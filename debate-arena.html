@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debate Arena — Apologia Daily</title>
+  <meta name="description" content="Practice defending your faith against AI opponents. Choose your topic, pick your difficulty, and get scored feedback after every debate." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy-950: #050d1a;
+      --navy-900: #0a1628;
+      --navy-800: #0f2040;
+      --navy-700: #163058;
+      --navy-600: #1e4278;
+      --navy-500: #285a9e;
+      --navy-400: #3b72bc;
+      --navy-300: #6f9fd4;
+      --navy-200: #aecae8;
+      --navy-100: #ddeaf5;
+      --navy-50:  #f0f6fb;
+      --gold:     #c8a951;
+      --gold-light: #e8cf87;
+      --white:    #ffffff;
+      --off-white: #f8f7f4;
+      --text-dark: #0a1628;
+      --text-mid:  #3a4a62;
+      --text-muted: #7a8fa8;
+      --border:   #d4e0ec;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: 'DM Sans', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text-dark); background: var(--white); line-height: 1.7; overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,13,26,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.7); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 8px 20px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    /* SCREENS */
+    .screen { display: none; }
+    .screen.active { display: block; }
+
+    /* ── SCREEN 1: SETUP ── */
+    .setup-header { background: var(--navy-950); padding: 8rem 2rem 4rem; position: relative; overflow: hidden; }
+    .setup-header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(30,66,120,0.5) 0%, transparent 70%); pointer-events: none; }
+    .setup-header-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+    .page-eyebrow { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .page-title { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; color: var(--white); margin-bottom: 1rem; }
+    .page-title em { font-style: italic; color: var(--gold); }
+    .page-sub { font-size: 1.05rem; font-weight: 300; color: rgba(255,255,255,0.6); max-width: 560px; line-height: 1.8; }
+
+    .setup-body { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 6rem; }
+    .setup-section { margin-bottom: 3rem; }
+    .setup-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 12px; }
+    .setup-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* OPPONENT GRID */
+    .opponent-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+    .opponent-card { background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; cursor: pointer; transition: all 0.2s; position: relative; }
+    .opponent-card:hover { border-color: var(--navy-300); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(10,22,40,0.07); }
+    .opponent-card.selected { border: 2px solid var(--navy-600); background: var(--navy-50); }
+    .opp-icon { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; }
+    .opp-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 4px; }
+    .opp-style { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .opp-desc { font-size: 0.88rem; font-weight: 300; color: var(--text-mid); line-height: 1.65; margin-bottom: 1rem; }
+    .diff-row { display: flex; gap: 6px; }
+    .diff-btn { font-family: var(--font-ui); font-size: 0.7rem; padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; transition: all 0.15s; }
+    .diff-btn:hover { border-color: var(--navy-300); color: var(--navy-500); }
+    .diff-btn.active { background: var(--navy-900); color: var(--white); border-color: var(--navy-900); }
+    .selected-check { position: absolute; top: 12px; right: 12px; width: 22px; height: 22px; border-radius: 50%; background: var(--navy-600); display: none; align-items: center; justify-content: center; }
+    .opponent-card.selected .selected-check { display: flex; }
+    .selected-check svg { width: 12px; height: 12px; stroke: white; fill: none; stroke-width: 2.5; }
+
+    /* TOPIC GRID */
+    .topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+    .topic-btn { background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: 1rem 1.25rem; text-align: left; cursor: pointer; transition: all 0.15s; }
+    .topic-btn:hover { border-color: var(--navy-300); background: var(--navy-50); }
+    .topic-btn.selected { border: 2px solid var(--navy-600); background: var(--navy-50); }
+    .topic-name { font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 3px; }
+    .topic-desc { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text-muted); }
+
+    /* START BTN */
+    .start-row { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .btn-start { font-family: var(--font-ui); font-size: 1rem; font-weight: 500; padding: 15px 40px; border-radius: 3px; background: var(--navy-900); color: var(--white); border: none; cursor: pointer; transition: all 0.2s; opacity: 0.4; pointer-events: none; }
+    .btn-start.ready { opacity: 1; pointer-events: all; background: var(--gold); color: var(--navy-950); }
+    .btn-start.ready:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .start-hint { font-family: var(--font-ui); font-size: 0.85rem; color: var(--text-muted); }
+
+    /* ── SCREEN 2: ARENA ── */
+    #screen-arena { background: var(--navy-950); min-height: 100vh; padding-top: 64px; }
+    .arena-wrap { max-width: 900px; margin: 0 auto; padding: 2rem; }
+
+    /* VS BAR */
+    .vs-bar { display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 1.5rem; }
+    .vs-side { text-align: center; flex: 1; }
+    .vs-label { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 4px; }
+    .vs-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+    .vs-badge { display: inline-block; font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; padding: 2px 8px; border-radius: 10px; margin-top: 4px; }
+    .vs-divider { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--gold); padding: 0 1rem; }
+    .topic-pill { text-align: center; margin-bottom: 1.5rem; }
+    .topic-pill span { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.05); padding: 5px 14px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.08); }
+
+    /* CHAT */
+    .chat-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 1.5rem; margin-bottom: 1rem; min-height: 320px; max-height: 440px; overflow-y: auto; display: flex; flex-direction: column; gap: 1rem; }
+    .chat-box::-webkit-scrollbar { width: 4px; }
+    .chat-box::-webkit-scrollbar-track { background: transparent; }
+    .chat-box::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+    .msg { display: flex; gap: 10px; max-width: 88%; }
+    .msg.opp { align-self: flex-start; }
+    .msg.user { align-self: flex-end; flex-direction: row-reverse; }
+    .msg-avatar { width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; margin-top: 2px; }
+    .msg-body {}
+    .msg-name { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 5px; }
+    .msg.opp .msg-name { color: rgba(255,255,255,0.35); }
+    .msg.user .msg-name { color: rgba(200,169,81,0.6); text-align: right; }
+    .msg-bubble { padding: 11px 14px; border-radius: 4px; font-size: 0.9rem; line-height: 1.7; }
+    .msg.opp .msg-bubble { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.85); border-left: 2px solid rgba(255,255,255,0.12); }
+    .msg.user .msg-bubble { background: rgba(200,169,81,0.12); color: rgba(255,255,255,0.9); border-right: 2px solid var(--gold); }
+    .typing-indicator { display: flex; gap: 5px; align-items: center; padding: 8px 0; }
+    .typing-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.3); animation: typingBounce 1.2s ease infinite; }
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes typingBounce { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-6px); } }
+
+    /* HINTS */
+    .hints-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1rem; }
+    .hint-chip { font-family: var(--font-ui); font-size: 0.75rem; padding: 5px 12px; border-radius: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.55); cursor: pointer; transition: all 0.15s; }
+    .hint-chip:hover { background: rgba(200,169,81,0.1); border-color: rgba(200,169,81,0.3); color: var(--gold); }
+    .hints-label { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-bottom: 8px; }
+
+    /* INPUT */
+    .input-row { display: flex; gap: 10px; margin-bottom: 1rem; }
+    .debate-input { flex: 1; padding: 12px 16px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; color: var(--white); font-family: var(--font-body); font-size: 0.9rem; outline: none; transition: border-color 0.2s; resize: none; }
+    .debate-input:focus { border-color: rgba(200,169,81,0.4); }
+    .debate-input::placeholder { color: rgba(255,255,255,0.25); }
+    .send-btn { padding: 12px 24px; background: var(--gold); color: var(--navy-950); border: none; border-radius: 4px; font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+    .send-btn:hover { background: var(--gold-light); }
+    .send-btn:disabled { opacity: 0.5; cursor: default; }
+    .arena-footer-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .turn-count { font-family: var(--font-ui); font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+    .end-btn { font-family: var(--font-ui); font-size: 0.78rem; padding: 7px 16px; border-radius: 3px; background: transparent; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.45); cursor: pointer; transition: all 0.2s; }
+    .end-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── SCREEN 3: FEEDBACK ── */
+    #screen-feedback { background: var(--off-white); min-height: 100vh; padding-top: 64px; }
+    .feedback-wrap { max-width: 860px; margin: 0 auto; padding: 3rem 2rem 6rem; }
+    .feedback-header { text-align: center; margin-bottom: 3rem; }
+    .feedback-eyebrow { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--navy-500); margin-bottom: 0.75rem; }
+    .feedback-title { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem; }
+    .feedback-title em { font-style: italic; color: var(--navy-600); }
+    .feedback-sub { font-family: var(--font-ui); font-size: 0.9rem; color: var(--text-muted); }
+
+    /* SCORE CARDS */
+    .score-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2.5rem; }
+    .score-card { background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; text-align: center; }
+    .score-num { font-family: var(--font-display); font-size: 2.8rem; font-weight: 700; line-height: 1; margin-bottom: 6px; }
+    .score-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+    .score-bar-wrap { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+    .score-bar { height: 100%; border-radius: 2px; }
+    .score-overall { background: var(--navy-900); border: none; }
+    .score-overall .score-num { color: var(--gold); }
+    .score-overall .score-label { color: rgba(255,255,255,0.4); }
+
+    /* FEEDBACK SECTIONS */
+    .fb-section { background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: 1.75rem; margin-bottom: 1rem; }
+    .fb-section-head { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+    .fb-icon { width: 32px; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .fb-icon svg { width: 16px; height: 16px; fill: none; stroke-width: 2; }
+    .fb-section-title { font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--text-dark); }
+    .fb-item { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; line-height: 1.65; }
+    .fb-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .fb-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
+    .fb-item-text { color: var(--text-mid); }
+    .fb-item-text strong { color: var(--text-dark); font-weight: 500; }
+
+    /* STUDY LINKS */
+    .study-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .study-item:last-child { border-bottom: none; }
+    .study-thumb { width: 40px; height: 40px; border-radius: 4px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .study-thumb svg { width: 18px; height: 18px; fill: none; stroke-width: 2; }
+    .study-info {}
+    .study-title { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; color: var(--text-dark); margin-bottom: 2px; }
+    .study-meta { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text-muted); }
+    .study-link { font-family: var(--font-ui); font-size: 0.75rem; color: var(--navy-500); margin-top: 3px; display: inline-block; text-decoration: none; }
+    .study-link:hover { color: var(--navy-700); }
+
+    /* FEEDBACK ACTIONS */
+    .feedback-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 2rem; }
+    .btn-retry { font-family: var(--font-ui); font-size: 0.9rem; font-weight: 500; padding: 13px 28px; border-radius: 3px; background: var(--navy-900); color: var(--white); border: none; cursor: pointer; transition: all 0.2s; text-decoration: none; }
+    .btn-retry:hover { background: var(--navy-700); }
+    .btn-outline { font-family: var(--font-ui); font-size: 0.9rem; padding: 13px 28px; border-radius: 3px; background: transparent; border: 1px solid var(--border); color: var(--text-dark); cursor: pointer; transition: all 0.2s; text-decoration: none; }
+    .btn-outline:hover { border-color: var(--navy-300); }
+
+    /* FOOTER */
+    footer { background: var(--navy-950); border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 2rem 2rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+    .footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-ui); font-size: 0.8rem; color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+    .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="video-library.html">Videos</a></li>
+      <li><a href="debate-arena.html" class="active">Debate Arena</a></li>
+      <li><a href="#">Daily</a></li>
+    </ul>
+    <a href="index.html#pricing" class="nav-cta">Start Free</a>
+  </nav>
+
+  <!-- ══ SCREEN 1: SETUP ══ -->
+  <div id="screen-setup" class="screen active">
+    <div class="setup-header">
+      <div class="setup-header-inner">
+        <p class="page-eyebrow">Debate Arena</p>
+        <h1 class="page-title">Practise the conversation<br/>before you have <em>the real one</em></h1>
+        <p class="page-sub">Go head to head with an AI opponent trained on the strongest sceptical arguments. Choose your topic, pick your difficulty, and get scored feedback after every round.</p>
+      </div>
+    </div>
+
+    <div class="setup-body">
+
+      <div class="setup-section reveal">
+        <p class="setup-label">Step 1 — Choose your opponent</p>
+        <div class="opponent-grid">
+
+          <div class="opponent-card" id="opp-atheist" onclick="selectOpponent('atheist', this)">
+            <div class="selected-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="opp-icon" style="background:#EEEDFE; color:#3C3489;">A</div>
+            <div class="opp-name">The Atheist</div>
+            <div class="opp-style" style="color:#534AB7;">Philosophical · Science-based</div>
+            <div class="opp-desc">Challenges your belief in God with logic, science, and the problem of evil. Draws on Dawkins, Hitchens, Harris, and Russell.</div>
+            <div class="diff-row">
+              <button class="diff-btn" onclick="setDiff(event,'gentle')">Gentle</button>
+              <button class="diff-btn active" onclick="setDiff(event,'challenging')">Challenging</button>
+              <button class="diff-btn" onclick="setDiff(event,'expert')">Expert</button>
+            </div>
+          </div>
+
+          <div class="opponent-card" id="opp-muslim" onclick="selectOpponent('muslim', this)">
+            <div class="selected-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="opp-icon" style="background:#E1F5EE; color:#0F6E56;">M</div>
+            <div class="opp-name">The Muslim</div>
+            <div class="opp-style" style="color:#0F6E56;">Theological · Scripture-based</div>
+            <div class="opp-desc">Challenges the Trinity, the divinity of Jesus, and the reliability of the Bible. Draws on the Quran and Islamic scholarship.</div>
+            <div class="diff-row">
+              <button class="diff-btn" onclick="setDiff(event,'gentle')">Gentle</button>
+              <button class="diff-btn active" onclick="setDiff(event,'challenging')">Challenging</button>
+              <button class="diff-btn" onclick="setDiff(event,'expert')">Expert</button>
+            </div>
+          </div>
+
+          <div class="opponent-card" id="opp-agnostic" onclick="selectOpponent('agnostic', this)">
+            <div class="selected-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="opp-icon" style="background:#FAEEDA; color:#854F0B;">?</div>
+            <div class="opp-name">The Agnostic</div>
+            <div class="opp-style" style="color:#854F0B;">Sceptical · Open-minded</div>
+            <div class="opp-desc">Not hostile — genuinely uncertain. Asks sincere questions about evidence, suffering, and why Christianity over other religions.</div>
+            <div class="diff-row">
+              <button class="diff-btn active" onclick="setDiff(event,'gentle')">Gentle</button>
+              <button class="diff-btn" onclick="setDiff(event,'challenging')">Challenging</button>
+              <button class="diff-btn" onclick="setDiff(event,'expert')">Expert</button>
+            </div>
+          </div>
+
+          <div class="opponent-card" id="opp-secularist" onclick="selectOpponent('secularist', this)">
+            <div class="selected-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="opp-icon" style="background:#FAECE7; color:#993C1D;">S</div>
+            <div class="opp-name">The Secularist</div>
+            <div class="opp-style" style="color:#993C1D;">Moral · Cultural</div>
+            <div class="opp-desc">Argues that religion causes harm, morality doesn't need God, and Christianity is exclusivist. Draws on social justice and humanist frameworks.</div>
+            <div class="diff-row">
+              <button class="diff-btn" onclick="setDiff(event,'gentle')">Gentle</button>
+              <button class="diff-btn active" onclick="setDiff(event,'challenging')">Challenging</button>
+              <button class="diff-btn" onclick="setDiff(event,'expert')">Expert</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="setup-section reveal">
+        <p class="setup-label">Step 2 — Choose a topic</p>
+        <div class="topic-grid">
+          <button class="topic-btn" onclick="selectTopic('Does God exist?', this)">
+            <div class="topic-name">Does God exist?</div>
+            <div class="topic-desc">Cosmological, moral & fine-tuning arguments</div>
+          </button>
+          <button class="topic-btn" onclick="selectTopic('Did Jesus rise from the dead?', this)">
+            <div class="topic-name">Did Jesus rise from the dead?</div>
+            <div class="topic-desc">Historical evidence & the minimal facts approach</div>
+          </button>
+          <button class="topic-btn" onclick="selectTopic('Why does God allow suffering?', this)">
+            <div class="topic-name">Why does God allow suffering?</div>
+            <div class="topic-desc">The problem of evil & theodicy</div>
+          </button>
+          <button class="topic-btn" onclick="selectTopic('Is the Bible reliable?', this)">
+            <div class="topic-name">Is the Bible reliable?</div>
+            <div class="topic-desc">Manuscript evidence, archaeology & prophecy</div>
+          </button>
+          <button class="topic-btn" onclick="selectTopic('Can science explain everything?', this)">
+            <div class="topic-name">Can science explain everything?</div>
+            <div class="topic-desc">Scientism, fine-tuning & the origin of the universe</div>
+          </button>
+          <button class="topic-btn" onclick="selectTopic('Is Jesus the only way to God?', this)">
+            <div class="topic-name">Is Jesus the only way to God?</div>
+            <div class="topic-desc">Exclusivism, world religions & grace</div>
+          </button>
+        </div>
+      </div>
+
+      <div class="setup-section reveal">
+        <p class="setup-label">Step 3 — Begin</p>
+        <div class="start-row">
+          <button class="btn-start" id="start-btn" onclick="startDebate()">Enter the Arena →</button>
+          <span class="start-hint" id="start-hint">Select an opponent and topic to begin</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ SCREEN 2: ARENA ══ -->
+  <div id="screen-arena" class="screen">
+    <div class="arena-wrap">
+      <div class="vs-bar">
+        <div class="vs-side">
+          <div class="vs-label">You</div>
+          <div class="vs-name">Christian</div>
+          <span class="vs-badge" style="background:rgba(200,169,81,0.15);color:var(--gold);">Defending</span>
+        </div>
+        <div class="vs-divider">VS</div>
+        <div class="vs-side">
+          <div class="vs-label">Opponent</div>
+          <div class="vs-name" id="arena-opp-name">The Atheist</div>
+          <span class="vs-badge" id="arena-diff-badge" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.45);">Challenging</span>
+        </div>
+      </div>
+      <div class="topic-pill"><span id="arena-topic-pill">Topic: Does God exist?</span></div>
+
+      <div class="chat-box" id="chat-box"></div>
+
+      <div class="hints-label">Suggested approaches</div>
+      <div class="hints-row" id="hints-row"></div>
+
+      <div class="input-row">
+        <textarea class="debate-input" id="debate-input" rows="2" placeholder="Type your response…"></textarea>
+        <button class="send-btn" id="send-btn" onclick="sendMessage()">Send →</button>
+      </div>
+      <div class="arena-footer-row">
+        <span class="turn-count" id="turn-count">Exchange 1 of 6</span>
+        <button class="end-btn" onclick="endDebate()">End debate & get feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SCREEN 3: FEEDBACK ══ -->
+  <div id="screen-feedback" class="screen">
+    <div class="feedback-wrap">
+      <div class="feedback-header">
+        <p class="feedback-eyebrow">Debate complete</p>
+        <h2 class="feedback-title">Here's how you <em>performed</em></h2>
+        <p class="feedback-sub" id="feedback-sub">vs The Atheist · Does God exist? · Challenging</p>
+      </div>
+
+      <div class="score-grid reveal">
+        <div class="score-card score-overall">
+          <div class="score-num" id="score-overall">74</div>
+          <div class="score-label" style="color:rgba(255,255,255,0.4);">Overall Score</div>
+          <div class="score-bar-wrap" style="background:rgba(255,255,255,0.1);"><div class="score-bar" id="bar-overall" style="background:var(--gold);"></div></div>
+        </div>
+        <div class="score-card">
+          <div class="score-num" id="score-argument" style="color:var(--navy-600);">78</div>
+          <div class="score-label">Argument Strength</div>
+          <div class="score-bar-wrap"><div class="score-bar" id="bar-argument" style="background:var(--navy-500);"></div></div>
+        </div>
+        <div class="score-card">
+          <div class="score-num" id="score-objection" style="color:var(--navy-600);">61</div>
+          <div class="score-label">Handling Objections</div>
+          <div class="score-bar-wrap"><div class="score-bar" id="bar-objection" style="background:var(--navy-500);"></div></div>
+        </div>
+      </div>
+
+      <div class="fb-section reveal">
+        <div class="fb-section-head">
+          <div class="fb-icon" style="background:#E1F5EE;">
+            <svg viewBox="0 0 24 24" stroke="#0F6E56"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="fb-section-title">What you did well</div>
+        </div>
+        <div id="feedback-strengths"></div>
+      </div>
+
+      <div class="fb-section reveal">
+        <div class="fb-section-head">
+          <div class="fb-icon" style="background:#FAEEDA;">
+            <svg viewBox="0 0 24 24" stroke="#854F0B"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="fb-section-title">Where to improve</div>
+        </div>
+        <div id="feedback-weaknesses"></div>
+      </div>
+
+      <div class="fb-section reveal">
+        <div class="fb-section-head">
+          <div class="fb-icon" style="background:#EEEDFE;">
+            <svg viewBox="0 0 24 24" stroke="#534AB7"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="fb-section-title">Recommended study</div>
+        </div>
+        <div id="feedback-study"></div>
+      </div>
+
+      <div class="feedback-actions reveal">
+        <button class="btn-retry" onclick="retryDebate()">Debate again →</button>
+        <button class="btn-outline" onclick="showScreen('screen-setup')">Try a different opponent</button>
+        <a href="evidence-library.html" class="btn-outline">Study the Evidence Library</a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">Apologia<span>Daily</span></div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="evidence-library.html">Evidence Library</a></li>
+          <li><a href="video-library.html">Videos</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+        </ul>
+        <div class="footer-copy">© 2026 Apologia Daily. Built for the defence of the Gospel.<br/><span style="font-size:0.7rem;opacity:0.6;margin-top:6px;display:block;">Apologia Daily is an independent platform not affiliated with or endorsed by any individuals or organisations referenced on this site.</span></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // ── STATE ──
+    let state = {
+      opponent: null,
+      difficulty: 'challenging',
+      topic: null,
+      turns: 0,
+      maxTurns: 6,
+      messages: []
+    };
+
+    // ── OPPONENT DATA ──
+    const opponents = {
+      atheist: {
+        name: 'The Atheist',
+        opening: {
+          'Does God exist?': "Let's be clear — you're asking me to believe in an invisible, undetectable being with zero empirical evidence. Science has explained the origin of the universe, the origin of life, and the origin of morality without invoking God. Why should I add an unnecessary supernatural hypothesis?",
+          'Did Jesus rise from the dead?': "The resurrection is an extraordinary claim requiring extraordinary evidence. We have documents written decades after the alleged events, by believers, with no independent corroboration. Every natural explanation — hallucination, legend, misidentification — is more probable than a genuine violation of natural law.",
+          'Why does God allow suffering?': "If God is all-powerful, all-knowing, and all-good — he could prevent the suffering of innocent children. He doesn't. Either he can't, he won't, or he doesn't exist. The sheer scale of gratuitous evil in the world is the strongest argument against the Christian God.",
+          'Is the Bible reliable?': "The Bible was written by humans, copied by humans, translated by humans — each step introducing error and bias. We know the Gospels contradict each other on basic facts. Paul never met Jesus. The canon was decided by political councils centuries later. Why trust it as God's word?",
+          'Can science explain everything?': "Science has a perfect track record of explaining things once attributed to God — thunder, disease, the diversity of life. Religion has a perfect track record of being wrong and retreating. The God of the gaps keeps getting smaller. Science doesn't need to explain everything to make God unnecessary.",
+          'Is Jesus the only way to God?': "The idea that the billions of people born before Christianity, or in cultures that never heard the gospel, are condemned is morally monstrous. If God is just and loving, he cannot require belief in a specific first-century Palestinian for salvation."
+        },
+        hints: ['Use the Kalam argument', 'Address the moral argument', 'Ask what explains consciousness', 'Respond to the multiverse claim', 'Use the fine-tuning argument']
+      },
+      muslim: {
+        name: 'The Muslim',
+        opening: {
+          'Does God exist?': "We actually agree that God exists — the question is which understanding of God is correct. The Islamic concept of Tawhid — the absolute oneness of God — is more rational than the Christian Trinity. How can one God be three persons? This is a contradiction that Christianity has never resolved.",
+          'Did Jesus rise from the dead?': "The Quran tells us clearly that Jesus was not crucified — it only appeared so to them. The disciples were confused. Even your own scholars admit the crucifixion accounts contain contradictions. And if the crucifixion is doubtful, the resurrection has no foundation.",
+          'Why does God allow suffering?': "Islam has a clear answer — this life is a test. Suffering is part of Allah's wisdom and we trust in his plan even when we cannot see it. But I want to ask you — your Bible shows God ordering the killing of innocent people. How is your God more loving than that?",
+          'Is the Bible reliable?': "The Bible has been corrupted over centuries — this is historically documented. The Council of Nicaea chose which books to include. Paul changed the religion of Jesus entirely. Jesus himself said he came only for the lost sheep of Israel. The Quran preserved the original message.",
+          'Can science explain everything?': "Science confirms the Quran — the Big Bang, embryology, the water cycle are all described 1,400 years before modern science. Islam has never feared science. But I ask you — if the universe began, it needs a cause. We agree on that. The question is which revelation correctly describes that cause.",
+          'Is Jesus the only way to God?': "Muslims revere Jesus deeply — he is a great prophet, born of a virgin, who performed miracles. But he is not God. He never once said 'I am God, worship me.' The idea that God had a son is shirk — the greatest sin in Islam. Why do Christians attribute partners to God?"
+        },
+        hints: ['Defend the Trinity clearly', 'Address Quranic claims about Jesus', 'Use manuscript evidence', 'Discuss fulfilled prophecy', 'Address the deity of Christ']
+      },
+      agnostic: {
+        name: 'The Agnostic',
+        opening: {
+          'Does God exist?': "I'm genuinely open to this — I just haven't seen evidence that convinces me. Every religion claims to have the truth. Christians, Muslims, Hindus all have personal experiences and arguments. How do you know your experience of God is real and not just psychology or culture?",
+          'Did Jesus rise from the dead?': "I find the story of Jesus genuinely moving and I'm not dismissing it. But extraordinary events require strong evidence. What we have are documents by believers written decades later. How can I distinguish the resurrection from the many other resurrection stories in ancient religions?",
+          'Why does God allow suffering?': "This is actually what stopped me believing. I watched someone I love suffer terribly for years before dying. If God was there and chose not to act, I don't know how to reconcile that with love. I want to believe — can you help me understand?",
+          'Is the Bible reliable?': "I grew up reading the Bible and I love a lot of it. But I've since learned about the contradictions, the violent passages, the different canon traditions. How do you know which parts are truly from God and which reflect the culture and biases of the authors?",
+          'Can science explain everything?': "I think science is our best tool for understanding reality. It keeps working — it keeps explaining more. I'm not sure we need a God hypothesis to explain what we don't yet understand. But I'm open — what does God explain that science genuinely cannot?",
+          'Is Jesus the only way to God?': "I struggle with this one. My grandmother was a devoted Buddhist — one of the most loving people I've ever known. Are you saying she's condemned? That seems to say more about the religion than about justice."
+        },
+        hints: ['Acknowledge their experience with respect', 'Use the minimal facts approach', 'Explain the soul-making theodicy', 'Distinguish Jesus from other resurrection myths', 'Be honest about mystery']
+      },
+      secularist: {
+        name: 'The Secularist',
+        opening: {
+          'Does God exist?': "Whether God exists or not, religion has been used to justify slavery, the subjugation of women, homophobia, and war throughout history. Even if I thought God was real, organised Christianity has caused too much harm for me to embrace it. Morality has progressed despite religion, not because of it.",
+          'Did Jesus rise from the dead?': "Even if Jesus existed and was a great moral teacher, the miraculous claims were added later to give his followers authority. The resurrection story served a political purpose — it made Christianity unique among the mystery religions competing for converts. It's mythology, not history.",
+          'Why does God allow suffering?': "Beyond personal suffering — look at systemic injustice. God apparently allowed centuries of slavery, the Holocaust, the abuse of children by religious institutions. At what point does faith become complicity in avoiding the real work of building a just society?",
+          'Is the Bible reliable?': "The Bible was used to justify slavery, with specific verses. It was used to keep women silent and subservient. It still gets used to exclude LGBTQ people. A book that has caused this much harm — regardless of who wrote it — should be read critically, not treated as divine authority.",
+          'Can science explain everything?': "Science doesn't need to explain everything right now to be our best guide. What I object to is using God as a placeholder for ignorance — and then using that God claim to enforce moral rules on other people. Science at least corrects itself. Religion just claims more authority.",
+          'Is Jesus the only way to God?': "This exclusivity claim is the heart of the problem with Christianity. It has been used to justify colonialism — converting the savages, destroying indigenous cultures. The claim that one religion has the only truth inevitably leads to the oppression of everyone who disagrees."
+        },
+        hints: ['Address religious harm charitably', 'Distinguish Christianity from its misuse', 'Discuss objective moral grounding', 'Acknowledge historical failures honestly', 'Focus on the truth question separately']
+      }
+    };
+
+    // ── FOLLOWUPS ──
+    const followups = {
+      atheist: [
+        "That's an interesting point, but you haven't addressed the central issue — even granting a first cause, you have no reason to think it's conscious, personal, or interested in humanity. You've established a deist watchmaker at best.",
+        "The Kalam assumes causation applies outside of time and space — but causation is a feature of our universe. You can't smuggle in a principle that only works inside the universe and apply it to the universe's origin.",
+        "Every claim you've made applies equally to the Flying Spaghetti Monster. You've given me no criteria to distinguish your God from any other unfalsifiable hypothesis.",
+        "I'll grant you the argument has some force. But notice you haven't shown it's the Christian God specifically. You need about fifty more arguments before you get from 'a cause exists' to 'Jesus rose from the dead.'"
+      ],
+      muslim: [
+        "You still haven't addressed the textual evidence for the Trinity in the New Testament. John 1:1, Colossians 1, Philippians 2 — these are early texts, not late inventions. How do you account for them?",
+        "The Quran was also transmitted through human hands, memorised by human beings, compiled by Uthman decades after the Prophet's death. Your critique of the Bible applies equally to your own scriptures.",
+        "I want to stay on the historical question — what is your evidence that Jesus was not crucified? The crucifixion is one of the most historically secure facts about Jesus, confirmed by Tacitus, Josephus, and multiple independent traditions.",
+        "You say Jesus never claimed to be God. But he claimed the authority to forgive sins — which only God can do in Jewish theology. He accepted worship. He said before Abraham was, I am — echoing the divine name. How do you interpret these claims?"
+      ],
+      agnostic: [
+        "I appreciate your honesty. Can I ask — what would it take to convince you? If there's no possible evidence that could change your mind, that's worth reflecting on. If there is, let's talk about whether the historical evidence for the resurrection meets that bar.",
+        "The experiences across religions aren't equivalent — Christianity makes specific, testable historical claims. The resurrection isn't just a feeling — it's a claim that a dead man was seen alive by over five hundred people. That's an evidence question, not just an experience question.",
+        "Your grandmother's goodness is real and I don't dismiss it. But the question of whether Christianity is true is separate from whether religious people are good or kind. Both things can be true — she was good, and Jesus rose from the dead.",
+        "I hear the pain behind that question about suffering. I don't have a clean answer that takes the pain away. What I can say is that the existence of suffering doesn't logically rule out God — and the resurrection suggests that God entered into suffering himself."
+      ],
+      secularist: [
+        "You've raised real historical failures and I won't defend them. But notice your argument — you're appealing to moral standards to condemn Christianity. Where do those moral standards come from? If God doesn't exist, on what basis do you call slavery wrong rather than just unpopular?",
+        "The abuses you cite were done by people using the Bible against its own core teachings — Jesus consistently championed the poor, the outsider, the marginalised. The misuse of a text doesn't disprove the text.",
+        "The question of whether Christianity is true is logically separate from the question of whether Christians have behaved well. If Jesus rose from the dead, that's true regardless of what the Crusaders did. Let's stay on the evidence question.",
+        "You're making a consequentialist argument — this belief causes harm, therefore reject it. But that standard would also reject democracy and science, which have also been used to cause harm. Truth isn't determined by consequences."
+      ]
+    };
+
+    // ── SETUP LOGIC ──
+    function selectOpponent(id, el) {
+      document.querySelectorAll('.opponent-card').forEach(c => c.classList.remove('selected'));
+      el.classList.add('selected');
+      state.opponent = id;
+      checkReady();
+    }
+
+    function setDiff(e, diff) {
+      e.stopPropagation();
+      const card = e.target.closest('.opponent-card');
+      card.querySelectorAll('.diff-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      state.difficulty = diff;
+    }
+
+    function selectTopic(topic, el) {
+      document.querySelectorAll('.topic-btn').forEach(b => b.classList.remove('selected'));
+      el.classList.add('selected');
+      state.topic = topic;
+      checkReady();
+    }
+
+    function checkReady() {
+      const btn = document.getElementById('start-btn');
+      const hint = document.getElementById('start-hint');
+      if (state.opponent && state.topic) {
+        btn.classList.add('ready');
+        hint.textContent = 'Ready — click to enter the arena';
+      } else if (state.opponent) {
+        hint.textContent = 'Now choose a topic';
+      } else if (state.topic) {
+        hint.textContent = 'Now choose an opponent';
+      }
+    }
+
+    // ── START DEBATE ──
+    function startDebate() {
+      if (!state.opponent || !state.topic) return;
+      const opp = opponents[state.opponent];
+      state.turns = 0;
+      state.messages = [];
+
+      document.getElementById('arena-opp-name').textContent = opp.name;
+      document.getElementById('arena-diff-badge').textContent = state.difficulty.charAt(0).toUpperCase() + state.difficulty.slice(1);
+      document.getElementById('arena-topic-pill').textContent = 'Topic: ' + state.topic;
+
+      const hintsRow = document.getElementById('hints-row');
+      hintsRow.innerHTML = '';
+      opp.hints.forEach(h => {
+        const btn = document.createElement('button');
+        btn.className = 'hint-chip';
+        btn.textContent = h;
+        btn.onclick = () => { document.getElementById('debate-input').value = h; };
+        hintsRow.appendChild(btn);
+      });
+
+      const chatBox = document.getElementById('chat-box');
+      chatBox.innerHTML = '';
+      const opening = opp.opening[state.topic] || opp.opening['Does God exist?'];
+      addMessage('opp', opp.name, opening);
+      state.messages.push({ role: 'opp', text: opening });
+      updateTurnCount();
+      showScreen('screen-arena');
+    }
+
+    // ── MESSAGING ──
+    function addMessage(role, name, text) {
+      const chatBox = document.getElementById('chat-box');
+      const msg = document.createElement('div');
+      msg.className = 'msg ' + role;
+      const initial = name.charAt(0).toUpperCase();
+      const avatarStyle = role === 'opp'
+        ? 'background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);'
+        : 'background:rgba(200,169,81,0.2);color:var(--gold);';
+      msg.innerHTML = `
+        <div class="msg-avatar" style="${avatarStyle}">${role === 'user' ? 'You' : initial}</div>
+        <div class="msg-body">
+          <div class="msg-name">${name}</div>
+          <div class="msg-bubble">${text}</div>
+        </div>`;
+      chatBox.appendChild(msg);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function showTyping() {
+      const chatBox = document.getElementById('chat-box');
+      const typing = document.createElement('div');
+      typing.className = 'msg opp';
+      typing.id = 'typing-indicator';
+      typing.innerHTML = `
+        <div class="msg-avatar" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);">
+          ${opponents[state.opponent].name.charAt(0)}
+        </div>
+        <div class="msg-body">
+          <div class="msg-name">${opponents[state.opponent].name}</div>
+          <div class="typing-indicator">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+          </div>
+        </div>`;
+      chatBox.appendChild(typing);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function removeTyping() {
+      const t = document.getElementById('typing-indicator');
+      if (t) t.remove();
+    }
+
+    function sendMessage() {
+      const input = document.getElementById('debate-input');
+      const text = input.value.trim();
+      if (!text) return;
+      input.value = '';
+
+      addMessage('user', 'You', text);
+      state.messages.push({ role: 'user', text });
+      state.turns++;
+      updateTurnCount();
+
+      if (state.turns >= state.maxTurns) {
+        setTimeout(() => endDebate(), 600);
+        return;
+      }
+
+      document.getElementById('send-btn').disabled = true;
+      showTyping();
+
+      const delay = 1200 + Math.random() * 800;
+      setTimeout(() => {
+        removeTyping();
+        const opp = opponents[state.opponent];
+        const replies = followups[state.opponent];
+        const reply = replies[Math.min(state.turns - 1, replies.length - 1)];
+        addMessage('opp', opp.name, reply);
+        state.messages.push({ role: 'opp', text: reply });
+        document.getElementById('send-btn').disabled = false;
+      }, delay);
+    }
+
+    function updateTurnCount() {
+      document.getElementById('turn-count').textContent =
+        'Exchange ' + Math.min(state.turns + 1, state.maxTurns) + ' of ' + state.maxTurns;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const input = document.getElementById('debate-input');
+      if (input) {
+        input.addEventListener('keydown', e => {
+          if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+        });
+      }
+    });
+
+    // ── END & FEEDBACK ──
+    function endDebate() {
+      const opp = opponents[state.opponent];
+      const overall = 65 + Math.floor(Math.random() * 25);
+      const argument = 60 + Math.floor(Math.random() * 30);
+      const objection = 55 + Math.floor(Math.random() * 30);
+
+      document.getElementById('score-overall').textContent = overall;
+      document.getElementById('score-argument').textContent = argument;
+      document.getElementById('score-objection').textContent = objection;
+      document.getElementById('bar-overall').style.width = overall + '%';
+      document.getElementById('bar-argument').style.width = argument + '%';
+      document.getElementById('bar-objection').style.width = objection + '%';
+      document.getElementById('feedback-sub').textContent =
+        'vs ' + opp.name + ' · ' + state.topic + ' · ' + state.difficulty.charAt(0).toUpperCase() + state.difficulty.slice(1);
+
+      const strengthsData = {
+        atheist: [
+          { text: '<strong>Strong opening premise.</strong> You correctly stated the Kalam\'s first two premises and drew the logical conclusion clearly.' },
+          { text: '<strong>Appropriate appeal to cosmology.</strong> Referencing the Big Bang as evidence for a temporal beginning was well placed and hard to dismiss.' },
+          { text: '<strong>Good moral argument instinct.</strong> You recognised that objective morality requires grounding — this is one of the strongest lines of argument available to you.' }
+        ],
+        muslim: [
+          { text: '<strong>Defended the Trinity with confidence.</strong> You distinguished between one God in three persons rather than three separate gods — this is the key clarification.' },
+          { text: '<strong>Used manuscript evidence well.</strong> Pointing to the early date of New Testament documents was relevant and accurate.' },
+          { text: '<strong>Stayed on the historical question.</strong> You kept the conversation anchored to evidence rather than letting it drift into pure theology.' }
+        ],
+        agnostic: [
+          { text: '<strong>Warm and respectful tone.</strong> You engaged the genuine questions with empathy rather than defensiveness — exactly the right approach with an open-minded enquirer.' },
+          { text: '<strong>Used the minimal facts well.</strong> Focusing on historically accepted facts rather than requiring faith was strategically wise.' },
+          { text: '<strong>Honest about difficulty.</strong> Acknowledging the problem of suffering rather than dismissing it builds credibility and trust.' }
+        ],
+        secularist: [
+          { text: '<strong>Acknowledged historical failures honestly.</strong> Not defending the Crusades or slavery — just redirecting to the truth question — was tactically strong.' },
+          { text: '<strong>Raised the moral grounding question.</strong> Asking what grounds objective moral values without God is the key move against the secularist position.' },
+          { text: '<strong>Kept the focus on truth.</strong> You correctly separated "Christians have done bad things" from "Christianity is false" — these are different claims.' }
+        ]
+      };
+
+      const weaknessesData = {
+        atheist: [
+          { text: '<strong>Missed the "who made God?" counter.</strong> When this came up, the correct response is that the Kalam only applies to things that <em>begin to exist</em> — God, as eternal and necessary, is uncaused. State this explicitly.' },
+          { text: '<strong>Didn\'t press the moral argument hard enough.</strong> When the opponent said evolution explains morality, push back — evolution explains why we <em>have</em> moral feelings, not why those feelings track objective moral facts.' },
+          { text: '<strong>Left the fine-tuning response hanging.</strong> The multiverse response to fine-tuning needs a counter — the BGV theorem applies to any multiverse-generating mechanism too.' }
+        ],
+        muslim: [
+          { text: '<strong>Didn\'t address the Quran\'s denial of the crucifixion directly.</strong> The crucifixion is confirmed by Tacitus, Josephus, and multiple independent sources — the Quran was written 600 years later. Make this chronological point.' },
+          { text: '<strong>The deity of Christ argument needed more support.</strong> Quote John 8:58, Mark 2:5-7, and Philippians 2:5-11 — these are early, clear claims to divine identity.' },
+          { text: '<strong>Missed the manuscript comparison.</strong> Both the Bible and the Quran were transmitted by humans — the Quran was compiled under Uthman decades after the Prophet\'s death. Apply the same standard consistently.' }
+        ],
+        agnostic: [
+          { text: '<strong>Could have asked what evidence they would need.</strong> An open-minded agnostic may never have been asked — "what would convince you?" This moves the conversation from feeling to criteria.' },
+          { text: '<strong>The problem of suffering deserved more depth.</strong> Alvin Plantinga\'s free will defence and the soul-making theodicy of John Hick are both accessible and worth having ready.' },
+          { text: '<strong>Didn\'t distinguish the resurrection from pagan myths.</strong> The dying-and-rising god parallels are mostly post-Christian or significantly different in character — have a specific response ready.' }
+        ],
+        secularist: [
+          { text: '<strong>Needed to press harder on moral grounding.</strong> The secularist used moral language to condemn Christianity — ask them directly: on what basis do you call slavery wrong rather than merely unpopular? This is the key move.' },
+          { text: '<strong>Didn\'t separate misuse from the teaching itself.</strong> Jesus\'s teaching on loving enemies and caring for the poor is the antithesis of colonialism. Make this explicit with specific passages.' },
+          { text: '<strong>The exclusivity question needed a fuller answer.</strong> Explore whether Jesus\'s claim is exclusive by arrogance or by nature — if he actually rose from the dead, exclusivity follows necessarily.' }
+        ]
+      };
+
+      const studyData = {
+        atheist: [
+          { type: 'book', title: 'On Guard — William Lane Craig', meta: 'Chapters 3–5 · Kalam, objections, and fine-tuning', link: '#' },
+          { type: 'book', title: 'Reasonable Faith — William Lane Craig', meta: 'Chapter 3 · The absurdity of life without God', link: '#' },
+          { type: 'video', title: 'The Kalam Cosmological Argument (animated)', meta: 'Reasonable Faith · 5 min', link: 'https://www.youtube.com/watch?v=6CulBuMCLg0' },
+          { type: 'library', title: 'Kalam Cosmological Argument', meta: 'Evidence Library · Beginner', link: 'evidence-library.html' }
+        ],
+        muslim: [
+          { type: 'book', title: 'No God But One — Nabeel Qureshi', meta: 'A former Muslim\'s comparison of Islam and Christianity', link: '#' },
+          { type: 'book', title: 'The Case for the Real Jesus — Lee Strobel', meta: 'Chapter on the deity of Christ', link: '#' },
+          { type: 'video', title: 'Is the Bible or Quran the Word of God?', meta: 'Sam Shamoun vs Shabir Ally · Video Library', link: 'video-library.html' },
+          { type: 'library', title: 'Manuscript Reliability Argument', meta: 'Evidence Library · Beginner', link: 'evidence-library.html' }
+        ],
+        agnostic: [
+          { type: 'book', title: 'The Problem of Pain — C.S. Lewis', meta: 'The classic Christian response to suffering', link: '#' },
+          { type: 'book', title: 'Cold-Case Christianity — J. Warner Wallace', meta: 'A homicide detective examines the resurrection evidence', link: '#' },
+          { type: 'video', title: 'The Minimal Facts Argument for the Resurrection', meta: 'Gary Habermas at UCSB · Video Library', link: 'video-library.html' },
+          { type: 'library', title: 'The Minimal Facts Argument', meta: 'Evidence Library · Beginner', link: 'evidence-library.html' }
+        ],
+        secularist: [
+          { type: 'book', title: 'Tactics — Greg Koukl', meta: 'How to navigate moral objections gracefully', link: '#' },
+          { type: 'book', title: 'Mere Christianity — C.S. Lewis', meta: 'Book 1 · The moral argument and its implications', link: '#' },
+          { type: 'video', title: 'Does God Exist? — Craig vs Hitchens', meta: 'Moral argument section · Video Library', link: 'video-library.html' },
+          { type: 'library', title: 'The Moral Argument', meta: 'Evidence Library · Beginner', link: 'evidence-library.html' }
+        ]
+      };
+
+      const typeIcon = t => {
+        if (t === 'book') return `<svg viewBox="0 0 24 24" stroke="#534AB7" fill="none" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`;
+        if (t === 'video') return `<svg viewBox="0 0 24 24" stroke="#0F6E56" fill="none" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`;
+        return `<svg viewBox="0 0 24 24" stroke="#854F0B" fill="none" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`;
+      };
+      const typeBg = t => t === 'book' ? '#EEEDFE' : t === 'video' ? '#E1F5EE' : '#FAEEDA';
+
+      const strengths = strengthsData[state.opponent] || strengthsData.atheist;
+      document.getElementById('feedback-strengths').innerHTML = strengths.map(s =>
+        `<div class="fb-item"><div class="fb-dot" style="background:#1D9E75;"></div><div class="fb-item-text">${s.text}</div></div>`
+      ).join('');
+
+      const weaknesses = weaknessesData[state.opponent] || weaknessesData.atheist;
+      document.getElementById('feedback-weaknesses').innerHTML = weaknesses.map(w =>
+        `<div class="fb-item"><div class="fb-dot" style="background:#EF9F27;"></div><div class="fb-item-text">${w.text}</div></div>`
+      ).join('');
+
+      const study = studyData[state.opponent] || studyData.atheist;
+      document.getElementById('feedback-study').innerHTML = study.map(s =>
+        `<div class="study-item">
+          <div class="study-thumb" style="background:${typeBg(s.type)};">${typeIcon(s.type)}</div>
+          <div class="study-info">
+            <div class="study-title">${s.title}</div>
+            <div class="study-meta">${s.meta}</div>
+            <a href="${s.link}" class="study-link">Study this →</a>
+          </div>
+        </div>`
+      ).join('');
+
+      showScreen('screen-feedback');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function retryDebate() { startDebate(); }
+
+    // ── SCREEN SWITCHING ──
+    function showScreen(id) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ── REVEAL ──
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
