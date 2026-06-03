@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Library — Apologia Daily</title>
+  <meta name="description" content="Curated apologetics debates, lectures, and quick answers. Filter by topic and format. Featuring William Lane Craig, Frank Turek, Sean McDowell and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy-950: #050d1a;
+      --navy-900: #0a1628;
+      --navy-800: #0f2040;
+      --navy-700: #163058;
+      --navy-600: #1e4278;
+      --navy-500: #285a9e;
+      --navy-400: #3b72bc;
+      --navy-300: #6f9fd4;
+      --navy-200: #aecae8;
+      --navy-100: #ddeaf5;
+      --navy-50:  #f0f6fb;
+      --gold:     #c8a951;
+      --gold-light: #e8cf87;
+      --white:    #ffffff;
+      --off-white: #f8f7f4;
+      --text-dark: #0a1628;
+      --text-mid:  #3a4a62;
+      --text-muted: #7a8fa8;
+      --border:   #d4e0ec;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: 'DM Sans', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(5,13,26,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 0 2rem; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 400; color: rgba(255,255,255,0.7); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 8px 20px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--gold-light); }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      background: var(--navy-950);
+      padding: 8rem 2rem 4rem;
+      position: relative; overflow: hidden;
+    }
+    .page-header::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(30,66,120,0.5) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .page-header-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+    .page-eyebrow { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .page-title { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; color: var(--white); margin-bottom: 1rem; }
+    .page-title em { font-style: italic; color: var(--gold); }
+    .page-sub { font-size: 1.05rem; font-weight: 300; color: rgba(255,255,255,0.6); max-width: 560px; line-height: 1.8; }
+
+    /* ── PLAYER SECTION ── */
+    .player-section {
+      background: var(--navy-900);
+      padding: 2rem;
+      display: none;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .player-section.visible { display: block; }
+    .player-inner { max-width: 1100px; margin: 0 auto; }
+    .player-grid { display: grid; grid-template-columns: 1fr 380px; gap: 2rem; align-items: start; }
+    .player-embed { position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 4px; overflow: hidden; background: #000; }
+    .player-embed iframe { width: 100%; height: 100%; border: none; }
+    .player-meta { padding: 0.5rem 0; }
+    .player-format-badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .player-title { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; line-height: 1.3; }
+    .player-desc { font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.7; margin-bottom: 1.25rem; }
+    .player-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.25rem; }
+    .player-tag { font-family: var(--font-ui); font-size: 0.7rem; padding: 4px 10px; border-radius: 20px; background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.5); }
+    .player-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .player-btn { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; padding: 8px 16px; border-radius: 3px; cursor: pointer; text-decoration: none; transition: all 0.2s; border: none; }
+    .player-btn-primary { background: var(--gold); color: var(--navy-950); }
+    .player-btn-primary:hover { background: var(--gold-light); }
+    .player-btn-secondary { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.12); }
+    .player-btn-secondary:hover { background: rgba(255,255,255,0.12); }
+    .player-close { font-family: var(--font-ui); font-size: 0.78rem; color: rgba(255,255,255,0.35); background: none; border: none; cursor: pointer; padding: 0; margin-top: 0.5rem; display: block; }
+    .player-close:hover { color: rgba(255,255,255,0.6); }
+    .related-label { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 0.75rem; }
+    .related-list { display: flex; flex-direction: column; gap: 8px; }
+    .related-card { display: flex; gap: 10px; cursor: pointer; padding: 8px; border-radius: 3px; transition: background 0.15s; }
+    .related-card:hover { background: rgba(255,255,255,0.05); }
+    .related-thumb { width: 80px; height: 45px; border-radius: 2px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .related-info {}
+    .related-title { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: rgba(255,255,255,0.7); line-height: 1.4; margin-bottom: 2px; }
+    .related-meta { font-family: var(--font-ui); font-size: 0.68rem; color: rgba(255,255,255,0.3); }
+
+    /* ── FILTERS ── */
+    .filters-bar {
+      background: var(--off-white);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      position: sticky; top: 64px; z-index: 90;
+    }
+    .filters-inner { max-width: 1100px; margin: 0 auto; }
+    .filters-row { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .filter-group { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .filter-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
+    .filter-divider { width: 1px; height: 24px; background: var(--border); }
+    .filter-btn { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 400; padding: 6px 14px; border-radius: 20px; cursor: pointer; border: 1px solid var(--border); background: var(--white); color: var(--text-muted); transition: all 0.15s; white-space: nowrap; }
+    .filter-btn:hover { border-color: var(--navy-300); color: var(--navy-600); }
+    .filter-btn.active { background: var(--navy-900); color: var(--white); border-color: var(--navy-900); }
+    .results-count { font-family: var(--font-ui); font-size: 0.8rem; color: var(--text-muted); margin-left: auto; white-space: nowrap; }
+
+    /* ── MAIN ── */
+    .main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 6rem; }
+
+    /* ── FEATURED ROW ── */
+    .section-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* ── VIDEO GRID ── */
+    .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+    .video-card { background: var(--white); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; cursor: pointer; transition: all 0.2s; }
+    .video-card:hover { border-color: var(--navy-300); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(10,22,40,0.08); }
+    .video-card.hidden { display: none; }
+    .video-thumb { position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .video-thumb-bg { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+    .play-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(5,13,26,0.3); opacity: 0; transition: opacity 0.2s; }
+    .video-card:hover .play-overlay { opacity: 1; }
+    .play-circle { width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.95); display: flex; align-items: center; justify-content: center; }
+    .play-circle svg { width: 18px; height: 18px; fill: var(--navy-900); margin-left: 3px; }
+    .duration-tag { position: absolute; bottom: 8px; right: 8px; background: rgba(5,13,26,0.85); color: white; font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; padding: 2px 7px; border-radius: 3px; }
+    .format-tag { position: absolute; top: 8px; left: 8px; font-family: var(--font-ui); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; }
+    .video-info { padding: 1rem 1.1rem; }
+    .video-topic { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy-400); margin-bottom: 5px; }
+    .video-title { font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--text-dark); line-height: 1.35; margin-bottom: 5px; }
+    .video-presenter { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text-muted); margin-bottom: 10px; }
+    .video-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 10px; border-top: 1px solid var(--border); }
+    .video-views { font-family: var(--font-ui); font-size: 0.72rem; color: var(--text-muted); }
+    .video-action { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500; color: var(--navy-500); }
+
+    /* ── LOCKED VIDEO ── */
+    .video-card.locked { opacity: 0.55; cursor: default; }
+    .video-card.locked:hover { transform: none; box-shadow: none; border-color: var(--border); }
+    .lock-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(5,13,26,0.4); }
+    .lock-circle { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); display: flex; align-items: center; justify-content: center; }
+    .lock-circle svg { width: 16px; height: 16px; stroke: white; fill: none; stroke-width: 2; }
+
+    /* ── PRO BANNER ── */
+    .pro-banner { background: var(--navy-900); border-radius: 4px; padding: 2rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin-bottom: 3rem; }
+    .pro-banner-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .pro-banner-sub { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+    .pro-banner-btn { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; padding: 11px 24px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; white-space: nowrap; transition: background 0.2s; border: none; cursor: pointer; }
+    .pro-banner-btn:hover { background: var(--gold-light); }
+
+    /* ── NO RESULTS ── */
+    .no-results { text-align: center; padding: 4rem 2rem; display: none; }
+    .no-results.visible { display: block; }
+    .no-results-title { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem; }
+    .no-results-sub { font-size: 0.9rem; color: var(--text-muted); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--navy-950); border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 2rem 2rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+    .footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-ui); font-size: 0.8rem; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+    .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
+
+    /* ── ANIMATIONS ── */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) { .player-grid { grid-template-columns: 1fr; } .related-list { flex-direction: row; overflow-x: auto; } .related-card { flex-direction: column; min-width: 140px; } .related-thumb { width: 100%; height: 80px; } }
+    @media (max-width: 600px) { .filters-row { gap: 0.75rem; } .video-grid { grid-template-columns: 1fr; } .main { padding: 2rem 1.25rem 4rem; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="#" class="active">Video Library</a></li>
+      <li><a href="#">Debate Arena</a></li>
+      <li><a href="#">Daily</a></li>
+    </ul>
+    <a href="index.html#pricing" class="nav-cta">Start Free</a>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="page-eyebrow">Video Library</p>
+      <h1 class="page-title">The best apologetics<br/><em>debates & lectures</em>, curated</h1>
+      <p class="page-sub">Handpicked debates, lectures, and quick-answer videos from the world's leading apologists. Filter by topic and format to find exactly what you need.</p>
+    </div>
+  </div>
+
+  <!-- PLAYER -->
+  <div class="player-section" id="player-section">
+    <div class="player-inner">
+      <div class="player-grid">
+        <div>
+          <div class="player-embed">
+            <iframe id="player-iframe" src="" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </div>
+        </div>
+        <div class="player-meta">
+          <span class="player-format-badge" id="player-badge"></span>
+          <h2 class="player-title" id="player-title"></h2>
+          <p class="player-desc" id="player-desc"></p>
+          <div class="player-tags" id="player-tags"></div>
+          <div class="player-actions">
+            <a href="#" class="player-btn player-btn-primary" onclick="goToArena()">Practice this topic in Debate Arena →</a>
+            <button class="player-btn player-btn-secondary" onclick="saveVideo()">Save video</button>
+          </div>
+          <button class="player-close" onclick="closePlayer()">✕ Close player</button>
+          <div style="margin-top:1.5rem;">
+            <div class="related-label">Up next</div>
+            <div class="related-list" id="related-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="filters-bar">
+    <div class="filters-inner">
+      <div class="filters-row">
+        <div class="filter-group">
+          <span class="filter-label">Topic</span>
+          <button class="filter-btn active" onclick="setFilter('topic','all',this)">All</button>
+          <button class="filter-btn" onclick="setFilter('topic','existence',this)">God's Existence</button>
+          <button class="filter-btn" onclick="setFilter('topic','resurrection',this)">Resurrection</button>
+          <button class="filter-btn" onclick="setFilter('topic','islam',this)">Islam</button>
+          <button class="filter-btn" onclick="setFilter('topic','science',this)">Science & Faith</button>
+          <button class="filter-btn" onclick="setFilter('topic','bible',this)">Bible</button>
+        </div>
+        <div class="filter-divider"></div>
+        <div class="filter-group">
+          <span class="filter-label">Format</span>
+          <button class="filter-btn active" onclick="setFilter('format','all',this)">All</button>
+          <button class="filter-btn" onclick="setFilter('format','debate',this)">Full Debates</button>
+          <button class="filter-btn" onclick="setFilter('format','lecture',this)">Lectures</button>
+          <button class="filter-btn" onclick="setFilter('format','quick',this)">Quick Answers</button>
+        </div>
+        <span class="results-count" id="results-count">Showing 12 videos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <p class="section-label reveal">Featured this week</p>
+
+    <div class="video-grid" id="video-grid">
+
+      <!-- VIDEO 1 -->
+      <div class="video-card" data-topic="existence" data-format="debate" data-id="dMlGMCfO2_c" data-title="Does God Exist? — Craig vs Hitchens" data-desc="William Lane Craig debates Christopher Hitchens at Biola University in one of the most watched apologetics debates of the modern era. Craig presents the Kalam, fine-tuning, and moral arguments." data-presenter="William Lane Craig vs Christopher Hitchens" data-duration="2h 02m" data-views="4.2M views" onclick="playVideo(this)">
+        <div class="video-thumb">
+          <div class="video-thumb-bg" style="background:linear-gradient(135deg,#0a1628,#163058);">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="rgba(200,169,81,0.15)"/><polygon points="16,12 30,20 16,28" fill="rgba(200,169,81,0.8)"/></svg>
+          </div>
+          <div class="play-overlay"><div class="play-circle"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <span class="duration-tag">2h 02m</span>
+          <span class="format-tag" style="background:rgba(200,169,81,0.2);color:#c8a951;">Full Debate</span>
+        </div>
+        <div class="video-info">
+          <div class="video-topic">God's Existence</div>
+          <div class="video-title">Does God Exist? — Craig vs Hitchens</div>
+          <div class="video-presenter">William Lane Craig · Christopher Hitchens</div>
+          <div class="video-footer">
+            <span class="video-views">4.2M views</span>
+            <span class="video-action">Watch now →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 2 -->
+      <div class="video-card" data-topic="existence" data-format="quick" data-id="noj4nTCMOBk" data-title="The Kalam Cosmological Argument Explained" data-desc="Reasonable Faith's animated explainer breaks down the Kalam Cosmological Argument clearly and concisely. Perfect for sharing with a sceptical friend or brushing up before a conversation." data-presenter="Reasonable Faith" data-duration="5m" data-views="3.4M views" onclick="playVideo(this)">
+        <div class="video-thumb">
+          <div class="video-thumb-bg" style="background:linear-gradient(135deg,#163058,#285a9e);">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="rgba(174,202,232,0.15)"/><polygon points="16,12 30,20 16,28" fill="rgba(174,202,232,0.8)"/></svg>
+          </div>
+          <div class="play-overlay"><div class="play-circle"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <span class="duration-tag">5m</span>
+          <span class="format-tag" style="background:rgba(30,66,120,0.15);color:#6f9fd4;">Quick Answer</span>
+        </div>
+        <div class="video-info">
+          <div class="video-topic">God's Existence</div>
+          <div class="video-title">The Kalam Cosmological Argument Explained</div>
+          <div class="video-presenter">Reasonable Faith (animated)</div>
+          <div class="video-footer">
+            <span class="video-views">3.4M views</span>
+            <span class="video-action">Watch now →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 3 -->
+      <div class="video-card" data-topic="resurrection" data-format="lecture" data-id="ay_Db4RwZ_M" data-title="The Minimal Facts Argument for the Resurrection" data-desc="Gary Habermas presents his landmark minimal facts approach to the resurrection — five historical facts accepted by virtually all scholars that are best explained by a bodily resurrection." data-presenter="Gary Habermas" data-duration="48m" data-views="1.1M views" onclick="playVideo(this)">
+        <div class="video-thumb">
+          <div class="video-thumb-bg" style="background:linear-gradient(135deg,#04342c,#0f6e56);">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="rgba(93,202,165,0.15)"/><polygon points="16,12 30,20 16,28" fill="rgba(93,202,165,0.8)"/></svg>
+          </div>
+          <div class="play-overlay"><div class="play-circle"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <span class="duration-tag">48m</span>
+          <span class="format-tag" style="background:rgba(15,110,86,0.15);color:#5dcaa5;">Lecture</span>
+        </div>
+        <div class="video-info">
+          <div class="video-topic">Resurrection</div>
+          <div class="video-title">The Minimal Facts Argument for the Resurrection</div>
+          <div class="video-presenter">Gary Habermas</div>
+          <div class="video-footer">
+            <span class="video-views">1.1M views</span>
+            <span class="video-action">Watch now →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 4 -->
+      <div class="video-card" data-topic="islam" data-format="debate" data-id="xuMHMhDxMbU" data-title="Is the Bible or Quran the Word of God?" data-desc="Frank Turek debates Islamic scholar Shabir Ally on the reliability and divine origin of the Bible and Quran. A respectful, well-argued exchange covering prophecy, manuscript evidence, and the nature of revelation." data-presenter="Frank Turek vs Shabir Ally" data-duration="1h 48m" data-views="890K views" onclick="playVideo(this)">
+        <div class="video-thumb">
+          <div class="video-thumb-bg" style="background:linear-gradient(135deg,#412402,#854f0b);">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="rgba(239,159,39,0.15)"/><polygon points="16,12 30,20 16,28" fill="rgba(239,159,39,0.8)"/></svg>
+          </div>
+          <div class="play-overlay"><div class="play-circle"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <span class="duration-tag">1h 48m</span>
+          <span class="format-tag" style="background:rgba(133,79,11,0.15);color:#ef9f27;">Full Debate</span>
+        </div>
+        <div class="video-info">
+          <div class="video-topic">Islam</div>
+          <div class="video-title">Is the Bible or Quran the Word of God?</div>
+          <div class="video-presenter">Frank Turek vs Shabir Ally</div>
+          <div class="video-footer">
+            <span class="video-views">890K views</span>
+            <span class="video-action">Watch now →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 5 -->
+      <div class="video-card" data-topic="science" data-format="lecture" data-id="RKljJHMrWAk" data-title="The Fine-Tuning of the Universe for Life" data-desc="InspiringPhilosophy breaks down the fine-tuning argument in depth — covering the physical constants, the cosmological constant problem, and why the multiverse doesn't solve the problem." data-presenter="InspiringPhilosophy" data-duration="18m" data-views="1.3M views" onclick="playVideo(this)">
+        <div class="video-thumb">
+          <div class="video-thumb-bg" style="background:linear-gradient(135deg,#042c53,#185fa5);">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="rgba(133,183,235,0.15)"/><polygon points="16,12 30,20 16,28" fill="rgba(133,183,235,0.8)"/></svg>
+          </div>
+          <div class="play-overlay"><div class="play-circle"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <span class="duration-tag">18m</span>
+          <span class="format-tag" style="background:rgba(24,95,165,0.15);color:#85b7eb;">Lecture</span>
+        </div>
+        <div class="video-info">
+          <div class="video-topic">Science & Faith</div>
+          <div class="video-title">The Fine-Tuning of the Universe for Life</div>
+          <div class="video-presenter">InspiringPhilosophy</div>
+          <div class="video-footer">
+            <span class="video-views">1.3M views</span>
+            <span class="video-action">Watch now →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 6 -->
+      <div class="video-card" data-topic="existence" data-format="debate" data-id="dMlGMCfO2_c" data-title="Does God Exist? — Craig vs Kagan (Yale)" data-desc="William Lane Craig debates Yale philosopher Shelly Kagan on the existence of God. One of the most philosophically rigorous exchanges in modern apologetics, covering the moral argument in depth." data-presenter="William Lane Craig vs Shelly Kagan" data-duration="2h 14m" data-views="2.1M views" onclick="playVideo(this)">
+        <div class="video-thumb">
+          <div class="video-thumb-bg" style="background:linear-gradient(135deg,#050d1a,#1e4278);">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="rgba(200,169,81,0.12)"/><polygon points="16,12 30,20 16,28" fill="rgba(200,169,81,0.7)"/></svg>
+          </div>
+          <div class="play-overlay"><div class="play-circle"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <span class="duration-tag">2h 14m</span>
+          <span class="format-tag" style="background:rgba(200,169,81,0.2);color:#c8a951;">Full Debate</span>
+        </div>
+        <div class="video-info">
+          <div class="video-topic">God's Existence</div>
+          <div class="video-title">Does God Exist? — Craig vs Kagan (Yale)</div>
+          <div class="video-presenter">William Lane Craig vs Shelly Kagan</div>
+          <div class="video-footer">
+            <span class="video-views">2.1M views</span>
+            <span class="video-action">Watch now →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 7 — LOCKED -->
+      <div class="video-card locked" data-topic="resurrection" data-format="debate">
+        <div class="video-thumb">
+          <div class="video-thumb-bg" style="background:linear-gradient(135deg,#173404,#3b6d11);">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="rgba(150,196,89,0.12)"/><polygon points="16,12 30,20 16,28" fill="rgba(150,196,89,0.6)"/></svg>
+          </div>
+          <div class="lock-overlay"><div class="lock-circle"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div></div>
+          <span class="duration-tag">1h 22m</span>
+          <span class="format-tag" style="background:rgba(59,109,17,0.2);color:#97c459;">Full Debate</span>
+        </div>
+        <div class="video-info">
+          <div class="video-topic">Resurrection</div>
+          <div class="video-title">Did Jesus Rise from the Dead? — Habermas vs Flew</div>
+          <div class="video-presenter">Gary Habermas vs Antony Flew</div>
+          <div class="video-footer">
+            <span class="video-views">670K views</span>
+            <span class="video-action" style="color:var(--text-muted);">Pro only</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 8 — LOCKED -->
+      <div class="video-card locked" data-topic="bible" data-format="lecture">
+        <div class="video-thumb">
+          <div class="video-thumb-bg" style="background:linear-gradient(135deg,#26215c,#534ab7);">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="rgba(175,169,236,0.12)"/><polygon points="16,12 30,20 16,28" fill="rgba(175,169,236,0.7)"/></svg>
+          </div>
+          <div class="lock-overlay"><div class="lock-circle"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div></div>
+          <span class="duration-tag">35m</span>
+          <span class="format-tag" style="background:rgba(83,74,183,0.2);color:#afa9ec;">Lecture</span>
+        </div>
+        <div class="video-info">
+          <div class="video-topic">Bible</div>
+          <div class="video-title">Is the New Testament Reliable? The Manuscript Evidence</div>
+          <div class="video-presenter">Sean McDowell</div>
+          <div class="video-footer">
+            <span class="video-views">520K views</span>
+            <span class="video-action" style="color:var(--text-muted);">Pro only</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 9 — LOCKED -->
+      <div class="video-card locked" data-topic="islam" data-format="quick">
+        <div class="video-thumb">
+          <div class="video-thumb-bg" style="background:linear-gradient(135deg,#4a1b0c,#993c1d);">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="rgba(240,153,123,0.12)"/><polygon points="16,12 30,20 16,28" fill="rgba(240,153,123,0.7)"/></svg>
+          </div>
+          <div class="lock-overlay"><div class="lock-circle"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div></div>
+          <span class="duration-tag">12m</span>
+          <span class="format-tag" style="background:rgba(153,60,29,0.2);color:#f0997b;">Quick Answer</span>
+        </div>
+        <div class="video-info">
+          <div class="video-topic">Islam</div>
+          <div class="video-title">Top 5 Muslim Objections to Christianity Answered</div>
+          <div class="video-presenter">Sean McDowell</div>
+          <div class="video-footer">
+            <span class="video-views">480K views</span>
+            <span class="video-action" style="color:var(--text-muted);">Pro only</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 10 — LOCKED -->
+      <div class="video-card locked" data-topic="science" data-format="debate">
+        <div class="video-thumb">
+          <div class="video-thumb-bg" style="background:linear-gradient(135deg,#042c53,#285a9e);">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="rgba(55,138,221,0.12)"/><polygon points="16,12 30,20 16,28" fill="rgba(55,138,221,0.7)"/></svg>
+          </div>
+          <div class="lock-overlay"><div class="lock-circle"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div></div>
+          <span class="duration-tag">1h 55m</span>
+          <span class="format-tag" style="background:rgba(40,90,158,0.2);color:#6f9fd4;">Full Debate</span>
+        </div>
+        <div class="video-info">
+          <div class="video-topic">Science & Faith</div>
+          <div class="video-title">Has Science Buried God? — Lennox vs Dawkins</div>
+          <div class="video-presenter">John Lennox vs Richard Dawkins</div>
+          <div class="video-footer">
+            <span class="video-views">3.8M views</span>
+            <span class="video-action" style="color:var(--text-muted);">Pro only</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 11 — LOCKED -->
+      <div class="video-card locked" data-topic="existence" data-format="quick">
+        <div class="video-thumb">
+          <div class="video-thumb-bg" style="background:linear-gradient(135deg,#0f2040,#285a9e);">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="rgba(200,169,81,0.1)"/><polygon points="16,12 30,20 16,28" fill="rgba(200,169,81,0.6)"/></svg>
+          </div>
+          <div class="lock-overlay"><div class="lock-circle"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div></div>
+          <span class="duration-tag">8m</span>
+          <span class="format-tag" style="background:rgba(40,90,158,0.15);color:#6f9fd4;">Quick Answer</span>
+        </div>
+        <div class="video-info">
+          <div class="video-topic">God's Existence</div>
+          <div class="video-title">The Moral Argument in 8 Minutes</div>
+          <div class="video-presenter">William Lane Craig</div>
+          <div class="video-footer">
+            <span class="video-views">920K views</span>
+            <span class="video-action" style="color:var(--text-muted);">Pro only</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 12 — LOCKED -->
+      <div class="video-card locked" data-topic="bible" data-format="quick">
+        <div class="video-thumb">
+          <div class="video-thumb-bg" style="background:linear-gradient(135deg,#26215c,#3c3489);">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="rgba(175,169,236,0.1)"/><polygon points="16,12 30,20 16,28" fill="rgba(175,169,236,0.6)"/></svg>
+          </div>
+          <div class="lock-overlay"><div class="lock-circle"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div></div>
+          <span class="duration-tag">6m</span>
+          <span class="format-tag" style="background:rgba(60,52,137,0.2);color:#afa9ec;">Quick Answer</span>
+        </div>
+        <div class="video-info">
+          <div class="video-topic">Bible</div>
+          <div class="video-title">Hasn't the Bible Been Changed? — The Manuscript Evidence</div>
+          <div class="video-presenter">Frank Turek</div>
+          <div class="video-footer">
+            <span class="video-views">340K views</span>
+            <span class="video-action" style="color:var(--text-muted);">Pro only</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="no-results" id="no-results">
+      <div class="no-results-title">No videos match those filters</div>
+      <div class="no-results-sub">Try a different topic or format combination.</div>
+    </div>
+
+    <div class="pro-banner reveal">
+      <div class="pro-banner-text">
+        <div class="pro-banner-title">50+ more videos in the full library</div>
+        <div class="pro-banner-sub">Upgrade to Pro to unlock all debates, lectures, and quick answers — including Lennox vs Dawkins, Habermas vs Flew, and much more.</div>
+      </div>
+      <a href="index.html#pricing" class="pro-banner-btn">Unlock Pro — $8/mo</a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Apologia<span>Daily</span></div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="evidence-library.html">Evidence Library</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+      <div class="footer-copy">
+        © 2026 Apologia Daily. Built for the defence of the Gospel.<br/>
+        <span style="font-size:0.7rem;opacity:0.6;margin-top:6px;display:block;">Apologia Daily is an independent platform not affiliated with, endorsed by, or officially connected to any individuals, ministries, or organisations referenced on this site. All third-party names are referenced for educational purposes only.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let activeFilters = { topic: 'all', format: 'all' };
+
+    function setFilter(type, value, btn) {
+      activeFilters[type] = value;
+      const group = btn.closest('.filter-group');
+      group.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const cards = document.querySelectorAll('.video-card');
+      let count = 0;
+      cards.forEach(card => {
+        const topic = card.dataset.topic || '';
+        const format = card.dataset.format || '';
+        const topicMatch = activeFilters.topic === 'all' || topic === activeFilters.topic;
+        const formatMatch = activeFilters.format === 'all' || format === activeFilters.format;
+        if (topicMatch && formatMatch) {
+          card.classList.remove('hidden');
+          count++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+      const noResults = document.getElementById('no-results');
+      noResults.classList.toggle('visible', count === 0);
+      document.getElementById('results-count').textContent = 'Showing ' + count + ' video' + (count !== 1 ? 's' : '');
+    }
+
+    function playVideo(card) {
+      if (card.classList.contains('locked')) {
+        window.location.href = 'index.html#pricing';
+        return;
+      }
+      const id = card.dataset.id;
+      const title = card.dataset.title;
+      const desc = card.dataset.desc;
+      const format = card.querySelector('.format-tag').textContent.trim();
+      const badgeStyle = card.querySelector('.format-tag').getAttribute('style');
+
+      document.getElementById('player-iframe').src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+      document.getElementById('player-title').textContent = title;
+      document.getElementById('player-desc').textContent = desc;
+
+      const badge = document.getElementById('player-badge');
+      badge.textContent = format;
+      badge.setAttribute('style', badgeStyle + '; font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px;');
+
+      const tags = document.getElementById('player-tags');
+      tags.innerHTML = '';
+      const topic = card.querySelector('.video-topic').textContent;
+      const presenter = card.dataset.presenter;
+      [topic, presenter].forEach(t => {
+        const span = document.createElement('span');
+        span.className = 'player-tag';
+        span.textContent = t;
+        tags.appendChild(span);
+      });
+
+      buildRelated(card);
+
+      const ps = document.getElementById('player-section');
+      ps.classList.add('visible');
+      ps.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function buildRelated(currentCard) {
+      const list = document.getElementById('related-list');
+      list.innerHTML = '';
+      const cards = document.querySelectorAll('.video-card:not(.locked)');
+      let added = 0;
+      cards.forEach(card => {
+        if (card === currentCard || added >= 3) return;
+        const div = document.createElement('div');
+        div.className = 'related-card';
+        const thumbBg = card.querySelector('.video-thumb-bg').getAttribute('style');
+        div.innerHTML = `
+          <div class="related-thumb" style="${thumbBg}; border-radius:3px;">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="7,4 16,10 7,16" fill="rgba(255,255,255,0.7)"/></svg>
+          </div>
+          <div class="related-info">
+            <div class="related-title">${card.dataset.title}</div>
+            <div class="related-meta">${card.querySelector('.duration-tag').textContent} · ${card.querySelector('.video-topic').textContent}</div>
+          </div>`;
+        div.onclick = () => playVideo(card);
+        list.appendChild(div);
+        added++;
+      });
+    }
+
+    function closePlayer() {
+      document.getElementById('player-iframe').src = '';
+      document.getElementById('player-section').classList.remove('visible');
+    }
+
+    function goToArena() { window.location.href = 'index.html#debate'; }
+    function saveVideo() { alert('Save feature coming soon with your Pro account!'); }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
