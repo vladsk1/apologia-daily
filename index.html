@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apologia Daily — Defend Your Faith With Confidence</title>
+  <meta name="description" content="The intellectual Christian's platform for apologetics. Evidence, debate practice, and daily faith and reason devotionals." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy-950: #050d1a;
+      --navy-900: #0a1628;
+      --navy-800: #0f2040;
+      --navy-700: #163058;
+      --navy-600: #1e4278;
+      --navy-500: #285a9e;
+      --navy-400: #3b72bc;
+      --navy-300: #6f9fd4;
+      --navy-200: #aecae8;
+      --navy-100: #ddeaf5;
+      --navy-50:  #f0f6fb;
+      --gold:     #c8a951;
+      --gold-light: #e8cf87;
+      --white:    #ffffff;
+      --off-white: #f8f7f4;
+      --text-dark: #0a1628;
+      --text-mid:  #3a4a62;
+      --text-muted: #7a8fa8;
+      --border:   #d4e0ec;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: 'DM Sans', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(5, 13, 26, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex; align-items: center; gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-ui);
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta {
+      font-family: var(--font-ui);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 3px;
+      background: var(--gold);
+      color: var(--navy-950);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold-light); }
+    .nav-mobile-toggle {
+      display: none;
+      background: none; border: none; cursor: pointer;
+      flex-direction: column; gap: 5px; padding: 4px;
+    }
+    .nav-mobile-toggle span {
+      display: block; width: 22px; height: 2px;
+      background: var(--white); border-radius: 2px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: var(--navy-950);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 0%, rgba(30,66,120,0.5) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 80% 80%, rgba(200,169,81,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.2s forwards;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--white);
+      max-width: 820px;
+      margin: 0 auto 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.4s forwards;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-sub {
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 300;
+      color: rgba(255,255,255,0.65);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.6s forwards;
+    }
+    .hero-actions {
+      display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; justify-content: center;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.8s forwards;
+    }
+    .btn-primary {
+      font-family: var(--font-ui);
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 14px 32px;
+      border-radius: 3px;
+      background: var(--gold);
+      color: var(--navy-950);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: all 0.2s;
+      border: none; cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-ghost {
+      font-family: var(--font-ui);
+      font-size: 0.95rem;
+      font-weight: 400;
+      padding: 14px 32px;
+      border-radius: 3px;
+      background: transparent;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: all 0.2s;
+    }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.5); color: var(--white); }
+    .hero-verse {
+      position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-style: italic;
+      color: rgba(255,255,255,0.3);
+      white-space: nowrap;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 1.2s forwards;
+    }
+    .hero-scroll {
+      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 1.4s forwards;
+    }
+    .scroll-line {
+      width: 1px; height: 40px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3));
+      animation: scrollPulse 2s ease infinite;
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--navy-900);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 1.5rem 2rem;
+      display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap;
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--gold);
+      display: block;
+    }
+    .stat-lbl {
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ── SECTION BASICS ── */
+    section { padding: 6rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-eyebrow {
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--navy-500);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text-dark);
+      margin-bottom: 1.25rem;
+    }
+    .section-title em { font-style: italic; color: var(--navy-600); }
+    .section-sub {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text-mid);
+      max-width: 560px;
+      line-height: 1.8;
+    }
+
+    /* ── FEATURES ── */
+    .features { background: var(--off-white); }
+    .features-intro { margin-bottom: 4rem; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .feature-card {
+      background: var(--white);
+      padding: 2.5rem;
+      position: relative;
+      transition: background 0.2s;
+    }
+    .feature-card:hover { background: var(--navy-50); }
+    .feature-num {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--navy-100);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .feature-icon {
+      width: 44px; height: 44px;
+      background: var(--navy-900);
+      border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    .feature-icon svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+    .feature-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+    }
+    .feature-desc {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--text-mid);
+      line-height: 1.75;
+    }
+    .feature-tag {
+      display: inline-block;
+      margin-top: 1.25rem;
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--navy-500);
+      border-bottom: 1px solid var(--navy-200);
+      padding-bottom: 2px;
+    }
+
+    /* ── DEBATE ARENA PROMO ── */
+    .arena-section {
+      background: var(--navy-900);
+      color: var(--white);
+    }
+    .arena-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .arena-text .section-eyebrow { color: var(--gold); }
+    .arena-text .section-title { color: var(--white); }
+    .arena-text .section-title em { color: var(--gold); }
+    .arena-text .section-sub { color: rgba(255,255,255,0.6); max-width: 100%; }
+    .arena-features { list-style: none; margin: 2rem 0; }
+    .arena-features li {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.75);
+    }
+    .arena-features li:last-child { border-bottom: none; }
+    .arena-check {
+      width: 20px; height: 20px; flex-shrink: 0;
+      background: rgba(200,169,81,0.15);
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+    }
+    .arena-check svg { width: 11px; height: 11px; stroke: var(--gold); fill: none; stroke-width: 2.5; }
+    .arena-visual {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 2rem;
+      overflow: hidden;
+    }
+    .arena-vs-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .arena-side { text-align: center; }
+    .arena-side-name {
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 4px;
+    }
+    .arena-side-label {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .arena-vs-text {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .arena-msg {
+      border-radius: 4px;
+      padding: 12px 14px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    .arena-msg.opp {
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.8);
+      border-left: 2px solid rgba(255,255,255,0.15);
+    }
+    .arena-msg.user {
+      background: rgba(200,169,81,0.12);
+      color: rgba(255,255,255,0.9);
+      border-left: 2px solid var(--gold);
+      margin-left: 2rem;
+    }
+    .arena-msg-label {
+      font-family: var(--font-ui);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      opacity: 0.5;
+    }
+
+    /* ── DAILY SECTION ── */
+    .daily-section { background: var(--white); }
+    .daily-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .daily-card {
+      background: var(--navy-950);
+      border-radius: 6px;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .daily-card::before {
+      content: '\201C';
+      position: absolute; top: -1rem; left: 1.5rem;
+      font-family: var(--font-display);
+      font-size: 8rem;
+      color: rgba(200,169,81,0.12);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .daily-date {
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+    .daily-verse {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+    .daily-ref {
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      margin-bottom: 1.5rem;
+    }
+    .daily-reflection {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.75;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .daily-actions {
+      display: flex; gap: 10px; margin-top: 1.5rem;
+    }
+    .daily-btn {
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      padding: 7px 16px;
+      border-radius: 3px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: transparent;
+      color: rgba(255,255,255,0.6);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .daily-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .streak-row {
+      display: flex; gap: 6px; margin-top: 1.5rem;
+    }
+    .streak-day {
+      width: 28px; height: 28px;
+      border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-ui);
+      font-size: 0.65rem;
+      font-weight: 500;
+    }
+    .streak-day.done { background: var(--gold); color: var(--navy-950); }
+    .streak-day.today { background: rgba(200,169,81,0.2); border: 1px solid var(--gold); color: var(--gold); }
+    .streak-day.empty { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.2); }
+
+    /* ── APOLOGISTS ── */
+    .apologists { background: var(--off-white); }
+    .apologists-intro { text-align: center; margin-bottom: 3.5rem; }
+    .apologists-intro .section-sub { margin: 0 auto; }
+    .apologists-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .apologist-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.75rem;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .apologist-card:hover {
+      border-color: var(--navy-300);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(10,22,40,0.08);
+    }
+    .apologist-initial {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: var(--navy-900);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--gold);
+    }
+    .apologist-name {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+    .apologist-role {
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ── PRICING ── */
+    .pricing { background: var(--white); }
+    .pricing-intro { text-align: center; margin-bottom: 3.5rem; }
+    .pricing-intro .section-sub { margin: 0 auto; }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .pricing-card {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2.5rem;
+      position: relative;
+    }
+    .pricing-card.featured {
+      background: var(--navy-900);
+      border-color: var(--navy-700);
+    }
+    .pricing-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      font-family: var(--font-ui);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: var(--navy-950);
+      padding: 4px 14px;
+      border-radius: 20px;
+    }
+    .pricing-tier {
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .pricing-card.featured .pricing-tier { color: rgba(255,255,255,0.45); }
+    .pricing-price {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .pricing-card.featured .pricing-price { color: var(--white); }
+    .pricing-period {
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+    .pricing-card.featured .pricing-period { color: rgba(255,255,255,0.4); }
+    .pricing-features { list-style: none; margin-bottom: 2rem; }
+    .pricing-features li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .pricing-card.featured .pricing-features li {
+      color: rgba(255,255,255,0.65);
+      border-bottom-color: rgba(255,255,255,0.08);
+    }
+    .pricing-features li:last-child { border-bottom: none; }
+    .check-mark {
+      width: 16px; height: 16px; flex-shrink: 0;
+      stroke: var(--navy-500); fill: none; stroke-width: 2.5;
+      margin-top: 3px;
+    }
+    .pricing-card.featured .check-mark { stroke: var(--gold); }
+    .btn-pricing {
+      display: block; width: 100%; text-align: center;
+      font-family: var(--font-ui);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 13px;
+      border-radius: 3px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+    .btn-pricing-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-dark);
+    }
+    .btn-pricing-outline:hover { border-color: var(--navy-400); color: var(--navy-600); }
+    .btn-pricing-gold {
+      background: var(--gold);
+      color: var(--navy-950);
+    }
+    .btn-pricing-gold:hover { background: var(--gold-light); }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--navy-950);
+      text-align: center;
+      padding: 8rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(30,66,120,0.5) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-section .section-eyebrow { color: var(--gold); text-align: center; margin-bottom: 1rem; }
+    .cta-section .section-title { color: var(--white); max-width: 600px; margin: 0 auto 1.25rem; }
+    .cta-section .section-sub { color: rgba(255,255,255,0.55); margin: 0 auto 2.5rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy-950);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 3rem 2rem 2rem;
+    }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .footer-logo span { color: var(--gold); }
+    .footer-links {
+      display: flex; gap: 2rem; list-style: none; flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.35);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+    .footer-copy {
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.2);
+      width: 100%;
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin-top: 1.5rem;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; }
+      50%       { opacity: 0.7; }
+    }
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .nav-mobile-toggle { display: flex; }
+      .arena-inner, .daily-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .arena-visual { order: -1; }
+      .stats-bar { gap: 2rem; }
+      section { padding: 4rem 1.25rem; }
+      .hero { padding: 7rem 1.25rem 5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#debate">Debate Arena</a></li>
+      <li><a href="#daily">Daily</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+    </ul>
+    <a href="#pricing" class="nav-cta">Start Free</a>
+    <button class="nav-mobile-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-eyebrow">Christian Apologetics Platform</p>
+    <h1>Defend Your Faith<br />with <em>Reason & Evidence</em></h1>
+    <p class="hero-sub">The serious intellectual platform for Christians. Master the evidence, practise real debates, and grow in confident faith — every single day.</p>
+    <div class="hero-actions">
+      <a href="#pricing" class="btn-primary">Begin Your Journey</a>
+      <a href="#features" class="btn-ghost">Explore the Platform</a>
+    </div>
+    <p class="hero-verse">"Always be prepared to give an answer to everyone who asks." — 1 Peter 3:15</p>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num">240+</span>
+      <span class="stat-lbl">Arguments & Answers</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">4</span>
+      <span class="stat-lbl">Debate Opponents</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">50+</span>
+      <span class="stat-lbl">Video Debates</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">365</span>
+      <span class="stat-lbl">Daily Devotionals</span>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features-intro reveal">
+        <p class="section-eyebrow">What's inside</p>
+        <h2 class="section-title">Everything you need to<br /><em>stand firm</em> in your faith</h2>
+        <p class="section-sub">Apologia Daily brings together the tools, content, and practice environment that serious Christians need — in one beautifully designed platform.</p>
+      </div>
+      <div class="features-grid reveal">
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="feature-title">Evidence Library</div>
+          <div class="feature-desc">300+ arguments for God's existence, the resurrection, biblical reliability, and science & faith. Organised from beginner to advanced.</div>
+          <span class="feature-tag">Explore arguments →</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div class="feature-title">AI Ask Anything</div>
+          <div class="feature-desc">Ask any question about the faith and receive a thoughtful, evidence-based answer drawn from the world's leading apologists — available 24/7.</div>
+          <span class="feature-tag">Ask a question →</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="feature-title">Debate Arena</div>
+          <div class="feature-desc">Go head to head with an AI atheist, Muslim, agnostic, or secularist. Choose your topic, pick your difficulty, and get scored feedback after every round.</div>
+          <span class="feature-tag">Enter the arena →</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div class="feature-title">Video Library</div>
+          <div class="feature-desc">Curated debates, lectures, and quick-answer videos from Craig, Turek, McDowell, and more — organised by topic so you find exactly what you need.</div>
+          <span class="feature-tag">Watch debates →</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="feature-title">Daily Devotional</div>
+          <div class="feature-desc">A daily verse, reflection, and guided prayer at the intersection of faith and reason. Build the habit of a thoughtful, grounded Christian life.</div>
+          <span class="feature-tag">Start today →</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="feature-title">Community</div>
+          <div class="feature-desc">A moderated forum where Christians sharpen each other — discuss arguments, share stories, and prepare together for the conversations that matter.</div>
+          <span class="feature-tag">Join the community →</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DEBATE ARENA -->
+  <section class="arena-section" id="debate">
+    <div class="container">
+      <div class="arena-inner">
+        <div class="arena-text reveal">
+          <p class="section-eyebrow">The Debate Arena</p>
+          <h2 class="section-title">Practise the conversation<br />before you have <em>the real one</em></h2>
+          <p class="section-sub">Go head to head with an AI opponent trained on the strongest atheist, Muslim, and secular arguments. Get honest feedback. Improve every round.</p>
+          <ul class="arena-features">
+            <li>
+              <div class="arena-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+              Four opponents — atheist, Muslim, agnostic, secularist
+            </li>
+            <li>
+              <div class="arena-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+              Three difficulty levels from gentle to expert
+            </li>
+            <li>
+              <div class="arena-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+              Scored feedback after every debate round
+            </li>
+            <li>
+              <div class="arena-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+              Linked directly to study resources for each weakness
+            </li>
+          </ul>
+          <a href="#pricing" class="btn-primary">Try the Arena</a>
+        </div>
+        <div class="arena-visual reveal">
+          <div class="arena-vs-bar">
+            <div class="arena-side">
+              <div class="arena-side-name">You</div>
+              <div class="arena-side-label">Christian</div>
+            </div>
+            <div class="arena-vs-text">VS</div>
+            <div class="arena-side">
+              <div class="arena-side-name">Opponent</div>
+              <div class="arena-side-label">The Atheist</div>
+            </div>
+          </div>
+          <div class="arena-msg opp">
+            <div class="arena-msg-label">Atheist</div>
+            Science explains the universe perfectly without invoking God. Why believe in an invisible being with zero empirical evidence?
+          </div>
+          <div class="arena-msg user">
+            <div class="arena-msg-label">You</div>
+            Science explains the how — but not the why there is something rather than nothing. The Kalam argument shows the universe began to exist and therefore requires a cause outside itself...
+          </div>
+          <div class="arena-msg opp">
+            <div class="arena-msg-label">Atheist</div>
+            Even granting a first cause — why must that cause be the Christian God? You've shown a deist watchmaker at best, not Yahweh.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY -->
+  <section class="daily-section" id="daily">
+    <div class="container">
+      <div class="daily-inner">
+        <div class="daily-card reveal">
+          <div class="daily-date">Today · Wednesday, 4 June 2026</div>
+          <div class="daily-verse">"Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have — but do this with gentleness and respect."</div>
+          <div class="daily-ref">1 Peter 3:15</div>
+          <div class="daily-reflection">Apologetics is not about winning arguments. It is about loving people enough to think carefully on their behalf. Today, consider who in your life is asking hard questions — and how you might meet them with both truth and grace.</div>
+          <div class="daily-actions">
+            <button class="daily-btn">▶ Listen</button>
+            <button class="daily-btn">✦ Pray</button>
+            <button class="daily-btn">↗ Share</button>
+          </div>
+          <div class="streak-row">
+            <div class="streak-day done">M</div>
+            <div class="streak-day done">T</div>
+            <div class="streak-day done">W</div>
+            <div class="streak-day done">T</div>
+            <div class="streak-day done">F</div>
+            <div class="streak-day today">S</div>
+            <div class="streak-day empty">S</div>
+          </div>
+        </div>
+        <div class="reveal">
+          <p class="section-eyebrow">Daily Devotional</p>
+          <h2 class="section-title">Faith and reason,<br /><em>every morning</em></h2>
+          <p class="section-sub">Like Hallow for apologetics — a daily rhythm of scripture, reflection, and prayer rooted in evidence and reason. Build a streak. Grow a habit. Deepen your confidence.</p>
+          <ul class="arena-features" style="border-top: 1px solid var(--border); margin-top: 2rem;">
+            <li style="border-bottom-color: var(--border); color: var(--text-mid);">
+              <div class="arena-check" style="background: rgba(21,66,120,0.08); border-color: var(--navy-400);">
+                <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#285a9e" stroke-width="2.5" fill="none"/></svg>
+              </div>
+              Daily verse tied to an apologetics theme
+            </li>
+            <li style="border-bottom-color: var(--border); color: var(--text-mid);">
+              <div class="arena-check" style="background: rgba(21,66,120,0.08); border-color: var(--navy-400);">
+                <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#285a9e" stroke-width="2.5" fill="none"/></svg>
+              </div>
+              Short written reflection — readable in 2 minutes
+            </li>
+            <li style="border-bottom-color: var(--border); color: var(--text-mid);">
+              <div class="arena-check" style="background: rgba(21,66,120,0.08); border-color: var(--navy-400);">
+                <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#285a9e" stroke-width="2.5" fill="none"/></svg>
+              </div>
+              Guided prayer for faith, doubt, and conversation
+            </li>
+            <li style="border-bottom: none; color: var(--text-mid);">
+              <div class="arena-check" style="background: rgba(21,66,120,0.08); border-color: var(--navy-400);">
+                <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#285a9e" stroke-width="2.5" fill="none"/></svg>
+              </div>
+              Streak tracking to build the daily habit
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APOLOGISTS -->
+  <section class="apologists">
+    <div class="container">
+      <div class="apologists-intro reveal">
+        <p class="section-eyebrow">Content from the best</p>
+        <h2 class="section-title">Learn from the world's leading <em>apologists</em></h2>
+        <p class="section-sub">Apologia Daily curates content from the most respected voices in Christian apologetics — all in one place.</p>
+      </div>
+      <div class="apologists-grid reveal">
+        <div class="apologist-card">
+          <div class="apologist-initial">WLC</div>
+          <div class="apologist-name">William Lane Craig</div>
+          <div class="apologist-role">Philosopher & theologian<br/>Reasonable Faith</div>
+        </div>
+        <div class="apologist-card">
+          <div class="apologist-initial">FT</div>
+          <div class="apologist-name">Frank Turek</div>
+          <div class="apologist-role">Author & speaker<br/>CrossExamined</div>
+        </div>
+        <div class="apologist-card">
+          <div class="apologist-initial">SM</div>
+          <div class="apologist-name">Sean McDowell</div>
+          <div class="apologist-role">Professor & author<br/>Biola University</div>
+        </div>
+        <div class="apologist-card">
+          <div class="apologist-initial">GK</div>
+          <div class="apologist-name">Greg Koukl</div>
+          <div class="apologist-role">Author & speaker<br/>Stand to Reason</div>
+        </div>
+        <div class="apologist-card">
+          <div class="apologist-initial">GH</div>
+          <div class="apologist-name">Gary Habermas</div>
+          <div class="apologist-role">Resurrection scholar<br/>Liberty University</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="pricing-intro reveal">
+        <p class="section-eyebrow">Pricing</p>
+        <h2 class="section-title">Start free. Go <em>deeper</em> when you're ready.</h2>
+        <p class="section-sub">Every Christian deserves access to a defence of their faith. Start for free — upgrade when you want the full experience.</p>
+      </div>
+      <div class="pricing-grid reveal">
+        <div class="pricing-card">
+          <div class="pricing-tier">Free</div>
+          <div class="pricing-price">$0</div>
+          <div class="pricing-period">forever</div>
+          <ul class="pricing-features">
+            <li>
+              <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Evidence Library (basic)
+            </li>
+            <li>
+              <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              5 AI questions per day
+            </li>
+            <li>
+              <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Daily devotional
+            </li>
+            <li>
+              <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Video library (limited)
+            </li>
+          </ul>
+          <a href="#" class="btn-pricing btn-pricing-outline">Get started free</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Most popular</div>
+          <div class="pricing-tier">Pro</div>
+          <div class="pricing-price" style="color:var(--gold);">$8</div>
+          <div class="pricing-period">per month · billed annually</div>
+          <ul class="pricing-features">
+            <li>
+              <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Full Evidence Library
+            </li>
+            <li>
+              <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Unlimited AI conversations
+            </li>
+            <li>
+              <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Full Debate Arena access
+            </li>
+            <li>
+              <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Complete video library
+            </li>
+            <li>
+              <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              All courses & study paths
+            </li>
+            <li>
+              <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Community forum access
+            </li>
+          </ul>
+          <a href="#" class="btn-pricing btn-pricing-gold">Start 7-day free trial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container" style="position:relative;z-index:1;">
+      <p class="section-eyebrow">Begin today</p>
+      <h2 class="section-title reveal">Are you ready to <em>defend</em><br />what you believe?</h2>
+      <p class="section-sub reveal">Join thousands of Christians building a confident, evidence-based faith — one day at a time.</p>
+      <div class="hero-actions reveal">
+        <a href="#pricing" class="btn-primary">Start for Free</a>
+        <a href="#features" class="btn-ghost">See All Features</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Apologia<span>Daily</span></div>
+      <ul class="footer-links">
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+      <div class="footer-copy">
+        © 2026 Apologia Daily. Built for the defence of the Gospel.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-mobile-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', () => {
+        const open = navLinks.style.display === 'flex';
+        navLinks.style.display = open ? 'none' : 'flex';
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '64px';
+        navLinks.style.left = '0'; navLinks.style.right = '0';
+        navLinks.style.background = 'rgba(5,13,26,0.98)';
+        navLinks.style.padding = '1.5rem 2rem';
+        navLinks.style.gap = '1.5rem';
+      });
+    }
+  </script>
+</body>
+</html>
