@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evidence Library — Apologia Daily</title>
+  <meta name="description" content="300+ arguments for the Christian faith. Organised by category — God's existence, the resurrection, biblical reliability, and science & faith." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy-950: #050d1a;
+      --navy-900: #0a1628;
+      --navy-800: #0f2040;
+      --navy-700: #163058;
+      --navy-600: #1e4278;
+      --navy-500: #285a9e;
+      --navy-400: #3b72bc;
+      --navy-300: #6f9fd4;
+      --navy-200: #aecae8;
+      --navy-100: #ddeaf5;
+      --navy-50:  #f0f6fb;
+      --gold:     #c8a951;
+      --gold-light: #e8cf87;
+      --white:    #ffffff;
+      --off-white: #f8f7f4;
+      --text-dark: #0a1628;
+      --text-mid:  #3a4a62;
+      --text-muted: #7a8fa8;
+      --border:   #d4e0ec;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: 'DM Sans', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(5,13,26,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.25rem; font-weight: 600;
+      color: var(--white); text-decoration: none;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-family: var(--font-ui); font-size: 0.85rem; font-weight: 400;
+      color: rgba(255,255,255,0.7); text-decoration: none;
+      letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta {
+      font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500;
+      padding: 8px 20px; border-radius: 3px;
+      background: var(--gold); color: var(--navy-950);
+      text-decoration: none; transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold-light); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      background: var(--navy-950);
+      padding: 8rem 2rem 4rem;
+      position: relative; overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(30,66,120,0.5) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .page-header-inner {
+      max-width: 1100px; margin: 0 auto;
+      position: relative; z-index: 1;
+    }
+    .page-eyebrow {
+      font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem;
+    }
+    .page-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 700; line-height: 1.1;
+      color: var(--white); margin-bottom: 1rem;
+    }
+    .page-title em { font-style: italic; color: var(--gold); }
+    .page-sub {
+      font-size: 1.05rem; font-weight: 300;
+      color: rgba(255,255,255,0.6);
+      max-width: 560px; line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    .search-bar {
+      display: flex; gap: 0;
+      max-width: 520px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 4px; overflow: hidden;
+      background: rgba(255,255,255,0.05);
+    }
+    .search-bar input {
+      flex: 1; padding: 12px 16px;
+      background: transparent; border: none; outline: none;
+      font-family: var(--font-ui); font-size: 0.9rem;
+      color: var(--white);
+    }
+    .search-bar input::placeholder { color: rgba(255,255,255,0.3); }
+    .search-bar button {
+      padding: 12px 20px;
+      background: var(--gold); border: none; cursor: pointer;
+      font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500;
+      color: var(--navy-950); transition: background 0.2s;
+    }
+    .search-bar button:hover { background: var(--gold-light); }
+
+    /* ── CATEGORY NAV ── */
+    .category-nav {
+      background: var(--navy-900);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 0 2rem;
+      position: sticky; top: 64px; z-index: 90;
+    }
+    .category-nav-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; gap: 0; overflow-x: auto;
+    }
+    .cat-tab {
+      font-family: var(--font-ui); font-size: 0.82rem; font-weight: 400;
+      letter-spacing: 0.04em;
+      padding: 1rem 1.5rem;
+      color: rgba(255,255,255,0.5);
+      border-bottom: 2px solid transparent;
+      cursor: pointer; white-space: nowrap;
+      background: none; border-left: none; border-right: none; border-top: none;
+      transition: all 0.2s;
+    }
+    .cat-tab:hover { color: rgba(255,255,255,0.85); }
+    .cat-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+    /* ── MAIN CONTENT ── */
+    .main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 6rem; }
+
+    /* ── CATEGORY SECTION ── */
+    .category-section { display: none; }
+    .category-section.active { display: block; }
+
+    .cat-intro {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem; align-items: start;
+      padding: 2.5rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+    .cat-intro-text {}
+    .cat-intro-eyebrow {
+      font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .cat-intro-title {
+      font-family: var(--font-display);
+      font-size: 1.9rem; font-weight: 700; line-height: 1.2;
+      color: var(--text-dark); margin-bottom: 0.75rem;
+    }
+    .cat-intro-title em { font-style: italic; }
+    .cat-intro-desc {
+      font-size: 0.95rem; font-weight: 300;
+      color: var(--text-mid); line-height: 1.8; max-width: 560px;
+    }
+    .cat-count {
+      text-align: right; flex-shrink: 0;
+    }
+    .cat-count-num {
+      font-family: var(--font-display);
+      font-size: 3rem; font-weight: 700; line-height: 1;
+      display: block;
+    }
+    .cat-count-lbl {
+      font-family: var(--font-ui); font-size: 0.72rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ── ARGUMENT CARDS ── */
+    .arguments-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-bottom: 3rem; }
+    .argument-card {
+      background: var(--white);
+      padding: 0;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .argument-card:hover { background: var(--navy-50); }
+    .argument-card.open { background: var(--navy-50); }
+    .argument-header {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1.5rem 1.75rem;
+    }
+    .argument-num {
+      font-family: var(--font-display);
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--navy-200); min-width: 2rem;
+      flex-shrink: 0;
+    }
+    .argument-info { flex: 1; }
+    .argument-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem; font-weight: 600;
+      color: var(--text-dark); margin-bottom: 3px;
+    }
+    .argument-tagline {
+      font-family: var(--font-ui); font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .argument-meta { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .diff-badge {
+      font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 20px;
+    }
+    .diff-beginner { background: #e1f5ee; color: #0f6e56; }
+    .diff-intermediate { background: #faeeda; color: #854f0b; }
+    .diff-advanced { background: #eeedfe; color: #3c3489; }
+    .argument-chevron {
+      width: 18px; height: 18px;
+      stroke: var(--text-muted); fill: none; stroke-width: 2;
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    .argument-card.open .argument-chevron { transform: rotate(180deg); }
+    .argument-body {
+      display: none;
+      padding: 0 1.75rem 1.75rem 4.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .argument-card.open .argument-body { display: block; }
+    .argument-premise {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+    }
+    .argument-premise-label {
+      font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 0.75rem;
+    }
+    .argument-premise ol {
+      padding-left: 1.25rem;
+    }
+    .argument-premise ol li {
+      font-size: 0.95rem; color: var(--text-mid);
+      line-height: 1.7; margin-bottom: 4px;
+    }
+    .argument-explanation {
+      font-size: 0.95rem; font-weight: 300;
+      color: var(--text-mid); line-height: 1.85;
+      margin-bottom: 1.25rem;
+    }
+    .argument-objections { margin-bottom: 1.25rem; }
+    .argument-objections-title {
+      font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 0.75rem;
+    }
+    .objection-row {
+      display: flex; gap: 10px; align-items: flex-start;
+      padding: 8px 0; border-bottom: 1px solid var(--border);
+      font-size: 0.88rem;
+    }
+    .objection-row:last-child { border-bottom: none; }
+    .objection-q { color: var(--text-muted); min-width: 14px; flex-shrink: 0; font-style: italic; }
+    .objection-a { color: var(--text-mid); line-height: 1.6; }
+    .argument-footer {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      padding-top: 1.25rem; border-top: 1px solid var(--border);
+    }
+    .arg-action {
+      font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500;
+      padding: 7px 16px; border-radius: 3px; cursor: pointer;
+      text-decoration: none; transition: all 0.2s; border: none;
+    }
+    .arg-action-primary {
+      background: var(--navy-900); color: var(--white);
+    }
+    .arg-action-primary:hover { background: var(--navy-700); }
+    .arg-action-secondary {
+      background: transparent; color: var(--navy-600);
+      border: 1px solid var(--border);
+    }
+    .arg-action-secondary:hover { border-color: var(--navy-300); }
+
+    /* ── SUBCATEGORY LABEL ── */
+    .subcat-label {
+      font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 1.5rem 0 0.75rem;
+      margin-bottom: 0;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .subcat-label::after {
+      content: ''; flex: 1; height: 1px; background: var(--border);
+    }
+
+    /* ── LOCKED CARD ── */
+    .argument-card.locked {
+      opacity: 0.6; cursor: default;
+    }
+    .argument-card.locked:hover { background: var(--white); }
+    .lock-icon {
+      width: 16px; height: 16px;
+      stroke: var(--text-muted); fill: none; stroke-width: 2;
+    }
+
+    /* ── PRO BANNER ── */
+    .pro-banner {
+      background: var(--navy-900);
+      border-radius: 4px;
+      padding: 2rem 2.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 2rem; flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .pro-banner-text {}
+    .pro-banner-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem; font-weight: 600;
+      color: var(--white); margin-bottom: 4px;
+    }
+    .pro-banner-sub {
+      font-family: var(--font-ui); font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .pro-banner-btn {
+      font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500;
+      padding: 11px 24px; border-radius: 3px;
+      background: var(--gold); color: var(--navy-950);
+      text-decoration: none; white-space: nowrap;
+      transition: background 0.2s; border: none; cursor: pointer;
+    }
+    .pro-banner-btn:hover { background: var(--gold-light); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy-950);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 3rem 2rem 2rem;
+    }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;
+    }
+    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+    .footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-ui); font-size: 0.8rem; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+    .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
+
+    /* ── ANIMATIONS ── */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .cat-intro { grid-template-columns: 1fr; }
+      .cat-count { text-align: left; }
+      .argument-header { padding: 1.25rem; }
+      .argument-body { padding: 0 1.25rem 1.25rem 1.25rem; }
+      .main { padding: 2rem 1.25rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="evidence-library.html" class="active">Evidence Library</a></li>
+      <li><a href="#">Debate Arena</a></li>
+      <li><a href="#">Videos</a></li>
+      <li><a href="#">Daily</a></li>
+    </ul>
+    <a href="index.html#pricing" class="nav-cta">Start Free</a>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="page-eyebrow">Evidence Library</p>
+      <h1 class="page-title">The case for <em>Christianity</em>,<br/>argument by argument</h1>
+      <p class="page-sub">300+ carefully explained arguments for the Christian faith. From classical philosophy to modern science — organised by category, accessible to everyone.</p>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search arguments, topics, thinkers…" />
+        <button onclick="doSearch()">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY NAV -->
+  <div class="category-nav">
+    <div class="category-nav-inner">
+      <button class="cat-tab active" onclick="switchCat('existence', this)">God's Existence</button>
+      <button class="cat-tab" onclick="switchCat('resurrection', this)">The Resurrection</button>
+      <button class="cat-tab" onclick="switchCat('bible', this)">Biblical Reliability</button>
+      <button class="cat-tab" onclick="switchCat('science', this)">Science & Faith</button>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- ── GOD'S EXISTENCE ── -->
+    <div class="category-section active" id="cat-existence">
+      <div class="cat-intro reveal">
+        <div class="cat-intro-text">
+          <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 1 of 4</p>
+          <h2 class="cat-intro-title">Arguments for <em>God's Existence</em></h2>
+          <p class="cat-intro-desc">From Aristotle's unmoved mover to modern cosmology, these arguments draw on philosophy, physics, and logic to make a compelling case that a transcendent Creator exists.</p>
+        </div>
+        <div class="cat-count" style="color:var(--navy-500);">
+          <span class="cat-count-num">87</span>
+          <span class="cat-count-lbl">Arguments</span>
+        </div>
+      </div>
+
+      <p class="subcat-label">Cosmological arguments</p>
+      <div class="arguments-list reveal">
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">01</div>
+            <div class="argument-info">
+              <div class="argument-title">The Kalam Cosmological Argument</div>
+              <div class="argument-tagline">Everything that begins to exist has a cause — William Lane Craig</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-beginner">Beginner</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="argument-premise">
+              <div class="argument-premise-label">The argument</div>
+              <ol>
+                <li>Everything that begins to exist has a cause.</li>
+                <li>The universe began to exist.</li>
+                <li>Therefore, the universe has a cause.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">The Kalam is one of the most discussed arguments in modern philosophy of religion, popularised by philosopher William Lane Craig. The first premise is intuitive — nothing comes from nothing. The second is supported by both philosophical reasoning and modern cosmology: the Big Bang indicates the universe had an absolute beginning. The cause must be spaceless, timeless, immaterial, and enormously powerful — properties consistent with theism.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections answered</div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>Who made God?</strong> — The Kalam only applies to things that begin to exist. God, as a necessary and eternal being, never began to exist and therefore requires no cause.</span>
+              </div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>Quantum events happen without causes.</strong> — Quantum indeterminacy doesn't mean events are uncaused — they still occur within a pre-existing framework of physical laws and energy. They don't arise from absolute nothingness.</span>
+              </div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>Maybe the universe is eternal.</strong> — Both philosophical arguments (infinite regress is impossible) and scientific evidence (Second Law of Thermodynamics, BGV theorem) strongly support a temporal beginning.</span>
+              </div>
+            </div>
+            <div class="argument-footer">
+              <a href="#" class="arg-action arg-action-primary">Practice in Debate Arena →</a>
+              <a href="#" class="arg-action arg-action-secondary">Watch WLC explain this</a>
+              <a href="#" class="arg-action arg-action-secondary">Further reading</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">02</div>
+            <div class="argument-info">
+              <div class="argument-title">Leibniz's Contingency Argument</div>
+              <div class="argument-tagline">Why does anything exist rather than nothing?</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-intermediate">Intermediate</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="argument-premise">
+              <div class="argument-premise-label">The argument</div>
+              <ol>
+                <li>Everything that exists has an explanation of its existence.</li>
+                <li>If the universe has an explanation, that explanation is a necessary being.</li>
+                <li>The universe exists.</li>
+                <li>Therefore the universe has an explanation — a necessary, uncaused being.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">Developed by philosopher Gottfried Wilhelm Leibniz and championed in modern form by William Lane Craig and Alexander Pruss. The universe is contingent — it could have not existed. Contingent things require an explanation outside themselves. The only satisfying explanation for the entire physical universe must be something that exists necessarily by its own nature — a being that could not have failed to exist.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections answered</div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>The universe could just exist without explanation.</strong> — This violates the Principle of Sufficient Reason, which is foundational to all rational inquiry. Accepting brute inexplicability for the universe would undermine science itself.</span>
+              </div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>Why can't the necessary being be the universe itself?</strong> — A necessary being cannot be physical — the laws of physics could have been otherwise. The universe is contingent by nature; a necessary being must transcend it.</span>
+              </div>
+            </div>
+            <div class="argument-footer">
+              <a href="#" class="arg-action arg-action-primary">Practice in Debate Arena →</a>
+              <a href="#" class="arg-action arg-action-secondary">Further reading</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">03</div>
+            <div class="argument-info">
+              <div class="argument-title">The Thomistic Cosmological Argument</div>
+              <div class="argument-tagline">There must be an unmoved mover — Aquinas's Five Ways</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-advanced">Advanced</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="argument-premise">
+              <div class="argument-premise-label">The argument</div>
+              <ol>
+                <li>Things in the world are in motion or undergoing change.</li>
+                <li>Whatever is moved is moved by another — nothing moves itself.</li>
+                <li>An infinite regress of movers is impossible.</li>
+                <li>Therefore there must be a first unmoved mover — Pure Act itself.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">Thomas Aquinas's First Way draws on Aristotle's metaphysics of act and potency. Every change in the universe is a transition from potential to actual — but potential cannot actualise itself. The chain of causes cannot regress infinitely; it must terminate in something that is Pure Act — that exists necessarily and moves without being moved. This is what all people call God.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections answered</div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>Why can't the chain be infinite?</strong> — An actually infinite regress of simultaneous causes cannot explain current motion. The question is not about a temporal series but a hierarchical series of causes operating right now.</span>
+              </div>
+            </div>
+            <div class="argument-footer">
+              <a href="#" class="arg-action arg-action-primary">Practice in Debate Arena →</a>
+              <a href="#" class="arg-action arg-action-secondary">Further reading</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="subcat-label">Teleological arguments</p>
+      <div class="arguments-list reveal">
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">04</div>
+            <div class="argument-info">
+              <div class="argument-title">The Fine-Tuning Argument</div>
+              <div class="argument-tagline">The physical constants of the universe are exquisitely calibrated for life</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-beginner">Beginner</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="argument-premise">
+              <div class="argument-premise-label">The argument</div>
+              <ol>
+                <li>The fine-tuning of the universe for intelligent life is either physical necessity, chance, or design.</li>
+                <li>It is not physical necessity, and the odds against chance are astronomically prohibitive.</li>
+                <li>Therefore the fine-tuning is best explained by design.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">Physicists have discovered that the constants of nature — the strength of gravity, the mass of electrons, the cosmological constant — are calibrated to life-permitting values with extraordinary precision. If any were different by even a fraction, no stars, planets, chemistry, or life would be possible. Cosmologist Robin Collins and philosopher William Lane Craig argue this points powerfully to intentional design.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections answered</div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>The Multiverse explains it.</strong> — The Multiverse is speculative and itself requires fine-tuning to produce life-permitting universes. It also raises deeper questions about why a multiverse-generating mechanism exists at all.</span>
+              </div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>We can only observe a life-permitting universe.</strong> — The Anthropic Principle explains why we observe fine-tuning but not why fine-tuning exists. A firing squad that all miss is not explained by "if they hadn't missed, I wouldn't be here to wonder."</span>
+              </div>
+            </div>
+            <div class="argument-footer">
+              <a href="#" class="arg-action arg-action-primary">Practice in Debate Arena →</a>
+              <a href="#" class="arg-action arg-action-secondary">Watch the explanation</a>
+              <a href="#" class="arg-action arg-action-secondary">Further reading</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card locked">
+          <div class="argument-header">
+            <div class="argument-num">05</div>
+            <div class="argument-info">
+              <div class="argument-title">The Argument from Biological Complexity</div>
+              <div class="argument-tagline">Irreducible complexity in biology points beyond blind evolution</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-intermediate">Intermediate</span>
+              <svg class="lock-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card locked">
+          <div class="argument-header">
+            <div class="argument-num">06</div>
+            <div class="argument-info">
+              <div class="argument-title">The Argument from Consciousness</div>
+              <div class="argument-tagline">The existence of mind cannot be explained by matter alone</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-advanced">Advanced</span>
+              <svg class="lock-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="subcat-label">Moral arguments</p>
+      <div class="arguments-list reveal">
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">07</div>
+            <div class="argument-info">
+              <div class="argument-title">The Moral Argument</div>
+              <div class="argument-tagline">If God does not exist, objective moral values do not exist</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-beginner">Beginner</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="argument-premise">
+              <div class="argument-premise-label">The argument</div>
+              <ol>
+                <li>If God does not exist, objective moral values and duties do not exist.</li>
+                <li>Objective moral values and duties do exist.</li>
+                <li>Therefore God exists.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">On atheism, moral values reduce to evolutionary preferences or cultural constructs — they may be useful, but they're not objectively binding. Yet we all recognise that torturing children for fun is not merely unfashionable — it is genuinely, objectively wrong. This deep moral intuition points to a transcendent moral lawgiver who grounds objective moral reality.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections answered</div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>You don't need God to be moral.</strong> — Agreed. This argument is not about whether atheists can behave morally — they clearly can. It's about what grounds the objectivity of moral values in the first place.</span>
+              </div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>Evolution explains morality.</strong> — Evolution explains why we have moral feelings, not why those feelings track objective moral facts. Evolutionary debunking arguments actually undermine moral realism on atheism.</span>
+              </div>
+            </div>
+            <div class="argument-footer">
+              <a href="#" class="arg-action arg-action-primary">Practice in Debate Arena →</a>
+              <a href="#" class="arg-action arg-action-secondary">Further reading</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pro-banner reveal">
+        <div class="pro-banner-text">
+          <div class="pro-banner-title">83 more arguments in this category</div>
+          <div class="pro-banner-sub">Upgrade to Pro to unlock the full Evidence Library — ontological, axiological, experiential arguments and more.</div>
+        </div>
+        <a href="index.html#pricing" class="pro-banner-btn">Unlock Pro — $8/mo</a>
+      </div>
+    </div>
+
+    <!-- ── RESURRECTION ── -->
+    <div class="category-section" id="cat-resurrection">
+      <div class="cat-intro reveal">
+        <div class="cat-intro-text">
+          <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 2 of 4</p>
+          <h2 class="cat-intro-title">Evidence for <em>the Resurrection</em></h2>
+          <p class="cat-intro-desc">The resurrection of Jesus is the cornerstone of the Christian faith. These arguments draw on historical methodology, ancient sources, and the minimal facts approach to make a compelling historical case.</p>
+        </div>
+        <div class="cat-count" style="color:var(--navy-500);">
+          <span class="cat-count-num">64</span>
+          <span class="cat-count-lbl">Arguments</span>
+        </div>
+      </div>
+
+      <p class="subcat-label">Minimal facts approach</p>
+      <div class="arguments-list reveal">
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">01</div>
+            <div class="argument-info">
+              <div class="argument-title">The Minimal Facts Argument</div>
+              <div class="argument-tagline">Five facts accepted by virtually all historians — Gary Habermas</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-beginner">Beginner</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="argument-premise">
+              <div class="argument-premise-label">The five minimal facts</div>
+              <ol>
+                <li>Jesus died by crucifixion.</li>
+                <li>His disciples believed he rose and appeared to them.</li>
+                <li>Paul, a persecutor of Christians, was suddenly converted.</li>
+                <li>James, a sceptic and Jesus's brother, was suddenly converted.</li>
+                <li>The tomb was empty.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">Historian Gary Habermas identified a set of facts about the post-crucifixion events that are accepted by the vast majority of New Testament scholars — including sceptics — on the basis of standard historical criteria. The resurrection is the best explanation of all five facts taken together. No other hypothesis — stolen body, swoon theory, hallucination theory — adequately accounts for all of them simultaneously.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections answered</div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>The disciples hallucinated.</strong> — Group hallucinations are not psychologically credible. More importantly, hallucinations don't explain the empty tomb, the conversion of Paul, or the conversion of the sceptic James.</span>
+              </div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>The disciples stole the body.</strong> — This doesn't explain Paul's conversion — he was actively persecuting Christians. It also doesn't explain why the disciples would willingly die for what they knew was a lie.</span>
+              </div>
+            </div>
+            <div class="argument-footer">
+              <a href="#" class="arg-action arg-action-primary">Practice in Debate Arena →</a>
+              <a href="#" class="arg-action arg-action-secondary">Further reading</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card locked">
+          <div class="argument-header">
+            <div class="argument-num">02</div>
+            <div class="argument-info">
+              <div class="argument-title">The Empty Tomb — Historical Evidence</div>
+              <div class="argument-tagline">Multiple independent sources confirm the tomb was found empty</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-intermediate">Intermediate</span>
+              <svg class="lock-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card locked">
+          <div class="argument-header">
+            <div class="argument-num">03</div>
+            <div class="argument-info">
+              <div class="argument-title">Paul's Conversion and the Early Creed</div>
+              <div class="argument-tagline">1 Corinthians 15 preserves a creed dating within years of the crucifixion</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-advanced">Advanced</span>
+              <svg class="lock-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pro-banner reveal">
+        <div class="pro-banner-text">
+          <div class="pro-banner-title">61 more resurrection arguments</div>
+          <div class="pro-banner-sub">Unlock the full library including the Shroud of Turin evidence, Roman crucifixion records, and responses to all major sceptical theories.</div>
+        </div>
+        <a href="index.html#pricing" class="pro-banner-btn">Unlock Pro — $8/mo</a>
+      </div>
+    </div>
+
+    <!-- ── BIBLE ── -->
+    <div class="category-section" id="cat-bible">
+      <div class="cat-intro reveal">
+        <div class="cat-intro-text">
+          <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 3 of 4</p>
+          <h2 class="cat-intro-title">The reliability of <em>the Bible</em></h2>
+          <p class="cat-intro-desc">Can we trust the Bible as a historically reliable document? These arguments draw on manuscript evidence, archaeology, prophecy, and textual criticism to make a compelling case for biblical reliability.</p>
+        </div>
+        <div class="cat-count" style="color:var(--navy-500);">
+          <span class="cat-count-num">79</span>
+          <span class="cat-count-lbl">Arguments</span>
+        </div>
+      </div>
+
+      <p class="subcat-label">Manuscript evidence</p>
+      <div class="arguments-list reveal">
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">01</div>
+            <div class="argument-info">
+              <div class="argument-title">The Manuscript Reliability Argument</div>
+              <div class="argument-tagline">The New Testament is the most well-attested document in ancient history</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-beginner">Beginner</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="argument-premise">
+              <div class="argument-premise-label">The key facts</div>
+              <ol>
+                <li>There are over 5,800 Greek New Testament manuscripts — more than any other ancient document.</li>
+                <li>The earliest manuscripts date within decades of the originals.</li>
+                <li>Scholars can reconstruct the original text with over 99% confidence.</li>
+                <li>No other ancient text comes remotely close to this level of attestation.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">We accept the works of Julius Caesar, Plato, and Tacitus as historically reliable despite having only a handful of manuscripts copied centuries after the originals. The New Testament, by contrast, has thousands of manuscripts, the earliest fragments dating to within a generation of the events. Textual criticism can confidently reconstruct the original documents. The question of reliability is settled by the same standards applied to all ancient history.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections answered</div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>The Bible has been changed over the centuries.</strong> — The volume and age of manuscripts actually makes it easier to detect any changes. Textual scholars can cross-reference thousands of manuscripts to identify and correct copying errors.</span>
+              </div>
+            </div>
+            <div class="argument-footer">
+              <a href="#" class="arg-action arg-action-primary">Practice in Debate Arena →</a>
+              <a href="#" class="arg-action arg-action-secondary">Further reading</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card locked">
+          <div class="argument-header">
+            <div class="argument-num">02</div>
+            <div class="argument-info">
+              <div class="argument-title">Archaeological Confirmation of the Bible</div>
+              <div class="argument-tagline">Hundreds of archaeological discoveries confirm biblical accounts</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-beginner">Beginner</span>
+              <svg class="lock-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pro-banner reveal">
+        <div class="pro-banner-text">
+          <div class="pro-banner-title">77 more biblical reliability arguments</div>
+          <div class="pro-banner-sub">Unlock the full library including fulfilled prophecy, the canon formation argument, and responses to all major critical theories.</div>
+        </div>
+        <a href="index.html#pricing" class="pro-banner-btn">Unlock Pro — $8/mo</a>
+      </div>
+    </div>
+
+    <!-- ── SCIENCE & FAITH ── -->
+    <div class="category-section" id="cat-science">
+      <div class="cat-intro reveal">
+        <div class="cat-intro-text">
+          <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 4 of 4</p>
+          <h2 class="cat-intro-title">Science & <em>Christian Faith</em></h2>
+          <p class="cat-intro-desc">Science and Christianity are not enemies — they are allies. These arguments address the origin of the universe, the origin of life, consciousness, and the philosophical limits of scientific inquiry.</p>
+        </div>
+        <div class="cat-count" style="color:var(--navy-500);">
+          <span class="cat-count-num">71</span>
+          <span class="cat-count-lbl">Arguments</span>
+        </div>
+      </div>
+
+      <p class="subcat-label">Origins & cosmology</p>
+      <div class="arguments-list reveal">
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">01</div>
+            <div class="argument-info">
+              <div class="argument-title">The Argument from the Big Bang</div>
+              <div class="argument-tagline">Modern cosmology confirms the universe had an absolute beginning</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-beginner">Beginner</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="argument-premise">
+              <div class="argument-premise-label">The key facts</div>
+              <ol>
+                <li>The standard Big Bang model shows the universe began from an initial singularity.</li>
+                <li>The Borde-Guth-Vilenkin theorem proves any universe that has been expanding must have had a beginning.</li>
+                <li>Space, time, matter, and energy all came into existence at this point.</li>
+                <li>Whatever caused the universe must be outside space, time, and matter.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">For most of history, atheists preferred an eternal universe — no beginning meant no need for a Creator. Modern cosmology has changed everything. The BGV theorem, proposed by atheist cosmologists themselves, demonstrates that the universe cannot be past-eternal. It had a beginning. This is exactly what Genesis 1:1 claimed thousands of years ago — and exactly what a theistic worldview predicts.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections answered</div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>What about the multiverse or cyclic models?</strong> — The BGV theorem applies to these models too. Even if our universe is part of a larger structure, that structure itself must have had a beginning.</span>
+              </div>
+            </div>
+            <div class="argument-footer">
+              <a href="#" class="arg-action arg-action-primary">Practice in Debate Arena →</a>
+              <a href="#" class="arg-action arg-action-secondary">Further reading</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card locked">
+          <div class="argument-header">
+            <div class="argument-num">02</div>
+            <div class="argument-info">
+              <div class="argument-title">The Origin of Life Argument</div>
+              <div class="argument-tagline">The information content of DNA points beyond unguided chemistry</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-intermediate">Intermediate</span>
+              <svg class="lock-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pro-banner reveal">
+        <div class="pro-banner-text">
+          <div class="pro-banner-title">69 more science & faith arguments</div>
+          <div class="pro-banner-sub">Unlock the full library including the argument from reason, consciousness, the reliability of science, and much more.</div>
+        </div>
+        <a href="index.html#pricing" class="pro-banner-btn">Unlock Pro — $8/mo</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Apologia<span>Daily</span></div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Debate Arena</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+      <div class="footer-copy">
+        © 2026 Apologia Daily. Built for the defence of the Gospel.<br/>
+        <span style="font-size:0.7rem;opacity:0.6;margin-top:6px;display:block;">Apologia Daily is an independent platform not affiliated with, endorsed by, or officially connected to any individuals, ministries, or organisations referenced on this site. All third-party names are referenced for educational purposes only.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function switchCat(cat, btn) {
+      document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.category-section').forEach(s => s.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('cat-' + cat).classList.add('active');
+      window.scrollTo({ top: 200, behavior: 'smooth' });
+    }
+
+    function toggleArg(card) {
+      if (card.classList.contains('locked')) return;
+      const wasOpen = card.classList.contains('open');
+      document.querySelectorAll('.argument-card.open').forEach(c => c.classList.remove('open'));
+      if (!wasOpen) card.classList.add('open');
+    }
+
+    function doSearch() {
+      const q = document.getElementById('search-input').value.trim().toLowerCase();
+      if (!q) return;
+      const cards = document.querySelectorAll('.argument-card:not(.locked)');
+      let found = false;
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(q)) {
+          card.classList.add('open');
+          if (!found) { card.scrollIntoView({ behavior: 'smooth', block: 'center' }); found = true; }
+        }
+      });
+    }
+
+    document.getElementById('search-input').addEventListener('keydown', e => {
+      if (e.key === 'Enter') doSearch();
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
