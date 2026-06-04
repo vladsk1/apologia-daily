@@ -191,6 +191,14 @@
     .footer-links a:hover { color: rgba(255,255,255,0.7); }
     .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
 
+    /* ── SUBTITLE SELECTOR ── */
+    .subtitle-row { display: flex; align-items: center; gap: 10px; margin-bottom: 1.25rem; flex-wrap: wrap; }
+    .subtitle-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); white-space: nowrap; }
+    .lang-btn { font-family: var(--font-ui); font-size: 0.75rem; padding: 5px 12px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.12); background: transparent; color: rgba(255,255,255,0.5); cursor: pointer; transition: all 0.15s; white-space: nowrap; }
+    .lang-btn:hover { border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.8); }
+    .lang-btn.active { background: var(--gold); color: var(--navy-950); border-color: var(--gold); }
+    .subtitle-note { font-family: var(--font-ui); font-size: 0.7rem; color: rgba(255,255,255,0.25); margin-top: 6px; line-height: 1.5; width: 100%; }
+
     /* ── ANIMATIONS ── */
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: none; }
@@ -237,6 +245,20 @@
           <h2 class="player-title" id="player-title"></h2>
           <p class="player-desc" id="player-desc"></p>
           <div class="player-tags" id="player-tags"></div>
+          <div class="subtitle-row">
+            <span class="subtitle-label">Subtitles</span>
+            <button class="lang-btn active" onclick="setLang('off', this)">Off</button>
+            <button class="lang-btn" onclick="setLang('en', this)">English</button>
+            <button class="lang-btn" onclick="setLang('mk', this)">Македонски</button>
+            <button class="lang-btn" onclick="setLang('es', this)">Español</button>
+            <button class="lang-btn" onclick="setLang('pt', this)">Português</button>
+            <button class="lang-btn" onclick="setLang('fr', this)">Français</button>
+            <button class="lang-btn" onclick="setLang('de', this)">Deutsch</button>
+            <button class="lang-btn" onclick="setLang('ar', this)">العربية</button>
+            <button class="lang-btn" onclick="setLang('zh-Hans', this)">中文</button>
+            <button class="lang-btn" onclick="setLang('ru', this)">Русский</button>
+            <div class="subtitle-note">Subtitle availability depends on the video creator. YouTube auto-generates subtitles for many languages. Macedonian (mk) supported.</div>
+          </div>
           <div class="player-actions">
             <a href="#" class="player-btn player-btn-primary" onclick="goToArena()">Practice this topic in Debate Arena →</a>
             <button class="player-btn player-btn-secondary" onclick="saveVideo()">Save video</button>
@@ -571,7 +593,27 @@
   </footer>
 
   <script>
-    let activeFilters = { topic: 'all', format: 'all' };
+    let currentVideoId = '';
+    let currentLang = 'off';
+
+    function setLang(lang, btn) {
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentLang = lang;
+      if (currentVideoId) reloadPlayer(currentVideoId);
+    }
+
+    function buildPlayerSrc(id) {
+      let src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+      if (currentLang !== 'off') {
+        src += '&cc_load_policy=1&cc_lang_pref=' + currentLang + '&hl=' + currentLang;
+      }
+      return src;
+    }
+
+    function reloadPlayer(id) {
+      document.getElementById('player-iframe').src = buildPlayerSrc(id);
+    }
 
     function setFilter(type, value, btn) {
       activeFilters[type] = value;
@@ -607,12 +649,13 @@
         return;
       }
       const id = card.dataset.id;
+      currentVideoId = id;
       const title = card.dataset.title;
       const desc = card.dataset.desc;
       const format = card.querySelector('.format-tag').textContent.trim();
       const badgeStyle = card.querySelector('.format-tag').getAttribute('style');
 
-      document.getElementById('player-iframe').src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+      document.getElementById('player-iframe').src = buildPlayerSrc(id);
       document.getElementById('player-title').textContent = title;
       document.getElementById('player-desc').textContent = desc;
 

@@ -383,6 +383,91 @@
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: none; }
 
+    /* ── FREE / PRO TIER LABELS ── */
+    .tier-label-free {
+      display: inline-block;
+      font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 20px;
+      background: var(--navy-50); color: var(--navy-500);
+      border: 1px solid var(--navy-200);
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── PRO DEEP DIVE ── */
+    .pro-deepdive {
+      margin-top: 2rem;
+      border-top: 2px solid var(--gold);
+      padding-top: 1.5rem;
+    }
+    .pro-deepdive-header {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 1.75rem; flex-wrap: wrap;
+    }
+    .pro-deepdive-badge {
+      font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 20px;
+      background: var(--gold); color: var(--navy-950);
+    }
+    .pro-deepdive-title {
+      font-family: var(--font-ui); font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .pro-section-label {
+      font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--navy-500); margin: 1.5rem 0 0.75rem;
+      padding-bottom: 6px; border-bottom: 1px solid var(--navy-100);
+    }
+    .pro-text {
+      font-size: 0.95rem; font-weight: 300;
+      color: var(--text-mid); line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+    .pro-text strong { color: var(--text-dark); font-weight: 500; }
+
+    /* ── CONVERSATION GUIDE ── */
+    .convo-guide { display: flex; flex-direction: column; gap: 0; }
+    .convo-step {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 1rem 0; border-bottom: 1px solid var(--border);
+    }
+    .convo-step:last-child { border-bottom: none; }
+    .convo-step-num {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--navy-900); color: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .convo-step-text {
+      font-size: 0.92rem; color: var(--text-mid); line-height: 1.75;
+    }
+    .convo-step-text strong { color: var(--text-dark); font-weight: 500; }
+
+    /* ── SCHOLAR QUOTES ── */
+    .scholar-row {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 1rem 0; border-bottom: 1px solid var(--border);
+    }
+    .scholar-row:last-child { border-bottom: none; }
+    .scholar-initial {
+      width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500;
+      flex-shrink: 0;
+    }
+    .scholar-info {}
+    .scholar-name {
+      font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500;
+      color: var(--text-dark); margin-bottom: 4px;
+    }
+    .scholar-quote {
+      font-size: 0.88rem; font-style: italic;
+      color: var(--text-mid); line-height: 1.65;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .nav-links { display: none; }
@@ -401,8 +486,8 @@
     <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
     <ul class="nav-links">
       <li><a href="evidence-library.html" class="active">Evidence Library</a></li>
-      <li><a href="#">Debate Arena</a></li>
-      <li><a href="#">Videos</a></li>
+      <li><a href="video-library.html">Videos</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
       <li><a href="#">Daily</a></li>
     </ul>
     <a href="index.html#pricing" class="nav-cta">Start Free</a>
@@ -464,35 +549,128 @@
             </div>
           </div>
           <div class="argument-body">
+
+            <!-- FREE TIER -->
+            <div class="tier-label-free">Free</div>
             <div class="argument-premise">
-              <div class="argument-premise-label">The argument</div>
+              <div class="argument-premise-label">The argument in brief</div>
               <ol>
                 <li>Everything that begins to exist has a cause.</li>
                 <li>The universe began to exist.</li>
-                <li>Therefore, the universe has a cause.</li>
+                <li>Therefore, the universe has a cause outside itself.</li>
               </ol>
             </div>
             <p class="argument-explanation">The Kalam is one of the most discussed arguments in modern philosophy of religion, popularised by philosopher William Lane Craig. The first premise is intuitive — nothing comes from nothing. The second is supported by both philosophical reasoning and modern cosmology: the Big Bang indicates the universe had an absolute beginning. The cause must be spaceless, timeless, immaterial, and enormously powerful — properties consistent with theism.</p>
             <div class="argument-objections">
-              <div class="argument-objections-title">Common objections answered</div>
+              <div class="argument-objections-title">Common objections — overview</div>
               <div class="objection-row">
                 <span class="objection-q">Q</span>
                 <span class="objection-a"><strong>Who made God?</strong> — The Kalam only applies to things that begin to exist. God, as a necessary and eternal being, never began to exist and therefore requires no cause.</span>
               </div>
               <div class="objection-row">
                 <span class="objection-q">Q</span>
-                <span class="objection-a"><strong>Quantum events happen without causes.</strong> — Quantum indeterminacy doesn't mean events are uncaused — they still occur within a pre-existing framework of physical laws and energy. They don't arise from absolute nothingness.</span>
-              </div>
-              <div class="objection-row">
-                <span class="objection-q">Q</span>
-                <span class="objection-a"><strong>Maybe the universe is eternal.</strong> — Both philosophical arguments (infinite regress is impossible) and scientific evidence (Second Law of Thermodynamics, BGV theorem) strongly support a temporal beginning.</span>
+                <span class="objection-a"><strong>Quantum events happen without causes.</strong> — Quantum indeterminacy doesn't mean events are uncaused — they still occur within a pre-existing framework of physical laws and energy, not absolute nothingness.</span>
               </div>
             </div>
-            <div class="argument-footer">
-              <a href="#" class="arg-action arg-action-primary">Practice in Debate Arena →</a>
-              <a href="#" class="arg-action arg-action-secondary">Watch WLC explain this</a>
-              <a href="#" class="arg-action arg-action-secondary">Further reading</a>
+
+            <!-- PRO TIER -->
+            <div class="pro-deepdive">
+              <div class="pro-deepdive-header">
+                <div class="pro-deepdive-badge">Pro — Deep Dive</div>
+                <div class="pro-deepdive-title">Full analysis, extended objections & conversation guide</div>
+              </div>
+
+              <div class="pro-section-label">Historical & philosophical background</div>
+              <p class="pro-text">The Kalam Cosmological Argument has an ancient pedigree. The medieval Islamic philosopher Al-Ghazali (1058–1111 AD) formulated the argument in his work <em>Tahafut al-Falasifa</em> (The Incoherence of the Philosophers), arguing that an actually infinite past is philosophically impossible and therefore the universe must have had a beginning. The argument draws its name from the Arabic word for "speech" or "word" — the Kalam tradition of Islamic philosophical theology. In the twentieth century, philosopher William Lane Craig revived and rigorously defended the argument in his landmark 1979 work <em>The Kalam Cosmological Argument</em>, marshalling both philosophical and scientific evidence for the second premise. Today it is arguably the most discussed argument for God's existence in analytic philosophy of religion, with major philosophers including J.P. Moreland, Alexander Pruss, and Robert Koons defending variations of it.</p>
+
+              <div class="pro-section-label">Evidence for Premise 1 — Everything that begins to exist has a cause</div>
+              <p class="pro-text">This premise has both intuitive and philosophical support. Intuitively, we have never observed anything come into existence without a cause — the principle that something cannot come from nothing (ex nihilo nihil fit) has been foundational to rational thought since Parmenides. Philosophically, if things could begin to exist without a cause, it becomes inexplicable why anything and everything doesn't pop into existence uncaused. The very fact that we don't observe this confirms the premise. The objection that quantum mechanics disproves it misunderstands quantum physics — even quantum fluctuations occur within a pre-existing vacuum state governed by physical laws. They are not examples of something coming from absolute nothingness.</p>
+
+              <div class="pro-section-label">Evidence for Premise 2 — The universe began to exist</div>
+              <p class="pro-text">This is the most scientifically substantiated premise in all of natural theology. There are two independent lines of support:</p>
+              <p class="pro-text"><strong>Philosophical:</strong> An actually infinite number of past events is impossible. If the past were infinite, we could never have arrived at the present moment — an infinite series has no final term. Furthermore, an actually infinite collection leads to mathematical absurdities (Hilbert's Hotel paradoxes) that make such a collection metaphysically impossible in the real world.</p>
+              <p class="pro-text"><strong>Scientific:</strong> The standard Big Bang cosmological model, confirmed by Hubble's observation of cosmic expansion (1929), the discovery of cosmic microwave background radiation (1964), and the Borde-Guth-Vilenkin (BGV) theorem (2003), demonstrates that the universe — including space, time, matter, and energy — had an absolute beginning. The BGV theorem is particularly significant: Alan Guth and Alexander Vilenkin are themselves secular cosmologists, and Vilenkin has stated plainly that "all the evidence we have says that the universe had a beginning." The theorem proves that any universe that has been on average expanding throughout its history cannot be past-eternal — it must have a boundary in the past.</p>
+
+              <div class="pro-section-label">What must the cause be like?</div>
+              <p class="pro-text">If the cause of the universe must exist outside space, time, matter, and energy — since it brought all of these into existence — then it must be: spaceless, timeless, immaterial, uncaused, and of unimaginable power. Remarkably, this cause must also be personal. A non-personal, abstract cause (like a mathematical law) cannot bring something into existence from nothing — only a personal agent with will and intention can choose to create. This profile corresponds precisely to the God of classical theism. As Craig argues, from the Kalam alone we can establish the existence of a transcendent, personal Creator of the universe.</p>
+
+              <div class="pro-section-label">Extended objections — 8 challenges answered thoroughly</div>
+              <div class="argument-objections" style="margin-top:0;">
+                <div class="objection-row">
+                  <span class="objection-q">Q</span>
+                  <span class="objection-a"><strong>Who made God?</strong> — The Kalam only applies to things that <em>begin to exist</em>. The argument does not say "everything has a cause" — it says "everything that begins to exist has a cause." God, by definition, is a necessary and eternal being who never began to exist. He is the uncaused First Cause. This is not special pleading — it follows directly from the logic of the argument itself. If God also began to exist, he would need a cause, leading to an infinite regress. The argument terminates in a being that necessarily has no beginning.</span>
+                </div>
+                <div class="objection-row">
+                  <span class="objection-q">Q</span>
+                  <span class="objection-a"><strong>Quantum mechanics shows things can happen without causes.</strong> — This objection misunderstands quantum physics. Quantum vacuum fluctuations do not occur in absolute nothingness — they occur within a pre-existing quantum vacuum, which is itself a structured, energy-laden field governed by the laws of physics. This is not nothing. Furthermore, even if subatomic events are genuinely indeterministic, they still occur within a framework of pre-existing physical reality. Nothing in quantum mechanics suggests that entire universes — including space, time, matter, and physical laws — can pop into existence from absolutely nothing.</span>
+                </div>
+                <div class="objection-row">
+                  <span class="objection-q">Q</span>
+                  <span class="objection-a"><strong>The universe could be eternal — perhaps in a cyclical model.</strong> — The BGV theorem (Borde, Guth, Vilenkin 2003) applies to all models in which the universe has on average been expanding — including cyclical, bouncing, and multiverse models. Even Guth himself acknowledges that the theorem shows these models require a beginning. There is no viable cosmological model that is genuinely past-eternal. The Second Law of Thermodynamics also rules out an eternal past — an eternally old universe would have reached maximum entropy long ago.</span>
+                </div>
+                <div class="objection-row">
+                  <span class="objection-q">Q</span>
+                  <span class="objection-a"><strong>Even if there's a cause, why must it be the Christian God?</strong> — The Kalam establishes the existence of a transcendent, personal, enormously powerful Creator. It does not by itself establish every Christian doctrine. This is not a weakness — it is how cumulative case apologetics works. The Kalam establishes theism; the resurrection evidence establishes Christian theism specifically. Each argument does its part. Craig himself is clear that the Kalam gets us to generic theism, and other arguments fill in the specifics.</span>
+                </div>
+                <div class="objection-row">
+                  <span class="objection-q">Q</span>
+                  <span class="objection-a"><strong>The cause could be impersonal — like the laws of physics.</strong> — Abstract objects and physical laws cannot cause anything — they have no causal power. The number seven cannot cause a universe to exist. Only concrete, active agents can initiate causal sequences. Furthermore, a timeless, non-personal cause would produce a timeless effect — yet the universe began at a point in time. Only a personal agent who freely chooses to create can explain why the universe began when it did rather than from eternity.</span>
+                </div>
+                <div class="objection-row">
+                  <span class="objection-q">Q</span>
+                  <span class="objection-a"><strong>This is just a God of the gaps argument.</strong> — A God of the gaps argument says "we don't know what caused X, therefore God." The Kalam is the opposite — it argues positively from what we do know: that the universe began, that beginnings require causes, and that the cause must have specific properties. The argument is driven by evidence (the BGV theorem, cosmic expansion, thermodynamics), not by ignorance. If new evidence showed the universe had no beginning, the argument would be defeated — it is empirically engaged, not immune to evidence.</span>
+                </div>
+                <div class="objection-row">
+                  <span class="objection-q">Q</span>
+                  <span class="objection-a"><strong>Time began with the universe, so "before" the universe is meaningless.</strong> — This objection actually supports the theistic conclusion. If time itself began with the universe, then the cause of the universe must be timeless — it existed without any temporal relations before creation. This is precisely what classical theism claims about God: he is eternal, existing outside of time. The objection strengthens rather than undermines the argument's conclusion.</span>
+                </div>
+                <div class="objection-row">
+                  <span class="objection-q">Q</span>
+                  <span class="objection-a"><strong>Stephen Hawking showed the universe has no boundary — no beginning.</strong> — Hawking's "no-boundary proposal" uses imaginary time to model the universe without an initial singularity. However, as Hawking himself acknowledged, imaginary time is a mathematical tool — in real time, the universe still has a beginning. Furthermore, the Hartle-Hawking model is itself a quantum cosmological model that requires pre-existing physical laws and mathematical structures. It does not describe creation from absolute nothingness.</span>
+                </div>
+              </div>
+
+              <div class="pro-section-label">How to use this argument in a real conversation</div>
+              <div class="convo-guide">
+                <div class="convo-step">
+                  <div class="convo-step-num">1</div>
+                  <div class="convo-step-text"><strong>Start with the simple form.</strong> Don't lead with jargon. Try: "Here's something I find genuinely compelling — scientists now agree the universe had a beginning. Whatever caused the universe to begin must exist outside space and time. That sounds a lot like God to me." This lands the core idea without sounding like a lecture.</div>
+                </div>
+                <div class="convo-step">
+                  <div class="convo-step-num">2</div>
+                  <div class="convo-step-text"><strong>Anticipate "who made God?" immediately.</strong> This is the most common response and you want to be ready: "The argument only applies to things that begin to exist — God, by definition, is eternal and never had a beginning. So he doesn't need a cause any more than the universe would if it had always existed." Practise saying this naturally.</div>
+                </div>
+                <div class="convo-step">
+                  <div class="convo-step-num">3</div>
+                  <div class="convo-step-text"><strong>Name-drop the secular scientists.</strong> "What's interesting is that this isn't just a religious claim — cosmologists Alexander Vilenkin and Alan Guth, neither of them Christians, published a theorem proving the universe had to have a beginning. Vilenkin has said publicly that all the evidence points to a beginning." Secular sources carry more weight with sceptics.</div>
+                </div>
+                <div class="convo-step">
+                  <div class="convo-step-num">4</div>
+                  <div class="convo-step-text"><strong>Don't overclaim.</strong> Be honest that the Kalam establishes a Creator — not necessarily every Christian doctrine. "This argument gets me to a powerful, personal Creator outside the universe. I think other evidence — like the resurrection — fills in the rest of the picture." Intellectual honesty builds trust and keeps the conversation going.</div>
+                </div>
+              </div>
+
+              <div class="pro-section-label">Key scholars on this argument</div>
+              <div class="scholar-row">
+                <div class="scholar-initial" style="background:#EEEDFE;color:#3C3489;">WLC</div>
+                <div class="scholar-info"><div class="scholar-name">William Lane Craig</div><div class="scholar-quote">"A first state of the universe cannot have a scientific explanation, since there is nothing before it, and therefore it can only be accounted for by a personal explanation." — <em>Reasonable Faith</em></div></div>
+              </div>
+              <div class="scholar-row">
+                <div class="scholar-initial" style="background:#E1F5EE;color:#0F6E56;">AV</div>
+                <div class="scholar-info"><div class="scholar-name">Alexander Vilenkin (Cosmologist, Tufts University)</div><div class="scholar-quote">"All the evidence we have says that the universe had a beginning." — <em>Many Worlds in One</em></div></div>
+              </div>
+              <div class="scholar-row">
+                <div class="scholar-initial" style="background:#FAEEDA;color:#854F0B;">AG</div>
+                <div class="scholar-info"><div class="scholar-name">Al-Ghazali (1058–1111 AD)</div><div class="scholar-quote">"Every being which begins has a cause for its beginning; now the world is a being which begins; therefore, it possesses a cause for its beginning." — <em>Tahafut al-Falasifa</em></div></div>
+              </div>
+
+              <div class="argument-footer" style="margin-top:1.5rem;">
+                <a href="debate-arena.html" class="arg-action arg-action-primary">Practice in Debate Arena →</a>
+                <a href="video-library.html" class="arg-action arg-action-secondary">Watch WLC explain this</a>
+                <a href="#" class="arg-action arg-action-secondary">Further reading</a>
+              </div>
             </div>
+
           </div>
         </div>
 
