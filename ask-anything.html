@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ask Anything — Apologia Daily</title>
+  <meta name="description" content="Ask any tough question about the Christian faith and get a thoughtful, evidence-based answer from our AI apologetics assistant." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy-950: #050d1a; --navy-900: #0a1628; --navy-800: #0f2040;
+      --navy-700: #163058; --navy-600: #1e4278; --navy-500: #285a9e;
+      --navy-400: #3b72bc; --navy-300: #6f9fd4; --navy-200: #aecae8;
+      --navy-100: #ddeaf5; --navy-50: #f0f6fb;
+      --gold: #c8a951; --gold-light: #e8cf87;
+      --white: #ffffff; --off-white: #f8f7f4;
+      --text-dark: #0a1628; --text-mid: #3a4a62; --text-muted: #7a8fa8;
+      --border: #d4e0ec;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: 'DM Sans', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text-dark); background: var(--off-white); line-height: 1.7; overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,13,26,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.7); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 8px 20px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    /* PAGE HEADER */
+    .page-header { background: var(--navy-950); padding: 8rem 2rem 4rem; position: relative; overflow: hidden; }
+    .page-header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(30,66,120,0.5) 0%, transparent 70%); pointer-events: none; }
+    .page-header-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+    .page-eyebrow { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .page-title { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; color: var(--white); margin-bottom: 1rem; }
+    .page-title em { font-style: italic; color: var(--gold); }
+    .page-sub { font-size: 1.05rem; font-weight: 300; color: rgba(255,255,255,0.6); max-width: 540px; line-height: 1.8; }
+
+    /* MAIN */
+    .main { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 6rem; }
+
+    /* ASK BOX */
+    .ask-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; margin-bottom: 1.5rem; }
+    .ask-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy-500); margin-bottom: 1rem; }
+    .ask-textarea { width: 100%; padding: 14px 16px; border: 1px solid var(--border); border-radius: 4px; font-family: var(--font-body); font-size: 1rem; color: var(--text-dark); resize: none; outline: none; transition: border-color 0.2s; min-height: 100px; background: var(--off-white); line-height: 1.65; }
+    .ask-textarea:focus { border-color: var(--navy-300); background: var(--white); }
+    .ask-textarea::placeholder { color: var(--text-muted); }
+    .ask-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; flex-wrap: wrap; gap: 10px; }
+    .ask-hint { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text-muted); }
+    .ask-btn { font-family: var(--font-ui); font-size: 0.9rem; font-weight: 500; padding: 11px 28px; border-radius: 3px; background: var(--navy-900); color: var(--white); border: none; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px; }
+    .ask-btn:hover { background: var(--navy-700); }
+    .ask-btn:disabled { opacity: 0.4; cursor: default; }
+    .ask-btn .spinner { width: 14px; height: 14px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.8s linear infinite; display: none; }
+    .ask-btn.loading .spinner { display: block; }
+    .ask-btn.loading .btn-text { opacity: 0.7; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* SUGGESTED QUESTIONS */
+    .suggested-section { margin-bottom: 2rem; }
+    .suggested-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; display: flex; align-items: center; gap: 12px; }
+    .suggested-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .suggested-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px; }
+    .suggested-btn { background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: 1rem 1.1rem; text-align: left; cursor: pointer; transition: all 0.15s; }
+    .suggested-btn:hover { border-color: var(--navy-300); background: var(--navy-50); transform: translateY(-1px); }
+    .suggested-cat { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy-400); margin-bottom: 4px; }
+    .suggested-q { font-family: var(--font-ui); font-size: 0.88rem; color: var(--text-dark); line-height: 1.4; }
+
+    /* ANSWER CARD */
+    .answer-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; margin-bottom: 1.5rem; display: none; }
+    .answer-card.visible { display: block; }
+    .answer-question { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 1.5rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border); font-style: italic; }
+    .answer-body { font-size: 0.95rem; font-weight: 300; color: var(--text-mid); line-height: 1.85; }
+    .answer-body p { margin-bottom: 1rem; }
+    .answer-body p:last-child { margin-bottom: 0; }
+    .answer-body strong { color: var(--text-dark); font-weight: 500; }
+    .answer-body h3 { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy-500); margin: 1.5rem 0 0.75rem; padding-top: 1.25rem; border-top: 1px solid var(--border); }
+    .answer-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border); }
+    .answer-action { font-family: var(--font-ui); font-size: 0.8rem; padding: 7px 16px; border-radius: 3px; border: 1px solid var(--border); background: transparent; color: var(--text-mid); cursor: pointer; transition: all 0.2s; }
+    .answer-action:hover { border-color: var(--navy-300); color: var(--navy-600); }
+    .answer-action.primary { background: var(--navy-900); color: var(--white); border-color: var(--navy-900); }
+    .answer-action.primary:hover { background: var(--navy-700); }
+
+    /* ERROR */
+    .error-msg { background: #fcebeb; border: 1px solid #f09595; border-radius: 4px; padding: 1rem 1.25rem; font-family: var(--font-ui); font-size: 0.85rem; color: #a32d2d; margin-bottom: 1.5rem; display: none; }
+    .error-msg.visible { display: block; }
+
+    /* HISTORY */
+    .history-section { margin-top: 2rem; }
+    .history-item { background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: 1rem 1.25rem; margin-bottom: 8px; cursor: pointer; transition: all 0.15s; display: flex; align-items: center; gap: 12px; }
+    .history-item:hover { border-color: var(--navy-300); background: var(--navy-50); }
+    .history-q { font-family: var(--font-ui); font-size: 0.88rem; color: var(--text-dark); flex: 1; }
+    .history-arrow { font-size: 0.8rem; color: var(--text-muted); }
+
+    /* FREE LIMIT BANNER */
+    .limit-banner { background: var(--navy-900); border-radius: 8px; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; display: none; }
+    .limit-banner.visible { display: flex; }
+    .limit-title { font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .limit-sub { font-family: var(--font-ui); font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+    .limit-btn { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 10px 22px; border-radius: 3px; background: var(--gold); color: var(--navy-950); border: none; cursor: pointer; white-space: nowrap; text-decoration: none; }
+    .limit-btn:hover { background: var(--gold-light); }
+
+    /* FOOTER */
+    footer { background: var(--navy-950); border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 2rem 2rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+    .footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-ui); font-size: 0.8rem; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+    .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    @media (max-width: 600px) { .main { padding: 2rem 1.25rem 4rem; } .suggested-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="video-library.html">Videos</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
+      <li><a href="daily-devotional.html">Daily</a></li>
+      <li><a href="worldviews.html">Worldviews</a></li>
+    </ul>
+    <a href="index.html#pricing" class="nav-cta">Start Free</a>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="page-eyebrow">Ask Anything</p>
+      <h1 class="page-title">Every tough question.<br/><em>A thoughtful answer.</em></h1>
+      <p class="page-sub">Ask any question about the Christian faith — from the problem of evil to the reliability of the Bible — and receive a scholarly, evidence-based answer drawn from the world's leading apologists.</p>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!-- FREE LIMIT BANNER -->
+    <div class="limit-banner" id="limit-banner">
+      <div>
+        <div class="limit-title">You've used your 5 free questions today</div>
+        <div class="limit-sub">Upgrade to Pro for unlimited questions, the full Evidence Library, and the complete Debate Arena.</div>
+      </div>
+      <a href="index.html#pricing" class="limit-btn">Upgrade to Pro — $8/mo</a>
+    </div>
+
+    <!-- ASK BOX -->
+    <div class="ask-card reveal">
+      <p class="ask-label">Your question</p>
+      <textarea class="ask-textarea" id="ask-input" placeholder="Ask any question about the Christian faith… e.g. 'How do I respond to someone who says God and evil can't coexist?' or 'What is the best evidence for the resurrection?'" rows="4"></textarea>
+      <div class="ask-footer">
+        <span class="ask-hint" id="ask-hint">5 free questions per day · Upgrade for unlimited</span>
+        <button class="ask-btn" id="ask-btn" onclick="askQuestion()">
+          <div class="spinner"></div>
+          <span class="btn-text">Get answer →</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ERROR -->
+    <div class="error-msg" id="error-msg">There was a problem getting your answer. Please try again.</div>
+
+    <!-- ANSWER -->
+    <div class="answer-card reveal" id="answer-card">
+      <div class="answer-question" id="answer-question"></div>
+      <div class="answer-body" id="answer-body"></div>
+      <div class="answer-actions">
+        <button class="answer-action primary" onclick="practiseInArena()">Practise this in the Debate Arena →</button>
+        <button class="answer-action" onclick="copyAnswer()">⧉ Copy answer</button>
+        <button class="answer-action" onclick="askFollowUp()">Ask a follow-up question</button>
+        <button class="answer-action" onclick="clearAnswer()">Ask a new question</button>
+      </div>
+    </div>
+
+    <!-- SUGGESTED QUESTIONS -->
+    <div class="suggested-section reveal" id="suggested-section">
+      <p class="suggested-label">Common questions to start with</p>
+      <div class="suggested-grid">
+        <button class="suggested-btn" onclick="fillQuestion(this.querySelector('.suggested-q').textContent)">
+          <div class="suggested-cat">God's Existence</div>
+          <div class="suggested-q">Hasn't science disproved the need for God?</div>
+        </button>
+        <button class="suggested-btn" onclick="fillQuestion(this.querySelector('.suggested-q').textContent)">
+          <div class="suggested-cat">Problem of Evil</div>
+          <div class="suggested-q">If God is good and all-powerful, why is there so much suffering?</div>
+        </button>
+        <button class="suggested-btn" onclick="fillQuestion(this.querySelector('.suggested-q').textContent)">
+          <div class="suggested-cat">Resurrection</div>
+          <div class="suggested-q">What is the best historical evidence that Jesus rose from the dead?</div>
+        </button>
+        <button class="suggested-btn" onclick="fillQuestion(this.querySelector('.suggested-q').textContent)">
+          <div class="suggested-cat">Islam</div>
+          <div class="suggested-q">How do I respond to a Muslim who says the Bible has been corrupted?</div>
+        </button>
+        <button class="suggested-btn" onclick="fillQuestion(this.querySelector('.suggested-q').textContent)">
+          <div class="suggested-cat">Scripture</div>
+          <div class="suggested-q">Isn't the Bible full of contradictions?</div>
+        </button>
+        <button class="suggested-btn" onclick="fillQuestion(this.querySelector('.suggested-q').textContent)">
+          <div class="suggested-cat">Morality</div>
+          <div class="suggested-q">Can you be a good person without believing in God?</div>
+        </button>
+        <button class="suggested-btn" onclick="fillQuestion(this.querySelector('.suggested-q').textContent)">
+          <div class="suggested-cat">Exclusivism</div>
+          <div class="suggested-q">How can a loving God send people to hell?</div>
+        </button>
+        <button class="suggested-btn" onclick="fillQuestion(this.querySelector('.suggested-q').textContent)">
+          <div class="suggested-cat">Scepticism</div>
+          <div class="suggested-q">Isn't faith just believing things without evidence?</div>
+        </button>
+        <button class="suggested-btn" onclick="fillQuestion(this.querySelector('.suggested-q').textContent)">
+          <div class="suggested-cat">Science & Faith</div>
+          <div class="suggested-q">Doesn't evolution disprove Genesis and Christian creation?</div>
+        </button>
+        <button class="suggested-btn" onclick="fillQuestion(this.querySelector('.suggested-q').textContent)">
+          <div class="suggested-cat">Identity of Jesus</div>
+          <div class="suggested-q">Did Jesus ever actually claim to be God?</div>
+        </button>
+        <button class="suggested-btn" onclick="fillQuestion(this.querySelector('.suggested-q').textContent)">
+          <div class="suggested-cat">Religious Diversity</div>
+          <div class="suggested-q">Why should I believe Christianity is true and not Islam or Hinduism?</div>
+        </button>
+        <button class="suggested-btn" onclick="fillQuestion(this.querySelector('.suggested-q').textContent)">
+          <div class="suggested-cat">History</div>
+          <div class="suggested-q">Hasn't religion caused more harm than good throughout history?</div>
+        </button>
+      </div>
+    </div>
+
+    <!-- HISTORY -->
+    <div class="history-section reveal" id="history-section" style="display:none;">
+      <p class="suggested-label">Your recent questions</p>
+      <div id="history-list"></div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Apologia<span>Daily</span></div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="evidence-library.html">Evidence Library</a></li>
+        <li><a href="debate-arena.html">Debate Arena</a></li>
+        <li><a href="daily-devotional.html">Daily</a></li>
+        <li><a href="worldviews.html">Worldviews</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+      </ul>
+      <div class="footer-copy">© 2026 Apologia Daily. Built for the defence of the Gospel.<br/><span style="font-size:0.7rem;opacity:0.6;margin-top:6px;display:block;">Answers are AI-generated drawing on established apologetics scholarship. For pastoral or theological counsel please consult a qualified minister.</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const FREE_LIMIT = 5;
+
+    function getUsageToday() {
+      const today = new Date().toDateString();
+      const stored = JSON.parse(localStorage.getItem('askUsage') || '{}');
+      if (stored.date !== today) return 0;
+      return stored.count || 0;
+    }
+
+    function incrementUsage() {
+      const today = new Date().toDateString();
+      const count = getUsageToday() + 1;
+      localStorage.setItem('askUsage', JSON.stringify({ date: today, count }));
+    }
+
+    function checkLimit() {
+      const used = getUsageToday();
+      const hint = document.getElementById('ask-hint');
+      const btn = document.getElementById('ask-btn');
+      const remaining = Math.max(0, FREE_LIMIT - used);
+      if (remaining === 0) {
+        document.getElementById('limit-banner').classList.add('visible');
+        btn.disabled = true;
+        hint.textContent = 'Daily limit reached — upgrade for unlimited questions';
+      } else {
+        hint.textContent = `${remaining} free question${remaining !== 1 ? 's' : ''} remaining today`;
+      }
+    }
+
+    function fillQuestion(q) {
+      document.getElementById('ask-input').value = q;
+      document.getElementById('ask-input').focus();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function formatAnswer(text) {
+      const lines = text.split('\n').filter(l => l.trim());
+      let html = '';
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (trimmed.match(/^(Common objection|How to use this|Further study|The core argument|In summary)/i)) {
+          html += `<h3>${trimmed}</h3>`;
+        } else if (trimmed) {
+          html += `<p>${trimmed}</p>`;
+        }
+      }
+      return html;
+    }
+
+    function saveToHistory(question) {
+      const history = JSON.parse(localStorage.getItem('askHistory') || '[]');
+      history.unshift(question);
+      localStorage.setItem('askHistory', JSON.stringify(history.slice(0, 10)));
+      buildHistory();
+    }
+
+    function buildHistory() {
+      const history = JSON.parse(localStorage.getItem('askHistory') || '[]');
+      if (history.length === 0) return;
+      const section = document.getElementById('history-section');
+      const list = document.getElementById('history-list');
+      section.style.display = 'block';
+      list.innerHTML = history.map(q =>
+        `<div class="history-item" onclick="fillQuestion('${q.replace(/'/g,"\\'")}')">
+          <span class="history-q">${q}</span>
+          <span class="history-arrow">→</span>
+        </div>`
+      ).join('');
+    }
+
+    async function askQuestion() {
+      const input = document.getElementById('ask-input');
+      const question = input.value.trim();
+      if (!question) return;
+
+      if (getUsageToday() >= FREE_LIMIT) {
+        document.getElementById('limit-banner').classList.add('visible');
+        return;
+      }
+
+      const btn = document.getElementById('ask-btn');
+      btn.disabled = true;
+      btn.classList.add('loading');
+      document.getElementById('error-msg').classList.remove('visible');
+      document.getElementById('answer-card').classList.remove('visible');
+      document.getElementById('suggested-section').style.opacity = '0.4';
+
+      try {
+        const res = await fetch('/api/ask', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question })
+        });
+
+        if (!res.ok) throw new Error('API error ' + res.status);
+
+        const data = await res.json();
+        if (!data.answer) throw new Error('No answer');
+
+        document.getElementById('answer-question').textContent = question;
+        document.getElementById('answer-body').innerHTML = formatAnswer(data.answer);
+        document.getElementById('answer-card').classList.add('visible');
+        document.getElementById('answer-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        incrementUsage();
+        saveToHistory(question);
+        checkLimit();
+
+      } catch (err) {
+        console.error(err);
+        document.getElementById('error-msg').classList.add('visible');
+      }
+
+      btn.disabled = false;
+      btn.classList.remove('loading');
+      document.getElementById('suggested-section').style.opacity = '1';
+    }
+
+    function practiseInArena() {
+      window.location.href = 'debate-arena.html';
+    }
+
+    function copyAnswer() {
+      const q = document.getElementById('answer-question').textContent;
+      const a = document.getElementById('answer-body').textContent;
+      navigator.clipboard.writeText(`Q: ${q}\n\nA: ${a}\n\n— Apologia Daily`);
+    }
+
+    function askFollowUp() {
+      const q = document.getElementById('answer-question').textContent;
+      document.getElementById('ask-input').value = `Following up on "${q}" — `;
+      document.getElementById('ask-input').focus();
+      window.scrollTo({ top: 200, behavior: 'smooth' });
+    }
+
+    function clearAnswer() {
+      document.getElementById('answer-card').classList.remove('visible');
+      document.getElementById('ask-input').value = '';
+      document.getElementById('ask-input').focus();
+      window.scrollTo({ top: 200, behavior: 'smooth' });
+    }
+
+    document.getElementById('ask-input').addEventListener('keydown', e => {
+      if (e.key === 'Enter' && e.ctrlKey) askQuestion();
+    });
+
+    checkLimit();
+    buildHistory();
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
