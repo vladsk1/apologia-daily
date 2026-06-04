@@ -1179,15 +1179,39 @@
     function doSearch() {
       const q = document.getElementById('search-input').value.trim().toLowerCase();
       if (!q) return;
-      const cards = document.querySelectorAll('.argument-card:not(.locked)');
+
+      const allCards = document.querySelectorAll('.argument-card:not(.locked)');
       let found = false;
-      cards.forEach(card => {
+      let foundCategory = null;
+
+      allCards.forEach(card => {
         const text = card.textContent.toLowerCase();
-        if (text.includes(q)) {
-          card.classList.add('open');
-          if (!found) { card.scrollIntoView({ behavior: 'smooth', block: 'center' }); found = true; }
+        if (text.includes(q) && !found) {
+          const section = card.closest('.category-section');
+          if (section) {
+            foundCategory = section.id.replace('cat-', '');
+          }
+          found = true;
         }
       });
+
+      if (found && foundCategory) {
+        const targetTab = document.querySelector(`.cat-tab[onclick*="${foundCategory}"]`);
+        if (targetTab) {
+          switchCat(foundCategory, targetTab);
+        }
+        setTimeout(() => {
+          allCards.forEach(card => {
+            const text = card.textContent.toLowerCase();
+            if (text.includes(q)) {
+              card.classList.add('open');
+              card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          });
+        }, 100);
+      } else {
+        alert('No arguments found matching "' + q + '". Try a different search term.');
+      }
     }
 
     document.getElementById('search-input').addEventListener('keydown', e => {
