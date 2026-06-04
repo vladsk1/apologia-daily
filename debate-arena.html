@@ -274,31 +274,8 @@
 
       <div class="setup-section reveal">
         <p class="setup-label">Step 2 — Choose a topic</p>
-        <div class="topic-grid">
-          <button class="topic-btn" onclick="selectTopic('Does God exist?', this)">
-            <div class="topic-name">Does God exist?</div>
-            <div class="topic-desc">Cosmological, moral & fine-tuning arguments</div>
-          </button>
-          <button class="topic-btn" onclick="selectTopic('Did Jesus rise from the dead?', this)">
-            <div class="topic-name">Did Jesus rise from the dead?</div>
-            <div class="topic-desc">Historical evidence & the minimal facts approach</div>
-          </button>
-          <button class="topic-btn" onclick="selectTopic('Why does God allow suffering?', this)">
-            <div class="topic-name">Why does God allow suffering?</div>
-            <div class="topic-desc">The problem of evil & theodicy</div>
-          </button>
-          <button class="topic-btn" onclick="selectTopic('Is the Bible reliable?', this)">
-            <div class="topic-name">Is the Bible reliable?</div>
-            <div class="topic-desc">Manuscript evidence, archaeology & prophecy</div>
-          </button>
-          <button class="topic-btn" onclick="selectTopic('Can science explain everything?', this)">
-            <div class="topic-name">Can science explain everything?</div>
-            <div class="topic-desc">Scientism, fine-tuning & the origin of the universe</div>
-          </button>
-          <button class="topic-btn" onclick="selectTopic('Is Jesus the only way to God?', this)">
-            <div class="topic-name">Is Jesus the only way to God?</div>
-            <div class="topic-desc">Exclusivism, world religions & grace</div>
-          </button>
+        <div class="topic-grid" id="topic-grid">
+          <div style="font-family:'DM Sans',sans-serif;font-size:0.9rem;color:#7a8fa8;padding:1rem 0;">Select an opponent first to see relevant topics.</div>
         </div>
       </div>
 
@@ -423,17 +400,93 @@
     };
 
     const openingMessages = {
-      atheist: { 'Does God exist?': "Look, I respect your right to believe what you want — but you're asking me to accept an invisible, undetectable being with zero empirical evidence. Science explains the origin of the universe, the diversity of life, and even the basis of morality without invoking God. Why should I add an unnecessary supernatural hypothesis to an already complete picture?", 'Did Jesus rise from the dead?': "Extraordinary claims require extraordinary evidence. What you're offering are documents written decades after the alleged events, by committed believers with obvious motivation to promote the story. Every natural explanation — mass hallucination, legendary development, mistaken identity — is more probable than an actual violation of natural law. Where's the extraordinary evidence?", 'Why does God allow suffering?': "This is where I find Christian theology genuinely incoherent. If your God is all-powerful, all-knowing, and perfectly good — he could prevent a child dying of cancer right now. He doesn't. Either he can't, he won't, or he isn't there. The sheer volume of gratuitous suffering in the world is the most powerful evidence against a good God I know of.", 'Is the Bible reliable?': "The Bible was written by fallible humans, copied by fallible humans, translated by fallible humans, and selected by politically motivated councils. Scholars have documented thousands of variants between manuscripts. The Gospels contradict each other on basic facts. Paul never met Jesus. On what basis do you treat this as divine revelation rather than ancient human literature?", 'Can science explain everything?': "Science has a perfect track record of explaining things previously attributed to God — lightning, disease, the diversity of species. Religion has a perfect track record of retreating as science advances. The God of the gaps keeps shrinking. Science doesn't need to explain everything right now to make God unnecessary — it just needs to keep doing what it's always done.", 'Is Jesus the only way to God?': "The idea that billions of people — born in the wrong century, on the wrong continent, into the wrong culture — are condemned through no fault of their own is not just implausible, it's morally monstrous. If your God is just and loving, how does he condemn someone who never had a genuine opportunity to hear the gospel?" },
-      muslim: { 'Does God exist?': "Actually we agree that God exists — the question between us is which understanding of God is correct. The Quran presents Tawhid — the absolute, undivided oneness of God — which is the purest form of monotheism. My concern with Christianity is the Trinity. How can one God simultaneously be three distinct persons? This seems to me not a mystery to accept but a contradiction to resolve.", 'Did Jesus rise from the dead?': "The Quran is clear — Jesus was not crucified. What appeared to the people was an illusion. So the foundational premise of the resurrection story is mistaken. But even setting the Quran aside — your own scholarly tradition shows the crucifixion accounts contain significant differences. And if the crucifixion is uncertain, the resurrection is built on sand.", 'Why does God allow suffering?': "Islam gives a clear, coherent answer — this life is a test, and suffering is part of Allah's wisdom and mercy, purifying believers and giving opportunities for patience and trust. But I want to ask you something — the Old Testament shows God commanding the killing of entire peoples, including women and children. How do you reconcile that with a God of love?", 'Is the Bible reliable?': "The Bible has been changed — this is a matter of historical record. The Council of Nicaea decided which books to include. Paul transformed the simple message of Jesus — a Jewish prophet calling people to God — into a theology Jesus himself never taught. The Quran preserved the original message that was corrupted in earlier scriptures.", 'Can science explain everything?': "Science and Islam have never been in conflict — the Quran contains remarkable descriptions of embryology, cosmology, and the water cycle that anticipate modern science by 1,400 years. But I ask you — if the universe began, as science confirms, it needs a cause. We agree on that. The question is which revelation correctly describes that Creator.", 'Is Jesus the only way to God?': "Muslims deeply honour Jesus — Isa — as one of the greatest prophets, born of a virgin, who performed miracles, and who will return at the end of time. But he is not God. He never said 'I am God, worship me' in those words. The doctrine that Jesus is God — the second person of a Trinity — was developed by later councils, not taught by Jesus himself." },
-      agnostic: { 'Does God exist?': "I genuinely want to believe — or at least, I want to know if there's something to believe. But here's my honest problem: every religious tradition claims to have the truth. Christians, Muslims, Hindus, Buddhists — they all have sincere experiences, compelling arguments, and devout communities. How do you know your experience of God is tracking something real rather than reflecting the culture you were born into?", 'Did Jesus rise from the dead?': "I find the story of Jesus genuinely compelling — something clearly happened that transformed a group of frightened disciples into people willing to die for their message. But I struggle with the leap to 'bodily resurrection.' How do I distinguish this from the many other resurrection narratives in ancient religion? What makes the Christian claim historically distinct?", 'Why does God allow suffering?': "This is actually the thing that most troubles me personally. I've watched people I love suffer terribly — good people, faithful people — and I couldn't see any purpose in it. I don't say this to score a debate point. I say it because I genuinely want to understand how you hold suffering and faith together.", 'Is the Bible reliable?': "I grew up reading the Bible and I still love much of it. But I've since learned about the different manuscript traditions, the books that didn't make the canon, the passages scholars think were added later. How do you navigate that? How do you know what's genuinely from God and what reflects human culture, politics, or misunderstanding?", 'Can science explain everything?': "I think science is clearly our most reliable tool for understanding reality. It's self-correcting, testable, and it works. I'm not saying it explains everything — but I'm genuinely not sure what God explains that science can't eventually account for. What would be left for God to do in a fully scientific account of reality?", 'Is Jesus the only way to God?': "My grandmother was a deeply devout Buddhist — one of the most loving, wise, and genuinely good people I've ever known. Are you saying she wasn't in relationship with God? That her lifetime of genuine spiritual seeking counted for nothing? I find that deeply difficult to accept." },
-      secularist: { 'Does God exist?': "Whether God exists or not — and I genuinely don't know — I've become convinced that organised religion, and Christianity specifically, has caused disproportionate harm throughout history. Crusades, inquisitions, the suppression of science, opposition to LGBTQ equality, the abuse crisis. Even if God is real, why would I align with an institution with that track record?", 'Did Jesus rise from the dead?': "Even granting that Jesus was an extraordinary teacher with a profound moral vision — the miraculous elements look to me like mythology added later to give the movement authority and distinguish it from competing mystery religions. The resurrection story follows well-known patterns of hero deification in ancient culture. Why should I treat it as history?", 'Why does God allow suffering?': "What troubles me most isn't cosmic suffering — it's the suffering caused in God's name. Religious institutions have enabled the abuse of children on an industrial scale, then protected perpetrators. Religious laws have criminalised love and identity. Religious nationalism has killed millions. At what point does faith in a good God become complicity in looking away from what religion actually does?", 'Is the Bible reliable?': "I'll take the Bible seriously as a text — and when I do, I find it used to justify slavery with specific verses, to silence women, to condemn same-sex love. A document with that history of use — regardless of its origins — deserves serious critical scrutiny rather than deference. The question isn't just whether it's reliable but what it's reliably used for.", 'Can science explain everything?': "Science doesn't need to explain everything to be our best guide. My concern isn't with mystery — it's with using God as a trump card to shut down inquiry, or using religious authority to impose particular moral conclusions on people who don't share your premises. What does God add to our understanding that we couldn't get to through reason, evidence, and human empathy alone?", 'Is Jesus the only way to God?': "The exclusivity claim is where Christianity has historically done its most damage. 'Only through us' was the justification for colonialism — converting the savages, destroying indigenous spiritual traditions, erasing cultures. I'm not saying that's what you intend. But the theological claim that one religion holds the exclusive key to salvation has a devastating track record when it meets political power." }
+      atheist: {
+        'Does God exist?': "Look, I respect your right to believe what you want — but you're asking me to accept an invisible, undetectable being with zero empirical evidence. Science explains the origin of the universe, the diversity of life, and even the basis of morality without invoking God. Why should I add an unnecessary supernatural hypothesis to an already complete picture?",
+        'Did Jesus rise from the dead?': "Extraordinary claims require extraordinary evidence. What you're offering are documents written decades after the alleged events, by committed believers with obvious motivation to promote the story. Every natural explanation — mass hallucination, legendary development, mistaken identity — is more probable than an actual violation of natural law. Where's the extraordinary evidence?",
+        'Why does God allow suffering?': "This is where I find Christian theology genuinely incoherent. If your God is all-powerful, all-knowing, and perfectly good — he could prevent a child dying of cancer right now. He doesn't. Either he can't, he won't, or he isn't there. The sheer volume of gratuitous suffering in the world is the most powerful evidence against a good God I know of.",
+        'Is the Bible reliable?': "The Bible was written by fallible humans, copied by fallible humans, translated by fallible humans, and selected by politically motivated councils. Scholars have documented thousands of variants between manuscripts. The Gospels contradict each other on basic facts. Paul never met Jesus. On what basis do you treat this as divine revelation rather than ancient human literature?",
+        'Can science explain everything?': "Science has a perfect track record of explaining things previously attributed to God — lightning, disease, the diversity of species. Religion has a perfect track record of retreating as science advances. The God of the gaps keeps shrinking. Science doesn't need to explain everything right now to make God unnecessary — it just needs to keep doing what it's always done.",
+        'Is Jesus the only way to God?': "The idea that billions of people — born in the wrong century, on the wrong continent, into the wrong culture — are condemned through no fault of their own is not just implausible, it's morally monstrous. If your God is just and loving, how does he condemn someone who never had a genuine opportunity to hear the gospel?"
+      },
+      muslim: {
+        'Is Jesus God or a prophet?': "We Muslims love and honour Isa — Jesus — deeply. He was born of a virgin, performed great miracles, and will return at the end of times. But he is a prophet, not God. The Quran is clear: 'They have certainly disbelieved who say Allah is the Messiah, the son of Mary' (5:72). Jesus himself never once said 'I am God, worship me.' So where exactly does the Bible say Jesus claimed to be God in clear, unambiguous terms?",
+        'Is the Bible corrupted?': "The Quran tells us the original Torah and Gospel were divine revelation — but those original scriptures have been changed by human hands over centuries. Your own scholars acknowledge thousands of manuscript variants, books excluded from the canon, and passages added by later scribes — like the ending of Mark and the woman caught in adultery in John. How can you call a document with that history the preserved Word of God?",
+        'The Islamic Dilemma — does the Quran confirm the Bible?': "This is an interesting argument, but I think it misunderstands what the Quran affirms. When Allah says to consult the People of the Book, he is affirming the original divine revelations given to Moses and Jesus — not the corrupted versions that exist today. The Quran itself is the final, perfectly preserved revelation that corrects what came before. Do you agree that a perfectly preserved revelation would naturally supersede earlier corrupted ones?",
+        'Did Jesus die on the cross?': "The Quran states clearly in Surah 4:157 that Jesus was not killed and was not crucified — it only appeared so to them. Allah raised Jesus to himself. Now I know you'll point to Roman historical sources — but consider how reliable those sources are about a single execution among thousands in a troubled province. And your own Gospels show the disciples fled and weren't present. How certain can you really be about what happened?",
+        'Is the Quran perfectly preserved?': "The Quran is the most memorised and preserved book in human history — millions of Muslims have it memorised word for word. The Prophet himself oversaw its compilation and the companions preserved it faithfully. The variant readings you may have heard of — the Qira\'at — are simply different recitation styles, all authorised by the Prophet, not contradictions. Can the same be said of the Bible with its thousands of manuscript differences?",
+        'Muhammad vs Jesus — who is the final prophet?': "The Bible itself points to a prophet coming after Jesus — in John 16:7, Jesus speaks of the Paraclete, the Comforter who will come. The Arabic word for praised one — Ahmad — corresponds to Muhammad. Jesus also said in John 14:30 that the ruler of this world is coming, and in Matthew 21:43 that the kingdom will be given to another nation. These are prophecies of Muhammad. How do you interpret these passages?"
+      },
+      agnostic: {
+        'Is there evidence God exists?': "I genuinely want to believe — or at least, I want to know if there's something to believe. But here's my honest problem: every religious tradition claims to have the truth. Christians, Muslims, Hindus, Buddhists — they all have sincere experiences, compelling arguments, and devout communities. How do you know your experience of God is tracking something real rather than reflecting the culture you were born into?",
+        'Why does God allow suffering?': "This is actually the thing that most troubles me personally. I've watched people I love suffer terribly — good people, faithful people — and I couldn't see any purpose in it. I don't say this to score a debate point. I say it because I genuinely want to understand how you hold suffering and faith together without it breaking your belief.",
+        'Why Christianity and not other religions?': "I find myself drawn to spiritual questions but stuck on this one — if I'm going to commit to a religion, how do I choose? Every tradition has sincere believers, profound wisdom, and claims to divine origin. What makes Christianity's claims different in kind from those of Islam, Buddhism, or Hinduism? Is there a principled reason to choose, or is it mostly where you were born?",
+        'Did Jesus actually rise from the dead?': "I find the story of Jesus genuinely compelling — something clearly happened that transformed a group of frightened disciples into people willing to die for their message. But I struggle with the leap to bodily resurrection. How do I distinguish this from the many other resurrection narratives in ancient religion? What makes the Christian claim historically distinct from myth?",
+        'Can you be good without God?': "I try to live a good life — I care about people, I try to be honest, I work for justice. And I do all of this without believing in God. So when Christians say morality requires God, I find it puzzling. Are you saying my ethics aren't real? Or that they're somehow borrowed from a foundation I don't accept? I'd genuinely like to understand what you mean.",
+        'Is faith rational?': "I respect people of faith deeply — some of the wisest people I know are religious. But I struggle with faith itself as a concept. It seems to mean believing something without or even against the evidence. How is that different from wishful thinking? What distinguishes Christian faith from the sincere faith of a Mormon, a Muslim, or a flat-earther who also believes deeply?"
+      },
+      secularist: {
+        'Does religion do more harm than good?': "I want to be fair here — I know religious communities do enormous amounts of good. Food banks, hospitals, community support. I'm not dismissing that. But when I look at the historical record — the Crusades, the Inquisition, the religious justification of slavery, the clergy abuse crisis, the opposition to life-saving medicine on religious grounds — I struggle to conclude the balance is positive. How do you weigh that honestly?",
+        'Can morality exist without God?': "I live by a clear ethical framework — reduce suffering, respect autonomy, promote human flourishing — and I do this without any reference to God. Secular ethics has produced the human rights framework, abolition of slavery, women's suffrage, and expanding circles of moral concern. Christianity, by contrast, took centuries to condemn slavery and still struggles with gender equality. Why do you think God is needed for morality when secular reason has driven so much moral progress?",
+        'Is Christianity exclusive and intolerant?': "My concern isn't with private belief — believe whatever you like. It's with the public consequences of exclusive truth claims. When a religion teaches it has the only path to God, history shows that tends to justify treating non-believers as lesser — mission fields, people to be saved, or in the worst cases, people to be forced. How do you hold 'Jesus is the only way' without that becoming a justification for marginalising people who disagree?",
+        'Has science made God unnecessary?': "Science doesn't need to explain everything right now to be our best guide to reality. What concerns me is the pattern — every time science explains something previously attributed to God, religion retreats and claims God was never meant to explain that. Lightning, disease, mental illness, the origin of species — all once attributed to God, now understood naturally. At what point does the God hypothesis become unfalsifiable and therefore unscientific?",
+        'Why does God allow suffering?': "What troubles me most isn't natural suffering — it's institutionalised suffering done in God's name. I think of children abused by clergy while institutions protected perpetrators. I think of LGBTQ young people told by churches that their identity is sinful, leading to devastating mental health outcomes. I think of women denied life-saving medical care for religious reasons. How do you reconcile a loving God with institutions repeatedly causing this kind of preventable harm?",
+        'Is the Bible oppressive?': "I want to engage with this seriously, not just score points. Ephesians 6:5 — 'Slaves, obey your earthly masters.' 1 Timothy 2:12 — 'I do not permit a woman to teach or have authority over a man.' Leviticus 20:13 — the verse used to justify criminalising same-sex relationships. These aren't obscure passages — they were used to justify real oppression for centuries. How do you decide which Biblical commands are binding and which are cultural artifacts, and who gets to make that call?"
+      }
+    };
+
+    const topicsByOpponent = {
+      atheist: [
+        { topic: 'Does God exist?', desc: 'Cosmological, moral & fine-tuning arguments' },
+        { topic: 'Did Jesus rise from the dead?', desc: 'Historical evidence & the minimal facts approach' },
+        { topic: 'Why does God allow suffering?', desc: 'The problem of evil & theodicy' },
+        { topic: 'Is the Bible reliable?', desc: 'Manuscript evidence, archaeology & prophecy' },
+        { topic: 'Can science explain everything?', desc: 'Scientism, fine-tuning & the origin of the universe' },
+        { topic: 'Is Jesus the only way to God?', desc: 'Exclusivism, world religions & grace' }
+      ],
+      muslim: [
+        { topic: 'Is Jesus God or a prophet?', desc: 'The deity of Christ, Trinity & Islamic view of Isa' },
+        { topic: 'Is the Bible corrupted?', desc: 'Manuscript evidence vs the Islamic corruption narrative' },
+        { topic: 'The Islamic Dilemma — does the Quran confirm the Bible?', desc: 'Surah 5:47, 10:94 & the corruption problem' },
+        { topic: 'Did Jesus die on the cross?', desc: 'Historical crucifixion evidence vs Quranic denial' },
+        { topic: 'Is the Quran perfectly preserved?', desc: 'Variant readings, Sanaa manuscripts & Uthman\'s codex' },
+        { topic: 'Muhammad vs Jesus — who is the final prophet?', desc: 'Prophetic credentials, miracles & fulfilment of prophecy' }
+      ],
+      agnostic: [
+        { topic: 'Is there evidence God exists?', desc: 'Cosmological, fine-tuning & personal experience arguments' },
+        { topic: 'Why does God allow suffering?', desc: 'The emotional & philosophical problem of evil' },
+        { topic: 'Why Christianity and not other religions?', desc: 'Religious diversity, exclusivism & the resurrection' },
+        { topic: 'Did Jesus actually rise from the dead?', desc: 'Historical methodology & the minimal facts approach' },
+        { topic: 'Can you be good without God?', desc: 'Moral grounding, secular ethics & human flourishing' },
+        { topic: 'Is faith rational?', desc: 'Evidence, reason, and the nature of religious belief' }
+      ],
+      secularist: [
+        { topic: 'Does religion do more harm than good?', desc: 'Historical failures vs Christian social contribution' },
+        { topic: 'Can morality exist without God?', desc: 'Secular ethics vs divine command theory' },
+        { topic: 'Is Christianity exclusive and intolerant?', desc: 'Exclusivism, pluralism & the love of neighbour' },
+        { topic: 'Has science made God unnecessary?', desc: 'Scientism, naturalism & the limits of science' },
+        { topic: 'Why does God allow suffering?', desc: 'Systemic injustice, theodicy & divine action' },
+        { topic: 'Is the Bible oppressive?', desc: 'Slavery, women, LGBTQ — scripture and justice' }
+      ]
     };
 
     function selectOpponent(id, el) {
       document.querySelectorAll('.opponent-card').forEach(c => c.classList.remove('selected'));
       el.classList.add('selected');
       state.opponent = id;
+      state.topic = null;
+      updateTopics(id);
       checkReady();
+    }
+
+    function updateTopics(opponent) {
+      const topics = topicsByOpponent[opponent] || topicsByOpponent.atheist;
+      const grid = document.getElementById('topic-grid');
+      grid.innerHTML = topics.map(t =>
+        `<button class="topic-btn" onclick="selectTopic('${t.topic.replace(/'/g,"\\'")}', this)">
+          <div class="topic-name">${t.topic}</div>
+          <div class="topic-desc">${t.desc}</div>
+        </button>`
+      ).join('');
     }
 
     function setDiff(e, diff) {
