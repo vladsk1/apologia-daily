@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Devotional — Apologia Daily</title>
+  <meta name="description" content="Daily apologetics devotionals — verse, reflection, prayer, and AI-powered follow up questions to deepen your faith and reason every morning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy-950: #050d1a; --navy-900: #0a1628; --navy-800: #0f2040;
+      --navy-700: #163058; --navy-600: #1e4278; --navy-500: #285a9e;
+      --navy-400: #3b72bc; --navy-300: #6f9fd4; --navy-200: #aecae8;
+      --navy-100: #ddeaf5; --navy-50: #f0f6fb;
+      --gold: #c8a951; --gold-light: #e8cf87;
+      --white: #ffffff; --off-white: #f8f7f4;
+      --text-dark: #0a1628; --text-mid: #3a4a62; --text-muted: #7a8fa8;
+      --border: #d4e0ec;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: 'DM Sans', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text-dark); background: var(--off-white); line-height: 1.7; overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,13,26,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.7); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 8px 20px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    /* PAGE LAYOUT */
+    .page-wrap { max-width: 760px; margin: 0 auto; padding: 5rem 2rem 6rem; }
+
+    /* DATE BAR */
+    .date-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+    .date-label { font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
+    .archive-link { font-family: var(--font-ui); font-size: 0.8rem; color: var(--navy-400); text-decoration: none; }
+    .archive-link:hover { color: var(--navy-600); }
+
+    /* STREAK */
+    .streak-section { background: var(--navy-900); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .streak-left { display: flex; align-items: center; gap: 14px; }
+    .streak-flame { font-size: 1.8rem; }
+    .streak-count { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .streak-label { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-top: 2px; }
+    .streak-days { display: flex; gap: 6px; }
+    .streak-day { width: 32px; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; flex-direction: column; gap: 1px; }
+    .streak-day .day-lbl { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .streak-day.done { background: var(--gold); color: var(--navy-950); }
+    .streak-day.today { background: rgba(200,169,81,0.2); border: 1px solid var(--gold); color: var(--gold); }
+    .streak-day.empty { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.2); }
+
+    /* DEVOTIONAL CARD */
+    .devotional-card { background: var(--navy-950); border-radius: 8px; padding: 2.5rem; margin-bottom: 1.5rem; position: relative; overflow: hidden; }
+    .devotional-card::before { content: '\201C'; position: absolute; top: -1.5rem; left: 1.5rem; font-family: var(--font-display); font-size: 10rem; color: rgba(200,169,81,0.08); line-height: 1; pointer-events: none; }
+    .devotional-theme { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+    .devotional-verse { font-family: var(--font-display); font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 400; font-style: italic; line-height: 1.6; color: var(--white); margin-bottom: 0.75rem; position: relative; z-index: 1; }
+    .devotional-ref { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; color: var(--gold); letter-spacing: 0.06em; margin-bottom: 1.75rem; }
+    .devotional-divider { height: 1px; background: rgba(255,255,255,0.08); margin-bottom: 1.75rem; }
+    .devotional-reflection { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.72); line-height: 1.85; margin-bottom: 1.5rem; }
+    .devotional-reflection strong { color: rgba(255,255,255,0.9); font-weight: 400; }
+    .devotional-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .devo-btn { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; padding: 8px 18px; border-radius: 3px; cursor: pointer; transition: all 0.2s; border: none; display: flex; align-items: center; gap: 6px; }
+    .devo-btn-primary { background: var(--gold); color: var(--navy-950); }
+    .devo-btn-primary:hover { background: var(--gold-light); }
+    .devo-btn-secondary { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.65); border: 1px solid rgba(255,255,255,0.12); }
+    .devo-btn-secondary:hover { background: rgba(255,255,255,0.1); }
+    .devo-btn.done { background: rgba(200,169,81,0.15); color: var(--gold); border: 1px solid rgba(200,169,81,0.3); }
+
+    /* PRAYER SECTION */
+    .prayer-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; margin-bottom: 1.5rem; }
+    .section-eyebrow { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy-500); margin-bottom: 0.75rem; }
+    .prayer-text { font-size: 1rem; font-weight: 300; color: var(--text-mid); line-height: 1.85; font-style: italic; margin-bottom: 1.25rem; }
+    .prayer-text strong { font-weight: 400; color: var(--text-dark); font-style: normal; }
+    .prayer-actions { display: flex; gap: 10px; }
+    .prayer-btn { font-family: var(--font-ui); font-size: 0.8rem; padding: 7px 16px; border-radius: 3px; border: 1px solid var(--border); background: transparent; color: var(--text-mid); cursor: pointer; transition: all 0.2s; }
+    .prayer-btn:hover { border-color: var(--navy-300); color: var(--navy-600); }
+    .prayer-btn.done { background: var(--navy-50); border-color: var(--navy-200); color: var(--navy-600); }
+
+    /* AI REFLECTION SECTION */
+    .ai-section { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; margin-bottom: 1.5rem; }
+    .ai-question { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--text-dark); line-height: 1.5; margin-bottom: 1.25rem; font-style: italic; }
+    .ai-question-loading { display: flex; align-items: center; gap: 10px; font-family: var(--font-ui); font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .ai-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--navy-300); animation: bounce 1.2s ease infinite; }
+    .ai-dot:nth-child(2) { animation-delay: 0.2s; }
+    .ai-dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes bounce { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-5px); } }
+    .ai-input { width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: 4px; font-family: var(--font-body); font-size: 0.95rem; color: var(--text-dark); resize: none; outline: none; transition: border-color 0.2s; min-height: 80px; background: var(--off-white); }
+    .ai-input:focus { border-color: var(--navy-300); background: var(--white); }
+    .ai-input::placeholder { color: var(--text-muted); }
+    .ai-submit { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 9px 20px; border-radius: 3px; background: var(--navy-900); color: var(--white); border: none; cursor: pointer; margin-top: 10px; transition: all 0.2s; }
+    .ai-submit:hover { background: var(--navy-700); }
+    .ai-submit:disabled { opacity: 0.4; cursor: default; }
+    .ai-response { background: var(--navy-50); border-left: 3px solid var(--navy-300); border-radius: 0 4px 4px 0; padding: 1rem 1.25rem; margin-top: 1rem; display: none; }
+    .ai-response.visible { display: block; }
+    .ai-response-text { font-size: 0.95rem; color: var(--text-mid); line-height: 1.75; }
+
+    /* RELATED CONTENT */
+    .related-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 1rem; }
+    .related-item { display: flex; gap: 10px; align-items: flex-start; padding: 10px; border-radius: 4px; background: var(--off-white); text-decoration: none; transition: background 0.15s; }
+    .related-item:hover { background: var(--navy-50); }
+    .related-icon { width: 32px; height: 32px; border-radius: 4px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .related-icon svg { width: 15px; height: 15px; fill: none; stroke-width: 2; }
+    .related-title { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text-dark); margin-bottom: 2px; line-height: 1.3; }
+    .related-sub { font-family: var(--font-ui); font-size: 0.72rem; color: var(--text-muted); }
+
+    /* ARCHIVE */
+    .archive-section { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .archive-list { display: flex; flex-direction: column; gap: 0; margin-top: 1rem; }
+    .archive-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); cursor: pointer; transition: all 0.15s; }
+    .archive-item:last-child { border-bottom: none; }
+    .archive-item:hover .archive-item-title { color: var(--navy-600); }
+    .archive-item-date { font-family: var(--font-ui); font-size: 0.72rem; color: var(--text-muted); min-width: 80px; }
+    .archive-item-title { font-family: var(--font-ui); font-size: 0.88rem; color: var(--text-dark); flex: 1; padding: 0 1rem; }
+    .archive-item-done { width: 18px; height: 18px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .archive-item-done.completed { background: var(--navy-900); border-color: var(--navy-900); }
+    .archive-item-done svg { width: 10px; height: 10px; stroke: var(--gold); fill: none; stroke-width: 2.5; }
+
+    /* FOOTER */
+    footer { background: var(--navy-950); border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 2rem 2rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+    .footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-ui); font-size: 0.8rem; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+    .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="video-library.html">Videos</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
+      <li><a href="daily-devotional.html" class="active">Daily</a></li>
+      <li><a href="worldviews.html">Worldviews</a></li>
+    </ul>
+    <a href="index.html#pricing" class="nav-cta">Start Free</a>
+  </nav>
+
+  <div class="page-wrap">
+
+    <!-- DATE BAR -->
+    <div class="date-bar reveal">
+      <span class="date-label" id="today-date">Thursday, 5 June 2026</span>
+      <a href="#archive" class="archive-link">View past devotionals ↓</a>
+    </div>
+
+    <!-- STREAK -->
+    <div class="streak-section reveal">
+      <div class="streak-left">
+        <div class="streak-flame">🔥</div>
+        <div>
+          <div class="streak-count" id="streak-count">7</div>
+          <div class="streak-label">day streak</div>
+        </div>
+      </div>
+      <div class="streak-days" id="streak-days"></div>
+    </div>
+
+    <!-- TODAY'S DEVOTIONAL -->
+    <div class="devotional-card reveal">
+      <div class="devotional-theme" id="devo-theme">Faith & Reason · The Call to Defend</div>
+      <div class="devotional-verse" id="devo-verse">"Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have — but do this with gentleness and respect."</div>
+      <div class="devotional-ref" id="devo-ref">1 Peter 3:15</div>
+      <div class="devotional-divider"></div>
+      <div class="devotional-reflection" id="devo-reflection">Peter's instruction to the early church is both a calling and a comfort. The word translated <strong>"answer"</strong> is the Greek <em>apologia</em> — a legal defence, a reasoned account. Peter is not asking Christians to win arguments. He is asking them to love people enough to think carefully about truth on their behalf.<br><br>Notice the conditions Peter adds: gentleness and respect. The best apologists are not the loudest or the most combative. They are the most patient, the most honest, and the most genuinely curious about the person in front of them. They win the hearing before they make the case.<br><br>Today, think about someone in your life who has genuine questions about faith. Not a hostile opponent — a genuine seeker. What would it mean to be <em>prepared</em> to meet them? What would it mean to do so with gentleness and respect rather than defensiveness?</div>
+      <div class="devotional-actions">
+        <button class="devo-btn devo-btn-primary" id="mark-done-btn" onclick="markDone()">✓ Mark as read</button>
+        <button class="devo-btn devo-btn-secondary" onclick="shareDevotional()">↗ Share</button>
+        <button class="devo-btn devo-btn-secondary" onclick="copyText()">⧉ Copy text</button>
+      </div>
+    </div>
+
+    <!-- PRAYER -->
+    <div class="prayer-card reveal">
+      <p class="section-eyebrow">Today's prayer</p>
+      <div class="prayer-text">
+        Lord, give me a <strong>prepared mind</strong> and a <strong>gentle spirit</strong>. When conversations about faith arise — whether I expect them or not — help me to be present, to listen well, and to speak with both clarity and compassion. Let me never argue to win, but always speak to love. Where I lack knowledge, give me humility. Where I lack courage, give me faith. May the reason for the hope I have be visible not only in what I say, but in how I live. Amen.
+      </div>
+      <div class="prayer-actions">
+        <button class="prayer-btn" id="prayer-btn" onclick="markPrayer()">🙏 I prayed this</button>
+        <button class="prayer-btn" onclick="copyPrayer()">⧉ Copy prayer</button>
+      </div>
+    </div>
+
+    <!-- AI REFLECTION -->
+    <div class="ai-section reveal">
+      <p class="section-eyebrow">Reflect deeper — AI follow up</p>
+      <div id="ai-question-wrap">
+        <div class="ai-question-loading" id="ai-loading">
+          <div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div>
+          <span style="margin-left:6px;">Preparing your reflection question…</span>
+        </div>
+        <div class="ai-question" id="ai-question" style="display:none;"></div>
+      </div>
+      <textarea class="ai-input" id="ai-input" placeholder="Type your reflection here…" rows="3"></textarea>
+      <button class="ai-submit" id="ai-submit" onclick="submitReflection()" disabled>Submit reflection →</button>
+      <div class="ai-response" id="ai-response">
+        <div class="ai-response-text" id="ai-response-text"></div>
+      </div>
+    </div>
+
+    <!-- RELATED CONTENT -->
+    <div class="related-card reveal">
+      <p class="section-eyebrow">Go deeper today</p>
+      <div class="related-grid">
+        <a href="evidence-library.html" class="related-item">
+          <div class="related-icon" style="background:#EEEDFE;"><svg viewBox="0 0 24 24" stroke="#534AB7"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <div><div class="related-title">Kalam Cosmological Argument</div><div class="related-sub">Evidence Library · God's Existence</div></div>
+        </a>
+        <a href="debate-arena.html" class="related-item">
+          <div class="related-icon" style="background:#E1F5EE;"><svg viewBox="0 0 24 24" stroke="#0F6E56"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div><div class="related-title">Practise defending the faith</div><div class="related-sub">Debate Arena · The Agnostic</div></div>
+        </a>
+        <a href="video-library.html" class="related-item">
+          <div class="related-icon" style="background:#FAEEDA;"><svg viewBox="0 0 24 24" stroke="#854F0B"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <div><div class="related-title">Tactics — Greg Koukl</div><div class="related-sub">Video Library · Quick Answer</div></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ARCHIVE -->
+    <div class="archive-section reveal" id="archive">
+      <p class="section-eyebrow">Past devotionals</p>
+      <div class="archive-list" id="archive-list"></div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Apologia<span>Daily</span></div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="evidence-library.html">Evidence Library</a></li>
+        <li><a href="debate-arena.html">Debate Arena</a></li>
+        <li><a href="worldviews.html">Worldviews</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+      </ul>
+      <div class="footer-copy">© 2026 Apologia Daily. Built for the defence of the Gospel.<br/><span style="font-size:0.7rem;opacity:0.6;margin-top:6px;display:block;">Apologia Daily is an independent platform not affiliated with or endorsed by any individuals or organisations referenced on this site.</span></div>
+    </div>
+  </footer>
+
+  <script>
+    // ── DEVOTIONAL DATA ──
+    const devotionals = [
+      {
+        date: new Date(2026, 5, 5),
+        theme: 'Faith & Reason · The Call to Defend',
+        verse: '"Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have — but do this with gentleness and respect."',
+        ref: '1 Peter 3:15',
+        reflection: 'Peter\'s instruction to the early church is both a calling and a comfort. The word translated "answer" is the Greek apologia — a legal defence, a reasoned account. Peter is not asking Christians to win arguments. He is asking them to love people enough to think carefully about truth on their behalf.\n\nNotice the conditions Peter adds: gentleness and respect. The best apologists are not the loudest or the most combative. They are the most patient, the most honest, and the most genuinely curious about the person in front of them. They win the hearing before they make the case.\n\nToday, think about someone in your life who has genuine questions about faith. Not a hostile opponent — a genuine seeker. What would it mean to be prepared to meet them? What would it mean to do so with gentleness and respect rather than defensiveness?',
+        prayer: 'Lord, give me a prepared mind and a gentle spirit. When conversations about faith arise — whether I expect them or not — help me to be present, to listen well, and to speak with both clarity and compassion. Let me never argue to win, but always speak to love. Where I lack knowledge, give me humility. Where I lack courage, give me faith. May the reason for the hope I have be visible not only in what I say, but in how I live. Amen.',
+        related: { library: 'Kalam Cosmological Argument', arena: 'The Agnostic', video: 'Tactics — Greg Koukl' }
+      },
+      {
+        date: new Date(2026, 5, 4),
+        theme: 'Faith & Reason · The Problem of Evil',
+        verse: '"And we know that in all things God works for the good of those who love him, who have been called according to his purpose."',
+        ref: 'Romans 8:28',
+        reflection: 'The problem of evil is the most emotionally powerful objection to Christian faith. It deserves to be taken seriously — not dismissed with easy answers. Paul does not deny the reality of suffering. He acknowledges "all things" — including the hardest and most painful — and makes a startling claim about them.\n\nThe Christian response to suffering is not "everything happens for a reason." It is something far more robust: that God, who entered into suffering himself in the person of Jesus, is sovereignly working even through evil and pain toward purposes that transcend our current understanding.\n\nToday, consider whether you are prepared to engage honestly with this question rather than deflecting it. People who ask about suffering deserve genuine engagement, not platitudes.',
+        prayer: 'Father, the weight of suffering in the world is real and I do not minimise it. Help me to hold faith and honesty together — to trust your sovereignty while taking pain seriously. Give me wisdom when others raise this question, and compassion that listens before it speaks. Amen.',
+        related: { library: 'Moral Argument', arena: 'The Atheist', video: 'Does God Exist? — Craig vs Hitchens' }
+      },
+      {
+        date: new Date(2026, 5, 3),
+        theme: 'Faith & Reason · The Risen Christ',
+        verse: '"And if Christ has not been raised, your faith is futile; you are still in your sins."',
+        ref: '1 Corinthians 15:17',
+        reflection: 'Paul does not ask us to believe in the resurrection by blind faith. He presents evidence. In the same passage, he lists the appearances of the risen Christ — to Peter, to the Twelve, to five hundred people at once, most of whom were still alive when Paul wrote and could be questioned.\n\nThe resurrection is not a private spiritual experience. It is a public historical claim — one that Paul stakes the entire Christian faith upon. If it did not happen, he says, everything falls. And if it did happen, everything changes.\n\nThe minimal facts approach developed by Gary Habermas shows that five historical facts — accepted by virtually all scholars — are best explained by a genuine resurrection. Today, make sure you can name those five facts.',
+        prayer: 'Lord Jesus, you rose from the dead and in doing so defeated the last enemy. Help me to know the evidence for that event deeply and to communicate it with confidence and joy. Let the resurrection not be an abstract doctrine but a living reality that shapes how I see everything. Amen.',
+        related: { library: 'Minimal Facts Argument', arena: 'The Muslim', video: 'Minimal Facts — Gary Habermas' }
+      },
+      {
+        date: new Date(2026, 5, 2),
+        theme: 'Faith & Reason · The Universe Has a Beginning',
+        verse: '"In the beginning God created the heavens and the earth."',
+        ref: 'Genesis 1:1',
+        reflection: 'For most of human history, atheists preferred an eternal universe — no beginning meant no need for a Creator. Modern cosmology has overturned that assumption entirely. The Borde-Guth-Vilenkin theorem, proposed by secular cosmologists, proves that any universe that has been on average expanding must have had a beginning.\n\nGenesis 1:1 has never looked more scientifically credible. The universe had an absolute beginning of space, time, matter, and energy. Whatever caused it must be outside all of those things — spaceless, timeless, immaterial, and of unimaginable power.\n\nToday, reflect on the remarkable convergence of modern physics and ancient scripture. Science, rightly understood, is not the enemy of faith.',
+        prayer: 'Creator God, you spoke and the universe began. Help me to see your fingerprints in the discoveries of science rather than fearing them. Give me confidence that truth, wherever it is found, is your truth. Amen.',
+        related: { library: 'Kalam Cosmological Argument', arena: 'The Atheist', video: 'The Kalam — Reasonable Faith' }
+      },
+      {
+        date: new Date(2026, 5, 1),
+        theme: 'Faith & Reason · Moral Truth Without God',
+        verse: '"The requirements of the law are written on their hearts, their consciences also bearing witness."',
+        ref: 'Romans 2:15',
+        reflection: 'Every human culture in history has had a moral code. They disagree on details, but they share certain deep intuitions — that gratuitous cruelty is wrong, that justice matters, that some things ought not to be done regardless of consequences. Paul sees this as evidence of a moral law written into human nature.\n\nThe moral argument for God asks a simple question: if God does not exist, what grounds the objectivity of those intuitions? On atheism, moral values reduce to evolutionary preferences — useful for survival, but not objectively binding. If torturing children for fun is not merely unpopular but genuinely, objectively wrong, that moral fact requires grounding in something beyond nature.\n\nToday, practise articulating this argument in plain language — not in academic jargon, but in the words you would use with a thoughtful friend.',
+        prayer: 'Holy God, you are the source of all that is good and true and beautiful. Help me to trace the moral intuitions of those around me back to you — not in a way that argues them into a corner, but in a way that opens a door. Amen.',
+        related: { library: 'The Moral Argument', arena: 'The Secularist', video: 'Does God Exist? — Craig vs Hitchens' }
+      },
+      {
+        date: new Date(2026, 4, 31),
+        theme: 'Faith & Reason · The Reliability of Scripture',
+        verse: '"Heaven and earth will pass away, but my words will never pass away."',
+        ref: 'Matthew 24:35',
+        reflection: 'The claim that the Bible has been corrupted over centuries is one of the most common objections raised by Muslims and sceptics alike. The manuscript evidence tells a different story. We have over 5,800 Greek New Testament manuscripts — more than any other ancient document — with the earliest fragments dating within a generation of the original events.\n\nWhen textual scholars compare these manuscripts, they can reconstruct the original text with extraordinary confidence. The Bible we read today is not a medieval invention. It is a well-attested ancient document whose transmission we can trace with unusual clarity.\n\nJesus\'s confidence in the permanence of his words was not misplaced. Today, take a moment to be thankful for the scholars and copyists who preserved these texts for us.',
+        prayer: 'Lord, thank you for your Word preserved through centuries of copying, translating, and transmission. Give me confidence in its reliability and wisdom in explaining that reliability to those who doubt it. Amen.',
+        related: { library: 'Manuscript Reliability', arena: 'The Muslim', video: 'Is the Bible Reliable?' }
+      },
+      {
+        date: new Date(2026, 4, 30),
+        theme: 'Faith & Reason · Fine-Tuning and the Creator',
+        verse: '"The heavens declare the glory of God; the skies proclaim the work of his hands."',
+        ref: 'Psalm 19:1',
+        reflection: 'Physicists have discovered that the constants of nature — the strength of gravity, the mass of the electron, the cosmological constant — are calibrated to life-permitting values with extraordinary precision. If any were different by even a fraction, no stars, planets, chemistry, or life would be possible.\n\nThe Psalmist had no access to modern physics. But the intuition that the ordered, life-sustaining universe points to a Creator is vindicated by everything modern science has revealed. The fine-tuning argument gives that intuition rigorous philosophical and scientific expression.\n\nToday, look at the world with fresh eyes. The very fact that atoms combine, that chemistry works, that a universe fine-tuned for life exists — each of these is an invitation to worship.',
+        prayer: 'Creator, the precision of your universe leaves me in awe. Help me to see the fine-tuning of reality not as a philosophical argument to be deployed, but as a daily invitation to wonder and gratitude. Amen.',
+        related: { library: 'Fine-Tuning Argument', arena: 'The Atheist', video: 'Fine-Tuning — InspiringPhilosophy' }
+      }
+    ];
+
+    // ── DATE & STREAK ──
+    function formatDate(date) {
+      return date.toLocaleDateString('en-AU', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+    }
+
+    function buildStreak() {
+      const days = ['S','M','T','W','T','F','S'];
+      const today = new Date();
+      const dayOfWeek = today.getDay();
+      const container = document.getElementById('streak-days');
+      container.innerHTML = '';
+      for (let i = 0; i < 7; i++) {
+        const div = document.createElement('div');
+        div.className = 'streak-day';
+        const completed = JSON.parse(localStorage.getItem('completed') || '[]');
+        const d = new Date(today);
+        d.setDate(today.getDate() - dayOfWeek + i);
+        const key = d.toDateString();
+        const isPast = d < today;
+        const isToday = d.toDateString() === today.toDateString();
+        let cls = 'empty';
+        if (isToday) cls = completed.includes(key) ? 'done' : 'today';
+        else if (isPast && completed.includes(key)) cls = 'done';
+        div.classList.add(cls);
+        div.innerHTML = `<span class="day-lbl">${days[i]}</span>`;
+        container.appendChild(div);
+      }
+      const completed = JSON.parse(localStorage.getItem('completed') || '[]');
+      let streak = 0;
+      const check = new Date(today);
+      while (true) {
+        if (completed.includes(check.toDateString())) { streak++; check.setDate(check.getDate() - 1); }
+        else break;
+      }
+      document.getElementById('streak-count').textContent = streak;
+    }
+
+    function markDone() {
+      const completed = JSON.parse(localStorage.getItem('completed') || '[]');
+      const key = new Date().toDateString();
+      if (!completed.includes(key)) { completed.push(key); localStorage.setItem('completed', JSON.stringify(completed)); }
+      const btn = document.getElementById('mark-done-btn');
+      btn.textContent = '✓ Completed today';
+      btn.classList.remove('devo-btn-primary');
+      btn.classList.add('done');
+      buildStreak();
+    }
+
+    function markPrayer() {
+      const btn = document.getElementById('prayer-btn');
+      btn.textContent = '🙏 Prayer offered';
+      btn.classList.add('done');
+    }
+
+    function shareDevotional() {
+      if (navigator.share) {
+        navigator.share({ title: 'Apologia Daily Devotional', text: 'Today\'s devotional from Apologia Daily', url: window.location.href });
+      } else {
+        navigator.clipboard.writeText(window.location.href).then(() => alert('Link copied to clipboard'));
+      }
+    }
+
+    function copyText() {
+      const verse = document.getElementById('devo-verse').textContent;
+      const ref = document.getElementById('devo-ref').textContent;
+      const reflection = document.getElementById('devo-reflection').textContent;
+      navigator.clipboard.writeText(`${verse}\n${ref}\n\n${reflection}\n\n— Apologia Daily`);
+    }
+
+    function copyPrayer() {
+      const prayer = document.getElementById('prayer-text') ? document.getElementById('prayer-text').textContent : document.querySelector('.prayer-text').textContent;
+      navigator.clipboard.writeText(prayer + '\n\n— Apologia Daily');
+    }
+
+    // ── AI REFLECTION ──
+    const todayDevo = devotionals[0];
+
+    async function loadAIQuestion() {
+      try {
+        const res = await fetch('/api/devotional', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            verse: todayDevo.ref,
+            reflection: todayDevo.theme,
+            userResponse: null
+          })
+        });
+        if (res.ok) {
+          const data = await res.json();
+          document.getElementById('ai-loading').style.display = 'none';
+          document.getElementById('ai-question').style.display = 'block';
+          document.getElementById('ai-question').textContent = data.question;
+          document.getElementById('ai-submit').disabled = false;
+        } else {
+          showDefaultQuestion();
+        }
+      } catch {
+        showDefaultQuestion();
+      }
+    }
+
+    function showDefaultQuestion() {
+      document.getElementById('ai-loading').style.display = 'none';
+      document.getElementById('ai-question').style.display = 'block';
+      document.getElementById('ai-question').textContent = 'Think of someone in your life who has questions about faith. What is the one question you feel least prepared to answer — and what would it look like to start preparing for that conversation this week?';
+      document.getElementById('ai-submit').disabled = false;
+    }
+
+    async function submitReflection() {
+      const input = document.getElementById('ai-input').value.trim();
+      if (!input) return;
+      document.getElementById('ai-submit').disabled = true;
+      document.getElementById('ai-submit').textContent = 'Thinking…';
+
+      try {
+        const res = await fetch('/api/devotional', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            verse: todayDevo.ref,
+            reflection: todayDevo.theme,
+            userResponse: input
+          })
+        });
+        if (res.ok) {
+          const data = await res.json();
+          document.getElementById('ai-response-text').textContent = data.question;
+          document.getElementById('ai-response').classList.add('visible');
+        }
+      } catch {
+        document.getElementById('ai-response-text').textContent = 'Thank you for your reflection. Continue holding that thought through the day and see what God brings to mind.';
+        document.getElementById('ai-response').classList.add('visible');
+      }
+      document.getElementById('ai-submit').disabled = false;
+      document.getElementById('ai-submit').textContent = 'Submit reflection →';
+    }
+
+    document.getElementById('ai-input').addEventListener('input', function() {
+      document.getElementById('ai-submit').disabled = this.value.trim().length === 0;
+    });
+
+    // ── ARCHIVE ──
+    function buildArchive() {
+      const completed = JSON.parse(localStorage.getItem('completed') || '[]');
+      const list = document.getElementById('archive-list');
+      list.innerHTML = devotionals.slice(1).map(d => {
+        const isDone = completed.includes(d.date.toDateString());
+        return `<div class="archive-item">
+          <span class="archive-item-date">${d.date.toLocaleDateString('en-AU', { day:'numeric', month:'short' })}</span>
+          <span class="archive-item-title">${d.theme}</span>
+          <div class="archive-item-done ${isDone ? 'completed' : ''}">
+            ${isDone ? '<svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>' : ''}
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    // ── INIT ──
+    document.getElementById('today-date').textContent = formatDate(new Date());
+    buildStreak();
+    buildArchive();
+    loadAIQuestion();
+
+    const markDoneBtn = document.getElementById('mark-done-btn');
+    const completed = JSON.parse(localStorage.getItem('completed') || '[]');
+    if (completed.includes(new Date().toDateString())) {
+      markDoneBtn.textContent = '✓ Completed today';
+      markDoneBtn.classList.remove('devo-btn-primary');
+      markDoneBtn.classList.add('done');
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
