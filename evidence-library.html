@@ -138,21 +138,17 @@
       background: var(--navy-900);
       border-bottom: 1px solid rgba(255,255,255,0.08);
       position: sticky; top: 64px; z-index: 90;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
     }
-    .category-nav::-webkit-scrollbar { display: none; }
     .category-nav-inner {
-      display: flex;
-      flex-wrap: nowrap;
-      padding: 0 2rem;
-      width: max-content;
-      min-width: 100%;
+      max-width: 1100px; margin: 0 auto;
+      display: flex; flex-wrap: nowrap;
+      padding: 0 1rem;
+      overflow-x: auto;
     }
+    .category-nav-inner::-webkit-scrollbar { display: none; }
     .cat-tab {
-      font-family: var(--font-ui); font-size: 0.78rem; font-weight: 400;
-      letter-spacing: 0.02em;
-      padding: 1rem 1rem;
+      font-family: var(--font-ui); font-size: 0.75rem; font-weight: 400;
+      padding: 1rem 0.9rem;
       color: rgba(255,255,255,0.5);
       border-bottom: 2px solid transparent;
       cursor: pointer; white-space: nowrap; flex-shrink: 0;
@@ -1542,7 +1538,7 @@
       document.querySelectorAll('.category-section').forEach(s => s.classList.remove('active'));
       btn.classList.add('active');
       document.getElementById('cat-' + cat).classList.add('active');
-      window.scrollTo({ top: 200, behavior: 'smooth' });
+      document.querySelector('.category-nav').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     function toggleArg(card) {
