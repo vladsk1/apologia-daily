@@ -954,8 +954,8 @@
       const scenarioName = convoScenarios[state.opponent] ? convoScenarios[state.opponent].name : oppNames[state.opponent];
 
       // Update feedback header for mode
-      document.getElementById('feedback-eyebrow').textContent = isConvo ? 'Conversation complete' : 'Debate complete';
-      document.getElementById('feedback-title').innerHTML = isConvo ? 'Here\'s your <em>conversation coaching</em>' : 'Here\'s how you <em>performed</em>';
+      document.querySelector('.feedback-eyebrow').textContent = isConvo ? 'Conversation complete' : 'Debate complete';
+      document.querySelector('.feedback-title').innerHTML = isConvo ? 'Here\'s your <em>conversation coaching</em>' : 'Here\'s how you <em>performed</em>';
       document.getElementById('feedback-sub').textContent = isConvo
         ? `${scenarioName} · ${state.topic}`
         : `vs ${oppNames[state.opponent]} · ${state.topic} · ${state.difficulty.charAt(0).toUpperCase() + state.difficulty.slice(1)}`;
@@ -972,8 +972,8 @@
         document.querySelector('.score-grid').style.display = 'none';
         document.getElementById('feedback-strengths').innerHTML = '<div class="fb-loading"><div class="fb-loading-dot"></div><div class="fb-loading-dot"></div><div class="fb-loading-dot"></div><span style="margin-left:6px;">Reviewing your conversation…</span></div>';
         document.getElementById('feedback-weaknesses').innerHTML = '<div class="fb-loading"><div class="fb-loading-dot"></div><div class="fb-loading-dot"></div><div class="fb-loading-dot"></div><span style="margin-left:6px;">Preparing your coaching…</span></div>';
-        document.querySelector('.fb-section:nth-child(2) .fb-section-title').textContent = 'What you did well';
-        document.querySelector('.fb-section:nth-child(3) .fb-section-title').textContent = 'How to grow from this conversation';
+        document.querySelectorAll('.fb-section')[0].querySelector('.fb-section-title').textContent = 'What you did well';
+        document.querySelectorAll('.fb-section')[1].querySelector('.fb-section-title').textContent = 'How to grow from this conversation';
       } else {
         document.querySelector('.score-grid').style.display = 'grid';
         document.getElementById('feedback-strengths').innerHTML = '<div class="fb-loading"><div class="fb-loading-dot"></div><div class="fb-loading-dot"></div><div class="fb-loading-dot"></div><span style="margin-left:6px;">Analysing your arguments…</span></div>';
