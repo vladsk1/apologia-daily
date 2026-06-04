@@ -140,9 +140,10 @@
       position: sticky; top: 64px; z-index: 90;
     }
     .category-nav-inner {
-      max-width: 1100px; margin: 0 auto;
+      max-width: 1100px;
+      margin: 0 auto;
       display: flex; flex-wrap: nowrap;
-      padding: 0 1rem;
+      padding: 0 2rem;
       overflow-x: auto;
     }
     .category-nav-inner::-webkit-scrollbar { display: none; }
@@ -164,6 +165,11 @@
     /* ── CATEGORY SECTION ── */
     .category-section { display: none; }
     .category-section.active { display: block; }
+    .category-section .cat-intro,
+    .category-section .subcat-label,
+    .category-section .arguments-list,
+    .category-section .pro-banner { }
+
 
     .cat-intro {
       display: grid;
@@ -523,7 +529,7 @@
     <div class="category-section active" id="cat-existence">
       <div class="cat-intro reveal">
         <div class="cat-intro-text">
-          <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 1 of 4</p>
+          <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 1 of 5</p>
           <h2 class="cat-intro-title">Arguments for <em>God's Existence</em></h2>
           <p class="cat-intro-desc">From Aristotle's unmoved mover to modern cosmology, these arguments draw on philosophy, physics, and logic to make a compelling case that a transcendent Creator exists.</p>
         </div>
@@ -886,7 +892,7 @@
     <div class="category-section" id="cat-resurrection">
       <div class="cat-intro reveal">
         <div class="cat-intro-text">
-          <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 2 of 4</p>
+          <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 2 of 5</p>
           <h2 class="cat-intro-title">Evidence for <em>the Resurrection</em></h2>
           <p class="cat-intro-desc">The resurrection of Jesus is the cornerstone of the Christian faith. These arguments draw on historical methodology, ancient sources, and the minimal facts approach to make a compelling historical case.</p>
         </div>
