@@ -772,7 +772,7 @@
     <p class="hero-sub">The serious intellectual platform for Christians. Master the evidence, practise real debates, and grow in confident faith — every single day.</p>
     <div class="hero-actions">
       <a href="#pricing" class="btn-primary">Begin Your Journey</a>
-      <a href="#features" class="btn-ghost">Explore the Platform</a>
+      <a href="#features" class="btn-ghost" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'});return false;">Explore the Platform</a>
     </div>
     <p class="hero-verse">"Always be prepared to give an answer to everyone who asks." — 1 Peter 3:15</p>
   </section>
@@ -807,7 +807,7 @@
       </div>
       <div class="features-grid reveal">
 
-        <div class="feature-card">
+        <div class="feature-card" onclick="window.location='evidence-library.html'" style="cursor:pointer;">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
           </div>
@@ -816,7 +816,7 @@
           <span class="feature-tag">Explore arguments →</span>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" onclick="window.location='ask-anything.html'" style="cursor:pointer;">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
           </div>
@@ -825,7 +825,7 @@
           <span class="feature-tag">Ask a question →</span>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" onclick="window.location='debate-arena.html'" style="cursor:pointer;">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
@@ -834,7 +834,7 @@
           <span class="feature-tag">Enter the arena →</span>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" onclick="window.location='video-library.html'" style="cursor:pointer;">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
           </div>
@@ -843,7 +843,7 @@
           <span class="feature-tag">Watch debates →</span>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" onclick="window.location='daily-devotional.html'" style="cursor:pointer;">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg>
           </div>
@@ -852,13 +852,14 @@
           <span class="feature-tag">Start today →</span>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" style="opacity:0.65;position:relative;">
+          <div style="position:absolute;top:12px;right:12px;font-family:var(--font-ui);font-size:0.65rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;background:var(--navy-100);color:var(--navy-600);padding:3px 10px;border-radius:20px;">Coming Soon</div>
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <div class="feature-title">Community</div>
           <div class="feature-desc">A moderated forum where Christians sharpen each other — discuss arguments, share stories, and prepare together for the conversations that matter.</div>
-          <span class="feature-tag">Join the community →</span>
+          <span class="feature-tag" style="color:var(--text-muted);border-color:var(--border);">Coming soon</span>
         </div>
 
       </div>
