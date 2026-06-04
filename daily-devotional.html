@@ -345,11 +345,25 @@
         const key = d.toDateString();
         const isPast = d < today;
         const isToday = d.toDateString() === today.toDateString();
+        const isFuture = d > today;
         let cls = 'empty';
         if (isToday) cls = completed.includes(key) ? 'done' : 'today';
         else if (isPast && completed.includes(key)) cls = 'done';
         div.classList.add(cls);
         div.innerHTML = `<span class="day-lbl">${days[i]}</span>`;
+        if (!isFuture) {
+          div.style.cursor = 'pointer';
+          div.title = isToday ? 'Today' : d.toLocaleDateString('en-AU', { weekday:'long', day:'numeric', month:'long' });
+          div.addEventListener('click', () => {
+            if (isToday) { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+            const devoIndex = devotionals.findIndex(dv => dv.date.toDateString() === key);
+            if (devoIndex > 0) openPastDevo(devoIndex);
+            else {
+              const diff = Math.round((today - d) / (1000*60*60*24));
+              if (diff < devotionals.length) openPastDevo(diff);
+            }
+          });
+        }
         container.appendChild(div);
       }
       const completed = JSON.parse(localStorage.getItem('completed') || '[]');
@@ -471,9 +485,9 @@
     function buildArchive() {
       const completed = JSON.parse(localStorage.getItem('completed') || '[]');
       const list = document.getElementById('archive-list');
-      list.innerHTML = devotionals.slice(1).map(d => {
+      list.innerHTML = devotionals.slice(1).map((d, i) => {
         const isDone = completed.includes(d.date.toDateString());
-        return `<div class="archive-item">
+        return `<div class="archive-item" onclick="openPastDevo(${i + 1})" style="cursor:pointer;">
           <span class="archive-item-date">${d.date.toLocaleDateString('en-AU', { day:'numeric', month:'short' })}</span>
           <span class="archive-item-title">${d.theme}</span>
           <div class="archive-item-done ${isDone ? 'completed' : ''}">
@@ -481,6 +495,43 @@
           </div>
         </div>`;
       }).join('');
+    }
+
+    // ── PAST DEVOTIONAL MODAL ──
+    function openPastDevo(index) {
+      const d = devotionals[index];
+      if (!d) return;
+
+      const existing = document.getElementById('past-devo-modal');
+      if (existing) existing.remove();
+
+      const modal = document.createElement('div');
+      modal.id = 'past-devo-modal';
+      modal.style.cssText = 'position:fixed;inset:0;background:rgba(5,13,26,0.85);z-index:200;overflow-y:auto;padding:2rem 1rem;display:flex;align-items:flex-start;justify-content:center;';
+      modal.innerHTML = `
+        <div style="background:var(--off-white);border-radius:8px;max-width:720px;width:100%;padding:2rem;position:relative;margin:auto;">
+          <button onclick="document.getElementById('past-devo-modal').remove()" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--text-muted);">✕</button>
+          <div style="font-family:var(--font-ui);font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.75rem;">${d.date.toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}</div>
+          <div style="background:var(--navy-950);border-radius:8px;padding:2rem;margin-bottom:1.5rem;">
+            <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">${d.theme}</div>
+            <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:400;font-style:italic;line-height:1.6;color:var(--white);margin-bottom:0.75rem;">${d.verse}</div>
+            <div style="font-family:var(--font-ui);font-size:0.8rem;font-weight:500;color:var(--gold);letter-spacing:0.06em;margin-bottom:1.5rem;">${d.ref}</div>
+            <div style="height:1px;background:rgba(255,255,255,0.08);margin-bottom:1.5rem;"></div>
+            <div style="font-size:0.95rem;font-weight:300;color:rgba(255,255,255,0.72);line-height:1.85;">${d.reflection.replace(/\n\n/g,'<br><br>')}</div>
+          </div>
+          <div style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1.5rem;margin-bottom:1rem;">
+            <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy-500);margin-bottom:0.75rem;">Prayer</div>
+            <div style="font-size:0.95rem;font-weight:300;color:var(--text-mid);line-height:1.85;font-style:italic;">${d.prayer}</div>
+          </div>
+          <button onclick="markPastDone('${d.date.toDateString()}');document.getElementById('past-devo-modal').remove();buildArchive();buildStreak();" style="font-family:var(--font-ui);font-size:0.85rem;font-weight:500;padding:10px 24px;border-radius:3px;background:var(--gold);color:var(--navy-950);border:none;cursor:pointer;">✓ Mark as completed</button>
+        </div>`;
+      document.body.appendChild(modal);
+      modal.addEventListener('click', e => { if (e.target === modal) modal.remove(); });
+    }
+
+    function markPastDone(dateStr) {
+      const completed = JSON.parse(localStorage.getItem('completed') || '[]');
+      if (!completed.includes(dateStr)) { completed.push(dateStr); localStorage.setItem('completed', JSON.stringify(completed)); }
     }
 
     // ── INIT ──
