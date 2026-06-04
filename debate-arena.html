@@ -656,47 +656,45 @@
       const conversationText = state.messages.map(m => `${m.role === 'user' ? 'Christian' : oppNames[state.opponent]}: ${m.content}`).join('\n\n');
 
       try {
-        const response = await fetch('/api/debate', {
+        const response = await fetch('/api/feedback', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            messages: [{
-              role: 'user',
-              content: `You are an expert Christian apologetics coach. Analyse this debate conversation and provide honest, specific, constructive feedback for the Christian participant. The debate was on the topic: "${state.topic}" against ${oppNames[state.opponent]} at ${state.difficulty} difficulty.\n\nHere is the full conversation:\n\n${conversationText}\n\nProvide your feedback in this exact JSON format with no other text:\n{"overall": <number 0-100>, "argument": <number 0-100>, "objection": <number 0-100>, "strengths": "<2-3 specific things the Christian did well, referencing their actual arguments>", "weaknesses": "<2-3 specific areas to improve, referencing specific moments in the debate where they could have responded better>"}`
-            }],
-            opponent: 'atheist',
+            conversation: conversationText,
+            opponent: oppNames[state.opponent],
             topic: state.topic,
-            difficulty: 'gentle'
+            difficulty: state.difficulty
           })
         });
 
         if (response.ok) {
-          const data = await response.json();
-          try {
-            const clean = data.reply.replace(/```json|```/g, '').trim();
-            const feedback = JSON.parse(clean);
+          const feedback = await response.json();
+          const overall = parseInt(feedback.overall) || 70;
+          const argument = parseInt(feedback.argument) || 72;
+          const objection = parseInt(feedback.objection) || 65;
 
-            document.getElementById('score-overall').textContent = feedback.overall;
-            document.getElementById('score-argument').textContent = feedback.argument;
-            document.getElementById('score-objection').textContent = feedback.objection;
-            setTimeout(() => {
-              document.getElementById('bar-overall').style.width = feedback.overall + '%';
-              document.getElementById('bar-argument').style.width = feedback.argument + '%';
-              document.getElementById('bar-objection').style.width = feedback.objection + '%';
-            }, 100);
+          document.getElementById('score-overall').textContent = overall;
+          document.getElementById('score-argument').textContent = argument;
+          document.getElementById('score-objection').textContent = objection;
 
-            document.getElementById('feedback-strengths').innerHTML =
-              feedback.strengths.split('. ').filter(s => s.trim()).map(s =>
-                `<p>✓ ${s.trim()}${s.trim().endsWith('.') ? '' : '.'}</p>`
-              ).join('');
+          setTimeout(() => {
+            document.getElementById('bar-overall').style.width = overall + '%';
+            document.getElementById('bar-argument').style.width = argument + '%';
+            document.getElementById('bar-objection').style.width = objection + '%';
+          }, 100);
 
-            document.getElementById('feedback-weaknesses').innerHTML =
-              feedback.weaknesses.split('. ').filter(s => s.trim()).map(s =>
-                `<p>⚠ ${s.trim()}${s.trim().endsWith('.') ? '' : '.'}</p>`
-              ).join('');
-          } catch (parseError) {
-            showGenericFeedback();
-          }
+          const strengths = feedback.strengths || 'You engaged with the debate and made a genuine effort to defend your position.';
+          const weaknesses = feedback.weaknesses || 'Study the specific arguments in the Evidence Library to sharpen your responses for next time.';
+
+          document.getElementById('feedback-strengths').innerHTML =
+            strengths.split('. ').filter(s => s.trim()).map(s =>
+              `<p style="margin-bottom:8px;">✓ ${s.trim()}${s.trim().endsWith('.') ? '' : '.'}</p>`
+            ).join('');
+
+          document.getElementById('feedback-weaknesses').innerHTML =
+            weaknesses.split('. ').filter(s => s.trim()).map(s =>
+              `<p style="margin-bottom:8px;">⚠ ${s.trim()}${s.trim().endsWith('.') ? '' : '.'}</p>`
+            ).join('');
         } else {
           showGenericFeedback();
         }
