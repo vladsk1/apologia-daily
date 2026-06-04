@@ -139,15 +139,18 @@
       border-bottom: 1px solid rgba(255,255,255,0.08);
       padding: 0 2rem;
       position: sticky; top: 64px; z-index: 90;
+      overflow-x: auto;
     }
+    .category-nav::-webkit-scrollbar { height: 0; }
     .category-nav-inner {
       max-width: 1100px; margin: 0 auto;
-      display: flex; gap: 0; overflow-x: auto;
+      display: flex; gap: 0;
+      min-width: max-content;
     }
     .cat-tab {
       font-family: var(--font-ui); font-size: 0.82rem; font-weight: 400;
-      letter-spacing: 0.04em;
-      padding: 1rem 1.5rem;
+      letter-spacing: 0.02em;
+      padding: 1rem 1.25rem;
       color: rgba(255,255,255,0.5);
       border-bottom: 2px solid transparent;
       cursor: pointer; white-space: nowrap;
