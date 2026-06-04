@@ -619,6 +619,8 @@
       document.getElementById('player-iframe').src = buildPlayerSrc(id);
     }
 
+    let activeFilters = { topic: 'all', format: 'all' };
+
     function setFilter(type, value, btn) {
       activeFilters[type] = value;
       const group = btn.closest('.filter-group');
@@ -628,23 +630,24 @@
     }
 
     function applyFilters() {
-      const cards = document.querySelectorAll('.video-card');
+      const cards = document.querySelectorAll('#video-grid .video-card');
       let count = 0;
       cards.forEach(card => {
-        const topic = card.dataset.topic || '';
-        const format = card.dataset.format || '';
+        const topic = (card.getAttribute('data-topic') || '').trim();
+        const format = (card.getAttribute('data-format') || '').trim();
         const topicMatch = activeFilters.topic === 'all' || topic === activeFilters.topic;
         const formatMatch = activeFilters.format === 'all' || format === activeFilters.format;
         if (topicMatch && formatMatch) {
-          card.classList.remove('hidden');
+          card.style.display = '';
           count++;
         } else {
-          card.classList.add('hidden');
+          card.style.display = 'none';
         }
       });
       const noResults = document.getElementById('no-results');
-      noResults.classList.toggle('visible', count === 0);
-      document.getElementById('results-count').textContent = 'Showing ' + count + ' video' + (count !== 1 ? 's' : '');
+      if (noResults) noResults.classList.toggle('visible', count === 0);
+      const countEl = document.getElementById('results-count');
+      if (countEl) countEl.textContent = 'Showing ' + count + ' video' + (count !== 1 ? 's' : '');
     }
 
     function playVideo(card) {
