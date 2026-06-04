@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account — Apologia Daily</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy-950: #050d1a; --navy-900: #0a1628; --navy-700: #163058;
+      --navy-600: #1e4278; --navy-500: #285a9e; --navy-300: #6f9fd4;
+      --navy-100: #ddeaf5; --navy-50: #f0f6fb;
+      --gold: #c8a951; --gold-light: #e8cf87;
+      --white: #ffffff; --off-white: #f8f7f4;
+      --text-dark: #0a1628; --text-mid: #3a4a62; --text-muted: #7a8fa8;
+      --border: #d4e0ec; --error: #a32d2d; --error-bg: #fcebeb;
+      --success: #0f6e56; --success-bg: #e1f5ee;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-ui: 'DM Sans', system-ui, sans-serif;
+    }
+    body { font-family: var(--font-ui); background: var(--navy-950); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; position: relative; overflow: hidden; }
+    body::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(30,66,120,0.4) 0%, transparent 70%); pointer-events: none; }
+    .card { background: var(--white); border-radius: 8px; padding: 2.5rem; width: 100%; max-width: 420px; position: relative; z-index: 1; }
+    .logo { text-align: center; margin-bottom: 2rem; }
+    .logo a { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--navy-950); text-decoration: none; }
+    .logo a span { color: var(--gold); }
+    .card-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem; text-align: center; }
+    .card-sub { font-size: 0.88rem; color: var(--text-muted); text-align: center; margin-bottom: 2rem; }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-label { display: block; font-size: 0.82rem; font-weight: 500; color: var(--text-mid); margin-bottom: 6px; }
+    .form-input { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 4px; font-family: var(--font-ui); font-size: 0.95rem; color: var(--text-dark); outline: none; transition: border-color 0.2s; background: var(--off-white); }
+    .form-input:focus { border-color: var(--navy-300); background: var(--white); }
+    .form-input::placeholder { color: var(--text-muted); }
+    .btn-primary { width: 100%; padding: 13px; border-radius: 4px; background: var(--gold); color: var(--navy-950); font-family: var(--font-ui); font-size: 0.95rem; font-weight: 500; border: none; cursor: pointer; transition: background 0.2s; margin-bottom: 1rem; }
+    .btn-primary:hover { background: var(--gold-light); }
+    .btn-primary:disabled { opacity: 0.5; cursor: default; }
+    .error-box { background: var(--error-bg); border: 1px solid #f09595; border-radius: 4px; padding: 10px 14px; font-size: 0.85rem; color: var(--error); margin-bottom: 1rem; display: none; }
+    .error-box.visible { display: block; }
+    .success-box { background: var(--success-bg); border: 1px solid #9fe1cb; border-radius: 4px; padding: 14px; font-size: 0.88rem; color: var(--success); margin-bottom: 1rem; display: none; text-align: center; line-height: 1.6; }
+    .success-box.visible { display: block; }
+    .switch-text { text-align: center; font-size: 0.85rem; color: var(--text-muted); }
+    .switch-text a { color: var(--navy-500); text-decoration: none; font-weight: 500; }
+    .switch-text a:hover { color: var(--navy-700); }
+    .free-badge { background: var(--navy-50); border: 1px solid var(--navy-100); border-radius: 4px; padding: 10px 14px; font-size: 0.82rem; color: var(--navy-600); margin-bottom: 1.5rem; text-align: center; }
+    .free-badge strong { color: var(--navy-900); }
+    .terms-text { font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-top: 1rem; line-height: 1.5; }
+    .loading-spinner { width: 16px; height: 16px; border: 2px solid rgba(10,22,40,0.2); border-top-color: var(--navy-900); border-radius: 50%; animation: spin 0.8s linear infinite; display: none; vertical-align: middle; margin-right: 8px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .back-link { position: absolute; top: 1.5rem; left: 1.5rem; font-size: 0.82rem; color: rgba(255,255,255,0.5); text-decoration: none; z-index: 1; }
+    .back-link:hover { color: var(--white); }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-link">← Back to home</a>
+
+  <div class="card">
+    <div class="logo">
+      <a href="index.html">Apologia<span>Daily</span></a>
+    </div>
+
+    <h1 class="card-title">Start for free</h1>
+    <p class="card-sub">Create your account and begin defending your faith</p>
+
+    <div class="free-badge">
+      <strong>Free account includes:</strong> Evidence Library, Video Library, Daily Devotional, Debate Arena, and Ask Anything — no credit card required.
+    </div>
+
+    <div class="error-box" id="error-box"></div>
+    <div class="success-box" id="success-box">
+      ✓ Account created! Check your email to confirm your address, then <a href="login.html" style="color:var(--success);font-weight:500;">sign in here</a>.
+    </div>
+
+    <div id="form-wrap">
+      <div class="form-group">
+        <label class="form-label" for="name">Your name</label>
+        <input class="form-input" type="text" id="name" placeholder="John Smith" autocomplete="name" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">Email address</label>
+        <input class="form-input" type="email" id="email" placeholder="you@example.com" autocomplete="email" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="password">Password</label>
+        <input class="form-input" type="password" id="password" placeholder="At least 8 characters" autocomplete="new-password" />
+      </div>
+
+      <button class="btn-primary" id="signup-btn" onclick="handleSignup()">
+        <span class="loading-spinner" id="spinner"></span>
+        <span id="btn-text">Create free account →</span>
+      </button>
+
+      <div class="switch-text">
+        Already have an account? <a href="login.html">Sign in</a>
+      </div>
+
+      <p class="terms-text">By creating an account you agree to our Terms of Service and Privacy Policy.</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const SUPABASE_URL = 'https://noprgxkwniouukmrfozc.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw';
+    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) window.location.href = 'dashboard.html';
+    });
+
+    async function handleSignup() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const errorBox = document.getElementById('error-box');
+      const btn = document.getElementById('signup-btn');
+      const spinner = document.getElementById('spinner');
+      const btnText = document.getElementById('btn-text');
+
+      errorBox.classList.remove('visible');
+
+      if (!name) { showError('Please enter your name.'); return; }
+      if (!email) { showError('Please enter your email address.'); return; }
+      if (!password || password.length < 8) { showError('Password must be at least 8 characters.'); return; }
+
+      btn.disabled = true;
+      spinner.style.display = 'inline-block';
+      btnText.textContent = 'Creating account…';
+
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: { data: { full_name: name } }
+      });
+
+      if (error) {
+        showError(error.message);
+        btn.disabled = false;
+        spinner.style.display = 'none';
+        btnText.textContent = 'Create free account →';
+        return;
+      }
+
+      document.getElementById('form-wrap').style.display = 'none';
+      document.getElementById('success-box').classList.add('visible');
+    }
+
+    function showError(msg) {
+      const box = document.getElementById('error-box');
+      box.textContent = msg;
+      box.classList.add('visible');
+    }
+  </script>
+</body>
+</html>

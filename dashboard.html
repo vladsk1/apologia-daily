@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Apologia Daily</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy-950: #050d1a; --navy-900: #0a1628; --navy-800: #0f2040;
+      --navy-700: #163058; --navy-600: #1e4278; --navy-500: #285a9e;
+      --navy-400: #3b72bc; --navy-300: #6f9fd4; --navy-200: #aecae8;
+      --navy-100: #ddeaf5; --navy-50: #f0f6fb;
+      --gold: #c8a951; --gold-light: #e8cf87;
+      --white: #ffffff; --off-white: #f8f7f4;
+      --text-dark: #0a1628; --text-mid: #3a4a62; --text-muted: #7a8fa8;
+      --border: #d4e0ec;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: 'DM Sans', system-ui, sans-serif;
+    }
+    body { font-family: var(--font-ui); color: var(--text-dark); background: var(--off-white); }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,13,26,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.7); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-right { display: flex; align-items: center; gap: 1rem; }
+    .nav-user { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+    .nav-signout { font-family: var(--font-ui); font-size: 0.82rem; padding: 7px 16px; border-radius: 3px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: rgba(255,255,255,0.6); cursor: pointer; transition: all 0.2s; }
+    .nav-signout:hover { border-color: rgba(255,255,255,0.5); color: var(--white); }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    /* MAIN */
+    .main { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem 6rem; }
+
+    /* WELCOME */
+    .welcome-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+    .welcome-title { font-family: var(--font-display); font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; color: var(--text-dark); margin-bottom: 0.25rem; }
+    .welcome-title em { font-style: italic; color: var(--navy-600); }
+    .welcome-sub { font-size: 0.95rem; color: var(--text-muted); }
+    .upgrade-btn { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 10px 22px; border-radius: 3px; background: var(--gold); color: var(--navy-950); border: none; cursor: pointer; text-decoration: none; white-space: nowrap; }
+    .upgrade-btn:hover { background: var(--gold-light); }
+
+    /* STAT CARDS */
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+    .stat-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; text-align: center; }
+    .stat-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; line-height: 1; margin-bottom: 6px; }
+    .stat-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+    .stat-card.highlight { background: var(--navy-900); border-color: var(--navy-700); }
+    .stat-card.highlight .stat-num { color: var(--gold); }
+    .stat-card.highlight .stat-label { color: rgba(255,255,255,0.4); }
+
+    /* BELT */
+    .belt-card { background: var(--navy-950); border-radius: 8px; padding: 2rem; margin-bottom: 2.5rem; display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+    .belt-icon { font-size: 2.5rem; flex-shrink: 0; }
+    .belt-info { flex: 1; }
+    .belt-level { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .belt-desc { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }
+    .belt-progress { height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; margin-bottom: 6px; }
+    .belt-progress-fill { height: 100%; border-radius: 3px; background: var(--gold); transition: width 1s ease; }
+    .belt-progress-label { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+    .belt-next { font-family: var(--font-ui); font-size: 0.82rem; padding: 8px 18px; border-radius: 3px; background: rgba(200,169,81,0.15); color: var(--gold); border: 1px solid rgba(200,169,81,0.3); cursor: pointer; text-decoration: none; white-space: nowrap; }
+    .belt-next:hover { background: rgba(200,169,81,0.25); }
+
+    /* SECTION LABEL */
+    .section-label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* QUICK ACTIONS */
+    .actions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+    .action-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; cursor: pointer; transition: all 0.2s; text-decoration: none; display: block; }
+    .action-card:hover { border-color: var(--navy-300); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(10,22,40,0.07); }
+    .action-icon { width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .action-icon svg { width: 20px; height: 20px; fill: none; stroke-width: 2; }
+    .action-title { font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 4px; }
+    .action-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+    .action-cta { font-size: 0.78rem; font-weight: 500; color: var(--navy-500); margin-top: 10px; display: block; }
+
+    /* RECOMMENDED */
+    .recommend-card { background: var(--white); border: 1px solid var(--gold); border-radius: 8px; padding: 1.5rem 2rem; margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .recommend-label { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+    .recommend-title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--text-dark); margin-bottom: 4px; }
+    .recommend-desc { font-size: 0.85rem; color: var(--text-muted); }
+    .recommend-btn { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 9px 20px; border-radius: 3px; background: var(--navy-900); color: var(--white); border: none; cursor: pointer; text-decoration: none; white-space: nowrap; }
+    .recommend-btn:hover { background: var(--navy-700); }
+
+    /* RECENT ACTIVITY */
+    .activity-list { background: var(--white); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 2.5rem; }
+    .activity-item { display: flex; align-items: center; gap: 14px; padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); }
+    .activity-item:last-child { border-bottom: none; }
+    .activity-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .activity-text { flex: 1; font-size: 0.88rem; color: var(--text-mid); }
+    .activity-text strong { color: var(--text-dark); font-weight: 500; }
+    .activity-time { font-size: 0.75rem; color: var(--text-muted); white-space: nowrap; }
+    .activity-empty { padding: 2rem; text-align: center; font-size: 0.88rem; color: var(--text-muted); }
+
+    /* PRO BANNER */
+    .pro-banner { background: var(--navy-900); border-radius: 8px; padding: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .pro-banner-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .pro-banner-sub { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+    .pro-banner-btn { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; padding: 11px 24px; border-radius: 3px; background: var(--gold); color: var(--navy-950); border: none; cursor: pointer; text-decoration: none; white-space: nowrap; }
+    .pro-banner-btn:hover { background: var(--gold-light); }
+
+    .loading-state { text-align: center; padding: 4rem; color: var(--text-muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="video-library.html">Videos</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
+      <li><a href="daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="ask-anything.html">Ask Anything</a></li>
+      <li><a href="worldviews.html">Worldviews</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="nav-user" id="nav-user"></span>
+      <button class="nav-signout" onclick="signOut()">Sign out</button>
+    </div>
+  </nav>
+
+  <div class="main" id="main" style="display:none;">
+
+    <!-- WELCOME -->
+    <div class="welcome-row">
+      <div>
+        <h1 class="welcome-title">Welcome back, <em id="user-name">friend</em></h1>
+        <p class="welcome-sub">Here's where your apologetics journey stands today.</p>
+      </div>
+      <a href="index.html#pricing" class="upgrade-btn">Upgrade to Pro →</a>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-grid">
+      <div class="stat-card highlight">
+        <div class="stat-num" id="stat-streak">0</div>
+        <div class="stat-label">🔥 Day streak</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="stat-debates" style="color:var(--navy-600);">0</div>
+        <div class="stat-label">Debates completed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="stat-questions" style="color:var(--navy-600);">0</div>
+        <div class="stat-label">Questions asked</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="stat-devotionals" style="color:var(--navy-600);">0</div>
+        <div class="stat-label">Devotionals read</div>
+      </div>
+    </div>
+
+    <!-- BELT -->
+    <div class="belt-card">
+      <div class="belt-icon" id="belt-icon">🤍</div>
+      <div class="belt-info">
+        <div class="belt-level" id="belt-level">White Belt — Beginner</div>
+        <div class="belt-desc" id="belt-desc">Complete your first debate and devotional to begin your apologetics journey</div>
+        <div class="belt-progress"><div class="belt-progress-fill" id="belt-fill" style="width:5%;"></div></div>
+        <div class="belt-progress-label" id="belt-progress-label">0 / 10 points to Yellow Belt</div>
+      </div>
+      <a href="debate-arena.html" class="belt-next">Start earning points →</a>
+    </div>
+
+    <!-- RECOMMENDED -->
+    <div class="recommend-card">
+      <div style="flex:1;">
+        <div class="recommend-label">Recommended for you today</div>
+        <div class="recommend-title" id="rec-title">Start with today's devotional</div>
+        <div class="recommend-desc" id="rec-desc">Build your daily habit with a 5-minute apologetics devotional — verse, reflection, and prayer.</div>
+      </div>
+      <a class="recommend-btn" id="rec-link" href="daily-devotional.html">Go →</a>
+    </div>
+
+    <!-- QUICK ACTIONS -->
+    <p class="section-label">Jump back in</p>
+    <div class="actions-grid">
+      <a href="daily-devotional.html" class="action-card">
+        <div class="action-icon" style="background:#FAEEDA;">
+          <svg viewBox="0 0 24 24" stroke="#854F0B"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div class="action-title">Daily Devotional</div>
+        <div class="action-desc">Today's verse, reflection, and guided prayer at the intersection of faith and reason.</div>
+        <span class="action-cta">Read today's devotional →</span>
+      </a>
+
+      <a href="debate-arena.html" class="action-card">
+        <div class="action-icon" style="background:#EEEDFE;">
+          <svg viewBox="0 0 24 24" stroke="#534AB7"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="action-title">Debate Arena</div>
+        <div class="action-desc">Practise defending your faith against AI opponents or real conversation scenarios.</div>
+        <span class="action-cta">Enter the arena →</span>
+      </a>
+
+      <a href="ask-anything.html" class="action-card">
+        <div class="action-icon" style="background:#E1F5EE;">
+          <svg viewBox="0 0 24 24" stroke="#0F6E56"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="action-title">Ask Anything</div>
+        <div class="action-desc">Get a thoughtful, evidence-based answer to any tough question about the faith.</div>
+        <span class="action-cta">Ask a question →</span>
+      </a>
+
+      <a href="evidence-library.html" class="action-card">
+        <div class="action-icon" style="background:#E6F1FB;">
+          <svg viewBox="0 0 24 24" stroke="#185FA5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="action-title">Evidence Library</div>
+        <div class="action-desc">Study the strongest arguments for the Christian faith — from beginner to advanced.</div>
+        <span class="action-cta">Browse arguments →</span>
+      </a>
+    </div>
+
+    <!-- RECENT ACTIVITY -->
+    <p class="section-label">Recent activity</p>
+    <div class="activity-list" id="activity-list">
+      <div class="activity-empty">Your activity will appear here as you use the platform.</div>
+    </div>
+
+    <!-- PRO BANNER -->
+    <div class="pro-banner">
+      <div>
+        <div class="pro-banner-title">Unlock the full platform with Pro</div>
+        <div class="pro-banner-sub">Deep-dive arguments, unlimited AI questions, all debate topics, full worldviews library, and more.</div>
+      </div>
+      <a href="index.html#pricing" class="pro-banner-btn">Upgrade — $8/mo</a>
+    </div>
+
+  </div>
+
+  <div class="loading-state" id="loading-state">Loading your dashboard…</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const SUPABASE_URL = 'https://noprgxkwniouukmrfozc.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw';
+    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    async function init() {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) { window.location.href = 'login.html'; return; }
+
+      const user = session.user;
+      const name = user.user_metadata?.full_name || user.email.split('@')[0];
+      const firstName = name.split(' ')[0];
+
+      document.getElementById('user-name').textContent = firstName;
+      document.getElementById('nav-user').textContent = name;
+
+      // Load stats from localStorage for now (will move to Supabase later)
+      const completed = JSON.parse(localStorage.getItem('completed') || '[]');
+      const askUsage = JSON.parse(localStorage.getItem('askUsage') || '{}');
+
+      // Calculate streak
+      let streak = 0;
+      const today = new Date();
+      const check = new Date(today);
+      while (completed.includes(check.toDateString())) {
+        streak++;
+        check.setDate(check.getDate() - 1);
+      }
+
+      document.getElementById('stat-streak').textContent = streak;
+      document.getElementById('stat-devotionals').textContent = completed.length;
+      document.getElementById('stat-debates').textContent = localStorage.getItem('debateCount') || '0';
+      document.getElementById('stat-questions').textContent = askUsage.count || '0';
+
+      // Belt calculation
+      const points = completed.length * 2 + (parseInt(localStorage.getItem('debateCount')) || 0) * 3 + (askUsage.count || 0);
+      updateBelt(points);
+
+      // Recommendation
+      if (completed.includes(today.toDateString())) {
+        document.getElementById('rec-title').textContent = 'Try the Debate Arena today';
+        document.getElementById('rec-desc').textContent = 'You\'ve done your devotional — now practise defending the faith against an AI opponent.';
+        document.getElementById('rec-link').href = 'debate-arena.html';
+      }
+
+      // Recent activity
+      buildActivity(completed, askUsage);
+
+      document.getElementById('loading-state').style.display = 'none';
+      document.getElementById('main').style.display = 'block';
+    }
+
+    function updateBelt(points) {
+      const belts = [
+        { name: 'White Belt', icon: '🤍', min: 0, max: 10, desc: 'Complete your first debate and devotional to begin' },
+        { name: 'Yellow Belt', icon: '💛', min: 10, max: 30, desc: 'You\'re building the habit — keep going' },
+        { name: 'Orange Belt', icon: '🧡', min: 30, max: 60, desc: 'A solid foundation in apologetics is forming' },
+        { name: 'Green Belt', icon: '💚', min: 60, max: 100, desc: 'You can defend the faith in most conversations' },
+        { name: 'Blue Belt', icon: '💙', min: 100, max: 150, desc: 'Confident, well-rounded apologetics ability' },
+        { name: 'Purple Belt', icon: '💜', min: 150, max: 220, desc: 'Advanced knowledge across multiple topics' },
+        { name: 'Brown Belt', icon: '🤎', min: 220, max: 300, desc: 'Expert level — you can equip others' },
+        { name: 'Black Belt', icon: '🖤', min: 300, max: 999, desc: 'Master apologist — you are ready for anything' }
+      ];
+
+      const current = belts.find(b => points >= b.min && points < b.max) || belts[belts.length - 1];
+      const next = belts[belts.indexOf(current) + 1];
+      const progress = next ? Math.round(((points - current.min) / (next.min - current.min)) * 100) : 100;
+
+      document.getElementById('belt-icon').textContent = current.icon;
+      document.getElementById('belt-level').textContent = current.name + ' — ' + (belts.indexOf(current) === 0 ? 'Beginner' : belts.indexOf(current) < 3 ? 'Novice' : belts.indexOf(current) < 5 ? 'Intermediate' : 'Advanced');
+      document.getElementById('belt-desc').textContent = current.desc;
+      document.getElementById('belt-fill').style.width = progress + '%';
+      document.getElementById('belt-progress-label').textContent = next
+        ? `${points - current.min} / ${next.min - current.min} points to ${next.name}`
+        : 'Maximum level achieved';
+    }
+
+    function buildActivity(completed, askUsage) {
+      const list = document.getElementById('activity-list');
+      const items = [];
+
+      if (completed.length > 0) {
+        const last = new Date(completed[completed.length - 1]);
+        items.push({ color: '#c8a951', text: `<strong>Devotional read</strong> — ${last.toLocaleDateString('en-AU', { weekday:'long', day:'numeric', month:'short' })}`, time: 'Recently' });
+      }
+
+      const debates = parseInt(localStorage.getItem('debateCount')) || 0;
+      if (debates > 0) {
+        items.push({ color: '#534AB7', text: `<strong>${debates} debate${debates > 1 ? 's' : ''} completed</strong> in the Arena`, time: 'This week' });
+      }
+
+      if (askUsage.count > 0) {
+        items.push({ color: '#0F6E56', text: `<strong>${askUsage.count} question${askUsage.count > 1 ? 's' : ''} asked</strong> in Ask Anything`, time: 'Today' });
+      }
+
+      if (items.length === 0) {
+        list.innerHTML = '<div class="activity-empty">Your activity will appear here as you use the platform.</div>';
+      } else {
+        list.innerHTML = items.map(item =>
+          `<div class="activity-item">
+            <div class="activity-dot" style="background:${item.color};"></div>
+            <div class="activity-text">${item.text}</div>
+            <div class="activity-time">${item.time}</div>
+          </div>`
+        ).join('');
+      }
+    }
+
+    async function signOut() {
+      await supabase.auth.signOut();
+      window.location.href = 'index.html';
+    }
+
+    init();
+  </script>
+</body>
+</html>
