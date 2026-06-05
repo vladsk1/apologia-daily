@@ -1,24 +1,15 @@
-export const config = { runtime: 'edge' };
-
-export default async function handler(req) {
-  const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Content-Type': 'application/json'
-  };
-
-  if (req.method === 'OPTIONS') return new Response(null, { status: 200, headers });
-  if (req.method !== 'POST') return new Response(JSON.stringify({ error: 'Method not allowed' }), { status: 405, headers });
+export default async function handler(req, res) {
+  if (req.method === 'OPTIONS') { res.setHeader('Access-Control-Allow-Origin', '*'); res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS'); res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); return res.status(200).end(); }
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    const body = await req.json();
+    const body = req.body;
     const { question } = body;
 
-    if (!question) return new Response(JSON.stringify({ error: 'No question provided' }), { status: 400, headers });
+    if (!question) return res.status(400).json({ error: 'No question provided' })
 
     const apiKey = process.env.ANTHROPIC_API_KEY;
-    if (!apiKey) return new Response(JSON.stringify({ error: 'API key not configured' }), { status: 500, headers });
+    if (!apiKey) return res.status(500).json({ error: 'API key not configured' })
 
     const systemPrompt = `You are a world-class Christian apologetics assistant with deep knowledge of philosophy of religion, theology, history, and science. You draw on the work of leading apologists and scholars including William Lane Craig, Gary Habermas, Alvin Plantinga, N.T. Wright, C.S. Lewis, Frank Turek, Greg Koukl, Sean McDowell, J.P. Moreland, and others.
 
@@ -55,17 +46,17 @@ Keep the total response to around 400-500 words. Be scholarly but accessible —
 
     if (!anthropicRes.ok) {
       const err = await anthropicRes.text();
-      return new Response(JSON.stringify({ error: 'Anthropic error', details: err }), { status: 500, headers });
+      return res.status(500).json({ error: 'Anthropic error', details: err })
     }
 
     const data = await anthropicRes.json();
     const answer = data.content && data.content[0] && data.content[0].text;
 
-    if (!answer) return new Response(JSON.stringify({ error: 'No answer returned' }), { status: 500, headers });
+    if (!answer) return res.status(500).json({ error: 'No answer returned' })
 
-    return new Response(JSON.stringify({ answer }), { status: 200, headers });
+    return res.status(200).json({ answer })
 
   } catch (err) {
-    return new Response(JSON.stringify({ error: 'Server error', message: err.message }), { status: 500, headers });
+    return res.status(500).json({ error: 'Server error', message: err.message })
   }
 }
