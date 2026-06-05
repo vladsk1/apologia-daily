@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Objection Catcher — Apologia Daily</title>
+  <meta name="description" content="A sceptic fires an objection. Pick the best response. Get coached on why. The most practical apologetics training game available." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy-950: #050d1a; --navy-900: #0a1628; --navy-700: #163058;
+      --navy-600: #1e4278; --navy-500: #285a9e; --navy-300: #6f9fd4;
+      --navy-100: #ddeaf5; --navy-50: #f0f6fb;
+      --gold: #c8a951; --gold-light: #e8cf87;
+      --white: #ffffff; --off-white: #f8f7f4;
+      --text-dark: #0a1628; --text-mid: #3a4a62; --text-muted: #7a8fa8;
+      --border: #d4e0ec;
+      --correct: #0f6e56; --correct-bg: #e1f5ee; --correct-border: #9fe1cb;
+      --wrong: #a32d2d; --wrong-bg: #fcebeb; --wrong-border: #f09595;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: 'DM Sans', system-ui, sans-serif;
+    }
+    body { font-family: var(--font-body); color: var(--text-dark); background: var(--off-white); }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,13,26,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+    .nav-links a { font-family: var(--font-ui); font-size: 0.82rem; color: rgba(255,255,255,0.7); text-decoration: none; text-transform: uppercase; letter-spacing: 0.04em; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-right { display: flex; gap: 10px; align-items: center; }
+    .nav-signin { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.6); text-decoration: none; }
+    .nav-cta { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 8px 20px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+    .page-wrap { max-width: 720px; margin: 0 auto; padding: 5rem 2rem 6rem; }
+    .quiz-header { text-align: center; margin-bottom: 2rem; }
+    .quiz-eyebrow { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .quiz-title { font-family: var(--font-display); font-size: clamp(1.8rem,4vw,2.5rem); font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem; }
+    .quiz-title em { font-style: italic; color: var(--navy-600); }
+    .quiz-sub { font-size: 0.95rem; color: var(--text-muted); }
+    .pro-banner { background: var(--navy-900); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .pro-banner-text { font-family: var(--font-ui); font-size: 0.88rem; color: rgba(255,255,255,0.7); }
+    .pro-banner-text strong { color: var(--gold); }
+    .pro-banner-btn { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; padding: 8px 18px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; white-space: nowrap; }
+    .score-strip { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .score-item { text-align: center; }
+    .score-item-num { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; line-height: 1; color: var(--navy-600); }
+    .score-item-lbl { font-family: var(--font-ui); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 3px; }
+    .diff-row { display: flex; gap: 8px; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .diff-btn { font-family: var(--font-ui); font-size: 0.8rem; padding: 7px 18px; border-radius: 20px; border: 1px solid var(--border); background: var(--white); color: var(--text-muted); cursor: pointer; transition: all 0.15s; }
+    .diff-btn:hover { border-color: var(--navy-300); color: var(--navy-600); }
+    .diff-btn.active { background: var(--navy-900); color: var(--white); border-color: var(--navy-900); }
+    .objection-card { background: var(--navy-950); border-radius: 8px; padding: 1.75rem; margin-bottom: 1.5rem; position: relative; }
+    .objection-label { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 0.75rem; }
+    .objection-speaker { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
+    .objection-avatar { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 0.9rem; color: rgba(255,255,255,0.6); flex-shrink: 0; }
+    .objection-name { font-family: var(--font-ui); font-size: 0.78rem; color: rgba(255,255,255,0.45); }
+    .objection-text { font-family: var(--font-body); font-size: 1rem; font-style: italic; color: rgba(255,255,255,0.88); line-height: 1.75; }
+    .question-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; margin-bottom: 1.5rem; }
+    .q-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem; }
+    .q-text { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--text-dark); margin-bottom: 1.25rem; line-height: 1.5; }
+    .q-options { display: flex; flex-direction: column; gap: 10px; }
+    .q-option { padding: 12px 16px; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; font-family: var(--font-ui); font-size: 0.9rem; color: var(--text-dark); background: var(--off-white); transition: all 0.15s; text-align: left; width: 100%; line-height: 1.5; }
+    .q-option:hover:not(:disabled) { border-color: var(--navy-300); background: var(--navy-50); }
+    .q-option:disabled { cursor: default; }
+    .q-option.correct { background: var(--correct-bg); border-color: var(--correct-border); color: var(--correct); }
+    .q-option.wrong { background: var(--wrong-bg); border-color: var(--wrong-border); color: var(--wrong); }
+    .feedback-box { border-radius: 6px; padding: 1.25rem 1.5rem; margin-top: 1.25rem; display: none; }
+    .feedback-box.visible { display: block; }
+    .feedback-box.correct { background: var(--correct-bg); border: 1px solid var(--correct-border); }
+    .feedback-box.wrong { background: var(--wrong-bg); border: 1px solid var(--wrong-border); }
+    .feedback-result { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; margin-bottom: 8px; }
+    .feedback-box.correct .feedback-result { color: var(--correct); }
+    .feedback-box.wrong .feedback-result { color: var(--wrong); }
+    .feedback-why-label { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-top: 1rem; margin-bottom: 6px; }
+    .feedback-why { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; }
+    .feedback-why strong { color: var(--text-dark); font-weight: 500; }
+    .feedback-study { margin-top: 10px; font-family: var(--font-ui); font-size: 0.8rem; }
+    .feedback-study a { color: var(--navy-500); text-decoration: none; }
+    .next-btn { width: 100%; padding: 14px; border-radius: 6px; background: var(--navy-900); color: var(--white); font-family: var(--font-ui); font-size: 0.95rem; font-weight: 500; border: none; cursor: pointer; margin-top: 1rem; display: none; }
+    .next-btn.visible { display: block; }
+    .next-btn:hover { background: var(--navy-700); }
+    .score-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 2.5rem; text-align: center; display: none; margin-bottom: 1.5rem; }
+    .score-card.visible { display: block; }
+    .score-big { font-family: var(--font-display); font-size: 5rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 0.5rem; }
+    .score-lbl { font-family: var(--font-ui); font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem; }
+    .score-msg { font-size: 1rem; font-style: italic; color: var(--text-mid); line-height: 1.7; margin-bottom: 2rem; }
+    .score-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .score-btn { font-family: var(--font-ui); font-size: 0.9rem; font-weight: 500; padding: 12px 24px; border-radius: 6px; cursor: pointer; text-decoration: none; display: inline-block; border: none; }
+    .score-btn-primary { background: var(--gold); color: var(--navy-950); }
+    .score-btn-secondary { background: transparent; border: 1px solid var(--border); color: var(--text-dark); }
+    footer { background: var(--navy-950); padding: 3rem 2rem 2rem; margin-top: 4rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+    .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
+    @media (max-width: 600px) { .page-wrap { padding: 5rem 1.25rem 4rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="games.html" class="active">Games</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
+      <li><a href="daily-devotional.html">Daily Devotional</a></li>
+    </ul>
+    <div class="nav-right">
+      <span id="nav-auth"><a href="login.html" class="nav-signin">Sign in</a>
+      <a href="signup.html" class="nav-cta">Start Free</a></span>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+    <div class="quiz-header">
+      <p class="quiz-eyebrow">Objection Catcher</p>
+      <h1 class="quiz-title">Catch the objection.<br/><em>Give the best answer.</em></h1>
+      <p class="quiz-sub">A sceptic fires an objection. Pick the strongest response from four options — then get coached on exactly why it works.</p>
+    </div>
+
+    <div class="pro-banner">
+      <div class="pro-banner-text"><strong>Pro feature</strong> — Objection Catcher is included in your Pro subscription. Unlimited rounds, all difficulty levels.</div>
+      <a href="signup.html" class="pro-banner-btn">Start free →</a>
+    </div>
+
+    <div class="score-strip">
+      <div class="score-item"><div class="score-item-num" id="score-correct">0</div><div class="score-item-lbl">Correct</div></div>
+      <div class="score-item"><div class="score-item-num" id="score-attempts">0</div><div class="score-item-lbl">Attempts</div></div>
+      <div class="score-item"><div class="score-item-num" id="score-pct">—</div><div class="score-item-lbl">Accuracy</div></div>
+      <div class="score-item"><div class="score-item-num" id="score-streak">0</div><div class="score-item-lbl">🔥 Streak</div></div>
+    </div>
+
+    <div class="diff-row">
+      <button class="diff-btn active" onclick="setDiff('all',this)">All topics</button>
+      <button class="diff-btn" onclick="setDiff('existence',this)">God's Existence</button>
+      <button class="diff-btn" onclick="setDiff('resurrection',this)">Resurrection</button>
+      <button class="diff-btn" onclick="setDiff('bible',this)">Bible</button>
+      <button class="diff-btn" onclick="setDiff('islam',this)">Islam</button>
+      <button class="diff-btn" onclick="setDiff('morality',this)">Morality</button>
+    </div>
+
+    <div class="objection-card" id="objection-card">
+      <div class="objection-label">The objection</div>
+      <div class="objection-speaker">
+        <div class="objection-avatar" id="opp-avatar">S</div>
+        <div class="objection-name" id="opp-name">Sceptical friend</div>
+      </div>
+      <div class="objection-text" id="objection-text"></div>
+    </div>
+
+    <div class="question-card" id="question-card">
+      <div class="q-label">What is the strongest response?</div>
+      <div class="q-options" id="q-options"></div>
+      <div class="feedback-box" id="feedback-box">
+        <div class="feedback-result" id="feedback-result"></div>
+        <div class="feedback-why-label">Why this answer works</div>
+        <div class="feedback-why" id="feedback-why"></div>
+        <div class="feedback-study" id="feedback-study"></div>
+      </div>
+      <button class="next-btn" id="next-btn" onclick="nextObjection()">Next objection →</button>
+    </div>
+
+    <div class="score-card" id="score-summary">
+      <div class="score-big" id="final-score">8/10</div>
+      <div class="score-lbl">Round complete</div>
+      <div class="score-msg" id="final-msg"></div>
+      <div class="score-actions">
+        <button class="score-btn score-btn-primary" onclick="restartGame()">Play again →</button>
+        <a href="debate-arena.html" class="score-btn score-btn-secondary">Try the Debate Arena</a>
+        <a href="evidence-library.html" class="score-btn score-btn-secondary">Study more</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Apologia<span>Daily</span></div>
+      <div style="font-family:var(--font-ui);font-size:0.75rem;color:rgba(255,255,255,0.2);">© 2026 Apologia Daily</div>
+    </div>
+    <div class="footer-copy">Built for the defence of the Gospel.</div>
+  </footer>
+
+  <script>
+    const objections = [
+      {
+        topic: 'existence',
+        speaker: 'Atheist colleague',
+        avatar: 'A',
+        objection: "Science has explained the origin of the universe, life, and morality — we don't need God anymore. Religion is just filling gaps that science hasn't got to yet.",
+        options: [
+          "Science can't explain anything — it's all just theory.",
+          "Science explains how things work within the universe, but it can't explain why there's a universe to do science in at all. The origin of the laws of physics, the fine-tuning of constants, and the existence of consciousness are not explained by science — they're assumed by it.",
+          "God of the gaps is a strawman — you don't understand what Christians actually believe.",
+          "The Big Bang proves God exists, so science actually supports Christianity."
+        ],
+        correct: 1,
+        why: "The strongest response concedes the genuine explanatory power of science while identifying what it cannot reach — the existence and nature of the framework itself. Science operates within the universe; it cannot explain why the universe exists or why its laws take the precise form they do. This isn't a gap-filler argument — it's pointing to the limits of methodological naturalism.",
+        study: "evidence-library.html"
+      },
+      {
+        topic: 'existence',
+        speaker: 'Philosophy student',
+        avatar: 'P',
+        objection: "The Kalam argument assumes causation applies outside the universe — but causation is a feature of our universe. You can't use a principle that only works inside the universe to explain the universe itself.",
+        options: [
+          "Causation does apply outside the universe — that's just common sense.",
+          "You're right that our experience of causation is within time, but the first premise is an intuitive metaphysical principle: something cannot come from absolute nothing. This isn't derived from physics — it's a philosophical claim about being itself. The burden falls on the objector to show how something genuinely comes from nothing.",
+          "This objection was already answered by William Lane Craig, so it doesn't work.",
+          "The universe didn't need a cause — it just always existed."
+        ],
+        correct: 1,
+        why: "The best response acknowledges the genuine philosophical challenge while identifying where it fails. The first premise of the Kalam — 'everything that begins to exist has a cause' — is a metaphysical claim, not a physical one. It's grounded in the intuition that being cannot arise from non-being, which is not derived from observing causes within the universe. The objector needs to explain how absolute nothingness could produce anything.",
+        study: "evidence-library.html"
+      },
+      {
+        topic: 'resurrection',
+        speaker: 'History student',
+        avatar: 'H',
+        objection: "The resurrection accounts were written decades after the events by believers. That's far too late and too biased to be historically reliable. We can't trust anything they say.",
+        options: [
+          "The Gospels were actually written within days of the resurrection.",
+          "Bias doesn't automatically invalidate testimony — historians evaluate ancient sources on multiple criteria including proximity, independence, and corroboration. The Gospels were written within 35-65 years of the events, closer than most ancient sources. Paul's letters — containing early eyewitness testimony — were written within 20 years. And the criteria of embarrassment suggests details no believer would invent are authentic.",
+          "The disciples were eyewitnesses so their testimony is completely reliable.",
+          "We don't need the Gospels — we have the Dead Sea Scrolls."
+        ],
+        correct: 1,
+        why: "The best response applies consistent historiographical standards rather than a double standard applied only to Christian sources. Julius Caesar's Gallic Wars is our primary source for events 50+ years before it was written — and it's by a self-interested party. The question is whether the sources meet standard historical criteria: proximity, independence, corroboration, and internal consistency. The New Testament sources fare well by these criteria.",
+        study: "evidence-library.html"
+      },
+      {
+        topic: 'resurrection',
+        speaker: 'Sceptical friend',
+        avatar: 'S',
+        objection: "The disciples were grief-stricken and desperate to believe. Hallucinations, wishful thinking, and group psychology explain the resurrection appearances without needing a miracle.",
+        options: [
+          "Hallucinations don't happen to groups — that's scientifically impossible.",
+          "The hallucination theory fails on several counts: (1) group hallucinations of the same content are not documented in psychiatric literature; (2) hallucinations don't explain the empty tomb — the disciples' opponents could have produced the body; (3) Paul and James were not grief-stricken believers — they were hostile sceptics whose conversions require an explanation hallucination cannot provide.",
+          "The disciples weren't grief-stricken — they were joyful because they knew Jesus would rise.",
+          "You need to read the Gospels before making claims like that."
+        ],
+        correct: 1,
+        why: "The hallucination theory has multiple fatal weaknesses. First, mass hallucinations of the same specific content are not documented in psychology. Second, and crucially, hallucinations cannot explain the empty tomb — the Jewish authorities and Romans could simply have produced Jesus's body to end the movement if it remained. Third, Paul (a persecutor) and James (a sceptic) converted based on their own resurrection experiences — neither fits the 'grief-stricken believer' profile.",
+        study: "evidence-library.html"
+      },
+      {
+        topic: 'bible',
+        speaker: 'Muslim colleague',
+        avatar: 'M',
+        objection: "The Bible has been corrupted over centuries. Scholars have found thousands of differences between manuscripts. You can't trust a book with that much variation in the text.",
+        options: [
+          "There are no differences between Bible manuscripts — it's perfectly preserved.",
+          "The thousands of variants are mostly spelling differences, word order variations, and minor scribal errors — the kind found in any ancient document copied by hand. Only a tiny fraction affect meaning, and none affect core Christian doctrine. We have 5,800+ Greek manuscripts to cross-reference. By contrast, the Quran's preservation story is complicated by the acknowledged existence of variant Qira'at reading traditions.",
+          "The Bible was inspired by God so it can't have errors.",
+          "Muslims changed their own scripture so you shouldn't talk about corruption."
+        ],
+        correct: 1,
+        why: "The best response gives an accurate account of what manuscript variants actually are — mostly trivial scribal differences — while noting the extraordinary wealth of manuscripts that allows scholars to reconstruct the original text with confidence. The comparison to Quranic variant readings (Qira'at) is appropriate in dialogue with a Muslim — applying a consistent standard to both traditions. The tone should be informative and respectful, not defensive.",
+        study: "worldviews.html"
+      },
+      {
+        topic: 'bible',
+        speaker: 'Sceptical friend',
+        avatar: 'S',
+        objection: "The Gospels contradict each other on basic facts — the number of angels at the tomb, the time of the crucifixion, the details of the resurrection appearances. A reliable historical account wouldn't have these contradictions.",
+        options: [
+          "The Gospels don't contradict each other at all — you're misreading them.",
+          "What you're calling contradictions are better understood as the kind of variation you find in multiple independent eyewitness accounts of the same event. Different witnesses notice different details, round times differently, and emphasise different aspects. Perfect uniformity across four independent accounts would actually suggest collusion, not reliability. The core facts — crucifixion, empty tomb, resurrection appearances — are consistent across all accounts.",
+          "The Gospels were written by the same person so they should all agree.",
+          "Minor discrepancies don't matter because the message is what's important."
+        ],
+        correct: 1,
+        why: "The best response reframes 'contradictions' as what historians actually expect from multiple independent eyewitness accounts. If four people witness the same car accident and tell identical stories in identical words, we suspect coordination. Normal eyewitness testimony shows variation in peripheral details while agreeing on central facts. The Gospels show precisely this pattern — peripheral variation with consistent core testimony about the crucifixion and resurrection.",
+        study: "evidence-library.html"
+      },
+      {
+        topic: 'morality',
+        speaker: 'Secular humanist',
+        avatar: 'H',
+        objection: "You don't need God to be moral. I'm an atheist and I live ethically — I care for others, I'm honest, I work for justice. Your moral argument proves nothing about God.",
+        options: [
+          "Atheists can't really be moral — without God there's no foundation for ethics.",
+          "You're absolutely right that atheists can and do behave morally — often more consistently than Christians. The moral argument isn't about behaviour. It's asking a deeper question: what makes an action objectively right or wrong? On atheism, moral values are evolutionary preferences with no objective status — 'wrong' just means 'I disapprove.' If morality is objective — if torturing children is genuinely wrong not just unpopular — that objectivity needs grounding beyond human opinion.",
+          "Evolution explains why we feel moral things but proves God exists because it's designed.",
+          "You're borrowing Christian morality without admitting it."
+        ],
+        correct: 1,
+        why: "This is the most commonly misunderstood objection in Christian apologetics. The moral argument is not about whether atheists behave well — of course they do. It's about the metaphysical grounding of moral claims. If 'this is wrong' just means 'I/we disapprove of this,' then moral statements have no objective truth value. The question the atheist must answer is: in what sense is the Holocaust objectively wrong rather than merely widely disapproved of? God provides the necessary grounding for objective moral facts.",
+        study: "evidence-library.html"
+      },
+      {
+        topic: 'morality',
+        speaker: 'Philosophy student',
+        avatar: 'P',
+        objection: "The problem of evil is decisive against God. If God is all-powerful, all-knowing, and all-good — he could and would stop evil. He doesn't. Therefore God doesn't exist.",
+        options: [
+          "Evil exists because of Adam and Eve — that's the Christian answer.",
+          "Plantinga's Free Will Defence shows the logical problem fails: God being omnipotent doesn't mean he can do the logically impossible. It may be that God cannot create free creatures who always choose good — genuine freedom includes the freedom to do evil. A world with love and genuine freedom may be more valuable than a world of moral robots. Even Mackie, who raised this objection, conceded Plantinga's argument was logically valid.",
+          "God allows suffering to test us — that's how faith works.",
+          "Evil is an illusion — in God's perspective everything is actually good."
+        ],
+        correct: 1,
+        why: "The strongest response uses Alvin Plantinga's Free Will Defence to address the logical problem of evil — the claim that God and evil cannot logically coexist. Plantinga showed that it is logically possible for God to be unable to create free creatures who always choose good. This doesn't solve the emotional problem of suffering, but it shows the logical argument fails. Even J.L. Mackie — the philosopher who made the logical argument famous — conceded that Plantinga's response was valid.",
+        study: "evidence-library.html"
+      },
+      {
+        topic: 'islam',
+        speaker: 'Muslim colleague',
+        avatar: 'M',
+        objection: "Jesus never claimed to be God. He never said 'I am God, worship me.' The idea that Jesus is divine was invented by the Council of Nicaea in 325 AD — not taught by Jesus himself.",
+        options: [
+          "John 3:16 proves Jesus is God — it says he's God's Son.",
+          "Jesus made implicit divine claims his Jewish audience immediately understood — and responded to by trying to stone him for blasphemy. John 8:58: 'Before Abraham was, I AM' — echoing the divine name from Exodus 3:14. Mark 2: forgiving sins, which only God can do. Matthew 25: claiming to be the final judge of all humanity. And Paul's letters — written 20 years before Nicaea — already contain hymns treating Jesus as divine. Nicaea didn't invent the doctrine; it defined it.",
+          "The Council of Nicaea was guided by the Holy Spirit so it must be right.",
+          "Muslims believe in Jesus too — we just disagree on some details."
+        ],
+        correct: 1,
+        why: "The strongest response gives specific textual evidence from the Gospels showing divine claims — and crucially notes that the reaction of Jesus's Jewish audience confirms they understood those claims as divine. Then it addresses the Nicaea objection directly: Paul's letters (Philippians 2, Colossians 1) predate Nicaea by 270+ years and already treat Jesus as divine. The high Christology didn't develop at Nicaea — it's present in the earliest documents we have.",
+        study: "worldviews.html"
+      },
+      {
+        topic: 'islam',
+        speaker: 'Muslim colleague',
+        avatar: 'M',
+        objection: "The Quran is the final and perfectly preserved word of God — unlike the Bible which has been corrupted. The Quran has been memorised by millions and has never changed since the time of the Prophet.",
+        options: [
+          "The Quran has lots of errors — I can find them online.",
+          "The preservation claim is more complex than it appears. Islamic scholarship itself acknowledges multiple Qira'at — variant reading traditions including Hafs and Warsh — which contain genuine word-level differences, not just pronunciation variations. The Sanaa manuscripts discovered in 1972 contain early Quranic variants. And the Quran itself (Surah 5:47, 10:94) affirms the Torah and Gospel as God's word — which creates a problem if those scriptures are corrupted.",
+          "The Bible is more preserved than the Quran because it's older.",
+          "All religious books are equally reliable or unreliable."
+        ],
+        correct: 1,
+        why: "The strongest response engages respectfully with the preservation claim while introducing genuine complexities from Islamic scholarship itself — the Qira'at are acknowledged within Islamic tradition and do involve more than pronunciation. The Sanaa manuscripts are a live scholarly issue. Then introducing the Islamic Dilemma — the Quran's own affirmation of the Bible — shifts the ground graciously. This response is informative rather than combative, which is the right tone for interfaith dialogue.",
+        study: "worldviews.html"
+      }
+    ];
+
+    let diff = 'all';
+    let pool = [...objections];
+    let current = 0;
+    let correct = 0;
+    let attempts = 0;
+    let streak = 0;
+    let answered = false;
+    const ROUND_SIZE = 5;
+
+    function setDiff(d, btn) {
+      diff = d;
+      document.querySelectorAll('.diff-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      restartGame();
+    }
+
+    function restartGame() {
+      correct = 0; attempts = 0; streak = 0; current = 0;
+      pool = diff === 'all' ? [...objections] : objections.filter(o => o.topic === diff);
+      pool = pool.sort(() => Math.random() - 0.5);
+      updateStats();
+      document.getElementById('score-summary').classList.remove('visible');
+      document.getElementById('objection-card').style.display = 'block';
+      document.getElementById('question-card').style.display = 'block';
+      showObjection();
+    }
+
+    function showObjection() {
+      if (current >= Math.min(ROUND_SIZE, pool.length)) { showSummary(); return; }
+      const obj = pool[current];
+      document.getElementById('opp-avatar').textContent = obj.avatar;
+      document.getElementById('opp-name').textContent = obj.speaker;
+      document.getElementById('objection-text').textContent = '"' + obj.objection + '"';
+      const shuffled = obj.options.map((o, i) => ({ text: o, isCorrect: i === obj.correct })).sort(() => Math.random() - 0.5);
+      document.getElementById('q-options').innerHTML = shuffled.map((o, i) =>
+        `<button class="q-option" onclick="answer(this,${o.isCorrect},'${obj.topic}')">${o.text}</button>`
+      ).join('');
+      document.getElementById('feedback-box').classList.remove('visible', 'correct', 'wrong');
+      document.getElementById('next-btn').classList.remove('visible');
+      answered = false;
+    }
+
+    function answer(btn, isCorrect, topic) {
+      if (answered) return;
+      answered = true;
+      attempts++;
+      const obj = pool[current];
+      if (isCorrect) { correct++; streak++; }
+      else { streak = 0; }
+      document.querySelectorAll('.q-option').forEach(b => {
+        b.disabled = true;
+        if (b === btn) b.classList.add(isCorrect ? 'correct' : 'wrong');
+        if (!isCorrect && b.onclick && b.onclick.toString().includes('true')) b.classList.add('correct');
+      });
+      const fb = document.getElementById('feedback-box');
+      fb.classList.add('visible', isCorrect ? 'correct' : 'wrong');
+      document.getElementById('feedback-result').textContent = isCorrect ? '✓ Strong answer!' : '✗ Not the strongest response';
+      document.getElementById('feedback-why').innerHTML = obj.why;
+      document.getElementById('feedback-study').innerHTML = `<a href="${obj.study}">Study this topic in the Evidence Library →</a>`;
+      document.getElementById('next-btn').classList.add('visible');
+      document.getElementById('next-btn').textContent = current < Math.min(ROUND_SIZE, pool.length) - 1 ? 'Next objection →' : 'See results →';
+      updateStats();
+    }
+
+    function nextObjection() { current++; showObjection(); }
+
+    function updateStats() {
+      document.getElementById('score-correct').textContent = correct;
+      document.getElementById('score-attempts').textContent = attempts;
+      document.getElementById('score-pct').textContent = attempts > 0 ? Math.round(correct / attempts * 100) + '%' : '—';
+      document.getElementById('score-streak').textContent = streak;
+    }
+
+    function showSummary() {
+      document.getElementById('objection-card').style.display = 'none';
+      document.getElementById('question-card').style.display = 'none';
+      document.getElementById('score-summary').classList.add('visible');
+      document.getElementById('final-score').textContent = correct + '/' + Math.min(ROUND_SIZE, pool.length);
+      const pct = Math.round(correct / Math.min(ROUND_SIZE, pool.length) * 100);
+      const msgs = { 100: "Perfect round! You're ready for any real conversation.", 80: "Excellent — you know your arguments well. Keep practising.", 60: "Good effort. Study the ones you missed and try again.", 40: "Keep going — each round makes you sharper.", 0: "Don't be discouraged — read the coaching and try again." };
+      const msg = Object.entries(msgs).reverse().find(([k]) => pct >= parseInt(k));
+      document.getElementById('final-msg').textContent = msg ? msg[1] : "Keep practising!";
+    }
+
+    restartGame();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    (function() {
+      var sb = window.supabase.createClient(
+        'https://noprgxkwniouukmrfozc.supabase.co',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+      );
+      sb.auth.getSession().then(function(res) {
+        var session = res.data && res.data.session;
+        var navRight = document.getElementById('nav-auth');
+        if (!navRight) return;
+        if (session) {
+          var name = session.user.user_metadata && session.user.user_metadata.full_name
+            ? session.user.user_metadata.full_name.split(' ')[0]
+            : session.user.email.split('@')[0];
+          navRight.innerHTML = '<a href="dashboard.html" style="font-family:var(--font-ui, DM Sans, sans-serif);font-size:0.85rem;font-weight:500;padding:8px 20px;border-radius:3px;background:var(--gold,#c8a951);color:var(--navy-950,#050d1a);text-decoration:none;">Dashboard</a>';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

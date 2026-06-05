@@ -136,7 +136,6 @@
   <nav>
     <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
     <ul class="nav-links">
-      <li><a href="beginners-path.html" style="color:var(--gold);">Start Here</a></li>
       <li><a href="evidence-library.html">Evidence Library</a></li>
       <li><a href="games.html">Games</a></li>
       <li><a href="debate-arena.html">Debate Arena</a></li>
@@ -144,10 +143,18 @@
       <li><a href="study-plans.html" class="active">Study Plans</a></li>
     </ul>
     <div class="nav-right">
-      <a href="login.html" class="nav-signin">Sign in</a>
-      <a href="signup.html" class="nav-cta">Start Free</a>
+      <span id="nav-auth"><a href="login.html" class="nav-signin">Sign in</a>
+      <a href="signup.html" class="nav-cta">Start Free</a></span>
     </div>
   </nav>
+
+  <!-- BEGINNER BANNER -->
+  <div id="beginner-banner" style="background:rgba(200,169,81,0.08);border-bottom:1px solid rgba(200,169,81,0.2);padding:10px 2rem;text-align:center;display:none;">
+    <span style="font-family:var(--font-ui,'DM Sans',sans-serif);font-size:0.82rem;color:#c8a951;">
+      &#127807; New to apologetics? 
+      <a href="beginners-path.html" style="color:#c8a951;font-weight:600;text-decoration:underline;">Start the free 5-day Beginner&apos;s Path →</a>
+    </span>
+  </div>
 
   <div class="page-header">
     <div class="page-header-inner">
@@ -588,6 +595,30 @@
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
   init();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    (function() {
+      var sb = window.supabase.createClient(
+        'https://noprgxkwniouukmrfozc.supabase.co',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+      );
+      sb.auth.getSession().then(function(res) {
+        var session = res.data && res.data.session;
+        // Show beginner banner only for non-logged-in users
+        var banner = document.getElementById('beginner-banner');
+        if (banner && !session) banner.style.display = 'block';
+        var navRight = document.getElementById('nav-auth');
+        if (!navRight) return;
+        if (session) {
+          var name = session.user.user_metadata && session.user.user_metadata.full_name
+            ? session.user.user_metadata.full_name.split(' ')[0]
+            : session.user.email.split('@')[0];
+          navRight.innerHTML = '<a href="dashboard.html" style="font-family:var(--font-ui, DM Sans, sans-serif);font-size:0.85rem;font-weight:500;padding:8px 20px;border-radius:3px;background:var(--gold,#c8a951);color:var(--navy-950,#050d1a);text-decoration:none;">Dashboard</a>';
+        }
+      });
+    })();
   </script>
 </body>
 </html>

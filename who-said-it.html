@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who Said It? — Apologia Daily</title>
+  <meta name="description" content="A famous apologetics quote appears. Was it Craig, Lewis, Chesterton, or Hitchens? Learn the great thinkers through this fun guessing game." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy-950: #050d1a; --navy-900: #0a1628; --navy-700: #163058;
+      --navy-600: #1e4278; --navy-500: #285a9e; --navy-300: #6f9fd4;
+      --gold: #c8a951; --gold-light: #e8cf87;
+      --white: #ffffff; --off-white: #f8f7f4;
+      --text-dark: #0a1628; --text-mid: #3a4a62; --text-muted: #7a8fa8;
+      --border: #d4e0ec;
+      --correct: #0f6e56; --correct-bg: #e1f5ee; --correct-border: #9fe1cb;
+      --wrong: #a32d2d; --wrong-bg: #fcebeb; --wrong-border: #f09595;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: 'DM Sans', system-ui, sans-serif;
+    }
+    body { font-family: var(--font-body); color: var(--text-dark); background: var(--off-white); }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,13,26,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+    .nav-links a { font-family: var(--font-ui); font-size: 0.82rem; color: rgba(255,255,255,0.7); text-decoration: none; text-transform: uppercase; letter-spacing: 0.04em; }
+    .nav-links a.active { color: var(--gold); }
+    .nav-right { display: flex; gap: 10px; align-items: center; }
+    .nav-signin { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.6); text-decoration: none; }
+    .nav-cta { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 8px 20px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+    .page-wrap { max-width: 720px; margin: 0 auto; padding: 5rem 2rem 6rem; }
+    .quiz-header { text-align: center; margin-bottom: 2rem; }
+    .quiz-eyebrow { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .quiz-title { font-family: var(--font-display); font-size: clamp(1.8rem,4vw,2.5rem); font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem; }
+    .quiz-title em { font-style: italic; color: var(--navy-600); }
+    .quiz-sub { font-size: 0.95rem; color: var(--text-muted); }
+    .score-strip { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .score-item { text-align: center; }
+    .score-item-num { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; line-height: 1; color: var(--navy-600); }
+    .score-item-lbl { font-family: var(--font-ui); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 3px; }
+    .progress-bar { height: 4px; background: var(--border); border-radius: 2px; margin-bottom: 1.5rem; overflow: hidden; }
+    .progress-fill { height: 100%; background: var(--gold); border-radius: 2px; transition: width 0.4s ease; }
+    .quote-card { background: var(--navy-950); border-radius: 8px; padding: 2.5rem; margin-bottom: 1.5rem; position: relative; }
+    .quote-mark { font-family: var(--font-display); font-size: 8rem; color: rgba(200,169,81,0.1); position: absolute; top: 0.5rem; left: 1.5rem; line-height: 1; }
+    .quote-text { font-family: var(--font-display); font-size: 1.15rem; font-style: italic; line-height: 1.75; color: rgba(255,255,255,0.92); position: relative; z-index: 1; }
+    .quote-source { font-family: var(--font-ui); font-size: 0.78rem; color: rgba(255,255,255,0.35); margin-top: 1.25rem; letter-spacing: 0.06em; }
+    .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; }
+    .thinker-btn { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; cursor: pointer; transition: all 0.15s; text-align: left; }
+    .thinker-btn:hover:not(:disabled) { border-color: var(--navy-300); background: var(--navy-50); transform: translateY(-1px); }
+        .thinker-btn:disabled { cursor: default; }
+    .thinker-btn.correct { background: var(--correct-bg); border-color: var(--correct-border); }
+    .thinker-btn.wrong { background: var(--wrong-bg); border-color: var(--wrong-border); }
+    .thinker-initial { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .thinker-name { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 2px; }
+    .thinker-btn.correct .thinker-name { color: var(--correct); }
+    .thinker-btn.wrong .thinker-name { color: var(--wrong); }
+    .thinker-desc { font-family: var(--font-ui); font-size: 0.72rem; color: var(--text-muted); line-height: 1.4; }
+    .feedback-box { border-radius: 6px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; display: none; }
+    .feedback-box.visible { display: block; }
+    .feedback-box.correct { background: var(--correct-bg); border: 1px solid var(--correct-border); }
+    .feedback-box.wrong { background: var(--wrong-bg); border: 1px solid var(--wrong-border); }
+    .feedback-result { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; margin-bottom: 6px; }
+    .feedback-box.correct .feedback-result { color: var(--correct); }
+    .feedback-box.wrong .feedback-result { color: var(--wrong); }
+    .feedback-text { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; }
+    .next-btn { width: 100%; padding: 14px; border-radius: 6px; background: var(--navy-900); color: var(--white); font-family: var(--font-ui); font-size: 0.95rem; font-weight: 500; border: none; cursor: pointer; display: none; }
+    .next-btn.visible { display: block; }
+    .next-btn:hover { background: var(--navy-700); }
+    .summary-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 2.5rem; text-align: center; display: none; margin-bottom: 1.5rem; }
+    .summary-card.visible { display: block; }
+    .summary-score { font-family: var(--font-display); font-size: 5rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 0.5rem; }
+    .summary-lbl { font-family: var(--font-ui); font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem; }
+    .summary-msg { font-size: 1rem; font-style: italic; color: var(--text-mid); margin-bottom: 2rem; line-height: 1.7; }
+    .summary-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .s-btn { font-family: var(--font-ui); font-size: 0.9rem; font-weight: 500; padding: 12px 24px; border-radius: 6px; cursor: pointer; text-decoration: none; display: inline-block; border: none; }
+    .s-btn-primary { background: var(--gold); color: var(--navy-950); }
+    .s-btn-secondary { background: transparent; border: 1px solid var(--border); color: var(--text-dark); }
+    footer { background: var(--navy-950); padding: 3rem 2rem 2rem; margin-top: 4rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+    .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
+    @media (max-width: 600px) { .options-grid { grid-template-columns: 1fr; } .page-wrap { padding: 5rem 1.25rem 4rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="games.html" class="active">Games</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
+      <li><a href="daily-devotional.html">Daily Devotional</a></li>
+    </ul>
+    <div class="nav-right">
+      <span id="nav-auth"><a href="login.html" class="nav-signin">Sign in</a>
+      <a href="signup.html" class="nav-cta">Start Free</a></span>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+    <div class="quiz-header">
+      <p class="quiz-eyebrow">Who Said It?</p>
+      <h1 class="quiz-title">The quote appears.<br/><em>Who said it?</em></h1>
+      <p class="quiz-sub">Famous quotes from the greatest Christian apologists — and their greatest critics. Learn the thinkers by learning their words.</p>
+    </div>
+
+    <div class="score-strip">
+      <div class="score-item"><div class="score-item-num" id="stat-correct">0</div><div class="score-item-lbl">Correct</div></div>
+      <div class="score-item"><div class="score-item-num" id="stat-streak">0</div><div class="score-item-lbl">🔥 Streak</div></div>
+      <div class="score-item"><div class="score-item-num" id="stat-pct">—</div><div class="score-item-lbl">Accuracy</div></div>
+      <div class="score-item"><div class="score-item-num" id="stat-q">1/10</div><div class="score-item-lbl">Question</div></div>
+    </div>
+
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:10%"></div></div>
+
+    <div class="quote-card" id="quote-card">
+      <div class="quote-mark">"</div>
+      <div class="quote-text" id="quote-text"></div>
+      <div class="quote-source" id="quote-source"></div>
+    </div>
+
+    <div class="options-grid" id="options-grid"></div>
+
+    <div class="feedback-box" id="feedback-box">
+      <div class="feedback-result" id="feedback-result"></div>
+      <div class="feedback-text" id="feedback-text"></div>
+    </div>
+
+    <button class="next-btn" id="next-btn" onclick="nextQuote()">Next quote →</button>
+
+    <div class="summary-card" id="summary-card">
+      <div class="summary-score" id="summary-score">8/10</div>
+      <div class="summary-lbl">Round complete</div>
+      <div class="summary-msg" id="summary-msg"></div>
+      <div class="summary-actions">
+        <button class="s-btn s-btn-primary" onclick="startGame()">Play again →</button>
+        <a href="daily-quiz.html" class="s-btn s-btn-secondary">Try the Daily Quiz</a>
+        <a href="games.html" class="s-btn s-btn-secondary">All games</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Apologia<span>Daily</span></div>
+    </div>
+    <div class="footer-copy">© 2026 Apologia Daily. Built for the defence of the Gospel.</div>
+  </footer>
+
+  <script>
+    const quotes = [
+      { quote: "I am trying to prevent anyone saying the really foolish thing that people often say about Him: 'I'm ready to accept Jesus as a great moral teacher, but I don't accept His claim to be God.' That is the one thing we must not say.", source: "Mere Christianity", correct: "C.S. Lewis", options: ["C.S. Lewis","G.K. Chesterton","William Lane Craig","Alvin Plantinga"], feedback: "C.S. Lewis wrote this in Mere Christianity — his famous Lord, Liar, or Lunatic trilemma. Lewis was a former atheist and Oxford professor who became one of the 20th century's most influential Christian apologists." },
+      { quote: "The evidence for Jesus's historical existence is overwhelming. Whatever you think about him, he certainly existed.", source: "Did Jesus Exist?, Bart Ehrman", correct: "Bart Ehrman", options: ["N.T. Wright","Gary Habermas","Bart Ehrman","Lee Strobel"], feedback: "Bart Ehrman is an agnostic New Testament scholar — not a Christian apologist. His statement is particularly powerful in apologetics because it comes from someone with no theological motivation to affirm Jesus's existence." },
+      { quote: "All the evidence we have says that the universe had a beginning.", source: "Many Worlds in One", correct: "Alexander Vilenkin", options: ["Stephen Hawking","Alexander Vilenkin","Richard Dawkins","Francis Collins"], feedback: "Alexander Vilenkin is a secular cosmologist at Tufts University and co-developer of the BGV theorem. He is not a theist — which makes his statement about the universe's beginning particularly significant for the Kalam argument." },
+      { quote: "The Christian does not think God will love us because we are good, but that God will make us good because He loves us.", source: "Mere Christianity", correct: "C.S. Lewis", options: ["C.S. Lewis","G.K. Chesterton","Augustine","Timothy Keller"], feedback: "Another C.S. Lewis quote from Mere Christianity — one of the most quotable books in Christian literature. Lewis's ability to express profound theological truth in simple, memorable language made him one of the most widely read Christian thinkers of the 20th century." },
+      { quote: "The Christian apologist must practice his craft in a spirit of intellectual integrity, honesty, and rigor.", source: "Reasonable Faith", correct: "William Lane Craig", options: ["Alvin Plantinga","William Lane Craig","J.P. Moreland","Frank Turek"], feedback: "William Lane Craig is widely regarded as the most prominent living Christian apologist and philosopher of religion. His book Reasonable Faith is one of the standard texts in academic Christian apologetics." },
+      { quote: "Religion poisons everything.", source: "God Is Not Great", correct: "Christopher Hitchens", options: ["Richard Dawkins","Christopher Hitchens","Sam Harris","Bertrand Russell"], feedback: "Christopher Hitchens was one of the 'Four Horsemen' of New Atheism. 'Religion poisons everything' is the subtitle of his book God Is Not Great. Understanding the strongest critics of Christianity is part of good apologetics preparation." },
+      { quote: "The universe we observe has precisely the properties we should expect if there is, at bottom, no design, no purpose, no evil, no good — nothing but blind, pitiless indifference.", source: "River Out of Eden", correct: "Richard Dawkins", options: ["Christopher Hitchens","Richard Dawkins","Daniel Dennett","Sam Harris"], feedback: "Richard Dawkins wrote this in River Out of Eden. Ironically, apologists like William Lane Craig point out that this statement actually supports the moral argument — if Dawkins is right, then there is no objective good or evil, which undermines any moral objection to God." },
+      { quote: "There is no good historical evidence that Jesus ever existed. The Gospels are unreliable documents written long after the alleged events.", source: "Various debates", correct: "Richard Dawkins", options: ["Bart Ehrman","Richard Dawkins","Sam Harris","Dan Brown"], feedback: "This view — that Jesus never existed — is held by Richard Dawkins and a small minority. It is rejected by virtually all professional historians including agnostic and atheist scholars. Bart Ehrman, himself an agnostic, has written an entire book rebutting this position." },
+      { quote: "If Christ has not been raised, your faith is futile; you are still in your sins.", source: "1 Corinthians 15:17", correct: "Paul the Apostle", options: ["Peter","Paul the Apostle","John","Jesus"], feedback: "Paul wrote this in his first letter to the Corinthians — one of the earliest documents in the New Testament. Paul is essentially saying that Christianity stands or falls on the historical resurrection. He doesn't ask for blind faith — he presents evidence including a list of eyewitnesses." },
+      { quote: "The very concept of God cannot coherently be separated from the concept of goodness. If God exists, goodness exists. If goodness exists, God exists.", source: "Mere Christianity", correct: "C.S. Lewis", options: ["C.S. Lewis","Alvin Plantinga","G.K. Chesterton","Thomas Aquinas"], feedback: "C.S. Lewis is remarkably well represented in the Who Said It game — his writings are so quotable and so central to popular apologetics that recognising his style is genuinely valuable. Lewis's moral argument is a more accessible version of what philosophers call the moral argument from objective values." },
+      { quote: "It is not that I have found God, but that God has found me.", source: "Surprised by Joy", correct: "C.S. Lewis", options: ["Augustine","C.S. Lewis","G.K. Chesterton","Francis Collins"], feedback: "From Lewis's autobiography Surprised by Joy, which recounts his journey from atheism to Christianity. The phrase echoes Augustine's famous 'our hearts are restless until they rest in Thee' — the idea that human spiritual seeking is itself a response to divine initiative." },
+      { quote: "I have a prior commitment to materialism. It's not that the methods and institutions of science somehow compel us to accept a material explanation of the phenomenal world, but, on the contrary, that we are forced by our a priori adherence to material causes to create an apparatus of investigation and a set of concepts that produce material explanations.", source: "The New York Review of Books", correct: "Richard Lewontin", options: ["Richard Dawkins","Richard Lewontin","Daniel Dennett","Lawrence Krauss"], feedback: "Richard Lewontin was a biologist at Harvard. This extraordinary admission — that scientists approach their work with a prior commitment to materialism, not just following evidence — is frequently cited by Christian apologists to show that the atheist-science identification is ideological, not purely empirical." }
+    ];
+
+    const ROUND = 10;
+    let current = 0;
+    let correct = 0;
+    let attempts = 0;
+    let streak = 0;
+    let pool = [];
+    let answered = false;
+
+    const thinkerColors = {
+      'C.S. Lewis': { bg: '#EEEDFE', color: '#3C3489' },
+      'William Lane Craig': { bg: '#E1F5EE', color: '#0F6E56' },
+      'Alvin Plantinga': { bg: '#E6F1FB', color: '#0C447C' },
+      'Gary Habermas': { bg: '#FAEEDA', color: '#854F0B' },
+      'G.K. Chesterton': { bg: '#EAF3DE', color: '#3B6D11' },
+      'N.T. Wright': { bg: '#FAECE7', color: '#993C1D' },
+      'Richard Dawkins': { bg: '#FCEBEB', color: '#A32D2D' },
+      'Christopher Hitchens': { bg: '#FCEBEB', color: '#A32D2D' },
+      'Bart Ehrman': { bg: '#F1EFE8', color: '#5F5E5A' },
+      'Sam Harris': { bg: '#FCEBEB', color: '#A32D2D' },
+      'Alexander Vilenkin': { bg: '#E6F1FB', color: '#0C447C' },
+      'Paul the Apostle': { bg: '#FAEEDA', color: '#854F0B' },
+      'Francis Collins': { bg: '#E1F5EE', color: '#0F6E56' },
+      'Lee Strobel': { bg: '#EAF3DE', color: '#3B6D11' },
+      'Timothy Keller': { bg: '#EEEDFE', color: '#3C3489' },
+      'Augustine': { bg: '#FAEEDA', color: '#854F0B' },
+      'Thomas Aquinas': { bg: '#E6F1FB', color: '#0C447C' },
+      'J.P. Moreland': { bg: '#EEEDFE', color: '#3C3489' },
+      'Frank Turek': { bg: '#E1F5EE', color: '#0F6E56' },
+      'Daniel Dennett': { bg: '#FCEBEB', color: '#A32D2D' },
+      'Lawrence Krauss': { bg: '#FCEBEB', color: '#A32D2D' },
+      'Bertrand Russell': { bg: '#F1EFE8', color: '#5F5E5A' },
+      'Stephen Hawking': { bg: '#E6F1FB', color: '#0C447C' },
+      'Dan Brown': { bg: '#F1EFE8', color: '#5F5E5A' },
+      'Peter': { bg: '#FAEEDA', color: '#854F0B' },
+      'John': { bg: '#E1F5EE', color: '#0F6E56' },
+      'Jesus': { bg: '#FAEEDA', color: '#854F0B' },
+      'Richard Lewontin': { bg: '#FCEBEB', color: '#A32D2D' }
+    };
+
+    function startGame() {
+      pool = [...quotes].sort(() => Math.random() - 0.5).slice(0, ROUND);
+      current = 0; correct = 0; attempts = 0; streak = 0;
+      answered = false;
+      document.getElementById('summary-card').classList.remove('visible');
+      document.getElementById('quote-card').style.display = 'block';
+      document.getElementById('options-grid').style.display = 'grid';
+      showQuote();
+    }
+
+    function showQuote() {
+      if (current >= pool.length) { showSummary(); return; }
+      const q = pool[current];
+      document.getElementById('quote-text').textContent = q.quote;
+      document.getElementById('quote-source').textContent = '— ' + q.source;
+      document.getElementById('progress-fill').style.width = ((current + 1) / ROUND * 100) + '%';
+      document.getElementById('stat-q').textContent = (current + 1) + '/' + ROUND;
+      document.getElementById('options-grid').innerHTML = q.options.map(name => {
+        const c = thinkerColors[name] || { bg: '#f0f6fb', color: '#285a9e' };
+        const descs = {
+          'C.S. Lewis': 'Oxford & Cambridge · Former atheist',
+          'William Lane Craig': 'Philosopher of religion',
+          'Alvin Plantinga': 'Reformed epistemologist',
+          'Gary Habermas': 'Resurrection scholar',
+          'G.K. Chesterton': 'Author & journalist',
+          'N.T. Wright': 'NT scholar & bishop',
+          'Richard Dawkins': 'Evolutionary biologist',
+          'Christopher Hitchens': 'Author & journalist',
+          'Bart Ehrman': 'Agnostic NT scholar',
+          'Sam Harris': 'Neuroscientist',
+          'Alexander Vilenkin': 'Cosmologist',
+          'Paul the Apostle': 'Apostle & letter-writer',
+          'Francis Collins': 'Geneticist & Christian',
+          'Lee Strobel': 'Journalist & apologist',
+          'Timothy Keller': 'Pastor & author',
+          'Augustine': 'Church Father (354-430)',
+          'Thomas Aquinas': 'Medieval theologian',
+          'J.P. Moreland': 'Philosopher',
+          'Frank Turek': 'Christian apologist',
+          'Daniel Dennett': 'Philosopher',
+          'Lawrence Krauss': 'Theoretical physicist',
+          'Bertrand Russell': 'Philosopher & atheist',
+          'Stephen Hawking': 'Theoretical physicist',
+          'Dan Brown': 'Novelist',
+          'Peter': 'Apostle',
+          'John': 'Apostle & evangelist',
+          'Jesus': 'Jesus of Nazareth',
+          'Richard Lewontin': 'Biologist · Harvard'
+        };
+        return `<button class="thinker-btn" onclick="answer('${name}')" data-name="${name}">
+          <div class="thinker-initial" style="background:${c.bg};color:${c.color};">${name.charAt(0)}</div>
+          <div class="thinker-name">${name}</div>
+          <div class="thinker-desc">${descs[name] || ''}</div>
+        </button>`;
+      }).join('');
+      document.getElementById('feedback-box').classList.remove('visible', 'correct', 'wrong');
+      document.getElementById('next-btn').classList.remove('visible');
+      answered = false;
+      updateStats();
+    }
+
+    function answer(name) {
+      if (answered) return;
+      answered = true;
+      attempts++;
+      const q = pool[current];
+      const isCorrect = name === q.correct;
+      if (isCorrect) { correct++; streak++; } else { streak = 0; }
+      document.querySelectorAll('.thinker-btn').forEach(btn => {
+        btn.disabled = true;
+        const n = btn.getAttribute('data-name');
+        if (n === q.correct) btn.classList.add('correct');
+        else if (n === name && !isCorrect) btn.classList.add('wrong');
+      });
+      const fb = document.getElementById('feedback-box');
+      fb.classList.add('visible', isCorrect ? 'correct' : 'wrong');
+      document.getElementById('feedback-result').textContent = isCorrect ? `✓ Correct — ${q.correct}!` : `✗ That was ${q.correct}`;
+      document.getElementById('feedback-text').textContent = q.feedback;
+      document.getElementById('next-btn').classList.add('visible');
+      document.getElementById('next-btn').textContent = current < pool.length - 1 ? 'Next quote →' : 'See results →';
+      updateStats();
+    }
+
+    function nextQuote() { current++; showQuote(); }
+
+    function updateStats() {
+      document.getElementById('stat-correct').textContent = correct;
+      document.getElementById('stat-streak').textContent = streak;
+      document.getElementById('stat-pct').textContent = attempts > 0 ? Math.round(correct / attempts * 100) + '%' : '—';
+    }
+
+    function showSummary() {
+      document.getElementById('quote-card').style.display = 'none';
+      document.getElementById('options-grid').style.display = 'none';
+      document.getElementById('feedback-box').classList.remove('visible');
+      document.getElementById('next-btn').classList.remove('visible');
+      document.getElementById('summary-card').classList.add('visible');
+      document.getElementById('summary-score').textContent = correct + '/' + ROUND;
+      const pct = Math.round(correct / ROUND * 100);
+      const msgs = {
+        100: "Perfect! You know your apologists and sceptics inside out.",
+        80: "Excellent — you clearly know the literature well.",
+        60: "Good effort. The more you read these thinkers, the more you'll recognise their voices.",
+        40: "Keep going — these quotes are worth knowing. Try reading one book from the list.",
+        0: "A great learning opportunity! Start with Mere Christianity by C.S. Lewis."
+      };
+      const msg = Object.entries(msgs).reverse().find(([k]) => pct >= parseInt(k));
+      document.getElementById('summary-msg').textContent = msg ? msg[1] : "Keep practising!";
+    }
+
+    startGame();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    (function() {
+      var sb = window.supabase.createClient(
+        'https://noprgxkwniouukmrfozc.supabase.co',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+      );
+      sb.auth.getSession().then(function(res) {
+        var session = res.data && res.data.session;
+        var navRight = document.getElementById('nav-auth');
+        if (!navRight) return;
+        if (session) {
+          var name = session.user.user_metadata && session.user.user_metadata.full_name
+            ? session.user.user_metadata.full_name.split(' ')[0]
+            : session.user.email.split('@')[0];
+          navRight.innerHTML = '<a href="dashboard.html" style="font-family:var(--font-ui, DM Sans, sans-serif);font-size:0.85rem;font-weight:500;padding:8px 20px;border-radius:3px;background:var(--gold,#c8a951);color:var(--navy-950,#050d1a);text-decoration:none;">Dashboard</a>';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
