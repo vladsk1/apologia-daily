@@ -1550,7 +1550,7 @@
     if (target) target.className = 'cat-section visible';
     if (btn) btn.className = 'cat-tab active';
     // Scroll to top of content
-    window.scrollTo({top: 300, behavior: 'smooth'});
+    document.querySelector('.category-nav').scrollIntoView();
   }
 
   function toggleArg(card) {
