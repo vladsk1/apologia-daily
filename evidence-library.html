@@ -163,8 +163,10 @@
     .main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 6rem; }
 
     /* ── CATEGORY SECTION ── */
-    .category-section { display: none; }
-    .category-section.active { display: block; }
+    .category-section { display: none !important; }
+    .category-section.active { display: block !important; }
+    .category-section[style*="display: block"] { display: block !important; }
+    .category-section[style*="display:block"] { display: block !important; }
     .category-section .cat-intro,
     .category-section .subcat-label,
     .category-section .arguments-list,
@@ -2208,139 +2210,96 @@
 
   <script>
     function toggleSimple(id) {
-      const el = document.getElementById('simple-' + id);
+      var el = document.getElementById('simple-' + id);
       if (el) el.classList.toggle('visible');
     }
 
     function switchCat(cat, btn) {
-      document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.category-section').forEach(s => s.classList.remove('active'));
+      var tabs = document.querySelectorAll('.cat-tab');
+      for (var i = 0; i < tabs.length; i++) tabs[i].classList.remove('active');
+
+      var ids = ['cat-existence','cat-resurrection','cat-jesus','cat-bible','cat-science'];
+      for (var i = 0; i < ids.length; i++) {
+        var s = document.getElementById(ids[i]);
+        if (s) {
+          s.classList.remove('active');
+          s.style.cssText = 'display:none!important';
+        }
+      }
+
       btn.classList.add('active');
-      const section = document.getElementById('cat-' + cat);
-      section.classList.add('active');
-      section.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-      document.querySelector('.category-nav').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      var target = document.getElementById('cat-' + cat);
+      if (target) {
+        target.classList.add('active');
+        target.style.cssText = 'display:block!important';
+        var reveals = target.querySelectorAll('.reveal');
+        for (var i = 0; i < reveals.length; i++) reveals[i].classList.add('visible');
+      }
+      window.scrollTo({ top: 200, behavior: 'smooth' });
     }
+
+    function initSections() {
+      var ids = ['cat-resurrection','cat-jesus','cat-bible','cat-science'];
+      for (var i = 0; i < ids.length; i++) {
+        var s = document.getElementById(ids[i]);
+        if (s) s.style.cssText = 'display:none!important';
+      }
+      var active = document.getElementById('cat-existence');
+      if (active) active.style.cssText = 'display:block!important';
+    }
+    initSections();
 
     function toggleArg(card) {
       if (card.classList.contains('locked')) return;
-      const wasOpen = card.classList.contains('open');
-      document.querySelectorAll('.argument-card.open').forEach(c => c.classList.remove('open'));
+      var wasOpen = card.classList.contains('open');
+      var open = document.querySelectorAll('.argument-card.open');
+      for (var i = 0; i < open.length; i++) open[i].classList.remove('open');
       if (!wasOpen) card.classList.add('open');
     }
 
-    // ── TUTOR ──
     async function askTutor(panelId, argument, category) {
-      const input = document.getElementById('tutor-input-' + panelId);
-      const question = input.value.trim();
+      var input = document.getElementById('tutor-input-' + panelId);
+      var question = input.value.trim();
       if (!question) return;
-      const sendBtn = document.getElementById('tutor-send-' + panelId);
-      const loading = document.getElementById('tutor-loading-' + panelId);
-      const response = document.getElementById('tutor-response-' + panelId);
-      const responseText = document.getElementById('tutor-text-' + panelId);
+      var sendBtn = document.getElementById('tutor-send-' + panelId);
+      var loading = document.getElementById('tutor-loading-' + panelId);
+      var response = document.getElementById('tutor-response-' + panelId);
+      var responseText = document.getElementById('tutor-text-' + panelId);
       sendBtn.disabled = true;
-      loading.classList.add('visible');
-      response.classList.remove('visible');
+      if (loading) loading.style.display = 'flex';
+      if (response) response.classList.remove('visible');
       try {
-        const res = await fetch('/api/tutor', {
+        var res = await fetch('/api/tutor', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ question, argument, category })
+          body: JSON.stringify({ question: question, argument: argument, category: category })
         });
         if (res.ok) {
-          const data = await res.json();
-          responseText.textContent = data.answer;
-          response.classList.add('visible');
+          var data = await res.json();
+          if (responseText) responseText.textContent = data.answer;
+          if (response) response.classList.add('visible');
           input.value = '';
-        } else {
-          responseText.textContent = 'Sorry — something went wrong. Please try again.';
-          response.classList.add('visible');
         }
       } catch (err) {
-        responseText.textContent = 'Sorry — something went wrong. Please try again.';
-        response.classList.add('visible');
+        if (responseText) responseText.textContent = 'Sorry — something went wrong. Please try again.';
+        if (response) response.classList.add('visible');
       }
       sendBtn.disabled = false;
-      loading.classList.remove('visible');
+      if (loading) loading.style.display = 'none';
     }
 
     function fillTutor(panelId, question) {
-      document.getElementById('tutor-input-' + panelId).value = question;
-      document.getElementById('tutor-input-' + panelId).focus();
+      var input = document.getElementById('tutor-input-' + panelId);
+      if (input) { input.value = question; input.focus(); }
     }
 
-    function makeTutorPanel(id, argument, category, suggestions) {
-      const suggHtml = suggestions.map(s =>
-        `<button class="tutor-suggestion" onclick="fillTutor('${id}','${s.replace(/'/g,"\\'")}');return false;">${s}</button>`
-      ).join('');
-      const argSafe = argument.replace(/'/g, "\\'");
-      const catSafe = category.replace(/'/g, "\\'");
-      return `<div class="tutor-panel">
-        <div class="tutor-header">
-          <div class="tutor-avatar">🎓</div>
-          <div>
-            <div class="tutor-title">Ask the Tutor</div>
-            <div class="tutor-sub">Ask anything about this argument — I'll explain it clearly</div>
-          </div>
-        </div>
-        <div class="tutor-suggestions">${suggHtml}</div>
-        <div class="tutor-input-row">
-          <input class="tutor-input" id="tutor-input-${id}" placeholder="Ask a question about this argument…" onkeydown="if(event.key==='Enter')askTutor('${id}','${argSafe}','${catSafe}')" />
-          <button class="tutor-send" id="tutor-send-${id}" onclick="askTutor('${id}','${argSafe}','${catSafe}')">Ask →</button>
-        </div>
-        <div class="tutor-loading" id="tutor-loading-${id}" style="display:none;align-items:center;gap:8px;font-family:var(--font-ui);font-size:0.82rem;color:rgba(255,255,255,0.4);margin-top:1rem;">
-          <div class="tutor-dot"></div><div class="tutor-dot"></div><div class="tutor-dot"></div>
-          <span style="margin-left:6px;">Thinking…</span>
-        </div>
-        <div class="tutor-response" id="tutor-response-${id}">
-          <div class="tutor-response-label">Tutor response</div>
-          <div class="tutor-response-text" id="tutor-text-${id}"></div>
-        </div>
-      </div>`;
-    }
-
-    const tutorData = [
-      { id:'kalam', arg:'The Kalam Cosmological Argument', cat:'Gods Existence', sugg:['Explain this in plain English','Give me a real-world analogy','How do I use this in conversation?','What is the strongest objection?'] },
-      { id:'leibniz', arg:'Leibniz Contingency Argument', cat:'Gods Existence', sugg:['What does contingent mean?','Explain this like I am 16','How is this different from the Kalam?','What is the necessary being?'] },
-      { id:'thomistic', arg:'The Thomistic Cosmological Argument', cat:'Gods Existence', sugg:['Who is Thomas Aquinas?','Explain the Five Ways','What does unmoved mover mean?','How is this different from the Kalam?'] },
-      { id:'finetuning', arg:'The Fine-Tuning Argument', cat:'Gods Existence', sugg:['What are physical constants?','Give me an analogy','What about the multiverse?','How precise is the fine-tuning?'] },
-      { id:'bio', arg:'The Argument from Biological Complexity', cat:'Gods Existence', sugg:['What is irreducible complexity?','Explain the bacterial flagellum','What about the evolution objection?','How do I use this carefully?'] },
-      { id:'consciousness', arg:'The Argument from Consciousness', cat:'Gods Existence', sugg:['What is the hard problem of consciousness?','Explain qualia with an example','Why cannot neuroscience explain this?','How does this support theism?'] },
-      { id:'moral', arg:'The Moral Argument', cat:'Gods Existence', sugg:['What does objective morality mean?','Explain this to an atheist friend','What about evolution explaining morality?','How is this different from saying atheists are immoral?'] },
-      { id:'minimal', arg:'The Minimal Facts Argument', cat:'The Resurrection', sugg:['What are the five minimal facts?','Why do atheist scholars accept these?','How do I use this in conversation?','What is the strongest objection?'] },
-      { id:'emptytomb', arg:'The Empty Tomb', cat:'The Resurrection', sugg:['Why is enemy attestation important?','What about the wrong tomb theory?','Why does the hallucination theory fail?','Explain this in plain English'] },
-      { id:'paulsconv', arg:'Paul Conversion and the Early Creed', cat:'The Resurrection', sugg:['How early is the 1 Corinthians 15 creed?','Why does Paul conversion matter?','Who is James the brother of Jesus?','What does received mean here?'] },
-      { id:'nonchristian', arg:'The Historical Existence of Jesus', cat:'Jesus', sugg:['Who is Tacitus?','Why does enemy attestation matter?','What did Josephus actually write?','How do I respond to a Jesus mythicist?'] },
-      { id:'multipleatt', arg:'The Criterion of Multiple Attestation', cat:'Jesus', sugg:['What counts as independent attestation?','Give me examples','How is this used in history?','Explain this in plain English'] },
-      { id:'earlycreed', arg:'The Early Creed of 1 Corinthians 15', cat:'Jesus', sugg:['Why is early dating significant?','What does received mean?','Why mention 500 witnesses?','How does this defeat legend theory?'] },
-      { id:'messianic', arg:'Messianic Prophecy', cat:'Jesus', sugg:['What is Isaiah 53 about?','How do the Dead Sea Scrolls help?','Best prophecy to use in conversation?','What about the written after objection?'] },
-      { id:'daniel', arg:'Daniel 70 Weeks', cat:'Jesus', sugg:['Explain the calculation step by step','What does a week of years mean?','What is the strongest objection?','How do I use this carefully?'] },
-      { id:'virginbirth', arg:'The Virgin Birth and Isaiah 7:14', cat:'Jesus', sugg:['What does almah mean?','Explain dual fulfilment','What is the Septuagint?','Why do Matthew and Luke differ?'] },
-      { id:'jesus_god', arg:'Did Jesus Claim to Be God', cat:'Jesus', sugg:['What is the I AM claim?','Explain the CS Lewis trilemma','Why did Jews try to stone Jesus?','How do I respond to a Muslim on this?'] },
-      { id:'john11', arg:'The Pre-existence of Christ John 1:1', cat:'Jesus', sugg:['Explain the Greek grammar','What is the Logos?','Why is the JW translation wrong?','How does this relate to the Trinity?'] },
-      { id:'phil2', arg:'The Philippians 2 Hymn', cat:'Jesus', sugg:['Why is this hymn important?','What does pre-Pauline mean?','What does the hymn actually say?','Who is Larry Hurtado?'] },
-      { id:'titles', arg:'The Titles of Jesus', cat:'Jesus', sugg:['What does Son of Man mean?','Why does Lord mean God?','What is the I AM claim?','Explain this to a Muslim friend'] },
-      { id:'manuscript', arg:'The Manuscript Reliability Argument', cat:'Biblical Reliability', sugg:['How many manuscripts are there?','What are textual variants?','How does this compare to other ancient texts?','How do I use this with a Muslim?'] },
-      { id:'archaeology', arg:'Archaeological Confirmation of the Bible', cat:'Biblical Reliability', sugg:['What is the Pilate Stone?','Tell me about the Hittites','What is the Pool of Bethesda?','How do I explain this in conversation?'] },
-      { id:'bigbang', arg:'The Argument from the Big Bang', cat:'Science and Faith', sugg:['What is the BGV theorem?','Explain the Big Bang in plain English','What about the multiverse?','How does this relate to Genesis 1?'] },
-      { id:'originlife', arg:'The Origin of Life Argument', cat:'Science and Faith', sugg:['What is specified information?','What is the RNA World?','Why cannot natural selection explain this?','How do I use this without being overconfident?'] },
-    ];
-
-    // Inject tutor panels into each pro-deepdive
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.pro-deepdive').forEach((div, i) => {
-        const d = tutorData[i];
-        if (!d) return;
-        const tutorEl = document.createElement('div');
-        tutorEl.innerHTML = makeTutorPanel(d.id, d.arg, d.cat, d.sugg);
-        div.appendChild(tutorEl.firstChild);
+    // Reveal observer
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
       });
-    });
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
   </script>
 </body>
 </html>
