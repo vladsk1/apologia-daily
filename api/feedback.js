@@ -1,26 +1,17 @@
-export const config = { runtime: 'edge' };
-
-export default async function handler(req) {
-  const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Content-Type': 'application/json'
-  };
-
-  if (req.method === 'OPTIONS') return new Response(null, { status: 200, headers });
-  if (req.method !== 'POST') return new Response(JSON.stringify({ error: 'Method not allowed' }), { status: 405, headers });
+export default async function handler(req, res) {
+  if (req.method === 'OPTIONS') { res.setHeader('Access-Control-Allow-Origin', '*'); res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS'); res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); return res.status(200).end(); }
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    const body = await req.json();
+    const body = req.body;
     const { conversation, opponent, topic, difficulty, mode } = body;
 
     if (!conversation || !opponent || !topic) {
-      return new Response(JSON.stringify({ error: 'Missing required fields' }), { status: 400, headers });
+      return res.status(400).json({ error: 'Missing required fields' })
     }
 
     const apiKey = process.env.ANTHROPIC_API_KEY;
-    if (!apiKey) return new Response(JSON.stringify({ error: 'API key not configured' }), { status: 500, headers });
+    if (!apiKey) return res.status(500).json({ error: 'API key not configured' })
 
     let systemPrompt, userMessage;
 
@@ -79,20 +70,20 @@ Analyse the Christian performance and respond with JSON only.`;
 
     if (!anthropicRes.ok) {
       const errData = await anthropicRes.text();
-      return new Response(JSON.stringify({ error: 'Anthropic error', details: errData }), { status: 500, headers });
+      return res.status(500).json({ error: 'Anthropic error', details: errData })
     }
 
     const data = await anthropicRes.json();
     const reply = data.content && data.content[0] && data.content[0].text;
 
-    if (!reply) return new Response(JSON.stringify({ error: 'No reply' }), { status: 500, headers });
+    if (!reply) return res.status(500).json({ error: 'No reply' })
 
     const clean = reply.replace(/```json|```/g, '').trim();
     const feedback = JSON.parse(clean);
 
-    return new Response(JSON.stringify(feedback), { status: 200, headers });
+    return res.status(200).json(feedback);
 
   } catch (err) {
-    return new Response(JSON.stringify({ error: 'Server error', message: err.message }), { status: 500, headers });
+    return res.status(500).json({ error: 'Server error', message: err.message })
   }
 }
