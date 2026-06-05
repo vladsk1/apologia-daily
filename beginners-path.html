@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beginner's Path — Apologia Daily</title>
+  <meta name="description" content="New to Christian apologetics? Start here. A simple 5-day guided journey to understanding and defending your faith — no philosophy degree required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy-950: #050d1a; --navy-900: #0a1628; --navy-800: #0f2040;
+      --navy-700: #163058; --navy-600: #1e4278; --navy-500: #285a9e;
+      --navy-400: #3b72bc; --navy-300: #6f9fd4; --navy-200: #aecae8;
+      --navy-100: #ddeaf5; --navy-50: #f0f6fb;
+      --gold: #c8a951; --gold-light: #e8cf87;
+      --white: #ffffff; --off-white: #f8f7f4;
+      --text-dark: #0a1628; --text-mid: #3a4a62; --text-muted: #7a8fa8;
+      --border: #d4e0ec;
+      --correct: #0f6e56; --correct-bg: #e1f5ee;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: 'DM Sans', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text-dark); background: var(--off-white); line-height: 1.7; overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,13,26,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.7); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-right { display: flex; gap: 10px; align-items: center; }
+    .nav-signin { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.6); text-decoration: none; }
+    .nav-cta { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 8px 20px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    /* HERO */
+    .hero { background: var(--navy-950); padding: 8rem 2rem 5rem; position: relative; overflow: hidden; text-align: center; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(30,66,120,0.5) 0%, transparent 70%); pointer-events: none; }
+    .hero-inner { max-width: 680px; margin: 0 auto; position: relative; z-index: 1; }
+    .hero-eyebrow { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .hero-title { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; color: var(--white); margin-bottom: 1.25rem; }
+    .hero-title em { font-style: italic; color: var(--gold); }
+    .hero-sub { font-size: 1.1rem; font-weight: 300; color: rgba(255,255,255,0.65); line-height: 1.8; margin-bottom: 2rem; }
+    .hero-verse { background: rgba(200,169,81,0.1); border: 1px solid rgba(200,169,81,0.25); border-radius: 6px; padding: 1rem 1.5rem; display: inline-block; margin-bottom: 2.5rem; }
+    .hero-verse-text { font-family: var(--font-display); font-size: 0.95rem; font-style: italic; color: rgba(255,255,255,0.85); }
+    .hero-verse-ref { font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-top: 4px; }
+    .hero-cta { font-family: var(--font-ui); font-size: 1rem; font-weight: 500; padding: 14px 36px; border-radius: 4px; background: var(--gold); color: var(--navy-950); border: none; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s; }
+    .hero-cta:hover { background: var(--gold-light); }
+
+    /* REASSURANCE */
+    .reassurance { background: var(--white); border-bottom: 1px solid var(--border); padding: 2.5rem 2rem; }
+    .reassurance-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center; }
+    .reassurance-item { }
+    .reassurance-icon { font-size: 1.5rem; margin-bottom: 8px; }
+    .reassurance-title { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 4px; }
+    .reassurance-text { font-family: var(--font-ui); font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* PROGRESS BAR */
+    .main { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 6rem; }
+    .progress-header { text-align: center; margin-bottom: 3rem; }
+    .progress-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .progress-track { display: flex; align-items: center; gap: 0; margin-bottom: 0.75rem; }
+    .progress-step-dot { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500; flex-shrink: 0; cursor: pointer; transition: all 0.2s; }
+    .progress-step-dot.done { background: var(--gold); color: var(--navy-950); }
+    .progress-step-dot.active { background: var(--navy-900); color: var(--white); border: 2px solid var(--gold); }
+    .progress-step-dot.locked { background: var(--border); color: var(--text-muted); }
+    .progress-line { flex: 1; height: 2px; background: var(--border); }
+    .progress-line.done { background: var(--gold); }
+    .progress-count { font-family: var(--font-ui); font-size: 0.82rem; color: var(--text-muted); }
+
+    /* DAY CARDS */
+    .day-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 1.5rem; transition: all 0.2s; }
+    .day-card.active { border-color: var(--navy-300); box-shadow: 0 4px 20px rgba(10,22,40,0.08); }
+    .day-card.completed { border-color: var(--correct); }
+    .day-card.locked { opacity: 0.55; }
+    .day-card-header { padding: 1.5rem 1.75rem; display: flex; align-items: center; gap: 1.25rem; cursor: pointer; }
+    .day-badge { width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+    .day-badge.active { background: var(--navy-900); }
+    .day-badge.completed { background: var(--correct-bg); }
+    .day-badge.locked { background: var(--off-white); }
+    .day-info { flex: 1; }
+    .day-num { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 3px; }
+    .day-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 3px; }
+    .day-subtitle { font-family: var(--font-ui); font-size: 0.82rem; color: var(--text-muted); }
+    .day-status { font-family: var(--font-ui); font-size: 0.75rem; font-weight: 500; padding: 4px 12px; border-radius: 20px; flex-shrink: 0; }
+    .day-status.active-badge { background: var(--navy-50); color: var(--navy-600); border: 1px solid var(--navy-200); }
+    .day-status.done-badge { background: var(--correct-bg); color: var(--correct); }
+    .day-status.locked-badge { background: var(--off-white); color: var(--text-muted); }
+    .day-body { padding: 0 1.75rem 1.75rem; display: none; border-top: 1px solid var(--border); }
+    .day-body.open { display: block; }
+    .day-body-intro { font-size: 0.95rem; color: var(--text-mid); line-height: 1.8; margin: 1.25rem 0; }
+    .day-tasks { display: flex; flex-direction: column; gap: 10px; margin-bottom: 1.5rem; }
+    .day-task { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; border-radius: 6px; background: var(--off-white); border: 1px solid var(--border); transition: all 0.15s; }
+    .day-task.done { background: var(--correct-bg); border-color: #9fe1cb; }
+    .day-task-check { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--border); flex-shrink: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; margin-top: 1px; }
+    .day-task.done .day-task-check { background: var(--correct); border-color: var(--correct); }
+    .day-task-check svg { width: 10px; height: 10px; stroke: white; fill: none; stroke-width: 2.5; display: none; }
+    .day-task.done .day-task-check svg { display: block; }
+    .day-task-content { flex: 1; }
+    .day-task-title { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; color: var(--text-dark); margin-bottom: 2px; }
+    .day-task.done .day-task-title { color: var(--correct); }
+    .day-task-desc { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
+    .day-task-link { font-family: var(--font-ui); font-size: 0.78rem; color: var(--navy-400); text-decoration: none; display: inline-block; margin-top: 4px; }
+    .day-task-link:hover { color: var(--navy-600); }
+    .day-time { font-family: var(--font-ui); font-size: 0.72rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px; margin-top: 2px; }
+    .complete-day-btn { width: 100%; padding: 13px; border-radius: 6px; background: var(--navy-900); color: var(--white); font-family: var(--font-ui); font-size: 0.95rem; font-weight: 500; border: none; cursor: pointer; transition: all 0.2s; }
+    .complete-day-btn:hover { background: var(--navy-700); }
+    .complete-day-btn.gold { background: var(--gold); color: var(--navy-950); }
+    .complete-day-btn.gold:hover { background: var(--gold-light); }
+
+    /* WHAT IS APOLOGETICS */
+    .explainer { background: var(--navy-950); border-radius: 8px; padding: 2.5rem; margin-bottom: 3rem; }
+    .explainer-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; }
+    .explainer-title em { font-style: italic; color: var(--gold); }
+    .explainer-text { font-size: 0.95rem; color: rgba(255,255,255,0.7); line-height: 1.85; margin-bottom: 1rem; }
+    .explainer-text strong { color: var(--white); font-weight: 500; }
+    .explainer-verse { font-family: var(--font-display); font-size: 1rem; font-style: italic; color: var(--gold); margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); }
+
+    /* COMPLETED STATE */
+    .completed-banner { background: var(--correct-bg); border: 1px solid #9fe1cb; border-radius: 8px; padding: 2rem; text-align: center; margin-bottom: 2rem; display: none; }
+    .completed-banner.visible { display: block; }
+    .completed-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+    .completed-title { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--correct); margin-bottom: 0.5rem; }
+    .completed-sub { font-family: var(--font-ui); font-size: 0.88rem; color: var(--text-mid); margin-bottom: 1.5rem; line-height: 1.6; }
+    .next-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-top: 1.5rem; }
+    .next-step { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem; text-align: center; text-decoration: none; transition: all 0.15s; }
+    .next-step:hover { border-color: var(--navy-300); transform: translateY(-2px); }
+    .next-step-icon { font-size: 1.5rem; margin-bottom: 8px; }
+    .next-step-title { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; color: var(--text-dark); margin-bottom: 3px; }
+    .next-step-sub { font-family: var(--font-ui); font-size: 0.72rem; color: var(--text-muted); }
+
+    /* FOOTER */
+    footer { background: var(--navy-950); border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 2rem 2rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+    .footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-ui); font-size: 0.8rem; color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    @media (max-width: 600px) { .main { padding: 2rem 1.25rem 4rem; } .progress-track { gap: 0; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
+      <li><a href="daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="ask-anything.html">Ask Anything</a></li>
+      <li><a href="worldviews.html">Worldviews</a></li>
+      <li><a href="study-plans.html">Study Plans</a></li>
+      <li><a href="whats-new.html">What's New</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="login.html" class="nav-signin">Sign in</a>
+      <a href="signup.html" class="nav-cta">Start Free</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Beginner's Path</p>
+      <h1 class="hero-title">New to apologetics?<br/><em>Start right here.</em></h1>
+      <p class="hero-sub">You don't need a theology degree. You don't need to know any philosophy. You just need 10 minutes a day and a willingness to think. This 5-day journey will give you real reasons to believe — and the words to share them.</p>
+      <div class="hero-verse">
+        <div class="hero-verse-text">"Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have — but do this with gentleness and respect."</div>
+        <div class="hero-verse-ref">1 Peter 3:15</div>
+      </div>
+      <br/>
+      <a href="#day-1" class="hero-cta">Begin Day 1 →</a>
+    </div>
+  </div>
+
+  <!-- REASSURANCE -->
+  <div class="reassurance">
+    <div class="reassurance-inner">
+      <div class="reassurance-item">
+        <div class="reassurance-icon">⏱️</div>
+        <div class="reassurance-title">10 minutes a day</div>
+        <div class="reassurance-text">Each day takes about 10 minutes. No long reading sessions — just focused, practical learning.</div>
+      </div>
+      <div class="reassurance-item">
+        <div class="reassurance-icon">📖</div>
+        <div class="reassurance-title">No prior knowledge needed</div>
+        <div class="reassurance-text">Everything is explained in plain English. If something is confusing, ask the AI tutor to explain it more simply.</div>
+      </div>
+      <div class="reassurance-item">
+        <div class="reassurance-icon">💬</div>
+        <div class="reassurance-title">Practical from day one</div>
+        <div class="reassurance-text">By Day 3 you'll have a real answer ready for a real conversation. By Day 5 you'll feel genuinely more confident.</div>
+      </div>
+      <div class="reassurance-item">
+        <div class="reassurance-icon">✝️</div>
+        <div class="reassurance-title">Faith-building, not just academic</div>
+        <div class="reassurance-text">This isn't about winning arguments. It's about loving people enough to think carefully about truth on their behalf.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!-- WHAT IS APOLOGETICS -->
+    <div class="explainer reveal">
+      <h2 class="explainer-title">What is <em>apologetics</em>?</h2>
+      <p class="explainer-text">The word "apologetics" comes from the Greek word <strong>apologia</strong> — a legal defence, a reasoned account. When Peter says "give an answer," he uses this word. He's telling Christians to be prepared to give a thoughtful, reasoned defence of their faith.</p>
+      <p class="explainer-text">Apologetics is not about being argumentative. It's not about making people feel stupid. It's about <strong>loving people enough to think carefully about truth on their behalf</strong>. The best apologists are not the most aggressive — they're the most patient, the most honest, and the most genuinely curious about the person they're talking to.</p>
+      <p class="explainer-text">Over the next five days, you'll discover that Christianity is not just a feeling or a tradition. It's a faith grounded in evidence — historical, philosophical, and scientific. You'll leave this path with real reasons to believe, and the words to share them naturally in conversation.</p>
+      <div class="explainer-verse">"Always be prepared to give an answer" — 1 Peter 3:15</div>
+    </div>
+
+    <!-- PROGRESS -->
+    <div class="progress-header reveal">
+      <div class="progress-label">Your progress</div>
+      <div class="progress-track" id="progress-track">
+        <div class="progress-step-dot active" id="dot-1" onclick="scrollToDay(1)">1</div>
+        <div class="progress-line" id="line-1"></div>
+        <div class="progress-step-dot locked" id="dot-2" onclick="scrollToDay(2)">2</div>
+        <div class="progress-line" id="line-2"></div>
+        <div class="progress-step-dot locked" id="dot-3" onclick="scrollToDay(3)">3</div>
+        <div class="progress-line" id="line-3"></div>
+        <div class="progress-step-dot locked" id="dot-4" onclick="scrollToDay(4)">4</div>
+        <div class="progress-line" id="line-4"></div>
+        <div class="progress-step-dot locked" id="dot-5" onclick="scrollToDay(5)">5</div>
+      </div>
+      <div class="progress-count" id="progress-count">0 of 5 days completed</div>
+    </div>
+
+    <!-- COMPLETED BANNER -->
+    <div class="completed-banner" id="completed-banner">
+      <div class="completed-icon">🎉</div>
+      <div class="completed-title">You've completed the Beginner's Path!</div>
+      <div class="completed-sub">You now have real, grounded reasons for what you believe — and the words to share them. This is just the beginning. Here's where to go next:</div>
+      <div class="next-steps">
+        <a href="evidence-library.html" class="next-step">
+          <div class="next-step-icon">📚</div>
+          <div class="next-step-title">Evidence Library</div>
+          <div class="next-step-sub">Go deeper into every argument</div>
+        </a>
+        <a href="debate-arena.html" class="next-step">
+          <div class="next-step-icon">⚔️</div>
+          <div class="next-step-title">Debate Arena</div>
+          <div class="next-step-sub">Practise real conversations</div>
+        </a>
+        <a href="daily-devotional.html" class="next-step">
+          <div class="next-step-icon">🙏</div>
+          <div class="next-step-title">Daily Devotional</div>
+          <div class="next-step-sub">Build the daily habit</div>
+        </a>
+        <a href="games.html" class="next-step">
+          <div class="next-step-icon">🎯</div>
+          <div class="next-step-title">Games & Quizzes</div>
+          <div class="next-step-sub">Test your new knowledge</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- DAY 1 -->
+    <div class="day-card active reveal" id="day-1">
+      <div class="day-card-header" onclick="toggleDay(1)">
+        <div class="day-badge active">📖</div>
+        <div class="day-info">
+          <div class="day-num">Day 1</div>
+          <div class="day-title">Why does anything exist at all?</div>
+          <div class="day-subtitle">The most basic question — and a surprisingly powerful answer</div>
+        </div>
+        <div class="day-status active-badge" id="status-1">Today</div>
+      </div>
+      <div class="day-body open" id="body-1">
+        <p class="day-body-intro">Welcome. Today you're going to encounter one of the oldest arguments for God's existence — and you're going to discover it's actually very simple. You don't need to know any philosophy. Just think carefully about one question: why does anything exist rather than nothing?</p>
+        <div class="day-tasks" id="tasks-1">
+          <div class="day-task" id="task-1-1" onclick="toggleTask(1,1)">
+            <div class="day-task-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="day-task-content">
+              <div class="day-task-title">Read today's devotional</div>
+              <div class="day-task-desc">Start with the verse for today and spend 5 minutes in the reflection. Don't rush it.</div>
+              <div class="day-time">⏱ 5 minutes</div>
+              <a href="daily-devotional.html" class="day-task-link">Open Daily Devotional →</a>
+            </div>
+          </div>
+          <div class="day-task" id="task-1-2" onclick="toggleTask(1,2)">
+            <div class="day-task-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="day-task-content">
+              <div class="day-task-title">Read: The Kalam Cosmological Argument</div>
+              <div class="day-task-desc">Read the free summary only — don't worry about the Pro deep dive yet. Focus on the "In plain English" box at the top. This is the most famous argument for God's existence in modern philosophy.</div>
+              <div class="day-time">⏱ 4 minutes</div>
+              <a href="evidence-library.html" class="day-task-link">Open Evidence Library → God's Existence → Kalam →</a>
+            </div>
+          </div>
+          <div class="day-task" id="task-1-3" onclick="toggleTask(1,3)">
+            <div class="day-task-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="day-task-content">
+              <div class="day-task-title">Ask yourself: does the argument make sense to you?</div>
+              <div class="day-task-desc">Don't just accept it — think about it honestly. Does "the universe had a beginning, so it had a cause" make sense? If something is confusing, use the Ask Anything button to ask about it in plain English.</div>
+              <div class="day-time">⏱ 2 minutes reflection</div>
+              <a href="ask-anything.html" class="day-task-link">Ask Anything if you have questions →</a>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--navy-50);border-radius:6px;padding:1rem 1.25rem;margin-bottom:1.25rem;">
+          <div style="font-family:var(--font-ui);font-size:0.7rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy-500);margin-bottom:6px;">💡 Today's takeaway</div>
+          <div style="font-family:var(--font-ui);font-size:0.88rem;color:var(--text-mid);line-height:1.6;">If someone asks you why you believe in God, you can now say: <em>"The universe had a beginning — even atheist scientists agree on that. Everything that begins to exist has a cause. So the universe has a cause outside itself — something spaceless, timeless, and incredibly powerful. That's not faith. That's logic."</em></div>
+        </div>
+        <button class="complete-day-btn" onclick="completeDay(1)">Mark Day 1 complete →</button>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day-card locked reveal" id="day-2">
+      <div class="day-card-header" onclick="toggleDay(2)">
+        <div class="day-badge locked">🔬</div>
+        <div class="day-info">
+          <div class="day-num">Day 2</div>
+          <div class="day-title">The universe looks designed — is it?</div>
+          <div class="day-subtitle">What scientists discovered about the precision of the universe</div>
+        </div>
+        <div class="day-status locked-badge" id="status-2">Complete Day 1 first</div>
+      </div>
+      <div class="day-body" id="body-2">
+        <p class="day-body-intro">Yesterday you looked at the fact that the universe had a beginning. Today you're going to discover something even more remarkable — the universe doesn't just exist, it appears to have been precisely set up for life. This is called the fine-tuning argument, and it's one of the most powerful in all of apologetics.</p>
+        <div class="day-tasks" id="tasks-2">
+          <div class="day-task" id="task-2-1" onclick="toggleTask(2,1)">
+            <div class="day-task-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="day-task-content">
+              <div class="day-task-title">Read: The Fine-Tuning Argument</div>
+              <div class="day-task-desc">Read the free summary. The "control panel" analogy in the explanation section will make this crystal clear. This is the argument that convinced many scientists that the universe looks intentional.</div>
+              <div class="day-time">⏱ 4 minutes</div>
+              <a href="evidence-library.html" class="day-task-link">Open Evidence Library → God's Existence → Fine-Tuning →</a>
+            </div>
+          </div>
+          <div class="day-task" id="task-2-2" onclick="toggleTask(2,2)">
+            <div class="day-task-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="day-task-content">
+              <div class="day-task-title">Try today's Daily Quiz — Beginner level</div>
+              <div class="day-task-desc">Test what you've learned so far with a few questions. Don't worry about getting them all right — the coaching after each question teaches you as much as the question itself.</div>
+              <div class="day-time">⏱ 3 minutes</div>
+              <a href="daily-quiz.html" class="day-task-link">Open Daily Quiz →</a>
+            </div>
+          </div>
+          <div class="day-task" id="task-2-3" onclick="toggleTask(2,3)">
+            <div class="day-task-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="day-task-content">
+              <div class="day-task-title">Read today's devotional</div>
+              <div class="day-task-desc">Take 5 minutes with today's verse and reflection before finishing your session.</div>
+              <div class="day-time">⏱ 5 minutes</div>
+              <a href="daily-devotional.html" class="day-task-link">Open Daily Devotional →</a>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--navy-50);border-radius:6px;padding:1rem 1.25rem;margin-bottom:1.25rem;">
+          <div style="font-family:var(--font-ui);font-size:0.7rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy-500);margin-bottom:6px;">💡 Today's takeaway</div>
+          <div style="font-family:var(--font-ui);font-size:0.88rem;color:var(--text-mid);line-height:1.6;">You can now say: <em>"The physical constants of the universe — things like the strength of gravity — are set to impossibly precise values. If they were even slightly different, no stars, no planets, no life would exist. Even secular scientists call this remarkable. It looks like someone set the dials."</em></div>
+        </div>
+        <button class="complete-day-btn" onclick="completeDay(2)">Mark Day 2 complete →</button>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day-card locked reveal" id="day-3">
+      <div class="day-card-header" onclick="toggleDay(3)">
+        <div class="day-badge locked">✝️</div>
+        <div class="day-info">
+          <div class="day-num">Day 3</div>
+          <div class="day-title">Did Jesus actually rise from the dead?</div>
+          <div class="day-subtitle">The historical case — no faith required to follow the argument</div>
+        </div>
+        <div class="day-status locked-badge" id="status-3">Complete Day 2 first</div>
+      </div>
+      <div class="day-body" id="body-3">
+        <p class="day-body-intro">The resurrection is the central claim of Christianity. Today you're going to discover that you don't need to trust the Bible as Scripture to examine it — it's a historical question with historical evidence. And the evidence is stronger than most people realise.</p>
+        <div class="day-tasks" id="tasks-3">
+          <div class="day-task" id="task-3-1" onclick="toggleTask(3,1)">
+            <div class="day-task-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="day-task-content">
+              <div class="day-task-title">Read: The Minimal Facts Argument</div>
+              <div class="day-task-desc">Read the free summary carefully. Notice that these five facts are accepted by virtually all historians — not just Christians. This is history, not just faith.</div>
+              <div class="day-time">⏱ 5 minutes</div>
+              <a href="evidence-library.html" class="day-task-link">Open Evidence Library → The Resurrection → Minimal Facts →</a>
+            </div>
+          </div>
+          <div class="day-task" id="task-3-2" onclick="toggleTask(3,2)">
+            <div class="day-task-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="day-task-content">
+              <div class="day-task-title">Try your first Conversation practice</div>
+              <div class="day-task-desc">Go to the Debate Arena, select "Real Conversations", and pick "The Curious Coworker" with the topic "Why do you believe in God?" Have a short 3-4 exchange conversation. Don't worry about being perfect — this is practice.</div>
+              <div class="day-time">⏱ 5 minutes</div>
+              <a href="debate-arena.html" class="day-task-link">Open Debate Arena → Real Conversations →</a>
+            </div>
+          </div>
+          <div class="day-task" id="task-3-3" onclick="toggleTask(3,3)">
+            <div class="day-task-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="day-task-content">
+              <div class="day-task-title">Read today's devotional</div>
+              <div class="day-task-desc">The resurrection isn't just an argument — it's the foundation of everything. Let the devotional connect the evidence to your faith today.</div>
+              <div class="day-time">⏱ 5 minutes</div>
+              <a href="daily-devotional.html" class="day-task-link">Open Daily Devotional →</a>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--navy-50);border-radius:6px;padding:1rem 1.25rem;margin-bottom:1.25rem;">
+          <div style="font-family:var(--font-ui);font-size:0.7rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy-500);margin-bottom:6px;">💡 Today's takeaway</div>
+          <div style="font-family:var(--font-ui);font-size:0.88rem;color:var(--text-mid);line-height:1.6;">You can now say: <em>"The resurrection isn't just a matter of faith — it's a matter of history. Five facts are accepted by virtually all historians, including atheists. The resurrection is the explanation that best fits all of them. No other theory explains why the tomb was empty AND why Paul and James — who both opposed Jesus — completely changed their lives."</em></div>
+        </div>
+        <button class="complete-day-btn" onclick="completeDay(3)">Mark Day 3 complete →</button>
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day-card locked reveal" id="day-4">
+      <div class="day-card-header" onclick="toggleDay(4)">
+        <div class="day-badge locked">🛡️</div>
+        <div class="day-info">
+          <div class="day-num">Day 4</div>
+          <div class="day-title">Practise answering the hard questions</div>
+          <div class="day-subtitle">The most common objections — and how to respond with confidence</div>
+        </div>
+        <div class="day-status locked-badge" id="status-4">Complete Day 3 first</div>
+      </div>
+      <div class="day-body" id="body-4">
+        <p class="day-body-intro">You've learned two powerful arguments for God's existence and the evidence for the resurrection. Today you're going to practise using them — because knowing an argument and being able to use it in a real conversation are two very different things. This is where Apologia Daily is unlike anything else.</p>
+        <div class="day-tasks" id="tasks-4">
+          <div class="day-task" id="task-4-1" onclick="toggleTask(4,1)">
+            <div class="day-task-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="day-task-content">
+              <div class="day-task-title">Try the Objection Catcher <span style="font-family:var(--font-ui);font-size:0.65rem;font-weight:500;background:#faeeda;color:#854f0b;padding:2px 8px;border-radius:10px;margin-left:6px;">Pro</span></div>
+              <div class="day-task-desc">Play one round of the Objection Catcher game. A sceptic fires an objection — you pick the best response. Read the coaching carefully after each question. This is where the learning really happens.</div>
+              <div class="day-time">⏱ 5 minutes</div>
+              <a href="objection-catcher.html" class="day-task-link">Open Objection Catcher →</a>
+            </div>
+          </div>
+
+          <div style="background:linear-gradient(135deg,#0a1628,#0f2040);border-radius:8px;padding:1.25rem 1.5rem;margin-top:-4px;margin-bottom:4px;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+            <div>
+              <div style="font-family:var(--font-ui);font-size:0.7rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Unlock the full Objection Catcher with Pro</div>
+              <div style="font-family:var(--font-ui);font-size:0.82rem;color:rgba(255,255,255,0.55);line-height:1.5;">10 real objections across 5 topics with expert coaching. The most practical training game on the platform — and the one that makes the biggest difference in real conversations.</div>
+            </div>
+            <a href="index.html#pricing" style="font-family:var(--font-ui);font-size:0.82rem;font-weight:500;padding:9px 20px;border-radius:3px;background:var(--gold);color:var(--navy-950);text-decoration:none;white-space:nowrap;flex-shrink:0;">Upgrade to Pro — $8/mo</a>
+          </div>
+          <div class="day-task" id="task-4-2" onclick="toggleTask(4,2)">
+            <div class="day-task-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="day-task-content">
+              <div class="day-task-title">Ask your biggest question</div>
+              <div class="day-task-desc">Go to Ask Anything and type the question about faith that you find hardest to answer — the one that comes up in your life most often. Get a clear, evidence-based response you can actually use.</div>
+              <div class="day-time">⏱ 3 minutes</div>
+              <a href="ask-anything.html" class="day-task-link">Open Ask Anything →</a>
+            </div>
+          </div>
+          <div class="day-task" id="task-4-3" onclick="toggleTask(4,3)">
+            <div class="day-task-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="day-task-content">
+              <div class="day-task-title">Try the Who Said It game</div>
+              <div class="day-task-desc">Play one round of Who Said It to start getting familiar with the great thinkers — both Christian apologists and atheist critics. Knowing who said what makes conversations richer.</div>
+              <div class="day-time">⏱ 3 minutes</div>
+              <a href="who-said-it.html" class="day-task-link">Open Who Said It →</a>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--navy-50);border-radius:6px;padding:1rem 1.25rem;margin-bottom:1.25rem;">
+          <div style="font-family:var(--font-ui);font-size:0.7rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy-500);margin-bottom:6px;">💡 Today's takeaway</div>
+          <div style="font-family:var(--font-ui);font-size:0.88rem;color:var(--text-mid);line-height:1.6;">Knowing arguments and being able to use them are two different skills. Today you started building the second one. The more you practise in the Arena and Objection Catcher, the more natural these conversations will feel in real life.</div>
+        </div>
+        <button class="complete-day-btn" onclick="completeDay(4)">Mark Day 4 complete →</button>
+      </div>
+    </div>
+
+    <!-- DAY 5 -->
+    <div class="day-card locked reveal" id="day-5">
+      <div class="day-card-header" onclick="toggleDay(5)">
+        <div class="day-badge locked">🌟</div>
+        <div class="day-info">
+          <div class="day-num">Day 5</div>
+          <div class="day-title">Gentleness, respect — and what comes next</div>
+          <div class="day-subtitle">The how matters as much as the what — and your journey is just beginning</div>
+        </div>
+        <div class="day-status locked-badge" id="status-5">Complete Day 4 first</div>
+      </div>
+      <div class="day-body" id="body-5">
+        <p class="day-body-intro">You've covered the arguments, you've practised the conversations, you've asked your questions. Today is about something equally important — the spirit in which you share your faith. Peter doesn't just say "give an answer." He says give it "with gentleness and respect." That's not optional. It's the whole point.</p>
+        <div class="day-tasks" id="tasks-5">
+          <div class="day-task" id="task-5-1" onclick="toggleTask(5,1)">
+            <div class="day-task-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="day-task-content">
+              <div class="day-task-title">Read: The Moral Argument</div>
+              <div class="day-task-desc">The moral argument is one of the most personally powerful arguments because it starts with something everyone already believes — that some things are genuinely wrong. It's also one of the most useful in real conversations.</div>
+              <div class="day-time">⏱ 4 minutes</div>
+              <a href="evidence-library.html" class="day-task-link">Open Evidence Library → God's Existence → Moral Argument →</a>
+            </div>
+          </div>
+          <div class="day-task" id="task-5-2" onclick="toggleTask(5,2)">
+            <div class="day-task-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="day-task-content">
+              <div class="day-task-title">Try a full Debate Arena session</div>
+              <div class="day-task-desc">Choose the Debate Mode, select The Agnostic, choose "Is there evidence God exists?" and have a full debate. Try to use what you've learned over the past four days. Get the feedback at the end.</div>
+              <div class="day-time">⏱ 6 minutes</div>
+              <a href="debate-arena.html" class="day-task-link">Open Debate Arena →</a>
+            </div>
+          </div>
+
+          <div style="background:var(--navy-50);border:1px solid var(--navy-100);border-radius:8px;padding:1.25rem 1.5rem;margin-top:-4px;margin-bottom:4px;">
+            <div style="font-family:var(--font-display);font-size:1rem;font-weight:600;color:var(--text-dark);margin-bottom:6px;">You've made it to Day 5 — here's what Pro unlocks 🎉</div>
+            <div style="font-family:var(--font-ui);font-size:0.85rem;color:var(--text-mid);line-height:1.7;margin-bottom:1rem;">Over the last five days you've only scratched the surface. Pro members get:</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1.25rem;">
+              <div style="font-family:var(--font-ui);font-size:0.8rem;color:var(--text-mid);display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--correct);font-weight:700;flex-shrink:0;">✓</span>Full Evidence Library deep dives on every argument</div>
+              <div style="font-family:var(--font-ui);font-size:0.8rem;color:var(--text-mid);display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--correct);font-weight:700;flex-shrink:0;">✓</span>Unlimited Ask Anything questions</div>
+              <div style="font-family:var(--font-ui);font-size:0.8rem;color:var(--text-mid);display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--correct);font-weight:700;flex-shrink:0;">✓</span>Objection Catcher — all 10 objections, 5 topics</div>
+              <div style="font-family:var(--font-ui);font-size:0.8rem;color:var(--text-mid);display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--correct);font-weight:700;flex-shrink:0;">✓</span>AI Tutor on every argument in the Evidence Library</div>
+              <div style="font-family:var(--font-ui);font-size:0.8rem;color:var(--text-mid);display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--correct);font-weight:700;flex-shrink:0;">✓</span>All Debate Arena topics unlocked</div>
+              <div style="font-family:var(--font-ui);font-size:0.8rem;color:var(--text-mid);display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--correct);font-weight:700;flex-shrink:0;">✓</span>Speed Round game and belt progression</div>
+            </div>
+            <a href="index.html#pricing" style="display:block;text-align:center;font-family:var(--font-ui);font-size:0.95rem;font-weight:500;padding:13px;border-radius:6px;background:var(--gold);color:var(--navy-950);text-decoration:none;transition:background 0.2s;">Upgrade to Pro — $8/month →</a>
+            <div style="font-family:var(--font-ui);font-size:0.72rem;color:var(--text-muted);text-align:center;margin-top:8px;">Cancel any time. No commitment.</div>
+          </div>
+          <div class="day-task" id="task-5-3" onclick="toggleTask(5,3)">
+            <div class="day-task-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <div class="day-task-content">
+              <div class="day-task-title">Read today's devotional — and pray</div>
+              <div class="day-task-desc">End your five days the same way you started — with the Word, reflection, and prayer. Ask God for a specific opportunity to use what you've learned. Then watch for it.</div>
+              <div class="day-time">⏱ 5 minutes</div>
+              <a href="daily-devotional.html" class="day-task-link">Open Daily Devotional →</a>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--navy-50);border-radius:6px;padding:1rem 1.25rem;margin-bottom:1.25rem;">
+          <div style="font-family:var(--font-ui);font-size:0.7rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy-500);margin-bottom:6px;">💡 Final thought</div>
+          <div style="font-family:var(--font-ui);font-size:0.88rem;color:var(--text-mid);line-height:1.6;">Apologetics is not a weapon. It's a gift. The goal is never to win an argument — it's to love a person well enough to take their questions seriously and give them real answers. You now have real answers. Use them with gentleness and respect, and trust God with the rest.</div>
+        </div>
+        <button class="complete-day-btn gold" onclick="completeDay(5)">Complete the Beginner's Path 🎉</button>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Apologia<span>Daily</span></div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="evidence-library.html">Evidence Library</a></li>
+        <li><a href="debate-arena.html">Debate Arena</a></li>
+        <li><a href="daily-devotional.html">Daily Devotional</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+      </ul>
+      <div class="footer-copy">© 2026 Apologia Daily. Built for the defence of the Gospel.</div>
+    </div>
+  </footer>
+
+  <script>
+    // ── STATE ──
+    const progress = JSON.parse(localStorage.getItem('beginners_path') || '{"days":[]}');
+
+    function saveProgress() {
+      localStorage.setItem('beginners_path', JSON.stringify(progress));
+    }
+
+    // ── INIT ──
+    function init() {
+      const completedDays = progress.days;
+      const nextDay = completedDays.length + 1;
+
+      completedDays.forEach(day => {
+        markDayComplete(day, false);
+      });
+
+      if (nextDay <= 5) {
+        unlockDay(nextDay);
+      }
+
+      if (completedDays.length === 5) {
+        document.getElementById('completed-banner').classList.add('visible');
+      }
+
+      updateProgressBar();
+      document.getElementById('progress-count').textContent = `${completedDays.length} of 5 days completed`;
+    }
+
+    function unlockDay(day) {
+      const card = document.getElementById('day-' + day);
+      const badge = card.querySelector('.day-badge');
+      const status = document.getElementById('status-' + day);
+      const dot = document.getElementById('dot-' + day);
+
+      card.classList.remove('locked');
+      card.classList.add('active');
+      badge.classList.remove('locked');
+      badge.classList.add('active');
+      status.textContent = day === 1 ? 'Today' : 'Ready';
+      status.className = 'day-status active-badge';
+      dot.classList.remove('locked');
+      dot.classList.add('active');
+    }
+
+    function markDayComplete(day, animate) {
+      const card = document.getElementById('day-' + day);
+      const badge = card.querySelector('.day-badge');
+      const status = document.getElementById('status-' + day);
+      const body = document.getElementById('body-' + day);
+      const dot = document.getElementById('dot-' + day);
+      const line = document.getElementById('line-' + day);
+      const icons = ['📖','🔬','✝️','🛡️','🌟'];
+
+      card.classList.remove('active', 'locked');
+      card.classList.add('completed');
+      badge.classList.remove('active', 'locked');
+      badge.classList.add('completed');
+      badge.textContent = '✓';
+      status.textContent = 'Complete ✓';
+      status.className = 'day-status done-badge';
+      dot.classList.remove('active', 'locked');
+      dot.classList.add('done');
+      dot.textContent = '✓';
+      if (line) line.classList.add('done');
+
+      if (animate) {
+        body.classList.remove('open');
+        setTimeout(() => {
+          if (day < 5) {
+            unlockDay(day + 1);
+            scrollToDay(day + 1);
+          } else {
+            document.getElementById('completed-banner').classList.add('visible');
+            document.getElementById('completed-banner').scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 400);
+      }
+    }
+
+    function completeDay(day) {
+      if (!progress.days.includes(day)) {
+        progress.days.push(day);
+        saveProgress();
+      }
+      markDayComplete(day, true);
+      updateProgressBar();
+      document.getElementById('progress-count').textContent = `${progress.days.length} of 5 days completed`;
+    }
+
+    function toggleDay(day) {
+      const card = document.getElementById('day-' + day);
+      if (card.classList.contains('locked')) return;
+      const body = document.getElementById('body-' + day);
+      body.classList.toggle('open');
+    }
+
+    function toggleTask(day, task) {
+      const el = document.getElementById(`task-${day}-${task}`);
+      el.classList.toggle('done');
+    }
+
+    function scrollToDay(day) {
+      const el = document.getElementById('day-' + day);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const body = document.getElementById('body-' + day);
+        if (!el.classList.contains('locked')) body.classList.add('open');
+      }
+    }
+
+    function updateProgressBar() {
+      const count = progress.days.length;
+      for (let i = 1; i <= 5; i++) {
+        const dot = document.getElementById('dot-' + i);
+        const line = document.getElementById('line-' + i);
+        if (progress.days.includes(i)) {
+          dot.classList.add('done');
+          dot.classList.remove('active', 'locked');
+          if (line) line.classList.add('done');
+        }
+      }
+    }
+
+    // ── REVEAL ──
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    init();
+  </script>
+</body>
+</html>

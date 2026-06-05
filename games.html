@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Games & Quizzes — Apologia Daily</title>
+  <meta name="description" content="Sharpen your apologetics skills through daily quizzes, objection catching, quote matching and more. Free and Pro games for every level." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy-950: #050d1a; --navy-900: #0a1628; --navy-700: #163058;
+      --navy-600: #1e4278; --navy-500: #285a9e; --navy-300: #6f9fd4;
+      --gold: #c8a951; --gold-light: #e8cf87;
+      --white: #ffffff; --off-white: #f8f7f4;
+      --text-dark: #0a1628; --text-mid: #3a4a62; --text-muted: #7a8fa8;
+      --border: #d4e0ec;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: 'DM Sans', system-ui, sans-serif;
+    }
+    body { font-family: var(--font-body); color: var(--text-dark); background: var(--off-white); }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,13,26,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+    .nav-links a { font-family: var(--font-ui); font-size: 0.82rem; color: rgba(255,255,255,0.7); text-decoration: none; text-transform: uppercase; letter-spacing: 0.04em; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-right { display: flex; gap: 10px; align-items: center; }
+    .nav-signin { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.6); text-decoration: none; }
+    .nav-cta { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 8px 20px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+    .page-header { background: var(--navy-950); padding: 8rem 2rem 4rem; position: relative; overflow: hidden; }
+    .page-header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(30,66,120,0.5) 0%, transparent 70%); pointer-events: none; }
+    .page-header-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+    .page-eyebrow { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .page-title { font-family: var(--font-display); font-size: clamp(2.2rem,5vw,3.5rem); font-weight: 700; line-height: 1.1; color: var(--white); margin-bottom: 1rem; }
+    .page-title em { font-style: italic; color: var(--gold); }
+    .page-sub { font-size: 1.05rem; font-weight: 300; color: rgba(255,255,255,0.6); max-width: 560px; line-height: 1.8; }
+    .main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 6rem; }
+    .section-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .games-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+    .game-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: all 0.2s; text-decoration: none; display: block; }
+    .game-card:hover { border-color: var(--navy-300); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(10,22,40,0.08); }
+    .game-card-header { padding: 1.75rem 1.75rem 1rem; }
+    .game-card-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .game-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 0.75rem; }
+    .game-card-name { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--text-dark); }
+    .game-badge { font-family: var(--font-ui); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+    .badge-free { background: #e1f5ee; color: #0f6e56; }
+    .badge-pro { background: #faeeda; color: #854f0b; }
+    .badge-new { background: #eeedfe; color: #3c3489; }
+    .game-card-desc { font-size: 0.9rem; color: var(--text-mid); line-height: 1.65; margin-bottom: 1rem; }
+    .game-card-footer { padding: 1rem 1.75rem 1.75rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .game-card-meta { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text-muted); }
+    .game-card-cta { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--navy-500); }
+    .game-card.featured { border-color: var(--gold); }
+    .game-card.featured .game-card-header { background: linear-gradient(135deg, var(--navy-950), var(--navy-800)); }
+    .game-card.featured .game-card-name { color: var(--white); }
+    .game-card.featured .game-card-desc { color: rgba(255,255,255,0.6); }
+    .game-card.coming { opacity: 0.6; cursor: default; }
+    .game-card.coming:hover { transform: none; box-shadow: none; border-color: var(--border); }
+    .streak-banner { background: var(--navy-900); border-radius: 8px; padding: 1.5rem 2rem; margin-bottom: 3rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+    .streak-banner-left { display: flex; align-items: center; gap: 1rem; }
+    .streak-flame { font-size: 2rem; }
+    .streak-info {}
+    .streak-num { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .streak-label { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.4); }
+    .streak-dots { display: flex; gap: 6px; }
+    .sdot { width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: var(--font-ui); font-size: 0.6rem; text-transform: uppercase; }
+    .sdot.done { background: var(--gold); color: var(--navy-950); font-weight: 500; }
+    .sdot.today { background: rgba(200,169,81,0.15); border: 1px solid var(--gold); color: var(--gold); }
+    .sdot.empty { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.2); }
+    footer { background: var(--navy-950); border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 2rem 2rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+    .footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-ui); font-size: 0.8rem; color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
+    @media (max-width: 600px) { .main { padding: 2rem 1.25rem 4rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="beginners-path.html" style="color:var(--gold);">Start Here</a></li>
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="games.html" class="active">Games</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
+      <li><a href="daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="worldviews.html">Worldviews</a></li>
+      <li><a href="study-plans.html">Study Plans</a></li>
+      <li><a href="whats-new.html">What's New</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="login.html" class="nav-signin">Sign in</a>
+      <a href="signup.html" class="nav-cta">Start Free</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="page-eyebrow">Games & Quizzes</p>
+      <h1 class="page-title">Sharpen your faith.<br/><em>One game at a time.</em></h1>
+      <p class="page-sub">Five games designed to train your apologetics knowledge and conversation skills — from daily habit building to advanced objection handling.</p>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!-- STREAK -->
+    <div class="streak-banner">
+      <div class="streak-banner-left">
+        <div class="streak-flame">🔥</div>
+        <div class="streak-info">
+          <div class="streak-num" id="streak-num">0</div>
+          <div class="streak-label">day quiz streak</div>
+        </div>
+      </div>
+      <div class="streak-dots" id="streak-dots"></div>
+      <a href="daily-quiz.html" style="font-family:var(--font-ui);font-size:0.85rem;font-weight:500;padding:9px 20px;border-radius:3px;background:var(--gold);color:var(--navy-950);text-decoration:none;">Today's quiz →</a>
+    </div>
+
+    <!-- FREE GAMES -->
+    <p class="section-label">Free games</p>
+    <div class="games-grid">
+
+      <a href="daily-quiz.html" class="game-card featured">
+        <div class="game-card-header">
+          <div class="game-card-icon">🧠</div>
+          <div class="game-card-top">
+            <div class="game-card-name">Daily Quiz</div>
+            <span class="game-badge badge-free">Free</span>
+          </div>
+          <div class="game-card-desc" style="color:rgba(255,255,255,0.6);">Five questions every day across three difficulty levels — Beginner, Intermediate, and Expert. Build your streak and grow your knowledge one day at a time.</div>
+        </div>
+        <div class="game-card-footer" style="border-top:1px solid rgba(255,255,255,0.08);">
+          <span class="game-card-meta" style="color:rgba(255,255,255,0.3);">5 questions · 3 levels · Daily streak</span>
+          <span class="game-card-cta" style="color:var(--gold);">Play today →</span>
+        </div>
+      </a>
+
+      <a href="who-said-it.html" class="game-card">
+        <div class="game-card-header">
+          <div class="game-card-icon">💬</div>
+          <div class="game-card-top">
+            <div class="game-card-name">Who Said It?</div>
+            <span class="game-badge badge-free">Free</span>
+          </div>
+          <div class="game-card-desc">A famous quote appears — was it Craig, Lewis, Hitchens, or Dawkins? Learn the great thinkers of both Christian apologetics and atheism through their most memorable words.</div>
+        </div>
+        <div class="game-card-footer">
+          <span class="game-card-meta">10 rounds · Unlimited replays · All thinkers</span>
+          <span class="game-card-cta">Play now →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- PRO GAMES -->
+    <p class="section-label">Pro games</p>
+    <div class="games-grid">
+
+      <a href="objection-catcher.html" class="game-card">
+        <div class="game-card-header">
+          <div class="game-card-icon">🛡️</div>
+          <div class="game-card-top">
+            <div class="game-card-name">Objection Catcher</div>
+            <span class="game-badge badge-pro">Pro</span>
+          </div>
+          <div class="game-card-desc">A sceptic fires a real objection. Pick the strongest response from four options. Get coached on exactly why the best answer works — and why the others fail. The most practical training game on the platform.</div>
+        </div>
+        <div class="game-card-footer">
+          <span class="game-card-meta">5 topics · Real objections · Expert coaching</span>
+          <span class="game-card-cta">Play now →</span>
+        </div>
+      </a>
+
+      <div class="game-card coming">
+        <div class="game-card-header">
+          <div class="game-card-icon">⚡</div>
+          <div class="game-card-top">
+            <div class="game-card-name">60 Second Speed Round</div>
+            <div style="display:flex;gap:6px;">
+              <span class="game-badge badge-pro">Pro</span>
+              <span class="game-badge badge-new">Coming soon</span>
+            </div>
+          </div>
+          <div class="game-card-desc">As many questions as possible in 60 seconds. Compete with other users on the weekly leaderboard. Share your score on social media. The most addictive game on the platform.</div>
+        </div>
+        <div class="game-card-footer">
+          <span class="game-card-meta">60 seconds · Leaderboard · Social sharing</span>
+          <span class="game-card-cta" style="color:var(--text-muted);">Coming soon</span>
+        </div>
+      </div>
+
+      <div class="game-card coming">
+        <div class="game-card-header">
+          <div class="game-card-icon">🔗</div>
+          <div class="game-card-top">
+            <div class="game-card-name">Argument Matcher</div>
+            <div style="display:flex;gap:6px;">
+              <span class="game-badge badge-free">Free</span>
+              <span class="game-badge badge-new">Coming soon</span>
+            </div>
+          </div>
+          <div class="game-card-desc">Match arguments to categories, apologists to quotes, premises to conclusions. A satisfying puzzle format that's perfect for beginners learning the landscape of Christian apologetics.</div>
+        </div>
+        <div class="game-card-footer">
+          <span class="game-card-meta">Multiple formats · Beginner friendly</span>
+          <span class="game-card-cta" style="color:var(--text-muted);">Coming soon</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BELT PROGRESS -->
+    <div style="background:var(--navy-900);border-radius:8px;padding:2rem;margin-bottom:3rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+      <div>
+        <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Your progress</div>
+        <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:600;color:var(--white);margin-bottom:4px;" id="belt-display">🤍 White Belt — Beginner</div>
+        <div style="font-family:var(--font-ui);font-size:0.82rem;color:rgba(255,255,255,0.45);">Complete games and quizzes to earn points and level up your belt</div>
+      </div>
+      <a href="dashboard.html" style="font-family:var(--font-ui);font-size:0.85rem;font-weight:500;padding:10px 22px;border-radius:3px;background:rgba(200,169,81,0.15);color:var(--gold);border:1px solid rgba(200,169,81,0.3);text-decoration:none;white-space:nowrap;">View dashboard →</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Apologia<span>Daily</span></div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="evidence-library.html">Evidence Library</a></li>
+        <li><a href="debate-arena.html">Debate Arena</a></li>
+        <li><a href="daily-devotional.html">Daily Devotional</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+      </ul>
+      <div class="footer-copy">© 2026 Apologia Daily. Built for the defence of the Gospel.</div>
+    </div>
+  </footer>
+
+  <script>
+    function buildStreak() {
+      const days = ['S','M','T','W','T','F','S'];
+      const today = new Date();
+      const dow = today.getDay();
+      const completed = JSON.parse(localStorage.getItem('quizCompleted') || '[]');
+      const container = document.getElementById('streak-dots');
+      container.innerHTML = '';
+      for (let i = 0; i < 7; i++) {
+        const d = new Date(today);
+        d.setDate(today.getDate() - dow + i);
+        const done = completed.includes(d.toDateString());
+        const isToday = d.toDateString() === today.toDateString();
+        const div = document.createElement('div');
+        div.className = 'sdot ' + (done ? 'done' : isToday ? 'today' : 'empty');
+        div.textContent = days[i];
+        container.appendChild(div);
+      }
+      let streak = 0;
+      const check = new Date(today);
+      while (completed.includes(check.toDateString())) { streak++; check.setDate(check.getDate() - 1); }
+      document.getElementById('streak-num').textContent = streak;
+    }
+
+    function updateBelt() {
+      const completed = JSON.parse(localStorage.getItem('quizCompleted') || '[]');
+      const debates = parseInt(localStorage.getItem('debateCount') || '0');
+      const askUsage = JSON.parse(localStorage.getItem('askUsage') || '{}');
+      const points = completed.length * 2 + debates * 3 + (askUsage.count || 0);
+      const belts = [
+        { icon: '🤍', name: 'White Belt', min: 0 },
+        { icon: '💛', name: 'Yellow Belt', min: 10 },
+        { icon: '🧡', name: 'Orange Belt', min: 30 },
+        { icon: '💚', name: 'Green Belt', min: 60 },
+        { icon: '💙', name: 'Blue Belt', min: 100 },
+        { icon: '💜', name: 'Purple Belt', min: 150 },
+        { icon: '🤎', name: 'Brown Belt', min: 220 },
+        { icon: '🖤', name: 'Black Belt', min: 300 }
+      ];
+      const belt = [...belts].reverse().find(b => points >= b.min) || belts[0];
+      document.getElementById('belt-display').textContent = belt.icon + ' ' + belt.name;
+    }
+
+    buildStreak();
+    updateBelt();
+  </script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What's New — Apologia Daily</title>
+  <meta name="description" content="Fresh apologetics content every week. New arguments, new objections, new devotionals — Pro subscribers get early access." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy-950: #050d1a; --navy-900: #0a1628; --navy-700: #163058;
+      --navy-600: #1e4278; --navy-500: #285a9e; --navy-300: #6f9fd4;
+      --gold: #c8a951; --gold-light: #e8cf87;
+      --white: #ffffff; --off-white: #f8f7f4;
+      --text-dark: #0a1628; --text-mid: #3a4a62; --text-muted: #7a8fa8;
+      --border: #d4e0ec;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: 'DM Sans', system-ui, sans-serif;
+    }
+    body { font-family: var(--font-body); color: var(--text-dark); background: var(--off-white); }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,13,26,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+    .nav-links a { font-family: var(--font-ui); font-size: 0.82rem; color: rgba(255,255,255,0.7); text-decoration: none; text-transform: uppercase; letter-spacing: 0.04em; }
+    .nav-links a.active { color: var(--gold); }
+    .nav-right { display: flex; gap: 10px; align-items: center; }
+    .nav-signin { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.6); text-decoration: none; }
+    .nav-cta { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 8px 20px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    .page-header { background: var(--navy-950); padding: 8rem 2rem 4rem; position: relative; overflow: hidden; }
+    .page-header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(30,66,120,0.5) 0%, transparent 70%); pointer-events: none; }
+    .page-header-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .page-eyebrow { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .page-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+    .page-title em { font-style: italic; color: var(--gold); }
+    .page-sub { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.6); max-width: 480px; line-height: 1.8; }
+    .pro-early { background: rgba(200,169,81,0.12); border: 1px solid rgba(200,169,81,0.3); border-radius: 6px; padding: 10px 16px; }
+    .pro-early-text { font-family: var(--font-ui); font-size: 0.78rem; color: var(--gold); line-height: 1.5; }
+
+    .main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 6rem; }
+    .section-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* THIS WEEK */
+    .this-week { background: var(--navy-950); border-radius: 8px; padding: 2rem; margin-bottom: 3rem; }
+    .this-week-label { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 10px; }
+    .this-week-label::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
+    .this-week-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+    .this-week-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 1.25rem; text-decoration: none; transition: all 0.15s; display: block; }
+    .this-week-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(200,169,81,0.3); }
+    .this-week-card-type { font-family: var(--font-ui); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .this-week-card-title { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 6px; line-height: 1.4; }
+    .this-week-card-desc { font-family: var(--font-ui); font-size: 0.78rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+    .this-week-card-cta { font-family: var(--font-ui); font-size: 0.75rem; color: var(--gold); margin-top: 10px; display: block; }
+
+    /* ARCHIVE */
+    .archive-list { display: flex; flex-direction: column; gap: 1rem; }
+    .archive-week { background: var(--white); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .archive-week-header { padding: 1.25rem 1.5rem; display: flex; align-items: center; justify-content: space-between; cursor: pointer; transition: background 0.15s; }
+    .archive-week-header:hover { background: var(--navy-50); }
+    .archive-week-date { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text-dark); }
+    .archive-week-count { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text-muted); }
+    .archive-week-body { display: none; padding: 0 1.5rem 1.5rem; border-top: 1px solid var(--border); }
+    .archive-week-body.open { display: block; }
+    .archive-items { display: flex; flex-direction: column; gap: 8px; padding-top: 1rem; }
+    .archive-item { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 6px; background: var(--off-white); text-decoration: none; transition: background 0.15s; }
+    .archive-item:hover { background: var(--navy-50); }
+    .archive-item-type { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); min-width: 80px; }
+    .archive-item-title { font-family: var(--font-ui); font-size: 0.85rem; color: var(--text-dark); flex: 1; }
+    .archive-item-arrow { font-size: 0.8rem; color: var(--text-muted); }
+
+    /* PRO BANNER */
+    .pro-banner { background: var(--navy-900); border-radius: 8px; padding: 2rem; margin-top: 3rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .pro-banner-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .pro-banner-sub { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+    .pro-banner-btn { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; padding: 11px 24px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; white-space: nowrap; }
+
+    footer { background: var(--navy-950); border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 2rem 2rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+    .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="beginners-path.html" style="color:var(--gold);">Start Here</a></li>
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="study-plans.html">Study Plans</a></li>
+      <li><a href="whats-new.html" class="active">What's New</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="login.html" class="nav-signin">Sign in</a>
+      <a href="signup.html" class="nav-cta">Start Free</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div>
+        <p class="page-eyebrow">What's New</p>
+        <h1 class="page-title">Fresh content<br/><em>every week</em></h1>
+        <p class="page-sub">A new argument, a new objection, and new devotional content drops every Monday. Pro subscribers get access two weeks before free users.</p>
+      </div>
+      <div class="pro-early">
+        <div class="pro-early-text">⭐ <strong>Pro subscribers</strong> get early access<br/>to every new content drop — 2 weeks ahead.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!-- THIS WEEK -->
+    <p class="section-label reveal">This week — 2 June 2026</p>
+    <div class="this-week reveal">
+      <div class="this-week-label">New this week</div>
+      <div class="this-week-grid">
+        <a href="evidence-library.html" class="this-week-card">
+          <div class="this-week-card-type">📚 New argument</div>
+          <div class="this-week-card-title">The Ontological Argument — Anselm and Plantinga</div>
+          <div class="this-week-card-desc">The argument that God's very concept entails his existence. One of the most discussed — and disputed — arguments in all of philosophy.</div>
+          <span class="this-week-card-cta">Read in Evidence Library →</span>
+        </a>
+        <a href="objection-catcher.html" class="this-week-card">
+          <div class="this-week-card-type">🛡️ New objection</div>
+          <div class="this-week-card-title">"Religion is just for people who are afraid of death"</div>
+          <div class="this-week-card-desc">A common objection that attacks the motivation for belief rather than the arguments. Learn how to respond graciously without getting defensive.</div>
+          <span class="this-week-card-cta">Practise in Objection Catcher →</span>
+        </a>
+        <a href="daily-devotional.html" class="this-week-card">
+          <div class="this-week-card-type">📖 New devotional series</div>
+          <div class="this-week-card-title">Reason and Revelation — a 7-day series</div>
+          <div class="this-week-card-desc">Seven devotionals on the relationship between rational inquiry and divine revelation. Faith and reason are not enemies — they are partners.</div>
+          <span class="this-week-card-cta">Start the series →</span>
+        </a>
+        <a href="worldviews.html" class="this-week-card">
+          <div class="this-week-card-type">🌍 New worldview content</div>
+          <div class="this-week-card-title">Jehovah's Witnesses — The New World Translation</div>
+          <div class="this-week-card-desc">How the JW translation of John 1:1 changes the meaning — and why the Greek grammar shows the standard translation is correct.</div>
+          <span class="this-week-card-cta">Read in Worldviews →</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ARCHIVE -->
+    <p class="section-label reveal">Previous weeks</p>
+    <div class="archive-list reveal" id="archive-list"></div>
+
+    <!-- PRO BANNER -->
+    <div class="pro-banner reveal">
+      <div>
+        <div class="pro-banner-title">Get every new drop two weeks early</div>
+        <div class="pro-banner-sub">Pro subscribers access all new arguments, objections, and worldview content the moment it publishes — two weeks before free users.</div>
+      </div>
+      <a href="index.html#pricing" class="pro-banner-btn">Upgrade to Pro — $8/mo</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Apologia<span>Daily</span></div>
+      <div style="font-family:var(--font-ui);font-size:0.75rem;color:rgba(255,255,255,0.2);">© 2026 Apologia Daily</div>
+    </div>
+    <div class="footer-copy">Built for the defence of the Gospel.</div>
+  </footer>
+
+  <script>
+    const archive = [
+      {
+        week: '26 May 2026',
+        items: [
+          { type: 'New Argument', title: 'The Leibniz Contingency Argument — full Pro deep dive', link: 'evidence-library.html' },
+          { type: 'New Objection', title: '"You only believe because you were raised that way"', link: 'objection-catcher.html' },
+          { type: 'New Devotional', title: 'Faith in the Age of Scepticism — 5-day series', link: 'daily-devotional.html' },
+        ]
+      },
+      {
+        week: '19 May 2026',
+        items: [
+          { type: 'New Argument', title: 'The Argument from Consciousness — Chalmers and theism', link: 'evidence-library.html' },
+          { type: 'New Objection', title: '"If God is good, why does he send people to hell?"', link: 'objection-catcher.html' },
+          { type: 'New Worldview', title: 'Mormonism — the Book of Mormon and historical evidence', link: 'worldviews.html' },
+        ]
+      },
+      {
+        week: '12 May 2026',
+        items: [
+          { type: 'New Argument', title: 'Daniel\'s 70 Weeks — the precise timing of the Messiah', link: 'evidence-library.html' },
+          { type: 'New Objection', title: '"The church has caused too much harm to be taken seriously"', link: 'objection-catcher.html' },
+          { type: 'New Devotional', title: 'The Resurrection and everyday life — 7-day series', link: 'daily-devotional.html' },
+        ]
+      },
+      {
+        week: '5 May 2026',
+        items: [
+          { type: 'New Argument', title: 'The Philippians 2 Hymn — earliest evidence of divine worship', link: 'evidence-library.html' },
+          { type: 'New Objection', title: '"Science has made God unnecessary"', link: 'objection-catcher.html' },
+          { type: 'New Worldview', title: 'Atheism — responding to the New Atheists graciously', link: 'worldviews.html' },
+        ]
+      },
+    ];
+
+    const list = document.getElementById('archive-list');
+    list.innerHTML = archive.map((week, i) => `
+      <div class="archive-week">
+        <div class="archive-week-header" onclick="toggleArchiveWeek(${i})">
+          <div class="archive-week-date">Week of ${week.week}</div>
+          <div class="archive-week-count">${week.items.length} items ↓</div>
+        </div>
+        <div class="archive-week-body" id="archive-week-${i}">
+          <div class="archive-items">
+            ${week.items.map(item => `
+              <a href="${item.link}" class="archive-item">
+                <div class="archive-item-type">${item.type}</div>
+                <div class="archive-item-title">${item.title}</div>
+                <div class="archive-item-arrow">→</div>
+              </a>`).join('')}
+          </div>
+        </div>
+      </div>`).join('');
+
+    function toggleArchiveWeek(i) {
+      const body = document.getElementById('archive-week-' + i);
+      body.classList.toggle('open');
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

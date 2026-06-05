@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Quiz — Apologia Daily</title>
+  <meta name="description" content="Test your apologetics knowledge every day. Beginner, intermediate and expert questions covering arguments, scholars, history and scripture." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy-950: #050d1a; --navy-900: #0a1628; --navy-800: #0f2040;
+      --navy-700: #163058; --navy-600: #1e4278; --navy-500: #285a9e;
+      --navy-400: #3b72bc; --navy-300: #6f9fd4; --navy-200: #aecae8;
+      --navy-100: #ddeaf5; --navy-50: #f0f6fb;
+      --gold: #c8a951; --gold-light: #e8cf87;
+      --white: #ffffff; --off-white: #f8f7f4;
+      --text-dark: #0a1628; --text-mid: #3a4a62; --text-muted: #7a8fa8;
+      --border: #d4e0ec;
+      --correct: #0f6e56; --correct-bg: #e1f5ee; --correct-border: #9fe1cb;
+      --wrong: #a32d2d; --wrong-bg: #fcebeb; --wrong-border: #f09595;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: 'DM Sans', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text-dark); background: var(--off-white); line-height: 1.7; overflow-x: hidden; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,13,26,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.7); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-right { display: flex; align-items: center; gap: 10px; }
+    .nav-signin { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.6); text-decoration: none; }
+    .nav-cta { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 8px 20px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    .page-wrap { max-width: 720px; margin: 0 auto; padding: 5rem 2rem 6rem; }
+
+    /* HEADER */
+    .quiz-header { text-align: center; margin-bottom: 2.5rem; }
+    .quiz-eyebrow { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .quiz-title { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem; }
+    .quiz-title em { font-style: italic; color: var(--navy-600); }
+    .quiz-sub { font-size: 0.95rem; color: var(--text-muted); }
+
+    /* STREAK BAR */
+    .streak-bar { background: var(--navy-900); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .streak-left { display: flex; align-items: center; gap: 12px; }
+    .streak-flame { font-size: 1.5rem; }
+    .streak-num { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .streak-label { font-family: var(--font-ui); font-size: 0.72rem; color: rgba(255,255,255,0.4); margin-top: 2px; }
+    .streak-dots { display: flex; gap: 6px; align-items: center; }
+    .streak-dot { width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: var(--font-ui); font-size: 0.6rem; font-weight: 500; text-transform: uppercase; flex-direction: column; }
+    .streak-dot.done { background: var(--gold); color: var(--navy-950); }
+    .streak-dot.today { background: rgba(200,169,81,0.2); border: 1px solid var(--gold); color: var(--gold); }
+    .streak-dot.empty { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.2); }
+
+    /* DIFFICULTY SELECTOR */
+    .diff-selector { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .diff-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .diff-card { border: 1px solid var(--border); border-radius: 6px; padding: 1rem; cursor: pointer; transition: all 0.15s; text-align: center; background: var(--off-white); }
+    .diff-card:hover { border-color: var(--navy-300); background: var(--navy-50); }
+    .diff-card.active { border: 2px solid var(--navy-600); background: var(--navy-50); }
+    .diff-card-icon { font-size: 1.5rem; margin-bottom: 6px; }
+    .diff-card-name { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 3px; }
+    .diff-card-desc { font-family: var(--font-ui); font-size: 0.72rem; color: var(--text-muted); line-height: 1.4; }
+
+    /* QUESTION CARD */
+    .question-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; margin-bottom: 1.5rem; }
+    .q-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 8px; }
+    .q-category { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy-400); }
+    .q-diff-badge { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; }
+    .q-progress { height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; margin-bottom: 1.5rem; }
+    .q-progress-fill { height: 100%; background: var(--gold); border-radius: 2px; transition: width 0.4s ease; }
+    .q-text { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; color: var(--text-dark); line-height: 1.5; margin-bottom: 1.5rem; }
+    .q-options { display: flex; flex-direction: column; gap: 10px; }
+    .q-option { padding: 12px 16px; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; font-family: var(--font-ui); font-size: 0.92rem; color: var(--text-dark); background: var(--off-white); transition: all 0.15s; text-align: left; width: 100%; display: flex; align-items: center; gap: 12px; }
+    .q-option:hover:not(:disabled) { border-color: var(--navy-300); background: var(--navy-50); }
+    .q-option:disabled { cursor: default; }
+    .q-option.correct { background: var(--correct-bg); border-color: var(--correct-border); color: var(--correct); }
+    .q-option.wrong { background: var(--wrong-bg); border-color: var(--wrong-border); color: var(--wrong); }
+    .q-option-letter { width: 28px; height: 28px; border-radius: 50%; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 500; flex-shrink: 0; transition: all 0.15s; }
+    .q-option.correct .q-option-letter { background: var(--correct); color: white; }
+    .q-option.wrong .q-option-letter { background: var(--wrong); color: white; }
+
+    /* FEEDBACK */
+    .feedback-box { border-radius: 6px; padding: 1.25rem 1.5rem; margin-top: 1.25rem; display: none; }
+    .feedback-box.visible { display: block; }
+    .feedback-box.correct { background: var(--correct-bg); border: 1px solid var(--correct-border); }
+    .feedback-box.wrong { background: var(--wrong-bg); border: 1px solid var(--wrong-border); }
+    .feedback-result { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; margin-bottom: 6px; }
+    .feedback-box.correct .feedback-result { color: var(--correct); }
+    .feedback-box.wrong .feedback-result { color: var(--wrong); }
+    .feedback-text { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; }
+    .feedback-text strong { color: var(--text-dark); font-weight: 500; }
+
+    /* NEXT BUTTON */
+    .next-btn { width: 100%; padding: 14px; border-radius: 6px; background: var(--navy-900); color: var(--white); font-family: var(--font-ui); font-size: 0.95rem; font-weight: 500; border: none; cursor: pointer; transition: all 0.2s; margin-top: 1rem; display: none; }
+    .next-btn.visible { display: block; }
+    .next-btn:hover { background: var(--navy-700); }
+
+    /* SCORE SUMMARY */
+    .score-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 2.5rem; margin-bottom: 1.5rem; text-align: center; display: none; }
+    .score-card.visible { display: block; }
+    .score-big { font-family: var(--font-display); font-size: 5rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 0.5rem; }
+    .score-label { font-family: var(--font-ui); font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem; }
+    .score-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2rem; }
+    .score-stat { background: var(--off-white); border-radius: 6px; padding: 1rem; }
+    .score-stat-num { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--navy-600); }
+    .score-stat-lbl { font-family: var(--font-ui); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 3px; }
+    .score-message { font-size: 1rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 2rem; font-style: italic; }
+    .score-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .score-btn { font-family: var(--font-ui); font-size: 0.9rem; font-weight: 500; padding: 12px 24px; border-radius: 6px; cursor: pointer; border: none; transition: all 0.2s; text-decoration: none; display: inline-block; }
+    .score-btn-primary { background: var(--gold); color: var(--navy-950); }
+    .score-btn-primary:hover { background: var(--gold-light); }
+    .score-btn-secondary { background: transparent; border: 1px solid var(--border); color: var(--text-dark); }
+    .score-btn-secondary:hover { border-color: var(--navy-300); }
+
+    /* LOCKED CARD */
+    .locked-card { background: var(--navy-900); border-radius: 8px; padding: 2rem; text-align: center; margin-bottom: 1.5rem; display: none; }
+    .locked-card.visible { display: block; }
+    .locked-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+    .locked-sub { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1.5rem; }
+    .locked-btn { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; padding: 11px 24px; border-radius: 3px; background: var(--gold); color: var(--navy-950); border: none; cursor: pointer; text-decoration: none; display: inline-block; }
+
+    /* COMPLETED TODAY */
+    .completed-card { background: var(--correct-bg); border: 1px solid var(--correct-border); border-radius: 8px; padding: 2rem; text-align: center; margin-bottom: 1.5rem; display: none; }
+    .completed-card.visible { display: block; }
+    .completed-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+    .completed-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--correct); margin-bottom: 0.5rem; }
+    .completed-sub { font-family: var(--font-ui); font-size: 0.85rem; color: var(--text-mid); margin-bottom: 1.5rem; }
+
+    /* RELATED */
+    .related-section { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; }
+    .related-label { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .related-links { display: flex; flex-direction: column; gap: 8px; }
+    .related-link { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 6px; background: var(--off-white); text-decoration: none; transition: background 0.15s; }
+    .related-link:hover { background: var(--navy-50); }
+    .related-link-icon { width: 32px; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .related-link-icon svg { width: 16px; height: 16px; fill: none; stroke-width: 2; }
+    .related-link-text { font-family: var(--font-ui); font-size: 0.85rem; color: var(--text-dark); }
+    .related-link-arrow { margin-left: auto; font-family: var(--font-ui); font-size: 0.78rem; color: var(--text-muted); }
+
+    footer { background: var(--navy-950); border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 2rem 2rem; margin-top: 4rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+    .footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-ui); font-size: 0.8rem; color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
+    @media (max-width: 600px) { .diff-grid { grid-template-columns: 1fr; } .score-grid { grid-template-columns: 1fr; } .page-wrap { padding: 5rem 1.25rem 4rem; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="beginners-path.html" style="color:var(--gold);">Start Here</a></li>
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="video-library.html">Videos</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
+      <li><a href="daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="ask-anything.html">Ask Anything</a></li>
+      <li><a href="worldviews.html">Worldviews</a></li>
+      <li><a href="study-plans.html">Study Plans</a></li>
+      <li><a href="whats-new.html">What's New</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="login.html" class="nav-signin">Sign in</a>
+      <a href="signup.html" class="nav-cta">Start Free</a>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="quiz-header">
+      <p class="quiz-eyebrow">Daily Quiz</p>
+      <h1 class="quiz-title">Test your <em>apologetics</em> knowledge</h1>
+      <p class="quiz-sub">Five questions every day. Choose your level and build your streak.</p>
+    </div>
+
+    <!-- STREAK -->
+    <div class="streak-bar">
+      <div class="streak-left">
+        <div class="streak-flame">🔥</div>
+        <div>
+          <div class="streak-num" id="streak-num">0</div>
+          <div class="streak-label">day streak</div>
+        </div>
+      </div>
+      <div class="streak-dots" id="streak-dots"></div>
+    </div>
+
+    <!-- DIFFICULTY -->
+    <div class="diff-selector" id="diff-selector">
+      <div class="diff-label">Choose your level</div>
+      <div class="diff-grid">
+        <div class="diff-card active" id="diff-beginner" onclick="setDifficulty('beginner')">
+          <div class="diff-card-icon">🌱</div>
+          <div class="diff-card-name">Beginner</div>
+          <div class="diff-card-desc">New to apologetics — key arguments, famous quotes, basic concepts</div>
+        </div>
+        <div class="diff-card" id="diff-intermediate" onclick="setDifficulty('intermediate')">
+          <div class="diff-card-icon">📚</div>
+          <div class="diff-card-name">Intermediate</div>
+          <div class="diff-card-desc">Some knowledge — argument details, objections, key scholars</div>
+        </div>
+        <div class="diff-card" id="diff-expert" onclick="setDifficulty('expert')">
+          <div class="diff-card-icon">🎓</div>
+          <div class="diff-card-name">Expert</div>
+          <div class="diff-card-desc">Deep knowledge — philosophy, theology, technical details</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPLETED TODAY -->
+    <div class="completed-card" id="completed-card">
+      <div class="completed-icon">✅</div>
+      <div class="completed-title">You've completed today's quiz!</div>
+      <div class="completed-sub" id="completed-sub">Come back tomorrow to keep your streak going.</div>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+        <a href="debate-arena.html" class="score-btn score-btn-primary">Practise in the Debate Arena →</a>
+        <a href="evidence-library.html" class="score-btn score-btn-secondary">Study the Evidence Library</a>
+      </div>
+    </div>
+
+    <!-- QUESTION CARD -->
+    <div class="question-card" id="question-card">
+      <div class="q-meta">
+        <span class="q-category" id="q-category">God's Existence</span>
+        <span class="q-diff-badge" id="q-diff-badge">Beginner</span>
+      </div>
+      <div class="q-progress">
+        <div class="q-progress-fill" id="q-progress" style="width:20%"></div>
+      </div>
+      <div class="q-text" id="q-text"></div>
+      <div class="q-options" id="q-options"></div>
+      <div class="feedback-box" id="feedback-box">
+        <div class="feedback-result" id="feedback-result"></div>
+        <div class="feedback-text" id="feedback-text"></div>
+      </div>
+      <button class="next-btn" id="next-btn" onclick="nextQuestion()">Next question →</button>
+    </div>
+
+    <!-- SCORE SUMMARY -->
+    <div class="score-card" id="score-card">
+      <div class="score-big" id="score-big">5/5</div>
+      <div class="score-label" id="score-label">Today's score</div>
+      <div class="score-grid">
+        <div class="score-stat"><div class="score-stat-num" id="stat-correct">0</div><div class="score-stat-lbl">Correct</div></div>
+        <div class="score-stat"><div class="score-stat-num" id="stat-streak">0</div><div class="score-stat-lbl">Day streak</div></div>
+        <div class="score-stat"><div class="score-stat-num" id="stat-total">0</div><div class="score-stat-lbl">Total answered</div></div>
+      </div>
+      <div class="score-message" id="score-message"></div>
+      <div class="score-actions">
+        <a href="debate-arena.html" class="score-btn score-btn-primary">Practise in Debate Arena →</a>
+        <a href="evidence-library.html" class="score-btn score-btn-secondary">Study more arguments</a>
+        <button class="score-btn score-btn-secondary" onclick="shareScore()">Share your score</button>
+      </div>
+    </div>
+
+    <!-- RELATED -->
+    <div class="related-section">
+      <div class="related-label">Keep learning</div>
+      <div class="related-links">
+        <a href="evidence-library.html" class="related-link">
+          <div class="related-link-icon" style="background:#EEEDFE;"><svg viewBox="0 0 24 24" stroke="#534AB7"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <span class="related-link-text">Evidence Library — study the full arguments</span>
+          <span class="related-link-arrow">→</span>
+        </a>
+        <a href="debate-arena.html" class="related-link">
+          <div class="related-link-icon" style="background:#E1F5EE;"><svg viewBox="0 0 24 24" stroke="#0F6E56"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <span class="related-link-text">Debate Arena — practise using these arguments</span>
+          <span class="related-link-arrow">→</span>
+        </a>
+        <a href="ask-anything.html" class="related-link">
+          <div class="related-link-icon" style="background:#FAEEDA;"><svg viewBox="0 0 24 24" stroke="#854F0B"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <span class="related-link-text">Ask Anything — get answers to hard questions</span>
+          <span class="related-link-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Apologia<span>Daily</span></div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="evidence-library.html">Evidence Library</a></li>
+        <li><a href="debate-arena.html">Debate Arena</a></li>
+        <li><a href="daily-devotional.html">Daily Devotional</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+      </ul>
+      <div class="footer-copy">© 2026 Apologia Daily. Built for the defence of the Gospel.</div>
+    </div>
+  </footer>
+
+  <script>
+    // ── QUESTION BANK ──
+    const questions = {
+      beginner: [
+        {
+          category: "Key Terms",
+          q: "What does the Greek word 'apologia' mean — the word used in 1 Peter 3:15?",
+          options: ["A prayer of confession", "A formal defence or reasoned account", "A public sermon", "A letter of apology"],
+          correct: 1,
+          feedback: "The word 'apologia' is a Greek legal term meaning a formal defence — the kind given in a court of law. Peter uses it to tell Christians to be prepared to give a reasoned defence of their faith. It's also where the word 'apologetics' comes from."
+        },
+        {
+          category: "Famous Scholars",
+          q: "Who wrote 'Mere Christianity' — one of the most influential books in Christian apologetics?",
+          options: ["William Lane Craig", "Alvin Plantinga", "C.S. Lewis", "G.K. Chesterton"],
+          correct: 2,
+          feedback: "C.S. Lewis wrote Mere Christianity, based on a series of BBC radio broadcasts during World War II. Lewis was a former atheist and Oxford professor who became one of Christianity's most articulate defenders. His 'Lord, Liar, or Lunatic' trilemma remains one of apologetics' most powerful arguments."
+        },
+        {
+          category: "God's Existence",
+          q: "The Kalam Cosmological Argument concludes that the universe has a cause. What does it say this cause must be like?",
+          options: ["Physical and within the universe", "Timeless, spaceless and immensely powerful", "A personal being who loves humanity", "An abstract mathematical principle"],
+          correct: 1,
+          feedback: "The Kalam argues that since the universe — including space, time, matter and energy — began to exist, its cause must exist outside all of these. Therefore the cause must be spaceless, timeless, immaterial and of unimaginable power. These properties are consistent with classical theism."
+        },
+        {
+          category: "The Resurrection",
+          q: "Which historian — not a Christian — wrote the earliest non-Christian reference to the crucifixion of Jesus, around 116 AD?",
+          options: ["Pliny the Younger", "Josephus", "Tacitus", "Suetonius"],
+          correct: 2,
+          feedback: "The Roman historian Tacitus wrote in his Annals that Christians were named after 'Christus, who was executed at the hands of the procurator Pontius Pilate in the reign of Tiberius.' This passage is considered genuine by virtually all scholars and independently confirms the crucifixion."
+        },
+        {
+          category: "Scripture",
+          q: "In 1 Peter 3:15, Peter says to give your answer 'with gentleness and _____'.",
+          options: ["Authority", "Boldness", "Respect", "Wisdom"],
+          correct: 2,
+          feedback: "Peter says to give the reason for your hope 'with gentleness and respect.' This is a crucial part of the verse that is often overlooked — the how matters as much as the what. Good apologetics is never arrogant or combative. Gentleness and respect are not optional extras; they are part of the calling."
+        },
+        {
+          category: "Famous Scholars",
+          q: "Who developed the 'Minimal Facts' approach to the resurrection — focusing on facts accepted by virtually all historians?",
+          options: ["N.T. Wright", "Gary Habermas", "William Lane Craig", "Lee Strobel"],
+          correct: 1,
+          feedback: "Gary Habermas developed the Minimal Facts approach, which identifies historical facts about Jesus that are accepted by the vast majority of critical scholars — including sceptics. The five core facts include the death of Jesus, the empty tomb, post-resurrection appearances, the transformation of the disciples, and Paul's conversion."
+        },
+        {
+          category: "God's Existence",
+          q: "The Fine-Tuning Argument notes that the physical constants of the universe are calibrated to extraordinary precision for life. What does this suggest?",
+          options: ["That life was inevitable given enough time", "That the universe was designed by an intelligent Creator", "That physics disproves God", "That evolution explains everything"],
+          correct: 1,
+          feedback: "The fine-tuning argument observes that the fundamental constants of physics — gravity, electromagnetism, the cosmological constant — are set to values so precise that any significant variation would make life impossible. The best explanation for this calibration is an intelligent Creator who fine-tuned the universe for life."
+        },
+        {
+          category: "World Religions",
+          q: "What is the Islamic term 'Tawhid' referring to?",
+          options: ["The five pillars of Islam", "The absolute oneness of God", "The collection of Muhammad's sayings", "The Islamic calendar"],
+          correct: 1,
+          feedback: "Tawhid refers to the absolute, undivided oneness of God — the central theological concept of Islam. Muslims use it to object to the Christian doctrine of the Trinity, which they believe compromises divine unity. Understanding Tawhid is essential for Christians engaging in dialogue with Muslims."
+        },
+        {
+          category: "The Resurrection",
+          q: "What are the 'five minimal facts' in Habermas's approach? Which of these is NOT one of them?",
+          options: ["Jesus died by crucifixion", "The disciples had experiences of the risen Jesus", "James the brother of Jesus converted", "Jesus performed miracles during his ministry"],
+          correct: 3,
+          feedback: "The five minimal facts are: (1) Jesus died by crucifixion, (2) the disciples had post-resurrection experiences, (3) the tomb was empty, (4) Paul converted after a resurrection experience, (5) James — a sceptic and Jesus's brother — converted. The miracles of Jesus's ministry, while important, are not part of the minimal facts approach."
+        },
+        {
+          category: "Famous Quotes",
+          q: "C.S. Lewis said Jesus is either Lord, Liar, or Lunatic. What did he say is NOT an available option?",
+          options: ["Son of God", "A great prophet", "A great moral teacher", "The Messiah"],
+          correct: 2,
+          feedback: "Lewis argued that because of the divine claims Jesus made, 'great moral teacher' is the one option that is not available. A man who claimed what Jesus claimed — to be the Son of God, to forgive sins, to be the judge of all humanity — is either telling the truth, deliberately lying, or genuinely deluded. Good teacher is not on the table."
+        }
+      ],
+      intermediate: [
+        {
+          category: "Philosophy",
+          q: "Alvin Plantinga's Free Will Defence was primarily a response to which argument against God?",
+          options: ["The Kalam Cosmological Argument", "The Logical Problem of Evil", "The Fine-Tuning Argument", "The Ontological Argument"],
+          correct: 1,
+          feedback: "Plantinga's Free Will Defence was designed to show that the logical problem of evil — the claim that God and evil cannot logically coexist — fails. He argued that it is logically possible that God, even being omnipotent, could not create free creatures who always chose good. Even Mackie, who raised the logical problem, conceded Plantinga's argument was valid."
+        },
+        {
+          category: "Manuscript Evidence",
+          q: "How many Greek New Testament manuscripts do scholars currently have access to?",
+          options: ["Approximately 500", "Around 1,200", "Over 5,800", "More than 10,000"],
+          correct: 2,
+          feedback: "We currently have over 5,800 Greek New Testament manuscripts — more than any other ancient document by a significant margin. Homer's Iliad, the next best attested, has around 1,800. The abundance of manuscripts allows textual scholars to cross-reference and reconstruct the original text with extraordinary confidence."
+        },
+        {
+          category: "Islamic Apologetics",
+          q: "The 'Islamic Dilemma' argues that the Quran creates a problem for Islam's claim that the Bible is corrupted. What is the core tension?",
+          options: ["The Quran was written after the Bible", "The Quran affirms the Bible as God's word but Islam says the Bible is corrupted", "The Quran and Bible use different names for God", "The Quran denies the existence of Jesus"],
+          correct: 1,
+          feedback: "The Islamic Dilemma, popularised by David Wood, points out that the Quran explicitly affirms the Torah and Gospel as divine revelation (Surah 5:47, 10:94) and commands people to follow them. But Islamic tradition holds that today's Bible is corrupted. This creates an irresolvable tension: if the corruption happened before Muhammad, the Quran is wrong to affirm the Bible; if after, we have manuscripts predating Muhammad that match today's Bible."
+        },
+        {
+          category: "God's Existence",
+          q: "The BGV theorem was developed by Borde, Guth, and Vilenkin in 2003. What does it prove about the universe?",
+          options: ["That the universe is infinite and eternal", "That any universe with average expansion must have had a beginning", "That parallel universes are possible", "That the speed of light is constant throughout history"],
+          correct: 1,
+          feedback: "The Borde-Guth-Vilenkin theorem proves that any universe which has been on average expanding throughout its history cannot be past-eternal — it must have had an absolute beginning. Crucially this applies not just to our universe but to any proposed multiverse-generating mechanism. Vilenkin himself — not a theist — has stated that this means 'all the evidence we have says the universe had a beginning.'"
+        },
+        {
+          category: "The Resurrection",
+          q: "Paul's first letter to the Corinthians contains an early creed about the resurrection. When do most scholars date this creed to?",
+          options: ["200-250 years after the crucifixion", "50-80 years after the crucifixion", "Within 2-5 years of the crucifixion", "Exactly 100 years after the crucifixion"],
+          correct: 2,
+          feedback: "The creed in 1 Corinthians 15:3-7 — 'Christ died for our sins... he was raised on the third day... he appeared to Peter, then to the Twelve' — is dated by most scholars to within 2-5 years of the crucifixion. Paul says he 'received' it, meaning he was passing on a tradition he had been taught. This is far too early for legendary development to have replaced historical memory."
+        },
+        {
+          category: "Philosophy",
+          q: "What is the main claim of the 'Moral Argument' for God's existence?",
+          options: ["That religious people are more moral than atheists", "That objective moral values require God as their grounding", "That morality was invented by the church", "That evolution explains all moral behaviour"],
+          correct: 1,
+          feedback: "The Moral Argument argues that if objective moral values and duties exist — if some things are genuinely right or wrong regardless of opinion — then there must be a transcendent standard that grounds them. On atheism, moral values reduce to evolutionary preferences with no objective status. The best explanation for the existence of objective morality is a morally perfect God."
+        },
+        {
+          category: "World Religions",
+          q: "The Hadith collections are central to Islamic law. How long after Muhammad's death were the major collections compiled?",
+          options: ["Within 5 years", "Within 20 years", "20-50 years later", "150-250 years later"],
+          correct: 3,
+          feedback: "The major Hadith collections — Bukhari, Muslim, Abu Dawud — were compiled 150 to 250 years after Muhammad's death. This significant gap is one of the main historical criticisms of Hadith as a reliable source. By comparison, the New Testament Gospels were written within 35-65 years of Jesus's crucifixion — and Paul's letters, which contain early creeds, within 20 years."
+        },
+        {
+          category: "Scripture",
+          q: "The Dead Sea Scrolls were discovered in 1947. Why are they significant for biblical reliability?",
+          options: ["They contain previously unknown Gospels", "They prove the Bible was written after Jesus", "They contain Old Testament texts from 100 BC that match today's Bible", "They disprove the New Testament"],
+          correct: 2,
+          feedback: "The Dead Sea Scrolls contain Old Testament manuscripts dating to 100-200 BC — over a thousand years older than the previously available texts. When compared to today's Hebrew Bible, they are virtually identical. This demonstrates extraordinary preservation over centuries and decisively refutes the claim that the Old Testament was changed or corrupted before Jesus's time."
+        },
+        {
+          category: "Famous Scholars",
+          q: "Bart Ehrman is a well-known New Testament scholar and agnostic. What does he say about the historical existence of Jesus?",
+          options: ["He says Jesus probably never existed", "He is completely uncertain", "He says the evidence for Jesus's existence is overwhelming", "He says Jesus existed but the Gospels are entirely fictional"],
+          correct: 2,
+          feedback: "Despite being a prominent agnostic and critic of traditional Christianity, Bart Ehrman has written extensively defending the historical existence of Jesus. In his book 'Did Jesus Exist?' he states: 'Whatever else you might think about Jesus, he certainly existed. The evidence for his historical existence is overwhelming.' This is significant — even Jesus's critics affirm his historical reality."
+        },
+        {
+          category: "The Resurrection",
+          q: "Why is the conversion of James the brother of Jesus considered significant evidence for the resurrection?",
+          options: ["James was already a devoted follower of Jesus before the crucifixion", "James was a Roman soldier who witnessed the resurrection", "James was a sceptic who did not believe in Jesus during his ministry", "James wrote the first Gospel account"],
+          correct: 2,
+          feedback: "The Gospel accounts make clear that Jesus's own brothers — including James — were sceptical of his ministry during his lifetime (John 7:5). After the crucifixion, James became a leader of the early Jerusalem church and was eventually martyred for his belief in Jesus's resurrection. His conversion from sceptic to martyr is most naturally explained by a genuine resurrection appearance."
+        }
+      ],
+      expert: [
+        {
+          category: "Philosophy of Religion",
+          q: "Alvin Plantinga's 'Reformed Epistemology' argues that belief in God can be what type of belief?",
+          options: ["Properly basic — rational without argument", "Always requiring evidential justification", "An act of faith over reason", "Dependent on the ontological argument"],
+          correct: 0,
+          feedback: "Plantinga argues that belief in God can be 'properly basic' — rational and warranted even without inference from other beliefs or arguments. Just as belief in other minds, memory, or the external world is basic (not derived from argument), so belief in God can be grounded in religious experience and cognitive faculties designed by God. This fundamentally changes the evidentialist challenge to theism."
+        },
+        {
+          category: "Islamic Scholarship",
+          q: "Which scholar's work 'Hagarism: The Making of the Islamic World' (1977) presented the most influential revisionist critique of early Islamic historical tradition?",
+          options: ["Harald Motzki and David Cook", "Patricia Crone and Michael Cook", "Ignaz Goldziher and Joseph Schacht", "Bernard Lewis and Montgomery Watt"],
+          correct: 1,
+          feedback: "Patricia Crone and Michael Cook's 'Hagarism' argued that Islamic historical tradition as preserved in the Hadith and Sira is largely unreliable for recovering 7th century events. Their methodology examined non-Islamic sources contemporary with Muhammad and found significant discrepancies. While their most radical conclusions have been disputed, their core methodological challenge to Hadith science has significantly influenced Western Islamic scholarship."
+        },
+        {
+          category: "Philosophy of Religion",
+          q: "The 'Leibnizian Cosmological Argument' differs from the Kalam argument primarily in that it argues from:",
+          options: ["The beginning of the universe", "The contingency of the universe's existence", "The moral nature of human beings", "The complexity of biological life"],
+          correct: 1,
+          feedback: "The Leibnizian Cosmological Argument (or Contingency Argument) argues not from the beginning of the universe but from its contingent existence. Even if the universe were eternal, it would still require an explanation — a 'sufficient reason' for why it exists rather than nothing. The only adequate explanation is a necessary being that exists by its own nature: God. This argument is not refuted by an eternal universe, unlike the Kalam."
+        },
+        {
+          category: "New Testament Scholarship",
+          q: "Larry Hurtado's scholarship on early Christology argues that the 'mutation' of treating Jesus as divine alongside God appeared when?",
+          options: ["Gradually over 200-300 years", "After the Council of Nicaea in 325 AD", "Explosively early, within the first two decades after the crucifixion", "Only after Paul's letters were written"],
+          correct: 2,
+          feedback: "Larry Hurtado, in 'Lord Jesus Christ' (2003), demonstrated that the devotional pattern of treating Jesus as divine — including prayer to Jesus, hymns to Jesus, and ritual invocation of Jesus's name — erupted suddenly within the first two decades after the crucifixion, among Jewish Christians for whom treating any figure as divine alongside God was the supreme sin. This 'explosion' demands a historical explanation that mere theological development cannot provide."
+        },
+        {
+          category: "Islamic Apologetics",
+          q: "In Islamic textual criticism, what is the 'Isnad' and what is the primary historical criticism of it?",
+          options: ["A Quranic chapter — criticised for its length", "The chain of narrators for a Hadith — criticised for its unreliability over 150-250 year transmission gap", "A form of prayer — criticised as innovation", "A school of jurisprudence — criticised as too strict"],
+          correct: 1,
+          feedback: "The Isnad is the chain of named narrators used to verify a Hadith's authenticity — tracing a report back through successive transmitters to Muhammad or a companion. The primary criticism, raised by scholars including Goldziher and Crone, is that this method cannot reliably verify reports over a 150-250 year transmission gap. Bukhari himself is said to have examined 600,000 Hadith and accepted only 7,275 as authentic — acknowledging that 98.8% were fabricated or unreliable."
+        },
+        {
+          category: "Philosophy of Religion",
+          q: "What is the 'Hiddenness Argument' against God's existence, associated with philosopher J.L. Schellenberg?",
+          options: ["God cannot be observed through science", "A perfectly loving God would not allow people to remain unaware of him if they sincerely seek him", "God hides behind suffering to test faith", "The Bible contains hidden codes that contradict Christianity"],
+          correct: 1,
+          feedback: "J.L. Schellenberg's hiddenness argument contends that if a perfectly loving God existed, he would ensure that any person open to a relationship with him would not remain unaware of him. Since many sincere seekers remain non-believers, either God does not exist or does not have perfectly responsive love. Christian responses include: divine hiddenness may serve soul-making purposes, non-belief may not always be 'inculpable,' and God may be more present than felt."
+        },
+        {
+          category: "Manuscript Evidence",
+          q: "The Qira'at are variant reading traditions of the Quran. How many primary reading traditions does Islamic scholarship acknowledge?",
+          options: ["One — the Uthmanic text only", "Three — Hafs, Warsh, and one other", "Seven — with some traditions accepting ten", "Fourteen — one for each major Islamic school"],
+          correct: 2,
+          feedback: "Islamic scholarship acknowledges seven primary Qira'at (and some traditions accept ten), each representing a different authorised reading tradition. The most widely used are Hafs (used across most of the Muslim world) and Warsh (used in North and West Africa). These are not merely pronunciation differences — they include genuine word-level variations including different verb forms and, in some cases, different meanings. This complicates the claim that the Quran is perfectly preserved in a single unified text."
+        },
+        {
+          category: "New Testament Scholarship",
+          q: "The 'criterion of embarrassment' is used by historians to identify authentic material in the Gospels. What does it assess?",
+          options: ["Material that is embarrassing to read aloud", "Details that would have been embarrassing to early Christians if invented — suggesting they must be authentic", "Passages that embarrassed the Roman authorities", "Sections that contradict later church teaching"],
+          correct: 1,
+          feedback: "The criterion of embarrassment argues that material potentially damaging or embarrassing to the early Christian movement is more likely to be authentic — because no one would invent it. Examples include: Jesus's baptism by John (implying subordination), his cry of dereliction from the cross ('My God, why have you forsaken me?'), his Galilean origins, and the flight of the disciples. These details are so awkward for early Christian theology that their presence in the Gospels strongly suggests they are historical."
+        },
+        {
+          category: "Philosophy of Religion",
+          q: "William Lane Craig's 'Middle Knowledge' (Molinism) is a theory about God's omniscience. What does it primarily address?",
+          options: ["How God knows the past", "How God knows what free creatures would do in any possible circumstance", "How God's knowledge relates to prayer", "Whether God knows mathematical truths"],
+          correct: 1,
+          feedback: "Middle Knowledge (associated with the 16th century Jesuit Luis de Molina) holds that God knows not only what is actual (free knowledge) and what is possible (natural knowledge), but also what free creatures would do in any possible circumstance (middle knowledge — counterfactuals of creaturely freedom). Craig uses this to explain how God can providentially govern history while preserving genuine human freedom, and to respond to the hiddenness and gratuitous evil arguments."
+        },
+        {
+          category: "Islamic Apologetics",
+          q: "Surah 15:9 is used by Muslims to argue for the Quran's perfect preservation. What is the apologetic counter-argument regarding this verse?",
+          options: ["The verse was added by later scribes", "The word 'dhikr' in this verse also refers to the Torah and Gospel in other Quranic usage — creating a problem for the corruption narrative", "The verse only applies to oral transmission", "The verse was abrogated by a later revelation"],
+          correct: 1,
+          feedback: "Surah 15:9 states 'Indeed, it is We who sent down the message (dhikr) and indeed We will be its guardian.' Muslims apply this to the Quran as proof of preservation. However, the Arabic word 'dhikr' is used in other Quranic passages to refer to divine revelation generally — including the Torah given to Moses (Surah 21:48). If Allah promised to preserve all dhikr, and the Bible is corrupted, Allah has failed — a theologically impossible conclusion in Islam."
+        }
+      ]
+    };
+
+    // ── STATE ──
+    let difficulty = 'beginner';
+    let currentQ = 0;
+    let score = 0;
+    let answered = false;
+    let todayQuestions = [];
+    const TOTAL_QUESTIONS = 5;
+
+    // ── DIFFICULTY ──
+    function setDifficulty(diff) {
+      difficulty = diff;
+      document.querySelectorAll('.diff-card').forEach(c => c.classList.remove('active'));
+      document.getElementById('diff-' + diff).classList.add('active');
+      localStorage.setItem('quizDifficulty', diff);
+      loadQuiz();
+    }
+
+    // ── STREAK ──
+    function buildStreak() {
+      const days = ['S','M','T','W','T','F','S'];
+      const today = new Date();
+      const dow = today.getDay();
+      const completed = JSON.parse(localStorage.getItem('quizCompleted') || '[]');
+      const container = document.getElementById('streak-dots');
+      container.innerHTML = '';
+      for (let i = 0; i < 7; i++) {
+        const d = new Date(today);
+        d.setDate(today.getDate() - dow + i);
+        const key = d.toDateString();
+        const isToday = d.toDateString() === today.toDateString();
+        const isPast = d < today;
+        const done = completed.includes(key);
+        const div = document.createElement('div');
+        div.className = 'streak-dot ' + (done ? 'done' : isToday ? 'today' : 'empty');
+        div.textContent = days[i];
+        container.appendChild(div);
+      }
+      let streak = 0;
+      const check = new Date(today);
+      const comp = JSON.parse(localStorage.getItem('quizCompleted') || '[]');
+      while (comp.includes(check.toDateString())) { streak++; check.setDate(check.getDate() - 1); }
+      document.getElementById('streak-num').textContent = streak;
+    }
+
+    // ── LOAD QUIZ ──
+    function loadQuiz() {
+      const today = new Date().toDateString();
+      const completed = JSON.parse(localStorage.getItem('quizCompleted') || '[]');
+
+      if (completed.includes(today)) {
+        const savedScore = localStorage.getItem('quizScore_' + today) || '0';
+        document.getElementById('completed-card').classList.add('visible');
+        document.getElementById('completed-sub').textContent = `You scored ${savedScore}/5 today. Come back tomorrow to keep your streak going.`;
+        document.getElementById('question-card').style.display = 'none';
+        document.getElementById('diff-selector').style.display = 'none';
+        return;
+      }
+
+      const pool = questions[difficulty];
+      const seed = today + difficulty;
+      let hash = 0;
+      for (let i = 0; i < seed.length; i++) hash = ((hash << 5) - hash) + seed.charCodeAt(i);
+      const shuffled = [...pool].sort((a, b) => {
+        const ra = Math.sin(hash + pool.indexOf(a)) * 10000;
+        const rb = Math.sin(hash + pool.indexOf(b)) * 10000;
+        return (ra - Math.floor(ra)) - (rb - Math.floor(rb));
+      });
+      todayQuestions = shuffled.slice(0, TOTAL_QUESTIONS);
+      currentQ = 0;
+      score = 0;
+      showQuestion();
+    }
+
+    // ── SHOW QUESTION ──
+    function showQuestion() {
+      const q = todayQuestions[currentQ];
+      const letters = ['A', 'B', 'C', 'D'];
+      const diffColors = { beginner: 'background:#e1f5ee;color:#0f6e56;', intermediate: 'background:#faeeda;color:#854f0b;', expert: 'background:#eeedfe;color:#3c3489;' };
+      const diffNames = { beginner: 'Beginner', intermediate: 'Intermediate', expert: 'Expert' };
+
+      document.getElementById('q-category').textContent = q.category;
+      document.getElementById('q-diff-badge').textContent = diffNames[difficulty];
+      document.getElementById('q-diff-badge').setAttribute('style', diffColors[difficulty]);
+      document.getElementById('q-progress').style.width = ((currentQ + 1) / TOTAL_QUESTIONS * 100) + '%';
+      document.getElementById('q-text').textContent = q.q;
+
+      const opts = document.getElementById('q-options');
+      opts.innerHTML = q.options.map((o, i) =>
+        `<button class="q-option" onclick="answer(${i})" id="opt-${i}">
+          <span class="q-option-letter">${letters[i]}</span>
+          ${o}
+        </button>`
+      ).join('');
+
+      document.getElementById('feedback-box').classList.remove('visible', 'correct', 'wrong');
+      document.getElementById('next-btn').classList.remove('visible');
+      answered = false;
+    }
+
+    // ── ANSWER ──
+    function answer(index) {
+      if (answered) return;
+      answered = true;
+      const q = todayQuestions[currentQ];
+      const isCorrect = index === q.correct;
+      if (isCorrect) score++;
+
+      document.querySelectorAll('.q-option').forEach((btn, i) => {
+        btn.disabled = true;
+        if (i === q.correct) btn.classList.add('correct');
+        else if (i === index && !isCorrect) btn.classList.add('wrong');
+      });
+
+      const fb = document.getElementById('feedback-box');
+      fb.classList.add('visible', isCorrect ? 'correct' : 'wrong');
+      document.getElementById('feedback-result').textContent = isCorrect ? '✓ Correct!' : '✗ Not quite';
+      document.getElementById('feedback-text').innerHTML = q.feedback;
+
+      const nextBtn = document.getElementById('next-btn');
+      nextBtn.classList.add('visible');
+      nextBtn.textContent = currentQ < TOTAL_QUESTIONS - 1 ? 'Next question →' : 'See my results →';
+    }
+
+    // ── NEXT QUESTION ──
+    function nextQuestion() {
+      currentQ++;
+      if (currentQ >= TOTAL_QUESTIONS) {
+        showResults();
+      } else {
+        showQuestion();
+        window.scrollTo({ top: 300, behavior: 'smooth' });
+      }
+    }
+
+    // ── RESULTS ──
+    function showResults() {
+      const today = new Date().toDateString();
+      const completed = JSON.parse(localStorage.getItem('quizCompleted') || '[]');
+      if (!completed.includes(today)) { completed.push(today); localStorage.setItem('quizCompleted', JSON.stringify(completed)); }
+      localStorage.setItem('quizScore_' + today, score);
+
+      document.getElementById('question-card').style.display = 'none';
+      document.getElementById('diff-selector').style.display = 'none';
+
+      let streak = 0;
+      const check = new Date();
+      const comp = JSON.parse(localStorage.getItem('quizCompleted') || '[]');
+      while (comp.includes(check.toDateString())) { streak++; check.setDate(check.getDate() - 1); }
+
+      const total = parseInt(localStorage.getItem('quizTotal') || '0') + TOTAL_QUESTIONS;
+      localStorage.setItem('quizTotal', total);
+
+      document.getElementById('score-big').textContent = score + '/' + TOTAL_QUESTIONS;
+      document.getElementById('stat-correct').textContent = score;
+      document.getElementById('stat-streak').textContent = streak;
+      document.getElementById('stat-total').textContent = total;
+
+      const messages = {
+        5: "Perfect score! You're ready for the debate arena. Keep this streak going — you're building something real.",
+        4: "Excellent work. One slipped through — study the feedback and you'll nail it tomorrow.",
+        3: "Good effort. Review the arguments you missed in the Evidence Library and try again tomorrow.",
+        2: "Keep going — every wrong answer is a learning opportunity. The Evidence Library will help.",
+        1: "A tough start — but you showed up, and that's what counts. The streak starts today.",
+        0: "Don't be discouraged. Read today's feedback carefully and you'll do better tomorrow. Everyone starts somewhere."
+      };
+      document.getElementById('score-message').textContent = messages[score] || messages[3];
+      document.getElementById('score-card').classList.add('visible');
+      buildStreak();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ── SHARE ──
+    function shareScore() {
+      const text = `I scored ${score}/5 on today's Apologia Daily quiz! 🛡️ Test your apologetics knowledge at apologiadaily.com`;
+      if (navigator.share) { navigator.share({ text, url: 'https://apologiadaily.com' }); }
+      else { navigator.clipboard.writeText(text); alert('Score copied to clipboard — paste it anywhere!'); }
+    }
+
+    // ── INIT ──
+    const savedDiff = localStorage.getItem('quizDifficulty') || 'beginner';
+    difficulty = savedDiff;
+    document.getElementById('diff-' + savedDiff).classList.add('active');
+    document.querySelectorAll('.diff-card').forEach(c => {
+      if (!c.id.includes(savedDiff)) c.classList.remove('active');
+    });
+    buildStreak();
+    loadQuiz();
+  </script>
+</body>
+</html>

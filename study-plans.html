@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Plans — Apologia Daily</title>
+  <meta name="description" content="Structured apologetics study plans for every level. 30-day deep dives, topic-specific courses, and guided journeys through the evidence for Christianity." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy-950: #050d1a; --navy-900: #0a1628; --navy-800: #0f2040;
+      --navy-700: #163058; --navy-600: #1e4278; --navy-500: #285a9e;
+      --navy-400: #3b72bc; --navy-300: #6f9fd4; --navy-200: #aecae8;
+      --navy-100: #ddeaf5; --navy-50: #f0f6fb;
+      --gold: #c8a951; --gold-light: #e8cf87;
+      --white: #ffffff; --off-white: #f8f7f4;
+      --text-dark: #0a1628; --text-mid: #3a4a62; --text-muted: #7a8fa8;
+      --border: #d4e0ec;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: 'DM Sans', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text-dark); background: var(--off-white); }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,13,26,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+    .nav-links a { font-family: var(--font-ui); font-size: 0.82rem; color: rgba(255,255,255,0.7); text-decoration: none; text-transform: uppercase; letter-spacing: 0.04em; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-right { display: flex; gap: 10px; align-items: center; }
+    .nav-signin { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.6); text-decoration: none; }
+    .nav-cta { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 8px 20px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    /* PAGE HEADER */
+    .page-header { background: var(--navy-950); padding: 8rem 2rem 4rem; position: relative; overflow: hidden; }
+    .page-header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(30,66,120,0.5) 0%, transparent 70%); pointer-events: none; }
+    .page-header-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+    .page-eyebrow { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .page-title { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; color: var(--white); margin-bottom: 1rem; }
+    .page-title em { font-style: italic; color: var(--gold); }
+    .page-sub { font-size: 1.05rem; font-weight: 300; color: rgba(255,255,255,0.6); max-width: 560px; line-height: 1.8; }
+
+    /* MAIN */
+    .main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 6rem; }
+    .section-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* ACTIVE PLAN BANNER */
+    .active-plan-banner { background: var(--navy-900); border-radius: 8px; padding: 1.5rem 2rem; margin-bottom: 2.5rem; display: none; }
+    .active-plan-banner.visible { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .active-plan-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .active-plan-sub { font-family: var(--font-ui); font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+    .active-plan-progress { flex: 1; }
+    .active-plan-bar { height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; margin: 8px 0; }
+    .active-plan-fill { height: 100%; background: var(--gold); border-radius: 3px; transition: width 0.5s ease; }
+    .active-plan-btn { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 10px 22px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; white-space: nowrap; border: none; cursor: pointer; }
+
+    /* PLAN CARDS */
+    .plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+    .plan-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: all 0.2s; cursor: pointer; }
+    .plan-card:hover { border-color: var(--navy-300); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(10,22,40,0.08); }
+    .plan-card.active-card { border-color: var(--gold); }
+    .plan-card-banner { height: 6px; }
+    .plan-card-body { padding: 1.75rem; }
+    .plan-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 1rem; }
+    .plan-card-icon { font-size: 2rem; }
+    .plan-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+    .plan-badge { font-family: var(--font-ui); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; }
+    .badge-pro { background: #faeeda; color: #854f0b; }
+    .badge-free { background: #e1f5ee; color: #0f6e56; }
+    .badge-new { background: #eeedfe; color: #3c3489; }
+    .badge-popular { background: var(--navy-100); color: var(--navy-600); }
+    .plan-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--text-dark); margin-bottom: 6px; }
+    .plan-desc { font-family: var(--font-ui); font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; }
+    .plan-meta { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+    .plan-meta-item { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text-muted); display: flex; align-items: center; gap: 5px; }
+    .plan-progress-wrap { margin-bottom: 1.25rem; display: none; }
+    .plan-progress-wrap.visible { display: block; }
+    .plan-progress-label { font-family: var(--font-ui); font-size: 0.72rem; color: var(--text-muted); margin-bottom: 5px; display: flex; justify-content: space-between; }
+    .plan-progress-bar { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+    .plan-progress-fill { height: 100%; border-radius: 2px; transition: width 0.5s ease; }
+    .plan-btn { width: 100%; padding: 11px; border-radius: 4px; font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; border: none; cursor: pointer; transition: all 0.2s; }
+    .plan-btn-start { background: var(--navy-900); color: var(--white); }
+    .plan-btn-start:hover { background: var(--navy-700); }
+    .plan-btn-continue { background: var(--gold); color: var(--navy-950); }
+    .plan-btn-continue:hover { background: var(--gold-light); }
+    .plan-btn-completed { background: var(--off-white); color: var(--text-muted); cursor: default; }
+
+    /* PLAN DETAIL MODAL */
+    .plan-modal { position: fixed; inset: 0; background: rgba(5,13,26,0.85); z-index: 200; overflow-y: auto; padding: 2rem 1rem; display: none; align-items: flex-start; justify-content: center; }
+    .plan-modal.open { display: flex; }
+    .plan-modal-inner { background: var(--off-white); border-radius: 8px; max-width: 740px; width: 100%; padding: 0; overflow: hidden; margin: auto; }
+    .plan-modal-header { background: var(--navy-950); padding: 2rem 2rem 1.5rem; position: relative; }
+    .plan-modal-close { position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.1); border: none; border-radius: 50%; width: 32px; height: 32px; font-size: 1rem; color: var(--white); cursor: pointer; display: flex; align-items: center; justify-content: center; }
+    .plan-modal-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+    .plan-modal-title { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+    .plan-modal-sub { font-family: var(--font-ui); font-size: 0.88rem; color: rgba(255,255,255,0.55); margin-bottom: 1.25rem; line-height: 1.6; }
+    .plan-modal-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .plan-modal-meta-item { font-family: var(--font-ui); font-size: 0.8rem; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 6px; }
+    .plan-modal-body { padding: 2rem; }
+    .plan-week { margin-bottom: 2rem; }
+    .plan-week-title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
+    .plan-day-list { display: flex; flex-direction: column; gap: 8px; }
+    .plan-day-item { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 6px; background: var(--white); border: 1px solid var(--border); }
+    .plan-day-item.done { background: #e1f5ee; border-color: #9fe1cb; }
+    .plan-day-num { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; color: var(--text-muted); min-width: 40px; }
+    .plan-day-text { flex: 1; font-family: var(--font-ui); font-size: 0.85rem; color: var(--text-dark); }
+    .plan-day-item.done .plan-day-text { color: var(--correct); }
+    .plan-day-check { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .plan-day-item.done .plan-day-check { background: #0f6e56; border-color: #0f6e56; }
+    .plan-day-check svg { width: 9px; height: 9px; stroke: white; fill: none; stroke-width: 2.5; display: none; }
+    .plan-day-item.done .plan-day-check svg { display: block; }
+    .plan-modal-footer { padding: 0 2rem 2rem; }
+    .plan-start-btn { width: 100%; padding: 14px; border-radius: 6px; font-family: var(--font-ui); font-size: 1rem; font-weight: 500; border: none; cursor: pointer; background: var(--gold); color: var(--navy-950); transition: background 0.2s; }
+    .plan-start-btn:hover { background: var(--gold-light); }
+
+    /* FOOTER */
+    footer { background: var(--navy-950); border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 2rem 2rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+    .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    @media (max-width: 600px) { .main { padding: 2rem 1.25rem 4rem; } .plans-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="beginners-path.html" style="color:var(--gold);">Start Here</a></li>
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
+      <li><a href="daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="study-plans.html" class="active">Study Plans</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="login.html" class="nav-signin">Sign in</a>
+      <a href="signup.html" class="nav-cta">Start Free</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="page-eyebrow">Study Plans</p>
+      <h1 class="page-title">Structured paths to<br/><em>deeper knowledge</em></h1>
+      <p class="page-sub">Go beyond browsing. These guided plans take you through the evidence systematically — daily tasks, progress tracking, and a clear sense of where you're headed.</p>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!-- ACTIVE PLAN -->
+    <div class="active-plan-banner" id="active-banner">
+      <div class="active-plan-progress" style="flex:1;">
+        <div class="active-plan-title" id="active-plan-name">Loading…</div>
+        <div class="active-plan-sub" id="active-plan-day">Day 0 of 0</div>
+        <div class="active-plan-bar"><div class="active-plan-fill" id="active-plan-fill" style="width:0%"></div></div>
+      </div>
+      <button class="active-plan-btn" id="active-plan-btn" onclick="continueActivePlan()">Continue today →</button>
+    </div>
+
+    <!-- PLANS -->
+    <p class="section-label reveal">Choose your path</p>
+    <div class="plans-grid reveal" id="plans-grid"></div>
+
+  </div>
+
+  <!-- PLAN DETAIL MODAL -->
+  <div class="plan-modal" id="plan-modal" onclick="closeModal(event)">
+    <div class="plan-modal-inner" id="modal-inner">
+      <div class="plan-modal-header">
+        <button class="plan-modal-close" onclick="closePlanModal()">✕</button>
+        <div class="plan-modal-icon" id="modal-icon"></div>
+        <div class="plan-modal-title" id="modal-title"></div>
+        <div class="plan-modal-sub" id="modal-sub"></div>
+        <div class="plan-modal-meta" id="modal-meta"></div>
+      </div>
+      <div class="plan-modal-body" id="modal-body"></div>
+      <div class="plan-modal-footer">
+        <button class="plan-start-btn" id="modal-start-btn" onclick="startPlanFromModal()">Start this plan →</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Apologia<span>Daily</span></div>
+      <div style="font-family:var(--font-ui);font-size:0.75rem;color:rgba(255,255,255,0.2);">© 2026 Apologia Daily</div>
+    </div>
+    <div class="footer-copy">Built for the defence of the Gospel.</div>
+  </footer>
+
+  <script>
+  const plans = [
+    {
+      id: 'resurrection',
+      icon: '✝️',
+      title: '30-Day Resurrection Deep Dive',
+      desc: 'The most important claim in Christianity — examined from every angle. Historical methodology, minimal facts, empty tomb, Paul\'s conversion, and practising the arguments in real conversations.',
+      color: '#c8a951',
+      days: 30,
+      level: 'Intermediate',
+      pro: true,
+      popular: true,
+      weeks: [
+        { title: 'Week 1 — The Historical Foundation', days: [
+          { day: 1, text: 'Read: The Minimal Facts Argument — free summary', link: 'evidence-library.html' },
+          { day: 2, text: 'Read today\'s devotional + Ask Anything: What is the minimal facts approach?', link: 'daily-devotional.html' },
+          { day: 3, text: 'Read: The Empty Tomb — free summary', link: 'evidence-library.html' },
+          { day: 4, text: 'Daily Quiz — Beginner — Resurrection questions', link: 'daily-quiz.html' },
+          { day: 5, text: 'Read: Paul\'s Conversion and the Early Creed', link: 'evidence-library.html' },
+          { day: 6, text: 'Conversation practice: Sceptical Family Member — "Did Jesus actually rise?"', link: 'debate-arena.html' },
+          { day: 7, text: 'Review week 1 — re-read the three arguments. Write your summary in plain English.', link: 'ask-anything.html' },
+        ]},
+        { title: 'Week 2 — Going Deeper', days: [
+          { day: 8, text: 'Pro deep dive: The Minimal Facts — full analysis with Habermas scholarship', link: 'evidence-library.html' },
+          { day: 9, text: 'Ask the tutor: "What is the strongest objection to the resurrection?"', link: 'evidence-library.html' },
+          { day: 10, text: 'Pro deep dive: The Empty Tomb — all alternative theories examined', link: 'evidence-library.html' },
+          { day: 11, text: 'Daily Quiz — Intermediate level', link: 'daily-quiz.html' },
+          { day: 12, text: 'Pro deep dive: Paul\'s Conversion — the early creed dating', link: 'evidence-library.html' },
+          { day: 13, text: 'Debate: The Atheist — "Did Jesus rise from the dead?" — Challenging', link: 'debate-arena.html' },
+          { day: 14, text: 'Objection Catcher — Resurrection topic — full round', link: 'objection-catcher.html' },
+        ]},
+        { title: 'Week 3 — Practising the Arguments', days: [
+          { day: 15, text: 'Conversation: Curious Coworker — "Give me one reason to believe"', link: 'debate-arena.html' },
+          { day: 16, text: 'Ask Anything: "How do I explain the resurrection to someone who has never heard of it?"', link: 'ask-anything.html' },
+          { day: 17, text: 'Who Said It — focus on resurrection scholars', link: 'who-said-it.html' },
+          { day: 18, text: 'Daily Quiz — Expert level — Resurrection', link: 'daily-quiz.html' },
+          { day: 19, text: 'Conversation: University Student — "Isn\'t resurrection just legend?"', link: 'debate-arena.html' },
+          { day: 20, text: 'Read: Multiple Attestation argument — Jesus section', link: 'evidence-library.html' },
+          { day: 21, text: 'Debate: The Muslim — "Did Jesus die on the cross?" — Expert', link: 'debate-arena.html' },
+        ]},
+        { title: 'Week 4 — Mastery', days: [
+          { day: 22, text: 'Ask Anything: "What would Bart Ehrman say about the resurrection?"', link: 'ask-anything.html' },
+          { day: 23, text: 'Full debate: The Atheist — Expert difficulty — resurrection topic', link: 'debate-arena.html' },
+          { day: 24, text: 'Read the devotional that covers 1 Corinthians 15', link: 'daily-devotional.html' },
+          { day: 25, text: 'Objection Catcher — all topics — full round', link: 'objection-catcher.html' },
+          { day: 26, text: 'Conversation: Grieving Friend — "Where was God?"', link: 'debate-arena.html' },
+          { day: 27, text: 'Ask Anything: "Write me a 5-sentence summary of the resurrection case I can use in conversation"', link: 'ask-anything.html' },
+          { day: 28, text: 'Daily Quiz — Expert — all categories', link: 'daily-quiz.html' },
+          { day: 29, text: 'Final debate: The Atheist — Expert — "Did Jesus rise from the dead?"', link: 'debate-arena.html' },
+          { day: 30, text: '🎉 Plan complete — review your progress and claim your belt points', link: 'dashboard.html' },
+        ]},
+      ]
+    },
+    {
+      id: 'answering_islam',
+      icon: '🕌',
+      title: 'Answering Islam',
+      desc: 'A 3-week plan for Christians who want to have confident, gracious conversations with Muslim friends. The Islamic Dilemma, the deity of Christ, manuscript evidence, and real conversation practice.',
+      color: '#285a9e',
+      days: 21,
+      level: 'Intermediate',
+      pro: true,
+      popular: false,
+      weeks: [
+        { title: 'Week 1 — Understanding Islam', days: [
+          { day: 1, text: 'Read: Worldviews — Islam section introduction', link: 'worldviews.html' },
+          { day: 2, text: 'Ask Anything: "What do Muslims believe about Jesus?"', link: 'ask-anything.html' },
+          { day: 3, text: 'Read: The Islamic Dilemma — does the Quran confirm the Bible?', link: 'worldviews.html' },
+          { day: 4, text: 'Ask the tutor: "Explain the Islamic Dilemma in plain English"', link: 'evidence-library.html' },
+          { day: 5, text: 'Read: Is the Bible corrupted? — Manuscript Reliability argument', link: 'evidence-library.html' },
+          { day: 6, text: 'Conversation: Muslim Colleague — "Is the Bible corrupted?"', link: 'debate-arena.html' },
+          { day: 7, text: 'Daily Quiz — Intermediate — Worldviews category', link: 'daily-quiz.html' },
+        ]},
+        { title: 'Week 2 — The Deity of Christ', days: [
+          { day: 8, text: 'Read: Did Jesus Claim to Be God? — free summary + Pro deep dive', link: 'evidence-library.html' },
+          { day: 9, text: 'Read: The Titles of Jesus — Son of Man, Lord, and I AM', link: 'evidence-library.html' },
+          { day: 10, text: 'Ask Anything: "How do I respond to a Muslim who says Jesus never claimed to be God?"', link: 'ask-anything.html' },
+          { day: 11, text: 'Read: John 1:1 and the Pre-existence of Christ', link: 'evidence-library.html' },
+          { day: 12, text: 'Objection Catcher — Islam topic — full round', link: 'objection-catcher.html' },
+          { day: 13, text: 'Debate: The Muslim — "Is Jesus God or a prophet?" — Challenging', link: 'debate-arena.html' },
+          { day: 14, text: 'Daily Quiz — Intermediate — Worldviews + Jesus categories', link: 'daily-quiz.html' },
+        ]},
+        { title: 'Week 3 — Confident Conversations', days: [
+          { day: 15, text: 'Read: Messianic Prophecy — the statistical case', link: 'evidence-library.html' },
+          { day: 16, text: 'Conversation: Muslim Colleague — "Muhammad vs Jesus — who is the final prophet?"', link: 'debate-arena.html' },
+          { day: 17, text: 'Ask Anything: "What is the strongest argument for Christianity over Islam?"', link: 'ask-anything.html' },
+          { day: 18, text: 'Debate: The Muslim — Expert — "Did Jesus die on the cross?"', link: 'debate-arena.html' },
+          { day: 19, text: 'Ask the tutor: "How do I bring up the Islamic Dilemma graciously in conversation?"', link: 'evidence-library.html' },
+          { day: 20, text: 'Objection Catcher — full round — all topics', link: 'objection-catcher.html' },
+          { day: 21, text: '🎉 Plan complete — you\'re ready for gracious, confident conversations', link: 'dashboard.html' },
+        ]},
+      ]
+    },
+    {
+      id: 'university',
+      icon: '🎓',
+      title: 'Defending Faith at University',
+      desc: 'Designed for students entering or already in an intellectually challenging environment. Science vs faith, the problem of evil, religious diversity, and how to hold your faith under academic pressure.',
+      color: '#534AB7',
+      days: 21,
+      level: 'Intermediate',
+      pro: true,
+      popular: false,
+      weeks: [
+        { title: 'Week 1 — Science and Faith', days: [
+          { day: 1, text: 'Read: The Argument from the Big Bang', link: 'evidence-library.html' },
+          { day: 2, text: 'Read: The Fine-Tuning Argument — free summary', link: 'evidence-library.html' },
+          { day: 3, text: 'Ask Anything: "How do I respond to a professor who says science disproves God?"', link: 'ask-anything.html' },
+          { day: 4, text: 'Read: The Origin of Life Argument', link: 'evidence-library.html' },
+          { day: 5, text: 'Conversation: University Student — "My professor says evolution disproves God"', link: 'debate-arena.html' },
+          { day: 6, text: 'Daily Quiz — Intermediate — Science and Faith', link: 'daily-quiz.html' },
+          { day: 7, text: 'Ask the tutor: "Explain the relationship between science and Christianity"', link: 'evidence-library.html' },
+        ]},
+        { title: 'Week 2 — The Hard Questions', days: [
+          { day: 8, text: 'Read: The Moral Argument — free summary and Pro deep dive', link: 'evidence-library.html' },
+          { day: 9, text: 'Ask Anything: "How do I answer the problem of evil?"', link: 'ask-anything.html' },
+          { day: 10, text: 'Debate: The Agnostic — "Why does God allow suffering?" — Challenging', link: 'debate-arena.html' },
+          { day: 11, text: 'Read: The Argument from Consciousness', link: 'evidence-library.html' },
+          { day: 12, text: 'Ask Anything: "Why should I believe Christianity and not Islam or Hinduism?"', link: 'ask-anything.html' },
+          { day: 13, text: 'Objection Catcher — Morality and Existence topics', link: 'objection-catcher.html' },
+          { day: 14, text: 'Conversation: University Student — "Religion is just a social construct"', link: 'debate-arena.html' },
+        ]},
+        { title: 'Week 3 — Holding Your Ground', days: [
+          { day: 15, text: 'Read: The Kalam Cosmological Argument — Pro deep dive', link: 'evidence-library.html' },
+          { day: 16, text: 'Debate: The Atheist — Expert — "Does God exist?"', link: 'debate-arena.html' },
+          { day: 17, text: 'Ask Anything: "How do I keep my faith at university without becoming defensive?"', link: 'ask-anything.html' },
+          { day: 18, text: 'Read: Historical Existence of Jesus — Non-Christian Sources', link: 'evidence-library.html' },
+          { day: 19, text: 'Conversation: Your Teenager / Peer — "Is any of this actually true?"', link: 'debate-arena.html' },
+          { day: 20, text: 'Daily Quiz — Expert — God\'s Existence + Science categories', link: 'daily-quiz.html' },
+          { day: 21, text: '🎉 Plan complete — you\'re equipped for the intellectual challenges ahead', link: 'dashboard.html' },
+        ]},
+      ]
+    },
+    {
+      id: 'gods_existence',
+      icon: '🌌',
+      title: 'The Case for God\'s Existence',
+      desc: 'A focused 14-day plan working through every major argument for God\'s existence — Kalam, fine-tuning, consciousness, morality, and Leibniz — with practice built in throughout.',
+      color: '#0f6e56',
+      days: 14,
+      level: 'Beginner',
+      pro: false,
+      popular: false,
+      weeks: [
+        { title: 'Week 1 — The Arguments', days: [
+          { day: 1, text: 'Read: The Kalam Cosmological Argument', link: 'evidence-library.html' },
+          { day: 2, text: 'Read: Leibniz\'s Contingency Argument', link: 'evidence-library.html' },
+          { day: 3, text: 'Read: The Fine-Tuning Argument', link: 'evidence-library.html' },
+          { day: 4, text: 'Daily Quiz — Beginner — God\'s Existence', link: 'daily-quiz.html' },
+          { day: 5, text: 'Read: The Moral Argument', link: 'evidence-library.html' },
+          { day: 6, text: 'Read: The Argument from Consciousness', link: 'evidence-library.html' },
+          { day: 7, text: 'Conversation: Curious Coworker — "Hasn\'t science disproved God?"', link: 'debate-arena.html' },
+        ]},
+        { title: 'Week 2 — Practising the Arguments', days: [
+          { day: 8, text: 'Ask Anything: "Which argument for God\'s existence is strongest?"', link: 'ask-anything.html' },
+          { day: 9, text: 'Debate: The Atheist — Gentle — "Does God exist?"', link: 'debate-arena.html' },
+          { day: 10, text: 'Objection Catcher — God\'s Existence topic', link: 'objection-catcher.html' },
+          { day: 11, text: 'Daily Quiz — Intermediate — God\'s Existence', link: 'daily-quiz.html' },
+          { day: 12, text: 'Conversation: Sceptical Family Member — "I just don\'t see evidence for God"', link: 'debate-arena.html' },
+          { day: 13, text: 'Ask Anything: "How do I explain the Kalam to a friend in one minute?"', link: 'ask-anything.html' },
+          { day: 14, text: '🎉 Plan complete — you know five powerful arguments for God\'s existence', link: 'dashboard.html' },
+        ]},
+      ]
+    },
+    {
+      id: 'bible_reliability',
+      icon: '📜',
+      title: 'Can We Trust the Bible?',
+      desc: 'A 14-day plan answering the most common questions about the Bible\'s reliability — manuscript evidence, archaeology, prophecy, and responding to the corruption narrative.',
+      color: '#854f0b',
+      days: 14,
+      level: 'Beginner',
+      pro: false,
+      popular: false,
+      weeks: [
+        { title: 'Week 1 — The Evidence', days: [
+          { day: 1, text: 'Read: Manuscript Reliability Argument', link: 'evidence-library.html' },
+          { day: 2, text: 'Ask Anything: "How do we know the Bible hasn\'t been changed?"', link: 'ask-anything.html' },
+          { day: 3, text: 'Read: Archaeological Confirmation of the Bible', link: 'evidence-library.html' },
+          { day: 4, text: 'Daily Quiz — Beginner — Biblical Reliability', link: 'daily-quiz.html' },
+          { day: 5, text: 'Read: Messianic Prophecy — the statistical case', link: 'evidence-library.html' },
+          { day: 6, text: 'Ask the tutor: "How do I explain manuscript evidence to a Muslim?"', link: 'evidence-library.html' },
+          { day: 7, text: 'Conversation: Muslim Colleague — "Is the Bible corrupted?"', link: 'debate-arena.html' },
+        ]},
+        { title: 'Week 2 — Practising the Responses', days: [
+          { day: 8, text: 'Objection Catcher — Bible topic — full round', link: 'objection-catcher.html' },
+          { day: 9, text: 'Ask Anything: "What is the strongest archaeological evidence for the Bible?"', link: 'ask-anything.html' },
+          { day: 10, text: 'Read: The Dead Sea Scrolls — significance for biblical reliability', link: 'evidence-library.html' },
+          { day: 11, text: 'Debate: The Muslim — "Is the Bible reliable?" — Challenging', link: 'debate-arena.html' },
+          { day: 12, text: 'Daily Quiz — Intermediate — Biblical Reliability', link: 'daily-quiz.html' },
+          { day: 13, text: 'Ask Anything: "How do I explain the Dead Sea Scrolls in conversation?"', link: 'ask-anything.html' },
+          { day: 14, text: '🎉 Plan complete — you can confidently defend the reliability of Scripture', link: 'dashboard.html' },
+        ]},
+      ]
+    },
+    {
+      id: 'jesus_identity',
+      icon: '✨',
+      title: 'Who Is Jesus?',
+      desc: 'A 21-day plan examining the historical Jesus, his divine claims, the prophecies he fulfilled, and how to explain his identity clearly in conversation.',
+      color: '#c8a951',
+      days: 21,
+      level: 'Intermediate',
+      pro: true,
+      popular: false,
+      weeks: [
+        { title: 'Week 1 — The Historical Jesus', days: [
+          { day: 1, text: 'Read: Historical Existence of Jesus — Non-Christian Sources', link: 'evidence-library.html' },
+          { day: 2, text: 'Read: The Criterion of Multiple Attestation', link: 'evidence-library.html' },
+          { day: 3, text: 'Read: Early Creed of 1 Corinthians 15', link: 'evidence-library.html' },
+          { day: 4, text: 'Daily Quiz — Beginner — Jesus category', link: 'daily-quiz.html' },
+          { day: 5, text: 'Ask Anything: "Did Jesus really exist? What\'s the best evidence?"', link: 'ask-anything.html' },
+          { day: 6, text: 'Conversation: Sceptical Family Member — "You only believe because you were raised that way"', link: 'debate-arena.html' },
+          { day: 7, text: 'Read today\'s devotional — reflect on who Jesus is to you personally', link: 'daily-devotional.html' },
+        ]},
+        { title: 'Week 2 — The Divine Claims', days: [
+          { day: 8, text: 'Read: Did Jesus Claim to Be God? — free summary and Pro deep dive', link: 'evidence-library.html' },
+          { day: 9, text: 'Read: The Titles of Jesus', link: 'evidence-library.html' },
+          { day: 10, text: 'Read: John 1:1 and Pre-existence of Christ', link: 'evidence-library.html' },
+          { day: 11, text: 'Ask the tutor: "Explain the C.S. Lewis trilemma in plain English"', link: 'evidence-library.html' },
+          { day: 12, text: 'Read: The Philippians 2 Hymn', link: 'evidence-library.html' },
+          { day: 13, text: 'Debate: The Muslim — "Is Jesus God or a prophet?" — Challenging', link: 'debate-arena.html' },
+          { day: 14, text: 'Objection Catcher — Islam topic — focus on Jesus', link: 'objection-catcher.html' },
+        ]},
+        { title: 'Week 3 — Prophecy and Practice', days: [
+          { day: 15, text: 'Read: Messianic Prophecy — the statistical case', link: 'evidence-library.html' },
+          { day: 16, text: 'Ask Anything: "Read me Isaiah 53 and explain how it points to Jesus"', link: 'ask-anything.html' },
+          { day: 17, text: 'Read: Daniel\'s 70 Weeks', link: 'evidence-library.html' },
+          { day: 18, text: 'Daily Quiz — Expert — Jesus category', link: 'daily-quiz.html' },
+          { day: 19, text: 'Conversation: Open Neighbour — "What do you actually believe about Jesus?"', link: 'debate-arena.html' },
+          { day: 20, text: 'Ask Anything: "Summarise the case for Jesus\'s divinity in plain English"', link: 'ask-anything.html' },
+          { day: 21, text: '🎉 Plan complete — you can explain and defend who Jesus is with confidence', link: 'dashboard.html' },
+        ]},
+      ]
+    },
+  ];
+
+  let activePlanData = null;
+  let currentModalPlanId = null;
+
+  function init() {
+    const saved = JSON.parse(localStorage.getItem('study_plans') || '{}');
+    renderPlans(saved);
+    updateActiveBanner(saved);
+  }
+
+  function renderPlans(saved) {
+    const grid = document.getElementById('plans-grid');
+    grid.innerHTML = plans.map(plan => {
+      const progress = saved[plan.id] || { started: false, completed: [], finished: false };
+      const pct = progress.completed ? Math.round(progress.completed.length / plan.days * 100) : 0;
+      const isActive = progress.started && !progress.finished;
+      const isFinished = progress.finished;
+
+      return `<div class="plan-card ${isActive ? 'active-card' : ''}" onclick="openPlanModal('${plan.id}')">
+        <div class="plan-card-banner" style="background:${plan.color};"></div>
+        <div class="plan-card-body">
+          <div class="plan-card-top">
+            <div class="plan-card-icon">${plan.icon}</div>
+            <div class="plan-badges">
+              ${plan.pro ? '<span class="plan-badge badge-pro">Pro</span>' : '<span class="plan-badge badge-free">Free</span>'}
+              ${plan.popular ? '<span class="plan-badge badge-popular">Popular</span>' : ''}
+              ${isActive ? '<span class="plan-badge badge-new">In Progress</span>' : ''}
+            </div>
+          </div>
+          <div class="plan-title">${plan.title}</div>
+          <div class="plan-desc">${plan.desc}</div>
+          <div class="plan-meta">
+            <span class="plan-meta-item">📅 ${plan.days} days</span>
+            <span class="plan-meta-item">📚 ${plan.level}</span>
+            <span class="plan-meta-item">🗓 ${plan.weeks.length} weeks</span>
+          </div>
+          ${isActive || isFinished ? `
+          <div class="plan-progress-wrap visible">
+            <div class="plan-progress-label"><span>${progress.completed ? progress.completed.length : 0} of ${plan.days} days</span><span>${pct}%</span></div>
+            <div class="plan-progress-bar"><div class="plan-progress-fill" style="width:${pct}%;background:${plan.color};"></div></div>
+          </div>` : ''}
+          <button class="plan-btn ${isFinished ? 'plan-btn-completed' : isActive ? 'plan-btn-continue' : 'plan-btn-start'}" onclick="event.stopPropagation();${isFinished ? '' : isActive ? `continueActivePlan()` : `openPlanModal('${plan.id}')`}">
+            ${isFinished ? '✓ Completed' : isActive ? 'Continue →' : 'View plan →'}
+          </button>
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  function updateActiveBanner(saved) {
+    const active = plans.find(p => {
+      const progress = saved[p.id];
+      return progress && progress.started && !progress.finished;
+    });
+    if (active) {
+      const progress = saved[active.id];
+      const completed = progress.completed ? progress.completed.length : 0;
+      const pct = Math.round(completed / active.days * 100);
+      document.getElementById('active-banner').classList.add('visible');
+      document.getElementById('active-plan-name').textContent = active.title;
+      document.getElementById('active-plan-day').textContent = `Day ${completed + 1} of ${active.days}`;
+      document.getElementById('active-plan-fill').style.width = pct + '%';
+      activePlanData = active;
+    }
+  }
+
+  function continueActivePlan() {
+    if (activePlanData) openPlanModal(activePlanData.id);
+  }
+
+  function openPlanModal(planId) {
+    const plan = plans.find(p => p.id === planId);
+    if (!plan) return;
+    currentModalPlanId = planId;
+    const saved = JSON.parse(localStorage.getItem('study_plans') || '{}');
+    const progress = saved[planId] || { started: false, completed: [] };
+
+    document.getElementById('modal-icon').textContent = plan.icon;
+    document.getElementById('modal-title').textContent = plan.title;
+    document.getElementById('modal-sub').textContent = plan.desc;
+    document.getElementById('modal-meta').innerHTML = `
+      <span class="plan-modal-meta-item">📅 ${plan.days} days</span>
+      <span class="plan-modal-meta-item">📚 ${plan.level}</span>
+      <span class="plan-modal-meta-item">${plan.pro ? '⭐ Pro' : '✓ Free'}</span>`;
+
+    let bodyHtml = '';
+    plan.weeks.forEach(week => {
+      bodyHtml += `<div class="plan-week">
+        <div class="plan-week-title">${week.title}</div>
+        <div class="plan-day-list">`;
+      week.days.forEach(day => {
+        const isDone = progress.completed && progress.completed.includes(day.day);
+        bodyHtml += `<div class="plan-day-item ${isDone ? 'done' : ''}" onclick="togglePlanDay('${planId}', ${day.day})">
+          <div class="plan-day-num">Day ${day.day}</div>
+          <div class="plan-day-text"><a href="${day.link}" style="color:inherit;text-decoration:none;" onclick="event.stopPropagation();">${day.text}</a></div>
+          <div class="plan-day-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+        </div>`;
+      });
+      bodyHtml += `</div></div>`;
+    });
+    document.getElementById('modal-body').innerHTML = bodyHtml;
+
+    const isStarted = progress.started;
+    const btn = document.getElementById('modal-start-btn');
+    btn.textContent = isStarted ? 'Continue plan →' : 'Start this plan →';
+
+    document.getElementById('plan-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function togglePlanDay(planId, dayNum) {
+    const saved = JSON.parse(localStorage.getItem('study_plans') || '{}');
+    if (!saved[planId]) saved[planId] = { started: true, completed: [] };
+    const completed = saved[planId].completed || [];
+    const idx = completed.indexOf(dayNum);
+    if (idx === -1) completed.push(dayNum);
+    else completed.splice(idx, 1);
+    saved[planId].completed = completed;
+    const plan = plans.find(p => p.id === planId);
+    if (plan && completed.length >= plan.days) saved[planId].finished = true;
+    localStorage.setItem('study_plans', JSON.stringify(saved));
+    openPlanModal(planId);
+    renderPlans(saved);
+    updateActiveBanner(saved);
+  }
+
+  function startPlanFromModal() {
+    if (!currentModalPlanId) return;
+    const saved = JSON.parse(localStorage.getItem('study_plans') || '{}');
+    if (!saved[currentModalPlanId]) saved[currentModalPlanId] = { started: true, completed: [] };
+    else saved[currentModalPlanId].started = true;
+    localStorage.setItem('study_plans', JSON.stringify(saved));
+    renderPlans(saved);
+    updateActiveBanner(saved);
+    closePlanModal();
+  }
+
+  function closePlanModal() {
+    document.getElementById('plan-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function closeModal(e) {
+    if (e.target === document.getElementById('plan-modal')) closePlanModal();
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  init();
+  </script>
+</body>
+</html>

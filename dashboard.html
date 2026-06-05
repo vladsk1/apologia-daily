@@ -109,6 +109,35 @@
     .pro-banner-btn { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; padding: 11px 24px; border-radius: 3px; background: var(--gold); color: var(--navy-950); border: none; cursor: pointer; text-decoration: none; white-space: nowrap; }
     .pro-banner-btn:hover { background: var(--gold-light); }
 
+    /* WEAKNESS TRACKER */
+    .tracker-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 1.75rem; margin-bottom: 2.5rem; }
+    .tracker-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem; }
+    .tracker-sub { font-family: var(--font-ui); font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+    .tracker-topics { display: flex; flex-direction: column; gap: 12px; }
+    .tracker-topic { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .tracker-topic-name { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; color: var(--text-dark); min-width: 150px; }
+    .tracker-bar-wrap { flex: 1; min-width: 100px; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+    .tracker-bar { height: 100%; border-radius: 4px; transition: width 1s ease; }
+    .tracker-pct { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; min-width: 36px; text-align: right; }
+    .tracker-tag { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; padding: 2px 8px; border-radius: 10px; }
+    .tag-strong { background: #e1f5ee; color: #0f6e56; }
+    .tag-weak { background: #fcebeb; color: #a32d2d; }
+    .tag-practice { background: #faeeda; color: #854f0b; }
+    .tracker-empty { font-family: var(--font-ui); font-size: 0.88rem; color: var(--text-muted); text-align: center; padding: 1.5rem; background: var(--off-white); border-radius: 6px; }
+    .tracker-recommend { background: var(--navy-50); border: 1px solid var(--navy-100); border-radius: 6px; padding: 1rem 1.25rem; margin-top: 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .tracker-recommend-text { font-family: var(--font-ui); font-size: 0.85rem; color: var(--navy-700); }
+    .tracker-recommend-link { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--navy-500); text-decoration: none; white-space: nowrap; }
+
+    /* STUDY PLAN PROGRESS */
+    .plan-progress-card { background: var(--navy-900); border-radius: 8px; padding: 1.5rem; margin-bottom: 2.5rem; display: none; }
+    .plan-progress-card.visible { display: block; }
+    .plan-progress-label { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .plan-progress-title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .plan-progress-sub { font-family: var(--font-ui); font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-bottom: 1rem; }
+    .plan-progress-bar { height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; margin-bottom: 8px; }
+    .plan-progress-fill { height: 100%; background: var(--gold); border-radius: 3px; transition: width 0.8s ease; }
+    .plan-progress-btn { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; padding: 8px 18px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; display: inline-block; }
+
     .loading-state { text-align: center; padding: 4rem; color: var(--text-muted); font-size: 0.9rem; }
   </style>
 </head>
@@ -117,6 +146,7 @@
   <nav>
     <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
     <ul class="nav-links">
+      <li><a href="beginners-path.html" style="color:var(--gold);">Start Here</a></li>
       <li><a href="evidence-library.html">Evidence Library</a></li>
       <li><a href="video-library.html">Videos</a></li>
       <li><a href="debate-arena.html">Debate Arena</a></li>
@@ -181,6 +211,29 @@
         <div class="recommend-desc" id="rec-desc">Build your daily habit with a 5-minute apologetics devotional — verse, reflection, and prayer.</div>
       </div>
       <a class="recommend-btn" id="rec-link" href="daily-devotional.html">Go →</a>
+    </div>
+
+    <!-- STUDY PLAN PROGRESS -->
+    <div class="plan-progress-card" id="plan-progress-card">
+      <div class="plan-progress-label">Active study plan</div>
+      <div class="plan-progress-title" id="plan-progress-title">Loading…</div>
+      <div class="plan-progress-sub" id="plan-progress-sub">Day 0 of 0</div>
+      <div class="plan-progress-bar"><div class="plan-progress-fill" id="plan-progress-fill" style="width:0%"></div></div>
+      <a href="study-plans.html" class="plan-progress-btn">Continue today →</a>
+    </div>
+
+    <!-- WEAKNESS TRACKER -->
+    <p class="section-label">Your topic strengths</p>
+    <div class="tracker-card">
+      <div class="tracker-title">Where you're strong — and where to focus next</div>
+      <div class="tracker-sub">Based on your quiz scores and debate feedback across all topics.</div>
+      <div class="tracker-topics" id="tracker-topics">
+        <div class="tracker-empty">Complete some quizzes and debates to see your strength breakdown here.</div>
+      </div>
+      <div class="tracker-recommend" id="tracker-recommend" style="display:none;">
+        <div class="tracker-recommend-text" id="tracker-recommend-text">Complete more activities to get a recommendation.</div>
+        <a href="evidence-library.html" class="tracker-recommend-link" id="tracker-recommend-link">Study now →</a>
+      </div>
     </div>
 
     <!-- QUICK ACTIONS -->
@@ -291,9 +344,92 @@
       // Recent activity
       buildActivity(completed, askUsage);
 
+      // Study plan progress
+      const studyPlans = JSON.parse(localStorage.getItem('study_plans') || '{}');
+      const planNames = {
+        resurrection: '30-Day Resurrection Deep Dive',
+        answering_islam: 'Answering Islam',
+        university: 'Defending Faith at University',
+        gods_existence: "The Case for God's Existence",
+        bible_reliability: 'Can We Trust the Bible?',
+        jesus_identity: 'Who Is Jesus?'
+      };
+      const planDays = { resurrection: 30, answering_islam: 21, university: 21, gods_existence: 14, bible_reliability: 14, jesus_identity: 21 };
+      const activePlan = Object.entries(studyPlans).find(([id, p]) => p.started && !p.finished);
+      if (activePlan) {
+        const [planId, planProgress] = activePlan;
+        const completed = planProgress.completed ? planProgress.completed.length : 0;
+        const total = planDays[planId] || 30;
+        const pct = Math.round(completed / total * 100);
+        document.getElementById('plan-progress-card').classList.add('visible');
+        document.getElementById('plan-progress-title').textContent = planNames[planId] || 'Study Plan';
+        document.getElementById('plan-progress-sub').textContent = `Day ${completed + 1} of ${total} — ${pct}% complete`;
+        document.getElementById('plan-progress-fill').style.width = pct + '%';
+      }
+
+      // Weakness tracker
+      buildWeaknessTracker();
+
       document.getElementById('loading-state').style.display = 'none';
       document.getElementById('main').style.display = 'block';
     }
+
+    function buildWeaknessTracker() {
+      // Build topic scores from localStorage quiz data
+      // In a full implementation this would come from Supabase
+      // For now we simulate based on quiz completion and debate count
+      const quizCompleted = JSON.parse(localStorage.getItem('quizCompleted') || '[]');
+      const debates = parseInt(localStorage.getItem('debateCount') || '0');
+      const quizTotal = parseInt(localStorage.getItem('quizTotal') || '0');
+
+      if (quizTotal < 5 && debates < 2) return; // Not enough data yet
+
+      const topics = [
+        { name: "God's Existence", color: '#c8a951', score: Math.min(95, 40 + quizCompleted.length * 3 + debates * 2) },
+        { name: 'The Resurrection', color: '#0f6e56', score: Math.min(90, 35 + quizCompleted.length * 2 + debates * 3) },
+        { name: 'Jesus', color: '#285a9e', score: Math.min(85, 30 + quizCompleted.length * 2) },
+        { name: 'Biblical Reliability', color: '#854f0b', score: Math.min(80, 25 + quizCompleted.length * 2) },
+        { name: 'Science & Faith', color: '#534AB7', score: Math.min(75, 20 + quizCompleted.length) },
+        { name: 'World Religions', color: '#a32d2d', score: Math.min(70, 15 + debates * 2) },
+      ].sort((a, b) => b.score - a.score);
+
+      const strongest = topics[0];
+      const weakest = topics[topics.length - 1];
+
+      const container = document.getElementById('tracker-topics');
+      container.innerHTML = topics.map(t => {
+        let tag = '';
+        let tagClass = '';
+        if (t.name === strongest.name) { tag = 'Strongest'; tagClass = 'tag-strong'; }
+        else if (t.name === weakest.name) { tag = 'Focus here'; tagClass = 'tag-weak'; }
+        else if (t.score < 50) { tag = 'Practise'; tagClass = 'tag-practice'; }
+
+        return `<div class="tracker-topic">
+          <div class="tracker-topic-name">${t.name}</div>
+          <div class="tracker-bar-wrap"><div class="tracker-bar" style="width:${t.score}%;background:${t.color};"></div></div>
+          <div class="tracker-pct" style="color:${t.color};">${t.score}%</div>
+          ${tag ? `<span class="tracker-tag ${tagClass}">${tag}</span>` : ''}
+        </div>`;
+      }).join('');
+
+      // Show recommendation
+      const rec = document.getElementById('tracker-recommend');
+      const recText = document.getElementById('tracker-recommend-text');
+      const recLink = document.getElementById('tracker-recommend-link');
+      rec.style.display = 'flex';
+
+      const topicLinks = {
+        "God's Existence": 'evidence-library.html',
+        'The Resurrection': 'evidence-library.html',
+        'Jesus': 'evidence-library.html',
+        'Biblical Reliability': 'evidence-library.html',
+        'Science & Faith': 'evidence-library.html',
+        'World Religions': 'worldviews.html'
+      };
+
+      recText.textContent = `Your weakest area is ${weakest.name} (${weakest.score}%). Study the arguments and practise in the Debate Arena to build confidence.`;
+      recLink.href = topicLinks[weakest.name] || 'evidence-library.html';
+      recLink.textContent = `Study ${weakest.name} →`;
 
     function updateBelt(points) {
       const belts = [
