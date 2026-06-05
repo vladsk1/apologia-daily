@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evidence Library — Apologia Daily</title>
+  <meta name="description" content="240+ arguments for the Christian faith — free summaries in plain English and Pro deep dives with AI tutor."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{
+      --navy-950:#050d1a;--navy-900:#0a1628;--navy-800:#0f2040;
+      --navy-700:#163058;--navy-600:#1e4278;--navy-500:#285a9e;
+      --navy-400:#3b72bc;--navy-300:#6f9fd4;--navy-200:#aecae8;
+      --navy-100:#ddeaf5;--navy-50:#f0f6fb;
+      --gold:#c8a951;--gold-light:#e8cf87;
+      --white:#ffffff;--off-white:#f8f7f4;
+      --text-dark:#0a1628;--text-mid:#3a4a62;--text-muted:#7a8fa8;
+      --border:#d4e0ec;
+      --correct:#0f6e56;--correct-bg:#e1f5ee;--correct-border:#9fe1cb;
+      --font-display:"Playfair Display",Georgia,serif;
+      --font-body:"Source Serif 4",Georgia,serif;
+      --font-ui:"DM Sans",system-ui,sans-serif;
+    }
+    body{font-family:var(--font-body);color:var(--text-dark);background:var(--off-white);line-height:1.7;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;}
+    .nav-logo{font-family:var(--font-display);font-size:1.25rem;font-weight:600;color:var(--white);text-decoration:none;}
+    .nav-logo span{color:var(--gold);}
+    .nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none;}
+    .nav-links a{font-family:var(--font-ui);font-size:0.82rem;color:rgba(255,255,255,0.7);text-decoration:none;text-transform:uppercase;letter-spacing:0.04em;}
+    .nav-links a.active{color:var(--gold);}
+    .nav-right{display:flex;gap:10px;align-items:center;}
+    .nav-signin{font-family:var(--font-ui);font-size:0.85rem;color:rgba(255,255,255,0.6);text-decoration:none;}
+    .nav-cta{font-family:var(--font-ui);font-size:0.85rem;font-weight:500;padding:8px 20px;border-radius:3px;background:var(--gold);color:var(--navy-950);text-decoration:none;}
+    @media(max-width:768px){.nav-links{display:none;}}
+    .page-header{background:var(--navy-950);padding:8rem 2rem 4rem;position:relative;overflow:hidden;}
+    .page-header::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(30,66,120,0.5) 0%,transparent 70%);pointer-events:none;}
+    .page-header-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1;}
+    .page-eyebrow{font-family:var(--font-ui);font-size:0.7rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+    .page-title{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.5rem);font-weight:700;line-height:1.1;color:var(--white);margin-bottom:1rem;}
+    .page-title em{font-style:italic;color:var(--gold);}
+    .page-sub{font-size:1.05rem;font-weight:300;color:rgba(255,255,255,0.6);max-width:560px;line-height:1.8;}
+    .diff-legend{background:var(--off-white);border-bottom:1px solid var(--border);padding:0.6rem 2rem;}
+    .diff-legend-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+    .diff-legend-label{font-family:var(--font-ui);font-size:0.68rem;color:var(--text-muted);font-weight:500;text-transform:uppercase;letter-spacing:0.08em;}
+    .diff-legend-item{font-family:var(--font-ui);font-size:0.72rem;display:flex;align-items:center;gap:6px;}
+    .cat-nav{position:sticky;top:64px;z-index:90;background:var(--navy-900);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 2rem;}
+    .cat-nav-inner{max-width:1100px;margin:0 auto;display:flex;overflow-x:auto;}
+    .tab{font-family:var(--font-ui);font-size:0.82rem;font-weight:500;padding:1rem 1.25rem;background:none;border:none;color:rgba(255,255,255,0.55);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:all 0.2s;}
+    .tab:hover{color:rgba(255,255,255,0.85);}
+    .tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+    .main{max-width:1100px;margin:0 auto;padding:2.5rem 2rem 6rem;}
+    .section{display:none;}
+    .section.on{display:block;}
+    .cat-intro{display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;margin-bottom:2.5rem;flex-wrap:wrap;}
+    .cat-intro-eyebrow{font-family:var(--font-ui);font-size:0.65rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.5rem;}
+    .cat-intro-title{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--text-dark);margin-bottom:0.75rem;}
+    .cat-intro-title em{font-style:italic;color:var(--navy-600);}
+    .cat-intro-desc{font-size:0.95rem;color:var(--text-mid);line-height:1.8;max-width:600px;}
+    .diff-badge{font-family:var(--font-ui);font-size:0.65rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:3px 10px;border-radius:20px;}
+    .diff-beginner{background:#e1f5ee;color:#0f6e56;}
+    .diff-intermediate{background:#faeeda;color:#854f0b;}
+    .diff-advanced{background:#eeedfe;color:#3c3489;}
+    .subcat-label{font-family:var(--font-ui);font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin:2rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);}
+    .argument-card{background:var(--white);border:1px solid var(--border);border-radius:6px;margin-bottom:10px;overflow:hidden;transition:border-color 0.15s;}
+    .argument-card:hover{border-color:var(--navy-200);}
+    .argument-card.open{border-color:var(--navy-300);}
+    .argument-header{display:flex;align-items:center;gap:1rem;padding:1.25rem 1.5rem;cursor:pointer;user-select:none;}
+    .argument-num{font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--navy-200);min-width:2rem;}
+    .argument-info{flex:1;}
+    .argument-title{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--text-dark);margin-bottom:2px;}
+    .argument-tagline{font-family:var(--font-ui);font-size:0.78rem;color:var(--text-muted);}
+    .argument-meta{display:flex;align-items:center;gap:10px;}
+    .argument-chevron{width:18px;height:18px;stroke:var(--text-muted);fill:none;stroke-width:2;transition:transform 0.2s;flex-shrink:0;}
+    .argument-card.open .argument-chevron{transform:rotate(180deg);}
+    .argument-body{display:none;padding:0 1.5rem 1.5rem 4.5rem;border-top:1px solid var(--border);}
+    .argument-card.open .argument-body{display:block;}
+    .tier-label-free{font-family:var(--font-ui);font-size:0.62rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--correct);background:var(--correct-bg);padding:3px 10px;border-radius:20px;display:inline-block;margin:1.25rem 0 0.75rem;}
+    .plain-english{font-family:var(--font-ui);font-size:0.85rem;background:var(--navy-50);border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 4px 4px 0;color:var(--text-mid);margin-bottom:1.25rem;line-height:1.6;}
+    .plain-english strong{color:var(--text-dark);}
+    .argument-premise{background:var(--white);border:1px solid var(--border);border-radius:3px;padding:1.25rem 1.5rem;margin:1.25rem 0;}
+    .argument-premise-label{font-family:var(--font-ui);font-size:0.65rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.75rem;}
+    .argument-premise ol{padding-left:1.25rem;}
+    .argument-premise ol li{font-size:0.92rem;color:var(--text-mid);margin-bottom:6px;line-height:1.6;}
+    .argument-explanation{font-size:0.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:1.25rem;}
+    .argument-objections{background:var(--off-white);border-radius:4px;padding:1.25rem 1.5rem;margin-top:1.25rem;}
+    .argument-objections-title{font-family:var(--font-ui);font-size:0.68rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem;}
+    .objection-row{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start;}
+    .objection-q{font-family:var(--font-ui);font-size:0.65rem;font-weight:700;background:var(--navy-600);color:var(--white);padding:1px 6px;border-radius:3px;flex-shrink:0;margin-top:2px;}
+    .objection-a{font-size:0.88rem;color:var(--text-mid);line-height:1.6;}
+    .objection-a strong{color:var(--text-dark);font-weight:500;}
+    .pro-deepdive{background:var(--navy-950);border-radius:6px;padding:1.5rem;margin-top:1.25rem;}
+    .pro-deepdive-header{display:flex;align-items:center;gap:12px;margin-bottom:1.25rem;flex-wrap:wrap;}
+    .pro-deepdive-badge{font-family:var(--font-ui);font-size:0.62rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;background:rgba(200,169,81,0.15);color:var(--gold);padding:3px 10px;border-radius:20px;border:1px solid rgba(200,169,81,0.3);}
+    .pro-deepdive-title{font-family:var(--font-ui);font-size:0.82rem;color:rgba(255,255,255,0.5);}
+    .pro-section-label{font-family:var(--font-ui);font-size:0.65rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin:1.25rem 0 0.6rem;}
+    .pro-text{font-size:0.92rem;color:rgba(255,255,255,0.72);line-height:1.85;margin-bottom:1rem;}
+    .pro-text em{font-style:italic;}
+    .pro-text strong{color:rgba(255,255,255,0.9);font-weight:500;}
+    .scholar-row{display:flex;gap:12px;align-items:flex-start;margin:1rem 0;}
+    .scholar-initial{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-ui);font-size:0.75rem;font-weight:700;flex-shrink:0;}
+    .scholar-name{font-family:var(--font-ui);font-size:0.8rem;font-weight:500;color:rgba(255,255,255,0.7);margin-bottom:3px;}
+    .scholar-quote{font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.6;font-style:italic;}
+    .argument-footer{display:flex;gap:10px;margin-top:1.5rem;flex-wrap:wrap;}
+    .arg-action{font-family:var(--font-ui);font-size:0.82rem;font-weight:500;padding:9px 18px;border-radius:3px;text-decoration:none;}
+    .arg-action-primary{background:var(--gold);color:var(--navy-950);}
+    .arg-action-secondary{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.65);}
+    .simple-toggle{display:flex;align-items:center;gap:10px;margin-bottom:1rem;padding:10px 14px;background:rgba(200,169,81,0.08);border:1px solid rgba(200,169,81,0.2);border-radius:6px;cursor:pointer;width:100%;text-align:left;}
+    .simple-toggle-icon{font-size:1rem;}
+    .simple-toggle-text{font-family:var(--font-ui);font-size:0.82rem;font-weight:500;color:var(--gold);flex:1;}
+    .simple-toggle-hint{font-family:var(--font-ui);font-size:0.72rem;color:rgba(255,255,255,0.35);}
+    .simple-summary{background:rgba(255,255,255,0.05);border-left:3px solid var(--gold);padding:1rem 1.25rem;margin-bottom:1rem;display:none;border-radius:0 6px 6px 0;}
+    .simple-summary.visible{display:block;}
+    .simple-summary-text{font-family:var(--font-body);font-size:0.92rem;color:rgba(255,255,255,0.8);line-height:1.85;}
+    .pro-banner{background:var(--navy-800);border-radius:6px;padding:1.5rem;margin-top:1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+    .pro-banner-text{}
+    .pro-banner-title{font-family:var(--font-display);font-size:1rem;font-weight:600;color:var(--white);margin-bottom:4px;}
+    .pro-banner-sub{font-family:var(--font-ui);font-size:0.82rem;color:rgba(255,255,255,0.5);}
+    .pro-banner-btn{font-family:var(--font-ui);font-size:0.82rem;font-weight:500;padding:9px 20px;border-radius:3px;background:var(--gold);color:var(--navy-950);text-decoration:none;white-space:nowrap;}
+    footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,0.08);padding:3rem 2rem 2rem;margin-top:4rem;}
+    .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;}
+    .footer-logo{font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--white);}
+    .footer-logo span{color:var(--gold);}
+    .footer-links{display:flex;gap:2rem;list-style:none;flex-wrap:wrap;}
+    .footer-links a{font-family:var(--font-ui);font-size:0.8rem;color:rgba(255,255,255,0.35);text-decoration:none;}
+    .footer-copy{font-family:var(--font-ui);font-size:0.75rem;color:rgba(255,255,255,0.2);width:100%;text-align:center;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06);margin-top:1.5rem;}
+    .cat-count{text-align:right;flex-shrink:0;}
+    .cat-count-num{font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--navy-200);display:block;line-height:1;}
+    .cat-count-lbl{font-family:var(--font-ui);font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+  <ul class="nav-links">
+    <li><a href="beginners-path.html" style="color:var(--gold);">Start Here</a></li>
+    <li><a href="evidence-library.html" class="active">Evidence Library</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="debate-arena.html">Debate Arena</a></li>
+    <li><a href="daily-devotional.html">Daily Devotional</a></li>
+    <li><a href="ask-anything.html">Ask Anything</a></li>
+    <li><a href="worldviews.html">Worldviews</a></li>
+    <li><a href="study-plans.html">Study Plans</a></li>
+    <li><a href="whats-new.html">What's New</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="login.html" class="nav-signin">Sign in</a>
+    <a href="signup.html" class="nav-cta">Start Free</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-eyebrow">Evidence Library</p>
+    <h1 class="page-title">The case for <em>Christian faith</em></h1>
+    <p class="page-sub">Every major argument examined — free summaries in plain English, Pro deep dives for those who want to go further.</p>
+  </div>
+</div>
+
+<div class="diff-legend">
+  <div class="diff-legend-inner">
+    <span class="diff-legend-label">Difficulty:</span>
+    <span class="diff-legend-item"><span class="diff-badge diff-beginner">&#127807; Beginner</span>&nbsp;No prior knowledge needed</span>
+    <span class="diff-legend-item"><span class="diff-badge diff-intermediate">&#128218; Intermediate</span>&nbsp;Helpful to read basics first</span>
+    <span class="diff-legend-item"><span class="diff-badge diff-advanced">&#127891; Advanced</span>&nbsp;Some philosophy background helpful</span>
+  </div>
+</div>
+
+<div class="cat-nav">
+  <div class="cat-nav-inner">
+    <button class="tab active" onclick="show('existence',this)">God's Existence</button>
+    <button class="tab" onclick="show('resurrection',this)">The Resurrection</button>
+    <button class="tab" onclick="show('jesus',this)">Jesus</button>
+    <button class="tab" onclick="show('bible',this)">Biblical Reliability</button>
+    <button class="tab" onclick="show('science',this)">Science &amp; Faith</button>
+  </div>
+</div>
+
+<div class="main">
+
+  <div id="existence" class="section on">
+<div class="cat-intro">
+      <div>
+        <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 1 of 5</p>
+        <h2 class="cat-intro-title">Arguments for <em>God&apos;s Existence</em></h2>
+        <p class="cat-intro-desc">You don&apos;t need a philosophy degree to understand why millions of thoughtful people believe God exists. These arguments — some ancient, some built on modern science — give you real reasons to believe, not just feelings. Start with the Kalam if you&apos;re new. Go as deep as you like.</p>
+      </div>
+    </div>
+
+    <p class="subcat-label">Cosmological arguments</p>
+
+    <div class="argument-card" onclick="toggleArg(this)">
+      <div class="argument-header">
+        <div class="argument-num">01</div>
+        <div class="argument-info">
+          <div class="argument-title">The Kalam Cosmological Argument</div>
+          <div class="argument-tagline">Everything that begins to exist has a cause — including the universe</div>
+        </div>
+        <div class="argument-meta">
+          <span class="diff-badge diff-beginner">&#127807; Beginner</span>
+          <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="argument-body">
+        <div class="tier-label-free">Free</div>
+        <div class="plain-english"><strong>In plain English:</strong> Everything that starts to exist was caused by something. The universe started to exist. So the universe was caused by something — and that something had to exist outside space, time, and matter. That sounds a lot like God.</div>
+        <div class="argument-premise">
+          <div class="argument-premise-label">The three steps</div>
+          <ol>
+            <li>Everything that begins to exist has a cause — you can&apos;t get something from nothing.</li>
+            <li>The universe began to exist — modern science confirms it had a starting point.</li>
+            <li>Therefore the universe has a cause that exists outside itself — outside space, time, and matter.</li>
+          </ol>
+        </div>
+        <p class="argument-explanation">Think of it this way. Imagine you walked into a room and found a ball sitting on a table. You&apos;d naturally ask — where did it come from? Now imagine the entire universe is that ball. The universe had a beginning — scientists call it the Big Bang — which means something caused it. But that cause had to exist before space, time, matter, and energy existed. The only thing that fits that description is something timeless, spaceless, and incredibly powerful. Christians say that&apos;s God. Philosopher William Lane Craig has made this one of the most discussed arguments in modern philosophy.</p>
+        <div class="argument-objections">
+          <div class="argument-objections-title">Questions people ask</div>
+          <div class="objection-row">
+            <span class="objection-q">Q</span>
+            <span class="objection-a"><strong>But who made God?</strong> — The argument only applies to things that begin to exist. God, by definition, never started to exist — he&apos;s eternal. So he doesn&apos;t need a cause.</span>
+          </div>
+          <div class="objection-row">
+            <span class="objection-q">Q</span>
+            <span class="objection-a"><strong>What about quantum physics?</strong> — Quantum particles appear from a quantum vacuum, which already exists and follows physical laws. That&apos;s not nothing — that&apos;s something. The argument is about absolute nothing.</span>
+          </div>
+        </div>
+        <div class="pro-deepdive">
+          <div class="pro-deepdive-header">
+            <span class="pro-deepdive-badge">Pro — Deep Dive</span>
+            <span class="pro-deepdive-title">Full analysis, BGV theorem, and extended objections</span>
+          </div>
+          <div class="simple-toggle" onclick="toggleSimple(&apos;kalam&apos;)">
+            <span class="simple-toggle-icon">&#128161;</span>
+            <span class="simple-toggle-text">Explain this simply first</span>
+            <span class="simple-toggle-hint">Toggle</span>
+          </div>
+          <div class="simple-summary" id="simple-kalam">
+            <div class="simple-summary-text">The universe started to exist — even scientists agree on that. Anything that starts to exist was caused by something. So the universe was caused by something outside itself — something that existed before space, time and matter. That something had to be spaceless, timeless, immensely powerful, and — since it chose to create — personal. Christians call that God.</div>
+          </div>
+          <p class="pro-section-label">The BGV theorem</p>
+          <p class="pro-text">The Borde-Guth-Vilenkin (BGV) theorem, developed in 2003 by three secular cosmologists, proves that any universe that has been on average expanding throughout its history cannot be past-eternal — it must have had an absolute beginning. Crucially, Alexander Vilenkin — not a theist — has stated plainly: "All the evidence we have says that the universe had a beginning." This makes the second premise of the Kalam extremely well supported by modern cosmology.</p>
+          <p class="pro-section-label">What the cause must be like</p>
+          <p class="pro-text">The cause of the universe must exist outside space, time, matter and energy — since it caused all of these. It must therefore be: spaceless, timeless, immaterial, enormously powerful, and — since it brought a temporal universe into existence from a timeless state — personal. These properties correspond precisely to the classical conception of God in theistic philosophy.</p>
+          <div class="argument-footer">
+            <a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena &rarr;</a>
+            <a href="ask-anything.html" class="arg-action arg-action-secondary">Ask the AI tutor</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="argument-card" onclick="toggleArg(this)">
+      <div class="argument-header">
+        <div class="argument-num">02</div>
+        <div class="argument-info">
+          <div class="argument-title">The Fine-Tuning Argument</div>
+          <div class="argument-tagline">The physical constants of the universe are calibrated to extraordinary precision for life</div>
+        </div>
+        <div class="argument-meta">
+          <span class="diff-badge diff-intermediate">&#128218; Intermediate</span>
+          <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="argument-body">
+        <div class="tier-label-free">Free</div>
+        <div class="plain-english"><strong>In plain English:</strong> The universe runs on precise settings — like dials on a control panel. If any of those dials were even slightly off, no stars, no planets, no life would exist. The precision is so exact that many scientists say it looks designed. Christians say it was.</div>
+        <div class="argument-premise">
+          <div class="argument-premise-label">The three steps</div>
+          <ol>
+            <li>The universe has incredibly precise physical settings — if any were even slightly different, life would be impossible.</li>
+            <li>This extreme precision is not the result of chance or necessity.</li>
+            <li>The best explanation is that the universe was intentionally designed for life.</li>
+          </ol>
+        </div>
+        <p class="argument-explanation">Imagine finding a control panel with 20 dials, each of which needs to be set to exactly the right position for the room to light up. You walk in and every single dial is perfect. Would you think that happened by accident? The universe has physical constants — like the strength of gravity and how strongly atoms bond together — that work exactly like those dials. Change any of them even slightly, and the universe collapses, or flies apart, or never forms stars or planets. Physicist Freeman Dyson put it this way: "The universe somehow knew we were coming."</p>
+        <div class="argument-objections">
+          <div class="argument-objections-title">Questions people ask</div>
+          <div class="objection-row">
+            <span class="objection-q">Q</span>
+            <span class="objection-a"><strong>What about the multiverse?</strong> — If there are infinite universes, one of them will be fine-tuned by chance. But this requires an enormous, untestable assumption. A designer is a simpler explanation. And even if a multiverse exists, something had to generate it — fine-tuning doesn&apos;t disappear.</span>
+          </div>
+        </div>
+        <div class="pro-deepdive">
+          <div class="pro-deepdive-header">
+            <span class="pro-deepdive-badge">Pro — Deep Dive</span>
+            <span class="pro-deepdive-title">The numbers, Robin Collins&apos;s work, and the multiverse objection in full</span>
+          </div>
+          <p class="pro-section-label">The numbers</p>
+          <p class="pro-text">Physicist Robin Collins has done the most rigorous work on fine-tuning. The cosmological constant — the energy density of empty space — is fine-tuned to 1 part in 10 to the power of 120. The ratio of electromagnetic force to gravity is fine-tuned to 1 part in 10 to the power of 40. These are not margins of error — they are the difference between a universe that can sustain life and one that cannot. The probability of these values occurring by chance is, by any reasonable measure, functionally zero.</p>
+          <p class="pro-section-label">Why the multiverse doesn&apos;t solve it</p>
+          <p class="pro-text">The multiverse hypothesis requires: (1) the existence of a universe-generating mechanism, (2) that this mechanism is capable of producing the range of physical constants we observe, and (3) that it actually produces infinitely many universes. None of these are established. The multiverse is not a scientific theory — it is a philosophical response to fine-tuning. It also generates the "Boltzmann Brain" problem and fails to explain the fine-tuning of the multiverse-generating mechanism itself.</p>
+          <div class="argument-footer">
+            <a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="argument-card" onclick="toggleArg(this)">
+      <div class="argument-header">
+        <div class="argument-num">03</div>
+        <div class="argument-info">
+          <div class="argument-title">The Moral Argument</div>
+          <div class="argument-tagline">Objective moral values require a transcendent foundation</div>
+        </div>
+        <div class="argument-meta">
+          <span class="diff-badge diff-beginner">&#127807; Beginner</span>
+          <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="argument-body">
+        <div class="tier-label-free">Free</div>
+        <div class="plain-english"><strong>In plain English:</strong> We all know some things are genuinely wrong — not just unpopular, but actually wrong. Torturing children. Genocide. Slavery. But if there&apos;s no God, moral rules are just things humans invented. If morality is real and objective, it needs a foundation. God is that foundation.</div>
+        <div class="argument-premise">
+          <div class="argument-premise-label">The three steps</div>
+          <ol>
+            <li>Objective moral values — things that are genuinely right or wrong regardless of what anyone thinks — exist.</li>
+            <li>Without God, there&apos;s no grounding for objective morality — it would just be personal or cultural preference.</li>
+            <li>Therefore God exists as the foundation of real, objective moral truth.</li>
+          </ol>
+        </div>
+        <p class="argument-explanation">Most people feel that some things are genuinely wrong. Not just "I don&apos;t like it" wrong, but actually, truly wrong. The Holocaust was evil, not just unfashionable. But if there&apos;s no God, those feelings are just evolution and culture. There&apos;s no real rule book — just preferences that helped our ancestors survive. Note: this argument is not saying atheists can&apos;t be good people. Of course they can. The argument is about what makes something objectively right or wrong, not who behaves well.</p>
+        <div class="argument-objections">
+          <div class="argument-objections-title">Questions people ask</div>
+          <div class="objection-row">
+            <span class="objection-q">Q</span>
+            <span class="objection-a"><strong>Atheists can be moral without God.</strong> — Correct — this argument is not about behaviour. It&apos;s about what makes an action objectively right or wrong. Even if atheists behave morally, the question is what grounds the objectivity of moral facts.</span>
+          </div>
+        </div>
+        <div class="pro-deepdive">
+          <div class="pro-deepdive-header">
+            <span class="pro-deepdive-badge">Pro — Deep Dive</span>
+            <span class="pro-deepdive-title">The grounding problem, evolutionary debunking, and William Lane Craig</span>
+          </div>
+          <p class="pro-section-label">The grounding problem</p>
+          <p class="pro-text">The core question is not whether moral claims are true, but what makes them true. On atheism, moral facts would need to be grounded in something — human preferences, evolutionary pressures, social contracts — none of which are objective. On theism, moral facts are grounded in the nature of a perfectly good God. This doesn&apos;t make morality arbitrary (the Euthyphro dilemma) because God&apos;s nature itself is the standard of goodness — he doesn&apos;t follow a moral law, he is the moral law.</p>
+          <div class="argument-footer">
+            <a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="argument-card" onclick="toggleArg(this)">
+      <div class="argument-header">
+        <div class="argument-num">04</div>
+        <div class="argument-info">
+          <div class="argument-title">The Argument from Consciousness</div>
+          <div class="argument-tagline">The existence of mind cannot be explained by matter alone</div>
+        </div>
+        <div class="argument-meta">
+          <span class="diff-badge diff-advanced">&#127891; Advanced</span>
+          <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="argument-body">
+        <div class="tier-label-free">Free</div>
+        <div class="plain-english"><strong>In plain English:</strong> Science can describe what happens in your brain when you taste coffee — electrical signals, chemical reactions. But it can&apos;t explain why there&apos;s something it feels like to taste coffee. That inner experience is almost impossible to explain if the universe is just physical stuff. But if God is a conscious mind who made the universe, minds and experiences make perfect sense.</div>
+        <div class="argument-premise">
+          <div class="argument-premise-label">The three steps</div>
+          <ol>
+            <li>You have inner experiences — the feeling of warmth, the colour red, the taste of something sweet. These are real.</li>
+            <li>No purely physical explanation can explain why physical processes give rise to inner experience.</li>
+            <li>A universe created by a conscious God is exactly what you&apos;d expect to produce conscious beings.</li>
+          </ol>
+        </div>
+        <p class="argument-explanation">Philosopher David Chalmers calls this the "hard problem of consciousness." Even a complete neuroscientific account of all brain processes would leave unexplained why those processes are accompanied by inner experience. If the universe is just matter and energy with no mind behind it, consciousness is deeply strange. But if the universe was created by a personal, conscious God — then the existence of minds makes complete sense.</p>
+        <div class="pro-deepdive">
+          <div class="pro-deepdive-header">
+            <span class="pro-deepdive-badge">Pro — Deep Dive</span>
+            <span class="pro-deepdive-title">The hard problem, qualia, and the theistic explanation</span>
+          </div>
+          <p class="pro-section-label">Qualia and the explanatory gap</p>
+          <p class="pro-text">Qualia are the subjective, felt qualities of experience — the redness of red, the painfulness of pain. Frank Jackson&apos;s "Mary&apos;s Room" thought experiment illustrates this: Mary knows all physical facts about colour vision but learns something new when she first sees red. That something new — a quale — is not captured by any physical description. This explanatory gap between physical processes and subjective experience is genuine and has not been bridged by neuroscience despite decades of effort.</p>
+          <div class="argument-footer">
+            <a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+
+  
+
+  <div
+  </div>
+
+  <div 
+  </div>
+
+  <div id="resurrection" class="section">
+<div class="cat-intro">
+        <div class="cat-intro-text">
+          <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 2 of 5</p>
+          <h2 class="cat-intro-title">Evidence for <em>the Resurrection</em></h2>
+          <p class="cat-intro-desc">The resurrection of Jesus is the cornerstone of the Christian faith. These arguments draw on historical methodology, ancient sources, and the minimal facts approach to make a compelling historical case.</p>
+        </div>
+        <div class="cat-count" style="color:var(--navy-500);">
+          <span class="cat-count-num">64</span>
+          <span class="cat-count-lbl">Arguments</span>
+        </div>
+      </div>
+
+      <p class="subcat-label">Minimal facts approach</p>
+      <div class="arguments-list">
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">01</div>
+            <div class="argument-info">
+              <div class="argument-title">The Minimal Facts Argument</div>
+              <div class="argument-tagline">Five facts accepted by virtually all historians — Gary Habermas</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-beginner" title="Beginner — no prior knowledge needed. Plain English throughout.">🌱 Beginner</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="argument-premise">
+              <div class="argument-premise-label">The five minimal facts</div>
+              <ol>
+                <li>Jesus died by crucifixion.</li>
+                <li>His disciples believed he rose and appeared to them.</li>
+                <li>Paul, a persecutor of Christians, was suddenly converted.</li>
+                <li>James, a sceptic and Jesus's brother, was suddenly converted.</li>
+                <li>The tomb was empty.</li>
+              </ol>
+            </div>
+            <p style="font-family:var(--font-ui);font-size:0.82rem;background:var(--navy-50);border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 4px 4px 0;color:var(--text-mid);margin-bottom:1.25rem;line-height:1.6;"><strong>In plain English:</strong> You don't need to trust the Bible to investigate the resurrection. There are five historical facts that even atheist historians accept. Historian Gary Habermas asks: what's the best explanation for all five? He argues the resurrection fits better than any other theory — and he's spent 40 years testing every alternative.</p>
+            <p class="argument-explanation">Gary Habermas has a brilliant approach to the resurrection. Instead of saying "trust the Bible," he only uses facts that virtually all serious historians — Christian, atheist, and agnostic — agree on. Then he asks: what theory best explains them all? The stolen body theory? It can't explain why Paul and James — who had every reason to stay hostile to Christianity — completely changed their lives. The hallucination theory? It can't explain the empty tomb. The legend theory? It developed too fast — the creed in 1 Corinthians 15 was being recited when eyewitnesses were still alive. The resurrection is the one explanation that accounts for everything. That's not blind faith — it's following the evidence where it leads.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections answered</div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>The disciples hallucinated.</strong> — Group hallucinations are not psychologically credible. More importantly, hallucinations don't explain the empty tomb, the conversion of Paul, or the conversion of the sceptic James.</span>
+              </div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>The disciples stole the body.</strong> — This doesn't explain Paul's conversion — he was actively persecuting Christians. It also doesn't explain why the disciples would willingly die for what they knew was a lie.</span>
+              </div>
+            </div>
+            <div class="argument-footer">
+              <a href="#" class="arg-action arg-action-primary">Practice in Debate Arena →</a>
+              <a href="#" class="arg-action arg-action-secondary">Further reading</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">02</div>
+            <div class="argument-info">
+              <div class="argument-title">The Empty Tomb — Historical Evidence</div>
+              <div class="argument-tagline">Multiple independent sources confirm the tomb was found empty</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-intermediate" title="Intermediate — helpful if you've read the basics first.">📚 Intermediate</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="tier-label-free">Free</div>
+
+            <p style="font-family:var(--font-ui);font-size:0.82rem;background:var(--navy-50);border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 4px 4px 0;color:var(--text-mid);margin-bottom:1.25rem;line-height:1.6;"><strong>In plain English:</strong> Three days after Jesus was buried, his tomb was found empty. The most powerful evidence? His enemies — who wanted to shut down Christianity — never denied the tomb was empty. Instead, they said the disciples stole the body. But if you're explaining why the tomb is empty, you're already admitting it was empty.</p>
+
+            <div class="argument-premise">
+              <div class="argument-premise-label">The key points</div>
+              <ol>
+                <li>Jesus was buried in a known tomb — provided by a named man, Joseph of Arimathea.</li>
+                <li>Three days later, multiple people found it empty.</li>
+                <li>The Jewish leaders — who wanted to stop the resurrection story — accused the disciples of stealing the body instead of saying "no, the body is still there."</li>
+                <li>That admission that the tomb was empty is some of the strongest evidence we have.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">If Jesus's body was still in the tomb, the Jewish authorities had the perfect weapon to stop Christianity instantly. They could have walked to the tomb, pointed to the body, and ended the movement on day one. They didn't do that. Instead, the account in Matthew's Gospel records that they bribed soldiers to say the disciples had stolen the body. Think about what that means. When someone offers an alternative explanation for why something happened, they're already conceding the thing happened. The Jewish leaders conceded the tomb was empty — they just offered a different explanation. Christians say the real explanation is that Jesus rose from the dead.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections — overview</div>
+              <div class="objection-row"><span class="objection-q">Q</span><span class="objection-a"><strong>The disciples went to the wrong tomb.</strong> — This fails because multiple people — including Joseph of Arimathea who provided the tomb — knew exactly where it was. The Jewish authorities also knew where it was and could have produced the body. The wrong-tomb theory requires everyone to have forgotten where the tomb was.</span></div>
+              <div class="objection-row"><span class="objection-q">Q</span><span class="objection-a"><strong>The disciples stole the body.</strong> — This is the oldest counter-explanation, recorded in Matthew 28:11-15. It requires the disciples to have died for what they knew was a lie. People die for beliefs they think are true — they don't die for what they know to be fabricated.</span></div>
+            </div>
+            <div class="pro-deepdive">
+              <div class="pro-deepdive-header">
+                <div class="pro-deepdive-badge">Pro — Deep Dive</div>
+                <div class="pro-deepdive-title">Full historical analysis and all alternative theories examined</div>
+              </div>
+              <button class="simple-toggle" onclick="toggleSimple('emptytomb')">
+                <span class="simple-toggle-icon">💡</span>
+                <span class="simple-toggle-text">Explain this simply first</span>
+                <span class="simple-toggle-hint">Toggle ↕</span>
+              </button>
+              <div class="simple-summary" id="simple-emptytomb">
+                <div class="simple-summary-text">Three days after Jesus was buried, the tomb was found empty. The Jewish authorities never denied this — they just claimed the disciples had stolen the body. But think about that. If you're explaining why the tomb is empty, you're already admitting it was empty. The Jewish leaders conceded the empty tomb — they just offered a different explanation. Christians say the real explanation is that Jesus rose.</div>
+              </div>
+              <div class="pro-section-label">The multiple attestation of the empty tomb</div>
+              <p class="pro-text">The empty tomb is attested in multiple independent sources. Mark's Gospel — almost certainly the earliest — records the empty tomb tradition. Matthew, Luke, and John all independently record it with different details suggesting independent sources rather than copying. Paul's 1 Corinthians 15 creed — dated to within 2-5 years of the crucifixion — implicitly affirms the empty tomb by stating that Jesus "was buried" and then "was raised." In Jewish thought, resurrection was always bodily — the same body that was buried. Paul's use of resurrection language necessarily implies an empty tomb. The gospel of the first Christians was preached in Jerusalem — exactly where the tomb was located. If the tomb were not empty, the Jewish authorities would simply have produced the body and ended the movement.</p>
+              <div class="pro-section-label">Enemy attestation — the most powerful evidence</div>
+              <p class="pro-text">The most compelling evidence for the empty tomb comes from the enemies of Christianity. Matthew 28:11-15 records that the Jewish chief priests bribed the soldiers to say the disciples stole the body. This counter-story is itself evidence for the empty tomb — it presupposes that the tomb was empty and offers an alternative explanation for why. The Jewish authorities never claimed the body was still in the tomb. They never produced the body. Instead they were forced to explain the empty tomb. This is enemy attestation of the highest order.</p>
+              <div class="pro-section-label">Women as the primary witnesses</div>
+              <p class="pro-text">All four Gospels record women as the primary witnesses to the empty tomb. In first-century Jewish culture, women's testimony was not accepted in legal proceedings. If the early Christians were fabricating the resurrection story, they would never have chosen women as the primary witnesses — it would undermine the credibility of the account in their cultural context. The fact that women are consistently named as the first witnesses strongly suggests the Gospel writers were recording what actually happened rather than inventing a story designed to persuade.</p>
+              <div class="pro-section-label">Alternative theories examined</div>
+              <p class="pro-text"><strong>Wrong tomb theory:</strong> Requires that Joseph of Arimathea — who provided the tomb — forgot where it was, that the disciples forgot, that the Jewish authorities forgot, and that no one could find the correct tomb in a small city within days of the burial. Historically implausible.<br><br><strong>Swoon theory:</strong> Jesus survived the crucifixion, revived in the tomb, pushed away the stone, overpowered the guards, and appeared to his disciples in sufficient health to convince them he had conquered death. Roman soldiers were highly skilled at executing criminals — they verified death before releasing bodies. The spear thrust into Jesus's side (John 19:34) and the water and blood that flowed out indicate death had already occurred.<br><br><strong>Hallucination theory:</strong> The disciples hallucinated the appearances but the tomb was actually occupied. This fails because the Jewish authorities could simply have produced the body. It also requires mass hallucinations — which are not documented in psychological literature.</p>
+              <div class="argument-footer" style="margin-top:1.5rem;"><a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena →</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">03</div>
+            <div class="argument-info">
+              <div class="argument-title">Paul's Conversion and the Early Creed</div>
+              <div class="argument-tagline">1 Corinthians 15 preserves a creed dating within years of the crucifixion</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-advanced" title="Advanced — some familiarity with philosophy or theology helpful.">🎓 Advanced</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="tier-label-free">Free</div>
+
+            <p style="font-family:var(--font-ui);font-size:0.82rem;background:var(--navy-50);border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 4px 4px 0;color:var(--text-mid);margin-bottom:1.25rem;line-height:1.6;"><strong>In plain English:</strong> Paul was a man who hunted and killed Christians — and then became one of the most passionate Christians in history. He says it's because he personally saw the risen Jesus. And he's not alone — he quotes a list of resurrection witnesses that dates to within a few years of the crucifixion, when eyewitnesses were still alive.</p>
+
+            <div class="argument-premise">
+              <div class="argument-premise-label">The key points</div>
+              <ol>
+                <li>Paul actively persecuted and killed Christians before his conversion — he had every reason to stay opposed to Christianity.</li>
+                <li>He claims a dramatic encounter with the risen Jesus completely changed him.</li>
+                <li>He then quotes a list of resurrection witnesses in 1 Corinthians 15 — a tradition scholars date to within 2-5 years of the crucifixion.</li>
+                <li>He explicitly says most of those 500+ witnesses were still alive and could be questioned.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">Saul of Tarsus was the ancient world's equivalent of an anti-Christian extremist. He stood by approving as Stephen was stoned to death. He dragged Christians from their homes. He described himself as one of Christianity's greatest enemies. And then he became one of its greatest advocates — writing most of the New Testament and eventually dying for his faith. His explanation? He encountered the risen Jesus on the road to Damascus. Now, people change their minds for lots of reasons. But they don't usually swap from killing members of a movement to dying for it — unless something extraordinary happened. Paul also quotes what scholars believe is one of the earliest Christian documents we have — a creed listing resurrection witnesses, probably composed within 2-5 years of the crucifixion itself. It's so early that legend simply didn't have time to develop.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections — overview</div>
+              <div class="objection-row"><span class="objection-q">Q</span><span class="objection-a"><strong>Paul never met Jesus — he only had a vision.</strong> — Paul describes his experience on the Damascus road using the same Greek word (ophthē <span style="font-style:italic;opacity:0.7;font-size:0.9em;">(the Greek word meaning "appeared to")</span> — "appeared to") as the other resurrection appearances in the creed. He includes himself in the list of resurrection witnesses. Paul also personally met Peter and James — men who had known the earthly Jesus — and his account was confirmed by them.</span></div>
+            </div>
+            <div class="pro-deepdive">
+              <div class="pro-deepdive-header">
+                <div class="pro-deepdive-badge">Pro — Deep Dive</div>
+                <div class="pro-deepdive-title">The creed's early dating, Paul's conversion, and James the sceptic</div>
+              </div>
+              <button class="simple-toggle" onclick="toggleSimple('paulsconv')">
+                <span class="simple-toggle-icon">💡</span>
+                <span class="simple-toggle-text">Explain this simply first</span>
+                <span class="simple-toggle-hint">Toggle ↕</span>
+              </button>
+              <div class="simple-summary" id="simple-paulsconv">
+                <div class="simple-summary-text">Paul was a man who hunted and killed Christians — then became one of their greatest advocates and died for his faith. He says it's because he personally encountered the risen Jesus. He also quotes a list of resurrection witnesses in 1 Corinthians 15 that scholars date to within 2-5 years of the crucifixion — before legend could develop. Paul was even invited to check his account against eyewitnesses like Peter and James.</div>
+              </div>
+              <div class="pro-section-label">Dating the creed — within years of the crucifixion</div>
+              <p class="pro-text">Paul wrote 1 Corinthians approximately 55 AD. But the creed he quotes predates the letter — Paul "received" it, meaning it was already established tradition. When did Paul receive it? In Galatians 1:18, Paul says he visited Peter in Jerusalem three years after his conversion. His conversion is dated to approximately 33-35 AD. This means Paul received this creed — and had it confirmed by eyewitnesses including Peter and James — within 3-7 years of the crucifixion itself. New Testament scholar James Dunn calls this "historical bedrock." This is far too early for legendary development to have replaced historical memory. The creed was circulating when the events were within living memory and when the primary witnesses were still alive and available for questioning.</p>
+              <div class="pro-section-label">Paul's conversion — the hostile witness</div>
+              <p class="pro-text">Saul of Tarsus was a Pharisee, a Roman citizen, and — by his own admission — a zealous persecutor of the early church. He described himself as "breathing threats and murder against the disciples of the Lord" (Acts 9:1). He witnessed and approved the stoning of Stephen. He had every cultural, theological, and professional reason to oppose Christianity. His conversion on the Damascus road — which he describes as an appearance of the risen Jesus — is one of the most historically significant conversions in history. Whatever happened to Paul, it was dramatic enough to reverse his entire trajectory. The resurrection appearance is the most natural explanation for a conversion of this character.</p>
+              <div class="pro-section-label">James the sceptic</div>
+              <p class="pro-text">James the brother of Jesus is described in the Gospels as a sceptic during Jesus's ministry — John 7:5 states explicitly that "even his own brothers did not believe in him." Yet after the resurrection, James became a leader of the Jerusalem church and was eventually martyred for his belief in Jesus's resurrection. Paul includes an appearance to James specifically in the 1 Corinthians 15 creed. The conversion of a family member who was sceptical of Jesus's ministry is one of the most psychologically compelling pieces of evidence for the resurrection. People don't die for a lie about their brother whom they watched grow up.</p>
+              <div class="scholar-row"><div class="scholar-initial" style="background:#E1F5EE;color:#0F6E56;">JD</div><div class="scholar-info"><div class="scholar-name">James Dunn — Durham University</div><div class="scholar-quote">"This is historical bedrock, facts about the early Christian movement which can be verified and which demand to be explained." — <em>Jesus Remembered</em></div></div></div>
+              <div class="argument-footer" style="margin-top:1.5rem;"><a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena →</a></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pro-banner">
+        <div class="pro-banner-text">
+          <div class="pro-banner-title">61 more resurrection arguments</div>
+          <div class="pro-banner-sub">Unlock the full library including the Shroud of Turin evidence, Roman crucifixion records, and responses to all major sceptical theories.</div>
+        </div>
+        <a href="index.html#pricing" class="pro-banner-btn">Unlock Pro — $8/mo</a>
+      
+    
+  <div
+  </div>
+
+  <div 
+  </div>
+
+  <div id="jesus" class="section">
+<div class="cat-intro">
+        <div class="cat-intro-text">
+          <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 3 of 5</p>
+          <h2 class="cat-intro-title">The person of <em>Jesus Christ</em></h2>
+          <p class="cat-intro-desc">Who exactly was Jesus? These arguments look at three questions: Did he really exist? Did the Old Testament predict him? And did he actually claim to be God? You might be surprised how strong the historical evidence is — even from sources that had no reason to support Christianity.</p>
+        </div>
+        <div class="cat-count" style="color:var(--navy-500);">
+          <span class="cat-count-num">64</span>
+          <span class="cat-count-lbl">Arguments</span>
+        </div>
+      </div>
+
+      <!-- SUBCATEGORY: HISTORICAL JESUS -->
+      <p class="subcat-label">The Historical Jesus</p>
+      <div class="arguments-list">
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">01</div>
+            <div class="argument-info">
+              <div class="argument-title">The Historical Existence of Jesus — Non-Christian Sources</div>
+              <div class="argument-tagline">Secular historians confirm the existence of Jesus independently of the New Testament</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-beginner" title="Beginner — no prior knowledge needed. Plain English throughout.">🌱 Beginner</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="tier-label-free">Free</div>
+
+            <p style="font-family:var(--font-ui);font-size:0.82rem;background:var(--navy-50);border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 4px 4px 0;color:var(--text-mid);margin-bottom:1.25rem;line-height:1.6;"><strong>In plain English:</strong> Some people claim Jesus never existed at all. But this view is rejected by virtually every serious historian — including atheists. Roman and Jewish writers who had no reason to support Christianity still mentioned Jesus. The evidence is actually stronger than for many famous figures of ancient history.</p>
+
+            <div class="argument-premise">
+              <div class="argument-premise-label">The key sources</div>
+              <ol>
+                <li>Tacitus — a Roman historian who disliked Christians — confirmed Jesus was executed under Pontius Pilate.</li>
+                <li>Josephus — a Jewish historian — referred to Jesus and his brother James in his historical records.</li>
+                <li>Pliny the Younger — a Roman governor — described Christians worshipping Jesus as God within 80 years of the crucifixion.</li>
+                <li>Even Jesus's enemies never denied he existed — they disputed his claims, not his existence.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">Here's the thing — we don't have YouTube footage of Julius Caesar either. We accept ancient historical figures based on documents and records from their time. By that same standard, the evidence for Jesus is actually very strong. The Roman historian Tacitus — who had zero sympathy for Christianity, calling it a "destructive superstition" — still confirmed that Jesus was executed by Pontius Pilate during the reign of Tiberius. That's exactly what the Gospels say. Even Bart Ehrman, an agnostic New Testament scholar who has written books arguing against traditional Christianity, wrote an entire book defending the historical existence of Jesus — because the evidence is that clear. The people who say Jesus never existed are not following the evidence. They're rejecting it.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections — overview</div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>The Josephus passages were interpolated by Christians.</strong> — Scholars acknowledge the longer Testimonium Flavianum <span style="font-style:italic;opacity:0.7;font-size:0.9em;">(Josephus's reference to Jesus)</span> passage was likely embellished, but the shorter reference to James "the brother of Jesus called Christ" is widely accepted as authentic. Tacitus's reference in the Annals is also considered genuine.</span>
+              </div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>Paul never mentions a historical Jesus, only a spiritual one.</strong> — Paul explicitly mentions Jesus's crucifixion under Pilate, his burial, his post-resurrection appearances, and names specific eyewitnesses including Peter and James the Lord's brother whom Paul personally met (Galatians 1:18-19).</span>
+              </div>
+            </div>
+
+            <div class="pro-deepdive">
+              <div class="pro-deepdive-header">
+                <div class="pro-deepdive-badge">Pro — Deep Dive</div>
+                <div class="pro-deepdive-title">Full analysis of every non-Christian source with scholarly assessment</div>
+              </div>
+              <button class="simple-toggle" onclick="toggleSimple('nonchristian')">
+                <span class="simple-toggle-icon">💡</span>
+                <span class="simple-toggle-text">Explain this simply first</span>
+                <span class="simple-toggle-hint">Toggle ↕</span>
+              </button>
+              <div class="simple-summary" id="simple-nonchristian">
+                <div class="simple-summary-text">The claim that Jesus never existed is rejected by virtually every serious historian, including atheists. Roman and Jewish writers with no reason to support Christianity still mentioned him. Tacitus described Jesus being executed by Pontius Pilate. Josephus referred to him twice. Even Bart Ehrman — an agnostic who has spent his career critiquing the Bible — wrote an entire book defending the historical existence of Jesus.</div>
+              </div>
+
+              <div class="pro-section-label">Tacitus — Annals 15.44 (c. 116 AD)</div>
+              <p class="pro-text">The Roman historian Tacitus, writing around 116 AD, describes Nero's persecution of Christians following the great fire of Rome in 64 AD. He writes that the Christians derived their name from "Christus, who was executed at the hands of the procurator Pontius Pilate in the reign of Tiberius." This passage is considered authentic by virtually all scholars — Tacitus was not sympathetic to Christianity, describing it as a "destructive superstition," making fabrication or interpolation extremely unlikely. It independently confirms the crucifixion under Pilate, exactly as the Gospels record.</p>
+
+              <div class="pro-section-label">Josephus — Antiquities of the Jews (c. 93 AD)</div>
+              <p class="pro-text">The Jewish historian Josephus refers to Jesus twice in his Antiquities. The shorter reference — describing the stoning of "James the brother of Jesus called Christ" — is accepted as authentic by the vast majority of scholars across the ideological spectrum. The longer Testimonium Flavianum passage is more complex: most scholars believe it contains authentic Josephan material that was later embellished by Christian scribes. The Arabic version of Josephus, discovered in the 10th century, preserves what appears to be a less-embellished form of the passage, still referring to Jesus as a wise man who performed surprising deeds.</p>
+
+              <div class="pro-section-label">Pliny the Younger — Letter to Trajan (c. 112 AD)</div>
+              <p class="pro-text">The Roman governor Pliny the Younger wrote to Emperor Trajan around 112 AD describing his investigation of Christians in Bithynia. He records that Christians "sing hymns to Christ as to a god" and meet on a fixed day before dawn. While this doesn't confirm biographical details about Jesus, it confirms that within 80 years of the crucifixion, Christians in Asia Minor were worshipping him as divine — far too early for legend to have entirely displaced historical memory.</p>
+
+              <div class="pro-section-label">Mara bar Serapion — Letter from prison (c. late 1st century)</div>
+              <p class="pro-text">A Syrian philosopher writing from prison to his son refers to "the wise king of the Jews" who was executed but whose teachings live on — most scholars identify this as a reference to Jesus. This represents an independent non-Roman, non-Jewish source confirming the broad outlines of Jesus's execution and the survival of his movement.</p>
+
+              <div class="pro-section-label">The criterion of embarrassment and enemy attestation</div>
+              <p class="pro-text">Two important historical criteria further confirm the historical Jesus. The criterion of embarrassment notes that early Christian sources contain details that would have been embarrassing if invented — Jesus's baptism by John (implying subordination), his crucifixion as a criminal (a stumbling block to Jews), his Galilean origins, and the flight of his disciples. No one inventing a religious founder would include these details. Enemy attestation notes that even Jesus's enemies — Jewish leaders and Roman authorities — never denied he existed; they disputed his claims, not his existence. The Talmud contains references to Jesus that are hostile but presuppose his historical reality.</p>
+
+              <div class="pro-section-label">Scholars across the ideological spectrum</div>
+              <div class="scholar-row">
+                <div class="scholar-initial" style="background:#EEEDFE;color:#3C3489;">BL</div>
+                <div class="scholar-info"><div class="scholar-name">Bart Ehrman — Agnostic NT Scholar, UNC Chapel Hill</div><div class="scholar-quote">"Whatever else you might think about Jesus, he certainly existed. The evidence for his historical existence is overwhelming." — <em>Did Jesus Exist?</em> (2012)</div></div>
+              </div>
+              <div class="scholar-row">
+                <div class="scholar-initial" style="background:#E1F5EE;color:#0F6E56;">MG</div>
+                <div class="scholar-info"><div class="scholar-name">Michael Grant — Classical Historian</div><div class="scholar-quote">"In terms of historical evidence, the sources for Jesus are as good or better than for most figures of Roman antiquity." — <em>Jesus: An Historian's Review</em></div></div>
+              </div>
+
+              <div class="argument-footer" style="margin-top:1.5rem;">
+                <a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena →</a>
+                <a href="video-library.html" class="arg-action arg-action-secondary">Watch related videos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">02</div>
+            <div class="argument-info">
+              <div class="argument-title">The Criterion of Multiple Attestation</div>
+              <div class="argument-tagline">Events confirmed by multiple independent sources are more likely to be historical</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-intermediate" title="Intermediate — helpful if you've read the basics first.">📚 Intermediate</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="tier-label-free">Free</div>
+            <div class="argument-premise">
+              <div class="argument-premise-label">The argument in brief</div>
+              <ol>
+                <li>Historians grant greater credibility to events attested by multiple independent sources.</li>
+                <li>Many key facts about Jesus — his baptism, his crucifixion, his reputation as a healer, his resurrection appearances — are attested by multiple independent sources.</li>
+                <li>Multiple independent attestation therefore provides strong historical grounds for accepting these facts about Jesus.</li>
+              </ol>
+            </div>
+            <p style="font-family:var(--font-ui);font-size:0.82rem;background:var(--navy-50);border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 4px 4px 0;color:var(--text-mid);margin-bottom:1.25rem;line-height:1.6;"><strong>In plain English:</strong> Historians trust events more when multiple independent sources all mention them. The crucifixion of Jesus is mentioned by four separate Gospel writers, Paul, Tacitus, and Josephus — people who didn't copy from each other. The more independent sources confirm something, the more confident historians can be it really happened.</p>
+            <p class="argument-explanation">If you hear a rumour from one person, you might be sceptical. If you hear the same thing from five people who don't know each other and had no chance to coordinate, you start to believe it. Historians use the same instinct — they call it multiple attestation. A historical event attested in multiple independent sources is much more likely to be real. The crucifixion of Jesus is attested in Mark's Gospel, Paul's letters, Tacitus, and Josephus — sources that are independent of each other. The resurrection appearances are attested in multiple Gospel traditions and Paul's early creed. This gives historians good reasons to take these events seriously as history, not just religious story.</p>
+            <div class="pro-deepdive">
+              <div class="pro-deepdive-header">
+                <div class="pro-deepdive-badge">Pro — Deep Dive</div>
+                <div class="pro-deepdive-title">Key facts about Jesus multiply attested across independent sources</div>
+              </div>
+              <button class="simple-toggle" onclick="toggleSimple('multipleatt')">
+                <span class="simple-toggle-icon">💡</span>
+                <span class="simple-toggle-text">Explain this simply first</span>
+                <span class="simple-toggle-hint">Toggle ↕</span>
+              </button>
+              <div class="simple-summary" id="simple-multipleatt">
+                <div class="simple-summary-text">Historians trust events more when multiple independent sources all confirm them. The crucifixion of Jesus is mentioned in Mark, Paul, Josephus, and Tacitus — sources that didn't copy from each other. The resurrection appearances appear in multiple independent Gospel traditions and Paul's early creed. Multiple independent confirmation is one of the strongest tools in historical methodology.</div>
+              </div>
+              <div class="pro-section-label">What counts as independent attestation</div>
+              <p class="pro-text">For sources to provide independent attestation, they must not have copied from each other. In New Testament studies, scholars generally identify multiple independent source traditions: Mark (the earliest Gospel), Q (the hypothetical source shared by Matthew and Luke but not from Mark), the material unique to Matthew (M), the material unique to Luke (L), John (largely independent of the Synoptics), and Paul's letters (which predate the Gospels). When an event or saying appears in multiple of these independent traditions, it has multiple attestation. Additionally, non-Christian sources (Tacitus, Josephus, Pliny) provide independent external attestation for basic facts.</p>
+              <div class="pro-section-label">Key multiply attested facts about Jesus</div>
+              <p class="pro-text"><strong>His baptism by John:</strong> Attested in Mark, Q, and John — and is an embarrassing detail (implying subordination to John) that no one would invent. <strong>His crucifixion under Pontius Pilate:</strong> Attested in Mark, Paul, John, Tacitus, and Josephus — one of the most historically secure facts about Jesus. <strong>His reputation as a healer and exorcist:</strong> Attested in multiple Gospel traditions and acknowledged even by his enemies who attributed his miracles to demonic power (a concession that implicitly admits the miracles occurred). <strong>His resurrection appearances:</strong> Attested in Paul's early creed (1 Cor 15), Mark's empty tomb tradition, and independent appearance traditions in Luke, John, and Matthew.</p>
+              <div class="pro-section-label">Applying consistent standards</div>
+              <p class="pro-text">The criterion of multiple attestation is not unique to Christian apologetics — it is standard historiography. Julius Caesar's campaigns are attested by Caesar himself, Cicero, Plutarch, and others. Alexander the Great's conquests are attested by Arrian, Plutarch, and Diodorus. The New Testament provides at minimum four independent source traditions for Jesus — more independent attestation than most figures of antiquity. Applying consistent historical standards requires treating this evidence with the same seriousness applied to other ancient figures.</p>
+              <div class="argument-footer" style="margin-top:1.5rem;"><a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena →</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">03</div>
+            <div class="argument-info">
+              <div class="argument-title">The Early Creed of 1 Corinthians 15 — Within Years of the Crucifixion</div>
+              <div class="argument-tagline">Paul's creed dates to within 2-5 years of the crucifixion — too early for legend</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-intermediate" title="Intermediate — helpful if you've read the basics first.">📚 Intermediate</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="tier-label-free">Free</div>
+            <div class="argument-premise">
+              <div class="argument-premise-label">The argument in brief</div>
+              <ol>
+                <li>1 Corinthians 15:3-7 contains a creed Paul explicitly says he "received" — a pre-existing formula.</li>
+                <li>Paul received this creed from eyewitnesses in Jerusalem within 3-7 years of the crucifixion.</li>
+                <li>The creed lists specific named witnesses to the resurrection — many of whom were still alive when Paul wrote.</li>
+                <li>This is far too early for legend to have developed and replaced the historical memory of eyewitnesses.</li>
+              </ol>
+            </div>
+            <p style="font-family:var(--font-ui);font-size:0.82rem;background:var(--navy-50);border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 4px 4px 0;color:var(--text-mid);margin-bottom:1.25rem;line-height:1.6;"><strong>In plain English:</strong> People say the resurrection story developed slowly over decades as legends grew. But we have a document listing resurrection witnesses that scholars date to within a few years of the crucifixion — when eyewitnesses were still alive and could be questioned. This is far too early for legend to have replaced history.</p>
+            <p class="argument-explanation">Paul writes in 1 Corinthians 15 that he is passing on something he "received" — meaning it was already established tradition before him. He lists resurrection appearances to Peter, to the Twelve, to over 500 people at once, to James, and then to himself. Then he adds something remarkable: "most of them are still living." He is essentially saying — if you don't believe me, go and ask them. They're still around. Most scholars date this tradition to within 2-5 years of the crucifixion. The legend theory — the idea that the resurrection story grew slowly over centuries like a game of telephone — simply cannot survive that timeline. This creed was circulating when the eyewitnesses were still alive and accessible.</p>
+            <div class="pro-deepdive">
+              <div class="pro-deepdive-header">
+                <div class="pro-deepdive-badge">Pro — Deep Dive</div>
+                <div class="pro-deepdive-title">The creed's dating, its content, and why legend theory fails</div>
+              </div>
+              <button class="simple-toggle" onclick="toggleSimple('earlycreed')">
+                <span class="simple-toggle-icon">💡</span>
+                <span class="simple-toggle-text">Explain this simply first</span>
+                <span class="simple-toggle-hint">Toggle ↕</span>
+              </button>
+              <div class="simple-summary" id="simple-earlycreed">
+                <div class="simple-summary-text">Paul writes in 1 Corinthians 15 that he is passing on something he 'received' — an already established tradition. Scholars date this creed to within 2-5 years of the crucifixion, when eyewitnesses were still alive. Paul even says 'most of them are still living' — an invitation to go and verify the claim. This is far too early for legend to have replaced historical memory. The resurrection was being proclaimed while the witnesses could still be questioned.</div>
+              </div>
+              <div class="pro-section-label">The legendary development objection answered</div>
+              <p class="pro-text">One of the most common objections to the resurrection is that the accounts developed legendary elements over decades or centuries — like the telephone game, small kernels of historical truth became embellished into miraculous stories. This theory might be plausible if our earliest sources were written a century after the events. But 1 Corinthians 15 contains a creed that dates to within 2-7 years of the crucifixion — before any of the Gospels were written. Legend theory requires time. The 1 Corinthians 15 creed eliminates the time required for legend to develop. The resurrection proclamation goes back to the very foundation of the church — not to a later theological development.</p>
+              <div class="pro-section-label">The five hundred witnesses — an invitation to verify</div>
+              <p class="pro-text">Paul's statement that the risen Jesus appeared to "more than five hundred of the brothers and sisters at the same time, most of whom are still living" is extraordinary. Paul is explicitly saying: if you doubt this, go and ask them. He is writing to a community in Corinth — connected to Jerusalem by travel routes — and pointing to living witnesses. This is not the language of legend or fabrication. A fabricator does not invite his audience to cross-examine his sources. The very fact that Paul includes this challenge implies he was confident the witnesses would confirm his account.</p>
+              <div class="argument-footer" style="margin-top:1.5rem;"><a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena →</a></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SUBCATEGORY: PROPHECY -->
+      <p class="subcat-label">Evidence from Prophecy</p>
+      <div class="arguments-list">
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">04</div>
+            <div class="argument-info">
+              <div class="argument-title">Messianic Prophecy — The Statistical Case</div>
+              <div class="argument-tagline">The probability of one person fulfilling hundreds of specific Old Testament prophecies by chance is astronomically small</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-beginner" title="Beginner — no prior knowledge needed. Plain English throughout.">🌱 Beginner</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="tier-label-free">Free</div>
+
+            <p style="font-family:var(--font-ui);font-size:0.82rem;background:var(--navy-50);border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 4px 4px 0;color:var(--text-mid);margin-bottom:1.25rem;line-height:1.6;"><strong>In plain English:</strong> Hundreds of years before Jesus was born, the Old Testament described someone who would be born in Bethlehem, enter Jerusalem on a donkey, be betrayed for 30 pieces of silver, have his hands and feet pierced, and rise from the dead. Jesus fulfilled all of these — and many more. The chances of that happening by accident are essentially zero.</p>
+
+            <div class="argument-premise">
+              <div class="argument-premise-label">Key prophecies and their fulfilment</div>
+              <ol>
+                <li>Born in Bethlehem (Micah 5:2, written 700 BC) — Jesus was born in Bethlehem.</li>
+                <li>Betrayed for 30 pieces of silver (Zechariah 11:12, written 520 BC) — Judas was paid exactly 30 silver coins.</li>
+                <li>Hands and feet pierced (Psalm 22:16, written 1000 BC) — crucifixion wasn't even invented when David wrote this.</li>
+                <li>Isaiah 53 describes someone who is "pierced for our transgressions" and "led like a lamb to the slaughter" — written 700 years before Jesus.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">A great way to feel the power of this argument: read Isaiah 53 without telling someone where it comes from, and ask them who it's describing. Almost everyone says Jesus — immediately — without being told it was written 700 years before his birth. The chapter describes someone who suffers silently, is pierced and crushed, bears the sins of others, dies among criminals, is buried in a rich man's tomb, and then "sees the light of life" after suffering. Every detail fits the crucifixion and resurrection perfectly. And we have physical copies of this text from before Jesus was born — the Dead Sea Scrolls, discovered in 1947, include Isaiah manuscripts dating to at least 125 BC. The prophecy was written before Jesus. We can prove it.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections — overview</div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>Jesus or his followers manipulated events to fulfil prophecies.</strong> — Some prophecies could theoretically be engineered, but many could not — his birthplace, lineage, manner of death (crucifixion was a Roman punishment not invented when Psalm 22 was written), and the specific betrayal price of 30 silver coins were not under his control.</span>
+              </div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>The prophecies were written after Jesus to match his life.</strong> — The Dead Sea Scrolls, discovered in 1947, contain Isaiah and other prophetic texts dating to at least 100 BC — centuries before Jesus. The Septuagint Greek translation of the Old Testament was completed around 200 BC. Both pre-date Jesus and confirm the antiquity of the prophecies.</span>
+              </div>
+            </div>
+
+            <div class="pro-deepdive">
+              <div class="pro-deepdive-header">
+                <div class="pro-deepdive-badge">Pro — Deep Dive</div>
+                <div class="pro-deepdive-title">Key prophecies examined in detail with historical context</div>
+              </div>
+              <button class="simple-toggle" onclick="toggleSimple('messianic')">
+                <span class="simple-toggle-icon">💡</span>
+                <span class="simple-toggle-text">Explain this simply first</span>
+                <span class="simple-toggle-hint">Toggle ↕</span>
+              </button>
+              <div class="simple-summary" id="simple-messianic">
+                <div class="simple-summary-text">Hundreds of years before Jesus was born, the Old Testament described someone who would be born in Bethlehem, be betrayed for 30 pieces of silver, have his hands and feet pierced, die among criminals, be buried in a rich man's tomb, and rise from the dead. Jesus fulfilled all of these. We know the prophecies pre-date Jesus — the Dead Sea Scrolls contain Isaiah manuscripts from at least 125 BC. The match is not coincidence.</div>
+              </div>
+
+              <div class="pro-section-label">Isaiah 53 — The Suffering Servant (written c. 700 BC)</div>
+              <p class="pro-text">Isaiah 53 is the most remarkable messianic prophecy in the entire Old Testament. Written approximately 700 years before the crucifixion, it describes a servant who is "pierced for our transgressions" and "crushed for our iniquities," who is "led like a lamb to the slaughter," who makes "his grave with the wicked and with the rich in his death," and who "will see the light of life" after his suffering. Every detail corresponds precisely to the crucifixion and resurrection of Jesus — the piercing, the silence before accusers, burial in a rich man's tomb (Joseph of Arimathea), and subsequent vindication. This is not a vague prophecy but a detailed narrative of substitutionary suffering and death that is unmistakably fulfilled in the Gospel accounts.</p>
+
+              <div class="pro-section-label">Psalm 22 — David's cry (written c. 1000 BC)</div>
+              <p class="pro-text">Psalm 22 begins with the words "My God, my God, why have you forsaken me?" — the exact words Jesus cried from the cross (Matthew 27:46). The Psalm continues: "I am a worm and not a man, scorned by everyone, despised by the people. All who see me mock me... they say 'He trusts in the LORD; let the LORD rescue him.'" It describes enemies who "pierce my hands and my feet" and who "divide my clothes among them and cast lots for my garment." All of these details are recorded in the Gospel crucifixion accounts. Crucifixion did not exist as a method of execution when David wrote this Psalm — and yet the description of hands and feet being pierced corresponds precisely to crucifixion.</p>
+
+              <div class="pro-section-label">Micah 5:2 — Born in Bethlehem (written c. 700 BC)</div>
+              <p class="pro-text">Micah 5:2 specifies that the ruler of Israel will come from Bethlehem Ephrathah — a small village, not the larger Bethlehem of Zebulun. This is noteworthy because Jesus's family were from Galilee; the birth in Bethlehem resulted from the Roman census requiring Joseph to return to his ancestral city. This is precisely the kind of detail that would be historically verifiable and could not be engineered after the fact — the Gospel accounts include it because it actually happened, and it happens to fulfil a 700-year-old prophecy.</p>
+
+              <div class="pro-section-label">Zechariah 11:12-13 — 30 pieces of silver (written c. 520 BC)</div>
+              <p class="pro-text">Zechariah 11:12-13 specifies that the shepherd of Israel would be valued at 30 pieces of silver, and that this money would be thrown into the temple and used to buy a potter's field. Matthew 27:3-10 records precisely this sequence of events — Judas's betrayal price of 30 silver coins, his throwing them into the temple, and the priests using the money to buy the potter's field. The specificity of the amount, the location (the temple), and the subsequent purchase make coincidence an implausible explanation.</p>
+
+              <div class="pro-section-label">The Dead Sea Scrolls — confirming pre-Christian dating</div>
+              <p class="pro-text">The discovery of the Dead Sea Scrolls in 1947 was one of the most significant archaeological finds in history for this argument. Among the scrolls was a complete copy of Isaiah dating to approximately 125 BC — over 100 years before Jesus's birth. The text of Isaiah 53 in the Dead Sea Scroll is virtually identical to the Masoretic text <span style="font-style:italic;opacity:0.7;font-size:0.9em;">(the standard Hebrew Bible text)</span> used in modern Bibles. This definitively refutes the objection that the prophecies were written after Jesus to match his life.</p>
+
+              <div class="pro-section-label">How to use this in conversation</div>
+              <div class="convo-guide">
+                <div class="convo-step">
+                  <div class="convo-step-num">1</div>
+                  <div class="convo-step-text"><strong>Start with Isaiah 53.</strong> Read it aloud without identifying it and ask "who does this describe?" Many people who are unfamiliar with the passage will immediately say "Jesus" before you've told them it was written 700 years before his birth. The text speaks for itself.</div>
+                </div>
+                <div class="convo-step">
+                  <div class="convo-step-num">2</div>
+                  <div class="convo-step-text"><strong>Address the "written after" objection immediately.</strong> Mention the Dead Sea Scrolls — "We actually have a physical copy of Isaiah dating to 125 BC. We can see it in a museum in Jerusalem. It matches today's Bible almost perfectly and it was written 100 years before Jesus was born."</div>
+                </div>
+                <div class="convo-step">
+                  <div class="convo-step-num">3</div>
+                  <div class="convo-step-text"><strong>Use the uncontrollable details.</strong> Focus on prophecies Jesus could not have engineered — his birthplace, his lineage, the manner of his death (crucifixion was a Roman method not invented when Psalm 22 was written), the specific betrayal price. These are the most compelling.</div>
+                </div>
+              </div>
+
+              <div class="argument-footer" style="margin-top:1.5rem;">
+                <a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">05</div>
+            <div class="argument-info">
+              <div class="argument-title">Daniel's 70 Weeks — The Precise Timing of the Messiah</div>
+              <div class="argument-tagline">Daniel 9 predicts the exact year of the Messiah's arrival centuries in advance</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-advanced" title="Advanced — some familiarity with philosophy or theology helpful.">🎓 Advanced</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="tier-label-free">Free</div>
+            <div class="argument-premise">
+              <div class="argument-premise-label">The argument in brief</div>
+              <ol>
+                <li>Daniel 9:24-27 contains a prophecy of "seventy weeks" — commonly understood as 70 weeks of years, totalling 490 years.</li>
+                <li>The prophecy specifies that from the decree to rebuild Jerusalem, 69 weeks (483 years) would pass until the arrival of the Anointed One.</li>
+                <li>Calculating from the decree of Artaxerxes I in 444 BC, 483 years brings us to approximately 33 AD — the time of Jesus's ministry and crucifixion.</li>
+                <li>This level of chronological precision — centuries in advance — is best explained by divine foreknowledge.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">Daniel 9 is one of the most remarkable prophecies in the entire Old Testament. Written in the 6th century BC, it specifies a timeline of 490 years from a specific decree to the coming of an Anointed One (Hebrew: Mashiach <span style="font-style:italic;opacity:0.7;font-size:0.9em;">(the Hebrew word for Messiah — anointed one)</span> — Messiah). The calculation, when applied to the decree of Artaxerxes I recorded in Nehemiah 2, points with astonishing precision to the period of Jesus's ministry — and even to the week of his crucifixion.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections — overview</div>
+              <div class="objection-row"><span class="objection-q">Q</span><span class="objection-a"><strong>Daniel was written after the events it predicts.</strong> — The Dead Sea Scrolls contain Daniel manuscripts dating to at least 165 BC — long before Jesus. Even the most critical scholars who date Daniel late place it in the 2nd century BC, still over 150 years before Jesus's ministry.</span></div>
+              <div class="objection-row"><span class="objection-q">Q</span><span class="objection-a"><strong>The calculation involves too many variables.</strong> — Different scholars have used different starting points and calendar systems and arrived at dates ranging from Jesus's baptism to his triumphal entry into Jerusalem. The precision of the convergence — regardless of which calculation is used — is striking.</span></div>
+            </div>
+            <div class="pro-deepdive">
+              <div class="pro-deepdive-header">
+                <div class="pro-deepdive-badge">Pro — Deep Dive</div>
+                <div class="pro-deepdive-title">The full calculation, historical starting points, and scholarly analysis</div>
+              </div>
+              <button class="simple-toggle" onclick="toggleSimple('daniel')">
+                <span class="simple-toggle-icon">💡</span>
+                <span class="simple-toggle-text">Explain this simply first</span>
+                <span class="simple-toggle-hint">Toggle ↕</span>
+              </button>
+              <div class="simple-summary" id="simple-daniel">
+                <div class="simple-summary-text">Daniel 9 contains a timeline — 70 weeks of years, totalling 490 years — counting from a specific decree to the arrival of the Messiah. When you calculate from the decree of Artaxerxes I in 444 BC using the Jewish prophetic calendar, you arrive at approximately 33 AD — the period of Jesus's ministry. Multiple scholars using different starting points arrive at closely converging dates pointing to Jesus.</div>
+              </div>
+              <div class="pro-section-label">The text of Daniel 9:24-27</div>
+              <p class="pro-text">The prophecy begins: "Seventy 'sevens' are decreed for your people and your holy city to finish transgression, to put an end to sin, to atone for wickedness, to bring in everlasting righteousness, to seal up vision and prophecy and to anoint the Most Holy Place." Then verse 25: "Know and understand this: From the time the word goes out to restore and rebuild Jerusalem until the Anointed One, the ruler, comes, there will be seven 'sevens,' and sixty-two 'sevens.' It will be rebuilt with streets and a trench, but in times of trouble." Seven sevens plus sixty-two sevens equals sixty-nine sevens. If a "seven" represents seven years (a standard interpretation in Jewish literature — cf. Leviticus 25), then sixty-nine sevens equals 483 years.</p>
+              <div class="pro-section-label">The calculation — from decree to Messiah</div>
+              <p class="pro-text">The most widely used starting point is the decree of Artaxerxes I to Nehemiah in 444 BC, recorded in Nehemiah 2:1-8. Using the Jewish prophetic calendar of 360 days per year: 483 years × 360 days = 173,880 days. From March 5, 444 BC (1 Nisan, the date of Artaxerxes's decree) to March 30, 33 AD equals 173,880 days. March 30, 33 AD corresponds with extraordinary precision to Palm Sunday — Jesus's triumphal entry into Jerusalem, the day when he publicly presented himself as the Messianic king. This calculation was developed by Sir Robert Anderson, formerly of Scotland Yard, in his 1894 work <em>The Coming Prince</em>, and has been substantiated by subsequent scholars.</p>
+              <div class="pro-section-label">The 70th week and its significance</div>
+              <p class="pro-text">Daniel 9:26 then states: "After the sixty-two 'sevens,' the Anointed One will be put to death and will have nothing." This refers to the Messiah's death — the crucifixion — which follows the 69 weeks. The 70th week describes a period of tribulation involving "the ruler who will come" who "will set up an abomination that causes desolation." Many scholars interpret this final week as either a future eschatological period or as events in 70 AD when the Roman general Titus destroyed the temple. The key apologetic point is that the arrival and death of the Anointed One are precisely predicted within the first 69 weeks — pointing to Jesus's ministry and crucifixion with remarkable chronological accuracy.</p>
+              <div class="pro-section-label">Honest caveats for apologetics</div>
+              <p class="pro-text">This argument should be used with care. It involves complex calculations with several variables — the starting decree, the calendar system used, and the interpretation of "sevens." Different scholars arrive at different but closely converging dates. The argument is powerful as part of a cumulative case alongside other messianic prophecies, but should not be presented as mathematically certain. The strongest version focuses on the convergence — that multiple reasonable interpretations all point to the general period of Jesus's ministry — rather than claiming pinpoint precision to a single day.</p>
+              <div class="argument-footer" style="margin-top:1.5rem;"><a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena →</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">06</div>
+            <div class="argument-info">
+              <div class="argument-title">The Virgin Birth — Isaiah 7:14 and Its Fulfilment</div>
+              <div class="argument-tagline">Examining the Hebrew almah <span style="font-style:italic;opacity:0.7;font-size:0.9em;">(the Hebrew word meaning young woman of marriageable age)</span> controversy and the historical evidence</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-intermediate" title="Intermediate — helpful if you've read the basics first.">📚 Intermediate</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="tier-label-free">Free</div>
+            <div class="argument-premise">
+              <div class="argument-premise-label">The argument in brief</div>
+              <ol>
+                <li>Isaiah 7:14 states: "The Lord himself will give you a sign: the virgin will conceive and give birth to a son, and will call him Immanuel."</li>
+                <li>Matthew 1:22-23 identifies the virgin birth of Jesus as the fulfilment of this prophecy.</li>
+                <li>The virgin birth is attested independently in both Matthew and Luke — two sources with different theological emphases and different birth narratives — suggesting independent historical tradition.</li>
+                <li>The theological significance — God himself entering human history — is consistent with the entire biblical narrative.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">Isaiah 7:14 is one of the most debated verses in the entire Bible. The central controversy is the Hebrew word <em>almah</em> — which Matthew's Greek translation renders as <em>parthenos <span style="font-style:italic;opacity:0.7;font-size:0.9em;">(the Greek word specifically meaning virgin)</span></em> (virgin), but which in Hebrew more broadly means "young woman." Critics argue the prophecy refers to a young woman in Isaiah's day, not a virgin birth centuries later. Understanding this debate is essential for confident apologetics.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections — overview</div>
+              <div class="objection-row"><span class="objection-q">Q</span><span class="objection-a"><strong>Almah means young woman, not virgin.</strong> — Almah appears 7 times in the Hebrew Bible and always refers to a young woman of marriageable age — who in that cultural context was expected to be a virgin. The related word <em>betulah</em> (more technically "virgin") is used elsewhere. However, the Septuagint — the Greek translation made by Jewish scholars around 200 BC — translated almah as <em>parthenos</em>, which specifically means virgin. Jewish scholars before Jesus's birth were already interpreting this prophecy as referring to a virgin birth.</span></div>
+            </div>
+            <div class="pro-deepdive">
+              <div class="pro-deepdive-header">
+                <div class="pro-deepdive-badge">Pro — Deep Dive</div>
+                <div class="pro-deepdive-title">The almah debate, dual fulfilment, and independent attestation</div>
+              </div>
+              <button class="simple-toggle" onclick="toggleSimple('virginbirth')">
+                <span class="simple-toggle-icon">💡</span>
+                <span class="simple-toggle-text">Explain this simply first</span>
+                <span class="simple-toggle-hint">Toggle ↕</span>
+              </button>
+              <div class="simple-summary" id="simple-virginbirth">
+                <div class="simple-summary-text">Isaiah 7:14, written about 700 BC, says a virgin will conceive and bear a son called Immanuel. Jewish scholars translated this into Greek around 200 BC using the word 'parthenos' — which specifically means virgin — before Jesus was born. Matthew and Luke record the virgin birth independently with completely different details, suggesting two separate historical traditions rather than one invented story.</div>
+              </div>
+              <div class="pro-section-label">The dual fulfilment interpretation</div>
+              <p class="pro-text">Many scholars — including conservative Christians — interpret Isaiah 7:14 as having a dual fulfilment. In its immediate historical context, the sign was given to King Ahaz regarding the political crisis of his day — the birth of a child within a certain time frame would signal the resolution of that crisis. This near fulfilment may have been the birth of Isaiah's own son (Isaiah 8:3) or another child born in that period. But the prophecy points beyond its immediate context to an ultimate fulfilment — a virgin who would conceive and bear the one truly called Immanuel, "God with us." This dual fulfilment pattern is common in biblical prophecy, where an immediate historical event foreshadows a greater eschatological reality.</p>
+              <div class="pro-section-label">The Septuagint — Jewish pre-Christian interpretation</div>
+              <p class="pro-text">The strongest evidence for the virgin birth interpretation is the Septuagint (LXX) — the Greek translation of the Hebrew Bible completed by Jewish scholars around 200 BC, long before Jesus's birth. The Septuagint consistently renders <em>almah</em> in Isaiah 7:14 as <em>parthenos</em> — the specific Greek word for virgin, as opposed to the more general <em>neanis</em> (young woman). This demonstrates that pre-Christian Jewish interpretation already understood this verse as predicting a virginal conception. Matthew was not retrofitting a Christian meaning — he was drawing on an established interpretive tradition within Judaism itself.</p>
+              <div class="pro-section-label">Independent attestation in Matthew and Luke</div>
+              <p class="pro-text">The virgin birth is independently attested in Matthew 1 and Luke 1-2. These two birth narratives are strikingly different in their details — Matthew focuses on Joseph's perspective and the visit of the Magi; Luke focuses on Mary's perspective and the shepherds. They share no common material except the core fact of the virgin birth. This independence strongly suggests they are drawing on separate historical traditions rather than a common literary source. If the virgin birth were a legendary invention, we would expect greater similarity between the accounts — and we would not expect it to appear in two independent streams of tradition.</p>
+              <div class="pro-section-label">The theological significance</div>
+              <p class="pro-text">For the Christian, the virgin birth is not merely a miracle to be defended — it is a theological statement about who Jesus is. The incarnation — God himself entering human history in the person of Jesus Christ — requires a unique mode of entry. Jesus is simultaneously fully human (born of Mary) and fully divine (conceived by the Holy Spirit). The virgin birth safeguards both his humanity (he was truly born, truly grew, truly suffered) and his divinity (he is not merely a human being who became God's son at baptism or resurrection — he is the Son of God from conception). As theologian J.I. Packer observed, the virgin birth is not peripheral to Christianity — it is the mechanism of the incarnation.</p>
+              <div class="argument-footer" style="margin-top:1.5rem;"><a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena →</a></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SUBCATEGORY: DEITY OF CHRIST -->
+      <p class="subcat-label">The Deity of Christ</p>
+      <div class="arguments-list">
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">07</div>
+            <div class="argument-info">
+              <div class="argument-title">Did Jesus Claim to Be God? — The Evidence from the Gospels</div>
+              <div class="argument-tagline">Jesus made implicit and explicit claims to divine identity that his Jewish audience understood clearly</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-beginner" title="Beginner — no prior knowledge needed. Plain English throughout.">🌱 Beginner</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="tier-label-free">Free</div>
+
+            <p style="font-family:var(--font-ui);font-size:0.82rem;background:var(--navy-50);border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 4px 4px 0;color:var(--text-mid);margin-bottom:1.25rem;line-height:1.6;"><strong>In plain English:</strong> People often say "Jesus was a great teacher but I don't think he was God." C.S. Lewis said that's the one option you can't take. Jesus claimed to forgive sins, to be the judge of all humanity, and to have existed before Abraham. His audience tried to stone him for blasphemy. A mere teacher doesn't get stoned for his teaching tips. So — was he lying, was he mad, or was he telling the truth?</p>
+
+            <div class="argument-premise">
+              <div class="argument-premise-label">The three options — C.S. Lewis's trilemma</div>
+              <ol>
+                <li><strong>Lord</strong> — Jesus is who he claimed to be. His claims were true.</li>
+                <li><strong>Liar</strong> — Jesus knew his claims were false but made them anyway. He deliberately deceived people.</li>
+                <li><strong>Lunatic</strong> — Jesus genuinely believed he was God but was tragically mistaken — like someone who thinks they're Napoleon.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">Here's what Jesus actually claimed. In Mark 2, he forgave a man's sins — and the religious leaders immediately said "who can forgive sins but God alone?" He didn't correct them; he doubled down. In John 8:58 he said "Before Abraham was born, I AM" — using the exact words God used for himself in Exodus 3:14. His audience picked up stones to execute him for blasphemy on the spot. In Matthew 25 he described himself as the judge of all humanity at the last day — a role that belongs to God alone in Jewish thought. C.S. Lewis — who was once an atheist — pointed out that these are not the words of a wise teacher. They're the words of someone making the most extraordinary claim in history. You can reject that claim. But you can't call him merely a good teacher while ignoring what he actually said. That option isn't available.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections — overview</div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>Jesus never directly said "I am God, worship me."</strong> — This misunderstands how divine claims were made in a Jewish context. When Jesus said "Before Abraham was, I AM" (John 8:58), the audience immediately picked up stones — they understood the claim. The divine name formula "I AM" (ego eimi <span style="font-style:italic;opacity:0.7;font-size:0.9em;">("I AM" in Greek)</span>) echoes Exodus 3:14 unmistakably.</span>
+              </div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>The divine claims were added by later editors.</strong> — The divine claims appear in the earliest strata of the New Testament including Paul's letters (written 20 years after the crucifixion) and the pre-Pauline creeds embedded within them. The high Christology of John 1 reflects genuine early Christian worship, not late theological development.</span>
+              </div>
+            </div>
+
+            <div class="pro-deepdive">
+              <div class="pro-deepdive-header">
+                <div class="pro-deepdive-badge">Pro — Deep Dive</div>
+                <div class="pro-deepdive-title">Every major divine claim examined with Greek text and scholarly analysis</div>
+              </div>
+              <button class="simple-toggle" onclick="toggleSimple('jesus_god')">
+                <span class="simple-toggle-icon">💡</span>
+                <span class="simple-toggle-text">Explain this simply first</span>
+                <span class="simple-toggle-hint">Toggle ↕</span>
+              </button>
+              <div class="simple-summary" id="simple-jesus_god">
+                <div class="simple-summary-text">Jesus never said 'I am God, worship me' in those exact words — but his claims were unmistakably divine to his Jewish audience. He forgave sins (only God can do that). He said 'Before Abraham was, I AM' — the divine name from Exodus. He accepted worship. He claimed to be the final judge of all humanity. Each time, his audience's response — accusations of blasphemy, attempts to stone him — confirms they understood exactly what he was claiming.</div>
+              </div>
+
+              <div class="pro-section-label">Claim 1 — Forgiving sins (Mark 2:5-7)</div>
+              <p class="pro-text">When Jesus told the paralysed man "your sins are forgiven," the scribes immediately responded: "Why does this man speak this way? He is blaspheming. Who can forgive sins but God alone?" They were correct in their theology — only God can forgive sins against God. Jesus's claim was not to relay God's forgiveness but to personally pronounce it — a claim to divine authority that he then validates by healing the man. This is not a late theological interpolation — it appears in Mark, widely considered the earliest Gospel.</p>
+
+              <div class="pro-section-label">Claim 2 — "Before Abraham was, I AM" (John 8:58)</div>
+              <p class="pro-text">The Greek text reads "prin Abraam genesthai, ego eimi" — "before Abraham came into being, I am." The phrase ego eimi is the Greek equivalent of the Hebrew YHWH's self-designation in Exodus 3:14: "I AM WHO I AM." The shift from the expected "I was" (past tense) to "I am" (present tense) is grammatically and theologically significant — Jesus is claiming timeless, self-existent being, not merely prior existence. His audience's immediate response — picking up stones to execute him for blasphemy — confirms they understood exactly what he was claiming.</p>
+
+              <div class="pro-section-label">Claim 3 — Accepting worship (Matthew 28:17; John 20:28)</div>
+              <p class="pro-text">In Jewish theology, worship is owed to God alone — this is the first of the Ten Commandments. When Thomas declares "My Lord and my God!" (John 20:28) and falls before the risen Jesus, Jesus does not correct him. When the disciples worship Jesus in Matthew 28:17, Jesus receives it without correction. Compare this with Peter (Acts 10:25-26) and the angel in Revelation (22:8-9) who both immediately refuse worship and redirect it to God. Jesus's acceptance of worship is a profound implicit claim to divine identity.</p>
+
+              <div class="pro-section-label">Claim 4 — Final judge of all humanity (Matthew 25:31-46)</div>
+              <p class="pro-text">In Matthew 25, Jesus describes himself as the Son of Man who will sit on "his glorious throne" and judge all nations, separating people "as a shepherd separates the sheep from the goats." In Jewish theology, the final judgement belongs to God alone. Jesus places himself in the seat of divine judge over all humanity — including the nations, not just Israel. The parable is not attributed to God acting through Jesus — Jesus himself is the judge. This is an unmistakable claim to divine prerogative.</p>
+
+              <div class="pro-section-label">C.S. Lewis's Trilemma — Lord, Liar, or Lunatic</div>
+              <p class="pro-text">C.S. Lewis's famous argument in Mere Christianity remains one of the most incisive responses to the "Jesus was just a good teacher" position. Lewis argues: "A man who was merely a man and said the sort of things Jesus said would not be a great moral teacher. He would either be a lunatic — on the level with a man who says he is a poached egg — or else he would be the Devil of Hell. You must make your choice. Either this man was, and is, the Son of God: or else a madman or something worse. You can shut Him up for a fool, you can spit at Him and kill Him as a demon; or you can fall at His feet and call Him Lord and God. But let us not come with any patronising nonsense about His being a great human teacher. He has not left that option open to us."</p>
+
+              <div class="pro-section-label">The early high Christology — against the "late development" theory</div>
+              <p class="pro-text">Some scholars argue that the divine claims of Jesus were a late theological development added decades after his death. Larry Hurtado's landmark scholarship in <em>Lord Jesus Christ</em> (2003) and <em>How on Earth Did Jesus Become a God?</em> (2005) demolishes this thesis. Hurtado demonstrates that the devotional pattern of treating Jesus as a divine figure alongside God the Father — including prayer to Jesus, hymns to Jesus, and the invocation of Jesus's name — is present in the earliest recoverable layer of Christianity, within years of the crucifixion. This "mutation" in Jewish monotheism is unprecedented and demands an explanation. The most historically plausible explanation is that the earliest Christians genuinely believed they had encountered a risen divine figure.</p>
+
+              <div class="scholar-row">
+                <div class="scholar-initial" style="background:#EEEDFE;color:#3C3489;">LH</div>
+                <div class="scholar-info"><div class="scholar-name">Larry Hurtado — University of Edinburgh</div><div class="scholar-quote">"The devotion to Jesus that we see in Paul's letters erupted suddenly and early, within the first two decades after the crucifixion, among Jewish believers — people for whom worshipping any figure other than God was the supreme sin." — <em>Lord Jesus Christ</em></div></div>
+              </div>
+              <div class="scholar-row">
+                <div class="scholar-initial" style="background:#E1F5EE;color:#0F6E56;">CS</div>
+                <div class="scholar-info"><div class="scholar-name">C.S. Lewis — Oxford & Cambridge</div><div class="scholar-quote">"I am trying here to prevent anyone saying the really foolish thing that people often say about Him: 'I'm ready to accept Jesus as a great moral teacher, but I don't accept his claim to be God.' That is the one thing we must not say." — <em>Mere Christianity</em></div></div>
+              </div>
+
+              <div class="argument-footer" style="margin-top:1.5rem;">
+                <a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena →</a>
+                <a href="worldviews.html" class="arg-action arg-action-secondary">See the Islamic response</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">08</div>
+            <div class="argument-info">
+              <div class="argument-title">The Pre-existence of Christ — John 1:1 and the Greek Text</div>
+              <div class="argument-tagline">In the beginning was the Word — examining the Logos <span style="font-style:italic;opacity:0.7;font-size:0.9em;">(the Greek word for Word or Reason)</span> theology and its implications</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-advanced" title="Advanced — some familiarity with philosophy or theology helpful.">🎓 Advanced</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="tier-label-free">Free</div>
+            <div class="argument-premise">
+              <div class="argument-premise-label">The argument in brief</div>
+              <ol>
+                <li>John 1:1 states: "In the beginning was the Word, and the Word was with God, and the Word was God."</li>
+                <li>The Greek <em>Logos</em> (Word) is identified with Jesus in John 1:14: "The Word became flesh."</li>
+                <li>The claim that the Word was both "with God" (distinct from the Father) and "was God" (sharing the divine nature) establishes the pre-existence and divinity of Christ.</li>
+                <li>The Jehovah's Witnesses' rendering "a god" is grammatically indefensible in context.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">John 1:1 is the most direct statement of Christ's pre-existence and deity in the New Testament. Its theological density is extraordinary. The opening words deliberately echo Genesis 1:1 — "In the beginning" — placing Jesus at the creation of the universe. The Word (Logos) was not created at the beginning; it already existed. And this Word was both distinct from God the Father ("with God") and identified with the divine nature ("was God").</p>
+            <div class="pro-deepdive">
+              <div class="pro-deepdive-header">
+                <div class="pro-deepdive-badge">Pro — Deep Dive</div>
+                <div class="pro-deepdive-title">Greek grammar, the Logos concept, and the JW mistranslation</div>
+              </div>
+              <button class="simple-toggle" onclick="toggleSimple('john11')">
+                <span class="simple-toggle-icon">💡</span>
+                <span class="simple-toggle-text">Explain this simply first</span>
+                <span class="simple-toggle-hint">Toggle ↕</span>
+              </button>
+              <div class="simple-summary" id="simple-john11">
+                <div class="simple-summary-text">John 1:1 says 'In the beginning was the Word, and the Word was with God, and the Word was God.' John 1:14 identifies the Word as Jesus. The grammar in Greek shows the Word shares the divine nature while being personally distinct from the Father. John is deliberately echoing Genesis 1:1 — placing Jesus at the creation of the universe, already existing, already divine.</div>
+              </div>
+              <div class="pro-section-label">The Greek grammar of John 1:1c</div>
+              <p class="pro-text">The third clause of John 1:1 reads in Greek: <em>kai theos ēn ho logos</em> — "and God was the Word." The word <em>theos</em> (God) here lacks the definite article — it is anarthrous <span style="font-style:italic;opacity:0.7;font-size:0.9em;">(lacking the definite article in Greek)</span>. The Jehovah's Witnesses' New World Translation renders this "a god," arguing that the absence of the article means an indefinite article should be supplied. However, Greek grammar does not work this way. When a predicate nominative <span style="font-style:italic;opacity:0.7;font-size:0.9em;">(the noun that describes the subject in Greek)</span> (here, <em>theos</em>) precedes the verb and lacks the article, it is functioning qualitatively — describing the nature of the subject rather than identifying it as one among many. Scholar Bruce Metzger, one of the 20th century's greatest Greek scholars, stated that the New World Translation's rendering here is "a frightful mistranslation." The grammar indicates that the Word possesses the divine nature — he is fully God — while remaining personally distinct from the Father.</p>
+              <div class="pro-section-label">The Logos concept in John's context</div>
+              <p class="pro-text">John's use of <em>Logos</em> was culturally brilliant. In Greek philosophy, the Logos was the rational principle governing the universe — the mind of God expressed in creation. In Jewish thought, the Word (Memra) of God was the active, creative expression of divine power — through the Word, God spoke the world into existence (Psalm 33:6). John takes both traditions and announces: the Logos — the principle that Plato and Aristotle searched for, the Word that Moses described — has appeared in history in the person of Jesus of Nazareth. This is not a minor claim. It is the most audacious theological statement in the ancient world.</p>
+              <div class="pro-section-label">Pre-existence in John's Gospel</div>
+              <p class="pro-text">John 1:1 is not an isolated claim. Throughout his Gospel, John records Jesus making statements that presuppose pre-existence. In John 8:58, Jesus says "Before Abraham was born, I am" — claiming existence before Abraham (who lived 2,000 years earlier) and applying to himself the divine name "I AM" from Exodus 3:14. In John 17:5, Jesus prays: "Father, glorify me in your presence with the glory I had with you before the world began" — explicitly claiming pre-cosmic existence alongside the Father. These statements cohere perfectly with John 1:1 and build a consistent portrait of Jesus as a pre-existent divine being who entered history.</p>
+              <div class="argument-footer" style="margin-top:1.5rem;"><a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena →</a><a href="worldviews.html" class="arg-action arg-action-secondary">The JW response →</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">09</div>
+            <div class="argument-info">
+              <div class="argument-title">The Philippians 2 Hymn — Earliest Evidence of Divine Worship</div>
+              <div class="argument-tagline">A pre-Pauline hymn dating to within years of the crucifixion treats Jesus as fully divine</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-advanced" title="Advanced — some familiarity with philosophy or theology helpful.">🎓 Advanced</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="tier-label-free">Free</div>
+            <div class="argument-premise">
+              <div class="argument-premise-label">The argument in brief</div>
+              <ol>
+                <li>Philippians 2:6-11 contains an early Christian hymn that most scholars recognise as pre-Pauline — it predates the letter itself.</li>
+                <li>The hymn describes Jesus as existing "in the form of God" before the incarnation, emptying himself to become human, and being exalted to receive the divine name.</li>
+                <li>This hymn dates to within years of the crucifixion — demolishing the claim that the high view of Jesus developed late.</li>
+                <li>It was sung in worship — meaning the earliest Christians treated Jesus as divine, not merely as a prophet or teacher.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">Philippians 2:6-11 is one of the most important texts in New Testament scholarship. Paul introduces it with "have this mind among yourselves, which is yours in Christ Jesus" — indicating he is quoting an existing tradition, not composing something new. The hymn describes a three-stage movement: pre-existence in divine form, humiliation through incarnation and crucifixion, and exaltation to receive universal acclamation. This is not primitive Christianity — it is sophisticated, high Christology from the very beginning.</p>
+            <div class="pro-deepdive">
+              <div class="pro-deepdive-header">
+                <div class="pro-deepdive-badge">Pro — Deep Dive</div>
+                <div class="pro-deepdive-title">The hymn's content, dating, and significance for Christology</div>
+              </div>
+              <button class="simple-toggle" onclick="toggleSimple('phil2')">
+                <span class="simple-toggle-icon">💡</span>
+                <span class="simple-toggle-text">Explain this simply first</span>
+                <span class="simple-toggle-hint">Toggle ↕</span>
+              </button>
+              <div class="simple-summary" id="simple-phil2">
+                <div class="simple-summary-text">Philippians 2:6-11 is an early Christian hymn — probably composed within years of the crucifixion — describing Jesus existing 'in the form of God' before becoming human, and being exalted to receive the divine name after the resurrection. Paul quotes it as existing tradition. This means Christians were singing hymns treating Jesus as fully divine within years of his death — centuries before the Council of Nicaea.</div>
+              </div>
+              <div class="pro-section-label">The text of the Philippians hymn</div>
+              <p class="pro-text">Philippians 2:6-11 reads: "Who, being in very nature God, did not consider equality with God something to be used to his own advantage; rather, he made himself nothing by taking the very nature of a servant, being made in human likeness. And being found in appearance as a man, he humbled himself by becoming obedient to death — even death on a cross! Therefore God exalted him to the highest place and gave him the name that is above every name, that at the name of Jesus every knee should bow, in heaven and on earth and under the earth, and every tongue acknowledge that Jesus Christ is Lord, to the glory of God the Father." The phrase "the name that is above every name" — clearly the divine name YHWH — and the universal acclamation language echoing Isaiah 45:23 (a passage specifically about YHWH) together make one of the most explicit divine identity claims in the New Testament.</p>
+              <div class="pro-section-label">Dating the hymn — before Nicaea by 270 years</div>
+              <p class="pro-text">Paul wrote Philippians approximately 60-62 AD. But the hymn he quotes is widely recognised as pre-Pauline — it shows features of Aramaic poetry and theological formulations that suggest it originated in the earliest Jerusalem church. If Paul received this hymn when he was taught the gospel (Galatians 1:18 — within 3-7 years of the crucifixion), then Christians were already worshipping Jesus as fully divine within a decade of his death. The Council of Nicaea in 325 AD did not create the doctrine of Christ's divinity — it was already being expressed in worship songs within years of the resurrection. The argument that divinity was a late theological development is simply refuted by this text.</p>
+              <div class="pro-section-label">Larry Hurtado's significance</div>
+              <p class="pro-text">Scholar Larry Hurtado's landmark work <em>Lord Jesus Christ</em> (2003) demonstrated that the pattern of devotion to Jesus — including hymn-singing, prayer, and the invocation of Jesus's name — constitutes a "mutation" in Jewish monotheism that is unparalleled in the ancient world. Jews were fiercely monotheistic — worshipping any figure other than God alone was the supreme sin. Yet within years of the crucifixion, Jewish Christians were singing hymns to Jesus alongside God the Father. The only adequate historical explanation is that they genuinely believed they had encountered the risen God in the person of Jesus.</p>
+              <div class="argument-footer" style="margin-top:1.5rem;"><a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena →</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">10</div>
+            <div class="argument-info">
+              <div class="argument-title">The Titles of Jesus — Son of God, Son of Man, and Lord</div>
+              <div class="argument-tagline">What did these titles mean in a 1st century Jewish context?</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-intermediate" title="Intermediate — helpful if you've read the basics first.">📚 Intermediate</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="tier-label-free">Free</div>
+            <div class="argument-premise">
+              <div class="argument-premise-label">The argument in brief</div>
+              <ol>
+                <li>The titles used for Jesus in the New Testament — Son of God, Son of Man, Lord (Kyrios <span style="font-style:italic;opacity:0.7;font-size:0.9em;">(the Greek word for Lord)</span>), and I AM — carried specific theological weight in a 1st century Jewish context.</li>
+                <li>Understanding what these titles meant to Jesus's Jewish audience reveals that he was making divine claims — not merely claiming to be a prophet or a great teacher.</li>
+                <li>His audience's response — accusations of blasphemy, attempts to stone him — confirms they understood his claims as divine.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">One of the most common objections to Christ's divinity is "Jesus never said he was God." Understanding the titles Jesus used and what they meant in his cultural context decisively answers this objection. In a 1st century Jewish setting, the claims Jesus made were understood by his audience as divine claims — which is precisely why they charged him with blasphemy.</p>
+            <div class="pro-deepdive">
+              <div class="pro-deepdive-header">
+                <div class="pro-deepdive-badge">Pro — Deep Dive</div>
+                <div class="pro-deepdive-title">Four titles examined in their Jewish historical context</div>
+              </div>
+              <button class="simple-toggle" onclick="toggleSimple('titles')">
+                <span class="simple-toggle-icon">💡</span>
+                <span class="simple-toggle-text">Explain this simply first</span>
+                <span class="simple-toggle-hint">Toggle ↕</span>
+              </button>
+              <div class="simple-summary" id="simple-titles">
+                <div class="simple-summary-text">The titles Jesus used — Son of Man, Lord, I AM, Son of God — carried specific meanings in a first-century Jewish context that his audience immediately understood as divine claims. Son of Man echoed Daniel 7's heavenly figure who receives universal worship. Lord translated the divine name YHWH in the Greek Old Testament. I AM echoed God's self-revelation to Moses in Exodus 3:14. His audience's attempts to stone him confirm they understood.</div>
+              </div>
+              <div class="pro-section-label">Son of Man — Daniel's divine figure</div>
+              <p class="pro-text">"Son of Man" was Jesus's most frequently used self-designation — and its significance is often missed by modern readers. In Daniel 7:13-14, the "Son of Man" is a heavenly figure who comes "with the clouds of heaven" to the Ancient of Days and receives universal, eternal dominion — worship that belongs only to God. When Jesus applies this title to himself (especially in Mark 14:62 — "you will see the Son of Man sitting at the right hand of the Mighty One and coming on the clouds of heaven"), he is explicitly claiming the divine authority of Daniel's cosmic figure. The high priest's response — tearing his robes and declaring blasphemy — confirms he understood this as a divine claim.</p>
+              <div class="pro-section-label">Lord (Kyrios) — the divine name</div>
+              <p class="pro-text">The title "Lord" (Greek: Kyrios) in the New Testament is loaded with significance. The Septuagint (Greek Old Testament) used <em>Kyrios</em> to translate the divine name YHWH — the name so holy that Jews would not pronounce it. When Paul writes that "Jesus Christ is Lord" in Philippians 2:11, or when Thomas declares "My Lord and my God" in John 20:28, they are applying to Jesus a title that specifically denoted the God of Israel. The early Christian confession "Jesus is Lord" (Romans 10:9) was not merely acknowledging his authority — it was identifying Jesus with the God of the Old Testament.</p>
+              <div class="pro-section-label">Son of God — not a subordinate figure</div>
+              <p class="pro-text">"Son of God" is often misunderstood as a title of subordination — as if Jesus is merely God's representative or a lesser divine being. In Jewish thought, "son of" often implies sharing the same nature — a "son of man" is a human being; a "son of God" is a divine being. When Jesus calls God "my Father" in a way that implies a unique, exclusive relationship (Matthew 11:27 — "No one knows the Son except the Father, and no one knows the Father except the Son"), he is claiming a relationship with God that no other human being has. His Jewish opponents understood this precisely — John 5:18 records that they sought to kill him "because he was even calling God his own Father, making himself equal with God."</p>
+              <div class="pro-section-label">I AM — the divine name applied to Jesus</div>
+              <p class="pro-text">The Greek phrase <em>ego eimi</em> (I AM) appears seven times in John in ways that echo Exodus 3:14 — where God revealed his name to Moses as "I AM WHO I AM." Jesus says "I AM the bread of life," "I AM the light of the world," "I AM the resurrection and the life," "I AM the way, the truth, and the life." But the most explicit usage is John 8:58 — "Before Abraham was born, I AM" — where Jesus applies the divine name to himself in an absolute, non-predicate form. The immediate reaction of his audience — picking up stones to execute him for blasphemy — confirms they understood exactly what he was claiming.</p>
+              <div class="argument-footer" style="margin-top:1.5rem;"><a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena →</a></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pro-banner">
+        <div class="pro-banner-text">
+          <div class="pro-banner-title">54 more Jesus arguments in the full library</div>
+          <div class="pro-banner-sub">Unlock Daniel's 70 weeks, the virgin birth, John 1:1 in the Greek, the Philippians 2 hymn, the titles of Jesus, and much more.</div>
+        </div>
+        <a href="index.html#pricing" class="pro-banner-btn">Unlock Pro — $8/mo</a>
+      
+
+    
+  <div
+  </div>
+
+  <div 
+  </div>
+
+  <div id="bible" class="section">
+<div class="cat-intro">
+        <div class="cat-intro-text">
+          <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 4 of 5</p>
+          <h2 class="cat-intro-title">The reliability of <em>the Bible</em></h2>
+          <p class="cat-intro-desc">Has the Bible been changed? Is it historically accurate? These are fair questions — and they have real answers. The evidence from ancient manuscripts, archaeology, and historical records gives us strong grounds to trust what we're reading. These arguments show you why.</p>
+        </div>
+        <div class="cat-count" style="color:var(--navy-500);">
+          <span class="cat-count-num">79</span>
+          <span class="cat-count-lbl">Arguments</span>
+        </div>
+      </div>
+
+      <p class="subcat-label">Manuscript evidence</p>
+      <div class="arguments-list">
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">01</div>
+            <div class="argument-info">
+              <div class="argument-title">The Manuscript Reliability Argument</div>
+              <div class="argument-tagline">The New Testament is the most well-attested document in ancient history</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-beginner" title="Beginner — no prior knowledge needed. Plain English throughout.">🌱 Beginner</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="argument-premise">
+              <div class="argument-premise-label">The key facts</div>
+              <ol>
+                <li>There are over 5,800 Greek New Testament manuscripts — more than any other ancient document.</li>
+                <li>The earliest manuscripts date within decades of the originals.</li>
+                <li>Scholars can reconstruct the original text with over 99% confidence.</li>
+                <li>No other ancient text comes remotely close to this level of attestation.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">We accept the works of Julius Caesar, Plato, and Tacitus as historically reliable despite having only a handful of manuscripts copied centuries after the originals. The New Testament, by contrast, has thousands of manuscripts, the earliest fragments dating to within a generation of the events. Textual criticism can confidently reconstruct the original documents. The question of reliability is settled by the same standards applied to all ancient history.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections answered</div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>The Bible has been changed over the centuries.</strong> — The volume and age of manuscripts actually makes it easier to detect any changes. Textual scholars can cross-reference thousands of manuscripts to identify and correct copying errors.</span>
+              </div>
+            </div>
+            <div class="argument-footer">
+              <a href="#" class="arg-action arg-action-primary">Practice in Debate Arena →</a>
+              <a href="#" class="arg-action arg-action-secondary">Further reading</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">02</div>
+            <div class="argument-info">
+              <div class="argument-title">Archaeological Confirmation of the Bible</div>
+              <div class="argument-tagline">Hundreds of archaeological discoveries confirm biblical accounts</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-beginner" title="Beginner — no prior knowledge needed. Plain English throughout.">🌱 Beginner</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="tier-label-free">Free</div>
+            <div class="argument-premise">
+              <div class="argument-premise-label">The argument in brief</div>
+              <ol>
+                <li>If the Bible is historically reliable, we would expect archaeological discoveries to confirm its accounts of people, places, and events.</li>
+                <li>Hundreds of archaeological discoveries over the past two centuries have confirmed specific biblical details — people, cities, customs, and events once dismissed as legendary.</li>
+                <li>Where archaeology can test the Bible's historical claims, it has repeatedly confirmed them.</li>
+                <li>This provides strong grounds for trusting the Bible's historical reliability — including its accounts of Jesus.</li>
+              </ol>
+            </div>
+            <p style="font-family:var(--font-ui);font-size:0.82rem;background:var(--navy-50);border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 4px 4px 0;color:var(--text-mid);margin-bottom:1.25rem;line-height:1.6;"><strong>In plain English:</strong> Time and again, critics have said "that person or place in the Bible is made up" — and then archaeologists dig it up. The Hittites. Pontius Pilate. The Pool of Bethesda. Each was called a legend, then confirmed by discovery. The Bible has an impressive track record as a historical document.</p>
+
+            <p class="argument-explanation">In the 1800s, scholars pointed to the Hittites as an example of the Bible making things up — they were mentioned throughout the Old Testament but left no trace in any other ancient record. Then in 1906, archaeologists discovered the Hittite capital in Turkey — a massive imperial city. The Bible had been right all along. This pattern has repeated itself again and again. Pontius Pilate — once thought to be a legendary figure — was confirmed by a stone inscription found in 1961. The Pool of Bethesda, described in John 5, was found exactly where John said it was, with the five colonnades he described. The more archaeology advances, the more the Bible's historical details are confirmed. This doesn't prove miracles happened — but it does show that the people who wrote the Bible were accurate, careful historians who can be trusted on the details they could be checked on.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections — overview</div>
+              <div class="objection-row"><span class="objection-q">Q</span><span class="objection-a"><strong>Archaeology only confirms some details — not the miraculous claims.</strong> — Correct. Archaeological confirmation establishes historical reliability — that the Bible accurately records real people, places, and events. This doesn't directly prove miracles, but it significantly strengthens the credibility of the writers who reported them.</span></div>
+            </div>
+            <div class="pro-deepdive">
+              <div class="pro-deepdive-header">
+                <div class="pro-deepdive-badge">Pro — Deep Dive</div>
+                <div class="pro-deepdive-title">Key archaeological discoveries and what they confirm</div>
+              </div>
+              <button class="simple-toggle" onclick="toggleSimple('archaeology')">
+                <span class="simple-toggle-icon">💡</span>
+                <span class="simple-toggle-text">Explain this simply first</span>
+                <span class="simple-toggle-hint">Toggle ↕</span>
+              </button>
+              <div class="simple-summary" id="simple-archaeology">
+                <div class="simple-summary-text">The Bible has repeatedly been vindicated by archaeology. The Hittites — once called legendary — were confirmed by a major excavation in 1906. Pontius Pilate — once questioned — was confirmed by a stone inscription in 1961. The Pool of Bethesda — described by John with five colonnades — was found exactly as described. Writers who get the verifiable details right deserve to be taken seriously on the larger claims.</div>
+              </div>
+              <div class="pro-section-label">The Hittites</div>
+              <p class="pro-text">19th century critics pointed to the Hittites as a prime example of biblical invention — they appeared frequently in the Old Testament but left no trace in other ancient records. Then in 1906, excavations at Boghaz-köy in Turkey uncovered the Hittite capital Hattusa — a vast imperial city with an extensive library of records. The Hittites were one of the great empires of the ancient Near East. The Bible's references to them were entirely accurate. This became a defining example of how absence of evidence in archaeology is not evidence of absence.</p>
+              <div class="pro-section-label">The Pilate Stone</div>
+              <p class="pro-text">Critics once argued that Pontius Pilate was a legendary figure — his name appeared only in the Gospels and a few later sources. In 1961, Italian archaeologists excavating Caesarea Maritima discovered a limestone block with a Latin inscription that reads: "[Pon]tius Pilatus, [Praef]ectus Iuda[eae]" — "Pontius Pilate, Prefect of Judaea." This is the only extant contemporary inscription bearing Pilate's name. The Gospels accurately identified his title (prefect, not procurator as later sources erroneously called him) and his role.</p>
+              <div class="pro-section-label">The Pool of Bethesda</div>
+              <p class="pro-text">John 5:2 describes a pool with five covered colonnades in Jerusalem called Bethesda where Jesus healed a paralysed man. Critics argued this was a legendary detail — a pool with five colonnades had no archaeological parallel. Excavations north of the Temple Mount subsequently discovered exactly this structure — a pool with a central dividing wall creating two basins, with colonnades on four sides and on the central partition, totalling five colonnades. John's Gospel was providing accurate topographical information about Jerusalem.</p>
+              <div class="pro-section-label">The Ossuary of Caiaphas</div>
+              <p class="pro-text">In 1990, a burial cave south of Jerusalem was accidentally discovered during construction work. It contained an ornately decorated ossuary (bone box) inscribed with the name "Joseph son of Caiaphas" — almost certainly the high priest Caiaphas who presided over the trial of Jesus according to the Gospels. The New Testament's identification of Caiaphas as the high priest during Jesus's crucifixion is confirmed by the discovery of his family's burial site.</p>
+              <div class="pro-section-label">What this means for apologetics</div>
+              <p class="pro-text">As the great archaeologist William F. Albright stated: "The excessive scepticism shown toward the Bible by important historical schools of the 18th and 19th centuries, certain phases of which still appear periodically, has been progressively discredited. Discovery after discovery has established the accuracy of innumerable details, and has brought increased recognition of the Bible as a source of history." This does not prove that miracles occurred or that the resurrection happened — but it establishes that the writers of the biblical texts were accurate recorders of historical reality. Writers who get the small details right deserve to be taken seriously on the big claims.</p>
+              <div class="argument-footer" style="margin-top:1.5rem;"><a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena →</a></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pro-banner">
+        <div class="pro-banner-text">
+          <div class="pro-banner-title">77 more biblical reliability arguments</div>
+          <div class="pro-banner-sub">Unlock the full library including fulfilled prophecy, the canon formation argument, and responses to all major critical theories.</div>
+        </div>
+        <a href="index.html#pricing" class="pro-banner-btn">Unlock Pro — $8/mo</a>
+      
+    
+  <div
+  </div>
+
+  <div 
+  </div>
+
+  <div id="science" class="section">
+<div class="cat-intro">
+        <div class="cat-intro-text">
+          <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 5 of 5</p>
+          <h2 class="cat-intro-title">Science & <em>Christian Faith</em></h2>
+          <p class="cat-intro-desc">Science and faith are not enemies — in fact, some of the strongest evidence for God comes from science itself. The origin of the universe, the fine-tuning of physical constants, the complexity of DNA — these discoveries point toward a Creator. These arguments show you how.</p>
+        </div>
+        <div class="cat-count" style="color:var(--navy-500);">
+          <span class="cat-count-num">71</span>
+          <span class="cat-count-lbl">Arguments</span>
+        </div>
+      </div>
+
+      <p class="subcat-label">Origins & cosmology</p>
+      <div class="arguments-list">
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">01</div>
+            <div class="argument-info">
+              <div class="argument-title">The Argument from the Big Bang</div>
+              <div class="argument-tagline">Modern cosmology confirms the universe had an absolute beginning</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-beginner" title="Beginner — no prior knowledge needed. Plain English throughout.">🌱 Beginner</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="argument-premise">
+              <div class="argument-premise-label">The key facts</div>
+              <ol>
+                <li>The standard Big Bang model shows the universe began from an initial singularity.</li>
+                <li>The Borde-Guth-Vilenkin theorem proves any universe that has been expanding must have had a beginning.</li>
+                <li>Space, time, matter, and energy all came into existence at this point.</li>
+                <li>Whatever caused the universe must be outside space, time, and matter.</li>
+              </ol>
+            </div>
+            <p style="font-family:var(--font-ui);font-size:0.82rem;background:var(--navy-50);border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 4px 4px 0;color:var(--text-mid);margin-bottom:1.25rem;line-height:1.6;"><strong>In plain English:</strong> For a long time, atheists preferred an eternal universe — if it always existed, you don't need a Creator. Then science proved the universe had a beginning. That's a massive problem for atheism and a huge confirmation of what Genesis 1:1 said all along: "In the beginning, God created the heavens and the earth."</p>
+
+            <p class="argument-explanation">Edwin Hubble discovered in 1929 that the universe is expanding — galaxies are moving away from each other in every direction. Run that expansion backwards and you get to a point — about 13.8 billion years ago — where everything began. Scientists call that the Big Bang. More recently, three cosmologists — Borde, Guth, and Vilenkin — proved mathematically that any universe that has been expanding like ours has to have had a beginning. None of these three are Christians. Vilenkin, who is not a theist, has said plainly: "All the evidence we have says the universe had a beginning." Genesis 1:1 said that thousands of years ago. For the universe to begin, something outside the universe had to cause it. Something outside space, time, matter, and energy. Christians have a name for that.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections answered</div>
+              <div class="objection-row">
+                <span class="objection-q">Q</span>
+                <span class="objection-a"><strong>What about the multiverse or cyclic models?</strong> — The BGV theorem applies to these models too. Even if our universe is part of a larger structure, that structure itself must have had a beginning.</span>
+              </div>
+            </div>
+            <div class="argument-footer">
+              <a href="#" class="arg-action arg-action-primary">Practice in Debate Arena →</a>
+              <a href="#" class="arg-action arg-action-secondary">Further reading</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="argument-card" onclick="toggleArg(this)">
+          <div class="argument-header">
+            <div class="argument-num">02</div>
+            <div class="argument-info">
+              <div class="argument-title">The Origin of Life Argument</div>
+              <div class="argument-tagline">The information content of DNA points beyond unguided chemistry</div>
+            </div>
+            <div class="argument-meta">
+              <span class="diff-badge diff-intermediate" title="Intermediate — helpful if you've read the basics first.">📚 Intermediate</span>
+              <svg class="argument-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="argument-body">
+            <div class="tier-label-free">Free</div>
+
+            <p style="font-family:var(--font-ui);font-size:0.82rem;background:var(--navy-50);border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 4px 4px 0;color:var(--text-mid);margin-bottom:1.25rem;line-height:1.6;"><strong>In plain English:</strong> Evolution explains how life changes and develops once it exists. But it can't explain where the first living cell came from — because evolution requires life to already exist before it can work. The first cell needed to contain working DNA — a molecule packed with precise, functional information. And in all of human experience, precise information like that comes from only one source: a mind.</p>
+
+            <div class="argument-premise">
+              <div class="argument-premise-label">The key points</div>
+              <ol>
+                <li>Life requires DNA — a molecule that stores enormous amounts of precise, functional information.</li>
+                <li>Evolution can't help explain the first DNA — you need life to already exist for evolution to work.</li>
+                <li>Every time we see precisely coded information — computer programs, books, blueprints — it comes from a mind.</li>
+                <li>The origin of the first living cell, with its DNA, points toward an intelligent Creator.</li>
+              </ol>
+            </div>
+            <p class="argument-explanation">Think of DNA like a recipe book. It contains step-by-step instructions for building proteins — the machinery that keeps cells alive. The human genome has about 3 billion "letters" in its recipe book. Now imagine asking: could that recipe book write itself by accident? Scientists have been trying to answer this question — how did the first DNA appear — for over 70 years. No one has a convincing answer. The more we learn about the complexity of even the simplest living cell, the harder the problem gets, not easier. Francis Crick — who discovered the double-helix structure of DNA and was a committed atheist — said the origin of life "appears almost a miracle." He proposed that life might have been seeded from space, just to avoid the problem. Christians say there's a simpler explanation: life was created by an intelligence. And we have a very good candidate for who that intelligence is.</p>
+            <div class="argument-objections">
+              <div class="argument-objections-title">Common objections — overview</div>
+              <div class="objection-row"><span class="objection-q">Q</span><span class="objection-a"><strong>Science is close to solving the origin of life.</strong> — This has been claimed for decades. Despite enormous effort and resources, no viable pathway from chemistry to the first self-replicating cell has been demonstrated. The RNA World hypothesis faces the problem of explaining how self-replicating RNA arose in the first place. The more we learn about cellular complexity, the harder the problem becomes — not easier.</span></div>
+              <div class="objection-row"><span class="objection-q">Q</span><span class="objection-a"><strong>This is just a God-of-the-gaps argument.</strong> — The objection is not "we don't know, therefore God." It is "we know of only one source that generates specified, functional information — intelligence — and DNA exhibits exactly this kind of information." This is an inference to the best explanation based on what we positively know about information sources.</span></div>
+            </div>
+            <div class="pro-deepdive">
+              <div class="pro-deepdive-header">
+                <div class="pro-deepdive-badge">Pro — Deep Dive</div>
+                <div class="pro-deepdive-title">DNA information, the RNA world problem, and Stephen Meyer's argument</div>
+              </div>
+              <button class="simple-toggle" onclick="toggleSimple('originlife')">
+                <span class="simple-toggle-icon">💡</span>
+                <span class="simple-toggle-text">Explain this simply first</span>
+                <span class="simple-toggle-hint">Toggle ↕</span>
+              </button>
+              <div class="simple-summary" id="simple-originlife">
+                <div class="simple-summary-text">DNA contains precise, functional information — like a computer program for building proteins. Every time we encounter this kind of specified information in our experience, it traces back to intelligence. Natural selection can adapt life once it exists, but it can't explain the first self-replicating cell. Scientists have been trying to solve origin-of-life for over 70 years without success. The more we learn, the harder the problem becomes. An intelligent Creator is the best explanation.</div>
+              </div>
+              <div class="pro-section-label">DNA as specified information</div>
+              <p class="pro-text">DNA contains a four-letter chemical alphabet (A, T, G, C) arranged in sequences that specify the construction of proteins. The human genome contains approximately 3 billion base pairs encoding 20,000+ proteins. What makes DNA remarkable is not merely its complexity but its specificity — the sequences are not just complex, they are functional. A random sequence of DNA letters is useless; only specific sequences produce functional proteins. This is what philosopher of science Stephen Meyer calls "specified complexity" — the hallmark of intelligent design. We encounter specified complexity constantly in human artefacts: computer code, written language, engineered machines. In every case we can examine, specified complexity traces back to intelligence.</p>
+              <div class="pro-section-label">The RNA World and its problems</div>
+              <p class="pro-text">The most widely discussed naturalistic hypothesis for the origin of life is the RNA World — the idea that RNA molecules, which can both store information and catalyse chemical reactions, preceded DNA and protein-based life. However, this hypothesis faces devastating problems. First, how did the first self-replicating RNA molecule arise? RNA molecules of sufficient complexity to self-replicate have never been observed forming spontaneously in plausible prebiotic conditions. Second, even short functional RNA sequences require specific arrangements of nucleotides — the probability of generating them by chance is astronomically small. Third, RNA is chemically fragile and degrades rapidly in water — the environment in which it supposedly arose. After decades of research, the RNA World remains a hypothesis without a demonstrated pathway.</p>
+              <div class="pro-section-label">Stephen Meyer's argument from information</div>
+              <p class="pro-text">Stephen Meyer's landmark book <em>Signature in the Cell</em> (2009) presents the most comprehensive scientific argument for intelligent design from the origin of life. Meyer argues that the information content of DNA is not just analogous to a computer program — it is structurally identical in the relevant sense. Both involve sequences of symbols that are: (1) physically arbitrary (any sequence is chemically possible), (2) functionally specified (only certain sequences work), and (3) capable of being expressed as instructions that direct physical processes. In all of human experience, such information has one and only one known cause — intelligence. This is not an argument from ignorance but from our best understanding of how information arises. As information theorist Hubert Yockey concluded after a lifetime of study: "The origin of the genetic code is the most baffling aspect of the problem of the origin of life and a major conceptual or philosophical obstacle."</p>
+              <div class="pro-section-label">Francis Crick's honest assessment</div>
+              <p class="pro-text">Francis Crick, co-discoverer of the double-helix structure of DNA and a committed atheist, wrote in his 1981 book <em>Life Itself</em>: "The origin of life appears at the moment to be almost a miracle, so many are the conditions which would have had to have been satisfied to get it going." He proposed panspermia — that life was seeded from space — as a way of postponing the problem rather than solving it. Crick's honest acknowledgement of the difficulty, even while rejecting theistic explanation, is a powerful indicator of how intractable the problem genuinely is.</p>
+              <div class="scholar-row"><div class="scholar-initial" style="background:#E1F5EE;color:#0F6E56;">SM</div><div class="scholar-info"><div class="scholar-name">Stephen Meyer — Discovery Institute</div><div class="scholar-quote">"Neo-Darwinism and chemical evolutionary theory together fail to provide a plausible account of the origin of biological information." — <em>Signature in the Cell</em></div></div></div>
+              <div class="argument-footer" style="margin-top:1.5rem;"><a href="debate-arena.html" class="arg-action arg-action-primary">Practise in Debate Arena →</a></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pro-banner">
+        <div class="pro-banner-text">
+          <div class="pro-banner-title">69 more science & faith arguments</div>
+          <div class="pro-banner-sub">Unlock the full library including the argument from reason, consciousness, the reliability of science, and much more.</div>
+        </div>
+        <a href="index.html#pricing" class="pro-banner-btn">Unlock Pro — $8/mo</a>
+      
+    
+
+  
+
+  <!-- FOOTER -->
+  
+
+
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Apologia<span>Daily</span></div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
+      <li><a href="daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+    </ul>
+  </div>
+  <div class="footer-copy">&#169; 2026 Apologia Daily. Built for the defence of the Gospel.</div>
+</footer>
+
+<script>
+function show(id, btn) {
+  var sections = document.querySelectorAll('.section');
+  for (var i = 0; i < sections.length; i++) {
+    sections[i].className = 'section';
+  }
+  var tabs = document.querySelectorAll('.tab');
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].className = 'tab';
+  }
+  document.getElementById(id).className = 'section on';
+  btn.className = 'tab active';
+}
+
+function toggleArg(card) {
+  if (card.classList.contains('open')) {
+    card.classList.remove('open');
+  } else {
+    var all = document.querySelectorAll('.argument-card.open');
+    for (var i = 0; i < all.length; i++) all[i].classList.remove('open');
+    card.classList.add('open');
+  }
+}
+
+function toggleSimple(id) {
+  var el = document.getElementById('simple-' + id);
+  if (el) el.classList.toggle('visible');
+}
+
+async function askTutor(pid, arg, cat) {
+  var input = document.getElementById('ti-' + pid);
+  var q = input ? input.value.trim() : '';
+  if (!q) return;
+  var btn = document.getElementById('ts-' + pid);
+  var resp = document.getElementById('tr-' + pid);
+  var text = document.getElementById('tt-' + pid);
+  if (btn) btn.disabled = true;
+  if (resp) resp.classList.remove('visible');
+  try {
+    var res = await fetch('/api/tutor', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({question: q, argument: arg, category: cat})
+    });
+    if (res.ok) {
+      var data = await res.json();
+      if (text) text.textContent = data.answer;
+      if (resp) resp.classList.add('visible');
+      if (input) input.value = '';
+    }
+  } catch(e) {
+    if (text) text.textContent = 'Sorry, something went wrong. Please try again.';
+    if (resp) resp.classList.add('visible');
+  }
+  if (btn) btn.disabled = false;
+}
+
+function fillTutor(pid, q) {
+  var input = document.getElementById('ti-' + pid);
+  if (input) { input.value = q; input.focus(); }
+}
+</script>
+</body>
+</html>
