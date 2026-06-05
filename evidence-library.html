@@ -4,580 +4,227 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Evidence Library — Apologia Daily</title>
-  <meta name="description" content="300+ arguments for the Christian faith. Organised by category — God's existence, the resurrection, biblical reliability, and science & faith." />
+  <meta name="description" content="240+ arguments for the Christian faith — from the Kalam Cosmological Argument to the resurrection. Free summaries and Pro deep dives with AI tutor." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --navy-950: #050d1a;
-      --navy-900: #0a1628;
-      --navy-800: #0f2040;
-      --navy-700: #163058;
-      --navy-600: #1e4278;
-      --navy-500: #285a9e;
-      --navy-400: #3b72bc;
-      --navy-300: #6f9fd4;
-      --navy-200: #aecae8;
-      --navy-100: #ddeaf5;
-      --navy-50:  #f0f6fb;
-      --gold:     #c8a951;
-      --gold-light: #e8cf87;
-      --white:    #ffffff;
-      --off-white: #f8f7f4;
-      --text-dark: #0a1628;
-      --text-mid:  #3a4a62;
-      --text-muted: #7a8fa8;
-      --border:   #d4e0ec;
-      --font-display: 'Playfair Display', Georgia, serif;
-      --font-body: 'Source Serif 4', Georgia, serif;
-      --font-ui: 'DM Sans', system-ui, sans-serif;
+      --navy-950: #050d1a; --navy-900: #0a1628; --navy-800: #0f2040;
+      --navy-700: #163058; --navy-600: #1e4278; --navy-500: #285a9e;
+      --navy-400: #3b72bc; --navy-300: #6f9fd4; --navy-200: #aecae8;
+      --navy-100: #ddeaf5; --navy-50: #f0f6fb;
+      --gold: #c8a951; --gold-light: #e8cf87;
+      --white: #ffffff; --off-white: #f8f7f4;
+      --text-dark: #0a1628; --text-mid: #3a4a62; --text-muted: #7a8fa8;
+      --border: #d4e0ec;
+      --correct: #0f6e56; --correct-bg: #e1f5ee; --correct-border: #9fe1cb;
+      --wrong: #a32d2d; --wrong-bg: #fcebeb; --wrong-border: #f09595;
+      --font-display: "Playfair Display", Georgia, serif;
+      --font-body: "Source Serif 4", Georgia, serif;
+      --font-ui: "DM Sans", system-ui, sans-serif;
     }
-
     html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--font-body);
-      color: var(--text-dark);
-      background: var(--white);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
+    body { font-family: var(--font-body); color: var(--text-dark); background: var(--off-white); line-height: 1.7; overflow-x: hidden; }
 
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(5,13,26,0.96);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding: 0 2rem;
-      height: 64px;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .nav-logo {
-      font-family: var(--font-display);
-      font-size: 1.25rem; font-weight: 600;
-      color: var(--white); text-decoration: none;
-    }
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,13,26,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--white); text-decoration: none; }
     .nav-logo span { color: var(--gold); }
-    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
-    .nav-links a {
-      font-family: var(--font-ui); font-size: 0.85rem; font-weight: 400;
-      color: rgba(255,255,255,0.7); text-decoration: none;
-      letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s;
-    }
-    .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+    .nav-links a { font-family: var(--font-ui); font-size: 0.82rem; color: rgba(255,255,255,0.7); text-decoration: none; text-transform: uppercase; letter-spacing: 0.04em; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
     .nav-links a.active { color: var(--gold); }
-    .nav-cta {
-      font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500;
-      padding: 8px 20px; border-radius: 3px;
-      background: var(--gold); color: var(--navy-950);
-      text-decoration: none; transition: background 0.2s;
-    }
-    .nav-cta:hover { background: var(--gold-light); }
+    .nav-right { display: flex; gap: 10px; align-items: center; }
+    .nav-signin { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.6); text-decoration: none; }
+    .nav-cta { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 8px 20px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
 
-    /* ── PAGE HEADER ── */
-    .page-header {
-      background: var(--navy-950);
-      padding: 8rem 2rem 4rem;
-      position: relative; overflow: hidden;
-    }
-    .page-header::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(30,66,120,0.5) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .page-header-inner {
-      max-width: 1100px; margin: 0 auto;
-      position: relative; z-index: 1;
-    }
-    .page-eyebrow {
-      font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 1rem;
-    }
-    .page-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
-      font-weight: 700; line-height: 1.1;
-      color: var(--white); margin-bottom: 1rem;
-    }
+    /* PAGE HEADER */
+    .page-header { background: var(--navy-950); padding: 8rem 2rem 4rem; position: relative; overflow: hidden; }
+    .page-header::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(30,66,120,0.5) 0%, transparent 70%); pointer-events: none; }
+    .page-header-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+    .page-eyebrow { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .page-title { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; color: var(--white); margin-bottom: 1rem; }
     .page-title em { font-style: italic; color: var(--gold); }
-    .page-sub {
-      font-size: 1.05rem; font-weight: 300;
-      color: rgba(255,255,255,0.6);
-      max-width: 560px; line-height: 1.8;
-      margin-bottom: 2rem;
-    }
-    .search-bar {
-      display: flex; gap: 0;
-      max-width: 520px;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 4px; overflow: hidden;
-      background: rgba(255,255,255,0.05);
-    }
-    .search-bar input {
-      flex: 1; padding: 12px 16px;
-      background: transparent; border: none; outline: none;
-      font-family: var(--font-ui); font-size: 0.9rem;
-      color: var(--white);
-    }
-    .search-bar input::placeholder { color: rgba(255,255,255,0.3); }
-    .search-bar button {
-      padding: 12px 20px;
-      background: var(--gold); border: none; cursor: pointer;
-      font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500;
-      color: var(--navy-950); transition: background 0.2s;
-    }
-    .search-bar button:hover { background: var(--gold-light); }
+    .page-sub { font-size: 1.05rem; font-weight: 300; color: rgba(255,255,255,0.6); max-width: 560px; line-height: 1.8; }
 
-    /* ── CATEGORY NAV ── */
-    .category-nav {
-      background: var(--navy-900);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      position: sticky; top: 64px; z-index: 90;
-    }
-    .category-nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex; flex-wrap: nowrap;
-      padding: 0 2rem;
-      overflow-x: auto;
-    }
-    .category-nav-inner::-webkit-scrollbar { display: none; }
-    .cat-tab {
-      font-family: var(--font-ui); font-size: 0.75rem; font-weight: 400;
-      padding: 1rem 0.9rem;
-      color: rgba(255,255,255,0.5);
-      border-bottom: 2px solid transparent;
-      cursor: pointer; white-space: nowrap; flex-shrink: 0;
-      background: none; border-left: none; border-right: none; border-top: none;
-      transition: all 0.2s;
-    }
+    /* DIFFICULTY LEGEND */
+    .diff-legend { background: var(--off-white); border-bottom: 1px solid var(--border); padding: 0.6rem 2rem; }
+    .diff-legend-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .diff-legend-label { font-family: var(--font-ui); font-size: 0.68rem; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; }
+    .diff-legend-item { font-family: var(--font-ui); font-size: 0.72rem; display: flex; align-items: center; gap: 6px; }
+
+    /* CATEGORY NAV */
+    .category-nav { position: sticky; top: 64px; z-index: 90; background: var(--navy-900); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 2rem; }
+    .category-nav-inner { max-width: 1100px; margin: 0 auto; display: flex; gap: 0; overflow-x: auto; }
+    .cat-tab { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; padding: 1rem 1.25rem; background: none; border: none; color: rgba(255,255,255,0.55); cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; transition: all 0.2s; }
     .cat-tab:hover { color: rgba(255,255,255,0.85); }
     .cat-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
 
-    /* ── MAIN CONTENT ── */
-    .main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 6rem; }
+    /* MAIN */
+    .main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem 6rem; }
 
-    /* ── CATEGORY SECTION ── */
-    .category-section { display: none !important; }
-    .category-section.active { display: block !important; }
-    .category-section[style*="display: block"] { display: block !important; }
-    .category-section[style*="display:block"] { display: block !important; }
-    .category-section .cat-intro,
-    .category-section .subcat-label,
-    .category-section .arguments-list,
-    .category-section .pro-banner { }
+    /* CATEGORY SECTIONS - THE KEY RULES */
+    .cat-section { display: none; }
+    .cat-section.visible { display: block; }
 
+    /* CATEGORY INTRO */
+    .cat-intro { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+    .cat-intro-eyebrow { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .cat-intro-title { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; color: var(--text-dark); margin-bottom: 0.75rem; }
+    .cat-intro-title em { font-style: italic; color: var(--navy-600); }
+    .cat-intro-desc { font-size: 0.95rem; color: var(--text-mid); line-height: 1.8; max-width: 600px; }
 
-    .cat-intro {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 2rem; align-items: start;
-      padding: 2.5rem 0 2rem;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 2.5rem;
-    }
-    .cat-intro-text {}
-    .cat-intro-eyebrow {
-      font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      margin-bottom: 0.5rem;
-    }
-    .cat-intro-title {
-      font-family: var(--font-display);
-      font-size: 1.9rem; font-weight: 700; line-height: 1.2;
-      color: var(--text-dark); margin-bottom: 0.75rem;
-    }
-    .cat-intro-title em { font-style: italic; }
-    .cat-intro-desc {
-      font-size: 0.95rem; font-weight: 300;
-      color: var(--text-mid); line-height: 1.8; max-width: 560px;
-    }
-    .cat-count {
-      text-align: right; flex-shrink: 0;
-    }
-    .cat-count-num {
-      font-family: var(--font-display);
-      font-size: 3rem; font-weight: 700; line-height: 1;
-      display: block;
-    }
-    .cat-count-lbl {
-      font-family: var(--font-ui); font-size: 0.72rem;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--text-muted);
-    }
-
-    /* ── ARGUMENT CARDS ── */
-    .arguments-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-bottom: 3rem; }
-    .argument-card {
-      background: var(--white);
-      padding: 0;
-      cursor: pointer;
-      transition: background 0.15s;
-    }
-    .argument-card:hover { background: var(--navy-50); }
-    .argument-card.open { background: var(--navy-50); }
-    .argument-header {
-      display: flex; align-items: center; gap: 1rem;
-      padding: 1.5rem 1.75rem;
-    }
-    .argument-num {
-      font-family: var(--font-display);
-      font-size: 1.1rem; font-weight: 700;
-      color: var(--navy-200); min-width: 2rem;
-      flex-shrink: 0;
-    }
-    .argument-info { flex: 1; }
-    .argument-title {
-      font-family: var(--font-display);
-      font-size: 1.05rem; font-weight: 600;
-      color: var(--text-dark); margin-bottom: 3px;
-    }
-    .argument-tagline {
-      font-family: var(--font-ui); font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-    .argument-meta { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-    .diff-badge {
-      font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      padding: 3px 10px; border-radius: 20px;
-    }
+    /* DIFF BADGES */
+    .diff-badge { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; }
     .diff-beginner { background: #e1f5ee; color: #0f6e56; }
     .diff-intermediate { background: #faeeda; color: #854f0b; }
     .diff-advanced { background: #eeedfe; color: #3c3489; }
-    .argument-chevron {
-      width: 18px; height: 18px;
-      stroke: var(--text-muted); fill: none; stroke-width: 2;
-      transition: transform 0.2s;
-      flex-shrink: 0;
-    }
+
+    /* SUBCAT LABEL */
+    .subcat-label { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+
+    /* ARGUMENT CARDS */
+    .argument-card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 10px; overflow: hidden; transition: border-color 0.15s; }
+    .argument-card:hover { border-color: var(--navy-200); }
+    .argument-card.open { border-color: var(--navy-300); }
+    .argument-header { display: flex; align-items: center; gap: 1rem; padding: 1.25rem 1.5rem; cursor: pointer; user-select: none; }
+    .argument-num { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--navy-200); min-width: 2rem; }
+    .argument-info { flex: 1; }
+    .argument-title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 2px; }
+    .argument-tagline { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text-muted); }
+    .argument-meta { display: flex; align-items: center; gap: 10px; }
+    .argument-chevron { width: 18px; height: 18px; stroke: var(--text-muted); fill: none; stroke-width: 2; transition: transform 0.2s; flex-shrink: 0; }
     .argument-card.open .argument-chevron { transform: rotate(180deg); }
-    .argument-body {
-      display: none;
-      padding: 0 1.75rem 1.75rem 4.5rem;
-      border-top: 1px solid var(--border);
-    }
+    .argument-body { display: none; padding: 0 1.5rem 1.5rem 4.5rem; border-top: 1px solid var(--border); }
     .argument-card.open .argument-body { display: block; }
-    .argument-premise {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 3px;
-      padding: 1.25rem 1.5rem;
-      margin: 1.25rem 0;
-    }
-    .argument-premise-label {
-      font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--text-muted); margin-bottom: 0.75rem;
-    }
-    .argument-premise ol {
-      padding-left: 1.25rem;
-    }
-    .argument-premise ol li {
-      font-size: 0.95rem; color: var(--text-mid);
-      line-height: 1.7; margin-bottom: 4px;
-    }
-    .argument-explanation {
-      font-size: 0.95rem; font-weight: 300;
-      color: var(--text-mid); line-height: 1.85;
-      margin-bottom: 1.25rem;
-    }
-    .argument-objections { margin-bottom: 1.25rem; }
-    .argument-objections-title {
-      font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--text-muted); margin-bottom: 0.75rem;
-    }
-    .objection-row {
-      display: flex; gap: 10px; align-items: flex-start;
-      padding: 8px 0; border-bottom: 1px solid var(--border);
-      font-size: 0.88rem;
-    }
-    .objection-row:last-child { border-bottom: none; }
-    .objection-q { color: var(--text-muted); min-width: 14px; flex-shrink: 0; font-style: italic; }
-    .objection-a { color: var(--text-mid); line-height: 1.6; }
-    .argument-footer {
-      display: flex; gap: 10px; flex-wrap: wrap;
-      padding-top: 1.25rem; border-top: 1px solid var(--border);
-    }
-    .arg-action {
-      font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500;
-      padding: 7px 16px; border-radius: 3px; cursor: pointer;
-      text-decoration: none; transition: all 0.2s; border: none;
-    }
-    .arg-action-primary {
-      background: var(--navy-900); color: var(--white);
-    }
-    .arg-action-primary:hover { background: var(--navy-700); }
-    .arg-action-secondary {
-      background: transparent; color: var(--navy-600);
-      border: 1px solid var(--border);
-    }
-    .arg-action-secondary:hover { border-color: var(--navy-300); }
 
-    /* ── SUBCATEGORY LABEL ── */
-    .subcat-label {
-      font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--text-muted);
-      padding: 1.5rem 0 0.75rem;
-      margin-bottom: 0;
-      display: flex; align-items: center; gap: 12px;
-    }
-    .subcat-label::after {
-      content: ''; flex: 1; height: 1px; background: var(--border);
-    }
+    /* FREE TIER */
+    .tier-label-free { font-family: var(--font-ui); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--correct); background: var(--correct-bg); padding: 3px 10px; border-radius: 20px; display: inline-block; margin: 1.25rem 0 0.75rem; }
+    .plain-english { font-family: var(--font-ui); font-size: 0.85rem; background: var(--navy-50); border-left: 3px solid var(--gold); padding: 10px 14px; border-radius: 0 4px 4px 0; color: var(--text-mid); margin-bottom: 1.25rem; line-height: 1.6; }
+    .plain-english strong { color: var(--text-dark); }
+    .argument-premise { background: var(--white); border: 1px solid var(--border); border-radius: 3px; padding: 1.25rem 1.5rem; margin: 1.25rem 0; }
+    .argument-premise-label { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem; }
+    .argument-premise ol { padding-left: 1.25rem; }
+    .argument-premise ol li { font-size: 0.92rem; color: var(--text-mid); margin-bottom: 6px; line-height: 1.6; }
+    .argument-explanation { font-size: 0.95rem; color: var(--text-mid); line-height: 1.85; margin-bottom: 1.25rem; }
+    .argument-objections { background: var(--off-white); border-radius: 4px; padding: 1.25rem 1.5rem; margin-top: 1.25rem; }
+    .argument-objections-title { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .objection-row { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .objection-q { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 700; background: var(--navy-600); color: var(--white); padding: 1px 6px; border-radius: 3px; flex-shrink: 0; margin-top: 2px; }
+    .objection-a { font-size: 0.88rem; color: var(--text-mid); line-height: 1.6; }
+    .objection-a strong { color: var(--text-dark); font-weight: 500; }
 
-    /* ── LOCKED CARD ── */
-    .argument-card.locked {
-      opacity: 0.6; cursor: default;
-    }
-    .argument-card.locked:hover { background: var(--white); }
-    .lock-icon {
-      width: 16px; height: 16px;
-      stroke: var(--text-muted); fill: none; stroke-width: 2;
-    }
+    /* PRO DEEP DIVE */
+    .pro-deepdive { background: var(--navy-950); border-radius: 6px; padding: 1.5rem; margin-top: 1.25rem; }
+    .pro-deepdive-header { display: flex; align-items: center; gap: 12px; margin-bottom: 1.25rem; flex-wrap: wrap; }
+    .pro-deepdive-badge { font-family: var(--font-ui); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; background: rgba(200,169,81,0.15); color: var(--gold); padding: 3px 10px; border-radius: 20px; border: 1px solid rgba(200,169,81,0.3); }
+    .pro-deepdive-title { font-family: var(--font-ui); font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+    .pro-section-label { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin: 1.25rem 0 0.6rem; }
+    .pro-text { font-size: 0.92rem; color: rgba(255,255,255,0.72); line-height: 1.85; margin-bottom: 1rem; }
+    .pro-text em { font-style: italic; }
+    .pro-text strong { color: rgba(255,255,255,0.9); font-weight: 500; }
+    .scholar-row { display: flex; gap: 12px; align-items: flex-start; margin: 1rem 0; }
+    .scholar-initial { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-ui); font-size: 0.75rem; font-weight: 700; flex-shrink: 0; }
+    .scholar-name { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.7); margin-bottom: 3px; }
+    .scholar-quote { font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.6; font-style: italic; }
+    .argument-footer { display: flex; gap: 10px; margin-top: 1.5rem; flex-wrap: wrap; }
+    .arg-action { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; padding: 9px 18px; border-radius: 3px; text-decoration: none; }
+    .arg-action-primary { background: var(--gold); color: var(--navy-950); }
+    .arg-action-secondary { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.65); }
 
-    /* ── PRO BANNER ── */
-    .pro-banner {
-      background: var(--navy-900);
-      border-radius: 4px;
-      padding: 2rem 2.5rem;
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 2rem; flex-wrap: wrap;
-      margin-bottom: 3rem;
-    }
-    .pro-banner-text {}
-    .pro-banner-title {
-      font-family: var(--font-display);
-      font-size: 1.2rem; font-weight: 600;
-      color: var(--white); margin-bottom: 4px;
-    }
-    .pro-banner-sub {
-      font-family: var(--font-ui); font-size: 0.85rem;
-      color: rgba(255,255,255,0.5);
-    }
-    .pro-banner-btn {
-      font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500;
-      padding: 11px 24px; border-radius: 3px;
-      background: var(--gold); color: var(--navy-950);
-      text-decoration: none; white-space: nowrap;
-      transition: background 0.2s; border: none; cursor: pointer;
-    }
-    .pro-banner-btn:hover { background: var(--gold-light); }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--navy-950);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 3rem 2rem 2rem;
-    }
-    .footer-inner {
-      max-width: 1100px; margin: 0 auto;
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;
-    }
-    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
-    .footer-logo span { color: var(--gold); }
-    .footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
-    .footer-links a { font-family: var(--font-ui); font-size: 0.8rem; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
-    .footer-links a:hover { color: rgba(255,255,255,0.7); }
-    .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
-
-    /* ── ANIMATIONS ── */
-    /* ── SIMPLE TOGGLE ── */
-    .simple-toggle { display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem; padding: 10px 14px; background: rgba(200,169,81,0.08); border: 1px solid rgba(200,169,81,0.2); border-radius: 6px; cursor: pointer; transition: all 0.15s; }
-    .simple-toggle:hover { background: rgba(200,169,81,0.12); }
+    /* SIMPLE TOGGLE */
+    .simple-toggle { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; padding: 10px 14px; background: rgba(200,169,81,0.08); border: 1px solid rgba(200,169,81,0.2); border-radius: 6px; cursor: pointer; width: 100%; text-align: left; }
     .simple-toggle-icon { font-size: 1rem; }
     .simple-toggle-text { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--gold); flex: 1; }
-    .simple-toggle-hint { font-family: var(--font-ui); font-size: 0.72rem; color: rgba(255,255,255,0.4); }
-    .simple-summary { background: rgba(255,255,255,0.05); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; display: none; }
+    .simple-toggle-hint { font-family: var(--font-ui); font-size: 0.72rem; color: rgba(255,255,255,0.35); }
+    .simple-summary { background: rgba(255,255,255,0.05); border-left: 3px solid var(--gold); padding: 1rem 1.25rem; margin-bottom: 1rem; display: none; border-radius: 0 6px 6px 0; }
     .simple-summary.visible { display: block; }
-    .simple-summary-text { font-family: var(--font-body); font-size: 0.95rem; color: rgba(255,255,255,0.82); line-height: 1.85; }
+    .simple-summary-text { font-family: var(--font-body); font-size: 0.92rem; color: rgba(255,255,255,0.8); line-height: 1.85; }
 
-    /* ── TUTOR PANEL ── */
+    /* TUTOR */
     .tutor-panel { background: linear-gradient(135deg, #050d1a, #0f2040); border: 1px solid rgba(200,169,81,0.25); border-radius: 8px; padding: 1.5rem; margin-top: 1.5rem; }
     .tutor-header { display: flex; align-items: center; gap: 10px; margin-bottom: 1.25rem; }
     .tutor-avatar { width: 36px; height: 36px; border-radius: 50%; background: rgba(200,169,81,0.15); border: 1px solid rgba(200,169,81,0.3); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
     .tutor-title { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--white); }
     .tutor-sub { font-family: var(--font-ui); font-size: 0.7rem; color: rgba(255,255,255,0.4); }
     .tutor-suggestions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.25rem; }
-    .tutor-suggestion { font-family: var(--font-ui); font-size: 0.75rem; padding: 6px 12px; border-radius: 20px; border: 1px solid rgba(200,169,81,0.25); background: rgba(200,169,81,0.08); color: rgba(255,255,255,0.65); cursor: pointer; transition: all 0.15s; text-align: left; }
-    .tutor-suggestion:hover { border-color: var(--gold); color: var(--gold); background: rgba(200,169,81,0.12); }
+    .tutor-suggestion { font-family: var(--font-ui); font-size: 0.75rem; padding: 6px 12px; border-radius: 20px; border: 1px solid rgba(200,169,81,0.25); background: rgba(200,169,81,0.08); color: rgba(255,255,255,0.65); cursor: pointer; transition: all 0.15s; }
+    .tutor-suggestion:hover { border-color: var(--gold); color: var(--gold); }
     .tutor-input-row { display: flex; gap: 8px; }
-    .tutor-input { flex: 1; padding: 10px 14px; border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; font-family: var(--font-ui); font-size: 0.88rem; color: var(--white); background: rgba(255,255,255,0.06); outline: none; transition: border-color 0.2s; }
+    .tutor-input { flex: 1; padding: 10px 14px; border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; font-family: var(--font-ui); font-size: 0.88rem; color: var(--white); background: rgba(255,255,255,0.06); outline: none; }
     .tutor-input:focus { border-color: rgba(200,169,81,0.5); }
     .tutor-input::placeholder { color: rgba(255,255,255,0.3); }
-    .tutor-send { padding: 10px 18px; border-radius: 4px; background: var(--gold); color: var(--navy-950); font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; border: none; cursor: pointer; white-space: nowrap; transition: background 0.2s; flex-shrink: 0; }
-    .tutor-send:hover { background: var(--gold-light); }
+    .tutor-send { padding: 10px 18px; border-radius: 4px; background: var(--gold); color: var(--navy-950); font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; border: none; cursor: pointer; flex-shrink: 0; }
     .tutor-send:disabled { opacity: 0.5; cursor: default; }
     .tutor-response { margin-top: 1.25rem; padding: 1.25rem; background: rgba(255,255,255,0.04); border-radius: 6px; border-left: 2px solid var(--gold); display: none; }
     .tutor-response.visible { display: block; }
     .tutor-response-label { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
     .tutor-response-text { font-size: 0.92rem; color: rgba(255,255,255,0.8); line-height: 1.8; }
-    .tutor-loading { display: flex; align-items: center; gap: 8px; font-family: var(--font-ui); font-size: 0.82rem; color: rgba(255,255,255,0.4); margin-top: 1rem; display: none; }
-    .tutor-loading.visible { display: flex; }
-    .tutor-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); animation: tutorBounce 1.2s ease infinite; }
-    .tutor-dot:nth-child(2) { animation-delay: 0.2s; }
-    .tutor-dot:nth-child(3) { animation-delay: 0.4s; }
-    @keyframes tutorBounce { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-4px); } }
 
-    /* ── FREE / PRO TIER LABELS ── */
-    .tier-label-free {
-      display: inline-block;
-      font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 3px 10px; border-radius: 20px;
-      background: var(--navy-50); color: var(--navy-500);
-      border: 1px solid var(--navy-200);
-      margin-bottom: 1.25rem;
-    }
-
-    /* ── PRO DEEP DIVE ── */
-    .pro-deepdive {
-      margin-top: 2rem;
-      border-top: 2px solid var(--gold);
-      padding-top: 1.5rem;
-    }
-    .pro-deepdive-header {
-      display: flex; align-items: center; gap: 12px;
-      margin-bottom: 1.75rem; flex-wrap: wrap;
-    }
-    .pro-deepdive-badge {
-      font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 4px 12px; border-radius: 20px;
-      background: var(--gold); color: var(--navy-950);
-    }
-    .pro-deepdive-title {
-      font-family: var(--font-ui); font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-    .pro-section-label {
-      font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--navy-500); margin: 1.5rem 0 0.75rem;
-      padding-bottom: 6px; border-bottom: 1px solid var(--navy-100);
-    }
-    .pro-text {
-      font-size: 0.95rem; font-weight: 300;
-      color: var(--text-mid); line-height: 1.85;
-      margin-bottom: 1rem;
-    }
-    .pro-text strong { color: var(--text-dark); font-weight: 500; }
-
-    /* ── CONVERSATION GUIDE ── */
-    .convo-guide { display: flex; flex-direction: column; gap: 0; }
-    .convo-step {
-      display: flex; gap: 14px; align-items: flex-start;
-      padding: 1rem 0; border-bottom: 1px solid var(--border);
-    }
-    .convo-step:last-child { border-bottom: none; }
-    .convo-step-num {
-      width: 28px; height: 28px; border-radius: 50%;
-      background: var(--navy-900); color: var(--gold);
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500;
-      flex-shrink: 0; margin-top: 2px;
-    }
-    .convo-step-text {
-      font-size: 0.92rem; color: var(--text-mid); line-height: 1.75;
-    }
-    .convo-step-text strong { color: var(--text-dark); font-weight: 500; }
-
-    /* ── SCHOLAR QUOTES ── */
-    .scholar-row {
-      display: flex; gap: 14px; align-items: flex-start;
-      padding: 1rem 0; border-bottom: 1px solid var(--border);
-    }
-    .scholar-row:last-child { border-bottom: none; }
-    .scholar-initial {
-      width: 40px; height: 40px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500;
-      flex-shrink: 0;
-    }
-    .scholar-info {}
-    .scholar-name {
-      font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500;
-      color: var(--text-dark); margin-bottom: 4px;
-    }
-    .scholar-quote {
-      font-size: 0.88rem; font-style: italic;
-      color: var(--text-mid); line-height: 1.65;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .cat-intro { grid-template-columns: 1fr; }
-      .cat-count { text-align: left; }
-      .argument-header { padding: 1.25rem; }
-      .argument-body { padding: 0 1.25rem 1.25rem 1.25rem; }
-      .main { padding: 2rem 1.25rem 4rem; }
-    }
+    footer { background: var(--navy-950); border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 2rem 2rem; margin-top: 4rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+    .footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-ui); font-size: 0.8rem; color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
-    <ul class="nav-links">
-      <li><a href="evidence-library.html" class="active">Evidence Library</a></li>
-      <li><a href="video-library.html">Videos</a></li>
-      <li><a href="debate-arena.html">Debate Arena</a></li>
-      <li><a href="daily-devotional.html">Daily Devotional</a></li>
-      <li><a href="ask-anything.html">Ask Anything</a></li>
-      <li><a href="worldviews.html">Worldviews</a></li>
-      <li><a href="study-plans.html">Study Plans</a></li>
-      <li><a href="whats-new.html">What's New</a></li>
-    </ul>
-    <div style="display:flex;align-items:center;gap:10px;">
-      <a href="login.html" style="font-family:var(--font-ui);font-size:0.85rem;color:rgba(255,255,255,0.6);text-decoration:none;">Sign in</a>
-      <a href="signup.html" class="nav-cta">Start Free</a>
-    </div>
-  </nav>
-
-  <!-- PAGE HEADER -->
-  <div class="page-header">
-    <div class="page-header-inner">
-      <p class="page-eyebrow">Evidence Library</p>
-      <h1 class="page-title">The case for <em>Christianity</em>,<br/>argument by argument</h1>
-      <p class="page-sub">300+ carefully explained arguments for the Christian faith. From classical philosophy to modern science — select a category below to explore.</p>
-    </div>
+<nav>
+  <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+  <ul class="nav-links">
+    <li><a href="beginners-path.html" style="color:var(--gold);">Start Here</a></li>
+    <li><a href="evidence-library.html" class="active">Evidence Library</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="debate-arena.html">Debate Arena</a></li>
+    <li><a href="daily-devotional.html">Daily Devotional</a></li>
+    <li><a href="ask-anything.html">Ask Anything</a></li>
+    <li><a href="worldviews.html">Worldviews</a></li>
+    <li><a href="study-plans.html">Study Plans</a></li>
+    <li><a href="whats-new.html">What's New</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="login.html" class="nav-signin">Sign in</a>
+    <a href="signup.html" class="nav-cta">Start Free</a>
   </div>
+</nav>
 
-  <!-- CATEGORY NAV -->
-  <div class="category-nav">
-    <div class="category-nav-inner">
-      <button class="cat-tab active" onclick="switchCat('existence', this)">God's Existence</button>
-      <button class="cat-tab" onclick="switchCat('resurrection', this)">The Resurrection</button>
-      <button class="cat-tab" onclick="switchCat('jesus', this)">Jesus</button>
-      <button class="cat-tab" onclick="switchCat('bible', this)">Biblical Reliability</button>
-      <button class="cat-tab" onclick="switchCat('science', this)">Science & Faith</button>
-    </div>
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-eyebrow">Evidence Library</p>
+    <h1 class="page-title">The case for <em>Christian faith</em></h1>
+    <p class="page-sub">Every major argument examined — from the Kalam Cosmological Argument to the resurrection. Free summaries in plain English. Pro deep dives for those who want to go further.</p>
   </div>
+</div>
 
-  <!-- DIFFICULTY LEGEND -->
-  <div style="background:var(--off-white);border-bottom:1px solid var(--border);padding:0.6rem 2rem;">
-    <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;">
-      <span style="font-family:var(--font-ui);font-size:0.68rem;color:var(--text-muted);font-weight:500;text-transform:uppercase;letter-spacing:0.08em;">Difficulty:</span>
-      <span style="font-family:var(--font-ui);font-size:0.72rem;display:flex;align-items:center;gap:5px;"><span class="diff-badge diff-beginner" style="padding:2px 8px;">🌱 Beginner</span> No prior knowledge needed</span>
-      <span style="font-family:var(--font-ui);font-size:0.72rem;display:flex;align-items:center;gap:5px;"><span class="diff-badge diff-intermediate" style="padding:2px 8px;">📚 Intermediate</span> Helpful to read basics first</span>
-      <span style="font-family:var(--font-ui);font-size:0.72rem;display:flex;align-items:center;gap:5px;"><span class="diff-badge diff-advanced" style="padding:2px 8px;">🎓 Advanced</span> Some philosophy background helpful</span>
-    </div>
+<div class="diff-legend">
+  <div class="diff-legend-inner">
+    <span class="diff-legend-label">Difficulty:</span>
+    <span class="diff-legend-item"><span class="diff-badge diff-beginner">&#127807; Beginner</span>&nbsp;No prior knowledge needed</span>
+    <span class="diff-legend-item"><span class="diff-badge diff-intermediate">&#128218; Intermediate</span>&nbsp;Helpful to read basics first</span>
+    <span class="diff-legend-item"><span class="diff-badge diff-advanced">&#127891; Advanced</span>&nbsp;Some philosophy background helpful</span>
   </div>
+</div>
 
-  <!-- MAIN -->
-  <div class="main">
-    <!-- ── GOD'S EXISTENCE ── -->
-    <div class="category-section active" id="cat-existence">
-      <div class="cat-intro reveal">
+<div class="category-nav">
+  <div class="category-nav-inner">
+    <button class="cat-tab active" onclick="showCat('existence', this)">God's Existence</button>
+    <button class="cat-tab" onclick="showCat('resurrection', this)">The Resurrection</button>
+    <button class="cat-tab" onclick="showCat('jesus', this)">Jesus</button>
+    <button class="cat-tab" onclick="showCat('bible', this)">Biblical Reliability</button>
+    <button class="cat-tab" onclick="showCat('science', this)">Science &amp; Faith</button>
+  </div>
+</div>
+
+<div class="main">
+
+  <div id="sec-existence" class="cat-section visible">
+    <div class="cat-intro reveal">
         <div class="cat-intro-text">
           <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 1 of 5</p>
           <h2 class="cat-intro-title">Arguments for <em>God's Existence</em></h2>
@@ -1100,8 +747,11 @@
     </div>
 
     <!-- ── RESURRECTION ── -->
-    <div class="category-section" id="cat-resurrection">
-      <div class="cat-intro reveal">
+    <div class="category-section"
+  </div>
+
+  <div id="sec-resurrection" class="cat-section">
+    <div class="cat-intro reveal">
         <div class="cat-intro-text">
           <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 2 of 5</p>
           <h2 class="cat-intro-title">Evidence for <em>the Resurrection</em></h2>
@@ -1285,8 +935,11 @@
     </div>
 
     <!-- ── JESUS ── -->
-    <div class="category-section" id="cat-jesus">
-      <div class="cat-intro reveal">
+    <div class="category-section"
+  </div>
+
+  <div id="sec-jesus" class="cat-section">
+    <div class="cat-intro reveal">
         <div class="cat-intro-text">
           <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 3 of 5</p>
           <h2 class="cat-intro-title">The person of <em>Jesus Christ</em></h2>
@@ -1940,8 +1593,11 @@
     </div>
 
     <!-- ── BIBLE ── -->
-    <div class="category-section" id="cat-bible">
-      <div class="cat-intro reveal">
+    <div class="category-section"
+  </div>
+
+  <div id="sec-bible" class="cat-section">
+    <div class="cat-intro reveal">
         <div class="cat-intro-text">
           <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 4 of 5</p>
           <h2 class="cat-intro-title">The reliability of <em>the Bible</em></h2>
@@ -2063,8 +1719,11 @@
     </div>
 
     <!-- ── SCIENCE & FAITH ── -->
-    <div class="category-section" id="cat-science">
-      <div class="cat-intro reveal">
+    <div class="category-section"
+  </div>
+
+  <div id="sec-science" class="cat-section">
+    <div class="cat-intro reveal">
         <div class="cat-intro-text">
           <p class="cat-intro-eyebrow" style="color:var(--navy-500);">Category 5 of 5</p>
           <h2 class="cat-intro-title">Science & <em>Christian Faith</em></h2>
@@ -2191,115 +1850,94 @@
   </div>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">Apologia<span>Daily</span></div>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Debate Arena</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="index.html#pricing">Pricing</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-      </ul>
-      <div class="footer-copy">
-        © 2026 Apologia Daily. Built for the defence of the Gospel.<br/>
-        <span style="font-size:0.7rem;opacity:0.6;margin-top:6px;display:block;">Apologia Daily is an independent platform not affiliated with, endorsed by, or officially connected to any individuals, ministries, or organisations referenced on this site. All third-party names are referenced for educational purposes only.</span>
-      </div>
-    </div>
-  </footer>
+  </div>
 
-  <script>
-    function toggleSimple(id) {
-      var el = document.getElementById('simple-' + id);
-      if (el) el.classList.toggle('visible');
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Apologia<span>Daily</span></div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
+      <li><a href="daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="ask-anything.html">Ask Anything</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+    </ul>
+  </div>
+  <div class="footer-copy">&#169; 2026 Apologia Daily. Built for the defence of the Gospel.</div>
+</footer>
+
+<script>
+  // Section IDs
+  var CATS = ['existence','resurrection','jesus','bible','science'];
+
+  function showCat(cat, btn) {
+    // Hide all sections
+    for (var i = 0; i < CATS.length; i++) {
+      var el = document.getElementById('sec-' + CATS[i]);
+      if (el) el.className = 'cat-section';
     }
-
-    function switchCat(cat, btn) {
-      var tabs = document.querySelectorAll('.cat-tab');
-      for (var i = 0; i < tabs.length; i++) tabs[i].classList.remove('active');
-
-      var ids = ['cat-existence','cat-resurrection','cat-jesus','cat-bible','cat-science'];
-      for (var i = 0; i < ids.length; i++) {
-        var s = document.getElementById(ids[i]);
-        if (s) {
-          s.classList.remove('active');
-          s.style.cssText = 'display:none!important';
-        }
-      }
-
-      btn.classList.add('active');
-      var target = document.getElementById('cat-' + cat);
-      if (target) {
-        target.classList.add('active');
-        target.style.cssText = 'display:block!important';
-        var reveals = target.querySelectorAll('.reveal');
-        for (var i = 0; i < reveals.length; i++) reveals[i].classList.add('visible');
-      }
-      window.scrollTo({ top: 200, behavior: 'smooth' });
+    // Remove active from all tabs
+    var tabs = document.querySelectorAll('.cat-tab');
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].className = 'cat-tab';
     }
+    // Show selected
+    var target = document.getElementById('sec-' + cat);
+    if (target) target.className = 'cat-section visible';
+    if (btn) btn.className = 'cat-tab active';
+    // Scroll to top of content
+    window.scrollTo({top: 300, behavior: 'smooth'});
+  }
 
-    function initSections() {
-      var ids = ['cat-resurrection','cat-jesus','cat-bible','cat-science'];
-      for (var i = 0; i < ids.length; i++) {
-        var s = document.getElementById(ids[i]);
-        if (s) s.style.cssText = 'display:none!important';
-      }
-      var active = document.getElementById('cat-existence');
-      if (active) active.style.cssText = 'display:block!important';
+  function toggleArg(card) {
+    if (card.classList.contains('open')) {
+      card.classList.remove('open');
+    } else {
+      var all = document.querySelectorAll('.argument-card.open');
+      for (var i = 0; i < all.length; i++) all[i].classList.remove('open');
+      card.classList.add('open');
     }
-    initSections();
+  }
 
-    function toggleArg(card) {
-      if (card.classList.contains('locked')) return;
-      var wasOpen = card.classList.contains('open');
-      var open = document.querySelectorAll('.argument-card.open');
-      for (var i = 0; i < open.length; i++) open[i].classList.remove('open');
-      if (!wasOpen) card.classList.add('open');
-    }
+  function toggleSimple(id) {
+    var el = document.getElementById('simple-' + id);
+    if (el) el.classList.toggle('visible');
+  }
 
-    async function askTutor(panelId, argument, category) {
-      var input = document.getElementById('tutor-input-' + panelId);
-      var question = input.value.trim();
-      if (!question) return;
-      var sendBtn = document.getElementById('tutor-send-' + panelId);
-      var loading = document.getElementById('tutor-loading-' + panelId);
-      var response = document.getElementById('tutor-response-' + panelId);
-      var responseText = document.getElementById('tutor-text-' + panelId);
-      sendBtn.disabled = true;
-      if (loading) loading.style.display = 'flex';
-      if (response) response.classList.remove('visible');
-      try {
-        var res = await fetch('/api/tutor', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ question: question, argument: argument, category: category })
-        });
-        if (res.ok) {
-          var data = await res.json();
-          if (responseText) responseText.textContent = data.answer;
-          if (response) response.classList.add('visible');
-          input.value = '';
-        }
-      } catch (err) {
-        if (responseText) responseText.textContent = 'Sorry — something went wrong. Please try again.';
-        if (response) response.classList.add('visible');
-      }
-      sendBtn.disabled = false;
-      if (loading) loading.style.display = 'none';
-    }
-
-    function fillTutor(panelId, question) {
-      var input = document.getElementById('tutor-input-' + panelId);
-      if (input) { input.value = question; input.focus(); }
-    }
-
-    // Reveal observer
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  async function askTutor(pid, arg, cat) {
+    var input = document.getElementById('ti-' + pid);
+    var q = input ? input.value.trim() : '';
+    if (!q) return;
+    var btn = document.getElementById('ts-' + pid);
+    var resp = document.getElementById('tr-' + pid);
+    var text = document.getElementById('tt-' + pid);
+    if (btn) btn.disabled = true;
+    if (resp) resp.classList.remove('visible');
+    try {
+      var res = await fetch('/api/tutor', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({question: q, argument: arg, category: cat})
       });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
-  </script>
+      if (res.ok) {
+        var data = await res.json();
+        if (text) text.textContent = data.answer;
+        if (resp) resp.classList.add('visible');
+        if (input) input.value = '';
+      }
+    } catch(e) {
+      if (text) text.textContent = 'Sorry, something went wrong. Please try again.';
+      if (resp) resp.classList.add('visible');
+    }
+    if (btn) btn.disabled = false;
+  }
+
+  function fillTutor(pid, q) {
+    var input = document.getElementById('ti-' + pid);
+    if (input) { input.value = q; input.focus(); }
+  }
+</script>
 </body>
 </html>
