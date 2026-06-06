@@ -1,3 +1,18 @@
+<style>
+.inline-tutor{background:linear-gradient(135deg,#050d1a,#0f2040);border:1px solid rgba(200,169,81,.25);border-radius:8px;padding:1.25rem;margin-top:1.25rem;}
+.it-head{display:flex;align-items:center;gap:8px;margin-bottom:1rem;}
+.it-icon{font-size:1.1rem;}
+.it-title{font-family:var(--ui);font-size:.8rem;font-weight:500;color:rgba(255,255,255,.7);}
+.it-input-row{display:flex;gap:8px;}
+.it-input{flex:1;padding:9px 12px;border:1px solid rgba(255,255,255,.15);border-radius:4px;font-family:var(--ui);font-size:.85rem;color:#fff;background:rgba(255,255,255,.07);outline:none;transition:border-color .15s;}
+.it-input:focus{border-color:rgba(200,169,81,.5);}
+.it-input::placeholder{color:rgba(255,255,255,.3);}
+.it-btn{padding:9px 18px;border-radius:4px;background:var(--g);color:var(--n);font-family:var(--ui);font-size:.82rem;font-weight:500;border:none;cursor:pointer;flex-shrink:0;transition:opacity .15s;}
+.it-btn:disabled{opacity:.5;cursor:default;}
+.it-resp{margin-top:1rem;padding:.875rem 1rem;background:rgba(255,255,255,.05);border-radius:6px;border-left:2px solid var(--g);}
+.it-resp-label{font-family:var(--ui);font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--g);margin-bottom:.5rem;}
+.it-resp-text{font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.8;white-space:pre-wrap;}
+</style>
 <div class="intro">
   <p class="iey" style="color:#285a9e">Category 4 of 5</p>
   <h2 class="it">The reliability of <em>the Bible</em></h2>
@@ -24,7 +39,21 @@
 <p class="pt">Critics note that there are approximately 400,000 textual variants among New Testament manuscripts. This sounds alarming until you understand what a textual variant is. The vast majority — approximately 99% — fall into these categories: (1) spelling differences and orthographic variants (e.g., "honor" vs "honour"); (2) word order variations (Greek is a flexible language where word order doesn't change meaning); (3) addition or omission of obvious Greek particles with no translation effect; (4) obvious scribal slips visible from context. Meaningful variants — those that affect the sense of a passage — are far fewer. Variants that affect any core Christian doctrine — the death and resurrection of Jesus, the nature of God, the requirements for salvation — are essentially zero. The abundance of manuscripts is what allows scholars to identify and correct variants — it is an asset, not a liability. More manuscripts means more confidence in the original text, because variants can be identified and corrected by comparison. Textual critic Daniel Wallace: "The NT text is 99.5% stable across all manuscripts." Bruce Metzger — the leading twentieth-century New Testament textual scholar — concluded that no major doctrine of Christianity is affected by any textual variant.</p>
 <p class="psl">The Dead Sea Scrolls and Old Testament reliability</p>
 <p class="pt">Before 1947, our oldest complete Hebrew manuscript of the Old Testament was the Aleppo Codex, dated to approximately 930 AD. The Dead Sea Scrolls, discovered beginning in 1947 at Qumran, pushed this back dramatically — to manuscripts dated 250-100 BC — over a thousand years closer to the originals. The Great Isaiah Scroll (1QIsa^a), dated to approximately 125-100 BC and containing all 66 chapters of Isaiah, is virtually identical to the Masoretic text used in modern translations — despite being over 1,000 years older. The differences are negligible: minor spelling variants, occasional word choices, no changes to any theological content. This is an extraordinary vindication of the Masoretic scribal tradition. The Masoretes (500-1000 AD) counted every letter of every book, noted the middle letter of each book, and destroyed scrolls containing a single error. Their methods produced a text of extraordinary stability. The Dead Sea Scrolls confirmed that the Old Testament text used by Christians and Jews today is essentially the same text that was in circulation in 100 BC — and by extension, that the messianic prophecies now interpreted as referring to Jesus were written centuries before he was born.</p>
-<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a><a href="ask-anything.html" class="aa aa2">Ask the AI tutor</a></div></div>
+<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a></div>
+<div class="inline-tutor" id="it-manuscript">
+  <div class="it-head">
+    <span class="it-icon">&#129504;</span>
+    <span class="it-title">Ask the AI Tutor about this argument</span>
+  </div>
+  <div class="it-input-row">
+    <input class="it-input" id="iti-manuscript" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;manuscript&#39;,&#39;The Manuscript Reliability Argument&#39;)"/>
+    <button class="it-btn" id="itb-manuscript" onclick="askInlineTutor(&#39;manuscript&#39;,&#39;The Manuscript Reliability Argument&#39;)">Ask</button>
+  </div>
+  <div class="it-resp" id="itr-manuscript" style="display:none;">
+    <div class="it-resp-label">AI Tutor</div>
+    <div class="it-resp-text" id="itrt-manuscript"></div>
+  </div>
+</div></div>
         </div>
           <div class="tutor-resp-text" id="tt-manuscript"></div>
         </div>
@@ -47,7 +76,21 @@
 <p class="pt">John 5:2 describes the Pool of Bethesda as having "five covered colonnades" — an unusual architectural feature that critics called an invented detail. In the nineteenth century, archaeologists excavating near the Church of Saint Anne in Jerusalem discovered the Pool of Bethesda — with exactly five colonnades (four along the sides and one across the middle dividing the pool into two sections). The specificity of John's architectural detail, confirmed by archaeology, is consistent with eyewitness or near-eyewitness knowledge of first-century Jerusalem. The Pool of Siloam, mentioned in John 9:7 (where Jesus heals the man born blind), was rediscovered in 2004 during sewage construction work in Jerusalem. The pool dates to the Second Temple period and was in use during Jesus's time. The pool described in John 9 — to which Jesus sends the blind man to wash — is now confirmed as a real place that existed in exactly the period described. These archaeological confirmations are not coincidences — they reflect the Gospels' consistent accuracy about Jerusalemite geography and architecture, consistent with authorship by people who knew the city before its destruction in 70 AD.</p>
 <p class="psl">The broader pattern — what archaeology consistently shows</p>
 <p class="pt">Archaeologist William Albright — a sceptic who became persuaded by the evidence — summarised: "Discovery after discovery has established the accuracy of innumerable details, and has brought increased recognition of the Bible as a source of history." The pattern is consistent: when critics have alleged that specific biblical persons, places, or practices are legendary or invented, subsequent archaeology has repeatedly confirmed them. The Nuzi tablets confirmed the social customs of the patriarchal period. The Ebla tablets confirmed the existence of the cities of the plain (Sodom, Gomorrah, Admah, Zeboiim, Bela — Genesis 14:2) as real cities in the Early Bronze Age. The Moabite Stone (Mesha Stele) confirms the existence of the Israelite King Omri and the wars with Moab described in 2 Kings. The Tel Dan inscription (1993) contains the first extra-biblical reference to "the House of David" — confirming David as a historical king. The Assyrian Annals confirm the reigns of Omri, Ahab, Jehu, Hezekiah, and other Israelite kings mentioned in the Historical Books. The pattern is not perfect — there are areas of ongoing debate — but the overall trajectory of twentieth-century archaeology has been strongly confirmatory of the biblical historical narrative.</p>
-<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a><a href="ask-anything.html" class="aa aa2">Ask the AI tutor</a></div></div>
+<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a></div>
+<div class="inline-tutor" id="it-archaeology">
+  <div class="it-head">
+    <span class="it-icon">&#129504;</span>
+    <span class="it-title">Ask the AI Tutor about this argument</span>
+  </div>
+  <div class="it-input-row">
+    <input class="it-input" id="iti-archaeology" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;archaeology&#39;,&#39;Archaeological Confirmation of the Bible&#39;)"/>
+    <button class="it-btn" id="itb-archaeology" onclick="askInlineTutor(&#39;archaeology&#39;,&#39;Archaeological Confirmation of the Bible&#39;)">Ask</button>
+  </div>
+  <div class="it-resp" id="itr-archaeology" style="display:none;">
+    <div class="it-resp-label">AI Tutor</div>
+    <div class="it-resp-text" id="itrt-archaeology"></div>
+  </div>
+</div></div>
         </div>
           <div class="tutor-resp-text" id="tt-archaeology"></div>
         </div>
@@ -75,7 +118,21 @@
 <p class="pt">The early church applied three principled criteria to determine which books belonged in the canon. Apostolicity: was the book written by an apostle or someone in close contact with the apostles? The four Gospels were attributed to Matthew and John (apostles) and Mark and Luke (apostolic companions). Paul's letters were written by the apostle himself. The disputed letters (2 Peter, Jude) were disputed partly on questions of authorship. Catholicity: was the book used and accepted across the universal church, not just in one region? Books with only local appeal were not canonical — the Epistle of Barnabas was respected in Alexandria but not universal; the Shepherd of Hermas was respected but not apostolic. Orthodoxy: was the book consistent with the rule of faith handed down from the apostles? Books that failed this test were rejected — the Gospel of Peter was initially considered in Antioch but rejected when the bishop discovered it contained Docetist theology (denying Christ's real physical body). These criteria were not arbitrary — they were principled attempts to identify genuine apostolic teaching. The Gnostic gospels (Gospel of Thomas, Gospel of Philip, Gospel of Judas) were rejected because they were late (second to third century), not in widespread use, and inconsistent with apostolic teaching — not for political reasons.</p>
 <p class="psl">The Gnostic gospels — why they were excluded</p>
 <p class="pt">Dan Brown's The Da Vinci Code claims that the "real" Gospels were suppressed at Nicaea in favour of the canonical four. This is historically false on every point. The Gnostic gospels were not suppressed at Nicaea — they were gradually excluded over centuries by the ordinary operation of the canon criteria. They were excluded not for political reasons but because: (1) they were late — the Gospel of Thomas dates to the late first or second century at the earliest; the Gospel of Philip, Gospel of Judas, and Gospel of Mary are second to third century. They cannot be from eyewitnesses of Jesus. (2) They were not in widespread use — they were produced by and for specific Gnostic communities, not the universal church. (3) They contain Gnostic theology that is demonstrably later than the apostolic period — rejecting the material world, requiring secret knowledge (gnosis) for salvation, often presenting Jesus as a revealer of cosmic secrets rather than a historical Saviour. Bart Ehrman — who is no apologist for traditional Christianity — agrees that the Gnostic gospels should not be in the canon: "These books were not excluded from the canon; they were never part of the canon in the first place." The canonical four Gospels were recognised because they met the criteria — not because Constantine preferred them.</p>
-<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a><a href="ask-anything.html" class="aa aa2">Ask the AI tutor</a></div></div>
+<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a></div>
+<div class="inline-tutor" id="it-canon">
+  <div class="it-head">
+    <span class="it-icon">&#129504;</span>
+    <span class="it-title">Ask the AI Tutor about this argument</span>
+  </div>
+  <div class="it-input-row">
+    <input class="it-input" id="iti-canon" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;canon&#39;,&#39;The Canon Formation Argument&#39;)"/>
+    <button class="it-btn" id="itb-canon" onclick="askInlineTutor(&#39;canon&#39;,&#39;The Canon Formation Argument&#39;)">Ask</button>
+  </div>
+  <div class="it-resp" id="itr-canon" style="display:none;">
+    <div class="it-resp-label">AI Tutor</div>
+    <div class="it-resp-text" id="itrt-canon"></div>
+  </div>
+</div></div>
 </div></div>
 <div class="card" onclick="tog(this)">
 <div class="ch"><div class="cnum">04</div><div class="ci"><div class="ct">The Argument from Fulfilled Prophecy in the Old Testament</div><div class="cg">The Old Testament accurately predicted events centuries before they occurred</div></div><div class="cm"><span class="db dbi">&#128218; Intermediate</span><svg class="chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div>
@@ -99,7 +156,21 @@
 <p class="pt">Isaiah 44:28 and 45:1 name Cyrus of Persia as the king who will decree the rebuilding of Jerusalem and the temple — written approximately 700 BC, 150 years before Cyrus was born. Isaiah 44:28: "who says of Cyrus, 'He is my shepherd and will accomplish all that I please; he will say of Jerusalem, "Let it be rebuilt," and of the temple, "Let its foundations be laid."'" Isaiah 45:1: "This is what the Lord says to his anointed, to Cyrus, whose right hand I take hold of to subdue nations before him." The historical fulfilment: Cyrus the Great conquered Babylon in 539 BC and immediately issued the famous Edict of Cyrus (preserved in Ezra 1:1-4 and confirmed by the Cyrus Cylinder, now in the British Museum), permitting the Jews to return to their homeland and rebuild the temple. The Cyrus Cylinder — a genuine ancient artefact — confirms Cyrus's policy of allowing subject peoples to return to their homelands and restore their temples, exactly as Isaiah predicted. The critical response is to argue for a "Second Isaiah" who wrote chapters 40-66 after the exile — but the Dead Sea Scrolls contain the complete book of Isaiah (1QIsa^a) in a single scroll without any break at chapter 40, and the ancient Jewish and early Christian tradition uniformly regarded Isaiah as a unified composition. Even if one accepts a sixth-century "Second Isaiah," this would still represent a prophet writing before Cyrus's birth — the prophecy would still be predictive.</p>
 <p class="psl">Jeremiah's 70 years and the return from exile</p>
 <p class="pt">Jeremiah 29:10 (written c. 600 BC) predicted: "When seventy years are completed for Babylon, I will come to you and fulfil my good promise to bring you back to this place." This prediction was made before the Babylonian exile began. The exile started with Nebuchadnezzar's first deportation in 605 BC. The decree of Cyrus permitting the return came in 538 BC — 67 years later. A second counting — from the destruction of the temple in 586 BC to the completion of the second temple in 516 BC — is exactly 70 years. Daniel, in exile, read this prophecy in Jeremiah and understood it was nearing fulfilment — which prompted his famous prayer of Daniel 9. The prophecy presupposed a Persian conquest of Babylon (which then dominated the world) — an extraordinary political prediction. No one in 600 BC could have predicted from natural knowledge that Babylon would fall to Persia rather than to Assyria, Egypt, or internal collapse. The specificity of the 70-year prediction, the identification of Persia as the agent of restoration, and the historical fulfilment in exactly the way predicted constitute strong evidence of genuine predictive prophecy.</p>
-<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a><a href="ask-anything.html" class="aa aa2">Ask the AI tutor</a></div></div>
+<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a></div>
+<div class="inline-tutor" id="it-prophecy">
+  <div class="it-head">
+    <span class="it-icon">&#129504;</span>
+    <span class="it-title">Ask the AI Tutor about this argument</span>
+  </div>
+  <div class="it-input-row">
+    <input class="it-input" id="iti-prophecy" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;prophecy&#39;,&#39;The Argument from Fulfilled Prophecy in the Old Testament&#39;)"/>
+    <button class="it-btn" id="itb-prophecy" onclick="askInlineTutor(&#39;prophecy&#39;,&#39;The Argument from Fulfilled Prophecy in the Old Testament&#39;)">Ask</button>
+  </div>
+  <div class="it-resp" id="itr-prophecy" style="display:none;">
+    <div class="it-resp-label">AI Tutor</div>
+    <div class="it-resp-text" id="itrt-prophecy"></div>
+  </div>
+</div></div>
 </div></div>
 <div class="card" onclick="tog(this)">
 <div class="ch"><div class="cnum">05</div><div class="ci"><div class="ct">The Internal Consistency of Scripture</div><div class="cg">66 books written across 1,500 years by 40 authors telling one coherent story</div></div><div class="cm"><span class="db dbg">&#127807; Beginner</span><svg class="chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div>
@@ -123,7 +194,21 @@
 <p class="pt">Northrop Frye — one of the twentieth century's greatest literary critics, a professor at the University of Toronto, and not a conservative Christian — devoted an entire book to the literary unity of the Bible: The Great Code: The Bible and Literature (1982). Frye was not writing apologetics — he was doing literary analysis. His conclusion: the Bible is the most coherent literary work in Western culture, structured around a single narrative arc from creation to new creation, employing an intricate and consistent system of imagery, typology, and archetype that no human editorial committee could have designed. He identified the "mythological universe" of the Bible as a coherent imaginative world that shapes all subsequent Western literature. Frye's literary analysis reaches conclusions that conservative theologians have always maintained: the Bible is, as a unified whole, something qualitatively different from other ancient collections of texts. His analysis of the Bible's unity is made more persuasive, not less, by the fact that he was not attempting to prove divine inspiration but simply applying rigorous literary analysis to the text he found in front of him.</p>
 <p class="psl">The coherence across cultural and temporal diversity</p>
 <p class="pt">The diversity of the Bible's authors makes its unity all the more remarkable. The Bible was written: in three languages (Hebrew, Aramaic, Greek); on three continents (Asia, Africa, Europe); over approximately 1,500 years; by approximately forty authors including kings (David, Solomon), shepherds (Amos), fishermen (Peter, James, John), tax collectors (Matthew), physicians (Luke), military commanders (Joshua), priests (Ezra, Zechariah), and highly educated scholars (Paul, who had the finest Rabbinic education of his generation). These authors were separated by centuries and had no means of coordinating their accounts. Yet the Bible moves from creation to new creation, from the garden to the holy city, from the first Adam to the last Adam, from the Passover lamb to the Lamb of God — in a single coherent narrative that each author contributes to without knowing the others' contributions. The unity of the Bible is not despite its diversity — it is demonstrated by it. A human editorial committee working from the available materials could not have produced this coherence. The most adequate explanation is the one the Bible itself claims: a divine Author working through human instruments, with a single redemptive purpose that he progressively reveals across the millennia.</p>
-<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a><a href="ask-anything.html" class="aa aa2">Ask the AI tutor</a></div></div>
+<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a></div>
+<div class="inline-tutor" id="it-consistency">
+  <div class="it-head">
+    <span class="it-icon">&#129504;</span>
+    <span class="it-title">Ask the AI Tutor about this argument</span>
+  </div>
+  <div class="it-input-row">
+    <input class="it-input" id="iti-consistency" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;consistency&#39;,&#39;The Internal Consistency of Scripture&#39;)"/>
+    <button class="it-btn" id="itb-consistency" onclick="askInlineTutor(&#39;consistency&#39;,&#39;The Internal Consistency of Scripture&#39;)">Ask</button>
+  </div>
+  <div class="it-resp" id="itr-consistency" style="display:none;">
+    <div class="it-resp-label">AI Tutor</div>
+    <div class="it-resp-text" id="itrt-consistency"></div>
+  </div>
+</div></div>
 </div></div>
 
 <div class="card" onclick="tog(this)">
@@ -148,7 +233,21 @@
 <p class="pt">The Gospels contain detailed, accurate references to Palestinian geography, architecture, social customs, religious practices, and political institutions that have been repeatedly confirmed by archaeology and by comparison with contemporary Jewish and Roman sources. The Pool of Bethesda with five colonnades (John 5:2) — confirmed archaeologically with exactly five colonnades. The Pool of Siloam (John 9:7) — rediscovered in 2004 and confirmed to date to the Second Temple period. The Pavement (Lithostrotos) where Pilate judged Jesus (John 19:13) — identified with the Gabbatha pavement near the Antonia Fortress. John's Gospel refers to Jerusalem's institutions and geography with a specificity and accuracy that implies first-hand knowledge of the city before its destruction in 70 AD. Luke's geographical references have been systematically verified by classical scholars: his knowledge of sea routes, harbor locations, administrative titles, and civic institutions across the eastern Mediterranean is consistently accurate — consistent with the author of Acts having traveled with Paul on the journeys he describes.</p>
 <p class="psl">The incidental details — the fingerprints of genuine memory</p>
 <p class="pt">Some of the most compelling evidence for eyewitness testimony in the Gospels is found in the incidental details — details that serve no theological purpose but appear as if they were simply remembered. John records: there were six stone water jars at the Cana wedding (John 2:6 — six, not five or seven); the pool at Bethesda was near the Sheep Gate (John 5:2 — a specific topographical detail); there were 153 fish in the miraculous catch (John 21:11 — not "many fish" but a specific count); Jesus "wrote on the ground" during the accusation of the adulteress (John 8:6 — what he wrote is never explained, making the detail purposeless except as memory); the beloved disciple "outran Peter" to the tomb (John 20:4 — a small competitive detail with no theological significance). Mark records: "there was green grass" at the feeding of the 5,000 (Mark 6:39 — a seasonal detail placing the event in spring, consistent with the Passover timing but theologically irrelevant). Luke records: "about 153 years and four months" for the famine (Luke 4:25 — the specificity of "four months" is the debris of genuine memory). These incidental, purposeless details are the hallmarks of genuine eyewitness memory rather than theological construction. No one inventing a story includes details that don't advance the narrative.</p>
-<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a><a href="ask-anything.html" class="aa aa2">Ask the AI tutor</a></div></div>
+<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a></div>
+<div class="inline-tutor" id="it-eyewitnesses">
+  <div class="it-head">
+    <span class="it-icon">&#129504;</span>
+    <span class="it-title">Ask the AI Tutor about this argument</span>
+  </div>
+  <div class="it-input-row">
+    <input class="it-input" id="iti-eyewitnesses" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;eyewitnesses&#39;,&#39;The Reliability of the Gospel Eyewitnesses&#39;)"/>
+    <button class="it-btn" id="itb-eyewitnesses" onclick="askInlineTutor(&#39;eyewitnesses&#39;,&#39;The Reliability of the Gospel Eyewitnesses&#39;)">Ask</button>
+  </div>
+  <div class="it-resp" id="itr-eyewitnesses" style="display:none;">
+    <div class="it-resp-label">AI Tutor</div>
+    <div class="it-resp-text" id="itrt-eyewitnesses"></div>
+  </div>
+</div></div>
 </div></div>
 
 <div class="card" onclick="tog(this)">
@@ -173,7 +272,21 @@
 <p class="pt">The Masoretes were Jewish scribes who from approximately 500-1000 AD produced and preserved the standard Hebrew text of the Old Testament (the Masoretic Text). Their methods were extraordinarily meticulous, documented in their own notes (masorah). They counted every letter in every book — noting, for example, that the middle letter of the Torah is the vav (ו) of Leviticus 11:42, and the middle verse of the Psalms is Psalm 78:38. They noted the number of times each word appeared in each book. If a scroll contained a single letter error, it was buried rather than corrected — a new copy was made from scratch from a verified exemplar. These methods, which critics had assumed were later inventions, are now vindicated by the Dead Sea Scrolls: the text the Masoretes preserved in 900 AD was essentially the same as the text circulating in 100 BC. Jewish scribes transmitted the Old Testament with extraordinary accuracy across a millennium. This vindicates our confidence in the biblical text more broadly — if the Old Testament was transmitted with this fidelity across 1,000 years, there is every reason to trust that the New Testament was similarly preserved across its shorter transmission history.</p>
 <p class="psl">What the scrolls prove about messianic prophecy</p>
 <p class="pt">The Dead Sea Scrolls have a decisive implication for the messianic prophecy debate. Critics of messianic prophecy have long argued that passages like Isaiah 53 were written after Jesus's life and then backdated, or that the Christian interpretation of Old Testament passages involves reading meaning into texts that were not intended to predict a specific Messiah. The Dead Sea Scrolls respond to the first objection definitively. The Great Isaiah Scroll — dated to 125-100 BC — contains Isaiah 53 in its entirety. This definitively establishes that Isaiah 53 predates Jesus by at least 130 years, and almost certainly by 600-700 years as the internal evidence of the book suggests. No one can argue that the suffering servant passage was written to describe Jesus — it was clearly written centuries before Jesus was born. The question is simply: does it describe him? The answer, when the passage is read against the passion narrative, is that the correspondence is too specific and too detailed to be coincidental. The Dead Sea Scrolls put this question on solid historical ground: the prophecy is genuinely predictive.</p>
-<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a><a href="ask-anything.html" class="aa aa2">Ask the AI tutor</a></div></div>
+<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a></div>
+<div class="inline-tutor" id="it-deadseascrolls">
+  <div class="it-head">
+    <span class="it-icon">&#129504;</span>
+    <span class="it-title">Ask the AI Tutor about this argument</span>
+  </div>
+  <div class="it-input-row">
+    <input class="it-input" id="iti-deadseascrolls" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;deadseascrolls&#39;,&#39;The Dead Sea Scrolls and Old Testament Reliability&#39;)"/>
+    <button class="it-btn" id="itb-deadseascrolls" onclick="askInlineTutor(&#39;deadseascrolls&#39;,&#39;The Dead Sea Scrolls and Old Testament Reliability&#39;)">Ask</button>
+  </div>
+  <div class="it-resp" id="itr-deadseascrolls" style="display:none;">
+    <div class="it-resp-label">AI Tutor</div>
+    <div class="it-resp-text" id="itrt-deadseascrolls"></div>
+  </div>
+</div></div>
 </div></div>
 
 <div class="card" onclick="tog(this)">
@@ -198,7 +311,21 @@
 <p class="pt">Early dating has profound implications for the reliability of the Gospel accounts. Documents written within 30-40 years of the events they describe, circulating in communities that included eyewitnesses, are in a fundamentally different epistemic position from documents written centuries later. Within this window: errors of geography, culture, personal names, and institutions would be immediately detectable by contemporary readers; eyewitnesses could correct fabrications; opponents could challenge false claims. The geographical, cultural, and institutional accuracy of the Gospels — repeatedly confirmed by archaeology and by comparison with contemporary Jewish sources like Josephus — is consistent with early authorship by people with direct knowledge of first-century Palestine. The naming patterns (Bauckham), the Aramaic traces, the accurate administrative titles, the specific topographical details — all point to composition by people who knew the world they were describing, not by later authors reconstructing it from a distance.</p>
 <p class="psl">Paul's letters — the earliest New Testament documents</p>
 <p class="pt">Paul's letters predate all the Gospels and provide our earliest window into early Christianity. Galatians is dated by most scholars to 48-49 AD — within 15-20 years of the crucifixion. First Thessalonians (c. 50 AD), 1 Corinthians (c. 54-55 AD), 2 Corinthians (c. 56 AD), Romans (c. 57 AD), Philippians, Philemon, and Colossians (c. 60-62 AD during Paul's imprisonment) all predate the destruction of Jerusalem. These letters reveal a Christianity that already had: a well-developed Christology (Philippians 2 hymn — Jesus as pre-existent God, 48-55 AD); a resurrection creed (1 Corinthians 15, received by Paul years earlier); an established community practice (Lord's Supper, baptism, Sunday worship); an active missionary network spanning the eastern Mediterranean. The Christianity of Paul's letters is not primitive or developing — it is a fully formed theological system with sophisticated Christology, ethics, eschatology, and ecclesiology. This is the Christianity of the 50s AD — within twenty years of the crucifixion. It was not invented at Nicaea (325 AD) or even in the second century. It is the original Christianity.</p>
-<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a><a href="ask-anything.html" class="aa aa2">Ask the AI tutor</a></div></div>
+<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a></div>
+<div class="inline-tutor" id="it-earlydate">
+  <div class="it-head">
+    <span class="it-icon">&#129504;</span>
+    <span class="it-title">Ask the AI Tutor about this argument</span>
+  </div>
+  <div class="it-input-row">
+    <input class="it-input" id="iti-earlydate" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;earlydate&#39;,&#39;The Early Date of the New Testament&#39;)"/>
+    <button class="it-btn" id="itb-earlydate" onclick="askInlineTutor(&#39;earlydate&#39;,&#39;The Early Date of the New Testament&#39;)">Ask</button>
+  </div>
+  <div class="it-resp" id="itr-earlydate" style="display:none;">
+    <div class="it-resp-label">AI Tutor</div>
+    <div class="it-resp-text" id="itrt-earlydate"></div>
+  </div>
+</div></div>
 </div></div>
 
 <div class="card" onclick="tog(this)">
@@ -223,7 +350,21 @@
 <p class="pt">Aramaic was the everyday language of first-century Palestine — it was the language Jesus spoke and the language of his earliest followers. The Gospels preserve numerous Aramaic words and phrases that Jesus spoke: "Talitha koum" (little girl, get up — Mark 5:41); "Ephphatha" (be opened — Mark 7:34); "Abba" (Father — Mark 14:36); "Eloi Eloi lama sabachthani" (My God, my God, why have you forsaken me — Mark 15:34). These Aramaic words are preserved in the Greek text because they were remembered as Jesus's actual words. Matthew Black's Aramaic Approach to the Gospels and Acts demonstrates that many sayings of Jesus make better sense when back-translated into Aramaic — preserving wordplays, rhythmic structures, and poetic parallelisms that are lost in the Greek translation. For example, Mark 7:27 — "Let the children first be fed, for it is not right to take the children's bread and throw it to the dogs" — contains a wordplay between "children" (yalda) and "dogs" (kelba) that works in Aramaic. These linguistic traces are not the creation of Greek-speaking Gentile authors — they are the preserved remnants of Aramaic oral tradition going back to Jesus himself.</p>
 <p class="psl">The parable method and Johannine Christology — Jewish throughout</p>
 <p class="pt">Jesus's use of parables is thoroughly Jewish — the parable (mashal) was an established form of Jewish wisdom and prophetic teaching. But Jesus uses parables with an unprecedented authority and creative power that distinguishes him from the rabbis. He does not say "our teachers have taught us" or "it is written" — he says "I tell you." He tells stories about God that his audience found shocking: a Father who runs to welcome a returning prodigal (Luke 15:20 — undignified in honour-shame culture), a Shepherd who leaves ninety-nine sheep to search for one lost sheep (Luke 15:4-6 — irresponsible by agricultural standards), a Judge who eventually grants justice not because it is right but to stop being bothered (Luke 18:1-8 — deliberately paradoxical). These parables are Jewish in method and revolutionary in content — exactly what you'd expect from a first-century Palestinian Jewish teacher saying something genuinely new within an old tradition. Even John's Gospel — the most theologically developed — contains thoroughly Jewish themes: the Logos as a Jewish wisdom concept, the "I AM" as the divine name, the Passover typology throughout. The Jewish texture of the Gospels at every level — linguistic, cultural, theological, literary — is the strongest argument for their historical reliability as records of a first-century Palestinian Jewish figure.</p>
-<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a><a href="ask-anything.html" class="aa aa2">Ask the AI tutor</a></div></div>
+<div class="af"><a href="debate-arena.html" class="aa aa1">Practise in Debate Arena &rarr;</a></div>
+<div class="inline-tutor" id="it-jewishness">
+  <div class="it-head">
+    <span class="it-icon">&#129504;</span>
+    <span class="it-title">Ask the AI Tutor about this argument</span>
+  </div>
+  <div class="it-input-row">
+    <input class="it-input" id="iti-jewishness" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;jewishness&#39;,&#39;The Argument from the Jewishness of Jesus&#39;)"/>
+    <button class="it-btn" id="itb-jewishness" onclick="askInlineTutor(&#39;jewishness&#39;,&#39;The Argument from the Jewishness of Jesus&#39;)">Ask</button>
+  </div>
+  <div class="it-resp" id="itr-jewishness" style="display:none;">
+    <div class="it-resp-label">AI Tutor</div>
+    <div class="it-resp-text" id="itrt-jewishness"></div>
+  </div>
+</div></div>
 </div></div>
 <div class="pbn"><div><div class="pbnt">77 more biblical reliability arguments</div><div class="pbns">Fulfilled prophecy, canon formation, the Dead Sea Scrolls, and responses to all major critical theories.</div></div><a href="index.html#pricing" class="pbnb">Upgrade to Pro &mdash; $8/mo</a></div>
 </d
