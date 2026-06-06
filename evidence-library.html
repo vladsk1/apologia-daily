@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Evidence Library — Apologia Daily</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=DM+Sans:wght@400;500&family=Source+Serif+4:wght@400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --n:#0a1628;--n2:#050d1a;--n3:#1e4278;--n4:#f0f6fb;
+  --g:#c8a951;--w:#fff;--o:#f8f7f4;
+  --m:#3a4a62;--mu:#7a8fa8;--b:#d4e0ec;
+  --gr:#0f6e56;--gr2:#e1f5ee;
+  --fd:'Playfair Display',Georgia,serif;
+  --ui:'DM Sans',sans-serif;
+  --bo:'Source Serif 4',Georgia,serif;
+}
+body{font-family:var(--bo);background:var(--o);color:var(--n);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;border-bottom:1px solid rgba(255,255,255,.08);}
+.logo{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:#fff;text-decoration:none;}
+.logo span{color:var(--g);}
+.nl{display:flex;gap:1.5rem;list-style:none;}
+.nl a{font-family:var(--ui);font-size:.82rem;color:rgba(255,255,255,.7);text-decoration:none;text-transform:uppercase;letter-spacing:.04em;}
+.nl a.act{color:var(--g);}
+.nr{display:flex;gap:10px;align-items:center;}
+.nsi{font-family:var(--ui);font-size:.85rem;color:rgba(255,255,255,.6);text-decoration:none;}
+.nct{font-family:var(--ui);font-size:.85rem;font-weight:500;padding:8px 20px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none;}
+@media(max-width:768px){.nl{display:none;}}
+.hero{background:var(--n2);padding:8rem 2rem 4rem;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(30,66,120,.5),transparent 70%);}
+.hi{max-width:1100px;margin:0 auto;position:relative;z-index:1;}
+.ey{font-family:var(--ui);font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--g);margin-bottom:1rem;}
+.ht{font-family:var(--fd);font-size:clamp(2.2rem,5vw,3.5rem);font-weight:700;color:#fff;margin-bottom:1rem;line-height:1.1;}
+.ht em{font-style:italic;color:var(--g);}
+.hs{font-size:1.05rem;color:rgba(255,255,255,.6);max-width:560px;line-height:1.8;}
+.bb{background:rgba(200,169,81,.08);border-bottom:1px solid rgba(200,169,81,.2);padding:10px 2rem;text-align:center;display:none;}
+.bb span{font-family:var(--ui);font-size:.82rem;color:var(--g);}
+.bb a{color:var(--g);font-weight:600;text-decoration:underline;}
+.leg{background:var(--o);border-bottom:1px solid var(--b);padding:.6rem 2rem;}
+.li{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.ll{font-family:var(--ui);font-size:.68rem;color:var(--mu);font-weight:500;text-transform:uppercase;letter-spacing:.08em;}
+.lb{font-family:var(--ui);font-size:.72rem;display:flex;align-items:center;gap:6px;}
+.db{font-family:var(--ui);font-size:.65rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:20px;}
+.dbg{background:#e1f5ee;color:#0f6e56;}
+.dbi{background:#faeeda;color:#854f0b;}
+.dba{background:#eeedfe;color:#3c3489;}
+.cn{position:sticky;top:64px;z-index:90;background:#0a1628;border-bottom:1px solid rgba(255,255,255,.08);padding:0 2rem;}
+.cni{max-width:1100px;margin:0 auto;display:flex;overflow-x:auto;}
+.tab{font-family:var(--ui);font-size:.82rem;font-weight:500;padding:1rem 1.25rem;background:none;border:none;color:rgba(255,255,255,.55);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;}
+.tab:hover{color:rgba(255,255,255,.85);}
+.tab.on{color:var(--g);border-bottom-color:var(--g);}
+.main{max-width:1100px;margin:0 auto;padding:2.5rem 2rem 6rem;}
+.sec{display:none;}
+.sec.go{display:block;}
+.intro{margin-bottom:2.5rem;}
+.iey{font-family:var(--ui);font-size:.65rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.5rem;}
+.it{font-family:var(--fd);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--n);margin-bottom:.75rem;}
+.it em{font-style:italic;color:var(--n3);}
+.id{font-size:.95rem;color:var(--m);line-height:1.8;}
+.sub{font-family:var(--ui);font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mu);margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--b);}
+.card{background:#fff;border:1px solid var(--b);border-radius:6px;margin-bottom:10px;overflow:hidden;}
+.card:hover{border-color:#aecae8;}
+.card.op{border-color:#6f9fd4;}
+.ch{display:flex;align-items:center;gap:1rem;padding:1.25rem 1.5rem;cursor:pointer;user-select:none;}
+.cnum{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:#aecae8;min-width:2rem;}
+.ci{flex:1;}
+.ct{font-family:var(--fd);font-size:1rem;font-weight:700;color:var(--n);margin-bottom:2px;}
+.cg{font-family:var(--ui);font-size:.78rem;color:var(--mu);}
+.cm{display:flex;align-items:center;gap:10px;}
+.chev{width:18px;height:18px;stroke:var(--mu);fill:none;stroke-width:2;flex-shrink:0;transition:transform .2s;}
+.card.op .chev{transform:rotate(180deg);}
+.cb{display:none;padding:0 1.5rem 1.5rem 4.5rem;border-top:1px solid var(--b);}
+.card.op .cb{display:block;}
+.fl{font-family:var(--ui);font-size:.62rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gr);background:var(--gr2);padding:3px 10px;border-radius:20px;display:inline-block;margin:1.25rem 0 .75rem;}
+.pe{font-family:var(--ui);font-size:.85rem;background:var(--n4);border-left:3px solid var(--g);padding:10px 14px;border-radius:0 4px 4px 0;color:var(--m);margin-bottom:1.25rem;line-height:1.6;}
+.pe strong{color:var(--n);}
+.ap{background:#fff;border:1px solid var(--b);border-radius:3px;padding:1.25rem 1.5rem;margin:1.25rem 0;}
+.apl{font-family:var(--ui);font-size:.65rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);margin-bottom:.75rem;}
+.ap ol{padding-left:1.25rem;}
+.ap ol li{font-size:.92rem;color:var(--m);margin-bottom:6px;line-height:1.6;}
+.ex{font-size:.95rem;color:var(--m);line-height:1.85;margin-bottom:1.25rem;}
+.ob{background:var(--o);border-radius:4px;padding:1.25rem 1.5rem;margin-top:1.25rem;}
+.obt{font-family:var(--ui);font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);margin-bottom:1rem;}
+.or{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start;}
+.oq{font-family:var(--ui);font-size:.65rem;font-weight:700;background:var(--n3);color:#fff;padding:1px 6px;border-radius:3px;flex-shrink:0;margin-top:2px;}
+.oa{font-size:.88rem;color:var(--m);line-height:1.6;}
+.oa strong{color:var(--n);font-weight:500;}
+.pro{background:var(--n2);border-radius:6px;padding:1.5rem;margin-top:1.25rem;}
+.proh{display:flex;align-items:center;gap:12px;margin-bottom:1.25rem;flex-wrap:wrap;}
+.prob{font-family:var(--ui);font-size:.62rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;background:rgba(200,169,81,.15);color:var(--g);padding:3px 10px;border-radius:20px;border:1px solid rgba(200,169,81,.3);}
+.prot{font-family:var(--ui);font-size:.82rem;color:rgba(255,255,255,.5);}
+.psl{font-family:var(--ui);font-size:.65rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--g);margin:1.25rem 0 .6rem;}
+.pt{font-size:.92rem;color:rgba(255,255,255,.72);line-height:1.85;margin-bottom:1rem;}
+.af{display:flex;gap:10px;margin-top:1.5rem;flex-wrap:wrap;}
+.aa{font-family:var(--ui);font-size:.82rem;font-weight:500;padding:9px 18px;border-radius:3px;text-decoration:none;}
+.aa1{background:var(--g);color:var(--n);}
+.aa2{background:rgba(255,255,255,.08);color:rgba(255,255,255,.65);}
+.pbn{background:#0f2040;border-radius:6px;padding:1.5rem;margin-top:1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.pbnt{font-family:var(--fd);font-size:1rem;font-weight:600;color:#fff;margin-bottom:4px;}
+.pbns{font-family:var(--ui);font-size:.82rem;color:rgba(255,255,255,.5);}
+.pbnb{font-family:var(--ui);font-size:.82rem;font-weight:500;padding:9px 20px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none;white-space:nowrap;}
+footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3rem 2rem 2rem;margin-top:4rem;}
+.fi{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;}
+.flo{font-family:var(--fd);font-size:1.1rem;font-weight:600;color:#fff;}
+.flo span{color:var(--g);}
+.fli{display:flex;gap:2rem;list-style:none;flex-wrap:wrap;}
+.fli a{font-family:var(--ui);font-size:.8rem;color:rgba(255,255,255,.35);text-decoration:none;}
+.fc{font-family:var(--ui);font-size:.75rem;color:rgba(255,255,255,.2);width:100%;text-align:center;padding-top:2rem;border-top:1px solid rgba(255,255,255,.06);margin-top:1.5rem;}
+
+    .tutor{background:linear-gradient(135deg,#050d1a,#0f2040);border:1px solid rgba(200,169,81,.25);border-radius:8px;padding:1.25rem;margin-top:1.25rem;}
+    .tutor-head{display:flex;align-items:center;gap:10px;margin-bottom:1rem;}
+    .tutor-av{width:32px;height:32px;border-radius:50%;background:rgba(200,169,81,.15);border:1px solid rgba(200,169,81,.3);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;}
+    .tutor-info{}
+    .tutor-name{font-family:var(--ui);font-size:.82rem;font-weight:500;color:#fff;}
+    .tutor-sub{font-family:var(--ui);font-size:.68rem;color:rgba(255,255,255,.4);}
+    .tutor-suggestions{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1rem;}
+    .ts{font-family:var(--ui);font-size:.72rem;padding:5px 11px;border-radius:20px;border:1px solid rgba(200,169,81,.25);background:rgba(200,169,81,.08);color:rgba(255,255,255,.65);cursor:pointer;transition:all .15s;}
+    .ts:hover{border-color:var(--g);color:var(--g);}
+    .tutor-row{display:flex;gap:8px;}
+    .tutor-inp{flex:1;padding:9px 12px;border:1px solid rgba(255,255,255,.12);border-radius:4px;font-family:var(--ui);font-size:.85rem;color:#fff;background:rgba(255,255,255,.06);outline:none;}
+    .tutor-inp:focus{border-color:rgba(200,169,81,.5);}
+    .tutor-inp::placeholder{color:rgba(255,255,255,.3);}
+    .tutor-btn{padding:9px 16px;border-radius:4px;background:var(--g);color:var(--n);font-family:var(--ui);font-size:.82rem;font-weight:500;border:none;cursor:pointer;flex-shrink:0;}
+    .tutor-btn:disabled{opacity:.5;cursor:default;}
+    .tutor-resp{margin-top:1rem;padding:1rem;background:rgba(255,255,255,.04);border-radius:6px;border-left:2px solid var(--g);display:none;}
+    .tutor-resp.show{display:block;}
+    .tutor-resp-label{font-family:var(--ui);font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--g);margin-bottom:.6rem;}
+    .tutor-resp-text{font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.8;}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">Apologia<span>Daily</span></a>
+  <ul class="nl">
+    <li><a href="evidence-library.html" class="act">Evidence Library</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="debate-arena.html">Debate Arena</a></li>
+    <li><a href="daily-devotional.html">Daily Devotional</a></li>
+    <li><a href="ask-anything.html">Ask Anything</a></li>
+    <li><a href="worldviews.html">Worldviews</a></li>
+    <li><a href="study-plans.html">Study Plans</a></li>
+    <li><a href="whats-new.html">What's New</a></li>
+  </ul>
+  <div class="nr">
+    <span id="nav-auth"><a href="login.html" class="nsi">Sign in</a> <a href="signup.html" class="nct">Start Free</a></span>
+  </div>
+</nav>
+
+<div id="bb" class="bb">
+  <span>&#127807; New to apologetics? <a href="beginners-path.html">Start the free 5-day Beginner's Path &rarr;</a></span>
+</div>
+
+<div class="hero">
+  <div class="hi">
+    <p class="ey">Evidence Library</p>
+    <h1 class="ht">The case for <em>Christian faith</em></h1>
+    <p class="hs">Every major argument examined — free summaries in plain English, Pro deep dives for those who want to go further.</p>
+  </div>
+</div>
+
+<div class="leg">
+  <div class="li">
+    <span class="ll">Difficulty:</span>
+    <span class="lb"><span class="db dbg">&#127807; Beginner</span>&nbsp;No prior knowledge needed</span>
+    <span class="lb"><span class="db dbi">&#128218; Intermediate</span>&nbsp;Helpful to read basics first</span>
+    <span class="lb"><span class="db dba">&#127891; Advanced</span>&nbsp;Some philosophy background helpful</span>
+  </div>
+</div>
+
+<div class="cn">
+  <div class="cni">
+    <button class="tab on" onclick="sw('s1',this)">God's Existence</button>
+    <button class="tab" onclick="sw('s2',this)">The Resurrection</button>
+    <button class="tab" onclick="sw('s3',this)">Jesus</button>
+    <button class="tab" onclick="sw('s4',this)">Biblical Reliability</button>
+    <button class="tab" onclick="sw('s5',this)">Science &amp; Faith</button>
+  </div>
+</div>
+
+<div class="main">
+
+<div id="s1" class="sec go"><div id="s1-content"><p style="padding:2rem;font-family:var(--ui);color:var(--mu);">Loading...</p></div></div>
+<div id="s2" class="sec"><div id="s2-content"></div></div>
+<div id="s3" class="sec"><div id="s3-content"></div></div>
+<div id="s4" class="sec"><div id="s4-content"></div></div>
+<div id="s5" class="sec"><div id="s5-content"></div></div>
+
+</div>
+
+<footer>
+<div class="fi">
+  <div class="flo">Apologia<span>Daily</span></div>
+  <ul class="fli">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="debate-arena.html">Debate Arena</a></li>
+    <li><a href="daily-devotional.html">Daily Devotional</a></li>
+    <li><a href="ask-anything.html">Ask Anything</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li>
+  </ul>
+</div>
+<div class="fc">&#169; 2026 Apologia Daily. Built for the defence of the Gospel.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
+async function askT(tid, arg) {
+  var inp = document.getElementById('ti-' + tid);
+  var q = inp ? inp.value.trim() : '';
+  if (!q) return;
+  var btn = document.getElementById('tb-' + tid);
+  var resp = document.getElementById('tr-' + tid);
+  var text = document.getElementById('tt-' + tid);
+  if (btn) btn.disabled = true;
+  if (resp) resp.classList.remove('show');
+  try {
+    var res = await fetch('/api/tutor', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({question: q, argument: arg, category: 'Evidence Library'})
+    });
+    if (res.ok) {
+      var data = await res.json();
+      if (text) text.textContent = data.answer;
+      if (resp) resp.classList.add('show');
+      if (inp) inp.value = '';
+    } else {
+      if (text) text.textContent = 'Sorry, something went wrong. Please try again.';
+      if (resp) resp.classList.add('show');
+    }
+  } catch(e) {
+    if (text) text.textContent = 'Sorry, something went wrong. Please try again.';
+    if (resp) resp.classList.add('show');
+  }
+  if (btn) btn.disabled = false;
+}
+function fillT(tid, q) {
+  var inp = document.getElementById('ti-' + tid);
+  if (inp) { inp.value = q; inp.focus(); }
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+var loaded = {};
+
+function sw(id, btn) {
+  var s = document.querySelectorAll('.sec');
+  for (var i = 0; i < s.length; i++) s[i].className = 'sec';
+  var t = document.querySelectorAll('.tab');
+  for (var i = 0; i < t.length; i++) t[i].className = 'tab';
+  document.getElementById(id).className = 'sec go';
+  btn.className = 'tab on';
+  loadSection(id);
+}
+
+function loadSection(id) {
+  if (loaded[id]) return;
+  loaded[id] = true;
+  var container = document.getElementById(id + '-content');
+  if (!container) return;
+  fetch('ev-' + id + '.html')
+    .then(function(r) { return r.text(); })
+    .then(function(html) { container.innerHTML = html; })
+    .catch(function() { container.innerHTML = '<p style="padding:2rem;color:red;">Failed to load. Please refresh.</p>'; });
+}
+
+function tog(card) {
+  if (card.classList.contains('op')) { card.classList.remove('op'); }
+  else {
+    var o = document.querySelectorAll('.card.op');
+    for (var i = 0; i < o.length; i++) o[i].classList.remove('op');
+    card.classList.add('op');
+  }
+}
+
+async function askT(tid, arg) {
+  var inp = document.getElementById('ti-' + tid);
+  var q = inp ? inp.value.trim() : '';
+  if (!q) return;
+  var btn = document.getElementById('tb-' + tid);
+  var resp = document.getElementById('tr-' + tid);
+  var text = document.getElementById('tt-' + tid);
+  if (btn) btn.disabled = true;
+  if (resp) resp.classList.remove('show');
+  try {
+    var res = await fetch('/api/tutor', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({question: q, argument: arg, category: 'Evidence Library'})
+    });
+    if (res.ok) {
+      var data = await res.json();
+      if (text) text.textContent = data.answer;
+      if (resp) resp.classList.add('show');
+      if (inp) inp.value = '';
+    }
+  } catch(e) {
+    if (text) text.textContent = 'Sorry, something went wrong.';
+    if (resp) resp.classList.add('show');
+  }
+  if (btn) btn.disabled = false;
+}
+
+function fillT(tid, q) {
+  var inp = document.getElementById('ti-' + tid);
+  if (inp) { inp.value = q; inp.focus(); }
+}
+
+// Load first section immediately
+loadSection('s1');
+
+// Auth
+(function(){
+  var sb = window.supabase.createClient(
+    'https://noprgxkwniouukmrfozc.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+  );
+  sb.auth.getSession().then(function(r){
+    var session = r.data && r.data.session;
+    var bb = document.getElementById('bb');
+    if (bb && !session) bb.style.display = 'block';
+    var na = document.getElementById('nav-auth');
+    if (!na) return;
+    if (session) {
+      na.innerHTML = '<a href="dashboard.html" style="font-family:var(--ui);font-size:.85rem;font-weight:500;padding:8px 20px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none;">Dashboard</a>';
+    }
+  });
+})();
+</script>
+</body>
+</html>
