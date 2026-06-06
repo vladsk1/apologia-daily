@@ -447,6 +447,8 @@
   let activePlanData = null;
   let currentModalPlanId = null;
 
+  document.addEventListener('DOMContentLoaded', function() { init(); });
+
   function init() {
     const saved = JSON.parse(localStorage.getItem('study_plans') || '{}');
     renderPlans(saved);
@@ -485,7 +487,7 @@
             <div class="plan-progress-bar"><div class="plan-progress-fill" style="width:${pct}%;background:${plan.color};"></div></div>
           </div>` : ''}
           <button class="plan-btn ${isFinished ? 'plan-btn-completed' : isActive ? 'plan-btn-continue' : 'plan-btn-start'}" onclick="event.stopPropagation();${isFinished ? '' : isActive ? `continueActivePlan()` : `openPlanModal('${plan.id}')`}">
-            ${isFinished ? '✓ Completed' : isActive ? 'Continue →' : 'View plan →'}
+            ${isFinished ? '✓ Completed' : isActive ? 'Continue →' : 'Start plan →'}
           </button>
         </div>
       </div>`;
@@ -572,12 +574,15 @@
   function startPlanFromModal() {
     if (!currentModalPlanId) return;
     const saved = JSON.parse(localStorage.getItem('study_plans') || '{}');
-    if (!saved[currentModalPlanId]) saved[currentModalPlanId] = { started: true, completed: [] };
-    else saved[currentModalPlanId].started = true;
+    if (!saved[currentModalPlanId]) saved[currentModalPlanId] = { started: true, startedDate: new Date().toISOString(), completed: [] };
+    else { saved[currentModalPlanId].started = true; if (!saved[currentModalPlanId].startedDate) saved[currentModalPlanId].startedDate = new Date().toISOString(); }
     localStorage.setItem('study_plans', JSON.stringify(saved));
     renderPlans(saved);
     updateActiveBanner(saved);
-    closePlanModal();
+    // Update modal button to "Continue plan"
+    const btn = document.getElementById('modal-start-btn');
+    if (btn) { btn.textContent = 'Plan started! Close to continue ✓'; btn.style.background = '#0f6e56'; btn.style.color = '#fff'; }
+    setTimeout(() => closePlanModal(), 1500);
   }
 
   function closePlanModal() {
