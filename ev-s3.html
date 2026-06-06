@@ -46,8 +46,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-historicaljesus" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;historicaljesus&#39;,&#39;The Historical Existence of Jesus&#39;)"/>
-    <button class="it-btn" id="itb-historicaljesus" onclick="event.stopPropagation();askInlineTutor(&#39;historicaljesus&#39;,&#39;The Historical Existence of Jesus&#39;)">Ask</button>
+    <input class="it-input" id="iti-historicaljesus" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="historicaljesus"/>
+    <button class="it-btn" id="itb-historicaljesus" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="historicaljesus" data-arg="The Historical Existence of Jesus">Ask</button>
   </div>
   <div class="it-resp" id="itr-historicaljesus" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -83,8 +83,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-jesusclaim" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;jesusclaim&#39;,&#39;Did Jesus Claim to Be God?&#39;)"/>
-    <button class="it-btn" id="itb-jesusclaim" onclick="event.stopPropagation();askInlineTutor(&#39;jesusclaim&#39;,&#39;Did Jesus Claim to Be God?&#39;)">Ask</button>
+    <input class="it-input" id="iti-jesusclaim" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="jesusclaim"/>
+    <button class="it-btn" id="itb-jesusclaim" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="jesusclaim" data-arg="Did Jesus Claim to Be God?">Ask</button>
   </div>
   <div class="it-resp" id="itr-jesusclaim" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -120,8 +120,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-messianic" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;messianic&#39;,&#39;Messianic Prophecy — the Statistical Case&#39;)"/>
-    <button class="it-btn" id="itb-messianic" onclick="event.stopPropagation();askInlineTutor(&#39;messianic&#39;,&#39;Messianic Prophecy — the Statistical Case&#39;)">Ask</button>
+    <input class="it-input" id="iti-messianic" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="messianic"/>
+    <button class="it-btn" id="itb-messianic" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="messianic" data-arg="Messianic Prophecy — the Statistical Case">Ask</button>
   </div>
   <div class="it-resp" id="itr-messianic" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -157,8 +157,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-john11" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;john11&#39;,&#39;John 1:1 and the Pre-existence of Christ&#39;)"/>
-    <button class="it-btn" id="itb-john11" onclick="event.stopPropagation();askInlineTutor(&#39;john11&#39;,&#39;John 1:1 and the Pre-existence of Christ&#39;)">Ask</button>
+    <input class="it-input" id="iti-john11" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="john11"/>
+    <button class="it-btn" id="itb-john11" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="john11" data-arg="John 1:1 and the Pre-existence of Christ">Ask</button>
   </div>
   <div class="it-resp" id="itr-john11" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -194,8 +194,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-phil2" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;phil2&#39;,&#39;The Philippians 2 Hymn&#39;)"/>
-    <button class="it-btn" id="itb-phil2" onclick="event.stopPropagation();askInlineTutor(&#39;phil2&#39;,&#39;The Philippians 2 Hymn&#39;)">Ask</button>
+    <input class="it-input" id="iti-phil2" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="phil2"/>
+    <button class="it-btn" id="itb-phil2" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="phil2" data-arg="The Philippians 2 Hymn">Ask</button>
   </div>
   <div class="it-resp" id="itr-phil2" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -231,8 +231,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-titles" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;titles&#39;,&#39;The Titles of Jesus&#39;)"/>
-    <button class="it-btn" id="itb-titles" onclick="event.stopPropagation();askInlineTutor(&#39;titles&#39;,&#39;The Titles of Jesus&#39;)">Ask</button>
+    <input class="it-input" id="iti-titles" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="titles"/>
+    <button class="it-btn" id="itb-titles" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="titles" data-arg="The Titles of Jesus">Ask</button>
   </div>
   <div class="it-resp" id="itr-titles" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -269,8 +269,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-multiatt" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;multiatt&#39;,&#39;The Criterion of Multiple Attestation&#39;)"/>
-    <button class="it-btn" id="itb-multiatt" onclick="event.stopPropagation();askInlineTutor(&#39;multiatt&#39;,&#39;The Criterion of Multiple Attestation&#39;)">Ask</button>
+    <input class="it-input" id="iti-multiatt" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="multiatt"/>
+    <button class="it-btn" id="itb-multiatt" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="multiatt" data-arg="The Criterion of Multiple Attestation">Ask</button>
   </div>
   <div class="it-resp" id="itr-multiatt" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -306,8 +306,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-earlycreed" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;earlycreed&#39;,&#39;The Early Creed of 1 Corinthians 15&#39;)"/>
-    <button class="it-btn" id="itb-earlycreed" onclick="event.stopPropagation();askInlineTutor(&#39;earlycreed&#39;,&#39;The Early Creed of 1 Corinthians 15&#39;)">Ask</button>
+    <input class="it-input" id="iti-earlycreed" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="earlycreed"/>
+    <button class="it-btn" id="itb-earlycreed" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="earlycreed" data-arg="The Early Creed of 1 Corinthians 15">Ask</button>
   </div>
   <div class="it-resp" id="itr-earlycreed" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -348,8 +348,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-jesuschar" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;jesuschar&#39;,&#39;The Argument from Jesus\'s Character&#39;)"/>
-    <button class="it-btn" id="itb-jesuschar" onclick="event.stopPropagation();askInlineTutor(&#39;jesuschar&#39;,&#39;The Argument from Jesus\'s Character&#39;)">Ask</button>
+    <input class="it-input" id="iti-jesuschar" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="jesuschar"/>
+    <button class="it-btn" id="itb-jesuschar" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="jesuschar" data-arg="The Argument from Jesus\'s Character">Ask</button>
   </div>
   <div class="it-resp" id="itr-jesuschar" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -386,8 +386,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-daniel70" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;daniel70&#39;,&#39;Daniel\'s 70 Weeks&#39;)"/>
-    <button class="it-btn" id="itb-daniel70" onclick="event.stopPropagation();askInlineTutor(&#39;daniel70&#39;,&#39;Daniel\'s 70 Weeks&#39;)">Ask</button>
+    <input class="it-input" id="iti-daniel70" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="daniel70"/>
+    <button class="it-btn" id="itb-daniel70" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="daniel70" data-arg="Daniel\'s 70 Weeks">Ask</button>
   </div>
   <div class="it-resp" id="itr-daniel70" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -424,8 +424,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-uniqueness" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;uniqueness&#39;,&#39;The Uniqueness of the Resurrection Claim&#39;)"/>
-    <button class="it-btn" id="itb-uniqueness" onclick="event.stopPropagation();askInlineTutor(&#39;uniqueness&#39;,&#39;The Uniqueness of the Resurrection Claim&#39;)">Ask</button>
+    <input class="it-input" id="iti-uniqueness" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="uniqueness"/>
+    <button class="it-btn" id="itb-uniqueness" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="uniqueness" data-arg="The Uniqueness of the Resurrection Claim">Ask</button>
   </div>
   <div class="it-resp" id="itr-uniqueness" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -463,8 +463,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-virginbirth" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;virginbirth&#39;,&#39;The Virgin Birth and Isaiah 7:14&#39;)"/>
-    <button class="it-btn" id="itb-virginbirth" onclick="event.stopPropagation();askInlineTutor(&#39;virginbirth&#39;,&#39;The Virgin Birth and Isaiah 7:14&#39;)">Ask</button>
+    <input class="it-input" id="iti-virginbirth" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="virginbirth"/>
+    <button class="it-btn" id="itb-virginbirth" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="virginbirth" data-arg="The Virgin Birth and Isaiah 7:14">Ask</button>
   </div>
   <div class="it-resp" id="itr-virginbirth" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -502,8 +502,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-respred" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;respred&#39;,&#39;The Argument from the Resurrection Predictions&#39;)"/>
-    <button class="it-btn" id="itb-respred" onclick="event.stopPropagation();askInlineTutor(&#39;respred&#39;,&#39;The Argument from the Resurrection Predictions&#39;)">Ask</button>
+    <input class="it-input" id="iti-respred" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="respred"/>
+    <button class="it-btn" id="itb-respred" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="respred" data-arg="The Argument from the Resurrection Predictions">Ask</button>
   </div>
   <div class="it-resp" id="itr-respred" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -544,8 +544,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-nde" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;nde&#39;,&#39;The Argument from Near-Death Experiences&#39;)"/>
-    <button class="it-btn" id="itb-nde" onclick="event.stopPropagation();askInlineTutor(&#39;nde&#39;,&#39;The Argument from Near-Death Experiences&#39;)">Ask</button>
+    <input class="it-input" id="iti-nde" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="nde"/>
+    <button class="it-btn" id="itb-nde" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="nde" data-arg="The Argument from Near-Death Experiences">Ask</button>
   </div>
   <div class="it-resp" id="itr-nde" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -557,24 +557,24 @@
 </d
 
 <script>
-async function askInlineTutor(tid, arg) {
-  var inp = document.getElementById('iti-' + tid);
+async function askInlineTutor(btn) {
+  var tutor = btn.closest('.inline-tutor');
+  if (!tutor) return;
+  var tid = btn.getAttribute('data-tid');
+  var arg = btn.getAttribute('data-arg');
+  var inp = tutor.querySelector('.it-input');
   var q = inp ? inp.value.trim() : '';
   if (!q) return;
-  var btn = document.getElementById('itb-' + tid);
-  var resp = document.getElementById('itr-' + tid);
-  var text = document.getElementById('itrt-' + tid);
-  if (btn) { btn.disabled = true; btn.textContent = '...'; }
+  var resp = tutor.querySelector('.it-resp');
+  var text = tutor.querySelector('.it-resp-text');
+  btn.disabled = true;
+  btn.textContent = '...';
   if (resp) resp.style.display = 'none';
   try {
     var res = await fetch('/api/tutor', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        question: q,
-        argument: arg,
-        category: 'Evidence Library'
-      })
+      body: JSON.stringify({ question: q, argument: arg, category: 'Evidence Library' })
     });
     if (res.ok) {
       var data = await res.json();
@@ -589,6 +589,7 @@ async function askInlineTutor(tid, arg) {
     if (text) text.textContent = 'Something went wrong. Please try again.';
     if (resp) resp.style.display = 'block';
   }
-  if (btn) { btn.disabled = false; btn.textContent = 'Ask'; }
+  btn.disabled = false;
+  btn.textContent = 'Ask';
 }
 </script>

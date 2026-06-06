@@ -46,8 +46,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-kalam" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;kalam&#39;,&#39;The Kalam Cosmological Argument&#39;)"/>
-    <button class="it-btn" id="itb-kalam" onclick="event.stopPropagation();askInlineTutor(&#39;kalam&#39;,&#39;The Kalam Cosmological Argument&#39;)">Ask</button>
+    <input class="it-input" id="iti-kalam" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="kalam"/>
+    <button class="it-btn" id="itb-kalam" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="kalam" data-arg="The Kalam Cosmological Argument">Ask</button>
   </div>
   <div class="it-resp" id="itr-kalam" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -81,8 +81,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-finetuning" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;finetuning&#39;,&#39;The Fine-Tuning Argument&#39;)"/>
-    <button class="it-btn" id="itb-finetuning" onclick="event.stopPropagation();askInlineTutor(&#39;finetuning&#39;,&#39;The Fine-Tuning Argument&#39;)">Ask</button>
+    <input class="it-input" id="iti-finetuning" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="finetuning"/>
+    <button class="it-btn" id="itb-finetuning" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="finetuning" data-arg="The Fine-Tuning Argument">Ask</button>
   </div>
   <div class="it-resp" id="itr-finetuning" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -114,8 +114,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-leibniz" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;leibniz&#39;,&#39;The Leibniz Contingency Argument&#39;)"/>
-    <button class="it-btn" id="itb-leibniz" onclick="event.stopPropagation();askInlineTutor(&#39;leibniz&#39;,&#39;The Leibniz Contingency Argument&#39;)">Ask</button>
+    <input class="it-input" id="iti-leibniz" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="leibniz"/>
+    <button class="it-btn" id="itb-leibniz" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="leibniz" data-arg="The Leibniz Contingency Argument">Ask</button>
   </div>
   <div class="it-resp" id="itr-leibniz" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -149,8 +149,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-moral" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;moral&#39;,&#39;The Moral Argument&#39;)"/>
-    <button class="it-btn" id="itb-moral" onclick="event.stopPropagation();askInlineTutor(&#39;moral&#39;,&#39;The Moral Argument&#39;)">Ask</button>
+    <input class="it-input" id="iti-moral" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="moral"/>
+    <button class="it-btn" id="itb-moral" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="moral" data-arg="The Moral Argument">Ask</button>
   </div>
   <div class="it-resp" id="itr-moral" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -182,8 +182,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-consciousness" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;consciousness&#39;,&#39;The Argument from Consciousness&#39;)"/>
-    <button class="it-btn" id="itb-consciousness" onclick="event.stopPropagation();askInlineTutor(&#39;consciousness&#39;,&#39;The Argument from Consciousness&#39;)">Ask</button>
+    <input class="it-input" id="iti-consciousness" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="consciousness"/>
+    <button class="it-btn" id="itb-consciousness" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="consciousness" data-arg="The Argument from Consciousness">Ask</button>
   </div>
   <div class="it-resp" id="itr-consciousness" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -215,8 +215,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-thomistic" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;thomistic&#39;,&#39;The Thomistic Cosmological Argument&#39;)"/>
-    <button class="it-btn" id="itb-thomistic" onclick="event.stopPropagation();askInlineTutor(&#39;thomistic&#39;,&#39;The Thomistic Cosmological Argument&#39;)">Ask</button>
+    <input class="it-input" id="iti-thomistic" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="thomistic"/>
+    <button class="it-btn" id="itb-thomistic" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="thomistic" data-arg="The Thomistic Cosmological Argument">Ask</button>
   </div>
   <div class="it-resp" id="itr-thomistic" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -252,8 +252,8 @@
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-reason" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;reason&#39;,&#39;The Argument from Reason&#39;)"/>
-    <button class="it-btn" id="itb-reason" onclick="event.stopPropagation();askInlineTutor(&#39;reason&#39;,&#39;The Argument from Reason&#39;)">Ask</button>
+    <input class="it-input" id="iti-reason" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="reason"/>
+    <button class="it-btn" id="itb-reason" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="reason" data-arg="The Argument from Reason">Ask</button>
   </div>
   <div class="it-resp" id="itr-reason" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -289,8 +289,8 @@ Conclusion: Therefore a maximally great being exists in the actual world.</p><p 
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-ontological" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;ontological&#39;,&#39;The Ontological Argument&#39;)"/>
-    <button class="it-btn" id="itb-ontological" onclick="event.stopPropagation();askInlineTutor(&#39;ontological&#39;,&#39;The Ontological Argument&#39;)">Ask</button>
+    <input class="it-input" id="iti-ontological" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="ontological"/>
+    <button class="it-btn" id="itb-ontological" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="ontological" data-arg="The Ontological Argument">Ask</button>
   </div>
   <div class="it-resp" id="itr-ontological" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -322,8 +322,8 @@ Conclusion: Therefore a maximally great being exists in the actual world.</p><p 
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-religious" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;religious&#39;,&#39;The Argument from Religious Experience&#39;)"/>
-    <button class="it-btn" id="itb-religious" onclick="event.stopPropagation();askInlineTutor(&#39;religious&#39;,&#39;The Argument from Religious Experience&#39;)">Ask</button>
+    <input class="it-input" id="iti-religious" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="religious"/>
+    <button class="it-btn" id="itb-religious" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="religious" data-arg="The Argument from Religious Experience">Ask</button>
   </div>
   <div class="it-resp" id="itr-religious" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -357,8 +357,8 @@ Conclusion: Therefore a maximally great being exists in the actual world.</p><p 
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-beauty" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;beauty&#39;,&#39;The Argument from Beauty&#39;)"/>
-    <button class="it-btn" id="itb-beauty" onclick="event.stopPropagation();askInlineTutor(&#39;beauty&#39;,&#39;The Argument from Beauty&#39;)">Ask</button>
+    <input class="it-input" id="iti-beauty" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="beauty"/>
+    <button class="it-btn" id="itb-beauty" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="beauty" data-arg="The Argument from Beauty">Ask</button>
   </div>
   <div class="it-resp" id="itr-beauty" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -391,8 +391,8 @@ Conclusion: Therefore a maximally great being exists in the actual world.</p><p 
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-evil" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;evil&#39;,&#39;The Problem of Evil as Evidence for God&#39;)"/>
-    <button class="it-btn" id="itb-evil" onclick="event.stopPropagation();askInlineTutor(&#39;evil&#39;,&#39;The Problem of Evil as Evidence for God&#39;)">Ask</button>
+    <input class="it-input" id="iti-evil" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="evil"/>
+    <button class="it-btn" id="itb-evil" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="evil" data-arg="The Problem of Evil as Evidence for God">Ask</button>
   </div>
   <div class="it-resp" id="itr-evil" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -426,8 +426,8 @@ Conclusion: Therefore a maximally great being exists in the actual world.</p><p 
     <span class="it-title">Ask the AI Tutor about this argument</span>
   </div>
   <div class="it-input-row">
-    <input class="it-input" id="iti-desire" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key===&#39;Enter&#39;)askInlineTutor(&#39;desire&#39;,&#39;The Argument from Desire&#39;)"/>
-    <button class="it-btn" id="itb-desire" onclick="event.stopPropagation();askInlineTutor(&#39;desire&#39;,&#39;The Argument from Desire&#39;)">Ask</button>
+    <input class="it-input" id="iti-desire" type="text" placeholder="e.g. Explain this simply, or give me an analogy..." onclick="event.stopPropagation()" onkeydown="if(event.key==='Enter'){var b=this.closest('.inline-tutor').querySelector('.it-btn');if(b)b.click();}" data-tid="desire"/>
+    <button class="it-btn" id="itb-desire" onclick="event.stopPropagation();askInlineTutor(this)" data-tid="desire" data-arg="The Argument from Desire">Ask</button>
   </div>
   <div class="it-resp" id="itr-desire" style="display:none;">
     <div class="it-resp-label">AI Tutor</div>
@@ -439,24 +439,24 @@ Conclusion: Therefore a maximally great being exists in the actual world.</p><p 
 </d
 
 <script>
-async function askInlineTutor(tid, arg) {
-  var inp = document.getElementById('iti-' + tid);
+async function askInlineTutor(btn) {
+  var tutor = btn.closest('.inline-tutor');
+  if (!tutor) return;
+  var tid = btn.getAttribute('data-tid');
+  var arg = btn.getAttribute('data-arg');
+  var inp = tutor.querySelector('.it-input');
   var q = inp ? inp.value.trim() : '';
   if (!q) return;
-  var btn = document.getElementById('itb-' + tid);
-  var resp = document.getElementById('itr-' + tid);
-  var text = document.getElementById('itrt-' + tid);
-  if (btn) { btn.disabled = true; btn.textContent = '...'; }
+  var resp = tutor.querySelector('.it-resp');
+  var text = tutor.querySelector('.it-resp-text');
+  btn.disabled = true;
+  btn.textContent = '...';
   if (resp) resp.style.display = 'none';
   try {
     var res = await fetch('/api/tutor', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        question: q,
-        argument: arg,
-        category: 'Evidence Library'
-      })
+      body: JSON.stringify({ question: q, argument: arg, category: 'Evidence Library' })
     });
     if (res.ok) {
       var data = await res.json();
@@ -471,6 +471,7 @@ async function askInlineTutor(tid, arg) {
     if (text) text.textContent = 'Something went wrong. Please try again.';
     if (resp) resp.style.display = 'block';
   }
-  if (btn) { btn.disabled = false; btn.textContent = 'Ask'; }
+  btn.disabled = false;
+  btn.textContent = 'Ask';
 }
 </script>
