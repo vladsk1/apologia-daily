@@ -129,6 +129,36 @@
     .reveal { opacity: 1; transform: none; }
     .reveal.visible { opacity: 1; transform: none; }
     @media (max-width: 600px) { .main { padding: 2rem 1.25rem 4rem; } .plans-grid { grid-template-columns: 1fr; } }
+  
+    .plan-day-main { flex: 1; }
+    .plan-day-header { display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 2px 0; }
+    .plan-day-action-icon { font-size: 0.9rem; flex-shrink: 0; }
+    .plan-day-chevron { flex-shrink: 0; color: var(--text-muted); transition: transform 0.2s; }
+    .plan-day-expanded { display: none; margin-top: 0.75rem; padding: 0.875rem 1rem; background: var(--off-white); border-radius: 6px; border-left: 3px solid var(--gold); }
+    .plan-day-item.expanded .plan-day-expanded { display: block; }
+    .plan-day-desc { font-size: 0.88rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 0.75rem; }
+    .plan-day-link { display: inline-block; font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; padding: 7px 16px; border-radius: 3px; background: var(--navy-950); color: var(--white); text-decoration: none; }
+    .plan-day-link:hover { background: var(--navy-800, #1e4278); }
+    .plan-day-check { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; cursor: pointer; color: transparent; font-size: 0.75rem; transition: all 0.15s; }
+    .plan-day-item.done .plan-day-check { background: var(--gold); border-color: var(--gold); color: var(--navy-950); }
+    .plan-day-item.done .plan-day-text { text-decoration: line-through; opacity: 0.6; }
+
+  
+    .plan-day-main { flex: 1; min-width: 0; }
+    .plan-day-header { display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 2px 0; }
+    .plan-day-action-icon { font-size: 0.9rem; flex-shrink: 0; }
+    .plan-day-chevron { flex-shrink: 0; color: #7a8fa8; transition: transform 0.2s; }
+    .plan-day-expanded { display: none; margin-top: 0.75rem; padding: 0.875rem 1rem; background: #f0f6fb; border-radius: 6px; border-left: 3px solid #c8a951; }
+    .plan-day-item.expanded .plan-day-expanded { display: block; }
+    .plan-day-desc { font-size: 0.88rem; color: #3a4a62; line-height: 1.75; margin-bottom: 0.75rem; }
+    .plan-day-link { display: inline-block; font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; padding: 7px 16px; border-radius: 3px; background: #0a1628; color: #fff; text-decoration: none; }
+    .plan-day-link:hover { background: #1e4278; }
+    .plan-day-check { width: 24px; height: 24px; border-radius: 50%; border: 2px solid #d4e0ec; display: flex; align-items: center; justify-content: center; flex-shrink: 0; cursor: pointer; color: transparent; font-size: 0.8rem; font-weight: 700; transition: all 0.15s; }
+    .plan-day-item.done .plan-day-check { background: #c8a951; border-color: #c8a951; color: #050d1a; }
+    .plan-day-item.done .plan-day-text { text-decoration: line-through; opacity: 0.55; }
+    .plan-day-item { border-bottom: 1px solid #f0f6fb; padding: 12px 0; }
+    .plan-day-item:last-child { border-bottom: none; }
+
   </style>
 </head>
 <body>
@@ -210,359 +240,860 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 const plans = [
-    {
-      id: 'resurrection',
-      icon: '✝️',
-      title: '30-Day Resurrection Deep Dive',
-      desc: 'The most important claim in Christianity — examined from every angle. Historical methodology, minimal facts, empty tomb, Paul\'s conversion, and practising the arguments in real conversations.',
-      color: '#c8a951',
-      days: 30,
-      level: 'Intermediate',
-      pro: true,
-      popular: true,
-      weeks: [
-        { title: 'Week 1 — The Historical Foundation', days: [
-          { day: 1, text: 'Read: The Minimal Facts Argument — free summary', link: 'evidence-library.html' },
-          { day: 2, text: 'Read today\'s devotional + Ask Anything: What is the minimal facts approach?', link: 'daily-devotional.html' },
-          { day: 3, text: 'Read: The Empty Tomb — free summary', link: 'evidence-library.html' },
-          { day: 4, text: 'Daily Quiz — Beginner — Resurrection questions', link: 'daily-quiz.html' },
-          { day: 5, text: 'Read: Paul\'s Conversion and the Early Creed', link: 'evidence-library.html' },
-          { day: 6, text: 'Conversation practice: Sceptical Family Member — Did Jesus actually rise?', link: 'debate-arena.html' },
-          { day: 7, text: 'Review week 1 — re-read the three arguments. Write your summary in plain English.', link: 'ask-anything.html' },
-        ]},
-        { title: 'Week 2 — Going Deeper', days: [
-          { day: 8, text: 'Pro deep dive: The Minimal Facts — full analysis with Habermas scholarship', link: 'evidence-library.html' },
-          { day: 9, text: 'Ask the tutor: What is the strongest objection to the resurrection?', link: 'evidence-library.html' },
-          { day: 10, text: 'Pro deep dive: The Empty Tomb — all alternative theories examined', link: 'evidence-library.html' },
-          { day: 11, text: 'Daily Quiz — Intermediate level', link: 'daily-quiz.html' },
-          { day: 12, text: 'Pro deep dive: Paul\'s Conversion — the early creed dating', link: 'evidence-library.html' },
-          { day: 13, text: 'Debate: The Atheist — Did Jesus rise from the dead? — Challenging', link: 'debate-arena.html' },
-          { day: 14, text: 'Objection Catcher — Resurrection topic — full round', link: 'objection-catcher.html' },
-        ]},
-        { title: 'Week 3 — Practising the Arguments', days: [
-          { day: 15, text: 'Conversation: Curious Coworker — Give me one reason to believe', link: 'debate-arena.html' },
-          { day: 16, text: 'Ask Anything: How do I explain the resurrection to someone who has never heard of it?', link: 'ask-anything.html' },
-          { day: 17, text: 'Who Said It — focus on resurrection scholars', link: 'who-said-it.html' },
-          { day: 18, text: 'Daily Quiz — Expert level — Resurrection', link: 'daily-quiz.html' },
-          { day: 19, text: 'Conversation: University Student — Isn\'t resurrection just legend?', link: 'debate-arena.html' },
-          { day: 20, text: 'Read: Multiple Attestation argument — Jesus section', link: 'evidence-library.html' },
-          { day: 21, text: 'Debate: The Muslim — Did Jesus die on the cross? — Expert', link: 'debate-arena.html' },
-        ]},
-        { title: 'Week 4 — Mastery', days: [
-          { day: 22, text: 'Ask Anything: What would Bart Ehrman say about the resurrection?', link: 'ask-anything.html' },
-          { day: 23, text: 'Full debate: The Atheist — Expert difficulty — resurrection topic', link: 'debate-arena.html' },
-          { day: 24, text: 'Read the devotional that covers 1 Corinthians 15', link: 'daily-devotional.html' },
-          { day: 25, text: 'Objection Catcher — all topics — full round', link: 'objection-catcher.html' },
-          { day: 26, text: 'Conversation: Grieving Friend — Where was God?', link: 'debate-arena.html' },
-          { day: 27, text: 'Ask Anything: Write me a 5-sentence summary of the resurrection case I can use in conversation', link: 'ask-anything.html' },
-          { day: 28, text: 'Daily Quiz — Expert — all categories', link: 'daily-quiz.html' },
-          { day: 29, text: 'Final debate: The Atheist — Expert — Did Jesus rise from the dead?', link: 'debate-arena.html' },
-          { day: 30, text: '🎉 Plan complete — review your progress and claim your belt points', link: 'dashboard.html' },
-        ]},
-      ]
-    },
-    {
-      id: 'answering_islam',
-      icon: '🕌',
-      title: 'Answering Islam',
-      desc: 'A 3-week plan for Christians who want to have confident, gracious conversations with Muslim friends. The Islamic Dilemma, the deity of Christ, manuscript evidence, and real conversation practice.',
-      color: '#285a9e',
-      days: 21,
-      level: 'Intermediate',
-      pro: true,
-      popular: false,
-      weeks: [
-        { title: 'Week 1 — Understanding Islam', days: [
-          { day: 1, text: 'Read: Worldviews — Islam section introduction', link: 'worldviews.html' },
-          { day: 2, text: 'Ask Anything: What do Muslims believe about Jesus?', link: 'ask-anything.html' },
-          { day: 3, text: 'Read: The Islamic Dilemma — does the Quran confirm the Bible?', link: 'worldviews.html' },
-          { day: 4, text: 'Ask the tutor: Explain the Islamic Dilemma in plain English', link: 'evidence-library.html' },
-          { day: 5, text: 'Read: Is the Bible corrupted? — Manuscript Reliability argument', link: 'evidence-library.html' },
-          { day: 6, text: 'Conversation: Muslim Colleague — Is the Bible corrupted?', link: 'debate-arena.html' },
-          { day: 7, text: 'Daily Quiz — Intermediate — Worldviews category', link: 'daily-quiz.html' },
-        ]},
-        { title: 'Week 2 — The Deity of Christ', days: [
-          { day: 8, text: 'Read: Did Jesus Claim to Be God? — free summary + Pro deep dive', link: 'evidence-library.html' },
-          { day: 9, text: 'Read: The Titles of Jesus — Son of Man, Lord, and I AM', link: 'evidence-library.html' },
-          { day: 10, text: 'Ask Anything: How do I respond to a Muslim who says Jesus never claimed to be God?', link: 'ask-anything.html' },
-          { day: 11, text: 'Read: John 1:1 and the Pre-existence of Christ', link: 'evidence-library.html' },
-          { day: 12, text: 'Objection Catcher — Islam topic — full round', link: 'objection-catcher.html' },
-          { day: 13, text: 'Debate: The Muslim — Is Jesus God or a prophet? — Challenging', link: 'debate-arena.html' },
-          { day: 14, text: 'Daily Quiz — Intermediate — Worldviews + Jesus categories', link: 'daily-quiz.html' },
-        ]},
-        { title: 'Week 3 — Confident Conversations', days: [
-          { day: 15, text: 'Read: Messianic Prophecy — the statistical case', link: 'evidence-library.html' },
-          { day: 16, text: 'Conversation: Muslim Colleague — Muhammad vs Jesus — who is the final prophet?', link: 'debate-arena.html' },
-          { day: 17, text: 'Ask Anything: What is the strongest argument for Christianity over Islam?', link: 'ask-anything.html' },
-          { day: 18, text: 'Debate: The Muslim — Expert — Did Jesus die on the cross?', link: 'debate-arena.html' },
-          { day: 19, text: 'Ask the tutor: How do I bring up the Islamic Dilemma graciously in conversation?', link: 'evidence-library.html' },
-          { day: 20, text: 'Objection Catcher — full round — all topics', link: 'objection-catcher.html' },
-          { day: 21, text: '🎉 Plan complete — you\'re ready for gracious, confident conversations', link: 'dashboard.html' },
-        ]},
-      ]
-    },
-    {
-      id: 'university',
-      icon: '🎓',
-      title: 'Defending Faith at University',
-      desc: 'Designed for students entering or already in an intellectually challenging environment. Science vs faith, the problem of evil, religious diversity, and how to hold your faith under academic pressure.',
-      color: '#534AB7',
-      days: 21,
-      level: 'Intermediate',
-      pro: true,
-      popular: false,
-      weeks: [
-        { title: 'Week 1 — Science and Faith', days: [
-          { day: 1, text: 'Read: The Argument from the Big Bang', link: 'evidence-library.html' },
-          { day: 2, text: 'Read: The Fine-Tuning Argument — free summary', link: 'evidence-library.html' },
-          { day: 3, text: 'Ask Anything: How do I respond to a professor who says science disproves God?', link: 'ask-anything.html' },
-          { day: 4, text: 'Read: The Origin of Life Argument', link: 'evidence-library.html' },
-          { day: 5, text: 'Conversation: University Student — My professor says evolution disproves God', link: 'debate-arena.html' },
-          { day: 6, text: 'Daily Quiz — Intermediate — Science and Faith', link: 'daily-quiz.html' },
-          { day: 7, text: 'Ask the tutor: Explain the relationship between science and Christianity', link: 'evidence-library.html' },
-        ]},
-        { title: 'Week 2 — The Hard Questions', days: [
-          { day: 8, text: 'Read: The Moral Argument — free summary and Pro deep dive', link: 'evidence-library.html' },
-          { day: 9, text: 'Ask Anything: How do I answer the problem of evil?', link: 'ask-anything.html' },
-          { day: 10, text: 'Debate: The Agnostic — Why does God allow suffering? — Challenging', link: 'debate-arena.html' },
-          { day: 11, text: 'Read: The Argument from Consciousness', link: 'evidence-library.html' },
-          { day: 12, text: 'Ask Anything: Why should I believe Christianity and not Islam or Hinduism?', link: 'ask-anything.html' },
-          { day: 13, text: 'Objection Catcher — Morality and Existence topics', link: 'objection-catcher.html' },
-          { day: 14, text: 'Conversation: University Student — Religion is just a social construct', link: 'debate-arena.html' },
-        ]},
-        { title: 'Week 3 — Holding Your Ground', days: [
-          { day: 15, text: 'Read: The Kalam Cosmological Argument — Pro deep dive', link: 'evidence-library.html' },
-          { day: 16, text: 'Debate: The Atheist — Expert — Does God exist?', link: 'debate-arena.html' },
-          { day: 17, text: 'Ask Anything: How do I keep my faith at university without becoming defensive?', link: 'ask-anything.html' },
-          { day: 18, text: 'Read: Historical Existence of Jesus — Non-Christian Sources', link: 'evidence-library.html' },
-          { day: 19, text: 'Conversation: Your Teenager / Peer — Is any of this actually true?', link: 'debate-arena.html' },
-          { day: 20, text: 'Daily Quiz — Expert — God\'s Existence + Science categories', link: 'daily-quiz.html' },
-          { day: 21, text: '🎉 Plan complete — you\'re equipped for the intellectual challenges ahead', link: 'dashboard.html' },
-        ]},
-      ]
-    },
-    {
-      id: 'gods_existence',
-      icon: '🌌',
-      title: 'The Case for God\'s Existence',
-      desc: 'A focused 14-day plan working through every major argument for God\'s existence — Kalam, fine-tuning, consciousness, morality, and Leibniz — with practice built in throughout.',
-      color: '#0f6e56',
-      days: 14,
-      level: 'Beginner',
-      pro: false,
-      popular: false,
-      weeks: [
-        { title: 'Week 1 — The Arguments', days: [
-          { day: 1, text: 'Read: The Kalam Cosmological Argument', link: 'evidence-library.html' },
-          { day: 2, text: 'Read: Leibniz\'s Contingency Argument', link: 'evidence-library.html' },
-          { day: 3, text: 'Read: The Fine-Tuning Argument', link: 'evidence-library.html' },
-          { day: 4, text: 'Daily Quiz — Beginner — God\'s Existence', link: 'daily-quiz.html' },
-          { day: 5, text: 'Read: The Moral Argument', link: 'evidence-library.html' },
-          { day: 6, text: 'Read: The Argument from Consciousness', link: 'evidence-library.html' },
-          { day: 7, text: 'Conversation: Curious Coworker — Hasn\'t science disproved God?', link: 'debate-arena.html' },
-        ]},
-        { title: 'Week 2 — Practising the Arguments', days: [
-          { day: 8, text: 'Ask Anything: Which argument for God\'s existence is strongest?', link: 'ask-anything.html' },
-          { day: 9, text: 'Debate: The Atheist — Gentle — Does God exist?', link: 'debate-arena.html' },
-          { day: 10, text: 'Objection Catcher — God\'s Existence topic', link: 'objection-catcher.html' },
-          { day: 11, text: 'Daily Quiz — Intermediate — God\'s Existence', link: 'daily-quiz.html' },
-          { day: 12, text: 'Conversation: Sceptical Family Member — I just don\'t see evidence for God', link: 'debate-arena.html' },
-          { day: 13, text: 'Ask Anything: How do I explain the Kalam to a friend in one minute?', link: 'ask-anything.html' },
-          { day: 14, text: '🎉 Plan complete — you know five powerful arguments for God\'s existence', link: 'dashboard.html' },
-        ]},
-      ]
-    },
-    {
-      id: 'bible_reliability',
-      icon: '📜',
-      title: 'Can We Trust the Bible?',
-      desc: 'A 14-day plan answering the most common questions about the Bible\'s reliability — manuscript evidence, archaeology, prophecy, and responding to the corruption narrative.',
-      color: '#854f0b',
-      days: 14,
-      level: 'Beginner',
-      pro: false,
-      popular: false,
-      weeks: [
-        { title: 'Week 1 — The Evidence', days: [
-          { day: 1, text: 'Read: Manuscript Reliability Argument', link: 'evidence-library.html' },
-          { day: 2, text: 'Ask Anything: How do we know the Bible hasn\'t been changed?', link: 'ask-anything.html' },
-          { day: 3, text: 'Read: Archaeological Confirmation of the Bible', link: 'evidence-library.html' },
-          { day: 4, text: 'Daily Quiz — Beginner — Biblical Reliability', link: 'daily-quiz.html' },
-          { day: 5, text: 'Read: Messianic Prophecy — the statistical case', link: 'evidence-library.html' },
-          { day: 6, text: 'Ask the tutor: How do I explain manuscript evidence to a Muslim?', link: 'evidence-library.html' },
-          { day: 7, text: 'Conversation: Muslim Colleague — Is the Bible corrupted?', link: 'debate-arena.html' },
-        ]},
-        { title: 'Week 2 — Practising the Responses', days: [
-          { day: 8, text: 'Objection Catcher — Bible topic — full round', link: 'objection-catcher.html' },
-          { day: 9, text: 'Ask Anything: What is the strongest archaeological evidence for the Bible?', link: 'ask-anything.html' },
-          { day: 10, text: 'Read: The Dead Sea Scrolls — significance for biblical reliability', link: 'evidence-library.html' },
-          { day: 11, text: 'Debate: The Muslim — Is the Bible reliable? — Challenging', link: 'debate-arena.html' },
-          { day: 12, text: 'Daily Quiz — Intermediate — Biblical Reliability', link: 'daily-quiz.html' },
-          { day: 13, text: 'Ask Anything: How do I explain the Dead Sea Scrolls in conversation?', link: 'ask-anything.html' },
-          { day: 14, text: '🎉 Plan complete — you can confidently defend the reliability of Scripture', link: 'dashboard.html' },
-        ]},
-      ]
-    },
-    {
-      id: 'jesus_identity',
-      icon: '✨',
-      title: 'Who Is Jesus?',
-      desc: 'A 21-day plan examining the historical Jesus, his divine claims, the prophecies he fulfilled, and how to explain his identity clearly in conversation.',
-      color: '#c8a951',
-      days: 21,
-      level: 'Intermediate',
-      pro: true,
-      popular: false,
-      weeks: [
-        { title: 'Week 1 — The Historical Jesus', days: [
-          { day: 1, text: 'Read: Historical Existence of Jesus — Non-Christian Sources', link: 'evidence-library.html' },
-          { day: 2, text: 'Read: The Criterion of Multiple Attestation', link: 'evidence-library.html' },
-          { day: 3, text: 'Read: Early Creed of 1 Corinthians 15', link: 'evidence-library.html' },
-          { day: 4, text: 'Daily Quiz — Beginner — Jesus category', link: 'daily-quiz.html' },
-          { day: 5, text: 'Ask Anything: Did Jesus really exist? What\'s the best evidence?', link: 'ask-anything.html' },
-          { day: 6, text: 'Conversation: Sceptical Family Member — You only believe because you were raised that way', link: 'debate-arena.html' },
-          { day: 7, text: 'Read today\'s devotional — reflect on who Jesus is to you personally', link: 'daily-devotional.html' },
-        ]},
-        { title: 'Week 2 — The Divine Claims', days: [
-          { day: 8, text: 'Read: Did Jesus Claim to Be God? — free summary and Pro deep dive', link: 'evidence-library.html' },
-          { day: 9, text: 'Read: The Titles of Jesus', link: 'evidence-library.html' },
-          { day: 10, text: 'Read: John 1:1 and Pre-existence of Christ', link: 'evidence-library.html' },
-          { day: 11, text: 'Ask the tutor: Explain the C.S. Lewis trilemma in plain English', link: 'evidence-library.html' },
-          { day: 12, text: 'Read: The Philippians 2 Hymn', link: 'evidence-library.html' },
-          { day: 13, text: 'Debate: The Muslim — Is Jesus God or a prophet? — Challenging', link: 'debate-arena.html' },
-          { day: 14, text: 'Objection Catcher — Islam topic — focus on Jesus', link: 'objection-catcher.html' },
-        ]},
-        { title: 'Week 3 — Prophecy and Practice', days: [
-          { day: 15, text: 'Read: Messianic Prophecy — the statistical case', link: 'evidence-library.html' },
-          { day: 16, text: 'Ask Anything: Read me Isaiah 53 and explain how it points to Jesus', link: 'ask-anything.html' },
-          { day: 17, text: 'Read: Daniel\'s 70 Weeks', link: 'evidence-library.html' },
-          { day: 18, text: 'Daily Quiz — Expert — Jesus category', link: 'daily-quiz.html' },
-          { day: 19, text: 'Conversation: Open Neighbour — What do you actually believe about Jesus?', link: 'debate-arena.html' },
-          { day: 20, text: 'Ask Anything: Summarise the case for Jesus\'s divinity in plain English', link: 'ask-anything.html' },
-          { day: 21, text: '🎉 Plan complete — you can explain and defend who Jesus is with confidence', link: 'dashboard.html' },
-        ]},
-      ]
-    },
-  ];
-
-  let currentPlanId = null;
-
-  // ── STORAGE ──
-  function getSaved() {
-    return JSON.parse(localStorage.getItem('study_plans') || '{}');
+  {
+    "id": "resurrection",
+    "icon": "✝️",
+    "title": "30-Day Resurrection Deep Dive",
+    "desc": "The most important claim in Christianity — examined from every angle. Historical methodology, minimal facts, empty tomb, and practising in real conversations.",
+    "color": "#c8a951",
+    "days": 30,
+    "level": "Intermediate",
+    "pro": true,
+    "popular": true,
+    "weeks": [
+      {
+        "title": "Week 1 — The Historical Foundation",
+        "days": [
+          {
+            "day": 1,
+            "action": "Read",
+            "text": "Read: The Minimal Facts Argument",
+            "desc": "Open the Evidence Library, go to The Resurrection tab, and read the Minimal Facts Argument card. Learn the five facts that even atheist historians accept. Take notes on any you find most compelling.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 2,
+            "action": "Ask",
+            "text": "Ask Anything: What is the minimal facts approach?",
+            "desc": "Use your daily Ask Anything question: ask the AI to explain Gary Habermas minimal facts approach and why it is so effective in debates. Read the response carefully and note two things you learned.",
+            "link": "ask-anything.html"
+          },
+          {
+            "day": 3,
+            "action": "Read",
+            "text": "Read: The Empty Tomb",
+            "desc": "Read the Empty Tomb argument card in the Evidence Library. Focus on enemy attestation — why the fact that Jewish leaders never denied the tomb was empty is one of the most powerful pieces of evidence.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 4,
+            "action": "Quiz",
+            "text": "Daily Quiz — Resurrection questions",
+            "desc": "Take the Daily Quiz and focus on the Resurrection category. This reinforces what you read in days 1-3. Aim for 100% — go back and re-read any argument you get wrong.",
+            "link": "daily-quiz.html"
+          },
+          {
+            "day": 5,
+            "action": "Read",
+            "text": "Read: Paul's Conversion and the Early Creed",
+            "desc": "Read the Paul's Conversion and Early Creed argument card. Pay particular attention to the dating of the 1 Corinthians 15 creed — understanding why 2-5 years after the crucifixion matters enormously.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 6,
+            "action": "Debate",
+            "text": "Debate Arena: Defend the resurrection against an atheist",
+            "desc": "Open the Debate Arena and choose the Atheist opponent. Select the topic of the resurrection. Use the minimal facts approach you learned this week. After the debate, reflect on which arguments felt strongest.",
+            "link": "debate-arena.html"
+          },
+          {
+            "day": 7,
+            "action": "Reflect",
+            "text": "Review and reflect",
+            "desc": "Write a one-paragraph summary of the strongest historical argument for the resurrection in your own words. No notes — write from memory. This locks the arguments into long-term memory.",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "title": "Week 2 — The Appearances and Hostile Witnesses",
+        "days": [
+          {
+            "day": 8,
+            "action": "Read",
+            "text": "Read: The Resurrection Appearances",
+            "desc": "Read the Resurrection Appearances argument card. Focus on the independence of the sources — Paul, Mark, Luke, and John each provide independent attestation of the appearances.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 9,
+            "action": "Read",
+            "text": "Read: The Conversion of the Sceptics",
+            "desc": "Read the Conversion of the Sceptics card. James and Paul are the most powerful witnesses — understand why their starting position makes their conversion so historically significant.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 10,
+            "action": "Ask",
+            "text": "Ask Anything: Why can the appearances not be hallucinations?",
+            "desc": "Ask the AI tutor why the hallucination theory is an inadequate explanation for the resurrection appearances, particularly for Paul and James. Note the key points for use in real conversations.",
+            "link": "ask-anything.html"
+          },
+          {
+            "day": 11,
+            "action": "Read",
+            "text": "Read: The Origin of the Disciples Belief",
+            "desc": "Read the Origin of the Disciples Belief card. Focus on the theological novelty argument — why the specific content of what the disciples proclaimed was unprecedented in Jewish thought.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 12,
+            "action": "Debate",
+            "text": "Debate: Defend against a Muslim opponent",
+            "desc": "In the Debate Arena, choose the Muslim opponent and the resurrection topic. Muslims have specific objections including that Jesus was not crucified. Practise responding using the historical evidence.",
+            "link": "debate-arena.html"
+          },
+          {
+            "day": 13,
+            "action": "Game",
+            "text": "Speed Round — Resurrection category",
+            "desc": "Open Speed Round and play on Intermediate difficulty focusing on Resurrection questions. Aim for 80% plus. Review any questions you get wrong immediately after.",
+            "link": "speed-round.html"
+          },
+          {
+            "day": 14,
+            "action": "Reflect",
+            "text": "Week 2 review — write your full case",
+            "desc": "Write a 200-word summary of the complete historical case for the resurrection using all the arguments from weeks 1 and 2. This is your elevator pitch. Keep it and refine it.",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "title": "Week 3 — Objections and Real Conversations",
+        "days": [
+          {
+            "day": 15,
+            "action": "Read",
+            "text": "Read: The Argument from the Burial",
+            "desc": "Read the Burial argument card. Joseph of Arimathea is a key detail — understand why his social position as a Sanhedrin member is evidence of historical authenticity.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 16,
+            "action": "Practice",
+            "text": "Objection Catcher: Resurrection objections",
+            "desc": "Open Objection Catcher and work through all resurrection-related scenarios. For each objection, practise your response out loud before checking the suggested answer.",
+            "link": "objection-catcher.html"
+          },
+          {
+            "day": 17,
+            "action": "Read",
+            "text": "Read: Post-Resurrection Behaviour",
+            "desc": "Read the Post-Resurrection Behaviour argument card. Focus on the Sunday worship change — why would Jewish monotheists change their most sacred day without an extraordinary reason?",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 18,
+            "action": "Ask",
+            "text": "Ask Anything: Respond to the hallucination theory fully",
+            "desc": "Ask for a complete response to the hallucination theory of the resurrection — covering group appearances, hostile witnesses, and the empty tomb. Memorise the key points.",
+            "link": "ask-anything.html"
+          },
+          {
+            "day": 19,
+            "action": "Debate",
+            "text": "Debate: Defend against an agnostic",
+            "desc": "Debate the agnostic opponent on the resurrection. Agnostics typically challenge the reliability of the sources and the possibility of miracles. Use the historical methodology you have learned.",
+            "link": "debate-arena.html"
+          },
+          {
+            "day": 20,
+            "action": "Journal",
+            "text": "Conversation Journal: Record a real conversation",
+            "desc": "Have a real conversation with someone about the resurrection this week. Record the conversation in the Journal and get AI coaching on what you said and what you could say better.",
+            "link": "conversation-journal.html"
+          },
+          {
+            "day": 21,
+            "action": "Reflect",
+            "text": "Mid-plan review",
+            "desc": "You are halfway through. Read your week 2 summary and update it with anything you have learned in week 3. What is now your single strongest argument? What objection do you still find hardest to answer?",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "title": "Week 4 — Mastery and Application",
+        "days": [
+          {
+            "day": 22,
+            "action": "Game",
+            "text": "Speed Round — Expert difficulty",
+            "desc": "Play Speed Round on Expert difficulty — Resurrection category. This tests whether you know the scholars, specific dates, and technical details. Aim for 70% plus on Expert.",
+            "link": "speed-round.html"
+          },
+          {
+            "day": 23,
+            "action": "Read",
+            "text": "Pro Deep Dive: Minimal Facts",
+            "desc": "Read the full Pro Deep Dive on the Minimal Facts Argument — all five facts defended in scholarly depth. Take notes on the specific scholars and sources you can cite.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 24,
+            "action": "Read",
+            "text": "Pro Deep Dive: The Empty Tomb",
+            "desc": "Read the full Pro Deep Dive on the Empty Tomb — focusing on enemy attestation, the criterion of embarrassment, and all alternative theories examined and refuted.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 25,
+            "action": "Ask",
+            "text": "Ask Anything: N.T. Wright on the resurrection",
+            "desc": "Ask for a summary of N.T. Wright historical argument for the resurrection from The Resurrection of the Son of God — particularly his theological novelty argument.",
+            "link": "ask-anything.html"
+          },
+          {
+            "day": 26,
+            "action": "Debate",
+            "text": "Debate: Extended debate — all arguments",
+            "desc": "Do a full debate in the arena using every argument you have learned over the past month. Try to use at least five distinct arguments. Ask for AI feedback at the end.",
+            "link": "debate-arena.html"
+          },
+          {
+            "day": 27,
+            "action": "Journal",
+            "text": "Journal: Second real conversation",
+            "desc": "Have another real conversation about the resurrection — ideally with someone more challenging than the first. Record it and compare the AI coaching with your week 3 journal entry. How have you improved?",
+            "link": "conversation-journal.html"
+          },
+          {
+            "day": 28,
+            "action": "Game",
+            "text": "Who Said It — Resurrection scholars",
+            "desc": "Play Who Said It and focus on matching resurrection scholars to their key quotes. Can you identify Habermas, Wright, Licona, Crossan, and Luedemann from their statements?",
+            "link": "who-said-it.html"
+          },
+          {
+            "day": 29,
+            "action": "Reflect",
+            "text": "Write your final case",
+            "desc": "Write a complete polished case for the resurrection — 400 words, no notes, from memory. Include the historical facts, the best explanation, the key scholars, and your response to the two strongest objections.",
+            "link": ""
+          },
+          {
+            "day": 30,
+            "action": "Complete",
+            "text": "Plan complete — celebrate and plan next steps",
+            "desc": "You have completed the 30-Day Resurrection Deep Dive. Review everything you have written over the past month. Share what you have learned with someone this week.",
+            "link": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gods_existence",
+    "icon": "✨",
+    "title": "21-Day God's Existence",
+    "desc": "Master the cosmological, teleological, and moral arguments. From the Kalam to fine-tuning to consciousness — build a complete case for theism.",
+    "color": "#285a9e",
+    "days": 21,
+    "level": "Beginner",
+    "pro": false,
+    "popular": false,
+    "weeks": [
+      {
+        "title": "Week 1 — Cosmological Arguments",
+        "days": [
+          {
+            "day": 1,
+            "action": "Read",
+            "text": "Read: The Kalam Cosmological Argument",
+            "desc": "Read the Kalam argument card in the Evidence Library. Focus on the two premises and why each is supported. The BGV theorem and the second law of thermodynamics are your two scientific supports for Premise 2.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 2,
+            "action": "Ask",
+            "text": "Ask Anything: Explain the Kalam simply",
+            "desc": "Ask the AI tutor to explain the Kalam Cosmological Argument in plain English with an everyday analogy — something you could use in a conversation at work. Practise saying the explanation out loud.",
+            "link": "ask-anything.html"
+          },
+          {
+            "day": 3,
+            "action": "Read",
+            "text": "Read: The Leibniz Contingency Argument",
+            "desc": "Read the Leibniz argument card. Why is there something rather than nothing? Understand the Principle of Sufficient Reason and why the universe cannot be its own explanation.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 4,
+            "action": "Read",
+            "text": "Read: The Thomistic Cosmological Argument",
+            "desc": "Read the Thomistic argument card. Focus on the distinction between per se and per accidens causal series — this is the key to understanding Aquinas correctly.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 5,
+            "action": "Debate",
+            "text": "Debate: Defend God's existence against an atheist",
+            "desc": "Open the Debate Arena and debate the atheist on whether God exists. Use the cosmological arguments from this week. After the debate, note which arguments the AI found most challenging to counter.",
+            "link": "debate-arena.html"
+          },
+          {
+            "day": 6,
+            "action": "Quiz",
+            "text": "Daily Quiz — God's Existence",
+            "desc": "Take the Daily Quiz on the God's Existence category. This tests the arguments from days 1-4. Aim for 100%.",
+            "link": "daily-quiz.html"
+          },
+          {
+            "day": 7,
+            "action": "Reflect",
+            "text": "Week 1 review",
+            "desc": "Write a one-paragraph summary of the cosmological case for God in your own words. Which argument do you find most personally compelling and why?",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "title": "Week 2 — Design and Consciousness",
+        "days": [
+          {
+            "day": 8,
+            "action": "Read",
+            "text": "Read: The Fine-Tuning Argument",
+            "desc": "Read the Fine-Tuning argument card. Focus on the specific numbers — the cosmological constant at 1 part in 10^120. Understand why the multiverse response does not actually solve the problem.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 9,
+            "action": "Read",
+            "text": "Read: The Argument from Consciousness",
+            "desc": "Read the Consciousness argument card. The hard problem of consciousness is one of the most powerful arguments for theism. Understand what qualia are and why they resist physical explanation.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 10,
+            "action": "Ask",
+            "text": "Ask Anything: Why doesn't the multiverse solve fine-tuning?",
+            "desc": "Ask the AI tutor for a complete response to the multiverse objection to the fine-tuning argument — covering the Boltzmann Brain problem, the meta-level fine-tuning issue, and the BGV theorem.",
+            "link": "ask-anything.html"
+          },
+          {
+            "day": 11,
+            "action": "Read",
+            "text": "Read: The Argument from Reason",
+            "desc": "Read the Argument from Reason card. C.S. Lewis and Alvin Plantinga both argue that naturalism undermines itself by undermining our ability to trust our own reasoning.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 12,
+            "action": "Game",
+            "text": "Speed Round — God's Existence",
+            "desc": "Play Speed Round on Beginner difficulty — God's Existence category. Focus on getting the argument structures right before testing the scholarly details.",
+            "link": "speed-round.html"
+          },
+          {
+            "day": 13,
+            "action": "Debate",
+            "text": "Debate: Fine-tuning against a scientist",
+            "desc": "Debate the atheist specifically on fine-tuning. This is often the strongest argument with scientifically-minded people. Practise stating the numbers and the multiverse response clearly.",
+            "link": "debate-arena.html"
+          },
+          {
+            "day": 14,
+            "action": "Reflect",
+            "text": "Week 2 review",
+            "desc": "Which design or consciousness argument do you find most powerful? Write a 150-word explanation as if explaining to a scientifically-minded friend who has never heard it.",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "title": "Week 3 — Moral and Experiential Arguments",
+        "days": [
+          {
+            "day": 15,
+            "action": "Read",
+            "text": "Read: The Moral Argument",
+            "desc": "Read the Moral Argument card. The grounding problem is the key — it is not about whether atheists behave morally but what makes moral facts objectively true. Understand the Euthyphro dilemma response.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 16,
+            "action": "Read",
+            "text": "Read: The Argument from Beauty and Desire",
+            "desc": "Read both the Beauty and Desire argument cards. C.S. Lewis argument from Joy is one of the most personally resonant arguments for many people.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 17,
+            "action": "Read",
+            "text": "Read: The Ontological Argument",
+            "desc": "Read the Ontological Argument card. This is the most philosophically demanding argument. Focus on Plantinga modal version and why conceivability implies possibility.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 18,
+            "action": "Ask",
+            "text": "Ask Anything: Best argument for my sceptical friend",
+            "desc": "Tell the AI tutor about a specific sceptical friend or family member and ask which argument for God existence would be most effective for them specifically. Apply the advice.",
+            "link": "ask-anything.html"
+          },
+          {
+            "day": 19,
+            "action": "Journal",
+            "text": "Conversation Journal: Have a real conversation",
+            "desc": "Have a real conversation about whether God exists with someone in your life. Record it in the Journal and get coaching on what you said and what you could improve.",
+            "link": "conversation-journal.html"
+          },
+          {
+            "day": 20,
+            "action": "Debate",
+            "text": "Debate: Full cumulative case",
+            "desc": "Debate the atheist using all the arguments from the three weeks — cosmological, design, consciousness, moral, and experiential. Can you weave them into a coherent cumulative case?",
+            "link": "debate-arena.html"
+          },
+          {
+            "day": 21,
+            "action": "Complete",
+            "text": "Plan complete",
+            "desc": "You have completed the 21-Day God's Existence plan. Write your complete personal case for God's existence — 300 words, from memory. Which argument will you lead with in real conversations?",
+            "link": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bible_reliability",
+    "icon": "📖",
+    "title": "14-Day Bible Reliability",
+    "desc": "Manuscript evidence, archaeology, prophecy, and canon formation. Equip yourself to confidently defend the reliability of Scripture.",
+    "color": "#0f6e56",
+    "days": 14,
+    "level": "Beginner",
+    "pro": false,
+    "popular": false,
+    "weeks": [
+      {
+        "title": "Week 1 — Manuscripts and Archaeology",
+        "days": [
+          {
+            "day": 1,
+            "action": "Read",
+            "text": "Read: The Manuscript Reliability Argument",
+            "desc": "Read the Manuscript Reliability card. Focus on the comparison — 5800 Greek New Testament manuscripts vs 10 for Caesar's Gallic Wars. Understand what textual variants actually are and why they don't threaten the text.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 2,
+            "action": "Read",
+            "text": "Read: The Dead Sea Scrolls",
+            "desc": "Read the Dead Sea Scrolls card. The Great Isaiah Scroll is the key evidence — 1000 years older than our previous oldest manuscript and virtually identical. Understand what this proves about scribal accuracy.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 3,
+            "action": "Read",
+            "text": "Read: Archaeological Confirmation",
+            "desc": "Read the Archaeological Confirmation card. Focus on four key discoveries: the Hittites, the Pilate Stone, the Caiaphas ossuary, and the Pool of Bethesda. Each was once called legendary.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 4,
+            "action": "Ask",
+            "text": "Ask Anything: How do I respond to the Bible has been changed?",
+            "desc": "Ask for a complete response to the claim that the Bible has been changed over the centuries — including the manuscript evidence, the Dead Sea Scrolls, and what textual variants actually are. Memorise the key points.",
+            "link": "ask-anything.html"
+          },
+          {
+            "day": 5,
+            "action": "Read",
+            "text": "Read: The Early Date of the New Testament",
+            "desc": "Read the Early Date card. Focus on the argument from Acts ending — why the silence about Jerusalem's fall in 70 AD suggests the Gospels were written before it happened.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 6,
+            "action": "Debate",
+            "text": "Debate: Defend the Bible's reliability",
+            "desc": "Open the Debate Arena and debate on whether we can trust the Bible. Use the manuscript and archaeological evidence from this week. After the debate, note which objections you found hardest.",
+            "link": "debate-arena.html"
+          },
+          {
+            "day": 7,
+            "action": "Reflect",
+            "text": "Week 1 review",
+            "desc": "Write a 150-word summary of the manuscript and archaeological case for Bible reliability. Which piece of evidence do you find most surprising or compelling?",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "title": "Week 2 — Prophecy, Canon, and Eyewitnesses",
+        "days": [
+          {
+            "day": 8,
+            "action": "Read",
+            "text": "Read: Fulfilled Prophecy",
+            "desc": "Read the Fulfilled Prophecy card. Focus on Ezekiel's Tyre prophecy and Isaiah 53. Understand why the Dead Sea Scrolls are crucial — they prove the prophecies predate Jesus.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 9,
+            "action": "Read",
+            "text": "Read: The Canon Formation Argument",
+            "desc": "Read the Canon Formation card. The Nicaea myth is one of the most common misconceptions about the Bible. Understand what actually happened at Nicaea and when the canon was actually formed.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 10,
+            "action": "Read",
+            "text": "Read: Gospel Eyewitnesses",
+            "desc": "Read the Gospel Eyewitnesses card. Focus on Richard Bauckham naming pattern research — the specific names in the Gospels match the naming patterns of first-century Palestinian Judaism precisely.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 11,
+            "action": "Ask",
+            "text": "Ask Anything: Respond to Nicaea invented the Bible",
+            "desc": "Ask for a complete response to the claim that the Council of Nicaea in 325 AD chose which books went in the Bible and suppressed other gospels. This is one of the most common misconceptions you will encounter.",
+            "link": "ask-anything.html"
+          },
+          {
+            "day": 12,
+            "action": "Read",
+            "text": "Read: The Internal Consistency of Scripture",
+            "desc": "Read the Internal Consistency card. Focus on the typological structure — how Old Testament types are fulfilled in the New Testament. This cannot have been coordinated by 40 human authors across 1500 years.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 13,
+            "action": "Game",
+            "text": "Speed Round — Bible Reliability",
+            "desc": "Play Speed Round on Intermediate difficulty — Biblical Reliability category. Test whether you know the specific manuscript numbers, archaeological discoveries, and scholarly names.",
+            "link": "speed-round.html"
+          },
+          {
+            "day": 14,
+            "action": "Complete",
+            "text": "Plan complete",
+            "desc": "You have completed the 14-Day Bible Reliability plan. Write a 200-word defence of the Bible's reliability from memory — covering manuscripts, archaeology, prophecy, and canon formation.",
+            "link": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jesus_identity",
+    "icon": "✝️",
+    "title": "14-Day Jesus Identity",
+    "desc": "Who was Jesus? Did he exist? Did he claim to be God? Build a complete Christological case from historical evidence.",
+    "color": "#3c3489",
+    "days": 14,
+    "level": "Intermediate",
+    "pro": true,
+    "popular": false,
+    "weeks": [
+      {
+        "title": "Week 1 — Historical Jesus and Divine Claims",
+        "days": [
+          {
+            "day": 1,
+            "action": "Read",
+            "text": "Read: The Historical Existence of Jesus",
+            "desc": "Read the Historical Existence card. Focus on the non-Christian sources — Tacitus, Josephus, Pliny, Lucian. Understand why even atheist historians accept Jesus existed and why mythicism is rejected by scholarship.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 2,
+            "action": "Read",
+            "text": "Read: Did Jesus Claim to Be God?",
+            "desc": "Read the Did Jesus Claim to Be God card. Focus on the I AM claims, the forgiving of sins, and the acceptance of worship. Understand the C.S. Lewis trilemma and why good teacher is not an option.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 3,
+            "action": "Read",
+            "text": "Read: The Titles of Jesus",
+            "desc": "Read the Titles of Jesus card. Son of Man from Daniel 7, Kyrios as the divine name YHWH, and I AM from Exodus 3 — understand the Jewish background that makes each title a divine claim.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 4,
+            "action": "Ask",
+            "text": "Ask Anything: How do I explain Jesus divinity to a Muslim?",
+            "desc": "Ask how to explain that Jesus claimed to be God in a conversation with a Muslim friend, using only the Gospels and historical evidence rather than Christian theology assumed. Note the approach carefully.",
+            "link": "ask-anything.html"
+          },
+          {
+            "day": 5,
+            "action": "Read",
+            "text": "Read: John 1:1 and the Philippians 2 Hymn",
+            "desc": "Read both cards. John 1:1 provides the Greek grammar of the divine claim. Philippians 2 provides the pre-Pauline hymn — evidence that Christians were worshipping Jesus as God within years of the crucifixion.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 6,
+            "action": "Debate",
+            "text": "Debate: Who is Jesus? Against a Muslim opponent",
+            "desc": "Debate the Muslim opponent specifically on the identity of Jesus. Muslims respect Jesus as a prophet — use this as a starting point and build toward the divine claims using the historical evidence.",
+            "link": "debate-arena.html"
+          },
+          {
+            "day": 7,
+            "action": "Reflect",
+            "text": "Week 1 review",
+            "desc": "Write a 200-word case for the divinity of Jesus using only historical and textual evidence. Which divine claim do you find most historically compelling?",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "title": "Week 2 — Messianic Prophecy and the Resurrection",
+        "days": [
+          {
+            "day": 8,
+            "action": "Read",
+            "text": "Read: Messianic Prophecy",
+            "desc": "Read the Messianic Prophecy card. Focus on Isaiah 53 and Psalm 22 — both describe the crucifixion in detail centuries before it happened. The Dead Sea Scrolls prove these prophecies predate Jesus.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 9,
+            "action": "Read",
+            "text": "Read: Daniel's 70 Weeks",
+            "desc": "Read the Daniel's 70 Weeks card. This is the most precise chronological prophecy in Scripture. Understand Sir Robert Anderson's calculation and why it points to the period of Jesus's ministry.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 10,
+            "action": "Read",
+            "text": "Read: The Early Creed of 1 Corinthians 15",
+            "desc": "Read the Early Creed card. The resurrection and the divine identity of Jesus are inseparable — the creed connects them within years of the crucifixion. Understand why this destroys legend theory.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 11,
+            "action": "Ask",
+            "text": "Ask Anything: Respond to Jesus never said he was God",
+            "desc": "Ask for a complete response to the objection that Jesus never claimed to be God — covering the I AM sayings, the forgiving of sins, the Son of Man title, and the reactions of his audience.",
+            "link": "ask-anything.html"
+          },
+          {
+            "day": 12,
+            "action": "Practice",
+            "text": "Objection Catcher: Jesus-related objections",
+            "desc": "Open Objection Catcher and work through all objections related to Jesus identity. Practise your responses out loud. Record any you find difficult to answer.",
+            "link": "objection-catcher.html"
+          },
+          {
+            "day": 13,
+            "action": "Debate",
+            "text": "Debate: Full Christological case",
+            "desc": "Debate the atheist with a complete Christological case — existence, divine claims, messianic prophecy, and resurrection. This is the integrated argument for who Jesus is.",
+            "link": "debate-arena.html"
+          },
+          {
+            "day": 14,
+            "action": "Complete",
+            "text": "Plan complete",
+            "desc": "You have completed the 14-Day Jesus Identity plan. Write a 300-word case for Jesus being who he claimed to be — from historical evidence alone.",
+            "link": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "answering_islam",
+    "icon": "☪️",
+    "title": "14-Day Answering Islam",
+    "desc": "The Islamic Dilemma, Quran preservation, Hadith reliability, and the historical Muhammad. A complete guide to Christian-Muslim dialogue.",
+    "color": "#0f6e56",
+    "days": 14,
+    "level": "Advanced",
+    "pro": true,
+    "popular": false,
+    "weeks": [
+      {
+        "title": "Week 1 — The Islamic Dilemma and Quran Questions",
+        "days": [
+          {
+            "day": 1,
+            "action": "Read",
+            "text": "Read: The Islamic Dilemma",
+            "desc": "Read the Islamic Dilemma section in the Worldviews page. The Quran affirms the Bible as God's Word — yet Muslims claim it is corrupted. This internal contradiction is the starting point for Christian-Muslim dialogue.",
+            "link": "worldviews.html"
+          },
+          {
+            "day": 2,
+            "action": "Read",
+            "text": "Read: Quran Preservation and Variant Readings",
+            "desc": "Read the Variant Readings and Quran Preservation sections in Worldviews. Understand the Hafs and Warsh traditions and what the burning of manuscripts by Uthman tells us about early Quran history.",
+            "link": "worldviews.html"
+          },
+          {
+            "day": 3,
+            "action": "Ask",
+            "text": "Ask Anything: How do I use the Islamic Dilemma in conversation?",
+            "desc": "Ask for a step-by-step guide for presenting the Islamic Dilemma in a respectful conversation with a Muslim friend — starting from Quranic verses they would accept. Note the approach.",
+            "link": "ask-anything.html"
+          },
+          {
+            "day": 4,
+            "action": "Read",
+            "text": "Read: Missing Verses and Hadith Science",
+            "desc": "Read the Missing Verses and Hadith Science sections in Worldviews. Understand the stoning verse, the breastfeeding verse, and why the 200-year gap before Hadith compilation matters.",
+            "link": "worldviews.html"
+          },
+          {
+            "day": 5,
+            "action": "Debate",
+            "text": "Debate: Against a Muslim opponent",
+            "desc": "Open the Debate Arena and debate the Muslim opponent on whether the Bible is reliable. Use the Islamic Dilemma — the Quran's own testimony about the Bible — as your starting framework.",
+            "link": "debate-arena.html"
+          },
+          {
+            "day": 6,
+            "action": "Study",
+            "text": "Study: David Wood's Islamic Dilemma",
+            "desc": "Search YouTube for David Wood's The Islamic Dilemma video series. Watch at least one episode and note three specific Quranic verses you can use in conversations. These are from Islamic sources.",
+            "link": ""
+          },
+          {
+            "day": 7,
+            "action": "Reflect",
+            "text": "Week 1 review",
+            "desc": "Write a 200-word summary of the Islamic Dilemma in your own words — starting from the Quranic evidence, then explaining the dilemma, then the Muslim responses and their problems.",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "title": "Week 2 — The Historical Jesus vs Islamic Claims",
+        "days": [
+          {
+            "day": 8,
+            "action": "Read",
+            "text": "Read: Did Jesus Claim to Be God?",
+            "desc": "Read the Did Jesus Claim to Be God card with a focus on how to present it to Muslims. Muslims deny Jesus divinity — but the historical evidence is clear. Focus on the reactions of his Jewish audience.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 9,
+            "action": "Read",
+            "text": "Read: Messianic Prophecy",
+            "desc": "Read the Messianic Prophecy card. Isaiah 53 is particularly significant in Muslim-Christian dialogue — it was written 700 years before Jesus, is preserved in the Dead Sea Scrolls, and Muslims cannot explain it.",
+            "link": "evidence-library.html"
+          },
+          {
+            "day": 10,
+            "action": "Ask",
+            "text": "Ask Anything: Respond to Jesus was just a prophet",
+            "desc": "Ask how to respond to the Muslim claim that Jesus was just a prophet, not God — using historical evidence, the words of Jesus himself, and early Christian sources that predate any alleged corruption.",
+            "link": "ask-anything.html"
+          },
+          {
+            "day": 11,
+            "action": "Read",
+            "text": "Read: The Sira and Hadith Reliability",
+            "desc": "Read the Sira reliability section in Worldviews. Understand how to apply consistent historical standards to Islamic sources — the same standards that Muslims apply to the Bible.",
+            "link": "worldviews.html"
+          },
+          {
+            "day": 12,
+            "action": "Debate",
+            "text": "Debate: Jesus identity against a Muslim",
+            "desc": "Debate the Muslim opponent specifically on Jesus identity — is he prophet or Lord? Use the historical evidence, the divine claims, and the early creed of 1 Corinthians 15.",
+            "link": "debate-arena.html"
+          },
+          {
+            "day": 13,
+            "action": "Journal",
+            "text": "Conversation Journal: Muslim-Christian conversation",
+            "desc": "If you know any Muslim friends or colleagues, initiate a respectful conversation about Jesus. Record it in the Journal and get coaching. If not, record a hypothetical conversation.",
+            "link": "conversation-journal.html"
+          },
+          {
+            "day": 14,
+            "action": "Complete",
+            "text": "Plan complete",
+            "desc": "You have completed the 14-Day Answering Islam plan. Write your top five arguments — the ones you will lead with in real conversations with Muslim friends.",
+            "link": ""
+          }
+        ]
+      }
+    ]
   }
-  function setSaved(data) {
-    localStorage.setItem('study_plans', JSON.stringify(data));
-  }
+];
 
-  // ── INIT ──
-  document.addEventListener('DOMContentLoaded', function() {
-    renderPlans();
-    updateActiveBanner();
-  });
+  var ACTION_ICONS = {"Read":"📖","Ask":"🤖","Debate":"⚔️","Quiz":"❓","Game":"🎮","Reflect":"✍️","Journal":"📔","Practice":"🎯","Study":"📚","Complete":"🏆"};
+  var currentPlanId = null;
 
-  // ── RENDER PLAN CARDS ──
+  function getSaved() { return JSON.parse(localStorage.getItem('study_plans') || '{}'); }
+  function setSaved(d) { localStorage.setItem('study_plans', JSON.stringify(d)); }
+
+  document.addEventListener('DOMContentLoaded', function() { renderPlans(); updateActiveBanner(); });
+
   function renderPlans() {
     var saved = getSaved();
     var grid = document.getElementById('plans-grid');
     if (!grid) return;
-    grid.innerHTML = plans.map(function(plan) {
+    var html = '';
+    plans.forEach(function(plan) {
       var progress = saved[plan.id] || { started: false, completed: [] };
       var completed = progress.completed ? progress.completed.length : 0;
       var pct = Math.round(completed / plan.days * 100);
       var isActive = progress.started && !progress.finished;
       var isFinished = progress.finished;
-      var btnLabel = isFinished ? '✓ Completed' : isActive ? 'Continue plan →' : 'Start plan →';
-      var btnClass = isFinished ? 'plan-btn plan-btn-completed' : isActive ? 'plan-btn plan-btn-continue' : 'plan-btn plan-btn-start';
-      var progressBar = (isActive || isFinished) ? (
-        '<div class="plan-progress-wrap visible">' +
-        '<div class="plan-progress-label"><span>' + completed + ' of ' + plan.days + ' days</span><span>' + pct + '%</span></div>' +
-        '<div class="plan-progress-bar"><div class="plan-progress-fill" style="width:' + pct + '%;background:' + plan.color + ';"></div></div>' +
-        '</div>'
-      ) : '';
-
-      return '<div class="plan-card' + (isActive ? ' active-card' : '') + '" data-id="' + plan.id + '">' +
+      var btnLabel = isFinished ? 'Completed' : isActive ? 'Continue' : 'Start plan';
+      var btnClass = isActive ? 'plan-btn plan-btn-continue' : isFinished ? 'plan-btn plan-btn-completed' : 'plan-btn plan-btn-start';
+      var progressHtml = '';
+      if (isActive || isFinished) {
+        progressHtml = '<div class="plan-progress-wrap visible"><div class="plan-progress-label"><span>' + completed + ' of ' + plan.days + ' days</span><span>' + pct + '%</span></div><div class="plan-progress-bar"><div class="plan-progress-fill" style="width:' + pct + '%;background:' + plan.color + ';"></div></div></div>';
+      }
+      html += '<div class="plan-card' + (isActive ? ' active-card' : '') + '" data-id="' + plan.id + '">' +
         '<div class="plan-card-banner" style="background:' + plan.color + ';"></div>' +
         '<div class="plan-card-body">' +
-        '<div class="plan-card-top">' +
-        '<div class="plan-card-icon">' + plan.icon + '</div>' +
-        '<div class="plan-badges">' +
-        (plan.pro ? '<span class="plan-badge badge-pro">Pro</span>' : '<span class="plan-badge badge-free">Free</span>') +
-        (plan.popular ? '<span class="plan-badge badge-popular">Popular</span>' : '') +
-        (isActive ? '<span class="plan-badge badge-new">In Progress</span>' : '') +
-        '</div></div>' +
+        '<div class="plan-card-top"><div class="plan-card-icon">' + plan.icon + '</div>' +
+        '<div class="plan-badges">' + (plan.pro ? '<span class="plan-badge badge-pro">Pro</span>' : '<span class="plan-badge badge-free">Free</span>') + (plan.popular ? '<span class="plan-badge badge-popular">Popular</span>' : '') + (isActive ? '<span class="plan-badge badge-new">In Progress</span>' : '') + '</div></div>' +
         '<div class="plan-title">' + plan.title + '</div>' +
         '<div class="plan-desc">' + plan.desc + '</div>' +
-        '<div class="plan-meta">' +
-        '<span class="plan-meta-item">📅 ' + plan.days + ' days</span>' +
-        '<span class="plan-meta-item">📚 ' + plan.level + '</span>' +
-        '<span class="plan-meta-item">🗓 ' + plan.weeks.length + ' weeks</span>' +
-        '</div>' +
-        progressBar +
-        '<button class="' + btnClass + '" data-action="' + (isActive ? 'continue' : 'open') + '" data-id="' + plan.id + '">' + btnLabel + '</button>' +
+        '<div class="plan-meta"><span class="plan-meta-item">' + plan.days + ' days</span><span class="plan-meta-item">' + plan.level + '</span><span class="plan-meta-item">' + plan.weeks.length + ' weeks</span></div>' +
+        progressHtml +
+        '<button class="' + btnClass + '" data-planid="' + plan.id + '">' + btnLabel + ' →</button>' +
         '</div></div>';
-    }).join('');
-
-    // Attach events after rendering
+    });
+    grid.innerHTML = html;
     grid.querySelectorAll('.plan-card').forEach(function(card) {
-      card.addEventListener('click', function(e) {
-        // Only open modal if clicking the card body (not the button)
-        if (!e.target.closest('.plan-btn')) {
-          openModal(card.dataset.id);
-        }
-      });
+      card.addEventListener('click', function(e) { if (!e.target.closest('.plan-btn')) openModal(card.dataset.id); });
     });
     grid.querySelectorAll('.plan-btn').forEach(function(btn) {
-      btn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        if (btn.dataset.action === 'continue') {
-          openModal(btn.dataset.id);
-        } else {
-          openModal(btn.dataset.id);
-        }
-      });
+      btn.addEventListener('click', function(e) { e.stopPropagation(); openModal(btn.dataset.planid); });
     });
   }
 
-  // ── ACTIVE BANNER ──
   function updateActiveBanner() {
     var saved = getSaved();
-    var active = plans.find(function(p) {
-      var pr = saved[p.id];
-      return pr && pr.started && !pr.finished;
-    });
+    var active = null;
+    for (var i = 0; i < plans.length; i++) { var pr = saved[plans[i].id]; if (pr && pr.started && !pr.finished) { active = plans[i]; break; } }
     var banner = document.getElementById('active-banner');
     if (!banner) return;
     if (active) {
-      var progress = saved[active.id];
-      var completed = progress.completed ? progress.completed.length : 0;
-      var pct = Math.round(completed / active.days * 100);
+      var pr2 = saved[active.id];
+      var done = pr2.completed ? pr2.completed.length : 0;
+      var pct = Math.round(done / active.days * 100);
       banner.classList.add('visible');
-      var nameEl = document.getElementById('active-plan-name');
-      var dayEl = document.getElementById('active-plan-day');
-      var pctEl = document.getElementById('active-plan-pct');
-      var fillEl = document.getElementById('active-plan-fill');
-      if (nameEl) nameEl.textContent = active.title;
-      if (dayEl) dayEl.textContent = 'Day ' + (completed + 1) + ' of ' + active.days;
-      if (pctEl) pctEl.textContent = pct + '%';
-      if (fillEl) fillEl.style.width = pct + '%';
-    } else {
-      banner.classList.remove('visible');
-    }
+      var ne = document.getElementById('active-plan-name'); if (ne) ne.textContent = active.title;
+      var de = document.getElementById('active-plan-day'); if (de) de.textContent = 'Day ' + (done + 1) + ' of ' + active.days;
+      var fe = document.getElementById('active-plan-fill'); if (fe) fe.style.width = pct + '%';
+    } else { banner.classList.remove('visible'); }
   }
 
-  // ── MODAL ──
   function continueActivePlan() {
     var saved = getSaved();
-    var active = plans.find(function(p) {
-      var pr = saved[p.id];
-      return pr && pr.started && !pr.finished;
-    });
-    if (active) openModal(active.id);
+    for (var i = 0; i < plans.length; i++) { var pr = saved[plans[i].id]; if (pr && pr.started && !pr.finished) { openModal(plans[i].id); return; } }
   }
 
   function openModal(planId) {
-    var plan = plans.find(function(p) { return p.id === planId; });
+    var plan = null;
+    for (var i = 0; i < plans.length; i++) { if (plans[i].id === planId) { plan = plans[i]; break; } }
     if (!plan) return;
     currentPlanId = planId;
     var saved = getSaved();
@@ -572,109 +1103,96 @@ const plans = [
     document.getElementById('modal-icon').textContent = plan.icon;
     document.getElementById('modal-title').textContent = plan.title;
     document.getElementById('modal-sub').textContent = plan.desc;
-    document.getElementById('modal-meta').innerHTML =
-      '<span class="plan-modal-meta-item">📅 ' + plan.days + ' days</span>' +
-      '<span class="plan-modal-meta-item">📚 ' + plan.level + '</span>' +
-      '<span class="plan-modal-meta-item">' + (plan.pro ? '⭐ Pro' : '✓ Free') + '</span>';
+    document.getElementById('modal-meta').innerHTML = '<span class="plan-modal-meta-item">' + plan.days + ' days</span><span class="plan-modal-meta-item">' + plan.level + '</span><span class="plan-modal-meta-item">' + (plan.pro ? 'Pro' : 'Free') + '</span>';
 
     var bodyHtml = '';
     plan.weeks.forEach(function(week) {
       bodyHtml += '<div class="plan-week"><div class="plan-week-title">' + week.title + '</div><div class="plan-day-list">';
       week.days.forEach(function(day) {
-        var isDone = progress.completed && progress.completed.includes(day.day);
+        var isDone = progress.completed && progress.completed.indexOf(day.day) !== -1;
+        var icon = ACTION_ICONS[day.action] || '▶';
         bodyHtml += '<div class="plan-day-item' + (isDone ? ' done' : '') + '" data-plan="' + planId + '" data-day="' + day.day + '">' +
           '<div class="plan-day-num">Day ' + day.day + '</div>' +
-          '<div class="plan-day-text"><a href="' + day.link + '" target="_blank" rel="noopener" style="color:inherit;">' + day.text + '</a></div>' +
-          '<div class="plan-day-check"><svg viewBox="0 0 12 12" width="12" height="12"><polyline points="2,6 5,9 10,3" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>' +
+          '<div class="plan-day-main">' +
+          '<div class="plan-day-header">' +
+          '<span class="plan-day-action-icon">' + icon + '</span>' +
+          '<span class="plan-day-text">' + day.text + '</span>' +
+          '<svg class="plan-day-chevron" viewBox="0 0 24 24" width="14" height="14"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>' +
+          '</div>' +
+          '<div class="plan-day-expanded">' +
+          '<p class="plan-day-desc">' + day.desc + '</p>' +
+          (day.link ? '<a href="' + day.link + '" target="_blank" class="plan-day-link">Open ' + day.action + ' →</a>' : '') +
+          '</div></div>' +
+          '<div class="plan-day-check">✓</div>' +
           '</div>';
       });
       bodyHtml += '</div></div>';
     });
     document.getElementById('modal-body').innerHTML = bodyHtml;
 
-    // Attach day toggle events
     document.querySelectorAll('.plan-day-item').forEach(function(item) {
-      item.addEventListener('click', function(e) {
-        if (e.target.closest('a')) return; // let links open normally
-        toggleDay(item.dataset.plan, parseInt(item.dataset.day));
-      });
+      var header = item.querySelector('.plan-day-header');
+      if (header) {
+        header.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var isOpen = item.classList.contains('expanded');
+          document.querySelectorAll('.plan-day-item.expanded').forEach(function(o) {
+            o.classList.remove('expanded');
+            var oc = o.querySelector('.plan-day-chevron'); if (oc) oc.style.transform = '';
+          });
+          if (!isOpen) {
+            item.classList.add('expanded');
+            var ch = item.querySelector('.plan-day-chevron'); if (ch) ch.style.transform = 'rotate(180deg)';
+          }
+        });
+      }
+      var check = item.querySelector('.plan-day-check');
+      if (check) {
+        check.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var planId2 = item.dataset.plan;
+          var dayNum = parseInt(item.dataset.day);
+          var saved2 = getSaved();
+          if (!saved2[planId2]) saved2[planId2] = { started: true, completed: [] };
+          var comp = saved2[planId2].completed || [];
+          var idx = comp.indexOf(dayNum);
+          if (idx === -1) comp.push(dayNum); else comp.splice(idx, 1);
+          saved2[planId2].completed = comp;
+          var pl2 = null; for (var j = 0; j < plans.length; j++) { if (plans[j].id === planId2) { pl2 = plans[j]; break; } }
+          if (pl2) saved2[planId2].finished = (comp.length >= pl2.days);
+          setSaved(saved2);
+          item.classList.toggle('done', idx === -1);
+          renderPlans(); updateActiveBanner();
+        });
+      }
     });
 
     var startBtn = document.getElementById('modal-start-btn');
-    if (startBtn) {
-      startBtn.textContent = isStarted ? 'Continue plan →' : 'Start this plan →';
-      startBtn.style.background = '';
-      startBtn.style.color = '';
-    }
-
+    if (startBtn) { startBtn.textContent = isStarted ? 'Continue plan →' : 'Start this plan →'; startBtn.style.background = ''; startBtn.style.color = ''; }
     document.getElementById('plan-modal').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
 
-  function closeModal(e) {
-    if (e && e.target !== document.getElementById('plan-modal')) return;
-    closePlanModal();
-  }
-
-  function closePlanModal() {
-    var modal = document.getElementById('plan-modal');
-    if (modal) modal.classList.remove('open');
-    document.body.style.overflow = '';
-  }
+  function closeModal(e) { if (e && e.target !== document.getElementById('plan-modal')) return; closePlanModal(); }
+  function closePlanModal() { var m = document.getElementById('plan-modal'); if (m) m.classList.remove('open'); document.body.style.overflow = ''; }
 
   function startPlan() {
     if (!currentPlanId) return;
     var saved = getSaved();
-    if (!saved[currentPlanId]) {
-      saved[currentPlanId] = { started: true, startedDate: new Date().toISOString(), completed: [] };
-    } else {
-      saved[currentPlanId].started = true;
-    }
+    if (!saved[currentPlanId]) saved[currentPlanId] = { started: true, startedDate: new Date().toISOString(), completed: [] };
+    else saved[currentPlanId].started = true;
     setSaved(saved);
-    renderPlans();
-    updateActiveBanner();
+    renderPlans(); updateActiveBanner();
     var btn = document.getElementById('modal-start-btn');
-    if (btn) {
-      btn.textContent = 'Plan started! ✓';
-      btn.style.background = '#0f6e56';
-      btn.style.color = '#fff';
-      setTimeout(function() { closePlanModal(); }, 1200);
-    }
+    if (btn) { btn.textContent = 'Plan started! ✓'; btn.style.background = '#0f6e56'; btn.style.color = '#fff'; setTimeout(function() { btn.textContent = 'Continue plan →'; btn.style.background = ''; btn.style.color = ''; }, 1500); }
   }
 
-  function toggleDay(planId, dayNum) {
-    var saved = getSaved();
-    if (!saved[planId]) saved[planId] = { started: true, completed: [] };
-    var completed = saved[planId].completed || [];
-    var idx = completed.indexOf(dayNum);
-    if (idx === -1) completed.push(dayNum);
-    else completed.splice(idx, 1);
-    saved[planId].completed = completed;
-    // Check if all days done
-    var plan = plans.find(function(p) { return p.id === planId; });
-    if (plan && completed.length >= plan.days) saved[planId].finished = true;
-    else if (saved[planId]) saved[planId].finished = false;
-    setSaved(saved);
-    // Re-render the day item
-    var item = document.querySelector('[data-plan="' + planId + '"][data-day="' + dayNum + '"]');
-    if (item) item.classList.toggle('done', idx === -1);
-    renderPlans();
-    updateActiveBanner();
-  }
-
-  // Auth
   (function() {
     try {
-      var sb = window.supabase.createClient(
-        'https://noprgxkwniouukmrfozc.supabase.co',
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
-      );
+      var sb = window.supabase.createClient('https://noprgxkwniouukmrfozc.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw');
       sb.auth.getSession().then(function(r) {
-        var s = r.data && r.data.session;
-        var na = document.getElementById('nav-auth');
-        if (na && s) {
-          na.innerHTML = '<a href="dashboard.html" style="font-family:var(--font-ui);font-size:.85rem;font-weight:500;padding:8px 20px;border-radius:3px;background:var(--gold,#c8a951);color:var(--navy-950,#050d1a);text-decoration:none;">Dashboard</a>';
-        }
+        var s = r.data && r.data.session; var na = document.getElementById('nav-auth');
+        if (na && s) na.innerHTML = '<a href="dashboard.html" style="font-family:var(--font-ui);font-size:.85rem;font-weight:500;padding:8px 20px;border-radius:3px;background:var(--gold,#c8a951);color:var(--navy-950,#050d1a);text-decoration:none;">Dashboard</a>';
       });
     } catch(e) {}
   })();
