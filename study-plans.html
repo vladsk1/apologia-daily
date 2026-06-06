@@ -194,7 +194,7 @@
       </div>
       <div class="plan-modal-body" id="modal-body"></div>
       <div class="plan-modal-footer">
-        <button class="plan-start-btn" id="modal-start-btn" onclick="startPlanFromModal()">Start this plan →</button>
+        <button class="plan-start-btn" id="modal-start-btn" onclick="startPlan()">Start this plan →</button>
       </div>
     </div>
   </div>
@@ -207,8 +207,9 @@
     <div class="footer-copy">Built for the defence of the Gospel.</div>
   </footer>
 
-  <script>
-  const plans = [
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const plans = [
     {
       id: 'resurrection',
       icon: '✝️',
@@ -444,195 +445,231 @@
     },
   ];
 
-  let activePlanData = null;
-  let currentModalPlanId = null;
+  let currentPlanId = null;
 
-  document.addEventListener('DOMContentLoaded', function() { init(); });
-
-  function init() {
-    const saved = JSON.parse(localStorage.getItem('study_plans') || '{}');
-    renderPlans(saved);
-    updateActiveBanner(saved);
+  // ── STORAGE ──
+  function getSaved() {
+    return JSON.parse(localStorage.getItem('study_plans') || '{}');
+  }
+  function setSaved(data) {
+    localStorage.setItem('study_plans', JSON.stringify(data));
   }
 
-  function renderPlans(saved) {
-    const grid = document.getElementById('plans-grid');
-    grid.innerHTML = plans.map(plan => {
-      const progress = saved[plan.id] || { started: false, completed: [], finished: false };
-      const pct = progress.completed ? Math.round(progress.completed.length / plan.days * 100) : 0;
-      const isActive = progress.started && !progress.finished;
-      const isFinished = progress.finished;
+  // ── INIT ──
+  document.addEventListener('DOMContentLoaded', function() {
+    renderPlans();
+    updateActiveBanner();
+  });
 
-      return `<div class="plan-card ${isActive ? 'active-card' : ''}" onclick="openPlanModal('${plan.id}')">
-        <div class="plan-card-banner" style="background:${plan.color};"></div>
-        <div class="plan-card-body">
-          <div class="plan-card-top">
-            <div class="plan-card-icon">${plan.icon}</div>
-            <div class="plan-badges">
-              ${plan.pro ? '<span class="plan-badge badge-pro">Pro</span>' : '<span class="plan-badge badge-free">Free</span>'}
-              ${plan.popular ? '<span class="plan-badge badge-popular">Popular</span>' : ''}
-              ${isActive ? '<span class="plan-badge badge-new">In Progress</span>' : ''}
-            </div>
-          </div>
-          <div class="plan-title">${plan.title}</div>
-          <div class="plan-desc">${plan.desc}</div>
-          <div class="plan-meta">
-            <span class="plan-meta-item">📅 ${plan.days} days</span>
-            <span class="plan-meta-item">📚 ${plan.level}</span>
-            <span class="plan-meta-item">🗓 ${plan.weeks.length} weeks</span>
-          </div>
-          ${isActive || isFinished ? `
-          <div class="plan-progress-wrap visible">
-            <div class="plan-progress-label"><span>${progress.completed ? progress.completed.length : 0} of ${plan.days} days</span><span>${pct}%</span></div>
-            <div class="plan-progress-bar"><div class="plan-progress-fill" style="width:${pct}%;background:${plan.color};"></div></div>
-          </div>` : ''}
-          <button class="plan-btn ${isFinished ? 'plan-btn-completed' : isActive ? 'plan-btn-continue' : 'plan-btn-start'}" onclick="event.stopPropagation();handlePlanBtn('${plan.id}',${isFinished},${isActive})">
-            ${isFinished ? '✓ Completed' : isActive ? 'Continue →' : 'Start plan →'}
-          </button>
-        </div>
-      </div>`;
+  // ── RENDER PLAN CARDS ──
+  function renderPlans() {
+    var saved = getSaved();
+    var grid = document.getElementById('plans-grid');
+    if (!grid) return;
+    grid.innerHTML = plans.map(function(plan) {
+      var progress = saved[plan.id] || { started: false, completed: [] };
+      var completed = progress.completed ? progress.completed.length : 0;
+      var pct = Math.round(completed / plan.days * 100);
+      var isActive = progress.started && !progress.finished;
+      var isFinished = progress.finished;
+      var btnLabel = isFinished ? '✓ Completed' : isActive ? 'Continue plan →' : 'Start plan →';
+      var btnClass = isFinished ? 'plan-btn plan-btn-completed' : isActive ? 'plan-btn plan-btn-continue' : 'plan-btn plan-btn-start';
+      var progressBar = (isActive || isFinished) ? (
+        '<div class="plan-progress-wrap visible">' +
+        '<div class="plan-progress-label"><span>' + completed + ' of ' + plan.days + ' days</span><span>' + pct + '%</span></div>' +
+        '<div class="plan-progress-bar"><div class="plan-progress-fill" style="width:' + pct + '%;background:' + plan.color + ';"></div></div>' +
+        '</div>'
+      ) : '';
+
+      return '<div class="plan-card' + (isActive ? ' active-card' : '') + '" data-id="' + plan.id + '">' +
+        '<div class="plan-card-banner" style="background:' + plan.color + ';"></div>' +
+        '<div class="plan-card-body">' +
+        '<div class="plan-card-top">' +
+        '<div class="plan-card-icon">' + plan.icon + '</div>' +
+        '<div class="plan-badges">' +
+        (plan.pro ? '<span class="plan-badge badge-pro">Pro</span>' : '<span class="plan-badge badge-free">Free</span>') +
+        (plan.popular ? '<span class="plan-badge badge-popular">Popular</span>' : '') +
+        (isActive ? '<span class="plan-badge badge-new">In Progress</span>' : '') +
+        '</div></div>' +
+        '<div class="plan-title">' + plan.title + '</div>' +
+        '<div class="plan-desc">' + plan.desc + '</div>' +
+        '<div class="plan-meta">' +
+        '<span class="plan-meta-item">📅 ' + plan.days + ' days</span>' +
+        '<span class="plan-meta-item">📚 ' + plan.level + '</span>' +
+        '<span class="plan-meta-item">🗓 ' + plan.weeks.length + ' weeks</span>' +
+        '</div>' +
+        progressBar +
+        '<button class="' + btnClass + '" data-action="' + (isActive ? 'continue' : 'open') + '" data-id="' + plan.id + '">' + btnLabel + '</button>' +
+        '</div></div>';
     }).join('');
-  }
 
-  function updateActiveBanner(saved) {
-    const active = plans.find(p => {
-      const progress = saved[p.id];
-      return progress && progress.started && !progress.finished;
+    // Attach events after rendering
+    grid.querySelectorAll('.plan-card').forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        // Only open modal if clicking the card body (not the button)
+        if (!e.target.closest('.plan-btn')) {
+          openModal(card.dataset.id);
+        }
+      });
     });
+    grid.querySelectorAll('.plan-btn').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (btn.dataset.action === 'continue') {
+          openModal(btn.dataset.id);
+        } else {
+          openModal(btn.dataset.id);
+        }
+      });
+    });
+  }
+
+  // ── ACTIVE BANNER ──
+  function updateActiveBanner() {
+    var saved = getSaved();
+    var active = plans.find(function(p) {
+      var pr = saved[p.id];
+      return pr && pr.started && !pr.finished;
+    });
+    var banner = document.getElementById('active-banner');
+    if (!banner) return;
     if (active) {
-      const progress = saved[active.id];
-      const completed = progress.completed ? progress.completed.length : 0;
-      const pct = Math.round(completed / active.days * 100);
-      document.getElementById('active-banner').classList.add('visible');
-      document.getElementById('active-plan-name').textContent = active.title;
-      document.getElementById('active-plan-day').textContent = `Day ${completed + 1} of ${active.days}`;
-      document.getElementById('active-plan-fill').style.width = pct + '%';
-      activePlanData = active;
-    }
-  }
-
-  
-  function handlePlanBtn(planId, isFinished, isActive) {
-    if (isFinished) return;
-    if (isActive) {
-      continueActivePlan();
+      var progress = saved[active.id];
+      var completed = progress.completed ? progress.completed.length : 0;
+      var pct = Math.round(completed / active.days * 100);
+      banner.classList.add('visible');
+      var nameEl = document.getElementById('active-plan-name');
+      var dayEl = document.getElementById('active-plan-day');
+      var pctEl = document.getElementById('active-plan-pct');
+      var fillEl = document.getElementById('active-plan-fill');
+      if (nameEl) nameEl.textContent = active.title;
+      if (dayEl) dayEl.textContent = 'Day ' + (completed + 1) + ' of ' + active.days;
+      if (pctEl) pctEl.textContent = pct + '%';
+      if (fillEl) fillEl.style.width = pct + '%';
     } else {
-      openPlanModal(planId);
+      banner.classList.remove('visible');
     }
   }
-  function continueActivePlan() {
-    if (activePlanData) openPlanModal(activePlanData.id);
-  }
 
-  function openPlanModal(planId) {
-    const plan = plans.find(p => p.id === planId);
+  // ── MODAL ──
+  function openModal(planId) {
+    var plan = plans.find(function(p) { return p.id === planId; });
     if (!plan) return;
-    currentModalPlanId = planId;
-    const saved = JSON.parse(localStorage.getItem('study_plans') || '{}');
-    const progress = saved[planId] || { started: false, completed: [] };
+    currentPlanId = planId;
+    var saved = getSaved();
+    var progress = saved[planId] || { started: false, completed: [] };
+    var isStarted = progress.started;
 
     document.getElementById('modal-icon').textContent = plan.icon;
     document.getElementById('modal-title').textContent = plan.title;
     document.getElementById('modal-sub').textContent = plan.desc;
-    document.getElementById('modal-meta').innerHTML = `
-      <span class="plan-modal-meta-item">📅 ${plan.days} days</span>
-      <span class="plan-modal-meta-item">📚 ${plan.level}</span>
-      <span class="plan-modal-meta-item">${plan.pro ? '⭐ Pro' : '✓ Free'}</span>`;
+    document.getElementById('modal-meta').innerHTML =
+      '<span class="plan-modal-meta-item">📅 ' + plan.days + ' days</span>' +
+      '<span class="plan-modal-meta-item">📚 ' + plan.level + '</span>' +
+      '<span class="plan-modal-meta-item">' + (plan.pro ? '⭐ Pro' : '✓ Free') + '</span>';
 
-    let bodyHtml = '';
-    plan.weeks.forEach(week => {
-      bodyHtml += `<div class="plan-week">
-        <div class="plan-week-title">${week.title}</div>
-        <div class="plan-day-list">`;
-      week.days.forEach(day => {
-        const isDone = progress.completed && progress.completed.includes(day.day);
-        bodyHtml += `<div class="plan-day-item ${isDone ? 'done' : ''}" onclick="togglePlanDay('${planId}', ${day.day})">
-          <div class="plan-day-num">Day ${day.day}</div>
-          <div class="plan-day-text"><a href="${day.link}" target="_blank" rel="noopener" style="color:inherit;" onclick="event.stopPropagation();">${day.text}</a></div>
-          <div class="plan-day-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
-        </div>`;
+    var bodyHtml = '';
+    plan.weeks.forEach(function(week) {
+      bodyHtml += '<div class="plan-week"><div class="plan-week-title">' + week.title + '</div><div class="plan-day-list">';
+      week.days.forEach(function(day) {
+        var isDone = progress.completed && progress.completed.includes(day.day);
+        bodyHtml += '<div class="plan-day-item' + (isDone ? ' done' : '') + '" data-plan="' + planId + '" data-day="' + day.day + '">' +
+          '<div class="plan-day-num">Day ' + day.day + '</div>' +
+          '<div class="plan-day-text"><a href="' + day.link + '" target="_blank" rel="noopener" style="color:inherit;">' + day.text + '</a></div>' +
+          '<div class="plan-day-check"><svg viewBox="0 0 12 12" width="12" height="12"><polyline points="2,6 5,9 10,3" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>' +
+          '</div>';
       });
-      bodyHtml += `</div></div>`;
+      bodyHtml += '</div></div>';
     });
     document.getElementById('modal-body').innerHTML = bodyHtml;
 
-    const isStarted = progress.started;
-    const btn = document.getElementById('modal-start-btn');
-    btn.textContent = isStarted ? 'Continue plan →' : 'Start this plan →';
+    // Attach day toggle events
+    document.querySelectorAll('.plan-day-item').forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        if (e.target.closest('a')) return; // let links open normally
+        toggleDay(item.dataset.plan, parseInt(item.dataset.day));
+      });
+    });
+
+    var startBtn = document.getElementById('modal-start-btn');
+    if (startBtn) {
+      startBtn.textContent = isStarted ? 'Continue plan →' : 'Start this plan →';
+      startBtn.style.background = '';
+      startBtn.style.color = '';
+    }
 
     document.getElementById('plan-modal').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
 
-  function togglePlanDay(planId, dayNum) {
-    const saved = JSON.parse(localStorage.getItem('study_plans') || '{}');
-    if (!saved[planId]) saved[planId] = { started: true, completed: [] };
-    const completed = saved[planId].completed || [];
-    const idx = completed.indexOf(dayNum);
-    if (idx === -1) completed.push(dayNum);
-    else completed.splice(idx, 1);
-    saved[planId].completed = completed;
-    const plan = plans.find(p => p.id === planId);
-    if (plan && completed.length >= plan.days) saved[planId].finished = true;
-    localStorage.setItem('study_plans', JSON.stringify(saved));
-    openPlanModal(planId);
-    renderPlans(saved);
-    updateActiveBanner(saved);
-  }
-
-  function startPlanFromModal() {
-    if (!currentModalPlanId) return;
-    const saved = JSON.parse(localStorage.getItem('study_plans') || '{}');
-    if (!saved[currentModalPlanId]) saved[currentModalPlanId] = { started: true, startedDate: new Date().toISOString(), completed: [] };
-    else { saved[currentModalPlanId].started = true; if (!saved[currentModalPlanId].startedDate) saved[currentModalPlanId].startedDate = new Date().toISOString(); }
-    localStorage.setItem('study_plans', JSON.stringify(saved));
-    renderPlans(saved);
-    updateActiveBanner(saved);
-    // Update modal button to "Continue plan"
-    const btn = document.getElementById('modal-start-btn');
-    if (btn) { btn.textContent = 'Plan started! Close to continue ✓'; btn.style.background = '#0f6e56'; btn.style.color = '#fff'; }
-    setTimeout(() => closePlanModal(), 1500);
+  function closeModal(e) {
+    if (e && e.target !== document.getElementById('plan-modal')) return;
+    closePlanModal();
   }
 
   function closePlanModal() {
-    document.getElementById('plan-modal').classList.remove('open');
+    var modal = document.getElementById('plan-modal');
+    if (modal) modal.classList.remove('open');
     document.body.style.overflow = '';
   }
 
-  function closeModal(e) {
-    if (e.target === document.getElementById('plan-modal')) closePlanModal();
+  function startPlan() {
+    if (!currentPlanId) return;
+    var saved = getSaved();
+    if (!saved[currentPlanId]) {
+      saved[currentPlanId] = { started: true, startedDate: new Date().toISOString(), completed: [] };
+    } else {
+      saved[currentPlanId].started = true;
+    }
+    setSaved(saved);
+    renderPlans();
+    updateActiveBanner();
+    var btn = document.getElementById('modal-start-btn');
+    if (btn) {
+      btn.textContent = 'Plan started! ✓';
+      btn.style.background = '#0f6e56';
+      btn.style.color = '#fff';
+      setTimeout(function() { closePlanModal(); }, 1200);
+    }
   }
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  function toggleDay(planId, dayNum) {
+    var saved = getSaved();
+    if (!saved[planId]) saved[planId] = { started: true, completed: [] };
+    var completed = saved[planId].completed || [];
+    var idx = completed.indexOf(dayNum);
+    if (idx === -1) completed.push(dayNum);
+    else completed.splice(idx, 1);
+    saved[planId].completed = completed;
+    // Check if all days done
+    var plan = plans.find(function(p) { return p.id === planId; });
+    if (plan && completed.length >= plan.days) saved[planId].finished = true;
+    else if (saved[planId]) saved[planId].finished = false;
+    setSaved(saved);
+    // Re-render the day item
+    var item = document.querySelector('[data-plan="' + planId + '"][data-day="' + dayNum + '"]');
+    if (item) item.classList.toggle('done', idx === -1);
+    renderPlans();
+    updateActiveBanner();
+  }
 
-  init();
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script>
-    (function() {
+  // Auth
+  (function() {
+    try {
       var sb = window.supabase.createClient(
         'https://noprgxkwniouukmrfozc.supabase.co',
         'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
       );
-      sb.auth.getSession().then(function(res) {
-        var session = res.data && res.data.session;
-        // Show beginner banner only for non-logged-in users
-        var banner = document.getElementById('beginner-banner');
-        if (banner && !session) banner.style.display = 'block';
-        var navRight = document.getElementById('nav-auth');
-        if (!navRight) return;
-        if (session) {
-          var name = session.user.user_metadata && session.user.user_metadata.full_name
-            ? session.user.user_metadata.full_name.split(' ')[0]
-            : session.user.email.split('@')[0];
-          navRight.innerHTML = '<a href="dashboard.html" style="font-family:var(--font-ui, DM Sans, sans-serif);font-size:0.85rem;font-weight:500;padding:8px 20px;border-radius:3px;background:var(--gold,#c8a951);color:var(--navy-950,#050d1a);text-decoration:none;">Dashboard</a>';
+      sb.auth.getSession().then(function(r) {
+        var s = r.data && r.data.session;
+        var na = document.getElementById('nav-auth');
+        if (na && s) {
+          na.innerHTML = '<a href="dashboard.html" style="font-family:var(--font-ui);font-size:.85rem;font-weight:500;padding:8px 20px;border-radius:3px;background:var(--gold,#c8a951);color:var(--navy-950,#050d1a);text-decoration:none;">Dashboard</a>';
         }
       });
-    })();
-  </script>
+    } catch(e) {}
+  })();
+</script>
+
 </body>
 </html>
