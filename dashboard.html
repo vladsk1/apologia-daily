@@ -298,214 +298,195 @@
   <div class="loading-state" id="loading-state">Loading your dashboard…</div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script>
-    var sb = null;
-    function initSb() {
-      if (window.supabase && window.supabase.createClient) {
-        sb = window.supabase.createClient(
-          'https://noprgxkwniouukmrfozc.supabase.co',
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
-        );
-        init();
-      } else {
-        setTimeout(initSb, 50);
-      }
-    }
-    document.addEventListener('DOMContentLoaded', initSb);
+<script>
+  var sb = null;
 
-    async function init() {
-      const { data: { session } } = await sb.auth.getSession();
+  function initSb() {
+    if (window.supabase && window.supabase.createClient) {
+      sb = window.supabase.createClient(
+        'https://noprgxkwniouukmrfozc.supabase.co',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+      );
+      init();
+    } else {
+      setTimeout(initSb, 50);
+    }
+  }
+  document.addEventListener('DOMContentLoaded', initSb);
+
+  function el(id) { return document.getElementById(id); }
+  function setText(id, val) { var e = el(id); if (e) e.textContent = val; }
+
+  async function init() {
+    try {
+      var result = await sb.auth.getSession();
+      var session = result.data && result.data.session;
       if (!session) { window.location.href = 'login.html'; return; }
 
-      const user = session.user;
-      const name = user.user_metadata?.full_name || user.email.split('@')[0];
-      const firstName = name.split(' ')[0];
+      var user = session.user;
+      var name = (user.user_metadata && user.user_metadata.full_name) || user.email.split('@')[0];
+      var firstName = name.split(' ')[0];
+      setText('user-name', firstName);
+      setText('nav-user', name);
 
-      document.getElementById('user-name').textContent = firstName;
-      document.getElementById('nav-user').textContent = name;
+      // Stats from localStorage
+      var completed = JSON.parse(localStorage.getItem('completed') || '[]');
+      var askUsage = JSON.parse(localStorage.getItem('askUsage') || '{}');
+      var debateCount = parseInt(localStorage.getItem('debateCount') || '0');
 
-      // Load stats from localStorage for now (will move to Supabase later)
-      const completed = JSON.parse(localStorage.getItem('completed') || '[]');
-      const askUsage = JSON.parse(localStorage.getItem('askUsage') || '{}');
-
-      // Calculate streak
-      let streak = 0;
-      const today = new Date();
-      const check = new Date(today);
-      while (completed.includes(check.toDateString())) {
+      // Streak
+      var streak = 0;
+      var today = new Date();
+      var check = new Date(today);
+      while (completed.indexOf(check.toDateString()) !== -1) {
         streak++;
         check.setDate(check.getDate() - 1);
       }
+      setText('stat-streak', streak);
+      setText('stat-devotionals', completed.length);
+      setText('stat-debates', debateCount);
+      setText('stat-questions', askUsage.count || 0);
 
-      document.getElementById('stat-streak').textContent = streak;
-      document.getElementById('stat-devotionals').textContent = completed.length;
-      document.getElementById('stat-debates').textContent = localStorage.getItem('debateCount') || '0';
-      document.getElementById('stat-questions').textContent = askUsage.count || '0';
-
-      // Belt calculation
-      const points = completed.length * 2 + (parseInt(localStorage.getItem('debateCount')) || 0) * 3 + (askUsage.count || 0);
+      // Belt
+      var points = completed.length * 2 + debateCount * 3 + (askUsage.count || 0);
       updateBelt(points);
 
       // Recommendation
-      if (completed.includes(today.toDateString())) {
-        document.getElementById('rec-title').textContent = 'Try the Debate Arena today';
-        document.getElementById('rec-desc').textContent = 'You\'ve done your devotional — now practise defending the faith against an AI opponent.';
-        document.getElementById('rec-link').href = 'debate-arena.html';
+      if (completed.indexOf(today.toDateString()) !== -1) {
+        setText('rec-title', 'Try the Debate Arena today');
+        setText('rec-desc', "You've done your devotional — now practise defending the faith against an AI opponent.");
+        var rl = el('rec-link'); if (rl) rl.href = 'debate-arena.html';
       }
 
-      // Recent activity
-      buildActivity(completed, askUsage);
+      // Activity
+      buildActivity(completed, askUsage, debateCount);
 
-      // Study plan progress
-      const studyPlans = JSON.parse(localStorage.getItem('study_plans') || '{}');
-      const planNames = {
+      // Study plan
+      var studyPlans = JSON.parse(localStorage.getItem('study_plans') || '{}');
+      var planNames = {
         resurrection: '30-Day Resurrection Deep Dive',
-        answering_islam: 'Answering Islam',
-        university: 'Defending Faith at University',
-        gods_existence: "The Case for God's Existence",
-        bible_reliability: 'Can We Trust the Bible?',
-        jesus_identity: 'Who Is Jesus?'
+        answering_islam: '14-Day Answering Islam',
+        university: '30-Day University Prep',
+        gods_existence: "21-Day God's Existence",
+        bible_reliability: '14-Day Bible Reliability',
+        jesus_identity: '14-Day Jesus Identity'
       };
-      const planDays = { resurrection: 30, answering_islam: 21, university: 21, gods_existence: 14, bible_reliability: 14, jesus_identity: 21 };
-      const activePlan = Object.entries(studyPlans).find(([id, p]) => p.started && !p.finished);
+      var planDays = { resurrection: 30, answering_islam: 14, university: 30, gods_existence: 21, bible_reliability: 14, jesus_identity: 14 };
+      var activePlan = null;
+      var activePlanId = null;
+      Object.keys(studyPlans).forEach(function(id) {
+        var p = studyPlans[id];
+        if (p.started && !p.finished && !activePlan) { activePlan = p; activePlanId = id; }
+      });
       if (activePlan) {
-        const [planId, planProgress] = activePlan;
-        const completed = planProgress.completed ? planProgress.completed.length : 0;
-        const total = planDays[planId] || 30;
-        const pct = Math.round(completed / total * 100);
-        document.getElementById('plan-progress-card').classList.add('visible');
-        document.getElementById('plan-progress-title').textContent = planNames[planId] || 'Study Plan';
-        document.getElementById('plan-progress-sub').textContent = `Day ${completed + 1} of ${total} — ${pct}% complete`;
-        document.getElementById('plan-progress-fill').style.width = pct + '%';
+        var doneCount = activePlan.completed ? activePlan.completed.length : 0;
+        var totalDays = planDays[activePlanId] || 30;
+        var pct = Math.round(doneCount / totalDays * 100);
+        var card = el('plan-progress-card');
+        if (card) card.classList.add('visible');
+        setText('plan-progress-title', planNames[activePlanId] || activePlanId);
+        setText('plan-progress-days', 'Day ' + (doneCount + 1) + ' of ' + totalDays);
+        setText('plan-progress-pct', pct + '%');
+        var fill = el('plan-progress-fill');
+        if (fill) fill.style.width = pct + '%';
       }
 
       // Weakness tracker
       buildWeaknessTracker();
 
-      document.getElementById('loading-state').style.display = 'none';
-      document.getElementById('main').style.display = 'block';
+      el('loading-state').style.display = 'none';
+      el('main').style.display = 'block';
+
+    } catch(e) {
+      console.error('Dashboard init error:', e);
+      // Show main anyway so user sees something
+      var ls = el('loading-state'); if (ls) ls.style.display = 'none';
+      var m = el('main'); if (m) m.style.display = 'block';
     }
+  }
 
-    function buildWeaknessTracker() {
-      // Build topic scores from localStorage quiz data
-      // In a full implementation this would come from Supabase
-      // For now we simulate based on quiz completion and debate count
-      const quizCompleted = JSON.parse(localStorage.getItem('quizCompleted') || '[]');
-      const debates = parseInt(localStorage.getItem('debateCount') || '0');
-      const quizTotal = parseInt(localStorage.getItem('quizTotal') || '0');
-
-      if (quizTotal < 5 && debates < 2) return; // Not enough data yet
-
-      const topics = [
-        { name: "God's Existence", color: '#c8a951', score: Math.min(95, 40 + quizCompleted.length * 3 + debates * 2) },
-        { name: 'The Resurrection', color: '#0f6e56', score: Math.min(90, 35 + quizCompleted.length * 2 + debates * 3) },
-        { name: 'Jesus', color: '#285a9e', score: Math.min(85, 30 + quizCompleted.length * 2) },
-        { name: 'Biblical Reliability', color: '#854f0b', score: Math.min(80, 25 + quizCompleted.length * 2) },
-        { name: 'Science & Faith', color: '#534AB7', score: Math.min(75, 20 + quizCompleted.length) },
-        { name: 'World Religions', color: '#a32d2d', score: Math.min(70, 15 + debates * 2) },
-      ].sort((a, b) => b.score - a.score);
-
-      const strongest = topics[0];
-      const weakest = topics[topics.length - 1];
-
-      const container = document.getElementById('tracker-topics');
-      container.innerHTML = topics.map(t => {
-        let tag = '';
-        let tagClass = '';
-        if (t.name === strongest.name) { tag = 'Strongest'; tagClass = 'tag-strong'; }
-        else if (t.name === weakest.name) { tag = 'Focus here'; tagClass = 'tag-weak'; }
-        else if (t.score < 50) { tag = 'Practise'; tagClass = 'tag-practice'; }
-
-        return `<div class="tracker-topic">
-          <div class="tracker-topic-name">${t.name}</div>
-          <div class="tracker-bar-wrap"><div class="tracker-bar" style="width:${t.score}%;background:${t.color};"></div></div>
-          <div class="tracker-pct" style="color:${t.color};">${t.score}%</div>
-          ${tag ? `<span class="tracker-tag ${tagClass}">${tag}</span>` : ''}
-        </div>`;
-      }).join('');
-
-      // Show recommendation
-      const rec = document.getElementById('tracker-recommend');
-      const recText = document.getElementById('tracker-recommend-text');
-      const recLink = document.getElementById('tracker-recommend-link');
-      rec.style.display = 'flex';
-
-      const topicLinks = {
-        "God's Existence": 'evidence-library.html',
-        'The Resurrection': 'evidence-library.html',
-        'Jesus': 'evidence-library.html',
-        'Biblical Reliability': 'evidence-library.html',
-        'Science & Faith': 'evidence-library.html',
-        'World Religions': 'worldviews.html'
-      };
-
-      recText.textContent = `Your weakest area is ${weakest.name} (${weakest.score}%). Study the arguments and practise in the Debate Arena to build confidence.`;
-      recLink.href = topicLinks[weakest.name] || 'evidence-library.html';
-      recLink.textContent = `Study ${weakest.name} →`;
-
-    function updateBelt(points) {
-      const belts = [
-        { name: 'White Belt', icon: '🤍', min: 0, max: 10, desc: 'Complete your first debate and devotional to begin' },
-        { name: 'Yellow Belt', icon: '💛', min: 10, max: 30, desc: 'You\'re building the habit — keep going' },
-        { name: 'Orange Belt', icon: '🧡', min: 30, max: 60, desc: 'A solid foundation in apologetics is forming' },
-        { name: 'Green Belt', icon: '💚', min: 60, max: 100, desc: 'You can defend the faith in most conversations' },
-        { name: 'Blue Belt', icon: '💙', min: 100, max: 150, desc: 'Confident, well-rounded apologetics ability' },
-        { name: 'Purple Belt', icon: '💜', min: 150, max: 220, desc: 'Advanced knowledge across multiple topics' },
-        { name: 'Brown Belt', icon: '🤎', min: 220, max: 300, desc: 'Expert level — you can equip others' },
-        { name: 'Black Belt', icon: '🖤', min: 300, max: 999, desc: 'Master apologist — you are ready for anything' }
-      ];
-
-      const current = belts.find(b => points >= b.min && points < b.max) || belts[belts.length - 1];
-      const next = belts[belts.indexOf(current) + 1];
-      const progress = next ? Math.round(((points - current.min) / (next.min - current.min)) * 100) : 100;
-
-      document.getElementById('belt-icon').textContent = current.icon;
-      document.getElementById('belt-level').textContent = current.name + ' — ' + (belts.indexOf(current) === 0 ? 'Beginner' : belts.indexOf(current) < 3 ? 'Novice' : belts.indexOf(current) < 5 ? 'Intermediate' : 'Advanced');
-      document.getElementById('belt-desc').textContent = current.desc;
-      document.getElementById('belt-fill').style.width = progress + '%';
-      document.getElementById('belt-progress-label').textContent = next
-        ? `${points - current.min} / ${next.min - current.min} points to ${next.name}`
-        : 'Maximum level achieved';
+  function updateBelt(points) {
+    var belts = [
+      { name: 'White Belt', icon: '🤍', min: 0, max: 10, desc: 'Complete your first debate and devotional to begin' },
+      { name: 'Yellow Belt', icon: '💛', min: 10, max: 30, desc: "You're building the habit — keep going" },
+      { name: 'Orange Belt', icon: '🧡', min: 30, max: 60, desc: 'A solid foundation in apologetics is forming' },
+      { name: 'Green Belt', icon: '💚', min: 60, max: 100, desc: 'You can defend the faith in most conversations' },
+      { name: 'Blue Belt', icon: '💙', min: 100, max: 150, desc: 'Confident and well-prepared for hard questions' },
+      { name: 'Purple Belt', icon: '💜', min: 150, max: 250, desc: 'Advanced understanding across all major arguments' },
+      { name: 'Brown Belt', icon: '🤎', min: 250, max: 400, desc: 'Scholar-level knowledge with real-world experience' },
+      { name: 'Black Belt', icon: '🖤', min: 400, max: 99999, desc: 'A masterful defender of the faith' }
+    ];
+    var belt = belts[0];
+    for (var i = 0; i < belts.length; i++) {
+      if (points >= belts[i].min) belt = belts[i];
     }
+    var iconEl = el('belt-icon'); if (iconEl) iconEl.textContent = belt.icon;
+    var levelEl = el('belt-level'); if (levelEl) levelEl.textContent = belt.name;
+    var descEl = el('belt-desc'); if (descEl) descEl.textContent = belt.desc;
+    var pct = belt.max === 99999 ? 100 : Math.round((points - belt.min) / (belt.max - belt.min) * 100);
+    var fillEl = el('belt-fill'); if (fillEl) fillEl.style.width = pct + '%';
+    var labelEl = el('belt-progress-label'); if (labelEl) labelEl.textContent = points + ' points';
+  }
 
-    function buildActivity(completed, askUsage) {
-      const list = document.getElementById('activity-list');
-      const items = [];
-
-      if (completed.length > 0) {
-        const last = new Date(completed[completed.length - 1]);
-        items.push({ color: '#c8a951', text: `<strong>Devotional read</strong> — ${last.toLocaleDateString('en-AU', { weekday:'long', day:'numeric', month:'short' })}`, time: 'Recently' });
-      }
-
-      const debates = parseInt(localStorage.getItem('debateCount')) || 0;
-      if (debates > 0) {
-        items.push({ color: '#534AB7', text: `<strong>${debates} debate${debates > 1 ? 's' : ''} completed</strong> in the Arena`, time: 'This week' });
-      }
-
-      if (askUsage.count > 0) {
-        items.push({ color: '#0F6E56', text: `<strong>${askUsage.count} question${askUsage.count > 1 ? 's' : ''} asked</strong> in Ask Anything`, time: 'Today' });
-      }
-
-      if (items.length === 0) {
-        list.innerHTML = '<div class="activity-empty">Your activity will appear here as you use the platform.</div>';
-      } else {
-        list.innerHTML = items.map(item =>
-          `<div class="activity-item">
-            <div class="activity-dot" style="background:${item.color};"></div>
-            <div class="activity-text">${item.text}</div>
-            <div class="activity-time">${item.time}</div>
-          </div>`
-        ).join('');
-      }
+  function buildActivity(completed, askUsage, debateCount) {
+    var list = el('activity-list');
+    if (!list) return;
+    var items = [];
+    if (completed.length > 0) {
+      var last = new Date(completed[completed.length - 1]);
+      items.push({ color: '#c8a951', text: 'Devotional read on ' + last.toLocaleDateString('en-AU', { weekday:'long', day:'numeric', month:'short' }), time: 'Recent' });
     }
-
-    async function signOut() {
-      try {
-        await sb.auth.signOut();
-      } catch(e) {}
-      window.location.href = 'index.html';
+    if (debateCount > 0) {
+      items.push({ color: '#285a9e', text: 'Debate Arena — ' + debateCount + ' debate' + (debateCount !== 1 ? 's' : '') + ' completed', time: 'Total' });
     }
+    if (askUsage.count > 0) {
+      items.push({ color: '#0f6e56', text: 'Ask Anything — ' + askUsage.count + ' question' + (askUsage.count !== 1 ? 's' : '') + ' asked', time: 'Total' });
+    }
+    if (items.length === 0) {
+      list.innerHTML = '<div style="font-size:.9rem;color:#7a8fa8;padding:1rem 0;">No activity yet — start with the Daily Devotional or Debate Arena.</div>';
+      return;
+    }
+    var html = '';
+    items.forEach(function(item) {
+      html += '<div class="activity-item">' +
+        '<div class="activity-dot" style="background:' + item.color + ';"></div>' +
+        '<div class="activity-text">' + item.text + '</div>' +
+        '<div class="activity-time">' + item.time + '</div>' +
+        '</div>';
+    });
+    list.innerHTML = html;
+  }
 
-  </script>
+  function buildWeaknessTracker() {
+    var areas = [
+      { name: 'Resurrection', key: 'resurrection_score', link: 'evidence-library.html' },
+      { name: "God's Existence", key: 'existence_score', link: 'evidence-library.html' },
+      { name: 'Bible Reliability', key: 'bible_score', link: 'evidence-library.html' },
+      { name: 'Jesus Identity', key: 'jesus_score', link: 'evidence-library.html' }
+    ];
+    var container = el('weakness-tracker');
+    if (!container) return;
+    var html = '';
+    areas.forEach(function(area) {
+      var score = parseInt(localStorage.getItem(area.key) || '0');
+      var pct = Math.min(score, 100);
+      var status = pct >= 70 ? 'Strong' : pct >= 40 ? 'Developing' : 'Needs work';
+      var color = pct >= 70 ? '#0f6e56' : pct >= 40 ? '#c8a951' : '#a32d2d';
+      html += '<div class="weakness-item">' +
+        '<div class="weakness-header">' +
+        '<span class="weakness-name">' + area.name + '</span>' +
+        '<span class="weakness-status" style="color:' + color + ';">' + status + '</span>' +
+        '</div>' +
+        '<div class="weakness-bar"><div class="weakness-fill" style="width:' + pct + '%;background:' + color + ';"></div></div>' +
+        '</div>';
+    });
+    container.innerHTML = html;
+  }
+
+  async function signOut() {
+    try { await sb.auth.signOut(); } catch(e) {}
+    window.location.href = 'index.html';
+  }
+</script>
 </body>
 </html>

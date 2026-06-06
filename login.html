@@ -101,74 +101,74 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script>
-    var sb = null;
+<script>
+  var sb = null;
 
-    function initSupabase() {
-      if (window.supabase && window.supabase.createClient) {
-        sb = window.supabase.createClient(
-          'https://noprgxkwniouukmrfozc.supabase.co',
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
-        );
-        // Redirect if already logged in
-        sb.auth.getSession().then(function(r) {
-          if (r.data && r.data.session) window.location.href = 'dashboard.html';
-        });
-      } else {
-        setTimeout(initSupabase, 50);
-      }
+  function initSb() {
+    if (window.supabase && window.supabase.createClient) {
+      sb = window.supabase.createClient(
+        'https://noprgxkwniouukmrfozc.supabase.co',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+      );
+      sb.auth.getSession().then(function(r) {
+        if (r.data && r.data.session) window.location.href = 'dashboard.html';
+      });
+    } else {
+      setTimeout(initSb, 50);
+    }
+  }
+  document.addEventListener('DOMContentLoaded', initSb);
+
+  async function handleLogin() {
+    if (!sb) { showError('Still loading — please try again in a moment.'); return; }
+
+    var email = document.getElementById('email').value.trim();
+    var password = document.getElementById('password').value;
+    var btn = document.getElementById('login-btn');
+    var spinner = document.getElementById('spinner');
+    var btnText = document.getElementById('btn-text');
+
+    var errorBox = document.getElementById('error-box');
+    if (errorBox) errorBox.classList.remove('visible');
+
+    if (!email || !password) {
+      showError('Please enter your email and password.');
+      return;
     }
 
-    document.addEventListener('DOMContentLoaded', initSupabase);
+    btn.disabled = true;
+    if (spinner) spinner.style.display = 'inline-block';
+    if (btnText) btnText.textContent = 'Signing in…';
 
-    async function handleLogin() {
-      if (!sb) { showError('Loading… please try again in a moment.'); return; }
-
-      var email = document.getElementById('email').value.trim();
-      var password = document.getElementById('password').value;
-      var btn = document.getElementById('login-btn');
-      var spinner = document.getElementById('spinner');
-      var btnText = document.getElementById('btn-text');
-
-      document.getElementById('error-box').classList.remove('visible');
-
-      if (!email || !password) {
-        showError('Please enter your email and password.');
-        return;
-      }
-
-      btn.disabled = true;
-      if (spinner) spinner.style.display = 'inline-block';
-      if (btnText) btnText.textContent = 'Signing in…';
-
-      try {
-        var result = await sb.auth.signInWithPassword({ email: email, password: password });
-        if (result.error) {
-          showError(result.error.message === 'Invalid login credentials'
-            ? 'Incorrect email or password. Please try again.'
-            : result.error.message);
-          btn.disabled = false;
-          if (spinner) spinner.style.display = 'none';
-          if (btnText) btnText.textContent = 'Sign in';
-        } else {
-          window.location.href = 'dashboard.html';
-        }
-      } catch(e) {
-        showError('Something went wrong. Please try again.');
+    try {
+      var result = await sb.auth.signInWithPassword({ email: email, password: password });
+      if (result.error) {
+        var msg = result.error.message === 'Invalid login credentials'
+          ? 'Incorrect email or password. Please try again.'
+          : result.error.message;
+        showError(msg);
         btn.disabled = false;
         if (spinner) spinner.style.display = 'none';
         if (btnText) btnText.textContent = 'Sign in';
+      } else {
+        window.location.href = 'dashboard.html';
       }
+    } catch(e) {
+      showError('Something went wrong. Please try again.');
+      btn.disabled = false;
+      if (spinner) spinner.style.display = 'none';
+      if (btnText) btnText.textContent = 'Sign in';
     }
+  }
 
-    function showError(msg) {
-      var box = document.getElementById('error-box');
-      if (box) { box.textContent = msg; box.classList.add('visible'); }
-    }
+  function showError(msg) {
+    var box = document.getElementById('error-box');
+    if (box) { box.textContent = msg; box.classList.add('visible'); }
+  }
 
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') handleLogin();
-    });
-  </script>
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') handleLogin();
+  });
+</script>
 </body>
 </html>
