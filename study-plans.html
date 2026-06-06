@@ -486,7 +486,7 @@
             <div class="plan-progress-label"><span>${progress.completed ? progress.completed.length : 0} of ${plan.days} days</span><span>${pct}%</span></div>
             <div class="plan-progress-bar"><div class="plan-progress-fill" style="width:${pct}%;background:${plan.color};"></div></div>
           </div>` : ''}
-          <button class="plan-btn ${isFinished ? 'plan-btn-completed' : isActive ? 'plan-btn-continue' : 'plan-btn-start'}" onclick="event.stopPropagation();${isFinished ? '' : isActive ? `continueActivePlan()` : `openPlanModal('${plan.id}')`}">
+          <button class="plan-btn ${isFinished ? 'plan-btn-completed' : isActive ? 'plan-btn-continue' : 'plan-btn-start'}" onclick="event.stopPropagation();handlePlanBtn('${plan.id}',${isFinished},${isActive})">
             ${isFinished ? '✓ Completed' : isActive ? 'Continue →' : 'Start plan →'}
           </button>
         </div>
@@ -511,6 +511,15 @@
     }
   }
 
+  
+  function handlePlanBtn(planId, isFinished, isActive) {
+    if (isFinished) return;
+    if (isActive) {
+      continueActivePlan();
+    } else {
+      openPlanModal(planId);
+    }
+  }
   function continueActivePlan() {
     if (activePlanData) openPlanModal(activePlanData.id);
   }
@@ -539,7 +548,7 @@
         const isDone = progress.completed && progress.completed.includes(day.day);
         bodyHtml += `<div class="plan-day-item ${isDone ? 'done' : ''}" onclick="togglePlanDay('${planId}', ${day.day})">
           <div class="plan-day-num">Day ${day.day}</div>
-          <div class="plan-day-text"><a href="${day.link}" style="color:inherit;text-decoration:none;" onclick="event.stopPropagation();">${day.text}</a></div>
+          <div class="plan-day-text"><a href="${day.link}" target="_blank" rel="noopener" style="color:inherit;" onclick="event.stopPropagation();">${day.text}</a></div>
           <div class="plan-day-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
         </div>`;
       });
