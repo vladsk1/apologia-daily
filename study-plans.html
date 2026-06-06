@@ -126,7 +126,7 @@
     .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
     .footer-logo span { color: var(--gold); }
     .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal { opacity: 1; transform: none; }
     .reveal.visible { opacity: 1; transform: none; }
     @media (max-width: 600px) { .main { padding: 2rem 1.25rem 4rem; } .plans-grid { grid-template-columns: 1fr; } }
   </style>
@@ -177,8 +177,8 @@
     </div>
 
     <!-- PLANS -->
-    <p class="section-label reveal">Choose your path</p>
-    <div class="plans-grid reveal" id="plans-grid"></div>
+    <p class="section-label">Choose your path</p>
+    <div class="plans-grid" id="plans-grid"></div>
 
   </div>
 
@@ -227,36 +227,36 @@ const plans = [
           { day: 3, text: 'Read: The Empty Tomb — free summary', link: 'evidence-library.html' },
           { day: 4, text: 'Daily Quiz — Beginner — Resurrection questions', link: 'daily-quiz.html' },
           { day: 5, text: 'Read: Paul\'s Conversion and the Early Creed', link: 'evidence-library.html' },
-          { day: 6, text: 'Conversation practice: Sceptical Family Member — "Did Jesus actually rise?"', link: 'debate-arena.html' },
+          { day: 6, text: 'Conversation practice: Sceptical Family Member — Did Jesus actually rise?', link: 'debate-arena.html' },
           { day: 7, text: 'Review week 1 — re-read the three arguments. Write your summary in plain English.', link: 'ask-anything.html' },
         ]},
         { title: 'Week 2 — Going Deeper', days: [
           { day: 8, text: 'Pro deep dive: The Minimal Facts — full analysis with Habermas scholarship', link: 'evidence-library.html' },
-          { day: 9, text: 'Ask the tutor: "What is the strongest objection to the resurrection?"', link: 'evidence-library.html' },
+          { day: 9, text: 'Ask the tutor: What is the strongest objection to the resurrection?', link: 'evidence-library.html' },
           { day: 10, text: 'Pro deep dive: The Empty Tomb — all alternative theories examined', link: 'evidence-library.html' },
           { day: 11, text: 'Daily Quiz — Intermediate level', link: 'daily-quiz.html' },
           { day: 12, text: 'Pro deep dive: Paul\'s Conversion — the early creed dating', link: 'evidence-library.html' },
-          { day: 13, text: 'Debate: The Atheist — "Did Jesus rise from the dead?" — Challenging', link: 'debate-arena.html' },
+          { day: 13, text: 'Debate: The Atheist — Did Jesus rise from the dead? — Challenging', link: 'debate-arena.html' },
           { day: 14, text: 'Objection Catcher — Resurrection topic — full round', link: 'objection-catcher.html' },
         ]},
         { title: 'Week 3 — Practising the Arguments', days: [
-          { day: 15, text: 'Conversation: Curious Coworker — "Give me one reason to believe"', link: 'debate-arena.html' },
-          { day: 16, text: 'Ask Anything: "How do I explain the resurrection to someone who has never heard of it?"', link: 'ask-anything.html' },
+          { day: 15, text: 'Conversation: Curious Coworker — Give me one reason to believe', link: 'debate-arena.html' },
+          { day: 16, text: 'Ask Anything: How do I explain the resurrection to someone who has never heard of it?', link: 'ask-anything.html' },
           { day: 17, text: 'Who Said It — focus on resurrection scholars', link: 'who-said-it.html' },
           { day: 18, text: 'Daily Quiz — Expert level — Resurrection', link: 'daily-quiz.html' },
-          { day: 19, text: 'Conversation: University Student — "Isn\'t resurrection just legend?"', link: 'debate-arena.html' },
+          { day: 19, text: 'Conversation: University Student — Isn\'t resurrection just legend?', link: 'debate-arena.html' },
           { day: 20, text: 'Read: Multiple Attestation argument — Jesus section', link: 'evidence-library.html' },
-          { day: 21, text: 'Debate: The Muslim — "Did Jesus die on the cross?" — Expert', link: 'debate-arena.html' },
+          { day: 21, text: 'Debate: The Muslim — Did Jesus die on the cross? — Expert', link: 'debate-arena.html' },
         ]},
         { title: 'Week 4 — Mastery', days: [
-          { day: 22, text: 'Ask Anything: "What would Bart Ehrman say about the resurrection?"', link: 'ask-anything.html' },
+          { day: 22, text: 'Ask Anything: What would Bart Ehrman say about the resurrection?', link: 'ask-anything.html' },
           { day: 23, text: 'Full debate: The Atheist — Expert difficulty — resurrection topic', link: 'debate-arena.html' },
           { day: 24, text: 'Read the devotional that covers 1 Corinthians 15', link: 'daily-devotional.html' },
           { day: 25, text: 'Objection Catcher — all topics — full round', link: 'objection-catcher.html' },
-          { day: 26, text: 'Conversation: Grieving Friend — "Where was God?"', link: 'debate-arena.html' },
-          { day: 27, text: 'Ask Anything: "Write me a 5-sentence summary of the resurrection case I can use in conversation"', link: 'ask-anything.html' },
+          { day: 26, text: 'Conversation: Grieving Friend — Where was God?', link: 'debate-arena.html' },
+          { day: 27, text: 'Ask Anything: Write me a 5-sentence summary of the resurrection case I can use in conversation', link: 'ask-anything.html' },
           { day: 28, text: 'Daily Quiz — Expert — all categories', link: 'daily-quiz.html' },
-          { day: 29, text: 'Final debate: The Atheist — Expert — "Did Jesus rise from the dead?"', link: 'debate-arena.html' },
+          { day: 29, text: 'Final debate: The Atheist — Expert — Did Jesus rise from the dead?', link: 'debate-arena.html' },
           { day: 30, text: '🎉 Plan complete — review your progress and claim your belt points', link: 'dashboard.html' },
         ]},
       ]
@@ -274,28 +274,28 @@ const plans = [
       weeks: [
         { title: 'Week 1 — Understanding Islam', days: [
           { day: 1, text: 'Read: Worldviews — Islam section introduction', link: 'worldviews.html' },
-          { day: 2, text: 'Ask Anything: "What do Muslims believe about Jesus?"', link: 'ask-anything.html' },
+          { day: 2, text: 'Ask Anything: What do Muslims believe about Jesus?', link: 'ask-anything.html' },
           { day: 3, text: 'Read: The Islamic Dilemma — does the Quran confirm the Bible?', link: 'worldviews.html' },
-          { day: 4, text: 'Ask the tutor: "Explain the Islamic Dilemma in plain English"', link: 'evidence-library.html' },
+          { day: 4, text: 'Ask the tutor: Explain the Islamic Dilemma in plain English', link: 'evidence-library.html' },
           { day: 5, text: 'Read: Is the Bible corrupted? — Manuscript Reliability argument', link: 'evidence-library.html' },
-          { day: 6, text: 'Conversation: Muslim Colleague — "Is the Bible corrupted?"', link: 'debate-arena.html' },
+          { day: 6, text: 'Conversation: Muslim Colleague — Is the Bible corrupted?', link: 'debate-arena.html' },
           { day: 7, text: 'Daily Quiz — Intermediate — Worldviews category', link: 'daily-quiz.html' },
         ]},
         { title: 'Week 2 — The Deity of Christ', days: [
           { day: 8, text: 'Read: Did Jesus Claim to Be God? — free summary + Pro deep dive', link: 'evidence-library.html' },
           { day: 9, text: 'Read: The Titles of Jesus — Son of Man, Lord, and I AM', link: 'evidence-library.html' },
-          { day: 10, text: 'Ask Anything: "How do I respond to a Muslim who says Jesus never claimed to be God?"', link: 'ask-anything.html' },
+          { day: 10, text: 'Ask Anything: How do I respond to a Muslim who says Jesus never claimed to be God?', link: 'ask-anything.html' },
           { day: 11, text: 'Read: John 1:1 and the Pre-existence of Christ', link: 'evidence-library.html' },
           { day: 12, text: 'Objection Catcher — Islam topic — full round', link: 'objection-catcher.html' },
-          { day: 13, text: 'Debate: The Muslim — "Is Jesus God or a prophet?" — Challenging', link: 'debate-arena.html' },
+          { day: 13, text: 'Debate: The Muslim — Is Jesus God or a prophet? — Challenging', link: 'debate-arena.html' },
           { day: 14, text: 'Daily Quiz — Intermediate — Worldviews + Jesus categories', link: 'daily-quiz.html' },
         ]},
         { title: 'Week 3 — Confident Conversations', days: [
           { day: 15, text: 'Read: Messianic Prophecy — the statistical case', link: 'evidence-library.html' },
-          { day: 16, text: 'Conversation: Muslim Colleague — "Muhammad vs Jesus — who is the final prophet?"', link: 'debate-arena.html' },
-          { day: 17, text: 'Ask Anything: "What is the strongest argument for Christianity over Islam?"', link: 'ask-anything.html' },
-          { day: 18, text: 'Debate: The Muslim — Expert — "Did Jesus die on the cross?"', link: 'debate-arena.html' },
-          { day: 19, text: 'Ask the tutor: "How do I bring up the Islamic Dilemma graciously in conversation?"', link: 'evidence-library.html' },
+          { day: 16, text: 'Conversation: Muslim Colleague — Muhammad vs Jesus — who is the final prophet?', link: 'debate-arena.html' },
+          { day: 17, text: 'Ask Anything: What is the strongest argument for Christianity over Islam?', link: 'ask-anything.html' },
+          { day: 18, text: 'Debate: The Muslim — Expert — Did Jesus die on the cross?', link: 'debate-arena.html' },
+          { day: 19, text: 'Ask the tutor: How do I bring up the Islamic Dilemma graciously in conversation?', link: 'evidence-library.html' },
           { day: 20, text: 'Objection Catcher — full round — all topics', link: 'objection-catcher.html' },
           { day: 21, text: '🎉 Plan complete — you\'re ready for gracious, confident conversations', link: 'dashboard.html' },
         ]},
@@ -315,27 +315,27 @@ const plans = [
         { title: 'Week 1 — Science and Faith', days: [
           { day: 1, text: 'Read: The Argument from the Big Bang', link: 'evidence-library.html' },
           { day: 2, text: 'Read: The Fine-Tuning Argument — free summary', link: 'evidence-library.html' },
-          { day: 3, text: 'Ask Anything: "How do I respond to a professor who says science disproves God?"', link: 'ask-anything.html' },
+          { day: 3, text: 'Ask Anything: How do I respond to a professor who says science disproves God?', link: 'ask-anything.html' },
           { day: 4, text: 'Read: The Origin of Life Argument', link: 'evidence-library.html' },
-          { day: 5, text: 'Conversation: University Student — "My professor says evolution disproves God"', link: 'debate-arena.html' },
+          { day: 5, text: 'Conversation: University Student — My professor says evolution disproves God', link: 'debate-arena.html' },
           { day: 6, text: 'Daily Quiz — Intermediate — Science and Faith', link: 'daily-quiz.html' },
-          { day: 7, text: 'Ask the tutor: "Explain the relationship between science and Christianity"', link: 'evidence-library.html' },
+          { day: 7, text: 'Ask the tutor: Explain the relationship between science and Christianity', link: 'evidence-library.html' },
         ]},
         { title: 'Week 2 — The Hard Questions', days: [
           { day: 8, text: 'Read: The Moral Argument — free summary and Pro deep dive', link: 'evidence-library.html' },
-          { day: 9, text: 'Ask Anything: "How do I answer the problem of evil?"', link: 'ask-anything.html' },
-          { day: 10, text: 'Debate: The Agnostic — "Why does God allow suffering?" — Challenging', link: 'debate-arena.html' },
+          { day: 9, text: 'Ask Anything: How do I answer the problem of evil?', link: 'ask-anything.html' },
+          { day: 10, text: 'Debate: The Agnostic — Why does God allow suffering? — Challenging', link: 'debate-arena.html' },
           { day: 11, text: 'Read: The Argument from Consciousness', link: 'evidence-library.html' },
-          { day: 12, text: 'Ask Anything: "Why should I believe Christianity and not Islam or Hinduism?"', link: 'ask-anything.html' },
+          { day: 12, text: 'Ask Anything: Why should I believe Christianity and not Islam or Hinduism?', link: 'ask-anything.html' },
           { day: 13, text: 'Objection Catcher — Morality and Existence topics', link: 'objection-catcher.html' },
-          { day: 14, text: 'Conversation: University Student — "Religion is just a social construct"', link: 'debate-arena.html' },
+          { day: 14, text: 'Conversation: University Student — Religion is just a social construct', link: 'debate-arena.html' },
         ]},
         { title: 'Week 3 — Holding Your Ground', days: [
           { day: 15, text: 'Read: The Kalam Cosmological Argument — Pro deep dive', link: 'evidence-library.html' },
-          { day: 16, text: 'Debate: The Atheist — Expert — "Does God exist?"', link: 'debate-arena.html' },
-          { day: 17, text: 'Ask Anything: "How do I keep my faith at university without becoming defensive?"', link: 'ask-anything.html' },
+          { day: 16, text: 'Debate: The Atheist — Expert — Does God exist?', link: 'debate-arena.html' },
+          { day: 17, text: 'Ask Anything: How do I keep my faith at university without becoming defensive?', link: 'ask-anything.html' },
           { day: 18, text: 'Read: Historical Existence of Jesus — Non-Christian Sources', link: 'evidence-library.html' },
-          { day: 19, text: 'Conversation: Your Teenager / Peer — "Is any of this actually true?"', link: 'debate-arena.html' },
+          { day: 19, text: 'Conversation: Your Teenager / Peer — Is any of this actually true?', link: 'debate-arena.html' },
           { day: 20, text: 'Daily Quiz — Expert — God\'s Existence + Science categories', link: 'daily-quiz.html' },
           { day: 21, text: '🎉 Plan complete — you\'re equipped for the intellectual challenges ahead', link: 'dashboard.html' },
         ]},
@@ -359,15 +359,15 @@ const plans = [
           { day: 4, text: 'Daily Quiz — Beginner — God\'s Existence', link: 'daily-quiz.html' },
           { day: 5, text: 'Read: The Moral Argument', link: 'evidence-library.html' },
           { day: 6, text: 'Read: The Argument from Consciousness', link: 'evidence-library.html' },
-          { day: 7, text: 'Conversation: Curious Coworker — "Hasn\'t science disproved God?"', link: 'debate-arena.html' },
+          { day: 7, text: 'Conversation: Curious Coworker — Hasn\'t science disproved God?', link: 'debate-arena.html' },
         ]},
         { title: 'Week 2 — Practising the Arguments', days: [
-          { day: 8, text: 'Ask Anything: "Which argument for God\'s existence is strongest?"', link: 'ask-anything.html' },
-          { day: 9, text: 'Debate: The Atheist — Gentle — "Does God exist?"', link: 'debate-arena.html' },
+          { day: 8, text: 'Ask Anything: Which argument for God\'s existence is strongest?', link: 'ask-anything.html' },
+          { day: 9, text: 'Debate: The Atheist — Gentle — Does God exist?', link: 'debate-arena.html' },
           { day: 10, text: 'Objection Catcher — God\'s Existence topic', link: 'objection-catcher.html' },
           { day: 11, text: 'Daily Quiz — Intermediate — God\'s Existence', link: 'daily-quiz.html' },
-          { day: 12, text: 'Conversation: Sceptical Family Member — "I just don\'t see evidence for God"', link: 'debate-arena.html' },
-          { day: 13, text: 'Ask Anything: "How do I explain the Kalam to a friend in one minute?"', link: 'ask-anything.html' },
+          { day: 12, text: 'Conversation: Sceptical Family Member — I just don\'t see evidence for God', link: 'debate-arena.html' },
+          { day: 13, text: 'Ask Anything: How do I explain the Kalam to a friend in one minute?', link: 'ask-anything.html' },
           { day: 14, text: '🎉 Plan complete — you know five powerful arguments for God\'s existence', link: 'dashboard.html' },
         ]},
       ]
@@ -385,20 +385,20 @@ const plans = [
       weeks: [
         { title: 'Week 1 — The Evidence', days: [
           { day: 1, text: 'Read: Manuscript Reliability Argument', link: 'evidence-library.html' },
-          { day: 2, text: 'Ask Anything: "How do we know the Bible hasn\'t been changed?"', link: 'ask-anything.html' },
+          { day: 2, text: 'Ask Anything: How do we know the Bible hasn\'t been changed?', link: 'ask-anything.html' },
           { day: 3, text: 'Read: Archaeological Confirmation of the Bible', link: 'evidence-library.html' },
           { day: 4, text: 'Daily Quiz — Beginner — Biblical Reliability', link: 'daily-quiz.html' },
           { day: 5, text: 'Read: Messianic Prophecy — the statistical case', link: 'evidence-library.html' },
-          { day: 6, text: 'Ask the tutor: "How do I explain manuscript evidence to a Muslim?"', link: 'evidence-library.html' },
-          { day: 7, text: 'Conversation: Muslim Colleague — "Is the Bible corrupted?"', link: 'debate-arena.html' },
+          { day: 6, text: 'Ask the tutor: How do I explain manuscript evidence to a Muslim?', link: 'evidence-library.html' },
+          { day: 7, text: 'Conversation: Muslim Colleague — Is the Bible corrupted?', link: 'debate-arena.html' },
         ]},
         { title: 'Week 2 — Practising the Responses', days: [
           { day: 8, text: 'Objection Catcher — Bible topic — full round', link: 'objection-catcher.html' },
-          { day: 9, text: 'Ask Anything: "What is the strongest archaeological evidence for the Bible?"', link: 'ask-anything.html' },
+          { day: 9, text: 'Ask Anything: What is the strongest archaeological evidence for the Bible?', link: 'ask-anything.html' },
           { day: 10, text: 'Read: The Dead Sea Scrolls — significance for biblical reliability', link: 'evidence-library.html' },
-          { day: 11, text: 'Debate: The Muslim — "Is the Bible reliable?" — Challenging', link: 'debate-arena.html' },
+          { day: 11, text: 'Debate: The Muslim — Is the Bible reliable? — Challenging', link: 'debate-arena.html' },
           { day: 12, text: 'Daily Quiz — Intermediate — Biblical Reliability', link: 'daily-quiz.html' },
-          { day: 13, text: 'Ask Anything: "How do I explain the Dead Sea Scrolls in conversation?"', link: 'ask-anything.html' },
+          { day: 13, text: 'Ask Anything: How do I explain the Dead Sea Scrolls in conversation?', link: 'ask-anything.html' },
           { day: 14, text: '🎉 Plan complete — you can confidently defend the reliability of Scripture', link: 'dashboard.html' },
         ]},
       ]
@@ -419,26 +419,26 @@ const plans = [
           { day: 2, text: 'Read: The Criterion of Multiple Attestation', link: 'evidence-library.html' },
           { day: 3, text: 'Read: Early Creed of 1 Corinthians 15', link: 'evidence-library.html' },
           { day: 4, text: 'Daily Quiz — Beginner — Jesus category', link: 'daily-quiz.html' },
-          { day: 5, text: 'Ask Anything: "Did Jesus really exist? What\'s the best evidence?"', link: 'ask-anything.html' },
-          { day: 6, text: 'Conversation: Sceptical Family Member — "You only believe because you were raised that way"', link: 'debate-arena.html' },
+          { day: 5, text: 'Ask Anything: Did Jesus really exist? What\'s the best evidence?', link: 'ask-anything.html' },
+          { day: 6, text: 'Conversation: Sceptical Family Member — You only believe because you were raised that way', link: 'debate-arena.html' },
           { day: 7, text: 'Read today\'s devotional — reflect on who Jesus is to you personally', link: 'daily-devotional.html' },
         ]},
         { title: 'Week 2 — The Divine Claims', days: [
           { day: 8, text: 'Read: Did Jesus Claim to Be God? — free summary and Pro deep dive', link: 'evidence-library.html' },
           { day: 9, text: 'Read: The Titles of Jesus', link: 'evidence-library.html' },
           { day: 10, text: 'Read: John 1:1 and Pre-existence of Christ', link: 'evidence-library.html' },
-          { day: 11, text: 'Ask the tutor: "Explain the C.S. Lewis trilemma in plain English"', link: 'evidence-library.html' },
+          { day: 11, text: 'Ask the tutor: Explain the C.S. Lewis trilemma in plain English', link: 'evidence-library.html' },
           { day: 12, text: 'Read: The Philippians 2 Hymn', link: 'evidence-library.html' },
-          { day: 13, text: 'Debate: The Muslim — "Is Jesus God or a prophet?" — Challenging', link: 'debate-arena.html' },
+          { day: 13, text: 'Debate: The Muslim — Is Jesus God or a prophet? — Challenging', link: 'debate-arena.html' },
           { day: 14, text: 'Objection Catcher — Islam topic — focus on Jesus', link: 'objection-catcher.html' },
         ]},
         { title: 'Week 3 — Prophecy and Practice', days: [
           { day: 15, text: 'Read: Messianic Prophecy — the statistical case', link: 'evidence-library.html' },
-          { day: 16, text: 'Ask Anything: "Read me Isaiah 53 and explain how it points to Jesus"', link: 'ask-anything.html' },
+          { day: 16, text: 'Ask Anything: Read me Isaiah 53 and explain how it points to Jesus', link: 'ask-anything.html' },
           { day: 17, text: 'Read: Daniel\'s 70 Weeks', link: 'evidence-library.html' },
           { day: 18, text: 'Daily Quiz — Expert — Jesus category', link: 'daily-quiz.html' },
-          { day: 19, text: 'Conversation: Open Neighbour — "What do you actually believe about Jesus?"', link: 'debate-arena.html' },
-          { day: 20, text: 'Ask Anything: "Summarise the case for Jesus\'s divinity in plain English"', link: 'ask-anything.html' },
+          { day: 19, text: 'Conversation: Open Neighbour — What do you actually believe about Jesus?', link: 'debate-arena.html' },
+          { day: 20, text: 'Ask Anything: Summarise the case for Jesus\'s divinity in plain English', link: 'ask-anything.html' },
           { day: 21, text: '🎉 Plan complete — you can explain and defend who Jesus is with confidence', link: 'dashboard.html' },
         ]},
       ]
@@ -552,6 +552,15 @@ const plans = [
   }
 
   // ── MODAL ──
+  function continueActivePlan() {
+    var saved = getSaved();
+    var active = plans.find(function(p) {
+      var pr = saved[p.id];
+      return pr && pr.started && !pr.finished;
+    });
+    if (active) openModal(active.id);
+  }
+
   function openModal(planId) {
     var plan = plans.find(function(p) { return p.id === planId; });
     if (!plan) return;
