@@ -657,6 +657,15 @@
 
     function startConvo() {
       if (!convoState.scenario || !convoState.topic) return;
+
+      // Check weekly limit (shared with debate)
+      const { allowed } = checkDebateLimit();
+      if (!allowed) {
+        showDebateLimitBanner();
+        return;
+      }
+      incrementDebateUsage();
+
       const scenario = convoScenarios[convoState.scenario];
       const opening = scenario.opening[convoState.topic] || "Hey, I wanted to ask you about your faith...";
 
@@ -822,9 +831,61 @@
       student: 'Student Friend', teenager: 'Your Child', neighbour: 'Neighbour'
     };
 
+    // ── WEEKLY DEBATE LIMIT ──
+    const DEBATE_WEEKLY_LIMIT = 1;
+
+    function getDebatesThisWeek() {
+      const stored = JSON.parse(localStorage.getItem('debateUsage') || '{}');
+      const now = new Date();
+      const weekStart = new Date(now);
+      weekStart.setDate(now.getDate() - now.getDay()); // Sunday
+      weekStart.setHours(0,0,0,0);
+      if (!stored.weekStart || new Date(stored.weekStart) < weekStart) return 0;
+      return stored.count || 0;
+    }
+
+    function incrementDebateUsage() {
+      const stored = JSON.parse(localStorage.getItem('debateUsage') || '{}');
+      const now = new Date();
+      const weekStart = new Date(now);
+      weekStart.setDate(now.getDate() - now.getDay());
+      weekStart.setHours(0,0,0,0);
+      const count = getDebatesThisWeek() + 1;
+      localStorage.setItem('debateUsage', JSON.stringify({ weekStart: weekStart.toISOString(), count }));
+    }
+
+    function checkDebateLimit() {
+      const used = getDebatesThisWeek();
+      const isPro = false; // replace with Supabase pro check when Stripe is live
+      return { allowed: isPro || used < DEBATE_WEEKLY_LIMIT, used, isPro };
+    }
+
+    function showDebateLimitBanner() {
+      const existing = document.getElementById('debate-limit-banner');
+      if (existing) return;
+      const banner = document.createElement('div');
+      banner.id = 'debate-limit-banner';
+      banner.style.cssText = 'background:#0a1628;border:1px solid rgba(200,169,81,0.3);border-radius:8px;padding:1.5rem 2rem;margin:1rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;';
+      banner.innerHTML = `
+        <div>
+          <div style="font-family:var(--font-display,serif);font-size:1rem;font-weight:600;color:#fff;margin-bottom:4px;">Weekly debate used</div>
+          <div style="font-family:var(--font-ui,sans-serif);font-size:0.82rem;color:rgba(255,255,255,0.5);">Free members get 1 debate per week. Your next debate unlocks on Sunday. Upgrade to Pro for unlimited debates against all opponents.</div>
+        </div>
+        <a href="index.html#pricing" style="font-family:var(--font-ui,sans-serif);font-size:0.88rem;font-weight:500;padding:10px 22px;border-radius:3px;background:#c8a951;color:#050d1a;text-decoration:none;white-space:nowrap;">Upgrade to Pro</a>`;
+      const main = document.querySelector('.arena-setup') || document.querySelector('.main') || document.body;
+      main.insertBefore(banner, main.firstChild);
+    }
+
     function startDebate() {
       if (!state.opponent || !state.topic) return;
-      state.turns = 0;
+
+      // Check weekly limit
+      const { allowed } = checkDebateLimit();
+      if (!allowed) {
+        showDebateLimitBanner();
+        return;
+      }
+      incrementDebateUsage();
       state.messages = [];
       state.debateStarted = false;
 
@@ -1114,6 +1175,18 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Show debate limit status on load
+    (function() {
+      const { allowed, used } = checkDebateLimit();
+      const hint = document.getElementById('start-hint');
+      if (!allowed && hint) {
+        hint.textContent = 'Weekly debate used — upgrade to Pro for unlimited debates';
+        hint.style.color = '#c8a951';
+        const btn = document.getElementById('start-btn');
+        if (btn) btn.style.opacity = '0.5';
+      }
+    })();
   </script>
 </body>
 </html>

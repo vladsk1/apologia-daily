@@ -279,7 +279,7 @@
   </footer>
 
   <script>
-    const FREE_LIMIT = 5;
+    const FREE_LIMIT = 1;
 
     function getUsageToday() {
       const today = new Date().toDateString();
@@ -302,9 +302,9 @@
       if (remaining === 0) {
         document.getElementById('limit-banner').classList.add('visible');
         btn.disabled = true;
-        hint.textContent = 'Daily limit reached — upgrade for unlimited questions';
+        hint.textContent = 'Daily limit reached — upgrade to Pro for unlimited questions';
       } else {
-        hint.textContent = `${remaining} free question${remaining !== 1 ? 's' : ''} remaining today`;
+        hint.textContent = remaining === FREE_LIMIT ? '1 free question per day — make it count' : 'Daily limit reached';
       }
     }
 

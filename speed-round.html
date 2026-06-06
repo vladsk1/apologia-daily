@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Speed Round — Apologia Daily</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=DM+Sans:wght@400;500&family=Source+Serif+4:wght@400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --n:#0a1628;--n2:#050d1a;--n3:#1e4278;--n4:#f0f6fb;
+  --g:#c8a951;--gl:#e8cf87;--w:#fff;--o:#f8f7f4;
+  --m:#3a4a62;--mu:#7a8fa8;--b:#d4e0ec;
+  --gr:#0f6e56;--gr2:#e1f5ee;
+  --wr:#a32d2d;--wr2:#fcebeb;
+  --fd:'Playfair Display',Georgia,serif;
+  --ui:'DM Sans',sans-serif;
+  --bo:'Source Serif 4',Georgia,serif;
+}
+body{font-family:var(--ui);background:var(--n2);color:var(--w);min-height:100vh;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;border-bottom:1px solid rgba(255,255,255,.08);}
+.logo{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:#fff;text-decoration:none;}
+.logo span{color:var(--g);}
+.nl{display:flex;gap:1.5rem;list-style:none;}
+.nl a{font-family:var(--ui);font-size:.82rem;color:rgba(255,255,255,.7);text-decoration:none;text-transform:uppercase;letter-spacing:.04em;}
+.nl a.act{color:var(--g);}
+.nr{display:flex;gap:10px;align-items:center;}
+.nsi{font-family:var(--ui);font-size:.85rem;color:rgba(255,255,255,.6);text-decoration:none;}
+.nct{font-family:var(--ui);font-size:.85rem;font-weight:500;padding:8px 20px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none;}
+@media(max-width:768px){.nl{display:none;}}
+
+/* SCREENS */
+.screen{display:none;min-height:100vh;padding-top:64px;}
+.screen.active{display:flex;flex-direction:column;align-items:center;justify-content:center;}
+
+/* LOBBY */
+.lobby{text-align:center;padding:2rem;max-width:600px;margin:0 auto;}
+.lobby-icon{font-size:4rem;margin-bottom:1.5rem;}
+.lobby-ey{font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--g);margin-bottom:1rem;}
+.lobby-title{font-family:var(--fd);font-size:clamp(2rem,5vw,3rem);font-weight:700;color:#fff;margin-bottom:1rem;line-height:1.1;}
+.lobby-sub{font-size:1rem;color:rgba(255,255,255,.6);margin-bottom:2.5rem;line-height:1.8;}
+.mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:2rem;}
+.mode-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:1.5rem;cursor:pointer;transition:all .2s;text-align:left;}
+.mode-card:hover{background:rgba(255,255,255,.08);border-color:rgba(200,169,81,.4);}
+.mode-card.selected{border-color:var(--g);background:rgba(200,169,81,.08);}
+.mode-icon{font-size:1.5rem;margin-bottom:.75rem;}
+.mode-name{font-weight:500;font-size:1rem;color:#fff;margin-bottom:.25rem;}
+.mode-desc{font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.5;}
+.diff-row{display:flex;gap:8px;justify-content:center;margin-bottom:2rem;}
+.diff-btn{padding:8px 20px;border-radius:20px;border:1px solid rgba(255,255,255,.2);background:none;color:rgba(255,255,255,.6);font-family:var(--ui);font-size:.82rem;cursor:pointer;transition:all .2s;}
+.diff-btn.sel{background:var(--g);border-color:var(--g);color:var(--n);font-weight:500;}
+.start-btn{padding:16px 48px;border-radius:4px;background:var(--g);color:var(--n);font-family:var(--ui);font-size:1rem;font-weight:500;border:none;cursor:pointer;transition:background .2s;font-size:1.1rem;}
+.start-btn:hover{background:var(--gl);}
+
+/* GAME */
+.game{width:100%;max-width:700px;padding:2rem;margin:0 auto;}
+.game-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;}
+.game-score{font-family:var(--fd);font-size:1.5rem;font-weight:700;color:var(--g);}
+.game-score-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);}
+.timer-ring{position:relative;width:64px;height:64px;}
+.timer-ring svg{transform:rotate(-90deg);}
+.timer-ring-bg{fill:none;stroke:rgba(255,255,255,.1);stroke-width:4;}
+.timer-ring-fg{fill:none;stroke:var(--g);stroke-width:4;stroke-linecap:round;transition:stroke-dashoffset .1s linear,stroke .3s;}
+.timer-num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:1.2rem;font-weight:700;color:#fff;}
+.combo-display{font-size:.82rem;color:var(--g);text-align:center;}
+.combo-num{font-family:var(--fd);font-size:1.2rem;font-weight:700;}
+
+.question-area{margin-bottom:2rem;}
+.q-num{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:.75rem;}
+.q-category{display:inline-block;font-size:.7rem;font-weight:500;padding:3px 10px;border-radius:20px;background:rgba(200,169,81,.15);color:var(--g);border:1px solid rgba(200,169,81,.3);margin-bottom:1rem;}
+.q-text{font-family:var(--fd);font-size:clamp(1.2rem,3vw,1.6rem);font-weight:700;color:#fff;line-height:1.4;margin-bottom:2rem;}
+
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+@media(max-width:500px){.answers{grid-template-columns:1fr;}}
+.answer-btn{padding:1rem 1.25rem;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.85);font-family:var(--ui);font-size:.9rem;cursor:pointer;transition:all .15s;text-align:left;line-height:1.4;}
+.answer-btn:hover:not(:disabled){background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25);}
+.answer-btn.correct{background:rgba(15,110,86,.25);border-color:#0f6e56;color:#5dcaa5;}
+.answer-btn.wrong{background:rgba(163,45,45,.2);border-color:#a32d2d;color:#f09595;}
+.answer-btn.reveal{background:rgba(15,110,86,.15);border-color:rgba(15,110,86,.4);color:rgba(255,255,255,.6);}
+.answer-btn:disabled{cursor:default;}
+
+.feedback-bar{height:4px;border-radius:2px;margin-top:.75rem;transition:width .3s;}
+.feedback-correct{background:var(--gr);}
+.feedback-wrong{background:var(--wr);}
+
+.progress-bar{height:3px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden;margin-bottom:2rem;}
+.progress-fill{height:100%;background:var(--g);border-radius:2px;transition:width .3s;}
+
+/* RESULTS */
+.results{text-align:center;padding:2rem;max-width:500px;margin:0 auto;}
+.result-score{font-family:var(--fd);font-size:4rem;font-weight:700;line-height:1;margin-bottom:.25rem;}
+.result-label{font-size:.82rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em;margin-bottom:2rem;}
+.result-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:2rem;}
+.rs{background:rgba(255,255,255,.05);border-radius:8px;padding:1.25rem;}
+.rs-num{font-family:var(--fd);font-size:1.5rem;font-weight:700;color:var(--g);}
+.rs-lbl{font-size:.7rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.08em;margin-top:4px;}
+.result-msg{font-family:var(--fd);font-size:1.3rem;color:#fff;margin-bottom:.5rem;}
+.result-sub{font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:2rem;line-height:1.7;}
+.result-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.result-btn{padding:12px 28px;border-radius:4px;font-family:var(--ui);font-size:.92rem;font-weight:500;border:none;cursor:pointer;}
+.result-btn-primary{background:var(--g);color:var(--n);}
+.result-btn-secondary{background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);}
+.review-list{margin-top:2rem;text-align:left;}
+.review-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1rem;margin-bottom:8px;}
+.review-q{font-size:.88rem;color:rgba(255,255,255,.7);margin-bottom:.5rem;line-height:1.5;}
+.review-correct{font-size:.82rem;color:#5dcaa5;font-weight:500;}
+.review-yours{font-size:.82rem;color:#f09595;}
+
+/* ANIMATIONS */
+@keyframes pop{0%{transform:scale(.9);opacity:0}100%{transform:scale(1);opacity:1}}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+@keyframes correct-flash{0%{background:rgba(15,110,86,.4)}100%{background:rgba(15,110,86,.25)}}
+.pop-in{animation:pop .2s ease-out forwards;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Apologia<span>Daily</span></a>
+  <ul class="nl">
+    <li><a href="evidence-library.html">Evidence Library</a></li>
+    <li><a href="games.html" class="act">Games</a></li>
+    <li><a href="debate-arena.html">Debate Arena</a></li>
+    <li><a href="study-plans.html">Study Plans</a></li>
+  </ul>
+  <div class="nr">
+    <span id="nav-auth"><a href="login.html" class="nsi">Sign in</a> <a href="signup.html" class="nct">Start Free</a></span>
+  </div>
+</nav>
+
+<!-- LOBBY -->
+<div class="screen active" id="screen-lobby">
+  <div class="lobby">
+    <div class="lobby-icon">&#9889;</div>
+    <p class="lobby-ey">Games</p>
+    <h1 class="lobby-title">Speed Round</h1>
+    <p class="lobby-sub">20 questions. Against the clock. Test how fast you can identify arguments, scholars, and key facts. Build your instincts for real conversations.</p>
+
+    <div class="mode-grid">
+      <div class="mode-card selected" id="mode-classic" onclick="selectMode('classic')">
+        <div class="mode-icon">&#9889;</div>
+        <div class="mode-name">Classic Speed</div>
+        <div class="mode-desc">20 questions, 15 seconds each. Answer fast for bonus points.</div>
+      </div>
+      <div class="mode-card" id="mode-survival" onclick="selectMode('survival')">
+        <div class="mode-icon">&#128293;</div>
+        <div class="mode-name">Survival</div>
+        <div class="mode-desc">One wrong answer and it's over. How far can you get?</div>
+      </div>
+      <div class="mode-card" id="mode-blitz" onclick="selectMode('blitz')">
+        <div class="mode-icon">&#128168;</div>
+        <div class="mode-name">60-Second Blitz</div>
+        <div class="mode-desc">Answer as many as you can in 60 seconds. No wrong answers, just speed.</div>
+      </div>
+      <div class="mode-card" id="mode-scholar" onclick="selectMode('scholar')">
+        <div class="mode-icon">&#127891;</div>
+        <div class="mode-name">Scholar Mode</div>
+        <div class="mode-desc">Match scholars to arguments. Know who said what.</div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:1rem;font-size:.82rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.08em;">Difficulty</div>
+    <div class="diff-row">
+      <button class="diff-btn sel" id="diff-beginner" onclick="selectDiff('beginner')">Beginner</button>
+      <button class="diff-btn" id="diff-intermediate" onclick="selectDiff('intermediate')">Intermediate</button>
+      <button class="diff-btn" id="diff-expert" onclick="selectDiff('expert')">Expert</button>
+    </div>
+
+    <button class="start-btn" onclick="startGame()">Start Speed Round &#9889;</button>
+  </div>
+</div>
+
+<!-- GAME -->
+<div class="screen" id="screen-game">
+  <div class="game">
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+    <div class="game-header">
+      <div>
+        <div class="game-score-label">Score</div>
+        <div class="game-score" id="score-display">0</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="timer-ring">
+          <svg viewBox="0 0 64 64" width="64" height="64">
+            <circle class="timer-ring-bg" cx="32" cy="32" r="28"/>
+            <circle class="timer-ring-fg" id="timer-ring" cx="32" cy="32" r="28" stroke-dasharray="175.9" stroke-dashoffset="0"/>
+          </svg>
+          <div class="timer-num" id="timer-num">15</div>
+        </div>
+        <div class="combo-display" id="combo-display" style="opacity:0">Combo x<span class="combo-num" id="combo-num">1</span></div>
+      </div>
+      <div style="text-align:right;">
+        <div class="game-score-label">Question</div>
+        <div class="game-score" id="qnum-display">1/20</div>
+      </div>
+    </div>
+
+    <div class="question-area" id="question-area">
+      <div class="q-num" id="q-num">Question 1</div>
+      <div class="q-category" id="q-category">God's Existence</div>
+      <div class="q-text" id="q-text">Loading...</div>
+    </div>
+
+    <div class="answers" id="answers-grid"></div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div class="screen" id="screen-results">
+  <div class="results">
+    <div class="result-score" id="result-score">0</div>
+    <div class="result-label">Final Score</div>
+    <div class="result-stats">
+      <div class="rs"><div class="rs-num" id="rs-correct">0</div><div class="rs-lbl">Correct</div></div>
+      <div class="rs"><div class="rs-num" id="rs-accuracy">0%</div><div class="rs-lbl">Accuracy</div></div>
+      <div class="rs"><div class="rs-num" id="rs-streak">0</div><div class="rs-lbl">Best streak</div></div>
+    </div>
+    <div class="result-msg" id="result-msg">Well done!</div>
+    <div class="result-sub" id="result-sub">Keep studying the Evidence Library to improve your score.</div>
+    <div class="result-btns">
+      <button class="result-btn result-btn-primary" onclick="startGame()">Play again &#9889;</button>
+      <button class="result-btn result-btn-secondary" onclick="showScreen('lobby')">Change mode</button>
+      <a href="evidence-library.html" style="padding:12px 28px;border-radius:4px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);font-family:var(--ui);font-size:.92rem;font-weight:500;text-decoration:none;">Study up &#8594;</a>
+    </div>
+    <div class="review-list" id="review-list"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const ALL_QUESTIONS = {
+  beginner: [
+    {q:"What are the three steps of the Kalam Cosmological Argument?",cat:"God's Existence",a:"Everything that begins to exist has a cause; the universe began to exist; therefore the universe has a cause",opts:["Everything that begins to exist has a cause; the universe began to exist; therefore the universe has a cause","If God exists then good exists; good exists; therefore God exists","The universe is complex; complex things need designers; therefore God designed the universe","Everything moves; something moved first; therefore God exists"]},
+    {q:"The Fine-Tuning Argument says the cosmological constant is fine-tuned to what precision?",cat:"God's Existence",a:"1 part in 10 to the power of 120",opts:["1 part in 10 to the power of 120","1 part in 10 to the power of 40","1 part in 10 to the power of 60","1 part in a billion"]},
+    {q:"Which historian called the Kalam 'the most discussed argument in contemporary Western philosophy of religion'?",cat:"God's Existence",a:"Quentin Smith",opts:["Quentin Smith","Bertrand Russell","David Hume","John Mackie"]},
+    {q:"The Minimal Facts Argument was developed by which scholar?",cat:"The Resurrection",a:"Gary Habermas",opts:["Gary Habermas","N.T. Wright","John Dominic Crossan","Bart Ehrman"]},
+    {q:"How many minimal facts does Habermas's argument use?",cat:"The Resurrection",a:"Five",opts:["Five","Three","Seven","Two"]},
+    {q:"What did the Jewish leaders claim happened to Jesus's body?",cat:"The Resurrection",a:"The disciples stole it",opts:["The disciples stole it","It was moved to another tomb","Jesus survived the crucifixion","The Romans destroyed it"]},
+    {q:"Which Roman historian confirmed Jesus was executed under Pontius Pilate?",cat:"Jesus",a:"Tacitus",opts:["Tacitus","Pliny","Suetonius","Livy"]},
+    {q:"In John 8:58, what did Jesus say that caused his audience to pick up stones?",cat:"Jesus",a:"Before Abraham was born, I AM",opts:["Before Abraham was born, I AM","I am the Son of God","I am greater than Abraham","I am the Messiah"]},
+    {q:"The manuscript reliability argument notes that we have over how many Greek New Testament manuscripts?",cat:"Biblical Reliability",a:"5,800",opts:["5,800","500","1,200","10,000"]},
+    {q:"The Pilate Stone was discovered in which year?",cat:"Biblical Reliability",a:"1961",opts:["1961","1906","1990","1947"]},
+    {q:"What does the BGV theorem prove?",cat:"Science & Faith",a:"Any expanding universe must have had a beginning",opts:["Any expanding universe must have had a beginning","The universe is approximately 13.8 billion years old","God exists based on cosmic expansion","Multiple universes are possible"]},
+    {q:"Who coined the term 'hard problem of consciousness'?",cat:"God's Existence",a:"David Chalmers",opts:["David Chalmers","Daniel Dennett","Francis Crick","Richard Dawkins"]},
+    {q:"The Dead Sea Scrolls were discovered in which year?",cat:"Biblical Reliability",a:"1947",opts:["1947","1906","1961","1902"]},
+    {q:"Which scholar said 'That Jesus was crucified is as sure as anything historical can be'?",cat:"The Resurrection",a:"John Dominic Crossan",opts:["John Dominic Crossan","Bart Ehrman","Gary Habermas","N.T. Wright"]},
+    {q:"The C.S. Lewis trilemma offers three options. Lord, Liar, and...?",cat:"Jesus",a:"Lunatic",opts:["Lunatic","Legend","Liberal","Layman"]},
+    {q:"What is the Principle of Sufficient Reason?",cat:"God's Existence",a:"Every contingent fact has an explanation",opts:["Every contingent fact has an explanation","God is the sufficient reason for all things","Sufficient evidence proves God's existence","Every effect has an observable cause"]},
+    {q:"Messianic Prophecy: Isaiah 53 was written approximately how many years before Jesus?",cat:"Jesus",a:"700 years",opts:["700 years","100 years","300 years","500 years"]},
+    {q:"Paul's conversion creed in 1 Corinthians 15 is dated to within how many years of the crucifixion?",cat:"The Resurrection",a:"2-5 years",opts:["2-5 years","20-30 years","50-100 years","10-15 years"]},
+    {q:"The Moral Argument says without God, moral values are grounded in what?",cat:"God's Existence",a:"Human preference or evolutionary pressures",opts:["Human preference or evolutionary pressures","Divine command alone","Natural law","Social consensus"]},
+    {q:"Which Jewish historian referred to Jesus twice in his historical writings?",cat:"Jesus",a:"Josephus",opts:["Josephus","Philo","Tacitus","Pliny the Younger"]},
+  ],
+  intermediate: [
+    {q:"The BGV theorem was published by Borde, Guth, and Vilenkin in which year?",cat:"Science & Faith",a:"2003",opts:["2003","1993","1998","2010"]},
+    {q:"Robin Collins's fine-tuning argument uses what type of probabilistic reasoning?",cat:"God's Existence",a:"Likelihood ratio — comparing probability on theism vs atheism",opts:["Likelihood ratio — comparing probability on theism vs atheism","Bayesian prior probability alone","Simple frequency statistics","Inferential statistics from physics"]},
+    {q:"The Philippians 2 hymn describes Jesus as existing 'in the form of God' — what does most scholarship say about its date?",cat:"Jesus",a:"It predates Paul's letter and dates to within 20 years of the crucifixion",opts:["It predates Paul's letter and dates to within 20 years of the crucifixion","It was composed by Paul himself in 55 AD","It dates to the second century","It was added by later scribes"]},
+    {q:"What distinguishes a per se causal series from a per accidens series in Aquinas?",cat:"God's Existence",a:"Per se causes operate simultaneously; per accidens causes operate in sequence",opts:["Per se causes operate simultaneously; per accidens causes operate in sequence","Per se causes are physical; per accidens causes are metaphysical","Per se series can be infinite; per accidens cannot","Per accidens causes are simultaneous; per se causes are sequential"]},
+    {q:"The Criterion of Embarrassment holds that events embarrassing to the early church are...",cat:"The Resurrection",a:"More likely to be historical because no one invents embarrassing details",opts:["More likely to be historical because no one invents embarrassing details","Less likely to be historical because they would have been suppressed","Neutral — neither more nor less likely","Unreliable due to emotional distortion"]},
+    {q:"Frank Jackson's 'Mary's Room' thought experiment is designed to demonstrate what?",cat:"God's Existence",a:"That qualia — subjective experience — cannot be reduced to physical facts",opts:["That qualia — subjective experience — cannot be reduced to physical facts","That knowledge is always physically grounded","That consciousness is an illusion","That colour perception is subjective"]},
+    {q:"Tacitus correctly identified Pontius Pilate's title as what?",cat:"Jesus",a:"Prefect",opts:["Prefect","Procurator","Governor","Legate"]},
+    {q:"The Euthyphro Dilemma asks: is something good because God commands it, or does God command it because it's good? The classical theist answer is...",cat:"God's Existence",a:"Both horns are false — God's nature is the standard of goodness",opts:["Both horns are false — God's nature is the standard of goodness","The first horn — God's commands define goodness","The second horn — goodness is independent of God","The dilemma is unanswerable"]},
+    {q:"Which scholar wrote 'Lord Jesus Christ' — the most comprehensive treatment of early devotion to Jesus as divine?",cat:"Jesus",a:"Larry Hurtado",opts:["Larry Hurtado","N.T. Wright","Raymond Brown","Richard Bauckham"]},
+    {q:"In Greek grammar, when a predicate noun precedes the verb and lacks the article, it is...",cat:"Jesus",a:"Qualitative — describing the nature of the subject",opts:["Qualitative — describing the nature of the subject","Indefinite — translatable as 'a'","Definite — requiring the article","Predicative — asserting identity"]},
+    {q:"The Borde-Guth-Vilenkin theorem applies to which proposed escape routes from the beginning?",cat:"Science & Faith",a:"All of them including inflationary multiverse models",opts:["All of them including inflationary multiverse models","Only the standard Big Bang model","Only oscillating universe models","Only string theory models"]},
+    {q:"Douglas Axe's research found the probability of a functional protein sequence arising by chance at approximately...",cat:"Science & Faith",a:"1 in 10^77",opts:["1 in 10^77","1 in 10^10","1 in 10^150","1 in a million"]},
+    {q:"Gerd Luedemann is significant in resurrection scholarship because...",cat:"The Resurrection",a:"He is an atheist New Testament scholar who accepts the early dating of the 1 Corinthians 15 creed",opts:["He is an atheist New Testament scholar who accepts the early dating of the 1 Corinthians 15 creed","He proved the resurrection happened","He proved the resurrection was a legend","He wrote the Minimal Facts Argument"]},
+    {q:"The Leibniz Contingency Argument concludes with a necessary being. What makes the universe disqualified from being that being?",cat:"God's Existence",a:"The universe is contingent — it began to exist and might not have existed",opts:["The universe is contingent — it began to exist and might not have existed","The universe is too small to be necessary","The universe lacks consciousness","The universe is too complex to be necessary"]},
+    {q:"Psalm 22 is significant for messianic prophecy because...",cat:"Jesus",a:"It describes piercing of hands and feet 600 years before crucifixion was invented",opts:["It describes piercing of hands and feet 600 years before crucifixion was invented","It names Jesus directly","It was written the night before Jesus died","It was found in the Dead Sea Scrolls in Jesus's handwriting"]},
+    {q:"The 'Boltzmann Brain problem' challenges the multiverse response to fine-tuning by arguing...",cat:"Science & Faith",a:"A random universe-generator would overwhelmingly produce tiny chaotic universes, not stable ones",opts:["A random universe-generator would overwhelmingly produce tiny chaotic universes, not stable ones","Boltzmann proved the multiverse is mathematically impossible","The multiverse requires more fine-tuning than a single universe","Brains cannot evolve in a multiverse"]},
+    {q:"James Dunn describes the 1 Corinthians 15 creed as...",cat:"The Resurrection",a:"Historical bedrock — what virtually every historian agrees on",opts:["Historical bedrock — what virtually every historian agrees on","Probably legendary","Uncertain in origin","A later interpolation"]},
+    {q:"The Pool of Bethesda confirmed which specific detail John recorded?",cat:"Biblical Reliability",a:"Five colonnades",opts:["Five colonnades","Underground location","Healing properties","Roman construction"]},
+    {q:"Sharon Street's evolutionary debunking argument challenges moral realism by arguing...",cat:"God's Existence",a:"If our moral beliefs evolved for survival, we have no reason to think they track moral reality",opts:["If our moral beliefs evolved for survival, we have no reason to think they track moral reality","Evolution proves morality is objective","Natural selection selects for moral truth","God guided evolutionary moral development"]},
+    {q:"N.T. Wright's 'The Climax of the Covenant' contains detailed exegesis of which passage?",cat:"Jesus",a:"The Philippians 2 hymn",opts:["The Philippians 2 hymn","The Sermon on the Mount","The prologue of John","Romans 1"]},
+  ],
+  expert: [
+    {q:"Alexander Vilenkin's exact quote about the universe's beginning is...",cat:"Science & Faith",a:"All the evidence we have says that the universe had a beginning",opts:["All the evidence we have says that the universe had a beginning","The Big Bang proves God created the universe","Science cannot determine whether the universe began","Multiple beginnings are mathematically possible"]},
+    {q:"In the Thomistic cosmological argument, Pure Act means...",cat:"God's Existence",a:"Something fully actual with no unrealised potential and no dependence on anything else",opts:["Something fully actual with no unrealised potential and no dependence on anything else","God's action of creation ex nihilo","The first moment of the Big Bang","A being with unlimited power"]},
+    {q:"The Testimonium Flavianum refers to...",cat:"Jesus",a:"Josephus's longer reference to Jesus in Antiquities 18 which has been partially interpolated",opts:["Josephus's longer reference to Jesus in Antiquities 18 which has been partially interpolated","Tacitus's account of Christian persecution","The Dead Sea Scrolls' reference to a messiah","Pliny the Younger's letter about Christians"]},
+    {q:"Arno Penzias won a Nobel Prize for co-discovering what, which confirmed the Big Bang?",cat:"Science & Faith",a:"The cosmic microwave background radiation",opts:["The cosmic microwave background radiation","The expansion of galaxies","The BGV theorem","Dark matter"]},
+    {q:"The anarthrous predicate nominative in John 1:1 ('Theos en ho Logos') grammatically means...",cat:"Jesus",a:"The Word shares the divine nature — qualitative, not indefinite",opts:["The Word shares the divine nature — qualitative, not indefinite","The Word is 'a god' — indefinite","The Word is identical to the Father","The Word is subordinate to God"]},
+    {q:"Stephen Meyer argues DNA exhibits 'specified information' — meaning...",cat:"Science & Faith",a:"Not just complexity but functional specification analogous to a computer program",opts:["Not just complexity but functional specification analogous to a computer program","DNA contains unexplained genetic code","DNA is more complex than any human technology","DNA was directly created without evolution"]},
+    {q:"The Great Isaiah Scroll from the Dead Sea Scrolls is significant because...",cat:"Biblical Reliability",a:"It is virtually identical to the Masoretic text despite being 1,000 years older",opts:["It is virtually identical to the Masoretic text despite being 1,000 years older","It contains previously unknown chapters","It contradicts the standard Old Testament","It proves Isaiah was written after Jesus"]},
+    {q:"Edward Feser argues that most atheist objections to Aquinas are based on...",cat:"God's Existence",a:"A fundamental misreading of what Aquinas was actually arguing",opts:["A fundamental misreading of what Aquinas was actually arguing","Valid logical counter-arguments","Modern scientific discoveries","Philosophical developments since the Enlightenment"]},
+    {q:"Ralph Martin's 'Carmen Christi' is the standard academic monograph on...",cat:"Jesus",a:"The Philippians 2 hymn",opts:["The Philippians 2 hymn","The Gospel of John's Christology","The resurrection appearances","Paul's conversion experience"]},
+    {q:"The Criterion of Multiple Attestation applied to the crucifixion yields how many independent sources?",cat:"The Resurrection",a:"Six — Mark, Paul, non-Markan Luke/Matthew, John, Josephus, Tacitus",opts:["Six — Mark, Paul, non-Markan Luke/Matthew, John, Josephus, Tacitus","Two — Mark and Paul only","Four — the four Gospels","Three — Mark, Josephus, Tacitus"]},
+    {q:"Fred Hoyle coined the term 'Big Bang' mockingly and resisted the model because...",cat:"Science & Faith",a:"It openly invites the concept of creation",opts:["It openly invites the concept of creation","He preferred a steady-state universe for aesthetic reasons","He had calculated it was mathematically impossible","He believed in a cyclic universe"]},
+    {q:"Derek Parfit's significance for the moral argument is...",cat:"God's Existence",a:"He died believing the grounding problem was unsolved and possibly unsolvable without a theistic foundation",opts:["He died believing the grounding problem was unsolved and possibly unsolvable without a theistic foundation","He proved atheistic moral realism is coherent","He refuted the moral argument conclusively","He converted to Christianity"]},
+    {q:"In Galatians 1:18, Paul describes visiting Jerusalem how many years after his conversion?",cat:"The Resurrection",a:"Three years",opts:["Three years","One year","Five years","Seven years"]},
+    {q:"The Caiaphas ossuary was found in which year, and by whom?",cat:"Biblical Reliability",a:"1990, by construction workers accidentally",opts:["1990, by construction workers accidentally","1961, by Italian archaeologists","1906, by Hugo Winckler","1947, by Bedouin shepherds"]},
+    {q:"Thomas Nagel's 'Mind and Cosmos' argues the standard neo-Darwinian account cannot accommodate...",cat:"God's Existence",a:"Consciousness, reason, and value",opts:["Consciousness, reason, and value","Physical complexity","Genetic mutation","Environmental adaptation"]},
+    {q:"The Zechariah 11:12-13 prophecy specifies which details?",cat:"Jesus",a:"Thirty pieces of silver thrown into the house of the Lord",opts:["Thirty pieces of silver thrown into the house of the Lord","Silver betrayal and hanging","A shepherd rejected by his people","Thirty days of mourning"]},
+    {q:"Alexander Pruss's 'Infinity, Causation, and Paradox' defends which argument?",cat:"God's Existence",a:"The Leibniz Contingency Argument and the Principle of Sufficient Reason",opts:["The Leibniz Contingency Argument and the Principle of Sufficient Reason","The Kalam Cosmological Argument","The Fine-Tuning Argument","The Moral Argument"]},
+    {q:"The Agapius version of the Testimonium Flavianum is significant because...",cat:"Jesus",a:"It likely preserves the original pre-interpolation text of Josephus's reference to Jesus",opts:["It likely preserves the original pre-interpolation text of Josephus's reference to Jesus","It is the oldest manuscript of Josephus","It was written in Jesus's lifetime","It contains eyewitness testimony"]},
+    {q:"Raymond Brown's significance in Johannine scholarship is...",cat:"Jesus",a:"He is a critical Catholic scholar whose commentary on John supports the traditional theology of the prologue",opts:["He is a critical Catholic scholar whose commentary on John supports the traditional theology of the prologue","He proved John was written in the second century","He disproved the pre-existence of Christ","He translated the New World Translation"]},
+    {q:"Eugene Koonin's statement about origin of life is...",cat:"Science & Faith",a:"The origin of life is a mystery that we are still far from solving",opts:["The origin of life is a mystery that we are still far from solving","RNA world theory has solved the origin of life","Life evolved from simple chemicals in 1 million years","The origin of life proves God does not exist"]},
+  ]
+};
+
+let gameMode = 'classic';
+let gameDiff = 'beginner';
+let questions = [];
+let currentQ = 0;
+let score = 0;
+let correct = 0;
+let combo = 0;
+let bestStreak = 0;
+let timer = null;
+let timeLeft = 15;
+let totalTime = 60;
+let gameStartTime = null;
+let wrongAnswers = [];
+let answered = false;
+
+function selectMode(mode) {
+  gameMode = mode;
+  document.querySelectorAll('.mode-card').forEach(c => c.classList.remove('selected'));
+  document.getElementById('mode-' + mode).classList.add('selected');
+}
+
+function selectDiff(diff) {
+  gameDiff = diff;
+  document.querySelectorAll('.diff-btn').forEach(b => b.classList.remove('sel'));
+  document.getElementById('diff-' + diff).classList.add('sel');
+}
+
+function showScreen(name) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('screen-' + name).classList.add('active');
+}
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function startGame() {
+  const pool = ALL_QUESTIONS[gameDiff] || ALL_QUESTIONS.beginner;
+  questions = shuffle(pool).slice(0, gameMode === 'blitz' ? pool.length : 20);
+  currentQ = 0;
+  score = 0;
+  correct = 0;
+  combo = 0;
+  bestStreak = 0;
+  wrongAnswers = [];
+  answered = false;
+  gameStartTime = Date.now();
+
+  showScreen('game');
+  loadQuestion();
+
+  if (gameMode === 'blitz') startBlitzTimer();
+}
+
+function startBlitzTimer() {
+  totalTime = 60;
+  const ring = document.getElementById('timer-ring');
+  const num = document.getElementById('timer-num');
+  const circumference = 175.9;
+  ring.setAttribute('stroke-dasharray', circumference);
+
+  timer = setInterval(() => {
+    totalTime--;
+    const offset = circumference * (1 - totalTime / 60);
+    ring.style.strokeDashoffset = offset;
+    num.textContent = totalTime;
+    if (totalTime <= 10) ring.style.stroke = '#a32d2d';
+    if (totalTime <= 0) { clearInterval(timer); endGame(); }
+  }, 1000);
+}
+
+function loadQuestion() {
+  if (currentQ >= questions.length) { endGame(); return; }
+
+  answered = false;
+  const q = questions[currentQ];
+  document.getElementById('q-num').textContent = 'Question ' + (currentQ + 1);
+  document.getElementById('q-category').textContent = q.cat;
+  document.getElementById('q-text').textContent = q.q;
+  document.getElementById('qnum-display').textContent = (currentQ + 1) + '/' + questions.length;
+  document.getElementById('progress-fill').style.width = (currentQ / questions.length * 100) + '%';
+  document.getElementById('score-display').textContent = score;
+
+  // Combo display
+  const comboEl = document.getElementById('combo-display');
+  if (combo >= 2) {
+    comboEl.style.opacity = '1';
+    document.getElementById('combo-num').textContent = combo;
+  } else {
+    comboEl.style.opacity = '0';
+  }
+
+  // Answers
+  const shuffledOpts = shuffle(q.opts);
+  const grid = document.getElementById('answers-grid');
+  grid.innerHTML = shuffledOpts.map(opt =>
+    `<button class="answer-btn pop-in" onclick="checkAnswer(this, '${opt.replace(/'/g, "\\'")}', '${q.a.replace(/'/g, "\\'")}')">${opt}</button>`
+  ).join('');
+
+  // Timer (not for blitz mode)
+  if (gameMode !== 'blitz') {
+    clearInterval(timer);
+    timeLeft = gameMode === 'survival' ? 20 : 15;
+    startQuestionTimer();
+  }
+}
+
+function startQuestionTimer() {
+  const ring = document.getElementById('timer-ring');
+  const num = document.getElementById('timer-num');
+  const circumference = 175.9;
+  ring.setAttribute('stroke-dasharray', circumference);
+  ring.style.stroke = '#c8a951';
+  num.textContent = timeLeft;
+
+  timer = setInterval(() => {
+    timeLeft--;
+    const offset = circumference * (1 - timeLeft / (gameMode === 'survival' ? 20 : 15));
+    ring.style.strokeDashoffset = offset;
+    num.textContent = timeLeft;
+    if (timeLeft <= 5) ring.style.stroke = '#a32d2d';
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      timeExpired();
+    }
+  }, 1000);
+}
+
+function timeExpired() {
+  if (answered) return;
+  answered = true;
+  const q = questions[currentQ];
+  wrongAnswers.push({ q: q.q, correct: q.a, yours: 'Time expired' });
+  combo = 0;
+  document.querySelectorAll('.answer-btn').forEach(btn => {
+    btn.disabled = true;
+    if (btn.textContent === q.a) btn.classList.add('reveal');
+  });
+  if (gameMode === 'survival') { endGame(); return; }
+  setTimeout(() => { currentQ++; loadQuestion(); }, 1500);
+}
+
+function checkAnswer(btn, chosen, correct_a) {
+  if (answered) return;
+  answered = true;
+  clearInterval(timer);
+
+  const q = questions[currentQ];
+  const isCorrect = chosen === correct_a;
+
+  document.querySelectorAll('.answer-btn').forEach(b => {
+    b.disabled = true;
+    if (b.textContent === correct_a) b.classList.add(isCorrect ? 'correct' : 'reveal');
+  });
+
+  if (isCorrect) {
+    btn.classList.add('correct');
+    correct++;
+    combo++;
+    if (combo > bestStreak) bestStreak = combo;
+    const timeBonus = gameMode === 'blitz' ? 10 : Math.max(0, timeLeft * 2);
+    const comboBonus = combo >= 3 ? combo * 5 : 0;
+    score += 10 + timeBonus + comboBonus;
+  } else {
+    btn.classList.add('wrong');
+    combo = 0;
+    wrongAnswers.push({ q: q.q, correct: correct_a, yours: chosen });
+    if (gameMode === 'survival') { setTimeout(() => endGame(), 1500); return; }
+  }
+
+  document.getElementById('score-display').textContent = score;
+  if (gameMode !== 'blitz') setTimeout(() => { currentQ++; loadQuestion(); }, 1200);
+  else { currentQ++; loadQuestion(); }
+}
+
+function endGame() {
+  clearInterval(timer);
+  showScreen('results');
+
+  const total = Math.max(currentQ, 1);
+  const accuracy = Math.round(correct / total * 100);
+  document.getElementById('result-score').textContent = score;
+  document.getElementById('rs-correct').textContent = correct;
+  document.getElementById('rs-accuracy').textContent = accuracy + '%';
+  document.getElementById('rs-streak').textContent = bestStreak;
+
+  const msgs = [
+    [90, "Outstanding! 🏆", "You're ready for any conversation about faith. Your knowledge is exceptional."],
+    [70, "Excellent work! ✝️", "You have a strong grasp of the arguments. Keep studying the Pro deep dives to get to 100%."],
+    [50, "Good start! 📚", "You know the basics. Review the Evidence Library to sharpen the details."],
+    [0, "Keep studying! 🌱", "Every expert started here. Review the Start Here tab on the Evidence Library."],
+  ];
+  const [, msg, sub] = msgs.find(([threshold]) => accuracy >= threshold);
+  document.getElementById('result-msg').textContent = msg;
+  document.getElementById('result-sub').textContent = sub;
+
+  // Review wrong answers
+  const reviewEl = document.getElementById('review-list');
+  if (wrongAnswers.length > 0) {
+    reviewEl.innerHTML = '<div style="font-family:var(--ui);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:.75rem;">Review — questions you missed</div>' +
+      wrongAnswers.slice(0, 5).map(w =>
+        `<div class="review-item">
+          <div class="review-q">${w.q}</div>
+          <div class="review-correct">✓ ${w.correct}</div>
+          ${w.yours !== 'Time expired' ? `<div class="review-yours">✗ Your answer: ${w.yours}</div>` : '<div class="review-yours">✗ Time expired</div>'}
+        </div>`
+      ).join('');
+  } else {
+    reviewEl.innerHTML = '<div style="text-align:center;font-family:var(--ui);font-size:.88rem;color:#5dcaa5;margin-top:1rem;">Perfect score — no wrong answers! ✓</div>';
+  }
+
+  // Save to localStorage
+  const history = JSON.parse(localStorage.getItem('speedRoundHistory') || '[]');
+  history.push({ date: new Date().toISOString(), score, correct, total, accuracy, mode: gameMode, diff: gameDiff });
+  localStorage.setItem('speedRoundHistory', JSON.stringify(history.slice(-50)));
+}
+
+// Nav auth
+(function(){
+  var sb = window.supabase.createClient(
+    'https://noprgxkwniouukmrfozc.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+  );
+  sb.auth.getSession().then(function(r){
+    var s = r.data && r.data.session;
+    var na = document.getElementById('nav-auth');
+    if(na && s) na.innerHTML = '<a href="dashboard.html" style="font-family:var(--ui);font-size:.85rem;font-weight:500;padding:8px 20px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none;">Dashboard</a>';
+  });
+})();
+</script>
+</body>
+</html>

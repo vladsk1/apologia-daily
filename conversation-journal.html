@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Conversation Journal — Apologia Daily</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=DM+Sans:wght@400;500&family=Source+Serif+4:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --n:#0a1628;--n2:#050d1a;--n3:#1e4278;--n4:#f0f6fb;--n5:#ddeaf5;
+  --g:#c8a951;--gl:#e8cf87;--w:#fff;--o:#f8f7f4;
+  --m:#3a4a62;--mu:#7a8fa8;--b:#d4e0ec;
+  --gr:#0f6e56;--gr2:#e1f5ee;
+  --fd:'Playfair Display',Georgia,serif;
+  --ui:'DM Sans',sans-serif;
+  --bo:'Source Serif 4',Georgia,serif;
+}
+body{font-family:var(--bo);background:var(--o);color:var(--n);min-height:100vh;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;border-bottom:1px solid rgba(255,255,255,.08);}
+.logo{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:#fff;text-decoration:none;}
+.logo span{color:var(--g);}
+.nl{display:flex;gap:1.5rem;list-style:none;}
+.nl a{font-family:var(--ui);font-size:.82rem;color:rgba(255,255,255,.7);text-decoration:none;text-transform:uppercase;letter-spacing:.04em;}
+.nl a.act{color:var(--g);}
+.nr{display:flex;gap:10px;align-items:center;}
+.nsi{font-family:var(--ui);font-size:.85rem;color:rgba(255,255,255,.6);text-decoration:none;}
+.nct{font-family:var(--ui);font-size:.85rem;font-weight:500;padding:8px 20px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none;}
+@media(max-width:768px){.nl{display:none;}}
+
+.hero{background:var(--n2);padding:8rem 2rem 4rem;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(30,66,120,.5),transparent 70%);}
+.hi{max-width:1100px;margin:0 auto;position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
+.ey{font-family:var(--ui);font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--g);margin-bottom:1rem;}
+.ht{font-family:var(--fd);font-size:clamp(2rem,5vw,3rem);font-weight:700;color:#fff;margin-bottom:1rem;line-height:1.1;}
+.ht em{font-style:italic;color:var(--g);}
+.hs{font-size:1rem;color:rgba(255,255,255,.6);max-width:480px;line-height:1.8;}
+.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;}
+.hs-stat{text-align:center;}
+.hs-num{font-family:var(--fd);font-size:2rem;font-weight:700;color:var(--g);display:block;line-height:1;}
+.hs-lbl{font-family:var(--ui);font-size:.7rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.1em;}
+
+.main{max-width:1100px;margin:0 auto;padding:2.5rem 2rem 6rem;display:grid;grid-template-columns:1fr 380px;gap:2rem;align-items:start;}
+@media(max-width:900px){.main{grid-template-columns:1fr;}}
+
+.section-label{font-family:var(--ui);font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mu);margin-bottom:1.25rem;display:flex;align-items:center;gap:12px;}
+.section-label::after{content:'';flex:1;height:1px;background:var(--b);}
+
+/* NEW ENTRY FORM */
+.form-card{background:var(--w);border:1px solid var(--b);border-radius:8px;padding:2rem;margin-bottom:2rem;}
+.form-title{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:var(--n);margin-bottom:.25rem;}
+.form-sub{font-family:var(--ui);font-size:.82rem;color:var(--mu);margin-bottom:1.5rem;}
+.form-group{margin-bottom:1.25rem;}
+.form-label{font-family:var(--ui);font-size:.75rem;font-weight:500;color:var(--m);margin-bottom:.4rem;display:block;text-transform:uppercase;letter-spacing:.06em;}
+.form-input{width:100%;padding:10px 14px;border:1px solid var(--b);border-radius:4px;font-family:var(--bo);font-size:.92rem;color:var(--n);background:var(--o);outline:none;transition:border-color .15s;}
+.form-input:focus{border-color:var(--n3);}
+.form-textarea{resize:vertical;min-height:80px;line-height:1.6;}
+.form-textarea.tall{min-height:120px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+@media(max-width:600px){.form-row{grid-template-columns:1fr;}}
+.form-select{width:100%;padding:10px 14px;border:1px solid var(--b);border-radius:4px;font-family:var(--ui);font-size:.88rem;color:var(--n);background:var(--o);outline:none;cursor:pointer;}
+.ai-coaching-btn{width:100%;padding:12px;border-radius:4px;background:var(--n);color:var(--w);font-family:var(--ui);font-size:.92rem;font-weight:500;border:none;cursor:pointer;transition:background .2s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.ai-coaching-btn:hover{background:var(--n3);}
+.ai-coaching-btn:disabled{opacity:.5;cursor:default;}
+.ai-coaching-btn .spin{width:16px;height:16px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite;display:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.save-btn{width:100%;padding:12px;border-radius:4px;background:var(--g);color:var(--n);font-family:var(--ui);font-size:.92rem;font-weight:500;border:none;cursor:pointer;margin-top:10px;}
+.save-btn:hover{background:var(--gl);}
+
+/* COACHING PANEL */
+.coaching-panel{background:var(--n2);border-radius:8px;padding:1.5rem;margin-top:1.25rem;display:none;}
+.coaching-panel.visible{display:block;}
+.cp-label{font-family:var(--ui);font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--g);margin-bottom:1rem;}
+.cp-section{margin-bottom:1.25rem;}
+.cp-section-title{font-family:var(--ui);font-size:.75rem;font-weight:500;color:rgba(255,255,255,.55);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.08em;}
+.cp-text{font-size:.9rem;color:rgba(255,255,255,.78);line-height:1.8;}
+.cp-item{display:flex;gap:10px;margin-bottom:.6rem;align-items:flex-start;}
+.cp-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:7px;}
+.cp-dot.good{background:#0f6e56;}
+.cp-dot.improve{background:var(--g);}
+.cp-dot.next{background:#285a9e;}
+
+/* JOURNAL ENTRIES */
+.entries-list{display:flex;flex-direction:column;gap:12px;}
+.entry-card{background:var(--w);border:1px solid var(--b);border-radius:8px;overflow:hidden;transition:border-color .15s;}
+.entry-card:hover{border-color:var(--n3);}
+.entry-header{padding:1.25rem 1.5rem;cursor:pointer;display:flex;align-items:flex-start;gap:12px;}
+.entry-icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;margin-top:2px;}
+.entry-meta{flex:1;}
+.entry-who{font-family:var(--fd);font-size:.95rem;font-weight:600;color:var(--n);margin-bottom:3px;}
+.entry-date{font-family:var(--ui);font-size:.72rem;color:var(--mu);}
+.entry-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;}
+.entry-tag{font-family:var(--ui);font-size:.62rem;font-weight:500;padding:2px 8px;border-radius:20px;}
+.tag-worldview{background:var(--n5);color:var(--n3);}
+.tag-outcome-great{background:#e1f5ee;color:#0f6e56;}
+.tag-outcome-ok{background:#faeeda;color:#854f0b;}
+.tag-outcome-hard{background:#fcebeb;color:#a32d2d;}
+.entry-chevron{font-size:.8rem;color:var(--mu);flex-shrink:0;transition:transform .2s;}
+.entry-card.open .entry-chevron{transform:rotate(180deg);}
+.entry-body{display:none;padding:0 1.5rem 1.5rem;border-top:1px solid var(--b);}
+.entry-card.open .entry-body{display:block;}
+.entry-section{margin-top:1rem;}
+.entry-section-label{font-family:var(--ui);font-size:.65rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);margin-bottom:.4rem;}
+.entry-section-text{font-size:.9rem;color:var(--m);line-height:1.7;}
+.entry-coaching{background:var(--n2);border-radius:6px;padding:1.25rem;margin-top:1rem;}
+.entry-coaching-label{font-family:var(--ui);font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--g);margin-bottom:.75rem;}
+.entry-coaching-text{font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.75;}
+.entry-delete{font-family:var(--ui);font-size:.72rem;color:#a32d2d;background:none;border:none;cursor:pointer;margin-top:1rem;padding:0;}
+
+/* SIDEBAR */
+.sidebar{}
+.sidebar-card{background:var(--w);border:1px solid var(--b);border-radius:8px;padding:1.5rem;margin-bottom:1.25rem;}
+.sidebar-title{font-family:var(--fd);font-size:1rem;font-weight:700;color:var(--n);margin-bottom:1rem;}
+.stat-row{display:flex;align-items:center;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid var(--b);}
+.stat-row:last-child{border-bottom:none;}
+.stat-label{font-family:var(--ui);font-size:.82rem;color:var(--m);}
+.stat-value{font-family:var(--fd);font-size:1.1rem;font-weight:700;color:var(--n);}
+.topic-bar{margin-bottom:.75rem;}
+.topic-bar-top{display:flex;justify-content:space-between;font-family:var(--ui);font-size:.78rem;color:var(--m);margin-bottom:4px;}
+.topic-bar-track{height:6px;background:var(--b);border-radius:3px;overflow:hidden;}
+.topic-bar-fill{height:100%;border-radius:3px;background:var(--n3);}
+.tip-box{background:var(--n4);border-left:3px solid var(--g);padding:10px 14px;border-radius:0 4px 4px 0;font-family:var(--ui);font-size:.82rem;color:var(--m);line-height:1.6;}
+.tip-box strong{color:var(--n);}
+.empty-state{text-align:center;padding:3rem 2rem;color:var(--mu);}
+.empty-icon{font-size:2.5rem;margin-bottom:1rem;}
+.empty-title{font-family:var(--fd);font-size:1.1rem;color:var(--m);margin-bottom:.5rem;}
+.empty-sub{font-family:var(--ui);font-size:.82rem;line-height:1.6;}
+
+footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3rem 2rem 2rem;margin-top:4rem;}
+.fi{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;}
+.flo{font-family:var(--fd);font-size:1.1rem;font-weight:600;color:#fff;}
+.flo span{color:var(--g);}
+.fc{font-family:var(--ui);font-size:.75rem;color:rgba(255,255,255,.2);width:100%;text-align:center;padding-top:2rem;border-top:1px solid rgba(255,255,255,.06);margin-top:1.5rem;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Apologia<span>Daily</span></a>
+  <ul class="nl">
+    <li><a href="evidence-library.html">Evidence Library</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="debate-arena.html">Debate Arena</a></li>
+    <li><a href="daily-devotional.html">Daily Devotional</a></li>
+    <li><a href="ask-anything.html">Ask Anything</a></li>
+    <li><a href="study-plans.html">Study Plans</a></li>
+    <li><a href="conversation-journal.html" class="act">Journal</a></li>
+  </ul>
+  <div class="nr">
+    <span id="nav-auth"><a href="login.html" class="nsi">Sign in</a> <a href="signup.html" class="nct">Start Free</a></span>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hi">
+    <div>
+      <p class="ey">Conversation Journal</p>
+      <h1 class="ht">Learn from every<br/><em>real conversation</em></h1>
+      <p class="hs">Record conversations about faith you have had in real life. Get AI coaching on what went well, what you could have said differently, and exactly what to say next time.</p>
+    </div>
+    <div class="hero-stats">
+      <div class="hs-stat">
+        <span class="hs-num" id="stat-total">0</span>
+        <span class="hs-lbl">Conversations</span>
+      </div>
+      <div class="hs-stat">
+        <span class="hs-num" id="stat-topics">0</span>
+        <span class="hs-lbl">Topics covered</span>
+      </div>
+      <div class="hs-stat">
+        <span class="hs-num" id="stat-streak">0</span>
+        <span class="hs-lbl">Day streak</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="left-col">
+
+    <!-- NEW ENTRY FORM -->
+    <p class="section-label">Record a conversation</p>
+    <div class="form-card">
+      <div class="form-title">New conversation entry</div>
+      <div class="form-sub">Describe what happened. The more detail you give, the better the AI coaching will be.</div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Who did you talk to?</label>
+          <input class="form-input" id="who" type="text" placeholder="e.g. Atheist coworker, Muslim friend, sceptical family member"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Their worldview</label>
+          <select class="form-select" id="worldview">
+            <option value="">Select...</option>
+            <option>Atheist</option>
+            <option>Agnostic</option>
+            <option>Muslim</option>
+            <option>Jewish</option>
+            <option>Hindu</option>
+            <option>Buddhist</option>
+            <option>Secular / No religion</option>
+            <option>Nominal Christian</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Main topic discussed</label>
+          <select class="form-select" id="topic">
+            <option value="">Select...</option>
+            <option>Does God exist?</option>
+            <option>The resurrection</option>
+            <option>Problem of evil / suffering</option>
+            <option>Science vs faith</option>
+            <option>Is the Bible reliable?</option>
+            <option>Who is Jesus?</option>
+            <option>Other religions</option>
+            <option>Morality without God</option>
+            <option>Jesus's existence</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">How did it go?</label>
+          <select class="form-select" id="outcome">
+            <option value="">Select...</option>
+            <option value="great">Great — they were genuinely interested</option>
+            <option value="ok">OK — civil but no real progress</option>
+            <option value="hard">Hard — they were hostile or dismissive</option>
+            <option value="ongoing">Ongoing — conversation continues</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">What did they say? What objections did they raise?</label>
+        <textarea class="form-input form-textarea tall" id="they-said" placeholder="e.g. They said science has disproved God and that faith is just wishful thinking. They also asked why God allows suffering..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">What did you say? How did you respond?</label>
+        <textarea class="form-input form-textarea tall" id="i-said" placeholder="e.g. I tried to explain the Kalam argument but got a bit confused when they mentioned quantum physics. I also said something about the resurrection but couldn't remember the details..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">How are you feeling about it? Anything specific you want coaching on?</label>
+        <textarea class="form-input form-textarea" id="reflection" placeholder="e.g. I felt unprepared on the suffering question. I'd love help knowing exactly what to say next time they bring it up."></textarea>
+      </div>
+
+      <button class="ai-coaching-btn" id="coaching-btn" onclick="getCoaching()">
+        <span class="spin" id="spin"></span>
+        <span id="btn-text">&#129504; Get AI coaching on this conversation</span>
+      </button>
+
+      <div class="coaching-panel" id="coaching-panel">
+        <div class="cp-label">AI Coaching</div>
+        <div id="coaching-content"></div>
+      </div>
+
+      <button class="save-btn" onclick="saveEntry()">Save to journal &#8594;</button>
+    </div>
+
+    <!-- ENTRIES LIST -->
+    <p class="section-label">Your journal</p>
+    <div id="entries-list">
+      <div class="empty-state">
+        <div class="empty-icon">&#128221;</div>
+        <div class="empty-title">No entries yet</div>
+        <div class="empty-sub">Record your first conversation above.<br/>Every real conversation is a learning opportunity.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sidebar">
+
+    <p class="section-label">Your stats</p>
+
+    <div class="sidebar-card">
+      <div class="sidebar-title">Conversations by topic</div>
+      <div id="topic-bars">
+        <div style="font-family:var(--ui);font-size:.82rem;color:var(--mu);">Record conversations to see your topic breakdown.</div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-title">Summary</div>
+      <div class="stat-row"><span class="stat-label">Total conversations</span><span class="stat-value" id="side-total">0</span></div>
+      <div class="stat-row"><span class="stat-label">Went well</span><span class="stat-value" id="side-great">0</span></div>
+      <div class="stat-row"><span class="stat-label">Went OK</span><span class="stat-value" id="side-ok">0</span></div>
+      <div class="stat-row"><span class="stat-label">Challenging</span><span class="stat-value" id="side-hard">0</span></div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-title">&#128161; Coaching tip</div>
+      <div class="tip-box" id="tip-box">
+        <strong>Start with curiosity.</strong> Before making your case, ask them what they actually believe and why. People are more open to hearing your perspective after they feel genuinely heard.
+      </div>
+    </div>
+
+    <div class="sidebar-card" style="background:var(--n2);border-color:rgba(255,255,255,.08);">
+      <div style="font-family:var(--fd);font-size:1rem;font-weight:700;color:#fff;margin-bottom:.5rem;">Want to practise first?</div>
+      <div style="font-family:var(--ui);font-size:.82rem;color:rgba(255,255,255,.5);margin-bottom:1rem;line-height:1.6;">Use the Debate Arena to rehearse conversations before having them in real life.</div>
+      <a href="debate-arena.html" style="display:block;text-align:center;padding:10px;border-radius:3px;background:var(--g);color:var(--n);font-family:var(--ui);font-size:.85rem;font-weight:500;text-decoration:none;">Open Debate Arena &#8594;</a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="fi">
+    <div class="flo">Apologia<span>Daily</span></div>
+  </div>
+  <div class="fc">&#169; 2026 Apologia Daily. Built for the defence of the Gospel.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const STORAGE_KEY = 'apologia_journal';
+
+const tips = [
+  '<strong>Start with curiosity.</strong> Before making your case, ask them what they actually believe and why. People are more open after they feel heard.',
+  '<strong>One argument at a time.</strong> Don\'t try to cover everything. Pick the argument most relevant to their objection and go deep on that one.',
+  '<strong>Ask, don\'t tell.</strong> "What would it take for you to believe God exists?" is more powerful than presenting all your arguments at once.',
+  '<strong>Acknowledge what\'s good.</strong> "That\'s a fair question" or "I can see why you think that" disarms defensiveness before you respond.',
+  '<strong>Know your limits.</strong> It\'s fine to say "I don\'t know the answer to that but I\'ll find out." Honesty builds trust.',
+  '<strong>The goal is a seed, not a harvest.</strong> Most people don\'t convert in one conversation. Your job is to leave them with something to think about.',
+  '<strong>Study the Kalam.</strong> It\'s the most accessible argument for most sceptics. A well-told Kalam often opens the door to deeper conversation.',
+];
+
+function loadEntries() {
+  return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+}
+
+function saveEntries(entries) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+}
+
+function renderEntries() {
+  const entries = loadEntries();
+  const container = document.getElementById('entries-list');
+  updateStats(entries);
+  updateTopicBars(entries);
+
+  if (entries.length === 0) {
+    container.innerHTML = '<div class="empty-state"><div class="empty-icon">&#128221;</div><div class="empty-title">No entries yet</div><div class="empty-sub">Record your first conversation above.<br/>Every real conversation is a learning opportunity.</div></div>';
+    return;
+  }
+
+  container.innerHTML = entries.slice().reverse().map((e, ri) => {
+    const i = entries.length - 1 - ri;
+    const outcomeTag = e.outcome === 'great' ? '<span class="entry-tag tag-outcome-great">Went well</span>' :
+      e.outcome === 'ok' ? '<span class="entry-tag tag-outcome-ok">Went OK</span>' :
+      e.outcome === 'hard' ? '<span class="entry-tag tag-outcome-hard">Challenging</span>' :
+      '<span class="entry-tag tag-worldview">Ongoing</span>';
+    const icons = {Atheist:'🔭',Agnostic:'🤔',Muslim:'☪️',Jewish:'✡️',Hindu:'🙏',Buddhist:'☸️','Secular / No religion':'🌍','Nominal Christian':'✝️',Other:'💬'};
+    const icon = icons[e.worldview] || '💬';
+    const bgColors = {Atheist:'#1e4278',Agnostic:'#3c3489',Muslim:'#0f6e56',Jewish:'#854f0b',Other:'#1e4278'};
+    const bg = bgColors[e.worldview] || '#1e4278';
+
+    return `<div class="entry-card" id="entry-${i}">
+      <div class="entry-header" onclick="toggleEntry(${i})">
+        <div class="entry-icon" style="background:${bg}20;font-size:1.1rem;">${icon}</div>
+        <div class="entry-meta">
+          <div class="entry-who">${e.who || 'Anonymous'} &mdash; ${e.topic || 'General conversation'}</div>
+          <div class="entry-date">${new Date(e.date).toLocaleDateString('en-AU', {day:'numeric',month:'long',year:'numeric'})}</div>
+          <div class="entry-tags">${e.worldview ? '<span class="entry-tag tag-worldview">'+e.worldview+'</span>' : ''}${outcomeTag}</div>
+        </div>
+        <div class="entry-chevron">&#8964;</div>
+      </div>
+      <div class="entry-body">
+        ${e.theySaid ? `<div class="entry-section"><div class="entry-section-label">What they said</div><div class="entry-section-text">${e.theySaid}</div></div>` : ''}
+        ${e.iSaid ? `<div class="entry-section"><div class="entry-section-label">What I said</div><div class="entry-section-text">${e.iSaid}</div></div>` : ''}
+        ${e.reflection ? `<div class="entry-section"><div class="entry-section-label">My reflection</div><div class="entry-section-text">${e.reflection}</div></div>` : ''}
+        ${e.coaching ? `<div class="entry-coaching"><div class="entry-coaching-label">AI Coaching</div><div class="entry-coaching-text">${e.coaching}</div></div>` : ''}
+        <button class="entry-delete" onclick="deleteEntry(${i})">Delete this entry</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function toggleEntry(i) {
+  const card = document.getElementById('entry-' + i);
+  card.classList.toggle('open');
+}
+
+function deleteEntry(i) {
+  if (!confirm('Delete this entry?')) return;
+  const entries = loadEntries();
+  entries.splice(i, 1);
+  saveEntries(entries);
+  renderEntries();
+}
+
+function updateStats(entries) {
+  document.getElementById('stat-total').textContent = entries.length;
+  const topics = new Set(entries.map(e => e.topic).filter(Boolean));
+  document.getElementById('stat-topics').textContent = topics.size;
+  document.getElementById('side-total').textContent = entries.length;
+  document.getElementById('side-great').textContent = entries.filter(e => e.outcome === 'great').length;
+  document.getElementById('side-ok').textContent = entries.filter(e => e.outcome === 'ok').length;
+  document.getElementById('side-hard').textContent = entries.filter(e => e.outcome === 'hard').length;
+}
+
+function updateTopicBars(entries) {
+  if (entries.length === 0) return;
+  const counts = {};
+  entries.forEach(e => { if (e.topic) counts[e.topic] = (counts[e.topic] || 0) + 1; });
+  const max = Math.max(...Object.values(counts));
+  const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 5);
+  document.getElementById('topic-bars').innerHTML = sorted.map(([topic, count]) =>
+    `<div class="topic-bar">
+      <div class="topic-bar-top"><span>${topic}</span><span>${count}</span></div>
+      <div class="topic-bar-track"><div class="topic-bar-fill" style="width:${Math.round(count/max*100)}%"></div></div>
+    </div>`
+  ).join('');
+}
+
+async function getCoaching() {
+  const who = document.getElementById('who').value.trim();
+  const worldview = document.getElementById('worldview').value;
+  const topic = document.getElementById('topic').value;
+  const theySaid = document.getElementById('they-said').value.trim();
+  const iSaid = document.getElementById('i-said').value.trim();
+  const reflection = document.getElementById('reflection').value.trim();
+
+  if (!theySaid && !iSaid) {
+    alert('Please describe what was said in the conversation first.');
+    return;
+  }
+
+  const btn = document.getElementById('coaching-btn');
+  const spin = document.getElementById('spin');
+  const btnText = document.getElementById('btn-text');
+  btn.disabled = true;
+  spin.style.display = 'inline-block';
+  btnText.textContent = 'Getting coaching...';
+
+  const prompt = `You are an expert Christian apologetics coach. A Christian has just had a real conversation about faith and wants your coaching.
+
+Conversation details:
+- Who they talked to: ${who || 'Not specified'}
+- Their worldview: ${worldview || 'Not specified'}
+- Main topic: ${topic || 'Not specified'}
+- What the other person said: ${theySaid || 'Not provided'}
+- What the Christian said: ${iSaid || 'Not provided'}
+- Their reflection and specific questions: ${reflection || 'None'}
+
+Please provide warm, practical coaching with these four sections:
+
+**What went well**
+(2-3 specific things they did well — be encouraging and specific)
+
+**What to improve**
+(2-3 specific, actionable suggestions — be kind but honest)
+
+**Exactly what to say next time**
+(Give them 2-3 specific sentences or a short script they can actually use in this exact type of conversation — make it natural and conversational, not preachy)
+
+**What to study**
+(1-2 specific arguments or resources from the Evidence Library that would help them most with this type of conversation)
+
+Keep the tone warm, encouraging, and practical. This person is trying to share their faith and deserves genuine help.`;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      const text = data.content[0].text;
+      window._lastCoaching = text;
+
+      // Parse and render
+      const panel = document.getElementById('coaching-panel');
+      const content = document.getElementById('coaching-content');
+
+      // Convert markdown-style to HTML
+      const formatted = text
+        .replace(/\*\*What went well\*\*/g, '<div class="cp-section"><div class="cp-section-title">What went well</div>')
+        .replace(/\*\*What to improve\*\*/g, '</div><div class="cp-section"><div class="cp-section-title">What to improve</div>')
+        .replace(/\*\*Exactly what to say next time\*\*/g, '</div><div class="cp-section"><div class="cp-section-title">What to say next time</div>')
+        .replace(/\*\*What to study\*\*/g, '</div><div class="cp-section"><div class="cp-section-title">What to study</div>')
+        .replace(/\n- /g, '\n')
+        .replace(/\n/g, '<br/>');
+
+      content.innerHTML = formatted + '</div>';
+      panel.classList.add('visible');
+    }
+  } catch(e) {
+    alert('Could not get coaching right now. Please try again.');
+  }
+
+  btn.disabled = false;
+  spin.style.display = 'none';
+  btnText.textContent = '&#129504; Get AI coaching on this conversation';
+}
+
+function saveEntry() {
+  const who = document.getElementById('who').value.trim();
+  const worldview = document.getElementById('worldview').value;
+  const topic = document.getElementById('topic').value;
+  const outcome = document.getElementById('outcome').value;
+  const theySaid = document.getElementById('they-said').value.trim();
+  const iSaid = document.getElementById('i-said').value.trim();
+  const reflection = document.getElementById('reflection').value.trim();
+
+  if (!theySaid && !iSaid) {
+    alert('Please describe what was said before saving.');
+    return;
+  }
+
+  const entry = {
+    id: Date.now(),
+    date: new Date().toISOString(),
+    who, worldview, topic, outcome, theySaid, iSaid, reflection,
+    coaching: window._lastCoaching || null
+  };
+
+  const entries = loadEntries();
+  entries.push(entry);
+  saveEntries(entries);
+  renderEntries();
+
+  // Clear form
+  ['who','they-said','i-said','reflection'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('worldview').value = '';
+  document.getElementById('topic').value = '';
+  document.getElementById('outcome').value = '';
+  document.getElementById('coaching-panel').classList.remove('visible');
+  window._lastCoaching = null;
+
+  // Show success
+  alert('Entry saved to your journal.');
+}
+
+// Random daily tip
+document.getElementById('tip-box').innerHTML = tips[Math.floor(Math.random() * tips.length)];
+
+// Supabase nav
+(function(){
+  var sb = window.supabase.createClient(
+    'https://noprgxkwniouukmrfozc.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+  );
+  sb.auth.getSession().then(function(r){
+    var s = r.data && r.data.session;
+    var na = document.getElementById('nav-auth');
+    if(na && s) na.innerHTML = '<a href="dashboard.html" style="font-family:var(--ui);font-size:.85rem;font-weight:500;padding:8px 20px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none;">Dashboard</a>';
+  });
+})();
+
+renderEntries();
+</script>
+</body>
+</html>
