@@ -437,3 +437,40 @@ Conclusion: Therefore a maximally great being exists in the actual world.</p><p 
 </div></div>
 <div class="pbn"><div><div class="pbnt">83 more arguments for God's existence</div><div class="pbns">Ontological, axiological, experiential, and teleological arguments — unlock with Pro.</div></div><a href="index.html#pricing" class="pbnb">Upgrade to Pro — $8/mo</a></div>
 </d
+
+<script>
+async function askInlineTutor(tid, arg) {
+  var inp = document.getElementById('iti-' + tid);
+  var q = inp ? inp.value.trim() : '';
+  if (!q) return;
+  var btn = document.getElementById('itb-' + tid);
+  var resp = document.getElementById('itr-' + tid);
+  var text = document.getElementById('itrt-' + tid);
+  if (btn) { btn.disabled = true; btn.textContent = '...'; }
+  if (resp) resp.style.display = 'none';
+  try {
+    var res = await fetch('/api/tutor', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        question: q,
+        argument: arg,
+        category: 'Evidence Library'
+      })
+    });
+    if (res.ok) {
+      var data = await res.json();
+      if (text) text.textContent = data.answer || 'No response received.';
+      if (resp) resp.style.display = 'block';
+      if (inp) inp.value = '';
+    } else {
+      if (text) text.textContent = 'Something went wrong. Please try again.';
+      if (resp) resp.style.display = 'block';
+    }
+  } catch(e) {
+    if (text) text.textContent = 'Something went wrong. Please try again.';
+    if (resp) resp.style.display = 'block';
+  }
+  if (btn) { btn.disabled = false; btn.textContent = 'Ask'; }
+}
+</script>
