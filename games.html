@@ -59,6 +59,7 @@
     .game-card-meta { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text-muted); }
     .game-card-cta { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--navy-500); }
     .game-card.featured { border-color: var(--gold); }
+    .game-card.featured .game-card-header { background: linear-gradient(135deg, var(--navy-950), var(--navy-800)); }
     .game-card.featured 
     .game-card.featured .game-card-name { color: #ffffff; font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; }
     .game-card.featured .game-card-desc { color: rgba(255,255,255,0.7); }
@@ -142,18 +143,18 @@
     <p class="section-label">Free games</p>
     <div class="games-grid">
 
-      <a href="daily-quiz.html" class="game-card featured">
-        <div class="game-card-header">
-          <div class="game-card-icon">🧠</div>
-          <div class="game-card-top">
-            <div class="game-card-name">Daily Quiz</div>
-            <span class="game-badge badge-free">Free</span>
+      <a href="daily-quiz.html" class="game-card featured" style="border:2px solid #c8a951;">
+        <div class="game-card-header" style="padding:1.75rem 1.75rem 1rem;">
+          <div class="game-card-icon" style="font-size:2rem;margin-bottom:1rem;">🧠</div>
+          <div class="game-card-top" style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:0.75rem;">
+            <div class="game-card-name" style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--navy-950,#050d1a);">Daily Quiz</div>
+            <span style="background:rgba(15,110,86,0.1);color:#0f6e56;border:1px solid rgba(15,110,86,0.2);font-family:var(--font-ui);font-size:0.7rem;font-weight:500;padding:3px 10px;border-radius:20px;white-space:nowrap;">Free</span>
           </div>
-          <div class="game-card-desc" style="color:rgba(255,255,255,0.6);">Five questions every day across three difficulty levels — Beginner, Intermediate, and Expert. Build your streak and grow your knowledge one day at a time.</div>
+          <div style="font-size:0.9rem;color:var(--text-mid,#3a4a62);line-height:1.65;">Five questions every day across three difficulty levels — Beginner, Intermediate, and Expert. Build your streak and grow your knowledge one day at a time.</div>
         </div>
-        <div class="game-card-footer" style="border-top:1px solid rgba(255,255,255,0.08);">
-          <span class="game-card-meta" style="color:rgba(255,255,255,0.3);">5 questions · 3 levels · Daily streak</span>
-          <span class="game-card-cta" style="color:var(--gold);">Play today →</span>
+        <div class="game-card-footer" style="padding:1rem 1.75rem;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border,#e8e2d8);">
+          <span style="font-family:var(--font-ui);font-size:0.78rem;color:var(--text-mid,#3a4a62);">5 questions · 3 levels · Daily streak</span>
+          <span style="font-family:var(--font-ui);font-size:0.85rem;font-weight:500;color:#c8a951;">Play today →</span>
         </div>
       </a>
 
