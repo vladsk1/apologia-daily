@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Argument Map — Apologia Daily</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --n:#050d1a;--n8:#0a1628;--n7:#0f2040;--n5:#1e4278;--n3:#4a7ab5;
+      --g:#c8a951;--gl:#d4b96a;
+      --w:#fff;--ow:#f7f4ef;--border:#e8e2d8;--tm:#3a4a62;--td:#0f1f38;
+      --fd:'Playfair Display',Georgia,serif;
+      --ss:'Source Serif 4',Georgia,serif;
+      --ui:'DM Sans',system-ui,sans-serif;
+      --c1:#285a9e;--c2:#a32d2d;--c3:#3c3489;--c4:#0f6e56;--c5:#854f0b;--c6:#1e4278;
+    }
+    body{font-family:var(--ui);background:var(--ow);color:var(--td);}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--n);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:56px;}
+    .nav-logo{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:#fff;text-decoration:none;}
+    .nav-logo span{color:var(--g);}
+    .nl{list-style:none;display:flex;gap:1.5rem;}
+    .nl a{font-family:var(--ui);font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.6);text-decoration:none;transition:color .15s;}
+    .nl a:hover,.nl a.active{color:#fff;}
+    .nav-right{display:flex;align-items:center;gap:1rem;}
+    .nav-signin{font-family:var(--ui);font-size:.82rem;color:rgba(255,255,255,.6);text-decoration:none;}
+    .nav-cta{font-family:var(--ui);font-size:.82rem;font-weight:500;padding:7px 16px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none;}
+
+    /* PAGE HEADER */
+    .page-header{background:var(--n);padding:7rem 2rem 3rem;text-align:center;}
+    .page-eyebrow{font-family:var(--ui);font-size:.72rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--g);margin-bottom:.75rem;}
+    .page-title{font-family:var(--fd);font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:1rem;}
+    .page-desc{font-family:var(--ss);font-size:1rem;color:rgba(255,255,255,.55);max-width:560px;margin:0 auto 2rem;line-height:1.8;}
+
+    /* CONTROLS */
+    .controls{display:flex;align-items:center;justify-content:center;gap:.75rem;flex-wrap:wrap;padding:1.5rem 2rem;}
+    .filter-btn{font-family:var(--ui);font-size:.78rem;font-weight:500;padding:7px 16px;border-radius:20px;border:1px solid var(--border);background:var(--w);color:var(--tm);cursor:pointer;transition:all .15s;}
+    .filter-btn:hover{border-color:var(--n5);color:var(--n);}
+    .filter-btn.active{background:var(--n);color:#fff;border-color:var(--n);}
+    .filter-btn[data-cat="gods-existence"].active{background:var(--c1);border-color:var(--c1);}
+    .filter-btn[data-cat="resurrection"].active{background:var(--c2);border-color:var(--c2);}
+    .filter-btn[data-cat="jesus"].active{background:var(--c3);border-color:var(--c3);}
+    .filter-btn[data-cat="bible"].active{background:var(--c4);border-color:var(--c4);}
+    .filter-btn[data-cat="science"].active{background:var(--c5);border-color:var(--c5);}
+    .filter-btn[data-cat="trinity"].active{background:var(--c6);border-color:var(--c6);}
+
+    /* MAP CANVAS */
+    .map-wrap{position:relative;overflow:hidden;background:var(--w);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+    #map-canvas{display:block;cursor:grab;user-select:none;}
+    #map-canvas:active{cursor:grabbing;}
+
+    /* TOOLTIP */
+    .tooltip{position:fixed;z-index:200;background:var(--n);color:#fff;border-radius:8px;padding:1rem 1.25rem;max-width:280px;pointer-events:none;opacity:0;transition:opacity .15s;box-shadow:0 8px 32px rgba(0,0,0,.3);}
+    .tooltip.show{opacity:1;}
+    .tt-cat{font-family:var(--ui);font-size:.62rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.4rem;}
+    .tt-title{font-family:var(--fd);font-size:1rem;font-weight:600;margin-bottom:.4rem;}
+    .tt-desc{font-family:var(--ui);font-size:.8rem;color:rgba(255,255,255,.6);line-height:1.6;margin-bottom:.75rem;}
+    .tt-link{font-family:var(--ui);font-size:.78rem;font-weight:500;color:var(--g);}
+
+    /* LEGEND */
+    .legend{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding:1rem 2rem;background:var(--ow);border-bottom:1px solid var(--border);}
+    .legend-item{display:flex;align-items:center;gap:6px;font-family:var(--ui);font-size:.75rem;color:var(--tm);}
+    .legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+
+    /* ZOOM CONTROLS */
+    .zoom-controls{position:absolute;bottom:1rem;right:1rem;display:flex;flex-direction:column;gap:4px;z-index:50;}
+    .zoom-btn{width:32px;height:32px;border-radius:4px;background:var(--w);border:1px solid var(--border);font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--td);}
+    .zoom-btn:hover{background:var(--ow);}
+
+    /* HINT */
+    .map-hint{text-align:center;padding:.75rem;font-family:var(--ui);font-size:.78rem;color:var(--tm);}
+
+    footer{background:var(--n);padding:2.5rem 2rem;text-align:center;}
+    .footer-logo{font-family:var(--fd);font-size:1.1rem;color:rgba(255,255,255,.5);}
+    .footer-logo span{color:var(--g);}
+    .footer-copy{font-family:var(--ui);font-size:.75rem;color:rgba(255,255,255,.2);margin-top:.5rem;}
+    @media(max-width:768px){.nl{display:none;}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+  <ul class="nl">
+    <li><a href="evidence-library.html">Evidence Library</a></li>
+    <li><a href="daily-devotional.html">Daily Devotional</a></li>
+    <li><a href="debate-arena.html">Debate Arena</a></li>
+    <li><a href="ask-anything.html">Ask Anything</a></li>
+    <li><a href="worldviews.html">Worldviews</a></li>
+    <li><a href="study-plans.html">Study Plans</a></li>
+    <li><a href="video-library.html">Videos</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="whats-new.html">What's New</a></li>
+  </ul>
+  <div class="nav-right">
+    <span id="nav-auth">
+      <a href="login.html" class="nav-signin">Sign in</a>
+      <a href="signup.html" class="nav-cta">Start Free</a>
+    </span>
+  </div>
+</nav>
+
+<div class="page-header">
+  <p class="page-eyebrow">Visual Guide</p>
+  <h1 class="page-title">The Argument Map</h1>
+  <p class="page-desc">See how all 50 arguments connect — from the existence of God to the resurrection, Bible reliability, and the Trinity. Click any node to explore.</p>
+</div>
+
+<div class="controls">
+  <button class="filter-btn active" data-cat="all">All arguments</button>
+  <button class="filter-btn" data-cat="gods-existence">God's Existence</button>
+  <button class="filter-btn" data-cat="resurrection">Resurrection</button>
+  <button class="filter-btn" data-cat="jesus">Jesus</button>
+  <button class="filter-btn" data-cat="bible">Bible</button>
+  <button class="filter-btn" data-cat="science">Science</button>
+  <button class="filter-btn" data-cat="trinity">Trinity</button>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#285a9e"></div>God's Existence</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#a32d2d"></div>Resurrection</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#3c3489"></div>Jesus</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#0f6e56"></div>Bible Reliability</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#854f0b"></div>Science &amp; Faith</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#1e4278"></div>The Trinity</div>
+  <div class="legend-item" style="opacity:.6;font-size:.7rem;">Larger nodes = more foundational</div>
+</div>
+
+<div class="map-hint">Drag to pan &middot; Scroll to zoom &middot; Click any node to explore</div>
+
+<div class="map-wrap" style="height:70vh;min-height:500px;">
+  <canvas id="map-canvas"></canvas>
+  <div class="zoom-controls">
+    <button class="zoom-btn" id="zoom-in">+</button>
+    <button class="zoom-btn" id="zoom-out">−</button>
+    <button class="zoom-btn" id="zoom-reset" title="Reset view" style="font-size:.7rem;">↺</button>
+  </div>
+</div>
+
+<div class="tooltip" id="tooltip">
+  <div class="tt-cat" id="tt-cat"></div>
+  <div class="tt-title" id="tt-title"></div>
+  <div class="tt-desc" id="tt-desc"></div>
+  <div class="tt-link">Click to open in Evidence Library →</div>
+</div>
+
+<footer>
+  <div class="footer-logo">Apologia<span>Daily</span></div>
+  <div class="footer-copy">Built for the defence of the Gospel.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+// ── AUTH ─────────────────────────────────────────────────────────────────────
+(function() {
+  function initNav() {
+    if (!window.supabase) { setTimeout(initNav, 50); return; }
+    var sb = window.supabase.createClient(
+      'https://noprgxkwniouukmrfozc.supabase.co',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+    );
+    sb.auth.getSession().then(function(r) {
+      if (r.data && r.data.session) {
+        var na = document.getElementById('nav-auth');
+        if (na) na.innerHTML = '<a href="dashboard.html" style="font-family:var(--ui);font-size:.82rem;font-weight:500;padding:7px 16px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none;">Dashboard</a>';
+      }
+    });
+  }
+  document.addEventListener('DOMContentLoaded', initNav);
+})();
+
+// ── DATA ─────────────────────────────────────────────────────────────────────
+var CATS = {
+  'gods-existence': { color: '#285a9e', label: "God's Existence" },
+  'resurrection':   { color: '#a32d2d', label: 'Resurrection' },
+  'jesus':          { color: '#3c3489', label: 'Jesus' },
+  'bible':          { color: '#0f6e56', label: 'Bible Reliability' },
+  'science':        { color: '#854f0b', label: 'Science & Faith' },
+  'trinity':        { color: '#1e4278', label: 'The Trinity' }
+};
+
+var ARGS = [
+  // GOD'S EXISTENCE — centre-left cluster
+  { id:'kalam',       cat:'gods-existence', r:28, x:220, y:280, title:'The Kalam Cosmological Argument',        desc:'Everything that begins to exist has a cause. The universe began to exist. Therefore the universe has a cause.' },
+  { id:'finetuning',  cat:'gods-existence', r:24, x:140, y:200, title:'The Fine-Tuning Argument',               desc:'The fundamental constants of physics are precisely calibrated for life — to a precision of 1 in 10^120.' },
+  { id:'leibniz',     cat:'gods-existence', r:20, x:300, y:180, title:'The Leibniz Contingency Argument',        desc:'Why is there something rather than nothing? Every contingent thing requires an explanation for its existence.' },
+  { id:'moral',       cat:'gods-existence', r:22, x:130, y:360, title:'The Moral Argument',                     desc:'Objective moral values exist. If God does not exist, objective moral values do not exist.' },
+  { id:'consciousness',cat:'gods-existence',r:18, x:230, y:400, title:'The Argument from Consciousness',        desc:'The existence of mind and subjective experience is deeply puzzling on naturalism — expected on theism.' },
+  { id:'thomistic',   cat:'gods-existence', r:18, x:320, y:340, title:'The Thomistic Cosmological Argument',    desc:"Aquinas's Five Ways — the argument from motion, causation, contingency, perfection, and governance." },
+  { id:'reason',      cat:'gods-existence', r:16, x:80,  y:280, title:'The Argument from Reason',               desc:"Naturalism undermines itself: if our minds are products of blind evolution, we can't trust them to reason correctly." },
+  { id:'ontological', cat:'gods-existence', r:16, x:330, y:240, title:'The Ontological Argument',               desc:'God is the greatest conceivable being. A being who exists is greater than one who does not. Therefore God exists.' },
+  { id:'religious',   cat:'gods-existence', r:15, x:160, y:440, title:'The Argument from Religious Experience', desc:'Millions across cultures and centuries report genuine encounters with God — evidence that cannot be dismissed.' },
+  { id:'beauty',      cat:'gods-existence', r:15, x:80,  y:430, title:'The Argument from Beauty',               desc:"C.S. Lewis's Joy — the universal longing for transcendent beauty that no earthly thing can satisfy." },
+  { id:'evil',        cat:'gods-existence', r:17, x:310, y:430, title:'The Problem of Evil as Evidence',        desc:'The very fact we recognise evil as objectively wrong presupposes a moral standard — which requires God.' },
+  { id:'desire',      cat:'gods-existence', r:14, x:420, y:360, title:'The Argument from Desire',               desc:'Augustine: our hearts are restless until they rest in God. Natural desires point to real objects.' },
+
+  // RESURRECTION — centre cluster
+  { id:'minimal',     cat:'resurrection',   r:26, x:560, y:280, title:'The Minimal Facts Argument',             desc:'Five facts accepted by virtually all historians — including atheists. Gary Habermas: the resurrection is the best explanation.' },
+  { id:'emptytomb',   cat:'resurrection',   r:22, x:650, y:200, title:'The Empty Tomb',                         desc:'Even the Jewish authorities admitted the tomb was empty — they claimed the disciples stole the body.' },
+  { id:'paulconv',    cat:'resurrection',   r:20, x:720, y:300, title:"Paul's Conversion",                      desc:'A persecutor of Christians who claimed to see the risen Jesus — converting against every personal interest.' },
+  { id:'appearances', cat:'resurrection',   r:20, x:660, y:370, title:'The Resurrection Appearances',           desc:'Multiple independent sources record appearances to hundreds of people, including Paul and James.' },
+  { id:'disciples',   cat:'resurrection',   r:17, x:540, y:380, title:"The Disciples' Belief",                  desc:'The disciples genuinely believed they had seen the risen Jesus — willing to die for this specific claim.' },
+  { id:'sceptics',    cat:'resurrection',   r:17, x:760, y:200, title:'The Conversion of the Sceptics',        desc:'James (Jesus\'s own sceptical brother) and Paul converted after seeing the risen Jesus.' },
+  { id:'burial',      cat:'resurrection',   r:15, x:600, y:160, title:'The Argument from the Burial',           desc:'Joseph of Arimathea — a named Sanhedrin member — buried Jesus in a known, verifiable tomb.' },
+  { id:'postres',     cat:'resurrection',   r:15, x:760, y:360, title:'Post-Resurrection Behaviour',            desc:'The change of worship day from Saturday to Sunday — Jewish monotheists changing their most sacred practice.' },
+
+  // JESUS — top-right cluster
+  { id:'historicaljesus', cat:'jesus', r:22, x:920, y:180, title:'Historical Existence of Jesus',              desc:'Tacitus, Josephus, Pliny — five independent streams of evidence confirm Jesus was a real historical person.' },
+  { id:'jesusclaim',  cat:'jesus',   r:24, x:860, y:280, title:'Did Jesus Claim to Be God?',                   desc:'The I AM sayings, forgiving sins, accepting worship — Jesus made unmistakable divine claims.' },
+  { id:'messianic',   cat:'jesus',   r:20, x:980, y:280, title:'Messianic Prophecy',                           desc:'Isaiah 53, Psalm 22, Daniel 9 — hundreds of years before Jesus, written in the Dead Sea Scrolls.' },
+  { id:'john11',      cat:'jesus',   r:18, x:860, y:380, title:'John 1:1 and Pre-existence',                   desc:"'In the beginning was the Word' — the Logos theology and the eternal pre-existence of Christ." },
+  { id:'phil2',       cat:'jesus',   r:17, x:960, y:370, title:'The Philippians 2 Hymn',                       desc:'A pre-Pauline hymn — Christians were worshipping Jesus as God within years of the crucifixion.' },
+  { id:'titles',      cat:'jesus',   r:16, x:1030,y:200, title:'The Titles of Jesus',                          desc:'Son of Man (Daniel 7), Kyrios (YHWH), I AM (Exodus 3:14) — each title a divine claim.' },
+  { id:'multiatt',    cat:'jesus',   r:15, x:980, y:100, title:'Multiple Attestation',                         desc:'The historical methodology — how historians evaluate ancient sources, applied to the Gospels.' },
+  { id:'earlycreed',  cat:'jesus',   r:20, x:820, y:160, title:'The Early Creed of 1 Cor 15',                  desc:'Within 2-5 years of the crucifixion — the earliest documented resurrection testimony.' },
+  { id:'jesuschar',   cat:'jesus',   r:15, x:900, y:420, title:"Jesus's Character",                            desc:"C.S. Lewis: the Gospels don't read like myth or legend. No ancient author invented a character like this." },
+  { id:'daniel70',    cat:'jesus',   r:15, x:1060,y:320, title:"Daniel's 70 Weeks",                            desc:'The most precise chronological prophecy in Scripture — pointing to the period of Jesus\'s ministry.' },
+  { id:'uniqueness',  cat:'jesus',   r:15, x:1040,y:420, title:'The Uniqueness of the Resurrection Claim',     desc:'Christianity stakes everything on one falsifiable historical event — unlike any other religion.' },
+  { id:'virginbirth', cat:'jesus',   r:14, x:800, y:420, title:'The Virgin Birth and Isaiah 7:14',             desc:'The Hebrew almah, the Septuagint translation parthenos, and two independent accounts.' },
+  { id:'respred',     cat:'jesus',   r:14, x:820, y:60,  title:'Resurrection Predictions',                     desc:'Jesus predicted his death and resurrection three times — the disciples were still completely unprepared.' },
+  { id:'nde',         cat:'jesus',   r:13, x:960, y:470, title:'Near-Death Experiences',                       desc:"Van Lommel's Lancet study — consciousness persisting when the brain has no measurable activity." },
+
+  // BIBLE — bottom-right cluster
+  { id:'manuscript',  cat:'bible',   r:22, x:840, y:580, title:'Manuscript Reliability',                       desc:'5,800 Greek manuscripts — more than the next ten ancient documents combined. The text is 99.5% stable.' },
+  { id:'archaeology', cat:'bible',   r:20, x:960, y:560, title:'Archaeological Confirmation',                  desc:'The Hittites, Pilate Stone, Caiaphas ossuary, Pool of Bethesda — all confirmed by archaeology.' },
+  { id:'canon',       cat:'bible',   r:18, x:760, y:640, title:'The Canon Formation Argument',                 desc:'The Trinity was not invented at Nicaea — and neither was the canon. Both predate 325 AD.' },
+  { id:'prophecy',    cat:'bible',   r:17, x:900, y:660, title:'Fulfilled Prophecy in the OT',                 desc:"Ezekiel's Tyre prophecy, Isaiah 44-45 naming Cyrus 150 years before his birth." },
+  { id:'consistency', cat:'bible',   r:16, x:1020,y:620, title:'Internal Consistency of Scripture',            desc:'66 books, 40 authors, 1,500 years — one coherent covenant narrative with intricate typological unity.' },
+  { id:'eyewitnesses',cat:'bible',   r:16, x:680, y:600, title:'Gospel Eyewitnesses',                          desc:"Bauckham's naming pattern research — the specific names in the Gospels match first-century Palestine precisely." },
+  { id:'deadseascrolls',cat:'bible', r:17, x:1060,y:540, title:'The Dead Sea Scrolls',                         desc:'1,000 years older than our previous manuscripts — virtually identical text. The Masoretic tradition vindicated.' },
+  { id:'earlydate',   cat:'bible',   r:15, x:680, y:520, title:'Early Date of the New Testament',              desc:"Acts ends with Paul alive — silence about Jerusalem's fall (70 AD) suggests pre-70 composition." },
+  { id:'jewishness',  cat:'bible',   r:14, x:1000,y:700, title:'The Jewishness of Jesus',                      desc:'The Gospels are saturated with first-century Palestinian Jewish texture — not the product of later Gentile invention.' },
+
+  // SCIENCE — bottom-left cluster
+  { id:'bigbang',     cat:'science', r:22, x:260, y:560, title:'The Argument from the Big Bang',               desc:'The BGV theorem: any universe with a net expansion must have had an absolute beginning. Vilenkin: no escape.' },
+  { id:'originlife',  cat:'science', r:19, x:160, y:640, title:'The Origin of Life Argument',                  desc:"DNA contains specified information of staggering complexity. Crick: 'Almost a miracle.'" },
+  { id:'mathematics', cat:'science', r:17, x:340, y:640, title:'The Argument from Mathematics',                desc:"Wigner's puzzle: why is mathematics 'unreasonably effective' at describing physical reality?" },
+  { id:'cambrian',    cat:'science', r:16, x:120, y:540, title:'The Cambrian Explosion',                       desc:'Most animal body plans appear suddenly in geological terms — requiring vast amounts of new genetic information.' },
+  { id:'cosmic',      cat:'science', r:16, x:440, y:600, title:'The Argument from Cosmic Purposiveness',       desc:"Conway Morris: convergent evolution shows the universe is structured toward life and intelligence." },
+  { id:'privileged',  cat:'science', r:15, x:240, y:680, title:'The Privileged Planet Argument',               desc:'Earth is simultaneously the best place for life and the best place for scientific observation — not a coincidence.' },
+  { id:'laws',        cat:'science', r:15, x:420, y:700, title:'The Argument from the Laws of Nature',         desc:"Why should matter obey rational mathematical laws? Newton, Kepler, Maxwell: 'We were thinking God's thoughts.'" },
+
+  // TRINITY — left cluster
+  { id:'shema',       cat:'trinity', r:20, x:120, y:140, title:'The Shema and Trinitarian Monotheism',         desc:'Echad vs yachid — the Hebrew word for one in the Shema is a compound unity, not an absolute singularity.' },
+  { id:'nt_trinity',  cat:'trinity', r:20, x:220, y:100, title:'The Trinity in the New Testament',             desc:'Matthew 28:19, the baptism of Jesus, the Paraclete discourses — the three persons appear together repeatedly.' },
+  { id:'ot_trinity',  cat:'trinity', r:17, x:70,  y:160, title:'OT Foundations of the Trinity',               desc:"The 'Let Us' passages, the Angel of the Lord, Isaiah 48:16 — the Trinity is hinted at throughout the Old Testament." },
+  { id:'early_church_trinity', cat:'trinity', r:16, x:350, y:120, title:'The Trinity in the Early Church',    desc:'Ignatius (107 AD), Tertullian (200 AD) — Trinitarian theology predates Nicaea by 125+ years.' },
+  { id:'philosophical_trinity', cat:'trinity', r:16, x:400, y:200, title:'Philosophical Defence of the Trinity',desc:'Social vs Latin Trinity models — why the Trinity is not a contradiction but a coherent metaphysical claim.' },
+  { id:'trinity_islam',  cat:'trinity', r:14, x:60,  y:80,  title:'Responding to Muslims on the Trinity',    desc:'Tawhid, shirk, and the Quran\'s own data on Jesus as the Word of God — a complete response.' },
+  { id:'trinity_jw',     cat:'trinity', r:14, x:200, y:60,  title:'Responding to Jehovah\'s Witnesses',      desc:"John 1:1 Greek grammar — the NWT mistranslation refuted. Every Greek scholar agrees: 'the Word was God.'" },
+  { id:'trinity_mormons', cat:'trinity',r:14, x:340, y:60,  title:'Responding to Mormons on the Trinity',    desc:'Isaiah 43-46: "Before me no god was formed, nor will there be one after me." — LDS eternal progression refuted.' },
+  { id:'modalism',       cat:'trinity', r:13, x:460, y:140, title:'Responding to Modalism',                    desc:'Oneness Pentecostalism refuted — at the baptism of Jesus, the Father speaks to the Son while the Spirit descends.' },
+  { id:'eternal_generation', cat:'trinity', r:13, x:480, y:260, title:'The Eternal Generation of the Son',   desc:"Begotten not made — the Son derives his divine being from the Father in an eternal, timeless relation." }
+];
+
+// Connection pairs [from_id, to_id] — arguments that support each other
+var CONNECTIONS = [
+  ['kalam','finetuning'],['kalam','bigbang'],['kalam','leibniz'],
+  ['finetuning','cosmic'],['finetuning','bigbang'],['finetuning','originlife'],
+  ['leibniz','thomistic'],['leibniz','ontological'],
+  ['moral','evil'],['moral','consciousness'],
+  ['consciousness','reason'],['consciousness','nde'],
+  ['reason','ontological'],
+  ['bigbang','laws'],['bigbang','mathematics'],
+  ['cambrian','originlife'],['privileged','cosmic'],
+  ['minimal','emptytomb'],['minimal','paulconv'],['minimal','appearances'],
+  ['minimal','sceptics'],['minimal','disciples'],
+  ['emptytomb','burial'],['paulconv','sceptics'],
+  ['appearances','postres'],['earlycreed','paulconv'],
+  ['earlycreed','minimal'],['historicaljesus','jesusclaim'],
+  ['jesusclaim','phil2'],['jesusclaim','john11'],['jesusclaim','titles'],
+  ['messianic','prophecy'],['messianic','daniel70'],
+  ['earlycreed','earlydate'],['earlydate','manuscript'],
+  ['manuscript','deadseascrolls'],['archaeology','eyewitnesses'],
+  ['eyewitnesses','multiatt'],['consistency','jewishness'],
+  ['canon','early_church_trinity'],
+  ['shema','nt_trinity'],['shema','ot_trinity'],
+  ['nt_trinity','phil2'],['nt_trinity','john11'],
+  ['philosophical_trinity','shema'],
+  ['trinity_islam','nt_trinity'],['trinity_jw','john11'],
+  ['eternal_generation','early_church_trinity'],
+  ['jesusclaim','shema'],['jesusclaim','nt_trinity'],
+  ['kalam','eternal_generation'],
+  ['moral','trinity_islam']
+];
+
+// ── CANVAS SETUP ─────────────────────────────────────────────────────────────
+var canvas = document.getElementById('map-canvas');
+var ctx = canvas.getContext('2d');
+var wrap = canvas.parentElement;
+
+var scale = 1;
+var offsetX = 0, offsetY = 0;
+var dragging = false, lastX = 0, lastY = 0;
+var activeFilter = 'all';
+var hoveredNode = null;
+var tooltip = document.getElementById('tooltip');
+
+function resize() {
+  canvas.width = wrap.clientWidth;
+  canvas.height = wrap.clientHeight;
+  // Center the map initially
+  if (offsetX === 0 && offsetY === 0) {
+    offsetX = canvas.width / 2 - 580;
+    offsetY = canvas.height / 2 - 380;
+  }
+  draw();
+}
+
+// ── DRAW ─────────────────────────────────────────────────────────────────────
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.save();
+  ctx.translate(offsetX, offsetY);
+  ctx.scale(scale, scale);
+
+  // Draw connections
+  CONNECTIONS.forEach(function(conn) {
+    var a = ARGS.find(function(n) { return n.id === conn[0]; });
+    var b = ARGS.find(function(n) { return n.id === conn[1]; });
+    if (!a || !b) return;
+    var aVisible = activeFilter === 'all' || a.cat === activeFilter;
+    var bVisible = activeFilter === 'all' || b.cat === activeFilter;
+    if (!aVisible && !bVisible) return;
+    var alpha = (aVisible && bVisible) ? 0.15 : 0.05;
+    ctx.beginPath();
+    ctx.moveTo(a.x, a.y);
+    ctx.lineTo(b.x, b.y);
+    ctx.strokeStyle = 'rgba(30,66,120,' + alpha + ')';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  });
+
+  // Draw nodes
+  ARGS.forEach(function(node) {
+    var visible = activeFilter === 'all' || node.cat === activeFilter;
+    var isHovered = hoveredNode && hoveredNode.id === node.id;
+    var cat = CATS[node.cat];
+    var alpha = visible ? 1 : 0.15;
+
+    ctx.globalAlpha = alpha;
+
+    // Shadow on hover
+    if (isHovered) {
+      ctx.shadowColor = cat.color;
+      ctx.shadowBlur = 16;
+    }
+
+    // Circle
+    ctx.beginPath();
+    ctx.arc(node.x, node.y, isHovered ? node.r + 3 : node.r, 0, Math.PI * 2);
+    ctx.fillStyle = cat.color;
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(255,255,255,0.3)';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    ctx.shadowBlur = 0;
+
+    // Label (only if node is large enough or hovered)
+    if (node.r >= 18 || isHovered) {
+      ctx.fillStyle = '#fff';
+      ctx.font = 'bold ' + Math.max(9, Math.min(11, node.r * 0.45)) + 'px DM Sans, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      // Wrap title to 2 lines max
+      var words = node.title.split(' ');
+      var line1 = '', line2 = '';
+      var maxW = node.r * 1.6;
+      var built = '';
+      words.forEach(function(w) {
+        var test = built ? built + ' ' + w : w;
+        if (ctx.measureText(test).width < maxW) {
+          built = test;
+        } else {
+          if (!line1) { line1 = built || w; built = line1 ? w : ''; }
+          else { line2 = built + (built ? ' ' : '') + w; built = ''; }
+        }
+      });
+      if (!line1) line1 = built;
+      else if (built) line2 = (line2 ? line2 + ' ' : '') + built;
+      if (line2) {
+        ctx.fillText(line1, node.x, node.y - 6);
+        ctx.fillText(line2.length > 16 ? line2.slice(0,14) + '…' : line2, node.x, node.y + 7);
+      } else {
+        ctx.fillText(line1, node.x, node.y);
+      }
+    }
+
+    ctx.globalAlpha = 1;
+  });
+
+  ctx.restore();
+}
+
+// ── INTERACTION ───────────────────────────────────────────────────────────────
+function getNodeAt(ex, ey) {
+  var wx = (ex - offsetX) / scale;
+  var wy = (ey - offsetY) / scale;
+  // Check in reverse so topmost (drawn last) wins
+  for (var i = ARGS.length - 1; i >= 0; i--) {
+    var n = ARGS[i];
+    var dx = wx - n.x, dy = wy - n.y;
+    if (Math.sqrt(dx*dx + dy*dy) <= n.r + 4) return n;
+  }
+  return null;
+}
+
+canvas.addEventListener('mousedown', function(e) {
+  var node = getNodeAt(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
+  if (node) {
+    // Navigate to evidence library
+    window.location.href = 'evidence-library.html';
+    return;
+  }
+  dragging = true;
+  lastX = e.clientX; lastY = e.clientY;
+});
+
+canvas.addEventListener('mousemove', function(e) {
+  var rect = canvas.getBoundingClientRect();
+  var ex = e.clientX - rect.left, ey = e.clientY - rect.top;
+  if (dragging) {
+    offsetX += e.clientX - lastX;
+    offsetY += e.clientY - lastY;
+    lastX = e.clientX; lastY = e.clientY;
+    draw();
+    return;
+  }
+  var node = getNodeAt(ex, ey);
+  if (node !== hoveredNode) {
+    hoveredNode = node;
+    canvas.style.cursor = node ? 'pointer' : 'grab';
+    draw();
+  }
+  if (node) {
+    var cat = CATS[node.cat];
+    document.getElementById('tt-cat').textContent = cat.label;
+    document.getElementById('tt-cat').style.color = cat.color;
+    document.getElementById('tt-title').textContent = node.title;
+    document.getElementById('tt-desc').textContent = node.desc;
+    var tx = e.clientX + 16, ty = e.clientY - 20;
+    if (tx + 290 > window.innerWidth) tx = e.clientX - 300;
+    tooltip.style.left = tx + 'px';
+    tooltip.style.top = ty + 'px';
+    tooltip.classList.add('show');
+  } else {
+    tooltip.classList.remove('show');
+  }
+});
+
+canvas.addEventListener('mouseup', function() { dragging = false; });
+canvas.addEventListener('mouseleave', function() {
+  dragging = false;
+  hoveredNode = null;
+  tooltip.classList.remove('show');
+  draw();
+});
+
+canvas.addEventListener('wheel', function(e) {
+  e.preventDefault();
+  var rect = canvas.getBoundingClientRect();
+  var mx = e.clientX - rect.left, my = e.clientY - rect.top;
+  var delta = e.deltaY > 0 ? 0.9 : 1.1;
+  var newScale = Math.max(0.3, Math.min(3, scale * delta));
+  offsetX = mx - (mx - offsetX) * (newScale / scale);
+  offsetY = my - (my - offsetY) * (newScale / scale);
+  scale = newScale;
+  draw();
+}, { passive: false });
+
+// Touch support
+var lastTouchDist = 0;
+canvas.addEventListener('touchstart', function(e) {
+  if (e.touches.length === 1) {
+    dragging = true;
+    lastX = e.touches[0].clientX;
+    lastY = e.touches[0].clientY;
+  } else if (e.touches.length === 2) {
+    var dx = e.touches[0].clientX - e.touches[1].clientX;
+    var dy = e.touches[0].clientY - e.touches[1].clientY;
+    lastTouchDist = Math.sqrt(dx*dx + dy*dy);
+  }
+  e.preventDefault();
+}, { passive: false });
+
+canvas.addEventListener('touchmove', function(e) {
+  if (e.touches.length === 1 && dragging) {
+    offsetX += e.touches[0].clientX - lastX;
+    offsetY += e.touches[0].clientY - lastY;
+    lastX = e.touches[0].clientX;
+    lastY = e.touches[0].clientY;
+    draw();
+  } else if (e.touches.length === 2) {
+    var dx = e.touches[0].clientX - e.touches[1].clientX;
+    var dy = e.touches[0].clientY - e.touches[1].clientY;
+    var dist = Math.sqrt(dx*dx + dy*dy);
+    var delta = dist / lastTouchDist;
+    scale = Math.max(0.3, Math.min(3, scale * delta));
+    lastTouchDist = dist;
+    draw();
+  }
+  e.preventDefault();
+}, { passive: false });
+
+canvas.addEventListener('touchend', function() { dragging = false; });
+
+// Zoom buttons
+document.getElementById('zoom-in').addEventListener('click', function() {
+  scale = Math.min(3, scale * 1.2);
+  draw();
+});
+document.getElementById('zoom-out').addEventListener('click', function() {
+  scale = Math.max(0.3, scale * 0.8);
+  draw();
+});
+document.getElementById('zoom-reset').addEventListener('click', function() {
+  scale = 1;
+  offsetX = canvas.width / 2 - 580;
+  offsetY = canvas.height / 2 - 380;
+  draw();
+});
+
+// Filter buttons
+document.querySelectorAll('.filter-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    activeFilter = btn.dataset.cat;
+    draw();
+  });
+});
+
+// Init
+window.addEventListener('resize', resize);
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(resize, 50);
+});
+resize();
+</script>
+</body>
+</html>

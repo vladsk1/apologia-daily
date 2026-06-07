@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apologists & Scholars — Apologia Daily</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --n:#050d1a;--n8:#0a1628;--n7:#0f2040;--n5:#1e4278;--n3:#4a7ab5;
+      --g:#c8a951;--gl:#d4b96a;
+      --w:#fff;--ow:#f7f4ef;--border:#e8e2d8;--tm:#3a4a62;--td:#0f1f38;
+      --fd:'Playfair Display',Georgia,serif;
+      --ss:'Source Serif 4',Georgia,serif;
+      --ui:'DM Sans',system-ui,sans-serif;
+    }
+    body{font-family:var(--ui);background:var(--ow);color:var(--td);}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--n);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:56px;}
+    .nav-logo{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:#fff;text-decoration:none;}
+    .nav-logo span{color:var(--g);}
+    .nl{list-style:none;display:flex;gap:1.5rem;}
+    .nl a{font-family:var(--ui);font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.6);text-decoration:none;transition:color .15s;}
+    .nl a:hover,.nl a.active{color:#fff;}
+    .nav-right{display:flex;align-items:center;gap:1rem;}
+    .nav-signin{font-family:var(--ui);font-size:.82rem;color:rgba(255,255,255,.6);text-decoration:none;}
+    .nav-cta{font-family:var(--ui);font-size:.82rem;font-weight:500;padding:7px 16px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none;}
+
+    .page-header{background:var(--n);padding:7rem 2rem 3rem;text-align:center;}
+    .page-eyebrow{font-family:var(--ui);font-size:.72rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--g);margin-bottom:.75rem;}
+    .page-title{font-family:var(--fd);font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:1rem;}
+    .page-desc{font-family:var(--ss);font-size:1rem;color:rgba(255,255,255,.55);max-width:560px;margin:0 auto;line-height:1.8;}
+
+    /* FILTER */
+    .filter-bar{display:flex;align-items:center;justify-content:center;gap:.75rem;flex-wrap:wrap;padding:1.5rem 2rem;border-bottom:1px solid var(--border);background:var(--w);}
+    .filter-btn{font-family:var(--ui);font-size:.78rem;font-weight:500;padding:7px 16px;border-radius:20px;border:1px solid var(--border);background:var(--ow);color:var(--tm);cursor:pointer;transition:all .15s;}
+    .filter-btn.active,.filter-btn:hover{background:var(--n);color:#fff;border-color:var(--n);}
+
+    /* SEARCH */
+    .search-wrap{max-width:480px;margin:1.5rem auto 0;padding:0 2rem;}
+    .search-input{width:100%;padding:10px 16px;border:1px solid var(--border);border-radius:4px;font-family:var(--ui);font-size:.9rem;color:var(--td);background:var(--w);outline:none;}
+    .search-input:focus{border-color:var(--n5);}
+
+    /* GRID */
+    .scholars-wrap{max-width:1200px;margin:0 auto;padding:2.5rem 2rem 5rem;}
+    .scholars-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.5rem;}
+
+    /* SCHOLAR CARD */
+    .scholar-card{background:var(--w);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:box-shadow .2s,transform .2s;cursor:pointer;}
+    .scholar-card:hover{box-shadow:0 8px 32px rgba(5,13,26,.1);transform:translateY(-2px);}
+    .scholar-card.hidden{display:none;}
+    .sc-header{padding:1.5rem 1.5rem 1rem;display:flex;align-items:flex-start;gap:1rem;}
+    .sc-avatar{width:64px;height:64px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:700;color:#fff;font-family:var(--fd);}
+    .sc-meta{flex:1;min-width:0;}
+    .sc-name{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:var(--td);margin-bottom:.2rem;}
+    .sc-dates{font-family:var(--ui);font-size:.75rem;color:var(--tm);margin-bottom:.4rem;}
+    .sc-tags{display:flex;flex-wrap:wrap;gap:4px;}
+    .sc-tag{font-family:var(--ui);font-size:.65rem;font-weight:500;padding:2px 8px;border-radius:20px;background:var(--ow);color:var(--tm);border:1px solid var(--border);}
+    .sc-body{padding:0 1.5rem 1rem;}
+    .sc-bio{font-family:var(--ss);font-size:.88rem;color:var(--tm);line-height:1.75;margin-bottom:1rem;}
+    .sc-section-label{font-family:var(--ui);font-size:.65rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--n5);margin-bottom:.5rem;margin-top:.75rem;}
+    .sc-args{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:.75rem;}
+    .sc-arg{font-family:var(--ui);font-size:.72rem;padding:3px 10px;border-radius:3px;background:rgba(30,66,120,.08);color:var(--n5);border:1px solid rgba(30,66,120,.15);}
+    .sc-quote{font-family:var(--ss);font-size:.85rem;font-style:italic;color:var(--tm);border-left:2px solid var(--g);padding-left:.875rem;margin:.75rem 0;line-height:1.7;}
+    .sc-books{list-style:none;}
+    .sc-books li{font-family:var(--ui);font-size:.78rem;color:var(--tm);padding:4px 0;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:6px;}
+    .sc-books li:last-child{border-bottom:none;}
+    .sc-books li::before{content:'📖';font-size:.7rem;flex-shrink:0;}
+    .sc-footer{padding:.875rem 1.5rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+    .sc-tradition{font-family:var(--ui);font-size:.72rem;color:var(--tm);}
+    .sc-link{font-family:var(--ui);font-size:.78rem;font-weight:500;color:var(--g);text-decoration:none;}
+    .sc-expand-btn{background:none;border:none;font-family:var(--ui);font-size:.78rem;color:var(--n5);cursor:pointer;padding:0;}
+    .sc-extra{display:none;}
+    .sc-extra.open{display:block;}
+
+    footer{background:var(--n);padding:2.5rem 2rem;text-align:center;}
+    .footer-logo{font-family:var(--fd);font-size:1.1rem;color:rgba(255,255,255,.5);}
+    .footer-logo span{color:var(--g);}
+    .footer-links{display:flex;justify-content:center;gap:1.5rem;margin:.75rem 0;}
+    .footer-links a{font-family:var(--ui);font-size:.75rem;color:rgba(255,255,255,.3);text-decoration:none;}
+    .footer-copy{font-family:var(--ui);font-size:.75rem;color:rgba(255,255,255,.2);}
+    @media(max-width:768px){.nl{display:none;}.scholars-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+  <ul class="nl">
+    <li><a href="evidence-library.html">Evidence Library</a></li>
+    <li><a href="daily-devotional.html">Daily Devotional</a></li>
+    <li><a href="debate-arena.html">Debate Arena</a></li>
+    <li><a href="ask-anything.html">Ask Anything</a></li>
+    <li><a href="worldviews.html">Worldviews</a></li>
+    <li><a href="study-plans.html">Study Plans</a></li>
+    <li><a href="video-library.html">Videos</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="whats-new.html">What's New</a></li>
+  </ul>
+  <div class="nav-right">
+    <span id="nav-auth">
+      <a href="login.html" class="nav-signin">Sign in</a>
+      <a href="signup.html" class="nav-cta">Start Free</a>
+    </span>
+  </div>
+</nav>
+
+<div class="page-header">
+  <p class="page-eyebrow">The People Behind the Arguments</p>
+  <h1 class="page-title">Apologists &amp; Scholars</h1>
+  <p class="page-desc">From C.S. Lewis to Alvin Plantinga — know the thinkers, their key arguments, and their best books. Being able to cite scholars by name gives your apologetics real credibility.</p>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="philosophy">Philosophy</button>
+  <button class="filter-btn" data-filter="history">History</button>
+  <button class="filter-btn" data-filter="science">Science</button>
+  <button class="filter-btn" data-filter="theology">Theology</button>
+  <button class="filter-btn" data-filter="literature">Literature</button>
+  <button class="filter-btn" data-filter="sceptic">Sceptics Worth Knowing</button>
+</div>
+
+<div class="search-wrap">
+  <input class="search-input" type="text" placeholder="Search scholars..." id="search-input" />
+</div>
+
+<div class="scholars-wrap">
+  <div class="scholars-grid" id="scholars-grid">
+
+    <!-- WILLIAM LANE CRAIG -->
+    <div class="scholar-card" data-cats="philosophy theology" data-name="william lane craig">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#285a9e;">WC</div>
+        <div class="sc-meta">
+          <div class="sc-name">William Lane Craig</div>
+          <div class="sc-dates">1949 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Philosophy</span>
+            <span class="sc-tag">Theology</span>
+            <span class="sc-tag">Cosmology</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Research Professor of Philosophy at Talbot School of Theology. The foremost Christian apologist of the late 20th and early 21st century. Has debated virtually every major atheist philosopher — Hitchens, Dawkins, Dennett, Kagan, Atkins, Krauss — and is widely regarded as having won most of them on argumentation.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Kalam Cosmological</span>
+          <span class="sc-arg">Fine-Tuning</span>
+          <span class="sc-arg">Resurrection</span>
+          <span class="sc-arg">Moral Argument</span>
+          <span class="sc-arg">Ontological</span>
+        </div>
+        <div class="sc-quote">"The God of classical theism is not merely one more object in the universe, but the ground of being itself — the metaphysically necessary foundation of all contingent reality."</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>Reasonable Faith (1984, 3rd ed. 2008) — his systematic apologetics</li>
+          <li>The Kalam Cosmological Argument (1979) — the definitive treatment</li>
+          <li>On Guard (2010) — accessible introduction to his arguments</li>
+          <li>God Over All (2016) — divine aseity and abstract objects</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Evangelical · Molinism</span>
+        <a href="https://www.reasonablefaith.org" target="_blank" class="sc-link">reasonablefaith.org →</a>
+      </div>
+    </div>
+
+    <!-- ALVIN PLANTINGA -->
+    <div class="scholar-card" data-cats="philosophy" data-name="alvin plantinga">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#3c3489;">AP</div>
+        <div class="sc-meta">
+          <div class="sc-name">Alvin Plantinga</div>
+          <div class="sc-dates">1932 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Philosophy</span>
+            <span class="sc-tag">Epistemology</span>
+            <span class="sc-tag">Logic</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Emeritus Professor of Philosophy at the University of Notre Dame. Widely regarded as the greatest living Christian philosopher. His work on the modal ontological argument, the free will defence against the problem of evil, and his epistemology of religious belief (Warranted Christian Belief) transformed academic philosophy of religion.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Modal Ontological</span>
+          <span class="sc-arg">Free Will Defence</span>
+          <span class="sc-arg">EAAN</span>
+          <span class="sc-arg">Warranted Belief</span>
+        </div>
+        <div class="sc-quote">"It is entirely right, rational, reasonable, and proper to believe in God without any evidence or argument at all." — Warranted Christian Belief</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>God and Other Minds (1967) — established him as a major philosopher</li>
+          <li>The Nature of Necessity (1974) — modal ontological argument</li>
+          <li>Warranted Christian Belief (2000) — his epistemological magnum opus</li>
+          <li>Where the Conflict Really Lies (2011) — science, religion, and naturalism</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Reformed · Calvinist</span>
+        <span class="sc-tradition" style="color:var(--g);">Notre Dame</span>
+      </div>
+    </div>
+
+    <!-- C.S. LEWIS -->
+    <div class="scholar-card" data-cats="literature theology philosophy" data-name="c.s. lewis clive staples">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#854f0b;">CL</div>
+        <div class="sc-meta">
+          <div class="sc-name">C.S. Lewis</div>
+          <div class="sc-dates">1898 – 1963 · British</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Literature</span>
+            <span class="sc-tag">Philosophy</span>
+            <span class="sc-tag">Theology</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Professor of Medieval and Renaissance Literature at Oxford and Cambridge. Former atheist who converted to Christianity after sustained argument with J.R.R. Tolkien and Hugo Dyson. The most widely read Christian apologist of the 20th century. His literary training gave him an unusual ability to detect whether texts read like genuine history or like legend — the Gospels, he concluded, read like the former.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Trilemma (Lord/Liar/Lunatic)</span>
+          <span class="sc-arg">Argument from Reason</span>
+          <span class="sc-arg">Argument from Desire/Joy</span>
+          <span class="sc-arg">Moral Argument</span>
+        </div>
+        <div class="sc-quote">"A man who was merely a man and said the sort of things Jesus said would not be a great moral teacher. He would either be a lunatic or else he would be the Devil of Hell." — Mere Christianity</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>Mere Christianity (1952) — the best introduction to Christian apologetics ever written</li>
+          <li>The Problem of Pain (1940) — theodicy and suffering</li>
+          <li>Miracles (1947) — includes the Argument from Reason</li>
+          <li>Surprised by Joy (1955) — his conversion autobiography</li>
+          <li>The Abolition of Man (1943) — moral objectivism</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Anglican · Mere Christianity</span>
+        <span class="sc-tradition" style="color:var(--g);">Oxford · Cambridge</span>
+      </div>
+    </div>
+
+    <!-- GARY HABERMAS -->
+    <div class="scholar-card" data-cats="history theology" data-name="gary habermas">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#a32d2d;">GH</div>
+        <div class="sc-meta">
+          <div class="sc-name">Gary Habermas</div>
+          <div class="sc-dates">1950 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">History</span>
+            <span class="sc-tag">Resurrection</span>
+            <span class="sc-tag">Theology</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Distinguished Research Professor at Liberty University. The world's foremost expert on the historical evidence for the resurrection of Jesus. Has surveyed over 3,400 scholarly sources — including atheist and agnostic scholars — to develop his Minimal Facts methodology: building the case for the resurrection using only facts accepted by virtually all critical scholars regardless of theological commitments.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Minimal Facts Method</span>
+          <span class="sc-arg">Empty Tomb</span>
+          <span class="sc-arg">Resurrection Appearances</span>
+          <span class="sc-arg">Paul's Conversion</span>
+        </div>
+        <div class="sc-quote">"The resurrection is not an article of faith that historians cannot touch. It is a historical event that meets the criteria historians apply to all ancient events — and it passes."</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>The Case for the Resurrection of Jesus (2004, with Licona) — the standard work</li>
+          <li>The Historical Jesus (1996) — ancient evidence for the life of Christ</li>
+          <li>The Risen Jesus and Future Hope (2003) — resurrection and eschatology</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Evangelical · Baptist</span>
+        <span class="sc-tradition" style="color:var(--g);">Liberty University</span>
+      </div>
+    </div>
+
+    <!-- N.T. WRIGHT -->
+    <div class="scholar-card" data-cats="history theology" data-name="n.t. wright nicholas thomas">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#0f2040;">NW</div>
+        <div class="sc-meta">
+          <div class="sc-name">N.T. Wright</div>
+          <div class="sc-dates">1948 – present · British</div>
+          <div class="sc-tags">
+            <span class="sc-tag">History</span>
+            <span class="sc-tag">Theology</span>
+            <span class="sc-tag">New Testament</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Former Bishop of Durham, Research Professor at St Andrews. The foremost New Testament scholar of his generation. His eight-volume series Christian Origins and the Question of God includes The Resurrection of the Son of God (2003) — the most comprehensive historical investigation of the resurrection ever written, at 740 pages. A committed Anglican who takes both historical method and orthodox theology with equal seriousness.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Historical Resurrection</span>
+          <span class="sc-arg">Theological Novelty</span>
+          <span class="sc-arg">Jewish Context</span>
+          <span class="sc-arg">Empty Tomb</span>
+        </div>
+        <div class="sc-quote">"The historian, whether or not a believer, is bound to say that the tomb was empty and that the disciples had experiences which they believed were appearances of the risen Jesus." — The Resurrection of the Son of God</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>The Resurrection of the Son of God (2003) — the definitive historical treatment</li>
+          <li>Simply Christian (2006) — accessible introduction to Christianity</li>
+          <li>Surprised by Hope (2008) — resurrection and Christian hope</li>
+          <li>The New Testament and the People of God (1992) — historical background</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Anglican · Historical-critical</span>
+        <span class="sc-tradition" style="color:var(--g);">St Andrews · Durham</span>
+      </div>
+    </div>
+
+    <!-- JOHN LENNOX -->
+    <div class="scholar-card" data-cats="science philosophy" data-name="john lennox">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#285a9e;">JL</div>
+        <div class="sc-meta">
+          <div class="sc-name">John Lennox</div>
+          <div class="sc-dates">1943 – present · Irish</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Science</span>
+            <span class="sc-tag">Mathematics</span>
+            <span class="sc-tag">Philosophy</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Emeritus Professor of Mathematics at Oxford University. Three earned doctorates. Has debated Richard Dawkins three times publicly — widely considered among the most effective Christian debaters on science and faith. His key insight: science and Christianity are not in conflict because science describes the mechanisms God uses; it cannot tell us whether God exists or what he is like.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Science & Faith</span>
+          <span class="sc-arg">Mathematical Universe</span>
+          <span class="sc-arg">DNA Information</span>
+          <span class="sc-arg">Big Bang</span>
+        </div>
+        <div class="sc-quote">"The more I understand science, the more I believe in God." — responding to Dawkins's claim that science leads to atheism</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>God's Undertaker: Has Science Buried God? (2007) — the science/faith interface</li>
+          <li>God and Stephen Hawking (2011) — response to The Grand Design</li>
+          <li>Gunning for God (2011) — response to the New Atheists</li>
+          <li>2084: Artificial Intelligence and the Future of Humanity (2020)</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Evangelical · Irish</span>
+        <span class="sc-tradition" style="color:var(--g);">Oxford University</span>
+      </div>
+    </div>
+
+    <!-- RICHARD BAUCKHAM -->
+    <div class="scholar-card" data-cats="history theology" data-name="richard bauckham">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#0f6e56;">RB</div>
+        <div class="sc-meta">
+          <div class="sc-name">Richard Bauckham</div>
+          <div class="sc-dates">1946 – present · British</div>
+          <div class="sc-tags">
+            <span class="sc-tag">History</span>
+            <span class="sc-tag">New Testament</span>
+            <span class="sc-tag">Theology</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Emeritus Professor of New Testament Studies at St Andrews. His Jesus and the Eyewitnesses (2006) transformed Gospel scholarship by demonstrating that the Gospels are rooted in specific named eyewitness testimony. His God Crucified (1998) established the "divine identity" framework — showing that the New Testament includes Jesus within the divine identity of the one God of Jewish monotheism without abandoning monotheism.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Eyewitness Testimony</span>
+          <span class="sc-arg">Naming Patterns</span>
+          <span class="sc-arg">Divine Identity</span>
+          <span class="sc-arg">High Christology</span>
+        </div>
+        <div class="sc-quote">"The Gospels are not anonymous community products. They are rooted in the testimony of specific named eyewitnesses — people known to their communities and available for verification." — Jesus and the Eyewitnesses</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>Jesus and the Eyewitnesses (2006) — landmark Gospel scholarship</li>
+          <li>God Crucified (1998) — divine identity and New Testament Christology</li>
+          <li>Jesus and the God of Israel (2008) — collected essays on Christology</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Anglican · Reformed</span>
+        <span class="sc-tradition" style="color:var(--g);">St Andrews</span>
+      </div>
+    </div>
+
+    <!-- J.P. MORELAND -->
+    <div class="scholar-card" data-cats="philosophy theology" data-name="j.p. moreland james porter">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#3c3489;">JM</div>
+        <div class="sc-meta">
+          <div class="sc-name">J.P. Moreland</div>
+          <div class="sc-dates">1948 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Philosophy</span>
+            <span class="sc-tag">Consciousness</span>
+            <span class="sc-tag">Theology</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Distinguished Professor of Philosophy at Talbot School of Theology. A leading philosopher of mind and philosopher of science. His Consciousness and the Existence of God (2008) is the most comprehensive argument that the existence of consciousness is the single most powerful evidence for theism currently available. His work on the soul, substance dualism, and the philosophy of mind has been enormously influential.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Consciousness</span>
+          <span class="sc-arg">Substance Dualism</span>
+          <span class="sc-arg">The Soul</span>
+          <span class="sc-arg">Argument from Reason</span>
+        </div>
+        <div class="sc-quote">"The existence of consciousness is not a minor puzzle to be resolved by future neuroscience. It is the central fact about the universe that any worldview must account for — and naturalism cannot." — Consciousness and the Existence of God</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>Consciousness and the Existence of God (2008) — the argument from mind</li>
+          <li>Scaling the Secular City (1987) — comprehensive apologetics</li>
+          <li>The Soul (2014) — accessible treatment of the philosophy of mind</li>
+          <li>Kingdom Triangle (2007) — integrating mind, spirit, and kingdom</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Evangelical · Biola University</span>
+        <span class="sc-tradition" style="color:var(--g);">Talbot School of Theology</span>
+      </div>
+    </div>
+
+    <!-- FRANK TUREK -->
+    <div class="scholar-card" data-cats="philosophy theology" data-name="frank turek">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#854f0b;">FT</div>
+        <div class="sc-meta">
+          <div class="sc-name">Frank Turek</div>
+          <div class="sc-dates">1961 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Philosophy</span>
+            <span class="sc-tag">Theology</span>
+            <span class="sc-tag">Apologetics</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Co-author (with Norman Geisler) of I Don't Have Enough Faith to Be an Atheist — one of the best-selling apologetics books of the 2000s. Founder of CrossExamined.org. Known for making complex philosophical arguments accessible to general audiences, particularly on university campuses. His CRIMES acronym (Cosmology, Reason, Information, Morality, Evil, Science) provides a memorable framework for the cumulative case for theism.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Cumulative Case</span>
+          <span class="sc-arg">Cosmological</span>
+          <span class="sc-arg">Moral Argument</span>
+          <span class="sc-arg">Resurrection</span>
+        </div>
+        <div class="sc-quote">"Atheism requires more faith than Christianity. To believe the universe came from nothing, life came from non-life, and consciousness from unconscious matter — without any cause — requires extraordinary faith in the improbable."</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>I Don't Have Enough Faith to Be an Atheist (2004, with Geisler) — the best popular-level cumulative case</li>
+          <li>Stealing from God (2014) — why atheists need God to make their case</li>
+          <li>Hollywood Heroes (2022) — apologetics through film</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Evangelical · CrossExamined</span>
+        <a href="https://www.crossexamined.org" target="_blank" class="sc-link">crossexamined.org →</a>
+      </div>
+    </div>
+
+    <!-- JOHN POLKINGHORNE -->
+    <div class="scholar-card" data-cats="science theology" data-name="john polkinghorne">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#0f6e56;">JP</div>
+        <div class="sc-meta">
+          <div class="sc-name">John Polkinghorne</div>
+          <div class="sc-dates">1930 – 2021 · British</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Science</span>
+            <span class="sc-tag">Theology</span>
+            <span class="sc-tag">Physics</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Former Professor of Mathematical Physics at Cambridge, then ordained as an Anglican priest. Fellow of the Royal Society. One of the most respected voices on the integration of science and faith in the 20th century. His key insight: the universe is not only rationally intelligible (the foundation of science) but also rationally beautiful — and both features are better explained by theism than naturalism.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Fine-Tuning</span>
+          <span class="sc-arg">Mathematical Universe</span>
+          <span class="sc-arg">Anthropic Fruitfulness</span>
+          <span class="sc-arg">Quantum Theology</span>
+        </div>
+        <div class="sc-quote">"Science and theology are both searching for truth... The universe is not only rationally transparent — it is rationally beautiful, a fact that calls for explanation beyond mere physics."</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>Belief in God in an Age of Science (1998) — his clearest statement</li>
+          <li>The Faith of a Physicist (1994) — systematic theology through a scientist's eyes</li>
+          <li>Science and the Trinity (2004) — Trinitarian theology and physics</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Anglican · FRS</span>
+        <span class="sc-tradition" style="color:var(--g);">Cambridge University</span>
+      </div>
+    </div>
+
+    <!-- TIMOTHY MCGREW -->
+    <div class="scholar-card" data-cats="philosophy history" data-name="timothy mcgrew">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#1e4278;">TM</div>
+        <div class="sc-meta">
+          <div class="sc-name">Timothy McGrew</div>
+          <div class="sc-dates">1965 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Philosophy</span>
+            <span class="sc-tag">Epistemology</span>
+            <span class="sc-tag">History</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Professor and Chair of Philosophy at Western Michigan University. Expert in epistemology, philosophy of science, and historical evidence for Christianity. His entry on "Miracles" in the Stanford Encyclopedia of Philosophy and his Bayesian analysis of the resurrection are among the most rigorous academic treatments of these topics. Known for bringing the tools of formal epistemology to bear on historical questions about the Gospels.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Bayesian Resurrection</span>
+          <span class="sc-arg">Miracles</span>
+          <span class="sc-arg">Gospel Reliability</span>
+          <span class="sc-arg">Undesigned Coincidences</span>
+        </div>
+        <div class="sc-quote">"The undesigned coincidences in the Gospels — small details that interlock in ways no collaborating authors could have planned — are among the most powerful evidences for their historical reliability."</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>Hidden in Plain View (2017, with Lydia McGrew) — undesigned coincidences in the Gospels</li>
+          <li>The Gospel of John as Eyewitness Testimony (2019) — Johannine scholarship</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Evangelical · Reformed</span>
+        <span class="sc-tradition" style="color:var(--g);">Western Michigan University</span>
+      </div>
+    </div>
+
+    <!-- MICHAEL LICONA -->
+    <div class="scholar-card" data-cats="history theology" data-name="michael licona">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#a32d2d;">ML</div>
+        <div class="sc-meta">
+          <div class="sc-name">Michael Licona</div>
+          <div class="sc-dates">1961 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">History</span>
+            <span class="sc-tag">Resurrection</span>
+            <span class="sc-tag">New Testament</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Associate Professor of Theology at Houston Baptist University. His The Resurrection of Jesus: A New Historiographical Approach (2010) — at 718 pages — is the most thorough application of standard historiographical methodology to the resurrection question ever published. Has debated leading sceptics worldwide including Bart Ehrman, John Shelby Spong, and Richard Carrier.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Historiographical Method</span>
+          <span class="sc-arg">Resurrection Appearances</span>
+          <span class="sc-arg">Paul's Testimony</span>
+          <span class="sc-arg">Minimal Facts</span>
+        </div>
+        <div class="sc-quote">"Applying standard historiographical criteria to the resurrection — multiple attestation, enemy attestation, the criterion of embarrassment — the resurrection is the most plausible explanation of the relevant historical bedrock."</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>The Resurrection of Jesus: A New Historiographical Approach (2010) — the magnum opus</li>
+          <li>The Case for the Resurrection of Jesus (2004, with Habermas) — popular level</li>
+          <li>Why Are There Differences in the Gospels? (2017) — genre and Gospel harmony</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Evangelical · Southern Baptist</span>
+        <span class="sc-tradition" style="color:var(--g);">Houston Baptist University</span>
+      </div>
+    </div>
+
+    <!-- EDWARD FESER -->
+    <div class="scholar-card" data-cats="philosophy theology" data-name="edward feser">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#3c3489;">EF</div>
+        <div class="sc-meta">
+          <div class="sc-name">Edward Feser</div>
+          <div class="sc-dates">1968 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Philosophy</span>
+            <span class="sc-tag">Thomism</span>
+            <span class="sc-tag">Metaphysics</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Associate Professor of Philosophy at Pasadena City College. The leading contemporary expositor of Thomistic-Aristotelian philosophy and natural theology. A former atheist, his conversion was driven by intellectual engagement with Aquinas. His book The Last Superstition is a sustained argument that the New Atheism is philosophically illiterate — it attacks a straw man of theism rather than the God of classical theology.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Thomistic Cosmological</span>
+          <span class="sc-arg">Act & Potency</span>
+          <span class="sc-arg">Pure Act</span>
+          <span class="sc-arg">Divine Simplicity</span>
+        </div>
+        <div class="sc-quote">"The God the New Atheists attack is not the God of classical theism. Dawkins spends 400 pages refuting a God that Aquinas, Augustine, and Anselm would not have recognized." — The Last Superstition</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>Aquinas (2009) — the clearest introduction to Aquinas's natural theology</li>
+          <li>The Last Superstition (2008) — against the New Atheism</li>
+          <li>Five Proofs of the Existence of God (2017) — Aristotelian, Augustinian, Thomistic, Leibnizian, Rationalist</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Catholic · Thomist</span>
+        <span class="sc-tradition" style="color:var(--g);">Pasadena City College</span>
+      </div>
+    </div>
+
+    <!-- RAVI ZACHARIAS -->
+    <div class="scholar-card" data-cats="theology philosophy" data-name="ravi zacharias">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#854f0b;">RZ</div>
+        <div class="sc-meta">
+          <div class="sc-name">Ravi Zacharias</div>
+          <div class="sc-dates">1946 – 2020 · Indian-Canadian</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Philosophy</span>
+            <span class="sc-tag">Theology</span>
+            <span class="sc-tag">Comparative Religion</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Founder of RZIM (Ravi Zacharias International Ministries). Born in India, converted from Hinduism to Christianity. For decades one of the most compelling public Christian apologists, known for addressing pluralism, Eastern religion, and postmodern relativism. Spoke at Harvard, Oxford, and the United Nations. His ministry was tragically marred by serious moral failures that came to light after his death in 2020.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Moral Argument</span>
+          <span class="sc-arg">Meaning & Purpose</span>
+          <span class="sc-arg">Religious Pluralism</span>
+          <span class="sc-arg">Argument from Desire</span>
+        </div>
+        <div class="sc-quote">"Every man and woman has a hunger of the soul that this world cannot satisfy. The heart is restless until it rests in God — and every competing philosophy leaves that hunger unmet."</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>Can Man Live Without God? (1994) — his clearest apologetic work</li>
+          <li>The Real Face of Atheism (2004) — response to atheist arguments</li>
+          <li>Jesus Among Other Gods (2000) — comparative religion</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Evangelical · Note: serious misconduct disclosed posthumously</span>
+      </div>
+    </div>
+
+    <!-- BART EHRMAN (SCEPTIC) -->
+    <div class="scholar-card" data-cats="sceptic history" data-name="bart ehrman">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#444;">BE</div>
+        <div class="sc-meta">
+          <div class="sc-name">Bart Ehrman</div>
+          <div class="sc-dates">1955 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Sceptic</span>
+            <span class="sc-tag">New Testament</span>
+            <span class="sc-tag">Textual Criticism</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">James A. Gray Distinguished Professor of Religious Studies at UNC Chapel Hill. A former evangelical Christian who lost his faith and became an agnostic. The most prominent popular-level sceptic of New Testament reliability. Know his arguments well — you will encounter them. Importantly, he affirms the historical existence of Jesus, the crucifixion, and the disciples' genuine belief in the resurrection, while denying the resurrection itself.</p>
+        <div class="sc-section-label">Key objections he raises</div>
+        <div class="sc-args">
+          <span class="sc-arg">Textual Variants</span>
+          <span class="sc-arg">Gospel Contradictions</span>
+          <span class="sc-arg">Problem of Suffering</span>
+          <span class="sc-arg">Hallucination Theory</span>
+        </div>
+        <div class="sc-quote">"Jesus certainly existed... I don't think we can claim that the resurrection is a matter of historical knowledge." — Jesus, Interrupted (but he affirms the crucifixion and disciples' belief)</div>
+        <div class="sc-section-label">Key books to know (and respond to)</div>
+        <ul class="sc-books">
+          <li>Misquoting Jesus (2005) — textual variants (responded to by Wallace, Metzger)</li>
+          <li>Did Jesus Exist? (2012) — actually defends Jesus's existence against mythicists</li>
+          <li>How Jesus Became God (2014) — sceptical Christology (responded to by Bird et al.)</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Agnostic · Know to respond to him</span>
+        <span class="sc-tradition" style="color:#a32d2d;">Sceptic</span>
+      </div>
+    </div>
+
+    <!-- RICHARD DAWKINS (SCEPTIC) -->
+    <div class="scholar-card" data-cats="sceptic science" data-name="richard dawkins">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#444;">RD</div>
+        <div class="sc-meta">
+          <div class="sc-name">Richard Dawkins</div>
+          <div class="sc-dates">1941 – present · British</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Sceptic</span>
+            <span class="sc-tag">Biology</span>
+            <span class="sc-tag">Atheism</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Former Professor of the Public Understanding of Science at Oxford. The most famous popular atheist of the early 21st century. A brilliant biologist and science communicator whose philosophical arguments are generally considered weak by professional philosophers — even atheist ones. His "who designed the designer?" objection and his Boeing 747 gambit are important to understand and respond to. His debates with Lennox and McGrath are worth studying.</p>
+        <div class="sc-section-label">Key objections he raises</div>
+        <div class="sc-args">
+          <span class="sc-arg">Who Designed the Designer?</span>
+          <span class="sc-arg">Boeing 747 Gambit</span>
+          <span class="sc-arg">Evolution Explains Design</span>
+          <span class="sc-arg">Meme Theory of Religion</span>
+        </div>
+        <div class="sc-quote">"The God of the Old Testament is arguably the most unpleasant character in all fiction." — The God Delusion (this is rhetoric, not argument)</div>
+        <div class="sc-section-label">Key books to respond to</div>
+        <ul class="sc-books">
+          <li>The God Delusion (2006) — responded to by Lennox, McGrath, Ward, Feser</li>
+          <li>The Blind Watchmaker (1986) — evolution and design (legitimate science)</li>
+          <li>The Selfish Gene (1976) — gene-centred evolution (legitimate science)</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Atheist · Know to respond to him</span>
+        <span class="sc-tradition" style="color:#a32d2d;">Sceptic</span>
+      </div>
+    </div>
+
+
+    <!-- STEPHEN MEYER -->
+    <div class="scholar-card" data-cats="science philosophy" data-name="stephen meyer">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#285a9e;">SM</div>
+        <div class="sc-meta">
+          <div class="sc-name">Stephen Meyer</div>
+          <div class="sc-dates">1958 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Science</span>
+            <span class="sc-tag">Philosophy</span>
+            <span class="sc-tag">Intelligent Design</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Director of the Center for Science and Culture at the Discovery Institute. PhD in History and Philosophy of Science from Cambridge. His Signature in the Cell (2009) makes the case that DNA's specified information is best explained by intelligent design — not Darwinian mechanisms. Darwin's Doubt (2013) addresses the Cambrian explosion. Not a young-earth creationist — he accepts an old universe and old earth.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">DNA Information</span>
+          <span class="sc-arg">Cambrian Explosion</span>
+          <span class="sc-arg">Origin of Life</span>
+          <span class="sc-arg">Intelligent Design</span>
+        </div>
+        <div class="sc-quote">"The discovery of the information-bearing properties of DNA raises the question of the origin of that information with a precision and force that earlier generations of scientists could not have anticipated." — Signature in the Cell</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>Signature in the Cell (2009) — DNA and the case for intelligent design</li>
+          <li>Darwin's Doubt (2013) — the Cambrian explosion and animal origins</li>
+          <li>Return of the God Hypothesis (2021) — three scientific discoveries that reveal mind behind the cosmos</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Evangelical · Discovery Institute</span>
+        <a href="https://stephencmeyer.org" target="_blank" class="sc-link">stephencmeyer.org →</a>
+      </div>
+    </div>
+
+    <!-- JAMES WHITE -->
+    <div class="scholar-card" data-cats="theology history" data-name="james white">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#1e4278;">JW</div>
+        <div class="sc-meta">
+          <div class="sc-name">James R. White</div>
+          <div class="sc-dates">1962 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Theology</span>
+            <span class="sc-tag">Debate</span>
+            <span class="sc-tag">Islam · JW · Mormonism</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Director of Alpha and Omega Ministries. Professor at Golden Gate Baptist Theological Seminary. The most prolific formal Christian debater alive — has participated in over 150 formal public debates with Muslim scholars, Mormon leaders, Jehovah's Witnesses, atheists, and Catholic apologists. His expertise in Greek and Hebrew makes him particularly effective on textual and Trinitarian questions. His debates with Muslim scholars are essential viewing.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Trinity Defence</span>
+          <span class="sc-arg">John 1:1 Grammar</span>
+          <span class="sc-arg">Islamic Dilemma</span>
+          <span class="sc-arg">Quran Preservation</span>
+        </div>
+        <div class="sc-quote">"The Islamic Dilemma: the Quran affirms the Bible as the Word of God — yet Muslims claim it is corrupted. These two claims cannot both be true. Every Muslim must choose which to abandon."</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>The Forgotten Trinity (1998) — best popular defence of Trinitarian theology</li>
+          <li>What Every Christian Needs to Know About the Quran (2013) — thorough and fair</li>
+          <li>The King James Only Controversy (1995) — textual criticism for laypeople</li>
+          <li>Is the Mormon My Brother? (1997) — LDS theology examined</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Reformed · Baptist</span>
+        <a href="https://www.aomin.org" target="_blank" class="sc-link">aomin.org →</a>
+      </div>
+    </div>
+
+    <!-- ALISTER MCGRATH -->
+    <div class="scholar-card" data-cats="science theology philosophy" data-name="alister mcgrath">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#0f6e56;">AM</div>
+        <div class="sc-meta">
+          <div class="sc-name">Alister McGrath</div>
+          <div class="sc-dates">1953 – present · Irish</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Theology</span>
+            <span class="sc-tag">Science</span>
+            <span class="sc-tag">History</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Andreas Idreos Professor of Science and Religion at Oxford. Holds doctorates in both molecular biophysics and theology — a rare combination that gives him unique credibility on science-faith questions. A former atheist who converted to Christianity while studying at Oxford. His three-volume Scientific Theology and his responses to Richard Dawkins (The Dawkins Delusion, written with his wife Joanna) are essential reading.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Science & Faith</span>
+          <span class="sc-arg">Natural Theology</span>
+          <span class="sc-arg">C.S. Lewis Scholarship</span>
+          <span class="sc-arg">Mere Christianity</span>
+        </div>
+        <div class="sc-quote">"Christianity is not anti-intellectual. It is the conviction that reality is rational and that the universe is intelligible — a conviction that gave birth to modern science and continues to sustain it."</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>The Dawkins Delusion (2007, with Joanna McGrath) — response to The God Delusion</li>
+          <li>C.S. Lewis: A Life (2013) — the definitive Lewis biography</li>
+          <li>Mere Apologetics (2012) — accessible introduction to apologetics method</li>
+          <li>The Science of God (2004) — science and Christian theology</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Anglican · Oxford University</span>
+        <span class="sc-tradition" style="color:var(--g);">Oxford University</span>
+      </div>
+    </div>
+
+    <!-- PETER KREEFT -->
+    <div class="scholar-card" data-cats="philosophy theology" data-name="peter kreeft">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#854f0b;">PK</div>
+        <div class="sc-meta">
+          <div class="sc-name">Peter Kreeft</div>
+          <div class="sc-dates">1937 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Philosophy</span>
+            <span class="sc-tag">Theology</span>
+            <span class="sc-tag">Thomism</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Professor of Philosophy at Boston College. A Dutch Reformed convert to Catholicism. One of the most prolific and accessible Christian philosophers of his generation — over 80 books. His Twenty Arguments for the Existence of God (with Ronald Tacelli) provides the most comprehensive single-volume catalogue of theistic arguments. Known for making Aquinas intelligible to undergraduates and for his defence of natural law ethics.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Argument from Desire</span>
+          <span class="sc-arg">Thomistic Arguments</span>
+          <span class="sc-arg">Moral Argument</span>
+          <span class="sc-arg">Pascal's Wager</span>
+        </div>
+        <div class="sc-quote">"The argument from desire may be the single most personally compelling argument for the existence of God — because every person has felt it. Augustine named it: our heart is restless until it rests in God."</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>Handbook of Catholic Apologetics (1994, with Tacelli) — 20 arguments for God</li>
+          <li>C.S. Lewis for the Third Millennium (1994) — applying Lewis to postmodernism</li>
+          <li>Socrates Meets Jesus (1987) — apologetics through philosophical dialogue</li>
+          <li>The Philosophy of Thomas Aquinas (2002) — accessible Aquinas</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Catholic · Thomist</span>
+        <span class="sc-tradition" style="color:var(--g);">Boston College</span>
+      </div>
+    </div>
+
+    <!-- ROBIN COLLINS -->
+    <div class="scholar-card" data-cats="philosophy science" data-name="robin collins">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#285a9e;">RC</div>
+        <div class="sc-meta">
+          <div class="sc-name">Robin Collins</div>
+          <div class="sc-dates">1961 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Philosophy</span>
+            <span class="sc-tag">Physics</span>
+            <span class="sc-tag">Fine-Tuning</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Professor of Philosophy at Messiah University. The most rigorous philosophical developer of the fine-tuning argument. His version — using the likelihood principle and Bayesian reasoning — is considered the most sophisticated treatment of fine-tuning in the academic literature. He holds a degree in physics as well as philosophy, giving him the technical credibility to engage with multiverse proposals and quantum cosmology at a serious level.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Fine-Tuning</span>
+          <span class="sc-arg">Likelihood Principle</span>
+          <span class="sc-arg">Multiverse Response</span>
+          <span class="sc-arg">Boltzmann Brain</span>
+        </div>
+        <div class="sc-quote">"The fine-tuning of the universe provides strong evidence for theism over atheism — the probability of a life-permitting universe is enormously higher on theism than on any atheistic multiverse proposal."</div>
+        <div class="sc-section-label">Essential reading</div>
+        <ul class="sc-books">
+          <li>"The Teleological Argument" in The Blackwell Companion to Natural Theology (2009) — his major academic treatment</li>
+          <li>"The Fine-Tuning of the Universe for Intelligent Life" — key academic paper</li>
+          <li>In God and Design (2003) ed. Neil Manson — accessible chapter</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Evangelical · Messiah University</span>
+      </div>
+    </div>
+
+    <!-- JOHN LENNOX (already there) — LARRY HURTADO -->
+    <div class="scholar-card" data-cats="history theology" data-name="larry hurtado">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#a32d2d;">LH</div>
+        <div class="sc-meta">
+          <div class="sc-name">Larry Hurtado</div>
+          <div class="sc-dates">1943 – 2019 · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">History</span>
+            <span class="sc-tag">New Testament</span>
+            <span class="sc-tag">Christology</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Emeritus Professor of New Testament Language, Literature and Theology at Edinburgh University. His Lord Jesus Christ: Devotion to Jesus in Earliest Christianity (2003) — at 746 pages — is the most comprehensive scholarly treatment of early Christology ever written. He demonstrated conclusively that the "devotional explosion" giving Jesus divine status happened within the first two decades of Christianity — not centuries later as critics claim.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Early High Christology</span>
+          <span class="sc-arg">Devotional Explosion</span>
+          <span class="sc-arg">Binatarian Worship</span>
+          <span class="sc-arg">Divine Identity</span>
+        </div>
+        <div class="sc-quote">"Within the first two decades after the crucifixion, Jewish Christians were worshipping Jesus as divine — not as a later Hellenistic development but as an immediate consequence of the resurrection." — Lord Jesus Christ</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>Lord Jesus Christ (2003) — the definitive treatment of early Christology</li>
+          <li>One God, One Lord (1988) — early Christian devotion and ancient Jewish monotheism</li>
+          <li>How on Earth Did Jesus Become a God? (2005) — accessible version of his thesis</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Evangelical Methodist</span>
+        <span class="sc-tradition" style="color:var(--g);">Edinburgh University</span>
+      </div>
+    </div>
+
+    <!-- DOUGLAS AXE -->
+    <div class="scholar-card" data-cats="science" data-name="douglas axe">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#854f0b;">DA</div>
+        <div class="sc-meta">
+          <div class="sc-name">Douglas Axe</div>
+          <div class="sc-dates">1961 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Science</span>
+            <span class="sc-tag">Biochemistry</span>
+            <span class="sc-tag">Intelligent Design</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Director of Biologic Institute. His research on protein function — published in the Journal of Molecular Biology in 2004 — provides the most rigorous empirical estimate of the probability of a functional protein arising by random mutation: approximately 1 in 10^77. This research has become foundational for the design inference in biology. Formerly a researcher at Cambridge University's Medical Research Council Centre.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Protein Function</span>
+          <span class="sc-arg">Functional Sequences</span>
+          <span class="sc-arg">1 in 10^77</span>
+          <span class="sc-arg">Origin of Life</span>
+        </div>
+        <div class="sc-quote">"The probability of a functional protein sequence arising by chance is approximately 1 in 10^77. If every atom in the observable universe ran an experiment every nanosecond since the Big Bang, this could not happen by chance." — Journal of Molecular Biology (2004)</div>
+        <div class="sc-section-label">Essential reading</div>
+        <ul class="sc-books">
+          <li>"Estimating the Prevalence of Protein Sequences Adopting Functional Enzyme Folds" — J. Molecular Biology (2004) — the key paper</li>
+          <li>Undeniable (2016) — accessible treatment of design in biology</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Evangelical · Biologic Institute</span>
+      </div>
+    </div>
+
+    <!-- DAVID WOOD -->
+    <div class="scholar-card" data-cats="theology" data-name="david wood">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#1e4278;">DW</div>
+        <div class="sc-meta">
+          <div class="sc-name">David Wood</div>
+          <div class="sc-dates">1975 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Theology</span>
+            <span class="sc-tag">Islam</span>
+            <span class="sc-tag">Apologetics</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Director of Acts 17 Apologetics. PhD in Philosophy of Religion. A former atheist who converted to Christianity while in prison. His YouTube channel has over 900,000 subscribers and his Islamic Dilemma video series has been watched millions of times — making him the most watched Christian apologist on Islam in the English-speaking world. Known for his ability to present complex arguments in memorable, accessible ways.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">The Islamic Dilemma</span>
+          <span class="sc-arg">Quran Preservation</span>
+          <span class="sc-arg">Muhammad's Character</span>
+          <span class="sc-arg">Resurrection vs Islam</span>
+        </div>
+        <div class="sc-quote">"The Islamic Dilemma is simple: the Quran affirms the Bible. If the Quran is right, the Bible is reliable. If the Bible is reliable, Islam is false. Muslims must choose which horn to take — both are fatal to Islam."</div>
+        <div class="sc-section-label">Essential resources</div>
+        <ul class="sc-books">
+          <li>YouTube: Acts17Apologetics — The Islamic Dilemma series</li>
+          <li>Answering Islam website (answering-islam.org) — comprehensive resource</li>
+          <li>Numerous formal debates with Muslim scholars available on YouTube</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Evangelical · Acts 17 Apologetics</span>
+        <a href="https://www.acts17apologetics.com" target="_blank" class="sc-link">acts17apologetics.com →</a>
+      </div>
+    </div>
+
+    <!-- RICHARD SWINBURNE -->
+    <div class="scholar-card" data-cats="philosophy theology" data-name="richard swinburne">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#3c3489;">RS</div>
+        <div class="sc-meta">
+          <div class="sc-name">Richard Swinburne</div>
+          <div class="sc-dates">1934 – present · British</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Philosophy</span>
+            <span class="sc-tag">Theology</span>
+            <span class="sc-tag">Epistemology</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Emeritus Nolloth Professor of the Philosophy of the Christian Religion at Oxford. The most systematic and rigorous philosophical theologian of his generation. His trilogy — The Coherence of Theism (1977), The Existence of God (1979), and Faith and Reason (1981) — is the most comprehensive philosophical defence of theism in the analytic tradition. His Bayesian approach applies probability theory formally to the existence of God.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Bayesian Theism</span>
+          <span class="sc-arg">Principle of Credulity</span>
+          <span class="sc-arg">Religious Experience</span>
+          <span class="sc-arg">Simplicity of Theism</span>
+        </div>
+        <div class="sc-quote">"The hypothesis that there is a God is a very simple hypothesis — simpler than the hypothesis that there is a complex physical universe with no explanation. Theism is not the complex hypothesis; it is the simple one." — The Existence of God</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>The Existence of God (1979, 2nd ed. 2004) — the rigorous philosophical case</li>
+          <li>Is There a God? (1996) — accessible version of his argument</li>
+          <li>The Resurrection of God Incarnate (2003) — Bayesian case for the resurrection</li>
+          <li>The Coherence of Theism (1977) — on whether the concept of God is coherent</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Anglican · Oxford University</span>
+        <span class="sc-tradition" style="color:var(--g);">Oxford University</span>
+      </div>
+    </div>
+
+    <!-- JOSH MCDOWELL -->
+    <div class="scholar-card" data-cats="theology history" data-name="josh mcdowell">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#854f0b;">JM</div>
+        <div class="sc-meta">
+          <div class="sc-name">Josh McDowell</div>
+          <div class="sc-dates">1939 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Theology</span>
+            <span class="sc-tag">History</span>
+            <span class="sc-tag">Apologetics</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Author and speaker with Campus Crusade for Christ (now Cru) for over 60 years. His Evidence That Demands a Verdict (1972) and More Evidence That Demands a Verdict (1975) were the first systematic popular-level compilations of historical and manuscript evidence for the reliability of the Bible and the resurrection. These books have introduced more people to the evidence for Christianity than perhaps any other apologetics works of the 20th century. A former sceptic who set out to disprove Christianity.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Manuscript Evidence</span>
+          <span class="sc-arg">Resurrection Evidence</span>
+          <span class="sc-arg">Prophecy</span>
+          <span class="sc-arg">Historical Jesus</span>
+        </div>
+        <div class="sc-quote">"I tried to disprove Christianity. The evidence for the resurrection of Jesus Christ is so overwhelming that it compels acceptance by proof beyond reasonable doubt."</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>Evidence That Demands a Verdict (1972, updated 2017) — the classic compilation</li>
+          <li>More Than a Carpenter (1977) — the most accessible introduction to his case</li>
+          <li>The New Evidence That Demands a Verdict (1999) — updated edition</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Evangelical · Cru</span>
+        <a href="https://www.josh.org" target="_blank" class="sc-link">josh.org →</a>
+      </div>
+    </div>
+
+    <!-- WILLIAM DEMBSKI -->
+    <div class="scholar-card" data-cats="science philosophy" data-name="william dembski">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#0f6e56;">WD</div>
+        <div class="sc-meta">
+          <div class="sc-name">William Dembski</div>
+          <div class="sc-dates">1960 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Science</span>
+            <span class="sc-tag">Mathematics</span>
+            <span class="sc-tag">Information Theory</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Senior Fellow at the Discovery Institute. Holds PhDs in both Mathematics and Philosophy, and a ThM in theology. Developer of the concept of "complex specified information" (CSI) as a reliable indicator of intelligent design. His work applies information theory — the science of measuring information — to biological systems, arguing that DNA constitutes exactly the kind of specified complexity that only intelligent agents produce.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Complex Specified Info</span>
+          <span class="sc-arg">Design Filter</span>
+          <span class="sc-arg">No Free Lunch</span>
+          <span class="sc-arg">Information Theory</span>
+        </div>
+        <div class="sc-quote">"Specified complexity — information that is both complex (unlikely) and specified (conforming to an independently recognisable pattern) — is a reliable marker of intelligent design, never produced by unintelligent processes."</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>The Design Inference (1998) — the academic foundation of intelligent design theory</li>
+          <li>Intelligent Design (1999) — accessible introduction</li>
+          <li>No Free Lunch (2002) — evolutionary algorithms and design</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Evangelical · Discovery Institute</span>
+      </div>
+    </div>
+
+    <!-- G.K. CHESTERTON -->
+    <div class="scholar-card" data-cats="literature theology philosophy" data-name="g.k. chesterton gilbert keith">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#854f0b;">GC</div>
+        <div class="sc-meta">
+          <div class="sc-name">G.K. Chesterton</div>
+          <div class="sc-dates">1874 – 1936 · British</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Literature</span>
+            <span class="sc-tag">Philosophy</span>
+            <span class="sc-tag">Theology</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Journalist, novelist, and Christian apologist. C.S. Lewis credited Chesterton as one of the most important influences on his own conversion. His Orthodoxy (1908) remains one of the most brilliant and surprising defences of Christianity ever written — beginning from common sense and arriving at the Apostles' Creed. His wit and paradoxical style have influenced every major Christian apologist since. George Bernard Shaw, a lifelong opponent, called him "a man of colossal genius."</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Paradox of Christianity</span>
+          <span class="sc-arg">Moral Argument</span>
+          <span class="sc-arg">Tradition & Democracy</span>
+          <span class="sc-arg">Against Determinism</span>
+        </div>
+        <div class="sc-quote">"The Christian ideal has not been tried and found wanting. It has been found difficult and left untried." — What's Wrong with the World (1910)</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>Orthodoxy (1908) — his spiritual autobiography and apologetic masterpiece</li>
+          <li>The Everlasting Man (1925) — influenced C.S. Lewis's conversion</li>
+          <li>Heretics (1905) — critique of contemporary intellectual fashions</li>
+          <li>St. Thomas Aquinas (1933) — described by Etienne Gilson as the best book on Aquinas ever written</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Catholic · Convert from Anglicanism</span>
+      </div>
+    </div>
+
+    <!-- FRANCIS COLLINS -->
+    <div class="scholar-card" data-cats="science theology" data-name="francis collins">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#0f6e56;">FC</div>
+        <div class="sc-meta">
+          <div class="sc-name">Francis Collins</div>
+          <div class="sc-dates">1950 – present · American</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Science</span>
+            <span class="sc-tag">Genetics</span>
+            <span class="sc-tag">Theology</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Former Director of the National Institutes of Health and former Director of the Human Genome Project — the mapping of the entire human genome. A former atheist who converted to Christianity after reading C.S. Lewis. His conversion story and his approach to the integration of faith and science are among the most credible available — he is not a creationist but an evolutionary theist who believes God created through evolutionary processes.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Moral Law</span>
+          <span class="sc-arg">BioLogos</span>
+          <span class="sc-arg">Fine-Tuning</span>
+          <span class="sc-arg">Evolutionary Theism</span>
+        </div>
+        <div class="sc-quote">"The God of the Bible is also the God of the genome. God can be found in the cathedral or in the laboratory. By investigating God's majestic and awesome creation, science can actually be a means of worship." — The Language of God</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>The Language of God (2006) — a scientist presents evidence for belief</li>
+          <li>Belief: Readings on the Reason for Faith (2010) — anthology he edited</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Evangelical · BioLogos Foundation</span>
+        <a href="https://biologos.org" target="_blank" class="sc-link">biologos.org →</a>
+      </div>
+    </div>
+
+    <!-- BLAISE PASCAL (HISTORICAL) -->
+    <div class="scholar-card" data-cats="philosophy science theology" data-name="blaise pascal">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#3c3489;">BP</div>
+        <div class="sc-meta">
+          <div class="sc-name">Blaise Pascal</div>
+          <div class="sc-dates">1623 – 1662 · French</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Philosophy</span>
+            <span class="sc-tag">Mathematics</span>
+            <span class="sc-tag">Theology</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Mathematician, physicist, and Christian philosopher. Inventor of probability theory and the mechanical calculator. His Pensées (Thoughts) — published posthumously from fragments — constitute one of the most searching explorations of the human condition and the case for Christianity ever written. His famous "wager" is often misunderstood — it is not an argument for belief but a psychological analysis of why intelligent people resist believing what the evidence already supports.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Pascal's Wager</span>
+          <span class="sc-arg">The Misery of Man</span>
+          <span class="sc-arg">Diversion (Divertissement)</span>
+          <span class="sc-arg">Argument from Desire</span>
+        </div>
+        <div class="sc-quote">"There is a God-shaped vacuum in the heart of each man which cannot be satisfied by any created thing, but only by God the Creator, made known through Jesus Christ." — Pensées</div>
+        <div class="sc-section-label">Essential books</div>
+        <ul class="sc-books">
+          <li>Pensées (1669, posthumous) — the greatest French apologetics work</li>
+          <li>The Provincial Letters (1656-57) — brilliant polemical writing</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Catholic · Jansenist</span>
+        <span class="sc-tradition" style="color:var(--g);">17th Century</span>
+      </div>
+    </div>
+
+    <!-- ANSELM OF CANTERBURY (HISTORICAL) -->
+    <div class="scholar-card" data-cats="philosophy theology" data-name="anselm of canterbury">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#1e4278;">AS</div>
+        <div class="sc-meta">
+          <div class="sc-name">Anselm of Canterbury</div>
+          <div class="sc-dates">1033 – 1109 · Italian-English</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Philosophy</span>
+            <span class="sc-tag">Theology</span>
+            <span class="sc-tag">Historical</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Archbishop of Canterbury and Benedictine monk. Father of scholasticism and one of the most important Christian philosophers of the medieval period. His Proslogion (1077-78) contains the original ontological argument — "that than which nothing greater can be conceived." The argument has been debated for nearly 1,000 years and, in its modal form as developed by Plantinga, is still taken seriously by academic philosophers today.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Ontological Argument</span>
+          <span class="sc-arg">Necessary Being</span>
+          <span class="sc-arg">Cur Deus Homo</span>
+          <span class="sc-arg">Divine Attributes</span>
+        </div>
+        <div class="sc-quote">"God is that than which nothing greater can be conceived. If God exists only in the mind, we can conceive of something greater — a God that also exists in reality. Therefore God must exist in reality." — Proslogion (1078)</div>
+        <div class="sc-section-label">Essential works</div>
+        <ul class="sc-books">
+          <li>Proslogion (1077-78) — the original ontological argument</li>
+          <li>Monologion (1076) — arguments for God's existence from degrees of goodness</li>
+          <li>Cur Deus Homo (1098) — why God became man; the satisfaction theory of atonement</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Catholic · Benedictine</span>
+        <span class="sc-tradition" style="color:var(--g);">11th–12th Century</span>
+      </div>
+    </div>
+
+    <!-- THOMAS AQUINAS (HISTORICAL) -->
+    <div class="scholar-card" data-cats="philosophy theology" data-name="thomas aquinas">
+      <div class="sc-header">
+        <div class="sc-avatar" style="background:#3c3489;">TA</div>
+        <div class="sc-meta">
+          <div class="sc-name">Thomas Aquinas</div>
+          <div class="sc-dates">1225 – 1274 · Italian</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Philosophy</span>
+            <span class="sc-tag">Theology</span>
+            <span class="sc-tag">Historical</span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body">
+        <p class="sc-bio">Dominican friar and the greatest theologian of the medieval period. His synthesis of Aristotelian philosophy and Christian theology — contained in the Summa Theologica — became the official theology of the Catholic Church. His Five Ways remain the most influential arguments for God's existence in history. The Thomistic tradition he founded continues to produce rigorous philosophical theology today — Edward Feser is his foremost contemporary expositor.</p>
+        <div class="sc-section-label">Key arguments</div>
+        <div class="sc-args">
+          <span class="sc-arg">Five Ways</span>
+          <span class="sc-arg">Act & Potency</span>
+          <span class="sc-arg">Pure Act</span>
+          <span class="sc-arg">Divine Simplicity</span>
+        </div>
+        <div class="sc-quote">"We cannot know what God is, but only what He is not. We must therefore consider the ways in which God does not exist, rather than the ways in which He does." — Summa Theologica</div>
+        <div class="sc-section-label">Essential works</div>
+        <ul class="sc-books">
+          <li>Summa Theologica (1265-74) — the greatest work of medieval theology</li>
+          <li>Summa Contra Gentiles (1259-65) — systematic apologetics for non-Christians</li>
+          <li>Aquinas by Edward Feser (2009) — the best contemporary introduction</li>
+        </ul>
+      </div>
+      <div class="sc-footer">
+        <span class="sc-tradition">Catholic · Dominican</span>
+        <span class="sc-tradition" style="color:var(--g);">13th Century</span>
+      </div>
+    </div>
+
+
+    </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Apologia<span>Daily</span></div>
+  <div class="footer-links">
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="mailto:hello@apologiadaily.com">Contact</a>
+  </div>
+  <div class="footer-copy">Built for the defence of the Gospel.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function() {
+  function initNav() {
+    if (!window.supabase) { setTimeout(initNav, 50); return; }
+    var sb = window.supabase.createClient(
+      'https://noprgxkwniouukmrfozc.supabase.co',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+    );
+    sb.auth.getSession().then(function(r) {
+      if (r.data && r.data.session) {
+        var na = document.getElementById('nav-auth');
+        if (na) na.innerHTML = '<a href="dashboard.html" style="font-family:var(--ui);font-size:.82rem;font-weight:500;padding:7px 16px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none;">Dashboard</a>';
+      }
+    });
+  }
+  document.addEventListener('DOMContentLoaded', initNav);
+})();
+
+// Filter
+document.querySelectorAll('.filter-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    var filter = btn.dataset.filter;
+    document.querySelectorAll('.scholar-card').forEach(function(card) {
+      if (filter === 'all') {
+        card.classList.remove('hidden');
+      } else {
+        var cats = card.dataset.cats || '';
+        card.classList.toggle('hidden', cats.indexOf(filter) === -1);
+      }
+    });
+  });
+});
+
+// Search
+document.getElementById('search-input').addEventListener('input', function() {
+  var q = this.value.toLowerCase().trim();
+  document.querySelectorAll('.scholar-card').forEach(function(card) {
+    var name = card.dataset.name || '';
+    var text = card.textContent.toLowerCase();
+    card.classList.toggle('hidden', q && name.indexOf(q) === -1 && text.indexOf(q) === -1);
+  });
+  // Reset filter buttons
+  if (q) {
+    document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+  }
+});
+</script>
+</body>
+</html>
