@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Groups — Apologia Daily</title>
+  <meta name="description" content="Create or join an apologetics study group. Work through evidence together, discuss arguments, and hold each other accountable." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy-950: #050d1a; --navy-900: #0a1628; --navy-800: #0f2040;
+      --navy-700: #163058; --navy-600: #1e4278; --navy-500: #285a9e;
+      --navy-400: #3b72bc; --navy-300: #6f9fd4; --navy-200: #aecae8;
+      --navy-100: #ddeaf5; --navy-50: #f0f6fb;
+      --gold: #c8a951; --gold-light: #e8cf87;
+      --white: #ffffff; --off-white: #f8f7f4;
+      --text-dark: #0a1628; --text-mid: #3a4a62; --text-muted: #7a8fa8;
+      --border: #d4e0ec;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: 'DM Sans', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-body); background: var(--off-white); color: var(--text-dark); min-height: 100vh; }
+
+    /* ── NAV ── */
+    nav { background: var(--navy-950); display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; height: 58px; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-logo { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.01em; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; list-style: none; gap: 0; }
+    .nav-links a { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 400; color: rgba(255,255,255,0.55); text-decoration: none; padding: 0 0.8rem; line-height: 58px; transition: color 0.15s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .nav-right { display: flex; align-items: center; gap: 10px; }
+    .nav-user { font-family: var(--font-ui); font-size: 0.8rem; color: rgba(255,255,255,0.6); }
+    .nav-signout { font-family: var(--font-ui); font-size: 0.78rem; background: none; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.6); padding: 5px 12px; border-radius: 3px; cursor: pointer; transition: all 0.15s; }
+    .nav-signout:hover { border-color: rgba(255,255,255,0.4); color: var(--white); }
+    .nav-cta { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; background: var(--gold); color: var(--navy-950); padding: 6px 16px; border-radius: 3px; text-decoration: none; }
+
+    /* ── HERO ── */
+    .hero { background: var(--navy-950); padding: 3.5rem 2rem 3rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(30,66,120,0.5) 0%, transparent 70%); pointer-events: none; }
+    .hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+    .page-eyebrow { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 700; color: var(--white); line-height: 1.15; margin-bottom: 0.75rem; }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.6); max-width: 540px; line-height: 1.8; }
+    .hero-actions { display: flex; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap; }
+    .btn-gold { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; background: var(--gold); color: var(--navy-950); padding: 11px 24px; border-radius: 3px; border: none; cursor: pointer; transition: background 0.15s; text-decoration: none; display: inline-block; }
+    .btn-gold:hover { background: var(--gold-light); }
+    .btn-outline { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 400; background: none; color: rgba(255,255,255,0.7); padding: 11px 24px; border-radius: 3px; border: 1px solid rgba(255,255,255,0.25); cursor: pointer; transition: all 0.15s; }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.5); color: var(--white); }
+
+    /* ── MAIN LAYOUT ── */
+    .main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem 5rem; }
+
+    /* ── TABS ── */
+    .tabs { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 2.5rem; }
+    .tab { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text-muted); padding: 0.75rem 1.5rem; border: none; background: none; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.15s; }
+    .tab.active { color: var(--navy-700); border-bottom-color: var(--navy-600); }
+    .tab:hover:not(.active) { color: var(--text-mid); }
+
+    /* ── SECTION LABEL ── */
+    .section-label { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* ── GROUPS GRID ── */
+    .groups-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.25rem; }
+    .group-card { background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; cursor: pointer; transition: all 0.2s; display: flex; flex-direction: column; gap: 0.75rem; }
+    .group-card:hover { border-color: var(--navy-300); box-shadow: 0 4px 16px rgba(10,22,40,0.07); transform: translateY(-1px); }
+    .group-card.mine { border-left: 3px solid var(--gold); }
+    .gc-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; }
+    .gc-icon { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+    .gc-meta { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .gc-badge { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; padding: 3px 8px; border-radius: 20px; }
+    .badge-open { background: rgba(29,112,100,0.1); color: #1d7064; }
+    .badge-invite { background: rgba(30,66,120,0.1); color: var(--navy-600); }
+    .badge-leader { background: rgba(200,169,81,0.15); color: #8a7020; }
+    .badge-member { background: rgba(100,100,120,0.1); color: var(--text-muted); }
+    .gc-name { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--text-dark); line-height: 1.3; }
+    .gc-desc { font-size: 0.88rem; color: var(--text-mid); line-height: 1.6; }
+    .gc-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+    .gc-members { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text-muted); display: flex; align-items: center; gap: 5px; }
+    .gc-plan { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text-muted); }
+    .gc-avatars { display: flex; }
+    .gc-avatar { width: 24px; height: 24px; border-radius: 50%; background: var(--navy-600); color: var(--white); font-family: var(--font-ui); font-size: 0.6rem; font-weight: 600; display: flex; align-items: center; justify-content: center; margin-left: -6px; border: 2px solid var(--white); }
+    .gc-avatar:first-child { margin-left: 0; }
+
+    /* ── EMPTY STATE ── */
+    .empty-state { text-align: center; padding: 4rem 2rem; }
+    .empty-icon { font-size: 3rem; margin-bottom: 1rem; opacity: 0.5; }
+    .empty-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem; }
+    .empty-sub { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7; }
+
+    /* ── CREATE GROUP MODAL ── */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(5,13,26,0.7); z-index: 500; align-items: center; justify-content: center; padding: 1rem; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: var(--white); border-radius: 6px; width: 100%; max-width: 560px; max-height: 90vh; overflow-y: auto; }
+    .modal-header { padding: 1.75rem 1.75rem 0; display: flex; justify-content: space-between; align-items: flex-start; }
+    .modal-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--text-dark); }
+    .modal-sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem; }
+    .modal-close { background: none; border: none; font-size: 1.2rem; color: var(--text-muted); cursor: pointer; padding: 4px 8px; line-height: 1; }
+    .modal-body { padding: 1.5rem 1.75rem 1.75rem; }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-label { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text-mid); display: block; margin-bottom: 0.4rem; }
+    .form-input, .form-textarea, .form-select { width: 100%; font-family: var(--font-ui); font-size: 0.88rem; color: var(--text-dark); background: var(--white); border: 1px solid var(--border); border-radius: 3px; padding: 10px 12px; transition: border 0.15s; }
+    .form-textarea { resize: vertical; min-height: 80px; }
+    .form-input:focus, .form-textarea:focus, .form-select:focus { outline: none; border-color: var(--navy-400); }
+    .form-hint { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; }
+    .icon-grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 0.5rem; }
+    .icon-opt { width: 100%; aspect-ratio: 1; border: 1px solid var(--border); border-radius: 4px; background: none; font-size: 1.2rem; cursor: pointer; transition: all 0.15s; display: flex; align-items: center; justify-content: center; }
+    .icon-opt:hover { border-color: var(--navy-300); background: var(--navy-50); }
+    .icon-opt.selected { border-color: var(--navy-600); background: var(--navy-100); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .modal-footer { display: flex; justify-content: flex-end; gap: 0.75rem; padding-top: 1.25rem; border-top: 1px solid var(--border); }
+    .btn-nav { font-family: var(--font-ui); font-size: 0.85rem; padding: 9px 20px; border-radius: 3px; cursor: pointer; border: 1px solid var(--border); background: var(--white); color: var(--text-mid); transition: all 0.15s; }
+    .btn-nav:hover { border-color: var(--navy-300); }
+    .btn-primary { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 9px 22px; border-radius: 3px; cursor: pointer; border: none; background: var(--navy-700); color: var(--white); transition: background 0.15s; }
+    .btn-primary:hover { background: var(--navy-600); }
+    .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* ── GROUP DETAIL VIEW ── */
+    .group-detail { display: none; }
+    .group-detail.open { display: block; }
+    .detail-back { font-family: var(--font-ui); font-size: 0.82rem; color: var(--text-muted); background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 6px; margin-bottom: 1.5rem; padding: 0; transition: color 0.15s; }
+    .detail-back:hover { color: var(--text-dark); }
+    .detail-header { display: flex; align-items: flex-start; gap: 1.25rem; margin-bottom: 2rem; }
+    .detail-icon { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; flex-shrink: 0; }
+    .detail-title { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--text-dark); line-height: 1.2; }
+    .detail-meta { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem; align-items: center; }
+    .detail-meta span { font-family: var(--font-ui); font-size: 0.8rem; color: var(--text-muted); }
+    .detail-grid { display: grid; grid-template-columns: 1fr 320px; gap: 2rem; }
+    @media (max-width: 800px) { .detail-grid { grid-template-columns: 1fr; } }
+
+    /* ── DISCUSSION THREAD ── */
+    .discussion-section { background: var(--white); border: 1px solid var(--border); border-radius: 4px; }
+    .discussion-header { padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .discussion-title { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+    .disc-tabs { display: flex; gap: 0; }
+    .disc-tab { font-family: var(--font-ui); font-size: 0.78rem; padding: 5px 14px; border: 1px solid var(--border); background: var(--white); cursor: pointer; color: var(--text-muted); transition: all 0.15s; }
+    .disc-tab:first-child { border-radius: 3px 0 0 3px; }
+    .disc-tab:last-child { border-radius: 0 3px 3px 0; border-left: none; }
+    .disc-tab.active { background: var(--navy-700); color: var(--white); border-color: var(--navy-700); }
+    .messages-list { padding: 1rem 1.5rem; min-height: 200px; max-height: 400px; overflow-y: auto; display: flex; flex-direction: column; gap: 1rem; }
+    .msg { display: flex; gap: 0.75rem; }
+    .msg-avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--navy-600); color: var(--white); font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .msg-body { flex: 1; }
+    .msg-meta { display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem; }
+    .msg-name { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; color: var(--text-dark); }
+    .msg-time { font-family: var(--font-ui); font-size: 0.72rem; color: var(--text-muted); }
+    .msg-text { font-size: 0.88rem; color: var(--text-mid); line-height: 1.6; }
+    .message-input-row { padding: 1rem 1.5rem; border-top: 1px solid var(--border); display: flex; gap: 0.75rem; }
+    .message-input { flex: 1; font-family: var(--font-ui); font-size: 0.85rem; color: var(--text-dark); background: var(--off-white); border: 1px solid var(--border); border-radius: 3px; padding: 8px 12px; resize: none; min-height: 40px; }
+    .message-input:focus { outline: none; border-color: var(--navy-300); background: var(--white); }
+    .send-btn { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; background: var(--navy-700); color: var(--white); border: none; padding: 8px 16px; border-radius: 3px; cursor: pointer; white-space: nowrap; }
+    .send-btn:hover { background: var(--navy-600); }
+    .send-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    /* ── SIDEBAR PANELS ── */
+    .sidebar-panel { background: var(--white); border: 1px solid var(--border); border-radius: 4px; margin-bottom: 1rem; }
+    .panel-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); }
+    .panel-title { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+    .panel-body { padding: 1.25rem; }
+    .member-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.4rem 0; }
+    .member-avatar { width: 30px; height: 30px; border-radius: 50%; background: var(--navy-600); color: var(--white); font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .member-name { font-family: var(--font-ui); font-size: 0.82rem; color: var(--text-dark); flex: 1; }
+    .member-role { font-family: var(--font-ui); font-size: 0.68rem; color: var(--text-muted); }
+    .progress-bar { background: var(--navy-100); border-radius: 2px; height: 5px; margin-top: 4px; }
+    .progress-fill { background: var(--navy-500); height: 5px; border-radius: 2px; }
+    .plan-assignment { background: var(--navy-50); border: 1px solid var(--navy-100); border-radius: 3px; padding: 0.85rem; }
+    .plan-name { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; color: var(--navy-700); margin-bottom: 0.25rem; }
+    .plan-day { font-family: var(--font-ui); font-size: 0.78rem; color: var(--text-muted); }
+    .invite-link-box { background: var(--off-white); border: 1px solid var(--border); border-radius: 3px; padding: 0.75rem; display: flex; gap: 0.5rem; align-items: center; }
+    .invite-link-text { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text-muted); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .copy-btn { font-family: var(--font-ui); font-size: 0.72rem; background: var(--navy-700); color: var(--white); border: none; padding: 4px 10px; border-radius: 2px; cursor: pointer; white-space: nowrap; }
+
+    /* ── TOAST ── */
+    .toast { position: fixed; bottom: 2rem; right: 2rem; background: var(--navy-800); color: var(--white); font-family: var(--font-ui); font-size: 0.85rem; padding: 12px 20px; border-radius: 4px; z-index: 999; opacity: 0; transform: translateY(8px); transition: all 0.25s; pointer-events: none; }
+    .toast.show { opacity: 1; transform: translateY(0); }
+
+    /* ── LOADING ── */
+    .spinner { display: inline-block; width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-top-color: var(--white); border-radius: 50%; animation: spin 0.7s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── FOOTER ── */
+    footer { background: var(--navy-950); padding: 2.5rem 2rem; margin-top: 4rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: rgba(255,255,255,0.8); }
+    .footer-logo span { color: var(--gold); }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { font-family: var(--font-ui); font-size: 0.78rem; color: rgba(255,255,255,0.4); text-decoration: none; }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+    .footer-copy { font-family: var(--font-ui); font-size: 0.72rem; color: rgba(255,255,255,0.25); text-align: center; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
+      <li><a href="ask-anything.html">Ask Anything</a></li>
+      <li><a href="worldviews.html">Worldviews</a></li>
+      <li><a href="study-plans.html">Study Plans</a></li>
+      <li><a href="video-library.html">Videos</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="whats-new.html">What's New</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="nav-user" id="nav-user"></span>
+      <button class="nav-signout" onclick="signOut()">Sign out</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-inner">
+      <p class="page-eyebrow">Community</p>
+      <h1>Study together.<br/>Grow <em>faster</em>.</h1>
+      <p class="hero-sub">Create a group with your church, small group, or friends. Work through evidence together, discuss arguments, hold each other accountable.</p>
+      <div class="hero-actions">
+        <button class="btn-gold" onclick="openCreateModal()">+ Create a group</button>
+        <a href="reading-club.html" class="btn-outline">&#128218; Reading Clubs &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- GROUPS LIST VIEW -->
+    <div id="view-groups">
+      <!-- MY GROUPS -->
+      <div id="my-groups-section">
+        <p class="section-label">Your groups</p>
+        <div class="groups-grid" id="my-groups-grid">
+          <div class="empty-state" id="my-groups-empty" style="display:none;">
+            <div class="empty-icon">&#128101;</div>
+            <div class="empty-title">No groups yet</div>
+            <div class="empty-sub">Create your first group or browse below to find one to join.</div>
+            <button class="btn-gold" onclick="openCreateModal()">+ Create a group</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- BROWSE -->
+      <div style="margin-top:2.5rem;">
+        <p class="section-label">Browse public groups</p>
+        <div class="groups-grid" id="public-groups-grid">
+          <!-- populated by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- GROUP DETAIL VIEW -->
+    <div id="view-detail" class="group-detail">
+      <button class="detail-back" onclick="backToGroups()">&#8592; All groups</button>
+      <div class="detail-header">
+        <div class="detail-icon" id="detail-icon">&#128101;</div>
+        <div>
+          <div class="detail-title" id="detail-name">Group Name</div>
+          <div class="detail-meta">
+            <span id="detail-privacy-badge"></span>
+            <span id="detail-member-count"></span>
+            <span id="detail-created"></span>
+          </div>
+        </div>
+      </div>
+      <div class="detail-grid">
+        <!-- Discussion -->
+        <div>
+          <div class="discussion-section">
+            <div class="discussion-header">
+              <span class="discussion-title">Discussion</span>
+              <div class="disc-tabs">
+                <button class="disc-tab active" onclick="switchDiscTab('general', this)">General</button>
+                <button class="disc-tab" onclick="switchDiscTab('plan', this)">Study Plan</button>
+                <button class="disc-tab" onclick="switchDiscTab('prayer', this)">Prayer</button>
+              </div>
+            </div>
+            <div class="messages-list" id="messages-list">
+              <!-- populated by JS -->
+            </div>
+            <div class="message-input-row">
+              <textarea class="message-input" id="message-input" rows="1" placeholder="Share a thought, question, or encouragement&#8230;" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendMessage();}"></textarea>
+              <button class="send-btn" id="send-btn" onclick="sendMessage()">Send</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div>
+          <!-- Study Plan -->
+          <div class="sidebar-panel">
+            <div class="panel-header"><div class="panel-title">Study Plan</div></div>
+            <div class="panel-body" id="plan-panel">
+              <div id="plan-none" class="plan-day" style="color:var(--text-muted);">No study plan assigned yet.</div>
+              <div id="plan-info" class="plan-assignment" style="display:none;">
+                <div class="plan-name" id="plan-name-text"></div>
+                <div class="plan-day" id="plan-day-text"></div>
+                <div class="progress-bar" style="margin-top:0.5rem;"><div class="progress-fill" id="plan-progress-fill" style="width:0%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Members -->
+          <div class="sidebar-panel">
+            <div class="panel-header">
+              <div class="panel-title" style="display:flex;justify-content:space-between;align-items:center;">
+                Members
+                <button id="invite-btn" onclick="showInvitePanel()" style="font-family:var(--font-ui);font-size:0.72rem;background:none;border:1px solid var(--border);color:var(--text-muted);padding:3px 8px;border-radius:2px;cursor:pointer;">+ Invite</button>
+              </div>
+            </div>
+            <div class="panel-body" id="members-panel">
+              <!-- populated by JS -->
+            </div>
+            <div class="panel-body" id="invite-panel" style="display:none;border-top:1px solid var(--border);">
+              <p class="form-hint" style="margin-bottom:0.5rem;">Share this link to invite people to your group:</p>
+              <div class="invite-link-box">
+                <span class="invite-link-text" id="invite-link-text">https://apologiadaily.com/join?g=...</span>
+                <button class="copy-btn" onclick="copyInviteLink()">Copy</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Assign plan (leader only) -->
+          <div class="sidebar-panel" id="assign-plan-panel" style="display:none;">
+            <div class="panel-header"><div class="panel-title">Assign Study Plan</div></div>
+            <div class="panel-body">
+              <select class="form-select" id="assign-plan-select" style="margin-bottom:0.75rem;">
+                <option value="">Select a plan&#8230;</option>
+                <option value="resurrection">30-Day Resurrection Deep Dive</option>
+                <option value="existence-god">30-Day God's Existence Foundations</option>
+                <option value="jesus-crash-course">14-Day Jesus Essentials</option>
+                <option value="worldview-comparison">21-Day Worldview Comparison</option>
+                <option value="debate-ready">28-Day Debate Preparation</option>
+                <option value="daily-defender">Daily Defender — 90 Days</option>
+              </select>
+              <button class="btn-primary" style="width:100%;" onclick="assignPlan()">Assign to group</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CREATE GROUP MODAL -->
+  <div class="modal-overlay" id="create-modal" onclick="handleModalClick(event)">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title">Create a Study Group</div>
+          <div class="modal-sub">Free for up to 10 members</div>
+        </div>
+        <button class="modal-close" onclick="closeCreateModal()">&#10005;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Step 1 -->
+        <div id="create-step-1">
+          <div class="form-group">
+            <label class="form-label" for="group-name">Group name</label>
+            <input class="form-input" type="text" id="group-name" placeholder="e.g. St Mark's Apologetics Circle" maxlength="60" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="group-desc">Description</label>
+            <textarea class="form-textarea" id="group-desc" placeholder="What will your group study? Who is it for?"></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Privacy</label>
+              <select class="form-select" id="group-privacy">
+                <option value="public">Public — anyone can join</option>
+                <option value="invite">Invite only</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Study plan (optional)</label>
+              <select class="form-select" id="group-plan">
+                <option value="">None yet</option>
+                <option value="resurrection">30-Day Resurrection</option>
+                <option value="existence-god">30-Day God's Existence</option>
+                <option value="jesus-crash-course">14-Day Jesus Essentials</option>
+                <option value="worldview-comparison">21-Day Worldview Comparison</option>
+                <option value="debate-ready">28-Day Debate Prep</option>
+                <option value="daily-defender">Daily Defender</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Icon</label>
+            <div class="icon-grid" id="icon-grid">
+              <!-- populated by JS -->
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-nav" onclick="closeCreateModal()">Cancel</button>
+          <button class="btn-primary" id="create-btn" onclick="createGroup()">Create group</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Apologia<span>Daily</span></div>
+      <ul class="footer-links">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="whats-new.html">Blog</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+      <div class="footer-copy">&copy; 2026 Apologia Daily. Built for the defence of the Gospel.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+  var sb = null;
+  var currentUser = null;
+  var currentGroup = null;
+  var currentTab = 'general';
+  var selectedIcon = '&#128101;';
+  var selectedIconRaw = '\u{1F465}';
+  var myGroups = [];
+  var publicGroups = [];
+
+  var ICONS = ['&#128101;','&#9997;','&#128218;','&#9878;','&#127793;','&#128591;','&#128276;','&#10011;','&#127775;','&#128269;','&#128736;','&#128081;','&#9993;','&#127982;','&#128640;','&#9728;'];
+  var ICON_RAWS = ['\u{1F465}','\u270D','\u{1F4DA}','\u2696','\u{1F331}','\u{1F64F}','\u{1F514}','\u271B','\u{1F4AB}','\u{1F50D}','\u{1F6E0}','\u{1F451}','\u2709','\u{1F4DE}','\u{1F680}','\u2600'];
+
+  var PLAN_LABELS = {
+    'resurrection': '30-Day Resurrection Deep Dive',
+    'existence-god': '30-Day God\'s Existence Foundations',
+    'jesus-crash-course': '14-Day Jesus Essentials',
+    'worldview-comparison': '21-Day Worldview Comparison',
+    'debate-ready': '28-Day Debate Preparation',
+    'daily-defender': 'Daily Defender \u2014 90 Days'
+  };
+
+  // Seed demo data for UI demonstration
+  var DEMO_GROUPS = [
+    { id: 'demo1', name: 'St Andrews Apologetics', desc: 'A group for our Friday night small group working through the Resurrection evidence.', icon: '\u271B', color: '#1e4278', privacy: 'public', member_count: 7, plan: 'resurrection', plan_day: 12, created_by: 'leader', role: 'leader' },
+    { id: 'demo2', name: 'University Fellowship Seekers', desc: 'Students engaging with tough questions about faith and science on campus.', icon: '\u{1F4DA}', color: '#285a9e', privacy: 'public', member_count: 14, plan: 'existence-god', plan_day: 8, created_by: null, role: 'none' },
+    { id: 'demo3', name: 'Wednesday Morning Prayer & Study', desc: 'Starting our day with prayer and one apologetics argument. All welcome.', icon: '\u{1F64F}', color: '#0f6e56', privacy: 'public', member_count: 5, plan: 'jesus-crash-course', plan_day: 3, created_by: null, role: 'none' }
+  ];
+
+  var DEMO_MESSAGES = {
+    general: [
+      { name: 'Sarah K.', initials: 'SK', text: 'Really loved the Isaiah 53 card this week. The detail about the Dead Sea Scrolls proving it was written before Jesus was born blew my mind.', time: '2 days ago', color: '#1e4278' },
+      { name: 'Thomas R.', initials: 'TR', text: 'Same! I shared the "Explain it Simply" version with my atheist colleague and he actually read the whole thing. First time he\'s engaged seriously.', time: '2 days ago', color: '#285a9e' },
+      { name: 'Pastor James', initials: 'PJ', text: 'This is exactly what we hoped for. Who wants to take Day 13 and lead the discussion on Sunday?', time: '1 day ago', color: '#0f6e56' }
+    ],
+    plan: [
+      { name: 'Pastor James', initials: 'PJ', text: 'This week we\'re on Days 12-14: Messianic Prophecy and the Early Creed. Please read both cards before Sunday.', time: '3 days ago', color: '#0f6e56' },
+      { name: 'Emma L.', initials: 'EL', text: 'The 1 Corinthians 15 creed being dated to within 5 years of the crucifixion is so powerful. I had no idea it was that early.', time: '1 day ago', color: '#8a7020' }
+    ],
+    prayer: [
+      { name: 'Sarah K.', initials: 'SK', text: 'Please pray for my brother. He\'s open to talking about faith for the first time. I\'m going to try using the historical existence argument this weekend.', time: '1 day ago', color: '#1e4278' },
+      { name: 'Thomas R.', initials: 'TR', text: 'Praying for you Sarah! You\'ve got this. Use the conversation starters from the Evidence Library.', time: '12 hours ago', color: '#285a9e' }
+    ]
+  };
+
+  var DEMO_MEMBERS = [
+    { name: 'Pastor James', initials: 'PJ', role: 'Leader', progress: 85, color: '#0f6e56' },
+    { name: 'Sarah K.', initials: 'SK', role: 'Member', progress: 70, color: '#1e4278' },
+    { name: 'Thomas R.', initials: 'TR', role: 'Member', progress: 65, color: '#285a9e' },
+    { name: 'Emma L.', initials: 'EL', role: 'Member', progress: 40, color: '#8a7020' },
+    { name: 'Michael C.', initials: 'MC', role: 'Member', progress: 55, color: '#5a3e8a' },
+    { name: 'Ruth W.', initials: 'RW', role: 'Member', progress: 80, color: '#1d7064' },
+    { name: 'Daniel F.', initials: 'DF', role: 'Member', progress: 30, color: '#7a3030' }
+  ];
+
+  function initSb() {
+    if (window.supabase && window.supabase.createClient) {
+      sb = window.supabase.createClient(
+        'https://noprgxkwniouukmrfozc.supabase.co',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+      );
+      init();
+    } else {
+      setTimeout(initSb, 50);
+    }
+  }
+  document.addEventListener('DOMContentLoaded', initSb);
+
+  async function init() {
+    try {
+      var result = await sb.auth.getSession();
+      var session = result.data && result.data.session;
+      if (!session) { window.location.href = 'login.html'; return; }
+      currentUser = session.user;
+      var name = (currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email.split('@')[0];
+      document.getElementById('nav-user').textContent = name;
+    } catch(e) {}
+
+    buildIconGrid();
+    renderMyGroups();
+    renderPublicGroups();
+  }
+
+  async function signOut() {
+    try { await sb.auth.signOut(); } catch(e) {}
+    window.location.href = 'index.html';
+  }
+
+  function buildIconGrid() {
+    var grid = document.getElementById('icon-grid');
+    var html = '';
+    ICONS.forEach(function(icon, i) {
+      html += '<button class="icon-opt' + (i === 0 ? ' selected' : '') + '" onclick="selectIcon(' + i + ', this)">' + icon + '</button>';
+    });
+    grid.innerHTML = html;
+  }
+
+  function selectIcon(i, btn) {
+    document.querySelectorAll('.icon-opt').forEach(function(b) { b.classList.remove('selected'); });
+    btn.classList.add('selected');
+    selectedIcon = ICONS[i];
+    selectedIconRaw = ICON_RAWS[i];
+  }
+
+  function renderMyGroups() {
+    var grid = document.getElementById('my-groups-grid');
+    var empty = document.getElementById('my-groups-empty');
+    var stored = getStoredGroups();
+
+    if (stored.length === 0 && DEMO_GROUPS.filter(function(g){ return g.role === 'leader' || g.role === 'member'; }).length === 0) {
+      grid.innerHTML = '';
+      grid.appendChild(empty);
+      empty.style.display = '';
+      return;
+    }
+    empty.style.display = 'none';
+
+    var html = '';
+    // Show leader demo group
+    var leaderGroup = DEMO_GROUPS[0];
+    html += buildGroupCard(leaderGroup, true);
+
+    // Show locally created groups
+    stored.forEach(function(g) {
+      html += buildGroupCard(g, true);
+    });
+    grid.innerHTML = html;
+  }
+
+  function renderPublicGroups() {
+    var grid = document.getElementById('public-groups-grid');
+    var html = '';
+    DEMO_GROUPS.slice(1).forEach(function(g) {
+      html += buildGroupCard(g, false);
+    });
+    grid.innerHTML = html;
+  }
+
+  function buildGroupCard(g, isMine) {
+    var avatarColors = ['#1e4278','#285a9e','#0f6e56','#8a7020','#5a3e8a','#1d7064','#7a3030'];
+    var avatars = '';
+    var count = Math.min(g.member_count, 4);
+    for (var i = 0; i < count; i++) {
+      avatars += '<div class="gc-avatar" style="background:' + avatarColors[i % avatarColors.length] + ';">' + String.fromCharCode(65 + i) + '</div>';
+    }
+
+    var badgeHtml = '';
+    if (isMine && g.role === 'leader') badgeHtml += '<span class="gc-badge badge-leader">&#9733; Leader</span>';
+    else if (isMine) badgeHtml += '<span class="gc-badge badge-member">Member</span>';
+    badgeHtml += '<span class="gc-badge ' + (g.privacy === 'public' ? 'badge-open' : 'badge-invite') + '">' + (g.privacy === 'public' ? 'Public' : 'Invite only') + '</span>';
+
+    var planText = g.plan ? (PLAN_LABELS[g.plan] || g.plan) : 'No plan assigned';
+
+    return '<div class="group-card' + (isMine ? ' mine' : '') + '" onclick="openGroup(\'' + g.id + '\')"><div class="gc-top"><div class="gc-icon" style="background:rgba(30,66,120,0.1);">' + (g.icon || '\u{1F465}') + '</div><div class="gc-meta">' + badgeHtml + '</div></div><div class="gc-name">' + g.name + '</div><div class="gc-desc">' + g.desc + '</div><div class="gc-footer"><div class="gc-members"><div class="gc-avatars">' + avatars + '</div>' + g.member_count + ' member' + (g.member_count !== 1 ? 's' : '') + '</div><div class="gc-plan">' + planText + '</div></div></div>';
+  }
+
+  function openGroup(id) {
+    var group = DEMO_GROUPS.find(function(g) { return g.id === id; });
+    if (!group) {
+      var stored = getStoredGroups();
+      group = stored.find(function(g) { return g.id === id; });
+    }
+    if (!group) return;
+
+    currentGroup = group;
+    document.getElementById('view-groups').style.display = 'none';
+    document.getElementById('view-detail').classList.add('open');
+
+    document.getElementById('detail-icon').textContent = group.icon || '\u{1F465}';
+    document.getElementById('detail-icon').style.background = 'rgba(30,66,120,0.1)';
+    document.getElementById('detail-name').textContent = group.name;
+    document.getElementById('detail-privacy-badge').innerHTML = '<span class="gc-badge ' + (group.privacy === 'public' ? 'badge-open' : 'badge-invite') + '">' + (group.privacy === 'public' ? 'Public' : 'Invite only') + '</span>';
+    document.getElementById('detail-member-count').textContent = group.member_count + ' members';
+
+    // Plan
+    if (group.plan) {
+      document.getElementById('plan-none').style.display = 'none';
+      document.getElementById('plan-info').style.display = '';
+      document.getElementById('plan-name-text').textContent = PLAN_LABELS[group.plan] || group.plan;
+      var day = group.plan_day || 1;
+      var total = group.plan === 'resurrection' ? 30 : group.plan === 'daily-defender' ? 90 : group.plan === 'worldview-comparison' ? 21 : group.plan === 'debate-ready' ? 28 : 14;
+      document.getElementById('plan-day-text').textContent = 'Day ' + day + ' of ' + total;
+      document.getElementById('plan-progress-fill').style.width = Math.round(day / total * 100) + '%';
+    }
+
+    // Leader controls
+    if (group.role === 'leader') {
+      document.getElementById('assign-plan-panel').style.display = '';
+      document.getElementById('invite-btn').style.display = '';
+    } else {
+      document.getElementById('assign-plan-panel').style.display = 'none';
+      document.getElementById('invite-btn').style.display = 'none';
+    }
+
+    // Members
+    renderMembers();
+    renderMessages('general');
+
+    // Invite link
+    document.getElementById('invite-link-text').textContent = 'https://apologiadaily.com/join?g=' + group.id;
+  }
+
+  function renderMembers() {
+    var panel = document.getElementById('members-panel');
+    var html = '';
+    DEMO_MEMBERS.forEach(function(m) {
+      html += '<div class="member-row"><div class="member-avatar" style="background:' + m.color + ';">' + m.initials + '</div><div style="flex:1;"><div class="member-name">' + m.name + '</div><div class="progress-bar"><div class="progress-fill" style="width:' + m.progress + '%;background:' + m.color + ';"></div></div></div><div class="member-role">' + m.role + '</div></div>';
+    });
+    panel.innerHTML = html;
+  }
+
+  function renderMessages(tab) {
+    currentTab = tab;
+    var list = document.getElementById('messages-list');
+    var msgs = DEMO_MESSAGES[tab] || [];
+
+    if (msgs.length === 0) {
+      list.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--text-muted);font-family:var(--font-ui);font-size:0.85rem;">No messages yet. Start the conversation!</div>';
+      return;
+    }
+
+    var html = '';
+    msgs.forEach(function(m) {
+      html += '<div class="msg"><div class="msg-avatar" style="background:' + m.color + ';">' + m.initials + '</div><div class="msg-body"><div class="msg-meta"><span class="msg-name">' + m.name + '</span><span class="msg-time">' + m.time + '</span></div><div class="msg-text">' + m.text + '</div></div></div>';
+    });
+    list.innerHTML = html;
+    list.scrollTop = list.scrollHeight;
+  }
+
+  function switchDiscTab(tab, btn) {
+    document.querySelectorAll('.disc-tab').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    renderMessages(tab);
+  }
+
+  function sendMessage() {
+    var input = document.getElementById('message-input');
+    var text = input.value.trim();
+    if (!text) return;
+
+    var name = (currentUser && currentUser.user_metadata && currentUser.user_metadata.full_name) || (currentUser && currentUser.email ? currentUser.email.split('@')[0] : 'You');
+    var initials = name.split(' ').map(function(w) { return w[0]; }).join('').toUpperCase().slice(0, 2);
+
+    if (!DEMO_MESSAGES[currentTab]) DEMO_MESSAGES[currentTab] = [];
+    DEMO_MESSAGES[currentTab].push({ name: name, initials: initials, text: text, time: 'Just now', color: '#1e4278' });
+
+    input.value = '';
+    renderMessages(currentTab);
+    showToast('Message sent');
+  }
+
+  function backToGroups() {
+    document.getElementById('view-groups').style.display = '';
+    document.getElementById('view-detail').classList.remove('open');
+    document.getElementById('invite-panel').style.display = 'none';
+    currentGroup = null;
+  }
+
+  function showInvitePanel() {
+    var panel = document.getElementById('invite-panel');
+    panel.style.display = panel.style.display === 'none' ? '' : 'none';
+  }
+
+  function copyInviteLink() {
+    var text = document.getElementById('invite-link-text').textContent;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(function() { showToast('Invite link copied!'); });
+    } else {
+      showToast('Copy: ' + text);
+    }
+  }
+
+  function assignPlan() {
+    var select = document.getElementById('assign-plan-select');
+    var plan = select.value;
+    if (!plan) return;
+    if (currentGroup) {
+      currentGroup.plan = plan;
+      currentGroup.plan_day = 1;
+      document.getElementById('plan-none').style.display = 'none';
+      document.getElementById('plan-info').style.display = '';
+      document.getElementById('plan-name-text').textContent = PLAN_LABELS[plan] || plan;
+      var total = plan === 'resurrection' ? 30 : plan === 'daily-defender' ? 90 : plan === 'worldview-comparison' ? 21 : plan === 'debate-ready' ? 28 : 14;
+      document.getElementById('plan-day-text').textContent = 'Day 1 of ' + total;
+      document.getElementById('plan-progress-fill').style.width = '3%';
+    }
+    showToast('Study plan assigned!');
+    select.value = '';
+  }
+
+  function openCreateModal() {
+    document.getElementById('create-modal').classList.add('open');
+  }
+
+  function closeCreateModal() {
+    document.getElementById('create-modal').classList.remove('open');
+  }
+
+  function handleModalClick(e) {
+    if (e.target === document.getElementById('create-modal')) closeCreateModal();
+  }
+
+  function createGroup() {
+    var name = document.getElementById('group-name').value.trim();
+    var desc = document.getElementById('group-desc').value.trim();
+    var privacy = document.getElementById('group-privacy').value;
+    var plan = document.getElementById('group-plan').value;
+
+    if (!name) { showToast('Please enter a group name'); return; }
+
+    var btn = document.getElementById('create-btn');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span>';
+
+    setTimeout(function() {
+      var id = 'local-' + Date.now();
+      var newGroup = { id: id, name: name, desc: desc || 'No description yet.', icon: selectedIconRaw, color: '#1e4278', privacy: privacy, member_count: 1, plan: plan || null, plan_day: 1, role: 'leader' };
+
+      var stored = getStoredGroups();
+      stored.push(newGroup);
+      localStorage.setItem('ad_groups', JSON.stringify(stored));
+
+      myGroups.push(newGroup);
+      closeCreateModal();
+      renderMyGroups();
+
+      btn.disabled = false;
+      btn.textContent = 'Create group';
+
+      document.getElementById('group-name').value = '';
+      document.getElementById('group-desc').value = '';
+      document.getElementById('group-plan').value = '';
+
+      showToast('Group created! Share the invite link to add members.');
+    }, 800);
+  }
+
+  function getStoredGroups() {
+    try { return JSON.parse(localStorage.getItem('ad_groups') || '[]'); } catch(e) { return []; }
+  }
+
+  function showToast(msg) {
+    var t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(function() { t.classList.remove('show'); }, 2800);
+  }
+  </script>
+</body>
+</html>
