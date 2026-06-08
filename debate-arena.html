@@ -815,8 +815,18 @@
     function checkReady() {
       const btn = document.getElementById('start-btn');
       const hint = document.getElementById('start-hint');
+      const { allowed } = checkDebateLimit();
+      if (!allowed) {
+        btn.classList.remove('ready');
+        btn.style.opacity = '0.4';
+        btn.style.pointerEvents = 'none';
+        if (hint) hint.textContent = 'Weekly limit reached — reset or upgrade to Pro';
+        return;
+      }
       if (state.opponent && state.topic) {
         btn.classList.add('ready');
+        btn.style.opacity = '';
+        btn.style.pointerEvents = '';
         hint.textContent = 'Ready — click to enter the arena';
       } else if (state.opponent) {
         hint.textContent = 'Now choose a topic to debate';
@@ -883,9 +893,11 @@
       localStorage.removeItem('debateUsage');
       const banner = document.getElementById('debate-limit-banner');
       if (banner) banner.remove();
-      // Brief visual feedback
-      const btn = document.querySelector('[onclick="resetDebateLimit()"]');
-      if (btn) { btn.textContent = '✓ Reset!'; btn.style.color = '#c8a951'; setTimeout(function(){ if(btn) btn.textContent = 'Reset weekly limit'; }, 2000); }
+      const startBtn = document.getElementById('start-btn');
+      if (startBtn) { startBtn.style.opacity = ''; startBtn.style.pointerEvents = ''; startBtn.style.cursor = ''; }
+      checkReady();
+      const hint = document.getElementById('start-hint');
+      if (hint && (!state.opponent || !state.topic)) hint.textContent = 'Limit reset — select an opponent and topic to begin';
     }
 
     function startDebate() {
@@ -919,13 +931,16 @@
         hintsRow.appendChild(btn);
       });
 
-      const opening = (openingMessages[state.opponent] || {})[state.topic] || "Let's debate this topic. What's your opening argument?";
-      addMessage('opp', opening);
-      state.messages.push({ role: 'assistant', content: opening });
-      state.debateStarted = true;
-
       showScreen('screen-arena');
       window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      const opening = (openingMessages[state.opponent] || {})[state.topic] || "Let's debate this topic. What's your opening argument?";
+      setTimeout(function() {
+        addMessage('opp', opening);
+        state.messages.push({ role: 'assistant', content: opening });
+        state.debateStarted = true;
+        document.getElementById('end-btn').disabled = false;
+      }, 100);
     }
 
     function addMessage(role, text) {
@@ -1192,11 +1207,19 @@
     (function() {
       const { allowed, used } = checkDebateLimit();
       const hint = document.getElementById('start-hint');
-      if (!allowed && hint) {
-        hint.textContent = 'Weekly debate used — upgrade to Pro for unlimited debates';
-        hint.style.color = '#c8a951';
-        const btn = document.getElementById('start-btn');
-        if (btn) btn.style.opacity = '0.5';
+      const btn = document.getElementById('start-btn');
+      if (!allowed) {
+        if (hint) {
+          hint.textContent = 'Weekly limit reached (' + used + '/' + DEBATE_WEEKLY_LIMIT + ') — reset below or upgrade to Pro';
+          hint.style.color = '#c8a951';
+        }
+        if (btn) {
+          btn.classList.remove('ready');
+          btn.style.opacity = '0.4';
+          btn.style.pointerEvents = 'none';
+          btn.style.cursor = 'not-allowed';
+        }
+        showDebateLimitBanner();
       }
     })();
   </script>
