@@ -137,6 +137,10 @@
     .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: none; }
+    .nav-right { display:flex; align-items:center; gap:10px; }
+    .nav-user { font-family:var(--font-ui); font-size:0.82rem; color:rgba(255,255,255,0.65); }
+    .nav-signout { font-family:var(--font-ui); font-size:0.78rem; background:none; border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.6); padding:5px 12px; border-radius:3px; cursor:pointer; transition:all 0.15s; }
+    .nav-signout:hover { border-color:rgba(255,255,255,0.4); color:#fff; }
   </style>
 </head>
 <body>
@@ -154,11 +158,9 @@
       <li><a href="games.html">Games</a></li>
       <li><a href="whats-new.html">What's New</a></li>
     </ul>
-    <div style="display:flex;align-items:center;gap:10px;" id="nav-right">
-      <span id="nav-user" style="font-family:var(--font-ui);font-size:0.82rem;color:rgba(255,255,255,0.6);display:none;"></span>
-      <button id="nav-signout" onclick="signOut()" style="display:none;font-family:var(--font-ui);font-size:0.78rem;background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.6);padding:5px 12px;border-radius:3px;cursor:pointer;">Sign out</button>
-      <a href="login.html" id="nav-signin" style="font-family:var(--font-ui);font-size:0.85rem;color:rgba(255,255,255,0.6);text-decoration:none;">Sign in</a>
-      <a href="signup.html" class="nav-cta" id="nav-cta">Start Free</a>
+        <div class="nav-right">
+      <span class="nav-user" id="nav-user"></span>
+      <button class="nav-signout" onclick="signOut()">Sign out</button>
     </div>
   </nav>
 
@@ -287,38 +289,24 @@
           'https://noprgxkwniouukmrfozc.supabase.co',
           'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
         );
-        checkAuth();
-        initPage();
+        init();
       } else {
         setTimeout(initSb, 50);
       }
     }
     document.addEventListener('DOMContentLoaded', initSb);
 
-    async function checkAuth() {
+    async function init() {
       try {
         var result = await sb.auth.getSession();
         var session = result.data && result.data.session;
         if (session) {
           var name = (session.user.user_metadata && session.user.user_metadata.full_name) || session.user.email.split('@')[0];
-          var navUser = document.getElementById('nav-user');
-          var navSignout = document.getElementById('nav-signout');
-          var navSignin = document.getElementById('nav-signin');
-          var navCta = document.getElementById('nav-cta');
-          if (navUser) { navUser.textContent = name; navUser.style.display = 'inline'; }
-          if (navSignout) navSignout.style.display = 'inline-block';
-          if (navSignin) navSignin.style.display = 'none';
-          if (navCta) navCta.style.display = 'none';
+          var el = document.getElementById('nav-user');
+          if (el) el.textContent = name;
         }
       } catch(e) { console.warn('Auth check failed:', e); }
-    }
 
-    async function signOut() {
-      try { await sb.auth.signOut(); } catch(e) {}
-      window.location.href = 'index.html';
-    }
-
-    function initPage() {
       document.getElementById('today-date').textContent = formatDate(new Date());
       fetchTodaysDevo().then(function(devo) {
         todayDevo = devo;
@@ -327,6 +315,11 @@
       });
       buildStreak();
       buildArchive();
+    }
+
+    async function signOut() {
+      try { await sb.auth.signOut(); } catch(e) {}
+      window.location.href = 'index.html';
     }
     var allDevos = [];
 
@@ -680,7 +673,7 @@
       if (relScholar) { relScholar.textContent = d.lbl_scholar || 'Scholar profile'; relScholar.href = d.rel_scholar || 'scholars.html'; }
     }
 
-    // Init handled by initPage() called from initSb()
+
 
     const markDoneBtn = document.getElementById('mark-done-btn');
     const completed = JSON.parse(localStorage.getItem('completed') || '[]');
