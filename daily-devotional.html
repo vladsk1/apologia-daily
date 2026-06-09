@@ -619,27 +619,78 @@
         if (!d) return;
         var existing = document.getElementById('past-devo-modal');
         if (existing) existing.remove();
-        var modal = document.createElement('div');
-        modal.id = 'past-devo-modal';
-        modal.style.cssText = 'position:fixed;inset:0;background:rgba(5,13,26,0.85);z-index:200;overflow-y:auto;padding:2rem;display:flex;align-items:flex-start;justify-content:center;';
-        var reflHtml = (d.reflection || '').replace(/\n\n/g, '<br><br>');
-        var inner = document.createElement('div');
-        inner.style.cssText = 'background:#fff;border-radius:6px;max-width:680px;width:100%;padding:2rem;margin-top:2rem;';
-        inner.innerHTML =
-          '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">' +
-          '<div><div style="font-family:var(--font-ui);font-size:0.7rem;color:var(--text-muted);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.3rem;">Day ' + d.day_number + '</div>' +
-          '<div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--text-dark);">' + (d.theme || '') + '</div></div>' +
-          '<button onclick="document.getElementById('past-devo-modal').remove();" style="background:none;border:none;font-size:1.2rem;color:var(--text-muted);cursor:pointer;">&#10005;</button></div>' +
-          '<div style="font-size:0.95rem;font-style:italic;color:var(--navy-700);border-left:3px solid var(--gold);padding-left:1rem;margin-bottom:1.25rem;">' + (d.verse || '') + '</div>' +
-          '<div style="font-size:0.7rem;color:var(--text-muted);font-family:var(--font-ui);margin-bottom:1.25rem;">' + (d.ref || '') + '</div>' +
-          '<div style="font-size:0.92rem;color:var(--text-mid);line-height:1.8;margin-bottom:1.5rem;">' + reflHtml + '</div>' +
-          '<div style="background:var(--off-white);border-radius:8px;padding:1.5rem;margin-bottom:1rem;">' +
-          '<div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy-500);margin-bottom:0.75rem;">Prayer</div>' +
-          '<div style="font-size:0.95rem;font-weight:300;color:var(--text-mid);line-height:1.85;font-style:italic;">' + (d.prayer || '') + '</div></div>' +
-          '<button onclick="markPastDone('devo-day-' + dayNum + '');document.getElementById('past-devo-modal').remove();buildStreak();" style="font-family:var(--font-ui);font-size:0.85rem;font-weight:500;padding:10px 24px;border-radius:3px;background:var(--gold);color:var(--navy-950);border:none;cursor:pointer;">Mark as completed</button>';
-        modal.appendChild(inner);
-        document.body.appendChild(modal);
-        modal.addEventListener('click', function(e) { if (e.target === modal) modal.remove(); });
+
+        var overlay = document.createElement('div');
+        overlay.id = 'past-devo-modal';
+        overlay.style.cssText = 'position:fixed;inset:0;background:rgba(5,13,26,0.85);z-index:200;overflow-y:auto;padding:2rem;display:flex;align-items:flex-start;justify-content:center;';
+
+        var box = document.createElement('div');
+        box.style.cssText = 'background:#fff;border-radius:6px;max-width:680px;width:100%;padding:2rem;margin-top:2rem;';
+
+        var header = document.createElement('div');
+        header.style.cssText = 'display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;';
+
+        var titleWrap = document.createElement('div');
+        var dayLabel = document.createElement('div');
+        dayLabel.style.cssText = 'font-family:var(--font-ui);font-size:0.7rem;color:var(--text-muted);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.3rem;';
+        dayLabel.textContent = 'Day ' + d.day_number;
+        var themeEl = document.createElement('div');
+        themeEl.style.cssText = 'font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--text-dark);';
+        themeEl.textContent = d.theme || '';
+        titleWrap.appendChild(dayLabel);
+        titleWrap.appendChild(themeEl);
+
+        var closeBtn = document.createElement('button');
+        closeBtn.style.cssText = 'background:none;border:none;font-size:1.2rem;color:var(--text-muted);cursor:pointer;';
+        closeBtn.textContent = 'X';
+        closeBtn.onclick = function() { overlay.remove(); };
+
+        header.appendChild(titleWrap);
+        header.appendChild(closeBtn);
+        box.appendChild(header);
+
+        var verseEl = document.createElement('div');
+        verseEl.style.cssText = 'font-size:0.95rem;font-style:italic;color:var(--navy-700);border-left:3px solid var(--gold);padding-left:1rem;margin-bottom:1.25rem;';
+        verseEl.textContent = d.verse || '';
+        box.appendChild(verseEl);
+
+        var refEl = document.createElement('div');
+        refEl.style.cssText = 'font-size:0.7rem;color:var(--text-muted);font-family:var(--font-ui);margin-bottom:1.25rem;';
+        refEl.textContent = d.ref || '';
+        box.appendChild(refEl);
+
+        var reflEl = document.createElement('div');
+        reflEl.style.cssText = 'font-size:0.92rem;color:var(--text-mid);line-height:1.8;margin-bottom:1.5rem;';
+        reflEl.innerHTML = (d.reflection || '').replace(/
+
+/g, '<br><br>');
+        box.appendChild(reflEl);
+
+        var prayerBox = document.createElement('div');
+        prayerBox.style.cssText = 'background:var(--off-white);border-radius:8px;padding:1.5rem;margin-bottom:1rem;';
+        var prayerLabel = document.createElement('div');
+        prayerLabel.style.cssText = 'font-family:var(--font-ui);font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy-500);margin-bottom:0.75rem;';
+        prayerLabel.textContent = 'Prayer';
+        var prayerText = document.createElement('div');
+        prayerText.style.cssText = 'font-size:0.95rem;font-weight:300;color:var(--text-mid);line-height:1.85;font-style:italic;';
+        prayerText.textContent = d.prayer || '';
+        prayerBox.appendChild(prayerLabel);
+        prayerBox.appendChild(prayerText);
+        box.appendChild(prayerBox);
+
+        var doneBtn = document.createElement('button');
+        doneBtn.style.cssText = 'font-family:var(--font-ui);font-size:0.85rem;font-weight:500;padding:10px 24px;border-radius:3px;background:var(--gold);color:var(--navy-950);border:none;cursor:pointer;';
+        doneBtn.textContent = 'Mark as completed';
+        doneBtn.onclick = function() {
+          markPastDone('devo-day-' + dayNum);
+          overlay.remove();
+          buildStreak();
+        };
+        box.appendChild(doneBtn);
+
+        overlay.appendChild(box);
+        document.body.appendChild(overlay);
+        overlay.addEventListener('click', function(e) { if (e.target === overlay) overlay.remove(); });
       });
     }
 
