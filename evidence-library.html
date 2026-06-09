@@ -389,6 +389,43 @@ async function askInlineTutor(btn) {
 <script>
 var floatOpen = false;
 var currentArgContext = '';
+var demoPlayed = false;
+var demoRunning = false;
+
+// ── PULSE ANIMATION CSS ──
+(function() {
+  var style = document.createElement('style');
+  style.textContent = [
+    '@keyframes tutorPulse {',
+    '  0%   { box-shadow: -4px 0 16px rgba(200,169,81,0.35); }',
+    '  50%  { box-shadow: -4px 0 28px rgba(200,169,81,0.75), 0 0 0 4px rgba(200,169,81,0.2); }',
+    '  100% { box-shadow: -4px 0 16px rgba(200,169,81,0.35); }',
+    '}',
+    '@keyframes tooltipSlide {',
+    '  0%   { opacity:0; transform:translateX(10px); }',
+    '  100% { opacity:1; transform:translateX(0); }',
+    '}',
+    '@keyframes typeCursor {',
+    '  0%,100% { opacity:1; } 50% { opacity:0; }',
+    '}',
+    '#float-btn.pulsing { animation: tutorPulse 1.8s ease-in-out infinite; }',
+    '#float-tooltip {',
+    '  position:absolute; right:calc(100% + 12px); top:50%; transform:translateY(-50%);',
+    '  background:#0a1628; border:1px solid rgba(200,169,81,0.4); border-radius:6px;',
+    '  padding:10px 14px; white-space:nowrap; pointer-events:none;',
+    '  font-family:"DM Sans",sans-serif; font-size:0.78rem; color:#c8a951; font-weight:500;',
+    '  animation: tooltipSlide 0.3s ease forwards;',
+    '  box-shadow: -4px 4px 16px rgba(0,0,0,0.4);',
+    '}',
+    '#float-tooltip::after {',
+    '  content:""; position:absolute; left:100%; top:50%; transform:translateY(-50%);',
+    '  border:6px solid transparent; border-left-color:rgba(200,169,81,0.4);',
+    '}',
+    '#float-demo-text { display:inline; }',
+    '#float-cursor { display:inline-block; animation: typeCursor 0.7s infinite; margin-left:1px; }',
+  ].join('\n');
+  document.head.appendChild(style);
+})();
 
 function toggleFloatTutor() {
   floatOpen = !floatOpen;
@@ -397,12 +434,134 @@ function toggleFloatTutor() {
   btn.style.background = floatOpen ? '#0a1628' : '#c8a951';
   btn.style.color = floatOpen ? '#c8a951' : '#050d1a';
   btn.style.border = floatOpen ? '1px solid rgba(200,169,81,0.3)' : 'none';
+  // Stop pulsing once opened
   if (floatOpen) {
+    btn.classList.remove('pulsing');
+    removeTooltip();
     setTimeout(function() { document.getElementById('float-input').focus(); }, 100);
   }
 }
 
-// Track which argument card is currently open
+function removeTooltip() {
+  var tt = document.getElementById('float-tooltip');
+  if (tt) tt.remove();
+}
+
+// ── DEMO SEQUENCE ──
+// Runs once on page load: pulse → tooltip → open panel → type question → show answer
+var DEMO_Q = 'Can you give me a simple analogy for this argument?';
+var DEMO_A = 'Think of it this way: imagine you found a running wristwatch on a deserted beach. You would never conclude it assembled itself from sand and metal by chance. The more complex and precisely calibrated something is, the more strongly it points to a designer. The universe is infinitely more complex than any watch — and its constants are fine-tuned to a precision no human engineer could match.';
+
+function startDemo() {
+  if (demoPlayed || demoRunning) return;
+  demoRunning = true;
+
+  var btn = document.getElementById('float-btn');
+
+  // Step 1: Start pulsing
+  btn.classList.add('pulsing');
+
+  // Step 2: Show tooltip after 1.5s
+  setTimeout(function() {
+    var container = document.getElementById('float-tutor');
+    var tt = document.createElement('div');
+    tt.id = 'float-tooltip';
+    tt.innerHTML = '&#129504; Try the AI Tutor &rarr;';
+    container.appendChild(tt);
+  }, 1500);
+
+  // Step 3: Auto-open panel after 3.5s
+  setTimeout(function() {
+    removeTooltip();
+    floatOpen = true;
+    document.getElementById('float-panel').style.display = 'block';
+    btn.classList.remove('pulsing');
+    btn.style.background = '#0a1628';
+    btn.style.color = '#c8a951';
+    btn.style.border = '1px solid rgba(200,169,81,0.3)';
+
+    // Update label for demo
+    var label = document.getElementById('float-arg-label');
+    if (label) label.textContent = 'The Kalam Cosmological Argument';
+
+    // Step 4: Type the demo question
+    var input = document.getElementById('float-input');
+    if (input) {
+      input.placeholder = '';
+      typeText(input, DEMO_Q, 0, function() {
+        // Step 5: Show "thinking" then demo answer
+        setTimeout(function() {
+          showDemoAnswer();
+        }, 600);
+      });
+    }
+  }, 3500);
+}
+
+function typeText(input, text, idx, callback) {
+  if (idx <= text.length) {
+    input.value = text.slice(0, idx);
+    setTimeout(function() { typeText(input, text, idx + 1, callback); }, 38);
+  } else {
+    if (callback) callback();
+  }
+}
+
+function showDemoAnswer() {
+  var btn = document.getElementById('float-send-btn');
+  var resp = document.getElementById('float-response');
+  var input = document.getElementById('float-input');
+
+  if (btn) { btn.disabled = true; btn.textContent = 'Thinking...'; }
+  if (resp) { resp.style.display = 'block'; resp.textContent = 'Thinking...'; }
+
+  // Simulate AI response delay then show canned answer
+  setTimeout(function() {
+    if (resp) {
+      resp.textContent = '';
+      // Type the answer in gradually
+      var words = DEMO_A.split(' ');
+      var i = 0;
+      var interval = setInterval(function() {
+        if (i < words.length) {
+          resp.textContent += (i === 0 ? '' : ' ') + words[i];
+          resp.scrollTop = resp.scrollHeight;
+          i++;
+        } else {
+          clearInterval(interval);
+          if (btn) { btn.disabled = false; btn.textContent = 'Ask AI Tutor'; }
+          if (input) { input.value = ''; input.placeholder = 'e.g. Explain this simply, or give me an analogy...'; }
+          // Add "This was a demo" note
+          var note = document.createElement('div');
+          note.style.cssText = 'margin-top:0.75rem;padding:0.5rem 0.75rem;background:rgba(200,169,81,0.08);border-radius:4px;font-family:"DM Sans",sans-serif;font-size:0.72rem;color:rgba(200,169,81,0.7);text-align:center;';
+          note.textContent = 'Demo complete -- open any argument card and ask your own question';
+          resp.parentNode.appendChild(note);
+          demoPlayed = true;
+          demoRunning = false;
+          // Save to localStorage so demo doesn't repeat
+          try { localStorage.setItem('tutor_demo_seen', '1'); } catch(e) {}
+        }
+      }, 28);
+    }
+  }, 1200);
+}
+
+// Start demo 2 seconds after page load (only if not seen before)
+window.addEventListener('load', function() {
+  try {
+    if (localStorage.getItem('tutor_demo_seen')) {
+      // Already seen - just pulse gently for 4 seconds to remind
+      var btn = document.getElementById('float-btn');
+      if (btn) {
+        btn.classList.add('pulsing');
+        setTimeout(function() { btn.classList.remove('pulsing'); }, 4000);
+      }
+      return;
+    }
+  } catch(e) {}
+  setTimeout(startDemo, 2000);
+});
+
 // Context updates automatically via tog() when a card opens
 
 async function sendFloatQuestion() {
@@ -411,6 +570,9 @@ async function sendFloatQuestion() {
   if (!q) return;
   var btn = document.getElementById('float-send-btn');
   var resp = document.getElementById('float-response');
+  // Remove any demo note
+  var note = resp.parentNode.querySelector('div[style*="Demo"]');
+  if (note) note.remove();
   btn.disabled = true;
   btn.textContent = 'Thinking...';
   resp.style.display = 'block';
