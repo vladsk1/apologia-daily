@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     let systemPrompt, userMessage;
 
     if (mode === 'convo') {
-      systemPrompt = `You are a warm, experienced Christian pastoral coach reviewing a practice conversation. Your role is to give gentle, specific, encouraging coaching to help the Christian communicate their faith more naturally and effectively in real conversations.
+      systemPrompt = `You are a warm, experienced Christian pastoral coach reviewing a practice conversation. Your role is to give gentle, specific, encouraging coaching — in the spirit of 1 Peter 3:15: with gentleness and respect. Coach with warmth, never harshness. The goal is to build the person up so they can share their faith more effectively, not to make them feel inadequate to help the Christian communicate their faith more naturally and effectively in real conversations.
 
 Focus on:
 - Whether they listened well before speaking
