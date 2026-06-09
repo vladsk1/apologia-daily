@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glossary — Apologia Daily</title>
+  <meta name="description" content="Plain English definitions of every apologetics term. From Kalam to Kenosis — every word explained simply." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --n:#0a1628; --n2:#050d1a; --n3:#1e4278; --n4:#f0f6fb;
+      --g:#c8a951; --w:#fff; --o:#f8f7f4;
+      --m:#3a4a62; --mu:#7a8fa8; --b:#d4e0ec;
+      --fd:'Playfair Display',Georgia,serif;
+      --ui:'DM Sans',sans-serif;
+      --bo:'Source Serif 4',Georgia,serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--bo); background: var(--o); color: var(--n); min-height: 100vh; }
+
+    /* NAV */
+    nav { background: var(--n2); display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; height: 58px; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-logo { font-family: var(--fd); font-size: 1.15rem; font-weight: 700; color: var(--w); text-decoration: none; }
+    .nav-logo span { color: var(--g); }
+    .nav-links { display: flex; list-style: none; }
+    .nav-links a { font-family: var(--ui); font-size: 0.78rem; color: rgba(255,255,255,0.55); text-decoration: none; padding: 0 0.8rem; line-height: 58px; transition: color 0.15s; }
+    .nav-links a:hover { color: var(--w); }
+    .nav-right { display: flex; align-items: center; gap: 10px; }
+    .nav-user { font-family: var(--ui); font-size: 0.82rem; color: rgba(255,255,255,0.65); }
+    .nav-signout { font-family: var(--ui); font-size: 0.78rem; background: none; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.6); padding: 5px 12px; border-radius: 3px; cursor: pointer; }
+    .nav-signin { font-family: var(--ui); font-size: 0.85rem; color: rgba(255,255,255,0.6); text-decoration: none; }
+    .nav-cta { font-family: var(--ui); font-size: 0.78rem; font-weight: 500; background: var(--g); color: var(--n2); padding: 6px 16px; border-radius: 3px; text-decoration: none; }
+
+    /* HERO */
+    .hero { background: var(--n2); padding: 3rem 2rem 2.5rem; }
+    .hero-inner { max-width: 860px; margin: 0 auto; }
+    .eyebrow { font-family: var(--ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--g); margin-bottom: 0.75rem; }
+    .hero h1 { font-family: var(--fd); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; color: var(--w); line-height: 1.2; margin-bottom: 0.75rem; }
+    .hero h1 em { font-style: italic; color: var(--g); }
+    .hero-sub { font-size: 0.95rem; color: rgba(255,255,255,0.55); max-width: 520px; line-height: 1.8; }
+
+    /* SEARCH */
+    .search-bar { max-width: 860px; margin: 0 auto; padding: 1.5rem 2rem 0; }
+    .search-input { width: 100%; font-family: var(--ui); font-size: 0.95rem; color: var(--n); background: var(--w); border: 1px solid var(--b); border-radius: 4px; padding: 12px 16px; outline: none; transition: border 0.15s; }
+    .search-input:focus { border-color: var(--n3); }
+
+    /* ALPHABET NAV */
+    .alpha-nav { max-width: 860px; margin: 0 auto; padding: 1.25rem 2rem 0; display: flex; flex-wrap: wrap; gap: 4px; }
+    .alpha-btn { font-family: var(--ui); font-size: 0.75rem; font-weight: 500; width: 30px; height: 30px; border: 1px solid var(--b); border-radius: 3px; background: var(--w); color: var(--m); cursor: pointer; transition: all 0.15s; display: flex; align-items: center; justify-content: center; }
+    .alpha-btn:hover { background: var(--n3); color: var(--w); border-color: var(--n3); }
+    .alpha-btn.inactive { opacity: 0.3; cursor: default; }
+
+    /* MAIN */
+    .main { max-width: 860px; margin: 0 auto; padding: 2rem 2rem 5rem; }
+
+    /* LETTER GROUP */
+    .letter-group { margin-bottom: 2.5rem; }
+    .letter-heading { font-family: var(--fd); font-size: 1.6rem; font-weight: 700; color: var(--n3); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--g); display: inline-block; min-width: 40px; }
+
+    /* TERM CARD */
+    .term-card { background: var(--w); border: 1px solid var(--b); border-radius: 4px; padding: 1.25rem 1.5rem; margin-bottom: 0.75rem; cursor: pointer; transition: all 0.15s; }
+    .term-card:hover { border-color: var(--n3); box-shadow: 0 2px 12px rgba(10,22,40,0.06); }
+    .term-card.open { border-color: var(--n3); }
+    .term-header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .term-name { font-family: var(--fd); font-size: 1.05rem; font-weight: 600; color: var(--n); }
+    .term-tag { font-family: var(--ui); font-size: 0.68rem; font-weight: 500; padding: 3px 8px; border-radius: 20px; background: var(--n4); color: var(--n3); white-space: nowrap; }
+    .term-preview { font-family: var(--ui); font-size: 0.82rem; color: var(--mu); margin-top: 0.3rem; }
+    .chev { width: 16px; height: 16px; stroke: var(--mu); stroke-width: 2; fill: none; flex-shrink: 0; transition: transform 0.2s; }
+    .term-card.open .chev { transform: rotate(180deg); }
+    .term-body { display: none; padding-top: 1rem; margin-top: 1rem; border-top: 1px solid var(--b); }
+    .term-card.open .term-body { display: block; }
+    .term-definition { font-size: 0.92rem; color: var(--m); line-height: 1.8; margin-bottom: 0.75rem; }
+    .term-example { font-size: 0.85rem; color: var(--mu); line-height: 1.7; background: var(--n4); border-left: 3px solid var(--g); padding: 0.75rem 1rem; border-radius: 0 3px 3px 0; margin-bottom: 0.75rem; font-style: italic; }
+    .term-link { font-family: var(--ui); font-size: 0.8rem; color: var(--n3); text-decoration: none; border: 1px solid var(--b); padding: 4px 12px; border-radius: 3px; display: inline-block; transition: all 0.15s; }
+    .term-link:hover { background: var(--n3); color: var(--w); border-color: var(--n3); }
+
+    /* NO RESULTS */
+    .no-results { text-align: center; padding: 3rem; color: var(--mu); font-family: var(--ui); font-size: 0.9rem; display: none; }
+
+    /* FOOTER */
+    footer { background: var(--n2); padding: 2.5rem 2rem; margin-top: 2rem; }
+    .fi { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+    .flo { font-family: var(--fd); font-size: 1.1rem; font-weight: 700; color: rgba(255,255,255,0.8); }
+    .flo span { color: var(--g); }
+    .fli { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; justify-content: center; }
+    .fli a { font-family: var(--ui); font-size: 0.78rem; color: rgba(255,255,255,0.4); text-decoration: none; }
+    .fcop { font-family: var(--ui); font-size: 0.72rem; color: rgba(255,255,255,0.25); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
+      <li><a href="ask-anything.html">Ask Anything</a></li>
+      <li><a href="worldviews.html">Worldviews</a></li>
+      <li><a href="study-plans.html">Study Plans</a></li>
+      <li><a href="video-library.html">Videos</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="whats-new.html">What's New</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="nav-user" id="nav-user"></span>
+      <button class="nav-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
+      <a href="login.html" class="nav-signin" id="nav-signin">Sign in</a>
+      <a href="signup.html" class="nav-cta" id="nav-cta">Start Free</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Reference</p>
+      <h1>The Apologetics <em>Glossary</em></h1>
+      <p class="hero-sub">Every term explained in plain English. No prior philosophy or theology background needed.</p>
+    </div>
+  </div>
+
+  <div class="search-bar">
+    <input class="search-input" type="text" id="search-input" placeholder="Search terms... e.g. Kalam, ontological, presuppositionalism" oninput="filterTerms(this.value)" />
+  </div>
+
+  <div class="alpha-nav" id="alpha-nav"></div>
+
+  <div class="main">
+    <div id="glossary-content"></div>
+    <div class="no-results" id="no-results">No terms found matching your search.</div>
+  </div>
+
+  <footer>
+    <div class="fi">
+      <div class="flo">Apologia<span>Daily</span></div>
+      <ul class="fli">
+        <li><a href="evidence-library.html">Evidence Library</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+      <div class="fcop">&copy; 2026 Apologia Daily. Built for the defence of the Gospel.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+  var sb = null;
+  function initSb() {
+    if (window.supabase && window.supabase.createClient) {
+      sb = window.supabase.createClient(
+        'https://noprgxkwniouukmrfozc.supabase.co',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+      );
+      checkAuth();
+    } else { setTimeout(initSb, 50); }
+  }
+  document.addEventListener('DOMContentLoaded', initSb);
+
+  async function checkAuth() {
+    try {
+      var r = await sb.auth.getSession();
+      var s = r.data && r.data.session;
+      if (s) {
+        var name = (s.user.user_metadata && s.user.user_metadata.full_name) || s.user.email.split('@')[0];
+        document.getElementById('nav-user').textContent = name;
+        document.getElementById('nav-signout').style.display = 'inline-block';
+        document.getElementById('nav-signin').style.display = 'none';
+        document.getElementById('nav-cta').style.display = 'none';
+      }
+    } catch(e) {}
+  }
+  async function signOut() {
+    try { await sb.auth.signOut(); } catch(e) {}
+    window.location.href = 'index.html';
+  }
+
+  // ── GLOSSARY DATA ──
+  var TERMS = [
+    // A
+    { term: 'A Posteriori', letter: 'A', tag: 'Philosophy', preview: 'Knowledge gained from experience or evidence', definition: 'Knowledge or reasoning that is based on observation and experience rather than pure logic. Most scientific arguments are a posteriori — they depend on what we observe about the world. The Fine-Tuning Argument and the Kalam Cosmological Argument both use a posteriori reasoning, starting from observed facts about the universe.', example: 'The universe appears fine-tuned for life (observation) — therefore it was probably designed (conclusion). This is a posteriori reasoning.', link: 'evidence-library.html' },
+
+    { term: 'A Priori', letter: 'A', tag: 'Philosophy', preview: 'Knowledge independent of experience or observation', definition: 'Knowledge or reasoning that does not depend on observation but follows from logic or definitions alone. The Ontological Argument is the most famous a priori argument in apologetics — it attempts to prove God\'s existence from the concept of God alone, without appealing to any evidence.', example: 'God is the greatest conceivable being. A being that exists is greater than one that doesn\'t. Therefore God must exist. This argument does not need any observations to work.', link: 'evidence-library.html' },
+
+    { term: 'Ad Hominem', letter: 'A', tag: 'Logic', preview: 'Attacking the person rather than their argument', definition: 'A logical fallacy where instead of responding to someone\'s argument, you attack the person making it. In apologetics conversations, ad hominem often sounds like: "You only believe that because you were raised Christian." Even if true, this says nothing about whether the argument is correct.', example: 'Instead of answering the Kalam Argument, someone says "Craig is just a theologian, not a real philosopher." That is an ad hominem — it attacks Craig, not his argument.', link: 'debate-arena.html' },
+
+    { term: 'Agnosticism', letter: 'A', tag: 'Worldview', preview: 'The view that God\'s existence cannot be known', definition: 'The position that the existence of God is unknown or unknowable. Strong agnosticism says it is impossible for anyone to know whether God exists. Weak agnosticism says the individual personally does not know. Agnosticism is about knowledge, not belief — an agnostic can still lean toward theism or atheism.', example: 'An agnostic might say: "I don\'t know whether God exists and I\'m not sure anyone can." This differs from atheism (which claims God probably does not exist) and theism (which claims God does exist).', link: 'worldviews.html' },
+
+    { term: 'Anthropic Principle', letter: 'A', tag: 'Science & Faith', preview: 'The observation that the universe must allow observers to exist', definition: 'The observation that the universe\'s physical constants must be compatible with conscious life, because we are here to observe them. Some use this to deflect the Fine-Tuning Argument: of course the universe allows life — we couldn\'t observe it if it didn\'t. Apologists respond that this doesn\'t explain WHY the constants are fine-tuned, only that they must be.', example: 'If you survived a firing squad of 100 marksmen who all missed, you shouldn\'t just say "well, I had to survive to wonder about it." The fact that you survived still needs an explanation.', link: 'evidence-library.html' },
+
+    { term: 'Apologetics', letter: 'A', tag: 'Core Term', preview: 'The discipline of giving reasoned defences of Christian faith', definition: 'From the Greek apologia (legal defence). The branch of Christian theology concerned with presenting and defending the intellectual case for Christian faith. Not the same as "apologising" — apologists offer reasoned arguments, not regrets. 1 Peter 3:15 calls every Christian to be prepared to give an apologia.', example: 'William Lane Craig, C.S. Lewis, and Alvin Plantinga are famous Christian apologists who have engaged seriously with philosophical and historical challenges to Christian faith.', link: 'evidence-library.html' },
+
+    { term: 'Argument from Design', letter: 'A', tag: 'God\'s Existence', preview: 'The universe shows evidence of intentional design', definition: 'Also called the Teleological Argument. The argument that the order, complexity, and apparent purposiveness of the universe point to an intelligent designer. William Paley\'s famous watchmaker analogy is the classic version. Modern versions focus on the fine-tuning of physical constants and the specified complexity of biological information (DNA).', example: 'The constants of nature are calibrated to such extraordinary precision that even a tiny change would make life impossible. This level of precision suggests intentional design rather than chance.', link: 'evidence-library.html' },
+
+    { term: 'Argument from Reason', letter: 'A', tag: 'God\'s Existence', preview: 'If materialism is true, we cannot trust our own reasoning', definition: 'C.S. Lewis\'s argument that naturalism undermines itself: if human minds are merely the product of blind, unguided evolutionary processes shaped only by survival advantage, there is no reason to trust them to reason correctly about anything. On theism, our minds are made in the image of the rational God, which explains why they can reliably discover truth.', example: '"If the solar system was brought about by an irrational process, then the products of that process — human minds — have no reason to trust their own rationality." (C.S. Lewis)', link: 'evidence-library.html' },
+
+    { term: 'Atheism', letter: 'A', tag: 'Worldview', preview: 'The belief that God does not exist', definition: 'The position that there is no God or gods. Strong (positive) atheism claims God definitely does not exist. Weak (negative) atheism is simply the absence of belief in God. New Atheism (Dawkins, Hitchens, Harris) argues not just that God probably does not exist but that religious belief is irrational and harmful.', example: 'Richard Dawkins argues in The God Delusion that the existence of God is extremely improbable and that natural selection can explain everything that religion has been invoked to explain.', link: 'worldviews.html' },
+
+    { term: 'Atonement', letter: 'A', tag: 'Theology', preview: 'How Christ\'s death deals with human sin', definition: 'The doctrine that explains how the death of Jesus reconciles humanity to God. Different theories: Penal Substitution (Christ bears the punishment we deserve), Moral Influence (the cross demonstrates God\'s love and changes us), Christus Victor (Christ defeats sin, death, and the devil). All agree the cross is central; they differ on how it works.', example: '"God made him who had no sin to be sin for us, so that in him we might become the righteousness of God." (2 Corinthians 5:21) — the core text for penal substitution.', link: 'evidence-library.html' },
+
+    // B
+    { term: 'Begging the Question', letter: 'B', tag: 'Logic', preview: 'Assuming what you\'re trying to prove', definition: 'A logical fallacy (petitio principii) where the conclusion is assumed in the premises. Often misused to mean "raising a question." In apologetics, "the Bible is true because God wrote it and God doesn\'t lie" begs the question — it assumes God exists and wrote the Bible, which is exactly what is in dispute.', example: '"How do you know the Bible is true?" — "Because it says so." This assumes the Bible\'s reliability in order to prove the Bible\'s reliability.', link: 'debate-arena.html' },
+
+    { term: 'Burden of Proof', letter: 'B', tag: 'Logic', preview: 'Who must prove what in an argument', definition: 'The obligation to provide evidence or argument for one\'s claim. In apologetics debates, both sides carry a burden: the theist must give reasons to believe God exists; the atheist who claims God does not exist must give reasons for that claim too. Simply saying "I don\'t believe it" without argument does not automatically shift the burden entirely to the theist.', example: 'If someone says "there is no God," they have made a claim that needs support. If they say "I have no reason to believe in God," they have merely stated their personal position.', link: 'debate-arena.html' },
+
+    // C
+    { term: 'Christology', letter: 'C', tag: 'Theology', preview: 'The study of the person and nature of Jesus Christ', definition: 'The branch of theology concerned with who Jesus is: his divine and human natures, his relationship to the Father, his pre-existence, and his identity as the second person of the Trinity. High Christology holds that Jesus is fully divine from the earliest Christian sources. Low Christology sees the divine claims as developing gradually.', example: 'Philippians 2:6-11, a hymn dating to within 15 years of the crucifixion, presents the highest possible Christology: Jesus was in very nature God before his incarnation.', link: 'evidence-library.html' },
+
+    { term: 'Compatibilism', letter: 'C', tag: 'Philosophy', preview: 'Free will and determinism can both be true', definition: 'The philosophical position that human free will is compatible with determinism or divine foreknowledge. God can know in advance what you will freely choose without that knowledge causing your choice. Relevant in theodicy: God\'s sovereignty and human freedom are both real.', example: 'God foreknew that Judas would betray Jesus without forcing him to do so. Judas chose freely; God knew what that choice would be. This is compatibilism.', link: 'evidence-library.html' },
+
+    { term: 'Contingency', letter: 'C', tag: 'Philosophy', preview: 'Something that exists but might not have existed', definition: 'A contingent being is one that could have not existed — its existence depends on something else. The universe is contingent: it might not have existed. The Leibniz Contingency Argument says every contingent thing requires an explanation. Since the universe is contingent, it requires an explanation that is not itself contingent — a necessary being. That necessary being is God.', example: 'You are contingent: your parents might not have met. The chair you\'re sitting on is contingent. The universe is contingent. But God, if he exists, exists necessarily — he could not not exist.', link: 'evidence-library.html' },
+
+    { term: 'Cosmological Argument', letter: 'C', tag: 'God\'s Existence', preview: 'The universe\'s existence points to God', definition: 'A family of arguments that reason from the existence or nature of the universe to the existence of God. Includes the Kalam Cosmological Argument (the universe had a beginning, therefore a cause), the Leibniz Contingency Argument (contingent things need explanation, leading to a necessary being), and Aquinas\'s Five Ways.', example: '"Everything that begins to exist has a cause. The universe began to exist. Therefore the universe has a cause." This is the Kalam Cosmological Argument in its simplest form.', link: 'evidence-library.html' },
+
+    { term: 'Criterion of Embarrassment', letter: 'C', tag: 'History', preview: 'Details that embarrass the author are more likely to be true', definition: 'A historical method: if a source records something that is awkward or embarrassing for the author\'s case, it is likely authentic — because no one would invent an embarrassing detail. Jesus being baptised by John (implying subordination), his family thinking he was mad, and his crucifixion (a criminal\'s death) all pass this criterion.', example: 'No Christian would invent the story that Jesus\'s own family tried to restrain him because they thought he was out of his mind (Mark 3:21). The story is there because it was too well-known to suppress.', link: 'evidence-library.html' },
+
+    { term: 'Criterion of Multiple Attestation', letter: 'C', tag: 'History', preview: 'Events confirmed by multiple independent sources', definition: 'A historical method: an event is more credible if it is attested in multiple independent sources. The crucifixion is attested in Mark, Paul\'s letters, Tacitus, and Josephus — all independently. Multiple attestation significantly reduces the probability that an event was fabricated.', example: 'The baptism of Jesus appears in Mark, Q (the source used by Matthew and Luke), and John independently — making it one of the most historically certain events in Jesus\'s life.', link: 'evidence-library.html' },
+
+    // D
+    { term: 'Dead Sea Scrolls', letter: 'D', tag: 'Biblical Reliability', preview: 'Ancient manuscripts proving the Bible\'s textual reliability', definition: 'A collection of approximately 900 manuscripts discovered between 1947 and 1956 near Qumran. They include copies of every Old Testament book except Esther, dated to 125-100 BC — over a century before Jesus. Comparing them with later manuscripts shows extraordinary textual preservation, eliminating the theory that Christians altered Old Testament prophecies to fit Jesus.', example: 'The Great Isaiah Scroll from Qumran is virtually identical to the Masoretic text used in modern translations — despite 1,000 years of copying between them. The text was preserved faithfully.', link: 'evidence-library.html' },
+
+    { term: 'Deism', letter: 'D', tag: 'Worldview', preview: 'God created the universe but does not intervene in it', definition: 'The belief that God created the universe and established its laws but does not intervene in it — no miracles, no revelation, no personal relationship. Popular among Enlightenment thinkers like Voltaire. Distinct from Christian theism, which holds that God is actively involved in creation and history.', example: 'Thomas Jefferson believed in a creator God who set the universe in motion but did not believe in miracles or the resurrection of Jesus. This is deism.', link: 'evidence-library.html' },
+
+    { term: 'Determinism', letter: 'D', tag: 'Philosophy', preview: 'All events are causally necessitated by prior events', definition: 'The view that every event, including human choices, is the inevitable result of prior causes. Hard determinism denies free will entirely. Soft determinism (compatibilism) says free will is compatible with deterministic causation. Relevant to theodicy: if determinism is true, how can God hold people responsible for evil?', example: 'If your choice to lie was determined by your neurons, which were determined by your genes, which were determined by the Big Bang — are you truly responsible for lying?', link: 'evidence-library.html' },
+
+    // E
+    { term: 'Empiricism', letter: 'E', tag: 'Philosophy', preview: 'All knowledge comes from sensory experience', definition: 'The philosophical position that all knowledge derives from sensory observation and experience. Associated with John Locke, George Berkeley, and David Hume. Hume\'s empiricism led him to scepticism about miracles (we have more evidence for the regularity of nature than for any particular miracle). Apologists respond that testimony is also a form of evidence.', example: 'Hume argued: the evidence for the regular course of nature is so strong that no testimony about a miracle could overcome it. But this argument assumes what it needs to prove.', link: 'evidence-library.html' },
+
+    { term: 'Epistemology', letter: 'E', tag: 'Philosophy', preview: 'The study of knowledge — how we know what we know', definition: 'The branch of philosophy concerned with the nature, sources, and limits of knowledge. In apologetics, epistemological questions include: Is belief in God rational? What counts as evidence? Can religious experience provide knowledge? Alvin Plantinga\'s Reformed Epistemology argues that belief in God can be properly basic — rational without requiring argument.', example: 'Reformed Epistemology: belief in God is like belief in other minds or belief in the external world — we accept it without being able to prove it, and yet it is rational to do so.', link: 'evidence-library.html' },
+
+    { term: 'Euthyphro Dilemma', letter: 'E', tag: 'Philosophy', preview: 'Is something good because God commands it, or does God command it because it\'s good?', definition: 'A philosophical challenge from Plato\'s dialogue Euthyphro: Is something morally good because God commands it (making morality arbitrary) or does God command it because it is good (making goodness independent of God)? Christian apologists respond that this presents a false dilemma: goodness is neither arbitrary nor independent of God because God IS good — his nature is the standard.', example: 'God cannot command cruelty as good because cruelty contradicts his own nature. Goodness is not a rule above God — it is the expression of who God is.', link: 'evidence-library.html' },
+
+    { term: 'Evidentialism', letter: 'E', tag: 'Apologetics Method', preview: 'Christian faith should be based on evidence', definition: 'An approach to apologetics that argues Christian belief should be based on and defended by evidence — historical, philosophical, and scientific. Associated with William Lane Craig, Gary Habermas, and Lee Strobel. Contrasts with Presuppositionalism, which argues that evidence is always interpreted through prior commitments.', example: 'The evidentialist says: here is the historical evidence for the resurrection — examine it honestly and you will find it compelling. The presuppositionalist says: all reasoning begins from foundational commitments.', link: 'evidence-library.html' },
+
+    // F
+    { term: 'Faith', letter: 'F', tag: 'Theology', preview: 'Trust based on evidence and testimony, not blind belief', definition: 'Widely misunderstood as belief without evidence. In its biblical usage (Greek: pistis), faith means trust, confidence, and commitment — similar to trusting a doctor\'s diagnosis based on their expertise. Christian faith is not blind belief but trust based on evidence, testimony, and the witness of the Spirit. C.S. Lewis: "Faith is the art of holding on to things your reason has once accepted, in spite of your changing moods."', example: 'You believe your chair will hold your weight before you sit on it. That belief is based on past experience (evidence) and the reliable testimony of others — not blind faith.', link: 'evidence-library.html' },
+
+    { term: 'Fallibilism', letter: 'F', tag: 'Philosophy', preview: 'All knowledge claims might be wrong', definition: 'The view that any of our beliefs could in principle be mistaken. Fallibilism does not mean scepticism — it simply acknowledges that certainty is rare and intellectual humility is appropriate. A fallibilist apologist can argue confidently for Christianity while acknowledging they might be wrong about some details.', example: 'Saying "I am highly confident the resurrection happened based on the evidence, but I acknowledge I could be wrong" is fallibilism. It is intellectually honest without abandoning the claim.', link: 'debate-arena.html' },
+
+    { term: 'Fine-Tuning Argument', letter: 'F', tag: 'God\'s Existence', preview: 'The precise calibration of nature\'s constants suggests design', definition: 'The argument that the physical constants of the universe — the strength of gravity, the mass of the electron, the cosmological constant — are calibrated to such extraordinary precision that life would be impossible if they were even slightly different. The probability of this occurring by chance is vanishingly small, suggesting intentional design by an intelligence.', example: 'The cosmological constant is fine-tuned to 1 part in 10 to the power of 120. Robin Collins: "If you rolled the dial at random, the probability of landing in the life-permitting range is like throwing a dart at a target the size of one atom on the other side of the observable universe."', link: 'evidence-library.html' },
+
+    // G
+    { term: 'General Revelation', letter: 'G', tag: 'Theology', preview: 'Knowledge of God available to all through creation and conscience', definition: 'The knowledge of God available to all people through nature, reason, and conscience — without special revelation. Romans 1:20 says God\'s qualities are clearly seen through what has been made. The moral law written on human hearts (Romans 2:14-15) is also general revelation. Contrasts with Special Revelation (Scripture, Jesus).', example: 'A person who has never heard the gospel can still know that God exists (through creation) and that some things are morally right and wrong (through conscience). This is general revelation.', link: 'evidence-library.html' },
+
+    // H
+    { term: 'Historical Method', letter: 'H', tag: 'History', preview: 'The criteria historians use to evaluate ancient sources', definition: 'The set of principles historians apply to determine what happened in the past, including: multiple attestation, criterion of embarrassment, coherence, enemy attestation, and proximity to events. Applying these criteria to the Gospels and Paul\'s letters yields strong evidence for the historical core of the New Testament.', example: 'Tacitus (hostile to Christianity) confirms the crucifixion of Christ under Pilate. Enemy attestation is among the strongest forms of historical evidence.', link: 'evidence-library.html' },
+
+    { term: 'Hypothesis', letter: 'H', tag: 'Philosophy', preview: 'A proposed explanation to be tested against evidence', definition: 'A testable explanation for observed facts. In apologetics, the resurrection hypothesis is tested against historical data: the empty tomb, the post-resurrection appearances, and the transformation of the disciples. The question is which hypothesis best explains all the data — resurrection, hallucination, theft, or swoon.', example: 'Which hypothesis best explains: empty tomb + multiple appearances + disciples dying for the claim + Paul\'s conversion + James\'s conversion? The resurrection hypothesis accounts for all five.', link: 'evidence-library.html' },
+
+    // I
+    { term: 'Immanence', letter: 'I', tag: 'Theology', preview: 'God is present within and throughout creation', definition: 'The divine attribute of being present within creation — involved in history, accessible in prayer, sustaining all things at every moment. Balanced with transcendence (God is also above and beyond creation). Pantheism overemphasises immanence (God IS the world). Deism overemphasises transcendence (God is absent from the world). Christianity holds both in tension.', example: '"In him we live and move and have our being" (Acts 17:28) — Paul to the Greeks in Athens, expressing divine immanence to a philosophical audience.', link: 'evidence-library.html' },
+
+    { term: 'Incarnation', letter: 'I', tag: 'Theology', preview: 'God became human in the person of Jesus', definition: 'The Christian doctrine that the second person of the Trinity became human in the person of Jesus of Nazareth. Not that God pretended to be human, nor that a human became divine, but that the divine Logos took on a fully human nature. The Philippians 2:6-11 hymn describes the pre-existent one in very nature God making himself nothing by becoming human.', example: '"The Word became flesh and made his dwelling among us." (John 1:14) — the core text for the Incarnation doctrine.', link: 'evidence-library.html' },
+
+    { term: 'Inference to the Best Explanation', letter: 'I', tag: 'Logic', preview: 'Choosing the hypothesis that best explains all the evidence', definition: 'Also called abductive reasoning. A form of reasoning that selects the hypothesis that most completely and elegantly accounts for all the observed facts. Used extensively in both science and apologetics. The resurrection is defended not as the only logically possible explanation but as the best explanation of the five minimal historical facts.', example: 'Scientists don\'t observe the Big Bang directly — they infer it as the best explanation of cosmic background radiation, galaxy recession, and the abundance of light elements. Similarly, the resurrection is the best explanation of the historical data.', link: 'evidence-library.html' },
+
+    // K
+    { term: 'Kalam Cosmological Argument', letter: 'K', tag: 'God\'s Existence', preview: 'The universe began to exist — therefore it has a cause', definition: 'Developed by medieval Islamic philosopher Al-Ghazali and championed by William Lane Craig. The argument: (1) Everything that begins to exist has a cause. (2) The universe began to exist. (3) Therefore the universe has a cause. The cause must be uncaused, spaceless, timeless, immensely powerful, and personal — the classical attributes of God.', example: '"Kalam" means "word" or "speech" in Arabic and refers to Islamic scholastic theology. The argument was originally developed to defend Islamic theism but is used by Christian apologists for the same conclusion.', link: 'evidence-library.html' },
+
+    { term: 'Kenosis', letter: 'K', tag: 'Theology', preview: 'Christ\'s voluntary self-emptying in the Incarnation', definition: 'From the Greek kenoo (to empty). The doctrine that in the Incarnation, Jesus voluntarily set aside the independent exercise of his divine attributes — not ceasing to be divine, but choosing not to exercise divine prerogatives independently. Philippians 2:7: he made himself nothing. Explains how Jesus could be genuinely limited (hungry, tired, not knowing the day of his return) while remaining fully divine.', example: 'Jesus says he does not know the day or hour of his return (Mark 13:32), yet is fully divine. Kenosis explains this: in his incarnation he voluntarily chose not to access that knowledge independently.', link: 'evidence-library.html' },
+
+    // L
+    { term: 'Logical Fallacy', letter: 'L', tag: 'Logic', preview: 'An error in reasoning that makes an argument invalid', definition: 'A flaw in an argument\'s structure that undermines its validity, regardless of the truth of its content. Common fallacies in apologetics debates include: ad hominem (attacking the person), straw man (misrepresenting the opponent\'s view), false dilemma (offering only two options when more exist), and begging the question (assuming what you\'re trying to prove).', example: '"Christians only believe because they were raised that way" is an ad hominem genetic fallacy — it attacks the origin of the belief rather than the evidence for it.', link: 'debate-arena.html' },
+
+    // M
+    { term: 'Metaphysics', letter: 'M', tag: 'Philosophy', preview: 'The study of ultimate reality — what exists and why', definition: 'The branch of philosophy concerned with the fundamental nature of reality: what exists, what kinds of things exist, and why anything exists at all. Questions in metaphysics include: Does God exist? Do abstract objects (numbers, properties) exist? Do minds exist independently of bodies? What is the nature of time and causation? Apologetics is deeply metaphysical.', example: 'The question "Why is there something rather than nothing?" is the fundamental question of metaphysics. The Leibniz Contingency Argument addresses it directly.', link: 'evidence-library.html' },
+
+    { term: 'Minimal Facts Argument', letter: 'M', tag: 'Resurrection', preview: 'Arguing for the resurrection using only data all scholars accept', definition: 'Developed by Gary Habermas. Instead of assuming the Bible is reliable, this method argues for the resurrection using only facts accepted by the vast majority of critical scholars — including atheists and agnostics. The five minimal facts: Jesus died by crucifixion, the tomb was empty, the disciples genuinely believed they saw the risen Jesus, Paul converted, and James converted.', example: 'Even Bart Ehrman (agnostic critic) accepts that Jesus died by crucifixion and that the disciples genuinely believed they saw him alive. These two facts alone eliminate many alternative explanations.', link: 'evidence-library.html' },
+
+    { term: 'Miracles', letter: 'M', tag: 'Theology', preview: 'Events involving divine action that transcend natural processes', definition: 'Events where God acts in ways that transcend or override ordinary natural processes. Hume argued miracles are always more improbable than any testimony for them. C.S. Lewis and others respond that this argument assumes what it needs to prove — if God exists, miracles are not improbable, just unusual. The question is whether God exists first, not whether miracles are possible.', example: 'The resurrection is the central miracle of Christianity. Paul in 1 Corinthians 15 says that if it did not happen, Christianity is false. Christianity is uniquely willing to stake everything on a specific historical claim.', link: 'evidence-library.html' },
+
+    { term: 'Monotheism', letter: 'M', tag: 'Theology', preview: 'Belief in one God', definition: 'The belief that there is exactly one God. Judaism, Christianity, and Islam are the three great monotheistic religions, though they differ significantly on the nature of that one God. Christianity\'s Trinitarian monotheism holds that the one God exists as three persons — not three gods, but one God in three persons. This is the most distinctive feature of Christian monotheism.', example: 'The Shema (Deuteronomy 6:4) is the foundational Jewish confession: "The Lord our God, the Lord is one." Christianity affirms this while unpacking the divine unity to include Father, Son, and Holy Spirit.', link: 'evidence-library.html' },
+
+    // N
+    { term: 'Naturalism', letter: 'N', tag: 'Worldview', preview: 'Only the natural, physical world exists', definition: 'The view that reality consists entirely of the natural, physical world — there is no supernatural realm, no God, no souls, no miracles. Methodological naturalism (used in science) simply brackets the supernatural without denying it. Metaphysical naturalism (a worldview) claims the supernatural does not exist. Apologists argue that naturalism cannot adequately account for consciousness, morality, reason, or the fine-tuned universe.', example: 'C.S. Lewis\'s Argument from Reason: if naturalism is true and our minds are merely physical, we have no basis for trusting our reasoning. Naturalism undermines the very faculty we would use to evaluate it.', link: 'evidence-library.html' },
+
+    { term: 'Necessary Being', letter: 'N', tag: 'Philosophy', preview: 'A being that cannot not exist', definition: 'A being whose non-existence is impossible — one that exists in all possible worlds. God, if he exists, is the paradigm necessary being. Everything else is contingent (might not have existed). The Leibniz Contingency Argument and the Ontological Argument both conclude that God is a necessary being — the ultimate explanation for why anything exists at all.', example: 'Numbers are often proposed as necessary beings — 2+2=4 is necessarily true. But numbers are abstract, not personal. The Cosmological Argument concludes that the necessary being is also personal.', link: 'evidence-library.html' },
+
+    // O
+    { term: 'Ontological Argument', letter: 'O', tag: 'God\'s Existence', preview: 'God\'s existence follows from the concept of God alone', definition: 'Proposed by Anselm of Canterbury (1078): God is that than which nothing greater can be conceived. A being that exists in reality is greater than one that exists only in the mind. Therefore God must exist in reality. Alvin Plantinga\'s modern version uses modal logic: it is possible that a maximally great being exists; if possible, it exists in some possible world; a maximally great being would exist in all possible worlds; therefore it exists in this world.', example: '"Even the fool has in mind a concept of God as the greatest conceivable being. But if God existed only in the mind and not in reality, we could conceive of something greater." — Anselm\'s original formulation.', link: 'evidence-library.html' },
+
+    // P
+    { term: 'Pantheism', letter: 'P', tag: 'Worldview', preview: 'God and the universe are identical', definition: 'The view that God and the physical universe are one and the same — not that God created the universe, but that the universe IS God. Associated with Spinoza and many Eastern religions. Contrasts with Christian theism, where God is distinct from his creation. C.S. Lewis argued that pantheism makes God impersonal and cannot account for the moral demand we all feel.', example: 'If God IS the universe, then prayers are addressed to mountains and quarks. The personal God of Christianity who loves, acts, and speaks is incompatible with pantheism.', link: 'worldviews.html' },
+
+    { term: 'Penal Substitution', letter: 'P', tag: 'Theology', preview: 'Christ bore the punishment we deserved', definition: 'The view of the atonement that holds that Jesus, in his death, bore the punishment that humanity deserved for sin — satisfying the demands of divine justice. The most prominent atonement theory in Reformed and evangelical theology. Critics argue it makes God punish an innocent person. Defenders respond that God himself was in Christ, not punishing someone else but paying the penalty himself.', example: '"God made him who had no sin to be sin for us, so that in him we might become the righteousness of God." (2 Corinthians 5:21) — the foundational text.', link: 'evidence-library.html' },
+
+    { term: 'Postmodernism', letter: 'P', tag: 'Worldview', preview: 'Scepticism about objective truth and universal claims', definition: 'A broad philosophical and cultural movement that is suspicious of universal truth claims, grand narratives, and objective knowledge. In apologetics, postmodernism often appears as "that\'s true for you but not for me." Apologists respond that this position is self-defeating: the claim "there is no objective truth" is itself presented as objectively true.', example: '"All truth is relative" — but is that statement itself relative, or is it objectively true? If relative, it can be ignored. If objectively true, it contradicts itself.', link: 'debate-arena.html' },
+
+    { term: 'Presuppositionalism', letter: 'P', tag: 'Apologetics Method', preview: 'All reasoning begins from foundational commitments', definition: 'An approach to apologetics associated with Cornelius Van Til and Greg Bahnsen. Argues that all reasoning begins from foundational presuppositions (commitments held before examining evidence). The Christian presuppositionalist argues that the existence of God is the necessary precondition for logic, science, and morality — without which no argument would be possible.', example: 'Van Til: "We must use the Bible to prove the Bible." Critics say this is circular. Presuppositionalists respond that every worldview begins in a circle — the question is which circle is internally consistent.', link: 'evidence-library.html' },
+
+    { term: 'Problem of Evil', letter: 'P', tag: 'Philosophy', preview: 'Why would a good God allow suffering and evil?', definition: 'The most emotionally powerful objection to Christian faith. The logical problem of evil argues that an all-powerful, all-knowing, all-good God and evil cannot both exist. Alvin Plantinga\'s Free Will Defence shows this argument fails: God creating genuinely free beings makes the possibility of evil unavoidable. The evidential problem of evil asks whether the degree of suffering is evidence against God\'s existence.', example: 'Plantinga: "It is possible that God could not have created a world containing moral good but no moral evil." If true, the logical problem of evil fails — God and evil are logically compatible.', link: 'evidence-library.html' },
+
+    // R
+    { term: 'Rationalism', letter: 'R', tag: 'Philosophy', preview: 'Reason alone can establish fundamental truths', definition: 'The philosophical position that reason, rather than sensory experience, is the primary source of knowledge. Associated with Descartes, Spinoza, and Leibniz. The Ontological Argument is the classic rationalist argument for God — it tries to establish God\'s existence through reason alone without any empirical observation.', example: 'Descartes: "I think, therefore I am." He tried to rebuild all knowledge from pure reason, eventually arriving at God\'s existence as a necessary conclusion of rational analysis.', link: 'evidence-library.html' },
+
+    { term: 'Reformed Epistemology', letter: 'R', tag: 'Apologetics Method', preview: 'Belief in God can be rational without argument', definition: 'Associated with Alvin Plantinga, Nicholas Wolterstorff, and William Alston. Argues that belief in God can be properly basic — a rational belief that does not require argument to justify, just as belief in other minds or the reliability of memory is rational without proof. We don\'t need to argue our way to theism; experience of God can ground rational belief directly.', example: 'Just as you can rationally believe you had breakfast without being able to prove it to a sceptic, you can rationally believe in God based on religious experience without being able to prove it philosophically.', link: 'evidence-library.html' },
+
+    { term: 'Relativism', letter: 'R', tag: 'Philosophy', preview: 'Truth and morality vary between cultures or individuals', definition: 'The view that truth, morality, or knowledge are not universal but relative to individuals or cultures. Moral relativism holds that what is right or wrong depends on cultural norms. Apologists argue that moral relativism is self-defeating and cannot account for the universal moral intuitions humans share — or justify the condemnation of obvious evils like genocide.', example: '"Female genital mutilation is wrong" is a moral claim. If moral relativism is true, this is only true for cultures that disapprove of it. Most people find this conclusion unacceptable — which shows most people are not really moral relativists.', link: 'evidence-library.html' },
+
+    { term: 'Resurrection', letter: 'R', tag: 'Core Term', preview: 'Jesus rose bodily from the dead on the third day', definition: 'The central claim of Christianity: Jesus of Nazareth, crucified under Pontius Pilate, rose bodily from the dead on the third day. Not a spiritual resurrection (he appeared physically, ate food, bore wounds). Not resuscitation (he never died again). The apostle Paul stakes the entire Christian faith on this: "If Christ has not been raised, your faith is futile." The historical evidence includes the empty tomb, post-resurrection appearances to over 500 people, and the transformation of the disciples.', example: 'The creed in 1 Corinthians 15:3-7 is dated by scholars to within 2-5 years of the crucifixion — the earliest testimony we have to the resurrection, from a time when eyewitnesses were still alive.', link: 'evidence-library.html' },
+
+    // S
+    { term: 'Scientism', letter: 'S', tag: 'Worldview', preview: 'Science is the only reliable source of knowledge', definition: 'The view that scientific knowledge is the only genuine knowledge — that questions which cannot be answered by science are meaningless or unanswerable. Apologists argue that scientism is self-defeating: the claim "only science produces knowledge" is not itself a scientific claim — it is a philosophical one. Science also cannot answer questions about morality, mathematics, or the meaning of life.', example: '"Science has disproved God" — but the existence of God is not a scientific question (God is not a physical entity that can be measured). It is a philosophical and metaphysical question that science cannot address.', link: 'evidence-library.html' },
+
+    { term: 'Sola Scriptura', letter: 'S', tag: 'Theology', preview: 'Scripture alone is the supreme authority for Christian faith', definition: 'The Reformation principle that the Bible is the sole supreme authority for Christian doctrine and practice. Does not mean tradition is useless, but that tradition is subordinate to Scripture. Relevant to apologetics because it grounds the authority of the arguments used — appeals to the Bible carry weight only for those who accept its authority.', example: 'When engaging with non-Christians, apologists typically argue for the historical reliability of the Gospels rather than appealing to Sola Scriptura — since the non-Christian has no prior commitment to biblical authority.', link: 'evidence-library.html' },
+
+    { term: 'Straw Man', letter: 'S', tag: 'Logic', preview: 'Misrepresenting an opponent\'s argument to make it easier to attack', definition: 'A logical fallacy where you misrepresent your opponent\'s argument in a weaker form, attack the weaker form, and claim to have defeated their actual argument. Common in apologetics debates: "Christians just believe because they were told to" misrepresents the actual philosophical arguments Christian apologists make.', example: '"Atheists believe the universe came from nothing!" — most atheists do not believe this. They believe the universe may have always existed or arose from a prior quantum state. Attacking the "nothing" position is a straw man.', link: 'debate-arena.html' },
+
+    { term: 'Supernaturalism', letter: 'S', tag: 'Worldview', preview: 'Reality includes more than the natural, physical world', definition: 'The view that reality is not limited to the natural, physical world — that there is a supernatural realm including God, souls, angels, and miracles. Contrasts with naturalism. Apologists argue that naturalism cannot explain consciousness, moral facts, the fine-tuning of the universe, or the origin of life — and that supernaturalism provides better explanations.', example: 'The existence of consciousness — subjective, first-person experience — is very difficult to explain on naturalism. On supernaturalism, mind is fundamental to reality because God is mind.', link: 'evidence-library.html' },
+
+    // T
+    { term: 'Tacitus', letter: 'T', tag: 'History', preview: 'Rome\'s greatest historian who confirms the crucifixion of Christ', definition: 'Cornelius Tacitus (c. 56-117 AD), Rome\'s greatest historian and an enemy of Christianity. In his Annals, he confirms that "Christus" was executed during the reign of Tiberius at the sentence of Pontius Pilatus. As a hostile witness with no motive to support Christianity, his testimony is among the most valuable non-Christian evidence for the historical Jesus.', example: 'Tacitus calls Christianity a "pernicious superstition" and a "disease." No Christian would fabricate such a hostile reference. Its hostility is precisely what makes it credible as confirmation.', link: 'evidence-library.html' },
+
+    { term: 'Teleological Argument', letter: 'T', tag: 'God\'s Existence', preview: 'The order and purpose in nature point to a designer', definition: 'From the Greek telos (end, purpose). The argument that the order, complexity, and apparent purpose in nature are best explained by a designing intelligence. William Paley\'s watchmaker argument is the classic version. Modern versions focus on fine-tuning and biological information (DNA). Distinct from creationism — the teleological argument is philosophical, not dependent on any specific theory of origins.', example: '"The chance that higher life forms might have emerged in this way is comparable with the chance that a tornado sweeping through a junkyard might assemble a Boeing 747." — Fred Hoyle (atheist astronomer) on the improbability of life arising by chance.', link: 'evidence-library.html' },
+
+    { term: 'Theism', letter: 'T', tag: 'Worldview', preview: 'Belief in a personal God who created and sustains the universe', definition: 'The belief that a personal God exists who created the universe, is distinct from it, and is involved in it. Includes Christianity, Judaism, and Islam. Contrasts with atheism (no God), agnosticism (unknown), deism (God exists but is uninvolved), and pantheism (God IS the universe). Classical theism holds that God is omnipotent, omniscient, and perfectly good.', example: 'The theist and the atheist agree that the universe exists, that logic works, and that cruelty is wrong. The theist has explanations for all three; the atheist struggles with all three.', link: 'evidence-library.html' },
+
+    { term: 'Theodicy', letter: 'T', tag: 'Philosophy', preview: 'A defence of God\'s goodness in the face of evil and suffering', definition: 'From Greek theos (God) and dike (justice). An attempt to justify or defend God\'s goodness and power in the face of evil and suffering. Examples: the Free Will Defence (evil results from human freedom), Soul-Making Theodicy (suffering enables character development), Greater Good Theodicy (suffering serves purposes we cannot see). No theodicy claims to fully explain all suffering.', example: 'Alvin Plantinga\'s Free Will Defence: it is logically possible that God could not have created genuinely free creatures who always choose good. Therefore moral evil is compatible with God\'s existence.', link: 'evidence-library.html' },
+
+    { term: 'Transcendence', letter: 'T', tag: 'Theology', preview: 'God is above and beyond the created order', definition: 'The divine attribute of being above and beyond creation — not limited by time, space, or the physical world. Balanced with immanence (God is also present within creation). God\'s transcendence means he is not part of the universe, not constrained by physical laws, and not dependent on the universe for his existence.', example: '"My thoughts are not your thoughts, neither are your ways my ways, declares the Lord. As the heavens are higher than the earth, so are my ways higher than your ways." (Isaiah 55:8-9)', link: 'evidence-library.html' },
+
+    { term: 'Trinity', letter: 'T', tag: 'Theology', preview: 'One God in three persons: Father, Son, and Holy Spirit', definition: 'The Christian doctrine that God is one being who exists as three distinct persons: Father, Son, and Holy Spirit. Not three gods (tritheism). Not one God wearing three masks (modalism). Three persons sharing one divine nature. The Trinity is not a contradiction — it is a distinction between nature (one) and persons (three). Embedded in Jesus\'s own words: baptise in the name of the Father and of the Son and of the Holy Spirit (Matthew 28:19).', example: 'C.S. Lewis used dimensions as an analogy: a two-dimensional being cannot imagine three dimensions, but that doesn\'t mean they don\'t exist. The Trinity is a higher-dimensional reality that exceeds our categories.', link: 'evidence-library.html' },
+
+    { term: 'Trilemma', letter: 'T', tag: 'Jesus', preview: 'Lord, Liar, or Lunatic — the three options for Jesus', definition: 'C.S. Lewis\'s famous argument: given the claims Jesus made, there are only three options — he was Lord (his claims were true), a Liar (he knew the claims were false but made them deliberately), or a Lunatic (he genuinely believed the claims but was deluded). "Great moral teacher" is not available because great moral teachers do not claim to be God and forgive sins.', example: '"A man who was merely a man and said the sort of things Jesus said would not be a great moral teacher. He would either be a lunatic on the level with a man who says he is a poached egg, or else he would be the Devil of Hell." — C.S. Lewis, Mere Christianity.', link: 'evidence-library.html' },
+
+    // V
+    { term: 'Verification Principle', letter: 'V', tag: 'Philosophy', preview: 'Only empirically verifiable or logically necessary claims are meaningful', definition: 'The logical positivist claim (A.J. Ayer) that a statement is meaningful only if it is empirically verifiable or logically necessary. This would make all theological claims meaningless. Apologists point out that the verification principle is self-defeating: it is neither empirically verifiable nor logically necessary, so by its own standard it is meaningless.', example: '"God exists" cannot be tested in a laboratory — but neither can "torturing innocent children is wrong." If the verification principle eliminates theology, it eliminates ethics too.', link: 'evidence-library.html' },
+
+    // W
+    { term: 'Worldview', letter: 'W', tag: 'Core Term', preview: 'The comprehensive framework through which we interpret reality', definition: 'The set of basic beliefs, assumptions, and values through which a person interprets reality and decides how to live. Every person has a worldview, whether articulate or not. Worldviews answer four questions: Where did we come from? What has gone wrong? What is the solution? What is our destiny? Christianity, atheism, Islam, and Buddhism all offer different answers.', example: 'When an atheist says "the universe is all there is," they are making a worldview claim, not a scientific one. When a Christian says "we are made in God\'s image," they are interpreting the same observable human beings through a different worldview framework.', link: 'worldviews.html' },
+  ];
+
+  // Build the glossary
+  var currentFilter = '';
+
+  function buildGlossary(filter) {
+    var content = document.getElementById('glossary-content');
+    var noResults = document.getElementById('no-results');
+    var terms = filter ? TERMS.filter(function(t) {
+      var f = filter.toLowerCase();
+      return t.term.toLowerCase().includes(f) ||
+             t.definition.toLowerCase().includes(f) ||
+             t.tag.toLowerCase().includes(f) ||
+             t.preview.toLowerCase().includes(f);
+    }) : TERMS;
+
+    if (terms.length === 0) {
+      content.innerHTML = '';
+      noResults.style.display = 'block';
+      return;
+    }
+    noResults.style.display = 'none';
+
+    // Group by letter
+    var groups = {};
+    terms.forEach(function(t) {
+      if (!groups[t.letter]) groups[t.letter] = [];
+      groups[t.letter].push(t);
+    });
+
+    var html = '';
+    Object.keys(groups).sort().forEach(function(letter) {
+      html += '<div class="letter-group" id="letter-' + letter + '">';
+      html += '<div class="letter-heading">' + letter + '</div>';
+      groups[letter].forEach(function(t, idx) {
+        var id = 'term-' + letter + idx;
+        html += '<div class="term-card" id="' + id + '" onclick="toggleTerm(this)">';
+        html += '<div class="term-header">';
+        html += '<div><div class="term-name">' + t.term + '</div><div class="term-preview">' + t.preview + '</div></div>';
+        html += '<div style="display:flex;align-items:center;gap:8px;"><span class="term-tag">' + t.tag + '</span>';
+        html += '<svg class="chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>';
+        html += '</div>';
+        html += '<div class="term-body">';
+        html += '<p class="term-definition">' + t.definition + '</p>';
+        if (t.example) html += '<div class="term-example">' + t.example + '</div>';
+        if (t.link) html += '<a href="' + t.link + '" class="term-link" onclick="event.stopPropagation()">See related argument &rarr;</a>';
+        html += '</div></div>';
+      });
+      html += '</div>';
+    });
+    content.innerHTML = html;
+  }
+
+  function toggleTerm(card) {
+    var isOpen = card.classList.contains('open');
+    document.querySelectorAll('.term-card.open').forEach(function(c) { c.classList.remove('open'); });
+    if (!isOpen) card.classList.add('open');
+  }
+
+  function filterTerms(val) {
+    currentFilter = val;
+    buildGlossary(val);
+  }
+
+  function scrollToLetter(letter) {
+    var el = document.getElementById('letter-' + letter);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function buildAlphaNav() {
+    var letters = [...new Set(TERMS.map(function(t) { return t.letter; }))].sort();
+    var all = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    var nav = document.getElementById('alpha-nav');
+    var html = '';
+    all.forEach(function(l) {
+      var active = letters.includes(l);
+      html += '<button class="alpha-btn' + (active ? '' : ' inactive') + '" onclick="' + (active ? 'scrollToLetter(\'' + l + '\')' : '') + '">' + l + '</button>';
+    });
+    nav.innerHTML = html;
+  }
+
+  // Init
+  document.addEventListener('DOMContentLoaded', function() {
+    initSb();
+    buildAlphaNav();
+    buildGlossary('');
+  });
+  </script>
+</body>
+</html>

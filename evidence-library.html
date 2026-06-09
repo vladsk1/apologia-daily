@@ -189,7 +189,8 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
     <span class="lb"><span class="db dbg">&#127807; Beginner</span>&nbsp;No prior knowledge needed</span>
     <span class="lb"><span class="db dbi">&#128218; Intermediate</span>&nbsp;Helpful to read basics first</span>
     <span class="lb"><span class="db dba">&#127891; Advanced</span>&nbsp;Some philosophy background helpful</span>
-  </div>
+    <span class="lb"><a href="glossary.html" style="font-family:var(--ui);font-size:0.82rem;color:var(--n3);text-decoration:none;border:1px solid var(--b);padding:3px 12px;border-radius:3px;">&#128218; Glossary &rarr;</a></span>
+</div>
 </div>
 
 <div class="cn">
@@ -387,5 +388,91 @@ async function askInlineTutor(btn) {
   btn.textContent = 'Ask';
 }
 </script>
+
+<!-- FLOATING AI TUTOR -->
+<div id="float-tutor" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:500;display:flex;flex-direction:column;align-items:flex-end;gap:0.5rem;">
+
+  <!-- Expanded panel -->
+  <div id="float-panel" style="display:none;background:#0a1628;border:1px solid rgba(200,169,81,0.3);border-radius:8px;width:320px;box-shadow:0 8px 32px rgba(0,0,0,0.4);">
+    <div style="padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;">
+      <div>
+        <div style="font-family:'DM Sans',sans-serif;font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#c8a951;">AI Tutor</div>
+        <div id="float-arg-label" style="font-family:'Playfair Display',serif;font-size:0.9rem;color:#fff;margin-top:2px;">Ask about any argument</div>
+      </div>
+      <button onclick="toggleFloatTutor()" style="background:none;border:none;color:rgba(255,255,255,0.4);font-size:1rem;cursor:pointer;padding:4px;">&#10005;</button>
+    </div>
+    <div style="padding:1rem 1.25rem;">
+      <textarea id="float-input" rows="2" placeholder="What are you unsure about? Ask anything..." style="width:100%;font-family:'DM Sans',sans-serif;font-size:0.85rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:4px;color:#fff;padding:8px 10px;resize:none;outline:none;" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendFloatQuestion();}"></textarea>
+      <button onclick="sendFloatQuestion()" id="float-send-btn" style="margin-top:0.5rem;width:100%;font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:500;background:#c8a951;color:#050d1a;border:none;border-radius:4px;padding:9px;cursor:pointer;">Ask AI Tutor</button>
+      <div id="float-response" style="display:none;margin-top:0.75rem;background:rgba(255,255,255,0.04);border-radius:4px;padding:0.75rem;font-family:'Source Serif 4',serif;font-size:0.85rem;color:rgba(255,255,255,0.8);line-height:1.7;max-height:180px;overflow-y:auto;"></div>
+    </div>
+  </div>
+
+  <!-- Toggle button -->
+  <button onclick="toggleFloatTutor()" id="float-btn" style="background:#c8a951;color:#050d1a;border:none;border-radius:50px;padding:12px 20px;font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:600;cursor:pointer;box-shadow:0 4px 16px rgba(200,169,81,0.4);display:flex;align-items:center;gap:8px;transition:all 0.2s;">
+    <span style="font-size:1.1rem;">&#129504;</span> Ask AI Tutor
+  </button>
+</div>
+
+<script>
+var floatOpen = false;
+var currentArgContext = '';
+
+function toggleFloatTutor() {
+  floatOpen = !floatOpen;
+  document.getElementById('float-panel').style.display = floatOpen ? 'block' : 'none';
+  var btn = document.getElementById('float-btn');
+  btn.style.background = floatOpen ? '#0a1628' : '#c8a951';
+  btn.style.color = floatOpen ? '#c8a951' : '#050d1a';
+  btn.style.border = floatOpen ? '1px solid rgba(200,169,81,0.3)' : 'none';
+  if (floatOpen) {
+    setTimeout(function() { document.getElementById('float-input').focus(); }, 100);
+  }
+}
+
+// Track which argument card is currently open
+document.addEventListener('click', function(e) {
+  var card = e.target.closest('.card');
+  if (card && card.classList.contains('op')) {
+    var titleEl = card.querySelector('.ct');
+    if (titleEl) {
+      currentArgContext = titleEl.textContent.trim();
+      document.getElementById('float-arg-label').textContent = currentArgContext;
+    }
+  }
+});
+
+async function sendFloatQuestion() {
+  var input = document.getElementById('float-input');
+  var q = input.value.trim();
+  if (!q) return;
+  var btn = document.getElementById('float-send-btn');
+  var resp = document.getElementById('float-response');
+  btn.disabled = true;
+  btn.textContent = 'Thinking...';
+  resp.style.display = 'block';
+  resp.textContent = 'Thinking...';
+  var arg = currentArgContext || 'Christian apologetics';
+  try {
+    var res = await fetch('/api/tutor', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({question: q, argument: arg, category: 'Evidence Library'})
+    });
+    if (res.ok) {
+      var data = await res.json();
+      resp.textContent = data.answer || 'No response received.';
+      input.value = '';
+    } else {
+      resp.textContent = 'Something went wrong. Please try again.';
+    }
+  } catch(e) {
+    resp.textContent = 'Something went wrong. Please try again.';
+  }
+  btn.disabled = false;
+  btn.textContent = 'Ask AI Tutor';
+}
+</script>
+
 </body>
 </html>
