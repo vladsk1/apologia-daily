@@ -92,6 +92,8 @@
     .nav-signout:hover { border-color:rgba(255,255,255,0.5); color:#fff; }
     .nav-signin { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.85rem; color:rgba(255,255,255,0.6); text-decoration:none; }
     .nav-cta { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.78rem; font-weight:500; background:var(--g,#c8a951); color:var(--n2,#050d1a); padding:6px 16px; border-radius:3px; text-decoration:none; }
+      .nav-dashboard { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.8rem; color:rgba(255,255,255,0.65); text-decoration:none; border:1px solid rgba(255,255,255,0.2); padding:5px 12px; border-radius:3px; transition:all 0.15s; }
+    .nav-dashboard:hover { color:#fff; border-color:rgba(255,255,255,0.4); }
   </style>
 </head>
 <body>
@@ -109,6 +111,7 @@
       <li><a href="whats-new.html">What's New</a></li>
     </ul>
         <div class="nav-right">
+      <a href="dashboard.html" class="nav-dashboard" id="nav-dashboard" style="display:none;">Dashboard</a>
       <span class="nav-user" id="nav-user"></span>
       <button class="nav-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
       <a href="login.html" class="nav-signin" id="nav-signin">Sign in</a>
@@ -471,6 +474,8 @@
         if (ns) ns.style.display = 'inline-block';
         if (ni) ni.style.display = 'none';
         if (nc) nc.style.display = 'none';
+        var nd = document.getElementById('nav-dashboard');
+        if (nd) nd.style.display = 'inline-block';
       }
     } catch(e) {}
   }
