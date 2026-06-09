@@ -1,33 +1,34 @@
 export default async function handler(req, res) {
-  if (req.method === 'OPTIONS') { res.setHeader('Access-Control-Allow-Origin', '*'); res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS'); res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); return res.status(200).end(); }
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    const body = req.body;
-    const { question } = body;
+    const { question, argument, category } = req.body;
 
-    if (!question) return res.status(400).json({ error: 'No question provided' })
+    if (!question || !argument) {
+      return res.status(400).json({ error: 'Missing required fields' });
+    }
 
     const apiKey = process.env.ANTHROPIC_API_KEY;
-    if (!apiKey) return res.status(500).json({ error: 'API key not configured' })
+    if (!apiKey) return res.status(500).json({ error: 'API key not configured' });
 
-    const systemPrompt = `You are a world-class Christian apologetics assistant with deep knowledge of philosophy of religion, theology, history, and science. You draw on the work of leading apologists and scholars including William Lane Craig, Gary Habermas, Alvin Plantinga, N.T. Wright, C.S. Lewis, Frank Turek, Greg Koukl, Sean McDowell, J.P. Moreland, and others.
+    const systemPrompt = `You are an expert Christian apologetics tutor — warm, patient, and exceptionally good at explaining complex philosophical and theological arguments in clear, accessible language. You are helping a student reading the Evidence Library on Apologia Daily.
 
-Your role is to answer tough questions about the Christian faith with:
-- Intellectual honesty and rigour
-- Warmth and genuine care for the person asking
-- Evidence-based reasoning, not just assertion
-- Acknowledgment of genuine difficulty where it exists
-- Practical guidance on how to use these arguments in real conversations
+The student is currently reading about: "${argument}" (in the ${category} category).
 
-FORMAT YOUR RESPONSE as follows:
-1. A direct, clear answer to the question (2-3 sentences)
-2. The core argument or evidence (the main body of your response)
-3. A "Common objection" section addressing the most likely pushback
-4. A "How to use this in conversation" section with practical plain-language guidance
-5. A "Further study" line suggesting one book or resource
+Your role:
+- Answer their specific question about this argument
+- Use plain, accessible language — avoid jargon unless you explain it
+- Use everyday analogies and examples to make abstract concepts concrete
+- Be encouraging — these are genuinely hard ideas
+- Keep responses to 150-250 words maximum
+- End with one follow-up thought that helps them go deeper
 
-Keep the total response to around 400-500 words. Be scholarly but accessible — write for an intelligent Christian who is not a professional philosopher. Never be dismissive of the question or the questioner. Some of the best apologetics happens when we take hard questions seriously.
+Be like a brilliant friend who happens to know philosophy and theology inside out.
 THEOLOGICAL BOUNDARIES — NON-NEGOTIABLE:
 - Always answer from within classical Christian orthodoxy as defined by the Apostles Creed and Nicene Creed
 - Firmly affirm: the full deity and humanity of Christ, the bodily resurrection, the Trinity as one God in three persons, the authority of Scripture, and salvation through Christ alone
@@ -38,7 +39,7 @@ THEOLOGICAL BOUNDARIES — NON-NEGOTIABLE:
 - On first-order creedal orthodoxy (Trinity, bodily resurrection, deity of Christ, salvation through Christ) hold the line firmly and clearly
 - If a question seems to be pushing toward a heterodox conclusion, answer it honestly and then gently redirect toward the orthodox position with reasons`;
 
-    const anthropicRes = await fetch('https://api.anthropic.com/v1/messages', {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -47,25 +48,25 @@ THEOLOGICAL BOUNDARIES — NON-NEGOTIABLE:
       },
       body: JSON.stringify({
         model: 'claude-haiku-4-5-20251001',
-        max_tokens: 800,
+        max_tokens: 400,
         system: systemPrompt,
         messages: [{ role: 'user', content: question }]
       })
     });
 
-    if (!anthropicRes.ok) {
-      const err = await anthropicRes.text();
-      return res.status(500).json({ error: 'Anthropic error', details: err })
+    if (!response.ok) {
+      const err = await response.text();
+      return res.status(500).json({ error: 'Anthropic error', details: err });
     }
 
-    const data = await anthropicRes.json();
+    const data = await response.json();
     const answer = data.content && data.content[0] && data.content[0].text;
 
-    if (!answer) return res.status(500).json({ error: 'No answer returned' })
+    if (!answer) return res.status(500).json({ error: 'No answer returned' });
 
-    return res.status(200).json({ answer })
+    return res.status(200).json({ answer });
 
   } catch (err) {
-    return res.status(500).json({ error: 'Server error', message: err.message })
+    return res.status(500).json({ error: 'Server error', message: err.message });
   }
 }
