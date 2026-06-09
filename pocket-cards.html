@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pocket Card Generator — Apologia Daily</title>
+  <meta name="description" content="Generate a shareable pocket card for any apologetics argument. Send the argument — and the site — to anyone." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --n:#050d1a; --n8:#0a1628; --n7:#0f2040; --n5:#1e4278; --n3:#4a7ab5;
+      --g:#c8a951; --gl:#d4b96a; --gd:#a88930;
+      --w:#fff; --ow:#f7f4ef; --border:#e8e2d8; --tm:#3a4a62; --td:#0f1f38;
+      --fd:'Playfair Display',Georgia,serif;
+      --ss:'Source Serif 4',Georgia,serif;
+      --ui:'DM Sans',system-ui,sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--ss); background: var(--ow); color: var(--td); min-height: 100vh; }
+
+    /* NAV */
+    nav { background: var(--n); display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; height: 58px; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-logo { font-family: var(--fd); font-size: 1.15rem; font-weight: 700; color: var(--w); text-decoration: none; }
+    .nav-logo span { color: var(--g); }
+    .nav-links { display: flex; list-style: none; }
+    .nav-links a { font-family: var(--ui); font-size: 0.78rem; color: rgba(255,255,255,0.55); text-decoration: none; padding: 0 0.8rem; line-height: 58px; transition: color 0.15s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--w); }
+    .nav-right { display: flex; align-items: center; gap: 10px; }
+    .nav-user { font-family: var(--ui); font-size: 0.82rem; color: rgba(255,255,255,0.65); }
+    .nav-dashboard { font-family: var(--ui); font-size: 0.8rem; color: rgba(255,255,255,0.65); text-decoration: none; border: 1px solid rgba(255,255,255,0.2); padding: 5px 12px; border-radius: 3px; display: none; }
+    .nav-signout { font-family: var(--ui); font-size: 0.78rem; background: none; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.6); padding: 5px 12px; border-radius: 3px; cursor: pointer; display: none; }
+    .nav-signin { font-family: var(--ui); font-size: 0.85rem; color: rgba(255,255,255,0.6); text-decoration: none; }
+    .nav-cta { font-family: var(--ui); font-size: 0.78rem; font-weight: 500; background: var(--g); color: var(--n); padding: 6px 16px; border-radius: 3px; text-decoration: none; }
+
+    /* HERO */
+    .hero { background: var(--n); padding: 3rem 2rem 2.5rem; }
+    .hero-inner { max-width: 860px; margin: 0 auto; }
+    .eyebrow { font-family: var(--ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--g); margin-bottom: 0.75rem; }
+    .hero h1 { font-family: var(--fd); font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; color: var(--w); line-height: 1.2; margin-bottom: 0.75rem; }
+    .hero h1 em { font-style: italic; color: var(--g); }
+    .hero-sub { font-size: 0.95rem; color: rgba(255,255,255,0.55); max-width: 540px; line-height: 1.8; }
+
+    /* MAIN */
+    .main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem 5rem; display: grid; grid-template-columns: 320px 1fr; gap: 2.5rem; align-items: start; }
+    @media (max-width: 768px) { .main { grid-template-columns: 1fr; } }
+
+    /* CONTROLS */
+    .controls { background: var(--w); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; position: sticky; top: 74px; }
+    .controls h2 { font-family: var(--fd); font-size: 1.1rem; font-weight: 700; color: var(--td); margin-bottom: 1.25rem; }
+    .field { margin-bottom: 1.1rem; }
+    .field label { font-family: var(--ui); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tm); display: block; margin-bottom: 0.4rem; }
+    .field select, .field input, .field textarea {
+      width: 100%; font-family: var(--ui); font-size: 0.88rem; color: var(--td);
+      background: var(--ow); border: 1px solid var(--border); border-radius: 3px;
+      padding: 9px 12px; outline: none; transition: border 0.15s;
+    }
+    .field select:focus, .field input:focus, .field textarea:focus { border-color: var(--n3); }
+    .field textarea { resize: vertical; min-height: 80px; line-height: 1.6; }
+
+    .style-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .style-btn { font-family: var(--ui); font-size: 0.78rem; padding: 8px 10px; border: 1px solid var(--border); border-radius: 3px; background: var(--ow); color: var(--tm); cursor: pointer; transition: all 0.15s; text-align: center; }
+    .style-btn.active { background: var(--n); color: var(--w); border-color: var(--n); }
+
+    .divider { height: 1px; background: var(--border); margin: 1.25rem 0; }
+
+    .btn-generate { width: 100%; font-family: var(--ui); font-size: 0.88rem; font-weight: 600; background: var(--g); color: var(--n); border: none; border-radius: 3px; padding: 12px; cursor: pointer; transition: background 0.15s; margin-bottom: 0.75rem; }
+    .btn-generate:hover { background: var(--gl); }
+    .btn-copy-link { width: 100%; font-family: var(--ui); font-size: 0.82rem; font-weight: 500; background: none; color: var(--n5); border: 1px solid var(--n3); border-radius: 3px; padding: 10px; cursor: pointer; transition: all 0.15s; }
+    .btn-copy-link:hover { background: var(--n5); color: var(--w); }
+
+    /* PREVIEW AREA */
+    .preview-area { }
+    .preview-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; }
+    .preview-header h2 { font-family: var(--fd); font-size: 1.1rem; font-weight: 700; color: var(--td); }
+    .preview-actions { display: flex; gap: 8px; }
+    .btn-action { font-family: var(--ui); font-size: 0.78rem; font-weight: 500; padding: 7px 14px; border-radius: 3px; cursor: pointer; transition: all 0.15s; border: none; }
+    .btn-download { background: var(--n); color: var(--w); }
+    .btn-download:hover { background: var(--n7); }
+    .btn-share { background: var(--g); color: var(--n); }
+    .btn-share:hover { background: var(--gl); }
+
+    /* CARD PREVIEW */
+    .card-preview-wrap { background: #e8e8e8; border-radius: 8px; padding: 2rem; display: flex; justify-content: center; margin-bottom: 1.5rem; }
+
+    /* ── CARD STYLES ── */
+    .pocket-card {
+      width: 380px; max-width: 100%;
+      font-family: var(--fd);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      position: relative;
+    }
+
+    /* STYLE 1: Navy */
+    .card-navy { background: var(--n); color: var(--w); }
+    .card-navy .card-top { background: var(--g); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .card-navy .card-brand { font-family: var(--ui); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--n); }
+    .card-navy .card-category { font-family: var(--ui); font-size: 0.68rem; color: rgba(5,13,26,0.65); letter-spacing: 0.08em; text-transform: uppercase; }
+    .card-navy .card-body { padding: 1.5rem 1.5rem 1rem; }
+    .card-navy .card-title { font-size: 1.2rem; font-weight: 700; line-height: 1.3; color: var(--w); margin-bottom: 0.5rem; }
+    .card-navy .card-tagline { font-family: var(--ui); font-size: 0.8rem; color: rgba(255,255,255,0.6); line-height: 1.5; margin-bottom: 1.25rem; font-style: italic; }
+    .card-navy .card-points { list-style: none; margin-bottom: 1.25rem; }
+    .card-navy .card-points li { font-family: var(--ss); font-size: 0.82rem; color: rgba(255,255,255,0.8); padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.08); line-height: 1.5; display: flex; gap: 8px; }
+    .card-navy .card-points li::before { content: '→'; color: var(--g); flex-shrink: 0; font-family: var(--ui); }
+    .card-navy .card-question { background: rgba(200,169,81,0.1); border-left: 3px solid var(--g); padding: 0.75rem 1rem; margin-bottom: 1.25rem; font-family: var(--ss); font-size: 0.82rem; color: rgba(255,255,255,0.85); line-height: 1.6; font-style: italic; }
+    .card-navy .card-footer { background: rgba(255,255,255,0.05); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .card-navy .card-url { font-family: var(--ui); font-size: 0.7rem; color: var(--g); letter-spacing: 0.05em; }
+    .card-navy .card-qr-placeholder { width: 36px; height: 36px; background: var(--g); border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 0.55rem; font-family: var(--ui); color: var(--n); font-weight: 700; text-align: center; line-height: 1.2; }
+
+    /* STYLE 2: Gold */
+    .card-gold { background: var(--g); color: var(--n); }
+    .card-gold .card-top { background: var(--n); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .card-gold .card-brand { font-family: var(--ui); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--g); }
+    .card-gold .card-category { font-family: var(--ui); font-size: 0.68rem; color: rgba(200,169,81,0.65); letter-spacing: 0.08em; text-transform: uppercase; }
+    .card-gold .card-body { padding: 1.5rem 1.5rem 1rem; }
+    .card-gold .card-title { font-size: 1.2rem; font-weight: 700; line-height: 1.3; color: var(--n); margin-bottom: 0.5rem; }
+    .card-gold .card-tagline { font-family: var(--ui); font-size: 0.8rem; color: rgba(5,13,26,0.65); line-height: 1.5; margin-bottom: 1.25rem; font-style: italic; }
+    .card-gold .card-points { list-style: none; margin-bottom: 1.25rem; }
+    .card-gold .card-points li { font-family: var(--ss); font-size: 0.82rem; color: rgba(5,13,26,0.85); padding: 5px 0; border-bottom: 1px solid rgba(5,13,26,0.12); line-height: 1.5; display: flex; gap: 8px; }
+    .card-gold .card-points li::before { content: '→'; color: var(--n); flex-shrink: 0; font-family: var(--ui); }
+    .card-gold .card-question { background: rgba(5,13,26,0.08); border-left: 3px solid var(--n); padding: 0.75rem 1rem; margin-bottom: 1.25rem; font-family: var(--ss); font-size: 0.82rem; color: rgba(5,13,26,0.85); line-height: 1.6; font-style: italic; }
+    .card-gold .card-footer { background: rgba(5,13,26,0.1); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .card-gold .card-url { font-family: var(--ui); font-size: 0.7rem; color: var(--n); letter-spacing: 0.05em; font-weight: 600; }
+    .card-gold .card-qr-placeholder { width: 36px; height: 36px; background: var(--n); border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 0.55rem; font-family: var(--ui); color: var(--g); font-weight: 700; text-align: center; line-height: 1.2; }
+
+    /* STYLE 3: White */
+    .card-white { background: var(--w); color: var(--td); border: 1px solid var(--border); }
+    .card-white .card-top { background: var(--n); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .card-white .card-brand { font-family: var(--ui); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--g); }
+    .card-white .card-category { font-family: var(--ui); font-size: 0.68rem; color: rgba(255,255,255,0.5); letter-spacing: 0.08em; text-transform: uppercase; }
+    .card-white .card-body { padding: 1.5rem 1.5rem 1rem; }
+    .card-white .card-title { font-size: 1.2rem; font-weight: 700; line-height: 1.3; color: var(--n); margin-bottom: 0.5rem; }
+    .card-white .card-tagline { font-family: var(--ui); font-size: 0.8rem; color: var(--tm); line-height: 1.5; margin-bottom: 1.25rem; font-style: italic; }
+    .card-white .card-points { list-style: none; margin-bottom: 1.25rem; }
+    .card-white .card-points li { font-family: var(--ss); font-size: 0.82rem; color: var(--tm); padding: 5px 0; border-bottom: 1px solid var(--border); line-height: 1.5; display: flex; gap: 8px; }
+    .card-white .card-points li::before { content: '→'; color: var(--g); flex-shrink: 0; font-family: var(--ui); }
+    .card-white .card-question { background: var(--ow); border-left: 3px solid var(--g); padding: 0.75rem 1rem; margin-bottom: 1.25rem; font-family: var(--ss); font-size: 0.82rem; color: var(--tm); line-height: 1.6; font-style: italic; }
+    .card-white .card-footer { background: var(--ow); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); }
+    .card-white .card-url { font-family: var(--ui); font-size: 0.7rem; color: var(--n5); letter-spacing: 0.05em; }
+    .card-white .card-qr-placeholder { width: 36px; height: 36px; background: var(--n); border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 0.55rem; font-family: var(--ui); color: var(--g); font-weight: 700; text-align: center; line-height: 1.2; }
+
+    /* SHARE LINK BOX */
+    .share-box { background: var(--w); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem; }
+    .share-box h3 { font-family: var(--ui); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tm); margin-bottom: 0.75rem; }
+    .link-row { display: flex; gap: 8px; }
+    .link-input { flex: 1; font-family: var(--ui); font-size: 0.82rem; color: var(--td); background: var(--ow); border: 1px solid var(--border); border-radius: 3px; padding: 8px 12px; outline: none; }
+    .btn-copy { font-family: var(--ui); font-size: 0.78rem; font-weight: 500; background: var(--n); color: var(--w); border: none; border-radius: 3px; padding: 8px 16px; cursor: pointer; white-space: nowrap; transition: background 0.15s; }
+    .btn-copy:hover { background: var(--n7); }
+    .btn-copy.copied { background: #0f6e56; }
+    .share-note { font-family: var(--ui); font-size: 0.72rem; color: var(--tm); margin-top: 0.5rem; line-height: 1.5; }
+
+    /* TOAST */
+    .toast { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); background: var(--n); color: var(--w); font-family: var(--ui); font-size: 0.85rem; padding: 10px 20px; border-radius: 4px; opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 999; }
+    .toast.show { opacity: 1; }
+
+    footer { background: var(--n); padding: 2rem; margin-top: 2rem; }
+    .fi { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+    .flo { font-family: var(--fd); font-size: 1.1rem; font-weight: 700; color: rgba(255,255,255,0.8); }
+    .flo span { color: var(--g); }
+    .fli { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; justify-content: center; }
+    .fli a { font-family: var(--ui); font-size: 0.78rem; color: rgba(255,255,255,0.4); text-decoration: none; }
+    .fcop { font-family: var(--ui); font-size: 0.72rem; color: rgba(255,255,255,0.25); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
+      <li><a href="ask-anything.html">Ask Anything</a></li>
+      <li><a href="worldviews.html">Worldviews</a></li>
+      <li><a href="study-plans.html">Study Plans</a></li>
+      <li><a href="video-library.html">Videos</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="whats-new.html">What's New</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="dashboard.html" class="nav-dashboard" id="nav-dashboard">Dashboard</a>
+      <span class="nav-user" id="nav-user"></span>
+      <button class="nav-signout" id="nav-signout" onclick="signOut()">Sign out</button>
+      <a href="login.html" class="nav-signin" id="nav-signin">Sign in</a>
+      <a href="signup.html" class="nav-cta" id="nav-cta">Start Free</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Share the Evidence</p>
+      <h1>Pocket Card <em>Generator</em></h1>
+      <p class="hero-sub">Create a shareable card for any apologetics argument. Send it as a link — or download it as an image to share anywhere.</p>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!-- CONTROLS -->
+    <div class="controls">
+      <h2>Build your card</h2>
+
+      <div class="field">
+        <label>Category</label>
+        <select id="sel-category" onchange="onCategoryChange()">
+          <option value="existence">God's Existence</option>
+          <option value="resurrection">The Resurrection</option>
+          <option value="jesus">Jesus</option>
+          <option value="bible">Biblical Reliability</option>
+          <option value="science">Science &amp; Faith</option>
+          <option value="trinity">The Trinity</option>
+          <option value="islam">Islam</option>
+          <option value="custom">Custom argument</option>
+        </select>
+      </div>
+
+      <div class="field" id="field-argument">
+        <label>Argument</label>
+        <select id="sel-argument" onchange="onArgumentChange()"></select>
+      </div>
+
+      <div class="field" id="field-custom" style="display:none;">
+        <label>Argument title</label>
+        <input type="text" id="inp-custom-title" placeholder="e.g. The Fine-Tuning Argument" oninput="renderCard()" />
+      </div>
+
+      <div class="field">
+        <label>Conversation starter</label>
+        <textarea id="inp-question" rows="3" placeholder="The question you ask..." oninput="renderCard()"></textarea>
+      </div>
+
+      <div class="field">
+        <label>Card style</label>
+        <div class="style-grid">
+          <button class="style-btn active" onclick="setStyle('navy', this)">Navy</button>
+          <button class="style-btn" onclick="setStyle('gold', this)">Gold</button>
+          <button class="style-btn" onclick="setStyle('white', this)">White</button>
+          <button class="style-btn" onclick="setStyle('custom', this)">Custom</button>
+        </div>
+      </div>
+
+      <div class="field" id="field-custom-color" style="display:none;">
+        <label>Background colour</label>
+        <input type="color" id="inp-color" value="#1e4278" oninput="renderCard()" style="height:40px;padding:2px 4px;" />
+      </div>
+
+      <div class="divider"></div>
+
+      <button class="btn-generate" onclick="downloadCard()">&#8681; Download as image</button>
+      <button class="btn-copy-link" onclick="copyShareLink()">&#128279; Copy share link</button>
+    </div>
+
+    <!-- PREVIEW -->
+    <div class="preview-area">
+      <div class="preview-header">
+        <h2>Preview</h2>
+        <div class="preview-actions">
+          <button class="btn-action btn-download" onclick="downloadCard()">Download PNG</button>
+          <button class="btn-action btn-share" onclick="copyShareLink()">Copy link</button>
+        </div>
+      </div>
+
+      <div class="card-preview-wrap">
+        <div id="card-output"></div>
+      </div>
+
+      <!-- SHARE LINK -->
+      <div class="share-box">
+        <h3>Share this argument</h3>
+        <div class="link-row">
+          <input class="link-input" type="text" id="share-link-input" readonly />
+          <button class="btn-copy" id="btn-copy-text" onclick="copyShareLink()">Copy</button>
+        </div>
+        <p class="share-note">This link opens the Apologia Daily argument directly — anyone who follows it will land on the Evidence Library with this argument pre-selected and can explore the full site from there.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <footer>
+    <div class="fi">
+      <div class="flo">Apologia<span>Daily</span></div>
+      <ul class="fli">
+        <li><a href="evidence-library.html">Evidence Library</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="argument-map.html">Argument Map</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+      <div class="fcop">&copy; 2026 Apologia Daily. Built for the defence of the Gospel.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script>
+  var sb = null;
+  function initSb() {
+    if (window.supabase && window.supabase.createClient) {
+      sb = window.supabase.createClient(
+        'https://noprgxkwniouukmrfozc.supabase.co',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+      );
+      navAuth();
+    } else { setTimeout(initSb, 50); }
+  }
+  document.addEventListener('DOMContentLoaded', initSb);
+  async function navAuth() {
+    try {
+      var r = await sb.auth.getSession();
+      var s = r.data && r.data.session;
+      if (s) {
+        var name = (s.user.user_metadata && s.user.user_metadata.full_name) || s.user.email.split('@')[0];
+        var nu = document.getElementById('nav-user');
+        var ns = document.getElementById('nav-signout');
+        var ni = document.getElementById('nav-signin');
+        var nc = document.getElementById('nav-cta');
+        var nd = document.getElementById('nav-dashboard');
+        if (nu) nu.textContent = name;
+        if (ns) ns.style.display = 'inline-block';
+        if (ni) ni.style.display = 'none';
+        if (nc) nc.style.display = 'none';
+        if (nd) nd.style.display = 'inline-block';
+      }
+    } catch(e) {}
+  }
+  async function signOut() {
+    try { await sb.auth.signOut(); } catch(e) {}
+    window.location.href = 'index.html';
+  }
+
+  // ── ARGUMENT DATA ──
+  var ARGS = {
+    existence: [
+      { id: 'kalam', title: 'The Kalam Cosmological Argument', tagline: 'The universe had a beginning. Everything that begins to exist has a cause. That cause is God.', points: ['The universe began to exist at the Big Bang', 'Everything that begins to exist has a cause', 'That cause must be spaceless, timeless, and powerful', 'Only a personal agent explains a universe from nothing'], question: 'What caused the universe? If you say nothing — that violates everything we know about cause and effect. If you say something — what was that something?', link: 'evidence-library.html' },
+      { id: 'finetuning', title: 'The Fine-Tuning Argument', tagline: 'The physical constants of nature are calibrated to extraordinary precision for life.', points: ['Over 30 physical constants must fall in a narrow life-permitting range', 'The cosmological constant is fine-tuned to 1 in 10 to the power of 120', 'Change any constant slightly and the universe cannot sustain life', 'Design is the most compelling explanation for this precision'], question: 'If the fine-tuning of the universe was not intentional, what is your best explanation for why all 30+ constants happen to fall in the life-permitting range?', link: 'evidence-library.html' },
+      { id: 'moral', title: 'The Moral Argument', tagline: 'Objective moral values require a foundation beyond human opinion — and that foundation is God.', points: ['The Holocaust was objectively evil — not merely unpopular', 'Objective moral values cannot be grounded in evolution or culture', 'They require a standard that transcends human opinion', 'God is the only adequate foundation for objective morality'], question: 'Was the Holocaust objectively wrong — or did the Nazis just have different opinions? If objectively wrong, what standard are you appealing to?', link: 'evidence-library.html' },
+      { id: 'consciousness', title: 'The Consciousness Argument', tagline: 'Subjective experience cannot be explained by blind physical processes — mind preceded matter.', points: ['Why does it feel like something to see red or feel grief?', 'Naturalism has no explanation for subjective first-person experience', 'On theism, consciousness is expected — God is mind', 'The hard problem of consciousness points to God'], question: 'If our minds evolved only for survival — not truth — why should we trust our reasoning? Including the reasoning that says there is no God?', link: 'evidence-library.html' },
+    ],
+    resurrection: [
+      { id: 'minimal', title: 'The Minimal Facts Argument', tagline: '5 facts accepted by virtually all critical scholars point overwhelmingly to the resurrection.', points: ['Jesus died by crucifixion — confirmed by friend and foe', 'The tomb was empty — enemies never disputed this', 'Disciples genuinely believed they saw the risen Jesus', 'Paul and James converted after resurrection appearances'], question: 'Can you explain the empty tomb, the post-resurrection appearances, and the transformation of the disciples — without using the resurrection?', link: 'evidence-library.html' },
+      { id: 'emptytomb', title: 'The Empty Tomb', tagline: "Even Jesus's enemies never claimed the tomb still contained a body.", points: ["Jewish authorities responded by saying disciples stole the body — admitting the tomb was empty", 'No first-century source claims the tomb contained Jesus', 'Enemies had every motive to produce a body — they could not', 'The empty tomb is confirmed by both friends and enemies'], question: "If the tomb was not empty, why didn't the Jewish authorities simply produce the body? That would have ended Christianity immediately.", link: 'evidence-library.html' },
+      { id: 'paul', title: 'The Early Creed of 1 Corinthians 15', tagline: 'The resurrection creed is dated to within 2-5 years of the crucifixion — eyewitness testimony.', points: ['Paul personally met Peter and James — key witnesses', 'The creed is dated within 2-5 years of the crucifixion', 'Five hundred witnesses cited while still alive to verify', 'No legend could develop in this timeframe'], question: 'Paul wrote this creed within 5 years of the crucifixion, while eyewitnesses were still alive to correct him. If the resurrection was fabricated, why did no one dispute it?', link: 'evidence-library.html' },
+    ],
+    jesus: [
+      { id: 'trilemma', title: 'Lord, Liar, or Lunatic', tagline: 'The claims Jesus made leave no room for "great moral teacher."', points: ['Jesus claimed to forgive sins — only God can do that', 'He accepted worship without correcting it', 'He used the divine name I AM for himself', '"Great moral teacher" is the one option not available'], question: 'Given what Jesus claimed about himself — forgiving sins, being before Abraham, accepting worship — which is more likely: that he was telling the truth, deliberately lying, or genuinely deluded?', link: 'evidence-library.html' },
+      { id: 'divinity', title: 'The Divine Christology of Paul', tagline: 'Christians were worshipping Jesus as God within 15 years of the crucifixion.', points: ['Philippians 2:6-11 is a hymn dated within 15 years of the crucifixion', 'It describes Jesus as being in very nature God before incarnation', 'Jewish monotheists worshipped Jesus — an explosive development', 'No gradual development — divine Christology was there from the start'], question: 'Paul was a trained Pharisee who believed worshipping anyone other than God was blasphemy. Yet he worshipped Jesus. What do you think changed his mind?', link: 'evidence-library.html' },
+    ],
+    bible: [
+      { id: 'manuscripts', title: 'The Manuscript Evidence', tagline: 'The New Testament is the most attested document of the ancient world.', points: ['5,800+ Greek manuscripts — compared with 7 for Plato', 'Variants are overwhelmingly trivial — no doctrine affected', 'Modern translations go back to original Greek directly', 'The text is preserved with extraordinary fidelity'], question: 'If you applied the same standards to the Bible that historians apply to Plato or Caesar, what would you conclude about its reliability?', link: 'evidence-library.html' },
+      { id: 'deadseascrolls', title: 'The Dead Sea Scrolls', tagline: 'Manuscripts dated to 125 BC prove the Old Testament text was faithfully preserved.', points: ['Discovered 1947 — include complete copy of Isaiah', 'Dated to 125 BC — before Jesus was born', 'Virtually identical to medieval manuscripts 1,000 years later', 'Eliminates the theory that Christians altered Old Testament prophecies'], question: 'The Dead Sea Scrolls prove Isaiah 53 was written before Jesus was born. How do you account for the precise match between that prophecy and the crucifixion?', link: 'evidence-library.html' },
+    ],
+    science: [
+      { id: 'bigbang', title: 'The Big Bang and Genesis 1:1', tagline: "Science confirmed what Genesis said for millennia — the universe had a beginning.", points: ['Georges Lemaitre — a Catholic priest — proposed the Big Bang', 'The universe had a beginning — Genesis 1:1 has always said so', 'A beginning requires a cause outside space, time, and matter', 'The cause has the classical attributes of God'], question: 'Can you name a scientific discovery that actually disproves God — not one that makes God less convenient, but one that actually rules him out?', link: 'evidence-library.html' },
+      { id: 'dna', title: 'DNA and the Information Argument', tagline: 'The genome is a digital information system. Information always comes from minds.', points: ['DNA contains 3.2 billion base pairs of specified information', 'Information always has an intelligent source — never arises from matter alone', 'Francis Collins: DNA is the language in which God spoke life into being', 'The origin of biological information points to a designing mind'], question: 'Where did the information in DNA come from? Not the molecules — the code. We know of exactly one source for complex specified information: minds.', link: 'evidence-library.html' },
+    ],
+    trinity: [
+      { id: 'trinity_biblical', title: 'The Trinity in Scripture', tagline: 'The Trinity is not a Greek imposition — it emerges from the New Testament itself.', points: ['Matthew 28:19 — one name, three persons: Father, Son, Spirit', 'John 1:1 — the Word was with God and the Word was God', "Paul rewrites the Jewish Shema to include Jesus alongside God", 'Divine Christology was present within 15 years of the crucifixion'], question: 'Where in the Bible does Jesus say there are three gods? He does not — because the Trinity is one God in three persons. Can we read John 1:1 together?', link: 'evidence-library.html' },
+    ],
+    islam: [
+      { id: 'islamic_dilemma', title: 'The Islamic Dilemma', tagline: 'The Quran affirms the Bible as divine revelation. If the Bible is corrupted, the Quran endorsed corruption.', points: ['Surah 5:46-47 — Allah gave the Gospel as guidance and light', 'Surah 10:94 — Muhammad told to consult the Bible when in doubt', 'Surah 3:3-4 — Torah and Gospel described as present-tense guidance', 'The Quran never says the Bible was corrupted — it affirms it'], question: 'Can you show me a verse in the Quran where Allah says the biblical text was changed? Not misinterpreted — actually altered in its text?', link: 'worldviews.html' },
+      { id: 'jesus_quran', title: 'Jesus in the Quran', tagline: 'The Quran gives Jesus titles given to no other prophet — including Muhammad.', points: ['Surah 3:45 — Jesus is called the Messiah and the Word of God', 'Surah 4:171 — Jesus is the Word from God and a Spirit from God', 'Surah 19:33 — Jesus himself predicts his own death and resurrection', 'No other prophet in the Quran receives these unique titles'], question: 'The Quran calls Jesus Kalimatullah — the Word of God. It does not give Muhammad that title. What do you think the title Word of God means when applied to Jesus?', link: 'worldviews.html' },
+      { id: 'paraclete', title: 'Does the Bible Predict Muhammad?', tagline: 'The texts Muslims cite as Muhammad prophecies say something different when read in context.', points: ['John 14:16-17 — the Paraclete is the Spirit of truth who lives in the disciples', 'All 5,800+ Greek manuscripts read Parakletos — not Periklutos', 'Deuteronomy 18:15 specifies an Israelite prophet — Muhammad was not an Israelite', 'Acts 3:22-23 applies Deuteronomy 18 to Jesus — by the disciples who knew him'], question: 'Can we read John 14:16-17 together? The Paraclete is described as living inside the disciples. Muhammad came 600 years later as an external prophet. Does the text fit?', link: 'worldviews.html' },
+    ],
+    custom: [
+      { id: 'custom', title: '', tagline: 'Your custom argument', points: ['Add your first point', 'Add your second point', 'Add your third point', 'Add your fourth point'], question: 'Your conversation starter question goes here.', link: 'evidence-library.html' }
+    ]
+  };
+
+  var currentStyle = 'navy';
+  var currentArg = null;
+
+  function onCategoryChange() {
+    var cat = document.getElementById('sel-category').value;
+    var argSel = document.getElementById('sel-argument');
+    var fieldCustom = document.getElementById('field-custom');
+    var fieldArg = document.getElementById('field-argument');
+
+    if (cat === 'custom') {
+      fieldArg.style.display = 'none';
+      fieldCustom.style.display = 'block';
+      currentArg = ARGS.custom[0];
+      renderCard();
+      return;
+    }
+
+    fieldArg.style.display = 'block';
+    fieldCustom.style.display = 'none';
+
+    var args = ARGS[cat] || [];
+    argSel.innerHTML = args.map(function(a) {
+      return '<option value="' + a.id + '">' + a.title + '</option>';
+    }).join('');
+
+    onArgumentChange();
+  }
+
+  function onArgumentChange() {
+    var cat = document.getElementById('sel-category').value;
+    var argId = document.getElementById('sel-argument').value;
+    var args = ARGS[cat] || [];
+    currentArg = args.find(function(a) { return a.id === argId; }) || args[0];
+    if (currentArg) {
+      document.getElementById('inp-question').value = currentArg.question;
+    }
+    renderCard();
+    updateShareLink();
+  }
+
+  function setStyle(style, btn) {
+    currentStyle = style;
+    document.querySelectorAll('.style-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    var customColorField = document.getElementById('field-custom-color');
+    customColorField.style.display = style === 'custom' ? 'block' : 'none';
+    renderCard();
+  }
+
+  function getCardData() {
+    var cat = document.getElementById('sel-category').value;
+    if (cat === 'custom') {
+      return {
+        title: document.getElementById('inp-custom-title').value || 'Custom Argument',
+        tagline: 'A Christian apologetics argument',
+        points: ['Your first point', 'Your second point', 'Your third point', 'Your fourth point'],
+        question: document.getElementById('inp-question').value || 'Your conversation starter',
+        link: 'evidence-library.html',
+        category: 'Custom'
+      };
+    }
+    if (!currentArg) return null;
+    var categoryNames = {
+      existence: "God's Existence", resurrection: 'The Resurrection', jesus: 'Jesus',
+      bible: 'Biblical Reliability', science: 'Science & Faith', trinity: 'The Trinity', islam: 'Islam'
+    };
+    return {
+      title: currentArg.title,
+      tagline: currentArg.tagline,
+      points: currentArg.points,
+      question: document.getElementById('inp-question').value || currentArg.question,
+      link: currentArg.link,
+      category: categoryNames[cat] || cat
+    };
+  }
+
+  function renderCard() {
+    var data = getCardData();
+    if (!data) return;
+
+    var styleClass = 'card-' + (currentStyle === 'custom' ? 'navy' : currentStyle);
+    var customBg = currentStyle === 'custom' ? document.getElementById('inp-color').value : '';
+
+    var pointsHtml = data.points.map(function(p) {
+      return '<li>' + p + '</li>';
+    }).join('');
+
+    var cardHtml = '<div class="pocket-card ' + styleClass + '"' + (customBg ? ' style="background:' + customBg + '"' : '') + '>' +
+      '<div class="card-top">' +
+        '<span class="card-brand">ApologiaDaily</span>' +
+        '<span class="card-category">' + data.category + '</span>' +
+      '</div>' +
+      '<div class="card-body">' +
+        '<div class="card-title">' + data.title + '</div>' +
+        '<div class="card-tagline">' + data.tagline + '</div>' +
+        '<ul class="card-points">' + pointsHtml + '</ul>' +
+        '<div class="card-question">' + data.question + '</div>' +
+      '</div>' +
+      '<div class="card-footer">' +
+        '<span class="card-url">apologiadaily.com</span>' +
+        '<div class="card-qr-placeholder">SCAN<br>ME</div>' +
+      '</div>' +
+    '</div>';
+
+    document.getElementById('card-output').innerHTML = cardHtml;
+    updateShareLink();
+  }
+
+  function updateShareLink() {
+    var cat = document.getElementById('sel-category').value;
+    var argId = currentArg ? currentArg.id : '';
+    var baseUrl = 'https://apologia-daily.vercel.app/';
+    var page = currentArg && currentArg.link ? currentArg.link : 'evidence-library.html';
+    var link = baseUrl + page + (argId ? '?arg=' + argId : '');
+    var input = document.getElementById('share-link-input');
+    if (input) input.value = link;
+  }
+
+  function copyShareLink() {
+    var input = document.getElementById('share-link-input');
+    if (!input) return;
+    navigator.clipboard.writeText(input.value).then(function() {
+      var btn = document.getElementById('btn-copy-text');
+      if (btn) { btn.textContent = 'Copied!'; btn.classList.add('copied'); setTimeout(function() { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000); }
+      showToast('Link copied to clipboard');
+    });
+  }
+
+  function downloadCard() {
+    var card = document.querySelector('#card-output .pocket-card');
+    if (!card) { showToast('Generate a card first'); return; }
+    if (typeof html2canvas === 'undefined') {
+      showToast('Download library loading — try again in a moment');
+      return;
+    }
+    html2canvas(card, { scale: 2, backgroundColor: null, useCORS: true }).then(function(canvas) {
+      var link = document.createElement('a');
+      var title = (currentArg ? currentArg.id : 'card');
+      link.download = 'apologiadaily-' + title + '.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      showToast('Card downloaded');
+    });
+  }
+
+  function showToast(msg) {
+    var toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2500);
+  }
+
+  // Read URL params on load
+  function initFromUrl() {
+    var params = new URLSearchParams(window.location.search);
+    var argParam = params.get('arg');
+    var catParam = params.get('cat');
+    if (catParam) {
+      var catSel = document.getElementById('sel-category');
+      catSel.value = catParam;
+    }
+    onCategoryChange();
+    if (argParam) {
+      var argSel = document.getElementById('sel-argument');
+      for (var i = 0; i < argSel.options.length; i++) {
+        if (argSel.options[i].value === argParam) {
+          argSel.value = argParam;
+          break;
+        }
+      }
+      onArgumentChange();
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    initFromUrl();
+  });
+  </script>
+</body>
+</html>
