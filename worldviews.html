@@ -767,7 +767,7 @@
   function initSb() {
     if (window.supabase && window.supabase.createClient) {
       sb = window.supabase.createClient('https://noprgxkwniouukmrfozc.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw');
-      init();
+      navAuth(); init();
     } else { setTimeout(initSb, 50); }
   }
   document.addEventListener('DOMContentLoaded', initSb);
@@ -817,7 +817,30 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+  
+  // ── NAV AUTH ──
+  async function navAuth() {
+    try {
+      var result = await sb.auth.getSession();
+      var session = result.data && result.data.session;
+      if (session) {
+        var name = (session.user.user_metadata && session.user.user_metadata.full_name) || session.user.email.split('@')[0];
+        var nu = document.getElementById('nav-user');
+        var ns = document.getElementById('nav-signout');
+        var ni = document.getElementById('nav-signin');
+        var nc = document.getElementById('nav-cta');
+        if (nu) nu.textContent = name;
+        if (ns) ns.style.display = 'inline-block';
+        if (ni) ni.style.display = 'none';
+        if (nc) nc.style.display = 'none';
+      }
+    } catch(e) {}
+  }
+  async function signOut() {
+    try { if(sb) await sb.auth.signOut(); } catch(e) {}
+    window.location.href = 'index.html';
+  }
+</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </body>
 </html>

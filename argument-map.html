@@ -95,13 +95,13 @@
     <li><a href="games.html">Games</a></li>
     <li><a href="whats-new.html">What's New</a></li>
   </ul>
-  <div class="nav-right">
-    <span id="nav-auth">
-      <a href="login.html" class="nav-signin">Sign in</a>
-      <a href="signup.html" class="nav-cta">Start Free</a>
-    </span>
-  </div>
-</nav>
+      <div class="nav-right">
+      <span class="nav-user" id="nav-user"></span>
+      <button class="nav-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
+      <a href="login.html" class="nav-signin" id="nav-signin">Sign in</a>
+      <a href="signup.html" class="nav-cta" id="nav-cta">Start Free</a>
+    </div>
+  </nav>
 
 <div class="page-header">
   <p class="page-eyebrow">Visual Guide</p>
@@ -154,6 +154,38 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
+  var sb = null;
+  function initSb() {
+    if (window.supabase && window.supabase.createClient) {
+      sb = window.supabase.createClient('https://noprgxkwniouukmrfozc.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw');
+      navAuth(); init();
+    } else { setTimeout(initSb, 50); }
+  }
+  document.addEventListener('DOMContentLoaded', initSb);
+  // ── AUTH ──
+  async function init() {
+    try {
+      var result = await sb.auth.getSession();
+      var session = result.data && result.data.session;
+      if (session) {
+        var user = session.user;
+        var name = (user.user_metadata && user.user_metadata.full_name) || user.email.split('@')[0];
+        var navUser = document.getElementById('nav-user');
+        var navSignout = document.getElementById('nav-signout');
+        var navSignin = document.getElementById('nav-signin');
+        var navCta = document.getElementById('nav-cta');
+        if (navUser) navUser.textContent = name;
+        if (navSignout) navSignout.style.display = 'inline-block';
+        if (navSignin) navSignin.style.display = 'none';
+        if (navCta) navCta.style.display = 'none';
+      }
+    } catch(e) { console.warn('Auth check failed:', e); }
+  }
+  async function signOut() {
+    try { await sb.auth.signOut(); } catch(e) {}
+    window.location.href = 'index.html';
+  }
+
 // ── AUTH ─────────────────────────────────────────────────────────────────────
 (function() {
   function initNav() {
@@ -540,6 +572,29 @@ document.addEventListener('DOMContentLoaded', function() {
   setTimeout(resize, 50);
 });
 resize();
+
+  // ── NAV AUTH ──
+  async function navAuth() {
+    try {
+      var result = await sb.auth.getSession();
+      var session = result.data && result.data.session;
+      if (session) {
+        var name = (session.user.user_metadata && session.user.user_metadata.full_name) || session.user.email.split('@')[0];
+        var nu = document.getElementById('nav-user');
+        var ns = document.getElementById('nav-signout');
+        var ni = document.getElementById('nav-signin');
+        var nc = document.getElementById('nav-cta');
+        if (nu) nu.textContent = name;
+        if (ns) ns.style.display = 'inline-block';
+        if (ni) ni.style.display = 'none';
+        if (nc) nc.style.display = 'none';
+      }
+    } catch(e) {}
+  }
+  async function signOut() {
+    try { if(sb) await sb.auth.signOut(); } catch(e) {}
+    window.location.href = 'index.html';
+  }
 </script>
 </body>
 </html>

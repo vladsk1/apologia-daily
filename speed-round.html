@@ -112,7 +112,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96)
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
 @keyframes correct-flash{0%{background:rgba(15,110,86,.4)}100%{background:rgba(15,110,86,.25)}}
 .pop-in{animation:pop .2s ease-out forwards;}
-</style>
+    .nav-right { display:flex; align-items:center; gap:10px; }
+    .nav-user { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.82rem; color:rgba(255,255,255,0.65); }
+    .nav-signout { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.78rem; background:none; border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.6); padding:5px 12px; border-radius:3px; cursor:pointer; }
+    .nav-signin { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.85rem; color:rgba(255,255,255,0.6); text-decoration:none; }
+    .nav-cta { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.78rem; font-weight:500; background:var(--g,#c8a951); color:var(--n2,#050d1a); padding:6px 16px; border-radius:3px; text-decoration:none; }
+  </style>
 </head>
 <body>
 
@@ -129,10 +134,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96)
       <li><a href="games.html">Games</a></li>
       <li><a href="whats-new.html">What's New</a></li>
     </ul>
-  <div class="nr">
-    <span id="nav-auth"><a href="login.html" class="nsi">Sign in</a> <a href="signup.html" class="nct">Start Free</a></span>
-  </div>
-</nav>
+      <div class="nav-right">
+      <span class="nav-user" id="nav-user"></span>
+      <button class="nav-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
+      <a href="login.html" class="nav-signin" id="nav-signin">Sign in</a>
+      <a href="signup.html" class="nav-cta" id="nav-cta">Start Free</a>
+    </div>
+  </nav>
 
 <!-- LOBBY -->
 <div class="screen active" id="screen-lobby">
@@ -234,6 +242,38 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96)
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
+  var sb = null;
+  function initSb() {
+    if (window.supabase && window.supabase.createClient) {
+      sb = window.supabase.createClient('https://noprgxkwniouukmrfozc.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw');
+      navAuth(); init();
+    } else { setTimeout(initSb, 50); }
+  }
+  document.addEventListener('DOMContentLoaded', initSb);
+  // ── AUTH ──
+  async function init() {
+    try {
+      var result = await sb.auth.getSession();
+      var session = result.data && result.data.session;
+      if (session) {
+        var user = session.user;
+        var name = (user.user_metadata && user.user_metadata.full_name) || user.email.split('@')[0];
+        var navUser = document.getElementById('nav-user');
+        var navSignout = document.getElementById('nav-signout');
+        var navSignin = document.getElementById('nav-signin');
+        var navCta = document.getElementById('nav-cta');
+        if (navUser) navUser.textContent = name;
+        if (navSignout) navSignout.style.display = 'inline-block';
+        if (navSignin) navSignin.style.display = 'none';
+        if (navCta) navCta.style.display = 'none';
+      }
+    } catch(e) { console.warn('Auth check failed:', e); }
+  }
+  async function signOut() {
+    try { await sb.auth.signOut(); } catch(e) {}
+    window.location.href = 'index.html';
+  }
+
 const ALL_QUESTIONS = {
   beginner: [
     {q:"What are the three steps of the Kalam Cosmological Argument?",cat:"God's Existence",a:"Everything that begins to exist has a cause; the universe began to exist; therefore the universe has a cause",opts:["Everything that begins to exist has a cause; the universe began to exist; therefore the universe has a cause","If God exists then good exists; good exists; therefore God exists","The universe is complex; complex things need designers; therefore God designed the universe","Everything moves; something moved first; therefore God exists"]},
@@ -537,6 +577,29 @@ function endGame() {
     if(na && s) na.innerHTML = '<a href="dashboard.html" style="font-family:var(--ui);font-size:.85rem;font-weight:500;padding:8px 20px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none;">Dashboard</a>';
   });
 })();
+
+  // ── NAV AUTH ──
+  async function navAuth() {
+    try {
+      var result = await sb.auth.getSession();
+      var session = result.data && result.data.session;
+      if (session) {
+        var name = (session.user.user_metadata && session.user.user_metadata.full_name) || session.user.email.split('@')[0];
+        var nu = document.getElementById('nav-user');
+        var ns = document.getElementById('nav-signout');
+        var ni = document.getElementById('nav-signin');
+        var nc = document.getElementById('nav-cta');
+        if (nu) nu.textContent = name;
+        if (ns) ns.style.display = 'inline-block';
+        if (ni) ni.style.display = 'none';
+        if (nc) nc.style.display = 'none';
+      }
+    } catch(e) {}
+  }
+  async function signOut() {
+    try { if(sb) await sb.auth.signOut(); } catch(e) {}
+    window.location.href = 'index.html';
+  }
 </script>
 </body>
 </html>
