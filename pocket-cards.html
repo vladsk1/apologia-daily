@@ -249,8 +249,8 @@
 
       <div class="divider"></div>
 
-      <button class="btn-generate" onclick="downloadCard()">&#8681; Download as image</button>
-      <button class="btn-copy-link" onclick="copyShareLink()">&#128279; Copy share link</button>
+      <button class="btn-generate" onclick="shareCard()">&#8679; Share card image</button>
+      <button class="btn-copy-link" onclick="downloadCard()">&#8681; Download as PNG</button>
     </div>
 
     <!-- PREVIEW -->
@@ -259,7 +259,7 @@
         <h2>Preview</h2>
         <div class="preview-actions">
           <button class="btn-action btn-download" onclick="downloadCard()">Download PNG</button>
-          <button class="btn-action btn-share" onclick="copyShareLink()">Copy link</button>
+          <button class="btn-action btn-share" onclick="shareCard()">Share image</button>
         </div>
       </div>
 
@@ -267,14 +267,21 @@
         <div id="card-output"></div>
       </div>
 
-      <!-- SHARE LINK -->
+      <!-- SHARE BOX -->
       <div class="share-box">
-        <h3>Share this argument</h3>
+        <h3>Share this card</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:0.75rem;">
+          <button class="btn-copy" onclick="shareCard()" style="background:var(--g);color:var(--n);">&#8679; Share image</button>
+          <button class="btn-copy" onclick="downloadCard()">&#8681; Download PNG</button>
+        </div>
+        <p class="share-note">On mobile — tapping Share opens your device share sheet so you can send the card image directly to WhatsApp, iMessage, Instagram, or email. On desktop — the image is copied to your clipboard, ready to paste anywhere. The card has <strong>apologiadaily.com</strong> printed on it so recipients can find the full argument.</p>
+        <div class="divider" style="margin:0.75rem 0;"></div>
+        <h3>Or share a link to this argument</h3>
         <div class="link-row">
           <input class="link-input" type="text" id="share-link-input" readonly />
           <button class="btn-copy" id="btn-copy-text" onclick="copyShareLink()">Copy</button>
         </div>
-        <p class="share-note">This link opens the Apologia Daily argument directly — anyone who follows it will land on the Evidence Library with this argument pre-selected and can explore the full site from there.</p>
+        <p class="share-note">This link opens the Apologia Daily Evidence Library with this argument pre-selected.</p>
       </div>
     </div>
 
@@ -498,6 +505,75 @@
       var btn = document.getElementById('btn-copy-text');
       if (btn) { btn.textContent = 'Copied!'; btn.classList.add('copied'); setTimeout(function() { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000); }
       showToast('Link copied to clipboard');
+    });
+  }
+
+  function downloadCard() {
+    var card = document.querySelector('#card-output .pocket-card');
+    if (!card) { showToast('Generate a card first'); return; }
+    if (typeof html2canvas === 'undefined') { showToast('Loading — try again'); return; }
+    html2canvas(card, { scale: 2, backgroundColor: null, useCORS: true }).then(function(canvas) {
+      var link = document.createElement('a');
+      link.download = 'apologiadaily-' + (currentArg ? currentArg.id : 'card') + '.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      showToast('Card downloaded — share the image anywhere');
+    });
+  }
+
+  function shareCard() {
+    var card = document.querySelector('#card-output .pocket-card');
+    if (!card) { showToast('Build a card first'); return; }
+    if (typeof html2canvas === 'undefined') { showToast('Loading — try again'); return; }
+    html2canvas(card, { scale: 2, backgroundColor: null, useCORS: true }).then(function(canvas) {
+      var fileName = 'apologiadaily-' + (currentArg ? currentArg.id : 'card') + '.png';
+      var title = (currentArg ? currentArg.title : 'Apologetics Argument');
+      canvas.toBlob(function(blob) {
+        var file = new File([blob], fileName, { type: 'image/png' });
+        // Web Share API — works on mobile (WhatsApp, iMessage, Instagram etc.)
+        if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+          navigator.share({
+            title: title + ' — Apologia Daily',
+            text: 'A Christian apologetics argument from ApologiaDaily.com',
+            files: [file]
+          }).catch(function(err) {
+            if (err.name !== 'AbortError') copyImageFallback(canvas, blob);
+          });
+        } else {
+          copyImageFallback(canvas, blob);
+        }
+      }, 'image/png');
+    });
+  }
+
+  function copyImageFallback(canvas, blob) {
+    // Try clipboard image copy (desktop Chrome/Edge)
+    if (typeof ClipboardItem !== 'undefined' && navigator.clipboard && navigator.clipboard.write) {
+      try {
+        navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]).then(function() {
+          showToast('Card image copied — paste it into WhatsApp, email, or anywhere');
+        }).catch(function() { downloadFallback(canvas); });
+      } catch(e) { downloadFallback(canvas); }
+    } else {
+      downloadFallback(canvas);
+    }
+  }
+
+  function downloadFallback(canvas) {
+    var link = document.createElement('a');
+    link.download = 'apologiadaily-' + (currentArg ? currentArg.id : 'card') + '.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    showToast('Card saved — share the image anywhere');
+  }
+
+  function copyShareLink() {
+    var input = document.getElementById('share-link-input');
+    if (!input) return;
+    navigator.clipboard.writeText(input.value).then(function() {
+      var btn = document.getElementById('btn-copy-text');
+      if (btn) { btn.textContent = 'Copied!'; btn.classList.add('copied'); setTimeout(function() { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000); }
+      showToast('Link copied');
     });
   }
 
