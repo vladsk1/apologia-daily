@@ -720,9 +720,27 @@
       if (ref) ref.textContent = d.ref || '';
       if (refl) refl.innerHTML = (d.reflection || '').replace(/\n\n/g, '<br><br>');
       if (prayer) prayer.textContent = d.prayer || '';
-      if (relLib) { relLib.textContent = d.lbl_library || 'Evidence Library'; relLib.href = d.rel_library || 'evidence-library.html'; }
-      if (relArena) { relArena.textContent = d.lbl_arena || 'Practice today'; relArena.href = d.rel_arena || 'debate-arena.html'; }
-      if (relScholar) { relScholar.textContent = d.lbl_scholar || 'Scholar profile'; relScholar.href = d.rel_scholar || 'scholars.html'; }
+      if (relLib && d.lbl_library) {
+        relLib.href = d.rel_library || 'evidence-library.html';
+        var libTitle = relLib.querySelector('.related-title');
+        var libSub = relLib.querySelector('.related-sub');
+        if (libTitle) libTitle.textContent = d.lbl_library;
+        if (libSub) libSub.textContent = 'Evidence Library';
+      }
+      if (relArena && d.lbl_arena) {
+        relArena.href = d.rel_arena || 'debate-arena.html';
+        var arenaTitle = relArena.querySelector('.related-title');
+        var arenaSub = relArena.querySelector('.related-sub');
+        if (arenaTitle) arenaTitle.textContent = d.lbl_arena;
+        if (arenaSub) arenaSub.textContent = 'Debate Arena';
+      }
+      if (relScholar && d.lbl_scholar) {
+        relScholar.href = d.rel_scholar || 'scholars.html';
+        var scholarTitle = relScholar.querySelector('.related-title');
+        var scholarSub = relScholar.querySelector('.related-sub');
+        if (scholarTitle) scholarTitle.textContent = d.lbl_scholar;
+        if (scholarSub) scholarSub.textContent = 'Scholar Profile';
+      }
     }
 
 
