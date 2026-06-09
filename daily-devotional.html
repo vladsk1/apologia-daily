@@ -661,9 +661,7 @@
 
         var reflEl = document.createElement('div');
         reflEl.style.cssText = 'font-size:0.92rem;color:var(--text-mid);line-height:1.8;margin-bottom:1.5rem;';
-        reflEl.innerHTML = (d.reflection || '').replace(/
-
-/g, '<br><br>');
+        reflEl.innerHTML = (d.reflection || '').replace(/\n\n/g, '<br><br>');
         box.appendChild(reflEl);
 
         var prayerBox = document.createElement('div');
