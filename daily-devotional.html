@@ -334,10 +334,8 @@
         day_number: dayNum,
         theme: 'Faith and Reason',
         ref: '1 Peter 3:15',
-        verse: 'Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have — but do this with gentleness and respect.',
-        reflection: 'Peter calls every Christian to be an apologist. The word apologia means a legal defence, a reasoned account. He is not asking you to win arguments. He is asking you to love people enough to think carefully about truth on their behalf.
-
-Today, think about someone in your life who has genuine questions. What would it mean to be prepared to meet them with both truth and tenderness?',
+        verse: 'Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have, but do this with gentleness and respect.',
+        reflection: 'Peter calls every Christian to be an apologist. The word apologia means a legal defence, a reasoned account. He is not asking you to win arguments. He is asking you to love people enough to think carefully about truth on their behalf. Today, think about someone in your life who has genuine questions. What would it mean to be prepared to meet them with both truth and tenderness?',
         prayer: 'Lord, give me a prepared mind and a gentle spirit. Help me to speak with clarity and compassion. Amen.',
         rel_library: 'evidence-library.html',
         rel_arena: 'debate-arena.html',
@@ -420,11 +418,11 @@ Today, think about someone in your life who has genuine questions. What would it
           div.title = isToday ? 'Today' : d.toLocaleDateString('en-AU', { weekday:'long', day:'numeric', month:'long' });
           div.addEventListener('click', () => {
             if (isToday) { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
-            const dayOffset = Math.round((today - d) / (1000*60*60*24)); const devoIndex = dayOffset < devotionals.length ? dayOffset % devotionals.length : -1;
+            const dayOffset = Math.round((today - d) / (1000*60*60*24)); const devoIndex = dayOffset >= 0 ? dayOffset % 365 : -1;
             if (devoIndex > 0) openPastDevo(devoIndex);
             else {
               const diff = Math.round((today - d) / (1000*60*60*24));
-              if (diff < devotionals.length) openPastDevo(diff);
+              if (diff < 365) openPastDevo(diff % 365 + 1);
             }
           });
         }
@@ -478,7 +476,6 @@ Today, think about someone in your life who has genuine questions. What would it
     }
 
     // ── AI REFLECTION ──
-    const todayDevo = devotionals[0];
 
     async function loadAIQuestion() {
       try {
@@ -607,14 +604,7 @@ Today, think about someone in your life who has genuine questions. What would it
     }
 
     // ── INIT ──
-    function getTodaysDevo() {
-      const now = new Date();
-      const start = new Date(now.getFullYear(), 0, 0);
-      const diff = now - start;
-      const oneDay = 1000 * 60 * 60 * 24;
-      const dayOfYear = Math.floor(diff / oneDay);
-      return devotionals[dayOfYear % devotionals.length];
-    }
+    // getTodaysDevo replaced by fetchTodaysDevo (Supabase)
 
     function loadTodaysDevo() {
       var d = todayDevo;
