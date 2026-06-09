@@ -744,6 +744,32 @@
       section { padding: 4rem 1.25rem; }
       .hero { padding: 7rem 1.25rem 5rem; }
     }
+
+    /* ── WHERE DO I START ── */
+    .start-section { background: var(--navy-950); padding: 5rem 1.25rem; border-top: 1px solid rgba(255,255,255,0.06); }
+    .start-intro { text-align: center; margin-bottom: 2.5rem; }
+    .start-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+    .start-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 1.5rem 1.25rem; cursor: pointer; transition: all 0.2s; text-align: center; }
+    .start-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(200,169,81,0.3); transform: translateY(-2px); }
+    .start-card.selected { background: rgba(200,169,81,0.1); border-color: var(--gold); }
+    .start-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .start-label { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; line-height: 1.3; }
+    .start-desc { font-family: var(--font-ui); font-size: 0.78rem; color: rgba(255,255,255,0.45); line-height: 1.6; }
+    .start-result { margin-top: 1rem; }
+    .start-result-inner { background: rgba(255,255,255,0.04); border: 1px solid rgba(200,169,81,0.25); border-radius: 6px; padding: 2rem; }
+    .result-eyebrow { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .result-title { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; line-height: 1.3; }
+    .result-desc { font-family: var(--font-body); font-size: 0.92rem; color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 1.5rem; max-width: 640px; }
+    .result-steps { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.75rem; }
+    .result-step { display: flex; align-items: flex-start; gap: 1rem; }
+    .step-num { width: 28px; height: 28px; border-radius: 50%; background: rgba(200,169,81,0.15); border: 1px solid rgba(200,169,81,0.3); color: var(--gold); font-family: var(--font-ui); font-size: 0.75rem; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .step-text { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.6; }
+    .step-text strong { color: var(--white); }
+    .result-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .result-btn-primary { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; background: var(--gold); color: var(--navy-950); padding: 11px 24px; border-radius: 3px; text-decoration: none; transition: background 0.15s; white-space: nowrap; }
+    .result-btn-primary:hover { background: #d4b96a; }
+    .result-btn-secondary { font-family: var(--font-ui); font-size: 0.88rem; background: none; color: rgba(255,255,255,0.6); padding: 11px 24px; border-radius: 3px; border: 1px solid rgba(255,255,255,0.2); text-decoration: none; transition: all 0.15s; white-space: nowrap; }
+    .result-btn-secondary:hover { border-color: rgba(255,255,255,0.4); color: var(--white); }
   </style>
 </head>
 <body>
@@ -803,6 +829,57 @@
       <span class="stat-lbl">Daily Devotionals</span>
     </div>
   </div>
+
+  <!-- WHERE DO I START -->
+  <section class="start-section" id="where-to-start">
+    <div class="container">
+      <div class="start-intro reveal">
+        <p class="section-eyebrow">Your Starting Point</p>
+        <h2 class="section-title">Where do <em>you</em> start?</h2>
+        <p class="section-sub">Everyone comes to apologetics differently. Tell us what brought you here and we'll point you to exactly the right place.</p>
+      </div>
+      <div class="start-grid reveal" id="start-grid">
+
+        <div class="start-card" onclick="selectStart(this, 'new-christian')">
+          <div class="start-icon">&#127807;</div>
+          <div class="start-label">I'm a new Christian</div>
+          <div class="start-desc">I want to understand my faith more deeply and know why I believe what I believe.</div>
+        </div>
+
+        <div class="start-card" onclick="selectStart(this, 'challenged')">
+          <div class="start-icon">&#9878;</div>
+          <div class="start-label">Someone challenged my faith</div>
+          <div class="start-desc">A friend, colleague, or family member raised questions I wasn't sure how to answer.</div>
+        </div>
+
+        <div class="start-card" onclick="selectStart(this, 'explain')">
+          <div class="start-icon">&#128172;</div>
+          <div class="start-label">I want to explain my faith</div>
+          <div class="start-desc">I believe, but I want to be able to share and defend my faith in real conversations.</div>
+        </div>
+
+        <div class="start-card" onclick="selectStart(this, 'deep-study')">
+          <div class="start-icon">&#128218;</div>
+          <div class="start-label">I want deep academic study</div>
+          <div class="start-desc">I'm ready for the scholarly arguments, the philosophy, and the serious intellectual work.</div>
+        </div>
+
+        <div class="start-card" onclick="selectStart(this, 'doubting')">
+          <div class="start-icon">&#10067;</div>
+          <div class="start-label">I have doubts and questions</div>
+          <div class="start-desc">Faith is hard right now. I have genuine questions and I need honest, thoughtful answers.</div>
+        </div>
+
+      </div>
+
+      <!-- RESULT PANEL -->
+      <div class="start-result reveal" id="start-result" style="display:none;">
+        <div class="start-result-inner" id="start-result-inner">
+          <!-- populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- FEATURES -->
   <section class="features" id="features">
@@ -1166,6 +1243,97 @@
         navLinks.style.padding = '1.5rem 2rem';
         navLinks.style.gap = '1.5rem';
       });
+    }
+
+    // ── WHERE DO I START ──
+    var START_PATHS = {
+      'new-christian': {
+        eyebrow: 'Perfect starting point for you',
+        title: 'Start with the 5-Day Beginner\'s Path',
+        desc: 'We\'ve built a gentle 5-day introduction that walks you through the core foundations of Christian faith and apologetics — no prior knowledge needed. By the end you\'ll understand why Christianity is intellectually credible and how to explain it to others.',
+        steps: [
+          { text: '<strong>Day 1–2:</strong> Who is Jesus and why does it matter? The historical evidence examined simply.' },
+          { text: '<strong>Day 3–4:</strong> Does God exist? Three arguments explained in plain English.' },
+          { text: '<strong>Day 5:</strong> Your first real conversation practice in the Debate Arena.' }
+        ],
+        btn1: { text: 'Start the Beginner\'s Path →', href: 'beginners-path.html' },
+        btn2: { text: 'Browse the Evidence Library', href: 'evidence-library.html' }
+      },
+      'challenged': {
+        eyebrow: 'We\'ve got you covered',
+        title: 'Find the Answer to the Challenge You Faced',
+        desc: 'Someone raised a hard question and you weren\'t sure how to respond. That\'s exactly what the Evidence Library and Objection Catcher are built for. Here\'s how to find your answer fast.',
+        steps: [
+          { text: '<strong>Step 1:</strong> Go to the Evidence Library and find the section that matches your challenge — God\'s Existence, Resurrection, Jesus, Bible Reliability, or Science & Faith.' },
+          { text: '<strong>Step 2:</strong> Read the "Explain it Simply" section of the relevant argument — plain English, ready to use in conversation.' },
+          { text: '<strong>Step 3:</strong> Practice your response in the Debate Arena against an AI opponent using the same objection.' }
+        ],
+        btn1: { text: 'Search the Evidence Library →', href: 'evidence-library.html' },
+        btn2: { text: 'Practice in Debate Arena', href: 'debate-arena.html' }
+      },
+      'explain': {
+        eyebrow: 'Built for real conversations',
+        title: 'The Conversation Toolkit',
+        desc: 'Knowing what you believe is only half the battle. Being able to explain it clearly and naturally in a real conversation is what Apologia Daily specialises in. Every argument has a plain-English summary and a ready-to-use conversation starter.',
+        steps: [
+          { text: '<strong>Start here:</strong> The "Explain it Simply" sections in the Evidence Library — every argument translated into natural conversation language.' },
+          { text: '<strong>Then practice:</strong> The Debate Arena — choose a scenario that matches someone in your life (coworker, family member, friend) and practice the conversation.' },
+          { text: '<strong>Then track:</strong> The Conversation Journal — log real conversations, get AI coaching on what worked and what to improve.' }
+        ],
+        btn1: { text: 'Go to Evidence Library →', href: 'evidence-library.html' },
+        btn2: { text: 'Practice a Conversation', href: 'debate-arena.html' }
+      },
+      'deep-study': {
+        eyebrow: 'The serious academic track',
+        title: 'The Full Intellectual Depth of Apologia Daily',
+        desc: 'Apologia Daily was built with serious scholarship in mind. The Pro sections of the Evidence Library go deep into primary sources, Greek and Hebrew text, philosophical arguments, and scholarly debates. The Scholars page profiles 31 leading apologists with their key arguments and essential reading.',
+        steps: [
+          { text: '<strong>Evidence Library Pro:</strong> Every argument has a full scholarly deep-dive — primary sources, academic objections, and detailed philosophical analysis.' },
+          { text: '<strong>Scholars Page:</strong> 31 profiles — Craig, Plantinga, N.T. Wright, Habermas, Lewis, Bauckham and more — with their key arguments and essential books.' },
+          { text: '<strong>Reading Clubs:</strong> Work through the classic texts — Mere Christianity, Reasonable Faith, The Case for Christ — with structured chapter guides and discussion.' }
+        ],
+        btn1: { text: 'Open Evidence Library →', href: 'evidence-library.html' },
+        btn2: { text: 'Browse Scholar Profiles', href: 'scholars.html' }
+      },
+      'doubting': {
+        eyebrow: 'Honest questions deserve honest answers',
+        title: 'This Is a Safe Place for Hard Questions',
+        desc: 'Doubt is not the opposite of faith. It is often the beginning of a deeper, more honest faith. Every question you have has been wrestled with by serious Christian thinkers — and Apologia Daily is designed to give you their honest answers, not easy platitudes.',
+        steps: [
+          { text: '<strong>Ask Anything:</strong> Type your exact doubt or question and get a thoughtful, intellectually honest response from our AI — trained on the best Christian scholarship.' },
+          { text: '<strong>Daily Devotional:</strong> Each day begins with a passage and a reflection that takes faith and reason seriously together. Come back daily — it helps.' },
+          { text: '<strong>Evidence Library:</strong> Browse the arguments at whatever pace feels right. You don\'t have to accept anything — just examine the evidence honestly.' }
+        ],
+        btn1: { text: 'Ask Your Question →', href: 'ask-anything.html' },
+        btn2: { text: 'Start the Daily Devotional', href: 'daily-devotional.html' }
+      }
+    };
+
+    function selectStart(el, type) {
+      document.querySelectorAll('.start-card').forEach(function(c) { c.classList.remove('selected'); });
+      el.classList.add('selected');
+      var path = START_PATHS[type];
+      if (!path) return;
+
+      var stepsHtml = path.steps.map(function(s, i) {
+        return '<div class="result-step"><div class="step-num">' + (i + 1) + '</div><div class="step-text">' + s.text + '</div></div>';
+      }).join('');
+
+      document.getElementById('start-result-inner').innerHTML =
+        '<div class="result-eyebrow">' + path.eyebrow + '</div>' +
+        '<div class="result-title">' + path.title + '</div>' +
+        '<div class="result-desc">' + path.desc + '</div>' +
+        '<div class="result-steps">' + stepsHtml + '</div>' +
+        '<div class="result-actions">' +
+        '<a href="' + path.btn1.href + '" class="result-btn-primary">' + path.btn1.text + '</a>' +
+        '<a href="' + path.btn2.href + '" class="result-btn-secondary">' + path.btn2.text + '</a>' +
+        '</div>';
+
+      var result = document.getElementById('start-result');
+      result.style.display = '';
+      setTimeout(function() {
+        result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
     }
   </script>
 </body>
