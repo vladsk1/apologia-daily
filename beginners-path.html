@@ -147,6 +147,12 @@
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: none; }
     @media (max-width: 600px) { .main { padding: 2rem 1.25rem 4rem; } .progress-track { gap: 0; } }
+      .nav-right { display:flex; align-items:center; gap:12px; }
+    .nav-user { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.82rem; color:rgba(255,255,255,0.65); }
+    .nav-signout { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.78rem; background:none; border:1px solid rgba(255,255,255,0.25); color:rgba(255,255,255,0.6); padding:5px 14px; border-radius:3px; cursor:pointer; transition:all 0.15s; }
+    .nav-signout:hover { border-color:rgba(255,255,255,0.5); color:#fff; }
+    .nav-signin { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.85rem; color:rgba(255,255,255,0.6); text-decoration:none; }
+    .nav-cta { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.78rem; font-weight:500; background:var(--g,#c8a951); color:var(--n2,#050d1a); padding:6px 16px; border-radius:3px; text-decoration:none; }
   </style>
 </head>
 <body>
