@@ -478,6 +478,7 @@
     // ── AI REFLECTION ──
 
     async function loadAIQuestion() {
+      if (!todayDevo) return;
       try {
         const res = await fetch('/api/devotional', {
           method: 'POST',
@@ -633,10 +634,10 @@
     fetchTodaysDevo().then(function(devo) {
       todayDevo = devo;
       loadTodaysDevo();
+      loadAIQuestion();
     });
     buildStreak();
     buildArchive();
-    loadAIQuestion();
 
     const markDoneBtn = document.getElementById('mark-done-btn');
     const completed = JSON.parse(localStorage.getItem('completed') || '[]');
