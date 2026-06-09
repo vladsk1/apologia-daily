@@ -443,7 +443,7 @@
       const key = new Date().toDateString();
       if (!completed.includes(key)) { completed.push(key); localStorage.setItem('completed', JSON.stringify(completed)); }
       const btn = document.getElementById('mark-done-btn');
-      btn.textContent = '✓ Completed today';
+      btn.textContent = 'Done - Completed today';
       btn.classList.remove('devo-btn-primary');
       btn.classList.add('done');
       buildStreak();
@@ -451,7 +451,7 @@
 
     function markPrayer() {
       const btn = document.getElementById('prayer-btn');
-      btn.textContent = '🙏 Prayer offered';
+      btn.textContent = 'Prayer offered';
       btn.classList.add('done');
     }
 
@@ -472,7 +472,7 @@
 
     function copyPrayer() {
       const prayer = document.getElementById('prayer-text') ? document.getElementById('prayer-text').textContent : document.querySelector('.prayer-text').textContent;
-      navigator.clipboard.writeText(prayer + '\n\n— Apologia Daily');
+      navigator.clipboard.writeText(prayer + '\n\n-- Apologia Daily');
     }
 
     // ── AI REFLECTION ──
@@ -506,7 +506,7 @@
     function showDefaultQuestion() {
       document.getElementById('ai-loading').style.display = 'none';
       document.getElementById('ai-question').style.display = 'block';
-      document.getElementById('ai-question').textContent = 'Think of someone in your life who has questions about faith. What is the one question you feel least prepared to answer — and what would it look like to start preparing for that conversation this week?';
+      document.getElementById('ai-question').textContent = 'Think of someone in your life who has questions about faith. What is the one question you feel least prepared to answer - and what would it look like to start preparing for that conversation this week?';
       document.getElementById('ai-submit').disabled = false;
     }
 
@@ -514,7 +514,7 @@
       const input = document.getElementById('ai-input').value.trim();
       if (!input) return;
       document.getElementById('ai-submit').disabled = true;
-      document.getElementById('ai-submit').textContent = 'Thinking…';
+      document.getElementById('ai-submit').textContent = 'Thinking...';
 
       try {
         const res = await fetch('/api/devotional', {
@@ -536,7 +536,7 @@
         document.getElementById('ai-response').classList.add('visible');
       }
       document.getElementById('ai-submit').disabled = false;
-      document.getElementById('ai-submit').textContent = 'Submit reflection →';
+      document.getElementById('ai-submit').textContent = 'Submit reflection';
     }
 
     document.getElementById('ai-input').addEventListener('input', function() {
@@ -642,7 +642,7 @@
     const markDoneBtn = document.getElementById('mark-done-btn');
     const completed = JSON.parse(localStorage.getItem('completed') || '[]');
     if (completed.includes(new Date().toDateString())) {
-      markDoneBtn.textContent = '✓ Completed today';
+      markDoneBtn.textContent = 'Done - Completed today';
       markDoneBtn.classList.remove('devo-btn-primary');
       markDoneBtn.classList.add('done');
     }
