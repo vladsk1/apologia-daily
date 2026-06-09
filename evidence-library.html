@@ -229,43 +229,8 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
 <div class="fc">&#169; 2026 Apologia Daily. Built for the defence of the Gospel.</div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
-async function askT(tid, arg) {
-  var inp = document.getElementById('ti-' + tid);
-  var q = inp ? inp.value.trim() : '';
-  if (!q) return;
-  var btn = document.getElementById('tb-' + tid);
-  var resp = document.getElementById('tr-' + tid);
-  var text = document.getElementById('tt-' + tid);
-  if (btn) btn.disabled = true;
-  if (resp) resp.classList.remove('show');
-  try {
-    var res = await fetch('/api/tutor', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({question: q, argument: arg, category: 'Evidence Library'})
-    });
-    if (res.ok) {
-      var data = await res.json();
-      if (text) text.textContent = data.answer;
-      if (resp) resp.classList.add('show');
-      if (inp) inp.value = '';
-    } else {
-      if (text) text.textContent = 'Sorry, something went wrong. Please try again.';
-      if (resp) resp.classList.add('show');
-    }
-  } catch(e) {
-    if (text) text.textContent = 'Sorry, something went wrong. Please try again.';
-    if (resp) resp.classList.add('show');
-  }
-  if (btn) btn.disabled = false;
-}
-function fillT(tid, q) {
-  var inp = document.getElementById('ti-' + tid);
-  if (inp) { inp.value = q; inp.focus(); }
-}
-</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script>
 var loaded = {};
 
@@ -296,6 +261,13 @@ function tog(card) {
     var o = document.querySelectorAll('.card.op');
     for (var i = 0; i < o.length; i++) o[i].classList.remove('op');
     card.classList.add('op');
+    // Update floating tutor context
+    var titleEl = card.querySelector('.ct');
+    if (titleEl) {
+      currentArgContext = titleEl.textContent.trim();
+      var label = document.getElementById('float-arg-label');
+      if (label) label.textContent = currentArgContext;
+    }
   }
 }
 
@@ -397,7 +369,7 @@ async function askInlineTutor(btn) {
     <div style="padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;">
       <div>
         <div style="font-family:'DM Sans',sans-serif;font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#c8a951;">AI Tutor</div>
-        <div id="float-arg-label" style="font-family:'Playfair Display',serif;font-size:0.9rem;color:#fff;margin-top:2px;">Ask about any argument</div>
+        <div id="float-arg-label" style="font-family:'Playfair Display',serif;font-size:0.9rem;color:#fff;margin-top:2px;">Open an argument card first</div>
       </div>
       <button onclick="toggleFloatTutor()" style="background:none;border:none;color:rgba(255,255,255,0.4);font-size:1rem;cursor:pointer;padding:4px;">&#10005;</button>
     </div>
@@ -409,8 +381,8 @@ async function askInlineTutor(btn) {
   </div>
 
   <!-- Toggle button -->
-  <button onclick="toggleFloatTutor()" id="float-btn" style="background:#c8a951;color:#050d1a;border:none;border-radius:6px 0 0 6px;padding:14px 12px;font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:600;cursor:pointer;box-shadow:-4px 0 16px rgba(200,169,81,0.35);display:flex;flex-direction:column;align-items:center;gap:6px;writing-mode:vertical-rl;text-orientation:mixed;transition:all 0.2s;letter-spacing:0.03em;">
-    <span style="font-size:1.1rem;writing-mode:horizontal-tb;">&#129504;</span> Ask AI Tutor
+  <button onclick="toggleFloatTutor()" id="float-btn" style="background:#c8a951;color:#050d1a;border:none;border-radius:6px 0 0 6px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:600;cursor:pointer;box-shadow:-4px 0 16px rgba(200,169,81,0.35);display:flex;align-items:center;gap:7px;transition:all 0.2s;white-space:nowrap;">
+    <span style="font-size:1rem;">&#129504;</span> Ask AI Tutor
   </button>
 </div>
 
@@ -431,16 +403,7 @@ function toggleFloatTutor() {
 }
 
 // Track which argument card is currently open
-document.addEventListener('click', function(e) {
-  var card = e.target.closest('.card');
-  if (card && card.classList.contains('op')) {
-    var titleEl = card.querySelector('.ct');
-    if (titleEl) {
-      currentArgContext = titleEl.textContent.trim();
-      document.getElementById('float-arg-label').textContent = currentArgContext;
-    }
-  }
-});
+// Context updates automatically via tog() when a card opens
 
 async function sendFloatQuestion() {
   var input = document.getElementById('float-input');
@@ -473,6 +436,5 @@ async function sendFloatQuestion() {
   btn.textContent = 'Ask AI Tutor';
 }
 </script>
-
 </body>
 </html>
