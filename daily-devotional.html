@@ -392,8 +392,11 @@
 
     async function fetchArchiveDevos() {
       try {
+        var todayNum = getDayNumber();
+        // Only fetch the 30 days before today - much faster than all 365
+        var startDay = Math.max(1, todayNum - 30);
         var res = await fetch(
-          SB_URL + '/rest/v1/devotionals?select=day_number,theme,ref&order=day_number.asc',
+          SB_URL + '/rest/v1/devotionals?select=day_number,theme,ref&day_number=lt.' + todayNum + '&day_number=gte.' + startDay + '&order=day_number.desc',
           {
             headers: {
               'apikey': SB_KEY,
@@ -592,21 +595,21 @@
       var completed = JSON.parse(localStorage.getItem('completed') || '[]');
       var list = document.getElementById('archive-list');
       if (!list) return;
-      // Fetch all devotionals for archive
+      list.innerHTML = '<div style="color:var(--text-muted);font-family:var(--font-ui);font-size:0.85rem;padding:1rem;">Loading past devotionals...</div>';
       fetchArchiveDevos().then(function(devos) {
         if (!devos || devos.length === 0) {
-          list.innerHTML = '<div style="color:var(--text-muted);font-family:var(--font-ui);font-size:0.85rem;padding:1rem;">Loading archive...</div>';
+          list.innerHTML = '<div style="color:var(--text-muted);font-family:var(--font-ui);font-size:0.85rem;padding:1rem;">No past devotionals available yet.</div>';
           return;
         }
         var todayNum = getDayNumber();
         var html = '';
         devos.forEach(function(d) {
-          if (d.day_number === todayNum) return; // skip today
+          if (d.day_number === todayNum) return;
           var isDone = completed.includes('devo-day-' + d.day_number);
           html += '<div class="archive-item" onclick="openPastDevo(' + d.day_number + ')" style="cursor:pointer;">' +
             '<span class="archive-item-date">Day ' + d.day_number + '</span>' +
             '<span class="archive-item-title">' + (d.theme || '') + '</span>' +
-            '<div class="archive-item-status">' + (isDone ? '<span style=\'color:#0f6e56;font-size:0.75rem;\'>&#10003; Read</span>' : '') + '</div>' +
+            '<div class="archive-item-status">' + (isDone ? '<span style="color:#0f6e56;font-size:0.75rem;">Done</span>' : '') + '</div>' +
             '</div>';
         });
         list.innerHTML = html || '<div style="color:var(--text-muted);font-family:var(--font-ui);font-size:0.85rem;padding:1rem;">No past devotionals yet.</div>';
