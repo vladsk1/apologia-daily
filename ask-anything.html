@@ -187,7 +187,7 @@
       <p class="ask-label">Your question</p>
       <textarea class="ask-textarea" id="ask-input" placeholder="Ask any question about the Christian faith… e.g. 'How do I respond to someone who says God and evil can't coexist?' or 'What is the best evidence for the resurrection?'" rows="4"></textarea>
       <div class="ask-footer">
-        <span class="ask-hint" id="ask-hint">5 free questions per day · Upgrade for unlimited</span>
+        <span class="ask-hint" id="ask-hint">5 free questions per week · Upgrade for unlimited</span>
         <button class="ask-btn" id="ask-btn" onclick="askQuestion()">
           <div class="spinner"></div>
           <span class="btn-text">Get answer →</span>
@@ -323,21 +323,28 @@
 
     const FREE_LIMIT = 1;
 
-    function getUsageToday() {
-      const today = new Date().toDateString();
+    function getUsageThisWeek() {
+      const weekStart = getWeekStart();
       const stored = JSON.parse(localStorage.getItem('askUsage') || '{}');
-      if (stored.date !== today) return 0;
+      if (stored.weekStart !== weekStart) return 0;
       return stored.count || 0;
     }
 
+    function getWeekStart() {
+      const d = new Date();
+      d.setHours(0,0,0,0);
+      d.setDate(d.getDate() - d.getDay());
+      return d.toDateString();
+    }
+
     function incrementUsage() {
-      const today = new Date().toDateString();
-      const count = getUsageToday() + 1;
-      localStorage.setItem('askUsage', JSON.stringify({ date: today, count }));
+      const weekStart = getWeekStart();
+      const count = getUsageThisWeek() + 1;
+      localStorage.setItem('askUsage', JSON.stringify({ weekStart, count }));
     }
 
     function checkLimit() {
-      const used = getUsageToday();
+      const used = getUsageThisWeek();
       const hint = document.getElementById('ask-hint');
       const btn = document.getElementById('ask-btn');
       const remaining = Math.max(0, FREE_LIMIT - used);
@@ -346,7 +353,7 @@
         btn.disabled = true;
         hint.textContent = 'Daily limit reached — upgrade to Pro for unlimited questions';
       } else {
-        hint.textContent = remaining === FREE_LIMIT ? '1 free question per day — make it count' : 'Daily limit reached';
+        hint.textContent = remaining === FREE_LIMIT ? '1 free question per week — make it count' : 'Daily limit reached';
       }
     }
 
@@ -396,7 +403,7 @@
       const question = input.value.trim();
       if (!question) return;
 
-      if (getUsageToday() >= FREE_LIMIT) {
+      if (getUsageThisWeek() >= FREE_LIMIT) {
         document.getElementById('limit-banner').classList.add('visible');
         return;
       }
