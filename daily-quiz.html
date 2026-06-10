@@ -191,18 +191,43 @@
   </nav>
 
 <!-- GUIDED JOURNEY BANNER -->
-<div id="journey-banner" style="display:none;background:linear-gradient(135deg,#1e4278,#0f2040);border-bottom:2px solid #c8a951;padding:0.75rem 1.5rem;position:sticky;top:58px;z-index:90;">
+<div id="journey-banner" style="display:none;background:linear-gradient(135deg,#1e4278,#0f2040);border-bottom:2px solid #c8a951;padding:0.85rem 1.5rem;position:sticky;top:58px;z-index:90;box-shadow:0 4px 16px rgba(0,0,0,0.2);">
   <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
     <div style="display:flex;align-items:center;gap:0.75rem;">
-      <span style="font-family:'DM Sans',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#c8a951;background:rgba(200,169,81,0.15);padding:3px 10px;border-radius:10px;white-space:nowrap;" id="jb-day">Day 2 of 7</span>
-      <span style="font-family:'DM Sans',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.85);" id="jb-task">Guided journey task</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#050d1a;background:#c8a951;padding:4px 11px;border-radius:10px;white-space:nowrap;" id="jb-day">Day 4 of 7</span>
+      <div>
+        <div style="font-family:'DM Sans',sans-serif;font-size:0.7rem;color:rgba(255,255,255,0.5);">Guided journey &mdash; current task</div>
+        <span style="font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:600;color:#fff;" id="jb-task">Guided journey task</span>
+      </div>
     </div>
     <div style="display:flex;gap:0.5rem;align-items:center;">
-      <button onclick="journeyMarkDone()" style="font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:600;background:#c8a951;color:#050d1a;border:none;border-radius:4px;padding:7px 16px;cursor:pointer;white-space:nowrap;">Mark done &amp; continue &rarr;</button>
+      <button onclick="journeyMarkDone()" id="jb-done-btn" style="font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:600;background:#c8a951;color:#050d1a;border:none;border-radius:4px;padding:8px 18px;cursor:pointer;white-space:nowrap;">Mark done &amp; continue &rarr;</button>
       <a href="dashboard.html" style="font-family:'DM Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.6);text-decoration:none;white-space:nowrap;">Back to journey</a>
     </div>
   </div>
 </div>
+
+<!-- TASK COMPLETE POPUP (appears when activity finished) -->
+<div id="journey-complete-popup" style="display:none;position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;max-width:360px;width:calc(100% - 3rem);">
+  <div style="background:#fff;border:1px solid #e8e2d8;border-radius:10px;box-shadow:0 12px 40px rgba(0,0,0,0.25);overflow:hidden;animation:jcp-slide 0.4s ease;">
+    <div style="background:linear-gradient(135deg,#166534,#15803d);padding:1rem 1.25rem;display:flex;align-items:center;gap:0.75rem;">
+      <span style="font-size:1.5rem;">&#9989;</span>
+      <div style="font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:700;color:#fff;">Task complete!</div>
+    </div>
+    <div style="padding:1.25rem;">
+      <div style="font-family:Georgia,serif;font-size:0.9rem;color:#0f1f38;line-height:1.6;margin-bottom:1rem;" id="jcp-message">Nicely done. Ready to continue your journey?</div>
+      <div style="display:flex;gap:0.5rem;">
+        <button onclick="journeyMarkDone()" style="font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:600;background:#c8a951;color:#050d1a;border:none;border-radius:4px;padding:9px 18px;cursor:pointer;flex:1;">Continue journey &rarr;</button>
+        <button onclick="document.getElementById('journey-complete-popup').style.display='none';" style="font-family:'DM Sans',sans-serif;font-size:0.82rem;background:none;color:#3a4a62;border:1px solid #e8e2d8;border-radius:4px;padding:9px 14px;cursor:pointer;">Not yet</button>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+@keyframes jcp-slide { from { transform:translateY(20px); opacity:0; } to { transform:translateY(0); opacity:1; } }
+@keyframes jb-pulse { 0%,100% { box-shadow:0 0 0 0 rgba(200,169,81,0.4); } 50% { box-shadow:0 0 0 6px rgba(200,169,81,0); } }
+#jb-done-btn { animation: jb-pulse 2s infinite; }
+</style>
 
 <script>
 (function() {
@@ -222,24 +247,21 @@
 
   function showJourneyBanner() {
     var prefs = getPrefs();
-    if (prefs.mode !== 'guided') return; // only in guided mode
+    if (prefs.mode !== 'guided') return;
     var journeyDay = parseInt(prefs.journeyDay) || 0;
-    if (journeyDay >= 7) return; // journey complete
-
+    if (journeyDay >= 7) return;
     var task = FREE_JOURNEY_TASKS[journeyDay];
     if (!task) return;
-
-    // Only show banner if THIS page is the current journey task page
     var currentPage = window.location.pathname.split('/').pop() || 'index.html';
     var taskPage = task.page.split('#')[0];
-    if (currentPage !== taskPage) return; // not on the right page for this day
-
+    if (currentPage !== taskPage) return;
     var banner = document.getElementById('journey-banner');
     var dayEl = document.getElementById('jb-day');
     var taskEl = document.getElementById('jb-task');
     if (dayEl) dayEl.textContent = 'Day ' + task.day + ' of 7';
     if (taskEl) taskEl.textContent = task.title;
     if (banner) banner.style.display = 'block';
+    window._journeyActive = true;
   }
 
   window.journeyMarkDone = function() {
@@ -247,13 +269,24 @@
     var journeyDay = parseInt(prefs.journeyDay) || 0;
     prefs.journeyDay = journeyDay + 1;
     try { localStorage.setItem('ad_prefs', JSON.stringify(prefs)); } catch(e) {}
-    // Return to dashboard to see the next day
     window.location.href = 'dashboard.html';
+  };
+
+  // Call this from the page when the user completes the activity
+  window.showJourneyComplete = function(message) {
+    if (!window._journeyActive) return; // only if on a journey task
+    var popup = document.getElementById('journey-complete-popup');
+    var msg = document.getElementById('jcp-message');
+    if (msg && message) msg.textContent = message;
+    if (popup) popup.style.display = 'block';
   };
 
   document.addEventListener('DOMContentLoaded', showJourneyBanner);
 })();
 </script>
+
+
+cript>
 
 
   <div class="page-wrap">
@@ -741,6 +774,7 @@
 
     // ── RESULTS ──
     function showResults() {
+    if (window.showJourneyComplete) window.showJourneyComplete('You finished the Daily Quiz. Great progress!');
       const today = new Date().toDateString();
       const completed = JSON.parse(localStorage.getItem('quizCompleted') || '[]');
       if (!completed.includes(today)) { completed.push(today); localStorage.setItem('quizCompleted', JSON.stringify(completed)); }

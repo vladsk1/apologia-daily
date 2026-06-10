@@ -182,70 +182,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
     </div>
   </nav>
 
-<!-- GUIDED JOURNEY BANNER -->
-<div id="journey-banner" style="display:none;background:linear-gradient(135deg,#1e4278,#0f2040);border-bottom:2px solid #c8a951;padding:0.75rem 1.5rem;position:sticky;top:58px;z-index:90;">
-  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
-    <div style="display:flex;align-items:center;gap:0.75rem;">
-      <span style="font-family:'DM Sans',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#c8a951;background:rgba(200,169,81,0.15);padding:3px 10px;border-radius:10px;white-space:nowrap;" id="jb-day">Day 2 of 7</span>
-      <span style="font-family:'DM Sans',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.85);" id="jb-task">Guided journey task</span>
-    </div>
-    <div style="display:flex;gap:0.5rem;align-items:center;">
-      <button onclick="journeyMarkDone()" style="font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:600;background:#c8a951;color:#050d1a;border:none;border-radius:4px;padding:7px 16px;cursor:pointer;white-space:nowrap;">Mark done &amp; continue &rarr;</button>
-      <a href="dashboard.html" style="font-family:'DM Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.6);text-decoration:none;white-space:nowrap;">Back to journey</a>
-    </div>
-  </div>
-</div>
-
-<script>
-(function() {
-  var FREE_JOURNEY_TASKS = [
-    {day:1,title:'Start with the Daily Devotional',page:'daily-devotional.html'},
-    {day:2,title:'Read the Kalam Argument',page:'evidence-library.html'},
-    {day:3,title:"Today's Argument -- active recall",page:'daily-argument.html'},
-    {day:4,title:'Build your flashcard deck',page:'flashcards.html'},
-    {day:5,title:'Play the Daily Quiz',page:'daily-quiz.html'},
-    {day:6,title:'Enter the Debate Arena',page:'debate-arena.html'},
-    {day:7,title:'Complete your journey',page:'index.html#pricing'}
-  ];
-
-  function getPrefs() {
-    try { return JSON.parse(localStorage.getItem('ad_prefs') || '{}'); } catch(e) { return {}; }
-  }
-
-  function showJourneyBanner() {
-    var prefs = getPrefs();
-    if (prefs.mode !== 'guided') return; // only in guided mode
-    var journeyDay = parseInt(prefs.journeyDay) || 0;
-    if (journeyDay >= 7) return; // journey complete
-
-    var task = FREE_JOURNEY_TASKS[journeyDay];
-    if (!task) return;
-
-    // Only show banner if THIS page is the current journey task page
-    var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    var taskPage = task.page.split('#')[0];
-    if (currentPage !== taskPage) return; // not on the right page for this day
-
-    var banner = document.getElementById('journey-banner');
-    var dayEl = document.getElementById('jb-day');
-    var taskEl = document.getElementById('jb-task');
-    if (dayEl) dayEl.textContent = 'Day ' + task.day + ' of 7';
-    if (taskEl) taskEl.textContent = task.title;
-    if (banner) banner.style.display = 'block';
-  }
-
-  window.journeyMarkDone = function() {
-    var prefs = getPrefs();
-    var journeyDay = parseInt(prefs.journeyDay) || 0;
-    prefs.journeyDay = journeyDay + 1;
-    try { localStorage.setItem('ad_prefs', JSON.stringify(prefs)); } catch(e) {}
-    // Return to dashboard to see the next day
-    window.location.href = 'dashboard.html';
-  };
-
-  document.addEventListener('DOMContentLoaded', showJourneyBanner);
-})();
-</script>
+cript>
 
 
 <div id="bb" class="bb">
