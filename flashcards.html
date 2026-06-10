@@ -514,7 +514,7 @@
       if (card) { try { await sb.from('flashcards').delete().eq('id', card.id); } catch(e){} }
     } else {
       // Check free limit
-      var isPro = false; // replace with real Pro check when Stripe is live
+      var isPro = true; // TEMP: open for testing until Stripe is configured
       if (!isPro && deck.length >= FREE_CARD_LIMIT) {
         // Show upgrade prompt
         var upgradeMsg = document.getElementById('upgrade-limit-msg');

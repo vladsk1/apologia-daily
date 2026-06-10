@@ -261,11 +261,16 @@
   async function signOut(){try{await sb.auth.signOut();}catch(e){}window.location.href='index.html';}
 
   async function init(){
+    try{
+      var r=await sb.auth.getSession();
+      if(r.data&&r.data.session) currentUser=r.data.session.user;
+    }catch(e){}
     navAuth();
-    try{var r=await sb.auth.getSession();if(r.data&&r.data.session)currentUser=r.data.session.user;}catch(e){}
 
     // ── PRO GATE ──
-    var isPro = false; // replace with real Supabase Pro check when Stripe is live
+    // Set to true to enable gate when Stripe is live
+    // var isPro = false; // uncomment and set via Supabase check when Stripe ready
+    var isPro = true; // TEMP: open for testing until Stripe is configured
     if (!isPro) {
       // Hide the main feature, show upgrade prompt
       document.querySelector('.main').innerHTML = '<div style="max-width:560px;margin:0 auto;padding:3rem 1rem;text-align:center;">' +
