@@ -182,7 +182,7 @@
       <div style="display:flex;align-items:center;gap:0.5rem;">
         <span id="mode-label" style="font-family:var(--font-ui);font-size:0.78rem;color:rgba(255,255,255,0.6);">Mode:</span>
         <div style="display:flex;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;">
-          <button id="btn-guided" onclick="setMode('guided')" style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;padding:5px 14px;border:none;cursor:pointer;transition:all 0.15s;">Guided</button>
+          <button id="btn-guided" onclick="setMode('guided')" style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;padding:5px 14px;border:none;cursor:pointer;transition:all 0.15s;background:#c8a951;color:#050d1a;">Guided</button>
           <button id="btn-explore" onclick="setMode('explore')" style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;padding:5px 14px;border:none;cursor:pointer;transition:all 0.15s;">Explore freely</button>
         </div>
       </div>
@@ -288,7 +288,7 @@
   </div>
 
     <!-- RECOMMENDED (shown in explore mode) -->
-    <div class="recommend-card" id="rec-card">
+    <div class="recommend-card" id="rec-card" style="display:none;">
       <div style="flex:1;">
         <div class="recommend-label">Recommended for you today</div>
         <div class="recommend-title" id="rec-title">Start with today's devotional</div>
@@ -509,7 +509,7 @@
           prefs.mode = prefs.mode || 'guided';
           localStorage.setItem('ad_prefs', JSON.stringify(prefs));
         }
-        applyMode(prefs.mode || 'guided');
+        applyMode('guided'); // forced guided for now
       } catch(e) { applyMode('guided'); }
 
       try { updateGuidedFocus(); } catch(e) { console.error('guided focus error', e); }
