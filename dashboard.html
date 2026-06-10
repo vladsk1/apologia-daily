@@ -254,7 +254,38 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1.5rem;" id="also-today">
         <!-- Populated by JS -->
       </div>
+
+      <!-- Mark complete button -->
+      <div style="text-align:center;margin-top:0.25rem;">
+        <button onclick="markDayComplete()" id="btn-mark-complete" style="font-family:var(--font-ui);font-size:0.78rem;font-weight:500;background:none;border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.35);padding:6px 16px;border-radius:4px;cursor:pointer;transition:all 0.15s;" onmouseover="this.style.borderColor='rgba(200,169,81,0.4)';this.style.color='#c8a951';" onmouseout="this.style.borderColor='rgba(255,255,255,0.12)';this.style.color='rgba(255,255,255,0.35)';">
+          Mark today complete &#10003;
+        </button>
+      </div>
     </div>
+  </div>
+
+  <!-- DAY COMPLETE MODAL -->
+  <div id="day-complete-modal" style="display:none;position:fixed;inset:0;background:rgba(5,13,26,0.92);z-index:1000;align-items:center;justify-content:center;padding:1rem;">
+    <div style="background:var(--white);border-radius:10px;width:100%;max-width:480px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.4);">
+      <div style="background:linear-gradient(135deg,#050d1a,#0f2040);padding:2rem;text-align:center;border-bottom:2px solid rgba(200,169,81,0.3);">
+        <div style="font-size:2.5rem;margin-bottom:0.75rem;" id="complete-modal-icon">&#127881;</div>
+        <div style="font-family:var(--font-serif);font-size:1.4rem;font-weight:700;color:#fff;margin-bottom:0.35rem;" id="complete-modal-title">Day complete!</div>
+        <div style="font-family:var(--font-ui);font-size:0.82rem;color:rgba(255,255,255,0.45);" id="complete-modal-day"></div>
+      </div>
+      <div style="padding:1.75rem;">
+        <div style="font-family:var(--font-serif);font-size:0.95rem;color:#0f1f38;line-height:1.8;margin-bottom:1.5rem;" id="complete-modal-message"></div>
+        <div style="background:#f7f4ef;border-radius:6px;padding:1.1rem 1.25rem;margin-bottom:1.25rem;border-left:3px solid #c8a951;">
+          <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#c8a951;margin-bottom:0.4rem;">Tomorrow</div>
+          <div style="font-family:var(--font-ui);font-size:0.85rem;font-weight:500;color:#0f1f38;margin-bottom:0.25rem;" id="complete-next-title"></div>
+          <div style="font-family:var(--font-ui);font-size:0.78rem;color:#3a4a62;line-height:1.5;" id="complete-next-desc"></div>
+        </div>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+          <a id="complete-next-btn" href="#" style="font-family:var(--font-ui);font-size:0.85rem;font-weight:600;background:#c8a951;color:#050d1a;padding:10px 22px;border-radius:4px;text-decoration:none;flex:1;text-align:center;">Do it now &rarr;</a>
+          <button onclick="closeDayComplete()" style="font-family:var(--font-ui);font-size:0.85rem;font-weight:500;background:none;color:#1e4278;border:1px solid #e8e2d8;padding:10px 18px;border-radius:4px;cursor:pointer;">Explore freely</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- RECOMMENDED (shown in explore mode) -->
     <div class="recommend-card" id="rec-card">
@@ -814,6 +845,82 @@
       }
     } catch(e) {}
   }
+
+
+  // ── DAY COMPLETE ──
+  var DAY_MESSAGES = [
+    "You have started building the habit. The devotional is the foundation everything else is built on. Come back tomorrow and we will go one step further.",
+    "You have read one of the most important arguments for the existence of God. The Kalam has convinced sceptics for decades. Tomorrow you will practise recalling it from memory.",
+    "Recalling an argument from memory is ten times more effective than re-reading it. You are training your brain to retrieve this under pressure. Tomorrow you practise explaining it to someone.",
+    "Your flashcard deck is started. The spaced repetition algorithm will now bring these back at exactly the right time. Tomorrow we test what you know with the Daily Quiz.",
+    "Five questions. You are building the knowledge base. Tomorrow is the most important day of the seven -- your first live debate.",
+    "That was your first live apologetics debate. How did it feel? The first one is always the hardest. Tomorrow we review where you are and show you what Pro unlocks.",
+    "You have completed your free 7-day journey. In one week you have built a habit, learned arguments, built a flashcard deck, and had a live debate. You are ready to go further."
+  ];
+
+  var DAY_ICONS = ['&#128217;','&#128218;','&#127891;','&#128196;','&#127514;','&#9876;','&#127941;'];
+
+  function markDayComplete() {
+    var streak = parseInt((document.getElementById('stat-streak')||{}).textContent) || 0;
+    var focusIdx = Math.min(streak, FREE_JOURNEY.length - 1);
+    var currentDay = FREE_JOURNEY[focusIdx];
+    var nextDay = FREE_JOURNEY[Math.min(focusIdx + 1, FREE_JOURNEY.length - 1)];
+    var isLastDay = focusIdx === FREE_JOURNEY.length - 1;
+
+    // Update modal content
+    var iconEl = document.getElementById('complete-modal-icon');
+    var titleEl = document.getElementById('complete-modal-title');
+    var dayEl = document.getElementById('complete-modal-day');
+    var msgEl = document.getElementById('complete-modal-message');
+    var nextTitleEl = document.getElementById('complete-next-title');
+    var nextDescEl = document.getElementById('complete-next-desc');
+    var nextBtnEl = document.getElementById('complete-next-btn');
+
+    if (iconEl) iconEl.innerHTML = DAY_ICONS[focusIdx] || '&#127881;';
+    if (titleEl) titleEl.textContent = isLastDay ? 'Journey complete!' : 'Day ' + (focusIdx + 1) + ' complete!';
+    if (dayEl) dayEl.textContent = currentDay.step;
+    if (msgEl) msgEl.textContent = DAY_MESSAGES[focusIdx] || 'Well done. Come back tomorrow to continue your journey.';
+
+    if (isLastDay) {
+      if (nextTitleEl) nextTitleEl.textContent = 'Upgrade to Pro';
+      if (nextDescEl) nextDescEl.textContent = 'Unlimited debates, full argument deep dives, AI coaching, and more.';
+      if (nextBtnEl) { nextBtnEl.textContent = 'See what Pro includes →'; nextBtnEl.href = 'index.html#pricing'; }
+    } else {
+      if (nextTitleEl) nextTitleEl.textContent = nextDay.title;
+      if (nextDescEl) nextDescEl.textContent = nextDay.desc;
+      if (nextBtnEl) { nextBtnEl.textContent = 'Do it now →'; nextBtnEl.href = nextDay.link; }
+    }
+
+    // Show modal
+    var modal = document.getElementById('day-complete-modal');
+    if (modal) modal.style.display = 'flex';
+
+    // Save progress to localStorage
+    try {
+      var prefs = JSON.parse(localStorage.getItem('ad_prefs') || '{}');
+      prefs.journeyDay = (focusIdx + 1);
+      localStorage.setItem('ad_prefs', JSON.stringify(prefs));
+    } catch(e) {}
+
+    // Update stat-streak display
+    var streakEl = document.getElementById('stat-streak');
+    if (streakEl) {
+      var newStreak = focusIdx + 1;
+      streakEl.textContent = newStreak;
+      updateGuidedFocus();
+    }
+  }
+
+  function closeDayComplete() {
+    var modal = document.getElementById('day-complete-modal');
+    if (modal) modal.style.display = 'none';
+  }
+
+  // Close modal on background click
+  document.addEventListener('click', function(e) {
+    var modal = document.getElementById('day-complete-modal');
+    if (modal && e.target === modal) closeDayComplete();
+  });
 
 </script>
 </body>
