@@ -770,25 +770,20 @@
 
   function applyMode(mode) {
     currentMode = mode;
-    var modeBar = document.getElementById('mode-bar');
     var guided = document.getElementById('guided-focus');
     var rec = document.getElementById('rec-card');
     var btnG = document.getElementById('btn-guided');
     var btnE = document.getElementById('btn-explore');
-    var modeDesc = document.getElementById('mode-desc');
-    if (modeBar) modeBar.style.display = 'block';
     if (mode === 'guided') {
       if (guided) guided.style.display = 'block';
       if (rec) rec.style.display = 'none';
-      if (btnG) { btnG.style.background = '#c8a951'; btnG.style.color = '#050d1a'; btnG.style.fontWeight = '600'; }
-      if (btnE) { btnE.style.background = 'transparent'; btnE.style.color = '#3a4a62'; btnE.style.fontWeight = '500'; }
-      if (modeDesc) modeDesc.textContent = 'Guided mode: we suggest your daily focus.';
+      if (btnG) { btnG.style.setProperty('background', '#c8a951'); btnG.style.setProperty('color', '#050d1a'); btnG.style.setProperty('font-weight', '600'); }
+      if (btnE) { btnE.style.setProperty('background', 'transparent'); btnE.style.setProperty('color', '#3a4a62'); btnE.style.setProperty('font-weight', '500'); }
     } else {
       if (guided) guided.style.display = 'none';
       if (rec) rec.style.display = 'flex';
-      if (btnE) { btnE.style.background = '#c8a951'; btnE.style.color = '#050d1a'; btnE.style.fontWeight = '600'; }
-      if (btnG) { btnG.style.background = 'transparent'; btnG.style.color = '#3a4a62'; btnG.style.fontWeight = '500'; }
-      if (modeDesc) modeDesc.textContent = 'Explore mode: full access, you decide.';
+      if (btnE) { btnE.style.setProperty('background', '#c8a951'); btnE.style.setProperty('color', '#050d1a'); btnE.style.setProperty('font-weight', '600'); }
+      if (btnG) { btnG.style.setProperty('background', 'transparent'); btnG.style.setProperty('color', '#3a4a62'); btnG.style.setProperty('font-weight', '500'); }
     }
   }
 
@@ -942,11 +937,19 @@
     if (isLastDay) {
       if (nextTitleEl) nextTitleEl.textContent = 'Upgrade to Pro';
       if (nextDescEl) nextDescEl.textContent = 'Unlimited debates, full argument deep dives, AI coaching, and more.';
-      if (nextBtnEl) { nextBtnEl.textContent = 'See what Pro includes →'; nextBtnEl.href = 'index.html#pricing'; }
+      if (nextBtnEl) { nextBtnEl.textContent = 'See what Pro includes →'; nextBtnEl.href = 'index.html#pricing'; nextBtnEl.onclick = null; }
     } else {
       if (nextTitleEl) nextTitleEl.textContent = nextDay.title;
       if (nextDescEl) nextDescEl.textContent = nextDay.desc;
-      if (nextBtnEl) { nextBtnEl.textContent = 'Do it now →'; nextBtnEl.href = nextDay.link; }
+      if (nextBtnEl) {
+        nextBtnEl.textContent = 'Do it now →';
+        nextBtnEl.href = 'javascript:void(0)';
+        nextBtnEl.onclick = function(e) {
+          if (e) e.preventDefault();
+          closeDayComplete();
+          openActivity();
+        };
+      }
     }
 
     // Show modal
