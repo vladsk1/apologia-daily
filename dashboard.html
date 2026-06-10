@@ -235,7 +235,16 @@
 
     <!-- GUIDED FOCUS (shown in guided mode) -->
     <div id="guided-focus" style="display:block;">
-      <p class="section-label">Your focus today</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;flex-wrap:wrap;gap:0.5rem;">
+        <p class="section-label" style="margin:0;">Your focus today</p>
+        <div style="display:flex;align-items:center;gap:0.5rem;">
+          <span style="font-family:var(--font-ui);font-size:0.72rem;color:var(--text-muted);">View:</span>
+          <div style="display:flex;background:var(--off-white);border:1px solid var(--border);border-radius:4px;overflow:hidden;">
+            <button id="btn-guided" onclick="setMode('guided')" style="font-family:var(--font-ui);font-size:0.74rem;font-weight:600;padding:5px 14px;border:none;cursor:pointer;background:#c8a951;color:#050d1a;">Guided</button>
+            <button id="btn-explore" onclick="setMode('explore')" style="font-family:var(--font-ui);font-size:0.74rem;font-weight:500;padding:5px 14px;border:none;cursor:pointer;background:transparent;color:var(--text-muted);">Explore freely</button>
+          </div>
+        </div>
+      </div>
       <div style="background:var(--navy-950);border:1px solid rgba(200,169,81,0.25);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
           <div style="flex:1;">
@@ -256,10 +265,9 @@
       </div>
 
       <!-- Mark complete button -->
-      <div style="text-align:center;margin-top:0.25rem;">
-        <button onclick="markDayComplete()" id="btn-mark-complete" style="font-family:var(--font-ui);font-size:0.78rem;font-weight:500;background:none;border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.35);padding:6px 16px;border-radius:4px;cursor:pointer;transition:all 0.15s;" onmouseover="this.style.borderColor='rgba(200,169,81,0.4)';this.style.color='#c8a951';" onmouseout="this.style.borderColor='rgba(255,255,255,0.12)';this.style.color='rgba(255,255,255,0.35)';">
-          Mark today complete &#10003;
-        </button>
+      <div style="text-align:center;margin-top:0.25rem;display:flex;gap:0.5rem;justify-content:center;">
+        <button onclick="goBackDay()" id="btn-back-day" style="font-family:var(--font-ui);font-size:0.78rem;font-weight:500;background:none;border:1px solid var(--border);color:var(--text-muted);padding:6px 16px;border-radius:4px;cursor:pointer;transition:all 0.15s;">&larr; Previous day</button>
+        <button onclick="markDayComplete()" id="btn-mark-complete" style="font-family:var(--font-ui);font-size:0.78rem;font-weight:600;background:var(--gold);border:1px solid var(--gold);color:#050d1a;padding:6px 18px;border-radius:4px;cursor:pointer;transition:all 0.15s;">Mark today complete &#10003;</button>
       </div>
     </div>
   </div>
@@ -860,6 +868,17 @@
   ];
 
   var DAY_ICONS = ['&#128217;','&#128218;','&#127891;','&#128196;','&#127514;','&#9876;','&#127941;'];
+
+  function goBackDay() {
+    var current = getJourneyDay();
+    if (current <= 0) { return; }
+    try {
+      var prefs = JSON.parse(localStorage.getItem('ad_prefs') || '{}');
+      prefs.journeyDay = current - 1;
+      localStorage.setItem('ad_prefs', JSON.stringify(prefs));
+    } catch(e) {}
+    updateGuidedFocus();
+  }
 
   function getJourneyDay() {
     try {
