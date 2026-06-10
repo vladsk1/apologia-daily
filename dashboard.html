@@ -244,8 +244,17 @@
 
     <!-- GUIDED FOCUS (shown in guided mode) -->
     <div id="guided-focus" style="display:block;">
-      <p class="section-label">Your focus today</p>
-      <div style="background:var(--navy-950);border:1px solid rgba(200,169,81,0.25);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;">
+      <div style="background:linear-gradient(135deg,#1e4278,#0f2040);border-radius:8px 8px 0 0;padding:1rem 1.5rem;border:1px solid rgba(200,169,81,0.25);border-bottom:none;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">
+          <div>
+            <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#c8a951;margin-bottom:0.2rem;">&#127919; Your 7-Day Guided Journey</div>
+            <div style="font-family:var(--font-ui);font-size:0.8rem;color:rgba(255,255,255,0.6);" id="journey-progress-text">You are on day 1 of 7 &mdash; building the foundation</div>
+          </div>
+          <div style="font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:#c8a951;" id="journey-day-badge">1/7</div>
+        </div>
+      </div>
+      <p class="section-label" style="display:none;">Your focus today</p>
+      <div style="background:var(--navy-950);border:1px solid rgba(200,169,81,0.25);border-radius:0 0 8px 8px;border-top:none;padding:1.5rem;margin-bottom:1.5rem;">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
           <div style="flex:1;">
             <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;" id="focus-step">Day 1 of 7</div>
@@ -758,14 +767,14 @@
     if (mode === 'guided') {
       if (guided) guided.style.display = 'block';
       if (rec) rec.style.display = 'none';
-      if (btnG) { btnG.style.background = '#c8a951'; btnG.style.color = '#050d1a'; }
-      if (btnE) { btnE.style.background = 'transparent'; btnE.style.color = 'rgba(255,255,255,0.5)'; }
+      if (btnG) { btnG.style.background = '#c8a951'; btnG.style.color = '#050d1a'; btnG.style.fontWeight = '600'; }
+      if (btnE) { btnE.style.background = 'transparent'; btnE.style.color = '#3a4a62'; btnE.style.fontWeight = '500'; }
       if (modeDesc) modeDesc.textContent = 'Guided mode: we suggest your daily focus.';
     } else {
       if (guided) guided.style.display = 'none';
       if (rec) rec.style.display = 'flex';
-      if (btnE) { btnE.style.background = '#c8a951'; btnE.style.color = '#050d1a'; }
-      if (btnG) { btnG.style.background = 'transparent'; btnG.style.color = 'rgba(255,255,255,0.5)'; }
+      if (btnE) { btnE.style.background = '#c8a951'; btnE.style.color = '#050d1a'; btnE.style.fontWeight = '600'; }
+      if (btnG) { btnG.style.background = 'transparent'; btnG.style.color = '#3a4a62'; btnG.style.fontWeight = '500'; }
       if (modeDesc) modeDesc.textContent = 'Explore mode: full access, you decide.';
     }
   }
@@ -799,6 +808,14 @@
     var journeyDay = getJourneyDay();
     var focusIdx = Math.min(journeyDay, focusArr.length - 1);
     var focus = focusArr[focusIdx];
+
+    // Update journey header
+    var progressText = document.getElementById('journey-progress-text');
+    var dayBadge = document.getElementById('journey-day-badge');
+    var phaseLabels = ['building the foundation','learning your first argument','training active recall','building your memory system','testing your knowledge','your first live debate','ready to go further'];
+    if (progressText) progressText.innerHTML = 'You are on day ' + (focusIdx + 1) + ' of 7 &mdash; ' + (phaseLabels[focusIdx] || 'continuing your journey');
+    if (dayBadge) dayBadge.textContent = (focusIdx + 1) + '/7';
+
     var els = {
       step: document.getElementById('focus-step'),
       title: document.getElementById('focus-title'),
