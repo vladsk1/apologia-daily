@@ -480,6 +480,14 @@
         <button class="btn-retry" onclick="retryDebate()">Debate again →</button>
         <button class="btn-outline" onclick="showScreen('screen-setup')">Try a different opponent</button>
         <a href="evidence-library.html" class="btn-outline">Study the Evidence Library</a>
+        <div id="post-debate-upgrade" style="display:none;background:linear-gradient(135deg,var(--navy-950),#0f2040);border:1px solid rgba(200,169,81,0.25);border-radius:8px;padding:1.5rem;margin-top:1.5rem;">
+          <div style="font-family:var(--font-display,serif);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">That was your free debate this week</div>
+          <div style="font-family:var(--font-ui,sans-serif);font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:1.25rem;">Your score was <span id="post-debate-score" style="color:#c8a951;font-weight:600;">--</span>/100. Pro users debate every day &mdash; one session a week is not enough to build the muscle. Consistent practice is how confidence in real conversations develops.</div>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <a href="index.html#pricing" style="font-family:var(--font-ui,sans-serif);font-size:0.85rem;font-weight:600;background:#c8a951;color:#050d1a;padding:10px 22px;border-radius:4px;text-decoration:none;">Upgrade to Pro &mdash; $8/mo</a>
+            <a href="evidence-library.html" style="font-family:var(--font-ui,sans-serif);font-size:0.85rem;font-weight:500;background:none;color:rgba(255,255,255,0.55);padding:10px 18px;border-radius:4px;text-decoration:none;border:1px solid rgba(255,255,255,0.15);">Study the arguments</a>
+          </div>
+        </div>
       </div>
     </div>
     <footer>
@@ -921,8 +929,8 @@
       banner.id = 'debate-limit-banner';
       banner.style.cssText = 'background:#0a1628;border:1px solid rgba(200,169,81,0.3);border-radius:4px;padding:1.5rem 2rem;margin:0 0 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;';
       banner.innerHTML = '<div>'
-        + '<div style="font-family:var(--font-display,serif);font-size:1rem;font-weight:600;color:#fff;margin-bottom:4px;">Weekly debates used (' + DEBATE_WEEKLY_LIMIT + '/' + DEBATE_WEEKLY_LIMIT + ')</div>'
-        + '<div style="font-family:var(--font-ui,sans-serif);font-size:0.82rem;color:rgba(255,255,255,0.5);">Free members get ' + DEBATE_WEEKLY_LIMIT + ' debates per week. Your limit resets on Sunday. Upgrade to Pro for unlimited debates.</div>'
+        + '<div style="font-family:var(--font-display,serif);font-size:1rem;font-weight:600;color:#fff;margin-bottom:4px;">You have used your free debate this week</div>'
+        + '<div style="font-family:var(--font-ui,sans-serif);font-size:0.82rem;color:rgba(255,255,255,0.5);">Pro users practise every day -- that is how the improvement compounds. Your limit resets Monday. Ready to go further?</div>'
         + '</div>'
         + '<div style="display:flex;gap:0.75rem;flex-wrap:wrap;align-items:center;">'
         + '<button onclick="resetDebateLimit()" style="font-family:var(--font-ui,sans-serif);font-size:0.78rem;padding:8px 14px;border-radius:3px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.15);cursor:pointer;">Reset weekly limit</button>'
@@ -1187,6 +1195,15 @@
           document.getElementById('score-overall').textContent = overall;
           document.getElementById('score-argument').textContent = argument;
           document.getElementById('score-objection').textContent = objection;
+
+          // Show post-debate upgrade CTA for free users at limit
+          var limitCheck = checkDebateLimit();
+          if (!limitCheck.allowed || limitCheck.used >= 1) {
+            var ctaEl = document.getElementById('post-debate-upgrade');
+            var scoreEl = document.getElementById('post-debate-score');
+            if (ctaEl) ctaEl.style.display = 'block';
+            if (scoreEl) scoreEl.textContent = overall;
+          }
 
           setTimeout(() => {
             document.getElementById('bar-overall').style.width = overall + '%';

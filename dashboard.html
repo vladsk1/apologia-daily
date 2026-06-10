@@ -162,22 +162,50 @@
     </div>
   </nav>
 
+  <!-- ONBOARDING MODAL -->
+  <div id="onboarding-modal" style="display:none;position:fixed;inset:0;background:rgba(5,13,26,0.92);z-index:1000;display:none;align-items:center;justify-content:center;padding:1rem;">
+    <div style="background:var(--white);border-radius:10px;width:100%;max-width:560px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.4);">
+      <div style="background:var(--navy-950);padding:2rem;">
+        <div style="font-family:var(--font-ui);font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Welcome to Apologia Daily</div>
+        <div style="font-family:var(--font-serif);font-size:1.4rem;font-weight:700;color:#fff;" id="ob-title">Let us personalise your experience</div>
+        <div style="font-family:var(--font-ui);font-size:0.85rem;color:rgba(255,255,255,0.5);margin-top:0.4rem;" id="ob-sub">3 quick questions — takes 30 seconds</div>
+      </div>
+      <div style="padding:2rem;" id="ob-body">
+        <!-- Steps injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MODE TOGGLE BAR -->
+  <div id="mode-bar" style="background:var(--navy-800);border-bottom:1px solid rgba(255,255,255,0.06);padding:0.6rem 2rem;display:none;">
+    <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <span id="mode-label" style="font-family:var(--font-ui);font-size:0.78rem;color:rgba(255,255,255,0.6);">Mode:</span>
+        <div style="display:flex;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;">
+          <button id="btn-guided" onclick="setMode('guided')" style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;padding:5px 14px;border:none;cursor:pointer;transition:all 0.15s;">Guided</button>
+          <button id="btn-explore" onclick="setMode('explore')" style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;padding:5px 14px;border:none;cursor:pointer;transition:all 0.15s;">Explore freely</button>
+        </div>
+      </div>
+      <div style="font-family:var(--font-ui);font-size:0.75rem;color:rgba(255,255,255,0.35);" id="mode-desc">Guided: we suggest your daily focus. Explore: full access, you decide.</div>
+    </div>
+  </div>
+
   <div class="main" id="main" style="display:none;">
 
-    <!-- WELCOME -->
+    <!-- WELCOME ROW -->
     <div class="welcome-row">
       <div>
         <h1 class="welcome-title">Welcome back, <em id="user-name">friend</em></h1>
-        <p class="welcome-sub">Here's where your apologetics journey stands today.</p>
+        <p class="welcome-sub" id="welcome-sub">Here is where your apologetics journey stands today.</p>
       </div>
-      <a href="index.html#pricing" class="upgrade-btn">Upgrade to Pro →</a>
+      <a href="index.html#pricing" class="upgrade-btn" id="upgrade-btn">Upgrade to Pro &rarr;</a>
     </div>
 
     <!-- STATS -->
     <div class="stats-grid">
       <div class="stat-card highlight">
         <div class="stat-num" id="stat-streak">0</div>
-        <div class="stat-label">🔥 Day streak</div>
+        <div class="stat-label">&#128293; Day streak</div>
       </div>
       <div class="stat-card">
         <div class="stat-num" id="stat-debates" style="color:var(--navy-600);">0</div>
@@ -195,86 +223,131 @@
 
     <!-- BELT -->
     <div class="belt-card">
-      <div class="belt-icon" id="belt-icon">🤍</div>
+      <div class="belt-icon" id="belt-icon">&#129293;</div>
       <div class="belt-info">
-        <div class="belt-level" id="belt-level">White Belt — Beginner</div>
+        <div class="belt-level" id="belt-level">White Belt &mdash; Beginner</div>
         <div class="belt-desc" id="belt-desc">Complete your first debate and devotional to begin your apologetics journey</div>
         <div class="belt-progress"><div class="belt-progress-fill" id="belt-fill" style="width:5%;"></div></div>
         <div class="belt-progress-label" id="belt-progress-label">0 / 10 points to Yellow Belt</div>
       </div>
-      <a href="debate-arena.html" class="belt-next">Start earning points →</a>
+      <a href="debate-arena.html" class="belt-next">Start earning points &rarr;</a>
     </div>
 
-    <!-- RECOMMENDED -->
-    <div class="recommend-card">
+    <!-- GUIDED FOCUS (shown in guided mode) -->
+    <div id="guided-focus" style="display:none;">
+      <p class="section-label">Your focus today</p>
+      <div style="background:var(--navy-950);border:1px solid rgba(200,169,81,0.25);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+          <div style="flex:1;">
+            <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;" id="focus-step">Step 1 of 3</div>
+            <div style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.4rem;" id="focus-title">Loading your daily focus...</div>
+            <div style="font-family:var(--font-ui);font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.6;" id="focus-desc"></div>
+          </div>
+          <a id="focus-btn" href="#" style="font-family:var(--font-ui);font-size:0.82rem;font-weight:600;background:var(--gold);color:var(--navy-950);border:none;border-radius:4px;padding:10px 20px;text-decoration:none;white-space:nowrap;flex-shrink:0;">Go &rarr;</a>
+        </div>
+        <!-- Daily steps mini-progress -->
+        <div style="display:flex;gap:6px;margin-top:1.25rem;" id="focus-steps-row"></div>
+      </div>
+
+      <!-- ALSO TODAY -->
+      <p class="section-label">Also suggested today</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1.5rem;" id="also-today">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
+    <!-- RECOMMENDED (shown in explore mode) -->
+    <div class="recommend-card" id="rec-card">
       <div style="flex:1;">
         <div class="recommend-label">Recommended for you today</div>
         <div class="recommend-title" id="rec-title">Start with today's devotional</div>
-        <div class="recommend-desc" id="rec-desc">Build your daily habit with a 5-minute apologetics devotional — verse, reflection, and prayer.</div>
+        <div class="recommend-desc" id="rec-desc">Build your daily habit with a 5-minute apologetics devotional.</div>
       </div>
-      <a class="recommend-btn" id="rec-link" href="daily-devotional.html">Go →</a>
+      <a class="recommend-btn" id="rec-link" href="daily-devotional.html">Go &rarr;</a>
+    </div>
+
+    <!-- LEARNING TOOLS -->
+    <p class="section-label">Learning tools</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-bottom:1.75rem;">
+      <a href="daily-argument.html" style="background:var(--navy-950);border:1px solid rgba(200,169,81,0.2);border-radius:8px;padding:1.1rem;text-decoration:none;display:block;transition:border-color 0.15s;" onmouseover="this.style.borderColor='rgba(200,169,81,0.5)'" onmouseout="this.style.borderColor='rgba(200,169,81,0.2)'">
+        <div style="font-size:1.3rem;margin-bottom:0.4rem;">&#127891;</div>
+        <div style="font-family:var(--font-ui);font-size:0.82rem;font-weight:600;color:#fff;margin-bottom:0.25rem;">Daily Argument</div>
+        <div style="font-family:var(--font-ui);font-size:0.72rem;color:rgba(255,255,255,0.4);line-height:1.5;">3-minute active recall</div>
+        <div style="font-family:var(--font-ui);font-size:0.7rem;color:var(--gold);margin-top:0.6rem;font-weight:500;" id="daily-arg-status">Start today &rarr;</div>
+      </a>
+      <a href="flashcards.html" style="background:var(--navy-950);border:1px solid rgba(200,169,81,0.2);border-radius:8px;padding:1.1rem;text-decoration:none;display:block;transition:border-color 0.15s;" onmouseover="this.style.borderColor='rgba(200,169,81,0.5)'" onmouseout="this.style.borderColor='rgba(200,169,81,0.2)'">
+        <div style="font-size:1.3rem;margin-bottom:0.4rem;">&#128196;</div>
+        <div style="font-family:var(--font-ui);font-size:0.82rem;font-weight:600;color:#fff;margin-bottom:0.25rem;">Flashcards</div>
+        <div style="font-family:var(--font-ui);font-size:0.72rem;color:rgba(255,255,255,0.4);line-height:1.5;">Spaced repetition</div>
+        <div style="font-family:var(--font-ui);font-size:0.7rem;color:var(--gold);margin-top:0.6rem;font-weight:500;" id="flashcard-status">Open deck &rarr;</div>
+      </a>
+      <a href="explain-it-back.html" style="background:var(--navy-950);border:1px solid rgba(200,169,81,0.2);border-radius:8px;padding:1.1rem;text-decoration:none;display:block;transition:border-color 0.15s;" onmouseover="this.style.borderColor='rgba(200,169,81,0.5)'" onmouseout="this.style.borderColor='rgba(200,169,81,0.2)'">
+        <div style="font-size:1.3rem;margin-bottom:0.4rem;">&#128172;</div>
+        <div style="font-family:var(--font-ui);font-size:0.82rem;font-weight:600;color:#fff;margin-bottom:0.25rem;">Explain It Back</div>
+        <div style="font-family:var(--font-ui);font-size:0.72rem;color:rgba(255,255,255,0.4);line-height:1.5;">AI feedback on your explanations</div>
+        <div style="font-family:var(--font-ui);font-size:0.7rem;color:var(--gold);margin-top:0.6rem;font-weight:500;">Practise now &rarr;</div>
+      </a>
     </div>
 
     <!-- STUDY PLAN PROGRESS -->
     <div class="plan-progress-card" id="plan-progress-card">
       <div class="plan-progress-label">Active study plan</div>
-      <div class="plan-progress-title" id="plan-progress-title">Loading…</div>
+      <div class="plan-progress-title" id="plan-progress-title">Loading&hellip;</div>
       <div class="plan-progress-sub" id="plan-progress-sub">Day 0 of 0</div>
       <div class="plan-progress-bar"><div class="plan-progress-fill" id="plan-progress-fill" style="width:0%"></div></div>
-      <a href="study-plans.html" class="plan-progress-btn">Continue today →</a>
+      <a href="study-plans.html" class="plan-progress-btn">Continue today &rarr;</a>
     </div>
 
-    <!-- WEAKNESS TRACKER -->
-    <p class="section-label">Your topic strengths</p>
-    <div class="tracker-card">
-      <div class="tracker-title">Where you're strong — and where to focus next</div>
-      <div class="tracker-sub">Based on your quiz scores and debate feedback across all topics.</div>
-      <div class="tracker-topics" id="tracker-topics">
-        <div class="tracker-empty">Complete some quizzes and debates to see your strength breakdown here.</div>
-      </div>
-      <div class="tracker-recommend" id="tracker-recommend" style="display:none;">
-        <div class="tracker-recommend-text" id="tracker-recommend-text">Complete more activities to get a recommendation.</div>
-        <a href="evidence-library.html" class="tracker-recommend-link" id="tracker-recommend-link">Study now →</a>
-      </div>
-    </div>
-
-    <!-- QUICK ACTIONS -->
-    <p class="section-label">Jump back in</p>
-    <div class="actions-grid">
-      <a href="daily-devotional.html" class="action-card">
-        <div class="action-icon" style="background:#FAEEDA;">
-          <svg viewBox="0 0 24 24" stroke="#854F0B"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg>
-        </div>
-        <div class="action-title">Daily Devotional</div>
-        <div class="action-desc">Today's verse, reflection, and guided prayer at the intersection of faith and reason.</div>
-        <span class="action-cta">Read today's devotional →</span>
+    <!-- EVERYTHING ELSE (always accessible) -->
+    <p class="section-label">Everything on the platform</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.6rem;margin-bottom:1.75rem;">
+      <a href="evidence-library.html" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:0.875rem;text-decoration:none;text-align:center;transition:all 0.15s;" onmouseover="this.style.borderColor='#4a7ab5'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.2rem;">&#128218;</div>
+        <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Evidence Library</div>
       </a>
-
-      <a href="debate-arena.html" class="action-card">
-        <div class="action-icon" style="background:#EEEDFE;">
-          <svg viewBox="0 0 24 24" stroke="#534AB7"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </div>
-        <div class="action-title">Debate Arena</div>
-        <div class="action-desc">Practise defending your faith against AI opponents or real conversation scenarios.</div>
-        <span class="action-cta">Enter the arena →</span>
+      <a href="daily-devotional.html" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:0.875rem;text-decoration:none;text-align:center;transition:all 0.15s;" onmouseover="this.style.borderColor='#4a7ab5'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.2rem;">&#128217;</div>
+        <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Daily Devotional</div>
       </a>
-
-      <a href="ask-anything.html" class="action-card">
-        <div class="action-icon" style="background:#E1F5EE;">
-          <svg viewBox="0 0 24 24" stroke="#0F6E56"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-        </div>
-        <div class="action-title">Ask Anything</div>
-        <div class="action-desc">Get a thoughtful, evidence-based answer to any tough question about the faith.</div>
-        <span class="action-cta">Ask a question →</span>
+      <a href="debate-arena.html" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:0.875rem;text-decoration:none;text-align:center;transition:all 0.15s;" onmouseover="this.style.borderColor='#4a7ab5'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.2rem;">&#9876;</div>
+        <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Debate Arena</div>
       </a>
-
-      <a href="evidence-library.html" class="action-card">
-        <div class="action-icon" style="background:#E6F1FB;">
-          <svg viewBox="0 0 24 24" stroke="#185FA5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        </div>
-        <div class="action-title">Evidence Library</div>
-        <div class="action-desc">Study the strongest arguments for the Christian faith — from beginner to advanced.</div>
-        <span class="action-cta">Browse arguments →</span>
+      <a href="ask-anything.html" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:0.875rem;text-decoration:none;text-align:center;transition:all 0.15s;" onmouseover="this.style.borderColor='#4a7ab5'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.2rem;">&#128172;</div>
+        <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Ask Anything</div>
+      </a>
+      <a href="worldviews.html" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:0.875rem;text-decoration:none;text-align:center;transition:all 0.15s;" onmouseover="this.style.borderColor='#4a7ab5'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.2rem;">&#127758;</div>
+        <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Worldviews</div>
+      </a>
+      <a href="study-plans.html" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:0.875rem;text-decoration:none;text-align:center;transition:all 0.15s;" onmouseover="this.style.borderColor='#4a7ab5'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.2rem;">&#128196;</div>
+        <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Study Plans</div>
+      </a>
+      <a href="games.html" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:0.875rem;text-decoration:none;text-align:center;transition:all 0.15s;" onmouseover="this.style.borderColor='#4a7ab5'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.2rem;">&#127918;</div>
+        <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Games</div>
+      </a>
+      <a href="glossary.html" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:0.875rem;text-decoration:none;text-align:center;transition:all 0.15s;" onmouseover="this.style.borderColor='#4a7ab5'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.2rem;">&#128213;</div>
+        <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Glossary</div>
+      </a>
+      <a href="scholars.html" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:0.875rem;text-decoration:none;text-align:center;transition:all 0.15s;" onmouseover="this.style.borderColor='#4a7ab5'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.2rem;">&#127891;</div>
+        <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Scholars</div>
+      </a>
+      <a href="pocket-cards.html" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:0.875rem;text-decoration:none;text-align:center;transition:all 0.15s;" onmouseover="this.style.borderColor='#4a7ab5'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.2rem;">&#128247;</div>
+        <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Pocket Cards</div>
+      </a>
+      <a href="video-library.html" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:0.875rem;text-decoration:none;text-align:center;transition:all 0.15s;" onmouseover="this.style.borderColor='#4a7ab5'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.2rem;">&#127916;</div>
+        <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Videos</div>
+      </a>
+      <a href="argument-map.html" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:0.875rem;text-decoration:none;text-align:center;transition:all 0.15s;" onmouseover="this.style.borderColor='#4a7ab5'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.2rem;">&#128506;</div>
+        <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Argument Map</div>
       </a>
     </div>
 
@@ -285,19 +358,19 @@
     </div>
 
     <!-- PRO BANNER -->
-    <div class="pro-banner">
+    <div class="pro-banner" id="pro-banner">
       <div>
         <div class="pro-banner-title">Unlock the full platform with Pro</div>
-        <div class="pro-banner-sub">Deep-dive arguments, unlimited AI questions, all debate topics, full worldviews library, and more.</div>
+        <div class="pro-banner-sub">Unlimited AI, Pro deep dives, all debate topics, pocket cards, and more.</div>
       </div>
-      <a href="index.html#pricing" class="pro-banner-btn">Upgrade — $8/mo</a>
+      <a href="index.html#pricing" class="pro-banner-btn">Upgrade &mdash; $8/mo</a>
     </div>
 
   </div>
 
-  <div class="loading-state" id="loading-state">Loading your dashboard…</div>
+  <div class="loading-state" id="loading-state">Loading your dashboard&hellip;</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
   var sb = null;
 
@@ -307,7 +380,7 @@
         'https://noprgxkwniouukmrfozc.supabase.co',
         'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
       );
-      init();
+      navAuth(); init();
     } else {
       setTimeout(initSb, 50);
     }
@@ -393,6 +466,24 @@
 
       // Weakness tracker
       buildWeaknessTracker();
+
+      // Learning tools status
+      updateLearningStatus(user.id);
+
+      // Guided focus
+      updateGuidedFocus();
+
+      // Restore mode preference or show onboarding
+      try {
+        var prefs = JSON.parse(localStorage.getItem('ad_prefs') || '{}');
+        if (!prefs.onboarded) {
+          // First visit - show onboarding after brief delay
+          setTimeout(showOnboarding, 800);
+          applyMode('guided'); // default
+        } else {
+          applyMode(prefs.mode || 'guided');
+        }
+      } catch(e) { applyMode('guided'); }
 
       el('loading-state').style.display = 'none';
       el('main').style.display = 'block';
@@ -487,6 +578,243 @@
     try { await sb.auth.signOut(); } catch(e) {}
     window.location.href = 'index.html';
   }
+
+
+  // ── NAV AUTH ──
+  async function navAuth() {
+    try {
+      var result = await sb.auth.getSession();
+      var session = result.data && result.data.session;
+      if (session) {
+        var name = (session.user.user_metadata && session.user.user_metadata.full_name) || session.user.email.split('@')[0];
+        var nu = document.getElementById('nav-user');
+        var ns = document.getElementById('nav-signout');
+        var ni = document.getElementById('nav-signin');
+        var nc = document.getElementById('nav-cta');
+        if (nu) nu.textContent = name;
+        if (ns) ns.style.display = 'inline-block';
+        if (ni) ni.style.display = 'none';
+        if (nc) nc.style.display = 'none';
+      }
+    } catch(e) {}
+  }
+  async function signOut() {
+    try { if(sb) await sb.auth.signOut(); } catch(e) {}
+    window.location.href = 'index.html';
+  }
+
+
+  // ── LEARNING TOOLS STATUS ──
+  async function updateLearningStatus(userId) {
+    try {
+      var dayNum = (function(){ var now=new Date(),start=new Date(now.getFullYear(),0,0),diff=now-start; return Math.floor(diff/86400000); })();
+      var stored = localStorage.getItem('daily_arg_complete');
+      var dailyEl = document.getElementById('daily-arg-status');
+      if (stored) {
+        var obj = JSON.parse(stored);
+        if (obj.day === dayNum && obj.userId === userId) {
+          if (dailyEl) { dailyEl.textContent = '\u2713 Done today'; dailyEl.style.color = '#22c55e'; }
+        }
+      }
+    } catch(e) {}
+    try {
+      var today = new Date().toISOString().split('T')[0];
+      var r = await sb.from('flashcards').select('id,next_review').eq('user_id', userId);
+      var fcEl = document.getElementById('flashcard-status');
+      if (r.data && r.data.length > 0) {
+        var due = r.data.filter(function(c){ return c.next_review <= today; }).length;
+        if (fcEl) {
+          if (due > 0) { fcEl.textContent = due + ' card' + (due !== 1 ? 's' : '') + ' due for review \u2192'; }
+          else { fcEl.textContent = '\u2713 All caught up -- ' + r.data.length + ' cards'; fcEl.style.color = '#22c55e'; }
+        }
+      } else {
+        var fcEl2 = document.getElementById('flashcard-status');
+        if (fcEl2) fcEl2.textContent = 'Build your deck \u2192';
+      }
+    } catch(e) {}
+  }
+
+
+  // ── ONBOARDING ──
+  var OB_STEPS = [
+    {id:'level',title:'What best describes you?',sub:'Helps us suggest the right starting point',options:[
+      {val:'beginner',label:'Complete beginner',desc:'New to apologetics'},
+      {val:'some',label:'Some knowledge',desc:'Know a few arguments, want to go deeper'},
+      {val:'advanced',label:'More advanced',desc:'Studied apologetics before'}
+    ]},
+    {id:'goal',title:'What is your main goal?',sub:'We will focus your daily suggestions around this',options:[
+      {val:'faith',label:'Strengthen my own faith',desc:'Understand why I believe what I believe'},
+      {val:'conversations',label:'Have better conversations',desc:'Respond confidently when faith is challenged'},
+      {val:'specific',label:'Prepare for specific challenges',desc:'Atheism, Islam, science, doubt'}
+    ]},
+    {id:'mode',title:'How do you like to learn?',sub:'You can change this any time from your dashboard',options:[
+      {val:'guided',label:'Guide me',desc:'Suggest what to do each day -- I will follow the path'},
+      {val:'explore',label:'Let me explore',desc:'Full access to everything -- I find my own way'}
+    ]}
+  ];
+  var obAnswers = {}; var obStep = 0;
+
+  function showOnboarding() {
+    var modal = document.getElementById('onboarding-modal');
+    if (modal) { modal.style.display = 'flex'; renderObStep(); }
+  }
+
+  function renderObStep() {
+    var step = OB_STEPS[obStep];
+    var titleEl = document.getElementById('ob-title');
+    var subEl = document.getElementById('ob-sub');
+    var body = document.getElementById('ob-body');
+    if (titleEl) titleEl.textContent = step.title;
+    if (subEl) subEl.textContent = step.sub;
+    if (!body) return;
+    body.innerHTML = '<div style="font-family:var(--font-ui);font-size:0.72rem;color:var(--text-muted);margin-bottom:1.25rem;">' + (obStep+1) + ' of ' + OB_STEPS.length + '</div>' +
+      '<div style="display:flex;flex-direction:column;gap:0.6rem;">' +
+      step.options.map(function(opt){
+        return '<button onclick="selectOb(\'' + step.id + '\',\'' + opt.val + '\')" style="background:var(--off-white);border:2px solid var(--border);border-radius:6px;padding:0.875rem 1rem;text-align:left;cursor:pointer;width:100%;">' +
+          '<div style="font-family:var(--font-ui);font-size:0.88rem;font-weight:600;color:var(--navy-900);">' + opt.label + '</div>' +
+          '<div style="font-family:var(--font-ui);font-size:0.78rem;color:var(--text-muted);margin-top:3px;">' + opt.desc + '</div></button>';
+      }).join('') + '</div>';
+  }
+
+  function selectOb(stepId, val) {
+    obAnswers[stepId] = val;
+    obStep++;
+    if (obStep >= OB_STEPS.length) { finishOnboarding(); }
+    else { renderObStep(); }
+  }
+
+  function finishOnboarding() {
+    try { localStorage.setItem('ad_prefs', JSON.stringify(Object.assign({}, obAnswers, {onboarded:true}))); } catch(e) {}
+    var modal = document.getElementById('onboarding-modal');
+    if (modal) modal.style.display = 'none';
+    applyMode(obAnswers.mode || 'guided');
+    updateGuidedFocus();
+  }
+
+  // ── MODE ──
+  var currentMode = 'guided';
+
+  function setMode(mode) {
+    currentMode = mode;
+    try {
+      var prefs = JSON.parse(localStorage.getItem('ad_prefs') || '{}');
+      prefs.mode = mode;
+      localStorage.setItem('ad_prefs', JSON.stringify(prefs));
+    } catch(e) {}
+    applyMode(mode);
+  }
+
+  function applyMode(mode) {
+    currentMode = mode;
+    var modeBar = document.getElementById('mode-bar');
+    var guided = document.getElementById('guided-focus');
+    var rec = document.getElementById('rec-card');
+    var btnG = document.getElementById('btn-guided');
+    var btnE = document.getElementById('btn-explore');
+    var modeDesc = document.getElementById('mode-desc');
+    if (modeBar) modeBar.style.display = 'block';
+    if (mode === 'guided') {
+      if (guided) guided.style.display = 'block';
+      if (rec) rec.style.display = 'none';
+      if (btnG) { btnG.style.background = '#c8a951'; btnG.style.color = '#050d1a'; }
+      if (btnE) { btnE.style.background = 'transparent'; btnE.style.color = 'rgba(255,255,255,0.5)'; }
+      if (modeDesc) modeDesc.textContent = 'Guided mode: we suggest your daily focus.';
+    } else {
+      if (guided) guided.style.display = 'none';
+      if (rec) rec.style.display = 'flex';
+      if (btnE) { btnE.style.background = '#c8a951'; btnE.style.color = '#050d1a'; }
+      if (btnG) { btnG.style.background = 'transparent'; btnG.style.color = 'rgba(255,255,255,0.5)'; }
+      if (modeDesc) modeDesc.textContent = 'Explore mode: full access, you decide.';
+    }
+  }
+
+  // ── GUIDED FOCUS ──
+  // 7-day free journey
+  var FREE_JOURNEY = [
+    {step:'Day 1 of 7',title:'Start with the Daily Devotional',desc:'Build the habit first. 5 minutes of verse, reflection, and prayer rooted in apologetics. This is the daily anchor the whole platform is built around.',link:'daily-devotional.html',tag:'free',also:[{icon:'&#127891;',title:"Today's Argument",link:'daily-argument.html'},{icon:'&#128218;',title:'Browse Evidence Library',link:'evidence-library.html'}]},
+    {step:'Day 2 of 7',title:'Read the Kalam Argument',desc:'The most important argument for the existence of God. Read the free summary -- written to be clear enough to explain to a friend tonight.',link:'evidence-library.html',tag:'free',also:[{icon:'&#128217;',title:'Daily Devotional',link:'daily-devotional.html'},{icon:'&#128218;',title:'Evidence Library',link:'evidence-library.html'}]},
+    {step:'Day 3 of 7',title:"Today's Argument -- active recall",desc:'Read the argument, then write it from memory. Even a rough attempt is more effective than re-reading. This is how arguments move from your head to your mouth.',link:'daily-argument.html',tag:'free',also:[{icon:'&#128196;',title:'Add to flashcards',link:'flashcards.html'},{icon:'&#128217;',title:'Daily Devotional',link:'daily-devotional.html'}]},
+    {step:'Day 4 of 7',title:'Build your flashcard deck',desc:'Add the Kalam and 4 other arguments to your deck. Free accounts get 10 cards. The spaced repetition algorithm will bring them back at exactly the right intervals.',link:'flashcards.html',tag:'free',also:[{icon:'&#127891;',title:"Today's Argument",link:'daily-argument.html'},{icon:'&#128217;',title:'Daily Devotional',link:'daily-devotional.html'}]},
+    {step:'Day 5 of 7',title:'Play the Daily Quiz',desc:'Test what you have learned so far. Five questions at the difficulty level you choose. A streak starts today.',link:'daily-quiz.html',tag:'free',also:[{icon:'&#128196;',title:'Flashcard review',link:'flashcards.html'},{icon:'&#128217;',title:'Daily Devotional',link:'daily-devotional.html'}]},
+    {step:'Day 6 of 7',title:'Enter the Debate Arena',desc:'This is the moment everything comes together. Choose The Atheist at Gentle difficulty and use what you have learned in a live conversation. This is your one free debate this week.',link:'debate-arena.html',tag:'free',also:[{icon:'&#127891;',title:"Today's Argument",link:'daily-argument.html'},{icon:'&#128196;',title:'Flashcard review',link:'flashcards.html'}]},
+    {step:'Day 7 of 7',title:'You have completed your free journey',desc:'In 7 days you have built a habit, learned 2 arguments, built a flashcard deck, and had your first live debate. Pro unlocks unlimited debates, full argument deep dives, Explain It Back AI coaching, and more.',link:'index.html#pricing',tag:'upgrade',also:[{icon:'&#9876;',title:'Unlimited debates',link:'index.html#pricing'},{icon:'&#128172;',title:'Explain It Back',link:'index.html#pricing'}]},
+  ];
+
+  // Ongoing guided focus for Pro users
+  var PRO_FOCUS = [
+    {step:'Today',title:'Start with the Daily Devotional',desc:'Build the habit. 5 minutes of verse, reflection, and prayer at the intersection of faith and reason.',link:'daily-devotional.html',tag:'pro',also:[{icon:'&#127891;',title:"Today's Argument",link:'daily-argument.html'},{icon:'&#128218;',title:'Evidence Library',link:'evidence-library.html'}]},
+    {step:'Today',title:'Explain the Kalam Argument back',desc:'You have read it. Now explain it in your own words. The AI tutor will score your explanation and tell you exactly what to improve.',link:'explain-it-back.html',tag:'pro',also:[{icon:'&#128196;',title:'Flashcard review',link:'flashcards.html'},{icon:'&#128217;',title:'Daily Devotional',link:'daily-devotional.html'}]},
+    {step:'Today',title:'Debate a sceptic',desc:'Put your knowledge under pressure. Choose an opponent, a topic, and a difficulty. Real confidence comes from being challenged, not just studying.',link:'debate-arena.html',tag:'pro',also:[{icon:'&#127891;',title:"Today's Argument",link:'daily-argument.html'},{icon:'&#128196;',title:'Flashcard review',link:'flashcards.html'}]},
+    {step:'Today',title:'Study the Moral Argument',desc:'One of the most powerful arguments for everyday conversations. Why the Holocaust was objectively evil -- and why that points to God.',link:'evidence-library.html',tag:'pro',also:[{icon:'&#128217;',title:'Daily Devotional',link:'daily-devotional.html'},{icon:'&#128196;',title:'Flashcard review',link:'flashcards.html'}]},
+    {step:'Today',title:"Review flashcards due today",desc:'Spaced repetition only works when you review on schedule. Check your deck and clear what is due. Ten minutes today means better recall in a month.',link:'flashcards.html',tag:'pro',also:[{icon:'&#127891;',title:"Today's Argument",link:'daily-argument.html'},{icon:'&#128217;',title:'Daily Devotional',link:'daily-devotional.html'}]},
+  ];
+
+  var DAILY_FOCUS = FREE_JOURNEY; // overridden in updateGuidedFocus based on isPro
+
+  function updateGuidedFocus() {
+    var streak = parseInt((document.getElementById('stat-streak')||{}).textContent) || 0;
+    var isPro = false; // replace with real check when Stripe live
+    var focusArr = isPro ? PRO_FOCUS : FREE_JOURNEY;
+    var focusIdx = Math.min(streak, focusArr.length - 1); // cap at last day for free
+    var focus = focusArr[focusIdx];
+    var els = {
+      step: document.getElementById('focus-step'),
+      title: document.getElementById('focus-title'),
+      desc: document.getElementById('focus-desc'),
+      btn: document.getElementById('focus-btn'),
+      stepsRow: document.getElementById('focus-steps-row'),
+      alsoToday: document.getElementById('also-today')
+    };
+    if (els.step) els.step.textContent = focus.step;
+    if (els.title) {
+      els.title.textContent = focus.title;
+      els.title.style.color = focus.tag === 'upgrade' ? '#c8a951' : '#fff';
+    }
+    if (els.desc) els.desc.textContent = focus.desc;
+    if (els.btn) {
+      els.btn.href = focus.link;
+      els.btn.textContent = focus.tag === 'upgrade' ? 'Upgrade to Pro →' : 'Go →';
+      els.btn.style.background = focus.tag === 'upgrade' ? '#c8a951' : '#c8a951';
+    }
+    if (els.stepsRow) {
+      els.stepsRow.innerHTML = focusArr.map(function(f, i) {
+        var done = i < focusIdx;
+        var cur = i === focusIdx;
+        return '<div style="height:4px;flex:1;border-radius:2px;background:' + (done?'#22c55e':cur?'#c8a951':'rgba(255,255,255,0.1)') + ';"></div>';
+      }).join('');
+    }
+    if (els.alsoToday && focus.also) {
+      els.alsoToday.innerHTML = focus.also.map(function(a) {
+        return '<a href="' + a.link + '" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:0.875rem;text-decoration:none;display:flex;align-items:center;gap:0.75rem;">' +
+          '<span style="font-size:1.2rem;">' + a.icon + '</span>' +
+          '<span style="font-family:var(--font-ui);font-size:0.82rem;font-weight:500;color:var(--navy-900);">' + a.title + '</span></a>';
+      }).join('');
+    }
+  }
+
+  // ── LEARNING STATUS ──
+  async function updateLearningStatus(userId) {
+    try {
+      var dayNum = (function(){ var now=new Date(),start=new Date(now.getFullYear(),0,0),diff=now-start; return Math.floor(diff/86400000); })();
+      var stored = localStorage.getItem('daily_arg_complete');
+      var dailyEl = document.getElementById('daily-arg-status');
+      if (stored && dailyEl) {
+        var obj = JSON.parse(stored);
+        if (obj.day === dayNum && obj.userId === userId) { dailyEl.textContent = '\u2713 Done today'; dailyEl.style.color = '#22c55e'; }
+      }
+    } catch(e) {}
+    try {
+      var today = new Date().toISOString().split('T')[0];
+      var r = await sb.from('flashcards').select('id,next_review').eq('user_id', userId);
+      var fcEl = document.getElementById('flashcard-status');
+      if (r.data && r.data.length > 0 && fcEl) {
+        var due = r.data.filter(function(c){ return c.next_review <= today; }).length;
+        fcEl.textContent = due > 0 ? due + ' card' + (due!==1?'s':'') + ' due \u2192' : '\u2713 All caught up';
+        if (due === 0) fcEl.style.color = '#22c55e';
+      }
+    } catch(e) {}
+  }
+
 </script>
 </body>
 </html>
