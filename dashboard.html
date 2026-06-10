@@ -239,8 +239,8 @@
       <div style="background:var(--navy-950);border:1px solid rgba(200,169,81,0.25);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
           <div style="flex:1;">
-            <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;" id="focus-step">Step 1 of 3</div>
-            <div style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.4rem;" id="focus-title">Loading your daily focus...</div>
+            <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;" id="focus-step">Day 1 of 7</div>
+            <div style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.4rem;" id="focus-title">Start with the Daily Devotional</div>
             <div style="font-family:var(--font-ui);font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.6;" id="focus-desc"></div>
           </div>
           <a id="focus-btn" href="#" style="font-family:var(--font-ui);font-size:0.82rem;font-weight:600;background:var(--gold);color:var(--navy-950);border:none;border-radius:4px;padding:10px 20px;text-decoration:none;white-space:nowrap;flex-shrink:0;">Go &rarr;</a>
@@ -496,19 +496,14 @@
       }
 
       // Weakness tracker
-      buildWeaknessTracker();
+      try { buildWeaknessTracker(); } catch(e) {}
 
       // Learning tools status
-      updateLearningStatus(user.id);
+      try { updateLearningStatus(user.id); } catch(e) {}
 
-      // Guided focus
-      updateGuidedFocus();
-
-      // Restore mode preference or show onboarding
-      // Always start in guided mode - skip onboarding modal for now
+      // Guided focus + mode (always run these)
       try {
         var prefs = JSON.parse(localStorage.getItem('ad_prefs') || '{}');
-        // Mark as onboarded so modal doesn't appear
         if (!prefs.onboarded) {
           prefs.onboarded = true;
           prefs.mode = prefs.mode || 'guided';
@@ -516,6 +511,8 @@
         }
         applyMode(prefs.mode || 'guided');
       } catch(e) { applyMode('guided'); }
+
+      try { updateGuidedFocus(); } catch(e) { console.error('guided focus error', e); }
 
       el('loading-state').style.display = 'none';
       el('main').style.display = 'block';
@@ -525,6 +522,9 @@
       // Show main anyway so user sees something
       var ls = el('loading-state'); if (ls) ls.style.display = 'none';
       var m = el('main'); if (m) m.style.display = 'block';
+      // Still activate guided mode and focus
+      try { applyMode('guided'); } catch(err) {}
+      try { updateGuidedFocus(); } catch(err) {}
     }
   }
 
