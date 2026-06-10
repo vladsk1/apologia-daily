@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/weekly-email?secret=apologia-cron-2026",
+      "schedule": "0 7 * * 1"
+    }
+  ]
+}
