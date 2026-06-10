@@ -176,19 +176,7 @@
     </div>
   </div>
 
-  <!-- MODE TOGGLE BAR -->
-  <div id="mode-bar" style="background:var(--navy-800);border-bottom:1px solid rgba(255,255,255,0.06);padding:0.6rem 2rem;display:block;">
-    <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
-      <div style="display:flex;align-items:center;gap:0.5rem;">
-        <span id="mode-label" style="font-family:var(--font-ui);font-size:0.78rem;color:rgba(255,255,255,0.6);">Mode:</span>
-        <div style="display:flex;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;">
-          <button id="btn-guided" onclick="setMode('guided')" style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;padding:5px 14px;border:none;cursor:pointer;transition:all 0.15s;background:#c8a951;color:#050d1a;">Guided</button>
-          <button id="btn-explore" onclick="setMode('explore')" style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;padding:5px 14px;border:none;cursor:pointer;transition:all 0.15s;">Explore freely</button>
-        </div>
-      </div>
-      <div style="font-family:var(--font-ui);font-size:0.75rem;color:rgba(255,255,255,0.35);" id="mode-desc">Guided: we suggest your daily focus. Explore: full access, you decide.</div>
-    </div>
-  </div>
+  
 
   <div class="main" id="main" style="display:none;">
 
@@ -261,7 +249,7 @@
             <div style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.4rem;" id="focus-title">Start with the Daily Devotional</div>
             <div style="font-family:var(--font-ui);font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.6;" id="focus-desc">Build the habit first. 5 minutes of verse, reflection, and prayer rooted in apologetics. This is the daily anchor the whole platform is built around.</div>
           </div>
-          <a id="focus-btn" href="daily-devotional.html" style="font-family:var(--font-ui);font-size:0.82rem;font-weight:600;background:var(--gold);color:var(--navy-950);border:none;border-radius:4px;padding:10px 20px;text-decoration:none;white-space:nowrap;flex-shrink:0;">Go &rarr;</a>
+          <button id="focus-btn" onclick="openActivity()" style="font-family:var(--font-ui);font-size:0.82rem;font-weight:600;background:var(--gold);color:var(--navy-950);border:none;border-radius:4px;padding:10px 20px;cursor:pointer;white-space:nowrap;flex-shrink:0;">Start &rarr;</button>
         </div>
         <!-- Daily steps mini-progress -->
         <div style="display:flex;gap:6px;margin-top:1.25rem;" id="focus-steps-row"></div>
@@ -283,7 +271,32 @@
     </div>
   </div>
 
-  <!-- DAY COMPLETE MODAL -->
+    <!-- ACTIVITY MODAL -->
+  <div id="activity-modal" style="display:none;position:fixed;inset:0;background:rgba(5,13,26,0.92);z-index:1001;align-items:center;justify-content:center;padding:1rem;overflow-y:auto;">
+    <div style="background:var(--white);border-radius:10px;width:100%;max-width:600px;max-height:90vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,0.4);margin:auto;">
+      <!-- Header -->
+      <div style="background:linear-gradient(135deg,#050d1a,#0f2040);padding:1.5rem 1.75rem;position:sticky;top:0;z-index:2;border-bottom:2px solid rgba(200,169,81,0.3);">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+          <div>
+            <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#c8a951;margin-bottom:0.25rem;" id="activity-day-label">Day 1 of 7</div>
+            <div style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:#fff;" id="activity-title">Activity</div>
+          </div>
+          <button onclick="closeActivity()" style="background:none;border:none;color:rgba(255,255,255,0.5);font-size:1.5rem;cursor:pointer;line-height:1;padding:0;">&times;</button>
+        </div>
+      </div>
+      <!-- Body -->
+      <div style="padding:1.75rem;" id="activity-body">
+        <!-- Populated by JS -->
+      </div>
+      <!-- Footer -->
+      <div style="padding:1.25rem 1.75rem;border-top:1px solid var(--border);background:var(--off-white);position:sticky;bottom:0;display:flex;gap:0.75rem;flex-wrap:wrap;">
+        <button onclick="completeActivityAndContinue()" style="font-family:var(--font-ui);font-size:0.85rem;font-weight:600;background:#c8a951;color:#050d1a;border:none;border-radius:4px;padding:11px 22px;cursor:pointer;flex:1;min-width:160px;">Mark done &amp; continue &rarr;</button>
+        <button onclick="closeActivity()" style="font-family:var(--font-ui);font-size:0.85rem;font-weight:500;background:none;color:var(--navy-600);border:1px solid var(--border);border-radius:4px;padding:11px 18px;cursor:pointer;">Close</button>
+      </div>
+    </div>
+  </div>
+
+<!-- DAY COMPLETE MODAL -->
   <div id="day-complete-modal" style="display:none;position:fixed;inset:0;background:rgba(5,13,26,0.92);z-index:1000;align-items:center;justify-content:center;padding:1rem;">
     <div style="background:var(--white);border-radius:10px;width:100%;max-width:480px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.4);">
       <div style="background:linear-gradient(135deg,#050d1a,#0f2040);padding:2rem;text-align:center;border-bottom:2px solid rgba(200,169,81,0.3);">
@@ -831,9 +844,8 @@
     }
     if (els.desc) els.desc.textContent = focus.desc;
     if (els.btn) {
-      els.btn.href = focus.link;
-      els.btn.textContent = focus.tag === 'upgrade' ? 'Upgrade to Pro →' : 'Go →';
-      els.btn.style.background = focus.tag === 'upgrade' ? '#c8a951' : '#c8a951';
+      els.btn.textContent = focus.tag === 'upgrade' ? 'View Pro →' : 'Start →';
+      els.btn.style.background = '#c8a951';
     }
     if (els.stepsRow) {
       els.stepsRow.innerHTML = focusArr.map(function(f, i) {
@@ -961,6 +973,138 @@
   document.addEventListener('click', function(e) {
     var modal = document.getElementById('day-complete-modal');
     if (modal && e.target === modal) closeDayComplete();
+  });
+
+
+  // ── GUIDED ACTIVITY POPUPS ──
+  var ACTIVITY_CONTENT = {
+    0: { // Day 1 - Devotional
+      type: 'devotional',
+      title: "Today's Devotional",
+      body: '<div style="font-family:var(--font-serif);line-height:1.8;color:#0f1f38;">' +
+        '<div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#c8a951;margin-bottom:0.5rem;">Verse</div>' +
+        '<p style="font-size:1.05rem;font-style:italic;border-left:3px solid #c8a951;padding-left:1rem;margin-bottom:1.25rem;">"Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have. But do this with gentleness and respect." &mdash; 1 Peter 3:15</p>' +
+        '<div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#c8a951;margin-bottom:0.5rem;">Reflection</div>' +
+        '<p style="margin-bottom:1rem;">This single verse is the foundation of everything on Apologia Daily. Notice it does not say "win every argument" or "prove you are right." It says be <em>prepared</em>, and do it with <em>gentleness and respect</em>.</p>' +
+        '<p style="margin-bottom:1rem;">Apologetics is not about defeating people. It is about being ready to give a reason for your hope, in a way that honours the person you are talking to. Knowledge without love is just noise.</p>' +
+        '<p>Over the next 7 days you will build that preparation &mdash; one argument, one practice session at a time. But never lose sight of the tone this verse calls for.</p>' +
+        '<div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#c8a951;margin:1.25rem 0 0.5rem;">Prayer</div>' +
+        '<p>Lord, prepare my heart and mind to defend the hope I have in You. Give me knowledge to answer, and the gentleness and respect to do it in a way that draws people closer to You, not further away. Amen.</p>' +
+        '</div>'
+    },
+    1: { // Day 2 - Kalam
+      type: 'reading',
+      title: 'The Kalam Cosmological Argument',
+      body: '<div style="font-family:var(--font-serif);line-height:1.8;color:#0f1f38;">' +
+        '<p style="margin-bottom:1.25rem;">The most important argument for the existence of God. It has three simple premises:</p>' +
+        '<div style="background:#f7f4ef;border-radius:6px;padding:1.25rem;margin-bottom:1.25rem;">' +
+        '<p style="margin-bottom:0.75rem;"><strong style="color:#c8a951;">Premise 1:</strong> Everything that begins to exist has a cause.</p>' +
+        '<p style="margin-bottom:0.75rem;"><strong style="color:#c8a951;">Premise 2:</strong> The universe began to exist.</p>' +
+        '<p><strong style="color:#c8a951;">Conclusion:</strong> Therefore, the universe has a cause.</p>' +
+        '</div>' +
+        '<p style="margin-bottom:1rem;"><strong>Why premise 1 is true:</strong> Things do not pop into existence from nothing, uncaused. If they could, why does anything need a cause at all? Our entire experience of reality confirms that what begins to exist has a cause.</p>' +
+        '<p style="margin-bottom:1rem;"><strong>Why premise 2 is true:</strong> The Big Bang confirms the universe had a beginning around 13.8 billion years ago. The second law of thermodynamics also points to a finite past. The universe is not eternal.</p>' +
+        '<p style="margin-bottom:1rem;"><strong>What the conclusion means:</strong> The cause of the universe must be outside space, time, and matter &mdash; because it created them. It must be spaceless, timeless, immaterial, and unimaginably powerful. And because it chose to create at a specific moment, it must be personal &mdash; a mind, not a mechanism.</p>' +
+        '<p style="background:#f7f4ef;border-left:3px solid #c8a951;padding:0.75rem 1rem;border-radius:4px;"><strong>Conversation starter:</strong> "If the universe had a beginning, something outside it must have caused it. What do you think that could be?"</p>' +
+        '</div>'
+    },
+    2: { // Day 3 - Daily Argument active recall
+      type: 'recall',
+      title: 'Active Recall: The Kalam',
+      body: '<div style="font-family:var(--font-serif);line-height:1.8;color:#0f1f38;">' +
+        '<p style="margin-bottom:1rem;">Yesterday you read the Kalam argument. Now test yourself &mdash; recalling from memory is ten times more effective than re-reading.</p>' +
+        '<div style="background:#f7f4ef;border-radius:6px;padding:1.25rem;margin-bottom:1.25rem;">' +
+        '<p style="font-family:var(--font-ui);font-size:0.85rem;font-weight:600;color:#1e4278;margin-bottom:0.75rem;">Without looking back, try to answer:</p>' +
+        '<p style="font-style:italic;">State the three premises of the Kalam argument, then explain why the cause must be personal rather than just a force.</p>' +
+        '</div>' +
+        '<p style="font-family:var(--font-ui);font-size:0.82rem;color:#3a4a62;margin-bottom:0.75rem;">Think about it, then tap below to reveal the answer:</p>' +
+        '<button onclick="document.getElementById(\'recall-answer\').style.display=\'block\';this.style.display=\'none\';" style="font-family:var(--font-ui);font-size:0.82rem;font-weight:600;background:#050d1a;color:#fff;border:none;border-radius:4px;padding:9px 18px;cursor:pointer;margin-bottom:1rem;">Reveal answer</button>' +
+        '<div id="recall-answer" style="display:none;background:#f7f4ef;border-radius:6px;padding:1.25rem;">' +
+        '<p style="margin-bottom:0.5rem;"><strong>1.</strong> Everything that begins to exist has a cause</p>' +
+        '<p style="margin-bottom:0.5rem;"><strong>2.</strong> The universe began to exist</p>' +
+        '<p style="margin-bottom:0.75rem;"><strong>3.</strong> Therefore the universe has a cause</p>' +
+        '<p>The cause must be <strong>personal</strong> because it chose to bring the universe into being at a specific moment. An impersonal force that always existed would have created an eternal effect. Only a personal agent with free will can explain a universe with a beginning.</p>' +
+        '</div>' +
+        '</div>'
+    },
+    3: { // Day 4 - Flashcards (opens full page - too interactive for popup)
+      type: 'redirect',
+      title: 'Build Your Flashcard Deck',
+      page: 'flashcards.html',
+      body: '<div style="font-family:var(--font-serif);line-height:1.8;color:#0f1f38;">' +
+        '<p style="margin-bottom:1rem;">Today you will build your flashcard deck using spaced repetition &mdash; the most proven method for long-term memory.</p>' +
+        '<p style="margin-bottom:1rem;">Add the Kalam argument and a few others to your deck. Free accounts get 10 cards. The algorithm will bring each card back at exactly the right moment to lock it into memory.</p>' +
+        '<p style="background:#f7f4ef;border-left:3px solid #c8a951;padding:0.75rem 1rem;border-radius:4px;">The flashcard builder opens on its own page. When you have added your cards, come back to your dashboard to continue the journey.</p>' +
+        '</div>'
+    },
+    4: { // Day 5 - Daily Quiz (redirect)
+      type: 'redirect',
+      title: 'Daily Quiz',
+      page: 'daily-quiz.html',
+      body: '<div style="font-family:var(--font-serif);line-height:1.8;color:#0f1f38;">' +
+        '<p style="margin-bottom:1rem;">Time to test what you have learned. The Daily Quiz gives you five questions at the difficulty you choose.</p>' +
+        '<p style="background:#f7f4ef;border-left:3px solid #c8a951;padding:0.75rem 1rem;border-radius:4px;">The quiz opens on its own page. When you finish, come back to your dashboard to continue.</p>' +
+        '</div>'
+    },
+    5: { // Day 6 - Debate (redirect)
+      type: 'redirect',
+      title: 'Enter the Debate Arena',
+      page: 'debate-arena.html',
+      body: '<div style="font-family:var(--font-serif);line-height:1.8;color:#0f1f38;">' +
+        '<p style="margin-bottom:1rem;">This is the moment everything comes together. You will have a live conversation with an AI sceptic and use what you have learned.</p>' +
+        '<p style="margin-bottom:1rem;"><strong>Tip:</strong> Choose <strong>The Atheist</strong> opponent and set difficulty to <strong>Gentle</strong> for your first debate. Use the Kalam argument you have been studying.</p>' +
+        '<p style="background:#f7f4ef;border-left:3px solid #c8a951;padding:0.75rem 1rem;border-radius:4px;">The Debate Arena opens on its own page. This is your one free debate this week. When you finish, come back to your dashboard.</p>' +
+        '</div>'
+    },
+    6: { // Day 7 - Complete / upgrade
+      type: 'complete',
+      title: 'Journey Complete',
+      body: '<div style="font-family:var(--font-serif);line-height:1.8;color:#0f1f38;text-align:center;">' +
+        '<div style="font-size:2.5rem;margin-bottom:1rem;">&#127941;</div>' +
+        '<p style="margin-bottom:1rem;">In one week you have built a daily habit, learned the most important arguments, built a flashcard deck, tested yourself, and had your first live debate.</p>' +
+        '<p style="margin-bottom:1rem;">You are no longer where you started. You are prepared.</p>' +
+        '<p style="margin-bottom:1.5rem;">To keep growing &mdash; unlimited debates, AI coaching on your explanations, the full deep-dive library &mdash; Pro is $8/month.</p>' +
+        '<a href="index.html#pricing" style="font-family:var(--font-ui);font-size:0.9rem;font-weight:600;background:#c8a951;color:#050d1a;padding:12px 28px;border-radius:4px;text-decoration:none;display:inline-block;">See what Pro includes &rarr;</a>' +
+        '</div>'
+    }
+  };
+
+  function openActivity() {
+    var focusIdx = Math.min(getJourneyDay(), FREE_JOURNEY.length - 1);
+    var activity = ACTIVITY_CONTENT[focusIdx];
+    if (!activity) return;
+
+    // If redirect type, set mode and go to the page
+    if (activity.type === 'redirect') {
+      try {
+        var prefs = JSON.parse(localStorage.getItem('ad_prefs') || '{}');
+        prefs.mode = 'guided';
+        localStorage.setItem('ad_prefs', JSON.stringify(prefs));
+      } catch(e) {}
+      window.location.href = activity.page;
+      return;
+    }
+
+    // Otherwise show popup
+    document.getElementById('activity-day-label').textContent = 'Day ' + (focusIdx + 1) + ' of 7';
+    document.getElementById('activity-title').textContent = activity.title;
+    document.getElementById('activity-body').innerHTML = activity.body;
+    document.getElementById('activity-modal').style.display = 'flex';
+  }
+
+  function closeActivity() {
+    document.getElementById('activity-modal').style.display = 'none';
+  }
+
+  function completeActivityAndContinue() {
+    closeActivity();
+    markDayComplete(); // this advances the day and shows the completion modal
+  }
+
+  // Close on background click
+  document.addEventListener('click', function(e) {
+    var modal = document.getElementById('activity-modal');
+    if (modal && e.target === modal) closeActivity();
   });
 
 </script>
