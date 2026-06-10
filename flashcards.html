@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashcards — Apologia Daily</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --n:#050d1a;--n8:#0a1628;--n7:#0f2040;--n5:#1e4278;--n3:#4a7ab5;
+      --g:#c8a951;--gl:#d4b96a;--gd:#a88930;
+      --w:#fff;--ow:#f7f4ef;--border:#e8e2d8;--tm:#3a4a62;--td:#0f1f38;
+      --fd:'Playfair Display',Georgia,serif;--ss:'Source Serif 4',Georgia,serif;--ui:'DM Sans',system-ui,sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--ss);background:var(--ow);color:var(--td);min-height:100vh;}
+    nav{background:var(--n);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:58px;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .nav-logo{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:var(--w);text-decoration:none;}
+    .nav-logo span{color:var(--g);}
+    .nav-links{display:flex;list-style:none;}
+    .nav-links a{font-family:var(--ui);font-size:0.78rem;color:rgba(255,255,255,0.55);text-decoration:none;padding:0 0.8rem;line-height:58px;transition:color 0.15s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--w);}
+    .nav-right{display:flex;align-items:center;gap:10px;}
+    .nav-user{font-family:var(--ui);font-size:0.82rem;color:rgba(255,255,255,0.65);}
+    .nav-dashboard{font-family:var(--ui);font-size:0.8rem;color:rgba(255,255,255,0.65);text-decoration:none;border:1px solid rgba(255,255,255,0.2);padding:5px 12px;border-radius:3px;display:none;}
+    .nav-signout{font-family:var(--ui);font-size:0.78rem;background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.6);padding:5px 12px;border-radius:3px;cursor:pointer;display:none;}
+    .nav-signin{font-family:var(--ui);font-size:0.85rem;color:rgba(255,255,255,0.6);text-decoration:none;}
+    .nav-cta{font-family:var(--ui);font-size:0.78rem;font-weight:500;background:var(--g);color:var(--n);padding:6px 16px;border-radius:3px;text-decoration:none;}
+
+    .page-hero{background:var(--n);padding:2.5rem 2rem 2rem;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .page-hero-inner{max-width:900px;margin:0 auto;}
+    .eyebrow{font-family:var(--ui);font-size:0.7rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--g);margin-bottom:0.5rem;}
+    .page-hero h1{font-family:var(--fd);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--w);margin-bottom:0.5rem;}
+    .page-hero p{font-size:0.9rem;color:rgba(255,255,255,0.55);max-width:500px;line-height:1.8;}
+
+    .main{max-width:900px;margin:0 auto;padding:2rem;}
+
+    /* STATS ROW */
+    .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem;}
+    .stat-box{background:var(--w);border:1px solid var(--border);border-radius:6px;padding:1rem 1.25rem;text-align:center;}
+    .stat-num{font-family:var(--fd);font-size:1.8rem;font-weight:700;color:var(--n5);}
+    .stat-num.gold{color:var(--g);}
+    .stat-num.green{color:#166534;}
+    .stat-lbl{font-family:var(--ui);font-size:0.72rem;color:var(--tm);margin-top:2px;letter-spacing:0.04em;}
+
+    /* TABS */
+    .tabs{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:2rem;}
+    .tab-btn{font-family:var(--ui);font-size:0.82rem;font-weight:500;padding:10px 20px;background:none;border:none;cursor:pointer;color:var(--tm);border-bottom:2px solid transparent;margin-bottom:-2px;transition:all 0.15s;}
+    .tab-btn.active{color:var(--n5);border-bottom-color:var(--n5);}
+
+    /* STUDY MODE */
+    .study-panel{display:none;}
+    .study-panel.active{display:block;}
+
+    /* FLASHCARD */
+    .card-wrap{perspective:1000px;margin-bottom:1.5rem;}
+    .card-inner{position:relative;width:100%;min-height:280px;transform-style:preserve-3d;transition:transform 0.5s ease;cursor:pointer;}
+    .card-inner.flipped{transform:rotateY(180deg);}
+    .card-face{position:absolute;width:100%;min-height:280px;backface-visibility:hidden;border-radius:8px;padding:2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+    .card-front{background:var(--n);color:var(--w);border:1px solid rgba(200,169,81,0.2);}
+    .card-back{background:var(--w);color:var(--td);border:1px solid var(--border);transform:rotateY(180deg);}
+    .card-label{font-family:var(--ui);font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:1rem;opacity:0.5;}
+    .card-front .card-label{color:var(--g);}
+    .card-back .card-label{color:var(--n5);}
+    .card-text{font-family:var(--fd);font-size:1.2rem;font-weight:600;line-height:1.5;color:inherit;}
+    .card-front .card-text{color:var(--w);}
+    .card-hint{font-family:var(--ui);font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:1.5rem;}
+    .card-category{font-family:var(--ui);font-size:0.72rem;background:rgba(200,169,81,0.15);color:var(--g);padding:3px 10px;border-radius:10px;margin-bottom:1rem;}
+
+    .card-back-answer{font-family:var(--ss);font-size:0.95rem;line-height:1.7;color:var(--td);margin-bottom:1rem;}
+    .card-back-title{font-family:var(--fd);font-size:0.9rem;font-weight:600;color:var(--n5);margin-bottom:0.5rem;}
+
+    /* RATING BUTTONS */
+    .rating-row{display:flex;gap:0.75rem;justify-content:center;margin-bottom:1.5rem;}
+    .rating-btn{font-family:var(--ui);font-size:0.82rem;font-weight:600;padding:10px 24px;border:none;border-radius:4px;cursor:pointer;transition:all 0.15s;min-width:90px;}
+    .rating-btn.hard{background:#FEE2E2;color:#991B1B;}
+    .rating-btn.hard:hover{background:#FECACA;}
+    .rating-btn.good{background:#DCFCE7;color:#166534;}
+    .rating-btn.good:hover{background:#BBF7D0;}
+    .rating-btn.easy{background:#DBEAFE;color:#1E40AF;}
+    .rating-btn.easy:hover{background:#BFDBFE;}
+    .rating-note{font-family:var(--ui);font-size:0.72rem;color:var(--tm);text-align:center;margin-bottom:2rem;}
+
+    .progress-bar-wrap{background:var(--border);border-radius:10px;height:6px;margin-bottom:0.5rem;}
+    .progress-bar-fill{background:var(--n5);border-radius:10px;height:6px;transition:width 0.3s;}
+    .progress-text{font-family:var(--ui);font-size:0.72rem;color:var(--tm);text-align:right;margin-bottom:1.5rem;}
+
+    /* SESSION COMPLETE */
+    .session-complete{background:var(--w);border:1px solid var(--border);border-radius:8px;padding:3rem;text-align:center;display:none;}
+    .session-complete h2{font-family:var(--fd);font-size:1.6rem;font-weight:700;color:var(--n);margin-bottom:0.75rem;}
+    .session-complete p{font-family:var(--ui);font-size:0.9rem;color:var(--tm);margin-bottom:2rem;line-height:1.7;}
+    .btn-primary{font-family:var(--ui);font-size:0.88rem;font-weight:600;background:var(--g);color:var(--n);border:none;border-radius:4px;padding:12px 28px;cursor:pointer;text-decoration:none;display:inline-block;transition:background 0.15s;}
+    .btn-primary:hover{background:var(--gl);}
+    .btn-secondary{font-family:var(--ui);font-size:0.88rem;font-weight:500;background:none;color:var(--n5);border:1px solid var(--n3);border-radius:4px;padding:11px 28px;cursor:pointer;text-decoration:none;display:inline-block;margin-left:0.75rem;transition:all 0.15s;}
+    .btn-secondary:hover{background:var(--n5);color:var(--w);}
+
+    /* MY DECK TAB */
+    .deck-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;}
+    .deck-header h2{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:var(--td);}
+    .deck-empty{background:var(--w);border:1px solid var(--border);border-radius:8px;padding:3rem;text-align:center;}
+    .deck-empty p{font-family:var(--ui);font-size:0.9rem;color:var(--tm);margin-bottom:1.5rem;line-height:1.7;}
+    .deck-list{display:flex;flex-direction:column;gap:8px;}
+    .deck-item{background:var(--w);border:1px solid var(--border);border-radius:6px;padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+    .deck-item-info{flex:1;}
+    .deck-item-title{font-family:var(--ui);font-size:0.88rem;font-weight:500;color:var(--td);}
+    .deck-item-meta{font-family:var(--ui);font-size:0.72rem;color:var(--tm);margin-top:2px;}
+    .deck-item-badge{font-family:var(--ui);font-size:0.68rem;font-weight:600;padding:3px 8px;border-radius:10px;}
+    .badge-due{background:#FEF3C7;color:#92400E;}
+    .badge-soon{background:#DBEAFE;color:#1E40AF;}
+    .badge-ok{background:#D1FAE5;color:#065F46;}
+    .btn-delete{background:none;border:none;color:rgba(0,0,0,0.25);cursor:pointer;font-size:1rem;padding:4px;}
+    .btn-delete:hover{color:#ef4444;}
+
+    /* ADD CARDS TAB */
+    .add-panel .section-title{font-family:var(--ui);font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--tm);margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);}
+    .arg-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0.75rem;margin-bottom:2rem;}
+    @media(max-width:640px){.arg-grid{grid-template-columns:1fr;}.stats-row{grid-template-columns:repeat(2,1fr);}}
+    .arg-card{background:var(--w);border:1px solid var(--border);border-radius:6px;padding:1rem;cursor:pointer;transition:all 0.15s;position:relative;}
+    .arg-card:hover{border-color:var(--n3);box-shadow:0 2px 12px rgba(30,66,120,0.1);}
+    .arg-card.added{border-color:var(--g);background:rgba(200,169,81,0.04);}
+    .arg-card-title{font-family:var(--ui);font-size:0.82rem;font-weight:500;color:var(--td);margin-bottom:4px;}
+    .arg-card-cat{font-family:var(--ui);font-size:0.68rem;color:var(--tm);}
+    .arg-card-check{position:absolute;top:10px;right:10px;font-size:0.85rem;display:none;}
+    .arg-card.added .arg-card-check{display:block;}
+
+    .auth-prompt{background:var(--n);border-radius:8px;padding:2.5rem;text-align:center;color:var(--w);}
+    .auth-prompt h2{font-family:var(--fd);font-size:1.4rem;margin-bottom:0.75rem;}
+    .auth-prompt p{font-family:var(--ui);font-size:0.88rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;line-height:1.7;}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
+      <li><a href="ask-anything.html">Ask Anything</a></li>
+      <li><a href="worldviews.html">Worldviews</a></li>
+      <li><a href="study-plans.html">Study Plans</a></li>
+      <li><a href="video-library.html">Videos</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="whats-new.html">What's New</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="dashboard.html" class="nav-dashboard" id="nav-dashboard">Dashboard</a>
+      <span class="nav-user" id="nav-user"></span>
+      <button class="nav-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
+      <a href="login.html" class="nav-signin" id="nav-signin">Sign in</a>
+      <a href="signup.html" class="nav-cta" id="nav-cta">Start Free</a>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <p class="eyebrow">Active Recall</p>
+      <h1>Flashcard Deck</h1>
+      <p>The only way to know an argument is to retrieve it under pressure. These cards train your long-term memory using spaced repetition — the same method used by medical students and language learners.</p>
+    </div>
+  </div>
+
+  <div class="main" id="main-content" style="display:none;">
+
+    <!-- STATS -->
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-num gold" id="st-due">0</div><div class="stat-lbl">Due today</div></div>
+      <div class="stat-box"><div class="stat-num" id="st-total">0</div><div class="stat-lbl">Cards <span id="st-limit-label" style="font-size:0.65rem;color:var(--tm);">(free: 10 max)</span></div></div>
+      <div class="stat-box"><div class="stat-num green" id="st-mastered">0</div><div class="stat-lbl">Mastered</div></div>
+      <div class="stat-box"><div class="stat-num" id="st-streak">0</div><div class="stat-lbl">Day streak</div></div>
+    </div>
+
+    <!-- TABS -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('study', this)">&#127891; Study</button>
+      <button class="tab-btn" onclick="switchTab('deck', this)">&#128196; My Deck</button>
+      <button class="tab-btn" onclick="switchTab('add', this)">&#43; Add Cards</button>
+    </div>
+
+    <!-- STUDY TAB -->
+    <div class="study-panel active" id="tab-study">
+      <div id="study-empty" style="display:none;">
+        <div class="session-complete" style="display:block;">
+          <div style="font-size:3rem;margin-bottom:1rem;">&#127881;</div>
+          <h2>All caught up!</h2>
+          <p>No cards are due for review right now. Come back tomorrow, or add more cards to your deck to keep practising.</p>
+          <button class="btn-primary" onclick="switchTab('add', document.querySelectorAll('.tab-btn')[2])">Add more cards</button>
+          <a href="daily-argument.html" class="btn-secondary">Today's argument</a>
+        </div>
+      </div>
+
+      <div id="study-active">
+        <!-- Progress -->
+        <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progress-fill" style="width:0%;"></div></div>
+        <div class="progress-text" id="progress-text">0 / 0 reviewed</div>
+
+        <!-- Card -->
+        <div class="card-wrap">
+          <div class="card-inner" id="card-inner" onclick="flipCard()">
+            <div class="card-face card-front">
+              <div class="card-category" id="card-cat">Category</div>
+              <div class="card-label">Question</div>
+              <div class="card-text" id="card-front-text">Loading...</div>
+              <div class="card-hint">Tap to reveal answer</div>
+            </div>
+            <div class="card-face card-back">
+              <div class="card-label">Answer</div>
+              <div class="card-back-title" id="card-back-title"></div>
+              <div class="card-back-answer" id="card-back-text">Loading...</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rating (shown after flip) -->
+        <div id="rating-section" style="display:none;">
+          <div class="rating-row">
+            <button class="rating-btn hard" onclick="rateCard(1)">&#128547; Hard<br><small style="font-weight:400;font-size:0.7rem;">Review soon</small></button>
+            <button class="rating-btn good" onclick="rateCard(3)">&#128512; Good<br><small style="font-weight:400;font-size:0.7rem;">Review in days</small></button>
+            <button class="rating-btn easy" onclick="rateCard(5)">&#129321; Easy<br><small style="font-weight:400;font-size:0.7rem;">Review in weeks</small></button>
+          </div>
+          <div class="rating-note">Be honest — this trains the algorithm to show you what you actually need</div>
+        </div>
+      </div>
+
+      <div class="session-complete" id="session-complete">
+        <div style="font-size:3rem;margin-bottom:1rem;">&#9989;</div>
+        <h2>Session complete!</h2>
+        <p id="session-summary">Well done. Your cards have been scheduled for review based on how you rated them.</p>
+        <button class="btn-primary" onclick="startSession()">Review again</button>
+        <a href="daily-argument.html" class="btn-secondary">Today's argument</a>
+      </div>
+    </div>
+
+    <!-- DECK TAB -->
+    <div class="study-panel" id="tab-deck">
+      <div class="deck-header">
+        <h2>My Cards</h2>
+        <button class="btn-primary" style="font-size:0.78rem;padding:8px 16px;" onclick="switchTab('add', document.querySelectorAll('.tab-btn')[2])">+ Add cards</button>
+      </div>
+      <div id="deck-content">
+        <div class="deck-empty">
+          <p>You haven't added any flashcards yet.<br>Go to the Add Cards tab to build your deck from the Evidence Library arguments.</p>
+          <button class="btn-primary" onclick="switchTab('add', document.querySelectorAll('.tab-btn')[2])">Add your first cards</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD CARDS TAB -->
+    <div class="study-panel add-panel" id="tab-add">
+      <p class="section-title">God's Existence</p>
+      <div class="arg-grid" id="grid-existence"></div>
+      <p class="section-title">The Resurrection</p>
+      <div class="arg-grid" id="grid-resurrection"></div>
+      <p class="section-title">Jesus</p>
+      <div class="arg-grid" id="grid-jesus"></div>
+      <p class="section-title">Biblical Reliability</p>
+      <div class="arg-grid" id="grid-bible"></div>
+      <p class="section-title">Science &amp; Faith</p>
+      <div class="arg-grid" id="grid-science"></div>
+      <p class="section-title">Islam</p>
+      <div class="arg-grid" id="grid-islam"></div>
+    </div>
+
+  </div>
+
+  <div id="auth-wall" style="display:none;max-width:900px;margin:3rem auto;padding:0 2rem;">
+    <div class="auth-prompt">
+      <h2>Sign in to access your flashcard deck</h2>
+      <p>Your deck, progress, and spaced repetition schedule are saved to your account. Create a free account to get started.</p>
+      <a href="signup.html" class="btn-primary" style="margin-right:0.75rem;">Create free account</a>
+      <a href="login.html" class="btn-secondary">Sign in</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+  var sb = null;
+  var currentUser = null;
+  var deck = [];
+  var dueCards = [];
+  var sessionIdx = 0;
+  var sessionReviewed = 0;
+  var sessionTotal = 0;
+  var cardFlipped = false;
+
+  // ── ALL ARGUMENT CARDS AVAILABLE ──
+  var ALL_ARGS = [
+    // Existence
+    {id:'kalam',title:'The Kalam Cosmological Argument',cat:'existence',catLabel:"God's Existence",front:'State the three premises of the Kalam argument in order.',back:'1. Everything that begins to exist has a cause\n2. The universe began to exist (confirmed by the Big Bang)\n3. Therefore the universe has a cause\n\nThe cause must be spaceless, timeless, immaterial, and powerful — matching the classical description of God.'},
+    {id:'finetuning',title:'The Fine-Tuning Argument',cat:'existence',catLabel:"God's Existence",front:'What is the fine-tuning argument and what is the key statistic?',back:'The physical constants of the universe are calibrated to extraordinary precision for life to exist.\n\nThe cosmological constant is fine-tuned to 1 part in 10^120. The three explanations are chance, necessity, or design. Design is the most reasonable inference.'},
+    {id:'moral',title:'The Moral Argument',cat:'existence',catLabel:"God's Existence",front:'State the moral argument in premise form.',back:'P1: If God does not exist, objective moral values do not exist\nP2: Objective moral values DO exist (the Holocaust was objectively evil)\nC: Therefore God exists\n\nObjective morality requires an objective foundation that transcends human opinion.'},
+    {id:'consciousness',title:'The Argument from Consciousness',cat:'existence',catLabel:"God's Existence",front:'What is the hard problem of consciousness and why does it point to God?',back:'The hard problem: why does it feel like something to experience red, music, or grief? No physical description of brain states captures subjective experience.\n\nNaturalism cannot explain consciousness. Theism predicts it — a universe created by a personal mind would contain personal minds.'},
+    {id:'reason',title:'The Argument from Reason',cat:'existence',catLabel:"God's Existence",front:"What is C.S. Lewis's argument from reason?",back:"If naturalism is true, our thoughts are the product of blind physical processes — not truth-tracking faculties. But if we can't trust our reasoning, we can't trust the reasoning that leads us to naturalism.\n\nNaturalism defeats itself. Theism grounds rational thought."},
+    // Resurrection
+    {id:'minimal',title:'The Minimal Facts Argument',cat:'resurrection',catLabel:'The Resurrection',front:'Name the 5 minimal facts accepted by virtually all critical scholars.',back:'1. Jesus died by crucifixion\n2. The tomb was empty\n3. Disciples genuinely believed they saw the risen Jesus\n4. Paul converted after an appearance\n5. James (sceptical brother) converted after an appearance\n\nThe resurrection explains all 5. No alternative does.'},
+    {id:'emptytomb',title:'The Empty Tomb',cat:'resurrection',catLabel:'The Resurrection',front:"Why is the Jewish authorities' response to the resurrection actually evidence FOR the empty tomb?",back:"They said the disciples stole the body — this response CONFIRMS the tomb was empty.\n\nThey disputed the EXPLANATION (theft) not the empty tomb itself. No first-century source ever claimed the tomb still contained a body. Enemies had every motive to produce it."},
+    {id:'paulconv',title:'The Early Creed of 1 Corinthians 15',cat:'resurrection',catLabel:'The Resurrection',front:'Why is the 1 Corinthians 15 creed significant for the resurrection?',back:'Dated by scholars to within 2-5 years of the crucifixion — living memory, not legend.\n\nPaul personally met Peter and James (key eyewitnesses). 500 witnesses cited while still alive to verify. The creed was already established tradition when Paul received it.'},
+    // Jesus
+    {id:'trilemma',title:"Lord, Liar, or Lunatic",cat:'jesus',catLabel:'Jesus',front:"State C.S. Lewis's trilemma. Which option do most people try to choose and why is it unavailable?",back:"Jesus was either Lord (telling the truth), Liar (deliberately deceiving), or Lunatic (genuinely deluded).\n\nPeople say 'great moral teacher' — but this is unavailable. Jesus claimed to forgive sins, used the divine name I AM, accepted worship. A great moral teacher does not say these things unless they are true."},
+    {id:'divinity',title:'The Divine Christology of Paul',cat:'jesus',catLabel:'Jesus',front:'Why is the Philippians 2 hymn significant for the deity of Christ?',back:"Dated within 15 years of the crucifixion — it describes Jesus as being 'in the form of God' before incarnation.\n\nJewish monotheists who understood worshipping anyone other than God was blasphemy began worshipping Jesus immediately after the resurrection. No gradual legend — divine Christology was there from the start."},
+    // Bible
+    {id:'manuscript',title:'The Manuscript Evidence',cat:'bible',catLabel:'Biblical Reliability',front:'Give the manuscript comparison numbers for the New Testament vs ancient authors.',back:'New Testament: 5,800+ Greek manuscripts\nPlato: 7 manuscripts\nCaesar: 10 manuscripts\nTacitus: 20 manuscripts\n\nNT gap to earliest manuscript: 25-50 years. Plato: 1,200 years. No historian questions whether we have Plato\'s actual words.'},
+    {id:'deadseascrolls',title:'The Dead Sea Scrolls',cat:'bible',catLabel:'Biblical Reliability',front:'Why do the Dead Sea Scrolls matter for Christian apologetics?',back:'They include a complete Isaiah scroll dated to 125 BC — virtually identical to medieval manuscripts 1,000 years later.\n\nThis eliminates the theory that Christians altered OT prophecies. Isaiah 53 was written before Jesus was born and describes crucifixion, burial with the rich, and resurrection in detail.'},
+    {id:'archaeology',title:'Archaeology Confirms the Bible',cat:'bible',catLabel:'Biblical Reliability',front:'Name three archaeological discoveries that confirm the historical accuracy of the Bible.',back:"1. Pilate Stone (1961) — confirms Pontius Pilate's existence and title\n2. Pool of Siloam (2004) — confirms John 9 location\n3. Tel Dan Stele (1993) — confirms the House of David\n\nArchaeologist William Albright: 'There can be no doubt that archaeology has confirmed the substantial historicity of the Old Testament.'"},
+    // Science
+    {id:'bigbang',title:'The Big Bang and Genesis',cat:'science',catLabel:'Science & Faith',front:"Why does the Big Bang actually support Genesis 1:1 rather than undermine it?",back:"The Big Bang confirms the universe had a beginning — exactly what Genesis 1:1 has always claimed.\n\nGeorges Lemaitre (Catholic priest) proposed the theory. A universe with a beginning requires a cause outside space, time, and matter — consistent with classical theism. Atheists initially resisted the Big Bang because of its theological implications."},
+    {id:'dna',title:'DNA and the Information Argument',cat:'science',catLabel:'Science & Faith',front:'What is the information argument from DNA?',back:"DNA contains 3.2 billion base pairs of specified, functional information — like a language.\n\nAll known sources of complex specified information are minds. Matter alone does not generate information. Francis Collins: DNA is the language in which God spoke life into being.\n\nThe origin of biological information points to a designing mind."},
+    // Islam
+    {id:'islamic_dilemma',title:'The Islamic Dilemma',cat:'islam',catLabel:'Islam',front:'State the Islamic dilemma and name two Surahs that confirm the Bible.',back:"The Quran endorses the Bible as divine revelation — if the Bible is corrupted, the Quran endorsed corrupted scripture.\n\nSurah 5:46-47: Allah gave the Gospel as guidance and light, commands Christians to judge by it.\nSurah 10:94: Muhammad told to consult the Bible when in doubt.\n\nThe Quran never uses 'tahrif' about the biblical text."},
+    {id:'jesus_quran',title:'Jesus in the Quran',cat:'islam',catLabel:'Islam',front:"What unique titles does the Quran give Jesus that it does not give Muhammad?",back:"1. Kalimatullah — Word of God (Surah 3:45, 4:171)\n2. Ruh min Allah — Spirit from God (Surah 4:171)\n3. Al-Masih — The Messiah (11 times)\n\nJesus is also: born of a virgin, worker of miracles including raising the dead, and predicts his own death and resurrection (Surah 19:33). No other prophet receives these titles."},
+  ];
+
+  function initSb() {
+    if (window.supabase && window.supabase.createClient) {
+      sb = window.supabase.createClient(
+        'https://noprgxkwniouukmrfozc.supabase.co',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+      );
+      init();
+    } else { setTimeout(initSb, 50); }
+  }
+  document.addEventListener('DOMContentLoaded', initSb);
+
+  async function navAuth() {
+    try {
+      var r = await sb.auth.getSession(); var s = r.data && r.data.session;
+      if (s) {
+        var name = (s.user.user_metadata && s.user.user_metadata.full_name) || s.user.email.split('@')[0];
+        var nu=document.getElementById('nav-user'),ns=document.getElementById('nav-signout'),ni=document.getElementById('nav-signin'),nc=document.getElementById('nav-cta'),nd=document.getElementById('nav-dashboard');
+        if(nu)nu.textContent=name;if(ns)ns.style.display='inline-block';if(ni)ni.style.display='none';if(nc)nc.style.display='none';if(nd)nd.style.display='inline-block';
+      }
+    } catch(e){}
+  }
+  async function signOut(){try{await sb.auth.signOut();}catch(e){}window.location.href='index.html';}
+
+  async function init() {
+    navAuth();
+    try {
+      var r = await sb.auth.getSession();
+      if (!r.data || !r.data.session) {
+        document.getElementById('auth-wall').style.display = 'block';
+        return;
+      }
+      currentUser = r.data.session.user;
+      document.getElementById('main-content').style.display = 'block';
+      await loadDeck();
+      renderAddGrid();
+    } catch(e) {
+      document.getElementById('auth-wall').style.display = 'block';
+    }
+  }
+
+  async function loadDeck() {
+    try {
+      var today = new Date().toISOString().split('T')[0];
+      var r = await sb.from('flashcards').select('*').eq('user_id', currentUser.id).order('next_review');
+      if (r.data) {
+        deck = r.data;
+        dueCards = deck.filter(function(c){ return c.next_review <= today; });
+        var mastered = deck.filter(function(c){ return c.reps >= 3 && c.interval >= 7; });
+        document.getElementById('st-due').textContent = dueCards.length;
+        document.getElementById('st-total').textContent = deck.length;
+        document.getElementById('st-mastered').textContent = mastered.length;
+        renderDeck();
+        if (dueCards.length > 0) startSession(); else showEmpty();
+      }
+    } catch(e) { console.warn('Failed to load deck', e); }
+  }
+
+  function showEmpty() {
+    document.getElementById('study-empty').style.display = 'block';
+    document.getElementById('study-active').style.display = 'none';
+    document.getElementById('session-complete').style.display = 'none';
+  }
+
+  function startSession() {
+    if (dueCards.length === 0) { showEmpty(); return; }
+    sessionIdx = 0;
+    sessionReviewed = 0;
+    sessionTotal = dueCards.length;
+    document.getElementById('study-empty').style.display = 'none';
+    document.getElementById('study-active').style.display = 'block';
+    document.getElementById('session-complete').style.display = 'none';
+    showCard();
+  }
+
+  function showCard() {
+    if (sessionIdx >= dueCards.length) { endSession(); return; }
+    var card = dueCards[sessionIdx];
+    cardFlipped = false;
+    document.getElementById('card-inner').classList.remove('flipped');
+    document.getElementById('rating-section').style.display = 'none';
+    document.getElementById('card-cat').textContent = card.category;
+    document.getElementById('card-front-text').textContent = card.front;
+    document.getElementById('card-back-title').textContent = card.argument_title;
+    document.getElementById('card-back-text').textContent = card.back;
+    var pct = Math.round((sessionReviewed / sessionTotal) * 100);
+    document.getElementById('progress-fill').style.width = pct + '%';
+    document.getElementById('progress-text').textContent = sessionReviewed + ' / ' + sessionTotal + ' reviewed';
+  }
+
+  function flipCard() {
+    if (cardFlipped) return;
+    cardFlipped = true;
+    document.getElementById('card-inner').classList.add('flipped');
+    document.getElementById('rating-section').style.display = 'block';
+  }
+
+  async function rateCard(quality) {
+    var card = dueCards[sessionIdx];
+    // SM-2 spaced repetition algorithm
+    var ef = Math.max(1.3, (card.ease_factor || 2.5) + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02)));
+    var reps = quality >= 3 ? (card.reps || 0) + 1 : 0;
+    var interval;
+    if (quality < 3) { interval = 1; }
+    else if (reps === 1) { interval = 1; }
+    else if (reps === 2) { interval = 6; }
+    else { interval = Math.round((card.interval || 1) * ef); }
+    var nextDate = new Date();
+    nextDate.setDate(nextDate.getDate() + interval);
+    var next_review = nextDate.toISOString().split('T')[0];
+    try {
+      await sb.from('flashcards').update({
+        ease_factor: ef, reps: reps, interval: interval,
+        next_review: next_review, last_reviewed: new Date().toISOString()
+      }).eq('id', card.id);
+    } catch(e) { console.warn('Failed to update card', e); }
+    sessionIdx++;
+    sessionReviewed++;
+    showCard();
+  }
+
+  function endSession() {
+    document.getElementById('study-active').style.display = 'none';
+    document.getElementById('session-complete').style.display = 'block';
+    document.getElementById('session-summary').textContent =
+      'You reviewed ' + sessionTotal + ' card' + (sessionTotal !== 1 ? 's' : '') +
+      '. Your cards have been scheduled for review based on how you rated them. Hard cards come back tomorrow. Easy cards come back in weeks.';
+    // Reload deck to update due count
+    loadDeck();
+  }
+
+  function renderDeck() {
+    var el = document.getElementById('deck-content');
+    if (deck.length === 0) {
+      el.innerHTML = '<div class="deck-empty"><p>You haven\'t added any flashcards yet.<br>Go to the Add Cards tab to build your deck.</p><button class="btn-primary" onclick="switchTab(\'add\', document.querySelectorAll(\'.tab-btn\')[2])">Add your first cards</button></div>';
+      return;
+    }
+    var today = new Date().toISOString().split('T')[0];
+    el.innerHTML = '<div class="deck-list">' + deck.map(function(c) {
+      var due = c.next_review;
+      var badgeCls, badgeText;
+      if (due <= today) { badgeCls='badge-due'; badgeText='Due now'; }
+      else {
+        var days = Math.round((new Date(due) - new Date(today)) / 86400000);
+        if (days <= 3) { badgeCls='badge-soon'; badgeText='In ' + days + 'd'; }
+        else { badgeCls='badge-ok'; badgeText='In ' + days + 'd'; }
+      }
+      return '<div class="deck-item">' +
+        '<div class="deck-item-info"><div class="deck-item-title">' + c.argument_title + '</div>' +
+        '<div class="deck-item-meta">' + c.category + ' &middot; ' + (c.reps || 0) + ' reviews</div></div>' +
+        '<span class="deck-item-badge ' + badgeCls + '">' + badgeText + '</span>' +
+        '<button class="btn-delete" onclick="deleteCard(\'' + c.id + '\')" title="Remove">&#215;</button>' +
+        '</div>';
+    }).join('') + '</div>';
+  }
+
+  async function deleteCard(id) {
+    if (!confirm('Remove this card from your deck?')) return;
+    try { await sb.from('flashcards').delete().eq('id', id); await loadDeck(); renderAddGrid(); } catch(e) {}
+  }
+
+  function renderAddGrid() {
+    var cats = ['existence','resurrection','jesus','bible','science','islam'];
+    var addedIds = deck.map(function(c){ return c.argument_id; });
+    cats.forEach(function(cat) {
+      var grid = document.getElementById('grid-' + cat);
+      if (!grid) return;
+      var args = ALL_ARGS.filter(function(a){ return a.cat === cat; });
+      grid.innerHTML = args.map(function(a) {
+        var isAdded = addedIds.includes(a.id);
+        return '<div class="arg-card' + (isAdded ? ' added' : '') + '" onclick="toggleCard(\'' + a.id + '\')" id="argcard-' + a.id + '">' +
+          '<div class="arg-card-title">' + a.title + '</div>' +
+          '<div class="arg-card-cat">' + a.catLabel + '</div>' +
+          '<span class="arg-card-check">&#9989;</span>' +
+          '</div>';
+      }).join('');
+    });
+  }
+
+  var FREE_CARD_LIMIT = 10;
+
+  async function toggleCard(argId) {
+    var addedIds = deck.map(function(c){ return c.argument_id; });
+    var arg = ALL_ARGS.find(function(a){ return a.id === argId; });
+    if (!arg) return;
+    if (addedIds.includes(argId)) {
+      // Remove
+      var card = deck.find(function(c){ return c.argument_id === argId; });
+      if (card) { try { await sb.from('flashcards').delete().eq('id', card.id); } catch(e){} }
+    } else {
+      // Check free limit
+      var isPro = false; // replace with real Pro check when Stripe is live
+      if (!isPro && deck.length >= FREE_CARD_LIMIT) {
+        // Show upgrade prompt
+        var upgradeMsg = document.getElementById('upgrade-limit-msg');
+        if (!upgradeMsg) {
+          upgradeMsg = document.createElement('div');
+          upgradeMsg.id = 'upgrade-limit-msg';
+          upgradeMsg.style.cssText = 'position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:var(--n);border:1px solid rgba(200,169,81,0.4);border-radius:8px;padding:1.25rem 1.5rem;max-width:420px;width:90%;z-index:999;box-shadow:0 8px 32px rgba(0,0,0,0.3);';
+          upgradeMsg.innerHTML = '<div style="font-family:var(--fd);font-size:1rem;font-weight:700;color:#fff;margin-bottom:0.4rem;">Free deck limit reached</div>' +
+            '<div style="font-family:var(--ui);font-size:0.82rem;color:rgba(255,255,255,0.6);margin-bottom:1rem;line-height:1.6;">You have ' + FREE_CARD_LIMIT + ' cards — the free limit. Upgrade to Pro for an unlimited deck across all 61 arguments.</div>' +
+            '<div style="display:flex;gap:0.75rem;">' +
+            '<a href="index.html#pricing" style="font-family:var(--ui);font-size:0.82rem;font-weight:600;background:var(--g);color:var(--n);padding:8px 18px;border-radius:4px;text-decoration:none;">Upgrade to Pro</a>' +
+            '<button onclick="document.getElementById(\'upgrade-limit-msg\').remove()" style="font-family:var(--ui);font-size:0.82rem;background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.6);padding:8px 14px;border-radius:4px;cursor:pointer;">Dismiss</button>' +
+            '</div>';
+          document.body.appendChild(upgradeMsg);
+          setTimeout(function() { if (upgradeMsg.parentNode) upgradeMsg.remove(); }, 6000);
+        }
+        return;
+      }
+      // Add
+      try {
+        await sb.from('flashcards').insert({
+          user_id: currentUser.id, argument_id: arg.id,
+          argument_title: arg.title, category: arg.catLabel,
+          front: arg.front, back: arg.back,
+          interval: 1, ease_factor: 2.5, reps: 0,
+          next_review: new Date().toISOString().split('T')[0]
+        });
+      } catch(e){ console.warn('Failed to add card', e); }
+    }
+    await loadDeck(); renderAddGrid();
+  }
+
+  function switchTab(name, btn) {
+    document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+    document.querySelectorAll('.study-panel').forEach(function(p){ p.classList.remove('active'); });
+    btn.classList.add('active');
+    document.getElementById('tab-' + name).classList.add('active');
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explain It Back — Apologia Daily</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root{--n:#050d1a;--n8:#0a1628;--n7:#0f2040;--n5:#1e4278;--n3:#4a7ab5;--g:#c8a951;--gl:#d4b96a;--gd:#a88930;--w:#fff;--ow:#f7f4ef;--border:#e8e2d8;--tm:#3a4a62;--td:#0f1f38;--fd:'Playfair Display',Georgia,serif;--ss:'Source Serif 4',Georgia,serif;--ui:'DM Sans',system-ui,sans-serif;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--ss);background:var(--ow);color:var(--td);min-height:100vh;}
+    nav{background:var(--n);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:58px;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .nav-logo{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:var(--w);text-decoration:none;}.nav-logo span{color:var(--g);}
+    .nav-links{display:flex;list-style:none;}.nav-links a{font-family:var(--ui);font-size:0.78rem;color:rgba(255,255,255,0.55);text-decoration:none;padding:0 0.8rem;line-height:58px;}
+    .nav-right{display:flex;align-items:center;gap:10px;}
+    .nav-user{font-family:var(--ui);font-size:0.82rem;color:rgba(255,255,255,0.65);}
+    .nav-dashboard{font-family:var(--ui);font-size:0.8rem;color:rgba(255,255,255,0.65);text-decoration:none;border:1px solid rgba(255,255,255,0.2);padding:5px 12px;border-radius:3px;display:none;}
+    .nav-signout{font-family:var(--ui);font-size:0.78rem;background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.6);padding:5px 12px;border-radius:3px;cursor:pointer;display:none;}
+    .nav-signin{font-family:var(--ui);font-size:0.85rem;color:rgba(255,255,255,0.6);text-decoration:none;}
+    .nav-cta{font-family:var(--ui);font-size:0.78rem;font-weight:500;background:var(--g);color:var(--n);padding:6px 16px;border-radius:3px;text-decoration:none;}
+
+    .hero{background:var(--n);padding:2.5rem 2rem 2rem;}
+    .hero-inner{max-width:860px;margin:0 auto;}
+    .eyebrow{font-family:var(--ui);font-size:0.7rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--g);margin-bottom:0.5rem;}
+    .hero h1{font-family:var(--fd);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--w);margin-bottom:0.5rem;}
+    .hero p{font-size:0.9rem;color:rgba(255,255,255,0.55);max-width:540px;line-height:1.8;}
+
+    .main{max-width:860px;margin:0 auto;padding:2rem;}
+
+    /* HOW IT WORKS */
+    .how-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.5rem;}
+    .how-card{background:var(--w);border:1px solid var(--border);border-radius:6px;padding:1.25rem;}
+    .how-num{font-family:var(--fd);font-size:1.8rem;font-weight:700;color:var(--g);margin-bottom:0.5rem;}
+    .how-title{font-family:var(--ui);font-size:0.82rem;font-weight:600;color:var(--td);margin-bottom:0.35rem;}
+    .how-desc{font-family:var(--ui);font-size:0.78rem;color:var(--tm);line-height:1.6;}
+    @media(max-width:600px){.how-row{grid-template-columns:1fr;}}
+
+    /* ARGUMENT SELECTOR */
+    .selector-wrap{background:var(--w);border:1px solid var(--border);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;}
+    .selector-label{font-family:var(--ui);font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--tm);margin-bottom:0.75rem;}
+    .arg-select{width:100%;font-family:var(--ui);font-size:0.9rem;color:var(--td);background:var(--ow);border:1px solid var(--border);border-radius:4px;padding:10px 14px;outline:none;cursor:pointer;}
+
+    /* ARGUMENT BRIEF */
+    .arg-brief{background:var(--n8);border:1px solid rgba(200,169,81,0.2);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;display:none;}
+    .brief-title{font-family:var(--fd);font-size:1.1rem;font-weight:700;color:var(--w);margin-bottom:0.75rem;}
+    .brief-label{font-family:var(--ui);font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--g);margin-bottom:0.4rem;}
+    .brief-premises{list-style:none;margin-bottom:1rem;}
+    .brief-premises li{font-family:var(--ss);font-size:0.85rem;color:rgba(255,255,255,0.75);padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .brief-premises li::before{content:'P' counter(item) '. ';counter-increment:item;color:var(--g);}
+    .brief-premises{counter-reset:item;}
+    .brief-evidence{font-family:var(--ss);font-size:0.82rem;color:rgba(255,255,255,0.6);line-height:1.7;}
+
+    /* EXPLANATION BOX */
+    .explain-wrap{background:var(--w);border:1px solid var(--border);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;}
+    .explain-label{font-family:var(--ui);font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--tm);margin-bottom:0.75rem;}
+    .explain-prompt{font-family:var(--ss);font-size:0.9rem;color:var(--tm);margin-bottom:1rem;line-height:1.7;font-style:italic;padding:0.75rem 1rem;background:var(--ow);border-radius:4px;border-left:3px solid var(--g);}
+    textarea.explain-input{width:100%;font-family:var(--ss);font-size:0.92rem;color:var(--td);background:var(--ow);border:1px solid var(--border);border-radius:4px;padding:14px 16px;outline:none;resize:vertical;min-height:180px;line-height:1.8;transition:border 0.15s;}
+    textarea.explain-input:focus{border-color:var(--n3);}
+    .word-count{font-family:var(--ui);font-size:0.72rem;color:var(--tm);text-align:right;margin-top:4px;}
+    .btn-submit{font-family:var(--ui);font-size:0.88rem;font-weight:600;background:var(--g);color:var(--n);border:none;border-radius:4px;padding:12px 28px;cursor:pointer;margin-top:1rem;transition:background 0.15s;width:100%;}
+    .btn-submit:hover{background:var(--gl);}
+    .btn-submit:disabled{background:var(--border);color:var(--tm);cursor:not-allowed;}
+
+    /* FEEDBACK */
+    .feedback-wrap{background:var(--w);border:1px solid var(--border);border-radius:8px;padding:1.5rem;display:none;}
+    .feedback-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;flex-wrap:wrap;gap:0.75rem;}
+    .feedback-title{font-family:var(--fd);font-size:1.1rem;font-weight:700;color:var(--td);}
+    .score-badge{font-family:var(--fd);font-size:1.6rem;font-weight:700;padding:6px 18px;border-radius:6px;}
+    .score-badge.excellent{background:#DCFCE7;color:#166534;}
+    .score-badge.good{background:#DBEAFE;color:#1E40AF;}
+    .score-badge.ok{background:#FEF3C7;color:#92400E;}
+    .score-badge.poor{background:#FEE2E2;color:#991B1B;}
+
+    .feedback-section{margin-bottom:1.25rem;}
+    .fb-label{font-family:var(--ui);font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--tm);margin-bottom:0.5rem;}
+    .fb-text{font-family:var(--ss);font-size:0.9rem;color:var(--td);line-height:1.8;}
+
+    .strength-list,.improve-list{list-style:none;padding:0;}
+    .strength-list li{padding:6px 0 6px 1.5rem;position:relative;font-family:var(--ss);font-size:0.88rem;color:var(--td);line-height:1.6;}
+    .strength-list li::before{content:'✓';position:absolute;left:0;color:#166534;font-weight:700;}
+    .improve-list li::before{content:'→';position:absolute;left:0;color:var(--n5);}
+
+    .model-answer{background:var(--ow);border:1px solid var(--border);border-radius:4px;padding:1rem 1.25rem;font-family:var(--ss);font-size:0.88rem;color:var(--tm);line-height:1.8;}
+
+    .btn-try-again{font-family:var(--ui);font-size:0.85rem;font-weight:600;background:none;color:var(--n5);border:1px solid var(--n3);border-radius:4px;padding:10px 24px;cursor:pointer;margin-top:0.75rem;margin-right:0.75rem;transition:all 0.15s;}
+    .btn-try-again:hover{background:var(--n5);color:var(--w);}
+    .btn-next{font-family:var(--ui);font-size:0.85rem;font-weight:600;background:var(--g);color:var(--n);border:none;border-radius:4px;padding:10px 24px;cursor:pointer;margin-top:0.75rem;transition:background 0.15s;}
+    .btn-next:hover{background:var(--gl);}
+
+    /* HISTORY */
+    .history-section{margin-top:2.5rem;}
+    .history-title{font-family:var(--ui);font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--tm);margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);}
+    .history-list{display:flex;flex-direction:column;gap:8px;}
+    .history-item{background:var(--w);border:1px solid var(--border);border-radius:6px;padding:0.875rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+    .hi-title{font-family:var(--ui);font-size:0.85rem;font-weight:500;color:var(--td);}
+    .hi-meta{font-family:var(--ui);font-size:0.72rem;color:var(--tm);margin-top:2px;}
+    .hi-score{font-family:var(--fd);font-size:1.1rem;font-weight:700;}
+    .hi-score.hi-ex{color:#166534;} .hi-score.hi-gd{color:#1E40AF;} .hi-score.hi-ok{color:#92400E;} .hi-score.hi-pr{color:#991B1B;}
+
+    .loading-dots{display:inline-flex;gap:4px;align-items:center;}
+    .loading-dots span{width:6px;height:6px;border-radius:50%;background:var(--n5);animation:dot-bounce 1.2s infinite;}
+    .loading-dots span:nth-child(2){animation-delay:0.2s;}
+    .loading-dots span:nth-child(3){animation-delay:0.4s;}
+    @keyframes dot-bounce{0%,80%,100%{transform:translateY(0);}40%{transform:translateY(-8px);}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
+    <ul class="nav-links">
+      <li><a href="evidence-library.html">Evidence Library</a></li>
+      <li><a href="daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="debate-arena.html">Debate Arena</a></li>
+      <li><a href="ask-anything.html">Ask Anything</a></li>
+      <li><a href="worldviews.html">Worldviews</a></li>
+      <li><a href="study-plans.html">Study Plans</a></li>
+      <li><a href="video-library.html">Videos</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="whats-new.html">What's New</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="dashboard.html" class="nav-dashboard" id="nav-dashboard">Dashboard</a>
+      <span class="nav-user" id="nav-user"></span>
+      <button class="nav-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
+      <a href="login.html" class="nav-signin" id="nav-signin">Sign in</a>
+      <a href="signup.html" class="nav-cta" id="nav-cta">Start Free</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Active Recall Training</p>
+      <h1>Explain It Back</h1>
+      <p>Choose an argument, read the brief, then explain it in your own words as if talking to a friend. The AI tutor reads your explanation and tells you exactly what you got right, what you missed, and how to say it more clearly.</p>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- HOW IT WORKS -->
+    <div class="how-row">
+      <div class="how-card"><div class="how-num">1</div><div class="how-title">Read the brief</div><div class="how-desc">A quick reminder of the argument structure and key evidence — then close it.</div></div>
+      <div class="how-card"><div class="how-num">2</div><div class="how-title">Explain it yourself</div><div class="how-desc">Write out the argument in plain English as if explaining to a sceptical friend. No peeking.</div></div>
+      <div class="how-card"><div class="how-num">3</div><div class="how-title">Get AI feedback</div><div class="how-desc">The AI tutor scores your explanation, highlights strengths, and shows you what to improve.</div></div>
+    </div>
+
+    <!-- ARGUMENT SELECTOR -->
+    <div class="selector-wrap">
+      <div class="selector-label">Choose an argument to practise</div>
+      <select class="arg-select" id="arg-select" onchange="onArgChange()">
+        <option value="">-- Select an argument --</option>
+        <optgroup label="God's Existence">
+          <option value="kalam">The Kalam Cosmological Argument</option>
+          <option value="finetuning">The Fine-Tuning Argument</option>
+          <option value="moral">The Moral Argument</option>
+          <option value="consciousness">The Argument from Consciousness</option>
+        </optgroup>
+        <optgroup label="The Resurrection">
+          <option value="minimal">The Minimal Facts Argument</option>
+          <option value="emptytomb">The Empty Tomb</option>
+          <option value="paul_creed">The Early Creed of 1 Corinthians 15</option>
+        </optgroup>
+        <optgroup label="Jesus">
+          <option value="trilemma">Lord, Liar, or Lunatic</option>
+          <option value="divinity">The Divine Christology of Paul</option>
+        </optgroup>
+        <optgroup label="Biblical Reliability">
+          <option value="manuscript">The Manuscript Evidence</option>
+          <option value="deadseascrolls">The Dead Sea Scrolls</option>
+        </optgroup>
+        <optgroup label="Islam">
+          <option value="islamic_dilemma">The Islamic Dilemma</option>
+          <option value="jesus_quran">Jesus in the Quran</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <!-- ARGUMENT BRIEF -->
+    <div class="arg-brief" id="arg-brief">
+      <div class="brief-title" id="brief-title"></div>
+      <div class="brief-label">Core premises</div>
+      <ul class="brief-premises" id="brief-premises"></ul>
+      <div class="brief-label">Key evidence</div>
+      <div class="brief-evidence" id="brief-evidence"></div>
+    </div>
+
+    <!-- EXPLAIN INPUT -->
+    <div class="explain-wrap" id="explain-wrap" style="display:none;">
+      <div class="explain-label">Your explanation</div>
+      <div class="explain-prompt" id="explain-prompt"></div>
+      <textarea class="explain-input" id="explain-input" placeholder="Explain the argument in your own words, as if talking to a sceptical friend over coffee. Aim for 80-200 words..." oninput="updateWordCount()" onkeydown="if(event.key==='Enter'&&event.metaKey)submitExplanation()"></textarea>
+      <div class="word-count" id="word-count">0 words</div>
+      <button class="btn-submit" id="btn-submit" onclick="submitExplanation()">Submit for feedback</button>
+    </div>
+
+    <!-- FEEDBACK -->
+    <div class="feedback-wrap" id="feedback-wrap">
+      <div class="feedback-header">
+        <div class="feedback-title">AI Tutor Feedback</div>
+        <div class="score-badge" id="score-badge"></div>
+      </div>
+      <div class="feedback-section">
+        <div class="fb-label">What you got right</div>
+        <ul class="strength-list" id="fb-strengths"></ul>
+      </div>
+      <div class="feedback-section">
+        <div class="fb-label">What to improve</div>
+        <ul class="improve-list strength-list" id="fb-improve"></ul>
+      </div>
+      <div class="feedback-section">
+        <div class="fb-label">How a pro apologist would say it</div>
+        <div class="model-answer" id="fb-model"></div>
+      </div>
+      <div>
+        <button class="btn-try-again" onclick="tryAgain()">Try again</button>
+        <button class="btn-next" onclick="nextArgument()">Next argument &rarr;</button>
+      </div>
+    </div>
+
+    <!-- HISTORY -->
+    <div class="history-section" id="history-section" style="display:none;">
+      <div class="history-title">Your practice history</div>
+      <div class="history-list" id="history-list"></div>
+    </div>
+  </div>
+
+  <!-- ARG DATA -->
+  <script>
+  var ARGS = {
+    kalam:{title:'The Kalam Cosmological Argument',premises:['Everything that begins to exist has a cause','The universe began to exist (confirmed by the Big Bang and the second law of thermodynamics)','Therefore the universe has a cause'],evidence:'The Big Bang confirms the universe had a beginning ~13.8 billion years ago. The cause must be spaceless (outside space), timeless (before time), immaterial (non-physical), and immensely powerful. Only a personal agent — one who can choose to act — explains why the universe began at a specific moment rather than never.',prompt:'Explain the Kalam argument to a sceptical friend who just asked "What caused the Big Bang?" Include the three premises and at least one reason why the cause must be personal.'},
+    finetuning:{title:'The Fine-Tuning Argument',premises:['The universe is fine-tuned for life — over 30 physical constants must fall in a narrow life-permitting range','This fine-tuning is either due to chance, physical necessity, or design','Chance and necessity are inadequate explanations — design is the most reasonable inference'],evidence:"The cosmological constant is fine-tuned to 1 part in 10^120. Change it slightly and no stars, no planets, no chemistry, no life. Physicist Paul Davies calls the precision 'so extreme it cannot plausibly be a coincidence.' The three possible explanations each have weaknesses except design.",prompt:"Your friend says 'The universe just happened to be right for life by chance.' Explain the fine-tuning argument and why chance is an inadequate explanation."},
+    moral:{title:'The Moral Argument',premises:['If God does not exist, objective moral values do not exist','Objective moral values do exist — some things are genuinely evil, not merely unpopular','Therefore God exists'],evidence:'The Holocaust was objectively evil — not just something most people disliked. This intuition is so strong that we hold war criminals responsible regardless of their culture or beliefs. Objective morality requires a standard that transcends human opinion, culture, and evolution. God provides that standard.',prompt:"Your friend says 'Morality is just a matter of opinion — different cultures have different values.' Use the moral argument to show why some things are objectively wrong regardless of opinion."},
+    consciousness:{title:'The Argument from Consciousness',premises:['If naturalism is true, all that exists is physical matter — consciousness should be reducible to brain states','Consciousness (subjective experience) cannot be fully explained by physical processes','Therefore naturalism is false and a non-physical mind is the best explanation'],evidence:"The 'hard problem of consciousness': why does it feel like something to see red or feel grief? No description of neurons firing captures the subjective quality of experience. J.P. Moreland argues consciousness is the greatest evidence for God — a universe created by a personal mind would naturally contain personal minds.",prompt:"Explain what the 'hard problem of consciousness' is and why it points toward God rather than materialism."},
+    minimal:{title:'The Minimal Facts Argument',premises:['Five facts are accepted by virtually all critical scholars regardless of theological position','The resurrection hypothesis explains all five facts better than any alternative','Therefore the resurrection of Jesus is the most historically credible explanation'],evidence:"The five facts: (1) death by crucifixion, (2) empty tomb (enemies never disputed it, only explained it away), (3) disciples genuinely believed they saw the risen Jesus, (4) Paul's conversion after an appearance, (5) James's conversion after an appearance. Gary Habermas has surveyed 3,400+ scholarly sources on this.",prompt:"State all five minimal facts from memory. Then explain why the resurrection hypothesis is stronger than the three main alternatives: hallucination theory, stolen body theory, and mass delusion."},
+    emptytomb:{title:'The Empty Tomb',premises:["The Jewish authorities responded to the resurrection claim by saying the disciples stole the body","This response confirms the tomb was empty — they disputed the explanation, not the empty tomb","No first-century hostile source ever claimed the tomb still contained a body"],evidence:"Matthew 28:11-15 records the bribed guard account — confirming the authorities knew the tomb was empty. They had every motive to produce a body to end Christianity instantly. The fact they never did, and instead invented a theft narrative, is strong evidence the tomb was genuinely empty.",prompt:"Explain why the way Jesus's enemies responded to the resurrection claim is actually EVIDENCE for the empty tomb. What does their denial confirm?"},
+    paul_creed:{title:'The Early Creed of 1 Corinthians 15',premises:['Paul received an early creed about the resurrection appearances','This creed is dated by scholars to within 2-5 years of the crucifixion — eyewitness era','Paul personally verified it with Peter and James, the key eyewitnesses'],evidence:"1 Cor 15:3-7: 'Christ died, was buried, was raised, appeared to Peter, then the twelve, then 500 at once (most still alive), then James, then Paul.' This is not legend — it predates the Gospels by decades and includes a challenge to verify with living witnesses.",prompt:"Why is the 1 Corinthians 15 creed so significant for establishing the resurrection? How does its early date matter and what does 'most still alive' mean for the argument?"},
+    trilemma:{title:'Lord, Liar, or Lunatic',premises:['Jesus claimed to be God — he forgave sins, accepted worship, used the divine name I AM','A man making these claims is either telling the truth, deliberately lying, or genuinely deluded','The evidence of his character, teaching, and resurrection rules out liar and lunatic'],evidence:"C.S. Lewis: 'A man who was merely a man and said the sort of things Jesus said would not be a great moral teacher... he would either be a lunatic — on the level with a man who says he is a poached egg — or else he would be the Devil of Hell.' The trilemma forces a choice.",prompt:"Your friend says 'Jesus was just a great moral teacher.' Use Lewis's trilemma to explain why this is the one option not available. Give one specific saying of Jesus that makes 'great teacher' impossible."},
+    divinity:{title:'The Divine Christology of Paul',premises:["Paul's letters contain hymns and creeds predating the Gospels that treat Jesus as divine","These were written by Jewish monotheists who understood worshipping anyone other than God was blasphemy","Divine Christology was present within 15 years of the crucifixion — not a later legend"],evidence:"Philippians 2:6-11 (dated within 15 years of crucifixion): Jesus was 'in the form of God,' 'equal with God,' and at his name 'every knee should bow.' This is the language used of God alone in Isaiah. Larry Hurtado: the explosive emergence of Christ-devotion among Jewish monotheists is the greatest historical puzzle of early Christianity.",prompt:"Explain why the Philippians 2 hymn is important evidence for the deity of Christ. When was it written and why does that matter?"},
+    manuscript:{title:'The Manuscript Evidence',premises:['The New Testament has 5,800+ Greek manuscripts — more than any other ancient document by a factor of hundreds','The gap between writing and earliest manuscript is 25-50 years for the NT — far shorter than any other ancient text','Textual variants between manuscripts are overwhelmingly trivial and no Christian doctrine is affected'],evidence:"Plato: 7 manuscripts, 1,200-year gap. Caesar: 10 manuscripts, 1,000-year gap. Tacitus: 20 manuscripts. Nobody questions whether we have Plato's actual words. The NT is better attested than any other ancient document by every measure.",prompt:"Your friend says 'The Bible has been changed over the centuries.' Use the manuscript evidence to respond. Include specific numbers for at least two ancient authors to make the comparison."},
+    deadseascrolls:{title:'The Dead Sea Scrolls',premises:['The Dead Sea Scrolls include a complete copy of Isaiah dated to 125 BC','This manuscript is virtually identical to medieval manuscripts 1,000 years later','This proves the Old Testament text was faithfully preserved and eliminates theories of Christian alteration'],evidence:"Isaiah 53 — the suffering servant prophecy — describes: someone 'pierced for our transgressions,' buried 'with the rich in his death,' and 'seeing his offspring' after death (resurrection). All written 700 years before Jesus. The DSS prove no Christian could have altered it.",prompt:"Why do the Dead Sea Scrolls matter specifically for Christian apologetics? What theory do they eliminate? Give two details from Isaiah 53 that match the crucifixion."},
+    islamic_dilemma:{title:'The Islamic Dilemma',premises:['The Quran repeatedly affirms the Torah and Gospel as authentic divine revelation','The Quran never says the biblical text was changed — only that some Jews misread or concealed it orally','Therefore Muslims cannot claim the Bible is corrupted without the Quran itself being wrong'],evidence:"Surah 5:46-47 commands Christians to judge by the Gospel Allah gave them. Surah 10:94 tells Muhammad to consult the Bible when in doubt. If the Bible was corrupted, Allah directed his prophet to consult corrupted guidance. The tahrif (corruption) claim is later Islamic tradition with no Quranic support.",prompt:"Explain the Islamic dilemma in your own words. Quote or reference one specific Surah that shows the Quran affirming the Bible. How do you respond to the tahrif objection?"},
+    jesus_quran:{title:'Jesus in the Quran',premises:['The Quran gives Jesus titles and attributes given to no other prophet including Muhammad','These titles — Word of God, Spirit from God, Messiah — point toward unique divine status','The Quran raises the question of who Jesus is but does not fully answer it — the New Testament does'],evidence:"Surah 4:171: Jesus is 'His Word which He directed to Mary and a Spirit from Him.' No other prophet receives this language. Surah 3:45: Jesus is the Messiah. Surah 19:33: Jesus himself predicts his death and resurrection. The Quran gives Jesus more extraordinary attributes than Muhammad.",prompt:"What unique titles does the Quran give Jesus that it does not give Muhammad? Name at least two with their Surah references. Then explain what the 'Islamic dilemma' of these titles creates for the Muslim worldview."}
+  };
+
+  var currentArgId = null;
+  var sessionHistory = [];
+
+  var sb = null;
+  var currentUser = null;
+
+  function initSb(){
+    if(window.supabase&&window.supabase.createClient){
+      sb=window.supabase.createClient('https://noprgxkwniouukmrfozc.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw');
+      init();
+    } else {setTimeout(initSb,50);}
+  }
+  document.addEventListener('DOMContentLoaded',initSb);
+
+  async function navAuth(){
+    try{var r=await sb.auth.getSession();var s=r.data&&r.data.session;if(s){var name=(s.user.user_metadata&&s.user.user_metadata.full_name)||s.user.email.split('@')[0];var nu=document.getElementById('nav-user'),ns=document.getElementById('nav-signout'),ni=document.getElementById('nav-signin'),nc=document.getElementById('nav-cta'),nd=document.getElementById('nav-dashboard');if(nu)nu.textContent=name;if(ns)ns.style.display='inline-block';if(ni)ni.style.display='none';if(nc)nc.style.display='none';if(nd)nd.style.display='inline-block';}}catch(e){}
+  }
+  async function signOut(){try{await sb.auth.signOut();}catch(e){}window.location.href='index.html';}
+
+  async function init(){
+    navAuth();
+    try{var r=await sb.auth.getSession();if(r.data&&r.data.session)currentUser=r.data.session.user;}catch(e){}
+
+    // ── PRO GATE ──
+    var isPro = false; // replace with real Supabase Pro check when Stripe is live
+    if (!isPro) {
+      // Hide the main feature, show upgrade prompt
+      document.querySelector('.main').innerHTML = '<div style="max-width:560px;margin:0 auto;padding:3rem 1rem;text-align:center;">' +
+        '<div style="font-size:3rem;margin-bottom:1rem;">&#127891;</div>' +
+        '<div style="font-family:var(--fd);font-size:1.6rem;font-weight:700;color:var(--td);margin-bottom:0.75rem;">Explain It Back is a Pro feature</div>' +
+        '<div style="font-family:var(--ss);font-size:0.95rem;color:var(--tm);line-height:1.8;margin-bottom:2rem;max-width:420px;margin-left:auto;margin-right:auto;">' +
+        'This is the most direct path from reading an argument to being able to use it in real conversation. Write your explanation, and the AI tutor tells you exactly what you got right, what you missed, and how a pro apologist would say it.' +
+        '<br><br>Upgrade to Pro to unlock Explain It Back, unlimited AI debate practice, full Evidence Library deep dives, and more.' +
+        '</div>' +
+        '<a href="index.html#pricing" style="font-family:var(--ui);font-size:0.92rem;font-weight:600;background:var(--g);color:var(--n);padding:13px 32px;border-radius:4px;text-decoration:none;display:inline-block;margin-bottom:1rem;">Upgrade to Pro &mdash; $8/month</a>' +
+        '<br><a href="daily-argument.html" style="font-family:var(--ui);font-size:0.82rem;color:var(--n5);text-decoration:none;display:inline-block;margin-top:0.5rem;">Try Daily Argument instead (free) &rarr;</a>' +
+        '</div>';
+      return;
+    }
+
+    loadHistory();
+  }
+
+  function onArgChange(){
+    var sel=document.getElementById('arg-select');currentArgId=sel.value;
+    document.getElementById('feedback-wrap').style.display='none';
+    if(!currentArgId){document.getElementById('arg-brief').style.display='none';document.getElementById('explain-wrap').style.display='none';return;}
+    var arg=ARGS[currentArgId];if(!arg)return;
+    document.getElementById('brief-title').textContent=arg.title;
+    var ul=document.getElementById('brief-premises');ul.innerHTML=arg.premises.map(function(p){return'<li>'+p+'</li>';}).join('');
+    document.getElementById('brief-evidence').textContent=arg.evidence;
+    document.getElementById('arg-brief').style.display='block';
+    document.getElementById('explain-prompt').textContent=arg.prompt;
+    document.getElementById('explain-input').value='';
+    document.getElementById('word-count').textContent='0 words';
+    document.getElementById('btn-submit').disabled=false;
+    document.getElementById('btn-submit').textContent='Submit for feedback';
+    document.getElementById('explain-wrap').style.display='block';
+    document.getElementById('explain-input').focus();
+  }
+
+  function updateWordCount(){
+    var txt=document.getElementById('explain-input').value.trim();
+    var words=txt?txt.split(/\s+/).length:0;
+    document.getElementById('word-count').textContent=words+' word'+(words!==1?'s':'');
+  }
+
+  async function submitExplanation(){
+    var txt=document.getElementById('explain-input').value.trim();
+    if(!txt||txt.split(/\s+/).length<20){alert('Please write at least 20 words — the feedback works better with a full explanation.');return;}
+    var arg=ARGS[currentArgId];if(!arg)return;
+    var btn=document.getElementById('btn-submit');
+    btn.disabled=true;
+    btn.innerHTML='Getting feedback <span class="loading-dots"><span></span><span></span><span></span></span>';
+
+    try{
+      var res=await fetch('/api/tutor',{
+        method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+          question:'Please evaluate this student explanation of "'+arg.title+'". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n'+arg.premises.join('\n')+'\n\nSTUDENT EXPLANATION:\n'+txt+'\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"],"model_answer":"A clear 3-4 sentence explanation a good apologist would give"}',
+          argument:arg.title,category:'explain-it-back'
+        })
+      });
+      if(res.ok){
+        var data=await res.json();
+        var raw=data.answer||'';
+        // Parse JSON from AI response
+        var jsonMatch=raw.match(/\{[\s\S]*\}/);
+        if(jsonMatch){
+          try{
+            var fb=JSON.parse(jsonMatch[0]);
+            showFeedback(fb,txt);
+            if(currentUser){saveFeedback(fb,txt);}
+          }catch(e){showRawFeedback(raw);}
+        }else{showRawFeedback(raw);}
+      }else{btn.disabled=false;btn.textContent='Submit for feedback';}
+    }catch(e){btn.disabled=false;btn.textContent='Submit for feedback';alert('Something went wrong. Please try again.');}
+  }
+
+  function showFeedback(fb, userText){
+    var score=fb.score||5;
+    var badgeCls=score>=8?'excellent':score>=6?'good':score>=4?'ok':'poor';
+    var wrap=document.getElementById('feedback-wrap');
+    document.getElementById('score-badge').className='score-badge '+badgeCls;
+    document.getElementById('score-badge').textContent=score+'/10';
+    document.getElementById('fb-strengths').innerHTML=(fb.strengths||[]).map(function(s){return'<li>'+s+'</li>';}).join('');
+    document.getElementById('fb-improve').innerHTML=(fb.improvements||[]).map(function(s){return'<li>'+s+'</li>';}).join('');
+    document.getElementById('fb-model').textContent=fb.model_answer||'';
+    wrap.style.display='block';
+    wrap.scrollIntoView({behavior:'smooth',block:'start'});
+    sessionHistory.unshift({title:ARGS[currentArgId].title,score:score,time:new Date()});
+    renderHistory();
+  }
+
+  function showRawFeedback(raw){
+    var wrap=document.getElementById('feedback-wrap');
+    document.getElementById('score-badge').className='score-badge good';
+    document.getElementById('score-badge').textContent='Done';
+    document.getElementById('fb-strengths').innerHTML='<li>Feedback received</li>';
+    document.getElementById('fb-improve').innerHTML='';
+    document.getElementById('fb-model').textContent=raw;
+    wrap.style.display='block';
+    wrap.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+
+  async function saveFeedback(fb, userText){
+    try{
+      await sb.from('explain_sessions').insert({
+        user_id:currentUser.id,argument_id:currentArgId,
+        argument_title:ARGS[currentArgId].title,
+        user_explanation:userText,
+        ai_feedback:JSON.stringify(fb),score:fb.score||null
+      });
+    }catch(e){console.warn('Failed to save session',e);}
+  }
+
+  function tryAgain(){
+    document.getElementById('feedback-wrap').style.display='none';
+    document.getElementById('explain-input').value='';
+    document.getElementById('word-count').textContent='0 words';
+    document.getElementById('btn-submit').disabled=false;
+    document.getElementById('btn-submit').textContent='Submit for feedback';
+    document.getElementById('explain-input').focus();
+  }
+
+  function nextArgument(){
+    var sel=document.getElementById('arg-select');
+    var opts=Array.from(sel.options).filter(function(o){return o.value;});
+    var current=opts.findIndex(function(o){return o.value===currentArgId;});
+    var next=opts[(current+1)%opts.length];
+    sel.value=next.value;
+    onArgChange();
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  function renderHistory(){
+    var list=document.getElementById('history-list');
+    var section=document.getElementById('history-section');
+    if(sessionHistory.length===0){section.style.display='none';return;}
+    section.style.display='block';
+    list.innerHTML=sessionHistory.slice(0,10).map(function(h){
+      var cls=h.score>=8?'hi-ex':h.score>=6?'hi-gd':h.score>=4?'hi-ok':'hi-pr';
+      var time=h.time.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+      return'<div class="history-item"><div><div class="hi-title">'+h.title+'</div><div class="hi-meta">Today at '+time+'</div></div><div class="hi-score '+cls+'">'+h.score+'/10</div></div>';
+    }).join('');
+  }
+
+  function loadHistory(){renderHistory();}
+  </script>
+</body>
+</html>
