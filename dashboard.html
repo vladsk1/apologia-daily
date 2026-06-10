@@ -177,7 +177,7 @@
   </div>
 
   <!-- MODE TOGGLE BAR -->
-  <div id="mode-bar" style="background:var(--navy-800);border-bottom:1px solid rgba(255,255,255,0.06);padding:0.6rem 2rem;display:none;">
+  <div id="mode-bar" style="background:var(--navy-800);border-bottom:1px solid rgba(255,255,255,0.06);padding:0.6rem 2rem;display:block;">
     <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
       <div style="display:flex;align-items:center;gap:0.5rem;">
         <span id="mode-label" style="font-family:var(--font-ui);font-size:0.78rem;color:rgba(255,255,255,0.6);">Mode:</span>
@@ -234,7 +234,7 @@
     </div>
 
     <!-- GUIDED FOCUS (shown in guided mode) -->
-    <div id="guided-focus" style="display:none;">
+    <div id="guided-focus" style="display:block;">
       <p class="section-label">Your focus today</p>
       <div style="background:var(--navy-950);border:1px solid rgba(200,169,81,0.25);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
@@ -505,15 +505,16 @@
       updateGuidedFocus();
 
       // Restore mode preference or show onboarding
+      // Always start in guided mode - skip onboarding modal for now
       try {
         var prefs = JSON.parse(localStorage.getItem('ad_prefs') || '{}');
+        // Mark as onboarded so modal doesn't appear
         if (!prefs.onboarded) {
-          // First visit - show onboarding after brief delay
-          setTimeout(showOnboarding, 800);
-          applyMode('guided'); // default
-        } else {
-          applyMode(prefs.mode || 'guided');
+          prefs.onboarded = true;
+          prefs.mode = prefs.mode || 'guided';
+          localStorage.setItem('ad_prefs', JSON.stringify(prefs));
         }
+        applyMode(prefs.mode || 'guided');
       } catch(e) { applyMode('guided'); }
 
       el('loading-state').style.display = 'none';
