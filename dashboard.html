@@ -788,7 +788,6 @@
     var focusArr = isPro ? PRO_FOCUS : FREE_JOURNEY;
     var journeyDay = getJourneyDay();
     var focusIdx = Math.min(journeyDay, focusArr.length - 1);
-    var focusIdx = Math.min(streak, focusArr.length - 1); // cap at last day for free
     var focus = focusArr[focusIdx];
     var els = {
       step: document.getElementById('focus-step'),
