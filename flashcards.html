@@ -179,7 +179,7 @@
       <div style="font-family:Georgia,serif;font-size:0.9rem;color:#0f1f38;line-height:1.6;margin-bottom:1rem;" id="jcp-message">Nicely done. Ready to continue your journey?</div>
       <div style="display:flex;gap:0.5rem;">
         <button onclick="journeyMarkDone()" style="font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:600;background:#c8a951;color:#050d1a;border:none;border-radius:4px;padding:9px 18px;cursor:pointer;flex:1;">Continue journey &rarr;</button>
-        <button onclick="document.getElementById('journey-complete-popup').style.display='none';" style="font-family:'DM Sans',sans-serif;font-size:0.82rem;background:none;color:#3a4a62;border:1px solid #e8e2d8;border-radius:4px;padding:9px 14px;cursor:pointer;">Not yet</button>
+        <a href="dashboard.html" style="font-family:'DM Sans',sans-serif;font-size:0.82rem;background:none;color:#3a4a62;border:1px solid #e8e2d8;border-radius:4px;padding:9px 14px;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;">Return to dashboard</a>
       </div>
     </div>
   </div>
@@ -326,7 +326,7 @@ cript>
       <div class="session-complete" id="session-complete">
         <div style="font-size:3rem;margin-bottom:1rem;">&#9989;</div>
         <h2>Session complete!</h2>
-        <p id="session-summary">Well done. Your cards have been scheduled for review based on how you rated them.</p>
+        <p id="session-summary">Well done. Each card will come back at just the right time to help you remember it.</p>
         <button class="btn-primary" onclick="startSession()">Review again</button>
         <a href="daily-argument.html" class="btn-secondary">Today's argument</a>
       </div>
@@ -348,6 +348,15 @@ cript>
 
     <!-- ADD CARDS TAB -->
     <div class="study-panel add-panel" id="tab-add">
+      <div id="add-study-prompt" style="display:none;background:var(--n);border:1px solid rgba(200,169,81,0.3);border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1.5rem;position:sticky;top:70px;z-index:10;">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+          <div>
+            <div style="font-family:var(--ui);font-size:0.9rem;font-weight:600;color:#fff;margin-bottom:0.2rem;"><span id="add-count">0</span> cards in your deck</div>
+            <div style="font-family:var(--ui);font-size:0.78rem;color:rgba(255,255,255,0.55);">Tap a card below to add or remove it. When ready, start studying.</div>
+          </div>
+          <button onclick="switchTab('study', document.querySelectorAll('.tab-btn')[0])" style="font-family:var(--ui);font-size:0.85rem;font-weight:600;background:var(--g);color:var(--n);border:none;border-radius:4px;padding:10px 22px;cursor:pointer;white-space:nowrap;">Start studying &rarr;</button>
+        </div>
+      </div>
       <p class="section-title">God's Existence</p>
       <div class="arg-grid" id="grid-existence"></div>
       <p class="section-title">The Resurrection</p>
@@ -472,6 +481,22 @@ cript>
     document.getElementById('study-empty').style.display = 'block';
     document.getElementById('study-active').style.display = 'none';
     document.getElementById('session-complete').style.display = 'none';
+    // Different message for brand new users vs caught-up users
+    var emptyInner = document.querySelector('#study-empty .session-complete');
+    if (emptyInner) {
+      if (deck.length === 0) {
+        emptyInner.innerHTML = '<div style="font-size:3rem;margin-bottom:1rem;">&#128218;</div>' +
+          '<h2>Build your deck to begin</h2>' +
+          '<p>You have no flashcards yet. Add a few arguments to your deck, then come back here to study them. It only takes a moment.</p>' +
+          '<button class="btn-primary" onclick="switchTab(\'add\', document.querySelectorAll(\'.tab-btn\')[2])">Add your first cards</button>';
+      } else {
+        emptyInner.innerHTML = '<div style="font-size:3rem;margin-bottom:1rem;">&#127881;</div>' +
+          '<h2>All caught up!</h2>' +
+          '<p>No cards are due for review right now. Your cards will come back at the perfect time. Come back tomorrow, or add more to your deck.</p>' +
+          '<button class="btn-primary" onclick="switchTab(\'add\', document.querySelectorAll(\'.tab-btn\')[2])">Add more cards</button>' +
+          '<a href="daily-argument.html" class="btn-secondary">Today\'s argument</a>';
+      }
+    }
   }
 
   function startSession() {
@@ -544,12 +569,12 @@ cript>
   }
 
   function endSession() {
-    if (window.showJourneyComplete) window.showJourneyComplete('You completed a flashcard session. Your cards are scheduled for review.');
+    if (window.showJourneyComplete) window.showJourneyComplete('You completed a flashcard session. These cards will come back at the perfect time to help you remember them.');
     document.getElementById('study-active').style.display = 'none';
     document.getElementById('session-complete').style.display = 'block';
     document.getElementById('session-summary').textContent =
       'You reviewed ' + sessionTotal + ' card' + (sessionTotal !== 1 ? 's' : '') +
-      '. Your cards have been scheduled for review based on how you rated them. Hard cards come back tomorrow. Easy cards come back in weeks.';
+      '. Each card will come back at just the right time. Cards you found hard come back soon; easy ones come back in weeks.';
     // Reload deck to update due count
     loadDeck();
   }
@@ -587,6 +612,11 @@ cript>
   function renderAddGrid() {
     var cats = ['existence','resurrection','jesus','bible','science','islam'];
     var addedIds = deck.map(function(c){ return c.argument_id; });
+    // Show study prompt if deck has cards
+    var prompt = document.getElementById('add-study-prompt');
+    var countEl = document.getElementById('add-count');
+    if (prompt) prompt.style.display = deck.length > 0 ? 'block' : 'none';
+    if (countEl) countEl.textContent = deck.length;
     cats.forEach(function(cat) {
       var grid = document.getElementById('grid-' + cat);
       if (!grid) return;
