@@ -402,7 +402,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">No looking back. State both premises, the conclusion, and what the cause must be like. You'll get scored out of 10.</p>
       <textarea id="explainBox" placeholder="The Kalam argument says that..."></textarea>
       <div class="btnrow">
-        <button class="btn primary" onclick="scoreExplain()">Score my explanation</button>
+        <button class="btn primary" onclick="scoreExplain(this)">Score my explanation</button>
         <button class="btn ghost" onclick="document.getElementById('explainBox').value='';document.getElementById('scoreOut').classList.remove('show')">Clear</button>
       </div>
       <div class="score" id="scoreOut">
@@ -532,22 +532,72 @@ function setCheck(id, on){
 }
 
 /* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
-function scoreExplain(){
-  const t = document.getElementById('explainBox').value.toLowerCase();
-  const checks = [
-    {ok:/(begin|began|begins|come into|came into)/.test(t) && /(cause|caused)/.test(t), hit:'Premise 1 \u2014 you named the "begins to exist \u2192 has a cause" link', miss:'Premise 1 is missing \u2014 say that whatever begins to exist has a cause'},
+/* ---- Kalam premises used to ground the AI scoring ---- */
+var KALAM_PREMISES = [
+  'Whatever begins to exist has a cause of its existence.',
+  'The universe began to exist.',
+  'Therefore, the universe has a cause of its existence.'
+];
+
+/* Real AI scoring via /api/tutor (same method as explain-it-back.html).
+   Falls back to a local heuristic if the API is unreachable (e.g. preview). */
+async function scoreExplain(btn){
+  var box = document.getElementById('explainBox');
+  var txt = box ? box.value.trim() : '';
+  if(!txt){ return; }
+  if(btn){ btn.disabled = true; btn.dataset.lbl = btn.textContent; btn.textContent = 'Scoring...'; }
+  try{
+    var prompt = 'Please evaluate this student explanation of "The Kalam Cosmological Argument". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + KALAM_PREMISES.join('\n') + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
+    var res = await fetch('/api/tutor', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ question: prompt, argument: 'The Kalam Cosmological Argument', category: 'Evidence Library' })
+    });
+    if(!res.ok){ throw new Error('bad status'); }
+    var data = await res.json();
+    var answer = data.answer || '';
+    var m = answer.match(/\{[\s\S]*\}/);
+    if(!m){ throw new Error('no json'); }
+    var fb = JSON.parse(m[0]);
+    renderScore(fb.score || 0, fb.strengths || [], fb.improvements || []);
+  }catch(e){
+    renderMockScore(txt);
+  }
+  if(btn){ btn.disabled = false; btn.textContent = btn.dataset.lbl || 'Score my explanation'; }
+}
+
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function renderScore(score, strengths, improvements){
+  score = Math.max(0, Math.min(10, Math.round(Number(score) || 0)));
+  var feed = '';
+  (strengths||[]).forEach(function(s){ feed += '<li class="hit"><span class="mk">\u2713</span>'+esc(s)+'</li>'; });
+  (improvements||[]).forEach(function(s){ feed += '<li class="miss"><span class="mk">\u25CB</span>'+esc(s)+'</li>'; });
+  document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
+  var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
+  document.getElementById('scoreVerdict').textContent = verdict;
+  document.getElementById('scoreFeed').innerHTML = feed;
+  document.getElementById('scoreOut').classList.add('show');
+  if(score>=7){ state.explainPass = true; }
+  updateDial();
+}
+
+function renderMockScore(txtRaw){
+  var t = (txtRaw||'').toLowerCase();
+  var checks = [
+    {ok:/(begin|began|begins|come into|came into)/.test(t) && /(cause|caused)/.test(t), hit:'Premise 1 \u2014 you named the begins-to-exist cause link', miss:'Premise 1 is missing \u2014 say that whatever begins to exist has a cause'},
     {ok:/universe|cosmos|world/.test(t) && /(begin|began|start|finite past)/.test(t), hit:'Premise 2 \u2014 you stated the universe began to exist', miss:'Premise 2 is thin \u2014 state clearly that the universe began to exist'},
     {ok:/therefore|so |conclu|has a cause|must have/.test(t), hit:'Conclusion \u2014 you drew out that the universe has a cause', miss:'Draw the conclusion explicitly: therefore the universe has a cause'},
-    {ok:/(timeless|spaceless|immaterial|outside time|personal|powerful|mind|beginningless)/.test(t), hit:'Nice \u2014 you described what the cause must be like', miss:'Push further: what must the cause be? (timeless, spaceless, immaterial, personal\u2026)'},
+    {ok:/(timeless|spaceless|immaterial|outside time|personal|powerful|mind|beginningless)/.test(t), hit:'Nice \u2014 you described what the cause must be like', miss:'Push further: what must the cause be (timeless, spaceless, immaterial, personal)'},
     {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth \u2014 you developed it, not just listed it', miss:'Go a bit deeper \u2014 a full reconstruction runs longer than this'}
   ];
-  let score = 0;
-  const feed = checks.map(c=>{
-    if(c.ok){ score += 2; return '<li class="hit"><span class="mk">\u2713</span>'+c.hit+'</li>'; }
-    return '<li class="miss"><span class="mk">\u25CB</span>'+c.miss+'</li>';
-  }).join('');
+  var score = 0, feed = '';
+  checks.forEach(function(c){
+    if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">\u2713</span>'+c.hit+'</li>'; }
+    else{ feed += '<li class="miss"><span class="mk">\u25CB</span>'+c.miss+'</li>'; }
+  });
   document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
-  let verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
+  var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
