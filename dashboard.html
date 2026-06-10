@@ -233,18 +233,18 @@
       <a href="debate-arena.html" class="belt-next">Start earning points &rarr;</a>
     </div>
 
+    <!-- MODE TOGGLE (always visible) -->
+    <div style="display:flex;align-items:center;justify-content:flex-end;gap:0.5rem;margin-bottom:1rem;">
+      <span style="font-family:var(--font-ui);font-size:0.72rem;color:var(--text-muted);">View:</span>
+      <div style="display:flex;background:var(--off-white);border:1px solid var(--border);border-radius:4px;overflow:hidden;">
+        <button id="btn-guided" onclick="setMode('guided')" style="font-family:var(--font-ui);font-size:0.74rem;font-weight:600;padding:5px 14px;border:none;cursor:pointer;background:#c8a951;color:#050d1a;">Guided</button>
+        <button id="btn-explore" onclick="setMode('explore')" style="font-family:var(--font-ui);font-size:0.74rem;font-weight:500;padding:5px 14px;border:none;cursor:pointer;background:transparent;color:var(--text-muted);">Explore freely</button>
+      </div>
+    </div>
+
     <!-- GUIDED FOCUS (shown in guided mode) -->
     <div id="guided-focus" style="display:block;">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;flex-wrap:wrap;gap:0.5rem;">
-        <p class="section-label" style="margin:0;">Your focus today</p>
-        <div style="display:flex;align-items:center;gap:0.5rem;">
-          <span style="font-family:var(--font-ui);font-size:0.72rem;color:var(--text-muted);">View:</span>
-          <div style="display:flex;background:var(--off-white);border:1px solid var(--border);border-radius:4px;overflow:hidden;">
-            <button id="btn-guided" onclick="setMode('guided')" style="font-family:var(--font-ui);font-size:0.74rem;font-weight:600;padding:5px 14px;border:none;cursor:pointer;background:#c8a951;color:#050d1a;">Guided</button>
-            <button id="btn-explore" onclick="setMode('explore')" style="font-family:var(--font-ui);font-size:0.74rem;font-weight:500;padding:5px 14px;border:none;cursor:pointer;background:transparent;color:var(--text-muted);">Explore freely</button>
-          </div>
-        </div>
-      </div>
+      <p class="section-label">Your focus today</p>
       <div style="background:var(--navy-950);border:1px solid rgba(200,169,81,0.25);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
           <div style="flex:1;">
@@ -258,17 +258,19 @@
         <div style="display:flex;gap:6px;margin-top:1.25rem;" id="focus-steps-row"></div>
       </div>
 
+      <!-- Mark complete button -->
+      <div style="text-align:center;margin-top:0.25rem;display:flex;gap:0.5rem;justify-content:center;">
+        <button onclick="goBackDay()" id="btn-back-day" style="font-family:var(--font-ui);font-size:0.78rem;font-weight:500;background:none;border:1px solid var(--border);color:var(--text-muted);padding:6px 16px;border-radius:4px;cursor:pointer;transition:all 0.15s;">&larr; Previous day</button>
+        <button onclick="markDayComplete()" id="btn-mark-complete" style="font-family:var(--font-ui);font-size:0.78rem;font-weight:600;background:var(--gold);border:1px solid var(--gold);color:#050d1a;padding:6px 18px;border-radius:4px;cursor:pointer;transition:all 0.15s;">Mark today complete &#10003;</button>
+      </div>
+
       <!-- ALSO TODAY -->
       <p class="section-label">Also suggested today</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1.5rem;" id="also-today">
         <!-- Populated by JS -->
       </div>
 
-      <!-- Mark complete button -->
-      <div style="text-align:center;margin-top:0.25rem;display:flex;gap:0.5rem;justify-content:center;">
-        <button onclick="goBackDay()" id="btn-back-day" style="font-family:var(--font-ui);font-size:0.78rem;font-weight:500;background:none;border:1px solid var(--border);color:var(--text-muted);padding:6px 16px;border-radius:4px;cursor:pointer;transition:all 0.15s;">&larr; Previous day</button>
-        <button onclick="markDayComplete()" id="btn-mark-complete" style="font-family:var(--font-ui);font-size:0.78rem;font-weight:600;background:var(--gold);border:1px solid var(--gold);color:#050d1a;padding:6px 18px;border-radius:4px;cursor:pointer;transition:all 0.15s;">Mark today complete &#10003;</button>
-      </div>
+      
     </div>
   </div>
 
@@ -288,8 +290,8 @@
           <div style="font-family:var(--font-ui);font-size:0.78rem;color:#3a4a62;line-height:1.5;" id="complete-next-desc"></div>
         </div>
         <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
-          <a id="complete-next-btn" href="#" style="font-family:var(--font-ui);font-size:0.85rem;font-weight:600;background:#c8a951;color:#050d1a;padding:10px 22px;border-radius:4px;text-decoration:none;flex:1;text-align:center;">Do it now &rarr;</a>
-          <button onclick="closeDayComplete()" style="font-family:var(--font-ui);font-size:0.85rem;font-weight:500;background:none;color:#1e4278;border:1px solid #e8e2d8;padding:10px 18px;border-radius:4px;cursor:pointer;">Explore freely</button>
+          <a id="complete-next-btn" href="#" style="font-family:var(--font-ui);font-size:0.85rem;font-weight:600;background:#c8a951;color:#050d1a;padding:10px 22px;border-radius:4px;text-decoration:none;flex:1;text-align:center;min-width:140px;">Do it now &rarr;</a>
+          <button onclick="closeDayComplete()" style="font-family:var(--font-ui);font-size:0.85rem;font-weight:500;background:none;color:#1e4278;border:1px solid #e8e2d8;padding:10px 18px;border-radius:4px;cursor:pointer;">Back to dashboard</button>
         </div>
       </div>
     </div>
