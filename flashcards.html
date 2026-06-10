@@ -198,9 +198,9 @@
           <div class="card-inner" id="card-inner" onclick="flipCard()">
             <div class="card-face card-front">
               <div class="card-category" id="card-cat">Category</div>
-              <div class="card-label">Question</div>
+              <div class="card-label">Try to answer this in your head first</div>
               <div class="card-text" id="card-front-text">Loading...</div>
-              <div class="card-hint">Tap to reveal answer</div>
+              <div class="card-hint" style="margin-top:2rem;font-size:0.8rem;">&#128161; Think of your answer, then tap the card to reveal</div>
             </div>
             <div class="card-face card-back">
               <div class="card-label">Answer</div>
@@ -212,9 +212,12 @@
 
         <!-- Rating (shown after flip) -->
         <div id="rating-section" style="display:none;">
+          <div style="text-align:center;font-family:var(--ui);font-size:0.85rem;color:var(--tm);margin-bottom:1rem;padding:0.75rem;background:var(--w);border-radius:6px;border:1px solid var(--border);">
+            How well did you know that answer <strong>before</strong> you flipped the card?
+          </div>
           <div class="rating-row">
-            <button class="rating-btn hard" onclick="rateCard(1)">&#128547; Hard<br><small style="font-weight:400;font-size:0.7rem;">Review soon</small></button>
-            <button class="rating-btn good" onclick="rateCard(3)">&#128512; Good<br><small style="font-weight:400;font-size:0.7rem;">Review in days</small></button>
+            <button class="rating-btn hard" onclick="rateCard(1)">&#128547; Hard<br><small style="font-weight:400;font-size:0.7rem;">Show again tomorrow</small></button>
+            <button class="rating-btn good" onclick="rateCard(3)">&#128512; Good<br><small style="font-weight:400;font-size:0.7rem;">Review in a few days</small></button>
             <button class="rating-btn easy" onclick="rateCard(5)">&#129321; Easy<br><small style="font-weight:400;font-size:0.7rem;">Review in weeks</small></button>
           </div>
           <div class="rating-note">Be honest — this trains the algorithm to show you what you actually need</div>
@@ -387,12 +390,24 @@
     if (sessionIdx >= dueCards.length) { endSession(); return; }
     var card = dueCards[sessionIdx];
     cardFlipped = false;
-    document.getElementById('card-inner').classList.remove('flipped');
+    var cardInner = document.getElementById('card-inner');
+    // Force reset without animation first
+    cardInner.style.transition = 'none';
+    cardInner.classList.remove('flipped');
+    // Re-enable animation after reset
+    setTimeout(function() { cardInner.style.transition = 'transform 0.5s ease'; }, 50);
     document.getElementById('rating-section').style.display = 'none';
     document.getElementById('card-cat').textContent = card.category;
     document.getElementById('card-front-text').textContent = card.front;
     document.getElementById('card-back-title').textContent = card.argument_title;
-    document.getElementById('card-back-text').textContent = card.back;
+    // Format back text - convert \n to line breaks and numbered lists
+    var backText = card.back || '';
+    var backEl = document.getElementById('card-back-text');
+    // Convert newlines to proper formatting
+    var lines = backText.split('\n').filter(function(l){ return l.trim(); });
+    backEl.innerHTML = lines.map(function(line) {
+      return '<p style="margin:0 0 0.5rem 0;text-align:left;">' + line + '</p>';
+    }).join('');
     var pct = Math.round((sessionReviewed / sessionTotal) * 100);
     document.getElementById('progress-fill').style.width = pct + '%';
     document.getElementById('progress-text').textContent = sessionReviewed + ' / ' + sessionTotal + ' reviewed';
