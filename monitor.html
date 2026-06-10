@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System Monitor — Apologia Daily</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050d1a;
+      --card: #0a1628;
+      --border: #1a2d4a;
+      --text: #e2eaf4;
+      --muted: #5a7a9a;
+      --green: #22c55e;
+      --yellow: #eab308;
+      --red: #ef4444;
+      --blue: #4a7ab5;
+      --gold: #c8a951;
+      --font: 'DM Sans', sans-serif;
+      --mono: 'DM Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    /* HEADER */
+    .header { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .header-left { display: flex; align-items: center; gap: 1rem; }
+    .logo { font-size: 1.1rem; font-weight: 600; color: var(--text); }
+    .logo span { color: var(--gold); }
+    .page-title { font-size: 0.85rem; color: var(--muted); font-weight: 400; }
+    .header-right { display: flex; align-items: center; gap: 1rem; }
+    .status-badge { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 500; padding: 5px 12px; border-radius: 20px; border: 1px solid; }
+    .status-badge.healthy { color: var(--green); border-color: rgba(34,197,94,0.3); background: rgba(34,197,94,0.08); }
+    .status-badge.degraded { color: var(--yellow); border-color: rgba(234,179,8,0.3); background: rgba(234,179,8,0.08); }
+    .status-badge.error { color: var(--red); border-color: rgba(239,68,68,0.3); background: rgba(239,68,68,0.08); }
+    .status-badge.loading { color: var(--muted); border-color: var(--border); background: rgba(255,255,255,0.03); }
+    .pulse { width: 8px; height: 8px; border-radius: 50%; background: currentColor; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+    .btn-refresh { font-family: var(--font); font-size: 0.8rem; font-weight: 500; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 4px; padding: 7px 16px; cursor: pointer; transition: all 0.15s; display: flex; align-items: center; gap: 6px; }
+    .btn-refresh:hover { border-color: var(--blue); color: var(--blue); }
+    .btn-refresh.spinning svg { animation: spin 1s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* MAIN */
+    .main { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+
+    /* SUMMARY ROW */
+    .summary-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+    .summary-card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem 1.5rem; }
+    .summary-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+    .summary-value { font-size: 1.8rem; font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; }
+    .summary-value.green { color: var(--green); }
+    .summary-value.yellow { color: var(--yellow); }
+    .summary-value.red { color: var(--red); }
+    .summary-sub { font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem; }
+
+    /* CHECKS GRID */
+    .section-title { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    .checks-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 2rem; }
+    @media (max-width: 640px) { .checks-grid { grid-template-columns: 1fr; } .summary-row { grid-template-columns: repeat(2, 1fr); } }
+
+    .check-card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem 1.25rem; display: flex; align-items: center; gap: 1rem; transition: border-color 0.2s; }
+    .check-card.ok { border-left: 3px solid var(--green); }
+    .check-card.error { border-left: 3px solid var(--red); }
+    .check-card.loading { border-left: 3px solid var(--border); }
+    .check-card.warning { border-left: 3px solid var(--yellow); }
+
+    .check-icon { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1rem; }
+    .check-icon.ok { background: rgba(34,197,94,0.12); }
+    .check-icon.error { background: rgba(239,68,68,0.12); }
+    .check-icon.loading { background: rgba(255,255,255,0.05); }
+    .check-icon.warning { background: rgba(234,179,8,0.12); }
+
+    .check-info { flex: 1; min-width: 0; }
+    .check-name { font-size: 0.88rem; font-weight: 500; color: var(--text); margin-bottom: 2px; }
+    .check-detail { font-size: 0.75rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .check-meta { text-align: right; flex-shrink: 0; }
+    .check-ms { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); }
+    .check-ms.fast { color: var(--green); }
+    .check-ms.slow { color: var(--yellow); }
+    .check-ms.timeout { color: var(--red); }
+    .check-status { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+    .check-status.ok { color: var(--green); }
+    .check-status.error { color: var(--red); }
+    .check-status.loading { color: var(--muted); }
+
+    /* HISTORY */
+    .history-section { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem 1.5rem; margin-bottom: 2rem; }
+    .history-title { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+    .history-bars { display: flex; gap: 3px; align-items: flex-end; height: 40px; }
+    .history-bar { flex: 1; border-radius: 2px; min-height: 4px; cursor: pointer; transition: opacity 0.15s; position: relative; }
+    .history-bar:hover::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%); background: #1a2d4a; color: var(--text); font-size: 0.68rem; padding: 3px 7px; border-radius: 3px; white-space: nowrap; pointer-events: none; z-index: 10; }
+    .history-bar.ok { background: var(--green); opacity: 0.7; }
+    .history-bar.error { background: var(--red); opacity: 0.9; }
+    .history-bar.empty { background: var(--border); }
+    .history-legend { display: flex; gap: 1rem; margin-top: 0.5rem; }
+    .history-legend span { font-size: 0.72rem; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+    .history-legend span::before { content: ''; width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+    .history-legend .leg-ok::before { background: var(--green); }
+    .history-legend .leg-err::before { background: var(--red); }
+    .history-legend .leg-empty::before { background: var(--border); }
+
+    /* VERCEL SECTION */
+    .vercel-section { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem 1.5rem; margin-bottom: 2rem; }
+    .vercel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+    .vercel-title { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .vercel-setup { background: rgba(234,179,8,0.08); border: 1px solid rgba(234,179,8,0.25); border-radius: 4px; padding: 0.75rem 1rem; font-size: 0.8rem; color: var(--yellow); line-height: 1.6; }
+    .vercel-setup code { font-family: var(--mono); font-size: 0.78rem; background: rgba(255,255,255,0.08); padding: 1px 5px; border-radius: 2px; }
+    .vercel-setup a { color: var(--blue); text-decoration: none; }
+
+    .deploy-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 1.25rem; }
+    .deploy-item { display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: rgba(255,255,255,0.03); border-radius: 4px; border: 1px solid var(--border); }
+    .deploy-state { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 7px; border-radius: 10px; }
+    .deploy-state.READY { background: rgba(34,197,94,0.15); color: var(--green); }
+    .deploy-state.ERROR { background: rgba(239,68,68,0.15); color: var(--red); }
+    .deploy-state.BUILDING { background: rgba(234,179,8,0.15); color: var(--yellow); }
+    .deploy-state.CANCELED { background: rgba(255,255,255,0.08); color: var(--muted); }
+    .deploy-info { flex: 1; min-width: 0; }
+    .deploy-url { font-family: var(--mono); font-size: 0.75rem; color: var(--blue); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .deploy-time { font-size: 0.7rem; color: var(--muted); margin-top: 1px; }
+
+    .fn-log-list { display: flex; flex-direction: column; gap: 4px; }
+    .fn-log-item { display: flex; gap: 10px; padding: 7px 10px; background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.15); border-radius: 4px; font-size: 0.78rem; }
+    .fn-log-item.warning { background: rgba(234,179,8,0.05); border-color: rgba(234,179,8,0.15); }
+    .fn-log-time { font-family: var(--mono); font-size: 0.68rem; color: var(--muted); white-space: nowrap; flex-shrink: 0; }
+    .fn-log-text { color: var(--text); font-family: var(--mono); font-size: 0.75rem; word-break: break-all; line-height: 1.5; }
+    .fn-log-empty { font-size: 0.82rem; color: var(--muted); font-style: italic; }
+    .error-log-title { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem; }
+    .error-empty { font-size: 0.82rem; color: var(--muted); font-style: italic; }
+    .error-item { border-bottom: 1px solid var(--border); padding: 0.6rem 0; }
+    .error-item:last-child { border-bottom: none; }
+    .error-time { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); margin-bottom: 2px; }
+    .error-msg { font-size: 0.82rem; color: var(--red); }
+
+    /* FOOTER */
+    .monitor-footer { text-align: center; padding: 1.5rem; font-size: 0.72rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 1rem; }
+    .monitor-footer a { color: var(--blue); text-decoration: none; }
+
+    /* AUTO REFRESH TOGGLE */
+    .auto-row { display: flex; align-items: center; gap: 0.75rem; }
+    .toggle { position: relative; width: 36px; height: 20px; cursor: pointer; }
+    .toggle input { opacity: 0; width: 0; height: 0; }
+    .toggle-slider { position: absolute; inset: 0; background: var(--border); border-radius: 10px; transition: 0.2s; }
+    .toggle-slider::before { content: ''; position: absolute; width: 14px; height: 14px; left: 3px; top: 3px; background: var(--muted); border-radius: 50%; transition: 0.2s; }
+    .toggle input:checked + .toggle-slider { background: var(--blue); }
+    .toggle input:checked + .toggle-slider::before { transform: translateX(16px); background: #fff; }
+    .auto-label { font-size: 0.78rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN GATE -->
+  <div id="login-gate" style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--bg);">
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:2.5rem 2rem;width:100%;max-width:360px;text-align:center;">
+      <div style="font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:0.25rem;">Apologia<span style="color:var(--gold);">Daily</span></div>
+      <div style="font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem;">System Monitor</div>
+      <div style="font-size:2rem;margin-bottom:1.25rem;">🔒</div>
+      <div id="login-error" style="display:none;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:#ef4444;font-size:0.78rem;padding:8px 12px;border-radius:4px;margin-bottom:1rem;">Incorrect password. Try again.</div>
+      <input
+        type="password"
+        id="pw-input"
+        placeholder="Enter admin password"
+        onkeydown="if(event.key==='Enter')checkPassword()"
+        style="width:100%;font-family:var(--font);font-size:0.88rem;background:#0f2040;border:1px solid var(--border);color:var(--text);border-radius:4px;padding:10px 14px;outline:none;margin-bottom:0.75rem;transition:border 0.15s;"
+        onfocus="this.style.borderColor='#4a7ab5'"
+        onblur="this.style.borderColor='var(--border)'"
+      />
+      <button
+        onclick="checkPassword()"
+        style="width:100%;font-family:var(--font);font-size:0.88rem;font-weight:600;background:var(--gold);color:#050d1a;border:none;border-radius:4px;padding:11px;cursor:pointer;transition:background 0.15s;"
+        onmouseover="this.style.background='#d4b96a'"
+        onmouseout="this.style.background='var(--gold)'"
+      >
+        Sign In
+      </button>
+      <div style="margin-top:1.25rem;font-size:0.72rem;color:var(--muted);">Admin access only &nbsp;·&nbsp; <a href="index.html" style="color:var(--blue);text-decoration:none;">Back to site</a></div>
+    </div>
+  </div>
+
+  <!-- MONITOR CONTENT (hidden until authenticated) -->
+  <div id="monitor-content" style="display:none;">
+
+  <div class="header">
+    <div class="header-left">
+      <div class="logo">Apologia<span>Daily</span></div>
+      <div class="page-title">/ System Monitor</div>
+    </div>
+    <div class="header-right">
+      <div class="auto-row">
+        <label class="toggle">
+          <input type="checkbox" id="auto-refresh" checked onchange="toggleAutoRefresh(this.checked)" />
+          <span class="toggle-slider"></span>
+        </label>
+        <span class="auto-label">Auto-refresh every 60s</span>
+      </div>
+      <div class="status-badge loading" id="global-status">
+        <span class="pulse"></span>
+        <span id="global-status-text">Checking...</span>
+      </div>
+      <button class="btn-refresh" onclick="runChecks()" id="btn-refresh">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+        Refresh
+      </button>
+      <button class="btn-refresh" onclick="signOutMonitor()" style="color:#ef4444;border-color:rgba(239,68,68,0.3);">
+        Sign out
+      </button>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!-- SUMMARY ROW -->
+    <div class="summary-row">
+      <div class="summary-card">
+        <div class="summary-label">Overall Status</div>
+        <div class="summary-value" id="sum-status">--</div>
+        <div class="summary-sub" id="sum-status-sub">Checking...</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-label">Checks Passing</div>
+        <div class="summary-value" id="sum-passing">--</div>
+        <div class="summary-sub" id="sum-total">of -- checks</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-label">Avg Response</div>
+        <div class="summary-value" id="sum-avg-ms">--</div>
+        <div class="summary-sub">milliseconds</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-label">Last Checked</div>
+        <div class="summary-value" style="font-size:1.1rem;" id="sum-time">--</div>
+        <div class="summary-sub" id="sum-uptime">-- checks today</div>
+      </div>
+    </div>
+
+    <!-- SERVICE CHECKS -->
+    <div class="section-title">Services</div>
+    <div class="checks-grid" id="checks-grid">
+      <!-- Populated by JS -->
+    </div>
+
+    <!-- UPTIME HISTORY -->
+    <div class="history-section">
+      <div class="history-title">Check History (last 50 checks)</div>
+      <div class="history-bars" id="history-bars"></div>
+      <div class="history-legend">
+        <span class="leg-ok">Healthy</span>
+        <span class="leg-err">Error detected</span>
+        <span class="leg-empty">No data</span>
+      </div>
+    </div>
+
+    <!-- VERCEL DEPLOYMENTS + FUNCTION LOGS -->
+    <div class="vercel-section">
+      <div class="vercel-header">
+        <div class="vercel-title">Vercel — Recent Deployments & Function Errors</div>
+        <button class="btn-refresh" onclick="loadVercelLogs()" id="btn-vercel-refresh" style="font-size:0.72rem;padding:5px 10px;">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          Refresh
+        </button>
+      </div>
+      <div id="vercel-content">
+        <div style="font-size:0.82rem;color:var(--muted);">Loading Vercel data...</div>
+      </div>
+    </div>
+
+    <!-- ERROR LOG -->
+    <div class="error-log">
+      <div class="error-log-title">Recent Errors</div>
+      <div id="error-log-content"><span class="error-empty">No errors recorded in this session.</span></div>
+    </div>
+
+  </div>
+
+  <div class="monitor-footer">
+    Apologia Daily monitoring dashboard &nbsp;·&nbsp;
+    <a href="https://apologiadaily.com" target="_blank">apologiadaily.com</a> &nbsp;·&nbsp;
+    <a href="https://vercel.com" target="_blank">Vercel logs</a> &nbsp;·&nbsp;
+    <a href="https://app.supabase.com" target="_blank">Supabase dashboard</a>
+  </div>
+
+  </div><!-- end monitor-content -->
+
+  <script>
+  // ── VERCEL LOGS ──
+  async function loadVercelLogs() {
+    var content = document.getElementById('vercel-content');
+    var btn = document.getElementById('btn-vercel-refresh');
+    if (!content) return;
+    if (btn) btn.classList.add('spinning');
+    content.innerHTML = '<div style="font-size:0.82rem;color:var(--muted);">Fetching from Vercel API...</div>';
+
+    try {
+      var res = await fetch('/api/logs', { cache: 'no-store', signal: AbortSignal.timeout(12000) });
+      var data = await res.json();
+      renderVercelLogs(data);
+    } catch (e) {
+      content.innerHTML = '<div style="font-size:0.82rem;color:var(--red);">Could not reach /api/logs: ' + e.message + '</div>';
+    }
+
+    if (btn) btn.classList.remove('spinning');
+  }
+
+  function renderVercelLogs(data) {
+    var content = document.getElementById('vercel-content');
+    if (!content) return;
+
+    var html = '';
+
+    // Setup instructions if token missing
+    if (data.error && data.setup_instructions) {
+      html += '<div class="vercel-setup">';
+      html += '<strong>Setup required:</strong> ' + data.setup_instructions + '<br/><br/>';
+      html += '<strong>Steps:</strong><br/>';
+      html += '1. Go to <a href="https://vercel.com/account/tokens" target="_blank">vercel.com/account/tokens</a> &rarr; Create Token (name it "Monitor")<br/>';
+      html += '2. Copy the token<br/>';
+      html += '3. In Vercel dashboard &rarr; your project &rarr; Settings &rarr; Environment Variables<br/>';
+      html += '4. Add: Name = <code>VERCEL_ACCESS_TOKEN</code> &nbsp; Value = your token<br/>';
+      html += '5. Redeploy the project once<br/>';
+      html += '6. Come back and refresh this section';
+      html += '</div>';
+      content.innerHTML = html;
+      return;
+    }
+
+    if (data.error) {
+      html += '<div style="font-size:0.82rem;color:var(--red);margin-bottom:1rem;">Vercel API error: ' + data.error + '</div>';
+    }
+
+    // Deployments
+    html += '<div style="font-size:0.78rem;font-weight:600;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.5rem;">Recent Deployments</div>';
+    if (data.deployments && data.deployments.length > 0) {
+      html += '<div class="deploy-list">';
+      data.deployments.forEach(function(d) {
+        var state = d.state || 'UNKNOWN';
+        var timeAgo = d.created ? timeAgoStr(d.created) : '';
+        var url = d.url ? 'https://' + d.url : '';
+        html += '<div class="deploy-item">';
+        html += '<span class="deploy-state ' + state + '">' + state + '</span>';
+        html += '<div class="deploy-info">';
+        html += '<div class="deploy-url">' + (url ? '<a href="' + url + '" target="_blank" style="color:var(--blue);text-decoration:none;">' + d.url + '</a>' : d.uid) + '</div>';
+        html += '<div class="deploy-time">' + timeAgo + '</div>';
+        html += '</div>';
+        if (state === 'ERROR') {
+          html += '<span style="font-size:0.72rem;color:var(--red);">&#9888; Failed</span>';
+        } else if (state === 'READY') {
+          html += '<span style="font-size:0.72rem;color:var(--green);">&#10003; Live</span>';
+        }
+        html += '</div>';
+      });
+      html += '</div>';
+    } else {
+      html += '<div style="font-size:0.8rem;color:var(--muted);font-style:italic;margin-bottom:1rem;">No recent deployments found.</div>';
+    }
+
+    // Function errors
+    html += '<div style="font-size:0.78rem;font-weight:600;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.5rem;margin-top:1.25rem;">Function Errors (Latest Deployment)</div>';
+
+    if (data.log_note) {
+      html += '<div style="font-size:0.78rem;color:var(--muted);font-style:italic;">' + data.log_note + ' — <a href="https://vercel.com/dashboard" target="_blank" style="color:var(--blue);">View full logs in Vercel dashboard</a></div>';
+    } else if (data.function_errors && data.function_errors.length > 0) {
+      html += '<div class="fn-log-list">';
+      data.function_errors.forEach(function(log) {
+        var cls = log.level === 'error' ? '' : 'warning';
+        var time = log.created ? new Date(log.created).toLocaleTimeString() : '';
+        html += '<div class="fn-log-item ' + cls + '">';
+        html += '<div class="fn-log-time">' + time + '</div>';
+        html += '<div class="fn-log-text">' + escHtml(log.text || '') + '</div>';
+        html += '</div>';
+      });
+      html += '</div>';
+    } else if (!data.error) {
+      html += '<div class="fn-log-empty">No function errors in the latest deployment. &#10003;</div>';
+    }
+
+    html += '<div style="margin-top:1rem;font-size:0.72rem;color:var(--muted);">';
+    html += '<a href="https://vercel.com/dashboard" target="_blank" style="color:var(--blue);text-decoration:none;">Open full Vercel dashboard &rarr;</a>';
+    html += '</div>';
+
+    content.innerHTML = html;
+  }
+
+  function timeAgoStr(ts) {
+    var ms = Date.now() - ts;
+    var mins = Math.floor(ms / 60000);
+    if (mins < 1) return 'just now';
+    if (mins < 60) return mins + 'm ago';
+    var hrs = Math.floor(mins / 60);
+    if (hrs < 24) return hrs + 'h ago';
+    return Math.floor(hrs / 24) + 'd ago';
+  }
+
+  function escHtml(str) {
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+  // Change this password to whatever you want
+  var ADMIN_PASSWORD = 'Apologia2026!';
+  var SESSION_KEY = 'ad_monitor_auth';
+  var SESSION_DURATION = 8 * 60 * 60 * 1000; // 8 hours
+
+  function checkPassword() {
+    var input = document.getElementById('pw-input');
+    var error = document.getElementById('login-error');
+    if (!input) return;
+    var val = input.value.trim();
+    // Simple hash check - not cryptographic but sufficient for admin page
+    if (val === ADMIN_PASSWORD) {
+      try {
+        localStorage.setItem(SESSION_KEY, JSON.stringify({ ts: Date.now() }));
+      } catch(e) {}
+      showMonitor();
+    } else {
+      if (error) error.style.display = 'block';
+      input.value = '';
+      input.focus();
+      // Shake animation
+      input.style.borderColor = '#ef4444';
+      setTimeout(function() { input.style.borderColor = 'var(--border)'; }, 1500);
+    }
+  }
+
+  function showMonitor() {
+    document.getElementById('login-gate').style.display = 'none';
+    document.getElementById('monitor-content').style.display = 'block';
+  }
+
+  function signOutMonitor() {
+    try { localStorage.removeItem(SESSION_KEY); } catch(e) {}
+    document.getElementById('monitor-content').style.display = 'none';
+    document.getElementById('login-gate').style.display = 'flex';
+    var input = document.getElementById('pw-input');
+    if (input) { input.value = ''; input.focus(); }
+  }
+
+  function checkSession() {
+    try {
+      var saved = localStorage.getItem(SESSION_KEY);
+      if (saved) {
+        var session = JSON.parse(saved);
+        if (Date.now() - session.ts < SESSION_DURATION) {
+          showMonitor();
+          return true;
+        }
+        localStorage.removeItem(SESSION_KEY);
+      }
+    } catch(e) {}
+    // Focus the password input
+    setTimeout(function() {
+      var input = document.getElementById('pw-input');
+      if (input) input.focus();
+    }, 100);
+    return false;
+  }
+
+  var BASE_URL = 'https://apologiadaily.com';
+  var CHECK_HISTORY = [];
+  var ERROR_LOG = [];
+  var autoRefreshTimer = null;
+  var isChecking = false;
+
+  var CHECK_DEFS = [
+    { id: 'homepage', name: 'Homepage', icon: '🏠', type: 'page', url: '/' },
+    { id: 'evidence', name: 'Evidence Library', icon: '📚', type: 'page', url: '/evidence-library.html' },
+    { id: 'devotional_page', name: 'Daily Devotional', icon: '📖', type: 'page', url: '/daily-devotional.html' },
+    { id: 'supabase', name: 'Supabase Database', icon: '🗄️', type: 'health', key: 'supabase' },
+    { id: 'anthropic_key', name: 'Anthropic API Key', icon: '🔑', type: 'health', key: 'anthropic_key' },
+    { id: 'api_ask', name: 'API: Ask Anything', icon: '💬', type: 'health', key: 'ask' },
+    { id: 'api_tutor', name: 'API: AI Tutor', icon: '🧠', type: 'health', key: 'tutor' },
+    { id: 'api_debate', name: 'API: Debate Arena', icon: '⚔️', type: 'health', key: 'debate' },
+    { id: 'api_devotional', name: 'API: Devotional AI', icon: '🙏', type: 'health', key: 'devotional' },
+    { id: 'api_feedback', name: 'API: Debate Feedback', icon: '📊', type: 'health', key: 'feedback' },
+  ];
+
+  function renderSkeletons() {
+    var grid = document.getElementById('checks-grid');
+    grid.innerHTML = CHECK_DEFS.map(function(c) {
+      return '<div class="check-card loading" id="check-' + c.id + '">' +
+        '<div class="check-icon loading">' + c.icon + '</div>' +
+        '<div class="check-info"><div class="check-name">' + c.name + '</div>' +
+        '<div class="check-detail">Checking...</div></div>' +
+        '<div class="check-meta"><div class="check-ms">--ms</div>' +
+        '<div class="check-status loading">PENDING</div></div></div>';
+    }).join('');
+  }
+
+  function updateCheckCard(id, status, detail, ms) {
+    var card = document.getElementById('check-' + id);
+    if (!card) return;
+    var statusClass = status === 'ok' ? 'ok' : status === 'loading' ? 'loading' : 'error';
+    card.className = 'check-card ' + statusClass;
+
+    var icon = card.querySelector('.check-icon');
+    if (icon) icon.className = 'check-icon ' + statusClass;
+
+    var detailEl = card.querySelector('.check-detail');
+    if (detailEl) detailEl.textContent = detail || '';
+
+    var msEl = card.querySelector('.check-ms');
+    if (msEl) {
+      if (ms === null || ms === undefined) {
+        msEl.textContent = '--';
+        msEl.className = 'check-ms';
+      } else {
+        msEl.textContent = ms + 'ms';
+        msEl.className = 'check-ms ' + (ms < 500 ? 'fast' : ms < 2000 ? '' : 'slow');
+      }
+    }
+
+    var statusEl = card.querySelector('.check-status');
+    if (statusEl) {
+      statusEl.textContent = status === 'ok' ? 'OK' : status === 'loading' ? '...' : 'ERROR';
+      statusEl.className = 'check-status ' + statusClass;
+    }
+  }
+
+  async function checkPage(url) {
+    var start = Date.now();
+    try {
+      var res = await fetch(BASE_URL + url, { method: 'HEAD', cache: 'no-store', signal: AbortSignal.timeout(8000) });
+      return { status: res.ok ? 'ok' : 'error', ms: Date.now() - start, detail: 'HTTP ' + res.status };
+    } catch (e) {
+      return { status: 'error', ms: Date.now() - start, detail: e.message };
+    }
+  }
+
+  async function runChecks() {
+    if (isChecking) return;
+    isChecking = true;
+
+    var btn = document.getElementById('btn-refresh');
+    if (btn) btn.classList.add('spinning');
+
+    var globalStatus = document.getElementById('global-status');
+    var globalText = document.getElementById('global-status-text');
+    if (globalStatus) globalStatus.className = 'status-badge loading';
+    if (globalText) globalText.textContent = 'Checking...';
+
+    renderSkeletons();
+
+    var checkResults = {};
+    var errors = [];
+
+    // Check pages in parallel
+    var pageChecks = CHECK_DEFS.filter(function(c) { return c.type === 'page'; });
+    var pagePromises = pageChecks.map(function(c) {
+      return checkPage(c.url).then(function(r) {
+        checkResults[c.id] = r;
+        updateCheckCard(c.id, r.status, r.detail, r.ms);
+        if (r.status !== 'ok') {
+          errors.push({ time: new Date().toISOString(), msg: c.name + ': ' + r.detail });
+        }
+      });
+    });
+
+    // Run health API check
+    var healthPromise = (async function() {
+      var start = Date.now();
+      try {
+        var res = await fetch(BASE_URL + '/api/health', { cache: 'no-store', signal: AbortSignal.timeout(15000) });
+        var data = await res.json();
+        var totalMs = Date.now() - start;
+
+        // Update each health check card
+        CHECK_DEFS.filter(function(c) { return c.type === 'health'; }).forEach(function(c) {
+          var check = data.checks && data.checks[c.key];
+          if (check) {
+            checkResults[c.id] = check;
+            updateCheckCard(c.id, check.status, check.detail, check.ms);
+            if (check.status !== 'ok') {
+              errors.push({ time: new Date().toISOString(), msg: c.name + ': ' + check.detail });
+            }
+          } else {
+            checkResults[c.id] = { status: 'error', ms: null, detail: 'No data from health endpoint' };
+            updateCheckCard(c.id, 'error', 'No data from health endpoint', null);
+            errors.push({ time: new Date().toISOString(), msg: c.name + ': no data' });
+          }
+        });
+
+      } catch (e) {
+        // Health endpoint unreachable - mark all health checks as error
+        CHECK_DEFS.filter(function(c) { return c.type === 'health'; }).forEach(function(c) {
+          checkResults[c.id] = { status: 'error', ms: null, detail: 'Health endpoint unreachable' };
+          updateCheckCard(c.id, 'error', 'Health endpoint unreachable: ' + e.message, null);
+          errors.push({ time: new Date().toISOString(), msg: c.name + ': health endpoint unreachable' });
+        });
+      }
+    })();
+
+    await Promise.all([...pagePromises, healthPromise]);
+
+    // Update summary
+    var total = Object.keys(checkResults).length;
+    var passing = Object.values(checkResults).filter(function(r) { return r.status === 'ok'; }).length;
+    var allOk = passing === total;
+    var avgMs = Math.round(Object.values(checkResults).filter(function(r) { return r.ms; }).reduce(function(a, r) { return a + r.ms; }, 0) / Math.max(1, Object.values(checkResults).filter(function(r) { return r.ms; }).length));
+
+    document.getElementById('sum-status').textContent = allOk ? 'Healthy' : 'Issues';
+    document.getElementById('sum-status').className = 'summary-value ' + (allOk ? 'green' : 'red');
+    document.getElementById('sum-status-sub').textContent = allOk ? 'All systems operational' : passing + ' of ' + total + ' passing';
+    document.getElementById('sum-passing').textContent = passing;
+    document.getElementById('sum-passing').className = 'summary-value ' + (passing === total ? 'green' : passing > total / 2 ? 'yellow' : 'red');
+    document.getElementById('sum-total').textContent = 'of ' + total + ' checks';
+    document.getElementById('sum-avg-ms').textContent = avgMs || '--';
+    document.getElementById('sum-avg-ms').className = 'summary-value ' + (avgMs < 500 ? 'green' : avgMs < 2000 ? '' : 'yellow');
+    document.getElementById('sum-time').textContent = new Date().toLocaleTimeString();
+
+    // Update global status badge
+    if (globalStatus && globalText) {
+      globalStatus.className = 'status-badge ' + (allOk ? 'healthy' : 'degraded');
+      globalText.textContent = allOk ? 'All Systems OK' : passing + '/' + total + ' Passing';
+    }
+
+    // Update history
+    CHECK_HISTORY.push({ time: Date.now(), ok: allOk, passing: passing, total: total });
+    if (CHECK_HISTORY.length > 50) CHECK_HISTORY.shift();
+    var todayChecks = CHECK_HISTORY.filter(function(h) { return Date.now() - h.time < 86400000; }).length;
+    document.getElementById('sum-uptime').textContent = todayChecks + ' check' + (todayChecks !== 1 ? 's' : '') + ' today';
+    renderHistory();
+
+    // Update error log
+    errors.forEach(function(e) { ERROR_LOG.unshift(e); });
+    if (ERROR_LOG.length > 20) ERROR_LOG = ERROR_LOG.slice(0, 20);
+    renderErrorLog();
+
+    // Persist to localStorage
+    try {
+      localStorage.setItem('ad_monitor_history', JSON.stringify(CHECK_HISTORY.slice(-50)));
+      localStorage.setItem('ad_monitor_errors', JSON.stringify(ERROR_LOG.slice(0, 20)));
+    } catch(e) {}
+
+    if (btn) btn.classList.remove('spinning');
+    isChecking = false;
+  }
+
+  function renderHistory() {
+    var bars = document.getElementById('history-bars');
+    if (!bars) return;
+    // Fill with empty slots to always show 50
+    var slots = [];
+    for (var i = 0; i < 50; i++) {
+      var h = CHECK_HISTORY[i];
+      if (h) {
+        var height = Math.max(20, Math.round((h.passing / Math.max(1, h.total)) * 40));
+        var cls = h.ok ? 'ok' : 'error';
+        var tip = new Date(h.time).toLocaleTimeString() + ' — ' + h.passing + '/' + h.total + ' passing';
+        slots.push('<div class="history-bar ' + cls + '" style="height:' + height + 'px;" data-tip="' + tip + '"></div>');
+      } else {
+        slots.push('<div class="history-bar empty" style="height:4px;"></div>');
+      }
+    }
+    bars.innerHTML = slots.join('');
+  }
+
+  function renderErrorLog() {
+    var el = document.getElementById('error-log-content');
+    if (!el) return;
+    if (ERROR_LOG.length === 0) {
+      el.innerHTML = '<span class="error-empty">No errors recorded in this session.</span>';
+      return;
+    }
+    el.innerHTML = ERROR_LOG.map(function(e) {
+      var d = new Date(e.time);
+      return '<div class="error-item"><div class="error-time">' + d.toLocaleString() + '</div><div class="error-msg">' + e.msg + '</div></div>';
+    }).join('');
+  }
+
+  function toggleAutoRefresh(on) {
+    if (autoRefreshTimer) { clearInterval(autoRefreshTimer); autoRefreshTimer = null; }
+    if (on) autoRefreshTimer = setInterval(runChecks, 60000);
+  }
+
+  // Load persisted history
+  try {
+    var saved = localStorage.getItem('ad_monitor_history');
+    if (saved) CHECK_HISTORY = JSON.parse(saved);
+    var savedErr = localStorage.getItem('ad_monitor_errors');
+    if (savedErr) ERROR_LOG = JSON.parse(savedErr);
+  } catch(e) {}
+
+  // Init
+  document.addEventListener('DOMContentLoaded', function() {
+    var authed = checkSession();
+    if (authed) {
+      renderHistory();
+      renderErrorLog();
+      renderSkeletons();
+      runChecks();
+      loadVercelLogs();
+      toggleAutoRefresh(true);
+    }
+  });
+  </script>
+</body>
+</html>
