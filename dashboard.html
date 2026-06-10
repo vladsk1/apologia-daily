@@ -783,9 +783,10 @@
   var DAILY_FOCUS = FREE_JOURNEY; // overridden in updateGuidedFocus based on isPro
 
   function updateGuidedFocus() {
-    var streak = parseInt((document.getElementById('stat-streak')||{}).textContent) || 0;
     var isPro = false; // replace with real check when Stripe live
     var focusArr = isPro ? PRO_FOCUS : FREE_JOURNEY;
+    var journeyDay = getJourneyDay();
+    var focusIdx = Math.min(journeyDay, focusArr.length - 1);
     var focusIdx = Math.min(streak, focusArr.length - 1); // cap at last day for free
     var focus = focusArr[focusIdx];
     var els = {
@@ -860,11 +861,18 @@
 
   var DAY_ICONS = ['&#128217;','&#128218;','&#127891;','&#128196;','&#127514;','&#9876;','&#127941;'];
 
+  function getJourneyDay() {
+    try {
+      var prefs = JSON.parse(localStorage.getItem('ad_prefs') || '{}');
+      return parseInt(prefs.journeyDay) || 0;
+    } catch(e) { return 0; }
+  }
+
   function markDayComplete() {
-    var streak = parseInt((document.getElementById('stat-streak')||{}).textContent) || 0;
-    var focusIdx = Math.min(streak, FREE_JOURNEY.length - 1);
+    var focusIdx = Math.min(getJourneyDay(), FREE_JOURNEY.length - 1);
     var currentDay = FREE_JOURNEY[focusIdx];
-    var nextDay = FREE_JOURNEY[Math.min(focusIdx + 1, FREE_JOURNEY.length - 1)];
+    var nextIdx = Math.min(focusIdx + 1, FREE_JOURNEY.length - 1);
+    var nextDay = FREE_JOURNEY[nextIdx];
     var isLastDay = focusIdx === FREE_JOURNEY.length - 1;
 
     // Update modal content
@@ -898,17 +906,12 @@
     // Save progress to localStorage
     try {
       var prefs = JSON.parse(localStorage.getItem('ad_prefs') || '{}');
-      prefs.journeyDay = (focusIdx + 1);
+      prefs.journeyDay = focusIdx + 1;
       localStorage.setItem('ad_prefs', JSON.stringify(prefs));
     } catch(e) {}
 
-    // Update stat-streak display
-    var streakEl = document.getElementById('stat-streak');
-    if (streakEl) {
-      var newStreak = focusIdx + 1;
-      streakEl.textContent = newStreak;
-      updateGuidedFocus();
-    }
+    // Update guided focus to show next day
+    updateGuidedFocus();
   }
 
   function closeDayComplete() {
