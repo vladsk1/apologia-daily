@@ -162,7 +162,8 @@
 .tour-next{font-family:var(--font-ui);font-weight:600;font-size:.88rem;background:var(--gold);color:var(--navy-950);border:none;border-radius:7px;padding:.58rem 1.3rem;cursor:pointer}
 .tour-next:hover{background:var(--gold-light)}
 .tour-cta2{font-family:var(--font-ui);font-size:.85rem;color:var(--gold);background:transparent;border:1px solid rgba(200,169,81,.5);border-radius:7px;padding:.55rem 1.1rem;cursor:pointer;text-decoration:none;display:inline-block}
-.tour-help{position:fixed;left:1.1rem;bottom:1.1rem;z-index:900;width:40px;height:40px;border-radius:50%;background:var(--navy-800);border:1px solid rgba(200,169,81,.5);color:var(--gold);font-family:var(--font-ui);font-weight:700;font-size:1rem;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.tour-help{position:fixed;left:1.1rem;bottom:1.1rem;z-index:900;display:none;align-items:center;gap:.5rem;background:var(--navy-800);border:1px solid rgba(200,169,81,.5);color:rgba(255,255,255,.85);font-family:var(--font-ui);font-weight:500;font-size:.8rem;padding:.5rem .95rem;border-radius:22px;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.tour-help .thq{color:var(--gold);font-weight:700;font-size:.9rem}
 .tour-help:hover{background:var(--navy-700)}
 @media(max-width:560px){.tour-card{padding:1.6rem 1.3rem 1.3rem}.tour-title{font-size:1.3rem}.tour-foot{flex-direction:column;gap:.9rem;align-items:stretch}.tour-btns{justify-content:flex-end}}
 </style>
@@ -1140,7 +1141,7 @@
   var TOUR_IS_PRO = false; /* when Stripe is live: set from currentUser?.user_metadata?.is_pro === true */
 
   var TOUR_FREE = [
-    { k: 'WELCOME', t: 'Welcome to your training ground', b: 'Apologia Daily is built to do one thing: make you genuinely able to explain and defend your faith. This one-minute tour shows you everything your free account includes. You can reopen it any time with the ? button, bottom-left.' },
+    { k: 'WELCOME', t: 'Welcome to your training ground', b: 'Apologia Daily is built to do one thing: make you genuinely able to explain and defend your faith. This one-minute tour shows you everything your free account includes. You can reopen it any time with the Platform tour button, bottom-left.' },
     { k: 'YOUR DASHBOARD', t: 'The 7-Day Guided Journey', b: 'This dashboard walks you through one focused step per day for your first week - a devotional, your first argument, your first debate. Prefer to wander? Flip the toggle to Explore freely at any time.', items: ['Day 1 starts right here when you close this tour', 'Mark each day complete to advance'] },
     { k: 'THE LIBRARY', t: 'Evidence Library - 240+ arguments', b: 'Six organised topics: God\u2019s existence, the Resurrection, Jesus, the Bible, science and faith, and the Trinity. Every argument has a clear free summary, objections, and answers.', link: { href: 'evidence-library.html', label: 'Peek at the Evidence Library' } },
     { k: 'ASK THE AI', t: 'Ask Anything - 3 questions a day', b: 'Type the hardest question you\u2019ve got and get a real answer: the evidence, the strongest objection handled, and exactly how to use it in a real conversation.', link: { href: 'ask-anything.html', label: 'Open Ask Anything' } },
@@ -1151,7 +1152,7 @@
   ];
 
   var TOUR_PRO = [
-    { k: 'WELCOME TO PRO', t: 'Everything is unlocked', b: 'You have the full platform. This one-minute tour shows you where the power is - reopen it any time with the ? button, bottom-left.' },
+    { k: 'WELCOME TO PRO', t: 'Everything is unlocked', b: 'You have the full platform. This one-minute tour shows you where the power is - reopen it any time with the Platform tour button, bottom-left.' },
     { k: 'THE FLAGSHIP', t: 'Mastery Tracks', b: 'Every argument has a complete skill path: understand it formally, drill it with flashcards and AI scoring, defend it against objections - and earn the gold Mastered badge.', link: { href: 'ev-m-kalam.html', label: 'Start with the Kalam' } },
     { k: 'THE LIBRARY', t: 'Full Pro deep dives - 240+ arguments', b: 'Beyond the summaries: full scholarly treatments, extended objections, and an AI Tutor embedded in every single argument.', link: { href: 'evidence-library.html', label: 'Open the Evidence Library' } },
     { k: 'ASK THE AI', t: 'Unlimited Ask Anything', b: 'No daily caps. Every answer comes with the strongest objection handled and word-for-word guidance for real conversations.', link: { href: 'ask-anything.html', label: 'Open Ask Anything' } },
@@ -1247,7 +1248,7 @@
   document.addEventListener('DOMContentLoaded', function(){
     setTimeout(function(){
       var help = document.getElementById('tourHelp');
-      if (help) help.style.display = 'block';
+      if (help) help.style.display = 'flex';
       tourStart(false);
     }, 900);
   });
@@ -1269,6 +1270,6 @@
     </div>
   </div>
 </div>
-<button class="tour-help" id="tourHelp" title="Platform tour" onclick="tourStart(true)" style="display:none">?</button>
+<button class="tour-help" id="tourHelp" onclick="tourStart(true)"><span class="thq">?</span> Platform tour</button>
 </body>
 </html>
