@@ -1500,17 +1500,35 @@
     inp.value = btn.textContent;
     hcAsk();
   }
+  var HC_ACCT_FREE = 3;
+  function hcAcct(){
+    var s = {};
+    try { s = JSON.parse(localStorage.getItem('ad_askcount') || '{}'); } catch(e){ s = {}; }
+    if (s.d !== hcToday()){ return 0; }
+    return s.n || 0;
+  }
+  function hcAcctSave(n){ try { localStorage.setItem('ad_askcount', JSON.stringify({ d: hcToday(), n: n })); } catch(e){} }
+  function hcShowLimit(loggedIn){
+    var el = document.getElementById('hcLimit');
+    if (loggedIn){
+      el.innerHTML = '<h4>You&rsquo;ve used today&rsquo;s 3 free questions</h4>' +
+        '<p>Pro is unlimited \u2014 plus the full Debate Arena, the AI Tutor, and every Mastery Track.</p>' +
+        '<a class="hc-cta" href="#pricing">Upgrade to Pro &rarr;</a>' +
+        '<span class="hc-login">Your free questions reset daily</span>';
+    }
+    el.style.display = 'block';
+    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
   async function hcAsk(){
     var inp = document.getElementById('hcInput');
     var q = inp.value.trim();
     if (!q){ inp.focus(); return; }
     var loggedIn = false;
     try { var r = await sb.auth.getSession(); loggedIn = !!(r.data && r.data.session); } catch(e){}
-    var s = hcState();
-    if (!loggedIn && s.n >= HC_FREE){
-      document.getElementById('hcLimit').style.display = 'block';
-      document.getElementById('hcLimit').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      return;
+    if (loggedIn){
+      if (hcAcct() >= HC_ACCT_FREE){ hcShowLimit(true); return; }
+    } else {
+      if (hcState().n >= HC_FREE){ hcShowLimit(false); return; }
     }
     var btn = document.getElementById('hcBtn');
     var box = document.getElementById('hcAnswer');
@@ -1526,15 +1544,22 @@
       if (!res.ok){ throw new Error('API error ' + res.status); }
       var data = await res.json();
       if (!data.answer){ throw new Error('No answer'); }
-      s = hcState(); s.n = s.n + 1; hcSave(s);
-      var left = HC_FREE - s.n;
-      var foot = '<div class="hc-foot"><span>';
-      if (loggedIn){ foot += 'Signed in \u2014 ask freely'; }
-      else if (left > 0){ foot += left + ' free question' + (left === 1 ? '' : 's') + ' left today'; }
-      else { foot += 'That was your last free question today'; }
-      foot += '</span><a href="ask-anything.html">Continue in Ask Anything &rarr;</a></div>';
+      var leftTxt = '';
+      var hitWall = false;
+      if (loggedIn){
+        hcAcctSave(hcAcct() + 1);
+        var leftA = HC_ACCT_FREE - hcAcct();
+        leftTxt = leftA > 0 ? (leftA + ' of your ' + HC_ACCT_FREE + ' daily questions left') : 'That was your last free question today';
+        hitWall = leftA <= 0;
+      } else {
+        var s = hcState(); s.n = s.n + 1; hcSave(s);
+        var left = HC_FREE - s.n;
+        leftTxt = left > 0 ? (left + ' free question' + (left === 1 ? '' : 's') + ' left today') : 'That was your last free question today';
+        hitWall = left <= 0;
+      }
+      var foot = '<div class="hc-foot"><span>' + leftTxt + '</span><a href="ask-anything.html">Continue in Ask Anything &rarr;</a></div>';
       box.innerHTML = '<div class="hc-q">' + hcEsc(q) + '</div><div class="hc-a">' + hcFormat(data.answer) + '</div>' + foot;
-      if (!loggedIn && left <= 0){ document.getElementById('hcLimit').style.display = 'block'; }
+      if (hitWall){ hcShowLimit(loggedIn); }
       inp.value = '';
     } catch(err){
       box.innerHTML = '<div class="hc-q">' + hcEsc(q) + '</div><div class="hc-a"><p>Something went wrong on our end \u2014 please try again in a moment, or <a href="ask-anything.html" style="color:var(--gold)">open Ask Anything</a>.</p></div>';
