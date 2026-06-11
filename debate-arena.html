@@ -576,6 +576,7 @@ cript>
         <div id="feedback-study"></div>
       </div>
       <div class="feedback-actions reveal">
+        <button class="btn-retry" style="background:var(--gold);color:var(--navy-950);border:none;" onclick="shareDebateCard(this)">Share my result</button>
         <button class="btn-retry" onclick="retryDebate()">Debate again →</button>
         <button class="btn-outline" onclick="showScreen('screen-setup')">Try a different opponent</button>
         <a href="evidence-library.html" class="btn-outline">Study the Evidence Library</a>
@@ -1410,5 +1411,65 @@ cript>
   }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<div id="dsCard" style="position:fixed;left:-9999px;top:0;width:540px;height:600px;box-sizing:border-box;background:linear-gradient(160deg,#050d1a 0%,#0f2040 100%);padding:44px;display:flex;flex-direction:column;font-family:'DM Sans',sans-serif;">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <span style="color:#c8a951;font-size:13px;">&#9670;</span>
+    <span style="color:#c8a951;font-size:12px;letter-spacing:.22em;font-weight:600;">APOLOGIA DAILY</span>
+  </div>
+  <div style="color:rgba(255,255,255,.55);font-size:12.5px;letter-spacing:.16em;font-weight:500;margin-top:36px;">DEBATE ARENA &middot; MY RESULT</div>
+  <div style="display:flex;align-items:baseline;gap:8px;margin-top:14px;">
+    <span id="dsScore" style="font-family:'Playfair Display',Georgia,serif;font-size:92px;font-weight:700;color:#c8a951;line-height:1;">--</span>
+    <span style="font-family:'Playfair Display',Georgia,serif;font-size:30px;color:rgba(255,255,255,.5);">/100</span>
+  </div>
+  <div id="dsMeta" style="color:rgba(255,255,255,.65);font-size:14.5px;margin-top:14px;letter-spacing:.02em;"></div>
+  <div style="width:56px;height:2px;background:#c8a951;margin:26px 0;"></div>
+  <div style="font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:600;color:#fff;line-height:1.3;">Could you defend your faith against an AI skeptic?</div>
+  <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(200,169,81,.3);padding-top:16px;">
+    <div style="color:rgba(255,255,255,.55);font-size:12.5px;">Take the challenge &mdash; beat my score</div>
+    <div style="color:#c8a951;font-size:13px;font-weight:600;">apologiadaily.com</div>
+  </div>
+</div>
+<script>
+function _dsMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
+function shareDebateCard(btn){
+  var sc = document.getElementById('score-overall');
+  document.getElementById('dsScore').textContent = sc ? sc.textContent : '--';
+  var meta = document.getElementById('feedback-sub');
+  document.getElementById('dsMeta').textContent = meta ? meta.textContent : '';
+  if (typeof html2canvas === 'undefined'){ _dsMsg(btn, 'Still loading - try again'); return; }
+  _dsMsg(btn, 'Creating image...');
+  html2canvas(document.getElementById('dsCard'), { scale: 2, backgroundColor: null, useCORS: true }).then(function(canvas){
+    canvas.toBlob(function(blob){
+      var file = new File([blob], 'apologia-debate-result.png', { type: 'image/png' });
+      if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })){
+        navigator.share({ files: [file], title: 'Apologia Daily' }).catch(function(err){
+          if (err && err.name !== 'AbortError'){ _dsCopy(canvas, blob, btn); }
+        });
+      } else {
+        _dsCopy(canvas, blob, btn);
+      }
+    });
+  });
+}
+function _dsCopy(canvas, blob, btn){
+  if (navigator.clipboard && window.ClipboardItem){
+    try {
+      navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })])
+        .then(function(){ _dsMsg(btn, 'Image copied - paste it anywhere'); })
+        .catch(function(){ _dsDownload(canvas, btn); });
+      return;
+    } catch(e){}
+  }
+  _dsDownload(canvas, btn);
+}
+function _dsDownload(canvas, btn){
+  var a = document.createElement('a');
+  a.download = 'apologia-debate-result.png';
+  a.href = canvas.toDataURL('image/png');
+  a.click();
+  _dsMsg(btn, 'Image downloaded');
+}
+</script>
 </body>
 </html>
