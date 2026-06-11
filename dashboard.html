@@ -139,7 +139,33 @@
     .plan-progress-btn { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500; padding: 8px 18px; border-radius: 3px; background: var(--gold); color: var(--navy-950); text-decoration: none; display: inline-block; }
 
     .loading-state { text-align: center; padding: 4rem; color: var(--text-muted); font-size: 0.9rem; }
-  </style>
+  
+/* ---- first-visit platform tour ---- */
+.tour-overlay{display:none;position:fixed;inset:0;background:rgba(5,13,26,.94);z-index:1200;align-items:center;justify-content:center;padding:1rem}
+.tour-overlay.open{display:flex}
+.tour-card{background:linear-gradient(155deg,var(--navy-900),var(--navy-800));border:1px solid rgba(200,169,81,.35);border-radius:16px;max-width:540px;width:100%;padding:2.1rem 2.3rem 1.7rem;position:relative;box-shadow:0 24px 70px rgba(0,0,0,.5)}
+.tour-skip{position:absolute;top:1rem;right:1.2rem;font-family:var(--font-ui);font-size:.78rem;color:rgba(255,255,255,.45);background:none;border:none;cursor:pointer}
+.tour-skip:hover{color:#fff}
+.tour-kick{font-family:var(--font-ui);font-size:.7rem;letter-spacing:.18em;color:var(--gold);font-weight:600;margin-bottom:.55rem}
+.tour-title{font-family:var(--font-display);font-size:1.55rem;font-weight:700;color:#fff;line-height:1.22;margin:0 0 .7rem}
+.tour-body{font-family:var(--font-ui);font-size:.93rem;color:rgba(255,255,255,.7);line-height:1.65;margin:0 0 1rem}
+.tour-items{margin:0 0 1rem}
+.tour-item{display:flex;gap:.65rem;font-family:var(--font-ui);font-size:.87rem;color:rgba(255,255,255,.78);line-height:1.55;margin-bottom:.5rem}
+.tour-item:before{content:"\25C6";color:var(--gold);font-size:.6rem;margin-top:.35rem}
+.tour-link{display:inline-block;font-family:var(--font-ui);font-size:.82rem;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(200,169,81,.4);padding-bottom:1px;margin-bottom:1.1rem}
+.tour-foot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.1);padding-top:1.1rem;margin-top:.3rem}
+.tour-dots{display:flex;gap:7px}
+.tour-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.18)}
+.tour-dot.on{background:var(--gold)}
+.tour-btns{display:flex;gap:.6rem}
+.tour-back{font-family:var(--font-ui);font-size:.85rem;color:rgba(255,255,255,.55);background:none;border:1px solid rgba(255,255,255,.2);border-radius:7px;padding:.55rem 1rem;cursor:pointer}
+.tour-next{font-family:var(--font-ui);font-weight:600;font-size:.88rem;background:var(--gold);color:var(--navy-950);border:none;border-radius:7px;padding:.58rem 1.3rem;cursor:pointer}
+.tour-next:hover{background:var(--gold-light)}
+.tour-cta2{font-family:var(--font-ui);font-size:.85rem;color:var(--gold);background:transparent;border:1px solid rgba(200,169,81,.5);border-radius:7px;padding:.55rem 1.1rem;cursor:pointer;text-decoration:none;display:inline-block}
+.tour-help{position:fixed;left:1.1rem;bottom:1.1rem;z-index:900;width:40px;height:40px;border-radius:50%;background:var(--navy-800);border:1px solid rgba(200,169,81,.5);color:var(--gold);font-family:var(--font-ui);font-weight:700;font-size:1rem;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.tour-help:hover{background:var(--navy-700)}
+@media(max-width:560px){.tour-card{padding:1.6rem 1.3rem 1.3rem}.tour-title{font-size:1.3rem}.tour-foot{flex-direction:column;gap:.9rem;align-items:stretch}.tour-btns{justify-content:flex-end}}
+</style>
 </head>
 <body>
 
@@ -1110,6 +1136,139 @@
     if (modal && e.target === modal) closeActivity();
   });
 
+  /* ================= PLATFORM TOUR ================= */
+  var TOUR_IS_PRO = false; /* when Stripe is live: set from currentUser?.user_metadata?.is_pro === true */
+
+  var TOUR_FREE = [
+    { k: 'WELCOME', t: 'Welcome to your training ground', b: 'Apologia Daily is built to do one thing: make you genuinely able to explain and defend your faith. This one-minute tour shows you everything your free account includes. You can reopen it any time with the ? button, bottom-left.' },
+    { k: 'YOUR DASHBOARD', t: 'The 7-Day Guided Journey', b: 'This dashboard walks you through one focused step per day for your first week - a devotional, your first argument, your first debate. Prefer to wander? Flip the toggle to Explore freely at any time.', items: ['Day 1 starts right here when you close this tour', 'Mark each day complete to advance'] },
+    { k: 'THE LIBRARY', t: 'Evidence Library - 240+ arguments', b: 'Six organised topics: God\u2019s existence, the Resurrection, Jesus, the Bible, science and faith, and the Trinity. Every argument has a clear free summary, objections, and answers.', link: { href: 'evidence-library.html', label: 'Peek at the Evidence Library' } },
+    { k: 'ASK THE AI', t: 'Ask Anything - 3 questions a day', b: 'Type the hardest question you\u2019ve got and get a real answer: the evidence, the strongest objection handled, and exactly how to use it in a real conversation.', link: { href: 'ask-anything.html', label: 'Open Ask Anything' } },
+    { k: 'DAILY HABITS', t: 'A few minutes a day, every day', b: 'Three free daily rhythms keep what you learn from fading:', items: ['Daily Argument - active-recall practice on one argument', 'Daily Quiz - quick-fire questions', 'Daily Devotional - 365 days, faith and intellect together'] },
+    { k: 'MEMORY', t: 'Flashcards that schedule themselves', b: 'Build a deck of up to 10 cards free. The system uses spaced repetition - it brings each card back right before you\u2019d forget it.', link: { href: 'flashcards.html', label: 'Open Flashcards' } },
+    { k: 'PRACTICE', t: 'Debate Arena - face the AI skeptic', b: 'One free debate every week. Pick an opponent and topic, defend your position, and get scored feedback - then share your result card and challenge a friend to beat it.', link: { href: 'debate-arena.html', label: 'See the Debate Arena' } },
+    { k: 'WHEN YOU\u2019RE READY', t: 'What Pro unlocks - $8/mo', b: 'Everything you just saw stays free forever. Pro turns answers into ability:', items: ['Mastery Tracks - learn, practice, and prove every argument', 'AI Tutor on every argument + Explain It Back with AI scoring', 'Unlimited Ask Anything and unlimited debates', 'Full Pro deep dives, games, and conversation tools'], final: 'free' }
+  ];
+
+  var TOUR_PRO = [
+    { k: 'WELCOME TO PRO', t: 'Everything is unlocked', b: 'You have the full platform. This one-minute tour shows you where the power is - reopen it any time with the ? button, bottom-left.' },
+    { k: 'THE FLAGSHIP', t: 'Mastery Tracks', b: 'Every argument has a complete skill path: understand it formally, drill it with flashcards and AI scoring, defend it against objections - and earn the gold Mastered badge.', link: { href: 'ev-m-kalam.html', label: 'Start with the Kalam' } },
+    { k: 'THE LIBRARY', t: 'Full Pro deep dives - 240+ arguments', b: 'Beyond the summaries: full scholarly treatments, extended objections, and an AI Tutor embedded in every single argument.', link: { href: 'evidence-library.html', label: 'Open the Evidence Library' } },
+    { k: 'ASK THE AI', t: 'Unlimited Ask Anything', b: 'No daily caps. Every answer comes with the strongest objection handled and word-for-word guidance for real conversations.', link: { href: 'ask-anything.html', label: 'Open Ask Anything' } },
+    { k: 'PRACTICE', t: 'Unlimited Debate Arena', b: 'Debate the AI skeptic every day - different opponents, different difficulty. Get scored, see exactly where to improve, and share your result card.', link: { href: 'debate-arena.html', label: 'Open the Debate Arena' } },
+    { k: 'PROVE IT', t: 'Explain It Back', b: 'The fastest way to find your gaps: explain an argument in your own words and the AI scores you out of 10, with specific strengths and fixes.', link: { href: 'explain-it-back.html', label: 'Try Explain It Back' } },
+    { k: 'TOOLS & GAMES', t: 'Train from every angle', b: 'Sharpen reflexes and take it into real life:', items: ['Speed Round and Objection Catcher - rapid-fire practice', 'Conversation Journal - log and learn from real conversations', 'Pocket Cards - shareable argument cards', 'Study Groups, Reading Club, and the Video Library'] },
+    { k: 'EVERY DAY', t: 'Your daily rhythm', b: 'The Daily Argument, Daily Quiz, and 365 devotionals keep it all alive - and every Monday your progress email lands with your stats and the argument of the week.', final: 'pro' }
+  ];
+
+  function tourKeyName(){ return TOUR_IS_PRO ? 'ad_tour_done_pro' : 'ad_tour_done_free'; }
+  var _tourSteps = [];
+  var _tourIdx = 0;
+
+  function tourStart(force){
+    if (!force){
+      try { if (localStorage.getItem(tourKeyName())) return; } catch(e){}
+    }
+    _tourSteps = TOUR_IS_PRO ? TOUR_PRO : TOUR_FREE;
+    _tourIdx = 0;
+    tourRender();
+    document.getElementById('tourOverlay').classList.add('open');
+  }
+
+  function tourRender(){
+    var s = _tourSteps[_tourIdx];
+    document.getElementById('tourKick').textContent = s.k + '  \u00B7  ' + (_tourIdx + 1) + ' of ' + _tourSteps.length;
+    document.getElementById('tourTitle').textContent = s.t;
+    document.getElementById('tourBody').textContent = s.b;
+    var items = document.getElementById('tourItems');
+    items.innerHTML = '';
+    if (s.items){
+      for (var i = 0; i < s.items.length; i++){
+        var d = document.createElement('div');
+        d.className = 'tour-item';
+        d.textContent = s.items[i];
+        items.appendChild(d);
+      }
+    }
+    var link = document.getElementById('tourLink');
+    if (s.link){
+      link.style.display = 'inline-block';
+      link.href = s.link.href;
+      link.textContent = s.link.label + ' \u2192';
+      link.onclick = function(){ tourMarkDone(); };
+    } else {
+      link.style.display = 'none';
+    }
+    var dots = document.getElementById('tourDots');
+    dots.innerHTML = '';
+    for (var j = 0; j < _tourSteps.length; j++){
+      var dot = document.createElement('span');
+      dot.className = 'tour-dot' + (j === _tourIdx ? ' on' : '');
+      dots.appendChild(dot);
+    }
+    var btns = document.getElementById('tourBtns');
+    btns.innerHTML = '';
+    if (_tourIdx > 0){
+      var back = document.createElement('button');
+      back.className = 'tour-back';
+      back.textContent = 'Back';
+      back.onclick = function(){ _tourIdx--; tourRender(); };
+      btns.appendChild(back);
+    }
+    if (s.final){
+      if (s.final === 'free'){
+        var pro = document.createElement('a');
+        pro.className = 'tour-cta2';
+        pro.href = 'index.html#pricing';
+        pro.textContent = 'See Pro';
+        pro.onclick = function(){ tourMarkDone(); };
+        btns.appendChild(pro);
+      }
+      var done = document.createElement('button');
+      done.className = 'tour-next';
+      done.textContent = s.final === 'free' ? 'Start Day 1 \u2192' : 'Open today\u2019s focus \u2192';
+      done.onclick = function(){ tourEnd(); };
+      btns.appendChild(done);
+    } else {
+      var next = document.createElement('button');
+      next.className = 'tour-next';
+      next.textContent = 'Next \u2192';
+      next.onclick = function(){ _tourIdx++; tourRender(); };
+      btns.appendChild(next);
+    }
+  }
+
+  function tourMarkDone(){ try { localStorage.setItem(tourKeyName(), '1'); } catch(e){} }
+  function tourEnd(){
+    tourMarkDone();
+    document.getElementById('tourOverlay').classList.remove('open');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(function(){
+      var help = document.getElementById('tourHelp');
+      if (help) help.style.display = 'block';
+      tourStart(false);
+    }, 900);
+  });
+
 </script>
+
+<!-- PLATFORM TOUR -->
+<div class="tour-overlay" id="tourOverlay">
+  <div class="tour-card">
+    <button class="tour-skip" onclick="tourEnd()">Skip tour</button>
+    <div class="tour-kick" id="tourKick"></div>
+    <h3 class="tour-title" id="tourTitle"></h3>
+    <p class="tour-body" id="tourBody"></p>
+    <div class="tour-items" id="tourItems"></div>
+    <a class="tour-link" id="tourLink" style="display:none" href="#"></a>
+    <div class="tour-foot">
+      <div class="tour-dots" id="tourDots"></div>
+      <div class="tour-btns" id="tourBtns"></div>
+    </div>
+  </div>
+</div>
+<button class="tour-help" id="tourHelp" title="Platform tour" onclick="tourStart(true)" style="display:none">?</button>
 </body>
 </html>
