@@ -777,7 +777,39 @@
     .nav-cta { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.78rem; font-weight:500; background:var(--g,#c8a951); color:var(--n2,#050d1a); padding:6px 16px; border-radius:3px; text-decoration:none; }
       .nav-dashboard { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.8rem; color:rgba(255,255,255,0.65); text-decoration:none; border:1px solid rgba(255,255,255,0.2); padding:5px 12px; border-radius:3px; transition:all 0.15s; }
     .nav-dashboard:hover { color:#fff; border-color:rgba(255,255,255,0.4); }
-  </style>
+  
+/* ---- homepage chat (Try it now) ---- */
+.homechat{padding:0 2rem;margin:-1.5rem auto 0;max-width:860px;position:relative;z-index:5}
+.hc-card{background:linear-gradient(150deg,var(--navy-900),var(--navy-800));border:1px solid rgba(200,169,81,.3);border-radius:16px;padding:2.2rem 2.4rem;box-shadow:0 18px 50px rgba(5,13,26,.45)}
+.hc-kick{font-family:var(--font-ui);font-size:.72rem;letter-spacing:.18em;color:var(--gold);font-weight:600;margin-bottom:.6rem}
+.hc-title{font-family:var(--font-display);font-size:1.65rem;color:#fff;margin:0 0 .5rem;line-height:1.2}
+.hc-sub{font-family:var(--font-ui);font-size:.92rem;color:rgba(255,255,255,.6);margin:0 0 1.1rem;line-height:1.55}
+.hc-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+.hc-chip{font-family:var(--font-ui);font-size:.8rem;color:rgba(255,255,255,.75);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:.42rem .85rem;cursor:pointer;transition:all .15s}
+.hc-chip:hover{border-color:var(--gold);color:var(--gold-light)}
+.hc-row{display:flex;gap:.6rem}
+.hc-input{flex:1;font-family:var(--font-ui);font-size:.95rem;padding:.85rem 1rem;border-radius:9px;border:1px solid rgba(255,255,255,.18);background:rgba(5,13,26,.55);color:#fff;outline:none}
+.hc-input:focus{border-color:var(--gold)}
+.hc-input::placeholder{color:rgba(255,255,255,.35)}
+.hc-btn{font-family:var(--font-ui);font-weight:600;font-size:.95rem;background:var(--gold);color:var(--navy-950);border:none;border-radius:9px;padding:.85rem 1.6rem;cursor:pointer;white-space:nowrap}
+.hc-btn:disabled{opacity:.55;cursor:wait}
+.hc-answer{margin-top:1.2rem;background:rgba(5,13,26,.45);border:1px solid rgba(255,255,255,.1);border-left:3px solid var(--gold);border-radius:10px;padding:1.1rem 1.3rem}
+.hc-q{font-family:var(--font-ui);font-size:.8rem;color:var(--gold);letter-spacing:.04em;margin-bottom:.5rem}
+.hc-a{font-family:var(--font-body);font-size:.97rem;color:rgba(255,255,255,.88);line-height:1.65}
+.hc-a p{margin:0 0 .75rem}
+.hc-a p:last-child{margin-bottom:0}
+.hc-foot{margin-top:.9rem;padding-top:.8rem;border-top:1px solid rgba(255,255,255,.1);font-family:var(--font-ui);font-size:.82rem;color:rgba(255,255,255,.55);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.hc-foot a{color:var(--gold);text-decoration:none}
+.hc-limit{margin-top:1.2rem;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.35);border-radius:10px;padding:1.2rem 1.3rem;text-align:center}
+.hc-limit h4{font-family:var(--font-display);color:#fff;font-size:1.1rem;margin:0 0 .35rem}
+.hc-limit p{font-family:var(--font-ui);font-size:.87rem;color:rgba(255,255,255,.6);margin:0 0 .9rem}
+.hc-limit .hc-cta{display:inline-block;font-family:var(--font-ui);font-weight:600;font-size:.9rem;background:var(--gold);color:var(--navy-950);border-radius:8px;padding:.7rem 1.5rem;text-decoration:none}
+.hc-limit .hc-login{display:block;margin-top:.6rem;font-family:var(--font-ui);font-size:.8rem;color:rgba(255,255,255,.55)}
+.hc-limit .hc-login a{color:var(--gold)}
+.hc-note{font-family:var(--font-ui);font-size:.76rem;color:rgba(255,255,255,.4);margin:1rem 0 0;text-align:center}
+.hc-note a{color:rgba(200,169,81,.8);text-decoration:none}
+@media(max-width:640px){.homechat{padding:0 1rem}.hc-card{padding:1.5rem 1.2rem}.hc-row{flex-direction:column}.hc-btn{width:100%}}
+</style>
 </head>
 <body>
 
@@ -815,6 +847,32 @@
       <a href="#features" class="btn-ghost" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'});return false;">Explore the Platform</a>
     </div>
     <p class="hero-verse">"Always be prepared to give an answer to everyone who asks." — 1 Peter 3:15</p>
+  </section>
+
+  <!-- HOMEPAGE CHAT -->
+  <section class="homechat" id="homechat">
+    <div class="hc-card">
+      <div class="hc-kick">TRY IT RIGHT NOW &mdash; NO ACCOUNT NEEDED</div>
+      <h2 class="hc-title">Ask the hardest question about Christianity you&rsquo;ve got</h2>
+      <p class="hc-sub">A real answer in seconds &mdash; grounded in classical Christian orthodoxy, gentle in tone, honest about difficulty. Your first two questions are free, no sign-up.</p>
+      <div class="hc-chips">
+        <button class="hc-chip" onclick="hcUse(this)">If God is good, why is there so much suffering?</button>
+        <button class="hc-chip" onclick="hcUse(this)">Hasn&rsquo;t science made God unnecessary?</button>
+        <button class="hc-chip" onclick="hcUse(this)">How do we know Jesus rose from the dead?</button>
+      </div>
+      <div class="hc-row">
+        <input id="hcInput" class="hc-input" placeholder="Type your question&hellip;" maxlength="400" onkeydown="if(event.key==='Enter'){hcAsk();}" />
+        <button class="hc-btn" id="hcBtn" onclick="hcAsk()">Ask</button>
+      </div>
+      <div id="hcAnswer" class="hc-answer" style="display:none"></div>
+      <div id="hcLimit" class="hc-limit" style="display:none">
+        <h4>You&rsquo;ve used today&rsquo;s free questions</h4>
+        <p>Create a free account to keep asking &mdash; and save your conversations, build flashcards, and start the 7-day journey.</p>
+        <a class="hc-cta" href="signup.html">Create your free account &rarr;</a>
+        <span class="hc-login">Already have an account? <a href="login.html">Log in</a> &middot; or come back tomorrow</span>
+      </div>
+      <p class="hc-note">Powered by the same AI as Ask Anything &middot; <a href="ask-anything.html">open the full experience &rarr;</a></p>
+    </div>
   </section>
 
   <!-- STATS BAR -->
@@ -1417,6 +1475,73 @@
     }
   
   // ── NAV AUTH ──
+  /* ---- homepage chat ---- */
+  var HC_FREE = 2;
+  function hcToday(){ var d = new Date(); return d.getFullYear() + '-' + (d.getMonth()+1) + '-' + d.getDate(); }
+  function hcState(){
+    var s = {};
+    try { s = JSON.parse(localStorage.getItem('ad_homechat') || '{}'); } catch(e){ s = {}; }
+    if (s.d !== hcToday()){ s = { d: hcToday(), n: 0 }; }
+    return s;
+  }
+  function hcSave(s){ try { localStorage.setItem('ad_homechat', JSON.stringify(s)); } catch(e){} }
+  function hcEsc(t){ var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+  function hcFormat(text){
+    var lines = String(text).split('\n');
+    var out = '';
+    for (var i = 0; i < lines.length; i++){
+      var t = lines[i].trim();
+      if (t){ out += '<p>' + hcEsc(t) + '</p>'; }
+    }
+    return out;
+  }
+  function hcUse(btn){
+    var inp = document.getElementById('hcInput');
+    inp.value = btn.textContent;
+    hcAsk();
+  }
+  async function hcAsk(){
+    var inp = document.getElementById('hcInput');
+    var q = inp.value.trim();
+    if (!q){ inp.focus(); return; }
+    var loggedIn = false;
+    try { var r = await sb.auth.getSession(); loggedIn = !!(r.data && r.data.session); } catch(e){}
+    var s = hcState();
+    if (!loggedIn && s.n >= HC_FREE){
+      document.getElementById('hcLimit').style.display = 'block';
+      document.getElementById('hcLimit').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      return;
+    }
+    var btn = document.getElementById('hcBtn');
+    var box = document.getElementById('hcAnswer');
+    btn.disabled = true; btn.textContent = 'Thinking\u2026';
+    box.style.display = 'block';
+    box.innerHTML = '<div class="hc-q">' + hcEsc(q) + '</div><div class="hc-a"><p>Thinking through your question\u2026</p></div>';
+    try {
+      var res = await fetch('/api/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q })
+      });
+      if (!res.ok){ throw new Error('API error ' + res.status); }
+      var data = await res.json();
+      if (!data.answer){ throw new Error('No answer'); }
+      s = hcState(); s.n = s.n + 1; hcSave(s);
+      var left = HC_FREE - s.n;
+      var foot = '<div class="hc-foot"><span>';
+      if (loggedIn){ foot += 'Signed in \u2014 ask freely'; }
+      else if (left > 0){ foot += left + ' free question' + (left === 1 ? '' : 's') + ' left today'; }
+      else { foot += 'That was your last free question today'; }
+      foot += '</span><a href="ask-anything.html">Continue in Ask Anything &rarr;</a></div>';
+      box.innerHTML = '<div class="hc-q">' + hcEsc(q) + '</div><div class="hc-a">' + hcFormat(data.answer) + '</div>' + foot;
+      if (!loggedIn && left <= 0){ document.getElementById('hcLimit').style.display = 'block'; }
+      inp.value = '';
+    } catch(err){
+      box.innerHTML = '<div class="hc-q">' + hcEsc(q) + '</div><div class="hc-a"><p>Something went wrong on our end \u2014 please try again in a moment, or <a href="ask-anything.html" style="color:var(--gold)">open Ask Anything</a>.</p></div>';
+    }
+    btn.disabled = false; btn.textContent = 'Ask';
+  }
+
   async function navAuth() {
     try {
       var result = await sb.auth.getSession();
