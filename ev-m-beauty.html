@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty — Mastery Track | Apologia Daily</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --n:#050d1a; --n8:#0a1628; --n7:#0f2040; --n5:#1e4278; --n3:#4a7ab5;
+  --g:#c8a951; --gl:#d4b96a; --gd:#a88930;
+  --w:#fff; --ow:#f7f4ef; --border:#e8e2d8; --tm:#3a4a62; --td:#0f1f38;
+  --fd:'Playfair Display',Georgia,serif;
+  --ss:'Source Serif 4',Georgia,serif;
+  --ui:'DM Sans',system-ui,sans-serif;
+  --ok:#2f7d57; --okl:#e7f2ec;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ss);color:var(--td);background:var(--ow);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px}
+
+/* ---------- site nav (matches hub) ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;border-bottom:1px solid rgba(255,255,255,.08)}
+nav .logo{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:#fff;text-decoration:none}
+nav .logo span{color:var(--g)}
+.nl{display:flex;gap:1.5rem;list-style:none}
+.nl a{font-family:var(--ui);font-size:.82rem;color:rgba(255,255,255,.7);text-decoration:none;text-transform:uppercase;letter-spacing:.04em}
+.nl a.active{color:var(--g)}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-right a,.nav-right span,.nav-right button{font-family:var(--ui);font-size:.82rem}
+.nav-dashboard{color:rgba(255,255,255,.7);text-decoration:none;text-transform:uppercase;letter-spacing:.04em}
+.nav-user{color:var(--gl);font-weight:600}
+.nav-signin{color:rgba(255,255,255,.7);text-decoration:none}
+.nav-signout{background:none;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);padding:6px 14px;border-radius:3px;cursor:pointer}
+.nav-cta{font-weight:500;padding:8px 20px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none}
+@media(max-width:880px){.nl{display:none}}
+body{padding-top:64px}
+
+/* ---------- top hero ---------- */
+.hero{background:linear-gradient(160deg,var(--n) 0%,var(--n7) 70%,var(--n5) 160%);color:var(--w);padding:54px 0 130px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border:1px solid rgba(200,169,81,.18);border-radius:50%}
+.hero::before{content:"";position:absolute;right:10px;top:10px;width:200px;height:200px;border:1px solid rgba(200,169,81,.12);border-radius:50%}
+.eyebrow{font-family:var(--ui);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gl);font-weight:600;display:inline-flex;align-items:center;gap:9px}
+.eyebrow .dot{width:5px;height:5px;background:var(--g);border-radius:50%}
+.hero h1{font-family:var(--fd);font-weight:700;font-size:clamp(34px,6vw,52px);line-height:1.05;margin:16px 0 14px;max-width:16ch}
+.hero .lede{font-size:clamp(16px,2.4vw,19px);color:#cdd8e8;max-width:56ch}
+.hero .lede em{color:var(--gl);font-style:italic}
+.crumbs{font-family:var(--ui);font-size:13px;color:#8ea2bf;margin-bottom:4px}
+.crumbs a{color:#8ea2bf;text-decoration:none}
+
+/* ---------- mastery dial card ---------- */
+.dialcard{background:var(--w);border:1px solid var(--border);border-radius:16px;box-shadow:0 18px 50px -24px rgba(5,13,26,.45);margin-top:-86px;position:relative;z-index:3;padding:26px 28px;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.dial{flex:0 0 96px;width:96px;height:96px;position:relative}
+.dial svg{transform:rotate(-90deg)}
+.dial .pct{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--ui)}
+.dial .pct b{font-size:24px;color:var(--td);font-weight:700;line-height:1}
+.dial .pct span{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-top:2px}
+.dialmeta{flex:1;min-width:240px}
+.dialmeta h2{font-family:var(--fd);font-size:21px;font-weight:600;margin-bottom:4px}
+.dialmeta p{font-size:14.5px;color:var(--tm);font-family:var(--ui)}
+.libnote{font-family:var(--ui);font-size:12.5px;color:var(--gd);font-weight:600;margin-top:10px;display:inline-flex;align-items:center;gap:7px;background:#fbf7ec;border:1px solid #f0e6cb;padding:6px 12px;border-radius:99px}
+
+/* ---------- phase spine ---------- */
+section{padding:46px 0 6px}
+.phasehead{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+.phasenum{font-family:var(--ui);font-weight:700;font-size:13px;color:var(--w);background:var(--n5);width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex:0 0 30px}
+.phasehead h3{font-family:var(--fd);font-size:27px;font-weight:600}
+.phasesub{font-family:var(--ui);color:var(--tm);font-size:15px;margin:2px 0 26px 44px}
+
+.card{background:var(--w);border:1px solid var(--border);border-radius:14px;padding:24px 26px;margin-bottom:18px}
+.card h4{font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:4px}
+.card .kick{font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;margin-bottom:11px;display:block}
+
+/* premises */
+.syllogism{display:grid;gap:12px;margin:8px 0 18px}
+.prem{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:start;background:var(--ow);border:1px solid var(--border);border-radius:11px;padding:15px 17px}
+.prem .tag{font-family:var(--ui);font-weight:700;font-size:12px;color:var(--n5);background:#fff;border:1px solid #d6e0ef;border-radius:7px;padding:6px 0;text-align:center}
+.prem.concl{background:linear-gradient(120deg,#fbf7ec,#fff);border-color:#eeddb6}
+.prem.concl .tag{color:var(--gd);border-color:#ecdcae;background:#fffdf6}
+.prem p{font-size:16.5px;font-family:var(--ss)}
+.prem p b{color:var(--n5)}
+.formnote{font-family:var(--ui);font-size:13px;color:var(--tm);font-style:normal;background:#f4f7fb;border-left:3px solid var(--n3);padding:10px 14px;border-radius:0 8px 8px 0}
+
+/* the cause chips */
+.chiprow{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{font-family:var(--ui);font-size:13px;font-weight:600;color:var(--n7);background:#eef3fa;border:1px solid #dbe6f4;padding:7px 13px;border-radius:99px}
+.chip.gold{color:var(--gd);background:#fbf7ec;border-color:#f0e6cb}
+
+/* accordion (premise defence + objections) */
+.acc{border:1px solid var(--border);border-radius:11px;overflow:hidden;margin-bottom:11px;background:var(--w)}
+.acc summary{list-style:none;cursor:pointer;padding:16px 20px;display:flex;align-items:center;gap:14px;font-family:var(--ui);font-weight:600;font-size:15.5px;color:var(--td)}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary:hover{background:#fafbfd}
+.acc .badge{font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:6px;margin-left:auto;white-space:nowrap}
+.badge.hard{background:#fdeceb;color:#b23b32}
+.badge.mid{background:#fbf3e2;color:#9a7416}
+.badge.easy{background:var(--okl);color:var(--ok)}
+.acc .chev{color:var(--n3);transition:transform .2s;flex:0 0 auto}
+.acc[open] .chev{transform:rotate(90deg)}
+.acc .body{padding:2px 20px 20px;border-top:1px solid var(--border)}
+.acc .body .lbl{font-family:var(--ui);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin:16px 0 5px}
+.lbl.steel{color:var(--n5)}
+.lbl.heard{color:var(--tm)}
+.lbl.reply{color:var(--gd)}
+.acc .body p{font-size:15.5px;margin-bottom:4px}
+.acc .body .quote{background:var(--ow);border-left:3px solid var(--g);padding:11px 15px;border-radius:0 8px 8px 0;font-style:italic;color:var(--td);margin-top:4px}
+
+/* sources */
+.src{display:grid;grid-template-columns:1fr;gap:0}
+.src .row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.src .row:last-child{border-bottom:none}
+.src .who{font-family:var(--ui);flex:0 0 150px}
+.src .who b{display:block;font-size:15px;color:var(--td)}
+.src .who span{font-size:12.5px;color:var(--tm)}
+.src .what{font-size:15px;color:var(--td)}
+
+/* practice: explain it back */
+.practicecard{background:var(--w);border:1px solid var(--border);border-radius:14px;padding:24px 26px;margin-bottom:18px}
+textarea{width:100%;min-height:120px;font-family:var(--ss);font-size:15.5px;color:var(--td);border:1px solid var(--border);border-radius:10px;padding:13px 15px;resize:vertical;background:var(--ow)}
+textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
+.btn{font-family:var(--ui);font-weight:600;font-size:14.5px;border:none;border-radius:9px;padding:11px 20px;cursor:pointer;transition:transform .08s,background .15s}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:var(--n5);color:#fff}
+.btn.primary:hover{background:var(--n7)}
+.btn.gold{background:var(--g);color:var(--n)}
+.btn.gold:hover{background:var(--gl)}
+.btn.ghost{background:transparent;color:var(--n5);border:1px solid #cfdcee}
+.btn.ghost:hover{background:#f3f7fc}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.score{margin-top:18px;border:1px solid var(--border);border-radius:11px;padding:18px 20px;background:var(--ow);display:none}
+.score.show{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.scorehead{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+.scorenum{font-family:var(--fd);font-size:34px;font-weight:700;color:var(--n5);line-height:1}
+.scorenum small{font-size:16px;color:var(--tm)}
+.scoreverdict{font-family:var(--ui);font-weight:600;font-size:15px}
+.feed{list-style:none;display:grid;gap:7px}
+.feed li{font-family:var(--ui);font-size:14px;display:flex;gap:9px;align-items:flex-start}
+.feed li .mk{flex:0 0 auto;font-weight:700}
+.feed li.hit .mk{color:var(--ok)}
+.feed li.miss .mk{color:var(--gd)}
+
+/* flashcards */
+.flashwrap{perspective:1200px}
+.flash{position:relative;height:178px;cursor:pointer}
+.flash .face{position:absolute;inset:0;backface-visibility:hidden;border-radius:13px;padding:24px;display:flex;flex-direction:column;justify-content:center;transition:transform .5s;border:1px solid var(--border)}
+.flash .front{background:linear-gradient(150deg,var(--n7),var(--n5));color:#fff}
+.flash .back{background:var(--w);transform:rotateY(180deg)}
+.flash.flipped .front{transform:rotateY(180deg)}
+.flash.flipped .back{transform:rotateY(0)}
+.flash .qlbl{font-family:var(--ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gl);font-weight:600;margin-bottom:9px}
+.flash .front p{font-family:var(--fd);font-size:19px;font-weight:500}
+.flash .back .qlbl{color:var(--gd)}
+.flash .back p{font-size:15px;color:var(--td)}
+.flash .tap{position:absolute;bottom:13px;right:18px;font-family:var(--ui);font-size:11px;opacity:.6}
+.flashnav{display:flex;align-items:center;justify-content:space-between;margin-top:14px;font-family:var(--ui)}
+.flashnav span{font-size:13px;color:var(--tm)}
+
+/* debate */
+.interloc{display:flex;gap:13px;margin-bottom:8px}
+.interloc .av{flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:#e6ebf3;color:var(--n5);display:flex;align-items:center;justify-content:center;font-family:var(--ui);font-weight:700;font-size:14px}
+.interloc .bub{background:#eef2f8;border-radius:4px 14px 14px 14px;padding:13px 17px;font-size:16px}
+.interloc .who2{font-family:var(--ui);font-size:12px;color:var(--tm);margin-bottom:3px;font-weight:600}
+.reveal{margin-top:14px}
+.modelans{display:none;margin-top:12px;border:1px solid #f0e6cb;background:#fbf7ec;border-radius:12px;padding:16px 19px}
+.modelans.show{display:block;animation:fade .3s ease}
+.modelans .lbl{font-family:var(--ui);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--gd);margin-bottom:7px}
+.modelans p{font-size:15px}
+
+/* prove it checklist */
+.checklist{display:grid;gap:11px}
+.cl{display:flex;align-items:center;gap:14px;padding:15px 18px;border:1px solid var(--border);border-radius:11px;background:var(--w);transition:.2s}
+.cl.done{border-color:#cfe6da;background:var(--okl)}
+.cl .box{flex:0 0 24px;width:24px;height:24px;border-radius:7px;border:2px solid #cdd6e2;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;transition:.2s}
+.cl.done .box{background:var(--ok);border-color:var(--ok)}
+.cl .txt{flex:1}
+.cl .txt b{font-family:var(--ui);font-size:15px;display:block}
+.cl .txt span{font-family:var(--ui);font-size:13px;color:var(--tm)}
+.cl .state{font-family:var(--ui);font-size:12.5px;font-weight:600;color:var(--tm)}
+.cl.done .state{color:var(--ok)}
+
+/* confidence */
+.confrow{display:flex;gap:9px;margin-top:14px;flex-wrap:wrap}
+.confrow button{flex:1;min-width:90px;font-family:var(--ui);font-weight:600;font-size:13.5px;border:1px solid #cfdcee;background:#fff;color:var(--n5);border-radius:9px;padding:11px 8px;cursor:pointer;transition:.15s}
+.confrow button:hover{border-color:var(--n3)}
+.confrow button.sel{background:var(--n5);color:#fff;border-color:var(--n5)}
+
+.bigcta{background:linear-gradient(150deg,var(--n) 0%,var(--n7) 100%);color:#fff;border-radius:16px;padding:30px 32px;margin:14px 0 60px;text-align:center}
+.bigcta h4{font-family:var(--fd);font-size:23px;font-weight:600;color:#fff;margin-bottom:6px}
+.bigcta p{color:#cdd8e8;font-family:var(--ui);font-size:14.5px;max-width:50ch;margin:0 auto 16px}
+
+.foot{text-align:center;font-family:var(--ui);font-size:12.5px;color:var(--tm);padding:0 0 50px}
+.foot code{background:#eef0f3;padding:2px 6px;border-radius:4px;font-size:12px}
+
+@media(max-width:560px){
+  .prem{grid-template-columns:46px 1fr;gap:11px}
+  .src .row{flex-direction:column;gap:4px}
+  .src .who{flex-basis:auto}
+  .dialcard{padding:22px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Apologia<span>Daily</span></a>
+  <ul class="nl">
+    <li><a href="evidence-library.html" class="active">Evidence Library</a></li>
+    <li><a href="daily-devotional.html">Daily Devotional</a></li>
+    <li><a href="debate-arena.html">Debate Arena</a></li>
+    <li><a href="ask-anything.html">Ask Anything</a></li>
+    <li><a href="worldviews.html">Worldviews</a></li>
+    <li><a href="study-plans.html">Study Plans</a></li>
+    <li><a href="video-library.html">Videos</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="whats-new.html">What's New</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="dashboard.html" class="nav-dashboard" id="nav-dashboard" style="display:none;">Dashboard</a>
+    <span class="nav-user" id="nav-user"></span>
+    <button class="nav-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
+    <a href="login.html" class="nav-signin" id="nav-signin">Sign in</a>
+    <a href="signup.html" class="nav-cta" id="nav-cta">Start Free</a>
+  </div>
+</nav>
+
+<div id="proGate" style="display:none;position:fixed;inset:64px 0 0;z-index:90;background:linear-gradient(160deg,#050d1a,#0f2040);color:#fff;align-items:center;justify-content:center;text-align:center;padding:24px">
+  <div style="max-width:440px">
+    <div style="font-size:34px;margin-bottom:8px">&#128274;</div>
+    <h2 style="font-family:var(--fd);font-size:28px;font-weight:600;margin-bottom:10px">Mastery Tracks are a Pro feature</h2>
+    <p style="font-family:var(--ui);color:#cdd8e8;font-size:15px;margin-bottom:22px">Go beyond reading the deep dive — reconstruct each argument from memory, answer its hardest objections, and track your mastery across the library.</p>
+    <a href="index.html#pricing" class="btn gold" style="display:inline-block;text-decoration:none;margin-bottom:14px">Upgrade to Pro &mdash; $8/mo</a>
+    <div><a href="evidence-library.html" style="font-family:var(--ui);color:#8ea2bf;font-size:13px;text-decoration:none">&larr; Back to the Evidence Library</a></div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="crumbs"><a href="evidence-library.html">Evidence Library</a> &nbsp;›&nbsp; God's Existence &nbsp;›&nbsp; <span style="color:var(--gl)">Beauty</span></div>
+    <span class="eyebrow"><span class="dot"></span> Pro · Mastery Track</span>
+    <h1>The Argument from Beauty</h1>
+    <p class="lede">The deep dive explains the argument. This track makes you able to <em>wield</em> it — rebuild it from memory, meet its hardest objections, and be clear about the kind of case it is.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <!-- mastery dial -->
+  <div class="dialcard">
+    <div class="dial">
+      <svg width="96" height="96" viewBox="0 0 96 96">
+        <circle cx="48" cy="48" r="42" fill="none" stroke="#ede7db" stroke-width="9"/>
+        <circle id="ring" cx="48" cy="48" r="42" fill="none" stroke="var(--g)" stroke-width="9" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="263.9"/>
+      </svg>
+      <div class="pct"><b id="pctNum">0%</b><span>mastered</span></div>
+    </div>
+    <div class="dialmeta">
+      <h2>Your mastery of this argument</h2>
+      <p>Four checkpoints: understand it, explain it, drill it, defend it. Complete them in any order — your progress saves to your account.</p>
+      <span class="libnote">◆ &nbsp;Argument 10 of 22 in the mastery library</span>
+    </div>
+  </div>
+
+  <!-- ===================== PHASE 1: UNDERSTAND ===================== -->
+  <section id="understand">
+    <div class="phasehead"><span class="phasenum">1</span><h3>Understand it</h3></div>
+    <p class="phasesub">Not more prose — the load-bearing structure. See the skeleton, then learn to defend each bone.</p>
+
+    <div class="card">
+      <span class="kick">The argument, formally</span>
+      <h4>Three lines — an abductive case, not a deductive proof.</h4>
+      <div class="syllogism">
+        <div class="prem"><div class="tag">P1</div><p><b>Objective beauty</b> exists — some things are genuinely, not merely subjectively, beautiful.</p></div>
+        <div class="prem"><div class="tag">P2</div><p>Objective beauty is <b>better explained</b> by a personal, beauty-loving Creator than by blind, indifferent processes.</p></div>
+        <div class="prem concl"><div class="tag">∴ C</div><p>So beauty is <b>evidence for God</b>.</p></div>
+      </div>
+      <p class="formnote">This is an inference to the best explanation, offered as part of a cumulative case — not a knock-down proof. Objections cluster on P1 (is beauty really objective?) and P2 (cannot evolution or brain chemistry explain it?). Knowing which is which keeps the conversation clear.</p>
+
+      <span class="kick" style="margin-top:22px">Then the conceptual step — what does beauty point to?</span>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">A universe drenched in beauty far beyond any survival need, and minds wired to be moved by it, is surprising on blind naturalism but natural on theism — a Creator who delights in beauty and made creatures to share the delight.</p>
+      <div class="chiprow">
+        <span class="chip">a personal aesthetic source</span><span class="chip">beauty beyond utility</span><span class="chip">a world fitted to the mind</span><span class="chip">delight built into creation</span><span class="chip gold">a Creator who enjoys beauty</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="kick">Defending the premises</span>
+      <h4>Why each premise is more plausible than its denial</h4>
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P1 — beauty is (at least partly) objective</summary>
+        <div class="body">
+          <p class="lbl steel">Convergence and correction</p>
+          <p>Tastes vary, yet the deepest beauty — a night sky, certain music, a mathematical proof — commands striking agreement across cultures and centuries, and we treat it as discovered: we say someone lacks taste, or grows in appreciation.</p>
+          <p class="lbl steel">We argue as if it is real</p>
+          <p>We dispute beauty as though there is a fact to get right or wrong. Pure subjectivism cannot explain why a Bach fugue moves people who share no culture. That objective core is all the argument needs.</p>
+        </div>
+      </details>
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P2 — a Creator explains it better</summary>
+        <div class="body">
+          <p class="lbl steel">The surplus problem</p>
+          <p>On naturalism, why would blind selection produce beings who weep at a requiem or find equations elegant — far beyond any reproductive need? This disinterested surplus is exactly what naturalism struggles to explain.</p>
+          <p class="lbl steel">Expected on theism</p>
+          <p>A beauty-loving Creator who made a world to be enjoyed, and minds attuned to enjoy it, makes the depth and pervasiveness of beauty unsurprising — even predicted.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <span class="kick">The hard part — objections, steelmanned</span>
+      <h4>Each one stated as its strongest defender would put it</h4>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">A soft-sounding argument still has hard objections. Strongest form first — never a strawman — then the reply.</p>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Beauty is entirely subjective" <span class="badge easy">Common</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>People disagree wildly about beauty, so it is just preference — there is nothing objective to explain.</p>
+          <p class="lbl reply">Reply</p>
+          <p>Some beauty is taste-relative, granted. But the deepest cases show remarkable convergence across cultures and centuries, and we treat them as discoveries — we say someone lacks taste, or grows into appreciating something. Pure subjectivism cannot explain why a Bach fugue moves people who share no culture. At minimum, that objective core is what the argument needs.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Evolution explains our sense of beauty" <span class="badge mid">Trickier</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>We find symmetry, fertile landscapes, and healthy mates beautiful because it aided survival. Beauty is an adaptation.</p>
+          <p class="lbl reply">Reply</p>
+          <p>Evolution may explain some preferences — mate symmetry, a safe-looking valley — but it badly overshoots for the rest. Why weep at a requiem, call a proof beautiful, or be undone by a sunset that confers no survival benefit? This surplus of disinterested beauty, far beyond fitness, is exactly what naturalism struggles with and theism predicts.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Beauty is just a brain reward" <span class="badge mid">Trickier</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>Beauty is whatever the brain finds pleasing — a neural reward response. Calling it objective is a confusion.</p>
+          <p class="lbl reply">Reply</p>
+          <p>This reduces beauty to a feeling and then cannot explain why we treat aesthetic judgments as correct or mistaken, why beauty seems to make a claim on us, or why it so often points beyond itself in awe and longing. It explains the phenomenon away rather than explaining the thing we actually have.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "There is ugliness too" <span class="badge hard">Hard</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>Nature is full of disease, decay, and predation. An aesthetic argument cuts both ways.</p>
+          <p class="lbl reply">Reply</p>
+          <p>The argument does not claim everything is beautiful; it claims the existence of objective beauty needs explaining, and even amid decay the world is shot through with gratuitous beauty. Ugliness raises the problem of evil — a real and separate challenge — but the presence of genuine beauty still demands a source, and is hard to get from indifferent matter.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "This is too soft to be an argument" <span class="badge easy">Common</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>Unlike the cosmological arguments, this is impressionistic, not rigorous.</p>
+          <p class="lbl reply">Reply</p>
+          <p>Agreed it is not a deductive proof, and it is not offered as one — it is an abductive, cumulative-case consideration: which worldview better predicts a universe drenched in disinterested beauty and minds that ache at it? Soft data still counts; the felt force of beauty is a real datum any worldview must place.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Even if it points beyond, why the Christian God?" <span class="badge mid">Trickier</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>At most this gives a vague aesthetic source, not the God of the gospel.</p>
+          <p class="lbl reply">Reply</p>
+          <p>True — on its own it indicates a personal, beauty-loving ground of reality, part of a cumulative case. The Christian adds that this fits a God who called creation good, who is himself the source of glory, and whose beauty Scripture says creation declares. But the modest conclusion is honestly a personal aesthetic Creator, filled out by the rest of the case.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <span class="kick">Touch the originals</span>
+      <h4>Where this comes from — primary sources, not our summary</h4>
+      <div class="src">
+        <div class="row">
+          <div class="who"><b>Augustine</b><span>4th–5th c. · <em>Confessions</em></span></div>
+          <div class="what">His cry, late have I loved you, beauty so old and so new — beauty as a road that leads the restless heart to God.</div>
+        </div>
+        <div class="row">
+          <div class="who"><b>Jonathan Edwards</b><span>18th c. · <em>The Nature of True Virtue</em></span></div>
+          <div class="what">Tied beauty and excellency to the divine, seeing creation’s loveliness as a communication of God’s own.</div>
+        </div>
+        <div class="row">
+          <div class="who"><b>Richard Swinburne</b><span>contemporary</span></div>
+          <div class="what">Includes the argument from beauty within his cumulative probabilistic case for God.</div>
+        </div>
+        <div class="row">
+          <div class="who"><b>C.S. Lewis</b><span>20th c. · <em>The Weight of Glory</em></span></div>
+          <div class="what">Beauty as longing — the ache that points beyond the world to its source. (We paraphrase — read the originals.)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PHASE 2: PRACTICE ===================== -->
+  <section id="practice">
+    <div class="phasehead"><span class="phasenum">2</span><h3>Practice it</h3></div>
+    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Three drills that route this argument through tools you already have.</p>
+
+    <div class="practicecard">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument in your own words</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Reconstruct the argument from memory: the objectivity of the deepest beauty (P1), why a Creator explains it better than blind processes (P2), and the conclusion — and be clear it is abductive, not a proof.</p>
+      <textarea id="explainBox" placeholder="Start with: Some beauty is not merely subjective, and..."></textarea>
+      <div class="btnrow">
+        <button class="btn primary" onclick="scoreExplain(this)">Score my explanation</button>
+        <button class="btn ghost" onclick="document.getElementById('explainBox').value='';document.getElementById('scoreOut').classList.remove('show')">Clear</button>
+      </div>
+      <div class="score" id="scoreOut">
+        <div class="scorehead">
+          <div class="scorenum" id="scoreNum">0<small>/10</small></div>
+          <div class="scoreverdict" id="scoreVerdict"></div>
+        </div>
+        <ul class="feed" id="scoreFeed"></ul>
+      </div>
+    </div>
+
+    <div class="practicecard">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 2 · Flashcards</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Drilled straight from this argument</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Five cards on the objectivity of beauty, the evolutionary surplus, the ugliness objection, and how strong this argument is.</p>
+      <div class="flashwrap">
+        <div class="flash" id="flash" onclick="this.classList.toggle('flipped')">
+          <div class="face front"><div class="qlbl">Prompt</div><p id="fFront"></p><span class="tap">tap to flip</span></div>
+          <div class="face back"><div class="qlbl">Answer</div><p id="fBack"></p><span class="tap">tap to flip</span></div>
+        </div>
+      </div>
+      <div class="flashnav">
+        <button class="btn ghost" onclick="prevCard()">‹ Prev</button>
+        <span id="cardCount"></span>
+        <button class="btn ghost" onclick="nextCard()">Next ›</button>
+      </div>
+    </div>
+
+    <div class="practicecard">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · Live objection</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Answer the it-is-just-evolution reply</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">A seeded scenario from the Debate Arena. Draft your reply, then reveal a model answer to compare.</p>
+      <div class="interloc">
+        <div class="av">SK</div>
+        <div>
+          <div class="who2">Skeptic</div>
+          <div class="bub">"Beauty is just subjective preference shaped by evolution. We like symmetry and green landscapes because it helped our ancestors survive. There is nothing there for a God to explain."</div>
+        </div>
+      </div>
+      <textarea id="debateBox" placeholder="Your response..."></textarea>
+      <div class="btnrow">
+        <button class="btn gold" onclick="document.getElementById('modelAns').classList.add('show')">Reveal a model response</button>
+      </div>
+      <div class="modelans" id="modelAns">
+        <div class="lbl">One strong way to answer — in a 1 Peter 3:15 tone</div>
+        <p>"Evolution does explain some of it — symmetry in a face, a fertile-looking valley, sure. But watch how far it overshoots. Why does a Bach cello suite undo someone to tears? Why do mathematicians call a proof beautiful and mean it? Why does a sunset that feeds no one and warns of no danger stop people in their tracks? None of that pays rent in survival terms — it is a vast surplus of beauty, and a delight in it wildly out of proportion to anything fitness needs. And notice we argue about it as if we can get it right or wrong — we say someone has no taste, or grows into appreciating something. That is the language of discovery, not mere preference. A blind, indifferent process is a strange thing to credit with a universe drenched in beauty and creatures wired to be moved by it. A Maker who delights in beauty is a more natural fit."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PHASE 3: PROVE IT ===================== -->
+  <section id="proveit">
+    <div class="phasehead"><span class="phasenum">3</span><h3>Prove it</h3></div>
+    <p class="phasesub">Mastery isn't a feeling — it's four things done. Clear them and this argument turns gold on your shelf.</p>
+
+    <div class="card">
+      <div class="checklist">
+        <div class="cl" id="ck-read"><div class="box">✓</div><div class="txt"><b>Understood it</b><span>Read the structure, defences, and all objections</span></div><div class="state">Open every section</div></div>
+        <div class="cl" id="ck-explain"><div class="box">✓</div><div class="txt"><b>Explained it</b><span>Score 7+ on Explain It Back</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="ck-cards"><div class="box">✓</div><div class="txt"><b>Drilled it</b><span>Cycle through every flashcard once</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="ck-debate"><div class="box">✓</div><div class="txt"><b>Defended it</b><span>Attempt the live objection</span></div><div class="state">Not yet</div></div>
+      </div>
+      <div style="margin-top:26px;border-top:1px solid var(--border);padding-top:20px">
+        <span class="kick">One more thing — be honest</span>
+        <h4 style="font-size:17px">If a friend challenged you on this tomorrow, how ready are you?</h4>
+        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Your self-rating is tracked over time so you can watch confidence climb across the library.</p>
+        <div class="confrow" id="confRow">
+          <button onclick="setConf(this,1)">Shaky</button>
+          <button onclick="setConf(this,2)">Getting there</button>
+          <button onclick="setConf(this,3)">Solid</button>
+          <button onclick="setConf(this,4)">Could teach it</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bigcta">
+      <h4 id="ctaTitle">Master the Argument from Beauty, then take the next one</h4>
+      <p id="ctaText">Two more cases for God remain in this set after this one — each with the same path from understanding to defence. The Problem of Evil as Evidence for God is next.</p>
+      <button class="btn gold" onclick="alert('In the live site this routes to the next argument.')">Next: the Problem of Evil as Evidence for God →</button>
+    </div>
+  </section>
+
+  <p class="foot">
+    Prototype · Apologia Daily Pro — Mastery Track. State is in-memory for this preview.<br>
+    In the live site, progress writes to <code>ad_prefs.mastery</code> in localStorage and syncs to a <code>mastery</code> Supabase table (RLS per user). Explain It Back calls <code>/api/tutor</code> for real scoring; flashcards feed the existing SM-2 deck.
+  </p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* ---- in-memory state (swap for localStorage/Supabase in production) ---- */
+const state = { read:false, explainPass:false, cardsSeen:new Set(), debateTried:false, conf:0 };
+
+/* ---- mastery dial ---- */
+const CIRC = 263.9;
+function updateDial(){
+  let done = 0;
+  if(state.read) done++;
+  if(state.explainPass) done++;
+  if(state.cardsSeen.size >= cards.length) done++;
+  if(state.debateTried) done++;
+  const pct = Math.round(done/4*100);
+  document.getElementById('pctNum').textContent = pct + '%';
+  document.getElementById('ring').style.strokeDashoffset = CIRC - (CIRC*pct/100);
+
+  setCheck('ck-read', state.read);
+  setCheck('ck-explain', state.explainPass);
+  setCheck('ck-cards', state.cardsSeen.size >= cards.length);
+  setCheck('ck-debate', state.debateTried);
+
+  if(pct===100){
+    document.getElementById('ctaTitle').textContent = 'the Argument from Beauty mastered - it just turned gold on your shelf';
+    document.getElementById('ctaText').textContent = 'That is 10 of 22. The same path is waiting for every argument in the library. Keep the streak going.';
+    document.querySelector('.libnote').innerHTML = '&#9670; &nbsp;the Argument from Beauty mastered - 10 of 22 core arguments complete';
+  }
+}
+function setCheck(id, on){
+  const el = document.getElementById(id);
+  el.classList.toggle('done', on);
+  var stEl = el.querySelector('.state');
+  if(on){ stEl.textContent = 'Done'; return; }
+  if(id==='ck-read'){
+    stEl.textContent = (typeof _accOpened !== 'undefined' && _accs.length) ? (_accOpened.size + ' of ' + _accs.length + ' opened') : 'Open every section';
+  } else {
+    stEl.textContent = 'Not yet';
+  }
+}
+
+/* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
+/* ---- argument premises used to ground the AI scoring ---- */
+var ARG_PREMISES = [
+  'Objective beauty exists - some things are genuinely, not merely subjectively, beautiful.',
+  'Objective beauty is better explained by a personal Creator than by blind processes.',
+  'So beauty is evidence for God.'
+];
+
+/* Real AI scoring via /api/tutor (same method as explain-it-back.html).
+   Falls back to a local heuristic if the API is unreachable (e.g. preview). */
+async function scoreExplain(btn){
+  var box = document.getElementById('explainBox');
+  var txt = box ? box.value.trim() : '';
+  if(!txt){ return; }
+  if(btn){ btn.disabled = true; btn.dataset.lbl = btn.textContent; btn.textContent = 'Scoring...'; }
+  try{
+    var prompt = 'Please evaluate this student explanation of "The Argument from Beauty". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
+    var res = await fetch('/api/tutor', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ question: prompt, argument: 'The Argument from Beauty', category: 'Evidence Library' })
+    });
+    if(!res.ok){ throw new Error('bad status'); }
+    var data = await res.json();
+    var answer = data.answer || '';
+    var m = answer.match(/\{[\s\S]*\}/);
+    if(!m){ throw new Error('no json'); }
+    var fb = JSON.parse(m[0]);
+    renderScore(fb.score || 0, fb.strengths || [], fb.improvements || []);
+  }catch(e){
+    renderMockScore(txt);
+  }
+  if(btn){ btn.disabled = false; btn.textContent = btn.dataset.lbl || 'Score my explanation'; }
+}
+
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function renderScore(score, strengths, improvements){
+  score = Math.max(0, Math.min(10, Math.round(Number(score) || 0)));
+  var feed = '';
+  (strengths||[]).forEach(function(s){ feed += '<li class="hit"><span class="mk">\u2713</span>'+esc(s)+'</li>'; });
+  (improvements||[]).forEach(function(s){ feed += '<li class="miss"><span class="mk">\u25CB</span>'+esc(s)+'</li>'; });
+  document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
+  var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
+  document.getElementById('scoreVerdict').textContent = verdict;
+  document.getElementById('scoreFeed').innerHTML = feed;
+  document.getElementById('scoreOut').classList.add('show');
+  if(score>=7){ state.explainPass = true; }
+  updateDial();
+}
+
+function renderMockScore(txtRaw){
+  var t = (txtRaw||'').toLowerCase();
+  var checks = [
+    {ok:/beaut/.test(t) && /objective|real|genuine|not (merely |just )?subjective/.test(t), hit:'Premise 1 - you affirmed objective beauty', miss:'State Premise 1 - some beauty is objective, not merely subjective'},
+    {ok:/evolution|fitness|survival|subjective|preference/.test(t), hit:'Good - you engaged the main objection', miss:'Engage the main objection - evolution or subjectivity'},
+    {ok:/surplus|beyond|disinterested|overshoot|cross-cultural|convergen|creator|personal|better explain/.test(t), hit:'Nice - you supported the better-explanation step', miss:'Support Premise 2 - the surplus of beauty fits a personal Creator better than blind processes'},
+    {ok:/god|points to|evidence for god/.test(t), hit:'Conclusion - you reached evidence for God', miss:'Draw the conclusion: beauty is evidence for God'},
+    {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth - you developed it, not just listed it', miss:'Go a bit deeper - a full reconstruction runs longer than this'}
+  ];
+  var score = 0, feed = '';
+  checks.forEach(function(c){
+    if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">\u2713</span>'+c.hit+'</li>'; }
+    else{ feed += '<li class="miss"><span class="mk">\u25CB</span>'+c.miss+'</li>'; }
+  });
+  document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
+  var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
+  document.getElementById('scoreVerdict').textContent = verdict;
+  document.getElementById('scoreFeed').innerHTML = feed;
+  document.getElementById('scoreOut').classList.add('show');
+  if(score>=7){ state.explainPass = true; }
+  updateDial();
+}
+
+/* ---- flashcards (generated from this argument) ---- */
+const cards = [
+  {q:'State the argument from beauty.', a:'Objective beauty exists. It is better explained by a personal, beauty-loving Creator than by blind processes. So beauty is evidence for God.'},
+  {q:'Reply to: beauty is purely subjective.', a:'Some is taste-relative, but the deepest beauty shows cross-cultural convergence and we treat it as discovered - we say someone lacks taste or grows in it. That objective core is what the argument needs.'},
+  {q:'Why does evolution not fully explain beauty?', a:'It may explain mate-symmetry preferences, but overshoots wildly for the surplus - weeping at a requiem, finding a proof elegant, awe at a useless sunset. That disinterested surplus fits theism, not fitness.'},
+  {q:'Does ugliness in nature defeat it?', a:'No - the argument needs only that objective beauty exists and needs a source. Ugliness raises the separate problem of evil; gratuitous beauty still demands explaining.'},
+  {q:'How strong is this argument?', a:'Abductive and cumulative, not a deductive proof. It asks which worldview better predicts a universe drenched in disinterested beauty and minds that ache at it.'}
+];
+let ci = 0;
+function renderCard(){
+  document.getElementById('flash').classList.remove('flipped');
+  document.getElementById('fFront').textContent = cards[ci].q;
+  document.getElementById('fBack').textContent = cards[ci].a;
+  document.getElementById('cardCount').textContent = (ci+1) + ' of ' + cards.length;
+  state.cardsSeen.add(ci);
+  updateDial();
+}
+function nextCard(){ ci = (ci+1)%cards.length; renderCard(); }
+function prevCard(){ ci = (ci-1+cards.length)%cards.length; renderCard(); }
+
+/* ---- debate ---- */
+document.getElementById('debateBox').addEventListener('input', ()=>{
+  if(document.getElementById('debateBox').value.trim().length > 8 && !state.debateTried){
+    state.debateTried = true; updateDial();
+  }
+});
+document.querySelector('[onclick*="modelAns"]').addEventListener('click', ()=>{
+  state.debateTried = true; updateDial();
+});
+
+/* ---- prove it ---- */
+function markRead(){
+  state.read = true;
+  document.getElementById('readBtn').textContent = 'Marked as understood \u2713';
+  document.getElementById('readBtn').classList.remove('primary');
+  document.getElementById('readBtn').classList.add('ghost');
+  updateDial();
+}
+function setConf(btn, val){
+  [...document.querySelectorAll('#confRow button')].forEach(b=>b.classList.remove('sel'));
+  btn.classList.add('sel');
+  state.conf = val;
+}
+
+/* ---- Supabase auth + Pro gate (matches site conventions) ---- */
+var sb = null;
+
+async function navAuth(){
+  try{
+    var result = await sb.auth.getSession();
+    var session = result.data && result.data.session;
+    if(session){
+      var name = (session.user.user_metadata && session.user.user_metadata.full_name) || session.user.email.split('@')[0];
+      var nu = document.getElementById('nav-user');
+      var ns = document.getElementById('nav-signout');
+      var ni = document.getElementById('nav-signin');
+      var nc = document.getElementById('nav-cta');
+      var nd = document.getElementById('nav-dashboard');
+      if(nu) nu.textContent = name;
+      if(ns) ns.style.display = 'inline-block';
+      if(ni) ni.style.display = 'none';
+      if(nc) nc.style.display = 'none';
+      if(nd) nd.style.display = 'inline-block';
+    }
+  }catch(e){}
+}
+
+async function signOut(){
+  try{ if(sb) await sb.auth.signOut(); }catch(e){}
+  window.location.href = 'index.html';
+}
+
+function showGate(){
+  var g = document.getElementById('proGate');
+  if(g) g.style.display = 'flex';
+}
+
+async function boot(){
+  if(window.supabase && window.supabase.createClient){
+    sb = window.supabase.createClient('https://noprgxkwniouukmrfozc.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw');
+    var result = await sb.auth.getSession();
+    var session = result.data && result.data.session;
+    await navAuth();
+    /* TEMP until Stripe is live — everything unlocked, same as flashcards/explain-it-back. */
+    var isPro = true;
+    /* Post-Stripe, replace the line above with:
+       var isPro = !!(session && session.user && session.user.user_metadata && session.user.user_metadata.is_pro === true); */
+    if(!isPro){ showGate(); return; }
+  }
+  /* build the track */
+  renderCard();
+  updateDial();
+}
+/* "Understood it" is earned by opening every section in Phase 1 (defences + objections) */
+var _accs = Array.prototype.slice.call(document.querySelectorAll('#understand details.acc'));
+var _accOpened = new Set();
+_accs.forEach(function(d, i){
+  d.addEventListener('toggle', function(){
+    if(!d.open || state.read){ return; }
+    _accOpened.add(i);
+    if(_accOpened.size >= _accs.length){ state.read = true; }
+    updateDial();
+  });
+});
+
+document.addEventListener('DOMContentLoaded', boot);
+</script>
+</body>
+</html>
