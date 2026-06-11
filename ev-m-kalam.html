@@ -462,15 +462,11 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 
     <div class="card">
       <div class="checklist">
-        <div class="cl" id="ck-read"><div class="box">✓</div><div class="txt"><b>Understood it</b><span>Read the structure, defences, and all objections</span></div><div class="state">Mark below</div></div>
+        <div class="cl" id="ck-read"><div class="box">✓</div><div class="txt"><b>Understood it</b><span>Read the structure, defences, and all objections</span></div><div class="state">Open every section</div></div>
         <div class="cl" id="ck-explain"><div class="box">✓</div><div class="txt"><b>Explained it</b><span>Score 7+ on Explain It Back</span></div><div class="state">Not yet</div></div>
         <div class="cl" id="ck-cards"><div class="box">✓</div><div class="txt"><b>Drilled it</b><span>Cycle through every flashcard once</span></div><div class="state">Not yet</div></div>
         <div class="cl" id="ck-debate"><div class="box">✓</div><div class="txt"><b>Defended it</b><span>Attempt the live objection</span></div><div class="state">Not yet</div></div>
       </div>
-      <div style="margin-top:16px">
-        <button class="btn primary" onclick="markRead()" id="readBtn">I've read and understood Phase 1</button>
-      </div>
-
       <div style="margin-top:26px;border-top:1px solid var(--border);padding-top:20px">
         <span class="kick">One more thing — be honest</span>
         <h4 style="font-size:17px">If a friend challenged you on this tomorrow, how ready are you?</h4>
@@ -528,7 +524,13 @@ function updateDial(){
 function setCheck(id, on){
   const el = document.getElementById(id);
   el.classList.toggle('done', on);
-  el.querySelector('.state').textContent = on ? 'Done' : (id==='ck-read'?'Mark below':'Not yet');
+  var stEl = el.querySelector('.state');
+  if(on){ stEl.textContent = 'Done'; return; }
+  if(id==='ck-read'){
+    stEl.textContent = (typeof _accOpened !== 'undefined' && _accs.length) ? (_accOpened.size + ' of ' + _accs.length + ' opened') : 'Open every section';
+  } else {
+    stEl.textContent = 'Not yet';
+  }
 }
 
 /* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
@@ -698,6 +700,18 @@ async function boot(){
   renderCard();
   updateDial();
 }
+/* "Understood it" is earned by opening every section in Phase 1 (defences + objections) */
+var _accs = Array.prototype.slice.call(document.querySelectorAll('#understand details.acc'));
+var _accOpened = new Set();
+_accs.forEach(function(d, i){
+  d.addEventListener('toggle', function(){
+    if(!d.open || state.read){ return; }
+    _accOpened.add(i);
+    if(_accOpened.size >= _accs.length){ state.read = true; }
+    updateDial();
+  });
+});
+
 document.addEventListener('DOMContentLoaded', boot);
 </script>
 </body>
