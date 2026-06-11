@@ -176,7 +176,7 @@
     <!-- FREE LIMIT BANNER -->
     <div class="limit-banner" id="limit-banner">
       <div>
-        <div class="limit-title">You've used your 5 free questions today</div>
+        <div class="limit-title">You've used today's 3 free questions</div>
         <div class="limit-sub">Upgrade to Pro for unlimited questions, the full Evidence Library, and the complete Debate Arena.</div>
       </div>
       <a href="index.html#pricing" class="limit-btn">Upgrade to Pro — $8/mo</a>
@@ -187,7 +187,7 @@
       <p class="ask-label">Your question</p>
       <textarea class="ask-textarea" id="ask-input" placeholder="Ask any question about the Christian faith… e.g. 'How do I respond to someone who says God and evil can't coexist?' or 'What is the best evidence for the resurrection?'" rows="4"></textarea>
       <div class="ask-footer">
-        <span class="ask-hint" id="ask-hint">5 free questions per week · Upgrade for unlimited</span>
+        <span class="ask-hint" id="ask-hint">3 free questions a day · Pro is unlimited</span>
         <button class="ask-btn" id="ask-btn" onclick="askQuestion()">
           <div class="spinner"></div>
           <span class="btn-text">Get answer →</span>
@@ -283,7 +283,9 @@
         <li><a href="daily-devotional.html">Daily Devotional</a></li>
         <li><a href="worldviews.html">Worldviews</a></li>
         <li><a href="index.html#pricing">Pricing</a></li>
-      </ul>
+      
+          <li><a href="video-library.html">Videos</a></li>
+          <li><a href="argument-map.html">Argument Map</a></li></ul>
     <div class="footer-copy">© 2026 Apologia Daily. Built for the defence of the Gospel.<br/><span style="font-size:0.7rem;opacity:0.6;margin-top:6px;display:block;">Answers are AI-generated drawing on established apologetics scholarship. For pastoral or theological counsel please consult a qualified minister.</span></div>
     </div>
   </footer>
@@ -321,26 +323,24 @@
     window.location.href = 'index.html';
   }
 
-    const FREE_LIMIT = 1;
+    const FREE_LIMIT = 3;
 
-    function getUsageThisWeek() {
-      const weekStart = getWeekStart();
-      const stored = JSON.parse(localStorage.getItem('askUsage') || '{}');
-      if (stored.weekStart !== weekStart) return 0;
-      return stored.count || 0;
+    function adToday() {
+      const d = new Date();
+      return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
     }
 
-    function getWeekStart() {
-      const d = new Date();
-      d.setHours(0,0,0,0);
-      d.setDate(d.getDate() - d.getDay());
-      return d.toDateString();
+    /* Daily question pool - SHARED with the homepage chat box via the same key */
+    function getUsageThisWeek() {
+      let s = {};
+      try { s = JSON.parse(localStorage.getItem('ad_askcount') || '{}'); } catch(e) { s = {}; }
+      if (s.d !== adToday()) return 0;
+      return s.n || 0;
     }
 
     function incrementUsage() {
-      const weekStart = getWeekStart();
-      const count = getUsageThisWeek() + 1;
-      localStorage.setItem('askUsage', JSON.stringify({ weekStart, count }));
+      const n = getUsageThisWeek() + 1;
+      try { localStorage.setItem('ad_askcount', JSON.stringify({ d: adToday(), n: n })); } catch(e) {}
     }
 
     function checkLimit() {
@@ -353,7 +353,7 @@
         btn.disabled = true;
         hint.textContent = 'Daily limit reached — upgrade to Pro for unlimited questions';
       } else {
-        hint.textContent = remaining === FREE_LIMIT ? '1 free question per week — make it count' : 'Daily limit reached';
+        hint.textContent = remaining + ' of ' + FREE_LIMIT + ' free questions left today';
       }
     }
 
