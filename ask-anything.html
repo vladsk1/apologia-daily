@@ -363,15 +363,29 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    function escHtml(t) {
+      const d = document.createElement('div');
+      d.textContent = t;
+      return d.innerHTML;
+    }
+    function mdInline(s) {
+      return s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/\*([^*]+)\*/g, '<em>$1</em>');
+    }
     function formatAnswer(text) {
-      const lines = text.split('\n').filter(l => l.trim());
+      const lines = String(text).split('\n');
       let html = '';
       for (const line of lines) {
         const trimmed = line.trim();
-        if (trimmed.match(/^(Common objection|How to use this|Further study|The core argument|In summary)/i)) {
-          html += `<h3>${trimmed}</h3>`;
-        } else if (trimmed) {
-          html += `<p>${trimmed}</p>`;
+        if (!trimmed) continue;
+        const hd = trimmed.match(/^#{1,4}\s+(.*)$/);
+        if (hd) {
+          html += '<h3>' + mdInline(escHtml(hd[1])) + '</h3>';
+        } else if (trimmed.match(/^(Common objection|How to use this|Further study|The core argument|In summary)/i)) {
+          html += '<h3>' + mdInline(escHtml(trimmed)) + '</h3>';
+        } else if (/^[-*\u2022]\s+/.test(trimmed)) {
+          html += '<p style="padding-left:1.1em;">&bull; ' + mdInline(escHtml(trimmed.replace(/^[-*\u2022]\s+/, ''))) + '</p>';
+        } else {
+          html += '<p>' + mdInline(escHtml(trimmed)) + '</p>';
         }
       }
       return html;

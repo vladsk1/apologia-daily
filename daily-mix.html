@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Mix | Apologia Daily</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --n:#050d1a; --n8:#0a1628; --n7:#0f2040; --n5:#1e4278; --n3:#4a7ab5;
+  --g:#c8a951; --gl:#d4b96a; --gd:#a88930;
+  --w:#fff; --ow:#f7f4ef; --border:#e8e2d8; --tm:#3a4a62; --td:#0f1f38;
+  --fd:'Playfair Display',Georgia,serif;
+  --ss:'Source Serif 4',Georgia,serif;
+  --ui:'DM Sans',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ow);color:var(--td);font-family:var(--ss);min-height:100vh}
+.top{background:var(--n);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.top a{font-family:var(--ui);font-size:.82rem;color:rgba(255,255,255,.6);text-decoration:none}
+.top a:hover{color:var(--gl)}
+.brand{font-family:var(--fd);font-weight:700;color:#fff;font-size:1rem}
+.brand span{color:var(--g)}
+.wrap{max-width:680px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+.kick{font-family:var(--ui);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gd);font-weight:700;margin-bottom:.5rem}
+h1{font-family:var(--fd);font-size:1.9rem;font-weight:700;margin-bottom:.5rem}
+.sub{font-family:var(--ui);font-size:.92rem;color:var(--tm);margin-bottom:2rem;line-height:1.6}
+.progress{display:flex;gap:5px;margin-bottom:1.5rem}
+.pip{flex:1;height:5px;border-radius:3px;background:var(--border);transition:background .2s}
+.pip.on{background:var(--g)} .pip.ok{background:#3d8b5f} .pip.bad{background:#b05050}
+.qcard{background:#fff;border:1px solid var(--border);border-radius:12px;padding:1.75rem;box-shadow:0 1px 3px rgba(5,13,26,.05)}
+.qcat{display:inline-block;font-family:var(--ui);font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gd);background:rgba(200,169,81,.1);border:1px solid rgba(200,169,81,.3);border-radius:20px;padding:3px 12px;margin-bottom:1rem}
+.qtext{font-family:var(--fd);font-size:1.18rem;font-weight:600;line-height:1.45;margin-bottom:1.4rem}
+.opt{display:block;width:100%;text-align:left;font-family:var(--ui);font-size:.92rem;color:var(--td);background:var(--ow);border:1px solid var(--border);border-radius:8px;padding:.85rem 1.1rem;margin-bottom:.6rem;cursor:pointer;transition:all .12s;line-height:1.5}
+.opt:hover{border-color:var(--g);background:#fdfbf6}
+.opt.correct{background:#eaf5ee;border-color:#3d8b5f;color:#1e5c3a;font-weight:600}
+.opt.wrong{background:#faeeee;border-color:#b05050;color:#7c3030}
+.opt:disabled{cursor:default}
+.expl{display:none;font-family:var(--ui);font-size:.85rem;color:var(--tm);background:var(--ow);border-left:3px solid var(--g);border-radius:0 6px 6px 0;padding:.8rem 1rem;margin-top:.9rem;line-height:1.65}
+.nextbtn{display:none;font-family:var(--ui);font-weight:600;font-size:.9rem;background:var(--g);color:var(--n);border:none;border-radius:6px;padding:.75rem 1.6rem;cursor:pointer;margin-top:1.1rem}
+.nextbtn:hover{background:var(--gl)}
+.done{display:none;text-align:center;background:#fff;border:1px solid var(--border);border-radius:12px;padding:2.5rem 1.75rem}
+.done .big{font-size:2.6rem;margin-bottom:.4rem}
+.done h2{font-family:var(--fd);font-size:1.5rem;margin-bottom:.4rem}
+.done p{font-family:var(--ui);font-size:.9rem;color:var(--tm);line-height:1.65;max-width:430px;margin:0 auto .6rem}
+.done .score{font-family:var(--fd);font-size:2.2rem;font-weight:800;color:var(--gd);margin:.6rem 0 1rem}
+.done a,.done button{display:inline-block;font-family:var(--ui);font-weight:600;font-size:.88rem;border-radius:6px;padding:.7rem 1.5rem;cursor:pointer;text-decoration:none;margin:.25rem}
+.gold{background:var(--g);color:var(--n);border:none}
+.ghost{background:none;color:var(--tm);border:1px solid var(--border)}
+.streaknote{display:none;font-family:var(--ui);font-size:.82rem;color:#1e5c3a;background:#eaf5ee;border:1px solid #bfe0cc;border-radius:8px;padding:.6rem 1rem;margin-top:1rem}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="brand">&#9670; Apologia <span>Daily</span></div>
+  <a href="dashboard.html">&larr; Back to dashboard</a>
+</div>
+
+<div class="wrap">
+  <div class="kick">Daily Mix &middot; interleaved review</div>
+  <h1>Eight questions. Every topic. No labels.</h1>
+  <p class="sub">Mixed practice is harder than reviewing one topic at a time &mdash; and that is exactly why it works. Real conversations never announce their category, so neither does this. A fresh mix every day.</p>
+
+  <div class="progress" id="pips"></div>
+
+  <div class="qcard" id="qcard">
+    <span class="qcat" id="qcat"></span>
+    <div class="qtext" id="qtext"></div>
+    <div id="opts"></div>
+    <div class="expl" id="expl"></div>
+    <button class="nextbtn" id="nextbtn" onclick="nextQ()">Next question &rarr;</button>
+  </div>
+
+  <div class="done" id="done">
+    <div class="big">&#127922;</div>
+    <h2>Mix complete</h2>
+    <div class="score" id="finalscore"></div>
+    <p id="doneMsg"></p>
+    <div class="streaknote" id="streaknote"></div>
+    <div style="margin-top:1.25rem;">
+      <a class="gold" href="dashboard.html">Back to dashboard</a>
+      <a class="ghost" href="evidence-library.html">Open the Evidence Library</a>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---------- question bank: 6 per category, 7 categories ---------- */
+var BANK = [
+/* God's Existence */
+{c:'Existence of God', q:'The Kalam argument says whatever begins to exist has a cause. What is the standard reply to "then who caused God?"', o:['God caused himself','The argument only applies to things that BEGIN to exist - God has no beginning','Causes do not apply to religion','The universe caused God'], a:1, e:'The premise is not "everything has a cause" but "everything that BEGINS to exist has a cause." God, having no beginning, needs no cause - he is the terminus the chain requires.'},
+{c:'Existence of God', q:'What does the fine-tuning argument point to as evidence?', o:['The beauty of sunsets','Physical constants set with extreme precision, where tiny changes forbid life','The complexity of DNA alone','The size of the universe'], a:1, e:'Gravity, the cosmological constant, the electron charge - small changes in any and no stars, chemistry, or life. Even atheist physicists grant the tuning; the debate is what explains it.'},
+{c:'Existence of God', q:'The moral argument claims objective moral values require God. What is its reply to "atheists are moral too"?', o:['Atheists are secretly religious','The question is not who CAN be good but what makes good objectively GOOD','Atheists are not really moral','Morality is an illusion anyway'], a:1, e:'Nobody denies atheists behave morally. The argument asks what grounds a moral LAW that binds all people and cultures - feelings and survival instincts do not create obligations.'},
+{c:'Existence of God', q:'Why does the multiverse reply to fine-tuning fall short?', o:['Scientists have disproven other universes','It has no observational evidence and just moves the question: what tuned the universe-generator?','It is too complicated to understand','It was invented by theologians'], a:1, e:'A universe-generating mechanism would itself need finely set laws. The multiverse postulates unobservable entities to avoid a designer - and still leaves the design question standing.'},
+{c:'Existence of God', q:'The contingency argument asks why anything exists at all. What kind of being does it conclude must exist?', o:['A very old being','A necessary being - one that cannot fail to exist and explains all contingent things','A being made of energy','Many gods working together'], a:1, e:'Everything contingent (could-have-not-existed) needs an explanation outside itself. The chain cannot be contingent all the way down - it terminates in a necessary being: God.'},
+{c:'Existence of God', q:'What is the argument from desire (Lewis)?', o:['We desire things, so they exist','Every natural desire has a real object - and we have a desire nothing in this world satisfies','Wanting God makes him real','Desires prove evolution'], a:1, e:'Hunger points to food, thirst to water. The persistent longing no earthly thing satisfies - joy, the ache behind beauty - points, like every other innate desire, to a real object: God.'},
+/* Resurrection */
+{c:'Resurrection', q:'Which facts do the MAJORITY of critical scholars - sceptics included - grant about Jesus?', o:['The virgin birth and miracles','His crucifixion, the disciples sincere belief in appearances, and the conversions of Paul and James','Nothing at all','Only that he existed'], a:1, e:'This is the minimal facts method: build only on what the other side already grants by ordinary historical criteria - then ask which explanation covers all of it.'},
+{c:'Resurrection', q:'Why does the empty tomb account being discovered by WOMEN matter historically?', o:['Women were considered the best witnesses','Womens testimony carried little legal weight - nobody inventing the story would choose them as chief witnesses','It does not matter','Women wrote the Gospels'], a:1, e:'The criterion of embarrassment: inventors write convenient stories. First witnesses whose testimony courts discounted is an inconvenient detail - the mark of memory, not myth.'},
+{c:'Resurrection', q:'The creed in 1 Corinthians 15:3-7 is dated to within 2-5 years of the cross. Why is that decisive?', o:['Because Paul was very honest','It removes the time legend needs - the resurrection proclamation is the EARLIEST stratum, with named living witnesses','Because old things are true','It proves Paul wrote the Gospels'], a:1, e:'Even the atheist scholar Ludemann dates it within two years. Legends need generations of dark; this claim was public, in Jerusalem, while everyone involved could be cross-examined.'},
+{c:'Resurrection', q:'What is the strongest reply to the hallucination theory?', o:['Hallucinations were unknown in the ancient world','Hallucinations are private - they do not appear to groups, convert enemies like Paul, or empty a tomb','The disciples were too holy to hallucinate','Romans checked for hallucinations'], a:1, e:'Group appearances in varied settings, two hostile converts (Paul and James), and an unrefuted empty tomb - no psychological account covers all the granted facts together.'},
+{c:'Resurrection', q:'Why could the authorities not stop Christianity at birth in Jerusalem?', o:['They did not notice it','They never produced a body - their own counter-story (the disciples stole him) concedes the tomb was empty','They supported the church secretly','The church was in Rome'], a:1, e:'The theft rumor recorded in Matthew - and still circulating in the second century - is hostile testimony that everyone agreed on one thing: the tomb was vacant.'},
+{c:'Resurrection', q:'People die for false beliefs all the time. Why is the apostles martyrdom still evidence?', o:['Martyrdom always proves truth','People die for beliefs they THINK true - but not for claims they KNOW they invented; the apostles were eyewitnesses to whether they saw him','They did not really die','Their deaths were staged'], a:1, e:'A modern terrorist sincerely believes; the apostles were in a position to KNOW. Liars make poor martyrs - and not one of them, under torture, ever recanted.'},
+/* Jesus */
+{c:'Jesus', q:'Why is "Son of Man" - Jesus favourite self-title - actually a DIVINE claim?', o:['It means a humble human','Its address is Daniel 7: a figure riding the clouds (YHWH-only transport) who receives worship and an everlasting kingdom','It was a common name','It refers to Adam'], a:1, e:'At his trial Jesus quotes Daniel 7 of himself - and the high priest tears his robes and rules blasphemy. Nobody tears robes over the claim to be human.'},
+{c:'Jesus', q:'John 1:3 says ALL things were made through the Word. Why does this defeat "the Word was a created being"?', o:['Because John was inspired','Nothing creates itself - the maker of all made things cannot be among the made things','Because the Greek is poetic','It does not defeat it'], a:1, e:'The verse sorts reality into two boxes: things made, and the Word who made them. A created Word would have to create himself - the one reading verse 3 forbids.'},
+{c:'Jesus', q:'The Philippians 2 hymn applies Isaiah 45:23 ("every knee shall bow") to Jesus. Why is that explosive?', o:['It is a nice poem','Isaiah 45 is the OTs fiercest monotheism chapter, and that oath is YHWHs about himself alone - sung of Jesus within the first decades','It mentions knees','It was written by Romans'], a:1, e:'Monotheistic Jews lifted YHWHs own oath from the "there is no other god" chapter and centered it on a crucified man - within years, not centuries. Legend has no time to grow.'},
+{c:'Jesus', q:'How do we know the messianic prophecies were not written AFTER Jesus to fit him?', o:['Christians would never do that','The Dead Sea Scrolls - physical manuscripts of Isaiah, Psalms and Daniel dated a century or more BEFORE Jesus','The prophets signed their work','Rome verified the dates'], a:1, e:'The Great Isaiah Scroll (c. 125 BC) sits in Jerusalem today - Isaiah 53 was complete in a jar a century before the crucifixion. The predictions verifiably predate the fulfilment.'},
+{c:'Jesus', q:'What is the modern repair to the liar-lunatic-Lord trilemma?', o:['Add a fourth option - legend - and close it with the early evidence before running the three','Ignore the legend option','Admit Jesus never existed','Choose lunatic'], a:0, e:'Close legend with dates: the creed within 5 years, the Philippians hymn, and a claim-title (Son of Man) the church never used itself. Then three options remain - and two collide with the character.'},
+{c:'Jesus', q:'Jesus publicly predicted his resurrection "after three days." Why does a PREDICTION change the evidence?', o:['Predictions are always true','It made the claim a time-stamped, falsifiable test - enemies remembered it and posted a guard; the empty tomb became a verdict','It impressed the crowds','It does not change anything'], a:1, e:'Post-hoc claims can be shaped to fit; a staked deadline cannot. Matt 27:63 - his ENEMIES quote the prediction when requesting the guard. The test was public before the verdict.'},
+/* Bible */
+{c:'The Bible', q:'About how many Greek New Testament manuscripts survive, versus a typical ancient work?', o:['About 50, versus 20','About 5,800 - versus a dozen or so for most ancient works','About 100, all medieval','Nobody knows'], a:1, e:'No ancient text comes close. The wealth of copies lets scholars compare and verify the text - we know what it said from the very beginning.'},
+{c:'The Bible', q:'Many manuscripts prove the text was faithfully TRANSMITTED. What shows it is also TRUE?', o:['Nothing can show that','Early dating, archaeology, and non-Christian corroboration like Tacitus and Josephus','The covers of the books','Church tradition alone'], a:1, e:'Keep the two claims distinct - it is the precise version of the argument. Transmission: manuscripts. Truth: earliness, eyewitness marks, archaeology, hostile sources.'},
+{c:'The Bible', q:'What is the criterion of embarrassment?', o:['Avoiding embarrassing topics','Details that create problems for the tellers - like the disciples cowardice - are likely authentic, because nobody invents their own scandal','Editing out mistakes','A rule about apologising'], a:1, e:'Peter rebuked as Satan, the disciples fleeing, women as first witnesses, "we were not born of fornication" - communities inherit and explain scandal; they do not invent it.'},
+{c:'The Bible', q:'Why does it matter that Luke names rulers, titles and places with verifiable precision?', o:['It makes the book longer','Accuracy where we CAN check earns credibility where we cannot - the habit of a careful historian','It does not matter','It proves Luke was Roman'], a:1, e:'Politarchs in Thessalonica, the proconsul Gallio, the right titles in the right decades - archaeology has repeatedly vindicated Lukes details once doubted.'},
+{c:'The Bible', q:'The Gospels are anonymous and late, says the sceptic. What is the short reply on dates?', o:['They were written by 40 AD','Paul writes within 25 years quoting creeds from within 5 - and the Gospels sit within living memory of named eyewitnesses','Dates do not matter','They were written in 300 AD'], a:1, e:'Mark within about 40 years, all four within living memory - by ancient standards extraordinarily close. Most of what we know of Alexander comes from sources 300+ years late.'},
+{c:'The Bible', q:'What did the Dead Sea Scrolls prove about Old Testament transmission?', o:['The text changed completely','A millennium-older Isaiah matched the medieval copies with remarkable fidelity - the scribes preserved the text','The OT was written late','Nothing useful'], a:1, e:'Before 1947 our oldest Hebrew Isaiah was c. 1000 AD. Qumran handed us one from c. 125 BC - and the text was essentially the same. The corruption theory lost its laboratory test.'},
+/* Science & Faith */
+{c:'Science & Faith', q:'What does the Big Bang imply that ancient materialism did not expect?', o:['The universe is eternal','Space, time and matter had a BEGINNING - which is what "in the beginning" had claimed all along','Stars are very hot','Nothing important'], a:1, e:'An eternal universe needed no cause; a universe with a beginning does. The standard cosmological model handed premise 2 of the Kalam to the theist.'},
+{c:'Science & Faith', q:'Why is "science has explained everything" confused?', o:['Science is usually wrong','Science explains HOW the universe works, not WHY it exists, why its laws hold, or why mathematics describes it','Scientists are biased','Explanations do not exist'], a:1, e:'Why is there something rather than nothing, why nature obeys elegant laws, why consciousness exists - these are questions about the foundation OF science, not inside it.'},
+{c:'Science & Faith', q:'Newton, Kepler and Pascal were devout believers. Why is that historically unsurprising?', o:['Everyone was religious back then','They expected an ordered, law-governed universe BECAUSE they believed in a rational Lawgiver - theism midwifed modern science','They feared the church','It is just coincidence'], a:1, e:'The conviction that nature is rational, uniform and discoverable grew in the soil of belief in a rational Creator - which is where modern science historically sprouted.'},
+{c:'Science & Faith', q:'What is "the unreasonable effectiveness of mathematics" (Wigner) pointing at?', o:['Maths is too hard','The deep mystery that abstract human mathematics keeps describing physical reality perfectly - expected if a Mind designed both','Calculators work well','Physics is finished'], a:1, e:'Why should equations dreamed up for beauty map onto quarks and galaxies? On naturalism it is a miracle with no explanation; on theism, creation bears its Authors signature.'},
+{c:'Science & Faith', q:'What is the origin-of-life problem for naturalism?', o:['Life is too recent','Coded information (DNA) and self-replicating machinery arising from chemistry unaided - information has only one known source: minds','Cells are too small to study','Darwin solved it'], a:1, e:'Evolution explains modification of existing life; it cannot start before replication exists. The gap between chemistry and the first coded cell remains naturalisms hardest problem.'},
+{c:'Science & Faith', q:'How should a Christian respond to "faith is belief without evidence"?', o:['Agree and change the subject','Reject the definition - biblical faith is TRUST grounded in evidence: "we are witnesses" is the apostles refrain','Admit religion is irrational','Quote more verses'], a:1, e:'Luke writes so Theophilus may have CERTAINTY; Paul stakes everything on a checkable resurrection. Faith is trusting a person the evidence has vindicated - like trusting a proven friend.'},
+/* Trinity */
+{c:'The Trinity', q:'Why is the Trinity NOT a contradiction?', o:['Because it is a mystery','A contradiction needs the same respect: one God and three GODS would qualify. One ESSENCE and three PERSONS are different respects','Because the church says so','It is a contradiction'], a:1, e:'What-God-is is one; who-God-is is three. Counting different things to different totals is precision, not error - the charge of contradiction misquotes the doctrine.'},
+{c:'The Trinity', q:'What does Paul do to the Shema in 1 Corinthians 8:6?', o:['He deletes it','He restates it with Jesus INSIDE it - one God the Father, one Lord Jesus Christ - distributing the creeds own two divine titles','He translates it to Latin','He never mentions it'], a:1, e:'In the Greek Shema, God (theos) and LORD (kyrios) both name YHWH. A trained Pharisee split those titles between Father and Son - inside an anti-idolatry argument.'},
+{c:'The Trinity', q:'Why can the baptism of Jesus not be explained by modalism (one person in three modes)?', o:['It can be','All three act AT ONCE - the Son in the water, the Spirit descending, the Father speaking. One actor cannot play three simultaneous parts','The water was special','Modalism is correct'], a:1, e:'Masks do not converse. Add Gethsemane - "not my will but YOURS" - and John 17:24, the Father loving the Son BEFORE creation, and the persons are real and eternal.'},
+{c:'The Trinity', q:'What was decided at Nicaea in 325?', o:['The Trinity was invented','An INNOVATION was rejected - Arius new claim that the Son was created; the bishops protected what churches had prayed for two centuries','The Bible was assembled','Christmas was scheduled'], a:1, e:'Ignatius calls Jesus "our God" in 107; Pliny reports hymns to Christ "as to a god" in 112 - enemy paperwork. Committees do not invent what they are quoting.'},
+{c:'The Trinity', q:'Why does "God is love" (1 John 4:8) require the Trinity?', o:['It does not','Love needs a beloved - a solitary God had no one to love before creation; only eternal Father-Son-Spirit love makes love GODS NATURE rather than an acquired act','Love is just a metaphor','Because John said so'], a:1, e:'The Father loved the Son "before the foundation of the world" (John 17:24). A solitary deity becomes loving when he creates; the Triune God creates FROM the love he eternally is.'},
+{c:'The Trinity', q:'A Jehovahs Witness says John 1:1 should read "a god." What is the two-step reply?', o:['Agree to disagree','The grammar ascribes NATURE (and the NWT renders the same construction "God" elsewhere in the chapter) - and verse 3 settles it: the maker of all things is not a made thing','Quote the Trinity creed','Change the subject'], a:1, e:'Use their own translation: NWT John 1:3 still says ALL things came through him. And Thomas "my Lord and my God" stands unedited in John 20:28 - blessed, not corrected.'},
+/* Islam & Worldviews */
+{c:'Worldviews', q:'What trinity does the Quran actually condemn in Surah 5:116?', o:['The Nicene Trinity','A triad of God, Jesus AND MARY as three gods - tritheism that Christians condemn just as firmly','The Father, Son and Spirit','No trinity at all'], a:1, e:'The polemic targets a doctrine no creed ever taught. Lead with agreement - "we also reject three gods" - then note the real doctrine has not yet been addressed.'},
+{c:'Worldviews', q:'What is the Eternal Word dilemma for Islam?', o:['There is no dilemma','Is Allahs Word created or uncreated? Created: Allah once lacked speech. Uncreated: something eternal and divine yet distinguishable exists with Allah - the Logos structure. And Surah 4:171 calls JESUS his Word','The Quran has no word for word','It concerns translations'], a:1, e:'Islam fought an inquisition (the Mihna, 833-848) over this and settled: the Word is uncreated. That concession draws the shape of John 1:1 - and the Quran hands the title to Jesus.'},
+{c:'Worldviews', q:'Why does the Quranic claim of perfect preservation face manuscript problems?', o:['It does not','Variant readings exist today - Hafs vs Warsh differ in the Fatiha itself (Owner vs King) and in who is speaking in 37:12 - and companions like Ibn Masud disputed the text','The Quran was never written down','Western scholars invented them'], a:1, e:'Both versions are printed as the Quran today, and Hafs dominance dates largely to the 1924 Cairo edition. Uthman standardised by BURNING rival codices - against companion protest.'},
+{c:'Worldviews', q:'What categorical texts close the Mormon doctrine that God was once a man?', o:['There are none','Isaiah 43:10 - "before me no god was FORMED, nor shall there be any after me" - and Psalm 90:2 - "from everlasting to everlasting, YOU ARE God"','Genesis 1 only','The Book of Revelation'], a:1, e:'No predecessor gods, no future gods, no becoming. Strikingly, the Book of Mormon itself (Mosiah 15, Alma 11) teaches one infinite eternal God - the progression doctrine came later.'},
+{c:'Worldviews', q:'"All religions are paths up the same mountain." What is the core problem with this?', o:['It is too optimistic','The religions make CONTRADICTORY claims about God, man and salvation - they cannot all be true; and only one rests on a checkable historical event','Mountains are dangerous','It is impolite'], a:1, e:'A personal triune God, an impersonal Brahman, no god at all - these are not one summit. And only Christianity stakes everything on a public, falsifiable claim: the resurrection.'},
+{c:'Worldviews', q:'What is the best FIRST move in any real conversation about the faith?', o:['Win quickly','Ask questions and listen - then give an answer with gentleness and respect (1 Peter 3:15); the goal is the person, not the point','Quote as many verses as possible','Avoid the conversation'], a:1, e:'"Always be prepared to give an answer... but with gentleness and respect." Questions reveal the real objection under the stated one - and respect keeps the door open.'}
+];
+
+/* ---------- daily seeded selection: 8 Qs from >=4 categories ---------- */
+function seedFor(dateStr){ var h = 0; for(var i=0;i<dateStr.length;i++){ h = (h*31 + dateStr.charCodeAt(i)) >>> 0; } return h; }
+function mulberry(a){ return function(){ a|=0; a = (a + 0x6D2B79F5)|0; var t = Math.imul(a ^ (a>>>15), 1|a); t = (t + Math.imul(t ^ (t>>>7), 61|t)) ^ t; return ((t ^ (t>>>14)) >>> 0) / 4294967296; }; }
+var today = new Date().toISOString().slice(0,10);
+var rnd = mulberry(seedFor(today));
+var cats = {};
+BANK.forEach(function(q,i){ (cats[q.c] = cats[q.c] || []).push(i); });
+var catNames = Object.keys(cats);
+/* shuffle categories, take one Q from each of the first 8 (we have 8 cats) */
+function shuffle(arr){ for(var i=arr.length-1;i>0;i--){ var j=Math.floor(rnd()*(i+1)); var t=arr[i]; arr[i]=arr[j]; arr[j]=t; } return arr; }
+shuffle(catNames);
+var picked = {};
+var QS = catNames.map(function(c){ var pool = cats[c]; var pi = pool[Math.floor(rnd()*pool.length)]; picked[pi] = 1; return BANK[pi]; });
+/* top up to 8 with an extra question from a random category, no repeats */
+while(QS.length < 8){
+  var pi2 = Math.floor(rnd()*BANK.length);
+  if(!picked[pi2]){ picked[pi2] = 1; QS.push(BANK[pi2]); }
+}
+shuffle(QS);
+
+/* ---------- quiz engine ---------- */
+var qi = 0, score = 0;
+var pips = document.getElementById('pips');
+QS.forEach(function(){ var d=document.createElement('div'); d.className='pip'; pips.appendChild(d); });
+
+function renderQ(){
+  var q = QS[qi];
+  pips.children[qi].classList.add('on');
+  document.getElementById('qcat').textContent = q.c;
+  document.getElementById('qtext').textContent = q.q;
+  var box = document.getElementById('opts'); box.innerHTML = '';
+  /* shuffle options, track correct */
+  var order = q.o.map(function(_,i){ return i; }); shuffle(order);
+  order.forEach(function(oi){
+    var b = document.createElement('button');
+    b.className = 'opt'; b.textContent = q.o[oi];
+    b.onclick = function(){ answer(b, oi === q.a, q); };
+    box.appendChild(b);
+  });
+  document.getElementById('expl').style.display = 'none';
+  document.getElementById('nextbtn').style.display = 'none';
+  document.getElementById('nextbtn').textContent = (qi === QS.length-1) ? 'See my result \u2192' : 'Next question \u2192';
+}
+function answer(btn, right, q){
+  var box = document.getElementById('opts');
+  [].forEach.call(box.children, function(b){
+    b.disabled = true;
+    if(b.textContent === q.o[q.a]) b.classList.add('correct');
+  });
+  if(!right){ btn.classList.add('wrong'); }
+  else { score++; }
+  pips.children[qi].classList.remove('on');
+  pips.children[qi].classList.add(right ? 'ok' : 'bad');
+  var ex = document.getElementById('expl');
+  ex.textContent = q.e; ex.style.display = 'block';
+  document.getElementById('nextbtn').style.display = 'inline-block';
+}
+function nextQ(){
+  qi++;
+  if(qi >= QS.length){ return finish(); }
+  renderQ();
+}
+function finish(){
+  document.getElementById('qcard').style.display = 'none';
+  document.getElementById('done').style.display = 'block';
+  document.getElementById('finalscore').textContent = score + ' / ' + QS.length;
+  var msg = score >= 7 ? 'Sharp across every front - this is what readiness looks like. Same time tomorrow: the mix will be different.'
+          : score >= 5 ? 'Solid - and notice WHICH categories slowed you down. Their deep dives and mastery tracks are one click away.'
+          : 'Mixed practice is meant to sting a little - it shows exactly where to shore up. Open the library on your weakest topic and come back tomorrow.';
+  document.getElementById('doneMsg').textContent = msg;
+  adMark();
+  try{ localStorage.setItem('ad_mix_done', String((parseInt(localStorage.getItem('ad_mix_done')||'0',10)||0)+1)); }catch(e){}
+  try{
+    var s = JSON.parse(localStorage.getItem('ad_streak')||'{}');
+    if(s.count){ var sn = document.getElementById('streaknote'); sn.innerHTML = '&#128293; Practice streak: <b>' + s.count + ' day' + (s.count>1?'s':'') + '</b>' + (s.freezes ? ' &middot; ' + s.freezes + ' freeze' + (s.freezes>1?'s':'') + ' banked' : ''); sn.style.display = 'block'; }
+  }catch(e){}
+}
+function adMark(){
+  try{
+    var t = new Date(); var iso = function(d){ return d.toISOString().slice(0,10); };
+    var td = iso(t), y1 = iso(new Date(t.getTime()-864e5)), y2 = iso(new Date(t.getTime()-1728e5));
+    var s = JSON.parse(localStorage.getItem('ad_streak')||'{"last":"","count":0,"freezes":0}');
+    if(s.last === td) return;
+    if(s.last === y1){ s.count += 1; }
+    else if(s.last === y2 && s.freezes > 0){ s.freezes -= 1; s.count += 2; }
+    else { s.count = 1; }
+    s.last = td;
+    if(s.count % 7 === 0){ s.freezes = Math.min(3, (s.freezes||0) + 1); }
+    localStorage.setItem('ad_streak', JSON.stringify(s));
+  }catch(e){}
+}
+renderQ();
+</script>
+</body>
+</html>

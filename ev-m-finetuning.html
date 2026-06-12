@@ -507,6 +507,49 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 /* ---- in-memory state (swap for localStorage/Supabase in production) ---- */
 const state = { read:false, explainPass:false, cardsSeen:new Set(), debateTried:false, conf:0 };
 
+/* ---- persistence + site streak (ad_mastery / ad_streak) ---- */
+const ARG_ID = location.pathname.split('/').pop().replace('ev-m-','').replace('.html','');
+const FRESH_MS = 30*24*60*60*1000; /* 30 days */
+function adAll(){ try{ return JSON.parse(localStorage.getItem('ad_mastery')||'{}'); }catch(e){ return {}; } }
+function adSave(full){
+  try{
+    var m = adAll(); var e = m[ARG_ID] || {};
+    e.read = state.read; e.explain = state.explainPass;
+    e.cards = state.cardsSeen.size; e.debate = state.debateTried;
+    if(full){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
+    m[ARG_ID] = e; localStorage.setItem('ad_mastery', JSON.stringify(m));
+  }catch(e){}
+}
+function adRestore(){
+  try{
+    var e = adAll()[ARG_ID]; if(!e) return;
+    state.read = !!e.read; state.explainPass = !!e.explain; state.debateTried = !!e.debate;
+    var fresh = e.fresh && (Date.now() - e.fresh) < FRESH_MS;
+    if(e.cards >= cards.length && fresh){ for(var i=0;i<cards.length;i++) state.cardsSeen.add(i); }
+    if(e.cards >= cards.length && !fresh){
+      var note = document.createElement('div');
+      note.style.cssText = 'font-family:var(--ui);font-size:.8rem;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.7rem 1rem;margin:0 0 1rem;';
+      note.innerHTML = '&#9888; Memory fades \u2014 it has been a while. Flip through the flashcards again to restore this argument to gold.';
+      var fc = document.querySelector('.flashwrap') || document.getElementById('flash') || null;
+      if(fc && fc.parentNode){ fc.parentNode.insertBefore(note, fc); }
+    }
+  }catch(e){}
+}
+function adMark(){
+  try{
+    var t = new Date(); var iso = function(d){ return d.toISOString().slice(0,10); };
+    var td = iso(t), y1 = iso(new Date(t.getTime()-864e5)), y2 = iso(new Date(t.getTime()-1728e5));
+    var s = JSON.parse(localStorage.getItem('ad_streak')||'{"last":"","count":0,"freezes":0}');
+    if(s.last === td) return;
+    if(s.last === y1){ s.count += 1; }
+    else if(s.last === y2 && s.freezes > 0){ s.freezes -= 1; s.count += 2; }
+    else { s.count = 1; }
+    s.last = td;
+    if(s.count % 7 === 0){ s.freezes = Math.min(3, (s.freezes||0) + 1); }
+    localStorage.setItem('ad_streak', JSON.stringify(s));
+  }catch(e){}
+}
+
 /* ---- mastery dial ---- */
 const CIRC = 263.9;
 function updateDial(){
@@ -516,6 +559,8 @@ function updateDial(){
   if(state.cardsSeen.size >= cards.length) done++;
   if(state.debateTried) done++;
   const pct = Math.round(done/4*100);
+  adSave(pct===100);
+  if(window._adLoaded && done>0) adMark();
   document.getElementById('pctNum').textContent = pct + '%';
   document.getElementById('ring').style.strokeDashoffset = CIRC - (CIRC*pct/100);
 
@@ -766,7 +811,8 @@ function _shareDownload(canvas, btn){
 
 document.addEventListener('DOMContentLoaded', boot);
 </script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js">adRestore(); updateDial(); window._adLoaded = true;
+</script>
 <div id="shareCard" style="position:fixed;left:-9999px;top:0;width:540px;height:675px;box-sizing:border-box;background:linear-gradient(160deg,#050d1a 0%,#0f2040 100%);padding:44px 44px 34px;display:flex;flex-direction:column;font-family:'DM Sans',sans-serif;">
   <div style="display:flex;align-items:center;gap:10px;">
     <span style="color:#c8a951;font-size:13px;">&#9670;</span>
