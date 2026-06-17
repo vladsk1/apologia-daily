@@ -239,23 +239,6 @@
     try { await sb.auth.signOut(); } catch(e) {}
     window.location.href = 'index.html';
   }
-
-    (function() {
-      function initNav() {
-        if (!window.supabase) { setTimeout(initNav, 50); return; }
-        var sb = window.supabase.createClient(
-          'https://noprgxkwniouukmrfozc.supabase.co',
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
-        );
-        sb.auth.getSession().then(function(r) {
-          if (r.data && r.data.session) {
-            var na = document.getElementById('nav-auth');
-            if (na) na.innerHTML = '<a href="dashboard.html" style="font-family:var(--ui);font-size:.82rem;font-weight:500;padding:7px 16px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none;">Dashboard</a>';
-          }
-        });
-      }
-      document.addEventListener('DOMContentLoaded', initNav);
-    })();
   
   // ── NAV AUTH ──
   async function navAuth() {
