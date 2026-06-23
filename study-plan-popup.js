@@ -79,12 +79,12 @@
       10: "The Early Creed of 1 Corinthians 15"
     },
     "answering_islam": {
-      1:  "The Islamic Dilemma - The Quran Affirms the Bible",
-      2:  "The Variant Readings of the Quran - Qira'at",
-      4:  "The Missing Verses - What the Hadith Says Was Lost",
+      1:  "The Islamic Dilemma",
+      2:  "The Variant Readings (Qira'at)",
+      4:  "The Preservation Promise vs the Lost Verses",
       8:  { f: "ev-s3.html", t: "Did Jesus Claim to Be God?" },
       9:  { f: "ev-s3.html", t: "Messianic Prophecy - the Statistical Case" },
-      11: "The Sira - How Reliable is Muhammad's Biography?"
+      11: "The Sira"
     },
     "existence-god": {
       1:  "The Kalam Cosmological Argument",
@@ -112,9 +112,9 @@
       1:  { f: "ev-s2.html", t: "The Minimal Facts Argument" },
       2:  "The Moral Argument",
       4:  { f: "ev-s3.html", t: "Jesus as God in the New Testament" },
-      8:  { f: "worldviews.html", t: "The Islamic Dilemma - The Quran Affirms the Bible" },
-      10: { f: "worldviews.html", t: "The Islamic Dilemma - The Quran Affirms the Bible" },
-      14: { f: "worldviews.html", t: "The Islamic Dilemma - The Quran Affirms the Bible" },
+      8:  { f: "worldviews.html", t: "The Islamic Dilemma" },
+      10: { f: "worldviews.html", t: "The Islamic Dilemma" },
+      14: { f: "worldviews.html", t: "The Islamic Dilemma" },
       15: "The Moral Argument"
     },
     "debate-ready": {
