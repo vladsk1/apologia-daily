@@ -126,15 +126,18 @@
     }
   };
 
-  /* 3. Which plans are Pro (show full card) vs free (free portion only) */
+  /* 3. Which plans show the full card.
+        Site is currently fully open (Pro not yet gated), so every study-plan
+        reading popup shows the complete argument — matching the Resurrection
+        plan. When Stripe/Pro launches, set the free plans back to false. */
   var EV_PLAN_PRO = {
     "resurrection": true,
-    "gods_existence": false,
-    "bible_reliability": false,
+    "gods_existence": true,
+    "bible_reliability": true,
     "jesus_identity": true,
     "answering_islam": true,
-    "existence-god": false,
-    "jesus-crash-course": false,
+    "existence-god": true,
+    "jesus-crash-course": true,
     "worldview-comparison": true,
     "debate-ready": true
   };
