@@ -454,7 +454,9 @@
     return false;
   }
 
-  var BASE_URL = 'https://apologiadaily.com';
+  // Empty = relative URLs, so the monitor always checks the SAME origin it's opened on.
+  // (Avoids www/non-www or http/https mismatches that cause "Failed to fetch".)
+  var BASE_URL = '';
   var CHECK_HISTORY = [];
   var ERROR_LOG = [];
   var autoRefreshTimer = null;
