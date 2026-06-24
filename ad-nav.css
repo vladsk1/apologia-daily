@@ -5,7 +5,7 @@ body{padding-top:0 !important}
 .adn-logo{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:1.25rem;color:#fff;text-decoration:none;white-space:nowrap}
 .adn-logo span{color:#c8a951}
 .adn-collapse{display:flex;align-items:center;gap:1.4rem;flex:1;min-width:0}
-.adn-links{display:flex;align-items:center;gap:1.4rem;list-style:none;margin:0;padding:0;flex:1}
+.adn-links{display:flex;align-items:center;justify-content:center;gap:1.9rem;list-style:none;margin:0;padding:0;flex:1}
 .adn-links>li{position:relative}
 .adn-links a,.adn-more{font-family:inherit;font-size:.82rem;letter-spacing:.03em;color:rgba(255,255,255,.72);text-decoration:none;background:none;border:0;cursor:pointer;white-space:nowrap;padding:0;display:inline-flex;align-items:center;gap:5px}
 .adn-links a:hover,.adn-more:hover,.adn-links a.adn-active{color:#c8a951}
