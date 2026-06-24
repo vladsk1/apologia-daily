@@ -1,0 +1,38 @@
+/* Apologia Daily — shared site navigation (standardized across all pages) */
+body{padding-top:0 !important}
+.adn-nav{position:sticky;top:0;z-index:1000;display:flex;align-items:center;gap:1.5rem;background:#0a1628;height:64px;padding:0 1.5rem;border-bottom:1px solid rgba(255,255,255,.08);font-family:'DM Sans',system-ui,sans-serif;box-sizing:border-box}
+.adn-nav *{box-sizing:border-box}
+.adn-logo{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:1.25rem;color:#fff;text-decoration:none;white-space:nowrap}
+.adn-logo span{color:#c8a951}
+.adn-collapse{display:flex;align-items:center;gap:1.4rem;flex:1;min-width:0}
+.adn-links{display:flex;align-items:center;gap:1.4rem;list-style:none;margin:0;padding:0;flex:1}
+.adn-links>li{position:relative}
+.adn-links a,.adn-more{font-family:inherit;font-size:.82rem;letter-spacing:.03em;color:rgba(255,255,255,.72);text-decoration:none;background:none;border:0;cursor:pointer;white-space:nowrap;padding:0;display:inline-flex;align-items:center;gap:5px}
+.adn-links a:hover,.adn-more:hover,.adn-links a.adn-active{color:#c8a951}
+.adn-caret{font-size:.7em;opacity:.85}
+.adn-drop{position:absolute;top:30px;left:0;min-width:172px;background:#0f2040;border:1px solid rgba(200,169,81,.3);border-radius:8px;padding:6px;list-style:none;margin:0;display:none;flex-direction:column}
+.adn-has-drop:hover .adn-drop,.adn-has-drop.adn-open .adn-drop{display:flex}
+.adn-drop a{display:block;padding:9px 13px;border-radius:6px;font-size:.86rem;color:rgba(255,255,255,.85)}
+.adn-drop a:hover{background:rgba(255,255,255,.08);color:#c8a951}
+.adn-right{display:flex;align-items:center;gap:1rem;margin-left:auto}
+.adn-dash,.adn-signin{font-size:.82rem;color:rgba(255,255,255,.72);text-decoration:none;white-space:nowrap}
+.adn-dash:hover,.adn-signin:hover{color:#c8a951}
+.adn-user{font-size:.82rem;color:#e8cf87;font-weight:500;white-space:nowrap}
+.adn-signout{font-size:.8rem;background:none;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);padding:6px 12px;border-radius:4px;cursor:pointer}
+.adn-cta{font-size:.82rem;font-weight:500;background:#c8a951;color:#0a1628;padding:8px 18px;border-radius:4px;text-decoration:none;white-space:nowrap}
+.adn-cta:hover{background:#e8cf87}
+.adn-burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px;margin-left:auto}
+.adn-burger i{display:block;width:23px;height:2px;background:#fff;border-radius:2px}
+@media(max-width:860px){
+  .adn-burger{display:flex}
+  .adn-collapse{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#0a1628;border-bottom:1px solid rgba(255,255,255,.1);padding:6px 0 12px;max-height:calc(100vh - 64px);overflow:auto}
+  .adn-nav.adn-menu-open .adn-collapse{display:flex}
+  .adn-links{flex-direction:column;align-items:stretch;gap:0;width:100%;flex:none}
+  .adn-links>li>a,.adn-more{width:100%;padding:13px 1.5rem;font-size:.95rem}
+  .adn-drop{position:static;display:flex;border:0;background:transparent;padding:0 0 6px;min-width:0}
+  .adn-drop a{padding:11px 2.6rem;font-size:.9rem}
+  .adn-caret{display:none}
+  .adn-right{flex-direction:column;align-items:stretch;gap:10px;margin:0;padding:12px 1.5rem 0;border-top:1px solid rgba(255,255,255,.08)}
+  .adn-signin,.adn-dash{text-align:center}
+  .adn-cta{padding:11px;text-align:center}
+}

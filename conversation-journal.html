@@ -140,30 +140,40 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
       .nav-dashboard { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.8rem; color:rgba(255,255,255,0.65); text-decoration:none; border:1px solid rgba(255,255,255,0.2); padding:5px 12px; border-radius:3px; transition:all 0.15s; }
     .nav-dashboard:hover { color:#fff; border-color:rgba(255,255,255,0.4); }
   </style>
+  <link rel="stylesheet" href="/ad-nav.css">
 </head>
 <body>
 
-<nav>
-  <a href="index.html" class="logo">Apologia<span>Daily</span></a>
-              <ul class="nav-links">
-      <li><a href="evidence-library.html">Evidence Library</a></li>
-      <li><a href="daily-devotional.html">Daily Devotional</a></li>
-      <li><a href="debate-arena.html">Debate Arena</a></li>
-      <li><a href="ask-anything.html">Ask Anything</a></li>
-      <li><a href="worldviews.html">Worldviews</a></li>
-      <li><a href="study-plans.html">Study Plans</a></li>
-      <li><a href="video-library.html">Videos</a></li>
-      <li><a href="games.html">Games</a></li>
-      <li><a href="whats-new.html">What's New</a></li>
+<nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <ul class="adn-drop">
+          <li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/games.html">Games</a></li>
+          <li><a href="/whats-new.html">What&#39;s New</a></li>
+          <li><a href="/answers/">Answers</a></li>
+        </ul>
+      </li>
     </ul>
-      <div class="nav-right">
-      <a href="dashboard.html" class="nav-dashboard" id="nav-dashboard" style="display:none;">Dashboard</a>
-      <span class="nav-user" id="nav-user"></span>
-      <button class="nav-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
-      <a href="login.html" class="nav-signin" id="nav-signin">Sign in</a>
-      <a href="signup.html" class="nav-cta" id="nav-cta">Start Free</a>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <button class="adn-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
 <div class="hero">
   <div class="hi">
@@ -633,5 +643,6 @@ renderEntries();
     window.location.href = 'index.html';
   }
 </script>
+  <script src="/ad-nav.js" defer></script>
 </body>
 </html>

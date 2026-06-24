@@ -167,27 +167,40 @@
 .tour-help:hover{background:var(--navy-700)}
 @media(max-width:560px){.tour-card{padding:1.6rem 1.3rem 1.3rem}.tour-title{font-size:1.3rem}.tour-foot{flex-direction:column;gap:.9rem;align-items:stretch}.tour-btns{justify-content:flex-end}}
 </style>
+  <link rel="stylesheet" href="/ad-nav.css">
 </head>
 <body>
 
-  <nav>
-    <a href="index.html" class="nav-logo">Apologia<span>Daily</span></a>
-                <ul class="nav-links">
-      <li><a href="evidence-library.html">Evidence Library</a></li>
-      <li><a href="daily-devotional.html">Daily Devotional</a></li>
-      <li><a href="debate-arena.html">Debate Arena</a></li>
-      <li><a href="ask-anything.html">Ask Anything</a></li>
-      <li><a href="worldviews.html">Worldviews</a></li>
-      <li><a href="study-plans.html">Study Plans</a></li>
-      <li><a href="video-library.html">Videos</a></li>
-      <li><a href="games.html">Games</a></li>
-      <li><a href="whats-new.html">What's New</a></li>
+  <nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <ul class="adn-drop">
+          <li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/games.html">Games</a></li>
+          <li><a href="/whats-new.html">What&#39;s New</a></li>
+          <li><a href="/answers/">Answers</a></li>
+        </ul>
+      </li>
     </ul>
-    <div class="nav-right">
-      <span class="nav-user" id="nav-user"></span>
-      <button class="nav-signout" onclick="signOut()">Sign out</button>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <button class="adn-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- ONBOARDING MODAL -->
   <div id="onboarding-modal" style="display:none;position:fixed;inset:0;background:rgba(5,13,26,0.92);z-index:1000;display:none;align-items:center;justify-content:center;padding:1rem;">
@@ -1435,5 +1448,6 @@ function closeBeltInfo(){ var m = document.getElementById('belt-modal'); if(m) m
   </div>
 </div>
 <script>(function(){try{var p=new URLSearchParams(location.search);if(p.get('nocount')==='1')localStorage.setItem('ad-nocount','1');if(p.get('nocount')==='0')localStorage.removeItem('ad-nocount');if(localStorage.getItem('ad-nocount')==='1')return;}catch(e){}var s=document.createElement('script');s.defer=true;s.src='/_vercel/insights/script.js';document.head.appendChild(s);})();</script>
+  <script src="/ad-nav.js" defer></script>
 </body>
 </html>

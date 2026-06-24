@@ -822,31 +822,41 @@
 .hc-close{position:absolute;top:.55rem;right:.65rem;width:26px;height:26px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(5,13,26,.5);color:rgba(255,255,255,.6);font-size:15px;line-height:1;cursor:pointer;font-family:var(--font-ui)}
 .hc-close:hover{color:#fff;border-color:var(--gold)}
 </style>
+  <link rel="stylesheet" href="/ad-nav.css">
 </head>
 <body>
 
   <!-- NAV -->
-  <nav>
-    <a href="#" class="nav-logo">Apologia<span>Daily</span></a>
-        <ul class="nav-links">
-      <li><a href="evidence-library.html">Evidence Library</a></li>
-      <li><a href="daily-devotional.html">Daily Devotional</a></li>
-      <li><a href="debate-arena.html">Debate Arena</a></li>
-      <li><a href="ask-anything.html">Ask Anything</a></li>
-      <li><a href="worldviews.html">Worldviews</a></li>
-      <li><a href="study-plans.html">Study Plans</a></li>
-      <li><a href="video-library.html">Videos</a></li>
-      <li><a href="games.html">Games</a></li>
-      <li><a href="whats-new.html">What's New</a></li>
+  <nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <ul class="adn-drop">
+          <li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/games.html">Games</a></li>
+          <li><a href="/whats-new.html">What&#39;s New</a></li>
+          <li><a href="/answers/">Answers</a></li>
+        </ul>
+      </li>
     </ul>
-        <div class="nav-right">
-      <a href="dashboard.html" class="nav-dashboard" id="nav-dashboard" style="display:none;">Dashboard</a>
-      <span class="nav-user" id="nav-user"></span>
-      <button class="nav-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
-      <a href="login.html" class="nav-signin" id="nav-signin">Sign in</a>
-      <a href="signup.html" class="nav-cta" id="nav-cta">Start Free</a>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <button class="adn-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- HERO -->
   <section class="hero">
@@ -941,6 +951,14 @@
         <p class="section-sub">Apologia Daily brings together the tools, content, and practice environment that serious Christians need — in one beautifully designed platform.</p>
       </div>
       <div class="features-grid reveal">
+        <div class="feature-card" onclick="window.location='/answers/'" style="cursor:pointer;">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.1 9.2a3 3 0 0 1 5.8 1c0 2-3 2.5-3 4"/><path d="M12 17.5h.01"/></svg>
+          </div>
+          <div class="feature-title">Answers</div>
+          <div class="feature-desc">Short, evidence-based answers to the questions skeptics and seekers actually ask &mdash; about God, Jesus, the Bible, suffering, and doubt.</div>
+          <span class="feature-tag">Browse answers &rarr;</span>
+        </div>
 
         <div class="feature-card" onclick="window.location='evidence-library.html'" style="cursor:pointer;">
           <div class="feature-icon">
@@ -1653,5 +1671,6 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>(function(){try{var p=new URLSearchParams(location.search);if(p.get('nocount')==='1')localStorage.setItem('ad-nocount','1');if(p.get('nocount')==='0')localStorage.removeItem('ad-nocount');if(localStorage.getItem('ad-nocount')==='1')return;}catch(e){}var s=document.createElement('script');s.defer=true;s.src='/_vercel/insights/script.js';document.head.appendChild(s);})();</script>
+  <script src="/ad-nav.js" defer></script>
 </body>
 </html>
