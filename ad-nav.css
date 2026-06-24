@@ -30,8 +30,9 @@ body{padding-top:0 !important}
   .adn-links{flex-direction:column;align-items:stretch;gap:0;width:100%;flex:none}
   .adn-links>li>a,.adn-more{width:100%;padding:13px 1.5rem;font-size:.95rem}
   .adn-drop{position:static;display:flex;border:0;background:transparent;padding:0 0 6px;min-width:0}
-  .adn-drop a{padding:11px 2.6rem;font-size:.9rem}
+  .adn-drop a{padding:13px 1.5rem;font-size:.92rem}
   .adn-caret{display:none}
+  .adn-more{display:none}
   .adn-right{flex-direction:column;align-items:stretch;gap:10px;margin:0;padding:12px 1.5rem 0;border-top:1px solid rgba(255,255,255,.08)}
   .adn-signin,.adn-dash{text-align:center}
   .adn-cta{padding:11px;text-align:center}
