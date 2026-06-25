@@ -229,10 +229,13 @@ footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08);pad
   <div class="fi"><div class="fc">&#169; 2026 Apologia Daily. Built for the defence of the Gospel.</div></div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="/coach.js"></script>
 <script>
 function refresh(){ try{ Coach.renderPanel('coach-body'); Coach.renderLog('log'); }catch(e){} }
 refresh();
+/* pull any cross-device signals for a signed-in user, then re-render */
+try{ if(window.Coach&&Coach.sync) Coach.sync(refresh); }catch(e){}
 /* Live demo of the capture->surface loop: records real signals, then re-renders. */
 function simulateSession(){
   var btn=document.getElementById('sim-btn');

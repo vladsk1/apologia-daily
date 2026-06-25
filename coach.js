@@ -99,7 +99,7 @@
   function prefs() { try { return JSON.parse(localStorage.getItem('ad_prefs') || '{}'); } catch (e) { return {}; } }
   function savePrefs(p) { try { localStorage.setItem('ad_prefs', JSON.stringify(p)); } catch (e) {} }
   function store() { var p = prefs(); return (p.coach && typeof p.coach === 'object') ? p.coach : { signals: [] }; }
-  function commit(c) { var p = prefs(); p.coach = c; savePrefs(p); syncSupabase(c); }
+  function commit(c) { var p = prefs(); p.coach = c; savePrefs(p); }
   function now() { try { return Date.now(); } catch (e) { return 0; } }
 
   /* reverse name -> id, so tools can pass a human title */
@@ -128,13 +128,16 @@
     c.signals = c.signals || [];
     c.signals.push({
       ts: sig.ts || now(),
+      sid: sig.sid || genSid(),
       id: id,
       src: sig.src || 'other',
       score: Math.max(0, Math.min(1, Number(sig.score))),
-      note: String(sig.note || '').slice(0, 140)
+      note: String(sig.note || '').slice(0, 140),
+      synced: false
     });
     if (c.signals.length > SIGNAL_CAP) c.signals = c.signals.slice(-SIGNAL_CAP);
     commit(c);
+    pushNew(); /* best-effort cross-device sync */
   }
   /* convenience wrappers for the tools */
   function recordExplain(id, score10, label) {
@@ -311,11 +314,91 @@
     return { explain: 'Explain', quiz: 'Quiz', debate: 'Debate', flashcard: 'Cards', mastery: 'Track' }[src] || src;
   }
 
-  /* ---------- Supabase sync (stub) ----------
-     In production: upsert ad_prefs.coach.signals to a per-user
-     'coach_signals' table (RLS) and reconcile on load. Left as a
-     no-op here so the engine runs fully client-side in preview. */
-  function syncSupabase(/* coach */) { /* no-op in preview */ }
+  /* ---------- Supabase persistence (cross-device) ----------
+     Explicit recorded signals upsert to a per-user 'coach_signals'
+     table (RLS). Offline-first: localStorage is always the live cache;
+     remote is reconciled by the client-generated 'sid'. deriveFromMastery
+     signals are NOT stored here (ad_mastery has its own sync).
+     Requires @supabase/supabase-js loaded on the page; otherwise the
+     engine runs fully client-side and flushes on the next synced page.
+
+     One-time table setup (run in the Supabase SQL editor):
+       create table if not exists public.coach_signals (
+         id uuid primary key default gen_random_uuid(),
+         user_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
+         sid text not null, skill_id text not null, src text,
+         score real, note text, ts bigint,
+         created_at timestamptz default now(),
+         unique (user_id, sid)
+       );
+       alter table public.coach_signals enable row level security;
+       create policy "coach_own" on public.coach_signals for all
+         using (auth.uid() = user_id) with check (auth.uid() = user_id);
+  */
+  var SB_URL = 'https://noprgxkwniouukmrfozc.supabase.co';
+  var SB_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw';
+  var _sb = null;
+  function client() {
+    if (_sb) return _sb;
+    try {
+      if (global.__adSb) { _sb = global.__adSb; return _sb; }
+      if (global.supabase && global.supabase.createClient) {
+        _sb = global.supabase.createClient(SB_URL, SB_ANON);
+        global.__adSb = _sb;
+        return _sb;
+      }
+    } catch (e) {}
+    return null;
+  }
+  function session() {
+    var c = client();
+    if (!c) return Promise.resolve(null);
+    return c.auth.getSession()
+      .then(function (r) { return (r.data && r.data.session) || null; })
+      .catch(function () { return null; });
+  }
+  function genSid() { return now().toString(36) + '-' + Math.random().toString(36).slice(2, 9); }
+  function markSynced(sids) {
+    var set = {}; sids.forEach(function (s) { set[s] = 1; });
+    var c = store(); (c.signals || []).forEach(function (s) { if (set[s.sid]) s.synced = true; });
+    commit(c);
+  }
+  /* push any local-only (unsynced) signals to remote */
+  function pushNew() {
+    var c = store(), pending = (c.signals || []).filter(function (s) { return !s.synced; });
+    if (!pending.length || !client()) return Promise.resolve();
+    return session().then(function (ses) {
+      if (!ses || !ses.user) return;
+      var uid = ses.user.id;
+      var rows = pending.map(function (s) {
+        if (!s.sid) s.sid = genSid();
+        return { user_id: uid, sid: s.sid, skill_id: s.id, src: s.src, score: s.score, note: s.note, ts: s.ts };
+      });
+      return client().from('coach_signals').upsert(rows, { onConflict: 'user_id,sid' })
+        .then(function (res) { if (!res.error) markSynced(pending.map(function (s) { return s.sid; })); });
+    }).catch(function () {});
+  }
+  /* pull remote -> merge into local by sid -> flush local-only -> callback */
+  function sync(cb) {
+    var done = function () { try { if (cb) cb(); } catch (e) {} };
+    if (!client()) { done(); return Promise.resolve(); }
+    return session().then(function (ses) {
+      if (!ses || !ses.user) { done(); return; }
+      return client().from('coach_signals')
+        .select('sid,skill_id,src,score,note,ts').eq('user_id', ses.user.id)
+        .then(function (res) {
+          if (res.error) { done(); return; }
+          var c = store(); c.signals = c.signals || [];
+          var have = {}; c.signals.forEach(function (s) { if (s.sid) have[s.sid] = 1; });
+          (res.data || []).forEach(function (r) {
+            if (!have[r.sid]) c.signals.push({ ts: r.ts || 0, sid: r.sid, id: r.skill_id, src: r.src, score: r.score, note: r.note, synced: true });
+          });
+          if (c.signals.length > SIGNAL_CAP) c.signals = c.signals.slice(-SIGNAL_CAP);
+          commit(c);
+          return pushNew().then(done);
+        });
+    }).catch(function () { done(); });
+  }
 
   function reset() { var p = prefs(); delete p.coach; savePrefs(p); }
 
@@ -330,6 +413,7 @@
     prescription: prescription,
     renderPanel: renderPanel,
     renderLog: renderLog,
+    sync: sync,
     reset: reset
   };
 })(window);
