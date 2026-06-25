@@ -291,9 +291,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <div class="syllogism">
         <div class="prem"><div class="tag">P1</div><p>If God did not exist, the <b>applicability of mathematics</b> to the physical universe would be a happy coincidence.</p></div>
         <div class="prem"><div class="tag">P2</div><p>But the applicability of mathematics is <b>not a happy coincidence</b> — the universe is astonishingly, describable in deep mathematical structure.</p></div>
-        <div class="prem concl"><div class="tag">∴ C</div><p>Therefore, <b>God exists</b>.</p></div>
+        <div class="prem concl"><div class="tag">∴ C</div><p>Therefore, the applicability of mathematics is <b>best explained by a divine Mind</b>.</p></div>
       </div>
-      <p class="formnote">The form is a valid <em>modus tollens</em> — if both premises are true the conclusion follows necessarily, so the live debate is over P2 (is the success of mathematics really inexplicable on naturalism?) and over the meaning of P1.</p>
+      <p class="formnote">This is an inference to the best explanation, not a deductive proof — so the live debate is over P2 (is the success of mathematics really inexplicable on naturalism?) and over which explanation accounts for the data most economically. A rational Mind behind both the cosmos and our reasoning is offered as the better explanation, not a forced conclusion.</p>
 
       <span class="kick" style="margin-top:22px">Then the conceptual step — what best explains the fit</span>
       <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">A rational Mind that designed both the cosmos and our mathematical reasoning makes the fit expected rather than miraculous — the deep harmony between abstract math and concrete physics is exactly what you'd predict if one intelligence stands behind both.</p>
@@ -401,7 +401,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         </div>
         <div class="row">
           <div class="who"><b>Mark Steiner</b><span>1998 · <em>The Applicability of Mathematics as a Philosophical Problem</em></span></div>
-          <div class="what">Argues the success of mathematics suggests a non-naturalist, anthropocentric (mind-friendly) universe — that the world is, surprisingly, built to be intelligible to minds.</div>
+          <div class="what">Argues the success of mathematics suggests a non-naturalist, "user-friendly," anthropocentric (mind-friendly) universe — that the world is, surprisingly, built to be intelligible to minds. Steiner himself stopped short of theism, but his case is widely read as pointing beyond naturalism.</div>
         </div>
       </div>
     </div>
@@ -602,7 +602,7 @@ function setCheck(id, on){
 var ARG_PREMISES = [
   'If God did not exist, the applicability of mathematics to the physical world would be a happy coincidence.',
   'But the applicability of mathematics is not a happy coincidence; the universe is described with uncanny precision by deep mathematical structure.',
-  'Therefore, God exists.'
+  'Therefore, the applicability of mathematics is best explained by a divine Mind.'
 ];
 
 /* Real AI scoring via /api/tutor (same method as explain-it-back.html).
@@ -653,7 +653,7 @@ function renderMockScore(txtRaw){
   var checks = [
     {ok:/(coincidence|fluke|chance)/.test(t) && /(god|naturalism|naturalist)/.test(t), hit:'Premise 1 — you tied the fit-as-coincidence horn to God vs. naturalism', miss:'Premise 1 is missing — say that without God the fit of math would be a happy coincidence'},
     {ok:/(applicab|effective|precision|describe|describes|fit)/.test(t), hit:'Premise 2 — you stated the applicability of math is no coincidence', miss:'Premise 2 is thin — state that math describes reality with uncanny precision, not by chance'},
-    {ok:/therefore|so |conclu|god exists|mind/.test(t), hit:'Conclusion — you drew out that this points to God / a Mind', miss:'Draw the conclusion explicitly: therefore God exists'},
+    {ok:/therefore|so |conclu|god|mind|best explan/.test(t), hit:'Conclusion — you drew out that a divine Mind is the best explanation', miss:'Draw the conclusion explicitly: the applicability of math is best explained by a divine Mind'},
     {ok:/(wigner|dirac|predict|group theory|platonism|riemann|antimatter)/.test(t), hit:'Nice — you brought in concrete evidence (Wigner, Dirac, prediction, group theory)', miss:'Push further: cite the evidence — Wigner, Dirac, predictive successes, group theory'},
     {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth — you developed it, not just listed it', miss:'Go a bit deeper — a full reconstruction runs longer than this'}
   ];
