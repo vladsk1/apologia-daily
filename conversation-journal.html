@@ -588,6 +588,30 @@ function saveEntry() {
   saveEntries(entries);
   renderEntries();
 
+  /* Coach capture — a real conversation is the strongest signal. Map the topic
+     to a category and the outcome to a score, so real-world struggles feed the
+     Coach's weakness profile alongside in-app drills. */
+  try {
+    if (window.Coach && topic) {
+      var T2C = {
+        'Does God exist?': "God's Existence",
+        'Problem of evil / suffering': "God's Existence",
+        'Morality without God': "God's Existence",
+        'The resurrection': 'The Resurrection',
+        'Who is Jesus?': 'Jesus',
+        "Jesus's existence": 'Jesus',
+        'Is the Bible reliable?': 'Biblical Reliability',
+        'Science vs faith': 'Science & Faith'
+      };
+      var cat = T2C[topic];
+      if (cat) {
+        var S = { hard: 0.25, ok: 0.5, ongoing: 0.5, great: 0.75 };
+        var score = S[outcome] != null ? S[outcome] : 0.4;
+        Coach.recordConversation('cat:' + cat, score, 'Real conversation on ' + topic + (outcome ? ' (' + outcome + ')' : ''));
+      }
+    }
+  } catch (e) {}
+
   // Clear form
   ['who','they-said','i-said','reflection'].forEach(id => document.getElementById(id).value = '');
   document.getElementById('worldview').value = '';
@@ -643,6 +667,7 @@ renderEntries();
     window.location.href = 'index.html';
   }
 </script>
+  <script src="/coach.js"></script>
   <script src="/ad-nav.js" defer></script>
 </body>
 </html>
