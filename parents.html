@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Parents — Apologia Daily</title>
+<meta name="description" content="Equip yourself to answer your kids' hardest questions about God — at every age. Research-based, gracious, and practical.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --n:#0a1628;--n2:#050d1a;--n3:#1e4278;--n4:#f0f6fb;--n5:#ddeaf5;
+  --g:#c8a951;--gl:#e8cf87;--gd:#a88930;--w:#fff;--o:#f8f7f4;
+  --m:#3a4a62;--mu:#7a8fa8;--b:#d4e0ec;
+  --gr:#0f6e56;--gr2:#e1f5ee;--warn:#9a7416;--warnb:#fbf3e2;--hard:#b23b32;--hardb:#fdeceb;
+  --fd:'Playfair Display',Georgia,serif;--ui:'DM Sans',sans-serif;--bo:'Source Serif 4',Georgia,serif;
+}
+body{font-family:var(--bo);background:var(--o);color:var(--n);-webkit-font-smoothing:antialiased}
+
+.hero{background:var(--n2);padding:3rem 2rem 3.25rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(30,66,120,.5),transparent 70%)}
+.hi{max-width:1000px;margin:0 auto;position:relative;z-index:1}
+.ey{font-family:var(--ui);font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--g);margin-bottom:1rem;display:flex;align-items:center;gap:8px}
+.ht{font-family:var(--fd);font-size:clamp(2rem,5vw,3rem);font-weight:700;color:#fff;margin-bottom:1rem;line-height:1.12}
+.ht em{font-style:italic;color:var(--g)}
+.hs{font-size:1.05rem;color:rgba(255,255,255,.65);max-width:60ch;line-height:1.8}
+
+.main{max-width:1000px;margin:0 auto;padding:2.5rem 2rem 6rem}
+
+/* research strip */
+.why{background:#fff;border:1px solid var(--b);border-left:3px solid var(--g);border-radius:0 10px 10px 0;padding:1.5rem 1.75rem;margin-bottom:2.5rem}
+.why h2{font-family:var(--fd);font-size:1.2rem;font-weight:700;margin-bottom:.6rem}
+.why p{font-size:.95rem;color:var(--m);line-height:1.8;margin-bottom:.8rem;font-family:var(--ui)}
+.why p:last-child{margin-bottom:0}
+.why b{color:var(--n)}
+.stats{display:flex;gap:1.5rem;flex-wrap:wrap;margin:1.1rem 0 .2rem}
+.stat{flex:1;min-width:150px}
+.stat-n{font-family:var(--fd);font-size:1.7rem;font-weight:700;color:var(--n3);line-height:1}
+.stat-l{font-family:var(--ui);font-size:.78rem;color:var(--mu);margin-top:4px;line-height:1.4}
+
+.section-label{font-family:var(--ui);font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mu);margin:0 0 1.25rem;display:flex;align-items:center;gap:12px}
+.section-label::after{content:'';flex:1;height:1px;background:var(--b)}
+
+/* age-band cards */
+.band{background:#fff;border:1px solid var(--b);border-radius:10px;margin-bottom:12px;overflow:hidden}
+.band.op{border-color:#aecae8}
+.bh{display:flex;align-items:center;gap:1rem;padding:1.25rem 1.5rem;cursor:pointer;user-select:none}
+.bage{font-family:var(--fd);font-size:1.05rem;font-weight:700;color:#fff;background:var(--n3);border-radius:8px;padding:.5rem .7rem;min-width:74px;text-align:center;line-height:1.15}
+.bage span{display:block;font-family:var(--ui);font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:2px}
+.bi{flex:1}
+.bt{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:var(--n)}
+.bsub{font-family:var(--ui);font-size:.82rem;color:var(--mu);margin-top:2px}
+.brisk{font-family:var(--ui);font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--hard);background:var(--hardb);padding:3px 9px;border-radius:20px;white-space:nowrap}
+.chev{width:18px;height:18px;stroke:var(--mu);fill:none;stroke-width:2;flex-shrink:0;transition:transform .2s}
+.band.op .chev{transform:rotate(180deg)}
+.bb{display:none;padding:0 1.5rem 1.5rem;border-top:1px solid var(--b)}
+.band.op .bb{display:block}
+.blk{font-family:var(--ui);font-size:.64rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gd);margin:1.25rem 0 .6rem}
+.bdev{font-size:.95rem;color:var(--m);line-height:1.8;font-family:var(--ui)}
+.qs{list-style:none;margin:.4rem 0}
+.qs li{font-family:var(--bo);font-size:.95rem;color:var(--n);padding:7px 0 7px 1.4rem;position:relative;border-bottom:1px solid var(--b)}
+.qs li:last-child{border-bottom:none}
+.qs li::before{content:'\201C';position:absolute;left:0;top:8px;color:var(--g);font-family:var(--fd);font-size:1.1rem}
+.how{background:var(--n4);border-radius:8px;padding:1rem 1.25rem;margin-top:.5rem;font-family:var(--ui);font-size:.92rem;color:var(--m);line-height:1.75}
+.how b{color:var(--n)}
+.blinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:1rem}
+.blink{font-family:var(--ui);font-size:.8rem;font-weight:500;color:var(--n3);background:#fff;border:1px solid var(--b);border-radius:20px;padding:6px 14px;text-decoration:none}
+.blink:hover{border-color:var(--n3)}
+
+/* AI explainer */
+.tool{background:linear-gradient(135deg,#050d1a,#0f2040);border:1px solid rgba(200,169,81,.3);border-radius:12px;padding:1.75rem;margin-bottom:2.5rem}
+.tool-h{display:flex;align-items:center;gap:10px;margin-bottom:.4rem}
+.tool-ic{width:38px;height:38px;border-radius:10px;background:rgba(200,169,81,.14);border:1px solid rgba(200,169,81,.35);display:flex;align-items:center;justify-content:center;font-size:1.15rem}
+.tool-t{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:#fff}
+.tool-s{font-family:var(--ui);font-size:.85rem;color:rgba(255,255,255,.5);margin-bottom:1.25rem}
+.tool-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.tool-age{font-family:var(--ui);font-size:.85rem;padding:10px 12px;border-radius:6px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;outline:none}
+.tool-in{flex:1;min-width:200px;font-family:var(--ui);font-size:.9rem;padding:10px 14px;border-radius:6px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;outline:none}
+.tool-in::placeholder{color:rgba(255,255,255,.35)}
+.tool-btn{font-family:var(--ui);font-size:.88rem;font-weight:600;background:var(--g);color:var(--n);border:none;border-radius:6px;padding:10px 22px;cursor:pointer;white-space:nowrap}
+.tool-btn:disabled{opacity:.5;cursor:default}
+.tool-resp{display:none;margin-top:1rem;background:rgba(255,255,255,.05);border-left:2px solid var(--g);border-radius:0 8px 8px 0;padding:1rem 1.25rem;font-family:var(--bo);font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.85;white-space:pre-wrap}
+.tool-resp.show{display:block}
+
+.cta{background:var(--n2);border-radius:12px;padding:1.75rem;display:flex;align-items:center;justify-content:space-between;gap:1.25rem;flex-wrap:wrap}
+.cta-t{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:4px}
+.cta-s{font-family:var(--ui);font-size:.85rem;color:rgba(255,255,255,.5);max-width:48ch}
+.cta a{font-family:var(--ui);font-size:.85rem;font-weight:600;background:var(--g);color:var(--n);padding:11px 22px;border-radius:4px;text-decoration:none;white-space:nowrap}
+
+footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3rem 2rem 2rem;margin-top:1rem}
+.fi{max-width:1000px;margin:0 auto;text-align:center}
+.fc{font-family:var(--ui);font-size:.75rem;color:rgba(255,255,255,.25)}
+.note{font-family:var(--ui);font-size:.74rem;color:var(--mu);margin-top:2.5rem;line-height:1.7;text-align:center}
+</style>
+<link rel="stylesheet" href="/ad-nav.css">
+</head>
+<body>
+<nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <ul class="adn-drop">
+          <li><a href="/parents.html">For Parents</a></li>
+          <li><a href="/palace.html">Memory Palace</a></li>
+          <li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/games.html">Games</a></li>
+          <li><a href="/whats-new.html">What&#39;s New</a></li>
+          <li><a href="/answers/">Answers</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <button class="adn-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hi">
+    <p class="ey"><span>&#128106;</span> For Parents</p>
+    <h1 class="ht">Raise kids who can <em>keep</em> their faith</h1>
+    <p class="hs">Your children will face the hardest questions long before university. This is how to answer them — at every age — with confidence and grace, built on what the research actually says about how kids form belief.</p>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- WHY START EARLY -->
+  <div class="why">
+    <h2>Why earlier than you think</h2>
+    <p>Most parents wait for the teen years. The research says that's too late to lay the <b>foundation</b>. A child's worldview begins forming before age two and is <b>largely set by 13</b> — and preteens (8&ndash;12) are already quietly deciding what they believe. The goal isn't to turn your 5-year-old into a philosopher; it's to <b>weave "is it true, and how do we know?" into normal conversation from the start</b>, changing the <em>method</em> as they grow, not the start date.</p>
+    <div class="stats">
+      <div class="stat"><div class="stat-n">~15 mo</div><div class="stat-l">when worldview starts forming (Barna)</div></div>
+      <div class="stat"><div class="stat-n">by age 13</div><div class="stat-l">worldview is ~85% set</div></div>
+      <div class="stat"><div class="stat-n">8&ndash;12</div><div class="stat-l">the highest-risk window for quietly walking away</div></div>
+      <div class="stat"><div class="stat-n">18&ndash;24</div><div class="stat-l">when most who leave, leave</div></div>
+    </div>
+    <p style="margin-top:1rem;font-size:.82rem;color:var(--mu)">Grounded in research from Barna, Sean McDowell, Natasha Crain, and Foundation Worldview, and developmental work by Jean Piaget and James Fowler.</p>
+  </div>
+
+  <!-- AI EXPLAINER TOOL -->
+  <div class="tool">
+    <div class="tool-h">
+      <span class="tool-ic">&#129504;</span>
+      <span class="tool-t">"How do I explain this to my kid?"</span>
+    </div>
+    <p class="tool-s">Type your child's question and their age. Get a clear, true, age-appropriate way to answer it &mdash; in words you can actually say.</p>
+    <div class="tool-row">
+      <select class="tool-age" id="p-age">
+        <option value="4">Age 3&ndash;6</option>
+        <option value="8" selected>Age 7&ndash;9</option>
+        <option value="11">Age 10&ndash;12</option>
+        <option value="14">Age 13&ndash;15</option>
+        <option value="17">Age 16&ndash;18</option>
+      </select>
+      <input class="tool-in" id="p-q" type="text" placeholder="e.g. Who made God? / Why does God let bad things happen?" onkeydown="if(event.key==='Enter')askParent()">
+      <button class="tool-btn" id="p-btn" onclick="askParent()">Get the answer</button>
+    </div>
+    <div class="tool-resp" id="p-resp"></div>
+  </div>
+
+  <div class="section-label">The path, by age &middot; tap a stage</div>
+  <div id="bands"></div>
+
+  <!-- HANDOFF CTA -->
+  <div class="cta">
+    <div>
+      <div class="cta-t">Heading to university soon?</div>
+      <div class="cta-s">The 16&ndash;18 stage hands off to focused college prep &mdash; practising the hostile-lecturer conversation before they're in it. <em style="color:var(--gl);font-style:italic">(Coming soon.)</em></div>
+    </div>
+    <a href="debate-arena.html">Try the Debate Arena &rarr;</a>
+  </div>
+
+  <p class="note">Every answer here is given within historic Christian orthodoxy and stays on the faith all Christian traditions share. For questions specific to your tradition, your pastor or priest is the best guide.</p>
+
+</div>
+
+<footer>
+  <div class="fi"><div class="fc">&#169; 2026 Apologia Daily. Built for the defence of the Gospel.</div></div>
+</footer>
+
+<script>
+/* ---- the five research-backed age bands ---- */
+var BANDS = [
+  { age:'3&ndash;6', stage:'Wonder', sub:'Plant awe and the habit of "how do we know?"', risk:'',
+    dev:'They think in <b>stories and pictures</b>, not abstractions, and they are absorbing a basic sense of whether the world is safe and good. They can’t follow a syllogism &mdash; but they are already forming a worldview. Your job is wonder, not arguments.',
+    qs:['Who made God?','Where is God? Why can’t I see Him?','Is God real?','Why is the sky there?'],
+    how:'Keep it <b>concrete and full of wonder.</b> Tie the unseen to things they already know are real but invisible &mdash; the wind, love, your thoughts. Answer simply and honestly: <b>"Everything that’s made has a maker. God made everything, and He was always there &mdash; He didn’t need making."</b> Don’t over-explain; let them marvel.',
+    links:[['kalam','A maker for everything'],['finetuning','The world is "just right"']] },
+  { age:'7&ndash;9', stage:'Curiosity', sub:'Start "is it true — and how do we know?"', risk:'',
+    dev:'<b>Critical thinking is switching on.</b> They’re literal, they care intensely about what’s fair and what’s real, and they can follow logic when it’s tied to concrete examples. They’ll start noticing that not everyone believes the same thing.',
+    qs:['How do we know the Bible is true?','Did the miracles really happen?','Why do some people not believe in God?','How do we know Jesus was real?'],
+    how:'Introduce the idea that faith has <b>reasons</b>, with concrete evidence: <b>"We have thousands of really old copies of the Bible &mdash; more than any other ancient book"</b>; "People who actually saw Jesus alive again wrote it down and wouldn’t take it back even when it cost them." Make "how do we know?" a normal, welcome question.',
+    links:[['manuscript','Can we trust the Bible?'],['eyewitnesses','People who were there'],['minimal','Did Jesus rise?']] },
+  { age:'10&ndash;12', stage:'Sharpening', sub:'The real questions arrive — meet them head-on', risk:'Highest-risk window',
+    dev:'Abstract reasoning comes online, and this is the window the research flags hardest: <b>preteens are already quietly rejecting core beliefs</b>, and media now shapes them more than parents or church. They can handle real arguments now &mdash; and they need to, before someone else frames the questions for them.',
+    qs:['Hasn’t science disproved God?','Why would a good God allow suffering?','Aren’t all religions basically the same?','How do you know Christianity is the right one?'],
+    how:'Teach them to <b>spot a weak argument</b> and to compare worldviews fairly &mdash; and make doubt safe to say out loud. Give them the real (kid-level) cases: the universe had a beginning, its constants are fine-tuned, the resurrection has evidence. The aim is a faith they’ve <b>examined</b>, not just inherited.',
+    links:[['finetuning','Fine-tuning'],['moral','Right and wrong'],['evil','Why suffering?'],['minimal','The resurrection']] },
+  { age:'13&ndash;15', stage:'Ownership', sub:'Help them make it theirs', risk:'',
+    dev:'Faith becomes <b>personal and identity-shaped</b>. They’re working out who they are and which communities to trust, and online "deconstruction" is loud. Today’s teens are often less gripped by science-vs-faith than by <b>meaning, identity, and trust</b>: How should I live? Can this be trusted with my actual life?',
+    qs:['What if I don’t feel God?','Is it wrong to doubt?','Why does the church get things wrong?','How can faith speak to who I am?'],
+    how:'Shift from lectures to <b>dialogue</b>. Welcome doubt as part of owning faith, not a betrayal of it. Answer the heart question under the head question. Let them test ideas safely &mdash; better they wrestle at your kitchen table than alone at 2am online.',
+    links:[['religious','Experiencing God'],['moral','Meaning & morality'],['uniqueness','Why Jesus?']] },
+  { age:'16&ndash;18', stage:'Launch', sub:'Pre-load the hardest questions before they leave', risk:'',
+    dev:'They’re about to step into the years when <b>most who leave the faith leave</b> &mdash; hostile lecturers, confident peers, and the assumption that no thinking person believes this. The foundation is poured; now it needs <b>stress-testing</b>.',
+    qs:['Everyone smart seems to be an atheist — am I missing something?','How do I answer a professor who mocks faith?','Can I defend this without sounding stupid?'],
+    how:'Pre-load the toughest objections in their <b>strongest form</b> (so a lecturer can’t blindside them), and let them <b>practise the conversation out loud</b> before they’re in it. Help them line up their people &mdash; a church, a mentor, a friend &mdash; before they go.',
+    links:[['kalam','The full case'],['minimal','Resurrection, in depth']] },
+];
+
+function render(){
+  document.getElementById('bands').innerHTML = BANDS.map(function(b,i){
+    var qs = b.qs.map(function(q){return '<li>'+q+'</li>';}).join('');
+    var links = b.links.map(function(l){return '<a class="blink" href="ev-m-'+l[0]+'.html">'+l[1]+' &rarr;</a>';}).join('');
+    return '<div class="band" id="band'+i+'">'+
+      '<div class="bh" onclick="tog('+i+')">'+
+        '<div class="bage">'+b.age+'<span>years</span></div>'+
+        '<div class="bi"><div class="bt">'+b.stage+'</div><div class="bsub">'+b.sub+'</div></div>'+
+        (b.risk?'<span class="brisk">&#9888; '+b.risk+'</span>':'')+
+        '<svg class="chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>'+
+      '</div>'+
+      '<div class="bb">'+
+        '<div class="blk">What’s happening</div><p class="bdev">'+b.dev+'</p>'+
+        '<div class="blk">Questions they ask now</div><ul class="qs">'+qs+'</ul>'+
+        '<div class="blk">How to answer</div><div class="how">'+b.how+'</div>'+
+        '<div class="blk">Go deeper together</div><div class="blinks">'+links+'</div>'+
+      '</div>'+
+    '</div>';
+  }).join('');
+}
+function tog(i){
+  var el=document.getElementById('band'+i);
+  var open=el.classList.contains('op');
+  var all=document.querySelectorAll('.band');
+  for(var j=0;j<all.length;j++) all[j].classList.remove('op');
+  if(!open) el.classList.add('op');
+}
+render();
+document.getElementById('band0').classList.add('op');
+
+/* ---- AI child-explainer (guarded via /api/tutor) ---- */
+async function askParent(){
+  var q=document.getElementById('p-q').value.trim();
+  if(!q) return;
+  var age=document.getElementById('p-age').value;
+  var btn=document.getElementById('p-btn'), resp=document.getElementById('p-resp');
+  btn.disabled=true; var lbl=btn.textContent; btn.textContent='Thinking…';
+  resp.classList.add('show'); resp.textContent='Thinking through how to say this to a '+age+'-year-old…';
+  var question='My child is '+age+' years old and asked me: "'+q+'". Give me a clear, warm, age-appropriate way to answer them in everyday words I can actually say out loud — true to the Christian faith, concrete (not abstract) for their age, and honest about what we don’t fully know. Keep it short. Then add one sentence I can use to invite a follow-up conversation.';
+  try{
+    var r=await fetch('/api/tutor',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({question:question,argument:'Talking with your kids about God',category:'For Parents'})});
+    if(r.ok){ var d=await r.json(); resp.textContent=d.answer||'Sorry, please try again.'; }
+    else { resp.textContent='Something went wrong. Please try again in a moment.'; }
+  }catch(e){ resp.textContent='Something went wrong. Please try again in a moment.'; }
+  btn.disabled=false; btn.textContent=lbl;
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function(){
+  function boot(){
+    if(!(window.supabase&&window.supabase.createClient)){ return setTimeout(boot,50); }
+    var sb=window.supabase.createClient('https://noprgxkwniouukmrfozc.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw');
+    window.signOut=async function(){ try{await sb.auth.signOut();}catch(e){} location.href='index.html'; };
+    sb.auth.getSession().then(function(r){
+      var s=r.data&&r.data.session; if(!s) return;
+      var name=(s.user.user_metadata&&s.user.user_metadata.full_name)||s.user.email.split('@')[0];
+      var nu=document.getElementById('nav-user'),ns=document.getElementById('nav-signout'),ni=document.getElementById('nav-signin'),nc=document.getElementById('nav-cta'),nd=document.getElementById('nav-dashboard');
+      if(nu)nu.textContent=name; if(ns)ns.style.display='inline-block'; if(ni)ni.style.display='none'; if(nc)nc.style.display='none'; if(nd)nd.style.display='inline-block';
+    }).catch(function(){});
+  }
+  boot();
+})();
+</script>
+<script src="/ad-nav.js" defer></script>
+</body>
+</html>
