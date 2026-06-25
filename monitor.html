@@ -235,6 +235,26 @@
       </div>
     </div>
 
+    <!-- PRODUCT METRICS -->
+    <div class="section-title">Product Metrics <span style="font-weight:400;color:#7a8fa8;font-size:.75rem;">&middot; server-side data</span></div>
+    <div id="pm-cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-bottom:.75rem;">
+      <div style="color:#7a8fa8;font-size:.85rem;">Loading metrics…</div>
+    </div>
+    <div id="pm-notes" style="font-size:.78rem;color:#7a8fa8;line-height:1.7;background:rgba(255,255,255,.03);border-radius:8px;padding:.85rem 1.1rem;margin-bottom:2rem;"></div>
+    <script>
+    (function(){
+      var cards=document.getElementById('pm-cards'), notes=document.getElementById('pm-notes');
+      function card(label,val){ return '<div style="background:#0f2040;border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:1rem;text-align:center;"><div style="font-family:\'Playfair Display\',serif;font-size:1.8rem;font-weight:700;color:#c8a951;line-height:1;">'+(val==null?'&mdash;':val)+'</div><div style="font-size:.68rem;color:#7a8fa8;text-transform:uppercase;letter-spacing:.06em;margin-top:6px;">'+label+'</div></div>'; }
+      fetch('/api/metrics').then(function(r){return r.json();}).then(function(d){
+        var m=d.metrics||{};
+        var html=card('Registered users',m.total_users)+card('Explain sessions',m.explain_sessions_total)+card('Explain · 7d',m.explain_sessions_7d)+card('Explain · 30d',m.explain_sessions_30d);
+        if(m.coach_signals_total!=null) html+=card('Coach signals',m.coach_signals_total);
+        cards.innerHTML=html;
+        notes.innerHTML=(d.notes||[]).map(function(n){return '&bull; '+n;}).join('<br>');
+      }).catch(function(){ cards.innerHTML='<div style="color:#b23b32;font-size:.85rem;">Could not load /api/metrics.</div>'; });
+    })();
+    </script>
+
     <!-- SERVICE CHECKS -->
     <div class="section-title">Services</div>
     <div class="checks-grid" id="checks-grid">
@@ -694,5 +714,6 @@
     }
   });
   </script>
+  <script src="/analytics.js" defer></script>
 </body>
 </html>
