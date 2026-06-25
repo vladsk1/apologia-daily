@@ -43,6 +43,23 @@
         persistence: 'localStorage+cookie'
       });
     } catch (e) {}
+
+    /* Identify the signed-in user so retention/funnels are per-person.
+       Reads the Supabase session straight from localStorage — no second
+       auth client (avoids the token-refresh conflict that logs users out). */
+    try {
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (k && /^sb-.*-auth-token$/.test(k)) {
+          var tok = JSON.parse(localStorage.getItem(k) || '{}');
+          var user = tok.user || (tok.currentSession && tok.currentSession.user) || null;
+          if (user && user.id && window.posthog && window.posthog.identify) {
+            window.posthog.identify(user.id, user.email ? { email: user.email } : {});
+          }
+          break;
+        }
+      }
+    } catch (e) {}
   }
 
   /* ---- tiny event helper (safe no-op if PostHog is off) ---- */
