@@ -245,7 +245,7 @@
     (function(){
       var cards=document.getElementById('pm-cards'), notes=document.getElementById('pm-notes');
       function card(label,val){ return '<div style="background:#0f2040;border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:1rem;text-align:center;"><div style="font-family:\'Playfair Display\',serif;font-size:1.8rem;font-weight:700;color:#c8a951;line-height:1;">'+(val==null?'&mdash;':val)+'</div><div style="font-size:.68rem;color:#7a8fa8;text-transform:uppercase;letter-spacing:.06em;margin-top:6px;">'+label+'</div></div>'; }
-      fetch('/api/metrics').then(function(r){return r.json();}).then(function(d){
+      fetch('/api/metrics?secret=' + encodeURIComponent('Apologia2026!')).then(function(r){return r.json();}).then(function(d){
         var m=d.metrics||{};
         var html=card('Registered users',m.total_users)+card('Explain sessions',m.explain_sessions_total)+card('Explain · 7d',m.explain_sessions_7d)+card('Explain · 30d',m.explain_sessions_30d);
         if(m.coach_signals_total!=null) html+=card('Coach signals',m.coach_signals_total);

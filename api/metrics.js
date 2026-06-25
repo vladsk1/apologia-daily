@@ -8,12 +8,12 @@
    Setup: set SUPABASE_SERVICE_ROLE_KEY (Supabase > Project Settings > API) and
    optionally METRICS_SECRET (then call /api/metrics?secret=...). */
 export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  if (req.method === 'OPTIONS') return res.status(200).end();
+  if (req.method === 'OPTIONS') return res.status(204).end();
 
   var SECRET = process.env.METRICS_SECRET;
-  if (SECRET && (req.query.secret || '') !== SECRET) {
-    return res.status(401).json({ error: 'Unauthorized' });
+  var provided = (req.headers.authorization || '').replace(/^Bearer\s+/i, '') || (req.query.secret || '');
+  if (!SECRET || provided !== SECRET) {
+    return res.status(401).json({ error: 'Unauthorized — set METRICS_SECRET in env and supply it.' });
   }
 
   var URL = process.env.SUPABASE_URL || 'https://noprgxkwniouukmrfozc.supabase.co';
