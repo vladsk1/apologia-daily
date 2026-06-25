@@ -153,6 +153,9 @@
   function recordFlashcards(id, ok) {
     record({ id: id, src: 'flashcard', score: ok ? 0.7 : 0.3, note: ok ? 'Cleared the flashcard deck' : 'Struggled on flashcards' });
   }
+  function recordConversation(idOrCat, score, note) {
+    record({ id: idOrCat, src: 'conversation', score: Math.max(0, Math.min(1, Number(score))), note: note || 'Real conversation logged' });
+  }
 
   /* ---------- derive signals from existing ad_mastery ---------- */
   function masteryMap() { try { return JSON.parse(localStorage.getItem('ad_mastery') || '{}'); } catch (e) { return {}; } }
@@ -251,15 +254,23 @@
         '<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:9px;padding:0.4rem 1rem;margin-bottom:1.1rem;">' + steps + '</div>' +
         '<div style="display:flex;gap:0.6rem;flex-wrap:wrap;">' +
           '<a href="' + esc(p.startHref) + '" style="font-family:\'DM Sans\',sans-serif;font-size:0.85rem;font-weight:600;background:#c8a951;color:#050d1a;padding:10px 22px;border-radius:4px;text-decoration:none;">Start session &rarr;</a>' +
-          '<a href="coach.html" style="font-family:\'DM Sans\',sans-serif;font-size:0.85rem;font-weight:500;color:rgba(255,255,255,0.7);padding:10px 16px;border-radius:4px;text-decoration:none;border:1px solid rgba(255,255,255,0.14);">Full training log</a></div>';
+          '<a href="coach.html" style="font-family:\'DM Sans\',sans-serif;font-size:0.85rem;font-weight:500;color:rgba(255,255,255,0.7);padding:10px 16px;border-radius:4px;text-decoration:none;border:1px solid rgba(255,255,255,0.14);">Full training log</a></div>' +
+        convoLink();
     } else {
       body.innerHTML =
         '<p style="font-family:\'Playfair Display\',Georgia,serif;font-size:1.08rem;line-height:1.6;color:rgba(255,255,255,0.92);margin-bottom:0.5rem;">Your Coach is warming up.</p>' +
         '<p style="font-family:\'DM Sans\',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.6;margin-bottom:1.1rem;">Finish a debate, quiz, or Explain It Back and the Coach starts tracking where you\u2019re strong and where you slip \u2014 then builds you a daily session aimed squarely at your weakest argument.</p>' +
         '<div style="display:flex;gap:0.6rem;flex-wrap:wrap;">' +
           '<a href="debate-arena.html" style="font-family:\'DM Sans\',sans-serif;font-size:0.85rem;font-weight:600;background:#c8a951;color:#050d1a;padding:10px 22px;border-radius:4px;text-decoration:none;">Do a drill to begin &rarr;</a>' +
-          '<a href="coach.html" style="font-family:\'DM Sans\',sans-serif;font-size:0.85rem;font-weight:500;color:rgba(255,255,255,0.7);padding:10px 16px;border-radius:4px;text-decoration:none;border:1px solid rgba(255,255,255,0.14);">Preview the Coach &rarr;</a></div>';
+          '<a href="coach.html" style="font-family:\'DM Sans\',sans-serif;font-size:0.85rem;font-weight:500;color:rgba(255,255,255,0.7);padding:10px 16px;border-radius:4px;text-decoration:none;border:1px solid rgba(255,255,255,0.14);">Preview the Coach &rarr;</a></div>' +
+        convoLink();
     }
+  }
+  /* link to log a real-world conversation for coaching (feeds the profile) */
+  function convoLink() {
+    return '<div style="margin-top:0.9rem;border-top:1px solid rgba(255,255,255,0.08);padding-top:0.8rem;">' +
+      '<a href="conversation-journal.html" style="font-family:\'DM Sans\',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.55);text-decoration:none;">' +
+      '&#128172; Had a real debate or got a question you couldn&rsquo;t answer? <span style="color:#c8a951;font-weight:600;">Log it for coaching &rarr;</span></a></div>';
   }
 
   function dial(pct) {
@@ -311,7 +322,7 @@
     }).join('');
   }
   function s_src(src) {
-    return { explain: 'Explain', quiz: 'Quiz', debate: 'Debate', flashcard: 'Cards', mastery: 'Track' }[src] || src;
+    return { explain: 'Explain', quiz: 'Quiz', debate: 'Debate', flashcard: 'Cards', mastery: 'Track', conversation: 'Real talk' }[src] || src;
   }
 
   /* ---------- Supabase persistence (cross-device) ----------
@@ -409,6 +420,7 @@
     recordQuiz: recordQuiz,
     recordDebate: recordDebate,
     recordFlashcards: recordFlashcards,
+    recordConversation: recordConversation,
     profile: profile,
     prescription: prescription,
     renderPanel: renderPanel,
