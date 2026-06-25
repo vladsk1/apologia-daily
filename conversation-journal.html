@@ -377,6 +377,19 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
 
 const STORAGE_KEY = 'apologia_journal';
 
+/* Maps the journal's topic dropdown to a Coach category (shared by the
+   coaching call and the save handler). */
+window.COACH_T2C = {
+  'Does God exist?': "God's Existence",
+  'Problem of evil / suffering': "God's Existence",
+  'Morality without God': "God's Existence",
+  'The resurrection': 'The Resurrection',
+  'Who is Jesus?': 'Jesus',
+  "Jesus's existence": 'Jesus',
+  'Is the Bible reliable?': 'Biblical Reliability',
+  'Science vs faith': 'Science & Faith'
+};
+
 const tips = [
   '<strong>Start with curiosity.</strong> Before making your case, ask them what they actually believe and why. People are more open after they feel heard.',
   '<strong>One argument at a time.</strong> Don\'t try to cover everything. Pick the argument most relevant to their objection and go deep on that one.',
@@ -495,6 +508,17 @@ async function getCoaching() {
   spin.style.display = 'inline-block';
   btnText.textContent = 'Getting coaching...';
 
+  /* Candidate arguments in this topic's category, for precise Coach targeting */
+  var _cat = (window.COACH_T2C && window.COACH_T2C[topic]) || '';
+  var _cands = [];
+  try {
+    if (window.Coach && window.Coach.ARGS && _cat) {
+      var A = window.Coach.ARGS;
+      for (var k in A) { if (A[k].c === _cat) _cands.push(k + ': ' + A[k].n); }
+    }
+  } catch (e) {}
+  const studyList = _cands.join('; ');
+
   const prompt = `You are an expert Christian apologetics coach. A Christian has just had a real conversation about faith and wants your coaching.
 
 Conversation details:
@@ -519,7 +543,11 @@ Please provide warm, practical coaching with these four sections:
 **What to study**
 (1-2 specific arguments or resources from the Evidence Library that would help them most with this type of conversation)
 
-Keep the tone warm, encouraging, and practical. This person is trying to share their faith and deserves genuine help.`;
+Keep the tone warm, encouraging, and practical. This person is trying to share their faith and deserves genuine help.${studyList ? `
+
+After all four sections, on a final separate line, output exactly one tag identifying the single argument this person most needs to study, chosen ONLY from this list (use the id before the colon):
+${studyList}
+Format the final line exactly as: [[STUDY:id]]` : ''}`;
 
   try {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
@@ -535,14 +563,23 @@ Keep the tone warm, encouraging, and practical. This person is trying to share t
     if (res.ok) {
       const data = await res.json();
       const text = data.content[0].text;
-      window._lastCoaching = text;
+
+      /* Extract the machine-readable study tag (specific argument), validate it,
+         stash for saveEntry, and strip it from what we display. */
+      window._coachArgId = null;
+      var _tag = text.match(/\[\[STUDY:\s*([a-z0-9_]+)\s*\]\]/i);
+      if (_tag && window.Coach && window.Coach.ARGS && window.Coach.ARGS[_tag[1]]) {
+        window._coachArgId = _tag[1];
+      }
+      const cleanText = text.replace(/\[\[STUDY:[^\]]*\]\]/ig, '').trim();
+      window._lastCoaching = cleanText;
 
       // Parse and render
       const panel = document.getElementById('coaching-panel');
       const content = document.getElementById('coaching-content');
 
       // Convert markdown-style to HTML
-      const formatted = text
+      const formatted = cleanText
         .replace(/\*\*What went well\*\*/g, '<div class="cp-section"><div class="cp-section-title">What went well</div>')
         .replace(/\*\*What to improve\*\*/g, '</div><div class="cp-section"><div class="cp-section-title">What to improve</div>')
         .replace(/\*\*Exactly what to say next time\*\*/g, '</div><div class="cp-section"><div class="cp-section-title">What to say next time</div>')
@@ -593,24 +630,20 @@ function saveEntry() {
      Coach's weakness profile alongside in-app drills. */
   try {
     if (window.Coach && topic) {
-      var T2C = {
-        'Does God exist?': "God's Existence",
-        'Problem of evil / suffering': "God's Existence",
-        'Morality without God': "God's Existence",
-        'The resurrection': 'The Resurrection',
-        'Who is Jesus?': 'Jesus',
-        "Jesus's existence": 'Jesus',
-        'Is the Bible reliable?': 'Biblical Reliability',
-        'Science vs faith': 'Science & Faith'
-      };
-      var cat = T2C[topic];
-      if (cat) {
-        var S = { hard: 0.25, ok: 0.5, ongoing: 0.5, great: 0.75 };
-        var score = S[outcome] != null ? S[outcome] : 0.4;
-        Coach.recordConversation('cat:' + cat, score, 'Real conversation on ' + topic + (outcome ? ' (' + outcome + ')' : ''));
+      var cat = (window.COACH_T2C && window.COACH_T2C[topic]) || null;
+      var S = { hard: 0.25, ok: 0.5, ongoing: 0.5, great: 0.75 };
+      var score = S[outcome] != null ? S[outcome] : 0.4;
+      var note = 'Real conversation on ' + topic + (outcome ? ' (' + outcome + ')' : '');
+      if (window._coachArgId && window.Coach.ARGS && window.Coach.ARGS[window._coachArgId]) {
+        // precise: the AI coaching identified the specific argument they struggled with
+        Coach.recordConversation(window._coachArgId, score, note);
+      } else if (cat) {
+        // fallback: tag the category
+        Coach.recordConversation('cat:' + cat, score, note);
       }
     }
   } catch (e) {}
+  window._coachArgId = null;
 
   // Clear form
   ['who','they-said','i-said','reflection'].forEach(id => document.getElementById(id).value = '');
