@@ -396,6 +396,51 @@
       <a class="recommend-btn" id="rec-link" href="daily-devotional.html">Go &rarr;</a>
     </div>
 
+    <!-- AI COACH — personalised weakness targeting (reads ad_prefs.coach) -->
+    <div id="coach-card" style="position:relative;background:linear-gradient(155deg,#050d1a 0%,#0f2040 75%,#1e4278 165%);border:1px solid rgba(200,169,81,0.3);border-radius:10px;padding:1.5rem 1.75rem;margin-bottom:1.75rem;box-shadow:0 4px 20px rgba(5,13,26,0.08);overflow:hidden;">
+      <div style="display:flex;align-items:center;gap:0.7rem;margin-bottom:1rem;">
+        <span style="width:34px;height:34px;border-radius:9px;background:rgba(200,169,81,0.14);border:1px solid rgba(200,169,81,0.35);display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0;">&#129305;</span>
+        <div>
+          <div style="font-family:var(--font-ui);font-size:0.62rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);">Your Coach</div>
+          <div style="font-family:var(--font-ui);font-size:0.72rem;color:rgba(255,255,255,0.4);">Personalised training from your weak spots</div>
+        </div>
+        <span style="margin-left:auto;font-family:var(--font-ui);font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);background:rgba(200,169,81,0.12);border:1px solid rgba(200,169,81,0.3);padding:4px 10px;border-radius:20px;">Pro</span>
+      </div>
+      <div id="coach-body"></div>
+    </div>
+    <script>
+    (function(){
+      var body=document.getElementById('coach-body');
+      if(!body) return;
+      function read(){ try{ return (JSON.parse(localStorage.getItem('ad_prefs')||'{}').coach)||null; }catch(e){ return null; } }
+      function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+      var c=read();
+      if(c && c.prescription && c.prescription.steps && c.prescription.steps.length){
+        var p=c.prescription;
+        var steps=p.steps.map(function(s,i){
+          return '<div style="display:flex;gap:11px;align-items:flex-start;padding:9px 2px;border-bottom:1px solid rgba(255,255,255,0.07);">'+
+            '<span style="flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:rgba(200,169,81,0.16);border:1px solid rgba(200,169,81,0.35);color:var(--gold);font-family:var(--font-ui);font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;">'+(i+1)+'</span>'+
+            '<span style="flex:1;font-family:var(--font-ui);font-size:0.85rem;color:rgba(255,255,255,0.85);line-height:1.4;">'+esc(s.act)+
+              '<span style="display:block;font-size:0.72rem;color:var(--navy-200);margin-top:1px;">'+esc(s.tool)+'</span></span></div>';
+        }).join('');
+        body.innerHTML=
+          '<p style="font-family:var(--font-display);font-size:1.08rem;line-height:1.6;color:rgba(255,255,255,0.92);margin-bottom:0.4rem;">'+esc(p.read)+'</p>'+
+          '<p style="font-family:var(--font-ui);font-size:0.74rem;color:rgba(255,255,255,0.4);margin-bottom:1rem;">'+esc(p.evidence)+'</p>'+
+          '<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:9px;padding:0.4rem 1rem;margin-bottom:1.1rem;">'+steps+'</div>'+
+          '<div style="display:flex;gap:0.6rem;flex-wrap:wrap;">'+
+            '<a href="'+esc(p.startHref||'coach.html')+'" style="font-family:var(--font-ui);font-size:0.85rem;font-weight:600;background:var(--gold);color:#050d1a;padding:10px 22px;border-radius:4px;text-decoration:none;">Start session &rarr;</a>'+
+            '<a href="coach.html" style="font-family:var(--font-ui);font-size:0.85rem;font-weight:500;color:rgba(255,255,255,0.7);padding:10px 16px;border-radius:4px;text-decoration:none;border:1px solid rgba(255,255,255,0.14);">Full training log</a></div>';
+      } else {
+        body.innerHTML=
+          '<p style="font-family:var(--font-display);font-size:1.08rem;line-height:1.6;color:rgba(255,255,255,0.92);margin-bottom:0.5rem;">Your Coach is warming up.</p>'+
+          '<p style="font-family:var(--font-ui);font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.6;margin-bottom:1.1rem;">Finish a debate, quiz, or Explain It Back and the Coach starts tracking where you&rsquo;re strong and where you slip &mdash; then builds you a daily session aimed squarely at your weakest argument.</p>'+
+          '<div style="display:flex;gap:0.6rem;flex-wrap:wrap;">'+
+            '<a href="debate-arena.html" style="font-family:var(--font-ui);font-size:0.85rem;font-weight:600;background:var(--gold);color:#050d1a;padding:10px 22px;border-radius:4px;text-decoration:none;">Do a drill to begin &rarr;</a>'+
+            '<a href="coach.html" style="font-family:var(--font-ui);font-size:0.85rem;font-weight:500;color:rgba(255,255,255,0.7);padding:10px 16px;border-radius:4px;text-decoration:none;border:1px solid rgba(255,255,255,0.14);">Preview the Coach &rarr;</a></div>';
+      }
+    })();
+    </script>
+
     <!-- LEARNING TOOLS -->
     <div style="background:linear-gradient(135deg,#0a1628,#050d1a);border:1px solid rgba(200,169,81,0.35);border-radius:10px;padding:1.5rem 1.75rem;margin-bottom:1.75rem;box-shadow:0 4px 20px rgba(5,13,26,0.08);">
       <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.35rem;">
