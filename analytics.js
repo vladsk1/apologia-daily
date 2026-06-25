@@ -19,7 +19,7 @@
 (function () {
   'use strict';
 
-  var POSTHOG_KEY = 'phc_REPLACE_WITH_YOUR_POSTHOG_KEY';
+  var POSTHOG_KEY = 'phc_qrovkG3stLv8pvL5NWYuyghweekGuP2S8BscpTf9AFkJ';
   var POSTHOG_HOST = 'https://eu.i.posthog.com'; /* US: https://us.i.posthog.com */
 
   /* ---- Vercel Web Analytics (load once; pageviews + sources) ---- */
