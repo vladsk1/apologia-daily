@@ -1304,6 +1304,14 @@
           document.getElementById('score-argument').textContent = argument;
           document.getElementById('score-objection').textContent = objection;
 
+          /* Coach capture — record this debate as a category-level signal */
+          try{
+            if(window.Coach && state && state.opponent){
+              var _opp2cat={atheist:"God's Existence",agnostic:"God's Existence",secularist:"God's Existence",muslim:"The Trinity",jw:"The Trinity",mormon:"The Trinity"};
+              Coach.recordDebate('cat:'+(_opp2cat[state.opponent]||"God's Existence"), overall, state.topic||'');
+            }
+          }catch(e){}
+
           // Show post-debate upgrade CTA for free users at limit
           var limitCheck = checkDebateLimit();
           if (!limitCheck.allowed || limitCheck.used >= 1) {
@@ -1494,6 +1502,7 @@ function adMark(){
 }
 </script>
 <script>(function(){try{var p=new URLSearchParams(location.search);if(p.get('nocount')==='1')localStorage.setItem('ad-nocount','1');if(p.get('nocount')==='0')localStorage.removeItem('ad-nocount');if(localStorage.getItem('ad-nocount')==='1')return;}catch(e){}var s=document.createElement('script');s.defer=true;s.src='/_vercel/insights/script.js';document.head.appendChild(s);})();</script>
+  <script src="/coach.js"></script>
   <script src="/ad-nav.js" defer></script>
 </body>
 </html>

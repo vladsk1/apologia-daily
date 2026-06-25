@@ -183,45 +183,7 @@ footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08);pad
       <span class="coach-pro">Pro</span>
     </div>
 
-    <p class="coach-read" id="coach-read">Across your last <b>8 sessions</b>, one soft spot keeps resurfacing: the <b>Moral Argument&rsquo;s grounding objection</b> &mdash; <em>&ldquo;you don&rsquo;t need God to be good.&rdquo;</em> You dodge it in debates and stall on it in recall. Let&rsquo;s close it today.</p>
-    <p class="coach-evi" id="coach-evi">Signals: 2 ducked rebuttals in Debate Arena &middot; 4/10 on Explain It Back &middot; 3 missed flashcards on moral ontology</p>
-
-    <div class="rx">
-      <div class="rx-head">
-        <span class="rx-title">Prescribed session</span>
-        <span class="rx-time" id="rx-time">&#8226; ~12 minutes &#8226; 3 steps</span>
-      </div>
-      <div class="rx-steps" id="rx-steps">
-        <div class="rx-step">
-          <div class="rx-n">1</div>
-          <div class="rx-body">
-            <div class="rx-act">Re-read the steelman: &ldquo;Morality is grounded in human flourishing, not God&rdquo;</div>
-            <div class="rx-why">Go back to the source before you drill &mdash; the gap is in the rebuttal, not your effort.</div>
-          </div>
-          <span class="rx-tool">Evidence Library</span>
-        </div>
-        <div class="rx-step">
-          <div class="rx-n">2</div>
-          <div class="rx-body">
-            <div class="rx-act">Explain the grounding reply back, out loud, scored</div>
-            <div class="rx-why">Retrieval, not re-reading. You need 7+ to clear this signal.</div>
-          </div>
-          <span class="rx-tool">Explain It Back</span>
-        </div>
-        <div class="rx-step">
-          <div class="rx-n">3</div>
-          <div class="rx-body">
-            <div class="rx-act">Spar The Secularist &mdash; topic seeded to &ldquo;morality doesn&rsquo;t need God&rdquo;</div>
-            <div class="rx-why">Same objection, live and under pressure. This is the one you ducked twice.</div>
-          </div>
-          <span class="rx-tool">Debate Arena</span>
-        </div>
-      </div>
-      <div class="rx-cta">
-        <a class="btn-gold" href="#" onclick="return false;">Start session &rarr;</a>
-        <button class="btn-ghost" onclick="swapRx()">Not today &mdash; pick another weak spot</button>
-      </div>
-    </div>
+    <div id="coach-body"></div>
   </div>
 
   <!-- ============ TRAINING LOG ============ -->
@@ -267,147 +229,24 @@ footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08);pad
   <div class="fi"><div class="fc">&#169; 2026 Apologia Daily. Built for the defence of the Gospel.</div></div>
 </footer>
 
+<script src="/coach.js"></script>
 <script>
-/* ---- in-memory profile (swap for ad_prefs.coach / Supabase in production) ---- */
-var skills = [
-  { id:'moral-grounding', name:'Moral grounding rebuttal', cat:"God's Existence &middot; The Moral Argument",
-    mastery:38, trend:'down', history:[62,55,48,44,40,38],
-    signals:[
-      {src:'Debate', t:'Ducked the &ldquo;flourishing&rdquo; rebuttal twice vs. The Secularist'},
-      {src:'Explain', t:'Scored 4/10 reconstructing the grounding reply'},
-      {src:'Cards', t:'3 missed flashcards on moral ontology in last review'}
-    ],
-    fix:'Re-read the steelman, then spar The Secularist on this exact line.' },
-
-  { id:'trinity-modalism', name:'Trinity vs. modalism', cat:'The Trinity &middot; One God, three persons',
-    mastery:52, trend:'flat', history:[40,46,50,49,51,52],
-    signals:[
-      {src:'Quiz', t:'Confused modalism with Arianism on 2 of last 3 quizzes'},
-      {src:'Explain', t:'6/10 &mdash; right instinct, fuzzy on the &ldquo;modes vs. persons&rdquo; distinction'}
-    ],
-    fix:'Drill the modalism objection card set, then re-take the Trinity quiz.' },
-
-  { id:'minimal-facts', name:'Minimal-facts case order', cat:'The Resurrection &middot; Habermas method',
-    mastery:71, trend:'up', history:[44,52,60,64,68,71],
-    signals:[
-      {src:'Debate', t:'Held the empty-tomb line cleanly vs. The Atheist'},
-      {src:'Explain', t:'8/10 &mdash; stated all four facts in order'},
-      {src:'Cards', t:'Full deck cleared on schedule'}
-    ],
-    fix:'Nearly solid. One spaced review in 4 days will lock it in.' },
-
-  { id:'fine-tuning', name:'Fine-tuning &ldquo;multiverse&rdquo; reply', cat:'Science &amp; Faith &middot; The Fine-Tuning Argument',
-    mastery:58, trend:'up', history:[35,40,48,52,55,58],
-    signals:[
-      {src:'Quiz', t:'Now naming the &ldquo;who designed the multiverse?&rdquo; counter reliably'},
-      {src:'Explain', t:'7/10 &mdash; cleared the threshold last attempt'}
-    ],
-    fix:'Trending up. Keep it in the interleaved Mixed Defense rotation.' }
-];
-
-function dial(pct){
-  var r=20, c=2*Math.PI*r, off=c*(1-pct/100);
-  var col = pct>=70?'var(--ok)':pct>=50?'var(--warn)':'var(--hard)';
-  return '<div class="dial"><svg width="48" height="48">'+
-    '<circle cx="24" cy="24" r="'+r+'" stroke="var(--border)" stroke-width="5" fill="none"></circle>'+
-    '<circle cx="24" cy="24" r="'+r+'" stroke="'+col+'" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="'+c+'" stroke-dashoffset="'+off+'"></circle>'+
-    '</svg><div class="dial-pct">'+pct+'</div></div>';
-}
-function trendBadge(t){
-  if(t==='up')   return '<span class="trend up">&#9650; Improving</span>';
-  if(t==='down') return '<span class="trend down">&#9660; Slipping</span>';
-  return '<span class="trend flat">&#9644; Stalled</span>';
-}
-function spark(h){
-  var max=Math.max.apply(null,h);
-  return '<div class="spark">'+h.map(function(v,i){
-    var pct=Math.round(v/max*100);
-    return '<div class="bar'+(i===h.length-1?' last':'')+'" style="height:'+pct+'%"></div>';
-  }).join('')+'</div>';
-}
-function render(){
-  var log=document.getElementById('log');
-  log.innerHTML = skills.map(function(s){
-    return '<div class="skill" id="sk-'+s.id+'">'+
-      '<div class="skill-head" onclick="toggle(\''+s.id+'\')">'+
-        '<div class="skill-left"><div class="skill-name">'+s.name+'</div><div class="skill-cat">'+s.cat+'</div></div>'+
-        trendBadge(s.trend)+
-        dial(s.mastery)+
-        '<svg class="chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>'+
-      '</div>'+
-      '<div class="skill-body">'+
-        '<div class="sb-grid">'+
-          '<div><div class="sb-lbl">What fed this score</div>'+
-            s.signals.map(function(g){return '<div class="signal"><span class="src">'+g.src+'</span>'+g.t+'</div>';}).join('')+
-          '</div>'+
-          '<div><div class="sb-lbl">Mastery over last 6 touches</div>'+spark(s.history)+'</div>'+
-        '</div>'+
-        '<div class="fix-row"><div class="fix-txt"><b>Coach says:</b> '+s.fix+'</div>'+
-          '<a class="btn-fix" href="#" onclick="return false;">Drill this &rarr;</a></div>'+
-      '</div>'+
-    '</div>';
-  }).join('');
-}
-function toggle(id){
-  var el=document.getElementById('sk-'+id);
-  el.classList.toggle('open');
-}
-
-/* swap the prescription to the next-weakest skill */
-var rxIdx=0;
-function swapRx(){
-  rxIdx=(rxIdx+1)%skills.length;
-  var s=skills[rxIdx];
-  document.getElementById('coach-read').innerHTML =
-    'Switching focus. Your next-weakest skill is <b>'+s.name+'</b> &mdash; '+s.cat.replace(/&middot;.*/,'').trim()+'. '+
-    'Here&rsquo;s a session built for it.';
-  document.getElementById('coach-evi').textContent =
-    'Signals: '+s.signals.map(function(g){return g.t.replace(/<[^>]+>/g,'');}).join(' · ');
-  document.getElementById('rx-steps').innerHTML =
-    '<div class="rx-step"><div class="rx-n">1</div><div class="rx-body">'+
-      '<div class="rx-act">Re-read the steelman for: '+s.name+'</div>'+
-      '<div class="rx-why">Source first &mdash; the gap is in the content, not the effort.</div></div>'+
-      '<span class="rx-tool">Evidence Library</span></div>'+
-    '<div class="rx-step"><div class="rx-n">2</div><div class="rx-body">'+
-      '<div class="rx-act">Explain it back, scored &mdash; aim for 7+</div>'+
-      '<div class="rx-why">Retrieval beats re-reading. Clears the recall signal.</div></div>'+
-      '<span class="rx-tool">Explain It Back</span></div>'+
-    '<div class="rx-step"><div class="rx-n">3</div><div class="rx-body">'+
-      '<div class="rx-act">Live spar, seeded to this exact objection</div>'+
-      '<div class="rx-why">Same weak spot, under pressure.</div></div>'+
-      '<span class="rx-tool">Debate Arena</span></div>';
-  document.getElementById('coach').scrollIntoView({behavior:'smooth',block:'start'});
-}
-
-/* simulate finishing the prescribed Moral Argument session */
+function refresh(){ try{ Coach.renderPanel('coach-body'); Coach.renderLog('log'); }catch(e){} }
+refresh();
+/* Live demo of the capture->surface loop: records real signals, then re-renders. */
 function simulateSession(){
   var btn=document.getElementById('sim-btn');
-  btn.disabled=true; btn.textContent='Updating profile…';
-  var moral=skills[0];
+  if(btn){ btn.disabled=true; btn.textContent='Recording session\u2026'; }
+  try{
+    Coach.recordExplain('moral', 4, 'grounding reply');
+    Coach.recordDebate('moral', 45);
+  }catch(e){}
   setTimeout(function(){
-    // move the moral-grounding skill: mastery up, trend flips, new signal logged
-    moral.mastery=64;
-    moral.trend='up';
-    moral.history=moral.history.concat([64]).slice(-6);
-    moral.signals.unshift({src:'Explain', t:'8/10 &mdash; stated the grounding reply cleanly (just now)'});
-    moral.fix='Big jump from 38 → 64. One spaced review in 3 days locks it in.';
-    // re-sort: weakest first
-    skills.sort(function(a,b){return a.mastery-b.mastery;});
-    render();
-    // open the moral card so the change is visible
-    document.getElementById('sk-moral-grounding').classList.add('open');
-    // update the coach read
-    document.getElementById('coach-read').innerHTML =
-      'Nice work. <b>Moral grounding</b> jumped <b>38 &rarr; 64</b> in one session and flipped to <b>improving</b>. '+
-      'Your new soft spot is <b>'+skills[0].name+'</b> &mdash; want to go there next?';
-    document.getElementById('coach-evi').textContent =
-      'Profile updated 1 second ago · 4 skills tracked · weakest surfaced first';
-    btn.textContent='✓ Profile updated — see the log move';
-    document.getElementById('sk-moral-grounding').scrollIntoView({behavior:'smooth',block:'center'});
-  },1100);
+    refresh();
+    var log=document.getElementById('log'); if(log) log.scrollIntoView({behavior:'smooth',block:'center'});
+    if(btn){ btn.textContent='\u2713 Recorded \u2014 the profile just moved'; setTimeout(function(){ btn.disabled=false; btn.textContent='\u25B6 Simulate another session'; },1600); }
+  }, 450);
 }
-
-render();
 </script>
 <script src="/ad-nav.js" defer></script>
 </body>

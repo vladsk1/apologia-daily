@@ -366,6 +366,11 @@
     document.getElementById('fb-model').textContent=fb.model_answer||'';
     wrap.style.display='block';
     wrap.scrollIntoView({behavior:'smooth',block:'start'});
+    /* Coach capture — map this tool's arg ids to the registry, then record the score */
+    try{
+      var _eib2arg={kalam:'kalam',finetuning:'finetuning',moral:'moral',consciousness:'consciousness',minimal:'minimal',emptytomb:'emptytomb',paul_creed:'earlycreed',trilemma:'jesus_claims',divinity:'jesus_as_god_nt',manuscript:'manuscript',deadseascrolls:'deadseascrolls',islamic_dilemma:'trinity_islam',jesus_quran:'trinity_islam'};
+      if(window.Coach && _eib2arg[currentArgId]) Coach.recordExplain(_eib2arg[currentArgId], score, ARGS[currentArgId].title);
+    }catch(e){}
     sessionHistory.unshift({title:ARGS[currentArgId].title,score:score,time:new Date()});
     renderHistory();
   }
@@ -425,6 +430,7 @@
 
   function loadHistory(){renderHistory();}
   </script>
+  <script src="/coach.js"></script>
   <script src="/ad-nav.js" defer></script>
 </body>
 </html>
