@@ -201,6 +201,14 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
   .src .who{flex-basis:auto}
   .dialcard{padding:22px}
 }
+
+/* ---------- public SEO summary (always visible, crawlable) ---------- */
+.seo-summary{background:var(--w);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin:26px 0 0}
+.seo-summary h2{font-family:var(--fd);font-size:20px;font-weight:600;color:var(--td);margin-bottom:10px}
+.seo-summary p{font-family:var(--ss);font-size:16px;color:var(--td);margin-bottom:12px}
+.seo-summary p:last-child{margin-bottom:0}
+.hero{padding-bottom:48px}
+.seo-summary + .dialcard{margin-top:24px}
 </style>
   <link rel="stylesheet" href="/ad-nav.css">
 </head>
@@ -257,6 +265,14 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 </header>
 
 <div class="wrap">
+  <!-- public, search-indexable summary (always visible) -->
+  <section class="seo-summary">
+    <h2>The argument in brief</h2>
+    <p>The ontological argument is the most unusual of the classic arguments for God: it tries to move from a concept to reality using logic alone, without appealing to evidence from the world. First framed by Anselm of Canterbury in the eleventh century and revived in modern modal form by philosopher Alvin Plantinga, it begins with the idea of a "maximally great being" — one that is all-powerful, all-knowing, perfectly good, and exists necessarily in every possible world.</p>
+    <p>Plantinga's version runs through the logic of possibility and necessity (the modal system known as S5). If it is even <em>possible</em> that such a maximally great being exists — that is, if its existence is not incoherent — then by definition it exists necessarily, and a necessary being that exists in any possible world exists in all of them, including the actual one. So the entire argument rests on a single load-bearing claim: that a maximally great being is genuinely possible.</p>
+    <p>In candor, even Plantinga grants this is not a proof that should compel every rational person; a skeptic can reply that maximal greatness is only <em>possibly</em> impossible, and the symmetry is hard to break by logic alone. Its honest value is more modest: it shows that belief in God can be rational, and that if God's existence is possible at all, it is necessary — there is no "maybe" with a being like that.</p>
+  </section>
+
   <!-- mastery dial -->
   <div class="dialcard">
     <div class="dial">

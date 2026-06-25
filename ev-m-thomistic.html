@@ -201,6 +201,14 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
   .src .who{flex-basis:auto}
   .dialcard{padding:22px}
 }
+
+/* ---------- public SEO summary (always visible, crawlable) ---------- */
+.seo-summary{background:var(--w);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin:26px 0 0}
+.seo-summary h2{font-family:var(--fd);font-size:20px;font-weight:600;color:var(--td);margin-bottom:10px}
+.seo-summary p{font-family:var(--ss);font-size:16px;color:var(--td);margin-bottom:12px}
+.seo-summary p:last-child{margin-bottom:0}
+.hero{padding-bottom:48px}
+.seo-summary + .dialcard{margin-top:24px}
 </style>
   <link rel="stylesheet" href="/ad-nav.css">
 </head>
@@ -257,6 +265,14 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 </header>
 
 <div class="wrap">
+  <!-- public, search-indexable summary (always visible) -->
+  <section class="seo-summary">
+    <h2>The argument in brief</h2>
+    <p>Thomas Aquinas's cosmological argument is often confused with the Kalam, but it makes a very different point. It is not about who lit the fuse at the beginning of time; it is about what holds everything in being <em>right now</em>. Aquinas noticed that things in the world are constantly being changed, moved, and kept in existence by something other than themselves. A coffee cup rests on a table, which rests on the floor, which rests on the earth — and the support has to be supplied at every instant, not just once in the past.</p>
+    <p>The key distinction is between a per se series (causes acting simultaneously, here and now) and a per accidens series (causes strung out over time, like fathers begetting sons). A per se series of sustainers cannot stretch back to infinity, because every member is borrowing its causal power from a prior member; remove a first source and there is nothing to borrow from. So there must be a being that does not derive its existence or activity from anything else — pure actuality, unchanging, self-existent. That, says Aquinas, is what everyone means by God.</p>
+    <p>Honestly, the argument requires effort to follow, and it leans on a classical metaphysics of act and potency that not everyone shares. But it has the striking feature that it works even if the universe is eternal — the question is not when things began, but why they continue to be.</p>
+  </section>
+
   <!-- mastery dial -->
   <div class="dialcard">
     <div class="dial">

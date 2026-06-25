@@ -201,6 +201,14 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
   .src .who{flex-basis:auto}
   .dialcard{padding:22px}
 }
+
+/* ---------- public SEO summary (always visible, crawlable) ---------- */
+.seo-summary{background:var(--w);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin:26px 0 0}
+.seo-summary h2{font-family:var(--fd);font-size:20px;font-weight:600;color:var(--td);margin-bottom:10px}
+.seo-summary p{font-family:var(--ss);font-size:16px;color:var(--td);margin-bottom:12px}
+.seo-summary p:last-child{margin-bottom:0}
+.hero{padding-bottom:48px}
+.seo-summary + .dialcard{margin-top:24px}
 </style>
   <link rel="stylesheet" href="/ad-nav.css">
 </head>
@@ -257,6 +265,14 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 </header>
 
 <div class="wrap">
+  <!-- public, search-indexable summary (always visible) -->
+  <section class="seo-summary">
+    <h2>The argument in brief</h2>
+    <p>The Leibnizian cosmological argument starts from a famous question Gottfried Leibniz pressed: "Why is there something rather than nothing?" Its engine is the Principle of Sufficient Reason — the idea that whatever exists has an explanation of its existence, either in the necessity of its own nature or in an external cause. The universe, by contrast, looks contingent: it exists, but there seems to be no reason it <em>had</em> to exist, and it could have been otherwise. If the universe is contingent, it cannot be the explanation of itself, so its explanation must lie in a being that exists necessarily — a being whose non-existence is impossible. That necessary, self-existent ground is what believers call God.</p>
+    <p>Unlike the Kalam argument, this one does not depend on the universe having a beginning. Even an eternal universe would still be contingent and still require an explanation for why it exists at all. The whole case therefore turns on two points: whether the Principle of Sufficient Reason holds, and whether the universe is genuinely contingent rather than itself necessary.</p>
+    <p>In fairness, a skeptic can call the universe a "brute fact" needing no explanation, or treat the cosmos itself as the necessary being. The argument does not claim to be a knock-down proof; it claims that a necessary, personal ground is a more satisfying explanation than an unexplained brute fact, and it leaves further questions about that being's character to other arguments.</p>
+  </section>
+
   <!-- mastery dial -->
   <div class="dialcard">
     <div class="dial">
