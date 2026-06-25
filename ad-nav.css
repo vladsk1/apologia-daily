@@ -24,16 +24,21 @@ body{padding-top:0 !important}
 .adn-burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px;margin-left:auto}
 .adn-burger i{display:block;width:23px;height:2px;background:#fff;border-radius:2px}
 @media(max-width:860px){
-  .adn-burger{display:flex}
-  .adn-collapse{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#0a1628;border-bottom:1px solid rgba(255,255,255,.1);padding:6px 0 12px;max-height:calc(100vh - 64px);overflow:auto}
-  .adn-nav.adn-menu-open .adn-collapse{display:flex}
-  .adn-links{flex-direction:column;align-items:stretch;gap:0;width:100%;flex:none}
+  .adn-burger{display:flex;order:3;margin-left:.4rem}
+  /* keep the bar as a row; only the links drop down behind the burger */
+  .adn-collapse{display:flex;order:2;flex:1;min-width:0;gap:0}
+  .adn-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;flex:none;background:#0a1628;border-bottom:1px solid rgba(255,255,255,.1);padding:6px 0 12px;max-height:calc(100vh - 64px);overflow:auto;z-index:1001}
+  .adn-nav.adn-menu-open .adn-links{display:flex}
+  .adn-links>li{width:100%}
   .adn-links>li>a,.adn-more{width:100%;padding:13px 1.5rem;font-size:.95rem}
   .adn-drop{position:static;display:flex;border:0;background:transparent;padding:0 0 6px;min-width:0}
   .adn-drop a{padding:13px 1.5rem;font-size:.92rem}
   .adn-caret{display:none}
   .adn-more{display:none}
-  .adn-right{flex-direction:column;align-items:stretch;gap:10px;margin:0;padding:12px 1.5rem 0;border-top:1px solid rgba(255,255,255,.08)}
-  .adn-signin,.adn-dash{text-align:center}
-  .adn-cta{padding:11px;text-align:center}
+  /* auth actions stay in the bar — no need to open the menu */
+  .adn-right{display:flex;flex-direction:row;align-items:center;gap:8px;margin-left:auto;padding:0;border:0}
+  .adn-user{display:none}
+  .adn-signin,.adn-dash{font-size:.82rem}
+  .adn-cta{padding:7px 13px;font-size:.82rem}
+  .adn-signout{font-size:.76rem;padding:5px 10px}
 }

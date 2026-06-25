@@ -351,14 +351,13 @@
   var _sb = null;
   function client() {
     if (_sb) return _sb;
-    try {
-      if (global.__adSb) { _sb = global.__adSb; return _sb; }
-      if (global.supabase && global.supabase.createClient) {
-        _sb = global.supabase.createClient(SB_URL, SB_ANON);
-        global.__adSb = _sb;
-        return _sb;
-      }
-    } catch (e) {}
+    /* Reuse a shared client only if the host page exposed one. NEVER create a
+       second GoTrue client: two clients with the same storage key race on token
+       refresh, and Supabase's refresh-token rotation can then revoke the whole
+       session (random logouts). Cross-device sync stays dormant until (a) the
+       coach_signals table exists and (b) pages expose their single client as
+       window.__adSb for reuse. Until then the Coach runs fully local. */
+    try { if (global.__adSb) { _sb = global.__adSb; return _sb; } } catch (e) {}
     return null;
   }
   function session() {
