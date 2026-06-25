@@ -10,7 +10,8 @@ body{padding-top:0 !important}
 .adn-links a,.adn-more{font-family:inherit;font-size:.82rem;letter-spacing:.03em;color:rgba(255,255,255,.72);text-decoration:none;background:none;border:0;cursor:pointer;white-space:nowrap;padding:0;display:inline-flex;align-items:center;gap:5px}
 .adn-links a:hover,.adn-more:hover,.adn-links a.adn-active{color:#c8a951}
 .adn-caret{font-size:.7em;opacity:.85}
-.adn-drop{position:absolute;top:30px;left:0;min-width:172px;background:#0f2040;border:1px solid rgba(200,169,81,.3);border-radius:8px;padding:6px;list-style:none;margin:0;display:none;flex-direction:column}
+.adn-drop{position:absolute;top:calc(100% + 8px);left:0;min-width:172px;background:#0f2040;border:1px solid rgba(200,169,81,.3);border-radius:8px;padding:6px;list-style:none;margin:0;display:none;flex-direction:column}
+.adn-drop::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px}
 .adn-has-drop:hover .adn-drop,.adn-has-drop.adn-open .adn-drop{display:flex}
 .adn-drop a{display:block;padding:9px 13px;border-radius:6px;font-size:.86rem;color:rgba(255,255,255,.85)}
 .adn-drop a:hover{background:rgba(255,255,255,.08);color:#c8a951}
