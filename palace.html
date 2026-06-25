@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memory Palace — Apologia Daily</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy-950:#050d1a; --navy-900:#0a1628; --navy-800:#0f2040;
+  --navy-700:#163058; --navy-600:#1e4278; --navy-500:#285a9e;
+  --navy-300:#6f9fd4; --navy-200:#aecae8; --navy-100:#ddeaf5; --navy-50:#f0f6fb;
+  --gold:#c8a951; --gold-light:#e8cf87; --gold-dark:#a88930;
+  --white:#fff; --off-white:#f8f7f4;
+  --text-dark:#0a1628; --text-mid:#3a4a62; --text-muted:#7a8fa8;
+  --border:#d4e0ec;
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'Source Serif 4',Georgia,serif;
+  --font-ui:'DM Sans',system-ui,sans-serif;
+}
+body{font-family:var(--font-ui);color:var(--text-dark);background:var(--off-white);padding-top:64px;-webkit-font-smoothing:antialiased}
+.main{max-width:1040px;margin:0 auto;padding:2.5rem 2rem 6rem}
+
+/* head */
+.eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-dark);display:inline-flex;align-items:center;gap:8px;margin-bottom:.6rem}
+.eyebrow .dot{width:5px;height:5px;background:var(--gold);border-radius:50%}
+.page-title{font-family:var(--font-display);font-size:clamp(1.9rem,4vw,2.6rem);font-weight:700;line-height:1.08;margin-bottom:.5rem}
+.page-title em{font-style:italic;color:var(--navy-600)}
+.page-sub{font-size:1rem;color:var(--text-mid);max-width:62ch;line-height:1.7;font-family:var(--font-body)}
+.page-sub b{color:var(--text-dark);font-weight:600}
+
+/* wing selector */
+.wings{display:flex;gap:8px;overflow-x:auto;margin:1.8rem 0 .4rem;padding-bottom:4px}
+.wing{flex:0 0 auto;font-family:var(--font-ui);font-size:.8rem;font-weight:500;padding:9px 16px;border-radius:99px;border:1px solid var(--border);background:#fff;color:var(--text-mid);cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:7px}
+.wing:hover{border-color:var(--navy-300)}
+.wing.on{background:var(--navy-900);border-color:var(--navy-900);color:#fff}
+.wing .lock{opacity:.6;font-size:.85em}
+.wing-meta{font-family:var(--font-ui);font-size:.8rem;color:var(--text-muted);margin-bottom:1.4rem}
+
+/* route / floor plan */
+.route{position:relative;display:flex;align-items:center;justify-content:space-between;gap:6px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.4rem;margin-bottom:1.2rem;overflow-x:auto}
+.route::before{content:'';position:absolute;left:2.4rem;right:2.4rem;top:50%;height:2px;background:repeating-linear-gradient(90deg,var(--navy-200) 0 8px,transparent 8px 16px);z-index:0}
+.stop{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer;flex:0 0 auto;min-width:90px}
+.stop .pin{width:38px;height:38px;border-radius:50%;background:#fff;border:2px solid var(--navy-200);display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:all .2s}
+.stop .nm{font-family:var(--font-ui);font-size:.68rem;font-weight:500;color:var(--text-muted);text-align:center;max-width:11ch;line-height:1.25}
+.stop:hover .pin{border-color:var(--gold)}
+.stop.done .pin{border-color:var(--gold);background:#fbf7ec}
+.stop.cur .pin{border-color:var(--gold);background:var(--gold);color:var(--navy-950);box-shadow:0 0 0 5px rgba(200,169,81,.2)}
+.stop.cur .nm{color:var(--text-dark);font-weight:600}
+
+/* the stage (a room) */
+.stage{position:relative;border-radius:16px;overflow:hidden;background:linear-gradient(168deg,var(--navy-950) 0%,var(--navy-800) 70%,var(--navy-700) 150%);color:#fff;box-shadow:0 26px 60px -30px rgba(5,13,26,.7)}
+.stage::after{content:'';position:absolute;left:50%;top:-120px;width:520px;height:520px;transform:translateX(-50%);background:radial-gradient(circle,rgba(200,169,81,.16),transparent 62%);pointer-events:none}
+/* arched window motif */
+.arch{position:absolute;top:26px;left:50%;transform:translateX(-50%);width:120px;height:170px;border:1px solid rgba(200,169,81,.22);border-radius:60px 60px 0 0;z-index:0}
+.arch::before{content:'';position:absolute;inset:14px;border:1px solid rgba(200,169,81,.14);border-radius:48px 48px 0 0}
+.stage-inner{position:relative;z-index:1;padding:2.4rem 2.2rem 2.2rem;text-align:center}
+.st-kick{font-family:var(--font-ui);font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.st-locus{font-family:var(--font-display);font-size:clamp(1.5rem,3.4vw,2rem);font-weight:600;font-style:italic;color:#fff;margin:.4rem 0 .2rem}
+.st-arg{font-family:var(--font-ui);font-size:.82rem;color:var(--navy-200)}
+.st-symbol{font-size:4.4rem;line-height:1;margin:1.6rem 0 1.3rem;filter:drop-shadow(0 6px 18px rgba(0,0,0,.35))}
+.st-scene{font-family:var(--font-body);font-size:1.12rem;line-height:1.75;color:rgba(255,255,255,.9);max-width:54ch;margin:0 auto 1.5rem}
+.st-scene b{color:var(--gold-light);font-weight:600}
+
+/* hook chip */
+.hook{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-ui);font-size:.92rem;font-weight:500;color:var(--gold);background:rgba(200,169,81,.1);border:1px solid rgba(200,169,81,.3);border-radius:99px;padding:9px 18px;margin-bottom:1.6rem}
+.hook .q{font-size:1.1rem;opacity:.7}
+
+/* meaning panel */
+.meaning{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:1.3rem 1.4rem;text-align:left;max-width:60ch;margin:0 auto}
+.meaning .lbl{font-family:var(--font-ui);font-size:.64rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem}
+.meaning ol{list-style:none;counter-reset:p}
+.meaning li{counter-increment:p;font-family:var(--font-body);font-size:.96rem;line-height:1.55;color:rgba(255,255,255,.86);padding:7px 0 7px 38px;position:relative;border-bottom:1px solid rgba(255,255,255,.07)}
+.meaning li:last-child{border-bottom:none}
+.meaning li::before{content:counter(p);position:absolute;left:0;top:7px;width:24px;height:24px;border-radius:50%;background:rgba(200,169,81,.16);border:1px solid rgba(200,169,81,.35);color:var(--gold);font-family:var(--font-ui);font-size:.72rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.meaning li.concl{color:var(--gold-light);font-weight:500}
+.study{display:inline-block;margin-top:1.2rem;font-family:var(--font-ui);font-size:.82rem;font-weight:600;color:var(--navy-950);background:var(--gold);padding:9px 20px;border-radius:4px;text-decoration:none}
+.study:hover{background:var(--gold-light)}
+
+/* recall mode */
+.recall{background:rgba(255,255,255,.04);border:1px dashed rgba(200,169,81,.4);border-radius:12px;padding:1.6rem 1.4rem;text-align:center;max-width:60ch;margin:0 auto}
+.recall p{font-family:var(--font-body);font-size:1rem;color:rgba(255,255,255,.7);margin-bottom:1.1rem;font-style:italic}
+.reveal-btn{font-family:var(--font-ui);font-size:.84rem;font-weight:600;padding:10px 22px;border-radius:4px;background:rgba(200,169,81,.15);color:var(--gold);border:1px solid rgba(200,169,81,.35);cursor:pointer}
+.reveal-btn:hover{background:rgba(200,169,81,.25)}
+
+/* walk controls */
+.walk{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.3rem;flex-wrap:wrap}
+.walk-btns{display:flex;gap:10px}
+.wbtn{font-family:var(--font-ui);font-size:.86rem;font-weight:500;padding:11px 22px;border-radius:4px;border:1px solid var(--border);background:#fff;color:var(--text-dark);cursor:pointer}
+.wbtn:hover{border-color:var(--navy-300)}
+.wbtn.primary{background:var(--navy-900);border-color:var(--navy-900);color:#fff}
+.wbtn.primary:hover{background:var(--navy-800)}
+.wbtn:disabled{opacity:.4;cursor:default}
+.mode{display:flex;align-items:center;gap:10px;font-family:var(--font-ui);font-size:.82rem;color:var(--text-mid)}
+.toggle{position:relative;width:46px;height:25px;border-radius:99px;background:var(--border);border:none;cursor:pointer;transition:background .2s;flex-shrink:0}
+.toggle::after{content:'';position:absolute;top:2px;left:2px;width:21px;height:21px;border-radius:50%;background:#fff;transition:transform .2s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.toggle.on{background:var(--gold)}
+.toggle.on::after{transform:translateX(21px)}
+
+/* replace-the-map note */
+.swap-note{margin-top:1.6rem;background:#fff;border:1px solid var(--border);border-left:3px solid var(--navy-500);border-radius:0 8px 8px 0;padding:1rem 1.2rem;font-family:var(--font-body);font-size:.9rem;color:var(--text-mid);line-height:1.65}
+.swap-note b{color:var(--text-dark)}
+.proto-note{margin-top:1.4rem;font-family:var(--font-ui);font-size:.76rem;color:var(--text-muted);line-height:1.7;background:#fff;border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:1rem 1.2rem}
+.proto-note code{background:var(--navy-50);padding:1px 5px;border-radius:3px;font-size:.95em}
+
+footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08);padding:3rem 2rem 2rem;margin-top:4rem}
+.fi{max-width:1040px;margin:0 auto;text-align:center}
+.fc{font-family:var(--font-ui);font-size:.75rem;color:rgba(255,255,255,.25)}
+</style>
+<link rel="stylesheet" href="/ad-nav.css">
+</head>
+<body>
+<nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <ul class="adn-drop">
+          <li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/games.html">Games</a></li>
+          <li><a href="/whats-new.html">What&#39;s New</a></li>
+          <li><a href="/answers/">Answers</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash">Dashboard</a>
+      <a href="/login.html" class="adn-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
+
+<div class="main">
+  <p class="eyebrow"><span class="dot"></span> Pro &middot; Method of loci</p>
+  <h1 class="page-title">The Memory <em>Palace</em></h1>
+  <p class="page-sub">The technique every memory champion uses, built for the arguments. Each category is a building you can walk &mdash; <b>one room per argument</b>, each holding a vivid scene that locks its structure into place. Walk it once to learn the landscape; walk it from memory to own it.</p>
+
+  <!-- WING SELECTOR -->
+  <div class="wings" id="wings"></div>
+  <div class="wing-meta" id="wing-meta"></div>
+
+  <!-- ROUTE -->
+  <div class="route" id="route"></div>
+
+  <!-- STAGE -->
+  <div class="stage">
+    <div class="arch"></div>
+    <div class="stage-inner">
+      <div class="st-kick" id="st-kick">Room 1 of 5</div>
+      <div class="st-locus" id="st-locus"></div>
+      <div class="st-arg" id="st-arg"></div>
+      <div class="st-symbol" id="st-symbol"></div>
+      <div class="st-scene" id="st-scene"></div>
+      <div class="hook" id="st-hook"><span class="q">&ldquo;</span><span id="st-hook-txt"></span><span class="q">&rdquo;</span></div>
+      <div id="st-meaning-wrap"></div>
+    </div>
+  </div>
+
+  <!-- WALK CONTROLS -->
+  <div class="walk">
+    <div class="walk-btns">
+      <button class="wbtn" id="prev" onclick="step(-1)">&lsaquo; Prev room</button>
+      <button class="wbtn primary" id="next" onclick="step(1)">Next room &rsaquo;</button>
+    </div>
+    <div class="mode">
+      <span>Recall walk</span>
+      <button class="toggle" id="recall-toggle" onclick="toggleRecall()" aria-label="Toggle recall mode"></button>
+      <span style="color:var(--text-muted)">hide the meaning &mdash; test yourself</span>
+    </div>
+  </div>
+
+  <div class="swap-note">
+    <b>This is the new way to see the whole library.</b> Where the old Argument Map showed how arguments connect as a diagram, the Palace shows them as places you can walk &mdash; so the same overview now doubles as the thing that makes them stick. Click any room to study it in full in the Evidence Library.
+  </div>
+
+  <div class="proto-note">
+    <b>Prototype &middot; Apologia Daily Pro &mdash; Memory Palace.</b> One wing (God&rsquo;s Existence) is fully walkable; the others are stubbed. In production this replaces <code>argument-map.html</code> and takes over its nav slots. Room scenes can be hand-authored per argument (on-brand, ~50 to write) or generated per premise via <code>/api/tutor</code>. Recall-walk results feed the spaced-repetition deck and the Coach&rsquo;s training profile (<code>ad_prefs.coach</code>).
+  </div>
+</div>
+
+<footer><div class="fi"><div class="fc">&#169; 2026 Apologia Daily. Built for the defence of the Gospel.</div></div></footer>
+
+<script>
+/* ---- wings (categories). Only God's Existence is walkable in this preview ---- */
+var WINGS=[
+  {id:'god', icon:'&#9962;', name:"God's Existence", live:true},
+  {id:'res', icon:'&#9961;', name:'The Resurrection', live:false},
+  {id:'jes', icon:'&#10013;', name:'Jesus', live:false},
+  {id:'bib', icon:'&#128214;', name:'Bible Reliability', live:false},
+  {id:'sci', icon:'&#128300;', name:'Science & Faith', live:false},
+  {id:'tri', icon:'&#9889;', name:'The Trinity', live:false}
+];
+
+/* ---- the God's Existence wing: 5 rooms along a walk ---- */
+var ROOMS=[
+  { pin:'&#128340;', short:'The Door',
+    locus:'The Great Door', arg:'Kalam Cosmological Argument', symbol:'&#128340;',
+    scene:'You push open the bronze door. A grandfather clock that stood silent <b>begins to tick</b> the instant you cross the threshold &mdash; yet no hand is near it. You spin around: <b>someone must have wound it.</b>',
+    hook:'A clock that starts ticking needs someone to wind it.',
+    href:'ev-m-kalam.html',
+    prem:['Whatever begins to exist has a cause.','The universe began to exist.'],
+    concl:'Therefore the universe has a cause &mdash; uncaused, timeless, powerful.' },
+
+  { pin:'&#127963;', short:'The Pillars',
+    locus:'The Leaning Pillars', arg:"Leibniz's Contingency Argument", symbol:'&#127963;',
+    scene:'The nave is lined with pillars, each <b>leaning on the one before it</b> &mdash; none can stand alone. At the far end, a single pillar stands perfectly upright, <b>leaning on nothing</b>, holding the whole colonnade up.',
+    hook:'Leaning pillars need one that stands on its own.',
+    href:'ev-m-leibniz.html',
+    prem:['Everything that exists has an explanation of its existence.','Contingent things depend on something beyond themselves.'],
+    concl:'The chain ends in a necessary being that exists by its own nature.' },
+
+  { pin:'&#127929;', short:'The Organ',
+    locus:'The Organ of Dials', arg:'The Fine-Tuning Argument', symbol:'&#127929;',
+    scene:'The great organ has no stops &mdash; only <b>a hundred dials, each balanced on a razor&rsquo;s edge</b>. Nudge any one a hair and the whole cathedral falls dark. Yet every dial is <b>set exactly right.</b>',
+    hook:'A hundred dials, each on a knife-edge, all set right.',
+    href:'ev-m-finetuning.html',
+    prem:['The constants of physics are fine-tuned for life.','This is due to chance, necessity, or design.'],
+    concl:'Chance and necessity fail &mdash; the best explanation is design.' },
+
+  { pin:'&#9878;', short:'The Altar',
+    locus:'The Altar Scales', arg:'The Moral Argument', symbol:'&#9878;&#65039;',
+    scene:'On the altar rest golden <b>scales</b> and a measuring rod marked in light. You try to bend the rod to your liking &mdash; <b>it will not bend.</b> The standard comes from above the altar, never from you.',
+    hook:'A measuring rod you can&rsquo;t bend to your liking.',
+    href:'ev-m-moral.html',
+    prem:['If there is no God, objective moral values do not exist.','Objective moral values do exist.'],
+    concl:'Therefore God exists &mdash; the standard above the altar.' },
+
+  { pin:'&#128081;', short:'The Crown',
+    locus:'The Crown of Light', arg:'The Ontological Argument', symbol:'&#128081;',
+    scene:'Above the altar floats a crown &mdash; <b>that than which nothing greater can be conceived.</b> To picture it as merely imaginary is to picture a <b>greater</b> crown that also exists. The crown insists on being real.',
+    hook:'A crown so great it must be real.',
+    href:'ev-m-ontological.html',
+    prem:['God is the greatest conceivable being.','Existing in reality is greater than existing in the mind alone.'],
+    concl:'Therefore the greatest conceivable being must exist in reality.' }
+];
+
+var cur=0, recall=false, revealed=false;
+
+function renderWings(){
+  document.getElementById('wings').innerHTML = WINGS.map(function(w){
+    return '<button class="wing'+(w.id==='god'?' on':'')+'" onclick="pickWing(\''+w.id+'\','+w.live+')">'+
+      '<span>'+w.icon+'</span>'+w.name+(w.live?'':' <span class="lock">&#128274;</span>')+'</button>';
+  }).join('');
+  document.getElementById('wing-meta').innerHTML =
+    '&#9962; <b style="color:var(--text-dark)">The Cathedral of God&rsquo;s Existence</b> &mdash; 5 rooms &middot; ~6 min to walk &middot; the other five wings unlock as you build them.';
+}
+function pickWing(id,live){
+  if(!live){ alert('This wing is stubbed in the preview. In production each category becomes its own walkable building.'); return; }
+}
+function renderRoute(){
+  document.getElementById('route').innerHTML = ROOMS.map(function(r,i){
+    var cls = i===cur?'stop cur':(i<cur?'stop done':'stop');
+    return '<div class="'+cls+'" onclick="goTo('+i+')"><div class="pin">'+r.pin+'</div><div class="nm">'+r.short+'</div></div>';
+  }).join('');
+}
+function meaningHTML(r){
+  var items = r.prem.map(function(p){return '<li>'+p+'</li>';}).join('')+'<li class="concl">'+r.concl+'</li>';
+  return '<div class="meaning"><div class="lbl">What this room holds</div><ol>'+items+'</ol>'+
+    '<a class="study" href="'+r.href+'">Study it in the Evidence Library &rarr;</a></div>';
+}
+function recallHTML(){
+  return '<div class="recall"><p>You&rsquo;re standing in this room. <b style="color:var(--gold-light)">What argument does it hold &mdash; and what are its premises?</b></p>'+
+    '<button class="reveal-btn" onclick="doReveal()">Reveal the answer</button></div>';
+}
+function renderRoom(){
+  var r=ROOMS[cur];
+  document.getElementById('st-kick').textContent='Room '+(cur+1)+' of '+ROOMS.length;
+  document.getElementById('st-locus').innerHTML=r.locus;
+  document.getElementById('st-arg').innerHTML=r.arg;
+  document.getElementById('st-symbol').innerHTML=r.symbol;
+  document.getElementById('st-scene').innerHTML=r.scene;
+  document.getElementById('st-hook-txt').innerHTML=r.hook;
+  var wrap=document.getElementById('st-meaning-wrap');
+  if(recall && !revealed){ wrap.innerHTML=recallHTML(); }
+  else { wrap.innerHTML=meaningHTML(r); }
+  document.getElementById('prev').disabled = cur===0;
+  document.getElementById('next').disabled = cur===ROOMS.length-1;
+  renderRoute();
+}
+function goTo(i){ cur=i; revealed=false; renderRoom(); }
+function step(d){ var n=cur+d; if(n<0||n>=ROOMS.length) return; goTo(n); }
+function toggleRecall(){
+  recall=!recall; revealed=false;
+  document.getElementById('recall-toggle').classList.toggle('on',recall);
+  renderRoom();
+}
+function doReveal(){ revealed=true; renderRoom(); }
+
+renderWings();
+renderRoom();
+</script>
+<script src="/ad-nav.js" defer></script>
+</body>
+</html>
