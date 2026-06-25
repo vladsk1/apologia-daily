@@ -18,12 +18,38 @@
 <link rel="stylesheet" href="answers.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"QAPage","mainEntity":{"@type":"Question","name":"Were the Gospels written by eyewitnesses?","acceptedAnswer":{"@type":"Answer","text":"The Gospels were written within the lifetime of people who knew Jesus - decades after the events, not centuries. They draw directly on eyewitness testimony: Matthew and John are tied to apostles, Mark to Peter\u0027s preaching, and Luke explicitly says he investigated \"those who from the first were eyewitnesses\" (Luke 1:2).  They also carry the marks of real memory - accurate, incidental details of first-century Palestinian geography, names, customs, and politics that a later, distant author would be unlikely to get right. They read like reports anchored in testimony, not like myths composed long afterward in a faraway place."}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When were the Gospels written?","acceptedAnswer":{"@type":"Answer","text":"Most scholars date Mark to around AD 65-70, with Matthew and Luke in the 70s-80s and John in the 80s-90s - within the lifetime of people who had known Jesus. Some scholars argue for earlier dates still. Either way, the Gospels were composed within living memory of the events, while eyewitnesses and hostile critics were available to challenge any invented claims."}},{"@type":"Question","name":"Why are the Gospels called anonymous?","acceptedAnswer":{"@type":"Answer","text":"The texts themselves do not name their authors in the body, which is why they are sometimes called formally anonymous. But the titles attributing them to Matthew, Mark, Luke and John appear early and with striking unanimity across the manuscript tradition, and no rival set of authors ever circulated. Early writers like Papias and Irenaeus connect them to apostolic sources, which fits a tradition rooted in known witnesses rather than guesswork."}},{"@type":"Question","name":"How can we tell the Gospels rely on real testimony?","acceptedAnswer":{"@type":"Answer","text":"One striking line of evidence comes from names. Scholar Richard Bauckham showed that the frequency of personal names in the Gospels closely matches the actual distribution of names in first-century Palestine, drawn from inscriptions and other sources - a pattern a later, foreign author would be very unlikely to reproduce. Some scholars read this as careful realism rather than direct memory, but it shows the accounts are anchored in the right time and place."}}]}</script>
+  <link rel="stylesheet" href="/ad-nav.css">
 </head>
 <body>
-<header class="ad-head">
-  <a class="ad-logo" href="/">Apologia<span>Daily</span></a>
-  <a class="ad-ask" href="/ask-anything.html">Ask a question &rarr;</a>
-</header>
+<nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <ul class="adn-drop">
+          <li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/games.html">Games</a></li>
+          <li><a href="/whats-new.html">What&#39;s New</a></li>
+          <li><a href="/answers/">Answers</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
 <main class="ad-main">
   <nav class="ad-crumbs"><a href="/">Home</a> &rsaquo; <a href="/answers/">Answers</a> &rsaquo; <span>Bible Reliability</span></nav>
   <article>
@@ -62,5 +88,6 @@ function adShare(){
 }
 </script>
   <script src="/analytics.js" defer></script>
+  <script src="/ad-nav.js" defer></script>
 </body>
 </html>

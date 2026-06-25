@@ -18,12 +18,38 @@
 <link rel="stylesheet" href="answers.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"QAPage","mainEntity":{"@type":"Question","name":"Can we trust the New Testament manuscripts?","acceptedAnswer":{"@type":"Answer","text":"By any standard historians apply to ancient writings, yes. Compare the numbers: Caesar\u0027s Gallic Wars survives in about 10 copies, the average classical work in a few dozen to a few hundred. The New Testament survives in more than 5,800 Greek manuscripts, some within a generation or two of the originals.  No one doubts what Caesar or Tacitus wrote, despite far thinner evidence. The New Testament gives us more manuscripts, earlier, with more agreement. The question was never whether the text was copied - of course it was - but whether it was copied reliably. By the historian\u0027s own measuring stick, the answer is yes."}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the earliest New Testament manuscript?","acceptedAnswer":{"@type":"Answer","text":"The earliest widely accepted fragment is Papyrus 52 (the John Rylands fragment), containing a few verses of John 18 and usually dated to roughly the first half of the second century - within a lifetime of the original. Larger early papyri like P66 and P75 preserve big portions of the Gospels from around AD 200, far closer to the originals than the copies we rely on for most ancient authors."}},{"@type":"Question","name":"Do the many textual variants mean we don't know what the New Testament said?","acceptedAnswer":{"@type":"Answer","text":"No. The large number of variants is mostly a side-effect of having so many manuscripts. The overwhelming majority are spelling slips, word-order changes, and obvious copying errors. Even the sceptical scholar Bart Ehrman grants that no essential Christian doctrine rests on a contested reading. Having more copies means more places to compare, which helps scholars recover the original wording, not lose it."}},{"@type":"Question","name":"Does having reliable manuscripts prove the New Testament is true?","acceptedAnswer":{"@type":"Answer","text":"No, and it is important to be clear about this. Manuscript evidence shows the text was accurately preserved - that we are reading what the authors actually wrote. Whether what they wrote is historically true is a separate question, answered by early dating, archaeology, and outside sources like Tacitus and Josephus. Preservation gets the words to us reliably; other lines of evidence test the claims."}}]}</script>
+  <link rel="stylesheet" href="/ad-nav.css">
 </head>
 <body>
-<header class="ad-head">
-  <a class="ad-logo" href="/">Apologia<span>Daily</span></a>
-  <a class="ad-ask" href="/ask-anything.html">Ask a question &rarr;</a>
-</header>
+<nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <ul class="adn-drop">
+          <li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/games.html">Games</a></li>
+          <li><a href="/whats-new.html">What&#39;s New</a></li>
+          <li><a href="/answers/">Answers</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
 <main class="ad-main">
   <nav class="ad-crumbs"><a href="/">Home</a> &rsaquo; <a href="/answers/">Answers</a> &rsaquo; <span>Bible Reliability</span></nav>
   <article>
@@ -62,5 +88,6 @@ function adShare(){
 }
 </script>
   <script src="/analytics.js" defer></script>
+  <script src="/ad-nav.js" defer></script>
 </body>
 </html>

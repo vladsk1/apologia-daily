@@ -17,12 +17,38 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="answers.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"QAPage","mainEntity":{"@type":"Question","name":"Wasn\u0027t Jesus just a good moral teacher?","acceptedAnswer":{"@type":"Answer","text":"It sounds respectful, but it\u0027s the one option Jesus didn\u0027t leave open. A good moral teacher doesn\u0027t claim to forgive sins, accept worship, and share God\u0027s own name - unless those claims are true.  C.S. Lewis put it bluntly: a man who said the sorts of things Jesus said would either be a liar, a lunatic, or exactly who he claimed to be. He could be the Lord, or a deceiver, or self-deluded - but not merely a wise human teacher, because wise human teachers don\u0027t make themselves the center of their own message. You\u0027re free to reject his claim, but \"great moral teacher\" isn\u0027t a way to dodge it."}}}</script>
+  <link rel="stylesheet" href="/ad-nav.css">
 </head>
 <body>
-<header class="ad-head">
-  <a class="ad-logo" href="/">Apologia<span>Daily</span></a>
-  <a class="ad-ask" href="/ask-anything.html">Ask a question &rarr;</a>
-</header>
+<nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <ul class="adn-drop">
+          <li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/games.html">Games</a></li>
+          <li><a href="/whats-new.html">What&#39;s New</a></li>
+          <li><a href="/answers/">Answers</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
 <main class="ad-main">
   <nav class="ad-crumbs"><a href="/">Home</a> &rsaquo; <a href="/answers/">Answers</a> &rsaquo; <span>Who Jesus Is</span></nav>
   <article>
@@ -51,5 +77,6 @@ function adShare(){
 }
 </script>
   <script src="/analytics.js" defer></script>
+  <script src="/ad-nav.js" defer></script>
 </body>
 </html>

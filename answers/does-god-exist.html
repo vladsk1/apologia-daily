@@ -17,12 +17,38 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="answers.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"QAPage","mainEntity":{"@type":"Question","name":"Is there any evidence that God exists?","acceptedAnswer":{"@type":"Answer","text":"Yes - and you don\u0027t have to take it on blind faith. Several independent lines of evidence point toward God. The universe had a beginning, which calls for a cause beyond space and time. Its physics is finely tuned for life against staggering odds. We experience real moral obligations that are hard to ground in mere matter. And human reason, consciousness, and our longing for meaning fit a personal source better than a blind one.  None of these is a knockdown proof by itself, but together they make belief in God reasonable - arguably more reasonable than the alternatives. Faith here isn\u0027t a leap in the dark; it\u0027s trust built on cumulative evidence."}}}</script>
+  <link rel="stylesheet" href="/ad-nav.css">
 </head>
 <body>
-<header class="ad-head">
-  <a class="ad-logo" href="/">Apologia<span>Daily</span></a>
-  <a class="ad-ask" href="/ask-anything.html">Ask a question &rarr;</a>
-</header>
+<nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <ul class="adn-drop">
+          <li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/games.html">Games</a></li>
+          <li><a href="/whats-new.html">What&#39;s New</a></li>
+          <li><a href="/answers/">Answers</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
 <main class="ad-main">
   <nav class="ad-crumbs"><a href="/">Home</a> &rsaquo; <a href="/answers/">Answers</a> &rsaquo; <span>God's Existence</span></nav>
   <article>
@@ -51,5 +77,6 @@ function adShare(){
 }
 </script>
   <script src="/analytics.js" defer></script>
+  <script src="/ad-nav.js" defer></script>
 </body>
 </html>

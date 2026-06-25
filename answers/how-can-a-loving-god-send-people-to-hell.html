@@ -17,12 +17,38 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="answers.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"QAPage","mainEntity":{"@type":"Question","name":"How can a loving God send people to hell?","acceptedAnswer":{"@type":"Answer","text":"It helps to reframe the picture. God doesn\u0027t gleefully dispatch people to hell; the New Testament shows a God who \"wants all people to be saved\" (1 Timothy 2:4) and who went to the cross to rescue them.  But genuine love requires the freedom to refuse it - a love you cannot say no to wouldn\u0027t be love at all. Hell, as writers like C.S. Lewis describe it, is what it means for God to finally honor the choice of someone who has spent their whole life saying, \"Leave me alone.\" The door, Lewis said, is locked from the inside. God\u0027s justice and his respect for human freedom meet there - and the cross shows how far he goes to spare us it."}}}</script>
+  <link rel="stylesheet" href="/ad-nav.css">
 </head>
 <body>
-<header class="ad-head">
-  <a class="ad-logo" href="/">Apologia<span>Daily</span></a>
-  <a class="ad-ask" href="/ask-anything.html">Ask a question &rarr;</a>
-</header>
+<nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <ul class="adn-drop">
+          <li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/games.html">Games</a></li>
+          <li><a href="/whats-new.html">What&#39;s New</a></li>
+          <li><a href="/answers/">Answers</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
 <main class="ad-main">
   <nav class="ad-crumbs"><a href="/">Home</a> &rsaquo; <a href="/answers/">Answers</a> &rsaquo; <span>Suffering &amp; Evil</span></nav>
   <article>
@@ -51,5 +77,6 @@ function adShare(){
 }
 </script>
   <script src="/analytics.js" defer></script>
+  <script src="/ad-nav.js" defer></script>
 </body>
 </html>

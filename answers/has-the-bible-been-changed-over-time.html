@@ -18,12 +18,38 @@
 <link rel="stylesheet" href="answers.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"QAPage","mainEntity":{"@type":"Question","name":"Has the Bible been changed over the centuries?","acceptedAnswer":{"@type":"Answer","text":"It\u0027s a common worry - a \"game of telephone\" over two thousand years. But that\u0027s not how manuscript copying works, and the evidence shows the opposite. The New Testament survives in over 5,800 Greek manuscripts, plus many thousands more in other languages - by far the best-attested text of the ancient world.  That abundance is a strength: scholars can compare copies and map exactly where differences crept in. The vast majority are spelling and word-order variations, and not one core Christian doctrine hangs on a disputed line. The Dead Sea Scrolls confirmed the same for the Old Testament. The text wasn\u0027t changed; it was carefully preserved."}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What do the Dead Sea Scrolls tell us about the Old Testament text?","acceptedAnswer":{"@type":"Answer","text":"The Dead Sea Scrolls, copied roughly between the third century BC and the first century AD, pushed our oldest Hebrew manuscripts back about a thousand years. When the great Isaiah scroll was compared with medieval copies a millennium later, the text matched closely, with differences confined to spelling and minor wording. That is strong evidence the Old Testament was transmitted with remarkable care, not rewritten."}},{"@type":"Question","name":"What about disputed passages like the ending of Mark or the woman caught in adultery?","acceptedAnswer":{"@type":"Answer","text":"These are the best-known textual questions, and Christians have nothing to hide here. Because the manuscript evidence is so rich, scholars can see that the longer ending of Mark (16:9-20) and the story in John 7:53-8:11 are absent from the earliest copies. Modern Bibles flag them in footnotes for exactly that reason. No doctrine depends on them, and the transparency itself shows the text is studied openly, not protected from scrutiny."}},{"@type":"Question","name":"Wasn't the Bible changed at the Council of Nicaea?","acceptedAnswer":{"@type":"Answer","text":"No. The Council of Nicaea in AD 325 addressed the relationship of the Son to the Father and produced the Nicene Creed; it did not edit, vote on, or rewrite the New Testament text. We can verify this because we possess manuscripts that predate Nicaea, and they contain the same writings we read today. The popular story of Nicaea inventing or altering Scripture has no historical basis."}}]}</script>
+  <link rel="stylesheet" href="/ad-nav.css">
 </head>
 <body>
-<header class="ad-head">
-  <a class="ad-logo" href="/">Apologia<span>Daily</span></a>
-  <a class="ad-ask" href="/ask-anything.html">Ask a question &rarr;</a>
-</header>
+<nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <ul class="adn-drop">
+          <li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/games.html">Games</a></li>
+          <li><a href="/whats-new.html">What&#39;s New</a></li>
+          <li><a href="/answers/">Answers</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
 <main class="ad-main">
   <nav class="ad-crumbs"><a href="/">Home</a> &rsaquo; <a href="/answers/">Answers</a> &rsaquo; <span>Bible Reliability</span></nav>
   <article>
@@ -62,5 +88,6 @@ function adShare(){
 }
 </script>
   <script src="/analytics.js" defer></script>
+  <script src="/ad-nav.js" defer></script>
 </body>
 </html>
