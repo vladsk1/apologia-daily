@@ -1024,7 +1024,7 @@
 
     function checkDebateLimit() {
       const used = getDebatesThisWeek();
-      const isPro = false; // replace with Supabase pro check when Stripe is live
+      const isPro = true; // OPEN for beta testing — unlimited debates until Stripe is live
       return { allowed: isPro || used < DEBATE_WEEKLY_LIMIT, used, isPro };
     }
 

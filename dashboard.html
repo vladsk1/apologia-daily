@@ -910,7 +910,7 @@
   var DAILY_FOCUS = FREE_JOURNEY; // overridden in updateGuidedFocus based on isPro
 
   function updateGuidedFocus() {
-    var isPro = false; // replace with real check when Stripe live
+    var isPro = true; // OPEN for beta — show the full Pro journey until Stripe live
     var focusArr = isPro ? PRO_FOCUS : FREE_JOURNEY;
     var journeyDay = getJourneyDay();
     var focusIdx = Math.min(journeyDay, focusArr.length - 1);
