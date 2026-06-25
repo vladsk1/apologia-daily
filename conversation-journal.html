@@ -519,50 +519,23 @@ async function getCoaching() {
   } catch (e) {}
   const studyList = _cands.join('; ');
 
-  const prompt = `You are an expert Christian apologetics coach. A Christian has just had a real conversation about faith and wants your coaching.
-
-Conversation details:
-- Who they talked to: ${who || 'Not specified'}
-- Their worldview: ${worldview || 'Not specified'}
-- Main topic: ${topic || 'Not specified'}
-- What the other person said: ${theySaid || 'Not provided'}
-- What the Christian said: ${iSaid || 'Not provided'}
-- Their reflection and specific questions: ${reflection || 'None'}
-
-Please provide warm, practical coaching with these four sections:
-
-**What went well**
-(2-3 specific things they did well — be encouraging and specific)
-
-**What to improve**
-(2-3 specific, actionable suggestions — be kind but honest)
-
-**Exactly what to say next time**
-(Give them 2-3 specific sentences or a short script they can actually use in this exact type of conversation — make it natural and conversational, not preachy)
-
-**What to study**
-(1-2 specific arguments or resources from the Evidence Library that would help them most with this type of conversation)
-
-Keep the tone warm, encouraging, and practical. This person is trying to share their faith and deserves genuine help.${studyList ? `
-
-After all four sections, on a final separate line, output exactly one tag identifying the single argument this person most needs to study, chosen ONLY from this list (use the id before the colon):
-${studyList}
-Format the final line exactly as: [[STUDY:id]]` : ''}`;
-
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
+    // Route through the server endpoint: keeps the Anthropic key server-side and
+    // applies the platform's orthodoxy + denominational-neutrality guardrails.
+    const res = await fetch('/api/feedback', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        messages: [{ role: 'user', content: prompt }]
+        mode: 'journal',
+        who: who, worldview: worldview, topic: topic,
+        theySaid: theySaid, iSaid: iSaid, reflection: reflection,
+        studyList: studyList
       })
     });
 
     if (res.ok) {
       const data = await res.json();
-      const text = data.content[0].text;
+      const text = data.answer || '';
 
       /* Extract the machine-readable study tag (specific argument), validate it,
          stash for saveEntry, and strip it from what we display. */

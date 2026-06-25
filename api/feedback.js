@@ -4,9 +4,13 @@ export default async function handler(req, res) {
 
   try {
     const body = req.body;
-    const { conversation, opponent, topic, difficulty, mode } = body;
+    const { conversation, opponent, topic, difficulty, mode, who, worldview, theySaid, iSaid, reflection, studyList } = body;
 
-    if (!conversation || !opponent || !topic) {
+    if (mode === 'journal') {
+      if (!theySaid && !iSaid) {
+        return res.status(400).json({ error: 'Missing conversation' })
+      }
+    } else if (!conversation || !opponent || !topic) {
       return res.status(400).json({ error: 'Missing required fields' })
     }
 
@@ -15,7 +19,40 @@ export default async function handler(req, res) {
 
     let systemPrompt, userMessage;
 
-    if (mode === 'convo') {
+    if (mode === 'journal') {
+      systemPrompt = `You are a warm, experienced Christian apologetics and pastoral coach reviewing a real conversation about faith that someone has just had in real life. Coach in the spirit of 1 Peter 3:15 — with gentleness and respect. Build them up; never make them feel inadequate. Be specific, referencing what they actually said.
+
+Respond in EXACTLY these four sections, each beginning with the bold header shown:
+
+**What went well**
+(2-3 specific, encouraging things they did well)
+
+**What to improve**
+(2-3 kind, specific, actionable suggestions)
+
+**Exactly what to say next time**
+(2-3 natural sentences or a short script they can actually use — conversational, not preachy)
+
+**What to study**
+(1-2 specific arguments or resources from the Evidence Library that would help them most)
+
+ORTHODOXY GUARDRAIL — NON-NEGOTIABLE: Coach firmly within classical Christian orthodoxy as defined by the Apostles' and Nicene Creeds — the bodily resurrection, the full deity and humanity of Christ, the Trinity (one God in three persons), the authority of Scripture, and salvation through Christ alone. Never advise softening, hedging, or conceding on core doctrine to be more relatable or open-minded; coach on tone, listening, and clarity, not on compromising the content of the faith. Never imply that all religions lead to God or that Christianity might be false.
+
+DENOMINATIONAL NEUTRALITY: Stay on the historic faith all Christians share (Catholic, Eastern Orthodox, Protestant). Do not steer them toward any one tradition's position on intra-Christian disputes (the Eucharist/real presence, Mary, the papacy or church authority, sola scriptura vs. sacred tradition, praying to or intercession of saints, icon or relic veneration, infant vs. believer's baptism, predestination/Calvinism vs. Arminianism, purgatory, prayers for the dead, the biblical canon, or end-times timelines). If such a dispute came up in the conversation, note graciously that faithful Christians differ and point them to their own pastor or priest — then refocus on the shared core and how they engaged the person.${studyList ? `
+
+After the four sections, on a final separate line, output exactly one tag identifying the single argument this person most needs to study, chosen ONLY from this list (use the id before the colon): ${studyList}. Format the final line exactly as: [[STUDY:id]]` : ''}`;
+
+      userMessage = `Here is the real conversation the Christian wants coaching on:
+- Who they talked to: ${who || 'Not specified'}
+- The other person's worldview: ${worldview || 'Not specified'}
+- Main topic: ${topic || 'Not specified'}
+- What the other person said / objections raised: ${theySaid || 'Not provided'}
+- What the Christian said / how they responded: ${iSaid || 'Not provided'}
+- Their own reflection and what they want coaching on: ${reflection || 'None'}
+
+Coach them warmly and specifically, using the exact four-section format.`;
+
+    } else if (mode === 'convo') {
       systemPrompt = `You are a warm, experienced Christian pastoral coach reviewing a practice conversation. Your role is to give gentle, specific, encouraging coaching — in the spirit of 1 Peter 3:15: with gentleness and respect. Coach with warmth, never harshness. The goal is to build the person up so they can share their faith more effectively, not to make them feel inadequate, and to help the Christian communicate their faith more naturally and effectively in real conversations.
 
 Focus on:
@@ -76,7 +113,7 @@ Analyse the Christian performance and respond with JSON only.`;
       },
       body: JSON.stringify({
         model: 'claude-haiku-4-5-20251001',
-        max_tokens: 500,
+        max_tokens: mode === 'journal' ? 900 : 500,
         system: systemPrompt,
         messages: [{ role: 'user', content: userMessage }]
       })
@@ -91,6 +128,11 @@ Analyse the Christian performance and respond with JSON only.`;
     const reply = data.content && data.content[0] && data.content[0].text;
 
     if (!reply) return res.status(500).json({ error: 'No reply' })
+
+    // Journal mode returns free-text coaching (4 sections + optional study tag)
+    if (mode === 'journal') {
+      return res.status(200).json({ answer: reply });
+    }
 
     const clean = reply.replace(/```json|```/g, '').trim();
     const feedback = JSON.parse(clean);
