@@ -127,7 +127,7 @@ footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08);pad
       <li class="adn-has-drop">
         <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
         <ul class="adn-drop">
-          <li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/palace.html">Memory Palace</a></li><li><a href="/video-library.html">Videos</a></li>
           <li><a href="/games.html">Games</a></li>
           <li><a href="/whats-new.html">What&#39;s New</a></li>
           <li><a href="/answers/">Answers</a></li>
@@ -146,6 +146,7 @@ footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08);pad
   <p class="eyebrow"><span class="dot"></span> Pro &middot; Method of loci</p>
   <h1 class="page-title">The Memory <em>Palace</em></h1>
   <p class="page-sub">The technique every memory champion uses, built for the arguments. Each category is a building you can walk &mdash; <b>one room per argument</b>, each holding a vivid scene that locks its structure into place. Walk it once to learn the landscape; walk it from memory to own it.</p>
+  <button id="why-btn" onclick="showWhy()" style="margin-top:1rem;font-family:var(--font-ui);font-size:.82rem;font-weight:600;color:var(--gold-dark);background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.35);border-radius:99px;padding:8px 16px;cursor:pointer;">&#9432;&nbsp; Why this works &mdash; the science</button>
 
   <!-- WING SELECTOR -->
   <div class="wings" id="wings"></div>
@@ -185,10 +186,37 @@ footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08);pad
     <b>This is the new way to see the whole library.</b> Where the old Argument Map showed how arguments connect as a diagram, the Palace shows them as places you can walk &mdash; so the same overview now doubles as the thing that makes them stick. Click any room to study it in full in the Evidence Library.
   </div>
 
-  <div class="proto-note">
-    <b>Prototype &middot; Apologia Daily Pro &mdash; Memory Palace.</b> All six wings are walkable, ~5 rooms each, every room linking to its Mastery Track. In production this replaces <code>argument-map.html</code> and takes over its nav slots. Room scenes can be hand-authored per argument (on-brand, ~50 to write) or generated per premise via <code>/api/tutor</code>. Recall-walk results feed the spaced-repetition deck and the Coach&rsquo;s training profile (<code>ad_prefs.coach</code>).
+</div>
+
+<!-- SCIENCE INTRO MODAL -->
+<div id="why-overlay" style="display:none;position:fixed;inset:0;z-index:600;background:rgba(5,13,26,.72);backdrop-filter:blur(3px);align-items:center;justify-content:center;padding:1.25rem;">
+  <div style="background:linear-gradient(165deg,#0a1628,#0f2040);border:1px solid rgba(200,169,81,.3);border-radius:14px;max-width:520px;width:100%;padding:1.9rem 1.9rem 1.6rem;box-shadow:0 30px 70px -30px rgba(0,0,0,.7);max-height:90vh;overflow-y:auto;">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.1rem;">
+      <span style="width:42px;height:42px;border-radius:11px;background:rgba(200,169,81,.14);border:1px solid rgba(200,169,81,.35);display:flex;align-items:center;justify-content:center;font-size:1.3rem;">&#127963;</span>
+      <div>
+        <div style="font-family:var(--font-ui);font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);">The science</div>
+        <div style="font-family:var(--font-display);font-size:1.35rem;font-weight:600;color:#fff;">Why a Memory Palace works</div>
+      </div>
+    </div>
+    <div style="font-family:var(--font-body);font-size:.96rem;line-height:1.7;color:rgba(255,255,255,.82);">
+      <p style="margin-bottom:.9rem;">The <b style="color:var(--gold-light);">method of loci</b> &mdash; the &ldquo;memory palace&rdquo; &mdash; is over 2,000 years old. Ancient orators used it to recall hour-long speeches, and every modern World Memory Champion still relies on it today.</p>
+      <p style="margin-bottom:.9rem;">Here&rsquo;s the trick: your brain is <b style="color:#fff;">poor at remembering abstract lists</b> but <b style="color:#fff;">exceptional at places and vivid images</b> &mdash; you can still walk through your childhood home room by room. This tool hijacks that strength: each argument becomes a striking scene in a building you walk, so recalling it is as easy as remembering a room.</p>
+      <p style="margin-bottom:.9rem;">Two principles make it stick: <b style="color:#fff;">spatial order</b> (walking the rooms in sequence lets you recall the whole case in order) and <b style="color:#fff;">retrieval practice</b> (the <em>Recall walk</em> hides the meaning so you test yourself &mdash; recalling a fact strengthens memory far more than re-reading it).</p>
+      <p style="font-family:var(--font-ui);font-size:.84rem;color:rgba(255,255,255,.55);background:rgba(255,255,255,.05);border-left:2px solid var(--gold);border-radius:0 6px 6px 0;padding:.7rem .9rem;">Tip: the more exaggerated and vivid you picture each scene, the better it sticks. Strange beats sensible.</p>
+    </div>
+    <button onclick="hideWhy()" style="margin-top:1.4rem;width:100%;font-family:var(--font-ui);font-size:.9rem;font-weight:600;background:var(--gold);color:#050d1a;border:none;border-radius:5px;padding:12px;cursor:pointer;">Got it &mdash; let me walk &rarr;</button>
   </div>
 </div>
+<script>
+  function showWhy(){ var o=document.getElementById('why-overlay'); if(o) o.style.display='flex'; }
+  function hideWhy(){ var o=document.getElementById('why-overlay'); if(o) o.style.display='none'; try{ localStorage.setItem('ad_palace_intro','1'); }catch(e){} }
+  (function(){
+    var seen=false; try{ seen=!!localStorage.getItem('ad_palace_intro'); }catch(e){}
+    if(!seen){ window.addEventListener('load',function(){ setTimeout(showWhy,500); }); }
+    var ov=document.getElementById('why-overlay');
+    if(ov) ov.addEventListener('click',function(e){ if(e.target===ov) hideWhy(); });
+  })();
+</script>
 
 <footer><div class="fi"><div class="fc">&#169; 2026 Apologia Daily. Built for the defence of the Gospel.</div></div></footer>
 
