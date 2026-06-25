@@ -396,6 +396,21 @@
       <a class="recommend-btn" id="rec-link" href="daily-devotional.html">Go &rarr;</a>
     </div>
 
+    <!-- AI COACH — personalised weakness targeting (reads ad_prefs.coach) -->
+    <div id="coach-card" style="position:relative;background:linear-gradient(155deg,#050d1a 0%,#0f2040 75%,#1e4278 165%);border:1px solid rgba(200,169,81,0.3);border-radius:10px;padding:1.5rem 1.75rem;margin-bottom:1.75rem;box-shadow:0 4px 20px rgba(5,13,26,0.08);overflow:hidden;">
+      <div style="display:flex;align-items:center;gap:0.7rem;margin-bottom:1rem;">
+        <span style="width:34px;height:34px;border-radius:9px;background:rgba(200,169,81,0.14);border:1px solid rgba(200,169,81,0.35);display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0;">&#129305;</span>
+        <div>
+          <div style="font-family:var(--font-ui);font-size:0.62rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);">Your Coach</div>
+          <div style="font-family:var(--font-ui);font-size:0.72rem;color:rgba(255,255,255,0.4);">Personalised training from your weak spots</div>
+        </div>
+        <span style="margin-left:auto;font-family:var(--font-ui);font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);background:rgba(200,169,81,0.12);border:1px solid rgba(200,169,81,0.3);padding:4px 10px;border-radius:20px;">Pro</span>
+      </div>
+      <div id="coach-body"></div>
+    </div>
+    <script src="/coach.js"></script>
+    <script>try{ Coach.renderPanel('coach-body'); }catch(e){}</script>
+
     <!-- LEARNING TOOLS -->
     <div style="background:linear-gradient(135deg,#0a1628,#050d1a);border:1px solid rgba(200,169,81,0.35);border-radius:10px;padding:1.5rem 1.75rem;margin-bottom:1.75rem;box-shadow:0 4px 20px rgba(5,13,26,0.08);">
       <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.35rem;">
@@ -484,9 +499,9 @@
         <div style="font-size:1.2rem;">&#127916;</div>
         <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Videos</div>
       </a>
-      <a href="argument-map.html" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:0.875rem;text-decoration:none;text-align:center;transition:all 0.15s;" onmouseover="this.style.borderColor='#4a7ab5'" onmouseout="this.style.borderColor='var(--border)'">
-        <div style="font-size:1.2rem;">&#128506;</div>
-        <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Argument Map</div>
+      <a href="palace.html" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:0.875rem;text-decoration:none;text-align:center;transition:all 0.15s;" onmouseover="this.style.borderColor='#4a7ab5'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.2rem;">&#127963;</div>
+        <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Memory Palace</div>
       </a>
     </div>
 
@@ -1448,6 +1463,7 @@ function closeBeltInfo(){ var m = document.getElementById('belt-modal'); if(m) m
   </div>
 </div>
 <script>(function(){try{var p=new URLSearchParams(location.search);if(p.get('nocount')==='1')localStorage.setItem('ad-nocount','1');if(p.get('nocount')==='0')localStorage.removeItem('ad-nocount');if(localStorage.getItem('ad-nocount')==='1')return;}catch(e){}var s=document.createElement('script');s.defer=true;s.src='/_vercel/insights/script.js';document.head.appendChild(s);})();</script>
+  <script>window.addEventListener('load',function(){ try{ if(window.Coach&&Coach.sync) Coach.sync(function(){ try{ Coach.renderPanel('coach-body'); }catch(e){} }); }catch(e){} });</script>
   <script src="/ad-nav.js" defer></script>
 </body>
 </html>

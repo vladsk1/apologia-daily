@@ -422,7 +422,7 @@
         <li><a href="index.html#pricing">Pricing</a></li>
       
           <li><a href="video-library.html">Videos</a></li>
-          <li><a href="argument-map.html">Argument Map</a></li></ul>
+          <li><a href="palace.html">Memory Palace</a></li></ul>
     <div class="footer-copy">© 2026 Apologia Daily. Built for the defence of the Gospel.</div>
     </div>
   </footer>
@@ -754,6 +754,8 @@
       const q = todayQuestions[currentQ];
       const isCorrect = index === q.correct;
       if (isCorrect) score++;
+      /* Coach capture — tally accuracy per question category */
+      try{ if(!window._qz)window._qz={}; var _cc=window._qz[q.category]||(window._qz[q.category]={c:0,t:0}); _cc.t++; if(isCorrect)_cc.c++; }catch(e){}
 
       document.querySelectorAll('.q-option').forEach((btn, i) => {
         btn.disabled = true;
@@ -789,6 +791,15 @@
       const completed = JSON.parse(localStorage.getItem('quizCompleted') || '[]');
       if (!completed.includes(today)) { completed.push(today); localStorage.setItem('quizCompleted', JSON.stringify(completed)); }
       localStorage.setItem('quizScore_' + today, score);
+
+      /* Coach capture — record per-category quiz accuracy as signals */
+      try{
+        if(window.Coach && window._qz){
+          var _qcat={"God's Existence":"God's Existence","The Resurrection":"The Resurrection","Scripture":"Biblical Reliability","Biblical Reliability":"Biblical Reliability","The Trinity":"The Trinity","Jesus":"Jesus","Science & Faith":"Science & Faith","Science":"Science & Faith"};
+          for(var _k in window._qz){ var _m=_qcat[_k]; if(_m){ var _o=window._qz[_k]; if(_o.t) Coach.recordQuiz('cat:'+_m, Math.round(_o.c/_o.t*100), _k); } }
+          window._qz={};
+        }
+      }catch(e){}
 
       document.getElementById('question-card').style.display = 'none';
       document.getElementById('diff-selector').style.display = 'none';
@@ -915,6 +926,7 @@
     window.location.href = 'index.html';
   }
 </script>
+  <script src="/coach.js"></script>
   <script src="/ad-nav.js" defer></script>
 </body>
 </html>

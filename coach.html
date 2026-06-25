@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Coach — Apologia Daily</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy-950:#050d1a; --navy-900:#0a1628; --navy-800:#0f2040;
+  --navy-700:#163058; --navy-600:#1e4278; --navy-500:#285a9e;
+  --navy-400:#3b72bc; --navy-300:#6f9fd4; --navy-200:#aecae8;
+  --navy-100:#ddeaf5; --navy-50:#f0f6fb;
+  --gold:#c8a951; --gold-light:#e8cf87; --gold-dark:#a88930;
+  --white:#fff; --off-white:#f8f7f4;
+  --text-dark:#0a1628; --text-mid:#3a4a62; --text-muted:#7a8fa8;
+  --border:#d4e0ec;
+  --ok:#2f7d57; --ok-bg:#e7f2ec; --ok-line:#bfe0cd;
+  --warn:#9a7416; --warn-bg:#fbf3e2;
+  --hard:#b23b32; --hard-bg:#fdeceb;
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'Source Serif 4',Georgia,serif;
+  --font-ui:'DM Sans',system-ui,sans-serif;
+}
+body{font-family:var(--font-ui);color:var(--text-dark);background:var(--off-white);padding-top:64px;-webkit-font-smoothing:antialiased}
+
+.main{max-width:1040px;margin:0 auto;padding:2.5rem 2rem 6rem}
+
+/* page head */
+.eyebrow{font-family:var(--font-ui);font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-dark);display:inline-flex;align-items:center;gap:8px;margin-bottom:.6rem}
+.eyebrow .dot{width:5px;height:5px;background:var(--gold);border-radius:50%}
+.page-title{font-family:var(--font-display);font-size:clamp(1.9rem,4vw,2.6rem);font-weight:700;line-height:1.08;margin-bottom:.5rem}
+.page-title em{font-style:italic;color:var(--navy-600)}
+.page-sub{font-size:1rem;color:var(--text-mid);max-width:60ch;line-height:1.7;font-family:var(--font-body)}
+
+.section-label{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin:2.75rem 0 1.1rem;display:flex;align-items:center;gap:12px}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* ============ COACH PRESCRIPTION PANEL ============ */
+.coach{position:relative;background:linear-gradient(155deg,var(--navy-950) 0%,var(--navy-800) 75%,var(--navy-600) 165%);border-radius:14px;padding:1.9rem 2rem;margin-top:1.9rem;overflow:hidden;box-shadow:0 22px 55px -28px rgba(5,13,26,.6)}
+.coach::after{content:'';position:absolute;right:-70px;top:-70px;width:280px;height:280px;border:1px solid rgba(200,169,81,.16);border-radius:50%}
+.coach::before{content:'';position:absolute;right:8px;top:8px;width:170px;height:170px;border:1px solid rgba(200,169,81,.1);border-radius:50%}
+.coach-top{display:flex;align-items:center;gap:14px;margin-bottom:1.3rem;position:relative;z-index:1}
+.coach-av{width:46px;height:46px;border-radius:12px;background:rgba(200,169,81,.14);border:1px solid rgba(200,169,81,.35);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+.coach-kick{font-family:var(--font-ui);font-size:.65rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.coach-name{font-family:var(--font-display);font-size:1.25rem;font-weight:600;color:#fff;margin-top:1px}
+.coach-pro{margin-left:auto;font-family:var(--font-ui);font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:rgba(200,169,81,.12);border:1px solid rgba(200,169,81,.3);padding:4px 10px;border-radius:99px}
+
+.coach-read{position:relative;z-index:1;font-family:var(--font-body);font-size:1.12rem;line-height:1.65;color:rgba(255,255,255,.9);margin-bottom:.4rem}
+.coach-read b{color:var(--gold-light);font-weight:600}
+.coach-evi{position:relative;z-index:1;font-family:var(--font-ui);font-size:.8rem;color:rgba(255,255,255,.42);margin-bottom:1.5rem}
+
+.rx{position:relative;z-index:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:11px;padding:1.2rem 1.3rem}
+.rx-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem;flex-wrap:wrap}
+.rx-title{font-family:var(--font-ui);font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.rx-time{font-family:var(--font-ui);font-size:.74rem;color:rgba(255,255,255,.45)}
+.rx-steps{display:flex;flex-direction:column;gap:2px}
+.rx-step{display:flex;gap:14px;align-items:flex-start;padding:11px 4px;border-bottom:1px solid rgba(255,255,255,.07)}
+.rx-step:last-child{border-bottom:none}
+.rx-n{flex:0 0 24px;width:24px;height:24px;border-radius:50%;background:rgba(200,169,81,.16);border:1px solid rgba(200,169,81,.35);color:var(--gold);font-family:var(--font-ui);font-size:.74rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.rx-body{flex:1}
+.rx-act{font-family:var(--font-ui);font-size:.92rem;font-weight:500;color:#fff;line-height:1.4}
+.rx-why{font-family:var(--font-ui);font-size:.76rem;color:rgba(255,255,255,.45);margin-top:2px}
+.rx-tool{font-family:var(--font-ui);font-size:.62rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--navy-200);background:rgba(110,159,212,.14);border:1px solid rgba(110,159,212,.3);padding:3px 9px;border-radius:6px;white-space:nowrap;align-self:center}
+.rx-cta{display:flex;gap:10px;margin-top:1.3rem;flex-wrap:wrap}
+.btn-gold{font-family:var(--font-ui);font-size:.86rem;font-weight:600;padding:11px 24px;border-radius:4px;background:var(--gold);color:var(--navy-950);border:none;cursor:pointer;text-decoration:none}
+.btn-gold:hover{background:var(--gold-light)}
+.btn-ghost{font-family:var(--font-ui);font-size:.86rem;font-weight:500;padding:11px 20px;border-radius:4px;background:rgba(255,255,255,.07);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.14);cursor:pointer;text-decoration:none}
+.btn-ghost:hover{color:#fff;border-color:rgba(255,255,255,.3)}
+
+/* ============ TRAINING LOG ============ */
+.log-intro{font-family:var(--font-body);font-size:.92rem;color:var(--text-mid);line-height:1.65;margin-bottom:1.3rem;max-width:64ch}
+.log{display:flex;flex-direction:column;gap:10px}
+.skill{background:var(--white);border:1px solid var(--border);border-radius:11px;overflow:hidden;transition:border-color .15s}
+.skill:hover{border-color:var(--navy-200)}
+.skill-head{display:grid;grid-template-columns:1fr auto auto;gap:1rem;align-items:center;padding:1.1rem 1.4rem;cursor:pointer;user-select:none}
+.skill-left{min-width:0}
+.skill-name{font-family:var(--font-display);font-size:1.02rem;font-weight:600;color:var(--text-dark);display:flex;align-items:center;gap:9px}
+.skill-cat{font-family:var(--font-ui);font-size:.74rem;color:var(--text-muted);margin-top:2px}
+.trend{font-family:var(--font-ui);font-size:.7rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:4px 11px;border-radius:99px;white-space:nowrap}
+.trend.up{color:var(--ok);background:var(--ok-bg)}
+.trend.flat{color:var(--warn);background:var(--warn-bg)}
+.trend.down{color:var(--hard);background:var(--hard-bg)}
+/* mastery dial */
+.dial{position:relative;width:48px;height:48px;flex-shrink:0}
+.dial svg{transform:rotate(-90deg)}
+.dial-pct{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-ui);font-size:.78rem;font-weight:700;color:var(--text-dark)}
+.chev{width:16px;height:16px;stroke:var(--text-muted);fill:none;stroke-width:2;transition:transform .2s;justify-self:end}
+.skill.open .chev{transform:rotate(180deg)}
+/* expanded body */
+.skill-body{display:none;padding:0 1.4rem 1.4rem;border-top:1px solid var(--border)}
+.skill.open .skill-body{display:block}
+.sb-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:1.2rem}
+@media(max-width:620px){.sb-grid{grid-template-columns:1fr}.skill-head{grid-template-columns:1fr auto;gap:.6rem}.dial{display:none}}
+.sb-lbl{font-family:var(--font-ui);font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.6rem}
+.signal{font-family:var(--font-ui);font-size:.82rem;color:var(--text-mid);line-height:1.5;padding:7px 0;border-bottom:1px solid var(--border);display:flex;gap:8px}
+.signal:last-child{border-bottom:none}
+.signal .src{font-size:.62rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--navy-500);background:var(--navy-50);border:1px solid var(--navy-100);padding:2px 7px;border-radius:5px;white-space:nowrap;height:fit-content}
+.spark{display:flex;align-items:flex-end;gap:4px;height:46px;margin-top:.3rem}
+.spark .bar{flex:1;background:var(--navy-200);border-radius:2px 2px 0 0;min-height:4px;transition:height .4s}
+.spark .bar.last{background:var(--gold)}
+.fix-row{margin-top:1.2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;background:var(--navy-50);border:1px solid var(--navy-100);border-radius:9px;padding:.85rem 1.1rem}
+.fix-txt{font-family:var(--font-ui);font-size:.82rem;color:var(--text-mid)}
+.fix-txt b{color:var(--text-dark)}
+.btn-fix{font-family:var(--font-ui);font-size:.78rem;font-weight:600;padding:8px 16px;border-radius:4px;background:var(--navy-600);color:#fff;border:none;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-fix:hover{background:var(--navy-500)}
+
+/* capture demo strip */
+.capture{margin-top:1.2rem;background:var(--white);border:1px dashed var(--navy-300);border-radius:11px;padding:1.2rem 1.4rem}
+.capture h3{font-family:var(--font-display);font-size:1.05rem;font-weight:600;margin-bottom:.3rem}
+.capture p{font-family:var(--font-body);font-size:.88rem;color:var(--text-mid);line-height:1.6;margin-bottom:1rem}
+.capture-toast{display:flex;align-items:center;gap:12px;background:var(--navy-950);border-radius:9px;padding:.85rem 1.1rem;margin-bottom:1rem}
+.capture-toast .ic{font-size:1.1rem}
+.capture-toast .t{font-family:var(--font-ui);font-size:.82rem;color:rgba(255,255,255,.8)}
+.capture-toast .t b{color:var(--gold)}
+.capture-toast a{margin-left:auto;font-family:var(--font-ui);font-size:.78rem;font-weight:600;color:var(--gold);text-decoration:none;white-space:nowrap}
+.btn-sim{font-family:var(--font-ui);font-size:.8rem;font-weight:600;padding:9px 18px;border-radius:4px;background:var(--gold);color:var(--navy-950);border:none;cursor:pointer}
+.btn-sim:disabled{opacity:.5;cursor:default}
+
+/* locked / free-tier teaser */
+.locked{position:relative;background:var(--navy-950);border-radius:12px;padding:1.6rem 1.8rem;margin-top:1.4rem;display:flex;align-items:center;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;border:1px solid rgba(200,169,81,.22)}
+.locked-l{display:flex;align-items:center;gap:14px}
+.locked-ic{font-size:1.4rem}
+.locked-t{font-family:var(--font-display);font-size:1.05rem;font-weight:600;color:#fff}
+.locked-s{font-family:var(--font-ui);font-size:.8rem;color:rgba(255,255,255,.45);margin-top:3px;max-width:48ch}
+.locked a{font-family:var(--font-ui);font-size:.84rem;font-weight:600;padding:10px 22px;border-radius:3px;background:var(--gold);color:var(--navy-950);text-decoration:none;white-space:nowrap}
+
+.proto-note{margin-top:3rem;font-family:var(--font-ui);font-size:.76rem;color:var(--text-muted);line-height:1.7;background:#fff;border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:1rem 1.2rem}
+.proto-note b{color:var(--text-mid)}
+footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08);padding:3rem 2rem 2rem;margin-top:4rem}
+.fi{max-width:1040px;margin:0 auto;text-align:center}
+.fc{font-family:var(--font-ui);font-size:.75rem;color:rgba(255,255,255,.25)}
+</style>
+<link rel="stylesheet" href="/ad-nav.css">
+</head>
+<body>
+<nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <ul class="adn-drop">
+          <li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/games.html">Games</a></li>
+          <li><a href="/whats-new.html">What&#39;s New</a></li>
+          <li><a href="/answers/">Answers</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash">Dashboard</a>
+      <a href="/login.html" class="adn-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
+
+<div class="main">
+
+  <p class="eyebrow"><span class="dot"></span> Pro &middot; Personalised training</p>
+  <h1 class="page-title">Your <em>Coach</em></h1>
+  <p class="page-sub">The gym gives you reps. The coach remembers them. Every debate, quiz, and explanation you finish feeds one place &mdash; so your next session attacks the exact thing you keep missing.</p>
+
+  <!-- ============ THE PRESCRIPTION PANEL ============ -->
+  <div class="coach">
+    <div class="coach-top">
+      <div class="coach-av">&#129305;</div>
+      <div>
+        <div class="coach-kick">Today&rsquo;s read</div>
+        <div class="coach-name">Coach</div>
+      </div>
+      <span class="coach-pro">Pro</span>
+    </div>
+
+    <div id="coach-body"></div>
+  </div>
+
+  <!-- ============ TRAINING LOG ============ -->
+  <div class="section-label">Training log &middot; your weakness profile</div>
+  <p class="log-intro">This is the coach&rsquo;s notebook. Every skill below is scored from your real activity and tracked over time, newest weakness first. Tap any row to see <em>why</em> it&rsquo;s flagged and what fed the score.</p>
+
+  <div class="log" id="log"></div>
+
+  <!-- ============ CAPTURE DEMO ============ -->
+  <div class="section-label">How it stays current</div>
+  <div class="capture">
+    <h3>The loop closes automatically</h3>
+    <p>Right now the Debate Arena scores your session, shows you strengths &amp; weaknesses, then throws them away. The Coach catches them instead. Every tool ends with one quiet line &mdash; that&rsquo;s also how most users first discover the Coach exists.</p>
+    <div class="capture-toast">
+      <span class="ic">&#128202;</span>
+      <span class="t"><b>Coach updated</b> &mdash; this session went into your training profile.</span>
+      <a href="#" onclick="return false;">See plan &rarr;</a>
+    </div>
+    <p style="margin-bottom:.9rem;">Try it: simulate finishing the prescribed Moral Argument session and watch the profile move.</p>
+    <button class="btn-sim" id="sim-btn" onclick="simulateSession()">&#9654; Simulate a completed session</button>
+  </div>
+
+  <!-- ============ FREE-TIER TEASER (shown to non-Pro) ============ -->
+  <div class="section-label">What free users see here</div>
+  <div class="locked">
+    <div class="locked-l">
+      <span class="locked-ic">&#128274;</span>
+      <div>
+        <div class="locked-t">Your Coach is a Pro feature</div>
+        <div class="locked-s">Pro builds a personalised training plan from your weak spots across every tool &mdash; and tells you exactly what to practise next.</div>
+      </div>
+    </div>
+    <a href="/index.html#pricing">Upgrade &mdash; $8/mo</a>
+  </div>
+
+  <div class="proto-note">
+    <b>Prototype &middot; Apologia Daily Pro &mdash; the Coach layer.</b> State is in-memory for this preview. In the live app this panel replaces the logic behind the dashboard&rsquo;s &ldquo;Recommended for you today&rdquo; slot, and the Training Log fills the current &ldquo;Recent activity&rdquo; stub. Weakness signals are captured on each tool&rsquo;s results screen (writing to <code>ad_prefs.coach</code> in localStorage, synced to a per-user <code>coach_signals</code> Supabase table with RLS), and the prescription is generated by <code>/api/tutor</code> reasoning over the accumulated profile.
+  </div>
+
+</div>
+
+<footer>
+  <div class="fi"><div class="fc">&#169; 2026 Apologia Daily. Built for the defence of the Gospel.</div></div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/coach.js"></script>
+<script>
+function refresh(){ try{ Coach.renderPanel('coach-body'); Coach.renderLog('log'); }catch(e){} }
+refresh();
+/* pull any cross-device signals for a signed-in user, then re-render */
+try{ if(window.Coach&&Coach.sync) Coach.sync(refresh); }catch(e){}
+/* Live demo of the capture->surface loop: records real signals, then re-renders. */
+function simulateSession(){
+  var btn=document.getElementById('sim-btn');
+  if(btn){ btn.disabled=true; btn.textContent='Recording session\u2026'; }
+  try{
+    Coach.recordExplain('moral', 4, 'grounding reply');
+    Coach.recordDebate('moral', 45);
+  }catch(e){}
+  setTimeout(function(){
+    refresh();
+    var log=document.getElementById('log'); if(log) log.scrollIntoView({behavior:'smooth',block:'center'});
+    if(btn){ btn.textContent='\u2713 Recorded \u2014 the profile just moved'; setTimeout(function(){ btn.disabled=false; btn.textContent='\u25B6 Simulate another session'; },1600); }
+  }, 450);
+}
+</script>
+<script src="/ad-nav.js" defer></script>
+</body>
+</html>

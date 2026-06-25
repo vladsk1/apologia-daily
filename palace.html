@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memory Palace — Apologia Daily</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy-950:#050d1a; --navy-900:#0a1628; --navy-800:#0f2040;
+  --navy-700:#163058; --navy-600:#1e4278; --navy-500:#285a9e;
+  --navy-300:#6f9fd4; --navy-200:#aecae8; --navy-100:#ddeaf5; --navy-50:#f0f6fb;
+  --gold:#c8a951; --gold-light:#e8cf87; --gold-dark:#a88930;
+  --white:#fff; --off-white:#f8f7f4;
+  --text-dark:#0a1628; --text-mid:#3a4a62; --text-muted:#7a8fa8;
+  --border:#d4e0ec;
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'Source Serif 4',Georgia,serif;
+  --font-ui:'DM Sans',system-ui,sans-serif;
+}
+body{font-family:var(--font-ui);color:var(--text-dark);background:var(--off-white);padding-top:64px;-webkit-font-smoothing:antialiased}
+.main{max-width:1040px;margin:0 auto;padding:2.5rem 2rem 6rem}
+
+/* head */
+.eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-dark);display:inline-flex;align-items:center;gap:8px;margin-bottom:.6rem}
+.eyebrow .dot{width:5px;height:5px;background:var(--gold);border-radius:50%}
+.page-title{font-family:var(--font-display);font-size:clamp(1.9rem,4vw,2.6rem);font-weight:700;line-height:1.08;margin-bottom:.5rem}
+.page-title em{font-style:italic;color:var(--navy-600)}
+.page-sub{font-size:1rem;color:var(--text-mid);max-width:62ch;line-height:1.7;font-family:var(--font-body)}
+.page-sub b{color:var(--text-dark);font-weight:600}
+
+/* wing selector */
+.wings{display:flex;gap:8px;overflow-x:auto;margin:1.8rem 0 .4rem;padding-bottom:4px}
+.wing{flex:0 0 auto;font-family:var(--font-ui);font-size:.8rem;font-weight:500;padding:9px 16px;border-radius:99px;border:1px solid var(--border);background:#fff;color:var(--text-mid);cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:7px}
+.wing:hover{border-color:var(--navy-300)}
+.wing.on{background:var(--navy-900);border-color:var(--navy-900);color:#fff}
+.wing .lock{opacity:.6;font-size:.85em}
+.wing-meta{font-family:var(--font-ui);font-size:.8rem;color:var(--text-muted);margin-bottom:1.4rem}
+
+/* route / floor plan */
+.route{position:relative;display:flex;align-items:center;justify-content:space-between;gap:6px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.4rem;margin-bottom:1.2rem;overflow-x:auto}
+.route::before{content:'';position:absolute;left:2.4rem;right:2.4rem;top:50%;height:2px;background:repeating-linear-gradient(90deg,var(--navy-200) 0 8px,transparent 8px 16px);z-index:0}
+.stop{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer;flex:0 0 auto;min-width:90px}
+.stop .pin{width:38px;height:38px;border-radius:50%;background:#fff;border:2px solid var(--navy-200);display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:all .2s}
+.stop .nm{font-family:var(--font-ui);font-size:.68rem;font-weight:500;color:var(--text-muted);text-align:center;max-width:11ch;line-height:1.25}
+.stop:hover .pin{border-color:var(--gold)}
+.stop.done .pin{border-color:var(--gold);background:#fbf7ec}
+.stop.cur .pin{border-color:var(--gold);background:var(--gold);color:var(--navy-950);box-shadow:0 0 0 5px rgba(200,169,81,.2)}
+.stop.cur .nm{color:var(--text-dark);font-weight:600}
+
+/* the stage (a room) */
+.stage{position:relative;border-radius:16px;overflow:hidden;background:linear-gradient(168deg,var(--navy-950) 0%,var(--navy-800) 70%,var(--navy-700) 150%);color:#fff;box-shadow:0 26px 60px -30px rgba(5,13,26,.7)}
+.stage::after{content:'';position:absolute;left:50%;top:-120px;width:520px;height:520px;transform:translateX(-50%);background:radial-gradient(circle,rgba(200,169,81,.16),transparent 62%);pointer-events:none}
+/* arched window motif */
+.arch{position:absolute;top:26px;left:50%;transform:translateX(-50%);width:120px;height:170px;border:1px solid rgba(200,169,81,.22);border-radius:60px 60px 0 0;z-index:0}
+.arch::before{content:'';position:absolute;inset:14px;border:1px solid rgba(200,169,81,.14);border-radius:48px 48px 0 0}
+.stage-inner{position:relative;z-index:1;padding:2.4rem 2.2rem 2.2rem;text-align:center}
+.st-kick{font-family:var(--font-ui);font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.st-locus{font-family:var(--font-display);font-size:clamp(1.5rem,3.4vw,2rem);font-weight:600;font-style:italic;color:#fff;margin:.4rem 0 .2rem}
+.st-arg{font-family:var(--font-ui);font-size:.82rem;color:var(--navy-200)}
+.st-symbol{font-size:4.4rem;line-height:1;margin:1.6rem 0 1.3rem;filter:drop-shadow(0 6px 18px rgba(0,0,0,.35))}
+.st-scene{font-family:var(--font-body);font-size:1.12rem;line-height:1.75;color:rgba(255,255,255,.9);max-width:54ch;margin:0 auto 1.5rem}
+.st-scene b{color:var(--gold-light);font-weight:600}
+
+/* hook chip */
+.hook{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-ui);font-size:.92rem;font-weight:500;color:var(--gold);background:rgba(200,169,81,.1);border:1px solid rgba(200,169,81,.3);border-radius:99px;padding:9px 18px;margin-bottom:1.6rem}
+.hook .q{font-size:1.1rem;opacity:.7}
+
+/* meaning panel */
+.meaning{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:1.3rem 1.4rem;text-align:left;max-width:60ch;margin:0 auto}
+.meaning .lbl{font-family:var(--font-ui);font-size:.64rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem}
+.meaning ol{list-style:none;counter-reset:p}
+.meaning li{counter-increment:p;font-family:var(--font-body);font-size:.96rem;line-height:1.55;color:rgba(255,255,255,.86);padding:7px 0 7px 38px;position:relative;border-bottom:1px solid rgba(255,255,255,.07)}
+.meaning li:last-child{border-bottom:none}
+.meaning li::before{content:counter(p);position:absolute;left:0;top:7px;width:24px;height:24px;border-radius:50%;background:rgba(200,169,81,.16);border:1px solid rgba(200,169,81,.35);color:var(--gold);font-family:var(--font-ui);font-size:.72rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.meaning li.concl{color:var(--gold-light);font-weight:500}
+.study{display:inline-block;margin-top:1.2rem;font-family:var(--font-ui);font-size:.82rem;font-weight:600;color:var(--navy-950);background:var(--gold);padding:9px 20px;border-radius:4px;text-decoration:none}
+.study:hover{background:var(--gold-light)}
+
+/* recall mode */
+.recall{background:rgba(255,255,255,.04);border:1px dashed rgba(200,169,81,.4);border-radius:12px;padding:1.6rem 1.4rem;text-align:center;max-width:60ch;margin:0 auto}
+.recall p{font-family:var(--font-body);font-size:1rem;color:rgba(255,255,255,.7);margin-bottom:1.1rem;font-style:italic}
+.reveal-btn{font-family:var(--font-ui);font-size:.84rem;font-weight:600;padding:10px 22px;border-radius:4px;background:rgba(200,169,81,.15);color:var(--gold);border:1px solid rgba(200,169,81,.35);cursor:pointer}
+.reveal-btn:hover{background:rgba(200,169,81,.25)}
+
+/* walk controls */
+.walk{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.3rem;flex-wrap:wrap}
+.walk-btns{display:flex;gap:10px}
+.wbtn{font-family:var(--font-ui);font-size:.86rem;font-weight:500;padding:11px 22px;border-radius:4px;border:1px solid var(--border);background:#fff;color:var(--text-dark);cursor:pointer}
+.wbtn:hover{border-color:var(--navy-300)}
+.wbtn.primary{background:var(--navy-900);border-color:var(--navy-900);color:#fff}
+.wbtn.primary:hover{background:var(--navy-800)}
+.wbtn:disabled{opacity:.4;cursor:default}
+.mode{display:flex;align-items:center;gap:10px;font-family:var(--font-ui);font-size:.82rem;color:var(--text-mid)}
+.toggle{position:relative;width:46px;height:25px;border-radius:99px;background:var(--border);border:none;cursor:pointer;transition:background .2s;flex-shrink:0}
+.toggle::after{content:'';position:absolute;top:2px;left:2px;width:21px;height:21px;border-radius:50%;background:#fff;transition:transform .2s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.toggle.on{background:var(--gold)}
+.toggle.on::after{transform:translateX(21px)}
+
+/* replace-the-map note */
+.swap-note{margin-top:1.6rem;background:#fff;border:1px solid var(--border);border-left:3px solid var(--navy-500);border-radius:0 8px 8px 0;padding:1rem 1.2rem;font-family:var(--font-body);font-size:.9rem;color:var(--text-mid);line-height:1.65}
+.swap-note b{color:var(--text-dark)}
+.proto-note{margin-top:1.4rem;font-family:var(--font-ui);font-size:.76rem;color:var(--text-muted);line-height:1.7;background:#fff;border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:1rem 1.2rem}
+.proto-note code{background:var(--navy-50);padding:1px 5px;border-radius:3px;font-size:.95em}
+
+footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08);padding:3rem 2rem 2rem;margin-top:4rem}
+.fi{max-width:1040px;margin:0 auto;text-align:center}
+.fc{font-family:var(--font-ui);font-size:.75rem;color:rgba(255,255,255,.25)}
+</style>
+<link rel="stylesheet" href="/ad-nav.css">
+</head>
+<body>
+<nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <ul class="adn-drop">
+          <li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/games.html">Games</a></li>
+          <li><a href="/whats-new.html">What&#39;s New</a></li>
+          <li><a href="/answers/">Answers</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash">Dashboard</a>
+      <a href="/login.html" class="adn-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
+
+<div class="main">
+  <p class="eyebrow"><span class="dot"></span> Pro &middot; Method of loci</p>
+  <h1 class="page-title">The Memory <em>Palace</em></h1>
+  <p class="page-sub">The technique every memory champion uses, built for the arguments. Each category is a building you can walk &mdash; <b>one room per argument</b>, each holding a vivid scene that locks its structure into place. Walk it once to learn the landscape; walk it from memory to own it.</p>
+
+  <!-- WING SELECTOR -->
+  <div class="wings" id="wings"></div>
+  <div class="wing-meta" id="wing-meta"></div>
+
+  <!-- ROUTE -->
+  <div class="route" id="route"></div>
+
+  <!-- STAGE -->
+  <div class="stage">
+    <div class="arch"></div>
+    <div class="stage-inner">
+      <div class="st-kick" id="st-kick">Room 1 of 5</div>
+      <div class="st-locus" id="st-locus"></div>
+      <div class="st-arg" id="st-arg"></div>
+      <div class="st-symbol" id="st-symbol"></div>
+      <div class="st-scene" id="st-scene"></div>
+      <div class="hook" id="st-hook"><span class="q">&ldquo;</span><span id="st-hook-txt"></span><span class="q">&rdquo;</span></div>
+      <div id="st-meaning-wrap"></div>
+    </div>
+  </div>
+
+  <!-- WALK CONTROLS -->
+  <div class="walk">
+    <div class="walk-btns">
+      <button class="wbtn" id="prev" onclick="step(-1)">&lsaquo; Prev room</button>
+      <button class="wbtn primary" id="next" onclick="step(1)">Next room &rsaquo;</button>
+    </div>
+    <div class="mode">
+      <span>Recall walk</span>
+      <button class="toggle" id="recall-toggle" onclick="toggleRecall()" aria-label="Toggle recall mode"></button>
+      <span style="color:var(--text-muted)">hide the meaning &mdash; test yourself</span>
+    </div>
+  </div>
+
+  <div class="swap-note">
+    <b>This is the new way to see the whole library.</b> Where the old Argument Map showed how arguments connect as a diagram, the Palace shows them as places you can walk &mdash; so the same overview now doubles as the thing that makes them stick. Click any room to study it in full in the Evidence Library.
+  </div>
+
+  <div class="proto-note">
+    <b>Prototype &middot; Apologia Daily Pro &mdash; Memory Palace.</b> All six wings are walkable, ~5 rooms each, every room linking to its Mastery Track. In production this replaces <code>argument-map.html</code> and takes over its nav slots. Room scenes can be hand-authored per argument (on-brand, ~50 to write) or generated per premise via <code>/api/tutor</code>. Recall-walk results feed the spaced-repetition deck and the Coach&rsquo;s training profile (<code>ad_prefs.coach</code>).
+  </div>
+</div>
+
+<footer><div class="fi"><div class="fc">&#169; 2026 Apologia Daily. Built for the defence of the Gospel.</div></div></footer>
+
+<script>
+/* ---- wings (categories). Only God's Existence is walkable in this preview ---- */
+var WINGS=[
+  {id:'god', icon:'&#9962;', name:"God's Existence", building:'The Cathedral of God&rsquo;s Existence', rooms:[
+    { pin:'&#128340;', short:'The Door', locus:'The Great Door', arg:'Kalam Cosmological Argument', symbol:'&#128340;', href:'ev-m-kalam.html',
+      scene:'You push open the bronze door. A grandfather clock that stood silent <b>begins to tick</b> the instant you cross the threshold &mdash; yet no hand is near it. You spin around: <b>someone must have wound it.</b>',
+      hook:'A clock that starts ticking needs someone to wind it.',
+      prem:['Whatever begins to exist has a cause.','The universe began to exist.'],
+      concl:'Therefore the universe has a cause &mdash; uncaused, timeless, powerful.' },
+    { pin:'&#127963;', short:'The Pillars', locus:'The Leaning Pillars', arg:"Leibniz's Contingency Argument", symbol:'&#127963;', href:'ev-m-leibniz.html',
+      scene:'The nave is lined with pillars, each <b>leaning on the one before it</b> &mdash; none can stand alone. At the far end, a single pillar stands perfectly upright, <b>leaning on nothing</b>, holding the whole colonnade up.',
+      hook:'Leaning pillars need one that stands on its own.',
+      prem:['Everything that exists has an explanation of its existence.','Contingent things depend on something beyond themselves.'],
+      concl:'The chain ends in a necessary being that exists by its own nature.' },
+    { pin:'&#127929;', short:'The Organ', locus:'The Organ of Dials', arg:'The Fine-Tuning Argument', symbol:'&#127929;', href:'ev-m-finetuning.html',
+      scene:'The great organ has no stops &mdash; only <b>a hundred dials, each balanced on a razor&rsquo;s edge</b>. Nudge any one a hair and the whole cathedral falls dark. Yet every dial is <b>set exactly right.</b>',
+      hook:'A hundred dials, each on a knife-edge, all set right.',
+      prem:['The constants of physics are fine-tuned for life.','This is due to chance, necessity, or design.'],
+      concl:'Chance and necessity fail &mdash; the best explanation is design.' },
+    { pin:'&#9878;', short:'The Altar', locus:'The Altar Scales', arg:'The Moral Argument', symbol:'&#9878;&#65039;', href:'ev-m-moral.html',
+      scene:'On the altar rest golden <b>scales</b> and a measuring rod marked in light. You try to bend the rod to your liking &mdash; <b>it will not bend.</b> The standard comes from above the altar, never from you.',
+      hook:'A measuring rod you can&rsquo;t bend to your liking.',
+      prem:['If there is no God, objective moral values do not exist.','Objective moral values do exist.'],
+      concl:'Therefore God exists &mdash; the standard above the altar.' },
+    { pin:'&#128081;', short:'The Crown', locus:'The Crown of Light', arg:'The Ontological Argument', symbol:'&#128081;', href:'ev-m-ontological.html',
+      scene:'Above the altar floats a crown &mdash; <b>that than which nothing greater can be conceived.</b> To picture it as merely imaginary is to picture a <b>greater</b> crown that also exists. The crown insists on being real.',
+      hook:'A crown so great it must be real.',
+      prem:['God is the greatest conceivable being.','Existing in reality is greater than existing in the mind alone.'],
+      concl:'Therefore the greatest conceivable being must exist in reality.' }
+  ]},
+
+  {id:'res', icon:'&#9961;', name:'The Resurrection', building:'The Garden Tomb', rooms:[
+    { pin:'&#129704;', short:'The Stone', locus:'The Rolled Stone', arg:'The Empty Tomb', symbol:'&#129704;', href:'ev-m-emptytomb.html',
+      scene:'A great <b>stone is rolled back</b> from the tomb&rsquo;s mouth. Inside, darkness &mdash; and the grave-cloths lie <b>folded where the body should be.</b> No corpse was ever produced to end the story.',
+      hook:'The stone is rolled back and the bed is empty.',
+      prem:['Jesus was buried in a known, guarded tomb.','That tomb was found empty by His own followers &mdash; and His enemies never produced the body.'],
+      concl:'The best explanation of the empty tomb is that He rose.' },
+    { pin:'&#128220;', short:'The Ledger', locus:'The Signed Ledger', arg:'The Minimal Facts Argument', symbol:'&#128220;', href:'ev-m-minimal.html',
+      scene:'A great ledger lies open on a stand. Its few lines are <b>countersigned even by skeptical historians</b> &mdash; the death, the empty tomb, the appearances, the transformed disciples. <b>Even your opponents have signed it.</b>',
+      hook:'Even the skeptics have signed these few facts.',
+      prem:['A handful of facts are granted by nearly all scholars, believing or not.','Only the resurrection explains all of them together.'],
+      concl:'The minimal facts converge on a risen Christ.' },
+    { pin:'&#9993;', short:'The Letter', locus:'The Early Letter', arg:'The Early Creed (1 Cor 15)', symbol:'&#9993;&#65039;', href:'ev-m-earlycreed.html',
+      scene:'A wax-sealed letter is dated <b>within a few years of the cross</b> &mdash; far too early for legend to grow. It already recites a creed: died, buried, raised, <b>seen.</b>',
+      hook:'A creed too early to be legend.',
+      prem:['Paul records a creed traceable to within a few years of the crucifixion.','Legends take generations to displace eyewitnesses.'],
+      concl:'The resurrection claim is original, not a later legend.' },
+    { pin:'&#128101;', short:'The Five Hundred', locus:'The Hall of Witnesses', arg:'The Resurrection Appearances', symbol:'&#128101;', href:'ev-m-appearances.html',
+      scene:'A crowd of <b>five hundred faces</b> turns toward a risen figure. Paul writes that <b>most are still alive</b> &mdash; meaning anyone could go and ask them.',
+      hook:'Five hundred who could still be questioned.',
+      prem:['The risen Jesus appeared to many witnesses, individually and in groups.','Hallucinations are not shared by crowds.'],
+      concl:'The appearances are best explained by a real, risen Jesus.' },
+    { pin:'&#9889;', short:'The Convert', locus:'The Turned Persecutor', arg:'The Conversion of the Sceptics', symbol:'&#9889;', href:'ev-m-sceptics.html',
+      scene:'On the Damascus road a man&rsquo;s <b>sword drops</b> and he is blinded by light. The fiercest enemy of the church &mdash; and the doubting brother James &mdash; <b>switch sides overnight.</b>',
+      hook:'The enemies who changed sides overnight.',
+      prem:['Paul the persecutor and James the skeptic both converted suddenly.','Each said it was because they saw the risen Jesus.'],
+      concl:'Hostile witnesses turned by an appearance is powerful evidence.' }
+  ]},
+
+  {id:'jes', icon:'&#10013;', name:'Jesus', building:'The Hall of Witnesses', rooms:[
+    { pin:'&#128220;', short:'The Record', locus:'The Court Record', arg:'The Historical Existence of Jesus', symbol:'&#128220;', href:'ev-m-hist_jesus.html',
+      scene:'A clerk reads the court record aloud. <b>Even hostile pens</b> &mdash; Tacitus, Josephus, the Talmud &mdash; are entered into evidence, <b>none of them friendly</b> to the claim.',
+      hook:'Even hostile pens recorded him.',
+      prem:['Multiple independent sources, including hostile ones, attest Jesus of Nazareth.','Inventing such a figure leaves these sources unexplained.'],
+      concl:'Jesus certainly existed as a historical person.' },
+    { pin:'&#128293;', short:'The Claim', locus:'The Claim on the Stand', arg:'Did Jesus Claim to Be God?', symbol:'&#128293;', href:'ev-m-jesus_claims.html',
+      scene:'A figure stands and declares, <b>&ldquo;Before Abraham was, I AM&rdquo;</b> &mdash; speaking the divine Name. The room shakes; <b>stones are picked up</b> for what everyone understood Him to mean.',
+      hook:'&ldquo;Before Abraham was, I AM.&rdquo;',
+      prem:['Jesus said and did things only God could rightly say and do.','His hearers understood the claim and charged Him with blasphemy.'],
+      concl:'Jesus claimed deity &mdash; not merely good teaching.' },
+    { pin:'&#128302;', short:'The Prophecy', locus:'The Prophecy Ledger', arg:'Messianic Prophecy', symbol:'&#128302;', href:'ev-m-messianic_prophecy.html',
+      scene:'A vast scroll unrolls, <b>centuries of predictions</b> ticking off one by one &mdash; birthplace, betrayal, pierced hands &mdash; the odds spiralling as <b>they all converge on one man.</b>',
+      hook:'Centuries of predictions, all converging on one man.',
+      prem:['The Hebrew Scriptures predicted specific details of the Messiah.','One man fulfilled them against staggering odds.'],
+      concl:'Jesus is the foretold Messiah.' },
+    { pin:'&#128591;', short:'The Worship', locus:'The Worship Scene', arg:'Jesus as God in the New Testament', symbol:'&#128591;', href:'ev-m-jesus_as_god_nt.html',
+      scene:'Thomas falls to his knees: <b>&ldquo;My Lord and my God!&rdquo;</b> Jesus <b>receives the worship</b> &mdash; the very thing every angel and prophet in Scripture refuses.',
+      hook:'He received worship no prophet would.',
+      prem:['The New Testament gives Jesus worship, divine titles, and God&rsquo;s works.','Faithful monotheists refuse worship that belongs to God alone.'],
+      concl:'The earliest church regarded Jesus as God.' },
+    { pin:'&#128081;', short:'The Titles', locus:'The Crown of Titles', arg:'The Titles of Jesus', symbol:'&#128081;', href:'ev-m-titles.html',
+      scene:'Across the hall blaze His titles in gold &mdash; <b>Lord, Son of Man, the Word, Alpha and Omega.</b> Each one is a title <b>Scripture reserves for God alone.</b>',
+      hook:'Lord, Son of Man, the Word &mdash; titles only God wears.',
+      prem:['Jesus is given the divine titles of the Old Testament.','These titles belong to Yahweh alone.'],
+      concl:'The titles identify Jesus with God.' }
+  ]},
+
+  {id:'bib', icon:'&#128214;', name:'Bible Reliability', building:'The Scriptorium', rooms:[
+    { pin:'&#128218;', short:'The Copies', locus:'The Mountain of Copies', arg:'The Manuscript Reliability Argument', symbol:'&#128218;', href:'ev-m-manuscript.html',
+      scene:'Manuscripts are stacked to the rafters &mdash; <b>5,800 Greek copies</b> &mdash; beside a thin little pile for Caesar and Plato. <b>More copies, earlier, than any ancient text.</b>',
+      hook:'More copies, earlier, than any ancient text.',
+      prem:['The New Testament survives in vastly more, and earlier, manuscripts than any ancient work.','More witnesses mean the original wording can be recovered.'],
+      concl:'The text we read is essentially what was written.' },
+    { pin:'&#9935;', short:'The Spade', locus:'The Spade and the Stone', arg:'Archaeological Confirmation', symbol:'&#9935;&#65039;', href:'ev-m-archaeology.html',
+      scene:'A spade strikes stone and turns up the <b>Pilate inscription</b>; nearby, the Pool of Bethesda with its five porches, exactly as John wrote. <b>The spade keeps confirming the page.</b>',
+      hook:'The spade keeps confirming the page.',
+      prem:['Archaeology repeatedly confirms the Bible&rsquo;s people, places, and customs.','Fiction is not vindicated detail by detail by the earth.'],
+      concl:'The biblical narrative is rooted in real history.' },
+    { pin:'&#127994;', short:'The Jars', locus:'The Sealed Jars', arg:'The Dead Sea Scrolls', symbol:'&#127994;', href:'ev-m-deadseascrolls.html',
+      scene:'In a cave sit clay jars. Inside, a scroll of Isaiah <b>a thousand years older</b> than any we had &mdash; and when laid beside the later copy, <b>it still matches.</b>',
+      hook:'A thousand years older &mdash; and it still matches.',
+      prem:['The Dead Sea Scrolls predate our prior manuscripts by a millennium.','They agree with the later text we already trusted.'],
+      concl:'The Old Testament was transmitted with remarkable fidelity.' },
+    { pin:'&#128064;', short:'The Witnesses', locus:'The Eyewitness Bench', arg:'The Gospel Eyewitnesses', symbol:'&#128064;', href:'ev-m-eyewitnesses.html',
+      scene:'A bench of named witnesses leans in: <b>&ldquo;what we have seen with our eyes.&rdquo;</b> The accounts were written <b>while the witnesses could still object</b> &mdash; and they didn&rsquo;t.',
+      hook:'Written while the witnesses could still object.',
+      prem:['The Gospels rest on named, living eyewitnesses.','Hostile witnesses and communities could have refuted false claims.'],
+      concl:'The Gospels carry genuine eyewitness testimony.' },
+    { pin:'&#129513;', short:'The Coincidences', locus:'The Interlocking Pieces', arg:'Undesigned Coincidences', symbol:'&#129513;', href:'ev-m-coincidences.html',
+      scene:'Four accounts lie on the table, each with a gap &mdash; and <b>each gap is quietly filled by another</b>, like puzzle pieces that were never meant to be cut to fit. <b>Accidental, interlocking, true.</b>',
+      hook:'Accounts that accidentally fit like puzzle pieces.',
+      prem:['The Gospels answer each other&rsquo;s unexplained details without trying to.','Such undesigned dovetailing is the mark of independent truth, not collusion.'],
+      concl:'The interlocking details point to real reporting.' }
+  ]},
+
+  {id:'sci', icon:'&#128300;', name:'Science & Faith', building:'The Observatory', rooms:[
+    { pin:'&#127765;', short:'First Light', locus:'The First Light', arg:'The Argument from the Big Bang', symbol:'&#127765;', href:'ev-m-bigbang.html',
+      scene:'Through the great telescope you watch the cosmos <b>flare into being from nothing</b> &mdash; space, time, and matter all switched on at once. <b>A universe with a birthday</b> raises the question of a Giver.',
+      hook:'A universe with a birthday needs a cause.',
+      prem:['Cosmology points to an absolute beginning of space, time, and matter.','What begins to exist does not cause itself.'],
+      concl:'The beginning points beyond the physical to a cause.' },
+    { pin:'&#129516;', short:'The Cell', locus:'The Coded Cell', arg:'The Origin of Life Argument', symbol:'&#129516;', href:'ev-m-originlife.html',
+      scene:'Inside the first cell glows a strand of DNA &mdash; <b>a written code, a library of instructions.</b> Chemistry alone never writes language. <b>The cell came pre-loaded with information.</b>',
+      hook:'The first cell came pre-loaded with code.',
+      prem:['Life runs on specified genetic information.','Information of this kind only ever traces back to a mind.'],
+      concl:'The origin of life points to intelligence.' },
+    { pin:'&#10133;', short:'The Equations', locus:'The Unreasonable Equations', arg:'The Argument from Mathematics', symbol:'&#10134;', href:'ev-m-mathematics.html',
+      scene:'A chalkboard fills with equations &mdash; and to your astonishment <b>the universe obeys them.</b> Abstract numbers, dreamed up in the mind, <b>govern the stars.</b> Why should reality be so mathematical?',
+      hook:'Why does the universe obey mathematics?',
+      prem:['Pure mathematics describes the physical world with uncanny precision.','A rational, math-shaped cosmos is expected if a Mind made it.'],
+      concl:'The deep mathematical order points to a Mind.' },
+    { pin:'&#128737;', short:'The Rails', locus:'The Golden Rails', arg:'The Argument from the Laws of Nature', symbol:'&#128737;&#65039;', href:'ev-m-laws.html',
+      scene:'The whole observatory runs on <b>golden rails that never bend</b> &mdash; the same here as at the edge of the galaxy. Laws this constant and universal <b>read like commands, not accidents.</b>',
+      hook:'Laws everywhere the same imply a Lawgiver.',
+      prem:['Nature is governed by consistent, universal, intelligible laws.','Law-like order is the signature of a Lawgiver.'],
+      concl:'The laws of nature point to a Lawgiver.' },
+    { pin:'&#127757;', short:'The Window', locus:'The Privileged Window', arg:'The Privileged Planet Argument', symbol:'&#127757;', href:'ev-m-privileged.html',
+      scene:'You reach the observatory&rsquo;s window and realise Earth sits in a <b>rare, perfect vantage</b> &mdash; placed not only where life can survive, but where the cosmos can be <b>seen and understood.</b>',
+      hook:'Placed not just to live, but to look out.',
+      prem:['The conditions for life also give us a rare window for discovery.','Habitability and discoverability coinciding looks purposed, not random.'],
+      concl:'Our place in the cosmos appears designed for discovery.' }
+  ]},
+
+  {id:'tri', icon:'&#9889;', name:'The Trinity', building:'The Triune Sanctuary', rooms:[
+    { pin:'&#128293;', short:'One Flame', locus:'One Flame, Many Tongues', arg:'The Shema & Trinitarian Monotheism', symbol:'&#128293;', href:'ev-m-shema.html',
+      scene:'On the inner lampstand, <b>one flame burns with several tongues.</b> &ldquo;Hear, O Israel, the LORD is one&rdquo; &mdash; and the word for <i>one</i> is the same used of <b>a unity made of parts.</b>',
+      hook:'&ldquo;The LORD is one&rdquo; &mdash; a oneness with room for plurality.',
+      prem:['The Shema declares one God using a word for composite unity.','Scripture then reveals Father, Son, and Spirit as that one God.'],
+      concl:'Biblical monotheism has room for the Trinity.' },
+    { pin:'&#128173;', short:'The Whisper', locus:'The Plural Whisper', arg:'The Old Testament Foundations', symbol:'&#128173;', href:'ev-m-ot_trinity.html',
+      scene:'From the oldest pages comes a whisper: <b>&ldquo;Let Us make man in Our image.&rdquo;</b> The Angel of the LORD speaks <b>as the LORD</b>, and the Spirit broods over the waters.',
+      hook:'&ldquo;Let Us make man&rdquo; &mdash; plurality in the oldest pages.',
+      prem:['The Old Testament speaks of God in plural and distinguishes persons within God.','These hints are unexplained on a flat, unitarian reading.'],
+      concl:'The Trinity is seeded in the Old Testament itself.' },
+    { pin:'&#128167;', short:'The Name', locus:'The Three-fold Name', arg:'The Trinity in the New Testament', symbol:'&#128167;', href:'ev-m-nt_trinity.html',
+      scene:'At baptism the command is to go in the <b>name &mdash; singular &mdash; of the Father, and of the Son, and of the Holy Spirit.</b> <b>One name; three persons.</b>',
+      hook:'One name &mdash; Father, Son, and Spirit.',
+      prem:['The New Testament names Father, Son, and Spirit together as one Name.','Each is called God and does what only God does.'],
+      concl:'The New Testament teaches one God in three persons.' },
+    { pin:'&#128160;', short:'The Triangle', locus:'The Triangle of Light', arg:'The Philosophical Defence', symbol:'&#128160;', href:'ev-m-philosophical_trinity.html',
+      scene:'A triangle of light hovers &mdash; <b>three distinct corners, one single shape.</b> Not one corner wearing three hats, and not three triangles: <b>three Whos, one What.</b>',
+      hook:'Not three gods &mdash; three Whos, one What.',
+      prem:['God is one in being (the What) and three in person (the Who).','One being in three persons is coherent, not contradictory.'],
+      concl:'The Trinity is one God without contradiction.' },
+    { pin:'&#128009;', short:'The Jordan', locus:'The Scene at the Jordan', arg:'Responding to Modalism', symbol:'&#128009;', href:'ev-m-modalism.html',
+      scene:'At the Jordan, <b>all three appear at once</b> &mdash; the Son in the water, the Spirit as a dove, the Father&rsquo;s voice from heaven. <b>Not one actor swapping masks</b>, but three persons together.',
+      hook:'At the Jordan, all three appear at once &mdash; not one in masks.',
+      prem:['Modalism says God is one person in three changing modes.','At the baptism the three persons are present simultaneously.'],
+      concl:'The persons are distinct, not mere masks &mdash; modalism fails.' }
+  ]}
+];
+
+var wingIdx=0, roomIdx=0, recall=false, revealed=false;
+function rooms(){ return WINGS[wingIdx].rooms; }
+
+function renderWings(){
+  document.getElementById('wings').innerHTML = WINGS.map(function(w,i){
+    return '<button class="wing'+(i===wingIdx?' on':'')+'" onclick="pickWing('+i+')">'+
+      '<span>'+w.icon+'</span>'+w.name+'</button>';
+  }).join('');
+  var w = WINGS[wingIdx], n = w.rooms.length, mins = Math.max(5, n+1);
+  document.getElementById('wing-meta').innerHTML =
+    w.icon+' <b style="color:var(--text-dark)">'+w.building+'</b> &mdash; '+n+' rooms &middot; ~'+mins+' min to walk &middot; walk it once to learn, again from memory to own it.';
+}
+function pickWing(i){
+  wingIdx=i; roomIdx=0; revealed=false;
+  renderWings(); renderRoom();
+  document.querySelector('.route').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function renderRoute(){
+  document.getElementById('route').innerHTML = rooms().map(function(r,i){
+    var cls = i===roomIdx?'stop cur':(i<roomIdx?'stop done':'stop');
+    return '<div class="'+cls+'" onclick="goTo('+i+')"><div class="pin">'+r.pin+'</div><div class="nm">'+r.short+'</div></div>';
+  }).join('');
+}
+function meaningHTML(r){
+  var items = r.prem.map(function(p){return '<li>'+p+'</li>';}).join('')+'<li class="concl">'+r.concl+'</li>';
+  return '<div class="meaning"><div class="lbl">What this room holds</div><ol>'+items+'</ol>'+
+    '<a class="study" href="'+r.href+'">Study it in the Evidence Library &rarr;</a></div>';
+}
+function recallHTML(){
+  return '<div class="recall"><p>You&rsquo;re standing in this room. <b style="color:var(--gold-light)">What argument does it hold &mdash; and what are its premises?</b></p>'+
+    '<button class="reveal-btn" onclick="doReveal()">Reveal the answer</button></div>';
+}
+function renderRoom(){
+  var rs=rooms(), r=rs[roomIdx];
+  document.getElementById('st-kick').textContent='Room '+(roomIdx+1)+' of '+rs.length;
+  document.getElementById('st-locus').innerHTML=r.locus;
+  document.getElementById('st-arg').innerHTML=r.arg;
+  document.getElementById('st-symbol').innerHTML=r.symbol;
+  document.getElementById('st-scene').innerHTML=r.scene;
+  document.getElementById('st-hook-txt').innerHTML=r.hook;
+  var wrap=document.getElementById('st-meaning-wrap');
+  if(recall && !revealed){ wrap.innerHTML=recallHTML(); }
+  else { wrap.innerHTML=meaningHTML(r); }
+  document.getElementById('prev').disabled = roomIdx===0;
+  document.getElementById('next').disabled = roomIdx===rs.length-1;
+  renderRoute();
+}
+function goTo(i){ roomIdx=i; revealed=false; renderRoom(); }
+function step(d){ var n=roomIdx+d; if(n<0||n>=rooms().length) return; goTo(n); }
+function toggleRecall(){
+  recall=!recall; revealed=false;
+  document.getElementById('recall-toggle').classList.toggle('on',recall);
+  renderRoom();
+}
+function doReveal(){ revealed=true; renderRoom(); }
+
+renderWings();
+renderRoom();
+
+</script>
+<script src="/ad-nav.js" defer></script>
+</body>
+</html>
