@@ -259,7 +259,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
   <div class="wrap">
     <div class="crumbs"><a href="evidence-library.html">Evidence Library</a> &nbsp;›&nbsp; Jesus &nbsp;›&nbsp; <span style="color:var(--gl)">Messianic Prophecy</span></div>
     <span class="eyebrow"><span class="dot"></span> Pro · Mastery Track</span>
-    <h1>Messianic Prophecy — the Statistical Case</h1>
+    <h1>Messianic Prophecy — Foretold and Fulfilled</h1>
     <p class="lede">The deep dive explains the argument. This track makes you able to <em>wield</em> it — rebuild it from memory, meet its hardest objections, and stay clear and calm in a real conversation.</p>
   </div>
 </header>
@@ -624,11 +624,11 @@ async function scoreExplain(btn){
   if(!txt){ return; }
   if(btn){ btn.disabled = true; btn.dataset.lbl = btn.textContent; btn.textContent = 'Scoring...'; }
   try{
-    var prompt = 'Please evaluate this student explanation of "Messianic Prophecy — the Statistical Case". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
+    var prompt = 'Please evaluate this student explanation of "Messianic Prophecy". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
     var res = await fetch('/api/tutor', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ question: prompt, argument: 'Messianic Prophecy — the Statistical Case', category: 'Evidence Library' })
+      body: JSON.stringify({ question: prompt, argument: 'Messianic Prophecy', category: 'Evidence Library' })
     });
     if(!res.ok){ throw new Error('bad status'); }
     var data = await res.json();
