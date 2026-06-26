@@ -100,14 +100,6 @@
   <p class="art-eyebrow">Deep Dive Essay <span class="art-badge">Pro</span></p>
   <h1>Did the Universe Begin? The Kalam Cosmological Argument</h1>
   <p class="art-meta">Apologia Daily &middot; deep dive &middot; fully sourced</p>
-  <div class="essay-tutor">
-    <div class="et-head"><span style="font-size:1.05rem">&#129504;</span><span>Ask the AI Tutor about this argument</span></div>
-    <div class="et-row">
-      <input id="et-input" type="text" placeholder="e.g. Explain this simply, or give me the strongest objection&hellip;" onkeydown="if(event.key==='Enter'){askTutor();}"/>
-      <button id="et-btn" type="button" onclick="askTutor()">Ask</button>
-    </div>
-    <div id="et-resp" class="et-resp" style="display:none"><div class="et-label">AI Tutor</div><div id="et-text" class="et-text"></div></div>
-  </div>
   <div class="art-body">
 <h2>A question that refuses to stay small</h2>
 <p>Ask a child where the world came from and you will get a chain of "and before that?" questions that does not naturally end. The adult version is no less stubborn. Either the universe has always existed, stretching back through an unbounded ocean of prior moments, or it had a first moment &mdash; a beginning before which there was, quite literally, nothing physical at all. There is no third option, and almost everything we believe about reality hangs on which it is. If the cosmos is a self-sufficient, eternal brute fact, then it is the deepest thing there is, and the religious instinct that something stands behind it is a sentimental error. But if the universe began &mdash; if space, time, matter, and energy all switched on together a finite time ago &mdash; then the most natural question in the world becomes unavoidable: what brought it into being? The Kalam cosmological argument is a disciplined attempt to take that question seriously without cheating, and to follow it wherever it leads.</p>
@@ -194,21 +186,48 @@
   </section>
 </main>
 <script src="/ad-nav.js" defer></script>
+<div id="float-tutor" style="position:fixed;bottom:50%;right:0;transform:translateY(50%);z-index:500;display:flex;flex-direction:column;align-items:flex-end;gap:0.5rem;">
+  <div id="float-panel" style="display:none;background:#0a1628;border:1px solid rgba(200,169,81,0.3);border-radius:8px 0 0 8px;width:min(320px,calc(100vw - 60px));box-shadow:-8px 0 32px rgba(0,0,0,0.4);">
+    <div style="padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;">
+      <div>
+        <div style="font-family:'DM Sans',sans-serif;font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#c8a951;">AI Tutor</div>
+        <div style="font-family:'Playfair Display',serif;font-size:0.9rem;color:#fff;margin-top:2px;">The Kalam Cosmological Argument</div>
+      </div>
+      <button type="button" onclick="toggleFloatTutor()" style="background:none;border:none;color:rgba(255,255,255,0.4);font-size:1rem;cursor:pointer;padding:4px;">&#10005;</button>
+    </div>
+    <div style="padding:1rem 1.25rem;">
+      <textarea id="float-input" rows="2" placeholder="Ask anything about this argument&hellip;" style="width:100%;box-sizing:border-box;font-family:'DM Sans',sans-serif;font-size:0.85rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:4px;color:#fff;padding:8px 10px;resize:none;outline:none;" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendFloatQuestion();}"></textarea>
+      <button type="button" onclick="sendFloatQuestion()" id="float-send-btn" style="margin-top:0.5rem;width:100%;font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:500;background:#c8a951;color:#050d1a;border:none;border-radius:4px;padding:9px;cursor:pointer;">Ask AI Tutor</button>
+      <div id="float-response" style="display:none;margin-top:0.75rem;background:rgba(255,255,255,0.04);border-radius:4px;padding:0.75rem;font-family:'Source Serif 4',serif;font-size:0.85rem;color:rgba(255,255,255,0.8);line-height:1.7;max-height:200px;overflow-y:auto;white-space:pre-wrap;"></div>
+    </div>
+  </div>
+  <button type="button" onclick="toggleFloatTutor()" id="float-btn" style="background:#c8a951;color:#050d1a;border:none;border-radius:6px 0 0 6px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:600;cursor:pointer;box-shadow:-4px 0 16px rgba(200,169,81,0.35);display:flex;align-items:center;gap:7px;white-space:nowrap;"><span style="font-size:1rem;">&#129504;</span> Ask AI Tutor</button>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 var AD_ARG = 'The Kalam Cosmological Argument';
-async function askTutor(){
-  var inp=document.getElementById('et-input'),btn=document.getElementById('et-btn');
+var floatOpen=false;
+function toggleFloatTutor(){
+  floatOpen=!floatOpen;
+  document.getElementById('float-panel').style.display=floatOpen?'block':'none';
+  var b=document.getElementById('float-btn');
+  b.style.background=floatOpen?'#0a1628':'#c8a951';
+  b.style.color=floatOpen?'#c8a951':'#050d1a';
+  b.style.border=floatOpen?'1px solid rgba(200,169,81,0.3)':'none';
+  if(floatOpen){ setTimeout(function(){var i=document.getElementById('float-input'); if(i) i.focus();},100); }
+}
+async function sendFloatQuestion(){
+  var inp=document.getElementById('float-input'),btn=document.getElementById('float-send-btn'),resp=document.getElementById('float-response');
   var q=(inp.value||'').trim(); if(!q) return;
-  var resp=document.getElementById('et-resp'),txt=document.getElementById('et-text');
   btn.disabled=true; var ol=btn.textContent; btn.textContent='Thinking…';
-  resp.style.display='block'; txt.textContent='…';
+  resp.style.display='block'; resp.textContent='…';
   try{
     var r=await fetch('/api/tutor',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,argument:AD_ARG,category:'Evidence Library'})});
-    var d=await r.json(); txt.textContent=(d.answer||'Sorry, no response just now. Please try again.');
-  }catch(e){ txt.textContent='The tutor is unavailable right now. Please try again in a moment.'; }
+    var d=await r.json(); resp.textContent=(d.answer||'Sorry, no response just now. Please try again.');
+  }catch(e){ resp.textContent='The tutor is unavailable right now. Please try again in a moment.'; }
   btn.disabled=false; btn.textContent=ol;
 }
+
 (function(){
   function boot(){
     if(window.supabase && window.supabase.createClient){
