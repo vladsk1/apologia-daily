@@ -41,6 +41,17 @@
   .art-cta p{font-family:'DM Sans',sans-serif;color:#cdd8e8;font-size:.95rem;margin:0 auto 16px;max-width:46ch}
   .art-cta a{display:inline-block;font-family:'DM Sans',sans-serif;font-weight:600;background:#c8a951;color:#0a1628;text-decoration:none;padding:11px 22px;border-radius:8px;margin:4px}
   .art-cta a.ghost{background:transparent;color:#e8cf87;border:1px solid rgba(200,169,81,.5)}
+  .essay-tutor{background:linear-gradient(135deg,#050d1a,#0f2040);border:1px solid rgba(200,169,81,.3);border-radius:10px;padding:1.1rem 1.25rem;margin:0 0 30px}
+  .et-head{display:flex;align-items:center;gap:9px;font-family:'DM Sans',sans-serif;font-size:.82rem;color:rgba(255,255,255,.72);margin-bottom:.8rem}
+  .et-row{display:flex;gap:8px}
+  .et-row input{flex:1;min-width:0;padding:10px 12px;border:1px solid rgba(255,255,255,.18);border-radius:5px;font-family:'DM Sans',sans-serif;font-size:.9rem;color:#fff;background:rgba(255,255,255,.07);outline:none}
+  .et-row input::placeholder{color:rgba(255,255,255,.35)}
+  .et-row input:focus{border-color:rgba(200,169,81,.55)}
+  .et-row button{padding:10px 20px;border-radius:5px;background:#c8a951;color:#0a1628;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;border:none;cursor:pointer;flex-shrink:0}
+  .et-row button:disabled{opacity:.5;cursor:default}
+  .et-resp{margin-top:.9rem;padding:.9rem 1rem;background:rgba(255,255,255,.05);border-left:2px solid #c8a951;border-radius:0 6px 6px 0}
+  .et-label{font-family:'DM Sans',sans-serif;font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#c8a951;margin-bottom:.5rem}
+  .et-text{font-family:'Source Serif 4',Georgia,serif;font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.7;white-space:pre-wrap}
 </style>
 </head>
 <body>
@@ -75,11 +86,28 @@
     </div>
   </div>
 </nav>
+<div id="proGate" style="display:none;position:fixed;inset:64px 0 0;z-index:90;background:linear-gradient(160deg,#050d1a,#0f2040);color:#fff;align-items:center;justify-content:center;text-align:center;padding:24px">
+  <div style="max-width:460px">
+    <div style="font-size:34px;margin-bottom:8px">&#128274;</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:600;margin-bottom:10px">Deep-Dive Essays are a Pro feature</h2>
+    <p style="font-family:'DM Sans',sans-serif;color:#cdd8e8;font-size:15px;margin-bottom:22px">Go beyond the summary: the full scholarly case for each argument &mdash; its history, the science, the strongest objections answered at length, with sources and an AI tutor.</p>
+    <a href="/index.html#pricing" style="display:inline-block;font-family:'DM Sans',sans-serif;font-weight:600;background:#c8a951;color:#0a1628;text-decoration:none;padding:11px 24px;border-radius:6px;margin-bottom:14px">Upgrade to Pro &mdash; $8/mo</a>
+    <div><a href="/evidence-library.html" style="font-family:'DM Sans',sans-serif;color:#8ea2bf;font-size:13px;text-decoration:none">&larr; Back to the Evidence Library</a></div>
+  </div>
+</div>
 <main class="art">
   <nav class="art-crumbs"><a href="/evidence-library.html">Evidence Library</a> &rsaquo; <a href="/ev-m-kalam.html">Kalam</a> &rsaquo; <span>Deep Dive</span></nav>
   <p class="art-eyebrow">Deep Dive Essay <span class="art-badge">Pro</span></p>
   <h1>Did the Universe Begin? The Kalam Cosmological Argument</h1>
   <p class="art-meta">Apologia Daily &middot; ~2,200 words &middot; fully sourced</p>
+  <div class="essay-tutor">
+    <div class="et-head"><span style="font-size:1.05rem">&#129504;</span><span>Ask the AI Tutor about this argument</span></div>
+    <div class="et-row">
+      <input id="et-input" type="text" placeholder="e.g. Explain this simply, or give me the strongest objection&hellip;" onkeydown="if(event.key==='Enter'){askTutor();}"/>
+      <button id="et-btn" type="button" onclick="askTutor()">Ask</button>
+    </div>
+    <div id="et-resp" class="et-resp" style="display:none"><div class="et-label">AI Tutor</div><div id="et-text" class="et-text"></div></div>
+  </div>
   <div class="art-body">
 <h2>A question that refuses to stay small</h2>
 <p>Ask a child where the world came from and you will get a chain of "and before that?" questions that does not naturally end. The adult version is no less stubborn. Either the universe has always existed, stretching back through an unbounded ocean of prior moments, or it had a first moment &mdash; a beginning before which there was, quite literally, nothing physical at all. There is no third option, and almost everything we believe about reality hangs on which it is. If the cosmos is a self-sufficient, eternal brute fact, then it is the deepest thing there is, and the religious instinct that something stands behind it is a sentimental error. But if the universe began &mdash; if space, time, matter, and energy all switched on together a finite time ago &mdash; then the most natural question in the world becomes unavoidable: what brought it into being? The Kalam cosmological argument is a disciplined attempt to take that question seriously without cheating, and to follow it wherever it leads.</p>
@@ -166,5 +194,37 @@
   </section>
 </main>
 <script src="/ad-nav.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+var AD_ARG = 'The Kalam Cosmological Argument';
+async function askTutor(){
+  var inp=document.getElementById('et-input'),btn=document.getElementById('et-btn');
+  var q=(inp.value||'').trim(); if(!q) return;
+  var resp=document.getElementById('et-resp'),txt=document.getElementById('et-text');
+  btn.disabled=true; var ol=btn.textContent; btn.textContent='Thinking…';
+  resp.style.display='block'; txt.textContent='…';
+  try{
+    var r=await fetch('/api/tutor',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,argument:AD_ARG,category:'Evidence Library'})});
+    var d=await r.json(); txt.textContent=(d.answer||'Sorry, no response just now. Please try again.');
+  }catch(e){ txt.textContent='The tutor is unavailable right now. Please try again in a moment.'; }
+  btn.disabled=false; btn.textContent=ol;
+}
+(function(){
+  function boot(){
+    if(window.supabase && window.supabase.createClient){
+      try{
+        var sb=window.supabase.createClient('https://noprgxkwniouukmrfozc.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw');
+        sb.auth.getSession().then(function(result){
+          var session=result.data && result.data.session;
+          var isPro=true; /* TEMP until Stripe is live - deep-dive essays unlocked for everyone */
+          /* Post-Stripe: var isPro = !!(session && session.user && session.user.user_metadata && session.user.user_metadata.is_pro===true); */
+          if(!isPro){ var g=document.getElementById('proGate'); if(g) g.style.display='flex'; }
+        });
+      }catch(e){}
+    }
+  }
+  if(document.readyState!=='loading') boot(); else document.addEventListener('DOMContentLoaded',boot);
+})();
+</script>
 </body>
 </html>
