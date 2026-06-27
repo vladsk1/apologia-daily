@@ -39,6 +39,7 @@ export default async function handler(req, res) {
   var email = record.email || '(no email on record)';
   var when = record.created_at || new Date().toISOString();
   var userId = record.id || null;
+  var kind = (body.event === 'confirmed') ? 'confirmed' : 'created';
 
   var notes = [];
 
@@ -61,10 +62,10 @@ export default async function handler(req, res) {
   var totalLine = (total !== null) ? ('Total users: ' + total) : '';
   if (RESEND) {
     try {
-      var subject = '🎉 New signup: ' + email + (total !== null ? ' (#' + total + ')' : '');
+      var subject = (kind === 'confirmed' ? '✅ Email confirmed: ' : '🎉 New signup: ') + email + (total !== null ? ' (#' + total + ')' : '');
       var html =
         '<div style="font-family:system-ui,sans-serif;font-size:15px;line-height:1.6">' +
-        '<h2 style="margin:0 0 8px">New Apologia Daily signup</h2>' +
+        '<h2 style="margin:0 0 8px">' + (kind === 'confirmed' ? 'Email confirmed' : 'New Apologia Daily signup') + '</h2>' +
         '<p style="margin:0"><strong>' + email + '</strong></p>' +
         (totalLine ? '<p style="margin:6px 0;color:#555">' + totalLine + '</p>' : '') +
         '<p style="margin:6px 0;color:#888;font-size:13px">' + when + '</p>' +
@@ -90,7 +91,7 @@ export default async function handler(req, res) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           api_key: PH_KEY,
-          event: 'signup_completed',
+          event: (kind === 'confirmed' ? 'email_confirmed' : 'signup_completed'),
           distinct_id: userId || email,
           properties: { email: email, $lib: 'apologia-server' }
         })
