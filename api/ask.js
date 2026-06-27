@@ -146,7 +146,9 @@ DENOMINATIONAL NEUTRALITY — STAY ON THE SHARED CORE:
       body: JSON.stringify({
         model: 'claude-sonnet-4-5-20250929',
         max_tokens: 1200,
-        system: systemPrompt,
+        // Cache the large (~3K token) static system prompt. Sonnet's cache
+        // minimum is 1024 tokens, so this qualifies; repeat reads cost ~10x less.
+        system: [{ type: 'text', text: systemPrompt, cache_control: { type: 'ephemeral' } }],
         messages: [{ role: 'user', content: question }]
       })
     });
