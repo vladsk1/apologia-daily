@@ -5,7 +5,7 @@
       "schedule": "0 7 * * 1"
     },
     {
-      "path": "/api/send-push?secret=apologia-cron-2026",
+      "path": "/api/push?do=send&secret=apologia-cron-2026",
       "schedule": "0 13 * * *"
     }
   ]

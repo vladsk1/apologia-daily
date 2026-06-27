@@ -7,7 +7,7 @@
    Bump CACHE_VERSION to force-update clients after a deploy. */
 'use strict';
 
-var CACHE_VERSION = 'apd-v2';
+var CACHE_VERSION = 'apd-v3';
 var SHELL = [
   '/',
   '/index.html',
@@ -89,7 +89,7 @@ self.addEventListener('push', function (e) {
     try { if (e.data) data = e.data.json(); } catch (err) {}
     if (!data.title) {
       try {
-        var r = await fetch('/api/today', { cache: 'no-store' });
+        var r = await fetch('/api/push?do=today', { cache: 'no-store' });
         if (r.ok) data = await r.json();
       } catch (err2) {}
     }
