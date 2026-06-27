@@ -85,4 +85,135 @@
       }
     }, true);
   } catch (e) {}
+
+  /* ============================================================
+     PWA: make the site installable + work offline.
+     Injects the manifest/icons/theme tags (so we don't have to edit
+     every page's <head>), registers the service worker, and offers a
+     tasteful Install button only when the browser reports it's installable.
+     ============================================================ */
+  try {
+    var head = document.head || document.getElementsByTagName('head')[0];
+    function addOnce(sel, make) { if (head && !document.querySelector(sel)) head.appendChild(make()); }
+    addOnce('link[rel="manifest"]', function () {
+      var l = document.createElement('link'); l.rel = 'manifest'; l.href = '/manifest.json'; return l;
+    });
+    addOnce('link[rel="apple-touch-icon"]', function () {
+      var l = document.createElement('link'); l.rel = 'apple-touch-icon'; l.href = '/apple-touch-icon.png'; return l;
+    });
+    addOnce('meta[name="theme-color"]', function () {
+      var m = document.createElement('meta'); m.name = 'theme-color'; m.content = '#0a1628'; return m;
+    });
+    addOnce('meta[name="apple-mobile-web-app-capable"]', function () {
+      var m = document.createElement('meta'); m.name = 'apple-mobile-web-app-capable'; m.content = 'yes'; return m;
+    });
+    addOnce('meta[name="apple-mobile-web-app-title"]', function () {
+      var m = document.createElement('meta'); m.name = 'apple-mobile-web-app-title'; m.content = 'Apologia'; return m;
+    });
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js').catch(function () {});
+      });
+    }
+
+    /* ---- engagement gate: don't nag first-time visitors ----
+       Count visits once per session; consider someone "engaged" on their 2nd
+       visit, or once they have any saved progress. Install/notify affordances
+       only appear for engaged users (or after a long dwell this session). */
+    try {
+      if (!sessionStorage.getItem('ad_sess_counted')) {
+        sessionStorage.setItem('ad_sess_counted', '1');
+        var vc = (parseInt(localStorage.getItem('ad_visits') || '0', 10) || 0) + 1;
+        localStorage.setItem('ad_visits', String(vc));
+      }
+    } catch (e) {}
+    function adEngaged() {
+      try {
+        if ((parseInt(localStorage.getItem('ad_visits') || '0', 10) || 0) >= 2) return true;
+        if (localStorage.getItem('ad_mastery') || localStorage.getItem('ad_streak')) return true;
+      } catch (e) {}
+      return false;
+    }
+
+    /* small shared pill-button factory (bottom-right stack) */
+    function adPill(id, label, bottomPx, onClick) {
+      if (document.getElementById(id)) return document.getElementById(id);
+      var b = document.createElement('button');
+      b.id = id; b.textContent = label;
+      b.setAttribute('style',
+        'position:fixed;right:14px;bottom:' + bottomPx + 'px;z-index:99999;' +
+        'font:600 13px/1 "DM Sans",system-ui,sans-serif;background:#c8a951;color:#0a1628;' +
+        'border:0;border-radius:999px;padding:11px 16px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.35)');
+      b.onclick = onClick;
+      document.body.appendChild(b);
+      return b;
+    }
+
+    /* Install prompt — Android/desktop Chrome. Stash the event always, but only
+       surface the button for engaged users (or after 60s dwell this session). */
+    var deferred = null, installShown = false;
+    function showInstall() {
+      if (installShown || !deferred) return;
+      installShown = true;
+      try { window.adTrack('pwa_install_offered', { where: location.pathname }); } catch (x) {}
+      adPill('ad-install', '↓ Install app', 14, function () {
+        if (!deferred) return;
+        deferred.prompt();
+        deferred.userChoice.then(function (c) {
+          try { window.adTrack('pwa_install_choice', { outcome: c && c.outcome }); } catch (x) {}
+          deferred = null;
+          var el = document.getElementById('ad-install'); if (el) el.remove();
+        });
+      });
+    }
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault(); deferred = e;
+      try { window.adTrack('pwa_installable', { where: location.pathname }); } catch (x) {}
+      if (adEngaged()) showInstall();
+      else setTimeout(showInstall, 60000); // give first-timers time to look around
+    });
+    window.addEventListener('appinstalled', function () {
+      try { window.adTrack('pwa_installed', {}); } catch (x) {}
+    });
+
+    /* ---- Push opt-in: "Daily reminder" bell, only for engaged users ----
+       Asks permission only on explicit tap (never auto-prompts), subscribes via
+       the VAPID public key, and registers the subscription server-side. */
+    window.adEnablePush = async function () {
+      try {
+        if (!('serviceWorker' in navigator) || !('PushManager' in window)) {
+          alert('Notifications are not supported on this browser.'); return false;
+        }
+        var perm = await Notification.requestPermission();
+        try { window.adTrack('push_permission', { outcome: perm }); } catch (x) {}
+        if (perm !== 'granted') return false;
+        var pub = await (await fetch('/api/push-public')).json();
+        if (!pub || !pub.key) { alert('Daily reminders are not configured yet.'); return false; }
+        var reg = await navigator.serviceWorker.ready;
+        function b64ToU8(s) {
+          var pad = '='.repeat((4 - s.length % 4) % 4);
+          var b = atob((s + pad).replace(/-/g, '+').replace(/_/g, '/'));
+          return Uint8Array.from(b, function (c) { return c.charCodeAt(0); });
+        }
+        var sub = await reg.pushManager.subscribe({
+          userVisibleOnly: true, applicationServerKey: b64ToU8(pub.key)
+        });
+        await fetch('/api/push-subscribe', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(sub)
+        });
+        try { window.adTrack('push_subscribed', {}); } catch (x) {}
+        var el = document.getElementById('ad-notify'); if (el) el.textContent = '✓ Reminders on';
+        return true;
+      } catch (e) { return false; }
+    };
+    // offer the bell to engaged users who haven't enabled it yet
+    try {
+      if (adEngaged() && 'Notification' in window && Notification.permission === 'default') {
+        var bottom = (deferred || !installShown) ? 60 : 14;
+        adPill('ad-notify', '🔔 Daily reminder', bottom, function () { window.adEnablePush(); });
+      }
+    } catch (e) {}
+  } catch (e) {}
 })();
