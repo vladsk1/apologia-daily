@@ -188,7 +188,7 @@
         var perm = await Notification.requestPermission();
         try { window.adTrack('push_permission', { outcome: perm }); } catch (x) {}
         if (perm !== 'granted') return false;
-        var pub = await (await fetch('/api/push-public')).json();
+        var pub = await (await fetch('/api/push?do=public')).json();
         if (!pub || !pub.key) { alert('Daily reminders are not configured yet.'); return false; }
         var reg = await navigator.serviceWorker.ready;
         function b64ToU8(s) {
@@ -199,7 +199,7 @@
         var sub = await reg.pushManager.subscribe({
           userVisibleOnly: true, applicationServerKey: b64ToU8(pub.key)
         });
-        await fetch('/api/push-subscribe', {
+        await fetch('/api/push', {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(sub)
         });
