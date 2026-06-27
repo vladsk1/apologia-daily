@@ -7,7 +7,7 @@
    Bump CACHE_VERSION to force-update clients after a deploy. */
 'use strict';
 
-var CACHE_VERSION = 'apd-v1';
+var CACHE_VERSION = 'apd-v2';
 var SHELL = [
   '/',
   '/index.html',
@@ -82,16 +82,24 @@ self.addEventListener('fetch', function (e) {
    Server sends a push payload; this shows it. Wired but dormant until you
    add a push provider + VAPID keys. */
 self.addEventListener('push', function (e) {
-  var data = {};
-  try { data = e.data ? e.data.json() : {}; } catch (err) {}
-  var title = data.title || 'Apologia Daily';
-  var opts = {
-    body: data.body || "Today's argument is ready.",
-    icon: '/pwa-icon-192.png',
-    badge: '/pwa-icon-192.png',
-    data: { url: data.url || '/dashboard.html' }
-  };
-  e.waitUntil(self.registration.showNotification(title, opts));
+  // Payload pushes are supported, but our daily cron sends no payload — so we
+  // fetch today's argument to show something fresh and specific.
+  e.waitUntil((async function () {
+    var data = {};
+    try { if (e.data) data = e.data.json(); } catch (err) {}
+    if (!data.title) {
+      try {
+        var r = await fetch('/api/today', { cache: 'no-store' });
+        if (r.ok) data = await r.json();
+      } catch (err2) {}
+    }
+    return self.registration.showNotification(data.title || 'Apologia Daily', {
+      body: data.body || "Today's argument is ready.",
+      icon: '/pwa-icon-192.png',
+      badge: '/pwa-icon-192.png',
+      data: { url: data.url || '/dashboard.html' }
+    });
+  })());
 });
 
 self.addEventListener('notificationclick', function (e) {
