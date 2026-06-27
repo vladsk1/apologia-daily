@@ -25,8 +25,8 @@ export default async function handler(req, res) {
   }
 
   var URL = process.env.SUPABASE_URL || 'https://noprgxkwniouukmrfozc.supabase.co';
-  var KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!KEY) return res.status(200).json({ ok: false, note: 'SUPABASE_SERVICE_ROLE_KEY not set' });
+  var KEY = (process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_KEY);
+  if (!KEY) return res.status(200).json({ ok: false, note: 'SUPABASE_SERVICE_KEY not set' });
 
   try {
     var r = await fetch(URL + '/rest/v1/push_subscriptions?on_conflict=endpoint', {

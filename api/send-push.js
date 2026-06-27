@@ -31,12 +31,12 @@ export default async function handler(req, res) {
 
   var PUB = process.env.VAPID_PUBLIC_KEY, PRIV = process.env.VAPID_PRIVATE_KEY;
   var URL = process.env.SUPABASE_URL || 'https://noprgxkwniouukmrfozc.supabase.co';
-  var KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  var KEY = (process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_KEY);
   var CONTACT = process.env.PUSH_CONTACT || 'vkiparizov@gmail.com';
   var out = { sent: 0, pruned: 0, failed: 0, notes: [] };
 
   if (!PUB || !PRIV) { out.notes.push('VAPID keys not set.'); return res.status(200).json(out); }
-  if (!KEY) { out.notes.push('SUPABASE_SERVICE_ROLE_KEY not set.'); return res.status(200).json(out); }
+  if (!KEY) { out.notes.push('SUPABASE_SERVICE_KEY not set.'); return res.status(200).json(out); }
 
   // Load all subscriptions.
   var subs = [];
