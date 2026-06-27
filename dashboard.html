@@ -417,14 +417,14 @@
     <script src="/coach.js"></script>
     <script>try{ Coach.renderPanel('coach-body'); }catch(e){}</script>
 
-    <!-- DAILY REMINDERS — push opt-in (self-hides if unsupported / on / dismissed) -->
+    <!-- DAILY REMINDERS — push on/off (self-hides if unsupported or blocked) -->
     <div id="notify-card" style="display:none;position:relative;background:linear-gradient(135deg,#0a1628,#050d1a);border:1px solid rgba(200,169,81,0.35);border-radius:10px;padding:1.1rem 1.4rem;margin-bottom:1.75rem;box-shadow:0 4px 20px rgba(5,13,26,0.08);">
       <button id="notify-x" aria-label="Dismiss" style="position:absolute;top:8px;right:11px;background:none;border:0;color:rgba(255,255,255,0.35);font-size:1.1rem;cursor:pointer;line-height:1;">&times;</button>
       <div style="display:flex;align-items:center;gap:0.9rem;flex-wrap:wrap;">
         <span style="width:38px;height:38px;border-radius:10px;background:rgba(200,169,81,0.14);border:1px solid rgba(200,169,81,0.35);display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0;">&#128276;</span>
         <div style="flex:1;min-width:180px;">
-          <div style="font-family:var(--font-ui);font-size:0.92rem;font-weight:600;color:#fff;">Get a daily argument</div>
-          <div style="font-family:var(--font-ui);font-size:0.78rem;color:rgba(255,255,255,0.55);margin-top:2px;">One short nudge a day keeps the arguments sharp. No spam &mdash; just today's argument.</div>
+          <div id="notify-title" style="font-family:var(--font-ui);font-size:0.92rem;font-weight:600;color:#fff;">Get a daily argument</div>
+          <div id="notify-desc" style="font-family:var(--font-ui);font-size:0.78rem;color:rgba(255,255,255,0.55);margin-top:2px;">One short nudge a day keeps the arguments sharp. No spam &mdash; just today's argument.</div>
         </div>
         <button id="notify-on" style="font-family:var(--font-ui);font-size:0.82rem;font-weight:600;background:var(--gold);color:#0a1628;border:0;border-radius:6px;padding:9px 16px;cursor:pointer;white-space:nowrap;">Turn on reminders</button>
       </div>
@@ -435,16 +435,49 @@
           var card=document.getElementById('notify-card');
           if(!card) return;
           var supported=('serviceWorker' in navigator)&&('PushManager' in window)&&('Notification' in window);
-          var dismissed=localStorage.getItem('ad_notify_dismissed')==='1';
-          if(supported && !dismissed && Notification.permission==='default'){ card.style.display='block'; }
-          document.getElementById('notify-x').onclick=function(){ try{localStorage.setItem('ad_notify_dismissed','1');}catch(e){} card.style.display='none'; };
-          document.getElementById('notify-on').onclick=function(){
-            var b=this; b.textContent='Enabling…'; b.disabled=true;
-            Promise.resolve(window.adEnablePush?window.adEnablePush():false).then(function(ok){
-              if(ok){ b.textContent='✓ Reminders on'; setTimeout(function(){card.style.display='none';},1500); }
-              else { b.textContent='Turn on reminders'; b.disabled=false; }
-            });
-          };
+          if(!supported) return;
+          var titleEl=document.getElementById('notify-title');
+          var descEl=document.getElementById('notify-desc');
+          var btn=document.getElementById('notify-on');
+          var xBtn=document.getElementById('notify-x');
+
+          function showOn(){
+            card.style.display='block';
+            titleEl.textContent='Daily reminders are on';
+            descEl.textContent="You'll get one short argument each day. Tap to stop.";
+            btn.textContent='Turn off'; btn.disabled=false;
+            btn.style.background='transparent'; btn.style.color='rgba(255,255,255,0.7)';
+            btn.style.border='1px solid rgba(255,255,255,0.25)';
+            xBtn.style.display='none';
+            btn.onclick=function(){
+              btn.textContent='Turning off…'; btn.disabled=true;
+              Promise.resolve(window.adDisablePush?window.adDisablePush():false).then(function(){ showOff(false); });
+            };
+          }
+          function showOff(invite){
+            titleEl.textContent='Get a daily argument';
+            descEl.textContent="One short nudge a day keeps the arguments sharp. No spam — just today's argument.";
+            btn.textContent='Turn on reminders'; btn.disabled=false;
+            btn.style.background='var(--gold)'; btn.style.color='#0a1628'; btn.style.border='0';
+            xBtn.style.display='';
+            card.style.display = invite ? 'block' : 'block';
+            btn.onclick=function(){
+              btn.textContent='Enabling…'; btn.disabled=true;
+              Promise.resolve(window.adEnablePush?window.adEnablePush():false).then(function(ok){
+                if(ok){ showOn(); } else { showOff(true); }
+              });
+            };
+          }
+
+          xBtn.onclick=function(){ try{localStorage.setItem('ad_notify_dismissed','1');}catch(e){} card.style.display='none'; };
+
+          // Decide which state to show.
+          Promise.resolve(window.adPushOn?window.adPushOn():false).then(function(on){
+            if(on){ showOn(); return; }
+            if(Notification.permission==='denied') return;            // blocked in browser; can't re-prompt
+            if(localStorage.getItem('ad_notify_dismissed')==='1') return;
+            showOff(true);                                            // invite to turn on
+          });
         }catch(e){}
       })();
     </script>

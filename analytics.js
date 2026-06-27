@@ -208,6 +208,28 @@
         return true;
       } catch (e) { return false; }
     };
+
+    /* Turn daily reminders OFF: unsubscribe locally. The cron auto-prunes the
+       now-dead endpoint (push service returns 410) on its next run. */
+    window.adDisablePush = async function () {
+      try {
+        if (!('serviceWorker' in navigator)) return false;
+        var reg = await navigator.serviceWorker.ready;
+        var sub = reg.pushManager && (await reg.pushManager.getSubscription());
+        if (sub) await sub.unsubscribe();
+        try { window.adTrack('push_unsubscribed', {}); } catch (x) {}
+        return true;
+      } catch (e) { return false; }
+    };
+
+    /* Is this device currently subscribed to reminders? */
+    window.adPushOn = async function () {
+      try {
+        if (!('serviceWorker' in navigator) || !('PushManager' in window)) return false;
+        var reg = await navigator.serviceWorker.ready;
+        return !!(reg.pushManager && (await reg.pushManager.getSubscription()));
+      } catch (e) { return false; }
+    };
     // offer the bell to engaged users who haven't enabled it yet
     try {
       if (adEngaged() && 'Notification' in window && Notification.permission === 'default') {
