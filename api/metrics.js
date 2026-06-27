@@ -17,11 +17,11 @@ export default async function handler(req, res) {
   }
 
   var URL = process.env.SUPABASE_URL || 'https://noprgxkwniouukmrfozc.supabase.co';
-  var KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  var KEY = (process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_KEY);
   var out = { generated: new Date().toISOString(), metrics: {}, notes: [] };
 
   if (!KEY) {
-    out.notes.push('SUPABASE_SERVICE_ROLE_KEY not set — add it in Vercel env to enable product metrics.');
+    out.notes.push('SUPABASE_SERVICE_KEY not set — add it in Vercel env to enable product metrics.');
     return res.status(200).json(out);
   }
 

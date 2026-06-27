@@ -45,7 +45,7 @@ export default async function handler(req, res) {
   // Optional: running user total (GoTrue admin API), best-effort.
   var total = null;
   var SB_URL = process.env.SUPABASE_URL || 'https://noprgxkwniouukmrfozc.supabase.co';
-  var SB_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  var SB_KEY = (process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_KEY);
   if (SB_KEY) {
     try {
       var ur = await fetch(SB_URL + '/auth/v1/admin/users?page=1&per_page=1',
