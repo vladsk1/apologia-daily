@@ -85,4 +85,63 @@
       }
     }, true);
   } catch (e) {}
+
+  /* ============================================================
+     PWA: make the site installable + work offline.
+     Injects the manifest/icons/theme tags (so we don't have to edit
+     every page's <head>), registers the service worker, and offers a
+     tasteful Install button only when the browser reports it's installable.
+     ============================================================ */
+  try {
+    var head = document.head || document.getElementsByTagName('head')[0];
+    function addOnce(sel, make) { if (head && !document.querySelector(sel)) head.appendChild(make()); }
+    addOnce('link[rel="manifest"]', function () {
+      var l = document.createElement('link'); l.rel = 'manifest'; l.href = '/manifest.json'; return l;
+    });
+    addOnce('link[rel="apple-touch-icon"]', function () {
+      var l = document.createElement('link'); l.rel = 'apple-touch-icon'; l.href = '/apple-touch-icon.png'; return l;
+    });
+    addOnce('meta[name="theme-color"]', function () {
+      var m = document.createElement('meta'); m.name = 'theme-color'; m.content = '#0a1628'; return m;
+    });
+    addOnce('meta[name="apple-mobile-web-app-capable"]', function () {
+      var m = document.createElement('meta'); m.name = 'apple-mobile-web-app-capable'; m.content = 'yes'; return m;
+    });
+    addOnce('meta[name="apple-mobile-web-app-title"]', function () {
+      var m = document.createElement('meta'); m.name = 'apple-mobile-web-app-title'; m.content = 'Apologia'; return m;
+    });
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js').catch(function () {});
+      });
+    }
+
+    /* Custom install prompt — fires only on Android/desktop Chrome when eligible.
+       (iOS has no event; users install via Share > Add to Home Screen.) */
+    var deferred = null;
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault(); deferred = e;
+      try { window.adTrack('pwa_installable', { where: location.pathname }); } catch (x) {}
+      var btn = document.createElement('button');
+      btn.id = 'ad-install';
+      btn.textContent = '↓ Install app';
+      btn.setAttribute('style',
+        'position:fixed;right:14px;bottom:14px;z-index:99999;font:600 13px/1 "DM Sans",system-ui,sans-serif;' +
+        'background:#c8a951;color:#0a1628;border:0;border-radius:999px;padding:11px 16px;cursor:pointer;' +
+        'box-shadow:0 6px 20px rgba(0,0,0,.35)');
+      btn.onclick = function () {
+        if (!deferred) return;
+        deferred.prompt();
+        deferred.userChoice.then(function (c) {
+          try { window.adTrack('pwa_install_choice', { outcome: c && c.outcome }); } catch (x) {}
+          deferred = null; if (btn.parentNode) btn.parentNode.removeChild(btn);
+        });
+      };
+      document.body.appendChild(btn);
+    });
+    window.addEventListener('appinstalled', function () {
+      try { window.adTrack('pwa_installed', {}); } catch (x) {}
+    });
+  } catch (e) {}
 })();
