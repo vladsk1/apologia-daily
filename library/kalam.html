@@ -101,6 +101,11 @@
   <p class="art-eyebrow">Deep Dive Essay <span class="art-badge">Pro</span></p>
   <h1>Did the Universe Begin? The Kalam Cosmological Argument</h1>
   <p class="art-meta">Apologia Daily &middot; deep dive &middot; fully sourced</p>
+  <div id="ad-listen" style="display:flex;align-items:center;gap:12px;margin:0 0 28px;padding:12px 16px;background:#0a1628;border-radius:10px;">
+    <button id="listen-btn" type="button" onclick="adToggleListen()" style="display:flex;align-items:center;gap:8px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;background:#c8a951;color:#0a1628;border:none;border-radius:6px;padding:9px 16px;cursor:pointer;">&#9654;&nbsp; Listen to this essay</button>
+    <span id="listen-status" style="font-family:'DM Sans',sans-serif;font-size:.76rem;color:rgba(255,255,255,.45);">Free preview voice</span>
+    <button id="listen-stop" type="button" onclick="adStopListen()" style="display:none;margin-left:auto;font-family:'DM Sans',sans-serif;font-size:.78rem;background:transparent;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:7px 12px;cursor:pointer;">Stop</button>
+  </div>
   <div class="art-body">
 <h2>A question that refuses to stay small</h2>
 <p>Ask a child where the world came from and you will get a chain of "and before that?" questions that does not naturally end. The adult version is no less stubborn. Either the universe has always existed, stretching back through an unbounded ocean of prior moments, or it had a first moment &mdash; a beginning before which there was, quite literally, nothing physical at all. There is no third option, and almost everything we believe about reality hangs on which it is. If the cosmos is a self-sufficient, eternal brute fact, then it is the deepest thing there is, and the religious instinct that something stands behind it is a sentimental error. But if the universe began &mdash; if space, time, matter, and energy all switched on together a finite time ago &mdash; then the most natural question in the world becomes unavoidable: what brought it into being? The Kalam cosmological argument is a disciplined attempt to take that question seriously without cheating, and to follow it wherever it leads.</p>
@@ -188,6 +193,58 @@
   </section>
 </main>
 <script src="/ad-nav.js" defer></script>
+<script>
+(function(){
+  var synth = window.speechSynthesis;
+  var chunks = [], idx = 0, playing = false, paused = false;
+  function gather(){
+    var body = document.querySelector('.art-body'); if(!body) return [];
+    var out = [];
+    body.querySelectorAll('h2,h3,p').forEach(function(n){
+      var clone = n.cloneNode(true);
+      clone.querySelectorAll('sup').forEach(function(s){ s.remove(); });
+      var t = clone.textContent.replace(/\s+/g,' ').trim();
+      if(t) out.push(t);
+    });
+    return out;
+  }
+  function pickVoice(){
+    var vs = synth.getVoices();
+    return vs.find(function(v){ return /en[-_]?(US|GB)/i.test(v.lang) && /natural|google|samantha|daniel|aria|jenny|libby/i.test(v.name); })
+        || vs.find(function(v){ return /^en/i.test(v.lang); }) || vs[0];
+  }
+  function speakNext(){
+    if(idx >= chunks.length){ adStopListen(); return; }
+    var u = new SpeechSynthesisUtterance(chunks[idx]);
+    var v = pickVoice(); if(v) u.voice = v;
+    u.rate = 1.0; u.pitch = 1.0;
+    u.onend = function(){ idx++; if(playing && !paused) speakNext(); };
+    synth.speak(u);
+  }
+  window.adToggleListen = function(){
+    if(!('speechSynthesis' in window)){ alert('Your browser does not support read-aloud.'); return; }
+    var btn = document.getElementById('listen-btn'), stop = document.getElementById('listen-stop');
+    if(!playing){
+      chunks = gather(); idx = 0; playing = true; paused = false;
+      stop.style.display = 'inline-block';
+      btn.innerHTML = '&#10074;&#10074;&nbsp; Pause';
+      speakNext();
+    } else if(!paused){
+      try{ synth.pause(); }catch(e){} paused = true; btn.innerHTML = '&#9654;&nbsp; Resume';
+    } else {
+      try{ synth.resume(); }catch(e){} paused = false; btn.innerHTML = '&#10074;&#10074;&nbsp; Pause';
+    }
+  };
+  window.adStopListen = function(){
+    playing = false; paused = false;
+    try{ synth.cancel(); }catch(e){}
+    var btn = document.getElementById('listen-btn'); if(btn) btn.innerHTML = '&#9654;&nbsp; Listen to this essay';
+    var stop = document.getElementById('listen-stop'); if(stop) stop.style.display = 'none';
+  };
+  if(synth && typeof synth.onvoiceschanged !== 'undefined'){ synth.onvoiceschanged = function(){}; }
+  window.addEventListener('beforeunload', function(){ try{ synth.cancel(); }catch(e){} });
+})();
+</script>
 <div id="float-tutor" style="position:fixed;bottom:50%;right:0;transform:translateY(50%);z-index:500;display:flex;flex-direction:column;align-items:flex-end;gap:0.5rem;">
   <div id="float-panel" style="display:none;background:#0a1628;border:1px solid rgba(200,169,81,0.3);border-radius:8px 0 0 8px;width:min(320px,calc(100vw - 60px));box-shadow:-8px 0 32px rgba(0,0,0,0.4);">
     <div style="padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;">
