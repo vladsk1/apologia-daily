@@ -67,6 +67,26 @@
     .wv-tab:hover { color: rgba(255,255,255,0.85); }
     .wv-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
     .wv-tab .coming-soon { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 10px; margin-left: 6px; color: rgba(255,255,255,0.3); }
+    /* AI Tutor (inline) + mastery blocks */
+    .inline-tutor{background:linear-gradient(135deg,#050d1a,#0f2040);border:1px solid rgba(200,169,81,.25);border-radius:8px;padding:1.25rem;margin-top:1.25rem;}
+    .it-head{display:flex;align-items:center;gap:8px;margin-bottom:1rem;}
+    .it-icon{font-size:1.1rem;}
+    .it-title{font-family:var(--font-ui);font-size:.8rem;font-weight:500;color:rgba(255,255,255,.7);}
+    .it-input-row{display:flex;gap:8px;}
+    .it-input{flex:1;padding:9px 12px;border:1px solid rgba(255,255,255,.15);border-radius:4px;font-family:var(--font-ui);font-size:.85rem;color:#fff;background:rgba(255,255,255,.07);outline:none;transition:border-color .15s;}
+    .it-input:focus{border-color:rgba(200,169,81,.5);}
+    .it-input::placeholder{color:rgba(255,255,255,.3);}
+    .it-btn{padding:9px 18px;border-radius:4px;background:var(--gold);color:#050d1a;font-family:var(--font-ui);font-size:.82rem;font-weight:600;border:none;cursor:pointer;flex-shrink:0;transition:opacity .15s;}
+    .it-btn:disabled{opacity:.5;cursor:default;}
+    .it-resp{margin-top:1rem;padding:.875rem 1rem;background:rgba(255,255,255,.05);border-radius:6px;border-left:2px solid var(--gold);}
+    .it-resp-label{font-family:var(--font-ui);font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;}
+    .it-resp-text{font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.8;white-space:pre-wrap;}
+    .wv-phase{margin-top:2rem;}
+    .wv-phase-head{display:flex;align-items:center;gap:.65rem;margin-bottom:.8rem;}
+    .wv-phase-num{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);font-family:var(--font-ui);font-weight:700;font-size:.9rem;flex-shrink:0;}
+    .wv-phase-head h3{font-family:var(--font-display),'Playfair Display',serif;font-size:1.15rem;color:#fff;margin:0;}
+    .wv-check{display:flex;align-items:flex-start;gap:.6rem;margin:.5rem 0;font-family:var(--font-ui);font-size:.92rem;color:var(--text-mid);line-height:1.6;}
+    .wv-check .tick{color:var(--gold);flex-shrink:0;font-weight:700;}
 
     /* MAIN */
     .main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 6rem; }
@@ -1023,6 +1043,60 @@
       </div>
 
 
+      <!-- ===== FROM UNDERSTANDING TO MASTERY ===== -->
+      <div class="wv-mastery reveal" style="margin-top:3.5rem;border-top:1px solid rgba(255,255,255,.08);padding-top:2.5rem;">
+        <p class="subcat-label">From understanding to mastery</p>
+
+        <a href="/library/islam.html" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;text-decoration:none;background:rgba(200,169,81,.1);border:1px solid rgba(200,169,81,.5);border-radius:8px;padding:1.1rem 1.35rem;margin-bottom:1.5rem;">
+          <span style="display:flex;align-items:center;gap:.8rem;">
+            <span style="font-size:1.3rem;">&#128214;</span>
+            <span>
+              <span style="display:block;font-family:var(--font-display),'Playfair Display',serif;font-size:1.02rem;font-weight:700;color:#fff;">Read the full deep-dive essay</span>
+              <span style="display:block;font-family:var(--font-ui);font-size:.8rem;color:rgba(255,255,255,.55);margin-top:3px;">Islam and Christianity: the crucifixion, the &ldquo;corruption&rdquo; claim, and the Trinity &mdash; the full scholarly case, with sources.</span>
+            </span>
+          </span>
+          <span style="font-family:var(--font-ui);font-size:.85rem;font-weight:600;padding:10px 20px;border-radius:4px;background:var(--gold);color:#050d1a;white-space:nowrap;">Read the essay &rarr;</span>
+        </a>
+
+        <div class="wv-phase">
+          <div class="wv-phase-head"><span class="wv-phase-num">1</span><h3>Understand it</h3></div>
+          <p style="font-family:var(--font-ui);font-size:.95rem;color:var(--text-mid);line-height:1.7;">Work through the arguments above &mdash; the Islamic Dilemma, the reliability of the hadith, what the Quran says about Jesus, and the prophecy claims. Open each card, read the steelmanned objection, and weigh the response before moving on.</p>
+        </div>
+
+        <div class="wv-phase">
+          <div class="wv-phase-head"><span class="wv-phase-num">2</span><h3>Practice it</h3></div>
+          <p style="font-family:var(--font-ui);font-size:.95rem;color:var(--text-mid);line-height:1.7;margin-bottom:1rem;">Don&rsquo;t just read &mdash; reconstruct. Try to state each of these in your own words, graciously, before you check yourself; then ask the AI Tutor anything you&rsquo;re unsure about.</p>
+          <ul style="font-family:var(--font-ui);font-size:.93rem;color:var(--text-mid);line-height:1.8;padding-left:1.2rem;margin:0 0 .5rem;">
+            <li>Why the claim that the Bible was corrupted runs into the Quran&rsquo;s own endorsement of the earlier scriptures.</li>
+            <li>Why the crucifixion of Jesus is among the best-attested facts of ancient history.</li>
+            <li>What the Quran actually affirms about Jesus &mdash; and what it denies.</li>
+            <li>How the Trinity differs from the triad the Quran rejects.</li>
+          </ul>
+          <div class="inline-tutor" id="it-islam">
+            <div class="it-head"><span class="it-icon">&#129504;</span><span class="it-title">Ask the AI Tutor about Islam</span></div>
+            <div class="it-input-row">
+              <input class="it-input" id="iti-islam" type="text" placeholder="e.g. How do I respond graciously to the &lsquo;corrupted Bible&rsquo; claim?" onkeydown="if(event.key==='Enter'){var b=document.getElementById('itb-islam');if(b)b.click();}"/>
+              <button class="it-btn" id="itb-islam" onclick="askInlineTutor(this)" data-arg="Islam and the Christian response (the crucifixion, the tahrif/corruption claim, and the Trinity)">Ask</button>
+            </div>
+            <div class="it-resp" id="itr-islam" style="display:none;">
+              <div class="it-resp-label">AI Tutor</div>
+              <div class="it-resp-text" id="itrt-islam"></div>
+            </div>
+          </div>
+          <p style="font-family:var(--font-ui);font-size:.88rem;color:rgba(255,255,255,.5);line-height:1.7;margin-top:1rem;">Take it live: practise in the <a href="/debate-arena.html" style="color:var(--gold);text-decoration:none;">Debate Arena</a> or sharpen your responses in the <a href="/objection-catcher.html" style="color:var(--gold);text-decoration:none;">Objection Catcher</a>.</p>
+        </div>
+
+        <div class="wv-phase">
+          <div class="wv-phase-head"><span class="wv-phase-num">3</span><h3>Prove it</h3></div>
+          <p style="font-family:var(--font-ui);font-size:.95rem;color:var(--text-mid);line-height:1.7;margin-bottom:.75rem;">You&rsquo;ve mastered the Christian response to Islam when you can, from memory and with gentleness and respect (1 Peter 3:15):</p>
+          <div class="wv-check"><span class="tick">&#10003;</span><span>State the Islamic Dilemma &mdash; how the charge that the Bible is corrupted collides with the Quran&rsquo;s affirmation of the Tawrat and Injil.</span></div>
+          <div class="wv-check"><span class="tick">&#10003;</span><span>Explain why the crucifixion is historical bedrock, citing the kind of non-Christian evidence even a sceptic accepts.</span></div>
+          <div class="wv-check"><span class="tick">&#10003;</span><span>Show what the Quran itself says about Jesus &mdash; his virgin birth, his miracles, and the title &ldquo;a Word from God.&rdquo;</span></div>
+          <div class="wv-check"><span class="tick">&#10003;</span><span>Distinguish the Trinity Christians confess from the Father-Mary-Jesus triad the Quran rejects.</span></div>
+          <div class="wv-check"><span class="tick">&#10003;</span><span>Answer the &ldquo;Muhammad foretold in the Bible&rdquo; claims (Deuteronomy 18; the Paraclete) fairly and in context.</span></div>
+        </div>
+      </div>
+
     </div>
 
     <div class="wv-section" id="wv-jw">
@@ -1206,6 +1280,25 @@
   async function signOut() {
     try { if(sb) await sb.auth.signOut(); } catch(e) {}
     window.location.href = 'index.html';
+  }
+
+  // ── AI TUTOR (inline) ──
+  async function askInlineTutor(btn){
+    var tutor = btn.closest('.inline-tutor'); if(!tutor) return;
+    var arg = btn.getAttribute('data-arg');
+    var inp = tutor.querySelector('.it-input');
+    var q = inp ? inp.value.trim() : '';
+    if(!q) return;
+    var resp = tutor.querySelector('.it-resp');
+    var text = tutor.querySelector('.it-resp-text');
+    btn.disabled = true; btn.textContent = '...';
+    if(resp) resp.style.display = 'none';
+    try{
+      var res = await fetch('/api/tutor',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,argument:arg,category:'Worldviews: Islam'})});
+      if(res.ok){ var data = await res.json(); if(text) text.textContent = data.answer || 'No response received.'; if(resp) resp.style.display='block'; if(inp) inp.value=''; }
+      else { if(text) text.textContent='Something went wrong. Please try again.'; if(resp) resp.style.display='block'; }
+    }catch(e){ if(text) text.textContent='Something went wrong. Please try again.'; if(resp) resp.style.display='block'; }
+    btn.disabled = false; btn.textContent='Ask';
   }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
