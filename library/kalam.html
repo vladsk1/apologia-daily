@@ -193,53 +193,84 @@
   </section>
 </main>
 <script src="/ad-nav.js" defer></script>
+<style>
+  .ad-reading{ background:rgba(200,169,81,.16); box-shadow:inset 4px 0 0 #c8a951; border-radius:3px; transition:background .25s ease; }
+  #ad-miniplayer{ position:fixed; left:0; right:0; bottom:0; z-index:600; display:none; align-items:center; gap:10px; background:#0a1628; border-top:1px solid rgba(200,169,81,.35); padding:10px 16px; padding-bottom:calc(10px + env(safe-area-inset-bottom)); box-shadow:0 -6px 20px rgba(0,0,0,.28); }
+  #ad-miniplayer .mp-pp{ background:#c8a951; color:#0a1628; font-family:'DM Sans',sans-serif; font-weight:600; font-size:.88rem; border:none; border-radius:6px; padding:9px 14px; min-width:108px; cursor:pointer; }
+  #ad-miniplayer .mp-prog{ font-family:'DM Sans',sans-serif; font-size:.7rem; color:rgba(255,255,255,.4); white-space:nowrap; }
+  #ad-miniplayer .mp-title{ font-family:'DM Sans',sans-serif; font-size:.78rem; color:rgba(255,255,255,.55); flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  #ad-miniplayer .mp-stop{ background:transparent; color:rgba(255,255,255,.6); border:1px solid rgba(255,255,255,.22); border-radius:6px; font-family:'DM Sans',sans-serif; font-size:.76rem; padding:8px 12px; cursor:pointer; }
+</style>
+<div id="ad-miniplayer" role="region" aria-label="Essay audio player">
+  <button class="mp-pp" type="button" onclick="adToggleListen()">&#10074;&#10074;&nbsp; Pause</button>
+  <span class="mp-prog" id="mp-prog"></span>
+  <span class="mp-title" id="mp-title"></span>
+  <button class="mp-stop" type="button" onclick="adStopListen()">Stop</button>
+</div>
 <script>
 (function(){
   var synth = window.speechSynthesis;
-  var chunks = [], idx = 0, playing = false, paused = false;
+  var items = [], idx = 0, playing = false, paused = false, curEl = null;
   function gather(){
-    var body = document.querySelector('.art-body'); if(!body) return [];
-    var out = [];
+    var body = document.querySelector('.art-body'); items = [];
+    if(!body) return;
     body.querySelectorAll('h2,h3,p').forEach(function(n){
       var clone = n.cloneNode(true);
       clone.querySelectorAll('sup').forEach(function(s){ s.remove(); });
       var t = clone.textContent.replace(/\s+/g,' ').trim();
-      if(t) out.push(t);
+      if(t) items.push({ text:t, el:n });
     });
-    return out;
   }
   function pickVoice(){
     var vs = synth.getVoices();
     return vs.find(function(v){ return /en[-_]?(US|GB)/i.test(v.lang) && /natural|google|samantha|daniel|aria|jenny|libby/i.test(v.name); })
         || vs.find(function(v){ return /^en/i.test(v.lang); }) || vs[0];
   }
+  function highlight(el){
+    if(curEl) curEl.classList.remove('ad-reading');
+    curEl = el || null;
+    if(el){
+      el.classList.add('ad-reading');
+      var r = el.getBoundingClientRect();
+      if(r.top < 80 || r.bottom > (window.innerHeight - 110)) el.scrollIntoView({ behavior:'smooth', block:'center' });
+    }
+  }
+  function setUI(){
+    var top = document.getElementById('listen-btn'), stopTop = document.getElementById('listen-stop');
+    var mp = document.getElementById('ad-miniplayer');
+    if(playing){
+      var label = paused ? '&#9654;&nbsp; Resume' : '&#10074;&#10074;&nbsp; Pause';
+      mp.style.display = 'flex';
+      mp.querySelector('.mp-pp').innerHTML = label;
+      if(top) top.innerHTML = label;
+      if(stopTop) stopTop.style.display = 'inline-block';
+      document.getElementById('mp-prog').textContent = Math.min(idx+1, items.length) + ' / ' + items.length;
+      document.getElementById('mp-title').textContent = curEl ? curEl.textContent.replace(/\s+/g,' ').trim().slice(0,70) : '';
+    } else {
+      mp.style.display = 'none';
+      if(top) top.innerHTML = '&#9654;&nbsp; Listen to this essay';
+      if(stopTop) stopTop.style.display = 'none';
+    }
+  }
   function speakNext(){
-    if(idx >= chunks.length){ adStopListen(); return; }
-    var u = new SpeechSynthesisUtterance(chunks[idx]);
-    var v = pickVoice(); if(v) u.voice = v;
-    u.rate = 1.0; u.pitch = 1.0;
+    if(idx >= items.length){ adStopListen(); return; }
+    highlight(items[idx].el); setUI();
+    var u = new SpeechSynthesisUtterance(items[idx].text);
+    var v = pickVoice(); if(v) u.voice = v; u.rate = 1.0; u.pitch = 1.0;
     u.onend = function(){ idx++; if(playing && !paused) speakNext(); };
     synth.speak(u);
   }
   window.adToggleListen = function(){
     if(!('speechSynthesis' in window)){ alert('Your browser does not support read-aloud.'); return; }
-    var btn = document.getElementById('listen-btn'), stop = document.getElementById('listen-stop');
-    if(!playing){
-      chunks = gather(); idx = 0; playing = true; paused = false;
-      stop.style.display = 'inline-block';
-      btn.innerHTML = '&#10074;&#10074;&nbsp; Pause';
-      speakNext();
-    } else if(!paused){
-      try{ synth.pause(); }catch(e){} paused = true; btn.innerHTML = '&#9654;&nbsp; Resume';
-    } else {
-      try{ synth.resume(); }catch(e){} paused = false; btn.innerHTML = '&#10074;&#10074;&nbsp; Pause';
-    }
+    if(!playing){ gather(); idx = 0; playing = true; paused = false; speakNext(); }
+    else if(!paused){ try{ synth.pause(); }catch(e){} paused = true; setUI(); }
+    else { try{ synth.resume(); }catch(e){} paused = false; setUI(); }
   };
   window.adStopListen = function(){
     playing = false; paused = false;
     try{ synth.cancel(); }catch(e){}
-    var btn = document.getElementById('listen-btn'); if(btn) btn.innerHTML = '&#9654;&nbsp; Listen to this essay';
-    var stop = document.getElementById('listen-stop'); if(stop) stop.style.display = 'none';
+    if(curEl){ curEl.classList.remove('ad-reading'); curEl = null; }
+    setUI();
   };
   if(synth && typeof synth.onvoiceschanged !== 'undefined'){ synth.onvoiceschanged = function(){}; }
   window.addEventListener('beforeunload', function(){ try{ synth.cancel(); }catch(e){} });
