@@ -218,8 +218,10 @@
     <div class="answer-card reveal" id="answer-card">
       <div class="answer-question" id="answer-question"></div>
       <div class="answer-body" id="answer-body"></div>
+      <div id="answer-trust" style="font-family:var(--font-ui);font-size:0.74rem;line-height:1.55;color:var(--text-muted);border-top:1px solid var(--border);margin-top:1.1rem;padding-top:0.85rem;">🛡️ <strong style="color:var(--text-mid);font-weight:600;">How this works:</strong> answers engage the strongest version of each objection and name their sources where possible. It&rsquo;s AI-generated, so verify specific facts and quotes against the primary sources.</div>
       <div class="answer-actions">
         <button class="answer-action primary" onclick="practiseInArena()">Practise this in the Debate Arena →</button>
+        <button class="answer-action" onclick="shareAnswer()">⤴ Share this answer</button>
         <button class="answer-action" onclick="copyAnswer()">⧉ Copy answer</button>
         <button class="answer-action" onclick="askFollowUp()">Ask a follow-up question</button>
         <button class="answer-action" onclick="clearAnswer()">Ask a new question</button>
@@ -396,7 +398,7 @@
         const hd = trimmed.match(/^#{1,4}\s+(.*)$/);
         if (hd) {
           html += '<h3>' + mdInline(escHtml(hd[1])) + '</h3>';
-        } else if (trimmed.match(/^(Common objection|How to use this|Further study|The core argument|In summary)/i)) {
+        } else if (trimmed.match(/^(Common objection|How to use this|Further study|The core argument|In summary|Worth pondering)/i)) {
           html += '<h3>' + mdInline(escHtml(trimmed)) + '</h3>';
         } else if (/^[-*\u2022]\s+/.test(trimmed)) {
           html += '<p style="padding-left:1.1em;">&bull; ' + mdInline(escHtml(trimmed.replace(/^[-*\u2022]\s+/, ''))) + '</p>';
@@ -484,6 +486,58 @@
       const q = document.getElementById('answer-question').textContent;
       const a = document.getElementById('answer-body').textContent;
       navigator.clipboard.writeText(`Q: ${q}\n\nA: ${a}\n\n— Apologia Daily`);
+    }
+
+    function rrA(ctx, x, y, w, h, r) {
+      ctx.beginPath(); ctx.moveTo(x + r, y);
+      ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+      ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+    }
+    function wrapText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
+      const words = String(text).split(/\s+/); let line = ''; const lines = [];
+      for (const w of words) { const test = line ? line + ' ' + w : w;
+        if (ctx.measureText(test).width > maxWidth && line) { lines.push(line); line = w; } else line = test; }
+      if (line) lines.push(line);
+      let out = lines;
+      if (maxLines && lines.length > maxLines) { out = lines.slice(0, maxLines); out[maxLines - 1] = out[maxLines - 1].replace(/[\s.,;:]+$/, '') + '…'; }
+      out.forEach((l, i) => ctx.fillText(l, x, y + i * lineHeight));
+      return y + out.length * lineHeight;
+    }
+    async function shareAnswer() {
+      const q = document.getElementById('answer-question').textContent;
+      const bodyEl = document.getElementById('answer-body');
+      const firstP = bodyEl.querySelector('p');
+      let take = (firstP ? firstP.textContent : bodyEl.textContent).replace(/\s+/g, ' ').trim();
+      take = take.slice(0, 260); const dot = take.lastIndexOf('. '); if (dot > 90) take = take.slice(0, dot + 1);
+      const text = `“${q}”\n\nApologia Daily answers the hard questions about God, Jesus, and the Christian faith — with evidence and sources. Read the full answer: https://apologiadaily.com/ask-anything.html`;
+      try {
+        await (document.fonts && document.fonts.ready);
+        const cv = document.createElement('canvas'); cv.width = 1080; cv.height = 1080; const c = cv.getContext('2d');
+        c.fillStyle = '#0a1628'; c.fillRect(0, 0, 1080, 1080);
+        c.strokeStyle = 'rgba(200,169,81,0.35)'; c.lineWidth = 3; rrA(c, 40, 40, 1000, 1000, 28); c.stroke();
+        c.textAlign = 'center';
+        c.fillStyle = '#c8a951'; c.font = '700 34px "DM Sans", sans-serif'; c.fillText('A P O L O G I A   D A I L Y', 540, 150);
+        c.strokeStyle = 'rgba(200,169,81,0.4)'; c.lineWidth = 2; c.beginPath(); c.moveTo(420, 185); c.lineTo(660, 185); c.stroke();
+        c.fillStyle = 'rgba(255,255,255,0.5)'; c.font = '500 26px "DM Sans", sans-serif'; c.fillText('ASK ANYTHING', 540, 232);
+        c.textAlign = 'left';
+        c.fillStyle = '#e8cf87'; c.font = '700 52px "Playfair Display", Georgia, serif';
+        let y = wrapText(c, '“' + q + '”', 110, 360, 860, 64, 4);
+        c.fillStyle = 'rgba(255,255,255,0.78)'; c.font = '400 32px "Source Serif 4", Georgia, serif';
+        wrapText(c, take, 110, y + 56, 860, 46, 6);
+        c.textAlign = 'center';
+        c.fillStyle = '#c8a951'; c.font = '600 30px "DM Sans", sans-serif';
+        c.fillText('Read the full answer at apologiadaily.com', 540, 1012);
+        const blob = await new Promise(r => cv.toBlob(r, 'image/png'));
+        const file = new File([blob], 'apologia-answer.png', { type: 'image/png' });
+        if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], text }); return; }
+        const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'apologia-answer.png';
+        document.body.appendChild(a); a.click(); a.remove();
+        if (navigator.clipboard) await navigator.clipboard.writeText(text);
+        alert('Answer card downloaded and share text copied — post them anywhere!');
+      } catch (e) {
+        if (navigator.share) { navigator.share({ text, url: 'https://apologiadaily.com/ask-anything.html' }); }
+        else if (navigator.clipboard) { navigator.clipboard.writeText(text); alert('Share text copied — paste it anywhere!'); }
+      }
     }
 
     function askFollowUp() {
