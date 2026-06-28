@@ -172,7 +172,8 @@
       <div class="summary-lbl">Round complete</div>
       <div class="summary-msg" id="summary-msg"></div>
       <div class="summary-actions">
-        <button class="s-btn s-btn-primary" onclick="startGame()">Play again →</button>
+        <button class="s-btn s-btn-primary" onclick="shareWSI()">Challenge a friend →</button>
+        <button class="s-btn s-btn-secondary" onclick="startGame()">Play again →</button>
         <a href="daily-quiz.html" class="s-btn s-btn-secondary">Try the Daily Quiz</a>
         <a href="games.html" class="s-btn s-btn-secondary">All games</a>
       </div>
@@ -209,6 +210,7 @@
     let streak = 0;
     let pool = [];
     let answered = false;
+    let wsiResults = [];
 
     const thinkerColors = {
       'C.S. Lewis': { bg: '#EEEDFE', color: '#3C3489' },
@@ -243,7 +245,7 @@
 
     function startGame() {
       pool = [...quotes].sort(() => Math.random() - 0.5).slice(0, ROUND);
-      current = 0; correct = 0; attempts = 0; streak = 0;
+      current = 0; correct = 0; attempts = 0; streak = 0; wsiResults = [];
       answered = false;
       document.getElementById('summary-card').classList.remove('visible');
       document.getElementById('quote-card').style.display = 'block';
@@ -309,6 +311,7 @@
       const q = pool[current];
       const isCorrect = name === q.correct;
       if (isCorrect) { correct++; streak++; } else { streak = 0; }
+      wsiResults.push(isCorrect);
       document.querySelectorAll('.thinker-btn').forEach(btn => {
         btn.disabled = true;
         const n = btn.getAttribute('data-name');
@@ -349,6 +352,75 @@
       };
       const msg = Object.entries(msgs).reverse().find(([k]) => pct >= parseInt(k));
       document.getElementById('summary-msg').textContent = msg ? msg[1] : "Keep practising!";
+    }
+
+    // ── SHARE ──
+    function wsiRoundRect(ctx, x, y, w, h, r) {
+      ctx.beginPath(); ctx.moveTo(x + r, y);
+      ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+      ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+    }
+    function buildWSICard() {
+      const results = (wsiResults.length === ROUND) ? wsiResults
+        : Array.from({ length: ROUND }, (_, i) => i < correct);
+      const pct = Math.round(correct / ROUND * 100);
+      const cv = document.createElement('canvas'); cv.width = 1080; cv.height = 1080;
+      const c = cv.getContext('2d');
+      c.fillStyle = '#0a1628'; c.fillRect(0, 0, 1080, 1080);
+      c.strokeStyle = 'rgba(200,169,81,0.35)'; c.lineWidth = 3; wsiRoundRect(c, 40, 40, 1000, 1000, 28); c.stroke();
+      c.textAlign = 'center';
+      c.fillStyle = '#c8a951'; c.font = '700 38px "DM Sans", sans-serif';
+      c.fillText('A P O L O G I A   D A I L Y', 540, 160);
+      c.strokeStyle = 'rgba(200,169,81,0.4)'; c.lineWidth = 2;
+      c.beginPath(); c.moveTo(390, 200); c.lineTo(690, 200); c.stroke();
+      c.fillStyle = 'rgba(255,255,255,0.55)'; c.font = '500 30px "DM Sans", sans-serif';
+      c.fillText('WHO SAID IT?', 540, 290);
+      c.fillStyle = '#e8cf87'; c.font = '700 180px "Playfair Display", Georgia, serif';
+      c.fillText(correct + '/' + ROUND, 540, 500);
+      c.fillStyle = 'rgba(255,255,255,0.5)'; c.font = '400 32px "DM Sans", sans-serif';
+      c.fillText('Round score', 540, 552);
+      const size = 100, gap = 22, perRow = 5, rowW = perRow * size + (perRow - 1) * gap;
+      const startX = (1080 - rowW) / 2, startY = 610;
+      results.forEach((ok, i) => {
+        const x = startX + (i % perRow) * (size + gap), y = startY + Math.floor(i / perRow) * (size + gap);
+        if (ok) { c.fillStyle = '#c8a951'; wsiRoundRect(c, x, y, size, size, 13); c.fill();
+          c.strokeStyle = '#0a1628'; c.lineWidth = 8; c.lineCap = 'round';
+          c.beginPath(); c.moveTo(x + 27, y + 52); c.lineTo(x + 43, y + 70); c.lineTo(x + 73, y + 32); c.stroke(); }
+        else { c.fillStyle = 'rgba(255,255,255,0.07)'; wsiRoundRect(c, x, y, size, size, 13); c.fill();
+          c.strokeStyle = 'rgba(255,255,255,0.18)'; c.lineWidth = 2; wsiRoundRect(c, x, y, size, size, 13); c.stroke();
+          c.strokeStyle = 'rgba(255,255,255,0.4)'; c.lineWidth = 7; c.lineCap = 'round';
+          c.beginPath(); c.moveTo(x + 33, y + 33); c.lineTo(x + 67, y + 67); c.moveTo(x + 67, y + 33); c.lineTo(x + 33, y + 67); c.stroke(); }
+      });
+      c.fillStyle = '#e8cf87'; c.font = '600 46px "DM Sans", sans-serif';
+      c.fillText(pct + '% accuracy', 540, 905);
+      c.fillStyle = 'rgba(255,255,255,0.45)'; c.font = '400 28px "DM Sans", sans-serif';
+      c.fillText('Guess the apologist or sceptic', 540, 955);
+      c.fillStyle = '#c8a951'; c.font = '600 34px "DM Sans", sans-serif';
+      c.fillText('Can you beat it?  apologiadaily.com', 540, 1015);
+      return cv;
+    }
+    function spoilerWSI() {
+      const results = (wsiResults.length === ROUND) ? wsiResults
+        : Array.from({ length: ROUND }, (_, i) => i < correct);
+      const row = n => results.slice(n, n + 5).map(ok => ok ? '🛡️' : '⬛').join('');
+      return `Apologia Daily — Who Said It?\n${row(0)}\n${row(5)}  ${correct}/${ROUND}\nCan you beat it? https://apologiadaily.com/who-said-it.html`;
+    }
+    async function shareWSI() {
+      const text = spoilerWSI();
+      try {
+        await (document.fonts && document.fonts.ready);
+        const canvas = buildWSICard();
+        const blob = await new Promise(res => canvas.toBlob(res, 'image/png'));
+        const file = new File([blob], 'apologia-whosaidit.png', { type: 'image/png' });
+        if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], text }); return; }
+        const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'apologia-whosaidit.png';
+        document.body.appendChild(a); a.click(); a.remove();
+        if (navigator.clipboard) await navigator.clipboard.writeText(text);
+        alert('Your result card was downloaded and the challenge text copied — post them anywhere!');
+      } catch (e) {
+        if (navigator.share) { navigator.share({ text, url: 'https://apologiadaily.com/who-said-it.html' }); }
+        else if (navigator.clipboard) { navigator.clipboard.writeText(text); alert('Result copied to clipboard — paste it anywhere!'); }
+      }
     }
 
     startGame();
