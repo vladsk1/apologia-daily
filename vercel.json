@@ -8,5 +8,12 @@
       "path": "/api/push?do=send&secret=apologia-cron-2026",
       "schedule": "0 13 * * *"
     }
+  ],
+  "redirects": [
+    { "source": "/CLAUDE.md", "destination": "/", "permanent": false },
+    { "source": "/HANDOFF.md", "destination": "/", "permanent": false },
+    { "source": "/docs/:path*", "destination": "/", "permanent": false },
+    { "source": "/tools/:path*", "destination": "/", "permanent": false },
+    { "source": "/.claude/:path*", "destination": "/", "permanent": false }
   ]
 }

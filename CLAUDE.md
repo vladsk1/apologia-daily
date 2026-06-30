@@ -1,7 +1,28 @@
 # Apologia Daily — project guide
 
-> **Resuming / new session?** Read **`HANDOFF.md`** first — it lists what's currently
-> deployed, open threads, and known issues to pick up.
+> **Resuming / new session?** Every chat auto-loads this file, so the live status lives
+> here. All work is deployed to `main`, so a new session on **any** branch already has it
+> (web sessions get different branch suffixes — that's fine). Full detail: `HANDOFF.md`
+> (repo root; committed but not web-served). Deploy rule unchanged: push your working
+> branch to `main`, never `git checkout main`.
+>
+> **Live on `main` (recent work):** dashboard "Due today" SR hook; intent-capture
+> onboarding; Debate Arena voice mode; "Related arguments" panel on essays; "send this
+> answer to a skeptic" referral; "Was Jesus a Muslim?" card + essay; the **Answers
+> flywheel** (`api/submit-question.js` + `tools/gen-answers.mjs` + `answers/_data.json`);
+> the **Macedonian pilot** (`library/mk/*` — 10 essays + index) and the **bilingual
+> Evidence Library hub** (EN/МК toggle in `evidence-library.html` + `ev-sN.mk.html`).
+>
+> **Open work:** (1) native Macedonian doctrinal review of the mk essays + hub fragments
+> (AI-translated, orthodoxy-gated, not yet human-checked); (2) fix the English
+> `ev-s4.html` famine number (Luke 4:25 → "three years and six months"; the mk is already
+> right); (3) set `RESEND_API_KEY` in Vercel so `api/submit-question.js` emails captured
+> questions; (4) **monetization is a stub** — `isPro` hardcoded, Stripe not live, a dead
+> "$8/mo + 7-day trial" is advertised: decide the model, don't run paid acquisition into
+> it, and never wire real prices/payments without human sign-off; (5) PostHog is
+> under-instrumented (full event/funnel plan in `docs/MARKETING_PLAN.md`). Candidate next
+> steps: Spanish essay translation; more `/answers/` pages via the flywheel; execute the
+> marketing plan.
 
 Apologia Daily (apologiadaily.com) is a commercial Christian apologetics platform: a
 static HTML/CSS/JS site on Vercel, with Supabase (auth/db) and Claude-powered AI
