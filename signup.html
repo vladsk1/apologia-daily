@@ -131,10 +131,15 @@
       spinner.style.display = 'inline-block';
       btnText.textContent = 'Creating account…';
 
+      var referredBy = '';
+      try { referredBy = new URLSearchParams(location.search).get('ref') || localStorage.getItem('ad_ref') || ''; } catch(e) {}
+      const signUpData = { full_name: name };
+      if (referredBy) signUpData.referred_by = referredBy;
+
       const { data, error } = await sb.auth.signUp({
         email,
         password,
-        options: { data: { full_name: name } }
+        options: { data: signUpData }
       });
 
       if (error) {
