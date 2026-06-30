@@ -131,6 +131,10 @@
     .send-btn { padding: 12px 24px; background: var(--gold); color: var(--navy-950); border: none; border-radius: 4px; font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; cursor: pointer; transition: background 0.2s; white-space: nowrap; align-self: flex-end; }
     .send-btn:hover { background: var(--gold-light); }
     .send-btn:disabled { opacity: 0.4; cursor: default; }
+    .mic-btn { padding: 12px 16px; background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; font-size: 1.05rem; cursor: pointer; transition: all 0.2s; align-self: flex-end; line-height: 1; }
+    .mic-btn:hover { background: rgba(255,255,255,0.12); }
+    .mic-btn.listening { background: rgba(214,69,69,0.18); border-color: rgba(214,69,69,0.6); animation: micpulse 1.2s ease-in-out infinite; }
+    @keyframes micpulse { 0%,100% { box-shadow: 0 0 0 0 rgba(214,69,69,0.4); } 50% { box-shadow: 0 0 0 6px rgba(214,69,69,0); } }
     .arena-footer-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding-bottom: 2rem; }
     .turn-count { font-family: var(--font-ui); font-size: 0.78rem; color: rgba(255,255,255,0.3); }
     .end-btn { font-family: var(--font-ui); font-size: 0.78rem; padding: 7px 16px; border-radius: 3px; background: transparent; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.45); cursor: pointer; transition: all 0.2s; }
@@ -531,10 +535,14 @@
         <div class="hints-row" id="hints-row"></div>
         <div class="input-row">
           <textarea class="debate-input" id="debate-input" rows="2" placeholder="Type your response to the opponent…"></textarea>
+          <button class="mic-btn" id="mic-btn" onclick="toggleMic()" title="Speak your answer out loud" style="display:none;">🎙️</button>
           <button class="send-btn" id="send-btn" onclick="sendMessage()">Send →</button>
         </div>
         <div class="arena-footer-row">
           <span class="turn-count" id="turn-count">Exchange 1 of 8</span>
+          <label class="voice-toggle" id="voice-toggle-wrap" style="display:none;align-items:center;gap:6px;font-family:var(--font-ui);font-size:0.78rem;color:rgba(255,255,255,0.55);cursor:pointer;user-select:none;">
+            <input type="checkbox" id="speak-toggle" onchange="onSpeakToggle()" style="accent-color:var(--gold);cursor:pointer;"> 🔊 Read opponent aloud
+          </label>
           <button class="end-btn" id="end-btn" onclick="endDebate()" disabled>End & get feedback</button>
         </div>
       </div>
@@ -651,7 +659,7 @@
     window.location.href = 'index.html';
   }
 
-    const state = { opponent: null, difficulty: 'challenging', topic: null, turns: 0, maxTurns: 8, messages: [], debateStarted: false, mode: 'debate' };
+    const state = { opponent: null, difficulty: 'challenging', topic: null, turns: 0, maxTurns: 8, messages: [], debateStarted: false, mode: 'debate', speakOn: false };
 
     // ── MODE SWITCHING ──
     function switchMode(mode) {
@@ -1120,6 +1128,7 @@
       msg.innerHTML = `<div class="msg-avatar" style="${avatarStyle}">${avatarText}</div><div class="msg-body"><div class="msg-name">${displayName}</div><div class="msg-bubble">${text}</div></div>`;
       chatBox.appendChild(msg);
       chatBox.scrollTop = chatBox.scrollHeight;
+      if (role === 'opp') speak(text);
     }
 
     function showTyping() {
@@ -1138,7 +1147,84 @@
       if (t) t.remove();
     }
 
+    // ── VOICE / SPEAK-OUT-LOUD PRACTICE (Web Speech API, client-only) ──
+    var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    var TTS = window.speechSynthesis;
+    var recog = null, micActive = false;
+
+    function initVoice() {
+      // Speak-aloud toggle: available wherever speech synthesis is supported
+      if (TTS) {
+        var wrap = document.getElementById('voice-toggle-wrap');
+        if (wrap) wrap.style.display = 'flex';
+      }
+      // Mic dictation: only where SpeechRecognition exists (Chrome/Edge/Safari)
+      if (SR) {
+        var mic = document.getElementById('mic-btn');
+        if (mic) mic.style.display = 'block';
+        recog = new SR();
+        recog.lang = 'en-US';
+        recog.interimResults = true;
+        recog.continuous = false;
+        var baseText = '';
+        recog.onstart = function() { baseText = (document.getElementById('debate-input').value || '').trim(); };
+        recog.onresult = function(e) {
+          var interim = '', finalT = '';
+          for (var i = e.resultIndex; i < e.results.length; i++) {
+            var seg = e.results[i][0].transcript;
+            if (e.results[i].isFinal) finalT += seg; else interim += seg;
+          }
+          var input = document.getElementById('debate-input');
+          var joined = (baseText ? baseText + ' ' : '') + (finalT || interim).trim();
+          input.value = joined;
+          if (finalT) baseText = joined;
+          input.scrollTop = input.scrollHeight;
+        };
+        recog.onerror = function() { stopMic(); };
+        recog.onend = function() { stopMic(); };
+      }
+    }
+
+    function setMicUI(on) {
+      var mic = document.getElementById('mic-btn');
+      if (!mic) return;
+      if (on) { mic.classList.add('listening'); mic.textContent = '⏺'; mic.title = 'Listening… click to stop'; }
+      else { mic.classList.remove('listening'); mic.textContent = '🎙️'; mic.title = 'Speak your answer out loud'; }
+    }
+
+    function toggleMic() {
+      if (!recog) return;
+      if (micActive) { try { recog.stop(); } catch(e) {} stopMic(); return; }
+      if (TTS) TTS.cancel(); // do not transcribe the opponent's own voice
+      try { recog.start(); micActive = true; setMicUI(true); document.getElementById('debate-input').focus(); }
+      catch(e) { stopMic(); }
+    }
+
+    function stopMic() {
+      micActive = false;
+      setMicUI(false);
+    }
+
+    function onSpeakToggle() {
+      state.speakOn = !!document.getElementById('speak-toggle').checked;
+      if (!state.speakOn && TTS) TTS.cancel();
+    }
+
+    function speak(text) {
+      if (!TTS || !state.speakOn || !text) return;
+      var clean = String(text).replace(/<[^>]*>/g, '').replace(/&[a-z]+;/g, ' ').trim();
+      if (!clean) return;
+      try {
+        TTS.cancel();
+        var u = new SpeechSynthesisUtterance(clean);
+        u.lang = 'en-US';
+        u.rate = 1.0;
+        TTS.speak(u);
+      } catch(e) {}
+    }
+
     async function sendMessage() {
+      if (micActive && recog) { try { recog.stop(); } catch(e) {} stopMic(); }
       const input = document.getElementById('debate-input');
       const text = input.value.trim();
       if (!text || !state.debateStarted) return;
@@ -1213,9 +1299,12 @@
           if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
         });
       }
+      try { initVoice(); } catch(e) {}
     });
 
     async function endDebate() {
+      if (micActive && recog) { try { recog.stop(); } catch(e) {} stopMic(); }
+      if (TTS) TTS.cancel();
       const isConvo = state.mode === 'convo';
       const scenarioName = convoScenarios[state.opponent] ? convoScenarios[state.opponent].name : oppNames[state.opponent];
 
