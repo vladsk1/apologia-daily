@@ -1,5 +1,8 @@
 # Apologia Daily — project guide
 
+> **Resuming / new session?** Read **`HANDOFF.md`** first — it lists what's currently
+> deployed, open threads, and known issues to pick up.
+
 Apologia Daily (apologiadaily.com) is a commercial Christian apologetics platform: a
 static HTML/CSS/JS site on Vercel, with Supabase (auth/db) and Claude-powered AI
 features (`/api/*.js`). The **Evidence Library** (`/library/*.html`) is the heart of the
