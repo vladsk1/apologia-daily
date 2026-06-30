@@ -214,7 +214,7 @@
       <div style="background:var(--navy-950);padding:2rem;">
         <div style="font-family:var(--font-ui);font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Welcome to Apologia Daily</div>
         <div style="font-family:var(--font-serif);font-size:1.4rem;font-weight:700;color:#fff;" id="ob-title">Let us personalise your experience</div>
-        <div style="font-family:var(--font-ui);font-size:0.85rem;color:rgba(255,255,255,0.5);margin-top:0.4rem;" id="ob-sub">3 quick questions — takes 30 seconds</div>
+        <div style="font-family:var(--font-ui);font-size:0.85rem;color:rgba(255,255,255,0.5);margin-top:0.4rem;" id="ob-sub">4 quick questions — takes 30 seconds</div>
       </div>
       <div style="padding:2rem;" id="ob-body">
         <!-- Steps injected by JS -->
@@ -641,6 +641,20 @@
       setText('user-name', firstName);
       setText('nav-user', name);
 
+      // Cross-device: hydrate onboarding prefs from the account if this device has none
+      try {
+        var um = user.user_metadata || {};
+        if (um.onboarded) {
+          var lp = JSON.parse(localStorage.getItem('ad_prefs') || '{}');
+          if (!lp.onboarded) {
+            ['intent','goal','level'].forEach(function(k){ if (um[k] && !lp[k]) lp[k] = um[k]; });
+            if (um.learn_mode && !lp.mode) lp.mode = um.learn_mode;
+            lp.onboarded = true;
+            localStorage.setItem('ad_prefs', JSON.stringify(lp));
+          }
+        }
+      } catch(e) {}
+
       // Stats from localStorage
       var completed = JSON.parse(localStorage.getItem('completed') || '[]');
       var askUsage = JSON.parse(localStorage.getItem('askUsage') || '{}');
@@ -715,11 +729,8 @@
       // Guided focus + mode (always run these)
       try {
         var prefs = JSON.parse(localStorage.getItem('ad_prefs') || '{}');
-        if (!prefs.onboarded) {
-          prefs.onboarded = true;
-          prefs.mode = prefs.mode || 'guided';
-          localStorage.setItem('ad_prefs', JSON.stringify(prefs));
-        }
+        applyIntent(prefs.intent);
+        if (!prefs.onboarded) { showOnboarding(); }
         applyMode('guided'); // forced guided for now
       } catch(e) { applyMode('guided'); }
 
@@ -900,6 +911,12 @@
 
   // ── ONBOARDING ──
   var OB_STEPS = [
+    {id:'intent',title:'What brings you here?',sub:'This shapes everything we suggest you',options:[
+      {val:'defend',label:'Defending my faith',desc:'I believe — I want to be ready to give a reason'},
+      {val:'doubts',label:'Working through doubts',desc:'I have honest questions of my own'},
+      {val:'skeptic',label:'Helping someone sceptical',desc:'A friend or family member who does not believe'},
+      {val:'academic',label:'Academic interest',desc:'I want the rigorous, scholarly case'}
+    ]},
     {id:'level',title:'What best describes you?',sub:'Helps us suggest the right starting point',options:[
       {val:'beginner',label:'Complete beginner',desc:'New to apologetics'},
       {val:'some',label:'Some knowledge',desc:'Know a few arguments, want to go deeper'},
@@ -948,10 +965,29 @@
 
   function finishOnboarding() {
     try { localStorage.setItem('ad_prefs', JSON.stringify(Object.assign({}, obAnswers, {onboarded:true}))); } catch(e) {}
+    // Persist to the account so intent survives across devices
+    try {
+      if (sb && sb.auth && sb.auth.updateUser) {
+        sb.auth.updateUser({ data: { onboarded:true, intent:obAnswers.intent, goal:obAnswers.goal, level:obAnswers.level, learn_mode:obAnswers.mode } });
+      }
+    } catch(e) {}
     var modal = document.getElementById('onboarding-modal');
     if (modal) modal.style.display = 'none';
+    applyIntent(obAnswers.intent);
     applyMode(obAnswers.mode || 'guided');
     updateGuidedFocus();
+  }
+
+  // Reflect the captured intent back to the user in the dashboard greeting
+  var INTENT_COPY = {
+    defend:   'You are here to be ready to give a reason. Today’s path is built around that.',
+    doubts:   'You are working through honest questions — we will take them seriously, one at a time.',
+    skeptic:  'You are here to help someone you care about. Let us get you ready for that conversation.',
+    academic: 'You want the rigorous, scholarly case. The deep-dive library is built for exactly this.'
+  };
+  function applyIntent(intent) {
+    var sub = document.getElementById('welcome-sub');
+    if (sub && intent && INTENT_COPY[intent]) sub.textContent = INTENT_COPY[intent];
   }
 
   // ── MODE ──
