@@ -268,6 +268,16 @@
       <div style="position:absolute;top:10px;right:14px;font-family:var(--font-ui);font-size:0.68rem;color:rgba(255,255,255,0.35);display:flex;align-items:center;gap:4px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border:1px solid rgba(255,255,255,0.35);border-radius:50%;font-size:0.6rem;">?</span> How belts work</div>
     </div>
 
+    <!-- DUE TODAY (spaced-repetition daily-return hook; populated from flashcards SR queue) -->
+    <a id="due-today-card" href="flashcards.html" style="display:none;align-items:center;gap:0.9rem;text-decoration:none;background:linear-gradient(135deg,#1e4278,#0f2040);border:1px solid rgba(200,169,81,0.45);border-radius:8px;padding:0.95rem 1.25rem;margin:0 0 1.25rem;">
+      <span style="font-size:1.6rem;line-height:1;">&#128218;</span>
+      <div style="flex:1;min-width:0;">
+        <div id="due-today-title" style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:#fff;">Reviews due today</div>
+        <div id="due-today-sub" style="font-family:var(--font-ui);font-size:0.72rem;color:rgba(255,255,255,0.55);margin-top:2px;">Spaced repetition brings each argument back right before you&rsquo;d forget it.</div>
+      </div>
+      <span id="due-today-cta" style="font-family:var(--font-ui);font-size:0.82rem;font-weight:600;padding:8px 16px;border-radius:5px;background:var(--gold);color:#050d1a;white-space:nowrap;">Review now &rarr;</span>
+    </a>
+
     <!-- MODE TOGGLE (always visible) -->
     <div style="display:flex;align-items:center;justify-content:flex-end;gap:0.5rem;margin-bottom:1rem;">
       <span style="font-family:var(--font-ui);font-size:0.72rem;color:var(--text-muted);">View:</span>
@@ -860,6 +870,25 @@
         if (fcEl) {
           if (due > 0) { fcEl.textContent = due + ' card' + (due !== 1 ? 's' : '') + ' due for review \u2192'; }
           else { fcEl.textContent = '\u2713 All caught up -- ' + r.data.length + ' cards'; fcEl.style.color = '#22c55e'; }
+        }
+        var dueCard = document.getElementById('due-today-card');
+        if (dueCard) {
+          var dueTitle = document.getElementById('due-today-title');
+          var dueSub = document.getElementById('due-today-sub');
+          var dueCta = document.getElementById('due-today-cta');
+          if (due > 0) {
+            dueTitle.textContent = due + ' argument' + (due !== 1 ? 's' : '') + ' due for review today';
+            dueSub.textContent = 'Spaced repetition brings each one back right before you\u2019d forget it.';
+            dueCta.textContent = 'Review now \u2192';
+            dueCard.style.display = 'flex';
+          } else {
+            dueTitle.textContent = '\u2713 You\u2019re caught up on reviews';
+            dueSub.textContent = r.data.length + ' card' + (r.data.length !== 1 ? 's' : '') + ' in your deck \u2014 nothing due today.';
+            dueCta.textContent = 'Open deck \u2192';
+            dueCard.style.borderColor = 'rgba(34,197,94,0.45)';
+            dueCta.style.background = '#22c55e';
+            dueCard.style.display = 'flex';
+          }
         }
       } else {
         var fcEl2 = document.getElementById('flashcard-status');
