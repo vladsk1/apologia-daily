@@ -210,6 +210,12 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
     <p class="ey">Evidence Library</p>
     <h1 class="ht">The case for <em>Christian faith</em></h1>
     <p class="hs">Every major argument examined — free summaries in plain English, Pro deep dives for those who want to go further.</p>
+    <div class="ev-lang" style="font-family:'DM Sans',sans-serif;font-size:0.82rem;margin-top:1.1rem;">
+      <span style="color:rgba(255,255,255,0.4);">&#127760;</span>
+      <span id="ev-lang-en" onclick="setLang('en')" style="cursor:pointer;margin:0 4px;color:#fff;font-weight:700;">English</span>
+      <span style="color:rgba(255,255,255,0.25);">&middot;</span>
+      <span id="ev-lang-mk" onclick="setLang('mk')" style="cursor:pointer;margin:0 4px;color:rgba(255,255,255,0.5);font-weight:400;">Македонски</span>
+    </div>
   </div>
 </div>
 
@@ -279,6 +285,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
 
 <script>
 var loaded = {};
+var LANG = (function(){ try { var u = new URLSearchParams(location.search).get('lang'); if (u==='mk'||u==='en') return u; return localStorage.getItem('ev_lang') || 'en'; } catch(e){ return 'en'; } })();
 
 function sw(id, btn) {
   var s = document.querySelectorAll('.sec');
@@ -295,7 +302,7 @@ function loadSection(id) {
   loaded[id] = true;
   var container = document.getElementById(id + '-content');
   if (!container) return;
-  fetch('ev-' + id + '.html')
+  fetch('ev-' + id + (LANG === 'mk' ? '.mk' : '') + '.html')
     .then(function(r) { return r.text(); })
     .then(function(html) { container.innerHTML = html; })
     .catch(function() { container.innerHTML = '<p style="padding:2rem;color:red;">Failed to load. Please refresh.</p>'; });
@@ -352,6 +359,46 @@ function fillT(tid, q) {
 
 // Load first section immediately
 loadSection('s1');
+
+// ── Bilingual hub (English / Macedonian) ──
+var I18N = {
+  en: { ey:'Evidence Library', ht:'The case for <em>Christian faith</em>',
+    hs:'Every major argument examined — free summaries in plain English, Pro deep dives for those who want to go further.',
+    tabs:{s1:"God's Existence",s2:'The Resurrection',s3:'Jesus',s4:'Biblical Reliability',s5:'Science &amp; Faith',s6:'The Trinity',s7:'Conversion Stories'},
+    floatLabel:'Open an argument card first', floatPlaceholder:'What are you unsure about? Ask anything...', floatBtn:'Ask AI Tutor' },
+  mk: { ey:'Доказна библиотека', ht:'Случајот за <em>христијанската вера</em>',
+    hs:'Секој главен аргумент разгледан — бесплатни резимеа на јасен јазик, Pro длабински осврти за оние што сакаат да продлабочат.',
+    tabs:{s1:'Постоењето на Бог',s2:'Воскресението',s3:'Исус',s4:'Веродостојност на Библијата',s5:'Наука и вера',s6:'Троица',s7:'Приказни за обраќање'},
+    floatLabel:'Прво отворете картичка со аргумент', floatPlaceholder:'Што не ви е јасно? Прашајте сѐ...', floatBtn:'Прашај го AI тутор' }
+};
+function applyChrome() {
+  var d = I18N[LANG] || I18N.en;
+  var ey=document.querySelector('.hero .ey'); if(ey) ey.textContent=d.ey;
+  var ht=document.querySelector('.hero .ht'); if(ht) ht.innerHTML=d.ht;
+  var hs=document.querySelector('.hero .hs'); if(hs) hs.textContent=d.hs;
+  var tabs=document.querySelectorAll('.cni .tab'); var order=['s1','s2','s3','s4','s5','s6','s7'];
+  for(var i=0;i<tabs.length;i++){ var k=order[i]; if(d.tabs[k]) tabs[i].innerHTML=d.tabs[k]; }
+  var fl=document.getElementById('float-arg-label');
+  if(fl){ var t=fl.textContent.trim(); if(t===I18N.en.floatLabel||t===I18N.mk.floatLabel) fl.textContent=d.floatLabel; }
+  var fi=document.getElementById('float-input'); if(fi) fi.placeholder=d.floatPlaceholder;
+  var fb=document.getElementById('float-send-btn'); if(fb) fb.textContent=d.floatBtn;
+  var en=document.getElementById('ev-lang-en'), mk=document.getElementById('ev-lang-mk');
+  if(en){ en.style.fontWeight=LANG==='en'?'700':'400'; en.style.color=LANG==='en'?'#fff':'rgba(255,255,255,0.5)'; }
+  if(mk){ mk.style.fontWeight=LANG==='mk'?'700':'400'; mk.style.color=LANG==='mk'?'#fff':'rgba(255,255,255,0.5)'; }
+}
+function setLang(lang){
+  if(lang!=='mk') lang='en';
+  LANG=lang;
+  try{ localStorage.setItem('ev_lang',lang); }catch(e){}
+  try{ var u=new URL(location.href); u.searchParams.set('lang',lang); history.replaceState({},'',u); }catch(e){}
+  applyChrome();
+  // re-fetch sections in the new language
+  loaded={};
+  var secs=document.querySelectorAll('.sec');
+  for(var i=0;i<secs.length;i++){ var c=document.getElementById(secs[i].id+'-content'); if(c) c.innerHTML=''; }
+  var active=document.querySelector('.sec.go'); if(active) loadSection(active.id);
+}
+applyChrome();
 
 // Auth
 (function(){
