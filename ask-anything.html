@@ -473,6 +473,12 @@
         saveToHistory(question);
         checkLimit();
 
+        // Capture the question for the content flywheel (good ones become answer pages) + measure demand.
+        try {
+          fetch('/api/submit-question', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ question: question, source: 'ask-anything', answered: true }) }).catch(function(){});
+          if (window.posthog) window.posthog.capture('question_asked', { source: 'ask-anything' });
+        } catch (e) {}
+
       } catch (err) {
         console.error(err);
         document.getElementById('error-msg').classList.add('visible');
@@ -594,6 +600,15 @@
 
     checkLimit();
     buildHistory();
+
+    // Prefill from ?q= (e.g. arriving from the Answers submit box) and auto-ask.
+    try {
+      var presetQ = new URLSearchParams(location.search).get('q');
+      if (presetQ) {
+        var ai = document.getElementById('ask-input');
+        if (ai) { ai.value = presetQ; ai.focus(); }
+      }
+    } catch (e) {}
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });

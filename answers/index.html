@@ -102,13 +102,44 @@
         <li><a href='/answers/isnt-faith-believing-without-evidence.html'>Isn't faith just believing without evidence?</a></li>
         <li><a href='/answers/is-it-ok-to-have-doubts-as-a-christian.html'>Is it okay to have doubts as a Christian?</a></li>
       </ul>
+      <div class='ad-cat'>Islam &amp; World Religions</div>
+      <ul class='ad-qlist'>
+        <li><a href='/answers/is-the-quran-corrupted.html'>Has the Quran been changed or corrupted?</a></li>
+        <li><a href='/answers/was-jesus-a-muslim.html'>Was Jesus a Muslim?</a></li>
+        <li><a href='/answers/does-the-bible-predict-muhammad.html'>Does the Bible predict Muhammad?</a></li>
+      </ul>
 
   <section class="ad-cta">
     <h2>Don't see your question?</h2>
-    <p>Ask Apologia Daily directly and get a thoughtful, evidence-based answer &mdash; free, no account needed.</p>
-    <a class="ad-cta-btn" href="/ask-anything.html">Ask your question &rarr;</a>
+    <p>Ask it. Good questions become new answer pages &mdash; and you can get an instant AI answer right now, free, no account needed.</p>
+    <div id="ask-submit-wrap" style="max-width:560px;margin:0 auto;">
+      <textarea id="ask-submit-q" rows="2" placeholder="e.g. How do we know Jesus actually rose?" style="width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #d4c9b0;border-radius:8px;font-family:inherit;font-size:1rem;resize:vertical;"></textarea>
+      <input type="text" id="ask-submit-hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" placeholder="website">
+      <input type="email" id="ask-submit-email" placeholder="Email (optional &mdash; if you'd like a reply)" style="width:100%;box-sizing:border-box;margin-top:8px;padding:10px 14px;border:1px solid #d4c9b0;border-radius:8px;font-family:inherit;font-size:0.95rem;">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;">
+        <button type="button" class="ad-cta-btn" onclick="adSubmitQuestion()" style="border:none;cursor:pointer;">Submit question &rarr;</button>
+        <a class="ad-cta-btn" id="ask-now-link" href="/ask-anything.html" style="background:transparent;color:#0a1628;border:1px solid #0a1628;">Get an instant AI answer &rarr;</a>
+      </div>
+      <p id="ask-submit-msg" style="margin:10px 0 0;font-size:0.9rem;color:#3a7d44;display:none;"></p>
+    </div>
   </section>
 </main>
+<script>
+  function adSubmitQuestion(){
+    var q=(document.getElementById('ask-submit-q').value||'').trim();
+    var email=(document.getElementById('ask-submit-email').value||'').trim();
+    var hp=(document.getElementById('ask-submit-hp').value||'');
+    var msg=document.getElementById('ask-submit-msg');
+    if(q.length<8){ msg.style.display='block'; msg.style.color='#a23'; msg.textContent='Please type a bit more of your question.'; return; }
+    var askLink=document.getElementById('ask-now-link');
+    try{ askLink.href='/ask-anything.html?q='+encodeURIComponent(q); }catch(e){}
+    fetch('/api/submit-question',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,email:email,website:hp,source:'answers-index'})}).catch(function(){});
+    try{ if(window.posthog) window.posthog.capture('question_submitted',{source:'answers-index',has_email:!!email}); }catch(e){}
+    msg.style.display='block'; msg.style.color='#3a7d44';
+    msg.innerHTML='Thank you &mdash; your question has been received. Want an answer right now? <a href="'+askLink.href+'">Ask the AI &rarr;</a>';
+    document.getElementById('ask-submit-q').value=''; document.getElementById('ask-submit-email').value='';
+  }
+</script>
 <footer class="ad-foot">
   <a href="/">apologiadaily.com</a> &middot; <a href="/evidence-library.html">Evidence Library</a>
   <div class="ad-foot-tag">Defending the faith with gentleness and respect.</div>
