@@ -11,17 +11,22 @@
 > answer to a skeptic" referral; "Was Jesus a Muslim?" card + essay; the **Answers
 > flywheel** (`api/submit-question.js` + `tools/gen-answers.mjs` + `answers/_data.json`);
 > the **Macedonian pilot** (`library/mk/*` — 10 essays + index) and the **bilingual
-> Evidence Library hub** (EN/МК toggle in `evidence-library.html` + `ev-sN.mk.html`).
+> Evidence Library hub** (EN/МК toggle in `evidence-library.html` + `ev-sN.mk.html`); the
+> **Spanish pilot** (`library/es/*` — 10 essays + index, tri-lingual EN/МК/ES switchers +
+> hreflang + sitemap, all 10 orthodoxy-gated CLEAN).
 >
-> **Open work:** (1) native Macedonian doctrinal review of the mk essays + hub fragments
-> (AI-translated, orthodoxy-gated, not yet human-checked); (2) fix the English
+> **Open work:** (1) native Macedonian **and Spanish** doctrinal review of the mk/es
+> essays + hub fragments (AI-translated, orthodoxy-gated, not yet human-checked; the es
+> gate also flagged one non-doctrinal note — Moltmann patripassianism boundary in
+> `es/evil.html`, matching the certified EN original); (2) fix the English
 > `ev-s4.html` famine number (Luke 4:25 → "three years and six months"; the mk is already
 > right); (3) set `RESEND_API_KEY` in Vercel so `api/submit-question.js` emails captured
 > questions; (4) **monetization is a stub** — `isPro` hardcoded, Stripe not live, a dead
 > "$8/mo + 7-day trial" is advertised: decide the model, don't run paid acquisition into
 > it, and never wire real prices/payments without human sign-off; (5) PostHog is
 > under-instrumented (full event/funnel plan in `docs/MARKETING_PLAN.md`). Candidate next
-> steps: Spanish essay translation; more `/answers/` pages via the flywheel; execute the
+> steps: extend the Spanish/Macedonian pilots beyond 10 essays (+ a Spanish hub via
+> `ev-sN.es.html` fragments); more `/answers/` pages via the flywheel; execute the
 > marketing plan.
 
 Apologia Daily (apologiadaily.com) is a commercial Christian apologetics platform: a
