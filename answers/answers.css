@@ -35,4 +35,11 @@ h1{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(1.6rem,4
 .ad-related-qs{margin:30px 0 8px;padding-top:22px;border-top:1px solid var(--border)}
 .ad-related-qs>h2{font-family:'Playfair Display',serif;font-weight:600;font-size:1.3rem;color:var(--navy);margin-bottom:16px}
 .ad-related-qs h3{font-family:'DM Sans',sans-serif;font-weight:600;font-size:1.05rem;color:var(--navy2);margin:18px 0 6px}
-.ad-related-qs p{font-size:1.02rem;margin-bottom:4px}
+.ad-related-qs p{font-size:1.02rem;margin-bottom:4px}.ad-more-qs{margin:28px 0 8px;padding-top:22px;border-top:1px solid var(--border)}
+.ad-more-qs>h2{font-family:'Playfair Display',serif;font-weight:600;font-size:1.3rem;color:var(--navy);margin-bottom:10px}
+.ad-more-qs ul{list-style:none}
+.ad-more-qs li{border-bottom:1px solid var(--border)}
+.ad-more-qs a{display:block;padding:11px 4px;color:var(--ink);text-decoration:none;font-size:1.02rem}
+.ad-more-qs a:hover{color:var(--gold-d)}
+.ad-more-all{margin-top:12px;font-family:'DM Sans',sans-serif;font-size:.9rem}
+.ad-more-all a{color:var(--gold-d);font-weight:600;text-decoration:none}

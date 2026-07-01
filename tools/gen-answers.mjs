@@ -73,6 +73,22 @@ function goDeeper(e) {
   return '';
 }
 
+// Sibling cross-links: up to 5 other answers in the same category. Builds the
+// internal-linking mesh (topic clusters) that concentrates relevance for search.
+function moreQs(e) {
+  const sibs = data.answers.filter((x) => x.category === e.category && x.slug !== e.slug).slice(0, 5);
+  if (!sibs.length) return '';
+  const items = sibs.map((s) => `      <li><a href="/answers/${s.slug}.html">${esc(s.q)}</a></li>`).join('\n');
+  return `  <nav class="ad-more-qs" aria-label="More questions about ${esc(e.category)}">
+    <h2>More on ${esc(e.category)}</h2>
+    <ul>
+${items}
+    </ul>
+    <p class="ad-more-all"><a href="/answers/">Browse all questions &rarr;</a></p>
+  </nav>
+`;
+}
+
 function page(e) {
   const url = `https://apologiadaily.com/answers/${e.slug}.html`;
   const paras = String(e.a).split('\n\n').map((p) => `<p>${esc(p.trim())}</p>`).join('\n      ');
@@ -111,7 +127,7 @@ ${NAV}
   </article>
 ${goDeeper(e)}
   <button class="ad-share" type="button" onclick="adShare()">Share this answer</button>
-  <section class="ad-cta">
+${moreQs(e)}  <section class="ad-cta">
     <h2>Have a question of your own?</h2>
     <p>Ask Apologia Daily and get a thoughtful, evidence-based answer &mdash; free, no account needed.</p>
     <a class="ad-cta-btn" href="/ask-anything.html">Ask your question &rarr;</a>
