@@ -87,6 +87,93 @@
   } catch (e) {}
 
   /* ============================================================
+     Content engagement + funnel instrumentation (delegated, site-wide).
+     Adds what autocapture can't: acquisition attribution, scroll depth,
+     FAQ reach, and named clicks on the internal answer<->essay funnel.
+     Everything routes through adTrack (safe no-op if PostHog is off).
+     ============================================================ */
+  try {
+    var _p = location.pathname;
+    var _ct = /^\/library\/mk\//.test(_p) ? 'essay_mk'
+            : /^\/library\/[^/]+\.html$/.test(_p) ? 'essay'
+            : /^\/answers\/[^/]+\.html$/.test(_p) ? 'answer'
+            : (_p === '/' || /\/index\.html?$/.test(_p)) ? 'home'
+            : 'page';
+
+    /* Acquisition: log the first campaign/referral landing of the session
+       so organic vs social vs referral traffic is attributable. */
+    try {
+      var _qs = new URLSearchParams(location.search || '');
+      var _c = {}, _keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'ref'];
+      for (var _i = 0; _i < _keys.length; _i++) { var _v = _qs.get(_keys[_i]); if (_v) _c[_keys[_i]] = _v; }
+      if (Object.keys(_c).length && !sessionStorage.getItem('ad_camp_logged')) {
+        sessionStorage.setItem('ad_camp_logged', '1');
+        _c.landing = _p;
+        try { if (document.referrer) _c.referrer = document.referrer; } catch (x) {}
+        window.adTrack('campaign_landing', _c);
+      }
+    } catch (e) {}
+
+    /* Scroll-depth milestones on long-form content (each fires once). */
+    if (_ct === 'essay' || _ct === 'answer' || _ct === 'essay_mk') {
+      var _fired = {}, _marks = [25, 50, 75, 90], _tk = null;
+      var _depth = function () {
+        try {
+          var d = document.documentElement;
+          var range = d.scrollHeight - window.innerHeight;
+          if (range <= 40) return;
+          var pct = Math.round(((window.scrollY || d.scrollTop || 0) / range) * 100);
+          for (var i = 0; i < _marks.length; i++) {
+            var m = _marks[i];
+            if (pct >= m && !_fired[m]) {
+              _fired[m] = 1;
+              window.adTrack('scroll_depth', { depth: m, content_type: _ct, path: _p });
+              if (m === 90) window.adTrack('read_complete', { content_type: _ct, path: _p });
+            }
+          }
+        } catch (x) {}
+      };
+      window.addEventListener('scroll', function () {
+        if (_tk) return; _tk = setTimeout(function () { _tk = null; _depth(); }, 300);
+      }, { passive: true });
+      window.addEventListener('load', _depth);
+    }
+
+    /* FAQ section reached — the FAQ is always-open, so track visibility. */
+    try {
+      var _faq = document.querySelector('.ad-faq');
+      if (_faq && 'IntersectionObserver' in window) {
+        var _io = new IntersectionObserver(function (ents) {
+          for (var i = 0; i < ents.length; i++) {
+            if (ents[i].isIntersecting) { window.adTrack('faq_viewed', { content_type: _ct, path: _p }); _io.disconnect(); break; }
+          }
+        }, { threshold: 0.3 });
+        _io.observe(_faq);
+      }
+    } catch (e) {}
+
+    /* Named clicks on the internal answer<->essay funnel + share + ask. */
+    document.addEventListener('click', function (ev) {
+      try {
+        var el = ev.target && ev.target.closest ? ev.target.closest('a,button') : null;
+        if (!el || !el.closest) return;
+        var href = (el.getAttribute && el.getAttribute('href')) || '';
+        var cls = (el.className && el.className.toString) ? el.className.toString() : '';
+        var oc = (el.getAttribute && el.getAttribute('onclick')) || '';
+        var evt = null, props = { from: _p, content_type: _ct };
+        if (el.closest('.art-shortanswer')) { evt = 'short_answer_click'; props.to = href; }
+        else if (el.closest('.ad-more-qs')) { evt = 'related_answer_click'; props.to = href; }
+        else if (el.closest('.ad-related')) { evt = 'go_deeper_click'; props.to = href; }
+        else if (el.closest('.ba-inner')) { evt = 'home_browse_click'; props.to = href; }
+        else if (/\bad-share\b/.test(cls)) { evt = 'share_click'; }
+        else if (/\bhc-btn\b/.test(cls) || el.id === 'hcBtn') { evt = 'ask_click'; }
+        else if (/handleSignup/.test(oc)) { evt = 'signup_submit'; }
+        if (evt) window.adTrack(evt, props);
+      } catch (x) {}
+    }, true);
+  } catch (e) {}
+
+  /* ============================================================
      PWA: make the site installable + work offline.
      Injects the manifest/icons/theme tags (so we don't have to edit
      every page's <head>), registers the service worker, and offers a
