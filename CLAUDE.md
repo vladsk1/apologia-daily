@@ -13,7 +13,22 @@
 > the **Macedonian pilot** (`library/mk/*` — 10 essays + index) and the **bilingual
 > Evidence Library hub** (EN/МК toggle in `evidence-library.html` + `ev-sN.mk.html`); the
 > **Spanish pilot** (`library/es/*` — 10 essays + index, tri-lingual EN/МК/ES switchers +
-> hreflang + sitemap, all 10 orthodoxy-gated CLEAN).
+> hreflang + sitemap, all 10 orthodoxy-gated CLEAN); the **"The Case, Plainly" tier** — a
+> warm, plain-English, positive-case walkthrough (~850–950 words) inlined as the FIRST paid
+> block in each argument card (under the Upgrade gate, before the deep dive), live across 7
+> tabs / **76 arguments, all orthodoxy-gated CLEAN**: Jesus (`ev-s3`, 15), Resurrection
+> (`ev-s2`, 8), Biblical Reliability (`ev-s4`, 11), Trinity (`ev-s6`, 10), God's Existence
+> (`ev-s1`, 12), Science & Faith (`ev-s5`, 7), and Islam in Worldviews (`worldviews.html`,
+> 13). **How it's built** (repeatable): a drafter (`apologia-evidence`, grounded in each
+> already-certified essay) writes body prose as `<p class="psl">`/`<p class="pt">` lines to
+> a scratch file; a per-tab build script wraps it in a second `.pro` block (or `.wv-pro` for
+> worldviews — psl→`wv-pro-section-label`, pt→`wv-pro-text`) and splices it in *before* the
+> deep-dive `.pro`, anchored on that argument's unique `.prot`/`.wv-pro-subtitle` tagline
+> (worldviews build is scoped to the Islam section only, 0 leakage); then a batched
+> `apologia-orthodoxy` gate on every article before deploy. Positive case ONLY — objections
+> deferred to the deep dive with one gentle closing line. Scripts + all scratch bodies are
+> under the session scratchpad. NOT yet done: Conversion Stories (`ev-s7`, intentionally
+> skipped) and the incomplete Worldviews pages (JW/Mormon/Atheism).
 >
 > **Open work:** (1) native Macedonian **and Spanish** doctrinal review of the mk/es
 > essays + hub fragments (AI-translated, orthodoxy-gated, not yet human-checked; the es
@@ -24,9 +39,15 @@
 > questions; (4) **monetization is a stub** — `isPro` hardcoded, Stripe not live, a dead
 > "$8/mo + 7-day trial" is advertised: decide the model, don't run paid acquisition into
 > it, and never wire real prices/payments without human sign-off; (5) PostHog is
-> under-instrumented (full event/funnel plan in `docs/MARKETING_PLAN.md`). Candidate next
-> steps: extend the Spanish/Macedonian pilots beyond 10 essays (+ a Spanish hub via
-> `ev-sN.es.html` fragments); more `/answers/` pages via the flywheel; execute the
+> under-instrumented (full event/funnel plan in `docs/MARKETING_PLAN.md`); (6) the **"The
+> Case, Plainly" tier** passed the automated `apologia-orthodoxy` gate on all 76 articles
+> but still needs eventual **human/pastoral sign-off** before high-stakes acquisition — most
+> relevant on the Trinity and Islam tabs; the gates left a short list of non-blocking notes
+> for that pass (e.g. the Surah 10:94 "doubt" reading on the islam-dilemma Case; a couple of
+> Islamic-studies attributions on islam-eternalword). Candidate next
+> steps: roll the Case tier across Conversion Stories / the remaining Worldviews once those
+> pages are complete; extend the Spanish/Macedonian pilots beyond 10 essays (+ a Spanish hub
+> via `ev-sN.es.html` fragments); more `/answers/` pages via the flywheel; execute the
 > marketing plan.
 
 Apologia Daily (apologiadaily.com) is a commercial Christian apologetics platform: a
