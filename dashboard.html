@@ -289,17 +289,38 @@
 
     <!-- GUIDED FOCUS (shown in guided mode) -->
     <div id="guided-focus" style="display:block;">
+      <!-- FIRST-WEEK JOURNEY (one joined card: banner + day task; hidden once the 7 days are done) -->
+      <div id="journey-block" style="margin-bottom:0.75rem;">
       <div style="background:linear-gradient(135deg,#1e4278,#0f2040);border-radius:8px 8px 0 0;padding:1rem 1.5rem;border:1px solid rgba(200,169,81,0.25);border-bottom:none;">
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">
           <div>
-            <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#c8a951;margin-bottom:0.2rem;">&#127919; Your 7-Day Guided Journey</div>
+            <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#c8a951;margin-bottom:0.2rem;">&#127919; Your First Week &mdash; Guided Journey</div>
             <div style="font-family:var(--font-ui);font-size:0.8rem;color:rgba(255,255,255,0.6);" id="journey-progress-text">You are on day 1 of 7 &mdash; building the foundation</div>
           </div>
           <div style="font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:#c8a951;" id="journey-day-badge">1/7</div>
         </div>
       </div>
+      <div style="background:var(--navy-950);border:1px solid rgba(200,169,81,0.25);border-radius:0 0 8px 8px;border-top:none;padding:1.5rem;">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+          <div style="flex:1;">
+            <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;" id="focus-step">Day 1 of 7</div>
+            <div style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.4rem;" id="focus-title">Start with the Daily Devotional</div>
+            <div style="font-family:var(--font-ui);font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.6;" id="focus-desc">Build the habit first. 5 minutes of verse, reflection, and prayer rooted in apologetics. This is the daily anchor the whole platform is built around.</div>
+          </div>
+          <button id="focus-btn" onclick="openActivity()" style="font-family:var(--font-ui);font-size:0.82rem;font-weight:600;background:var(--gold);color:var(--navy-950);border:none;border-radius:4px;padding:10px 20px;cursor:pointer;white-space:nowrap;flex-shrink:0;">Start &rarr;</button>
+        </div>
+        <!-- Daily steps mini-progress -->
+        <div style="display:flex;gap:6px;margin-top:1.25rem;" id="focus-steps-row"></div>
+        <!-- Mark complete button -->
+        <div style="text-align:center;margin-top:1.1rem;display:flex;gap:0.5rem;justify-content:center;">
+          <button onclick="goBackDay()" id="btn-back-day" style="font-family:var(--font-ui);font-size:0.78rem;font-weight:500;background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.55);padding:6px 16px;border-radius:4px;cursor:pointer;transition:all 0.15s;">&larr; Previous day</button>
+          <button onclick="markDayComplete()" id="btn-mark-complete" style="font-family:var(--font-ui);font-size:0.78rem;font-weight:600;background:var(--gold);border:1px solid var(--gold);color:#050d1a;padding:6px 18px;border-radius:4px;cursor:pointer;transition:all 0.15s;">Mark today complete &#10003;</button>
+        </div>
+      </div>
+      </div><!-- /journey-block -->
+
       <!-- TODAY hero: the daily 5-minute session -->
-      <a href="today.html" id="today-hero" style="display:flex;align-items:center;gap:1.25rem;text-decoration:none;background:linear-gradient(135deg,var(--navy-800),#16325c);border:1px solid rgba(200,169,81,0.55);border-radius:10px;padding:1.15rem 1.5rem;margin-bottom:0.75rem;transition:border-color 0.15s,box-shadow 0.15s;flex-wrap:wrap;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 24px rgba(200,169,81,0.15)'" onmouseout="this.style.borderColor='rgba(200,169,81,0.55)';this.style.boxShadow='none'">
+      <a href="today.html" id="today-hero" style="display:flex;align-items:center;gap:1.25rem;text-decoration:none;background:var(--navy-950);border:1px solid rgba(200,169,81,0.4);border-radius:8px;padding:1.15rem 1.5rem;margin-bottom:0.75rem;transition:border-color 0.15s;flex-wrap:wrap;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(200,169,81,0.4)'">
         <span style="font-size:1.9rem;flex-shrink:0;" id="today-hero-icon">&#9654;&#65039;</span>
         <div style="flex:1;min-width:220px;">
           <div style="font-family:var(--font-ui);font-size:0.62rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:2px;">Start here every day</div>
@@ -308,6 +329,7 @@
         </div>
         <span id="today-hero-btn" style="font-family:var(--font-ui);font-size:0.88rem;font-weight:600;background:var(--gold);color:var(--navy-950);padding:11px 26px;border-radius:4px;white-space:nowrap;">Start &rarr;</span>
       </a>
+
       <!-- Practice row: streak / daily mix / mastery shelf -->
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.75rem;margin-bottom:1.25rem;" id="practice-row">
         <div style="background:var(--navy-950);border:1px solid var(--navy-700);border-radius:8px;padding:0.9rem 1.1rem;display:flex;align-items:center;gap:0.8rem;">
@@ -334,33 +356,13 @@
       </div>
       <div id="shelf-fading" style="display:none;font-family:var(--font-ui);font-size:0.74rem;color:#d4b96a;background:rgba(200,169,81,0.07);border:1px solid rgba(200,169,81,0.25);border-radius:6px;padding:0.6rem 0.9rem;margin:-0.5rem 0 1.25rem;line-height:1.7;"></div>
 
-      <p class="section-label" style="display:none;">Your focus today</p>
-      <div style="background:var(--navy-950);border:1px solid rgba(200,169,81,0.25);border-radius:0 0 8px 8px;border-top:none;padding:1.5rem;margin-bottom:1.5rem;">
-        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
-          <div style="flex:1;">
-            <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;" id="focus-step">Day 1 of 7</div>
-            <div style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.4rem;" id="focus-title">Start with the Daily Devotional</div>
-            <div style="font-family:var(--font-ui);font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.6;" id="focus-desc">Build the habit first. 5 minutes of verse, reflection, and prayer rooted in apologetics. This is the daily anchor the whole platform is built around.</div>
-          </div>
-          <button id="focus-btn" onclick="openActivity()" style="font-family:var(--font-ui);font-size:0.82rem;font-weight:600;background:var(--gold);color:var(--navy-950);border:none;border-radius:4px;padding:10px 20px;cursor:pointer;white-space:nowrap;flex-shrink:0;">Start &rarr;</button>
-        </div>
-        <!-- Daily steps mini-progress -->
-        <div style="display:flex;gap:6px;margin-top:1.25rem;" id="focus-steps-row"></div>
-      </div>
-
-      <!-- Mark complete button -->
-      <div style="text-align:center;margin-top:0.25rem;display:flex;gap:0.5rem;justify-content:center;">
-        <button onclick="goBackDay()" id="btn-back-day" style="font-family:var(--font-ui);font-size:0.78rem;font-weight:500;background:none;border:1px solid var(--border);color:var(--text-muted);padding:6px 16px;border-radius:4px;cursor:pointer;transition:all 0.15s;">&larr; Previous day</button>
-        <button onclick="markDayComplete()" id="btn-mark-complete" style="font-family:var(--font-ui);font-size:0.78rem;font-weight:600;background:var(--gold);border:1px solid var(--gold);color:#050d1a;padding:6px 18px;border-radius:4px;cursor:pointer;transition:all 0.15s;">Mark today complete &#10003;</button>
-      </div>
-
-      <!-- ALSO TODAY -->
-      <p class="section-label">Also suggested today</p>
+      <!-- ALSO TODAY (journey suggestions; hidden with the journey) -->
+      <p class="section-label" id="also-today-label">Also suggested today</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1.5rem;" id="also-today">
         <!-- Populated by JS -->
       </div>
 
-      
+
     </div>
   </div>
 
@@ -1046,20 +1048,22 @@
   ];
 
   // Ongoing guided focus for Pro users
-  var PRO_FOCUS = [
-    {step:'Today',title:'Start with the Daily Devotional',desc:'Build the habit. 5 minutes of verse, reflection, and prayer at the intersection of faith and reason.',link:'daily-devotional.html',tag:'pro',also:[{icon:'&#127891;',title:"Today's Argument",link:'daily-argument.html'},{icon:'&#128218;',title:'Evidence Library',link:'evidence-library.html'}]},
-    {step:'Today',title:'Explain the Kalam Argument back',desc:'You have read it. Now explain it in your own words. The AI tutor will score your explanation and tell you exactly what to improve.',link:'explain-it-back.html',tag:'pro',also:[{icon:'&#128196;',title:'Flashcard review',link:'flashcards.html'},{icon:'&#128217;',title:'Daily Devotional',link:'daily-devotional.html'}]},
-    {step:'Today',title:'Debate a sceptic',desc:'Put your knowledge under pressure. Choose an opponent, a topic, and a difficulty. Real confidence comes from being challenged, not just studying.',link:'debate-arena.html',tag:'pro',also:[{icon:'&#127891;',title:"Today's Argument",link:'daily-argument.html'},{icon:'&#128196;',title:'Flashcard review',link:'flashcards.html'}]},
-    {step:'Today',title:'Study the Moral Argument',desc:'One of the most powerful arguments for everyday conversations. Why the Holocaust was objectively evil -- and why that points to God.',link:'evidence-library.html',tag:'pro',also:[{icon:'&#128217;',title:'Daily Devotional',link:'daily-devotional.html'},{icon:'&#128196;',title:'Flashcard review',link:'flashcards.html'}]},
-    {step:'Today',title:"Review flashcards due today",desc:'Spaced repetition only works when you review on schedule. Check your deck and clear what is due. Ten minutes today means better recall in a month.',link:'flashcards.html',tag:'pro',also:[{icon:'&#127891;',title:"Today's Argument",link:'daily-argument.html'},{icon:'&#128217;',title:'Daily Devotional',link:'daily-devotional.html'}]},
-  ];
 
-  var DAILY_FOCUS = FREE_JOURNEY; // overridden in updateGuidedFocus based on isPro
 
   function updateGuidedFocus() {
-    var isPro = true; // OPEN for beta — show the full Pro journey until Stripe live
-    var focusArr = isPro ? PRO_FOCUS : FREE_JOURNEY;
+    var focusArr = FREE_JOURNEY; // first-week onboarding; the daily loop itself lives at /today
     var journeyDay = getJourneyDay();
+    // Once the first week is done, retire the journey — /today is the daily front door
+    var jb = document.getElementById('journey-block');
+    var alsoLabel = document.getElementById('also-today-label');
+    var alsoGrid = document.getElementById('also-today');
+    if (journeyDay >= focusArr.length) {
+      if (jb) jb.style.display = 'none';
+      if (alsoLabel) alsoLabel.style.display = 'none';
+      if (alsoGrid) alsoGrid.style.display = 'none';
+      return;
+    }
+    if (jb) jb.style.display = 'block';
     var focusIdx = Math.min(journeyDay, focusArr.length - 1);
     var focus = focusArr[focusIdx];
 
