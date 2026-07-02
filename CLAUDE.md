@@ -17,7 +17,8 @@
 > (`today.html` + `/today` rewrite in `vercel.json` + dashboard practice-row card — a 5-min
 > composed session: due-card review reusing the flashcards SM-2 maths → day's argument from
 > `daily_arguments` → **`daily-args.json` (63 orthodoxy-gated entries covering all 6 tabs,
-> also the rotation for `daily-argument.html` + the push teasers)** → built-in fallbacks,
+> also the push-teaser rotation; the old standalone `daily-argument.html` is RETIRED —
+> deleted, 301 → `/today`, all links repointed)** → built-in fallbacks,
 > w/ TTS listen → active-recall self-rate feeding
 > `Coach.recordQuiz` + auto-seeding a flashcard on a miss → `ad_streak` mark +
 > `ad_today_done` belt point; Sat=Arena/Sun=devotional bonus cards; orthodoxy-gated CLEAN);
