@@ -211,7 +211,7 @@
   var FREE_JOURNEY_TASKS = [
     {day:1,title:'Start with the Daily Devotional',page:'daily-devotional.html'},
     {day:2,title:'Read the Kalam Argument',page:'evidence-library.html'},
-    {day:3,title:"Today's Argument -- active recall",page:'daily-argument.html'},
+    {day:3,title:"Today's Session -- the daily 5-minute loop",page:'today.html'},
     {day:4,title:'Build your flashcard deck',page:'flashcards.html'},
     {day:5,title:'Play the Daily Quiz',page:'daily-quiz.html'},
     {day:6,title:'Enter the Debate Arena',page:'debate-arena.html'},
@@ -299,7 +299,7 @@
           <h2>All caught up!</h2>
           <p>No cards are due for review right now. Come back tomorrow, or add more cards to your deck to keep practising.</p>
           <button class="btn-primary" onclick="switchTab('add', document.querySelectorAll('.tab-btn')[2])">Add more cards</button>
-          <a href="daily-argument.html" class="btn-secondary">Today's argument</a>
+          <a href="today.html" class="btn-secondary">Today's session</a>
         </div>
       </div>
 
@@ -344,7 +344,7 @@
         <h2>Session complete!</h2>
         <p id="session-summary">Well done. Each card will come back at just the right time to help you remember it.</p>
         <button class="btn-primary" onclick="startSession()">Review again</button>
-        <a href="daily-argument.html" class="btn-secondary">Today's argument</a>
+        <a href="today.html" class="btn-secondary">Today's session</a>
       </div>
     </div>
 
@@ -510,7 +510,7 @@
           '<h2>All caught up!</h2>' +
           '<p>No cards are due for review right now. Your cards will come back at the perfect time. Come back tomorrow, or add more to your deck.</p>' +
           '<button class="btn-primary" onclick="switchTab(\'add\', document.querySelectorAll(\'.tab-btn\')[2])">Add more cards</button>' +
-          '<a href="daily-argument.html" class="btn-secondary">Today\'s argument</a>';
+          '<a href="today.html" class="btn-secondary">Today\'s session</a>';
       }
     }
   }

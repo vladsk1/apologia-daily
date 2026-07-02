@@ -512,11 +512,11 @@
       </div>
       <div style="font-family:var(--font-ui);font-size:0.8rem;color:rgba(255,255,255,0.5);margin-bottom:1.25rem;padding-left:0.85rem;">Build the daily habit &mdash; recall, review, and practise what you learn.</div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;">
-        <a href="daily-argument.html" style="position:relative;background:rgba(255,255,255,0.03);border:1px solid rgba(200,169,81,0.25);border-radius:8px;padding:1.1rem;text-decoration:none;display:block;transition:border-color 0.15s;" onmouseover="this.style.borderColor='rgba(200,169,81,0.6)'" onmouseout="this.style.borderColor='rgba(200,169,81,0.25)'">
+        <a href="today.html" style="position:relative;background:rgba(255,255,255,0.03);border:1px solid rgba(200,169,81,0.25);border-radius:8px;padding:1.1rem;text-decoration:none;display:block;transition:border-color 0.15s;" onmouseover="this.style.borderColor='rgba(200,169,81,0.6)'" onmouseout="this.style.borderColor='rgba(200,169,81,0.25)'">
           <span style="position:absolute;top:0.85rem;right:0.85rem;font-family:var(--font-ui);font-size:0.58rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#0f6e56;background:#e1f5ee;padding:2px 8px;border-radius:20px;">Free</span>
           <div style="font-size:1.3rem;margin-bottom:0.4rem;">&#127891;</div>
-          <div style="font-family:var(--font-ui);font-size:0.82rem;font-weight:600;color:#fff;margin-bottom:0.25rem;">Daily Argument</div>
-          <div style="font-family:var(--font-ui);font-size:0.72rem;color:rgba(255,255,255,0.4);line-height:1.5;">3-minute active recall</div>
+          <div style="font-family:var(--font-ui);font-size:0.82rem;font-weight:600;color:#fff;margin-bottom:0.25rem;">Today&rsquo;s Session</div>
+          <div style="font-family:var(--font-ui);font-size:0.72rem;color:rgba(255,255,255,0.4);line-height:1.5;">5-minute daily loop &mdash; review &middot; learn &middot; prove</div>
           <div style="font-family:var(--font-ui);font-size:0.7rem;color:var(--gold);margin-top:0.6rem;font-weight:500;" id="daily-arg-status">Start today &rarr;</div>
         </a>
         <a href="flashcards.html" style="position:relative;background:rgba(255,255,255,0.03);border:1px solid rgba(200,169,81,0.25);border-radius:8px;padding:1.1rem;text-decoration:none;display:block;transition:border-color 0.15s;" onmouseover="this.style.borderColor='rgba(200,169,81,0.6)'" onmouseout="this.style.borderColor='rgba(200,169,81,0.25)'">
@@ -1038,12 +1038,12 @@
   // ── GUIDED FOCUS ──
   // 7-day free journey
   var FREE_JOURNEY = [
-    {step:'Day 1 of 7',title:'Start with the Daily Devotional',desc:'Build the habit first. 5 minutes of verse, reflection, and prayer rooted in apologetics. This is the daily anchor the whole platform is built around.',link:'daily-devotional.html',tag:'free',also:[{icon:'&#127891;',title:"Today's Argument",link:'daily-argument.html'},{icon:'&#128218;',title:'Browse Evidence Library',link:'evidence-library.html'}]},
+    {step:'Day 1 of 7',title:'Start with the Daily Devotional',desc:'Build the habit first. 5 minutes of verse, reflection, and prayer rooted in apologetics. This is the daily anchor the whole platform is built around.',link:'daily-devotional.html',tag:'free',also:[{icon:'&#9654;&#65039;',title:"Today's Session",link:'today.html'},{icon:'&#128218;',title:'Browse Evidence Library',link:'evidence-library.html'}]},
     {step:'Day 2 of 7',title:'Read the Kalam Argument',desc:'The most important argument for the existence of God. Read the free summary -- written to be clear enough to explain to a friend tonight.',link:'evidence-library.html',tag:'free',also:[{icon:'&#128217;',title:'Daily Devotional',link:'daily-devotional.html'},{icon:'&#128218;',title:'Evidence Library',link:'evidence-library.html'}]},
-    {step:'Day 3 of 7',title:"Today's Argument -- active recall",desc:'Read the argument, then write it from memory. Even a rough attempt is more effective than re-reading. This is how arguments move from your head to your mouth.',link:'daily-argument.html',tag:'free',also:[{icon:'&#128196;',title:'Add to flashcards',link:'flashcards.html'},{icon:'&#128217;',title:'Daily Devotional',link:'daily-devotional.html'}]},
-    {step:'Day 4 of 7',title:'Build your flashcard deck',desc:'Add the Kalam and 4 other arguments to your deck. Free accounts get 10 cards. The spaced repetition algorithm will bring them back at exactly the right intervals.',link:'flashcards.html',tag:'free',also:[{icon:'&#127891;',title:"Today's Argument",link:'daily-argument.html'},{icon:'&#128217;',title:'Daily Devotional',link:'daily-devotional.html'}]},
+    {step:'Day 3 of 7',title:"Today's Session -- your daily 5 minutes",desc:'The habit at the heart of the platform: review what is due, read today’s argument, then prove you can say it from memory. Five focused minutes.',link:'today.html',tag:'free',also:[{icon:'&#128196;',title:'Add to flashcards',link:'flashcards.html'},{icon:'&#128217;',title:'Daily Devotional',link:'daily-devotional.html'}]},
+    {step:'Day 4 of 7',title:'Build your flashcard deck',desc:'Add the Kalam and 4 other arguments to your deck. Free accounts get 10 cards. The spaced repetition algorithm will bring them back at exactly the right intervals.',link:'flashcards.html',tag:'free',also:[{icon:'&#9654;&#65039;',title:"Today's Session",link:'today.html'},{icon:'&#128217;',title:'Daily Devotional',link:'daily-devotional.html'}]},
     {step:'Day 5 of 7',title:'Play the Daily Quiz',desc:'Test what you have learned so far. Five questions at the difficulty level you choose. A streak starts today.',link:'daily-quiz.html',tag:'free',also:[{icon:'&#128196;',title:'Flashcard review',link:'flashcards.html'},{icon:'&#128217;',title:'Daily Devotional',link:'daily-devotional.html'}]},
-    {step:'Day 6 of 7',title:'Enter the Debate Arena',desc:'This is the moment everything comes together. Choose The Atheist at Gentle difficulty and use what you have learned in a live conversation. This is your one free debate this week.',link:'debate-arena.html',tag:'free',also:[{icon:'&#127891;',title:"Today's Argument",link:'daily-argument.html'},{icon:'&#128196;',title:'Flashcard review',link:'flashcards.html'}]},
+    {step:'Day 6 of 7',title:'Enter the Debate Arena',desc:'This is the moment everything comes together. Choose The Atheist at Gentle difficulty and use what you have learned in a live conversation. This is your one free debate this week.',link:'debate-arena.html',tag:'free',also:[{icon:'&#9654;&#65039;',title:"Today's Session",link:'today.html'},{icon:'&#128196;',title:'Flashcard review',link:'flashcards.html'}]},
     {step:'Day 7 of 7',title:'You have completed your free journey',desc:'In 7 days you have built a habit, learned 2 arguments, built a flashcard deck, and had your first live debate. Pro unlocks unlimited debates, full argument deep dives, Explain It Back AI coaching, and more.',link:'index.html#pricing',tag:'upgrade',also:[{icon:'&#9876;',title:'Unlimited debates',link:'index.html#pricing'},{icon:'&#128172;',title:'Explain It Back',link:'index.html#pricing'}]},
   ];
 
@@ -1262,9 +1262,10 @@
         '<p style="background:#f7f4ef;border-left:3px solid #c8a951;padding:0.75rem 1rem;border-radius:4px;"><strong>Conversation starter:</strong> "If the universe had a beginning, something outside it must have caused it. What do you think that could be?"</p>' +
         '</div>'
     },
-    2: { // Day 3 - Daily Argument active recall
-      type: 'recall',
-      title: 'Active Recall: The Kalam',
+    2: { // Day 3 - Today's Session (the daily loop; its Prove step is the recall rep)
+      type: 'redirect',
+      page: 'today.html',
+      title: 'Today\u2019s Session',
       body: '<div style="font-family:var(--font-serif);line-height:1.8;color:#0f1f38;">' +
         '<p style="margin-bottom:1rem;">Yesterday you read the Kalam argument. Now test yourself &mdash; recalling from memory is ten times more effective than re-reading.</p>' +
         '<div style="background:#f7f4ef;border-radius:6px;padding:1.25rem;margin-bottom:1.25rem;">' +

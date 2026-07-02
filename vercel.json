@@ -13,6 +13,7 @@
     { "source": "/today", "destination": "/today.html" }
   ],
   "redirects": [
+    { "source": "/daily-argument.html", "destination": "/today", "permanent": true },
     { "source": "/CLAUDE.md", "destination": "/", "permanent": false },
     { "source": "/HANDOFF.md", "destination": "/", "permanent": false },
     { "source": "/docs/:path*", "destination": "/", "permanent": false },

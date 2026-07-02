@@ -242,7 +242,7 @@ function buildEmailHtml(name, fc, ex) {
     <div style="font-family:Georgia,serif;font-size:0.92rem;color:#3a4a62;font-style:italic;line-height:1.7;margin-bottom:1rem;padding-left:1rem;border-left:3px solid #c8a951;">"${weeklyArg.q}"</div>
     <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
       <a href="https://apologiadaily.com/${weeklyArg.link}" style="font-family:Arial,sans-serif;font-size:0.8rem;font-weight:600;background:#050d1a;color:#fff;padding:8px 16px;border-radius:3px;text-decoration:none;">Study the argument</a>
-      <a href="https://apologiadaily.com/daily-argument.html" style="font-family:Arial,sans-serif;font-size:0.8rem;font-weight:600;background:none;color:#1e4278;padding:8px 16px;border-radius:3px;text-decoration:none;border:1px solid #1e4278;">Daily argument</a>
+      <a href="https://apologiadaily.com/today" style="font-family:Arial,sans-serif;font-size:0.8rem;font-weight:600;background:none;color:#1e4278;padding:8px 16px;border-radius:3px;text-decoration:none;border:1px solid #1e4278;">Today's session</a>
     </div>
   </div>
 
