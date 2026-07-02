@@ -13,7 +13,13 @@
 > the **Macedonian pilot** (`library/mk/*` — 10 essays + index) and the **bilingual
 > Evidence Library hub** (EN/МК toggle in `evidence-library.html` + `ev-sN.mk.html`); the
 > **Spanish pilot** (`library/es/*` — 10 essays + index, tri-lingual EN/МК/ES switchers +
-> hreflang + sitemap, all 10 orthodoxy-gated CLEAN); the **"The Case, Plainly" tier** — a
+> hreflang + sitemap, all 10 orthodoxy-gated CLEAN); the **`/today` daily loop**
+> (`today.html` + `/today` rewrite in `vercel.json` + dashboard practice-row card — a 5-min
+> composed session: due-card review reusing the flashcards SM-2 maths → day's argument from
+> `daily_arguments`/certified fallbacks w/ TTS listen → active-recall self-rate feeding
+> `Coach.recordQuiz` + auto-seeding a flashcard on a miss → `ad_streak` mark +
+> `ad_today_done` belt point; Sat=Arena/Sun=devotional bonus cards; orthodoxy-gated CLEAN);
+> the **"The Case, Plainly" tier** — a
 > warm, plain-English, positive-case walkthrough (~850–950 words) inlined as the FIRST paid
 > block in each argument card (under the Upgrade gate, before the deep dive), live across 7
 > tabs / **76 arguments, all orthodoxy-gated CLEAN**: Jesus (`ev-s3`, 15), Resurrection

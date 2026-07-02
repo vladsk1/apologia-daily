@@ -9,6 +9,9 @@
       "schedule": "0 13 * * *"
     }
   ],
+  "rewrites": [
+    { "source": "/today", "destination": "/today.html" }
+  ],
   "redirects": [
     { "source": "/CLAUDE.md", "destination": "/", "permanent": false },
     { "source": "/HANDOFF.md", "destination": "/", "permanent": false },

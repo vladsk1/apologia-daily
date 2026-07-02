@@ -300,6 +300,13 @@
       </div>
       <!-- Practice row: streak / daily mix / mastery shelf -->
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.75rem;margin-bottom:1.25rem;" id="practice-row">
+        <a href="today.html" id="today-card" style="text-decoration:none;background:linear-gradient(135deg,var(--navy-800),var(--navy-700));border:1px solid rgba(200,169,81,0.45);border-radius:8px;padding:0.9rem 1.1rem;display:flex;align-items:center;gap:0.8rem;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(200,169,81,0.45)'">
+          <span style="font-size:1.4rem;">&#9654;&#65039;</span>
+          <div>
+            <div style="font-family:var(--font-serif);font-size:1.02rem;font-weight:700;color:var(--gold);" id="today-card-title">Today&rsquo;s session</div>
+            <div style="font-family:var(--font-ui);font-size:0.68rem;color:rgba(255,255,255,0.5);" id="today-card-sub">5 minutes &mdash; review &middot; learn &middot; prove</div>
+          </div>
+        </a>
         <div style="background:var(--navy-950);border:1px solid var(--navy-700);border-radius:8px;padding:0.9rem 1.1rem;display:flex;align-items:center;gap:0.8rem;">
           <span style="font-size:1.5rem;" id="streak-flame">&#128293;</span>
           <div>
@@ -676,8 +683,9 @@
       // Belt
       var masteredPts = (function(){ try{ var m = JSON.parse(localStorage.getItem('ad_mastery')||'{}'); var c=0; for(var k in m){ if(m[k] && m[k].done) c++; } return c*5; }catch(e){ return 0; } })();
       var mixPts = parseInt(localStorage.getItem('ad_mix_done')||'0',10) || 0;
-      var points = completed.length * 2 + debateCount * 3 + (askUsage.count || 0) + masteredPts + mixPts;
-      window._adPointParts = { dev: completed.length, deb: debateCount, ask: (askUsage.count||0), mast: masteredPts/5, mix: mixPts };
+      var todayPts = parseInt(localStorage.getItem('ad_today_done')||'0',10) || 0;
+      var points = completed.length * 2 + debateCount * 3 + (askUsage.count || 0) + masteredPts + mixPts + todayPts;
+      window._adPointParts = { dev: completed.length, deb: debateCount, ask: (askUsage.count||0), mast: masteredPts/5, mix: mixPts, today: todayPts };
       updateBelt(points);
 
       // Recommendation
@@ -1541,7 +1549,8 @@ function openBeltInfo(){
         + '<br>&#9876;&#65039; Debate completed &mdash; <b>3 pts</b> (you: ' + p.deb + ')'
         + '<br>&#10067; Question asked &mdash; <b>1 pt</b> (you: ' + p.ask + ')'
         + '<br>&#127942; Argument mastered &mdash; <b>5 pts</b> (you: ' + p.mast + ')'
-        + '<br>&#127922; Daily Mix finished &mdash; <b>1 pt</b> (you: ' + p.mix + ')';
+        + '<br>&#127922; Daily Mix finished &mdash; <b>1 pt</b> (you: ' + p.mix + ')'
+        + '<br>&#9654;&#65039; Today session finished &mdash; <b>1 pt</b> (you: ' + (p.today||0) + ')';
     }
     var lad = document.getElementById('belt-ladder');
     if(lad){

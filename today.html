@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Today — Your 5-Minute Session — Apologia Daily</title>
+  <meta name="description" content="Your daily 5-minute apologetics session: review what's due, learn today's argument, prove you can say it, keep your streak alive." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root{--n:#050d1a;--n8:#0a1628;--n7:#0f2040;--n5:#1e4278;--n3:#4a7ab5;--g:#c8a951;--gl:#d4b96a;--gd:#a88930;--w:#fff;--ow:#f7f4ef;--border:#e8e2d8;--tm:#3a4a62;--td:#0f1f38;--fd:'Playfair Display',Georgia,serif;--ss:'Source Serif 4',Georgia,serif;--ui:'DM Sans',system-ui,sans-serif;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--ss);background:var(--ow);color:var(--td);min-height:100vh;}
+
+    .hero{background:var(--n);padding:2rem 2rem 1.5rem;}
+    .hero-inner{max-width:720px;margin:0 auto;}
+    .date-badge{font-family:var(--ui);font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--g);margin-bottom:0.4rem;}
+    .hero-row{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+    .hero h1{font-family:var(--fd);font-size:clamp(1.6rem,3vw,2rem);font-weight:700;color:var(--w);}
+    .hero-sub{font-size:0.85rem;color:rgba(255,255,255,0.45);line-height:1.7;margin-top:0.35rem;}
+    .streak-chip{display:flex;align-items:center;gap:0.6rem;background:var(--n8);border:1px solid rgba(200,169,81,0.25);border-radius:8px;padding:0.6rem 1rem;}
+    .streak-chip .fl{font-size:1.4rem;}
+    .streak-chip .cnt{font-family:var(--fd);font-size:1.1rem;font-weight:700;color:var(--g);}
+    .streak-chip .lbl{font-family:var(--ui);font-size:0.65rem;color:rgba(255,255,255,0.45);}
+    .dots{display:flex;gap:0.5rem;margin-top:1.2rem;}
+    .dot{flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,0.12);transition:background 0.3s;}
+    .dot.on{background:var(--g);}
+    .dots-label{font-family:var(--ui);font-size:0.68rem;color:rgba(255,255,255,0.4);margin-top:0.45rem;}
+
+    .main{max-width:720px;margin:0 auto;padding:1.5rem 2rem 3rem;}
+
+    /* step cards */
+    .step{background:var(--w);border:1px solid var(--border);border-radius:10px;margin-bottom:1rem;overflow:hidden;transition:opacity 0.2s;}
+    .step.locked{opacity:0.55;pointer-events:none;}
+    .step-head{display:flex;align-items:center;gap:0.8rem;padding:1rem 1.25rem;border-bottom:1px solid transparent;}
+    .step.open .step-head{border-bottom-color:var(--border);}
+    .step-chip{width:28px;height:28px;border-radius:50%;background:var(--n8);color:var(--g);font-family:var(--ui);font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .step.done .step-chip{background:#166534;color:#fff;}
+    .step-title{font-family:var(--fd);font-size:1rem;font-weight:700;color:var(--td);}
+    .step-mins{margin-left:auto;font-family:var(--ui);font-size:0.7rem;color:var(--tm);white-space:nowrap;}
+    .step-done-note{margin-left:auto;font-family:var(--ui);font-size:0.75rem;color:#166534;font-weight:600;white-space:nowrap;}
+    .step-body{padding:1.25rem;display:none;}
+    .step.open .step-body{display:block;}
+
+    /* review card */
+    .rv-card{background:var(--n8);border:1px solid rgba(200,169,81,0.25);border-radius:8px;padding:1.5rem;cursor:pointer;min-height:150px;display:flex;flex-direction:column;justify-content:center;}
+    .rv-side-label{font-family:var(--ui);font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--g);margin-bottom:0.6rem;}
+    .rv-text{font-family:var(--ss);font-size:0.95rem;color:rgba(255,255,255,0.85);line-height:1.7;}
+    .rv-hint{font-family:var(--ui);font-size:0.7rem;color:rgba(255,255,255,0.35);margin-top:0.8rem;}
+    .rv-meta{font-family:var(--ui);font-size:0.72rem;color:var(--tm);margin:0.6rem 2px 0.8rem;}
+    .rate-row{display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:0.8rem;}
+    .rate-btn{font-family:var(--ui);font-size:0.82rem;font-weight:600;padding:9px 16px;border:none;border-radius:5px;cursor:pointer;flex:1;min-width:110px;}
+    .rate-btn.again{background:#FEE2E2;color:#991B1B;}
+    .rate-btn.good{background:#FEF3C7;color:#92400E;}
+    .rate-btn.easy{background:#DCFCE7;color:#166534;}
+    .rv-empty{font-family:var(--ui);font-size:0.85rem;color:var(--tm);line-height:1.7;}
+
+    /* learn card */
+    .arg-top{background:linear-gradient(135deg,var(--n7),var(--n5));border-radius:8px 8px 0 0;padding:1.5rem;}
+    .arg-cat{font-family:var(--ui);font-size:0.65rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--g);margin-bottom:0.4rem;}
+    .arg-title{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:var(--w);line-height:1.3;}
+    .arg-tag{font-family:var(--ss);font-size:0.85rem;color:rgba(255,255,255,0.6);font-style:italic;line-height:1.6;margin-top:0.4rem;}
+    .arg-body{background:var(--n8);border-radius:0 0 8px 8px;padding:1.25rem 1.5rem;}
+    .sec-label{font-family:var(--ui);font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--g);margin:0.9rem 0 0.5rem;}
+    .sec-label:first-child{margin-top:0;}
+    .prem{list-style:none;counter-reset:pr;}
+    .prem li{font-family:var(--ss);font-size:0.88rem;color:rgba(255,255,255,0.8);padding:7px 0;line-height:1.6;display:flex;gap:0.7rem;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .prem li:last-child{border-bottom:none;}
+    .prem li::before{content:'P' counter(pr);counter-increment:pr;color:var(--g);font-family:var(--ui);font-size:0.72rem;font-weight:700;min-width:20px;padding-top:2px;flex-shrink:0;}
+    .ev-text{font-family:var(--ss);font-size:0.85rem;color:rgba(255,255,255,0.7);line-height:1.8;}
+    .listen-row{display:flex;align-items:center;gap:0.6rem;margin-top:1rem;}
+    .listen-btn{font-family:var(--ui);font-size:0.78rem;font-weight:600;background:var(--g);color:var(--n);border:none;border-radius:5px;padding:8px 14px;cursor:pointer;}
+    .listen-stop{font-family:var(--ui);font-size:0.72rem;background:transparent;color:rgba(255,255,255,0.55);border:1px solid rgba(255,255,255,0.2);border-radius:5px;padding:7px 12px;cursor:pointer;display:none;}
+
+    .btn-primary{font-family:var(--ui);font-size:0.85rem;font-weight:600;background:var(--g);color:var(--n);border:none;border-radius:5px;padding:11px 22px;cursor:pointer;text-decoration:none;display:inline-block;}
+    .btn-primary:hover{background:var(--gl);}
+    .btn-sec{font-family:var(--ui);font-size:0.82rem;font-weight:500;background:none;color:var(--n5);border:1px solid var(--n3);border-radius:5px;padding:10px 20px;cursor:pointer;text-decoration:none;display:inline-block;}
+    .btn-row{margin-top:1rem;display:flex;gap:0.7rem;flex-wrap:wrap;}
+
+    /* prove */
+    .prompt-box{font-family:var(--ss);font-size:0.9rem;color:var(--tm);line-height:1.7;padding:0.8rem 1rem;background:var(--ow);border-left:3px solid var(--g);border-radius:4px;font-style:italic;margin-bottom:0.9rem;}
+    textarea.ans{width:100%;font-family:var(--ss);font-size:0.9rem;color:var(--td);background:var(--ow);border:1px solid var(--border);border-radius:5px;padding:12px 14px;outline:none;resize:vertical;min-height:110px;line-height:1.8;}
+    textarea.ans:focus{border-color:var(--n3);}
+    .model-box{background:var(--ow);border:1px solid var(--border);border-radius:5px;padding:1rem 1.2rem;margin:0.9rem 0;}
+    .model-label{font-family:var(--ui);font-size:0.65rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--n5);margin-bottom:0.5rem;}
+    .model-text{font-family:var(--ss);font-size:0.88rem;color:var(--td);line-height:1.8;white-space:pre-line;}
+    .rate-q{font-family:var(--ui);font-size:0.85rem;color:var(--tm);margin:0.9rem 0 0.6rem;}
+
+    /* close */
+    .close-box{text-align:center;padding:0.5rem 0;}
+    .close-icon{font-size:2.6rem;margin-bottom:0.6rem;}
+    .close-title{font-family:var(--fd);font-size:1.35rem;font-weight:700;color:var(--td);margin-bottom:0.4rem;}
+    .close-sub{font-family:var(--ui);font-size:0.85rem;color:var(--tm);line-height:1.7;max-width:440px;margin:0 auto 1.1rem;}
+    .close-stats{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.2rem;}
+    .cs{background:var(--n8);border-radius:8px;padding:0.8rem 1.3rem;min-width:110px;}
+    .cs .n{font-family:var(--fd);font-size:1.3rem;font-weight:700;color:var(--g);}
+    .cs .l{font-family:var(--ui);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:2px;}
+    .tomorrow{font-family:var(--ui);font-size:0.8rem;color:var(--tm);margin-top:1.1rem;}
+    .tomorrow b{color:var(--td);}
+
+    .bonus{background:var(--n8);border:1px solid rgba(200,169,81,0.3);border-radius:8px;padding:1.1rem 1.3rem;margin:1rem 0 0;display:flex;align-items:center;gap:0.9rem;text-align:left;}
+    .bonus .bi{font-size:1.5rem;flex-shrink:0;}
+    .bonus .bt{font-family:var(--ui);font-size:0.82rem;font-weight:600;color:var(--w);}
+    .bonus .bd{font-family:var(--ui);font-size:0.75rem;color:rgba(255,255,255,0.55);line-height:1.5;margin-top:2px;}
+    .bonus a{color:var(--g);}
+
+    .done-banner{background:linear-gradient(135deg,#166534,#15803d);border-radius:8px;padding:1.1rem 1.4rem;margin-bottom:1rem;display:none;align-items:center;gap:0.9rem;}
+    .done-banner span{font-family:var(--ui);font-size:0.86rem;color:rgba(255,255,255,0.92);line-height:1.5;}
+
+    @media(max-width:560px){.main{padding:1.25rem 1rem 2.5rem;}.hero{padding:1.5rem 1rem 1.25rem;}}
+  </style>
+  <link rel="stylesheet" href="/ad-nav.css">
+</head>
+<body>
+  <nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <ul class="adn-drop">
+          <li><a href="/library/">Deep-Dive Essays</a></li>
+          <li><a href="/parents.html">For Parents</a></li><li><a href="/palace.html">Memory Palace</a></li><li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/games.html">Games</a></li>
+          <li><a href="/whats-new.html">What&#39;s New</a></li>
+          <li><a href="/answers/">Answers</a></li>
+          <li><a href="/study-groups.html">Study Groups</a></li>
+          <li><a href="/reading-club.html">Reading Clubs</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/what-we-believe.html">What We Believe</a></li>
+          <li><a href="/editorial-standards.html">Editorial Standards</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <button class="adn-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="date-badge" id="date-badge">Loading&hellip;</div>
+      <div class="hero-row">
+        <div>
+          <h1>Today</h1>
+          <p class="hero-sub">Your 5-minute session &mdash; review what&rsquo;s due, learn one argument, prove you can say it.</p>
+        </div>
+        <div class="streak-chip">
+          <span class="fl" id="hz-flame">&#128293;</span>
+          <div>
+            <div class="cnt" id="hz-count">0 days</div>
+            <div class="lbl" id="hz-sub">Practice streak</div>
+          </div>
+        </div>
+      </div>
+      <div class="dots">
+        <div class="dot" id="dot-1"></div>
+        <div class="dot" id="dot-2"></div>
+        <div class="dot" id="dot-3"></div>
+        <div class="dot" id="dot-4"></div>
+      </div>
+      <div class="dots-label" id="dots-label">Step 1 of 4 &mdash; Review</div>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <div class="done-banner" id="done-banner">
+      <div style="font-size:1.4rem;flex-shrink:0;">&#9989;</div>
+      <span>You completed today&rsquo;s session. Come back tomorrow &mdash; your streak is safe until midnight tomorrow.</span>
+    </div>
+
+    <!-- STEP 1: REVIEW -->
+    <div class="step open" id="step-1">
+      <div class="step-head">
+        <div class="step-chip" id="chip-1">1</div>
+        <div class="step-title">Review &mdash; make yesterday stick</div>
+        <div class="step-mins" id="mins-1">~90 sec</div>
+      </div>
+      <div class="step-body" id="body-1">
+        <div id="rv-area"><div class="rv-empty">Checking your deck&hellip;</div></div>
+      </div>
+    </div>
+
+    <!-- STEP 2: LEARN -->
+    <div class="step locked" id="step-2">
+      <div class="step-head">
+        <div class="step-chip" id="chip-2">2</div>
+        <div class="step-title">Learn &mdash; today&rsquo;s argument</div>
+        <div class="step-mins" id="mins-2">~90 sec</div>
+      </div>
+      <div class="step-body" id="body-2">
+        <div class="arg-top">
+          <div class="arg-cat" id="arg-cat"></div>
+          <div class="arg-title" id="arg-title">Loading&hellip;</div>
+          <div class="arg-tag" id="arg-tag"></div>
+        </div>
+        <div class="arg-body">
+          <div class="sec-label">Core premises</div>
+          <ul class="prem" id="arg-prem"></ul>
+          <div class="sec-label">Key evidence</div>
+          <div class="ev-text" id="arg-ev"></div>
+          <div class="listen-row">
+            <button class="listen-btn" id="listen-btn" onclick="toggleListen()">&#9654;&nbsp; Listen</button>
+            <button class="listen-stop" id="listen-stop" onclick="stopListen()">Stop</button>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-primary" onclick="finishLearn()">Got it &mdash; test me &rarr;</button>
+          <a class="btn-sec" id="arg-deeper" href="/evidence-library.html">Go deeper</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3: PROVE -->
+    <div class="step locked" id="step-3">
+      <div class="step-head">
+        <div class="step-chip" id="chip-3">3</div>
+        <div class="step-title">Prove it &mdash; say it from memory</div>
+        <div class="step-mins" id="mins-3">~60 sec</div>
+      </div>
+      <div class="step-body" id="body-3">
+        <div class="prompt-box" id="prove-q">Loading&hellip;</div>
+        <div id="prove-phase-1">
+          <textarea class="ans" id="prove-ans" rows="4" placeholder="Without scrolling up: write the argument in your own words. Rough is fine &mdash; recall is the rep."></textarea>
+          <div class="btn-row"><button class="btn-primary" onclick="revealModel()">Reveal model answer</button></div>
+        </div>
+        <div id="prove-phase-2" style="display:none;">
+          <div class="model-box">
+            <div class="model-label">Model answer</div>
+            <div class="model-text" id="model-text"></div>
+          </div>
+          <div class="rate-q">How did you do?</div>
+          <div class="rate-row">
+            <button class="rate-btn again" onclick="finishProve(1)">&#128549; Missed it</button>
+            <button class="rate-btn good" onclick="finishProve(3)">&#128512; Got the gist</button>
+            <button class="rate-btn easy" onclick="finishProve(5)">&#129321; Nailed it</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 4: CLOSE -->
+    <div class="step locked" id="step-4">
+      <div class="step-head">
+        <div class="step-chip" id="chip-4">4</div>
+        <div class="step-title">Done &mdash; streak &amp; tomorrow</div>
+        <div class="step-mins" id="mins-4">~30 sec</div>
+      </div>
+      <div class="step-body" id="body-4">
+        <div class="close-box">
+          <div class="close-icon">&#128293;</div>
+          <div class="close-title" id="close-title">Session complete</div>
+          <div class="close-sub" id="close-sub">Five focused minutes. That is how arguments become instincts.</div>
+          <div class="close-stats">
+            <div class="cs"><div class="n" id="cl-streak">0</div><div class="l">Day streak</div></div>
+            <div class="cs"><div class="n" id="cl-reviewed">0</div><div class="l">Cards reviewed</div></div>
+            <div class="cs"><div class="n">+1</div><div class="l">Belt point</div></div>
+          </div>
+          <div class="btn-row" style="justify-content:center;">
+            <a class="btn-primary" href="/pocket-cards.html">Share today&rsquo;s argument</a>
+            <a class="btn-sec" href="/dashboard.html">Back to dashboard</a>
+          </div>
+          <div class="bonus" id="bonus-card" style="display:none;"></div>
+          <div class="tomorrow" id="tomorrow"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+  var sb = null, currentUser = null;
+  var dayNum = 1, todayArg = null, dueCards = [], rvIdx = 0, rvFlipped = false, reviewedCount = 0;
+  var doneKey = 'ad_today_v1';
+
+  // Same rotation source + certified fallback content as daily-argument.html
+  var FALLBACK_ARGS = [
+    {day_number:1,argument_id:'kalam',argument_title:'The Kalam Cosmological Argument',category:"God's Existence",tagline:'The universe had a beginning — and beginnings require causes outside themselves.',premise_1:'Everything that begins to exist has a cause',premise_2:'The universe began to exist (confirmed by the Big Bang)',premise_3:'Therefore the universe has a cause — spaceless, timeless, immensely powerful',key_evidence:'The Big Bang confirms the universe began ~13.8 billion years ago. The cause must be outside space and time — matching the classical description of God. Physicist Alexander Vilenkin: "All the evidence we have says that the universe had a beginning."',practice_q:'Without looking up: state the three premises of the Kalam argument and explain why the cause of the universe must be personal rather than just a force.',convo_starter:'If the universe had a beginning, something must have caused it. What do you think caused the Big Bang?'},
+    {day_number:2,argument_id:'minimal',argument_title:'The Minimal Facts Argument',category:'The Resurrection',tagline:'Five facts accepted by virtually all critical scholars point overwhelmingly to the resurrection.',premise_1:'Jesus died by crucifixion — confirmed by friend and foe alike',premise_2:'The tomb was empty — Jesus\'s enemies never disputed this, only explained it away',premise_3:'The disciples genuinely believed they saw the risen Jesus and died for that claim',key_evidence:'Gary Habermas has surveyed over 3,400 scholarly sources. Paul converted after an appearance. James — the sceptical brother of Jesus — converted after an appearance. These last two are the hardest to explain without the resurrection.',practice_q:'Name all five minimal facts without looking. Then explain why the resurrection hypothesis is stronger than the three main alternatives.',convo_starter:'Historians who don\'t believe in the resurrection still accept the tomb was empty and the disciples claimed to see Jesus. How do you explain those two facts without the resurrection?'},
+    {day_number:3,argument_id:'moral',argument_title:'The Moral Argument',category:"God's Existence",tagline:'Objective moral values require a foundation beyond human opinion — and that foundation is God.',premise_1:'If God does not exist, objective moral values do not exist',premise_2:'Objective moral values DO exist — the Holocaust was genuinely evil, not just unpopular',premise_3:'Therefore God exists',key_evidence:'If morality is just human opinion or evolutionary programming, we cannot say slavery was wrong — only that we personally dislike it. But we hold war criminals responsible regardless of their culture. Objective moral standards demand an objective foundation that transcends human opinion.',practice_q:'State the moral argument in three premises. Give one concrete example of an objective moral truth and explain why it needs God as its foundation.',convo_starter:'Was the Holocaust objectively evil, or did the Nazis just have different values? If objectively evil — what standard are you appealing to?'}
+  ];
+
+  function track(name, props){ try{ if(window.adTrack) window.adTrack(name, props||{}); }catch(e){} }
+  function $(id){ return document.getElementById(id); }
+  function getDayNumber(){ var now=new Date(); var start=new Date(now.getFullYear(),0,0); return Math.floor((now-start)/864e5); }
+
+  /* ---- streak: same key + same freeze-banking rules as dashboard.html ---- */
+  function adStreak(){ try{ return JSON.parse(localStorage.getItem('ad_streak')||'{"last":"","count":0,"freezes":0}'); }catch(e){ return {last:'',count:0,freezes:0}; } }
+  function adMark(){
+    try{
+      var t = new Date(); var iso = function(d){ return d.toISOString().slice(0,10); };
+      var td = iso(t), y1 = iso(new Date(t.getTime()-864e5)), y2 = iso(new Date(t.getTime()-1728e5));
+      var s = adStreak();
+      if(s.last === td) return;
+      if(s.last === y1){ s.count += 1; }
+      else if(s.last === y2 && s.freezes > 0){ s.freezes -= 1; s.count += 2; }
+      else { s.count = 1; }
+      s.last = td;
+      if(s.count % 7 === 0){ s.freezes = Math.min(3, (s.freezes||0) + 1); }
+      localStorage.setItem('ad_streak', JSON.stringify(s));
+    }catch(e){}
+  }
+  function renderStreak(){
+    try{
+      var s = adStreak();
+      var today = new Date().toISOString().slice(0,10);
+      var alive = s.last === today || s.last === new Date(Date.now()-864e5).toISOString().slice(0,10);
+      var n = alive ? s.count : 0;
+      $('hz-count').textContent = n + (n===1?' day':' days');
+      $('hz-sub').textContent = (s.freezes>0 ? (s.freezes+' freeze'+(s.freezes>1?'s':'')+' banked • ') : '') + (s.last===today ? 'Practised today ✓' : 'Practice streak');
+      $('hz-flame').style.opacity = (s.last===today) ? '1' : '0.45';
+      $('cl-streak').textContent = n;
+    }catch(e){}
+  }
+
+  /* ---- step machinery ---- */
+  function setDots(step){
+    for(var i=1;i<=4;i++){ $('dot-'+i).classList.toggle('on', i<step); }
+    var labels = {1:'Step 1 of 4 — Review',2:'Step 2 of 4 — Learn',3:'Step 3 of 4 — Prove it',4:'Step 4 of 4 — Done',5:'All done for today ✓'};
+    $('dots-label').textContent = labels[step] || labels[5];
+    if(step>4){ for(var j=1;j<=4;j++){ $('dot-'+j).classList.add('on'); } }
+  }
+  function completeStep(n, note){
+    var st = $('step-'+n);
+    st.classList.remove('open'); st.classList.add('done');
+    $('chip-'+n).innerHTML = '&#10003;';
+    var mins = $('mins-'+n); if(mins){ mins.className='step-done-note'; mins.textContent = note || 'Done'; }
+    if(n < 4){
+      var nx = $('step-'+(n+1));
+      nx.classList.remove('locked'); nx.classList.add('open');
+      setDots(n+1);
+      setTimeout(function(){ try{ nx.scrollIntoView({behavior:'smooth',block:'start'}); }catch(e){} }, 150);
+    } else { setDots(5); }
+  }
+
+  /* ---- init ---- */
+  function initSb(){
+    if(window.supabase && window.supabase.createClient){
+      sb = window.supabase.createClient(
+        'https://noprgxkwniouukmrfozc.supabase.co',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+      );
+      init();
+    } else { setTimeout(initSb, 50); }
+  }
+  document.addEventListener('DOMContentLoaded', initSb);
+
+  async function navAuth(){
+    try{
+      var r = await sb.auth.getSession(); var s = r.data && r.data.session;
+      if(s){
+        currentUser = s.user;
+        var name = (s.user.user_metadata && s.user.user_metadata.full_name) || s.user.email.split('@')[0];
+        var nu=$('nav-user'),ns=$('nav-signout'),ni=$('nav-signin'),nc=$('nav-cta'),nd=$('nav-dashboard');
+        if(nu)nu.textContent=name;if(ns)ns.style.display='inline-block';if(ni)ni.style.display='none';if(nc)nc.style.display='none';if(nd)nd.style.display='inline-block';
+      }
+    }catch(e){}
+  }
+  async function signOut(){ try{ await sb.auth.signOut(); }catch(e){} window.location.href='index.html'; }
+
+  async function init(){
+    dayNum = getDayNumber();
+    $('date-badge').textContent = new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'}) + ' — Day ' + dayNum;
+    renderStreak();
+    track('today_opened',{day:dayNum});
+    await navAuth();
+    await loadArgument();
+
+    // already completed today?
+    try{
+      var st = JSON.parse(localStorage.getItem(doneKey)||'null');
+      if(st && st.day === dayNum && st.date === new Date().toDateString()){
+        $('done-banner').style.display = 'flex';
+        for(var i=1;i<=3;i++){
+          var s = $('step-'+i); s.classList.remove('open','locked'); s.classList.add('done');
+          $('chip-'+i).innerHTML = '&#10003;';
+          var m = $('mins-'+i); if(m){ m.className='step-done-note'; m.textContent='Done'; }
+        }
+        var s4=$('step-4'); s4.classList.remove('locked'); s4.classList.add('open');
+        $('chip-4').innerHTML='&#10003;';
+        $('cl-reviewed').textContent = st.reviewed || 0;
+        setDots(5);
+        renderClose();
+        return;
+      }
+    }catch(e){}
+
+    await loadDue();
+  }
+
+  /* ---- STEP 1: review (same table + SM-2 rules as flashcards.html) ---- */
+  var RV_MAX = 5;
+  async function loadDue(){
+    var area = $('rv-area');
+    if(!currentUser){
+      area.innerHTML = '<div class="rv-empty">Reviews live in your free account — <a href="/signup.html" style="color:var(--n5);">create one</a> or <a href="/login.html" style="color:var(--n5);">sign in</a> and the cards you learn will come back at the perfect moment. For now, straight to today’s argument.</div>' +
+        '<div class="btn-row"><button class="btn-primary" onclick="finishReview(true)">Continue &rarr;</button></div>';
+      return;
+    }
+    try{
+      var today = new Date().toISOString().split('T')[0];
+      var r = await sb.from('flashcards').select('*').eq('user_id', currentUser.id).order('next_review');
+      var deck = (r.data||[]);
+      dueCards = deck.filter(function(c){ return c.next_review <= today; }).slice(0, RV_MAX);
+    }catch(e){ dueCards = []; }
+    if(!dueCards.length){
+      area.innerHTML = '<div class="rv-empty">Nothing due today — your cards are resting until the ideal review moment. Learn today’s argument and add it to your deck to keep the engine fed.</div>' +
+        '<div class="btn-row"><button class="btn-primary" onclick="finishReview(true)">Continue &rarr;</button></div>';
+      return;
+    }
+    rvIdx = 0; renderReviewCard();
+  }
+  function renderReviewCard(){
+    if(rvIdx >= dueCards.length){ finishReview(false); return; }
+    var c = dueCards[rvIdx]; rvFlipped = false;
+    $('rv-area').innerHTML =
+      '<div class="rv-meta">Card ' + (rvIdx+1) + ' of ' + dueCards.length + ' • ' + esc(c.argument_title || c.category || '') + '</div>' +
+      '<div class="rv-card" id="rv-card" onclick="flipCard()">' +
+        '<div class="rv-side-label" id="rv-side">Question</div>' +
+        '<div class="rv-text" id="rv-text">' + esc(c.front) + '</div>' +
+        '<div class="rv-hint" id="rv-hint">Tap to reveal the answer</div>' +
+      '</div>' +
+      '<div class="rate-row" id="rv-rate" style="display:none;">' +
+        '<button class="rate-btn again" onclick="rateCard(2)">Again</button>' +
+        '<button class="rate-btn good" onclick="rateCard(4)">Good</button>' +
+        '<button class="rate-btn easy" onclick="rateCard(5)">Easy</button>' +
+      '</div>';
+  }
+  function flipCard(){
+    if(rvFlipped) return;
+    rvFlipped = true;
+    var c = dueCards[rvIdx];
+    $('rv-side').textContent = 'Answer';
+    $('rv-text').textContent = c.back;
+    $('rv-hint').style.display = 'none';
+    $('rv-rate').style.display = 'flex';
+  }
+  async function rateCard(quality){
+    var card = dueCards[rvIdx];
+    // SM-2 — identical maths to flashcards.html
+    var ef = Math.max(1.3, (card.ease_factor || 2.5) + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02)));
+    var reps = quality < 3 ? 0 : (card.reps || 0) + 1;
+    var interval;
+    if(quality < 3){ interval = 1; }
+    else if(reps === 1){ interval = 1; }
+    else if(reps === 2){ interval = 6; }
+    else { interval = Math.round((card.interval || 1) * ef); }
+    var nextDate = new Date(); nextDate.setDate(nextDate.getDate() + interval);
+    try{
+      await sb.from('flashcards').update({
+        ease_factor: ef, reps: reps, interval: interval,
+        next_review: nextDate.toISOString().split('T')[0], last_reviewed: new Date().toISOString()
+      }).eq('id', card.id);
+    }catch(e){}
+    try{ if(window.Coach && Coach.recordFlashcards) Coach.recordFlashcards(card.argument_id, quality >= 3); }catch(e){}
+    reviewedCount++;
+    rvIdx++;
+    renderReviewCard();
+  }
+  function finishReview(skipped){
+    track('today_review_done',{reviewed:reviewedCount,skipped:!!skipped});
+    $('body-1').style.display='none';
+    completeStep(1, reviewedCount ? (reviewedCount + ' card' + (reviewedCount>1?'s':'') + ' reviewed') : 'Nothing due');
+  }
+
+  /* ---- STEP 2: learn ---- */
+  async function loadArgument(){
+    var arg = null;
+    try{
+      var r = await sb.from('daily_arguments').select('*').eq('day_number', dayNum).single();
+      if(r.data) arg = r.data;
+    }catch(e){}
+    if(!arg) arg = FALLBACK_ARGS[(dayNum-1) % FALLBACK_ARGS.length];
+    todayArg = arg;
+    $('arg-cat').textContent = arg.category || '';
+    $('arg-title').textContent = arg.argument_title;
+    $('arg-tag').textContent = arg.tagline || '';
+    $('arg-prem').innerHTML = [arg.premise_1,arg.premise_2,arg.premise_3].filter(Boolean).map(function(p){ return '<li>'+esc(p)+'</li>'; }).join('');
+    $('arg-ev').textContent = arg.key_evidence || '';
+    $('prove-q').textContent = arg.practice_q || 'State the argument’s premises from memory and explain its conclusion.';
+    $('model-text').textContent = [arg.premise_1,arg.premise_2,arg.premise_3].filter(Boolean).join('\n\n') + '\n\nKey evidence: ' + (arg.key_evidence||'');
+  }
+  function finishLearn(){
+    stopListen();
+    track('today_learn_done',{arg: todayArg && todayArg.argument_id});
+    $('body-2').style.display='none';
+    completeStep(2, 'Read');
+  }
+
+  /* ---- listen (browser TTS, same engine as the essay Listen feature) ---- */
+  var synth = window.speechSynthesis || null;
+  function toggleListen(){
+    if(!synth){ alert('Read-aloud is not supported in this browser.'); return; }
+    if(synth.speaking){ stopListen(); return; }
+    var a = todayArg; if(!a) return;
+    var text = a.argument_title + '. ' + (a.tagline||'') + ' Premise one: ' + a.premise_1 + '. Premise two: ' + a.premise_2 + '. Premise three: ' + a.premise_3 + '. Key evidence: ' + (a.key_evidence||'');
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.95;
+    u.onend = function(){ resetListenBtn(); };
+    synth.speak(u);
+    $('listen-btn').innerHTML = '&#10074;&#10074;&nbsp; Playing…';
+    $('listen-stop').style.display = 'inline-block';
+  }
+  function stopListen(){ try{ if(synth) synth.cancel(); }catch(e){} resetListenBtn(); }
+  function resetListenBtn(){ var b=$('listen-btn'); if(b) b.innerHTML='&#9654;&nbsp; Listen'; var s=$('listen-stop'); if(s) s.style.display='none'; }
+  window.addEventListener('beforeunload', function(){ try{ if(synth) synth.cancel(); }catch(e){} });
+
+  /* ---- STEP 3: prove ---- */
+  function revealModel(){
+    $('prove-phase-1').style.display='none';
+    $('prove-phase-2').style.display='block';
+  }
+  async function finishProve(rating){
+    var pct = rating === 5 ? 90 : (rating === 3 ? 65 : 30);
+    try{ if(window.Coach && Coach.recordQuiz && todayArg) Coach.recordQuiz(todayArg.argument_id, pct, 'Today session'); }catch(e){}
+    track('today_prove_done',{rating:rating, arg: todayArg && todayArg.argument_id});
+    // auto-seed: a missed or partial argument goes into the SR deck so Review has it tomorrow
+    if(currentUser && todayArg && rating < 5){
+      try{
+        var existing = await sb.from('flashcards').select('id').eq('user_id', currentUser.id).eq('argument_id', todayArg.argument_id).limit(1);
+        if(!existing.data || !existing.data.length){
+          await sb.from('flashcards').insert({
+            user_id: currentUser.id, argument_id: todayArg.argument_id,
+            argument_title: todayArg.argument_title, category: todayArg.category || '',
+            front: todayArg.practice_q || ('State the ' + todayArg.argument_title + ' from memory.'),
+            back: [todayArg.premise_1,todayArg.premise_2,todayArg.premise_3].filter(Boolean).join(' • ') + ' — ' + (todayArg.key_evidence||''),
+            interval: 1, ease_factor: 2.5, reps: 0,
+            next_review: new Date(Date.now()+864e5).toISOString().split('T')[0]
+          });
+          track('today_card_added',{arg: todayArg.argument_id});
+        }
+      }catch(e){}
+    }
+    $('body-3').style.display='none';
+    completeStep(3, rating===5 ? 'Nailed it' : (rating===3 ? 'Got the gist' : 'Coming back tomorrow'));
+    closeSession(rating);
+  }
+
+  /* ---- STEP 4: close ---- */
+  function closeSession(rating){
+    adMark();
+    try{
+      var st = JSON.parse(localStorage.getItem(doneKey)||'null');
+      var todayStr = new Date().toDateString();
+      if(!st || st.date !== todayStr){
+        var n = parseInt(localStorage.getItem('ad_today_done')||'0',10)||0;
+        localStorage.setItem('ad_today_done', String(n+1));
+      }
+      localStorage.setItem(doneKey, JSON.stringify({day:dayNum, date:todayStr, rating:rating, reviewed:reviewedCount}));
+    }catch(e){}
+    renderStreak();
+    $('cl-reviewed').textContent = reviewedCount;
+    if(rating === 1){ $('close-title').textContent = 'The rep still counts'; $('close-sub').textContent = 'Missing it today is how it sticks tomorrow — the card is in your deck and will come back at the right moment.'; }
+    track('today_completed',{day:dayNum, rating:rating, reviewed:reviewedCount});
+    renderClose();
+    $('done-banner').style.display = 'flex';
+  }
+  async function renderClose(){
+    // weekly rhythm bonus: Saturday = Arena day, Sunday = devotional day
+    var wd = new Date().getDay();
+    var bc = $('bonus-card');
+    if(wd === 6){
+      var target = null;
+      try{ if(window.Coach && Coach.prescription) target = Coach.prescription(); }catch(e){}
+      bc.innerHTML = '<div class="bi">&#9876;&#65039;</div><div><div class="bt">Saturday is sparring day</div><div class="bd">' +
+        (target ? ('The Coach says <b>' + target.name + '</b> ' + (target.mastery < 45 ? 'keeps tripping you up' : 'is still shaky') + ' — take it into the <a href="/debate-arena.html">Debate Arena</a>.') :
+        'One round in the <a href="/debate-arena.html">Debate Arena</a> — practise under pressure while the week’s arguments are fresh.') + '</div></div>';
+      bc.style.display = 'flex';
+    } else if(wd === 0){
+      bc.innerHTML = '<div class="bi">&#128217;</div><div><div class="bt">Sunday — rest the arguments, feed the soul</div><div class="bd">Close the week with <a href="/daily-devotional.html">today’s devotional</a>. The reasons matter because the Person does.</div></div>';
+      bc.style.display = 'flex';
+    }
+    // tomorrow teaser
+    var next = null;
+    try{
+      var r = await sb.from('daily_arguments').select('argument_title').eq('day_number', dayNum+1).single();
+      if(r.data) next = r.data.argument_title;
+    }catch(e){}
+    if(!next) next = FALLBACK_ARGS[dayNum % FALLBACK_ARGS.length].argument_title;
+    $('tomorrow').innerHTML = 'Tomorrow: <b>' + esc(next) + '</b>';
+  }
+
+  function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+  </script>
+  <script src="/coach.js"></script>
+  <script src="/ad-nav.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>
