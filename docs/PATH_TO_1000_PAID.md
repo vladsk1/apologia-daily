@@ -171,6 +171,45 @@ day-7 upsell → trial (not dead `#pricing`), in-card gate copy naming exactly w
 and a one-click cancellation flow with a single respectful save offer (pause or free
 tier — never a maze), exit survey feeding analytics.
 
+## Appendix: can this reach 3,000 paid? (market-sizing research, 2026-07-02)
+
+Two further research passes (faith-app subscriber numbers; apologetics niche sizing).
+
+**Comparable paying-subscriber bases:** Hallow ≈ **high hundreds of thousands** of payers
+($33–51M ARR at ~$70/yr); Pray.com ≈ ~85–90K (est., $11M 2024 revenue); Bible Chat ≈
+~250K (company states ~5% of ~5M MAU pay); Logos $68M revenue at $150–180/yr from the
+serious-study audience. **Cautionary:** Glorify raised $40M and landed ≈ low thousands of
+payers ($208K 2023 revenue); Truthly (closest analogue: niche, AI, small team) has no
+public subscriber numbers after ~50–69K downloads. Pattern: broad devotional/prayer/AI
+apps reach 10⁵–10⁶ payers; niche faith products reach 10²–10³.
+
+**The most direct proof for the niche:** apologetics creators' recurring-payment bases —
+Inspiring Philosophy **~2,188 Patreon patrons** (one creator, thinner product than this
+site), Alisa Childers ~778, Capturing Christianity ~500–800 (volatile). Thousands of
+people already pay monthly for apologetics content; most creators land in the hundreds,
+the best in the low thousands.
+
+**Niche size:** est. **2–10M** English-speaking regular apologetics consumers (GotQuestions
+alone: ~10–16M visits/mo, of which perhaps 10–25% apologetics-flavored; verified YouTube
+apologetics audience sums to 3–4M+ subscriptions ≈ 1.5–3M unique people). Growth is real
+but **contested and creator-concentrated**: Bible sales +22% (2024) then +11% (2025),
+religion podcasts +49% YoY, UK Gen Z attendance 4%→16% (Bible Society) — but Pew reads
+the US data as *stabilization, not revival*, and the UK numbers are disputed. Plan for a
+flat-to-modestly-growing niche, not an exponential one.
+
+**The 3,000-paid funnel** (same template as §1): ~2.5M cumulative visitors → ~87K
+registered → ~3,900 gross → 3,000 net ≈ **$288K ARR** at $96/yr. That's ~1–4% lifetime
+capture of the niche — ambitious, not absurd (GotQuestions processes more traffic in one
+month than this needs cumulatively). Timeline: **~3–4+ years organic-only**; the creator
+and founding-member plays compress it.
+
+**Verdict:** capable, yes — as a multi-year ceiling reached by being the category's best
+product, not a fast target. The binding constraint is not audience size; it is
+(a) converting against a dominant free incumbent (GotQuestions) — which is exactly why
+the paid layer must be the practice/AI tier no free incumbent has, and (b) distribution
+time-in-market. "3,000 *new* paid per month" would be Hallow/Pray.com scale — top-five
+faith apps globally — and is not a realistic planning target for a niche product.
+
 ## Open decisions only the owner can make
 
 1. **The model itself**: paywall vs donations vs the recommended hybrid (paid Pro + free
