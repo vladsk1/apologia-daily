@@ -25,10 +25,12 @@
 > the **"The Case, Plainly" tier** — a
 > warm, plain-English, positive-case walkthrough (~850–950 words) inlined as the FIRST paid
 > block in each argument card (under the Upgrade gate, before the deep dive), live across 7
-> tabs / **76 arguments, all orthodoxy-gated CLEAN**: Jesus (`ev-s3`, 15), Resurrection
+> tabs / **77 arguments, all orthodoxy-gated CLEAN**: Jesus (`ev-s3`, 15), Resurrection
 > (`ev-s2`, 8), Biblical Reliability (`ev-s4`, 11), Trinity (`ev-s6`, 10), God's Existence
 > (`ev-s1`, 12), Science & Faith (`ev-s5`, 7), and Islam in Worldviews (`worldviews.html`,
-> 13). **How it's built** (repeatable): a drafter (`apologia-evidence`, grounded in each
+> 14 — incl. the new **"Contradictions in the Qur'an" card 07 + `library/islam-contradictions.html`**,
+> full pipeline run 2026-07-02: author → citations [0 blockers] → argument [blockers fixed] →
+> orthodoxy CLEAN). **How it's built** (repeatable): a drafter (`apologia-evidence`, grounded in each
 > already-certified essay) writes body prose as `<p class="psl">`/`<p class="pt">` lines to
 > a scratch file; a per-tab build script wraps it in a second `.pro` block (or `.wv-pro` for
 > worldviews — psl→`wv-pro-section-label`, pt→`wv-pro-text`) and splices it in *before* the
