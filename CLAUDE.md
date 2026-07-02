@@ -44,13 +44,11 @@
 > **Open work:** (1) native Macedonian **and Spanish** doctrinal review of the mk/es
 > essays + hub fragments (AI-translated, orthodoxy-gated, not yet human-checked; the es
 > gate also flagged one non-doctrinal note — Moltmann patripassianism boundary in
-> `es/evil.html`, matching the certified EN original); (2) fix the English
-> `ev-s4.html` famine number (Luke 4:25 → "three years and six months"; the mk is already
-> right); (3) set `RESEND_API_KEY` in Vercel so `api/submit-question.js` emails captured
-> questions; (4) **monetization is a stub** — `isPro` hardcoded, Stripe not live, a dead
+> `es/evil.html`, matching the certified EN original); (2) set `RESEND_API_KEY` in Vercel so `api/submit-question.js` emails captured
+> questions; (3) **monetization is a stub** — `isPro` hardcoded, Stripe not live, a dead
 > "$8/mo + 7-day trial" is advertised: decide the model, don't run paid acquisition into
-> it, and never wire real prices/payments without human sign-off; (5) PostHog is
-> under-instrumented (full event/funnel plan in `docs/MARKETING_PLAN.md`); (6) the **"The
+> it, and never wire real prices/payments without human sign-off; (4) PostHog is
+> under-instrumented (full event/funnel plan in `docs/MARKETING_PLAN.md`); (5) the **"The
 > Case, Plainly" tier** passed the automated `apologia-orthodoxy` gate on all 76 articles
 > but still needs eventual **human/pastoral sign-off** before high-stakes acquisition — most
 > relevant on the Trinity and Islam tabs; the gates left a short list of non-blocking notes
