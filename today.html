@@ -477,12 +477,30 @@
   }
 
   /* ---- STEP 2: learn ---- */
+  var ROTATION = null; // /daily-args.json — 63 certified entries covering the whole library
+  async function loadRotation(){
+    if(ROTATION) return ROTATION;
+    try{
+      var r = await fetch('/daily-args.json', {cache:'default'});
+      if(r.ok){ var j = await r.json(); if(Array.isArray(j) && j.length) ROTATION = j; }
+    }catch(e){}
+    return ROTATION;
+  }
+  function fromRotation(entry){
+    return { argument_id: entry.id, argument_title: entry.title, category: entry.category,
+      tagline: entry.tagline, premise_1: entry.p1, premise_2: entry.p2, premise_3: entry.p3,
+      key_evidence: entry.evidence, practice_q: entry.practice_q, convo_starter: entry.convo, link: entry.link };
+  }
   async function loadArgument(){
     var arg = null;
     try{
       var r = await sb.from('daily_arguments').select('*').eq('day_number', dayNum).single();
       if(r.data) arg = r.data;
     }catch(e){}
+    if(!arg){
+      var rot = await loadRotation();
+      if(rot) arg = fromRotation(rot[(dayNum-1) % rot.length]);
+    }
     if(!arg) arg = FALLBACK_ARGS[(dayNum-1) % FALLBACK_ARGS.length];
     todayArg = arg;
     $('arg-cat').textContent = arg.category || '';
@@ -492,6 +510,7 @@
     $('arg-ev').textContent = arg.key_evidence || '';
     $('prove-q').textContent = arg.practice_q || 'State the argument’s premises from memory and explain its conclusion.';
     $('model-text').textContent = [arg.premise_1,arg.premise_2,arg.premise_3].filter(Boolean).join('\n\n') + '\n\nKey evidence: ' + (arg.key_evidence||'');
+    if(arg.link) $('arg-deeper').href = arg.link;
   }
   function finishLearn(){
     stopListen();
@@ -589,6 +608,10 @@
       var r = await sb.from('daily_arguments').select('argument_title').eq('day_number', dayNum+1).single();
       if(r.data) next = r.data.argument_title;
     }catch(e){}
+    if(!next){
+      var rot = await loadRotation();
+      if(rot) next = rot[dayNum % rot.length].title;
+    }
     if(!next) next = FALLBACK_ARGS[dayNum % FALLBACK_ARGS.length].argument_title;
     $('tomorrow').innerHTML = 'Tomorrow: <b>' + esc(next) + '</b>';
   }

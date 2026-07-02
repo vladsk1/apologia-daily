@@ -318,6 +318,22 @@
       if (r.data) arg = r.data;
     } catch(e) {}
 
+    // Then the certified 63-argument rotation file (whole-library coverage)
+    if (!arg) {
+      try {
+        var fr = await fetch('/daily-args.json', {cache:'default'});
+        if (fr.ok) {
+          var rot = await fr.json();
+          if (Array.isArray(rot) && rot.length) {
+            var e = rot[(dayNum - 1) % rot.length];
+            arg = { argument_id: e.id, argument_title: e.title, category: e.category,
+              tagline: e.tagline, premise_1: e.p1, premise_2: e.p2, premise_3: e.p3,
+              key_evidence: e.evidence, practice_q: e.practice_q, convo_starter: e.convo };
+          }
+        }
+      } catch(e) {}
+    }
+
     // Fallback to built-in args
     if (!arg) {
       var idx = (dayNum - 1) % FALLBACK_ARGS.length;
