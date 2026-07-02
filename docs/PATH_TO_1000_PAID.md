@@ -52,7 +52,8 @@ instrumentation is already in the NUMBER_ONE_ROADMAP "Now" bundle.
    selling point on the pricing page — a stated differentiator vs Truthly.
 2. **Pro = the trainer**: unlimited Ask Anything (free: 3/day), daily Debate Arena + all
    opponents + voice (free: 1/week), Coach, mastery tracks (first track free — it IS the
-   session-1 activation), full audio library when built (free: ~5 flagship essays),
+   session-1 activation), premium narrated audio when built (browser-TTS Listen already
+   exists free on every essay and stays free; Pro = podcast-grade narrated files),
    in-card deep dives. The gate is *economically honest*: "Pro pays for the AI and keeps
    the library free for everyone."
 3. **Never gate**: flashcards/SR/streaks/"Due today" (the habit that later converts —

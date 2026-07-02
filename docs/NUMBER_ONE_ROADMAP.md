@@ -36,7 +36,7 @@ Three blockers stand between today's site and that position:
 
 | Adopt | From | Why / evidence | Build cost here |
 |---|---|---|---|
-| **"Listen" audio mode on essays/devotional** | Glorify, Abide, Hallow | Narration is the #1 cited retention driver in all three; makes 76 dense essays commute-consumable | **Small** — the TTS/read-aloud code already exists in `debate-arena.html`; port it |
+| **Premium narrated audio (upgrade of the existing Listen feature)** | Glorify, Abide, Hallow | Narration is the #1 cited retention driver in all three. CORRECTION (2026-07-02): browser-TTS "Listen to this essay" ALREADY EXISTS free on all 77 essays + all MK/ES translations. The remaining gap: pre-generated high-quality narrated audio (background-playable, lock-screen controls, downloadable — podcast-grade) as a Pro tier, keeping browser TTS free; plus porting the player to the devotional/daily pages | **Medium** — generate narrated files per essay; player upgrade |
 | **Email streak-defense nudge** (warm tone, never guilt) | Duolingo (7-day-streak users are 2.4× likelier to return next day) | Streak system already exists in `dashboard.html`; this closes the loop | **Small** — Resend already wired; needs `RESEND_API_KEY` + a scheduled function |
 | **Named seasonal challenge** ("40 Days Before Easter") | Hallow's Pray40/Lent challenge — tied to its biggest growth spike ever (briefly #1 on the App Store) | `study-plans.html` engine exists; this is packaging + a landing page | **Small–Medium** |
 | **Post-completion share-card auto-surface** | YouVersion verse images (its most viral loop) | `pocket-cards.html` + referral loop exist; this is wiring | **Small** |
@@ -191,7 +191,8 @@ none of it should wire real payments without sign-off.
 
 **Next (month 1–2):**
 - Build `/today` (the daily loop) and point push + weekly email at it.
-- "Listen" audio mode on essays/devotional (port the Arena TTS code).
+- Premium narrated audio tier (browser-TTS Listen already exists free on every essay;
+  the upgrade is podcast-grade narrated files + devotional/daily-page coverage).
 - Ship JW + Mormonism worldview tabs (kills the "coming soon" credibility bug; Islam
   template is repeatable).
 - OT ethics trio: Canaanites, slavery, hell (full mandatory pipeline).
