@@ -31,6 +31,8 @@
     /* step cards */
     .step{background:var(--w);border:1px solid var(--border);border-radius:10px;margin-bottom:1rem;overflow:hidden;transition:opacity 0.2s;}
     .step.locked{opacity:0.55;pointer-events:none;}
+    .step.done .step-head{cursor:pointer;}
+    .step.done .step-head:hover{background:var(--ow);}
     .step-head{display:flex;align-items:center;gap:0.8rem;padding:1rem 1.25rem;border-bottom:1px solid transparent;}
     .step.open .step-head{border-bottom-color:var(--border);}
     .step-chip{width:28px;height:28px;border-radius:50%;background:var(--n8);color:var(--g);font-family:var(--ui);font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
@@ -96,6 +98,15 @@
     .cs .l{font-family:var(--ui);font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:2px;}
     .tomorrow{font-family:var(--ui);font-size:0.8rem;color:var(--tm);margin-top:1.1rem;}
     .tomorrow b{color:var(--td);}
+
+    /* conversation starter (same pattern as the retired daily-argument page) */
+    .convo-wrap{text-align:left;background:var(--ow);border:1px solid var(--border);border-radius:8px;padding:1.1rem 1.3rem;margin:1.2rem 0 0;}
+    .convo-label{font-family:var(--ui);font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--tm);margin-bottom:0.5rem;}
+    .convo-q{font-family:var(--fd);font-size:0.98rem;font-style:italic;color:var(--td);line-height:1.6;border-left:3px solid var(--g);padding-left:1rem;margin-bottom:0.6rem;}
+    .convo-note{font-family:var(--ui);font-size:0.75rem;color:var(--tm);line-height:1.6;}
+
+    .back-link{font-family:var(--ui);font-size:0.78rem;color:var(--tm);text-decoration:none;display:inline-block;margin-bottom:0.9rem;}
+    .back-link:hover{color:var(--n5);}
 
     .bonus{background:var(--n8);border:1px solid rgba(200,169,81,0.3);border-radius:8px;padding:1.1rem 1.3rem;margin:1rem 0 0;display:flex;align-items:center;gap:0.9rem;text-align:left;}
     .bonus .bi{font-size:1.5rem;flex-shrink:0;}
@@ -175,6 +186,8 @@
   </div>
 
   <div class="main">
+
+    <a href="/dashboard.html" class="back-link">&larr; Back to dashboard</a>
 
     <div class="done-banner" id="done-banner">
       <div style="font-size:1.4rem;flex-shrink:0;">&#9989;</div>
@@ -272,6 +285,11 @@
             <a class="btn-primary" href="/pocket-cards.html">Share today&rsquo;s argument</a>
             <a class="btn-sec" href="/dashboard.html">Back to dashboard</a>
           </div>
+          <div class="convo-wrap" id="convo-wrap" style="display:none;">
+            <div class="convo-label">Conversation starter</div>
+            <div class="convo-q" id="convo-q"></div>
+            <div class="convo-note">Try floating this question in a real conversation today &mdash; even casually. Real conversations are the point of all this. (Tap any finished step above to review the argument again.)</div>
+          </div>
           <div class="bonus" id="bonus-card" style="display:none;"></div>
           <div class="tomorrow" id="tomorrow"></div>
         </div>
@@ -333,9 +351,19 @@
     $('dots-label').textContent = labels[step] || labels[5];
     if(step>4){ for(var j=1;j<=4;j++){ $('dot-'+j).classList.add('on'); } }
   }
+  // Finished steps can be re-opened to review (argument card, model answer, cards)
+  function toggleDoneStep(n){
+    var st = $('step-'+n);
+    if(!st || !st.classList.contains('done')) return;
+    var body = $('body-'+n);
+    if(st.classList.contains('open')){ st.classList.remove('open'); }
+    else { if(body) body.style.display = ''; st.classList.add('open'); }
+  }
   function completeStep(n, note){
     var st = $('step-'+n);
     st.classList.remove('open'); st.classList.add('done');
+    var head = st.querySelector('.step-head');
+    if(head && !head.getAttribute('onclick')){ head.setAttribute('onclick','toggleDoneStep('+n+')'); head.title = 'Tap to review'; }
     $('chip-'+n).innerHTML = '&#10003;';
     var mins = $('mins-'+n); if(mins){ mins.className='step-done-note'; mins.textContent = note || 'Done'; }
     if(n < 4){
@@ -386,6 +414,8 @@
         $('done-banner').style.display = 'flex';
         for(var i=1;i<=3;i++){
           var s = $('step-'+i); s.classList.remove('open','locked'); s.classList.add('done');
+          var hd = s.querySelector('.step-head');
+          if(hd){ hd.setAttribute('onclick','toggleDoneStep('+i+')'); hd.title = 'Tap to review'; }
           $('chip-'+i).innerHTML = '&#10003;';
           var m = $('mins-'+i); if(m){ m.className='step-done-note'; m.textContent='Done'; }
         }
@@ -472,6 +502,9 @@
   }
   function finishReview(skipped){
     track('today_review_done',{reviewed:reviewedCount,skipped:!!skipped});
+    $('rv-area').innerHTML = '<div class="rv-empty">' + (reviewedCount
+      ? 'Reviewed ' + reviewedCount + ' card' + (reviewedCount>1?'s':'') + ' today — they will come back at the ideal moment.'
+      : 'Nothing was due today. Cards you learn come back here at the ideal review moment.') + '</div>';
     $('body-1').style.display='none';
     completeStep(1, reviewedCount ? (reviewedCount + ' card' + (reviewedCount>1?'s':'') + ' reviewed') : 'Nothing due');
   }
@@ -563,6 +596,8 @@
         }
       }catch(e){}
     }
+    try{ document.querySelector('#prove-phase-2 .rate-q').style.display='none';
+         document.querySelector('#prove-phase-2 .rate-row').style.display='none'; }catch(e){}
     $('body-3').style.display='none';
     completeStep(3, rating===5 ? 'Nailed it' : (rating===3 ? 'Got the gist' : 'Coming back tomorrow'));
     closeSession(rating);
@@ -588,6 +623,11 @@
     $('done-banner').style.display = 'flex';
   }
   async function renderClose(){
+    // conversation starter — take today's argument into a real conversation
+    if(todayArg && todayArg.convo_starter){
+      $('convo-q').textContent = todayArg.convo_starter;
+      $('convo-wrap').style.display = 'block';
+    }
     // weekly rhythm bonus: Saturday = Arena day, Sunday = devotional day
     var wd = new Date().getDay();
     var bc = $('bonus-card');
