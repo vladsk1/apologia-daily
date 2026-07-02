@@ -91,7 +91,7 @@ export default async function handler(req, res) {
   if (act === 'today') {
     res.setHeader('Cache-Control', 's-maxage=3600');
     var a = todayArg();
-    return res.status(200).json({ title: 'Today: ' + a.t, body: a.b, url: a.u });
+    return res.status(200).json({ title: 'Today: ' + a.t, body: a.b, url: '/today' });
   }
 
   // ---- GET ?do=send: daily cron sender ----

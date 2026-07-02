@@ -298,15 +298,18 @@
           <div style="font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:#c8a951;" id="journey-day-badge">1/7</div>
         </div>
       </div>
+      <!-- TODAY hero: the daily 5-minute session -->
+      <a href="today.html" id="today-hero" style="display:flex;align-items:center;gap:1.25rem;text-decoration:none;background:linear-gradient(135deg,var(--navy-800),#16325c);border:1px solid rgba(200,169,81,0.55);border-radius:10px;padding:1.15rem 1.5rem;margin-bottom:0.75rem;transition:border-color 0.15s,box-shadow 0.15s;flex-wrap:wrap;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 24px rgba(200,169,81,0.15)'" onmouseout="this.style.borderColor='rgba(200,169,81,0.55)';this.style.boxShadow='none'">
+        <span style="font-size:1.9rem;flex-shrink:0;" id="today-hero-icon">&#9654;&#65039;</span>
+        <div style="flex:1;min-width:220px;">
+          <div style="font-family:var(--font-ui);font-size:0.62rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:2px;">Start here every day</div>
+          <div id="today-hero-title" style="font-family:var(--font-serif);font-size:1.3rem;font-weight:700;color:#fff;">Today&rsquo;s session</div>
+          <div id="today-hero-sub" style="font-family:var(--font-ui);font-size:0.8rem;color:rgba(255,255,255,0.55);margin-top:2px;">5 minutes &mdash; review what&rsquo;s due &middot; learn today&rsquo;s argument &middot; prove you can say it</div>
+        </div>
+        <span id="today-hero-btn" style="font-family:var(--font-ui);font-size:0.88rem;font-weight:600;background:var(--gold);color:var(--navy-950);padding:11px 26px;border-radius:4px;white-space:nowrap;">Start &rarr;</span>
+      </a>
       <!-- Practice row: streak / daily mix / mastery shelf -->
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.75rem;margin-bottom:1.25rem;" id="practice-row">
-        <a href="today.html" id="today-card" style="text-decoration:none;background:linear-gradient(135deg,var(--navy-800),var(--navy-700));border:1px solid rgba(200,169,81,0.45);border-radius:8px;padding:0.9rem 1.1rem;display:flex;align-items:center;gap:0.8rem;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(200,169,81,0.45)'">
-          <span style="font-size:1.4rem;">&#9654;&#65039;</span>
-          <div>
-            <div style="font-family:var(--font-serif);font-size:1.02rem;font-weight:700;color:var(--gold);" id="today-card-title">Today&rsquo;s session</div>
-            <div style="font-family:var(--font-ui);font-size:0.68rem;color:rgba(255,255,255,0.5);" id="today-card-sub">5 minutes &mdash; review &middot; learn &middot; prove</div>
-          </div>
-        </a>
         <div style="background:var(--navy-950);border:1px solid var(--navy-700);border-radius:8px;padding:0.9rem 1.1rem;display:flex;align-items:center;gap:0.8rem;">
           <span style="font-size:1.5rem;" id="streak-flame">&#128293;</span>
           <div>
@@ -1491,6 +1494,17 @@ function adMark(){
 var AD_NAMES = {kalam:'Kalam', leibniz:'Contingency (Leibniz)', thomistic:'Thomistic Argument', finetuning:'Fine-Tuning', moral:'Moral Argument', ontological:'Ontological', consciousness:'Consciousness', reason:'Argument from Reason', beauty:'Beauty', religious:'Religious Experience', desire:'Argument from Desire', evil:'Problem of Evil', minimal:'Minimal Facts', emptytomb:'Empty Tomb', paul:'Conversion of Paul', appearances:'The Appearances', disciplesbelief:'Disciples Belief', sceptics:'Sceptics Converted', burial:'The Burial', postresurrection:'Post-Resurrection Church', hist_jesus:'Historical Jesus', jesus_as_god_nt:'Jesus as God in the NT', hands:'HANDS Framework', jesus_claims:'Jesus Claims', messianic_prophecy:'Messianic Prophecy', john11:'John 1:1', phil2:'Philippians 2', titles:'Titles of Jesus', multiatt:'Multiple Attestation', earlycreed:'The Early Creed', jesuschar:'Character of Jesus', daniel70:'Daniels 70 Weeks', uniqueness:'Uniqueness', virginbirth:'Virgin Birth', respred:'Resurrection Predictions', shema:'The Shema', nt_trinity:'Trinity in the NT', ot_trinity:'OT Foundations', early_church_trinity:'Early Church', philosophical_trinity:'Philosophical Defence', trinity_islam:'Answering Islam', trinity_jw:'Watchtower', trinity_mormons:'Mormonism', modalism:'Modalism', eternal_generation:'Eternal Generation'};
 function renderPracticeRow(){
   try{
+    /* Today hero state: done today vs start */
+    try{
+      var tst = JSON.parse(localStorage.getItem('ad_today_v1')||'null');
+      if(tst && tst.date === new Date().toDateString()){
+        var hi=document.getElementById('today-hero-icon'), ht=document.getElementById('today-hero-title'), hs=document.getElementById('today-hero-sub'), hb=document.getElementById('today-hero-btn');
+        if(hi) hi.textContent = '✅';
+        if(ht) ht.innerHTML = 'Done for today ✓';
+        if(hs) hs.textContent = 'Your streak is safe — come back tomorrow for the next argument.';
+        if(hb){ hb.textContent = 'Revisit'; hb.style.background='transparent'; hb.style.color='var(--gold)'; hb.style.border='1px solid rgba(200,169,81,0.5)'; }
+      }
+    }catch(e){}
     var s = adStreak();
     var today = new Date().toISOString().slice(0,10);
     var alive = s.last === today || s.last === new Date(Date.now()-864e5).toISOString().slice(0,10);
