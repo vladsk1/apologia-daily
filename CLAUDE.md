@@ -105,6 +105,12 @@ human/pastoral doctrinal sign-off on high-stakes content.
 - **Tone — 1 Peter 3:15**: gentleness and respect; steelman every objection in its
   strongest form before answering; never triumphalist, strawman, or condescending;
   represent other faiths (Judaism, Islam, JW, Mormonism, atheism) charitably.
+  **Calibration cuts both ways**: charity is *accuracy*, not concession. Steelman means
+  the opposing case in its strongest *accurate* form — never inflate the other side's
+  evidence, grant symmetries that don't exist, or concede more than the evidence
+  requires. Gentleness governs the tone, not the scoreboard. (Caught example: a line
+  granting Bible and Qur'an face "the same standard" when Surah 4:82's no-contradiction
+  test is the Qur'an's own, stricter, self-issued standard.)
 - **No fabrication**: no invented quotes, citations, dates, or statistics.
 - **Argument-specific rules**:
   - Kalam: "whatever **begins to exist** has a cause," never "everything has a cause."

@@ -21,6 +21,7 @@ A single weak or overstated argument does more damage than a missing one: it han
 - **Classical orthodoxy** (Apostles'/Nicene Creed): deity and humanity of Christ, bodily resurrection, Trinity, authority of Scripture, salvation through Christ. Flag any drift into heterodoxy.
 - **Denominational neutrality** — defend the historic faith common to Catholics, Orthodox, and Protestants. Flag any essay that takes sides on intra-Christian disputes (baptism, predestination, papacy, sacraments, end-times) as if settled.
 - **Tone (1 Peter 3:15)** — gentleness and respect. Flag triumphalism, condescension, or mockery of other views.
+- **Over-concession (fairness cuts both ways)** — flag with equal severity: inflating the opposing side's evidence, granting symmetries that don't exist (e.g. treating a claim the opposing text makes about itself as if both sides made it), conceding more than the evidence requires, or softening our conclusion below what the argument establishes. Charity is accuracy, not concession — the steelman must be the strongest *accurate* form of the other side, not a stronger-than-real one.
 - **Argument-specific rules** (flag violations):
   - Kalam/first-cause: "whatever **begins to exist** has a cause," never "everything has a cause."
   - Bible reliability: manuscript counts prove **accurate preservation**, NOT that the content is true — those are separate arguments.

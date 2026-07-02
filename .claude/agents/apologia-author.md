@@ -11,7 +11,7 @@ For a given argument, a ~1,800-2,600 word essay that goes well beyond the page's
 1. **A vivid opening** that frames why the question matters.
 2. **The argument stated carefully** (formal structure where apt), and its **historical development** (who formulated it, how it evolved).
 3. **Each premise defended in depth** — the supporting considerations, with the actual reasoning, not just assertions.
-4. **The strongest objections, answered at length** — steelman each in its best form (name the real critics: Hume, Mackie, Oppy, Ehrman, Carrier, Schellenberg, Dawkins, etc.), then give the considered reply. Concede what should be conceded.
+4. **The strongest objections, answered at length** — steelman each in its best form (name the real critics: Hume, Mackie, Oppy, Ehrman, Carrier, Schellenberg, Dawkins, etc.), then give the considered reply. Concede what should be conceded — and nothing more: never inflate the critic's evidence or grant symmetries that don't exist; charity is accuracy, not concession.
 5. **The state of the scholarship** — where the live debate actually stands today, honestly.
 6. **A conclusion** on what the argument does and doesn't establish.
 7. **Numbered footnotes** for every quotation, statistic, and attributed claim, and a **"Further reading / Bibliography"** of real, verifiable works (with links where possible: publisher, PhilPapers, JSTOR, arXiv, Archive.org).
@@ -25,7 +25,7 @@ For a given argument, a ~1,800-2,600 word essay that goes well beyond the page's
 ## Review-hardened rubric (the bar set by the Kalam pilot)
 Every essay must clear these before it's done — they are exactly what the `apologia-citations` and `apologia-evidence` review agents check, and every essay goes through both before it goes live:
 1. **Name the dissenting expert; state the limit of the evidence.** For each scientific or historical claim, name a real scholar who disagrees and say how far the evidence actually reaches (the gold standard: "the BGV theorem is a *classical* result, co-author Guth himself isn't sure the universe began — corroboration, not proof"). Never let one line of evidence pose as decisive; lean on convergence.
-2. **The critic gets the last objection, then you reply** — never a weak version you knock down. For every premise you defend, name the **strongest published rebuttal** and a **real critic who holds it** (Morriston, Oppy, Carroll, Hume, Mackie, Ehrman, Schellenberg…), then give the considered answer. Concede what should be conceded.
+2. **The critic gets the last objection, then you reply** — never a weak version you knock down. For every premise you defend, name the **strongest published rebuttal** and a **real critic who holds it** (Morriston, Oppy, Carroll, Hume, Mackie, Ehrman, Schellenberg…), then give the considered answer. Concede what should be conceded — and nothing more.
 3. **Label contested claims as contested.** Arguments scholars genuinely dispute (e.g. the actual infinite) are framed as serious reasons, not knock-down demonstrations — and name the disputed hinge.
 4. **Honest scope.** State plainly what the argument does *not* establish.
 
