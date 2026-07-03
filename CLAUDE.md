@@ -59,16 +59,24 @@
 > via `ev-sN.es.html` fragments); more `/answers/` pages via the flywheel; execute the
 > marketing plan.
 >
-> **Deep-dive essay audit — 3 tabs done (2026-07-03):** all **30** deep-dive essays behind
-> the Bible (`ev-s4`), God's Existence (`ev-s1`), and Science (`ev-s5`) tabs got a full
-> `apologia-citations` fact-check. **Zero fabrications, zero doctrinal blockers across all 30**
-> — confirming the essays are pipeline-clean and the earlier fabricated quotes lived only in
-> the *card* layer (already fixed). Minor quote-precision fixes applied + deployed; the one
-> substantive catch was a backwards probability comparison in `originlife.html` (now correct).
-> MK mirrors `mk/kalam.html` + `mk/evil.html` updated too. Exemplary templates to reuse:
-> `archaeology`, `finetuning`, `cosmic`, `moral`, `laws`. **Not yet essay-audited (Wave 3):**
-> the Jesus/Resurrection (`ev-s2`/`ev-s3`), Trinity (`ev-s6`), and Islam/`worldviews` deep-dive
-> essays; and the MK essay translations beyond kalam/evil. Full detail in `HANDOFF.md`.
+> **Deep-dive essay audit — COMPLETE, all 7 tabs / ~78 essays (2026-07-03):** every
+> `library/*.html` deep-dive behind all seven Evidence Library tabs got a full
+> `apologia-citations` fact-check, in three waves (Bible+God's-Existence+Science = 30;
+> Resurrection 11 + Jesus 12 + Trinity 10 + Islam 13 = 46; plus islam-contradictions/
+> islam-jesusmuslim pipelined earlier). **Result: ZERO fabrications and ZERO doctrinal
+> blockers across every essay** — the essays are the trustworthy layer; the earlier
+> fabricated quotes lived only in the *card* layer (already fixed). Only minor quote/citation-
+> precision fixes were applied + deployed (commits `893a1a3`, `becb070`, `49ad2aa`, `7a71004`,
+> `3a4fceb`, `0ceca2a`, `027c76e`, `0a532a1`); the one substantive catch was a backwards
+> probability comparison in `originlife.html` (now correct). Trinity tab held strict Nicene
+> with 0 drift; `shema`/`ot_trinity` correctly REFUTE the retired echad overreach; the Islam
+> tab held "charity is accuracy" throughout. MK mirrors updated where essays exist (kalam,
+> evil, minimalfacts, emptytomb, paulconv). Exemplary templates to reuse: `archaeology`,
+> `finetuning`, `cosmic`, `moral`, `laws`, `shema`, `phil2`, `messianic-prophecy`, `islam-naskh`.
+> **Still open:** MK essay translations beyond the 5 mirrored; ~a dozen CHECK-level page-cites
+> for a human-with-the-books pass; non-blocking human/pastoral sign-off items on the Trinity +
+> Islam tabs (incl. the `evil.html` Moltmann line and the `islam-dilemma` 10:94 gloss). Full
+> detail in `HANDOFF.md`.
 
 Apologia Daily (apologiadaily.com) is a commercial Christian apologetics platform: a
 static HTML/CSS/JS site on Vercel, with Supabase (auth/db) and Claude-powered AI
