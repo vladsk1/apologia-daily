@@ -1,0 +1,75 @@
+{
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "voiceover": "Muslims often say Jesus was a Muslim. He wasn't — and the claim trades on two meanings of one word. \"Muslim\" can mean simply \"one who submits to God.\" But the religion of Islam is something specific: defined by Muhammad and the Quran — the seventh century, six hundred years after Jesus. Jesus was a first-century Jew who kept the Torah and never heard of Muhammad. And the Jesus of history did what no Muslim ever could: he forgave sins in his own name, accepted worship, and claimed to share the Father's own glory — which, on Islam's own terms, is shirk, impossible for a mere prophet. So either we trust the Gospels — and Jesus was no Muslim — or we throw them out, and there's no \"Muslim Jesus\" left at all. Yes, Jesus submitted to the Father, perfectly — but as God the Son, who became human to save us. Not a Muslim. The Lord.",
+  "source": "answers/was-jesus-a-muslim.html",
+  "scenes": [
+    { "dur": 2.6,
+      "big": [ {"t": "Was Jesus", "c": "gold", "s": 118}, {"t": "a Muslim?", "c": "cream", "s": 118} ],
+      "sub": [ {"t": "The question, answered honestly.", "c": "dim", "f": "serif", "s": 44} ] },
+
+    { "kicker": "THE CLAIM", "dur": 3.4, "lines": [
+      {"t": "Muslims often say", "c": "cream", "s": 62},
+      {"t": "Jesus was a Muslim.", "c": "cream", "s": 62},
+      {"t": "", "s": 20},
+      {"t": "He wasn't.", "c": "gold", "f": "serifb", "s": 84} ] },
+
+    { "kicker": "TWO MEANINGS, ONE WORD", "dur": 4.0, "lines": [
+      {"t": "“Muslim” can mean simply", "c": "cream", "s": 60},
+      {"t": "one who submits to God.", "c": "cream", "s": 60},
+      {"t": "", "s": 24},
+      {"t": "But that is not", "c": "dim", "s": 52},
+      {"t": "the religion of Islam.", "c": "gold", "f": "serifb", "s": 60} ] },
+
+    { "kicker": "ISLAM IS SPECIFIC", "dur": 4.4, "lines": [
+      {"t": "Islam is defined by", "c": "cream", "s": 58},
+      {"t": "Muhammad and the Qur'an —", "c": "gold", "f": "serifb", "s": 62},
+      {"t": "", "s": 20},
+      {"t": "the 7th century,", "c": "cream", "s": 58},
+      {"t": "600 years after Jesus.", "c": "cream", "s": 58} ] },
+
+    { "kicker": "WHO JESUS ACTUALLY WAS", "dur": 4.2, "lines": [
+      {"t": "Jesus was a", "c": "cream", "s": 58},
+      {"t": "first-century Jew", "c": "gold", "f": "serifb", "s": 66},
+      {"t": "who kept the Torah —", "c": "cream", "s": 56},
+      {"t": "and never heard", "c": "cream", "s": 56},
+      {"t": "of Muhammad.", "c": "cream", "s": 56} ] },
+
+    { "kicker": "WHAT NO MUSLIM COULD DO", "dur": 5.2, "lines": [
+      {"t": "The Jesus of history", "c": "cream", "s": 54},
+      {"t": "did what no Muslim could:", "c": "cream", "s": 54},
+      {"t": "", "s": 22},
+      {"t": "he forgave sins in his own name,", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "accepted worship,", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "and claimed the Father's glory.", "c": "gold", "f": "serifb", "s": 48} ] },
+
+    { "kicker": "ON ISLAM'S OWN TERMS", "dur": 4.4, "lines": [
+      {"t": "For a mere prophet,", "c": "cream", "s": 58},
+      {"t": "that is shirk —", "c": "gold", "f": "serifb", "s": 78},
+      {"t": "", "s": 18},
+      {"t": "the one unforgivable sin.", "c": "dim", "s": 52} ] },
+
+    { "kicker": "THE DILEMMA", "dur": 5.6, "lines": [
+      {"t": "Trust the Gospels —", "c": "cream", "s": 56},
+      {"t": "and Jesus was no Muslim.", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "", "s": 26},
+      {"t": "Throw them out —", "c": "cream", "s": 56},
+      {"t": "and there's no", "c": "cream", "s": 56},
+      {"t": "“Muslim Jesus” left at all.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "THE ANSWER", "dur": 5.6, "lines": [
+      {"t": "Yes — Jesus submitted", "c": "cream", "s": 56},
+      {"t": "to the Father, perfectly.", "c": "cream", "s": 56},
+      {"t": "", "s": 22},
+      {"t": "But as God the Son,", "c": "gold", "f": "serifb", "s": 66},
+      {"t": "who became human", "c": "cream", "s": 54},
+      {"t": "to save us.", "c": "cream", "s": 54} ] },
+
+    { "dur": 3.8,
+      "big": [ {"t": "Not a Muslim.", "c": "cream", "s": 96}, {"t": "The Lord.", "c": "gold", "s": 116} ],
+      "sub": [ {"t": "Explore the full case at", "c": "dim", "f": "serif", "s": 42},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52} ] }
+  ]
+}

@@ -1,0 +1,214 @@
+#!/usr/bin/env python3
+"""
+Apologia Daily — branded short-form reel generator.
+
+Turns a JSON spec (a title + a list of caption scenes) into a finished, brand-styled
+MP4 (deep-navy/gold or light "manuscript" theme) at vertical / square / wide sizes,
+with crossfades and a subtle Ken Burns zoom. No Canva, no network, no voiceover engine
+required — it renders slides with Pillow and encodes with a bundled static ffmpeg.
+
+Usage:
+    python3 gen_reel.py <spec.json> [--out path.mp4] [--aspect vertical|square|wide]
+                                     [--theme navy|parchment]
+
+CLI flags override the matching keys in the spec. See tools/reel/README.md and
+tools/reel/specs/*.json for the spec format. Add a voiceover afterward in any editor
+using the "voiceover" text in the spec (this tool renders silent, fully-captioned video).
+"""
+import os, sys, json, subprocess, argparse, importlib
+
+# ---- dependency bootstrap (Pillow + a static ffmpeg) ----
+def _ensure(pkg, imp=None):
+    try:
+        return importlib.import_module(imp or pkg)
+    except ImportError:
+        subprocess.run([sys.executable, "-m", "pip", "install", "-q", pkg], check=True)
+        return importlib.import_module(imp or pkg)
+
+Image = _ensure("Pillow", "PIL.Image"); from PIL import Image, ImageDraw, ImageFont, ImageFilter
+imageio_ffmpeg = _ensure("imageio-ffmpeg", "imageio_ffmpeg")
+FF = imageio_ffmpeg.get_ffmpeg_exe()
+
+# ---- fonts (present on Debian/Ubuntu; override via env if needed) ----
+FONTS = {
+    "serif":  os.environ.get("REEL_SERIF",  "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"),
+    "serifb": os.environ.get("REEL_SERIFB", "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"),
+    "sans":   os.environ.get("REEL_SANS",   "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"),
+}
+def F(name, size): return ImageFont.truetype(FONTS.get(name, FONTS["serif"]), size)
+
+# ---- themes ----
+THEMES = {
+    "navy": dict(
+        top=(5, 13, 26), mid=(10, 22, 40), bot=(15, 32, 64),
+        gold=(200, 169, 81), cream=(250, 238, 218), dim=(196, 188, 173),
+        glow=(120, 96, 40), vignette=0.55, shadow=(0, 0, 0),
+    ),
+    "parchment": dict(
+        top=(247, 244, 238), mid=(240, 235, 224), bot=(228, 220, 203),
+        gold=(160, 126, 44), cream=(20, 30, 52), dim=(92, 84, 68),
+        glow=(210, 190, 140), vignette=0.22, shadow=(200, 190, 168),
+    ),
+}
+ASPECTS = {"vertical": (1080, 1920), "square": (1080, 1080), "wide": (1920, 1080)}
+
+def color(spec_theme, name):
+    t = THEMES[spec_theme]
+    return t.get(name, t["cream"])
+
+# ---- background ----
+def gradient_bg(W, H, th):
+    img = Image.new("RGB", (W, H), th["top"]); px = img.load()
+    for y in range(H):
+        t = y / (H - 1)
+        if t < 0.55:
+            u = t / 0.55; a, b = th["top"], th["mid"]
+        else:
+            u = (t - 0.55) / 0.45; a, b = th["mid"], th["bot"]
+        c = tuple(int(a[i] + (b[i] - a[i]) * u) for i in range(3))
+        for x in range(W): px[x, y] = c
+    # soft radial glow
+    glow = Image.new("L", (W, H), 0); gd = ImageDraw.Draw(glow)
+    cx, cy, r = W // 2, int(H * 0.42), int(min(W, H) * 0.6)
+    for rr in range(r, 0, -8):
+        gd.ellipse([cx - rr, cy - int(rr * 1.15), cx + rr, cy + int(rr * 1.15)],
+                   fill=int(46 * (1 - rr / r)))
+    glow = glow.filter(ImageFilter.GaussianBlur(80))
+    img = Image.composite(Image.new("RGB", (W, H), th["glow"]), img, glow)
+    # vignette
+    vig = Image.new("L", (W, H), 255); v = ImageDraw.Draw(vig)
+    m = int(min(W, H) * 0.08); v.rectangle([m, m, W - m, H - m], fill=0)
+    vig = vig.filter(ImageFilter.GaussianBlur(120))
+    img = Image.composite(Image.new("RGB", (W, H), (0, 0, 0) if sum(th["top"]) < 200 else (120, 110, 90)),
+                          img, vig.point(lambda p: int(p * th["vignette"])))
+    return img
+
+def wrap(draw, text, font, max_w):
+    words, lines, cur = text.split(), [], ""
+    for w in words:
+        test = (cur + " " + w).strip()
+        if draw.textlength(test, font=font) <= max_w: cur = test
+        else:
+            if cur: lines.append(cur)
+            cur = w
+    if cur: lines.append(cur)
+    return lines
+
+def center_block(draw, W, blocks, cy, shadow):
+    heights = []
+    for _, font, _, gap in blocks:
+        asc, desc = font.getmetrics(); heights.append(asc + desc + gap)
+    y = cy - sum(heights) // 2
+    for (text, font, col, gap), hh in zip(blocks, heights):
+        w = draw.textlength(text, font=font); x = (W - w) // 2
+        draw.text((x + 2, y + 2), text, font=font, fill=shadow)
+        draw.text((x, y), text, font=font, fill=col)
+        y += hh
+
+def kicker(draw, W, text, th):
+    max_w = W - 180
+    for size, sep in [(34, "  "), (32, "  "), (30, " "), (28, " "), (26, " "), (24, " ")]:
+        f = F("sans", size); spaced = sep.join(list(text)); w = draw.textlength(spaced, font=f)
+        if w <= max_w: break
+    x = (W - w) // 2; y = int(0.13 * 1920) if W < 1300 else 150
+    draw.text((x, y), spaced, font=f, fill=th["gold"])
+    draw.line([(W // 2 - 70, y + 70), (W // 2 + 70, y + 70)], fill=th["gold"], width=3)
+
+def footer(draw, W, H, th):
+    f = F("sans", 30); text = "A P O L O G I A   D A I L Y"
+    w = draw.textlength(text, font=f); draw.text(((W - w) // 2, H - 190), text, font=f, fill=th["gold"])
+    f2 = F("serif", 30); t2 = "apologiadaily.com"; w2 = draw.textlength(t2, font=f2)
+    draw.text(((W - w2) // 2, H - 145), t2, font=f2, fill=th["dim"])
+
+def progress(draw, W, H, idx, n, th):
+    r, gap = 7, 30; total = n * gap; x0 = (W - total) // 2 + gap // 2; y = H - 250
+    for i in range(n):
+        c = th["gold"] if i == idx else (70, 84, 110) if sum(th["top"]) < 200 else (180, 170, 150)
+        draw.ellipse([x0 + i * gap - r, y - r, x0 + i * gap + r, y + r], fill=c)
+
+def line_blocks(lines, th):
+    out = []
+    for ln in lines:
+        if ln.get("t", "") == "":
+            out.append((" ", F("serif", ln.get("s", 20)), th["top"], 0)); continue
+        out.append((ln["t"], F(ln.get("f", "serif"), ln.get("s", 56)),
+                    th.get(ln.get("c", "cream"), th["cream"]), ln.get("gap", 16)))
+    return out
+
+# ---- render all scenes ----
+def render(spec, W, H, theme, frames_dir):
+    th = THEMES[theme]; os.makedirs(frames_dir, exist_ok=True)
+    scenes = spec["scenes"]; n = len(scenes); durs = []
+    for i, sc in enumerate(scenes):
+        img = gradient_bg(W, H, th); d = ImageDraw.Draw(img)
+        if sc.get("kicker"): kicker(d, W, sc["kicker"], th)
+        has_k = bool(sc.get("kicker"))
+        cy = int(H * (0.44 if has_k else 0.47))
+        if "big" in sc:
+            big = [(x["t"], F(x.get("f", "serifb"), x.get("s", 110)),
+                    th.get(x.get("c", "cream"), th["cream"]), 18) for x in sc["big"]]
+            center_block(d, W, big, cy - 60, th["shadow"])
+            if sc.get("sub"):
+                sub = [(x["t"], F(x.get("f", "serif"), x.get("s", 44)),
+                        th.get(x.get("c", "dim"), th["dim"]), 14) for x in sc["sub"]]
+                center_block(d, W, sub, cy + int(H * 0.14), th["shadow"])
+        else:
+            center_block(d, W, line_blocks(sc["lines"], th), cy, th["shadow"])
+        footer(d, W, H, th); progress(d, W, H, i, n, th)
+        img.save(os.path.join(frames_dir, f"scene_{i:02d}.png"))
+        durs.append(float(sc.get("dur", 3.5)))
+    return durs, n
+
+# ---- encode ----
+def encode(spec, W, H, frames_dir, clips_dir, out_path):
+    os.makedirs(clips_dir, exist_ok=True)
+    FPS = int(spec.get("fps", 30)); XF = float(spec.get("crossfade", 0.6))
+    durs = spec["_durs"]; n = spec["_n"]
+    clips = []
+    for i, dsec in enumerate(durs):
+        fr = int(round(dsec * FPS)); src = os.path.join(frames_dir, f"scene_{i:02d}.png")
+        out = os.path.join(clips_dir, f"clip_{i:02d}.mp4")
+        vf = (f"scale={W*2}:{H*2},zoompan=z='min(1+0.05*on/{fr},1.05)':"
+              f"x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={fr}:s={W}x{H}:fps={FPS},format=yuv420p")
+        r = subprocess.run([FF, "-y", "-loop", "1", "-i", src, "-vf", vf, "-frames:v", str(fr),
+                            "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+                            "-pix_fmt", "yuv420p", "-r", str(FPS), out], capture_output=True, text=True)
+        if r.returncode: sys.exit(f"clip {i} failed:\n{r.stderr[-1200:]}")
+        clips.append((out, dsec))
+    inputs, fc, prev, cum = [], [], "0:v", clips[0][1]
+    for out, _ in clips: inputs += ["-i", out]
+    for i in range(1, n):
+        off = cum - XF; lbl = f"x{i}"
+        fc.append(f"[{prev}][{i}:v]xfade=transition=fade:duration={XF}:offset={off:.3f}[{lbl}]")
+        prev = lbl; cum = cum - XF + clips[i][1]
+    cmd = [FF, "-y"] + inputs + (["-filter_complex", ";".join(fc), "-map", f"[{prev}]"] if n > 1
+                                 else ["-map", "0:v"])
+    cmd += ["-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
+            "-movflags", "+faststart", "-r", str(FPS), out_path]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    if r.returncode: sys.exit(f"xfade failed:\n{r.stderr[-1800:]}")
+    return round(cum, 1)
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("spec")
+    ap.add_argument("--out")
+    ap.add_argument("--aspect", choices=list(ASPECTS))
+    ap.add_argument("--theme", choices=list(THEMES))
+    ap.add_argument("--workdir")
+    a = ap.parse_args()
+    spec = json.load(open(a.spec))
+    aspect = a.aspect or spec.get("aspect", "vertical")
+    theme = a.theme or spec.get("theme", "navy")
+    W, H = ASPECTS[aspect]
+    base = os.path.splitext(os.path.basename(a.spec))[0]
+    out = a.out or f"{base}-{aspect}-{theme}.mp4"
+    work = a.workdir or os.path.join(os.path.dirname(os.path.abspath(a.spec)), f".build_{base}_{aspect}_{theme}")
+    frames_dir = os.path.join(work, "frames"); clips_dir = os.path.join(work, "clips")
+    durs, n = render(spec, W, H, theme, frames_dir)
+    spec["_durs"], spec["_n"] = durs, n
+    total = encode(spec, W, H, frames_dir, clips_dir, out)
+    print(f"OK  {out}  {W}x{H}  {theme}  {total}s  ({n} scenes)")
+
+if __name__ == "__main__":
+    main()
