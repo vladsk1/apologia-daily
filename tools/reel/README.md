@@ -20,6 +20,9 @@ python3 gen_reel.py specs/was-jesus-a-muslim.json --aspect square --out /tmp/out
 
 First run pip-installs `Pillow` and `imageio-ffmpeg` if missing. Renders in seconds.
 
+**Where it saves:** finished MP4s go to **`tools/reel/output/`** by default (auto-created,
+git-ignored), named `<spec>-<aspect>-<theme>.mp4`. Pass `--out <path>` to override.
+
 Flags (override the spec): `--theme navy|parchment` · `--aspect vertical|square|wide` ·
 `--out <path>` · `--workdir <dir>` (scratch for frames/clips).
 

@@ -11,6 +11,9 @@ Usage:
     python3 gen_reel.py <spec.json> [--out path.mp4] [--aspect vertical|square|wide]
                                      [--theme navy|parchment]
 
+By default the finished MP4 is written to tools/reel/output/ (one predictable folder,
+git-ignored); pass --out to override the location/name.
+
 CLI flags override the matching keys in the spec. See tools/reel/README.md and
 tools/reel/specs/*.json for the spec format. Add a voiceover afterward in any editor
 using the "voiceover" text in the spec (this tool renders silent, fully-captioned video).
@@ -202,8 +205,11 @@ def main():
     theme = a.theme or spec.get("theme", "navy")
     W, H = ASPECTS[aspect]
     base = os.path.splitext(os.path.basename(a.spec))[0]
-    out = a.out or f"{base}-{aspect}-{theme}.mp4"
-    work = a.workdir or os.path.join(os.path.dirname(os.path.abspath(a.spec)), f".build_{base}_{aspect}_{theme}")
+    # default: save all finished reels into tools/reel/output/ (one predictable folder)
+    outdir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")
+    os.makedirs(outdir, exist_ok=True)
+    out = a.out or os.path.join(outdir, f"{base}-{aspect}-{theme}.mp4")
+    work = a.workdir or os.path.join(outdir, f".build_{base}_{aspect}_{theme}")
     frames_dir = os.path.join(work, "frames"); clips_dir = os.path.join(work, "clips")
     durs, n = render(spec, W, H, theme, frames_dir)
     spec["_durs"], spec["_n"] = durs, n

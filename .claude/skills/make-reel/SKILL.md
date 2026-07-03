@@ -43,13 +43,14 @@ Tooling lives in `tools/reel/`:
 
 3. **Render.** From `tools/reel/`:
    ```
-   python3 gen_reel.py specs/<name>.json --theme navy      --out /abs/out/<name>-navy.mp4
-   python3 gen_reel.py specs/<name>.json --theme parchment  --aspect vertical
+   python3 gen_reel.py specs/<name>.json --theme navy       # → tools/reel/output/
+   python3 gen_reel.py specs/<name>.json --theme parchment
    python3 gen_reel.py specs/<name>.json --aspect square
    python3 gen_reel.py specs/<name>.json --aspect wide
    ```
    `--theme` (navy|parchment), `--aspect` (vertical|square|wide) override the spec.
-   Write outputs to the session scratchpad, not the repo.
+   Finished MP4s save to **`tools/reel/output/`** by default (git-ignored); pass `--out`
+   only if you need a different location.
 
 4. **QA before delivering.** Probe duration/size and extract a couple of frames to eyeball
    for overflow/typos (ffmpeg is at `python3 -c "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())"`):
