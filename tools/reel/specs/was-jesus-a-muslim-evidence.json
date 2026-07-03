@@ -1,0 +1,72 @@
+{
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "voiceover": "Muslims call Jesus a Muslim — a \"submitter\" to God. Fair enough, as a word. But watch what the historical Jesus actually did. One: he forgave sins in his own name — \"Your sins are forgiven\" — and the scribes knew what that meant: who can forgive sins but God alone? Two: when Thomas fell before him and said \"My Lord and my God,\" Jesus didn't correct him — he accepted it. Three: he prayed to the Father, \"Glorify me with the glory I had with you before the world existed.\" For a prophet to claim any of this would be shirk — the one unforgivable sin in Islam. So either we trust the Gospels, and Jesus was no Muslim — or we discard them, and no \"Muslim Jesus\" remains at all. Yes, he submitted to the Father, fully — as God the Son, who became human to save us. Not a submitter. The Lord.",
+  "source": "answers/was-jesus-a-muslim.html",
+  "scenes": [
+    { "dur": 2.8,
+      "big": [ {"t": "3 things Jesus did", "c": "cream", "s": 74}, {"t": "that no Muslim could", "c": "gold", "s": 74} ],
+      "sub": [ {"t": "Straight from the record.", "c": "dim", "f": "serif", "s": 44} ] },
+
+    { "kicker": "THE CLAIM", "dur": 4.0, "lines": [
+      {"t": "Muslims call Jesus a Muslim —", "c": "cream", "s": 52},
+      {"t": "a “submitter” to God.", "c": "cream", "s": 52},
+      {"t": "", "s": 22},
+      {"t": "Fair enough, as a word.", "c": "dim", "s": 50},
+      {"t": "But watch what he did.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "ONE — HE FORGAVE SINS", "dur": 5.0, "lines": [
+      {"t": "He forgave sins", "c": "cream", "s": 56},
+      {"t": "in his own name:", "c": "cream", "s": 56},
+      {"t": "“Your sins are forgiven.”", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "", "s": 18},
+      {"t": "“Who can forgive sins", "c": "dim", "s": 46},
+      {"t": "but God alone?”", "c": "dim", "s": 46},
+      {"t": "— Mark 2:5–7", "c": "dim", "f": "serif", "s": 38} ] },
+
+    { "kicker": "TWO — HE ACCEPTED WORSHIP", "dur": 4.6, "lines": [
+      {"t": "Thomas fell before him:", "c": "cream", "s": 56},
+      {"t": "“My Lord and my God!”", "c": "gold", "f": "serifb", "s": 60},
+      {"t": "", "s": 18},
+      {"t": "Jesus did not correct him.", "c": "cream", "s": 50},
+      {"t": "He accepted it.", "c": "cream", "s": 50},
+      {"t": "— John 20:28–29", "c": "dim", "f": "serif", "s": 38} ] },
+
+    { "kicker": "THREE — HE CLAIMED GOD'S GLORY", "dur": 5.2, "lines": [
+      {"t": "He prayed to the Father:", "c": "cream", "s": 54},
+      {"t": "“Glorify me with the glory", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "I had with you", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "before the world existed.”", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "— John 17:5", "c": "dim", "f": "serif", "s": 38} ] },
+
+    { "kicker": "ON ISLAM'S OWN TERMS", "dur": 4.2, "lines": [
+      {"t": "For a prophet to claim this", "c": "cream", "s": 54},
+      {"t": "is shirk —", "c": "gold", "f": "serifb", "s": 78},
+      {"t": "", "s": 18},
+      {"t": "the one unforgivable sin.", "c": "dim", "s": 52} ] },
+
+    { "kicker": "THE DILEMMA", "dur": 5.2, "lines": [
+      {"t": "Trust the Gospels —", "c": "cream", "s": 56},
+      {"t": "and Jesus was no Muslim.", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "", "s": 24},
+      {"t": "Discard them —", "c": "cream", "s": 56},
+      {"t": "and no “Muslim Jesus”", "c": "cream", "s": 56},
+      {"t": "remains at all.", "c": "cream", "s": 56} ] },
+
+    { "kicker": "THE ANSWER", "dur": 5.6, "lines": [
+      {"t": "Yes — he submitted", "c": "cream", "s": 56},
+      {"t": "to the Father, fully.", "c": "cream", "s": 56},
+      {"t": "", "s": 20},
+      {"t": "As God the Son,", "c": "gold", "f": "serifb", "s": 64},
+      {"t": "who became human to save us.", "c": "cream", "s": 48},
+      {"t": "— Philippians 2:6–8", "c": "dim", "f": "serif", "s": 38} ] },
+
+    { "dur": 3.8,
+      "big": [ {"t": "Not a submitter.", "c": "cream", "s": 88}, {"t": "The Lord.", "c": "gold", "s": 116} ],
+      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52} ] }
+  ]
+}
