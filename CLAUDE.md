@@ -58,6 +58,17 @@
 > pages are complete; extend the Spanish/Macedonian pilots beyond 10 essays (+ a Spanish hub
 > via `ev-sN.es.html` fragments); more `/answers/` pages via the flywheel; execute the
 > marketing plan.
+>
+> **Deep-dive essay audit — 3 tabs done (2026-07-03):** all **30** deep-dive essays behind
+> the Bible (`ev-s4`), God's Existence (`ev-s1`), and Science (`ev-s5`) tabs got a full
+> `apologia-citations` fact-check. **Zero fabrications, zero doctrinal blockers across all 30**
+> — confirming the essays are pipeline-clean and the earlier fabricated quotes lived only in
+> the *card* layer (already fixed). Minor quote-precision fixes applied + deployed; the one
+> substantive catch was a backwards probability comparison in `originlife.html` (now correct).
+> MK mirrors `mk/kalam.html` + `mk/evil.html` updated too. Exemplary templates to reuse:
+> `archaeology`, `finetuning`, `cosmic`, `moral`, `laws`. **Not yet essay-audited (Wave 3):**
+> the Jesus/Resurrection (`ev-s2`/`ev-s3`), Trinity (`ev-s6`), and Islam/`worldviews` deep-dive
+> essays; and the MK essay translations beyond kalam/evil. Full detail in `HANDOFF.md`.
 
 Apologia Daily (apologiadaily.com) is a commercial Christian apologetics platform: a
 static HTML/CSS/JS site on Vercel, with Supabase (auth/db) and Claude-powered AI
