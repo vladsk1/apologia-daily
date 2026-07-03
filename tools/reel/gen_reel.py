@@ -198,6 +198,8 @@ def main():
     ap.add_argument("--out")
     ap.add_argument("--aspect", choices=list(ASPECTS))
     ap.add_argument("--theme", choices=list(THEMES))
+    ap.add_argument("--pace", type=float, default=None,
+                    help="multiply every scene's on-screen time (1.0 = spec; 1.5 = 50%% slower)")
     ap.add_argument("--workdir")
     a = ap.parse_args()
     spec = json.load(open(a.spec))
@@ -212,6 +214,9 @@ def main():
     work = a.workdir or os.path.join(outdir, f".build_{base}_{aspect}_{theme}")
     frames_dir = os.path.join(work, "frames"); clips_dir = os.path.join(work, "clips")
     durs, n = render(spec, W, H, theme, frames_dir)
+    pace = a.pace if a.pace is not None else float(spec.get("pace", 1.0))
+    if pace != 1.0:
+        durs = [round(d * pace, 3) for d in durs]
     spec["_durs"], spec["_n"] = durs, n
     total = encode(spec, W, H, frames_dir, clips_dir, out)
     print(f"OK  {out}  {W}x{H}  {theme}  {total}s  ({n} scenes)")
