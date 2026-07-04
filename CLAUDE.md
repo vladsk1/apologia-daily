@@ -6,6 +6,20 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **2026-07-04 — NEW POLICY (read the guardrails below):** **"Orthodoxy outranks charity"**
+> is now a hard tiebreak in every place content is written/checked — `api/ask.js` (the live
+> AI), the guardrails below, and the `apologia-orthodoxy` + `apologia-argument` agents.
+> Concede only accurate facts + sincerity; **never** the opponent's frame, a mistaken
+> inference's soundness, or an unearned symmetry (concede the *observation*, not the
+> *inference*). Pull-quote test: if a concession, screenshotted alone, could read as
+> dignifying heterodoxy, rewrite it — err toward the stronger, clearer orthodox statement.
+> This came from finding real **over-concession** on the JW/Mormon/Islam **answer** pages
+> (e.g. "real biblical reasoning," "the parallels are real," "same God"). ALL 56 `/answers/`
+> were swept (argument + orthodoxy) and fixed; the offenders are corrected + live. **The
+> answers layer is NOT a lighter tier** — `answers/_data.json` now carries a structured
+> `reviewed: {argument, orthodoxy, by}` and **`tools/gen-answers.mjs` refuses to build a new
+> answer unless both gate-dates are stamped.** Same pipeline as essays. Detail: `HANDOFF.md`.
+>
 > **2026-07-04:** in-house short-form **reel generator** (`tools/reel/gen_reel.py` + the
 > **`make-reel`** skill) — brand-styled vertical MP4s from `/answers/` pages via Pillow +
 > bundled ffmpeg, no Canva/network/TTS (silent + captioned; 9 specs); **pricing integrity

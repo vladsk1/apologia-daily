@@ -4,6 +4,49 @@ _Last updated: 2026-07-04. Read this together with `CLAUDE.md` to resume with fu
 context at minimal token cost. Everything below is already committed to git; the chat
 that produced it can be discarded._
 
+## Session 2026-07-04b — orthodoxy-over-charity policy + answers integrity sweep
+
+**Trigger:** review of a few `/answers/` openings surfaced **over-concession** — steelman
+openings that granted the opponent's *frame/legitimacy*, not just facts, on the highest-stakes
+pages: JW ("hold, sincerely and on real biblical reasoning… a coherent picture"), John 1:1 NWT
+("its reasoning should be granted"), "same God" ("Both faiths worship the one Creator God"),
+pagan myths ("The parallels are real"), Mormon ("breathtaking dignity and destiny… honored"),
+canon ("the winners… deserves its due"). All corrected + live (grant the *observation*, not the
+*inference*; "same God" reframed as contested with the triune God primary + 1 John 2:23).
+
+**NEW POLICY — "Orthodoxy outranks charity" (hard tiebreak), applied everywhere content is
+generated or checked:**
+- `api/ask.js` (live "Ask Anything" AI) — added to THEOLOGICAL BOUNDARIES: concede only
+  accurate facts + the person's sincerity; never the frame / a mistaken inference's soundness /
+  an unearned symmetry; concede the observation not the inference; err toward the stronger,
+  clearer orthodox statement. (Real behavior change to live answers.)
+- `CLAUDE.md` guardrails — new NON-NEGOTIABLE bullet with the red-flag word list ("careful,"
+  "coherent," "not baseless," "deserves its due," "the parallels are real"…) + the **pull-quote
+  test** (a concession that, screenshotted alone, dignifies heterodoxy → rewrite).
+- `apologia-orthodoxy` agent — over-concession is now a first-class HIGH-PRIORITY test
+  ([DRIFT]+ , never [NOTE]); `apologia-argument` — pull-quote + self-contradiction tells,
+  [BREAK] when a concession shades doctrinal.
+- `CLAUDE.md` pipeline section — now explicitly covers `/answers/*`, reel scripts, and
+  `api/*.js`. Answers are NOT a lighter tier.
+
+**Enforced review gate (process fix so this can't recur silently):**
+- `answers/_data.json` entries now carry `reviewed: { argument: "<date>", orthodoxy: "<date>",
+  by: "<name>" }` (was: nothing — the flywheel's checks were manual + unrecorded).
+- `tools/gen-answers.mjs` **refuses to generate a new answer page unless both dates are
+  stamped** (names which is missing). A bare `true` no longer passes. Caveat: the flag can't
+  *prove* the agents ran — it's an explicit, dated, auditable human assertion; integrity still
+  required. Never stamp a check you didn't run.
+
+**Full sweep result (all 56 answers, argument + orthodoxy gates):** 0 [HERESY], 0 [BREAK].
+Fixed 5 over-concessions (JW-Michael, canon, pagan-myths, John-1:1-NWT, do-JW-believe) + 2 more
+(both Mormon pages) + reframed "same God" + applied 7 argument-quality fixes (morality overstate,
+did-Jesus-claim → Synoptic anchor, good-moral-teacher → legend horn, Kalam hedge, empty-tomb
+caveat, Qur'an *ahruf* steelman, Muslim-Jesus *tahrif* steelman). Two Christology edits re-gated
+CLEAN. **All 56 now stamped reviewed {argument, orthodoxy} 2026-07-04; 0 pending.** Note: some
+answer pages had **JSON-LD drifted from the visible text** — reconciled where touched; a broader
+audit of JSON-LD vs visible across all answers is an open cleanup. Open pastoral item (unchanged
+by me): the hell answer leans on the Lewisian free-will model (orthodox, but one model).
+
 ## Session 2026-07-04 — short-form video engine, growth research, two fixes
 
 **New: in-house short-form reel generator + `make-reel` skill (committed, on `main`).**
