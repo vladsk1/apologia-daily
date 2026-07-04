@@ -6,12 +6,20 @@
    add for the new pages.
 
    Flywheel: a visitor question comes in (api/submit-question) -> draft a short
-   answer -> run it through citations + argument + orthodoxy -> append an entry to
-   answers/_data.json -> `node tools/gen-answers.mjs` -> paste the printed index +
-   sitemap snippets -> deploy.
+   answer -> run it through the SAME mandatory pipeline as an essay: apologia-argument
+   (incl. the over-concession / pull-quote check) AND apologia-orthodoxy -> apply fixes ->
+   set "reviewed": true on the entry -> `node tools/gen-answers.mjs` -> paste the printed
+   index + sitemap snippets -> deploy.
+
+   REVIEW GATE (enforced below): an entry WITHOUT "reviewed": true is refused — no page is
+   written for it. Answers are not a lighter tier than essays; see CLAUDE.md "MANDATORY
+   content pipeline" and the "Orthodoxy outranks charity" guardrail. Never set reviewed:true
+   without actually running the gate.
 
    Entry shape in _data.json:
      { slug, q, category, meta, a,                // a uses \n\n between paragraphs
+       reviewed,                                  // REQUIRED true to generate; records the gate passed
+       reviewNote?,                               // free-text provenance ("2026-07-04: orthodoxy CLEAN ...")
        essay?, relatedLabel?,                     // explicit essay href (e.g. "/library/islam-preservation.html")
        related?, relatedLabel? }                  // OR legacy "ev-m-*.html" (maps to /library/<x>.html + practice link)
 */
@@ -149,12 +157,27 @@ function adShare(){
 `;
 }
 
+// ── REVIEW GATE (enforced) ──
+// A new answer page is NOT generated unless its entry is marked `"reviewed": true`,
+// which by policy means it has passed the SAME mandatory pipeline as an essay —
+// argument-soundness (incl. the over-concession / pull-quote check) AND the
+// apologia-orthodoxy gate. See CLAUDE.md "MANDATORY content pipeline" and the
+// "Orthodoxy outranks charity" guardrail. Existing pages are never regenerated
+// (additive), so this gate only ever blocks brand-new, un-gated answers.
+const blocked = [];
 const created = [];
 for (const e of data.answers) {
   const fp = join(ANSWERS, e.slug + '.html');
-  if (existsSync(fp)) continue;
+  if (existsSync(fp)) continue;              // additive: never overwrite a live page
+  if (e.reviewed !== true) { blocked.push(e); continue; }
   writeFileSync(fp, page(e), 'utf8');
   created.push(e);
+}
+
+if (blocked.length) {
+  console.error(`\n⛔ ${blocked.length} new entr${blocked.length === 1 ? 'y' : 'ies'} BLOCKED — not "reviewed": true (run apologia-argument + apologia-orthodoxy first, then set the flag):`);
+  blocked.forEach((e) => console.error('   - ' + e.slug + '   ' + (e.reviewNote ? '(' + e.reviewNote + ')' : '(no reviewNote)')));
+  console.error('   No page was written for the above. Gate content, then re-run.\n');
 }
 
 if (!created.length) { console.log('No new pages — every _data.json entry already has a page.'); process.exit(0); }

@@ -91,7 +91,23 @@ static HTML/CSS/JS site on Vercel, with Supabase (auth/db) and Claude-powered AI
 features (`/api/*.js`). The **Evidence Library** (`/library/*.html`) is the heart of the
 site: long-form, fully-cited deep-dive essays.
 
-## MANDATORY content pipeline (any new essay or substantive content)
+## MANDATORY content pipeline (ALL written content, no exceptions)
+
+Every piece of written content **must** pass through this pipeline, in order. Do not
+deploy content that has skipped a stage. **This explicitly includes: deep-dive essays,
+Evidence Library fragments, `/answers/*` pages (the flywheel), short-form reel scripts
+(`tools/reel/specs/*`), and the live AI system prompts (`api/ask.js`, `api/*.js`).** The
+"answers" layer is NOT a lighter tier — the over-concession defects found on the JW/deity
+answer pages (2026-07-04) reached production precisely because the answers were treated as
+lower-stakes and shipped without the gate. There is no such thing as content too small to
+gate. At minimum, argument-soundness (step 4) + orthodoxy (step 7) run on **every** answer
+and reel before it goes live; record it (see the `reviewed` provenance in
+`answers/_data.json`, enforced by `tools/gen-answers.mjs`).
+
+The argument + orthodoxy passes must actively hunt **over-concession**, not only
+overstatement or heresy-in-our-own-voice: a steelman that grants the opponent's frame, the
+soundness of a mistaken inference, or an unearned symmetry is a defect even when the body
+later refutes it. See the "Orthodoxy outranks charity" guardrail below.
 
 Every essay or substantive page added to the site **must** pass through this pipeline,
 in order. Do not deploy content that has skipped a stage.
@@ -124,6 +140,21 @@ human/pastoral doctrinal sign-off on high-stakes content.
   Trinity (one God, three co-equal co-eternal persons — never modalism, tritheism, or
   Arian/subordinationist drift); bodily resurrection; authority of Scripture; salvation
   through Christ alone. Never affirm heterodoxy in the site's own voice.
+- **Orthodoxy outranks charity (HARD TIEBREAK).** Whenever gentleness/steelmanning and
+  doctrinal safety pull apart, orthodoxy wins — every time. Charity governs *tone*, never
+  the doctrinal scoreboard. When steelmanning or conceding, concede only (a) accurate
+  facts and (b) the sincerity of the person — **never** the opponent's *frame*, the
+  *soundness* of a mistaken inference, or a *symmetry* the evidence doesn't establish.
+  **Concede the observation, never the inference.** Never phrase a concession so that a
+  single sentence, lifted out of context as a pull-quote, could read as affirming,
+  dignifying, or granting legitimacy to a heterodox claim (denial of Christ's full deity
+  or humanity, subordinationism, modalism, tritheism, Arianism, works-salvation,
+  universalism-as-certain, or any departure from Nicene orthodoxy). Red-flag words applied
+  to a heterodox or skeptical claim: "careful," "coherent," "sound," "reasonable," "not
+  baseless," "deserves its due," "the parallels are real." If any sentence has *any*
+  plausible reading that hints at heresy, rewrite it until it doesn't — **even at the cost
+  of sounding less charitable or less balanced. When in doubt, err toward the stronger,
+  clearer orthodox statement.** A little too firm beats any hint of heresy left standing.
 - **Denominational neutrality**: defend the faith common to Catholics, Orthodox, and
   Protestants; do NOT adjudicate intra-Christian disputes (baptism, predestination,
   papacy, sacraments, Marian doctrine, end-times) as settled.
