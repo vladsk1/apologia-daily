@@ -1,17 +1,29 @@
 {
   "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.6,
-  "voiceover": "Would you die for something you knew was a lie? First, the honest part: dying for a belief doesn't make it true — plenty of people die for things that are false. But here's the difference. A modern martyr dies for what others told them. The disciples died for what they claimed to see with their own eyes. And people don't knowingly die for something they made up, with nothing to gain. That doesn't prove they were right. It proves they weren't lying — and that something happened.",
+  "voiceover": "Would you die for something you knew was a lie? First, the honest part: dying for a belief doesn't make it true. Muslims, Hindus, and countless others have died bravely for convictions that can't all be correct. And the popular claim that all twelve apostles were martyred outruns the evidence — historian Sean McDowell shows only a few deaths, like Peter, Paul, and the two Jameses, are firmly attested. So state it carefully. Here's what martyrdom does establish: sincerity. And that matters because of who these people were. A modern martyr dies for a conviction received on trust. The disciples claimed to be eyewitnesses of the very thing in question — that they saw Jesus alive again. People don't knowingly die for what they themselves made up, with nothing to gain. That doesn't prove they were right. It proves they weren't lying. The real question is what best explains why these first-century Jews became utterly convinced they'd seen a crucified man risen bodily — a category their own tradition didn't even have.",
   "source": "answers/why-did-the-disciples-die-for-their-faith.html",
   "scenes": [
-    { "dur": 2.8, "big": [ {"t": "Would you die", "c": "cream", "s": 82}, {"t": "for a lie?", "c": "gold", "s": 100} ],
+    { "dur": 3.0, "big": [ {"t": "Would you die", "c": "cream", "s": 82}, {"t": "for a lie?", "c": "gold", "s": 100} ],
       "sub": [ {"t": "The disciples' deaths, honestly.", "c": "dim", "f": "serif", "s": 42} ] },
-    { "kicker": "FIRST, THE HONEST PART", "dur": 4.4, "lines": [
+    { "kicker": "FIRST, THE HONEST PART", "dur": 4.6, "lines": [
       {"t": "Dying for a belief", "c": "cream", "s": 56},
       {"t": "doesn't make it true.", "c": "cream", "s": 56},
       {"t": "", "s": 18},
-      {"t": "Plenty of people die", "c": "dim", "s": 48},
-      {"t": "for things that are false.", "c": "dim", "s": 48} ] },
-    { "kicker": "BUT HERE'S THE DIFFERENCE", "dur": 4.8, "lines": [
+      {"t": "Many have died bravely", "c": "dim", "s": 48},
+      {"t": "for things that can't all be true.", "c": "dim", "s": 42} ] },
+    { "kicker": "AND BE PRECISE", "dur": 5.0, "lines": [
+      {"t": "\"All twelve were martyred\"", "c": "cream", "s": 50},
+      {"t": "outruns the evidence.", "c": "cream", "s": 52},
+      {"t": "", "s": 16},
+      {"t": "Historian Sean McDowell:", "c": "dim", "s": 46},
+      {"t": "only a few deaths", "c": "cream", "s": 50},
+      {"t": "are firmly attested.", "c": "gold", "f": "serifb", "s": 52} ] },
+    { "kicker": "WHAT IT DOES ESTABLISH", "dur": 4.4, "lines": [
+      {"t": "Not that they were right —", "c": "cream", "s": 52},
+      {"t": "", "s": 16},
+      {"t": "but sincerity.", "c": "gold", "f": "serifb", "s": 66},
+      {"t": "And that matters. Here's why.", "c": "dim", "s": 46} ] },
+    { "kicker": "BECAUSE OF WHO THEY WERE", "dur": 5.0, "lines": [
       {"t": "A modern martyr dies", "c": "cream", "s": 54},
       {"t": "for what others told them.", "c": "cream", "s": 52},
       {"t": "", "s": 18},
@@ -23,12 +35,18 @@
       {"t": "", "s": 16},
       {"t": "You don't knowingly die", "c": "cream", "s": 50},
       {"t": "for something you made up.", "c": "gold", "f": "serifb", "s": 50} ] },
-    { "kicker": "WHAT THAT PROVES", "dur": 4.6, "lines": [
-      {"t": "It doesn't prove", "c": "cream", "s": 54},
-      {"t": "they were right.", "c": "cream", "s": 54},
+    { "kicker": "SO THE CRUDEST THEORY DIES", "dur": 4.4, "lines": [
+      {"t": "It wasn't a deliberate hoax.", "c": "cream", "s": 52},
       {"t": "", "s": 18},
-      {"t": "It proves they weren't lying.", "c": "gold", "f": "serifb", "s": 50} ] },
-    { "dur": 3.8, "big": [ {"t": "Not a hoax.", "c": "cream", "s": 90}, {"t": "Something happened.", "c": "gold", "s": 80} ],
+      {"t": "The belief was real,", "c": "cream", "s": 54},
+      {"t": "and deeply held.", "c": "gold", "f": "serifb", "s": 56} ] },
+    { "kicker": "WHICH LEAVES THE REAL QUESTION", "dur": 5.6, "lines": [
+      {"t": "What best explains", "c": "cream", "s": 54},
+      {"t": "why these first-century Jews", "c": "cream", "s": 46},
+      {"t": "were sure they'd seen", "c": "cream", "s": 52},
+      {"t": "a crucified man", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "risen bodily from death?", "c": "gold", "f": "serifb", "s": 52} ] },
+    { "dur": 4.0, "big": [ {"t": "Not a hoax.", "c": "cream", "s": 90}, {"t": "Something happened.", "c": "gold", "s": 80} ],
       "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42}, {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
   ]
 }

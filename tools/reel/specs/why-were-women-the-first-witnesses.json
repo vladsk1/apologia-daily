@@ -1,28 +1,22 @@
 {
-  "aspect": "vertical",
-  "theme": "navy",
-  "fps": 30,
-  "crossfade": 0.6,
-  "voiceover": "Here's the one detail skeptics can't explain away. All four Gospels say the first witnesses to the empty tomb were women. But in the first century, a woman's testimony wasn't even accepted in a court of law. So if you were inventing a story to convince that society, you'd never hand the most important moment to witnesses no one would believe — you'd put respected men there. But the Gospel writers kept the embarrassing detail anyway. Why? Because they weren't crafting propaganda — they were reporting what actually happened. Awkward, unhelpful details like this aren't how you invent a legend. They're the fingerprint of history.",
+  "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.6,
+  "voiceover": "Here's the one detail skeptics can't explain away. All four Gospels say the first witnesses to the empty tomb were women. But in first-century Jewish and Roman culture, a woman's testimony was so devalued it often wasn't even accepted in a court of law. So if you were fabricating a story to convince that society, you'd never hand the most important moment to witnesses no one would believe — you'd put respected men there instead. But the Gospel writers kept the embarrassing detail anyway. Why? Because they weren't crafting effective propaganda — they were reporting what actually happened. Historians even have a name for this: the criterion of embarrassment. Awkward, unhelpful details like this aren't how you invent a legend. They're the fingerprint of history.",
   "source": "answers/why-were-women-the-first-witnesses.html",
   "cta_url": "apologiadaily.com/answers/why-were-women-the-first-witnesses.html",
   "scenes": [
-    { "dur": 2.8,
+    { "dur": 3.0,
       "big": [ {"t": "The detail skeptics", "c": "cream", "s": 68}, {"t": "can't explain away", "c": "gold", "s": 74} ],
       "sub": [ {"t": "about the empty tomb.", "c": "dim", "f": "serif", "s": 44} ] },
-
-    { "kicker": "ALL FOUR GOSPELS AGREE", "dur": 3.6, "lines": [
+    { "kicker": "ALL FOUR GOSPELS AGREE", "dur": 3.8, "lines": [
       {"t": "The first witnesses", "c": "cream", "s": 58},
       {"t": "to the empty tomb", "c": "cream", "s": 58},
       {"t": "", "s": 16},
       {"t": "were women.", "c": "gold", "f": "serifb", "s": 78} ] },
-
-    { "kicker": "HERE'S WHY THAT'S STRANGE", "dur": 4.6, "lines": [
+    { "kicker": "HERE'S WHY THAT'S STRANGE", "dur": 4.8, "lines": [
       {"t": "In that culture,", "c": "cream", "s": 56},
       {"t": "a woman's testimony", "c": "cream", "s": 56},
       {"t": "wasn't even accepted", "c": "cream", "s": 56},
       {"t": "in a court of law.", "c": "gold", "f": "serifb", "s": 58} ] },
-
     { "kicker": "IF YOU WERE INVENTING IT", "dur": 5.2, "lines": [
       {"t": "You'd never hand", "c": "cream", "s": 54},
       {"t": "the most important moment", "c": "cream", "s": 50},
@@ -30,21 +24,24 @@
       {"t": "no one would believe.", "c": "cream", "s": 54},
       {"t": "", "s": 16},
       {"t": "You'd put respected men there.", "c": "gold", "f": "serifb", "s": 48} ] },
-
     { "kicker": "BUT THEY DIDN'T", "dur": 4.8, "lines": [
       {"t": "They kept", "c": "cream", "s": 58},
       {"t": "the embarrassing detail —", "c": "gold", "f": "serifb", "s": 56},
       {"t": "", "s": 18},
       {"t": "because they were reporting", "c": "cream", "s": 48},
       {"t": "what actually happened.", "c": "cream", "s": 48} ] },
-
+    { "kicker": "HISTORIANS HAVE A NAME FOR IT", "dur": 4.8, "lines": [
+      {"t": "the criterion", "c": "cream", "s": 56},
+      {"t": "of embarrassment —", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "", "s": 16},
+      {"t": "details you'd never invent,", "c": "cream", "s": 48},
+      {"t": "so you probably didn't.", "c": "dim", "s": 48} ] },
     { "kicker": "THE FINGERPRINT OF HISTORY", "dur": 4.8, "lines": [
       {"t": "Awkward, unhelpful details", "c": "cream", "s": 52},
       {"t": "aren't how you invent a legend.", "c": "gold", "f": "serifb", "s": 46},
       {"t": "", "s": 16},
       {"t": "They're how you tell the truth.", "c": "cream", "s": 50} ] },
-
-    { "dur": 3.8,
+    { "dur": 4.0,
       "big": [ {"t": "Not propaganda.", "c": "cream", "s": 88}, {"t": "History.", "c": "gold", "s": 116} ],
       "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42},
                {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }

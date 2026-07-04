@@ -1,32 +1,42 @@
 {
   "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.6,
-  "voiceover": "Did the Church invent Jesus as God at the Council of Nicaea? It's a popular myth — helped along by novels — but the history is clear. Belief in Jesus' divinity is already there decades earlier, in the earliest layers of the New Testament. Paul, writing in the 50s, calls Jesus 'in very nature God' — Philippians 2:6. So what did Nicaea actually do? It didn't vote Jesus into divinity. It defended the language that protected what Christians already believed and worshipped, against a teaching that denied it. Not invented. Confessed.",
+  "voiceover": "Did the Church invent Jesus as God at the Council of Nicaea? It's a popular myth — helped along by novels — but the history is clear. Belief in Jesus' divinity isn't from AD 325. It's in the earliest layers of the New Testament, decades earlier. Paul, writing in the 50s, takes Old Testament 'Lord' texts that were about God and applies them directly to Jesus. And an early hymn he quotes calls Jesus 'in very nature God' — Philippians 2:6. So what did Nicaea actually do? It didn't vote Jesus into divinity. It gathered to defend the language protecting what Christians already believed and worshipped — against a teaching called Arianism that denied it. The council clarified and confessed an ancient faith. It didn't manufacture a new one. Not invented. Confessed.",
   "source": "answers/did-the-church-invent-jesus-divinity-at-nicaea.html",
   "scenes": [
-    { "dur": 2.8, "big": [ {"t": "Did the Church invent", "c": "cream", "s": 58}, {"t": "Jesus as God?", "c": "gold", "s": 84} ],
+    { "dur": 3.0, "big": [ {"t": "Did the Church invent", "c": "cream", "s": 58}, {"t": "Jesus as God?", "c": "gold", "s": 84} ],
       "sub": [ {"t": "The Nicaea myth, checked.", "c": "dim", "f": "serif", "s": 44} ] },
-    { "kicker": "THE POPULAR STORY", "dur": 4.0, "lines": [
+    { "kicker": "THE POPULAR STORY", "dur": 4.2, "lines": [
       {"t": "A council voted Jesus", "c": "cream", "s": 56},
       {"t": "into being God —", "c": "cream", "s": 56},
       {"t": "", "s": 16},
       {"t": "at Nicaea, AD 325.", "c": "gold", "f": "serifb", "s": 60} ] },
-    { "kicker": "BUT THE HISTORY IS CLEAR", "dur": 4.4, "lines": [
+    { "kicker": "BUT THE HISTORY IS CLEAR", "dur": 4.6, "lines": [
       {"t": "It's already there", "c": "cream", "s": 56},
       {"t": "decades earlier —", "c": "cream", "s": 56},
       {"t": "", "s": 16},
       {"t": "in the New Testament itself.", "c": "gold", "f": "serifb", "s": 50} ] },
-    { "kicker": "PAUL, WRITING IN THE 50s", "dur": 4.2, "lines": [
-      {"t": "calls Jesus", "c": "cream", "s": 56},
-      {"t": "“in very nature God.”", "c": "gold", "f": "serifb", "s": 60},
+    { "kicker": "PAUL, WRITING IN THE 50s", "dur": 5.2, "lines": [
+      {"t": "takes Old Testament", "c": "cream", "s": 52},
+      {"t": "\"Lord\" texts about God", "c": "cream", "s": 52},
+      {"t": "and applies them", "c": "cream", "s": 52},
+      {"t": "straight to Jesus.", "c": "gold", "f": "serifb", "s": 56} ] },
+    { "kicker": "AN EARLY HYMN CALLS HIM", "dur": 4.6, "lines": [
+      {"t": "“in very nature God.”", "c": "gold", "f": "serifb", "s": 62},
       {"t": "", "s": 16},
       {"t": "— Philippians 2:6", "c": "dim", "f": "serif", "s": 40} ] },
-    { "kicker": "SO WHAT DID NICAEA DO?", "dur": 5.0, "lines": [
+    { "kicker": "SO WHAT DID NICAEA DO?", "dur": 5.2, "lines": [
       {"t": "It didn't invent the belief.", "c": "cream", "s": 50},
-      {"t": "", "s": 18},
+      {"t": "", "s": 16},
       {"t": "It defended the words", "c": "cream", "s": 52},
       {"t": "that protected", "c": "cream", "s": 52},
       {"t": "what was already worshipped.", "c": "gold", "f": "serifb", "s": 46} ] },
-    { "dur": 3.8, "big": [ {"t": "Not invented.", "c": "cream", "s": 88}, {"t": "Confessed.", "c": "gold", "s": 104} ],
+    { "kicker": "AGAINST ARIANISM", "dur": 4.4, "lines": [
+      {"t": "the teaching that denied it.", "c": "cream", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "The council confessed", "c": "cream", "s": 52},
+      {"t": "an ancient faith —", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "it didn't make a new one.", "c": "cream", "s": 48} ] },
+    { "dur": 4.0, "big": [ {"t": "Not invented.", "c": "cream", "s": 88}, {"t": "Confessed.", "c": "gold", "s": 104} ],
       "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42}, {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
   ]
 }

@@ -1,40 +1,46 @@
 {
   "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.6,
-  "voiceover": "So who made God? It feels like a knockout — if everything needs a maker, then God needs one too, and the whole idea collapses. But look at what's actually being claimed. The argument never says 'everything has a cause.' It says something narrower: whatever begins to exist has a cause. The universe began to exist, so it needs a cause beyond itself. God, by definition, never began — he is eternal. So he isn't an arbitrary exception; he simply falls outside a rule that was only ever about things that begin. Asking what made God is like asking what the bachelor's wife is doing tonight. The question assumes what's already been ruled out. Not a knockout. A category error.",
+  "voiceover": "So who made God? It feels like it should stop the whole conversation — if everything needs a maker, then God needs one too, and it all collapses into an infinite regress. But it rests on a small misunderstanding of the claim. The argument from the universe's beginning never says everything has a cause. It says something narrower and more careful: whatever begins to exist has a cause. Things don't pop into being out of nothing. The universe, the evidence suggests, began to exist — so it needs a cause beyond itself. God, by definition, did not begin to exist. He's eternal. So he isn't an arbitrary exception; he simply falls outside a rule that was only ever about things that begin. Now, you can still ask good questions: is an eternal, uncaused being coherent? Could the universe itself be eternal? Ask them. But 'who made God' is a bit like asking what the bachelor's wife is doing tonight — it presupposes what the claim already ruled out. Whatever is the ultimate explanation of everything must, by its nature, be something that never needed to be made.",
   "source": "answers/who-made-god.html",
   "scenes": [
-    { "dur": 2.8, "big": [ {"t": "So who made God?", "c": "gold", "s": 80} ],
+    { "dur": 3.0, "big": [ {"t": "So who made God?", "c": "gold", "s": 80} ],
       "sub": [ {"t": "The question that answers itself.", "c": "dim", "f": "serif", "s": 42} ] },
-    { "kicker": "IT FEELS LIKE A KNOCKOUT", "dur": 4.2, "lines": [
+    { "kicker": "IT FEELS LIKE A KNOCKOUT", "dur": 4.6, "lines": [
       {"t": "If everything needs a maker,", "c": "cream", "s": 50},
       {"t": "then God needs one too —", "c": "cream", "s": 50},
-      {"t": "", "s": 18},
-      {"t": "and it all collapses.", "c": "gold", "f": "serifb", "s": 56} ] },
-    { "kicker": "BUT LOOK AT THE CLAIM", "dur": 5.2, "lines": [
+      {"t": "", "s": 16},
+      {"t": "an infinite regress.", "c": "gold", "f": "serifb", "s": 56} ] },
+    { "kicker": "BUT LOOK AT THE CLAIM", "dur": 5.4, "lines": [
       {"t": "It never says", "c": "cream", "s": 52},
       {"t": "“everything has a cause.”", "c": "dim", "s": 50},
       {"t": "", "s": 16},
       {"t": "It says: whatever", "c": "cream", "s": 52},
       {"t": "begins to exist", "c": "gold", "f": "serifb", "s": 60},
       {"t": "has a cause.", "c": "gold", "f": "serifb", "s": 60} ] },
-    { "kicker": "THE UNIVERSE BEGAN", "dur": 4.6, "lines": [
-      {"t": "So it needs a cause", "c": "cream", "s": 54},
-      {"t": "beyond itself.", "c": "cream", "s": 54},
-      {"t": "", "s": 18},
-      {"t": "God, by definition,", "c": "cream", "s": 52},
-      {"t": "never began.", "c": "gold", "f": "serifb", "s": 62} ] },
-    { "kicker": "SO HE'S NO EXCEPTION", "dur": 4.6, "lines": [
-      {"t": "He falls outside", "c": "cream", "s": 54},
-      {"t": "a rule that was only", "c": "cream", "s": 52},
-      {"t": "ever about things", "c": "cream", "s": 52},
-      {"t": "that begin.", "c": "gold", "f": "serifb", "s": 58} ] },
-    { "kicker": "IT'S LIKE ASKING", "dur": 4.6, "lines": [
-      {"t": "what the bachelor's", "c": "cream", "s": 54},
-      {"t": "wife is doing tonight.", "c": "gold", "f": "serifb", "s": 52},
+    { "kicker": "THINGS DON'T COME FROM NOTHING", "dur": 4.4, "lines": [
+      {"t": "The universe, it seems,", "c": "cream", "s": 52},
+      {"t": "began to exist —", "c": "cream", "s": 54},
+      {"t": "so it needs a cause", "c": "cream", "s": 52},
+      {"t": "beyond itself.", "c": "gold", "f": "serifb", "s": 56} ] },
+    { "kicker": "BUT GOD NEVER BEGAN", "dur": 4.8, "lines": [
+      {"t": "He is eternal.", "c": "gold", "f": "serifb", "s": 62},
       {"t": "", "s": 16},
-      {"t": "The question assumes", "c": "dim", "s": 46},
-      {"t": "what's already ruled out.", "c": "dim", "s": 46} ] },
-    { "dur": 3.8, "big": [ {"t": "Not a knockout.", "c": "cream", "s": 86}, {"t": "A category error.", "c": "gold", "s": 84} ],
+      {"t": "Not an arbitrary exception —", "c": "cream", "s": 48},
+      {"t": "just outside a rule", "c": "cream", "s": 52},
+      {"t": "about things that begin.", "c": "cream", "s": 50} ] },
+    { "kicker": "FAIR QUESTIONS REMAIN", "dur": 5.0, "lines": [
+      {"t": "Is an uncaused, eternal being", "c": "cream", "s": 46},
+      {"t": "even coherent?", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "Could the universe be eternal?", "c": "cream", "s": 46},
+      {"t": "", "s": 14},
+      {"t": "Good questions — ask them.", "c": "dim", "s": 46} ] },
+    { "kicker": "BUT “WHO MADE GOD” ISN'T ONE", "dur": 5.0, "lines": [
+      {"t": "It's like asking", "c": "cream", "s": 54},
+      {"t": "what the bachelor's", "c": "cream", "s": 52},
+      {"t": "wife is doing tonight.", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "", "s": 14},
+      {"t": "It assumes what's ruled out.", "c": "dim", "s": 46} ] },
+    { "dur": 4.0, "big": [ {"t": "Not a knockout.", "c": "cream", "s": 86}, {"t": "A category error.", "c": "gold", "s": 84} ],
       "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42}, {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
   ]
 }
