@@ -1,8 +1,62 @@
 # Apologia Daily — Session Handoff
 
-_Last updated: 2026-06-30. Read this together with `CLAUDE.md` to resume with full
+_Last updated: 2026-07-04. Read this together with `CLAUDE.md` to resume with full
 context at minimal token cost. Everything below is already committed to git; the chat
 that produced it can be discarded._
+
+## Session 2026-07-04 — short-form video engine, growth research, two fixes
+
+**New: in-house short-form reel generator + `make-reel` skill (committed, on `main`).**
+- `tools/reel/gen_reel.py` renders a finished, brand-styled vertical MP4 from a JSON spec
+  using **Pillow + a bundled static ffmpeg** — no Canva, no network, no API keys. Themes
+  `navy`/`parchment`; aspects `vertical`/`square`/`wide`; `--pace` multiplies scene time;
+  kicker (gold section label) is top-anchored close to the body text. Output → **`tools/reel/output/`**
+  (git-ignored, **ephemeral** — download finished MP4s, they don't persist).
+  Regenerate: `cd tools/reel && python3 gen_reel.py specs/<slug>.json [--theme parchment] [--aspect square] [--pace 1.4]`.
+- Skill: `.claude/skills/make-reel/SKILL.md` (invoke by asking "make a reel for answers/<x>.html").
+  Spec format in `tools/reel/README.md`. **Videos are silent + fully captioned by design**
+  (no TTS is reachable in this env — Google TTS + HuggingFace both policy-blocked; Canva AI
+  Voice is editor-only). Add voiceover **and a trending sound** in CapCut/TikTok/IG after.
+- **9 specs exist**, all sourced from already-orthodoxy-gated `/answers/` pages, all `pace 1.4`
+  (~45–53s): `was-jesus-a-muslim`, `was-jesus-a-muslim-evidence`, `why-were-women-the-first-witnesses`,
+  `why-did-the-disciples-die-for-their-faith`, `was-jesus-copied-from-pagan-myths`,
+  `did-the-church-invent-jesus-divinity-at-nicaea`, `where-is-god-when-im-hurting`,
+  `is-the-quran-corrupted`, `who-made-god`. House pattern: discovery-gap hook (open with a
+  curiosity gap, not a claim) → evidence beats (gold-highlight the payload line) → confident
+  close → `apologiadaily.com`; rotate the emotional register across a posting week.
+- **Canva note:** the Canva Connect MCP works for READ + MP4 export, but every WRITE
+  (finalize candidate, resize, edit, AI Voice) is blocked by an approval gate in this
+  headless env — that's why reels are built locally instead.
+
+**Fix 1 — pricing integrity (deployed):** `index.html` Pro card advertised a "Start 7-day free
+trial / billed annually / cancel anytime" that Stripe can't fulfil. Reframed to **"Coming soon"**
+(planned price + "Create a free account" CTA that captures email). No trial promises remain sitewide.
+Monetization is still a stub — do NOT wire Stripe/prices without human sign-off.
+
+**Fix 2 — accuracy (deployed):** Sean McDowell was mislabeled **"historian"**; he is a **Christian
+apologist** (Assoc. Prof. of Christian Apologetics, Talbot/Biola; PhD Apologetics & Worldview
+Studies). Corrected in `answers/why-did-the-disciples-die-for-their-faith.html` (visible + JSON-LD),
+`answers/_data.json`, `library/postres.html`, `library/disciplesbelief.html`, and the disciples reel.
+(The bibliography entries citing *The Fate of the Apostles* were already fine.)
+
+**Growth research (Bible Chat teardown, product + marketing).** Bible Chat = a paid-acquisition
+**volume** business (~10M users, ~$15M ARR, **97% never pay / ~3% convert**); don't try to out-spend
+it. Copyable levers for us: (1) **organic short-form** with discovery-gap hooks + weekly register
+rotation (our reel tool is exactly this — a small account is fine; format beats follower count);
+(2) **front-loaded onboarding** (their ~20-step quiz is a commitment device — we can do a lean 2–3
+question version with the existing dashboard modal + `/today`); (3) **SEO is our "ASO"** (their real
+paid spend was Apple Search Ads keywords, not video ads). Do NOT copy: auto-converting trials,
+"subscription = mission gift" reframing, fake-organic personas, $7/wk dark-pattern pricing.
+**Screenshot evidence from the user's own accounts:** a branded reel got **147 IG views** vs **0–22**
+for website screen-recordings → post reels (not screenshots), add a trending sound, upload the
+watermark-free file natively to each platform, post ~daily, re-pin the best reel on TikTok.
+
+**Still open from this session:** (a) run `apologia-citations` over the reel scripts (offered, not
+yet run — the McDowell catch shows why); (b) no square/16:9 cuts yet; (c) next reel batch not drafted;
+(d) PostHog still missing `signup_completed`, `reel_link_click{slug}`, `answers_page_viewed` (needed to
+measure reel→signup); (e) **commits show "Unverified"** because the signing key was never provisioned
+in this env (`/home/claude/.ssh/commit_signing_key.pub` is empty, no private key) — cosmetic, needs a
+re-sign from an env that has the key.
 
 ## Ground rules (unchanged)
 - Develop on branch **`claude/agents-visibility-calling-n5d1ml`**.

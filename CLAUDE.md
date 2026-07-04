@@ -6,6 +6,14 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **2026-07-04:** in-house short-form **reel generator** (`tools/reel/gen_reel.py` + the
+> **`make-reel`** skill) — brand-styled vertical MP4s from `/answers/` pages via Pillow +
+> bundled ffmpeg, no Canva/network/TTS (silent + captioned; 9 specs); **pricing integrity
+> fix** (Pro card → "Coming soon"; Stripe still not live); **accuracy fix** (Sean McDowell is
+> a *Christian apologist*, not a historian — corrected across the answer page, `_data.json`,
+> and `library/postres.html` + `disciplesbelief.html`); Bible Chat growth teardown. Full
+> detail for all four in `HANDOFF.md` (2026-07-04 session section).
+>
 > **Live on `main` (recent work):** dashboard "Due today" SR hook; intent-capture
 > onboarding; Debate Arena voice mode; "Related arguments" panel on essays; "send this
 > answer to a skeptic" referral; "Was Jesus a Muslim?" card + essay; the **Answers
