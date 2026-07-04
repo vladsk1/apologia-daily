@@ -117,7 +117,9 @@ def kicker(draw, W, text, th):
         if w <= max_w: break
     x = (W - w) // 2; y = int(0.13 * 1920) if W < 1300 else 150
     draw.text((x, y), spaced, font=f, fill=th["gold"])
-    draw.line([(W // 2 - 70, y + 70), (W // 2 + 70, y + 70)], fill=th["gold"], width=3)
+    underline_y = y + 70
+    draw.line([(W // 2 - 70, underline_y), (W // 2 + 70, underline_y)], fill=th["gold"], width=3)
+    return underline_y  # so callers can place body text a fixed, tight gap below
 
 def footer(draw, W, H, th):
     f = F("sans", 30); text = "A P O L O G I A   D A I L Y"
@@ -146,7 +148,7 @@ def render(spec, W, H, theme, frames_dir):
     scenes = spec["scenes"]; n = len(scenes); durs = []
     for i, sc in enumerate(scenes):
         img = gradient_bg(W, H, th); d = ImageDraw.Draw(img)
-        if sc.get("kicker"): kicker(d, W, sc["kicker"], th)
+        kick_bottom = kicker(d, W, sc["kicker"], th) if sc.get("kicker") else None
         has_k = bool(sc.get("kicker"))
         cy = int(H * (0.44 if has_k else 0.47))
         if "big" in sc:
@@ -158,9 +160,9 @@ def render(spec, W, H, theme, frames_dir):
                         th.get(x.get("c", "dim"), th["dim"]), 14) for x in sc["sub"]]
                 center_block(d, W, sub, cy + int(H * 0.14), th["shadow"])
         else:
-            # on kicker scenes, anchor the text just under the kicker (tight gap);
-            # without a kicker, keep it vertically centered
-            top = int(H * 0.26) if has_k else None
+            # on kicker scenes, anchor the text a small fixed gap under the kicker's
+            # underline so it reads as that kicker's text; else vertically center
+            top = (kick_bottom + int(H * 0.035)) if has_k else None
             center_block(d, W, line_blocks(sc["lines"], th), cy, th["shadow"], top=top)
         footer(d, W, H, th); progress(d, W, H, i, n, th)
         img.save(os.path.join(frames_dir, f"scene_{i:02d}.png"))
