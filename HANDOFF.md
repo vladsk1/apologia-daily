@@ -42,10 +42,31 @@ Fixed 5 over-concessions (JW-Michael, canon, pagan-myths, John-1:1-NWT, do-JW-be
 (both Mormon pages) + reframed "same God" + applied 7 argument-quality fixes (morality overstate,
 did-Jesus-claim → Synoptic anchor, good-moral-teacher → legend horn, Kalam hedge, empty-tomb
 caveat, Qur'an *ahruf* steelman, Muslim-Jesus *tahrif* steelman). Two Christology edits re-gated
-CLEAN. **All 56 now stamped reviewed {argument, orthodoxy} 2026-07-04; 0 pending.** Note: some
-answer pages had **JSON-LD drifted from the visible text** — reconciled where touched; a broader
-audit of JSON-LD vs visible across all answers is an open cleanup. Open pastoral item (unchanged
-by me): the hell answer leans on the Lewisian free-will model (orthodox, but one model).
+CLEAN. **All 56 now stamped reviewed {argument, orthodoxy} 2026-07-04; 0 pending.**
+
+**Visible↔_data↔JSON-LD drift — FOUND + RECONCILED + guarded (the "do all four"):** each
+answer's text lives in THREE places that must agree — the visible `<div class="ad-answer">`,
+the QAPage JSON-LD `acceptedAnswer.text`, and `_data.json "a"` (the gate reads `_data.json`).
+On **6 Bible-reliability pages** the live visible text had been hand-edited without updating the
+other two, so the gate had certified a stale copy — meaning the live text was effectively
+**un-reviewed**. (1) Reconciled all three to the corrected visible text on all 6
+(`are-there-contradictions-in-the-bible`, `can-we-trust-the-new-testament-manuscripts`,
+`has-the-bible-been-changed-over-time`, `is-there-archaeological-evidence-for-the-bible`,
+`is-there-evidence-jesus-rose-from-the-dead`, `were-the-gospels-written-by-eyewitnesses`);
+JSON-LD rebuilt from visible via `json.dumps`, all parse, all three copies verified MATCH.
+(2) Re-gated the live visible text (argument + orthodoxy): **orthodoxy CLEAN 6/6**, argument
+0 BREAK / 2 WEAK / 3 POLISH. (3) Fixed the 2 WEAK: `contradictions` now states Synoptic
+dependence honestly (Matthew/Luke draw on Mark; John independent — no longer implies four
+fully independent Gospels); `archaeology` drops the false "Pilate was once doubted" claim
+(Pilate/Caiaphas were known from Roman+Jewish writers, later confirmed epigraphically). The
+3 POLISH left as defensible (resurrection martyrdom phrasing, gospel-titles "early",
+hostile-witness line). (4) **`tools/gen-answers.mjs` now runs a DRIFT AUDIT on every
+invocation** — normalizes visible `ad-answer` vs `_data "a"` and loudly warns on any page
+that has diverged, so this class of silent drift can't recur. Deployed (commit on `main`,
+2026-07-04b). Broader cleanup now effectively closed for the answers layer.
+
+Open pastoral item (unchanged by me): the hell answer leans on the Lewisian free-will model
+(orthodox, but one model).
 
 ## Session 2026-07-04 — short-form video engine, growth research, two fixes
 

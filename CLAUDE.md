@@ -18,7 +18,13 @@
 > were swept (argument + orthodoxy) and fixed; the offenders are corrected + live. **The
 > answers layer is NOT a lighter tier** — `answers/_data.json` now carries a structured
 > `reviewed: {argument, orthodoxy, by}` and **`tools/gen-answers.mjs` refuses to build a new
-> answer unless both gate-dates are stamped.** Same pipeline as essays. Detail: `HANDOFF.md`.
+> answer unless both gate-dates are stamped.** Same pipeline as essays. Also found + fixed
+> **visible↔`_data.json`↔JSON-LD drift**: each answer lives in 3 copies that must agree, and 6
+> Bible-reliability pages had live text hand-edited without updating the other two (so the gate
+> certified a stale copy). All 6 reconciled + re-gated (orthodoxy CLEAN, 2 WEAK argument flags
+> fixed: honest Synoptic dependence in `contradictions`, false "Pilate was doubted" removed from
+> `archaeology`), and **`gen-answers.mjs` now runs a drift audit every run** so it can't recur.
+> Detail: `HANDOFF.md`.
 >
 > **2026-07-04:** in-house short-form **reel generator** (`tools/reel/gen_reel.py` + the
 > **`make-reel`** skill) — brand-styled vertical MP4s from `/answers/` pages via Pillow +
