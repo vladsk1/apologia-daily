@@ -71,6 +71,7 @@
   // keep the box within the viewport horizontally (it's centered on the phrase, which
   // can sit near a screen edge on mobile). Runs on every show (hover/focus/tap).
   function place(box) {
+    if (!box) return;
     box.style.transform = 'translateX(-50%) translateY(0)';
     var r = box.getBoundingClientRect(), pad = 12, shift = 0;
     if (r.right > window.innerWidth - pad) shift = (window.innerWidth - pad) - r.right;
@@ -78,21 +79,22 @@
     if (shift) box.style.transform = 'translateX(calc(-50% + ' + Math.round(shift) + 'px)) translateY(0)';
   }
 
-  document.querySelectorAll('.on').forEach(function (on) {
-    var box = on.querySelector('.on-box');
-    var mark = on.querySelector('.on-mark');
-    if (!box) return;
-    on.addEventListener('mouseenter', function () { place(box); });
-    on.addEventListener('focusin', function () { place(box); });
-    if (mark) mark.addEventListener('click', function (e) {
-      e.stopPropagation();
-      var open = box.classList.toggle('is-open');
-      mark.setAttribute('aria-expanded', open ? 'true' : 'false');
-      closeAll(box);
-      if (open) place(box);
-    });
+  // EVENT DELEGATION on document — so clarifiers work even when they are injected
+  // AFTER load (e.g. the Evidence Library hub swaps ev-s*.html tab fragments in via JS;
+  // per-element listeners would miss those). Hover/focus visibility is pure CSS; these
+  // handlers only reposition on show and toggle on tap.
+  function onOf(el) { return el && el.closest ? el.closest('.on') : null; }
+  document.addEventListener('mouseover', function (e) { var on = onOf(e.target); if (on) place(on.querySelector('.on-box')); });
+  document.addEventListener('focusin', function (e) { var on = onOf(e.target); if (on) place(on.querySelector('.on-box')); });
+  document.addEventListener('click', function (e) {
+    var mark = e.target.closest ? e.target.closest('.on-mark') : null;
+    if (!mark) { closeAll(null); return; }
+    e.stopPropagation();
+    var box = mark.parentElement.querySelector('.on-box');
+    var open = box.classList.toggle('is-open');
+    mark.setAttribute('aria-expanded', open ? 'true' : 'false');
+    closeAll(box);
+    if (open) place(box);
   });
-
-  document.addEventListener('click', function () { closeAll(null); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(null); });
 })();
