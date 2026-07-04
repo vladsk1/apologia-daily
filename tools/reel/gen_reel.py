@@ -97,11 +97,13 @@ def wrap(draw, text, font, max_w):
     if cur: lines.append(cur)
     return lines
 
-def center_block(draw, W, blocks, cy, shadow):
+def center_block(draw, W, blocks, cy, shadow, top=None):
     heights = []
     for _, font, _, gap in blocks:
         asc, desc = font.getmetrics(); heights.append(asc + desc + gap)
-    y = cy - sum(heights) // 2
+    # top-anchor when given (keeps a tight, consistent gap under the kicker);
+    # otherwise vertically center around cy
+    y = top if top is not None else cy - sum(heights) // 2
     for (text, font, col, gap), hh in zip(blocks, heights):
         w = draw.textlength(text, font=font); x = (W - w) // 2
         draw.text((x + 2, y + 2), text, font=font, fill=shadow)
@@ -156,7 +158,10 @@ def render(spec, W, H, theme, frames_dir):
                         th.get(x.get("c", "dim"), th["dim"]), 14) for x in sc["sub"]]
                 center_block(d, W, sub, cy + int(H * 0.14), th["shadow"])
         else:
-            center_block(d, W, line_blocks(sc["lines"], th), cy, th["shadow"])
+            # on kicker scenes, anchor the text just under the kicker (tight gap);
+            # without a kicker, keep it vertically centered
+            top = int(H * 0.26) if has_k else None
+            center_block(d, W, line_blocks(sc["lines"], th), cy, th["shadow"], top=top)
         footer(d, W, H, th); progress(d, W, H, i, n, th)
         img.save(os.path.join(frames_dir, f"scene_{i:02d}.png"))
         durs.append(float(sc.get("dur", 3.5)))
