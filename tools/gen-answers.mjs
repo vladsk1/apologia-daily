@@ -33,6 +33,33 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ANSWERS = join(ROOT, 'answers');
 const data = JSON.parse(readFileSync(join(ANSWERS, '_data.json'), 'utf8'));
 
+// ── DRIFT AUDIT ──
+// Every answer's text lives in THREE places that must agree: the visible <div class="ad-answer">,
+// the QAPage JSON-LD acceptedAnswer, and _data.json "a". If the visible page is hand-edited
+// without updating _data.json, the gate (which reads _data.json) certifies the wrong copy —
+// exactly the 2026-07-04 finding on the Bible-reliability pages. This runs on every invocation
+// and loudly warns on any page whose live visible text has drifted from its _data.json source.
+const _norm = (s) => String(s)
+  .replace(/<[^>]*>/g, ' ')
+  .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+  .replace(/&mdash;/g, '-').replace(/&ndash;/g, '-').replace(/&rsquo;|&lsquo;|’|‘/g, "'")
+  .replace(/&ldquo;|&rdquo;|“|”/g, '"').replace(/[—–]/g, '-')
+  .replace(/\s+/g, ' ').trim();
+const drift = [];
+for (const e of data.answers) {
+  const fp = join(ANSWERS, e.slug + '.html');
+  if (!existsSync(fp)) continue;
+  const html = readFileSync(fp, 'utf8');
+  const m = html.match(/<div class="ad-answer">([\s\S]*?)<\/div>/);
+  if (!m) continue;
+  if (_norm(m[1]) !== _norm(String(e.a).split('\n\n').map((p) => `<p>${p}</p>`).join(''))) drift.push(e.slug);
+}
+if (drift.length) {
+  console.error(`\n⚠️  DRIFT: ${drift.length} page(s) whose live visible text ≠ _data.json "a" (the gate reads _data.json, so the live copy may be UN-REVIEWED). Reconcile _data.json + JSON-LD to the visible text, then re-gate:`);
+  drift.forEach((s) => console.error('   - ' + s));
+  console.error('');
+}
+
 const NAV = `<nav class="adn-nav">
   <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
   <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
