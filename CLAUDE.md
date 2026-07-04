@@ -235,3 +235,16 @@ human/pastoral doctrinal sign-off on high-stakes content.
   existing content is stamped as it's next touched. Same honest caveat as the answers
   gate: the stamp is an auditable human assertion, not proof the agents ran — never stamp
   a check you didn't run. (`/answers/*` keep their own gate in `tools/gen-answers.mjs`.)
+- **Doctrinal clarifiers (`orthonote`) — STANDARD for delicate-but-orthodox phrases.** When a
+  phrase is orthodox but a compressed reader could misread it as heterodox (subordination,
+  modalism, tritheism, partialism, patripassianism, works-salvation, universalism-as-certain,
+  "same God," the retired echad overreach, etc.), fence it on the page with a clarifier: a gold
+  ＊ that opens an "Is saying / Not saying" box. This is exactly where the `apologia-orthodoxy`
+  gate leaves a NOTE-level "delicate but orthodox" flag — turn those NOTEs into clarifiers rather
+  than leaving them for a later human pass. **How:** essays/fragments — inline the markup pattern
+  documented at the top of `library/orthonote.js` and add `<script src="/library/orthonote.js"
+  defer></script>`; answer pages — add a `clarifiers` array to the `_data.json` entry (drift-safe,
+  data-driven; the generator injects it into the visible answer only, never the JSON-LD/`"a"`).
+  The clarifier's box text is DOCTRINAL content and must pass the argument + orthodoxy gates like
+  any content. Registry of every live clarifier: `docs/clarifiers.md` (regenerate with
+  `node tools/list-clarifiers.mjs`).
