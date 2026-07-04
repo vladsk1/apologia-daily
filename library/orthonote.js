@@ -25,10 +25,13 @@
 
   var css = [
     '.on{position:relative;display:inline}',
-    '.on-phrase{border-bottom:1px dotted #a88930;cursor:help}',
-    ".on-mark{font-family:'DM Sans',sans-serif;font-weight:700;font-size:.62em;line-height:0;",
-    'vertical-align:super;color:#a88930;background:none;border:0;padding:0 .12em;cursor:pointer}',
-    '.on-mark:focus-visible{outline:2px solid #a88930;outline-offset:2px;border-radius:3px}',
+    '.on-phrase{border-bottom:2px dotted #c8a951;background:rgba(200,169,81,.14);border-radius:3px;padding:0 .1em;cursor:help}',
+    // the mark is a small filled gold badge (not a bare ＊) so it clearly reads as tappable
+    ".on-mark{display:inline-flex;align-items:center;justify-content:center;width:1.15em;height:1.15em;",
+    "margin:0 .06em 0 .2em;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.66em;line-height:1;",
+    'vertical-align:super;color:#fff;background:#c8a951;border:0;border-radius:50%;cursor:pointer;transition:background .12s ease}',
+    '.on-mark:hover{background:#a88930}',
+    '.on-mark:focus-visible{outline:2px solid #a88930;outline-offset:2px}',
     '.on-box{position:absolute;left:50%;top:calc(100% + 12px);',
     'transform:translateX(-50%) translateY(6px);width:min(340px,calc(100vw - 24px));z-index:40;',
     'background:#fff;border:1px solid rgba(200,169,81,.55);border-radius:12px;',
