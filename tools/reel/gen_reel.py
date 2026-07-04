@@ -110,16 +110,28 @@ def center_block(draw, W, blocks, cy, shadow, top=None):
         draw.text((x, y), text, font=font, fill=col)
         y += hh
 
-def kicker(draw, W, text, th):
+def measure_kicker(draw, W, text):
     max_w = W - 180
     for size, sep in [(34, "  "), (32, "  "), (30, " "), (28, " "), (26, " "), (24, " ")]:
         f = F("sans", size); spaced = sep.join(list(text)); w = draw.textlength(spaced, font=f)
         if w <= max_w: break
-    x = (W - w) // 2; y = int(0.13 * 1920) if W < 1300 else 150
-    draw.text((x, y), spaced, font=f, fill=th["gold"])
-    underline_y = y + 70
+    return f, spaced, w
+
+# height from the kicker text's top to its underline (used to center the whole group)
+KICKER_H = 70
+
+def kicker_at(draw, W, f, spaced, w, y, th):
+    # draw an already-measured kicker with its text top at y; underline a fixed gap below
+    draw.text(((W - w) // 2, y), spaced, font=f, fill=th["gold"])
+    underline_y = y + KICKER_H
     draw.line([(W // 2 - 70, underline_y), (W // 2 + 70, underline_y)], fill=th["gold"], width=3)
     return underline_y  # so callers can place body text a fixed, tight gap below
+
+def blocks_height(blocks):
+    total = 0
+    for _, font, _, gap in blocks:
+        asc, desc = font.getmetrics(); total += asc + desc + gap
+    return total
 
 def footer(draw, W, H, th):
     f = F("sans", 30); text = "A P O L O G I A   D A I L Y"
@@ -148,10 +160,12 @@ def render(spec, W, H, theme, frames_dir):
     scenes = spec["scenes"]; n = len(scenes); durs = []
     for i, sc in enumerate(scenes):
         img = gradient_bg(W, H, th); d = ImageDraw.Draw(img)
-        kick_bottom = kicker(d, W, sc["kicker"], th) if sc.get("kicker") else None
         has_k = bool(sc.get("kicker"))
-        cy = int(H * (0.44 if has_k else 0.47))
+        cy = int(H * 0.47)
         if "big" in sc:
+            if has_k:  # rare; keep the kicker at the top for full-bleed title cards
+                f, spaced, w = measure_kicker(d, W, sc["kicker"])
+                kicker_at(d, W, f, spaced, w, int(0.13 * H) if W < 1300 else 150, th)
             big = [(x["t"], F(x.get("f", "serifb"), x.get("s", 110)),
                     th.get(x.get("c", "cream"), th["cream"]), 18) for x in sc["big"]]
             center_block(d, W, big, cy - 60, th["shadow"])
@@ -160,10 +174,19 @@ def render(spec, W, H, theme, frames_dir):
                         th.get(x.get("c", "dim"), th["dim"]), 14) for x in sc["sub"]]
                 center_block(d, W, sub, cy + int(H * 0.14), th["shadow"])
         else:
-            # on kicker scenes, anchor the text a small fixed gap under the kicker's
-            # underline so it reads as that kicker's text; else vertically center
-            top = (kick_bottom + int(H * 0.035)) if has_k else None
-            center_block(d, W, line_blocks(sc["lines"], th), cy, th["shadow"], top=top)
+            blocks = line_blocks(sc["lines"], th)
+            if has_k:
+                # center the WHOLE group (kicker -> underline -> body) so every scene's
+                # content sits in the same central band as the title cards; the kicker
+                # stays tight above its text (gap preserved), the unit just moves down
+                f, spaced, w = measure_kicker(d, W, sc["kicker"])
+                gap_under = int(H * 0.035)
+                total_h = KICKER_H + gap_under + blocks_height(blocks)
+                ky = int(H * 0.46) - total_h // 2
+                underline_y = kicker_at(d, W, f, spaced, w, ky, th)
+                center_block(d, W, blocks, cy, th["shadow"], top=underline_y + gap_under)
+            else:
+                center_block(d, W, blocks, cy, th["shadow"])
         footer(d, W, H, th); progress(d, W, H, i, n, th)
         img.save(os.path.join(frames_dir, f"scene_{i:02d}.png"))
         durs.append(float(sc.get("dur", 3.5)))

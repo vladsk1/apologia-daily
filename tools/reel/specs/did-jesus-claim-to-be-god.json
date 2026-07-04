@@ -1,10 +1,10 @@
 {
   "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.6, "pace": 1.4,
-  "voiceover": "You'll hear it often: Jesus never actually claimed to be God. But read what he said and did. He said, 'Before Abraham was born, I AM' — taking up God's own name from Exodus — and his hearers picked up stones, because they knew exactly what he meant. He forgave sins, something only God can do. He accepted worship instead of refusing it. He said, 'I and the Father are one,' and 'Anyone who has seen me has seen the Father.' When Thomas said, 'My Lord and my God,' Jesus didn't correct him. These aren't the words of a mere moral teacher. They're the claim of God in the flesh.",
+  "voiceover": "You'll hear it often: Jesus never actually claimed to be God. But he did — plainly, in both word and deed. He said, 'Before Abraham was born, I AM' — taking up God's own name from Exodus — and his hearers picked up stones, because they knew exactly what he meant. He forgave sins, something only God can do. He accepted worship instead of refusing it. He said, 'I and the Father are one,' and 'Anyone who has seen me has seen the Father.' When Thomas said, 'My Lord and my God,' Jesus didn't correct him. These aren't the words of a mere moral teacher. They're the claim of God in the flesh.",
   "source": "answers/did-jesus-claim-to-be-god.html",
   "scenes": [
-    { "dur": 3.2, "big": [ {"t": "“Jesus never", "c": "cream", "s": 76}, {"t": "claimed to be God.”", "c": "gold", "s": 68} ],
-      "sub": [ {"t": "Read what he said and did.", "c": "dim", "f": "serif", "s": 40} ] },
+    { "dur": 3.4, "big": [ {"t": "“Jesus never", "c": "cream", "s": 76}, {"t": "claimed to be God.”", "c": "cream", "s": 68} ],
+      "sub": [ {"t": "He did — and claimed", "c": "gold", "f": "serifb", "s": 48}, {"t": "to be God himself.", "c": "gold", "f": "serifb", "s": 48} ] },
     { "kicker": "HE TOOK GOD'S OWN NAME", "dur": 5.0, "lines": [
       {"t": "“Before Abraham was born,", "c": "cream", "s": 50},
       {"t": "I AM.”", "c": "gold", "f": "serifb", "s": 76},
