@@ -11,15 +11,17 @@
    set "reviewed": true on the entry -> `node tools/gen-answers.mjs` -> paste the printed
    index + sitemap snippets -> deploy.
 
-   REVIEW GATE (enforced below): an entry WITHOUT "reviewed": true is refused — no page is
-   written for it. Answers are not a lighter tier than essays; see CLAUDE.md "MANDATORY
-   content pipeline" and the "Orthodoxy outranks charity" guardrail. Never set reviewed:true
-   without actually running the gate.
+   REVIEW GATE (enforced below): an entry is refused (no page written) unless its `reviewed`
+   object stamps BOTH checks: { argument: "<date>", orthodoxy: "<date>", by: "<name>" }.
+   Answers are not a lighter tier than essays; see CLAUDE.md "MANDATORY content pipeline" and
+   the "Orthodoxy outranks charity" guardrail. Stamping a date asserts that agent actually ran
+   and the page was fixed to CLEAN — never stamp a check you did not run.
 
    Entry shape in _data.json:
      { slug, q, category, meta, a,                // a uses \n\n between paragraphs
-       reviewed,                                  // REQUIRED true to generate; records the gate passed
-       reviewNote?,                               // free-text provenance ("2026-07-04: orthodoxy CLEAN ...")
+       reviewed: { argument, orthodoxy, by },     // REQUIRED: argument+orthodoxy dates to generate;
+                                                  //   argument may be null while a fix is pending
+       pending?,                                  // (optional) note on what's outstanding for a null check
        essay?, relatedLabel?,                     // explicit essay href (e.g. "/library/islam-preservation.html")
        related?, relatedLabel? }                  // OR legacy "ev-m-*.html" (maps to /library/<x>.html + practice link)
 */
@@ -158,25 +160,35 @@ function adShare(){
 }
 
 // ── REVIEW GATE (enforced) ──
-// A new answer page is NOT generated unless its entry is marked `"reviewed": true`,
-// which by policy means it has passed the SAME mandatory pipeline as an essay —
-// argument-soundness (incl. the over-concession / pull-quote check) AND the
-// apologia-orthodoxy gate. See CLAUDE.md "MANDATORY content pipeline" and the
-// "Orthodoxy outranks charity" guardrail. Existing pages are never regenerated
-// (additive), so this gate only ever blocks brand-new, un-gated answers.
+// A new answer page is NOT generated unless its entry records BOTH required checks in a
+// structured `reviewed` object: { argument: "<date>", orthodoxy: "<date>", by: "<name>" }.
+// A bare `true` no longer passes — you must consciously stamp each gate (date + signer),
+// which is an audit trail and harder to fake on autopilot. By policy, stamping a date means
+// the corresponding agent (apologia-argument / apologia-orthodoxy) actually ran and the page
+// was fixed to CLEAN. This is the SAME pipeline an essay gets; answers are not a lighter tier.
+// See CLAUDE.md "MANDATORY content pipeline" + the "Orthodoxy outranks charity" guardrail.
+// Additive: existing pages are never regenerated, so this only ever blocks brand-new answers.
+// NOTE: the flag cannot PROVE the agents ran — it records an explicit, dated human assertion;
+// the ultimate guarantee is the reviewer's integrity.
+const missingChecks = (e) => {
+  const r = e.reviewed;
+  if (!r || typeof r !== 'object') return ['argument', 'orthodoxy'];
+  return ['argument', 'orthodoxy'].filter((k) => !r[k]);   // null / "" / absent = not done
+};
 const blocked = [];
 const created = [];
 for (const e of data.answers) {
   const fp = join(ANSWERS, e.slug + '.html');
   if (existsSync(fp)) continue;              // additive: never overwrite a live page
-  if (e.reviewed !== true) { blocked.push(e); continue; }
+  const missing = missingChecks(e);
+  if (missing.length) { blocked.push([e, missing]); continue; }
   writeFileSync(fp, page(e), 'utf8');
   created.push(e);
 }
 
 if (blocked.length) {
-  console.error(`\n⛔ ${blocked.length} new entr${blocked.length === 1 ? 'y' : 'ies'} BLOCKED — not "reviewed": true (run apologia-argument + apologia-orthodoxy first, then set the flag):`);
-  blocked.forEach((e) => console.error('   - ' + e.slug + '   ' + (e.reviewNote ? '(' + e.reviewNote + ')' : '(no reviewNote)')));
+  console.error(`\n⛔ ${blocked.length} new entr${blocked.length === 1 ? 'y' : 'ies'} BLOCKED — reviewed.{argument,orthodoxy} not both stamped. Run the missing gate(s), fix to CLEAN, then add the date(s):`);
+  blocked.forEach(([e, missing]) => console.error(`   - ${e.slug}   missing: ${missing.join(' + ')}`));
   console.error('   No page was written for the above. Gate content, then re-run.\n');
 }
 
