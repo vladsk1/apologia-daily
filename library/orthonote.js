@@ -30,7 +30,7 @@
     'vertical-align:super;color:#a88930;background:none;border:0;padding:0 .12em;cursor:pointer}',
     '.on-mark:focus-visible{outline:2px solid #a88930;outline-offset:2px;border-radius:3px}',
     '.on-box{position:absolute;left:50%;top:calc(100% + 12px);',
-    'transform:translateX(-50%) translateY(6px);width:min(340px,86vw);z-index:40;',
+    'transform:translateX(-50%) translateY(6px);width:min(340px,calc(100vw - 24px));z-index:40;',
     'background:#fff;border:1px solid rgba(200,169,81,.55);border-radius:12px;',
     'box-shadow:0 16px 44px rgba(10,22,40,.22);padding:.9rem 1rem 1rem;text-align:left;',
     "font-family:'DM Sans',sans-serif;line-height:1.5;",
@@ -40,7 +40,9 @@
     'transform:translateX(-50%) rotate(45deg)}',
     '.on:hover .on-box,.on:focus-within .on-box,.on-box.is-open{',
     'opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}',
-    '.on-box h4{margin:0 0 .5rem;font-family:\'DM Sans\',sans-serif;font-size:.7rem;letter-spacing:.13em;',
+    // heading is an inline <span> (NOT <h4>): a block element here would auto-close the
+    // surrounding <p> during HTML parsing and eject the box's content. display:block via CSS.
+    '.on-box .on-h{display:block;margin:0 0 .5rem;font-family:\'DM Sans\',sans-serif;font-size:.7rem;letter-spacing:.13em;',
     'text-transform:uppercase;color:#a88930;font-weight:700}',
     '.on-row{display:flex;gap:.5rem;font-size:.88rem;margin:.38rem 0;color:#26364e}',
     '.on-row b{flex:0 0 auto;font-size:.68rem;font-weight:700;letter-spacing:.02em;padding:.1rem .42rem;',
@@ -63,14 +65,28 @@
     });
   }
 
-  document.querySelectorAll('.on-mark').forEach(function (mark) {
-    var box = mark.parentElement.querySelector('.on-box');
+  // keep the box within the viewport horizontally (it's centered on the phrase, which
+  // can sit near a screen edge on mobile). Runs on every show (hover/focus/tap).
+  function place(box) {
+    box.style.transform = 'translateX(-50%) translateY(0)';
+    var r = box.getBoundingClientRect(), pad = 12, shift = 0;
+    if (r.right > window.innerWidth - pad) shift = (window.innerWidth - pad) - r.right;
+    if (r.left + shift < pad) shift = pad - r.left;
+    if (shift) box.style.transform = 'translateX(calc(-50% + ' + Math.round(shift) + 'px)) translateY(0)';
+  }
+
+  document.querySelectorAll('.on').forEach(function (on) {
+    var box = on.querySelector('.on-box');
+    var mark = on.querySelector('.on-mark');
     if (!box) return;
-    mark.addEventListener('click', function (e) {
+    on.addEventListener('mouseenter', function () { place(box); });
+    on.addEventListener('focusin', function () { place(box); });
+    if (mark) mark.addEventListener('click', function (e) {
       e.stopPropagation();
       var open = box.classList.toggle('is-open');
       mark.setAttribute('aria-expanded', open ? 'true' : 'false');
       closeAll(box);
+      if (open) place(box);
     });
   });
 

@@ -138,7 +138,7 @@ ${items}
 function clarifierMarkup(c) {
   return `<span class="on"><span class="on-phrase">${esc(c.phrase)}</span>`
     + `<!--onote--><button class="on-mark" type="button" aria-label="Doctrinal clarification" aria-expanded="false">＊</button>`
-    + `<span class="on-box" role="tooltip"><h4>${esc(c.heading)}</h4>`
+    + `<span class="on-box" role="tooltip"><span class="on-h">${esc(c.heading)}</span>`
     + `<span class="on-row on-yes"><b>Is saying</b><span>${c.is}</span></span>`
     + `<span class="on-row on-no"><b>Not saying</b><span>${c.not}</span></span>`
     + `</span><!--/onote--></span>`;

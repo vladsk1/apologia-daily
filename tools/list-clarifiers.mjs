@@ -20,7 +20,7 @@ const files = globSync('{library/**/*.html,ev-s*.html,worldviews.html,answers/*.
 //   …on-yes…<span>IS</span>…on-no…<span>NOT</span>…<!--/onote--></span>
 // tolerant of clarifiers with or without the <!--onote--> drift markers (essays added
 // before the answer-page convention omit them; answer pages include them).
-const RE = /<span class="on"><span class="on-phrase">([\s\S]*?)<\/span>(?:<!--onote-->)?<button class="on-mark"[\s\S]*?<h4>([\s\S]*?)<\/h4>[\s\S]*?<b>Is saying<\/b><span>([\s\S]*?)<\/span><\/span><span class="on-row on-no"><b>Not saying<\/b><span>([\s\S]*?)<\/span><\/span><\/span>/g;
+const RE = /<span class="on"><span class="on-phrase">([\s\S]*?)<\/span>(?:<!--onote-->)?<button class="on-mark"[\s\S]*?<span class="on-h">([\s\S]*?)<\/span>[\s\S]*?<b>Is saying<\/b><span>([\s\S]*?)<\/span><\/span><span class="on-row on-no"><b>Not saying<\/b><span>([\s\S]*?)<\/span><\/span><\/span>/g;
 
 const strip = (s) => String(s).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
 
