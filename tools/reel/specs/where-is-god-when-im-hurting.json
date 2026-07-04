@@ -1,0 +1,33 @@
+{
+  "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.6,
+  "voiceover": "Where is God when it hurts? This isn't an argument to win — it's a wound to sit with. Christianity's answer isn't a clever explanation. It's a God who didn't stay at a safe distance from pain. In Jesus, God entered grief, betrayal, torture, and death himself. So whatever you're facing, you're not facing it watched by a stranger. 'The Lord is close to the brokenhearted' — Psalm 34:18. If you're in a dark place right now, that's exactly where this God has promised to meet people. You're not alone. He came in.",
+  "source": "answers/where-is-god-when-im-hurting.html",
+  "scenes": [
+    { "dur": 2.8, "big": [ {"t": "Where is God", "c": "cream", "s": 82}, {"t": "when it hurts?", "c": "gold", "s": 86} ],
+      "sub": [ {"t": "If you're asking this right now.", "c": "dim", "f": "serif", "s": 42} ] },
+    { "kicker": "NO TIDY ANSWER", "dur": 4.0, "lines": [
+      {"t": "This isn't an argument", "c": "cream", "s": 54},
+      {"t": "to win.", "c": "cream", "s": 54},
+      {"t": "", "s": 18},
+      {"t": "It's a wound to sit with.", "c": "gold", "f": "serifb", "s": 54} ] },
+    { "kicker": "CHRISTIANITY'S ANSWER", "dur": 4.4, "lines": [
+      {"t": "isn't a clever explanation —", "c": "cream", "s": 50},
+      {"t": "", "s": 18},
+      {"t": "it's a God who didn't stay", "c": "cream", "s": 52},
+      {"t": "at a safe distance.", "c": "gold", "f": "serifb", "s": 54} ] },
+    { "kicker": "IN JESUS", "dur": 4.4, "lines": [
+      {"t": "God entered", "c": "cream", "s": 56},
+      {"t": "grief, betrayal,", "c": "cream", "s": 56},
+      {"t": "torture, and death —", "c": "cream", "s": 54},
+      {"t": "himself.", "c": "gold", "f": "serifb", "s": 66} ] },
+    { "kicker": "SO WHATEVER YOU'RE FACING", "dur": 5.2, "lines": [
+      {"t": "you're not facing it", "c": "cream", "s": 54},
+      {"t": "watched by a stranger.", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "", "s": 18},
+      {"t": "“The Lord is close to", "c": "dim", "s": 46},
+      {"t": "the brokenhearted.”", "c": "dim", "s": 46},
+      {"t": "— Psalm 34:18", "c": "dim", "f": "serif", "s": 38} ] },
+    { "dur": 3.8, "big": [ {"t": "You're not alone.", "c": "cream", "s": 82}, {"t": "He came in.", "c": "gold", "s": 100} ],
+      "sub": [ {"t": "Find the rest at", "c": "dim", "f": "serif", "s": 42}, {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}

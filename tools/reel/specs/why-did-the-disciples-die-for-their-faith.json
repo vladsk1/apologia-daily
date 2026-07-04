@@ -1,0 +1,34 @@
+{
+  "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.6,
+  "voiceover": "Would you die for something you knew was a lie? First, the honest part: dying for a belief doesn't make it true — plenty of people die for things that are false. But here's the difference. A modern martyr dies for what others told them. The disciples died for what they claimed to see with their own eyes. And people don't knowingly die for something they made up, with nothing to gain. That doesn't prove they were right. It proves they weren't lying — and that something happened.",
+  "source": "answers/why-did-the-disciples-die-for-their-faith.html",
+  "scenes": [
+    { "dur": 2.8, "big": [ {"t": "Would you die", "c": "cream", "s": 82}, {"t": "for a lie?", "c": "gold", "s": 100} ],
+      "sub": [ {"t": "The disciples' deaths, honestly.", "c": "dim", "f": "serif", "s": 42} ] },
+    { "kicker": "FIRST, THE HONEST PART", "dur": 4.4, "lines": [
+      {"t": "Dying for a belief", "c": "cream", "s": 56},
+      {"t": "doesn't make it true.", "c": "cream", "s": 56},
+      {"t": "", "s": 18},
+      {"t": "Plenty of people die", "c": "dim", "s": 48},
+      {"t": "for things that are false.", "c": "dim", "s": 48} ] },
+    { "kicker": "BUT HERE'S THE DIFFERENCE", "dur": 4.8, "lines": [
+      {"t": "A modern martyr dies", "c": "cream", "s": 54},
+      {"t": "for what others told them.", "c": "cream", "s": 52},
+      {"t": "", "s": 18},
+      {"t": "The disciples died for", "c": "cream", "s": 54},
+      {"t": "what they claimed to see.", "c": "gold", "f": "serifb", "s": 52} ] },
+    { "kicker": "NO ONE DIES FOR A KNOWN HOAX", "dur": 5.0, "lines": [
+      {"t": "You might die", "c": "cream", "s": 56},
+      {"t": "for a sincere mistake.", "c": "cream", "s": 56},
+      {"t": "", "s": 16},
+      {"t": "You don't knowingly die", "c": "cream", "s": 50},
+      {"t": "for something you made up.", "c": "gold", "f": "serifb", "s": 50} ] },
+    { "kicker": "WHAT THAT PROVES", "dur": 4.6, "lines": [
+      {"t": "It doesn't prove", "c": "cream", "s": 54},
+      {"t": "they were right.", "c": "cream", "s": 54},
+      {"t": "", "s": 18},
+      {"t": "It proves they weren't lying.", "c": "gold", "f": "serifb", "s": 50} ] },
+    { "dur": 3.8, "big": [ {"t": "Not a hoax.", "c": "cream", "s": 90}, {"t": "Something happened.", "c": "gold", "s": 80} ],
+      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42}, {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.6,
+  "voiceover": "Has the Qur'an really never changed a single letter? That's the common claim — preserved perfectly since Muhammad. But there isn't one single Qur'an text today. There are several canonical readings — the qira'at. Most of the Muslim world uses Hafs; much of West Africa uses Warsh; and they differ in wording. And Islam's own most trusted source says the caliph Uthman standardised one version and burned the others — Sahih al-Bukhari 4987. Said gently, not to mock: a claim of flawless preservation only needs a few counter-examples to fall. The deeper point is that Christianity never rested on mechanical preservation — it rests on the evidence for the resurrection.",
+  "source": "answers/is-the-quran-corrupted.html",
+  "scenes": [
+    { "dur": 2.8, "big": [ {"t": "“The Qur'an never", "c": "cream", "s": 66}, {"t": "changed a letter.”", "c": "gold", "s": 72} ],
+      "sub": [ {"t": "From Islam's own sources.", "c": "dim", "f": "serif", "s": 44} ] },
+    { "kicker": "THE COMMON CLAIM", "dur": 3.6, "lines": [
+      {"t": "Preserved letter-for-letter,", "c": "cream", "s": 50},
+      {"t": "unchanged since Muhammad.", "c": "cream", "s": 50} ] },
+    { "kicker": "BUT THERE ISN'T ONE TEXT", "dur": 5.0, "lines": [
+      {"t": "There are several", "c": "cream", "s": 54},
+      {"t": "canonical readings — qira'at.", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "", "s": 16},
+      {"t": "Most use Hafs.", "c": "cream", "s": 50},
+      {"t": "West Africa uses Warsh.", "c": "cream", "s": 50},
+      {"t": "They differ in wording.", "c": "dim", "s": 46} ] },
+    { "kicker": "ISLAM'S OWN SOURCE SAYS", "dur": 4.8, "lines": [
+      {"t": "Caliph Uthman standardised", "c": "cream", "s": 48},
+      {"t": "one version —", "c": "cream", "s": 54},
+      {"t": "and burned the others.", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "", "s": 14},
+      {"t": "— Sahih al-Bukhari 4987", "c": "dim", "f": "serif", "s": 38} ] },
+    { "kicker": "SAID GENTLY, NOT TO MOCK", "dur": 4.6, "lines": [
+      {"t": "A claim of flawless", "c": "cream", "s": 52},
+      {"t": "preservation needs only", "c": "cream", "s": 52},
+      {"t": "a few counter-examples", "c": "cream", "s": 52},
+      {"t": "to fall.", "c": "gold", "f": "serifb", "s": 58} ] },
+    { "kicker": "THE DEEPER POINT", "dur": 4.8, "lines": [
+      {"t": "Christianity never rested", "c": "cream", "s": 50},
+      {"t": "on mechanical preservation —", "c": "cream", "s": 48},
+      {"t": "", "s": 16},
+      {"t": "but on the evidence", "c": "cream", "s": 52},
+      {"t": "for the resurrection.", "c": "gold", "f": "serifb", "s": 54} ] },
+    { "dur": 3.8, "big": [ {"t": "Worth an", "c": "cream", "s": 84}, {"t": "honest look.", "c": "gold", "s": 96} ],
+      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42}, {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}
