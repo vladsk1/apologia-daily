@@ -40,6 +40,10 @@ const data = JSON.parse(readFileSync(join(ANSWERS, '_data.json'), 'utf8'));
 // exactly the 2026-07-04 finding on the Bible-reliability pages. This runs on every invocation
 // and loudly warns on any page whose live visible text has drifted from its _data.json source.
 const _norm = (s) => String(s)
+  // orthonote clarifiers are presentation-only: the ＊ mark + its box are NOT part of
+  // the canonical answer text, so strip the whole comment-delimited region before
+  // comparing visible vs _data.json "a" (the phrase itself stays and is compared).
+  .replace(/<!--onote-->[\s\S]*?<!--\/onote-->/g, ' ')
   .replace(/<[^>]*>/g, ' ')
   .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
   .replace(/&mdash;/g, '-').replace(/&ndash;/g, '-').replace(/&rsquo;|&lsquo;|’|‘/g, "'")
@@ -126,9 +130,29 @@ ${items}
 `;
 }
 
+// A doctrinal "clarifier": a gold ＊ next to a delicate phrase whose box (rendered by
+// /library/orthonote.js) says what the phrase IS and IS NOT saying. The mark + box are
+// wrapped in <!--onote-->…<!--/onote--> so the drift audit treats them as presentation,
+// not canonical text. c.is / c.not may contain inline <em>/<strong> (trusted author HTML);
+// c.phrase / c.heading are escaped. The box text is DOCTRINAL and must pass the orthodoxy gate.
+function clarifierMarkup(c) {
+  return `<span class="on"><span class="on-phrase">${esc(c.phrase)}</span>`
+    + `<!--onote--><button class="on-mark" type="button" aria-label="Doctrinal clarification" aria-expanded="false">＊</button>`
+    + `<span class="on-box" role="tooltip"><h4>${esc(c.heading)}</h4>`
+    + `<span class="on-row on-yes"><b>Is saying</b><span>${c.is}</span></span>`
+    + `<span class="on-row on-no"><b>Not saying</b><span>${c.not}</span></span>`
+    + `</span><!--/onote--></span>`;
+}
+
 function page(e) {
   const url = `https://apologiadaily.com/answers/${e.slug}.html`;
-  const paras = String(e.a).split('\n\n').map((p) => `<p>${esc(p.trim())}</p>`).join('\n      ');
+  let paras = String(e.a).split('\n\n').map((p) => `<p>${esc(p.trim())}</p>`).join('\n      ');
+  for (const c of (e.clarifiers || [])) {
+    const target = esc(c.phrase);
+    const idx = paras.indexOf(target);
+    if (idx === -1) throw new Error(`clarifier phrase not found in ${e.slug}: "${c.phrase}"`);
+    paras = paras.slice(0, idx) + clarifierMarkup(c) + paras.slice(idx + target.length);
+  }
   const ld = JSON.stringify({
     '@context': 'https://schema.org', '@type': 'QAPage',
     mainEntity: { '@type': 'Question', name: e.q, acceptedAnswer: { '@type': 'Answer', text: String(e.a).replace(/\n\n/g, '  ') } }
@@ -181,7 +205,7 @@ function adShare(){
 </script>
   <script src="/analytics.js" defer></script>
   <script src="/ad-nav.js" defer></script>
-</body>
+${(e.clarifiers && e.clarifiers.length) ? '  <script src="/library/orthonote.js" defer></script>\n' : ''}</body>
 </html>
 `;
 }
