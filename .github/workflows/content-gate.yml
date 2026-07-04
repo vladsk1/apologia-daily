@@ -1,0 +1,45 @@
+name: Content review gate
+
+# Enforces the CLAUDE.md content pipeline for CHANGED content files: every new
+# or modified essay / hub fragment / worldviews page / reel script / live AI
+# prompt must carry a content-review stamp recording that the argument and
+# orthodoxy gates ran (see tools/check-content-review.mjs). The answers layer
+# has its own gate in tools/gen-answers.mjs and is excluded here.
+#
+# This reports a red/green status on the commit or PR. To make it BLOCKING,
+# enable branch protection on `main` and mark "Content review gate" a required
+# check (Settings → Branches) — with a PR-based flow rather than direct pushes.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  content-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # need history to diff changed files against the base
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Determine base ref
+        id: base
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "ref=${{ github.event.pull_request.base.sha }}" >> "$GITHUB_OUTPUT"
+          else
+            # push: diff against the commit that was there before this push
+            base="${{ github.event.before }}"
+            if [ -z "$base" ] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then
+              base="HEAD~1"
+            fi
+            echo "ref=$base" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check content-review stamps on changed files
+        run: node tools/check-content-review.mjs --changed ${{ steps.base.outputs.ref }}

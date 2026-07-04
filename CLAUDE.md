@@ -224,3 +224,14 @@ human/pastoral doctrinal sign-off on high-stakes content.
 - Deploy by fast-forward push: `git push origin <branch>:main`.
 - Apply edits with assert-guarded scripts (verify exact-match counts) and re-verify
   footnote `<sup>↔<li>` integrity before deploying.
+- **Content-review gate (enforced):** any new/changed essay, `ev-s*` fragment,
+  `worldviews.html`, reel spec, or `api/ask.js` must carry a review stamp recording that
+  the argument + orthodoxy gates ran:
+  `<!-- content-review: {"argument":"<date>","orthodoxy":"<date>","by":"<name>"} -->`
+  (HTML/JS) or a top-level `"reviewed": {argument, orthodoxy, by}` (reel-spec JSON).
+  Verify before deploy: `node tools/check-content-review.mjs --changed` (checks files
+  changed vs `origin/main`); `--audit` lists everything unstamped. CI runs it on every
+  push/PR (`.github/workflows/content-gate.yml`) — only CHANGED files are gated, so
+  existing content is stamped as it's next touched. Same honest caveat as the answers
+  gate: the stamp is an auditable human assertion, not proof the agents ran — never stamp
+  a check you didn't run. (`/answers/*` keep their own gate in `tools/gen-answers.mjs`.)
