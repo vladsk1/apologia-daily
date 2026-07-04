@@ -40,10 +40,10 @@ const data = JSON.parse(readFileSync(join(ANSWERS, '_data.json'), 'utf8'));
 // exactly the 2026-07-04 finding on the Bible-reliability pages. This runs on every invocation
 // and loudly warns on any page whose live visible text has drifted from its _data.json source.
 const _norm = (s) => String(s)
-  // orthonote clarifiers are presentation-only: the ＊ mark + its box are NOT part of
-  // the canonical answer text, so strip the whole comment-delimited region before
-  // comparing visible vs _data.json "a" (the phrase itself stays and is compared).
-  .replace(/<!--onote-->[\s\S]*?<!--\/onote-->/g, ' ')
+  // orthonote clarifiers are presentation-only: unwrap the whole clarifier span back to
+  // just its phrase (group $1) so the ＊ mark + box vanish AND no boundary whitespace is
+  // introduced — the phrase then compares exactly against _data.json "a".
+  .replace(/<span class="on"><span class="on-phrase">([\s\S]*?)<\/span><!--onote-->[\s\S]*?<!--\/onote--><\/span>/g, '$1')
   .replace(/<[^>]*>/g, ' ')
   .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
   .replace(/&mdash;/g, '-').replace(/&ndash;/g, '-').replace(/&rsquo;|&lsquo;|’|‘/g, "'")
