@@ -1,36 +1,233 @@
 {
-  "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.6, "pace": 1.4,
-  "voiceover": "You'll hear it often: Jesus never actually claimed to be God. But he did. Let's take a closer look — in his own words and deeds. He said, 'Before Abraham was born, I AM' — taking up God's own name from Exodus — and his hearers picked up stones, because they knew exactly what he meant. He forgave sins, something only God can do. He accepted worship instead of refusing it. He said, 'I and the Father are one,' and 'Anyone who has seen me has seen the Father.' When Thomas said, 'My Lord and my God,' Jesus didn't correct him. These aren't the words of a mere moral teacher. They're the claim of God in the flesh.",
+  "reviewed": {"argument": "2026-07-04", "orthodoxy": "2026-07-04", "by": "argument+orthodoxy gates"},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "pace": 1.4,
+  "voiceover": "You'll hear it often: Jesus never actually claimed to be God. But he did. Let's take a closer look — in his own words and deeds. He said, 'Before Abraham was born, I AM' — taking up God's own name from Exodus — and his hearers picked up stones, because they knew exactly what he meant. He forgave sins, something only God can do. He accepted worship instead of refusing it. He said, 'I and the Father are one,' and 'Anyone who has seen me has seen the Father.' When Thomas said, 'My Lord and my God,' Jesus didn't correct him. Now, some point out that John's Gospel was written later — a fair objection. But Jesus forgave sins and accepted worship in the earliest Gospels too. These aren't the words of a mere moral teacher. They're the claim of God in the flesh.",
   "source": "answers/did-jesus-claim-to-be-god.html",
   "scenes": [
-    { "dur": 3.4, "big": [ {"t": "“Jesus never", "c": "cream", "s": 76}, {"t": "claimed to be God.”", "c": "cream", "s": 68} ],
-      "sub": [ {"t": "He did.", "c": "gold", "f": "serifb", "s": 56}, {"t": "Let's take a closer look.", "c": "cream", "f": "serif", "s": 44} ] },
-    { "kicker": "HE TOOK GOD'S OWN NAME", "dur": 5.0, "lines": [
-      {"t": "“Before Abraham was born,", "c": "cream", "s": 50},
-      {"t": "I AM.”", "c": "gold", "f": "serifb", "s": 76},
-      {"t": "", "s": 12},
-      {"t": "The name from Exodus.", "c": "cream", "s": 46},
-      {"t": "They picked up stones.", "c": "dim", "s": 46},
-      {"t": "— John 8:58", "c": "dim", "f": "serif", "s": 36} ] },
-    { "kicker": "HE DID WHAT ONLY GOD DOES", "dur": 4.8, "lines": [
-      {"t": "He forgave sins.", "c": "gold", "f": "serifb", "s": 60},
-      {"t": "", "s": 14},
-      {"t": "He accepted worship —", "c": "cream", "s": 50},
-      {"t": "and never refused it.", "c": "cream", "s": 50} ] },
-    { "kicker": "HE SAID IT PLAINLY", "dur": 5.0, "lines": [
-      {"t": "“I and the Father", "c": "cream", "s": 52},
-      {"t": "are one.”", "c": "gold", "f": "serifb", "s": 62},
-      {"t": "", "s": 12},
-      {"t": "“Whoever has seen me", "c": "cream", "s": 48},
-      {"t": "has seen the Father.”", "c": "cream", "s": 48},
-      {"t": "— John 10:30; 14:9", "c": "dim", "f": "serif", "s": 36} ] },
-    { "kicker": "AND HE LET IT STAND", "dur": 4.6, "lines": [
-      {"t": "Thomas: “My Lord", "c": "cream", "s": 52},
-      {"t": "and my God!”", "c": "gold", "f": "serifb", "s": 60},
-      {"t": "", "s": 12},
-      {"t": "Jesus did not correct him.", "c": "cream", "s": 48},
-      {"t": "— John 20:28", "c": "dim", "f": "serif", "s": 36} ] },
-    { "dur": 4.2, "big": [ {"t": "Not a mere teacher.", "c": "cream", "s": 62}, {"t": "God in the flesh.", "c": "gold", "s": 72} ],
-      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42}, {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+    {
+      "dur": 3.4,
+      "big": [
+        {
+          "t": "“Jesus never",
+          "c": "cream",
+          "s": 76
+        },
+        {
+          "t": "claimed to be God.”",
+          "c": "cream",
+          "s": 68
+        }
+      ],
+      "sub": [
+        {
+          "t": "He did.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        },
+        {
+          "t": "Let's take a closer look.",
+          "c": "cream",
+          "f": "serif",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "kicker": "HE TOOK GOD'S OWN NAME",
+      "dur": 5.0,
+      "lines": [
+        {
+          "t": "“Before Abraham was born,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "I AM.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 76
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "The name from Exodus.",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "They picked up stones.",
+          "c": "dim",
+          "s": 46
+        },
+        {
+          "t": "— John 8:58",
+          "c": "dim",
+          "f": "serif",
+          "s": 36
+        }
+      ]
+    },
+    {
+      "kicker": "HE DID WHAT ONLY GOD DOES",
+      "dur": 4.8,
+      "lines": [
+        {
+          "t": "He forgave sins.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 60
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "He accepted worship —",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "and never refused it.",
+          "c": "cream",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "kicker": "HE SAID IT PLAINLY",
+      "dur": 5.0,
+      "lines": [
+        {
+          "t": "“I and the Father",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "are one.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 62
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "“Whoever has seen me",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "has seen the Father.”",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "— John 10:30; 14:9",
+          "c": "dim",
+          "f": "serif",
+          "s": 36
+        }
+      ]
+    },
+    {
+      "kicker": "AND HE LET IT STAND",
+      "dur": 4.6,
+      "lines": [
+        {
+          "t": "Thomas: “My Lord",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "and my God!”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 60
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Jesus did not correct him.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "— John 20:28",
+          "c": "dim",
+          "f": "serif",
+          "s": 36
+        }
+      ]
+    },
+    {
+      "kicker": "BUT ISN'T JOHN WRITTEN LATE?",
+      "dur": 4.8,
+      "lines": [
+        {
+          "t": "A fair objection.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Yet he forgave sins and",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "accepted worship in the",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "earliest Gospels too.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 4.2,
+      "big": [
+        {
+          "t": "Not a mere teacher.",
+          "c": "cream",
+          "s": 62
+        },
+        {
+          "t": "God in the flesh.",
+          "c": "gold",
+          "s": 72
+        }
+      ],
+      "sub": [
+        {
+          "t": "The full case at",
+          "c": "dim",
+          "f": "serif",
+          "s": 42
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    }
   ]
 }

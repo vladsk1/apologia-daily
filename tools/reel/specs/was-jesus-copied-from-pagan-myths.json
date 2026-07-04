@@ -1,49 +1,265 @@
 {
-  "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.6, "pace": 1.4,
-  "voiceover": "\"Jesus was just copied from pagan myths.\" Let's actually check the sources. First — it's not a silly claim. There really are ancient stories of gods who descend into death and return: Osiris, Adonis, the mystery cults. And Christianity spread in exactly that religious world. The parallels are real. But read the sources. The strongest critic here wasn't an apologist — it was Jonathan Z. Smith, the skeptical University of Chicago scholar, who concluded the whole 'dying-and-rising god' category is largely a misnomer built on late, ambiguous texts. Where real cases exist, they're gods bound to the seasonal cycle — dying and reviving with the crops each year, in a timeless mythic elsewhere. The Christian claim is a different kind of thing: a named man, under a named governor, Pontius Pilate, in a known city, risen once, bodily, never to die again. Mithras and Horus don't match the story at all — once you read the sources instead of the memes. And the belief is early: Paul quotes a creed in 1 Corinthians 15 dated within a few years of the crucifixion. Too early for legend. Not a myth. Something new.",
+  "reviewed": {"argument": "2026-07-04", "orthodoxy": "2026-07-04", "by": "argument+orthodoxy gates"},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "pace": 1.4,
+  "voiceover": "\"Jesus was just copied from pagan myths.\" Let's actually check the sources. First — it's not a silly claim. There really are ancient stories of gods who descend into death and return: Osiris, Adonis, the mystery cults. And Christianity spread in exactly that religious world. So it's a fair question. But read the sources. The strongest critic here wasn't an apologist — it was Jonathan Z. Smith, the skeptical University of Chicago scholar, who concluded the whole 'dying-and-rising god' category is largely a misnomer built on late, ambiguous texts. Where real cases exist, they're gods bound to the seasonal cycle — dying and reviving with the crops each year, in a timeless mythic elsewhere. The Christian claim is a different kind of thing: a named man, under a named governor, Pontius Pilate, in a known city, risen once, bodily, never to die again. Mithras and Horus don't match the story at all — once you read the sources instead of the memes. And the belief is early: Paul quotes a creed in 1 Corinthians 15 dated within a few years of the crucifixion. Too early for legend. Not a myth. Something new.",
   "source": "answers/was-jesus-copied-from-pagan-myths.html",
   "scenes": [
-    { "dur": 3.0, "big": [ {"t": "“Jesus was copied", "c": "cream", "s": 70}, {"t": "from pagan myths.”", "c": "gold", "s": 70} ],
-      "sub": [ {"t": "Let's check the sources.", "c": "dim", "f": "serif", "s": 44} ] },
-    { "kicker": "FIRST — IT'S NOT SILLY", "dur": 4.8, "lines": [
-      {"t": "There really are", "c": "cream", "s": 56},
-      {"t": "ancient dying-and-rising gods.", "c": "cream", "s": 48},
-      {"t": "", "s": 16},
-      {"t": "Osiris. Adonis.", "c": "gold", "f": "serifb", "s": 60},
-      {"t": "The parallels are real.", "c": "cream", "s": 50} ] },
-    { "kicker": "BUT READ THE SOURCES", "dur": 5.2, "lines": [
-      {"t": "The scholar who debunked this", "c": "cream", "s": 46},
-      {"t": "wasn't an apologist —", "c": "cream", "s": 52},
-      {"t": "", "s": 16},
-      {"t": "it was Jonathan Z. Smith,", "c": "gold", "f": "serifb", "s": 50},
-      {"t": "the skeptic at U. of Chicago.", "c": "dim", "s": 44} ] },
-    { "kicker": "A CATEGORY BUILT ON THIN TEXTS", "dur": 5.0, "lines": [
-      {"t": "He called the whole", "c": "cream", "s": 52},
-      {"t": "\"dying-and-rising\" idea", "c": "cream", "s": 50},
-      {"t": "largely a misnomer —", "c": "gold", "f": "serifb", "s": 52},
-      {"t": "built on late, ambiguous texts.", "c": "dim", "s": 44} ] },
-    { "kicker": "NOT THE SAME STORY", "dur": 4.8, "lines": [
-      {"t": "Those gods die and revive", "c": "cream", "s": 50},
-      {"t": "with the crops, every year,", "c": "cream", "s": 50},
-      {"t": "in a mythic 'once upon a time.'", "c": "dim", "s": 46} ] },
-    { "kicker": "THE JESUS CLAIM IS DIFFERENT", "dur": 5.0, "lines": [
-      {"t": "A named man.", "c": "gold", "f": "serifb", "s": 58},
-      {"t": "Under Pontius Pilate.", "c": "gold", "f": "serifb", "s": 54},
-      {"t": "In a known city.", "c": "gold", "f": "serifb", "s": 54},
-      {"t": "", "s": 16},
-      {"t": "Risen once. Bodily. For good.", "c": "cream", "s": 48} ] },
-    { "kicker": "MITHRAS? HORUS?", "dur": 4.4, "lines": [
-      {"t": "They don't match", "c": "cream", "s": 54},
-      {"t": "the story at all —", "c": "cream", "s": 54},
-      {"t": "", "s": 16},
-      {"t": "once you read the sources,", "c": "cream", "s": 48},
-      {"t": "not the memes.", "c": "gold", "f": "serifb", "s": 56} ] },
-    { "kicker": "AND IT'S EARLY", "dur": 4.8, "lines": [
-      {"t": "Paul quotes a creed", "c": "cream", "s": 54},
-      {"t": "in 1 Corinthians 15,", "c": "cream", "s": 52},
-      {"t": "dated within a few years —", "c": "cream", "s": 50},
-      {"t": "too early for legend.", "c": "gold", "f": "serifb", "s": 54} ] },
-    { "dur": 4.0, "big": [ {"t": "Not a myth.", "c": "cream", "s": 90}, {"t": "Something new.", "c": "gold", "s": 92} ],
-      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42}, {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+    {
+      "dur": 3.0,
+      "big": [
+        {
+          "t": "“Jesus was copied",
+          "c": "cream",
+          "s": 70
+        },
+        {
+          "t": "from pagan myths.”",
+          "c": "gold",
+          "s": 70
+        }
+      ],
+      "sub": [
+        {
+          "t": "Let's check the sources.",
+          "c": "dim",
+          "f": "serif",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "kicker": "FIRST — IT'S NOT SILLY",
+      "dur": 4.8,
+      "lines": [
+        {
+          "t": "There really are",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "old stories of death and return.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 16
+        },
+        {
+          "t": "Osiris. Adonis.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 60
+        },
+        {
+          "t": "It's a fair question.",
+          "c": "cream",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "kicker": "BUT READ THE SOURCES",
+      "dur": 5.2,
+      "lines": [
+        {
+          "t": "The scholar who debunked this",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "wasn't an apologist —",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 16
+        },
+        {
+          "t": "it was Jonathan Z. Smith,",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "the skeptic at U. of Chicago.",
+          "c": "dim",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "kicker": "A CATEGORY BUILT ON THIN TEXTS",
+      "dur": 5.0,
+      "lines": [
+        {
+          "t": "He called the whole",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "\"dying-and-rising\" idea",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "largely a misnomer —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "built on late, ambiguous texts.",
+          "c": "dim",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "kicker": "NOT THE SAME STORY",
+      "dur": 4.8,
+      "lines": [
+        {
+          "t": "Those gods die and revive",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "with the crops, every year,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "in a mythic 'once upon a time.'",
+          "c": "dim",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "kicker": "THE JESUS CLAIM IS DIFFERENT",
+      "dur": 5.0,
+      "lines": [
+        {
+          "t": "A named man.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        },
+        {
+          "t": "Under Pontius Pilate.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        },
+        {
+          "t": "In a known city.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 16
+        },
+        {
+          "t": "Risen once. Bodily. For good.",
+          "c": "cream",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "kicker": "MITHRAS? HORUS?",
+      "dur": 4.4,
+      "lines": [
+        {
+          "t": "They don't match",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "the story at all —",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 16
+        },
+        {
+          "t": "once you read the sources,",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "not the memes.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        }
+      ]
+    },
+    {
+      "kicker": "AND IT'S EARLY",
+      "dur": 4.8,
+      "lines": [
+        {
+          "t": "Paul quotes a creed",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "in 1 Corinthians 15,",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "dated within a few years —",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "too early for legend.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        }
+      ]
+    },
+    {
+      "dur": 4.0,
+      "big": [
+        {
+          "t": "Not a myth.",
+          "c": "cream",
+          "s": 90
+        },
+        {
+          "t": "Something new.",
+          "c": "gold",
+          "s": 92
+        }
+      ],
+      "sub": [
+        {
+          "t": "The full case at",
+          "c": "dim",
+          "f": "serif",
+          "s": 42
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    }
   ]
 }
