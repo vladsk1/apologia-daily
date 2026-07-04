@@ -1,0 +1,43 @@
+{
+  "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.6, "pace": 1.4,
+  "voiceover": "Can science explain the origin of life without God? Start by being fair to the science. Real progress has been made — the famous Miller-Urey experiment showed some of life's building blocks can form on their own. That was a genuine landmark. But building blocks aren't a living cell, and they aren't the hard part: the origin of biological information, the coded instructions in the first self-replicating cell. The honest summary, from the researchers themselves, is that there is currently no agreed scientific mechanism for how life began. It's an open problem. That's where a design inference enters — carefully. Not 'science can't explain it, therefore God' — that's an argument from ignorance. Rather: in every other case we know of, coded information traces back to a mind. So a mind is a serious candidate for the information in the first cell. This is contested and defeasible, not a proof. And it isn't about evolution — the origin of life is a different question. But the coded instructions are real, and they still need an explanation.",
+  "source": "answers/can-science-explain-the-origin-of-life.html",
+  "scenes": [
+    { "dur": 3.2, "big": [ {"t": "Where did the first", "c": "cream", "s": 66}, {"t": "living cell", "c": "cream", "s": 70}, {"t": "come from?", "c": "gold", "s": 74} ] },
+    { "kicker": "FIRST, BE FAIR TO THE SCIENCE", "dur": 4.8, "lines": [
+      {"t": "Miller-Urey showed", "c": "cream", "s": 50},
+      {"t": "life's building blocks", "c": "cream", "s": 50},
+      {"t": "can form on their own.", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "", "s": 12},
+      {"t": "A genuine landmark.", "c": "dim", "s": 46} ] },
+    { "kicker": "BUT THAT ISN'T THE HARD PART", "dur": 5.0, "lines": [
+      {"t": "Building blocks", "c": "cream", "s": 50},
+      {"t": "aren't a living cell.", "c": "cream", "s": 50},
+      {"t": "", "s": 12},
+      {"t": "The hard part is the", "c": "cream", "s": 48},
+      {"t": "coded information", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "in the first cell.", "c": "cream", "s": 48} ] },
+    { "kicker": "THE HONEST SUMMARY", "dur": 4.6, "lines": [
+      {"t": "Researchers themselves say:", "c": "cream", "s": 46},
+      {"t": "", "s": 12},
+      {"t": "no agreed mechanism", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "for how life began.", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "It's an open problem.", "c": "dim", "s": 46} ] },
+    { "kicker": "A DESIGN INFERENCE — CAREFULLY", "dur": 5.6, "lines": [
+      {"t": "Not “can't explain it,", "c": "dim", "s": 46},
+      {"t": "therefore God” —", "c": "dim", "s": 46},
+      {"t": "that's an argument", "c": "cream", "s": 46},
+      {"t": "from ignorance.", "c": "cream", "s": 48},
+      {"t": "", "s": 12},
+      {"t": "Rather: coded information", "c": "cream", "s": 46},
+      {"t": "always traces to a mind.", "c": "gold", "f": "serifb", "s": 48} ] },
+    { "kicker": "STATED HONESTLY", "dur": 4.6, "lines": [
+      {"t": "Contested. Defeasible.", "c": "cream", "s": 50},
+      {"t": "Not a proof.", "c": "dim", "s": 50},
+      {"t": "", "s": 12},
+      {"t": "And not about evolution —", "c": "cream", "s": 46},
+      {"t": "this is life's origin.", "c": "cream", "s": 48} ] },
+    { "dur": 4.0, "big": [ {"t": "The code is real.", "c": "cream", "s": 66}, {"t": "It needs an answer.", "c": "gold", "s": 64} ],
+      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42}, {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}

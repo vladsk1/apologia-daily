@@ -1,0 +1,43 @@
+{
+  "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.6, "pace": 1.4,
+  "voiceover": "Isn't the Trinity a contradiction — one equals three? It would be, if Christians said God is one person and three persons, or one God and three Gods, in the same sense. But that isn't the doctrine. The Trinity says God is one in being — one 'what' — and three in persons — three 'whos': Father, Son, and Holy Spirit. Those are different categories, so there's no contradiction, any more than one triangle having three sides is a contradiction. It is a mystery — something we couldn't have guessed and can't fully exhaust — but a mystery is not a contradiction. The doctrine wasn't invented to be clever; it was forced by the evidence: Scripture insists there is only one God, yet calls the Father, the Son, and the Spirit each fully God. The Trinity is simply what you get when you refuse to drop either truth.",
+  "source": "answers/isnt-the-trinity-a-contradiction.html",
+  "scenes": [
+    { "dur": 3.2, "big": [ {"t": "Isn't the Trinity", "c": "cream", "s": 72}, {"t": "just bad math?", "c": "gold", "s": 74} ],
+      "sub": [ {"t": "One equals three?", "c": "dim", "f": "serif", "s": 42} ] },
+    { "kicker": "IT WOULD BE — IF WE SAID", "dur": 5.0, "lines": [
+      {"t": "one person", "c": "cream", "s": 54},
+      {"t": "and three persons,", "c": "cream", "s": 52},
+      {"t": "", "s": 12},
+      {"t": "or one God", "c": "cream", "s": 54},
+      {"t": "and three Gods —", "c": "cream", "s": 52},
+      {"t": "in the same sense.", "c": "gold", "f": "serifb", "s": 50} ] },
+    { "kicker": "BUT THAT ISN'T THE DOCTRINE", "dur": 5.4, "lines": [
+      {"t": "One in being —", "c": "cream", "s": 54},
+      {"t": "one “what.”", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "", "s": 12},
+      {"t": "Three in persons —", "c": "cream", "s": 54},
+      {"t": "three “whos.”", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "Father, Son, Spirit.", "c": "cream", "s": 48} ] },
+    { "kicker": "DIFFERENT CATEGORIES", "dur": 4.6, "lines": [
+      {"t": "So there's no contradiction —", "c": "cream", "s": 46},
+      {"t": "", "s": 12},
+      {"t": "no more than one triangle", "c": "cream", "s": 46},
+      {"t": "having three sides", "c": "cream", "s": 48},
+      {"t": "is a contradiction.", "c": "gold", "f": "serifb", "s": 48} ] },
+    { "kicker": "A MYSTERY, NOT A CONTRADICTION", "dur": 4.6, "lines": [
+      {"t": "Something we couldn't", "c": "cream", "s": 48},
+      {"t": "have guessed —", "c": "cream", "s": 50},
+      {"t": "and can't fully exhaust.", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "", "s": 12},
+      {"t": "But not a contradiction.", "c": "cream", "s": 48} ] },
+    { "kicker": "WHY BELIEVE IT?", "dur": 5.0, "lines": [
+      {"t": "Scripture insists:", "c": "cream", "s": 50},
+      {"t": "there is one God.", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "", "s": 12},
+      {"t": "Yet it calls Father, Son,", "c": "cream", "s": 46},
+      {"t": "and Spirit each fully God.", "c": "gold", "f": "serifb", "s": 48} ] },
+    { "dur": 4.2, "big": [ {"t": "Refuse to drop", "c": "cream", "s": 64}, {"t": "either truth.", "c": "gold", "s": 72} ],
+      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42}, {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}

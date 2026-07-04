@@ -1,0 +1,48 @@
+{
+  "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.6, "pace": 1.4,
+  "voiceover": "Is the universe fine-tuned for life? Here's the part that isn't controversial. The fundamental constants of physics — the force of gravity, the balance of the forces, the expansion rate of the cosmos — sit inside an astonishingly narrow range that permits life. Move many of them by a hair and there are no stars, no planets, no chemistry, no us. Even atheist physicists concede the data. The debate is only over what explains it. There are three options: physical necessity, chance, or design. Necessity has no evidence that the constants had to be this way. Chance has to reach for an unobserved multiverse — countless unseen universes — just to make our odds look less lonely. Design remains a serious, simpler candidate. The fine-tuning is the fact. Design is the inference — contested, but honest. As the psalmist wrote long before the physics: the heavens declare the glory of God.",
+  "source": "answers/is-the-universe-fine-tuned-for-life.html",
+  "scenes": [
+    { "dur": 3.0, "big": [ {"t": "Is the universe", "c": "cream", "s": 78}, {"t": "rigged for life?", "c": "gold", "s": 82} ],
+      "sub": [ {"t": "The part physicists don't dispute.", "c": "dim", "f": "serif", "s": 40} ] },
+    { "kicker": "THE FACT", "dur": 5.0, "lines": [
+      {"t": "The constants of physics —", "c": "cream", "s": 48},
+      {"t": "gravity, the forces,", "c": "cream", "s": 50},
+      {"t": "the expansion rate —", "c": "cream", "s": 50},
+      {"t": "", "s": 14},
+      {"t": "sit in a razor-thin range", "c": "gold", "f": "serifb", "s": 52} ] },
+    { "kicker": "MOVE THEM A HAIR", "dur": 4.4, "lines": [
+      {"t": "No stars.", "c": "cream", "s": 58},
+      {"t": "No planets.", "c": "cream", "s": 58},
+      {"t": "No chemistry.", "c": "cream", "s": 58},
+      {"t": "", "s": 14},
+      {"t": "No us.", "c": "gold", "f": "serifb", "s": 76} ] },
+    { "kicker": "AND HERE'S THE KEY", "dur": 4.6, "lines": [
+      {"t": "Even atheist physicists", "c": "cream", "s": 50},
+      {"t": "concede the data.", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "", "s": 14},
+      {"t": "The only fight is over", "c": "cream", "s": 48},
+      {"t": "what explains it.", "c": "cream", "s": 50} ] },
+    { "kicker": "THREE OPTIONS", "dur": 5.2, "lines": [
+      {"t": "Necessity —", "c": "cream", "s": 52},
+      {"t": "no evidence it had to be.", "c": "dim", "s": 46},
+      {"t": "", "s": 12},
+      {"t": "Chance —", "c": "cream", "s": 52},
+      {"t": "needs an unseen multiverse.", "c": "dim", "s": 46},
+      {"t": "", "s": 12},
+      {"t": "Design —", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "serious and simpler.", "c": "gold", "f": "serifb", "s": 50} ] },
+    { "kicker": "STATED HONESTLY", "dur": 4.8, "lines": [
+      {"t": "The fine-tuning is the fact.", "c": "cream", "s": 48},
+      {"t": "", "s": 14},
+      {"t": "Design is the inference —", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "contested, but reasonable.", "c": "cream", "s": 46} ] },
+    { "kicker": "SEEN LONG BEFORE THE PHYSICS", "dur": 4.2, "lines": [
+      {"t": "“The heavens declare", "c": "cream", "s": 52},
+      {"t": "the glory of God.”", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "", "s": 12},
+      {"t": "— Psalm 19:1", "c": "dim", "f": "serif", "s": 38} ] },
+    { "dur": 4.0, "big": [ {"t": "The data is conceded.", "c": "cream", "s": 62}, {"t": "The question is why.", "c": "gold", "s": 66} ],
+      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42}, {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}

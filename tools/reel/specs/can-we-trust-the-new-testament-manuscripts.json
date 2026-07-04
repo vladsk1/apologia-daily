@@ -1,0 +1,40 @@
+{
+  "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.6, "pace": 1.4,
+  "voiceover": "Can we trust the New Testament after centuries of hand-copying? By the standard historians use for every ancient text, yes — and it isn't close. Caesar's Gallic Wars survives in about ten copies. The New Testament survives in more than 5,800 Greek manuscripts, plus tens of thousands more in Latin, Syriac, and Coptic — the best-attested document of the ancient world. Some fragments sit within a generation of the originals, where most classical works have a gap of eight hundred to a thousand years. And the abundance skeptics call a problem is actually the solution: a scribe in Egypt and a scribe in Italy couldn't coordinate their mistakes, so where the copies agree, they point back to the original. Yes, the manuscripts differ in hundreds of thousands of places — but the vast majority are spelling and word order, and no core teaching hangs on them. One honest caveat: this shows the text was faithfully preserved, not that it's true — that's a separate case worth making. But you are reading what they wrote.",
+  "source": "answers/can-we-trust-the-new-testament-manuscripts.html",
+  "scenes": [
+    { "dur": 3.2, "big": [ {"t": "Can you trust a book", "c": "cream", "s": 60}, {"t": "hand-copied", "c": "cream", "s": 64}, {"t": "for centuries?", "c": "gold", "s": 70} ] },
+    { "kicker": "COMPARE THE NUMBERS", "dur": 5.2, "lines": [
+      {"t": "Caesar's Gallic Wars:", "c": "cream", "s": 50},
+      {"t": "about 10 copies.", "c": "dim", "s": 52},
+      {"t": "", "s": 14},
+      {"t": "The New Testament:", "c": "cream", "s": 50},
+      {"t": "5,800+ Greek manuscripts.", "c": "gold", "f": "serifb", "s": 52} ] },
+    { "kicker": "PLUS TENS OF THOUSANDS MORE", "dur": 4.2, "lines": [
+      {"t": "Latin. Syriac. Coptic.", "c": "cream", "s": 50},
+      {"t": "", "s": 14},
+      {"t": "The best-attested text", "c": "cream", "s": 48},
+      {"t": "of the ancient world.", "c": "gold", "f": "serifb", "s": 50} ] },
+    { "kicker": "AND CLOSE IN TIME", "dur": 4.6, "lines": [
+      {"t": "Fragments within", "c": "cream", "s": 50},
+      {"t": "a generation of the originals —", "c": "gold", "f": "serifb", "s": 44},
+      {"t": "", "s": 12},
+      {"t": "where most classics wait", "c": "cream", "s": 46},
+      {"t": "800 to 1,000 years.", "c": "dim", "s": 48} ] },
+    { "kicker": "THE ABUNDANCE IS THE ANSWER", "dur": 5.2, "lines": [
+      {"t": "A scribe in Egypt and", "c": "cream", "s": 48},
+      {"t": "a scribe in Italy", "c": "cream", "s": 48},
+      {"t": "couldn't coordinate mistakes.", "c": "cream", "s": 46},
+      {"t": "", "s": 12},
+      {"t": "Where the copies agree,", "c": "cream", "s": 48},
+      {"t": "they point to the original.", "c": "gold", "f": "serifb", "s": 48} ] },
+    { "kicker": "ONE HONEST CAVEAT", "dur": 4.8, "lines": [
+      {"t": "This proves the text", "c": "cream", "s": 48},
+      {"t": "was faithfully preserved —", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "not yet that it's true.", "c": "cream", "s": 48},
+      {"t": "", "s": 12},
+      {"t": "That's a separate case.", "c": "dim", "s": 46} ] },
+    { "dur": 4.0, "big": [ {"t": "But you are reading", "c": "cream", "s": 60}, {"t": "what they wrote.", "c": "gold", "s": 68} ],
+      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42}, {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}
