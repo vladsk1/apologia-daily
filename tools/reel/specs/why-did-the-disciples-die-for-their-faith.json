@@ -1,6 +1,6 @@
 {
   "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.6, "pace": 1.4,
-  "voiceover": "Would you die for something you knew was a lie? First, the honest part: dying for a belief doesn't make it true. Muslims, Hindus, and countless others have died bravely for convictions that can't all be correct. And the popular claim that all twelve apostles were martyred outruns the evidence — historian Sean McDowell shows only a few deaths, like Peter, Paul, and the two Jameses, are firmly attested. So state it carefully. Here's what martyrdom does establish: sincerity. And that matters because of who these people were. A modern martyr dies for a conviction received on trust. The disciples claimed to be eyewitnesses of the very thing in question — that they saw Jesus alive again. People don't knowingly die for what they themselves made up, with nothing to gain. That doesn't prove they were right. It proves they weren't lying. The real question is what best explains why these first-century Jews became utterly convinced they'd seen a crucified man risen bodily — a category their own tradition didn't even have.",
+  "voiceover": "Would you die for something you knew was a lie? First, the honest part: dying for a belief doesn't make it true. Muslims, Hindus, and countless others have died bravely for convictions that can't all be correct. And the popular claim that all twelve apostles were martyred outruns the evidence — the Christian apologist Sean McDowell shows only a few deaths, like Peter, Paul, and the two Jameses, are firmly attested. So state it carefully. Here's what martyrdom does establish: sincerity. And that matters because of who these people were. A modern martyr dies for a conviction received on trust. The disciples claimed to be eyewitnesses of the very thing in question — that they saw Jesus alive again. People don't knowingly die for what they themselves made up, with nothing to gain. That doesn't prove they were right. It proves they weren't lying. The real question is what best explains why these first-century Jews became utterly convinced they'd seen a crucified man risen bodily — a category their own tradition didn't even have.",
   "source": "answers/why-did-the-disciples-die-for-their-faith.html",
   "scenes": [
     { "dur": 3.0, "big": [ {"t": "Would you die", "c": "cream", "s": 82}, {"t": "for a lie?", "c": "gold", "s": 100} ],
@@ -15,7 +15,7 @@
       {"t": "\"All twelve were martyred\"", "c": "cream", "s": 50},
       {"t": "outruns the evidence.", "c": "cream", "s": 52},
       {"t": "", "s": 16},
-      {"t": "Historian Sean McDowell:", "c": "dim", "s": 46},
+      {"t": "Apologist Sean McDowell:", "c": "dim", "s": 46},
       {"t": "only a few deaths", "c": "cream", "s": 50},
       {"t": "are firmly attested.", "c": "gold", "f": "serifb", "s": 52} ] },
     { "kicker": "WHAT IT DOES ESTABLISH", "dur": 4.4, "lines": [
