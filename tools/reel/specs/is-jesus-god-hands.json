@@ -1,0 +1,60 @@
+{
+  "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.55, "pace": 1.3,
+  "voiceover": "Is Jesus really God? The whole case fits on one hand. Here's the puzzle: Jews who would rather die than bow to an idol came to worship Jesus as God. Why? Scholars Robert Bowman and Ed Komoszewski point to five things the New Testament gives Jesus that belong to God alone — five fingers of one hand, spelling HANDS. H, Honors: the honor due to God is given to the Son — 'that all may honor the Son, just as they honor the Father,' John 5:23. A, Attributes: God's own nature, eternal and Creator — 'and the Word was God,' John 1:1. N, Names: God's own name — the Lord, YHWH — is applied to Jesus. D, Deeds: what only God does — 'all things were made through him'; he creates, gives life, and judges. S, Seat: God's own throne — 'sit at my right hand,' Psalm 110:1, the most-quoted Old Testament verse in the New. Honors, Attributes, Names, Deeds, Seat. Each belongs to God alone. Each is given to Jesus. Not a great teacher. God in the flesh.",
+  "source": "library/hands.html",
+  "scenes": [
+    { "dur": 3.2, "big": [ {"t": "Is Jesus God?", "c": "cream", "s": 74}, {"t": "The whole case fits", "c": "cream", "s": 52}, {"t": "on one hand.", "c": "gold", "s": 70} ],
+      "sub": [ {"t": "H · A · N · D · S", "c": "dim", "f": "serif", "s": 44} ] },
+    { "kicker": "THE PUZZLE", "dur": 4.8, "lines": [
+      {"t": "Jews who would rather die", "c": "cream", "s": 46},
+      {"t": "than bow to an idol", "c": "cream", "s": 48},
+      {"t": "", "s": 12},
+      {"t": "came to worship Jesus", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "as God. Why?", "c": "cream", "s": 48} ] },
+    { "kicker": "FIVE THINGS GOD ALONE HAS", "dur": 4.4, "lines": [
+      {"t": "The New Testament gives Jesus", "c": "cream", "s": 44},
+      {"t": "five marks of deity —", "c": "cream", "s": 48},
+      {"t": "", "s": 12},
+      {"t": "five fingers of one hand.", "c": "gold", "f": "serifb", "s": 50} ] },
+    { "kicker": "H — HONORS", "dur": 4.8, "lines": [
+      {"t": "The honor due to God", "c": "cream", "s": 48},
+      {"t": "is given to the Son.", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "", "s": 12},
+      {"t": "“…honor the Son just", "c": "cream", "s": 44},
+      {"t": "as they honor the Father.”", "c": "cream", "s": 44},
+      {"t": "— John 5:23", "c": "dim", "f": "serif", "s": 36} ] },
+    { "kicker": "A — ATTRIBUTES", "dur": 4.6, "lines": [
+      {"t": "God's own nature:", "c": "cream", "s": 48},
+      {"t": "eternal, and Creator.", "c": "cream", "s": 48},
+      {"t": "", "s": 12},
+      {"t": "“…and the Word was God.”", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "— John 1:1", "c": "dim", "f": "serif", "s": 36} ] },
+    { "kicker": "N — NAMES", "dur": 4.6, "lines": [
+      {"t": "God's own name.", "c": "cream", "s": 50},
+      {"t": "The Lord — YHWH —", "c": "cream", "s": 48},
+      {"t": "is applied to Jesus.", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "", "s": 12},
+      {"t": "he is Kyrios, the Lord", "c": "dim", "s": 42} ] },
+    { "kicker": "D — DEEDS", "dur": 4.8, "lines": [
+      {"t": "What only God does:", "c": "cream", "s": 48},
+      {"t": "“All things were made", "c": "cream", "s": 46},
+      {"t": "through him.”", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "", "s": 12},
+      {"t": "He creates, gives life, judges.", "c": "cream", "s": 42},
+      {"t": "— John 1:3; Col. 1:16", "c": "dim", "f": "serif", "s": 36} ] },
+    { "kicker": "S — SEAT", "dur": 4.8, "lines": [
+      {"t": "God's own throne.", "c": "cream", "s": 50},
+      {"t": "“Sit at my right hand.”", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "", "s": 12},
+      {"t": "the seat of divine rule.", "c": "cream", "s": 46},
+      {"t": "— Psalm 110:1", "c": "dim", "f": "serif", "s": 36} ] },
+    { "kicker": "THE WHOLE HAND POINTS ONE WAY", "dur": 5.0, "lines": [
+      {"t": "Honors. Attributes. Names.", "c": "cream", "s": 46},
+      {"t": "Deeds. Seat.", "c": "cream", "s": 50},
+      {"t": "", "s": 14},
+      {"t": "Each belongs to God alone.", "c": "cream", "s": 46},
+      {"t": "Each is given to Jesus.", "c": "gold", "f": "serifb", "s": 50} ] },
+    { "dur": 4.0, "big": [ {"t": "Not a great teacher.", "c": "cream", "s": 58}, {"t": "God in the flesh.", "c": "gold", "s": 72} ],
+      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42}, {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}
