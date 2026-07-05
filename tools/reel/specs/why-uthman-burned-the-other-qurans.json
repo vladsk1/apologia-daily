@@ -1,0 +1,330 @@
+{
+  "reviewed": {
+    "argument": "2026-07-04",
+    "orthodoxy": "2026-07-04",
+    "by": "citations+argument+orthodoxy gates (Uthman/Quran-preservation reel)"
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.55,
+  "pace": 1.3,
+  "voiceover": "Why did the caliph Uthman burn the other Qur'ans? It comes from Islam's own most trusted sources. Muslims are often taught the Qur'an has been preserved perfectly, letter for letter, since Muhammad. But about twenty years after his death, as the Muslim armies quarreled over how to recite it, Uthman had one standard edition made — and, Sahih al-Bukhari reports, ordered the others burned. Here's the honest question: you don't convene a commission and burn the alternatives over differences that don't exist. Islam's own sources say Ibn Mas'ud, one of Muhammad's most authoritative reciters, had a codex that differed — in wording, and even in the order of the surahs — and told his followers to hide their copies rather than surrender them. And in 1972, in a mosque in Sana'a, workers found a Qur'an written over an erased one underneath — the same suras, but with real, documented variants. Now, a Muslim scholar will say those variants were the divinely-permitted 'seven ahruf' — revelation faithfully transmitted — and Uthman simply chose one. That's fair. But it concedes the decisive point: there was never a single, letter-perfect text — which is exactly why the variants had to be burned. This isn't said to mock a book Muslims love. It's an honest invitation to look. And the deeper point for a Christian: our faith never rested on a claim of mechanical copying. It rests on the historical evidence that Jesus rose.",
+  "source": "answers/is-the-quran-corrupted.html",
+  "scenes": [
+    {
+      "dur": 3.2,
+      "big": [
+        {
+          "t": "Why did Uthman",
+          "c": "cream",
+          "s": 68
+        },
+        {
+          "t": "burn the other",
+          "c": "cream",
+          "s": 68
+        },
+        {
+          "t": "Qur'ans?",
+          "c": "gold",
+          "s": 78
+        }
+      ],
+      "sub": [
+        {
+          "t": "From Islam's own sources.",
+          "c": "dim",
+          "f": "serif",
+          "s": 40
+        }
+      ]
+    },
+    {
+      "kicker": "THE CLAIM",
+      "dur": 4.6,
+      "lines": [
+        {
+          "t": "Muslims are often taught",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "the Qur'an is preserved",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "letter for letter —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "unchanged since Muhammad.",
+          "c": "dim",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "kicker": "BUT ~20 YEARS LATER",
+      "dur": 5.0,
+      "lines": [
+        {
+          "t": "The armies quarreled",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "over how to recite it.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "So Caliph Uthman made",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "one standard edition.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ]
+    },
+    {
+      "kicker": "AND THEN",
+      "dur": 4.4,
+      "lines": [
+        {
+          "t": "He ordered all",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "the other Qur'ans",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "burned.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 82
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "— Sahih al-Bukhari 4987",
+          "c": "dim",
+          "f": "serif",
+          "s": 36
+        }
+      ]
+    },
+    {
+      "kicker": "THE HONEST QUESTION",
+      "dur": 4.8,
+      "lines": [
+        {
+          "t": "You don't burn",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "the alternatives",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "over differences",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "that don't exist.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        }
+      ]
+    },
+    {
+      "kicker": "ISLAM'S OWN SOURCES",
+      "dur": 5.4,
+      "lines": [
+        {
+          "t": "Ibn Mas'ud — a leading reciter —",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "had a codex that differed:",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "wording, even the order",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "of the surahs.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "He told followers to hide it.",
+          "c": "dim",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "kicker": "AND BURIED UNDER A PAGE",
+      "dur": 4.8,
+      "lines": [
+        {
+          "t": "Sana'a, 1972:",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "a Qur'an written over",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "an erased one underneath —",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "the same suras,",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "with real, documented variants.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 42
+        }
+      ]
+    },
+    {
+      "kicker": "THE STRONGEST REPLY",
+      "dur": 5.2,
+      "lines": [
+        {
+          "t": "“The variants were the",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "divinely-permitted ahruf —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "Uthman just chose one.”",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Fair. But that still means",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "no single letter-perfect text.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "kicker": "THE DEEPER POINT",
+      "dur": 5.0,
+      "lines": [
+        {
+          "t": "Christianity never rested",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "on mechanical copying.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "It rests on the evidence",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "that Jesus rose.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        }
+      ]
+    },
+    {
+      "dur": 4.0,
+      "big": [
+        {
+          "t": "Asked in honesty.",
+          "c": "cream",
+          "s": 66
+        },
+        {
+          "t": "Not to wound.",
+          "c": "gold",
+          "s": 72
+        }
+      ],
+      "sub": [
+        {
+          "t": "The full case at",
+          "c": "dim",
+          "f": "serif",
+          "s": 42
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    }
+  ]
+}
