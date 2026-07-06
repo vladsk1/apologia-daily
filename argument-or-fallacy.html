@@ -173,7 +173,13 @@
     { text: "This explanation accounts for more of the evidence while assuming less than its rivals, so it is the better explanation.", type:'solid', name:'Inference to the best explanation', why:"Preferring the hypothesis that explains more with fewer assumptions is exactly how good reasoning and good science work." },
     { text: "If the body were still in the tomb, the authorities could have produced it to end the movement. They didn't. That is some evidence the tomb was empty.", type:'solid', name:'Reasonable inference', why:"It's a measured argument from what the opponents did not do, and it's offered as 'some evidence,' not as proof &mdash; a fair inference, not a fallacy." },
     { text: "We have no good reason to think the witnesses were lying and several reasons to think they were sincere, so sincerity is the better-supported conclusion.", type:'solid', name:'Weighing the evidence', why:"It follows the balance of evidence to the more probable conclusion, without overstating the case." },
-    { text: "All men are mortal. Socrates is a man. Therefore Socrates is mortal.", type:'solid', name:'Valid form (syllogism)', why:"The textbook example of a valid deductive argument &mdash; the conclusion is guaranteed by the premises." }
+    { text: "All men are mortal. Socrates is a man. Therefore Socrates is mortal.", type:'solid', name:'Valid form (syllogism)', why:"The textbook example of a valid deductive argument &mdash; the conclusion is guaranteed by the premises." },
+    { text: "Whatever begins to exist has a cause. The universe began to exist. Therefore the universe has a cause.", type:'solid', name:"Valid deduction (Kalam)", why:"The form is logically valid — if the premises are true, the conclusion follows — and each premise is defended with evidence and argument rather than assumed. Note what it does NOT say: 'everything has a cause.'" },
+    { text: "Even physicists who reject design agree that the constants of physics fall in an extraordinarily narrow life-permitting range. That agreed data needs an explanation — necessity, chance, or design.", type:'solid', name:"Sound framing (fine-tuning)", why:"It claims only what the evidence supports: the fine-tuning data is conceded by all sides, and design is offered as one of three candidates to be weighed — not asserted as something 'scientists agree' on." },
+    { text: "Virtually all scholars — including sceptical ones — grant that Jesus died by crucifixion and that his disciples sincerely believed they saw him alive afterwards. Any theory of Christian origins has to explain those facts.", type:'solid', name:"Sound method (minimal facts)", why:"It builds only on premises the other side already grants and draws a modest conclusion: these facts demand an explanation. No appeal to biblical authority is smuggled in." },
+    { text: "If objective moral duties exist, they need a ground beyond human opinion. Torturing a child for fun is wrong regardless of anyone's opinion. So there is a ground of moral duties beyond human opinion.", type:'solid', name:"Valid deduction (moral argument)", why:"Logically valid, with modest premises: it never claims unbelievers are immoral — only that objective duties, which nearly everyone affirms in practice, require a grounding deeper than preference or consensus." },
+    { text: "We have over 5,800 Greek New Testament manuscripts, so we can be confident the text has been accurately preserved. Whether what it says is true is a further question that needs separate historical argument.", type:'solid', name:"Honest scope (manuscripts)", why:"It claims exactly what the evidence shows — accurate preservation — and explicitly refuses to stretch copy-counts into proof of truth. Knowing what your evidence does NOT establish is a mark of sound reasoning, not weakness." },
+    { text: "Paul quotes a creed in 1 Corinthians 15 that scholars across the spectrum date to within a few years of the crucifixion. So the proclamation of the resurrection began far too early to be a slowly accumulating legend.", type:'solid', name:"Strong inference (early creed)", why:"The premise is a near-consensus dating accepted even by sceptical scholars, and the conclusion targets exactly what the legend theory requires — decades of quiet development that the timeline doesn't allow." }
   ];
 
   const ROUND = 10, ROUND_TIME = 18;
@@ -182,7 +188,15 @@
   function shuffle(a){ a = a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 
   function startGame(){
-    pool = shuffle(ITEMS).slice(0, ROUND);
+    // prefer least-seen items so consecutive games differ (localStorage)
+    let seen = {};
+    try { seen = JSON.parse(localStorage.getItem('aof_seen') || '{}'); } catch (e) {}
+    const key = it => it.text.slice(0, 40);
+    pool = ITEMS.map(it => ({ it, r: (seen[key(it)] || 0) + Math.random() }))
+      .sort((a, b) => a.r - b.r).slice(0, ROUND).map(x => x.it);
+    pool = shuffle(pool);
+    pool.forEach(it => { seen[key(it)] = (seen[key(it)] || 0) + 1; });
+    try { localStorage.setItem('aof_seen', JSON.stringify(seen)); } catch (e) {}
     current = 0; correct = 0; attempts = 0; streak = 0; afResults = [];
     document.getElementById('summary').classList.remove('show');
     document.getElementById('card').style.display = '';
