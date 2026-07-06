@@ -1,0 +1,122 @@
+{
+  "reviewed": {
+    "argument": "2026-07-05",
+    "orthodoxy": "2026-07-05",
+    "by": "argument+orthodoxy gates (OT typology reel 2: Isaac/Passover/manna)"
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.55,
+  "pace": 1.3,
+  "voiceover": "Two thousand years before the cross, God said to Abraham: take your son, your only son, whom you love, and offer him. Genesis 22. They walk three days to a mountain in the region where Jerusalem's temple would later stand. And Isaac, the beloved only son, carries the wood for his own sacrifice up the hill on his own back. Isaac asks, where is the lamb? And Abraham says, God will provide the lamb himself. At the last moment the knife is stayed, and a ram, caught in a thicket, dies in Isaac's place. This isn't a prediction. It's Abraham's true history. But it rhymes with a hill outside that same city, where another beloved only Son carried his own wood — and where the knife was not stayed, because this time the Father provided the Lamb. Christians call this typology: a real event God shaped to foreshadow something greater. Look at the Passover. Each household took a lamb without blemish and painted its blood on the doorframe, so that when judgment came, it passed over the house marked by blood. Not one of its bones was to be broken. Centuries later, the soldiers found Jesus already dead and broke no bone of his — and Paul says plainly, Christ, our Passover lamb, has been sacrificed. Look at the manna. God rained bread from heaven to keep Israel alive in the wilderness. And Jesus said, I am the bread of life; the bread that comes down from heaven. The gift that kept them alive was a shadow of the One who is life. Now, honestly: this isn't proof by odds, and it isn't prophecy. It's a pattern you see in hindsight, once you already trust that Jesus rose. But once you do, the whole Old Testament turns and points one way. Isaac asked, where is the lamb? And one day John the Baptist pointed and said: behold, the Lamb of God.",
+  "source": "library/typology.html",
+  "scenes": [
+    {
+      "dur": 3.6,
+      "big": [
+        {"t": "God told Abraham:", "c": "cream", "s": 50},
+        {"t": "take your only son", "c": "cream", "s": 52},
+        {"t": "and offer him.", "c": "gold", "s": 66}
+      ],
+      "sub": [
+        {"t": "Genesis 22 — and it points to the cross.", "c": "dim", "f": "serif", "s": 36}
+      ]
+    },
+    {
+      "kicker": "ISAAC — GENESIS 22",
+      "dur": 5.2,
+      "lines": [
+        {"t": "“Take your son,", "c": "cream", "s": 48},
+        {"t": "your only son,", "c": "cream", "s": 48},
+        {"t": "whom you love.”", "c": "gold", "f": "serifb", "s": 52},
+        {"t": "", "s": 12},
+        {"t": "The beloved son carries", "c": "cream", "s": 44},
+        {"t": "the wood up the mountain.", "c": "cream", "s": 44}
+      ]
+    },
+    {
+      "kicker": "THE RAM IN HIS PLACE",
+      "dur": 5.4,
+      "lines": [
+        {"t": "“Where is the lamb?” “God will provide.”", "c": "cream", "s": 38},
+        {"t": "", "s": 12},
+        {"t": "A ram, caught in a thicket,", "c": "cream", "s": 44},
+        {"t": "dies in Isaac's place.", "c": "gold", "f": "serifb", "s": 48},
+        {"t": "", "s": 12},
+        {"t": "The knife was stayed for Isaac, not the Son —", "c": "cream", "s": 32},
+        {"t": "the Father gave the true Lamb.", "c": "gold", "f": "serifb", "s": 44}
+      ]
+    },
+    {
+      "kicker": "THIS IS TYPOLOGY",
+      "dur": 4.4,
+      "lines": [
+        {"t": "Not a prediction.", "c": "cream", "s": 50},
+        {"t": "A real history", "c": "cream", "s": 48},
+        {"t": "that rhymes with the cross.", "c": "gold", "f": "serifb", "s": 46}
+      ]
+    },
+    {
+      "kicker": "THE PASSOVER",
+      "dur": 5.0,
+      "lines": [
+        {"t": "A lamb without blemish.", "c": "cream", "s": 46},
+        {"t": "Its blood on the doorframe.", "c": "cream", "s": 46},
+        {"t": "", "s": 12},
+        {"t": "When judgment came,", "c": "cream", "s": 46},
+        {"t": "it passed over the blood.", "c": "gold", "f": "serifb", "s": 48},
+        {"t": "— Exodus 12", "c": "dim", "f": "serif", "s": 34}
+      ]
+    },
+    {
+      "kicker": "THE TRUE LAMB",
+      "dur": 5.2,
+      "lines": [
+        {"t": "Not one of its bones broken.", "c": "cream", "s": 44},
+        {"t": "At the cross they broke", "c": "cream", "s": 44},
+        {"t": "no bone of Jesus.", "c": "cream", "s": 46},
+        {"t": "", "s": 12},
+        {"t": "“Christ, our Passover lamb,", "c": "gold", "f": "serifb", "s": 44},
+        {"t": "has been sacrificed.”", "c": "gold", "f": "serifb", "s": 44},
+        {"t": "— 1 Corinthians 5:7", "c": "dim", "f": "serif", "s": 32}
+      ]
+    },
+    {
+      "kicker": "THE MANNA FROM HEAVEN",
+      "dur": 5.2,
+      "lines": [
+        {"t": "God rained bread from heaven", "c": "cream", "s": 42},
+        {"t": "to keep Israel alive", "c": "cream", "s": 46},
+        {"t": "in the wilderness. (Exodus 16)", "c": "cream", "s": 42},
+        {"t": "", "s": 12},
+        {"t": "“I am the bread of life…", "c": "gold", "f": "serifb", "s": 46},
+        {"t": "the bread from heaven.”", "c": "gold", "f": "serifb", "s": 46},
+        {"t": "— John 6", "c": "dim", "f": "serif", "s": 32}
+      ]
+    },
+    {
+      "kicker": "THE HONEST PART",
+      "dur": 5.0,
+      "lines": [
+        {"t": "This isn't proof by odds.", "c": "cream", "s": 46},
+        {"t": "It isn't prophecy.", "c": "cream", "s": 48},
+        {"t": "", "s": 12},
+        {"t": "A pattern you see in hindsight —", "c": "cream", "s": 42},
+        {"t": "once you trust that he rose.", "c": "gold", "f": "serifb", "s": 46}
+      ]
+    },
+    {
+      "dur": 4.6,
+      "big": [
+        {"t": "“Where is the lamb?”", "c": "cream", "s": 52},
+        {"t": "asked Isaac.", "c": "cream", "s": 44},
+        {"t": "“Behold, the Lamb of God.”", "c": "gold", "s": 50}
+      ],
+      "sub": [
+        {"t": "The full case at", "c": "dim", "f": "serif", "s": 40},
+        {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50}
+      ]
+    }
+  ]
+}
