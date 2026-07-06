@@ -188,8 +188,7 @@ footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08);pad
 
   <!-- STAGE -->
   <div class="stage">
-    <div class="arch"></div>
-    <div class="stage-inner">
+        <div class="stage-inner">
       <div class="st-kick" id="st-kick">Room 1 of 5</div>
       <div class="st-locus" id="st-locus"></div>
       <div class="st-arg" id="st-arg"></div>
@@ -425,60 +424,334 @@ var WINGS=[
 ];
 
 
-/* per-room scene props for the tableau (2-3 supporting emoji per room) */
-var ROOM_PROPS = {
-  'ev-m-kalam.html':            ['\uD83D\uDEAA','\uD83D\uDDDD\uFE0F','\u2728'],
-  'ev-m-leibniz.html':          ['\uD83C\uDFDB\uFE0F','\uD83C\uDFDB\uFE0F','\u2728'],
-  'ev-m-finetuning.html':       ['\uD83C\uDF9A\uFE0F','\uD83C\uDF9A\uFE0F','\uD83D\uDD6F\uFE0F'],
-  'ev-m-moral.html':            ['\uD83D\uDCCF','\u2728','\uD83D\uDD4A\uFE0F'],
-  'ev-m-ontological.html':      ['\u2601\uFE0F','\u2728','\uD83C\uDF1F'],
-  'ev-m-emptytomb.html':        ['\uD83E\uDEA8','\uD83D\uDD4A\uFE0F','\u2728'],
-  'ev-m-minimal.html':          ['\uD83D\uDD8B\uFE0F','\u2696\uFE0F','\uD83D\uDCDC'],
-  'ev-m-earlycreed.html':       ['\uD83D\uDCDC','\uD83D\uDD6F\uFE0F','\u2709\uFE0F'],
-  'ev-m-appearances.html':      ['\uD83D\uDC65','\uD83D\uDC65','\u2600\uFE0F'],
-  'ev-m-sceptics.html':         ['\u26A1','\uD83D\uDDE1\uFE0F','\u2728'],
-  'ev-m-hist_jesus.html':       ['\uD83D\uDCDC','\u2696\uFE0F','\uD83D\uDD8B\uFE0F'],
-  'ev-m-jesus_claims.html':     ['\uD83E\uDEA8','\uD83E\uDEA8','\uD83D\uDD25'],
-  'ev-m-messianic_prophecy.html':['\uD83D\uDCDC','\u2728','\uD83C\uDF1F'],
-  'ev-m-jesus_as_god_nt.html':  ['\uD83D\uDE4F','\u2728','\uD83D\uDC51'],
-  'ev-m-titles.html':           ['\uD83D\uDC51','\uD83D\uDCD6','\u2728'],
-  'ev-m-manuscript.html':       ['\uD83D\uDCDA','\uD83D\uDCDC','\uD83C\uDFDB\uFE0F'],
-  'ev-m-archaeology.html':      ['\u26CF\uFE0F','\uD83E\uDEA8','\uD83C\uDFFA'],
-  'ev-m-deadseascrolls.html':   ['\uD83C\uDFFA','\uD83D\uDCDC','\uD83D\uDD6F\uFE0F'],
-  'ev-m-eyewitnesses.html':     ['\uD83D\uDC41\uFE0F','\u270D\uFE0F','\uD83D\uDCDC'],
-  'ev-m-coincidences.html':     ['\uD83E\uDDE9','\uD83E\uDDE9','\uD83D\uDCD6'],
-  'ev-m-bigbang.html':          ['\uD83D\uDD2D','\uD83C\uDF0C','\u2728'],
-  'ev-m-originlife.html':       ['\uD83E\uDDEC','\uD83D\uDCD6','\u2728'],
-  'ev-m-mathematics.html':      ['\u2797','\u270F\uFE0F','\uD83D\uDCD0'],
-  'ev-m-laws.html':             ['\u2699\uFE0F','\uD83D\uDCCF','\u2728'],
-  'ev-m-privileged.html':       ['\uD83C\uDF0D','\uD83D\uDD2D','\u2728'],
-  'ev-m-shema.html':            ['\uD83D\uDD25','\uD83D\uDD4E','\u2728'],
-  'ev-m-ot_trinity.html':       ['\uD83D\uDCAD','\uD83D\uDCDC','\u2728'],
-  'ev-m-nt_trinity.html':       ['\uD83D\uDCA7','\uD83D\uDD4A\uFE0F','\u2728'],
-  'ev-m-philosophical_trinity.html':['\uD83D\uDD3A','\uD83D\uDCA1','\u2728'],
-  'ev-m-modalism.html':         ['\uD83C\uDF0A','\uD83D\uDD4A\uFE0F','\uD83D\uDDE3\uFE0F']
+/* ------------------------------------------------------------------ ROOM ART
+   Hand-drawn vector scenes — engraved gold line-art on navy. One drawing per
+   room (no emoji). To swap in painted raster images later: set USE_ROOM_IMAGES
+   = true and drop files at /palace-art/<key>.jpg (keys = ev-m-*.html slug);
+   prompts for all 30 in docs/PALACE_ART_PROMPTS.md. */
+var USE_ROOM_IMAGES = false;
+var G = '#d9b45c';           /* gold line   */
+var GD = 'rgba(217,180,92,'; /* gold alpha  */
+function _defs(){
+  return '<defs>'+
+    '<radialGradient id="pgl" cx="50%" cy="42%" r="62%">'+
+      '<stop offset="0%" stop-color="rgba(217,180,92,.30)"/>'+
+      '<stop offset="55%" stop-color="rgba(217,180,92,.09)"/>'+
+      '<stop offset="100%" stop-color="rgba(217,180,92,0)"/></radialGradient>'+
+    '<filter id="psoft" x="-40%" y="-40%" width="180%" height="180%">'+
+      '<feGaussianBlur stdDeviation="1.1"/></filter>'+
+    '</defs>';
+}
+function _motes(){
+  var d='';
+  [[52,58,1.6],[86,34,1.1],[288,52,1.5],[318,96,1.1],[70,132,1.2],[300,140,1.3],[180,22,1.2]].forEach(function(m){
+    d+='<circle cx="'+m[0]+'" cy="'+m[1]+'" r="'+m[2]+'" fill="'+GD+'.5)"/>';
+  });
+  return d;
+}
+function _rays(){
+  return '<polygon points="150,0 210,0 250,205 110,205" fill="'+GD+'.05)"/>'+
+         '<polygon points="168,0 192,0 214,205 146,205" fill="'+GD+'.06)"/>';
+}
+/* wing backdrops (subtle silhouettes behind the focal drawing) */
+var WING_BG = {
+  god:  '<path d="M40 205 V96 M76 205 V72 M284 205 V72 M320 205 V96" stroke="'+GD+'.16)" stroke-width="7"/>'+
+        '<circle cx="180" cy="46" r="21" fill="none" stroke="'+GD+'.2)" stroke-width="2"/>'+
+        '<circle cx="180" cy="46" r="11" fill="none" stroke="'+GD+'.14)" stroke-width="1.5"/>',
+  res:  '<path d="M0 168 Q80 148 180 162 T360 156" fill="none" stroke="'+GD+'.18)" stroke-width="2"/>'+
+        '<circle cx="60" cy="40" r="1.7" fill="'+GD+'.5)"/><circle cx="304" cy="30" r="1.4" fill="'+GD+'.45)"/>'+
+        '<circle cx="264" cy="58" r="1.2" fill="'+GD+'.4)"/><circle cx="96" cy="24" r="1.2" fill="'+GD+'.4)"/>',
+  jes:  '<path d="M52 205 V64 M92 205 V52 M268 205 V52 M308 205 V64" stroke="'+GD+'.15)" stroke-width="6"/>'+
+        '<path d="M52 64 H308 M92 52 H268" stroke="'+GD+'.12)" stroke-width="2"/>',
+  bib:  '<path d="M28 62 H120 M28 96 H120 M28 130 H120 M240 62 H332 M240 96 H332 M240 130 H332" stroke="'+GD+'.16)" stroke-width="2"/>'+
+        '<path d="M36 62 v-16 M52 62 v-13 M66 62 v-15 M84 62 v-12 M100 62 v-15 M248 62 v-14 M264 62 v-12 M282 62 v-16 M300 62 v-13 M318 62 v-15" stroke="'+GD+'.2)" stroke-width="3.5"/>'+
+        '<path d="M36 96 v-16 M56 96 v-12 M74 96 v-15 M92 96 v-13 M110 96 v-14 M250 96 v-15 M270 96 v-12 M290 96 v-16 M310 96 v-13" stroke="'+GD+'.16)" stroke-width="3.5"/>',
+  sci:  '<path d="M20 92 Q180 -28 340 92" fill="none" stroke="'+GD+'.18)" stroke-width="2"/>'+
+        '<circle cx="70" cy="46" r="1.5" fill="'+GD+'.5)"/><circle cx="292" cy="38" r="1.7" fill="'+GD+'.5)"/>'+
+        '<circle cx="240" cy="20" r="1.2" fill="'+GD+'.4)"/><circle cx="120" cy="26" r="1.2" fill="'+GD+'.4)"/>',
+  tri:  '<path d="M70 205 V96 Q70 62 100 62 Q130 62 130 96 V205 M230 205 V96 Q230 62 260 62 Q290 62 290 96 V205" fill="none" stroke="'+GD+'.15)" stroke-width="2"/>'
+};
+/* focal drawings — each centered around (180,~115) in the 360x210 viewBox */
+var ROOM_ART = {
+'ev-m-kalam.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<rect x="160" y="46" width="40" height="102" rx="9"/>'+
+  '<circle cx="180" cy="74" r="15"/>'+
+  '<path d="M180 74 V64 M180 74 L189 79"/>'+
+  '<path d="M180 66 v2 M188 74 h-2 M180 82 v-2 M172 74 h2" stroke-width="1.6"/>'+
+  '<path d="M180 92 V126" stroke-width="1.8"/><circle cx="180" cy="132" r="6.5"/>'+
+  '<rect x="152" y="148" width="56" height="9" rx="3"/>'+
+  '<path d="M104 157 V96 Q104 76 122 76" opacity=".8"/>'+
+  '<path d="M112 152 L98 142" stroke-width="2" opacity=".7"/>'+
+  '<circle cx="252" cy="84" r="8"/><path d="M260 84 H282 M274 84 v7 M282 84 v9" />'+
+  '</g>',
+'ev-m-leibniz.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<g transform="rotate(-10 116 150)"><rect x="108" y="76" width="15" height="74"/><path d="M104 76 h23 M104 150 h23"/></g>'+
+  '<g transform="rotate(-7 152 152)"><rect x="144" y="70" width="15" height="82"/><path d="M140 70 h23 M140 152 h23"/></g>'+
+  '<g transform="rotate(-4 188 154)"><rect x="180" y="66" width="15" height="88"/><path d="M176 66 h23 M176 154 h23"/></g>'+
+  '<rect x="236" y="58" width="17" height="98"/><path d="M230 58 h29 M230 156 h29 M232 52 h25" stroke-width="3"/>'+
+  '<path d="M96 158 H272" stroke-width="2" opacity=".7"/>'+
+  '</g>',
+'ev-m-finetuning.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<path d="M132 96 v-42 M148 96 v-56 M164 96 v-48 M180 96 v-64 M196 96 v-48 M212 96 v-56 M228 96 v-42" stroke-width="7" opacity=".85"/>'+
+  '<rect x="118" y="96" width="124" height="34" rx="4"/>'+
+  '<circle cx="140" cy="150" r="9"/><path d="M140 150 L146 144"/>'+
+  '<circle cx="166" cy="150" r="9"/><path d="M166 150 L170 143"/>'+
+  '<circle cx="192" cy="150" r="9"/><path d="M192 150 L192 141"/>'+
+  '<circle cx="218" cy="150" r="9"/><path d="M218 150 L212 144"/>'+
+  '<circle cx="192" cy="150" r="13" opacity=".55"/>'+
+  '</g>',
+'ev-m-moral.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<rect x="122" y="140" width="116" height="10" rx="3"/><path d="M132 150 v14 M228 150 v14"/>'+
+  '<path d="M180 62 V138 M180 62 L134 78 M180 62 L226 78"/>'+
+  '<path d="M134 78 v16 M226 78 v16"/>'+
+  '<path d="M120 100 Q134 112 148 100" /><path d="M212 100 Q226 112 240 100"/>'+
+  '<g transform="rotate(24 262 118)"><path d="M262 74 V150" stroke-width="3"/><path d="M256 84 h8 M256 98 h8 M256 112 h8 M256 126 h8 M256 140 h8" stroke-width="1.6"/></g>'+
+  '</g>',
+'ev-m-ontological.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<path d="M140 116 L148 82 L166 104 L180 74 L194 104 L212 82 L220 116 Z"/>'+
+  '<rect x="140" y="116" width="80" height="14" rx="4"/>'+
+  '<circle cx="148" cy="79" r="3.5"/><circle cx="180" cy="70" r="4"/><circle cx="212" cy="79" r="3.5"/>'+
+  '<path d="M180 42 v-12 M136 52 l-9 -9 M224 52 l9 -9 M116 92 h-14 M244 92 h14" stroke-width="2" opacity=".75"/>'+
+  '<path d="M130 148 Q146 138 166 146 Q182 152 200 146 Q222 138 236 148" opacity=".6"/>'+
+  '</g>',
+'ev-m-emptytomb.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<path d="M108 158 V108 Q108 70 146 70 Q184 70 184 108 V158" />'+
+  '<path d="M118 158 V110 Q118 80 146 80 Q174 80 174 110 V158" opacity=".5" fill="rgba(5,13,26,.55)"/>'+
+  '<circle cx="232" cy="126" r="32"/>'+
+  '<path d="M214 104 Q222 96 236 96 M212 148 Q204 138 204 126" opacity=".6" stroke-width="1.6"/>'+
+  '<path d="M132 150 h26 M136 144 h18" stroke-width="2" opacity=".85"/>'+
+  '<path d="M92 158 H288" stroke-width="2" opacity=".7"/>'+
+  '</g>',
+'ev-m-minimal.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<path d="M180 78 Q150 66 116 74 V148 Q150 140 180 152 Q210 140 244 148 V74 Q210 66 180 78 Z"/>'+
+  '<path d="M180 78 V152"/>'+
+  '<path d="M126 88 h40 M126 100 h40 M126 112 h40 M126 124 h34" stroke-width="1.6" opacity=".8"/>'+
+  '<path d="M194 88 h40 M194 100 h40 M194 112 h30" stroke-width="1.6" opacity=".8"/>'+
+  '<path d="M196 130 q8 -8 14 0 q6 8 14 -2 q5 -6 10 0" stroke-width="2"/>'+
+  '<path d="M258 66 L240 122 M258 66 l3 10" stroke-width="2" opacity=".85"/>'+
+  '</g>',
+'ev-m-earlycreed.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<rect x="128" y="70" width="104" height="66" rx="5"/>'+
+  '<path d="M128 74 L180 112 L232 74"/>'+
+  '<circle cx="180" cy="136" r="12" fill="'+GD+'.22)"/>'+
+  '<path d="M175 132 q5 6 10 0 M177 140 h6" stroke-width="1.6"/>'+
+  '<path d="M96 148 v-34 M96 114 q0 -8 5 -3" stroke-width="3"/>'+
+  '<path d="M96 104 q-5 -9 0 -14 q5 5 0 14" fill="'+GD+'.3)" stroke-width="1.6"/>'+
+  '</g>',
+'ev-m-appearances.html':
+  '<g stroke="'+G+'" stroke-width="2.2" fill="none" stroke-linecap="round">'+
+  '<circle cx="180" cy="52" r="13"/><path d="M180 32 v-8 M198 40 l6 -6 M162 40 l-6 -6 M200 52 h9 M160 52 h-9" stroke-width="1.8"/>'+
+  '<g opacity=".9">'+
+  '<circle cx="118" cy="106" r="9"/><path d="M104 128 q14 -12 28 0"/>'+
+  '<circle cx="152" cy="102" r="9"/><path d="M138 124 q14 -12 28 0"/>'+
+  '<circle cx="186" cy="106" r="9"/><path d="M172 128 q14 -12 28 0"/>'+
+  '<circle cx="220" cy="102" r="9"/><path d="M206 124 q14 -12 28 0"/>'+
+  '<circle cx="254" cy="106" r="9"/><path d="M240 128 q14 -12 28 0"/>'+
+  '<circle cx="134" cy="140" r="9"/><path d="M120 162 q14 -12 28 0"/>'+
+  '<circle cx="170" cy="144" r="9"/><path d="M156 166 q14 -12 28 0"/>'+
+  '<circle cx="206" cy="140" r="9"/><path d="M192 162 q14 -12 28 0"/>'+
+  '<circle cx="240" cy="144" r="9"/><path d="M226 166 q14 -12 28 0"/>'+
+  '</g></g>',
+'ev-m-sceptics.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<path d="M124 164 L172 92 M236 164 L196 92" opacity=".8"/>'+
+  '<circle cx="184" cy="56" r="12" fill="'+GD+'.25)"/>'+
+  '<path d="M184 36 v-12 M168 44 l-9 -8 M200 44 l9 -8 M164 58 h-13 M204 58 h13 M172 70 l-8 9 M196 70 l8 9" stroke-width="2"/>'+
+  '<g transform="rotate(38 196 142)"><path d="M172 142 H224" stroke-width="3"/><path d="M178 134 v16 M170 142 h-10" stroke-width="2.5"/></g>'+
+  '</g>',
+'ev-m-hist_jesus.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<rect x="120" y="72" width="86" height="84" rx="4"/>'+
+  '<path d="M132 88 h60 M132 102 h60 M132 116 h60 M132 130 h44" stroke-width="1.7" opacity=".85"/>'+
+  '<path d="M240 84 V132 M226 96 H254 M226 96 v8 q0 6 6 6 M254 96 v8 q0 6 -6 6" stroke-width="2.2"/>'+
+  '<circle cx="240" cy="140" r="5"/>'+
+  '<path d="M96 150 L118 84 M96 150 l-2 -10 M96 150 l9 -5" stroke-width="2"/>'+
+  '</g>',
+'ev-m-jesus_claims.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<circle cx="180" cy="66" r="14" fill="'+GD+'.25)"/>'+
+  '<path d="M180 44 v-14 M162 50 l-10 -10 M198 50 l10 -10 M158 66 h-15 M202 66 h15 M164 82 l-9 10 M196 82 l9 10 M180 88 v13" stroke-width="2"/>'+
+  '<ellipse cx="128" cy="140" rx="13" ry="9"/><ellipse cx="158" cy="152" rx="11" ry="8"/>'+
+  '<ellipse cx="206" cy="148" rx="13" ry="9"/><ellipse cx="236" cy="138" rx="10" ry="7"/>'+
+  '<path d="M118 124 l-7 -8 M146 136 l-5 -9 M216 132 l6 -9" stroke-width="1.6" opacity=".7"/>'+
+  '</g>',
+'ev-m-messianic_prophecy.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<path d="M120 58 H216" stroke-width="3"/><circle cx="116" cy="58" r="5"/><circle cx="220" cy="58" r="5"/>'+
+  '<path d="M124 58 V128 Q124 142 138 142 H198"/><path d="M212 58 V120"/>'+
+  '<path d="M134 74 h64 M134 88 h64 M134 102 h50" stroke-width="1.6" opacity=".8"/>'+
+  '<circle cx="252" cy="106" r="8"/><path d="M252 114 v26 M252 122 l-12 10 M252 122 l12 10 M252 140 l-9 14 M252 140 l9 14" stroke-width="2.2"/>'+
+  '<path d="M200 74 q28 4 42 24 M186 90 q30 10 54 30" stroke-dasharray="2 5" stroke-width="1.7" opacity=".75"/>'+
+  '</g>',
+'ev-m-jesus_as_god_nt.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<circle cx="216" cy="58" r="10"/><path d="M204 70 L228 70 L234 136 L198 136 Z"/>'+
+  '<path d="M216 40 v-9 M200 46 l-7 -7 M232 46 l7 -7 M196 58 h-9 M236 58 h9" stroke-width="1.8" opacity=".85"/>'+
+  '<circle cx="138" cy="96 " r="9"/>'+
+  '<path d="M130 104 Q118 116 122 138 L148 138 Q152 118 158 112"/>'+
+  '<path d="M148 108 Q168 96 198 92" stroke-width="2.2"/>'+
+  '<circle cx="207" cy="90" r="2.2" fill="'+G+'"/>'+
+  '<path d="M112 152 H260" stroke-width="2" opacity=".7"/>'+
+  '</g>',
+'ev-m-titles.html':
+  '<g stroke="'+G+'" stroke-width="2.4" fill="none" stroke-linecap="round">'+
+  '<path d="M158 44 L166 28 L176 40 L180 24 L184 40 L194 28 L202 44 Z"/>'+
+  '<rect x="112" y="64" width="60" height="22" rx="3"/><path d="M120 75 h44" stroke-width="1.6" opacity=".7"/>'+
+  '<rect x="188" y="64" width="60" height="22" rx="3"/><path d="M196 75 h44" stroke-width="1.6" opacity=".7"/>'+
+  '<rect x="112" y="104" width="60" height="22" rx="3"/><path d="M120 115 h44" stroke-width="1.6" opacity=".7"/>'+
+  '<rect x="188" y="104" width="60" height="22" rx="3"/><path d="M196 115 h44" stroke-width="1.6" opacity=".7"/>'+
+  '<rect x="150" y="142" width="60" height="22" rx="3"/><path d="M158 153 h44" stroke-width="1.6" opacity=".7"/>'+
+  '</g>',
+'ev-m-manuscript.html':
+  '<g stroke="'+G+'" stroke-width="2.4" fill="none" stroke-linecap="round">'+
+  '<g opacity=".95">'+
+  '<rect x="112" y="140" width="58" height="10" rx="2"/><rect x="116" y="128" width="52" height="10" rx="2"/>'+
+  '<rect x="112" y="116" width="56" height="10" rx="2"/><rect x="118" y="104" width="50" height="10" rx="2"/>'+
+  '<rect x="114" y="92" width="54" height="10" rx="2"/><rect x="118" y="80" width="48" height="10" rx="2"/>'+
+  '<rect x="116" y="68" width="52" height="10" rx="2"/>'+
+  '<rect x="186" y="140" width="58" height="10" rx="2"/><rect x="190" y="128" width="52" height="10" rx="2"/>'+
+  '<rect x="186" y="116" width="56" height="10" rx="2"/><rect x="192" y="104" width="50" height="10" rx="2"/>'+
+  '<rect x="188" y="92" width="54" height="10" rx="2"/>'+
+  '</g>'+
+  '<rect x="262" y="140" width="34" height="9" rx="2" opacity=".65"/><rect x="266" y="130" width="26" height="9" rx="2" opacity=".65"/>'+
+  '<path d="M112 152 H300" stroke-width="2" opacity=".7"/>'+
+  '</g>',
+'ev-m-archaeology.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<path d="M100 150 H280" stroke-width="2"/>'+
+  '<path d="M172 60 V118" stroke-width="2.5"/><path d="M164 52 q8 -8 16 0" stroke-width="2.5"/>'+
+  '<path d="M160 118 h24 L180 150 h-16 Z"/>'+
+  '<g transform="rotate(-8 236 132)"><rect x="208" y="112" width="56" height="40" rx="3"/>'+
+  '<path d="M216 124 h28 M216 134 h36 M216 144 h22" stroke-width="1.6" opacity=".8"/></g>'+
+  '<path d="M124 150 v-20 q0 -10 10 -10 q10 0 10 10 v20" opacity=".8"/>'+
+  '</g>',
+'ev-m-deadseascrolls.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<path d="M84 156 Q84 66 180 52 Q276 66 276 156" opacity=".45"/>'+
+  '<path d="M128 152 v-34 q0 -14 12 -14 q12 0 12 14 v34 M124 104 h32" />'+
+  '<path d="M172 152 v-40 q0 -16 14 -16 q14 0 14 16 v40 M168 96 h36"/>'+
+  '<path d="M186 84 q0 -10 10 -10 h4" stroke-width="2"/>'+
+  '<circle cx="236" cy="140" r="7"/><path d="M243 140 h18 q6 0 6 6 v6" stroke-width="2.2"/>'+
+  '<path d="M104 156 H286" stroke-width="2" opacity=".7"/>'+
+  '</g>',
+'ev-m-eyewitnesses.html':
+  '<g stroke="'+G+'" stroke-width="2.4" fill="none" stroke-linecap="round">'+
+  '<path d="M132 56 Q180 30 228 56 Q180 82 132 56 Z"/>'+
+  '<circle cx="180" cy="56" r="9"/><circle cx="180" cy="56" r="3.4" fill="'+G+'"/>'+
+  '<rect x="112" y="128" width="136" height="9" rx="3"/><path d="M122 137 v18 M238 137 v18"/>'+
+  '<circle cx="140" cy="104" r="8"/><path d="M128 128 q12 -12 24 0"/>'+
+  '<circle cx="172" cy="104" r="8"/><path d="M160 128 q12 -12 24 0"/>'+
+  '<circle cx="204" cy="104" r="8"/><path d="M192 128 q12 -12 24 0"/>'+
+  '<circle cx="234" cy="104" r="8"/><path d="M222 128 q12 -12 24 0"/>'+
+  '<path d="M254 96 L268 74 M268 74 l2 8" stroke-width="2"/>'+
+  '</g>',
+'ev-m-coincidences.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<path d="M118 84 h28 q-6 -14 8 -14 q14 0 8 14 h28 v28 q14 -6 14 8 q0 14 -14 8 v28 h-72 v-28 q-14 6 -14 -8 q0 -14 14 -8 Z"/>'+
+  '<path d="M226 78 h24 q-5 -13 8 -13 q13 0 8 13 h24 v64 h-64 v-24 q-13 5 -13 -8 q0 -13 13 -8 Z" transform="rotate(7 258 110)"/>'+
+  '<path d="M196 108 h24" stroke-dasharray="3 6" stroke-width="2"/>'+
+  '<path d="M120 162 H296" stroke-width="2" opacity=".7"/>'+
+  '</g>',
+'ev-m-bigbang.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<g transform="rotate(-32 168 112)"><rect x="130" y="102" width="76" height="20" rx="8"/><rect x="202" y="106" width="16" height="12" rx="4"/></g>'+
+  '<path d="M150 128 L128 164 M170 122 L176 164 M158 126 L152 164" stroke-width="2.2"/>'+
+  '<path d="M212 74 Q232 60 252 66 M206 60 Q234 38 266 48 M200 46 Q238 14 282 28" opacity=".75" stroke-width="2"/>'+
+  '<circle cx="262" cy="82" r="2.4" fill="'+G+'"/><circle cx="286" cy="58" r="1.8" fill="'+G+'"/><circle cx="242" cy="48" r="1.6" fill="'+G+'"/>'+
+  '</g>',
+'ev-m-originlife.html':
+  '<g stroke="'+G+'" stroke-width="2.4" fill="none" stroke-linecap="round">'+
+  '<circle cx="180" cy="110" r="58" opacity=".5"/>'+
+  '<path d="M156 66 Q186 88 156 110 Q126 132 156 154" stroke-width="2.6"/>'+
+  '<path d="M204 66 Q174 88 204 110 Q234 132 204 154" stroke-width="2.6"/>'+
+  '<path d="M162 78 h36 M158 96 h44 M158 124 h44 M162 142 h36" stroke-width="1.8" opacity=".85"/>'+
+  '</g>',
+'ev-m-mathematics.html':
+  '<g stroke="'+G+'" stroke-width="2.4" fill="none" stroke-linecap="round">'+
+  '<rect x="112" y="56" width="136" height="92" rx="4"/>'+
+  '<path d="M124 128 Q136 104 148 128 Q160 152 148 128" opacity="0"/>'+
+  '<path d="M122 118 Q132 96 142 118 Q152 140 162 118 Q172 96 182 118" stroke-width="2"/>'+
+  '<path d="M196 132 h36 l-18 -30 Z M214 132 v-8 h8" stroke-width="2"/>'+
+  '<circle cx="210" cy="80" r="13"/><path d="M210 80 h13" stroke-width="1.8"/>'+
+  '<path d="M124 74 h44" stroke-width="1.6" opacity=".7"/>'+
+  '<circle cx="276" cy="48" r="2" fill="'+G+'"/><circle cx="92" cy="60" r="1.7" fill="'+G+'"/>'+
+  '</g>',
+'ev-m-laws.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<path d="M132 164 L172 64 M228 164 L188 64" stroke-width="2.6"/>'+
+  '<path d="M142 148 h78 M150 130 h62 M157 112 h48 M163 96 h36 M168 82 h26" stroke-width="2"/>'+
+  '<g stroke-width="2.2"><circle cx="262" cy="120" r="15"/><circle cx="262" cy="120" r="5"/>'+
+  '<path d="M262 100 v-7 M262 140 v7 M242 120 h-7 M282 120 h7 M248 106 l-5 -5 M276 106 l5 -5 M248 134 l-5 5 M276 134 l5 5"/></g>'+
+  '</g>',
+'ev-m-privileged.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<path d="M118 160 V96 Q118 48 180 48 Q242 48 242 96 V160" />'+
+  '<circle cx="180" cy="112" r="26"/>'+
+  '<path d="M158 104 q10 8 22 2 q12 -6 20 2 M162 124 q12 6 24 0 q10 -5 16 1" stroke-width="1.8" opacity=".85"/>'+
+  '<circle cx="222" cy="76" r="4" opacity=".9"/>'+
+  '<circle cx="98" cy="70" r="1.6" fill="'+G+'"/><circle cx="266" cy="60" r="1.8" fill="'+G+'"/><circle cx="284" cy="112" r="1.4" fill="'+G+'"/>'+
+  '</g>',
+'ev-m-shema.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<path d="M180 156 v-34 M160 156 h40" stroke-width="3"/>'+
+  '<path d="M158 122 Q158 108 180 108 Q202 108 202 122" stroke-width="2.6"/>'+
+  '<path d="M180 100 Q160 78 180 52 Q200 78 180 100 Z" fill="'+GD+'.16)"/>'+
+  '<path d="M172 92 Q166 80 172 68 M180 94 Q174 76 180 62 M188 92 Q194 80 188 68" stroke-width="1.7"/>'+
+  '<path d="M146 64 l-8 -6 M214 64 l8 -6 M180 40 v-9" stroke-width="1.8" opacity=".75"/>'+
+  '</g>',
+'ev-m-ot_trinity.html':
+  '<g stroke="'+G+'" stroke-width="2.4" fill="none" stroke-linecap="round">'+
+  '<path d="M120 74 H240" stroke-width="3"/><circle cx="116" cy="74" r="5"/><circle cx="244" cy="74" r="5"/>'+
+  '<path d="M126 74 V140 M234 74 V140 M126 140 H234"/>'+
+  '<circle cx="164" cy="100" r="9" opacity=".9"/><circle cx="196" cy="100" r="9" opacity=".9"/><circle cx="180" cy="118" r="9" opacity=".9"/>'+
+  '<path d="M120 158 q16 -10 30 0 q16 10 30 0 q16 -10 30 0 q16 10 30 0" stroke-width="2" opacity=".8"/>'+
+  '</g>',
+'ev-m-nt_trinity.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<circle cx="150" cy="96" r="22"/><circle cx="210" cy="96" r="22"/><circle cx="180" cy="126" r="22"/>'+
+  '<path d="M116 164 q16 -8 32 0 q16 8 32 0 q16 -8 32 0 q16 8 32 0" stroke-width="2" opacity=".8"/>'+
+  '<path d="M180 44 q-8 10 -18 12 q12 2 18 10 q6 -8 18 -10 q-10 -2 -18 -12" fill="'+GD+'.2)" stroke-width="2"/>'+
+  '</g>',
+'ev-m-philosophical_trinity.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<path d="M180 56 L124 148 H236 Z"/>'+
+  '<circle cx="180" cy="56" r="7" fill="'+GD+'.28)"/><circle cx="124" cy="148" r="7" fill="'+GD+'.28)"/><circle cx="236" cy="148" r="7" fill="'+GD+'.28)"/>'+
+  '<path d="M180 84 Q160 116 180 120 Q200 116 180 84 M152 138 Q176 128 180 120 M208 138 Q184 128 180 120" stroke-width="1.8" opacity=".8"/>'+
+  '<path d="M180 34 v-9 M138 44 l-7 -7 M222 44 l7 -7" stroke-width="1.8" opacity=".7"/>'+
+  '</g>',
+'ev-m-modalism.html':
+  '<g stroke="'+G+'" stroke-width="2.5" fill="none" stroke-linecap="round">'+
+  '<path d="M96 150 q20 -10 40 0 q20 10 40 0 q20 -10 40 0 q20 10 40 0" stroke-width="2.2"/>'+
+  '<path d="M96 162 q20 -10 40 0 q20 10 40 0 q20 -10 40 0 q20 10 40 0" stroke-width="2" opacity=".6"/>'+
+  '<circle cx="180" cy="96" r="10"/><path d="M170 106 Q166 126 168 142 M190 106 Q194 126 192 142" stroke-width="2.2"/>'+
+  '<path d="M216 56 q-8 8 -16 10 q10 2 14 8 q5 -7 15 -8 q-8 -3 -13 -10" fill="'+GD+'.2)" stroke-width="2"/>'+
+  '<path d="M140 36 q40 14 80 0 M148 24 q32 10 64 0" stroke-width="1.7" opacity=".7"/>'+
+  '</g>'
 };
 function artSVG(r){
-  var props = ROOM_PROPS[r.href] || ['\u2728','\u2728','\u2728'];
-  return '<svg viewBox="0 0 360 210" role="img" aria-label="Room scene">'+
-    '<defs><radialGradient id="glow" cx="50%" cy="38%" r="65%">'+
-    '<stop offset="0%" stop-color="rgba(200,169,81,.28)"/><stop offset="55%" stop-color="rgba(200,169,81,.08)"/><stop offset="100%" stop-color="rgba(200,169,81,0)"/></radialGradient></defs>'+
-    // floor
-    '<ellipse cx="180" cy="182" rx="150" ry="22" fill="rgba(255,255,255,.045)"/>'+
-    '<ellipse cx="180" cy="182" rx="98" ry="14" fill="rgba(200,169,81,.07)"/>'+
-    // archway
-    '<path d="M104 196 L104 92 Q104 30 180 30 Q256 30 256 92 L256 196" fill="none" stroke="rgba(200,169,81,.35)" stroke-width="2.5"/>'+
-    '<path d="M118 196 L118 96 Q118 44 180 44 Q242 44 242 96 L242 196" fill="none" stroke="rgba(200,169,81,.16)" stroke-width="1.5"/>'+
-    '<rect x="86" y="196" width="188" height="3" rx="1.5" fill="rgba(200,169,81,.3)"/>'+
-    // glow behind the object
-    '<circle cx="180" cy="118" r="86" fill="url(#glow)"/>'+
-    // props (left, right, top) with slight tilts
-    '<text x="66" y="120" font-size="34" text-anchor="middle" transform="rotate(-10 66 120)" opacity=".92">'+props[0]+'</text>'+
-    '<text x="296" y="108" font-size="34" text-anchor="middle" transform="rotate(9 296 108)" opacity=".92">'+props[1]+'</text>'+
-    '<text x="180" y="34" font-size="24" text-anchor="middle" opacity=".85">'+props[2]+'</text>'+
-    // main object + pedestal shadow
-    '<ellipse cx="180" cy="164" rx="44" ry="8" fill="rgba(0,0,0,.35)"/>'+
-    '<text x="180" y="142" font-size="74" text-anchor="middle" style="filter:drop-shadow(0 6px 14px rgba(0,0,0,.45))">'+r.symbol+'</text>'+
+  var wing = WINGS[wingIdx].id;
+  var focal = ROOM_ART[r.href] || '';
+  if (USE_ROOM_IMAGES) {
+    var key = r.href.replace('ev-m-','').replace('.html','');
+    return '<img src="/palace-art/'+key+'.jpg" alt="" style="width:100%;border-radius:12px;display:block;" loading="lazy"/>';
+  }
+  return '<svg viewBox="0 0 360 210" role="img" aria-label="Room scene">'+_defs()+
+    _rays()+
+    (WING_BG[wing]||'')+
+    '<ellipse cx="180" cy="186" rx="150" ry="20" fill="rgba(255,255,255,.045)"/>'+
+    '<ellipse cx="180" cy="186" rx="96" ry="12" fill="'+GD+'.07)"/>'+
+    '<circle cx="180" cy="112" r="88" fill="url(#pgl)"/>'+
+    _motes()+
+    focal+
+    '<ellipse cx="180" cy="168" rx="52" ry="7" fill="rgba(0,0,0,.32)"/>'+
     '</svg>';
 }
 
