@@ -32,6 +32,26 @@ body{font-family:var(--font-ui);color:var(--text-dark);background:var(--off-whit
 .page-sub{font-size:1rem;color:var(--text-mid);max-width:62ch;line-height:1.7;font-family:var(--font-body)}
 .page-sub b{color:var(--text-dark);font-weight:600}
 
+/* how-it-works strip */
+.howto{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:1.6rem 0 .2rem}
+.howto .hstep{background:#fff;border:1px solid var(--border);border-radius:10px;padding:.85rem 1rem;display:flex;gap:10px;align-items:flex-start}
+.howto .hn{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--navy-900);color:var(--gold);font-family:var(--font-ui);font-size:.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.howto .ht{font-family:var(--font-ui);font-size:.8rem;line-height:1.5;color:var(--text-mid)}
+.howto .ht b{display:block;font-size:.84rem;color:var(--text-dark);margin-bottom:2px}
+@media(max-width:700px){.howto{grid-template-columns:1fr}}
+/* in-stage step tags */
+.st-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-ui);font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 0 .5rem}
+.st-tag .tn{width:18px;height:18px;border-radius:50%;background:rgba(200,169,81,.18);border:1px solid rgba(200,169,81,.45);display:inline-flex;align-items:center;justify-content:center;font-size:.62rem;color:var(--gold-light)}
+/* room tableau (SVG scene) */
+.st-art{margin:1.4rem auto 1.2rem;max-width:400px}
+.st-art svg{width:100%;height:auto;display:block}
+/* finish card */
+.donecard{background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.4);border-radius:12px;padding:1.6rem 1.4rem;text-align:center;max-width:60ch;margin:0 auto}
+.donecard h3{font-family:var(--font-display);font-size:1.3rem;color:var(--gold-light);margin-bottom:.5rem}
+.donecard p{font-family:var(--font-body);font-size:.95rem;color:rgba(255,255,255,.75);margin-bottom:1rem}
+.donecard .db{display:inline-block;font-family:var(--font-ui);font-size:.82rem;font-weight:600;padding:9px 18px;border-radius:4px;margin:0 4px;text-decoration:none;cursor:pointer;border:none}
+.donecard .db.gold{background:var(--gold);color:var(--navy-950)}
+.donecard .db.ghost{background:transparent;color:var(--gold);border:1px solid rgba(200,169,81,.4)}
 /* wing selector */
 .wings{display:flex;gap:8px;overflow-x:auto;margin:1.8rem 0 .4rem;padding-bottom:4px}
 .wing{flex:0 0 auto;font-family:var(--font-ui);font-size:.8rem;font-weight:500;padding:9px 16px;border-radius:99px;border:1px solid var(--border);background:#fff;color:var(--text-mid);cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:7px}
@@ -152,6 +172,11 @@ footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08);pad
   <p class="eyebrow"><span class="dot"></span> Pro &middot; Method of loci</p>
   <h1 class="page-title">The Memory <em>Palace</em></h1>
   <p class="page-sub">The technique every memory champion uses, built for the arguments. Each category is a building you can walk &mdash; <b>one room per argument</b>, each holding a vivid scene that locks its structure into place. Walk it once to learn the landscape; walk it from memory to own it.</p>
+  <div class="howto">
+    <div class="hstep"><div class="hn">1</div><div class="ht"><b>Walk the rooms</b>Each room is one argument turned into a strange, vivid scene. Read it slowly.</div></div>
+    <div class="hstep"><div class="hn">2</div><div class="ht"><b>Picture the scene</b>Close your eyes and see it. The image <em>is</em> the argument &mdash; the stranger you make it, the better it sticks.</div></div>
+    <div class="hstep"><div class="hn">3</div><div class="ht"><b>Recall walk</b>Walk it again with meanings hidden and say each argument from memory. That test is what makes it permanent.</div></div>
+  </div>
   <button id="why-btn" onclick="showWhy()" style="margin-top:1rem;font-family:var(--font-ui);font-size:.82rem;font-weight:600;color:var(--gold-dark);background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.35);border-radius:99px;padding:8px 16px;cursor:pointer;">&#9432;&nbsp; Why this works &mdash; the science</button>
 
   <!-- WING SELECTOR -->
@@ -168,7 +193,8 @@ footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08);pad
       <div class="st-kick" id="st-kick">Room 1 of 5</div>
       <div class="st-locus" id="st-locus"></div>
       <div class="st-arg" id="st-arg"></div>
-      <div class="st-symbol" id="st-symbol"></div>
+      <div class="st-art" id="st-art"></div>
+      <div class="st-tag"><span class="tn">1</span> Picture this scene</div>
       <div class="st-scene" id="st-scene"></div>
       <div class="hook" id="st-hook"><span class="q">&ldquo;</span><span id="st-hook-txt"></span><span class="q">&rdquo;</span></div>
       <div id="st-meaning-wrap"></div>
@@ -218,7 +244,7 @@ footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08);pad
   function hideWhy(){ var o=document.getElementById('why-overlay'); if(o) o.style.display='none'; try{ localStorage.setItem('ad_palace_intro','1'); }catch(e){} }
   (function(){
     var seen=false; try{ seen=!!localStorage.getItem('ad_palace_intro'); }catch(e){}
-    if(!seen){ window.addEventListener('load',function(){ setTimeout(showWhy,500); }); }
+    if(!seen){ window.addEventListener('load',function(){ setTimeout(function(){ var s=false; try{ s=!!localStorage.getItem('ad_palace_intro'); }catch(e){} if(!s) showWhy(); },500); }); }
     var ov=document.getElementById('why-overlay');
     if(ov) ov.addEventListener('click',function(e){ if(e.target===ov) hideWhy(); });
   })();
@@ -398,6 +424,64 @@ var WINGS=[
   ]}
 ];
 
+
+/* per-room scene props for the tableau (2-3 supporting emoji per room) */
+var ROOM_PROPS = {
+  'ev-m-kalam.html':            ['\uD83D\uDEAA','\uD83D\uDDDD\uFE0F','\u2728'],
+  'ev-m-leibniz.html':          ['\uD83C\uDFDB\uFE0F','\uD83C\uDFDB\uFE0F','\u2728'],
+  'ev-m-finetuning.html':       ['\uD83C\uDF9A\uFE0F','\uD83C\uDF9A\uFE0F','\uD83D\uDD6F\uFE0F'],
+  'ev-m-moral.html':            ['\uD83D\uDCCF','\u2728','\uD83D\uDD4A\uFE0F'],
+  'ev-m-ontological.html':      ['\u2601\uFE0F','\u2728','\uD83C\uDF1F'],
+  'ev-m-emptytomb.html':        ['\uD83E\uDEA8','\uD83D\uDD4A\uFE0F','\u2728'],
+  'ev-m-minimal.html':          ['\uD83D\uDD8B\uFE0F','\u2696\uFE0F','\uD83D\uDCDC'],
+  'ev-m-earlycreed.html':       ['\uD83D\uDCDC','\uD83D\uDD6F\uFE0F','\u2709\uFE0F'],
+  'ev-m-appearances.html':      ['\uD83D\uDC65','\uD83D\uDC65','\u2600\uFE0F'],
+  'ev-m-sceptics.html':         ['\u26A1','\uD83D\uDDE1\uFE0F','\u2728'],
+  'ev-m-hist_jesus.html':       ['\uD83D\uDCDC','\u2696\uFE0F','\uD83D\uDD8B\uFE0F'],
+  'ev-m-jesus_claims.html':     ['\uD83E\uDEA8','\uD83E\uDEA8','\uD83D\uDD25'],
+  'ev-m-messianic_prophecy.html':['\uD83D\uDCDC','\u2728','\uD83C\uDF1F'],
+  'ev-m-jesus_as_god_nt.html':  ['\uD83D\uDE4F','\u2728','\uD83D\uDC51'],
+  'ev-m-titles.html':           ['\uD83D\uDC51','\uD83D\uDCD6','\u2728'],
+  'ev-m-manuscript.html':       ['\uD83D\uDCDA','\uD83D\uDCDC','\uD83C\uDFDB\uFE0F'],
+  'ev-m-archaeology.html':      ['\u26CF\uFE0F','\uD83E\uDEA8','\uD83C\uDFFA'],
+  'ev-m-deadseascrolls.html':   ['\uD83C\uDFFA','\uD83D\uDCDC','\uD83D\uDD6F\uFE0F'],
+  'ev-m-eyewitnesses.html':     ['\uD83D\uDC41\uFE0F','\u270D\uFE0F','\uD83D\uDCDC'],
+  'ev-m-coincidences.html':     ['\uD83E\uDDE9','\uD83E\uDDE9','\uD83D\uDCD6'],
+  'ev-m-bigbang.html':          ['\uD83D\uDD2D','\uD83C\uDF0C','\u2728'],
+  'ev-m-originlife.html':       ['\uD83E\uDDEC','\uD83D\uDCD6','\u2728'],
+  'ev-m-mathematics.html':      ['\u2797','\u270F\uFE0F','\uD83D\uDCD0'],
+  'ev-m-laws.html':             ['\u2699\uFE0F','\uD83D\uDCCF','\u2728'],
+  'ev-m-privileged.html':       ['\uD83C\uDF0D','\uD83D\uDD2D','\u2728'],
+  'ev-m-shema.html':            ['\uD83D\uDD25','\uD83D\uDD4E','\u2728'],
+  'ev-m-ot_trinity.html':       ['\uD83D\uDCAD','\uD83D\uDCDC','\u2728'],
+  'ev-m-nt_trinity.html':       ['\uD83D\uDCA7','\uD83D\uDD4A\uFE0F','\u2728'],
+  'ev-m-philosophical_trinity.html':['\uD83D\uDD3A','\uD83D\uDCA1','\u2728'],
+  'ev-m-modalism.html':         ['\uD83C\uDF0A','\uD83D\uDD4A\uFE0F','\uD83D\uDDE3\uFE0F']
+};
+function artSVG(r){
+  var props = ROOM_PROPS[r.href] || ['\u2728','\u2728','\u2728'];
+  return '<svg viewBox="0 0 360 210" role="img" aria-label="Room scene">'+
+    '<defs><radialGradient id="glow" cx="50%" cy="38%" r="65%">'+
+    '<stop offset="0%" stop-color="rgba(200,169,81,.28)"/><stop offset="55%" stop-color="rgba(200,169,81,.08)"/><stop offset="100%" stop-color="rgba(200,169,81,0)"/></radialGradient></defs>'+
+    // floor
+    '<ellipse cx="180" cy="182" rx="150" ry="22" fill="rgba(255,255,255,.045)"/>'+
+    '<ellipse cx="180" cy="182" rx="98" ry="14" fill="rgba(200,169,81,.07)"/>'+
+    // archway
+    '<path d="M104 196 L104 92 Q104 30 180 30 Q256 30 256 92 L256 196" fill="none" stroke="rgba(200,169,81,.35)" stroke-width="2.5"/>'+
+    '<path d="M118 196 L118 96 Q118 44 180 44 Q242 44 242 96 L242 196" fill="none" stroke="rgba(200,169,81,.16)" stroke-width="1.5"/>'+
+    '<rect x="86" y="196" width="188" height="3" rx="1.5" fill="rgba(200,169,81,.3)"/>'+
+    // glow behind the object
+    '<circle cx="180" cy="118" r="86" fill="url(#glow)"/>'+
+    // props (left, right, top) with slight tilts
+    '<text x="66" y="120" font-size="34" text-anchor="middle" transform="rotate(-10 66 120)" opacity=".92">'+props[0]+'</text>'+
+    '<text x="296" y="108" font-size="34" text-anchor="middle" transform="rotate(9 296 108)" opacity=".92">'+props[1]+'</text>'+
+    '<text x="180" y="34" font-size="24" text-anchor="middle" opacity=".85">'+props[2]+'</text>'+
+    // main object + pedestal shadow
+    '<ellipse cx="180" cy="164" rx="44" ry="8" fill="rgba(0,0,0,.35)"/>'+
+    '<text x="180" y="142" font-size="74" text-anchor="middle" style="filter:drop-shadow(0 6px 14px rgba(0,0,0,.45))">'+r.symbol+'</text>'+
+    '</svg>';
+}
+
 var wingIdx=0, roomIdx=0, recall=false, revealed=false;
 function rooms(){ return WINGS[wingIdx].rooms; }
 
@@ -423,11 +507,11 @@ function renderRoute(){
 }
 function meaningHTML(r){
   var items = r.prem.map(function(p){return '<li>'+p+'</li>';}).join('')+'<li class="concl">'+r.concl+'</li>';
-  return '<div class="meaning"><div class="lbl">What this room holds</div><ol>'+items+'</ol>'+
+  return '<div class="meaning"><div class="lbl"><span style="display:inline-flex;width:16px;height:16px;border-radius:50%;background:rgba(200,169,81,.18);border:1px solid rgba(200,169,81,.45);align-items:center;justify-content:center;font-size:.6rem;margin-right:6px;vertical-align:-3px;">2</span>What the scene encodes</div><ol>'+items+'</ol>'+
     '<a class="study" href="'+r.href+'">Study it in the Evidence Library &rarr;</a></div>';
 }
 function recallHTML(){
-  return '<div class="recall"><p>You&rsquo;re standing in this room. <b style="color:var(--gold-light)">What argument does it hold &mdash; and what are its premises?</b></p>'+
+  return '<div class="recall"><div style="font-family:var(--font-ui);font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem;">3 &middot; Test yourself</div><p>You&rsquo;re standing in this room. <b style="color:var(--gold-light)">What argument does it hold &mdash; and what are its premises?</b></p>'+
     '<button class="reveal-btn" onclick="doReveal()">Reveal the answer</button></div>';
 }
 function renderRoom(){
@@ -435,14 +519,18 @@ function renderRoom(){
   document.getElementById('st-kick').textContent='Room '+(roomIdx+1)+' of '+rs.length;
   document.getElementById('st-locus').innerHTML=r.locus;
   document.getElementById('st-arg').innerHTML=r.arg;
-  document.getElementById('st-symbol').innerHTML=r.symbol;
+  document.getElementById('st-art').innerHTML=artSVG(r);
   document.getElementById('st-scene').innerHTML=r.scene;
   document.getElementById('st-hook-txt').innerHTML=r.hook;
   var wrap=document.getElementById('st-meaning-wrap');
   if(recall && !revealed){ wrap.innerHTML=recallHTML(); }
   else { wrap.innerHTML=meaningHTML(r); }
   document.getElementById('prev').disabled = roomIdx===0;
-  document.getElementById('next').disabled = roomIdx===rs.length-1;
+  var nb=document.getElementById('next');
+  var last = roomIdx===rs.length-1;
+  if(last && !recall){ nb.disabled=false; nb.innerHTML='Start the Recall walk &rsaquo;'; nb.onclick=function(){ startRecallWalk(); }; }
+  else if(last && recall){ nb.disabled=false; nb.innerHTML='Finish the walk &#10003;'; nb.onclick=function(){ finishWalk(); }; }
+  else { nb.disabled=false; nb.innerHTML='Next room &rsaquo;'; nb.onclick=function(){ step(1); }; }
   renderRoute();
 }
 function goTo(i){ roomIdx=i; revealed=false; renderRoom(); }
@@ -453,6 +541,22 @@ function toggleRecall(){
   renderRoom();
 }
 function doReveal(){ revealed=true; renderRoom(); }
+
+function startRecallWalk(){
+  recall=true; revealed=false;
+  document.getElementById('recall-toggle').classList.add('on');
+  roomIdx=0; renderRoom();
+  document.querySelector('.route').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function finishWalk(){
+  var w=WINGS[wingIdx];
+  document.getElementById('st-meaning-wrap').innerHTML =
+    '<div class="donecard"><h3>&#127963; You own this building.</h3>'+
+    '<p>You just recalled every argument in '+w.building+' from memory. Walk it again tomorrow to lock it in for good &mdash; or study any room in depth.</p>'+
+    '<button class="db gold" onclick="startRecallWalk()">Walk it again &rsaquo;</button>'+
+    '<a class="db ghost" href="/evidence-library.html">Evidence Library &rarr;</a></div>';
+}
+
 
 renderWings();
 renderRoom();
