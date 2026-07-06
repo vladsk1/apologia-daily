@@ -2,14 +2,14 @@
   "reviewed": {
     "argument": "2026-07-05",
     "orthodoxy": "2026-07-05",
-    "by": "argument+orthodoxy gates (OT typology reel)"
+    "by": "argument+orthodoxy gates (OT typology reel; Joseph->bronze serpent swap re-gated CLEAN)"
   },
   "aspect": "vertical",
   "theme": "navy",
   "fps": 30,
   "crossfade": 0.55,
   "pace": 1.3,
-  "voiceover": "Is the Old Testament really about Jesus? Start on a mountain. A beloved, only son carries the wood of his own sacrifice up a hill outside Jerusalem, while his father says God himself will provide the lamb. That's Genesis 22 — Abraham and Isaac. It isn't a prediction. It's Abraham's true history. And yet it rhymes. Christians call this typology: a real person or event God shaped to foreshadow something greater — and greater is the key word. Look at the Passover lamb: without blemish, its blood shielding from judgment, not one of its bones broken. Paul says it plainly — Christ, our Passover lamb, has been sacrificed. Look at Joseph: betrayed by his brothers, sold for silver, raised to a king's right hand, saving the very brothers who betrayed him. Look at the tabernacle, where God dwelt with his people — and John says the Word became flesh and tabernacled among us. Now, the honest part. This isn't proof by odds, and it isn't prophecy. It's a pattern you recognize in hindsight, once you already have reason to trust that Jesus rose. But once you do, it's breathtaking: a library written over a thousand years, by dozens of writers who never met, turns out to have a single center. Isaac asked, where is the lamb? Two thousand years later, John the Baptist pointed and said: behold, the Lamb of God.",
+  "voiceover": "Is the Old Testament really about Jesus? Start on a mountain. A beloved, only son carries the wood of his own sacrifice up a hill outside Jerusalem, while his father says God himself will provide the lamb. That's Genesis 22 — Abraham and Isaac. It isn't a prediction. It's Abraham's true history. And yet it rhymes. Christians call this typology: a real person or event God shaped to foreshadow something greater — and greater is the key word. Look at the Passover lamb: without blemish, its blood shielding from judgment, not one of its bones broken. Paul says it plainly — Christ, our Passover lamb, has been sacrificed. Look at the bronze serpent: when a plague of snakes struck Israel in the wilderness, God told Moses to lift up a bronze serpent on a pole, and everyone who looked at it in faith lived. Jesus took that very image for himself — as Moses lifted up the serpent, so must the Son of Man be lifted up, that whoever believes in him may have eternal life. Look at the tabernacle, where God dwelt with his people — and John says the Word became flesh and tabernacled among us. Now, the honest part. This isn't proof by odds, and it isn't prophecy. It's a pattern you recognize in hindsight, once you already have reason to trust that Jesus rose. But once you do, it's breathtaking: a library written over a thousand years, by dozens of writers who never met, turns out to have a single center. Isaac asked, where is the lamb? Two thousand years later, John the Baptist pointed and said: behold, the Lamb of God.",
   "source": "library/typology.html",
   "scenes": [
     {
@@ -71,15 +71,16 @@
       ]
     },
     {
-      "kicker": "JOSEPH",
-      "dur": 4.8,
+      "kicker": "THE BRONZE SERPENT",
+      "dur": 5.0,
       "lines": [
-        {"t": "Betrayed by his brothers,", "c": "cream", "s": 46},
-        {"t": "sold for silver,", "c": "cream", "s": 48},
-        {"t": "raised to a king's right hand —", "c": "cream", "s": 44},
+        {"t": "Snakebitten in the desert,", "c": "cream", "s": 46},
+        {"t": "a bronze serpent is lifted up —", "c": "cream", "s": 42},
+        {"t": "all who look, live. (Numbers 21)", "c": "cream", "s": 40},
         {"t": "", "s": 12},
-        {"t": "to save the ones", "c": "cream", "s": 46},
-        {"t": "who betrayed him.", "c": "gold", "f": "serifb", "s": 50}
+        {"t": "“So must the Son of Man", "c": "gold", "f": "serifb", "s": 46},
+        {"t": "be lifted up.”", "c": "gold", "f": "serifb", "s": 52},
+        {"t": "— John 3:14", "c": "dim", "f": "serif", "s": 34}
       ]
     },
     {
