@@ -1,0 +1,133 @@
+{
+  "reviewed": {
+    "argument": "2026-07-05",
+    "orthodoxy": "2026-07-05",
+    "by": "argument+orthodoxy gates (OT typology reel)"
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.55,
+  "pace": 1.3,
+  "voiceover": "Is the Old Testament really about Jesus? Start on a mountain. A beloved, only son carries the wood of his own sacrifice up a hill outside Jerusalem, while his father says God himself will provide the lamb. That's Genesis 22 — Abraham and Isaac. It isn't a prediction. It's Abraham's true history. And yet it rhymes. Christians call this typology: a real person or event God shaped to foreshadow something greater — and greater is the key word. Look at the Passover lamb: without blemish, its blood shielding from judgment, not one of its bones broken. Paul says it plainly — Christ, our Passover lamb, has been sacrificed. Look at Joseph: betrayed by his brothers, sold for silver, raised to a king's right hand, saving the very brothers who betrayed him. Look at the tabernacle, where God dwelt with his people — and John says the Word became flesh and tabernacled among us. Now, the honest part. This isn't proof by odds, and it isn't prophecy. It's a pattern you recognize in hindsight, once you already have reason to trust that Jesus rose. But once you do, it's breathtaking: a library written over a thousand years, by dozens of writers who never met, turns out to have a single center. Isaac asked, where is the lamb? Two thousand years later, John the Baptist pointed and said: behold, the Lamb of God.",
+  "source": "library/typology.html",
+  "scenes": [
+    {
+      "dur": 3.2,
+      "big": [
+        {"t": "The Old Testament", "c": "cream", "s": 62},
+        {"t": "keeps pointing", "c": "cream", "s": 62},
+        {"t": "to Jesus.", "c": "gold", "s": 80}
+      ],
+      "sub": [
+        {"t": "Not prophecy — pattern.", "c": "dim", "f": "serif", "s": 42}
+      ]
+    },
+    {
+      "kicker": "START ON A MOUNTAIN",
+      "dur": 5.0,
+      "lines": [
+        {"t": "A beloved, only son", "c": "cream", "s": 48},
+        {"t": "carries the wood", "c": "cream", "s": 48},
+        {"t": "up a hill outside Jerusalem —", "c": "cream", "s": 44},
+        {"t": "", "s": 12},
+        {"t": "his father says God", "c": "cream", "s": 46},
+        {"t": "will provide the lamb.", "c": "gold", "f": "serifb", "s": 50},
+        {"t": "— Genesis 22", "c": "dim", "f": "serif", "s": 34}
+      ]
+    },
+    {
+      "kicker": "THIS ISN'T A PREDICTION",
+      "dur": 4.4,
+      "lines": [
+        {"t": "It's Abraham's true history.", "c": "cream", "s": 46},
+        {"t": "And yet it rhymes.", "c": "cream", "s": 48},
+        {"t": "", "s": 12},
+        {"t": "Christians call this", "c": "cream", "s": 44},
+        {"t": "typology.", "c": "gold", "f": "serifb", "s": 64}
+      ]
+    },
+    {
+      "kicker": "A TYPE, NOT A CODE",
+      "dur": 4.6,
+      "lines": [
+        {"t": "A real person or event", "c": "cream", "s": 48},
+        {"t": "God shaped to foreshadow", "c": "cream", "s": 46},
+        {"t": "something greater —", "c": "cream", "s": 48},
+        {"t": "", "s": 12},
+        {"t": "and greater is the key word.", "c": "gold", "f": "serifb", "s": 46}
+      ]
+    },
+    {
+      "kicker": "THE PASSOVER LAMB",
+      "dur": 5.0,
+      "lines": [
+        {"t": "Without blemish.", "c": "cream", "s": 50},
+        {"t": "Blood that shields from judgment.", "c": "cream", "s": 40},
+        {"t": "Not one of its bones broken.", "c": "cream", "s": 44},
+        {"t": "", "s": 12},
+        {"t": "“Christ, our Passover lamb.”", "c": "gold", "f": "serifb", "s": 46},
+        {"t": "— 1 Corinthians 5:7", "c": "dim", "f": "serif", "s": 34}
+      ]
+    },
+    {
+      "kicker": "JOSEPH",
+      "dur": 4.8,
+      "lines": [
+        {"t": "Betrayed by his brothers,", "c": "cream", "s": 46},
+        {"t": "sold for silver,", "c": "cream", "s": 48},
+        {"t": "raised to a king's right hand —", "c": "cream", "s": 44},
+        {"t": "", "s": 12},
+        {"t": "to save the ones", "c": "cream", "s": 46},
+        {"t": "who betrayed him.", "c": "gold", "f": "serifb", "s": 50}
+      ]
+    },
+    {
+      "kicker": "THE TABERNACLE",
+      "dur": 4.6,
+      "lines": [
+        {"t": "Where God dwelt", "c": "cream", "s": 50},
+        {"t": "with his people.", "c": "cream", "s": 50},
+        {"t": "", "s": 12},
+        {"t": "“The Word became flesh", "c": "cream", "s": 44},
+        {"t": "and dwelt among us.”", "c": "gold", "f": "serifb", "s": 48},
+        {"t": "— John 1:14", "c": "dim", "f": "serif", "s": 34}
+      ]
+    },
+    {
+      "kicker": "THE HONEST PART",
+      "dur": 5.0,
+      "lines": [
+        {"t": "This isn't proof by odds.", "c": "cream", "s": 46},
+        {"t": "It isn't prophecy.", "c": "cream", "s": 48},
+        {"t": "", "s": 12},
+        {"t": "A pattern you see in hindsight —", "c": "cream", "s": 42},
+        {"t": "once you trust that he rose.", "c": "gold", "f": "serifb", "s": 46}
+      ]
+    },
+    {
+      "kicker": "BUT ONCE YOU DO",
+      "dur": 5.0,
+      "lines": [
+        {"t": "A library written", "c": "cream", "s": 48},
+        {"t": "over a thousand years,", "c": "cream", "s": 46},
+        {"t": "by dozens who never met,", "c": "cream", "s": 44},
+        {"t": "", "s": 12},
+        {"t": "turns out to have", "c": "cream", "s": 46},
+        {"t": "one center.", "c": "gold", "f": "serifb", "s": 58}
+      ]
+    },
+    {
+      "dur": 4.4,
+      "big": [
+        {"t": "“Where is the lamb?”", "c": "cream", "s": 54},
+        {"t": "asked Isaac.", "c": "cream", "s": 46},
+        {"t": "“Behold, the Lamb of God.”", "c": "gold", "s": 50}
+      ],
+      "sub": [
+        {"t": "The full case at", "c": "dim", "f": "serif", "s": 40},
+        {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50}
+      ]
+    }
+  ]
+}

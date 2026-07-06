@@ -1,0 +1,119 @@
+{
+  "reviewed": {
+    "argument": "2026-07-05",
+    "orthodoxy": "2026-07-05",
+    "by": "argument+orthodoxy gates (early-creed resurrection reel)"
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.55,
+  "pace": 1.3,
+  "voiceover": "How soon did people start saying Jesus rose from the dead? The skeptic's best move is to call it a legend — a story that grew over decades, blurred by time until a dying-and-rising god emerged. But there's a problem. Writing around AD 55, the apostle Paul stops and recites a creed he says he did not invent — one he 'received' and 'delivered.' It's 1 Corinthians 15: that Christ died for our sins, was buried, was raised on the third day, and appeared. And the creed carries its own age. It uses the rabbinic language of received-and-delivered tradition, its wording isn't Paul's usual Greek, and it names Peter by his Aramaic name, Cephas — the marks of a formula older than the letter that quotes it. So count backward. The crucifixion is around AD 30. Paul says that within a few years of his conversion he went to Jerusalem and met Peter and James — the very men the creed names as witnesses. That puts the creed within about two to five years of the cross. This isn't a Christian-only conclusion. The atheist New Testament scholar Gerd Lüdemann dated the tradition to the first two years after the crucifixion. Now, stated honestly: this does not by itself prove the resurrection. What it proves is that the belief was early, sincere, and anchored in named eyewitnesses — far too early for legend to have done its slow work. Not a legend that grew. A claim from the very start.",
+  "source": "library/earlycreed.html",
+  "scenes": [
+    {
+      "dur": 3.2,
+      "big": [
+        {"t": "How soon did people", "c": "cream", "s": 54},
+        {"t": "say Jesus rose?", "c": "gold", "s": 72}
+      ],
+      "sub": [
+        {"t": "Not decades later. A few years.", "c": "dim", "f": "serif", "s": 40}
+      ]
+    },
+    {
+      "kicker": "THE SKEPTIC'S BEST MOVE",
+      "dur": 4.8,
+      "lines": [
+        {"t": "Call it a legend —", "c": "cream", "s": 50},
+        {"t": "a story that grew", "c": "cream", "s": 48},
+        {"t": "over decades,", "c": "cream", "s": 48},
+        {"t": "", "s": 12},
+        {"t": "blurred by time.", "c": "gold", "f": "serifb", "s": 52}
+      ]
+    },
+    {
+      "kicker": "BUT PAUL QUOTES SOMETHING OLDER",
+      "dur": 5.0,
+      "lines": [
+        {"t": "Writing around AD 55,", "c": "cream", "s": 46},
+        {"t": "Paul recites a creed", "c": "cream", "s": 48},
+        {"t": "he says he did not invent —", "c": "cream", "s": 44},
+        {"t": "", "s": 12},
+        {"t": "one he “received.”", "c": "gold", "f": "serifb", "s": 50},
+        {"t": "— 1 Corinthians 15:3", "c": "dim", "f": "serif", "s": 34}
+      ]
+    },
+    {
+      "kicker": "IT CARRIES ITS OWN AGE",
+      "dur": 5.2,
+      "lines": [
+        {"t": "Rabbinic “received /", "c": "cream", "s": 46},
+        {"t": "delivered” language.", "c": "cream", "s": 46},
+        {"t": "Not Paul's usual words.", "c": "cream", "s": 46},
+        {"t": "Peter's Aramaic name: Cephas.", "c": "gold", "f": "serifb", "s": 42},
+        {"t": "", "s": 12},
+        {"t": "A formula older than the letter.", "c": "dim", "s": 40}
+      ]
+    },
+    {
+      "kicker": "SO COUNT BACKWARD",
+      "dur": 5.2,
+      "lines": [
+        {"t": "Crucifixion: about AD 30.", "c": "cream", "s": 46},
+        {"t": "Within a few years Paul meets", "c": "cream", "s": 42},
+        {"t": "Peter and James in Jerusalem", "c": "cream", "s": 42},
+        {"t": "(Galatians 1:18–19) —", "c": "dim", "f": "serif", "s": 36},
+        {"t": "", "s": 12},
+        {"t": "the very men the creed names.", "c": "gold", "f": "serifb", "s": 44}
+      ]
+    },
+    {
+      "kicker": "SO HOW EARLY?",
+      "dur": 4.8,
+      "lines": [
+        {"t": "The scholarly consensus:", "c": "cream", "s": 46},
+        {"t": "strikingly early.", "c": "gold", "f": "serifb", "s": 54},
+        {"t": "", "s": 12},
+        {"t": "The window works out to", "c": "cream", "s": 44},
+        {"t": "2 to 5 years", "c": "gold", "f": "serifb", "s": 58},
+        {"t": "of the cross.", "c": "cream", "s": 46}
+      ]
+    },
+    {
+      "kicker": "EVEN A SKEPTIC AGREES",
+      "dur": 5.0,
+      "lines": [
+        {"t": "The atheist scholar", "c": "cream", "s": 46},
+        {"t": "Gerd Lüdemann dated it", "c": "cream", "s": 46},
+        {"t": "to “the first two years", "c": "gold", "f": "serifb", "s": 46},
+        {"t": "after the crucifixion.”", "c": "gold", "f": "serifb", "s": 46}
+      ]
+    },
+    {
+      "kicker": "STATED HONESTLY",
+      "dur": 5.2,
+      "lines": [
+        {"t": "This doesn't by itself", "c": "cream", "s": 46},
+        {"t": "prove the resurrection.", "c": "cream", "s": 46},
+        {"t": "", "s": 12},
+        {"t": "It proves the belief was early,", "c": "cream", "s": 42},
+        {"t": "sincere, eyewitness-anchored —", "c": "gold", "f": "serifb", "s": 42},
+        {"t": "too early for legend.", "c": "cream", "s": 44}
+      ]
+    },
+    {
+      "dur": 4.2,
+      "big": [
+        {"t": "Not a legend", "c": "cream", "s": 58},
+        {"t": "that grew.", "c": "cream", "s": 58},
+        {"t": "A claim from the start.", "c": "gold", "s": 56}
+      ],
+      "sub": [
+        {"t": "The full case at", "c": "dim", "f": "serif", "s": 40},
+        {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50}
+      ]
+    }
+  ]
+}
