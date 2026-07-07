@@ -1,0 +1,372 @@
+{
+  "reviewed": {
+    "argument": "2026-07-07",
+    "orthodoxy": "2026-07-07",
+    "by": "argument+orthodoxy gates (Paul conversion / hostile-witness reel)"
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.55,
+  "pace": 1.3,
+  "voiceover": "This isn't a believer's story about Jesus. It's an enemy's confession. In his own hand, Saul of Tarsus wrote that he persecuted the church of God violently and tried to destroy it. He had every earthly reason not to switch sides - status, a career, his safety - and he burned all of it, escaping one city lowered in a basket through a hole in the wall. And notice: none of the easy explanations fit him. He wasn't grieving Jesus. He wasn't hoping Jesus was alive - he thought the movement was blasphemy worth killing for. He wasn't swept along by the group - he was leading the other side. But here's the part most people never hear. He didn't just believe it. He went and cross-examined the other witnesses: fifteen days with Peter, then with James, the very men who said they saw Jesus alive. And it's early - Paul's letters come before the gospels, and the creed he quotes dates to within a few years of the cross. Even atheist scholars grant these facts. So the honest question isn't whether Paul was sincere - everyone agrees he was. It's whether he was right, or sincerely mistaken. The fairest skeptic says he had a real but subjective vision. But a vision of what? Visions are primed by grief, hope, or expectation, and Paul had none of them. He set out to arrest Christians, not join them. One man doesn't prove the resurrection by himself. But he is the enemy who switched sides - and whatever met him on that road turned Christianity's fiercest destroyer into the man who spent his life, and by strong early tradition his death, still proclaiming it.",
+  "source": "library/paulconv.html",
+  "scenes": [
+    {
+      "dur": 3.4,
+      "big": [
+        {
+          "t": "This isn't a believer's",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "story about Jesus.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "It's an enemy's confession.",
+          "c": "gold",
+          "s": 52
+        }
+      ],
+      "sub": [
+        {
+          "t": "Meet Saul of Tarsus.",
+          "c": "dim",
+          "f": "serif",
+          "s": 40
+        }
+      ]
+    },
+    {
+      "kicker": "IN HIS OWN HAND",
+      "dur": 5.0,
+      "lines": [
+        {
+          "t": "He wrote it himself:",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "“I persecuted the church of God",
+          "c": "gold",
+          "f": "serifb",
+          "s": 42
+        },
+        {
+          "t": "violently and tried",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "to destroy it.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "— Galatians 1:13",
+          "c": "dim",
+          "f": "serif",
+          "s": 34
+        }
+      ]
+    },
+    {
+      "kicker": "HE HAD EVERY REASON NOT TO",
+      "dur": 5.0,
+      "lines": [
+        {
+          "t": "Status. A career. His safety.",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "He burned all of it —",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "and fled one city lowered",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "in a basket through the wall.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "kicker": "NONE OF THE EASY ANSWERS FIT",
+      "dur": 5.0,
+      "lines": [
+        {
+          "t": "No grief — he wasn't mourning Jesus.",
+          "c": "cream",
+          "s": 38
+        },
+        {
+          "t": "No wishful thinking —",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "he thought it was blasphemy.",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "No peer pressure —",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "he was leading the other side.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 42
+        }
+      ]
+    },
+    {
+      "kicker": "BUT HERE'S WHAT YOU HAVEN'T HEARD",
+      "dur": 4.8,
+      "lines": [
+        {
+          "t": "He didn't just believe it.",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "He went and cross-examined",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "the other eyewitnesses.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "kicker": "HE FACT-CHECKED IT",
+      "dur": 5.0,
+      "lines": [
+        {
+          "t": "Fifteen days with Peter.",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "Then with James.",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "The very men who said",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "they saw Jesus alive.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "— Galatians 1:18–19",
+          "c": "dim",
+          "f": "serif",
+          "s": 34
+        }
+      ]
+    },
+    {
+      "kicker": "AND IT'S EARLY",
+      "dur": 4.6,
+      "lines": [
+        {
+          "t": "Paul's letters predate the gospels.",
+          "c": "cream",
+          "s": 40
+        },
+        {
+          "t": "The creed he quotes dates",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "to within a few years of the cross.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 40
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Even atheist scholars grant it.",
+          "c": "dim",
+          "s": 42
+        }
+      ]
+    },
+    {
+      "kicker": "THE FAIREST SKEPTIC",
+      "dur": 4.6,
+      "lines": [
+        {
+          "t": "Everyone agrees he was sincere.",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "The question is whether he was",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "right — or sincerely mistaken.",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "“A real but subjective vision.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 42
+        }
+      ]
+    },
+    {
+      "kicker": "BUT A VISION OF WHAT?",
+      "dur": 5.0,
+      "lines": [
+        {
+          "t": "Visions are primed by grief,",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "hope, or expectation.",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Paul had none of them.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "He set out to arrest Christians —",
+          "c": "cream",
+          "s": 40
+        },
+        {
+          "t": "not to join them.",
+          "c": "cream",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "kicker": "STATED HONESTLY",
+      "dur": 4.8,
+      "lines": [
+        {
+          "t": "One man doesn't prove it alone.",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "He's one hostile witness",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "in a much bigger case —",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "the enemy who switched sides.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "dur": 4.4,
+      "big": [
+        {
+          "t": "Not a fan. Not a follower.",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "An enemy — who met",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "something on that road.",
+          "c": "gold",
+          "s": 52
+        }
+      ],
+      "sub": [
+        {
+          "t": "The full case at",
+          "c": "dim",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    }
+  ]
+}
