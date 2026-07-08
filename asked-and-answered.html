@@ -99,6 +99,7 @@
     .trust p { font-family:var(--font-ui); font-size:0.88rem; color:var(--text-mid); line-height:1.7; }
     .trust-steps { display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:1rem; }
     .trust-step { font-family:var(--font-ui); font-size:0.76rem; color:var(--navy-600); background:var(--navy-50); border:1px solid var(--border); border-radius:20px; padding:6px 13px; }
+    .disclaimer { font-family:var(--font-ui); font-size:0.75rem; color:var(--text-muted); line-height:1.6; margin-top:1rem; padding-top:0.9rem; border-top:1px dashed var(--border); }
 
     .tl-wrap { margin-top:3rem; }
     .section-label { font-family:var(--font-ui); font-size:0.68rem; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-muted); margin-bottom:1.5rem; display:flex; align-items:center; gap:12px; }
@@ -212,15 +213,16 @@
     </div>
 
     <div class="trust">
-      <h3>Why you can trust these answers</h3>
-      <p>Answers drawn from our library have passed our full review chain — citation fact-check, argument soundness, and a final orthodoxy gate — the same agents that vet our Evidence Library essays. Fresh AI answers to new questions follow the same orthodoxy guardrails and are clearly labelled as AI-generated.</p>
+      <h3>How these answers are made</h3>
+      <p>Answers here are written by AI, held inside strict guardrails: classical (Nicene) orthodoxy, no invented quotes or statistics, and every objection steelmanned in its strongest accurate form before it's answered. They are clearly labelled as AI-generated and are <em>not</em> individually reviewed by a person.</p>
       <div class="trust-steps">
-        <span class="trust-step">Citation fact-check</span>
-        <span class="trust-step">Argument soundness</span>
-        <span class="trust-step">Orthodoxy gate</span>
-        <span class="trust-step">Gentle-but-honest tone</span>
+        <span class="trust-step">Nicene orthodoxy</span>
+        <span class="trust-step">No fabricated quotes</span>
+        <span class="trust-step">Steelman first</span>
+        <span class="trust-step">Gentle &amp; honest tone</span>
       </div>
-      <p style="margin-top:1rem;">Answers from our library carry no invented quotes or statistics; live AI answers follow the same rule and are clearly labelled as AI-generated. Every objection is steelmanned in its strongest accurate form before it's answered — because charity is accuracy.</p>
+      <p style="margin-top:1rem;">The deep-dive essays and answers we link to for further reading <em>have</em> been through our full human-supervised review chain — citation fact-check, argument soundness, and a final orthodoxy gate.</p>
+      <p class="disclaimer">Answers are for study and to help you think and respond — they are not personal, pastoral, medical, legal, or professional advice. For personal or spiritual guidance, please talk with a trusted pastor or minister.</p>
     </div>
 
     <div class="tl-wrap">
@@ -267,63 +269,6 @@
     async function signOut(){ try { if(sb) await sb.auth.signOut(); } catch(e){} window.location.href='index.html'; }
 
     // ═══════ CURATED SAMPLE ANSWERS (static; passed citations + argument + orthodoxy) ═══════
-    const SAMPLES = [
-      {
-        keys: ["gospel","written","decades","anonymous","author","late","unreliable","forty years","40 years"],
-        chip: "The Gospels were written too late to trust",
-        obj: "The Gospels were written decades after Jesus, by unknown authors, so they can't be trusted.",
-        ans: `<p>That's a fair concern, and it deserves a real answer rather than a brush-off. Two things.</p>
-              <p><b>First, our earliest evidence isn't the Gospels.</b> Paul quotes a creed in 1&nbsp;Corinthians 15:3&ndash;7 — naming eyewitnesses — that most scholars, including skeptics, date to within a few years of the crucifixion. That's far too early to be legend.</p>
-              <p><b>Second, "decades later" is normal for ancient history</b> and doesn't by itself mean unreliable — several of our best sources for figures like Alexander the Great were written centuries after the events. The Gospels were also circulating while people who knew Jesus were still alive to push back. The time gap is real; the leap to "therefore worthless" is the part that doesn't follow.</p>
-              <p><b>On "anonymous authors":</b> that's a fair and separate question — the traditional authors are defended from early external testimony, and it's covered in the deep-dive below. But it's distinct from the timing point here: even setting authorship aside, the earliest evidence for the resurrection predates all four Gospels.</p>`,
-        good: "This is close to what Celsus argued in the 2nd century — that the disciples made the story up. Origen answered him at length in <em>Against Celsus</em> (c. 248 AD). It's one of the oldest objections there is.",
-        links: [
-          {label:"The Historical Jesus", href:"/ev-m-hist_jesus.html"},
-          {label:"The Early Creed (1 Cor 15)", href:"/ev-m-earlycreed.html"},
-          {label:"When were the Gospels written?", href:"/answers/when-were-the-gospels-written.html"}
-        ]
-      },
-      {
-        keys: ["exist","existed","real person","made up","mythical","never lived","no evidence jesus"],
-        chip: "There's no evidence Jesus even existed",
-        obj: "There's no real evidence Jesus ever existed — he's a myth.",
-        ans: `<p>If Jesus showed up <em>only</em> in Christian sources, that would be a fair worry. But he doesn't.</p>
-              <p>Non-Christian writers mention him within about a century of his life — the Roman historian Tacitus (a hostile witness), the Jewish historian Josephus, and the Roman official Pliny the Younger among them. That's why virtually no professional historian, atheist or Christian, doubts that Jesus existed; the "myth" claim is a fringe position online, not the consensus in the academy.</p>
-              <p>The serious historical debate has never been <em>whether</em> Jesus lived, but <em>who he was</em> — and that's the better conversation to have.</p>`,
-        good: "Even Bart Ehrman — an agnostic New Testament scholar — wrote a whole book (<em>Did Jesus Exist?</em>, 2012) arguing against the myth theory. The people who study this for a living aren't the ones saying he didn't exist.",
-        links: [
-          {label:"The Historical Jesus", href:"/ev-m-hist_jesus.html"},
-          {label:"Evidence for Jesus outside the Bible", href:"/answers/is-there-evidence-for-jesus-outside-the-bible.html"}
-        ]
-      },
-      {
-        keys: ["evil","suffering","suffer","pain","if god is good","why does god allow","cancer","children die"],
-        chip: "If God is good, why is there so much suffering?",
-        obj: "If God is real and good, why is there so much evil and suffering in the world?",
-        ans: `<p>This is the hardest question there is, and it deserves honesty before any argument: no tidy formula makes real suffering acceptable, and Christianity doesn't pretend to offer one.</p>
-              <p>What it offers instead is two things. <b>First, a God who didn't stay distant from the pain</b> — in Jesus, God the Son entered it himself, in the flesh, at the cross. <b>Second, a point that's easy to miss:</b> to call suffering genuinely <em>evil</em> — not just unpleasant — you need a real standard of good, which is far easier to ground if God exists than if the universe is blind matter.</p>
-              <p>Philosophically, the mere existence of evil doesn't logically disprove God; thinkers like Alvin Plantinga have shown the two aren't contradictory. That's a defense, not a full explanation — the mystery is real. But "there is evil, therefore no God" doesn't actually follow.</p>`,
-        good: "This puzzle is traditionally credited to Epicurus over 2,000 years ago, and David Hume sharpened it in the 1700s. It's one of the oldest and most serious objections there is — and it's been wrestled with honestly ever since, not ignored.",
-        links: [
-          {label:"The Problem of Evil", href:"/library/evil.html"},
-          {label:"The Moral Argument", href:"/ev-m-moral.html"}
-        ]
-      },
-      {
-        keys: ["resurrection","legend","grew over time","rose from the dead","made up later","myth grew","embellish"],
-        chip: "The resurrection is just a legend that grew over time",
-        obj: "The resurrection is just a legend that grew and got embellished over the years.",
-        ans: `<p>If the resurrection story had developed slowly over generations, "legend" would be a reasonable diagnosis. The problem is the timing.</p>
-              <p>Paul quotes a creed in 1&nbsp;Corinthians 15:3&ndash;7 — listing named eyewitnesses to the risen Jesus — that scholars date to within a few years of the crucifixion, not generations later. On top of that, you still have to explain the empty tomb, the disciples who were willing to die for what they claimed to have seen, and the conversion of skeptics like Paul and James.</p>
-              <p>Legends don't usually grow that fast, in the very place the events happened, among people positioned to know better. You can reject the resurrection — but "a slowly-growing legend" doesn't fit the earliest evidence.</p>`,
-        good: "The skeptic David Strauss popularised the &ldquo;myth&rdquo; reading of the Gospels in the 1800s. The early-creed evidence is precisely what makes the slow-legend version hard to sustain today — which is why the debate has moved on to explaining the earliest evidence, not denying it.",
-        links: [
-          {label:"The Early Creed (1 Cor 15)", href:"/ev-m-earlycreed.html"},
-          {label:"The Minimal Facts", href:"/ev-m-minimal.html"},
-          {label:"The Empty Tomb", href:"/ev-m-emptytomb.html"}
-        ]
-      }
-    ];
 
     const TIMELINE = [
       { when:"c. 178 AD", who:"Celsus", obj:"The pagan philosopher Celsus, in <em>The True Word</em>, called Jesus a sorcerer of illegitimate birth and claimed the disciples invented the resurrection.", ans:"Answered at length by Origen in <em>Against Celsus</em> (c. 248 AD)." },
@@ -341,10 +286,16 @@
     function tokens(s){ return s.toLowerCase().replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(w => w.length>=3 && !STOP.has(w)); }
 
     // ═══════ RENDER ═══════
+    const EXAMPLES = [
+      { chip:"The Gospels were written too late to trust", q:"The Gospels were written decades after Jesus by anonymous authors, so they can't be trusted." },
+      { chip:"There's no evidence Jesus even existed", q:"There's no real evidence Jesus ever existed \u2014 he's a myth." },
+      { chip:"If God is good, why so much suffering?", q:"If God is real and good, why is there so much evil and suffering in the world?" },
+      { chip:"Isn't the resurrection just a legend?", q:"The resurrection is just a legend that grew and got embellished over the years." }
+    ];
     const chipsEl = document.getElementById('chips');
-    SAMPLES.forEach(s => {
-      const c = document.createElement('span'); c.className='chip'; c.textContent = s.chip;
-      c.onclick = () => { document.getElementById('obj').value = s.obj; answer(); };
+    EXAMPLES.forEach(e => {
+      const c = document.createElement('span'); c.className='chip'; c.textContent = e.chip;
+      c.onclick = () => { document.getElementById('obj').value = e.q; answer(); };
       chipsEl.appendChild(c);
     });
     const tlEl = document.getElementById('timeline');
@@ -366,7 +317,7 @@
       document.getElementById('r-links').innerHTML = (o.links||[]).map(l => `<a class="deeper-link" href="${l.href}"${/^https?:|^\//.test(l.href)?'':''} target="_blank" rel="noopener">${l.label} &rarr;</a>`).join('');
       const badge=document.getElementById('r-badge'), ai=document.getElementById('r-ai');
       if (o.verified) { badge.style.display=''; ai.style.display='none'; }
-      else { badge.style.display='none'; ai.style.display=''; ai.textContent = o.aiNote || 'AI-generated within Apologia Daily’s orthodoxy guardrails — not individually human-reviewed.'; }
+      else { badge.style.display='none'; ai.style.display=''; ai.textContent = o.aiNote || 'AI-generated within our orthodoxy guardrails — not individually reviewed, and not personal or professional advice.'; }
       const r=document.getElementById('result'); r.classList.add('show'); setStatus(''); r.scrollIntoView({behavior:'smooth', block:'start'});
     }
 
@@ -386,13 +337,6 @@
       return html;
     }
 
-    function matchSample(text){
-      // Require >=2 keyword hits so a single greedy word (e.g. "exist" in "does God exist")
-      // can't drag an unrelated question into the wrong curated answer.
-      const t = text.toLowerCase(); let best=null, score=0;
-      SAMPLES.forEach(s => { let sc=0; s.keys.forEach(k => { if(t.includes(k)) sc++; }); if(sc>score){score=sc;best=s;} });
-      return score>=2 ? best : null;
-    }
     // Return up to `n` RELATED library answers (as suggestions, never as the authoritative
     // answer — keyword overlap can't tell "did God die on the cross" from "did Jesus die on
     // the cross (Islam)", so these are offered as "related reading", not served inline).
@@ -414,13 +358,10 @@
       document.getElementById('gate').classList.remove('show');
       setStatus('');
 
-      // 1) Curated sample only (hand-tuned, precise) renders inline as the answer.
-      const s = matchSample(text);
-      if (s) { render({ obj:s.obj, ans:s.ans, good:s.good, links:s.links, verified:true }); return; }
-
-      // 2) Everything else: the LIVE AI answers the actual question. Existing library
-      //    answers are attached as "related reading" links only — never served as the
-      //    answer (keyword overlap mismatches, e.g. God-on-the-cross vs the Islam page).
+      // Every question is answered by the live AI (the actual question, under the orthodoxy
+      // guardrails). Matching library answers are attached as "related reading" links only —
+      // never served as the answer (keyword overlap mismatches, e.g. God-on-the-cross vs the
+      // Islam "did Jesus die" page).
       const related = topRelated(text, 3);
       if (!isPro) { document.getElementById('result').classList.remove('show'); const g=document.getElementById('gate'); g.classList.add('show'); g.scrollIntoView({behavior:'smooth',block:'center'}); return; }
       await liveAnswer(text, related);
