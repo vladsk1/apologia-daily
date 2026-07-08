@@ -278,13 +278,6 @@
       { when:"2006&ndash;07", who:"The New Atheists", obj:"Richard Dawkins (<em>The God Delusion</em>, 2006) and Christopher Hitchens (<em>god Is Not Great</em>, 2007) revived many of these objections for a mass audience.", ans:"Largely re-runs of older arguments — with long-standing replies." }
     ];
 
-    // ═══════ RETRIEVAL INDEX (the gated /answers/ library) ═══════
-    let INDEX = [];
-    fetch('/answers/search-index.json').then(r => r.ok ? r.json() : []).then(j => { INDEX = j || []; }).catch(() => { INDEX = []; });
-
-    const STOP = new Set("a an the of to in on for and or but if is are was were be do does did how what why who when where which that this these those with about into can could should would will not no yes it its as at by from your you my me his her he she we they them i".split(" "));
-    function tokens(s){ return s.toLowerCase().replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(w => w.length>=3 && !STOP.has(w)); }
-
     // ═══════ RENDER ═══════
     const EXAMPLES = [
       { chip:"The Gospels were written too late to trust", q:"The Gospels were written decades after Jesus by anonymous authors, so they can't be trusted." },
@@ -337,19 +330,6 @@
       return html;
     }
 
-    // Return up to `n` RELATED library answers (as suggestions, never as the authoritative
-    // answer — keyword overlap can't tell "did God die on the cross" from "did Jesus die on
-    // the cross (Islam)", so these are offered as "related reading", not served inline).
-    function topRelated(text, n){
-      const q = new Set(tokens(text)); if(!q.size || !INDEX.length) return [];
-      return INDEX
-        .map(e => { let sc=0; (e.keywords||[]).forEach(k => { if(q.has(k)) sc++; }); return {e, sc}; })
-        .filter(x => x.sc >= 2)
-        .sort((a,b) => b.sc - a.sc)
-        .slice(0, n || 3)
-        .map(x => ({ label: x.e.q, href: x.e.href }));
-    }
-
     async function answer(){
       const text = document.getElementById('obj').value.trim();
       if (!text) { document.getElementById('obj').focus(); return; }
@@ -359,15 +339,13 @@
       setStatus('');
 
       // Every question is answered by the live AI (the actual question, under the orthodoxy
-      // guardrails). Matching library answers are attached as "related reading" links only —
-      // never served as the answer (keyword overlap mismatches, e.g. God-on-the-cross vs the
-      // Islam "did Jesus die" page).
-      const related = topRelated(text, 3);
+      // guardrails). "Go deeper" points to the Evidence Library rather than a keyword-guessed
+      // page, so a near-match can never mislabel the further reading.
       if (!isPro) { document.getElementById('result').classList.remove('show'); const g=document.getElementById('gate'); g.classList.add('show'); g.scrollIntoView({behavior:'smooth',block:'center'}); return; }
-      await liveAnswer(text, related);
+      await liveAnswer(text);
     }
 
-    async function liveAnswer(text, related){
+    async function liveAnswer(text){
       const btn=document.getElementById('ask-btn'); btn.disabled=true;
       setStatus('Finding the best answer…','work');
       try {
@@ -376,9 +354,7 @@
         if (!res.ok) throw new Error('API '+res.status);
         const data = await res.json();
         if (!data.answer) throw new Error('no answer');
-        const links = (related && related.length)
-          ? related
-          : [ {label:'The Evidence Library', href:'/evidence-library.html'}, {label:'Browse all answers', href:'/answers/'} ];
+        const links = [ {label:'Explore the Evidence Library', href:'/evidence-library.html'}, {label:'Browse all answers', href:'/answers/'} ];
         render({
           objLabel:'You asked', obj:text, ans: formatAnswer(data.answer), good:null,
           links, verified:false
