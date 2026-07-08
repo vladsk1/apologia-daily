@@ -70,6 +70,19 @@
     .btn-book { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; background: var(--gold); color: var(--navy-950); padding: 11px 22px; border-radius: 3px; border: none; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; transition: background 0.15s; }
     .btn-book:hover { background: var(--gold-light); }
 
+    /* GET THE BOOK BAND */
+    .buybar { display: flex; align-items: center; gap: 1.5rem; background: linear-gradient(135deg,#13243f,#0a1628); border: 1px solid var(--gold); border-radius: 10px; padding: 1.5rem 1.75rem; margin-bottom: 2rem; flex-wrap: wrap; box-shadow: 0 8px 26px rgba(200,169,81,0.10); }
+    .buybar-cover { width: 62px; aspect-ratio: 2/3; border-radius: 4px; background: linear-gradient(160deg,#1a2f52,#0c1a30); border: 1px solid rgba(255,255,255,0.15); flex-shrink: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 7px 6px; }
+    .buybar-cover .bc-q { font-family: var(--font-display); font-style: italic; color: var(--gold-light); font-size: 0.5rem; line-height: 1.12; }
+    .buybar-cover .bc-by { font-family: var(--font-ui); font-size: 0.4rem; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .buybar-text { flex: 1; min-width: 220px; }
+    .buybar-k { font-family: var(--font-ui); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+    .buybar-text h3 { font-family: var(--font-display); font-size: 1.25rem; color: #fff; font-weight: 700; line-height: 1.2; margin-bottom: 0.35rem; }
+    .buybar-text p { font-family: var(--font-ui); font-size: 0.85rem; color: rgba(255,255,255,0.62); line-height: 1.6; }
+    .buybar-btn { font-family: var(--font-ui); font-size: 0.98rem; font-weight: 600; background: var(--gold); color: var(--navy-950); padding: 14px 28px; border-radius: 6px; text-decoration: none; white-space: nowrap; box-shadow: 0 6px 18px rgba(200,169,81,0.32); transition: all 0.15s; }
+    .buybar-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+    @media (max-width: 620px){ .buybar { align-items: flex-start; } .buybar-btn { width: 100%; text-align: center; } }
+
     /* WHAT'S DIFFERENT CALLOUT */
     .diff { background: var(--navy-950); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; padding: 1.1rem 1.4rem; margin-bottom: 2rem; }
     .diff h4 { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
@@ -161,6 +174,16 @@
       <h4>What makes this club different</h4>
       <p>A normal reading club stops at discussion questions. This one connects every chapter to Apologia Daily's certified evidence pages, and adds a live drill on the pivotal ones — answer the objection in Ask Anything, spar it in the Debate Arena, catch it in a game. You don't just read the argument; you rehearse saying it.</p>
     </div>
+
+    <section class="buybar">
+      <div class="buybar-cover"><div class="bc-q">Did Jesus Really Say He Was God?</div><div class="bc-by">Del Rosario</div></div>
+      <div class="buybar-text">
+        <div class="buybar-k">Read along · Start here</div>
+        <h3>Get the book</h3>
+        <p>This club follows <em>Did Jesus Really Say He Was God?</em> by Dr. Mikel Del Rosario, chapter by chapter. Grab your copy, then work each chapter through here.</p>
+      </div>
+      <a class="buybar-btn" href="https://www.amazon.com/Did-Jesus-Really-Say-Was/dp/1514011018" target="_blank" rel="noopener">&#128214; Get the book on Amazon &rarr;</a>
+    </section>
 
     <div class="detail-grid">
       <div>
