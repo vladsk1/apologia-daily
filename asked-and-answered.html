@@ -86,6 +86,15 @@
     .verify-badge { font-family:var(--font-ui); font-size:0.74rem; color:#0f6e56; background:rgba(29,112,100,0.1); border-radius:20px; padding:4px 12px; font-weight:500; display:inline-flex; align-items:center; gap:6px; }
     .ai-note { font-family:var(--font-ui); font-size:0.73rem; color:var(--text-muted); font-style:italic; }
 
+    .followup { border-top:1px dashed var(--border); margin-top:1.35rem; padding-top:1.25rem; }
+    .followup-k { font-family:var(--font-ui); font-size:0.7rem; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted); margin-bottom:0.5rem; }
+    .fu-row { display:flex; gap:8px; align-items:flex-end; flex-wrap:wrap; }
+    #fu-input { flex:1 1 240px; font-family:var(--font-ui); font-size:0.9rem; color:var(--text-dark); background:var(--white); border:1px solid var(--border); border-radius:7px; padding:10px 12px; resize:vertical; min-height:46px; line-height:1.5; }
+    #fu-input:focus { outline:none; border-color:var(--navy-500); box-shadow:0 0 0 3px var(--navy-100); }
+    .fu-btn { font-family:var(--font-ui); font-size:0.86rem; font-weight:600; background:var(--navy-600); color:#fff; border:none; border-radius:7px; padding:11px 20px; cursor:pointer; white-space:nowrap; transition:background 0.15s; }
+    .fu-btn:hover { background:var(--navy-700); }
+    .fu-btn:disabled { opacity:0.55; cursor:default; }
+
     .gate { background:linear-gradient(135deg,#13243f,#0a1628); border:1px solid var(--gold); border-radius:12px; padding:1.9rem 1.75rem; text-align:center; margin-top:1.5rem; display:none; }
     .gate.show { display:block; animation:fade 0.3s ease; }
     .gate-k { font-family:var(--font-ui); font-size:0.64rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem; }
@@ -197,6 +206,13 @@
           </div>
           <div class="deeper-k">Go deeper</div>
           <div id="r-links"></div>
+          <div class="followup" id="followup" style="display:none;">
+            <div class="followup-k">Ask a follow-up</div>
+            <div class="fu-row">
+              <textarea id="fu-input" rows="1" placeholder="e.g. &ldquo;But how do we know the creed is that early?&rdquo;"></textarea>
+              <button class="fu-btn" id="fu-btn" onclick="askFollowUp()">Ask &rarr;</button>
+            </div>
+          </div>
         </div>
         <div class="res-foot">
           <span class="verify-badge" id="r-badge">&#10003; Reviewed for accuracy &amp; orthodoxy</span>
@@ -330,40 +346,71 @@
       return html;
     }
 
+    // Conversation state so a follow-up can build on the previous answer.
+    let lastQ = '', lastA = '';
+
     async function answer(){
       const text = document.getElementById('obj').value.trim();
       if (!text) { document.getElementById('obj').focus(); return; }
       // Clear any previous result/gate so a new query never shows stale content.
       document.getElementById('result').classList.remove('show');
       document.getElementById('gate').classList.remove('show');
+      document.getElementById('followup').style.display = 'none';
+      const fi=document.getElementById('fu-input'); if(fi) fi.value='';
       setStatus('');
 
       // Every question is answered by the live AI (the actual question, under the orthodoxy
       // guardrails). "Go deeper" points to the Evidence Library rather than a keyword-guessed
       // page, so a near-match can never mislabel the further reading.
       if (!isPro) { document.getElementById('result').classList.remove('show'); const g=document.getElementById('gate'); g.classList.add('show'); g.scrollIntoView({behavior:'smooth',block:'center'}); return; }
-      await liveAnswer(text);
+      await liveAnswer(text, text);
     }
 
-    async function liveAnswer(text){
-      const btn=document.getElementById('ask-btn'); btn.disabled=true;
+    // displayQ = what we show the reader as "You asked"; apiQ = what /api/ask actually receives
+    // (for a follow-up this carries the prior Q+A as context so the AI builds on it).
+    async function liveAnswer(displayQ, apiQ){
+      const btn=document.getElementById('ask-btn'), fbtn=document.getElementById('fu-btn');
+      btn.disabled=true; if(fbtn) fbtn.disabled=true;
       setStatus('Finding the best answer…','work');
       try {
-        const res = await fetch('/api/ask', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ question: text }) });
+        const res = await fetch('/api/ask', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ question: apiQ }) });
         if (res.status === 429) { setStatus("You've reached today's free limit for live answers. Please try again tomorrow, or browse the answered objections above.", 'err'); return; }
         if (!res.ok) throw new Error('API '+res.status);
         const data = await res.json();
         if (!data.answer) throw new Error('no answer');
         const links = [ {label:'Explore the Evidence Library', href:'/evidence-library.html'}, {label:'Browse all answers', href:'/answers/'} ];
         render({
-          objLabel:'You asked', obj:text, ans: formatAnswer(data.answer), good:null,
+          objLabel:'You asked', obj:displayQ, ans: formatAnswer(data.answer), good:null,
           links, verified:false
         });
+        // Remember this exchange, reveal the follow-up box, and clear its input.
+        lastQ = displayQ; lastA = data.answer;
+        const fu=document.getElementById('followup'), fi=document.getElementById('fu-input');
+        if(fu){ fu.style.display=''; } if(fi){ fi.value=''; }
         // flywheel: capture the question (fire-and-forget)
-        try { fetch('/api/submit-question', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ question: text, source:'asked-and-answered' }) }); } catch(e){}
+        try { fetch('/api/submit-question', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ question: displayQ, source:'asked-and-answered' }) }); } catch(e){}
       } catch(e) {
         setStatus('Something went wrong reaching the answer service. Please try again in a moment.', 'err');
-      } finally { btn.disabled=false; }
+      } finally { btn.disabled=false; if(fbtn) fbtn.disabled=false; }
+    }
+
+    // Ask a follow-up that builds on the previous answer. We fold the prior exchange into the
+    // question we send to /api/ask (no API change), so the model continues the conversation
+    // rather than starting fresh — while the reader only sees their follow-up as "You asked".
+    async function askFollowUp(){
+      const fi=document.getElementById('fu-input');
+      const fu=(fi.value||'').trim();
+      if (!fu) { fi.focus(); return; }
+      if (!lastQ || !lastA) { await liveAnswer(fu, fu); return; }
+      const apiQ =
+        'This is a follow-up question in an ongoing conversation about Christian apologetics. '
+        + 'For context, here is what was asked and answered just before.\n\n'
+        + 'Earlier question: "' + lastQ + '"\n\n'
+        + 'Your earlier answer:\n' + lastA + '\n\n'
+        + 'Follow-up question: "' + fu + '"\n\n'
+        + 'Answer the follow-up directly, building on the earlier answer where relevant. '
+        + 'Do not repeat the earlier answer in full; address the new question. Keep the same format and tone.';
+      await liveAnswer(fu, apiQ);
     }
 
     // ═══════ SCREENSHOT OCR (client-side, free) ═══════
@@ -389,6 +436,8 @@
 
     // Enter / Ctrl+Enter submits; prefill from ?q=
     document.getElementById('obj').addEventListener('keydown', e => { if ((e.key==='Enter') && (e.ctrlKey||e.metaKey)) { e.preventDefault(); answer(); } });
+    // Follow-up: Enter submits (Shift+Enter for a newline).
+    document.getElementById('fu-input').addEventListener('keydown', e => { if (e.key==='Enter' && !e.shiftKey) { e.preventDefault(); askFollowUp(); } });
     try { const pq = new URLSearchParams(location.search).get('q'); if (pq) { document.getElementById('obj').value = pq; answer(); } } catch(e){}
   </script>
   <script src="/ad-nav.js" defer></script>
