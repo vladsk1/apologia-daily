@@ -1,15 +1,34 @@
 # Handoff — Dr. Mikel Del Rosario reading-club companion study
 
-**Status: paused, waiting on the book.** Resume this in a **local** Claude Code session
-that can drive a browser (so it can read the book in Kindle Cloud Reader,
-read.amazon.com, while logged into the user's Amazon account). Everything below is
-already committed and deployed. Deploy rule unchanged: work on the feature branch,
-**never `git checkout main`**, deploy by `git push origin <branch>:main`.
+**Status (updated 2026-07-09): the ENTIRE book has now been read page by page, and all 13 session
+summaries + questions are CONFIRMED against it with ZERO changes.** The copy was first written
+(2026-07-08) from a partial read; it was then verified (2026-07-09) against a **complete
+page-by-page read of the entire main text** (Introduction + all 12 chapters, pp. 1–203; back matter
+not needed) — every previously-skimmed chapter middle was read, and **every summary and every
+question was confirmed with no changes required.** Directly verified against the book: the certainty
+scale (−4..+4); the ten data points (two +4 "certainly historical" = miracle-worker reputation &
+rejection/crucifixion-under-Rome, eight +3 "very probable"); the five best-explanation criteria; the
+five critics (Hägerland/Ehrman/Casey/Borg/Kirk); 1 Enoch 37–71 (Son of Man as heavenly judge); and
+**Table 11.1 exactly** (Hägerland P/F/F/F/—, Ehrman F/F/F/F/—, Kirk P/P/F/F/P, divine hypothesis
+P/P/P/P/P — Kirk's illumination legitimately updates from "—" in ch. 10's Table 10.3 to "P" in
+ch. 11's Table 11.1, and the demo cites the final table, so its values are correct). The book's own
+conclusion lands on **classical Nicene orthodoxy** (it quotes the Nicene Creed) and the **1 Cor 15:3–5
+early creed** (Dunn: "within months" of the crucifixion) — fully aligned with the site's guardrails.
+Per-page reading notes: session scratchpad `delrosario-book-notes.md`. Gates run: **apologia-citations CLEAN** (all scripture
+quotes match ESV; Hägerland/Casey/Ehrman/Kirk/1 Enoch correctly attributed); **apologia-evidence**
+(standing in for the dedicated gates, which are NOT registered in this session) — orthodoxy CLEAN,
+argument PASS after one detail-hero overstatement was re-hedged. **Still to do before public launch:**
+(a) run the dedicated **apologia-argument + apologia-orthodoxy** gates in a session where they load;
+(b) swap the "Get the book" link for the author's affiliate link; (c) optional orthonote clarifier;
+(d) human/pastoral sign-off + the author's own review; (e) draft + send the DM. NOT yet
+deployed/committed — the rewrite currently lives in the local working tree only. Deploy rule
+unchanged: work on the feature branch, **never `git checkout main`**, deploy by
+`git push origin <branch>:main`.
 
 ## The opportunity
 Dr. Mikel Del Rosario (@apologeticsguy — PhD, host of the *Table Podcast*, foreword by
 Darrell L. Bock) wrote **_Did Jesus Really Say He Was God? Making Sense of His Historical
-Claims_** (IVP Academic, 2024). The user reached out via Instagram to build an interactive
+Claims_** (IVP Academic, 2025). The user reached out via Instagram to build an interactive
 **study on Apologia Daily based on his book**; he replied he's **willing to look at a demo**.
 This is a credibility + traffic partnership (see `docs/CREATOR_OUTREACH.md`).
 
@@ -55,10 +74,21 @@ This is a credibility + traffic partnership (see `docs/CREATOR_OUTREACH.md`).
   - 12. Conclusion: How Jesus Said He Was God
 - Back matter: Glossary · Notes · Bibliography · General Index · Scripture Index · About the Author
 
-## THE NEXT TASK (why we paused) — verify against the actual book
-The **chapter titles + the two Mark passages are verified**; the **per-session `summary` prose and
-the `questions` are my inferences from the titles + public info — NOT checked against the book's
-actual pages.** A scholar will spot a misread instantly, so before sending:
+## THE NEXT TASK — ✅ DONE 2026-07-08, then FULLY VERIFIED 2026-07-09 (page by page)
+~~The per-session `summary` prose and `questions` are inferences from the titles + public info —
+NOT checked against the book's actual pages.~~ **RESOLVED and now FULLY VERIFIED:** the book was
+read directly in Kindle Cloud Reader. All 13 `summary` + `questions` were first rewritten (07-08)
+to match Del Rosario's real content, then (07-09) checked against a **complete page-by-page read of
+the entire main text** — every chapter middle included — and **confirmed with zero changes.**
+Real errors that were fixed vs. the old inferred copy: Ch 2 no longer ties the chapter to the
+1 Cor 15 creed (it's actually about historical *method* — best-explanation reasoning + criteria of
+authenticity); Ch 5 now centers Tobias Hägerland's challenge to Mark 2:10 + the five questions;
+Ch 8 now names Casey/Ehrman's "three-pronged" argument that it *wasn't* blasphemy; Ch 10/11 now
+reflect the real ten-data-points / five-criteria contest and J. R. Daniel Kirk's "idealized human"
+view; the book's actual engine (argue from **Mark not John**, focus on the **enemies'** reaction)
+now runs through the copy. Detailed per-chapter reading notes: session scratchpad
+`delrosario-book-notes.md`. The original steps are kept below for reference; steps 1–3 are done,
+steps 4–6 remain:
 
 1. **Read the book** in Kindle Cloud Reader (local browser session; the sandboxed cloud session
    here could not). Work chapter by chapter.
