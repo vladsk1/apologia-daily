@@ -66,6 +66,8 @@
     .detail-actions { display: flex; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap; }
     .btn-join { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; background: var(--navy-700); color: var(--white); padding: 11px 24px; border-radius: 3px; border: none; cursor: pointer; transition: background 0.15s; }
     .btn-join:hover { background: var(--navy-600); }
+    .btn-book { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500; background: var(--gold); color: var(--navy-950); padding: 11px 22px; border-radius: 3px; border: none; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; transition: background 0.15s; }
+    .btn-book:hover { background: var(--gold-light); }
 
     /* WHAT'S DIFFERENT CALLOUT */
     .diff { background: var(--navy-950); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; padding: 1.1rem 1.4rem; margin-bottom: 2rem; }
@@ -141,13 +143,16 @@
         <div class="detail-title">Did Jesus Really Say He Was God?</div>
         <div class="detail-author">by <b>Dr. Mikel Del Rosario</b> &middot; Foreword by Darrell&nbsp;L.&nbsp;Bock &middot; IVP Academic</div>
         <div class="detail-meta-row">
-          <div class="detail-meta-item"><strong>6 sessions</strong>Self-paced</div>
-          <div class="detail-meta-item"><strong>4 parts</strong>Mark 2 &amp; Mark 14</div>
-          <div class="detail-meta-item"><strong>Reading + drills</strong>For every stage</div>
+          <div class="detail-meta-item"><strong>13 sessions</strong>Intro + 12 chapters</div>
+          <div class="detail-meta-item"><strong>Four parts</strong>Mark 2 &amp; Mark 14</div>
+          <div class="detail-meta-item"><strong>Reading + drills</strong>For every chapter</div>
           <div class="detail-meta-item"><span class="book-status status-joining">Featured club</span></div>
         </div>
-        <div class="detail-desc">Can we show — by the standards of professional historians — that Jesus claimed to be God? Del Rosario builds the case through two Gospel scenes: the paralytic Jesus forgives in Mark 2, and the trial where he answers the high priest in Mark 14. This club walks that argument one session at a time, then hands you the tools to defend it.</div>
-        <div class="detail-actions"><button class="btn-join" onclick="alert('Demo preview — joining is disabled in this private build.')">Join this reading club</button></div>
+        <div class="detail-desc">Can we show — by the standards of professional historians — that Jesus claimed to be God? Del Rosario builds the case through two parallel &ldquo;blasphemy accusation&rdquo; scenes: the paralytic Jesus forgives in Mark 2 (authority to <em>forgive</em> sins), and the Jewish examination in Mark 14 (authority to <em>judge</em> sins). Each scene runs the same three beats — the core scene, the blasphemy charge, the divine claim. This club walks the book chapter by chapter, then hands you the tools to defend it.</div>
+        <div class="detail-actions">
+          <button class="btn-join" onclick="alert('Demo preview — joining is disabled in this private build.')">Join this reading club</button>
+          <a class="btn-book" href="https://www.amazon.com/Did-Jesus-Really-Say-Was/dp/1514011018" target="_blank" rel="noopener">&#128214; Get the book</a>
+        </div>
       </div>
     </div>
 
@@ -172,9 +177,9 @@
         <div class="sidebar-panel">
           <div class="panel-header"><div class="panel-title">A note for Dr. Del Rosario</div></div>
           <div class="panel-body">
-            <p>This is a working preview built <em>around</em> your book's public structure — the four movements, the focus on Mark&nbsp;2:1&ndash;12 and Mark&nbsp;14:53&ndash;65, and the historian's-method framing.</p>
-            <p>Nothing here reproduces your text. Before it goes live under your name, we'd set the session titles to match your exact chapters and invite your edits on every summary and question.</p>
-            <p class="fine">Demo build · session mapping provisional · pending author review.</p>
+            <p>The 13 sessions follow your book's own table of contents — the introduction, all twelve chapters, and the four parts, in order.</p>
+            <p>The chapter <em>titles</em> are yours; the summaries, drills, and discussion questions are ours, and nothing here reproduces your text. Before it goes live under your name we'd invite your edits on every one, and swap the &ldquo;Get the book&rdquo; link for your preferred store or affiliate link.</p>
+            <p class="fine">Demo build · titles from the published contents · summaries pending your review.</p>
           </div>
         </div>
       </div>
@@ -189,46 +194,95 @@
   <script>
     const CH = [
       {
-        num: "Intro", title: "More Than a Man?", part: "Part 1 — The Historian's Method", current: true,
-        summary: "Before we ask what Jesus claimed, we ask how a historian tests any ancient claim: early sources, independent lines of testimony, and material an author wouldn't invent. This is the ground the book stands on — not “the Bible says,” but criteria a secular historian would accept.",
-        reads: [ {label:"The Historical Jesus", link:"https://apologiadaily.com/ev-m-hist_jesus.html"}, {label:"Multiple Attestation", link:"https://apologiadaily.com/ev-m-multiatt.html"} ],
+        num: "Intro", title: "More Than a Man?", part: "Introduction", current: true,
+        summary: "Del Rosario sets the question: not whether the church later worshipped Jesus, but whether Jesus himself — read as a figure in ancient history — claimed divine authority. The whole book turns on two Gospel scenes and one honest historical test.",
+        reads: [ {label:"The Historical Jesus", link:"https://apologiadaily.com/ev-m-hist_jesus.html"} ],
+        drills: [],
+        questions: ["Why frame the question historically — “what did Jesus claim?” — rather than theologically?", "What would count, for you, as good evidence that Jesus claimed divine authority?"]
+      },
+      {
+        num: "Ch. 1", title: "Let's Make History: How Historians Discover Past Events", part: "Part One — Person of Interest",
+        summary: "How do historians recover any past event? Early sources, independent testimony, and details that cut against the author's interest. This is the toolkit the rest of the book uses — the case is built on criteria a secular historian would accept, not on “the Bible says.”",
+        reads: [ {label:"Multiple Attestation", link:"https://apologiadaily.com/ev-m-multiatt.html"} ],
         drills: [],
         questions: ["What makes a source count as good historical evidence, whatever the topic?", "Why does starting from a historian's criteria change the conversation with a skeptic?"]
       },
       {
-        num: "Ch. 1", title: "The Healing of the Paralytic — Mark 2:1–12", part: "Part 2 — The Man Who Forgave Sins",
-        summary: "A paralyzed man is lowered through a roof, and Jesus's first words aren't about his legs — they're about his sins. Walk the scene the way the book does, watching what Jesus assumes about his own authority.",
+        num: "Ch. 2", title: "Rules of Evidence: Investigating the Historical Jesus", part: "Part One — Person of Interest",
+        summary: "Apply the rules to Jesus. The earliest sources sit remarkably close to the events — the 1 Corinthians 15 creed is a textbook example of evidence that predates legend. This chapter is where “rules of evidence” stop being abstract.",
+        reads: [ {label:"The Historical Jesus", link:"https://apologiadaily.com/ev-m-hist_jesus.html"}, {label:"The Early Creed (1 Cor 15)", link:"https://apologiadaily.com/ev-m-earlycreed.html"} ],
+        drills: [],
+        questions: ["Which “rule of evidence” do you think does the most work in this case?", "How early is early enough to rule out legend?"]
+      },
+      {
+        num: "Ch. 3", title: "The Core Scene: A Miraculous Healing", part: "Part Two — First Blasphemy Scene (Mark 2:1–12)",
+        summary: "A paralyzed man is lowered through a roof, and Jesus's first words aren't about his legs — they're about his sins. Walk the scene the way the book does, watching what Jesus assumes about his own authority before he heals a thing.",
         reads: [ {label:"Jesus's Divine Claims", link:"https://apologiadaily.com/library/jesus_claims.html"} ],
         drills: [],
         questions: ["Why does Jesus address the man's sins before his paralysis?", "What is Jesus assuming about himself when he says “your sins are forgiven”?"]
       },
       {
-        num: "Ch. 2", title: "“Who Can Forgive Sins but God Alone?”", part: "Part 2 — The Man Who Forgave Sins",
-        summary: "The scribes' outrage is the tell. “Who can forgive sins but God alone?” — their reaction is evidence, not a distraction, for what Jesus was implicitly claiming about himself.",
+        num: "Ch. 4", title: "A Blasphemy Accusation: Who Can Forgive Sins?", part: "Part Two — First Blasphemy Scene (Mark 2:1–12)",
+        summary: "The scribes' outrage is the tell: “Who can forgive sins but God alone?” Del Rosario treats their reaction as evidence, not a distraction — it shows how a first-century Jewish audience heard Jesus's words.",
         reads: [ {label:"Did Jesus Claim to Be God?", link:"https://apologiadaily.com/ev-m-jesus_claims.html"} ],
         drills: [ {label:"Ask Anything: “wasn't he just announcing forgiveness, like a priest?”", link:"https://apologiadaily.com/ask-anything.html"} ],
-        questions: ["Why is the scribes' charge of blasphemy actually useful to the argument?", "How would you answer someone who says Jesus was only pronouncing God's forgiveness, not claiming it himself?"]
+        questions: ["Why is the charge of blasphemy actually useful to the argument?", "How would you answer someone who says Jesus was only pronouncing God's forgiveness, not claiming it himself?"]
       },
       {
-        num: "Ch. 3", title: "Before the Sanhedrin — Mark 14:53–65", part: "Part 3 — On Trial for Blasphemy",
-        summary: "“Are you the Christ, the Son of the Blessed?” Jesus's answer — and the high priest tearing his robes — is the hinge of the whole book. Read what Jesus actually said and why it detonated the room.",
+        num: "Ch. 5", title: "A Divine Claim: Authority to Forgive on Earth", part: "Part Two — First Blasphemy Scene (Mark 2:1–12)",
+        summary: "Jesus doesn't deny the charge — he doubles down, healing the man “so that you may know the Son of Man has authority on earth to forgive sins.” The miracle is offered as public evidence of a claim only God could rightly make.",
         reads: [ {label:"Jesus as God in the New Testament", link:"https://apologiadaily.com/library/jesus_as_god_nt.html"} ],
         drills: [],
-        questions: ["What exactly did Jesus claim in his answer to the high priest?", "Why did the council treat that answer as blasphemy rather than mere messianic hope?"]
+        questions: ["How does the healing function as evidence for the claim, not just a kindness?", "What does “the Son of Man has authority… to forgive” tell us about how Jesus saw himself?"]
       },
       {
-        num: "Ch. 4", title: "The Son of Man and the Charge of Blasphemy", part: "Part 3 — On Trial for Blasphemy",
-        summary: "Jesus didn't just say “yes.” He reached for Daniel 7 — a figure who comes on the clouds and receives worship and everlasting dominion. Understand this and Caiaphas's reaction stops being an overreaction.",
+        num: "Ch. 6", title: "The Core Scene: A Legal Investigation", part: "Part Three — Second Blasphemy Scene (Mark 14:53–65)",
+        summary: "Now the second scene. Jesus stands before the Jewish authorities in a nighttime examination. Read the setup the way the book does — what kind of proceeding this is, and what question it's driving toward.",
+        reads: [ {label:"Jesus as God in the New Testament", link:"https://apologiadaily.com/library/jesus_as_god_nt.html"} ],
+        drills: [],
+        questions: ["What is the examination actually trying to establish?", "Why does Mark give this scene such weight in the story?"]
+      },
+      {
+        num: "Ch. 7", title: "Questioning Jesus: Who Do You Think You Are?", part: "Part Three — Second Blasphemy Scene (Mark 14:53–65)",
+        summary: "“Are you the Christ, the Son of the Blessed?” Jesus answers by reaching for Daniel 7 — the Son of Man who comes on the clouds and receives everlasting dominion. Understand that background and the reaction stops being an overreaction.",
         reads: [ {label:"The Son of Man (Daniel 7)", link:"https://apologiadaily.com/ev-m-jesus_as_god_nt.html"}, {label:"Daniel's 70 Weeks", link:"https://apologiadaily.com/ev-m-daniel70.html"} ],
-        drills: [ {label:"Objection Catcher: “Jesus never claimed deity”", link:"https://apologiadaily.com/objection-catcher.html"}, {label:"Debate Arena: did Jesus claim to be God?", link:"https://apologiadaily.com/debate-arena.html"} ],
-        questions: ["Why is the Daniel 7 background the key to reading Jesus's answer?", "How would you explain to a friend why the high priest reacted so strongly?"]
+        drills: [ {label:"Debate Arena: did Jesus claim to be God?", link:"https://apologiadaily.com/debate-arena.html"} ],
+        questions: ["Why is the Daniel 7 allusion the key to reading Jesus's answer?", "What is Jesus claiming about himself by using that image?"]
       },
       {
-        num: "Ch. 5", title: "More Than a Man: Why It Matters", part: "Part 4 — Significance & Answering Back",
-        summary: "The Philippians 2 hymn and the 1 Corinthians 15 creed show the earliest Christians already treating Jesus as God — far too early for legend. This is where the book's historical case turns into a worship claim, and where the common objections get answered.",
-        reads: [ {label:"The Early Creed (1 Cor 15)", link:"https://apologiadaily.com/ev-m-earlycreed.html"}, {label:"The Philippians 2 Hymn", link:"https://apologiadaily.com/ev-m-phil2.html"} ],
+        num: "Ch. 8", title: "A Blasphemy Accusation: You Can't Judge Me!", part: "Part Three — Second Blasphemy Scene (Mark 14:53–65)",
+        summary: "The high priest tears his robes and the council calls it blasphemy. Just as in Mark 2, the accusation is the tell: it reveals that everyone in the room understood Jesus to be claiming far more than the title of Messiah.",
+        reads: [ {label:"Did Jesus Claim to Be God?", link:"https://apologiadaily.com/ev-m-jesus_claims.html"} ],
+        drills: [ {label:"Objection Catcher: “Jesus never claimed deity”", link:"https://apologiadaily.com/objection-catcher.html"} ],
+        questions: ["Why did the council treat the answer as blasphemy rather than mere messianic hope?", "How does this second accusation parallel the first one in Mark 2?"]
+      },
+      {
+        num: "Ch. 9", title: "A Divine Claim: Authority to Judge in Heaven", part: "Part Three — Second Blasphemy Scene (Mark 14:53–65)",
+        summary: "Where Mark 2 claimed authority to forgive on earth, Mark 14 claims authority to sit at God's right hand and judge. Two scenes, one escalating claim. The earliest Christians took the point and worshipped him — the Philippians 2 hymn shows how fast.",
+        reads: [ {label:"Daniel's 70 Weeks", link:"https://apologiadaily.com/ev-m-daniel70.html"}, {label:"The Philippians 2 Hymn", link:"https://apologiadaily.com/ev-m-phil2.html"} ],
         drills: [ {label:"Ask Anything: “he never said the words ‘I am God’”", link:"https://apologiadaily.com/ask-anything.html"} ],
-        questions: ["Why does the early dating of the creeds matter so much to the case?", "Write a 200-word answer to the book's title question, in your own words."]
+        questions: ["How do the two scenes together build a single claim to divine authority?", "Forgive on earth, judge in heaven — why do these two together point past a merely human authority?"]
+      },
+      {
+        num: "Ch. 10", title: "Limited Power: Authority over Some of Reality", part: "Part Four — Battle of the Views",
+        summary: "Now Del Rosario tests the alternatives. Could Jesus's claims be read as merely delegated authority — a prophet or agent given power over part of reality, the way Scripture grants others limited roles? He weighs that reading fairly before answering it.",
+        reads: [ {label:"Did Jesus Claim to Be God?", link:"https://apologiadaily.com/ev-m-jesus_claims.html"} ],
+        drills: [ {label:"Ask Anything: “couldn't Jesus just be God's appointed agent?”", link:"https://apologiadaily.com/ask-anything.html"} ],
+        questions: ["What's the strongest version of the “delegated authority” reading?", "Where does that reading start to strain against what Jesus actually says?"]
+      },
+      {
+        num: "Ch. 11", title: "Total Power: Authority over All of Reality", part: "Part Four — Battle of the Views",
+        summary: "The case that the two scenes together claim something no prophet or angel ever claimed: authority to forgive on earth and to judge from heaven — prerogatives God does not delegate. Not authority over some of reality, but all of it.",
+        reads: [ {label:"Jesus as God in the New Testament", link:"https://apologiadaily.com/library/jesus_as_god_nt.html"}, {label:"The Philippians 2 Hymn", link:"https://apologiadaily.com/ev-m-phil2.html"} ],
+        drills: [ {label:"Debate Arena: did Jesus claim to be God?", link:"https://apologiadaily.com/debate-arena.html"} ],
+        questions: ["Why can't “authority to forgive AND to judge” be squared with a merely delegated role?", "How does comparing the two scenes settle the question the whole book asks?"]
+      },
+      {
+        num: "Ch. 12", title: "Conclusion: How Jesus Said He Was God", part: "Part Four — Battle of the Views",
+        summary: "The payoff. Jesus didn't announce his deity with a slogan — he enacted it, claiming in two courtroom-style scenes the authority that belongs to God alone. That's how, by a historian's own standards, Jesus said he was God.",
+        reads: [ {label:"Did Jesus Claim to Be God?", link:"https://apologiadaily.com/ev-m-jesus_claims.html"} ],
+        drills: [ {label:"Ask Anything: put the whole case in your own words", link:"https://apologiadaily.com/ask-anything.html"} ],
+        questions: ["How would you sum up the book's answer to its own title in three sentences?", "Write a 200-word case that Jesus claimed to be God — from Mark 2, Mark 14, and the historian's method — as if a friend just asked you over coffee."]
       }
     ];
 
