@@ -844,7 +844,7 @@
       <li><a href="/evidence-library.html">Evidence Library</a></li>
       <li><a href="/daily-devotional.html">Daily Devotional</a></li>
       <li><a href="/debate-arena.html">Debate Arena</a></li>
-      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/asked-and-answered.html">Asked &amp; Answered</a></li>
       <li><a href="/worldviews.html">Worldviews</a></li>
       <li><a href="/study-plans.html">Study Plans</a></li>
       <li class="adn-has-drop">
@@ -1083,7 +1083,7 @@
         <a class="hc-cta" href="signup.html">Create your free account &rarr;</a>
         <span class="hc-login">Already have an account? <a href="login.html">Log in</a> &middot; or come back tomorrow</span>
       </div>
-      <p class="hc-note">Powered by the same AI as Ask Anything &middot; <a href="ask-anything.html">open the full experience &rarr;</a></p>
+      <p class="hc-note">Powered by the same AI as Ask Anything &middot; <a href="/asked-and-answered.html">open the full experience &rarr;</a></p>
     </div>
   </section>
 
@@ -1700,7 +1700,7 @@
         leftTxt = left > 0 ? (left + ' free question' + (left === 1 ? '' : 's') + ' left today') : 'That was your last free question today';
         hitWall = left <= 0;
       }
-      var foot = '<div class="hc-foot"><span>' + leftTxt + '</span><span><a href="#" onclick="hcClose();return false;" style="color:rgba(255,255,255,.55);margin-right:1rem">Close</a><a href="ask-anything.html">Continue in Ask Anything &rarr;</a></span></div>';
+      var foot = '<div class="hc-foot"><span>' + leftTxt + '</span><span><a href="#" onclick="hcClose();return false;" style="color:rgba(255,255,255,.55);margin-right:1rem">Close</a><a href="/asked-and-answered.html">Continue in Ask Anything &rarr;</a></span></div>';
       box.innerHTML = '<button class="hc-close" onclick="hcClose()" aria-label="Close">&times;</button><div class="hc-q">' + hcEsc(q) + '</div><div class="hc-a">' + hcFormat(data.answer) + '</div>' + foot;
       var aEl = box.querySelector('.hc-a');
       if (aEl && aEl.scrollHeight > 560){
@@ -1714,7 +1714,7 @@
       if (hitWall){ hcShowLimit(loggedIn); }
       inp.value = '';
     } catch(err){
-      box.innerHTML = '<button class="hc-close" onclick="hcClose()" aria-label="Close">&times;</button><div class="hc-q">' + hcEsc(q) + '</div><div class="hc-a"><p>Something went wrong on our end \u2014 please try again in a moment, or <a href="ask-anything.html" style="color:var(--gold)">open Ask Anything</a>.</p></div>';
+      box.innerHTML = '<button class="hc-close" onclick="hcClose()" aria-label="Close">&times;</button><div class="hc-q">' + hcEsc(q) + '</div><div class="hc-a"><p>Something went wrong on our end \u2014 please try again in a moment, or <a href="/asked-and-answered.html" style="color:var(--gold)">open Ask Anything</a>.</p></div>';
     }
     btn.disabled = false; btn.textContent = 'Ask';
   }

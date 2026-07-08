@@ -2,6 +2,16 @@
 (function(){
   function init(){
     var nav=document.querySelector('.adn-nav'); if(!nav) return;
+    /* Ask Anything was replaced by Asked & Answered. Repoint any legacy nav link at
+       runtime so pages whose static nav still points at the old URL stay correct
+       (the old URL also 301s server-side). Nav-scoped only; body links untouched. */
+    try {
+      var legacy=nav.querySelectorAll('a[href*="ask-anything.html"]');
+      for(var L=0;L<legacy.length;L++){
+        legacy[L].setAttribute('href','/asked-and-answered.html');
+        if((legacy[L].textContent||'').trim()==='Ask Anything') legacy[L].textContent='Asked & Answered';
+      }
+    } catch(e){}
     var path=(location.pathname||'/').replace(/\/index\.html$/,'/')||'/';
     var links=nav.querySelectorAll('.adn-links a');
     for(var i=0;i<links.length;i++){

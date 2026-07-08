@@ -1,3 +1,25 @@
+// content-review: {"argument":"2026-07-08","orthodoxy":"2026-07-08","by":"apologia-argument + apologia-orthodoxy on the objection-handling addition to the system prompt (0 BREAK / 0 heresy). Existing guardrails unchanged; added instruction to restate a pasted objection as the underlying question before answering in the same format."}
+
+// Per-IP daily cap on live answers (cost/abuse guard). Fail-open: any error or
+// missing Supabase config lets the request through, so the endpoint never hard-breaks.
+const DAILY_IP_CAP = 40;
+async function underDailyCap(req) {
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_KEY;
+  if (!url || !key) return true; // not configured → don't block
+  try {
+    const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim() || 'unknown';
+    const r = await fetch(`${url}/rest/v1/rpc/bump_ask_rate`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', apikey: key, Authorization: `Bearer ${key}` },
+      body: JSON.stringify({ p_ip: ip })
+    });
+    if (!r.ok) return true; // e.g. table/function not migrated yet → fail open
+    const n = await r.json();
+    return !(typeof n === 'number' && n > DAILY_IP_CAP);
+  } catch (e) { return true; }
+}
+
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') { res.setHeader('Access-Control-Allow-Origin', '*'); res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS'); res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); return res.status(200).end(); }
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -10,6 +32,11 @@ export default async function handler(req, res) {
 
     const apiKey = process.env.ANTHROPIC_API_KEY;
     if (!apiKey) return res.status(500).json({ error: 'API key not configured' })
+
+    // Rate limit before spending any tokens.
+    if (!(await underDailyCap(req))) {
+      return res.status(429).json({ error: 'rate_limited' });
+    }
 
     // ── TOPIC GUARD ──
     // Classify the question before spending tokens on a full answer.
@@ -50,7 +77,7 @@ NOTE: defending a shared creedal doctrine (e.g. "why do Christians believe in th
 "OFFTOPIC" = nothing to do with Christianity, faith, or religion (cooking, sports, coding, finance, weather, medical advice, celebrity gossip, etc.).
 
 Respond with only ONTOPIC, DENOM, or OFFTOPIC.`,
-        messages: [{ role: 'user', content: `Classify this question for a Christian apologetics tool. Question: "${question}"` }]
+        messages: [{ role: 'user', content: `Classify this message for a Christian apologetics tool. It may be a question OR an objection/claim pasted from social media — classify by topic either way. Message: "${question}"` }]
       })
     });
 
@@ -96,6 +123,10 @@ YOUR ROLE:
 - Provide evidence-based reasoning, not just assertion
 - Give practical guidance on how to use these answers in real conversations
 - Point people toward Jesus — not just toward correct doctrine
+
+HANDLING OBJECTIONS AND PASTED STATEMENTS:
+- The message may be a genuine question, OR it may be an objection or claim pasted from social media (a tweet, a comment, an argument someone met online). If it is a statement rather than a question, do not reply as though arguing with the person who wrote it. Silently work out the underlying question or challenge it raises, then open by naming that objection plainly and accurately, in its strongest fair form, in a single sentence that flows straight into your direct answer (this naming sentence is the allowed opener — not a restated-question heading). Then continue in the format below.
+- Assume the person pasting an objection is usually a Christian seeking help to respond, or a sincere doubter — not an attacker. Keep the same gentleness and steelman the objection in its strongest accurate form before answering.
 
 EVIDENTIAL PRECISION — LEAD WITH YOUR STRONGEST CARD:
 - Cite the earliest and strongest evidence first, and date it precisely. Weak framings invite objections that strong framings foreclose.

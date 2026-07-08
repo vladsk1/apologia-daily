@@ -64,7 +64,7 @@
       <li><a href="/evidence-library.html">Evidence Library</a></li>
       <li><a href="/daily-devotional.html">Daily Devotional</a></li>
       <li><a href="/debate-arena.html">Debate Arena</a></li>
-      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/asked-and-answered.html">Asked &amp; Answered</a></li>
       <li><a href="/worldviews.html">Worldviews</a></li>
     </ul>
     <div class="adn-right">
@@ -91,7 +91,7 @@
       <div class="cta-title">Got a harder question?</div>
       <div class="cta-sub">Ask anything about God, Jesus, the Bible, suffering, science, other faiths — and get a thoughtful, sourced answer. It’s free.</div>
       <div class="cta-row">
-        <a class="btn-gold" id="cta-ask" href="/ask-anything.html">Ask your own question →</a>
+        <a class="btn-gold" id="cta-ask" href="/asked-and-answered.html">Ask your own question →</a>
         <a class="btn-ghost" id="cta-library" href="/evidence-library.html">See the evidence →</a>
       </div>
     </div>
@@ -142,7 +142,7 @@
 
       var wrap = document.getElementById('answer-wrap');
       if (!payload || !payload.q || !payload.a) {
-        wrap.innerHTML = '<div class="missing">This shared answer could not be loaded.<br><a href="/ask-anything.html">Ask your own question instead →</a></div>';
+        wrap.innerHTML = '<div class="missing">This shared answer could not be loaded.<br><a href="/asked-and-answered.html">Ask your own question instead →</a></div>';
       } else {
         if (!ref && payload.ref) ref = payload.ref;
         var card = document.createElement('div');

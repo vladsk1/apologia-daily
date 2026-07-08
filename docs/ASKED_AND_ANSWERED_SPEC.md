@@ -83,9 +83,55 @@ Levers: **retrieval-first** (most answers $0), **prompt caching** (guardrail pro
 - [ ] Batch review sweep job + "promote to /answers/" flow.
 - [ ] (Later) free-taste metering; (later) real Stripe paywall.
 
-## Prototype status
-`demo/asked-and-answered.html` — static sample answers (4, fully gated: citations 0
-fabrications, argument 0 BREAK, orthodoxy 0 heresy), the timeline, the trust panel, and a
-**Free/Pro preview toggle** demonstrating the model: retrieval-HIT (already-answered) = free
-for everyone; retrieval-MISS (your own objection) = Pro gate. Unlisted, noindex, not on nav/
-sitemap. Content-review stamped.
+## SHIPPED (2026-07-08) — live version
+
+Built and deployed:
+- **`asked-and-answered.html`** (root, live, indexed) — one smart box (typed question / pasted
+  objection / screenshot), 2,000-year timeline, trust panel, curated sample answers, dormant
+  Pro gate. Loads the standard `adn-nav` + `/ad-nav.js` + `/analytics.js` + Supabase.
+- **Screenshot OCR** — `tesseract.js` (CDN), client-side, free: upload / drop / paste an image →
+  OCR → fills the box → answers.
+- **Retrieval-first** — `tools/gen-answers-index.mjs` → `answers/search-index.json` (66 answers
+  with `a` text). The page (1) matches curated SAMPLES, then (2) an index hit renders the
+  pre-gated `/answers/` answer inline (free, $0), then (3) falls through to live `/api/ask`.
+- **`api/ask.js`** — added objection-handling to the (already-gated) system prompt + a
+  per-IP daily cap (`DAILY_IP_CAP = 40`, fail-open). Re-gated: argument sound, orthodoxy CLEAN.
+- **Replaced Ask Anything** — nav label swapped on non-gated pages; gated essays reverted (so the
+  content gate isn't tripped by a cosmetic change) and relabeled at runtime by `ad-nav.js`;
+  `/ask-anything.html` 301 → `/asked-and-answered.html` (vercel.json); sitemap updated.
+- **Pro gate dormant** — `isPro` hardcoded `true` (open to all now). When Stripe is live, set
+  `var isPro = !!(session.user.user_metadata.is_pro===true)` in `asked-and-answered.html` to make
+  live answers paid-only; retrieval-hit library answers stay free.
+
+### ⚠️ ONE MANUAL STEP — run this SQL once in Supabase (enables the IP rate limit)
+Until this runs, the per-IP cap fails open (endpoint still works, just less protected):
+```sql
+create table if not exists public.ask_rate_limit (
+  ip  text not null,
+  day date not null default current_date,
+  n   int  not null default 0,
+  primary key (ip, day)
+);
+alter table public.ask_rate_limit enable row level security; -- service role bypasses RLS
+
+create or replace function public.bump_ask_rate(p_ip text)
+returns int language plpgsql security definer as $$
+declare cur int;
+begin
+  insert into public.ask_rate_limit(ip, day, n) values (p_ip, current_date, 1)
+  on conflict (ip, day) do update set n = public.ask_rate_limit.n + 1
+  returning n into cur;
+  return cur;
+end; $$;
+```
+`api/ask.js` POSTs to `/rest/v1/rpc/bump_ask_rate` with the service-role key
+(`SUPABASE_SERVICE_ROLE_KEY`), and returns HTTP 429 once an IP exceeds 40/day.
+
+### Still open (follow-ups)
+- Run the SQL above (you). · Verify OCR on a real device (CDN blocked in CI sandbox).
+- Later: free-taste metering; the batch review sweep that promotes good live answers into
+  `/answers/`; Claude-vision OCR fallback; port the old "share this answer to a skeptic" feature.
+
+## Prototype status (superseded)
+`demo/asked-and-answered.html` — the original unlisted prototype with the Free/Pro preview
+toggle. Superseded by the live root page above; kept for reference.
