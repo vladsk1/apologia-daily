@@ -1,0 +1,116 @@
+{
+  "reviewed": {
+    "argument": "2026-07-08",
+    "orthodoxy": "2026-07-08",
+    "by": "apologia-argument (sound, 0 BREAK) + apologia-orthodoxy (CLEAN); grounded in certified library/islam-preservation.html; concedes the Qur'an is well-preserved, argues only that letter-for-letter/word-for-word is false; steelman scene cut for a short"
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.55,
+  "pace": 1.3,
+  "voiceover": "We're told the Qur'an has never changed - letter for letter, word for word, for fourteen hundred years. But ask Islam's own earliest sources, and the story gets more complicated. About twenty years after Muhammad died, the caliph Uthman had a single version copied and ordered the rest burned - that's recorded in Sahih al-Bukhari. You don't gather a commission and destroy the alternatives over differences that were never there. Two of Muhammad's own appointed teachers of the Qur'an, Ibn Mas'ud and Ubayy ibn Ka'b, held differing texts. In Yemen, in 1972, the Sana'a manuscript revealed an early Qur'an scraped off and written over - the older text differing in wording, even chapter order. And to this day the Qur'an is printed in different traditional readings, like Hafs and Warsh, that don't match word for word. The Qur'an is well-preserved. But it was never preserved letter for letter, word for word - and that is the claim the history can't carry, as Islam's own sources show.",
+  "source": "library/islam-preservation.html",
+  "scenes": [
+    {
+      "dur": 3.6,
+      "big": [
+        { "t": "The Qur'an, we're told,", "c": "cream", "s": 44 },
+        { "t": "has never changed —", "c": "cream", "s": 46 },
+        { "t": "letter for letter,", "c": "gold", "f": "serifb", "s": 46 },
+        { "t": "word for word.", "c": "gold", "f": "serifb", "s": 52 }
+      ],
+      "sub": [
+        { "t": "Is that history — or hope?", "c": "dim", "f": "serif", "s": 40 }
+      ]
+    },
+    {
+      "kicker": "SO ASK ISLAM'S OWN SOURCES",
+      "dur": 4.2,
+      "lines": [
+        { "t": "The earliest Muslim histories", "c": "cream", "s": 44 },
+        { "t": "tell a more complicated story —", "c": "cream", "s": 42 },
+        { "t": "", "s": 12 },
+        { "t": "and they are the ones", "c": "cream", "s": 42 },
+        { "t": "telling it.", "c": "gold", "f": "serifb", "s": 50 }
+      ]
+    },
+    {
+      "kicker": "UTHMAN'S ONE EDITION",
+      "dur": 5.0,
+      "lines": [
+        { "t": "About 20 years after Muhammad died,", "c": "cream", "s": 39 },
+        { "t": "the caliph Uthman had one", "c": "cream", "s": 42 },
+        { "t": "version copied — and ordered", "c": "cream", "s": 42 },
+        { "t": "the rest burned.", "c": "gold", "f": "serifb", "s": 48 },
+        { "t": "— Sahih al-Bukhari", "c": "dim", "f": "serif", "s": 34 }
+      ]
+    },
+    {
+      "kicker": "YOU DON'T BURN WHAT NEVER DIFFERED",
+      "dur": 4.8,
+      "lines": [
+        { "t": "You don't gather a commission", "c": "cream", "s": 43 },
+        { "t": "and destroy the alternatives", "c": "cream", "s": 43 },
+        { "t": "over differences", "c": "cream", "s": 43 },
+        { "t": "that were never there.", "c": "gold", "f": "serifb", "s": 46 }
+      ]
+    },
+    {
+      "kicker": "HIS OWN QUR'AN-TEACHERS DIFFERED",
+      "dur": 5.0,
+      "lines": [
+        { "t": "Ibn Mas'ud and Ubayy ibn Ka'b —", "c": "cream", "s": 39 },
+        { "t": "men Muhammad himself appointed", "c": "cream", "s": 41 },
+        { "t": "to teach the Qur'an —", "c": "cream", "s": 41 },
+        { "t": "held differing texts.", "c": "gold", "f": "serifb", "s": 47 }
+      ]
+    },
+    {
+      "kicker": "SCRAPED AND REWRITTEN",
+      "dur": 5.2,
+      "lines": [
+        { "t": "Yemen, 1972: the Sana'a manuscript.", "c": "cream", "s": 39 },
+        { "t": "An early Qur'an had been scraped off", "c": "cream", "s": 39 },
+        { "t": "and written over — the older text", "c": "cream", "s": 39 },
+        { "t": "differed in wording,", "c": "cream", "s": 42 },
+        { "t": "even chapter order.", "c": "gold", "f": "serifb", "s": 44 }
+      ]
+    },
+    {
+      "kicker": "AND STILL, TODAY",
+      "dur": 4.8,
+      "lines": [
+        { "t": "The Qur'an is still printed", "c": "cream", "s": 43 },
+        { "t": "in different traditional readings —", "c": "cream", "s": 40 },
+        { "t": "Hafs and Warsh —", "c": "cream", "s": 44 },
+        { "t": "that don't match word for word.", "c": "gold", "f": "serifb", "s": 42 }
+      ]
+    },
+    {
+      "dur": 5.2,
+      "big": [
+        { "t": "Yes — the Qur'an is well-preserved.", "c": "cream", "s": 40 },
+        { "t": "", "s": 10 },
+        { "t": "But it was never preserved", "c": "cream", "s": 42 },
+        { "t": "letter for letter, word for word —", "c": "cream", "s": 40 },
+        { "t": "and that is the claim", "c": "cream", "s": 42 },
+        { "t": "the history can't carry.", "c": "gold", "f": "serifb", "s": 46 }
+      ],
+      "sub": [
+        { "t": "— and Islam's own sources show it.", "c": "dim", "f": "serif", "s": 34 }
+      ]
+    },
+    {
+      "dur": 4.2,
+      "big": [
+        { "t": "Asked honestly.", "c": "cream", "s": 46 },
+        { "t": "Answered with the sources.", "c": "cream", "s": 44 }
+      ],
+      "sub": [
+        { "t": "The full case at", "c": "dim", "f": "serif", "s": 40 },
+        { "t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50 }
+      ]
+    }
+  ]
+}
