@@ -83,6 +83,14 @@
     .buybar-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
     @media (max-width: 620px){ .buybar { align-items: flex-start; } .buybar-btn { width: 100%; text-align: center; } }
 
+    /* PRIMARY BOOK-READ + OPTIONAL BLOCK */
+    .ch-bookread { font-family: var(--font-ui); font-size: 0.92rem; font-weight: 500; color: var(--text-dark); background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 4px; padding: 10px 14px; margin-bottom: 0.4rem; }
+    .ch-bookread em { color: var(--text-mid); }
+    .ch-optional { margin-top: 1.1rem; padding-top: 0.9rem; border-top: 1px dashed var(--border); }
+    .ch-label.opt { color: var(--text-muted); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .opt-tag { font-family: var(--font-ui); font-size: 0.58rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: #8a7020; background: rgba(200,169,81,0.15); padding: 2px 8px; border-radius: 20px; }
+    .opt-note { font-family: var(--font-ui); font-size: 0.75rem; color: var(--text-muted); font-style: italic; margin-bottom: 0.6rem; line-height: 1.5; }
+
     /* WHAT'S DIFFERENT CALLOUT */
     .diff { background: var(--navy-950); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; padding: 1.1rem 1.4rem; margin-bottom: 2rem; }
     .diff h4 { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
@@ -141,7 +149,7 @@
     <div class="hero-inner">
       <p class="page-eyebrow">Reading Clubs</p>
       <h1>Read it <em>together</em> — and put it to work.</h1>
-      <p class="hero-sub">A chapter-by-chapter reading club for <em>Did Jesus Really Say He Was God?</em> — a certified reading and discussion for every chapter, and a live drill to rehearse the pivotal claims and objections.</p>
+      <p class="hero-sub">A chapter-by-chapter reading club for <em>Did Jesus Really Say He Was God?</em> — read each chapter, talk it over with guided questions, and, only if you want to, go further with a few optional Apologia Daily resources.</p>
     </div>
   </header>
 
@@ -159,7 +167,7 @@
         <div class="detail-meta-row">
           <div class="detail-meta-item"><strong>13 sessions</strong>Intro + 12 chapters</div>
           <div class="detail-meta-item"><strong>Four parts</strong>Mark 2 &amp; Mark 14</div>
-          <div class="detail-meta-item"><strong>Reading + drills</strong>Drills on key chapters</div>
+          <div class="detail-meta-item"><strong>Read + discuss</strong>Optional extras</div>
           <div class="detail-meta-item"><span class="book-status status-joining">Featured club</span></div>
         </div>
         <div class="detail-desc">Can we show — by the standards of professional historians — that Jesus claimed to be God? Dr. Mikel Del Rosario builds the case through two parallel &ldquo;blasphemy accusation&rdquo; scenes: the paralytic Jesus forgives in Mark 2 (authority to <em>forgive</em> sins), and the Jewish examination in Mark 14 (authority to <em>judge</em>). Each scene runs the same three beats — the core scene, the blasphemy charge, the divine claim. This club walks the book chapter by chapter, then hands you the tools to defend it.</div>
@@ -171,8 +179,8 @@
     </div>
 
     <div class="diff">
-      <h4>What makes this club different</h4>
-      <p>A normal reading club stops at discussion questions. This one connects every chapter to Apologia Daily's certified evidence pages, and adds a live drill on the pivotal ones — answer the objection in Ask Anything, spar it in the Debate Arena, catch it in a game. You don't just read the argument; you rehearse saying it.</p>
+      <h4>How the club works</h4>
+      <p>Read Dr. Del Rosario's book chapter by chapter, with discussion questions for each — that's the whole club, and the book is all you need. Then, <em>if</em> you want to go further, each session links a few optional Apologia Daily resources to practise defending the case (Ask Anything, the Debate Arena, a game). They're clearly marked as ours, and entirely skippable.</p>
     </div>
 
     <section class="buybar">
@@ -194,15 +202,16 @@
         <div class="sidebar-panel">
           <div class="panel-header"><div class="panel-title">About this club</div></div>
           <div class="panel-body">
-            <p>Read the book at your own pace. Each session gives you a short, fully-cited reading, a discussion question to think through, and one live drill to make the argument yours.</p>
-            <p>Related Evidence Library pages open in a new tab and have all been through Apologia Daily's editorial and doctrinal review.</p>
+            <p>Read the book at your own pace. Each session gives you the chapter to read and discussion questions to think through — that's all you need.</p>
+            <p>If you'd like to go further, a few optional Apologia Daily resources are linked at the bottom of each session. They're our own material, clearly marked, and easy to skip.</p>
           </div>
         </div>
         <div class="sidebar-panel">
           <div class="panel-header"><div class="panel-title">A note for Dr. Del Rosario</div></div>
           <div class="panel-body">
             <p>The 13 sessions follow your book's own table of contents — the introduction, all twelve chapters, and the four parts, in order.</p>
-            <p>The chapter <em>titles</em> are yours; the summaries, drills, and discussion questions are ours, and nothing here reproduces your text. Before it goes live under your name we'd invite your edits on every one, and swap the &ldquo;Get the book&rdquo; link for your preferred store or affiliate link.</p>
+            <p>The chapter <em>titles</em> are yours; the summaries and discussion questions are ours, and nothing here reproduces your text. Before it goes live under your name we'd invite your edits on every one, and swap the &ldquo;Get the book&rdquo; link for your preferred store or affiliate link.</p>
+            <p>The extra Apologia Daily links are clearly labelled as our own optional resources — not part of your book, and not your endorsement of them. A reader can complete the whole club without ever opening one.</p>
             <p class="fine">Demo build · titles from the published contents · summaries pending your review.</p>
           </div>
         </div>
@@ -327,9 +336,14 @@
          </div>
          <div class="chapter-body">
            <p class="ch-summary">${c.summary}</p>
-           <div class="ch-label">Read on Apologia Daily</div>${reads}
-           ${drills ? `<div class="ch-label">Practice &amp; drills</div>${drills}` : ''}
+           <div class="ch-label">Read from the book</div>
+           <div class="ch-bookread">&#128214; ${c.num === 'Intro' ? 'Read the Introduction' : 'Read ' + c.num.replace('Ch.', 'Chapter')} — <em>${c.title}</em></div>
            <div class="ch-label">Discussion</div>${qs}
+           ${(reads || drills) ? `<div class="ch-optional">
+             <div class="ch-label opt">Optional — go further <span class="opt-tag">Apologia Daily resources</span></div>
+             <div class="opt-note">Our own material, offered as a bonus. Not part of the book, and not endorsed by the author.</div>
+             ${reads}${drills}
+           </div>` : ''}
          </div>`;
       row.querySelector('.chapter-header').addEventListener('click', () => row.classList.toggle('open'));
       wrap.appendChild(row);
