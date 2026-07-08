@@ -393,11 +393,17 @@
       SAMPLES.forEach(s => { let sc=0; s.keys.forEach(k => { if(t.includes(k)) sc++; }); if(sc>score){score=sc;best=s;} });
       return score>=2 ? best : null;
     }
-    function matchIndex(text){
-      const q = new Set(tokens(text)); if(!q.size || !INDEX.length) return null;
-      let best=null, score=0;
-      INDEX.forEach(e => { let sc=0; (e.keywords||[]).forEach(k => { if(q.has(k)) sc++; }); if(sc>score){score=sc;best=e;} });
-      return score>=2 ? best : null;
+    // Return up to `n` RELATED library answers (as suggestions, never as the authoritative
+    // answer — keyword overlap can't tell "did God die on the cross" from "did Jesus die on
+    // the cross (Islam)", so these are offered as "related reading", not served inline).
+    function topRelated(text, n){
+      const q = new Set(tokens(text)); if(!q.size || !INDEX.length) return [];
+      return INDEX
+        .map(e => { let sc=0; (e.keywords||[]).forEach(k => { if(q.has(k)) sc++; }); return {e, sc}; })
+        .filter(x => x.sc >= 2)
+        .sort((a,b) => b.sc - a.sc)
+        .slice(0, n || 3)
+        .map(x => ({ label: x.e.q, href: x.e.href }));
     }
 
     async function answer(){
@@ -408,27 +414,19 @@
       document.getElementById('gate').classList.remove('show');
       setStatus('');
 
-      // 1) Curated sample (richest — includes historical "good company").
+      // 1) Curated sample only (hand-tuned, precise) renders inline as the answer.
       const s = matchSample(text);
       if (s) { render({ obj:s.obj, ans:s.ans, good:s.good, links:s.links, verified:true }); return; }
 
-      // 2) Existing gated /answers/ page (free, $0, already reviewed).
-      const e = matchIndex(text);
-      if (e) {
-        const ansHtml = (e.a||'').split(/\n\n+/).map(p => '<p>'+p.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</p>').join('');
-        const links = [];
-        if (e.deep && e.deep.href) links.push({ label: e.deep.label, href: e.deep.href });
-        links.push({ label: 'Open the full answer', href: e.href });
-        render({ objLabel:'You asked', obj:e.q, ans:ansHtml, good:null, links, verified:true });
-        return;
-      }
-
-      // 3) Live AI answer (Pro-gated when Stripe is live; open for now).
+      // 2) Everything else: the LIVE AI answers the actual question. Existing library
+      //    answers are attached as "related reading" links only — never served as the
+      //    answer (keyword overlap mismatches, e.g. God-on-the-cross vs the Islam page).
+      const related = topRelated(text, 3);
       if (!isPro) { document.getElementById('result').classList.remove('show'); const g=document.getElementById('gate'); g.classList.add('show'); g.scrollIntoView({behavior:'smooth',block:'center'}); return; }
-      await liveAnswer(text);
+      await liveAnswer(text, related);
     }
 
-    async function liveAnswer(text){
+    async function liveAnswer(text, related){
       const btn=document.getElementById('ask-btn'); btn.disabled=true;
       setStatus('Finding the best answer…','work');
       try {
@@ -437,10 +435,12 @@
         if (!res.ok) throw new Error('API '+res.status);
         const data = await res.json();
         if (!data.answer) throw new Error('no answer');
+        const links = (related && related.length)
+          ? related
+          : [ {label:'The Evidence Library', href:'/evidence-library.html'}, {label:'Browse all answers', href:'/answers/'} ];
         render({
           objLabel:'You asked', obj:text, ans: formatAnswer(data.answer), good:null,
-          links: [ {label:'The Evidence Library', href:'/evidence-library.html'}, {label:'Browse all answers', href:'/answers/'} ],
-          verified:false
+          links, verified:false
         });
         // flywheel: capture the question (fire-and-forget)
         try { fetch('/api/submit-question', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ question: text, source:'asked-and-answered' }) }); } catch(e){}
