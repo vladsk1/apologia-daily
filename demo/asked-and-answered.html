@@ -46,6 +46,18 @@
     .askbox-hint { font-family:var(--font-ui); font-size:0.76rem; color:var(--text-muted); }
     .askbox-btn { font-family:var(--font-ui); font-size:0.95rem; font-weight:600; background:var(--navy-900); color:#fff; border:none; border-radius:7px; padding:12px 26px; cursor:pointer; transition:background 0.15s; }
     .askbox-btn:hover { background:var(--navy-700); }
+    .pro-pill { font-family:var(--font-ui); font-size:0.58rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#7a4e08; background:linear-gradient(90deg,#f0d288,#e8cf87); padding:2px 8px; border-radius:20px; margin-left:7px; vertical-align:middle; }
+    .preview-toggle { display:flex; align-items:center; gap:8px; margin-bottom:1rem; font-family:var(--font-ui); font-size:0.74rem; color:var(--text-muted); flex-wrap:wrap; }
+    .mode-btns { display:inline-flex; border:1px solid var(--border); border-radius:20px; overflow:hidden; }
+    .mode-btn { font-family:var(--font-ui); font-size:0.74rem; padding:5px 14px; background:var(--white); color:var(--text-mid); border:none; cursor:pointer; }
+    .mode-btn.on { background:var(--navy-900); color:#fff; }
+    .gate { background:linear-gradient(135deg,#13243f,#0a1628); border:1px solid var(--gold); border-radius:12px; padding:1.9rem 1.75rem; text-align:center; margin-top:1.5rem; display:none; }
+    .gate.show { display:block; animation:fade 0.3s ease; }
+    .gate-k { font-family:var(--font-ui); font-size:0.64rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem; }
+    .gate h3 { font-family:var(--font-display); color:#fff; font-size:1.4rem; font-weight:700; margin-bottom:0.5rem; }
+    .gate p { font-family:var(--font-ui); font-size:0.9rem; color:rgba(255,255,255,0.66); line-height:1.65; max-width:460px; margin:0 auto 1.15rem; }
+    .gate-btn { font-family:var(--font-ui); font-size:0.95rem; font-weight:600; background:var(--gold); color:var(--navy-950); border:none; border-radius:7px; padding:12px 28px; cursor:pointer; }
+    .gate-btn:hover { background:var(--gold-light); }
     .chips { margin-top:1rem; display:flex; flex-wrap:wrap; gap:8px; }
     .chip-label { font-family:var(--font-ui); font-size:0.72rem; color:var(--text-muted); width:100%; margin-bottom:2px; }
     .chip { font-family:var(--font-ui); font-size:0.78rem; color:var(--navy-600); background:var(--navy-50); border:1px solid var(--border); border-radius:20px; padding:6px 13px; cursor:pointer; transition:all 0.15s; }
@@ -117,13 +129,19 @@
 
   <div class="wrap">
     <div class="askbox">
-      <label class="askbox-label" for="obj">Paste the objection</label>
+      <div class="preview-toggle">Preview as:
+        <span class="mode-btns">
+          <button class="mode-btn" id="m-free" onclick="setMode('free')">Free visitor</button>
+          <button class="mode-btn on" id="m-pro" onclick="setMode('pro')">Pro member</button>
+        </span>
+      </div>
+      <label class="askbox-label" for="obj">Paste your own objection <span class="pro-pill">Pro</span></label>
       <textarea id="obj" placeholder="e.g. &ldquo;The Gospels were written decades after Jesus by anonymous authors — you can't trust a word of them.&rdquo;"></textarea>
       <div class="askbox-row">
-        <span class="askbox-hint">Paste a tweet, a comment, or type the argument in your own words.</span>
+        <span class="askbox-hint">Pasting your own objection for a fresh, live answer is a Pro feature. The objections below are answered free.</span>
         <button class="askbox-btn" onclick="answer()">Answer it &rarr;</button>
       </div>
-      <div class="chips" id="chips"><span class="chip-label">Or try one:</span></div>
+      <div class="chips" id="chips"><span class="chip-label">Already answered — free to read:</span></div>
     </div>
 
     <div class="result" id="result">
@@ -146,6 +164,13 @@
           <span class="res-demo-note" id="r-demo"></span>
         </div>
       </div>
+    </div>
+
+    <div class="gate" id="gate">
+      <div class="gate-k">Pro feature</div>
+      <h3>Get a live answer to your objection</h3>
+      <p>Free visitors can read every objection we've already answered — and the full 2,000-year timeline — at no cost. To paste your <em>own</em> objection and get a fresh, reviewed answer, upgrade to Pro.</p>
+      <button class="gate-btn" onclick="alert('Demo preview — upgrade is disabled in this private build.')">Unlock live answers &rarr;</button>
     </div>
 
     <div class="trust">
@@ -280,9 +305,15 @@
       return bestScore > 0 ? best : null;
     }
 
-    function answer() {
-      const text = document.getElementById('obj').value.trim();
-      const data = (text ? match(text) : null) || GENERIC;
+    let MODE = 'pro';
+    function setMode(m) {
+      MODE = m;
+      document.getElementById('m-free').classList.toggle('on', m === 'free');
+      document.getElementById('m-pro').classList.toggle('on', m === 'pro');
+    }
+
+    function renderAnswer(data, text) {
+      document.getElementById('gate').classList.remove('show');
       document.getElementById('r-obj').textContent = data.obj || text || "Your objection";
       document.getElementById('r-ans').innerHTML = data.ans;
       document.getElementById('r-good').innerHTML = data.good;
@@ -294,6 +325,22 @@
       const r = document.getElementById('result');
       r.classList.add('show');
       r.scrollIntoView({ behavior:'smooth', block:'start' });
+    }
+
+    function answer() {
+      const text = document.getElementById('obj').value.trim();
+      const hit = text ? match(text) : null;
+      // Retrieval hit = an objection we've already answered (static, free for everyone).
+      if (hit) { renderAnswer(hit, text); return; }
+      // Retrieval miss = needs a fresh, live AI answer. Free for a chip demo, Pro for custom input.
+      if (MODE === 'free') {
+        document.getElementById('result').classList.remove('show');
+        const g = document.getElementById('gate');
+        g.classList.add('show');
+        g.scrollIntoView({ behavior:'smooth', block:'center' });
+      } else {
+        renderAnswer(GENERIC, text);
+      }
     }
   </script>
 </body>
