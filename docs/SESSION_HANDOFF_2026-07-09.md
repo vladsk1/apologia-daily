@@ -137,6 +137,31 @@ There is **no** unattributed "months" claim in our own voice — the one that lo
 the Del Rosario demo: represent **his** ~5-year framing from the book, keep our own voice at "a few
 years."
 
+### 9. Philippians 2 "deity of Christ" reels (make-reel) — 2 specs, gated CLEAN
+Built two short-form vertical reels from the certified `library/phil2.html` essay via the `make-reel`
+skill (`tools/reel/gen_reel.py`). Both passed **apologia-argument + apologia-orthodoxy** (CLEAN /
+SOUND) and carry a `reviewed` stamp:
+- **`tools/reel/specs/phil2-deity.json`** — the "four hidden Greek words" cut (morphē, harpagmos,
+  ekenōsen/kenosis, Kyrios). NOTE: the user hand-edited this spec (hook → "worships Jesus as God";
+  the Kyrios scene states "is the divine name itself" flatly) — **that edit is intentional, keep it.**
+- **`tools/reel/specs/phil2-everyknee.json`** — the user's preferred recut: **Isaiah 45:23 as the
+  centerpiece** ("every knee shall bow" — YHWH's exclusive-worship oath applied to Jesus), other
+  Greek words trimmed to one nod, **slower pacing** (~67s, longer holds, 0.9s crossfades). The
+  "name above every name" scene was deliberately reworded to route confidence through the
+  **uncontested facts** (Jesus is confessed *Kyrios*; *Kyrios* is the LXX word for YHWH) instead of
+  the hedged "almost certainly the divine name" — a change both gates rated an *improvement* (states
+  Christ's deity confidently while staying honest about the one contested exegetical sub-point).
+- **⚠️ The rendered MP4s do NOT travel through git** — `tools/reel/output/` is git-ignored. Only the
+  **specs** are committed. To recreate the videos locally: `cd tools/reel && python3 gen_reel.py
+  specs/phil2-everyknee.json --theme navy` (also `--theme parchment`, `--aspect square|wide`). The
+  finished MP4s were delivered to the user in-chat. A ready-to-post **TikTok caption + voiceover**
+  script for the everyknee cut was written in-chat (not committed) — regenerate or ask if needed.
+
+### 10. Footer "About" link fix (homepage)
+`index.html` footer linked **About → `index.html#about`** (a non-existent anchor → dead click);
+repointed to the real **`about.html`**. All other footer links verified working. (Root page, not
+content-gated.)
+
 ## Standing rules / guardrails (carry forward — see `CLAUDE.md`)
 - Mandatory pipeline for ALL written/AI content: draft → citations → argument → editor → footnote
   integrity → **orthodoxy gate (must be CLEAN)** → deploy. Answers + reels + card + api prompts included.
