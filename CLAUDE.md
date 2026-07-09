@@ -6,6 +6,17 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **2026-07-09 (web session) — latest handoff: `docs/SESSION_HANDOFF_2026-07-09.md`.** Shipped:
+> a full four-agent recheck (citations + argument + **new `apologia-neutrality`** red-team + orthodoxy)
+> of the **Trinity, Jesus, and Islam** card tiers — all CLEAN, 0 heresy; the real defect everywhere was
+> *paraphrases dressed as verbatim scholar quotes* in the compressed cards (fixed). Plus a Trinity-essay
+> clarifier sweep, Asked & Answered follow-up questions, `parents.html` upgrades, the site-wide
+> "Ask Anything → Asked & Answered" rename, MK/ES index nav, and a creed-dating audit (no change needed —
+> our voice already says "~2–5 years"; "within months" is always attributed to Dunn). **Del Rosario demo
+> is NOT part of this web session — it was built straight from the book in a separate LOCAL session and is
+> current on `main`; its live status is `docs/DEL_ROSARIO_READING_CLUB.md`. Do not re-open, re-summarise, or
+> treat it as paused.**
+>
 > **2026-07-04 — NEW POLICY (read the guardrails below):** **"Orthodoxy outranks charity"**
 > is now a hard tiebreak in every place content is written/checked — `api/ask.js` (the live
 > AI), the guardrails below, and the `apologia-orthodoxy` + `apologia-argument` agents.
