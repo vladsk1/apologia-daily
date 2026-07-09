@@ -327,7 +327,19 @@
       const badge=document.getElementById('r-badge'), ai=document.getElementById('r-ai');
       if (o.verified) { badge.style.display=''; ai.style.display='none'; }
       else { badge.style.display='none'; ai.style.display=''; ai.textContent = o.aiNote || 'AI-generated within our orthodoxy guardrails — not individually reviewed, and not personal or professional advice.'; }
-      const r=document.getElementById('result'); r.classList.add('show'); setStatus(''); r.scrollIntoView({behavior:'smooth', block:'start'});
+      const r=document.getElementById('result'); r.classList.add('show'); setStatus('');
+      scrollToResult(r);
+    }
+    // Reliable scroll to the top of the fresh answer (works on mobile Safari, where a tapped
+    // button keeps focus and smooth scrollIntoView is flaky). Blur the active control so the
+    // browser doesn't pull the viewport back down to it, then scroll after a layout frame,
+    // offsetting for the 64px sticky nav.
+    function scrollToResult(r){
+      try { if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); } catch(e){}
+      requestAnimationFrame(function(){
+        var top = r.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop || 0) - 76;
+        window.scrollTo({ top: top < 0 ? 0 : top, behavior: 'smooth' });
+      });
     }
 
     // simple markdown for live AI answers
