@@ -87,13 +87,14 @@
     .ai-note { font-family:var(--font-ui); font-size:0.73rem; color:var(--text-muted); font-style:italic; }
 
     .followup { border-top:1px dashed var(--border); margin-top:1.35rem; padding-top:1.25rem; }
-    .followup-k { font-family:var(--font-ui); font-size:0.7rem; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted); margin-bottom:0.5rem; }
-    .fu-row { display:flex; gap:8px; align-items:flex-end; flex-wrap:wrap; }
-    #fu-input { flex:1 1 240px; font-family:var(--font-ui); font-size:0.9rem; color:var(--text-dark); background:var(--white); border:1px solid var(--border); border-radius:7px; padding:10px 12px; resize:vertical; min-height:46px; line-height:1.5; }
-    #fu-input:focus { outline:none; border-color:var(--navy-500); box-shadow:0 0 0 3px var(--navy-100); }
-    .fu-btn { font-family:var(--font-ui); font-size:0.86rem; font-weight:600; background:var(--navy-600); color:#fff; border:none; border-radius:7px; padding:11px 20px; cursor:pointer; white-space:nowrap; transition:background 0.15s; }
-    .fu-btn:hover { background:var(--navy-700); }
-    .fu-btn:disabled { opacity:0.55; cursor:default; }
+    .fu-jump { font-family:var(--font-ui); font-size:0.9rem; font-weight:600; background:var(--navy-600); color:#fff; border:none; border-radius:7px; padding:11px 22px; cursor:pointer; display:inline-flex; align-items:center; gap:8px; transition:background 0.15s; }
+    .fu-jump:hover { background:var(--navy-700); }
+    /* context breadcrumb shown by the top ask box when you're following up */
+    .fu-context { display:flex; align-items:center; gap:10px; flex-wrap:wrap; background:var(--navy-50); border:1px solid var(--navy-100); border-radius:8px; padding:9px 12px; margin-bottom:0.75rem; }
+    .fu-context-txt { font-family:var(--font-ui); font-size:0.82rem; color:var(--text-mid); line-height:1.4; }
+    .fu-context-txt em { font-style:italic; color:var(--navy-600); font-weight:500; }
+    .fu-context-x { font-family:var(--font-ui); font-size:0.76rem; font-weight:600; color:var(--navy-600); background:var(--white); border:1px solid var(--border); border-radius:20px; padding:4px 12px; cursor:pointer; white-space:nowrap; margin-left:auto; }
+    .fu-context-x:hover { background:var(--navy-100); }
 
     .gate { background:linear-gradient(135deg,#13243f,#0a1628); border:1px solid var(--gold); border-radius:12px; padding:1.9rem 1.75rem; text-align:center; margin-top:1.5rem; display:none; }
     .gate.show { display:block; animation:fade 0.3s ease; }
@@ -179,6 +180,10 @@
   <div class="wrap">
     <div class="askbox" id="askbox">
       <label class="askbox-label" for="obj">Ask a question, paste an objection, or drop a screenshot</label>
+      <div class="fu-context" id="fu-context" style="display:none;">
+        <span class="fu-context-txt">Following up on: <em id="fu-context-q"></em></span>
+        <button class="fu-context-x" id="fu-context-x" onclick="clearFollowUp()">&times; new question</button>
+      </div>
       <textarea id="obj" placeholder="e.g. &ldquo;The Gospels were written decades after Jesus by anonymous authors — you can't trust a word of them.&rdquo;  ·  or  ·  &ldquo;What's the best evidence for the resurrection?&rdquo;"></textarea>
       <div class="askbox-row">
         <div class="askbox-left">
@@ -207,11 +212,7 @@
           <div class="deeper-k">Go deeper</div>
           <div id="r-links"></div>
           <div class="followup" id="followup" style="display:none;">
-            <div class="followup-k">Ask a follow-up</div>
-            <div class="fu-row">
-              <textarea id="fu-input" rows="1" placeholder="e.g. &ldquo;But how do we know the creed is that early?&rdquo;"></textarea>
-              <button class="fu-btn" id="fu-btn" onclick="askFollowUp()">Ask &rarr;</button>
-            </div>
+            <button class="fu-jump" id="fu-jump" onclick="startFollowUp()">&uarr; Ask a follow-up question</button>
           </div>
         </div>
         <div class="res-foot">
@@ -359,7 +360,40 @@
     }
 
     // Conversation state so a follow-up can build on the previous answer.
-    let lastQ = '', lastA = '';
+    let lastQ = '', lastA = '', followUp = false;
+
+    // Scroll the top ask box into view (below the 64px sticky nav) and focus it — used when the
+    // reader taps "Ask a follow-up" so they type their next question right where they asked the last.
+    function scrollToAsk(focus){
+      const box = document.getElementById('askbox');
+      try { if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); } catch(e){}
+      requestAnimationFrame(function(){
+        var top = box.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop || 0) - 76;
+        window.scrollTo({ top: top < 0 ? 0 : top, behavior: 'smooth' });
+        if (focus) { const o=document.getElementById('obj'); try { o.focus({preventScroll:true}); } catch(e){ o.focus(); } }
+      });
+    }
+
+    // "Ask a follow-up" (button under the answer): turn on follow-up mode, show the breadcrumb of
+    // the question you just asked, and take you back up to the main ask box to type the follow-up.
+    function startFollowUp(){
+      if (!lastQ) return;
+      followUp = true;
+      const ctx=document.getElementById('fu-context'), q=document.getElementById('fu-context-q');
+      q.textContent = lastQ.length > 90 ? lastQ.slice(0,90)+'…' : lastQ;
+      ctx.style.display = '';
+      document.getElementById('obj').value = '';
+      document.getElementById('obj').placeholder = 'Ask your follow-up… e.g. “But how do we know the creed is that early?”';
+      scrollToAsk(true);
+    }
+
+    // "✕ new question": leave follow-up mode so the next question starts a fresh thread.
+    function clearFollowUp(){
+      followUp = false;
+      document.getElementById('fu-context').style.display = 'none';
+      const o=document.getElementById('obj'); o.value=''; o.placeholder = ORIG_PLACEHOLDER; o.focus();
+    }
+    const ORIG_PLACEHOLDER = document.getElementById('obj').getAttribute('placeholder');
 
     async function answer(){
       const text = document.getElementById('obj').value.trim();
@@ -368,21 +402,31 @@
       document.getElementById('result').classList.remove('show');
       document.getElementById('gate').classList.remove('show');
       document.getElementById('followup').style.display = 'none';
-      const fi=document.getElementById('fu-input'); if(fi) fi.value='';
       setStatus('');
 
-      // Every question is answered by the live AI (the actual question, under the orthodoxy
-      // guardrails). "Go deeper" points to the Evidence Library rather than a keyword-guessed
-      // page, so a near-match can never mislabel the further reading.
+      // Follow-up mode folds the prior Q+A into the question so the AI continues the thread; a
+      // fresh question is sent as-is. Either way it's the live AI under the orthodoxy guardrails.
+      let apiQ = text;
+      if (followUp && lastQ && lastA) {
+        apiQ =
+          'This is a follow-up question in an ongoing conversation about Christian apologetics. '
+          + 'For context, here is what was asked and answered just before.\n\n'
+          + 'Earlier question: "' + lastQ + '"\n\n'
+          + 'Your earlier answer:\n' + lastA + '\n\n'
+          + 'Follow-up question: "' + text + '"\n\n'
+          + 'Answer the follow-up directly, building on the earlier answer where relevant. '
+          + 'Do not repeat the earlier answer in full; address the new question. Keep the same format and tone.';
+      }
+
       if (!isPro) { document.getElementById('result').classList.remove('show'); const g=document.getElementById('gate'); g.classList.add('show'); g.scrollIntoView({behavior:'smooth',block:'center'}); return; }
-      await liveAnswer(text, text);
+      await liveAnswer(text, apiQ);
     }
 
     // displayQ = what we show the reader as "You asked"; apiQ = what /api/ask actually receives
     // (for a follow-up this carries the prior Q+A as context so the AI builds on it).
     async function liveAnswer(displayQ, apiQ){
-      const btn=document.getElementById('ask-btn'), fbtn=document.getElementById('fu-btn');
-      btn.disabled=true; if(fbtn) fbtn.disabled=true;
+      const btn=document.getElementById('ask-btn'); const btnLabel=btn.textContent;
+      btn.disabled=true; btn.textContent='Answering…';
       setStatus('Finding the best answer…','work');
       try {
         const res = await fetch('/api/ask', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ question: apiQ }) });
@@ -395,34 +439,19 @@
           objLabel:'You asked', obj:displayQ, ans: formatAnswer(data.answer), good:null,
           links, verified:false
         });
-        // Remember this exchange, reveal the follow-up box, and clear its input.
+        // Remember this exchange and reveal the "Ask a follow-up" button under the answer.
         lastQ = displayQ; lastA = data.answer;
-        const fu=document.getElementById('followup'), fi=document.getElementById('fu-input');
-        if(fu){ fu.style.display=''; } if(fi){ fi.value=''; }
+        document.getElementById('followup').style.display = '';
+        // If we were mid-thread, keep follow-up mode on and point the breadcrumb at the newest Q;
+        // a fresh question leaves follow-up mode off (the button starts a new thread).
+        if (followUp) { document.getElementById('fu-context-q').textContent = lastQ.length>90 ? lastQ.slice(0,90)+'…' : lastQ; }
+        else { document.getElementById('fu-context').style.display='none'; document.getElementById('obj').placeholder = ORIG_PLACEHOLDER; }
+        document.getElementById('obj').value = '';
         // flywheel: capture the question (fire-and-forget)
         try { fetch('/api/submit-question', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ question: displayQ, source:'asked-and-answered' }) }); } catch(e){}
       } catch(e) {
         setStatus('Something went wrong reaching the answer service. Please try again in a moment.', 'err');
-      } finally { btn.disabled=false; if(fbtn) fbtn.disabled=false; }
-    }
-
-    // Ask a follow-up that builds on the previous answer. We fold the prior exchange into the
-    // question we send to /api/ask (no API change), so the model continues the conversation
-    // rather than starting fresh — while the reader only sees their follow-up as "You asked".
-    async function askFollowUp(){
-      const fi=document.getElementById('fu-input');
-      const fu=(fi.value||'').trim();
-      if (!fu) { fi.focus(); return; }
-      if (!lastQ || !lastA) { await liveAnswer(fu, fu); return; }
-      const apiQ =
-        'This is a follow-up question in an ongoing conversation about Christian apologetics. '
-        + 'For context, here is what was asked and answered just before.\n\n'
-        + 'Earlier question: "' + lastQ + '"\n\n'
-        + 'Your earlier answer:\n' + lastA + '\n\n'
-        + 'Follow-up question: "' + fu + '"\n\n'
-        + 'Answer the follow-up directly, building on the earlier answer where relevant. '
-        + 'Do not repeat the earlier answer in full; address the new question. Keep the same format and tone.';
-      await liveAnswer(fu, apiQ);
+      } finally { btn.disabled=false; btn.textContent=btnLabel; }
     }
 
     // ═══════ SCREENSHOT OCR (client-side, free) ═══════
@@ -448,8 +477,6 @@
 
     // Enter / Ctrl+Enter submits; prefill from ?q=
     document.getElementById('obj').addEventListener('keydown', e => { if ((e.key==='Enter') && (e.ctrlKey||e.metaKey)) { e.preventDefault(); answer(); } });
-    // Follow-up: Enter submits (Shift+Enter for a newline).
-    document.getElementById('fu-input').addEventListener('keydown', e => { if (e.key==='Enter' && !e.shiftKey) { e.preventDefault(); askFollowUp(); } });
     try { const pq = new URLSearchParams(location.search).get('q'); if (pq) { document.getElementById('obj').value = pq; answer(); } } catch(e){}
   </script>
   <script src="/ad-nav.js" defer></script>
