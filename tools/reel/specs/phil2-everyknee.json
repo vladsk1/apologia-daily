@@ -1,0 +1,95 @@
+{
+  "reviewed": {"argument": "2026-07-09", "orthodoxy": "2026-07-09", "by": "argument+orthodoxy gates; derived from library/phil2.html (orthodoxy-CLEAN 2026-07-04). Isaiah-45-centered recut."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.7,
+  "voiceover": "Every knee will bow. Paul wrote that about Jesus — but Isaiah wrote it about God. Tucked into a prison letter, Paul quotes a hymn older than his own letter — the Carmen Christi, the Song of Christ, sung within a generation of the cross. It says Christ was in the form of God, then emptied himself to become a servant, obedient even to death. But the loudest line is the last one — and to hear it, you have to turn back seven hundred years, to Isaiah 45, one of the most fiercely monotheistic chapters in the whole Bible. There God says: I am God, and there is no other. And then he swears an oath by himself: to me every knee shall bow, every tongue shall swear. That is worship owed to the one God of Israel — and to no one else. Now watch what Paul does. He takes that oath — God's own exclusive worship — and he writes: at the name of Jesus every knee should bow, and every tongue confess that Jesus Christ is Lord. The name above every name that Jesus is given is almost certainly the divine name itself — Kyrios, the LORD. The worship Isaiah reserved for YHWH alone is now given to Jesus — and monotheism is not abandoned, for it is all to the glory of God the Father. This is no demigod in a pantheon. It is Jesus placed inside the very identity of the one God — what Richard Bauckham calls a Christology of divine identity. And it was not a later invention. It was confessed at the headwaters of the faith. Every knee will bow. The only question is whether yours bows now, in worship, or later, in awe.",
+  "source": "library/phil2.html",
+  "scenes": [
+    { "dur": 4.6,
+      "big": [ {"t": "“Every knee", "c": "gold", "s": 116}, {"t": "will bow.”", "c": "gold", "s": 116} ],
+      "sub": [ {"t": "Paul wrote it about Jesus.", "c": "cream", "f": "serif", "s": 46},
+               {"t": "Isaiah wrote it about God.", "c": "dim", "f": "serif", "s": 46} ] },
+
+    { "kicker": "THE SONG OF CHRIST", "dur": 5.4, "lines": [
+      {"t": "In a prison letter, Paul quotes", "c": "cream", "s": 52},
+      {"t": "a hymn older than the letter —", "c": "cream", "s": 52},
+      {"t": "", "s": 22},
+      {"t": "the Carmen Christi,", "c": "gold", "f": "serifb", "s": 62},
+      {"t": "sung within a generation", "c": "dim", "s": 46},
+      {"t": "of the cross.", "c": "dim", "s": 46} ] },
+
+    { "kicker": "THE HYMN CLIMBS", "dur": 5.6, "lines": [
+      {"t": "Christ was “in the form of God,”", "c": "cream", "s": 50},
+      {"t": "then “emptied himself”", "c": "cream", "s": 52},
+      {"t": "by taking a servant's form,", "c": "cream", "s": 52},
+      {"t": "obedient even to death.", "c": "cream", "s": 52},
+      {"t": "", "s": 20},
+      {"t": "But the loudest line is last.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "TURN BACK 700 YEARS", "dur": 5.6, "lines": [
+      {"t": "To hear it, go back", "c": "cream", "s": 54},
+      {"t": "to Isaiah 45 —", "c": "gold", "f": "serifb", "s": 72},
+      {"t": "", "s": 20},
+      {"t": "one of the most fiercely", "c": "cream", "s": 50},
+      {"t": "monotheistic chapters", "c": "cream", "s": 50},
+      {"t": "in the whole Bible.", "c": "cream", "s": 50} ] },
+
+    { "kicker": "WHAT GOD SAYS THERE", "dur": 6.0, "lines": [
+      {"t": "“I am God,", "c": "gold", "f": "serifb", "s": 74},
+      {"t": "and there is no other.”", "c": "gold", "f": "serifb", "s": 66},
+      {"t": "", "s": 22},
+      {"t": "Then he swears", "c": "cream", "s": 52},
+      {"t": "an oath by himself…", "c": "cream", "s": 52} ] },
+
+    { "kicker": "THE OATH · ISAIAH 45:23", "dur": 6.4, "lines": [
+      {"t": "“To ME every knee shall bow,", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "every tongue shall swear.”", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "", "s": 22},
+      {"t": "Worship owed to the one God —", "c": "cream", "s": 48},
+      {"t": "and to no one else.", "c": "dim", "s": 50} ] },
+
+    { "kicker": "NOW WATCH PAUL", "dur": 6.6, "lines": [
+      {"t": "He takes that oath —", "c": "cream", "s": 52},
+      {"t": "God's own exclusive worship —", "c": "cream", "s": 48},
+      {"t": "and writes:", "c": "cream", "s": 52},
+      {"t": "", "s": 20},
+      {"t": "“at the name of JESUS", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "every knee should bow.”", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "kicker": "THE NAME ABOVE EVERY NAME", "dur": 5.8, "lines": [
+      {"t": "The name Jesus is given is", "c": "cream", "s": 52},
+      {"t": "almost certainly", "c": "cream", "s": 52},
+      {"t": "the divine name itself —", "c": "cream", "s": 52},
+      {"t": "", "s": 20},
+      {"t": "Kyrios, the LORD.", "c": "gold", "f": "serifb", "s": 74} ] },
+
+    { "kicker": "WHAT THAT MEANS", "dur": 6.4, "lines": [
+      {"t": "The worship Isaiah reserved", "c": "cream", "s": 50},
+      {"t": "for YHWH alone", "c": "cream", "s": 50},
+      {"t": "is now given to Jesus —", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "", "s": 20},
+      {"t": "yet monotheism stands:", "c": "cream", "s": 48},
+      {"t": "“to the glory of God the Father.”", "c": "dim", "s": 44} ] },
+
+    { "kicker": "A CHRISTOLOGY OF DIVINE IDENTITY", "dur": 5.4, "lines": [
+      {"t": "No demigod in a pantheon.", "c": "cream", "s": 50},
+      {"t": "Jesus is placed inside", "c": "cream", "s": 50},
+      {"t": "the identity of the one God.", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "", "s": 18},
+      {"t": "Bauckham's phrase, not ours.", "c": "dim", "s": 44} ] },
+
+    { "kicker": "NOT A LATER INVENTION", "dur": 5.0, "lines": [
+      {"t": "This was not a legend", "c": "cream", "s": 52},
+      {"t": "that grew over centuries.", "c": "cream", "s": 52},
+      {"t": "", "s": 20},
+      {"t": "It was confessed", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "at the headwaters of the faith.", "c": "gold", "f": "serifb", "s": 48} ] },
+
+    { "dur": 5.2,
+      "big": [ {"t": "Every knee.", "c": "cream", "s": 96}, {"t": "Including yours.", "c": "gold", "s": 96} ],
+      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52} ] }
+  ]
+}
