@@ -83,6 +83,7 @@ body{font-family:var(--bo);background:var(--o);color:var(--n);-webkit-font-smoot
 .tool-btn:disabled{opacity:.5;cursor:default}
 .tool-resp{display:none;margin-top:1rem;background:rgba(255,255,255,.05);border-left:2px solid var(--g);border-radius:0 8px 8px 0;padding:1rem 1.25rem;font-family:var(--bo);font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.85;white-space:pre-wrap}
 .tool-resp.show{display:block}
+.tool-note{font-family:var(--ui);font-size:.72rem;font-style:italic;color:rgba(255,255,255,.5);line-height:1.55;margin-top:.9rem}
 
 .cta{background:var(--n2);border-radius:12px;padding:1.75rem;display:flex;align-items:center;justify-content:space-between;gap:1.25rem;flex-wrap:wrap}
 .cta-t{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:4px}
@@ -178,6 +179,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
       <button class="tool-btn" id="p-btn" onclick="askParent()">Get the answer</button>
     </div>
     <div class="tool-resp" id="p-resp"></div>
+    <p class="tool-note">AI-generated within our orthodoxy guardrails &mdash; a starting point in your own words, not a script, and not personal, pastoral, or professional advice. For guidance specific to your family or church, please talk with a trusted pastor or minister.</p>
   </div>
 
   <div class="section-label">The path, by age &middot; tap a stage</div>
@@ -207,14 +209,16 @@ var BANDS = [
     dev:'They think in <b>stories and pictures</b>, not abstractions, and they are absorbing a basic sense of whether the world is safe and good. They can’t follow a syllogism &mdash; but they are already forming a worldview. Your job is wonder, not arguments.',
     qs:['Who made God?','Where is God? Why can’t I see Him?','Is God real?','Why is the sky there?'],
     how:'Keep it <b>concrete and full of wonder.</b> Tie the unseen to things they already know are real but invisible &mdash; the wind, love, your thoughts. Answer simply and honestly: <b>"Everything that’s made has a maker. God made everything, and He was always there &mdash; He didn’t need making."</b> Don’t over-explain; let them marvel.',
+    deeper:'For you — be ready before they ask',
     links:[['kalam','A maker for everything'],['finetuning','The world is "just right"']] },
   { age:'7&ndash;9', stage:'Curiosity', sub:'Start "is it true — and how do we know?"', risk:'',
     dev:'<b>Critical thinking is switching on.</b> They’re literal, they care intensely about what’s fair and what’s real, and they can follow logic when it’s tied to concrete examples. They’ll start noticing that not everyone believes the same thing.',
     qs:['How do we know the Bible is true?','Did the miracles really happen?','Why do some people not believe in God?','How do we know Jesus was real?'],
     how:'Introduce the idea that faith has <b>reasons</b>, with concrete evidence: <b>"We have thousands of really old copies of the Bible &mdash; more than any other ancient book"</b>; "People who actually saw Jesus alive again wrote it down and wouldn’t take it back even when it cost them." Make "how do we know?" a normal, welcome question.',
+    deeper:'For you — the evidence behind your answers',
     links:[['manuscript','Can we trust the Bible?'],['eyewitnesses','People who were there'],['minimal','Did Jesus rise?']] },
   { age:'10&ndash;12', stage:'Sharpening', sub:'The real questions arrive — meet them head-on', risk:'Highest-risk window',
-    dev:'Abstract reasoning comes online, and this is the window the research flags hardest: <b>preteens are already quietly rejecting core beliefs</b>, and media now shapes them more than parents or church. They can handle real arguments now &mdash; and they need to, before someone else frames the questions for them.',
+    dev:'Abstract reasoning comes online, and this is the window the research flags hardest: <b>preteens are already quietly deciding what they believe</b> &mdash; and some are beginning to disengage &mdash; with media now shaping them as much as parents or church. They can handle real arguments now &mdash; and they need to, before someone else frames the questions for them.',
     qs:['Hasn’t science disproved God?','Why would a good God allow suffering?','Aren’t all religions basically the same?','How do you know Christianity is the right one?'],
     how:'Teach them to <b>spot a weak argument</b> and to compare worldviews fairly &mdash; and make doubt safe to say out loud. Give them the real (kid-level) cases: the universe had a beginning, its constants are fine-tuned, the resurrection has evidence. The aim is a faith they’ve <b>examined</b>, not just inherited.',
     links:[['finetuning','Fine-tuning'],['moral','Right and wrong'],['evil','Why suffering?'],['minimal','The resurrection']] },
@@ -245,7 +249,7 @@ function render(){
         '<div class="blk">What’s happening</div><p class="bdev">'+b.dev+'</p>'+
         '<div class="blk">Questions they ask now</div><ul class="qs">'+qs+'</ul>'+
         '<div class="blk">How to answer</div><div class="how">'+b.how+'</div>'+
-        '<div class="blk">Go deeper together</div><div class="blinks">'+links+'</div>'+
+        '<div class="blk">'+(b.deeper||'Go deeper together')+'</div><div class="blinks">'+links+'</div>'+
       '</div>'+
     '</div>';
   }).join('');
