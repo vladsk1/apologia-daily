@@ -8,8 +8,13 @@
 >
 > **2026-07-09 (web session) — latest handoff: `docs/SESSION_HANDOFF_2026-07-09.md`.** Shipped:
 > a full four-agent recheck (citations + argument + **new `apologia-neutrality`** red-team + orthodoxy)
-> of the **Trinity, Jesus, and Islam** card tiers — all CLEAN, 0 heresy; the real defect everywhere was
-> *paraphrases dressed as verbatim scholar quotes* in the compressed cards (fixed). Plus a Trinity-essay
+> of **five** card tiers — **Trinity, Jesus, Islam, Resurrection (`ev-s2`), and Biblical Reliability
+> (`ev-s4`)** — all CLEAN, 0 heresy; the real defect everywhere was
+> *paraphrases dressed as verbatim scholar quotes* + overstatement in the compressed cards (fixed;
+> the Resurrection/Bible-Reliability pass also fixed one empty-tomb argument BREAK, the Meier-brackets-
+> resurrection misattribution, a false Cyrus/Deutero-Isaiah dating claim, the Tyre overstatement, and
+> reconciled discredited Caesar/Plato manuscript counts). **Only `ev-s1` (God's Existence) and `ev-s5`
+> (Science & Faith) card tiers remain unswept.** Plus a Trinity-essay
 > clarifier sweep, Asked & Answered follow-up questions, `parents.html` upgrades, the site-wide
 > "Ask Anything → Asked & Answered" rename, MK/ES index nav, and a creed-dating audit (no change needed —
 > our voice already says "~2–5 years"; "within months" is always attributed to Dunn). **Del Rosario demo

@@ -24,11 +24,11 @@ separate LOCAL session** and is already on `main` and current.
 
 ## What this WEB session shipped (all live on `main`)
 
-### 1. Evidence Library recheck — Trinity, Jesus, Islam (four-agent pipeline)
+### 1. Evidence Library recheck — Trinity, Jesus, Islam, Resurrection, Biblical Reliability (four-agent pipeline)
 Ran the full pipeline — **`apologia-citations` + `apologia-argument` + `apologia-neutrality` +
-`apologia-orthodoxy`** — on the three highest-stakes tabs' **card tier** (the compressed
+`apologia-orthodoxy`** — on **five** tabs' **card tier** (the compressed
 "Case, Plainly" / mastery boxes / daily-args), benchmarked against the already-audited essays.
-**Result across all three: zero BREAK, zero heresy; every final orthodoxy gate CLEAN.** The
+**Result across all five: zero BREAK, zero heresy; every final orthodoxy gate CLEAN.** The
 essays were already clean; the drift lived only in the compressed card tier, and it was
 quotation-precision + overstatement, never heterodoxy.
 
@@ -54,7 +54,36 @@ quotation-precision + overstatement, never heterodoxy.
   600k/"99%" overstatement (card 09, "exclusion ≠ forgery"); restored **denominational neutrality**
   on Surah 5:116 ("folk Catholic practice" → a heterodox sect, the Collyridians). The **4:82
   self-issued-standard framing and all deity/Trinity cards were confirmed CLEAN.**
-- Both `ev-s3.html` and `worldviews.html` re-stamped recording all four passes.
+- **Resurrection tab** (`ev-s2.html` + `daily-args.json` Resurrection entries): de-quoted the
+  recurring paraphrase-as-verbatim defect — **Licona** ("most plausible" → *best historical
+  explanation*), **two Raymond Brown** quotes → his real "very probable / almost inexplicable,"
+  **two Meier** quotes, and a phantom **Dunn** "historical bedrock." Corrected a real
+  **misattribution**: the tab had **Meier applying multiple attestation to the resurrection**, but
+  Meier deliberately *brackets* the resurrection out of historical method → now flagged as our
+  inference. The one argument **BREAK**: the empty-tomb card asserted "the tomb was empty —
+  conceded by enemies" while omitting the strongest sceptical thesis, so **imported the
+  Crossan/Ehrman "no honourable tomb at all" objection + reply** from `emptytomb.html` and reframed
+  to "*if* the tomb was empty." Softened the "cannot hallucinate" absolutes and **added Dale
+  Allison** as the serious visionary-hypothesis critic; qualified the martyrdom traditions ("by
+  strong early tradition"); **cut the uncertified Shroud of Turin deep-dive down to a neutral
+  we-take-no-position note**; softened Sabbath→Sunday. Creed dating already correct (own voice
+  "~2–5 years"; Dunn's "within months" attributed only to Dunn).
+- **Biblical Reliability tab** (`ev-s4.html` + `daily-args.json` Bible-reliability entries): fixed
+  a genuine **factual error** — "a 6th-century Deutero-Isaiah would still be writing before Cyrus's
+  birth" is false (Cyrus b. ~600 BC) → rewrote to rest on the traditional dating + the
+  naming-in-advance point that holds either way. Added the honest **Tyre caveat** (Ezek 29:18 —
+  Nebuchadnezzar got no plunder; a settlement at Tyre exists today); **scoped the Dead Sea Scrolls
+  point to *dating*, not the Servant's identity**; softened "could not have been invented" /
+  "cannot be a coincidence" / "strongly confirmatory"; noted the Muratorian minority late-dating;
+  made **preservation ≠ truth** explicit in the category intro; softened the Da Vinci Code
+  "historically illiterate" tone. In `daily-args.json`: reconciled the **discredited Caesar/Plato
+  manuscript counts** (10/7 → ~250/~210, matching the card), restored dropped words in the
+  **Albright** quote, de-quoted the **Ehrman** canon paraphrase.
+- Both `ev-s2.html` and `ev-s4.html` newly stamped (they had no `content-review` stamp before);
+  `ev-s3.html` and `worldviews.html` re-stamped recording all four passes.
+- **Two optional `orthonote` clarifier candidates deferred to the human/pastoral pass** (both gate-
+  judged CLEAN, "not needed for deploy"): `ev-s2` Card 08 high-Christology clause; `ev-s4` Card 07
+  Servant-identity clause. Same treatment as the Trinity/Islam NOTE items.
 
 ### 2. New permanent fleet agent — `apologia-neutrality`
 `.claude/agents/apologia-neutrality.md` — an adversarial red-team reviewer for high-stakes pages
@@ -121,10 +150,9 @@ years."
 - Deploy: `git push origin claude/short-form-reels-generator-tjpymt:main`.
 
 ## Open / candidate next steps (web side)
-- **Same four-agent recheck on the remaining card tiers** not yet swept: **God's Existence (`ev-s1`),
-  Resurrection (`ev-s2`), Bible Reliability (`ev-s4`), Science & Faith (`ev-s5`)** — same method; the
-  citations pass on their card tiers is the missing piece, and the fabricated-quote failure mode is
-  what to hunt.
+- **Same four-agent recheck on the remaining two card tiers** not yet swept: **God's Existence
+  (`ev-s1`)** and **Science & Faith (`ev-s5`)** — same method (Trinity/Jesus/Islam/Resurrection/
+  Bible-Reliability are now done). The fabricated-quote / overstatement failure mode is what to hunt.
 - Human/pastoral sign-off on the Trinity + Islam tabs (the orthodoxy gate left a short NOTE list of
   delicate-but-orthodox phrases, mostly already fenced with clarifiers).
 - (Unchanged, owed by user) run the `ask_rate_limit` SQL in Supabase (see
