@@ -175,7 +175,7 @@
     var msg=document.getElementById('ask-submit-msg');
     if(q.length<8){ msg.style.display='block'; msg.style.color='#a23'; msg.textContent='Please type a bit more of your question.'; return; }
     var askLink=document.getElementById('ask-now-link');
-    try{ askLink.href='/ask-anything.html?q='+encodeURIComponent(q); }catch(e){}
+    try{ askLink.href='/asked-and-answered.html?q='+encodeURIComponent(q); }catch(e){}
     fetch('/api/submit-question',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,email:email,website:hp,source:'answers-index'})}).catch(function(){});
     try{ if(window.posthog) window.posthog.capture('question_submitted',{source:'answers-index',has_email:!!email}); }catch(e){}
     msg.style.display='block'; msg.style.color='#3a7d44';

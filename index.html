@@ -984,12 +984,12 @@
           <span class="feature-tag">Explore arguments →</span>
         </div>
 
-        <div class="feature-card" onclick="window.location='ask-anything.html'" style="cursor:pointer;">
+        <div class="feature-card" onclick="window.location='asked-and-answered.html'" style="cursor:pointer;">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
           </div>
-          <div class="feature-title">AI Ask Anything</div>
-          <div class="feature-desc">Ask any question about the faith and receive a thoughtful, evidence-based answer drawn from the world's leading apologists — available 24/7.</div>
+          <div class="feature-title">Asked &amp; Answered</div>
+          <div class="feature-desc">Paste an objection or ask any question about the faith and get a clear, evidence-based answer — plus the skeptic who first raised it and where to dig deeper. Available 24/7.</div>
           <span class="feature-tag">Ask a question →</span>
         </div>
 
@@ -1083,7 +1083,7 @@
         <a class="hc-cta" href="signup.html">Create your free account &rarr;</a>
         <span class="hc-login">Already have an account? <a href="login.html">Log in</a> &middot; or come back tomorrow</span>
       </div>
-      <p class="hc-note">Powered by the same AI as Ask Anything &middot; <a href="/asked-and-answered.html">open the full experience &rarr;</a></p>
+      <p class="hc-note">Powered by the same AI as Asked &amp; Answered &middot; <a href="/asked-and-answered.html">open the full experience &rarr;</a></p>
     </div>
   </section>
 
@@ -1334,7 +1334,7 @@
             </li>
             <li>
               <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Ask Anything &mdash; 1 AI question per week
+              Asked &amp; Answered &mdash; 1 AI question per week
             </li>
             <li>
               <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1366,7 +1366,7 @@
             </li>
             <li>
               <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Unlimited Ask Anything
+              Unlimited Asked &amp; Answered
             </li>
             <li>
               <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1568,11 +1568,11 @@
         title: 'This Is a Safe Place for Hard Questions',
         desc: 'Doubt is not the opposite of faith. It is often the beginning of a deeper, more honest faith. Every question you have has been wrestled with by serious Christian thinkers — and Apologia Daily is designed to give you their honest answers, not easy platitudes.',
         steps: [
-          { text: '<strong>Ask Anything:</strong> Type your exact doubt or question and get a thoughtful, intellectually honest response from our AI — trained on the best Christian scholarship.' },
+          { text: '<strong>Asked &amp; Answered:</strong> Type your exact doubt or paste an objection and get a thoughtful, intellectually honest response from our AI — trained on the best Christian scholarship.' },
           { text: '<strong>Daily Devotional:</strong> Each day begins with a passage and a reflection that takes faith and reason seriously together. Come back daily — it helps.' },
           { text: '<strong>Evidence Library:</strong> Browse the arguments at whatever pace feels right. You don\'t have to accept anything — just examine the evidence honestly.' }
         ],
-        btn1: { text: 'Ask Your Question →', href: 'ask-anything.html' },
+        btn1: { text: 'Ask Your Question →', href: 'asked-and-answered.html' },
         btn2: { text: 'Start the Daily Devotional', href: 'daily-devotional.html' }
       }
     };
@@ -1700,7 +1700,7 @@
         leftTxt = left > 0 ? (left + ' free question' + (left === 1 ? '' : 's') + ' left today') : 'That was your last free question today';
         hitWall = left <= 0;
       }
-      var foot = '<div class="hc-foot"><span>' + leftTxt + '</span><span><a href="#" onclick="hcClose();return false;" style="color:rgba(255,255,255,.55);margin-right:1rem">Close</a><a href="/asked-and-answered.html">Continue in Ask Anything &rarr;</a></span></div>';
+      var foot = '<div class="hc-foot"><span>' + leftTxt + '</span><span><a href="#" onclick="hcClose();return false;" style="color:rgba(255,255,255,.55);margin-right:1rem">Close</a><a href="/asked-and-answered.html">Continue in Asked &amp; Answered &rarr;</a></span></div>';
       box.innerHTML = '<button class="hc-close" onclick="hcClose()" aria-label="Close">&times;</button><div class="hc-q">' + hcEsc(q) + '</div><div class="hc-a">' + hcFormat(data.answer) + '</div>' + foot;
       var aEl = box.querySelector('.hc-a');
       if (aEl && aEl.scrollHeight > 560){
@@ -1714,7 +1714,7 @@
       if (hitWall){ hcShowLimit(loggedIn); }
       inp.value = '';
     } catch(err){
-      box.innerHTML = '<button class="hc-close" onclick="hcClose()" aria-label="Close">&times;</button><div class="hc-q">' + hcEsc(q) + '</div><div class="hc-a"><p>Something went wrong on our end \u2014 please try again in a moment, or <a href="/asked-and-answered.html" style="color:var(--gold)">open Ask Anything</a>.</p></div>';
+      box.innerHTML = '<button class="hc-close" onclick="hcClose()" aria-label="Close">&times;</button><div class="hc-q">' + hcEsc(q) + '</div><div class="hc-a"><p>Something went wrong on our end \u2014 please try again in a moment, or <a href="/asked-and-answered.html" style="color:var(--gold)">open Asked &amp; Answered</a>.</p></div>';
     }
     btn.disabled = false; btn.textContent = 'Ask';
   }

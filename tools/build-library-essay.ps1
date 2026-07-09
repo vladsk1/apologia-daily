@@ -108,7 +108,7 @@ $tpl=@'
       <li><a href="/evidence-library.html">Evidence Library</a></li>
       <li><a href="/daily-devotional.html">Daily Devotional</a></li>
       <li><a href="/debate-arena.html">Debate Arena</a></li>
-      <li><a href="/ask-anything.html">Ask Anything</a></li>
+      <li><a href="/asked-and-answered.html">Asked &amp; Answered</a></li>
       <li><a href="/worldviews.html">Worldviews</a></li>
       <li><a href="/study-plans.html">Study Plans</a></li>
       <li class="adn-has-drop">
@@ -166,7 +166,7 @@ $tpl=@'
     <h2>Put it into practice</h2>
     <p>Reconstruct this argument from memory, drill its objections, and defend it in the interactive Mastery Track.</p>
     <a href="/{{MASTERY}}">Practice this argument &rarr;</a>
-    <a class="ghost" href="/ask-anything.html">Ask a question &rarr;</a>
+    <a class="ghost" href="/asked-and-answered.html">Ask a question &rarr;</a>
   </section>
 </main>
 <div id="float-tutor" style="position:fixed;bottom:50%;right:0;transform:translateY(50%);z-index:500;display:flex;flex-direction:column;align-items:flex-end;gap:0.5rem;">
