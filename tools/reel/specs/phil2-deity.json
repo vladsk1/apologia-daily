@@ -1,0 +1,85 @@
+{
+  "reviewed": {"argument": "2026-07-09", "orthodoxy": "2026-07-09", "by": "argument+orthodoxy gates; derived from library/phil2.html (already orthodoxy-CLEAN 2026-07-04)"},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "voiceover": "You've probably sung Philippians 2 — but your English Bible hides its most explosive words in the Greek. Tucked into a prison letter is a passage that reads like a song. Scholars call it the Carmen Christi — the Song of Christ — and most think Paul is quoting something older than his own letter, sung within a generation of the cross. Word one: morphe theou — the form of God. Not a costume. The same word describes the form of a servant he truly became — so the form of God is just as real. Word two: harpagmos — one of the hardest words in the New Testament. Most now read it this way: equality with God he already had, and refused to exploit. Word three: ekenosen — he emptied himself. Here is the trap most readers miss: he did not empty himself of his deity. He emptied himself by adding humanity — remaining what he was, becoming what he was not. Word four: the name above every name — Kyrios, the Lord, the divine name itself. Paul takes Isaiah 45, where God swears to me every knee shall bow — and applies it to Jesus. This is no demigod in a crowded pantheon. It is Jesus placed inside the identity of the one God — what Richard Bauckham calls a Christology of divine identity. The worship of Jesus as God is not a late invention. It was sung at the very headwaters of the faith. The first Christians did not argue Jesus into godhood. They sang it. Jesus is Lord — to the glory of God the Father.",
+  "source": "library/phil2.html",
+  "scenes": [
+    { "dur": 3.2,
+      "big": [ {"t": "The hymn that", "c": "cream", "s": 86}, {"t": "worships Jesus as God", "c": "gold", "s": 72} ],
+      "sub": [ {"t": "Philippians 2 — hidden in the Greek", "c": "dim", "f": "serif", "s": 44} ] },
+
+    { "kicker": "THE SONG OF CHRIST", "dur": 4.4, "lines": [
+      {"t": "Tucked in a prison letter", "c": "cream", "s": 56},
+      {"t": "is a passage that reads", "c": "cream", "s": 56},
+      {"t": "like a song. Scholars call it", "c": "cream", "s": 52},
+      {"t": "", "s": 18},
+      {"t": "the Carmen Christi.", "c": "gold", "f": "serifb", "s": 74} ] },
+
+    { "kicker": "OLDER THAN THE LETTER", "dur": 4.2, "lines": [
+      {"t": "Most scholars think Paul", "c": "cream", "s": 56},
+      {"t": "is quoting something older —", "c": "cream", "s": 54},
+      {"t": "", "s": 20},
+      {"t": "sung within a generation", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "of the cross.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "WORD 1 · MORPHĒ THEOU", "dur": 4.8, "lines": [
+      {"t": "“in the form of God”", "c": "gold", "f": "serifb", "s": 66},
+      {"t": "", "s": 16},
+      {"t": "Not a costume. The same word", "c": "cream", "s": 50},
+      {"t": "names the “form of a servant”", "c": "cream", "s": 50},
+      {"t": "he truly became —", "c": "cream", "s": 52},
+      {"t": "so this is just as real.", "c": "dim", "s": 50} ] },
+
+    { "kicker": "WORD 2 · HARPAGMOS", "dur": 5.0, "lines": [
+      {"t": "one of the hardest words", "c": "cream", "s": 54},
+      {"t": "in the New Testament", "c": "cream", "s": 54},
+      {"t": "", "s": 18},
+      {"t": "Most now read it:", "c": "dim", "s": 50},
+      {"t": "equality with God he already had —", "c": "gold", "f": "serifb", "s": 44},
+      {"t": "and refused to exploit.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "WORD 3 · EKENŌSEN", "dur": 5.6, "lines": [
+      {"t": "“he emptied himself”", "c": "gold", "f": "serifb", "s": 62},
+      {"t": "", "s": 14},
+      {"t": "The trap most readers miss:", "c": "cream", "s": 50},
+      {"t": "he did NOT empty himself", "c": "cream", "s": 50},
+      {"t": "of his deity — he emptied himself", "c": "cream", "s": 46},
+      {"t": "by ADDING humanity.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "REMAINED WHAT HE WAS", "dur": 3.8, "lines": [
+      {"t": "He remained what he was,", "c": "cream", "s": 56},
+      {"t": "", "s": 18},
+      {"t": "and became", "c": "cream", "s": 56},
+      {"t": "what he was not.", "c": "gold", "f": "serifb", "s": 66} ] },
+
+    { "kicker": "WORD 4 · KYRIOS", "dur": 5.6, "lines": [
+      {"t": "The name above every name", "c": "cream", "s": 52},
+      {"t": "is the divine name itself.", "c": "cream", "s": 52},
+      {"t": "", "s": 18},
+      {"t": "Paul takes Isaiah 45 — where God", "c": "cream", "s": 44},
+      {"t": "swears “to ME every knee shall bow” —", "c": "gold", "f": "serifb", "s": 40},
+      {"t": "and applies it to Jesus.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "A CHRISTOLOGY OF DIVINE IDENTITY", "dur": 5.0, "lines": [
+      {"t": "No demigod in a pantheon.", "c": "cream", "s": 52},
+      {"t": "Jesus is placed inside", "c": "cream", "s": 52},
+      {"t": "the identity of the one God —", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "Bauckham's phrase, not ours.", "c": "dim", "s": 44} ] },
+
+    { "kicker": "NOT A LATE INVENTION", "dur": 4.6, "lines": [
+      {"t": "The worship of Jesus as God", "c": "cream", "s": 52},
+      {"t": "was not a legend that grew", "c": "cream", "s": 52},
+      {"t": "over centuries.", "c": "cream", "s": 52},
+      {"t": "", "s": 18},
+      {"t": "It was there from the start.", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "dur": 4.2,
+      "big": [ {"t": "They didn't argue it.", "c": "cream", "s": 74}, {"t": "They sang it.", "c": "gold", "s": 104} ],
+      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52} ] }
+  ]
+}
