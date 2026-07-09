@@ -63,6 +63,9 @@ body{font-family:var(--bo);background:var(--o);color:var(--n);-webkit-font-smoot
 .qs li{font-family:var(--bo);font-size:.95rem;color:var(--n);padding:7px 0 7px 1.4rem;position:relative;border-bottom:1px solid var(--b)}
 .qs li:last-child{border-bottom:none}
 .qs li::before{content:'\201C';position:absolute;left:0;top:8px;color:var(--g);font-family:var(--fd);font-size:1.1rem}
+.qs a.qlink{color:var(--n3);text-decoration:none;font-weight:500}
+.qs a.qlink::after{content:' \2192';color:var(--g);font-weight:700}
+.qs a.qlink:hover{color:var(--gd);text-decoration:underline;text-underline-offset:2px}
 .how{background:var(--n4);border-radius:8px;padding:1rem 1.25rem;margin-top:.5rem;font-family:var(--ui);font-size:.92rem;color:var(--m);line-height:1.75}
 .how b{color:var(--n)}
 .blinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:1rem}
@@ -84,6 +87,9 @@ body{font-family:var(--bo);background:var(--o);color:var(--n);-webkit-font-smoot
 .tool-resp{display:none;margin-top:1rem;background:rgba(255,255,255,.05);border-left:2px solid var(--g);border-radius:0 8px 8px 0;padding:1rem 1.25rem;font-family:var(--bo);font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.85;white-space:pre-wrap}
 .tool-resp.show{display:block}
 .tool-note{font-family:var(--ui);font-size:.72rem;font-style:italic;color:rgba(255,255,255,.5);line-height:1.55;margin-top:.9rem}
+.tool-eg{background:none;border:none;font-family:var(--ui);font-size:.78rem;font-weight:500;color:var(--gl);cursor:pointer;padding:0;margin-top:2px;text-decoration:underline;text-underline-offset:2px}
+.tool-eg:hover{color:var(--g)}
+.tool-eg-tag{display:inline-block;font-family:var(--ui);font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g);background:rgba(200,169,81,.14);border:1px solid rgba(200,169,81,.35);border-radius:20px;padding:2px 9px;margin-bottom:.7rem}
 
 .cta{background:var(--n2);border-radius:12px;padding:1.75rem;display:flex;align-items:center;justify-content:space-between;gap:1.25rem;flex-wrap:wrap}
 .cta-t{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:4px}
@@ -178,6 +184,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
       <input class="tool-in" id="p-q" type="text" placeholder="e.g. Who made God? / Why does God let bad things happen?" onkeydown="if(event.key==='Enter')askParent()">
       <button class="tool-btn" id="p-btn" onclick="askParent()">Get the answer</button>
     </div>
+    <button type="button" class="tool-eg" onclick="showExample()">See an example &rarr;</button>
     <div class="tool-resp" id="p-resp"></div>
     <p class="tool-note">AI-generated within our orthodoxy guardrails &mdash; a starting point in your own words, not a script, and not personal, pastoral, or professional advice. For guidance specific to your family or church, please talk with a trusted pastor or minister.</p>
   </div>
@@ -189,9 +196,9 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
   <div class="cta">
     <div>
       <div class="cta-t">Heading to university soon?</div>
-      <div class="cta-s">The 16&ndash;18 stage hands off to focused college prep &mdash; practising the hostile-lecturer conversation before they're in it. <em style="color:var(--gl);font-style:italic">(Coming soon.)</em></div>
+      <div class="cta-s">You can start now: have them practise defending their faith out loud in the Debate Arena, and pre-load the hardest objections from the 16&ndash;18 stage above &mdash; so a confident lecturer or classmate can't blindside them. <em style="color:var(--gl);font-style:italic">A dedicated college-prep track is on the way; these tools are ready today.</em></div>
     </div>
-    <a href="debate-arena.html">Try the Debate Arena &rarr;</a>
+    <a href="debate-arena.html">Practise in the Debate Arena &rarr;</a>
   </div>
 
   <p class="note">Every answer here is given within historic Christian orthodoxy and stays on the faith all Christian traditions share. For questions specific to your tradition, your pastor or priest is the best guide.</p>
@@ -207,36 +214,39 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
 var BANDS = [
   { age:'3&ndash;6', stage:'Wonder', sub:'Plant awe and the habit of "how do we know?"', risk:'',
     dev:'They think in <b>stories and pictures</b>, not abstractions, and they are absorbing a basic sense of whether the world is safe and good. They can’t follow a syllogism &mdash; but they are already forming a worldview. Your job is wonder, not arguments.',
-    qs:['Who made God?','Where is God? Why can’t I see Him?','Is God real?','Why is the sky there?'],
+    qs:[['Who made God?','who-made-god'],['Where is God? Why can’t I see Him?','if-god-is-real-why-does-he-seem-hidden'],['Is God real?','does-god-exist'],'Why is the sky there?'],
     how:'Keep it <b>concrete and full of wonder.</b> Tie the unseen to things they already know are real but invisible &mdash; the wind, love, your thoughts. Answer simply and honestly: <b>"Everything that’s made has a maker. God made everything, and He was always there &mdash; He didn’t need making."</b> Don’t over-explain; let them marvel.',
     deeper:'For you — be ready before they ask',
     links:[['kalam','A maker for everything'],['finetuning','The world is "just right"']] },
   { age:'7&ndash;9', stage:'Curiosity', sub:'Start "is it true — and how do we know?"', risk:'',
     dev:'<b>Critical thinking is switching on.</b> They’re literal, they care intensely about what’s fair and what’s real, and they can follow logic when it’s tied to concrete examples. They’ll start noticing that not everyone believes the same thing.',
-    qs:['How do we know the Bible is true?','Did the miracles really happen?','Why do some people not believe in God?','How do we know Jesus was real?'],
+    qs:[['How do we know the Bible is true?','were-the-gospels-written-by-eyewitnesses'],['Did the miracles really happen?','is-there-evidence-jesus-rose-from-the-dead'],'Why do some people not believe in God?',['How do we know Jesus was real?','did-jesus-really-exist']],
     how:'Introduce the idea that faith has <b>reasons</b>, with concrete evidence: <b>"We have thousands of really old copies of the Bible &mdash; more than any other ancient book"</b>; "People who actually saw Jesus alive again wrote it down and wouldn’t take it back even when it cost them." Make "how do we know?" a normal, welcome question.',
     deeper:'For you — the evidence behind your answers',
     links:[['manuscript','Can we trust the Bible?'],['eyewitnesses','People who were there'],['minimal','Did Jesus rise?']] },
   { age:'10&ndash;12', stage:'Sharpening', sub:'The real questions arrive — meet them head-on', risk:'Highest-risk window',
     dev:'Abstract reasoning comes online, and this is the window the research flags hardest: <b>preteens are already quietly deciding what they believe</b> &mdash; and some are beginning to disengage &mdash; with media now shaping them as much as parents or church. They can handle real arguments now &mdash; and they need to, before someone else frames the questions for them.',
-    qs:['Hasn’t science disproved God?','Why would a good God allow suffering?','Aren’t all religions basically the same?','How do you know Christianity is the right one?'],
+    qs:[['Hasn’t science disproved God?','doesnt-science-disprove-god'],['Why would a good God allow suffering?','why-does-god-allow-suffering'],['Aren’t all religions basically the same?','arent-all-religions-basically-the-same'],['How do you know Christianity is the right one?','what-makes-christianity-different-from-other-religions']],
     how:'Teach them to <b>spot a weak argument</b> and to compare worldviews fairly &mdash; and make doubt safe to say out loud. Give them the real (kid-level) cases: the universe had a beginning, its constants are fine-tuned, the resurrection has evidence. The aim is a faith they’ve <b>examined</b>, not just inherited.',
     links:[['finetuning','Fine-tuning'],['moral','Right and wrong'],['evil','Why suffering?'],['minimal','The resurrection']] },
   { age:'13&ndash;15', stage:'Ownership', sub:'Help them make it theirs', risk:'',
     dev:'Faith becomes <b>personal and identity-shaped</b>. They’re working out who they are and which communities to trust, and online "deconstruction" is loud. Today’s teens are often less gripped by science-vs-faith than by <b>meaning, identity, and trust</b>: How should I live? Can this be trusted with my actual life?',
-    qs:['What if I don’t feel God?','Is it wrong to doubt?','Why does the church get things wrong?','How can faith speak to who I am?'],
+    qs:[['What if I don’t feel God?','if-god-is-real-why-does-he-seem-hidden'],['Is it wrong to doubt?','is-it-ok-to-have-doubts-as-a-christian'],'Why does the church get things wrong?','How can faith speak to who I am?'],
     how:'Shift from lectures to <b>dialogue</b>. Welcome doubt as part of owning faith, not a betrayal of it. Answer the heart question under the head question. Let them test ideas safely &mdash; better they wrestle at your kitchen table than alone at 2am online.',
     links:[['religious','Experiencing God'],['moral','Meaning & morality'],['uniqueness','Why Jesus?']] },
   { age:'16&ndash;18', stage:'Launch', sub:'Pre-load the hardest questions before they leave', risk:'',
     dev:'They’re about to step into the years when <b>most who leave the faith leave</b> &mdash; hostile lecturers, confident peers, and the assumption that no thinking person believes this. The foundation is poured; now it needs <b>stress-testing</b>.',
-    qs:['Everyone smart seems to be an atheist — am I missing something?','How do I answer a professor who mocks faith?','Can I defend this without sounding stupid?'],
+    qs:[['Everyone smart seems to be an atheist — am I missing something?','isnt-faith-believing-without-evidence'],'How do I answer a professor who mocks faith?','Can I defend this without sounding stupid?'],
     how:'Pre-load the toughest objections in their <b>strongest form</b> (so a lecturer can’t blindside them), and let them <b>practise the conversation out loud</b> before they’re in it. Help them line up their people &mdash; a church, a mentor, a friend &mdash; before they go.',
     links:[['kalam','The full case'],['minimal','Resurrection, in depth']] },
 ];
 
 function render(){
   document.getElementById('bands').innerHTML = BANDS.map(function(b,i){
-    var qs = b.qs.map(function(q){return '<li>'+q+'</li>';}).join('');
+    var qs = b.qs.map(function(q){
+      if (Array.isArray(q)) return '<li><a class="qlink" href="/answers/'+q[1]+'.html">'+q[0]+'</a></li>';
+      return '<li>'+q+'</li>';
+    }).join('');
     var links = b.links.map(function(l){return '<a class="blink" href="ev-m-'+l[0]+'.html">'+l[1]+' &rarr;</a>';}).join('');
     return '<div class="band" id="band'+i+'">'+
       '<div class="bh" onclick="tog('+i+')">'+
@@ -280,6 +290,15 @@ async function askParent(){
     else { resp.textContent='Something went wrong. Please try again in a moment.'; }
   }catch(e){ resp.textContent='Something went wrong. Please try again in a moment.'; }
   btn.disabled=false; btn.textContent=lbl;
+}
+
+/* ---- one-tap sample so parents see the value before typing ---- */
+function showExample(){
+  document.getElementById('p-age').value='4';
+  document.getElementById('p-q').value='Who made God?';
+  var resp=document.getElementById('p-resp');
+  resp.classList.add('show');
+  resp.innerHTML='<span class="tool-eg-tag">Example &middot; age 4</span>That’s such a good question! Here’s a way to say it:\n\n“Everything that gets made has a maker — your toys, our house, even you. But God is different. Nobody made God. He was always there, and He’s the one who made everything else. That’s part of what makes Him God.”\n\nThen keep the door open: “What made you wonder about that? I love that you’re asking the big questions.”';
 }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
