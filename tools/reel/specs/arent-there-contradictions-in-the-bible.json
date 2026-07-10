@@ -1,0 +1,68 @@
+{
+  "reviewed": {"citations": "2026-07-10", "argument": "2026-07-10", "orthodoxy": "2026-07-10", "by": "New reel on Bible contradictions. apologia-citations = 0 fabrications (one-angel [Matt 28/Mark 16] vs two [Luke 24/John 20] harmonization correct). argument+orthodoxy via general-purpose running each agent's .md = orthodoxy CLEAN (no manuscript->truth overreach, denominationally neutral, no strict-inerrancy adjudication); argument WEAK->fixed the key precision slip: the reel discusses NARRATIVE discrepancies but had slid into textual-criticism 'variant' language + 'catalogued every variant' (borrows the Comma-Johanneum-adjacent manuscript debate's authority) -> changed to 'scholars have studied them for centuries' and 'none of them PUTS a core teaching in doubt' (vs 'touch', which the 1 John 5:7 interpolation would falsify). The honest 'a few passages are genuinely hard' concession kept intact so the car-crash analogy doesn't over-prove."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "pace": 1.4,
+  "voiceover": "Isn't the Bible full of contradictions? Fewer than you've been told. Picture a car crash with four witnesses. One saw the color, one heard the horn, one counted the passengers — each notices different things, and none of them is lying. That's the Gospels. One writer mentions the angel at the tomb who spoke; another counts two who were there. Both can be true. Complementary details aren't contradictions — they're what real testimony looks like. And it cuts the other way: if four accounts matched word for word, you'd rightly suspect they'd been rehearsed. Now, be honest — a few passages are genuinely hard, and scholars have studied them for centuries. But none of them puts a single core teaching of the faith in doubt. The differences are minor. The event they all report — a man raised from the dead — is not.",
+  "source": "answers/arent-there-contradictions-in-the-bible.html",
+  "scenes": [
+    { "dur": 3.4,
+      "big": [ {"t": "Contradictions", "c": "gold", "s": 84}, {"t": "in the Bible?", "c": "cream", "s": 90} ],
+      "sub": [ {"t": "Fewer than you've been told.", "c": "dim", "f": "serif", "s": 42} ] },
+
+    { "kicker": "THE USUAL LIST", "dur": 4.2, "lines": [
+      {"t": "Different numbers.", "c": "cream", "s": 54},
+      {"t": "Different details.", "c": "cream", "s": 54},
+      {"t": "Gospels that don't", "c": "cream", "s": 52},
+      {"t": "line up perfectly.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "PICTURE A CAR CRASH", "dur": 4.6, "lines": [
+      {"t": "Four witnesses describe it.", "c": "cream", "s": 48},
+      {"t": "Each notices", "c": "cream", "s": 54},
+      {"t": "different things.", "c": "cream", "s": 54},
+      {"t": "", "s": 16},
+      {"t": "None of them is lying.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "THAT'S THE GOSPELS", "dur": 4.8, "lines": [
+      {"t": "One writer mentions", "c": "cream", "s": 52},
+      {"t": "one angel at the tomb;", "c": "cream", "s": 52},
+      {"t": "another counts two.", "c": "cream", "s": 52},
+      {"t": "", "s": 16},
+      {"t": "Both can be true.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "ANGLES, NOT CONFLICTS", "dur": 4.4, "lines": [
+      {"t": "Complementary details", "c": "cream", "s": 52},
+      {"t": "aren't contradictions —", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "", "s": 16},
+      {"t": "they're what real", "c": "cream", "s": 52},
+      {"t": "testimony looks like.", "c": "cream", "s": 52} ] },
+
+    { "kicker": "IT CUTS THE OTHER WAY", "dur": 4.6, "lines": [
+      {"t": "If the accounts matched", "c": "cream", "s": 50},
+      {"t": "word for word,", "c": "cream", "s": 54},
+      {"t": "you'd rightly suspect", "c": "cream", "s": 52},
+      {"t": "they'd been rehearsed.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "THE HONEST PART", "dur": 4.6, "lines": [
+      {"t": "Yes — a few passages", "c": "cream", "s": 52},
+      {"t": "are genuinely hard.", "c": "cream", "s": 52},
+      {"t": "", "s": 16},
+      {"t": "Scholars have studied them", "c": "cream", "s": 48},
+      {"t": "for centuries.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "AND THE VERDICT?", "dur": 4.6, "lines": [
+      {"t": "None of them puts", "c": "cream", "s": 52},
+      {"t": "a core teaching in doubt.", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "The differences are minor.", "c": "cream", "s": 52} ] },
+
+    { "dur": 4.2,
+      "big": [ {"t": "Not contradictions.", "c": "cream", "s": 72}, {"t": "Witnesses.", "c": "gold", "s": 100} ],
+      "sub": [ {"t": "The event they all report", "c": "dim", "f": "serif", "s": 40},
+               {"t": "is not in doubt.", "c": "cream", "f": "serifb", "s": 42},
+               {"t": "", "s": 10},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}

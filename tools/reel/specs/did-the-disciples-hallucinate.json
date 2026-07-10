@@ -1,0 +1,70 @@
+{
+  "reviewed": {"citations": "2026-07-10", "argument": "2026-07-10", "orthodoxy": "2026-07-10", "by": "New reel on the hallucination theory. apologia-citations (registered) = 0 fabrications: 1 Cor 15:6 (500+ at once), appearances to the Twelve/women/James (skeptic, John 7:5)/Paul (persecutor, Acts 8:3), risen body eating fish (Luke 24:42-43) + wounds to touch (John 20:27), empty tomb all verified. argument+orthodoxy via general-purpose running each agent's .md = orthodoxy CLEAN (bodily resurrection affirmed); argument WEAK->fixed: softened absolute 'two people never share the same one' -> 'no group can share one' / VO 'no recognized way for a group to share one' (group hallucinations aren't a clinically recognized phenomenon, not a metaphysical impossibility); re-labeled kicker 'AND EVEN TO ENEMIES' -> 'TO DOUBTERS AND ENEMIES' (James was a skeptic, only Paul an enemy)."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "pace": 1.4,
+  "voiceover": "The disciples were grieving — maybe their minds just conjured Jesus back to life. It's the gentlest theory, and it breaks fast. Hallucinations are private events: like dreams, they happen inside one brain, and there's no recognized way for a group to share the same one. Yet Jesus appeared to the Twelve, to the women, and to more than five hundred people at once — indoors and outdoors, morning and evening, to friends and to skeptics. He appeared to James the doubter, and to Paul, who was hunting Christians down. Grief doesn't convert your enemies. And it's the wrong shape entirely: a grief vision shows you a loved one at peace in heaven, not a body eating fish and offering its wounds to be touched. Worst of all, a hallucination leaves the body right where it lay — but the tomb was empty. Group appearances, converted enemies, an empty grave: no single trick of the mind holds all three.",
+  "source": "answers/did-the-disciples-just-hallucinate-jesus.html",
+  "scenes": [
+    { "dur": 3.2,
+      "big": [ {"t": "Just a", "c": "cream", "s": 92}, {"t": "hallucination?", "c": "gold", "s": 92} ],
+      "sub": [ {"t": "The gentlest theory —", "c": "dim", "f": "serif", "s": 44},
+               {"t": "and it breaks fast.", "c": "gold", "f": "serifb", "s": 46} ] },
+
+    { "kicker": "THE THEORY", "dur": 4.0, "lines": [
+      {"t": "The disciples were grieving.", "c": "cream", "s": 50},
+      {"t": "Their minds", "c": "cream", "s": 54},
+      {"t": "conjured Jesus", "c": "cream", "s": 54},
+      {"t": "back to life.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "HALLUCINATIONS ARE PRIVATE", "dur": 4.4, "lines": [
+      {"t": "Like dreams,", "c": "cream", "s": 54},
+      {"t": "they happen", "c": "cream", "s": 54},
+      {"t": "inside one brain.", "c": "cream", "s": 54},
+      {"t": "", "s": 16},
+      {"t": "No group can share one.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "YET HE APPEARED TO GROUPS", "dur": 4.4, "lines": [
+      {"t": "To the Twelve.", "c": "cream", "s": 56},
+      {"t": "To the women.", "c": "cream", "s": 56},
+      {"t": "", "s": 16},
+      {"t": "To more than", "c": "cream", "s": 52},
+      {"t": "five hundred at once.", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "kicker": "TO DOUBTERS AND ENEMIES", "dur": 4.6, "lines": [
+      {"t": "James the doubter.", "c": "cream", "s": 54},
+      {"t": "Paul, who was", "c": "cream", "s": 52},
+      {"t": "hunting Christians down.", "c": "cream", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "Grief doesn't do that.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "AND THE WRONG SHAPE", "dur": 5.0, "lines": [
+      {"t": "A grief vision shows you", "c": "cream", "s": 50},
+      {"t": "a loved one in heaven —", "c": "cream", "s": 50},
+      {"t": "", "s": 14},
+      {"t": "not a body eating fish", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "and offering", "c": "cream", "s": 52},
+      {"t": "its wounds to touch.", "c": "cream", "s": 52} ] },
+
+    { "kicker": "THEN THERE'S THE TOMB", "dur": 4.4, "lines": [
+      {"t": "A hallucination", "c": "cream", "s": 54},
+      {"t": "leaves the body", "c": "cream", "s": 54},
+      {"t": "right where it lay.", "c": "cream", "s": 52},
+      {"t": "", "s": 16},
+      {"t": "This tomb was empty.", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "kicker": "THREE FACTS AT ONCE", "dur": 4.8, "lines": [
+      {"t": "Group appearances.", "c": "cream", "s": 54},
+      {"t": "Converted enemies.", "c": "cream", "s": 54},
+      {"t": "An empty grave.", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "", "s": 16},
+      {"t": "One trick can't hold all three.", "c": "cream", "s": 46} ] },
+
+    { "dur": 4.2,
+      "big": [ {"t": "Not a trick", "c": "cream", "s": 92}, {"t": "of the mind.", "c": "gold", "s": 96} ],
+      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}

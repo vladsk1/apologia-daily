@@ -1,0 +1,68 @@
+{
+  "reviewed": {"citations": "2026-07-10", "argument": "2026-07-10", "orthodoxy": "2026-07-10", "by": "New reel on Gospel eyewitnesses. apologia-citations = 0 fabrications, CLEAN: Bauckham 'Jesus and the Eyewitnesses' thesis, Simon of Cyrene + sons (Alexander/Rufus, Mark 15:21) as named living sources, Palestinian-name-frequency argument (Bauckham/Ilan/P.Williams), Papias via Eusebius (HE 3.39.15) on Mark as Peter's interpreter, living-memory dating all verified; authorship hedge ('debate the pen-names') judged adequate (never asserts Matt/Mark/Luke/John authorship in our voice). argument+orthodoxy via general-purpose running each agent's .md = orthodoxy CLEAN (no bibliolatry overstatement); argument WEAK->fixed two categorical overstatements: 'while THE eyewitnesses were still alive' -> 'while MANY eyewitnesses...', and 'legends need centuries and no living witnesses' -> 'legends usually need generations to grow, with no one left to check'."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "pace": 1.4,
+  "voiceover": "Were the Gospels really written by eyewitnesses — or passed down like a game of telephone? The telephone picture fails, because it wasn't a long anonymous chain. The Gospels were written while many of the eyewitnesses were still alive and still talking. They even name their sources: Mark points to Simon of Cyrene and his sons, people the first readers could go and question. The details ring true — the right Palestinian names in the right frequency, real villages, real customs no distant forger would know. An early bishop, Papias, records that Mark wrote down what Peter the eyewitness preached. Legends usually need generations to grow, with no one left to check them; the Gospels had neither luxury. You can debate the pen-names if you like — but the roots reach straight back to eyewitness memory. Not a rumor. A report.",
+  "source": "answers/were-the-gospels-written-by-eyewitnesses.html",
+  "scenes": [
+    { "dur": 3.4,
+      "big": [ {"t": "Did eyewitnesses", "c": "cream", "s": 74}, {"t": "write the Gospels?", "c": "gold", "s": 76} ],
+      "sub": [ {"t": "Closer than the telephone game.", "c": "dim", "f": "serif", "s": 40} ] },
+
+    { "kicker": "THE OBJECTION", "dur": 4.0, "lines": [
+      {"t": "Written decades later,", "c": "cream", "s": 52},
+      {"t": "passed down", "c": "cream", "s": 54},
+      {"t": "like a game", "c": "cream", "s": 54},
+      {"t": "of telephone.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "BUT IT WASN'T A LONG CHAIN", "dur": 4.6, "lines": [
+      {"t": "The Gospels were written", "c": "cream", "s": 50},
+      {"t": "while many eyewitnesses", "c": "cream", "s": 50},
+      {"t": "were still alive —", "c": "cream", "s": 52},
+      {"t": "", "s": 16},
+      {"t": "and still talking.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "THEY NAME THEIR SOURCES", "dur": 4.8, "lines": [
+      {"t": "Mark points to", "c": "cream", "s": 52},
+      {"t": "Simon of Cyrene", "c": "cream", "s": 52},
+      {"t": "and his sons —", "c": "cream", "s": 52},
+      {"t": "", "s": 14},
+      {"t": "people the first readers", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "could go and ask.", "c": "gold", "f": "serifb", "s": 50} ] },
+
+    { "kicker": "THE DETAILS RING TRUE", "dur": 4.6, "lines": [
+      {"t": "The right Palestinian names,", "c": "cream", "s": 46},
+      {"t": "in the right frequency.", "c": "cream", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "Real villages,", "c": "cream", "s": 52},
+      {"t": "real customs.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "PAPIAS ON MARK", "dur": 4.8, "lines": [
+      {"t": "An early bishop records", "c": "cream", "s": 50},
+      {"t": "that Mark wrote down", "c": "cream", "s": 50},
+      {"t": "what Peter,", "c": "cream", "s": 52},
+      {"t": "the eyewitness, preached.", "c": "gold", "f": "serifb", "s": 50} ] },
+
+    { "kicker": "TESTIMONY, NOT LEGEND", "dur": 4.6, "lines": [
+      {"t": "Legends usually need", "c": "cream", "s": 50},
+      {"t": "generations to grow —", "c": "cream", "s": 50},
+      {"t": "no one left to check.", "c": "cream", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "The Gospels had neither.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "THE HONEST SCOPE", "dur": 4.6, "lines": [
+      {"t": "Debate the pen-names", "c": "cream", "s": 52},
+      {"t": "if you like.", "c": "cream", "s": 54},
+      {"t": "", "s": 16},
+      {"t": "The roots reach", "c": "cream", "s": 52},
+      {"t": "eyewitness memory.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "dur": 4.2,
+      "big": [ {"t": "Not a rumor.", "c": "cream", "s": 92}, {"t": "A report.", "c": "gold", "s": 104} ],
+      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}
