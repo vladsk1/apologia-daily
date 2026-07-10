@@ -51,6 +51,12 @@
     .section-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 12px; }
     .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
+    /* PLAN FILTERS */
+    .plan-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .pf-chip { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; color: var(--text-mid); background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 6px 16px; cursor: pointer; transition: all 0.15s; }
+    .pf-chip:hover { border-color: var(--navy-300); }
+    .pf-chip.active { background: var(--navy-900); color: var(--white); border-color: var(--navy-900); }
+
     /* ACTIVE PLAN BANNER */
     .active-plan-banner { background: var(--navy-900); border-radius: 8px; padding: 1.5rem 2rem; margin-bottom: 2.5rem; display: none; }
     .active-plan-banner.visible { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
@@ -239,6 +245,12 @@
 
     <!-- PLANS -->
     <p class="section-label">Choose your path</p>
+    <div class="plan-filters" id="plan-filters">
+      <button class="pf-chip active" data-level="all">All plans</button>
+      <button class="pf-chip" data-level="Beginner">Beginner</button>
+      <button class="pf-chip" data-level="Intermediate">Intermediate</button>
+      <button class="pf-chip" data-level="Advanced">Advanced</button>
+    </div>
     <div class="plans-grid" id="plans-grid"></div>
 
   </div>
@@ -296,6 +308,7 @@
         if (navCta) navCta.style.display = 'none';
       }
     } catch(e) { console.warn('Auth check failed:', e); }
+    syncPull();
   }
   async function signOut() {
     try { await sb.auth.signOut(); } catch(e) {}
@@ -549,8 +562,8 @@ const plans = [
   {
     "id": "gods_existence",
     "icon": "✨",
-    "title": "21-Day God's Existence",
-    "desc": "Master the cosmological, teleological, and moral arguments. From the Kalam to fine-tuning to consciousness — build a complete case for theism.",
+    "title": "21-Day God's Existence Essentials",
+    "desc": "Master the cosmological, teleological, and moral arguments. From the Kalam to fine-tuning to consciousness — build a complete case for theism. The focused 3-week core — a faster path than the 30-Day Deep Dive.",
     "color": "#285a9e",
     "days": 21,
     "level": "Beginner",
@@ -845,8 +858,8 @@ const plans = [
   {
     "id": "jesus_identity",
     "icon": "✝️",
-    "title": "14-Day Jesus Identity",
-    "desc": "Who was Jesus? Did he exist? Did he claim to be God? Build a complete Christological case from historical evidence.",
+    "title": "14-Day Jesus: The Divine Identity",
+    "desc": "Who was Jesus? Did he exist? Did he claim to be God? Build a complete Christological case from historical evidence. A deeper, intermediate case — goes beyond the beginner Essentials.",
     "color": "#3c3489",
     "days": 14,
     "level": "Intermediate",
@@ -1088,8 +1101,8 @@ const plans = [
   {
     "id": "existence-god",
     "icon": "🌌",
-    "title": "30-Day God's Existence Foundations",
-    "desc": "From physics to philosophy to personal experience — build an unshakeable case for God's existence. Arguments from cosmology, design, morality, consciousness, and beauty.",
+    "title": "30-Day God's Existence Deep Dive",
+    "desc": "From physics to philosophy to personal experience — build an unshakeable case for God's existence. Arguments from cosmology, design, morality, consciousness, and beauty. The complete 5-week journey — the in-depth companion to the 21-Day Essentials.",
     "color": "#285a9e",
     "days": 30,
     "level": "Beginner",
@@ -1105,7 +1118,7 @@ const plans = [
           {"day": 4, "action": "Quiz", "text": "Quiz: Cosmological Arguments", "desc": "Test your understanding of the Kalam and Leibniz arguments. Make sure you can explain both in simple terms.", "link": "daily-quiz.html"},
           {"day": 5, "action": "Read", "text": "Read: The Fine-Tuning Argument", "desc": "The universe is calibrated for life to a precision of 1 in 10^120. Understand why this is evidence of design.", "link": "evidence-library.html"},
           {"day": 6, "action": "Debate", "text": "Debate: Defend cosmological arguments against an atheist", "desc": "Choose God's Existence as your topic and test your arguments in the Debate Arena.", "link": "debate-arena.html"},
-          {"day": 7, "action": "Reflect", "text": "Reflection: Which argument feels most powerful to you?", "desc": "Write down which cosmological argument you find most convincing and why. This is the foundation for the rest of the month.", "link": "index.html"}
+          {"day": 7, "action": "Reflect", "text": "Reflection: Which argument feels most powerful to you?", "desc": "Write down which cosmological argument you find most convincing and why. This is the foundation for the rest of the month.", "link": ""}
         ]
       },
       {
@@ -1117,7 +1130,7 @@ const plans = [
           {"day": 11, "action": "Quiz", "text": "Quiz: Mind and Reason", "desc": "Test your grasp of consciousness and reason arguments.", "link": "daily-quiz.html"},
           {"day": 12, "action": "Read", "text": "Read: The Argument from Beauty and Desire", "desc": "Augustine: 'Our hearts are restless until they rest in God.' Natural desires point to real objects.", "link": "evidence-library.html"},
           {"day": 13, "action": "Debate", "text": "Debate: Consciousness and reason with an atheist", "desc": "Use the Debate Arena to test these arguments.", "link": "debate-arena.html"},
-          {"day": 14, "action": "Reflect", "text": "Reflection: The cumulative case", "desc": "You've now covered cosmology, consciousness, reason, and beauty. How do these fit together?", "link": "index.html"}
+          {"day": 14, "action": "Reflect", "text": "Reflection: The cumulative case", "desc": "You've now covered cosmology, consciousness, reason, and beauty. How do these fit together?", "link": ""}
         ]
       },
       {
@@ -1129,7 +1142,7 @@ const plans = [
           {"day": 18, "action": "Quiz", "text": "Quiz: Morality and value", "desc": "Test your understanding of moral arguments.", "link": "daily-quiz.html"},
           {"day": 19, "action": "Read", "text": "Read: The Thomistic Cosmological Argument", "desc": "Aquinas's version goes deeper into the nature of existence itself.", "link": "evidence-library.html"},
           {"day": 20, "action": "Debate", "text": "Debate: Morality with an atheist", "desc": "Can your atheist opponent account for objective moral values?", "link": "debate-arena.html"},
-          {"day": 21, "action": "Reflect", "text": "Reflection: Natural theology summary", "desc": "You've now seen the major natural theology arguments. Which combination feels most compelling?", "link": "index.html"}
+          {"day": 21, "action": "Reflect", "text": "Reflection: Natural theology summary", "desc": "You've now seen the major natural theology arguments. Which combination feels most compelling?", "link": ""}
         ]
       },
       {
@@ -1139,7 +1152,7 @@ const plans = [
           {"day": 23, "action": "Ask", "text": "Ask: How do I explain these arguments simply?", "desc": "Ask the AI how to translate these complex arguments into dinner-table conversation.", "link": "asked-and-answered.html"},
           {"day": 24, "action": "Read", "text": "Read: The Argument from Religious Experience", "desc": "Millions report genuine encounters with God. This evidence shouldn't be dismissed.", "link": "evidence-library.html"},
           {"day": 25, "action": "Quiz", "text": "Quiz: The full spectrum", "desc": "Take the full God's Existence quiz. You should be scoring high now.", "link": "daily-quiz.html"},
-          {"day": 26, "action": "Reflect", "text": "Reflection: Your personal case", "desc": "Which arguments have moved you most? Which would you lead with in a conversation?", "link": "index.html"},
+          {"day": 26, "action": "Reflect", "text": "Reflection: Your personal case", "desc": "Which arguments have moved you most? Which would you lead with in a conversation?", "link": ""},
           {"day": 27, "action": "Debate", "text": "Final debate: God's existence with different opponents", "desc": "Try a debate with an agnostic opponent. Different approach needed?", "link": "debate-arena.html"},
           {"day": 28, "action": "Read", "text": "Read: Scholar profiles — William Lane Craig and Alvin Plantinga", "desc": "See how the world's leading philosophers use these arguments.", "link": "scholars.html"}
         ]
@@ -1148,7 +1161,7 @@ const plans = [
         "title": "Week 5 — Mastery and Application",
         "days": [
           {"day": 29, "action": "Debate", "text": "Back-to-back debates: God's existence", "desc": "You've learned enough. Have 2-3 quick debates with different opponents to build confidence.", "link": "debate-arena.html"},
-          {"day": 30, "action": "Reflect", "text": "Completion: Your foundation is solid", "desc": "You now understand the major arguments for God's existence. You can explain them. You can defend them. Next step: move to the Resurrection Deep Dive or Jesus section.", "link": "index.html"}
+          {"day": 30, "action": "Reflect", "text": "Completion: Your foundation is solid", "desc": "You now understand the major arguments for God's existence. You can explain them. You can defend them. Next step: move to the Resurrection Deep Dive or Jesus section.", "link": ""}
         ]
       }
     ]
@@ -1174,7 +1187,7 @@ const plans = [
           {"day": 4, "action": "Read", "text": "Read: Did Jesus Claim to Be God?", "desc": "His enemies tried to stone him for blasphemy. They understood his claims perfectly.", "link": "evidence-library.html"},
           {"day": 5, "action": "Quiz", "text": "Quiz: Jesus and his claims", "desc": "Test your understanding of the historical Jesus and his divine identity.", "link": "daily-quiz.html"},
           {"day": 6, "action": "Debate", "text": "Debate: Was Jesus God?", "desc": "Practice defending the divinity of Christ in the Debate Arena.", "link": "debate-arena.html"},
-          {"day": 7, "action": "Reflect", "text": "Reflection: The most radical claim", "desc": "Jesus didn't claim to be a great teacher. He claimed to be God. How does that change everything?", "link": "index.html"}
+          {"day": 7, "action": "Reflect", "text": "Reflection: The most radical claim", "desc": "Jesus didn't claim to be a great teacher. He claimed to be God. How does that change everything?", "link": ""}
         ]
       },
       {
@@ -1186,7 +1199,7 @@ const plans = [
           {"day": 11, "action": "Read", "text": "Read: The Early Creed of 1 Corinthians 15", "desc": "Written 2-5 years after the crucifixion — the oldest testimony we have.", "link": "evidence-library.html"},
           {"day": 12, "action": "Quiz", "text": "Quiz: The resurrection evidence", "desc": "Pull together everything: empty tomb, appearances, disciples' transformation.", "link": "daily-quiz.html"},
           {"day": 13, "action": "Debate", "text": "Debate: The resurrection with different opponents", "desc": "Try arguing for the resurrection against an atheist and against an agnostic. Different approaches needed?", "link": "debate-arena.html"},
-          {"day": 14, "action": "Reflect", "text": "Completion: The case is complete", "desc": "Jesus claimed to be God. Jesus rose from the dead. If true, everything changes. You now have the foundations.", "link": "index.html"}
+          {"day": 14, "action": "Reflect", "text": "Completion: The case is complete", "desc": "Jesus claimed to be God. Jesus rose from the dead. If true, everything changes. You now have the foundations.", "link": ""}
         ]
       }
     ]
@@ -1211,7 +1224,7 @@ const plans = [
           {"day": 3, "action": "Ask", "text": "Ask: What are Christianity's core claims?", "desc": "Get clarity on what distinguishes Christianity from every other worldview.", "link": "asked-and-answered.html"},
           {"day": 4, "action": "Read", "text": "Read: The Trinity and Jesus as God", "desc": "Christianity's distinctive claim: one God, three persons.", "link": "evidence-library.html"},
           {"day": 5, "action": "Quiz", "text": "Quiz: Christianity essentials", "desc": "Make sure you can articulate what Christians actually believe.", "link": "daily-quiz.html"},
-          {"day": 6, "action": "Reflect", "text": "Reflection: Christianity's unique claims", "desc": "Write down 3-5 things that make Christianity distinctive.", "link": "index.html"},
+          {"day": 6, "action": "Reflect", "text": "Reflection: Christianity's unique claims", "desc": "Write down 3-5 things that make Christianity distinctive.", "link": ""},
           {"day": 7, "action": "Debate", "text": "Debate: Christian beliefs in the Debate Arena", "desc": "Practice explaining Christianity to skeptical opponents.", "link": "debate-arena.html"}
         ]
       },
@@ -1223,7 +1236,7 @@ const plans = [
           {"day": 10, "action": "Read", "text": "Read: The Islamic Dilemma — Quran and Bible reliability", "desc": "The Quran affirms the Bible. If the Quran is right, the Bible is reliable. If the Bible is reliable, Islam is false.", "link": "evidence-library.html"},
           {"day": 11, "action": "Quiz", "text": "Quiz: Christianity vs Islam", "desc": "Test your understanding of the key differences.", "link": "daily-quiz.html"},
           {"day": 12, "action": "Debate", "text": "Debate: A Muslim opponent in the Debate Arena", "desc": "How would you discuss Jesus with someone from an Islamic background?", "link": "debate-arena.html"},
-          {"day": 13, "action": "Reflect", "text": "Reflection: Dialogue with Islam", "desc": "What did you learn about where Christianity and Islam genuinely differ?", "link": "index.html"},
+          {"day": 13, "action": "Reflect", "text": "Reflection: Dialogue with Islam", "desc": "What did you learn about where Christianity and Islam genuinely differ?", "link": ""},
           {"day": 14, "action": "Read", "text": "Read: Scholar profile — James White on Islam", "desc": "See how an expert apologist handles Islam.", "link": "scholars.html"}
         ]
       },
@@ -1235,8 +1248,8 @@ const plans = [
           {"day": 17, "action": "Read", "text": "Read: Worldviews section on Mormonism (or request via Ask)", "desc": "Explore the differences between Mormon theology and Christianity.", "link": "worldviews.html"},
           {"day": 18, "action": "Quiz", "text": "Quiz: Worldviews comparison", "desc": "Test your broad understanding of multiple worldviews.", "link": "daily-quiz.html"},
           {"day": 19, "action": "Debate", "text": "Multi-opponent debates in the Debate Arena", "desc": "Debate different opponents back-to-back. Can you adapt your approach for each worldview?", "link": "debate-arena.html"},
-          {"day": 20, "action": "Reflect", "text": "Reflection: Where worldviews differ most", "desc": "Which worldview is most different from Christianity? What are the key pressure points in each comparison?", "link": "index.html"},
-          {"day": 21, "action": "Reflect", "text": "Completion: A broader apologetic toolkit", "desc": "You can now compare Christianity to multiple worldviews. You understand where they agree and where they radically differ.", "link": "index.html"}
+          {"day": 20, "action": "Reflect", "text": "Reflection: Where worldviews differ most", "desc": "Which worldview is most different from Christianity? What are the key pressure points in each comparison?", "link": ""},
+          {"day": 21, "action": "Reflect", "text": "Completion: A broader apologetic toolkit", "desc": "You can now compare Christianity to multiple worldviews. You understand where they agree and where they radically differ.", "link": ""}
         ]
       }
     ]
@@ -1274,7 +1287,7 @@ const plans = [
           {"day": 11, "action": "Debate", "text": "10 debates on the resurrection", "desc": "This is your bread and butter. Get fast, confident, persuasive.", "link": "debate-arena.html"},
           {"day": 12, "action": "Read", "text": "Read: Scholar profiles — Habermas, Wright, Licona", "desc": "Know the experts. Use their authority.", "link": "scholars.html"},
           {"day": 13, "action": "Debate", "text": "Debate different opponents on resurrection", "desc": "Atheist, agnostic, skeptic — adapt your approach.", "link": "debate-arena.html"},
-          {"day": 14, "action": "Reflect", "text": "Reflection: Your resurrection expertise", "desc": "Can you now explain the resurrection case in 2 minutes? 5 minutes? 30 minutes?", "link": "index.html"}
+          {"day": 14, "action": "Reflect", "text": "Reflection: Your resurrection expertise", "desc": "Can you now explain the resurrection case in 2 minutes? 5 minutes? 30 minutes?", "link": ""}
         ]
       },
       {
@@ -1286,7 +1299,7 @@ const plans = [
           {"day": 18, "action": "Debate", "text": "10 debates: Did Jesus claim to be God?", "desc": "This is where the case for Christianity stands or falls.", "link": "debate-arena.html"},
           {"day": 19, "action": "Read", "text": "Read: John 1:1 and the Logos theology in depth", "desc": "Know the Greek. Know the theology. Know the history.", "link": "evidence-library.html"},
           {"day": 20, "action": "Debate", "text": "Debate a Muslim opponent on Jesus", "desc": "Different approach needed — Islamic framework, not atheistic.", "link": "debate-arena.html"},
-          {"day": 21, "action": "Reflect", "text": "Reflection: Can you defend the divinity of Christ?", "desc": "This is the heart of Christianity. Master it.", "link": "index.html"}
+          {"day": 21, "action": "Reflect", "text": "Reflection: Can you defend the divinity of Christ?", "desc": "This is the heart of Christianity. Master it.", "link": ""}
         ]
       },
       {
@@ -1296,9 +1309,9 @@ const plans = [
           {"day": 23, "action": "Play", "text": "Speed Round: All modes, back-to-back", "desc": "Build speed and muscle memory.", "link": "games.html"},
           {"day": 24, "action": "Read", "text": "Read: Study guides and conversation scripts", "desc": "Know how to open, pivot, close a conversation.", "link": "study-plans.html"},
           {"day": 25, "action": "Debate", "text": "5 more debates — mix of topics and opponents", "desc": "You should be feeling confident now. Test that confidence.", "link": "debate-arena.html"},
-          {"day": 26, "action": "Reflect", "text": "Reflection: Your debate style", "desc": "What worked? What didn't? Which approaches feel most natural to you?", "link": "index.html"},
+          {"day": 26, "action": "Reflect", "text": "Reflection: Your debate style", "desc": "What worked? What didn't? Which approaches feel most natural to you?", "link": ""},
           {"day": 27, "action": "Debate", "text": "Final championship debate", "desc": "Choose your strongest argument, your toughest opponent. Go all out.", "link": "debate-arena.html"},
-          {"day": 28, "action": "Reflect", "text": "Completion: You are now debate-ready", "desc": "You know the evidence. You know the objections. You know how to handle pressure. You're ready for real conversations.", "link": "index.html"}
+          {"day": 28, "action": "Reflect", "text": "Completion: You are now debate-ready", "desc": "You know the evidence. You know the objections. You know how to handle pressure. You're ready for real conversations.", "link": ""}
         ]
       }
     ]
@@ -1324,7 +1337,7 @@ const plans = [
           {"day": 4, "action": "Ask", "text": "Asked & Answered: One good question", "desc": "5 minutes. Ask one question that's on your mind. Read the response. Reflect.", "link": "asked-and-answered.html"},
           {"day": 5, "action": "Practice", "text": "Debate Arena: One quick debate", "desc": "10 minutes. Put what you learned into practice.", "link": "debate-arena.html"},
           {"day": 6, "action": "Journal", "text": "Conversation Journal: Reflect on a conversation", "desc": "5 minutes. Did you mention faith today? How did it go?", "link": "games.html"},
-          {"day": 7, "action": "Reflect", "text": "Weekly reflection", "desc": "Which argument felt most powerful this week? Which objection did you learn most from?", "link": "index.html"}
+          {"day": 7, "action": "Reflect", "text": "Weekly reflection", "desc": "Which argument felt most powerful this week? Which objection did you learn most from?", "link": ""}
         ]
       },
       {
@@ -1332,11 +1345,11 @@ const plans = [
         "days": [
           {"day": 8, "action": "Devotional", "text": "Daily Devotional", "desc": "This pattern repeats. Each day has a purpose. Over 90 days you will have read 90 arguments, asked 13 questions, taken 13 quizzes, had 13 debates, and journaled 13 conversations.", "link": "daily-devotional.html"},
           {"day": 9, "action": "Learn", "text": "Next argument", "desc": "Work through the Evidence Library systematically — 1-2 arguments per day.", "link": "evidence-library.html"},
-          {"day": 10, "action": "Quiz", "text": "Daily Quiz", "desc": "", "link": "daily-quiz.html"},
-          {"day": 11, "action": "Ask", "text": "Asked & Answered", "desc": "", "link": "asked-and-answered.html"},
-          {"day": 12, "action": "Practice", "text": "Debate Arena", "desc": "", "link": "debate-arena.html"},
-          {"day": 13, "action": "Journal", "text": "Conversation Journal", "desc": "", "link": "games.html"},
-          {"day": 14, "action": "Reflect", "text": "Weekly reflection", "desc": "After 90 days, you will have internalised the case for Christianity thoroughly.", "link": "index.html"}
+          {"day": 10, "action": "Quiz", "text": "Daily Quiz", "desc": "Two minutes. Five quick questions to keep the arguments sharp.", "link": "daily-quiz.html"},
+          {"day": 11, "action": "Ask", "text": "Asked & Answered", "desc": "Five minutes. Bring one honest question and read the answer slowly.", "link": "asked-and-answered.html"},
+          {"day": 12, "action": "Practice", "text": "Debate Arena", "desc": "Ten minutes. One short practice debate to keep your responses ready.", "link": "debate-arena.html"},
+          {"day": 13, "action": "Journal", "text": "Conversation Journal", "desc": "Five minutes. Note any faith conversation you had — what went well, what you would say next time.", "link": "conversation-journal.html"},
+          {"day": 14, "action": "Reflect", "text": "Weekly reflection", "desc": "After 90 days, you will have internalised the case for Christianity thoroughly.", "link": ""}
         ]
       }
     ]
@@ -1345,19 +1358,52 @@ const plans = [
 
   var ACTION_ICONS = {"Read":"📖","Ask":"🤖","Debate":"⚔️","Quiz":"❓","Game":"🎮","Reflect":"✍️","Journal":"📔","Practice":"🎯","Study":"📚","Complete":"🏆"};
   var currentPlanId = null;
+  var currentLevel = 'all';
 
   function getSaved() { return JSON.parse(localStorage.getItem('study_plans') || '{}'); }
-  function setSaved(d) { localStorage.setItem('study_plans', JSON.stringify(d)); }
+  function setSaved(d) { localStorage.setItem('study_plans', JSON.stringify(d)); syncPush(); }
 
-  document.addEventListener('DOMContentLoaded', function() { renderPlans(); updateActiveBanner(); });
+  // ── cross-device progress sync (best-effort; no-ops until the Supabase table exists) ──
+  async function syncPull() {
+    try {
+      if (!sb) return;
+      var r = await sb.auth.getSession(); var s = r.data && r.data.session; if (!s) return;
+      if (Object.keys(getSaved()).length > 0) return;   // this device already has progress; it will push on next save
+      var q = await sb.from('study_plans_progress').select('progress').eq('user_id', s.user.id).maybeSingle();
+      if (q && q.data && q.data.progress) {
+        localStorage.setItem('study_plans', JSON.stringify(q.data.progress));
+        renderPlans(); updateActiveBanner();
+      }
+    } catch (e) {}
+  }
+  async function syncPush() {
+    try {
+      if (!sb) return;
+      var r = await sb.auth.getSession(); var s = r.data && r.data.session; if (!s) return;
+      await sb.from('study_plans_progress').upsert({ user_id: s.user.id, progress: getSaved(), updated_at: new Date().toISOString() });
+    } catch (e) {}
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    renderPlans(); updateActiveBanner();
+    document.querySelectorAll('.pf-chip').forEach(function(chip) {
+      chip.addEventListener('click', function() {
+        document.querySelectorAll('.pf-chip').forEach(function(c) { c.classList.remove('active'); });
+        chip.classList.add('active');
+        currentLevel = chip.dataset.level;
+        renderPlans();
+      });
+    });
+  });
 
   function renderPlans() {
     var saved = getSaved();
     var grid = document.getElementById('plans-grid');
     if (!grid) return;
     var html = '';
-    plans.forEach(function(plan) {
+    plans.filter(function(plan) { return currentLevel === 'all' || plan.level === currentLevel || plan.level === 'All levels'; }).forEach(function(plan) {
       var progress = saved[plan.id] || { started: false, completed: [] };
+      var mins = plan.id === 'daily-defender' ? 5 : (plan.days >= 28 ? 15 : 12);
       var completed = progress.completed ? progress.completed.length : 0;
       var pct = Math.round(completed / plan.days * 100);
       var isActive = progress.started && !progress.finished;
@@ -1375,7 +1421,7 @@ const plans = [
         '<div class="plan-badges">' + (plan.pro ? '<span class="plan-badge badge-pro">Pro</span>' : '<span class="plan-badge badge-free">Free</span>') + (plan.popular ? '<span class="plan-badge badge-popular">Popular</span>' : '') + (isActive ? '<span class="plan-badge badge-new">In Progress</span>' : '') + '</div></div>' +
         '<div class="plan-title">' + plan.title + '</div>' +
         '<div class="plan-desc">' + plan.desc + '</div>' +
-        '<div class="plan-meta"><span class="plan-meta-item">' + plan.days + ' days</span><span class="plan-meta-item">' + plan.level + '</span><span class="plan-meta-item">' + plan.weeks.length + ' weeks</span></div>' +
+        '<div class="plan-meta"><span class="plan-meta-item">' + plan.days + ' days</span><span class="plan-meta-item">' + plan.level + '</span><span class="plan-meta-item">' + plan.weeks.length + ' weeks</span><span class="plan-meta-item">~' + mins + ' min/day</span></div>' +
         progressHtml +
         '<button class="' + btnClass + '" data-planid="' + plan.id + '">' + btnLabel + ' →</button>' +
         '</div></div>';
@@ -1486,6 +1532,20 @@ const plans = [
         });
       }
     });
+
+    // for a plan already under way, jump to and expand the next incomplete day
+    if (isStarted && !progress.finished) {
+      var compNext = progress.completed || [];
+      var dayItems = document.querySelectorAll('#modal-body .plan-day-item');
+      for (var qi = 0; qi < dayItems.length; qi++) {
+        if (compNext.indexOf(parseInt(dayItems[qi].dataset.day)) === -1) {
+          dayItems[qi].classList.add('expanded');
+          var chNext = dayItems[qi].querySelector('.plan-day-chevron'); if (chNext) chNext.style.transform = 'rotate(180deg)';
+          (function(el){ setTimeout(function(){ el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 150); })(dayItems[qi]);
+          break;
+        }
+      }
+    }
 
     var startBtn = document.getElementById('modal-start-btn');
     if (startBtn) { startBtn.textContent = isStarted ? 'Continue plan →' : 'Start this plan →'; startBtn.style.background = ''; startBtn.style.color = ''; }
