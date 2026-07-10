@@ -215,6 +215,7 @@
       </div>
       <div class="step-body" id="body-2">
         <div class="arg-top">
+          <div class="arg-coach" id="arg-coach" style="display:none;font-family:'DM Sans',sans-serif;font-size:.74rem;font-weight:600;color:#a8842c;background:rgba(200,169,81,.12);border:1px solid rgba(200,169,81,.32);border-radius:6px;padding:6px 10px;margin-bottom:10px;line-height:1.45;"></div>
           <div class="arg-cat" id="arg-cat"></div>
           <div class="arg-title" id="arg-title">Loading&hellip;</div>
           <div class="arg-tag" id="arg-tag"></div>
@@ -524,18 +525,51 @@
       tagline: entry.tagline, premise_1: entry.p1, premise_2: entry.p2, premise_3: entry.p3,
       key_evidence: entry.evidence, practice_q: entry.practice_q, convo_starter: entry.convo, link: entry.link };
   }
+  /* Adaptivity: for a signed-in user with enough practice history, target the
+     weakest argument the Coach identifies instead of the fixed daily rotation —
+     but only when daily-args carries the structured Learn-card content for it.
+     Returns {entry, presc} or null (null => fall back to the fixed rotation). */
+  function coachAdaptivePick(rot){
+    if(!currentUser || !rot || !window.Coach || !Coach.prescription || !Coach.profile) return null;
+    try{
+      var prof = Coach.profile().filter(function(s){ return s.isArg; });
+      var signalCount = prof.reduce(function(n,s){ return n + (s.count||0); }, 0);
+      if(prof.length < 2 || signalCount < 3) return null;         // not enough history yet
+      var presc = Coach.prescription();
+      if(!presc || !presc.id || presc.mastery >= 85) return null; // nothing weak enough to target
+      var entry = rot.find(function(e){ return e.id === presc.id; });
+      if(!entry) return null;                                     // no daily-args content — fall back
+      return { entry: entry, presc: presc };
+    }catch(e){ return null; }
+  }
+
   async function loadArgument(){
-    var arg = null;
+    var arg = null, coachPick = null;
     try{
       var r = await sb.from('daily_arguments').select('*').eq('day_number', dayNum).single();
       if(r.data) arg = r.data;
     }catch(e){}
     if(!arg){
       var rot = await loadRotation();
-      if(rot) arg = fromRotation(rot[(dayNum-1) % rot.length]);
+      if(rot){
+        var pick = coachAdaptivePick(rot);
+        if(pick){ arg = fromRotation(pick.entry); coachPick = pick.presc; }
+        else arg = fromRotation(rot[(dayNum-1) % rot.length]);
+      }
     }
     if(!arg) arg = FALLBACK_ARGS[(dayNum-1) % FALLBACK_ARGS.length];
     todayArg = arg;
+    todayArg._coach = !!coachPick;
+    var cp = $('arg-coach');
+    if(cp){
+      if(coachPick){
+        var verb = coachPick.mastery < 45 ? 'keeps tripping you up'
+                 : (coachPick.mastery < 70 ? 'is still shaky' : 'is worth locking in');
+        cp.innerHTML = '✦ Coach pick — because <b>'+esc(coachPick.name)+'</b> '+verb+'.';
+        cp.style.display = 'block';
+        try{ track('today_coach_pick', { arg: arg.argument_id, mastery: coachPick.mastery }); }catch(e){}
+      } else { cp.style.display = 'none'; }
+    }
     $('arg-cat').textContent = arg.category || '';
     $('arg-title').textContent = arg.argument_title;
     $('arg-tag').textContent = arg.tagline || '';
