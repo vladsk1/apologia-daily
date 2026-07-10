@@ -32,11 +32,32 @@ Image = _ensure("Pillow", "PIL.Image"); from PIL import Image, ImageDraw, ImageF
 imageio_ffmpeg = _ensure("imageio-ffmpeg", "imageio_ffmpeg")
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 
-# ---- fonts (present on Debian/Ubuntu; override via env if needed) ----
+# ---- fonts ----
+# Prefer an env override (REEL_SERIF/REEL_SERIFB/REEL_SANS), else the first font
+# that actually exists — DejaVu on Debian/Ubuntu, Georgia/Arial on Windows, the
+# Supplemental faces on macOS. Keeps the tool working cross-platform out of the box.
+def _pick(env, candidates):
+    p = os.environ.get(env)
+    if p:
+        return p
+    for c in candidates:
+        if os.path.exists(c):
+            return c
+    return candidates[0]  # best effort; may still raise, surfacing a clear error
+
 FONTS = {
-    "serif":  os.environ.get("REEL_SERIF",  "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"),
-    "serifb": os.environ.get("REEL_SERIFB", "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"),
-    "sans":   os.environ.get("REEL_SANS",   "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"),
+    "serif":  _pick("REEL_SERIF", [
+        "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf",
+        "C:/Windows/Fonts/georgia.ttf", "C:/Windows/Fonts/constan.ttf", "C:/Windows/Fonts/times.ttf",
+        "/System/Library/Fonts/Supplemental/Georgia.ttf", "/Library/Fonts/Georgia.ttf"]),
+    "serifb": _pick("REEL_SERIFB", [
+        "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf",
+        "C:/Windows/Fonts/georgiab.ttf", "C:/Windows/Fonts/constanb.ttf", "C:/Windows/Fonts/timesbd.ttf",
+        "/System/Library/Fonts/Supplemental/Georgia Bold.ttf"]),
+    "sans":   _pick("REEL_SANS", [
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "C:/Windows/Fonts/arialbd.ttf", "C:/Windows/Fonts/segoeuib.ttf",
+        "/System/Library/Fonts/Supplemental/Arial Bold.ttf"]),
 }
 def F(name, size): return ImageFont.truetype(FONTS.get(name, FONTS["serif"]), size)
 
@@ -232,7 +253,7 @@ def main():
                     help="multiply every scene's on-screen time (1.0 = spec; 1.5 = 50%% slower)")
     ap.add_argument("--workdir")
     a = ap.parse_args()
-    spec = json.load(open(a.spec))
+    spec = json.load(open(a.spec, encoding="utf-8"))
     aspect = a.aspect or spec.get("aspect", "vertical")
     theme = a.theme or spec.get("theme", "navy")
     W, H = ASPECTS[aspect]
