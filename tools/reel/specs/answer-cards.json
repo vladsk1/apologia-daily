@@ -1,0 +1,98 @@
+{
+  "reviewed": {"argument": "2026-07-09", "orthodoxy": "2026-07-09", "by": "10 static X/IG quote cards compressed from the already-vetted /answers/ pages. apologia-argument + apologia-orthodoxy run via general-purpose using each agent's .md instructions (the registered subagents can't hot-load this session) = 10/10 CLEAN orthodoxy (0 heresy), 10/10 argument pass (0 BREAK); rules verified: Kalam begins-to-exist, Big-Bang cause-not-proof, suffering-concedes-the-mystery, no fine-tuning overstatement, Lewis-trilemma accurate. One accuracy polish applied: nicaea 'three centuries' -> 'nearly three centuries'. Rendered as stills via gen_card.py."},
+  "theme": "navy",
+  "aspect": "portrait",
+  "cards": [
+    { "name": "who-made-god", "kicker": "WHO MADE GOD?", "lines": [
+      {"t": "If God made everything,", "c": "cream", "s": 62},
+      {"t": "who made God?", "c": "cream", "s": 62},
+      {"t": "", "s": 26},
+      {"t": "Whatever begins to exist", "c": "cream", "s": 50},
+      {"t": "has a cause.", "c": "cream", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "God never began.", "c": "gold", "f": "serifb", "s": 78} ] },
+
+    { "name": "science-disprove", "kicker": "DOES SCIENCE DISPROVE GOD?", "lines": [
+      {"t": "Science can't disprove God —", "c": "cream", "s": 54},
+      {"t": "it keeps pointing to him.", "c": "cream", "s": 54},
+      {"t": "", "s": 24},
+      {"t": "A beginning. Fine-tuning.", "c": "cream", "s": 48},
+      {"t": "Laws that obey mathematics.", "c": "cream", "s": 46},
+      {"t": "", "s": 16},
+      {"t": "None of it explains itself.", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "name": "copycat-jesus", "kicker": "COPIED FROM HORUS?", "lines": [
+      {"t": "Was Jesus copied from", "c": "cream", "s": 56},
+      {"t": "Horus or Mithras?", "c": "cream", "s": 56},
+      {"t": "", "s": 24},
+      {"t": "No — the parallels are", "c": "cream", "s": 50},
+      {"t": "late, vague, or invented.", "c": "cream", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "Historians reject the myth.", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "name": "nicaea-myth", "kicker": "THE NICAEA MYTH", "lines": [
+      {"t": "Did Nicaea invent", "c": "cream", "s": 58},
+      {"t": "Jesus' divinity in 325?", "c": "cream", "s": 58},
+      {"t": "", "s": 24},
+      {"t": "No. Christians worshipped him", "c": "cream", "s": 46},
+      {"t": "as God within 20 years", "c": "cream", "s": 48},
+      {"t": "of the cross —", "c": "cream", "s": 48},
+      {"t": "nearly three centuries earlier.", "c": "gold", "f": "serifb", "s": 50} ] },
+
+    { "name": "stolen-body", "kicker": "STOLEN BODY?", "lines": [
+      {"t": "Could the disciples", "c": "cream", "s": 58},
+      {"t": "have stolen the body?", "c": "cream", "s": 58},
+      {"t": "", "s": 24},
+      {"t": "Then they died horribly", "c": "cream", "s": 50},
+      {"t": "for what they knew", "c": "cream", "s": 50},
+      {"t": "was a lie.", "c": "cream", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "Liars make poor martyrs.", "c": "gold", "f": "serifb", "s": 60} ] },
+
+    { "name": "why-suffering", "kicker": "WHY SO MUCH SUFFERING?", "lines": [
+      {"t": "If God is good,", "c": "cream", "s": 60},
+      {"t": "why is there suffering?", "c": "cream", "s": 58},
+      {"t": "", "s": 24},
+      {"t": "Christianity offers no", "c": "cream", "s": 50},
+      {"t": "tidy answer — but a God", "c": "cream", "s": 50},
+      {"t": "who himself", "c": "cream", "s": 50},
+      {"t": "entered the pain.", "c": "gold", "f": "serifb", "s": 60} ] },
+
+    { "name": "faith-evidence", "kicker": "FAITH VS EVIDENCE", "lines": [
+      {"t": "Isn't faith believing", "c": "cream", "s": 58},
+      {"t": "without evidence?", "c": "cream", "s": 58},
+      {"t": "", "s": 24},
+      {"t": "Biblical faith isn't", "c": "cream", "s": 50},
+      {"t": "a leap in the dark.", "c": "cream", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "It's trust grounded in reasons.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "name": "big-bang", "kicker": "THE BIG BANG", "lines": [
+      {"t": "Space, time, and matter", "c": "cream", "s": 54},
+      {"t": "snapped into being.", "c": "cream", "s": 54},
+      {"t": "", "s": 24},
+      {"t": "Whatever caused that", "c": "cream", "s": 52},
+      {"t": "must be beyond", "c": "cream", "s": 52},
+      {"t": "all three.", "c": "gold", "f": "serifb", "s": 70} ] },
+
+    { "name": "good-teacher", "kicker": "JUST A GOOD TEACHER?", "lines": [
+      {"t": "“Jesus was just", "c": "cream", "s": 58},
+      {"t": "a good teacher.”", "c": "cream", "s": 58},
+      {"t": "", "s": 24},
+      {"t": "But he forgave sins,", "c": "cream", "s": 50},
+      {"t": "accepted worship, and called", "c": "cream", "s": 44},
+      {"t": "himself the world's judge.", "c": "cream", "s": 46},
+      {"t": "", "s": 16},
+      {"t": "Good teachers don't say that.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "name": "all-religions", "kicker": "ALL THE SAME?", "lines": [
+      {"t": "Aren't all religions", "c": "cream", "s": 58},
+      {"t": "basically the same?", "c": "cream", "s": 58},
+      {"t": "", "s": 24},
+      {"t": "They make opposite claims", "c": "cream", "s": 48},
+      {"t": "about God, Jesus, and salvation.", "c": "cream", "s": 44},
+      {"t": "", "s": 16},
+      {"t": "They can all be wrong —", "c": "cream", "s": 50},
+      {"t": "but they can't all be right.", "c": "gold", "f": "serifb", "s": 54} ] }
+  ]
+}
