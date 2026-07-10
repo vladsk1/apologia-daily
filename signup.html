@@ -150,6 +150,13 @@
         return;
       }
 
+      try {
+        window.adTrack && window.adTrack('signup_completed', {
+          referred: !!referredBy,
+          confirmed: !!(data && data.session)
+        });
+      } catch (e) {}
+
       document.getElementById('form-wrap').style.display = 'none';
       document.getElementById('success-box').classList.add('visible');
     }
