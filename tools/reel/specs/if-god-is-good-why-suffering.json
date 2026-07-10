@@ -1,0 +1,76 @@
+{
+  "reviewed": {"citations": "2026-07-10", "argument": "2026-07-10", "orthodoxy": "2026-07-10", "by": "New reel from answers/if-god-is-good-why-is-there-suffering. argument+orthodoxy via general-purpose running each agent's .md; apologia-citations also reviewed (no factual overreach). argument WEAK->fixed: the natural-evil hook (cancer/famine) was answered only by a moral-evil/free-will beat; added an explicit 'but not all of it — cancer, famine, pain no one chose — there the formulas run out' beat so the free-will defense isn't overclaimed and the cross carries natural evil. Concedes the mystery, no tidy theodicy, Plantinga-as-defense. orthodoxy CLEAN with NOTE: 'In Jesus, God himself was...killed' / 'a God with scars' is orthodox via communicatio idiomatum (the divine Son died in his human nature; the 'In Jesus, God himself' anchor stays on the SAME caption card — never split it). FOLLOW-UP: add a two-natures orthonote clarifier to the source answer page."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "pace": 1.4,
+  "voiceover": "If God is good and all-powerful, why the cancer ward, the famine, the funeral? Let's be honest: Christianity doesn't hand you a formula that makes the pain add up. But notice something. To call suffering a real evil — not just something you happen to dislike — you need a real standard of good. And that standard points beyond us, to the very God the objection was trying to disprove. Some of the evil is us: a world where love is real is a world where love can be refused, and so much of it is. But cancer? A famine? So much suffering no one ever chose — and there the formulas run out. Which is why the Christian claim isn't that God watches our pain from a safe distance. In Jesus, God himself was betrayed, tortured, and killed — inside the worst of it. So the answer to suffering isn't finally an argument. It's a God with scars.",
+  "source": "answers/if-god-is-good-why-is-there-suffering.html",
+  "scenes": [
+    { "dur": 3.4,
+      "big": [ {"t": "Why so much", "c": "cream", "s": 90}, {"t": "suffering?", "c": "gold", "s": 100} ],
+      "sub": [ {"t": "The hardest question.", "c": "dim", "f": "serif", "s": 44},
+               {"t": "Honestly.", "c": "gold", "f": "serifb", "s": 48} ] },
+
+    { "kicker": "LET'S BE HONEST", "dur": 4.4, "lines": [
+      {"t": "If God is good", "c": "cream", "s": 54},
+      {"t": "and all-powerful —", "c": "cream", "s": 54},
+      {"t": "why the cancer ward,", "c": "cream", "s": 52},
+      {"t": "the famine, the funeral?", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "NO TIDY ANSWER", "dur": 4.2, "lines": [
+      {"t": "Christianity doesn't hand you", "c": "cream", "s": 48},
+      {"t": "a neat formula", "c": "cream", "s": 54},
+      {"t": "that makes the pain", "c": "cream", "s": 52},
+      {"t": "add up.", "c": "gold", "f": "serifb", "s": 64} ] },
+
+    { "kicker": "BUT NOTICE THIS", "dur": 5.0, "lines": [
+      {"t": "To call suffering", "c": "cream", "s": 52},
+      {"t": "a real evil —", "c": "cream", "s": 54},
+      {"t": "not just something", "c": "cream", "s": 50},
+      {"t": "you happen to dislike —", "c": "cream", "s": 50},
+      {"t": "", "s": 14},
+      {"t": "you need a real", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "standard of good.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "AND THAT STANDARD", "dur": 4.4, "lines": [
+      {"t": "points beyond us —", "c": "cream", "s": 54},
+      {"t": "to the very God", "c": "cream", "s": 52},
+      {"t": "the objection was", "c": "cream", "s": 52},
+      {"t": "trying to disprove.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "SOME OF IT IS US", "dur": 4.4, "lines": [
+      {"t": "A world where love is real", "c": "cream", "s": 50},
+      {"t": "is a world where", "c": "cream", "s": 52},
+      {"t": "love can be refused —", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "", "s": 14},
+      {"t": "and so much of it is.", "c": "cream", "s": 52} ] },
+
+    { "kicker": "BUT NOT ALL OF IT", "dur": 4.6, "lines": [
+      {"t": "But cancer? A famine?", "c": "cream", "s": 52},
+      {"t": "So much pain", "c": "cream", "s": 52},
+      {"t": "no one ever chose —", "c": "cream", "s": 52},
+      {"t": "", "s": 14},
+      {"t": "and there the formulas", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "run out.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "GOD DIDN'T STAY AWAY", "dur": 4.4, "lines": [
+      {"t": "The Christian claim isn't", "c": "cream", "s": 50},
+      {"t": "that God watches the pain", "c": "cream", "s": 48},
+      {"t": "from a safe", "c": "cream", "s": 52},
+      {"t": "distance.", "c": "gold", "f": "serifb", "s": 62} ] },
+
+    { "kicker": "HE ENTERED IT", "dur": 4.8, "lines": [
+      {"t": "In Jesus, God himself", "c": "cream", "s": 52},
+      {"t": "was betrayed, tortured,", "c": "cream", "s": 50},
+      {"t": "and killed —", "c": "cream", "s": 54},
+      {"t": "", "s": 14},
+      {"t": "inside the worst of it.", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "dur": 4.4,
+      "big": [ {"t": "Not a formula.", "c": "cream", "s": 82}, {"t": "A God with scars.", "c": "gold", "s": 78} ],
+      "sub": [ {"t": "The honest answer at", "c": "dim", "f": "serif", "s": 42},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}

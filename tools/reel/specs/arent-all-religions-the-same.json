@@ -1,0 +1,69 @@
+{
+  "reviewed": {"argument": "2026-07-10", "orthodoxy": "2026-07-10", "by": "New reel from answers/arent-all-religions-basically-the-same. argument+orthodoxy via general-purpose running each agent's .md = argument PASS/STRONG, orthodoxy CLEAN. Steelmans pluralism ('sounds humble') then withholds the inference; law-of-non-contradiction handled precisely ('could all be wrong, can't all be right'); no faith strawmanned (personal/impersonal, one/many/none, God/prophet/myth all accurate); lands on invitation not triumphalism. apologia-citations: CLEAN, no misdescription of any named religion."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "pace": 1.4,
+  "voiceover": "Aren't all religions basically the same? It sounds humble — all paths up the same mountain. But ask what they actually claim. Is God personal, or impersonal? One, many, or none at all? Did Jesus rise from the dead, or not? Is he God, a prophet, or a myth? These aren't small differences of flavor; they're flat contradictions at the core. And opposite claims can't both be true. That's not arrogance — it's arithmetic. The 'same mountain' picture actually smuggles in a huge claim: that you can stand above every religion and see what none of them can. To respect a faith is to let it mean what it actually says. So here's the honest option: they could all be wrong, but they can't all be right — which makes it worth finding out which one is.",
+  "source": "answers/arent-all-religions-basically-the-same.html",
+  "scenes": [
+    { "dur": 3.4,
+      "big": [ {"t": "Aren't all religions", "c": "cream", "s": 74}, {"t": "the same?", "c": "gold", "s": 96} ],
+      "sub": [ {"t": "It sounds humble.", "c": "dim", "f": "serif", "s": 44},
+               {"t": "It isn't.", "c": "gold", "f": "serifb", "s": 48} ] },
+
+    { "kicker": "THE FRIENDLY VERSION", "dur": 4.0, "lines": [
+      {"t": "All paths", "c": "cream", "s": 56},
+      {"t": "up the same mountain.", "c": "cream", "s": 54},
+      {"t": "", "s": 18},
+      {"t": "All roughly the same truth.", "c": "gold", "f": "serifb", "s": 50} ] },
+
+    { "kicker": "BUT ASK WHAT THEY CLAIM", "dur": 4.4, "lines": [
+      {"t": "Is God personal,", "c": "cream", "s": 54},
+      {"t": "or impersonal?", "c": "cream", "s": 54},
+      {"t": "", "s": 16},
+      {"t": "One, many,", "c": "cream", "s": 54},
+      {"t": "or none at all?", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "kicker": "THEY DISAGREE AT THE CORE", "dur": 4.4, "lines": [
+      {"t": "Did Jesus rise", "c": "cream", "s": 54},
+      {"t": "from the dead, or not?", "c": "cream", "s": 52},
+      {"t": "", "s": 16},
+      {"t": "Is he God, a prophet,", "c": "cream", "s": 52},
+      {"t": "or a myth?", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "THESE CAN'T ALL BE TRUE", "dur": 4.4, "lines": [
+      {"t": "Opposite claims", "c": "cream", "s": 54},
+      {"t": "can't both be right.", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "", "s": 18},
+      {"t": "That's not arrogance —", "c": "cream", "s": 52},
+      {"t": "it's arithmetic.", "c": "cream", "s": 54} ] },
+
+    { "kicker": "THE MOUNTAIN METAPHOR FAILS", "dur": 5.0, "lines": [
+      {"t": "To say all paths agree,", "c": "cream", "s": 50},
+      {"t": "you'd have to stand", "c": "cream", "s": 52},
+      {"t": "above them all —", "c": "cream", "s": 52},
+      {"t": "", "s": 14},
+      {"t": "and claim to see", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "what none of them can.", "c": "gold", "f": "serifb", "s": 50} ] },
+
+    { "kicker": "SO TAKE THEM SERIOUSLY", "dur": 4.4, "lines": [
+      {"t": "Respecting a faith", "c": "cream", "s": 52},
+      {"t": "means letting it mean", "c": "cream", "s": 52},
+      {"t": "what it actually says —", "c": "cream", "s": 50},
+      {"t": "not blurring it away.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "THE HONEST OPTION", "dur": 4.6, "lines": [
+      {"t": "They could all be wrong.", "c": "cream", "s": 52},
+      {"t": "They can't all be right.", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "", "s": 18},
+      {"t": "So it's worth", "c": "cream", "s": 52},
+      {"t": "finding out which.", "c": "cream", "s": 52} ] },
+
+    { "dur": 4.2,
+      "big": [ {"t": "Not all the same.", "c": "cream", "s": 76}, {"t": "Worth checking.", "c": "gold", "s": 84} ],
+      "sub": [ {"t": "Start at", "c": "dim", "f": "serif", "s": 42},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}

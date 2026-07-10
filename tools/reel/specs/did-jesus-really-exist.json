@@ -1,0 +1,66 @@
+{
+  "reviewed": {"citations": "2026-07-10", "argument": "2026-07-10", "orthodoxy": "2026-07-10", "by": "New reel from answers/did-jesus-really-exist. apologia-citations (registered) = 0 fabrications: Tacitus Annals 15.44 (senator; Christus executed under Pilate), Josephus Testimonium + brother-James passage (Ant. 20.9.1), Pliny/Suetonius/Lucian/Talmud, Ehrman (agnostic) 'Did Jesus Exist?' 2012 all verified. argument+orthodoxy via general-purpose running each agent's .md = argument WEAK->fixed (softened the grouped-sources line 'all take him as real' -> 'corroborate the picture', since Pliny/Suetonius/Lucian corroborate rather than independently attest; 'A executed'->'An executed'); orthodoxy CLEAN (historicity only; 'debate who he was, not whether' brackets Christology)."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "pace": 1.4,
+  "voiceover": "Did Jesus really exist — or is he just a myth the church invented? Almost no historian agrees with the myth. Across the spectrum, believer and atheist alike, scholars treat his existence as settled. Tacitus, a Roman senator, records that Christus was executed under Pontius Pilate. The Jewish historian Josephus mentions Jesus — and the execution of his brother James. Pliny, Suetonius, Lucian, the Talmud — a chain of Roman and Jewish sources corroborate the picture. Even the agnostic scholar Bart Ehrman wrote a whole book refuting the idea that Jesus never existed. And here's the tell: no one invents a crucified messiah. An executed criminal was a scandal, not a marketing plan. You can debate who Jesus was. That he lived is not seriously in doubt.",
+  "source": "answers/did-jesus-really-exist.html",
+  "scenes": [
+    { "dur": 3.2,
+      "big": [ {"t": "Did Jesus", "c": "cream", "s": 96}, {"t": "really exist?", "c": "gold", "s": 100} ],
+      "sub": [ {"t": "Even skeptics say yes.", "c": "dim", "f": "serif", "s": 44} ] },
+
+    { "kicker": "THE CLAIM", "dur": 3.8, "lines": [
+      {"t": "Maybe Jesus", "c": "cream", "s": 56},
+      {"t": "never existed at all —", "c": "cream", "s": 54},
+      {"t": "just a myth", "c": "cream", "s": 56},
+      {"t": "the church made up.", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "kicker": "ALMOST NO HISTORIAN AGREES", "dur": 4.4, "lines": [
+      {"t": "Across the spectrum —", "c": "cream", "s": 54},
+      {"t": "believer and atheist —", "c": "cream", "s": 54},
+      {"t": "scholars treat his existence", "c": "cream", "s": 48},
+      {"t": "as settled.", "c": "gold", "f": "serifb", "s": 60} ] },
+
+    { "kicker": "THE ROMANS NOTICED", "dur": 4.6, "lines": [
+      {"t": "Tacitus, a Roman senator,", "c": "cream", "s": 50},
+      {"t": "records that Christus", "c": "cream", "s": 52},
+      {"t": "was executed", "c": "cream", "s": 52},
+      {"t": "under Pontius Pilate.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "SO DID THE JEWS", "dur": 4.6, "lines": [
+      {"t": "The Jewish historian", "c": "cream", "s": 52},
+      {"t": "Josephus mentions Jesus —", "c": "cream", "s": 50},
+      {"t": "and the execution", "c": "cream", "s": 52},
+      {"t": "of his brother James.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "AND MORE STILL", "dur": 4.4, "lines": [
+      {"t": "Pliny, Suetonius, Lucian,", "c": "cream", "s": 50},
+      {"t": "the Talmud —", "c": "cream", "s": 54},
+      {"t": "a chain of sources", "c": "cream", "s": 50},
+      {"t": "corroborate the picture.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "EVEN BART EHRMAN", "dur": 4.8, "lines": [
+      {"t": "The agnostic scholar", "c": "cream", "s": 52},
+      {"t": "Bart Ehrman wrote", "c": "cream", "s": 52},
+      {"t": "a whole book refuting", "c": "cream", "s": 50},
+      {"t": "the idea that", "c": "cream", "s": 52},
+      {"t": "Jesus is a myth.", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "kicker": "THE TELL", "dur": 4.6, "lines": [
+      {"t": "No one invents", "c": "cream", "s": 56},
+      {"t": "a crucified messiah.", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "", "s": 18},
+      {"t": "It was a scandal,", "c": "cream", "s": 52},
+      {"t": "not a marketing plan.", "c": "cream", "s": 52} ] },
+
+    { "dur": 4.2,
+      "big": [ {"t": "He lived.", "c": "cream", "s": 100}, {"t": "Ask any historian.", "c": "gold", "s": 74} ],
+      "sub": [ {"t": "Debate who he was —", "c": "dim", "f": "serif", "s": 42},
+               {"t": "not whether he was.", "c": "cream", "f": "serifb", "s": 44},
+               {"t": "", "s": 10},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "reviewed": {"citations": "2026-07-10", "argument": "2026-07-10", "orthodoxy": "2026-07-10", "by": "New reel from answers/doesnt-science-disprove-god. apologia-citations = 0 fabrications; honors the fine-tuning guardrail (DATA conceded 'constants on a knife-edge'; DESIGN left as inference 'fits a Maker better than an accident' — never 'science proves design'); kalam rule not triggered (asserts only that the universe began). argument+orthodoxy via general-purpose running each agent's .md = argument PASS, orthodoxy CLEAN. Polishes applied: restored the 'seems to point' hedge; softened monocausal 'science was born from' -> 'grew from' and 'the universe snapped into being' -> 'on the standard picture, the universe began'."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "pace": 1.4,
+  "voiceover": "Doesn't science disprove God? Usually it's the opposite. Science studies the physical world — but God isn't a physical thing inside it. You won't find the Maker by searching the house for one more piece of furniture. And the deeper science digs, the more it seems to point beyond itself. On the standard picture, the universe began — space, time, and matter all at once. Its constants sit on a knife-edge: nudge one and there are no stars, no life, no us. And it all runs on elegant mathematics, as if the cosmos were written to be read. None of that is a fluke of history: modern science grew out of the belief that a rational God made an orderly world we could understand. None of this proves God in a laboratory. But it fits a Maker far better than a lucky accident. Science can't disprove God — it keeps handing us the clues.",
+  "source": "answers/doesnt-science-disprove-god.html",
+  "scenes": [
+    { "dur": 3.2,
+      "big": [ {"t": "Doesn't science", "c": "cream", "s": 84}, {"t": "disprove God?", "c": "gold", "s": 88} ],
+      "sub": [ {"t": "It's usually the opposite.", "c": "dim", "f": "serif", "s": 44} ] },
+
+    { "kicker": "A CATEGORY MISTAKE", "dur": 4.2, "lines": [
+      {"t": "Science studies", "c": "cream", "s": 56},
+      {"t": "the physical world.", "c": "cream", "s": 56},
+      {"t": "", "s": 18},
+      {"t": "God isn't a physical thing", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "inside it.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "SO IT CAN'T RULE HIM OUT", "dur": 4.4, "lines": [
+      {"t": "You won't find the Maker", "c": "cream", "s": 52},
+      {"t": "by searching the house", "c": "cream", "s": 52},
+      {"t": "for one more", "c": "cream", "s": 52},
+      {"t": "piece of furniture.", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "kicker": "AND IT KEEPS POINTING", "dur": 3.8, "lines": [
+      {"t": "The deeper science digs,", "c": "cream", "s": 52},
+      {"t": "the more it seems to point", "c": "cream", "s": 48},
+      {"t": "beyond itself.", "c": "gold", "f": "serifb", "s": 60} ] },
+
+    { "kicker": "A BEGINNING", "dur": 4.0, "lines": [
+      {"t": "The universe", "c": "cream", "s": 56},
+      {"t": "snapped into being —", "c": "cream", "s": 54},
+      {"t": "space, time, and matter,", "c": "cream", "s": 50},
+      {"t": "all at once.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "FINE-TUNING", "dur": 4.4, "lines": [
+      {"t": "Its constants sit", "c": "cream", "s": 54},
+      {"t": "on a knife-edge —", "c": "cream", "s": 54},
+      {"t": "nudge one, and there are", "c": "cream", "s": 50},
+      {"t": "no stars, no life, no us.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "A UNIVERSE YOU CAN READ", "dur": 4.4, "lines": [
+      {"t": "And it all obeys", "c": "cream", "s": 54},
+      {"t": "elegant mathematics —", "c": "cream", "s": 52},
+      {"t": "as if the cosmos", "c": "cream", "s": 52},
+      {"t": "were written to be read.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "NOT ENEMIES", "dur": 4.6, "lines": [
+      {"t": "Modern science grew", "c": "cream", "s": 52},
+      {"t": "from the belief that", "c": "cream", "s": 52},
+      {"t": "a rational God", "c": "cream", "s": 52},
+      {"t": "made an orderly world.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "THE HONEST LINE", "dur": 4.8, "lines": [
+      {"t": "None of this proves God", "c": "cream", "s": 52},
+      {"t": "in a laboratory.", "c": "cream", "s": 52},
+      {"t": "", "s": 16},
+      {"t": "But it fits a Maker far better", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "than a lucky accident.", "c": "gold", "f": "serifb", "s": 50} ] },
+
+    { "dur": 4.2,
+      "big": [ {"t": "Science can't", "c": "cream", "s": 90}, {"t": "disprove God.", "c": "gold", "s": 92} ],
+      "sub": [ {"t": "It keeps handing us the clues.", "c": "dim", "f": "serif", "s": 40},
+               {"t": "", "s": 10},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}
