@@ -29,6 +29,7 @@ export default async function handler(req, res) {
   }
 
   const results = { sent: 0, failed: 0, skipped: 0, errors: [] };
+  let groupNudgeCount = 0;
 
   try {
     // ── GET ALL USERS ──
@@ -51,6 +52,27 @@ export default async function handler(req, res) {
 
     const usersData = await usersRes.json();
     const users = usersData.users || [];
+
+    // ── GROUP NUDGES ──
+    // Members whose study group has momentum this week but who haven't shown up
+    // get a gentle "your group missed you" email. Runs first so a nudged member
+    // is skipped in the generic weekly summary below (never both in one morning).
+    const emailById = {};
+    users.forEach(function(u) {
+      if (u.email && u.email_confirmed_at) {
+        emailById[u.id] = {
+          email: u.email,
+          name: (u.user_metadata && u.user_metadata.full_name) ? u.user_metadata.full_name.split(' ')[0] : u.email.split('@')[0]
+        };
+      }
+    });
+    const nudge = await sendGroupNudges({ SB_URL: SB_URL, authKey: authKey, RESEND_KEY: RESEND_KEY, emailById: emailById });
+    groupNudgeCount = nudge.sent;
+
+    // Manual/cron route: send ONLY the group nudges and return.
+    if ((req.query.do || '') === 'group-nudge') {
+      return res.status(200).json({ status: 'nudges_complete', nudged: nudge.sent, failed: nudge.failed, groups_scanned: nudge.groups });
+    }
 
     // ── GET FLASHCARD STATS FOR ALL USERS ──
     const today = new Date().toISOString().split('T')[0];
@@ -96,6 +118,7 @@ export default async function handler(req, res) {
     // ── SEND EMAIL TO EACH USER ──
     for (const user of users) {
       if (!user.email || !user.email_confirmed_at) { results.skipped++; continue; }
+      if (nudge.nudgedIds.has(user.id)) { results.skipped++; continue; } // already got a group nudge today
 
       const name = (user.user_metadata && user.user_metadata.full_name)
         ? user.user_metadata.full_name.split(' ')[0]
@@ -124,8 +147,117 @@ export default async function handler(req, res) {
     sent: results.sent,
     failed: results.failed,
     skipped: results.skipped,
+    group_nudges: groupNudgeCount,
     errors: results.errors.slice(0, 5)
   });
+}
+
+// ── GROUP NUDGES ──
+// Scans study groups; for each "alive" group (>=2 members, >=1 active in the last
+// 7 days) it emails members who joined >3 days ago but have not studied in 7 days.
+// Each user is nudged at most once (their most-active group). Returns the set of
+// nudged user_ids so the caller can skip them in the weekly summary.
+async function sendGroupNudges({ SB_URL, authKey, RESEND_KEY, emailById }) {
+  const out = { nudgedIds: new Set(), sent: 0, failed: 0, groups: 0 };
+  if (!RESEND_KEY) return out;
+  const h = { apikey: authKey, Authorization: `Bearer ${authKey}` };
+  const since = new Date(Date.now() - 7 * 86400000).toISOString().slice(0, 10);
+
+  let groups = [], members = [], activity = [];
+  try {
+    const [gR, mR, aR] = await Promise.all([
+      fetch(`${SB_URL}/rest/v1/groups?select=id,name,icon,plan,plan_day`, { headers: h }),
+      fetch(`${SB_URL}/rest/v1/group_members?select=group_id,user_id,joined_at`, { headers: h }),
+      fetch(`${SB_URL}/rest/v1/group_activity?select=group_id,user_id&day=gte.${since}`, { headers: h })
+    ]);
+    if (!gR.ok || !mR.ok || !aR.ok) return out; // tables not present / not migrated yet
+    groups = await gR.json(); members = await mR.json(); activity = await aR.json();
+  } catch (e) { return out; }
+  if (!Array.isArray(groups) || !groups.length) return out;
+  out.groups = groups.length;
+
+  const gById = {}; groups.forEach(function (g) { gById[g.id] = g; });
+  const byGroup = {}; // gid -> { members: [], active: Set }
+  members.forEach(function (m) {
+    (byGroup[m.group_id] = byGroup[m.group_id] || { members: [], active: new Set() }).members.push(m);
+  });
+  activity.forEach(function (a) { if (byGroup[a.group_id]) byGroup[a.group_id].active.add(a.user_id); });
+
+  const cutoff = Date.now() - 3 * 86400000; // joined more than 3 days ago
+  const nudgeFor = {}; // user_id -> { group, activeCount, memberCount }
+  Object.keys(byGroup).forEach(function (gid) {
+    const gg = byGroup[gid], g = gById[gid]; if (!g) return;
+    const memberCount = gg.members.length, activeCount = gg.active.size;
+    if (memberCount < 2 || activeCount < 1) return; // needs a real, alive group
+    gg.members.forEach(function (m) {
+      if (gg.active.has(m.user_id)) return;                         // studied recently
+      if (new Date(m.joined_at).getTime() > cutoff) return;          // too new to nudge
+      if (!emailById[m.user_id]) return;                             // no confirmed email
+      const prev = nudgeFor[m.user_id];
+      if (!prev || activeCount > prev.activeCount) nudgeFor[m.user_id] = { group: g, activeCount: activeCount, memberCount: memberCount };
+    });
+  });
+
+  const targets = Object.keys(nudgeFor);
+  for (let i = 0; i < targets.length; i++) {
+    const uid = targets[i], info = nudgeFor[uid], who = emailById[uid];
+    try {
+      await resendSend(RESEND_KEY, who.email, buildNudgeSubject(info.group), buildNudgeHtml(who.name, info.group, info.activeCount, info.memberCount));
+      out.nudgedIds.add(uid); out.sent++;
+      await new Promise(function (r) { setTimeout(r, 100); });
+    } catch (e) { out.failed++; }
+  }
+  return out;
+}
+
+async function resendSend(resendKey, to, subject, html) {
+  const response = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { 'Authorization': `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ from: 'Apologia Daily <hello@apologiadaily.com>', to: to, subject: subject, html: html })
+  });
+  if (!response.ok) { const err = await response.text(); throw new Error(`Resend ${response.status}: ${err}`); }
+  return response.json();
+}
+
+function buildNudgeSubject(g) {
+  return `Your study group has been at it — ${g.name} missed you`;
+}
+
+function buildNudgeHtml(name, g, activeCount, memberCount) {
+  const others = Math.max(1, activeCount);
+  const planLine = g.plan
+    ? `They're on day ${g.plan_day || 1} of the plan. A few minutes gets you caught up.`
+    : `A few minutes today keeps you in step with them.`;
+  return `<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"></head>
+<body style="margin:0;padding:0;background:#f7f4ef;font-family:Georgia,serif;">
+<div style="max-width:560px;margin:0 auto;">
+  <div style="background:#050d1a;padding:1.75rem 2rem;border-bottom:2px solid #c8a951;">
+    <div style="font-family:Georgia,serif;font-size:1.3rem;font-weight:700;color:#fff;">Apologia<span style="color:#c8a951;">Daily</span></div>
+    <div style="font-family:Arial,sans-serif;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:3px;">Study Groups</div>
+  </div>
+  <div style="background:#050d1a;padding:2rem 2rem 1.75rem;">
+    <div style="font-size:2.25rem;margin-bottom:0.75rem;">${g.icon || '👥'}</div>
+    <div style="font-family:Georgia,serif;font-size:1.35rem;font-weight:700;color:#fff;margin-bottom:0.6rem;">${name}, your group has been studying without you.</div>
+    <div style="font-family:Arial,sans-serif;font-size:0.92rem;color:rgba(255,255,255,0.6);line-height:1.75;">
+      <strong style="color:#e8cf87;">${g.name}</strong> had ${others} member${others !== 1 ? 's' : ''} show up this week. ${planLine}
+    </div>
+    <a href="https://apologiadaily.com/study-groups.html" style="display:inline-block;margin-top:1.5rem;font-family:Arial,sans-serif;font-size:0.85rem;font-weight:600;background:#c8a951;color:#050d1a;padding:11px 22px;border-radius:3px;text-decoration:none;">Jump back in →</a>
+  </div>
+  <div style="background:#050d1a;padding:1.25rem 2rem;">
+    <div style="font-family:Georgia,serif;font-size:0.9rem;color:rgba(255,255,255,0.7);font-style:italic;line-height:1.8;text-align:center;">"As iron sharpens iron, so one person sharpens another."</div>
+    <div style="font-family:Arial,sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.35);text-align:center;margin-top:0.5rem;">Proverbs 27:17</div>
+  </div>
+  <div style="background:#050d1a;padding:1.25rem 2rem;border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="font-family:Arial,sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.3);text-align:center;line-height:1.7;">
+      Apologia Daily &middot; apologiadaily.com<br>
+      You are receiving this because you joined a study group.
+      <a href="https://apologiadaily.com/study-groups.html" style="color:rgba(200,169,81,0.5);text-decoration:none;">Manage your groups</a>
+    </div>
+  </div>
+</div>
+</body></html>`;
 }
 
 async function sendWeeklyEmail(resendKey, email, name, fc, ex) {
