@@ -387,6 +387,26 @@
         '<span style="margin-left:auto;color:#1e4278;">Tap a square to drill it &rarr;</span></div>';
   }
 
+  /* compact skill-map strip for the dashboard coach card (dark) */
+  function renderSkillStrip(elId) {
+    var el = document.getElementById(elId); if (!el) return;
+    var byId = {}; profile().forEach(function (s) { if (s.isArg) byId[s.id] = s; });
+    var cats = {}, total = 0, unlocked = 0, msum = 0;
+    for (var id in ARGS) { var a = ARGS[id]; (cats[a.c] = cats[a.c] || []).push(id); total++; var p = byId[id]; if (p) { unlocked++; msum += p.mastery; } }
+    var overall = unlocked ? Math.round(msum / unlocked) : 0;
+    var bars = CAT_ORDER.filter(function (c) { return cats[c]; }).map(function (c) {
+      var ids = cats[c], un = 0, sum = 0;
+      ids.forEach(function (i) { var p = byId[i]; if (p) { un++; sum += p.mastery; } });
+      var cov = Math.round(un / ids.length * 100), col = un ? mColor(Math.round(sum / un)) : 'rgba(255,255,255,0.14)';
+      return '<div title="' + esc(c) + ' — ' + un + '/' + ids.length + '" style="flex:1;height:6px;border-radius:3px;background:rgba(255,255,255,0.08);overflow:hidden;"><div style="height:100%;width:' + cov + '%;background:' + col + ';"></div></div>';
+    }).join('');
+    el.innerHTML = '<a href="coach.html" style="display:block;margin-top:1rem;border-top:1px solid rgba(255,255,255,0.1);padding-top:0.9rem;text-decoration:none;">' +
+      '<div style="display:flex;align-items:baseline;justify-content:space-between;gap:0.6rem;margin-bottom:0.55rem;">' +
+        '<span style="font-family:\'DM Sans\',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.85);"><b style="color:#e8cf87;">Skill map</b> &middot; ' + (unlocked ? ('<b style="color:#fff;">' + unlocked + '</b>/' + total + ' unlocked &middot; ' + overall + '% mastery') : 'start unlocking the map') + '</span>' +
+        '<span style="font-family:\'DM Sans\',sans-serif;font-size:0.74rem;font-weight:600;color:#c8a951;white-space:nowrap;">See it all &rarr;</span></div>' +
+      '<div style="display:flex;gap:4px;">' + bars + '</div></a>';
+  }
+
   /* ---------- Supabase persistence (cross-device) ----------
      Explicit recorded signals upsert to a per-user 'coach_signals'
      table (RLS). Offline-first: localStorage is always the live cache;
@@ -487,6 +507,7 @@
     renderPanel: renderPanel,
     renderLog: renderLog,
     renderSkillMap: renderSkillMap,
+    renderSkillStrip: renderSkillStrip,
     sync: sync,
     reset: reset
   };

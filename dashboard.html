@@ -194,6 +194,7 @@
             </div>
             <div class="adn-mega-col">
               <div class="adn-mega-h">Practice &amp; community</div>
+              <a class="adn-mi" href="/coach.html"><span class="adn-mi-ic">&#129305;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Coach</span><span class="adn-mi-dc">Your skill map &amp; a plan for your weak spots.</span></span></a>
               <a class="adn-mi" href="/games.html"><span class="adn-mi-ic">&#127918;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Games</span><span class="adn-mi-dc">Quizzes that feed your streak.</span></span></a>
               <a class="adn-mi" href="/study-groups.html"><span class="adn-mi-ic">&#128101;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Study Groups <span class="adn-mi-tag">New</span></span><span class="adn-mi-dc">Study with people you love.</span></span></a>
               <a class="adn-mi" href="/reading-club.html"><span class="adn-mi-ic">&#128214;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Reading Clubs</span><span class="adn-mi-dc">The classics, chapter by chapter.</span></span></a>
@@ -449,9 +450,10 @@
         <span style="margin-left:auto;font-family:var(--font-ui);font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);background:rgba(200,169,81,0.12);border:1px solid rgba(200,169,81,0.3);padding:4px 10px;border-radius:20px;">Pro</span>
       </div>
       <div id="coach-body"></div>
+      <div id="coach-skill-strip"></div>
     </div>
     <script src="/coach.js"></script>
-    <script>try{ Coach.renderPanel('coach-body'); }catch(e){}</script>
+    <script>try{ Coach.renderPanel('coach-body'); Coach.renderSkillStrip('coach-skill-strip'); }catch(e){}</script>
 
     <!-- DAILY REMINDERS — push on/off (self-hides if unsupported or blocked) -->
     <div id="notify-card" style="display:none;position:relative;background:linear-gradient(135deg,#0a1628,#050d1a);border:1px solid rgba(200,169,81,0.35);border-radius:10px;padding:1.1rem 1.4rem;margin-bottom:1.75rem;box-shadow:0 4px 20px rgba(5,13,26,0.08);">
@@ -1645,7 +1647,7 @@ function closeBeltInfo(){ var m = document.getElementById('belt-modal'); if(m) m
   </div>
 </div>
 <script>(function(){try{var p=new URLSearchParams(location.search);if(p.get('nocount')==='1')localStorage.setItem('ad-nocount','1');if(p.get('nocount')==='0')localStorage.removeItem('ad-nocount');if(localStorage.getItem('ad-nocount')==='1')return;}catch(e){}var s=document.createElement('script');s.defer=true;s.src='/_vercel/insights/script.js';document.head.appendChild(s);})();</script>
-  <script>window.addEventListener('load',function(){ try{ if(window.Coach&&Coach.sync) Coach.sync(function(){ try{ Coach.renderPanel('coach-body'); }catch(e){} }); }catch(e){} });</script>
+  <script>window.addEventListener('load',function(){ try{ if(window.Coach&&Coach.sync) Coach.sync(function(){ try{ Coach.renderPanel('coach-body'); Coach.renderSkillStrip('coach-skill-strip'); }catch(e){} }); }catch(e){} });</script>
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
 </body>
