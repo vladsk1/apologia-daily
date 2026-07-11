@@ -252,6 +252,13 @@
   function evNorm(s) {
     return (s || '').toLowerCase().replace(/[\u2018\u2019']/g, '').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
   }
+  /* The "main title" before any dash (hyphen / en / em) \u2014 lets a day match a card
+     whose subtitle has since been reworded (e.g. map "Messianic Prophecy - the
+     Statistical Case" still finds the card "Messianic Prophecy \u2014 Foretold and
+     Fulfilled"). Normalised; used only as a fallback after exact/substring. */
+  function evHead(s) {
+    return evNorm((s || '').split(/[\u2014\u2013-]/)[0]);
+  }
 
   /* Find a card by title. Tries Evidence Library (.card/.ct) first, then
      Worldviews (.argument-card/.argument-title). Returns the matched node. */
@@ -280,6 +287,19 @@
       if (tn === wn || tn.indexOf(wn) !== -1 || wn.indexOf(tn) !== -1) {
         acards[i].classList.add('open');
         return acards[i];
+      }
+    }
+
+    /* Fallback: match on the pre-dash main title (survives subtitle rewording). */
+    var wh = evHead(wantTitle);
+    if (wh.length >= 6) {
+      for (i = 0; i < cards.length; i++) {
+        t = cards[i].querySelector('.ct');
+        if (t && evHead(t.textContent) === wh) { cards[i].classList.add('op'); return cards[i]; }
+      }
+      for (i = 0; i < acards.length; i++) {
+        t = acards[i].querySelector('.argument-title');
+        if (t && evHead(t.textContent) === wh) { acards[i].classList.add('open'); return acards[i]; }
       }
     }
     return null;
