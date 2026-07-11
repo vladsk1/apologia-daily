@@ -50,10 +50,21 @@ const RE = /<ul class="adn-links">[\s\S]*?<\/ul>(\s*)<div class="adn-right">/;
 
 const check = process.argv.includes('--check');
 
-// all tracked .html files, minus node_modules
+// Doctrinally-gated content (see tools/check-content-review.mjs): NEVER touched
+// here — a nav-only edit would trip the content-review gate and wrongly demand a
+// fresh orthodoxy stamp. Nav consistency on these leaf pages isn't worth that.
+const CONTENT_GATED = [
+  /^library\/(?!index\.html$).+\.html$/,  // deep-dive essays (+ mk/ es/ mirrors)
+  /^ev-s\d[a-z0-9.]*\.html$/,             // hub fragments (no nav anyway)
+  /^worldviews\.html$/,
+];
+const isGated = (p) => CONTENT_GATED.some((re) => re.test(p));
+
+// all tracked .html files, minus node_modules and gated content
 const files = execSync('git ls-files "*.html"', { cwd: process.cwd(), encoding: 'utf8' })
   .split('\n').map(s => s.trim()).filter(Boolean)
-  .filter(f => !f.startsWith('node_modules/'));
+  .filter(f => !f.startsWith('node_modules/'))
+  .filter(f => !isGated(f));
 
 let changed = 0, skipped = 0, scanned = 0;
 const drifted = [];
