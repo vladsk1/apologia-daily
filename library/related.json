@@ -2503,5 +2503,36 @@
     "cat": "The Trinity"
    }
   ]
+ },
+ "relations.html": {
+  "title": "What Distinguishes the Persons? The Inner Grammar of the Trinity",
+  "cat": "The Trinity",
+  "related": [
+   {
+    "slug": "eternal_generation.html",
+    "title": "The Eternal Generation of the Son",
+    "cat": "The Trinity"
+   },
+   {
+    "slug": "philosophical_trinity.html",
+    "title": "A Philosophical Defence of the Trinity",
+    "cat": "The Trinity"
+   },
+   {
+    "slug": "nt_trinity.html",
+    "title": "The Trinity in the New Testament",
+    "cat": "The Trinity"
+   },
+   {
+    "slug": "holy_spirit.html",
+    "title": "The Deity and Personhood of the Holy Spirit",
+    "cat": "The Trinity"
+   },
+   {
+    "slug": "modalism.html",
+    "title": "Answering Modalism: One God in Three Persons",
+    "cat": "The Trinity"
+   }
+  ]
  }
 }
