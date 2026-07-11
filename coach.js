@@ -325,6 +325,68 @@
     return { explain: 'Explain', quiz: 'Quiz', debate: 'Debate', flashcard: 'Cards', mastery: 'Track', conversation: 'Real talk' }[src] || src;
   }
 
+  /* ---------- Skill Map: the whole territory, coloured by mastery ---------- */
+  function mColor(m) { return m >= 70 ? '#2f7d57' : (m >= 45 ? '#9a7416' : '#b23b32'); }
+  var CAT_ORDER = ["God's Existence", 'The Resurrection', 'Jesus', 'Biblical Reliability', 'Science & Faith', 'The Trinity'];
+  var CAT_ICON = { "God's Existence": '\u{1F30C}', 'The Resurrection': '✝️', 'Jesus': '\u{1F451}', 'Biblical Reliability': '\u{1F4D6}', 'Science & Faith': '\u{1F52C}', 'The Trinity': '☘️' };
+  function dialLg(pct) {
+    var r = 30, c = 2 * Math.PI * r, off = c * (1 - pct / 100);
+    var col = pct >= 70 ? '#7fe0b0' : pct >= 45 ? '#e8cf87' : '#f0a99f';
+    return '<div style="position:relative;width:78px;height:78px;flex-shrink:0;"><svg width="78" height="78" style="transform:rotate(-90deg)">' +
+      '<circle cx="39" cy="39" r="' + r + '" stroke="rgba(255,255,255,0.13)" stroke-width="7" fill="none"></circle>' +
+      '<circle cx="39" cy="39" r="' + r + '" stroke="' + col + '" stroke-width="7" fill="none" stroke-linecap="round" stroke-dasharray="' + c + '" stroke-dashoffset="' + off + '"></circle>' +
+      '</svg><div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:\'DM Sans\',sans-serif;color:#fff;">' +
+      '<span style="font-size:1.35rem;font-weight:700;line-height:1;">' + pct + '</span><span style="font-size:.52rem;color:rgba(255,255,255,.5);letter-spacing:.1em;">MASTERY</span></div></div>';
+  }
+  function renderSkillMap(elId) {
+    var el = document.getElementById(elId); if (!el) return;
+    var byId = {}; profile().forEach(function (s) { if (s.isArg) byId[s.id] = s; });
+    var cats = {}, total = 0, unlocked = 0, msum = 0;
+    for (var id in ARGS) { var a = ARGS[id]; (cats[a.c] = cats[a.c] || []).push({ id: id, name: a.n }); total++; var p = byId[id]; if (p) { unlocked++; msum += p.mastery; } }
+    var overall = unlocked ? Math.round(msum / unlocked) : 0;
+    var head = unlocked === 0 ? 'Your map is waiting. Finish one drill and the first squares light up.'
+      : (unlocked / total < 0.25 ? 'You’ve started charting the map — keep unlocking territory.'
+        : (overall >= 70 ? 'Strong across the board. Keep the weak squares warm.'
+          : 'Your competence is growing — here’s the whole territory.'));
+
+    var cards = CAT_ORDER.filter(function (c) { return cats[c]; }).map(function (c) {
+      var items = cats[c], un = 0, sum = 0;
+      var cells = items.map(function (it) {
+        var p = byId[it.id];
+        if (p) {
+          un++; sum += p.mastery;
+          return '<a href="ev-m-' + it.id + '.html" title="' + esc(it.name) + ' — ' + p.mastery + '%' + (p.trend === 'up' ? ' (improving)' : p.trend === 'down' ? ' (slipping)' : '') + '" ' +
+            'style="width:34px;height:34px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:\'DM Sans\',sans-serif;font-size:.62rem;font-weight:700;color:#fff;text-decoration:none;background:' + mColor(p.mastery) + ';position:relative;">' + p.mastery +
+            (p.trend === 'up' ? '<span style="position:absolute;top:-4px;right:-3px;font-size:.5rem;color:#2f7d57;">▲</span>' : '') + '</a>';
+        }
+        return '<a href="ev-m-' + it.id + '.html" title="' + esc(it.name) + ' — not started yet" ' +
+          'style="width:34px;height:34px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.8rem;color:#b8c4d4;text-decoration:none;background:#eef2f7;border:1px solid #dde5ee;">·</a>';
+      }).join('');
+      var cavg = un ? Math.round(sum / un) : 0;
+      return '<div style="background:#fff;border:1px solid #d4e0ec;border-radius:12px;padding:1.1rem 1.2rem;">' +
+        '<div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.7rem;">' +
+          '<div style="font-family:\'Playfair Display\',Georgia,serif;font-size:1rem;font-weight:600;color:#0a1628;">' + CAT_ICON[c] + ' ' + esc(c) + '</div>' +
+          '<div style="font-family:\'DM Sans\',sans-serif;font-size:.72rem;color:#7a8fa8;white-space:nowrap;">' + un + '/' + items.length + (un ? ' · ' + cavg + '%' : '') + '</div></div>' +
+        '<div style="height:5px;background:#eef2f7;border-radius:3px;margin-bottom:.9rem;overflow:hidden;"><div style="height:100%;width:' + Math.round(un / items.length * 100) + '%;background:' + (un ? mColor(cavg) : '#d4e0ec') + ';border-radius:3px;"></div></div>' +
+        '<div style="display:flex;flex-wrap:wrap;gap:6px;">' + cells + '</div></div>';
+    }).join('');
+
+    el.innerHTML =
+      '<div style="display:flex;align-items:center;gap:1.4rem;background:linear-gradient(135deg,#0a1628,#163058);border-radius:14px;padding:1.4rem 1.6rem;margin-bottom:1.3rem;flex-wrap:wrap;">' +
+        dialLg(overall) +
+        '<div style="flex:1;min-width:210px;">' +
+          '<div style="font-family:\'Playfair Display\',Georgia,serif;font-size:1.22rem;color:#fff;margin-bottom:.3rem;line-height:1.35;">' + head + '</div>' +
+          '<div style="font-family:\'DM Sans\',sans-serif;font-size:.84rem;color:rgba(255,255,255,.62);"><b style="color:#e8cf87;">' + unlocked + '</b> of ' + total + ' arguments unlocked' + (unlocked ? ' · <b style="color:#e8cf87;">' + overall + '%</b> average mastery' : '') + '</div>' +
+        '</div></div>' +
+      '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1rem;">' + cards + '</div>' +
+      '<div style="font-family:\'DM Sans\',sans-serif;font-size:.72rem;color:#7a8fa8;margin-top:1rem;display:flex;gap:1.1rem;flex-wrap:wrap;align-items:center;">' +
+        '<span><span style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#2f7d57;vertical-align:-1px;"></span> 70%+ solid</span>' +
+        '<span><span style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#9a7416;vertical-align:-1px;"></span> 45–69% shaky</span>' +
+        '<span><span style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#b23b32;vertical-align:-1px;"></span> under 45%</span>' +
+        '<span><span style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#eef2f7;border:1px solid #dde5ee;vertical-align:-1px;"></span> not started</span>' +
+        '<span style="margin-left:auto;color:#1e4278;">Tap a square to drill it &rarr;</span></div>';
+  }
+
   /* ---------- Supabase persistence (cross-device) ----------
      Explicit recorded signals upsert to a per-user 'coach_signals'
      table (RLS). Offline-first: localStorage is always the live cache;
@@ -424,6 +486,7 @@
     prescription: prescription,
     renderPanel: renderPanel,
     renderLog: renderLog,
+    renderSkillMap: renderSkillMap,
     sync: sync,
     reset: reset
   };

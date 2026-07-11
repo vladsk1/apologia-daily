@@ -206,6 +206,12 @@ footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08);pad
     <div id="coach-body"></div>
   </div>
 
+  <!-- ============ SKILL MAP ============ -->
+  <div class="section-label">Your skill map &middot; the whole territory</div>
+  <p class="log-intro">Every argument you can master, in one view. Each square lights up as you practise it and is coloured by how solid it is &mdash; so you can watch your competence grow and see exactly where the map still needs filling in.</p>
+
+  <div id="skill-map"></div>
+
   <!-- ============ TRAINING LOG ============ -->
   <div class="section-label">Training log &middot; your weakness profile</div>
   <p class="log-intro">This is the coach&rsquo;s notebook. Every skill below is scored from your real activity and tracked over time, newest weakness first. Tap any row to see <em>why</em> it&rsquo;s flagged and what fed the score.</p>
@@ -221,7 +227,7 @@ footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08);pad
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="/coach.js"></script>
 <script>
-function refresh(){ try{ Coach.renderPanel('coach-body'); Coach.renderLog('log'); }catch(e){} }
+function refresh(){ try{ Coach.renderPanel('coach-body'); Coach.renderSkillMap('skill-map'); Coach.renderLog('log'); }catch(e){} }
 refresh();
 /* pull any cross-device signals for a signed-in user, then re-render */
 try{ if(window.Coach&&Coach.sync) Coach.sync(refresh); }catch(e){}
