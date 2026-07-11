@@ -1,0 +1,79 @@
+{
+  "reviewed": {"argument": "2026-07-09", "orthodoxy": "2026-07-09", "by": "argument+orthodoxy gates; derived from library/names.html (citation-audited, Biblical Reliability). Provenance claim only — not proof of eyewitnesses/miracles."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.8,
+  "voiceover": "There's a fingerprint in the Gospels that is almost impossible to fake — and it sat hidden in plain sight for two thousand years. Not prophecy. Not miracles. The names. Think of a novel: a British boy born in 1950 is Brian or Keith; born today he's Oliver or Noah. No author researches that — names just leak out, carrying the fingerprint of a real time and place. Get one wrong and a local knows instantly you weren't there. So run that test on the Gospels. If they were Greek legends written in Rome generations later, the names should match that world. They don't. They match first-century Jewish Palestine, closely. The historian Tal Ilan catalogued about three thousand real Jewish people from that era — from inscriptions, papyri, and Josephus. The two most common male names in Palestine were Simon and Joseph. The two most common in the Gospels and Acts? Simon and Joseph. Fifteen point six percent of real men, versus eighteen point two percent in the Gospels and Acts. And here's what no forger thinks of: so many men were named Simon that people had to tag them — Simon bar-Jonah, Simon the Zealot, Simon the Leper. The Gospels do exactly this, but only on the over-common names. Rare names are usually left bare. That's a real culture, not set dressing. To be fair, this doesn't prove the Gospels are true, or that eyewitnesses wrote them — accurate names aren't accurate miracles. But it does make the late-legend theory very hard to hold. These traditions are early, and local. The Gospels carry the watermark of the exact world they describe — down to the statistics.",
+  "source": "library/names.html",
+  "scenes": [
+    { "dur": 4.6,
+      "big": [ {"t": "The detail in the Gospels", "c": "cream", "s": 60}, {"t": "that's nearly impossible", "c": "cream", "s": 56}, {"t": "to fake", "c": "gold", "s": 100} ],
+      "sub": [ {"t": "Hidden in plain sight for 2,000 years", "c": "dim", "f": "serif", "s": 42} ] },
+
+    { "kicker": "NOT WHAT YOU'D GUESS", "dur": 4.6, "lines": [
+      {"t": "Not prophecy.", "c": "cream", "s": 60},
+      {"t": "Not miracles.", "c": "cream", "s": 60},
+      {"t": "", "s": 22},
+      {"t": "The names.", "c": "gold", "f": "serifb", "s": 92} ] },
+
+    { "kicker": "THINK OF A NOVEL", "dur": 6.2, "lines": [
+      {"t": "A British boy born in 1950", "c": "cream", "s": 52},
+      {"t": "is Brian or Keith.", "c": "cream", "s": 52},
+      {"t": "Born today? Oliver or Noah.", "c": "cream", "s": 52},
+      {"t": "", "s": 20},
+      {"t": "No one researches that —", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "names just leak out.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "GET ONE WRONG", "dur": 5.4, "lines": [
+      {"t": "Name a 1950 schoolboy", "c": "cream", "s": 54},
+      {"t": "“Jayden,” and a local knows", "c": "cream", "s": 52},
+      {"t": "at once —", "c": "cream", "s": 54},
+      {"t": "", "s": 20},
+      {"t": "you weren't there.", "c": "gold", "f": "serifb", "s": 64} ] },
+
+    { "kicker": "NOW TEST THE GOSPELS", "dur": 6.4, "lines": [
+      {"t": "If they were Greek legends", "c": "cream", "s": 52},
+      {"t": "written in Rome generations later,", "c": "cream", "s": 46},
+      {"t": "the names should match that world.", "c": "cream", "s": 46},
+      {"t": "", "s": 20},
+      {"t": "They don't. They match", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "first-century Palestine.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "THE HARD DATA · TAL ILAN", "dur": 6.6, "lines": [
+      {"t": "A historian catalogued ~3,000", "c": "cream", "s": 50},
+      {"t": "real Jews of that era —", "c": "cream", "s": 50},
+      {"t": "inscriptions, papyri, Josephus.", "c": "cream", "s": 46},
+      {"t": "", "s": 18},
+      {"t": "Top 2 male names: Simon & Joseph.", "c": "gold", "f": "serifb", "s": 46} ] },
+
+    { "kicker": "THE MATCH", "dur": 6.0, "lines": [
+      {"t": "Top 2 in the Gospels & Acts?", "c": "cream", "s": 50},
+      {"t": "Simon & Joseph.", "c": "gold", "f": "serifb", "s": 66},
+      {"t": "", "s": 20},
+      {"t": "15.6% of real men —", "c": "cream", "s": 50},
+      {"t": "18.2% in the Gospels & Acts.", "c": "cream", "s": 50} ] },
+
+    { "kicker": "WHAT NO FORGER THINKS OF", "dur": 7.2, "lines": [
+      {"t": "So many men were named Simon", "c": "cream", "s": 50},
+      {"t": "that people had to tag them:", "c": "cream", "s": 50},
+      {"t": "Simon bar-Jonah, the Zealot,", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "the Leper.", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "", "s": 18},
+      {"t": "The Gospels tag only the", "c": "cream", "s": 48},
+      {"t": "over-common names. Rare ones", "c": "cream", "s": 48},
+      {"t": "usually stay bare — a real culture.", "c": "dim", "s": 44} ] },
+
+    { "kicker": "THE HONEST LIMIT", "dur": 6.4, "lines": [
+      {"t": "This doesn't prove the miracles,", "c": "cream", "s": 48},
+      {"t": "or that eyewitnesses held the pen.", "c": "cream", "s": 46},
+      {"t": "", "s": 20},
+      {"t": "But the “late Greek legend”", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "theory becomes very hard to hold.", "c": "gold", "f": "serifb", "s": 44} ] },
+
+    { "dur": 5.6,
+      "big": [ {"t": "The right names.", "c": "cream", "s": 82}, {"t": "In the right place.", "c": "gold", "s": 76} ],
+      "sub": [ {"t": "The full, sourced case at", "c": "dim", "f": "serif", "s": 42},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52} ] }
+  ]
+}
