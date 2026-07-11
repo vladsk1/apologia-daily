@@ -1,53 +1,46 @@
 {
-  "reviewed": {"argument": "2026-07-11", "orthodoxy": "2026-07-11", "by": "argument+orthodoxy gates; derived from library/messianic-prophecy.html (citation-audited). Cumulative-convergence claim, referent honestly flagged as contested; leans on the textually-secure 53:9 match + DSS pre-dating."},
+  "reviewed": {"argument": "2026-07-11", "orthodoxy": "2026-07-11", "by": "argument+orthodoxy gates; derived from library/messianic-prophecy.html (citation-audited). Positive substitutionary reading (Isa 53:5-6 + 1 Pet 2:24); DSS pre-dating; humble 'portrait not proof / read for yourself' close. Jewish-objection scene removed at user request; non-triumphalist."},
   "aspect": "vertical",
   "theme": "navy",
   "fps": 30,
   "crossfade": 0.8,
-  "voiceover": "I'm going to read you a passage, and I want you to guess the year it was written. He was despised and rejected by men — a man of sorrows, and acquainted with grief. But he was pierced for our transgressions, crushed for our iniquities; and with his wounds we are healed. Like a lamb led to the slaughter, he did not open his mouth. And they made his grave with the wicked — and with a rich man in his death. So what year? This is not the Gospels. It's Isaiah 53, written centuries before Jesus was born. And we can prove the date: the Dead Sea Scrolls gave us a complete copy of Isaiah from about 125 BC — over a century before Christ. No one edited it after the fact. Now look at that last line: a criminal's death, and a rich man's grave. Jesus was crucified between two criminals, and buried in the tomb of Joseph of Arimathea — a rich man. Here's the honest part: many Jewish readers understand the Servant as the nation Israel — a sincere, longstanding reading, and Isaiah 53's meaning is genuinely debated. So this isn't a mathematical proof. It's a portrait, sketched centuries early, that comes into startling focus on one face. Coincidence, or providence? You decide.",
+  "voiceover": "I'm going to read you a passage — guess the year it was written. He was despised and rejected by men, a man of sorrows, and acquainted with grief. But he was pierced for our transgressions, crushed for our iniquities; and by his wounds we are healed. Like a lamb led to the slaughter, he did not open his mouth. So what year? This is not the Gospels. It's Isaiah 53, written centuries before Jesus was born. And we can prove the date: the Dead Sea Scrolls gave us a complete copy of Isaiah from about 125 BC — over a century before Christ. No one edited it after the fact. Now go back to verse 5. This is the heart of it: he was not merely suffering. He was pierced for us. Wounded in our place. Verse 6: we all, like sheep, have gone astray — and the Lord has laid on him the iniquity of us all. And the apostle Peter quotes it straight back: he bore our sins in his body on the tree; by his wounds you have been healed. Even the small details fit — a criminal's death and a rich man's grave, Jesus crucified between thieves and buried by Joseph, a rich man. It isn't a mathematical proof. It's a portrait, sketched centuries early, that comes into focus on one face. Read Isaiah 53 for yourself. Coincidence, or providence? You decide.",
   "source": "library/messianic-prophecy.html",
   "scenes": [
     { "dur": 4.8,
       "big": [ {"t": "I'll read a passage.", "c": "cream", "s": 72}, {"t": "You guess the year.", "c": "gold", "s": 76} ],
       "sub": [ {"t": "Most people get it very wrong.", "c": "dim", "f": "serif", "s": 44} ] },
 
-    { "kicker": "THE PASSAGE", "dur": 5.2, "lines": [
+    { "kicker": "THE PASSAGE", "dur": 5.0, "lines": [
       {"t": "“He was despised", "c": "cream", "s": 56},
       {"t": "and rejected by men —", "c": "cream", "s": 54},
       {"t": "", "s": 18},
       {"t": "a man of sorrows,", "c": "gold", "f": "serifb", "s": 58},
       {"t": "and acquainted with grief.”", "c": "gold", "f": "serifb", "s": 50} ] },
 
-    { "kicker": "IT GETS SHARPER", "dur": 6.0, "lines": [
+    { "kicker": "VERSE 5", "dur": 6.0, "lines": [
       {"t": "“But he was pierced", "c": "cream", "s": 54},
-      {"t": "for our transgressions,", "c": "cream", "s": 54},
-      {"t": "crushed for our iniquities …", "c": "cream", "s": 50},
+      {"t": "for OUR transgressions,", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "crushed for OUR iniquities …", "c": "cream", "s": 48},
       {"t": "", "s": 18},
-      {"t": "with his wounds", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "and by his wounds", "c": "cream", "s": 52},
       {"t": "we are healed.”", "c": "gold", "f": "serifb", "s": 60} ] },
 
-    { "kicker": "STRANGER STILL", "dur": 5.4, "lines": [
+    { "kicker": "STRANGER STILL", "dur": 5.2, "lines": [
       {"t": "“Like a lamb", "c": "cream", "s": 56},
       {"t": "led to the slaughter,", "c": "cream", "s": 54},
       {"t": "", "s": 18},
       {"t": "he did not", "c": "cream", "s": 54},
       {"t": "open his mouth.”", "c": "gold", "f": "serifb", "s": 62} ] },
 
-    { "kicker": "THEN THIS ODD LINE", "dur": 5.8, "lines": [
-      {"t": "“They made his grave", "c": "cream", "s": 54},
-      {"t": "with the wicked —", "c": "cream", "s": 54},
-      {"t": "", "s": 18},
-      {"t": "and with a rich man", "c": "gold", "f": "serifb", "s": 54},
-      {"t": "in his death.”", "c": "gold", "f": "serifb", "s": 60} ] },
-
-    { "kicker": "SO — WHAT YEAR?", "dur": 6.0, "lines": [
+    { "kicker": "SO — WHAT YEAR?", "dur": 5.8, "lines": [
       {"t": "This is not the Gospels.", "c": "cream", "s": 54},
       {"t": "", "s": 18},
       {"t": "It's Isaiah 53 —", "c": "gold", "f": "serifb", "s": 70},
       {"t": "written centuries", "c": "cream", "s": 52},
       {"t": "before Jesus was born.", "c": "cream", "s": 52} ] },
 
-    { "kicker": "AND THE DATE IS PROVEN", "dur": 6.8, "lines": [
+    { "kicker": "AND THE DATE IS PROVEN", "dur": 6.6, "lines": [
       {"t": "The Dead Sea Scrolls gave us", "c": "cream", "s": 48},
       {"t": "a complete Isaiah scroll —", "c": "cream", "s": 50},
       {"t": "about 125 BC.", "c": "gold", "f": "serifb", "s": 64},
@@ -55,33 +48,40 @@
       {"t": "Over a century before Christ.", "c": "cream", "s": 48},
       {"t": "No one edited it after.", "c": "dim", "s": 48} ] },
 
-    { "kicker": "NOW LOOK AT THAT LINE", "dur": 7.2, "lines": [
-      {"t": "A criminal's death.", "c": "cream", "s": 54},
-      {"t": "A rich man's grave.", "c": "cream", "s": 54},
+    { "kicker": "NOW — THE HEART OF IT", "dur": 6.4, "lines": [
+      {"t": "Go back to verse 5.", "c": "cream", "s": 54},
+      {"t": "He was not merely suffering.", "c": "cream", "s": 50},
       {"t": "", "s": 18},
-      {"t": "Jesus was crucified", "c": "gold", "f": "serifb", "s": 52},
-      {"t": "between two criminals —", "c": "gold", "f": "serifb", "s": 50},
-      {"t": "and buried in the tomb of", "c": "cream", "s": 48},
-      {"t": "Joseph, a rich man.", "c": "cream", "s": 50} ] },
+      {"t": "He was pierced FOR US.", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "Wounded in our place.", "c": "gold", "f": "serifb", "s": 54} ] },
 
-    { "kicker": "THE HONEST PART", "dur": 6.8, "lines": [
-      {"t": "Many Jewish readers understand", "c": "cream", "s": 46},
-      {"t": "the Servant as Israel itself —", "c": "cream", "s": 48},
-      {"t": "a sincere, longstanding reading.", "c": "dim", "s": 46},
+    { "kicker": "AND VERSE 6", "dur": 6.2, "lines": [
+      {"t": "“We all, like sheep,", "c": "cream", "s": 54},
+      {"t": "have gone astray …", "c": "cream", "s": 54},
       {"t": "", "s": 18},
-      {"t": "Isaiah 53's meaning", "c": "cream", "s": 50},
-      {"t": "is genuinely debated.", "c": "gold", "f": "serifb", "s": 52} ] },
+      {"t": "and the LORD has laid on him", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "the iniquity of us all.”", "c": "gold", "f": "serifb", "s": 54} ] },
 
-    { "kicker": "SO WHAT IS IT?", "dur": 6.6, "lines": [
-      {"t": "Not a math proof.", "c": "cream", "s": 56},
-      {"t": "", "s": 18},
-      {"t": "A portrait — sketched", "c": "gold", "f": "serifb", "s": 52},
-      {"t": "centuries early — that comes", "c": "cream", "s": 48},
-      {"t": "into focus on one face.", "c": "cream", "s": 50} ] },
+    { "kicker": "FULFILLED AT THE CROSS", "dur": 6.8, "lines": [
+      {"t": "Peter quotes it straight back:", "c": "cream", "s": 48},
+      {"t": "", "s": 16},
+      {"t": "“He bore our sins", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "in his body on the tree —", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "by his wounds", "c": "cream", "s": 50},
+      {"t": "you have been healed.”", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "— 1 Peter 2:24", "c": "dim", "s": 42} ] },
 
-    { "dur": 5.8,
+    { "kicker": "EVEN THE DETAILS FIT", "dur": 5.2, "lines": [
+      {"t": "A criminal's death.", "c": "cream", "s": 52},
+      {"t": "A rich man's grave.", "c": "cream", "s": 52},
+      {"t": "", "s": 16},
+      {"t": "Crucified between thieves —", "c": "cream", "s": 48},
+      {"t": "buried by Joseph, a rich man.", "c": "dim", "s": 46} ] },
+
+    { "dur": 6.0,
       "big": [ {"t": "Coincidence?", "c": "cream", "s": 84}, {"t": "Or providence?", "c": "gold", "s": 88} ],
-      "sub": [ {"t": "You decide. The full case at", "c": "dim", "f": "serif", "s": 40},
-               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52} ] }
+      "sub": [ {"t": "Read Isaiah 53 for yourself —", "c": "dim", "f": "serif", "s": 42},
+               {"t": "a portrait, not a proof.", "c": "dim", "f": "serif", "s": 40},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
   ]
 }
