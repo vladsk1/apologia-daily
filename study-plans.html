@@ -279,6 +279,7 @@
       <div class="plan-modal-body" id="modal-body"></div>
       <div class="plan-modal-footer">
         <button class="plan-start-btn" id="modal-start-btn" onclick="startPlan()">Start this plan →</button>
+        <a id="modal-group-link" href="study-groups.html" style="display:block;text-align:center;margin-top:0.75rem;font-family:var(--font-ui);font-size:0.85rem;font-weight:500;color:var(--navy-600);text-decoration:none;">👥 Study this with a group →</a>
       </div>
     </div>
   </div>
@@ -1395,6 +1396,23 @@ const plans = [
     } catch (e) {}
   }
 
+  // Piece 4: when a plan day is completed, count it for any of your groups on
+  // that plan — one study action feeds both the plan and the group's pulse.
+  async function pingGroupsForPlan(planId){
+    try {
+      if (!sb) return;
+      var r = await sb.auth.getSession(); var s = r.data && r.data.session; if (!s) return;
+      var uid = s.user.id;
+      var nm = (s.user.user_metadata && s.user.user_metadata.full_name) || s.user.email.split('@')[0];
+      var res = await sb.from('group_members').select('group_id, group:groups(plan)').eq('user_id', uid);
+      if (res.error || !res.data) return;
+      var mine = res.data.filter(function(row){ return row.group && row.group.plan === planId; });
+      for (var i = 0; i < mine.length; i++) {
+        try { await sb.from('group_activity').insert({ group_id: mine[i].group_id, user_id: uid, display_name: nm, kind: 'today', detail: 'Studied via plan' }); } catch(e){}
+      }
+    } catch(e){}
+  }
+
   document.addEventListener('DOMContentLoaded', function() {
     renderPlans(); updateActiveBanner();
     document.querySelectorAll('.pf-chip').forEach(function(chip) {
@@ -1405,6 +1423,8 @@ const plans = [
         renderPlans();
       });
     });
+    // Piece 2: deep-link from a group — study-plans.html?plan=<id> opens that plan.
+    try { var pid = new URLSearchParams(location.search).get('plan'); if (pid) openModal(pid); } catch(e){}
   });
 
   function renderPlans() {
@@ -1539,6 +1559,7 @@ const plans = [
           if (pl2) saved2[planId2].finished = (comp.length >= pl2.days);
           setSaved(saved2);
           item.classList.toggle('done', idx === -1);
+          if (idx === -1) { try { pingGroupsForPlan(planId2); } catch(e){} }  // newly completed → count it for my groups on this plan
           renderPlans(); updateActiveBanner();
         });
       }
@@ -1560,6 +1581,8 @@ const plans = [
 
     var startBtn = document.getElementById('modal-start-btn');
     if (startBtn) { startBtn.textContent = isStarted ? 'Continue plan →' : 'Start this plan →'; startBtn.style.background = ''; startBtn.style.color = ''; }
+    var groupLink = document.getElementById('modal-group-link');
+    if (groupLink) groupLink.href = 'study-groups.html?create=1&plan=' + encodeURIComponent(planId);
     document.getElementById('plan-modal').classList.add('open');
     document.body.style.overflow = 'hidden';
   }

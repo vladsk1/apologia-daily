@@ -347,6 +347,7 @@
                 <div class="plan-name" id="plan-name-text"></div>
                 <div class="plan-day" id="plan-day-text"></div>
                 <div class="progress-bar" style="margin-top:0.5rem;"><div class="progress-fill" id="plan-progress-fill" style="width:0%"></div></div>
+                <div id="plan-actions" style="display:flex;gap:0.4rem;flex-wrap:wrap;align-items:center;margin-top:0.85rem;"></div>
               </div>
             </div>
           </div>
@@ -496,15 +497,27 @@
     { id:'other',   emoji:'✨',    name:'Something else',  desc:'Your own kind of group', icon:'\u{1F465}' }
   ];
 
+  // Must mirror the plan ids/titles/day-counts in study-plans.html (all 10 plans).
   var PLAN_LABELS = {
     'resurrection': '30-Day Resurrection Deep Dive',
-    'existence-god': "30-Day God's Existence Foundations",
+    'gods_existence': "21-Day God's Existence Essentials",
+    'bible_reliability': '14-Day Bible Reliability',
+    'jesus_identity': '14-Day Jesus: The Divine Identity',
+    'answering_islam': '14-Day Answering Islam',
+    'existence-god': "30-Day God's Existence Deep Dive",
     'jesus-crash-course': '14-Day Jesus Essentials',
     'worldview-comparison': '21-Day Worldview Comparison',
     'debate-ready': '28-Day Debate Preparation',
     'daily-defender': 'Daily Defender — 90 Days'
   };
-  var PLAN_TOTAL = { 'resurrection':30, 'existence-god':30, 'jesus-crash-course':14, 'worldview-comparison':21, 'debate-ready':28, 'daily-defender':90 };
+  var PLAN_TOTAL = {
+    'resurrection':30, 'gods_existence':21, 'bible_reliability':14, 'jesus_identity':14, 'answering_islam':14,
+    'existence-god':30, 'jesus-crash-course':14, 'worldview-comparison':21, 'debate-ready':28, 'daily-defender':90
+  };
+  var PLAN_OPTIONS = [
+    'resurrection','gods_existence','bible_reliability','jesus_identity','answering_islam',
+    'existence-god','jesus-crash-course','worldview-comparison','debate-ready','daily-defender'
+  ];
 
   var AV_COLORS = ['#1e4278','#285a9e','#0f6e56','#8a7020','#5a3e8a','#1d7064','#7a3030','#3b72bc'];
   function colorFor(str){ var h=0; str=str||''; for(var i=0;i<str.length;i++){ h=(h*31+str.charCodeAt(i))>>>0; } return AV_COLORS[h % AV_COLORS.length]; }
@@ -549,12 +562,31 @@
 
     buildKindGrid();
     buildIconGrid();
+    fillPlanSelects();
     await loadGroups();
 
-    // deep-link: ?open=<groupId> (from a successful join)
     var params = new URLSearchParams(location.search);
+    // deep-link: ?open=<groupId> (from a successful join)
     var openId = params.get('open');
-    if (openId) openGroup(openId);
+    if (openId) { openGroup(openId); return; }
+    // deep-link: ?create=1&plan=<planId> (from "Study this with a group" on a plan)
+    if (params.get('create') === '1') {
+      openCreateModal();
+      var pl = params.get('plan');
+      if (pl && PLAN_LABELS[pl]) {
+        var sel = document.getElementById('group-plan'); if (sel) sel.value = pl;
+        var nm = document.getElementById('group-name');
+        if (nm && !nm.value) nm.placeholder = 'e.g. ' + PLAN_LABELS[pl].replace(/^\d+-Day\s*/, '').replace(/^Daily Defender.*/, 'Daily Defenders') + ' crew';
+      }
+    }
+  }
+
+  function fillPlanSelects(){
+    var opts = PLAN_OPTIONS.map(function(id){ return '<option value="' + id + '">' + esc(PLAN_LABELS[id]) + '</option>'; }).join('');
+    var create = document.getElementById('group-plan');
+    var assign = document.getElementById('assign-plan-select');
+    if (create) create.innerHTML = '<option value="">None yet</option>' + opts;
+    if (assign) assign.innerHTML = '<option value="">Select a plan…</option>' + opts;
   }
 
   async function signOut() {
@@ -739,10 +771,31 @@
       var done = day >= total;
       document.getElementById('plan-day-text').textContent = done ? ('\u{1F389} Completed — all ' + total + ' days') : ('Day ' + day + ' of ' + total);
       document.getElementById('plan-progress-fill').style.width = Math.min(100, Math.round(day / total * 100)) + '%';
+      // actions: everyone can do the plan; the host paces the group's day
+      var isHost = group.role === 'host';
+      var linkBtn = 'font-family:var(--font-ui);font-size:0.75rem;font-weight:500;padding:6px 12px;border-radius:3px;text-decoration:none;border:none;cursor:pointer;';
+      var acts = '<a href="study-plans.html?plan=' + encodeURIComponent(group.plan) + '" style="' + linkBtn + 'background:var(--gold);color:var(--navy-950);">' + (done ? 'Review the plan →' : "Do today's day →") + '</a>';
+      if (isHost && day > 1) acts += '<button onclick="advanceGroupDay(-1)" title="Previous day" style="' + linkBtn + 'background:none;color:var(--text-muted);border:1px solid var(--border);">◀</button>';
+      if (isHost && !done) acts += '<button onclick="advanceGroupDay(1)" style="' + linkBtn + 'background:var(--navy-700);color:#fff;">Advance day ▶</button>';
+      document.getElementById('plan-actions').innerHTML = acts;
     } else {
       document.getElementById('plan-none').style.display = '';
       document.getElementById('plan-info').style.display = 'none';
     }
+  }
+
+  async function advanceGroupDay(delta){
+    if (!currentGroup || !currentGroup.plan) return;
+    var total = PLAN_TOTAL[currentGroup.plan] || 14;
+    var next = Math.max(1, Math.min(total, (currentGroup.plan_day || 1) + delta));
+    if (next === currentGroup.plan_day) return;
+    try {
+      var up = await sb.from('groups').update({ plan_day: next }).eq('id', currentGroup.id);
+      if (up.error) throw up.error;
+      currentGroup.plan_day = next;
+      renderPlan(currentGroup);
+      if (next >= total) showToast('\u{1F389} Your group finished the plan! Tap Share to celebrate.');
+    } catch(e){ showToast('Only the host can move the group’s day.'); }
   }
 
   async function loadMembers(id){
