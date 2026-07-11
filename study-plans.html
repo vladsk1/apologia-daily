@@ -38,13 +38,15 @@
     @media (max-width: 768px) { .nav-links { display: none; } }
 
     /* PAGE HEADER */
-    .page-header { background: var(--navy-950); padding: 8rem 2rem 4rem; position: relative; overflow: hidden; }
-    .page-header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(30,66,120,0.5) 0%, transparent 70%); pointer-events: none; }
+    .page-header { background: var(--navy-950); padding: 3.5rem 2rem 3rem; position: relative; overflow: hidden; }
+    .page-header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(30,66,120,0.5) 0%, transparent 70%); pointer-events: none; }
     .page-header-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
     .page-eyebrow { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
-    .page-title { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; color: var(--white); margin-bottom: 1rem; }
+    .page-title { font-family: var(--font-display); font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 700; line-height: 1.15; color: var(--white); margin-bottom: 0.75rem; }
     .page-title em { font-style: italic; color: var(--gold); }
-    .page-sub { font-size: 1.05rem; font-weight: 300; color: rgba(255,255,255,0.6); max-width: 560px; line-height: 1.8; }
+    .page-sub { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.62); max-width: 560px; line-height: 1.8; }
+    .plan-chips { display: flex; gap: 0.5rem; margin-top: 1.5rem; flex-wrap: wrap; }
+    .pc-chip { font-family: var(--font-ui); font-size: 0.74rem; color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 5px 12px; }
 
     /* MAIN */
     .main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 6rem; }
@@ -58,8 +60,9 @@
     .pf-chip.active { background: var(--navy-900); color: var(--white); border-color: var(--navy-900); }
 
     /* ACTIVE PLAN BANNER */
-    .active-plan-banner { background: var(--navy-900); border-radius: 8px; padding: 1.5rem 2rem; margin-bottom: 2.5rem; display: none; }
+    .active-plan-banner { background: linear-gradient(135deg, var(--navy-900), var(--navy-700)); border-radius: 8px; padding: 1.5rem 2rem; margin-bottom: 2.5rem; display: none; }
     .active-plan-banner.visible { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .active-plan-eyebrow { font-family: var(--font-ui); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
     .active-plan-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
     .active-plan-sub { font-family: var(--font-ui); font-size: 0.82rem; color: rgba(255,255,255,0.5); }
     .active-plan-progress { flex: 1; }
@@ -228,6 +231,13 @@
       <p class="page-eyebrow">Study Plans</p>
       <h1 class="page-title">Structured paths to<br/><em>deeper knowledge</em></h1>
       <p class="page-sub">Go beyond browsing. These guided plans take you through the evidence systematically — daily tasks, progress tracking, and a clear sense of where you're headed.</p>
+      <div class="plan-chips">
+        <span class="pc-chip">🗓️ 30-day deep dives</span>
+        <span class="pc-chip">⚡ Short crash courses</span>
+        <span class="pc-chip">🎯 Topic tracks</span>
+        <span class="pc-chip">📈 Progress saved as you go</span>
+        <span class="pc-chip">👥 Study solo or with a group</span>
+      </div>
     </div>
   </div>
 
@@ -236,6 +246,7 @@
     <!-- ACTIVE PLAN -->
     <div class="active-plan-banner" id="active-banner">
       <div class="active-plan-progress" style="flex:1;">
+        <div class="active-plan-eyebrow">Continue where you left off</div>
         <div class="active-plan-title" id="active-plan-name">Loading…</div>
         <div class="active-plan-sub" id="active-plan-day">Day 0 of 0</div>
         <div class="active-plan-bar"><div class="active-plan-fill" id="active-plan-fill" style="width:0%"></div></div>
