@@ -66,6 +66,11 @@ const files = execSync('git ls-files "*.html"', { cwd: process.cwd(), encoding: 
   .filter(f => !f.startsWith('node_modules/'))
   .filter(f => !isGated(f));
 
+// whitespace-insensitive compare so --check flags real menu drift (added/removed/
+// reordered links), never cosmetic indentation a formatter might introduce.
+const norm = (s) => s.replace(/>\s+</g, '><').replace(/\s+/g, ' ').trim();
+const canonNorm = norm(`${CANON}\n<div class="adn-right">`);
+
 let changed = 0, skipped = 0, scanned = 0;
 const drifted = [];
 for (const f of files) {
@@ -74,11 +79,12 @@ for (const f of files) {
   scanned++;
   const matches = html.match(new RegExp(RE, 'g')) || [];
   if (matches.length !== 1) { skipped++; console.warn(`SKIP (${matches.length} nav matches): ${f}`); continue; }
-  const next = html.replace(RE, `${CANON}$1<div class="adn-right">`);
-  if (next !== html) {
-    drifted.push(f);
-    if (!check) writeFileSync(f, next);
-    changed++;
+  if (check) {
+    const m = html.match(RE);
+    if (norm(m[0]) !== canonNorm) { drifted.push(f); changed++; }
+  } else {
+    const next = html.replace(RE, `${CANON}$1<div class="adn-right">`);
+    if (next !== html) { drifted.push(f); writeFileSync(f, next); changed++; }
   }
 }
 

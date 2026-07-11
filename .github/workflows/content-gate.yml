@@ -43,3 +43,15 @@ jobs:
 
       - name: Check content-review stamps on changed files
         run: node tools/check-content-review.mjs --changed ${{ steps.base.outputs.ref }}
+
+  nav-consistency:
+    # Fails if any non-gated page's nav menu has drifted from the canonical menu
+    # in tools/sync-nav.mjs. Fix: run `node tools/sync-nav.mjs` and commit.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check nav menu is in sync
+        run: node tools/sync-nav.mjs --check
