@@ -21,6 +21,25 @@ export default async function handler(req, res) {
   const SB_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw';
   const authKey = SB_SERVICE_KEY || SB_ANON_KEY;
 
+  // ── DIAGNOSTIC (no emails sent) ── GET /api/weekly-email?do=status&secret=...
+  if ((req.query.do || '') === 'status') {
+    const status = {
+      status: 'diagnostic',
+      resend_api_key_set: !!RESEND_KEY,
+      supabase_service_key_set: !!SB_SERVICE_KEY,
+      email_sending: RESEND_KEY ? 'CONFIGURED — weekly email + nudges will send' : 'DORMANT — RESEND_API_KEY not set, nothing sends',
+    };
+    try {
+      const uRes = await fetch(`${SB_URL}/auth/v1/admin/users?per_page=1`, { headers: { apikey: authKey, Authorization: `Bearer ${authKey}` } });
+      status.can_list_users = uRes.ok;
+    } catch (e) { status.can_list_users = false; }
+    try {
+      const gRes = await fetch(`${SB_URL}/rest/v1/groups?select=id`, { headers: { apikey: authKey, Authorization: `Bearer ${authKey}`, Prefer: 'count=exact', Range: '0-0' } });
+      status.groups_total = gRes.headers.get('content-range');
+    } catch (e) {}
+    return res.status(200).json(status);
+  }
+
   if (!RESEND_KEY) {
     return res.status(200).json({
       status: 'skipped',
