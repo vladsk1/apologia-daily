@@ -6,6 +6,20 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **2026-07-11 (Trinity "world-class" session — handoff: `docs/SESSION_HANDOFF_2026-07-11-trinity.md`).**
+> Rebuilt the **Trinity tab (`ev-s6`) from 10 cards to 15**, plus a guided-pathway intro box and a new
+> interactive **"Name the Heresy"** diagnostic (`name-the-heresy.html`, in `games.html`). Five new gated
+> cards: **04 The Deity of the Son** (bridge → gated `jesus_as_god_nt`), **05 The Deity and Personhood of the
+> Holy Spirit** (new essay `library/holy_spirit.html` + mastery), **08 Why Every Trinity Analogy Fails** (new
+> essay `library/analogies.html` + mastery), **09 Did the Church Invent the Trinity?** (bridge → the
+> `early_church_trinity` essay, which gained a gated "Was It Borrowed from Paganism?" section), and **15 What
+> Distinguishes the Persons?** (relations of origin / perichoresis / inseparable operations — new essay
+> `library/relations.html` + mastery). Every new essay/section + card cleared citations → argument →
+> orthodoxy **CLEAN (0 heresy)**; the recurring catches were paraphrase-as-quote and compression overreach
+> (e.g. "perichoresis *secures*" vs *manifests* the unity). All 13 Trinity mastery pages now read "N of 13"
+> (also fixed pre-existing stale dial-counter drift). **Top open item: human/pastoral sign-off on this new
+> Christology is still owed** (automated gate CLEAN, but every stamp says so).
+>
 > **2026-07-11 (web session) — latest handoff: `docs/SESSION_HANDOFF_2026-07-11.md`.** Shipped this
 > session: the **Philippians 2 deity reels** (`phil2-deity` + Isaiah-recut `phil2-everyknee`) and the
 > **Gospel-names onomastic reel** (`gospel-names`), all gated CLEAN/SOUND; the **`signup_completed`**
@@ -82,7 +96,7 @@
 > warm, plain-English, positive-case walkthrough (~850–950 words) inlined as the FIRST paid
 > block in each argument card (under the Upgrade gate, before the deep dive), live across 7
 > tabs / **77 arguments, all orthodoxy-gated CLEAN**: Jesus (`ev-s3`, 15), Resurrection
-> (`ev-s2`, 8), Biblical Reliability (`ev-s4`, 11), Trinity (`ev-s6`, 10), God's Existence
+> (`ev-s2`, 8), Biblical Reliability (`ev-s4`, 11), Trinity (`ev-s6`, 10 at this rollout &mdash; now **15**, see the 2026-07-11 Trinity session note above), God's Existence
 > (`ev-s1`, 12), Science & Faith (`ev-s5`, 7), and Islam in Worldviews (`worldviews.html`,
 > 14 — incl. the new **"Contradictions in the Qur'an" card 07 + `library/islam-contradictions.html`**,
 > full pipeline run 2026-07-02: author → citations [0 blockers] → argument [blockers fixed] →
