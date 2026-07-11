@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<!-- content-review: {"argument":"PENDING","orthodoxy":"PENDING","by":"Draft mastery page compressed from the gated library/relations.html essay; NOT yet run through apologia-argument or apologia-orthodoxy. Do not deploy until both gates pass."} -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Distinguishes the Persons? | Apologia Daily</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --n:#050d1a; --n8:#0a1628; --n7:#0f2040; --n5:#1e4278; --n3:#4a7ab5;
+  --g:#c8a951; --gl:#d4b96a; --gd:#a88930;
+  --w:#fff; --ow:#f7f4ef; --border:#e8e2d8; --tm:#3a4a62; --td:#0f1f38;
+  --fd:'Playfair Display',Georgia,serif;
+  --ss:'Source Serif 4',Georgia,serif;
+  --ui:'DM Sans',system-ui,sans-serif;
+  --ok:#2f7d57; --okl:#e7f2ec;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ss);color:var(--td);background:var(--ow);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px}
+
+/* ---------- site nav (matches hub) ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;border-bottom:1px solid rgba(255,255,255,.08)}
+nav .logo{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:#fff;text-decoration:none}
+nav .logo span{color:var(--g)}
+.nl{display:flex;gap:1.5rem;list-style:none}
+.nl a{font-family:var(--ui);font-size:.82rem;color:rgba(255,255,255,.7);text-decoration:none;text-transform:uppercase;letter-spacing:.04em}
+.nl a.active{color:var(--g)}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-right a,.nav-right span,.nav-right button{font-family:var(--ui);font-size:.82rem}
+.nav-dashboard{color:rgba(255,255,255,.7);text-decoration:none;text-transform:uppercase;letter-spacing:.04em}
+.nav-user{color:var(--gl);font-weight:600}
+.nav-signin{color:rgba(255,255,255,.7);text-decoration:none}
+.nav-signout{background:none;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);padding:6px 14px;border-radius:3px;cursor:pointer}
+.nav-cta{font-weight:500;padding:8px 20px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none}
+@media(max-width:880px){.nl{display:none}}
+body{padding-top:64px}
+
+/* ---------- top hero ---------- */
+.hero{background:linear-gradient(160deg,var(--n) 0%,var(--n7) 70%,var(--n5) 160%);color:var(--w);padding:54px 0 130px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border:1px solid rgba(200,169,81,.18);border-radius:50%}
+.hero::before{content:"";position:absolute;right:10px;top:10px;width:200px;height:200px;border:1px solid rgba(200,169,81,.12);border-radius:50%}
+.eyebrow{font-family:var(--ui);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gl);font-weight:600;display:inline-flex;align-items:center;gap:9px}
+.eyebrow .dot{width:5px;height:5px;background:var(--g);border-radius:50%}
+.hero h1{font-family:var(--fd);font-weight:700;font-size:clamp(34px,6vw,52px);line-height:1.05;margin:16px 0 14px;max-width:16ch}
+.hero .lede{font-size:clamp(16px,2.4vw,19px);color:#cdd8e8;max-width:56ch}
+.hero .lede em{color:var(--gl);font-style:italic}
+.crumbs{font-family:var(--ui);font-size:13px;color:#8ea2bf;margin-bottom:4px}
+.crumbs a{color:#8ea2bf;text-decoration:none}
+
+/* ---------- mastery dial card ---------- */
+.dialcard{background:var(--w);border:1px solid var(--border);border-radius:16px;box-shadow:0 18px 50px -24px rgba(5,13,26,.45);margin-top:-86px;position:relative;z-index:3;padding:26px 28px;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.dial{flex:0 0 96px;width:96px;height:96px;position:relative}
+.dial svg{transform:rotate(-90deg)}
+.dial .pct{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--ui)}
+.dial .pct b{font-size:24px;color:var(--td);font-weight:700;line-height:1}
+.dial .pct span{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-top:2px}
+.dialmeta{flex:1;min-width:240px}
+.dialmeta h2{font-family:var(--fd);font-size:21px;font-weight:600;margin-bottom:4px}
+.dialmeta p{font-size:14.5px;color:var(--tm);font-family:var(--ui)}
+.libnote{font-family:var(--ui);font-size:12.5px;color:var(--gd);font-weight:600;margin-top:10px;display:inline-flex;align-items:center;gap:7px;background:#fbf7ec;border:1px solid #f0e6cb;padding:6px 12px;border-radius:99px}
+
+/* ---------- phase spine ---------- */
+section{padding:46px 0 6px}
+.phasehead{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+.phasenum{font-family:var(--ui);font-weight:700;font-size:13px;color:var(--w);background:var(--n5);width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex:0 0 30px}
+.phasehead h3{font-family:var(--fd);font-size:27px;font-weight:600}
+.phasesub{font-family:var(--ui);color:var(--tm);font-size:15px;margin:2px 0 26px 44px}
+
+.card{background:var(--w);border:1px solid var(--border);border-radius:14px;padding:24px 26px;margin-bottom:18px}
+.card h4{font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:4px}
+.card .kick{font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;margin-bottom:11px;display:block}
+
+/* premises */
+.syllogism{display:grid;gap:12px;margin:8px 0 18px}
+.prem{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:start;background:var(--ow);border:1px solid var(--border);border-radius:11px;padding:15px 17px}
+.prem .tag{font-family:var(--ui);font-weight:700;font-size:12px;color:var(--n5);background:#fff;border:1px solid #d6e0ef;border-radius:7px;padding:6px 0;text-align:center}
+.prem.concl{background:linear-gradient(120deg,#fbf7ec,#fff);border-color:#eeddb6}
+.prem.concl .tag{color:var(--gd);border-color:#ecdcae;background:#fffdf6}
+.prem p{font-size:16.5px;font-family:var(--ss)}
+.prem p b{color:var(--n5)}
+.formnote{font-family:var(--ui);font-size:13px;color:var(--tm);font-style:normal;background:#f4f7fb;border-left:3px solid var(--n3);padding:10px 14px;border-radius:0 8px 8px 0}
+
+/* the cause chips */
+.chiprow{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{font-family:var(--ui);font-size:13px;font-weight:600;color:var(--n7);background:#eef3fa;border:1px solid #dbe6f4;padding:7px 13px;border-radius:99px}
+.chip.gold{color:var(--gd);background:#fbf7ec;border-color:#f0e6cb}
+
+/* accordion (premise defence + objections) */
+.acc{border:1px solid var(--border);border-radius:11px;overflow:hidden;margin-bottom:11px;background:var(--w)}
+.acc summary{list-style:none;cursor:pointer;padding:16px 20px;display:flex;align-items:center;gap:14px;font-family:var(--ui);font-weight:600;font-size:15.5px;color:var(--td)}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary:hover{background:#fafbfd}
+.acc .badge{font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:6px;margin-left:auto;white-space:nowrap}
+.badge.hard{background:#fdeceb;color:#b23b32}
+.badge.mid{background:#fbf3e2;color:#9a7416}
+.badge.easy{background:var(--okl);color:var(--ok)}
+.acc .chev{color:var(--n3);transition:transform .2s;flex:0 0 auto}
+.acc[open] .chev{transform:rotate(90deg)}
+.acc .body{padding:2px 20px 20px;border-top:1px solid var(--border)}
+.acc .body .lbl{font-family:var(--ui);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin:16px 0 5px}
+.lbl.steel{color:var(--n5)}
+.lbl.heard{color:var(--tm)}
+.lbl.reply{color:var(--gd)}
+.acc .body p{font-size:15.5px;margin-bottom:4px}
+.acc .body .quote{background:var(--ow);border-left:3px solid var(--g);padding:11px 15px;border-radius:0 8px 8px 0;font-style:italic;color:var(--td);margin-top:4px}
+
+/* sources */
+.src{display:grid;grid-template-columns:1fr;gap:0}
+.src .row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.src .row:last-child{border-bottom:none}
+.src .who{font-family:var(--ui);flex:0 0 150px}
+.src .who b{display:block;font-size:15px;color:var(--td)}
+.src .who span{font-size:12.5px;color:var(--tm)}
+.src .what{font-size:15px;color:var(--td)}
+
+/* practice: explain it back */
+.practicecard{background:var(--w);border:1px solid var(--border);border-radius:14px;padding:24px 26px;margin-bottom:18px}
+textarea{width:100%;min-height:120px;font-family:var(--ss);font-size:15.5px;color:var(--td);border:1px solid var(--border);border-radius:10px;padding:13px 15px;resize:vertical;background:var(--ow)}
+textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
+.btn{font-family:var(--ui);font-weight:600;font-size:14.5px;border:none;border-radius:9px;padding:11px 20px;cursor:pointer;transition:transform .08s,background .15s}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:var(--n5);color:#fff}
+.btn.primary:hover{background:var(--n7)}
+.btn.gold{background:var(--g);color:var(--n)}
+.btn.gold:hover{background:var(--gl)}
+.btn.ghost{background:transparent;color:var(--n5);border:1px solid #cfdcee}
+.btn.ghost:hover{background:#f3f7fc}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.score{margin-top:18px;border:1px solid var(--border);border-radius:11px;padding:18px 20px;background:var(--ow);display:none}
+.score.show{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.scorehead{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+.scorenum{font-family:var(--fd);font-size:34px;font-weight:700;color:var(--n5);line-height:1}
+.scorenum small{font-size:16px;color:var(--tm)}
+.scoreverdict{font-family:var(--ui);font-weight:600;font-size:15px}
+.feed{list-style:none;display:grid;gap:7px}
+.feed li{font-family:var(--ui);font-size:14px;display:flex;gap:9px;align-items:flex-start}
+.feed li .mk{flex:0 0 auto;font-weight:700}
+.feed li.hit .mk{color:var(--ok)}
+.feed li.miss .mk{color:var(--gd)}
+
+/* flashcards */
+.flashwrap{perspective:1200px}
+.flash{position:relative;height:178px;cursor:pointer}
+.flash .face{position:absolute;inset:0;backface-visibility:hidden;border-radius:13px;padding:24px;display:flex;flex-direction:column;justify-content:center;transition:transform .5s;border:1px solid var(--border)}
+.flash .front{background:linear-gradient(150deg,var(--n7),var(--n5));color:#fff}
+.flash .back{background:var(--w);transform:rotateY(180deg)}
+.flash.flipped .front{transform:rotateY(180deg)}
+.flash.flipped .back{transform:rotateY(0)}
+.flash .qlbl{font-family:var(--ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gl);font-weight:600;margin-bottom:9px}
+.flash .front p{font-family:var(--fd);font-size:19px;font-weight:500}
+.flash .back .qlbl{color:var(--gd)}
+.flash .back p{font-size:15px;color:var(--td)}
+.flash .tap{position:absolute;bottom:13px;right:18px;font-family:var(--ui);font-size:11px;opacity:.6}
+.flashnav{display:flex;align-items:center;justify-content:space-between;margin-top:14px;font-family:var(--ui)}
+.flashnav span{font-size:13px;color:var(--tm)}
+
+/* debate */
+.interloc{display:flex;gap:13px;margin-bottom:8px}
+.interloc .av{flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:#e6ebf3;color:var(--n5);display:flex;align-items:center;justify-content:center;font-family:var(--ui);font-weight:700;font-size:14px}
+.interloc .bub{background:#eef2f8;border-radius:4px 14px 14px 14px;padding:13px 17px;font-size:16px}
+.interloc .who2{font-family:var(--ui);font-size:12px;color:var(--tm);margin-bottom:3px;font-weight:600}
+.reveal{margin-top:14px}
+.modelans{display:none;margin-top:12px;border:1px solid #f0e6cb;background:#fbf7ec;border-radius:12px;padding:16px 19px}
+.modelans.show{display:block;animation:fade .3s ease}
+.modelans .lbl{font-family:var(--ui);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--gd);margin-bottom:7px}
+.modelans p{font-size:15px}
+
+/* prove it checklist */
+.checklist{display:grid;gap:11px}
+.cl{display:flex;align-items:center;gap:14px;padding:15px 18px;border:1px solid var(--border);border-radius:11px;background:var(--w);transition:.2s}
+.cl.done{border-color:#cfe6da;background:var(--okl)}
+.cl .box{flex:0 0 24px;width:24px;height:24px;border-radius:7px;border:2px solid #cdd6e2;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;transition:.2s}
+.cl.done .box{background:var(--ok);border-color:var(--ok)}
+.cl .txt{flex:1}
+.cl .txt b{font-family:var(--ui);font-size:15px;display:block}
+.cl .txt span{font-family:var(--ui);font-size:13px;color:var(--tm)}
+.cl .state{font-family:var(--ui);font-size:12.5px;font-weight:600;color:var(--tm)}
+.cl.done .state{color:var(--ok)}
+
+/* confidence */
+.confrow{display:flex;gap:9px;margin-top:14px;flex-wrap:wrap}
+.confrow button{flex:1;min-width:90px;font-family:var(--ui);font-weight:600;font-size:13.5px;border:1px solid #cfdcee;background:#fff;color:var(--n5);border-radius:9px;padding:11px 8px;cursor:pointer;transition:.15s}
+.confrow button:hover{border-color:var(--n3)}
+.confrow button.sel{background:var(--n5);color:#fff;border-color:var(--n5)}
+
+.bigcta{background:linear-gradient(150deg,var(--n) 0%,var(--n7) 100%);color:#fff;border-radius:16px;padding:30px 32px;margin:14px 0 60px;text-align:center}
+.bigcta h4{font-family:var(--fd);font-size:23px;font-weight:600;color:#fff;margin-bottom:6px}
+.bigcta p{color:#cdd8e8;font-family:var(--ui);font-size:14.5px;max-width:50ch;margin:0 auto 16px}
+
+.foot{text-align:center;font-family:var(--ui);font-size:12.5px;color:var(--tm);padding:0 0 50px}
+.foot code{background:#eef0f3;padding:2px 6px;border-radius:4px;font-size:12px}
+
+@media(max-width:560px){
+  .prem{grid-template-columns:46px 1fr;gap:11px}
+  .src .row{flex-direction:column;gap:4px}
+  .src .who{flex-basis:auto}
+  .dialcard{padding:22px}
+}
+.seo-summary{background:var(--w);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin:26px 0 0}
+.seo-summary h2{font-family:var(--fd);font-size:20px;font-weight:600;color:var(--td);margin-bottom:10px}
+.seo-summary p{font-family:var(--ss);font-size:16px;color:var(--td);margin-bottom:12px}
+.seo-summary p:last-child{margin-bottom:0}
+.hero{padding-bottom:48px}
+.seo-summary + .dialcard{margin-top:24px}
+</style>
+  <link rel="stylesheet" href="/ad-nav.css">
+<meta name="description" content="Master what distinguishes the persons of the Trinity: the three classical rules - relations of origin, perichoresis, and inseparable operations.">
+<link rel="canonical" href="https://apologiadaily.com/ev-m-relations.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What Distinguishes the Persons? | Apologia Daily">
+<meta property="og:description" content="Master what distinguishes the persons of the Trinity: the three classical rules - relations of origin, perichoresis, and inseparable operations.">
+<meta property="og:url" content="https://apologiadaily.com/ev-m-relations.html">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"What Distinguishes the Persons?","description":"Master what distinguishes the persons of the Trinity: the three classical rules - relations of origin, perichoresis, and inseparable operations.","learningResourceType":"Self-paced mastery track","educationalLevel":"Advanced","inLanguage":"en","isAccessibleForFree":true,"about":"Christian apologetics","url":"https://apologiadaily.com/ev-m-relations.html","publisher":{"@type":"Organization","name":"Apologia Daily","url":"https://apologiadaily.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://apologiadaily.com/ev-m-relations.html"}}</script>
+</head>
+<body>
+
+<nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/asked-and-answered.html">Asked &amp; Answered</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <ul class="adn-drop">
+          <li><a href="/library/">Deep-Dive Essays</a></li>
+          <li><a href="/parents.html">For Parents</a></li><li><a href="/palace.html">Memory Palace</a></li><li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/games.html">Games</a></li>
+          <li><a href="/whats-new.html">What&#39;s New</a></li>
+          <li><a href="/answers/">Answers</a></li>
+          <li><a href="/study-groups.html">Study Groups</a></li>
+          <li><a href="/reading-club.html">Reading Clubs</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/what-we-believe.html">What We Believe</a></li>
+          <li><a href="/editorial-standards.html">Editorial Standards</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <button class="adn-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
+
+<div id="proGate" style="display:none;position:fixed;inset:64px 0 0;z-index:90;background:linear-gradient(160deg,#050d1a,#0f2040);color:#fff;align-items:center;justify-content:center;text-align:center;padding:24px">
+  <div style="max-width:440px">
+    <div style="font-size:34px;margin-bottom:8px">&#128274;</div>
+    <h2 style="font-family:var(--fd);font-size:28px;font-weight:600;margin-bottom:10px">Mastery Tracks are a Pro feature</h2>
+    <p style="font-family:var(--ui);color:#cdd8e8;font-size:15px;margin-bottom:22px">Go beyond reading the deep dive — reconstruct each argument from memory, answer its hardest objections, and track your mastery across the library.</p>
+    <a href="index.html#pricing" class="btn gold" style="display:inline-block;text-decoration:none;margin-bottom:14px">Upgrade to Pro &mdash; $8/mo</a>
+    <div><a href="evidence-library.html" style="font-family:var(--ui);color:#8ea2bf;font-size:13px;text-decoration:none">&larr; Back to the Evidence Library</a></div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="crumbs"><a href="evidence-library.html">Evidence Library</a> &nbsp;›&nbsp; The Trinity &nbsp;›&nbsp; <span style="color:var(--gl)">What Distinguishes the Persons?</span></div>
+    <span class="eyebrow"><span class="dot"></span> Pro · Mastery Track</span>
+    <h1>What Distinguishes the Persons?</h1>
+    <p class="lede">The deep dive explains the argument. This track makes you able to <em>wield</em> it — rebuild it from memory, meet its hardest objections, and stay clear and calm in a real conversation.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <!-- public, search-indexable summary (always visible) -->
+  <section class="seo-summary">
+    <h2>The argument in brief</h2>
+    <p>If the Father, the Son, and the Spirit share one being, one will, and one power — truly co-equal and co-eternal — then what actually makes them distinct? Name too little and the persons collapse into one (modalism); name a difference of rank or attribute and you have three gods (tritheism). The classical tradition answers with three disciplined rules that thread exactly this needle.</p>
+    <p>First, the persons differ <em>only</em> in their relations of origin — the Father unbegotten, the Son eternally begotten, the Spirit eternally proceeding. In everything else they are identical and fully equal; a relation of origin is never an inequality. Second, they wholly indwell one another (perichoresis), so they are never three beings side by side. Third, they always act as one agent (inseparable operations), with Scripture "appropriating" a work to one person to reveal that person, never to divide the work.</p>
+    <p>Together the rules deliver a real, permanent distinction (against modalism) and an unbreakable unity (against tritheism): distinction without division, unity without confusion. They are disciplined rules for right speech, not a diagram that dissolves the mystery — and what they guard is that God is eternally relational: Father, Son, and Spirit giving, receiving, and indwelling. "God is love" was true before the world.</p>
+  </section>
+
+  <!-- mastery dial -->
+  <div class="dialcard">
+    <div class="dial">
+      <svg width="96" height="96" viewBox="0 0 96 96">
+        <circle cx="48" cy="48" r="42" fill="none" stroke="#ede7db" stroke-width="9"/>
+        <circle id="ring" cx="48" cy="48" r="42" fill="none" stroke="var(--g)" stroke-width="9" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="263.9"/>
+      </svg>
+      <div class="pct"><b id="pctNum">0%</b><span>mastered</span></div>
+    </div>
+    <div class="dialmeta">
+      <h2>Your mastery of this argument</h2>
+      <p>Four checkpoints: understand it, explain it, drill it, defend it. Complete them in any order — your progress saves to your account.</p>
+      <span class="libnote">◆ &nbsp;Argument 13 of 13 in the Trinity mastery track</span>
+    </div>
+  </div>
+
+  <!-- ===================== PHASE 1: UNDERSTAND ===================== -->
+  <section id="understand">
+    <div class="phasehead"><span class="phasenum">1</span><h3>Understand it</h3></div>
+    <p class="phasesub">Not more prose — the load-bearing structure. See the skeleton, then learn to defend each bone.</p>
+
+    <div class="card">
+      <span class="kick">The argument, formally</span>
+      <h4>One difference, and only one — relation of origin.</h4>
+      <div class="syllogism">
+        <div class="prem"><div class="tag">P1</div><p>The three persons <b>share one essence, one will, one power</b> — co-equal and co-eternal in every divine attribute (eternity, power, wisdom, goodness, the one undivided being). Whatever difference distinguishes them, it cannot be a difference of nature, degree, or rank.</p></div>
+        <div class="prem"><div class="tag">P2</div><p>Yet the persons are <b>really and eternally distinct</b> — the Father is not the Son is not the Spirit; paternity, filiation, and procession are irreducible (against modalism's three masks).</p></div>
+        <div class="prem concl"><div class="tag">∴ C</div><p>Therefore the only distinction is <b>relation of origin</b> — who is from whom. Perichoresis (mutual indwelling) and inseparable operations, resting on the one essence, secure the <b>unity</b> against tritheism; the real, eternal relations secure the <b>distinction</b> against modalism.</p></div>
+      </div>
+      <p class="formnote">This is the capstone question of the whole Trinity track: HOW the persons differ without differing in essence. Relation is the one difference that distinguishes without dividing.</p>
+
+      <span class="kick" style="margin-top:22px">The three rules — in one breath.</span>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">Relations of origin: they differ only in who is from whom (John 5:26). Perichoresis: each is wholly IN the others (John 14:10–11) — this manifests the unity the one essence grounds, it does not manufacture it. Inseparable operations: they always act as one agent (John 5:19), with appropriation revealing the persons and one exception — only the Son became incarnate.</p>
+      <div class="chiprow">
+        <span class="chip">relations of origin</span><span class="chip">not inequality</span><span class="chip">perichoresis — John 14:10</span><span class="chip">inseparable operations</span><span class="chip">appropriation</span><span class="chip gold">distinguishes without dividing</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="kick">Defending the premises</span>
+      <h4>Why each premise is more plausible than its denial</h4>
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P1 — one essence, equal in all things</summary>
+        <div class="body">
+          <p class="lbl steel">Homoousios</p>
+          <p>The Creed confesses the Son "of one substance (homoousios) with the Father" and the Spirit worshipped and glorified "with the Father and the Son." Same being, not a similar one. Whatever divides the persons cannot be a divided nature.</p>
+          <p class="lbl steel">Said by relation, not substance</p>
+          <p>Augustine's rule in On the Trinity: Father, Son, and Spirit are named "not according to substance, but according to relation," and in God nothing is greater or lesser. The persons are identical in every attribute; the only thing left to distinguish them is the relation each bears to the others.</p>
+        </div>
+      </details>
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P2 — the distinction is real and eternal</summary>
+        <div class="body">
+          <p class="lbl steel">Really distinct</p>
+          <p>Jesus is "in the Father" and the Father "in me" (John 10:38); the Son is sent, and sends the Spirit (John 15:26). One person can be sent from another only because he is, eternally, FROM that other. A thing cannot indwell or be sent by itself — modalism cannot say this.</p>
+          <p class="lbl steel">Eternal, not adopted roles</p>
+          <p>The relations of origin are eternal and irreducible: paternity is not filiation, and no theology can make the Father be the Son. The distinction is "as old as God and can never be undone" — which is exactly what rules out three masks.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <span class="kick">The hard part — objections, steelmanned</span>
+      <h4>Each one stated as its strongest defender would put it</h4>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Each objection gets its strongest form first — never a strawman — then the reply.</p>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "If the Son is begotten and the Spirit proceeds, they are FROM the Father — so the Father is source and they are forever second" <span class="badge easy">Common</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>Derived deity is junior deity. An order of origin is a hierarchy of being with extra steps — the Arians just said it honestly: begotten means later, and later means lesser.</p>
+          <p class="lbl reply">Reply</p>
+          <p>This is precisely the inference Nicaea refused: the Son is "begotten, not made…God from God, Light from Light, true God from true God." A relation of origin orders the PERSONS without grading the ESSENCE — the Son receives not a portion or a lesser grade but the whole undivided nature. The radiance is exactly as old and exactly as bright as the flame. Distinguished by order, never by rank.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Tuggy's dilemma: the persons are either too THIN to be persons, or too THICK to be one God" <span class="badge hard">Hard</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>A relation cannot think, love, speak, or act — yet the persons plainly do. "Subsistent relation" is a category mistake dressed in Latin. But if you let each person be a full centre of consciousness to escape it, you have just described three gods. Either too thin (modalism) or too thick (tritheism).</p>
+          <p class="lbl reply">Reply</p>
+          <p>The dilemma omits perichoresis and the one will. The one who thinks, loves, and acts is not a bare relation but the divine essence itself, subsisting as this relationally distinct person — in the ONE undivided operation and the one will that follows from the one nature, not three separate minds. "Subsistent relation" names that, not an abstraction doing the acting. What must be conceded is honest: we have no positive model making the HOW transparent. The claim is only the modest one — no contradiction has been demonstrated.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Cartwright's logical problem: Father is God, Son is God, Father is not the Son — that is a flat contradiction" <span class="badge hard">Hard</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>Read as ordinary identity statements, the creed says F = God, S = God, F ≠ S. By the transitivity of identity, F must equal S. The doctrine is formally inconsistent unless "is God" quietly means something other than identity.</p>
+          <p class="lbl reply">Reply</p>
+          <p>Exactly so — and the rule of relations of origin was framed to deny that "is God" asserts numerical identity between person and essence in a way that would make Father and Son identical to each other. The persons are not each IDENTICAL to the essence as one thing to another; they are the one essence SUBSISTING in three relationally distinct ways. Aquinas anticipated the worry: in God the relation IS the essence — really identical with it, yet really distinct from its opposing relation. Paternity and filiation differ from each other without either differing from the essence. Unusual logic; not a contradiction, since the terms are not affirmed in the same respect.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Perichoresis is just a fancy word for three individuals who get along — that is tritheism with good manners" <span class="badge mid">Trickier</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>"Mutual indwelling" pictures three beings so close they interpenetrate — but three-who-coinhere is still three. Perichoresis smuggles in a social committee and calls it one God.</p>
+          <p class="lbl reply">Reply</p>
+          <p>Mind the order of grounding. The persons are one God in virtue of the one undivided essence they wholly share; perichoresis MANIFESTS that unity and forbids the picture of three separate beings — it does not manufacture a oneness out of three that would otherwise stand apart. Nor does it collapse them: a thing cannot indwell itself, so indwelling presupposes real distinction. Perichoresis is the expression of a unity already grounded in the shared essence, not a substitute for it.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Saying the three share ONE will just begs the question against social Trinitarians — you have picked a side" <span class="badge mid">Trickier</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>Whether the persons have one will (classical) or three harmonized wills (social) is a live in-house dispute. Asserting one will as if it were settled quietly loads the dice.</p>
+          <p class="lbl reply">Reply</p>
+          <p>Apologia Daily reports, rather than adjudicates, the intramural debate between social and classical Trinitarians; both camps intend full Nicene orthodoxy, and each accuses the other of leaning toward the opposite cliff. What this track affirms is the common floor both defend: the persons are one God, distinguished by relation and not by rank, neither three separate beings nor mere aspects of one. Will follows nature — and the persons share one nature; that much every party to the debate must hold to stay this side of tritheism.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "The Filioque proves the rules are broken — East and West cannot even agree how the Spirit is distinct" <span class="badge mid">Trickier</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>The one place the doctrine tries to name the Spirit's distinct relation of origin, it split the Church: the West says "from the Father AND the Son," the East says "from the Father." If the grammar itself is contested, the whole scheme is guesswork.</p>
+          <p class="lbl reply">Reply</p>
+          <p>The disagreement is narrower than it looks, and Apologia Daily reports it without taking a side. It concerns the ORDERING of the Spirit's procession, not whether the Spirit is God: both East and West confess, without reservation, the full, co-equal, co-eternal deity of the Holy Spirit, worshipped and glorified with the Father and the Son. Faithful Christians on both sides have held their wording for a millennium. A dispute about the grammar of procession is not the collapse of the rule of relations of origin; it is two traditions using it.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <span class="kick">Touch the originals</span>
+      <h4>Where this comes from — primary sources, not our summary</h4>
+      <div class="src">
+        <div class="row">
+          <div class="who"><b>Augustine of Hippo</b><span>4th–5th c. · <em>On the Trinity</em></span></div>
+          <div class="what">The persons are named "not according to substance, but according to relation"; in God nothing is greater or lesser.</div>
+        </div>
+        <div class="row">
+          <div class="who"><b>Gregory of Nazianzus</b><span>4th c. · <em>Theological Orations</em></span></div>
+          <div class="what">Fixed the vocabulary: the Father ingenerate, the Son begotten, the Spirit proceeding — relations of origin, not degrees of divinity.</div>
+        </div>
+        <div class="row">
+          <div class="who"><b>John of Damascus</b><span>8th c. · <em>On the Orthodox Faith</em></span></div>
+          <div class="what">The classic Trinitarian use of perichoresis — the persons dwell in one another without confusion, compounding, or mingling.</div>
+        </div>
+        <div class="row">
+          <div class="who"><b>Thomas Aquinas</b><span>13th c. · <em>Summa Theologiae</em> Ia, qq. 27–43</span></div>
+          <div class="what">A divine person just IS a subsistent relation; in God the relation is really identical with the essence yet really distinct from its opposing relation.</div>
+        </div>
+        <div class="row">
+          <div class="who"><b>Gilles Emery</b><span>contemporary · <em>The Trinity: An Introduction</em></span></div>
+          <div class="what">The Trinity as a communion of "subsistent relations," and the doctrine of appropriation. (We paraphrase — the originals reward the time.)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PHASE 2: PRACTICE ===================== -->
+  <section id="practice">
+    <div class="phasehead"><span class="phasenum">2</span><h3>Practice it</h3></div>
+    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Three drills that route this argument through tools you already have.</p>
+
+    <div class="practicecard">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument in your own words</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Write it from memory: state the fork (modalism vs tritheism), name the three rules, show that relation of origin is not inequality, and say what each rule guards.</p>
+      <textarea id="explainBox" placeholder="Start with: If the persons share one being, one will, one power, the only thing left to distinguish them is..."></textarea>
+      <div class="btnrow">
+        <button class="btn primary" onclick="scoreExplain(this)">Score my explanation</button>
+        <button class="btn ghost" onclick="document.getElementById('explainBox').value='';document.getElementById('scoreOut').classList.remove('show')">Clear</button>
+      </div>
+      <div class="score" id="scoreOut">
+        <div class="scorehead">
+          <div class="scorenum" id="scoreNum">0<small>/10</small></div>
+          <div class="scoreverdict" id="scoreVerdict"></div>
+        </div>
+        <ul class="feed" id="scoreFeed"></ul>
+      </div>
+    </div>
+
+    <div class="practicecard">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 2 · Flashcards</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Drilled straight from this argument</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Five cards pulled straight from this argument and its sharpest objections. Flip, recall, repeat until it is automatic.</p>
+      <div class="flashwrap">
+        <div class="flash" id="flash" onclick="this.classList.toggle('flipped')">
+          <div class="face front"><div class="qlbl">Prompt</div><p id="fFront"></p><span class="tap">tap to flip</span></div>
+          <div class="face back"><div class="qlbl">Answer</div><p id="fBack"></p><span class="tap">tap to flip</span></div>
+        </div>
+      </div>
+      <div class="flashnav">
+        <button class="btn ghost" onclick="prevCard()">‹ Prev</button>
+        <span id="cardCount"></span>
+        <button class="btn ghost" onclick="nextCard()">Next ›</button>
+      </div>
+    </div>
+
+    <div class="practicecard">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · Live objection</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Hold the line on relation, not rank</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">A seeded scenario from the Debate Arena. Draft your reply, then reveal a model answer to compare.</p>
+      <div class="interloc">
+        <div class="av">SK</div>
+        <div>
+          <div class="who2">Skeptic</div>
+          <div class="bub">"You say the Father is God and the Son is God, but the Father is not the Son. That is just a contradiction in a robe. Either they are the same thing or they are two things — you cannot have it both ways."</div>
+        </div>
+      </div>
+      <textarea id="debateBox" placeholder="Your response..."></textarea>
+      <div class="btnrow">
+        <button class="btn gold" onclick="document.getElementById('modelAns').classList.add('show')">Reveal a model response</button>
+      </div>
+      <div class="modelans" id="modelAns">
+        <div class="lbl">One strong way to answer — in a 1 Peter 3:15 tone</div>
+        <p>"That would be a contradiction if 'is God' meant 'is identical to the divine essence, the way this coin is identical to itself' — because then Father and Son, both identical to the one essence, would have to be identical to each other. But that is exactly what the doctrine denies. The persons are not each a separate thing that happens to BE God; they are the one undivided essence SUBSISTING in three ways, distinguished only by their relations of origin — the Father unbegotten, the Son eternally begotten, the Spirit proceeding. Aquinas put it sharply: in God the relation just IS the essence — really the same as it, yet really distinct from its opposite relation. So paternity and filiation differ from each other without either differing from the one essence. The Father is God and the Son is God, and they are distinct — not in the same respect, so there is no contradiction. I will be honest that I cannot hand you a picture that makes the HOW transparent; no one can. What I can say is that no one has shown it to be contradictory — and that is a very different thing."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PHASE 3: PROVE IT ===================== -->
+  <section id="proveit">
+    <div class="phasehead"><span class="phasenum">3</span><h3>Prove it</h3></div>
+    <p class="phasesub">Mastery isn't a feeling — it's four things done. Clear them and this argument turns gold on your shelf.</p>
+
+    <div class="card">
+      <div class="checklist">
+        <div class="cl" id="ck-read"><div class="box">✓</div><div class="txt"><b>Understood it</b><span>Read the structure, defences, and all objections</span></div><div class="state">Open every section</div></div>
+        <div class="cl" id="ck-explain"><div class="box">✓</div><div class="txt"><b>Explained it</b><span>Score 7+ on Explain It Back</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="ck-cards"><div class="box">✓</div><div class="txt"><b>Drilled it</b><span>Cycle through every flashcard once</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="ck-debate"><div class="box">✓</div><div class="txt"><b>Defended it</b><span>Attempt the live objection</span></div><div class="state">Not yet</div></div>
+      </div>
+      <div style="margin-top:26px;border-top:1px solid var(--border);padding-top:20px">
+        <span class="kick">One more thing — be honest</span>
+        <h4 style="font-size:17px">If a friend challenged you on this tomorrow, how ready are you?</h4>
+        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Your self-rating is tracked over time so you can watch confidence climb across the library.</p>
+        <div class="confrow" id="confRow">
+          <button onclick="setConf(this,1)">Shaky</button>
+          <button onclick="setConf(this,2)">Getting there</button>
+          <button onclick="setConf(this,3)">Solid</button>
+          <button onclick="setConf(this,4)">Could teach it</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bigcta">
+      <h4 id="ctaTitle">Master "What Distinguishes the Persons?", then take the next one</h4>
+      <p id="ctaText">That completes the Trinity mastery track — thirteen arguments from the Shema to the inner grammar of the persons. The full library is waiting for whatever you take on next.</p>
+      <button class="btn gold" onclick="location.href='evidence-library.html'">Back to the Evidence Library →</button>
+      <div style="margin-top:18px"><button class="btn" onclick="shareArgCard(this)" style="background:transparent;color:var(--gl);border:1px solid rgba(200,169,81,.45);">Share this argument as an image</button></div>
+      <div><a href="dashboard.html" style="display:inline-block;margin-top:14px;font-family:var(--ui);font-size:13.5px;color:rgba(255,255,255,.6);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:1px">Back to dashboard</a></div>
+    </div>
+  </section>
+
+  <p class="foot">
+    Apologia Daily &mdash; defending the faith with gentleness and respect.
+  </p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* ---- in-memory state (swap for localStorage/Supabase in production) ---- */
+const state = { read:false, explainPass:false, cardsSeen:new Set(), debateTried:false, conf:0 };
+
+/* ---- persistence + site streak (ad_mastery / ad_streak) ---- */
+const ARG_ID = location.pathname.split('/').pop().replace('ev-m-','').replace('.html','');
+const FRESH_MS = 30*24*60*60*1000; /* 30 days */
+function adAll(){ try{ return JSON.parse(localStorage.getItem('ad_mastery')||'{}'); }catch(e){ return {}; } }
+function adSave(full){
+  try{
+    var m = adAll(); var e = m[ARG_ID] || {};
+    e.read = state.read; e.explain = state.explainPass;
+    e.cards = state.cardsSeen.size; e.debate = state.debateTried;
+    if(full){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
+    m[ARG_ID] = e; localStorage.setItem('ad_mastery', JSON.stringify(m));
+  }catch(e){}
+}
+function adRestore(){
+  try{
+    var e = adAll()[ARG_ID]; if(!e) return;
+    state.read = !!e.read; state.explainPass = !!e.explain; state.debateTried = !!e.debate;
+    var fresh = e.fresh && (Date.now() - e.fresh) < FRESH_MS;
+    if(e.cards >= cards.length && fresh){ for(var i=0;i<cards.length;i++) state.cardsSeen.add(i); }
+    if(e.cards >= cards.length && !fresh){
+      var note = document.createElement('div');
+      note.style.cssText = 'font-family:var(--ui);font-size:.8rem;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.7rem 1rem;margin:0 0 1rem;';
+      note.innerHTML = '&#9888; Memory fades — it has been a while. Flip through the flashcards again to restore this argument to gold.';
+      var fc = document.querySelector('.flashwrap') || document.getElementById('flash') || null;
+      if(fc && fc.parentNode){ fc.parentNode.insertBefore(note, fc); }
+    }
+  }catch(e){}
+}
+function adMark(){
+  try{
+    var t = new Date(); var iso = function(d){ return d.toISOString().slice(0,10); };
+    var td = iso(t), y1 = iso(new Date(t.getTime()-864e5)), y2 = iso(new Date(t.getTime()-1728e5));
+    var s = JSON.parse(localStorage.getItem('ad_streak')||'{"last":"","count":0,"freezes":0}');
+    if(s.last === td) return;
+    if(s.last === y1){ s.count += 1; }
+    else if(s.last === y2 && s.freezes > 0){ s.freezes -= 1; s.count += 2; }
+    else { s.count = 1; }
+    s.last = td;
+    if(s.count % 7 === 0){ s.freezes = Math.min(3, (s.freezes||0) + 1); }
+    localStorage.setItem('ad_streak', JSON.stringify(s));
+  }catch(e){}
+}
+
+/* ---- mastery dial ---- */
+const CIRC = 263.9;
+function updateDial(){
+  let done = 0;
+  if(state.read) done++;
+  if(state.explainPass) done++;
+  if(state.cardsSeen.size >= cards.length) done++;
+  if(state.debateTried) done++;
+  const pct = Math.round(done/4*100);
+  adSave(pct===100);
+  if(window._adLoaded && done>0) adMark();
+  document.getElementById('pctNum').textContent = pct + '%';
+  document.getElementById('ring').style.strokeDashoffset = CIRC - (CIRC*pct/100);
+
+  setCheck('ck-read', state.read);
+  setCheck('ck-explain', state.explainPass);
+  setCheck('ck-cards', state.cardsSeen.size >= cards.length);
+  setCheck('ck-debate', state.debateTried);
+
+  if(pct===100){
+    document.getElementById('ctaTitle').textContent = 'What Distinguishes the Persons? mastered - it just turned gold on your shelf';
+    document.getElementById('ctaText').textContent = 'That is 13 of 13 in the Trinity track. The same path is waiting for every argument in the library.';
+    document.querySelector('.libnote').innerHTML = '&#9670; &nbsp;What Distinguishes the Persons? mastered - 13 of 13 in the Trinity track';
+  }
+}
+function setCheck(id, on){
+  const el = document.getElementById(id);
+  el.classList.toggle('done', on);
+  var stEl = el.querySelector('.state');
+  if(on){ stEl.textContent = 'Done'; return; }
+  if(id==='ck-read'){
+    stEl.textContent = (typeof _accOpened !== 'undefined' && _accs.length) ? (_accOpened.size + ' of ' + _accs.length + ' opened') : 'Open every section';
+  } else {
+    stEl.textContent = 'Not yet';
+  }
+}
+
+/* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
+/* ---- argument premises used to ground the AI scoring ---- */
+var ARG_PREMISES = [
+  'The three persons share one essence, one will, one power - co-equal and co-eternal in every divine attribute.',
+  'Yet the persons are really and eternally distinct - the Father is not the Son is not the Spirit.',
+  'Therefore the only distinction is relation of origin; perichoresis and inseparable operations secure the unity (against tritheism), the real relations secure the distinction (against modalism).'
+];
+
+/* Real AI scoring via /api/tutor (same method as explain-it-back.html).
+   Falls back to a local heuristic if the API is unreachable (e.g. preview). */
+async function scoreExplain(btn){
+  var box = document.getElementById('explainBox');
+  var txt = box ? box.value.trim() : '';
+  if(!txt){ return; }
+  if(btn){ btn.disabled = true; btn.dataset.lbl = btn.textContent; btn.textContent = 'Scoring...'; }
+  try{
+    var prompt = 'Please evaluate this student explanation of "What Distinguishes the Persons? The Inner Grammar of the Trinity". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
+    var res = await fetch('/api/tutor', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ question: prompt, argument: 'What Distinguishes the Persons?', category: 'Evidence Library' })
+    });
+    if(!res.ok){ throw new Error('bad status'); }
+    var data = await res.json();
+    var answer = data.answer || '';
+    var m = answer.match(/\{[\s\S]*\}/);
+    if(!m){ throw new Error('no json'); }
+    var fb = JSON.parse(m[0]);
+    renderScore(fb.score || 0, fb.strengths || [], fb.improvements || []);
+  }catch(e){
+    renderMockScore(txt);
+  }
+  if(btn){ btn.disabled = false; btn.textContent = btn.dataset.lbl || 'Score my explanation'; }
+}
+
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function renderScore(score, strengths, improvements){
+  score = Math.max(0, Math.min(10, Math.round(Number(score) || 0)));
+  var feed = '';
+  (strengths||[]).forEach(function(s){ feed += '<li class="hit"><span class="mk">✓</span>'+esc(s)+'</li>'; });
+  (improvements||[]).forEach(function(s){ feed += '<li class="miss"><span class="mk">○</span>'+esc(s)+'</li>'; });
+  document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
+  var verdict = score>=8?'Strong — you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way — fill the gaps below' : 'Have another go with the structure in mind';
+  document.getElementById('scoreVerdict').textContent = verdict;
+  document.getElementById('scoreFeed').innerHTML = feed;
+  document.getElementById('scoreOut').classList.add('show');
+  if(score>=7){ state.explainPass = true; }
+  updateDial();
+}
+
+function renderMockScore(txtRaw){
+  var t = (txtRaw||'').toLowerCase();
+  var checks = [
+    {ok:/(modalism|tritheism|three masks|collapse|fork|cliff)/i.test(t), hit:'You named the fork - modalism on one side, tritheism on the other', miss:'Name the fork - too little difference is modalism, a difference of rank is tritheism'},
+    {ok:/(relation of origin|relations of origin|who is from whom|begotten|proceed|unbegotten)/i.test(t), hit:'You named relations of origin as the one distinction', miss:'State rule one - the persons differ ONLY in relations of origin (who is from whom)'},
+    {ok:/(perichoresis|indwell|coinher|in the father)/i.test(t) && /(inseparable|act as one|undivided|one agent|opera)/i.test(t), hit:'You covered perichoresis AND inseparable operations', miss:'Add rules two and three - perichoresis (mutual indwelling) and inseparable operations'},
+    {ok:/(not.{0,12}inequal|not.{0,12}rank|not.{0,12}subordinat|co-equal|coequal|radiance|true god from true god|order.{0,10}not.{0,10}rank)/i.test(t), hit:'You held the line - relation of origin is not inequality', miss:'Guard the key line - a relation of origin is NOT an inequality (order, never rank)'},
+    {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth - you developed it, not just listed it', miss:'Go a bit deeper - a full reconstruction runs longer than this'}
+  ];
+  var score = 0, feed = '';
+  checks.forEach(function(c){
+    if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">✓</span>'+c.hit+'</li>'; }
+    else{ feed += '<li class="miss"><span class="mk">○</span>'+c.miss+'</li>'; }
+  });
+  document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
+  var verdict = score>=8?'Strong — you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way — fill the gaps below' : 'Have another go with the structure in mind';
+  document.getElementById('scoreVerdict').textContent = verdict;
+  document.getElementById('scoreFeed').innerHTML = feed;
+  document.getElementById('scoreOut').classList.add('show');
+  if(score>=7){ state.explainPass = true; }
+  updateDial();
+}
+
+/* ---- flashcards (generated from this argument) ---- */
+const cards = [
+  {q:'What distinguishes the persons of the Trinity?', a:'Their relations of origin, and nothing else - who is from whom. The Father unbegotten, the Son eternally begotten, the Spirit eternally proceeding. In every attribute they are identical and equal; only the relation differs.'},
+  {q:'Is a relation of origin an inequality?', a:'No. Nicaea refused that Arian inference: begotten, not made - true God from true God. Order of origin grades the PERSONS, never the ESSENCE; the Son receives the whole undivided nature. Radiance is not junior light.'},
+  {q:'What does perichoresis do - and not do?', a:'Mutual indwelling: each person wholly IN the others (John 14:10-11). It MANIFESTS the unity the one essence grounds and forbids three-separate-beings; it does not manufacture the oneness. A thing cannot indwell itself, so distinction is presupposed.'},
+  {q:'Inseparable operations - and the one exception?', a:'The three always act as one agent (John 5:19); appropriation attributes a work to one person to REVEAL that person, never to divide the work. The one exception: only the Son became incarnate - the undivided act terminates in the Son alone.'},
+  {q:'Reply to Tuggy: too thin (modalism) or too thick (tritheism)?', a:'The dilemma omits perichoresis and the one will. The one who thinks and loves is the divine essence subsisting as this relationally distinct person - in one undivided operation, not three minds. Conceded: no positive model of the HOW; but no contradiction shown.'}
+];
+let ci = 0;
+function renderCard(){
+  document.getElementById('flash').classList.remove('flipped');
+  document.getElementById('fFront').textContent = cards[ci].q;
+  document.getElementById('fBack').textContent = cards[ci].a;
+  document.getElementById('cardCount').textContent = (ci+1) + ' of ' + cards.length;
+  state.cardsSeen.add(ci);
+  updateDial();
+}
+function nextCard(){ ci = (ci+1)%cards.length; renderCard(); }
+function prevCard(){ ci = (ci-1+cards.length)%cards.length; renderCard(); }
+
+/* ---- debate ---- */
+document.getElementById('debateBox').addEventListener('input', ()=>{
+  if(document.getElementById('debateBox').value.trim().length > 8 && !state.debateTried){
+    state.debateTried = true; updateDial();
+  }
+});
+document.querySelector('[onclick*="modelAns"]').addEventListener('click', ()=>{
+  state.debateTried = true; updateDial();
+});
+
+/* ---- prove it ---- */
+function markRead(){
+  state.read = true;
+  document.getElementById('readBtn').textContent = 'Marked as understood ✓';
+  document.getElementById('readBtn').classList.remove('primary');
+  document.getElementById('readBtn').classList.add('ghost');
+  updateDial();
+}
+function setConf(btn, val){
+  [...document.querySelectorAll('#confRow button')].forEach(b=>b.classList.remove('sel'));
+  btn.classList.add('sel');
+  state.conf = val;
+}
+
+/* ---- Supabase auth + Pro gate (matches site conventions) ---- */
+var sb = null;
+
+async function navAuth(){
+  try{
+    var result = await sb.auth.getSession();
+    var session = result.data && result.data.session;
+    if(session){
+      var name = (session.user.user_metadata && session.user.user_metadata.full_name) || session.user.email.split('@')[0];
+      var nu = document.getElementById('nav-user');
+      var ns = document.getElementById('nav-signout');
+      var ni = document.getElementById('nav-signin');
+      var nc = document.getElementById('nav-cta');
+      var nd = document.getElementById('nav-dashboard');
+      if(nu) nu.textContent = name;
+      if(ns) ns.style.display = 'inline-block';
+      if(ni) ni.style.display = 'none';
+      if(nc) nc.style.display = 'none';
+      if(nd) nd.style.display = 'inline-block';
+    }
+  }catch(e){}
+}
+
+async function signOut(){
+  try{ if(sb) await sb.auth.signOut(); }catch(e){}
+  window.location.href = 'index.html';
+}
+
+function showGate(){
+  var g = document.getElementById('proGate');
+  if(g) g.style.display = 'flex';
+}
+
+async function boot(){
+  if(window.supabase && window.supabase.createClient){
+    sb = window.supabase.createClient('https://noprgxkwniouukmrfozc.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw');
+    var result = await sb.auth.getSession();
+    var session = result.data && result.data.session;
+    await navAuth();
+    /* TEMP until Stripe is live — everything unlocked, same as flashcards/explain-it-back. */
+    var isPro = true;
+    /* Post-Stripe, replace the line above with:
+       var isPro = !!(session && session.user && session.user.user_metadata && session.user.user_metadata.is_pro === true); */
+    if(!isPro){ showGate(); return; }
+  }
+  /* build the track */
+  renderCard();
+  updateDial();
+}
+/* "Understood it" is earned by opening every section in Phase 1 (defences + objections) */
+var _accs = Array.prototype.slice.call(document.querySelectorAll('#understand details.acc'));
+var _accOpened = new Set();
+_accs.forEach(function(d, i){
+  d.addEventListener('toggle', function(){
+    if(!d.open || state.read){ return; }
+    _accOpened.add(i);
+    if(_accOpened.size >= _accs.length){ state.read = true; }
+    updateDial();
+  });
+});
+
+/* ---- share-card: render this argument as a branded image ---- */
+function _shareSetMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
+function shareArgCard(btn){
+  var prem = (typeof ARG_PREMISES !== 'undefined') ? ARG_PREMISES : KALAM_PREMISES;
+  document.getElementById('scTitle').textContent = document.querySelector('h1').textContent;
+  document.getElementById('scP1').textContent = prem[0];
+  document.getElementById('scP2').textContent = prem[1];
+  document.getElementById('scC').textContent  = prem[2];
+  if (typeof html2canvas === 'undefined'){ _shareSetMsg(btn, 'Still loading - try again'); return; }
+  _shareSetMsg(btn, 'Creating image...');
+  var card = document.getElementById('shareCard');
+  html2canvas(card, { scale: 2, backgroundColor: null, useCORS: true }).then(function(canvas){
+    canvas.toBlob(function(blob){
+      var file = new File([blob], 'apologia-daily-argument.png', { type: 'image/png' });
+      if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })){
+        navigator.share({ files: [file], title: 'Apologia Daily' }).catch(function(err){
+          if (err && err.name !== 'AbortError'){ _shareCopy(canvas, blob, btn); }
+        });
+      } else {
+        _shareCopy(canvas, blob, btn);
+      }
+    });
+  });
+}
+function _shareCopy(canvas, blob, btn){
+  if (navigator.clipboard && window.ClipboardItem){
+    try {
+      navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })])
+        .then(function(){ _shareSetMsg(btn, 'Image copied - paste it anywhere'); })
+        .catch(function(){ _shareDownload(canvas, btn); });
+      return;
+    } catch(e){}
+  }
+  _shareDownload(canvas, btn);
+}
+function _shareDownload(canvas, btn){
+  var a = document.createElement('a');
+  a.download = 'apologia-daily-argument.png';
+  a.href = canvas.toDataURL('image/png');
+  a.click();
+  _shareSetMsg(btn, 'Image downloaded');
+}
+
+document.addEventListener('DOMContentLoaded', boot);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js">adRestore(); updateDial(); window._adLoaded = true;
+</script>
+<div id="shareCard" style="position:fixed;left:-9999px;top:0;width:540px;height:675px;box-sizing:border-box;background:linear-gradient(160deg,#050d1a 0%,#0f2040 100%);padding:44px 44px 34px;display:flex;flex-direction:column;font-family:'DM Sans',sans-serif;">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <span style="color:#c8a951;font-size:13px;">&#9670;</span>
+    <span style="color:#c8a951;font-size:12px;letter-spacing:.22em;font-weight:600;">APOLOGIA DAILY</span>
+  </div>
+  <div style="color:rgba(255,255,255,.55);font-size:12.5px;letter-spacing:.16em;font-weight:500;margin-top:32px;">COULD YOU DEFEND THIS?</div>
+  <div id="scTitle" style="font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:700;color:#fff;line-height:1.16;margin-top:10px;"></div>
+  <div style="width:56px;height:2px;background:#c8a951;margin:20px 0 24px;"></div>
+  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P1</div><div id="scP1" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.45;"></div></div>
+  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P2</div><div id="scP2" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.45;"></div></div>
+  <div style="display:flex;gap:14px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">&#8756;</div><div id="scC" style="color:#fff;font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.45;font-weight:600;"></div></div>
+  <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(200,169,81,.3);padding-top:16px;">
+    <div style="color:rgba(255,255,255,.55);font-size:12.5px;">Learn it. Practice it. Defend it.</div>
+    <div style="color:#c8a951;font-size:13px;font-weight:600;">apologiadaily.com</div>
+  </div>
+</div>
+
+  <script src="/ad-nav.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>
