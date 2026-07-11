@@ -105,6 +105,13 @@
 <script>
   var sb = null;
 
+  function nextDest(){
+    try {
+      var n = new URLSearchParams(location.search).get('next');
+      if (n && /^\/[A-Za-z0-9/_.\-?=&%]*$/.test(n)) return n;
+    } catch(e){}
+    return 'dashboard.html';
+  }
   function initSb() {
     if (window.supabase && window.supabase.createClient) {
       sb = window.supabase.createClient(
@@ -112,7 +119,7 @@
         'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
       );
       sb.auth.getSession().then(function(r) {
-        if (r.data && r.data.session) window.location.href = 'dashboard.html';
+        if (r.data && r.data.session) window.location.href = nextDest();
       });
     } else {
       setTimeout(initSb, 50);
@@ -152,7 +159,7 @@
         if (spinner) spinner.style.display = 'none';
         if (btnText) btnText.textContent = 'Sign in';
       } else {
-        window.location.href = 'dashboard.html';
+        window.location.href = nextDest();
       }
     } catch(e) {
       showError('Something went wrong. Please try again.');

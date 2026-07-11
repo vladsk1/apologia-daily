@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join a Study Group — Apologia Daily</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700&family=Source+Serif+4:wght@300;400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy-950:#050d1a; --navy-900:#0a1628; --navy-700:#163058; --navy-600:#1e4278;
+      --gold:#c8a951; --gold-light:#e8cf87; --white:#fff; --off-white:#f8f7f4;
+      --text-dark:#0a1628; --text-mid:#3a4a62; --text-muted:#7a8fa8; --border:#d4e0ec;
+      --fd:'Playfair Display',Georgia,serif; --fb:'Source Serif 4',Georgia,serif; --fu:'DM Sans',system-ui,sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--fb);background:var(--navy-950);color:var(--text-dark);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1.5rem;}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 0%,rgba(30,66,120,0.45),transparent 70%);pointer-events:none;}
+    .card{position:relative;z-index:1;background:var(--white);border-radius:10px;max-width:460px;width:100%;padding:2.5rem 2.25rem;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,0.35);}
+    .logo{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:var(--navy-950);margin-bottom:1.5rem;}
+    .logo span{color:var(--gold);}
+    .icon{font-size:2.75rem;margin-bottom:1rem;}
+    h1{font-family:var(--fd);font-size:1.5rem;font-weight:700;color:var(--text-dark);margin-bottom:0.5rem;line-height:1.25;}
+    p{font-size:0.95rem;color:var(--text-mid);line-height:1.7;margin-bottom:1.5rem;}
+    .group-name{font-weight:600;color:var(--navy-700);}
+    .btn{font-family:var(--fu);font-size:0.92rem;font-weight:500;padding:12px 26px;border-radius:4px;border:none;cursor:pointer;text-decoration:none;display:inline-block;}
+    .btn-gold{background:var(--gold);color:var(--navy-950);}
+    .btn-gold:hover{background:var(--gold-light);}
+    .btn-ghost{background:none;color:var(--text-muted);border:1px solid var(--border);}
+    .btn-row{display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;}
+    .spinner{width:26px;height:26px;border:3px solid var(--border);border-top-color:var(--navy-600);border-radius:50%;animation:spin 0.8s linear infinite;margin:0.5rem auto 1.25rem;}
+    @keyframes spin{to{transform:rotate(360deg);}}
+    .muted{font-family:var(--fu);font-size:0.8rem;color:var(--text-muted);margin-top:1.25rem;}
+    .muted a{color:var(--navy-600);}
+  </style>
+</head>
+<body>
+  <div class="card" id="card">
+    <div class="logo">Apologia<span>Daily</span></div>
+    <div class="spinner" id="spinner"></div>
+    <div id="body"><p>Looking up your invitation&hellip;</p></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+  var sb = null;
+  var code = new URLSearchParams(location.search).get('g');
+
+  function render(html){ document.getElementById('body').innerHTML = html; }
+  function hideSpinner(){ var s=document.getElementById('spinner'); if(s) s.style.display='none'; }
+
+  function boot(){
+    if (!(window.supabase && window.supabase.createClient)) { return setTimeout(boot, 50); }
+    sb = window.supabase.createClient(
+      'https://noprgxkwniouukmrfozc.supabase.co',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+    );
+    run();
+  }
+  document.addEventListener('DOMContentLoaded', boot);
+
+  async function run(){
+    if (!code) {
+      hideSpinner();
+      document.querySelector('.icon') || (document.getElementById('body').insertAdjacentHTML('beforebegin','<div class="icon">🔗</div>'));
+      render('<h1>Invite link incomplete</h1><p>This link is missing its group code. Ask whoever invited you to send it again.</p><div class="btn-row"><a href="/study-groups.html" class="btn btn-gold">Browse groups</a></div>');
+      return;
+    }
+
+    // Must be signed in — preserve this exact invite link through auth.
+    var session = null;
+    try { var r = await sb.auth.getSession(); session = r.data && r.data.session; } catch(e){}
+    if (!session) {
+      hideSpinner();
+      var nextUrl = '/join?g=' + encodeURIComponent(code);
+      var loginHref  = '/login.html?next='  + encodeURIComponent(nextUrl);
+      var signupHref = '/signup.html?next=' + encodeURIComponent(nextUrl);
+      render('<div class="icon">👋</div><h1>You&rsquo;re invited to a study group</h1>'+
+        '<p>Sign in or create a free account to join — it takes a few seconds, and we&rsquo;ll bring you straight back here.</p>'+
+        '<div class="btn-row"><a class="btn btn-gold" href="'+signupHref+'">Create free account</a>'+
+        '<a class="btn btn-ghost" href="'+loginHref+'">Sign in</a></div>');
+      return;
+    }
+
+    // Signed in — join via the security-definer RPC (works for public + invite groups).
+    try {
+      var res = await sb.rpc('join_group_by_code', { code: code });
+      if (res.error) throw res.error;
+      var gid = res.data;
+      if (!gid) {
+        hideSpinner();
+        render('<div class="icon">🤔</div><h1>Invitation not found</h1><p>This group may have been closed, or the link is mistyped. Ask for a fresh invite link.</p><div class="btn-row"><a href="/study-groups.html" class="btn btn-gold">Browse groups</a></div>');
+        return;
+      }
+      hideSpinner();
+      render('<div class="icon">🎉</div><h1>You&rsquo;re in!</h1><p>Taking you to your group&hellip;</p>');
+      window.location.href = '/study-groups.html?open=' + encodeURIComponent(gid);
+    } catch(e) {
+      hideSpinner();
+      var msg = (e && e.message) || '';
+      if (/function .*join_group_by_code|does not exist|schema cache|PGRST202/i.test(msg)) {
+        render('<div class="icon">🛠️</div><h1>Groups are being switched on</h1><p>The community backend isn&rsquo;t enabled yet, so invites can&rsquo;t be accepted right now. Please try this link again shortly.</p><div class="btn-row"><a href="/study-groups.html" class="btn btn-gold">Study Groups</a></div>');
+      } else {
+        render('<div class="icon">⚠️</div><h1>Something went wrong</h1><p>We couldn&rsquo;t add you to the group just now. Please try the link again.</p><div class="btn-row"><a href="/study-groups.html" class="btn btn-gold">Browse groups</a></div>');
+      }
+    }
+  }
+  </script>
+</body>
+</html>

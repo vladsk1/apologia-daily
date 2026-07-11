@@ -108,8 +108,16 @@
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw';
     const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
+    function nextDest(){
+      try {
+        const n = new URLSearchParams(location.search).get('next');
+        if (n && /^\/[A-Za-z0-9/_.\-?=&%]*$/.test(n)) return n;
+      } catch(e){}
+      return 'dashboard.html';
+    }
+
     sb.auth.getSession().then(({ data: { session } }) => {
-      if (session) window.location.href = 'dashboard.html';
+      if (session) window.location.href = nextDest();
     });
 
     async function handleSignup() {
@@ -156,6 +164,12 @@
           confirmed: !!(data && data.session)
         });
       } catch (e) {}
+
+      // Auto-confirm on: session is live immediately — honor an invite/next destination.
+      if (data && data.session && nextDest() !== 'dashboard.html') {
+        window.location.href = nextDest();
+        return;
+      }
 
       document.getElementById('form-wrap').style.display = 'none';
       document.getElementById('success-box').classList.add('visible');

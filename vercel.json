@@ -10,7 +10,8 @@
     }
   ],
   "rewrites": [
-    { "source": "/today", "destination": "/today.html" }
+    { "source": "/today", "destination": "/today.html" },
+    { "source": "/join", "destination": "/join.html" }
   ],
   "redirects": [
     { "source": "/ask-anything.html", "destination": "/asked-and-answered.html", "permanent": true },
