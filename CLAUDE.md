@@ -6,15 +6,27 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
-> **2026-07-09 (web session) — latest handoff: `docs/SESSION_HANDOFF_2026-07-09.md`.** Shipped:
+> **2026-07-11 (web session) — latest handoff: `docs/SESSION_HANDOFF_2026-07-11.md`.** Shipped this
+> session: the **Philippians 2 deity reels** (`phil2-deity` + Isaiah-recut `phil2-everyknee`) and the
+> **Gospel-names onomastic reel** (`gospel-names`), all gated CLEAN/SOUND; the **`signup_completed`**
+> analytics event; **Coach → `/today` adaptivity** (daily Learn step now targets the user's weakest
+> argument); the footer **About-link** fix; and a three-agent **growth/SEO/learning strategy roadmap**
+> (captured in the 07-11 handoff). **Tab-recheck status is now: all six argument card tiers
+> `ev-s1`–`ev-s6` are four-agent-swept** (God's Existence + Science & Faith were finished by the LOCAL
+> session on `main`, commits `bed086b`/`841faa3`); only Conversion Stories (`ev-s7`) is intentionally
+> unswept. **Top open item: the `ask_rate_limit` Supabase migration is still un-run (human step) — do
+> it before any traffic/reels push.**
+>
+> **2026-07-09 (web session) — handoff: `docs/SESSION_HANDOFF_2026-07-09.md`.** Shipped:
 > a full four-agent recheck (citations + argument + **new `apologia-neutrality`** red-team + orthodoxy)
 > of **five** card tiers — **Trinity, Jesus, Islam, Resurrection (`ev-s2`), and Biblical Reliability
 > (`ev-s4`)** — all CLEAN, 0 heresy; the real defect everywhere was
 > *paraphrases dressed as verbatim scholar quotes* + overstatement in the compressed cards (fixed;
 > the Resurrection/Bible-Reliability pass also fixed one empty-tomb argument BREAK, the Meier-brackets-
 > resurrection misattribution, a false Cyrus/Deutero-Isaiah dating claim, the Tyre overstatement, and
-> reconciled discredited Caesar/Plato manuscript counts). **Only `ev-s1` (God's Existence) and `ev-s5`
-> (Science & Faith) card tiers remain unswept.** Plus a Trinity-essay
+> reconciled discredited Caesar/Plato manuscript counts). (`ev-s1`/`ev-s5` were later swept by the
+> LOCAL session — see the 2026-07-11 note above; only `ev-s7` Conversion Stories remains, intentionally.)
+> Plus a Trinity-essay
 > clarifier sweep, Asked & Answered follow-up questions, `parents.html` upgrades, the site-wide
 > "Ask Anything → Asked & Answered" rename, MK/ES index nav, and a creed-dating audit (no change needed —
 > our voice already says "~2–5 years"; "within months" is always attributed to Dunn). **Del Rosario demo
