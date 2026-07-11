@@ -949,6 +949,14 @@
     for (var i=0;i<8;i++){ var r = arr ? arr[i] : Math.floor(Math.random()*c.length); s += c[r % c.length]; }
     return s;
   }
+  function uuid(){
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    var b = (window.crypto && crypto.getRandomValues) ? crypto.getRandomValues(new Uint8Array(16)) : null;
+    if (!b) { b = new Uint8Array(16); for (var i=0;i<16;i++) b[i] = Math.floor(Math.random()*256); }
+    b[6] = (b[6] & 0x0f) | 0x40; b[8] = (b[8] & 0x3f) | 0x80;
+    var h = []; for (var j=0;j<256;j++) h[j] = (j + 0x100).toString(16).slice(1);
+    return h[b[0]]+h[b[1]]+h[b[2]]+h[b[3]]+'-'+h[b[4]]+h[b[5]]+'-'+h[b[6]]+h[b[7]]+'-'+h[b[8]]+h[b[9]]+'-'+h[b[10]]+h[b[11]]+h[b[12]]+h[b[13]]+h[b[14]]+h[b[15]];
+  }
 
   async function createGroup() {
     var name = document.getElementById('group-name').value.trim();
@@ -961,16 +969,22 @@
     btn.disabled = true; btn.innerHTML = '<span class="spinner"></span>';
 
     try {
+      // Generate the id client-side and skip insert().select(): an invite-only
+      // group isn't SELECT-able until the host membership row exists, so asking
+      // the DB to return the new row would fail RLS and look like a create error.
+      var gid = uuid();
       var code = randCode();
       var ins = await sb.from('groups').insert({
-        name: name, description: desc, icon: selectedIconRaw, kind: selectedKind,
+        id: gid, name: name, description: desc, icon: selectedIconRaw, kind: selectedKind,
         privacy: privacy, plan: plan || null, plan_day: 1, join_code: code, created_by: currentUser.id
-      }).select().single();
+      });
       if (ins.error) throw ins.error;
-      var g = ins.data;
-      var memIns = await sb.from('group_members').insert({ group_id: g.id, user_id: currentUser.id, display_name: myName, role: 'host' });
-      if (memIns.error) throw memIns.error;
-      myGroupIds[g.id] = 'host';
+      var memIns = await sb.from('group_members').insert({ group_id: gid, user_id: currentUser.id, display_name: myName, role: 'host' });
+      if (memIns.error) {
+        try { await sb.from('groups').delete().eq('id', gid); } catch(_e){}  // don't leave an orphan group
+        throw memIns.error;
+      }
+      myGroupIds[gid] = 'host';
 
       closeCreateModal();
       document.getElementById('group-name').value = '';
@@ -981,7 +995,7 @@
       try { if (window.adTrack) adTrack('group_created', { kind: selectedKind, privacy: privacy, has_plan: !!plan }); } catch(e){}
       showToast('Group created! Invite people with the link inside.');
       await loadGroups();
-      openGroup(g.id);
+      openGroup(gid);
     } catch(e){
       btn.disabled = false; btn.textContent = 'Create group';
       if (isMissingTable(e)) { closeCreateModal(); showSetupNotice(); showToast('Study Groups isn’t switched on yet.'); }
