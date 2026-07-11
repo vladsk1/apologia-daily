@@ -415,15 +415,36 @@ function sw(id, btn) {
   loadSection(id);
 }
 
-function loadSection(id) {
-  if (loaded[id]) return;
+function loadSection(id, cb) {
+  if (loaded[id]) { if (cb) cb(); return; }
   loaded[id] = true;
   var container = document.getElementById(id + '-content');
-  if (!container) return;
+  if (!container) { if (cb) cb(); return; }
   fetch('ev-' + id + (LANG === 'mk' ? '.mk' : '') + '.html')
     .then(function(r) { return r.text(); })
-    .then(function(html) { container.innerHTML = html; })
+    .then(function(html) { container.innerHTML = html; if (cb) cb(); })
     .catch(function() { container.innerHTML = '<p style="padding:2rem;color:red;">Failed to load. Please refresh.</p>'; });
+}
+
+/* Deep-linking: evidence-library.html?arg=<slug> (or #arg-<slug>) opens the tab
+   containing that argument card and scrolls to it. Cards carry id="arg-<slug>";
+   ARG_TAB (generated from the fragments) maps each slug to its tab. */
+var ARG_TAB = {"analogies":"s6","appearances":"s2","archaeology":"s4","beauty":"s1","bigbang":"s5","burial":"s2","cambrian":"s5","canon":"s4","coincidences":"s4","consciousness":"s1","consistency":"s4","cosmic":"s5","daniel70":"s3","deadseascrolls":"s4","desire":"s1","disciplesbelief":"s2","early_church_trinity":"s6","earlycreed":"s3","earlydate":"s4","emptytomb":"s2","eternal_generation":"s6","evil":"s1","eyewitnesses":"s4","finetuning":"s1","hands":"s3","hist_jesus":"s3","holy_spirit":"s6","jesus_as_god_nt":"s6","jesus_claims":"s3","jesuschar":"s3","jewishness":"s4","john11":"s3","kalam":"s1","laws":"s5","leibniz":"s1","manuscript":"s4","mathematics":"s5","messianic_prophecy":"s3","minimal":"s2","modalism":"s6","moral":"s1","multiatt":"s3","names":"s4","nt_trinity":"s6","ontological":"s1","originlife":"s5","ot_trinity":"s6","paul":"s2","phil2":"s3","philosophical_trinity":"s6","postresurrection":"s2","privileged":"s5","prophecy":"s4","reason":"s1","relations":"s6","religious":"s1","respred":"s3","sceptics":"s2","shema":"s6","thomistic":"s1","titles":"s3","trinity_islam":"s6","trinity_jw":"s6","trinity_mormons":"s6","typology":"s3","uniqueness":"s3","virginbirth":"s3"};
+function activateTab(id) {
+  var s = document.querySelectorAll('.sec'); for (var i = 0; i < s.length; i++) s[i].className = 'sec';
+  var t = document.querySelectorAll('.tab'); for (var i = 0; i < t.length; i++) t[i].className = 'tab';
+  var sec = document.getElementById(id); if (sec) sec.className = 'sec go';
+  var tabs = document.querySelectorAll('.tab');
+  for (var i = 0; i < tabs.length; i++) { if ((tabs[i].getAttribute('onclick') || '').indexOf("'" + id + "'") !== -1) { tabs[i].className = 'tab on'; break; } }
+}
+function openArgCard(slug) {
+  var el = document.getElementById('arg-' + slug); if (!el) return;
+  el.classList.add('op');
+  try { var ct = el.querySelector('.ct'); if (ct) { currentArgContext = ct.textContent.trim(); var lbl = document.getElementById('float-arg-label'); if (lbl) lbl.textContent = currentArgContext; } } catch (e) {}
+  setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+}
+function deepLinkArg() {
+  try { var a = new URLSearchParams(location.search).get('arg'); if (!a && location.hash) a = location.hash.replace(/^#(arg-)?/, ''); return a || ''; } catch (e) { return ''; }
 }
 
 function tog(card) {
@@ -476,7 +497,11 @@ function fillT(tid, q) {
 }
 
 // Load first section immediately
-loadSection('s1');
+(function () {
+  var a = deepLinkArg();
+  if (a && ARG_TAB[a]) { activateTab(ARG_TAB[a]); loadSection(ARG_TAB[a], function () { openArgCard(a); }); }
+  else { loadSection('s1'); }
+})();
 
 // ── Bilingual hub (English / Macedonian) ──
 var I18N = {
