@@ -148,7 +148,7 @@ footer{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08);pad
         <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
         <ul class="adn-drop">
           <li><a href="/library/">Deep-Dive Essays</a></li>
-          <li><a href="/parents.html">For Parents</a></li><li><a href="/palace.html">Memory Palace</a></li><li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/parents.html">For Parents</a></li><li><a href="/video-library.html">Videos</a></li>
           <li><a href="/games.html">Games</a></li>
           <li><a href="/whats-new.html">What&#39;s New</a></li>
           <li><a href="/answers/">Answers</a></li>
@@ -831,8 +831,25 @@ function finishWalk(){
 }
 
 
+/* deep-link: palace.html#<argId> opens that argument's room directly.
+   Used by the mastery track ("Fix it in memory") to jump straight to the
+   room whose href is ev-m-<argId>.html. Falls back to the first wing. */
+function openFromHash(){
+  var h = (location.hash || '').replace(/^#/, '').trim();
+  if(!h) return;
+  var target = 'ev-m-' + h + '.html';
+  for(var wi=0; wi<WINGS.length; wi++){
+    var rs = WINGS[wi].rooms;
+    for(var ri=0; ri<rs.length; ri++){
+      if(rs[ri].href === target){ wingIdx=wi; roomIdx=ri; revealed=false; return; }
+    }
+  }
+}
+
+openFromHash();
 renderWings();
 renderRoom();
+window.addEventListener('hashchange', function(){ openFromHash(); renderWings(); renderRoom(); });
 
 </script>
 <script src="/ad-nav.js" defer></script>

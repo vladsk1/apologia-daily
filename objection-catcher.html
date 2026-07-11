@@ -126,7 +126,7 @@
         <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
         <ul class="adn-drop">
           <li><a href="/library/">Deep-Dive Essays</a></li>
-          <li><a href="/parents.html">For Parents</a></li><li><a href="/palace.html">Memory Palace</a></li><li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/parents.html">For Parents</a></li><li><a href="/video-library.html">Videos</a></li>
           <li><a href="/games.html">Games</a></li>
           <li><a href="/whats-new.html">What&#39;s New</a></li>
           <li><a href="/answers/">Answers</a></li>
@@ -202,7 +202,8 @@
       <div class="score-lbl">Round complete</div>
       <div class="score-msg" id="final-msg"></div>
       <div class="score-actions">
-        <button class="score-btn score-btn-primary" onclick="restartGame()">Play again →</button>
+        <button class="score-btn score-btn-primary" onclick="shareOC()">Challenge a friend →</button>
+        <button class="score-btn score-btn-secondary" onclick="restartGame()">Play again</button>
         <a href="debate-arena.html" class="score-btn score-btn-secondary">Try the Debate Arena</a>
         <a href="evidence-library.html" class="score-btn score-btn-secondary">Study more</a>
       </div>
@@ -453,7 +454,10 @@
     let attempts = 0;
     let streak = 0;
     let answered = false;
+    let objResults = [];
+    let objTopics = {};
     const ROUND_SIZE = 5;
+    const TOPIC_CAT = { existence: "God's Existence", resurrection: 'The Resurrection', bible: 'Biblical Reliability', morality: "God's Existence", islam: null };
 
     function setDiff(d, btn) {
       diff = d;
@@ -463,7 +467,7 @@
     }
 
     function restartGame() {
-      correct = 0; attempts = 0; streak = 0; current = 0;
+      correct = 0; attempts = 0; streak = 0; current = 0; objResults = []; objTopics = {};
       pool = diff === 'all' ? [...objections] : objections.filter(o => o.topic === diff);
       pool = pool.sort(() => Math.random() - 0.5);
       updateStats();
@@ -495,6 +499,9 @@
       const obj = pool[current];
       if (isCorrect) { correct++; streak++; }
       else { streak = 0; }
+      objResults.push(!!isCorrect);
+      var _t = objTopics[topic] || (objTopics[topic] = { c: 0, t: 0 });
+      _t.t++; if (isCorrect) _t.c++;
       document.querySelectorAll('.q-option').forEach(b => {
         b.disabled = true;
         if (b === btn) b.classList.add(isCorrect ? 'correct' : 'wrong');
@@ -528,6 +535,25 @@
       const msgs = { 100: "Perfect round! You're ready for any real conversation.", 80: "Excellent — you know your arguments well. Keep practising.", 60: "Good effort. Study the ones you missed and try again.", 40: "Keep going — each round makes you sharper.", 0: "Don't be discouraged — read the coaching and try again." };
       const msg = Object.entries(msgs).reverse().find(([k]) => pct >= parseInt(k));
       document.getElementById('final-msg').textContent = msg ? msg[1] : "Keep practising!";
+      /* one streak + Coach: record each topic's accuracy under its category */
+      try {
+        if (window.ADGame) {
+          ADGame.mark();
+          Object.keys(objTopics).forEach(function (tp) {
+            var cat = TOPIC_CAT[tp]; var o = objTopics[tp];
+            if (cat && o.t) ADGame.recordCat(cat, Math.round(o.c / o.t * 100), 'Objection Catcher');
+          });
+        }
+      } catch (e) {}
+    }
+
+    function shareOC() {
+      ADGame.share({
+        game: 'Objection Catcher', correct: correct, total: Math.min(ROUND_SIZE, pool.length),
+        results: objResults, unit: 'Objections answered', icon: '🛡️',
+        tagline: 'Pick the strongest response to a real objection',
+        cta: 'Can you beat it?', path: '/objection-catcher.html'
+      });
     }
 
     restartGame();
@@ -610,6 +636,8 @@
     window.location.href = 'index.html';
   }
 </script>
+  <script src="/coach.js" defer></script>
+  <script src="/games-common.js" defer></script>
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
 </body>

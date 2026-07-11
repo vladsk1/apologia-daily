@@ -139,7 +139,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96)
         <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
         <ul class="adn-drop">
           <li><a href="/library/">Deep-Dive Essays</a></li>
-          <li><a href="/parents.html">For Parents</a></li><li><a href="/palace.html">Memory Palace</a></li><li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/parents.html">For Parents</a></li><li><a href="/video-library.html">Videos</a></li>
           <li><a href="/games.html">Games</a></li>
           <li><a href="/whats-new.html">What&#39;s New</a></li>
           <li><a href="/answers/">Answers</a></li>
@@ -251,7 +251,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96)
     <div class="result-msg" id="result-msg">Well done!</div>
     <div class="result-sub" id="result-sub">Keep studying the Evidence Library to improve your score.</div>
     <div class="result-btns">
-      <button class="result-btn result-btn-primary" onclick="startGame()">Play again &#9889;</button>
+      <button class="result-btn result-btn-primary" onclick="shareSR()">Challenge a friend &#8594;</button>
+      <button class="result-btn result-btn-secondary" onclick="startGame()">Play again &#9889;</button>
       <button class="result-btn result-btn-secondary" onclick="showScreen('lobby')">Change mode</button>
       <a href="evidence-library.html" style="padding:12px 28px;border-radius:4px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);font-family:var(--ui);font-size:.92rem;font-weight:500;text-decoration:none;">Study up &#8594;</a>
     </div>
@@ -376,6 +377,8 @@ let totalTime = 60;
 let gameStartTime = null;
 let wrongAnswers = [];
 let answered = false;
+let srResults = [];
+let catTally = {};
 
 function selectMode(mode) {
   gameMode = mode;
@@ -413,6 +416,8 @@ function startGame() {
   bestStreak = 0;
   wrongAnswers = [];
   answered = false;
+  srResults = [];
+  catTally = {};
   gameStartTime = Date.now();
 
   showScreen('game');
@@ -500,6 +505,8 @@ function timeExpired() {
   answered = true;
   const q = questions[currentQ];
   wrongAnswers.push({ q: q.q, correct: q.a, yours: 'Time expired' });
+  srResults.push(false);
+  if (q.cat) { var _ct = catTally[q.cat] || (catTally[q.cat] = { c: 0, t: 0 }); _ct.t++; }
   combo = 0;
   document.querySelectorAll('.answer-btn').forEach(btn => {
     btn.disabled = true;
@@ -516,6 +523,8 @@ function checkAnswer(btn, chosen, correct_a) {
 
   const q = questions[currentQ];
   const isCorrect = chosen === correct_a;
+  srResults.push(!!isCorrect);
+  if (q.cat) { var _ct = catTally[q.cat] || (catTally[q.cat] = { c: 0, t: 0 }); _ct.t++; if (isCorrect) _ct.c++; }
 
   document.querySelectorAll('.answer-btn').forEach(b => {
     b.disabled = true;
@@ -582,6 +591,27 @@ function endGame() {
   const history = JSON.parse(localStorage.getItem('speedRoundHistory') || '[]');
   history.push({ date: new Date().toISOString(), score, correct, total, accuracy, mode: gameMode, diff: gameDiff });
   localStorage.setItem('speedRoundHistory', JSON.stringify(history.slice(-50)));
+
+  // one streak + Coach: record each category's accuracy
+  try {
+    if (window.ADGame) {
+      ADGame.mark();
+      Object.keys(catTally).forEach(function (cat) {
+        var o = catTally[cat];
+        if (o.t) ADGame.recordCat(cat, Math.round(o.c / o.t * 100), 'Speed Round');
+      });
+    }
+  } catch (e) {}
+}
+
+function shareSR() {
+  var total = srResults.length || Math.max(correct, 1);
+  ADGame.share({
+    game: 'Speed Round', correct: correct, total: total, results: srResults,
+    unit: 'Questions correct', icon: '⚡',
+    tagline: 'How fast do you know your arguments?',
+    cta: 'Can you beat it?', path: '/speed-round.html'
+  });
 }
 
 // Nav auth
@@ -622,6 +652,8 @@ function endGame() {
     window.location.href = 'index.html';
   }
 </script>
+  <script src="/coach.js" defer></script>
+  <script src="/games-common.js" defer></script>
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
 </body>

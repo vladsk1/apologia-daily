@@ -184,7 +184,7 @@
         <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
         <ul class="adn-drop">
           <li><a href="/library/">Deep-Dive Essays</a></li>
-          <li><a href="/parents.html">For Parents</a></li><li><a href="/palace.html">Memory Palace</a></li><li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/parents.html">For Parents</a></li><li><a href="/video-library.html">Videos</a></li>
           <li><a href="/games.html">Games</a></li>
           <li><a href="/whats-new.html">What&#39;s New</a></li>
           <li><a href="/answers/">Answers</a></li>
@@ -428,7 +428,7 @@
         <li><a href="index.html#pricing">Pricing</a></li>
       
           <li><a href="video-library.html">Videos</a></li>
-          <li><a href="palace.html">Memory Palace</a></li></ul>
+          </ul>
     <div class="footer-copy">© 2026 Apologia Daily. Built for the defence of the Gospel.</div>
     </div>
   </footer>
@@ -692,6 +692,8 @@
           window._qz={};
         }
       }catch(e){}
+      /* one streak — feed the shared ad_streak used by /today + dashboard */
+      try{ if(window.ADGame) ADGame.mark(); }catch(e){}
 
       document.getElementById('question-card').style.display = 'none';
       document.getElementById('diff-selector').style.display = 'none';
@@ -723,96 +725,18 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // ── SHARE ──
-    function roundRect(ctx, x, y, w, h, r) {
-      ctx.beginPath();
-      ctx.moveTo(x + r, y);
-      ctx.arcTo(x + w, y, x + w, y + h, r);
-      ctx.arcTo(x + w, y + h, x, y + h, r);
-      ctx.arcTo(x, y + h, x, y, r);
-      ctx.arcTo(x, y, x + w, y, r);
-      ctx.closePath();
-    }
-
-    function buildScoreCard() {
-      const results = (quizResults.length === TOTAL_QUESTIONS)
-        ? quizResults
-        : Array.from({ length: TOTAL_QUESTIONS }, (_, i) => i < score); // fallback
-      const streak = parseInt(document.getElementById('stat-streak').textContent) || 0;
-      const cv = document.createElement('canvas');
-      cv.width = 1080; cv.height = 1080;
-      const c = cv.getContext('2d');
-      // background
-      c.fillStyle = '#0a1628'; c.fillRect(0, 0, 1080, 1080);
-      c.strokeStyle = 'rgba(200,169,81,0.35)'; c.lineWidth = 3;
-      roundRect(c, 40, 40, 1000, 1000, 28); c.stroke();
-      c.textAlign = 'center';
-      // brand
-      c.fillStyle = '#c8a951'; c.font = '700 38px "DM Sans", sans-serif';
-      c.fillText('A P O L O G I A   D A I L Y', 540, 165);
-      c.strokeStyle = 'rgba(200,169,81,0.4)'; c.lineWidth = 2;
-      c.beginPath(); c.moveTo(390, 205); c.lineTo(690, 205); c.stroke();
-      c.fillStyle = 'rgba(255,255,255,0.55)'; c.font = '500 30px "DM Sans", sans-serif';
-      c.fillText('DAILY APOLOGETICS QUIZ', 540, 300);
-      // big score
-      c.fillStyle = '#e8cf87'; c.font = '700 200px "Playfair Display", Georgia, serif';
-      c.fillText(score + '/' + TOTAL_QUESTIONS, 540, 545);
-      c.fillStyle = 'rgba(255,255,255,0.5)'; c.font = '400 32px "DM Sans", sans-serif';
-      c.fillText("Today's score", 540, 600);
-      // result squares (spoiler-free pattern)
-      const size = 112, gap = 24, total = TOTAL_QUESTIONS * size + (TOTAL_QUESTIONS - 1) * gap;
-      let x = (1080 - total) / 2; const y = 670;
-      results.forEach(ok => {
-        if (ok) { c.fillStyle = '#c8a951'; roundRect(c, x, y, size, size, 14); c.fill();
-          c.strokeStyle = '#0a1628'; c.lineWidth = 9; c.lineCap = 'round';
-          c.beginPath(); c.moveTo(x + 30, y + 58); c.lineTo(x + 48, y + 78); c.lineTo(x + 82, y + 36); c.stroke(); }
-        else { c.fillStyle = 'rgba(255,255,255,0.07)'; roundRect(c, x, y, size, size, 14); c.fill();
-          c.strokeStyle = 'rgba(255,255,255,0.18)'; c.lineWidth = 2; roundRect(c, x, y, size, size, 14); c.stroke();
-          c.strokeStyle = 'rgba(255,255,255,0.4)'; c.lineWidth = 8; c.lineCap = 'round';
-          c.beginPath(); c.moveTo(x + 36, y + 36); c.lineTo(x + 76, y + 76); c.moveTo(x + 76, y + 36); c.lineTo(x + 36, y + 76); c.stroke(); }
-        x += size + gap;
-      });
-      // streak + date
-      c.fillStyle = '#e8cf87'; c.font = '600 46px "DM Sans", sans-serif';
-      c.fillText('🔥 ' + streak + ' day streak', 540, 905);
-      c.fillStyle = 'rgba(255,255,255,0.45)'; c.font = '400 28px "DM Sans", sans-serif';
-      c.fillText(new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }), 540, 955);
-      // footer
-      c.fillStyle = '#c8a951'; c.font = '600 34px "DM Sans", sans-serif';
-      c.fillText('Can you beat it?  apologiadaily.com', 540, 1015);
-      return cv;
-    }
-
-    function spoilerText() {
+    // ── SHARE (universal card via games-common.js) ──
+    function shareScore() {
       const results = (quizResults.length === TOTAL_QUESTIONS)
         ? quizResults
         : Array.from({ length: TOTAL_QUESTIONS }, (_, i) => i < score);
-      const grid = results.map(ok => ok ? '🛡️' : '⬛').join('');
       const streak = parseInt(document.getElementById('stat-streak').textContent) || 0;
-      return `Apologia Daily — Daily Quiz\n${grid}  ${score}/${TOTAL_QUESTIONS}\n🔥 ${streak} day streak\nCan you beat it? https://apologiadaily.com/daily-quiz.html`;
-    }
-
-    async function shareScore() {
-      const text = spoilerText();
-      try {
-        await (document.fonts && document.fonts.ready);
-        const canvas = buildScoreCard();
-        const blob = await new Promise(res => canvas.toBlob(res, 'image/png'));
-        const file = new File([blob], 'apologia-quiz.png', { type: 'image/png' });
-        if (navigator.canShare && navigator.canShare({ files: [file] })) {
-          await navigator.share({ files: [file], text });
-          return;
-        }
-        // fallback: download the image + copy the spoiler-free text
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob); a.download = 'apologia-quiz.png';
-        document.body.appendChild(a); a.click(); a.remove();
-        if (navigator.clipboard) await navigator.clipboard.writeText(text);
-        alert('Your score card was downloaded and the share text copied — post them anywhere!');
-      } catch (e) {
-        if (navigator.share) { navigator.share({ text, url: 'https://apologiadaily.com/daily-quiz.html' }); }
-        else if (navigator.clipboard) { navigator.clipboard.writeText(text); alert('Score copied to clipboard — paste it anywhere!'); }
-      }
+      ADGame.share({
+        game: 'Daily Quiz', correct: score, total: TOTAL_QUESTIONS, results: results,
+        unit: "Today's score", icon: '🛡️',
+        tagline: streak > 0 ? ('🔥 ' + streak + ' day streak') : 'Five questions a day',
+        cta: 'Can you beat it?', path: '/daily-quiz.html'
+      });
     }
 
     // ── INIT ──
@@ -904,6 +828,7 @@
   }
 </script>
   <script src="/coach.js"></script>
+  <script src="/games-common.js" defer></script>
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
 </body>

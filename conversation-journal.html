@@ -159,7 +159,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
         <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
         <ul class="adn-drop">
           <li><a href="/library/">Deep-Dive Essays</a></li>
-          <li><a href="/parents.html">For Parents</a></li><li><a href="/palace.html">Memory Palace</a></li><li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/parents.html">For Parents</a></li><li><a href="/video-library.html">Videos</a></li>
           <li><a href="/games.html">Games</a></li>
           <li><a href="/whats-new.html">What&#39;s New</a></li>
           <li><a href="/answers/">Answers</a></li>
@@ -624,6 +624,9 @@ function saveEntry() {
   } catch (e) {}
   window._coachArgId = null;
 
+  /* one streak — logging a real conversation is practice; keep the daily streak alive */
+  try { if (window.ADGame) ADGame.mark(); } catch (e) {}
+
   // Clear form
   ['who','they-said','i-said','reflection'].forEach(id => document.getElementById(id).value = '');
   document.getElementById('worldview').value = '';
@@ -680,6 +683,7 @@ renderEntries();
   }
 </script>
   <script src="/coach.js"></script>
+  <script src="/games-common.js" defer></script>
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
 </body>
