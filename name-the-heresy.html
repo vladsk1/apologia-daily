@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!-- content-review: {"argument":"PENDING","orthodoxy":"PENDING","by":"new Trinity diagnostic — gates pending"} -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Name the Heresy — Can You Spot the Trinity Error? | Apologia Daily</title>
+<meta name="description" content="A 60-second game: read a statement about God and name the heresy it teaches — modalism, Arianism, tritheism, partialism, or is it orthodox? Learn the Trinity by spotting where it goes wrong.">
+<link rel="canonical" href="https://apologiadaily.com/name-the-heresy.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Apologia Daily">
+<meta property="og:title" content="Name the Heresy — Can You Spot the Trinity Error?">
+<meta property="og:description" content="Read a statement about God and name the heresy it teaches — or is it orthodox? Ten quick rounds. Learn the Trinity by spotting where it goes wrong.">
+<meta property="og:url" content="https://apologiadaily.com/name-the-heresy.html">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ad-nav.css">
+<style>
+  :root{ --navy-950:#050d1a; --navy-900:#0a1628; --navy-800:#0f2040; --navy-600:#1e4278; --gold:#c8a951; --gold-light:#e8cf87; --white:#fff; --off:#f7f4ef; --border:#d9e0ea; --muted:#5a6b82; --correct:#0f6e56; --correct-bg:#e1f5ee; --correct-border:#9fe1cb; --wrong:#b4322b; --wrong-bg:#fbeceb; --wrong-border:#f0c5c2; --fd:'Playfair Display',Georgia,serif; --body:'Source Serif 4',Georgia,serif; --ui:'DM Sans',system-ui,sans-serif; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--off);color:#0f1f38;font-family:var(--body);line-height:1.6}
+  .wrap{max-width:680px;margin:0 auto;padding:30px 20px 70px}
+  .intro{text-align:center;margin-bottom:24px}
+  .eyebrow{font-family:var(--ui);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#a88930;font-weight:600}
+  h1{font-family:var(--fd);font-weight:700;font-size:clamp(1.9rem,5vw,2.5rem);color:var(--navy-900);margin:8px 0 6px}
+  .sub{font-family:var(--ui);font-size:.95rem;color:var(--muted)}
+  .strip{background:var(--navy-900);border-radius:10px;padding:.9rem 1rem;margin-bottom:14px;display:flex;justify-content:space-between;gap:.5rem}
+  .si{text-align:center;flex:1}
+  .si-num{font-family:var(--fd);font-size:1.5rem;font-weight:700;color:var(--gold);line-height:1}
+  .si-lbl{font-family:var(--ui);font-size:.6rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.45);margin-top:4px}
+  .timer{height:6px;background:rgba(10,22,40,.1);border-radius:99px;overflow:hidden;margin-bottom:20px}
+  .timer-fill{height:100%;width:100%;background:var(--gold);border-radius:99px;transition:width .25s linear}
+  .timer-fill.low{background:var(--wrong)}
+  .card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:32px 26px;margin-bottom:18px;box-shadow:0 4px 20px rgba(15,32,72,.06)}
+  .card-kicker{font-family:var(--ui);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+  .statement{font-family:var(--body);font-size:1.3rem;line-height:1.5;color:var(--navy-900)}
+  .choices{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:18px}
+  .choice{font-family:var(--ui);font-size:1rem;font-weight:600;padding:15px 16px;border-radius:10px;border:2px solid var(--border);background:var(--white);color:var(--navy-900);cursor:pointer;transition:.12s;display:flex;align-items:baseline;gap:10px;text-align:left}
+  .choice:hover:not(:disabled){border-color:var(--gold);transform:translateY(-1px)}
+  .choice:disabled{cursor:default}
+  .choice small{font-family:var(--ui);font-size:.78rem;font-weight:400;color:var(--muted)}
+  .choice.reveal{background:var(--correct-bg);border-color:var(--correct);color:var(--correct);box-shadow:0 0 0 1px var(--correct) inset}
+  .choice.reveal small{color:var(--correct)}
+  .choice.picked{background:var(--wrong-bg);border-color:var(--wrong);color:var(--wrong)}
+  .choice.picked small{color:var(--wrong)}
+  .fb{display:none;border-radius:10px;padding:16px 18px;margin-bottom:16px}
+  .fb.show{display:block}
+  .fb.right{background:var(--correct-bg);border:1px solid var(--correct-border)}
+  .fb.wrong{background:var(--wrong-bg);border:1px solid var(--wrong-border)}
+  .fb-result{font-family:var(--ui);font-size:.85rem;font-weight:600;margin-bottom:4px}
+  .fb.right .fb-result{color:var(--correct)} .fb.wrong .fb-result{color:var(--wrong)}
+  .fb-name{font-family:var(--ui);font-size:.78rem;font-weight:600;color:var(--navy-800);margin-bottom:6px}
+  .fb-text{font-size:.96rem;color:#2a3a52}
+  .next{display:none;width:100%;font-family:var(--ui);font-size:1rem;font-weight:600;padding:15px;border:none;border-radius:10px;background:var(--navy-900);color:#fff;cursor:pointer}
+  .next.show{display:block}
+  .summary{display:none;text-align:center;background:var(--white);border:1px solid var(--border);border-radius:14px;padding:38px 26px;box-shadow:0 4px 20px rgba(15,32,72,.06)}
+  .summary.show{display:block}
+  .sum-score{font-family:var(--fd);font-size:4.5rem;font-weight:700;color:var(--gold);line-height:1}
+  .sum-lbl{font-family:var(--ui);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .sum-msg{font-size:1.05rem;color:#2a3a52;max-width:44ch;margin:0 auto 22px}
+  .sum-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .sbtn{font-family:var(--ui);font-size:.92rem;font-weight:600;padding:12px 20px;border-radius:8px;text-decoration:none;cursor:pointer;border:1px solid var(--border)}
+  .sbtn-primary{background:var(--gold);color:var(--navy-950);border-color:var(--gold)}
+  .sbtn-secondary{background:var(--white);color:var(--navy-900)}
+  .learn{font-family:var(--ui);font-size:.85rem;color:var(--muted);margin-top:18px;text-align:center}
+  .learn a{color:var(--navy-600);font-weight:600}
+</style>
+</head>
+<body>
+<nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/asked-and-answered.html">Asked &amp; Answered</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <ul class="adn-drop">
+          <li><a href="/library/">Deep-Dive Essays</a></li>
+          <li><a href="/video-library.html">Videos</a></li>
+          <li><a href="/games.html">Games</a></li>
+          <li><a href="/whats-new.html">What&#39;s New</a></li>
+          <li><a href="/answers/">Answers</a></li>
+          <li><a href="/study-groups.html">Study Groups</a></li>
+          <li><a href="/reading-club.html">Reading Clubs</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/what-we-believe.html">What We Believe</a></li>
+          <li><a href="/editorial-standards.html">Editorial Standards</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="intro">
+    <p class="eyebrow">Trinity Diagnostic</p>
+    <h1>Name the Heresy</h1>
+    <p class="sub">Read the statement about God. Is it orthodox &mdash; or which classic Trinity error does it teach? Beat the clock.</p>
+  </div>
+
+  <div class="strip">
+    <div class="si"><div class="si-num" id="stat-correct">0</div><div class="si-lbl">Correct</div></div>
+    <div class="si"><div class="si-num" id="stat-streak">0</div><div class="si-lbl">&#128293; Streak</div></div>
+    <div class="si"><div class="si-num" id="stat-pct">&mdash;</div><div class="si-lbl">Accuracy</div></div>
+    <div class="si"><div class="si-num" id="stat-round">1/10</div><div class="si-lbl">Round</div></div>
+  </div>
+  <div class="timer"><div class="timer-fill" id="timer-fill"></div></div>
+
+  <div class="card" id="card">
+    <div class="card-kicker">Someone tells you&hellip;</div>
+    <div class="statement" id="statement"></div>
+  </div>
+
+  <div class="choices" id="choices">
+    <button class="choice" data-val="orthodox" onclick="answer('orthodox')">&#10003; Orthodox <small>&mdash; the Trinity, stated rightly</small></button>
+    <button class="choice" data-val="modalism" onclick="answer('modalism')">Modalism <small>&mdash; one person in three modes or masks</small></button>
+    <button class="choice" data-val="arianism" onclick="answer('arianism')">Arianism <small>&mdash; a person of the Godhead is a creature / less than fully God</small></button>
+    <button class="choice" data-val="tritheism" onclick="answer('tritheism')">Tritheism <small>&mdash; three separate gods</small></button>
+    <button class="choice" data-val="partialism" onclick="answer('partialism')">Partialism <small>&mdash; three parts or thirds of one God</small></button>
+  </div>
+
+  <div class="fb" id="fb">
+    <div class="fb-result" id="fb-result"></div>
+    <div class="fb-name" id="fb-name"></div>
+    <div class="fb-text" id="fb-text"></div>
+  </div>
+  <button class="next" id="next" onclick="nextRound()">Next round &rarr;</button>
+
+  <div class="summary" id="summary">
+    <div class="sum-score" id="sum-score">8/10</div>
+    <div class="sum-lbl">Round complete</div>
+    <div class="sum-msg" id="sum-msg"></div>
+    <div class="sum-actions">
+      <button class="sbtn sbtn-primary" onclick="shareNTH()">Challenge a friend &rarr;</button>
+      <button class="sbtn sbtn-secondary" onclick="startGame()">Play again &rarr;</button>
+      <a class="sbtn sbtn-secondary" href="/library/analogies.html">Why every analogy fails</a>
+      <a class="sbtn sbtn-secondary" href="/evidence-library.html">The Trinity, defended</a>
+    </div>
+  </div>
+  <p class="learn">New to these terms? The <a href="/library/analogies.html">&ldquo;Why Every Trinity Analogy Fails&rdquo;</a> essay walks through each error and what to say instead.</p>
+</main>
+
+<script>
+  // answer: 'orthodox' | 'modalism' | 'arianism' | 'tritheism' | 'partialism'
+  const LABELS = { orthodox:'Orthodox', modalism:'Modalism', arianism:'Arianism', tritheism:'Tritheism', partialism:'Partialism' };
+  const ITEMS = [
+    { text: "&ldquo;God is like water &mdash; it can be ice, liquid, or steam. Same stuff, three forms.&rdquo;", answer:'modalism', why:"Water is one thing that shifts between three states, usually one at a time. That pictures one person who is Father, then Son, then Spirit &mdash; modalism. But at the Jordan the Son is in the water, the Spirit descends, and the Father speaks, all at once: three distinct persons, always." },
+    { text: "&ldquo;God is like an egg: shell, white, and yolk. Three parts, one egg.&rdquo;", answer:'partialism', why:"Each part is only a piece of the egg; none is the whole. But the Father is not one-third of God. Each person is fully and wholly God &mdash; one undivided being, not three parts." },
+    { text: "&ldquo;There was a time when the Son did not exist; the Father brought him into being.&rdquo;", answer:'arianism', why:"This is Arius&rsquo;s own teaching &mdash; &lsquo;there was when he was not.&rsquo; The Nicene Creed answers it: the Son is &lsquo;begotten, not made&hellip; true God from true God,&rsquo; co-eternal with the Father, never created." },
+    { text: "&ldquo;The Father, the Son, and the Spirit are three separate gods who always cooperate perfectly.&rdquo;", answer:'tritheism', why:"Three gods, however united, is polytheism &mdash; tritheism. Scripture is relentless: there is one God, one being (ousia), who exists as three persons &mdash; not three gods in agreement." },
+    { text: "&ldquo;Father, Son, and Spirit are three masks the one God wears, or three roles he plays.&rdquo;", answer:'modalism', why:"Masks and roles make the persons mere appearances of a single person &mdash; Sabellian modalism. But the Son prays to the Father and is sent by him; one who prays to another is not that other wearing a mask." },
+    { text: "&ldquo;God is one being who exists eternally as three co-equal, co-eternal persons: Father, Son, and Holy Spirit.&rdquo;", answer:'orthodox', why:"This is the doctrine itself &mdash; one what, three whos; one being, three persons, none greater or lesser. Nicene orthodoxy, stated exactly right." },
+    { text: "&ldquo;Jesus is the first and greatest being God ever created &mdash; higher than the angels, but still a creature.&rdquo;", answer:'arianism', why:"A created, lesser Son is Arianism. Scripture puts the Son on the Creator&rsquo;s side of the line: &lsquo;all things were made through him&rsquo; (John 1:3). The one through whom all things were made cannot be one of the made things." },
+    { text: "&ldquo;God is like a shamrock: three leaves on one stem.&rdquo;", answer:'partialism', why:"Each leaf is only part of the shamrock, not the whole &mdash; partialism. The persons are not parts that add up to God; each person is wholly and completely God." },
+    { text: "&ldquo;It was the Father himself who was born of Mary and suffered on the cross.&rdquo;", answer:'modalism', why:"This is patripassianism, a form of modalism &mdash; it collapses the Father and the Son into one person. It was the Son who became incarnate and suffered; on the cross he cries out to the Father, who is genuinely distinct from him." },
+    { text: "&ldquo;Each person is one-third God; add the three together and you get one whole God.&rdquo;", answer:'partialism', why:"Thirds that sum to God is partialism. Each person is fully God, not a fraction. There are not three parts of God but three persons who each fully share the one undivided divine being." },
+    { text: "&ldquo;The Son is truly God, the Father is truly God, the Spirit is truly God &mdash; and there is exactly one God.&rdquo;", answer:'orthodox', why:"All three fully God, and only one God &mdash; held together without dividing the being or confusing the persons. That is precisely the Trinity." },
+    { text: "&ldquo;The one God first appeared as the Father, then became the Son, and now comes as the Spirit.&rdquo;", answer:'modalism', why:"One person in three successive modes across history is modalism. The three persons are eternally distinct and simultaneously present &mdash; not stages or costumes the one God passes through in turn." },
+    { text: "&ldquo;There really are three divine beings; we just call them &lsquo;one&rsquo; because they share a nature and never disagree.&rdquo;", answer:'tritheism', why:"Three beings who share a kind is how we describe three humans &mdash; that is tritheism. The Trinity is one numerically single being (not three that resemble each other) subsisting as three persons." },
+    { text: "&ldquo;The Holy Spirit is not really a person &mdash; he is God&rsquo;s impersonal power, like a force God sends out.&rdquo;", answer:'arianism', why:"Making the Spirit a mere force denies his full deity &mdash; the same impulse as Arianism (the church called this the pneumatomachian error). The Spirit speaks, chooses, and is grieved (Eph 4:30), and lying to him is lying to God (Acts 5:3&ndash;4): a co-equal divine person." }
+  ];
+
+  const ROUND = 10, ROUND_TIME = 20;
+  let pool = [], current = 0, correct = 0, attempts = 0, streak = 0, answered = false, nthResults = [], timer = null, timeLeft = 0;
+
+  function shuffle(a){ a = a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+
+  function startGame(){
+    let seen = {};
+    try { seen = JSON.parse(localStorage.getItem('nth_seen') || '{}'); } catch (e) {}
+    const key = it => it.text.slice(0, 40);
+    pool = ITEMS.map(it => ({ it, r: (seen[key(it)] || 0) + Math.random() }))
+      .sort((a, b) => a.r - b.r).slice(0, ROUND).map(x => x.it);
+    pool = shuffle(pool);
+    pool.forEach(it => { seen[key(it)] = (seen[key(it)] || 0) + 1; });
+    try { localStorage.setItem('nth_seen', JSON.stringify(seen)); } catch (e) {}
+    current = 0; correct = 0; attempts = 0; streak = 0; nthResults = [];
+    document.getElementById('summary').classList.remove('show');
+    document.getElementById('card').style.display = '';
+    document.getElementById('choices').style.display = '';
+    updateStats();
+    showRound();
+  }
+
+  function showRound(){
+    answered = false;
+    const q = pool[current];
+    document.getElementById('statement').innerHTML = q.text;
+    document.getElementById('stat-round').textContent = (current+1) + '/' + ROUND;
+    const fb = document.getElementById('fb'); fb.className = 'fb';
+    document.getElementById('next').classList.remove('show');
+    document.querySelectorAll('.choice').forEach(b => { b.disabled = false; b.classList.remove('picked','reveal'); });
+    startTimer();
+  }
+
+  function startTimer(){
+    clearInterval(timer); timeLeft = ROUND_TIME;
+    const fill = document.getElementById('timer-fill');
+    fill.classList.remove('low'); fill.style.width = '100%';
+    timer = setInterval(() => {
+      timeLeft -= 0.1;
+      const pct = Math.max(0, timeLeft / ROUND_TIME * 100);
+      fill.style.width = pct + '%';
+      if (pct < 30) fill.classList.add('low');
+      if (timeLeft <= 0){ clearInterval(timer); if(!answered) answer(null); }
+    }, 100);
+  }
+
+  function answer(choice){
+    if (answered) return;
+    answered = true;
+    clearInterval(timer);
+    attempts++;
+    const q = pool[current];
+    const isCorrect = choice === q.answer;
+    if (isCorrect){ correct++; streak++; } else { streak = 0; }
+    nthResults.push(isCorrect);
+
+    document.querySelectorAll('.choice').forEach(b => {
+      b.disabled = true;
+      const v = b.getAttribute('data-val');
+      if (v === q.answer) b.classList.add('reveal');
+      if (v === choice && !isCorrect) b.classList.add('picked');
+    });
+
+    const fb = document.getElementById('fb');
+    fb.className = 'fb show ' + (isCorrect ? 'right' : 'wrong');
+    document.getElementById('fb-result').innerHTML = choice === null ? "&#9203; Time's up" : (isCorrect ? '&#10003; Correct' : '&#10007; Not quite');
+    document.getElementById('fb-name').textContent = q.answer === 'orthodox' ? 'This one is orthodox' : ('Heresy: ' + LABELS[q.answer]);
+    document.getElementById('fb-text').innerHTML = q.why;
+    document.getElementById('next').textContent = current < ROUND - 1 ? 'Next round →' : 'See results →';
+    document.getElementById('next').classList.add('show');
+    updateStats();
+  }
+
+  function nextRound(){
+    current++;
+    if (current >= ROUND) showSummary();
+    else { showRound(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  }
+
+  function updateStats(){
+    document.getElementById('stat-correct').textContent = correct;
+    document.getElementById('stat-streak').textContent = streak;
+    document.getElementById('stat-pct').textContent = attempts > 0 ? Math.round(correct/attempts*100) + '%' : '—';
+  }
+
+  function showSummary(){
+    clearInterval(timer);
+    document.getElementById('card').style.display = 'none';
+    document.getElementById('choices').style.display = 'none';
+    document.getElementById('fb').className = 'fb';
+    document.getElementById('next').classList.remove('show');
+    document.getElementById('timer-fill').style.width = '0%';
+    const s = document.getElementById('summary'); s.classList.add('show');
+    document.getElementById('sum-score').textContent = correct + '/' + ROUND;
+    const pct = Math.round(correct/ROUND*100);
+    const msgs = {
+      100: "Flawless. You could have sat on the Council of Nicaea. Now read why every analogy still fails.",
+      80: "Sharp. You can spot the classic Trinity errors on sight &mdash; and name them.",
+      60: "Solid. Review the ones you missed and the boundaries will lock in.",
+      40: "Good start. These heresies are subtle by design &mdash; naming them is how you learn the doctrine.",
+      0: "Everyone starts here. The Trinity is learned by seeing exactly where each error goes wrong."
+    };
+    const m = Object.entries(msgs).reverse().find(([k]) => pct >= parseInt(k));
+    document.getElementById('sum-msg').textContent = m ? m[1] : "Keep practising!";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // ── SHARE ──
+  function nthRoundRect(ctx,x,y,w,h,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
+  function buildNTHCard(){
+    const results = (nthResults.length === ROUND) ? nthResults : Array.from({length:ROUND},(_,i)=>i<correct);
+    const pct = Math.round(correct/ROUND*100);
+    const cv = document.createElement('canvas'); cv.width=1080; cv.height=1080;
+    const c = cv.getContext('2d');
+    c.fillStyle='#0a1628'; c.fillRect(0,0,1080,1080);
+    c.strokeStyle='rgba(200,169,81,0.35)'; c.lineWidth=3; nthRoundRect(c,40,40,1000,1000,28); c.stroke();
+    c.textAlign='center';
+    c.fillStyle='#c8a951'; c.font='700 38px "DM Sans",sans-serif'; c.fillText('A P O L O G I A   D A I L Y',540,160);
+    c.strokeStyle='rgba(200,169,81,0.4)'; c.lineWidth=2; c.beginPath(); c.moveTo(390,200); c.lineTo(690,200); c.stroke();
+    c.fillStyle='rgba(255,255,255,0.55)'; c.font='500 30px "DM Sans",sans-serif'; c.fillText('NAME THE HERESY',540,290);
+    c.fillStyle='#e8cf87'; c.font='700 180px "Playfair Display",Georgia,serif'; c.fillText(correct+'/'+ROUND,540,500);
+    c.fillStyle='rgba(255,255,255,0.5)'; c.font='400 32px "DM Sans",sans-serif'; c.fillText('Trinity errors named',540,552);
+    const size=100,gap=22,perRow=5,rowW=perRow*size+(perRow-1)*gap,startX=(1080-rowW)/2,startY=610;
+    results.forEach((ok,i)=>{ const x=startX+(i%perRow)*(size+gap), y=startY+Math.floor(i/perRow)*(size+gap);
+      if(ok){ c.fillStyle='#c8a951'; nthRoundRect(c,x,y,size,size,13); c.fill(); c.strokeStyle='#0a1628'; c.lineWidth=8; c.lineCap='round'; c.beginPath(); c.moveTo(x+27,y+52); c.lineTo(x+43,y+70); c.lineTo(x+73,y+32); c.stroke(); }
+      else { c.fillStyle='rgba(255,255,255,0.07)'; nthRoundRect(c,x,y,size,size,13); c.fill(); c.strokeStyle='rgba(255,255,255,0.18)'; c.lineWidth=2; nthRoundRect(c,x,y,size,size,13); c.stroke(); c.strokeStyle='rgba(255,255,255,0.4)'; c.lineWidth=7; c.lineCap='round'; c.beginPath(); c.moveTo(x+33,y+33); c.lineTo(x+67,y+67); c.moveTo(x+67,y+33); c.lineTo(x+33,y+67); c.stroke(); }
+    });
+    c.fillStyle='#e8cf87'; c.font='600 46px "DM Sans",sans-serif'; c.fillText(pct+'% accuracy',540,905);
+    c.fillStyle='rgba(255,255,255,0.45)'; c.font='400 28px "DM Sans",sans-serif'; c.fillText('Can you spot modalism, Arianism, tritheism?',540,955);
+    c.fillStyle='#c8a951'; c.font='600 34px "DM Sans",sans-serif'; c.fillText('Can you beat it?  apologiadaily.com',540,1015);
+    return cv;
+  }
+  function spoilerNTH(){
+    const results = (nthResults.length === ROUND) ? nthResults : Array.from({length:ROUND},(_,i)=>i<correct);
+    const row = n => results.slice(n,n+5).map(ok=>ok?'🛡️':'⬛').join('');
+    return 'Apologia Daily — Name the Heresy\n'+row(0)+'\n'+row(5)+'  '+correct+'/'+ROUND+'\nCan you beat it? https://apologiadaily.com/name-the-heresy.html';
+  }
+  async function shareNTH(){
+    const text = spoilerNTH();
+    try{
+      await (document.fonts && document.fonts.ready);
+      const canvas = buildNTHCard();
+      const blob = await new Promise(res => canvas.toBlob(res,'image/png'));
+      const file = new File([blob],'apologia-name-the-heresy.png',{type:'image/png'});
+      if(navigator.canShare && navigator.canShare({files:[file]})){ await navigator.share({files:[file],text}); return; }
+      const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='apologia-name-the-heresy.png';
+      document.body.appendChild(a); a.click(); a.remove();
+      if(navigator.clipboard) await navigator.clipboard.writeText(text);
+      alert('Your result card was downloaded and the challenge text copied — post them anywhere!');
+    }catch(e){
+      if(navigator.share){ navigator.share({text,url:'https://apologiadaily.com/name-the-heresy.html'}); }
+      else if(navigator.clipboard){ navigator.clipboard.writeText(text); alert('Result copied to clipboard — paste it anywhere!'); }
+    }
+  }
+
+  startGame();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  (function(){ function boot(){ if(window.supabase && window.supabase.createClient){ try{ window.sb = window.supabase.createClient('https://noprgxkwniouukmrfozc.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'); }catch(e){} } } if(document.readyState!=='loading') boot(); else document.addEventListener('DOMContentLoaded',boot); })();
+</script>
+<script src="/ad-nav.js" defer></script>
+</body>
+</html>
