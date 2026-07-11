@@ -6,6 +6,24 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **2026-07-11 (web session — Groups / UX / SEO / Coach — handoff:
+> `docs/SESSION_HANDOFF_2026-07-11-groups-ux.md`).** Product/UX, not doctrine. **Study Groups is now a
+> real feature** (Supabase migration RAN by the user; `docs/STUDY_GROUPS_SPEC.md`): reframed for everyone,
+> realtime chat, team pulse, working invite/join (`join.html` + `?next=` on login/signup), group result
+> share-card. **Email + fall-behind nudges are LIVE** — `RESEND_API_KEY` is confirmed set (the long-standing
+> "unset" open item is RESOLVED); nudges fold into `api/weekly-email.js` (`?do=group-nudge`, plus a no-send
+> `?do=status` diagnostic). **Games unified** (`games-common.js` = one `ad_streak` + Coach + universal share
+> card; cut Argument-or-Fallacy; Memory Palace folded into the ev-m mastery track and removed from nav).
+> **Plans ↔ Groups** are one loop ("Study this with a group", group "do today's day" + host day controls,
+> plan-day pings `group_activity`). **SEO**: crawlable static index on `evidence-library.html`, `ev-m` →
+> essay canonicals (67), per-card deep links (`?arg=<slug>` + `id="arg-*"` anchors), sitemap lastmod
+> regenerator (`tools/update-sitemap-lastmod.mjs`), study-plan reading-popup title-drift fix. **Nav is now a
+> build step**: `tools/sync-nav.mjs` (single-source menu, CI `--check`, gated pages excluded) + a **rich
+> "More" mega-menu LIVE on 179 non-gated pages** (mobile-aware; gated pages keep the simple dropdown — NOT
+> browser-tested, verify). **Coach Skill Map**: `Coach.renderSkillMap()` on `coach.html` (all 63 arguments as
+> a mastery-coloured grid) + `renderSkillStrip()` on the dashboard + Coach added to the nav mega. Top open
+> items: bring the mega to the gated pages via a stamp pass; browser-verify the mega desktop+mobile.
+>
 > **2026-07-11 (Trinity "world-class" session — handoff: `docs/SESSION_HANDOFF_2026-07-11-trinity.md`).**
 > Rebuilt the **Trinity tab (`ev-s6`) from 10 cards to 15**, plus a guided-pathway intro box and a new
 > interactive **"Name the Heresy"** diagnostic (`name-the-heresy.html`, in `games.html`). Five new gated
