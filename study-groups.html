@@ -310,7 +310,10 @@
           <div class="pulse-n" id="pulse-n">0 of 0 studied</div>
           <div class="pulse-sub" id="pulse-sub">When your group shows up, it shows here.</div>
         </div>
-        <button class="pulse-btn" id="pulse-btn" onclick="markStudiedToday()">&#10003; I studied today</button>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <button class="pulse-btn" id="pulse-btn" onclick="markStudiedToday()">&#10003; I studied today</button>
+          <button class="pulse-btn" id="share-btn" style="background:rgba(255,255,255,0.12);color:#fff;" onclick="shareGroupCard()">&#128228; Share</button>
+        </div>
       </div>
 
       <div class="detail-grid">
@@ -733,7 +736,8 @@
       document.getElementById('plan-name-text').textContent = PLAN_LABELS[group.plan] || group.plan;
       var day = group.plan_day || 1;
       var total = PLAN_TOTAL[group.plan] || 14;
-      document.getElementById('plan-day-text').textContent = 'Day ' + day + ' of ' + total;
+      var done = day >= total;
+      document.getElementById('plan-day-text').textContent = done ? ('\u{1F389} Completed — all ' + total + ' days') : ('Day ' + day + ' of ' + total);
       document.getElementById('plan-progress-fill').style.width = Math.min(100, Math.round(day / total * 100)) + '%';
     } else {
       document.getElementById('plan-none').style.display = '';
@@ -989,6 +993,90 @@
     var t = document.getElementById('toast');
     t.textContent = msg; t.classList.add('show');
     setTimeout(function() { t.classList.remove('show'); }, 2800);
+  }
+
+  // ── GROUP RESULT SHARE CARD ──
+  function grRound(c,x,y,w,h,r){ c.beginPath(); c.moveTo(x+r,y); c.arcTo(x+w,y,x+w,y+h,r); c.arcTo(x+w,y+h,x,y+h,r); c.arcTo(x,y+h,x,y,r); c.arcTo(x,y,x+w,y,r); c.closePath(); }
+  function wrapText(c,text,x,y,maxW,lh){
+    var words=(text||'').split(' '), line='', yy=y;
+    for(var i=0;i<words.length;i++){ var test=line+words[i]+' ';
+      if(c.measureText(test).width>maxW && line){ c.fillText(line.trim(),x,yy); line=words[i]+' '; yy+=lh; }
+      else line=test; }
+    c.fillText(line.trim(),x,yy); return yy;
+  }
+  function buildGroupShareCanvas(){
+    var g = currentGroup;
+    var total = g.plan ? (PLAN_TOTAL[g.plan]||14) : 0;
+    var day = g.plan_day || 1;
+    var complete = g.plan && day >= total;
+    var planName = g.plan ? (PLAN_LABELS[g.plan]||g.plan) : '';
+    var mc = parseInt(document.getElementById('detail-member-count').textContent) || 1;
+    var active = 0; try { active = Object.keys(window._activeSet||{}).length; } catch(e){}
+
+    var cv=document.createElement('canvas'); cv.width=1080; cv.height=1080; var c=cv.getContext('2d');
+    c.fillStyle='#0a1628'; c.fillRect(0,0,1080,1080);
+    c.strokeStyle='rgba(200,169,81,0.35)'; c.lineWidth=3; grRound(c,40,40,1000,1000,28); c.stroke();
+    c.textAlign='center';
+    c.fillStyle='#c8a951'; c.font='700 36px "DM Sans",sans-serif'; c.fillText('A P O L O G I A   D A I L Y',540,150);
+    c.strokeStyle='rgba(200,169,81,0.4)'; c.lineWidth=2; c.beginPath(); c.moveTo(400,188); c.lineTo(680,188); c.stroke();
+    c.fillStyle='rgba(255,255,255,0.55)'; c.font='500 28px "DM Sans",sans-serif';
+    c.fillText(complete ? 'STUDY GROUP · COMPLETED TOGETHER' : 'STUDY GROUP', 540, 250);
+
+    // group icon in a ring
+    c.beginPath(); c.arc(540,360,68,0,Math.PI*2); c.fillStyle='rgba(200,169,81,0.12)'; c.fill();
+    c.strokeStyle='rgba(200,169,81,0.5)'; c.lineWidth=2; c.stroke();
+    c.font='64px "DM Sans",sans-serif'; c.fillStyle='#fff'; c.fillText(g.icon||'\u{1F465}',540,382);
+
+    // group name
+    c.fillStyle='#fff'; c.font='700 58px "Playfair Display",Georgia,serif';
+    var ny = wrapText(c, g.name, 540, 500, 880, 66);
+
+    // headline
+    c.fillStyle='#e8cf87'; c.font='600 40px "DM Sans",sans-serif';
+    if(complete) c.fillText('We finished '+planName+'!', 540, ny+90);
+    else if(g.plan) c.fillText('Day '+day+' of '+total+' · '+planName, 540, ny+90);
+    else c.fillText(mc+' studying the evidence together', 540, ny+90);
+
+    // progress bar (if plan)
+    if(g.plan){
+      var pw=620, px=(1080-pw)/2, py=ny+140, pct=Math.min(1, day/total);
+      c.fillStyle='rgba(255,255,255,0.10)'; grRound(c,px,py,pw,16,8); c.fill();
+      c.fillStyle='#c8a951'; grRound(c,px,py,Math.max(16,pw*pct),16,8); c.fill();
+    }
+
+    // stats row
+    c.fillStyle='rgba(255,255,255,0.5)'; c.font='400 30px "DM Sans",sans-serif';
+    var statLine = mc+' member'+(mc!==1?'s':'') + (active>0 ? ('  ·  '+active+' active this week') : '');
+    c.fillText(statLine, 540, 900);
+
+    // CTA
+    c.fillStyle='#c8a951'; c.font='600 34px "DM Sans",sans-serif';
+    c.fillText('Study together at apologiadaily.com', 540, 1000);
+    return cv;
+  }
+  async function shareGroupCard(){
+    if(!currentGroup) return;
+    var g=currentGroup;
+    var total = g.plan ? (PLAN_TOTAL[g.plan]||14) : 0, day=g.plan_day||1;
+    var complete = g.plan && day>=total;
+    var line = complete ? ('Our group just finished '+(PLAN_LABELS[g.plan]||g.plan)+' on Apologia Daily! 🎉')
+      : g.plan ? ('Our group is on Day '+day+' of '+(PLAN_LABELS[g.plan]||g.plan)+' on Apologia Daily.')
+      : ('We\'re studying the case for the faith together on Apologia Daily.');
+    var text = line + '\nCome study with us: https://apologiadaily.com/study-groups.html';
+    try{
+      await (document.fonts && document.fonts.ready);
+      var canvas=buildGroupShareCanvas();
+      var blob=await new Promise(function(res){ canvas.toBlob(res,'image/png'); });
+      var file=new File([blob],'apologia-study-group.png',{type:'image/png'});
+      if(navigator.canShare && navigator.canShare({files:[file]})){ await navigator.share({files:[file],text:text}); return; }
+      var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='apologia-study-group.png';
+      document.body.appendChild(a); a.click(); a.remove();
+      if(navigator.clipboard){ try{ await navigator.clipboard.writeText(text); }catch(e){} }
+      showToast('Group card downloaded + invite text copied — post it anywhere.');
+    }catch(e){
+      if(navigator.share){ navigator.share({text:text,url:'https://apologiadaily.com/study-groups.html'}); }
+      else if(navigator.clipboard){ navigator.clipboard.writeText(text); showToast('Invite copied to clipboard.'); }
+    }
   }
 
   // ── NAV AUTH ──
