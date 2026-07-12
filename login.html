@@ -50,6 +50,8 @@
 
     .error-box { background: var(--error-bg); border: 1px solid #f09595; border-radius: 4px; padding: 10px 14px; font-size: 0.85rem; color: var(--error); margin-bottom: 1rem; display: none; }
     .error-box.visible { display: block; }
+    .notice-box { background: #e1f5ee; border: 1px solid #9fe1cb; border-radius: 4px; padding: 10px 14px; font-size: 0.85rem; color: #0f6e56; margin-bottom: 1rem; display: none; line-height: 1.5; }
+    .notice-box.visible { display: block; }
 
     .divider { display: flex; align-items: center; gap: 12px; margin: 1rem 0; }
     .divider-line { flex: 1; height: 1px; background: var(--border); }
@@ -78,6 +80,7 @@
     <p class="card-sub">Sign in to continue your apologetics journey</p>
 
     <div class="error-box" id="error-box"></div>
+    <div class="notice-box" id="notice-box"></div>
 
     <div class="form-group">
       <label class="form-label" for="email">Email address</label>
@@ -89,7 +92,7 @@
       <input class="form-input" type="password" id="password" placeholder="Your password" autocomplete="current-password" />
     </div>
 
-
+    <a href="#" class="forgot-link" id="forgot-link" onclick="handleForgot(event)">Forgot your password?</a>
 
     <button class="btn-primary" id="login-btn" onclick="handleLogin()">
       <span class="loading-spinner" id="spinner"></span>
@@ -167,6 +170,26 @@
       if (spinner) spinner.style.display = 'none';
       if (btnText) btnText.textContent = 'Sign in';
     }
+  }
+
+  async function handleForgot(e) {
+    if (e) e.preventDefault();
+    if (!sb) { showError('Still loading — please try again in a moment.'); return; }
+    var email = document.getElementById('email').value.trim();
+    var errorBox = document.getElementById('error-box'); if (errorBox) errorBox.classList.remove('visible');
+    var noticeBox = document.getElementById('notice-box'); if (noticeBox) noticeBox.classList.remove('visible');
+    if (!email) { showError('Enter your email address above, then tap “Forgot your password?” again.'); return; }
+    try {
+      await sb.auth.resetPasswordForEmail(email, { redirectTo: window.location.origin + '/update-password.html' });
+      try { window.adTrack && window.adTrack('password_reset_requested'); } catch(x){}
+    } catch (err) { /* fall through to the same neutral message either way */ }
+    // Neutral wording on purpose — don't reveal whether an account exists for that email.
+    showNotice('If an account exists for ' + email + ', we’ve emailed a link to reset your password. Check your inbox (and your spam folder).');
+  }
+
+  function showNotice(msg) {
+    var box = document.getElementById('notice-box');
+    if (box) { box.textContent = msg; box.classList.add('visible'); }
   }
 
   function showError(msg) {

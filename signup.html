@@ -34,6 +34,10 @@
     .form-input { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 4px; font-family: var(--font-ui); font-size: 0.95rem; color: var(--text-dark); outline: none; transition: border-color 0.2s; background: var(--off-white); }
     .form-input:focus { border-color: var(--navy-300); background: var(--white); }
     .form-input::placeholder { color: var(--text-muted); }
+    .pw-wrap { position: relative; }
+    .pw-wrap .form-input { padding-right: 62px; }
+    .pw-toggle { position: absolute; top: 50%; right: 8px; transform: translateY(-50%); background: none; border: none; font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--navy-500); cursor: pointer; padding: 4px 6px; }
+    .pw-toggle:hover { color: var(--navy-700); }
     .btn-primary { width: 100%; padding: 13px; border-radius: 4px; background: var(--gold); color: var(--navy-950); font-family: var(--font-ui); font-size: 0.95rem; font-weight: 500; border: none; cursor: pointer; transition: background 0.2s; margin-bottom: 1rem; }
     .btn-primary:hover { background: var(--gold-light); }
     .btn-primary:disabled { opacity: 0.5; cursor: default; }
@@ -86,7 +90,15 @@
 
       <div class="form-group">
         <label class="form-label" for="password">Password</label>
-        <input class="form-input" type="password" id="password" placeholder="At least 8 characters" autocomplete="new-password" />
+        <div class="pw-wrap">
+          <input class="form-input" type="password" id="password" placeholder="At least 8 characters" autocomplete="new-password" />
+          <button type="button" class="pw-toggle" id="pw-toggle" onclick="togglePw()" aria-label="Show password">Show</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="password2">Confirm password</label>
+        <input class="form-input" type="password" id="password2" placeholder="Re-enter your password" autocomplete="new-password" />
       </div>
 
       <button class="btn-primary" id="signup-btn" onclick="handleSignup()">
@@ -131,9 +143,12 @@
 
       errorBox.classList.remove('visible');
 
+      const password2 = document.getElementById('password2').value;
+
       if (!name) { showError('Please enter your name.'); return; }
       if (!email) { showError('Please enter your email address.'); return; }
       if (!password || password.length < 8) { showError('Password must be at least 8 characters.'); return; }
+      if (password !== password2) { showError('The two passwords don’t match.'); return; }
 
       btn.disabled = true;
       spinner.style.display = 'inline-block';
@@ -150,11 +165,27 @@
         options: { data: signUpData }
       });
 
-      if (error) {
-        showError(error.message);
+      function resetBtn() {
         btn.disabled = false;
         spinner.style.display = 'none';
         btnText.textContent = 'Create free account →';
+      }
+
+      if (error) {
+        if (/already|exists|registered/i.test(error.message || '')) {
+          showExisting(email);
+        } else {
+          showError(error.message);
+        }
+        resetBtn();
+        return;
+      }
+
+      // When email confirmation is on, Supabase hides "already registered" to prevent
+      // email enumeration: it returns a user with an empty identities array and no error.
+      if (data && data.user && Array.isArray(data.user.identities) && data.user.identities.length === 0) {
+        showExisting(email);
+        resetBtn();
         return;
       }
 
@@ -179,6 +210,27 @@
       const box = document.getElementById('error-box');
       box.textContent = msg;
       box.classList.add('visible');
+    }
+
+    // "An account already exists" — point them to sign in / reset instead of a dead end.
+    function showExisting(email) {
+      const box = document.getElementById('error-box');
+      box.innerHTML = 'An account with this email already exists. '
+        + '<a href="login.html" style="color:var(--error);font-weight:600;">Sign in</a> instead — '
+        + 'or reset your password from the sign-in page.';
+      box.classList.add('visible');
+    }
+
+    // Show/hide both password fields together.
+    function togglePw() {
+      const p1 = document.getElementById('password');
+      const p2 = document.getElementById('password2');
+      const t = document.getElementById('pw-toggle');
+      const show = p1.type === 'password';
+      p1.type = show ? 'text' : 'password';
+      if (p2) p2.type = show ? 'text' : 'password';
+      t.textContent = show ? 'Hide' : 'Show';
+      t.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
     }
   </script>
 <script>(function(){try{var p=new URLSearchParams(location.search);if(p.get('nocount')==='1')localStorage.setItem('ad-nocount','1');if(p.get('nocount')==='0')localStorage.removeItem('ad-nocount');if(localStorage.getItem('ad-nocount')==='1')return;}catch(e){}var s=document.createElement('script');s.defer=true;s.src='/_vercel/insights/script.js';document.head.appendChild(s);})();</script>
