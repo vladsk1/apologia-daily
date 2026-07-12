@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Source Library — Apologia Daily</title>
+  <meta name="description" content="The words of the early church, in the original public-domain translations — the creeds and the Church Fathers, every passage verified against its source." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/ad-nav.css">
+  <style>
+    :root {
+      --n:#0a1628; --n2:#050d1a; --n3:#1e4278; --n4:#f0f6fb;
+      --g:#c8a951; --w:#fff; --o:#f8f7f4;
+      --m:#3a4a62; --mu:#7a8fa8; --b:#d4e0ec;
+      --fd:'Playfair Display',Georgia,serif;
+      --ui:'DM Sans',sans-serif;
+      --bo:'Source Serif 4',Georgia,serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--bo); background: var(--o); color: var(--n); min-height: 100vh; }
+
+    .hero { background: var(--n2); padding: 3rem 2rem 1rem; }
+    .hero-inner { max-width: 880px; margin: 0 auto; }
+    .eyebrow { font-family: var(--ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--g); margin-bottom: 0.7rem; }
+    .hero h1 { font-family: var(--fd); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; color: var(--w); line-height: 1.2; margin-bottom: 0.6rem; }
+    .hero h1 em { font-style: italic; color: var(--g); }
+    .hero-sub { font-size: 0.95rem; color: rgba(255,255,255,0.6); max-width: 620px; line-height: 1.7; }
+
+    .search-wrap { background: var(--n2); padding: 1.4rem 2rem 2.2rem; }
+    .search-box { max-width: 880px; margin: 0 auto; position: relative; }
+    .search-input {
+      width: 100%; font-family: var(--ui); font-size: 1.05rem; color: var(--n);
+      padding: 0.9rem 1rem 0.9rem 3rem; border: 1px solid transparent; border-radius: 8px;
+      background: var(--w); outline: none; box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+    }
+    .search-input:focus { border-color: var(--g); }
+    .search-ic { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); font-size: 1.05rem; color: var(--mu); pointer-events: none; }
+
+    .main { max-width: 880px; margin: 0 auto; padding: 1.6rem 2rem 4rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 1rem; }
+    .chip { font-family: var(--ui); font-size: 0.78rem; color: var(--m); background: var(--w); border: 1px solid var(--b); border-radius: 999px; padding: 6px 14px; cursor: pointer; transition: all 0.15s; }
+    .chip:hover { border-color: var(--g); color: var(--n); }
+    .chip.active { background: var(--n); color: var(--w); border-color: var(--n); }
+    .chip .ct { opacity: 0.55; margin-left: 5px; font-variant-numeric: tabular-nums; }
+    .result-meta { font-family: var(--ui); font-size: 0.82rem; color: var(--mu); margin-bottom: 1.2rem; }
+
+    .psg { background: var(--w); border: 1px solid var(--b); border-left: 3px solid var(--g); border-radius: 8px; padding: 1.2rem 1.4rem; margin-bottom: 0.9rem; }
+    .psg-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 0.6rem; flex-wrap: wrap; }
+    .psg-au { font-family: var(--ui); font-size: 0.86rem; font-weight: 600; color: var(--n3); }
+    .psg-badge { font-family: var(--ui); font-size: 0.6rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #4a7a4a; background: #eaf4ea; border-radius: 4px; padding: 3px 7px; white-space: nowrap; }
+    .psg-q { font-family: var(--bo); font-size: 1.08rem; line-height: 1.66; color: var(--n); font-weight: 400; }
+    .psg-q::before { content: '\201C'; font-family: var(--fd); color: var(--g); font-size: 1.4em; line-height: 0; vertical-align: -0.35em; margin-right: 2px; }
+    .psg-q::after { content: '\201D'; font-family: var(--fd); color: var(--g); font-size: 1.4em; line-height: 0; vertical-align: -0.55em; margin-left: 1px; }
+    .psg-cite { font-family: var(--ui); font-size: 0.82rem; color: var(--m); margin-top: 0.7rem; }
+    .psg-cite b { font-weight: 600; color: var(--n); }
+    .psg-yr { color: var(--mu); }
+    .psg-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 0.7rem; flex-wrap: wrap; }
+    .psg-tr { font-family: var(--bo); font-style: italic; font-size: 0.8rem; color: var(--mu); }
+    .psg-actions { display: flex; gap: 8px; align-items: center; }
+    .psg-btn { font-family: var(--ui); font-size: 0.75rem; color: var(--m); background: var(--o); border: 1px solid var(--b); border-radius: 6px; padding: 5px 11px; cursor: pointer; text-decoration: none; transition: all 0.15s; white-space: nowrap; }
+    .psg-btn:hover { border-color: var(--g); color: var(--n); }
+    .psg-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.8rem; }
+    .psg-tag { font-family: var(--ui); font-size: 0.68rem; color: var(--mu); background: var(--o); border: 1px solid var(--b); border-radius: 999px; padding: 2px 9px; cursor: pointer; }
+    .psg-tag:hover { border-color: var(--g); color: var(--n); }
+    .psg mark { background: #fbf1c8; color: inherit; padding: 0 1px; border-radius: 2px; }
+
+    .grp-h { font-family: var(--fd); font-size: 1.15rem; font-weight: 700; color: var(--n); margin: 1.8rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--b); }
+    .grp-h:first-child { margin-top: 0; }
+    .grp-h span { font-family: var(--ui); font-size: 0.78rem; font-weight: 400; color: var(--mu); }
+
+    .empty { text-align: center; padding: 3rem 1rem; color: var(--mu); font-family: var(--ui); }
+    .empty strong { color: var(--n); }
+    .note { font-family: var(--ui); font-size: 0.8rem; color: var(--mu); line-height: 1.6; margin-top: 2.4rem; padding-top: 1.4rem; border-top: 1px solid var(--b); }
+    .note a { color: #8a6d1f; }
+
+    footer { background: var(--n2); color: rgba(255,255,255,0.5); padding: 2.5rem 2rem; font-family: var(--ui); font-size: 0.85rem; }
+    .fi { max-width: 1100px; margin: 0 auto; text-align: center; }
+    .flo { font-family: var(--fd); font-weight: 700; color: var(--w); font-size: 1.1rem; margin-bottom: 0.8rem; }
+    .flo span { color: var(--g); }
+    .fli { list-style: none; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; padding: 0; }
+    .fli a { color: rgba(255,255,255,0.55); text-decoration: none; }
+    .fli a:hover { color: var(--w); }
+    .fcop { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+    .toast { position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--n); color: var(--w); font-family: var(--ui); font-size: 0.85rem; padding: 10px 18px; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); opacity: 0; pointer-events: none; transition: all 0.25s; z-index: 60; }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  </style>
+</head>
+<body>
+
+  <nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/search.html" class="adn-search-link" aria-label="Search">&#128269; Search</a></li>
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/asked-and-answered.html">Asked &amp; Answered</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop adn-has-mega">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <div class="adn-mega">
+          <div class="adn-mega-in">
+            <div class="adn-mega-col">
+              <div class="adn-mega-h">Go deeper</div>
+              <a class="adn-mi" href="/library/"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Deep-Dive Essays</span><span class="adn-mi-dc">Long-form, fully-cited essays.</span></span></a>
+              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Answers</span><span class="adn-mi-dc">The questions people ask most.</span></span></a>
+              <a class="adn-mi" href="/sources.html"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Source Library</span><span class="adn-mi-dc">The creeds &amp; Church Fathers, verified.</span></span></a>
+              <a class="adn-mi" href="/whats-new.html"><span class="adn-mi-ic">&#128240;</span><span class="adn-mi-tx"><span class="adn-mi-nm">What&#39;s New</span><span class="adn-mi-dc">Latest essays, features &amp; reels.</span></span></a>
+            </div>
+            <div class="adn-mega-col">
+              <div class="adn-mega-h">Practice &amp; community</div>
+              <a class="adn-mi" href="/coach.html"><span class="adn-mi-ic">&#129305;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Coach</span><span class="adn-mi-dc">Your skill map &amp; a plan for your weak spots.</span></span></a>
+              <a class="adn-mi" href="/games.html"><span class="adn-mi-ic">&#127918;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Games</span><span class="adn-mi-dc">Quizzes that feed your streak.</span></span></a>
+              <a class="adn-mi" href="/study-groups.html"><span class="adn-mi-ic">&#128101;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Study Groups <span class="adn-mi-tag">New</span></span><span class="adn-mi-dc">Study with people you love.</span></span></a>
+              <a class="adn-mi" href="/reading-club.html"><span class="adn-mi-ic">&#128214;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Reading Clubs</span><span class="adn-mi-dc">The classics, chapter by chapter.</span></span></a>
+            </div>
+            <div class="adn-mega-col">
+              <div class="adn-mega-h">For you</div>
+              <a class="adn-mi" href="/parents.html"><span class="adn-mi-ic">&#128106;</span><span class="adn-mi-tx"><span class="adn-mi-nm">For Parents</span><span class="adn-mi-dc">Your kids&#39; hardest questions.</span></span></a>
+              <a class="adn-mi" href="/video-library.html"><span class="adn-mi-ic">&#127909;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Videos</span><span class="adn-mi-dc">Short, shareable explainers.</span></span></a>
+            </div>
+            <div class="adn-mega-foot">
+              <a href="/about.html">About</a>
+              <a href="/what-we-believe.html">What We Believe</a>
+              <a href="/editorial-standards.html">Editorial Standards</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <button class="adn-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Source Library</p>
+      <h1>The words of the <em>early church</em></h1>
+      <p class="hero-sub">The creeds and the Church Fathers, in their original public-domain translations — every passage verified word-for-word against its source, so you can quote the real thing. When Ignatius calls Jesus &ldquo;our God&rdquo; in AD 107, that is the actual text.</p>
+    </div>
+  </div>
+  <div class="search-wrap">
+    <div class="search-box">
+      <span class="search-ic">&#128269;</span>
+      <input class="search-input" type="text" id="q" autocomplete="off"
+             placeholder="Search the fathers: deity of Christ, resurrection, Trinity, Eucharist&hellip;"
+             oninput="onInput()" />
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="chips" id="chips"></div>
+    <div class="result-meta" id="meta"></div>
+    <div id="results"></div>
+    <p class="note" id="note"></p>
+  </div>
+
+  <footer>
+    <div class="fi">
+      <div class="flo">Apologia<span>Daily</span></div>
+      <ul class="fli">
+        <li><a href="/evidence-library.html">Evidence Library</a></li>
+        <li><a href="/answers/">Answers</a></li>
+        <li><a href="/search.html">Search</a></li>
+        <li><a href="/glossary.html">Glossary</a></li>
+      </ul>
+      <div class="fcop">&copy; 2026 Apologia Daily. Built for the defence of the Gospel.</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">Copied to clipboard</div>
+
+  <script>
+  (function () {
+    var INDEX = [];
+    var filter = 'all';
+
+    // group each passage into a browsable collection
+    function groupOf(rec) {
+      var w = rec.work || '', a = rec.author || '';
+      if (/Creed|Definition/i.test(w)) return 'creeds';
+      if (/Ignatius/i.test(a)) return 'ignatius';
+      if (/Athanasius/i.test(a)) return 'athanasius';
+      return 'other';
+    }
+    var GROUP_LABEL = { creeds: 'The Creeds', ignatius: 'Ignatius of Antioch', athanasius: 'Athanasius of Alexandria', other: 'Other Fathers' };
+    var GROUP_ORDER = { creeds: 0, ignatius: 1, athanasius: 2, other: 3 };
+
+    function esc(s) {
+      return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+      });
+    }
+    function norm(s) {
+      return String(s == null ? '' : s).toLowerCase()
+        .replace(/[‘’'`]/g, '')
+        .replace(/&[a-z]+;|&#\d+;/g, ' ')
+        .replace(/\s+/g, ' ').trim();
+    }
+    function tokens(q) { return norm(q).split(/\s+/).filter(Boolean).slice(0, 8); }
+
+    function matches(rec, toks) {
+      for (var i = 0; i < toks.length; i++) { if (rec._b.indexOf(toks[i]) === -1) return false; }
+      return true;
+    }
+    function highlight(text, toks) {
+      var out = esc(text);
+      for (var i = 0; i < toks.length; i++) {
+        var tok = toks[i].replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        if (!tok) continue;
+        try { out = out.replace(new RegExp('(' + tok + ')', 'ig'), '<mark>$1</mark>'); } catch (e) {}
+      }
+      return out;
+    }
+    function dateStr(rec) {
+      if (!rec.year) return '';
+      var councils = groupOf(rec) === 'creeds' && /Council|Nicaea|Constantinople|Chalcedon|Definition/i.test((rec.author || '') + (rec.work || ''));
+      return (councils ? 'AD ' : 'c. AD ') + rec.year;
+    }
+
+    function card(rec, toks) {
+      var tags = (rec.tags || []).map(function (t) {
+        return '<button class="psg-tag" data-tag="' + esc(t) + '">' + esc(t) + '</button>';
+      }).join('');
+      var d = dateStr(rec);
+      return '<article class="psg">' +
+        '<div class="psg-top"><span class="psg-au">' + esc(rec.author) + '</span>' +
+          '<span class="psg-badge">&#10003; verified</span></div>' +
+        '<blockquote class="psg-q">' + highlight(rec.text, toks) + '</blockquote>' +
+        '<div class="psg-cite"><b>' + esc(rec.work) + '</b>' + (rec.section ? ', ' + esc(rec.section) : '') +
+          (d ? ' &middot; <span class="psg-yr">' + d + '</span>' : '') + '</div>' +
+        '<div class="psg-foot"><span class="psg-tr">' + esc(rec.translation) + '</span>' +
+          '<span class="psg-actions">' +
+            '<button class="psg-btn psg-copy" data-id="' + esc(rec.id) + '">Copy quote</button>' +
+            '<a class="psg-btn" href="' + esc(rec.source_url) + '" target="_blank" rel="noopener">Source &#8599;</a>' +
+          '</span></div>' +
+        (tags ? '<div class="psg-tags">' + tags + '</div>' : '') +
+      '</article>';
+    }
+
+    function render() {
+      var toks = tokens(document.getElementById('q').value);
+      var results = document.getElementById('results');
+      var meta = document.getElementById('meta');
+
+      var hits = INDEX.filter(function (r) {
+        if (filter !== 'all' && r._g !== filter) return false;
+        return matches(r, toks);
+      });
+
+      meta.textContent = hits.length + ' passage' + (hits.length === 1 ? '' : 's') +
+        (toks.length ? ' matching “' + document.getElementById('q').value.trim() + '”' : '');
+
+      if (!hits.length) {
+        results.innerHTML = '<div class="empty">No passages match.<br>Try a broader term, or clear the filters.</div>';
+        return;
+      }
+
+      // group headings (only when showing all groups)
+      var html = '', lastG = null, showHeads = (filter === 'all');
+      for (var i = 0; i < hits.length; i++) {
+        var r = hits[i];
+        if (showHeads && r._g !== lastG) {
+          lastG = r._g;
+          var n = hits.filter(function (x) { return x._g === lastG; }).length;
+          html += '<div class="grp-h">' + esc(GROUP_LABEL[lastG]) + ' <span>&middot; ' + n + '</span></div>';
+        }
+        html += card(r, toks);
+      }
+      results.innerHTML = html;
+
+      results.querySelectorAll('.psg-copy').forEach(function (b) {
+        b.onclick = function () { copyQuote(b.getAttribute('data-id')); };
+      });
+      results.querySelectorAll('.psg-tag').forEach(function (b) {
+        b.onclick = function () {
+          document.getElementById('q').value = b.getAttribute('data-tag');
+          onInput();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+      });
+    }
+
+    function copyQuote(id) {
+      var r = INDEX.find(function (x) { return x.id === id; });
+      if (!r) return;
+      var cite = r.author + ', ' + r.work + (r.section ? ' ' + r.section : '') + ' (' + r.translation + ')';
+      var payload = '“' + r.text + '” — ' + cite;
+      var done = function () { showToast(); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(payload).then(done, function () { fallbackCopy(payload); done(); });
+      } else { fallbackCopy(payload); done(); }
+    }
+    function fallbackCopy(t) {
+      var ta = document.createElement('textarea'); ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+    var toastT;
+    function showToast() {
+      var el = document.getElementById('toast'); el.classList.add('show');
+      clearTimeout(toastT); toastT = setTimeout(function () { el.classList.remove('show'); }, 1600);
+    }
+
+    function buildChips() {
+      var counts = { all: INDEX.length, creeds: 0, ignatius: 0, athanasius: 0, other: 0 };
+      INDEX.forEach(function (r) { counts[r._g] = (counts[r._g] || 0) + 1; });
+      var defs = [['all', 'All'], ['creeds', 'The Creeds'], ['ignatius', 'Ignatius'], ['athanasius', 'Athanasius']];
+      if (counts.other) defs.push(['other', 'Other Fathers']);
+      var el = document.getElementById('chips');
+      el.innerHTML = defs.map(function (d) {
+        return '<button class="chip' + (d[0] === filter ? ' active' : '') + '" data-f="' + d[0] + '">' +
+          d[1] + '<span class="ct">' + (counts[d[0]] || 0) + '</span></button>';
+      }).join('');
+      el.querySelectorAll('.chip').forEach(function (b) {
+        b.onclick = function () { filter = b.getAttribute('data-f'); buildChips(); render(); };
+      });
+    }
+
+    window.onInput = function () {
+      var q = document.getElementById('q').value;
+      try { history.replaceState(null, '', q ? '/sources.html?q=' + encodeURIComponent(q) : '/sources.html'); } catch (e) {}
+      render();
+    };
+
+    fetch('/sources-index.json').then(function (r) { return r.json(); }).then(function (data) {
+      INDEX = (data || []).filter(function (r) { return r.verified; }).map(function (rec) {
+        rec._g = groupOf(rec);
+        rec._b = norm([rec.text, rec.author, rec.work, rec.section, (rec.tags || []).join(' ')].join(' '));
+        return rec;
+      });
+      INDEX.sort(function (a, b) {
+        if (GROUP_ORDER[a._g] !== GROUP_ORDER[b._g]) return GROUP_ORDER[a._g] - GROUP_ORDER[b._g];
+        if ((a.year || 0) !== (b.year || 0)) return (a.year || 0) - (b.year || 0);
+        return String(a.id).localeCompare(String(b.id));
+      });
+      document.getElementById('note').innerHTML =
+        'Every passage is public-domain and has been verified word-for-word against its cited source. ' +
+        'These are the primary texts the <a href="/evidence-library.html">Evidence Library</a> quotes from. ' +
+        'Growing steadily &mdash; the creeds, Ignatius, and Athanasius are here now, with Irenaeus, Justin Martyr, Tertullian, Augustine and Eusebius to follow.';
+      buildChips();
+      var pre = new URLSearchParams(location.search).get('q');
+      if (pre) document.getElementById('q').value = pre;
+      render();
+    }).catch(function () {
+      document.getElementById('results').innerHTML =
+        '<div class="empty">The library is temporarily unavailable. Browse the <a href="/evidence-library.html" style="color:#8a6d1f;">Evidence Library</a> instead.</div>';
+    });
+  })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
+  <script>
+  var sb = null;
+  function initSb() {
+    if (window.supabase && window.supabase.createClient) {
+      sb = window.supabase.createClient(
+        'https://noprgxkwniouukmrfozc.supabase.co',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+      );
+      checkAuth();
+    } else { setTimeout(initSb, 50); }
+  }
+  document.addEventListener('DOMContentLoaded', initSb);
+  async function checkAuth() {
+    try {
+      var r = await sb.auth.getSession();
+      var s = r.data && r.data.session;
+      if (s) {
+        var name = (s.user.user_metadata && s.user.user_metadata.full_name) || s.user.email.split('@')[0];
+        document.getElementById('nav-user').textContent = name;
+        document.getElementById('nav-dashboard').style.display = 'inline-block';
+        document.getElementById('nav-signout').style.display = 'inline-block';
+        document.getElementById('nav-signin').style.display = 'none';
+        document.getElementById('nav-cta').style.display = 'none';
+      }
+    } catch(e) {}
+  }
+  async function signOut() {
+    try { await sb.auth.signOut(); } catch(e) {}
+    window.location.href = '/index.html';
+  }
+  </script>
+  <script src="/ad-nav.js" defer></script>
+</body>
+</html>
