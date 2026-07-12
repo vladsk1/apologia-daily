@@ -185,7 +185,8 @@
     var email = document.getElementById('email').value.trim();
     var errorBox = document.getElementById('error-box'); if (errorBox) errorBox.classList.remove('visible');
     var noticeBox = document.getElementById('notice-box'); if (noticeBox) noticeBox.classList.remove('visible');
-    if (!email) { showError('Enter your email address above, then tap “Forgot your password?” again.'); return; }
+    if (!email) { showError('Type your email address in the box above first, then tap “Forgot your password?” — we’ll email you a reset link.'); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('Please enter your full email address (e.g. you@example.com), then tap “Forgot your password?” again.'); return; }
     try {
       await sb.auth.resetPasswordForEmail(email, { redirectTo: window.location.origin + '/update-password.html' });
       try { window.adTrack && window.adTrack('password_reset_requested'); } catch(x){}
