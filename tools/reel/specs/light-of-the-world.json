@@ -1,0 +1,76 @@
+{
+  "reviewed": {"argument": "2026-07-11", "orthodoxy": "2026-07-11", "by": "argument+orthodoxy gates; scripture from library/messianic-prophecy.html register (Isa 53:3, Ps 118:22, Isa 49:6, Luke 2:32, John 8:12); historical-spread framing modeled on the gated air-we-breathe reel. Rejection kept non-anti-Jewish (authorities of the day + Rome, no collective blame); humble 'portrait not proof' close."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.8,
+  "voiceover": "The Hebrew prophets predicted something that shouldn't fit together. First, the Messiah would be rejected. Isaiah 53: he was despised and rejected by men. Psalm 118: the stone the builders rejected. But the very same prophets said he would become a light. Isaiah 49:6 — I will make you as a light for the nations, that my salvation may reach to the end of the earth. See the problem? A rejected man does not become the light of the whole world. Those two don't go together — unless the prophets were right. So watch it happen. Jesus was rejected by the leaders of his day and crucified by Rome — an executed teacher from a backwater town, the most shameful death the empire had. It should have ended there. Instead, within a few centuries his followers filled that same empire. Today more than two billion people, on every continent and in nearly every nation, call him Lord. And he had said it about himself: at his birth, Simeon called him a light for revelation to the Gentiles; he called himself the light of the world. Rejected first — then a light to the nations, to the ends of the earth. Exactly the shape Isaiah traced centuries before. Coincidence, or the pattern the prophets saw? You decide.",
+  "source": "library/messianic-prophecy.html",
+  "scenes": [
+    { "dur": 4.8,
+      "big": [ {"t": "Rejected first.", "c": "cream", "s": 80}, {"t": "Then — the light", "c": "gold", "s": 70}, {"t": "of the world.", "c": "gold", "s": 80} ],
+      "sub": [ {"t": "The prophets traced this arc. Then it happened.", "c": "dim", "f": "serif", "s": 40} ] },
+
+    { "kicker": "FIRST — REJECTED", "dur": 5.8, "lines": [
+      {"t": "“He was despised", "c": "cream", "s": 54},
+      {"t": "and rejected by men.”", "c": "cream", "s": 54},
+      {"t": "— Isaiah 53", "c": "dim", "s": 44},
+      {"t": "", "s": 16},
+      {"t": "“The stone the builders rejected.”", "c": "gold", "f": "serifb", "s": 44},
+      {"t": "— Psalm 118", "c": "dim", "s": 44} ] },
+
+    { "kicker": "YET — A LIGHT TO THE NATIONS", "dur": 6.4, "lines": [
+      {"t": "“I will make you", "c": "cream", "s": 54},
+      {"t": "as a light for the nations,", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "that my salvation may reach", "c": "cream", "s": 46},
+      {"t": "to the end of the earth.”", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "— Isaiah 49:6", "c": "dim", "s": 44} ] },
+
+    { "kicker": "SEE THE PROBLEM?", "dur": 6.0, "lines": [
+      {"t": "A REJECTED man does not", "c": "cream", "s": 50},
+      {"t": "become the light", "c": "cream", "s": 52},
+      {"t": "of the whole world.", "c": "cream", "s": 52},
+      {"t": "", "s": 16},
+      {"t": "Those don't go together —", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "unless the prophets were right.", "c": "cream", "s": 46} ] },
+
+    { "kicker": "SO WATCH IT HAPPEN", "dur": 7.0, "lines": [
+      {"t": "Jesus was rejected", "c": "cream", "s": 52},
+      {"t": "by the leaders of his day,", "c": "cream", "s": 48},
+      {"t": "crucified by Rome —", "c": "cream", "s": 50},
+      {"t": "an executed teacher", "c": "cream", "s": 48},
+      {"t": "from a backwater town.", "c": "cream", "s": 48},
+      {"t": "", "s": 16},
+      {"t": "It should have ended there.", "c": "gold", "f": "serifb", "s": 50} ] },
+
+    { "kicker": "INSTEAD — THE LIGHT SPREAD", "dur": 6.8, "lines": [
+      {"t": "Within a few centuries", "c": "cream", "s": 50},
+      {"t": "his followers filled that empire.", "c": "cream", "s": 46},
+      {"t": "", "s": 16},
+      {"t": "Today, more than 2 billion —", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "on every continent,", "c": "cream", "s": 50},
+      {"t": "in nearly every nation.", "c": "cream", "s": 50} ] },
+
+    { "kicker": "AND HE SAID IT WAS HIM", "dur": 6.6, "lines": [
+      {"t": "At his birth, Simeon called him", "c": "cream", "s": 46},
+      {"t": "“a light … for the Gentiles.”", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "— Luke 2:32", "c": "dim", "s": 44},
+      {"t": "", "s": 16},
+      {"t": "He called himself", "c": "cream", "s": 50},
+      {"t": "“the light of the world.”", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "— John 8:12", "c": "dim", "s": 44} ] },
+
+    { "kicker": "THE WHOLE ARC", "dur": 6.2, "lines": [
+      {"t": "Rejected first —", "c": "cream", "s": 54},
+      {"t": "then a light to the nations,", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "to the ends of the earth.", "c": "cream", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "Exactly the shape", "c": "cream", "s": 50},
+      {"t": "Isaiah traced first.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "dur": 5.8,
+      "big": [ {"t": "Rejected.", "c": "cream", "s": 84}, {"t": "Then the light", "c": "cream", "s": 62}, {"t": "of the world.", "c": "gold", "s": 84} ],
+      "sub": [ {"t": "Coincidence — or the pattern the prophets saw?", "c": "dim", "f": "serif", "s": 38},
+               {"t": "You decide.  apologiadaily.com", "c": "gold", "f": "serifb", "s": 46} ] }
+  ]
+}
