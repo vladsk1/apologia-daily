@@ -294,6 +294,22 @@ human/pastoral doctrinal sign-off on high-stakes content.
   (template: `library/manuscript.html`). Index: `library/index.html`; also wire new
   essays into `sitemap.xml` and the relevant `ev-sN.html` section.
 
+## Public-domain source library (`/sources`)
+A searchable corpus of **public-domain** primary texts (creeds, Church Fathers, pre-1929
+works) for grounding content in real, quotable sources. See `sources/README.md` for the
+full rules. In short:
+- **PD only** — the work *and* its translation must be public domain (19th-c. Schaff
+  ANF/NPNF, Roberts–Donaldson, Robertson, etc.). Never store modern copyrighted
+  translations or any copyrighted book here; use owned copyrighted books only as *research*
+  that points to primary sources, in our own words.
+- **Drafting:** `apologia-author`/`apologia-evidence` should `Grep`/`Read` `sources/*.json`
+  (or `sources-index.json`) for on-topic passages and quote the **verified** ones with the
+  entry's `section` + `translation` as the citation.
+- **Gate:** an entry with `verified: false` may NOT be quoted in published content until
+  `apologia-citations` confirms its exact wording against `source_url` and flips it to `true`
+  — same "nothing ships unverified" discipline as the rest of the pipeline.
+- Rebuild the index after edits: `node tools/build-sources-index.mjs` (CI runs `--check`).
+
 ## Deploy workflow (security-critical)
 - Work on the feature branch; **never `git checkout main`** (a stale local main lacks
   `.claude/agents/` and de-registers the agent fleet).

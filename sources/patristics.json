@@ -1,0 +1,71 @@
+[
+  {
+    "id": "ignatius-eph-salutation",
+    "author": "Ignatius of Antioch",
+    "work": "Epistle to the Ephesians",
+    "year": 107,
+    "section": "salutation",
+    "translation": "Clementson, 1827 (public domain)",
+    "pd": true,
+    "source_url": "https://raw.githubusercontent.com/wordtreefoundation/books/master/pseudo_biblical/The%20Epistles%20of%20Ignatius%20and%20Polycarp%20-%201827.md",
+    "verified": false,
+    "tags": ["deity of christ", "early church", "pre-nicene"],
+    "note": "Ignatius calls Jesus 'our God' c. AD 107 — 218 years before Nicaea. Preferred citation translation on verification: Roberts-Donaldson (ANF).",
+    "text": "Ignatius, also called Theophorus, to the most blessed church, which is in Ephesus of Asia, bids much joy in Jesus Christ and in his spotless grace."
+  },
+  {
+    "id": "ignatius-eph-7",
+    "author": "Ignatius of Antioch",
+    "work": "Epistle to the Ephesians",
+    "year": 107,
+    "section": "ch. 7",
+    "translation": "Clementson, 1827 (public domain)",
+    "pd": true,
+    "source_url": "https://raw.githubusercontent.com/wordtreefoundation/books/master/pseudo_biblical/The%20Epistles%20of%20Ignatius%20and%20Polycarp%20-%201827.md",
+    "verified": false,
+    "tags": ["deity of christ", "incarnation", "two natures", "early church"],
+    "note": "The 'one Physician' passage — full deity and full humanity of Christ in one breath, pre-Nicene. Roberts-Donaldson renders 'God existing in flesh'.",
+    "text": "There is one physician, both having a body and being a spirit, born and not born, made flesh, yet God; in death, yet true life; both of Mary and of God."
+  },
+  {
+    "id": "ignatius-eph-18-19",
+    "author": "Ignatius of Antioch",
+    "work": "Epistle to the Ephesians",
+    "year": 107,
+    "section": "ch. 18-19",
+    "translation": "Clementson, 1827 (public domain)",
+    "pd": true,
+    "source_url": "https://raw.githubusercontent.com/wordtreefoundation/books/master/pseudo_biblical/The%20Epistles%20of%20Ignatius%20and%20Polycarp%20-%201827.md",
+    "verified": false,
+    "tags": ["deity of christ", "virgin birth", "incarnation", "early church"],
+    "text": "Our God Jesus the anointed was carried in the womb by Mary according to the dispensation of God."
+  },
+  {
+    "id": "ignatius-smyrn-1-3",
+    "author": "Ignatius of Antioch",
+    "work": "Epistle to the Smyrnaeans",
+    "year": 107,
+    "section": "ch. 1-3",
+    "translation": "Clementson, 1827 (public domain)",
+    "pd": true,
+    "source_url": "https://raw.githubusercontent.com/wordtreefoundation/books/master/pseudo_biblical/The%20Epistles%20of%20Ignatius%20and%20Polycarp%20-%201827.md",
+    "verified": false,
+    "tags": ["resurrection", "bodily resurrection", "docetism", "humanity of christ", "early church"],
+    "note": "Against docetism — the reality of Christ's flesh, crucifixion, and bodily resurrection.",
+    "text": "He is truly of the race of David according to the flesh, the Son of God... truly nailed for us in his body — not, as some unbelievers say, that he suffered in appearance... and after his resurrection he ate and drank with them, as having a body."
+  },
+  {
+    "id": "athanasius-inc-54",
+    "author": "Athanasius of Alexandria",
+    "work": "On the Incarnation of the Word (De Incarnatione)",
+    "year": 318,
+    "section": "§54",
+    "translation": "Robertson, NPNF ser. 2 vol. 4 (public domain)",
+    "pd": true,
+    "source_url": "https://www.ccel.org/ccel/athanasius/incarnation.html",
+    "verified": false,
+    "tags": ["incarnation", "theosis", "deity of christ", "salvation"],
+    "note": "The most-quoted line of the treatise, on the purpose of the Incarnation. Wording to be confirmed against the NPNF text by apologia-citations before use.",
+    "text": "For He was made man that we might be made God; and He manifested Himself by a body that we might receive the idea of the unseen Father; and He endured the insolence of men that we might inherit immortality."
+  }
+]
