@@ -121,7 +121,8 @@ Analyse the Christian performance and respond with JSON only.`;
 
     if (!anthropicRes.ok) {
       const errData = await anthropicRes.text();
-      return res.status(500).json({ error: 'Anthropic error', details: errData })
+      console.error('feedback: Anthropic upstream error', anthropicRes.status, errData);
+      return res.status(502).json({ error: 'Upstream error' })
     }
 
     const data = await anthropicRes.json();
@@ -140,6 +141,7 @@ Analyse the Christian performance and respond with JSON only.`;
     return res.status(200).json(feedback);
 
   } catch (err) {
-    return res.status(500).json({ error: 'Server error', message: err.message })
+    console.error('feedback: server error', err);
+    return res.status(500).json({ error: 'Server error' })
   }
 }

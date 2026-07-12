@@ -43,7 +43,8 @@ Always operate from within classical Christian orthodoxy. Your questions should 
 
     if (!anthropicRes.ok) {
       const err = await anthropicRes.text();
-      return res.status(500).json({ error: 'Anthropic error', details: err })
+      console.error('devotional: Anthropic upstream error', anthropicRes.status, err);
+      return res.status(502).json({ error: 'Upstream error' })
     }
 
     const data = await anthropicRes.json();
@@ -52,6 +53,7 @@ Always operate from within classical Christian orthodoxy. Your questions should 
     return res.status(200).json({ question })
 
   } catch (err) {
-    return res.status(500).json({ error: 'Server error', message: err.message })
+    console.error('devotional: server error', err);
+    return res.status(500).json({ error: 'Server error' })
   }
 }

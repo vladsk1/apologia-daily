@@ -55,6 +55,15 @@ export default async function handler(req, res) {
     } catch (e) { /* non-fatal */ }
   }
 
+  // Escape record-derived fields before templating into the notification HTML —
+  // `email`/`when` come from the (untrusted) webhook payload, so an attacker-set
+  // value must not inject markup into the founder's inbox.
+  var esc = function (s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  };
+
   // Send the email via Resend.
   var TO = process.env.SIGNUP_NOTIFY_TO || 'vkiparizov@gmail.com';
   var FROM = process.env.SIGNUP_NOTIFY_FROM || 'Apologia Daily <onboarding@resend.dev>';
@@ -66,9 +75,9 @@ export default async function handler(req, res) {
       var html =
         '<div style="font-family:system-ui,sans-serif;font-size:15px;line-height:1.6">' +
         '<h2 style="margin:0 0 8px">' + (kind === 'confirmed' ? 'Email confirmed' : 'New Apologia Daily signup') + '</h2>' +
-        '<p style="margin:0"><strong>' + email + '</strong></p>' +
-        (totalLine ? '<p style="margin:6px 0;color:#555">' + totalLine + '</p>' : '') +
-        '<p style="margin:6px 0;color:#888;font-size:13px">' + when + '</p>' +
+        '<p style="margin:0"><strong>' + esc(email) + '</strong></p>' +
+        (totalLine ? '<p style="margin:6px 0;color:#555">' + esc(totalLine) + '</p>' : '') +
+        '<p style="margin:6px 0;color:#888;font-size:13px">' + esc(when) + '</p>' +
         '</div>';
       var r = await fetch('https://api.resend.com/emails', {
         method: 'POST',

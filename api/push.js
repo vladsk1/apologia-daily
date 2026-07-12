@@ -7,7 +7,7 @@
 
    Env: VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY (PKCS8 DER base64),
         SUPABASE_URL, SUPABASE_SERVICE_KEY,
-        PUSH_CRON_SECRET (default 'apologia-cron-2026'),
+        PUSH_CRON_SECRET (or CRON_SECRET — no default; endpoint fails closed),
         PUSH_CONTACT (mailto; default vkiparizov@gmail.com).
 
    Subscriptions table (Supabase SQL editor):
@@ -15,6 +15,25 @@
        endpoint text primary key, p256dh text not null,
        auth text not null, created_at timestamptz default now()); */
 import crypto from 'crypto';
+
+/* SSRF guard: a PushSubscription endpoint must be an HTTPS URL on a known
+   browser-push service. Without this, an attacker could store an arbitrary
+   endpoint (e.g. an internal/metadata URL) that the ?do=send cron would then
+   fetch(). Allow only the official FCM/Apple/Mozilla/Windows push hosts. */
+function isAllowedPushEndpoint(u) {
+  var url;
+  try { url = new URL(u); } catch (e) { return false; }
+  if (url.protocol !== 'https:') return false;
+  var h = url.hostname.toLowerCase();
+  return (
+    h === 'fcm.googleapis.com' ||
+    h === 'updates.push.services.mozilla.com' ||
+    h.endsWith('.push.services.mozilla.com') ||
+    h === 'web.push.apple.com' ||
+    h.endsWith('.push.apple.com') ||
+    h.endsWith('.notify.windows.com')
+  );
+}
 
 /* Generated from daily-args.json (63 certified entries) — same order as the /today rotation. */
 var ARGS = [
@@ -118,6 +137,7 @@ export default async function handler(req, res) {
     body = body || {};
     var keys = body.keys || {};
     if (!body.endpoint || !keys.p256dh || !keys.auth) return res.status(400).json({ error: 'Invalid subscription' });
+    if (!isAllowedPushEndpoint(body.endpoint)) return res.status(400).json({ error: 'Unsupported push endpoint' });
     if (!SB_KEY) return res.status(200).json({ ok: false, note: 'SUPABASE_SERVICE_KEY not set' });
     try {
       var sr = await fetch(SB_URL + '/rest/v1/push_subscriptions?on_conflict=endpoint', {
@@ -145,8 +165,13 @@ export default async function handler(req, res) {
 
   // ---- GET ?do=send: daily cron sender ----
   if (act === 'send') {
-    var SECRET = process.env.PUSH_CRON_SECRET || 'apologia-cron-2026';
-    if ((req.query.secret || '') !== SECRET) return res.status(401).json({ error: 'Unauthorized' });
+    // Require a secret. Accept Vercel's native cron auth header
+    // (Authorization: Bearer $CRON_SECRET) OR a manual ?secret= match against
+    // PUSH_CRON_SECRET/CRON_SECRET. Fail CLOSED if none configured — no default.
+    var SECRET = process.env.PUSH_CRON_SECRET || process.env.CRON_SECRET;
+    var bearer = (req.headers.authorization || '').replace(/^Bearer\s+/i, '');
+    var got = bearer || req.query.secret || '';
+    if (!SECRET || got !== SECRET) return res.status(401).json({ error: 'Unauthorized' });
     var PUB = process.env.VAPID_PUBLIC_KEY, PRIV = process.env.VAPID_PRIVATE_KEY;
     var CONTACT = process.env.PUSH_CONTACT || 'vkiparizov@gmail.com';
     var out = { sent: 0, pruned: 0, failed: 0, notes: [] };
@@ -172,6 +197,9 @@ export default async function handler(req, res) {
     for (var i = 0; i < subs.length; i++) {
       var ep = subs[i].endpoint;
       try {
+        // Defence in depth: skip (and prune) any stored endpoint that isn't a
+        // known push host — covers rows written before the allowlist existed.
+        if (!isAllowedPushEndpoint(ep)) { await delSub(ep); continue; }
         var aud = new URL(ep).origin;
         if (!jwtByAud[aud]) jwtByAud[aud] = vapidJWT(aud, PRIV, CONTACT);
         var pr = await fetch(ep, { method: 'POST', headers: { Authorization: 'vapid t=' + jwtByAud[aud] + ', k=' + PUB, TTL: '86400' } });

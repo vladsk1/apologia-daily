@@ -192,7 +192,8 @@ DENOMINATIONAL NEUTRALITY — STAY ON THE SHARED CORE:
 
     if (!anthropicRes.ok) {
       const err = await anthropicRes.text();
-      return res.status(500).json({ error: 'Anthropic error', details: err })
+      console.error('ask: Anthropic upstream error', anthropicRes.status, err);
+      return res.status(502).json({ error: 'Upstream error' })
     }
 
     const data = await anthropicRes.json();
@@ -203,6 +204,7 @@ DENOMINATIONAL NEUTRALITY — STAY ON THE SHARED CORE:
     return res.status(200).json({ answer })
 
   } catch (err) {
-    return res.status(500).json({ error: 'Server error', message: err.message })
+    console.error('ask: server error', err);
+    return res.status(500).json({ error: 'Server error' })
   }
 }

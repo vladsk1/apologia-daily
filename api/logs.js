@@ -4,6 +4,15 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
 
+  // Access control: this endpoint exposes production deploy metadata + function
+  // error logs, so it must never be public. Require LOGS_SECRET (fall back to the
+  // shared METRICS_SECRET so ops only manages one secret). Fail CLOSED if unset.
+  const SECRET = process.env.LOGS_SECRET || process.env.METRICS_SECRET;
+  const provided = (req.headers.authorization || '').replace(/^Bearer\s+/i, '') || (req.query.secret || '');
+  if (!SECRET || provided !== SECRET) {
+    return res.status(401).json({ error: 'Unauthorized — set LOGS_SECRET (or METRICS_SECRET) in env and supply it as ?secret= or a Bearer token.' });
+  }
+
   const token = process.env.VERCEL_ACCESS_TOKEN;
   if (!token) {
     return res.status(200).json({

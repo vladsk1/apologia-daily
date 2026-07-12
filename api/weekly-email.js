@@ -8,10 +8,14 @@ export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   if (req.method === 'OPTIONS') return res.status(200).end();
 
-  // Security: only allow GET with correct secret, or POST from cron
-  const secret = req.headers['x-cron-secret'] || req.query.secret;
-  const cronSecret = process.env.CRON_SECRET || 'apologia-cron-2026';
-  if (secret !== cronSecret) {
+  // Security: require CRON_SECRET. Accept Vercel's native cron auth
+  // (Authorization: Bearer $CRON_SECRET, injected automatically for cron jobs)
+  // OR a manual x-cron-secret / ?secret= match. Fail CLOSED if CRON_SECRET is
+  // unset — never fall back to a hardcoded/guessable default.
+  const cronSecret = process.env.CRON_SECRET;
+  const bearer = (req.headers.authorization || '').replace(/^Bearer\s+/i, '');
+  const provided = bearer || req.headers['x-cron-secret'] || req.query.secret || '';
+  if (!cronSecret || provided !== cronSecret) {
     return res.status(401).json({ error: 'Unauthorised' });
   }
 

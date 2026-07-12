@@ -83,7 +83,8 @@ ACCURACY RAILS (do not get these wrong):
 
     if (!response.ok) {
       const err = await response.text();
-      return res.status(500).json({ error: 'Anthropic error', details: err });
+      console.error('tutor: Anthropic upstream error', response.status, err);
+      return res.status(502).json({ error: 'Upstream error' });
     }
 
     const data = await response.json();
@@ -94,6 +95,7 @@ ACCURACY RAILS (do not get these wrong):
     return res.status(200).json({ answer });
 
   } catch (err) {
-    return res.status(500).json({ error: 'Server error', message: err.message });
+    console.error('tutor: server error', err);
+    return res.status(500).json({ error: 'Server error' });
   }
 }

@@ -94,7 +94,8 @@ RULES:
 
     if (!anthropicRes.ok) {
       const errData = await anthropicRes.text();
-      return res.status(500).json({ error: 'Anthropic error', details: errData })
+      console.error('debate: Anthropic upstream error', anthropicRes.status, errData);
+      return res.status(502).json({ error: 'Upstream error' })
     }
 
     const data = await anthropicRes.json();
@@ -105,6 +106,7 @@ RULES:
     return res.status(200).json({ reply })
 
   } catch (err) {
-    return res.status(500).json({ error: 'Server error', message: err.message })
+    console.error('debate: server error', err);
+    return res.status(500).json({ error: 'Server error' })
   }
 }
