@@ -387,18 +387,12 @@
 
           <!-- Assign plan (host only) -->
           <div class="sidebar-panel" id="assign-plan-panel" style="display:none;">
-            <div class="panel-header"><div class="panel-title">Set the group&rsquo;s plan</div></div>
+            <div class="panel-header"><div class="panel-title" id="assign-plan-title">Set the group&rsquo;s plan</div></div>
             <div class="panel-body">
               <select class="form-select" id="assign-plan-select" style="margin-bottom:0.75rem;">
                 <option value="">Select a plan&#8230;</option>
-                <option value="resurrection">30-Day Resurrection Deep Dive</option>
-                <option value="existence-god">30-Day God's Existence Foundations</option>
-                <option value="jesus-crash-course">14-Day Jesus Essentials</option>
-                <option value="worldview-comparison">21-Day Worldview Comparison</option>
-                <option value="debate-ready">28-Day Debate Preparation</option>
-                <option value="daily-defender">Daily Defender — 90 Days</option>
               </select>
-              <button class="btn-primary" style="width:100%;" onclick="assignPlan()">Set for the group</button>
+              <button class="btn-primary" style="width:100%;" id="assign-plan-btn" onclick="assignPlan()">Set for the group</button>
             </div>
           </div>
 
@@ -796,6 +790,25 @@
     } else {
       document.getElementById('plan-none').style.display = '';
       document.getElementById('plan-info').style.display = 'none';
+    }
+    syncAssignPanel(group);
+  }
+
+  // Keep the host "set/change plan" panel in sync with the group's active plan,
+  // so it reflects what's live instead of always reading "Select a plan…".
+  function syncAssignPanel(group){
+    var sel = document.getElementById('assign-plan-select');
+    var title = document.getElementById('assign-plan-title');
+    var btn = document.getElementById('assign-plan-btn');
+    if (!sel) return;
+    if (group && group.plan) {
+      sel.value = group.plan;
+      if (title) title.innerHTML = 'Change the group&rsquo;s plan';
+      if (btn) btn.textContent = 'Update the group&rsquo;s plan';
+    } else {
+      sel.value = '';
+      if (title) title.innerHTML = 'Set the group&rsquo;s plan';
+      if (btn) btn.textContent = 'Set for the group';
     }
   }
 
