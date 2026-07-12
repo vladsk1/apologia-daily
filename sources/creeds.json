@@ -5,12 +5,13 @@
     "work": "The Apostles' Creed",
     "year": 400,
     "section": "full (traditional English)",
-    "translation": "Traditional ecumenical English, public domain",
+    "translation": "Book of Common Prayer (1662), public domain",
     "pd": true,
-    "source_url": "https://www.ccel.org/creeds/apostles.creed.html",
+    "source_url": "https://www.gutenberg.org/ebooks/45108",
     "verified": false,
     "tags": ["creed", "trinity", "incarnation", "resurrection", "denominationally-neutral"],
-    "text": "I believe in God, the Father almighty, creator of heaven and earth. I believe in Jesus Christ, his only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died, and was buried; he descended to the dead. On the third day he rose again; he ascended into heaven, is seated at the right hand of the Father, and will come again to judge the living and the dead. I believe in the Holy Spirit, the holy catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and the life everlasting. Amen."
+    "note": "The genuinely public-domain traditional BCP wording ('Holy Ghost', 'descended into hell'). NOT the modern ELLC/ICET 1988 ecumenical version ('Holy Spirit', 'descended to the dead'), which is a copyrighted text used by permission — do not use that one here.",
+    "text": "I believe in God the Father Almighty, Maker of heaven and earth: And in Jesus Christ his only Son our Lord, Who was conceived by the Holy Ghost, Born of the Virgin Mary, Suffered under Pontius Pilate, Was crucified, dead, and buried: He descended into hell; The third day he rose again from the dead, He ascended into heaven, And sitteth on the right hand of God the Father Almighty; From thence he shall come to judge the quick and the dead. I believe in the Holy Ghost; The holy catholic Church; The communion of saints; The forgiveness of sins; The resurrection of the body, And the life everlasting. Amen."
   },
   {
     "id": "nicene-creed-325",
