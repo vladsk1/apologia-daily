@@ -6,6 +6,24 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **2026-07-12 (search + Logos assessment + PD source library — handoff:
+> `docs/SESSION_HANDOFF_2026-07-12-search-and-sources.md`).** Shipped **site-wide search**
+> (`/search` + `search.html` + `tools/build-search-index.mjs` → `search-index.json`; 221 records
+> across essays/answers/glossary; "🔍 Search" added to the canonical nav on 180 pages). Did a
+> **Logos Bible Software** competitive assessment (quick wins: #1 search ✅ DONE; #2 cite-button +
+> "Reviewed" byline; #3 Factbook entity hubs — both NOT built). Built a **public-domain source
+> library** (`/sources` + `sources/README.md` + `tools/build-sources-index.mjs` →
+> `sources-index.json`): a searchable corpus of PD primary texts (creeds + Church Fathers) the
+> content agents quote+cite when drafting. **Rules: PD work AND PD translation only; never store
+> copyrighted books (owned books = research pointing to primaries, in our own words); nothing
+> quotable until `verified:true` (apologia-citations confirms vs source).** A citations pass
+> **caught 2 real defects** (Apostles' Creed was copyrighted ELLC-1988 mislabeled PD → fixed to PD
+> BCP 1662; a Smyrnaeans quote was a spliced composite → fixed) and **verified 4 Ignatius
+> passages**; **6 pending** (creeds + Athanasius §54) because the clean hosts (CCEL/ANF/Wikisource)
+> are **network-blocked in the web sandbox**. **NEXT: a local/web-enabled session verifies the 6
+> against clean primaries + expands the library** (steps in the handoff). Also still open: run
+> `docs/STUDY_GROUPS_DISPLAY_NAME_FIX.md` (M4) in Supabase.
+>
 > **2026-07-12 (security hardening pass — handoff: `docs/SESSION_HANDOFF_2026-07-12-security.md`).**
 > Full security audit (two adversarial agents over `api/*.js` + client/RLS/config) then **fixed every
 > finding, Critical→Medium; all deployed to `main`.** Highlights: **Study Groups RLS takeover** closed
