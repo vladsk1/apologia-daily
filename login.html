@@ -40,6 +40,10 @@
     .form-input:focus { border-color: var(--navy-300); background: var(--white); }
     .form-input::placeholder { color: var(--text-muted); }
     .form-input.error { border-color: var(--error); background: var(--error-bg); }
+    .pw-wrap { position: relative; }
+    .pw-wrap .form-input { padding-right: 62px; }
+    .pw-toggle { position: absolute; top: 50%; right: 8px; transform: translateY(-50%); background: none; border: none; font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; color: var(--navy-500); cursor: pointer; padding: 4px 6px; }
+    .pw-toggle:hover { color: var(--navy-700); }
 
     .forgot-link { display: block; text-align: right; font-size: 0.78rem; color: var(--navy-500); text-decoration: none; margin-top: -0.75rem; margin-bottom: 1.25rem; }
     .forgot-link:hover { color: var(--navy-700); }
@@ -89,7 +93,10 @@
 
     <div class="form-group">
       <label class="form-label" for="password">Password</label>
-      <input class="form-input" type="password" id="password" placeholder="Your password" autocomplete="current-password" />
+      <div class="pw-wrap">
+        <input class="form-input" type="password" id="password" placeholder="Your password" autocomplete="current-password" />
+        <button type="button" class="pw-toggle" id="pw-toggle" onclick="togglePw()" aria-label="Show password">Show</button>
+      </div>
     </div>
 
     <a href="#" class="forgot-link" id="forgot-link" onclick="handleForgot(event)">Forgot your password?</a>
@@ -190,6 +197,15 @@
   function showNotice(msg) {
     var box = document.getElementById('notice-box');
     if (box) { box.textContent = msg; box.classList.add('visible'); }
+  }
+
+  function togglePw() {
+    var p = document.getElementById('password');
+    var t = document.getElementById('pw-toggle');
+    var show = p.type === 'password';
+    p.type = show ? 'text' : 'password';
+    t.textContent = show ? 'Hide' : 'Show';
+    t.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
   }
 
   function showError(msg) {
