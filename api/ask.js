@@ -1,6 +1,6 @@
 // content-review: {"argument":"2026-07-08","orthodoxy":"2026-07-08","by":"apologia-argument + apologia-orthodoxy on the objection-handling addition to the system prompt (0 BREAK / 0 heresy). Existing guardrails unchanged; added instruction to restate a pasted objection as the underlying question before answering in the same format."}
 
-import { overRateLimit } from '../lib/ratelimit.js';
+import { overRateLimit, inputTooLong } from '../lib/ratelimit.js';
 
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') { res.setHeader('Access-Control-Allow-Origin', '*'); res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS'); res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); return res.status(200).end(); }
@@ -14,6 +14,8 @@ export default async function handler(req, res) {
 
     const apiKey = process.env.ANTHROPIC_API_KEY;
     if (!apiKey) return res.status(500).json({ error: 'API key not configured' })
+
+    if (inputTooLong(question, 5000)) return res.status(413).json({ error: 'input_too_long' });
 
     // Rate limit before spending any tokens.
     if (await overRateLimit(req, 40, 'ask')) {
