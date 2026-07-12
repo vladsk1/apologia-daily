@@ -54,7 +54,9 @@
           var tok = JSON.parse(localStorage.getItem(k) || '{}');
           var user = tok.user || (tok.currentSession && tok.currentSession.user) || null;
           if (user && user.id && window.posthog && window.posthog.identify) {
-            window.posthog.identify(user.id, user.email ? { email: user.email } : {});
+            // Identify by the stable user id only — do NOT ship the user's email
+            // (PII) to a third-party analytics vendor on every page load.
+            window.posthog.identify(user.id);
           }
           break;
         }

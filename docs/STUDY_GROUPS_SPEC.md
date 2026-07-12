@@ -112,6 +112,33 @@ begin
   return gid;
 end; $$;
 
+-- ========== ANTI-SPOOF: stamp display_name server-side (see M4 fix) ==========
+-- The client supplies display_name; this trigger overwrites it with the real
+-- name from auth.users so a member can't post/appear under someone else's name.
+create or replace function public.set_member_display_name()
+returns trigger language plpgsql security definer set search_path = public as $$
+begin
+  select coalesce(
+           nullif(u.raw_user_meta_data->>'full_name', ''),
+           nullif(split_part(u.email, '@', 1), ''),
+           'Member')
+    into new.display_name
+    from auth.users u
+    where u.id = new.user_id;
+  if new.display_name is null then new.display_name := 'Member'; end if;
+  return new;
+end; $$;
+
+drop trigger if exists trg_gm_dname   on public.group_members;
+drop trigger if exists trg_gmsg_dname on public.group_messages;
+drop trigger if exists trg_gact_dname on public.group_activity;
+create trigger trg_gm_dname   before insert on public.group_members
+  for each row execute function public.set_member_display_name();
+create trigger trg_gmsg_dname before insert on public.group_messages
+  for each row execute function public.set_member_display_name();
+create trigger trg_gact_dname before insert on public.group_activity
+  for each row execute function public.set_member_display_name();
+
 -- ========== RLS ==========
 alter table public.groups         enable row level security;
 alter table public.group_members  enable row level security;
