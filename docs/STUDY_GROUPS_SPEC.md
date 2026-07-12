@@ -85,6 +85,18 @@ returns boolean language sql security definer set search_path = public as $$
                 where m.group_id = gid and m.user_id = uid and m.role = 'host');
 $$;
 
+-- used by the hardened gm_insert policy (bypass RLS so the check can read
+-- groups.created_by / groups.privacy even for not-yet-visible invite-only groups)
+create or replace function public.is_group_creator(gid uuid, uid uuid)
+returns boolean language sql security definer set search_path = public as $$
+  select exists(select 1 from public.groups g where g.id = gid and g.created_by = uid);
+$$;
+
+create or replace function public.is_group_public(gid uuid)
+returns boolean language sql security definer set search_path = public as $$
+  select exists(select 1 from public.groups g where g.id = gid and g.privacy = 'public');
+$$;
+
 -- join (or public-browse join) by code, bypassing RLS on the lookup
 create or replace function public.join_group_by_code(code text)
 returns uuid language plpgsql security definer set search_path = public as $$
@@ -116,11 +128,21 @@ create policy groups_update on public.groups for update
 create policy groups_delete on public.groups for delete
   using (auth.uid() = created_by);
 
--- group_members: members see their group's roster; a user manages their own membership
+-- group_members: members see their group's roster; a user manages their own membership.
+-- INSERT is hardened (see docs/STUDY_GROUPS_RLS_FIX.md): you may insert a `host` row
+-- only for a group you created, and a `member` row only into a PUBLIC group. Private
+-- groups are joined only via the join_group_by_code RPC. No UPDATE policy exists, so
+-- RLS denies all updates — a member cannot escalate their own role to host.
 create policy gm_select on public.group_members for select
   using (public.is_group_member(group_id, auth.uid()));
 create policy gm_insert on public.group_members for insert
-  with check (user_id = auth.uid());
+  with check (
+    user_id = auth.uid()
+    and (
+      (role = 'host'   and public.is_group_creator(group_id, auth.uid()))
+      or (role = 'member' and public.is_group_public(group_id))
+    )
+  );
 create policy gm_delete on public.group_members for delete
   using (user_id = auth.uid() or public.is_group_host(group_id, auth.uid()));
 
