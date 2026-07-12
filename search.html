@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search — Apologia Daily</title>
+  <meta name="description" content="Search the whole of Apologia Daily — every deep-dive essay, answer, and glossary term in one place." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/ad-nav.css">
+  <style>
+    :root {
+      --n:#0a1628; --n2:#050d1a; --n3:#1e4278; --n4:#f0f6fb;
+      --g:#c8a951; --w:#fff; --o:#f8f7f4;
+      --m:#3a4a62; --mu:#7a8fa8; --b:#d4e0ec;
+      --fd:'Playfair Display',Georgia,serif;
+      --ui:'DM Sans',sans-serif;
+      --bo:'Source Serif 4',Georgia,serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--bo); background: var(--o); color: var(--n); min-height: 100vh; }
+
+    .hero { background: var(--n2); padding: 3rem 2rem 1rem; }
+    .hero-inner { max-width: 820px; margin: 0 auto; }
+    .eyebrow { font-family: var(--ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--g); margin-bottom: 0.7rem; }
+    .hero h1 { font-family: var(--fd); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; color: var(--w); line-height: 1.2; margin-bottom: 0.6rem; }
+    .hero h1 em { font-style: italic; color: var(--g); }
+    .hero-sub { font-size: 0.95rem; color: rgba(255,255,255,0.55); max-width: 560px; line-height: 1.7; }
+
+    .search-wrap { background: var(--n2); padding: 0 2rem 2.2rem; }
+    .search-box { max-width: 820px; margin: 0 auto; position: relative; }
+    .search-input {
+      width: 100%; font-family: var(--ui); font-size: 1.1rem; color: var(--n);
+      padding: 1rem 1rem 1rem 3rem; border: 1px solid transparent; border-radius: 8px;
+      background: var(--w); outline: none; box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+    }
+    .search-input:focus { border-color: var(--g); }
+    .search-ic { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); font-size: 1.15rem; color: var(--mu); pointer-events: none; }
+
+    .main { max-width: 820px; margin: 0 auto; padding: 1.6rem 2rem 4rem; }
+    .result-meta { font-family: var(--ui); font-size: 0.82rem; color: var(--mu); margin-bottom: 1.1rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 1.4rem; }
+    .chip { font-family: var(--ui); font-size: 0.78rem; color: var(--m); background: var(--w); border: 1px solid var(--b); border-radius: 999px; padding: 5px 13px; cursor: pointer; transition: all 0.15s; }
+    .chip:hover { border-color: var(--g); color: var(--n); }
+    .chip.active { background: var(--n); color: var(--w); border-color: var(--n); }
+
+    .result { display: block; background: var(--w); border: 1px solid var(--b); border-radius: 8px; padding: 1rem 1.2rem; margin-bottom: 0.7rem; text-decoration: none; color: inherit; transition: border-color 0.15s, transform 0.05s; }
+    .result:hover { border-color: var(--g); }
+    .result:active { transform: translateY(1px); }
+    .result-top { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; flex-wrap: wrap; }
+    .r-type { font-family: var(--ui); font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; }
+    .r-essay { background: #f5edd6; color: #8a6d1f; }
+    .r-answer { background: #e4eefb; color: #1e4278; }
+    .r-term { background: #eceff3; color: #556; }
+    .r-cat { font-family: var(--ui); font-size: 0.74rem; color: var(--mu); }
+    .r-title { font-family: var(--fd); font-size: 1.12rem; font-weight: 600; color: var(--n); line-height: 1.3; }
+    .r-desc { font-size: 0.92rem; color: var(--m); line-height: 1.55; margin-top: 4px; }
+    .result mark { background: #fbf1c8; color: inherit; padding: 0 1px; border-radius: 2px; }
+
+    .empty { text-align: center; padding: 3rem 1rem; color: var(--mu); font-family: var(--ui); }
+    .empty strong { color: var(--n); }
+
+    footer { background: var(--n2); color: rgba(255,255,255,0.5); padding: 2.5rem 2rem; font-family: var(--ui); font-size: 0.85rem; }
+    .fi { max-width: 1100px; margin: 0 auto; text-align: center; }
+    .flo { font-family: var(--fd); font-weight: 700; color: var(--w); font-size: 1.1rem; margin-bottom: 0.8rem; }
+    .flo span { color: var(--g); }
+    .fli { list-style: none; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; padding: 0; }
+    .fli a { color: rgba(255,255,255,0.55); text-decoration: none; }
+    .fli a:hover { color: var(--w); }
+    .fcop { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+  </style>
+</head>
+<body>
+
+  <nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/search.html" class="adn-search-link" aria-label="Search">&#128269; Search</a></li>
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/asked-and-answered.html">Asked &amp; Answered</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop adn-has-mega">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <div class="adn-mega">
+          <div class="adn-mega-in">
+            <div class="adn-mega-col">
+              <div class="adn-mega-h">Go deeper</div>
+              <a class="adn-mi" href="/library/"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Deep-Dive Essays</span><span class="adn-mi-dc">Long-form, fully-cited essays.</span></span></a>
+              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Answers</span><span class="adn-mi-dc">The questions people ask most.</span></span></a>
+              <a class="adn-mi" href="/whats-new.html"><span class="adn-mi-ic">&#128240;</span><span class="adn-mi-tx"><span class="adn-mi-nm">What&#39;s New</span><span class="adn-mi-dc">Latest essays, features &amp; reels.</span></span></a>
+            </div>
+            <div class="adn-mega-col">
+              <div class="adn-mega-h">Practice &amp; community</div>
+              <a class="adn-mi" href="/coach.html"><span class="adn-mi-ic">&#129305;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Coach</span><span class="adn-mi-dc">Your skill map &amp; a plan for your weak spots.</span></span></a>
+              <a class="adn-mi" href="/games.html"><span class="adn-mi-ic">&#127918;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Games</span><span class="adn-mi-dc">Quizzes that feed your streak.</span></span></a>
+              <a class="adn-mi" href="/study-groups.html"><span class="adn-mi-ic">&#128101;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Study Groups <span class="adn-mi-tag">New</span></span><span class="adn-mi-dc">Study with people you love.</span></span></a>
+              <a class="adn-mi" href="/reading-club.html"><span class="adn-mi-ic">&#128214;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Reading Clubs</span><span class="adn-mi-dc">The classics, chapter by chapter.</span></span></a>
+            </div>
+            <div class="adn-mega-col">
+              <div class="adn-mega-h">For you</div>
+              <a class="adn-mi" href="/parents.html"><span class="adn-mi-ic">&#128106;</span><span class="adn-mi-tx"><span class="adn-mi-nm">For Parents</span><span class="adn-mi-dc">Your kids&#39; hardest questions.</span></span></a>
+              <a class="adn-mi" href="/video-library.html"><span class="adn-mi-ic">&#127909;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Videos</span><span class="adn-mi-dc">Short, shareable explainers.</span></span></a>
+            </div>
+            <div class="adn-mega-foot">
+              <a href="/about.html">About</a>
+              <a href="/what-we-believe.html">What We Believe</a>
+              <a href="/editorial-standards.html">Editorial Standards</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <button class="adn-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Search</p>
+      <h1>Search <em>everything</em></h1>
+      <p class="hero-sub">Every deep-dive essay, answer, and glossary term in one place. Ask a question, name a topic, or type a scholar's name.</p>
+    </div>
+  </div>
+  <div class="search-wrap">
+    <div class="search-box">
+      <span class="search-ic">&#128269;</span>
+      <input class="search-input" type="text" id="q" autocomplete="off" autofocus
+             placeholder="Try: resurrection, Ehrman, fine-tuning, was Jesus a myth…"
+             oninput="onInput()" />
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="chips" id="chips"></div>
+    <div class="result-meta" id="meta"></div>
+    <div id="results"></div>
+  </div>
+
+  <footer>
+    <div class="fi">
+      <div class="flo">Apologia<span>Daily</span></div>
+      <ul class="fli">
+        <li><a href="/evidence-library.html">Evidence Library</a></li>
+        <li><a href="/answers/">Answers</a></li>
+        <li><a href="/glossary.html">Glossary</a></li>
+        <li><a href="/index.html#pricing">Pricing</a></li>
+      </ul>
+      <div class="fcop">&copy; 2026 Apologia Daily. Built for the defence of the Gospel.</div>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    var INDEX = [];
+    var filter = 'all';
+    var TYPE_LABEL = { essay: 'Essay', answer: 'Answer', term: 'Term' };
+    var TYPE_ORDER = { essay: 0, answer: 1, term: 2 };
+
+    function esc(s) {
+      return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+      });
+    }
+    // Normalize for MATCHING only (not display): drop apostrophe entities/chars so
+    // "quran" matches "Qur&rsquo;an" and "gods" matches "God's"; turn other HTML
+    // entities into spaces so word boundaries survive.
+    function norm(s) {
+      return String(s == null ? '' : s).toLowerCase()
+        .replace(/&(rsquo|lsquo|apos|#39|#8217|#8216);/g, '')
+        .replace(/[‘’'`]/g, '')
+        .replace(/&[a-z]+;|&#\d+;/g, ' ')
+        .replace(/\s+/g, ' ').trim();
+    }
+    function tokens(q) {
+      return norm(q).split(/\s+/).filter(Boolean).slice(0, 8);
+    }
+    function score(rec, toks) {
+      var t = rec._t, c = rec._c, d = rec._d, blob = rec._b, s = 0;
+      for (var i = 0; i < toks.length; i++) {
+        var tok = toks[i];
+        if (blob.indexOf(tok) === -1) return -1; // every token must appear (AND)
+        if (t === tok) s += 100;
+        if (t.indexOf(tok) === 0) s += 30;
+        if (t.indexOf(tok) !== -1) s += 16;
+        try { if (new RegExp('\\b' + tok.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(t)) s += 8; } catch (e) {}
+        if (c.indexOf(tok) !== -1) s += 6;
+        if (d.indexOf(tok) !== -1) s += 4;
+      }
+      return s;
+    }
+    function highlight(text, toks) {
+      var out = esc(text);
+      for (var i = 0; i < toks.length; i++) {
+        var tok = toks[i].replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        if (!tok) continue;
+        try { out = out.replace(new RegExp('(' + tok + ')', 'ig'), '<mark>$1</mark>'); } catch (e) {}
+      }
+      return out;
+    }
+
+    function render() {
+      var q = document.getElementById('q').value;
+      var toks = tokens(q);
+      var results = document.getElementById('results');
+      var meta = document.getElementById('meta');
+
+      if (!toks.length) {
+        results.innerHTML = '<div class="empty">Start typing to search <strong>' + INDEX.length +
+          '</strong> essays, answers &amp; terms.</div>';
+        meta.textContent = '';
+        return;
+      }
+      var hits = [];
+      for (var i = 0; i < INDEX.length; i++) {
+        if (filter !== 'all' && INDEX[i].y !== filter) continue;
+        var sc = score(INDEX[i], toks);
+        if (sc > 0) hits.push({ r: INDEX[i], s: sc });
+      }
+      hits.sort(function (a, b) {
+        if (b.s !== a.s) return b.s - a.s;
+        return TYPE_ORDER[a.r.y] - TYPE_ORDER[b.r.y];
+      });
+
+      meta.textContent = hits.length
+        ? hits.length + ' result' + (hits.length === 1 ? '' : 's') + ' for “' + q.trim() + '”'
+        : '';
+
+      if (!hits.length) {
+        results.innerHTML = '<div class="empty">No matches for <strong>“' + esc(q.trim()) +
+          '”</strong>.<br>Try fewer or more general words — or <a href="/asked-and-answered.html" style="color:#8a6d1f;">ask it directly</a>.</div>';
+        return;
+      }
+      var html = '';
+      for (var j = 0; j < hits.length && j < 60; j++) {
+        var r = hits[j].r;
+        html += '<a class="result" href="' + esc(r.u) + '">' +
+          '<div class="result-top">' +
+            '<span class="r-type r-' + r.y + '">' + TYPE_LABEL[r.y] + '</span>' +
+            '<span class="r-cat">' + esc(r.c) + '</span>' +
+          '</div>' +
+          '<div class="r-title">' + highlight(r.t, toks) + '</div>' +
+          (r.d ? '<div class="r-desc">' + highlight(r.d, toks) + '</div>' : '') +
+        '</a>';
+      }
+      results.innerHTML = html;
+    }
+
+    function buildChips() {
+      var defs = [['all', 'All'], ['essay', 'Essays'], ['answer', 'Answers'], ['term', 'Glossary']];
+      var el = document.getElementById('chips');
+      el.innerHTML = defs.map(function (d) {
+        return '<button class="chip' + (d[0] === filter ? ' active' : '') +
+          '" data-f="' + d[0] + '">' + d[1] + '</button>';
+      }).join('');
+      el.querySelectorAll('.chip').forEach(function (b) {
+        b.onclick = function () { filter = b.getAttribute('data-f'); buildChips(); render(); };
+      });
+    }
+
+    window.onInput = function () {
+      var q = document.getElementById('q').value;
+      try { history.replaceState(null, '', q ? '/search.html?q=' + encodeURIComponent(q) : '/search.html'); } catch (e) {}
+      render();
+    };
+
+    fetch('/search-index.json').then(function (r) { return r.json(); }).then(function (data) {
+      INDEX = (data || []).map(function (rec) {
+        rec._t = norm(rec.t); rec._c = norm(rec.c); rec._d = norm(rec.d);
+        rec._b = rec._t + ' ' + rec._c + ' ' + rec._d;
+        return rec;
+      });
+      buildChips();
+      var pre = new URLSearchParams(location.search).get('q');
+      if (pre) document.getElementById('q').value = pre;
+      render();
+      document.getElementById('q').focus();
+    }).catch(function () {
+      document.getElementById('results').innerHTML =
+        '<div class="empty">Search is temporarily unavailable. Browse the <a href="/evidence-library.html" style="color:#8a6d1f;">Evidence Library</a> instead.</div>';
+    });
+  })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
+  <script>
+  var sb = null;
+  function initSb() {
+    if (window.supabase && window.supabase.createClient) {
+      sb = window.supabase.createClient(
+        'https://noprgxkwniouukmrfozc.supabase.co',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+      );
+      checkAuth();
+    } else { setTimeout(initSb, 50); }
+  }
+  document.addEventListener('DOMContentLoaded', initSb);
+  async function checkAuth() {
+    try {
+      var r = await sb.auth.getSession();
+      var s = r.data && r.data.session;
+      if (s) {
+        var name = (s.user.user_metadata && s.user.user_metadata.full_name) || s.user.email.split('@')[0];
+        document.getElementById('nav-user').textContent = name;
+        document.getElementById('nav-dashboard').style.display = 'inline-block';
+        document.getElementById('nav-signout').style.display = 'inline-block';
+        document.getElementById('nav-signin').style.display = 'none';
+        document.getElementById('nav-cta').style.display = 'none';
+      }
+    } catch(e) {}
+  }
+  async function signOut() {
+    try { await sb.auth.signOut(); } catch(e) {}
+    window.location.href = '/index.html';
+  }
+  </script>
+  <script src="/ad-nav.js" defer></script>
+</body>
+</html>

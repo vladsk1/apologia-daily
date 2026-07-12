@@ -21,6 +21,7 @@ import { execSync } from 'node:child_process';
 
 // ── CANONICAL MENU (edit here — the one source of truth) ──
 const CANON = `<ul class="adn-links">
+      <li><a href="/search.html" class="adn-search-link" aria-label="Search">&#128269; Search</a></li>
       <li><a href="/evidence-library.html">Evidence Library</a></li>
       <li><a href="/daily-devotional.html">Daily Devotional</a></li>
       <li><a href="/debate-arena.html">Debate Arena</a></li>
