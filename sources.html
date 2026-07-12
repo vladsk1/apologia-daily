@@ -187,15 +187,16 @@
     var filter = 'all';
 
     // group each passage into a browsable collection
-    function groupOf(rec) {
-      var w = rec.work || '', a = rec.author || '';
-      if (/Creed|Definition/i.test(w)) return 'creeds';
-      if (/Ignatius/i.test(a)) return 'ignatius';
-      if (/Athanasius/i.test(a)) return 'athanasius';
-      return 'other';
+    // The creeds share one collection; every Father gets his own, keyed off the author name.
+    function groupKey(rec) {
+      if (/Creed|Definition/i.test(rec.work || '')) return 'creeds';
+      return (rec.author || 'other').toLowerCase().replace(/\s+of\s+.*$/, '').replace(/[^a-z0-9]+/g, '-');
     }
-    var GROUP_LABEL = { creeds: 'The Creeds', ignatius: 'Ignatius of Antioch', athanasius: 'Athanasius of Alexandria', other: 'Other Fathers' };
-    var GROUP_ORDER = { creeds: 0, ignatius: 1, athanasius: 2, other: 3 };
+    function groupLabel(rec) {
+      if (groupKey(rec) === 'creeds') return 'The Creeds';
+      return (rec.author || 'Other').replace(/\s+of\s+.*$/, '');
+    }
+    var GROUPS = {}; // key -> { label, order, count } — built after the index loads
 
     function esc(s) {
       return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
@@ -225,7 +226,7 @@
     }
     function dateStr(rec) {
       if (!rec.year) return '';
-      var councils = groupOf(rec) === 'creeds' && /Council|Nicaea|Constantinople|Chalcedon|Definition/i.test((rec.author || '') + (rec.work || ''));
+      var councils = groupKey(rec) === 'creeds' && /Council|Nicaea|Constantinople|Chalcedon|Definition/i.test((rec.author || '') + (rec.work || ''));
       return (councils ? 'AD ' : 'c. AD ') + rec.year;
     }
 
@@ -234,11 +235,16 @@
         return '<button class="psg-tag" data-tag="' + esc(t) + '">' + esc(t) + '</button>';
       }).join('');
       var d = dateStr(rec);
+      // Avoid "Confessions, Confessions I.1" when the section already leads with the work title.
+      var secLc = (rec.section || '').toLowerCase(), workLc = (rec.work || '').toLowerCase();
+      var citeInner = (rec.section && workLc && secLc.indexOf(workLc) === 0)
+        ? '<b>' + esc(rec.section) + '</b>'
+        : '<b>' + esc(rec.work) + '</b>' + (rec.section ? ', ' + esc(rec.section) : '');
       return '<article class="psg">' +
         '<div class="psg-top"><span class="psg-au">' + esc(rec.author) + '</span>' +
           '<span class="psg-badge">&#10003; verified</span></div>' +
         '<blockquote class="psg-q">' + highlight(rec.text, toks) + '</blockquote>' +
-        '<div class="psg-cite"><b>' + esc(rec.work) + '</b>' + (rec.section ? ', ' + esc(rec.section) : '') +
+        '<div class="psg-cite">' + citeInner +
           (d ? ' &middot; <span class="psg-yr">' + d + '</span>' : '') + '</div>' +
         '<div class="psg-foot"><span class="psg-tr">' + esc(rec.translation) + '</span>' +
           '<span class="psg-actions">' +
@@ -274,7 +280,7 @@
         if (showHeads && r._g !== lastG) {
           lastG = r._g;
           var n = hits.filter(function (x) { return x._g === lastG; }).length;
-          html += '<div class="grp-h">' + esc(GROUP_LABEL[lastG]) + ' <span>&middot; ' + n + '</span></div>';
+          html += '<div class="grp-h">' + esc(GROUPS[lastG].label) + ' <span>&middot; ' + n + '</span></div>';
         }
         html += card(r, toks);
       }
@@ -315,14 +321,12 @@
     }
 
     function buildChips() {
-      var counts = { all: INDEX.length, creeds: 0, ignatius: 0, athanasius: 0, other: 0 };
-      INDEX.forEach(function (r) { counts[r._g] = (counts[r._g] || 0) + 1; });
-      var defs = [['all', 'All'], ['creeds', 'The Creeds'], ['ignatius', 'Ignatius'], ['athanasius', 'Athanasius']];
-      if (counts.other) defs.push(['other', 'Other Fathers']);
+      var keys = Object.keys(GROUPS).sort(function (a, b) { return GROUPS[a].order - GROUPS[b].order; });
+      var defs = [['all', 'All', INDEX.length]].concat(keys.map(function (k) { return [k, GROUPS[k].label, GROUPS[k].count]; }));
       var el = document.getElementById('chips');
       el.innerHTML = defs.map(function (d) {
         return '<button class="chip' + (d[0] === filter ? ' active' : '') + '" data-f="' + d[0] + '">' +
-          d[1] + '<span class="ct">' + (counts[d[0]] || 0) + '</span></button>';
+          esc(d[1]) + '<span class="ct">' + d[2] + '</span></button>';
       }).join('');
       el.querySelectorAll('.chip').forEach(function (b) {
         b.onclick = function () { filter = b.getAttribute('data-f'); buildChips(); render(); };
@@ -337,19 +341,26 @@
 
     fetch('/sources-index.json').then(function (r) { return r.json(); }).then(function (data) {
       INDEX = (data || []).filter(function (r) { return r.verified; }).map(function (rec) {
-        rec._g = groupOf(rec);
+        rec._g = groupKey(rec);
         rec._b = norm([rec.text, rec.author, rec.work, rec.section, (rec.tags || []).join(' ')].join(' '));
         return rec;
       });
+      // Build the group registry: creeds first, then each Father by earliest year.
+      INDEX.forEach(function (rec) {
+        var k = rec._g;
+        if (!GROUPS[k]) GROUPS[k] = { label: groupLabel(rec), order: (k === 'creeds' ? -1 : (rec.year || 9999)), count: 0 };
+        GROUPS[k].count++;
+        if (k !== 'creeds' && rec.year && rec.year < GROUPS[k].order) GROUPS[k].order = rec.year;
+      });
       INDEX.sort(function (a, b) {
-        if (GROUP_ORDER[a._g] !== GROUP_ORDER[b._g]) return GROUP_ORDER[a._g] - GROUP_ORDER[b._g];
+        if (GROUPS[a._g].order !== GROUPS[b._g].order) return GROUPS[a._g].order - GROUPS[b._g].order;
         if ((a.year || 0) !== (b.year || 0)) return (a.year || 0) - (b.year || 0);
         return String(a.id).localeCompare(String(b.id));
       });
       document.getElementById('note').innerHTML =
         'Every passage is public-domain and has been verified word-for-word against its cited source. ' +
         'These are the primary texts the <a href="/evidence-library.html">Evidence Library</a> quotes from. ' +
-        'Growing steadily &mdash; the creeds, Ignatius, and Athanasius are here now, with Irenaeus, Justin Martyr, Tertullian, Augustine and Eusebius to follow.';
+        'Now spanning the creeds, Ignatius, Athanasius, Irenaeus, Justin Martyr, Tertullian, Augustine, and Eusebius &mdash; ' + INDEX.length + ' verified passages, and still growing.';
       buildChips();
       var pre = new URLSearchParams(location.search).get('q');
       if (pre) document.getElementById('q').value = pre;

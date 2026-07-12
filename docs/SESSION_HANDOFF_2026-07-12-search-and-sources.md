@@ -97,12 +97,28 @@ Action items 1–2 complete; item 3 begun (Ignatius + Athanasius ingested); 4–
   Robertson (NPNF), complementing §54 (which stays in `patristics.json`). Drafted by
   apologia-evidence, verbatim-verified by apologia-citations (3 corrections applied:
   Smyrn. 3 dropped-sentence, Smyrn. 1 editorial brackets, Eph. 7 connector).
-- **Library now = 36 verified passages.** `build-sources-index.mjs` also had a win32 path
-  bug (`import.meta.url.pathname`) fixed → `fileURLToPath`, so the build + `--check` run on
-  Windows. Index rebuilt; CI `--check` passes.
-- **STILL TO EXPAND (item 3 continued):** Irenaeus *Against Heresies*, Augustine, Justin
-  Martyr, Tertullian, Eusebius, and the remaining creeds/councils — same PD-only, verify-
-  before-quote discipline.
+- **`build-sources-index.mjs`** also had a win32 path bug (`import.meta.url.pathname`) fixed →
+  `fileURLToPath`, so the build + `--check` run on Windows. Index rebuilt; CI `--check` passes.
+
+## ✅ DONE 2026-07-11 (continued) — /sources browse page + 5 more Fathers
+- **`/sources` browse page** (`sources.html`) — searchable, groups the library by author with
+  dynamic chips (chronological), per-passage "Copy quote", source links, verified badges.
+  Added "Source Library" to the canonical nav (`tools/sync-nav.mjs`, re-synced 180 pages) +
+  the `/sources` rewrite in `vercel.json`.
+- **Item 3 expansion done (5 authors, +30 verified passages):** `sources/irenaeus.json` (7,
+  Roberts & Rambaut ANF), `sources/justin-martyr.json` (6, Dods & Reith ANF),
+  `sources/tertullian.json` (6, Holmes/Thelwall ANF), `sources/augustine.json` (6, NPNF1
+  Pilkington/Dods/Haddan/Gibb), `sources/eusebius.json` (5, McGiffert NPNF2). Drafted by
+  apologia-evidence, verbatim-verified by apologia-citations (0 mismatches; it confirmed the
+  Augustine text is genuine NPNF, not the Pusey paraphrase everyone quotes). Delicate-but-
+  orthodox lines (Justin's taxis, Tertullian's Praxeas "in degree", Irenaeus/Athanasius
+  deification, Augustine avoided predestination) are flagged in each entry's note for a future
+  `orthonote` clarifier when quoted.
+- **Library now = 66 verified passages** (creeds 5 · Ignatius 21 · Athanasius 10 · Irenaeus 7
+  · Justin 6 · Tertullian 6 · Augustine 6 · Eusebius 5).
+- **STILL TO EXPAND:** the remaining councils, plus e.g. Clement of Rome, Polycarp, the
+  Didache, Cyprian, Origen (with care), Gregory of Nazianzus, Basil — same PD-only,
+  verify-before-quote discipline.
 
 ## ▶ ACTION FOR THE WEB-ENABLED (LOCAL) SESSION
 Do this where CCEL/ANF/Wikisource are reachable:
