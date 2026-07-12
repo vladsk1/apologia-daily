@@ -111,7 +111,7 @@
     function nextDest(){
       try {
         const n = new URLSearchParams(location.search).get('next');
-        if (n && /^\/[A-Za-z0-9/_.\-?=&%]*$/.test(n)) return n;
+        if (n && /^\/(?![\/\\])[A-Za-z0-9/_.\-?=&%]*$/.test(n)) return n;
       } catch(e){}
       return 'dashboard.html';
     }
