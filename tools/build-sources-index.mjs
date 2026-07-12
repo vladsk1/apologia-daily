@@ -8,8 +8,11 @@
  * CI:    node tools/build-sources-index.mjs --check   (fails if stale)
  */
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
-const ROOT = new URL('..', import.meta.url).pathname;
+// fileURLToPath (not .pathname) so this works on Windows too — .pathname yields
+// a broken "/C:/…%20…" path (leading slash + undecoded spaces) on win32.
+const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const DIR = ROOT + 'sources/';
 
 const REQUIRED = ['id', 'author', 'work', 'section', 'translation', 'pd', 'source_url', 'verified', 'text'];

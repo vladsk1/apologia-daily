@@ -64,9 +64,9 @@
     "translation": "Robertson, NPNF ser. 2 vol. 4 (public domain)",
     "pd": true,
     "source_url": "https://www.ccel.org/ccel/schaff/npnf204.vii.ii.liv.html",
-    "verified": false,
+    "verified": true,
     "tags": ["incarnation", "theosis", "deity of christ", "salvation"],
-    "note": "The most-quoted line of the treatise. Wording and §54 citation corroborated via search (incl. a CCEL snippet), but NOT yet confirmed against the primary NPNF text (CCEL is network-blocked in the build sandbox) — flip to verified when a clean fetch is possible.",
+    "note": "The most-quoted line of the treatise. Verified verbatim (character-for-character) against the primary NPNF ser. 2 vol. 4 §54 text (apologia-citations, web, 2026-07-11).",
     "text": "For He was made man that we might be made God; and He manifested Himself by a body that we might receive the idea of the unseen Father; and He endured the insolence of men that we might inherit immortality."
   }
 ]

@@ -7,11 +7,11 @@
     "section": "full (traditional English)",
     "translation": "Book of Common Prayer (1662), public domain",
     "pd": true,
-    "source_url": "https://www.gutenberg.org/ebooks/45108",
-    "verified": false,
+    "source_url": "https://justus.anglican.org/resources/bcp/1662/baskerville.htm",
+    "verified": true,
     "tags": ["creed", "trinity", "incarnation", "resurrection", "denominationally-neutral"],
-    "note": "The genuinely public-domain traditional BCP wording ('Holy Ghost', 'descended into hell'). NOT the modern ELLC/ICET 1988 ecumenical version ('Holy Spirit', 'descended to the dead'), which is a copyrighted text used by permission — do not use that one here.",
-    "text": "I believe in God the Father Almighty, Maker of heaven and earth: And in Jesus Christ his only Son our Lord, Who was conceived by the Holy Ghost, Born of the Virgin Mary, Suffered under Pontius Pilate, Was crucified, dead, and buried: He descended into hell; The third day he rose again from the dead, He ascended into heaven, And sitteth on the right hand of God the Father Almighty; From thence he shall come to judge the quick and the dead. I believe in the Holy Ghost; The holy catholic Church; The communion of saints; The forgiveness of sins; The resurrection of the body, And the life everlasting. Amen."
+    "note": "The genuinely public-domain traditional BCP wording ('Holy Ghost', 'descended into hell'). NOT the modern ELLC/ICET 1988 ecumenical version ('Holy Spirit', 'descended to the dead'), which is a copyrighted text used by permission — do not use that one here. Verified 2026-07-11 (apologia-citations, web): wording confirmed as authentic 1662 BCP and PD, copyrighted-ELLC trap ruled out; exact 1662 capitalization restored ('Catholick', 'Communion of Saints'). The prior source_url (Gutenberg 45108) was wrong — it is 'P. T. Barnum's Menagerie' — now corrected to the 1662 BCP.",
+    "text": "I believe in God the Father Almighty, Maker of heaven and earth: And in Jesus Christ his only Son our Lord, Who was conceived by the Holy Ghost, Born of the Virgin Mary, Suffered under Pontius Pilate, Was crucified, dead, and buried: He descended into hell; The third day he rose again from the dead, He ascended into heaven, And sitteth on the right hand of God the Father Almighty; From thence he shall come to judge the quick and the dead. I believe in the Holy Ghost; The holy Catholick Church; The Communion of Saints; The Forgiveness of sins; The Resurrection of the body, And the life everlasting. Amen."
   },
   {
     "id": "nicene-creed-325",
@@ -21,10 +21,10 @@
     "section": "full",
     "translation": "Schaff, Creeds of Christendom (public domain)",
     "pd": true,
-    "source_url": "https://www.ccel.org/ccel/schaff/creeds1.html",
-    "verified": false,
+    "source_url": "https://www.ccel.org/ccel/schaff/creeds1.iv.iii.html",
+    "verified": true,
     "tags": ["creed", "trinity", "deity of christ", "homoousios", "arianism", "nicaea"],
-    "note": "The original 325 creed, ending in the anathemas against Arianism. Distinct from the longer 381 recited creed.",
+    "note": "The original 325 creed, ending in the anathemas against Arianism. Distinct from the longer 381 recited creed. Verified verbatim against Schaff (apologia-citations, web, 2026-07-11); the transliteration '(homoousios)' is a PD-safe reader gloss of Schaff's Greek '(ὁμοούσιον)'.",
     "text": "We believe in one God, the Father Almighty, Maker of all things visible and invisible. And in one Lord Jesus Christ, the Son of God, begotten of the Father, the only-begotten; that is, of the essence of the Father, God of God, Light of Light, very God of very God, begotten, not made, being of one substance (homoousios) with the Father; by whom all things were made both in heaven and on earth; who for us men, and for our salvation, came down and was incarnate and was made man; he suffered, and the third day he rose again, ascended into heaven; from thence he shall come to judge the quick and the dead. And in the Holy Ghost. But those who say: 'There was a time when he was not;' and 'He was not before he was made;' and 'He was made out of nothing,' or 'He is of another substance' or 'essence,' or 'The Son of God is created,' or 'changeable,' or 'alterable' — they are condemned by the holy catholic and apostolic Church."
   },
   {
@@ -33,13 +33,13 @@
     "work": "The Niceno-Constantinopolitan Creed (381)",
     "year": 381,
     "section": "full (original, without the filioque)",
-    "translation": "Traditional ecumenical English, public domain",
+    "translation": "Schaff, Creeds of Christendom (public domain)",
     "pd": true,
-    "source_url": "https://www.ccel.org/ccel/schaff/creeds2.html",
-    "verified": false,
+    "source_url": "https://www.ccel.org/ccel/schaff/creeds1.iv.iii.html",
+    "verified": true,
     "tags": ["creed", "trinity", "deity of christ", "holy spirit", "denominationally-neutral"],
-    "note": "Given in its original form WITHOUT the filioque ('and the Son'), which was later added in the West and is disputed between East and West — do not present the filioque as settled (denominational neutrality). 'We believe' is the conciliar form; many traditions recite 'I believe.'",
-    "text": "We believe in one God, the Father almighty, maker of heaven and earth, of all things visible and invisible. And in one Lord Jesus Christ, the only-begotten Son of God, begotten of the Father before all ages, Light of Light, true God of true God, begotten not made, of one substance with the Father, through whom all things were made; who for us men and for our salvation came down from heaven, and was incarnate by the Holy Spirit and the Virgin Mary, and was made man; and was crucified also for us under Pontius Pilate, and suffered and was buried; and the third day he rose again according to the Scriptures, and ascended into heaven, and sits on the right hand of the Father; and he shall come again with glory to judge the living and the dead, whose kingdom shall have no end. And in the Holy Spirit, the Lord and giver of life, who proceeds from the Father, who with the Father and the Son together is worshipped and glorified, who spoke by the prophets. And in one holy catholic and apostolic Church; we acknowledge one baptism for the remission of sins; we look for the resurrection of the dead, and the life of the world to come. Amen."
+    "note": "Given in its original form WITHOUT the filioque ('and the Son') in the procession clause, which was later added in the West and is disputed between East and West — do not present the filioque as settled (denominational neutrality). (The 'and the Son' in the WORSHIP clause is original and stays.) 'We believe' is the conciliar form; many traditions recite 'I believe.' Text swapped 2026-07-11: the prior wording was a modern ecumenical (ICET/ELLC-family) rendering — copyright-risky, the same trap as the Apostles' Creed — now replaced with Schaff's verbatim PD text (apologia-citations, web); Schaff prints '[and the Son]' bracketed in the procession clause, omitted here.",
+    "text": "We believe in one God, the Father Almighty, Maker of heaven and earth, and of all things visible and invisible. And in one Lord Jesus Christ, the only-begotten Son of God, begotten of the Father before all worlds (æons), Light of Light, very God of very God, begotten, not made, being of one substance with the Father; by whom all things were made; who for us men, and for our salvation, came down from heaven, and was incarnate by the Holy Ghost of the Virgin Mary, and was made man; and was crucified also for us under Pontius Pilate; he suffered and was buried; and the third day he rose again, according to the Scriptures; and ascended into heaven, and sitteth on the right hand of the Father; and he shall come again, with glory, to judge the quick and the dead; whose kingdom shall have no end. And in the Holy Ghost, the Lord and Giver of life, who proceedeth from the Father, who with the Father and the Son together is worshiped and glorified, who spake by the prophets. In one holy catholic and apostolic Church; we acknowledge one baptism for the remission of sins; we look for the resurrection of the dead, and the life of the world to come. Amen."
   },
   {
     "id": "chalcedonian-definition-451",
@@ -49,10 +49,11 @@
     "section": "christological core",
     "translation": "Schaff, Creeds of Christendom (public domain)",
     "pd": true,
-    "source_url": "https://www.ccel.org/ccel/schaff/creeds2.html",
-    "verified": false,
+    "source_url": "https://www.ccel.org/ccel/schaff/creeds2.iv.i.iii.html",
+    "verified": true,
     "tags": ["creed", "incarnation", "two natures", "hypostatic union", "deity of christ", "humanity of christ"],
-    "text": "We, then, following the holy Fathers, all with one consent, teach men to confess one and the same Son, our Lord Jesus Christ, the same perfect in Godhead and also perfect in manhood; truly God and truly man, of a reasonable soul and body; consubstantial with the Father according to the Godhead, and consubstantial with us according to the Manhood; in all things like unto us, without sin; begotten before all ages of the Father according to the Godhead, and in these latter days, for us and for our salvation, born of the Virgin Mary, the Mother of God, according to the Manhood; one and the same Christ, Son, Lord, Only-begotten, to be acknowledged in two natures, inconfusedly, unchangeably, indivisibly, inseparably; the distinction of natures being by no means taken away by the union, but rather the property of each nature being preserved, and concurring in one Person and one Subsistence, not parted or divided into two persons, but one and the same Son, and only-begotten God, the Word, the Lord Jesus Christ."
+    "note": "Christological core excerpt, verbatim Schaff (apologia-citations, web, 2026-07-11); the closing '...as the prophets from the beginning [have declared]...' is intentionally omitted. Fixed 2026-07-11: 'only-begotten God, the Word' -> 'only begotten, God the Word' (Schaff = God the Logos).",
+    "text": "We, then, following the holy Fathers, all with one consent, teach men to confess one and the same Son, our Lord Jesus Christ, the same perfect in Godhead and also perfect in manhood; truly God and truly man, of a reasonable soul and body; consubstantial with the Father according to the Godhead, and consubstantial with us according to the Manhood; in all things like unto us, without sin; begotten before all ages of the Father according to the Godhead, and in these latter days, for us and for our salvation, born of the Virgin Mary, the Mother of God, according to the Manhood; one and the same Christ, Son, Lord, Only-begotten, to be acknowledged in two natures, inconfusedly, unchangeably, indivisibly, inseparably; the distinction of natures being by no means taken away by the union, but rather the property of each nature being preserved, and concurring in one Person and one Subsistence, not parted or divided into two persons, but one and the same Son, and only begotten, God the Word, the Lord Jesus Christ."
   },
   {
     "id": "athanasian-creed-trinity",
@@ -62,10 +63,10 @@
     "section": "on the Trinity (clauses 3-6, 15-20, 25-26)",
     "translation": "Traditional English (Book of Common Prayer), public domain",
     "pd": true,
-    "source_url": "https://www.ccel.org/ccel/schaff/creeds2.html",
-    "verified": false,
+    "source_url": "https://en.wikisource.org/wiki/Book_of_Common_Prayer_(ECUSA)/Historical_Documents_of_the_Church/Quicunque_Vult",
+    "verified": true,
     "tags": ["creed", "trinity", "co-equal", "co-eternal", "modalism", "tritheism", "arianism"],
-    "note": "Excerpt of the Trinitarian clauses (the most-cited part). Despite the name it is a later Western text, not by Athanasius himself.",
+    "note": "Excerpt of the Trinitarian clauses (the most-cited part). Despite the name it is a later Western text, not by Athanasius himself. Verified 2026-07-11 (apologia-citations, web) as the verbatim traditional Book of Common Prayer Quicunque Vult (PD) — note the BCP-distinctive 'co-eternal together, and co-equal'; this is the BCP translation, NOT Schaff (do not relabel or point at the Schaff page).",
     "text": "And the catholic faith is this: That we worship one God in Trinity, and Trinity in Unity; neither confounding the Persons, nor dividing the Substance. For there is one Person of the Father, another of the Son, and another of the Holy Ghost. But the Godhead of the Father, of the Son, and of the Holy Ghost, is all one; the Glory equal, the Majesty co-eternal. Such as the Father is, such is the Son, and such is the Holy Ghost. The Father eternal, the Son eternal, and the Holy Ghost eternal. And yet they are not three eternals, but one eternal. So likewise the Father is Almighty, the Son Almighty, and the Holy Ghost Almighty. And yet they are not three Almighties, but one Almighty. So the Father is God, the Son is God, and the Holy Ghost is God. And yet they are not three Gods, but one God. And in this Trinity none is afore, or after another; none is greater, or less than another. But the whole three Persons are co-eternal together, and co-equal."
   }
 ]
