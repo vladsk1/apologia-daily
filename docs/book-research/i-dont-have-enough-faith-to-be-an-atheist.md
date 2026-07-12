@@ -3,20 +3,24 @@
 > **Norman L. Geisler & Frank Turek** (Crossway, 2004). Foreword by David Limbaugh.
 > A cornerstone cumulative-case apologetic. This note is a **research map**, not the book.
 
-> ## 🚧 STATUS: UNFINISHED — needs completion
-> This note is **usable now** but **not complete**. Built by reading the book in the Amazon Cloud
-> Reader (~10% read in full + targeted verification of key passages). **Strong/verified:** the
-> Introduction (12 points) and Chapters 1, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14.
-> **Still thin — to finish:** **Chapter 2** (logic / first principles / Hume & Kant), **Chapter 6**
-> (macroevolution — partial), **Chapter 8** (miracles — thesis only), and **Appendices 1–3**.
-> See the **Capture status** table lower in this file for the exact per-chapter depth.
+> ## ✅ STATUS: COMPLETE (all chapters + appendices captured)
+> This note now maps **every chapter and all three appendices** in our own words, with the
+> primary-source leads indexed. Completed 2026-07-12 by reading the remaining sections directly in
+> the Amazon Cloud Reader: **Chapter 2** (logic / first principles / Hume & Kant), **Chapter 6**
+> (macroevolution — the full five-reasons architecture), **Chapter 8** (miracles — Spinoza + the
+> complete three-part Hume rebuttal), and **Appendices 2–3**. Chapter 11's "Top Ten Reasons" list
+> was also re-verified against the book's actual numbered headers and **renumbered** (an earlier
+> pass had mis-slotted it — see that section's note). Appendix 1 remains at the thesis level it was
+> first captured at (usable; deepen later if needed).
 >
-> **To resume:** open the book in a **fresh** Claude Browser session (the Cloud Reader's screenshot
-> renderer froze reproducibly late in the build session — a clean browser process fixes it). Use the
-> in-reader **Search** to jump to sections and the **Annotations** panel as a highlight index.
-> Read the argument sections of ch. 2/6/8 + the appendices, capture citations, and update the
-> Capture-status table. Do **not** treat any citation as confirmed until verified against the
-> primary source (per this note's usage rules below).
+> **Standing rule (unchanged):** this is a *research map of a copyrighted book*, not a quotable
+> source. Do **not** treat any citation below as confirmed for publication until it is verified
+> against the **primary source** and run through the normal pipeline (citations → argument →
+> orthodoxy). Watch two known citation-precision flags surfaced during capture: (1) the "Boeing 747
+> from a tornado in a junkyard" line is attributed *in this book* to **Chandra Wickramasinghe**
+> (it is usually the Hoyle–Wickramasinghe analogy — attribute carefully); (2) several scholar quotes
+> here (Behe, Dawkins, N.T. Wright, Greenleaf, the DNA-similarity percentages) are the book's
+> renderings — re-verify each against its own source before use.
 
 ## ⚖️ What this file is (and the copyright line)
 
@@ -169,7 +173,82 @@ _Maps to:_ foundational — "is truth relative?" / "isn't every religion true?" 
 Ask-Anything system prompt's posture on exclusivity.
 
 ### Ch. 2 — Why Should Anyone Believe Anything At All? (logic, first principles, Hume/Kant)
-_(reading…)_
+**Thesis:** truth is discovered by **reason and evidence** (the "philosophical" grounds), and the
+two great modern attempts to shut reason out of religion — **Hume's** empiricism and **Kant's**
+agnosticism — are both **self-defeating**. Epigraph: **Blaise Pascal**, "People almost invariably
+arrive at their beliefs not on the basis of proof but on the basis of what they find attractive."
+Opens with **James Sire**'s seminar of the same title.
+
+**Why do people believe what they believe? (Table 2.1, verified p. 51)** — Sire sorts every answer
+into four categories, then shows only the last is a *truth*-test:
+- **Sociological** (parents, friends, society, culture) — not a good reason; the Nazis had a
+  culture that accepted mass murder.
+- **Psychological** (comfort, peace of mind, meaning, purpose, hope, identity) — comfort isn't a
+  test for truth; a junkie is comforted by a drug that kills him.
+- **Religious** (scripture, pastor/priest, guru, rabbi, imam, church) — insufficient alone: *whose*
+  scripture? They teach contradictory things.
+- **Philosophical** (consistency, coherence, completeness — best explanation of *all* the evidence)
+  — the only adequate ground: is it rational, supported by evidence, and does it best explain the
+  data? This is the classic sense of "philosophy" = finding truth through **logic, evidence, and
+  science**. *(Reusable definition on the same pages: an **apologist** is "someone who shows how
+  good reason and evidence support or contradict a particular belief.")*
+
+**The first principle everything rests on — the Law of Noncontradiction** *(verified pp. 54–55):*
+the self-evident law that contradictory claims cannot both be true at the same time in the same
+sense — "the opposite of true is false." It's what makes the **Road Runner tactic** (ch. 1) work.
+It applies to the God question exactly as to anything else: either theists are right (God exists) or
+atheists are right (God doesn't); either Jesus rose (Bible) or he didn't (Qur'an) — one is right,
+the other wrong. Medieval Muslim philosopher **Avicenna**'s vivid line: anyone who denies the law
+should be "beaten and burned until he admits that to be beaten is not the same as not to be beaten"
+(the source of the section title, "To Be Burned or Not to Be Burned"). Also rebuts the relativist
+"Eastern (both-and) vs. Western (either-or) logic" claim: asserting you *must* use both-and logic
+is itself an either-or claim; 2+2=4 and "murder is wrong" hold regardless of culture.
+
+**Hume's skepticism, and why it's self-defeating** *(verified pp. 55–57):* **David Hume** the
+**empiricist** held that a proposition is meaningful only if it is (1) *true by definition* (a math
+equation, "all triangles have three sides") or (2) *empirically verifiable* through the five senses.
+His *Enquiry Concerning Human Understanding* famously ends: commit any volume of "divinity or school
+metaphysics" that lacks these "**to the flames, for it can contain nothing but sophistry and
+illusion**." **A. J. Ayer** later packaged this as the "**principle of empirical verifiability**"
+(**Logical Positivism**), the rage in mid-1960s philosophy departments. The refutation (Geisler's
+own classroom story): the verifiability principle *itself* is neither true by definition nor
+empirically verifiable — **so by its own standard it is meaningless.** Hume and Ayer "try to prove
+too much because their method… excludes too much." *(Note: Hume's* Of Miracles *and his anti-miracle
+argument are handled in ch. 8, not here.)*
+
+**Kant's agnosticism, and why it's self-defeating** *(verified pp. 58–60):* **Immanuel Kant** —
+"even more devastating." His **phenomena/noumena** split: your mind and senses *form* all incoming
+sense data, so you only ever know the thing *as it appears to you* (phenomena), never the thing
+**in itself** (noumena) — the "tree" you see is your mind's construction. Two refutations: **(1) Road
+Runner** — Kant *claims to know* the real world is unknowable, i.e. "the truth about the real world
+is that there are no truths about the real world" (violates the Law of Noncontradiction). **(2) The
+"nothing-but" fallacy** — to know the data is "nothing but" phenomena, he'd have to see *more than*
+phenomena (you can only tell where white paper ends by also seeing the black desk that borders it);
+if you *can't* distinguish phenomena from noumena, the reasonable assumption is that they match — so
+we really do know the thing in itself. (Wax-seal image: the seal impresses the wax, not vice-versa;
+the tree molds your mind. Senses are "windows *through which*," not "*at which*," we look.)
+C. S. Lewis is quoted: "good philosophy must exist… because bad philosophy needs to be answered."
+
+**The honest limit + the epistemic standard** *(verified pp. 60–63):* refuting Hume and Kant only
+shows their arguments are **false** — the Road Runner tactic gives **no positive evidence** *for*
+God (that's ch. 3+). How is truth then known? Through **first principles** (self-evident, e.g. the
+Law of Noncontradiction and the **Law of the Excluded Middle** — "either God exists or he does not;
+no third alternative") **plus** the two engines of reasoning: **deduction** (valid conclusions from
+premises — but "an argument can be logically [valid] but still false because the premises… do not
+correspond to reality") and **induction** (≈ the scientific method — general conclusions from
+repeated observation). Crucially, inductive conclusions are **"highly probable," not absolutely
+certain** (except "perfect induction," where all particulars are known). **So the whole cumulative
+case for God is built to "beyond reasonable doubt," not to deductive proof — this is the book's
+governing epistemic standard.**
+
+> ✅ **Guardrail fit:** clean, mainstream logic and epistemology; the "beyond reasonable doubt"
+> standard matches our own honest, probabilistic framing of the cumulative case (never overclaim
+> "proof"). The self-refutation moves against verificationism and Kantian agnosticism are standard
+> and safe. Hume (d. 1776) and Kant (d. 1804) are **PD** — any quotation can be verified against a
+> PD edition and could even seed `/sources`.
+_Maps to:_ foundational — "is truth relative?" / "isn't that just your opinion?" answers; the
+Ask-Anything posture on reason and evidence; a possible "how do we know anything?" / first-principles
+explainer.
 
 ### Ch. 3 — In the Beginning There Was a Great SURGE (cosmological argument)
 **Thesis:** five converging lines of scientific evidence show the universe **began** (the Big
@@ -265,48 +344,74 @@ Capture exact quotes/figures from the primaries.
 _Maps to:_ `library/originlife.html` (Science & Faith tab).
 
 ### Ch. 6 — New Life Forms: Goo to You via the Zoo? (macroevolution)
-_Captured at thesis level (structure, not page-by-page) — confirm all specifics before use._
-**Thesis:** distinguishes **microevolution** (small change within a kind — observed, uncontested)
-from **macroevolution** ("goo-to-you-via-the-zoo," one kind becoming a fundamentally new kind —
-which they argue is *not* observed and doesn't follow from micro). Argues the extrapolation from
-one to the other is the disputed leap, and points to the information problem (ch. 5) and fossil
-discontinuities.
+_Now captured in full (pp. 137–149) — the chapter's argument architecture and citations._
+**Thesis:** carries the ch. 5 **information** argument forward into new life forms, then argues
+**natural selection cannot bridge microevolution to macroevolution**. Epigraph — Ron Carlson: "In
+grammar school they taught me that a frog turning into a prince was a fairy tale. In the university
+they taught me that a frog turning into a prince was a fact!"
 
-**Verified specifics (from in-book highlights, pp. 141, 154):** the chapter's precise claims are
-"microevolution **has** been observed," but "natural selection has never been observed to create
-new **types**," and "surviving bacteria always stay bacteria" — i.e. the disputed step is
-macroevolution, which "is exactly what Darwinists claim from the data." Cites **Michael Behe**
-(*p. 154*: "biology dwarfs anatomy on the question of the plausibility of macroevolution") — i.e.
-the **irreducible-complexity** argument (Behe, *Darwin's Black Box*).
+**The SETI / information opening** *(verified pp. 137–139):* the movie *Contact* (from **Carl
+Sagan**'s novel) turns on the premise that an unmistakable sign of intelligence is a **message** (a
+sequence of prime numbers) — "random radio waves can be naturally produced, but those that contain a
+message always have an intelligent source." DNA's genetic alphabet *is* a message, so the
+cell-to-encyclopedia comparison is "one-to-one… rather than just an analogy." **The Sagan irony** (a
+directly reusable point): Sagan, an ardent evolutionist who ran the real SETI on "message ⇒ mind"
+logic, was sure a string of prime numbers proves an intelligent being, yet held the ~1,000
+encyclopedias of information in the first cell needs no mind — the book's line: "It takes a lot of
+faith *not* to believe in God. More than we have!" (Sagan's own brain-information estimate + the
+Madison Square Garden "20 million books, 1,000 on every seat" image.)
+
+**Two problems for the Darwinist frame, first** *(verified pp. 139–140):* (a) macroevolution can't
+even begin without *first life*, and abiogenesis (spontaneous generation / **panspermia**) is an
+unscientific "just-so" story (the Steve Martin "first, get a million dollars" joke); (b) **"natural
+selection" is a misnomer / a tautology** — since evolution is by definition unguided, there is no
+"selection" going on; "the fittest survive" is true by definition and proves nothing.
+
+**Micro vs. macro, and the key data claims** *(verified p. 141; Figure 6.1):* microevolution
+(**change within a type** — antibiotic-resistant bacteria, dog breeds) **has** been observed; but
+"the surviving bacteria always stay bacteria… **Natural selection has never been observed to create
+new types**." Macroevolution (**across types**) has never been observed. Darwinists "use the
+evidence for micro to prove macro," making no distinction between them — the **Berkeley law
+professor Phillip Johnson** exposed this "sleight of hand" in *Darwin on Trial*. Biologist
+**Jonathan Wells**: "Biochemical mutations cannot explain the large-scale changes… in the history of
+life." (Table 6.1: artificial selection is *intelligently guided*, natural selection is not — so the
+breeder analogy fails; illustrated by the **Paul Kurtz debate**, 1986, moderated by **John
+Ankerberg**, where Kurtz's airplane analogy backfired because planes change *by intelligence*.)
+
+**Five reasons natural selection can't produce macroevolution** *(verified pp. 141–149) — the
+chapter's reusable spine:*
+1. **Genetic Limits** — breeding hits built-in walls (Chihuahua → Great Dane, but dogs stay dogs;
+   fruit-fly experiments yield only more, often crippled, fruit flies).
+2. **Cyclical Change** — variation oscillates within a limited range, not directional (**Darwin's
+   finches**: beak size tracks wet/dry cycles but they always stay finches). "Natural selection may
+   explain the **survival** of a species, but not the **arrival** of a species."
+3. **Irreducible Complexity** — Darwin's own 1859 falsification test (a complex organ un-formable by
+   "numerous, successive, slight modifications" would break his theory); the cell was a "black box"
+   to Darwin, now known to be irreducibly complex. **Michael Behe** (biochemistry, Lehigh), *Darwin's
+   Black Box*, defines it ("removal of any one part causes the system to cease functioning") and
+   gives blood clotting, cilia, and vision as examples. (Steelmans and rebuts **Ken Miller's**
+   4-part-mousetrap counter from the PBS debate: Miller's mousetrap still requires intelligence and
+   isn't a physical precursor.)
+4. **Non-viability of Transitional Forms** — a half-scales/half-feathers creature couldn't survive
+   (feathers are irreducibly complex; a halfway reptile-bird is easy prey): no viable mechanism, and
+   the intermediates wouldn't survive anyway.
+5. **Molecular Isolation** — universal DNA is *claimed* as proof of common descent (**Richard
+   Dawkins**; human-ape DNA similarity 85–95%+), but the same data fits a **common Designer** equally
+   well (shared biochemistry to share one biosphere). The "Charles Darwin was a scientific **god** /
+   **dog**" illustration (>90% same letters, opposite meaning); and human-*mouse* DNA is also ~90%,
+   which undercuts the ancestry inference.
+
 > ⚠️ **Handle with the most care of any chapter.** This is our single most scientifically
 > sensitive area. Our Science & Faith tab does **not** commit the site to young-earth creationism
 > or blanket anti-evolutionism, and denominational neutrality means we don't bind Christians to a
 > position on evolutionary mechanism. **Borrow only the narrow, defensible micro/macro *definitional*
 > point and the information argument; do NOT import sweeping "evolution is false" rhetoric.** Behe's
-> irreducible complexity is **contested** in mainstream biology — present as "an argued challenge,"
-> not established fact. Any scientific claim here must be re-verified against current primary
-> literature (the book is 2004, popular-level). Prefer "the origin of biological information is
-> unexplained," not "Darwinism is refuted."
+> irreducible complexity and the "no new types observed" claim are **contested** in mainstream
+> biology — present as "an argued challenge," not established fact. The DNA-similarity percentages,
+> the Dawkins/Wells/Behe quotes, and the finch data are the book's popular-level renderings (2004) —
+> re-verify each against current primary literature before use. Prefer "the origin of biological
+> information is unexplained," not "Darwinism is refuted."
 _Maps to:_ Science & Faith tab — use sparingly and carefully.
-
-### Ch. 8 — Miracles: Signs of God or Gullibility?
-_Captured at thesis level — confirm specific quotes before use._
-**Thesis / role in the case:** this is **points 4–5** of the 12 — the bridge from "God exists" to
-the historical case. If a theistic God exists (established in ch. 3–7), then **miracles are
-possible** (a God who created the universe from nothing can certainly act within it), and miracles
-tied to a truth-claim can **confirm a message from God**. So one cannot rule out the resurrection
-*a priori*; it must be examined *historically* (ch. 9–12).
-
-**Main interlocutor — David Hume** (*Of Miracles*, in *An Enquiry Concerning Human Understanding*).
-The book treats Hume (with **Kant**) as the fountainhead of modern skepticism *(HUME'S SKEPTICISM
-section, p. 56)* and rebuts Hume's argument against miracles — the standard reply that Hume begs
-the question / weighs evidence by mere frequency and so would rule out any rare-but-real event.
-> ✅ **Guardrail fit:** the move is modest and correct — *if* God exists, miracles are *possible*
-> (not "proven here"); the resurrection is then argued on *historical* evidence, not assumed. This
-> matches our resurrection method (lead with evidence, not with "miracles must have happened").
-_To confirm on use:_ Hume is **PD** (d. 1776) — his *Of Miracles* text can be quoted directly and
-could even seed `/sources`. Verify the exact wording of any Hume quote from a PD edition.
-_Maps to:_ Science & Faith / Resurrection tabs.
 
 ### Ch. 7 — Mother Teresa vs. Hitler (moral argument)
 **Thesis:** an objective **Moral Law** really exists (Mother Teresa was genuinely *good* and Hitler
@@ -338,7 +443,82 @@ everything is permitted" is a common companion line — verify wording/source (i
 _Maps to:_ `library/moral.html` (God's Existence tab).
 
 ### Ch. 8 — Miracles: Signs of God or Gullibility?
-_(pending)_
+_Now captured in full (pp. 197–207) — the framework + the Spinoza and Hume rebuttals._
+**Thesis / role in the case:** this is **points 4–5** of the 12 — the bridge from "God exists" to
+the historical case. If a theistic God exists (established in ch. 3–7), then **miracles are
+possible**, and miracles tied to a truth-claim can **confirm a message from God**. So one cannot
+rule out the resurrection *a priori*; it must be examined *historically* (ch. 9–12). Epigraph — **C.
+S. Lewis**, "If we admit God, must we admit Miracle? Indeed, indeed, you have no security against it.
+That is the bargain."
+
+**Setup (verified pp. 197–202):**
+- **What the theistic arguments already establish about God:** from the **Cosmological** argument —
+  self-existent, timeless, immaterial, infinite, unimaginably powerful, **personal**; from the
+  **Teleological** — supremely intelligent and purposeful; from the **Moral** — absolutely morally
+  pure (infinite justice + love). "**Theism** is the proper term"; this God is known by **natural /
+  general revelation** (Ps 19; Rom 1:18–20; 2:14–15) — "discovered without use of the Bible" —
+  which narrows the field to the theistic religions (Judaism, Christianity, Islam; Table 8.1), while
+  conceding there is real "truth and goodness in most world religions."
+- **How God would communicate:** general revelation gives the basics; **special revelation** gives
+  detail. God doesn't simply overpower us because that would violate free will (Lewis, *Screwtape*:
+  "He cannot ravish. He can only woo"). **The King's Seal** analogy (reusable): a king authenticates
+  a message with a unique seal only he possesses — likewise **a miracle is God's "seal,"**
+  authenticating a message; even skeptics who demand "a sign" concede miracles would prove God.
+- **Definition:** a miracle is "a special act of God that interrupts the normal course of events"
+  (atheist **Antony Flew**: "something which would never have happened had nature… been left to its
+  own devices"). Miracle = "an act of God to confirm the word of God through a messenger of God."
+- **The open vs. closed universe** (**Ronald Nash**'s Russia lecture): naturalism assumes a *closed*
+  box; theism says the universe is *open* to its Creator — "God created the box!" Since God created
+  the universe from nothing (the greatest miracle, already accomplished), "then every other miracle
+  in the Bible is easy to believe." This doesn't prove the biblical miracles *happened* (a historical
+  question) — only that ruling them out *a priori* is illegitimate.
+
+**Objection 1 — Spinoza: natural laws are immutable** *(verified p. 203):* **Benedict Spinoza**
+(Jewish pantheist, 1670s): (1) miracles violate natural laws; (2) natural laws are immutable; (3)
+immutable laws can't be violated; (4) ∴ miracles are impossible. **Rebuttal:** it **begs the
+question** — it *defines* laws as immutable, which is the very point in dispute, and Spinoza's
+pantheism ruled out the theistic God in advance. Natural laws are **descriptions** of what regularly
+happens, **not prescriptions** of what must happen; finite beings overpower natural forces daily (a
+ballplayer catching a ball overpowers gravity without changing it), so the infinite Creator certainly
+can.
+
+**Objection 2 — Hume: the wise never believe miracles** *(verified pp. 204–207) — the chapter's
+centerpiece, and the specific rebuttal our resurrection material should lean on:* the modern
+objection isn't Spinoza's but **David Hume's** (1711–1776), which "Harvard bought into." Hume's
+argument in syllogistic form:
+1. Natural law is by definition a description of a **regular** occurrence.
+2. A miracle is by definition a **rare** occurrence.
+3. The evidence for the regular is **always** greater than that for the rare.
+4. A wise man always bases his belief on the greater evidence.
+5. ∴ A wise man should never believe in miracles.
+
+**The rebuttal has three prongs:**
+- **Premise 3 is false.** The evidence for the regular is *not always* greater than for the rare —
+  one counterexample defeats it, and naturalism supplies several **from its own commitments**: the
+  origin of the universe, the origin of life, and the origin of new life forms each happened *once*
+  yet are believed; indeed all of history is unrepeatable events — Hume's own birth happened once,
+  but he believed it.
+- **It confuses *believability* with *possibility*.** Even if true, the argument wouldn't touch a
+  miracle's *possibility* — it would tell an eyewitness who verified the risen Jesus to disbelieve
+  what he had verified.
+- **It confuses *probability* with *evidence*, and argues in a circle.** Hume **adds** the evidence
+  for all regular events instead of **weighing** the evidence for the specific rare event (we believe
+  a sober eyewitness's hole-in-one without demanding it be repeated five times). And he **presupposes**
+  "uniform experience against miracles," which he could only know if he already knew every miracle
+  report is false — **C. S. Lewis**: "we are arguing in a circle." Same error as the Darwinists:
+  the conclusion hidden in a false premise. The only legitimate method is to **weigh the evidence for
+  each miracle claim** — which is exactly what ch. 9–12 then do for the resurrection.
+
+> ✅ **Guardrail fit (resurrection / miracles rule) — textbook:** *if* God exists, miracles are
+> *possible* (not "proven here"); the resurrection is then argued on *historical* evidence, not
+> assumed. The "descriptions not prescriptions" point and the three-prong Hume rebuttal are strong,
+> mainstream apologetic moves and directly reusable. Keep our care: this argues miracles are
+> *possible and worth investigating*, never that "miracles must have happened."
+_To confirm on use:_ **Hume** (d. 1776) and **Spinoza** (d. 1677) are **PD** — *Of Miracles* and the
+*Tractatus* can be quoted directly and could seed `/sources`; verify exact wording from a PD edition.
+The **Flew**, **Nash**, and **Lewis** (*Screwtape*, *Miracles*) quotes are copyrighted — keep to our
+one-short-quote limit or paraphrase.
+_Maps to:_ Science & Faith / Resurrection tabs; `library/minimalfacts.html`, `library/emptytomb.html`.
 
 ### Ch. 9 — Do We Have Early Testimony About Jesus?
 **Thesis:** the NT witness is **early**, not a late legend. The gap between the events and the
@@ -413,7 +593,17 @@ flagship and most reusable material:**
   you eat my flesh and drink my blood, you have no life in you" (**John 6:53**), after which many
   disciples "turned back and no longer followed him" (**John 6:66**).
 
-**Reasons 5–10 — now page-verified (pp. 281–293):**
+**Reasons 4–10 — now page-verified against the book's actual numbered headers (pp. 280–293):**
+> **Numbering note (2026-07-12):** the book's bold headers were read directly this pass, and the
+> earlier draft had mis-slotted the back half. Corrected below. The two previously-missing reasons
+> are **4** (distinguished Jesus' words) and **8** (challenge readers to verify); the previously-
+> missing **9** is the unembellished-miracle-accounts reason; and what the old draft split into
+> "Reason 9 (abandoned beliefs)" and "Reason 10 (willing to die)" is a **single** reason 10 in the
+> book. Reasons 1–3 above are correct as-is.
+- **Reason 4 — They carefully *distinguished Jesus' words from their own*** (p. 280): though
+  quotation marks didn't exist in first-century Greek, the writers clearly marked what Jesus said vs.
+  what he didn't (red-letter editions largely agree). Inventors of a religion would have put their own
+  theology into Jesus' mouth to settle first-century disputes — but they didn't.
 - **Reason 5 — They included *resurrection* events they'd never have invented** (p. 281): the
   **burial by Joseph of Arimathea** (a named Sanhedrin member — easily checkable, so not fabricated);
   **women as the first witnesses** — incl. the formerly demon-possessed **Mary Magdalene**
@@ -423,23 +613,34 @@ flagship and most reusable material:**
   the **conversion of Jerusalem priests** (Acts 6:7).
 - **Reason 6 — They include more than *thirty historically confirmed people*** (p. 283) — real,
   checkable public figures; you don't populate a deceptive fiction with verifiable names.
-- **Reason 7 — They include *divergent details*** (p. 284) — e.g. Matthew's one angel at the tomb
-  vs. John's two: the mark of **independent** eyewitnesses, not a single harmonized/collusive source.
-- **Reason 9 — They *abandoned* long-held sacred beliefs and *adopted* radical new ones** (pp.
-  290–292, **Table 11.1**): sacrifice → fulfilled in Christ; Law of Moses → nonbinding; strict
+- **Reason 7 — They include *divergent details*** (pp. 283–285) — e.g. Matthew's one angel at the
+  tomb vs. John's two: the mark of **independent** eyewitnesses, not a single harmonized/collusive
+  source. Closes with **Simon Greenleaf** (Harvard law professor, author of the standard 19th-c.
+  treatise on legal evidence), who credited his conversion to examining the Gospel witnesses and
+  concluded they "would have been received in evidence in any court of justice, without the slightest
+  hesitation."
+- **Reason 8 — They *challenge their readers to check out verifiable facts*, even about miracles**
+  (pp. 285–286): the writers stake their credibility on checkable public claims — Luke to Theophilus
+  (**Luke 1:1–4**), Peter "not… cleverly devised tales" (**2 Pet 1:16**), Paul before Festus and
+  Agrippa (**Acts 26**), the 500 living witnesses (**1 Cor 15:6**), and Paul reminding the Corinthians
+  of "the things that mark an apostle — signs, wonders and miracles — [that] were done among you"
+  (**2 Cor 12:12**). You can't remind people of shared miracles that never happened.
+- **Reason 9 — They *describe miracles like other historical events* — simple, unembellished
+  accounts** (pp. 286–289): embellishment is a mark of legend. The restrained John 20 / Matthew 28
+  resurrection accounts are contrasted with the florid apocryphal **Gospel of Peter** (its "walking
+  and talking cross"). Cites **N. T. Wright** on how little theological framing the four canonical
+  resurrection stories actually contain — the mark of writers "concerned about getting the history
+  correct," not inventing theology.
+- **Reason 10 — They *abandoned long-held sacred beliefs/practices*, adopted radical new ones, and
+  *did not deny their testimony under persecution or threat of death*** (pp. 289–293, **Table 11.1**;
+  a *single* reason in the book): sacrifice → fulfilled in Christ; Law of Moses → nonbinding; strict
   monotheism → **Trinity**; Sabbath → Sunday; conquering Messiah → sacrificial Messiah; circumcision
-  → baptism/Communion. Devout Jews don't overturn this without cause. Cites **J. P. Moreland** on the
-  magnitude of the shift.
-- **Reason 10 — They were *willing to die* for their testimony** (pp. 292–293): **11 of the 12**
-  apostles were martyred (John exiled to Patmos); "no sane person dies for what they *know* is a
-  lie." Uses the **Watergate argument** — cites **Chuck Colson** (the conspirators cracked within
-  weeks under mere threat of embarrassment/prison; the apostles faced execution and none recanted —
-  Peter, who denied Jesus 3×, would not die for a hoax) and **Justice Antonin Scalia**.
-
-**Reasons 4 & 8 — not isolated this pass** (the remaining two of the ten; standard Geisler–Turek
-set includes "they carefully **distinguished Jesus' words from their own**," they **challenged
-readers / hostile witnesses to verify** the facts, and they **described miracles plainly** without
-embellishment — confirm which two fill slots 4 & 8 on a further read).
+  → baptism/Communion (devout Jews don't overturn this without cause — cites **J. P. Moreland** on
+  the magnitude of the shift). And they held the testimony to death: **11 of the 12** apostles
+  martyred (John exiled to Patmos); "no sane person dies for what they *know* is a lie." The
+  **Watergate argument** — **Chuck Colson** (the conspirators cracked within weeks under mere threat
+  of embarrassment/prison; the apostles faced execution and none recanted; Peter, who denied Jesus
+  3×, would not die for a hoax) and **Justice Antonin Scalia**.
 
 > ✅ **Guardrail fit:** the criterion of embarrassment + enemy-attestation + divergent-details are
 > mainstream, defensible historical tools — excellent, on-brand material, and Table 11.1 / the
@@ -573,14 +774,57 @@ love/virtue requires free creatures who can also choose evil).
 > several — don't present as the settled Christian answer.
 _Maps to:_ `library/evil.html` (God's Existence / Science & Faith); `/answers/where-is-god-when-im-hurting`.
 
-### Ch. 13 — Who Is Jesus: God? Or Just a Great Moral Teacher?
-_(pending)_
+### Appendix 2 — Isn't That Just Your Interpretation?
+_Captured in full (pp. 402–404). Written as a Socratic Atheist/Christian dialogue._
+**Thesis:** "that's just your interpretation" is a **self-defeating** dodge, not a rebuttal; every
+conclusion is an interpretation, and since opposites can't both be true, the real question is *which*
+interpretation the **evidence** best supports. Argument beats (all reusable):
+- "It's just *your* interpretation" — of course it is, but that doesn't make it *wrong*; and "I say
+  it *is* wrong" is itself just an interpretation (Road Runner). "There are no objective
+  interpretations" self-destructs — *is that* an objective interpretation?
+- **Evidence, not assertion:** the book didn't *assert* Christianity is true, it argued it step by
+  step; "what evidence do you have that atheism is true?" — "evil and science" are *perceived
+  obstacles*, not positive evidence (evil is handled in Appendix 1; science supports theism, ch. 3–6).
+- **Truth isn't a majority vote:** "Christianity excludes too many people" doesn't bear on whether
+  it's *true*; and Christianity doesn't exclude people — people **exclude themselves** by suppressing
+  known truth (**Romans 1**).
+- **"You ought not judge" self-refutes** ("why are you judging me for judging?"): Jesus forbade
+  *hypocritical* judging, not discernment (**Matt 7:1–5**); Scripture *commands* it ("test
+  everything," **1 Thess 5:21**; **1 John 4:1**). Objective meaning of a text comes from reading it
+  **in context** (authorial intent).
+> ✅ **Guardrail fit:** clean, standard responses to relativism about interpretation; the Romans 1
+> "suppress the truth" line is Pauline and on-brand. Keep the tone gentle (1 Peter 3:15) — the
+> dialogue is pointed but not sneering.
+_Maps to:_ "isn't that just your interpretation?" / "isn't it arrogant to say one religion is true?"
+answers; hermeneutics / "how do we read the Bible?" material.
 
-### Ch. 14 — What Did Jesus Teach About the Bible?
-_(pending)_
-
-### Appendix 1 — If God, Why Evil?
-_(pending)_
+### Appendix 3 — Why the Jesus Seminar Doesn't Speak for Jesus
+_Captured in full (pp. 409–410)._
+**Thesis:** the **Jesus Seminar** (est. 1985) — which cast doubt on ~82% of the Gospels' sayings and
+whose member **John Dominic Crossan** claimed Jesus was buried in a shallow grave and eaten by dogs
+— does **not** speak for the historical Jesus, for **seven reasons** ("The Wrong ___"):
+1. **The Wrong Group** — ~70 fringe "scholars," some atheists, one a filmmaker; founder **Robert
+   Funk** admitted their work would "constantly border on blasphemy."
+2. **The Wrong Motive** — self-admitted goal to create a "**fictive**" Jesus refashioned for modern
+   man, plus confessed publicity-seeking (TV summit, press, tapes, a possible movie).
+3. **The Wrong Procedure** — determining truth by **majority vote** ("no better than when most people
+   believed the world was flat").
+4. **The Wrong Books** — relies on a hypothetical **"Q"** and the 2nd-century Gnostic **Gospel of
+   Thomas** (and a non-existent **Secret Mark**), treating them as more authentic than the earlier
+   Mark or John.
+5. **The Wrong Assumptions** — an *a priori* rejection of miracles (= implicit atheism), plus the
+   discredited assumption that Christianity borrowed from pagan **mystery religions** (monotheistic
+   Jewish writers wouldn't use polytheistic pagan sources — cf. ch. 12).
+6. **The Wrong Dates** — unjustified **late-dating** of the Gospels (A.D. 70–100) to create room for
+   myth to accrue — contrary to the early-testimony case (ch. 9–10).
+7. **The Wrong Conclusions** — after gutting the Gospels, no agreement on who Jesus was (cynic, sage,
+   Jewish reformer, feminist, prophet-teacher, radical social prophet, eschatological prophet).
+> ✅ **Guardrail fit:** the critique targets a specific fringe body's *method*, not scholarship as
+> such — keep it that way (charity/accuracy). The mystery-religion-borrowing rebuttal and the
+> early-dating point are already in our resurrection/reliability material. Attribute the Funk quotes
+> to the Seminar's own publications and verify wording before use.
+_Maps to:_ Resurrection + Biblical Reliability tabs; "can we trust the Gospels?" / "was Jesus a
+myth?" answers.
 
 ---
 
@@ -592,40 +836,48 @@ citations in our own words. **Depth per chapter:**
 | Chapter | Depth | Notes |
 |---|---|---|
 | Introduction (12 points) | ✅ **Fully verified** | 12 points word-checked pp. 27–28 |
+| 1 Truth is knowable | ✅ Strong | correspondence + Road Runner verified pp. 35–39 |
+| 2 First principles / Hume & Kant | ✅ **Strong** | Table 2.1 + Law of Noncontradiction + Hume/Ayer + Kant refutations + deduction/induction verified pp. 51–63 |
 | 3 SURGE | ✅ Strong | S + Jastrow verified; U/R/G/E = standard expansion |
 | 4 Divine Design | ✅ Strong | Hoyle quote verified p. 106 |
 | 5 First Life | ✅ Good | "specified complexity" verified p. 116 |
-| 6 Evolution | ◐ Partial | micro/macro + Behe verified via highlights (pp. 141, 154) |
+| 6 Evolution | ✅ **Strong** | full 5-reasons architecture + SETI/Sagan + Johnson/Wells/Behe/Dawkins + Tables 6.1/Figs verified pp. 137–149 |
 | 7 Moral | ✅ Strong | syllogism verified p. 170 |
-| 8 Miracles | ◐ Thesis-level | Hume/Kant engagement confirmed p. 56 |
+| 8 Miracles | ✅ **Strong** | King's Seal + Nash box + Spinoza + full 3-prong Hume rebuttal (Flew/Lewis) verified pp. 197–207 |
 | 9 Early testimony | ✅ Strong | Habermas 41 creeds + 1 Cor 15 verified p. 245 |
 | 10 Eyewitness | ✅ Strong | Hemer citation verified (notes p. 425) |
-| 11 Ten reasons | ✅ Strong | reasons 1–3, 5–7, 9–10 verified w/ Scripture + Tables 11.1/12.1 + Justin Martyr/Tertullian/Moreland/Colson/Scalia; only slots 4 & 8 unnamed |
+| 11 Ten reasons | ✅ **Strong** | **all ten** now page-verified against the book's numbered headers (pp. 275–293); numbering corrected (reasons 4/8/9 added; old "9+10" is one reason 10) |
 | 12 Resurrection | ✅ Strong | Table 12.1 (12 appearances) + hallucination/wrong-tomb refutations verified pp. 301–303 |
 | 13 Deity of Christ | ✅ Strong | trilemma verified p. 346 (Kreeft) + Son-of-Man/clouds p. 341 |
 | 14 Jesus on the Bible | ✅ Good | attributes list verified p. 357 (Matt 4; John 10:35; 17:17; Matt 22; "92 occasions") |
-| Appendix 1 (evil) | ○ Thesis-level | soul-making + free-will (highlight p. 392) |
+| Appendix 1 (evil) | ◐ Thesis-level | soul-making + free-will (highlight p. 392) — the one section still at thesis level |
+| Appendix 2 (interpretation) | ✅ Strong | full Socratic dialogue verified pp. 402–404 |
+| Appendix 3 (Jesus Seminar) | ✅ Strong | all 7 "Wrong ___" reasons + Funk/Crossan verified pp. 409–410 |
 
-**Remaining loose ends (optional, low priority):** name reasons **4 & 8** of ch. 11 (the two of the
-ten not isolated — standard set: "distinguished Jesus' words from their own," "challenged
-readers/hostile witnesses to verify," "described miracles plainly"); ch. 13's full "I AM"/John 8:58
-list; ch. 14's item 2 exact wording + the NT-extension passage; Appendix 1 in full; ch. 8 (miracles)
-and ch. 2 (Hume/Kant epistemology) if we ever need the anti-skepticism material. Reading tips that
-worked: the in-reader **Search** jumps to a named scholar/section; the **Annotations** panel lists
-existing highlights (a fast index of key passages). If screenshots freeze, reload the reader tab.
+**Remaining loose ends (optional, low priority):** deepen **Appendix 1** (evil) past thesis level;
+ch. 13's full "I AM"/John 8:58 deity-claim list; ch. 14's imperishability proof-text (item 2) exact
+wording. Reading tips that worked: the in-reader **Search** jumps to a named scholar/section (search
+a bold header phrase like "distinguished Jesus" to land on a numbered reason); the **Annotations**
+panel lists existing highlights. The Cloud Reader was **stable across ~80 captures** in the
+2026-07-12 completion session (the earlier freeze was a one-off) — but reload the reader tab if the
+screenshot renderer ever stalls. Shrinking the font (Aa menu → size slider) fits far more text per
+screen and cuts the number of captures.
 
 ## Cross-map to our Evidence Library
 
 | Book chapter | Our tab / essays it strengthens |
 |---|---|
+| 1–2 Truth / first principles | Foundational — relativism / "isn't that just your opinion?" answers; Ask-Anything posture |
 | 3 SURGE (cosmological) | God's Existence — Kalam (`library/kalam.html`, `cosmic.html`) |
 | 4 Divine Design | God's Existence — fine-tuning (`library/finetuning.html`) |
 | 5 First Life | Science & Faith — origin of life (`library/originlife.html`) |
+| 6 Macroevolution | Science & Faith — use sparingly/carefully (info argument + micro/macro definitional point only) |
 | 7 Moral argument | God's Existence — morality (`library/moral.html`) |
-| 8 Miracles | Science & Faith / Resurrection |
+| 8 Miracles | Science & Faith / Resurrection (`library/minimalfacts.html`, `library/emptytomb.html`) |
 | 9–11 NT reliability | Biblical Reliability tab (`ev-s4`) |
 | 12 Resurrection | Resurrection tab (`ev-s2`) — minimal facts |
 | 13 Who is Jesus | Jesus tab (`ev-s3`) — deity of Christ |
 | 14 Jesus on the Bible | Biblical Reliability |
-
-_(To be tightened once chapters are read.)_
+| Appendix 1 Evil | `library/evil.html`; `/answers/where-is-god-when-im-hurting` |
+| Appendix 2 Interpretation | Relativism / "isn't it arrogant to say one religion is true?" answers |
+| Appendix 3 Jesus Seminar | Resurrection + Reliability — "can we trust the Gospels?" / "was Jesus a myth?" |
