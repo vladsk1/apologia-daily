@@ -6,6 +6,22 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **2026-07-12 (security hardening pass — handoff: `docs/SESSION_HANDOFF_2026-07-12-security.md`).**
+> Full security audit (two adversarial agents over `api/*.js` + client/RLS/config) then **fixed every
+> finding, Critical→Medium; all deployed to `main`.** Highlights: **Study Groups RLS takeover** closed
+> (`gm_insert` only checked `user_id`; any user could self-assign `host` — now creator-only host + public-only
+> member join; `docs/STUDY_GROUPS_RLS_FIX.md`, **RUN**); **published cron secret** removed from `vercel.json`
+> + hardcoded fallbacks in `weekly-email.js`/`push.js` (now require `CRON_SECRET`, fail closed — **SET in
+> Vercel + verified**); **`/api/logs`** locked behind a secret; **rate limiting** on every Claude endpoint via
+> shared `lib/ratelimit.js` (per-IP/day counter, degrades to in-memory, never fails open; migration
+> `docs/ASK_RATE_LIMIT.md`, **RUN**) + **413 input-size caps**; **push SSRF** allowlist; **open redirect**
+> (`?next=//evil.com`) closed; **CDN SRI** pinned on all non-gated pages (supabase-js `@2.110.2`, canary-
+> verified; ~103 gated essays deferred to next content review); **security headers + CSP** added to
+> `vercel.json`; **email HTML-injection** + **error-body leaks** fixed; **PostHog no longer gets user email**
+> (`analytics.js` id-only). **ONE human step left: run `docs/STUDY_GROUPS_DISPLAY_NAME_FIX.md`** (M4 anti-spoof
+> trigger) in Supabase. Open: browser-verify the CSP; SRI the gated essays later; optional strip email from
+> `new-signup.js` PostHog event. Rate limit is IP-based (not distributed-attack proof).
+>
 > **2026-07-11 (web session — Groups / UX / SEO / Coach — handoff:
 > `docs/SESSION_HANDOFF_2026-07-11-groups-ux.md`).** Product/UX, not doctrine. **Study Groups is now a
 > real feature** (Supabase migration RAN by the user; `docs/STUDY_GROUPS_SPEC.md`): reframed for everyone,
