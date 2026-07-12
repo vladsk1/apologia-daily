@@ -328,6 +328,22 @@ full rules. In short:
   — same "nothing ships unverified" discipline as the rest of the pipeline.
 - Rebuild the index after edits: `node tools/build-sources-index.mjs` (CI runs `--check`).
 
+## Owned-book research notes (`docs/book-research/`)
+In-our-own-words **research maps of owned copyrighted apologetics books** — the argument
+structure plus an index of the **primary sources** the book cites (Scripture, Fathers,
+scholars, dates) to chase down. **Distinct from `/sources`:** these are *maps of copyrighted
+books*, not quotable text.
+- **Drafting:** `apologia-author`/`apologia-evidence` should `Grep`/`Read` `docs/book-research/*.md`
+  for a topic to get the argument's shape, the strongest objections, and *which primary sources
+  to cite directly* — then quote the **primaries**, verified, in our own voice.
+- **Hard rule:** never reproduce the book's prose, and treat **every** citation in these notes as
+  **unverified** until confirmed against the primary source and run through the normal pipeline
+  (citations → argument → orthodoxy). The note is a lead, not a source.
+- **Current notes:** `i-dont-have-enough-faith-to-be-an-atheist.md` (Geisler & Turek — complete;
+  covers the cosmological/teleological/moral arguments, NT reliability, resurrection, deity of
+  Christ, miracles, and the anti-skepticism material). See each note's header for its own usage
+  rules and any citation-precision flags.
+
 ## Deploy workflow (security-critical)
 - Work on the feature branch; **never `git checkout main`** (a stale local main lacks
   `.claude/agents/` and de-registers the agent fleet).
