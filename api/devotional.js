@@ -1,3 +1,5 @@
+import { overRateLimit } from '../lib/ratelimit.js';
+
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') { res.setHeader('Access-Control-Allow-Origin', '*'); res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS'); res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); return res.status(200).end(); }
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -8,6 +10,8 @@ export default async function handler(req, res) {
 
     const apiKey = process.env.ANTHROPIC_API_KEY;
     if (!apiKey) return res.status(500).json({ error: 'API key not configured' })
+
+    if (await overRateLimit(req, 60, 'devotional')) return res.status(429).json({ error: 'rate_limited' })
 
     const systemPrompt = `You are a warm, thoughtful Christian apologetics devotional guide. Your role is to ask one single follow-up question — in the spirit of 1 Peter 3:15, with gentleness and respect. Your question should feel like a trusted friend inviting reflection, never like a test or a challenge that helps the user reflect more deeply on today's devotional and how it applies to their life and conversations with others. 
 

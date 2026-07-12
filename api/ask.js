@@ -1,24 +1,6 @@
 // content-review: {"argument":"2026-07-08","orthodoxy":"2026-07-08","by":"apologia-argument + apologia-orthodoxy on the objection-handling addition to the system prompt (0 BREAK / 0 heresy). Existing guardrails unchanged; added instruction to restate a pasted objection as the underlying question before answering in the same format."}
 
-// Per-IP daily cap on live answers (cost/abuse guard). Fail-open: any error or
-// missing Supabase config lets the request through, so the endpoint never hard-breaks.
-const DAILY_IP_CAP = 40;
-async function underDailyCap(req) {
-  const url = process.env.SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_KEY;
-  if (!url || !key) return true; // not configured → don't block
-  try {
-    const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim() || 'unknown';
-    const r = await fetch(`${url}/rest/v1/rpc/bump_ask_rate`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', apikey: key, Authorization: `Bearer ${key}` },
-      body: JSON.stringify({ p_ip: ip })
-    });
-    if (!r.ok) return true; // e.g. table/function not migrated yet → fail open
-    const n = await r.json();
-    return !(typeof n === 'number' && n > DAILY_IP_CAP);
-  } catch (e) { return true; }
-}
+import { overRateLimit } from '../lib/ratelimit.js';
 
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') { res.setHeader('Access-Control-Allow-Origin', '*'); res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS'); res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); return res.status(200).end(); }
@@ -34,7 +16,7 @@ export default async function handler(req, res) {
     if (!apiKey) return res.status(500).json({ error: 'API key not configured' })
 
     // Rate limit before spending any tokens.
-    if (!(await underDailyCap(req))) {
+    if (await overRateLimit(req, 40, 'ask')) {
       return res.status(429).json({ error: 'rate_limited' });
     }
 

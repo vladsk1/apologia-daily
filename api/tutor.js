@@ -1,3 +1,5 @@
+import { overRateLimit } from '../lib/ratelimit.js';
+
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -15,6 +17,8 @@ export default async function handler(req, res) {
 
     const apiKey = process.env.ANTHROPIC_API_KEY;
     if (!apiKey) return res.status(500).json({ error: 'API key not configured' });
+
+    if (await overRateLimit(req, 80, 'tutor')) return res.status(429).json({ error: 'rate_limited' });
 
     let systemPrompt = `You are an expert Christian apologetics tutor — warm, patient, and exceptionally good at explaining complex philosophical and theological arguments in clear, accessible language. You are helping a student reading the Evidence Library on Apologia Daily.
 
