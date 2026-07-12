@@ -80,8 +80,8 @@
       <a href="index.html">Apologia<span>Daily</span></a>
     </div>
 
-    <h1 class="card-title">Welcome back</h1>
-    <p class="card-sub">Sign in to continue your apologetics journey</p>
+    <h1 class="card-title" id="card-title">Welcome back</h1>
+    <p class="card-sub" id="card-sub">Sign in to continue your apologetics journey</p>
 
     <div class="error-box" id="error-box"></div>
     <div class="notice-box" id="notice-box"></div>
@@ -91,7 +91,7 @@
       <input class="form-input" type="email" id="email" placeholder="you@example.com" autocomplete="email" />
     </div>
 
-    <div class="form-group">
+    <div class="form-group" id="pw-group">
       <label class="form-label" for="password">Password</label>
       <div class="pw-wrap">
         <input class="form-input" type="password" id="password" placeholder="Your password" autocomplete="current-password" />
@@ -99,14 +99,17 @@
       </div>
     </div>
 
-    <a href="#" class="forgot-link" id="forgot-link" onclick="handleForgot(event)">Forgot your password?</a>
+    <a href="#" class="forgot-link" id="forgot-link" onclick="enterReset(event)">Forgot your password?</a>
 
     <button class="btn-primary" id="login-btn" onclick="handleLogin()">
       <span class="loading-spinner" id="spinner"></span>
       <span id="btn-text">Sign in</span>
     </button>
 
-    <div class="switch-text">
+    <button class="btn-primary" id="reset-btn" onclick="handleForgot()" style="display:none;">Send reset link</button>
+    <div class="switch-text" id="back-signin" style="display:none;"><a href="#" onclick="exitReset(event)">← Back to sign in</a></div>
+
+    <div class="switch-text" id="switch-text">
       Don't have an account? <a href="signup.html">Create one free →</a>
     </div>
   </div>
@@ -209,13 +212,39 @@
     t.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
   }
 
+  var resetMode = false;
+  function setDisp(id, v) { var el = document.getElementById(id); if (el) el.style.display = v; }
+  function clearMsgs() {
+    var eb = document.getElementById('error-box'); if (eb) eb.classList.remove('visible');
+    var nb = document.getElementById('notice-box'); if (nb) nb.classList.remove('visible');
+  }
+  function enterReset(e) {
+    if (e) e.preventDefault();
+    resetMode = true;
+    document.getElementById('card-title').textContent = 'Reset your password';
+    document.getElementById('card-sub').textContent = 'Enter your email and we’ll send you a reset link.';
+    setDisp('pw-group', 'none'); setDisp('forgot-link', 'none'); setDisp('login-btn', 'none'); setDisp('switch-text', 'none');
+    setDisp('reset-btn', 'block'); setDisp('back-signin', 'block');
+    clearMsgs();
+    var em = document.getElementById('email'); if (em) em.focus();
+  }
+  function exitReset(e) {
+    if (e) e.preventDefault();
+    resetMode = false;
+    document.getElementById('card-title').textContent = 'Welcome back';
+    document.getElementById('card-sub').textContent = 'Sign in to continue your apologetics journey';
+    setDisp('pw-group', ''); setDisp('forgot-link', ''); setDisp('login-btn', ''); setDisp('switch-text', '');
+    setDisp('reset-btn', 'none'); setDisp('back-signin', 'none');
+    clearMsgs();
+  }
+
   function showError(msg) {
     var box = document.getElementById('error-box');
     if (box) { box.textContent = msg; box.classList.add('visible'); }
   }
 
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') handleLogin();
+    if (e.key === 'Enter') { if (resetMode) handleForgot(); else handleLogin(); }
   });
 </script>
 <script>(function(){try{var p=new URLSearchParams(location.search);if(p.get('nocount')==='1')localStorage.setItem('ad-nocount','1');if(p.get('nocount')==='0')localStorage.removeItem('ad-nocount');if(localStorage.getItem('ad-nocount')==='1')return;}catch(e){}var s=document.createElement('script');s.defer=true;s.src='/_vercel/insights/script.js';document.head.appendChild(s);})();</script>
