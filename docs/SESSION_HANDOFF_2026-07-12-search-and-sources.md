@@ -82,6 +82,28 @@ citation-grade patristic text cannot be produced from here.
 
 ---
 
+## ✅ DONE 2026-07-11 (web-enabled local session)
+Action items 1–2 complete; item 3 begun (Ignatius + Athanasius ingested); 4–5 in place.
+- **All 6 pending entries verified → `verified: true`** against clean PD primaries
+  (CCEL Schaff, CCEL NPNF, traditional BCP). Two real defects caught + fixed: the
+  Apostles' Creed `source_url` pointed at Gutenberg 45108 (**"P. T. Barnum's Menagerie"**,
+  not the BCP) → fixed to 1662 BCP + exact 1662 caps restored; and the **381 creed text
+  was a modern ecumenical (ICET/ELLC) rendering — copyright-risky**, the same trap as the
+  Apostles' Creed → swapped to Schaff's verbatim PD text (filioque kept absent). Chalcedon
+  got a "God the Word" comma fix; source_urls tightened to leaf pages.
+- **Expanded (all PD, verbatim, verified):** `sources/ignatius-anf.json` — 17 passages,
+  the 7 genuine (short-recension) Ignatian letters in Roberts–Donaldson (ANF); and
+  `sources/athanasius-on-the-incarnation.json` — 9 passages of *On the Incarnation* in
+  Robertson (NPNF), complementing §54 (which stays in `patristics.json`). Drafted by
+  apologia-evidence, verbatim-verified by apologia-citations (3 corrections applied:
+  Smyrn. 3 dropped-sentence, Smyrn. 1 editorial brackets, Eph. 7 connector).
+- **Library now = 36 verified passages.** `build-sources-index.mjs` also had a win32 path
+  bug (`import.meta.url.pathname`) fixed → `fileURLToPath`, so the build + `--check` run on
+  Windows. Index rebuilt; CI `--check` passes.
+- **STILL TO EXPAND (item 3 continued):** Irenaeus *Against Heresies*, Augustine, Justin
+  Martyr, Tertullian, Eusebius, and the remaining creeds/councils — same PD-only, verify-
+  before-quote discipline.
+
 ## ▶ ACTION FOR THE WEB-ENABLED (LOCAL) SESSION
 Do this where CCEL/ANF/Wikisource are reachable:
 
