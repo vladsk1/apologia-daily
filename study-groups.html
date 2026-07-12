@@ -803,11 +803,11 @@
     if (!sel) return;
     if (group && group.plan) {
       sel.value = group.plan;
-      if (title) title.innerHTML = 'Change the group&rsquo;s plan';
-      if (btn) btn.textContent = 'Update the group&rsquo;s plan';
+      if (title) title.textContent = 'Change the group’s plan';
+      if (btn) btn.textContent = 'Update the group’s plan';
     } else {
       sel.value = '';
-      if (title) title.innerHTML = 'Set the group&rsquo;s plan';
+      if (title) title.textContent = 'Set the group’s plan';
       if (btn) btn.textContent = 'Set for the group';
     }
   }
