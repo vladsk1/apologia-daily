@@ -229,7 +229,7 @@
       <div style="background:var(--navy-950);padding:2rem;">
         <div style="font-family:var(--font-ui);font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Welcome to Apologia Daily</div>
         <div style="font-family:var(--font-serif);font-size:1.4rem;font-weight:700;color:#fff;" id="ob-title">Let us personalise your experience</div>
-        <div style="font-family:var(--font-ui);font-size:0.85rem;color:rgba(255,255,255,0.5);margin-top:0.4rem;" id="ob-sub">4 quick questions — takes 30 seconds</div>
+        <div style="font-family:var(--font-ui);font-size:0.85rem;color:rgba(255,255,255,0.5);margin-top:0.4rem;" id="ob-sub">5 quick questions — takes 30 seconds</div>
       </div>
       <div style="padding:2rem;" id="ob-body">
         <!-- Steps injected by JS -->
@@ -675,7 +675,7 @@
         if (um.onboarded) {
           var lp = JSON.parse(localStorage.getItem('ad_prefs') || '{}');
           if (!lp.onboarded) {
-            ['intent','goal','level'].forEach(function(k){ if (um[k] && !lp[k]) lp[k] = um[k]; });
+            ['intent','goal','level','focus'].forEach(function(k){ if (um[k] && !lp[k]) lp[k] = um[k]; });
             if (um.learn_mode && !lp.mode) lp.mode = um.learn_mode;
             lp.onboarded = true;
             localStorage.setItem('ad_prefs', JSON.stringify(lp));
@@ -939,6 +939,16 @@
 
 
   // ── ONBOARDING ──
+  // Each focus maps to a real seed argument (an ev-m-*.html page AND a
+  // daily-args.json entry, so /today can open the first session right there).
+  var FOCUS_MAP = {
+    god:          { arg:'kalam',         name:'The Kalam Cosmological Argument',       cat:"God's Existence",     label:'does God exist' },
+    jesus:        { arg:'jesus_claims',  name:'Did Jesus Claim to Be God',             cat:'Jesus',               label:'who Jesus is' },
+    resurrection: { arg:'minimal',       name:'The Minimal Facts Argument',            cat:'The Resurrection',    label:'the resurrection' },
+    bible:        { arg:'manuscript',    name:'The Manuscript Reliability Argument',   cat:'Biblical Reliability',label:'whether the Bible is reliable' },
+    suffering:    { arg:'evil',          name:'The Problem of Evil as Evidence for God',cat:"God's Existence",    label:'the problem of suffering' },
+    islam:        { arg:'trinity_islam', name:'Answering Islam on the Trinity',        cat:'The Trinity',         label:'answering Islam' }
+  };
   var OB_STEPS = [
     {id:'intent',title:'What brings you here?',sub:'This shapes everything we suggest you',options:[
       {val:'defend',label:'Defending my faith',desc:'I believe — I want to be ready to give a reason'},
@@ -950,6 +960,14 @@
       {val:'beginner',label:'Complete beginner',desc:'New to apologetics'},
       {val:'some',label:'Some knowledge',desc:'Know a few arguments, want to go deeper'},
       {val:'advanced',label:'More advanced',desc:'Studied apologetics before'}
+    ]},
+    {id:'focus',title:'Which question is most on your mind?',sub:'We will start your very first session right here',options:[
+      {val:'god',label:'Does God exist?',desc:'The case for God from science and reason'},
+      {val:'jesus',label:'Who is Jesus — and is he God?',desc:'His claims, and the Trinity'},
+      {val:'resurrection',label:'Did Jesus rise from the dead?',desc:'The historical case for the resurrection'},
+      {val:'bible',label:'Can I trust the Bible?',desc:'Manuscripts, reliability, and history'},
+      {val:'suffering',label:'Why is there suffering?',desc:'The problem of evil'},
+      {val:'islam',label:'Answering Islam',desc:'Responding to the strongest Muslim objections'}
     ]},
     {id:'goal',title:'What is your main goal?',sub:'We will focus your daily suggestions around this',options:[
       {val:'faith',label:'Strengthen my own faith',desc:'Understand why I believe what I believe'},
@@ -992,19 +1010,62 @@
     else { renderObStep(); }
   }
 
+  function getFocus() {
+    try {
+      var p = JSON.parse(localStorage.getItem('ad_prefs') || '{}');
+      return (p.focus && FOCUS_MAP[p.focus]) ? Object.assign({ key: p.focus }, FOCUS_MAP[p.focus]) : null;
+    } catch(e) { return null; }
+  }
+
   function finishOnboarding() {
-    try { localStorage.setItem('ad_prefs', JSON.stringify(Object.assign({}, obAnswers, {onboarded:true}))); } catch(e) {}
-    // Persist to the account so intent survives across devices
+    // Preserve any prior journey progress; add the new answers + focus.
+    try {
+      var prev = JSON.parse(localStorage.getItem('ad_prefs') || '{}');
+      localStorage.setItem('ad_prefs', JSON.stringify(Object.assign(prev, obAnswers, {onboarded:true})));
+    } catch(e) {
+      try { localStorage.setItem('ad_prefs', JSON.stringify(Object.assign({}, obAnswers, {onboarded:true}))); } catch(x) {}
+    }
+    // Persist to the account so intent + focus survive across devices
     try {
       if (sb && sb.auth && sb.auth.updateUser) {
-        sb.auth.updateUser({ data: { onboarded:true, intent:obAnswers.intent, goal:obAnswers.goal, level:obAnswers.level, learn_mode:obAnswers.mode } });
+        sb.auth.updateUser({ data: { onboarded:true, intent:obAnswers.intent, goal:obAnswers.goal, level:obAnswers.level, focus:obAnswers.focus, learn_mode:obAnswers.mode } });
       }
     } catch(e) {}
+    try { window.adTrack && window.adTrack('onboarding_completed', { intent:obAnswers.intent, focus:obAnswers.focus, level:obAnswers.level }); } catch(e) {}
+    renderObFinish();
+  }
+
+  // Reflect the answers back as a concrete starting point (the "here's your path" moment).
+  function renderObFinish() {
+    var f = getFocus();
+    var titleEl = document.getElementById('ob-title');
+    var subEl = document.getElementById('ob-sub');
+    var body = document.getElementById('ob-body');
+    if (titleEl) titleEl.textContent = 'Your path is ready';
+    if (subEl) subEl.textContent = f ? 'Because of what you told us, here is where we are starting you' : 'Here is where we are starting you';
+    if (!body) return;
+    var startHref = f ? ('ev-m-' + f.arg + '.html') : 'today.html';
+    var startLabel = f ? f.name : "Today's session";
+    var because = f ? ('You said you are here about <b>' + f.label + '</b> — so your first session is <b>' + startLabel + '</b>.') :
+                      'Start with a focused 5-minute session built around what matters most to you.';
+    body.innerHTML =
+      '<div style="background:var(--off-white);border:1px solid var(--border);border-radius:8px;padding:1.1rem 1.2rem;margin-bottom:1.1rem;">' +
+        '<div style="font-family:var(--font-ui);font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.45rem;">Start here</div>' +
+        '<div style="font-family:var(--font-ui);font-size:0.9rem;color:var(--navy-900);line-height:1.55;">' + because + '</div>' +
+        (f ? '<div style="font-family:var(--font-ui);font-size:0.78rem;color:var(--text-muted);margin-top:0.5rem;">Then your daily session at <b>/today</b> and your Skill Map will build from here.</div>' : '') +
+      '</div>' +
+      '<a href="' + startHref + '" onclick="closeOnboarding()" style="display:block;text-align:center;background:var(--gold);color:var(--navy-950);font-family:var(--font-ui);font-size:0.92rem;font-weight:600;padding:0.9rem;border-radius:6px;text-decoration:none;margin-bottom:0.7rem;">Start with ' + (f ? startLabel : 'today’s session') + ' &rarr;</a>' +
+      '<button onclick="closeOnboarding()" style="display:block;width:100%;background:none;border:none;font-family:var(--font-ui);font-size:0.82rem;color:var(--text-muted);cursor:pointer;padding:0.3rem;">Go to my dashboard first</button>';
+  }
+
+  function closeOnboarding() {
     var modal = document.getElementById('onboarding-modal');
     if (modal) modal.style.display = 'none';
     applyIntent(obAnswers.intent);
     applyMode(obAnswers.mode || 'guided');
     updateGuidedFocus();
+    var f = getFocus();
+    try { if (window.Coach && Coach.renderSkillStrip) Coach.renderSkillStrip('coach-skill-strip', f ? f.cat : null); } catch(e) {}
   }
 
   // Reflect the captured intent back to the user in the dashboard greeting
@@ -1082,6 +1143,19 @@
     if (jb) jb.style.display = 'block';
     var focusIdx = Math.min(journeyDay, focusArr.length - 1);
     var focus = focusArr[focusIdx];
+
+    // Personalise the "learn your first argument" day around the topic the
+    // user chose at onboarding, instead of the fixed default.
+    if (focusIdx === 1) {
+      var pf = getFocus();
+      if (pf) {
+        focus = Object.assign({}, focus, {
+          title: 'Read: ' + pf.name,
+          desc: 'You told us you are here about ' + pf.label + ' — so this is where we start you. Read the free summary, written to be clear enough to explain to a friend tonight.',
+          link: 'ev-m-' + pf.arg + '.html'
+        });
+      }
+    }
 
     // Update journey header
     var progressText = document.getElementById('journey-progress-text');
@@ -1647,7 +1721,7 @@ function closeBeltInfo(){ var m = document.getElementById('belt-modal'); if(m) m
   </div>
 </div>
 <script>(function(){try{var p=new URLSearchParams(location.search);if(p.get('nocount')==='1')localStorage.setItem('ad-nocount','1');if(p.get('nocount')==='0')localStorage.removeItem('ad-nocount');if(localStorage.getItem('ad-nocount')==='1')return;}catch(e){}var s=document.createElement('script');s.defer=true;s.src='/_vercel/insights/script.js';document.head.appendChild(s);})();</script>
-  <script>window.addEventListener('load',function(){ try{ if(window.Coach&&Coach.sync) Coach.sync(function(){ try{ Coach.renderPanel('coach-body'); Coach.renderSkillStrip('coach-skill-strip'); }catch(e){} }); }catch(e){} });</script>
+  <script>window.addEventListener('load',function(){ try{ if(window.Coach&&Coach.sync) Coach.sync(function(){ try{ var _gf=(typeof getFocus==='function')?getFocus():null; Coach.renderPanel('coach-body'); Coach.renderSkillStrip('coach-skill-strip', _gf?_gf.cat:null); }catch(e){} }); }catch(e){} });</script>
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
 </body>

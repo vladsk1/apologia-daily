@@ -388,7 +388,9 @@
   }
 
   /* compact skill-map strip for the dashboard coach card (dark) */
-  function renderSkillStrip(elId) {
+  /* focusCat (optional): honestly highlight the category the user chose at
+     onboarding — a gold outline on that bar, no fabricated mastery. */
+  function renderSkillStrip(elId, focusCat) {
     var el = document.getElementById(elId); if (!el) return;
     var byId = {}; profile().forEach(function (s) { if (s.isArg) byId[s.id] = s; });
     var cats = {}, total = 0, unlocked = 0, msum = 0;
@@ -398,7 +400,10 @@
       var ids = cats[c], un = 0, sum = 0;
       ids.forEach(function (i) { var p = byId[i]; if (p) { un++; sum += p.mastery; } });
       var cov = Math.round(un / ids.length * 100), col = un ? mColor(Math.round(sum / un)) : 'rgba(255,255,255,0.14)';
-      return '<div title="' + esc(c) + ' — ' + un + '/' + ids.length + '" style="flex:1;height:6px;border-radius:3px;background:rgba(255,255,255,0.08);overflow:hidden;"><div style="height:100%;width:' + cov + '%;background:' + col + ';"></div></div>';
+      var isFocus = focusCat && c === focusCat;
+      var ring = isFocus ? 'box-shadow:0 0 0 1.5px #c8a951;' : '';
+      var ttl = esc(c) + ' — ' + un + '/' + ids.length + (isFocus ? ' · your focus — start here' : '');
+      return '<div title="' + ttl + '" style="flex:1;height:6px;border-radius:3px;background:rgba(255,255,255,0.08);overflow:hidden;' + ring + '"><div style="height:100%;width:' + cov + '%;background:' + (isFocus && !un ? '#c8a951' : col) + ';"></div></div>';
     }).join('');
     el.innerHTML = '<a href="coach.html" style="display:block;margin-top:1rem;border-top:1px solid rgba(255,255,255,0.1);padding-top:0.9rem;text-decoration:none;">' +
       '<div style="display:flex;align-items:baseline;justify-content:space-between;gap:0.6rem;margin-bottom:0.55rem;">' +

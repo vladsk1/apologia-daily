@@ -558,18 +558,43 @@
     }catch(e){ return null; }
   }
 
+  /* Focus-first: before any practice history exists, open the first sessions on
+     the topic the user chose at onboarding (dashboard). Yields to the Coach the
+     moment the user builds any real argument history. */
+  var FOCUS_ARG = { god:'kalam', jesus:'jesus_claims', resurrection:'minimal', bible:'manuscript', suffering:'evil', islam:'trinity_islam' };
+  var FOCUS_LABEL = { god:'does God exist', jesus:'who Jesus is', resurrection:'the resurrection', bible:'whether the Bible is reliable', suffering:'the problem of suffering', islam:'answering Islam' };
+  function focusFirstPick(rot){
+    if(!currentUser || !rot) return null;
+    try{
+      var p = JSON.parse(localStorage.getItem('ad_prefs') || '{}');
+      var f = p.focus; if(!f || !FOCUS_ARG[f]) return null;
+      if(window.Coach && Coach.profile){
+        var hist = Coach.profile().filter(function(s){ return s.isArg; });
+        if(hist.length) return null;   // has real history → let the Coach lead
+      }
+      var entry = rot.find(function(e){ return e.id === FOCUS_ARG[f]; });
+      if(!entry) return null;
+      return { entry: entry, key: f };
+    }catch(e){ return null; }
+  }
+
   async function loadArgument(){
     var arg = null, coachPick = null;
     try{
       var r = await sb.from('daily_arguments').select('*').eq('day_number', dayNum).single();
       if(r.data) arg = r.data;
     }catch(e){}
+    var focusPick = null;
     if(!arg){
       var rot = await loadRotation();
       if(rot){
         var pick = coachAdaptivePick(rot);
         if(pick){ arg = fromRotation(pick.entry); coachPick = pick.presc; }
-        else arg = fromRotation(rot[(dayNum-1) % rot.length]);
+        else {
+          var fp = focusFirstPick(rot);
+          if(fp){ arg = fromRotation(fp.entry); focusPick = fp; }
+          else arg = fromRotation(rot[(dayNum-1) % rot.length]);
+        }
       }
     }
     if(!arg) arg = FALLBACK_ARGS[(dayNum-1) % FALLBACK_ARGS.length];
@@ -583,6 +608,10 @@
         cp.innerHTML = '✦ Coach pick — because <b>'+esc(coachPick.name)+'</b> '+verb+'.';
         cp.style.display = 'block';
         try{ track('today_coach_pick', { arg: arg.argument_id, mastery: coachPick.mastery }); }catch(e){}
+      } else if(focusPick){
+        cp.innerHTML = '✦ Your focus — you told us you’re here about <b>'+esc(FOCUS_LABEL[focusPick.key]||'this')+'</b>. Starting you here.';
+        cp.style.display = 'block';
+        try{ track('today_focus_pick', { arg: arg.argument_id, focus: focusPick.key }); }catch(e){}
       } else { cp.style.display = 'none'; }
     }
     $('arg-cat').textContent = arg.category || '';
