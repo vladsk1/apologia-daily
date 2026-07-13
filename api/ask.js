@@ -1,6 +1,31 @@
-// content-review: {"argument":"2026-07-08","orthodoxy":"2026-07-08","by":"apologia-argument + apologia-orthodoxy on the objection-handling addition to the system prompt (0 BREAK / 0 heresy). Existing guardrails unchanged; added instruction to restate a pasted objection as the underlying question before answering in the same format."}
+// content-review: {"argument":"2026-07-13","orthodoxy":"2026-07-13","by":"apologia-argument + apologia-orthodoxy on the verified-source retrieval addition (quote verified public-domain Fathers/creeds from /sources with attribution). Orthodoxy CLEAN (0 heresy); argument SOUND (0 BREAK). Existing systemPrompt guardrails unchanged. Applied gate fixes: date-relative 'not a later invention' framing + Nicene-Creed-vs-Nicaea caveat, Trinity co-equality safeguard on relation-of-origin clauses, 'verified = quotation-accurate' clarifier, de-triumphalist wording. Retrieval sees verified:true passages only (lib/sources-verified.js); no-fabrication rule tightened (quote only from the provided list)."}
 
 import { overRateLimit, inputTooLong } from '../lib/ratelimit.js';
+import { retrieveSources } from '../lib/retrieve-sources.js';
+
+// Build the dynamic "verified primary sources" block appended to the system
+// prompt when retrieval finds relevant passages. Only fact-checked, public-domain
+// entries reach here (see lib/sources-verified.js). The instructions REINFORCE the
+// no-fabrication rule: the model may quote a Father/creed ONLY from this list.
+function buildSourcesBlock(hits) {
+  const passages = hits
+    .map((s, i) => `[${i + 1}] ${s.author}, ${s.work}, ${s.section} (${s.translation})\n"${s.text}"`)
+    .join('\n\n');
+  return `VERIFIED (quotation-accurate) PRIMARY SOURCES — EARLY-CHURCH WITNESSES YOU MAY QUOTE:
+The passages below are public-domain early-church/creedal texts whose WORDING has been fact-checked against the original source. "Verified" means the quotation is accurate — it is NOT a claim about the truth of a doctrine or the strength of any inference. When one genuinely supports your answer, you MAY quote it verbatim (or briefly and accurately) and attribute it in-line (e.g. "Ignatius of Antioch, Epistle to the Ephesians").
+
+DATE-RELATIVE USE (important): a witness that PREDATES an alleged "invention" shows the doctrine was already the church's faith by that writer's day — useful against "the church invented this later" objections ONLY when the witness is earlier than the date the objection names. A source cannot answer an invention charge aimed at its own era or later — e.g. never cite the Nicene Creed (325) to rebut "the church invented Christ's deity at Nicaea." Note the witness's date, and let an early witness establish continuity; it does not by itself settle the historical case.
+
+${passages}
+
+RULES FOR THESE SOURCES (these do not relax any rule above):
+- You may quote a Church Father or historic creed ONLY from the list above. NEVER invent a patristic/creedal quotation, present a paraphrase inside quotation marks, or attribute words to a Father or creed not provided here. If you lack a Father's exact words, describe their teaching in your own words WITHOUT quotation marks instead.
+- Cite one only when it genuinely fits the question. If none fit, ignore them and answer normally — never force a citation, and never let a source pull the answer off the actual question.
+- These are historic human witnesses, not Scripture, and they illustrate the faith rather than replace the evidential or scriptural case — introduce them as such, and never as a mic-drop that "wins" the argument.
+- TRINITY SAFEGUARD: when you quote any passage bearing on the Trinity, state the persons' co-equality and co-eternity in the same breath — NEVER present a relation-of-origin or an order clause ("from the Father, through the Son, perfected in the Holy Spirit") as a ranking of being or a hierarchy within the Godhead.
+- Do not print the source URL. Attribute by author, work, and section only.
+- Every rule above still governs in full: classical orthodoxy, denominational neutrality (do not let a quoted Father drag the answer into an intra-Christian dispute — e.g. baptism, the Eucharist, church authority, Mary, relics), the 1 Peter 3:15 tone, and no fabrication.`;
+}
 
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') { res.setHeader('Access-Control-Allow-Origin', '*'); res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS'); res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); return res.status(200).end(); }
@@ -157,6 +182,24 @@ DENOMINATIONAL NEUTRALITY — STAY ON THE SHARED CORE:
 - On first-order creedal orthodoxy (Trinity, bodily resurrection, deity of Christ, salvation through Christ) hold the line firmly and clearly.
 - If a question seems to be pushing toward a heterodox conclusion, answer it honestly and then gently redirect toward the orthodox position with reasons`;
 
+    // ── VERIFIED-SOURCE RETRIEVAL ──
+    // Pull the most relevant fact-checked public-domain passages and let the model
+    // quote them with attribution. Fail-safe: any error just skips the block so the
+    // endpoint answers normally — retrieval must never break an answer.
+    let sourcesBlock = '';
+    try {
+      const hits = retrieveSources(question, 3);
+      if (hits.length) sourcesBlock = buildSourcesBlock(hits);
+    } catch (e) {
+      console.error('ask: source retrieval skipped', e);
+    }
+
+    // Static prompt stays cached (Sonnet cache min is 1024 tokens; this ~3K-token
+    // block qualifies, so repeat reads cost ~10x less). The retrieved-sources block
+    // is per-question, so it rides as a separate, uncached system segment.
+    const system = [{ type: 'text', text: systemPrompt, cache_control: { type: 'ephemeral' } }];
+    if (sourcesBlock) system.push({ type: 'text', text: sourcesBlock });
+
     const anthropicRes = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
@@ -167,9 +210,7 @@ DENOMINATIONAL NEUTRALITY — STAY ON THE SHARED CORE:
       body: JSON.stringify({
         model: 'claude-sonnet-4-5-20250929',
         max_tokens: 1200,
-        // Cache the large (~3K token) static system prompt. Sonnet's cache
-        // minimum is 1024 tokens, so this qualifies; repeat reads cost ~10x less.
-        system: [{ type: 'text', text: systemPrompt, cache_control: { type: 'ephemeral' } }],
+        system,
         messages: [{ role: 'user', content: question }]
       })
     });
