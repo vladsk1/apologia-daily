@@ -9,7 +9,8 @@
   "scenes": [
     { "dur": 5.0,
       "big": [ {"t": "They worshipped", "c": "cream", "s": 78}, {"t": "Jesus as God —", "c": "gold", "s": 82}, {"t": "long before", "c": "cream", "s": 66}, {"t": "any council.", "c": "gold", "s": 78} ],
-      "sub": [ {"t": "The record predates Nicaea by 200 years.", "c": "dim", "f": "serif", "s": 40} ] },
+      "sub": [ {"t": "The trail runs back to his first disciples —", "c": "dim", "f": "serif", "s": 38},
+               {"t": "not a council 300 years later.", "c": "dim", "f": "serif", "s": 38} ] },
 
     { "kicker": "THE POPULAR CLAIM", "dur": 5.2, "lines": [
       {"t": "“A council voted Jesus", "c": "cream", "s": 54},
