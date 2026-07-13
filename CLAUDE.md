@@ -343,6 +343,11 @@ books*, not quotable text.
   covers the cosmological/teleological/moral arguments, NT reliability, resurrection, deity of
   Christ, miracles, and the anti-skepticism material). See each note's header for its own usage
   rules and any citation-precision flags.
+- **Adding a book from page photos** (the user may do this from a phone session — upload ~5–10
+  legible photos of a book they **own**, incl. footnote/bibliography pages): follow
+  `docs/book-research/README.md`, which has the full workflow + copyright rules and points to the
+  Geisler–Turek note as the format template. Owned books only — never Perlego or any service whose
+  terms forbid automated extraction.
 
 ## Deploy workflow (security-critical)
 - Work on the feature branch; **never `git checkout main`** (a stale local main lacks
