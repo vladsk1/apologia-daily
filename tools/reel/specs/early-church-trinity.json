@@ -1,0 +1,86 @@
+{
+  "reviewed": {"argument": "2026-07-13", "orthodoxy": "2026-07-13", "by": "argument+orthodoxy gates on library/early_church_trinity.html (orthodoxy-CLEAN 2026-07-11). Orthodoxy: CLEAN, 0 flags, per-scene certified. Argument: SOUND, 0 BREAK; applied the WEAK fix (Hurtado was a believing historian, NOT a skeptic — re-labelled the scene 'A historian, not an apologist' and dropped the 'even the skeptics' framing) + POLISH (Phil 2 now hedged 'a hymn most date older than Paul's letter'). Positive case only — no Ehrman steelman, no pagan-borrowing objection, per request. Every quote/date verbatim from the essay: Pliny quasi deo (c.112), Ignatius 'Jesus Christ our God' (c.107), marana tha (1 Cor 16:22), Phil 2 / Isa 45:23, baptismal formula (Mt 28:19 / Didache), Tertullian tres personae una substantia (c.210), Hurtado 'mutation'. Claims early WORSHIP + threefold devotion pre-Nicaea, NOT the later homoousios metaphysics."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.85,
+  "voiceover": "People will tell you the divinity of Jesus was invented at a council in the year 325 — voted in by bishops under an emperor. But the record from long before that council tells a different story. Start with a hostile witness. Around the year 112, the Roman governor Pliny wrote to his emperor about the Christians he was executing, and reported their strange habit: they met before dawn to sing a hymn 'to Christ, as to a god.' That is a pagan official, no friend of the faith, more than two hundred years before Nicaea. Go earlier. Around 107, Ignatius, a bishop being marched to the arena to die, writes to a church plainly of 'Jesus Christ our God' — no argument, no apology, just the settled speech of his churches. Earlier still, in the oldest words we can reach, the first Aramaic-speaking Christians prayed marana tha — 'Our Lord, come!' — a prayer addressed to Jesus. And Paul quotes a hymn — one most scholars date older than his own letter — that takes Isaiah's line, where every knee bows to the LORD alone, and gives that worship to Jesus. And it was never Jesus only. From the beginning the church baptized 'in the name of the Father, and of the Son, and of the Holy Spirit,' and praised the three together. Around the year 210, a full century before Nicaea, Tertullian had already put it in Latin: three persons, one substance — Trinity. And Larry Hurtado, who studied this as a historian, not an apologist, concluded the worship of Jesus was a stunning mutation inside Jewish monotheism — arising within twenty years of the cross, among Jews for whom worshipping a creature was blasphemy. So Nicaea invented nothing. It defended what the church had been praying all along. The praying came first. The definitions came to guard it.",
+  "source": "library/early_church_trinity.html",
+  "scenes": [
+    { "dur": 5.0,
+      "big": [ {"t": "They worshipped", "c": "cream", "s": 78}, {"t": "Jesus as God —", "c": "gold", "s": 82}, {"t": "long before", "c": "cream", "s": 66}, {"t": "any council.", "c": "gold", "s": 78} ],
+      "sub": [ {"t": "The record predates Nicaea by 200 years.", "c": "dim", "f": "serif", "s": 40} ] },
+
+    { "kicker": "THE POPULAR CLAIM", "dur": 5.2, "lines": [
+      {"t": "“A council voted Jesus", "c": "cream", "s": 54},
+      {"t": "into godhood in 325.”", "c": "cream", "s": 54},
+      {"t": "", "s": 20},
+      {"t": "The evidence from before that", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "council says otherwise.", "c": "gold", "f": "serifb", "s": 48} ] },
+
+    { "kicker": "A HOSTILE WITNESS · c. AD 112", "dur": 6.6, "lines": [
+      {"t": "A Roman governor, Pliny,", "c": "cream", "s": 50},
+      {"t": "reports the Christians he executes", "c": "cream", "s": 44},
+      {"t": "meet before dawn to sing", "c": "cream", "s": 48},
+      {"t": "", "s": 18},
+      {"t": "“a hymn to Christ,", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "as to a god.”", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "— 200+ years before Nicaea", "c": "dim", "s": 42} ] },
+
+    { "kicker": "A BISHOP ON DEATH ROW · c. AD 107", "dur": 6.4, "lines": [
+      {"t": "Ignatius, marched to the arena", "c": "cream", "s": 48},
+      {"t": "to be killed, writes of", "c": "cream", "s": 48},
+      {"t": "", "s": 20},
+      {"t": "“Jesus Christ our God”", "c": "gold", "f": "serifb", "s": 60},
+      {"t": "", "s": 16},
+      {"t": "— no argument, no apology.", "c": "dim", "s": 44},
+      {"t": "The settled speech of his churches.", "c": "cream", "s": 44} ] },
+
+    { "kicker": "THE OLDEST PRAYER WE CAN REACH", "dur": 6.4, "lines": [
+      {"t": "The first Aramaic Christians prayed", "c": "cream", "s": 46},
+      {"t": "", "s": 18},
+      {"t": "marana tha", "c": "gold", "f": "serifb", "s": 68},
+      {"t": "“Our Lord, come!”", "c": "cream", "f": "serif", "s": 52},
+      {"t": "— 1 Corinthians 16:22", "c": "dim", "s": 42},
+      {"t": "", "s": 14},
+      {"t": "a prayer addressed to Jesus.", "c": "cream", "s": 48} ] },
+
+    { "kicker": "A HYMN OLDER THAN PAUL'S LETTER", "dur": 6.4, "lines": [
+      {"t": "Isaiah: to the LORD alone", "c": "cream", "s": 50},
+      {"t": "“every knee shall bow.”", "c": "cream", "s": 50},
+      {"t": "— Isaiah 45:23", "c": "dim", "s": 42},
+      {"t": "", "s": 18},
+      {"t": "Paul gives that worship to Jesus.", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "— Philippians 2, a hymn most date", "c": "dim", "s": 40},
+      {"t": "older than Paul's own letter", "c": "dim", "s": 40} ] },
+
+    { "kicker": "NEVER JESUS ONLY — THREE, TOGETHER", "dur": 6.6, "lines": [
+      {"t": "From the start they baptized", "c": "cream", "s": 50},
+      {"t": "“in the name of the Father,", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "and of the Son,", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "and of the Holy Spirit.”", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "— Matthew 28:19, in the Didache", "c": "dim", "s": 40} ] },
+
+    { "kicker": "A CENTURY BEFORE NICAEA · c. AD 210", "dur": 6.2, "lines": [
+      {"t": "Tertullian had already written it", "c": "cream", "s": 48},
+      {"t": "in Latin:", "c": "cream", "s": 48},
+      {"t": "", "s": 20},
+      {"t": "three persons, one substance", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "— Trinitas.", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "The word was already on the page.", "c": "dim", "s": 42} ] },
+
+    { "kicker": "A HISTORIAN, NOT AN APOLOGIST", "dur": 6.4, "lines": [
+      {"t": "Larry Hurtado — who studied this", "c": "cream", "s": 48},
+      {"t": "as a historian — called it", "c": "cream", "s": 48},
+      {"t": "", "s": 18},
+      {"t": "a “mutation” in Jewish monotheism,", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "within 20 years of the cross —", "c": "cream", "s": 46},
+      {"t": "where worshipping a creature", "c": "dim", "s": 42},
+      {"t": "was blasphemy.", "c": "dim", "s": 42} ] },
+
+    { "dur": 6.0,
+      "big": [ {"t": "Nicaea invented", "c": "cream", "s": 72}, {"t": "nothing.", "c": "gold", "s": 92} ],
+      "sub": [ {"t": "It defended what the church was already praying.", "c": "cream", "f": "serif", "s": 40},
+               {"t": "The praying came first.  apologiadaily.com", "c": "gold", "f": "serifb", "s": 44} ] }
+  ]
+}
