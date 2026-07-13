@@ -192,7 +192,7 @@ the Resurrection tab intro framing.
   carefully; it's where the opposing evidence is stated.*
 
 ### Part Two — "The Resurrection Bears a Heavy Burden of Proof"
-- **Ch. 3 — The Christian Claim That Jesus Was Resurrected** (pp. 43–46 captured; chapter continues).
+- **Ch. 3 — The Christian Claim That Jesus Was Resurrected** (pp. 43–51 captured; chapter continues to 56).
   **Thesis (our words):** defines the *specifically Christian* claim — a **bodily** resurrection —
   and its heavy burden of proof. Pushes back on a modern trend to *de-divinize* Jesus (reduce him to
   "a great moral teacher / nice person who turned the other cheek"). Argues (a) Jesus made radical
@@ -228,6 +228,68 @@ the Resurrection tab intro framing.
     Jesus *made* exalted claims and had a reputation as an exorcist; do **not** inflate this into a
     claimed consensus that Jesus asserted *Nicene* deity. Keep our "scholars grant the data, not the
     theological conclusion" discipline.
+
+  **Ch. 3 continued — OT/Second-Temple resurrection roots + "the real vs. the phony Jesus" +
+  eyewitness memory (pp. 47–51):**
+  - **§ OT + Second-Temple roots of resurrection hope (pp. 47–48):** the chapter grounds bodily
+    resurrection in the Hebrew Scriptures and the intertestamental period, then shows Jesus defending
+    it from Moses. Primary-source leads to verify (cite the primaries, not the book):
+    - **Isaiah 26:19** — "Thy dead shall live, their bodies shall rise… O dwellers in the dust, awake
+      and sing for joy!" (book renders RSV — verify wording/translation).
+    - **Daniel 12:2** — the two-fold awakening (everlasting life vs. shame/contempt).
+    - **Hosea 6:2** — "After two days he will revive us; on the third day he will raise us up"
+      (note: primarily national-restoration language; flag the "third day" resonance carefully — do
+      **not** overclaim it as a direct resurrection prophecy of Jesus).
+    - **2 Maccabees 7:9** (RSV Apocrypha) — the mother-and-seven-sons martyrdom under **Antiochus IV**;
+      an explicit bodily-resurrection hope. *Deuterocanonical — note the canon status honestly; it's a
+      *Second-Temple witness to the belief*, cite it as historical background, not as our Scripture,
+      to keep denominational neutrality (Protestant vs. Catholic/Orthodox canon).* 
+    - **A Qumran / Dead Sea Scrolls text** ("made alive" language) — find the specific fragment before
+      citing; do not cite "a Qumran text" generically.
+    - **Ezekiel 37** (dry bones) — again flagged as a *national-restoration metaphor* that fed later
+      resurrection hope (hold that nuance).
+    - **The Pharisees held bodily resurrection** (vs. Sadducees): **Mark 12:18–27; Acts 4:2;
+      Acts 23:6–8**.
+    - **Exodus 3:6** (the burning bush — "I am the God of Abraham, Isaac, Jacob") as Jesus' proof-text
+      that the patriarchs live to God: **Matt 22:23–33 // Luke 20:27–40**, with **Luke 20:39** (scribes:
+      "Teacher, you have spoken well"). *The book notes a redactional difference among the Synoptics in
+      how the scribes respond — verify before repeating any harmonization claim.*
+    - **Messianic-deeds-as-resurrection-sign:** **Matt 11:3, 5 // Luke 7:22** ("the dead are raised up")
+      — reprised here as the bridge into Reason #3 (Jesus *demonstrated* resurrection power).
+    - *Cross-map: an OT-foundations / `library/messianic-prophecy.html` + `library/emptytomb.html`
+      (Pharisee/Sadducee background). The 2 Macc + Qumran material is genuinely useful Second-Temple
+      background we don't yet foreground.*
+  - **§ "What Did the Real Jesus Teach / Do / Achieve?" (pp. 49–50)** — Johnston contrasts the
+    **canonical Jesus** with the **phony/extracanonical Jesus** of later gnostic texts. Leads:
+    - Teaching: the **kingdom of God**; authority to forgive sins — **Luke 7:49** (HCSB, "Who is this
+      man who even forgives sins?"); "greater than Solomon / Jonah" motifs (verify refs — likely
+      **Matt 12:41–42 // Luke 11:31–32**).
+    - Achieving: **John 14:9** (NIV) — "Anyone who has seen me has seen the Father" (a deity/oneness
+      text — good for the Jesus/Trinity tabs, gate carefully).
+    - **The extracanonical contrast is apologetically live and cross-maps to two tabs:**
+      - The **Gospel of Thomas** (a sayings-gospel with no passion/resurrection) is used as the foil
+        for "the real Jesus." *Cross-map: any "lost gospels / why not the gnostic gospels" material
+        and `library/manuscript.html` canon discussion.*
+      - **Basilides** (2nd-c. gnostic) taught a **docetic** swap — that **Simon of Cyrene** was
+        crucified in Jesus' place, Jesus escaping death. The book notes this docetic denial-of-the-
+        real-death is echoed in the **Qur'an's** denial that Jesus was actually crucified
+        (**Surah 4:157**). *Two cross-maps: (1) Christology/docetism — full humanity + real death of
+        Christ, a core guardrail; (2) the **Islam tab** (`worldviews.html` Islam section /
+        `library/islam-*`) — the crucifixion-denial is exactly the naskh/Surah 4:157 material, and the
+        gnostic-root observation is a strong, verifiable historical point. **Handle the Islam framing
+        inside our "charity is accuracy" guardrail; verify Surah 4:157 wording directly.***
+    - **⚠️ Calibration:** the "real vs. phony Jesus" framing is rhetorically sharp; on use, keep it to
+      the *historical* point (canonical Gospels are 1st-c./eyewitness-rooted; Thomas/gnostic texts are
+      2nd-c.+ and theologically later) rather than a dismissive tone — 1 Peter 3:15.
+  - **§ "How Did the NT Writers Remember What Jesus Said and Did?" (p. 51)** — the oral-tradition /
+    eyewitness-memory argument: the Gospels were written ~30–40 years after the events, inside a
+    **first-century oral-memory culture** (trained memorization, communal transmission) utterly unlike
+    our instant-information age — so the gap is not the fatal problem a modern reader assumes.
+    *Cross-map: `library/eyewitnesses.html`, `library/manuscript.html`. **Calibration:** state the gap
+    **honestly** (~30–40 years, as the book does) and argue from memory-culture + eyewitness control —
+    do not minimize the interval; that matches our "never frame it as merely decades later, but don't
+    hide the interval either" discipline. Bauckham's *Jesus and the Eyewitnesses* is the scholarly
+    anchor to cite directly rather than the popular book.*
 
 ### Part Three — "The 7 Best Reasons to Believe in the Resurrection of Jesus" *(pending capture)*
 - **Ch. 4 — Reason #1: Society is transformed everywhere Christianity is embraced** (p. 57). Note: a
@@ -269,8 +331,8 @@ the Resurrection tab intro framing.
 | Introduction | 15–19 | ✅ captured (leads indexed) |
 | Ch. 1 (Part One) | 23–31 | ✅ captured complete (device + historical test + viva; 2 calibration flags) |
 | Ch. 2 (Part One) | 33–42 | ⬜ pending (skipped in capture order) |
-| Ch. 3 (Part Two) | 43–46 | ✅ captured (claim + Jewish resurrection background); continues 47–56 |
-| Ch. 3 (rest) | 47–56 | ⬜ pending |
+| Ch. 3 (Part Two) | 43–51 | ✅ captured (claim + Jewish/OT resurrection roots + real-vs-phony Jesus + memory); continues 52–56 |
+| Ch. 3 (rest) | 52–56 | ⬜ pending |
 | Ch. 4–7 (Reasons 1–4) | 57–94 | ⬜ pending |
 | Ch. 8–10 (Reasons 5–7) | 95–130 | ⬜ pending |
 | Ch. 11–12 (Part Four) | 131–158 | ⬜ pending |
@@ -282,4 +344,7 @@ Primary tab: **Resurrection (`ev-s2`)**. Feeds `library/minimalfacts.html`, `lib
 `library/disciplesbelief.html`, `library/paulconv.html`, `library/earlycreed.html`,
 `library/archaeology.html`; the suffering chapter touches `library/evil.html` (hold our theodicy
 guardrail). Ch. 12's "they did a terrible job [inventing it]" pairs with the undesigned-coincidences
-material (`library/coincidences.html`).
+material (`library/coincidences.html`). **Ch. 3 (pp. 47–51) also feeds the Islam tab** — Basilides's
+docetic Simon-of-Cyrene swap as the gnostic root behind the Qur'an's Surah 4:157 crucifixion denial
+(cross-map: the Islam section of `worldviews.html` / `library/islam-*`) — and touches Christology
+(full humanity + real death of Christ) and the eyewitness-memory case (`library/eyewitnesses.html`).
