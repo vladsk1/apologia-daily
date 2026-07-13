@@ -326,7 +326,20 @@ full rules. In short:
 - **Gate:** an entry with `verified: false` may NOT be quoted in published content until
   `apologia-citations` confirms its exact wording against `source_url` and flips it to `true`
   — same "nothing ships unverified" discipline as the rest of the pipeline.
-- Rebuild the index after edits: `node tools/build-sources-index.mjs` (CI runs `--check`).
+- **LIVE consumer (raises the stakes on `verified`):** the live `/api/ask` endpoint now
+  **retrieves** the most relevant `verified:true` passages at answer-time and lets the model quote
+  them with attribution (build emits `lib/sources-verified.js` = verified-only; `lib/retrieve-sources.js`
+  scores them; `api/ask.js` injects them as a second system segment under a gated instruction block
+  that keeps them "quotation-accurate historic witnesses, not Scripture," fences denominational
+  disputes, and hard-blocks fabrication — "quote ONLY from the provided list"). So flipping an entry
+  to `verified:true` now also puts its exact wording into live answers — hold the citations bar
+  accordingly. Any change to that instruction block must re-clear argument + orthodoxy (it's a gated
+  file). **Open follow-up:** the per-passage curator `note` fields (which fence delicate Trinity
+  relation-of-origin/taxis readings) are NOT sent to the model — a block-level Trinity co-equality
+  safeguard covers it, but a citations pass should fold the "the Godhead is one" conclusion into the
+  `text`/a context field for the taxis-clause entries (e.g. Gregory of Nyssa "Not Three Gods").
+- Rebuild the index after edits: `node tools/build-sources-index.mjs` (CI runs `--check`; emits both
+  `sources-index.json` and `lib/sources-verified.js`).
 
 ## Owned-book research notes (`docs/book-research/`)
 In-our-own-words **research maps of owned copyrighted apologetics books** — the argument
