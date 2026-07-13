@@ -17,6 +17,12 @@ git-ignored); pass --out to override the location/name.
 CLI flags override the matching keys in the spec. See tools/reel/README.md and
 tools/reel/specs/*.json for the spec format. Add a voiceover afterward in any editor
 using the "voiceover" text in the spec (this tool renders silent, fully-captioned video).
+
+Alongside each MP4 the tool also writes a CapCut kit (disable with --no-kit):
+  <base>.srt           — captions timed to the scenes (import into CapCut)
+  <base>.voiceover.txt — the voiceover script + a per-scene timing sheet
+so a silent, made-elsewhere reel becomes a native, voiced video in one editor pass —
+which performs far better than a silent static upload.
 """
 import os, sys, json, subprocess, argparse, importlib
 
@@ -243,6 +249,67 @@ def encode(spec, W, H, frames_dir, clips_dir, out_path):
     if r.returncode: sys.exit(f"xfade failed:\n{r.stderr[-1800:]}")
     return round(cum, 1)
 
+# ---- CapCut kit: synced .srt captions + a voiceover script/timing sheet ----
+# So a silent, made-elsewhere reel becomes a NATIVE, voiced video in one CapCut pass:
+# drop the MP4 in, import the .srt as captions (already timed to the scenes), and run
+# text-to-speech / record from the voiceover script. Native + spoken = far better reach
+# than a silent static upload.
+def _srt_ts(sec):
+    if sec < 0: sec = 0
+    ms = int(round(sec * 1000)); h = ms // 3600000; ms -= h * 3600000
+    m = ms // 60000; ms -= m * 60000; s = ms // 1000; ms -= s * 1000
+    return f"{h:02d}:{m:02d}:{s:02d},{ms:03d}"
+
+def _mmss(sec):
+    sec = int(round(sec)); return f"{sec // 60}:{sec % 60:02d}"
+
+def _scene_caption(sc):
+    parts = []
+    if "big" in sc:
+        parts += [b.get("t", "") for b in sc.get("big", [])]
+        parts += [s.get("t", "") for s in sc.get("sub", [])]
+    else:
+        parts += [l.get("t", "") for l in sc.get("lines", [])]
+    parts = [p.strip() for p in parts if p and p.strip()]
+    return " ".join(parts)
+
+def _scene_offsets(durs, xf):
+    # start times on the crossfaded timeline (mirrors encode()'s xfade offsets)
+    n = len(durs); offs = [0.0] * n; run = durs[0] if durs else 0.0
+    for i in range(1, n):
+        offs[i] = max(0.0, run - xf); run = run - xf + durs[i]
+    return offs, run  # run == total length
+
+def write_kit(spec, base, outdir, durs, xf):
+    scenes = spec["scenes"]; n = len(scenes)
+    offs, total = _scene_offsets(durs, xf)
+    ends = [offs[i + 1] if i < n - 1 else total for i in range(n)]
+
+    srt_path = os.path.join(outdir, f"{base}.srt")
+    with open(srt_path, "w", encoding="utf-8") as f:
+        for i in range(n):
+            cap = _scene_caption(scenes[i]) or " "
+            f.write(f"{i+1}\n{_srt_ts(offs[i])} --> {_srt_ts(ends[i])}\n{cap}\n\n")
+
+    vo = (spec.get("voiceover") or "").strip()
+    vo_path = os.path.join(outdir, f"{base}.voiceover.txt")
+    with open(vo_path, "w", encoding="utf-8") as f:
+        f.write("APOLOGIA DAILY — REEL VOICEOVER KIT\n")
+        f.write(f"reel: {base}   ·   length: {_mmss(total)} ({total:.1f}s)   ·   {n} scenes\n")
+        f.write("=" * 64 + "\n\n")
+        f.write("HOW TO USE (makes the video NATIVE + spoken, which TikTok rewards):\n")
+        f.write("  1. Open CapCut, drop in the MP4.\n")
+        f.write("  2. Text-to-speech: paste the script below (or record it yourself).\n")
+        f.write("  3. Captions: import the matching .srt (already timed to the scenes),\n")
+        f.write("     or use CapCut Auto-captions once the voiceover is added.\n")
+        f.write("  4. Add a trending sound low under the voice, then export to TikTok.\n\n")
+        f.write("FULL VOICEOVER SCRIPT\n" + "-" * 64 + "\n")
+        f.write((vo if vo else "(no voiceover text in this spec)") + "\n\n")
+        f.write("SCENE TIMING (match your delivery to these windows)\n" + "-" * 64 + "\n")
+        for i in range(n):
+            f.write(f"[{i+1:2d}]  {_mmss(offs[i])}–{_mmss(ends[i])}   {_scene_caption(scenes[i])}\n")
+    return srt_path, vo_path
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("spec")
@@ -251,6 +318,8 @@ def main():
     ap.add_argument("--theme", choices=list(THEMES))
     ap.add_argument("--pace", type=float, default=None,
                     help="multiply every scene's on-screen time (1.0 = spec; 1.5 = 50%% slower)")
+    ap.add_argument("--no-kit", action="store_true",
+                    help="skip writing the .srt + .voiceover.txt CapCut kit")
     ap.add_argument("--workdir")
     a = ap.parse_args()
     spec = json.load(open(a.spec, encoding="utf-8"))
@@ -271,6 +340,10 @@ def main():
     spec["_durs"], spec["_n"] = durs, n
     total = encode(spec, W, H, frames_dir, clips_dir, out)
     print(f"OK  {out}  {W}x{H}  {theme}  {total}s  ({n} scenes)")
+    if not a.no_kit:
+        srt_path, vo_path = write_kit(spec, base, outdir, durs, float(spec.get("crossfade", 0.6)))
+        print(f"KIT {srt_path}")
+        print(f"KIT {vo_path}")
 
 if __name__ == "__main__":
     main()
