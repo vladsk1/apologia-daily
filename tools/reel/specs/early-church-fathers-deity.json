@@ -1,0 +1,73 @@
+{
+  "reviewed": {"argument": "2026-07-13", "orthodoxy": "2026-07-13", "by": "quote-wall reel: the church fathers on the deity of Christ, pre-Nicaea. Grounded in library/early_church_trinity.html (orthodoxy-CLEAN). GATES: orthodoxy CLEAN (9/9 scenes, 0 flags); argument SOUND (0 BREAK/WEAK); citations verified 4/5 quotes verbatim + all dates/attributions, with 1 CHECK APPLIED — Ignatius 'Jesus Christ our God' (Eph. salutation, Roberts-Donaldson), Pliny 'a hymn to Christ, as to a god' (Letters 10.96), Irenaeus 'our Lord, and God, and Saviour, and King' (Against Heresies 1.10.1), Clement 'he alone being both, both God and man' (Protrepticus 1) all confirmed verbatim; the Tertullian line was DE-QUOTED (his actual Latin is una substantia/tres personae, so 'three persons, one substance' is now framed as his Latin FORMULA, not a verbatim quote, and scene 2 changed 'Real quotes' -> 'Their own words'). Positive case only. Omits Melito (anti-Jewish-pull-quote risk) and Justin (subordinationist language). Claims early confession of deity, not the later homoousios metaphysics."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.85,
+  "voiceover": "Did the early church believe Jesus was God? Don't take my word for it — take theirs, in their own writing, more than a century before the Council of Nicaea. Around the year 107, Ignatius of Antioch — a bishop on his way to be executed — wrote to a church of 'Jesus Christ our God.' Around 112, even a hostile Roman governor, Pliny, reported that Christians gathered before dawn to sing 'a hymn to Christ, as to a god.' Around 180, Irenaeus of Lyons hailed him as 'our Lord, and God, and Saviour, and King.' Around 195, Clement of Alexandria wrote that the Word has now appeared as man — 'he alone being both, both God and man.' And around 210, Tertullian of Carthage gave it its Latin formula — three persons, one substance — and coined the very word: Trinity. Every one of those quotes was written before the Council of Nicaea in the year 325. The church did not invent the divinity of Jesus at a council. They inherited it — and they wrote it down. The words were there all along.",
+  "source": "library/early_church_trinity.html",
+  "scenes": [
+    { "dur": 5.0,
+      "big": [ {"t": "They called", "c": "cream", "s": 78}, {"t": "Jesus God —", "c": "gold", "s": 90}, {"t": "in writing.", "c": "cream", "s": 74} ],
+      "sub": [ {"t": "The church fathers, in their own words.", "c": "dim", "f": "serif", "s": 40} ] },
+
+    { "kicker": "IN THEIR OWN WORDS", "dur": 5.2, "lines": [
+      {"t": "Not a vague hint.", "c": "cream", "s": 54},
+      {"t": "Named men. Their own words.", "c": "cream", "s": 50},
+      {"t": "", "s": 20},
+      {"t": "A century before any council", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "voted on anything.", "c": "gold", "f": "serifb", "s": 48} ] },
+
+    { "kicker": "IGNATIUS OF ANTIOCH · c. AD 107", "dur": 6.2, "lines": [
+      {"t": "A bishop, on his way", "c": "cream", "s": 48},
+      {"t": "to be executed, wrote", "c": "cream", "s": 48},
+      {"t": "to a church of", "c": "cream", "s": 48},
+      {"t": "", "s": 18},
+      {"t": "“Jesus Christ our God.”", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "— Letter to the Ephesians", "c": "dim", "s": 42} ] },
+
+    { "kicker": "EVEN ROME NOTICED · c. AD 112", "dur": 6.2, "lines": [
+      {"t": "Pliny, a Roman governor,", "c": "cream", "s": 48},
+      {"t": "reports Christians met at dawn", "c": "cream", "s": 44},
+      {"t": "to sing", "c": "cream", "s": 48},
+      {"t": "", "s": 16},
+      {"t": "“a hymn to Christ,", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "as to a god.”", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "— Letter to the Emperor Trajan", "c": "dim", "s": 40} ] },
+
+    { "kicker": "IRENAEUS OF LYONS · c. AD 180", "dur": 6.0, "lines": [
+      {"t": "He hailed Jesus as", "c": "cream", "s": 48},
+      {"t": "", "s": 18},
+      {"t": "“our Lord, and God,", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "and Saviour, and King.”", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "— Against Heresies", "c": "dim", "s": 42} ] },
+
+    { "kicker": "CLEMENT OF ALEXANDRIA · c. AD 195", "dur": 6.4, "lines": [
+      {"t": "The Word “has now", "c": "cream", "s": 48},
+      {"t": "appeared as man” —", "c": "cream", "s": 48},
+      {"t": "", "s": 16},
+      {"t": "“he alone being both,", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "both God and man.”", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "— Exhortation to the Greeks", "c": "dim", "s": 40} ] },
+
+    { "kicker": "TERTULLIAN OF CARTHAGE · c. AD 210", "dur": 6.2, "lines": [
+      {"t": "He gave it its Latin formula —", "c": "cream", "s": 48},
+      {"t": "three persons, one substance —", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "and coined the very word:", "c": "cream", "s": 46},
+      {"t": "", "s": 18},
+      {"t": "Trinitas.", "c": "gold", "f": "serifb", "s": 60},
+      {"t": "— Against Praxeas", "c": "dim", "s": 42} ] },
+
+    { "kicker": "AND THE DATE?", "dur": 5.6, "lines": [
+      {"t": "Every one of these", "c": "cream", "s": 52},
+      {"t": "was written —", "c": "cream", "s": 52},
+      {"t": "", "s": 18},
+      {"t": "BEFORE the Council", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "of Nicaea in 325.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "dur": 6.0,
+      "big": [ {"t": "They didn't", "c": "cream", "s": 72}, {"t": "invent it.", "c": "cream", "s": 78}, {"t": "They wrote it down.", "c": "gold", "s": 60} ],
+      "sub": [ {"t": "The words were there all along.", "c": "cream", "f": "serif", "s": 40},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 46} ] }
+  ]
+}
