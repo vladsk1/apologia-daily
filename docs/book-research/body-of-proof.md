@@ -151,6 +151,42 @@ the Resurrection tab intro framing.
   - **Non-Scripture lead:** the **Sam Roberts / NYT / *Vanity Fair* Easter obituary** — find and
     verify the actual published piece before referencing it as real.
   - Cross-map: `library/minimalfacts.html` and the "legend / imaginative storytelling" objection cards.
+
+  **Ch. 1 continued — "The Historical Test" + "Do You Believe?" (pp. 27–31):**
+  - **Thesis (our words):** the obituary is finished as a naturalistic account of the crucifixion and
+    burial (arrested Thursday, condemned by **Pontius Pilate** — the Jewish authorities lacking
+    capital jurisdiction — charged as a would-be "King of the Jews / anointed one," dead by Friday,
+    buried, and on Sunday the tomb reported empty). Johnston's move: *Christianity, unlike any other
+    religion, plants itself in datable public history and invites the historical test.* He treats the
+    resurrection as an event to be investigated like any other, closes on the empty tomb, and then
+    turns autobiographical (his Oxford doctoral viva on the resurrection) to model that examination.
+  - **His two governing commitments (worth adopting — they match our house frame):**
+    1. the **New Testament is a historical document** to be studied like any other ancient source; and
+    2. the **bodily resurrection is the *best explanation*** of the agreed data ("most explanatory
+       power") — i.e. **inference to the best explanation**, not a deductive "proof." *This is exactly
+       our calibration; lean on #2's framing when the book's cover word "proof" tempts overstatement.*
+  - **Dating leads to verify:** **Pilate** prefect AD 26–36; **Caiaphas** high priest (removed AD 36);
+    crucifixion dated via **Nisan/Passover** + astronomy to **~April AD 30** (with **AD 33** as the
+    alternative). Verify against the standard treatments before use.
+  - **Scripture / source leads:** **Luke 1:1–2** — the tradition came from "eyewitnesses" (Gk.
+    *autoptēs*, the root of "autopsy"; the book notes Luke's physician background — cf. **Col 4:14**);
+    **Acts 4:2** — the apostles proclaiming "in Jesus the resurrection of the dead"; **Josephus** on
+    **James the brother of Jesus** (martyr, ~AD 62 — *Antiquities* 20.200, verify); the early-creed /
+    "reach back close to the event" point (**1 Cor 15:3–7**).
+  - **Scholars named (leads, verify credentials/claims independently):** **Gary Habermas** (foreword);
+    **Prof. William Telford** (his viva examiner); **Prof. Craig Evans** (his doctoral advisor — a
+    well-known Jesus scholar); **Pastor Dr. Jack Graham** (a quoted line). The viva is placed at
+    **Oxford** in the book; if we ever cite Johnston's credentials, confirm his actual degree-granting
+    institution separately.
+  - **⚠️ TWO CALIBRATION FLAGS (popular-level overstatement — do NOT adopt as-is):**
+    1. **"Jesus' death by Roman crucifixion is the best-established fact of the ancient world."**
+       Crucifixion is *very* widely accepted (even by skeptics), but "best-established fact of the
+       ancient world" is rhetoric — soften to "one of the most securely established facts" on use.
+    2. **"reach back to within six weeks of the resurrection."** This is more aggressive than our house
+       calibration. **Our guardrail:** lead with the **1 Cor 15:3–7 early creed (~2–5 years)**; never
+       frame the evidence as merely "decades later," but also **do not assert "six weeks"** without
+       confirming exactly what he means and sourcing it. Prefer our own "~2–5 years / within a few
+       years" wording.
 - **Ch. 2 — The Case against Jesus' Resurrection** (p. 33). Steelman of the skeptical case
   (swoon/hallucination/theft/legend). Cross-map: `ev-s2` objection cards. *Pending — capture this one
   carefully; it's where the opposing evidence is stated.*
@@ -197,8 +233,8 @@ the Resurrection tab intro framing.
 | Table of contents | 9 | ✅ captured |
 | Foreword (Habermas) | 11 | ⬜ pending |
 | Introduction | 15–19 | ✅ captured (leads indexed) |
-| Ch. 1 (Part One, opening) | 23–26 | ✅ captured (device + leads; chapter continues) |
-| Ch. 1 (rest) + Ch. 2 | 27–42 | ⬜ pending |
+| Ch. 1 (Part One) | 23–31 | ✅ captured complete (device + historical test + viva; 2 calibration flags) |
+| Ch. 2 (Part One) | 33–42 | ⬜ pending |
 | Ch. 3 (Part Two) | 43–56 | ⬜ pending |
 | Ch. 4–7 (Reasons 1–4) | 57–94 | ⬜ pending |
 | Ch. 8–10 (Reasons 5–7) | 95–130 | ⬜ pending |
