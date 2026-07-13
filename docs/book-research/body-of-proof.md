@@ -124,9 +124,33 @@ existence only, never quote it.
 appearance/eyewitness essays (`library/eyewitnesses.html`, `library/appearances`-type material), and
 the Resurrection tab intro framing.
 
-### Part One — "Skeptics Take the Microphone" *(pending capture)*
-- **Ch. 1 — "Isn't the Resurrection Imaginative Storytelling?"** (p. 23). Likely: the "legend/myth"
-  objection. Cross-map: `library/minimalfacts.html`, the earlydate/eyewitnesses essays. *Pending.*
+### Part One — "Skeptics Take the Microphone"
+- **Ch. 1 — "Isn't the Resurrection Imaginative Storytelling?"** (pp. 23–26 captured; chapter
+  continues). **Thesis (our words):** the chapter opens with a rhetorical device — Johnston recounts
+  being invited by **New York Times** writer **Sam Roberts** to co-write a "serious," secular
+  **obituary of Jesus**, published Easter weekend in **Vanity Fair** (headline in the book's telling:
+  *"Jesus of Nazareth, Whose Messianic Message Captivated Thousands, Dies at About 33"*). He then
+  renders Jesus' life the way a purely naturalistic obituary would — a Galilean teacher/healer with a
+  fast-growing following, crucified around age 33 — deliberately granting everything a skeptic could
+  grant *and stopping at the tomb*. The setup: a secular sketch can capture the **biography** but not
+  explain the **movement that followed**; the resurrection is the one thing the "obituary" can't hold
+  — which frames the "is it just imaginative storytelling?" question the chapter goes on to answer.
+  - **Guardrail note for our use:** the obituary is a *skeptic-voice* device — it uses hedged
+    phrasings ("reputed," "said to have," "credited with"). Those are the skeptic's framing, **not the
+    book's assertions**; never quote them as the author's own claims. Also: per our new **no-steelman
+    reel rule**, this device is *not* reel material; it's fine as essay framing only.
+  - **Primary-source leads to verify (the biographical sketch's underlying texts):**
+    Jesus' name "Yeshua" / "the Nazarene" (Matt 2:23); Bethlehem birth + Davidic line (Matt 1–2;
+    Luke 2); mother Mary, father Joseph, **brothers James, Joseph, Judas/Jude, Simon + sisters**
+    (Mark 6:3; Matt 13:55); baptism by **John** in the Jordan (Mark 1:9–11); the **Twelve**; parables;
+    dining with tax collectors/sinners; **miracles echoing Elijah/Elisha** raising the dead
+    (1 Kings 17:17–24; 2 Kings 4:32–37); **feeding of the 5,000** with five loaves (Matt 14 / Mark 6 /
+    Luke 9 / John 6 — the *only* miracle in all four Gospels); "the **lost sheep of the house of
+    Israel**" (Matt 15:24; 10:6); arrival **timed to Passover** + the **Temple/money-changers** action
+    (Mark 11:15–17). Verify each before use.
+  - **Non-Scripture lead:** the **Sam Roberts / NYT / *Vanity Fair* Easter obituary** — find and
+    verify the actual published piece before referencing it as real.
+  - Cross-map: `library/minimalfacts.html` and the "legend / imaginative storytelling" objection cards.
 - **Ch. 2 — The Case against Jesus' Resurrection** (p. 33). Steelman of the skeptical case
   (swoon/hallucination/theft/legend). Cross-map: `ev-s2` objection cards. *Pending — capture this one
   carefully; it's where the opposing evidence is stated.*
@@ -173,7 +197,8 @@ the Resurrection tab intro framing.
 | Table of contents | 9 | ✅ captured |
 | Foreword (Habermas) | 11 | ⬜ pending |
 | Introduction | 15–19 | ✅ captured (leads indexed) |
-| Ch. 1–2 (Part One) | 23–42 | ⬜ pending |
+| Ch. 1 (Part One, opening) | 23–26 | ✅ captured (device + leads; chapter continues) |
+| Ch. 1 (rest) + Ch. 2 | 27–42 | ⬜ pending |
 | Ch. 3 (Part Two) | 43–56 | ⬜ pending |
 | Ch. 4–7 (Reasons 1–4) | 57–94 | ⬜ pending |
 | Ch. 8–10 (Reasons 5–7) | 95–130 | ⬜ pending |
