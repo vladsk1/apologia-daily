@@ -1,0 +1,17 @@
+{
+  "reviewed": {"argument": "2026-07-13", "orthodoxy": "2026-07-13", "by": "TALK-OVER background version of early-church-fathers-deity.json (gates CLEAN 2026-07-13). Single steady card for the creator to read the voiceover over, with lower two-thirds left clear for TikTok/CapCut captions. No new claims: the slogan reuses the gated scene-1 phrasing ('They called Jesus God') and the voiceover is IDENTICAL to the certified fathers reel. Positive case only."},
+  "layout": "talkbg",
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0,
+  "voiceover": "Did the early church believe Jesus was God? Don't take my word for it — take theirs, in their own writing, more than a century before the Council of Nicaea. Around the year 107, Ignatius of Antioch — a bishop on his way to be executed — wrote to a church of 'Jesus Christ our God.' Around 112, even a hostile Roman governor, Pliny, reported that Christians gathered before dawn to sing 'a hymn to Christ, as to a god.' Around 180, Irenaeus of Lyons hailed him as 'our Lord, and God, and Saviour, and King.' Around 195, Clement of Alexandria wrote that the Word has now appeared as man — 'he alone being both, both God and man.' And around 210, Tertullian of Carthage gave it its Latin formula — three persons, one substance — and coined the very word: Trinity. Every one of those quotes was written before the Council of Nicaea in the year 325. The church did not invent the divinity of Jesus at a council. They inherited it — and they wrote it down. The words were there all along.",
+  "source": "library/early_church_trinity.html",
+  "scenes": [
+    { "dur": 50.0,
+      "kicker": "THE CHURCH FATHERS · BEFORE NICAEA",
+      "big": [ {"t": "They called", "c": "cream", "s": 88}, {"t": "Jesus God.", "c": "gold", "s": 104} ],
+      "sub": [ {"t": "In their own words —", "c": "dim", "f": "serif", "s": 44},
+               {"t": "a century before any council.", "c": "dim", "f": "serif", "s": 42} ] }
+  ]
+}

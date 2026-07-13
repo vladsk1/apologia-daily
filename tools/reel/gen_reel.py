@@ -185,10 +185,30 @@ def line_blocks(lines, th):
 def render(spec, W, H, theme, frames_dir):
     th = THEMES[theme]; os.makedirs(frames_dir, exist_ok=True)
     scenes = spec["scenes"]; n = len(scenes); durs = []
+    talkbg = spec.get("layout") == "talkbg"
     for i, sc in enumerate(scenes):
         img = gradient_bg(W, H, th); d = ImageDraw.Draw(img)
         has_k = bool(sc.get("kicker"))
         cy = int(H * 0.47)
+        if talkbg:
+            # single "talk-over" card: slogan anchored HIGH, lower two-thirds left
+            # clear so the creator's own TikTok/CapCut captions have room. No
+            # progress dots (you read a voiceover over one steady background).
+            if sc.get("kicker"):
+                f, spaced, w = measure_kicker(d, W, sc["kicker"])
+                kicker_at(d, W, f, spaced, w, int(H * 0.10), th)
+            big = [(x["t"], F(x.get("f", "serifb"), x.get("s", 92)),
+                    th.get(x.get("c", "cream"), th["cream"]), 20) for x in sc.get("big", [])]
+            top = int(H * (0.20 if sc.get("kicker") else 0.15))
+            if big: center_block(d, W, big, cy, th["shadow"], top=top)
+            if sc.get("sub"):
+                sub = [(x["t"], F(x.get("f", "serif"), x.get("s", 42)),
+                        th.get(x.get("c", "dim"), th["dim"]), 14) for x in sc["sub"]]
+                center_block(d, W, sub, cy, th["shadow"], top=top + blocks_height(big) + int(H * 0.03))
+            footer(d, W, H, th)
+            img.save(os.path.join(frames_dir, f"scene_{i:02d}.png"))
+            durs.append(float(sc.get("dur", 3.5)))
+            continue
         if "big" in sc:
             if has_k:  # rare; keep the kicker at the top for full-bleed title cards
                 f, spaced, w = measure_kicker(d, W, sc["kicker"])
