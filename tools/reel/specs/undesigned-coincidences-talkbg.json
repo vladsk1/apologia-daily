@@ -1,0 +1,17 @@
+{
+  "reviewed": {"argument": "2026-07-13", "orthodoxy": "2026-07-13", "by": "TALK-OVER (single-card) version of undesigned-coincidences.json (gates CLEAN 2026-07-13: citations 9/9, orthodoxy CLEAN, argument SOUND w/ 3 fixes applied). One steady card for the creator to read the voiceover over, lower two-thirds clear for TikTok/CapCut captions. No new claims: slogan reuses the gated scene-1 hook ('Why did Jesus ask Philip?') and the voiceover is IDENTICAL to the certified reel. ~105s for a slow read-over."},
+  "layout": "talkbg",
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0,
+  "voiceover": "Here's a puzzle hiding inside the Gospels. When Jesus feeds five thousand people, John's Gospel says he turned to one specific disciple — Philip — and asked, 'Where are we to buy bread?' But why Philip? He wasn't the leader; that was Peter. He wasn't the treasurer; that was Judas. John raises the question and never answers it. Now watch. Luke tells the same story and adds a detail John leaves out: it happened near a town called Bethsaida. And John — five chapters earlier, for a completely unrelated reason — mentions in passing that Philip was from Bethsaida. Put the three together and the puzzle dissolves: Jesus asked Philip because they were near Philip's hometown, and he'd know the local markets. But no single Gospel says that. You have to assemble it yourself, from three details scattered across different books. This is called an undesigned coincidence. And here's why it's powerful: people who invent a story together agree on the big claims. What they almost never fake is a tiny detail in one book that accidentally answers a riddle left open in another — with neither writer noticing. And it happens again and again. Luke shows that Jesus' circle had inside knowledge of Herod's court — he could call the tetrarch 'that fox.' How would they know what went on in the palace? Luke mentions, elsewhere, that one of the women funding Jesus was Joanna, the wife of Herod's household manager. And Acts names Manaen, raised alongside Herod himself. Inside sources. The scholars William Paley and John James Blunt catalogued dozens of these; today Lydia McGrew calls them hidden in plain view. It doesn't prove the miracles happened. But it makes one thing very hard to believe — that the Gospels are late, free-floating legend. They read like the residue of real memory of real events. Hidden in plain view.",
+  "source": "library/coincidences.html",
+  "scenes": [
+    { "dur": 105.0,
+      "kicker": "UNDESIGNED COINCIDENCES",
+      "big": [ {"t": "Why did Jesus", "c": "cream", "s": 84}, {"t": "ask Philip?", "c": "gold", "s": 98} ],
+      "sub": [ {"t": "A clue the Gospel writers", "c": "dim", "f": "serif", "s": 44},
+               {"t": "didn't know they left.", "c": "dim", "f": "serif", "s": 42} ] }
+  ]
+}

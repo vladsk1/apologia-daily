@@ -1,0 +1,89 @@
+{
+  "reviewed": {"argument": "2026-07-13", "orthodoxy": "2026-07-13", "by": "reel on undesigned coincidences, grounded in library/coincidences.html (CLEAN). GATES: citations CLEAN (9/9, 0 errors — all quotes verbatim ESV; Luke 8:3 + Acts 13:1 correctly rendered as unquoted paraphrase); orthodoxy CLEAN (neutral, stays inside the reliability-not-proof bound); argument SOUND (0 BREAK) with 3 fixes APPLIED — 'what they can't fake' -> 'almost never fake' (essay is probabilistic, not absolute); 'doesn't prove every miracle' -> 'doesn't prove the miracles happened' (the 'every' wrongly implied some are proven); Herod scene reworded from 'knew Herod's secret plot' to 'inside knowledge of Herod's court' (the threat was openly reported by the Pharisees; the point is court access via Joanna/Manaen). Flagship Philip/Bethsaida (John 6:5 / Luke 9:10 / John 1:44) + Herod's-court (Luke 13:32 / Luke 8:3 / Acts 13:1) + Paley/Blunt/McGrew. Keeps the essay's BOUND: corroboration, NOT proof of miracles or inerrancy. ~80s for a read-over voiceover."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.8,
+  "pace": 1.4,
+  "voiceover": "Here's a puzzle hiding inside the Gospels. When Jesus feeds five thousand people, John's Gospel says he turned to one specific disciple — Philip — and asked, 'Where are we to buy bread?' But why Philip? He wasn't the leader; that was Peter. He wasn't the treasurer; that was Judas. John raises the question and never answers it. Now watch. Luke tells the same story and adds a detail John leaves out: it happened near a town called Bethsaida. And John — five chapters earlier, for a completely unrelated reason — mentions in passing that Philip was from Bethsaida. Put the three together and the puzzle dissolves: Jesus asked Philip because they were near Philip's hometown, and he'd know the local markets. But no single Gospel says that. You have to assemble it yourself, from three details scattered across different books. This is called an undesigned coincidence. And here's why it's powerful: people who invent a story together agree on the big claims. What they almost never fake is a tiny detail in one book that accidentally answers a riddle left open in another — with neither writer noticing. And it happens again and again. Luke shows that Jesus' circle had inside knowledge of Herod's court — he could call the tetrarch 'that fox.' How would they know what went on in the palace? Luke mentions, elsewhere, that one of the women funding Jesus was Joanna, the wife of Herod's household manager. And Acts names Manaen, raised alongside Herod himself. Inside sources. The scholars William Paley and John James Blunt catalogued dozens of these; today Lydia McGrew calls them hidden in plain view. It doesn't prove the miracles happened. But it makes one thing very hard to believe — that the Gospels are late, free-floating legend. They read like the residue of real memory of real events. Hidden in plain view.",
+  "source": "library/coincidences.html",
+  "scenes": [
+    { "dur": 5.0,
+      "big": [ {"t": "Why did Jesus", "c": "cream", "s": 78}, {"t": "ask Philip?", "c": "gold", "s": 92} ],
+      "sub": [ {"t": "A puzzle the Gospels raise —", "c": "dim", "f": "serif", "s": 42},
+               {"t": "and never answer.", "c": "dim", "f": "serif", "s": 42} ] },
+
+    { "kicker": "THE FEEDING OF 5,000 · JOHN 6", "dur": 7.6, "lines": [
+      {"t": "John's Gospel: Jesus turns", "c": "cream", "s": 48},
+      {"t": "to one disciple, Philip —", "c": "cream", "s": 48},
+      {"t": "“Where are we to buy bread?”", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "— John 6:5", "c": "dim", "s": 42},
+      {"t": "", "s": 16},
+      {"t": "Not Peter. Not Judas. Why him?", "c": "cream", "s": 46} ] },
+
+    { "kicker": "JOHN NEVER SAYS · BUT—", "dur": 7.4, "lines": [
+      {"t": "Luke tells the same story", "c": "cream", "s": 48},
+      {"t": "and adds what John left out:", "c": "cream", "s": 46},
+      {"t": "", "s": 18},
+      {"t": "it happened near a town", "c": "cream", "s": 48},
+      {"t": "called Bethsaida.", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "— Luke 9:10", "c": "dim", "s": 42} ] },
+
+    { "kicker": "AND FIVE CHAPTERS EARLIER—", "dur": 7.0, "lines": [
+      {"t": "John mentions, for a", "c": "cream", "s": 48},
+      {"t": "totally unrelated reason:", "c": "cream", "s": 48},
+      {"t": "", "s": 18},
+      {"t": "“Philip was from Bethsaida.”", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "— John 1:44", "c": "dim", "s": 42} ] },
+
+    { "kicker": "THE PIECES CLICK", "dur": 7.6, "lines": [
+      {"t": "Jesus asked Philip because", "c": "cream", "s": 48},
+      {"t": "they were near his hometown —", "c": "cream", "s": 46},
+      {"t": "he'd know the local markets.", "c": "cream", "s": 46},
+      {"t": "", "s": 18},
+      {"t": "No Gospel says it.", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "You assemble it yourself.", "c": "gold", "f": "serifb", "s": 50} ] },
+
+    { "kicker": "WHY THIS IS POWERFUL", "dur": 8.0, "lines": [
+      {"t": "Liars agree on the big story.", "c": "cream", "s": 48},
+      {"t": "", "s": 16},
+      {"t": "What they almost never fake:", "c": "cream", "s": 46},
+      {"t": "a detail in one book that", "c": "cream", "s": 46},
+      {"t": "quietly answers a riddle", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "in another — unnoticed.", "c": "gold", "f": "serifb", "s": 48} ] },
+
+    { "kicker": "AND IT HAPPENS AGAIN", "dur": 7.6, "lines": [
+      {"t": "Jesus' circle had inside", "c": "cream", "s": 48},
+      {"t": "knowledge of Herod's court —", "c": "cream", "s": 46},
+      {"t": "“Go and tell that fox.”", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "— Luke 13:32", "c": "dim", "s": 42},
+      {"t": "", "s": 16},
+      {"t": "How? Look who was with him.", "c": "cream", "s": 46} ] },
+
+    { "kicker": "THE ANSWER, DROPPED IN PASSING", "dur": 8.0, "lines": [
+      {"t": "A woman funding Jesus was", "c": "cream", "s": 46},
+      {"t": "Joanna — wife of Herod's", "c": "cream", "s": 46},
+      {"t": "household manager. (Luke 8:3)", "c": "gold", "f": "serifb", "s": 44},
+      {"t": "", "s": 16},
+      {"t": "Acts names Manaen,", "c": "cream", "s": 46},
+      {"t": "raised with Herod himself. (Acts 13:1)", "c": "dim", "s": 40} ] },
+
+    { "kicker": "CATALOGUED FOR CENTURIES", "dur": 6.4, "lines": [
+      {"t": "William Paley. J. J. Blunt.", "c": "cream", "s": 48},
+      {"t": "Today, Lydia McGrew:", "c": "cream", "s": 48},
+      {"t": "", "s": 18},
+      {"t": "“Hidden in Plain View.”", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "WHAT IT SHOWS — AND DOESN'T", "dur": 7.4, "lines": [
+      {"t": "It doesn't prove the miracles happened.", "c": "cream", "s": 42},
+      {"t": "", "s": 18},
+      {"t": "But it makes one thing hard", "c": "cream", "s": 48},
+      {"t": "to believe — that the Gospels", "c": "cream", "s": 46},
+      {"t": "are late, invented legend.", "c": "gold", "f": "serifb", "s": 48} ] },
+
+    { "dur": 6.2,
+      "big": [ {"t": "They read like", "c": "cream", "s": 70}, {"t": "real memory.", "c": "gold", "s": 84} ],
+      "sub": [ {"t": "Undesigned coincidences — hidden in plain view.", "c": "cream", "f": "serif", "s": 38},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 46} ] }
+  ]
+}

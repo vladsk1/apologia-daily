@@ -28,10 +28,18 @@ Tooling lives in `tools/reel/`:
    (e.g. `answers/*.html`, `library/*.html`), Read it and pull the vetted claims from
    there. Otherwise draft a script. **Every reel is site content and must obey the same
    guardrails in `CLAUDE.md`**: classical Nicene orthodoxy, denominational neutrality,
-   1 Peter 3:15 tone, and "charity is accuracy, not concession" — steelman the other side
-   accurately, but open and close **confidently**, never with a concession as the hook.
-   No fabricated quotes/citations/stats. For a brand-new argument (not derived from an
-   already-certified page), run it past the `apologia-orthodoxy` agent before delivering.
+   1 Peter 3:15 tone, and "charity is accuracy, not concession."
+   - **REELS ARE POSITIVE-CASE ONLY — NO STEELMANNING (hard rule, all reels).** The
+     `voiceover` **and** the on-screen scenes must NOT steelman, restate, or give the
+     opposing objection any airtime. State the case confidently from open to close. Do not
+     add an "objection scene" or a "now, skeptics argue…" beat, even briefly.
+   - This does **not** license overstatement. Keep the honest *scope bounds* the
+     argument/orthodoxy gates require (e.g. "this corroborates — it doesn't by itself prove
+     X," or the deity-vs-metaphysics distinction) — those are **accuracy, not
+     steelmanning**, and stay. The banned thing is voicing the other side's counter-case;
+     the required thing is not claiming more than the evidence shows.
+   - No fabricated quotes/citations/stats. For a brand-new argument (not derived from an
+     already-certified page), run it past the `apologia-orthodoxy` agent before delivering.
 
 2. **Write the spec.** Copy `specs/was-jesus-a-muslim.json` as the template and adapt it.
    ~9–11 scenes, ~35–45s total. Structure that works: hook title → the claim → the pivot
