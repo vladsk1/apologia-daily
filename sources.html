@@ -188,13 +188,25 @@
 
     // group each passage into a browsable collection
     // The creeds share one collection; every Father gets his own, keyed off the author name.
+    // A few names need explicit handling (multi-word titles; the two Gregories; grouping
+    // the Martyrdom of Polycarp with Polycarp) so the generic "strip ' of X'" heuristic
+    // doesn't mangle them.
     function groupKey(rec) {
+      var a = rec.author || 'other';
       if (/Creed|Definition/i.test(rec.work || '')) return 'creeds';
-      return (rec.author || 'other').toLowerCase().replace(/\s+of\s+.*$/, '').replace(/[^a-z0-9]+/g, '-');
+      if (/Didache/i.test(a)) return 'didache';
+      if (/Polycarp/i.test(a)) return 'polycarp';          // Epistle + Martyrdom together
+      if (/Nazianzus/i.test(a)) return 'gregory-naz';
+      if (/Nyssa/i.test(a)) return 'gregory-nyssa';
+      return a.toLowerCase().replace(/\s+of\s+.*$/, '').replace(/[^a-z0-9]+/g, '-');
     }
+    var GROUP_LABELS = {
+      creeds: 'The Creeds', didache: 'The Didache', polycarp: 'Polycarp',
+      'gregory-naz': 'Gregory of Nazianzus', 'gregory-nyssa': 'Gregory of Nyssa'
+    };
     function groupLabel(rec) {
-      if (groupKey(rec) === 'creeds') return 'The Creeds';
-      return (rec.author || 'Other').replace(/\s+of\s+.*$/, '');
+      var k = groupKey(rec);
+      return GROUP_LABELS[k] || (rec.author || 'Other').replace(/\s+of\s+.*$/, '');
     }
     var GROUPS = {}; // key -> { label, order, count } — built after the index loads
 
@@ -360,7 +372,7 @@
       document.getElementById('note').innerHTML =
         'Every passage is public-domain and has been verified word-for-word against its cited source. ' +
         'These are the primary texts the <a href="/evidence-library.html">Evidence Library</a> quotes from. ' +
-        'Now spanning the creeds, Ignatius, Athanasius, Irenaeus, Justin Martyr, Tertullian, Augustine, and Eusebius &mdash; ' + INDEX.length + ' verified passages, and still growing.';
+        'Now spanning the creeds and the Fathers &mdash; Clement of Rome, the Didache, Ignatius, Polycarp, Justin Martyr, Irenaeus, Tertullian, Cyprian, Athanasius, Eusebius, the Cappadocians, and Augustine &mdash; ' + INDEX.length + ' verified passages, and still growing.';
       buildChips();
       var pre = new URLSearchParams(location.search).get('q');
       if (pre) document.getElementById('q').value = pre;

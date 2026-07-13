@@ -114,11 +114,25 @@ Action items 1–2 complete; item 3 begun (Ignatius + Athanasius ingested); 4–
   orthodox lines (Justin's taxis, Tertullian's Praxeas "in degree", Irenaeus/Athanasius
   deification, Augustine avoided predestination) are flagged in each entry's note for a future
   `orthonote` clarifier when quoted.
-- **Library now = 66 verified passages** (creeds 5 · Ignatius 21 · Athanasius 10 · Irenaeus 7
-  · Justin 6 · Tertullian 6 · Augustine 6 · Eusebius 5).
-- **STILL TO EXPAND:** the remaining councils, plus e.g. Clement of Rome, Polycarp, the
-  Didache, Cyprian, Origen (with care), Gregory of Nazianzus, Basil — same PD-only,
-  verify-before-quote discipline.
+## ✅ DONE 2026-07-13 — 5 more Fathers + Athanasius deepened (library = 102)
+- **+36 verified passages**, drafted by apologia-evidence, verbatim-verified by apologia-citations
+  (5 archaic-form corrections applied — modernized web hosts had regressed pronouns; 0 fabrications):
+  `sources/clement-rome.json` (6), `sources/polycarp.json` (5, incl. the Martyrdom), `sources/didache.json`
+  (6), `sources/cyprian.json` (5), `sources/cappadocians.json` (7 — Basil, Gregory of Nazianzus, Gregory
+  of Nyssa), and **Athanasius *On the Incarnation* expanded +7** (§3-5 creation/Fall, §33 prophecy, §47/§50
+  Gentile-refutation + changed-lives, §57 conclusion), now 17 total.
+- **COPYRIGHT NOTE:** the user supplied a PDF of *On the Incarnation* — it is the **Sister Penelope /
+  C.S.M.V. 1944 translation with the C. S. Lewis introduction, still under copyright**. Not stored; used
+  only as a reading guide. The 7 new Athanasius passages come from the PD Robertson (NPNF) text. Same
+  trap as the ELLC/ICET creeds — modern translations of ancient works are copyrighted.
+- **Delicacy flags** recorded in-entry for a future orthonote pass: Cappadocian generation/procession
+  clauses (never quote the taxis clause alone), Cyprian's almsgiving/merit + "baptism of blood",
+  Clement's justification (not a settled sola-fide proof) + apostolic succession, Didache baptism/eucharist
+  (antiquity, not mode/efficacy). The Gregory-of-Nyssa excerpt is marked mid-sentence with a leading ellipsis.
+- **`sources.html`** groups the new authors correctly (explicit rules so "The Didache", the two Gregories,
+  and Polycarp+Martyrdom render cleanly), chronologically. **Library now = 102 verified passages.**
+- **STILL TO EXPAND:** the remaining councils, plus Origen (with care), John Chrysostom, Cyril of
+  Alexandria, Leo the Great, Vincent of Lérins — same PD-only, verify-before-quote discipline.
 
 ## ▶ ACTION FOR THE WEB-ENABLED (LOCAL) SESSION
 Do this where CCEL/ANF/Wikisource are reachable:

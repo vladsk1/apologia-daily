@@ -1,0 +1,72 @@
+[
+  {
+    "id": "polycarp-phil-1",
+    "author": "Polycarp of Smyrna",
+    "work": "Epistle to the Philippians",
+    "year": 110,
+    "section": "ch. 1",
+    "translation": "Roberts–Donaldson (ANF vol. 1), public domain",
+    "pd": true,
+    "source_url": "https://www.ccel.org/ccel/schaff/anf01.iv.ii.i.html",
+    "verified": true,
+    "tags": ["resurrection", "assurance", "salvation by grace", "cross", "early church", "pre-nicene"],
+    "note": "The ground of assurance: Christ 'for our sins suffered even unto death, whom God raised from the dead, having loosed the bands of the grave' — a very early (c. AD 110–140) witness to the death-and-bodily-resurrection kerygma, closing with a grace-not-works line (echoing Eph. 2:8–9). Cleanly orthodox and denominationally neutral. Verify wording vs source_url (currently false).",
+    "text": "I have greatly rejoiced with you in our Lord Jesus Christ, because ye have followed the example of true love [as displayed by God], and have accompanied, as became you, those who were bound in chains, the fitting ornaments of saints, and which are indeed the diadems of the true elect of God and our Lord; and because the strong root of your faith, spoken of in days long gone by, endureth even until now, and bringeth forth fruit to our Lord Jesus Christ, who for our sins suffered even unto death, [but] whom God raised from the dead, having loosed the bands of the grave. In whom, though now ye see Him not, ye believe, and believing, rejoice with joy unspeakable and full of glory; into which joy many desire to enter, knowing that by grace ye are saved, not of works, but by the will of God through Jesus Christ."
+  },
+  {
+    "id": "polycarp-phil-7",
+    "author": "Polycarp of Smyrna",
+    "work": "Epistle to the Philippians",
+    "year": 110,
+    "section": "ch. 7",
+    "translation": "Roberts–Donaldson (ANF vol. 1), public domain",
+    "pd": true,
+    "source_url": "https://www.ccel.org/ccel/schaff/anf01.iv.ii.vii.html",
+    "verified": true,
+    "tags": ["docetism", "incarnation", "antichrist", "rule of faith", "resurrection", "final judgment"],
+    "note": "The anti-docetic rule of faith, echoing 1 John 4:2–3: 'whosoever does not confess that Jesus Christ has come in the flesh, is antichrist.' Note the 'perverts the oracles of the Lord to his own lusts' clause — an early-2nd-c. witness to a NT-shaped rule of faith and to fixed apostolic teaching ('the oracles of the Lord') being handled as authoritative. On-message for incarnation, resurrection, and Scripture's authority. Verify wording vs source_url.",
+    "text": "For whosoever does not confess that Jesus Christ has come in the flesh, is antichrist; and whosoever does not confess the testimony of the cross, is of the devil; and whosoever perverts the oracles of the Lord to his own lusts, and says that there is neither a resurrection nor a judgment, he is the first-born of Satan."
+  },
+  {
+    "id": "polycarp-phil-8",
+    "author": "Polycarp of Smyrna",
+    "work": "Epistle to the Philippians",
+    "year": 110,
+    "section": "ch. 8",
+    "translation": "Roberts–Donaldson (ANF vol. 1), public domain",
+    "pd": true,
+    "source_url": "https://www.ccel.org/ccel/schaff/anf01.iv.ii.viii.html",
+    "verified": true,
+    "tags": ["righteousness", "endurance", "atonement", "cross", "discipleship"],
+    "note": "Perseverance grounded in the atonement: 'Let us then continually persevere in our hope, and the earnest of our righteousness, which is Jesus Christ' — quoting 1 Pet. 2:22, 24. DELICATE/wording flag: this fetched text reads 'in His own body on the tree'; the tasking cited 'upon the tree' — confirm the exact ANF preposition ('on' vs 'upon') and 'and the earnest' vs 'and in the earnest' when flipping verified. The apostolic-example material ('Ignatius... Paul... the rest of the apostles... they have not run in vain') is the very next chapter (ch. 9), not included here; capture separately if needed.",
+    "text": "Let us then continually persevere in our hope, and the earnest of our righteousness, which is Jesus Christ, 'who bore our sins in His own body on the tree,' 'who did no sin, neither was guile found in His mouth,' but endured all things for us, that we might live in Him."
+  },
+  {
+    "id": "polycarp-mart-9",
+    "author": "The Martyrdom of Polycarp",
+    "work": "The Martyrdom of Polycarp",
+    "year": 155,
+    "section": "ch. 9",
+    "translation": "Roberts–Donaldson (ANF vol. 1), public domain",
+    "pd": true,
+    "source_url": "http://www.earlychristianwritings.com/text/martyrdompolycarp-roberts.html",
+    "verified": true,
+    "tags": ["martyrdom", "confession", "lordship of christ", "king and saviour", "early church"],
+    "note": "Polycarp's confession before the proconsul (eyewitness letter, c. AD 155–160, NOT authored by Polycarp — hence author 'The Martyrdom of Polycarp'). '...how then can I blaspheme my King and my Saviour?' — Christ confessed as King and Saviour to the point of death; the 'eighty and six years' also anchors his lifelong Christian discipleship reaching back near the apostolic age. Cleanly orthodox. NB: later chapters of this same work (esp. ch. 17–18, the martyr's bones and the 'birthday' commemoration) touch the veneration-of-relics question — intra-Christian and deliberately NOT captured here. Verify wording vs source_url.",
+    "text": "\"Swear, and I will set thee at liberty, reproach Christ;\" Polycarp declared, \"Eighty and six years have I served Him, and He never did me any injury: how then can I blaspheme my King and my Saviour?\""
+  },
+  {
+    "id": "polycarp-mart-14",
+    "author": "The Martyrdom of Polycarp",
+    "work": "The Martyrdom of Polycarp",
+    "year": 155,
+    "section": "ch. 14",
+    "translation": "Roberts–Donaldson (ANF vol. 1), public domain",
+    "pd": true,
+    "source_url": "http://www.earlychristianwritings.com/text/martyrdompolycarp-roberts.html",
+    "verified": true,
+    "tags": ["martyrdom", "prayer", "resurrection", "holy spirit", "trinitarian shape"],
+    "note": "Polycarp's prayer at the stake — a steadfast-witness passage with a Trinitarian shape ('the Father of thy beloved and blessed Son Jesus Christ... through the incorruption imparted by the Holy Ghost') and hope in 'the resurrection of eternal life, both of soul and body.' Cleanly orthodox. Roberts–Donaldson archaic pronouns (Thee/Thou/Thy) preserved from the ANF text; New Advent (fathers/0102.htm) modernizes these to 'You/Your', so it was NOT used as the source of record for wording. Verify vs source_url.",
+    "text": "O Lord God Almighty, the Father of thy beloved and blessed Son Jesus Christ, by whom we have received the knowledge of Thee, the God of angels and powers, and of every creature, and of the whole race of the righteous who live before thee, I give Thee thanks that Thou hast counted me, worthy of this day and this hour, that I should have a part in the number of Thy martyrs, in the cup of thy Christ, to the resurrection of eternal life, both of soul and body, through the incorruption [imparted] by the Holy Ghost."
+  }
+]
