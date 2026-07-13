@@ -191,9 +191,43 @@ the Resurrection tab intro framing.
   (swoon/hallucination/theft/legend). Cross-map: `ev-s2` objection cards. *Pending — capture this one
   carefully; it's where the opposing evidence is stated.*
 
-### Part Two — "The Resurrection Bears a Heavy Burden of Proof" *(pending capture)*
-- **Ch. 3 — The Christian Claim That Jesus Was Resurrected** (p. 43). Defines the bodily-resurrection
-  claim + burden of proof. *Pending.*
+### Part Two — "The Resurrection Bears a Heavy Burden of Proof"
+- **Ch. 3 — The Christian Claim That Jesus Was Resurrected** (pp. 43–46 captured; chapter continues).
+  **Thesis (our words):** defines the *specifically Christian* claim — a **bodily** resurrection —
+  and its heavy burden of proof. Pushes back on a modern trend to *de-divinize* Jesus (reduce him to
+  "a great moral teacher / nice person who turned the other cheek"). Argues (a) Jesus made radical
+  claims about himself (an intimate relationship with God; chosen by God to usher in God's kingdom; a
+  reputed miracle-worker/exorcist), and (b) **most scholars — even skeptics — grant, at minimum, that
+  he *made* these claims**. If he did not rise, he's a false prophet unworthy of allegiance; if he
+  did, it confirms the claims. The resurrection testified to is **bodily**, not vague/ghostly/
+  hearsay — attested by eyewitnesses, and (strikingly) first by **women**.
+  - **Scripture leads:** **Matt 12:38–42** (the only "sign" = his resurrection, the sign of Jonah);
+    **Acts 2:32** (Peter at Pentecost — "This Jesus God raised up, and of that we are all witnesses");
+    women as first witnesses — **Mark 15:47; Luke 8:1–3; Luke 24:10** ("the other women" — the Marys
+    and **Joanna**). *Cross-map: `library/emptytomb.html` (women-witnesses / criterion of
+    embarrassment), `library/earlycreed.html`.*
+  - **Second-Temple Jewish resurrection background (§"Resurrection Ideas… among His Contemporaries"):**
+    Jesus both believed and taught resurrection — **Matt 11:3, 5 // Luke 7:22** (the reply to John the
+    Baptist's emissaries: "the dead are raised up"); **John the Baptist** as Herod Antipas's prisoner
+    at **Machaerus** in Perea, beheaded (via **Josephus**); the **Sadducees** "who say there is no
+    resurrection" (**Matt 22:23–33 // Mark 12:18–27 // Luke 20:27–40**) vs Jesus defending it from
+    Moses and the burning bush; **Paul** before the Sanhedrin — "With respect to the hope and the
+    resurrection of the dead I am on trial" (**Acts 23:6** RSV). **Josephus** on the three parties
+    (Pharisees — soul imperishable / "passes into another body"; Sadducees — no afterlife; Essenes —
+    soul freed at death, "borne aloft"); **Dead Sea Scrolls / Qumran / Essene** eschatology;
+    **Daniel 12:2** (many who sleep in the dust "shall awake"). *Sources to verify: Josephus,
+    *Antiquities* / *Jewish War* on the three sects + on John the Baptist (18.116–119); the specific
+    DSS texts.*
+  - **§"The Judeo-Christian Origins of Resurrection":** resurrection is rooted in the Hebrew
+    Scriptures — **Ezekiel 37** (the valley of dry bones; the book rightly flags it as a *metaphor for
+    national restoration* that nonetheless fed resurrection hope) and **Daniel 12:2**. *Cross-map:
+    `library/shema.html` / OT-foundation essays; hold the honest "Ezekiel 37 = national-restoration
+    metaphor" nuance.*
+  - **His own earlier book referenced:** *Unanswered* (Johnston) — a pointer, not a source.
+  - **Calibration flag:** "most scholars, even skeptics, agree" — true that critical scholars grant
+    Jesus *made* exalted claims and had a reputation as an exorcist; do **not** inflate this into a
+    claimed consensus that Jesus asserted *Nicene* deity. Keep our "scholars grant the data, not the
+    theological conclusion" discipline.
 
 ### Part Three — "The 7 Best Reasons to Believe in the Resurrection of Jesus" *(pending capture)*
 - **Ch. 4 — Reason #1: Society is transformed everywhere Christianity is embraced** (p. 57). Note: a
@@ -234,8 +268,9 @@ the Resurrection tab intro framing.
 | Foreword (Habermas) | 11 | ⬜ pending |
 | Introduction | 15–19 | ✅ captured (leads indexed) |
 | Ch. 1 (Part One) | 23–31 | ✅ captured complete (device + historical test + viva; 2 calibration flags) |
-| Ch. 2 (Part One) | 33–42 | ⬜ pending |
-| Ch. 3 (Part Two) | 43–56 | ⬜ pending |
+| Ch. 2 (Part One) | 33–42 | ⬜ pending (skipped in capture order) |
+| Ch. 3 (Part Two) | 43–46 | ✅ captured (claim + Jewish resurrection background); continues 47–56 |
+| Ch. 3 (rest) | 47–56 | ⬜ pending |
 | Ch. 4–7 (Reasons 1–4) | 57–94 | ⬜ pending |
 | Ch. 8–10 (Reasons 5–7) | 95–130 | ⬜ pending |
 | Ch. 11–12 (Part Four) | 131–158 | ⬜ pending |
