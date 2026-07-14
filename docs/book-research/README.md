@@ -54,3 +54,12 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   teleological / moral arguments, NT reliability, resurrection, deity of Christ, miracles, and the
   anti-skepticism (logic / Hume / Kant) material. Its header carries its own usage rules + a couple
   of citation-precision flags.
+- `body-of-proof.md` — Jeremiah J. Johnston, *Body of Proof* (**in progress**): the resurrection —
+  the 7 reasons, the 1 Cor 15 early creed, the empty-tomb/burial archaeology (honorable-vs-wretched
+  burial, Magness), skeptic conversions (Paul/James), the resurrection-vs-resuscitation distinction,
+  and the suffering/hope chapter. Watch its popular-level overstatement + one Islam-polemic passage.
+- `did-jesus-really-say-he-was-god.md` — Mikel Del Rosario, *Did Jesus Really Say He Was God?*
+  (**complete map**): a historical-Jesus / deity-of-Christ argument built **from Mark, weighing the
+  enemies' reaction** — the two blasphemy scenes (Mark 2 forgive-on-earth / Mark 14 judge-from-heaven),
+  the ten data points + five best-explanation criteria, and the critics (Hägerland/Ehrman/Casey/Kirk).
+  Built from the already-gated reading behind the live reading-club demo; distinct from that demo.

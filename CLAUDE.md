@@ -354,8 +354,13 @@ books*, not quotable text.
   (citations → argument → orthodoxy). The note is a lead, not a source.
 - **Current notes:** `i-dont-have-enough-faith-to-be-an-atheist.md` (Geisler & Turek — complete;
   covers the cosmological/teleological/moral arguments, NT reliability, resurrection, deity of
-  Christ, miracles, and the anti-skepticism material). See each note's header for its own usage
-  rules and any citation-precision flags.
+  Christ, miracles, and the anti-skepticism material); `body-of-proof.md` (Jeremiah Johnston —
+  resurrection: the 7 reasons, 1 Cor 15 creed, empty-tomb/burial archaeology, skeptic conversions,
+  resurrection-vs-resuscitation, suffering/hope — in progress, watch its popular-level overstatement
+  + one Islam-polemic passage); `did-jesus-really-say-he-was-god.md` (Mikel Del Rosario — deity of
+  Christ argued *from Mark, via the enemies' reaction*: the two blasphemy scenes, ten data points,
+  five best-explanation criteria; built from the already-gated reading behind the reading-club demo,
+  and distinct from it). See each note's header for its own usage rules and any citation-precision flags.
 - **Adding a book from page photos** (the user may do this from a phone session — upload ~5–10
   legible photos of a book they **own**, incl. footnote/bibliography pages): follow
   `docs/book-research/README.md`, which has the full workflow + copyright rules and points to the
