@@ -445,6 +445,38 @@ the Resurrection tab intro framing.
     Resurrection rule says lead with the **1 Cor 15:3–7 creed**; the passion-prediction material
     **supplements** that, it doesn't replace it. *Cross-map: `library/messianic-prophecy.html`,
     `library/earlycreed.html`. Verify Mark 8:31/9:31/10:33–34, Luke 24:46, Hosea 6:2 verbatim.*
+  - **§ "Predictions and Expectations" + the three passion predictions box (pp. 69–70):** the Synoptics
+    stress the "on the third day / after three days" predictions; a boxed sidebar quotes the "three
+    biggies" — **Mark 8:31; 9:31; 10:33–34 (RSV)** (the fullest, 10:33–34, adds handing to the Gentiles,
+    mocking, scourging). The risen Jesus expounds them at **Emmaus (Luke 24:13–27)** and in **Luke
+    24:44–49** (v. 46). The disciples' *contrary* expectation is shown through **Judas** (hoped for a
+    conqueror, gave up) and the **Bethany anointing** at Simon the leper's house — **Mark 14:3–10**,
+    esp. **14:8** ("She has anointed my body beforehand for burial"). *Verify each; the "disciples
+    expected a political Messiah, not a dying-rising one" point is solid and matches our frame.*
+  - **§ "A Proclamation of Jesus' Continuing Ministry" — the Last Supper / new covenant (pp. 70–71):**
+    a rich covenant-theology cluster. The **Words of Institution** — **Mark 14:22–24 (NIV)**; also
+    **Matthew 26:26–29; Luke 22:14–20; 1 Corinthians 11:24–25** ("Do this in remembrance of me") — are
+    read against **Exodus 24:8** ("the blood of the covenant") and **Jeremiah 31:31** (the promised
+    **new covenant** with Israel and Judah), with the book's point that atonement comes "not through
+    the blood of bulls and goats but through his own blood" (a Hebrews-style echo). The death/
+    resurrection defeat the real enemies — **sin and death** — "not by killing Romans." **✅ Strong,
+    orthodox, quotable cluster — cross-map: `ev-m-typology.html` / `library/typology.html` (covenant
+    typology), `library/earlycreed.html`.** *Verify Exodus 24:8, Jeremiah 31:31, Mark 14:22–24,
+    1 Cor 11:24–25.*
+  - **§ Great Commission + "The Lord's Day" (pp. 71–72):** the risen Jesus sends the disciples to all
+    nations — **Acts 1:8 (RSV)** ("you shall be my witnesses … to the end of the earth"; cf. the
+    Commission), and the resurrection is woven into worship: Christians proclaim his death "until he
+    comes" (**1 Corinthians 11:26**), and gather on **Sunday / the Lord's Day** as a standing testimony
+    to the resurrection — **Revelation 1:10** ("the Lord's day"), **Matthew 28:1; Mark 16:2; Luke 24:1**
+    (empty tomb on the first day), **Acts 20:7; 1 Corinthians 16:2** (first-day gathering). Also
+    **Matthew 10:8** ("raise the dead") and **Matthew 26:29** (the "fruit of the vine … in my Father's
+    kingdom"). **⚠️ Two flags:** (1) **Mark 16:9** (cited for a Sunday appearance) is in the
+    **longer/variant ending of Mark** — flag on any use. (2) The Sabbath→Sunday / Lord's-Day material
+    edges toward a **denominational** question (Sabbatarian vs. Sunday worship); the book's *historical*
+    point (the earliest Christians gathered on the resurrection day) is broadly shared — **keep it
+    historical and neutral; do not adjudicate the Sabbath debate.** *Cross-map: `library/emptytomb.html`,
+    `library/earlycreed.html`. Verify all refs; the covenant + Lord's-Day clusters are the most
+    reusable material in this chapter.*
 - **Ch. 6 — Reason #3: Jesus demonstrated resurrection power** (p. 75). Likely the raisings
   (Lazarus — John 11; Jairus' daughter — Mark 5; the widow's son — Luke 7). *Pending.*
 - **Ch. 7 — Reason #4: There Was No Motivation to Invent the Resurrection Narrative** (pp. 87–92
@@ -530,7 +562,7 @@ the Resurrection tab intro framing.
 | Ch. 3 (Part Two) | 43–54 | ✅ **captured complete** (claim + OT/Jewish roots + real-vs-extracanonical Jesus + eyewitness memory + bodily-resurrection cluster) |
 | Part Three title page | 55 | ✅ captured |
 | Ch. 4 (Reason #1) | 57–63 | ✅ **captured complete** (social transformation + "world without God"/Hitler close; heavy calibration incl. Islam-polemic + atheism→Nazism flags) |
-| Ch. 5 (Reason #2) | 65–68 | 🟡 captured pp. 65–68 (Jesus predicted it: Emmaus Luke 24:21 + messianic-pretenders sidebar + passion predictions/Hosea 6:2); continues past 68 |
+| Ch. 5 (Reason #2) | 65–72 | 🟡 captured pp. 65–72 (Jesus predicted it + pretenders sidebar + passion-prediction box + Last Supper/new-covenant cluster + Great Commission/Lord's Day); may finish 73–74 |
 | Ch. 6 (Reason #3) | 75–86 | ⬜ pending |
 | Ch. 7 (Reason #4) | 87–92 | 🟡 captured pp. 87–92 (no-motivation: "you didn't need it" + crucifixion-disqualifies + unique survival + Akiva + Celsus/Porphyry); continues past 92 |
 | Ch. 8–10 (Reasons 5–7) | 95–130 | ⬜ pending |
