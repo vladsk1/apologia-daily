@@ -386,8 +386,65 @@ the Resurrection tab intro framing.
   - *Cross-map: primarily an apologetic-for-Christianity's-impact point (touches `ev-s5`), NOT a
     `ev-s2` resurrection-evidence point. The specific stats (2.4 billion; "one-third follow Jesus";
     the slavery/Islam claims) all need the **endnotes** + independent verification before any use.*
-- **Ch. 5 — Reason #2: Jesus called it, "#OnTheThirdDay"** (p. 65). Jesus' passion/resurrection
-  predictions. Leads: Mark 8:31; 9:31; 10:33–34; Matt 12:40; John 2:19. *Verify each. Pending.*
+  - **Ch. 4 close — the "world without God" counterfactual (p. 63):** the book's sharpest move — only
+    Christianity holds that **God himself purchased our redemption** (vs. self-redemption systems), and
+    it argues the 20th century shows the alternative: **Hitler** (portrayed as ignoring a priest's
+    pastoral warning and "hardening his heart, even as Pharaoh did"), and the claim that
+    "**Enlightenment-driven atheism … served Hitler well**" because "**with God out of the picture** it
+    was easier to argue for the elimination of unwanted people … justify violence … promote a superior
+    race." Closes: the pre-Christian pagan world "was hell on earth." **⚠️⚠️ CALIBRATION — handle with
+    great care, likely NOT usable as-is:** the "atheism → Nazism" causal claim is **historically
+    contested and rhetorically loaded** (Hitler's actual religious views are debated; Nazi ideology drew
+    on many sources; the "without God, anything goes" move overreaches as *history* even where it holds
+    as *moral-grounding* argument). Our **moral-argument guardrail** already covers the legitimate core
+    ("objective moral **duties need a ground**") — route any use through **that** framing (`ev-s1` moral
+    argument / `library/moral.html`), **never** as "atheists caused the Holocaust." Do not adopt the
+    Hitler-Pharaoh or "hell on earth" rhetoric. Keep "never 'atheists can't be moral.'"
+- **Ch. 5 — Reason #2: Jesus Called It — "#OnTheThirdDay"** (pp. 65–68 captured; chapter continues past
+  68). **Thesis (our words):** Jesus **predicted** his own death and third-day resurrection, and the
+  prediction came true — a "called shot." Opens with a **Babe Ruth "called shot"** analogy (Game 3 of
+  the **1932 World Series**, Wrigley Field — the disputed home run Ruth allegedly pointed to; sourced to
+  reporter **Joe Williams** / *New York World-Telegram* and Gehrig biographer **Dan Joseph**). *That's
+  an illustrative device, not evidence — don't carry the baseball anecdote into content as proof.*
+  - **§ "What Explains the Growth of the Early Christian Movement?" (pp. 66–67):** the founder was a
+    **crucified criminal** (a heinous, shameful death), the disciples **lost all hope** — the **Emmaus
+    road**, "**We had hoped that he was the one to redeem Israel**" (**Luke 24:21**; scene Luke 24:13–35)
+    — yet the movement thrived. Why? The resurrection. Draws on the author's own earlier book
+    *Unanswered* (a pointer, not a source). *Cross-map: `library/paulconv.html`, `library/emptytomb.html`,
+    the "why did it survive" thread; Luke 24:21 is a strong criterion-of-embarrassment lead — verify.*
+  - **§ "Additional Messianic Pretenders" sidebar (p. 67) — ✅ this is the concrete list behind the
+    Ch. 7 "~10 pretenders" lead. Verify each against Josephus/Acts before use:**
+    - Intro set: **Judah, Simon, Athronges** (risen after **Herod the Great's death, 4 BC**); **Menahem**
+      and **Simon bar Giora** (during the Jewish revolt, **AD 66–70**).
+    - **The Anonymous Samaritan** (AD 26–36, under Pilate) — via **Josephus**; led followers to **Mount
+      Gerizim** claiming to reveal buried temple vessels.
+    - **Theudas** (AD 44–46) — **Acts 5:36** (Gamaliel: "Theudas … claiming to be somebody, and about
+      four hundred men rallied to him. He was killed … and it all came to nothing," NIV) + **Josephus**.
+      **⚠️ Known scholarly crux:** the **Acts 5:36 vs. Josephus (*Ant.* 20.97–98) chronology** is a
+      famous alleged anachronism (Gamaliel names Theudas *before* Judas the Galilean, and Josephus dates
+      Theudas ~AD 44–46, after the dramatic date of the speech) — **do not present this list without
+      being ready to address that**; it cuts against a naive "Luke is always precise" use.
+    - **The Anonymous Egyptian** (AD 56) — **Acts 21:38** ("the Egyptian who … led four thousand
+      terrorists out into the wilderness," NIV) + **Josephus**.
+    - **Jesus son of Ananias** (AD 62–69) — **Josephus** (*Jewish War* 6.300–309); doom-oracle over the
+      temple, echoing **Jeremiah 7:34** (book's footnote 3).
+    - **Jonathan the refugee** (AD 70–79) — **Josephus**; led poorer Jews into the desert "promising …
+      signs and apparitions" (footnote 4).
+    - *Payoff (matches our house point): every one of these movements **ended with the leader's death** —
+      Jesus' is the lone exception that continued. Strong, verifiable comparative argument; cross-map
+      Ch. 7 + `library/paulconv.html` + a possible "why did the Jesus movement survive" essay.*
+  - **§ "The Importance of Jesus' Passion and Resurrection Promises" (pp. 67–68):** the passion/
+    resurrection predictions — **Mark 8:31; 9:31; 10:33–34** ("the Son of Man … after three days will
+    rise"); **Luke 24:46** ("the Christ should suffer and on the third day rise from the dead"). Roots
+    the "third day" in **Hosea 6:2** ("After two days he will revive us; on the third day he will raise
+    us up") — **and the book is honest that Hosea 6:2 originally spoke of *national restoration*** and
+    only later came to be read of resurrection. *Hold that nuance (same discipline as our Ezekiel-37
+    handling); do not present Hosea 6:2 as a straightforward predictive proof-text. Also note the book's
+    fair caveat that the predictions were "edited and contextualized by the Gospel evangelists" while
+    preserving an authentic core — that's a responsible concession, keep it.* **Guardrail tie-in:** our
+    Resurrection rule says lead with the **1 Cor 15:3–7 creed**; the passion-prediction material
+    **supplements** that, it doesn't replace it. *Cross-map: `library/messianic-prophecy.html`,
+    `library/earlycreed.html`. Verify Mark 8:31/9:31/10:33–34, Luke 24:46, Hosea 6:2 verbatim.*
 - **Ch. 6 — Reason #3: Jesus demonstrated resurrection power** (p. 75). Likely the raisings
   (Lazarus — John 11; Jairus' daughter — Mark 5; the widow's son — Luke 7). *Pending.*
 - **Ch. 7 — Reason #4: There Was No Motivation to Invent the Resurrection Narrative** (pp. 87–92
@@ -416,9 +473,11 @@ the Resurrection tab intro framing.
   - **§ The unique survival of the movement (p. 91 — cross-refs ch. 5):** the book cites **"at least
     ten" messianic/prophetic pretenders around Jesus' time** whose movements **collapsed once the
     leader was defeated/executed** — Jesus' movement is the lone exception that *continued and grew*
-    after its founder's execution. *Strong, verifiable lead — chase the specific list (Theudas, Judas
-    the Galilean, the Egyptian, Bar Kokhba, etc., via **Josephus** + **N. T. Wright**, *The Resurrection
-    of the Son of God*); verify the "ten" figure and each name before use. Cross-map: `library/paulconv.html`,
+    after its founder's execution. **✅ The concrete list is the Ch. 5 sidebar (p. 67) — see it above**
+    (Judah/Simon/Athronges, Menahem, Simon bar Giora, the Anonymous Samaritan, Theudas [Acts 5:36],
+    the Egyptian [Acts 21:38], Jesus son of Ananias, Jonathan the refugee — all via Josephus/Acts).
+    *Verify each (incl. the **Theudas/Acts 5:36 chronology crux** flagged there); N. T. Wright's
+    *The Resurrection of the Son of God* is the scholarly anchor. Cross-map: `library/paulconv.html`,
     the "why did the movement survive" material.*
   - **§ The Rabbi Akiva counter-example (p. 92):** **Rabbi Akiva (Aqiba)**, martyred in the **2nd
     century AD** (Bar Kokhba revolt), had his teaching cherished and preserved **without anyone
@@ -470,8 +529,8 @@ the Resurrection tab intro framing.
 | Ch. 2 (Part One) | 33–42 | ⬜ pending (skipped in capture order) |
 | Ch. 3 (Part Two) | 43–54 | ✅ **captured complete** (claim + OT/Jewish roots + real-vs-extracanonical Jesus + eyewitness memory + bodily-resurrection cluster) |
 | Part Three title page | 55 | ✅ captured |
-| Ch. 4 (Reason #1) | 57–62 | 🟡 captured pp. 57–62 (social transformation: loving God / ethics / women / science-arts + "what makes Christianity unique"; heavy calibration incl. Islam-polemic flag); continues past 62 |
-| Ch. 5 (Reason #2) | 65–74 | ⬜ pending |
+| Ch. 4 (Reason #1) | 57–63 | ✅ **captured complete** (social transformation + "world without God"/Hitler close; heavy calibration incl. Islam-polemic + atheism→Nazism flags) |
+| Ch. 5 (Reason #2) | 65–68 | 🟡 captured pp. 65–68 (Jesus predicted it: Emmaus Luke 24:21 + messianic-pretenders sidebar + passion predictions/Hosea 6:2); continues past 68 |
 | Ch. 6 (Reason #3) | 75–86 | ⬜ pending |
 | Ch. 7 (Reason #4) | 87–92 | 🟡 captured pp. 87–92 (no-motivation: "you didn't need it" + crucifixion-disqualifies + unique survival + Akiva + Celsus/Porphyry); continues past 92 |
 | Ch. 8–10 (Reasons 5–7) | 95–130 | ⬜ pending |
