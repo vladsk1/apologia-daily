@@ -735,9 +735,34 @@ the Resurrection tab intro framing.
     by a **Platonic** immortal-soul view denied bodily resurrection) — so the early church's insistence on
     *bodily* resurrection is best explained by conviction it happened, not cultural borrowing. *Cross-map:
     `library/emptytomb.html`; verify Acts 17:32.*
+  - **§ James's martyrdom + the apostles' conviction (p. 110):** the family's unbelief — **Mark 3:21**
+    ("He is out of his mind"), **Mark 6:3** ("took offense"), **John 7:5** — then after **1 Cor 15:7**
+    James leads and dies for it; **Josephus** records **James "the brother of Jesus called the Messiah"
+    stoned by the Sanhedrin ~AD 62** (*Antiquities* 20.200 — verify; consistent with the Ch. 1 note).
+    The apostles' post-Easter boldness: **Acts 4:33** ("with great power the apostles… testify to the
+    resurrection") and **Romans 1:4** ("declared to be the Son of God… by the resurrection"). *Verify;
+    cross-map `library/paulconv.html`, `library/disciplesbelief.html`.*
+  - **§ The Jewish context of Saul + Galatians 3:28 (pp. 110–113):** Saul the **Pharisee** saw the
+    resurrection-preaching, gentile-inclusive movement as an existential threat to Torah/Israel (framed
+    against Maccabean zeal). The Damascus encounter reversed it — the fruit being the radical-equality
+    vision of **Galatians 3:28** ("neither Jew nor Greek… slave nor free… male nor female"), the
+    two-names note (Saul/Paul = Aramaic/Latin), and the gentile-blessing motifs (**Syrophoenician
+    woman, Mark 7:24–30**; Samaritans). **⚠️ Two calibrations:** (1) the book's "Paul the **chauvinistic
+    misanthropist** → lover of humanity" and "Paul **lionizes women** / egalitarian program" framing
+    edges into the **complementarian/egalitarian** intra-Christian debate — **keep neutral: Gal 3:28's
+    *equal standing in Christ* is shared ground; do NOT adjudicate church-office questions or adopt the
+    "egalitarian" label.** (2) "Paul's letters transformed barbarian Europe into a civilization **more
+    advanced than the East**" is Eurocentric overstatement — drop on use. *Verify Gal 3:28, Mark 7:24–30.*
+  - **§ "There's More" — resurrection-centrism (pp. 113–114):** the movement grew from **120** (Acts
+    1:15) to "**turned the world upside down**" (**Acts 17:6**); **every sermon in Acts** proclaims the
+    resurrection (the "22% of Acts is dialogue" stat — ⚠️ verify); **Romans 1:4**, **Philippians 3:10**
+    ("know Christ and… the power that raised him"), and the **believer-raised-with-Christ** cluster
+    (**Romans 6:4; 8:11; Ephesians 2:6**; "more than two dozen" such promises). *Strong, orthodox
+    resurrection-hope cluster — cross-map `library/earlycreed.html`, `library/minimalfacts.html`. Verify
+    Acts 1:15/17:6, Rom 1:4/6:4/8:11, Phil 3:10, Eph 2:6.*
   - **⚠️ Calibration:** keep the "~2–5 years" creed dating (attribute earlier figures to their scholars),
     and frame the skeptic conversions as **best explanation** of agreed data, not deductive proof.
-    *Cross-map primary tab: `ev-s2`.*
+    Keep denominational neutrality on the Gal 3:28 / women material. *Cross-map primary tab: `ev-s2`.*
 - **Ch. 10 — Reason #7: The resurrection is the only basis for making sense of suffering** (p. 115).
   Cross-map: `library/evil.html` (note: keep our "concede the mystery; no tidy complete theodicy"
   guardrail — this chapter's title claim is strong). *Pending.*
@@ -771,7 +796,7 @@ the Resurrection tab intro framing.
 | Ch. 6 (Reason #3) | 75–86 | ✅ **captured complete** (three raisings + resuscitation-vs-resurrection + glorified-body + emic/etic w/ Trinity aside + Herod/JtB + 1 Cor 15 firstfruits + Paul's 4 questions + ascension/doubt close) |
 | Ch. 7 (Reason #4) | 87–93 | 🟡 captured pp. 87–93 (two-headings framing + no-motivation cluster + Historical-Questions demographics/sources + James & Saul hostile witnesses); continues past 93 (Ch. 8 opens p. 95) |
 | Ch. 8 (Reason #5) | 95–103 | 🟡 captured pp. 95–103 (archaeology/manuscripts + burial argument + Magness + tomb-stone + minimal-facts "established facts" + post-resurrection appearances sidebar); may finish 104 |
-| Ch. 9 (Reason #6) | 105–109 | 🟡 captured pp. 105–109 (1 Cor 15:3–7 creed in full + Dunn/Habermas early dating [guardrail] + Paul's timeline/historeō + James the skeptic brother); continues past 109 |
+| Ch. 9 (Reason #6) | 105–114 | ✅ **captured complete** (1 Cor 15:3–7 creed + Dunn/Habermas dating [guardrail] + Paul's timeline/historeō + James the skeptic brother/Josephus + Gal 3:28 equality [neutrality flag] + resurrection-centrism cluster) |
 | Ch. 10 (Reason #7) | 115–130 | ⬜ pending |
 | Ch. 11–12 (Part Four) | 131–158 | ⬜ pending |
 | **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
