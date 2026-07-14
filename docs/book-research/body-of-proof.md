@@ -694,8 +694,50 @@ the Resurrection tab intro framing.
   - **⚠️ Calibration:** keep the resurrection guardrail (the empty tomb + burial *corroborate*, and the
     resurrection is the *best explanation* of the agreed facts — not a stand-alone proof); manuscripts
     show preservation, not truth. *Cross-map primary tab: `ev-s2`; also `ev-s4` (Bible reliability).*
-- **Ch. 9 — Reason #6: Only the resurrection explains the conversion of non-followers** (p. 105).
-  Paul (1 Cor 15:8; Gal 1) and James (1 Cor 15:7). Cross-map: `library/paulconv.html`. *Pending.*
+- **Ch. 9 — Reason #6: Only Jesus' Resurrection Convincingly Explains the Conversion of People Not
+  Previously His Followers** (pp. 105–109 captured; chapter continues past 109). **Thesis (our words):**
+  the best explanation for why **skeptics/opponents** (Saul of Tarsus; Jesus' brother James) became
+  martyr-willing believers is a real encounter with the risen Jesus — a *personal* experience, not
+  secondhand report. **✅ This is our flagship guardrail chapter (1 Cor 15 early creed) — highest-value
+  cross-map to `library/earlycreed.html`, `library/paulconv.html`, `library/minimalfacts.html`.**
+  - **§ The 1 Corinthians 15:3–7 creed (pp. 106–107) — quoted in full:** "I delivered to you as of
+    first importance what I also received: that Christ died for our sins… was buried… was raised on the
+    third day… appeared to Cephas, then to the twelve… more than five hundred… most of whom are still
+    alive… James… all the apostles." Framed as **the oldest tradition in the NT**, "of first importance"
+    (**1 Cor 15:3**), received-and-handed-on (not invented) — the same **"received/delivered" formula**
+    as **1 Cor 11:23** (Lord's Supper). Compared to the **Shema (Deuteronomy 6:4–9)** as a creed, and to
+    modern creed-like texts. Paul wrote **13 of 27 NT books (~25%)**; passed this creed to Corinth in
+    **AD 53–55**; it's the **kerygma** (proclamation), oral before it was written. *Verify 1 Cor 15:3–7,
+    15:3, 11:23, Deut 6:4–9; the "13 books/~25%" figure.*
+  - **§ The early-dating scholars — mind the guardrail (p. 106):** cites **James Dunn** — "entirely
+    confident" the 1 Cor 15:3–4 tradition was **"formulated… within months of Jesus' death"** — and
+    **Gary Habermas**'s survey of scholars across the spectrum on the creed's early date. **⚠️ GUARDRAIL
+    (critical):** our house voice leads with **"~2–5 years"** and attributes **"within months"** (and the
+    book's own **"within weeks"**) *to Dunn*, never asserting it in our own voice. The book here rightly
+    attributes "within months" to Dunn — **keep that attribution discipline; do not adopt the book's bare
+    "within weeks."** *This is the recurring calibration flag from Ch. 1 (the "six weeks" line).*
+  - **§ Paul's conversion + timeline (pp. 108–109):** Saul the persecutor of "the Way" (the book cites
+    **Acts 7** — ⚠️ that's Stephen's martyrdom where Saul only *consents*; the persecution proper is
+    **Acts 8–9** — minor imprecision, flag) met the risen Jesus *after* the resurrection. Dating chain:
+    crucifixion **Friday, ~AD 30** (alt. AD 33); Paul converted **~1–2 years** later; **Galatians
+    1:16–19** — Arabia first ("did not consult any human being," v. 16), then after three years to
+    Jerusalem to **"visit Cephas… fifteen days"** (v. 18), the Greek **ἱστορέω/*historeō*** ("to
+    investigate," root of *history*) — i.e. Paul *interviewed* the eyewitnesses **Peter and James**;
+    Nero reigned **AD 54–68**, martyred **Paul ~AD 65** (and **Peter ~AD 64**). *Verify Gal 1:16–19, the
+    historeō lexical point, the crucifixion/Nero dates. Cross-map: `library/paulconv.html`.*
+  - **§ James, the skeptic brother (p. 109):** the Gospels report Jesus' family did **not** believe him
+    the Messiah (**Mark 6:3** — "the carpenter, the son of Mary and brother of James…"; cf. **John 7:5**)
+    — yet **James** became a Jerusalem-church leader after **an appearance of the risen Jesus** (**1 Cor
+    15:7**; **Galatians 1:19**). **✅ Strong skeptic-conversion lead — cross-map: `library/paulconv.html`,
+    `library/minimalfacts.html`.** *Verify Mark 6:3, John 7:5, 1 Cor 15:7, Gal 1:19.*
+  - **§ Why "resurrection," not "his spirit lives on" (pp. 107–108):** a risen *corpse* was **offensive
+    to Greco-Roman** ears (Paul mocked at the **Areopagus/Mars Hill, Acts 17:32**; Corinthians influenced
+    by a **Platonic** immortal-soul view denied bodily resurrection) — so the early church's insistence on
+    *bodily* resurrection is best explained by conviction it happened, not cultural borrowing. *Cross-map:
+    `library/emptytomb.html`; verify Acts 17:32.*
+  - **⚠️ Calibration:** keep the "~2–5 years" creed dating (attribute earlier figures to their scholars),
+    and frame the skeptic conversions as **best explanation** of agreed data, not deductive proof.
+    *Cross-map primary tab: `ev-s2`.*
 - **Ch. 10 — Reason #7: The resurrection is the only basis for making sense of suffering** (p. 115).
   Cross-map: `library/evil.html` (note: keep our "concede the mystery; no tidy complete theodicy"
   guardrail — this chapter's title claim is strong). *Pending.*
@@ -729,7 +771,8 @@ the Resurrection tab intro framing.
 | Ch. 6 (Reason #3) | 75–86 | ✅ **captured complete** (three raisings + resuscitation-vs-resurrection + glorified-body + emic/etic w/ Trinity aside + Herod/JtB + 1 Cor 15 firstfruits + Paul's 4 questions + ascension/doubt close) |
 | Ch. 7 (Reason #4) | 87–93 | 🟡 captured pp. 87–93 (two-headings framing + no-motivation cluster + Historical-Questions demographics/sources + James & Saul hostile witnesses); continues past 93 (Ch. 8 opens p. 95) |
 | Ch. 8 (Reason #5) | 95–103 | 🟡 captured pp. 95–103 (archaeology/manuscripts + burial argument + Magness + tomb-stone + minimal-facts "established facts" + post-resurrection appearances sidebar); may finish 104 |
-| Ch. 9–10 (Reasons 6–7) | 105–130 | ⬜ pending |
+| Ch. 9 (Reason #6) | 105–109 | 🟡 captured pp. 105–109 (1 Cor 15:3–7 creed in full + Dunn/Habermas early dating [guardrail] + Paul's timeline/historeō + James the skeptic brother); continues past 109 |
+| Ch. 10 (Reason #7) | 115–130 | ⬜ pending |
 | Ch. 11–12 (Part Four) | 131–158 | ⬜ pending |
 | **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
 | Copyright page | (front) | ⬜ **pending — need for publisher/year** |
