@@ -6,12 +6,13 @@
 > not treat as confirmed until the copyright page is captured).
 > This note is a **research map**, not the book.
 
-> ## 🟡 STATUS: IN PROGRESS — structure + Introduction captured; chapters pending
-> Captured 2026-07-13 from photos: the **cover**, the **full table of contents**, and the
-> **complete Introduction (pp. 15–19)**. The chapter bodies (pp. 23–158) and the **Notes / endnotes
-> (p. 163+)** are **not yet captured** — those endnote pages are where the real primary-source
-> leads live, so they're the priority for the next batch. Every chapter row below the Intro is
-> at **thesis-level from the TOC only** and marked *pending*.
+> ## 🟢 STATUS: NEARLY COMPLETE — Intro + Chs. 1, 3–12 + full Notes captured; Ch. 2 body + copyright page pending
+> Captured 2026-07-13/14 from photos: the **cover**, the **full table of contents**, the **complete
+> Introduction (pp. 15–19)**, **Chapters 1 and 3 through 12** (bodies), and — new 2026-07-14 — the
+> **complete Notes / endnotes (pp. 163–172)**, the chapter-by-chapter primary-source + scholarly trail
+> that resolves nearly every earlier UNVERIFIED lead (and confirmed the hard **Ch. 4 Bill-Warner/CSPI
+> do-not-use** flag). **Still pending: the Ch. 2 body (pp. 33–42)** and the **copyright page** (for the
+> confirmed publisher/year). See the capture-status table at the foot of this file.
 >
 > **Standing rule:** this is a *research map of a copyrighted book*, not a quotable source. Do
 > **not** treat any citation below as confirmed for publication until it is verified against the
@@ -1034,13 +1035,124 @@ see the ✅ back-references below):
   Aslan, Markus Bockmuehl, Bart D. Ehrman, Jeremiah J. Johnston (the author himself), Helmut Koester,
   Daniel Master, Lawrence E. Stager, Peter Williams**, and others. **✅ Resolves the Ch. 1 "find + verify
   the actual published piece" flag** — it ran in *Vanity Fair* (2016), and Johnston was a contributor.
-- *Still to capture: the rest of the Notes (chs. 2–12 endnotes) — the primary-source + scholarly citation
-  trail (Josephus refs, the rabbinic-burial sources, Dunn/Habermas/Bauckham page cites, the Akhmîm/
-  Contra Celsum/Apocriticus editions, Bowersock, Magness, Barkay, the Edicule reports). This is the
-  richest remaining verification target.*
-- **From Oxford to Jerusalem — My Academic Journey** (p. 159) — author bio/testimony. Low priority.
-- **Notes** (p. 163+) — **the endnotes: highest-value target for the next batch.**
+**Chapter-by-chapter endnote index (pp. 163–172 — CAPTURED COMPLETE; these are the real
+primary-source + scholarly trail. Every source below is still UNVERIFIED-until-checked, but these are
+the leads to chase, not popular-level assertions).**
+
+- **Ch. 2 (skeptical case):** the chapter's spine is **E. P. Sanders, *The Historical Figure of Jesus*
+  (London: Penguin, 1993), 11, 13.** ✅ Confirms the Ch. 2 skeptical framing is drawn from a mainstream,
+  citable source (Sanders), not a strawman. *(Ch. 2 body pp. 33–42 still un-captured; Sanders is its anchor.)*
+- **Ch. 3 (the claim / Jewish roots):** Josephus — **Ant. 18.117–119** (John the Baptist), **JW 2.163**
+  and **2.154–55** (Pharisees/Essenes on the soul); the Dead Sea Scrolls **4Q521 frag. 2 col. 2 line 12**
+  (the *Messianic Apocalypse* — "the dead are raised"); plus Niebuhr / Kvalbein / Labahn / Becker studies
+  and the France / Nolland / Green commentaries. ✅ Grounds the "resurrection was already a live Jewish
+  hope" argument in Josephus + Qumran primaries. *Cross-map `library/messianic-prophecy.html`.*
+- **Ch. 4 (social transformation) — ⚠️⚠️ HARD DO-NOT-USE, tendentious source confirmed:** the Islam/
+  slavery material is sourced **entirely to Bill Warner / CSPI** — **Bill Warner, *The Doctrine of Slavery:
+  An Islamic Institution* (Nashville: CSPI, 2010), 13** and **Bill Warner, *Sharia Law for Non-Muslims*
+  (Nashville: CSPI, 2010), 33.** This **confirms the earlier ⚠️ flag**: Warner/CSPI is a self-publishing
+  anti-Islam advocacy imprint, **not** mainstream Islamic-studies scholarship. **Do not repeat, cite, or
+  adapt any of Ch. 4's Islam-slavery claims** — they fail our "charity is accuracy" + no-tendentious-source
+  bar. (The genuine, citable social-history leads in Ch. 4 — infanticide, treatment of women/children — need
+  their *own* mainstream sources; Warner cannot supply them.)
+- **Ch. 5 (Jesus predicted it):** Josephus **JW 6.5.3 §300–309** (Jesus son of Ananias, the doom-crier);
+  **JW 7.11.1 §437–438** + **Life 76 §424–425** (Jonathan the weaver / Cyrene sicarii); and Johnston's own
+  monograph, **Jeremiah J. Johnston, *The Resurrection of Jesus in the Gospel of Peter* (London/New York:
+  Bloomsbury T&T Clark, 2016), 103–104.** ✅ The "other first-century figures whose predictions failed"
+  sidebar is grounded in Josephus, not invented.
+- **Ch. 6 (raisings):** *(no distinct endnote block surfaced in the captured pages — Ch. 6's material was
+  cross-referenced under later chapters; treat its NT citations [1 Cor 15, the raising narratives] as
+  self-sourcing from Scripture.)*
+- **Ch. 7 (no motivation to lie):** **⚠️ Ch. 7 has NO endnotes** — the Notes jump straight from Ch. 6 to
+  Ch. 8. So Ch. 7's demographic/percentage claims (literacy, "who could have written this," the "no
+  motivation" statistics) have **no citation trail in the book** and must be independently sourced before
+  any use. *(This hardens the earlier Ch. 7 flag.)*
+- **Ch. 8 (empty tomb / burial):** the rabbinic burial law — **m. Sanhedrin 6:5**, **Semahot 13.7**,
+  **m. Sanhedrin 6:6** (honorable vs. dishonorable/criminal burial); and **Jodi Magness, "Jesus' Tomb —
+  What Did It Look Like?" in Hershel Shanks (ed.), *Where Christianity Was Born* (Washington, DC: Biblical
+  Archaeology Society, 2006), 212–26, quote p. 224** (Magness *contra* Crossan — Jesus was buried according
+  to Jewish law). ✅ Resolves the Ch. 8 "verify Magness + the rabbinic-burial sources" flag; these are the
+  strong, citable primaries behind the burial argument. *Cross-map `library/emptytomb.html`, `library/archaeology.html`.*
+- **Ch. 9 (the creed):** **James D. G. Dunn, *Jesus Remembered* (Grand Rapids: Eerdmans, 2003), 855** —
+  the source of the "within months" 1 Cor 15 dating line (**guardrail: keep "within months" attributed to
+  Dunn; our own voice says ~2–5 years**); **Gary R. Habermas, *The Historical Jesus* (Joplin, MO: College
+  Press, 1996), 153**; Josephus **Ant. 20.200** (via Whiston — the death of James the Lord's brother).
+  ✅ Resolves the Ch. 9 "find the Dunn + Habermas page cites" flag. *Cross-map `library/earlycreed.html`.*
+- **Ch. 10 (suffering / hope):** Walter Isaacson, *Steve Jobs* (2011), 14–15; **C. S. Lewis, *Collected
+  Letters* vol. 3**, letter to Fr. Peter Bide, 29 Apr 1959; Michael F. Hull, *Baptism on Account of the
+  Dead (1 Cor 15:29)* (Leiden: Brill, 2005); **A. A. Trites, "Μάρτυς and Martyrdom in the Apocalypse,"
+  *Novum Testamentum* 15 (1973): 72–80** (the *martys* = "witness→martyr" semantic study); F. B. Meyer
+  (bible.org / christianhistoryinstitute.org, "Lasting Contributions of a Wretched Worm"); and the **Antony
+  Flew conversion close** — **Gary R. Habermas, "My Pilgrimage from Atheism to Theism" (biola.edu / the
+  Habermas–Flew dialogue)** + **David Baggett (ed.), *Did the Resurrection Happen? A Conversation with
+  Gary Habermas and Antony Flew* (Downers Grove: IVP Academic, 2009), 85** (the Flew quote). ✅ Resolves the
+  Ch. 10 Flew-close sourcing. *(Theodicy guardrail still governs the chapter — no tidy complete theodicy.)*
+- **Ch. 11 (Holy Sepulchre vs. Garden Tomb):** **Edward Robinson & Eli Smith, *Biblical Researches in
+  Palestine* (1841), 1:407–18**; **Gabriel Barkay, "The Garden Tomb — Was Jesus Buried Here?" *Biblical
+  Archaeology Review* 12 no. 2 (1986)** (Barkay dates the Garden Tomb to the First Temple / Iron Age →
+  rejects it as Jesus' tomb); and **Justin Martyr** (in Thomas B. Falls trans., *Fathers of the Church*
+  vol. 6, Washington DC: CUA Press, 1948), 354. ✅ Resolves the Ch. 11 Barkay + Garden-Tomb sourcing.
+  **Hold the Jewish-sensitivity flag on the Justin/Eusebius material** (no anti-Jewish pull-quote).
+  *Cross-map `library/archaeology.html`, `library/emptytomb.html`.*
+- **Ch. 12 (the apocrypha / ancient critics) — the largest endnote block (nn. 1–44):**
+  - **n. 1 — the master resurrection bibliography** (chase these as the field's core secondary lit):
+    Koch; C. F. D. Moule; C. F. Evans; R. H. Fuller; **Murray J. Harris**; Longenecker; **N. T. Wright,
+    *The Resurrection of the Son of God* (Fortress, 2003)**; **Dale C. Allison, *Resurrecting Jesus*
+    (T&T Clark, 2005)**; **Michael R. Licona, *The Resurrection of Jesus: A New Historiographical Approach*
+    (IVP Academic, 2010)**; Christopher Bryan.
+  - **Miracles-in-early-Christianity apparatus (nn. 3, 6–8):** Gregory of Nyssa / Lactantius / Libanius /
+    Lucian (n. 3); **G. W. H. Lampe, "Miracles and Early Christian Apologetic"** + **Maurice Wiles,
+    "Miracles in the Early Church," in C. F. D. Moule (ed.), *Miracles: Cambridge Studies in their
+    Philosophy and History* (London: Mowbray, 1965), 205–18 & 221–34**; **Ramsay MacMullen, *Paganism in
+    the Roman Empire* (Yale, 1981), 94–112** and *Christianizing the Roman Empire (A.D. 100–400)* (Yale,
+    1984), 25–42.
+  - **Asclepius / healing-cult apparatus (nn. 7–8):** **James H. Charlesworth, *The Good and Evil Serpent*
+    (Yale, 2010), 108–16**; Michael Becker, *Wunder und Wundertäter im frührabbinischen Judentum*
+    (WUNT II.144; Mohr Siebeck, 2002), 134 n. 208 ("the cult of Asclepius in Jerusalem 'can hardly be
+    reconstructed'"); Günther Lorenz, *Asklepios* (Innsbruck UP, 2016); **Emma J. & Ludwig Edelstein,
+    *Asclepius: Collection and Interpretation of the Testimonies*, 2 vols. (Johns Hopkins, 1945)**;
+    Lynn R. LiDonnici, *The Epidaurian Miracle Inscriptions* (SBLTT 36; Scholars Press, 1995).
+  - **Ancient critics of the resurrection (nn. 9–10, 12–17, 23–26, 31–37):** **Russ Dudrey, "What the
+    Writers Should Have Done Better: A Case for the Resurrection of Jesus Based on Ancient Criticisms of
+    the Resurrection Reports," *Stone-Campbell Journal* 3 (2000): 55–78** (the chapter's organizing
+    article); **Origen, *Contra Celsum*** (crit. ed. **Henry Chadwick, *Origen: Contra Celsum*, Cambridge,
+    1953**); **R. Joseph Hoffmann, *Celsus on the True Doctrine* (OUP, 1987)** (Celsus reconstructed) and
+    **Hoffmann, *Porphyry's Against the Christians: The Literary Remains* (Amherst NY: Prometheus, 1994)**;
+    **Robert L. Wilken, *The Christians as the Romans Saw Them*, 2nd ed. (Yale, 2003), 111**; E. R. Dodds,
+    *Pagan and Christian in an Age of Anxiety* (Cambridge, 1965); **John Granger Cook, *The Interpretation
+    of the New Testament in Greco-Roman Paganism* (Mohr Siebeck, 2000)**; **Adolf von Harnack, *Gegen die
+    Christen* (Berlin, 1916)** (the Porphyry fragments; Harnack's Macarius/Porphyry attribution, which
+    Johnston accepts).
+  - **Gospel of Peter scholarship (nn. 11, 20–22, 27–30, 38–39, 44):** Johnston's own **monograph** (see
+    Ch. 5 above); **Craig A. Evans, "The Gospels of Peter and Thomas," in Collins, Evans & McDonald (eds.),
+    *Ancient Jewish and Christian Scriptures: New Developments in Canon Controversy* (Louisville: WJK, 2020),
+    167–93, esp. 168–82**; **Léon Vaganay, *L'Évangile de Pierre*, 2nd ed. (Paris: Gabalda, 1930)**;
+    **Timothy P. Henderson, *The Gospel of Peter and Early Christian Apologetics* (WUNT 301; Mohr Siebeck,
+    2011), 213**; Tobias Nicklas essay in *Life Beyond Death in Matthew's Gospel* (BTS 13; Leuven: Peeters,
+    2011), 27–41; **Thomas J. Kraus, "EvPet 12,50–14,60…," *Early Christianity* 5 (2013): 335–61**.
+  - **The Gospels-vs-Greco-Roman-history apologetic (n. 33) — a strong, citable cross-map for us:**
+    **C. S. Keener, "Otho: A Targeted Comparison of Suetonius's Biography and Tacitus' History, with
+    Implications for the Gospels' Historical Reliability," *Bulletin for Biblical Research* 21 (2011):
+    331–55** (Gospel discrepancies are "fewer and less severe" than those among Greco-Roman historians).
+    ✅ Directly feeds `library/contradictions.html` / the Synoptic-difference material.
+  - **Bowersock's *Scheintod* / reverse-influence apparatus (nn. 40–43):** **G. W. Bowersock, *Fiction as
+    History: Nero to Julian* (Sather Classical Lectures 58; Berkeley: UC Press, 1994), ch. 5 "Resurrection"
+    99–119** (and pp. 118, 126, 134–36); E. Koskenniemi, *Apollonios von Tyana in der neutestamentlichen
+    Exegese* (WUNT II/61; Mohr Siebeck, 1994); the Greek-novel parallels — Achilles Tatius, *Leucippe et
+    Clitophon* 2.2.5 (Dionysius: "this is… blood of the cluster") and Petronius, *Satyricon* 141.2–4 (the
+    eat-my-body will). *(Handle Bowersock's "fiction" thesis as the objection being answered, not as our
+    own concession — the book uses it to argue the Gospels ran the influence the other way.)*
+- **"From Oxford to Jerusalem — My Academic Journey" (bio) notes** begin p. 172: n. 1 = Johnston,
+  *The Resurrection of Jesus in the Gospel of Peter* (Bloomsbury T&T Clark, 2016), xviii, xix.
+- **From Oxford to Jerusalem — My Academic Journey** (p. 159 body) — author testimony. Low priority.
 - **About the Author** (p. 173).
+
+**Net verification payload of the Notes:** the endnotes convert nearly every earlier "UNVERIFIED lead"
+into a real, chase-able citation (Josephus/Qumran for Jewish resurrection hope; the rabbinic-burial +
+Magness sources for the empty tomb; Dunn 855 + Habermas 153 for the creed; Robinson/Barkay for the tomb
+geography; Vaganay/Henderson/Evans + Contra Celsum/Porphyry for the Gospel-of-Peter chapter; Keener 2011
+for the Gospel-reliability cross-map; Baggett-ed. IVP 2009 for the Flew close). The one **hard negative
+find** is decisive: **Ch. 4's Islam-slavery material is Bill-Warner/CSPI-sourced and must not be used.**
 
 ---
 
@@ -1066,7 +1178,7 @@ see the ✅ back-references below):
 | Ch. 11 (Part Four) | 131–138 | ✅ **captured complete** (Holy Sepulchre vs Garden Tomb; Garden Tomb rejected [Barkay/Crusader]; Holy Sepulchre defended: Agrippa's walls, Hadrian-preserved-the-tomb, Helena/Constantine, 2016–17 Edicule bench; Justin/Eusebius w/ a Jewish-sensitivity flag) |
 | Ch. 12 (Part Four) | 139–157 | ✅ **captured complete** (embarrassment/Dudrey; miracles vs Asclepius; Celsus + Porphyry + Julian; the apocrypha as the "improved" version; honest discrepancies list; Bowersock's Scheintod reverse-influence; "Why This Review Matters" — canonical restraint = reliability) |
 | From Oxford to Jerusalem (bio) | 159 | ⬜ pending (low priority — author testimony) |
-| **Notes / endnotes** | **163+** | 🟡 **STARTED (p. 163)** — resolved 3 flags (BBC/ComRes 2017 poll; Johnston's supervisors Evans/Foster/Telford; the *Vanity Fair* 2016 obituary); rest pending — **richest remaining target** |
+| **Notes / endnotes** | **163–172** | ✅ **CAPTURED COMPLETE** — full chapter-by-chapter source trail indexed; resolved the Intro/Ch.1 flags (BBC/ComRes 2017; supervisors; *Vanity Fair* 2016) **and** the Ch.3/8/9/10/11/12 primary cites (Josephus+4Q521; rabbinics+Magness; Dunn 855/Habermas 153; Baggett-IVP Flew; Robinson/Barkay; Vaganay/Henderson/Evans/Keener/Bowersock). **⚠️ Hard negative: Ch. 4 Islam material = Bill Warner/CSPI — DO NOT USE.** Ch. 7 has **no endnotes** |
 | Copyright page | (front) | ⬜ **pending — need for publisher/year** |
 
 ## Cross-map to our Evidence Library
