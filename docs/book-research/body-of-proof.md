@@ -859,6 +859,38 @@ the Resurrection tab intro framing.
     rock-cut tomb with a stone-groove; a nearby olive press echoing **Gethsemane** ("olive press";
     **Matthew 26:36; Mark 14:32**). *Cross-map: `library/archaeology.html`, `library/emptytomb.html`.
     Verify Matt 27:33/26:36, Mark 15:22/14:32, John 19:17; Robinson/Schick/Gordon are real, verify dates.*
+  - **§ The Church of the Holy Sepulchre — the book's actual verdict (pp. 134–138, chapter ends): ✅
+    the mainstream site, well argued.** The Gospels put Jesus in **Joseph of Arimathea's new, rock-hewn
+    tomb** in a garden near the crucifixion, "near the city" but "outside the gate" — **Matthew 27:57,
+    60; Luke 23:50–51, 53; John 19:38, 41–42, 20; Hebrews 13:12** (with the sin-offering analogy, cf.
+    **Exodus 29:14**). Threads:
+    - **The "inside the walls" objection answered (p. 134):** the 18th-c. objection was that the Holy
+      Sepulchre sits *inside* the Old City walls — but **Agrippa I extended Jerusalem's walls northward
+      c. AD 41–44** (after the crucifixion), so the site was **outside** the walls at Jesus' burial. *A
+      strong, standard rebuttal — verify the Agrippa "third wall" dating. Cross-map: `library/emptytomb.html`,
+      `library/archaeology.html`.*
+    - **"Hadrian inadvertently preserved the tomb" (pp. 135–136):** after the **Bar Kokhba revolt (AD
+      132–135**; Simon ben Kosiba / "Son of the Star"), **Hadrian** rebuilt Jerusalem as **Aelia
+      Capitolina** and covered the venerated tomb with a platform + a **temple to Jupiter/Venus** — which
+      *marked* the spot. Then **Helena** (mother of Constantine) c. **AD 326–328** had the pagan temple
+      demolished; excavation found first-century tombs, matching local "continuity of memory"; Constantine
+      built the church. *Strong, verifiable historical arc.*
+    - **⚠️⚠️ JEWISH-SENSITIVITY FLAG (important):** the book supports this with **Justin Martyr** (*Dialogue*
+      108; *First Apology* 31.5–6) and **Eusebius** (*Chronicle*) — real, public-domain patristic sources,
+      **but framed in 2nd-c. supersessionist / anti-Jewish polemic** ("the Jewish people refuse to repent,"
+      "they count us foes and enemies," Bar Kokhba persecuting Christians). **DO NOT reproduce that gloss
+      in our voice.** If we ever use this, cite only the *historical datum* (the revolts, Hadrian's
+      slighting-then-preserving of the site) and drop the "Jews refuse to repent" framing — our recurring
+      **"use 'his enemies,' avoid anti-Jewish pull-quotes"** guardrail. High-sensitivity.
+    - **✅ The 2016–2017 Edicule restoration (p. 137) — strong modern lead:** during the repair, the marble
+      cladding was removed for the first time in ~5 centuries and experts had **~60 hours** to examine the
+      tomb; the **limestone burial bench** and remains were found **consistent with early-first-century
+      Jerusalem tombs**. *Well-documented (National Geographic-covered); verify before citing. Cross-map:
+      `library/archaeology.html`, `library/emptytomb.html`.*
+    - **Jewish burial practice recap (pp. 137–138):** wash / perfume / wrap → bench/shelf → 7-day mourning
+      → secondary burial (bones to an **ossuary**) a year later — the same frame as Ch. 8; the women came
+      Sunday to perfume + mourn and to plan the later bone-gathering "that did not happen": the stone was
+      rolled aside, the tomb empty. *Cross-map: `library/emptytomb.html`.*
   - **§ Why archaeology REJECTS the Garden Tomb (p. 133) — ✅ the book itself concludes against it:**
     **General Charles Gordon** (visited Jerusalem 1883, influenced by Schick) popularized it via a
     "skeletal diagram" matching Skull Hill — but the book states plainly that **archaeology does not
@@ -899,7 +931,7 @@ the Resurrection tab intro framing.
 | Ch. 8 (Reason #5) | 95–103 | 🟡 captured pp. 95–103 (archaeology/manuscripts + burial argument + Magness + tomb-stone + minimal-facts "established facts" + post-resurrection appearances sidebar); may finish 104 |
 | Ch. 9 (Reason #6) | 105–114 | ✅ **captured complete** (1 Cor 15:3–7 creed + Dunn/Habermas dating [guardrail] + Paul's timeline/historeō + James the skeptic brother/Josephus + Gal 3:28 equality [neutrality flag] + resurrection-centrism cluster) |
 | Ch. 10 (Reason #7) | 115–127 | ✅ **captured complete** (suffering/THEODICY guardrail + resurrection-hope + burial innovation + death-of-a-Christian comfort + Lazarus + "I Am"/deity + salvation cluster [sola-fide neutrality flag] + Antony Flew close) |
-| Ch. 11 (Part Four) | 131–133 | 🟡 captured pp. 131–133 (Holy Sepulchre vs. Garden Tomb + Garden Tomb history Robinson/Schick/Gordon + archaeology REJECTS the Garden Tomb: Barkay Iron-Age dating, Crusader trough); continues (134–137 pending — API image outage) |
+| Ch. 11 (Part Four) | 131–138 | ✅ **captured complete** (Holy Sepulchre vs Garden Tomb; Garden Tomb rejected [Barkay/Crusader]; Holy Sepulchre defended: Agrippa's walls, Hadrian-preserved-the-tomb, Helena/Constantine, 2016–17 Edicule bench; Justin/Eusebius w/ a Jewish-sensitivity flag) |
 | Ch. 12 (Part Four) | 139–158 | ⬜ pending |
 | **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
 | Copyright page | (front) | ⬜ **pending — need for publisher/year** |
