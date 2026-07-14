@@ -477,8 +477,41 @@ the Resurrection tab intro framing.
     historical and neutral; do not adjudicate the Sabbath debate.** *Cross-map: `library/emptytomb.html`,
     `library/earlycreed.html`. Verify all refs; the covenant + Lord's-Day clusters are the most
     reusable material in this chapter.*
-- **Ch. 6 — Reason #3: Jesus demonstrated resurrection power** (p. 75). Likely the raisings
-  (Lazarus — John 11; Jairus' daughter — Mark 5; the widow's son — Luke 7). *Pending.*
+- **Ch. 6 — Reason #3: Jesus Demonstrated Resurrection Power** (pp. 75–78 captured; chapter continues
+  past 78). **Thesis (our words):** Jesus' three raisings-from-the-dead are eschatological *previews* —
+  a "recently deceased" person restored now, foreshadowing the general resurrection at the last day, and
+  a harbinger of Jesus' own resurrection. He authorized the disciples to "**raise the dead**"
+  (**Matthew 10:8**) and cited it as a messianic sign (**Matthew 11:5 // Luke 7:22**, "the dead are
+  raised up"). The **three raising accounts**:
+  - **Jairus's daughter** — **Mark 5:21–43; Matthew 9:18–26; Luke 8:40–56**; vivid, plausibly-eyewitness
+    detail (Jairus named, a synagogue ruler [Capernaum]; **Mark 5:35** "Your daughter is dead. Why
+    trouble the Teacher?"; **5:39** "not dead but sleeping"; the **Aramaic** *talitha cumi*, **Mark 5:41**
+    "Little girl, arise").
+  - **The widow of Nain's son** — **Luke 7:11–17**; the funeral procession, the bier, **Luke 7:14**
+    ("Young man, arise"), the boy "sat up."
+  - **Lazarus** — **John 11:1–44** (brother of Mary and Martha, Bethany near Jerusalem); the most
+    dramatic, dead **four days**; **John 11:39** ("by this time there is a stench"); **11:43–44 (NASB)**
+    ("came out bound hand and foot with wrappings"); cf. **John 12:1–2**.
+  - **§ Eyewitness-memory argument (p. 77):** the retained names/places/Aramaic words are read as marks
+    of firsthand memory embedded in the community, shaping how the followers later interpreted Easter.
+    *Bauckham-style; solid as **corroboration**, but "vivid detail ⇒ eyewitness" is contested by critics
+    — keep it supporting, don't overclaim. Cross-map: `library/eyewitnesses.html`. Also flags a rabbinic
+    "**the spirit lingers near the corpse three days, departs on the fourth**" tradition (why "four days"
+    matters for Lazarus) — **verify + date carefully; it's later rabbinic (e.g. Genesis/Leviticus
+    Rabbah), do NOT present it as certainly 1st-century.***
+  - **§ "Clarifying Resurrection versus Resuscitation" (p. 78) — ✅ theologically important + orthodox:**
+    the book carefully distinguishes **resuscitation** (Lazarus, Jairus's daughter, the Nain boy were
+    *brought back* but would **die again**) from **resurrection** (Jesus was raised to a transformed,
+    **"un-dieable"** — the author's coined term — glorified body, never to die again). **This matches our
+    house frame exactly — "bodily, transformed, not a reanimation"** (cf. the 1 Cor 15 "spiritual body"
+    material). The book concedes the Greek NT itself doesn't lexically differentiate the two — a fair,
+    honest point. **Strong, reusable, safe cluster — cross-map: `library/emptytomb.html`,
+    `library/earlycreed.html`, and any "was it just resuscitation?" objection card.** *Verify Matthew
+    10:8, 11:5/Luke 7:22, Mark 5:35/39/41, Luke 7:14, John 11:39/43–44, John 12:1–2.*
+  - **⚠️ Calibration:** the raisings **presuppose** the miraculous, so to a skeptic they can't *prove*
+    the resurrection (they're part of what's in question) — frame them as *internal coherence /
+    foreshadowing*, and keep our guardrail: this shows Jesus' ministry pointed to resurrection, it
+    doesn't independently prove the miracles happened. *Cross-map primary tab: `ev-s2`.*
 - **Ch. 7 — Reason #4: There Was No Motivation to Invent the Resurrection Narrative** (pp. 87–92
   captured; opening pp. 87 + chapter continues past 92). **Thesis (our words):** a *cui bono* /
   motivation argument — a first-century Torah-observant Jew had **neither the need nor the motive** to
@@ -563,7 +596,7 @@ the Resurrection tab intro framing.
 | Part Three title page | 55 | ✅ captured |
 | Ch. 4 (Reason #1) | 57–63 | ✅ **captured complete** (social transformation + "world without God"/Hitler close; heavy calibration incl. Islam-polemic + atheism→Nazism flags) |
 | Ch. 5 (Reason #2) | 65–72 | 🟡 captured pp. 65–72 (Jesus predicted it + pretenders sidebar + passion-prediction box + Last Supper/new-covenant cluster + Great Commission/Lord's Day); may finish 73–74 |
-| Ch. 6 (Reason #3) | 75–86 | ⬜ pending |
+| Ch. 6 (Reason #3) | 75–78 | 🟡 captured pp. 75–78 (three raisings: Jairus/Nain/Lazarus + eyewitness-memory + the resurrection-vs-resuscitation "un-dieable" distinction); continues past 78 |
 | Ch. 7 (Reason #4) | 87–92 | 🟡 captured pp. 87–92 (no-motivation: "you didn't need it" + crucifixion-disqualifies + unique survival + Akiva + Celsus/Porphyry); continues past 92 |
 | Ch. 8–10 (Reasons 5–7) | 95–130 | ⬜ pending |
 | Ch. 11–12 (Part Four) | 131–158 | ⬜ pending |
