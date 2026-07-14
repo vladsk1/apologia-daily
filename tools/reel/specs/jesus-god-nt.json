@@ -1,0 +1,89 @@
+{
+  "reviewed": {"argument": "2026-07-14", "orthodoxy": "2026-07-14", "by": "captioned multi-scene reel (NOT the talkbg voiceover version): 'Is Jesus God in the New Testament?' Grounded in library/jesus_as_god_nt.html, which was itself re-gated CLEAN 2026-07-14 (apologia-orthodoxy CLEAN; apologia-argument sound). EVERY scripture line is verbatim ESV lifted from that certified essay: John 20:28, John 1:1, John 8:58, Colossians 2:9, Hebrews 1:8, Revelation 1:17/22:13, Isaiah 44:6 (referenced), Philippians 2/Isaiah 45:23 (described not quoted), Marana tha. Positive case ONLY per the reel rule — the JW/Unitarian + Ehrman counter in the essay is deliberately omitted (no steelman/objection scene). Honest scope bound KEPT (scene 10: the systematic creed vocabulary came later; the data — throne/name/worship — is early and everywhere) = accuracy, not steelmanning. Bauckham 'divine identity' + Hurtado 'earliest = highest' framing preserved. Not independently re-gated as a reel beyond inheriting the essay's clearance; a formal reel orthodoxy pass can run before publishing."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.85,
+  "voiceover": "Did the New Testament actually call Jesus God? A week after the crucifixion, a skeptic named Thomas reached toward the wounds of the man he had watched die, and said something no Jew said to anyone but the LORD: My Lord and my God. And that is one thread of many. Across twenty-seven books, by around nine authors, in two languages, one line runs through all of it: Jesus is placed on the Creator's side. John opens, In the beginning was the Word, and the Word was God, and has Jesus take God's own name onto his lips: before Abraham was, I am. Paul, writing decades earlier, says in him the whole fullness of deity dwells bodily, and quotes a hymn older than his own letter where every knee bows to Jesus, the honor Isaiah gives to the LORD alone. Hebrews says, to the Son: your throne, O God, is forever. Revelation has the risen Christ claim God's own title from Isaiah: I am the first and the last, the Alpha and the Omega. And it isn't only titles. They worshiped him, prayed to him, and kept an Aramaic prayer untranslated: Marana tha, Our Lord, come, straight from the Jerusalem church of the thirties. The creed's words came later. The reality was there from the first breath of the church. Thomas didn't invent a category. He named what the whole New Testament had been saying.",
+  "source": "library/jesus_as_god_nt.html",
+  "scenes": [
+    { "dur": 5.2,
+      "big": [ {"t": "Is Jesus God", "c": "cream", "s": 74}, {"t": "in the New", "c": "cream", "s": 74}, {"t": "Testament?", "c": "gold", "s": 84} ],
+      "sub": [ {"t": "27 books. Around 9 authors.", "c": "dim", "f": "serif", "s": 40},
+               {"t": "Two languages. One answer.", "c": "dim", "f": "serif", "s": 40} ] },
+
+    { "kicker": "A WEEK AFTER THE CROSS", "dur": 6.6, "lines": [
+      {"t": "Thomas, who refused to believe,", "c": "cream", "s": 46},
+      {"t": "reached for the wounds", "c": "cream", "s": 48},
+      {"t": "and said what no Jew said", "c": "cream", "s": 46},
+      {"t": "to anyone but God:", "c": "cream", "s": 46},
+      {"t": "", "s": 16},
+      {"t": "“My Lord and my God.”", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "— John 20:28", "c": "dim", "s": 42} ] },
+
+    { "kicker": "ONE LINE RUNS THROUGH ALL OF IT", "dur": 5.8, "lines": [
+      {"t": "Again and again, Jesus is", "c": "cream", "s": 48},
+      {"t": "placed on the Creator's side —", "c": "cream", "s": 46},
+      {"t": "", "s": 18},
+      {"t": "God's throne. God's name.", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "God's worship.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "JOHN", "dur": 6.6, "lines": [
+      {"t": "“In the beginning was the Word,", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "and the Word was God.” (1:1)", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "", "s": 18},
+      {"t": "Jesus takes God's own name:", "c": "cream", "s": 46},
+      {"t": "“Before Abraham was, I am.”", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "— John 8:58", "c": "dim", "s": 42} ] },
+
+    { "kicker": "PAUL · DECADES EARLIER", "dur": 6.0, "lines": [
+      {"t": "“In him the whole fullness", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "of deity dwells bodily.”", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "— Colossians 2:9", "c": "dim", "s": 42},
+      {"t": "", "s": 16},
+      {"t": "Not a hint. A statement.", "c": "cream", "s": 46} ] },
+
+    { "kicker": "PHILIPPIANS 2 · A HYMN OLDER THAN THE LETTER", "dur": 6.2, "lines": [
+      {"t": "Every knee shall bow", "c": "cream", "s": 50},
+      {"t": "to Jesus —", "c": "cream", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "the honor Isaiah gives", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "to the LORD alone.", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "— Philippians 2 · Isaiah 45:23", "c": "dim", "s": 40} ] },
+
+    { "kicker": "HEBREWS", "dur": 5.6, "lines": [
+      {"t": "God says — to the Son —", "c": "cream", "s": 48},
+      {"t": "", "s": 18},
+      {"t": "“Your throne, O God,", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "is forever and ever.”", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "— Hebrews 1:8", "c": "dim", "s": 42} ] },
+
+    { "kicker": "REVELATION", "dur": 6.2, "lines": [
+      {"t": "The risen Christ claims", "c": "cream", "s": 48},
+      {"t": "God's own title:", "c": "cream", "s": 48},
+      {"t": "", "s": 16},
+      {"t": "“I am the first and the last,", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "the Alpha and the Omega.”", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "— Rev 1:17; 22:13 · cf. Isaiah 44:6", "c": "dim", "s": 38} ] },
+
+    { "kicker": "AND NOT JUST A TITLE", "dur": 6.6, "lines": [
+      {"t": "They worshiped him.", "c": "cream", "s": 50},
+      {"t": "They prayed to him.", "c": "cream", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "“Marana tha” — “Our Lord, come!”", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "Aramaic. The Jerusalem", "c": "cream", "s": 44},
+      {"t": "church of the 30s.", "c": "cream", "s": 44} ] },
+
+    { "kicker": "EARLY. EVERYWHERE.", "dur": 6.0, "lines": [
+      {"t": "The creed's words came later.", "c": "cream", "s": 48},
+      {"t": "", "s": 18},
+      {"t": "The reality — throne, name,", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "worship — was there from the", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "first breath of the church.", "c": "gold", "f": "serifb", "s": 46} ] },
+
+    { "dur": 6.2,
+      "big": [ {"t": "“My Lord", "c": "cream", "s": 78}, {"t": "and my God.”", "c": "gold", "s": 84} ],
+      "sub": [ {"t": "Thomas named what the whole NT had been saying.", "c": "cream", "f": "serif", "s": 36},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 46} ] }
+  ]
+}
