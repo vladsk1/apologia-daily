@@ -628,8 +628,41 @@ the Resurrection tab intro framing.
     believed), not a proof of the event; keep it as "their conviction is hard to explain on invention,"
     not "this proves the resurrection." And represent Second-Temple Judaism **charitably and accurately**
     (the "you already had everything" point must not tip into caricature). *Cross-map primary tab: `ev-s2`.*
-- **Ch. 8 — Reason #5: Written and archaeological sources support the Gospels' narrative** (p. 95).
-  Cross-map: `library/archaeology.html`, `library/manuscript.html`. *Pending — endnotes crucial here.*
+- **Ch. 8 — Reason #5: Written and Archaeological Sources Overwhelmingly Support the Gospels'
+  Resurrection Narrative** (pp. 95–99 captured; chapter continues past 99). **Thesis (our words):** the
+  NT text + archaeology corroborate the Gospels' burial/empty-tomb narrative as sober history, not
+  legend. Opens (pp. 95–96) with biblical archaeology as a young (~120-yr) discipline and the claim
+  that Christianity (with Judaism) uniquely enjoys **material-culture corroboration** where other
+  religions avoid "points of tangency" with archaeology. **⚠️ Calibration:** "overwhelmingly" +
+  "all other religions avoid archaeology" is popular-level overstatement — soften on use.
+  - **§ Manuscript + "verisimilitude" (p. 96):** the NT text is **early, numerous, stable** (small
+    fragments to the 2nd c., substantial portions to the 3rd) — *appropriately modest, not overclaimed*.
+    The Gospels exhibit **verisimilitude** (Latin *veritas*/*verus* "truth" + *similitude* "likeness")
+    — real people/places/events corroborated by inscriptions, documents, finds. **⚠️ Keep our
+    manuscript guardrail: manuscripts prove *accurate preservation*, NOT that the content is true —
+    argue truth separately.** *Cross-map: `library/manuscript.html`.*
+  - **§ The two resurrection elements (p. 97):** (1) **Jesus showed himself alive** — the appearance
+    tradition, **1 Corinthians 15:3–7**; (2) **Jesus abandoned the grave** — the empty-tomb tradition in
+    **all four Gospels**: **Matthew 28:1–8; Mark 16:1–8; Luke 24:1–12, 22–24; John 20:1–13**. The book
+    argues the burial happened (against the "Jesus wasn't buried" thesis): a crucified body would **not**
+    be left hanging over Passover eve near Jerusalem — a Jewish-law point (cf. **Deuteronomy 21:22–23;
+    John 19:31**, verify). *Cross-map: `library/emptytomb.html`, `library/earlycreed.html`.*
+  - **§ The honorable-vs-wretched burial argument (pp. 98–99) — ✅ strong, well-sourced (Craig Evans-
+    style):** under Jewish law an executed criminal got a *proper but dishonorable* burial — the
+    Sanhedrin kept **two criminal burial grounds** ("wretched places"), no public mourning, remains held
+    a year before transfer to the family tomb. The book **quotes rabbinic law** for this (block quotes —
+    **⚠️ almost certainly Mishnah *Sanhedrin* 6:5–6 / *Semachot*; VERIFY the exact source + wording
+    before any use, this is a quotation-accuracy risk**). **Mark 15**'s burial is praised as realistic;
+    **Joseph of Arimathea** (a Sanhedrin member; **John** adds **Nicodemus**) gives Jesus a
+    *slightly-better-than-expected* burial in a **new/freshly-hewn tomb** — "neutral," neither the
+    criminals' dishonorable pit nor an honored family tomb — which is why the empty tomb was locatable.
+    **Paul anchors the burial: 1 Corinthians 15:4.** *Strong cross-map: `library/emptytomb.html` (women
+    witnesses + Joseph of Arimathea + the located tomb). Verify the rabbinic citations, Deut 21:22–23,
+    John 19:31, the burial texts (Mark 15:42–47 // Matt 27:57–60 // Luke 23:50–53 // John 19:38–42),
+    1 Cor 15:4.*
+  - **⚠️ Calibration:** keep the resurrection guardrail (the empty tomb + burial *corroborate*, and the
+    resurrection is the *best explanation* of the agreed facts — not a stand-alone proof); manuscripts
+    show preservation, not truth. *Cross-map primary tab: `ev-s2`; also `ev-s4` (Bible reliability).*
 - **Ch. 9 — Reason #6: Only the resurrection explains the conversion of non-followers** (p. 105).
   Paul (1 Cor 15:8; Gal 1) and James (1 Cor 15:7). Cross-map: `library/paulconv.html`. *Pending.*
 - **Ch. 10 — Reason #7: The resurrection is the only basis for making sense of suffering** (p. 115).
@@ -664,7 +697,8 @@ the Resurrection tab intro framing.
 | Ch. 5 (Reason #2) | 65–72 | 🟡 captured pp. 65–72 (Jesus predicted it + pretenders sidebar + passion-prediction box + Last Supper/new-covenant cluster + Great Commission/Lord's Day); may finish 73–74 |
 | Ch. 6 (Reason #3) | 75–86 | ✅ **captured complete** (three raisings + resuscitation-vs-resurrection + glorified-body + emic/etic w/ Trinity aside + Herod/JtB + 1 Cor 15 firstfruits + Paul's 4 questions + ascension/doubt close) |
 | Ch. 7 (Reason #4) | 87–93 | 🟡 captured pp. 87–93 (two-headings framing + no-motivation cluster + Historical-Questions demographics/sources + James & Saul hostile witnesses); continues past 93 (Ch. 8 opens p. 95) |
-| Ch. 8–10 (Reasons 5–7) | 95–130 | ⬜ pending |
+| Ch. 8 (Reason #5) | 95–99 | 🟡 captured pp. 95–99 (archaeology/manuscripts + verisimilitude + empty-tomb tradition + honorable-vs-wretched burial / Joseph of Arimathea); continues past 99 |
+| Ch. 9–10 (Reasons 6–7) | 105–130 | ⬜ pending |
 | Ch. 11–12 (Part Four) | 131–158 | ⬜ pending |
 | **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
 | Copyright page | (front) | ⬜ **pending — need for publisher/year** |
