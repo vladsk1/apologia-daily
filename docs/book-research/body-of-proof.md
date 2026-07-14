@@ -763,9 +763,43 @@ the Resurrection tab intro framing.
   - **⚠️ Calibration:** keep the "~2–5 years" creed dating (attribute earlier figures to their scholars),
     and frame the skeptic conversions as **best explanation** of agreed data, not deductive proof.
     Keep denominational neutrality on the Gal 3:28 / women material. *Cross-map primary tab: `ev-s2`.*
-- **Ch. 10 — Reason #7: The resurrection is the only basis for making sense of suffering** (p. 115).
-  Cross-map: `library/evil.html` (note: keep our "concede the mystery; no tidy complete theodicy"
-  guardrail — this chapter's title claim is strong). *Pending.*
+- **Ch. 10 — Reason #7: Jesus' Resurrection Is the Only Basis for Making Sense of Suffering** (pp.
+  115–119 captured; chapter continues past 119). **Thesis (our words):** the resurrection is what gives
+  *hope* in the face of suffering — the problem of evil is real and painful, but the risen Christ grounds
+  a living hope. Opens with the **Steve Jobs / Biafra** anecdote (the *Life* July 1968 starving-children
+  cover; young Jobs' challenge to his pastor; per Walter Isaacson, the problem of evil drove him from
+  faith). **⚠️⚠️ THEODICY GUARDRAIL — the most important calibration in the book for us:**
+  - **The chapter TITLE claim ("the *only* basis for making sense of suffering") is too strong — soften
+    on use to "the resurrection gives *hope* in the face of suffering," never "the only way to make sense
+    of it."** Our guardrail: **concede the mystery first; no tidy complete theodicy; Plantinga is a
+    *defense* (consistency), not a proof.**
+  - **✅ Good news: the book largely MODELS our guardrail** — it repeatedly calls suffering "mysterious,"
+    "unexplainable," an "unanswered question," and offers the resurrection as **hope**, *not* as a
+    complete explanation of why God permits evil. Keep that posture; do not let a compressed reader hear
+    "the resurrection *solves* the problem of evil." *Cross-map: `library/evil.html` (hold the Moltmann/
+    patripassianism boundary noted there); a `/answers/` "problem of evil" page.*
+  - **Scripture/quote leads:** **John 14:19** ("Because I live, you also will live"); **Hebrews 13:5**
+    (God won't forsake); **Romans 8:18** ("the sufferings of this present time are not worth comparing…");
+    **Mary & Martha, John 11:21** ("Lord, if only you had been here"); Peter's failure/second chance. A
+    **C. S. Lewis** quote — "We are not necessarily doubting that God will do the best for us; we are
+    wondering how painful the best will turn out to be" (**⚠️ verify wording + source — *A Grief
+    Observed*/*The Problem of Pain*; it's real but confirm before quoting**). *Verify John 14:19, Heb
+    13:5, Rom 8:18, John 11:21.*
+  - **§ "Paul's Letters Affirm… Based on the Resurrection" (p. 118):** if there's no resurrection, one
+    might as well pursue pleasure (**1 Corinthians 15:30–32**; cf. Romans 12:1–2); because there is,
+    pursue holy living (**1 Cor 15:33–34**). **⚠️ Denominational-neutrality note:** the book cites
+    **"baptism for the dead" (1 Cor 15:29)** — but is careful that **Paul does *not* endorse the
+    practice**, only uses it as an argument. **Keep that care; do not adjudicate the practice** (it's a
+    contested/sectarian text). Plus the **martyr/*martys* = "witness"** etymology and martyrology.
+  - **§ The resurrection body + Paul's timeline (p. 119):** **1 Corinthians 15:35–49** — Paul's answer
+    to "how are the dead raised?" (the seed/agricultural analogy vv. 36–38; earthly vs. heavenly bodies
+    vv. 39–44; "we shall bear the image of the man of heaven," v. 49) → the raised body is **more
+    glorious** than the present one; plus **1 Cor 15:52** ("in a flash… twinkling of an eye… last
+    trumpet") and **1 Thess 4:16**. Re-anchors Paul's conversion "**about two years after the
+    crucifixion**" and **Galatians 1:18–19** (Jerusalem after three years; "saw none of the other
+    apostles except James the Lord's brother"), the creed received "within five years." *Matches our
+    bodily-transformed frame; cross-map `library/earlycreed.html`. Verify 1 Cor 15:35–49/52, 1 Thess 4:16,
+    Gal 1:18–19.*
 
 ### Part Four — "The New Frontier: Further Assessing the Evidence" *(pending capture)*
 - **Ch. 11 — The Most Significant Place in Christianity** (p. 131). Likely the empty tomb / Jerusalem
@@ -797,7 +831,7 @@ the Resurrection tab intro framing.
 | Ch. 7 (Reason #4) | 87–93 | 🟡 captured pp. 87–93 (two-headings framing + no-motivation cluster + Historical-Questions demographics/sources + James & Saul hostile witnesses); continues past 93 (Ch. 8 opens p. 95) |
 | Ch. 8 (Reason #5) | 95–103 | 🟡 captured pp. 95–103 (archaeology/manuscripts + burial argument + Magness + tomb-stone + minimal-facts "established facts" + post-resurrection appearances sidebar); may finish 104 |
 | Ch. 9 (Reason #6) | 105–114 | ✅ **captured complete** (1 Cor 15:3–7 creed + Dunn/Habermas dating [guardrail] + Paul's timeline/historeō + James the skeptic brother/Josephus + Gal 3:28 equality [neutrality flag] + resurrection-centrism cluster) |
-| Ch. 10 (Reason #7) | 115–130 | ⬜ pending |
+| Ch. 10 (Reason #7) | 115–119 | 🟡 captured pp. 115–119 (suffering: Jobs/Biafra hook + THEODICY guardrail [book models 'concede mystery', soften 'only basis'] + Lewis quote + resurrection-hope cluster + 1 Cor 15:35–49 body); continues past 119 |
 | Ch. 11–12 (Part Four) | 131–158 | ⬜ pending |
 | **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
 | Copyright page | (front) | ⬜ **pending — need for publisher/year** |
