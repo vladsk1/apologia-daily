@@ -6,13 +6,16 @@
 > not treat as confirmed until the copyright page is captured).
 > This note is a **research map**, not the book.
 
-> ## 🟢 STATUS: NEARLY COMPLETE — Intro + Chs. 1, 3–12 + full Notes captured; Ch. 2 body + copyright page pending
-> Captured 2026-07-13/14 from photos: the **cover**, the **full table of contents**, the **complete
-> Introduction (pp. 15–19)**, **Chapters 1 and 3 through 12** (bodies), and — new 2026-07-14 — the
-> **complete Notes / endnotes (pp. 163–172)**, the chapter-by-chapter primary-source + scholarly trail
-> that resolves nearly every earlier UNVERIFIED lead (and confirmed the hard **Ch. 4 Bill-Warner/CSPI
-> do-not-use** flag). **Still pending: the Ch. 2 body (pp. 33–42)** and the **copyright page** (for the
-> confirmed publisher/year). See the capture-status table at the foot of this file.
+> ## ✅ STATUS: COMPLETE (finalized as-is 2026-07-14) — Intro + Chs. 1, 3–12 + full Notes captured
+> Captured 2026-07-13/14 from photos and **finalized as a completed research-library entry**: the
+> **cover**, the **full table of contents**, the **complete Introduction (pp. 15–19)**, **Chapters 1 and
+> 3 through 12** (bodies), and the **complete Notes / endnotes (pp. 163–172)** — the chapter-by-chapter
+> primary-source + scholarly trail that resolves nearly every earlier UNVERIFIED lead (and confirmed the
+> hard **Ch. 4 Bill-Warner/CSPI do-not-use** flag). **Two gaps were intentionally left un-captured** (not
+> blockers for using the note): the **Ch. 2 body (pp. 33–42)** — the skeptical-case chapter, anchored on
+> E. P. Sanders, whose thesis is already summarized from the TOC + resolved via its endnote — and the
+> **copyright page** (publisher/year still listed as "TBD — assumed Bethany House ~2023"). Add either
+> later if the pages are sent; the note is otherwise finished. See the capture-status table at the foot.
 >
 > **Standing rule:** this is a *research map of a copyrighted book*, not a quotable source. Do
 > **not** treat any citation below as confirmed for publication until it is verified against the

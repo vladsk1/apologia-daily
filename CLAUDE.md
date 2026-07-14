@@ -355,9 +355,12 @@ books*, not quotable text.
 - **Current notes:** `i-dont-have-enough-faith-to-be-an-atheist.md` (Geisler & Turek — complete;
   covers the cosmological/teleological/moral arguments, NT reliability, resurrection, deity of
   Christ, miracles, and the anti-skepticism material); `body-of-proof.md` (Jeremiah Johnston —
-  resurrection: the 7 reasons, 1 Cor 15 creed, empty-tomb/burial archaeology, skeptic conversions,
-  resurrection-vs-resuscitation, suffering/hope — in progress, watch its popular-level overstatement
-  + one Islam-polemic passage); `did-jesus-really-say-he-was-god.md` (Mikel Del Rosario — deity of
+  resurrection: the 7 reasons, 1 Cor 15 creed [Dunn 855 / Habermas 153], empty-tomb/burial archaeology
+  [Magness], skeptic conversions [Paul/James, the Flew close], resurrection-vs-resuscitation,
+  suffering/hope, and the Gospel-of-Peter / ancient-critics apparatus — **complete** [Intro + Chs. 1,
+  3–12 + full Notes pp. 163–172; only the Ch. 2 body + copyright page deferred]; watch its popular-level
+  overstatement, and **two hard flags: Ch. 4's Islam-slavery material is Bill-Warner/CSPI-sourced → DO
+  NOT USE; Ch. 7 has no endnotes**); `did-jesus-really-say-he-was-god.md` (Mikel Del Rosario — deity of
   Christ argued *from Mark, via the enemies' reaction*: the two blasphemy scenes, ten data points,
   five best-explanation criteria; built from the already-gated reading behind the reading-club demo,
   and distinct from it). See each note's header for its own usage rules and any citation-precision flags.

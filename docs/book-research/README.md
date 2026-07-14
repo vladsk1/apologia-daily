@@ -54,10 +54,15 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   teleological / moral arguments, NT reliability, resurrection, deity of Christ, miracles, and the
   anti-skepticism (logic / Hume / Kant) material. Its header carries its own usage rules + a couple
   of citation-precision flags.
-- `body-of-proof.md` — Jeremiah J. Johnston, *Body of Proof* (**in progress**): the resurrection —
-  the 7 reasons, the 1 Cor 15 early creed, the empty-tomb/burial archaeology (honorable-vs-wretched
-  burial, Magness), skeptic conversions (Paul/James), the resurrection-vs-resuscitation distinction,
-  and the suffering/hope chapter. Watch its popular-level overstatement + one Islam-polemic passage.
+- `body-of-proof.md` — Jeremiah J. Johnston, *Body of Proof* (**complete**; Intro + Chs. 1, 3–12 +
+  the full Notes/endnotes pp. 163–172 captured — Ch. 2 body pp. 33–42 and the copyright page are the
+  only intentionally-deferred gaps): the resurrection — the 7 reasons, the 1 Cor 15 early creed
+  (Dunn 855 / Habermas 153), the empty-tomb/burial archaeology (honorable-vs-wretched burial, Magness),
+  skeptic conversions (Paul/James, the Flew close via Baggett-ed. IVP 2009), resurrection-vs-resuscitation,
+  the suffering/hope chapter, and the Gospel-of-Peter / ancient-critics apparatus (Vaganay/Henderson/
+  Evans/Keener/Bowersock + Contra Celsum/Porphyry). **Watch its popular-level overstatement, and note
+  two hard flags: Ch. 4's Islam-slavery material is Bill-Warner/CSPI-sourced → DO NOT USE; Ch. 7 has no
+  endnotes (its demographic claims have no citation trail).**
 - `did-jesus-really-say-he-was-god.md` — Mikel Del Rosario, *Did Jesus Really Say He Was God?*
   (**complete map**): a historical-Jesus / deity-of-Christ argument built **from Mark, weighing the
   enemies' reaction** — the two blasphemy scenes (Mark 2 forgive-on-earth / Mark 14 judge-from-heaven),
