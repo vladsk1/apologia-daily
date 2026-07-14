@@ -66,13 +66,16 @@ const RE = /<ul class="adn-links">[\s\S]*?<\/ul>(\s*)<div class="adn-right">/;
 
 const check = process.argv.includes('--check');
 
-// Doctrinally-gated content (see tools/check-content-review.mjs): NEVER touched
-// here — a nav-only edit would trip the content-review gate and wrongly demand a
-// fresh orthodoxy stamp. Nav consistency on these leaf pages isn't worth that.
+// Content that this script must NOT touch.
+// English deep-dive essays (library/*.html) ARE synced now: every one carries a
+// content-review stamp (2026-07-14 sweep), so a nav-only edit keeps the
+// content-review gate green instead of demanding a fresh orthodoxy stamp. Only the
+// still-unstamped, translation-review-pending localized mirrors (es/ mk/) and the
+// hub-style worldviews page are excluded, plus the head-less ev-s fragments.
 const CONTENT_GATED = [
-  /^library\/(?!index\.html$).+\.html$/,  // deep-dive essays (+ mk/ es/ mirrors)
+  /^library\/(es|mk)\/.+\.html$/,         // localized mirrors: need a translated nav + translation gating (deferred)
   /^ev-s\d[a-z0-9.]*\.html$/,             // hub fragments (no nav anyway)
-  /^worldviews\.html$/,
+  /^worldviews\.html$/,                   // gated hub-style page; nav handled in a targeted pass
 ];
 const isGated = (p) => CONTENT_GATED.some((re) => re.test(p));
 
