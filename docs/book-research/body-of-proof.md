@@ -192,7 +192,7 @@ the Resurrection tab intro framing.
   carefully; it's where the opposing evidence is stated.*
 
 ### Part Two — "The Resurrection Bears a Heavy Burden of Proof"
-- **Ch. 3 — The Christian Claim That Jesus Was Resurrected** (pp. 43–51 captured; chapter continues to 56).
+- **Ch. 3 — The Christian Claim That Jesus Was Resurrected** (pp. 43–54 — ✅ CAPTURED COMPLETE).
   **Thesis (our words):** defines the *specifically Christian* claim — a **bodily** resurrection —
   and its heavy burden of proof. Pushes back on a modern trend to *de-divinize* Jesus (reduce him to
   "a great moral teacher / nice person who turned the other cheek"). Argues (a) Jesus made radical
@@ -291,9 +291,63 @@ the Resurrection tab intro framing.
     hide the interval either" discipline. Bauckham's *Jesus and the Eyewitnesses* is the scholarly
     anchor to cite directly rather than the popular book.*
 
-### Part Three — "The 7 Best Reasons to Believe in the Resurrection of Jesus" *(pending capture)*
-- **Ch. 4 — Reason #1: Society is transformed everywhere Christianity is embraced** (p. 57). Note: a
-  *social-fruit* argument — softer/inductive; on use, don't overstate causation. *Pending.*
+  **Ch. 3 final section — apostolic-eyewitness requirement + real-vs-extracanonical Jesus + the bodily
+  claim (pp. 52–54, chapter ends):**
+  - **§ Oral culture → the eyewitness requirement (p. 52):** the first century was an oral culture that
+    prized the "living voice" of an eyewitness over a written account; the Gospels were written once the
+    eyewitnesses began to die. Anchor text: when **Judas** was replaced, the requirement was a man who
+    had **been with Jesus from the beginning** — **Acts 1:21–22 (NIV)** ("one of the men who have been
+    with us the whole time… beginning from John's baptism to the time when Jesus was taken up… must
+    become a witness with us of his resurrection"). *Lead: verify Acts 1:21–22 verbatim; it's a strong,
+    quotable apostolic-eyewitness proof-text. Cross-map: `library/eyewitnesses.html`.*
+  - **§ "Where Do We Find the Real, Historical Jesus?" (pp. 52–53):** argues the canonical four
+    (Matthew, Mark, Luke, John) are the earliest/apostolic sources, while the **extracanonical
+    "gospels"** are **late, non-apostolic, idiosyncratic**, and don't reflect Jesus' first-century
+    world. Critiques the **Jesus Seminar** for leaning on those questionable sources, and names novelist
+    **Dan Brown** (*The Da Vinci Code*, popular-level distortion). The book's memorable device: trying
+    to write a first-hand "journal" of someone who lived **150 years ago (the 1850s)** while pretending
+    to be a contemporary — you'd inevitably slip up on daily-life detail; yet the four Gospel writers,
+    describing Jesus in the **AD 20s–30s**, **did not slip up**. *This is essentially the
+    undesigned-coincidences / verisimilitude point in popular dress — cross-map: `library/coincidences.html`,
+    `library/manuscript.html`. **Calibration:** keep 1 Peter 3:15 tone — critique the sources'
+    lateness/provenance as a historical judgment, avoid a dismissive "pseudo-scholarly" sneer in our
+    own voice.*
+  - **§ "Jesus' Resurrection as the Beginning" (pp. 53–54):** the Christian movement began with the
+    **proclamation of the resurrection**, and most scholars grant that the earliest Christians
+    understood that resurrection as **bodily**, not merely spiritual — the point of **Paul's argument
+    in 1 Corinthians 15** (bodily, though transformed — *not* a mere reanimation). The Gospels stress
+    the bodily nature. Primary-source leads to verify (all strong, quotable bodily-resurrection texts):
+    - **Luke 24:39** — "touch me and see" (a spirit has no flesh and bones); cf. **1 John 1:1** ("what
+      our hands have touched").
+    - **John 20:20, 24–28** — the crucifixion wounds shown; Thomas.
+    - **Luke 24:41–43** — the risen Jesus **ate** (broiled fish) — "disembodied spirits cannot do" this.
+    - **Luke 24:22–23** — the body **absent from the tomb** where it had been laid.
+    - **Acts 2:22–36** (Peter at Pentecost) — the resurrection as fulfillment of the prophecy that
+      **God's Holy One would not be abandoned to the grave** (Ps 16 / **Acts 2:27, 31**).
+    *Cross-map: `library/emptytomb.html`, `library/earlycreed.html`; this is a clean "the earliest claim
+    was **bodily**" cluster — matches our house frame exactly (bodily, transformed, not reanimation).*
+
+### Part Three — "The 7 Best Reasons to Believe in the Resurrection of Jesus"
+*(Part-title page p. 55 — ✅ captured. Chapters below.)*
+- **Ch. 4 — Reason #1: Society Is Transformed Everywhere Christianity Is Introduced and Embraced**
+  (pp. 57–… ; opening p. 57 captured, chapter continues). **Thesis (our words):** a *social-fruit*
+  argument — the resurrection launched a movement whose effect on the world is measurable. Opens with a
+  **counterfactual device** ("what would the world be like if the resurrection had never happened?"),
+  compared to other historical what-ifs (Churchill, WWII, Greece vs. Persia). His move: we don't have to
+  *guess* the counterfactual — we can look at what the pre-Christian world was actually like, and at
+  what avowedly anti-Christian regimes (**Soviet communism, Nazi Germany**) produced, as a rough control.
+  - **⚠️ CALIBRATION (important — this is the softest of the seven):** a *social-consequences* argument is
+    **inductive and indirect** — it does **not** by itself establish that the resurrection *happened*
+    (a movement's good fruit doesn't prove its founding miracle). On any use, (a) don't overstate
+    causation or claim Christianity is the *sole* cause of a social good; (b) be historically honest
+    that things done *in the church's name* cut both ways; (c) frame it as **corroborating** the
+    transforming power the resurrection claim would predict, not as proof of the event. Keep it a
+    *supporting* consideration, never a lead resurrection proof. *Cross-map: this is more an apologetic-
+    for-Christianity's-impact point than a `ev-s2` resurrection-evidence point; use sparingly and with
+    the causation caveat.*
+  - *Leads to capture in the chapter body: whatever specific historical claims/stats he cites for the
+    pre-Christian world and for the communism/Nazi comparison — these are exactly the popular-level
+    numbers that need the endnotes + independent verification before any use.*
 - **Ch. 5 — Reason #2: Jesus called it, "#OnTheThirdDay"** (p. 65). Jesus' passion/resurrection
   predictions. Leads: Mark 8:31; 9:31; 10:33–34; Matt 12:40; John 2:19. *Verify each. Pending.*
 - **Ch. 6 — Reason #3: Jesus demonstrated resurrection power** (p. 75). Likely the raisings
@@ -331,9 +385,10 @@ the Resurrection tab intro framing.
 | Introduction | 15–19 | ✅ captured (leads indexed) |
 | Ch. 1 (Part One) | 23–31 | ✅ captured complete (device + historical test + viva; 2 calibration flags) |
 | Ch. 2 (Part One) | 33–42 | ⬜ pending (skipped in capture order) |
-| Ch. 3 (Part Two) | 43–51 | ✅ captured (claim + Jewish/OT resurrection roots + real-vs-phony Jesus + memory); continues 52–56 |
-| Ch. 3 (rest) | 52–56 | ⬜ pending |
-| Ch. 4–7 (Reasons 1–4) | 57–94 | ⬜ pending |
+| Ch. 3 (Part Two) | 43–54 | ✅ **captured complete** (claim + OT/Jewish roots + real-vs-extracanonical Jesus + eyewitness memory + bodily-resurrection cluster) |
+| Part Three title page | 55 | ✅ captured |
+| Ch. 4 (Reason #1) | 57–… | 🟡 opening captured (p. 57 — social-transformation thesis + calibration); body pending |
+| Ch. 4–7 rest (Reasons 1–4) | 58–94 | ⬜ pending |
 | Ch. 8–10 (Reasons 5–7) | 95–130 | ⬜ pending |
 | Ch. 11–12 (Part Four) | 131–158 | ⬜ pending |
 | **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
