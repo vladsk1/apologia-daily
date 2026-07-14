@@ -938,9 +938,37 @@ the Resurrection tab intro framing.
     disproof. The book's move: these very complaints are the *embarrassing details a fabricator would
     have removed*, so Celsus is an unintentional witness to their authenticity. *Verify Wilken (*The
     Christians as the Romans Saw Them*) + the Celsus quotes via Contra Celsum.*
+  - **§ The apocrypha as the "improved" version (pp. 144–148) — ✅ the payoff, well-argued:** the book
+    shows the **Gospel of Peter** (mid-2nd c., the **Akhmîm fragment**) and the **Acts of Pilate**
+    (c. AD 160) *did* rewrite the story the way a fabricator would — supplying the "credible witnesses"
+    Celsus demanded: **Roman guards + the centurion Petronius** call Jesus "Son of God" (Akhmîm
+    11:45–46); the guards and the very Jewish leaders *watch* the resurrection (9:35–11:45); a **giant
+    risen Jesus whose head surpasses the clouds** (10:40); "seven seals" + guards "pitching a tent" at
+    the tomb (8:33); a heavy "they *saw* / *heard*" emphasis (scholar **Tobias Nicklas**); in the Acts
+    of Pilate the guards stay awake and quote the angel (13:1). **The contrast is the argument:** the
+    **canonical Gospels depict *no human* watching the resurrection itself** — restrained and
+    un-embellished, exactly *not* what an inventor answering critics would write. *Strong; cross-map
+    `library/manuscript.html` (why the apocryphal gospels are late/legendary), `library/emptytomb.html`.
+    Scholars to verify: **Léon Vaganay**, **Tobias Nicklas**; the Akhmîm + Acts of Pilate refs.*
+  - **§ Celsus's actual taunts (pp. 144–147):** via **Origen, *Contra Celsum*** — "no wise man believes
+    the gospel"; the risen Jesus should have appeared to "the illustrious and educated" and to his
+    enemies, not "one woman and a few comrades"; the only witnesses were "**a hysterical woman**… and
+    perhaps one other person," deluded or hallucinating; "what god offers disbelief as the proof of his
+    divinity?" **✅ These mockeries are the book's best evidence:** the canonical accounts kept precisely
+    the details a 2nd-c. apologist (and the Gospel of Peter) *removed* — the women witnesses, the
+    private appearances, the un-watched resurrection — the mark of early, un-improved tradition.
+  - **⚠️⚠️ JEWISH-SENSITIVITY FLAG (again):** the **Gospel of Peter is notoriously anti-Jewish** — it
+    exonerates Pilate ("I am clean from the blood of the son of God") and shifts guilt onto the Jewish
+    leaders (who "lie" about the resurrection). The book rightly uses this as a *mark of the apocryphon's
+    late, tendentious embellishment* — **keep that framing; do NOT reproduce the Gospel of Peter's
+    Pilate-exoneration / Jewish-blame in our voice.** Its blame-shift is a red flag of its lateness, not
+    a datum to repeat. (Same guardrail as the Ch. 11 Justin/Eusebius flag.)
+  - **§ Porphyry opens (p. 148):** **Porphyry** (c. AD 232–303, a native of **Tyre**; heard Origen
+    preach in his youth) studied the Hebrew Scriptures and Gospels but found them "lacking in literary
+    quality and philosophical sophistication." *Section continues past 148.*
   - **⚠️ Calibration:** keep it as **evidence of authenticity/antiquity (best explanation), not proof of
-    the resurrection**; hold the respectful framing on the women-witness point. *Cross-map primary tab:
-    `ev-s2`.*
+    the resurrection**; hold the respectful framing on the women-witness point; hold the anti-Jewish flag
+    on the Gospel of Peter. *Cross-map primary tab: `ev-s2`.*
 - **From Oxford to Jerusalem — My Academic Journey** (p. 159) — author bio/testimony. Low priority.
 - **Notes** (p. 163+) — **the endnotes: highest-value target for the next batch.**
 - **About the Author** (p. 173).
@@ -967,7 +995,7 @@ the Resurrection tab intro framing.
 | Ch. 9 (Reason #6) | 105–114 | ✅ **captured complete** (1 Cor 15:3–7 creed + Dunn/Habermas dating [guardrail] + Paul's timeline/historeō + James the skeptic brother/Josephus + Gal 3:28 equality [neutrality flag] + resurrection-centrism cluster) |
 | Ch. 10 (Reason #7) | 115–127 | ✅ **captured complete** (suffering/THEODICY guardrail + resurrection-hope + burial innovation + death-of-a-Christian comfort + Lazarus + "I Am"/deity + salvation cluster [sola-fide neutrality flag] + Antony Flew close) |
 | Ch. 11 (Part Four) | 131–138 | ✅ **captured complete** (Holy Sepulchre vs Garden Tomb; Garden Tomb rejected [Barkay/Crusader]; Holy Sepulchre defended: Agrippa's walls, Hadrian-preserved-the-tomb, Helena/Constantine, 2016–17 Edicule bench; Justin/Eusebius w/ a Jewish-sensitivity flag) |
-| Ch. 12 (Part Four) | 139–143 | 🟡 captured pp. 139–143 (criterion-of-embarrassment "they'd have done a better job" — Dudrey; women-witness hostile testimony Celsus/Porphyry; miracles vs Asclepius + no-pagan-resurrection [anti-copycat]; Celsus/Wilken); continues past 143 (chapter ends ~158) |
+| Ch. 12 (Part Four) | 139–148 | 🟡 captured pp. 139–148 (embarrassment/Dudrey; miracles vs Asclepius + anti-copycat; Celsus's taunts via Contra Celsum; the apocrypha as the "improved" version — Gospel of Peter/Acts of Pilate w/ a Jewish-sensitivity flag; canonical restraint; Porphyry opens); continues (Porphyry → ends ~158) |
 | **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
 | Copyright page | (front) | ⬜ **pending — need for publisher/year** |
 
