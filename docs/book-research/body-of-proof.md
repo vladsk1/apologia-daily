@@ -512,6 +512,39 @@ the Resurrection tab intro framing.
     the resurrection (they're part of what's in question) — frame them as *internal coherence /
     foreshadowing*, and keep our guardrail: this shows Jesus' ministry pointed to resurrection, it
     doesn't independently prove the miracles happened. *Cross-map primary tab: `ev-s2`.*
+  - **§ The glorified ("un-dieable") body cluster (pp. 79–80) — ✅ strongly orthodox, reusable:** the
+    risen body is transformed and deathless — **Revelation 1:18** ("I died, and behold I am alive
+    forevermore"); **Luke 20:36** (the raised "cannot die anymore"); the post-resurrection abilities
+    (**Luke 24:31**, vanished from sight; **John 20:19 RSV**, appeared in the closed room, "Peace be
+    with you"). *Verify each; matches our 1 Cor 15 "spiritual/transformed body" frame — cross-map
+    `library/emptytomb.html`, `library/earlycreed.html`.*
+  - **§ Emic/etic + a Trinity aside (pp. 80–81):** a methodological digression (credits **Prof. Paul
+    Foster, Univ. of Edinburgh**) distinguishing *emic* terms (in the text) from *etic* categories
+    (scholar's labels not in the ancient vocabulary) — with the Greek **ἀνάστασις (anastasis)** /
+    **ἐγείρω (egeirō)** / **παρουσία (parousia)**. **✅ Notable cross-map:** the book uses **"Trinity"
+    as the model etic case — "Matthew never uses the word *trinity*; the Latin *trinitas* originated
+    with Tertullian, the early church father; the NT authors didn't use the term."** That's exactly our
+    **"the word isn't in the Bible but the concept is"** Trinity point — **cross-map:
+    `library/early_church_trinity.html` / the Trinity tab (`ev-s6`).** *Verify: Tertullian coining
+    Latin* trinitas *is broadly correct — confirm before use.*
+  - **§ "Resurrection Beliefs Were Embraced in Early Judaism" — Herod & John the Baptist (pp. 81–82):**
+    resurrection hope wasn't fringe; even **Herod Antipas** feared the risen **John the Baptist** —
+    **Mark 6:14–16** ("John… has been raised"; backstory 6:17–29), **Matthew 14:1–12**, **Luke 9:7–9**
+    ("perplexed, because it was said by some that John had been raised… some that Elijah… others that
+    one of the prophets of old had risen"). *Good Second-Temple-background lead; verify each. Cross-map:
+    the Pharisee/Sadducee resurrection-background material (Ch. 3), `library/emptytomb.html`.*
+  - **§ Paul & 1 Corinthians 15 — the firstfruits guarantee (pp. 82–83) — ✅ our flagship guardrail
+    material:** **1 Corinthians** is flagged as the **earliest written source** for the resurrection,
+    resting on early preaching/creed/eyewitness testimony (not innovation) — **1 Cor 15:20 (NIV)**
+    ("Christ has indeed been raised… the firstfruits of those who have fallen asleep"), **15:22–24**
+    ("As in Adam all die, so in Christ shall all be made alive… Christ the firstfruits, then… those who
+    belong to him"); the transformed body **Philippians 3:20–21 (NIV)**; the comfort of **1
+    Thessalonians 4:13**; the second-coming detail **1 Cor 15:51–52** and **1 Thess 4:16** ("cry of
+    command," "voice of an archangel," "trumpet of God"). **This is exactly our Resurrection rule — lead
+    with the 1 Cor 15 early creed.** *Cross-map: `library/earlycreed.html`, `library/minimalfacts.html`.
+    Verify 1 Cor 15:20/22–24/51–52, Phil 3:20–21, 1 Thess 4:13/16.* The chapter then opens Paul's **four
+    questions** about the resurrection body (Q1 second coming; Q2 "what kind of body" — *deathlessness*,
+    literal/physical; **Qs continue pp. 84+, pending**).
 - **Ch. 7 — Reason #4: There Was No Motivation to Invent the Resurrection Narrative** (pp. 87–92
   captured; opening pp. 87 + chapter continues past 92). **Thesis (our words):** a *cui bono* /
   motivation argument — a first-century Torah-observant Jew had **neither the need nor the motive** to
@@ -596,7 +629,7 @@ the Resurrection tab intro framing.
 | Part Three title page | 55 | ✅ captured |
 | Ch. 4 (Reason #1) | 57–63 | ✅ **captured complete** (social transformation + "world without God"/Hitler close; heavy calibration incl. Islam-polemic + atheism→Nazism flags) |
 | Ch. 5 (Reason #2) | 65–72 | 🟡 captured pp. 65–72 (Jesus predicted it + pretenders sidebar + passion-prediction box + Last Supper/new-covenant cluster + Great Commission/Lord's Day); may finish 73–74 |
-| Ch. 6 (Reason #3) | 75–78 | 🟡 captured pp. 75–78 (three raisings: Jairus/Nain/Lazarus + eyewitness-memory + the resurrection-vs-resuscitation "un-dieable" distinction); continues past 78 |
+| Ch. 6 (Reason #3) | 75–83 | 🟡 captured pp. 75–83 (three raisings + resuscitation-vs-resurrection + glorified-body cluster + emic/etic w/ Trinity aside + Herod/JtB + 1 Cor 15 firstfruits); Q3–4 on 84–86 pending |
 | Ch. 7 (Reason #4) | 87–92 | 🟡 captured pp. 87–92 (no-motivation: "you didn't need it" + crucifixion-disqualifies + unique survival + Akiva + Celsus/Porphyry); continues past 92 |
 | Ch. 8–10 (Reasons 5–7) | 95–130 | ⬜ pending |
 | Ch. 11–12 (Part Four) | 131–158 | ⬜ pending |
