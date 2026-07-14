@@ -904,8 +904,43 @@ the Resurrection tab intro framing.
     is a good, honest example for us — cross-map `library/archaeology.html`; verify Barkay's dating +
     Matt 27:60 / Luke 23:53.*
 - **Ch. 12 — If the Disciples Invented the Story of Jesus' Resurrection, They Did a Terrible Job**
-  (p. 139). The "incidental awkwardness / undesigned" style argument — dovetails with our new
-  undesigned-coincidences material. *Pending — high-interest chapter.*
+  (pp. 139–143 captured; chapter continues past 143). **Thesis (our words):** a **criterion-of-
+  embarrassment** argument — a fabricated resurrection story would have been *smoother*; the canonical
+  Gospels keep awkward, embarrassing details (frightened women as first witnesses, the disciples
+  fleeing/doubting/betraying, Jesus' Gethsemane anguish), which is evidence of **antiquity and probable
+  truth**, not invention. **✅ Pairs directly with our undesigned-coincidences + empty-tomb material —
+  cross-map `library/coincidences.html`, `library/emptytomb.html`, `library/disciplesbelief.html`.**
+  - **§ The core argument — Russ Dudrey (pp. 142–143):** cites scholar **Russ Dudrey** — fabricators
+    ("Christ conspirators") would have "done a better job"; 2nd-c. apocrypha (**Gospel of Peter, Acts of
+    Pilate**) actually *did* smooth/embellish the story to answer pagan objectors, showing by contrast
+    that the canonical accounts are the awkward, early, un-improved ones. So **Celsus's and Porphyry's
+    ridicule "unwittingly supports" the earliest accounts' truthfulness.** *Verify Dudrey; cross-map the
+    "why not the apocryphal gospels" / canon material (`library/manuscript.html`).*
+  - **§ Hostile-witness on the women (p. 140):** **Celsus and Porphyry** mocked the resurrection as
+    resting on "the confused and contradictory testimony of **frightened women**" — which *confirms* the
+    women-witness detail was there early (embarrassment). **⚠️ Framing caution (our recurring one):** the
+    point is that women's testimony was *culturally undervalued*, so inventors wouldn't have chosen it —
+    NOT that women are unreliable. State it respectfully. *Cross-map `library/emptytomb.html`.*
+  - **§ The miracle-apologetic + the Asclepius problem (pp. 140–142):** early fathers used Jesus'
+    miracles as evidence — **Quadratus** (d. c. 140, the earliest apology fragment, *apud* **Eusebius,
+    *Hist. eccl.* 4.3.2**), **Origen** (*Contra Celsum* 2.48; *Commentary on John* 2.34), grounded in
+    **John 10:25; John 14:11** ("the works… bear witness"). But healing was **not unique** — the
+    **Asclepius** cult (Epidaurus; votive body-part figurines; inscribed testimonials) offered healings
+    too. **What had NO pagan parallel was resurrection:** the book quotes **Aeschylus, *Eumenides*
+    647–650** (Apollo/Aeschylus: once the dust drinks a dead man's blood, "there is no resurrection")
+    and **Iamblichus** (the soul "scattered"). **✅ Strong, accurate anti-"copycat" material** — the
+    ancient world had dying gods and healers but *no promised bodily resurrection*, the opposite of the
+    old "borrowed from pagan myth" thesis. *Cross-map any "was the resurrection copied from pagan
+    myths?" objection; verify Quadratus/Eusebius, Origen refs, the Aeschylus/Iamblichus quotes.*
+  - **§ Celsus in detail (p. 143):** **Celsus**'s *The True Doctrine* (AD 175–181, surviving only in
+    **Origen's *Contra Celsum***; scholar **Robert Wilken** summarizes it) faults the death/resurrection
+    "at almost every point" — Jesus a coward in Gethsemane, the disciples' flight/betrayal/unbelief as
+    disproof. The book's move: these very complaints are the *embarrassing details a fabricator would
+    have removed*, so Celsus is an unintentional witness to their authenticity. *Verify Wilken (*The
+    Christians as the Romans Saw Them*) + the Celsus quotes via Contra Celsum.*
+  - **⚠️ Calibration:** keep it as **evidence of authenticity/antiquity (best explanation), not proof of
+    the resurrection**; hold the respectful framing on the women-witness point. *Cross-map primary tab:
+    `ev-s2`.*
 - **From Oxford to Jerusalem — My Academic Journey** (p. 159) — author bio/testimony. Low priority.
 - **Notes** (p. 163+) — **the endnotes: highest-value target for the next batch.**
 - **About the Author** (p. 173).
@@ -932,7 +967,7 @@ the Resurrection tab intro framing.
 | Ch. 9 (Reason #6) | 105–114 | ✅ **captured complete** (1 Cor 15:3–7 creed + Dunn/Habermas dating [guardrail] + Paul's timeline/historeō + James the skeptic brother/Josephus + Gal 3:28 equality [neutrality flag] + resurrection-centrism cluster) |
 | Ch. 10 (Reason #7) | 115–127 | ✅ **captured complete** (suffering/THEODICY guardrail + resurrection-hope + burial innovation + death-of-a-Christian comfort + Lazarus + "I Am"/deity + salvation cluster [sola-fide neutrality flag] + Antony Flew close) |
 | Ch. 11 (Part Four) | 131–138 | ✅ **captured complete** (Holy Sepulchre vs Garden Tomb; Garden Tomb rejected [Barkay/Crusader]; Holy Sepulchre defended: Agrippa's walls, Hadrian-preserved-the-tomb, Helena/Constantine, 2016–17 Edicule bench; Justin/Eusebius w/ a Jewish-sensitivity flag) |
-| Ch. 12 (Part Four) | 139–158 | ⬜ pending |
+| Ch. 12 (Part Four) | 139–143 | 🟡 captured pp. 139–143 (criterion-of-embarrassment "they'd have done a better job" — Dudrey; women-witness hostile testimony Celsus/Porphyry; miracles vs Asclepius + no-pagan-resurrection [anti-copycat]; Celsus/Wilken); continues past 143 (chapter ends ~158) |
 | **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
 | Copyright page | (front) | ⬜ **pending — need for publisher/year** |
 
