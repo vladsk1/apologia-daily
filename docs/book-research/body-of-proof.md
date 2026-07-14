@@ -825,10 +825,40 @@ the Resurrection tab intro framing.
     no other gods exist") keeps it orthodox (classical self-existence/aseity, not panentheism); prefer
     "self-existent Creator" wording on use. Plus **Romans 1:16** ("not ashamed of the gospel… power of
     God") and **John 14:19**. *Verify Exodus 3:14, John 8:58-type "I Am" sayings, Rom 1:16.*
+  - **§ Salvation-Scripture cluster + chapter close (pp. 125–127) — chapter ends (Part Three ends):**
+    a gospel-invitation list (NKJV): **John 1:12; Acts 16:31; John 5:24; Romans 10:9–10; Romans 6:23;
+    2 Corinthians 5:8; John 11:25–26, 43–44; Revelation 21:4** (no more tears). **⚠️ DENOMINATIONAL
+    NEUTRALITY FLAG:** the book's framing here is explicitly **Protestant *sola fide*** — "salvation is
+    conditioned solely on faith… appears over 200 times," "**works are a grace-killing element**." **Our
+    guardrail: defend the faith common to Catholics, Orthodox, and Protestants; do NOT adjudicate the
+    faith-vs-works / *sola fide* debate.** Keep the **shared** ground (salvation through Christ alone, by
+    grace) but **do not adopt the polemical anti-works wording** or the "over 200 times" stat (verify
+    anyway). The chapter closes with an **Antony Flew** quote — the atheist(-turned-deist) philosopher
+    (Habermas's debate partner): "the evidence for the resurrection is better than for claimed miracles
+    in any other religion… outstandingly different in quality and quantity." **✅ Strong hostile-witness
+    lead — ⚠️ VERIFY exact wording + source (the Habermas–Flew debate, *Did Jesus Rise from the Dead?*);
+    Flew never converted to Christianity, so attribute precisely.** *Cross-map: `library/minimalfacts.html`,
+    a `/answers/` "how do I become a Christian" page (kept denominationally neutral).*
 
-### Part Four — "The New Frontier: Further Assessing the Evidence" *(pending capture)*
-- **Ch. 11 — The Most Significant Place in Christianity** (p. 131). Likely the empty tomb / Jerusalem
-  proclamation. *Pending.*
+### Part Four — "The New Frontier: Further Assessing the Evidence"
+*(the author's "more scholarly" two-chapter section on the historicity of the tomb)*
+- **Ch. 11 — The Most Significant Place in Christianity** (pp. 131–132 captured; chapter continues).
+  **Thesis (our words):** which Jerusalem site actually held Jesus' body — the **Church of the Holy
+  Sepulchre** (venerated by Roman Catholics, Greek Orthodox, Armenian Apostolic, and in minor roles
+  Coptic/Syriac/Ethiopian Orthodox) or the **Garden Tomb** (favored by Protestants)? Archaeology weighs
+  in. **⚠️ DENOMINATIONAL NEUTRALITY:** the two sites map onto Catholic/Orthodox vs. Protestant devotion
+  — **treat this strictly as a historical/archaeological question; do NOT frame it as one tradition being
+  "right."** *(Honest scholarly note for our use: mainstream archaeology actually favors the **Church of
+  the Holy Sepulchre**; the Garden Tomb is a **19th-century Protestant identification now dated to the
+  Iron Age and rejected by most scholars** as Jesus' tomb — keep that balance if we ever use this.)*
+  - **§ The Garden Tomb / "Gordon's Golgotha" history (p. 132):** **Edward Robinson**'s *Biblical
+    Researches in Palestine* (1841) argued against the Holy Sepulchre (it sits inside the Old City walls,
+    whereas burial was outside the city) and proposed a site near the Damascus Gate; explorers then found
+    a **skull-shaped hill ("Skull Hill")** identified as **Golgotha/Calvary** (**Matthew 27:33; Mark
+    15:22; John 19:17**), popularized by **General Gordon**; **Conrad Schick** (1874) found a nearby
+    rock-cut tomb with a stone-groove; a nearby olive press echoing **Gethsemane** ("olive press";
+    **Matthew 26:36; Mark 14:32**). *Cross-map: `library/archaeology.html`, `library/emptytomb.html`.
+    Verify Matt 27:33/26:36, Mark 15:22/14:32, John 19:17; Robinson/Schick/Gordon are real, verify dates.*
 - **Ch. 12 — If the Disciples Invented the Story of Jesus' Resurrection, They Did a Terrible Job**
   (p. 139). The "incidental awkwardness / undesigned" style argument — dovetails with our new
   undesigned-coincidences material. *Pending — high-interest chapter.*
@@ -856,8 +886,9 @@ the Resurrection tab intro framing.
 | Ch. 7 (Reason #4) | 87–93 | 🟡 captured pp. 87–93 (two-headings framing + no-motivation cluster + Historical-Questions demographics/sources + James & Saul hostile witnesses); continues past 93 (Ch. 8 opens p. 95) |
 | Ch. 8 (Reason #5) | 95–103 | 🟡 captured pp. 95–103 (archaeology/manuscripts + burial argument + Magness + tomb-stone + minimal-facts "established facts" + post-resurrection appearances sidebar); may finish 104 |
 | Ch. 9 (Reason #6) | 105–114 | ✅ **captured complete** (1 Cor 15:3–7 creed + Dunn/Habermas dating [guardrail] + Paul's timeline/historeō + James the skeptic brother/Josephus + Gal 3:28 equality [neutrality flag] + resurrection-centrism cluster) |
-| Ch. 10 (Reason #7) | 115–124 | 🟡 captured pp. 115–124 (suffering/THEODICY guardrail + resurrection-hope cluster + Christian-burial innovation + death-of-a-Christian comfort texts + Lazarus + five-fold Hope + "I Am"/deity); continues past 124 |
-| Ch. 11–12 (Part Four) | 131–158 | ⬜ pending |
+| Ch. 10 (Reason #7) | 115–127 | ✅ **captured complete** (suffering/THEODICY guardrail + resurrection-hope + burial innovation + death-of-a-Christian comfort + Lazarus + "I Am"/deity + salvation cluster [sola-fide neutrality flag] + Antony Flew close) |
+| Ch. 11 (Part Four) | 131–132 | 🟡 opening captured (Holy Sepulchre vs. Garden Tomb question [neutrality flag] + Garden Tomb/Gordon's Golgotha history: Robinson/Schick); continues |
+| Ch. 12 (Part Four) | 139–158 | ⬜ pending |
 | **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
 | Copyright page | (front) | ⬜ **pending — need for publisher/year** |
 
