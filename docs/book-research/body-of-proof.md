@@ -542,12 +542,31 @@ the Resurrection tab intro framing.
     Thessalonians 4:13**; the second-coming detail **1 Cor 15:51–52** and **1 Thess 4:16** ("cry of
     command," "voice of an archangel," "trumpet of God"). **This is exactly our Resurrection rule — lead
     with the 1 Cor 15 early creed.** *Cross-map: `library/earlycreed.html`, `library/minimalfacts.html`.
-    Verify 1 Cor 15:20/22–24/51–52, Phil 3:20–21, 1 Thess 4:13/16.* The chapter then opens Paul's **four
-    questions** about the resurrection body (Q1 second coming; Q2 "what kind of body" — *deathlessness*,
-    literal/physical; **Qs continue pp. 84+, pending**).
-- **Ch. 7 — Reason #4: There Was No Motivation to Invent the Resurrection Narrative** (pp. 87–92
-  captured; opening pp. 87 + chapter continues past 92). **Thesis (our words):** a *cui bono* /
-  motivation argument — a first-century Torah-observant Jew had **neither the need nor the motive** to
+    Verify 1 Cor 15:20/22–24/51–52, Phil 3:20–21, 1 Thess 4:13/16.* The chapter then works Paul's **four
+    questions** about the resurrection body:
+  - **§ Paul's four questions, Q2–Q4 + the ascension close (pp. 84–86) — chapter ends:** **Q2 "what
+    kind of body?"** — patterned on Jesus' own (**Luke 24:39**, "flesh and bones… touch me"; **Phil
+    3:20–21**), characterized by Paul as **imperishable** and **immortal** (**1 Corinthians 15:53**),
+    "raised in glory… raised in power" (**1 Cor 15:43**), motivating "to live is Christ, to die is gain"
+    (**Philippians 1:21**; a Greg Laurie line is quoted — pointer only). **Q3 resurrection & valuing
+    life** (feeds Reason #7). **Q4 "why it matters today"** — the capstone: **1 Corinthians 15:58**
+    ("your labor in the Lord is *not in vain*," present tense, HCSB) — the resurrection gives present
+    work eternal weight. Closes on the **ascension/Great Commission** — **Matthew 28:17** ("they
+    worshiped Him; but some were doubtful," the Greek **διστάζω/*distazo*** = waver/hesitate) and
+    **28:19** ("Go therefore and make disciples"), with a pastorally strong **"doubt and worship
+    together — Jesus commissions doubters"** beat. **✅ Reusable for a doubt/faith answer — cross-map:
+    a `/answers/` doubt page, `library/eyewitnesses.html`.** *Verify Luke 24:39, 1 Cor 15:43/53/58,
+    Phil 1:21, Matt 28:17/19.* Chapter ends (p. 86) tying Reasons #2 and #3 together: Jesus predicted
+    *and* demonstrated power over death, foreshadowing his own resurrection.
+- **Ch. 7 — Reason #4: No Motivation to Invent Jesus' Resurrection Narrative Is Evident** (pp. 87–92
+  captured; chapter continues past 92). **Framing (p. 87):** the book structures the whole resurrection
+  case under **two headings — (1) the lack of a coherent/compelling alternative explanation, and (2)
+  substantial direct + circumstantial evidence for it** — and says the rest of the book focuses on (2).
+  It warns against **anachronism** — reading our post-Easter understanding back into the first
+  followers, who did **not** expect a dying-and-rising Messiah. *The book calls this "an original and
+  fresh argument"; **calibration:** the "no motivation to invent" point is **not actually novel** (cf.
+  N. T. Wright, and the criterion-of-embarrassment tradition) — don't repeat the originality claim.*
+  **Thesis (our words):** a *cui bono* / motivation argument — a first-century Torah-observant Jew had **neither the need nor the motive** to
   fabricate a bodily-resurrection story, so the disciples' resurrection claim is best explained by their
   actually believing it happened. NOT the same as our usual "died-for-a-lie" martyrdom point — the
   book's angle is that inventing the claim would have been *pointless and counterproductive*, not just
@@ -629,8 +648,8 @@ the Resurrection tab intro framing.
 | Part Three title page | 55 | ✅ captured |
 | Ch. 4 (Reason #1) | 57–63 | ✅ **captured complete** (social transformation + "world without God"/Hitler close; heavy calibration incl. Islam-polemic + atheism→Nazism flags) |
 | Ch. 5 (Reason #2) | 65–72 | 🟡 captured pp. 65–72 (Jesus predicted it + pretenders sidebar + passion-prediction box + Last Supper/new-covenant cluster + Great Commission/Lord's Day); may finish 73–74 |
-| Ch. 6 (Reason #3) | 75–83 | 🟡 captured pp. 75–83 (three raisings + resuscitation-vs-resurrection + glorified-body cluster + emic/etic w/ Trinity aside + Herod/JtB + 1 Cor 15 firstfruits); Q3–4 on 84–86 pending |
-| Ch. 7 (Reason #4) | 87–92 | 🟡 captured pp. 87–92 (no-motivation: "you didn't need it" + crucifixion-disqualifies + unique survival + Akiva + Celsus/Porphyry); continues past 92 |
+| Ch. 6 (Reason #3) | 75–86 | ✅ **captured complete** (three raisings + resuscitation-vs-resurrection + glorified-body + emic/etic w/ Trinity aside + Herod/JtB + 1 Cor 15 firstfruits + Paul's 4 questions + ascension/doubt close) |
+| Ch. 7 (Reason #4) | 87–92 | 🟡 captured pp. 87–92 (two-headings framing + no-motivation: "you didn't need it" + crucifixion-disqualifies + unique survival + Akiva + Celsus/Porphyry); continues past 92 |
 | Ch. 8–10 (Reasons 5–7) | 95–130 | ⬜ pending |
 | Ch. 11–12 (Part Four) | 131–158 | ⬜ pending |
 | **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
