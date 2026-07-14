@@ -660,6 +660,37 @@ the Resurrection tab intro framing.
     witnesses + Joseph of Arimathea + the located tomb). Verify the rabbinic citations, Deut 21:22–23,
     John 19:31, the burial texts (Mark 15:42–47 // Matt 27:57–60 // Luke 23:50–53 // John 19:38–42),
     1 Cor 15:4.*
+  - **§ Jodi Magness + the women's Sunday visit + tomb-stone archaeology (pp. 100–101):** cites
+    **Prof. Jodi Magness (UNC Chapel Hill)** — a real, top-tier Jewish-archaeology scholar — that the
+    Gospel burial is "consistent with archaeological evidence and Jewish law" (strong anchor). Explains
+    the women's **first-light-Sunday** visit by Sabbath timing (buried Friday before nightfall; Sat =
+    Shabbat; no night visits) and Jewish graveside-mourning custom (spices to mask decay; standing
+    prayer inside the tomb). Then the **tomb-stone shape** point: most first-century blocking stones were
+    **square/rectangular "cork/stopper" stones** (only ~10–20% the round rolling type, reserved for
+    wealthy family tombs) — Jesus was in **a rich man's tomb** (**Matthew 27:57–60**) with a stone the
+    women worried they couldn't move. **⚠️ Calibration:** the square-stopper-stone claim is the
+    **minority (Amos Kloner) view** and the Gospels do say the stone was "rolled" (Mark 16:4) — present
+    it as *a* possibility, not settled. *Verify the Magness attribution + the stone stats. Cross-map:
+    `library/emptytomb.html`, `library/archaeology.html`.*
+  - **§ "Established Facts" + the body never produced (pp. 102–103) — ✅ minimal-facts method:** the
+    book's method — you may dispute the women's *interpretation* ("maybe they were mistaken"), but not
+    the **established facts** (Jesus died by crucifixion; was buried in a known tomb; the tomb was found
+    empty; the followers experienced the risen Jesus) — this **is our minimal-facts / best-explanation
+    frame** (Habermas). Adds: the body **was never produced**, and in a culture that treated bones as a
+    sacred trust (the ~150,000 burials on the **Mount of Olives** — ⚠️ verify the figure) that silence
+    is telling; and the **women-as-first-witnesses** point (dismissed by some *because* they were women —
+    criterion of embarrassment). The appearances were **bodily, not a phantom** ("touch him… sit and
+    eat") — matches our frame. *Cross-map: `library/minimalfacts.html`, `library/emptytomb.html`,
+    `library/disciplesbelief.html`.*
+  - **§ Post-Resurrection Appearances sidebar (p. 103) — ✅ GOLD reference list (verify each):** to the
+    **women** (Matt 28:9–10); **Mary Magdalene** (Mark 16:9–10; John 20:14–17); the **Emmaus two**
+    (Mark 16:12–13; Luke 24:13–31); **Peter** (Luke 24:34; 1 Cor 15:5); **ten** in the upper room (Luke
+    24:36–49; John 20:19–23); **eleven** in the upper room (Mark 16:14; John 20:26–31; 1 Cor 15:5);
+    **seven fishing** (John 21:1–23); the **Galilee mountain** (Matt 28:16–20; Mark 16:15–18); **500+**
+    (1 Cor 15:6); **James, then all the apostles** (1 Cor 15:7); the **ascension** (Mark 16:19; Luke
+    24:50–51; Acts 1:7–9); **Paul** (Acts 9:3–6). **⚠️ Several entries lean on Mark 16:9–20 (the variant
+    long ending) — flag; prefer the non-Markan-ending parallel for each on use.** *Directly reusable on
+    `library/appearances`-type material, `minimalfacts`, `earlycreed`.*
   - **⚠️ Calibration:** keep the resurrection guardrail (the empty tomb + burial *corroborate*, and the
     resurrection is the *best explanation* of the agreed facts — not a stand-alone proof); manuscripts
     show preservation, not truth. *Cross-map primary tab: `ev-s2`; also `ev-s4` (Bible reliability).*
@@ -697,7 +728,7 @@ the Resurrection tab intro framing.
 | Ch. 5 (Reason #2) | 65–72 | 🟡 captured pp. 65–72 (Jesus predicted it + pretenders sidebar + passion-prediction box + Last Supper/new-covenant cluster + Great Commission/Lord's Day); may finish 73–74 |
 | Ch. 6 (Reason #3) | 75–86 | ✅ **captured complete** (three raisings + resuscitation-vs-resurrection + glorified-body + emic/etic w/ Trinity aside + Herod/JtB + 1 Cor 15 firstfruits + Paul's 4 questions + ascension/doubt close) |
 | Ch. 7 (Reason #4) | 87–93 | 🟡 captured pp. 87–93 (two-headings framing + no-motivation cluster + Historical-Questions demographics/sources + James & Saul hostile witnesses); continues past 93 (Ch. 8 opens p. 95) |
-| Ch. 8 (Reason #5) | 95–99 | 🟡 captured pp. 95–99 (archaeology/manuscripts + verisimilitude + empty-tomb tradition + honorable-vs-wretched burial / Joseph of Arimathea); continues past 99 |
+| Ch. 8 (Reason #5) | 95–103 | 🟡 captured pp. 95–103 (archaeology/manuscripts + burial argument + Magness + tomb-stone + minimal-facts "established facts" + post-resurrection appearances sidebar); may finish 104 |
 | Ch. 9–10 (Reasons 6–7) | 105–130 | ⬜ pending |
 | Ch. 11–12 (Part Four) | 131–158 | ⬜ pending |
 | **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
