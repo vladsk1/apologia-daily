@@ -994,9 +994,50 @@ the Resurrection tab intro framing.
     only Peter/John) as the empty-tomb witnesses, "dubious" by that culture's lights, is the embarrassing
     detail an inventor would have replaced. *Directly reusable on `library/emptytomb.html`,
     `library/manuscript.html`; verify the resurrection-account refs.*
+  - **§ Bowersock's "reverse influence" + the chapter's conclusion (pp. 154–157 — chapter ends): ✅ the
+    thesis payoff.** Classicist **Glen Bowersock** (*Fiction as History*) argued the Christian
+    death/burial/empty-tomb story may have *seeded* the **Scheintod ("apparent death")** theme in
+    Greco-Roman novels — **Chariton's *Chaereas and Callirhoe*, Achilles Tatius's *Leucippe and
+    Clitophon*, Xenophon of Ephesus's *Ephesian Tale*, Philostratus's *Life of Apollonius*** — i.e.
+    Christianity influenced the novels, **not the reverse** (another anti-"copycat" point; Celsus's "did
+    anyone who really died rise again with the same body?" — *Contra Celsum* 2.55 — is the same question
+    the novels play with). The Gospel of Peter is then one more such 2nd-c. "Christian novel" (with the
+    Acts of Paul and Thecla, Acts of John). **✅ "Why This Review Matters" (p. 157) — the clean summary
+    to reuse:** the apocrypha show how the resurrection "**could and should have been written** had the
+    goal been a compelling story but not a factual one"; by contrast **the canonical Gospels are
+    restrained, sober, committed to veracity — they leave themselves *open to criticism / apparent
+    vulnerability* out of fidelity to their sources.** That candor is the reliability marker. *Strong,
+    quotable close — cross-map `library/coincidences.html`, `library/emptytomb.html`,
+    `library/manuscript.html`. Verify Bowersock + the four novels.* **⚠️** the Gospel of Peter's
+    Pilate-exoneration / anti-Jewish blame (Akhmîm 11.46, 11.48) recurs here — same flag: don't reproduce.
   - **⚠️ Calibration:** keep it as **evidence of authenticity/antiquity (best explanation), not proof of
     the resurrection**; hold the respectful framing on the women-witness point (don't repeat Porphyry's
     Mary-Magdalene slur); hold the anti-Jewish flag on the Gospel of Peter. *Cross-map primary tab: `ev-s2`.*
+
+### Back matter — Notes / endnotes (p. 163 → ; **capture started, high-value**)
+The endnotes begin on **p. 163**. Already captured (they **resolve several earlier UNVERIFIED flags** —
+see the ✅ back-references below):
+- **Intro n. 1 — the declining-resurrection-belief stat is real:** it's the **BBC News, 9 April 2017,
+  "Resurrection did not happen, say quarter of Christians"** + the **ComRes / BBC Religion & Ethics**
+  poll data tables. **✅ Resolves the Introduction's "one in four" UNVERIFIED flag** — it's a sourced
+  2017 BBC/ComRes survey (verify the exact figures against the data tables before quoting).
+- **Intro n. 2 — Johnston's credentials:** he cites ~150,000 words on the resurrection across an academic
+  monograph + peer-reviewed journals (OUP reference works; **E. J. Brill**; **Mohr Siebeck**), and names
+  his doctoral **supervisors — Prof. Craig A. Evans (Houston Baptist Univ.) and Prof. Paul Foster (Univ.
+  of Edinburgh) — and external examiner Prof. William Telford (Durham Univ.)**. **✅ Partly resolves the
+  Ch. 1 "confirm his degree-granting institution" flag:** supervisors/examiner are now named (the earlier
+  chapter's "Oxford" placement of the viva looks loose — the note names Edinburgh/Durham/Houston Baptist,
+  not Oxford; still no single degree-granting university stated, so keep that precision note).
+- **Ch. 1 n. 1 — the "obituary of Jesus" is a real piece:** **Sam Roberts, "Jesus of Nazareth, Whose
+  Messianic Message Captivated Thousands, Dies at About 33," *Vanity Fair*, 25 March 2016** (NYT-obituary
+  *style*; the URL is vanityfair.com/culture/…jesus-new-york-times-obituary). Contributors include **Reza
+  Aslan, Markus Bockmuehl, Bart D. Ehrman, Jeremiah J. Johnston (the author himself), Helmut Koester,
+  Daniel Master, Lawrence E. Stager, Peter Williams**, and others. **✅ Resolves the Ch. 1 "find + verify
+  the actual published piece" flag** — it ran in *Vanity Fair* (2016), and Johnston was a contributor.
+- *Still to capture: the rest of the Notes (chs. 2–12 endnotes) — the primary-source + scholarly citation
+  trail (Josephus refs, the rabbinic-burial sources, Dunn/Habermas/Bauckham page cites, the Akhmîm/
+  Contra Celsum/Apocriticus editions, Bowersock, Magness, Barkay, the Edicule reports). This is the
+  richest remaining verification target.*
 - **From Oxford to Jerusalem — My Academic Journey** (p. 159) — author bio/testimony. Low priority.
 - **Notes** (p. 163+) — **the endnotes: highest-value target for the next batch.**
 - **About the Author** (p. 173).
@@ -1023,8 +1064,9 @@ the Resurrection tab intro framing.
 | Ch. 9 (Reason #6) | 105–114 | ✅ **captured complete** (1 Cor 15:3–7 creed + Dunn/Habermas dating [guardrail] + Paul's timeline/historeō + James the skeptic brother/Josephus + Gal 3:28 equality [neutrality flag] + resurrection-centrism cluster) |
 | Ch. 10 (Reason #7) | 115–127 | ✅ **captured complete** (suffering/THEODICY guardrail + resurrection-hope + burial innovation + death-of-a-Christian comfort + Lazarus + "I Am"/deity + salvation cluster [sola-fide neutrality flag] + Antony Flew close) |
 | Ch. 11 (Part Four) | 131–138 | ✅ **captured complete** (Holy Sepulchre vs Garden Tomb; Garden Tomb rejected [Barkay/Crusader]; Holy Sepulchre defended: Agrippa's walls, Hadrian-preserved-the-tomb, Helena/Constantine, 2016–17 Edicule bench; Justin/Eusebius w/ a Jewish-sensitivity flag) |
-| Ch. 12 (Part Four) | 139–153 | 🟡 captured pp. 139–153 (embarrassment/Dudrey; miracles vs Asclepius + anti-copycat; Celsus + Porphyry [Apocriticus] + Julian; the apocrypha as the "improved" version [Jewish-sensitivity flag]; the honest discrepancies list; the "no one saw the resurrection itself" restraint payoff); continues (upper-room → ends ~158) |
-| **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
+| Ch. 12 (Part Four) | 139–157 | ✅ **captured complete** (embarrassment/Dudrey; miracles vs Asclepius; Celsus + Porphyry + Julian; the apocrypha as the "improved" version; honest discrepancies list; Bowersock's Scheintod reverse-influence; "Why This Review Matters" — canonical restraint = reliability) |
+| From Oxford to Jerusalem (bio) | 159 | ⬜ pending (low priority — author testimony) |
+| **Notes / endnotes** | **163+** | 🟡 **STARTED (p. 163)** — resolved 3 flags (BBC/ComRes 2017 poll; Johnston's supervisors Evans/Foster/Telford; the *Vanity Fair* 2016 obituary); rest pending — **richest remaining target** |
 | Copyright page | (front) | ⬜ **pending — need for publisher/year** |
 
 ## Cross-map to our Evidence Library
