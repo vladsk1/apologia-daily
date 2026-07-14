@@ -610,6 +610,20 @@ the Resurrection tab intro framing.
     — verify each as real pagan critics of resurrection; cross-map: `library/manuscript.html`, the
     "hostile-testimony" material. **Calibration:** "no other religion comes close [to testability]" is
     popular-level rhetoric — soften to a comparative claim on use.*
+  - **§ "Historical Questions" — demographics, sources, hostile witnesses (p. 93):** the chapter's
+    second heading (evidence) opens by sketching the **high-mortality Roman world** (the book claims
+    life expectancy ~20; up to a quarter sick/dying on a given day; infant mortality ~30%; the **San
+    Panfilo catacomb in Rome, 83 of 111 graves for children**; only ~40% reaching age 20) to explain why
+    Jesus the **healer** drew crowds (**Mark 5:14; 6:56; 8:22; 10:13**). **⚠️ Those demographic stats are
+    popular-level — verify each against the endnotes before any use.** It then lists the resurrection
+    narratives across **all four Gospels + Acts** (**Matthew 27:62–28:20; Mark 16:1–20** [⚠️ the
+    longer/variant ending — flag]; **Luke 24:1–53; John 20–21; Acts 1:1–12**), reaffirms **Paul as the
+    "best and earliest source,"** and makes the **hostile/transformed-witness** point: the testimony
+    comes from believers, the indifferent, **and from two who opposed Jesus — James (his skeptical
+    brother) and Saul of Tarsus (who used violence)** — both transformed by an encounter with the risen
+    Jesus. **✅ Strong lead — cross-map: `library/paulconv.html` (Paul + James as skeptic-to-believer
+    conversions), `library/minimalfacts.html`.** *Verify Mark 5:14/6:56/8:22/10:13, the narrative refs,
+    and the James/1 Cor 15:7 + Galatians 1 material.*
   - **⚠️ Overall calibration:** the motivation argument is **abductive** (best explanation of why they
     believed), not a proof of the event; keep it as "their conviction is hard to explain on invention,"
     not "this proves the resurrection." And represent Second-Temple Judaism **charitably and accurately**
@@ -649,7 +663,7 @@ the Resurrection tab intro framing.
 | Ch. 4 (Reason #1) | 57–63 | ✅ **captured complete** (social transformation + "world without God"/Hitler close; heavy calibration incl. Islam-polemic + atheism→Nazism flags) |
 | Ch. 5 (Reason #2) | 65–72 | 🟡 captured pp. 65–72 (Jesus predicted it + pretenders sidebar + passion-prediction box + Last Supper/new-covenant cluster + Great Commission/Lord's Day); may finish 73–74 |
 | Ch. 6 (Reason #3) | 75–86 | ✅ **captured complete** (three raisings + resuscitation-vs-resurrection + glorified-body + emic/etic w/ Trinity aside + Herod/JtB + 1 Cor 15 firstfruits + Paul's 4 questions + ascension/doubt close) |
-| Ch. 7 (Reason #4) | 87–92 | 🟡 captured pp. 87–92 (two-headings framing + no-motivation: "you didn't need it" + crucifixion-disqualifies + unique survival + Akiva + Celsus/Porphyry); continues past 92 |
+| Ch. 7 (Reason #4) | 87–93 | 🟡 captured pp. 87–93 (two-headings framing + no-motivation cluster + Historical-Questions demographics/sources + James & Saul hostile witnesses); continues past 93 (Ch. 8 opens p. 95) |
 | Ch. 8–10 (Reasons 5–7) | 95–130 | ⬜ pending |
 | Ch. 11–12 (Part Four) | 131–158 | ⬜ pending |
 | **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
