@@ -330,24 +330,62 @@ the Resurrection tab intro framing.
 ### Part Three — "The 7 Best Reasons to Believe in the Resurrection of Jesus"
 *(Part-title page p. 55 — ✅ captured. Chapters below.)*
 - **Ch. 4 — Reason #1: Society Is Transformed Everywhere Christianity Is Introduced and Embraced**
-  (pp. 57–… ; opening p. 57 captured, chapter continues). **Thesis (our words):** a *social-fruit*
-  argument — the resurrection launched a movement whose effect on the world is measurable. Opens with a
+  (pp. 57–62 captured; chapter continues past 62). **Thesis (our words):** a *social-fruit* argument —
+  the resurrection launched a movement whose effect on the world is measurable. Opens with a
   **counterfactual device** ("what would the world be like if the resurrection had never happened?"),
   compared to other historical what-ifs (Churchill, WWII, Greece vs. Persia). His move: we don't have to
   *guess* the counterfactual — we can look at what the pre-Christian world was actually like, and at
   what avowedly anti-Christian regimes (**Soviet communism, Nazi Germany**) produced, as a rough control.
-  - **⚠️ CALIBRATION (important — this is the softest of the seven):** a *social-consequences* argument is
-    **inductive and indirect** — it does **not** by itself establish that the resurrection *happened*
-    (a movement's good fruit doesn't prove its founding miracle). On any use, (a) don't overstate
-    causation or claim Christianity is the *sole* cause of a social good; (b) be historically honest
-    that things done *in the church's name* cut both ways; (c) frame it as **corroborating** the
-    transforming power the resurrection claim would predict, not as proof of the event. Keep it a
-    *supporting* consideration, never a lead resurrection proof. *Cross-map: this is more an apologetic-
-    for-Christianity's-impact point than a `ev-s2` resurrection-evidence point; use sparingly and with
-    the causation caveat.*
-  - *Leads to capture in the chapter body: whatever specific historical claims/stats he cites for the
-    pre-Christian world and for the communism/Nazi comparison — these are exactly the popular-level
-    numbers that need the endnotes + independent verification before any use.*
+  He develops the case in **four areas** (each with an endnote — chase these in the Notes):
+  1. **The Revelation of a Loving God (p. 59):** against petty/capricious/placate-able pagan gods, the
+     one God who "is love" and gives his Son — **John 3:16** ("God so loved the world…"). *Verify John
+     3:16 wording; strong, clean lead.*
+  2. **Improvement in Ethics and Morals (p. 60):** claims the Christianized empire ended gladiatorial
+     games, curbed infanticide, and improved the treatment of women/children; notes ~**2.4 billion**
+     adherents today. *Numbers + "racism disappeared by the 4th c." = overstatement, see flag below.*
+  3. **More Social and Cultural Freedoms for Women (pp. 60–61):** the imago Dei + Jesus' practice
+     implied men and women are equal in God's eyes; women taught, led, and were drawn by the church's
+     mercy. **⚠️ Denominational-neutrality watch:** the book threads a "different, complementary roles
+     in family and public, but equal before God" line — that lands in a *contested intra-Christian*
+     complementarian/egalitarian debate. **Do not import either side as settled**; keep to the neutral,
+     shared point (the early church dignified women strikingly against its pagan context).
+  4. **Strides in Science, the Arts, and the Quality of Life (pp. 61–62):** the "created order is
+     intelligible because a rational God made it, and humans as imago Dei can explore it" thesis behind
+     early modern science; Christian themes in the arts (**Leonardo's *Last Supper*, Michelangelo's
+     Sistine Chapel ceiling**); universities, hospitals, orphanages, literacy. *Cross-map: `ev-s5`
+     Science & Faith (the "Christian roots of science" argument we already run — Stark/Hannam-type
+     material). Verify any specific attribution before use.*
+  - The chapter closes with a **"What Makes Christianity Unique?"** section (p. 62): a third of the world
+    now follows Jesus; the pre-Christian world was polytheistic; the net effect is framed as an "enormous
+    improvement in the quality of life."
+  - **⚠️⚠️ CALIBRATION — this is the softest AND most rhetorically loaded chapter; hold the line hard:**
+    1. **Structural limit:** a *social-consequences* argument is **inductive and indirect** — it does
+       **not** establish that the resurrection *happened* (good fruit doesn't prove the founding
+       miracle). Frame as **corroborating** the transforming power the claim would predict, never as a
+       lead resurrection proof; be honest that deeds done *in the church's name* cut both ways.
+    2. **Overstatement to NOT adopt:** "racism disappeared" / cruelty simply "came to an end" by the 4th
+       century; Christianity "abolished slavery not once but twice"; sweeping "we'd still be savages /
+       witch doctors / smoke signals without Christianity" counterfactuals. These are popular-level and
+       historically contestable (slavery persisted in Christendom for centuries; abolition is a real but
+       *contested and gradual* Christian-led achievement — see Wilberforce/Wesley, whom the book
+       rightly credits). Soften every "disappeared/ended/abolished" absolute to the honest historical
+       claim on use.
+    3. **⚠️ ISLAM POLEMIC — do NOT reproduce as-is (guardrail-critical):** the book asserts the
+       "Islamic trilogy (Qur'an, Hadith, Sira) contains the most elaborate slave code," that "Islam has
+       enslaved more people than any other culture," and that slavery persists in Saudi Arabia /
+       Mauritania / Sudan (its footnote 3). **This is exactly the kind of comparative claim our "charity
+       is accuracy" guardrail governs.** Some of it points at real, documented facts (Mauritania's late
+       abolition; historical Islamic slavery) but the superlatives ("more than any other culture") are
+       polemical and hard to verify. **If ever used: (a) drop the superlatives; (b) source each factual
+       claim to a scholarly primary before any use; (c) keep 1 Peter 3:15 tone — no civilizational
+       sneer; (d) route through the Islam-tab review, not the resurrection tab.** Treat this whole
+       passage as UNVERIFIED and high-sensitivity.
+    4. **Enlightenment aside (p. 58):** the book notes several Enlightenment figures (**Hobbes, Locke,
+       Voltaire, Hume, Burke**) did *not* oppose slavery — a fair corrective to a "secular reason freed
+       the slaves" myth, but verify each name's actual record before repeating (their views varied).
+  - *Cross-map: primarily an apologetic-for-Christianity's-impact point (touches `ev-s5`), NOT a
+    `ev-s2` resurrection-evidence point. The specific stats (2.4 billion; "one-third follow Jesus";
+    the slavery/Islam claims) all need the **endnotes** + independent verification before any use.*
 - **Ch. 5 — Reason #2: Jesus called it, "#OnTheThirdDay"** (p. 65). Jesus' passion/resurrection
   predictions. Leads: Mark 8:31; 9:31; 10:33–34; Matt 12:40; John 2:19. *Verify each. Pending.*
 - **Ch. 6 — Reason #3: Jesus demonstrated resurrection power** (p. 75). Likely the raisings
@@ -432,7 +470,7 @@ the Resurrection tab intro framing.
 | Ch. 2 (Part One) | 33–42 | ⬜ pending (skipped in capture order) |
 | Ch. 3 (Part Two) | 43–54 | ✅ **captured complete** (claim + OT/Jewish roots + real-vs-extracanonical Jesus + eyewitness memory + bodily-resurrection cluster) |
 | Part Three title page | 55 | ✅ captured |
-| Ch. 4 (Reason #1) | 57–… | 🟡 opening captured (p. 57 — social-transformation thesis + calibration); body 58–64 pending |
+| Ch. 4 (Reason #1) | 57–62 | 🟡 captured pp. 57–62 (social transformation: loving God / ethics / women / science-arts + "what makes Christianity unique"; heavy calibration incl. Islam-polemic flag); continues past 62 |
 | Ch. 5 (Reason #2) | 65–74 | ⬜ pending |
 | Ch. 6 (Reason #3) | 75–86 | ⬜ pending |
 | Ch. 7 (Reason #4) | 87–92 | 🟡 captured pp. 87–92 (no-motivation: "you didn't need it" + crucifixion-disqualifies + unique survival + Akiva + Celsus/Porphyry); continues past 92 |
