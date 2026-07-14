@@ -859,6 +859,18 @@ the Resurrection tab intro framing.
     rock-cut tomb with a stone-groove; a nearby olive press echoing **Gethsemane** ("olive press";
     **Matthew 26:36; Mark 14:32**). *Cross-map: `library/archaeology.html`, `library/emptytomb.html`.
     Verify Matt 27:33/26:36, Mark 15:22/14:32, John 19:17; Robinson/Schick/Gordon are real, verify dates.*
+  - **§ Why archaeology REJECTS the Garden Tomb (p. 133) — ✅ the book itself concludes against it:**
+    **General Charles Gordon** (visited Jerusalem 1883, influenced by Schick) popularized it via a
+    "skeletal diagram" matching Skull Hill — but the book states plainly that **archaeology does not
+    support the Garden Tomb**: it is **far too old** to be Joseph of Arimathea's "new" tomb
+    (**Matthew 27:60**; cf. **Luke 23:53**) — Israeli archaeologist **Gabriel Barkay** dates it to the
+    **7th–8th century BC (Iron Age)**, others to the Hellenistic period; its architecture doesn't match
+    first-century tombs; the entrance "groove" is a **medieval Crusader** water trough (not a
+    rolling-stone track) and the "olive press" a Crusader cistern; and the "skull" face has heavily
+    eroded since the 1800s. **So the book's own verdict aligns with mainstream scholarship — the Garden
+    Tomb is NOT Jesus' tomb** (removes the earlier "keep the balance" caveat: the author agrees). *This
+    is a good, honest example for us — cross-map `library/archaeology.html`; verify Barkay's dating +
+    Matt 27:60 / Luke 23:53.*
 - **Ch. 12 — If the Disciples Invented the Story of Jesus' Resurrection, They Did a Terrible Job**
   (p. 139). The "incidental awkwardness / undesigned" style argument — dovetails with our new
   undesigned-coincidences material. *Pending — high-interest chapter.*
@@ -887,7 +899,7 @@ the Resurrection tab intro framing.
 | Ch. 8 (Reason #5) | 95–103 | 🟡 captured pp. 95–103 (archaeology/manuscripts + burial argument + Magness + tomb-stone + minimal-facts "established facts" + post-resurrection appearances sidebar); may finish 104 |
 | Ch. 9 (Reason #6) | 105–114 | ✅ **captured complete** (1 Cor 15:3–7 creed + Dunn/Habermas dating [guardrail] + Paul's timeline/historeō + James the skeptic brother/Josephus + Gal 3:28 equality [neutrality flag] + resurrection-centrism cluster) |
 | Ch. 10 (Reason #7) | 115–127 | ✅ **captured complete** (suffering/THEODICY guardrail + resurrection-hope + burial innovation + death-of-a-Christian comfort + Lazarus + "I Am"/deity + salvation cluster [sola-fide neutrality flag] + Antony Flew close) |
-| Ch. 11 (Part Four) | 131–132 | 🟡 opening captured (Holy Sepulchre vs. Garden Tomb question [neutrality flag] + Garden Tomb/Gordon's Golgotha history: Robinson/Schick); continues |
+| Ch. 11 (Part Four) | 131–133 | 🟡 captured pp. 131–133 (Holy Sepulchre vs. Garden Tomb + Garden Tomb history Robinson/Schick/Gordon + archaeology REJECTS the Garden Tomb: Barkay Iron-Age dating, Crusader trough); continues (134–137 pending — API image outage) |
 | Ch. 12 (Part Four) | 139–158 | ⬜ pending |
 | **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
 | Copyright page | (front) | ⬜ **pending — need for publisher/year** |
