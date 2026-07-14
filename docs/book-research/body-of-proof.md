@@ -352,9 +352,54 @@ the Resurrection tab intro framing.
   predictions. Leads: Mark 8:31; 9:31; 10:33–34; Matt 12:40; John 2:19. *Verify each. Pending.*
 - **Ch. 6 — Reason #3: Jesus demonstrated resurrection power** (p. 75). Likely the raisings
   (Lazarus — John 11; Jairus' daughter — Mark 5; the widow's son — Luke 7). *Pending.*
-- **Ch. 7 — Reason #4: No motivation to invent the resurrection narrative** (p. 87). Embarrassment /
-  women as first witnesses / martyrdom-for-a-lie. Cross-map: `library/emptytomb.html`,
-  `library/disciplesbelief.html`. *Pending.*
+- **Ch. 7 — Reason #4: There Was No Motivation to Invent the Resurrection Narrative** (pp. 87–92
+  captured; opening pp. 87 + chapter continues past 92). **Thesis (our words):** a *cui bono* /
+  motivation argument — a first-century Torah-observant Jew had **neither the need nor the motive** to
+  fabricate a bodily-resurrection story, so the disciples' resurrection claim is best explained by their
+  actually believing it happened. NOT the same as our usual "died-for-a-lie" martyrdom point — the
+  book's angle is that inventing the claim would have been *pointless and counterproductive*, not just
+  costly. Several threads:
+  - **§ Psychological / "you didn't need it" (pp. 88–90):** a devout Jew already had a covenant (Sinai,
+    Moses, the Law), the prophets, prophetic promises that God would redeem Israel, a hope of the
+    afterlife/future resurrection (as the **Pharisees** held), plus heritage, community, and legacy in
+    distinction from the polytheistic Greco-Roman world. So there was **no religious vacuum** a
+    made-up resurrection would fill — "if you're Jewish, you don't need it." A grieving follower could
+    coherently say: *Jesus is dead, but what he taught is true, he's with God, and he'll be vindicated
+    at the future resurrection as the Pharisees expect* — **without one word about Jesus himself being
+    already raised.** The book stresses the disciples *understood* Jesus predicted his death and rising
+    yet resisted it — **Peter's rebuke and Jesus' counter-rebuke: Matthew 16:22–23** ("Get behind me,
+    Satan!") // **Mark 8:31–33** ("he said this plainly"). *Leads to verify: Matt 16:22–23; Mark 8:31–33.*
+  - **§ The crucifixion *disqualified* a messianic claim (p. 91):** death on a Roman cross was shameful
+    and, on the standard expectation (Messiah defeats Rome, restores Israel), would have *invalidated*
+    Jesus' messianic claim — there was **no Jewish paradigm** in which the Messiah must die and rise.
+    So a dead-and-buried Jesus gave his followers every reason to conclude they'd been mistaken, not to
+    invent a resurrection. *Cross-map: `library/emptytomb.html`, `library/disciplesbelief.html`,
+    `library/earlycreed.html`.*
+  - **§ The unique survival of the movement (p. 91 — cross-refs ch. 5):** the book cites **"at least
+    ten" messianic/prophetic pretenders around Jesus' time** whose movements **collapsed once the
+    leader was defeated/executed** — Jesus' movement is the lone exception that *continued and grew*
+    after its founder's execution. *Strong, verifiable lead — chase the specific list (Theudas, Judas
+    the Galilean, the Egyptian, Bar Kokhba, etc., via **Josephus** + **N. T. Wright**, *The Resurrection
+    of the Son of God*); verify the "ten" figure and each name before use. Cross-map: `library/paulconv.html`,
+    the "why did the movement survive" material.*
+  - **§ The Rabbi Akiva counter-example (p. 92):** **Rabbi Akiva (Aqiba)**, martyred in the **2nd
+    century AD** (Bar Kokhba revolt), had his teaching cherished and preserved **without anyone
+    inventing a resurrection story** about him — showing that revering a dead teacher does *not*
+    require resurrection claims. *Verify Akiva's martyrdom (Talmudic sources / Roman persecution under
+    Hadrian) before citing; it's a clean analogy.*
+  - **§ Historical-testability + hostile pagan reception (p. 92, "Historical Questions"):** Christianity
+    is uniquely **testable against history**, and in the 1st–3rd centuries bodily resurrection was
+    **mocked and attacked** by pagan intellectuals — the book names **Celsus** and **Porphyry** (and, on
+    p. 88, notes the early Greeks found a risen-body claim "grotesque"). Inventing a resurrection was
+    therefore the *worst* possible marketing choice — evidence the claim was conviction, not strategy.
+    *Leads: Celsus (via **Origen**, *Contra Celsum*) and **Porphyry** (*Against the Christians*, fragmentary)
+    — verify each as real pagan critics of resurrection; cross-map: `library/manuscript.html`, the
+    "hostile-testimony" material. **Calibration:** "no other religion comes close [to testability]" is
+    popular-level rhetoric — soften to a comparative claim on use.*
+  - **⚠️ Overall calibration:** the motivation argument is **abductive** (best explanation of why they
+    believed), not a proof of the event; keep it as "their conviction is hard to explain on invention,"
+    not "this proves the resurrection." And represent Second-Temple Judaism **charitably and accurately**
+    (the "you already had everything" point must not tip into caricature). *Cross-map primary tab: `ev-s2`.*
 - **Ch. 8 — Reason #5: Written and archaeological sources support the Gospels' narrative** (p. 95).
   Cross-map: `library/archaeology.html`, `library/manuscript.html`. *Pending — endnotes crucial here.*
 - **Ch. 9 — Reason #6: Only the resurrection explains the conversion of non-followers** (p. 105).
@@ -387,8 +432,10 @@ the Resurrection tab intro framing.
 | Ch. 2 (Part One) | 33–42 | ⬜ pending (skipped in capture order) |
 | Ch. 3 (Part Two) | 43–54 | ✅ **captured complete** (claim + OT/Jewish roots + real-vs-extracanonical Jesus + eyewitness memory + bodily-resurrection cluster) |
 | Part Three title page | 55 | ✅ captured |
-| Ch. 4 (Reason #1) | 57–… | 🟡 opening captured (p. 57 — social-transformation thesis + calibration); body pending |
-| Ch. 4–7 rest (Reasons 1–4) | 58–94 | ⬜ pending |
+| Ch. 4 (Reason #1) | 57–… | 🟡 opening captured (p. 57 — social-transformation thesis + calibration); body 58–64 pending |
+| Ch. 5 (Reason #2) | 65–74 | ⬜ pending |
+| Ch. 6 (Reason #3) | 75–86 | ⬜ pending |
+| Ch. 7 (Reason #4) | 87–92 | 🟡 captured pp. 87–92 (no-motivation: "you didn't need it" + crucifixion-disqualifies + unique survival + Akiva + Celsus/Porphyry); continues past 92 |
 | Ch. 8–10 (Reasons 5–7) | 95–130 | ⬜ pending |
 | Ch. 11–12 (Part Four) | 131–158 | ⬜ pending |
 | **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
