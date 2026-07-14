@@ -800,6 +800,31 @@ the Resurrection tab intro framing.
     apostles except James the Lord's brother"), the creed received "within five years." *Matches our
     bodily-transformed frame; cross-map `library/earlycreed.html`. Verify 1 Cor 15:35–49/52, 1 Thess 4:16,
     Gal 1:18–19.*
+  - **§ Christian burial innovation (p. 120):** resurrection hope reshaped burial — early Christians
+    coined **"cemetery"** (Gk. *koimētērion*, "sleeping place") vs. pagan *necropolis*/*mausoleum*, and
+    cared for each body (against Rome's mass corpse-dumping — the ~1,500-corpse figure and the *puticuli*
+    mass pits [book spells "petuculi"]), which the book credits for the faith's spread among the poor.
+    *Cross-map `library/archaeology.html`; verify the Latin/Greek terms + the Rome stats vs. the endnotes.*
+  - **§ "What the Bible says about a Christian's death" (pp. 120–124) — devotional/hope cluster:**
+    **Psalm 116:15** ("Precious in the sight of the LORD…"); **Romans 8:35, 37–39** (nothing separates us);
+    **2 Corinthians 5:8** ("absent from the body… present with the Lord"); **Luke 23:43** (the thief,
+    "today… in paradise"); **John 11:25–26** ("I am the resurrection and the life"), the **Lazarus**
+    narrative (Bethany ~2 mi from Jerusalem; **John 11:21, 32, 33–35** incl. "Jesus wept"). Two named
+    deathbed testimonies — **F. B. Meyer** ("we shall meet in the morning") and **William Carey** ("speak
+    about Dr. Carey's Savior"). **⚠️ Flags:** (1) the slogan **"A Christian life isn't perfect, just
+    forgiven" is a bumper-sticker, NOT Scripture** — don't cite it as biblical; (2) **"not one sin… will
+    keep him out of heaven" touches the eternal-security / perseverance debate — keep denominational
+    neutrality, do NOT adjudicate**; (3) verify the Meyer + Carey quotes. *Cross-map `library/evil.html`
+    (hope-in-grief), a `/answers/` "what happens after death" page.*
+  - **§ The five-fold "Hope" + the "I Am" deity point (pp. 123–124):** structures John 11:25–26 as
+    **Person / Power / Prerequisite / Promise / Permanence of Hope**. The **"I Am the resurrection"** is
+    tied to the divine **"I Am" (Yahweh, Exodus 3; *adonai*/*kyrios* = "Lord")** — a **deity-of-Christ**
+    move (Jesus speaks the divine self-designation). **✅ Orthodox and useful — cross-map the Jesus/deity
+    material (`ev-s3`, `library/jesus_as_god_nt.html` / the "I Am" sayings).** **⚠️ Minor:** the phrase
+    **"the ground of all being"** carries a Tillichian echo — the book's own gloss ("Creator and Sustainer…
+    no other gods exist") keeps it orthodox (classical self-existence/aseity, not panentheism); prefer
+    "self-existent Creator" wording on use. Plus **Romans 1:16** ("not ashamed of the gospel… power of
+    God") and **John 14:19**. *Verify Exodus 3:14, John 8:58-type "I Am" sayings, Rom 1:16.*
 
 ### Part Four — "The New Frontier: Further Assessing the Evidence" *(pending capture)*
 - **Ch. 11 — The Most Significant Place in Christianity** (p. 131). Likely the empty tomb / Jerusalem
@@ -831,7 +856,7 @@ the Resurrection tab intro framing.
 | Ch. 7 (Reason #4) | 87–93 | 🟡 captured pp. 87–93 (two-headings framing + no-motivation cluster + Historical-Questions demographics/sources + James & Saul hostile witnesses); continues past 93 (Ch. 8 opens p. 95) |
 | Ch. 8 (Reason #5) | 95–103 | 🟡 captured pp. 95–103 (archaeology/manuscripts + burial argument + Magness + tomb-stone + minimal-facts "established facts" + post-resurrection appearances sidebar); may finish 104 |
 | Ch. 9 (Reason #6) | 105–114 | ✅ **captured complete** (1 Cor 15:3–7 creed + Dunn/Habermas dating [guardrail] + Paul's timeline/historeō + James the skeptic brother/Josephus + Gal 3:28 equality [neutrality flag] + resurrection-centrism cluster) |
-| Ch. 10 (Reason #7) | 115–119 | 🟡 captured pp. 115–119 (suffering: Jobs/Biafra hook + THEODICY guardrail [book models 'concede mystery', soften 'only basis'] + Lewis quote + resurrection-hope cluster + 1 Cor 15:35–49 body); continues past 119 |
+| Ch. 10 (Reason #7) | 115–124 | 🟡 captured pp. 115–124 (suffering/THEODICY guardrail + resurrection-hope cluster + Christian-burial innovation + death-of-a-Christian comfort texts + Lazarus + five-fold Hope + "I Am"/deity); continues past 124 |
 | Ch. 11–12 (Part Four) | 131–158 | ⬜ pending |
 | **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
 | Copyright page | (front) | ⬜ **pending — need for publisher/year** |
