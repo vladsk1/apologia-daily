@@ -963,12 +963,40 @@ the Resurrection tab intro framing.
     late, tendentious embellishment* — **keep that framing; do NOT reproduce the Gospel of Peter's
     Pilate-exoneration / Jewish-blame in our voice.** Its blame-shift is a red flag of its lateness, not
     a datum to repeat. (Same guardrail as the Ch. 11 Justin/Eusebius flag.)
-  - **§ Porphyry opens (p. 148):** **Porphyry** (c. AD 232–303, a native of **Tyre**; heard Origen
-    preach in his youth) studied the Hebrew Scriptures and Gospels but found them "lacking in literary
-    quality and philosophical sophistication." *Section continues past 148.*
+  - **§ Porphyry (pp. 148–150):** **Porphyry** (c. AD 232–303, of **Tyre**; heard Origen preach; later
+    a bitter opponent — persecution under **Decius**) wrote the 15-book **_Against the Christians_**,
+    preserved partly via **Macarius Magnes's *Apocriticus*** (4th/5th c.; refs *Apocrit.* 2.12, 2.14).
+    He echoes Celsus: "the evangelists were **fiction writers**… each of the four contradicts the
+    other," mocking the **varying last words** of Jesus ("Into your hands I commit my spirit" [Luke
+    23:46]; "It is finished" [John 19:30]; "My God, my God, why have you forsaken me" [Matt 27:46/Mark
+    15:34] — ⚠️ his fourth, "why do you *punish* me," is the **Gospel of Peter** variant, not canonical);
+    and he sneers that Jesus appeared only to **Mary Magdalene** ("possessed by seven demons") and lowly
+    women, not to Pilate/Herod/the high priest. **⚠️** Porphyry's "Mary Magdalene = prostitute" is a
+    **later slur, not in the NT** — don't repeat it. Again the point: the Gospel of Peter "fixed" exactly
+    what Porphyry demanded (high-rank + Roman witnesses), the canonical accounts didn't.
+  - **§ The honest discrepancies list (pp. 151–153) — ✅ good, matches our "honest concession" rule:**
+    the book **openly lays out** the real un-harmonized differences (which is the *point* of the "terrible
+    job" thesis — inventors would have smoothed them): (1) **which women** — Mark 16:1 (three: Mary
+    Magdalene, Mary mother of James, Salome), Matt 28:1 (two Marys), Luke 24:1,10 (five+ incl. Joanna);
+    (2) **the angel(s)** — Mark 16:5 "a young man," Luke 24:4 "two men," Matt 28:2–3 "an angel," John
+    none; (3) **Galilee vs Jerusalem** appearances (Mark 16:7 Galilee; Luke–Acts Jerusalem; Matt/John
+    both). Also cites **Julian "the Apostate," *Contra Galilaeos*** (via **Cyril of Alexandria**) pressing
+    the same. **✅ These are exactly the "incidental-detail discrepancies" our own material addresses as
+    marks of independent testimony, not core contradiction — cross-map `answers/`-style resurrection-
+    contradictions material + `library/emptytomb.html`.** Mark 16:9–20 is again flagged as the variant
+    ending ("rightly omitting 16:9–20"). *Church Fathers who answered the mockery (leads): Gregory of
+    Nyssa (*Oratio catechetica* 5), Lactantius (*Div. inst.* 5.2), Libanius (*Or.* 18.178), the pagan
+    Lucian (*De morte Peregrini* 11).*
+  - **§ THE payoff line (p. 153) — ✅ strong cross-map:** the canonical Gospels give **no eyewitness of
+    the resurrection *event itself*** — only the empty tomb, the angel(s), and the appearances; **nobody
+    watches Jesus rise.** "This is exactly the gap the Gospel of Peter seems to fill" (with its
+    watched, cloud-high risen Christ). **That restraint is the authenticity marker** — and the women (+
+    only Peter/John) as the empty-tomb witnesses, "dubious" by that culture's lights, is the embarrassing
+    detail an inventor would have replaced. *Directly reusable on `library/emptytomb.html`,
+    `library/manuscript.html`; verify the resurrection-account refs.*
   - **⚠️ Calibration:** keep it as **evidence of authenticity/antiquity (best explanation), not proof of
-    the resurrection**; hold the respectful framing on the women-witness point; hold the anti-Jewish flag
-    on the Gospel of Peter. *Cross-map primary tab: `ev-s2`.*
+    the resurrection**; hold the respectful framing on the women-witness point (don't repeat Porphyry's
+    Mary-Magdalene slur); hold the anti-Jewish flag on the Gospel of Peter. *Cross-map primary tab: `ev-s2`.*
 - **From Oxford to Jerusalem — My Academic Journey** (p. 159) — author bio/testimony. Low priority.
 - **Notes** (p. 163+) — **the endnotes: highest-value target for the next batch.**
 - **About the Author** (p. 173).
@@ -995,7 +1023,7 @@ the Resurrection tab intro framing.
 | Ch. 9 (Reason #6) | 105–114 | ✅ **captured complete** (1 Cor 15:3–7 creed + Dunn/Habermas dating [guardrail] + Paul's timeline/historeō + James the skeptic brother/Josephus + Gal 3:28 equality [neutrality flag] + resurrection-centrism cluster) |
 | Ch. 10 (Reason #7) | 115–127 | ✅ **captured complete** (suffering/THEODICY guardrail + resurrection-hope + burial innovation + death-of-a-Christian comfort + Lazarus + "I Am"/deity + salvation cluster [sola-fide neutrality flag] + Antony Flew close) |
 | Ch. 11 (Part Four) | 131–138 | ✅ **captured complete** (Holy Sepulchre vs Garden Tomb; Garden Tomb rejected [Barkay/Crusader]; Holy Sepulchre defended: Agrippa's walls, Hadrian-preserved-the-tomb, Helena/Constantine, 2016–17 Edicule bench; Justin/Eusebius w/ a Jewish-sensitivity flag) |
-| Ch. 12 (Part Four) | 139–148 | 🟡 captured pp. 139–148 (embarrassment/Dudrey; miracles vs Asclepius + anti-copycat; Celsus's taunts via Contra Celsum; the apocrypha as the "improved" version — Gospel of Peter/Acts of Pilate w/ a Jewish-sensitivity flag; canonical restraint; Porphyry opens); continues (Porphyry → ends ~158) |
+| Ch. 12 (Part Four) | 139–153 | 🟡 captured pp. 139–153 (embarrassment/Dudrey; miracles vs Asclepius + anti-copycat; Celsus + Porphyry [Apocriticus] + Julian; the apocrypha as the "improved" version [Jewish-sensitivity flag]; the honest discrepancies list; the "no one saw the resurrection itself" restraint payoff); continues (upper-room → ends ~158) |
 | **Notes / endnotes** | **163+** | ⬜ **pending — priority** |
 | Copyright page | (front) | ⬜ **pending — need for publisher/year** |
 
