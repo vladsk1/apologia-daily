@@ -258,6 +258,13 @@ human/pastoral doctrinal sign-off on high-stakes content.
 
 ## NON-NEGOTIABLE guardrails (mirror `api/ask.js`; enforced by every agent)
 
+> **Canonical anchor: [`docs/STATEMENT_OF_FAITH.md`](docs/STATEMENT_OF_FAITH.md).** That file is
+> the single source of truth for what the site believes — the Nicene and Apostles' Creeds
+> (verbatim from the verified `sources/creeds.json`) plus the operational boundaries and the
+> rejected-heresies list. The guardrails below are the same commitments in working form; the
+> `apologia-orthodoxy` gate certifies against the Statement. **Faithfulness to Jesus Christ and
+> Nicene orthodoxy outranks the platform's reach, growth, or success — every time.**
+
 - **Classical orthodoxy** (Apostles'/Nicene Creed): full deity AND humanity of Christ;
   Trinity (one God, three co-equal co-eternal persons — never modalism, tritheism, or
   Arian/subordinationist drift); bodily resurrection; authority of Scripture; salvation
@@ -395,6 +402,26 @@ books*, not quotable text.
   existing content is stamped as it's next touched. Same honest caveat as the answers
   gate: the stamp is an auditable human assertion, not proof the agents ran — never stamp
   a check you didn't run. (`/answers/*` keep their own gate in `tools/gen-answers.mjs`.)
+- **Orthodoxy tripwire scan (whole-corpus regression guard):**
+  `node tools/check-orthodoxy-tripwires.mjs` scans **every** live page (not just changed ones)
+  for a curated set of heterodox phrasings ("the Word was a god," "Jesus became God," "we worship
+  the same God" of Allah, modalist "God is one person," works-salvation, universalism-as-certain,
+  etc.). It uses a **baseline allowlist** (`tools/orthodoxy-tripwires-baseline.json`) so it only
+  fails on a *newly introduced* match — legitimate refutation/attribution context is baselined.
+  A new match is either real drift (fix the wording) or legitimate new refutation context (accept
+  on-record with `--update`, commit the baseline diff). Coarse net, not a doctrinal judge — the
+  orthodoxy agent is that. CI-blocking.
+- **Stamp-integrity check (certified-then-edited guard):**
+  `node tools/check-stamp-integrity.mjs` flags any gated file whose *doctrinal* lines were changed
+  by a commit **after** its `content-review` stamp without a re-stamp (nav/OG/sitemap/boilerplate
+  edits are filtered out and do not trip it). Closes the "gate certifies a version that no longer
+  exists" hole. Runs `--warn` (non-blocking report) in CI; a flag means: re-run argument +
+  orthodoxy on that file, then bump the stamp date.
+- **Dual-consensus for the highest-stakes content (Trinity, deity/person of Christ, salvation,
+  world-religions).** For these pages, one orthodoxy pass is not enough: require **both**
+  `apologia-orthodoxy` AND the adversarial `apologia-neutrality` red-team to certify CLEAN (two
+  independent lenses must agree) before deploy. Record both in the stamp `by` note. For all other
+  content the single orthodoxy gate remains the bar.
 - **Doctrinal clarifiers (`orthonote`) — STANDARD for delicate-but-orthodox phrases.** When a
   phrase is orthodox but a compressed reader could misread it as heterodox (subordination,
   modalism, tritheism, partialism, patripassianism, works-salvation, universalism-as-certain,

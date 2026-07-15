@@ -59,3 +59,21 @@ jobs:
         run: node tools/build-search-index.mjs --check
       - name: Check source library index is in sync
         run: node tools/build-sources-index.mjs --check
+
+  orthodoxy-guards:
+    # Doctrinal regression guards over the WHOLE corpus (not just changed files).
+    # tripwire scan is blocking (fails on a newly-introduced heterodox phrasing not
+    # in the baseline allowlist); stamp-integrity is a non-blocking report (flags
+    # gated files whose doctrinal lines changed after their content-review stamp).
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # stamp-integrity needs history
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Orthodoxy tripwire scan (blocking)
+        run: node tools/check-orthodoxy-tripwires.mjs
+      - name: Stamp-integrity report (non-blocking)
+        run: node tools/check-stamp-integrity.mjs --warn
