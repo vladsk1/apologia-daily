@@ -242,6 +242,14 @@ in order. Do not deploy content that has skipped a stage.
 7. **FINAL GATE — `apologia-orthodoxy`** (read-only): doctrinal certification. **This is
    always the last check before deploy.** Content is not deployed until it is certified
    CLEAN (or flags are resolved). A single [HERESY]-level flag blocks deploy.
+   **Standing sub-step (every run): the gate MUST return a "Clarifier candidates" verdict —
+   even when it is "none."** For every piece of content it scans for phrases that are orthodox
+   but a compressed reader could misread as heterodox and gives each a disposition (add
+   `orthonote` clarifier / rewrite / leave-as-is with reason). The *consideration is mandatory
+   and on-record*; the *application stays selective* — never add a clarifier where the wording is
+   plainly unambiguous (the ＊ works because it's rare). Non-interactive formats (reel specs,
+   push/teaser copy) can't host the ＊ box, so a candidate there routes to a **wording** fix
+   instead. See the `orthonote` STANDARD section below and the registry `docs/clarifiers.md`.
 8. **Deploy** (see deploy workflow below).
 
 Read-only agents (citations, argument, orthodoxy) report; a human-supervised step applies
