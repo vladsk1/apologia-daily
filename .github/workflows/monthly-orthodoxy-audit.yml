@@ -1,0 +1,44 @@
+name: Monthly orthodoxy audit
+
+# Scheduled whole-corpus doctrinal integrity guard. Unlike the per-push content
+# gate, this runs on a CALENDAR (the 1st of each month) so drift is caught even
+# in a month with no commits. It runs the deterministic guards over EVERY live
+# page:
+#   - orthodoxy tripwire scan (blocking): fails if a newly-introduced heterodox
+#     phrasing has appeared that is not in the reviewed baseline allowlist.
+#   - stamp-integrity report (non-blocking): lists gated files whose doctrinal
+#     lines changed after their content-review stamp without a re-gate.
+#
+# This covers the DETERMINISTIC half of the monthly re-audit. The AGENT half —
+# dispatching apologia-orthodoxy / apologia-neutrality over the corpus and
+# applying fixes — requires a Claude session and is run via the "Monthly
+# doctrinal re-audit" Routine (a fresh-session scheduled trigger). If a run here
+# goes red, that is the signal to launch/att end the agent sweep.
+#
+# Can also be run on demand from the Actions tab (workflow_dispatch).
+
+on:
+  schedule:
+    - cron: '0 9 1 * *'   # 09:00 UTC on the 1st of every month
+  workflow_dispatch:
+
+jobs:
+  orthodoxy-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # stamp-integrity needs full history
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Full-corpus tripwire matches (for the record)
+        run: node tools/check-orthodoxy-tripwires.mjs --list || true
+
+      - name: Orthodoxy tripwire scan (blocking on NEW heterodox phrasing)
+        run: node tools/check-orthodoxy-tripwires.mjs
+
+      - name: Stamp-integrity report (files edited after certification)
+        run: node tools/check-stamp-integrity.mjs --warn
