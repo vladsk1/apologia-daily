@@ -6,6 +6,31 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **2026-07-15 (orthodoxy-assurance hardening + Waves 1–3 answers + DNA reel).** Built a
+> defense-in-depth layer so faithfulness to Nicene orthodoxy is enforced by *process*, not just
+> intent. **NEW canonical anchor: [`docs/STATEMENT_OF_FAITH.md`](docs/STATEMENT_OF_FAITH.md)** — the
+> Nicene (Schaff 381) + Apostles' (BCP 1662) creeds VERBATIM from verified `sources/creeds.json`, the
+> non-negotiables, a rejected-heresies list, neutrality, and a pastoral sign-off log; the whole agent
+> fleet + `api/ask.js` now reference it. **New guards (all live + wired into CI):** whole-corpus
+> `tools/check-orthodoxy-tripwires.mjs` (baseline allowlist; blocks NEW heterodox phrasings) +
+> `tools/check-stamp-integrity.mjs` (flags gated files edited after their stamp; nav/boilerplate
+> filtered) + a scheduled `.github/workflows/monthly-orthodoxy-audit.yml`. **Process changes in this
+> file:** clarifier-consideration is now a MANDATORY standing sub-step of the orthodoxy gate (always
+> returns a "Clarifier candidates" verdict, even "none"); **dual-consensus** (orthodoxy AND neutrality
+> both CLEAN) required for highest-stakes pages; a **"mission" check** ("strengthen believers'
+> confidence — but confidence EARNED by truth, never hype") added to CLAUDE.md and **every** agent;
+> `apologia-neutrality` gained a **6th failure mode** (over-concession / unearned symmetry to a rival
+> worldview). **`api/ask.js`** got a runtime FINAL SELF-CHECK (re-audits its own answer vs the
+> non-negotiables) — re-gated CLEAN. **`what-we-believe.html`** had a **copyrighted ELLC-1988 creed
+> replaced with PD text** (+ Nicene added, filioque-neutral, "report a doctrinal concern" link) and is
+> now footer-linked site-wide. **Content: Waves 1–3 = 36 new `/answers/` pages (74→110)** grounded in
+> certified essays, each argument+orthodoxy gated; and a **DNA-complexity reel** (added an optional
+> `bg_image` backdrop feature to `tools/reel/gen_reel.py`). **OPEN (need a human):** (1) recruit a
+> standing **pastoral/elder reviewer** — sign-off log in the Statement of Faith is _pending_; (2) the
+> **monthly agent-sweep Routine** (#5's agent half) was NOT created — `create_trigger` hit a
+> permission error; retry it. Also: a **Reasonable Faith** (Craig) book-research note is awaiting a
+> **print/Kindle** copy (Perlego is forbidden — do not extract from it).
+>
 > **2026-07-12 (search + Logos assessment + PD source library — handoff:
 > `docs/SESSION_HANDOFF_2026-07-12-search-and-sources.md`).** Shipped **site-wide search**
 > (`/search` + `search.html` + `tools/build-search-index.mjs` → `search-index.json`; 221 records
