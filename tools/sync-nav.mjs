@@ -20,7 +20,9 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { execSync } from 'node:child_process';
 
 // ── CANONICAL MENU (edit here — the one source of truth) ──
-const CANON = `<ul class="adn-links">
+// Exported so other tools (e.g. tools/gen-answers.mjs) build their nav from the
+// SAME source and can never drift from it.
+export const CANON = `<ul class="adn-links">
       <li><a href="/search.html" class="adn-search-link" aria-label="Search">&#128269; Search</a></li>
       <li><a href="/evidence-library.html">Evidence Library</a></li>
       <li><a href="/daily-devotional.html">Daily Devotional</a></li>
@@ -64,6 +66,10 @@ const CANON = `<ul class="adn-links">
 // matches the whole adn-links UL (incl. the nested adn-drop) up to the auth region
 const RE = /<ul class="adn-links">[\s\S]*?<\/ul>(\s*)<div class="adn-right">/;
 
+// Run the sync/check only when invoked directly as a CLI — NOT when this module
+// is imported for its CANON export (e.g. by tools/gen-answers.mjs).
+const isCLI = !!process.argv[1] && process.argv[1].endsWith('sync-nav.mjs');
+if (isCLI) {
 const check = process.argv.includes('--check');
 
 // Content that this script must NOT touch.
@@ -111,4 +117,5 @@ console.log(`\nScanned ${scanned} nav pages · ${changed} ${check ? 'would chang
 if (check && changed > 0) {
   console.log('Drifted files:\n  ' + drifted.join('\n  '));
   process.exit(1);
+}
 }

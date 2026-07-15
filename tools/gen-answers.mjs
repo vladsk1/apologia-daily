@@ -28,6 +28,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { CANON } from './sync-nav.mjs';   // single source of truth for the nav menu
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ANSWERS = join(ROOT, 'answers');
@@ -68,25 +69,7 @@ const NAV = `<nav class="adn-nav">
   <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
   <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
   <div class="adn-collapse">
-    <ul class="adn-links">
-      <li><a href="/evidence-library.html">Evidence Library</a></li>
-      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
-      <li><a href="/debate-arena.html">Debate Arena</a></li>
-      <li><a href="/asked-and-answered.html">Asked &amp; Answered</a></li>
-      <li><a href="/worldviews.html">Worldviews</a></li>
-      <li><a href="/study-plans.html">Study Plans</a></li>
-      <li class="adn-has-drop">
-        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
-        <ul class="adn-drop">
-          <li><a href="/library/">Deep-Dive Essays</a></li><li><a href="/video-library.html">Videos</a></li>
-          <li><a href="/games.html">Games</a></li>
-          <li><a href="/whats-new.html">What&#39;s New</a></li>
-          <li><a href="/answers/">Answers</a></li>
-          <li><a href="/study-groups.html">Study Groups</a></li>
-          <li><a href="/reading-club.html">Reading Clubs</a></li><li><a href="/about.html">About</a></li><li><a href="/what-we-believe.html">What We Believe</a></li><li><a href="/editorial-standards.html">Editorial Standards</a></li>
-        </ul>
-      </li>
-    </ul>
+    ${CANON}
     <div class="adn-right">
       <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
       <span class="adn-user" id="nav-user"></span>
