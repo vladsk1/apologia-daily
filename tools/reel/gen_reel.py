@@ -34,7 +34,7 @@ def _ensure(pkg, imp=None):
         subprocess.run([sys.executable, "-m", "pip", "install", "-q", pkg], check=True)
         return importlib.import_module(imp or pkg)
 
-Image = _ensure("Pillow", "PIL.Image"); from PIL import Image, ImageDraw, ImageFont, ImageFilter
+Image = _ensure("Pillow", "PIL.Image"); from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageOps
 imageio_ffmpeg = _ensure("imageio-ffmpeg", "imageio_ffmpeg")
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 
@@ -186,8 +186,18 @@ def render(spec, W, H, theme, frames_dir):
     th = THEMES[theme]; os.makedirs(frames_dir, exist_ok=True)
     scenes = spec["scenes"]; n = len(scenes); durs = []
     talkbg = spec.get("layout") == "talkbg"
+    # optional full-bleed background image (cover-fit, darkened for caption legibility)
+    base_bg = None
+    bg_path = spec.get("bg_image")
+    if bg_path:
+        if not os.path.isabs(bg_path):
+            bg_path = os.path.join(os.path.dirname(os.path.abspath(spec["__path__"])), bg_path) \
+                if spec.get("__path__") else bg_path
+        raw = ImageOps.fit(Image.open(bg_path).convert("RGB"), (W, H), Image.LANCZOS)
+        base_bg = Image.blend(raw, Image.new("RGB", (W, H), th["top"]), spec.get("bg_dim", 0.5))
     for i, sc in enumerate(scenes):
-        img = gradient_bg(W, H, th); d = ImageDraw.Draw(img)
+        img = base_bg.copy() if base_bg is not None else gradient_bg(W, H, th)
+        d = ImageDraw.Draw(img)
         has_k = bool(sc.get("kicker"))
         cy = int(H * 0.47)
         if talkbg:
