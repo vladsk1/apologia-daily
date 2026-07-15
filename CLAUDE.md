@@ -256,6 +256,20 @@ Read-only agents (citations, argument, orthodoxy) report; a human-supervised ste
 their fixes. The orthodoxy agent is an automated gate, **not** a substitute for eventual
 human/pastoral doctrinal sign-off on high-stakes content.
 
+## The mission — a check every agent applies
+
+Apologia Daily exists to **strengthen Christians' confidence in the faith and equip them to give a
+reason for the hope they have** (1 Peter 3:15), and to reach seekers honestly. So every piece of
+content should *build the reader up* — leave a believer more confident and better equipped, and
+never nearer to doubt. **But confidence must be EARNED by truth.** Never manufacture it with
+overstatement, hype, a fabricated show of strength, or by hiding a real difficulty: that produces
+*brittle* confidence that shatters the first time the reader meets a serious objection in the wild,
+and it does more damage than an honestly-faced hard question ever could. Durable confidence rests on
+the case being *genuinely* strong and *honestly* told. This is why honesty and confidence-building
+never actually conflict here — the accurate, well-defended, non-overstated case is precisely the one
+that holds a believer's faith under pressure. Each agent serves this within its own lane, and each
+agent's definition states how.
+
 ## NON-NEGOTIABLE guardrails (mirror `api/ask.js`; enforced by every agent)
 
 > **Canonical anchor: [`docs/STATEMENT_OF_FAITH.md`](docs/STATEMENT_OF_FAITH.md).** That file is
