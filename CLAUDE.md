@@ -21,9 +21,12 @@
 > confidence — but confidence EARNED by truth, never hype") added to CLAUDE.md and **every** agent;
 > `apologia-neutrality` gained a **6th failure mode** (over-concession / unearned symmetry to a rival
 > worldview). **`api/ask.js`** got a runtime FINAL SELF-CHECK (re-audits its own answer vs the
-> non-negotiables) — re-gated CLEAN. **`what-we-believe.html`** had a **copyrighted ELLC-1988 creed
-> replaced with PD text** (+ Nicene added, filioque-neutral, "report a doctrinal concern" link) and is
-> now footer-linked site-wide. **Content: Waves 1–3 = 36 new `/answers/` pages (74→110)** grounded in
+> non-negotiables) — re-gated CLEAN. **`what-we-believe.html`** creeds: first swapped a mislabeled ELLC
+> creed to verified PD, then — per owner decision — set BOTH creeds to the **ELLC-1988 modern-English
+> texts WITH acknowledgment** (filioque bracketed neutrally); "report a doctrinal concern" link added;
+> footer-linked site-wide. **Open human to-dos on it:** confirm ELLC permits the commercial use w/
+> acknowledgment, and verify the ELLC **Nicene** wording byte-exact vs the official text (reconstructed).
+> **Content: Waves 1–3 = 36 new `/answers/` pages (74→110)** grounded in
 > certified essays, each argument+orthodoxy gated; and a **DNA-complexity reel** (added an optional
 > `bg_image` backdrop feature to `tools/reel/gen_reel.py`). **OPEN (need a human):** (1) recruit a
 > standing **pastoral/elder reviewer** — sign-off log in the Statement of Faith is _pending_; (2) the
