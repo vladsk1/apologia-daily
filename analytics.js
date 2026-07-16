@@ -22,6 +22,23 @@
   var POSTHOG_KEY = 'phc_qrovkG3stLv8pvL5NWYuyghweekGuP2S8BscpTf9AFkJ';
   var POSTHOG_HOST = 'https://eu.i.posthog.com'; /* US: https://us.i.posthog.com */
 
+  /* ---- Self-exclusion (owner / internal traffic) --------------------
+     Visiting ANY page with ?nocount=1 sets a per-browser flag that turns
+     OFF all analytics (Vercel pageviews AND PostHog) on every page that
+     loads this file; ?nocount=0 clears it. This mirrors the inline guard
+     on the home/auth pages so the exclusion actually covers the whole
+     site (previously this loader ignored the flag, so owner visits to the
+     library/answers pages were still counted). Per-browser + per-device,
+     stored in localStorage — set it once in each browser you use. To
+     verify: DevTools console -> localStorage.getItem('ad-nocount') === '1',
+     or Network tab -> the /_vercel/insights/script.js request is absent. */
+  try {
+    var _q = new URLSearchParams(location.search);
+    if (_q.get('nocount') === '1') localStorage.setItem('ad-nocount', '1');
+    if (_q.get('nocount') === '0') localStorage.removeItem('ad-nocount');
+    if (localStorage.getItem('ad-nocount') === '1') return;
+  } catch (e) {}
+
   /* ---- Vercel Web Analytics (load once; pageviews + sources) ---- */
   try {
     if (!document.querySelector('script[src*="/_vercel/insights/script.js"]')) {
