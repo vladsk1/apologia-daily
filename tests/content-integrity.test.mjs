@@ -2,6 +2,18 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, globSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+
+// Every /answers/* opening must LEAD WITH THE ANSWER — the short-form rule.
+// The lint is a curated regex net for known front-loaded-opening tells; it
+// exits non-zero (throwing here) if any answer opens by conceding/steelmanning
+// before answering. Complements the apologia-argument gate.
+test('no answer opens with a front-loaded tell (leads with the answer)', () => {
+  assert.doesNotThrow(
+    () => execFileSync('node', ['tools/check-answer-openings.mjs'], { cwd: process.cwd(), stdio: 'pipe' }),
+    'an /answers/* entry opens front-loaded — run: node tools/check-answer-openings.mjs',
+  );
+});
 
 // Every content-review stamp must be valid JSON. A stamp with an unescaped inner
 // double-quote silently breaks the gate's parser (the 2026-07-14 finding).

@@ -488,6 +488,16 @@ books*, not quotable text.
   A new match is either real drift (fix the wording) or legitimate new refutation context (accept
   on-record with `--update`, commit the baseline diff). Coarse net, not a doctrinal judge — the
   orthodoxy agent is that. CI-blocking.
+- **Answer-openings lint (lead-with-the-answer guard):**
+  `node tools/check-answer-openings.mjs` scans every `/answers/*` opening for known front-loaded
+  tells (charitable throat-clearing / conceding before answering — "It's a fair question," "This is
+  a serious objection," "Let's not soften this," "The honest place to begin is with a concession,"
+  etc.) and **fails the build** on any non-baselined hit. Baseline allowlist:
+  `tools/answer-openings-baseline.json` (accept a deliberate exception with `--update`). Coarse
+  regex net, NOT a judge — it complements the `apologia-argument` gate (which catches front-loading
+  that has no fixed opening phrase). Enforces the SHORT-FORM ANSWER RULE mechanically so a
+  front-loaded opening can't ship even if a future session's gate is sloppy. CI-blocking, plus a
+  `node:test` case in `tests/content-integrity.test.mjs`.
 - **Stamp-integrity check (certified-then-edited guard):**
   `node tools/check-stamp-integrity.mjs` flags any gated file whose *doctrinal* lines were changed
   by a commit **after** its `content-review` stamp without a re-stamp (nav/OG/sitemap/boilerplate

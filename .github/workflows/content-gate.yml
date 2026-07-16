@@ -75,6 +75,8 @@ jobs:
           node-version: '22'
       - name: Orthodoxy tripwire scan (blocking)
         run: node tools/check-orthodoxy-tripwires.mjs
+      - name: Answer openings lead-with-the-answer lint (blocking)
+        run: node tools/check-answer-openings.mjs
       - name: Stamp-integrity report (non-blocking)
         run: node tools/check-stamp-integrity.mjs --warn
 
