@@ -361,7 +361,18 @@ agent's definition states how.
 | `apologia-argument` | Judges argument soundness / steelmanning / overstatement | read-only |
 | `apologia-editor` | Copy-edit: typos, grammar, markup, links | write |
 | `apologia-orthodoxy` | **Final doctrinal gate** — runs last, certifies orthodoxy | read-only |
+| `apologia-engineer` | **Code-quality & security reviewer** — api/*.js, RLS, tools, paywall (correctness, security, DRY smells); runs the test suite | read-only |
 | `apologia-strategist` / `-research` / `-product` / `-growth` / `-seo` / `-social` | Growth/strategy/content research (not part of essay QA) | varies |
+
+**Code health (distinct from the content pipeline).** `apologia-engineer` reviews *code* the way the
+orthodoxy agent reviews *content*: run it on changes touching `api/`, `tools/`, Supabase RLS, or the
+client auth/paywall JS. Backing it: a dependency-free **test suite** (`tests/*.test.mjs`, run with
+`node --test tests/*.test.mjs`) that guards the nav single-source-of-truth, `answers/_data.json`
+integrity, content-review-stamp JSON validity, the `api/ask.js` guardrail presence, and static
+security invariants (service-role key never client-shipped; cron endpoints fail closed). CI runs it on
+every push (`content-gate.yml` → `tests` job) and monthly (`monthly-code-audit.yml`). The
+**agent-driven** monthly security sweep of `api/*.js` + RLS still needs a fresh-session Routine
+(create it when `create_trigger` is reachable).
 
 ## Evidence Library structure
 - Hub: `evidence-library.html` (tabs fetch `ev-sN.html` fragments via JS).

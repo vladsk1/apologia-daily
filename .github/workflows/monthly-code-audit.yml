@@ -1,0 +1,38 @@
+name: Monthly code & security audit
+
+# Scheduled code-health guard, parallel to the monthly orthodoxy audit. Runs the
+# deterministic test suite + static security checks on a calendar (1st of each
+# month) and on demand.
+#
+# This is the DETERMINISTIC half. The AGENT half — the apologia-engineer reviewing
+# api/*.js (auth, rate-limit fail-closed, SSRF, injection, secrets), the Supabase
+# RLS policies, and the paywall logic, and applying fixes — needs a Claude session
+# and is run via a fresh-session "Monthly code & security review" Routine. If a run
+# here goes red, that is the signal to launch the agent review.
+
+on:
+  schedule:
+    - cron: '0 10 1 * *'   # 10:00 UTC on the 1st (an hour after the orthodoxy audit)
+  workflow_dispatch:
+
+jobs:
+  code-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Test suite (blocking)
+        run: node --test tests/*.test.mjs
+
+      - name: Consistency checks (blocking)
+        run: |
+          node tools/sync-nav.mjs --check
+          node tools/build-search-index.mjs --check
+          node tools/build-sources-index.mjs --check
+          node tools/check-orthodoxy-tripwires.mjs
+
+      # NB: the static security invariant (service-role key never client-shipped;
+      # cron endpoints fail closed) is covered by tests/security.test.mjs above.

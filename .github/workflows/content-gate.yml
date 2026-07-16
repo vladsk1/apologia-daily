@@ -77,3 +77,17 @@ jobs:
         run: node tools/check-orthodoxy-tripwires.mjs
       - name: Stamp-integrity report (non-blocking)
         run: node tools/check-stamp-integrity.mjs --warn
+
+  tests:
+    # Deterministic code/content invariants (node:test, no dependencies): nav
+    # single-source-of-truth, answers/_data.json integrity, content-review stamp
+    # validity, api/ask.js guardrail presence, and static security checks
+    # (service-role key never client-shipped; cron endpoints fail closed).
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run test suite
+        run: node --test tests/*.test.mjs
