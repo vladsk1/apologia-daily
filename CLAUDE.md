@@ -520,6 +520,20 @@ books*, not quotable text.
   that has no fixed opening phrase). Enforces the SHORT-FORM ANSWER RULE mechanically so a
   front-loaded opening can't ship even if a future session's gate is sloppy. CI-blocking, plus a
   `node:test` case in `tests/content-integrity.test.mjs`.
+- **Answer over-concession lint (unearned-symmetry guard):**
+  `node tools/check-answer-concessions.mjs` is the companion to the openings lint: it scans the
+  **whole answer AND the `meta` subtitle** (not just the opening) for known over-concession /
+  unearned-symmetry tells toward a rival or heterodox view ("in a warmer/looser sense," "it would be
+  ungracious to pretend otherwise," "grant that warmly," "the parallels are real," "X love Jesus
+  and…," the "person at your door qualifies," etc.) and **fails the build** on any non-baselined hit.
+  Baseline allowlist: `tools/answer-concessions-baseline.json` (accept a genuinely-defended
+  in-refutation exception with `--update`; `--audit` shows every hit with context). **This closes the
+  exact gap that let the "Are Mormons/JWs Christians?" over-concessions ship** — they *led* with the
+  correct "no," so the openings lint (first-sentence only) passed them while the concession sat in
+  sentence 2 / the close / the meta, and the semantic pull-quote catch only runs in periodic agent
+  sweeps. Coarse regex net, NOT a judge — it complements the `apologia-argument` + `apologia-neutrality`
+  + `apologia-orthodoxy` pull-quote test (which catches context-dependent over-concession no fixed
+  phrase can). CI-blocking, plus a `node:test` in `tests/content-integrity.test.mjs`.
 - **Stamp-integrity check (certified-then-edited guard):**
   `node tools/check-stamp-integrity.mjs` flags any gated file whose *doctrinal* lines were changed
   by a commit **after** its `content-review` stamp without a re-stamp (nav/OG/sitemap/boilerplate

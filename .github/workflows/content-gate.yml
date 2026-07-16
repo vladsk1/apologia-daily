@@ -77,6 +77,8 @@ jobs:
         run: node tools/check-orthodoxy-tripwires.mjs
       - name: Answer openings lead-with-the-answer lint (blocking)
         run: node tools/check-answer-openings.mjs
+      - name: Answer over-concession lint (blocking)
+        run: node tools/check-answer-concessions.mjs
       - name: Stamp-integrity report (non-blocking)
         run: node tools/check-stamp-integrity.mjs --warn
 

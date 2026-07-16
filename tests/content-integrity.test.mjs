@@ -16,6 +16,18 @@ test('no answer opens with a front-loaded tell (leads with the answer)', () => {
   );
 });
 
+// No /answers/* entry may carry an un-reviewed OVER-CONCESSION / unearned symmetry
+// toward a rival or heterodox view — in ANY paragraph or the meta subtitle, not
+// just the opening. This is the gap that let the "Are Mormons/JWs Christians?"
+// concessions ship (they led with the correct "no," so the openings lint passed).
+// Complements the apologia-argument/-neutrality/-orthodoxy pull-quote test.
+test('no answer carries an over-concession tell (whole answer + meta)', () => {
+  assert.doesNotThrow(
+    () => execFileSync('node', ['tools/check-answer-concessions.mjs'], { cwd: process.cwd(), stdio: 'pipe' }),
+    'an /answers/* entry over-concedes — run: node tools/check-answer-concessions.mjs',
+  );
+});
+
 // The deterministic crisis backstop in api/ask.js must catch every unmistakable
 // first-person crisis phrasing and stay silent on ordinary questions. This
 // extracts the LIVE regex from api/ask.js and asserts it against the labeled
