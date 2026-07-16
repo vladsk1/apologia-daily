@@ -385,6 +385,30 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   **"concede the honest difficulty, no tidy proof"** register — the case is *best explanation on the
   evidence*, not mathematical proof.
 
+### Chapter 5 — "Always Looking for a Way Out: Of Legends, Lies, and Lapses" (pp. 84–88+) — LEGEND THEORY REFUTED
+- **Beat:** answers the **legend theory** in three forms: **(1) embellishment**, **(2) nonhistorical
+  genre**, **(3) myths in other religions** (the "copycat" claim — begins p. 88, refutation on later
+  pages not yet captured).
+- **(1) Embellishment** ("telephone-game" growth of the story). Replies: legend needs *time* and the
+  *death of eyewitnesses* to grow (skeptic **Robert Price** is cited on legend-rate; comparison: the
+  miracle legends of **Buddha/Siddhartha Gautama** appear only in the later Sanskrit texts ~centuries
+  after, not the early Pali); the NT text is early and textually stable (even critical scholars
+  question few words, none doctrine-affecting); and embellishment can't touch the **empty tomb / Paul
+  / James** — so it needs a **"combination theory," which is inevitably weak.**
+- **(2) Nonhistorical genre** (the Gospels are fable/myth/parable, not meant as history). Five replies:
+  can't account for the empty tomb; a *fable* wouldn't have converted the hostile, learned **Paul**
+  (he'd not follow a "cursed" false messiah and jeopardize his soul) or **James**; educated 1st-c.
+  readers knew genres, and **the burden is on the critic to PROVE** the Gospels are non-historical —
+  they read as history (sermon summaries in Acts), not fiction.
+- **Primary-source leads:** **Robert Price** (legend-rate); the **Buddhism/Gautama** legend-timing
+  comparison; **Midrash** and **Aesop** as the genre foils; the pagan **dying-and-rising gods** claim
+  (capture the refutation next). *(The classic legend-rate scholar A.N. **Sherwin-White** may be in the
+  endnotes — check.)*
+- **Guardrail fit:** these are our `minimalfacts` / `emptytomb` objection sections. **Cross-check the
+  pagan-"copycat" refutation against our recently-recalibrated `answers/…pagan-myths` answer** (the
+  T.C. Schmidt/Josephus work) so we stay consistent and current. Represent Buddhism/other faiths
+  **accurately and charitably** (neutrality rule) — the point is legend *timing*, not a swipe.
+
 ## Cross-map to our Evidence Library
 - Resurrection tab **`ev-s2`**; essays **`library/minimalfacts.html`**, **`emptytomb.html`**,
   **`paulconv.html`**; the `/answers/*` resurrection set (several already list this book under
@@ -410,7 +434,8 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
 | Ch. 4 "A Quintet of Facts (4 + 1) — The Last Three" | 64–73 | ✅ | **Fact 3** (Paul's conversion; enemy + primary evidence; Fuller; chart), **Fact 4** (James's conversion; 1 Cor 15:7; Josephus *Ant.* 20; Hegesippus; James Ossuary [disputed]; Fuller; chart), **Fact 5** (empty tomb, the "+1", ~75%; Jerusalem factor / enemy attestation / women's testimony; William Wand) |
 | Part 2 close — "Five Facts" summary + conclusion | 74–75 | ✅ | J-E-T empty-tomb mnemonic; the Five Facts (4+1) chart; method restated |
 | Intro to Part 3 "Is the Resurrection the Only Explanation?" | 81–83 | ✅ | the naturalistic theories to refute (hallucination/legend/lie/swoon/"science"); Barth, Brown, Flew, Hartshorne, Hume |
-| **The refutation chapters (Ch. 5–8) + medical evidence for death** | after p. 83 | ⏳ | the actual answers to each theory — highest content value; being captured next |
+| Ch. 5 "Always Looking for a Way Out" (legend/lies/lapses) | 84–88+ | ✅ | refutes the **legend theory**: embellishment (Price; Buddhism timing; combination-theory weakness), nonhistorical genre (burden on critic; Paul/James wouldn't die for a fable); begins the pagan-"copycat" section |
+| **Ch. 6–8 refutations (copycat/hallucination/fraud/swoon/"science") + medical evidence** | after p. 88 | ⏳ | the rest of the answers to each theory — being captured next |
 | (Ch. 4 end / notes gap) | 76–80 | ❌ | not photographed |
 | Responses to naturalistic theories (hallucination, legend, swoon, etc.) | later chs. | ❌ | ❌ |
 | **Endnotes / bibliography** | back matter | ❌ | **the citation trail — highest priority** |
