@@ -1,4 +1,4 @@
-// content-review: {"argument":"2026-07-16","orthodoxy":"2026-07-16","by":"Added PASTORAL CARE block (top of systemPrompt, priority over the normal format): when a message signals crisis - suicidal ideation/self-harm, abuse/danger, acute despair, or stopping needed medical/psychiatric care to just-pray - the AI does NOT give the normal apologetics answer but responds briefly and warmly, affirms worth (imago Dei, loved by God), urges contact with a trusted person/pastor/counsellor + findahelpline.com + local emergency services if in danger, offers Christ as comfort/presence not argument, and never diagnoses or gives medical/legal advice. The AI is told NOT to cast itself as the person's counsellor/friend or dwell on its own feelings ('I'm so glad you told me') - instead make clear they are not alone and point them to real human help quickly. apologia-orthodoxy + apologia-argument re-gated on the change. Prior 2026-07-15 FINAL SELF-CHECK self-audit + 2026-07-13 retrieval/guardrail review otherwise unchanged."}
+// content-review: {"argument":"2026-07-16","orthodoxy":"2026-07-16","by":"Added PASTORAL CARE block (top of systemPrompt, priority over the normal format): when a message signals crisis - suicidal ideation/self-harm, abuse/danger, acute despair, or stopping needed medical/psychiatric care to just-pray - the AI does NOT give the normal apologetics answer but responds briefly and warmly, affirms worth (imago Dei, loved by God), urges contact with a trusted person/pastor/counsellor + findahelpline.com + local emergency services if in danger, offers Christ as comfort/presence not argument, and never diagnoses or gives medical/legal advice. The AI is told NOT to cast itself as the person's counsellor/friend or dwell on its own feelings ('I'm so glad you told me') - instead make clear they are not alone and point them to real human help quickly; brief second-person acknowledgment of their pain is allowed; harm-to-others routes to immediate-safety emphasis. CRITICAL routing fix: the Haiku topic-guard gained a 4th verdict PASTORAL (first-person crisis signal, overrides OFFTOPIC/DENOM even when it reads like medical advice) that falls through to the full-answer path so a crisis message is never diverted to the canned off-topic brush-off before the PASTORAL CARE block runs. apologia-orthodoxy CLEAN + apologia-argument re-gated on the change. Prior 2026-07-15 FINAL SELF-CHECK self-audit + 2026-07-13 retrieval/guardrail review otherwise unchanged."}
 
 import { overRateLimit, inputTooLong } from '../lib/ratelimit.js';
 import { retrieveSources } from '../lib/retrieve-sources.js';
@@ -85,7 +85,9 @@ NOTE: defending a shared creedal doctrine (e.g. "why do Christians believe in th
 
 "OFFTOPIC" = nothing to do with Christianity, faith, or religion (cooking, sports, coding, finance, weather, medical advice, celebrity gossip, etc.).
 
-Respond with only ONTOPIC, DENOM, or OFFTOPIC.`,
+"PASTORAL" = the message shows a FIRST-PERSON, present-tense signal that the person writing is in distress or danger — thoughts of suicide or self-harm, a wish to die or that their own life is not worth living, being abused or unsafe, a wish to harm someone else, acute despair about their own situation, or a plan to stop needed medical or psychiatric care to "just pray." This classification OVERRIDES the others: if such a signal is present, answer PASTORAL even when the message also looks OFFTOPIC (e.g. reads like medical advice) or mentions no religion at all. A purely intellectual question that merely mentions death, suffering, or whether life has meaning ("isn't life pointless without God?", the problem of evil) is NOT pastoral — that is ONTOPIC.
+
+Respond with only ONTOPIC, DENOM, OFFTOPIC, or PASTORAL.`,
         messages: [{ role: 'user', content: `Classify this message for a Christian apologetics tool. It may be a question OR an objection/claim pasted from social media — classify by topic either way. Message: "${question}"` }]
       })
     });
@@ -94,16 +96,23 @@ Respond with only ONTOPIC, DENOM, or OFFTOPIC.`,
       const topicData = await topicCheckRes.json();
       const verdict = topicData.content && topicData.content[0] && topicData.content[0].text.trim().toUpperCase();
 
-      if (verdict.includes('OFFTOPIC')) {
-        return res.status(200).json({
-          answer: `This is a Christian apologetics tool — it's designed to answer questions about the Christian faith, theology, evidence, and how to engage with challenges to Christianity.\n\nYour question doesn't appear to be related to those topics. Try asking something like:\n\n• "How do I respond when someone says Jesus never existed?"\n• "What is the best evidence for the resurrection?"\n• "How do Christians answer the problem of evil?"\n• "Is the Bible historically reliable?"\n• "What should I say to an atheist friend who asks about suffering?"`
-        });
-      }
+      // PASTORAL intentionally falls through to the full-answer path below, whose
+      // system prompt opens with the PASTORAL CARE block (compassion + referral to
+      // real human help). It is checked FIRST so a crisis message is never diverted
+      // to the OFFTOPIC/DENOM canned replies — even if it also looks off-topic
+      // (e.g. "should I stop my medication and just pray?" reads like medical advice).
+      if (!verdict.includes('PASTORAL')) {
+        if (verdict.includes('OFFTOPIC')) {
+          return res.status(200).json({
+            answer: `This is a Christian apologetics tool — it's designed to answer questions about the Christian faith, theology, evidence, and how to engage with challenges to Christianity.\n\nYour question doesn't appear to be related to those topics. Try asking something like:\n\n• "How do I respond when someone says Jesus never existed?"\n• "What is the best evidence for the resurrection?"\n• "How do Christians answer the problem of evil?"\n• "Is the Bible historically reliable?"\n• "What should I say to an atheist friend who asks about suffering?"`
+          });
+        }
 
-      if (verdict.includes('DENOM')) {
-        return res.status(200).json({
-          answer: `That's a question where sincere Christians across the great traditions — Catholic, Eastern Orthodox, and Protestant — genuinely differ, and it's not one Apologia Daily tries to settle.\n\nThis tool focuses on the historic faith that all Christians hold in common: the case for God, the resurrection of Jesus, his deity, the reliability of Scripture, and how to respond to challenges from atheism, Islam, and other worldviews. Questions specific to one tradition are best explored with your own pastor or priest, who knows your context and can guide you well.\n\nI'd be glad to help with something in that shared apologetics space. For example:\n\n• "What's the historical evidence that Jesus rose from the dead?"\n• "How do I respond when someone says the Trinity is a contradiction?"\n• "Why think Jesus actually claimed to be God?"\n• "How can God allow so much suffering?"`
-        });
+        if (verdict.includes('DENOM')) {
+          return res.status(200).json({
+            answer: `That's a question where sincere Christians across the great traditions — Catholic, Eastern Orthodox, and Protestant — genuinely differ, and it's not one Apologia Daily tries to settle.\n\nThis tool focuses on the historic faith that all Christians hold in common: the case for God, the resurrection of Jesus, his deity, the reliability of Scripture, and how to respond to challenges from atheism, Islam, and other worldviews. Questions specific to one tradition are best explored with your own pastor or priest, who knows your context and can guide you well.\n\nI'd be glad to help with something in that shared apologetics space. For example:\n\n• "What's the historical evidence that Jesus rose from the dead?"\n• "How do I respond when someone says the Trinity is a contradiction?"\n• "Why think Jesus actually claimed to be God?"\n• "How can God allow so much suffering?"`
+          });
+        }
       }
     }
 
@@ -113,9 +122,11 @@ Respond with only ONTOPIC, DENOM, or OFFTOPIC.`,
 
 PASTORAL CARE — THIS TAKES PRIORITY OVER EVERYTHING ELSE WHEN IT APPLIES:
 Some messages are not requests for an argument but signs that the person writing is hurting or in danger. Watch for a FIRST-PERSON, present-tense signal about the writer's OWN life or safety — thoughts of suicide or self-harm, a wish to die or that their own life is not worth living, being abused or unsafe, a wish to harm someone else, acute despair about their own situation, or a plan to stop needed medical or psychiatric care to "just pray." (An ordinary intellectual question that merely mentions death, suffering, or whether life has meaning — e.g. "isn't life pointless without God?" or the problem of evil — is NOT this; answer those normally, with the emotional acknowledgment the tone rules already require.) When a genuine personal-distress or safety signal is present, do NOT give the normal apologetics answer, do NOT debate, do NOT offer a theodicy or a clever case, and do NOT use the FORMAT below. Instead respond briefly and warmly — but do NOT cast yourself as their counsellor, friend, or the one who will walk with them. You are not a person and not a substitute for real human help; the most loving thing you can do is make clear they are not alone and point them to a real person quickly. Keep the focus on THEM and on getting them real support — not on your own feelings about their message:
+- You may briefly and directly acknowledge how hard this is for THEM ("what you're carrying sounds incredibly heavy," "I'm sorry you're hurting this much") — that is second-person validation of their pain, which is good and keeps the focus on them. What to avoid is centring your OWN feelings about their message.
 - Take them seriously and gently: their life has real worth — they are made in God's image and deeply loved by God. They are not alone, and reaching out for help is a good and brave step.
 - Point them clearly and without delay to real people who can help right now: someone they trust, a pastor or priest, or a professional counsellor. For a free, confidential crisis line in their own country point them to findahelpline.com, which lists local lines worldwide; and if they may be in immediate danger, urge them to contact their local emergency services now.
 - Keep it short, warm, and non-preachy. Avoid heavy first-person lines about how their message makes YOU feel ("I'm so glad you told me," "I want to sit with you") — these imply you are the support they need; centre instead on their worth, that they are not alone, and the real people who can help. Offer the hope of Christ as comfort and presence, not as an argument. Do NOT diagnose and do NOT give medical or legal advice; do NOT treat despair or suicidal thoughts as a debate to be won or try to talk someone out of how they feel — point them toward care.
+- If the danger is toward SOMEONE ELSE (a wish or plan to harm another person), the emphasis shifts: the priority is immediate safety — urge them to contact local emergency services now and to reach a crisis line or counsellor — rather than leading with the "you are loved" reassurance, which fits self-directed despair.
 This is not a refusal; it is the loving answer. Apply it whenever a genuine personal-distress or safety signal is present (err toward care if such a signal is truly ambiguous); a question that is merely intellectual, with no such signal, gets the normal format and boundaries below.
 
 THE SPIRIT OF 1 PETER 3:15 — THIS GOVERNS EVERYTHING:
