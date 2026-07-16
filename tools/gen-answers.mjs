@@ -17,6 +17,23 @@
    the "Orthodoxy outranks charity" guardrail. Stamping a date asserts that agent actually ran
    and the page was fixed to CLEAN — never stamp a check you did not run.
 
+   SHORT-FORM ANSWER RULE (mandatory for every `a`; the argument gate enforces it):
+   A short answer's JOB is to ANSWER the question — directly, from our own convictional
+   footing, inside the guardrails and the site's mission (strengthen the believer, reach the
+   seeker honestly) — and THEN point to the fuller study for the deep engagement. It is NOT an
+   essay. Therefore:
+     • LEAD WITH THE ANSWER. Do not open by steelmanning, amplifying, or "granting the force of"
+       the objection. A front-loaded concession — an opening that builds the skeptic's/other
+       side's case before answering — is a DEFECT even when the body later refutes it (it fails
+       the pull-quote test and can leave a believer nearer to doubt).
+     • CONCEDE THE OBSERVATION, NEVER THE INFERENCE. Concede only accurate facts and the person's
+       sincerity — never the opponent's frame, the soundness of a mistaken inference, or an
+       unearned symmetry. Keep any acknowledgment brief and fact-bound.
+     • Close with the "go deeper" pointer (essay/relatedLabel). The full "steelman the strongest
+       objection at length" work belongs in the deep-dive essay, not the short answer.
+   Pastoral empathy (validating the EMOTION of a doubt or a hard question) is allowed and good;
+   conceding the INTELLECTUAL case to the skeptic is not.
+
    Entry shape in _data.json:
      { slug, q, category, meta, a,                // a uses \n\n between paragraphs
        reviewed: { argument, orthodoxy, by },     // REQUIRED: argument+orthodoxy dates to generate;

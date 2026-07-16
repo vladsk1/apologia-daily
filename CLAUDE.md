@@ -246,6 +246,24 @@ gate. At minimum, argument-soundness (step 4) + orthodoxy (step 7) run on **ever
 and reel before it goes live; record it (see the `reviewed` provenance in
 `answers/_data.json`, enforced by `tools/gen-answers.mjs`).
 
+**SHORT-FORM ANSWER RULE (mandatory for every `/answers/*` entry; the argument gate enforces
+it, and `tools/gen-answers.mjs`'s header documents it).** A short answer's *job* is to **answer
+the question** — directly, from our own convictional footing, inside the guardrails and the
+mission — and then **point to the fuller study** (the linked essay) for the deep engagement. It
+is **not** an essay, and it must **not** carry an essay's heavy steelman.
+- **Lead with the answer.** Do **not** open by steelmanning, amplifying, or "granting the force
+  of" the objection. A **front-loaded concession** — an opening that builds the skeptic's/other
+  side's case before answering — is a **defect even when the body later refutes it** (it fails the
+  pull-quote test and can leave a believer nearer to doubt). This was the 2026-07-16 sweep's whole
+  finding: 11 of 110 answers had exactly this front-loaded-concession opening (all fixed).
+- **Concede the observation, never the inference.** Concede only accurate facts and the person's
+  sincerity — never the opponent's frame, the soundness of a mistaken inference, or an unearned
+  symmetry. Keep any acknowledgment **brief and fact-bound**.
+- **Close with the "go deeper" pointer.** The full "steelman the strongest objection at length"
+  work belongs in the deep-dive essay, not the short answer.
+- Pastoral empathy (validating the *emotion* of a doubt or a hard question) is allowed and good;
+  conceding the *intellectual* case to the skeptic is not.
+
 The argument + orthodoxy passes must actively hunt **over-concession**, not only
 overstatement or heresy-in-our-own-voice: a steelman that grants the opponent's frame, the
 soundness of a mistaken inference, or an unearned symmetry is a defect even when the body
