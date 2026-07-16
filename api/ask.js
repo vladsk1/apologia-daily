@@ -1,4 +1,4 @@
-// content-review: {"argument":"2026-07-16","orthodoxy":"2026-07-16","by":"Added PASTORAL CARE block (top of systemPrompt, priority over the normal format): when a message signals crisis - suicidal ideation/self-harm, abuse/danger, acute despair, or stopping needed medical/psychiatric care to just-pray - the AI does NOT give the normal apologetics answer but responds briefly and warmly, affirms worth (imago Dei, loved by God), urges contact with a trusted person/pastor/counsellor + findahelpline.com + local emergency services if in danger, offers Christ as comfort/presence not argument, and never diagnoses or gives medical/legal advice. The AI is told NOT to cast itself as the person's counsellor/friend or dwell on its own feelings ('I'm so glad you told me') - instead make clear they are not alone and point them to real human help quickly; brief second-person acknowledgment of their pain is allowed; harm-to-others routes to immediate-safety emphasis. CRITICAL routing fix: the Haiku topic-guard gained a 4th verdict PASTORAL (first-person crisis signal, overrides OFFTOPIC/DENOM even when it reads like medical advice) that falls through to the full-answer path so a crisis message is never diverted to the canned off-topic brush-off before the PASTORAL CARE block runs. apologia-orthodoxy CLEAN + apologia-argument re-gated on the change. Prior 2026-07-15 FINAL SELF-CHECK self-audit + 2026-07-13 retrieval/guardrail review otherwise unchanged."}
+// content-review: {"argument":"2026-07-16","orthodoxy":"2026-07-16","by":"Added PASTORAL CARE block (top of systemPrompt, priority over the normal format): when a message signals crisis - suicidal ideation/self-harm, abuse/danger, acute despair, or stopping needed medical/psychiatric care to just-pray - the AI does NOT give the normal apologetics answer but responds briefly and warmly, affirms worth (imago Dei, loved by God), urges contact with a trusted person/pastor/counsellor + findahelpline.com + local emergency services if in danger, offers Christ as comfort/presence not argument, and never diagnoses or gives medical/legal advice. The AI is told NOT to cast itself as the person's counsellor/friend or dwell on its own feelings ('I'm so glad you told me') - instead make clear they are not alone and point them to real human help quickly; brief second-person acknowledgment of their pain is allowed; harm-to-others routes to immediate-safety emphasis. CRITICAL routing fix: the Haiku topic-guard gained a 4th verdict PASTORAL (first-person crisis signal, overrides OFFTOPIC/DENOM even when it reads like medical advice) that falls through to the full-answer path so a crisis message is never diverted to the canned off-topic brush-off before the PASTORAL CARE block runs, PLUS a deterministic regex crisisBackstop that forces the same fall-through even if the classifier misfires (crisis routing never rests on Haiku alone; classifier-outage path also fails open into the pastoral block). apologia-orthodoxy CLEAN + apologia-argument SOUND (BREAK fixed, both WEAK fixes applied) re-gated on the change. Prior 2026-07-15 FINAL SELF-CHECK self-audit + 2026-07-13 retrieval/guardrail review otherwise unchanged."}
 
 import { overRateLimit, inputTooLong } from '../lib/ratelimit.js';
 import { retrieveSources } from '../lib/retrieve-sources.js';
@@ -47,9 +47,19 @@ export default async function handler(req, res) {
       return res.status(429).json({ error: 'rate_limited' });
     }
 
+    // ── CRISIS BACKSTOP (deterministic, runs before the classifier) ──
+    // The OFFTOPIC/DENOM canned replies have no LLM behind them, so crisis
+    // routing must not depend solely on the Haiku classifier obeying its prompt.
+    // If the message shows an unmistakable first-person crisis signal, force the
+    // pastoral fall-through regardless of the classifier verdict. False positives
+    // are harmless here (the person just gets the warm pastoral answer).
+    const crisisBackstop = /\b(kill myself|killing myself|end my life|ending my life|want to die|wanna die|don'?t want to (be alive|live)|take my (own )?life|taking my (own )?life|suicidal|commit suicide|better off (dead|without me)|no reason to live|hurt myself|harm myself|cutting myself|stop (taking|my) (my )?(meds|medication)|end it all)\b/i.test(question);
+
     // ── TOPIC GUARD ──
     // Classify the question before spending tokens on a full answer.
-    // Three-way: ONTOPIC (answer), DENOM (intra-Christian dispute -> redirect), OFFTOPIC (decline).
+    // Four-way: ONTOPIC (answer), DENOM (intra-Christian dispute -> redirect),
+    // OFFTOPIC (decline), PASTORAL (first-person crisis -> fall through to the
+    // full-answer path, whose prompt opens with the PASTORAL CARE block).
     const topicCheckRes = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
@@ -60,7 +70,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         model: 'claude-haiku-4-5-20251001',
         max_tokens: 20,
-        system: `You are a topic classifier for a Christian apologetics tool. Respond with only ONE word: "ONTOPIC", "DENOM", or "OFFTOPIC".
+        system: `You are a topic classifier for a Christian apologetics tool. Respond with only ONE word: "ONTOPIC", "DENOM", "OFFTOPIC", or "PASTORAL".
 
 "ONTOPIC" = core Christian apologetics: defending the historic Christian faith that all Christians share against outside challenge. Includes:
 - Existence of God, arguments for/against God, problem of evil, miracles, fine-tuning
@@ -94,14 +104,16 @@ Respond with only ONTOPIC, DENOM, OFFTOPIC, or PASTORAL.`,
 
     if (topicCheckRes.ok) {
       const topicData = await topicCheckRes.json();
-      const verdict = topicData.content && topicData.content[0] && topicData.content[0].text.trim().toUpperCase();
+      const verdict = (topicData.content && topicData.content[0] && topicData.content[0].text.trim().toUpperCase()) || '';
 
       // PASTORAL intentionally falls through to the full-answer path below, whose
       // system prompt opens with the PASTORAL CARE block (compassion + referral to
       // real human help). It is checked FIRST so a crisis message is never diverted
       // to the OFFTOPIC/DENOM canned replies — even if it also looks off-topic
       // (e.g. "should I stop my medication and just pray?" reads like medical advice).
-      if (!verdict.includes('PASTORAL')) {
+      // The deterministic crisisBackstop forces the same fall-through even if the
+      // classifier misfires, so crisis routing never rests on Haiku alone.
+      if (!crisisBackstop && !verdict.includes('PASTORAL')) {
         if (verdict.includes('OFFTOPIC')) {
           return res.status(200).json({
             answer: `This is a Christian apologetics tool — it's designed to answer questions about the Christian faith, theology, evidence, and how to engage with challenges to Christianity.\n\nYour question doesn't appear to be related to those topics. Try asking something like:\n\n• "How do I respond when someone says Jesus never existed?"\n• "What is the best evidence for the resurrection?"\n• "How do Christians answer the problem of evil?"\n• "Is the Bible historically reliable?"\n• "What should I say to an atheist friend who asks about suffering?"`
