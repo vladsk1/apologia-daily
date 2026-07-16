@@ -11,10 +11,12 @@
 > via Gal 1:18; POWr/nine sources; apostolic fathers; Bultmann/Lüdemann/Fredriksen + Habermas's
 > 1,400-source survey]; (3) Paul's conversion [enemy, primary evidence]; (4) James's conversion
 > [1 Cor 15:7; Josephus *Ant.* 20; Fuller]; (5) the empty tomb ["+1", ~75%; Jerusalem factor / enemy
-> attestation / women-witness embarrassment; William Wand]. Still **not** captured: the book's
-> **response to naturalistic theories** (hallucination/legend/etc., later chapters), the **medical
-> evidence for the death**, and — critically — the **endnotes / bibliography** where the primary-source
-> leads live. See "Next photos needed." Do not treat this note as a complete map of the book.
+> attestation / women-witness embarrassment; William Wand]. Plus the **Part 2 "Five Facts" summary**
+> and the **Introduction to Part 3** (the naturalistic theories to be refuted — hallucination/legend/
+> lie/swoon/"science"; Barth/Brown/Flew/Hartshorne/Hume). Still **not** captured: the **actual
+> refutation chapters (5–8)**, the **medical evidence for the death**, and — critically — the
+> **endnotes / bibliography** where the primary-source leads live. See "Next photos needed." Do not
+> treat this note as a complete map of the book.
 
 ## Usage rules (same as every note in this folder)
 - **Never reproduce the book's prose.** Everything here is our paraphrase of the argument's *shape*.
@@ -353,6 +355,36 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   its consensus** (matches our own Resurrection rule); **(2)** the James Ossuary is disputed — omit or
   explicitly flag it, never lean on it.
 
+### Part 2 close — the "Five Facts" summary (pp. 74–75)
+- Mnemonics/charts: the empty-tomb sub-argument is **"J-E-T" = Jerusalem factor, Enemy attested,
+  Testimony of women**; the whole case is the **"Five Facts (4 + 1)"** chart: Jesus' death by
+  crucifixion · disciples' beliefs that Jesus appeared · conversion of the persecutor Paul ·
+  conversion of the skeptic James · empty tomb. The Conclusion restates the method (only
+  strongly-attested data granted by the majority of *non-believing* scholars; no appeal to
+  inspiration/inerrancy).
+
+### Introduction to Part 3 — "Is Jesus' Resurrection the Only Explanation?" (pp. 81–83) — OBJECTION-HANDLING BEGINS
+- **Beat (this is the part our essays' objection sections need):** the strategy is to show the
+  **naturalistic alternatives all fail**, so the resurrection is the best explanation of the five
+  facts. The book notes even non-conservative scholars long ago abandoned the old naturalistic
+  theories as "unrespectable," yet modern critics recycle them. The theories to be examined and
+  refuted in **chapters 5–8** (NOT yet captured — the actual refutations are the next high-value pages):
+  **(1)** the disciples **hallucinated** (incl. "grief hallucinations" / cultic visions);
+  **(2)** the resurrection is a **legend**; **(3)** it is a **lie / fraud** ("fraud 1/2" theories);
+  **(4)** the **apparent-death / "swoon"** theory (Jesus never really died); **(5)** "**science** has
+  shown resurrection impossible." Method notes: the rival theories are often *mutually incompatible*,
+  and skeptics apply a **100%-certainty double standard** they don't apply to other history.
+- **Primary-source leads to verify:** **Karl Barth** (naturalistic theories now rightly dismissed),
+  **Raymond Brown** (echoing Barth), **Antony Flew** (the atheist philosopher who debated Habermas —
+  "my metaphysical bias is against resurrections"), **Charles Hartshorne**, and **David Hume** (the
+  background anti-miracle bias). Verify each quote/attribution before use.
+- **Guardrail fit:** these refutations map directly onto our `library/minimalfacts.html` +
+  `emptytomb.html` objection sections and the resurrection `/answers/*`. Two rules to hold when we get
+  the refutation pages: **the hallucination reply** must stay accurate (group + individual + varied
+  appearances make mass-hallucination implausible — don't overstate the psychology); and keep our
+  **"concede the honest difficulty, no tidy proof"** register — the case is *best explanation on the
+  evidence*, not mathematical proof.
+
 ## Cross-map to our Evidence Library
 - Resurrection tab **`ev-s2`**; essays **`library/minimalfacts.html`**, **`emptytomb.html`**,
   **`paulconv.html`**; the `/answers/*` resurrection set (several already list this book under
@@ -376,7 +408,10 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
 | Intro to Part 2 "Minimal Facts Approach" | 43–47 | ✅ | the METHOD: 2 criteria (strongly evidenced + granted by virtually all scholars incl. skeptics), lowest-common-denominator; Licona UVa anecdote, Covey, Tacitus-as-usable-biased-source |
 | Ch. 3 "A Quintet of Facts (4 + 1)" — Facts 1 & 2 | 48–62 | ✅ | the "4+1" framing; **Fact 1** (crucifixion; 5 non-Christian sources + Crossan) and **Fact 2** (disciples believed: 1 Cor 15 creed + Gal 1:18 dating, POWr/nine sources, apostolic fathers, epistemic hinge, Bultmann/Lüdemann/Fredriksen + Habermas 1,400-source survey); both charts |
 | Ch. 4 "A Quintet of Facts (4 + 1) — The Last Three" | 64–73 | ✅ | **Fact 3** (Paul's conversion; enemy + primary evidence; Fuller; chart), **Fact 4** (James's conversion; 1 Cor 15:7; Josephus *Ant.* 20; Hegesippus; James Ossuary [disputed]; Fuller; chart), **Fact 5** (empty tomb, the "+1", ~75%; Jerusalem factor / enemy attestation / women's testimony; William Wand) |
-| **Response to naturalistic theories + medical evidence for death** | Ch. 5–8 (after p. 73) | ⏳ | hallucination / legend / swoon etc. — being captured next |
+| Part 2 close — "Five Facts" summary + conclusion | 74–75 | ✅ | J-E-T empty-tomb mnemonic; the Five Facts (4+1) chart; method restated |
+| Intro to Part 3 "Is the Resurrection the Only Explanation?" | 81–83 | ✅ | the naturalistic theories to refute (hallucination/legend/lie/swoon/"science"); Barth, Brown, Flew, Hartshorne, Hume |
+| **The refutation chapters (Ch. 5–8) + medical evidence for death** | after p. 83 | ⏳ | the actual answers to each theory — highest content value; being captured next |
+| (Ch. 4 end / notes gap) | 76–80 | ❌ | not photographed |
 | Responses to naturalistic theories (hallucination, legend, swoon, etc.) | later chs. | ❌ | ❌ |
 | **Endnotes / bibliography** | back matter | ❌ | **the citation trail — highest priority** |
 
