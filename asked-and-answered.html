@@ -282,7 +282,7 @@
     var sb = null, AD_USER_ID = null, isPro = true;
     /* TEMP until Stripe is live — everyone is treated as Pro, so live answers are open to all.
        Post-Stripe, replace the line above with:
-       var isPro = !!(session && session.user && session.user.user_metadata && session.user.user_metadata.is_pro === true);
+       var isPro = !!(session && session.user && session.user.app_metadata && session.user.app_metadata.is_pro === true);
        and the gate below will make live answers paid-only. Retrieval-hit library answers stay free regardless. */
     function initSb(){
       if (window.supabase && window.supabase.createClient) {

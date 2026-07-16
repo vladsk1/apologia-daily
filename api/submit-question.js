@@ -1,3 +1,4 @@
+import { overRateLimit } from '../lib/ratelimit.js';
 /* Question capture — the content flywheel intake.
    Visitors submit a question (from /answers/ or ask-anything); the founder gets
    an email so good questions can be drafted, run through the QA + orthodoxy
@@ -32,6 +33,12 @@ export default async function handler(req, res) {
   var source = (body.source || 'unknown').toString().slice(0, 60);
   if (!question || question.length < 8) return res.status(400).json({ error: 'Please enter a question.' });
   if (question.length > 1000) question = question.slice(0, 1000) + '…';
+
+  // Per-IP daily cap so a bot ignoring the honeypot can't flood the founder inbox
+  // / exhaust the Resend quota. A genuine ask form needs only a handful/day.
+  if (await overRateLimit(req, 10, 'submitq')) {
+    return res.status(429).json({ error: 'Thanks — you have submitted several questions today. Please try again tomorrow.' });
+  }
 
   var notes = [];
   var when = new Date().toISOString();

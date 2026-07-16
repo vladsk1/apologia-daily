@@ -24,12 +24,12 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  // Shared-secret guard so randoms can't spam the notifier.
+  // Shared-secret guard so randoms can't spam the notifier. FAIL CLOSED: if the
+  // secret is not configured, reject — never leave this world-writable (matches
+  // push.js / weekly-email.js). An unset secret must not skip the check.
   var SECRET = process.env.SIGNUP_HOOK_SECRET;
-  if (SECRET) {
-    var given = (req.query && req.query.secret) || req.headers['x-signup-secret'] || '';
-    if (given !== SECRET) return res.status(401).json({ error: 'Unauthorized' });
-  }
+  var given = (req.query && req.query.secret) || req.headers['x-signup-secret'] || '';
+  if (!SECRET || given !== SECRET) return res.status(401).json({ error: 'Unauthorized' });
 
   // Parse the Supabase webhook payload: { type, table, record, ... }.
   var body = req.body;

@@ -44,13 +44,21 @@ export default async function handler(req, res) {
   }
 
   // ── CHECK API ENDPOINTS (lightweight ping) ──
-  const endpoints = [
+  // These POSTs actually invoke the LLM endpoints (real token cost). Gate them
+  // behind a secret so a public GET /api/health can't be looped to amplify spend.
+  // Basic checks above (Supabase + key presence) stay public and free.
+  const HSECRET = process.env.HEALTH_SECRET || process.env.METRICS_SECRET;
+  const givenSecret = (req.query && req.query.secret) || req.headers['x-health-secret'] || '';
+  const runPings = !!HSECRET && givenSecret === HSECRET;
+
+  const endpoints = runPings ? [
     { name: 'ask', path: '/api/ask', body: { question: '__health_check__' } },
     { name: 'tutor', path: '/api/tutor', body: { question: '__health_check__', argument: 'test', category: 'test' } },
     { name: 'debate', path: '/api/debate', body: { message: '__health_check__', opponent: 'atheist', topic: 'test', difficulty: 'gentle', history: [], mode: 'debate' } },
     { name: 'devotional', path: '/api/devotional', body: { verse: 'test', reflection: 'test', userResponse: null } },
     { name: 'feedback', path: '/api/feedback', body: { history: [], opponent: 'atheist', topic: 'test', mode: 'debate' } },
-  ];
+  ] : [];
+  if (!runPings) results.endpoints = { status: 'skipped', ms: null, detail: 'LLM endpoint pings require the health secret (?secret= or x-health-secret)' };
 
   const baseUrl = process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
@@ -79,7 +87,7 @@ export default async function handler(req, res) {
   }
 
   const totalMs = Date.now() - startTime;
-  const allOk = Object.values(results).every(r => r.status === 'ok');
+  const allOk = Object.values(results).every(r => r.status === 'ok' || r.status === 'skipped');
 
   return res.status(200).json({
     status: allOk ? 'healthy' : 'degraded',

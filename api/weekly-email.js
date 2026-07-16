@@ -243,6 +243,15 @@ async function resendSend(resendKey, to, subject, html) {
   return response.json();
 }
 
+// Escape user-controlled values (display name, group name/icon) before they go
+// into email HTML. These are user-set and reach OTHER members' inboxes, so an
+// unescaped value is stored HTML injection across users.
+function esc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
 function buildNudgeSubject(g) {
   return `Your study group has been at it — ${g.name} missed you`;
 }
@@ -261,10 +270,10 @@ function buildNudgeHtml(name, g, activeCount, memberCount) {
     <div style="font-family:Arial,sans-serif;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:3px;">Study Groups</div>
   </div>
   <div style="background:#050d1a;padding:2rem 2rem 1.75rem;">
-    <div style="font-size:2.25rem;margin-bottom:0.75rem;">${g.icon || '👥'}</div>
-    <div style="font-family:Georgia,serif;font-size:1.35rem;font-weight:700;color:#fff;margin-bottom:0.6rem;">${name}, your group has been studying without you.</div>
+    <div style="font-size:2.25rem;margin-bottom:0.75rem;">${esc(g.icon || '👥')}</div>
+    <div style="font-family:Georgia,serif;font-size:1.35rem;font-weight:700;color:#fff;margin-bottom:0.6rem;">${esc(name)}, your group has been studying without you.</div>
     <div style="font-family:Arial,sans-serif;font-size:0.92rem;color:rgba(255,255,255,0.6);line-height:1.75;">
-      <strong style="color:#e8cf87;">${g.name}</strong> had ${others} member${others !== 1 ? 's' : ''} show up this week. ${planLine}
+      <strong style="color:#e8cf87;">${esc(g.name)}</strong> had ${others} member${others !== 1 ? 's' : ''} show up this week. ${planLine}
     </div>
     <a href="https://apologiadaily.com/study-groups.html" style="display:inline-block;margin-top:1.5rem;font-family:Arial,sans-serif;font-size:0.85rem;font-weight:600;background:#c8a951;color:#050d1a;padding:11px 22px;border-radius:3px;text-decoration:none;">Jump back in →</a>
   </div>
@@ -380,7 +389,7 @@ function buildEmailHtml(name, fc, ex) {
 
   <!-- GREETING -->
   <div style="background:#050d1a;padding:2rem 2rem 1.5rem;">
-    <div style="font-family:Georgia,serif;font-size:1.35rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">Good morning, ${name}. New week.</div>
+    <div style="font-family:Georgia,serif;font-size:1.35rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">Good morning, ${esc(name)}. New week.</div>
     <div style="font-family:Arial,sans-serif;font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.7;">Here is your apologetics focus for this week. Consistent short sessions beat occasional long ones &mdash; ten minutes today matters more than two hours next month.</div>
   </div>
 

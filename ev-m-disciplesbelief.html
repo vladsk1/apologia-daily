@@ -800,7 +800,7 @@ async function boot(){
     /* TEMP until Stripe is live — everything unlocked, same as flashcards/explain-it-back. */
     var isPro = true;
     /* Post-Stripe, replace the line above with:
-       var isPro = !!(session && session.user && session.user.user_metadata && session.user.user_metadata.is_pro === true); */
+       var isPro = !!(session && session.user && session.user.app_metadata && session.user.app_metadata.is_pro === true); */
     if(!isPro){ showGate(); return; }
   }
   /* build the track */
