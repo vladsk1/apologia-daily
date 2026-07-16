@@ -4,15 +4,13 @@
 (Grand Rapids: Kregel, 2004). Owner's physical copy (photographed). Copyrighted — this is an
 **in-our-own-words map that points at quotable primaries**, NOT a store of the book's prose.
 
-> **Status: IN PROGRESS — captured pp. 23–36** (Introduction to Part 1 + all of Ch. 1 + the opening
-> of Ch. 2 "History 101"): the gospel = 3 facts; the resurrection as the external/historical test vs.
-> subjective tests; "Did Jesus predict his resurrection?"; the "history = probability / best
-> explanation / reasonable-certainty" methodology; evidence-as-part-of-gospel; and the *start* of the
-> "five historical principles." Still **not** captured: the **five principles in full**, the
-> **"minimal facts" core** (the historical bedrock — crucifixion, disciples' experiences, Paul's and
-> James's conversions, empty tomb — and the survey of what critical scholars grant), and, critically,
-> the **endnotes / bibliography** where the primary-source leads live. See "Next photos needed" at the
-> bottom. Do not treat this note as a complete map of the book.
+> **Status: IN PROGRESS — captured pp. 23–48** (Intro to Part 1 + Ch. 1 + Ch. 2 "History 101" [the
+> five historical principles in full] + Intro to Part 2 [the minimal-facts **method**: 2 criteria +
+> lowest-common-denominator] + the start of Ch. 3 [the **"4 + 1" facts**, and **Fact 1: Jesus died by
+> crucifixion**, with Josephus/Tacitus/Lucian]). Still **not** captured: **Facts 2–5** (the disciples'
+> experiences, Paul's and James's conversions, and the "+1" empty tomb) and the **survey of scholarly
+> agreement**; and, critically, the **endnotes / bibliography** where the primary-source leads live.
+> See "Next photos needed." Do not treat this note as a complete map of the book.
 
 ## Usage rules (same as every note in this folder)
 - **Never reproduce the book's prose.** Everything here is our paraphrase of the argument's *shape*.
@@ -155,18 +153,85 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   and useful. Popular illustrations here (the Niagara-Falls wheelbarrow) are fine as *illustration* —
   never cite them as argument.
 
-### Chapter 2 — "History 101": the historian's principles (pp. 36+) — IN PROGRESS
-- **Beat:** before weighing the resurrection evidence, the book lays out the **principles historians
-  use to assess sources** — presented as guiding principles, not hard rules. Header: **"Five historical
-  principles speak to Resurrection."** These five are the **methodological backbone of the minimal-facts
-  case** (classically: multiple independent attestation, enemy attestation, the principle of
-  embarrassment, eyewitness testimony, and early testimony) — but so far only the chapter opening +
-  the first principle are captured; the full five and their application to the resurrection are the
-  next pages.
-- **Primary-source leads:** TBD — capture the five-principles pages (they carry the footnotes that name
-  the sources).
-- **Guardrail fit:** these criteria are standard and defensible; frame them as *raising the probability*
-  of a fact, not as proof.
+### Chapter 2 — "History 101": the five historical principles (pp. 36–40)
+- **Beat:** before weighing the resurrection evidence, lay out the **principles historians use to
+  assess a source's strength** — guiding principles ("Some testimony is stronger than others"), not
+  hard rules. History weighs evidence like a balance scale; the historicity verdict follows whichever
+  side the scale tips toward (probability, not proof). **The five (the methodological backbone of the
+  minimal-facts case):**
+  1. **Multiple, independent sources** — an event attested by more than one *independent* source is
+     strongly indicated (illustrated by a car-accident/red-light scenario).
+  2. **Enemy attestation** — affirmation from a *neutral or hostile* source outweighs a friendly one,
+     because the bias-in-favor is absent.
+  3. **Embarrassing admissions** (criterion of embarrassment) — a source is unlikely to invent details
+     that *embarrass its own cause* or weaken its position, so such material is a strong authenticity
+     marker.
+  4. **Eyewitness testimony** — firsthand testimony outweighs secondhand/hearsay.
+  5. **Early testimony** — the *closer* the testimony to the event, the more reliable (less time for
+     exaggeration and legend to accrue).
+- **Primary-source leads to verify (illustrations — verify if ever used, but they're secular examples,
+  not the resurrection argument itself):**
+  - **John Adams / Alexander Hamilton** — Hamilton's hostile pamphlet against Adams still conceded
+    Adams's integrity → used to illustrate *enemy attestation* (footnotes 3–4).
+  - **Annette Gordon-Reed**, on **Thomas Jefferson & Sally Hemings** — her "declarations against
+    interest" argument, later supported by DNA → used to illustrate *embarrassing admissions*
+    (footnotes 5–6). (Note: Gordon-Reed also appeared earlier for burden-of-proof — same scholar.)
+  - **Emo Philips** — the "Northern Conservative Fundamentalist Baptist… die, heretic!" bridge joke
+    opens Part 2; **illustration only**, never cite as argument, and note it lampoons *sectarianism* —
+    fine with our denominational-neutrality stance.
+- **Guardrail fit:** these five are the standard, defensible historical-Jesus criteria and are exactly
+  what `library/minimalfacts.html` rests on — **strong, verifiable material.** Frame each as *raising
+  the probability* of a fact, never as proof; and when we deploy them, cite the criteria to recognised
+  historical-method sources, not to this popular book.
+
+### Introduction to Part 2 — "The Minimal Facts Approach" (pp. 43–47) — THE METHOD
+- **Beat (the core method of the book):** rather than first defending biblical inspiration/inerrancy,
+  the case is built only on data that meet **two criteria**:
+  1. **strongly evidenced** historically, and
+  2. **granted by virtually all scholars** who study the subject — *including skeptical ones*
+     (the "lowest common denominator" of NT scholarship).
+  The point is to keep attention on the central claim (the resurrection) and avoid getting bogged down
+  in side debates about inerrancy. If a skeptic rejects a minimal fact that the majority of *skeptical*
+  scholars accept, the burden shifts to them.
+- **Method illustrations (verify if used; mostly secular/anecdotal):**
+  - **Licona's University of Virginia anecdote** — a med-student atheist says the Bible's contradictions
+    sink the resurrection; the reply is that even *granting* the Bible errors for argument's sake, the
+    minimal facts (strongly attested, granted by most scholars) stand. Illustration only.
+  - **Steven Covey**, "keep the main thing the main thing" — rhetorical framing.
+  - **Tacitus** — described as the greatest Roman historian who nonetheless "writes with a heavy bias,"
+    yet scholars still benefit greatly from his work → the point that a *biased or errant source can
+    still yield reliable facts* (approach the NT as you would any ancient source). Verify the
+    characterization; Tacitus is also a genuine extra-biblical witness (see Fact 1).
+- **Guardrail fit:** this method is *on-mission* — confidence **earned** from what even critics grant,
+  not from assuming the conclusion. **Apply our Bible-reliability rule squarely here:** the minimal-
+  facts move deliberately brackets inspiration/inerrancy and argues history separately — good. Do not
+  overstate "virtually all scholars" beyond what the book's own survey supports (verify the survey when
+  the endnotes/Habermas source pages are captured).
+
+### Chapter 3 — "A Quintet of Facts (4 + 1): The First Two" (p. 48+) — THE FACTS BEGIN
+- **Beat:** **Habermas lists twelve** historical facts; this book focuses on **five, framed as "4 + 1"**
+  — four that **nearly every** scholar (incl. skeptics) accepts, plus a fifth that an **impressive
+  majority** accepts (but not quite all). Chapters 3–8 walk through them with memory-aid charts.
+- **THE FIVE (to confirm/complete as the pages come in):**
+  1. **Jesus died by crucifixion** — *(captured, p. 48)*. Crucifixion was the standard Roman execution
+     for the lower class / slaves / rebels / those accused of treason. Attested **outside** the NT by
+     **Josephus** (1st-c. Jewish historian), and (facing page) **Tacitus** and **Lucian** — extra-
+     biblical corroboration.
+  2. — *(not yet captured — likely the disciples' experiences / belief they saw him risen)*
+  3. — *(not yet captured)*
+  4. — *(not yet captured)*
+  5. **(the "+1")** — *(not yet captured — the one granted by a majority but not all; historically the
+     empty tomb in this book's scheme)*
+- **Primary-source leads to verify (this is our bread and butter — verify each to the primary before use):**
+  - **Gary Habermas** — the "twelve facts" list / the scholarly-agreement survey (footnotes 1–2, p. 48).
+    Find the actual Habermas source (his published survey of critical scholarship) + numbers.
+  - **Josephus** — the crucifixion report (footnote 3, p. 48). *Cross-check our own `library/hist_jesus.html`
+    Josephus handling (recently recalibrated) so the Testimonium framing stays consistent.*
+  - **Tacitus** (Annals 15.44) and **Lucian** — extra-biblical crucifixion witnesses (facing page).
+- **Guardrail fit:** Fact 1 (death by crucifixion) is about as uncontested as ancient history gets and
+  is exactly what `library/minimalfacts.html` + the Resurrection tab rest on. Keep the extra-biblical
+  witnesses precise (our recent Josephus/Tacitus recalibration in `ev-s3` / `hist_jesus` applies — do
+  not overstate what Tacitus/Josephus establish).
 
 ## Cross-map to our Evidence Library
 - Resurrection tab **`ev-s2`**; essays **`library/minimalfacts.html`**, **`emptytomb.html`**,
@@ -186,20 +251,23 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
 | Table of contents | — | ❌ | need to map the full chapter list |
 | Intro to Part 1 | 23–24 | ✅ | Jesus Seminar framing; leads listed above |
 | Ch. 1 "Unwrapping the Gift" | 25–35 | ✅ | gospel = 3 facts; resurrection as external test (Qur'an 2:23 / Moroni 10:4); "did Jesus predict it?" (embarrassment / dissimilarity / multiple attestation; Meier, Blomberg); history = probability / best explanation (Gordon-Reed, Twelftree); evidence + gospel (Acts 17) |
-| Ch. 2 "History 101" | 36+ | ✅ (partial) | opening + "five historical principles" header; the five in full + their application NOT yet captured |
-| **Minimal-facts core** (the historical bedrock + best-explanation case) | later chs. | ❌ | **the heart of the book — highest priority** |
+| Ch. 2 "History 101" | 36–40 | ✅ | the five historical principles in full (multiple/independent, enemy, embarrassment, eyewitness, early); illustrations: Adams/Hamilton, Gordon-Reed on Jefferson/Hemings |
+| (Ch. 2 end / notes) | 41–42 | ❌ | small gap — not photographed (likely Ch. 2 notes or section break) |
+| Intro to Part 2 "Minimal Facts Approach" | 43–47 | ✅ | the METHOD: 2 criteria (strongly evidenced + granted by virtually all scholars incl. skeptics), lowest-common-denominator; Licona UVa anecdote, Covey, Tacitus-as-usable-biased-source |
+| Ch. 3 "A Quintet of Facts (4 + 1)" | 48+ | ✅ (partial) | the "4 + 1" framing (Habermas's 12 → 5); **Fact 1: Jesus died by crucifixion** (Josephus/Tacitus/Lucian). Facts 2–5 on the pages after 48 |
+| **Facts 2–5 + scholarly-agreement survey** | Ch. 3–8 (after p. 48) | ⏳ | **the rest of the core — being captured now** |
 | Responses to naturalistic theories (hallucination, legend, swoon, etc.) | later chs. | ❌ | ❌ |
 | **Endnotes / bibliography** | back matter | ❌ | **the citation trail — highest priority** |
 
 ## Next photos needed (in priority order)
-1. **The minimal-facts chapters** — the pages that list and defend the core historical facts (Jesus'
-   death by crucifixion; the disciples' experiences/belief they saw him risen; the conversions of
-   **Paul** and of **James** the skeptic; and the empty-tomb material) and the **survey of what critical
-   scholars grant**. This is the actual argument we want mapped (Ch. 2 onward, past p. 36).
-2. **The rest of Ch. 2 "History 101"** — the **five historical principles** in full and how they apply
-   to the resurrection (carries the footnotes that name the sources).
-3. **The endnotes / bibliography pages** — where the real primary-source leads (scholars, works, dates,
-   page numbers) live; without them the citations above stay unverifiable.
-4. The **table of contents** + **copyright page** (to fix the edition and map the whole book).
+1. **Facts 2–5 (the rest of Ch. 3 onward, past p. 48)** — the disciples' experiences / belief they saw
+   him risen; the conversions of **Paul** and of **James** the skeptic; and the "+1" **empty tomb** —
+   plus the **survey of scholarly agreement** (how many/which scholars grant each). This is the
+   remainder of the core argument.
+2. **The endnotes / bibliography pages** — where the real primary-source leads (Habermas's survey,
+   Josephus/Tacitus/Lucian references, scholars, works, dates, page numbers) live; without them the
+   citations above stay unverifiable.
+3. The **table of contents** + **copyright page** (to fix the edition and map the whole book).
+4. **pp. 41–42** (the small skipped gap — Ch. 2 end / notes), if not blank.
 
 Photograph straight-on, flat, no glare, whole page in frame, in reading order, ~5–10 per batch.
