@@ -462,13 +462,21 @@
       "category": "Islam & World Religions",
       "meta": "Muslims say Jesus was a Muslim — a submitter to God. He did submit to the Father, but he also claimed and accepted what no mere submitter could: to forgive sins and receive worship.",
       "reviewed": {
-        "orthodoxy": "2026-07-04",
-        "argument": "2026-07-04",
-        "by": "apologia argument+orthodoxy gates (session 2026-07-04)"
+        "orthodoxy": "2026-07-16",
+        "argument": "2026-07-16",
+        "by": "added doctrinal clarifier (＊ Is/Not box) fencing an eternal-subordination misread; box gated by apologia-orthodoxy"
       },
       "a": "Muslims often say Jesus (Isa) was a Muslim, meaning a 'submitter' to the one God — and in that broad sense, yes, Jesus submitted to his Father perfectly. But 'submitter to God' is not the same as a follower of the religion of Islam, which is defined by the testimony that Muhammad is God's messenger and by the Quran — both from the seventh century, six hundred years after Jesus. Jesus was a first-century Jew who never heard of Muhammad and kept the Torah, not Islamic law.\n\nMore decisively, the Jesus of the historical record did things no Muslim ever could: he forgave sins in his own name (Mark 2:5-7), accepted worship (John 20:28-29), and claimed to share the Father's glory (John 17:5) — which on Islam's own terms would be shirk, impossible for a prophet. A Muslim may reply that the Gospels were corrupted at exactly these points (tahrif) - but the divine-claim material sits in the earliest and best-attested strata, so excising only the inconvenient parts is special pleading. So either we trust the Gospels, and Jesus was no Muslim, or we discard them, and there is no historical 'Muslim Jesus' left at all. His submission to the Father was real — the submission of God the Son, who became human to save us (Philippians 2:6-8).",
       "essay": "/library/islam-jesusmuslim.html",
-      "relatedLabel": "Was Jesus a Muslim? The Christian Response"
+      "relatedLabel": "Was Jesus a Muslim? The Christian Response",
+      "clarifiers": [
+        {
+          "phrase": "the submission of God the Son, who became human to save us",
+          "heading": "The Son's submission",
+          "is": "The eternal Son, <strong>fully God</strong>, freely submits to the Father in his <em>incarnate human obedience</em> &mdash; the voluntary, loving order of the Trinity's outward work.",
+          "not": "<strong>Not</strong> that the Son is lesser in being, rank, or divinity than the Father (the Arian / subordinationist error). His submission is that of the God who became man, not of a creature."
+        }
+      ]
     },
     {
       "slug": "does-the-bible-predict-muhammad",
@@ -562,11 +570,19 @@
       "reviewed": {
         "orthodoxy": "2026-07-16",
         "argument": "2026-07-16",
-        "by": "over-concession sweep 2026-07-16: tightened front-loaded opening (concede observation, not inference; lead with the answer, point to fuller study)"
+        "by": "added doctrinal clarifier (＊ Is/Not box) fencing an eternal-subordination misread; box gated by apologia-orthodoxy"
       },
       "a": "It's a fair and pressing question. Jesus prays, obeys, is sent, calls the Father “greater,” and says he does not know the day or the hour - texts that, at first glance, look like they describe someone ranked below God.\n\nThe classical Christian answer turns on the incarnation. Philippians 2 says the Son, being in the form of God, emptied himself by taking the form of a servant. Notice what the Greek does not say: it never says he emptied himself of his deity. There is no of anything in the sentence. It tells us how he emptied himself, by adding a genuine human nature, not by subtracting his divinity. The mystery is concealment, not loss: the one who was fully God veiled that glory beneath a servant's form, remaining what he was while becoming what he was not. So the praying, obeying, and not-knowing belong to his real human life and his freely accepted role as servant, not to an inferiority in the divine nature. This is not the ancient Arian idea that the Son is a lesser god.\n\nAnd the same Jesus who says the Father is greater also says I and the Father are one. Greater speaks of order and role, not of a better nature. The picture that holds all the texts together is not a demoted deity, but God himself stooping to share our life, our limits, and even our death.",
       "essay": "/library/phil2.html",
-      "relatedLabel": "Philippians 2:6-11: The Carmen Christi and Christ's Deity"
+      "relatedLabel": "Philippians 2:6-11: The Carmen Christi and Christ's Deity",
+      "clarifiers": [
+        {
+          "phrase": "order and role",
+          "heading": "Order of relation — not rank of nature",
+          "is": "A distinction of <em>relation and role</em>: the Son eternally proceeds from the Father and is sent by him, and in the incarnation freely takes the servant's place.",
+          "not": "<strong>Not</strong> that the Son is lesser in nature, being, or divinity. He is fully God, co-equal and co-eternal with the Father &mdash; \"I and the Father are one\" (John 10:30). This denies both Arianism and any eternal subordination of the Son's essence."
+        }
+      ]
     },
     {
       "slug": "where-is-the-trinity-in-the-bible",
