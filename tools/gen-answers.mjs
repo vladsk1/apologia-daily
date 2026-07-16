@@ -47,6 +47,7 @@
        related?, relatedLabel? }                  // OR legacy "ev-m-*.html" (maps to /library/<x>.html + practice link)
 */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { CANON } from './sync-nav.mjs';   // single source of truth for the nav menu
@@ -54,6 +55,26 @@ import { CANON } from './sync-nav.mjs';   // single source of truth for the nav 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ANSWERS = join(ROOT, 'answers');
 const data = JSON.parse(readFileSync(join(ANSWERS, '_data.json'), 'utf8'));
+
+// ── SHORT-FORM RULE GATE (fail closed, runs FIRST) ──
+// gen-answers is the script you MUST run to create any new answer page, so it is
+// the natural chokepoint to enforce the SHORT-FORM ANSWER RULE mechanically: no
+// page is built while ANY answer leads front-loaded (check-answer-openings) or
+// carries an un-baselined over-concession / unearned symmetry anywhere in the
+// answer or its meta (check-answer-concessions). These are the exact defects that
+// reached production on the JW/Mormon answers; blocking here means a new answer
+// literally cannot be generated while the corpus trips either lint — independent
+// of CI. Both are whole-corpus, so new entries are covered automatically.
+for (const lint of ['check-answer-openings.mjs', 'check-answer-concessions.mjs']) {
+  try {
+    execFileSync('node', [join(ROOT, 'tools', lint)], { cwd: ROOT, stdio: 'pipe' });
+  } catch (err) {
+    process.stderr.write((err.stdout || '') + (err.stderr || ''));
+    console.error(`\n⛔ gen-answers refuses to build: tools/${lint} failed (see above).`);
+    console.error('   Fix the flagged answer (lead with the answer / drop the over-concession) and re-run.\n');
+    process.exit(1);
+  }
+}
 
 // ── DRIFT AUDIT ──
 // Every answer's text lives in THREE places that must agree: the visible <div class="ad-answer">,
