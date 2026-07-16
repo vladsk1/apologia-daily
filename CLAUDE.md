@@ -251,11 +251,17 @@ it, and `tools/gen-answers.mjs`'s header documents it).** A short answer's *job*
 the question** — directly, from our own convictional footing, inside the guardrails and the
 mission — and then **point to the fuller study** (the linked essay) for the deep engagement. It
 is **not** an essay, and it must **not** carry an essay's heavy steelman.
-- **Lead with the answer.** Do **not** open by steelmanning, amplifying, or "granting the force
-  of" the objection. A **front-loaded concession** — an opening that builds the skeptic's/other
-  side's case before answering — is a **defect even when the body later refutes it** (it fails the
-  pull-quote test and can leave a believer nearer to doubt). This was the 2026-07-16 sweep's whole
-  finding: 11 of 110 answers had exactly this front-loaded-concession opening (all fixed).
+- **Lead with the answer.** The **first sentence must answer the question** from our own footing (a
+  direct "No —" / "Yes —" / clear assertion), not open on the objection. Do **not** open by
+  steelmanning, amplifying, "granting the force of," or even neutrally *restating* the objection. A
+  **front-loaded opening is a defect even when every word of it is factually accurate** — the defect is
+  the *placement and weight* (answering the objection before you've answered the reader), not the
+  accuracy. "It's a fair question," "This is a serious/common objection," "Honestly, this is hard,"
+  "Let's not soften this," "At first glance X seems true" are all front-loaded openings to rewrite.
+  A front-loaded concession fails the pull-quote test and can leave a believer nearer to doubt. (This
+  was the 2026-07-16 sweeps' finding: first 11 over-concession openings, then a full opening-rewrite
+  pass — the earlier over-concession gate had *passed* factually-honest-but-front-loaded openings, so
+  the rule is: front-loading is a defect regardless of factual accuracy.)
 - **Concede the observation, never the inference.** Concede only accurate facts and the person's
   sincerity — never the opponent's frame, the soundness of a mistaken inference, or an unearned
   symmetry. Keep any acknowledgment **brief and fact-bound**.

@@ -22,10 +22,14 @@
    footing, inside the guardrails and the site's mission (strengthen the believer, reach the
    seeker honestly) — and THEN point to the fuller study for the deep engagement. It is NOT an
    essay. Therefore:
-     • LEAD WITH THE ANSWER. Do not open by steelmanning, amplifying, or "granting the force of"
-       the objection. A front-loaded concession — an opening that builds the skeptic's/other
-       side's case before answering — is a DEFECT even when the body later refutes it (it fails
-       the pull-quote test and can leave a believer nearer to doubt).
+     • LEAD WITH THE ANSWER. The FIRST SENTENCE must answer the question from our own footing
+       (a direct "No —"/"Yes —"/clear assertion) — not open on the objection. Do not open by
+       steelmanning, amplifying, "granting the force of," or even neutrally RESTATING the objection.
+       A front-loaded opening is a DEFECT EVEN WHEN EVERY WORD OF IT IS FACTUALLY ACCURATE — the
+       defect is the placement/weight, not the accuracy. ("It's a fair question," "This is a
+       serious objection," "Honestly this is hard," "Let's not soften this," "At first glance X
+       seems true" are all front-loaded openings to rewrite.) Fails the pull-quote test; can leave
+       a believer nearer to doubt.
      • CONCEDE THE OBSERVATION, NEVER THE INFERENCE. Concede only accurate facts and the person's
        sincerity — never the opponent's frame, the soundness of a mistaken inference, or an
        unearned symmetry. Keep any acknowledgment brief and fact-bound.
