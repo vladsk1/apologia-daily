@@ -409,6 +409,17 @@ every push (`content-gate.yml` → `tests` job) and monthly (`monthly-code-audit
 **agent-driven** monthly security sweep of `api/*.js` + RLS still needs a fresh-session Routine
 (create it when `create_trigger` is reachable).
 
+**Crisis-routing harness (`tools/test-crisis-routing.mjs`).** End-to-end guard for the `api/ask.js`
+PASTORAL CARE path (a crisis message must never get the normal answer or the canned off-topic/denom
+brush-off — see the pastoral/crisis exception above). Two modes: **offline** (default, CI-safe) extracts
+the live `crisisBackstop` regex from `api/ask.js` and asserts it against a labeled corpus — this is
+wired into `tests/content-integrity.test.mjs` so a regex regression fails CI; **`--live [baseUrl]`**
+POSTs every case to the deployed `/api/ask` and classifies the real response by route (crisis / answer /
+offtopic / denom), exercising the Haiku PASTORAL classifier too (abuse / harm-to-others cases the regex
+can't catch). Live spends tokens and is IP-rate-limited (40/day) — run it sparingly from a web-enabled
+session (the sandbox can't reach the endpoint). Add new crisis phrasings to the `CASES` corpus as they
+come up.
+
 ## Evidence Library structure
 - Hub: `evidence-library.html` (tabs fetch `ev-sN.html` fragments via JS).
 - Mastery pages: `ev-m-*.html`. Deep-dive essays: `library/*.html`
