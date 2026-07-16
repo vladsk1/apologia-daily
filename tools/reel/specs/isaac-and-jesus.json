@@ -1,0 +1,350 @@
+{
+  "reviewed": {
+    "argument": "2026-07-16",
+    "orthodoxy": "2026-07-16",
+    "by": "apologia-argument + apologia-orthodoxy, both CLEAN; Scene 7 adopted the gate's optional willing-self-gift wording"
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.7,
+  "bg_image": "../assets/typology-reel-bg.png",
+  "bg_dim": 0.34,
+  "voiceover": "A father and his son climb a mountain. The boy carries the wood for the fire on his own back. He doesn't yet know the wood is for his own sacrifice. And when he asks, 'My father, where is the lamb?' — his father says only, 'God will provide the lamb.' This is Genesis 22 — ancient history. But watch how the details line up. A beloved, only son, carrying the wood of his own sacrifice up the hill. Two thousand years later, another beloved Son carries his own cross up a hill outside Jerusalem. On the mountain, a ram is caught in a thicket and dies in Isaac's place — and the son is spared. But this time, the Son is not spared. This time the Son freely goes, and the Father himself provides the Lamb. Abraham named that mountain 'The LORD will provide.' And Isaac's question — where is the lamb? — hung in the air for two thousand years. Until a man stood by a river, pointed, and said: 'Behold, the Lamb of God, who takes away the sin of the world.' It was pointing here all along.",
+  "source": "library/typology.html",
+  "scenes": [
+    {
+      "dur": 4.6,
+      "big": [
+        {
+          "t": "Where is",
+          "c": "cream",
+          "s": 104
+        },
+        {
+          "t": "the lamb?",
+          "c": "gold",
+          "s": 112
+        }
+      ],
+      "sub": [
+        {
+          "t": "Genesis 22",
+          "c": "dim",
+          "f": "serif",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "kicker": "THE SCENE",
+      "dur": 6.4,
+      "lines": [
+        {
+          "t": "A father and his son",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "climb a mountain.",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "",
+          "s": 22
+        },
+        {
+          "t": "The boy carries the wood",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        },
+        {
+          "t": "on his own back.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        }
+      ]
+    },
+    {
+      "kicker": "HE DOESN'T KNOW YET",
+      "dur": 6.6,
+      "lines": [
+        {
+          "t": "The wood is for",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "his own sacrifice.",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "",
+          "s": 22
+        },
+        {
+          "t": "His father says only:",
+          "c": "dim",
+          "s": 52
+        },
+        {
+          "t": "“God will provide the lamb.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        }
+      ]
+    },
+    {
+      "kicker": "NOW WATCH THE PATTERN",
+      "dur": 6.2,
+      "lines": [
+        {
+          "t": "A beloved, only son —",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "carrying the wood",
+          "c": "gold",
+          "f": "serifb",
+          "s": 62
+        },
+        {
+          "t": "up the hill himself.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 62
+        }
+      ]
+    },
+    {
+      "kicker": "TWO THOUSAND YEARS LATER",
+      "dur": 6.4,
+      "lines": [
+        {
+          "t": "Another beloved Son",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "carries his own cross",
+          "c": "gold",
+          "f": "serifb",
+          "s": 62
+        },
+        {
+          "t": "up a hill",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "outside Jerusalem.",
+          "c": "cream",
+          "s": 56
+        }
+      ]
+    },
+    {
+      "kicker": "ON THE MOUNTAIN",
+      "dur": 6.4,
+      "lines": [
+        {
+          "t": "A ram is caught",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "in a thicket",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "and dies in Isaac's place.",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "The son is spared.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 66
+        }
+      ]
+    },
+    {
+      "kicker": "BUT THIS TIME",
+      "dur": 7.0,
+      "lines": [
+        {
+          "t": "the Son is not spared —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 62
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "this time the Son freely goes,",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "and the Father himself",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "provides the Lamb.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 60
+        }
+      ]
+    },
+    {
+      "kicker": "THE NAME OF THE PLACE",
+      "dur": 5.6,
+      "lines": [
+        {
+          "t": "Abraham named",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "that mountain:",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "",
+          "s": 22
+        },
+        {
+          "t": "“The LORD will provide.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 62
+        }
+      ]
+    },
+    {
+      "kicker": "THE QUESTION WAITED",
+      "dur": 6.0,
+      "lines": [
+        {
+          "t": "“Where is the lamb?”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 70
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "hung in the air",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "for two thousand years —",
+          "c": "cream",
+          "s": 56
+        }
+      ]
+    },
+    {
+      "kicker": "UNTIL A MAN POINTED",
+      "dur": 5.2,
+      "lines": [
+        {
+          "t": "at a river,",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "and said:",
+          "c": "cream",
+          "s": 58
+        }
+      ]
+    },
+    {
+      "dur": 6.6,
+      "big": [
+        {
+          "t": "“Behold,",
+          "c": "cream",
+          "s": 86
+        },
+        {
+          "t": "the Lamb of God.”",
+          "c": "gold",
+          "s": 92
+        }
+      ],
+      "sub": [
+        {
+          "t": "who takes away the sin of the world",
+          "c": "cream",
+          "f": "serif",
+          "s": 38
+        },
+        {
+          "t": "John 1:29",
+          "c": "dim",
+          "f": "serifb",
+          "s": 40
+        }
+      ]
+    },
+    {
+      "dur": 5.0,
+      "big": [
+        {
+          "t": "It was pointing here",
+          "c": "cream",
+          "s": 66
+        },
+        {
+          "t": "all along.",
+          "c": "gold",
+          "s": 92
+        }
+      ],
+      "sub": [
+        {
+          "t": "The full story at",
+          "c": "dim",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ]
+    }
+  ]
+}

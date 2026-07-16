@@ -353,6 +353,7 @@ def main():
     ap.add_argument("--workdir")
     a = ap.parse_args()
     spec = json.load(open(a.spec, encoding="utf-8"))
+    spec["__path__"] = a.spec  # so relative bg_image paths resolve against the spec's directory
     aspect = a.aspect or spec.get("aspect", "vertical")
     theme = a.theme or spec.get("theme", "navy")
     W, H = ASPECTS[aspect]
