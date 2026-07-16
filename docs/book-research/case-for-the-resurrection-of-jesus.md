@@ -4,13 +4,17 @@
 (Grand Rapids: Kregel, 2004). Owner's physical copy (photographed). Copyrighted — this is an
 **in-our-own-words map that points at quotable primaries**, NOT a store of the book's prose.
 
-> **Status: IN PROGRESS — captured pp. 23–48** (Intro to Part 1 + Ch. 1 + Ch. 2 "History 101" [the
-> five historical principles in full] + Intro to Part 2 [the minimal-facts **method**: 2 criteria +
-> lowest-common-denominator] + the start of Ch. 3 [the **"4 + 1" facts**, and **Fact 1: Jesus died by
-> crucifixion**, with Josephus/Tacitus/Lucian]). Still **not** captured: **Facts 2–5** (the disciples'
-> experiences, Paul's and James's conversions, and the "+1" empty tomb) and the **survey of scholarly
-> agreement**; and, critically, the **endnotes / bibliography** where the primary-source leads live.
-> See "Next photos needed." Do not treat this note as a complete map of the book.
+> **Status: IN PROGRESS — captured pp. 23–73; the FULL "4 + 1" quintet is now mapped.** Intro to
+> Part 1 + Ch. 1 + Ch. 2 "History 101" (five principles) + Intro to Part 2 (the minimal-facts method)
+> + **Ch. 3 & 4 "A Quintet of Facts (4+1)" — all five facts:** (1) crucifixion [Josephus/Tacitus/
+> Lucian/Mara Bar-Serapion/Talmud + Crossan]; (2) the disciples believed [1 Cor 15 creed dated ~5 yrs
+> via Gal 1:18; POWr/nine sources; apostolic fathers; Bultmann/Lüdemann/Fredriksen + Habermas's
+> 1,400-source survey]; (3) Paul's conversion [enemy, primary evidence]; (4) James's conversion
+> [1 Cor 15:7; Josephus *Ant.* 20; Fuller]; (5) the empty tomb ["+1", ~75%; Jerusalem factor / enemy
+> attestation / women-witness embarrassment; William Wand]. Still **not** captured: the book's
+> **response to naturalistic theories** (hallucination/legend/etc., later chapters), the **medical
+> evidence for the death**, and — critically — the **endnotes / bibliography** where the primary-source
+> leads live. See "Next photos needed." Do not treat this note as a complete map of the book.
 
 ## Usage rules (same as every note in this folder)
 - **Never reproduce the book's prose.** Everything here is our paraphrase of the argument's *shape*.
@@ -213,25 +217,141 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   — four that **nearly every** scholar (incl. skeptics) accepts, plus a fifth that an **impressive
   majority** accepts (but not quite all). Chapters 3–8 walk through them with memory-aid charts.
 - **THE FIVE (to confirm/complete as the pages come in):**
-  1. **Jesus died by crucifixion** — *(captured, p. 48)*. Crucifixion was the standard Roman execution
-     for the lower class / slaves / rebels / those accused of treason. Attested **outside** the NT by
-     **Josephus** (1st-c. Jewish historian), and (facing page) **Tacitus** and **Lucian** — extra-
-     biblical corroboration.
-  2. — *(not yet captured — likely the disciples' experiences / belief they saw him risen)*
-  3. — *(not yet captured)*
-  4. — *(not yet captured)*
-  5. **(the "+1")** — *(not yet captured — the one granted by a majority but not all; historically the
-     empty tomb in this book's scheme)*
+  1. **Jesus died by crucifixion** — *(captured, pp. 48–50)*. The standard Roman execution for the
+     lower class / slaves / rebels / treason. Attested **outside the NT** by **five non-Christian
+     sources** (the book's chart): **Josephus, Tacitus, Lucian of Samosata, Mara Bar-Serapion,** and
+     the **Talmud** — plus **Cicero** on crucifixion's horror. Even the Jesus-Seminar skeptic **John
+     Dominic Crossan**: "that he was crucified is as sure as anything historical can ever be." (Medical
+     details deferred to the book's ch. 5.)
+  2. **Jesus' disciples believed he rose and appeared to them** — *(captured, pp. 50–55+)*. The book
+     claims a **"virtual consensus"** among scholars that, after the crucifixion, the disciples
+     *sincerely believed* the risen Jesus appeared to them, and were **transformed** from fearful into
+     bold proclaimers, steadfast under persecution and (in several cases) martyrdom. Split into two
+     sub-claims: **(a) "They claimed it"** — reached from **nine early, independent sources** in three
+     categories: **(1)** Paul's testimony about the disciples (he knew Peter, James, John — the "big
+     three" — cf. Gal 1–2), **(2)** oral tradition / early creeds, **(3)** the written works of the
+     early church; and **(b)** they *sincerely held* it (the transformation/willingness-to-suffer).
+     **Key material here:**
+     - **The 1 Corinthians 15:3–8 creed** (quoted in Paul's letter, ~AD 55, "what I also received"):
+       Christ died for our sins, was buried, was raised on the third day, appeared to Cephas then the
+       twelve. Marked as an **ancient creed *predating* Paul's letters**; critical scholars hold **Paul
+       received it from Peter and James in Jerusalem ~3 years after his conversion** (cf. Gal 1:18) —
+       i.e. **within ~5 years of the crucifixion**. *(This is our tab's ANCHOR — see Guardrail fit.)*
+     - The **Apostles' Creed** cited as an example of an early creed.
+     - **Sermon summaries in Acts** (predating the written NT; Luke's testimony) and **all four
+       Gospels** (dated within the first century / ~70 years) as further attestation.
+     - **The apostolic fathers** — esp. **Clement of Rome** (c. 30–100; possibly the Clement of
+       Phil 4:3, *1 Clement 5* on Peter's & Paul's martyrdoms); **Polycarp** (martyred Smyrna
+       ~155/160; *Letter to the Philippians*); **Ignatius of Antioch** (martyred Rome ~110; seven
+       letters; the risen Jesus' "handle me… I am not a bodiless demon" [Luke 24:39 echo]; the
+       disciples who "despised death"); with later attestation from **Irenaeus, Tertullian, Origen**
+       (*Contra Celsum*; Peter crucified upside down, Paul beheaded under Nero), **Eusebius,
+       Dionysius of Corinth, Hegesippus** — a transmission line back to the apostles.
+     - **The epistemic hinge (the whole point of Fact 2, and our martyrdom rule):** the disciples'
+       willingness to suffer/die shows they *sincerely believed* they saw the risen Jesus — and,
+       unlike later martyrs of any faith, **they were in a position to KNOW** whether they really did
+       (they died for what they claimed to have *witnessed*, not merely been *taught*). Skeptical NT
+       critic **Norman Perrin** (Univ. of Chicago) is quoted conceding the appearance tradition ("the
+       firmer the rock begins to appear upon which they are based"). Mnemonic the book uses for the
+       nine sources / three categories: **"POWr" = Paul, Oral tradition, Written tradition.**
+     - **Skeptic concessions the book leans on for "virtually all scholars" (high-value, verify each):**
+       **Rudolf Bultmann** (the disciples *came to believe* in the resurrection — historically certain);
+       **Gerd Lüdemann** — "It may be taken as historically certain that Peter and the disciples had
+       experiences after Jesus' death in which Jesus appeared to them as the risen Christ" (*What Really
+       Happened to Jesus*, 1995 — **cross-check `api/ask.js`, which already cites Lüdemann for the creed
+       dating**); **Paula Fredriksen** (Boston Univ.) — "as a historian… they must have seen something."
+       And **Habermas's own bibliographic survey**: an overview of **1,400+ sources on the resurrection
+       published since 1975**, ~650 catalogued in English/German/French — "perhaps no fact is more widely
+       recognized than that early Christian believers had real experiences that they thought were
+       appearances of the risen Jesus." **This survey is the actual citation behind our "virtually all
+       scholars" phrasing — use it, and don't overstate beyond "had experiences they believed were
+       appearances" (NOT "scholars grant the resurrection happened").**
+     - **Chart (memory aid):** the "Sincerely Believed" source-tree — *They Claimed It* (Paul; Oral:
+       creeds/sermon-summaries; Written: 4 Gospels + apostolic fathers) and *They Believed It*
+       (Willingness to Suffer: Acts, Clement of Rome, Polycarp, Ignatius, Dionysius of Corinth,
+       Tertullian, Origen; "(E)" = the quotation is found in Eusebius).
+  3. **The church-persecutor Paul was suddenly changed** — *(captured, Ch. 4, pp. 64–66)*. Saul of
+     Tarsus, an *enemy* who violently persecuted the church, became its most influential missionary.
+     His pre-Christian persecution is multiply attested (his own letters + Acts), and he was known by
+     sight to the Judean churches within ~3 years (**Gal 1:23**, "he who once persecuted us is now
+     preaching the faith he once tried to destroy"). The cause: **Paul believed he had personally seen
+     the risen Jesus** — i.e. he converted on **primary evidence** (a direct appearance), not on
+     someone else's testimony (unlike most religious converts). Sources: Paul himself, Luke/Acts,
+     Clement of Rome, Polycarp, Tertullian, Dionysius of Corinth, Origen (chart on p. 66).
+  4. **The skeptic James, brother of Jesus, was suddenly changed** — *(captured, Ch. 4, pp. 67–68)*.
+     James was **an unbeliever during Jesus' ministry** (Mark 3:21, 31; 6:3; John 7:5) who became a
+     leader of the Jerusalem church (Acts 15:12–21; Gal 1:19) and a martyr. The book's four points:
+     (1) the Gospels' embarrassing note that Jesus' brothers didn't believe; (2) the **1 Cor 15:7**
+     creed lists an appearance "then he appeared to **James**"; (3) James as Jerusalem leader; (4) his
+     martyrdom attested by **Josephus** (*Antiquities* 20 — the "brother of Jesus who was called Christ"
+     passage), **Hegesippus** and **Clement of Alexandria** (via Eusebius). Also cites the **2002 James
+     Ossuary** ("James, son of Joseph, brother of Jesus") — **but the book itself flags the authenticity
+     controversy; do NOT present the ossuary as authenticated.** Critical scholar **Reginald Fuller**:
+     to explain James's conversion-from-skepticism + his rise to the Jerusalem pastorate, "we should
+     have to invent" a resurrection appearance if we didn't have one.
+  5. **(the "+1") The tomb was empty** — *(captured, Ch. 4 close, pp. 69–73)*. **This is the "+1"
+     precisely because it does NOT meet the two criteria fully — it is accepted by a strong majority
+     (~75% of critical scholars per Habermas's survey) but NOT "virtually all."** Three arguments:
+     (a) **The Jerusalem factor** — the resurrection was proclaimed publicly *in the very city* where
+     Jesus was executed and buried; the authorities need only have produced/displayed the body to end
+     it, and didn't. (b) **Enemy attestation** — the earliest Jewish counter-claim was that the
+     *disciples stole the body* (Matt 28:12–13; Justin Martyr, *Dialogue with Trypho* 108; Tertullian,
+     *De Spectaculis* 30) — an *indirect admission the tomb was empty*. (c) **The testimony of women**
+     — all four Gospels make **women** the primary witnesses, though 1st-c. Jewish/Roman culture
+     dismissed women's testimony (Talmud *Sotah* 19a, *Kiddushin* 82b, *Rosh Hashanah* 1.8; Josephus,
+     *Antiquities* 4.8.15; cf. Luke 24:11 "idle tale") — an invented story would have used male
+     witnesses (Joseph of Arimathea, Nicodemus), so this is a strong **criterion-of-embarrassment**
+     point. Quote: **William Wand** (former Oxford church historian) — "All the strictly historical
+     evidence we have is in favor of [the empty tomb]…"
 - **Primary-source leads to verify (this is our bread and butter — verify each to the primary before use):**
   - **Gary Habermas** — the "twelve facts" list / the scholarly-agreement survey (footnotes 1–2, p. 48).
     Find the actual Habermas source (his published survey of critical scholarship) + numbers.
-  - **Josephus** — the crucifixion report (footnote 3, p. 48). *Cross-check our own `library/hist_jesus.html`
-    Josephus handling (recently recalibrated) so the Testimonium framing stays consistent.*
-  - **Tacitus** (Annals 15.44) and **Lucian** — extra-biblical crucifixion witnesses (facing page).
-- **Guardrail fit:** Fact 1 (death by crucifixion) is about as uncontested as ancient history gets and
-  is exactly what `library/minimalfacts.html` + the Resurrection tab rest on. Keep the extra-biblical
-  witnesses precise (our recent Josephus/Tacitus recalibration in `ev-s3` / `hist_jesus` applies — do
-  not overstate what Tacitus/Josephus establish).
+  - **Fact 1 — the five non-Christian crucifixion witnesses** (verify each to the primary; keep our
+    recent `ev-s3`/`hist_jesus` recalibration — do not overstate what any of them establishes):
+    **Josephus**; **Tacitus, Annals 15.44** (the "Christus… Pontius Pilatus… reign of Tiberius" line —
+    exact wording); **Lucian of Samosata** (*The Death of Peregrinus* — the "crucified sophist" line);
+    **Mara Bar-Serapion** (the "Wise King" letter); the **Talmud** (Sanhedrin 43a — "Yeshu… hanged on
+    the eve of Passover"). Plus **Cicero** on crucifixion's horror, and **Crossan's** "as sure as
+    anything historical can ever be" (from *Jesus: A Revolutionary Biography*, 1994) — verify.
+  - **Fact 2 — the 1 Cor 15:3–8 creed + its dating** (our single most-used datum): verify the quotation
+    and the dating chain — **Gal 1:18** (Paul's Jerusalem visit with Peter/James ~3 yrs post-conversion)
+    → creed "within ~5 years." The book quotes **Dean John Rodgers** (Trinity Episcopal School for
+    Ministry): "the sort of data that historians of antiquity drool over" (footnotes 25–27) — verify.
+  - **Apostolic fathers** — **Clement of Rome** (*1 Clement 5*), **Polycarp** (*Phil.*), **Ignatius**
+    (seven letters), **Irenaeus, Tertullian, Origen, Eusebius, Dionysius of Corinth, Hegesippus**, and
+    the skeptic **Norman Perrin** quote. **⚠ EXTRA-CAREFUL on Ignatius:** our 2026-07-12 citations pass
+    already caught a *spliced/composite* Ignatius-of-Smyrnaeans quote in our content — so verify any
+    Ignatius wording (esp. "handle me… not a bodiless demon" / "despised death") against the actual
+    letter + translation before use, and don't reproduce the book's phrasing as a quote.
+- **Guardrail fit (Facts 1–2):**
+  - Fact 1 (death by crucifixion) is about as uncontested as ancient history gets — exactly what
+    `library/minimalfacts.html` + the Resurrection tab rest on. Keep the extra-biblical witnesses
+    precise per our recent recalibration.
+  - **Fact 2 is where our Resurrection RULE bites:** *lead with the 1 Cor 15:3–7 creed dated to within
+    ~2–5 years* — this book is a **prime, citable source** for that exact move. Our house voice says
+    "~2–5 years"; "within months" is only ever attributed (e.g. to Dunn) — the book's "within five
+    years" is consistent. **Also apply the martyrdom-precision rule** (per Sean McDowell): the disciples
+    were demonstrably *willing* to suffer and die and several were *verifiably* martyred (Peter, Paul,
+    James of Jesus, James of John) — do **not** upgrade the book's "steadfast… martyrdom" into "all
+    twelve were martyred." Keep "sincerely believed they saw him," not "proven they saw him."
+- **Primary-source leads — Facts 3–5 (verify each):**
+  - **Fact 3 (Paul):** Gal 1:13–24 (esp. **1:23**), Acts 9/22/26; the enemy-attestation + primary-vs-
+    secondary-evidence framing; **Reginald Fuller** on the necessity of Paul's conversion.
+  - **Fact 4 (James):** Mark 3:21, 31; 6:3; John 7:5 (unbelief); **1 Cor 15:7** ("then… to James");
+    Acts 15:12–21; Gal 1:19; martyrdom via **Josephus *Antiquities* 20** (the *authentic* "brother of
+    Jesus called Christ" passage — **distinct from the disputed Testimonium** we recalibrated in
+    `hist_jesus`/`ev-s3`; keep that distinction), **Hegesippus** & **Clement of Alexandria** (via
+    Eusebius); **Reginald Fuller** ("we should have to invent it"). **⚠ The 2002 James Ossuary is
+    authenticity-DISPUTED — never present it as authenticated.**
+  - **Fact 5 (empty tomb):** the ~75% figure (Habermas survey — cite as *strong majority, NOT
+    "virtually all"*); Matt 28:12–13; **Justin Martyr** *Dial.* 108; **Tertullian** *De Spect.* 30;
+    the women-witness embarrassment sources (Talmud *Sotah* 19a / *Kiddushin* 82b / *Rosh Hashanah*
+    1.8; Josephus *Ant.* 4.8.15; Luke 24:11); **William Wand** quote. Cross-check `library/emptytomb.html`.
+- **Guardrail fit (Facts 3–5):** all standard, defensible resurrection material and squarely what our
+  `paulconv` / `emptytomb` / `minimalfacts` essays already argue. Two calibration flags: **(1)** the
+  empty tomb is the **"+1" — a strong-majority (~75%) fact, not a "virtually all" one; never overstate
+  its consensus** (matches our own Resurrection rule); **(2)** the James Ossuary is disputed — omit or
+  explicitly flag it, never lean on it.
 
 ## Cross-map to our Evidence Library
 - Resurrection tab **`ev-s2`**; essays **`library/minimalfacts.html`**, **`emptytomb.html`**,
@@ -254,20 +374,18 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
 | Ch. 2 "History 101" | 36–40 | ✅ | the five historical principles in full (multiple/independent, enemy, embarrassment, eyewitness, early); illustrations: Adams/Hamilton, Gordon-Reed on Jefferson/Hemings |
 | (Ch. 2 end / notes) | 41–42 | ❌ | small gap — not photographed (likely Ch. 2 notes or section break) |
 | Intro to Part 2 "Minimal Facts Approach" | 43–47 | ✅ | the METHOD: 2 criteria (strongly evidenced + granted by virtually all scholars incl. skeptics), lowest-common-denominator; Licona UVa anecdote, Covey, Tacitus-as-usable-biased-source |
-| Ch. 3 "A Quintet of Facts (4 + 1)" | 48+ | ✅ (partial) | the "4 + 1" framing (Habermas's 12 → 5); **Fact 1: Jesus died by crucifixion** (Josephus/Tacitus/Lucian). Facts 2–5 on the pages after 48 |
-| **Facts 2–5 + scholarly-agreement survey** | Ch. 3–8 (after p. 48) | ⏳ | **the rest of the core — being captured now** |
+| Ch. 3 "A Quintet of Facts (4 + 1)" — Facts 1 & 2 | 48–62 | ✅ | the "4+1" framing; **Fact 1** (crucifixion; 5 non-Christian sources + Crossan) and **Fact 2** (disciples believed: 1 Cor 15 creed + Gal 1:18 dating, POWr/nine sources, apostolic fathers, epistemic hinge, Bultmann/Lüdemann/Fredriksen + Habermas 1,400-source survey); both charts |
+| Ch. 4 "A Quintet of Facts (4 + 1) — The Last Three" | 64–73 | ✅ | **Fact 3** (Paul's conversion; enemy + primary evidence; Fuller; chart), **Fact 4** (James's conversion; 1 Cor 15:7; Josephus *Ant.* 20; Hegesippus; James Ossuary [disputed]; Fuller; chart), **Fact 5** (empty tomb, the "+1", ~75%; Jerusalem factor / enemy attestation / women's testimony; William Wand) |
+| **Response to naturalistic theories + medical evidence for death** | Ch. 5–8 (after p. 73) | ⏳ | hallucination / legend / swoon etc. — being captured next |
 | Responses to naturalistic theories (hallucination, legend, swoon, etc.) | later chs. | ❌ | ❌ |
 | **Endnotes / bibliography** | back matter | ❌ | **the citation trail — highest priority** |
 
 ## Next photos needed (in priority order)
-1. **Facts 2–5 (the rest of Ch. 3 onward, past p. 48)** — the disciples' experiences / belief they saw
-   him risen; the conversions of **Paul** and of **James** the skeptic; and the "+1" **empty tomb** —
-   plus the **survey of scholarly agreement** (how many/which scholars grant each). This is the
-   remainder of the core argument.
-2. **The endnotes / bibliography pages** — where the real primary-source leads (Habermas's survey,
-   Josephus/Tacitus/Lucian references, scholars, works, dates, page numbers) live; without them the
-   citations above stay unverifiable.
-3. The **table of contents** + **copyright page** (to fix the edition and map the whole book).
+1. **The endnotes / bibliography pages** — now the single highest priority. All five facts are mapped,
+   but their leads (Habermas's survey; the Josephus/Tacitus/Lucian/creed/Fuller/Wand references) stay
+   **unverifiable** until we can see the notes with exact sources, page numbers, and dates.
+2. **The book's response to naturalistic theories** (later chapters — hallucination, legend, "swoon"/
+   apparent-death, stolen body, wrong tomb) and the **medical evidence for Jesus' death** — what lets
+   us answer objections, not just state the facts.
+3. The **table of contents** + **copyright page** (to fix the exact edition and map the whole book).
 4. **pp. 41–42** (the small skipped gap — Ch. 2 end / notes), if not blank.
-
-Photograph straight-on, flat, no glare, whole page in frame, in reading order, ~5–10 per batch.
