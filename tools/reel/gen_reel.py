@@ -166,6 +166,14 @@ def footer(draw, W, H, th):
     f2 = F("serif", 30); t2 = "apologiadaily.com"; w2 = draw.textlength(t2, font=f2)
     draw.text(((W - w2) // 2, H - 145), t2, font=f2, fill=th["dim"])
 
+def ref_line(draw, W, H, text, th):
+    # small scripture citation, centered just above the progress dots — so viewers
+    # can see exactly where in Scripture each scene is found.
+    f = F("serif", 34); w = draw.textlength(text, font=f)
+    y = H - 312; x = (W - w) // 2
+    draw.text((x + 1, y + 1), text, font=f, fill=th["shadow"])
+    draw.text((x, y), text, font=f, fill=th["gold"])
+
 def progress(draw, W, H, idx, n, th):
     r, gap = 7, 30; total = n * gap; x0 = (W - total) // 2 + gap // 2; y = H - 250
     for i in range(n):
@@ -244,6 +252,7 @@ def render(spec, W, H, theme, frames_dir):
                 center_block(d, W, blocks, cy, th["shadow"], top=underline_y + gap_under)
             else:
                 center_block(d, W, blocks, cy, th["shadow"])
+        if sc.get("ref"): ref_line(d, W, H, sc["ref"], th)
         footer(d, W, H, th); progress(d, W, H, i, n, th)
         img.save(os.path.join(frames_dir, f"scene_{i:02d}.png"))
         durs.append(float(sc.get("dur", 3.5)))
