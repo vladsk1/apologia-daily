@@ -477,7 +477,10 @@ books*, not quotable text.
   NOT USE; Ch. 7 has no endnotes**); `did-jesus-really-say-he-was-god.md` (Mikel Del Rosario — deity of
   Christ argued *from Mark, via the enemies' reaction*: the two blasphemy scenes, ten data points,
   five best-explanation criteria; built from the already-gated reading behind the reading-club demo,
-  and distinct from it). See each note's header for its own usage rules and any citation-precision flags.
+  and distinct from it); `case-for-the-resurrection-of-jesus.md` (Habermas & Licona — the flagship
+  "minimal facts" book, and our own "Further study" rec on the resurrection answers; **IN PROGRESS,
+  seeded from pp. 23–26 only** — the minimal-facts core chapters + the endnotes/bibliography still need
+  photographing). See each note's header for its own usage rules and any citation-precision flags.
 - **Adding a book from page photos** (the user may do this from a phone session — upload ~5–10
   legible photos of a book they **own**, incl. footnote/bibliography pages): follow
   `docs/book-research/README.md`, which has the full workflow + copyright rules and points to the

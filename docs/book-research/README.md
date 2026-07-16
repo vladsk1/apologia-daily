@@ -68,3 +68,9 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   enemies' reaction** — the two blasphemy scenes (Mark 2 forgive-on-earth / Mark 14 judge-from-heaven),
   the ten data points + five best-explanation criteria, and the critics (Hägerland/Ehrman/Casey/Kirk).
   Built from the already-gated reading behind the live reading-club demo; distinct from that demo.
+- `case-for-the-resurrection-of-jesus.md` — Gary R. Habermas & Michael R. Licona, *The Case for the
+  Resurrection of Jesus* (Kregel, 2004) — **IN PROGRESS, seeded from pp. 23–26 only** (Intro to Part 1
+  + opening of Ch. 1): the Jesus-Seminar-≠-consensus framing (Johnson/Blomberg/Crossan/Jennings leads)
+  and the gospel = 3 essential facts / resurrection-is-crucial setup. **Still to photograph (high
+  priority): the minimal-facts core chapters and the endnotes/bibliography** — the citation trail. The
+  flagship "minimal facts" book and our own "Further study" rec on the resurrection answers.
