@@ -408,6 +408,29 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   pagan-"copycat" refutation against our recently-recalibrated `answers/…pagan-myths` answer** (the
   T.C. Schmidt/Josephus work) so we stay consistent and current. Represent Buddhism/other faiths
   **accurately and charitably** (neutrality rule) — the point is legend *timing*, not a swipe.
+- **(3) Myths in other religions — the "copycat" theory (pp. 89–92, captured).** Skeptics cite
+  **Osiris, Tammuz, Adonis, Attis, Marduk** (+ **Apollonius of Tyana**). The book's six replies (its
+  "Resurrections in Other Religions" chart): the accounts are **(a)** unclear/vague; **(b)** not
+  regarded as genuine parallels by today's scholars; **(c)** the first *clear* dying-and-rising
+  parallel postdates Jesus by **100+ years** (e.g. Adonis after ~AD 150; Attis' resurrection not until
+  the 3rd c.; Marduk has no clear death/resurrection); **(d)** it's questionable whether a resurrection
+  is even in the *earliest* version; **(e)** the accounts lack evidence and are better explained by
+  legend; **(f)** they don't explain the evidence for *Jesus'* resurrection. Specifics: **Osiris** was
+  chopped into pieces and reassembled by Isis to rule the underworld — a "zombification," not a bodily
+  resurrection (the book quotes a "Chris Clayton"); **Apollonius**' *Life* by **Philostratus** postdates
+  Jesus ~200 yrs and is likely a conscious reaction *to* Christianity; **Muhammad's** miracle accounts
+  appear ~70 yrs after his death and are treated as legend even by Islamic scholars. **Justin Martyr's**
+  pagan parallels (Asclepius, Hercules, Bacchus, Ariadne, Augustus) were an *apologetic* ("don't
+  persecute us — your own religions claim similar things"), not an admission of copying; **Celsus** (2nd
+  c.) read the claim as a *literal* bodily resurrection. **Guardrail: this is exactly our recalibrated
+  `pagan-myths` answer — reuse this structure, keep the "late + vague + not-a-resurrection" trio, and
+  represent Islam/others charitably (the Muhammad-legend point especially).**
+- **Fraud theories begin (pp. 92–93):** "claiming ≠ establishing." The book splits fraud into
+  **Fraud 1** (the disciples *lied* and *stole the body*) and **Fraud 2** (someone *else* moved the
+  body, so the disciples were sincerely mistaken). **Fraud 1** is answered by **Fact 2** (the disciples
+  *sincerely believed* and suffered/died — "liars make poor martyrs"; conspirators crack under
+  pressure). Leads: Matt 28:11–15 (the stolen-body rumor); **Justin Martyr**, *Dialogue with Trypho*
+  (~150) — the rumor still circulating. **Fraud 2 / the rest — capture next.**
 
 ## Cross-map to our Evidence Library
 - Resurrection tab **`ev-s2`**; essays **`library/minimalfacts.html`**, **`emptytomb.html`**,
@@ -434,8 +457,8 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
 | Ch. 4 "A Quintet of Facts (4 + 1) — The Last Three" | 64–73 | ✅ | **Fact 3** (Paul's conversion; enemy + primary evidence; Fuller; chart), **Fact 4** (James's conversion; 1 Cor 15:7; Josephus *Ant.* 20; Hegesippus; James Ossuary [disputed]; Fuller; chart), **Fact 5** (empty tomb, the "+1", ~75%; Jerusalem factor / enemy attestation / women's testimony; William Wand) |
 | Part 2 close — "Five Facts" summary + conclusion | 74–75 | ✅ | J-E-T empty-tomb mnemonic; the Five Facts (4+1) chart; method restated |
 | Intro to Part 3 "Is the Resurrection the Only Explanation?" | 81–83 | ✅ | the naturalistic theories to refute (hallucination/legend/lie/swoon/"science"); Barth, Brown, Flew, Hartshorne, Hume |
-| Ch. 5 "Always Looking for a Way Out" (legend/lies/lapses) | 84–88+ | ✅ | refutes the **legend theory**: embellishment (Price; Buddhism timing; combination-theory weakness), nonhistorical genre (burden on critic; Paul/James wouldn't die for a fable); begins the pagan-"copycat" section |
-| **Ch. 6–8 refutations (copycat/hallucination/fraud/swoon/"science") + medical evidence** | after p. 88 | ⏳ | the rest of the answers to each theory — being captured next |
+| Ch. 5 "Always Looking for a Way Out" (legend/lies/lapses) | 84–93 | ✅ | refutes **legend** (embellishment: Price/Buddhism/combination-weakness; nonhistorical genre: burden on critic, Paul/James wouldn't die for a fable) + the **copycat/pagan-myths** theory (Osiris/Adonis/Attis/Marduk/Apollonius — late, vague, not-a-resurrection; Justin's parallels were apologetic; Muhammad-legend point); **begins fraud** (Fraud 1 = disciples lied/stole body → refuted by Fact 2, "liars make poor martyrs") |
+| **Rest of fraud (Fraud 2) + hallucination/swoon/"science" + medical evidence** | after p. 93 | ⏳ | the remaining refutations — being captured next |
 | (Ch. 4 end / notes gap) | 76–80 | ❌ | not photographed |
 | Responses to naturalistic theories (hallucination, legend, swoon, etc.) | later chs. | ❌ | ❌ |
 | **Endnotes / bibliography** | back matter | ❌ | **the citation trail — highest priority** |
