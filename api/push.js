@@ -1,3 +1,4 @@
+import { requireSecret } from '../lib/require-secret.js';
 /* Consolidated push endpoint — kept as ONE serverless function to stay under
    the Hobby plan's 12-function limit. Routes by query/method:
      GET  /api/push?do=public           -> VAPID public key (client subscribes)
@@ -168,10 +169,7 @@ export default async function handler(req, res) {
     // Require a secret. Accept Vercel's native cron auth header
     // (Authorization: Bearer $CRON_SECRET) OR a manual ?secret= match against
     // PUSH_CRON_SECRET/CRON_SECRET. Fail CLOSED if none configured — no default.
-    var SECRET = process.env.PUSH_CRON_SECRET || process.env.CRON_SECRET;
-    var bearer = (req.headers.authorization || '').replace(/^Bearer\s+/i, '');
-    var got = bearer || req.query.secret || '';
-    if (!SECRET || got !== SECRET) return res.status(401).json({ error: 'Unauthorized' });
+    if (!requireSecret(req, res, { envVars: ['PUSH_CRON_SECRET', 'CRON_SECRET'] })) return;
     var PUB = process.env.VAPID_PUBLIC_KEY, PRIV = process.env.VAPID_PRIVATE_KEY;
     var CONTACT = process.env.PUSH_CONTACT || 'vkiparizov@gmail.com';
     var out = { sent: 0, pruned: 0, failed: 0, notes: [] };

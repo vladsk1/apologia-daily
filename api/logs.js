@@ -1,3 +1,4 @@
+import { requireSecret } from '../lib/require-secret.js';
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
@@ -7,11 +8,7 @@ export default async function handler(req, res) {
   // Access control: this endpoint exposes production deploy metadata + function
   // error logs, so it must never be public. Require LOGS_SECRET (fall back to the
   // shared METRICS_SECRET so ops only manages one secret). Fail CLOSED if unset.
-  const SECRET = process.env.LOGS_SECRET || process.env.METRICS_SECRET;
-  const provided = (req.headers.authorization || '').replace(/^Bearer\s+/i, '') || (req.query.secret || '');
-  if (!SECRET || provided !== SECRET) {
-    return res.status(401).json({ error: 'Unauthorized — set LOGS_SECRET (or METRICS_SECRET) in env and supply it as ?secret= or a Bearer token.' });
-  }
+  if (!requireSecret(req, res, { envVars: ['LOGS_SECRET', 'METRICS_SECRET'], message: 'Unauthorized — set LOGS_SECRET (or METRICS_SECRET) in env and supply it as ?secret= or a Bearer token.' })) return;
 
   const token = process.env.VERCEL_ACCESS_TOKEN;
   if (!token) {

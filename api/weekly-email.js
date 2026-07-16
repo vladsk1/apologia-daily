@@ -1,3 +1,4 @@
+import { requireSecret } from '../lib/require-secret.js';
 // api/weekly-email.js
 // Sends a personalised weekly summary email to all users every Sunday
 // Triggered by Vercel cron (configure in vercel.json) or called manually
@@ -12,12 +13,7 @@ export default async function handler(req, res) {
   // (Authorization: Bearer $CRON_SECRET, injected automatically for cron jobs)
   // OR a manual x-cron-secret / ?secret= match. Fail CLOSED if CRON_SECRET is
   // unset — never fall back to a hardcoded/guessable default.
-  const cronSecret = process.env.CRON_SECRET;
-  const bearer = (req.headers.authorization || '').replace(/^Bearer\s+/i, '');
-  const provided = bearer || req.headers['x-cron-secret'] || req.query.secret || '';
-  if (!cronSecret || provided !== cronSecret) {
-    return res.status(401).json({ error: 'Unauthorised' });
-  }
+  if (!requireSecret(req, res, { envVars: ['CRON_SECRET'], headers: ['x-cron-secret'], message: 'Unauthorised' })) return;
 
   const RESEND_KEY = process.env.RESEND_API_KEY;
   const SB_URL = 'https://noprgxkwniouukmrfozc.supabase.co';

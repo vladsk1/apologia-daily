@@ -1,3 +1,4 @@
+import { requireSecret } from '../lib/require-secret.js';
 /* Product metrics for the admin monitor.
    Reads server-side data from Supabase using the SERVICE ROLE key.
    Honest scope: most engagement (mastery progress, streaks, debate counts,
@@ -10,11 +11,7 @@
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(204).end();
 
-  var SECRET = process.env.METRICS_SECRET;
-  var provided = (req.headers.authorization || '').replace(/^Bearer\s+/i, '') || (req.query.secret || '');
-  if (!SECRET || provided !== SECRET) {
-    return res.status(401).json({ error: 'Unauthorized — set METRICS_SECRET in env and supply it.' });
-  }
+  if (!requireSecret(req, res, { envVars: ['METRICS_SECRET'], message: 'Unauthorized — set METRICS_SECRET in env and supply it.' })) return;
 
   var URL = process.env.SUPABASE_URL || 'https://noprgxkwniouukmrfozc.supabase.co';
   var KEY = (process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_KEY);

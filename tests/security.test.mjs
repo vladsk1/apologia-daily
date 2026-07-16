@@ -45,16 +45,15 @@ test('service-role key never appears in client-shipped files', () => {
   }
 });
 
-// Cron-protected endpoints must read the secret from env and must not carry a
-// hardcoded fallback (the published-secret finding). Presence-level guard.
-test('cron endpoints require CRON_SECRET from env (no hardcoded fallback)', () => {
-  for (const f of ['api/weekly-email.js', 'api/push.js']) {
+// Cron/webhook/ops endpoints must guard via the shared, fail-closed requireSecret
+// helper (not a hand-rolled copy that can drift to fail-open, as new-signup once
+// did) and must carry no hardcoded secret fallback (the published-secret finding).
+test('secret-guarded endpoints use the shared requireSecret helper (no hardcoded fallback)', () => {
+  for (const f of ['api/weekly-email.js', 'api/push.js', 'api/logs.js', 'api/metrics.js', 'api/new-signup.js']) {
     let txt;
     try { txt = readFileSync(f, 'utf8'); } catch { continue; }
-    if (!/CRON_SECRET/.test(txt)) continue;
-    assert.match(txt, /process\.env\.CRON_SECRET/, `${f}: CRON_SECRET should come from process.env`);
-    // no literal like:  CRON_SECRET || 'some-hardcoded-value'
-    assert.doesNotMatch(txt, /CRON_SECRET\s*\|\|\s*['"][^'"]+['"]/,
-      `${f}: CRON_SECRET must not have a hardcoded fallback (fail closed instead)`);
+    assert.match(txt, /requireSecret\(/, `${f}: must guard via the shared requireSecret helper`);
+    assert.doesNotMatch(txt, /_SECRET\s*\|\|\s*['"][^'"]+['"]/,
+      `${f}: a secret must not have a hardcoded fallback (fail closed instead)`);
   }
 });

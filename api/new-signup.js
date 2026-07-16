@@ -1,3 +1,4 @@
+import { requireSecret } from '../lib/require-secret.js';
 /* New-signup notifier.
    Fired by a Supabase Database Webhook on INSERT into auth.users. Emails the
    founder so new signups land in real time, and (optionally) records a
@@ -27,9 +28,7 @@ export default async function handler(req, res) {
   // Shared-secret guard so randoms can't spam the notifier. FAIL CLOSED: if the
   // secret is not configured, reject — never leave this world-writable (matches
   // push.js / weekly-email.js). An unset secret must not skip the check.
-  var SECRET = process.env.SIGNUP_HOOK_SECRET;
-  var given = (req.query && req.query.secret) || req.headers['x-signup-secret'] || '';
-  if (!SECRET || given !== SECRET) return res.status(401).json({ error: 'Unauthorized' });
+  if (!requireSecret(req, res, { envVars: ['SIGNUP_HOOK_SECRET'], headers: ['x-signup-secret'], allowBearer: false })) return;
 
   // Parse the Supabase webhook payload: { type, table, record, ... }.
   var body = req.body;
