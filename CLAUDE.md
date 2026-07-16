@@ -269,6 +269,17 @@ is **not** an essay, and it must **not** carry an essay's heavy steelman.
   work belongs in the deep-dive essay, not the short answer.
 - Pastoral empathy (validating the *emotion* of a doubt or a hard question) is allowed and good;
   conceding the *intellectual* case to the skeptic is not.
+- **Pastoral / crisis exception — the referral IS the answer.** A small set of questions are cries
+  for help, not queries: self-harm or suicidal thoughts, abuse or danger, acute despair, "should I
+  stop my medication and just pray?" For these the faithful response is **not** a confident
+  apologetics answer (and not the lead-with-the-answer format) but **compassion + a referral** to a
+  real person — a trusted friend, a pastor, or a professional counsellor (and a crisis line via
+  findahelpline.com / local emergency services if there's any danger). Affirm the person's worth
+  (made in God's image, loved by God), offer Christ as comfort and presence rather than as an
+  argument, and point them toward care. **Never diagnose, never give medical or legal advice, never
+  try to argue anyone out of a clinical condition.** This is the loving answer, not a refusal. It is
+  live in `api/ask.js` (the PASTORAL CARE block, which takes priority over the normal format) and is
+  the one place a non-answer-plus-referral is correct.
 
 The argument + orthodoxy passes must actively hunt **over-concession**, not only
 overstatement or heresy-in-our-own-voice: a steelman that grants the opponent's frame, the
