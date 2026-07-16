@@ -430,7 +430,28 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   body, so the disciples were sincerely mistaken). **Fraud 1** is answered by **Fact 2** (the disciples
   *sincerely believed* and suffered/died — "liars make poor martyrs"; conspirators crack under
   pressure). Leads: Matt 28:11–15 (the stolen-body rumor); **Justin Martyr**, *Dialogue with Trypho*
-  (~150) — the rumor still circulating. **Fraud 2 / the rest — capture next.**
+  (~150) — the rumor still circulating.
+- **Fraud 1 refuted (pp. 94–95):** *liars make poor martyrs.* The book's centerpiece is **Chuck
+  Colson's Watergate analogy** — the most powerful men in the US couldn't hold a lie together even a
+  few weeks with no lives at stake, yet the apostles held to "we saw him raised" to their deaths.
+  Skeptic reply ("people die for false faiths — 9/11, Branch Davidians"): answered by the
+  **martyrdom-precision rule** — martyrdom proves *sincerity*, not truth; but the disciples died for
+  what they **claimed to have witnessed**, not merely been *taught*. **⚠ Handle the 9/11/Islam example
+  with charity** (the point is *sincere ≠ true*, not a swipe at Islam — neutrality rule).
+- **Fraud 2 refuted (pp. 95–97):** *"someone else stole the body."* Reply: an empty tomb *by itself*
+  never convinced anyone — **Mary Magdalene** first concluded theft (John 20), **Thomas** was
+  unconvinced by the empty-tomb reports (John 20:24–25); it was the **appearances** (to the disciples,
+  Paul, James) that convinced. Fraud 2 at best questions the *cause* of the empty tomb and can't touch
+  the appearances — the strongest evidence.
+- **Wrong-tomb theory refuted (pp. 97–98):** the women/disciples went to the wrong tomb. Six replies —
+  chiefly: it still can't explain the *appearances*; the authorities would simply go to the *right*
+  tomb and exhume the body; **Joseph of Arimathea** (a known **Sanhedrin** member) buried Jesus in his
+  own tomb, so the location was known and un-denied; and the earliest Jewish counter was "the disciples
+  *stole* the body" — which **concedes the right tomb was empty.** Net: the empty tomb (of the correct
+  tomb) is common ground for believer and skeptic.
+- **Guardrail (fraud/wrong-tomb):** these are our `emptytomb` + the "were the disciples liars/deluded?"
+  `/answers/*`. Keep the **martyrdom-precision** wording exactly (sincere, in-a-position-to-know; not
+  "all twelve martyred"), and quote **Colson** only once verified (from *Loving God*).
 
 ## Cross-map to our Evidence Library
 - Resurrection tab **`ev-s2`**; essays **`library/minimalfacts.html`**, **`emptytomb.html`**,
@@ -457,8 +478,8 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
 | Ch. 4 "A Quintet of Facts (4 + 1) — The Last Three" | 64–73 | ✅ | **Fact 3** (Paul's conversion; enemy + primary evidence; Fuller; chart), **Fact 4** (James's conversion; 1 Cor 15:7; Josephus *Ant.* 20; Hegesippus; James Ossuary [disputed]; Fuller; chart), **Fact 5** (empty tomb, the "+1", ~75%; Jerusalem factor / enemy attestation / women's testimony; William Wand) |
 | Part 2 close — "Five Facts" summary + conclusion | 74–75 | ✅ | J-E-T empty-tomb mnemonic; the Five Facts (4+1) chart; method restated |
 | Intro to Part 3 "Is the Resurrection the Only Explanation?" | 81–83 | ✅ | the naturalistic theories to refute (hallucination/legend/lie/swoon/"science"); Barth, Brown, Flew, Hartshorne, Hume |
-| Ch. 5 "Always Looking for a Way Out" (legend/lies/lapses) | 84–93 | ✅ | refutes **legend** (embellishment: Price/Buddhism/combination-weakness; nonhistorical genre: burden on critic, Paul/James wouldn't die for a fable) + the **copycat/pagan-myths** theory (Osiris/Adonis/Attis/Marduk/Apollonius — late, vague, not-a-resurrection; Justin's parallels were apologetic; Muhammad-legend point); **begins fraud** (Fraud 1 = disciples lied/stole body → refuted by Fact 2, "liars make poor martyrs") |
-| **Rest of fraud (Fraud 2) + hallucination/swoon/"science" + medical evidence** | after p. 93 | ⏳ | the remaining refutations — being captured next |
+| Ch. 5 "Always Looking for a Way Out" (legend/lies/lapses) | 84–98 | ✅ | refutes **legend** (embellishment; nonhistorical genre) + **copycat/pagan-myths** (Osiris/Adonis/Attis/Marduk/Apollonius) + **fraud** (Fraud 1 = lied/stole body → Colson/Watergate; Fraud 2 = someone else stole it → appearances-not-tomb, Mary/Thomas) + **wrong-tomb** (Joseph of Arimathea; earliest Jewish reply concedes an empty tomb) |
+| **Ch. 6+ : hallucination/vision + swoon/apparent-death + "science" + medical evidence** | after p. 98 | ⏳ | the remaining refutations — being captured next |
 | (Ch. 4 end / notes gap) | 76–80 | ❌ | not photographed |
 | Responses to naturalistic theories (hallucination, legend, swoon, etc.) | later chs. | ❌ | ❌ |
 | **Endnotes / bibliography** | back matter | ❌ | **the citation trail — highest priority** |
