@@ -512,8 +512,16 @@ books*, not quotable text.
   "minimal facts" book, and our own "Further study" rec on the resurrection answers; **mapped pp. 23–150
   + the complete A–Z bibliography + all 70 Chapter-3 numbered notes** — the full positive+defensive case
   with page-precise citations for Facts 1–2, incl. the creed-dating chain, the Ignatius=*Smyrnaeans* 3
-  locus, and the Habermas survey; other chapters' numbered notes are the only nice-to-have gap). See each
-  note's header for its own usage rules and citation-precision flags, and `INDEX.md` for topic routing.
+  locus, and the Habermas survey; other chapters' numbered notes are the only nice-to-have gap);
+  `in-defense-of-the-bible.md` (Cowan & Wilder, eds. — **ch. 6 only, COMPLETE**: Daniel B. Wallace, "Has
+  the New Testament Text Been Hopelessly Corrupted?", pp. 140–163, all 51 footnotes indexed — the NT
+  textual-reliability case: two ditches [radical skepticism vs. KJV-Only], the four-category
+  viability/meaningfulness variant taxonomy [meaningful-AND-viable variants are <1%], and no cardinal
+  doctrine on a disputed variant [incl. Ehrman's own concession]; feeds Biblical Reliability `ev-s4` —
+  **used 2026-07-17 to strengthen `library/manuscript.html`** with the taxonomy + worked examples [Rom
+  5:1, Jesus Barabbas, Mark 1:41, John 1:18], dual-consensus re-gated CLEAN; only this one chapter of the
+  multi-author volume is captured). See each note's header for its own usage rules and citation-precision
+  flags, and `INDEX.md` for topic routing.
 - **Adding a book from page photos** (the user may do this from a phone session — upload ~5–10
   legible photos of a book they **own**, incl. footnote/bibliography pages): follow
   `docs/book-research/README.md`, which has the full workflow + copyright rules and points to the
