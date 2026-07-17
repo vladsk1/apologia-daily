@@ -480,7 +480,15 @@ books*, not quotable text.
   and distinct from it); `case-for-the-resurrection-of-jesus.md` (Habermas & Licona — the flagship
   "minimal facts" book, and our own "Further study" rec on the resurrection answers; **IN PROGRESS,
   seeded from pp. 23–26 only** — the minimal-facts core chapters + the endnotes/bibliography still need
-  photographing). See each note's header for its own usage rules and any citation-precision flags.
+  photographing); `in-defense-of-the-bible.md` (Cowan & Wilder, eds. — **ch. 6 only, COMPLETE**: Daniel
+  B. Wallace, "Has the New Testament Text Been Hopelessly Corrupted?", pp. 140–163, all 51 footnotes
+  indexed — the NT textual-reliability case: two ditches [radical skepticism vs. KJV-Only], the four-
+  category viability/meaningfulness variant taxonomy [meaningful-AND-viable variants are <1%], and no
+  cardinal doctrine on a disputed variant [incl. Ehrman's own concession]; feeds Biblical Reliability
+  `ev-s4` — **used 2026-07-17 to strengthen `library/manuscript.html`** with the taxonomy + worked
+  examples [Rom 5:1, Jesus Barabbas, Mark 1:41, John 1:18], dual-consensus re-gated CLEAN; only this one
+  chapter of the multi-author volume is captured). See each note's header for its own usage rules and
+  any citation-precision flags.
 - **Adding a book from page photos** (the user may do this from a phone session — upload ~5–10
   legible photos of a book they **own**, incl. footnote/bibliography pages): follow
   `docs/book-research/README.md`, which has the full workflow + copyright rules and points to the
