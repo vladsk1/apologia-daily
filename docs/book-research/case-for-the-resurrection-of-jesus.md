@@ -4,7 +4,7 @@
 (Grand Rapids: Kregel, 2004). Owner's physical copy (photographed). Copyrighted — this is an
 **in-our-own-words map that points at quotable primaries**, NOT a store of the book's prose.
 
-> **Status: IN PROGRESS — captured pp. 23–112.** The complete POSITIVE case (Part 1–2: the
+> **Status: IN PROGRESS — captured pp. 23–119.** The complete POSITIVE case (Part 1–2: the
 > minimal-facts method + the full "4 + 1" quintet with charts and skeptic concessions) AND the
 > DEFENSIVE case so far: **Ch. 5** (legend, copycat/pagan-myths, fraud, wrong-tomb, swoon/apparent-
 > death + the JAMA medical evidence) and **Ch. 6 "Mind Games"** (hallucination, delusion, and
@@ -516,8 +516,27 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   (touched, ate; 1 Cor 15:3–8) and the **empty tomb** defeat it. **Gerd Lüdemann's** subjective-vision
   theory is the named target; **Paul's Acts 9** light-and-voice is noted but Paul reports *bodily*
   appearances.
-- **(begins) "Conversion disorder"** (p. 112) — a modern psychosomatic theory (physical symptoms from
-  psychological stress) proposed for Paul; refutation on the next pages (not yet captured).
+- **Conversion disorder / other Paul-only theories (pp. 113–119) — completing Ch. 6.** Critics who
+  can't explain the *group* appearances retreat to psychologising **Paul alone**:
+  - **Conversion disorder** (psychosomatic symptoms from stress): Paul doesn't fit the **DSM-IV**
+    profile (the disorder skews female ~5:1, lower-IQ, adolescent, low-income, combat-stressed — none
+    fit Paul); and it can't explain the **empty tomb**, the **appearances to others/the disciples**, or
+    the conversion of **James**. Antony **Flew** raised it in his **April 2000 televised debate with
+    Habermas**, then conceded it was "not very helpful."
+  - **Power theory** (Paul converted to grab authority/influence — critic **Evan Fales**): refuted by
+    Paul's actual life — beatings, imprisonments, constant danger, no self-gratification; he sought no
+    place of power in Rome or the church.
+  - **Epiphany theory** (Paul had a sudden natural *insight*, not a real appearance): refuted — it
+    doesn't fit Luke's Acts 9 account (a bright **light** + a **voice** his companions also perceived),
+    reads the NT "light of the gospel" metaphor woodenly, and still can't explain the empty tomb or the
+    appearances to others.
+  - **Conclusion of Ch. 6:** *no* psychological phenomenon — hallucination, delusion, vision,
+    conversion disorder, grief, guilt, epiphany, or power-lust — can account for **all five facts**
+    together. That is the book's core defensive claim.
+  - **Leads:** DSM-IV (conversion-disorder profile); the **Flew–Habermas** debate (April 2000);
+    **Evan Fales** (power theory); Acts 9:1–2 & 6:8–8:3 (Paul's persecution); Deut 21:23 ("cursed is
+    everyone hanged on a tree"); Isaiah 53. Verify each; keep the DSM-demographics point **sober and
+    non-derogatory**.
 - **Primary-source leads:** 1 Cor 15:3–8; Acts 9 (Paul); **Gerd Lüdemann** (subjective vision —
   cross-check `api/ask.js`, which already cites him); the SEAL "Hell Week" and Heaven's Gate/Jonestown/
   Waco examples (factual — verify dates, present soberly).
