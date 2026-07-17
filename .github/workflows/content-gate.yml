@@ -59,6 +59,8 @@ jobs:
         run: node tools/build-search-index.mjs --check
       - name: Check source library index is in sync
         run: node tools/build-sources-index.mjs --check
+      - name: Check argument-briefs index is in sync
+        run: node tools/build-briefs-index.mjs --check
 
   orthodoxy-guards:
     # Doctrinal regression guards over the WHOLE corpus (not just changed files).

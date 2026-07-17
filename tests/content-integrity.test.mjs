@@ -76,3 +76,47 @@ test('api/ask.js retains its core orthodoxy guardrails', () => {
   ];
   for (const s of required) assert.ok(ask.includes(s), `api/ask.js is missing a guardrail: "${s}"`);
 });
+
+// The argument-briefs retrieval layer (briefs/ -> lib/briefs-verified.js -> api/ask.js)
+// must stay safe: only twice-gated briefs may reach the live module, and the build
+// output must be in sync. This is the /sources-style trust boundary for briefs.
+test('argument-briefs index is in sync (build is deterministic)', () => {
+  assert.doesNotThrow(
+    () => execFileSync('node', ['tools/build-briefs-index.mjs', '--check'], { cwd: process.cwd(), stdio: 'pipe' }),
+    'briefs build is stale — run: node tools/build-briefs-index.mjs',
+  );
+});
+
+test('lib/briefs-verified.js contains ONLY twice-gated briefs (no ungated leak to live)', async () => {
+  const data = JSON.parse(readFileSync(new URL('../briefs/_data.json', import.meta.url), 'utf8'));
+  const { VERIFIED_BRIEFS } = await import('../lib/briefs-verified.js');
+  const gatedIds = new Set(
+    data.filter((b) => b.reviewed && b.reviewed.argument && b.reviewed.orthodoxy).map((b) => b.id),
+  );
+  for (const b of VERIFIED_BRIEFS) {
+    assert.ok(gatedIds.has(b.id), `ungated brief "${b.id}" leaked into the live module`);
+  }
+  // Every entry must carry the required fields + a reviewed object (stamped or not).
+  for (const b of data) {
+    for (const k of ['id', 'topic', 'tags', 'framing', 'from', 'reviewed']) {
+      assert.ok(k in b, `brief "${b.id || '?'}" missing "${k}"`);
+    }
+    assert.ok(b.reviewed && typeof b.reviewed === 'object', `brief "${b.id}" reviewed must be an object`);
+  }
+});
+
+// The briefs instruction block must keep the framing OPTIONAL and subordinate to the
+// guardrails — a future edit must not turn it into a script the model must follow.
+test('api/ask.js keeps the argument-brief block optional + guardrail-subordinate', () => {
+  const ask = readFileSync(new URL('../api/ask.js', import.meta.url), 'utf8');
+  const ask_l = ask.toLowerCase();
+  assert.ok(ask.includes('buildBriefsBlock'), 'the briefs block builder is missing');
+  assert.ok(ask.includes('retrieveBriefs'), 'brief retrieval is not wired');
+  const required = [
+    'optional',                       // the framing is optional background
+    'ignore it',                      // the model may ignore it
+    'never overrides a guardrail',    // guardrails win
+    'not a quotable source',          // not to be quoted verbatim
+  ];
+  for (const s of required) assert.ok(ask_l.includes(s), `briefs block missing its safety instruction: "${s}"`);
+});

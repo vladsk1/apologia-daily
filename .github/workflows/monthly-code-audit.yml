@@ -32,6 +32,7 @@ jobs:
           node tools/sync-nav.mjs --check
           node tools/build-search-index.mjs --check
           node tools/build-sources-index.mjs --check
+          node tools/build-briefs-index.mjs --check
           node tools/check-orthodoxy-tripwires.mjs
 
       # NB: the static security invariant (service-role key never client-shipped;

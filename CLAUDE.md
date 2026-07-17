@@ -455,6 +455,25 @@ full rules. In short:
 - Rebuild the index after edits: `node tools/build-sources-index.mjs` (CI runs `--check`; emits both
   `sources-index.json` and `lib/sources-verified.js`).
 
+## Argument briefs (`/briefs`) — a SECOND live-consumed gated retrieval layer
+Sibling of `/sources`, but for **our-own-words argument framing** instead of verbatim quotes (see
+`briefs/README.md`). Each brief is the core move + the strongest objection + the honest concession for a
+topic, **distilled from our already-certified essays** (and, for structure only, the `docs/book-research/*`
+maps). The live `/api/ask` endpoint retrieves the single best-matching brief and offers it to the model as
+**OPTIONAL background framing** — a helper, not a leash: the instruction block keeps it optional,
+non-quotable (not a source, not Scripture, not attributed to a scholar), and subordinate to every
+guardrail, so the model still weighs its own knowledge and the pastoral path always wins.
+- **Trust boundary (why it's safe):** `docs/book-research/*` (unverified leads) → a **certified essay**
+  and/or a **gated brief** → `lib/briefs-verified.js` (gated-only) → live answer. The runtime never reads
+  the raw notes; only twice-gated, our-own-words framing reaches a visitor.
+- **Gate:** a brief reaches the live module ONLY when its `reviewed` object stamps BOTH `argument` and
+  `orthodoxy` dates; `tools/build-briefs-index.mjs` enforces this (un-stamped → excluded, like `/sources`
+  `verified:true`). The brief text is DOCTRINAL content — it passes `apologia-argument` + `apologia-orthodoxy`
+  (+ `apologia-neutrality` for the resurrection/deity set) like any content, and **any change to the
+  `buildBriefsBlock` instruction in `api/ask.js` re-clears argument + orthodoxy** (gated file).
+- Rebuild after edits: `node tools/build-briefs-index.mjs` (CI runs `--check`; emits `briefs-index.json`
+  + `lib/briefs-verified.js`). Guarded by `tests/content-integrity.test.mjs` (gated-only + block-stays-optional).
+
 ## Owned-book research notes (`docs/book-research/`)
 In-our-own-words **research maps of owned copyrighted apologetics books** — the argument
 structure plus an index of the **primary sources** the book cites (Scripture, Fathers,

@@ -2,6 +2,7 @@
 
 import { overRateLimit, inputTooLong } from '../lib/ratelimit.js';
 import { retrieveSources } from '../lib/retrieve-sources.js';
+import { retrieveBriefs } from '../lib/retrieve-briefs.js';
 
 // Build the dynamic "verified primary sources" block appended to the system
 // prompt when retrieval finds relevant passages. Only fact-checked, public-domain
@@ -25,6 +26,30 @@ RULES FOR THESE SOURCES (these do not relax any rule above):
 - TRINITY SAFEGUARD: when you quote any passage bearing on the Trinity, state the persons' co-equality and co-eternity in the same breath — NEVER present a relation-of-origin or an order clause ("from the Father, through the Son, perfected in the Holy Spirit") as a ranking of being or a hierarchy within the Godhead.
 - Do not print the source URL. Attribute by author, work, and section only.
 - Every rule above still governs in full: classical orthodoxy, denominational neutrality (do not let a quoted Father drag the answer into an intra-Christian dispute — e.g. baptism, the Eucharist, church authority, Mary, relics), the 1 Peter 3:15 tone, and no fabrication.`;
+}
+
+// Build the optional "argument brief" block appended to the system prompt when
+// retrieval finds a topically-matching brief. A brief is OUR-OWN-WORDS argument
+// framing (core move + strongest objection + honest concession) distilled from our
+// already-certified essays and gated (argument + orthodoxy) before it can go live
+// (see lib/briefs-verified.js / briefs/README.md). It is a HELPER, NOT A LEASH:
+// the instructions below keep it optional, non-quotable, and subordinate to every
+// guardrail, so the model still weighs its own knowledge and picks the best answer.
+function buildBriefsBlock(briefs) {
+  const items = briefs
+    .map((b, i) => `[${i + 1}] ${b.topic}\n${b.framing}`)
+    .join('\n\n');
+  return `BACKGROUND ARGUMENT FRAMING (our own words, already reviewed) — OPTIONAL, USE ONLY IF IT FITS:
+The note(s) below are our house framing for this topic — the core argument, the strongest objection, and the honest concession — distilled from our own fact-checked essays and reviewed for soundness and orthodoxy. They are provided to help you shape a strong, accurate answer.
+
+${items}
+
+RULES FOR THIS FRAMING (these do not relax any rule above, and do not override your own judgement):
+- It is OPTIONAL background, not a script. Use it ONLY when it genuinely fits the question. If it does not fit, or if your own knowledge yields a better answer, IGNORE it entirely and answer normally — never force it, never bend the question to match it.
+- It is FRAMING IN OUR OWN WORDS, not a quotable source and NOT Scripture. Do NOT quote it verbatim, do NOT present it as a citation, and do NOT attribute it to any named scholar as their words. Write your own answer; let the framing inform your reasoning, not your wording.
+- It never overrides a guardrail. Classical orthodoxy, denominational neutrality, the 1 Peter 3:15 tone, "orthodoxy outranks charity," and no-fabrication all still govern in full. If the framing and a guardrail ever seem to pull apart, the guardrail wins.
+- Keep the argument-specific discipline it encodes: on the resurrection, lead with the early 1 Corinthians 15:3-7 creed (dated within a few years); say "the disciples sincerely believed they saw the risen Jesus," never "it is proven"; treat the empty tomb as the more contested strand; concede the observation, never the inference.
+- The pastoral-care path always takes priority: if the message signals crisis, answer pastorally per the block above and ignore this framing.`;
 }
 
 export default async function handler(req, res) {
@@ -229,11 +254,25 @@ FINAL SELF-CHECK — run this silently on your drafted answer BEFORE you send it
       console.error('ask: source retrieval skipped', e);
     }
 
+    // ── ARGUMENT-BRIEF RETRIEVAL ──
+    // Pull the single most relevant gated brief (our-own-words framing) if one
+    // clears the (deliberately high) relevance bar, and offer it as OPTIONAL
+    // background. Same fail-safe: any error just skips the block. Only twice-gated
+    // briefs are visible here (lib/briefs-verified.js), so nothing unverified leaks.
+    let briefsBlock = '';
+    try {
+      const briefs = retrieveBriefs(question, 1);
+      if (briefs.length) briefsBlock = buildBriefsBlock(briefs);
+    } catch (e) {
+      console.error('ask: brief retrieval skipped', e);
+    }
+
     // Static prompt stays cached (Sonnet cache min is 1024 tokens; this ~3K-token
-    // block qualifies, so repeat reads cost ~10x less). The retrieved-sources block
-    // is per-question, so it rides as a separate, uncached system segment.
+    // block qualifies, so repeat reads cost ~10x less). The retrieved-sources and
+    // -briefs blocks are per-question, so they ride as separate, uncached segments.
     const system = [{ type: 'text', text: systemPrompt, cache_control: { type: 'ephemeral' } }];
     if (sourcesBlock) system.push({ type: 'text', text: sourcesBlock });
+    if (briefsBlock) system.push({ type: 'text', text: briefsBlock });
 
     const anthropicRes = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
