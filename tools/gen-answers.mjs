@@ -5,11 +5,22 @@
    Then prints the <li> snippets (grouped by category) and the sitemap lines to
    add for the new pages.
 
-   Flywheel: a visitor question comes in (api/submit-question) -> draft a short
-   answer -> run it through the SAME mandatory pipeline as an essay: apologia-argument
-   (incl. the over-concession / pull-quote check) AND apologia-orthodoxy -> apply fixes ->
-   set "reviewed": true on the entry -> `node tools/gen-answers.mjs` -> paste the printed
-   index + sitemap snippets -> deploy.
+   Flywheel: a visitor question comes in (api/submit-question) -> GROUND the draft (see next
+   paragraph) -> draft a short answer -> run it through the SAME mandatory pipeline as an essay:
+   apologia-argument (incl. the over-concession / pull-quote check) AND apologia-orthodoxy ->
+   apply fixes -> set "reviewed": true on the entry -> `node tools/gen-answers.mjs` -> paste the
+   printed index + sitemap snippets -> deploy.
+
+   GROUNDING STEP (do this BEFORE drafting a new answer on resurrection / deity-of-Christ /
+   general-apologetics topics): `Grep`/`Read` `docs/book-research/INDEX.md`, which routes the topic
+   to the relevant owned-book research map (Habermas-Licona, Johnston, Geisler-Turek, Del Rosario)
+   plus the `/sources` public-domain corpus. Take the argument SHAPE and the strongest PRIMARIES to
+   cite from the map, then cite the primaries (verified). Every citation in a research map is an
+   UNVERIFIED LEAD until confirmed against the primary and run through the pipeline; never reproduce
+   a book's prose, and heed the map's "do not use / high-caution" flags. (This grounding is a
+   documented convention like the review stamp -- it is NOT machine-enforced here, because a build
+   script cannot verify that a human/agent consulted a file. The point is that this file, the answer-
+   creation chokepoint, now names the step so it is not skipped by omission.)
 
    REVIEW GATE (enforced below): an entry is refused (no page written) unless its `reviewed`
    object stamps BOTH checks: { argument: "<date>", orthodoxy: "<date>", by: "<name>" }.

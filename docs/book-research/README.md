@@ -69,8 +69,13 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   the ten data points + five best-explanation criteria, and the critics (Hägerland/Ehrman/Casey/Kirk).
   Built from the already-gated reading behind the live reading-club demo; distinct from that demo.
 - `case-for-the-resurrection-of-jesus.md` — Gary R. Habermas & Michael R. Licona, *The Case for the
-  Resurrection of Jesus* (Kregel, 2004) — **IN PROGRESS, seeded from pp. 23–26 only** (Intro to Part 1
-  + opening of Ch. 1): the Jesus-Seminar-≠-consensus framing (Johnson/Blomberg/Crossan/Jennings leads)
-  and the gospel = 3 essential facts / resurrection-is-crucial setup. **Still to photograph (high
-  priority): the minimal-facts core chapters and the endnotes/bibliography** — the citation trail. The
-  flagship "minimal facts" book and our own "Further study" rec on the resurrection answers.
+  Resurrection of Jesus* (Kregel, 2004) — **mapped pp. 23–150 (the full positive + defensive case) + the
+  complete A–Z bibliography (pp. 335–345) + all 70 Chapter-3 numbered notes (pp. 256–279)**: the
+  minimal-facts method, the "4+1" quintet, every naturalistic-theory refutation (Chs. 5–8), and
+  page-precise citations for Facts 1–2 (the 1 Cor 15 creed-dating chain, the Ignatius=*Smyrnaeans* 3
+  locus, the Bultmann/Lüdemann concession pin-cites, the Habermas survey). The only nice-to-have gap is
+  the numbered notes for the *other* chapters (Ch. 4 begins p. 279). The flagship "minimal facts" book
+  and our own "Further study" rec on the resurrection answers.
+
+**See [`INDEX.md`](INDEX.md) for the topical index** — it routes a topic → the right note + section + the
+strongest primaries, and is the file a content session should consult first.

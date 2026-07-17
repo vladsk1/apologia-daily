@@ -460,12 +460,24 @@ In-our-own-words **research maps of owned copyrighted apologetics books** — th
 structure plus an index of the **primary sources** the book cites (Scripture, Fathers,
 scholars, dates) to chase down. **Distinct from `/sources`:** these are *maps of copyrighted
 books*, not quotable text.
-- **Drafting:** `apologia-author`/`apologia-evidence` should `Grep`/`Read` `docs/book-research/*.md`
-  for a topic to get the argument's shape, the strongest objections, and *which primary sources
-  to cite directly* — then quote the **primaries**, verified, in our own voice.
+- **START HERE — the topical index:** [`docs/book-research/INDEX.md`](docs/book-research/INDEX.md) routes
+  a topic (resurrection / minimal facts / empty tomb / creed dating / deity of Christ / naturalism / etc.)
+  → the right note + section + the strongest **already-identified primaries** + any "do not use" flag.
+- **Drafting (ALL content — essays, `ev-s*` cards, AND `/answers/*`):** before writing on a topic these
+  books cover, `Grep`/`Read` `INDEX.md` (then the mapped note) to get the argument's shape, the strongest
+  objections, and *which primary sources to cite directly* — then quote the **primaries**, verified, in
+  our own voice. **The answers flywheel is explicitly in scope:** `tools/gen-answers.mjs`'s header names
+  this as the "GROUNDING STEP" before drafting a new answer. (It's a documented convention, not a machine
+  gate — a build script can't verify a file was read; the point is the chokepoint now names the step.)
 - **Hard rule:** never reproduce the book's prose, and treat **every** citation in these notes as
   **unverified** until confirmed against the primary source and run through the normal pipeline
   (citations → argument → orthodoxy). The note is a lead, not a source.
+- **⚠ The live `/api/ask` endpoint does NOT (and cannot) read this folder.** It's a deployed serverless
+  function — it can't reach `docs/` (not deployed/served), and these are unverified copyrighted-book leads
+  anyway. The ONLY path from an owned-book note to a *live* answer is: lead → verify the primary → add it
+  to `/sources` as `verified:true` → it compiles into `lib/sources-verified.js`, which `api/ask.js`
+  retrieves. So "make a book inform live answers" = promote its verified primaries into `/sources`, never
+  point the runtime at `docs/book-research/`.
 - **Current notes:** `i-dont-have-enough-faith-to-be-an-atheist.md` (Geisler & Turek — complete;
   covers the cosmological/teleological/moral arguments, NT reliability, resurrection, deity of
   Christ, miracles, and the anti-skepticism material); `body-of-proof.md` (Jeremiah Johnston —
@@ -478,9 +490,11 @@ books*, not quotable text.
   Christ argued *from Mark, via the enemies' reaction*: the two blasphemy scenes, ten data points,
   five best-explanation criteria; built from the already-gated reading behind the reading-club demo,
   and distinct from it); `case-for-the-resurrection-of-jesus.md` (Habermas & Licona — the flagship
-  "minimal facts" book, and our own "Further study" rec on the resurrection answers; **IN PROGRESS,
-  seeded from pp. 23–26 only** — the minimal-facts core chapters + the endnotes/bibliography still need
-  photographing). See each note's header for its own usage rules and any citation-precision flags.
+  "minimal facts" book, and our own "Further study" rec on the resurrection answers; **mapped pp. 23–150
+  + the complete A–Z bibliography + all 70 Chapter-3 numbered notes** — the full positive+defensive case
+  with page-precise citations for Facts 1–2, incl. the creed-dating chain, the Ignatius=*Smyrnaeans* 3
+  locus, and the Habermas survey; other chapters' numbered notes are the only nice-to-have gap). See each
+  note's header for its own usage rules and citation-precision flags, and `INDEX.md` for topic routing.
 - **Adding a book from page photos** (the user may do this from a phone session — upload ~5–10
   legible photos of a book they **own**, incl. footnote/bibliography pages): follow
   `docs/book-research/README.md`, which has the full workflow + copyright rules and points to the
