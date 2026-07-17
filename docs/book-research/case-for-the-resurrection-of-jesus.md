@@ -449,6 +449,23 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   own tomb, so the location was known and un-denied; and the earliest Jewish counter was "the disciples
   *stole* the body" — which **concedes the right tomb was empty.** Net: the empty tomb (of the correct
   tomb) is common ground for believer and skeptic.
+- **Swoon / apparent-death theory refuted (pp. 100–102) — the medical evidence (high-value):** the
+  claim that Jesus only *fainted* and later revived. Answered by the physiology of crucifixion: the
+  landmark **JAMA article "On the Physical Death of Jesus Christ" (*Journal of the American Medical
+  Association*, March 21, 1986)** by a team including a **Mayo Clinic** pathologist — scourging, death
+  by **asphyxiation** (the victim must push up on nailed feet to exhale), the Romans' **crurifragium**
+  (leg-breaking) to hasten death (John 19:31–33), and the **spear wound** (John 19:34–35) with "blood
+  and water" consistent with a ruptured **pericardium / pleural effusion** — the team concluded the
+  survival assumption "appears to be at odds with modern medical knowledge." **Quintilian** (AD 35–95)
+  attests the procedure. Then the decisive turn: even the skeptic **David Friedrich Strauss** (1835)
+  demolished the swoon theory on its own terms — a half-dead man who crept from the tomb needing
+  bandaging could only have produced *pity*, never the disciples' conviction that they had met the risen
+  **Prince of Life** ("Alive? Barely. Risen? No."). Chart: JAMA (asphyxiation / spear wound) · Strauss'
+  critique · Paul experienced a "glorious" appearance.
+- **Leads (fact-of-death / swoon):** the **JAMA 1986** article (real + citable — verify authors
+  Edwards/Gabel/Hosmer + wording); **John 19:31–37**; **Quintilian**; **D.F. Strauss** (*The Life of
+  Jesus Critically Examined*, 1835 — verify the exact "Prince of Life" wording). This is our
+  `library/minimalfacts.html` "was Jesus really dead?" material — sober, not gratuitously graphic.
 - **Guardrail (fraud/wrong-tomb):** these are our `emptytomb` + the "were the disciples liars/deluded?"
   `/answers/*`. Keep the **martyrdom-precision** wording exactly (sincere, in-a-position-to-know; not
   "all twelve martyred"), and quote **Colson** only once verified (from *Loving God*).
@@ -478,8 +495,8 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
 | Ch. 4 "A Quintet of Facts (4 + 1) — The Last Three" | 64–73 | ✅ | **Fact 3** (Paul's conversion; enemy + primary evidence; Fuller; chart), **Fact 4** (James's conversion; 1 Cor 15:7; Josephus *Ant.* 20; Hegesippus; James Ossuary [disputed]; Fuller; chart), **Fact 5** (empty tomb, the "+1", ~75%; Jerusalem factor / enemy attestation / women's testimony; William Wand) |
 | Part 2 close — "Five Facts" summary + conclusion | 74–75 | ✅ | J-E-T empty-tomb mnemonic; the Five Facts (4+1) chart; method restated |
 | Intro to Part 3 "Is the Resurrection the Only Explanation?" | 81–83 | ✅ | the naturalistic theories to refute (hallucination/legend/lie/swoon/"science"); Barth, Brown, Flew, Hartshorne, Hume |
-| Ch. 5 "Always Looking for a Way Out" (legend/lies/lapses) | 84–98 | ✅ | refutes **legend** (embellishment; nonhistorical genre) + **copycat/pagan-myths** (Osiris/Adonis/Attis/Marduk/Apollonius) + **fraud** (Fraud 1 = lied/stole body → Colson/Watergate; Fraud 2 = someone else stole it → appearances-not-tomb, Mary/Thomas) + **wrong-tomb** (Joseph of Arimathea; earliest Jewish reply concedes an empty tomb) |
-| **Ch. 6+ : hallucination/vision + swoon/apparent-death + "science" + medical evidence** | after p. 98 | ⏳ | the remaining refutations — being captured next |
+| Ch. 5 "Always Looking for a Way Out" (legend/lies/lapses) | 84–102 | ✅ | refutes **legend** (embellishment; nonhistorical genre) + **copycat/pagan-myths** (Osiris/Adonis/Attis/Marduk/Apollonius) + **fraud** (Fraud 1 = lied/stole body → Colson/Watergate; Fraud 2 = someone else stole it → appearances-not-tomb, Mary/Thomas) + **wrong-tomb** (Joseph of Arimathea) + **swoon/apparent-death** (JAMA 1986 medical study; spear wound/pericardium; Strauss's critique) |
+| **Ch. 6+ : hallucination/vision theory + "science disproves miracles" + Ch. 8 faith-factor** | after p. 102 | ⏳ | the remaining refutations — being captured next |
 | (Ch. 4 end / notes gap) | 76–80 | ❌ | not photographed |
 | Responses to naturalistic theories (hallucination, legend, swoon, etc.) | later chs. | ❌ | ❌ |
 | **Endnotes / bibliography** | back matter | ❌ | **the citation trail — highest priority** |
