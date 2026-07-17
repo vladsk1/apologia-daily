@@ -4,14 +4,15 @@
 (Grand Rapids: Kregel, 2004). Owner's physical copy (photographed). Copyrighted — this is an
 **in-our-own-words map that points at quotable primaries**, NOT a store of the book's prose.
 
-> **Status: IN PROGRESS — captured pp. 23–122.** The complete POSITIVE case (Part 1–2: the
+> **Status: IN PROGRESS — captured pp. 23–130 + 140–144 (a few page-gaps noted).** The complete POSITIVE case (Part 1–2: the
 > minimal-facts method + the full "4 + 1" quintet with charts and skeptic concessions) AND the
 > DEFENSIVE case so far: **Ch. 5** (legend, copycat/pagan-myths, fraud, wrong-tomb, swoon/apparent-
 > death + the JAMA medical evidence) and **Ch. 6 "Mind Games"** (hallucination, delusion, and
-> vision theories — the ones modern critics prefer, incl. Lüdemann; + the start of "conversion
-> disorder"). Still **not** captured: the rest of Ch. 6/7 (conversion-disorder, the **"science /
-> miracles" chapter**) and the **Ch. 8 faith-factor**, and — the single highest priority — the **endnotes / bibliography**, which is what makes
-> every lead in this note verifiable. See "Next photos needed." Not a complete map of the book.
+> vision theories, incl. Lüdemann), **Ch. 6 tail** (conversion-disorder/power/epiphany — Flew–Habermas),
+> **Ch. 7 "Stopping at Nothing"** (source-count, biased-testimony, "we'll never know", alien), and
+> **Ch. 9 "Naturally Speaking"** (Behe/God-of-the-gaps, Swinburne, Yamauchi, Hume). GAPS not yet shot:
+> pp. 119–122, 124–125, 127, 131–139. Single highest priority remaining: the **endnotes / bibliography**,
+> which is what makes every lead in this note verifiable. See "Next photos needed." Not a complete map of the book.
 
 ## Usage rules (same as every note in this folder)
 - **Never reproduce the book's prose.** Everything here is our paraphrase of the argument's *shape*.
@@ -569,6 +570,73 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   itself prove every detail; argue the core (death, burial, empty tomb, appearances), not harmonised
   minutiae. The probability math is illustrative, not a proof — present it as such.
 
+### Chapter 6 tail — conversion disorder + "power/epiphany" theories (pp. 113–118)
+- **Conversion disorder** (a psychosomatic illness) proposed for Paul. Refuted: it can't explain the
+  **empty tomb**, the **group** appearances, or **James's** conversion; Paul doesn't fit the profile
+  (per **DSM-IV**: women ~5:1, low IQ/economic status, adolescents/soldiers more prone); and it takes
+  *stacking ad hoc theories* (auditory hallucination + messiah complex + conversion disorder at once)
+  to fit — that is *ad hoc*, not explanatory. Notably, atheist **Antony Flew**, in his April 2000
+  televised debate with **Habermas**, conceded conversion disorder was "not very helpful."
+- **"Power" theory** (Paul converted for ambition/influence — assoc. with **Evan Fales**): refuted —
+  Paul gained *persecution, danger, and martyrdom,* not power; the church was smaller than Judaism.
+- **"Epiphany"** (a sudden intuitive insight): refuted — doesn't fit Paul's hostile pre-conversion
+  frame; Acts 9 reports an external light + voice, not a private insight.
+- **Leads:** DSM-IV; the **Flew–Habermas** debate (April 2000); **Evan Fales**; Acts 9. Cross-check
+  `api/ask.js`/`paulconv` for consistent Flew handling.
+
+### Chapter 7 — "Stopping at Nothing" (pp. 123–130): "something happened, but not God"
+*(Partial capture — pp. 124–125 and 127 not yet photographed.)*
+- **"Not enough sources / a risen Jesus would have left a bigger footprint."** Refuted: **Craig
+  Blomberg's** four reasons more wasn't written (Christianity's humble beginnings; remote Palestine;
+  only a small % of ancient works survive; little attention paid to Jewish figures). Most ancient works
+  are simply **lost** (Asclepiades of Mendes, Nicholas of Damascus, Thallus, Livy, Suetonius, Papias,
+  Quadratus, Hegesippus — fragments only). Yet Jesus is named by **~9 NT + ~20 early-Christian sources
+  and non-Christian ones (Josephus, Tacitus, Pliny the Younger, Suetonius, Lucian, Celsus, Thallus,
+  Phlegon, Mara Bar-Serapion) = at least ~42 sources within 150 years** — compared with **~5** for
+  Julius Caesar's Gallic Wars and **~10** for Tiberius. Jesus is *better* attested than most ancient
+  figures. **⚠ Cross-check our own manuscript answers:** the 2026-07-09 sweep recalibrated the
+  Caesar/Tiberius source-count comparison — verify these tallies and DON'T overstate.
+- **"Biased testimony"** (chart): Paul & James were *hostile/unbiased* beforehand; **bias doesn't
+  require distortion**; and "the disciples would say that" is the **genetic fallacy / ad hominem** —
+  it attacks the source, not the evidence.
+- **"The disciples experienced 'something' we'll never identify"** (Lüdemann-style agnosticism):
+  refuted — this **rejects the conclusion, not the evidence**; the minimal facts + the failure of every
+  natural theory + the religio-historical context (Jesus claimed divinity, did miraculous deeds; other
+  evidence for God) make the resurrection the best explanation of the *known* facts.
+- **"Jesus was an extraterrestrial alien"** (a fringe dodge): refuted — even if entertained it concedes
+  the ordinary explanations fail and doesn't deny the resurrection, only *God* as its cause; Jesus was
+  born on earth and lived a full human life (unlike the objection's own alien tropes).
+- **Guardrail fit:** the "~42 sources / better-attested-than-Caesar" comparison is exactly what our
+  **Bible-reliability rule** polices — attestation shows Jesus *existed and was written about early*,
+  NOT that the resurrection is thereby proven; keep the counts verified and the claim measured.
+
+### Chapter 9 — "Naturally Speaking" (pp. 140–144): miracles & the "science" objection
+*(PARTIAL — pp. 131–139 not yet photographed; this is the tail of the miracles chapter.)*
+- **"God-of-the-gaps."** Refuted: a supernatural cause is reasonable *only when* natural theories all
+  fail **and** there is credible positive evidence — not as a lazy filler. Science shouldn't rule out
+  the supernatural *a priori* (methodological naturalism as a closed circle). **Michael Behe's** "elephant
+  in the room" analogy: detectives crawl the floor with magnifying glasses and miss the elephant because
+  the textbook says they "must get their man."
+- **"Even if a miracle happened, we could never know it was one / trace it to God."** Refuted via
+  **Richard Swinburne's** criteria for recognising a miracle — an event (1) with no precedent before or
+  since, (2) not accountable by any current law of nature, (3) with no foreseeable scientific revision —
+  which the resurrection meets; and the religio-historical context (Jesus' divinity claims) traces it to
+  God rather than a bare anomaly.
+- **"Miracles in other religions cancel out Christian ones."** Refuted (historian **Edwin Yamauchi**):
+  genuine miracles are compatible with Christian belief; rival-religion miracle claims are typically
+  late and poorly attested (and often appear centuries after the founder — Buddha, Krishna), whereas the
+  resurrection is early and uniquely well-attested.
+- **"There is a huge mountain of probability against any event ever being an act of God"** (Hume):
+  refuted — the argument is **circular** (it assumes uniform experience against miracles to conclude
+  against them) and rests on a sampling fallacy.
+- **Leads:** **Michael Behe** (the "elephant"/*Darwin's Black Box*); **Richard Swinburne** (miracle
+  criteria); **Edwin Yamauchi** (other-religion miracles); **David Hume** (the a-priori-against-miracles
+  argument). Verify each to the primary.
+- **Guardrail fit:** the Behe/intelligent-design material is where our **fine-tuning/ID rule** bites —
+  the *data* may be conceded but *design* is the contested inference; never write "science proves
+  design." Represent Hume's argument accurately (steelman before answering).
+
+
 ## Cross-map to our Evidence Library
 - Resurrection tab **`ev-s2`**; essays **`library/minimalfacts.html`**, **`emptytomb.html`**,
   **`paulconv.html`**; the `/answers/*` resurrection set (several already list this book under
@@ -596,7 +664,10 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
 | Intro to Part 3 "Is the Resurrection the Only Explanation?" | 81–83 | ✅ | the naturalistic theories to refute (hallucination/legend/lie/swoon/"science"); Barth, Brown, Flew, Hartshorne, Hume |
 | Ch. 5 "Always Looking for a Way Out" (legend/lies/lapses) | 84–102 | ✅ | refutes **legend** (embellishment; nonhistorical genre) + **copycat/pagan-myths** (Osiris/Adonis/Attis/Marduk/Apollonius) + **fraud** (Fraud 1 = lied/stole body → Colson/Watergate; Fraud 2 = someone else stole it → appearances-not-tomb, Mary/Thomas) + **wrong-tomb** (Joseph of Arimathea) + **swoon/apparent-death** (JAMA 1986 medical study; spear wound/pericardium; Strauss's critique) |
 | Ch. 6 "Mind Games" (psychological phenomena) | 104–107+ | ✅ | refutes the **hallucination** theory: illusion/delusion/hallucination defined; hallucinations are private/individual (group appearances can't be; SEAL "Hell Week"); doesn't explain the empty tomb, or Paul's & James's hostile-not-expectant frame |
-| **"Science / miracles" chapter + Ch. 8 faith-factor** | after p. 107 | ⏳ | the last refutations — being captured next |
+| Ch. 6 tail — conversion disorder + power/epiphany | 113–118 | ✅ | Paul: DSM-IV profile, ad-hoc stacking, Flew–Habermas 2000; Evan Fales power-theory; epiphany |
+| Ch. 7 "Stopping at Nothing" | 123–130 (124–125,127 gap) | ◑ | not-enough-sources (Blomberg; ~42 sources vs Caesar/Tiberius), biased-testimony (genetic/ad hominem), "we'll never know" (Lüdemann), alien dodge |
+| Ch. 8 (faith-factor) + Ch. 9 open | 131–139 | ❌ | **GAP — not yet photographed** |
+| Ch. 9 "Naturally Speaking" (miracles/science) | 140–144 | ◑ | God-of-the-gaps/Behe, Swinburne miracle criteria, Yamauchi (other-religion miracles), Hume |
 | (Ch. 4 end / notes gap) | 76–80 | ❌ | not photographed |
 | Responses to naturalistic theories (hallucination, legend, swoon, etc.) | later chs. | ❌ | ❌ |
 | **Endnotes / bibliography** | back matter | ❌ | **the citation trail — highest priority** |
