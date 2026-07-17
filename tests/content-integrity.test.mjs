@@ -120,12 +120,21 @@ test('brief retrieval fires on-topic and stays silent off-topic', async () => {
     'Was Jesus just copied from Mithras and Osiris?',
     'Did the disciples hallucinate seeing Jesus?',
     'How was the 1 Corinthians 15 creed dated so early?',
+    'Why does God allow suffering?',
+    'Where does morality come from without God?',
+    'Can we trust the New Testament manuscripts?',
+    'Do Muslims and Christians worship the same God?',
+    'Are Mormons Christians?',
+    'Wasnt Jesus just a good moral teacher?',
   ];
   const offTopic = [
     'what is the best pizza topping',
     'How do I stay motivated to exercise?',
     'Should I get baptized as an infant or adult?',  // intra-Christian dispute — no brief
     'who was Pontius Pilate',
+    'Are Catholics Christians?',                      // intra-Christian — no brief (not Mormon/JW)
+    'What do Christians believe about heaven?',
+    'how do I forgive someone',
   ];
   for (const q of onTopic) {
     assert.ok(retrieveBriefs(q, 1).length === 1, `expected a brief for on-topic question: "${q}"`);
