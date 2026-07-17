@@ -68,6 +68,15 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   enemies' reaction** — the two blasphemy scenes (Mark 2 forgive-on-earth / Mark 14 judge-from-heaven),
   the ten data points + five best-explanation criteria, and the critics (Hägerland/Ehrman/Casey/Kirk).
   Built from the already-gated reading behind the live reading-club demo; distinct from that demo.
+- `in-defense-of-the-bible.md` — Steven B. Cowan & Terry L. Wilder, eds., *In Defense of the Bible*
+  (B&H Academic, 2013) — **ch. 6 only, COMPLETE** (Daniel B. Wallace, "Has the New Testament Text Been
+  Hopelessly Corrupted?", pp. 140–163, all 51 footnotes captured). The NT textual-reliability case: the
+  two ditches (radical skepticism vs. KJV-Only), the ~400,000-variants-because-of-manuscript-riches
+  point, the four-category viability/meaningfulness taxonomy (meaningful-AND-viable variants are <1%),
+  and the payoff that no cardinal doctrine rests on a disputed variant (incl. Ehrman's own concession).
+  **Only this one chapter of the multi-author volume is captured** — its other chapters + general
+  bibliography are not. Feeds Biblical Reliability (`ev-s4`). Watch popular-level count overstatement
+  (Wallace himself tempers it) and keep the inerrancy material denominationally neutral.
 - `case-for-the-resurrection-of-jesus.md` — Gary R. Habermas & Michael R. Licona, *The Case for the
   Resurrection of Jesus* (Kregel, 2004) — **IN PROGRESS, seeded from pp. 23–26 only** (Intro to Part 1
   + opening of Ch. 1): the Jesus-Seminar-≠-consensus framing (Johnson/Blomberg/Crossan/Jennings leads)
