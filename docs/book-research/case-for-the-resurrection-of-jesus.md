@@ -4,19 +4,14 @@
 (Grand Rapids: Kregel, 2004). Owner's physical copy (photographed). Copyrighted — this is an
 **in-our-own-words map that points at quotable primaries**, NOT a store of the book's prose.
 
-> **Status: IN PROGRESS — captured pp. 23–73; the FULL "4 + 1" quintet is now mapped.** Intro to
-> Part 1 + Ch. 1 + Ch. 2 "History 101" (five principles) + Intro to Part 2 (the minimal-facts method)
-> + **Ch. 3 & 4 "A Quintet of Facts (4+1)" — all five facts:** (1) crucifixion [Josephus/Tacitus/
-> Lucian/Mara Bar-Serapion/Talmud + Crossan]; (2) the disciples believed [1 Cor 15 creed dated ~5 yrs
-> via Gal 1:18; POWr/nine sources; apostolic fathers; Bultmann/Lüdemann/Fredriksen + Habermas's
-> 1,400-source survey]; (3) Paul's conversion [enemy, primary evidence]; (4) James's conversion
-> [1 Cor 15:7; Josephus *Ant.* 20; Fuller]; (5) the empty tomb ["+1", ~75%; Jerusalem factor / enemy
-> attestation / women-witness embarrassment; William Wand]. Plus the **Part 2 "Five Facts" summary**
-> and the **Introduction to Part 3** (the naturalistic theories to be refuted — hallucination/legend/
-> lie/swoon/"science"; Barth/Brown/Flew/Hartshorne/Hume). Still **not** captured: the **actual
-> refutation chapters (5–8)**, the **medical evidence for the death**, and — critically — the
-> **endnotes / bibliography** where the primary-source leads live. See "Next photos needed." Do not
-> treat this note as a complete map of the book.
+> **Status: IN PROGRESS — captured pp. 23–107.** The complete POSITIVE case (Part 1–2: the
+> minimal-facts method + the full "4 + 1" quintet with charts and skeptic concessions) AND the
+> DEFENSIVE case so far: **Ch. 5** (legend, copycat/pagan-myths, fraud, wrong-tomb, swoon/apparent-
+> death + the JAMA medical evidence) and **Ch. 6 "Mind Games"** (the hallucination theory: private/
+> individual, group appearances, empty tomb, Paul & James's hostile frame). Still **not** captured:
+> the rest of the objection-handling (the **"science / miracles" chapter** and the **Ch. 8 faith-
+> factor**), and — the single highest priority — the **endnotes / bibliography**, which is what makes
+> every lead in this note verifiable. See "Next photos needed." Not a complete map of the book.
 
 ## Usage rules (same as every note in this folder)
 - **Never reproduce the book's prose.** Everything here is our paraphrase of the argument's *shape*.
@@ -470,6 +465,32 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   `/answers/*`. Keep the **martyrdom-precision** wording exactly (sincere, in-a-position-to-know; not
   "all twelve martyred"), and quote **Colson** only once verified (from *Loving God*).
 
+### Chapter 6 — "Mind Games: Psychological Phenomena" (pp. 104–107+) — HALLUCINATION THEORY REFUTED
+- **Beat:** the theory modern critics actually favor — the disciples *hallucinated* the risen Jesus.
+  First the book defines terms: **illusion** = a distorted *perception* of something that IS there
+  (a mirage; the Ebbinghaus dots); **delusion** = a false *belief* held against the evidence (a widow
+  denying her husband's death); **hallucination** = a false *perception* of something that is NOT
+  there. Then four replies:
+  1. **Hallucinations are PRIVATE, individual events** (like dreams — you can't invite someone into
+     your dream). So the **group appearances can't be hallucinations** — 1 Cor 15:5–7 lists Cephas,
+     the Twelve, **500+ at once**, then all the apostles. Illustration: **US Navy SEAL "Hell Week"**
+     sleep-deprived candidates hallucinate — but each sees something *different* (an octopus, a train,
+     a wall), never the same thing together.
+  2. Hallucinations **don't explain the empty tomb** (the body would still be there).
+  3. Hallucinations **don't explain Paul** — a hallucination needs the right (grieving/expectant)
+     frame of mind, and Paul was the *opposite*: a hostile enemy out to *stop* the movement.
+  4. Hallucinations **don't explain James** — a pious Jew would not hallucinate his crucified brother
+     (a would-be Messiah "cursed" by hanging, Deut 21:23) into the risen Lord.
+- **Primary-source leads to verify:** the clinical definitions (the book cites psychologists on
+  hallucinations being individual — likely **Gary A. Sibcy**/**Gary Collins**, check the endnotes);
+  **1 Cor 15:5–7** (the group-appearance list); **Deut 21:23** (the "cursed" point for James); the
+  SEAL "Hell Week" example.
+- **Guardrail fit:** this is our `emptytomb` / `minimalfacts` / `paulconv` "were they hallucinating?"
+  material. Keep it to **"hallucinations are individual experiences"** (well-supported) — do NOT
+  overstate into "group hallucination is scientifically impossible full stop" (modern discussion is
+  more nuanced); the load is carried by *variety of appearances + Paul/James's hostile-not-expectant
+  frame + the empty tomb*, which is the honest, strong form.
+
 ## Cross-map to our Evidence Library
 - Resurrection tab **`ev-s2`**; essays **`library/minimalfacts.html`**, **`emptytomb.html`**,
   **`paulconv.html`**; the `/answers/*` resurrection set (several already list this book under
@@ -496,7 +517,8 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
 | Part 2 close — "Five Facts" summary + conclusion | 74–75 | ✅ | J-E-T empty-tomb mnemonic; the Five Facts (4+1) chart; method restated |
 | Intro to Part 3 "Is the Resurrection the Only Explanation?" | 81–83 | ✅ | the naturalistic theories to refute (hallucination/legend/lie/swoon/"science"); Barth, Brown, Flew, Hartshorne, Hume |
 | Ch. 5 "Always Looking for a Way Out" (legend/lies/lapses) | 84–102 | ✅ | refutes **legend** (embellishment; nonhistorical genre) + **copycat/pagan-myths** (Osiris/Adonis/Attis/Marduk/Apollonius) + **fraud** (Fraud 1 = lied/stole body → Colson/Watergate; Fraud 2 = someone else stole it → appearances-not-tomb, Mary/Thomas) + **wrong-tomb** (Joseph of Arimathea) + **swoon/apparent-death** (JAMA 1986 medical study; spear wound/pericardium; Strauss's critique) |
-| **Ch. 6+ : hallucination/vision theory + "science disproves miracles" + Ch. 8 faith-factor** | after p. 102 | ⏳ | the remaining refutations — being captured next |
+| Ch. 6 "Mind Games" (psychological phenomena) | 104–107+ | ✅ | refutes the **hallucination** theory: illusion/delusion/hallucination defined; hallucinations are private/individual (group appearances can't be; SEAL "Hell Week"); doesn't explain the empty tomb, or Paul's & James's hostile-not-expectant frame |
+| **"Science / miracles" chapter + Ch. 8 faith-factor** | after p. 107 | ⏳ | the last refutations — being captured next |
 | (Ch. 4 end / notes gap) | 76–80 | ❌ | not photographed |
 | Responses to naturalistic theories (hallucination, legend, swoon, etc.) | later chs. | ❌ | ❌ |
 | **Endnotes / bibliography** | back matter | ❌ | **the citation trail — highest priority** |
