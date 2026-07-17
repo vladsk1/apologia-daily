@@ -4,7 +4,7 @@
 (Grand Rapids: Kregel, 2004). Owner's physical copy (photographed). Copyrighted — this is an
 **in-our-own-words map that points at quotable primaries**, NOT a store of the book's prose.
 
-> **Status: IN PROGRESS — captured pp. 23–119.** The complete POSITIVE case (Part 1–2: the
+> **Status: IN PROGRESS — captured pp. 23–122.** The complete POSITIVE case (Part 1–2: the
 > minimal-facts method + the full "4 + 1" quintet with charts and skeptic concessions) AND the
 > DEFENSIVE case so far: **Ch. 5** (legend, copycat/pagan-myths, fraud, wrong-tomb, swoon/apparent-
 > death + the JAMA medical evidence) and **Ch. 6 "Mind Games"** (hallucination, delusion, and
@@ -545,6 +545,29 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   terms move and the group-appearances + empty-tomb + Paul/James replies are strong and reusable. Keep
   the SEAL/cult illustrations factual and non-mocking (neutrality), and keep our "best explanation, not
   proof" register.
+
+### Chapter 7 — "Stopping at Nothing: More Critical Comebacks" (pp. 120–122+) — COMBINATION THEORIES + DISCREPANCIES
+- **Combination theories** (the skeptic stitches several naturalistic theories together — e.g.
+  theft + multiple-hallucination + conversion disorder). Four problems (chart "Combination Theories"):
+  **(1)** combining theories **multiplies improbabilities** (the coin-flip illustration: five theories
+  each ~80% likely → .8⁵ ≈ **33%**, i.e. *less* probable, not more); **(2)** each component still
+  carries **its own individual defects** (theft still can't explain the appearances, hallucination
+  still isn't a group event, etc.); **(3)** piling on sub-theories to patch holes is transparently
+  **ad hoc** ("the person caught in a lie fabricates new lies"); **(4)** the burden is to **show the
+  combination actually happened**, not merely that it's *possible* — "the mere stating of an opposing
+  theory does nothing to prove this is what really happened."
+- **(begins) "Discrepancies among the resurrection accounts" (p. 122+):** the objection that the
+  Gospels differ on peripheral details (how many **angels/women** at the tomb — one vs two: Matt
+  28:2–7 / Mark 16:5 vs Luke 24:4 / John 20:12; the women in Mark 16:1). Reply (finish capturing
+  next): variation in *secondary* detail doesn't nullify a core event — historians don't discard an
+  event because sources differ on particulars (the **burning of Rome** analogy: ancient accounts vary
+  on who/how-big, yet no one doubts it happened); **undesigned variation is what real eyewitness
+  testimony looks like** — collusion would produce suspicious *uniformity*.
+- **Guardrail fit:** the combination-theory probability point and the discrepancies reply map onto
+  `minimalfacts`/`emptytomb` and our Bible-reliability "do the Gospels contradict?" `/answers/*`. Keep
+  our **Bible-reliability rule** — variation shows *independent* attestation of the core, it doesn't by
+  itself prove every detail; argue the core (death, burial, empty tomb, appearances), not harmonised
+  minutiae. The probability math is illustrative, not a proof — present it as such.
 
 ## Cross-map to our Evidence Library
 - Resurrection tab **`ev-s2`**; essays **`library/minimalfacts.html`**, **`emptytomb.html`**,
