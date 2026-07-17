@@ -18,10 +18,12 @@
 > earlier draft mis-numbered "Naturally Speaking" as Ch. 9; it is Chapter 8** (pp. 132–150), and its
 > Behe/Swinburne/Yamauchi/Hume material sits at pp. 140–144. **The complete A–Z Bibliography (pp.
 > 335–345) is now captured too** — see the "Bibliography" section, which backs nearly every lead with
-> real publication data (wording/page still to verify per the pipeline). **One item still outstanding:
-> the numbered per-chapter Notes/Endnotes** (the section just before the bibliography), which would add
-> the exact page inside each source per footnote — precision, not a blocker. See "Next photos needed."
-> Not a complete map of the book (chs. 9–13 / Part 4, on other topics, are past our scope — see p. 150).
+> real publication data (wording/page still to verify per the pipeline). **The complete Chapter 3
+> numbered Notes (all 70, pp. 256–279) are ALSO captured** — page-precise citations for Facts 1 & 2, incl.
+> the Bultmann/Lüdemann concession pin-cites, the creed-dating chain (n25), and Habermas's survey (n70).
+> **Remaining (nice-to-have, not blockers):** the numbered Notes for the *other* chapters (Ch. 4 begins on
+> p. 279); the ToC/copyright; and the small 41–42 / 76–80 prose gaps. See "Next photos needed." Not a
+> complete map of the book (chs. 9–13 / Part 4, on other topics, are past our scope — see p. 150).
 
 ## Usage rules (same as every note in this folder)
 - **Never reproduce the book's prose.** Everything here is our paraphrase of the argument's *shape*.
@@ -896,6 +898,134 @@ back:
   the endnotes" is confirmed present; **Robert M. Price, "Is There a Place for Historical Criticism?,"
   *Religious Studies* 27 (1991)** for the skeptical legend-rate side.
 
+## Chapter 3 numbered Notes (captured IN FULL: all 70 notes, pp. 256–279) — PAGE-PRECISE citations for Facts 1 & 2
+The book's per-chapter numbered notes for **Chapter 3** (crucifixion + the 1 Cor 15 creed + the disciples'
+belief/martyrdom + the extra-biblical witnesses) are captured **in full (notes 1–70)** — this is the exact
+page-level trail behind our most-used material. (Only Ch. 3's notes are shot; the Ch. 4 notes *begin* on
+p. 279 but the rest of the chapters' numbered notes remain a nice-to-have.) Still verify each quotation to
+the primary, but the *where* is now pinned:
+- **n1 — the "twelve facts" list:** Gary R. Habermas, *The Historical Jesus* (Joplin, Mo.: College Press,
+  1996), **158–67**; Habermas & J.P. Moreland, *Beyond Death* (Crossway, 1998), **115**. The note adds
+  that **Antony Flew "granted all twelve of these facts" in the April 2000 Ankerberg televised debate**
+  (*The John Ankerberg Show*, "Did Jesus Rise from the Dead?").
+- **n3 — crucifixion's horror:** Gerard S. Sloyan, *The Crucifixion of Jesus* (Fortress, 1995), **18–20**;
+  Martin Hengel, *Crucifixion* (Fortress, 1977).
+- **n4 — the Josephus mass-crucifixion quote:** from Paul L. Maier, *Josephus: The Essential Works*
+  (Kregel, 1994), **358** (= Josephus, *Jewish Wars* 5.451).
+- **n5 — Cicero on crucifixion** ("that most cruel and disgusting penalty"): Sloyan, *Crucifixion*, **13**,
+  citing Cicero, *Against Verres* 2.5.165 / 2.5.64; cited in Hengel, *Crucifixion*, **8**; Cicero, *Pro
+  Rabirio* 9–17. **⚠ verify the exact Cicero locus + wording — the OCR of this note is ambiguous.**
+- **n6/n9 — Tacitus:** *The Annals* 15.44 (Tacitus c. **A.D. 115**).
+- **n8 — Josephus Testimonium:** *Antiquities* 18.64 (Feldman, Loeb vol. 9, Harvard, 1981). *(Keep our
+  `hist_jesus`/`ev-s3` distinction between the disputed Testimonium and the authentic Ant. 20 James
+  passage.)*
+- **n10 — Lucian:** *The Death of Peregrine* 11–13 (c. late 2nd c.).
+- **n11 — Mara Bar-Serapion:** British Museum, **Syriac MS Additional 14,658**; translation from the ANF
+  (Roberts–Donaldson–Coxe, Logos ed. 1997).
+- **n12 — Talmud:** *Sanhedrin* 43a (Epstein/Soncino); the note candidly adds the Talmud "was written too
+  late to provide evidence… independent of earlier sources," citing Meier, *A Marginal Jew*, **1:96–97**.
+- **n15 — Crossan's "as sure as anything historical can ever be":** *Jesus: A Revolutionary Biography*,
+  **p. 145** (see also 154, 196, 201). **⚠ Edition discrepancy inside the book:** this note cites
+  "HarperCollins, **1991**," but the Bibliography lists the same title as "HarperSanFrancisco, **1994**."
+  Both refer to the same work; resolve the year at verification (the quote is p. 145 regardless).
+- **n16 — the disciples'-claims chart:** Geivett & Habermas, eds., *In Defense of Miracles* (IVP, 1997),
+  **266**.
+- **n18 — apostolic fathers citing Paul (⚠ EXTRA-CARE, per our spliced-Ignatius catch):** a dense note —
+  Clement of Rome (*1 Clement* 47), *2 Clement* 19:2, **Polycarp *To the Philippians*** (16 citations:
+  1:3; 2:2; 4:1[×3]; 6:1–2[×2]; 9:2; 11:1,2,4; 12:1[×2]), Papias (*Fragments*), **Ignatius** (*To
+  Polycarp* 5:1; and Ignatius succeeded Peter at Antioch per Eusebius, *Ecclesiastical History*
+  3.36.3–4), *Martyrdom of Polycarp* 1:2; on Papias's dating see Gundry, *Mark* (Eerdmans, 1993),
+  **1026–45**; Polycarp's "accurately and reliably taught the word" + Irenaeus (*Against Heresies* 3.3.4)
+  and *To Florinus* (in Eusebius, *EH* 5.20). **Verify every Father-quotation to the ANF/Lightfoot text
+  before any use.**
+- **n21 — apostolic-fathers dating:** Clement (*1 Clem.* 5, c. A.D. 95); Polycarp (*Phil.*, c. 110);
+  Ignatius (*To the Romans* 4, c. 110); Papias (*Fragment* 5, c. 100–107; the note argues 100–107 over the
+  traditional 125, via Gundry, *Mark*, 1026–45).
+- **n23–n24 — the creedal analysis (1 Cor 15:3–7):** vv. 3–5 (and, separately, the "then to the Twelve…"
+  through v. 7) are widely held to be **pre-Pauline creed**; markers = Paul's "delivered… received"
+  hand-off language (cf. 11:23), the **Aramaic** substrate (four-fold *hoti* / "that"; *Cephas* = Aramaic
+  for Peter, John 1:42), and the stylized parallelism "according to the Scriptures." Sources: **John
+  Kloppenborg, "An Analysis of the Pre-Pauline Formula 1 Cor 15:3–5b…," *Catholic Biblical Quarterly* 40
+  (1978): 351–67**; **William Lane Craig, *Assessing the New Testament Evidence…* (Edwin Mellen, 1989),
+  1–49, esp. 1–6**; Habermas, "Evidential Apologetics" (*Five Views on Apologetics*, 2000) + *Historical
+  Jesus*, **152–57**.
+- **n25 — THE DATING CHAIN (this is the exact backing for our house "~2–5 years" rule):** crucifixion
+  dated **A.D. 30** (most scholars); Paul's conversion **31–33**; per **Gal. 1:18–19** Paul visited Peter
+  & James in Jerusalem ~3 years post-conversion; Paul's verb ***historēsai*** ("to gain a historical
+  account" — the note cites its use in Esther 8:12 LXX; 1 Esdras 1:33, 40; 2 Macc 2:24, 30, 32; 4 Macc
+  3:19; 17:7) implies he came to *learn firsthand*. Conclusion: Paul **"received it within two to five
+  years after Jesus' crucifixion from the disciples themselves"** (or even earlier, at his Damascus
+  conversion); 1 Corinthians itself written **53–57**. **✅ This confirms the book's dating is consistent
+  with our rule ("~2–5 years"; "within months" only ever attributed, e.g. to Dunn) — cite this note (n25)
+  + Kloppenborg/Craig as the backing, not the popular book's prose.**
+- **n26–n29 — the appearances as early tradition:** Paul in 1 Cor 15:9–11, 14–15; the Luke 24:34
+  appearance-to-Peter creed; **Richard Ostling, "Who Was Jesus?," *Time*, 15 Aug 1988, 41** (n27); the
+  **Acts sermon-summaries** as pre-literary oral tradition with Semitisms — **C.H. Dodd, *The Apostolic
+  Preaching and Its Developments* (Baker, repr. 1980), 17–31** (n29); Habermas & Moreland, *Beyond
+  Death*, 131–32.
+- **n30–n31 — Mark 16:9–20:** the note candidly grants the long ending is **not original to Mark** (Colin
+  Hemer, *The Book of Acts in the Setting of Hellenistic History* (Eisenbrauns, 1990), 415–43; **Metzger,
+  *A Textual Commentary on the Greek NT* (UBS, 1975), 125**; France's *Mark*, Marshall & Hagner). *(Good
+  for our Bible-reliability honesty — we don't lean on the Markan long ending.)*
+- **n33–n41 — the apostolic-fathers / apostolic-succession apparatus (⚠ EXTRA-CARE zone):** dense
+  primary pin-cites — **Irenaeus, *Against Heresies* 3.3.3–3.3.4** (ANF, Roberts–Donaldson–Coxe, Logos
+  1997); **Tertullian, *The Prescription Against Heretics* 32 & 42:3**; **1 Clement 42**; **Irenaeus,
+  *To Florinus*** (in Eusebius, *Ecclesiastical History* 5.20; Maier's *Church History*, Kregel 1999,
+  195–96); **Clement of Alexandria, *Stromata* 7.18**; **Martyrdom of Polycarp 9:3**; **Polycarp, *To the
+  Philippians* 9:2**.
+- **⚠✅ n48–n49 — the Ignatius quotes we've been careful about are now PINNED:** the risen Jesus'
+  **"handle me… I am not a bodiless demon"** and the disciples who **"despised death"** are **Ignatius,
+  *To the Smyrnaeans* 3:2 (n48) and 3:4 (n49)** (the book uses the author's own translation). *(This
+  resolves the 2026-07-12 spliced-Ignatius worry: verify our wording against **Smyrnaeans 3** in the
+  ANF/Lightfoot–Holmes text specifically — that is the correct locus, not a composite.)* Related word-study
+  on "martyr/witness": Kittel & Friedrich, *TDNT*; Colin Brown, *NIDNTT* (Zondervan, 1975), 1:461–62 (n50);
+  Tertullian, *Scorpiace* 15 (n51).
+- **n42 — the Josephus Testimonium (pp. 266–269), a careful, honest treatment worth mirroring:** the note
+  gives the full *Antiquities* 18.3.3 §63–64 text (Feldman trans., §§49–51), flags it as **partly a later
+  Christian interpolation**, and argues for a **"carefully neutral" authentic core** using the **Arabic
+  version (Agapius)**, **Shlomo Pines**, **Feldman**, **Meier (*A Marginal Jew* 1)**, and **Robert Van
+  Voorst, *Jesus Outside the New Testament* (Eerdmans, 2000), 88**. **✅ Matches our own
+  `hist_jesus`/`ev-s3` recalibration — the Testimonium is disputed/partly-interpolated, NOT to be quoted
+  whole; keep leaning on the authentic *Ant.* 20 James passage instead.**
+- **n43–n46 — the disciples' martyrdom (our martyrdom-precision rule):** James the brother via **Yamauchi
+  in *Jesus Under Fire*, 213–14** + **Josephus *Ant.* 20**; **Norman Perrin, *The Resurrection According
+  to Matthew, Mark, and Luke* (Fortress, 1977), 80** (n43); persecution in **Acts 4; 5; 12**; and **1
+  Clement 5:2–7** on Peter's & Paul's deaths, with a word-study on *heōs thanatou* ("unto death"). **Hold
+  our rule:** these establish the disciples were *willing* to suffer/die and several were *verifiably*
+  martyred (Peter, Paul, James of Jesus, James of John) — do NOT inflate to "all twelve martyred."
+- **n53 — Tacitus *Annals* 15.44** full text (Church–Brodribb) + the note's measured point that Tacitus &
+  Suetonius are "a lot closer to the events they write about than we are to the American Civil War."
+- **n56–n58 — Peter's & James's deaths:** Peter crucified (John 21:18–19; Origen via Eusebius, *EH* 3.1;
+  a recent study dates Peter's execution **64–68** — Michael Grant, *Saint Peter: A Biography* (Scribner,
+  1994), ch. 13; Ben Witherington III, *John's Wisdom* (WJK, 1995), 356); James via Eusebius, *EH* 2.23.
+- **⚠✅ n59 & n63 — the book itself flags the LEGENDARY martyrdom traditions as unreliable (supports our
+  martyrdom-precision rule):** n59 gives the **Hippolytus "On the Twelve Apostles"** apostle-fates list
+  (Peter crucified head-downward in Rome, Andrew on an olive tree at Patrae, John banished to Patmos,
+  Philip crucified at Hierapolis, James the Just stoned, Matthias, etc. — ANF, Roberts–Donaldson–Coxe
+  Appendix) but candidly calls its "dating and authorship… doubtful… anecdotal and cannot be accorded too
+  much weight"; n63 says the same of **Foxe's *Book of Martyrs*** (16th c., late/lost sources — "we cannot
+  assign much weight to his records for the purpose of historical investigation"). **✅ So the book does
+  NOT rest the martyrdom case on the legendary apostle-fates lists** — it restricts the strong,
+  well-attested claims to Peter, Paul, James of Jesus, and James of John. Hold our rule accordingly.
+- **n64 — the wider attestation net:** Josephus *Ant.* 20:200 (James); **Pliny, *Ep.* 10.96–97**; Stephen
+  (Acts 7:59–60); Antipas (Rev 2:13); Shepherd of Hermas; Melito of Sardis; Dionysius of Corinth (via
+  Eusebius); + Habermas, *Historical Jesus*, ch. 9.
+- **⚠✅ n67 — the Bultmann concession pin-cite:** Rudolf Bultmann, "New Testament and Mythology," in
+  *Kerygma and Myth* (ed. Hans Werner Bartsch; trans. Reginald H. Fuller; New York: Harper & Row, 1961),
+  **42; cf. 39**.
+- **⚠✅ n68 — the Lüdemann concession pin-cite:** Gerd Lüdemann, *What Really Happened to Jesus? A
+  Historical Approach to the Resurrection* (trans. John Bowden; Louisville: WJK, 1995), **80** (Lüdemann
+  holds *visions* caused the disciples' beliefs). **Cross-check the existing `api/ask.js` Lüdemann
+  citation against this exact locus.**
+- **n69 — the Jesus-Seminar/media framing (ties back to the Intro):** the **Peter Jennings / ABC News
+  documentary *The Search for Jesus*, July 2000** — pins the Intro-to-Part-1 lead.
+- **⭐ n70 — THE Habermas bibliographic survey (the actual source behind our "virtually all scholars"
+  phrasing):** Gary R. Habermas, **"Resurrection Research from 1975 to the Present: What Are Critical
+  Scholars Saying?," *Philosophia Christi*** (listed "forthcoming" in this 2004 book; subsequently
+  published as *Philosophia Christi* NS 3.2 [2004/2005]). **This is the citation to use for the
+  survey/"virtually all scholars grant the appearances" claim — verify the final volume/page and keep the
+  wording to "had experiences they believed were appearances."**
+
 ## Capture-status
 | Section | Pages | Captured? | Notes |
 |---|---|---|---|
@@ -917,25 +1047,31 @@ back:
 | Ch. 7 "Stopping at Nothing" — biased/sources/alien | 123–131 | ✅ | not-enough-sources (Blomberg; ~42 sources vs Caesar/Tiberius); biased-testimony in full (Tacitus, genetic/ad hominem, N.T. Wright, "bias≠lying"); "we'll never know" (Lüdemann); alien dodge; p.131 fine-tuning "cosmic joke" close (⚠ fine-tuning rule) |
 | Ch. 8 "Naturally Speaking" (naturalism / the "science" objections) | 132–150 | ✅ | ⚠ **this is Ch. 8, not "Ch. 9"**; naturalism defined; a priori/a posteriori; the 8-objection chart (p.139 + p.145); self-refuting-scientism; Mike's-grandfather; genetic-fallacy; God-can't-intervene; Behe elephant (fn 17); Swinburne/Yamauchi/Hume (=old "140–144"); NDEs (Morse/Beloff/Ayer/Flew — ⚠ high-caution); conclusion + 4+1 restatement (⚠ Muslim line) |
 | **Bibliography (A–Z)** | 335–345 | ✅ | **full source data for nearly every lead** — see the "Bibliography" section above; upgrades leads from "does it exist?" to "confirmed source, wording/page still to verify" |
+| **Chapter 3 numbered Notes (all 70)** | 256–279 | ✅ | **PAGE-PRECISE citations for Facts 1 & 2** — see the "Chapter 3 numbered Notes" section above; incl. creed-dating chain (n25), Ignatius=*Smyrnaeans* 3 (n48–49), Bultmann (n67)/Lüdemann p.80 (n68), Habermas survey (n70), + the book's own honesty flags on the Hippolytus/Foxe legendary lists (n59, n63) |
+| Numbered Notes — Ch. 4 (begins) + Chs. 1,2,5,6,7,8 | 279+ / back matter | ❌ | nice-to-have; the Bibliography already gives full source data for these chapters' leads |
 | (Ch. 4 end / notes gap) | 76–80 | ❌ | not photographed (small gap) |
 | (Ch. 2 end / notes gap) | 41–42 | ❌ | not photographed (small gap) |
-| **Numbered per-chapter Notes / Endnotes** | back matter (pre-335) | ❌ | **the one remaining item — gives the exact page inside each source per footnote; the Bibliography (captured) already gives full source data** |
 
 ## Next photos needed (in priority order)
-1. **The numbered per-chapter Notes / Endnotes** (the section just before the Bibliography, roughly pp.
-   ~300–334) — now the single remaining item. The **Bibliography is fully captured** (pp. 335–345), so we
-   have complete *source* data; the numbered notes would add the **exact page inside each source** for
-   each footnote (e.g. which page of Behe, of Perrin, of the JAMA article). Nice-to-have precision, not a
-   blocker for most uses.
+1. **The numbered Notes for the OTHER chapters** (Ch. 4 begins on p. 279; Chs. 1, 2, 5, 6, 7, 8 elsewhere
+   in the back matter). **Ch. 3's notes are fully captured**, and the **Bibliography is complete** (pp.
+   335–345), so this is now purely *page-level precision* for the remaining chapters (e.g. the exact page
+   of Behe, of the JAMA article, of Wand). Nice-to-have, not a blocker — the Ch. 4 notes (Paul/James) are
+   the most useful next grab.
 2. The **table of contents** + **copyright page** (to fix the exact edition/printing/ISBN and map the
    full chapter list — we now know the book runs to at least ch. 13 / a "Part 4" beyond the resurrection
    defense; see p. 150).
 3. **pp. 41–42** (Ch. 2 end) and **pp. 76–80** (Ch. 4 end) — small skipped gaps, if not blank.
 
-> **Session note (2026-07-17):** captured the whole **119–150** run (closing every prose gap) + the
-> **complete A–Z Bibliography (335–345)**. Fixed the **Ch. 8 vs "Ch. 9"** mis-numbering for "Naturally
-> Speaking" and the **Strauss swoon-critique reference** (it's *A New Life of Jesus*, 1879, not the 1835
-> work). Flagged the **NDE section (pp. 146–147) as high-caution / low-priority** (Ayer did not convert;
+> **Session note (2026-07-17):** captured the whole **119–150** run (closing every prose gap), the
+> **complete A–Z Bibliography (335–345)**, AND the **complete Chapter 3 numbered Notes (all 70, pp.
+> 256–279)**. Fixed the **Ch. 8 vs "Ch. 9"** mis-numbering for "Naturally Speaking" and the **Strauss
+> swoon-critique reference** (it's *A New Life of Jesus*, 1879, not the 1835 work). Page-precise wins from
+> the Ch. 3 notes: the **creed-dating chain** (n25 → our "~2–5 years" rule), **Ignatius = *Smyrnaeans* 3**
+> (n48–49, resolving the spliced-quote worry), the **Bultmann (n67) & Lüdemann p.80 (n68)** concession
+> pin-cites, the **Habermas survey** (n70, behind "virtually all scholars"), and the book's own **honesty
+> flags on the legendary Hippolytus/Foxe apostle-fates lists** (n59, n63 — supports our martyrdom-precision
+> rule). Flagged the **NDE section (pp. 146–147) as high-caution / low-priority** (Ayer did not convert;
 > keep it off the minimal-facts case) and the **p. 148 Muslim line** + **p. 131 fine-tuning 1:10²⁵** for
-> the neutrality / fine-tuning rules. Bibliography now backs nearly every lead with real publication data
-> (see the new "Bibliography" section) — wording/page still to verify per the pipeline.
+> the neutrality / fine-tuning rules. Everything here remains a **lead** — wording/page verified per the
+> pipeline before any live-content use.
