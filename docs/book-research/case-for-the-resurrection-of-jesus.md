@@ -4,13 +4,13 @@
 (Grand Rapids: Kregel, 2004). Owner's physical copy (photographed). Copyrighted — this is an
 **in-our-own-words map that points at quotable primaries**, NOT a store of the book's prose.
 
-> **Status: IN PROGRESS — captured pp. 23–107.** The complete POSITIVE case (Part 1–2: the
+> **Status: IN PROGRESS — captured pp. 23–112.** The complete POSITIVE case (Part 1–2: the
 > minimal-facts method + the full "4 + 1" quintet with charts and skeptic concessions) AND the
 > DEFENSIVE case so far: **Ch. 5** (legend, copycat/pagan-myths, fraud, wrong-tomb, swoon/apparent-
-> death + the JAMA medical evidence) and **Ch. 6 "Mind Games"** (the hallucination theory: private/
-> individual, group appearances, empty tomb, Paul & James's hostile frame). Still **not** captured:
-> the rest of the objection-handling (the **"science / miracles" chapter** and the **Ch. 8 faith-
-> factor**), and — the single highest priority — the **endnotes / bibliography**, which is what makes
+> death + the JAMA medical evidence) and **Ch. 6 "Mind Games"** (hallucination, delusion, and
+> vision theories — the ones modern critics prefer, incl. Lüdemann; + the start of "conversion
+> disorder"). Still **not** captured: the rest of Ch. 6/7 (conversion-disorder, the **"science /
+> miracles" chapter**) and the **Ch. 8 faith-factor**, and — the single highest priority — the **endnotes / bibliography**, which is what makes
 > every lead in this note verifiable. See "Next photos needed." Not a complete map of the book.
 
 ## Usage rules (same as every note in this folder)
@@ -490,6 +490,42 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   overstate into "group hallucination is scientifically impossible full stop" (modern discussion is
   more nuanced); the load is carried by *variety of appearances + Paul/James's hostile-not-expectant
   frame + the empty tomb*, which is the honest, strong form.
+
+### Chapter 6 — "Mind Games: Psychological Phenomena" (pp. 104–112) — HALLUCINATION / DELUSION / VISION REFUTED
+- **Beat:** answers the theories **modern critics actually prefer.** First it *defines* the terms
+  (important — critics blur them): an **illusion** = a distorted perception of something real; a
+  **hallucination** = a false perception with nothing there (private, individual, "like a dream you
+  can't invite someone into"); a **delusion** = a false belief held against the evidence.
+- **Hallucination theory** (chart "Hallucinations"): refuted because hallucinations are **private and
+  individual — not group events** (the Navy SEAL "Hell Week" sleep-deprivation example: each candidate
+  hallucinated something *different* — an octopus, a train, a wall), yet the appearances were to
+  **groups** (1 Cor 15: the Twelve, the 500, all the apostles); and it can't explain the **empty tomb**,
+  **Paul** (a hostile foe, not grieving), **James** (a skeptic), or the **many personal variances**
+  (indoors/outdoors, many people, over ~40 days).
+- **Delusion theory** (chart "Delusions"): a false *belief*. Cult parallels — **Heaven's Gate /
+  Marshall Applewhite / Hale-Bopp** (1997), **Jim Jones / Peoples Temple** (1978), **David Koresh /
+  Branch Davidians** (1993) — but each rode a **living charismatic leader**; the disciples had none
+  after Jesus died. Delusion can't explain the empty tomb or the Paul/James conversions (Paul would
+  not delude himself into following a "cursed" false messiah; James didn't fit the profile). Highly
+  implausible.
+- **Vision theory** (chart "Visions"): "vision" is a **vague term — make the skeptic define it.** If
+  *literary-genre* vision → that's the **legend** theory (already answered). If an **objective** vision
+  (God causes a real perception of the risen Christ *outside* the mind) → that **concedes the risen
+  Christ** (i.e. the resurrection). If a **subjective** vision (in the mind only) → that's just
+  **hallucination/delusion** (already answered). Either way the **bodily nature of the appearances**
+  (touched, ate; 1 Cor 15:3–8) and the **empty tomb** defeat it. **Gerd Lüdemann's** subjective-vision
+  theory is the named target; **Paul's Acts 9** light-and-voice is noted but Paul reports *bodily*
+  appearances.
+- **(begins) "Conversion disorder"** (p. 112) — a modern psychosomatic theory (physical symptoms from
+  psychological stress) proposed for Paul; refutation on the next pages (not yet captured).
+- **Primary-source leads:** 1 Cor 15:3–8; Acts 9 (Paul); **Gerd Lüdemann** (subjective vision —
+  cross-check `api/ask.js`, which already cites him); the SEAL "Hell Week" and Heaven's Gate/Jonestown/
+  Waco examples (factual — verify dates, present soberly).
+- **Guardrail fit:** this is the **highest-value objection material** for `emptytomb`/`minimalfacts`
+  (the hallucination/vision theories are what serious critics like Lüdemann run) — the define-your-
+  terms move and the group-appearances + empty-tomb + Paul/James replies are strong and reusable. Keep
+  the SEAL/cult illustrations factual and non-mocking (neutrality), and keep our "best explanation, not
+  proof" register.
 
 ## Cross-map to our Evidence Library
 - Resurrection tab **`ev-s2`**; essays **`library/minimalfacts.html`**, **`emptytomb.html`**,
