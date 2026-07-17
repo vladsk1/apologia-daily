@@ -105,6 +105,36 @@ test('lib/briefs-verified.js contains ONLY twice-gated briefs (no ungated leak t
   }
 });
 
+// Retrieval tuning battery: on-topic questions must surface a brief, and clearly
+// off-topic / intra-Christian-dispute questions must surface NONE (so the model
+// just answers normally). Guards recall AND precision against a future STOP-word or
+// threshold regression. Not exhaustive — a representative net.
+test('brief retrieval fires on-topic and stays silent off-topic', async () => {
+  const { retrieveBriefs } = await import('../lib/retrieve-briefs.js');
+  const onTopic = [
+    'Is Jesus God?',
+    'Did Jesus ever actually claim to be God?',
+    'Isnt the Trinity a logical contradiction?',
+    'Does fine tuning prove the universe was designed?',
+    'What caused the universe to exist?',
+    'Was Jesus just copied from Mithras and Osiris?',
+    'Did the disciples hallucinate seeing Jesus?',
+    'How was the 1 Corinthians 15 creed dated so early?',
+  ];
+  const offTopic = [
+    'what is the best pizza topping',
+    'How do I stay motivated to exercise?',
+    'Should I get baptized as an infant or adult?',  // intra-Christian dispute — no brief
+    'who was Pontius Pilate',
+  ];
+  for (const q of onTopic) {
+    assert.ok(retrieveBriefs(q, 1).length === 1, `expected a brief for on-topic question: "${q}"`);
+  }
+  for (const q of offTopic) {
+    assert.ok(retrieveBriefs(q, 1).length === 0, `expected NO brief for off-topic question: "${q}"`);
+  }
+});
+
 // The briefs instruction block must keep the framing OPTIONAL and subordinate to the
 // guardrails — a future edit must not turn it into a script the model must follow.
 test('api/ask.js keeps the argument-brief block optional + guardrail-subordinate', () => {
