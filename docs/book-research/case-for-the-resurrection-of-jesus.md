@@ -4,15 +4,24 @@
 (Grand Rapids: Kregel, 2004). Owner's physical copy (photographed). Copyrighted — this is an
 **in-our-own-words map that points at quotable primaries**, NOT a store of the book's prose.
 
-> **Status: IN PROGRESS — captured pp. 23–130 + 140–144 (a few page-gaps noted).** The complete POSITIVE case (Part 1–2: the
-> minimal-facts method + the full "4 + 1" quintet with charts and skeptic concessions) AND the
-> DEFENSIVE case so far: **Ch. 5** (legend, copycat/pagan-myths, fraud, wrong-tomb, swoon/apparent-
-> death + the JAMA medical evidence) and **Ch. 6 "Mind Games"** (hallucination, delusion, and
-> vision theories, incl. Lüdemann), **Ch. 6 tail** (conversion-disorder/power/epiphany — Flew–Habermas),
-> **Ch. 7 "Stopping at Nothing"** (source-count, biased-testimony, "we'll never know", alien), and
-> **Ch. 9 "Naturally Speaking"** (Behe/God-of-the-gaps, Swinburne, Yamauchi, Hume). GAPS not yet shot:
-> pp. 119–122, 124–125, 127, 131–139. Single highest priority remaining: the **endnotes / bibliography**,
-> which is what makes every lead in this note verifiable. See "Next photos needed." Not a complete map of the book.
+> **Status: IN PROGRESS — captured pp. 23–150 (contiguous, no page-gaps).** The complete POSITIVE case
+> (Part 1–2: the minimal-facts method + the full "4 + 1" quintet with charts and skeptic concessions) AND
+> the whole DEFENSIVE case (Part 3): **Ch. 5** (legend, copycat/pagan-myths, fraud, wrong-tomb,
+> swoon/apparent-death + the JAMA medical evidence), **Ch. 6 "Mind Games"** (hallucination, delusion,
+> vision theories incl. Lüdemann, + conversion-disorder/power/epiphany — Flew–Habermas), **Ch. 7
+> "Stopping at Nothing"** (combination theories + the coin-flip probability math, discrepancies-among-
+> accounts, biased-testimony, not-enough-sources/~42-sources, "we'll never know", the alien dodge), and
+> **Ch. 8 "Naturally Speaking"** (naturalism defined; a priori vs a posteriori; the 4-objection chart;
+> "only science proves truth"/self-refuting; "science proves people don't rise"/Mike's-grandfather;
+> "science explains everything"/genetic-fallacy; "God can't intervene"; "science must assume naturalism"
+> + Behe's elephant; NDEs — Morse/Beloff/Ayer/Flew; conclusion + the "4+1" restatement). **⚠ NOTE — the
+> earlier draft mis-numbered "Naturally Speaking" as Ch. 9; it is Chapter 8** (pp. 132–150), and its
+> Behe/Swinburne/Yamauchi/Hume material sits at pp. 140–144. **The complete A–Z Bibliography (pp.
+> 335–345) is now captured too** — see the "Bibliography" section, which backs nearly every lead with
+> real publication data (wording/page still to verify per the pipeline). **One item still outstanding:
+> the numbered per-chapter Notes/Endnotes** (the section just before the bibliography), which would add
+> the exact page inside each source per footnote — precision, not a blocker. See "Next photos needed."
+> Not a complete map of the book (chs. 9–13 / Part 4, on other topics, are past our scope — see p. 150).
 
 ## Usage rules (same as every note in this folder)
 - **Never reproduce the book's prose.** Everything here is our paraphrase of the argument's *shape*.
@@ -453,15 +462,20 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   (leg-breaking) to hasten death (John 19:31–33), and the **spear wound** (John 19:34–35) with "blood
   and water" consistent with a ruptured **pericardium / pleural effusion** — the team concluded the
   survival assumption "appears to be at odds with modern medical knowledge." **Quintilian** (AD 35–95)
-  attests the procedure. Then the decisive turn: even the skeptic **David Friedrich Strauss** (1835)
-  demolished the swoon theory on its own terms — a half-dead man who crept from the tomb needing
-  bandaging could only have produced *pity*, never the disciples' conviction that they had met the risen
-  **Prince of Life** ("Alive? Barely. Risen? No."). Chart: JAMA (asphyxiation / spear wound) · Strauss'
-  critique · Paul experienced a "glorious" appearance.
-- **Leads (fact-of-death / swoon):** the **JAMA 1986** article (real + citable — verify authors
-  Edwards/Gabel/Hosmer + wording); **John 19:31–37**; **Quintilian**; **D.F. Strauss** (*The Life of
-  Jesus Critically Examined*, 1835 — verify the exact "Prince of Life" wording). This is our
-  `library/minimalfacts.html` "was Jesus really dead?" material — sober, not gratuitously graphic.
+  attests the procedure. Then the decisive turn: even the skeptic **David Friedrich Strauss** (the "Prince
+  of Life" passage is from his later *A New Life of Jesus*, 1879 ET — see the Bibliography correction
+  below; NOT the 1835 *Life of Jesus Critically Examined*) demolished the swoon theory on its own terms —
+  a half-dead man who crept from the tomb needing bandaging could only have produced *pity*, never the
+  disciples' conviction that they had met the risen **Prince of Life** ("Alive? Barely. Risen? No.").
+  Chart: JAMA (asphyxiation / spear wound) · Strauss' critique · Paul experienced a "glorious" appearance.
+- **Leads (fact-of-death / swoon):** the **JAMA 1986** article — **now CONFIRMED in the bibliography:**
+  Edwards, William D.; Wesley J. Gabel; and Floyd E. Hosmer, "On the Physical Death of Jesus Christ,"
+  *JAMA* 255.11 (21 March 1986): 1455–63 (wording still to verify to the article); **John 19:31–37**;
+  **Quintilian**; **D.F. Strauss** — ⚠ **CORRECTION: the book cites Strauss, *A New Life of Jesus* (2
+  vols., Edinburgh: Williams & Norgate, 1879)**, NOT the 1835 *Life of Jesus Critically Examined* an
+  earlier draft of this note assumed; verify the exact "Prince of Life" / "barely alive" wording to the
+  1879 work. This is our `library/minimalfacts.html` "was Jesus really dead?" material — sober, not
+  gratuitously graphic.
 - **Guardrail (fraud/wrong-tomb):** these are our `emptytomb` + the "were the disciples liars/deluded?"
   `/answers/*`. Keep the **martyrdom-precision** wording exactly (sincere, in-a-position-to-know; not
   "all twelve martyred"), and quote **Colson** only once verified (from *Loving God*).
@@ -547,28 +561,43 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   the SEAL/cult illustrations factual and non-mocking (neutrality), and keep our "best explanation, not
   proof" register.
 
-### Chapter 7 — "Stopping at Nothing: More Critical Comebacks" (pp. 120–122+) — COMBINATION THEORIES + DISCREPANCIES
-- **Combination theories** (the skeptic stitches several naturalistic theories together — e.g.
-  theft + multiple-hallucination + conversion disorder). Four problems (chart "Combination Theories"):
-  **(1)** combining theories **multiplies improbabilities** (the coin-flip illustration: five theories
-  each ~80% likely → .8⁵ ≈ **33%**, i.e. *less* probable, not more); **(2)** each component still
-  carries **its own individual defects** (theft still can't explain the appearances, hallucination
-  still isn't a group event, etc.); **(3)** piling on sub-theories to patch holes is transparently
-  **ad hoc** ("the person caught in a lie fabricates new lies"); **(4)** the burden is to **show the
-  combination actually happened**, not merely that it's *possible* — "the mere stating of an opposing
-  theory does nothing to prove this is what really happened."
-- **(begins) "Discrepancies among the resurrection accounts" (p. 122+):** the objection that the
-  Gospels differ on peripheral details (how many **angels/women** at the tomb — one vs two: Matt
-  28:2–7 / Mark 16:5 vs Luke 24:4 / John 20:12; the women in Mark 16:1). Reply (finish capturing
-  next): variation in *secondary* detail doesn't nullify a core event — historians don't discard an
-  event because sources differ on particulars (the **burning of Rome** analogy: ancient accounts vary
-  on who/how-big, yet no one doubts it happened); **undesigned variation is what real eyewitness
-  testimony looks like** — collusion would produce suspicious *uniformity*.
+### Chapter 7 — "Stopping at Nothing: More Critical Comebacks" (pp. 120–122) — COMBINATION THEORIES + DISCREPANCIES *(captured)*
+- **Combination theories** (the skeptic stitches several naturalistic theories together — the book's
+  worked example is a **"theft / multiple-psychosis theory"**: the disciples stole the body [Fraud 2]
+  *and* subsequently deluded themselves into believing they saw the risen Jesus, *and* Paul had a
+  conversion disorder, *and* James also hallucinated). Four problems (chart "Combination Theories"):
+  **(1) combinations generally lead to HIGHER improbability, not lower.** The book's coin-flip
+  illustration: flipping a nickel to land heads is ~50%; two nickels both heads is .5 × .5 = **25%**;
+  five heads in a row = **~3%** — adding theories *multiplies* the improbability. Applied more
+  charitably (assign each of the five component theories a generous **80%** individual probability):
+  .8 × .8 × .8 × .8 × .8 = **.328 ≈ 33%**, i.e. the *combination* is much *less* likely (67% likely
+  false) than any single component — the opposite of what the skeptic wants. **(2)** many of the
+  components' individual **problems remain when they're considered together** (theft still can't explain
+  the appearances; a conversion disorder on Paul remains highly unlikely; there's no indication James
+  was in a frame of mind to hallucinate). **(3)** it ends up sounding **ad hoc** — even with no problems
+  remaining, piling on sub-theories to patch holes is "the liar contriving new excuses to support the
+  initial lie" / "fabricates new lies in an attempt to defend the original." **(4)** even if a
+  combination *could* be assembled, the **burden is to show it actually happened**, not merely that it's
+  *possible* — "the mere stating of an opposing theory does nothing to prove this is a probable
+  explanation of the facts." (footnote 2)
+- **"There are discrepancies among the resurrection accounts" (p. 122):** the objection that the Gospel
+  writers can't agree on details — how many **angels/women** at the tomb (one vs two: John 20:1; Matt
+  28:2–7 / Mark 16:5; Luke 24:4 / John 20:12; the women of Mark 16:1) — so the whole resurrection story
+  is dubious. Replies begun here (chart "Discrepancies…"): **First,** discrepancies in the Gospels don't
+  overturn their *general* trustworthiness on the core event. **Second,** historians don't conclude an
+  event didn't happen because accounts vary on peripheral details (the **burning of Rome** analogy —
+  ancient accounts differ on who started it and how big it was, yet no one doubts Rome burned; footnote
+  3). **⚠ Right-hand column cut off in the photo** (the "Third/Fourth" replies about undesigned
+  independent eyewitness variation vs suspicious collusion-uniformity are partly off-page) — capture the
+  full list if re-shot, but the thrust is: *undesigned variation in secondary detail is what real,
+  independent eyewitness testimony looks like.*
 - **Guardrail fit:** the combination-theory probability point and the discrepancies reply map onto
   `minimalfacts`/`emptytomb` and our Bible-reliability "do the Gospels contradict?" `/answers/*`. Keep
   our **Bible-reliability rule** — variation shows *independent* attestation of the core, it doesn't by
   itself prove every detail; argue the core (death, burial, empty tomb, appearances), not harmonised
-  minutiae. The probability math is illustrative, not a proof — present it as such.
+  minutiae. **The probability math is a rhetorical illustration, not a proof** — the 80%/33% figures are
+  the book's *assumed* inputs, not measured probabilities; present the *point* (stacking theories
+  compounds improbability + is ad hoc), never the numbers as if they were data.
 
 ### Chapter 6 tail — conversion disorder + "power/epiphany" theories (pp. 113–118)
 - **Conversion disorder** (a psychosomatic illness) proposed for Paul. Refuted: it can't explain the
@@ -584,8 +613,7 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
 - **Leads:** DSM-IV; the **Flew–Habermas** debate (April 2000); **Evan Fales**; Acts 9. Cross-check
   `api/ask.js`/`paulconv` for consistent Flew handling.
 
-### Chapter 7 — "Stopping at Nothing" (pp. 123–130): "something happened, but not God"
-*(Partial capture — pp. 124–125 and 127 not yet photographed.)*
+### Chapter 7 — "Stopping at Nothing" (pp. 123–130): "something happened, but not God" *(captured)*
 - **"Not enough sources / a risen Jesus would have left a bigger footprint."** Refuted: **Craig
   Blomberg's** four reasons more wasn't written (Christianity's humble beginnings; remote Palestine;
   only a small % of ancient works survive; little attention paid to Jewish figures). Most ancient works
@@ -596,9 +624,27 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   Julius Caesar's Gallic Wars and **~10** for Tiberius. Jesus is *better* attested than most ancient
   figures. **⚠ Cross-check our own manuscript answers:** the 2026-07-09 sweep recalibrated the
   Caesar/Tiberius source-count comparison — verify these tallies and DON'T overstate.
-- **"Biased testimony"** (chart): Paul & James were *hostile/unbiased* beforehand; **bias doesn't
-  require distortion**; and "the disciples would say that" is the **genetic fallacy / ad hominem** —
-  it attacks the source, not the evidence.
+- **"Biased testimony / the Resurrection accounts are biased" (pp. 124–125):** the objection that all we
+  have are the *biased* testimonies of Christians who transferred their bias into their writings. Six
+  replies: **First,** Paul's testimony is stronger than a neutral witness — his bias ran the *opposite*
+  way (he was hostile to the Christian cause and persecuted the church; he became a Christian *after*
+  the appearance, so at the moment he was won over he was a hostile source). **Second,** the bias of
+  James (an unbeliever during Jesus' life) also ran contrary to Christianity until the risen Jesus
+  appeared to him (1 Cor 15:7a). **Third,** an author's bias doesn't automatically discredit the facts —
+  modern **Jewish historians** carefully chronicled Nazi atrocities *because* they were passionately
+  committed to exposing what really happened; personal interest can *encourage* accuracy. **Fourth,** if
+  we reject the testimony of all interested parties, we'd have to reject most of standard history — the
+  authors of such works usually had a personal interest; that's the *role* of the historian. **Fifth,**
+  the historian's job is to comb the literature to ascertain what really happened; **Tacitus** opens his
+  *Annals* claiming to write "without anger or partiality" (**Annals 1.1**) yet is manifestly biased,
+  and is still regarded as *the* most reliable source for Roman history of the period — bias and
+  usefulness coexist. **Sixth,** the skeptic must avoid the **genetic fallacy** ("Bill believes X
+  *because* he's a Bible-believing Christian" attacks the *origin* of the belief, not the evidence for
+  it) and the **ad hominem** ("It must be asserted most strongly that to discover a writer has a 'bias'
+  tells us nothing whatever about the value of the information" — attributed to **N.T. Wright**). The
+  clincher: **"Bias does not mean lying"** — a source may be very biased *and* correct. **⚠ Verify the
+  N.T. Wright quote (fn ~10) and Tacitus *Annals* 1.1 wording to the primaries; cross-check our recent
+  `hist_jesus`/`ev-s3` Tacitus recalibration.**
 - **"The disciples experienced 'something' we'll never identify"** (Lüdemann-style agnosticism):
   refuted — this **rejects the conclusion, not the evidence**; the minimal facts + the failure of every
   natural theory + the religio-historical context (Jesus claimed divinity, did miraculous deeds; other
@@ -606,35 +652,152 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
 - **"Jesus was an extraterrestrial alien"** (a fringe dodge): refuted — even if entertained it concedes
   the ordinary explanations fail and doesn't deny the resurrection, only *God* as its cause; Jesus was
   born on earth and lived a full human life (unlike the objection's own alien tropes).
+- **The chapter's close — the "cosmic joke" turn (p. 131, end of Ch. 7):** the alien dodge is answered
+  partly by a **fine-tuning** aside. The book's figures: ~1 trillion galaxies, an average ~100 billion
+  stars each (~10²² stars), ~one planet per 1,000 stars (~10¹⁹ planets); required planet-star constants
+  would eliminate 99.9% of candidates, and with additional constants the odds of a life-capable planet
+  are put at **1:10²⁵** — so against ~10¹⁹ planets "we would not expect life to exist on even one." The
+  conclusion: the interconnected account is "better explained as God's confirmation of his claims to
+  divinity than an alien playing a cosmic joke" (footnotes 30–34). **⚠⚠ FINE-TUNING RULE bites hard
+  here:** this is a probabilistic *design/anti-abiogenesis* argument at popular-level compression. Our
+  rule: the fine-tuning **data** is conceded by physicists, but **design** is the *contested inference* —
+  never "science proves design." The specific **1:10²⁵ figure is unsourced in the body and must be
+  verified** (it reads like a life-origin probability of the Hoyle/Ross lineage); do not reproduce it as
+  established. Treat this as *illustrative*, not as one of our load-bearing arguments.
 - **Guardrail fit:** the "~42 sources / better-attested-than-Caesar" comparison is exactly what our
   **Bible-reliability rule** polices — attestation shows Jesus *existed and was written about early*,
   NOT that the resurrection is thereby proven; keep the counts verified and the claim measured.
 
-### Chapter 9 — "Naturally Speaking" (pp. 140–144): miracles & the "science" objection
-*(PARTIAL — pp. 131–139 not yet photographed; this is the tail of the miracles chapter.)*
-- **"God-of-the-gaps."** Refuted: a supernatural cause is reasonable *only when* natural theories all
-  fail **and** there is credible positive evidence — not as a lazy filler. Science shouldn't rule out
-  the supernatural *a priori* (methodological naturalism as a closed circle). **Michael Behe's** "elephant
-  in the room" analogy: detectives crawl the floor with magnifying glasses and miss the elephant because
-  the textbook says they "must get their man."
-- **"Even if a miracle happened, we could never know it was one / trace it to God."** Refuted via
-  **Richard Swinburne's** criteria for recognising a miracle — an event (1) with no precedent before or
-  since, (2) not accountable by any current law of nature, (3) with no foreseeable scientific revision —
-  which the resurrection meets; and the religio-historical context (Jesus' divinity claims) traces it to
-  God rather than a bare anomaly.
-- **"Miracles in other religions cancel out Christian ones."** Refuted (historian **Edwin Yamauchi**):
-  genuine miracles are compatible with Christian belief; rival-religion miracle claims are typically
-  late and poorly attested (and often appear centuries after the founder — Buddha, Krishna), whereas the
-  resurrection is early and uniquely well-attested.
-- **"There is a huge mountain of probability against any event ever being an act of God"** (Hume):
-  refuted — the argument is **circular** (it assumes uniform experience against miracles to conclude
-  against them) and rests on a sampling fallacy.
-- **Leads:** **Michael Behe** (the "elephant"/*Darwin's Black Box*); **Richard Swinburne** (miracle
-  criteria); **Edwin Yamauchi** (other-religion miracles); **David Hume** (the a-priori-against-miracles
-  argument). Verify each to the primary.
-- **Guardrail fit:** the Behe/intelligent-design material is where our **fine-tuning/ID rule** bites —
-  the *data* may be conceded but *design* is the contested inference; never write "science proves
-  design." Represent Hume's argument accurately (steelman before answering).
+### Chapter 8 — "Naturally Speaking: The Challenge of Naturalism" (pp. 132–150) — THE "SCIENCE" OBJECTIONS *(captured; ⚠ this is Ch. 8, NOT Ch. 9 as an earlier draft said)*
+- **Setup (pp. 132–133):** defines **naturalism** (the natural world is the sum of reality; scientific
+  investigation is the best/only path to knowledge; only material phenomena are real — "what is
+  nonscience is nonsense"). Distinguishes the objections in this chapter from the Part-3 theories so far:
+  these are **a priori / philosophical** ("no matter what evidence, miracles *can't* happen because they'd
+  contradict natural law") rather than **a posteriori** ("I can explain your evidence naturally"). The
+  chapter answers general anti-miracle objections from naturalist skeptics. **The "Naturalism" chart runs
+  across two pages (p. 139 = objections 1–4; p. 145 = objections 5–8):**
+  1. **"Only what science can proves is true"** (a. science is limited; b/c. self-refuting — the position
+     can't prove *itself*; d. the historian can handle the non-supernatural elements of the data).
+  2. **"Science proves that people don't come back to life"** (a. science proves people don't rise *by
+     natural causes* — which Christians never claimed; b. Jesus' life/claims provide the *context* where
+     his resurrection is "right at home").
+  3. **"Science can explain everything — we don't need a God"** (a. past "God-of-the-gaps" explanations no
+     more discredit today's arguments than discarded theories discredit today's science; b. **genetic
+     fallacy**; c. it's not what we *don't* know but what we *do* know; d. unjustified leap to assume a
+     future scientific answer).
+  4. **"If God exists, he cannot intervene in the laws of nature"** (a. how does the skeptic *know* what
+     God can/can't do?; b. what would stop the Creator suspending laws he made?; c. the resurrection shows
+     God *could and did* act).
+  5. **"Science must assume a naturalistic explanation for everything"** (a. don't deny a supernatural
+     cause when the religio-historical context fits and no plausible natural explanation exists — the
+     **Elephant** example; b. the real question is whether a God exists who may supersede nature; c. some
+     miracles bear marks of genuine interference with natural law; d. assuming naturalism to rule out
+     miracles is **arguing in a circle**).
+  6. **"Even if a miracle occurred, we could never know it was one"** (a. if God exists we have reason to
+     consider a divine cause; b. the religio-historical context can *identify* an act as a miracle; c.
+     endlessly "expanding the laws of nature" to reclassify the event as natural creates more problems).
+  7. **"Miracles in other religions count against Christian miracle claims"** (a. genuine miracles among
+     others would be *compatible* with Christian belief; b. poorly-evidenced rival claims can't cancel a
+     well-evidenced one, and typically fail the tests Jesus' resurrection passes).
+  8. **"There's a mountain of probability against any event ever being an act of God"** (Hume) — a. if God
+     exists there's no reason to reject the *possibility* of miracles; b. ruling the resurrection out *a
+     priori* "no matter how strong the evidence" is circular; we learn what the world is like *by
+     experience*, and a legitimate miracle claim challenges the naturalist's assumption (prayer studies &
+     NDEs cited as further pressure).
+- **The replies, in prose:**
+  - **"Only what science proves is true" (pp. 133–135):** four replies — (1) the scientific method is
+    itself **limited** (biology/geology/paleontology also deal in non-repeatable, non-predictable
+    situations); (2) the claim is **self-refuting** ("there is no such thing as truth" defeats itself; and
+    "only what science can prove is true" *cannot itself be proved by science*, so it "flunks its own
+    test"); (3) demanding that historical events be **predictable/repeatable** is likewise self-refuting
+    (Caesar crossing the Rubicon, Washington as first president aren't repeatable; and science itself
+    builds on unrepeatable past experiments); (4) **science can't measure God's *action*, but it (or
+    history) *can* assess the non-supernatural parts** — "was Jesus seen alive after his death?" — even if
+    it can't itself pronounce "God raised him" (cross-ref pp. 174–81, beyond our capture).
+  - **"Science proves people don't come back to life" (pp. 135–136):** laws of nature state what
+    *normally* happens; Christians never claimed a *natural* resurrection — the NT asserts *God* raised
+    Jesus. And the resurrection isn't an isolated marvel: it sits in an **interconnected religio-historical
+    context** (Jesus' divinity claims, deeds, predictions). The **"Mike's grandfather"** analogy — a
+    corpse reported walking around 20 years later, with *no* such context, would rightly draw suspicion of
+    misunderstanding; but Jesus' case *does* have the significant context, so this objection doesn't apply
+    unless a naturalistic theory works (and we've seen how hard that is).
+  - **"Science can explain everything / God-of-the-gaps" (pp. 137–138):** three replies — past
+    gap-explanations (thunder = God's anger) don't discredit present arguments any more than discarded
+    theories discredit modern science; "God is just a label for the unknown" commits the **genetic
+    fallacy** (the *origin* of a belief doesn't settle its *truth* — ancient Romans crediting Jupiter for
+    a victory doesn't unmake the historical victory); and what makes the resurrection compelling is what we
+    *do* know from respected disciplines — beware substituting a **"naturalism of the gaps"** (bare denial
+    despite adequate evidence).
+  - **"If God exists, he cannot intervene in natural laws" (p. 138):** this is a *philosophical*, not
+    scientific, premise (often a deist one). If God created the universe *and* its laws, nothing stops him
+    suspending them to act — he can't do the *logically* impossible (a married bachelor, a square circle),
+    but suspending physical law isn't logically impossible, "especially if he wished to send a message."
+    The resurrection is "an excellent reason for concluding that God not only *could* act miraculously in
+    the world, but that he actually *did*."
+  - **"Science must assume a naturalistic explanation for everything" (pp. 139–142):** the skeptic may
+    still relabel any event "natural" ("a one-of-a-kind freak of nature," "expand the laws to fit it") to
+    keep naturalism in control. Reply: a supernatural cause *may* be considered when all natural theories
+    fail **and** there's credible positive evidence — while genuinely guarding against a lazy
+    "God-of-the-gaps" default. The book quotes molecular biologist **Michael Behe's "elephant in the room"
+    analogy** (footnote 17): detectives crawl a room examining the floor for the killer of a body that lies
+    crushed flat, carefully avoiding the legs of the large gray **elephant** standing next to it and never
+    glancing at it — because "textbooks say detectives must 'get their man,' so they never consider
+    elephants." Behe's elephant = God; ruling out the supernatural *a priori* is that willful blindness.
+  - **"Even if a miracle occurred, we could never know it was a miracle" & "miracles in other religions"
+    & the Humean "mountain of probability" (pp. 142–144):** answered via the religio-historical context
+    (which lets us *identify* the resurrection as a divine act, not a bare anomaly — this is the **Richard
+    Swinburne**-style criteria material), the point that genuine rival miracles would be *compatible* with
+    Christianity while poorly-attested late ones can't cancel a well-attested early one (**Edwin
+    Yamauchi**), and the charge that **Hume's** a-priori-against-miracles argument is **circular** (assumes
+    uniform experience against miracles to conclude against them). *(These three map to the earlier-captured
+    pp. 140–144 material — same chapter, now correctly placed in Ch. 8.)*
+- **Near-death experiences (pp. 146–147) — ⚠⚠ HIGH-CAUTION / LOW-PRIORITY FOR US.** As a *positive*
+  anti-naturalism pointer the book adduces **NDEs**: veridical reports (patients describing jewelry,
+  medical procedures, or events down the hall / miles away that they "should not have been able to know"),
+  people blind from birth reporting correct visual detail, and events recalled while the patient had a
+  "flat" EKG/EEG. Cases/sources: pediatrician **Melvin Morse** (a 9-year-old near-drowning; "profoundly
+  comatose," fixed/dilated pupils, later accurately describing the ER and reporting she "visited heaven
+  with an angel" and spoke with a deceased grandfather; footnote 34); **John Beloff** in *The Humanist*
+  (an atheist admitting the afterlife evidence, fn 35); **A.J. Ayer's** own NDE — "On the face of it,
+  these experiences… are rather strong evidence that death does not put an end to consciousness," and "My
+  recent experiences have slightly weakened my conviction that my genuine death… will be the end of me,
+  **though I continue to hope that it will be**" (fns 36–37); and **Antony Flew** — NDEs "certainly
+  constitute impressive evidence of the possibility of the occurrence of human consciousness independent
+  of any occurrences in the human brain…. This evidence equally certainly weakens if it does not
+  completely refute my argument against doctrines of a future life" (fn 38). **Why high-caution:** (a) this
+  is the book's *most contestable* evidential leg — veridical-NDE and "visited heaven" claims are disputed
+  and depend on case-by-case reliability; (b) **A.J. Ayer did NOT convert** — his own words *hope* death
+  is the end, so citing him as a witness to the afterlife would badly overstate him; (c) doctrinally we
+  would not *affirm* the visions' content. **Our resurrection essays do not and should not rest on NDEs.**
+  If ever touched at all, present as "some report X," heavily qualified, never as proof — and keep it well
+  away from the minimal-facts case, which stands on its own.
+- **Conclusion + the "4+1" restatement (pp. 148–150):** naturalism is "besieged with problems," so no
+  opposing theory adequately accounts for the five facts. Each critic is committed to a **worldview that
+  can't permit** the resurrection without being overturned — this applies to atheism and deism (which deny
+  resurrection a priori) and, the book adds, **the Muslim must reject it "for theological reasons, since
+  this event would confirm the Christian worldview and expose Muhammad as a deceiver or as one deceived."
+  ⚠ NEUTRALITY FLAG** — if this framing is ever used, state Islam's *actual* theological reason accurately
+  and charitably (the Qur'an 4:157 denial that Jesus was crucified) and never as a swipe; run it through
+  the neutrality + over-concession gates. The chapter closes by re-stating the **"minimal facts (4+1)"**:
+  (1) Jesus died by crucifixion; (2) the disciples sincerely believed the risen Jesus appeared to them
+  (so *legend* and *deliberate lie* both fail); (3) the enemy **Paul** and (4) the skeptic **James** were
+  converted by what they believed were appearances; and (5) the **empty tomb** — concluding the
+  resurrection is "not the *most* plausible explanation… it is the *only* explanation." The book then
+  points ahead to further chapters (chs. 9–13 / a "Part 4," on other topics) that are **past our scope.**
+- **Leads (verify each to the primary; several are now confirmed in the Bibliography below):** **Michael
+  Behe**, *Darwin's Black Box* (the elephant, fn 17); **Richard Swinburne** (miracle-identification
+  criteria); **Edwin Yamauchi** (rival-religion miracles); **David Hume** (a-priori-against-miracles);
+  **A.J. Ayer**, "'What I Saw When I Was Dead'" (*National Review*, 1988); **Melvin Morse**; **John
+  Beloff** (*The Humanist*); **Antony Flew** (NDE remarks — ⚠ cross-check our existing Flew handling in
+  `api/ask.js`/`paulconv`, and note this is *pre-2004* Flew); the p. 146 intercessory-prayer study
+  (**Byrd**, *Southern Medical Journal*, 1988); the fine-tuning sources behind p. 131 (**Crick**, **Paul
+  Davies**, **Denton**, **Dembski**).
+- **Guardrail fit:** the self-refuting-scientism and genetic-fallacy replies are clean, reusable material
+  for `originlife`/`laws`/`finetuning` and the "does science disprove miracles?" `/answers/*`. **Two rules
+  bite hard:** (1) the **fine-tuning/ID material** (p. 131 + the Behe/Denton/Davies leads) — *data*
+  conceded, *design* is the contested inference; never "science proves design." (2) **The NDE section is
+  the book's weakest leg — keep it low-priority, heavily-qualified, and off the minimal-facts case; do not
+  overstate Ayer.** Steelman Hume before answering.
 
 
 ## Cross-map to our Evidence Library
@@ -647,6 +810,91 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   caricature).
 - Related existing note: **`docs/book-research/body-of-proof.md`** (Johnston) also maps the 1 Cor 15
   creed (Dunn / Habermas) and empty-tomb archaeology — cross-check to avoid duplicated leads.
+
+## Bibliography — full source data for the leads (captured: pp. 335–345, A–Z, complete)
+**What this changes:** the book's alphabetical **Bibliography** is fully captured, so most leads in this
+note are upgraded from "does this source even exist?" to **"confirmed real, published source with correct
+title/publisher/date — exact quotation + page still to verify to the primary."** That verification bar is
+unchanged (nothing is quotable in our content until `apologia-citations` confirms wording against the
+source). **NOT captured:** the book's *numbered per-chapter Notes* (which would give the exact page inside
+each source for each footnote) — that's the one remaining photo need. Highlights, grouped by the lead they
+back:
+
+- **The 1 Cor 15:3–7 creed (our anchor):** **John Kloppenborg, "An Analysis of the Pre-Pauline Formula
+  1 Cor 15:3–5b in Light of Some Recent Literature," *Catholic Biblical Quarterly* 40 (1978): 351–67** —
+  a *real academic* source for the creed's pre-Pauline formula; prefer citing this (and the primaries)
+  over the popular book. (Also present: Kremer-type material is not here, but Habermas's own survey is —
+  see below.)
+- **"Virtually all scholars" survey (behind Fact 2):** **Gary R. Habermas, "The Late Twentieth-Century
+  Resurgence of Naturalistic Responses to Jesus' Resurrection," *Trinity Journal* 22 NS.2 (Fall 2001):
+  179–96** — the citable form of the bibliographic survey; keep our wording to "had experiences they
+  believed were appearances," never "scholars grant the resurrection happened."
+- **Skeptic concessions:** **Gerd Lüdemann, *What Really Happened to Jesus? A Historical Approach to the
+  Resurrection*, trans. John Bowden (Louisville: WJK, 1995)** (the "historically certain… appeared to
+  them" line — cross-check the existing `api/ask.js` Lüdemann citation); **Rudolf Bultmann** in *Kerygma
+  and Myth* (trans. R.H. Fuller; Harper & Row, 1961); **Paula Fredriksen**, "What You See Is What You
+  Get" (BU web essay); **Norman Perrin, *The Resurrection According to Matthew, Mark, and Luke*
+  (Fortress, 1977)** (the "firmer the rock" quote); **J.D. Crossan, *Jesus: A Revolutionary Biography*
+  (HarperSanFrancisco, 1994)** ("as sure as anything historical").
+- **Fact 1 extra-biblical witnesses:** **Robert E. Van Voorst, *Jesus Outside the New Testament*
+  (Eerdmans, 2000)** — a strong, citable secondary source for Tacitus/Josephus/etc.; **Tacitus**,
+  *Annals* (Church–Brodribb, classics.mit.edu); **Suetonius**, *Twelve Caesars* (Graves, Penguin);
+  **Josephus**, *Jewish Antiquities* (Feldman, Loeb/Harvard, 1981) + Whiston (Kregel); **Talmud**
+  (Epstein/Soncino). **Hengel, *Crucifixion* (Fortress, 1977)** for crucifixion horror.
+- **Facts 3–5 apparatus:** **Apostolic Fathers** — **Lightfoot–Harmer–Holmes, *The Apostolic Fathers*
+  (Baker, 2d ed. 1999)** and the **Ante-Nicene Fathers (Roberts–Donaldson, Logos ed. 1997)** — these are
+  our PD-translation pointers for Clement/Ignatius/Polycarp (recall the 2026-07-12 spliced-Ignatius
+  catch — quote only verified wording); **William Wand, *Christianity: A Historical Religion?* (Judson,
+  1972)** (the empty-tomb "all the strictly historical evidence" quote); **Reginald Fuller** (via the
+  creed literature); Josephus *Ant.* 20 for James.
+- **Historical-method backbone (Ch. 2 five principles):** **C. Behan McCullagh, *Justifying Historical
+  Descriptions* (Cambridge, 1984)** — cite this real methodology source (not the popular book) for the
+  criteria; the illustrations trace to **David McCullough, *John Adams* (2001)** + **Syrett, *Papers of
+  Alexander Hamilton* vol. 25 (Columbia, 1974)** and **Annette Gordon-Reed, *Thomas Jefferson and Sally
+  Hemings* (UP of Virginia, 1997)**; the "historicity is the default when reasons significantly outweigh"
+  line = **Graham Twelftree, *Jesus: The Miracle Worker* (IVP, 1999)**.
+- **Ch. 1 Son-of-Man authenticity:** **Craig Blomberg, "Who Did Jesus Think He Was?"** is in **Wilkins &
+  Moreland, eds., *Jesus Under Fire* (Zondervan, 1995)**; **Meier, *A Marginal Jew* vol. 1 (Doubleday,
+  1991)** (the p. 171 dissimilarity point).
+- **Copycat / pagan-parallels (Ch. 5):** **Metzger, *Historical and Literary Studies: Pagan, Jewish, and
+  Christian* (Eerdmans, 1968)**; **Harold Remus, *Pagan-Christian Conflict over Miracle in the Second
+  Century* (1983)**; **Günter Wagner, *Pauline Baptism and the Pagan Mysteries* (Oliver & Boyd, 1967)**;
+  **Philostratus, *Life of Apollonius* (Conybeare, Loeb, 1912)**; **Maxime Rodinson, *Muhammad*
+  (Pantheon, 1980)** for the Muhammad-legend point. (Cross-check our recalibrated `pagan-myths` answer.)
+- **Psychological theories (Ch. 6):** **Kendall & Hammen, *Abnormal Psychology* (Houghton Mifflin,
+  1995)** (illusion/delusion/hallucination + conversion-disorder definitions); **DSM-IV** (APA, 1994);
+  **Jack A. Kent, *The Psychological Origins of the Resurrection Myth* (Open Gate, 1999)** (grief/vision
+  theory); **Michael Goulder, "The Baseless Fabric of a Vision," in *Resurrection Reconsidered* (ed.
+  D'Costa, Oneworld, 1996)** (subjective-vision theory); **Evan Fales, "Successful Defense? A Review of
+  *In Defense of Miracles*," *Philosophia Christi* NS3.1 (2001)** (power theory) + Habermas's reply same
+  issue; **Michael Martin, *The Case Against Christianity* (Temple UP, 1991)** (atheist critic).
+- **Flew–Habermas:** the 2000 televised exchange = **"Did Jesus Rise From the Dead?" *The John Ankerberg
+  Show* (2000)**; the classic debate book = **Miethe, ed., *Did Jesus Rise from the Dead? The Resurrection
+  Debate* (Harper & Row, 1987)**. ⚠ Keep our existing Flew handling consistent (`api/ask.js`/`paulconv`)
+  and note the NDE remarks are *pre-2004* Flew.
+- **Ch. 8 "science" chapter:** **Behe, *Darwin's Black Box* (Free Press, 1996)** (the elephant, fn 17);
+  **Swinburne, "Violation of a Law of Nature," in *Miracles* (Macmillan, 1989)** (miracle criteria);
+  **Yamauchi, *Jesus, Zoroaster, Buddha, Socrates, Mohammad* (IVP, rev. 1972)** (rival-religion
+  miracles); **Hume, *Enquiry Concerning Human Understanding*** (a-priori-against-miracles);
+  **N.T. Wright, "Looking Again for Jesus," *Stimulus* 4.4 (Nov 1996)** (the "bias tells us nothing"
+  quote, p. 125). **⚠ Fine-tuning (p. 131) sources — hold to the fine-tuning/ID rule:** **Hugh Ross,
+  "Astronomical Evidences for a Personal, Transcendent God," in Moreland, ed., *The Creation Hypothesis*
+  (IVP, 1994)** (likely home of the 1:10²⁵ figure — verify), **Paul Davies** (*Cosmic Blueprint*,
+  *Superforce*), **Michael Denton** (*Nature's Destiny*), **Francis Crick** (*Life Itself*): all
+  design-leaning — *data* conceded, *design* is the contested inference.
+- **NDEs (p. 146–147, high-caution):** **A.J. Ayer, "'What I Saw When I Was Dead': Intimations of
+  Immortality," *National Review*, 14 Oct 1988: 38–40** (⚠ Ayer did NOT convert — verify the exact
+  "continue to hope" wording); **Melvin Morse**, "Near Death Experiences and Death-Related Visions in
+  Children," *Current Problems in Pediatrics* 24 (1994): 55–83, and *Closer to the Light* (Random, 1990);
+  **Byrd**, "Positive Therapeutic Effects of Intercessory Prayer…," *Southern Medical Journal* 81.7
+  (1988): 826–29; **Stevenson & Greyson**, "Near-Death Experiences," *JAMA* 242 (1979): 265–67. **Keep
+  this leg low-priority and off the minimal-facts case.**
+- **Part-3 framing:** **Barth, *Church Dogmatics* IV/1 (T&T Clark, 1956)**; **Raymond Brown**, multiple
+  works incl. "The Resurrection and Biblical Criticism," *Commonweal* 87 (24 Nov 1967): 232–36.
+- **Legend-rate (Ch. 5):** **A.N. Sherwin-White, *Roman Society and Roman Law in the New Testament*
+  (Oxford, 1963)** *is* in the bibliography — so the classic legend-rate source the note flagged "check
+  the endnotes" is confirmed present; **Robert M. Price, "Is There a Place for Historical Criticism?,"
+  *Religious Studies* 27 (1991)** for the skeptical legend-rate side.
 
 ## Capture-status
 | Section | Pages | Captured? | Notes |
@@ -665,19 +913,29 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
 | Ch. 5 "Always Looking for a Way Out" (legend/lies/lapses) | 84–102 | ✅ | refutes **legend** (embellishment; nonhistorical genre) + **copycat/pagan-myths** (Osiris/Adonis/Attis/Marduk/Apollonius) + **fraud** (Fraud 1 = lied/stole body → Colson/Watergate; Fraud 2 = someone else stole it → appearances-not-tomb, Mary/Thomas) + **wrong-tomb** (Joseph of Arimathea) + **swoon/apparent-death** (JAMA 1986 medical study; spear wound/pericardium; Strauss's critique) |
 | Ch. 6 "Mind Games" (psychological phenomena) | 104–107+ | ✅ | refutes the **hallucination** theory: illusion/delusion/hallucination defined; hallucinations are private/individual (group appearances can't be; SEAL "Hell Week"); doesn't explain the empty tomb, or Paul's & James's hostile-not-expectant frame |
 | Ch. 6 tail — conversion disorder + power/epiphany | 113–118 | ✅ | Paul: DSM-IV profile, ad-hoc stacking, Flew–Habermas 2000; Evan Fales power-theory; epiphany |
-| Ch. 7 "Stopping at Nothing" | 123–130 (124–125,127 gap) | ◑ | not-enough-sources (Blomberg; ~42 sources vs Caesar/Tiberius), biased-testimony (genetic/ad hominem), "we'll never know" (Lüdemann), alien dodge |
-| Ch. 8 (faith-factor) + Ch. 9 open | 131–139 | ❌ | **GAP — not yet photographed** |
-| Ch. 9 "Naturally Speaking" (miracles/science) | 140–144 | ◑ | God-of-the-gaps/Behe, Swinburne miracle criteria, Yamauchi (other-religion miracles), Hume |
-| (Ch. 4 end / notes gap) | 76–80 | ❌ | not photographed |
-| Responses to naturalistic theories (hallucination, legend, swoon, etc.) | later chs. | ❌ | ❌ |
-| **Endnotes / bibliography** | back matter | ❌ | **the citation trail — highest priority** |
+| Ch. 7 "Stopping at Nothing" — combination theories + discrepancies | 119–122 | ✅ | combination theories (coin-flip .8⁵≈33% math, ad hoc, chart); discrepancies-among-accounts (angels/women, burning-of-Rome; right column partly cut off) |
+| Ch. 7 "Stopping at Nothing" — biased/sources/alien | 123–131 | ✅ | not-enough-sources (Blomberg; ~42 sources vs Caesar/Tiberius); biased-testimony in full (Tacitus, genetic/ad hominem, N.T. Wright, "bias≠lying"); "we'll never know" (Lüdemann); alien dodge; p.131 fine-tuning "cosmic joke" close (⚠ fine-tuning rule) |
+| Ch. 8 "Naturally Speaking" (naturalism / the "science" objections) | 132–150 | ✅ | ⚠ **this is Ch. 8, not "Ch. 9"**; naturalism defined; a priori/a posteriori; the 8-objection chart (p.139 + p.145); self-refuting-scientism; Mike's-grandfather; genetic-fallacy; God-can't-intervene; Behe elephant (fn 17); Swinburne/Yamauchi/Hume (=old "140–144"); NDEs (Morse/Beloff/Ayer/Flew — ⚠ high-caution); conclusion + 4+1 restatement (⚠ Muslim line) |
+| **Bibliography (A–Z)** | 335–345 | ✅ | **full source data for nearly every lead** — see the "Bibliography" section above; upgrades leads from "does it exist?" to "confirmed source, wording/page still to verify" |
+| (Ch. 4 end / notes gap) | 76–80 | ❌ | not photographed (small gap) |
+| (Ch. 2 end / notes gap) | 41–42 | ❌ | not photographed (small gap) |
+| **Numbered per-chapter Notes / Endnotes** | back matter (pre-335) | ❌ | **the one remaining item — gives the exact page inside each source per footnote; the Bibliography (captured) already gives full source data** |
 
 ## Next photos needed (in priority order)
-1. **The endnotes / bibliography pages** — now the single highest priority. All five facts are mapped,
-   but their leads (Habermas's survey; the Josephus/Tacitus/Lucian/creed/Fuller/Wand references) stay
-   **unverifiable** until we can see the notes with exact sources, page numbers, and dates.
-2. **The book's response to naturalistic theories** (later chapters — hallucination, legend, "swoon"/
-   apparent-death, stolen body, wrong tomb) and the **medical evidence for Jesus' death** — what lets
-   us answer objections, not just state the facts.
-3. The **table of contents** + **copyright page** (to fix the exact edition and map the whole book).
-4. **pp. 41–42** (the small skipped gap — Ch. 2 end / notes), if not blank.
+1. **The numbered per-chapter Notes / Endnotes** (the section just before the Bibliography, roughly pp.
+   ~300–334) — now the single remaining item. The **Bibliography is fully captured** (pp. 335–345), so we
+   have complete *source* data; the numbered notes would add the **exact page inside each source** for
+   each footnote (e.g. which page of Behe, of Perrin, of the JAMA article). Nice-to-have precision, not a
+   blocker for most uses.
+2. The **table of contents** + **copyright page** (to fix the exact edition/printing/ISBN and map the
+   full chapter list — we now know the book runs to at least ch. 13 / a "Part 4" beyond the resurrection
+   defense; see p. 150).
+3. **pp. 41–42** (Ch. 2 end) and **pp. 76–80** (Ch. 4 end) — small skipped gaps, if not blank.
+
+> **Session note (2026-07-17):** captured the whole **119–150** run (closing every prose gap) + the
+> **complete A–Z Bibliography (335–345)**. Fixed the **Ch. 8 vs "Ch. 9"** mis-numbering for "Naturally
+> Speaking" and the **Strauss swoon-critique reference** (it's *A New Life of Jesus*, 1879, not the 1835
+> work). Flagged the **NDE section (pp. 146–147) as high-caution / low-priority** (Ayer did not convert;
+> keep it off the minimal-facts case) and the **p. 148 Muslim line** + **p. 131 fine-tuning 1:10²⁵** for
+> the neutrality / fine-tuning rules. Bibliography now backs nearly every lead with real publication data
+> (see the new "Bibliography" section) — wording/page still to verify per the pipeline.
