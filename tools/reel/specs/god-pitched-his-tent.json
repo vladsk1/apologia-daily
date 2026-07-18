@@ -1,0 +1,142 @@
+{
+  "reviewed": {
+    "argument": "2026-07-18",
+    "orthodoxy": "2026-07-18",
+    "by": "2026-07-18 reel from certified library/typology.html (tabernacle/eskenosen section). apologia-orthodoxy CLEAN (0 heresy; incarnation stated orthodoxly, eskenosen/skene philology + glory-link accurate/not overstated, positive-case only); Exodus 25:8 on-screen quote tightened to 'sanctuary' per the gate's paraphrase note."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.7,
+  "bg_image": "../assets/typology-reel-bg.png",
+  "bg_dim": 0.34,
+  "keep_watching": "keep watching  ↓",
+  "voiceover": "In the Old Testament, God gave Israel a strange command: build me a sanctuary, a tent where I will dwell in your midst. And when they finished it, his presence came down and filled it. The tabernacle was the one place on earth where a holy God dwelt among his people — but his glory sat behind a veil. Near, and yet kept apart. Then, centuries later, John opened his Gospel with a line that would have stopped any Jewish reader cold: 'The Word became flesh, and dwelt among us.' The word he chose for 'dwelt' is the Greek eskenosen. Literally, it means 'he pitched his tent.' It comes from skene — the very word for the tabernacle. John is saying the tent was always a shadow. In Jesus, God himself has come to tabernacle among us — and we have seen his glory. The presence that once hid behind a curtain now had a face. And when Jesus died, that curtain tore in two, from top to bottom. The way to God was thrown open. God did not send a building. He came to dwell with us.",
+  "source": "library/typology.html",
+  "scenes": [
+    {
+      "dur": 4.6,
+      "big": [
+        { "t": "Where did God", "c": "cream", "s": 96 },
+        { "t": "choose to live?", "c": "gold", "s": 104 }
+      ],
+      "sub": [
+        { "t": "The Old Testament had an answer.", "c": "dim", "f": "serif", "s": 42 }
+      ]
+    },
+    {
+      "kicker": "IN THE WILDERNESS",
+      "dur": 6.4,
+      "lines": [
+        { "t": "God gave Israel", "c": "cream", "s": 60 },
+        { "t": "a strange command:", "c": "cream", "s": 60 },
+        { "t": "", "s": 22 },
+        { "t": "“Build me a sanctuary,", "c": "gold", "f": "serifb", "s": 56 },
+        { "t": "and I will dwell", "c": "gold", "f": "serifb", "s": 56 },
+        { "t": "in your midst.”", "c": "gold", "f": "serifb", "s": 56 }
+      ],
+      "ref": "Exodus 25:8"
+    },
+    {
+      "kicker": "WHEN IT WAS FINISHED",
+      "dur": 6.6,
+      "lines": [
+        { "t": "His presence came down", "c": "cream", "s": 56 },
+        { "t": "and filled it —", "c": "cream", "s": 56 },
+        { "t": "", "s": 22 },
+        { "t": "God himself, dwelling", "c": "gold", "f": "serifb", "s": 58 },
+        { "t": "among his people.", "c": "gold", "f": "serifb", "s": 58 }
+      ],
+      "ref": "Exodus 40:34"
+    },
+    {
+      "kicker": "BUT AT A DISTANCE",
+      "dur": 6.2,
+      "lines": [
+        { "t": "His glory sat", "c": "cream", "s": 60 },
+        { "t": "behind a veil.", "c": "cream", "s": 60 },
+        { "t": "", "s": 20 },
+        { "t": "Near — and yet", "c": "cream", "s": 54 },
+        { "t": "kept apart.", "c": "gold", "f": "serifb", "s": 62 }
+      ],
+      "ref": "Exodus 40:34–35"
+    },
+    {
+      "kicker": "CENTURIES LATER, JOHN WROTE",
+      "dur": 6.4,
+      "lines": [
+        { "t": "“The Word became flesh", "c": "cream", "s": 54 },
+        { "t": "and dwelt among us.”", "c": "gold", "f": "serifb", "s": 58 }
+      ],
+      "ref": "John 1:14"
+    },
+    {
+      "kicker": "THE WORD HE CHOSE",
+      "dur": 7.0,
+      "lines": [
+        { "t": "“Dwelt” is the Greek", "c": "cream", "s": 56 },
+        { "t": "eskēnōsen —", "c": "gold", "f": "serifb", "s": 74 },
+        { "t": "", "s": 20 },
+        { "t": "literally:", "c": "dim", "s": 50 },
+        { "t": "“he pitched his tent.”", "c": "gold", "f": "serifb", "s": 58 }
+      ]
+    },
+    {
+      "kicker": "NOW CATCH THIS",
+      "dur": 6.4,
+      "lines": [
+        { "t": "It comes from skēnē —", "c": "cream", "s": 56 },
+        { "t": "the very word for", "c": "cream", "s": 56 },
+        { "t": "the tabernacle.", "c": "cream", "s": 56 },
+        { "t": "", "s": 20 },
+        { "t": "Jesus tabernacled among us.", "c": "gold", "f": "serifb", "s": 52 }
+      ]
+    },
+    {
+      "kicker": "SEE WHAT JOHN MEANS",
+      "dur": 6.0,
+      "lines": [
+        { "t": "The tent was always", "c": "cream", "s": 58 },
+        { "t": "a shadow.", "c": "cream", "s": 58 },
+        { "t": "", "s": 20 },
+        { "t": "Jesus is the real", "c": "gold", "f": "serifb", "s": 60 },
+        { "t": "dwelling of God.", "c": "gold", "f": "serifb", "s": 60 }
+      ],
+      "ref": "Hebrews 8:5"
+    },
+    {
+      "kicker": "AND REMEMBER THE GLORY",
+      "dur": 5.6,
+      "lines": [
+        { "t": "The glory that once", "c": "cream", "s": 56 },
+        { "t": "filled the tent —", "c": "cream", "s": 56 },
+        { "t": "", "s": 22 },
+        { "t": "“we have seen his glory.”", "c": "gold", "f": "serifb", "s": 56 }
+      ],
+      "ref": "John 1:14"
+    },
+    {
+      "kicker": "AND THE VEIL?",
+      "dur": 5.2,
+      "lines": [
+        { "t": "At the cross it tore", "c": "cream", "s": 56 },
+        { "t": "in two —", "c": "cream", "s": 56 },
+        { "t": "", "s": 18 },
+        { "t": "the way to God", "c": "cream", "s": 54 },
+        { "t": "thrown open.", "c": "gold", "f": "serifb", "s": 62 }
+      ],
+      "ref": "Matthew 27:51"
+    },
+    {
+      "dur": 6.6,
+      "big": [
+        { "t": "God came", "c": "cream", "s": 76 },
+        { "t": "to dwell with us.", "c": "gold", "s": 84 }
+      ],
+      "sub": [
+        { "t": "The full story at", "c": "dim", "f": "serif", "s": 40 },
+        { "t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52 }
+      ]
+    }
+  ]
+}

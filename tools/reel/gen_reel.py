@@ -166,6 +166,13 @@ def footer(draw, W, H, th):
     f2 = F("serif", 30); t2 = "apologiadaily.com"; w2 = draw.textlength(t2, font=f2)
     draw.text(((W - w2) // 2, H - 145), t2, font=f2, fill=th["dim"])
 
+def keep_watching(draw, W, H, text, th):
+    # optional gentle "there is more coming" nudge, sits above the scripture ref /
+    # progress dots on every scene except the last. Enabled via spec "keep_watching".
+    f = F("sans", 32); w = draw.textlength(text, font=f)
+    y = H - 372; x = (W - w) // 2
+    draw.text((x, y), text, font=f, fill=th["gold"])
+
 def ref_line(draw, W, H, text, th):
     # small scripture citation, centered just above the progress dots — so viewers
     # can see exactly where in Scripture each scene is found.
@@ -253,6 +260,8 @@ def render(spec, W, H, theme, frames_dir):
             else:
                 center_block(d, W, blocks, cy, th["shadow"])
         if sc.get("ref"): ref_line(d, W, H, sc["ref"], th)
+        kw = spec.get("keep_watching")
+        if kw and i < n - 1: keep_watching(d, W, H, kw, th)
         footer(d, W, H, th); progress(d, W, H, i, n, th)
         img.save(os.path.join(frames_dir, f"scene_{i:02d}.png"))
         durs.append(float(sc.get("dur", 3.5)))
