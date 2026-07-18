@@ -806,6 +806,11 @@
       document.getElementById('nav-user').textContent = name;
     } catch(e) {}
     renderBooks();
+    // deep-link: /reading-club.html?book=<id> opens that book directly
+    try {
+      var _bp = new URLSearchParams(location.search).get('book');
+      if (_bp && BOOKS.some(function(b){ return b.id === _bp; })) openBook(_bp);
+    } catch(e) {}
   }
 
   async function signOut() {
