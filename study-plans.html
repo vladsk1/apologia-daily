@@ -167,6 +167,10 @@
     .plan-day-item.done .plan-day-text { text-decoration: line-through; opacity: 0.55; }
     .plan-day-item { border-bottom: 1px solid #f0f6fb; padding: 12px 0; }
     .plan-day-item:last-child { border-bottom: none; }
+    .plan-day-reflect { width: 100%; min-height: 96px; margin: 0 0 10px; padding: 10px 12px; border: 1px solid #d4e0ec; border-radius: 6px; font-family: var(--font-body,'Source Serif 4',Georgia,serif); font-size: 0.9rem; line-height: 1.6; color: #0a1628; background: #fff; resize: vertical; }
+    .plan-day-reflect:focus { outline: none; border-color: #c8a951; box-shadow: 0 0 0 2px rgba(200,169,81,0.15); }
+    .plan-day-reflect-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .plan-day-reflect-status { font-family: var(--font-ui,'DM Sans',sans-serif); font-size: 0.72rem; color: #0f6e56; }
 
       .nav-right { display:flex; align-items:center; gap:12px; }
     .nav-user { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.82rem; color:rgba(255,255,255,0.65); }
@@ -220,6 +224,8 @@
               <a href="/about.html">About</a>
               <a href="/what-we-believe.html">What We Believe</a>
               <a href="/editorial-standards.html">Editorial Standards</a>
+              <a href="/privacy.html">Privacy</a>
+              <a href="/terms.html">Terms</a>
             </div>
           </div>
         </div>
@@ -1056,10 +1062,10 @@ const plans = [
           },
           {
             "day": 6,
-            "action": "Study",
-            "text": "Study: David Wood's Islamic Dilemma",
-            "desc": "Search YouTube for David Wood's The Islamic Dilemma video series. Watch at least one episode and note three specific Quranic verses you can use in conversations. These are from Islamic sources.",
-            "link": ""
+            "action": "Read",
+            "text": "Read: The Islamic Dilemma",
+            "desc": "Read our deep dive on the Islamic Dilemma — the tension between the Qur'an affirming the earlier Scriptures and the later claim that they were corrupted. Note three specific Qur'anic verses you can reference in a conversation.",
+            "link": "library/islam-dilemma.html"
           },
           {
             "day": 7,
@@ -1299,10 +1305,10 @@ const plans = [
         "title": "Week 1 — Know Your Objections",
         "days": [
           {"day": 1, "action": "Read", "text": "Read: Objection Catcher introduction", "desc": "Learn the most common objections you'll face: 'Science disproves God,' 'If God exists why is there evil,' 'The Bible is not reliable.'", "link": "games.html"},
-          {"day": 2, "action": "Play", "text": "Objection Catcher: Run through 10 scenarios", "desc": "Practice identifying objections and formulating responses.", "link": "games.html"},
+          {"day": 2, "action": "Play", "text": "Objection Catcher: Run through 10 scenarios", "desc": "Practice identifying objections and formulating responses.", "link": "objection-catcher.html"},
           {"day": 3, "action": "Read", "text": "Read: The Problem of Evil — full treatment", "desc": "This is the #1 objection you'll face. Know it inside and out.", "link": "evidence-library.html"},
           {"day": 4, "action": "Debate", "text": "Debate on the problem of evil", "desc": "Use what you learned against the AI. Refine your responses.", "link": "debate-arena.html"},
-          {"day": 5, "action": "Play", "text": "Speed Round: Timed answers to rapid-fire questions", "desc": "Build the speed and confidence to respond under pressure.", "link": "games.html"},
+          {"day": 5, "action": "Play", "text": "Speed Round: Timed answers to rapid-fire questions", "desc": "Build the speed and confidence to respond under pressure.", "link": "speed-round.html"},
           {"day": 6, "action": "Read", "text": "Read: Handling the 'science disproves God' objection", "desc": "Understand why science and faith are compatible.", "link": "evidence-library.html"},
           {"day": 7, "action": "Debate", "text": "Back-to-back debates on science and faith", "desc": "Practice, practice, practice.", "link": "debate-arena.html"}
         ]
@@ -1312,7 +1318,7 @@ const plans = [
         "days": [
           {"day": 8, "action": "Read", "text": "Read: Every resurrection argument in depth", "desc": "You need to be an expert on the resurrection. Read all 8 cards in the Resurrection section.", "link": "evidence-library.html"},
           {"day": 9, "action": "Ask", "text": "Ask: What are the best responses to resurrection skeptics?", "desc": "Get insights on Bart Ehrman's objections and how to respond.", "link": "asked-and-answered.html"},
-          {"day": 10, "action": "Play", "text": "Conversation Journal: Record and review debates", "desc": "Use this to track which arguments worked best.", "link": "games.html"},
+          {"day": 10, "action": "Journal", "text": "Conversation Journal: Record and review debates", "desc": "Use this to track which arguments worked best.", "link": "conversation-journal.html"},
           {"day": 11, "action": "Debate", "text": "10 debates on the resurrection", "desc": "This is your bread and butter. Get fast, confident, persuasive.", "link": "debate-arena.html"},
           {"day": 12, "action": "Read", "text": "Read: Scholar profiles — Habermas, Wright, Licona", "desc": "Know the experts. Use their authority.", "link": "scholars.html"},
           {"day": 13, "action": "Debate", "text": "Debate different opponents on resurrection", "desc": "Atheist, agnostic, skeptic — adapt your approach.", "link": "debate-arena.html"},
@@ -1324,7 +1330,7 @@ const plans = [
         "days": [
           {"day": 15, "action": "Read", "text": "Read: All 15 Jesus argument cards", "desc": "You must know every claim Jesus made and every response to it.", "link": "evidence-library.html"},
           {"day": 16, "action": "Ask", "text": "Ask: How do I explain the divinity of Jesus to a skeptic?", "desc": "Get clear on your explanation strategy.", "link": "asked-and-answered.html"},
-          {"day": 17, "action": "Play", "text": "Who Said It: Jesus quotes and their context", "desc": "Know what Jesus said and be able to cite it in debates.", "link": "games.html"},
+          {"day": 17, "action": "Play", "text": "Who Said It: Jesus quotes and their context", "desc": "Know what Jesus said and be able to cite it in debates.", "link": "who-said-it.html"},
           {"day": 18, "action": "Debate", "text": "10 debates: Did Jesus claim to be God?", "desc": "This is where the case for Christianity stands or falls.", "link": "debate-arena.html"},
           {"day": 19, "action": "Read", "text": "Read: John 1:1 and the Logos theology in depth", "desc": "Know the Greek. Know the theology. Know the history.", "link": "evidence-library.html"},
           {"day": 20, "action": "Debate", "text": "Debate a Muslim opponent on Jesus", "desc": "Different approach needed — Islamic framework, not atheistic.", "link": "debate-arena.html"},
@@ -1335,7 +1341,7 @@ const plans = [
         "title": "Week 4 — Final Combat Drills",
         "days": [
           {"day": 22, "action": "Debate", "text": "5 rapid debates with different opponents", "desc": "Switch between atheist, Muslim, agnostic, secularist, coworker.", "link": "debate-arena.html"},
-          {"day": 23, "action": "Play", "text": "Speed Round: All modes, back-to-back", "desc": "Build speed and muscle memory.", "link": "games.html"},
+          {"day": 23, "action": "Play", "text": "Speed Round: All modes, back-to-back", "desc": "Build speed and muscle memory.", "link": "speed-round.html"},
           {"day": 24, "action": "Read", "text": "Read: Study guides and conversation scripts", "desc": "Know how to open, pivot, close a conversation.", "link": "study-plans.html"},
           {"day": 25, "action": "Debate", "text": "5 more debates — mix of topics and opponents", "desc": "You should be feeling confident now. Test that confidence.", "link": "debate-arena.html"},
           {"day": 26, "action": "Reflect", "text": "Reflection: Your debate style", "desc": "What worked? What didn't? Which approaches feel most natural to you?", "link": ""},
@@ -1350,9 +1356,9 @@ const plans = [
     "id": "daily-defender",
     "icon": "🛡️",
     "title": "Daily Defender — Ongoing Habit Building",
-    "desc": "Not a one-time course — a sustainable daily rhythm. 5 minutes per day of guided learning, practice, and reflection. Build apologetics into your lifestyle.",
+    "desc": "Not a one-time course — a sustainable daily rhythm you repeat. A 14-day cycle of guided learning, practice, and reflection, ~5 minutes a day. Finish it, then run it again to build apologetics into your lifestyle.",
     "color": "#854f0b",
-    "days": 90,
+    "days": 14,
     "level": "All levels",
     "pro": true,
     "popular": false,
@@ -1365,30 +1371,31 @@ const plans = [
           {"day": 3, "action": "Quiz", "text": "Daily Quiz: 5 questions", "desc": "2 minutes. Quick mental sharpening.", "link": "daily-quiz.html"},
           {"day": 4, "action": "Ask", "text": "Asked & Answered: One good question", "desc": "5 minutes. Ask one question that's on your mind. Read the response. Reflect.", "link": "asked-and-answered.html"},
           {"day": 5, "action": "Practice", "text": "Debate Arena: One quick debate", "desc": "10 minutes. Put what you learned into practice.", "link": "debate-arena.html"},
-          {"day": 6, "action": "Journal", "text": "Conversation Journal: Reflect on a conversation", "desc": "5 minutes. Did you mention faith today? How did it go?", "link": "games.html"},
+          {"day": 6, "action": "Journal", "text": "Conversation Journal: Reflect on a conversation", "desc": "5 minutes. Did you mention faith today? How did it go?", "link": "conversation-journal.html"},
           {"day": 7, "action": "Reflect", "text": "Weekly reflection", "desc": "Which argument felt most powerful this week? Which objection did you learn most from?", "link": ""}
         ]
       },
       {
         "title": "Week 3+: Sustained Practice (repeat)",
         "days": [
-          {"day": 8, "action": "Devotional", "text": "Daily Devotional", "desc": "This pattern repeats. Each day has a purpose. Over 90 days you will have read 90 arguments, asked 13 questions, taken 13 quizzes, had 13 debates, and journaled 13 conversations.", "link": "daily-devotional.html"},
+          {"day": 8, "action": "Devotional", "text": "Daily Devotional", "desc": "This pattern repeats. Each day has a purpose — read an argument, ask a question, take a quiz, debate, and journal a real conversation. Run the full 14-day cycle as many times as you like.", "link": "daily-devotional.html"},
           {"day": 9, "action": "Learn", "text": "Next argument", "desc": "Work through the Evidence Library systematically — 1-2 arguments per day.", "link": "evidence-library.html"},
           {"day": 10, "action": "Quiz", "text": "Daily Quiz", "desc": "Two minutes. Five quick questions to keep the arguments sharp.", "link": "daily-quiz.html"},
           {"day": 11, "action": "Ask", "text": "Asked & Answered", "desc": "Five minutes. Bring one honest question and read the answer slowly.", "link": "asked-and-answered.html"},
           {"day": 12, "action": "Practice", "text": "Debate Arena", "desc": "Ten minutes. One short practice debate to keep your responses ready.", "link": "debate-arena.html"},
           {"day": 13, "action": "Journal", "text": "Conversation Journal", "desc": "Five minutes. Note any faith conversation you had — what went well, what you would say next time.", "link": "conversation-journal.html"},
-          {"day": 14, "action": "Reflect", "text": "Weekly reflection", "desc": "After 90 days, you will have internalised the case for Christianity thoroughly.", "link": ""}
+          {"day": 14, "action": "Reflect", "text": "Weekly reflection", "desc": "Cycle complete. Repeat this rhythm and the case for Christianity becomes second nature.", "link": ""}
         ]
       }
     ]
   }
 ];
 
-  var ACTION_ICONS = {"Read":"📖","Ask":"🤖","Debate":"⚔️","Quiz":"❓","Game":"🎮","Reflect":"✍️","Journal":"📔","Practice":"🎯","Study":"📚","Complete":"🏆"};
+  var ACTION_ICONS = {"Read":"📖","Ask":"🤖","Debate":"⚔️","Quiz":"❓","Game":"🎮","Reflect":"✍️","Journal":"📔","Practice":"🎯","Study":"📚","Complete":"🏆","Play":"🕹️","Devotional":"🙏","Learn":"📘"};
   var currentPlanId = null;
   var currentLevel = 'all';
 
+  function escapeHtml(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
   function getSaved() { return JSON.parse(localStorage.getItem('study_plans') || '{}'); }
   function setSaved(d) { localStorage.setItem('study_plans', JSON.stringify(d)); syncPush(); }
 
@@ -1525,6 +1532,7 @@ const plans = [
       week.days.forEach(function(day) {
         var isDone = progress.completed && progress.completed.indexOf(day.day) !== -1;
         var icon = ACTION_ICONS[day.action] || '▶';
+        var reflVal = (progress.reflections && progress.reflections[day.day]) || '';
         bodyHtml += '<div class="plan-day-item' + (isDone ? ' done' : '') + '" data-plan="' + planId + '" data-day="' + day.day + '">' +
           '<div class="plan-day-num">Day ' + day.day + '</div>' +
           '<div class="plan-day-main">' +
@@ -1535,7 +1543,13 @@ const plans = [
           '</div>' +
           '<div class="plan-day-expanded">' +
           '<p class="plan-day-desc">' + day.desc + '</p>' +
-          (day.link ? '<a href="' + day.link + '" target="_blank" class="plan-day-link">Open ' + day.action + ' →</a>' : '') +
+          (day.link
+            ? '<a href="' + day.link + '" target="_blank" class="plan-day-link">Open ' + day.action + ' →</a>'
+            : '<textarea class="plan-day-reflect" placeholder="Write it here — in your own words, from memory…">' + escapeHtml(reflVal) + '</textarea>' +
+              '<div class="plan-day-reflect-row">' +
+                '<button type="button" class="plan-day-link plan-day-selfdone" style="border:none;cursor:pointer;">' + (isDone ? 'Completed &#10003; &mdash; tap to undo' : 'Mark as done &#10003;') + '</button>' +
+                '<span class="plan-day-reflect-status">' + (reflVal && reflVal.trim() ? 'Saved &#10003;' : '') + '</span>' +
+              '</div>') +
           '</div></div>' +
           '<div class="plan-day-check">✓</div>' +
           '</div>';
@@ -1559,6 +1573,30 @@ const plans = [
             var ch = item.querySelector('.plan-day-chevron'); if (ch) ch.style.transform = 'rotate(180deg)';
           }
         });
+      }
+      var selfDone = item.querySelector('.plan-day-selfdone');
+      if (selfDone) {
+        selfDone.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var chk = item.querySelector('.plan-day-check');
+          if (chk) chk.click();
+          selfDone.innerHTML = item.classList.contains('done') ? 'Completed &#10003; &mdash; tap to undo' : 'Mark as done &#10003;';
+        });
+      }
+      var refl = item.querySelector('.plan-day-reflect');
+      if (refl) {
+        var persistRefl = function(push) {
+          var pid = item.dataset.plan, dn = parseInt(item.dataset.day);
+          var sv = getSaved();
+          if (!sv[pid]) sv[pid] = { started: false, completed: [] };
+          if (!sv[pid].reflections) sv[pid].reflections = {};
+          sv[pid].reflections[dn] = refl.value;
+          if (push) { setSaved(sv); } else { localStorage.setItem('study_plans', JSON.stringify(sv)); }
+          var st = item.querySelector('.plan-day-reflect-status');
+          if (st) st.innerHTML = refl.value.trim() ? 'Saved &#10003;' : '';
+        };
+        refl.addEventListener('input', function() { persistRefl(false); });
+        refl.addEventListener('blur', function() { persistRefl(true); });
       }
       var check = item.querySelector('.plan-day-check');
       if (check) {

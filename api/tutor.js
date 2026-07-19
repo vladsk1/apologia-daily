@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    const { question, argument, category } = req.body;
+    const { question, argument, category, excerpt } = req.body;
 
     if (!question || !argument) {
       return res.status(400).json({ error: 'Missing required fields' });
@@ -18,6 +18,8 @@ export default async function handler(req, res) {
     const apiKey = process.env.ANTHROPIC_API_KEY;
     if (!apiKey) return res.status(500).json({ error: 'API key not configured' });
 
+    // excerpt = the text of the essay/card the student is reading (sent by the client)
+    const essayText = typeof excerpt === 'string' ? excerpt.slice(0, 18000) : '';
     if (inputTooLong([question, argument, category], 8000)) return res.status(413).json({ error: 'input_too_long' });
     if (await overRateLimit(req, 80, 'tutor')) return res.status(429).json({ error: 'rate_limited' });
 
@@ -56,7 +58,20 @@ DENOMINATIONAL NEUTRALITY — STAY ON THE SHARED CORE:
 - On first-order creedal orthodoxy (Trinity, bodily resurrection, deity of Christ, salvation through Christ) hold the line firmly and clearly
 - If a question seems to be pushing toward a heterodox conclusion, answer it honestly and then gently redirect toward the orthodox position with reasons`;
 
-    if (category && category.toLowerCase().indexOf('islam') !== -1) {
+    if (essayText) {
+      systemPrompt += `
+
+THE ESSAY THE STUDENT IS READING (this is the certified Apologia Daily essay text — treat it as the source of truth for this page; base your answers on it, summarise and quote FROM it, and when the student asks you to summarise the conclusion or a section, use THIS essay's own wording rather than guessing from the title):
+"""
+${essayText}
+"""`;
+    }
+
+    // Fire the Islam accuracy rails whenever the topic is Islam — detected by category
+    // OR by the essay/argument content, since some pages send a generic category.
+    const isIslamTopic = (category && category.toLowerCase().indexOf('islam') !== -1) ||
+      /\b(qur'?an|koran|islam|muslim|muhammad|tawhid|shirk|surah|hadith|allah|tahrif|injil)\b/i.test((argument || '') + ' ' + essayText.slice(0, 4000));
+    if (isIslamTopic) {
       systemPrompt += `
 
 ISLAM — TOPIC-SPECIFIC GUIDANCE (the student is studying the Christian response to Islam):

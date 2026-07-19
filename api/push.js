@@ -151,7 +151,7 @@ export default async function handler(req, res) {
       });
       if (!sr.ok && sr.status !== 409) return res.status(200).json({ ok: false, status: sr.status });
       return res.status(200).json({ ok: true });
-    } catch (e) { return res.status(200).json({ ok: false, error: e.message }); }
+    } catch (e) { console.error('push subscribe failed', e && e.message); return res.status(200).json({ ok: false, error: 'Subscription failed' }); }
   }
 
   // ---- GET ?do=public: VAPID public key ----

@@ -1,4 +1,6 @@
 import { requireSecret } from '../lib/require-secret.js';
+import { unsubUrl } from '../lib/unsub-token.js';
+import { handleUnsubscribe } from '../lib/handle-unsubscribe.js';
 // api/weekly-email.js
 // Sends a personalised weekly summary email to all users every Sunday
 // Triggered by Vercel cron (configure in vercel.json) or called manually
@@ -9,6 +11,12 @@ export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   if (req.method === 'OPTIONS') return res.status(200).end();
 
+  // PUBLIC, token-gated email opt-out — must run BEFORE the CRON_SECRET guard
+  // (recipients click this from an email, they have no secret). Merged in here so
+  // it isn't a 13th serverless function (Vercel Hobby caps at 12). Reached via the
+  // /api/unsubscribe rewrite in vercel.json, or /api/weekly-email?do=unsubscribe.
+  if ((req.query && req.query.do) === 'unsubscribe') return handleUnsubscribe(req, res);
+
   // Security: require CRON_SECRET. Accept Vercel's native cron auth
   // (Authorization: Bearer $CRON_SECRET, injected automatically for cron jobs)
   // OR a manual x-cron-secret / ?secret= match. Fail CLOSED if CRON_SECRET is
@@ -17,7 +25,7 @@ export default async function handler(req, res) {
 
   const RESEND_KEY = process.env.RESEND_API_KEY;
   const SB_URL = 'https://noprgxkwniouukmrfozc.supabase.co';
-  const SB_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY;
+  const SB_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_KEY;
   const SB_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw';
   const authKey = SB_SERVICE_KEY || SB_ANON_KEY;
 
@@ -78,8 +86,9 @@ export default async function handler(req, res) {
     // is skipped in the generic weekly summary below (never both in one morning).
     const emailById = {};
     users.forEach(function(u) {
-      if (u.email && u.email_confirmed_at) {
+      if (u.email && u.email_confirmed_at && !(u.app_metadata && u.app_metadata.email_unsubscribed)) {
         emailById[u.id] = {
+          id: u.id,
           email: u.email,
           name: (u.user_metadata && u.user_metadata.full_name) ? u.user_metadata.full_name.split(' ')[0] : u.email.split('@')[0]
         };
@@ -137,6 +146,7 @@ export default async function handler(req, res) {
     // ── SEND EMAIL TO EACH USER ──
     for (const user of users) {
       if (!user.email || !user.email_confirmed_at) { results.skipped++; continue; }
+      if (user.app_metadata && user.app_metadata.email_unsubscribed) { results.skipped++; continue; } // opted out
       if (nudge.nudgedIds.has(user.id)) { results.skipped++; continue; } // already got a group nudge today
 
       const name = (user.user_metadata && user.user_metadata.full_name)
@@ -147,7 +157,8 @@ export default async function handler(req, res) {
       const ex = explainStats[user.id] || null;
 
       try {
-        await sendWeeklyEmail(RESEND_KEY, user.email, name, fc, ex);
+        const unsub = process.env.CRON_SECRET ? unsubUrl(user.id, process.env.CRON_SECRET) : 'https://apologiadaily.com';
+        await sendWeeklyEmail(RESEND_KEY, user.email, name, fc, ex, unsub);
         results.sent++;
         // Small delay to avoid rate limits
         await new Promise(r => setTimeout(r, 100));
@@ -221,7 +232,8 @@ async function sendGroupNudges({ SB_URL, authKey, RESEND_KEY, emailById }) {
   for (let i = 0; i < targets.length; i++) {
     const uid = targets[i], info = nudgeFor[uid], who = emailById[uid];
     try {
-      await resendSend(RESEND_KEY, who.email, buildNudgeSubject(info.group), buildNudgeHtml(who.name, info.group, info.activeCount, info.memberCount));
+      const unsub = process.env.CRON_SECRET ? unsubUrl(who.id, process.env.CRON_SECRET) : 'https://apologiadaily.com';
+      await resendSend(RESEND_KEY, who.email, buildNudgeSubject(info.group), buildNudgeHtml(who.name, info.group, info.activeCount, info.memberCount, unsub), unsub);
       out.nudgedIds.add(uid); out.sent++;
       await new Promise(function (r) { setTimeout(r, 100); });
     } catch (e) { out.failed++; }
@@ -229,11 +241,12 @@ async function sendGroupNudges({ SB_URL, authKey, RESEND_KEY, emailById }) {
   return out;
 }
 
-async function resendSend(resendKey, to, subject, html) {
+async function resendSend(resendKey, to, subject, html, unsub) {
   const response = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: { 'Authorization': `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ from: 'Apologia Daily <hello@apologiadaily.com>', to: to, subject: subject, html: html })
+    body: JSON.stringify({ from: 'Apologia Daily <hello@apologiadaily.com>', to: to, subject: subject, html: html,
+      headers: unsub ? { 'List-Unsubscribe': `<${unsub}>`, 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' } : undefined })
   });
   if (!response.ok) { const err = await response.text(); throw new Error(`Resend ${response.status}: ${err}`); }
   return response.json();
@@ -252,7 +265,7 @@ function buildNudgeSubject(g) {
   return `Your study group has been at it — ${g.name} missed you`;
 }
 
-function buildNudgeHtml(name, g, activeCount, memberCount) {
+function buildNudgeHtml(name, g, activeCount, memberCount, unsub) {
   const others = Math.max(1, activeCount);
   const planLine = g.plan
     ? `They're on day ${g.plan_day || 1} of the plan. A few minutes gets you caught up.`
@@ -281,15 +294,16 @@ function buildNudgeHtml(name, g, activeCount, memberCount) {
     <div style="font-family:Arial,sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.3);text-align:center;line-height:1.7;">
       Apologia Daily &middot; apologiadaily.com<br>
       You are receiving this because you joined a study group.
-      <a href="https://apologiadaily.com/study-groups.html" style="color:rgba(200,169,81,0.5);text-decoration:none;">Manage your groups</a>
+      <a href="https://apologiadaily.com/study-groups.html" style="color:rgba(200,169,81,0.5);text-decoration:none;">Manage your groups</a> &middot;
+      <a href="${unsub || 'https://apologiadaily.com'}" style="color:rgba(200,169,81,0.5);text-decoration:none;">Unsubscribe</a>
     </div>
   </div>
 </div>
 </body></html>`;
 }
 
-async function sendWeeklyEmail(resendKey, email, name, fc, ex) {
-  const html = buildEmailHtml(name, fc, ex);
+async function sendWeeklyEmail(resendKey, email, name, fc, ex, unsub) {
+  const html = buildEmailHtml(name, fc, ex, unsub);
   const subject = buildSubject(fc, ex);
 
   const response = await fetch('https://api.resend.com/emails', {
@@ -302,7 +316,8 @@ async function sendWeeklyEmail(resendKey, email, name, fc, ex) {
       from: 'Apologia Daily <hello@apologiadaily.com>',
       to: email,
       subject: subject,
-      html: html
+      html: html,
+      headers: unsub ? { 'List-Unsubscribe': `<${unsub}>`, 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' } : undefined
     })
   });
 
@@ -320,7 +335,7 @@ function buildSubject(fc, ex) {
   return `Your weekly apologetics update`;
 }
 
-function buildEmailHtml(name, fc, ex) {
+function buildEmailHtml(name, fc, ex, unsub) {
   // Personalised sections
   let flashcardSection = '';
   if (fc && fc.total > 0) {
@@ -453,7 +468,7 @@ function buildEmailHtml(name, fc, ex) {
       Apologia Daily &nbsp;&middot;&nbsp; apologiadaily.com<br>
       <a href="https://apologiadaily.com/dashboard.html" style="color:rgba(255,255,255,0.3);">Dashboard</a> &nbsp;&middot;&nbsp;
       You are receiving this because you have an Apologia Daily account.<br>
-      <a href="https://apologiadaily.com" style="color:rgba(200,169,81,0.5);text-decoration:none;">Unsubscribe</a>
+      <a href="${unsub || 'https://apologiadaily.com'}" style="color:rgba(200,169,81,0.5);text-decoration:none;">Unsubscribe</a>
     </div>
   </div>
 
