@@ -18,7 +18,7 @@ export default async function handler(req, res) {
 
   const RESEND_KEY = process.env.RESEND_API_KEY;
   const SB_URL = 'https://noprgxkwniouukmrfozc.supabase.co';
-  const SB_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY;
+  const SB_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_KEY;
   const SB_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw';
   const authKey = SB_SERVICE_KEY || SB_ANON_KEY;
 

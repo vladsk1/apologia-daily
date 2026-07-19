@@ -44,7 +44,7 @@ async function doUnsubscribe(serviceKey, userId) {
 
 export default async function handler(req, res) {
   const secret = process.env.CRON_SECRET;
-  const serviceKey = process.env.SUPABASE_SERVICE_KEY;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_KEY;
   const u = (req.query && req.query.u) || '';
   const t = (req.query && req.query.t) || '';
   const valid = verifyUnsubToken(u, t, secret);
@@ -58,10 +58,21 @@ export default async function handler(req, res) {
   }
 
   if (req.method === 'POST') {
-    if (serviceKey) { try { await doUnsubscribe(serviceKey, u); } catch (e) {} }
-    // One-click mail clients only need a 2xx; humans get the HTML confirmation.
-    return res.status(200).send(page('Unsubscribed',
-      '<h1>You’re unsubscribed</h1><p>You won’t receive any more weekly summary or nudge emails. Your account stays active — this only affects email.</p><a class="btn" href="https://apologiadaily.com/dashboard.html">Go to your dashboard</a>'));
+    let ok = false;
+    if (serviceKey) {
+      try { ok = await doUnsubscribe(serviceKey, u); }
+      catch (e) { console.error('unsubscribe: write failed', e && e.message); }
+    } else {
+      console.error('unsubscribe: SUPABASE_SERVICE_ROLE_KEY / SUPABASE_SERVICE_KEY not set');
+    }
+    // Only claim success when the opt-out actually persisted. A one-click mail
+    // client keys off the 2xx/5xx status; a human gets the matching page.
+    if (ok) {
+      return res.status(200).send(page('Unsubscribed',
+        '<h1>You’re unsubscribed</h1><p>You won’t receive any more weekly summary or nudge emails. Your account stays active — this only affects email.</p><a class="btn" href="https://apologiadaily.com/dashboard.html">Go to your dashboard</a>'));
+    }
+    return res.status(500).send(page('Something went wrong',
+      '<h1>We couldn’t complete that</h1><p>Something went wrong on our end and you may still receive emails. Please email <a href="mailto:hello@apologiadaily.com">hello@apologiadaily.com</a> and we’ll remove you right away.</p>'));
   }
 
   // GET -> confirmation page (a button that POSTs, so link pre-fetchers can't auto-unsubscribe).

@@ -202,6 +202,7 @@
     if (!email) { showError('Type your email address in the box above first, then tap “Forgot your password?” — we’ll email you a reset link.'); return; }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('Please enter your full email address (e.g. you@example.com), then tap “Forgot your password?” again.'); return; }
     var captchaToken = (window.turnstile && window.turnstile.getResponse()) || '';
+    if (!captchaToken) { showError('Please complete the “I’m human” check below, then tap “Forgot your password?” again.'); return; }
     try {
       await sb.auth.resetPasswordForEmail(email, { redirectTo: window.location.origin + '/update-password.html', captchaToken: captchaToken });
       try { window.adTrack && window.adTrack('password_reset_requested'); } catch(x){}
