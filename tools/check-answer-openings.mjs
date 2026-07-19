@@ -67,6 +67,15 @@ const TELLS = [
   /^this is the (hardest|deepest) (form|and)\b/i,
   /^this is a question people feel\b/i,
   /^this is one of the most (serious|forceful|painful|morally serious|difficult|common)\b/i,
+  // "Restate the rival's position first" openers — front-loading by naming what the
+  // opposing view teaches/claims before giving our answer. (2026-07-18: caught the
+  // pre-07-16 Islam + Wave-1/2 answers that opened on the objection instead of leading
+  // with the answer — e.g. "Islam teaches that…", "Muslims are often taught…", "The
+  // Quran makes a bold move…", "The fairest way to weigh…", "The worry is not that…".)
+  /^(islam|muslims?|the qur'?an|the hadith|jehovah'?s witnesses|the watchtower|mormons?|the book of mormon) (teach|teaches|say|says|claim|claims|hold|holds|invite|invites|is often taught|are often taught|make a bold|makes a bold)\b/i,
+  /^muslims are (often )?taught\b/i,
+  /^the fairest way to\b/i,
+  /^the worry is not that\b/i,
 ];
 
 function openingSentence(a) {
