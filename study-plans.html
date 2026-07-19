@@ -1535,7 +1535,9 @@ const plans = [
           '</div>' +
           '<div class="plan-day-expanded">' +
           '<p class="plan-day-desc">' + day.desc + '</p>' +
-          (day.link ? '<a href="' + day.link + '" target="_blank" class="plan-day-link">Open ' + day.action + ' →</a>' : '') +
+          (day.link
+            ? '<a href="' + day.link + '" target="_blank" class="plan-day-link">Open ' + day.action + ' →</a>'
+            : '<button type="button" class="plan-day-link plan-day-selfdone" style="border:none;cursor:pointer;">' + (isDone ? 'Completed &#10003; &mdash; tap to undo' : 'Mark as done &#10003;') + '</button>') +
           '</div></div>' +
           '<div class="plan-day-check">✓</div>' +
           '</div>';
@@ -1558,6 +1560,15 @@ const plans = [
             item.classList.add('expanded');
             var ch = item.querySelector('.plan-day-chevron'); if (ch) ch.style.transform = 'rotate(180deg)';
           }
+        });
+      }
+      var selfDone = item.querySelector('.plan-day-selfdone');
+      if (selfDone) {
+        selfDone.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var chk = item.querySelector('.plan-day-check');
+          if (chk) chk.click();
+          selfDone.innerHTML = item.classList.contains('done') ? 'Completed &#10003; &mdash; tap to undo' : 'Mark as done &#10003;';
         });
       }
       var check = item.querySelector('.plan-day-check');
