@@ -101,6 +101,8 @@
         <input class="form-input" type="password" id="password2" placeholder="Re-enter your password" autocomplete="new-password" />
       </div>
 
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAD41xNE9t5rbRuaA" style="margin:0 auto 1rem;"></div>
+
       <button class="btn-primary" id="signup-btn" onclick="handleSignup()">
         <span class="loading-spinner" id="spinner"></span>
         <span id="btn-text">Create free account →</span>
@@ -115,6 +117,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script>
     const SUPABASE_URL = 'https://noprgxkwniouukmrfozc.supabase.co';
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw';
@@ -150,6 +153,9 @@
       if (!password || password.length < 8) { showError('Password must be at least 8 characters.'); return; }
       if (password !== password2) { showError('The two passwords don’t match.'); return; }
 
+      const captchaToken = (window.turnstile && window.turnstile.getResponse()) || '';
+      if (!captchaToken) { showError('Please complete the “I’m human” check below, then try again.'); return; }
+
       btn.disabled = true;
       spinner.style.display = 'inline-block';
       btnText.textContent = 'Creating account…';
@@ -162,8 +168,9 @@
       const { data, error } = await sb.auth.signUp({
         email,
         password,
-        options: { data: signUpData }
+        options: { data: signUpData, captchaToken }
       });
+      if (window.turnstile) window.turnstile.reset();
 
       function resetBtn() {
         btn.disabled = false;
