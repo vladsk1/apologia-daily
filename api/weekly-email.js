@@ -1,5 +1,6 @@
 import { requireSecret } from '../lib/require-secret.js';
 import { unsubUrl } from '../lib/unsub-token.js';
+import { handleUnsubscribe } from '../lib/handle-unsubscribe.js';
 // api/weekly-email.js
 // Sends a personalised weekly summary email to all users every Sunday
 // Triggered by Vercel cron (configure in vercel.json) or called manually
@@ -9,6 +10,12 @@ import { unsubUrl } from '../lib/unsub-token.js';
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   if (req.method === 'OPTIONS') return res.status(200).end();
+
+  // PUBLIC, token-gated email opt-out — must run BEFORE the CRON_SECRET guard
+  // (recipients click this from an email, they have no secret). Merged in here so
+  // it isn't a 13th serverless function (Vercel Hobby caps at 12). Reached via the
+  // /api/unsubscribe rewrite in vercel.json, or /api/weekly-email?do=unsubscribe.
+  if ((req.query && req.query.do) === 'unsubscribe') return handleUnsubscribe(req, res);
 
   // Security: require CRON_SECRET. Accept Vercel's native cron auth
   // (Authorization: Bearer $CRON_SECRET, injected automatically for cron jobs)

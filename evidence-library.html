@@ -255,17 +255,6 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
   </div>
 </div>
 
-<a href="palace.html" style="display:block;text-decoration:none;background:linear-gradient(120deg,#050d1a,#0f2040);border-bottom:1px solid rgba(200,169,81,.25);">
-  <div style="max-width:1100px;margin:0 auto;padding:1rem 2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-    <span style="font-size:1.7rem;line-height:1;">&#127963;</span>
-    <div style="flex:1;min-width:220px;">
-      <div style="font-family:var(--fd);font-size:1.02rem;font-weight:700;color:#fff;">New &middot; Walk these arguments as a <em style="color:var(--g);font-style:italic;">Memory Palace</em></div>
-      <div style="font-family:var(--ui);font-size:.82rem;color:rgba(255,255,255,.6);margin-top:3px;">The technique memory champions use &mdash; turn each argument into a room you can walk, so it actually sticks. <span style="color:var(--g);font-weight:600;">Pro</span></div>
-    </div>
-    <span style="font-family:var(--ui);font-size:.82rem;font-weight:600;background:var(--g);color:var(--n);padding:10px 20px;border-radius:3px;white-space:nowrap;">Enter the Palace &rarr;</span>
-  </div>
-</a>
-
 <a href="/reading-club.html" style="display:block;text-decoration:none;background:linear-gradient(120deg,#0a1628,#1e3357);border-bottom:1px solid rgba(200,169,81,.25);">
   <div style="max-width:1100px;margin:0 auto;padding:1rem 2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
     <span style="font-size:1.7rem;line-height:1;">&#128214;</span>
@@ -277,6 +266,15 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
   </div>
 </a>
 
+<style>
+  .mp-wrap { position: relative; display: inline-flex; align-items: center; gap: 5px; }
+  .mp-info { appearance: none; -webkit-appearance: none; border: none; background: none; cursor: pointer; color: var(--n3); font-size: 0.95rem; line-height: 1; padding: 0; }
+  .mp-info:hover, .mp-info:focus { color: var(--g); outline: none; }
+  .mp-tip { display: none; position: absolute; bottom: calc(100% + 9px); left: 0; z-index: 30; width: 250px; background: #0a1628; color: #fff; font-family: var(--ui); font-size: 0.78rem; font-weight: 400; line-height: 1.55; text-align: left; padding: 10px 12px; border-radius: 6px; box-shadow: 0 6px 20px rgba(10,22,40,.28); border: 1px solid rgba(200,169,81,.3); }
+  .mp-tip::after { content: ''; position: absolute; top: 100%; left: 18px; border: 6px solid transparent; border-top-color: #0a1628; }
+  .mp-wrap:hover .mp-tip, .mp-wrap:focus-within .mp-tip { display: block; }
+  @media (max-width: 600px) { .mp-tip { left: auto; right: 0; } .mp-tip::after { left: auto; right: 18px; } }
+</style>
 <div class="leg">
   <div class="li">
     <span class="ll">Difficulty:</span>
@@ -284,7 +282,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
     <span class="lb"><span class="db dbi">&#128218; Intermediate</span>&nbsp;Helpful to read basics first</span>
     <span class="lb"><span class="db dba">&#127891; Advanced</span>&nbsp;Some philosophy background helpful</span>
     <span class="lb"><a href="glossary.html" style="font-family:var(--ui);font-size:0.82rem;color:var(--n3);text-decoration:none;border:1px solid var(--b);padding:3px 12px;border-radius:3px;">&#128218; Glossary &rarr;</a></span>
-    <span class="lb"><a href="palace.html" style="font-family:var(--ui);font-size:0.82rem;color:var(--g);text-decoration:none;border:1px solid rgba(200,169,81,0.4);background:rgba(200,169,81,0.06);padding:3px 12px;border-radius:3px;">&#127963; Walk it as a Memory Palace &rarr;</a></span>
+    <span class="lb"><span class="mp-wrap"><a href="palace.html" style="font-family:var(--ui);font-size:0.82rem;color:var(--g);text-decoration:none;border:1px solid rgba(200,169,81,0.4);background:rgba(200,169,81,0.06);padding:3px 12px;border-radius:3px;">&#127963; Walk it as a Memory Palace &rarr;</a><button type="button" class="mp-info" aria-label="What is a Memory Palace?" aria-describedby="mp-tip">&#9432;</button><span class="mp-tip" id="mp-tip" role="tooltip">The technique memory champions use &mdash; turn each argument into a room you can walk, so it actually sticks. <span style="color:var(--g);">Pro</span></span></span></span>
 </div>
 </div>
 
