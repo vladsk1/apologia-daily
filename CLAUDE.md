@@ -319,6 +319,36 @@ Read-only agents (citations, argument, orthodoxy) report; a human-supervised ste
 their fixes. The orthodoxy agent is an automated gate, **not** a substitute for eventual
 human/pastoral doctrinal sign-off on high-stakes content.
 
+## EXPLICIT-VERDICT RULE — Islam and every rival-worldview refutation (mandatory; `apologia-argument` enforces it)
+
+**Any content whose job is to answer a rival-worldview claim — every Islam card, essay, and
+`/answers/*` entry (and JW / Mormon / atheism content) — MUST explicitly LAND ITS VERDICT in
+our own voice.** After presenting and fairly steelmanning the claim, it must plainly state that
+the Islamic (or other) position **does not hold / the answer is _no_ / the specific claim is
+false** — stated, not merely set up. This is the "higher bar" the 2026-07-18 Islam sweep applied
+to the cards, essays, and answers; hold **all future Islam / rival-worldview content** to it.
+Two failure modes are defects even when the body is excellent:
+
+- **Implying the verdict is NOT landing it.** "Each text keeps pointing to Christ" *implies*
+  Muhammad isn't predicted but never *states* it; "the transmission looks ordinary" *implies* the
+  perfect-preservation claim fails but never *says so*. The reader must not have to infer the
+  conclusion. Model fix (Muhammad card): **"So the honest answer to the question is no… none of the
+  passages Islam appeals to predicts Muhammad."**
+- **Usage-guidance is NOT a substitute for the verdict.** A close / "Where this leaves us" /
+  "an open door" section that tells the reader *how to use the argument graciously* ("you can say a
+  wholehearted 'yes, let's read it'") **without first plainly stating the conclusion** is a defect.
+  State the conclusion **first**, then the gracious guidance.
+- **The verdict is bounded and honest, never overclaimed.** Falsify only the specific claim the
+  evidence reaches ("the perfect-preservation slogan is not true"; "the crucifixion denial runs
+  against the clearest evidence"). Where a claim is a *metaphysical framing* rather than a factual
+  error (wahy vs. Incarnation), land the bounded verdict the evidence supports ("the objection can
+  no longer simply be _presumed_") rather than overstating "false."
+- Charity governs **tone** (1 Peter 3:15), never the scoreboard: "not a hostile verdict, just what
+  the text says once it's allowed to finish its own sentence" is the right frame — softening into
+  *no* verdict is not. (Companion to the SHORT-FORM ANSWER RULE above, which requires answers to
+  *lead* with the verdict; this rule requires every falsification piece to *state* it explicitly,
+  cards and essays included.)
+
 ## The mission — a check every agent applies
 
 Apologia Daily exists to **strengthen Christians' confidence in the faith and equip them to give a
