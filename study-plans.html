@@ -167,6 +167,10 @@
     .plan-day-item.done .plan-day-text { text-decoration: line-through; opacity: 0.55; }
     .plan-day-item { border-bottom: 1px solid #f0f6fb; padding: 12px 0; }
     .plan-day-item:last-child { border-bottom: none; }
+    .plan-day-reflect { width: 100%; min-height: 96px; margin: 0 0 10px; padding: 10px 12px; border: 1px solid #d4e0ec; border-radius: 6px; font-family: var(--font-body,'Source Serif 4',Georgia,serif); font-size: 0.9rem; line-height: 1.6; color: #0a1628; background: #fff; resize: vertical; }
+    .plan-day-reflect:focus { outline: none; border-color: #c8a951; box-shadow: 0 0 0 2px rgba(200,169,81,0.15); }
+    .plan-day-reflect-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .plan-day-reflect-status { font-family: var(--font-ui,'DM Sans',sans-serif); font-size: 0.72rem; color: #0f6e56; }
 
       .nav-right { display:flex; align-items:center; gap:12px; }
     .nav-user { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.82rem; color:rgba(255,255,255,0.65); }
@@ -1389,6 +1393,7 @@ const plans = [
   var currentPlanId = null;
   var currentLevel = 'all';
 
+  function escapeHtml(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
   function getSaved() { return JSON.parse(localStorage.getItem('study_plans') || '{}'); }
   function setSaved(d) { localStorage.setItem('study_plans', JSON.stringify(d)); syncPush(); }
 
@@ -1525,6 +1530,7 @@ const plans = [
       week.days.forEach(function(day) {
         var isDone = progress.completed && progress.completed.indexOf(day.day) !== -1;
         var icon = ACTION_ICONS[day.action] || '▶';
+        var reflVal = (progress.reflections && progress.reflections[day.day]) || '';
         bodyHtml += '<div class="plan-day-item' + (isDone ? ' done' : '') + '" data-plan="' + planId + '" data-day="' + day.day + '">' +
           '<div class="plan-day-num">Day ' + day.day + '</div>' +
           '<div class="plan-day-main">' +
@@ -1537,7 +1543,11 @@ const plans = [
           '<p class="plan-day-desc">' + day.desc + '</p>' +
           (day.link
             ? '<a href="' + day.link + '" target="_blank" class="plan-day-link">Open ' + day.action + ' →</a>'
-            : '<button type="button" class="plan-day-link plan-day-selfdone" style="border:none;cursor:pointer;">' + (isDone ? 'Completed &#10003; &mdash; tap to undo' : 'Mark as done &#10003;') + '</button>') +
+            : '<textarea class="plan-day-reflect" placeholder="Write it here — in your own words, from memory…">' + escapeHtml(reflVal) + '</textarea>' +
+              '<div class="plan-day-reflect-row">' +
+                '<button type="button" class="plan-day-link plan-day-selfdone" style="border:none;cursor:pointer;">' + (isDone ? 'Completed &#10003; &mdash; tap to undo' : 'Mark as done &#10003;') + '</button>' +
+                '<span class="plan-day-reflect-status">' + (reflVal && reflVal.trim() ? 'Saved &#10003;' : '') + '</span>' +
+              '</div>') +
           '</div></div>' +
           '<div class="plan-day-check">✓</div>' +
           '</div>';
@@ -1570,6 +1580,21 @@ const plans = [
           if (chk) chk.click();
           selfDone.innerHTML = item.classList.contains('done') ? 'Completed &#10003; &mdash; tap to undo' : 'Mark as done &#10003;';
         });
+      }
+      var refl = item.querySelector('.plan-day-reflect');
+      if (refl) {
+        var persistRefl = function(push) {
+          var pid = item.dataset.plan, dn = parseInt(item.dataset.day);
+          var sv = getSaved();
+          if (!sv[pid]) sv[pid] = { started: false, completed: [] };
+          if (!sv[pid].reflections) sv[pid].reflections = {};
+          sv[pid].reflections[dn] = refl.value;
+          if (push) { setSaved(sv); } else { localStorage.setItem('study_plans', JSON.stringify(sv)); }
+          var st = item.querySelector('.plan-day-reflect-status');
+          if (st) st.innerHTML = refl.value.trim() ? 'Saved &#10003;' : '';
+        };
+        refl.addEventListener('input', function() { persistRefl(false); });
+        refl.addEventListener('blur', function() { persistRefl(true); });
       }
       var check = item.querySelector('.plan-day-check');
       if (check) {
