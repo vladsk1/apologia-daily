@@ -304,7 +304,7 @@ async function sendFloatQuestion(){
   btn.disabled=true; var ol=btn.textContent; btn.textContent='Thinking...';
   resp.style.display='block'; resp.textContent='...';
   try{
-    var r=await fetch('/api/tutor',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,argument:AD_ARG,category:'Evidence Library'})});
+    var _ab=document.querySelector('.art-body')||document.querySelector('main.art');var _ex=_ab?(_ab.innerText||_ab.textContent||'').replace(/\s+/g,' ').trim().slice(0,16000):'';var r=await fetch('/api/tutor',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,argument:AD_ARG,category:'Evidence Library',excerpt:_ex})});
     var d=await r.json(); resp.textContent=(d.answer||'Sorry, no response just now. Please try again.');
   }catch(e){ resp.textContent='The tutor is unavailable right now. Please try again in a moment.'; }
   btn.disabled=false; btn.textContent=ol;
