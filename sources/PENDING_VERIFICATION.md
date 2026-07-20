@@ -68,7 +68,35 @@ DELICACY notes. Library 102 → **107 verified passages**.
 | `basil-holyspirit-conjoined` | Basil, *On the Holy Spirit* | ~16/27 | The Spirit glorified *with* Father and Son (fuller doxology passage) | NPNF2 v.8 · newadvent.org/fathers/3203.htm |
 | `gregory-naz-or31-splendour` | Gregory of Nazianzus, *Oration 31* | 31.14 | "No sooner do I conceive of the One than I am encompassed by the splendour of the Three" | NPNF2 v.7 · newadvent.org/fathers/310231.htm |
 
-## Seed files awaiting verification — `sources/_pending/` (27 passages)
+## ✅ Seed backlog — **DONE 2026-07-20, deployed** (26 of 27 shipped, 1 dropped, 1 held)
+All five files verified by `apologia-citations` and moved into `sources/`; `_pending/` is empty
+and removed. **Library: 107 → 132 verified passages.**
+
+| file | shipped | outcome |
+|---|---|---|
+| ✅ `origen.json` | 4 of 5 | **De Principiis Preface DROPPED** — see Delicacy watch below |
+| ✅ `chrysostom.json` | 5 of 6 | 1 **HELD** at `false`: the Eucharist quote is a hybrid of two recensions + truncated mid-sentence |
+| ✅ `leo-great.json` | 6 of 6 | all exact on 3 hosts; "possible nature" is genuinely what NPNF prints |
+| ✅ `councils.json` | 5 of 5 | 2 needed verbatim fixes; "Canon X" relabelled "Capitulum X" |
+| ✅ `cyril-alexandria.json` | 5 of 5 | fragment-stitching confirmed **seam-free**; 3 needed small fixes |
+
+**Why the Origen Preface was dropped** (the plan predicted this): its *wording* was fine, but
+the problem is what the citation points **at**. *De Principiis* survives only in Rufinus's
+Latin — and he admitted "correcting" the Trinitarian passages, so the witness is weakest
+exactly where our quote was strongest. The ANF's own footnote records Jerome reading "made or
+unmade" where Rufinus has "born or innate" (i.e. whether the Spirit is a *creature*). And Book
+I's adjacent chapters teach pre-existence of souls and apokatastasis. **A DELICACY note can
+fence a clause; it cannot fence a hyperlink** — and `/api/ask` publishes that hyperlink as the
+attribution. The four *Contra Celsum* passages differ in kind: Greek, Origen's own words, no
+Rufinus problem. The rule-of-faith slot should be filled by `irenaeus-ah-1-10-1` (Priority 2).
+
+**Two entries were re-fenced STRUCTURALLY** rather than by advice, because a note cannot travel
+with a pull-quote: Chrysostom's bare "He emptied Himself… form of a servant" (indistinguishable
+from kenoticism alone) now carries his own "while He remained what He was, He took that which He
+was not"; and his bare "saved us by grace… no man may boast" now opens with "Hath He Himself
+hindered our being justified by works? By no means."
+
+## Seed files — original staging note (`sources/_pending/`, now cleared)
 Five files drafted in an earlier round were left **unverified** (`verified: false`) and were
 sitting loose in `sources/`, where `build-sources-index.mjs` globs them — they would have
 leaked into `sources-index.json` **and the live `/api/ask` retrieval set** before verification,
