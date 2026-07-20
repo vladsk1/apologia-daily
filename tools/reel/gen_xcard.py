@@ -19,7 +19,8 @@ Spec (JSON):
     "sub": [ "History's most successful lawyer weighed the case",
              "for the resurrection — and returned his verdict." ]
   }
-Output → tools/reel/output/cards/<name>-xcard.png
+X-card specs live in tools/reel/xcards/ (NOT tools/reel/specs/, which the
+content-review gate treats as doctrinal reel scripts). Output → tools/reel/output/cards/<name>-xcard.png
 """
 import os, sys, json, argparse, math
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
