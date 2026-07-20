@@ -82,7 +82,8 @@ const GLOBS = [
 
 function files() {
   const set = new Set();
-  for (const g of GLOBS) for (const f of globSync(g)) {
+  for (const g of GLOBS) for (const f0 of globSync(g)) {
+    const f = f0.replace(/\\/g, '/'); // normalize Windows separators so keys are OS-portable
     if (/\/index\.html$/.test(f) || f === 'index.html') continue; // link hubs, not prose
     set.add(f);
   }
