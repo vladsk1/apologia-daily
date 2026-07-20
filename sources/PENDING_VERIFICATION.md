@@ -33,14 +33,27 @@ For each target:
    `node tools/build-sources-index.mjs` (compiles into `lib/sources-verified.js` →
    live-quotable) and `--check` in CI stays green.
 
-## Priority 1 — new Fathers (breadth gaps; not yet in the corpus)
-| id (proposed) | Father / work | § | Role | PD source |
-|---|---|---|---|---|
-| `hippolytus-noetus-14` | Hippolytus of Rome, *Against Noetus* | 14 | Anti-modalist Trinity — one God confessed as Father, Son, Spirit | ANF v.5 · newadvent.org/fathers/0521.htm |
-| `novatian-trinity-11` | Novatian, *On the Trinity* | ~11–13 | Christ is announced as God *and* as man | ANF v.5 · newadvent.org/fathers/0612.htm |
-| `novatian-trinity-29` | Novatian, *On the Trinity* | ~29 | Person/work of the Holy Spirit | ANF v.5 · newadvent.org/fathers/0612.htm |
-| `clement-alex-protr-1` | Clement of Alexandria, *Exhortation to the Heathen* | 1 | The Word "is God and man" | ANF v.2 · newadvent.org/fathers/0208.htm |
-| `clement-alex-paed-1` | Clement of Alexandria, *The Instructor* | 1.ii | The Word as God, our Instructor/Saviour | ANF v.2 · newadvent.org/fathers/0209.htm |
+## Priority 1 — new Fathers (breadth gaps) — ✅ **DONE 2026-07-20, deployed**
+All five verified verbatim by `apologia-citations` against **two independent PD hosts each**
+(0 fabrications, 0 misattributions, 0 modern-copyright contamination) and shipped with
+DELICACY notes. Library 102 → **107 verified passages**.
+
+| id (as shipped) | Father / work | § | Status |
+|---|---|---|---|
+| ✅ `hippolytus-noetus-14` | Hippolytus of Rome, *Against Noetus* | 14 | verified · `sources/hippolytus.json` |
+| ✅ `novatian-trinity-11` | Novatian, *On the Trinity* | 11 | verified · `sources/novatian.json` |
+| ✅ `novatian-trinity-29` | Novatian, *On the Trinity* | 29 | verified · `sources/novatian.json` |
+| ✅ `clement-alex-protr-1` | Clement of Alexandria, *Exhortation to the Heathen* | 1 | verified · `sources/clement-alexandria.json` |
+| ✅ `clement-alex-paed-1-2` | Clement of Alexandria, *The Instructor* | Bk I, ch. 2 | verified (id took a `-2` suffix for the chapter) |
+
+**Corrections found while executing — three of this plan's URLs were wrong:**
+- `newadvent.org/fathers/0612.htm` is **Fragments of Dionysius**, not Novatian. Novatian's
+  treatise is `0511.htm`; the per-chapter Wikisource ANF pages were used instead (cleaner).
+- `0208.htm` / `0209.htm` are **table-of-contents pages**, not text; chapters live at leaf
+  URLs (`020801.htm`) or the Wikisource work pages.
+- For Hippolytus, **do not cite New Advent `0521.htm`** — its site-wide boilerplate credits
+  J. H. MacMahon, who translated only the *Refutation*; ANF v.5 credits **S. D. F. Salmond**
+  for *Against Noetus*. Cite the Wikisource/CCEL ANF page.
 
 ## Priority 2 — fuller passages from Fathers already in the corpus (depth)
 | id (proposed) | Father / work | § | Role | PD source |
@@ -54,6 +67,21 @@ For each target:
 | `augustine-trinity-1-4-7` | Augustine, *On the Trinity* | 1.4.7 | Father, Son, Spirit — one substance, co-equal, inseparable | NPNF1 v.3 · newadvent.org/fathers/130101.htm |
 | `basil-holyspirit-conjoined` | Basil, *On the Holy Spirit* | ~16/27 | The Spirit glorified *with* Father and Son (fuller doxology passage) | NPNF2 v.8 · newadvent.org/fathers/3203.htm |
 | `gregory-naz-or31-splendour` | Gregory of Nazianzus, *Oration 31* | 31.14 | "No sooner do I conceive of the One than I am encompassed by the splendour of the Three" | NPNF2 v.7 · newadvent.org/fathers/310231.htm |
+
+## Seed files awaiting verification — `sources/_pending/` (27 passages)
+Five files drafted in an earlier round were left **unverified** (`verified: false`) and were
+sitting loose in `sources/`, where `build-sources-index.mjs` globs them — they would have
+leaked into `sources-index.json` **and the live `/api/ask` retrieval set** before verification,
+and broken CI (they are untracked). Moved to `sources/_pending/`, which the glob ignores.
+They enter `sources/` only once verified.
+
+| file | passages | notes |
+|---|---|---|
+| `councils.json` | 5 | Ephesus 431, Formula of Reunion 433, Const. II 553, Const. III 681 |
+| `cyril-alexandria.json` | 5 | Second Letter to Nestorius — **highest verbatim risk** (stitched from ~125-char fragments) |
+| `chrysostom.json` | 6 | New Advent serves a *modernized* NPNF ("you" for "thou") — stored text vs cited URL must agree |
+| `leo-great.json` | 6 | check "possible"/"passible" print quirk; several source_urls known wrong |
+| `origen.json` | 5 | see Delicacy watch below — plan says exclude; under doctrinal screen |
 
 ## Delicacy watch (fence with the resolving clause; may warrant an `orthonote` if surfaced)
 - **Justin Martyr** (Dial. 61; 1 Apol. 63): the Logos as "another" God/Lord — pre-Nicene
