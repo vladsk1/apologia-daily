@@ -1,0 +1,242 @@
+{
+  "reviewed": {
+    "argument": "2026-07-18",
+    "orthodoxy": "2026-07-18",
+    "by": "argument+orthodoxy gates (2026-07-18); positive-case-only reel derived from the certified minimalfacts essay + resurrection answers"
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "pace": 1.4,
+  "voiceover": "Is there real evidence that Jesus rose from the dead? One of the strongest cases doesn't even start with the Gospels. The minimal-facts method, built by Gary Habermas and Michael Licona, begins only with facts critical scholars concede — and it begins early, in a creed Paul received and passed on, traced to within a few years of the cross. Fact one: Jesus died by crucifixion — even the skeptic John Dominic Crossan calls it as sure as anything historical can ever be. Fact two: his disciples were convinced they saw him alive. And Paul, who once hunted the church, and James, Jesus' own skeptical brother, were both convinced they saw him too. What single explanation accounts for all of it at once? He rose. Not a proof — the best explanation.",
+  "source": "answers/is-there-evidence-jesus-rose-from-the-dead.html + library/minimalfacts.html",
+  "scenes": [
+    {
+      "dur": 3.0,
+      "big": [
+        {
+          "t": "Is there real evidence",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "Jesus rose?",
+          "c": "gold",
+          "s": 88
+        }
+      ],
+      "sub": [
+        {
+          "t": "The minimal-facts case.",
+          "c": "dim",
+          "f": "serif",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "kicker": "THE MINIMAL-FACTS METHOD",
+      "dur": 4.2,
+      "lines": [
+        {
+          "t": "It doesn’t start",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "with the Gospels —",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 16
+        },
+        {
+          "t": "but with facts",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "even skeptics grant.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ]
+    },
+    {
+      "kicker": "AND IT BEGINS EARLY",
+      "dur": 4.6,
+      "lines": [
+        {
+          "t": "A creed Paul received,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "traced to within",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "a few years",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "of the cross.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 60
+        }
+      ]
+    },
+    {
+      "kicker": "FACT ONE",
+      "dur": 5.2,
+      "lines": [
+        {
+          "t": "Jesus died by crucifixion.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 16
+        },
+        {
+          "t": "“As sure as anything",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "historical can ever be”",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "— the skeptic Crossan.",
+          "c": "dim",
+          "f": "serif",
+          "s": 40
+        }
+      ]
+    },
+    {
+      "kicker": "FACT TWO",
+      "dur": 4.6,
+      "lines": [
+        {
+          "t": "His disciples",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "were convinced",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "",
+          "s": 16
+        },
+        {
+          "t": "they saw him alive.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        }
+      ]
+    },
+    {
+      "kicker": "FACTS THREE & FOUR",
+      "dur": 5.2,
+      "lines": [
+        {
+          "t": "Paul, who hunted",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "the church —",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "and James,",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "his skeptical brother —",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "both convinced they saw him.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 42
+        }
+      ]
+    },
+    {
+      "kicker": "ONE EXPLANATION FITS ALL FOUR",
+      "dur": 4.4,
+      "lines": [
+        {
+          "t": "What accounts for",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "all of it at once?",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 16
+        },
+        {
+          "t": "He rose.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 78
+        }
+      ]
+    },
+    {
+      "dur": 4.0,
+      "big": [
+        {
+          "t": "Not a proof.",
+          "c": "cream",
+          "s": 80
+        },
+        {
+          "t": "The best explanation.",
+          "c": "gold",
+          "s": 70
+        }
+      ],
+      "sub": [
+        {
+          "t": "The full case at",
+          "c": "dim",
+          "f": "serif",
+          "s": 42
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    }
+  ]
+}
