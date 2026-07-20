@@ -1,0 +1,30 @@
+[
+  {
+    "id": "clement-alex-protr-1",
+    "author": "Clement of Alexandria",
+    "work": "Exhortation to the Heathen (Protrepticus)",
+    "year": 195,
+    "section": "ch. 1",
+    "translation": "William Wilson (ANF vol. 2), public domain",
+    "pd": true,
+    "source_url": "https://en.wikisource.org/wiki/Ante-Nicene_Fathers/Volume_II/Exhortation_to_the_Heathen",
+    "verified": true,
+    "tags": ["deity of christ", "incarnation", "two natures", "logos", "pre-nicene", "early church"],
+    "note": "Clement of Alexandria, c. AD 195 — over a century before Nicaea — states the two natures in a single breath: the Word who was 'in God' has 'appeared as man, He alone being both, both God and man.' Useful precisely because it is early, incidental, and not written to settle a Trinitarian controversy: it simply assumes Christ's deity while affirming a real incarnation. No subordinationist clause in this excerpt. (Clement elsewhere writes speculative Middle-Platonist theology; he is cited here only for this christological statement.) Verified verbatim against two independent PD hosts (apologia-citations, web, 2026-07-20); translator Wilson confirmed, and the em-dash in 'both God and man—the Author' is ANF's own punctuation, not a normalisation artifact.",
+    "text": "This Word, then, the Christ, the cause of both our being at first (for He was in God) and of our well-being, this very Word has now appeared as man, He alone being both, both God and man—the Author of all blessings to us; by whom we, being taught to live well, are sent on our way to life eternal."
+  },
+  {
+    "id": "clement-alex-paed-1-2",
+    "author": "Clement of Alexandria",
+    "work": "The Instructor (Paedagogus)",
+    "year": 198,
+    "section": "Bk I, ch. 2",
+    "translation": "William Wilson (ANF vol. 2), public domain",
+    "pd": true,
+    "source_url": "https://en.wikisource.org/wiki/Ante-Nicene_Fathers/Volume_II/The_Instructor/Book_I",
+    "verified": true,
+    "tags": ["deity of christ", "incarnation", "logos", "image of god", "pre-nicene", "early church"],
+    "note": "Chapter title: 'Our Instructor's Treatment of Our Sins.' A pre-Nicene statement of Christ's deity stacked four deep — 'the Word who is God, who is in the Father, who is at the Father's right hand, and with the form of God is God.' DELICACY: 'God in the form of man' is NOT docetism and not a denial of real humanity — it is Philippians 2 idiom ('form of God' / 'form of a servant'), and Clement's very next clauses predicate full deity of the Word. Second, 'to Him we are to try with all our might to assimilate our souls' is moral likeness by imitation and grace, not humans becoming God by nature — the Creator/creature line is not crossed. Verified verbatim against two independent PD hosts (apologia-citations, web, 2026-07-20); translator Wilson confirmed. TRANSCRIPTION NOTE: the lowercase 's' in 'whose son He is' is ANF's own typography (Wilson capitalises it elsewhere), NOT a theological signal — preserve it; 'correcting' it would break verbatim status.",
+    "text": "Now, O you, my children, our Instructor is like His Father God, whose son He is, sinless, blameless, and with a soul devoid of passion; God in the form of man, stainless, the minister of His Father's will, the Word who is God, who is in the Father, who is at the Father's right hand, and with the form of God is God. He is to us a spotless image; to Him we are to try with all our might to assimilate our souls."
+  }
+]
