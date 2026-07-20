@@ -11,8 +11,11 @@
  * A CI check (--check) fails if the committed index is stale.
  */
 import { readFileSync, writeFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
-const ROOT = new URL('..', import.meta.url).pathname;
+// fileURLToPath (not .pathname) so this works on Windows too — .pathname yields
+// a broken "/C:/…%20…" path (leading slash + undecoded spaces) on win32.
+const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const read = (p) => readFileSync(ROOT + p, 'utf8');
 
 // ── Evidence Library essays (from the crawlable libcard list) ──
