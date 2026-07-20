@@ -1,0 +1,105 @@
+[
+  {
+    "id": "cyril-2nd-letter-nestorius-1",
+    "author": "Cyril of Alexandria",
+    "work": "Second Letter to Nestorius",
+    "year": 430,
+    "section": "the dogmatic letter (Ep. 4); read and ratified at Ephesus (431) and Chalcedon (451)",
+    "translation": "Percival (NPNF ser. 2 vol. 14), public domain",
+    "pd": true,
+    "source_url": "https://www.tertullian.org/fathers2/NPNF2-14/Npnf2-14-67.htm",
+    "verified": true,
+    "tags": [
+      "incarnation",
+      "hypostatic union",
+      "one person of christ",
+      "two natures",
+      "deity of christ",
+      "humanity of christ",
+      "against nestorianism"
+    ],
+    "note": "The central one-person Christology of the SAFE, universally-received Second (dogmatic) Letter — declared by the Council of Ephesus to agree with Nicaea and re-affirmed at Chalcedon. It holds together both halves of the guardrail: the Word did NOT change into flesh (against any confusion of natures) yet He truly 'became man' by uniting flesh 'animated by a rational soul' to Himself hypostatically (a complete humanity, body and rational soul, against Apollinarianism and Nestorianism alike). One Christ, not two sons. Reconstructed from consecutive in-order verbatim fragments off New Advent's Council of Ephesus page (Percival/NPNF2-14 translation). verified:false per README until apologia-citations confirms the continuous wording against a CCEL npnf214 leaf. NOTE for verifier: confirm the source_url translation is Percival (New Advent reproduces the NPNF2-14 council text) and add the precise CCEL leaf. CORRECTED 2026-07-20: restored the dropped leading \"For\" (\"For we do not say...\") — the parallel entry council-ephesus-431 had retained it, so the two files disagreed. Continuous unbroken run CONFIRMED (the ~125-char fragment stitching left no false seams). DELICACY: \"the two natures being brought together in a true union\" reads Nestorian if lifted alone — always carry \"there is of both one Christ and one Son.\" Verified verbatim against the printed NPNF2-14 (Percival) via tertullian.org, cross-checked on independent hosts (apologia-citations, web, 2026-07-20).",
+    "text": "For we do not say that the nature of the Word was changed and became flesh, or that it was converted into a whole man consisting of soul and body; but rather that the Word having personally united to himself flesh animated by a rational soul, did in an ineffable and inconceivable manner become man, and was called the Son of Man, not merely as willing or being pleased to be so called, neither on account of taking to himself a person, but because the two natures being brought together in a true union, there is of both one Christ and one Son; for the difference of the natures is not taken away by the union, but rather the divinity and the humanity make perfect for us the one Lord Jesus Christ by their ineffable and inexpressible union."
+  },
+  {
+    "id": "cyril-2nd-letter-nestorius-2",
+    "author": "Cyril of Alexandria",
+    "work": "Second Letter to Nestorius",
+    "year": 430,
+    "section": "the dogmatic letter (Ep. 4), on the Theotokos",
+    "translation": "Percival (NPNF ser. 2 vol. 14), public domain",
+    "pd": true,
+    "source_url": "https://www.tertullian.org/fathers2/NPNF2-14/Npnf2-14-67.htm",
+    "verified": true,
+    "tags": [
+      "theotokos",
+      "incarnation",
+      "deity of christ",
+      "one person of christ",
+      "virgin birth"
+    ],
+    "note": "DELICACY / DENOMINATIONAL-NEUTRALITY FLAG: 'Theotokos' (God-bearer / Mother of God) here is a CHRISTOLOGICAL guarantee, not a Marian-elevation doctrine. Cyril's own qualifier makes this explicit — 'not as if the nature of the Word or his divinity had its beginning from the Holy Virgin.' The claim is about the identity of the CHILD: the one born of Mary is the one divine Son, so denying her the title implies denying that God the Son was truly born and truly became man (exactly Nestorius's error). This is the point Ephesus and Chalcedon affirmed and that Catholics, Orthodox, and Protestants share as Christology; it does NOT settle any later intra-Christian Marian dispute (immaculate conception, perpetual virginity, veneration), which the site does not adjudicate. When quoting, pair with the qualifier and frame it as a statement about Christ, not about Mary's status. Reconstructed from consecutive in-order verbatim fragments (Percival/NPNF2-14 via New Advent). verified:false until apologia-citations confirms wording (esp. 'they ventured to call') against a CCEL npnf214 leaf. CORRECTED 2026-07-20: \"Holy Virgin\" -> \"holy Virgin\" (twice, preserving Percival's asymmetry with capitalised \"Mother of God\"); and the entry began with a silently capitalised mid-sentence \"Therefore\" — restored by extending back to the printed lead-in \"This was the sentiment of the holy Fathers; therefore they ventured...\". \"They ventured to call\" confirmed correct. DELICACY: Theotokos is a christological guarantee about the identity of the child, not a Marian-elevation doctrine; the resolving qualifier \"not as if the nature of the Word or his divinity had its beginning from the holy Virgin\" is inside the quote. Verified verbatim against the printed NPNF2-14 (Percival) via tertullian.org, cross-checked on independent hosts (apologia-citations, web, 2026-07-20).",
+    "text": "This was the sentiment of the holy Fathers; therefore they ventured to call the holy Virgin, the Mother of God, not as if the nature of the Word or his divinity had its beginning from the holy Virgin, but because of her was born that holy body with a rational soul, to which the Word being personally united is said to be born according to the flesh."
+  },
+  {
+    "id": "cyril-2nd-letter-nestorius-3",
+    "author": "Cyril of Alexandria",
+    "work": "Second Letter to Nestorius",
+    "year": 430,
+    "section": "the dogmatic letter (Ep. 4), on the one Christ worshipped",
+    "translation": "Percival (NPNF ser. 2 vol. 14), public domain",
+    "pd": true,
+    "source_url": "https://www.tertullian.org/fathers2/NPNF2-14/Npnf2-14-67.htm",
+    "verified": true,
+    "tags": [
+      "one person of christ",
+      "communicatio idiomatum",
+      "worship of christ",
+      "deity of christ",
+      "against nestorianism"
+    ],
+    "note": "The single subject of worship: one Christ and Lord, not a man worshipped 'alongside' the Word (the Nestorian 'two sons' Cyril is refuting), but the one incarnate Son — the ground of the communicatio idiomatum (both the divine and the human are ascribed to the one Christ). Reconstructed from consecutive in-order verbatim fragments (Percival/NPNF2-14 via New Advent). verified:false until confirmed against a CCEL npnf214 leaf. NOTE for verifier: check whether the printed text sets the phrase 'with the Word' in quotation marks/italics. CORRECTED 2026-07-20: restored the quotation marks Percival prints around the second \"with the Word\" — they are the device that makes the clause parseable; without them the sentence reads as doubled and confusing. DELICACY: \"the body of the Word, with which he sits with the Father\" could be misread as two enthroned subjects or as spatial subordination — the resolving clause \"not as if two sons were sitting with him, but one by the union with the flesh\" must travel with it. Verified verbatim against the printed NPNF2-14 (Percival) via tertullian.org, cross-checked on independent hosts (apologia-citations, web, 2026-07-20).",
+    "text": "We, therefore, confess one Christ and Lord, not as worshipping a man with the Word (lest this expression \"with the Word\" should suggest to the mind the idea of division), but worshipping him as one and the same, forasmuch as the body of the Word, with which he sits with the Father, is not separated from the Word himself, not as if two sons were sitting with him, but one by the union with the flesh."
+  },
+  {
+    "id": "cyril-2nd-letter-nestorius-4",
+    "author": "Cyril of Alexandria",
+    "work": "Second Letter to Nestorius",
+    "year": 430,
+    "section": "the dogmatic letter (Ep. 4), on the impassible Word suffering in the flesh",
+    "translation": "Percival (NPNF ser. 2 vol. 14), public domain",
+    "pd": true,
+    "source_url": "https://www.tertullian.org/fathers2/NPNF2-14/Npnf2-14-67.htm",
+    "verified": true,
+    "tags": [
+      "communicatio idiomatum",
+      "impassibility",
+      "incarnation",
+      "cross",
+      "deity of christ",
+      "humanity of christ"
+    ],
+    "note": "The communicatio idiomatum applied to the passion: the one Christ genuinely suffered, yet the divine nature as such is impassible — 'he who is in himself incapable of suffering was in a suffering body.' The properties of the human nature are truly predicated of the one divine person without the divine nature being altered. Reconstructed from consecutive in-order verbatim fragments (Percival/NPNF2-14 via New Advent). verified:false until confirmed against a CCEL npnf214 leaf. DELICACY: \"the Divine nature is incapable of suffering\" reads docetic/Nestorian if quoted alone (as though God did not really suffer and only the man did). It must ALWAYS travel with its resolving clauses — \"he is also said to suffer for us\" and especially the closing \"he who is in himself incapable of suffering was in a suffering body.\" TRANSCRIPTION NOTE: tertullian.org, BibleStudyTools and uoregon (all CCEL-etext descendants) print \"lie is also said to suffer\" — that is an OCR corruption of \"he\" (a broken h), NOT a variant reading; the independently typeset earlychurchtexts reads \"he\". The stored \"he\" is correct; do not propagate \"lie.\" Verified verbatim against the printed NPNF2-14 (Percival) via tertullian.org, cross-checked on independent hosts (apologia-citations, web, 2026-07-20).",
+    "text": "On this account we say that he suffered and rose again; not as if God the Word suffered in his own nature stripes, or the piercing of the nails, or any other wounds, for the Divine nature is incapable of suffering, inasmuch as it is incorporeal, but since that which had become his own body suffered in this way, he is also said to suffer for us; for he who is in himself incapable of suffering was in a suffering body."
+  },
+  {
+    "id": "cyril-2nd-letter-nestorius-5",
+    "author": "Cyril of Alexandria",
+    "work": "Second Letter to Nestorius",
+    "year": 430,
+    "section": "the dogmatic letter (Ep. 4), on Christ's death and resurrection",
+    "translation": "Percival (NPNF ser. 2 vol. 14), public domain",
+    "pd": true,
+    "source_url": "https://www.tertullian.org/fathers2/NPNF2-14/Npnf2-14-67.htm",
+    "verified": true,
+    "tags": [
+      "communicatio idiomatum",
+      "death of christ",
+      "bodily resurrection",
+      "incarnation",
+      "deity of christ"
+    ],
+    "note": "The same logic extended to death and resurrection: the Word is by nature immortal, yet because His own body 'tasted death for every man' (Heb. 2:9), the one Son is said to have died and to have risen — bodily. Guards both the true death/resurrection of Christ and the impassibility/immortality of the divine nature. Reconstructed from consecutive in-order verbatim fragments (Percival/NPNF2-14 via New Advent). verified:false until confirmed against a CCEL npnf214 leaf. DELICACY: \"not as if he had any experience of death in his own nature\" is the sharpest pull-quote risk in this file — a skeptic could screenshot it as \"Cyril denies Christ really died.\" Resolving clauses that must travel with it: \"he himself is said to have suffered death for us\" and \"because his own body was raised again.\" The bodily-resurrection payload here does real work for the site's resurrection material and must never be trimmed to the impassibility clause. Immediately follows entry -4 in print. Verified verbatim against the printed NPNF2-14 (Percival) via tertullian.org, cross-checked on independent hosts (apologia-citations, web, 2026-07-20).",
+    "text": "In the same manner also we conceive respecting his dying; for the Word of God is by nature immortal and incorruptible, and life and life-giving; since, however, his own body did, as Paul says, by the grace of God taste death for every man, he himself is said to have suffered death for us, not as if he had any experience of death in his own nature (for it would be madness to say or think this), but because, as I have just said, his flesh tasted death. In like manner his flesh being raised again, it is spoken of as his resurrection, not as if he had fallen into corruption (God forbid), but because his own body was raised again."
+  }
+]
