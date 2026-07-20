@@ -1,0 +1,46 @@
+{
+  "reviewed": {"argument": "2026-07-18", "orthodoxy": "2026-07-18", "by": "argument+orthodoxy gates (2026-07-18); testimony reel derived from the certified ev-s7 Conversion Stories entry (Sir Lionel Luckhoo)"},
+  "aspect": "vertical", "theme": "navy", "fps": 30, "crossfade": 0.6, "pace": 1.4,
+  "keep_watching": "keep watching  ↓",
+  "voiceover": "He was, by the Guinness Book of Records, the most successful lawyer in history — two hundred and forty-five consecutive murder acquittals, knighted twice, ambassador for two nations at once. Sir Lionel Luckhoo spent his life weighing evidence and persuading juries. Then, at sixty-four, he came to faith in Christ — and did what a trial lawyer does: he put the resurrection on trial. He applied the same standards of proof he'd used to win every case — the testimony, the alternatives, the burden of proof. His verdict? 'The evidence for the resurrection of Jesus Christ is so overwhelming that it compels acceptance by proof which leaves absolutely no room for doubt.' The world's most successful lawyer gave his closing argument — and spent the rest of his life making the case for Christ.",
+  "source": "ev-s7.html (Conversion Stories — Sir Lionel Luckhoo)",
+  "scenes": [
+    { "dur": 3.0, "big": [ {"t": "He put the resurrection", "c": "cream", "s": 52}, {"t": "on trial.", "c": "gold", "s": 92} ],
+      "sub": [ {"t": "The verdict of history’s most successful lawyer.", "c": "dim", "f": "serif", "s": 33} ] },
+    { "kicker": "SIR LIONEL LUCKHOO", "dur": 4.2, "lines": [
+      {"t": "By the Guinness Book", "c": "cream", "s": 50},
+      {"t": "of Records, the most", "c": "cream", "s": 50},
+      {"t": "successful lawyer", "c": "cream", "s": 50},
+      {"t": "in history.", "c": "gold", "f": "serifb", "s": 60} ] },
+    { "kicker": "HIS RECORD", "dur": 4.6, "lines": [
+      {"t": "245 consecutive", "c": "cream", "s": 54},
+      {"t": "murder-case acquittals.", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "A life spent weighing evidence.", "c": "cream", "s": 38} ] },
+    { "kicker": "THEN, AT 64", "dur": 5.2, "lines": [
+      {"t": "he came to faith", "c": "cream", "s": 54},
+      {"t": "in Christ —", "c": "cream", "s": 54},
+      {"t": "", "s": 16},
+      {"t": "and did what", "c": "cream", "s": 50},
+      {"t": "a trial lawyer does.", "c": "gold", "f": "serifb", "s": 54} ] },
+    { "kicker": "HE PUT IT ON TRIAL", "dur": 4.6, "lines": [
+      {"t": "the same standards", "c": "cream", "s": 50},
+      {"t": "of proof he used", "c": "cream", "s": 50},
+      {"t": "to win every case —", "c": "cream", "s": 50},
+      {"t": "now on the resurrection.", "c": "gold", "f": "serifb", "s": 46} ] },
+    { "kicker": "HIS VERDICT", "dur": 5.2, "lines": [
+      {"t": "“The evidence for", "c": "cream", "s": 46},
+      {"t": "the resurrection …", "c": "cream", "s": 46},
+      {"t": "leaves absolutely", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "no room for doubt.”", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "— Sir Lionel Luckhoo", "c": "dim", "f": "serif", "s": 34} ] },
+    { "kicker": "HIS CLOSING ARGUMENT", "dur": 4.4, "lines": [
+      {"t": "He left the courtroom", "c": "cream", "s": 48},
+      {"t": "and spent his life", "c": "cream", "s": 48},
+      {"t": "", "s": 16},
+      {"t": "making the case", "c": "cream", "s": 50},
+      {"t": "for Christ.", "c": "gold", "f": "serifb", "s": 66} ] },
+    { "dur": 4.0, "big": [ {"t": "What is", "c": "cream", "s": 72}, {"t": "your verdict?", "c": "gold", "s": 92} ],
+      "sub": [ {"t": "His full story at", "c": "dim", "f": "serif", "s": 42}, {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}
