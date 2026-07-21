@@ -112,11 +112,14 @@
 </footer>
 <script>
 function adShare(){
-  var d={title:document.title,text:"What do the Dead Sea Scrolls prove about the Bible?",url:location.href};
+  var url=location.origin+location.pathname+'?utm_source=share&utm_medium=answer&utm_campaign=what-do-the-dead-sea-scrolls-prove-about-the-bible';
+  var d={title:document.title,text:"What do the Dead Sea Scrolls prove about the Bible?",url:url};
+  try{if(window.adTrack)adTrack('share_click',{slug:'what-do-the-dead-sea-scrolls-prove-about-the-bible'});}catch(x){}
   if(navigator.share){navigator.share(d).catch(function(){});return;}
-  if(navigator.clipboard){navigator.clipboard.writeText(location.href);}
+  if(navigator.clipboard){navigator.clipboard.writeText(url);}
   var b=document.querySelector('.ad-share');if(b){var o=b.textContent;b.textContent='Link copied ✓';setTimeout(function(){b.textContent=o;},1500);}
 }
+window.addEventListener('load',function(){try{if(new URLSearchParams(location.search).get('utm_source')==='share'&&window.adTrack)adTrack('shared_answer_viewed',{slug:'what-do-the-dead-sea-scrolls-prove-about-the-bible'});}catch(x){}});
 </script>
   <script src="/analytics.js" defer></script>
   <script src="/ad-nav.js" defer></script>

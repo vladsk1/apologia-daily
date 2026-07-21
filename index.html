@@ -902,10 +902,36 @@
     <h1>Defend Your Faith<br />with <em>Reason & Evidence</em></h1>
     <p class="hero-sub">The serious intellectual platform for Christians. Master the evidence, practise real debates, and grow in confident faith — every single day.</p>
     <div class="hero-actions">
-      <a href="#pricing" class="btn-primary">Begin Your Journey</a>
+      <a href="#homechat" class="btn-primary" onclick="document.getElementById('homechat').scrollIntoView({behavior:'smooth'});return false;">Ask Your Hardest Question</a>
       <a href="#features" class="btn-ghost" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'});return false;">Explore the Platform</a>
     </div>
     <p class="hero-verse">"Always be prepared to give an answer to everyone who asks." — 1 Peter 3:15</p>
+  </section>
+
+  <!-- HOMEPAGE CHAT — the no-account "aha", first thing after the hero -->
+  <section class="homechat" id="homechat">
+    <div class="hc-card">
+      <div class="hc-kick">TRY IT RIGHT NOW &mdash; NO ACCOUNT NEEDED</div>
+      <h2 class="hc-title">Ask the hardest question about Christianity you&rsquo;ve got</h2>
+      <p class="hc-sub">A real answer in seconds &mdash; grounded in classical Christian orthodoxy, gentle in tone, honest about difficulty. Your first two questions are free, no sign-up.</p>
+      <div class="hc-chips">
+        <button class="hc-chip" onclick="hcUse(this)">If God is good, why is there so much suffering?</button>
+        <button class="hc-chip" onclick="hcUse(this)">Hasn&rsquo;t science made God unnecessary?</button>
+        <button class="hc-chip" onclick="hcUse(this)">How do we know Jesus rose from the dead?</button>
+      </div>
+      <div class="hc-row">
+        <input id="hcInput" class="hc-input" placeholder="Type your question&hellip;" maxlength="400" onkeydown="if(event.key==='Enter'){hcAsk();}" />
+        <button class="hc-btn" id="hcBtn" onclick="hcAsk()">Ask</button>
+      </div>
+      <div id="hcAnswer" class="hc-answer" style="display:none"></div>
+      <div id="hcLimit" class="hc-limit" style="display:none">
+        <h4>You&rsquo;ve used today&rsquo;s free questions</h4>
+        <p>Create a free account to keep asking &mdash; and save your conversations, build flashcards, and start the 7-day journey.</p>
+        <a class="hc-cta" href="signup.html">Create your free account &rarr;</a>
+        <span class="hc-login">Already have an account? <a href="login.html">Log in</a> &middot; or come back tomorrow</span>
+      </div>
+      <p class="hc-note">Powered by the same AI as Asked &amp; Answered &middot; <a href="/asked-and-answered.html">open the full experience &rarr;</a></p>
+    </div>
   </section>
 
   <!-- STATS BAR -->
@@ -1083,32 +1109,6 @@
     </div>
   </section>
 
-  <!-- HOMEPAGE CHAT -->
-  <section class="homechat" id="homechat">
-    <div class="hc-card">
-      <div class="hc-kick">TRY IT RIGHT NOW &mdash; NO ACCOUNT NEEDED</div>
-      <h2 class="hc-title">Ask the hardest question about Christianity you&rsquo;ve got</h2>
-      <p class="hc-sub">A real answer in seconds &mdash; grounded in classical Christian orthodoxy, gentle in tone, honest about difficulty. Your first two questions are free, no sign-up.</p>
-      <div class="hc-chips">
-        <button class="hc-chip" onclick="hcUse(this)">If God is good, why is there so much suffering?</button>
-        <button class="hc-chip" onclick="hcUse(this)">Hasn&rsquo;t science made God unnecessary?</button>
-        <button class="hc-chip" onclick="hcUse(this)">How do we know Jesus rose from the dead?</button>
-      </div>
-      <div class="hc-row">
-        <input id="hcInput" class="hc-input" placeholder="Type your question&hellip;" maxlength="400" onkeydown="if(event.key==='Enter'){hcAsk();}" />
-        <button class="hc-btn" id="hcBtn" onclick="hcAsk()">Ask</button>
-      </div>
-      <div id="hcAnswer" class="hc-answer" style="display:none"></div>
-      <div id="hcLimit" class="hc-limit" style="display:none">
-        <h4>You&rsquo;ve used today&rsquo;s free questions</h4>
-        <p>Create a free account to keep asking &mdash; and save your conversations, build flashcards, and start the 7-day journey.</p>
-        <a class="hc-cta" href="signup.html">Create your free account &rarr;</a>
-        <span class="hc-login">Already have an account? <a href="login.html">Log in</a> &middot; or come back tomorrow</span>
-      </div>
-      <p class="hc-note">Powered by the same AI as Asked &amp; Answered &middot; <a href="/asked-and-answered.html">open the full experience &rarr;</a></p>
-    </div>
-  </section>
-
   <!-- BROWSE ANSWERS — in-body links to deep content (crawlable, SEO) -->
   <section class="browse-answers" id="browse">
     <style>
@@ -1194,7 +1194,7 @@
               Linked directly to study resources for each weakness
             </li>
           </ul>
-          <a href="#pricing" class="btn-primary">Try the Arena</a>
+          <a href="signup.html" class="btn-primary">Try the Arena</a>
         </div>
         <div class="arena-visual reveal">
           <div class="arena-vs-bar">
@@ -1438,7 +1438,7 @@
       <h2 class="section-title reveal">Are you ready to <em>defend</em><br />what you believe?</h2>
       <p class="section-sub reveal">Join thousands of Christians building a confident, evidence-based faith — one day at a time.</p>
       <div class="hero-actions reveal">
-        <a href="#pricing" class="btn-primary">Start for Free</a>
+        <a href="signup.html" class="btn-primary">Start for Free</a>
         <a href="#features" class="btn-ghost">See All Features</a>
       </div>
     </div>
@@ -1675,6 +1675,7 @@
   }
   function hcAcctSave(n){ try { localStorage.setItem('ad_askcount', JSON.stringify({ d: hcToday(), n: n })); } catch(e){} }
   function hcShowLimit(loggedIn){
+    try{ if(window.adTrack) adTrack('homechat_wall_hit',{loggedIn:!!loggedIn}); }catch(e){}
     var el = document.getElementById('hcLimit');
     if (loggedIn){
       el.innerHTML = '<h4>You&rsquo;ve used today&rsquo;s 3 free questions</h4>' +
@@ -1735,6 +1736,7 @@
         aEl.parentNode.insertBefore(more, aEl.nextElementSibling);
       }
       if (hitWall){ hcShowLimit(loggedIn); }
+      try{ if(window.adTrack){ adTrack('ai_answer',{source:'homechat',loggedIn:loggedIn}); if(!localStorage.getItem('ad_first_ai_answer')){ localStorage.setItem('ad_first_ai_answer','1'); adTrack('first_ai_answer',{source:'homechat'}); } } }catch(e){}
       inp.value = '';
     } catch(err){
       box.innerHTML = '<button class="hc-close" onclick="hcClose()" aria-label="Close">&times;</button><div class="hc-q">' + hcEsc(q) + '</div><div class="hc-a"><p>Something went wrong on our end \u2014 please try again in a moment, or <a href="/asked-and-answered.html" style="color:var(--gold)">open Asked &amp; Answered</a>.</p></div>';

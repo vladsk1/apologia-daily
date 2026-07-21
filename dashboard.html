@@ -349,6 +349,16 @@
         <span id="today-hero-btn" style="font-family:var(--font-ui);font-size:0.88rem;font-weight:600;background:var(--gold);color:var(--navy-950);padding:11px 26px;border-radius:4px;white-space:nowrap;">Start &rarr;</span>
       </a>
 
+      <!-- Weak-spot one-tap workout (Coach-driven; hidden until there's practice data) -->
+      <a id="weakspot-strip" href="#" style="display:none;align-items:center;gap:1rem;text-decoration:none;background:var(--navy-950);border:1px solid rgba(163,45,45,0.4);border-radius:8px;padding:0.9rem 1.3rem;margin-bottom:0.75rem;transition:border-color 0.15s;flex-wrap:wrap;" onmouseover="this.style.borderColor='#a32d2d'" onmouseout="this.style.borderColor='rgba(163,45,45,0.4)'">
+        <span style="font-size:1.5rem;flex-shrink:0;">&#127919;</span>
+        <div style="flex:1;min-width:200px;">
+          <div style="font-family:var(--font-ui);font-size:0.62rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#e0918f;margin-bottom:2px;">Today&rsquo;s weak-spot workout</div>
+          <div id="weakspot-title" style="font-family:var(--font-serif);font-size:1.15rem;font-weight:700;color:#fff;"></div>
+        </div>
+        <span style="font-family:var(--font-ui);font-size:0.85rem;font-weight:600;background:rgba(255,255,255,0.08);color:#fff;padding:9px 20px;border-radius:4px;white-space:nowrap;">Drill it &rarr;</span>
+      </a>
+
       <!-- Practice row: streak / daily mix / mastery shelf -->
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.75rem;margin-bottom:1.25rem;" id="practice-row">
         <div style="background:var(--navy-950);border:1px solid var(--navy-700);border-radius:8px;padding:0.9rem 1.1rem;display:flex;align-items:center;gap:0.8rem;">
@@ -1725,7 +1735,24 @@ function closeBeltInfo(){ var m = document.getElementById('belt-modal'); if(m) m
   </div>
 </div>
 <script>(function(){try{var p=new URLSearchParams(location.search);if(p.get('nocount')==='1')localStorage.setItem('ad-nocount','1');if(p.get('nocount')==='0')localStorage.removeItem('ad-nocount');if(localStorage.getItem('ad-nocount')==='1')return;}catch(e){}var s=document.createElement('script');s.defer=true;s.src='/_vercel/insights/script.js';document.head.appendChild(s);})();</script>
-  <script>window.addEventListener('load',function(){ try{ if(window.Coach&&Coach.sync) Coach.sync(function(){ try{ var _gf=(typeof getFocus==='function')?getFocus():null; Coach.renderPanel('coach-body'); Coach.renderSkillStrip('coach-skill-strip', _gf?_gf.cat:null); }catch(e){} }); }catch(e){} });</script>
+  <script>
+  function renderWeakSpot(){
+    try{
+      if(!window.Coach||!Coach.prescription) return;
+      var p = Coach.prescription();
+      var strip = document.getElementById('weakspot-strip');
+      var t = document.getElementById('weakspot-title');
+      if(!strip||!t||!p) return;
+      t.textContent = p.name;
+      var span = document.createElement('span');
+      span.style.cssText = 'font-weight:400;color:rgba(255,255,255,0.5);font-size:0.9rem;';
+      span.textContent = ' · ' + Math.round(p.mastery) + '% mastered';
+      t.appendChild(span);
+      strip.setAttribute('href', p.startHref);
+      strip.style.display = 'flex';
+    }catch(e){}
+  }
+  window.addEventListener('load',function(){ try{ if(window.Coach&&Coach.sync) Coach.sync(function(){ try{ var _gf=(typeof getFocus==='function')?getFocus():null; Coach.renderPanel('coach-body'); Coach.renderSkillStrip('coach-skill-strip', _gf?_gf.cat:null); renderWeakSpot(); }catch(e){} }); }catch(e){} });</script>
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
 </body>
