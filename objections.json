@@ -1,0 +1,1357 @@
+{
+  "generated": "tools/build-objections.mjs",
+  "note": "Harvested VERBATIM (reply side) from certified ev-m-*.html mastery pages. Do not hand-edit; re-run the build.",
+  "count": 149,
+  "categories": {
+    "Biblical Reliability": 20,
+    "God's Existence": 24,
+    "Jesus": 42,
+    "Old Testament & Jesus": 1,
+    "Science & Faith": 18,
+    "The Resurrection": 20,
+    "The Trinity": 24
+  },
+  "objections": [
+    {
+      "id": "archaeology-a-skeptic-says-accurate-scenery-doesn-t-make-mir",
+      "arg": "archaeology",
+      "argName": "Archaeological Confirmation of the Bible",
+      "category": "Biblical Reliability",
+      "front": "A skeptic says: \"Accurate scenery doesn’t make miracles true.\"",
+      "back": "Correct, and we don’t claim it does. Confirmation shows the authors are careful, well-informed reporters — not distant myth-makers — which earns the rest a fair hearing.",
+      "source": "ev-m-archaeology.html"
+    },
+    {
+      "id": "archaeology-why-isn-t-this-just-cherry-picking-lucky-hits",
+      "arg": "archaeology",
+      "argName": "Archaeological Confirmation of the Bible",
+      "category": "Biblical Reliability",
+      "front": "Why isn’t this just cherry-picking lucky hits?",
+      "back": "The confirmations are specific and risky — exact, changing official titles (Luke’s \"politarchs\"), named persons, local customs — which chance doesn’t produce; unverified items are mostly things archaeology can’t reach, not tested failures.",
+      "source": "ev-m-archaeology.html"
+    },
+    {
+      "id": "canon-a-skeptic-says-the-books-were-chosen-by-a-vote-a",
+      "arg": "canon",
+      "argName": "The Canon Formation Argument",
+      "category": "Biblical Reliability",
+      "front": "A skeptic says: \"The books were chosen by a vote at Nicaea.\"",
+      "back": "Nicaea (325) was about the deity of Christ, not the canon; it never voted on books. The core was already received as Scripture for over two centuries.",
+      "source": "ev-m-canon.html"
+    },
+    {
+      "id": "coincidences-a-skeptic-says-you-re-just-reading-coincidences-",
+      "arg": "coincidences",
+      "argName": "The Argument from Undesigned Coincidences",
+      "category": "Biblical Reliability",
+      "front": "A skeptic says: \"You’re just reading coincidences in after the fact.\"",
+      "back": "The genuine cases are question-and-answer shaped across separate documents, hard to manufacture; and the argument is cumulative — dozens pulling one way is what truthful independent reporting predicts.",
+      "source": "ev-m-coincidences.html"
+    },
+    {
+      "id": "coincidences-why-don-t-apparent-contradictions-between-gospel",
+      "arg": "coincidences",
+      "argName": "The Argument from Undesigned Coincidences",
+      "category": "Biblical Reliability",
+      "front": "Why don’t apparent contradictions between Gospels sink this argument?",
+      "back": "They actually help: surface tensions show the writers weren’t colluding, while deep unplanned agreement shows real knowledge — together, the profile of multiple genuine witnesses.",
+      "source": "ev-m-coincidences.html"
+    },
+    {
+      "id": "consistency-a-skeptic-says-the-bible-is-full-of-contradictio",
+      "arg": "consistency",
+      "argName": "The Internal Consistency of Scripture",
+      "category": "Biblical Reliability",
+      "front": "A skeptic says: \"The Bible is full of contradictions.\"",
+      "back": "Most are differences of detail and emphasis from independent witnesses, not logical contradictions, and none touches the central storyline the argument rests on.",
+      "source": "ev-m-consistency.html"
+    },
+    {
+      "id": "consistency-why-doesn-t-later-editors-manufactured-the-unity",
+      "arg": "consistency",
+      "argName": "The Internal Consistency of Scripture",
+      "category": "Biblical Reliability",
+      "front": "Why doesn’t \"later editors manufactured the unity\" defeat the argument?",
+      "back": "Editing can smooth wording but cannot retroactively plant a coherent, forward-looking storyline into documents written centuries apart by uncoordinated authors.",
+      "source": "ev-m-consistency.html"
+    },
+    {
+      "id": "deadseascrolls-a-skeptic-says-the-scrolls-are-full-of-variants",
+      "arg": "deadseascrolls",
+      "argName": "The Dead Sea Scrolls and Old Testament Reliability",
+      "category": "Biblical Reliability",
+      "front": "A skeptic says: \"The Scrolls are full of variants\"",
+      "back": "The variants are real but trivial — spelling, word order, copyist slips. Almost none touch meaning or doctrine. Their character confirms faithful transmission.",
+      "source": "ev-m-deadseascrolls.html"
+    },
+    {
+      "id": "deadseascrolls-why-isn-t-qumran-was-a-fringe-sect-a-problem",
+      "arg": "deadseascrolls",
+      "argName": "The Dead Sea Scrolls and Old Testament Reliability",
+      "category": "Biblical Reliability",
+      "front": "Why isn’t \"Qumran was a fringe sect\" a problem?",
+      "back": "Many Qumran scrolls are proto-Masoretic, and non-Essene finds at Masada and the Bar Kokhba caves match the same standard text. It wasn’t a sectarian quirk.",
+      "source": "ev-m-deadseascrolls.html"
+    },
+    {
+      "id": "earlydate-a-skeptic-says-mark-13-predicts-the-temple-s-fal",
+      "arg": "earlydate",
+      "argName": "The Early Date of the New Testament",
+      "category": "Biblical Reliability",
+      "front": "A skeptic says Mark 13 predicts the Temple’s fall, proving a post-70 date. Reply?",
+      "back": "That only follows if you assume prediction is impossible; the text is vague on how it fell, and the NT never mentions the destruction as past — fitting a pre-70 date.",
+      "source": "ev-m-earlydate.html"
+    },
+    {
+      "id": "earlydate-how-early-is-the-1-corinthians-15-creed-and-why-",
+      "arg": "earlydate",
+      "argName": "The Early Date of the New Testament",
+      "category": "Biblical Reliability",
+      "front": "How early is the 1 Corinthians 15 creed, and why does it matter?",
+      "back": "Scholars across the spectrum date it to within a few years of the crucifixion — so the resurrection claim is foundational, not a late legend.",
+      "source": "ev-m-earlydate.html"
+    },
+    {
+      "id": "earlydate-why-does-the-silence-of-acts-suggest-an-early-da",
+      "arg": "earlydate",
+      "argName": "The Early Date of the New Testament",
+      "category": "Biblical Reliability",
+      "front": "Why does the silence of Acts suggest an early date?",
+      "back": "Acts never reports the deaths of Paul, Peter, or James, nor the AD 70 fall of Jerusalem — events Luke would surely include if writing later.",
+      "source": "ev-m-earlydate.html"
+    },
+    {
+      "id": "eyewitnesses-a-skeptic-says-the-gospels-are-anonymous-reply",
+      "arg": "eyewitnesses",
+      "argName": "The Reliability of the Gospel Eyewitnesses",
+      "category": "Biblical Reliability",
+      "front": "A skeptic says the Gospels are anonymous. Reply?",
+      "back": "Anonymity in the text isn’t anonymity of origin: the titles are early and uniform with no rival names, and the texts embed their own named eyewitness sources.",
+      "source": "ev-m-eyewitnesses.html"
+    },
+    {
+      "id": "jewishness-a-skeptic-says-a-jewish-author-just-wrote-a-jewi",
+      "arg": "jewishness",
+      "argName": "The Argument from the Jewishness of Jesus",
+      "category": "Biblical Reliability",
+      "front": "A skeptic says: \"A Jewish author just wrote a Jewish character\"",
+      "back": "That explains the flavor, not the frictions — the untranslated Aramaic, baffling disputes, and against-interest sayings point to memory, not skilled invention.",
+      "source": "ev-m-jewishness.html"
+    },
+    {
+      "id": "jewishness-why-does-the-pre-70-ad-detail-matter-against-a-l",
+      "arg": "jewishness",
+      "argName": "The Argument from the Jewishness of Jesus",
+      "category": "Biblical Reliability",
+      "front": "Why does the \"pre-70 AD\" detail matter against a late forger?",
+      "back": "The texture assumes a functioning temple and live Sadducee–Pharisee disputes that the Jewish War of 66–70 erased. A later writer would betray anachronisms; the Gospels get the vanished world right.",
+      "source": "ev-m-jewishness.html"
+    },
+    {
+      "id": "manuscript-a-skeptic-says-there-are-more-variants-than-word",
+      "arg": "manuscript",
+      "argName": "The Manuscript Reliability Argument",
+      "category": "Biblical Reliability",
+      "front": "A skeptic says: \"There are more variants than words in the NT.\"",
+      "back": "More manuscripts mechanically produce more variants. The overwhelming majority are spelling, word order, and obvious slips; even Ehrman concedes no central doctrine rests on a disputed reading.",
+      "source": "ev-m-manuscript.html"
+    },
+    {
+      "id": "manuscript-why-isn-t-transmission-a-game-of-telephone",
+      "arg": "manuscript",
+      "argName": "The Manuscript Reliability Argument",
+      "category": "Biblical Reliability",
+      "front": "Why isn’t transmission a \"game of telephone\"?",
+      "back": "Telephone is one chain heard once. Manuscripts branch into independent lines across regions and languages, so each corruption is checked against the others.",
+      "source": "ev-m-manuscript.html"
+    },
+    {
+      "id": "names-what-is-the-disambiguation-clue-and-why-does-it-",
+      "arg": "names",
+      "argName": "The Argument from Palestinian Names",
+      "category": "Biblical Reliability",
+      "front": "What is the disambiguation clue, and why does it matter?",
+      "back": "So many shared a few names that people were distinguished by patronymics, places, or nicknames (Simon Bar-Jonah, Joseph of Arimathea). The Gospels apply this to exactly the over-common names — as real Palestinians did.",
+      "source": "ev-m-names.html"
+    },
+    {
+      "id": "names-why-isn-t-a-later-author-just-researched-the-nam",
+      "arg": "names",
+      "argName": "The Argument from Palestinian Names",
+      "category": "Biblical Reliability",
+      "front": "Why isn’t \"a later author just researched the names\" a good objection?",
+      "back": "There were no ancient name-frequency tables. Matching the relative ratios and the nicknaming of over-common names is statistical research no first/second-century writer could do.",
+      "source": "ev-m-names.html"
+    },
+    {
+      "id": "prophecy-why-isn-t-jesus-just-deliberately-fulfilled-them",
+      "arg": "prophecy",
+      "argName": "The Argument from Fulfilled Prophecy in the Old Testament",
+      "category": "Biblical Reliability",
+      "front": "Why isn’t \"Jesus just deliberately fulfilled them\" a good objection?",
+      "back": "The decisive prophecies are beyond a person’s control — birthplace, ancestry, manner of execution, soldiers casting lots, burial in a rich man’s tomb.",
+      "source": "ev-m-prophecy.html"
+    },
+    {
+      "id": "beauty-beauty-is-purely-subjective",
+      "arg": "beauty",
+      "argName": "The Argument from Beauty",
+      "category": "God's Existence",
+      "front": "Beauty is purely subjective.",
+      "back": "Some is taste-relative, but the deepest beauty shows cross-cultural convergence and we treat it as discovered - we say someone lacks taste or grows in it. That objective core is what the argument needs.",
+      "source": "ev-m-beauty.html"
+    },
+    {
+      "id": "beauty-why-does-evolution-not-fully-explain-beauty",
+      "arg": "beauty",
+      "argName": "The Argument from Beauty",
+      "category": "God's Existence",
+      "front": "Why does evolution not fully explain beauty?",
+      "back": "It may explain mate-symmetry preferences, but overshoots wildly for the surplus - weeping at a requiem, finding a proof elegant, awe at a useless sunset. That disinterested surplus fits theism, not fitness.",
+      "source": "ev-m-beauty.html"
+    },
+    {
+      "id": "consciousness-consciousness-is-just-emergence-like-wetness",
+      "arg": "consciousness",
+      "argName": "The Argument from Consciousness",
+      "category": "God's Existence",
+      "front": "Consciousness is just emergence, like wetness.",
+      "back": "Wetness is weakly emergent - explicable from molecules. Consciousness is strongly emergent - the parts give no clue why experience appears. Emergent names the mystery, not the solution.",
+      "source": "ev-m-consciousness.html"
+    },
+    {
+      "id": "consciousness-why-does-theism-predict-consciousness",
+      "arg": "consciousness",
+      "argName": "The Argument from Consciousness",
+      "category": "God's Existence",
+      "front": "Why does theism predict consciousness?",
+      "back": "On naturalism you must get mind from mindless matter (the hard problem). On theism you start with Mind, and finite minds are exactly what a conscious Creator would produce.",
+      "source": "ev-m-consciousness.html"
+    },
+    {
+      "id": "desire-the-longing-is-just-unmet-needs",
+      "arg": "desire",
+      "argName": "The Argument from Desire",
+      "category": "God's Existence",
+      "front": "The longing is just unmet needs.",
+      "back": "It persists after every need is met - love, success, security, and still the ache remains, sharpest when we are most satisfied. Met drives should quiet, not point beyond themselves.",
+      "source": "ev-m-desire.html"
+    },
+    {
+      "id": "desire-wish-fulfilment",
+      "arg": "desire",
+      "argName": "The Argument from Desire",
+      "category": "God's Existence",
+      "front": "Wish-fulfilment.",
+      "back": "Genetic fallacy - wanting heaven does not make it false. And the datum is the desire itself: why are we built with a hunger nothing in the world can feed?",
+      "source": "ev-m-desire.html"
+    },
+    {
+      "id": "evil-evil-is-an-evolved-aversion",
+      "arg": "evil",
+      "argName": "The Problem of Evil as Evidence for God",
+      "category": "God's Existence",
+      "front": "Evil is an evolved aversion.",
+      "back": "That explains the feeling of revulsion, not the fact that genocide is truly wrong. If evil is mere aversion, the torturer is not mistaken, just wired differently - which no one believes.",
+      "source": "ev-m-evil.html"
+    },
+    {
+      "id": "evil-evil-is-just-harm-or-suffering",
+      "arg": "evil",
+      "argName": "The Problem of Evil as Evidence for God",
+      "category": "God's Existence",
+      "front": "Evil is just harm or suffering.",
+      "back": "Harm is descriptive; calling it evil is normative - it ought not be. Naturalism can describe suffering but not ground the ought-not-ness that makes it evil.",
+      "source": "ev-m-evil.html"
+    },
+    {
+      "id": "finetuning-why-does-the-multiverse-not-cleanly-defeat-fine-",
+      "arg": "finetuning",
+      "argName": "The Fine-Tuning Argument",
+      "category": "God's Existence",
+      "front": "Why does the multiverse not cleanly defeat fine-tuning?",
+      "back": "It is unobserved; the inflation that would generate it is itself fine-tuned; and it predicts we should see far smaller ordered patches than we do.",
+      "source": "ev-m-finetuning.html"
+    },
+    {
+      "id": "kalam-a-skeptic-asks-what-caused-god",
+      "arg": "kalam",
+      "argName": "The Kalam Cosmological Argument",
+      "category": "God's Existence",
+      "front": "A skeptic asks: \"What caused God?\"",
+      "back": "P1 only applies to things that BEGIN to exist. God never began, so He falls outside the premise. It’s principled, not special pleading.",
+      "source": "ev-m-kalam.html"
+    },
+    {
+      "id": "kalam-why-isn-t-particles-from-the-quantum-vacuum-a-co",
+      "arg": "kalam",
+      "argName": "The Kalam Cosmological Argument",
+      "category": "God's Existence",
+      "front": "Why isn’t \"particles from the quantum vacuum\" a counterexample to P1?",
+      "back": "The quantum vacuum is not nothing — it’s structured energy governed by laws. So those particles do have a cause.",
+      "source": "ev-m-kalam.html"
+    },
+    {
+      "id": "kalam-why-must-the-first-cause-be-personal-not-a-mecha",
+      "arg": "kalam",
+      "argName": "The Kalam Cosmological Argument",
+      "category": "God's Existence",
+      "front": "Why must the first cause be personal, not a mechanism?",
+      "back": "A changeless, timeless cause could only produce a temporal effect by a free act of will. That points to a mind — agent causation.",
+      "source": "ev-m-kalam.html"
+    },
+    {
+      "id": "leibniz-explaining-each-part-explains-the-whole",
+      "arg": "leibniz",
+      "argName": "The Leibniz Contingency Argument",
+      "category": "God's Existence",
+      "front": "Explaining each part explains the whole.",
+      "back": "Even an infinite chain of contingent causes is itself contingent. Why this chain rather than none? The whole series still needs a non-contingent ground.",
+      "source": "ev-m-leibniz.html"
+    },
+    {
+      "id": "leibniz-the-universe-is-just-a-brute-fact",
+      "arg": "leibniz",
+      "argName": "The Leibniz Contingency Argument",
+      "category": "God's Existence",
+      "front": "The universe is just a brute fact.",
+      "back": "A brute fact is a refusal to explain, not an explanation. We accept it nowhere else, so exempting only the universe is arbitrary - the taxicab fallacy.",
+      "source": "ev-m-leibniz.html"
+    },
+    {
+      "id": "leibniz-why-must-the-necessary-being-be-more-than-a-numb",
+      "arg": "leibniz",
+      "argName": "The Leibniz Contingency Argument",
+      "category": "God's Existence",
+      "front": "Why must the necessary being be more than a number?",
+      "back": "Abstract objects are causally impotent - a number cannot cause a universe. The ground of contingent reality must be able to cause, and plausibly chooses - so it is a mind, not a number.",
+      "source": "ev-m-leibniz.html"
+    },
+    {
+      "id": "moral-why-does-evolution-not-ground-morality",
+      "arg": "moral",
+      "argName": "The Moral Argument",
+      "category": "God's Existence",
+      "front": "Why does evolution not ground morality?",
+      "back": "It may explain why we have moral feelings, not whether any are true. If ought is just a survival trick it has no binding authority - that debunks morality, not grounds it.",
+      "source": "ev-m-moral.html"
+    },
+    {
+      "id": "ontological-what-is-the-strongest-objection",
+      "arg": "ontological",
+      "argName": "The Ontological Argument",
+      "category": "God's Existence",
+      "front": "What is the strongest objection?",
+      "back": "The reverse possibility claim (possibly no maximally great being), which would make God impossible. So the argument cannot coerce - it is as strong as the possibility premise, which shifts the burden.",
+      "source": "ev-m-ontological.html"
+    },
+    {
+      "id": "reason-false-beliefs-get-you-killed",
+      "arg": "reason",
+      "argName": "The Argument from Reason",
+      "category": "God's Existence",
+      "front": "False beliefs get you killed.",
+      "back": "Selection acts on behaviour, which depends on belief and desire together. Many belief-desire pairs yield the same survival behaviour, so true belief is not guaranteed.",
+      "source": "ev-m-reason.html"
+    },
+    {
+      "id": "reason-this-is-self-refuting",
+      "arg": "reason",
+      "argName": "The Argument from Reason",
+      "category": "God's Existence",
+      "front": "This is self-refuting.",
+      "back": "It is conditional: reason is unreliable if naturalism is true. The conclusion is to reject naturalism, not reason - so we can keep trusting the reason we cannot avoid using.",
+      "source": "ev-m-reason.html"
+    },
+    {
+      "id": "religious-different-religions-contradict",
+      "arg": "religious",
+      "argName": "The Argument from Religious Experience",
+      "category": "God's Existence",
+      "front": "Different religions contradict.",
+      "back": "Conflict over interpretation does not erase the convergent core - a transcendent, holy, personal reality. Eyewitnesses disagreeing on details does not mean nothing happened.",
+      "source": "ev-m-religious.html"
+    },
+    {
+      "id": "religious-it-is-just-brain-chemistry",
+      "arg": "religious",
+      "argName": "The Argument from Religious Experience",
+      "category": "God's Existence",
+      "front": "It is just brain chemistry.",
+      "back": "Every experience has a neural correlate, including seeing a tree. A brain mechanism does not show the experience is false - a receiver having circuitry does not mean there is no signal.",
+      "source": "ev-m-religious.html"
+    },
+    {
+      "id": "religious-it-is-wish-fulfilment",
+      "arg": "religious",
+      "argName": "The Argument from Religious Experience",
+      "category": "God's Existence",
+      "front": "It is wish-fulfilment.",
+      "back": "Genetic fallacy - wanting a belief does not make it false. And much religious experience is unwelcome: convicting, fearful, demanding - a poor fit for comfort-projection.",
+      "source": "ev-m-religious.html"
+    },
+    {
+      "id": "thomistic-why-can-the-per-se-series-not-be-infinite",
+      "arg": "thomistic",
+      "argName": "The Thomistic Cosmological Argument",
+      "category": "God's Existence",
+      "front": "Why can the per se series not be infinite?",
+      "back": "Its later members are mere instruments with no power of their own. An infinite series of instruments with no first source explains nothing - like an endless paintbrush with no painter.",
+      "source": "ev-m-thomistic.html"
+    },
+    {
+      "id": "thomistic-why-is-this-not-just-the-kalam",
+      "arg": "thomistic",
+      "argName": "The Thomistic Cosmological Argument",
+      "category": "God's Existence",
+      "front": "Why is this not just the Kalam?",
+      "back": "Kalam is about a temporal beginning. The Thomistic argument is about here-and-now dependence - what sustains things in existence right now, even if the universe were eternal.",
+      "source": "ev-m-thomistic.html"
+    },
+    {
+      "id": "daniel70-a-window-is-not-an-identification",
+      "arg": "daniel70",
+      "argName": "Daniel's 70 Weeks",
+      "category": "Jesus",
+      "front": "A window is not an identification.",
+      "back": "Daniel supplies the deadline; the fit supplies the rest - one figure hailed Messiah, cut off not for himself, sequel on schedule, which he himself predicted.",
+      "source": "ev-m-daniel70.html"
+    },
+    {
+      "id": "daniel70-daniel-was-written-in-165-bc",
+      "arg": "daniel70",
+      "argName": "Daniel's 70 Weeks",
+      "category": "Jesus",
+      "front": "Daniel was written in 165 BC.",
+      "back": "Take the date as a gift - still two centuries before an Anointed One cut off and the 70 AD destruction. On the critics own dating, the prediction stays a prediction.",
+      "source": "ev-m-daniel70.html"
+    },
+    {
+      "id": "earlycreed-early-belief-is-not-an-early-event",
+      "arg": "earlycreed",
+      "argName": "The Early Creed of 1 Corinthians 15",
+      "category": "Jesus",
+      "front": "Early belief is not an early event.",
+      "back": "Right - it eliminates LEGEND. What remains must explain a checkable public claim in Jerusalem with named living witnesses, converting enemies like Paul and James.",
+      "source": "ev-m-earlycreed.html"
+    },
+    {
+      "id": "earlycreed-paul-never-mentions-the-empty-tomb",
+      "arg": "earlycreed",
+      "argName": "The Early Creed of 1 Corinthians 15",
+      "category": "Jesus",
+      "front": "Paul never mentions the empty tomb.",
+      "back": "Buried then RAISED is an emptied grave in Jewish categories - what goes down comes up. Paul argues bodily resurrection for the whole chapter.",
+      "source": "ev-m-earlycreed.html"
+    },
+    {
+      "id": "earlycreed-why-is-this-argument-an-engine-for-others",
+      "arg": "earlycreed",
+      "argName": "The Early Creed of 1 Corinthians 15",
+      "category": "Jesus",
+      "front": "Why is this argument an engine for others?",
+      "back": "Minimal facts, the appearances, multiple attestation - all draw their early dating from this creed. Master it once, deploy it everywhere.",
+      "source": "ev-m-earlycreed.html"
+    },
+    {
+      "id": "hands-but-jesus-grows-prays-and-does-not-know-the-hour",
+      "arg": "hands",
+      "argName": "The HANDS Framework",
+      "category": "Jesus",
+      "front": "But Jesus grows, prays, and does not know the hour.",
+      "back": "Hebrews 1:3 holds both in one verse - the upholder of the universe made purification for sins. The counter-lines describe what the Son took on; HANDS describes what he never ceased to be.",
+      "source": "ev-m-hands.html"
+    },
+    {
+      "id": "hands-the-right-hand-means-he-is-not-god",
+      "arg": "hands",
+      "argName": "The HANDS Framework",
+      "category": "Jesus",
+      "front": "The right hand means he is NOT God.",
+      "back": "Two persons - which is Trinitarianism. But God shares his throne with no creature, and Revelation puts the Lamb ON the one throne receiving every creatures worship. The seat distinguishes persons and includes the Son in the identity.",
+      "source": "ev-m-hands.html"
+    },
+    {
+      "id": "hands-why-is-the-convergence-the-argument",
+      "arg": "hands",
+      "argName": "The HANDS Framework",
+      "category": "Jesus",
+      "front": "Why is the CONVERGENCE the argument?",
+      "back": "Any one line can be quibbled. Five independent lines - each reserved for God alone in Judaism - converging on one figure must be explained whole. No other figure in the literature scores even two.",
+      "source": "ev-m-hands.html"
+    },
+    {
+      "id": "hands-worship-just-means-homage-to-kings",
+      "arg": "hands",
+      "argName": "The HANDS Framework",
+      "category": "Jesus",
+      "front": "Worship just means homage to kings.",
+      "back": "The NT runs the test itself - Peter refuses the gesture, Revelations angel refuses it twice: worship God! The risen Jesus accepts it in heaven from every creature.",
+      "source": "ev-m-hands.html"
+    },
+    {
+      "id": "hist_jesus-he-is-another-dying-rising-god",
+      "arg": "hist_jesus",
+      "argName": "The Historical Existence of Jesus",
+      "category": "Jesus",
+      "front": "He is another dying-rising god.",
+      "back": "The parallels collapse - rock-born Mithras, underworld Osiris. Jesus is anchored to a named governor and living memory; myths float in once-upon-a-time.",
+      "source": "ev-m-hist_jesus.html"
+    },
+    {
+      "id": "hist_jesus-the-josephus-passage-is-forged",
+      "arg": "hist_jesus",
+      "argName": "The Historical Existence of Jesus",
+      "category": "Jesus",
+      "front": "The Josephus passage is forged.",
+      "back": "Partly retouched, yes - but a Josephan core remains, the Arabic version is neutral, and the second James reference is undisputed. Tacitus stands regardless.",
+      "source": "ev-m-hist_jesus.html"
+    },
+    {
+      "id": "hist_jesus-why-is-the-silence-of-ancient-critics-evidence",
+      "arg": "hist_jesus",
+      "argName": "The Historical Existence of Jesus",
+      "category": "Jesus",
+      "front": "Why is the silence of ancient critics evidence?",
+      "back": "Celsus and the Talmud attack Jesus as sorcerer and deceiver - never as nonexistent. The easiest refutation was unavailable to those closest to the facts.",
+      "source": "ev-m-hist_jesus.html"
+    },
+    {
+      "id": "jesus_as_god_nt-john-1-1-should-read-a-god",
+      "arg": "jesus_as_god_nt",
+      "argName": "Jesus as God in the New Testament",
+      "category": "Jesus",
+      "front": "John 1:1 should read a god.",
+      "back": "The article-less predicate marks quality - the Word was God by nature. Verse 3 seals it: all created things came through him, so he is not in the created column.",
+      "source": "ev-m-jesus_as_god_nt.html"
+    },
+    {
+      "id": "jesus_as_god_nt-nicaea-invented-the-deity",
+      "arg": "jesus_as_god_nt",
+      "argName": "Jesus as God in the New Testament",
+      "category": "Jesus",
+      "front": "Nicaea invented the deity.",
+      "back": "Ignatius calls Jesus our God in 107; Pliny reports hymns to Christ as God in 112. Nicaea defined terms for a worship already two centuries old.",
+      "source": "ev-m-jesus_as_god_nt.html"
+    },
+    {
+      "id": "jesus_as_god_nt-the-father-is-greater-than-i",
+      "arg": "jesus_as_god_nt",
+      "argName": "Jesus as God in the New Testament",
+      "category": "Jesus",
+      "front": "The Father is greater than I.",
+      "back": "Two registers on purpose - truly man, so he prays and hungers; truly God, so he creates and forgives. Greater is the sent ones deference, beside I and the Father are one.",
+      "source": "ev-m-jesus_as_god_nt.html"
+    },
+    {
+      "id": "jesus_claims-drop-john-and-the-claims-vanish",
+      "arg": "jesus_claims",
+      "argName": "Did Jesus Claim to Be God",
+      "category": "Jesus",
+      "front": "Drop John and the claims vanish.",
+      "back": "Mark alone has sin-forgiveness, Sabbath lordship, the sea stilled, and the blasphemy trial. John makes explicit what the Synoptics show in action.",
+      "source": "ev-m-jesus_claims.html"
+    },
+    {
+      "id": "jesus_claims-he-never-says-i-am-god",
+      "arg": "jesus_claims",
+      "argName": "Did Jesus Claim to Be God",
+      "category": "Jesus",
+      "front": "He never says I am God.",
+      "back": "That sentence would claim to be the Father. He claimed deity in his worlds categories - I AM, forgiving sins, Daniel 7 - and the stones and the verdict prove it was heard.",
+      "source": "ev-m-jesus_claims.html"
+    },
+    {
+      "id": "jesus_claims-why-does-the-blasphemy-verdict-matter",
+      "arg": "jesus_claims",
+      "argName": "Did Jesus Claim to Be God",
+      "category": "Jesus",
+      "front": "Why does the blasphemy verdict matter?",
+      "back": "Mere messiah claims were not blasphemy - bar Kokhba was never so tried. The robes tore at a man seating himself beside the Power on the clouds.",
+      "source": "ev-m-jesus_claims.html"
+    },
+    {
+      "id": "jesuschar-why-does-liar-fail",
+      "arg": "jesuschar",
+      "argName": "The Character of Jesus",
+      "category": "Jesus",
+      "front": "Why does liar fail?",
+      "back": "The lie was maximally unstrategic - blasphemy in monotheistic Judaism - and bought him poverty and crucifixion he walked toward. Con men profit and flee.",
+      "source": "ev-m-jesuschar.html"
+    },
+    {
+      "id": "jesuschar-why-does-lunatic-fail",
+      "arg": "jesuschar",
+      "argName": "The Character of Jesus",
+      "category": "Jesus",
+      "front": "Why does lunatic fail?",
+      "back": "Grandiose god-delusion shows somewhere - fragility, incoherence, collapse under pressure. Instead: integrated, brilliant under traps, praying for executioners under torture.",
+      "source": "ev-m-jesuschar.html"
+    },
+    {
+      "id": "jesuschar-why-is-great-moral-teacher-not-an-option",
+      "arg": "jesuschar",
+      "argName": "The Character of Jesus",
+      "category": "Jesus",
+      "front": "Why is great moral teacher not an option?",
+      "back": "A mere man claiming to forgive all sins and judge all nations is not a great teacher - he is the problem. The claims remove the comfortable middle.",
+      "source": "ev-m-jesuschar.html"
+    },
+    {
+      "id": "john11-the-greek-says-a-god",
+      "arg": "john11",
+      "argName": "John 1:1 and the Pre-existence of Christ",
+      "category": "Jesus",
+      "front": "The Greek says a god.",
+      "back": "The article-less predicate ascribes nature, not a second deity - and John, a monotheist, could not write of a god. Verse 3 closes the loophole regardless.",
+      "source": "ev-m-john11.html"
+    },
+    {
+      "id": "john11-why-can-the-word-not-be-a-created-being",
+      "arg": "john11",
+      "argName": "John 1:1 and the Pre-existence of Christ",
+      "category": "Jesus",
+      "front": "Why can the Word not be a created being?",
+      "back": "Verse 3: all things were made through him, and nothing made was made without him. The maker of all made things cannot be among the made things.",
+      "source": "ev-m-john11.html"
+    },
+    {
+      "id": "messianic_prophecy-isaiah-53-is-about-israel",
+      "arg": "messianic_prophecy",
+      "argName": "Messianic Prophecy \\u2014 the Statistical Case",
+      "category": "Jesus",
+      "front": "Isaiah 53 is about Israel.",
+      "back": "The servant there suffers FOR Israel, is innocent, and dies - fits no nation. Pre-Christian Jewish sources, including the Targum, read it messianically.",
+      "source": "ev-m-messianic_prophecy.html"
+    },
+    {
+      "id": "messianic_prophecy-the-writers-shaped-the-story-to-fit",
+      "arg": "messianic_prophecy",
+      "argName": "Messianic Prophecy \\u2014 the Statistical Case",
+      "category": "Jesus",
+      "front": "The writers shaped the story to fit.",
+      "back": "It fails for facts enemies concede - the crucifixion is attested by Tacitus - and for fulfilments the church found embarrassing, like a crucified messiah.",
+      "source": "ev-m-messianic_prophecy.html"
+    },
+    {
+      "id": "multiatt-all-the-sources-are-christian",
+      "arg": "multiatt",
+      "argName": "The Criterion of Multiple Attestation",
+      "category": "Jesus",
+      "front": "All the sources are Christian.",
+      "back": "Tacitus and Josephus are not. And historians test interested sources, not discard them - or the whole ancient world disappears.",
+      "source": "ev-m-multiatt.html"
+    },
+    {
+      "id": "multiatt-the-gospels-copied-each-other",
+      "arg": "multiatt",
+      "argName": "The Criterion of Multiple Attestation",
+      "category": "Jesus",
+      "front": "The Gospels copied each other.",
+      "back": "The criterion counts streams, not books - the copying is mapped, which lets us isolate the independent lines. Mark, John, Paul, and Tacitus alone outgun most ancient events.",
+      "source": "ev-m-multiatt.html"
+    },
+    {
+      "id": "phil2-form-of-god-means-image-like-adam",
+      "arg": "phil2",
+      "argName": "The Philippians 2 Hymn",
+      "category": "Jesus",
+      "front": "Form of God means image, like Adam.",
+      "back": "The verbs kill it - he EMPTIED himself by TAKING servant form and BEING BORN. Adam never pre-existed his humanity. And no Adam typology earns the Isaiah 45 oath.",
+      "source": "ev-m-phil2.html"
+    },
+    {
+      "id": "phil2-kyrios-just-means-sir",
+      "arg": "phil2",
+      "argName": "The Philippians 2 Hymn",
+      "category": "Jesus",
+      "front": "Kyrios just means sir.",
+      "back": "The hymn quotes Isaiah 45:23, where kyrios renders YHWH in the oath being cited. Every knee bowing is the divine prerogative of the no-other-God chapter.",
+      "source": "ev-m-phil2.html"
+    },
+    {
+      "id": "phil2-why-does-the-early-date-matter-so-much",
+      "arg": "phil2",
+      "argName": "The Philippians 2 Hymn",
+      "category": "Jesus",
+      "front": "Why does the early date matter so much?",
+      "back": "It removes the time legend needs. The highest Christology - full deity worship by monotheistic Jews - is among the EARLIEST evidence, not the latest.",
+      "source": "ev-m-phil2.html"
+    },
+    {
+      "id": "respred-after-three-days-vs-the-third-day",
+      "arg": "respred",
+      "argName": "The Resurrection Predictions",
+      "category": "Jesus",
+      "front": "After three days vs the third day.",
+      "back": "Inclusive reckoning - parts of days counted; the idioms were interchangeable (Esther uses both for one interval). Matthew keeps both without anxiety.",
+      "source": "ev-m-respred.html"
+    },
+    {
+      "id": "respred-the-church-wrote-predictions-in-afterward",
+      "arg": "respred",
+      "argName": "The Resurrection Predictions",
+      "category": "Jesus",
+      "front": "The church wrote predictions in afterward.",
+      "back": "Then it sabotaged itself - inventing predictions while recording that no one believed them. And the trial charge plus guard request show the saying circulating beforehand.",
+      "source": "ev-m-respred.html"
+    },
+    {
+      "id": "respred-why-does-a-prediction-change-the-evidential-pict",
+      "arg": "respred",
+      "argName": "The Resurrection Predictions",
+      "category": "Jesus",
+      "front": "Why does a PREDICTION change the evidential picture?",
+      "back": "Post-hoc claims can be shaped; predictions are time-stamped tests. With enemies guarding the tomb, the empty tomb becomes a verdict on a staked wager.",
+      "source": "ev-m-respred.html"
+    },
+    {
+      "id": "titles-jesus-never-plainly-said-i-am-god",
+      "arg": "titles",
+      "argName": "The Titles of Jesus",
+      "category": "Jesus",
+      "front": "Jesus never plainly said I am God.",
+      "back": "Saying that would mean I am the Father. He claimed deity the way his categories allowed - YHWH titles, prerogatives, and name - and was stoned at and executed for exactly that claim.",
+      "source": "ev-m-titles.html"
+    },
+    {
+      "id": "titles-kyrios-was-common-even-for-caesar",
+      "arg": "titles",
+      "argName": "The Titles of Jesus",
+      "category": "Jesus",
+      "front": "Kyrios was common, even for Caesar.",
+      "back": "The first Christians moved YHWH-verses onto Jesus - calling on the name of the LORD in Joel becomes calling on Jesus in Romans 10:13. You do not relocate scripture for politeness.",
+      "source": "ev-m-titles.html"
+    },
+    {
+      "id": "titles-why-does-the-church-not-inventing-son-of-man-mat",
+      "arg": "titles",
+      "argName": "The Titles of Jesus",
+      "category": "Jesus",
+      "front": "Why does the church not inventing Son of Man matter?",
+      "back": "It appears about 80 times on Jesus lips and almost never in the epistles - a title the church did not use is a title the church did not invent.",
+      "source": "ev-m-titles.html"
+    },
+    {
+      "id": "titles-why-is-son-of-man-a-divine-title",
+      "arg": "titles",
+      "argName": "The Titles of Jesus",
+      "category": "Jesus",
+      "front": "Why is Son of Man a DIVINE title?",
+      "back": "Daniel 7: he rides the clouds - YHWH-only transport - receives worship-service and an everlasting kingdom. Jesus claims it verbatim at his trial.",
+      "source": "ev-m-titles.html"
+    },
+    {
+      "id": "uniqueness-cognitive-dissonance-invented-it",
+      "arg": "uniqueness",
+      "argName": "The Uniqueness of the Resurrection Claim",
+      "category": "Jesus",
+      "front": "Cognitive dissonance invented it.",
+      "back": "Dissonance predicts conventional swerves - spiritualise, recalculate, new messiah - the moves other failed movements made. It does not predict an unprecedented checkable costly claim.",
+      "source": "ev-m-uniqueness.html"
+    },
+    {
+      "id": "uniqueness-why-does-jewish-expectation-fail-as-the-parent",
+      "arg": "uniqueness",
+      "argName": "The Uniqueness of the Resurrection Claim",
+      "category": "Jesus",
+      "front": "Why does Jewish expectation fail as the parent?",
+      "back": "Resurrection meant EVERYONE at the END of history. One man raised mid-history was not a variant - it broke the structure. And a crucified Messiah was Torah-cursed.",
+      "source": "ev-m-uniqueness.html"
+    },
+    {
+      "id": "virginbirth-almah-is-a-mistranslation",
+      "arg": "virginbirth",
+      "argName": "The Virgin Birth and Isaiah 7:14",
+      "category": "Jesus",
+      "front": "Almah is a mistranslation.",
+      "back": "Jewish translators chose parthenos two centuries before Christ - Matthew inherited a Jewish reading. And Luke attests the event without citing Isaiah - the verse did not generate the belief.",
+      "source": "ev-m-virginbirth.html"
+    },
+    {
+      "id": "virginbirth-copied-from-pagan-divine-births",
+      "arg": "virginbirth",
+      "argName": "The Virgin Birth and Isaiah 7:14",
+      "category": "Jesus",
+      "front": "Copied from pagan divine births.",
+      "back": "Pagan versions are god-impregnation tales producing demigods. The Gospels have no union at all - the Spirit overshadows, creational and Jewish. Monotheists do not borrow the motif they most despise.",
+      "source": "ev-m-virginbirth.html"
+    },
+    {
+      "id": "virginbirth-the-sign-was-for-ahaz",
+      "arg": "virginbirth",
+      "argName": "The Virgin Birth and Isaiah 7:14",
+      "category": "Jesus",
+      "front": "The sign was for Ahaz.",
+      "back": "Grant the near horizon - then follow the pattern to Isaiah 9: the child called Mighty God on Davids throne forever. Matthews fulfil is pattern-completion, standard Jewish exegesis.",
+      "source": "ev-m-virginbirth.html"
+    },
+    {
+      "id": "typology-why-is-typology-confirmatory-not-a-probability-p",
+      "arg": "typology",
+      "argName": "Typology: Christ in the Old Testament",
+      "category": "Old Testament & Jesus",
+      "front": "Why is typology confirmatory, not a probability proof?",
+      "back": "Unlike a prediction (checkable in advance by comparing a dated text to a later event), a type is recognized in hindsight, in the light of the resurrection. It proves nothing by odds. For those who already trust the resurrection it supplies coherence - the sense that one authorial hand shaped the whole story.",
+      "source": "ev-m-typology.html"
+    },
+    {
+      "id": "bigbang-a-skeptic-says-the-big-bang-is-just-where-our-ph",
+      "arg": "bigbang",
+      "argName": "The Argument from the Big Bang",
+      "category": "Science & Faith",
+      "front": "A skeptic says the Big Bang is just where our physics breaks down, not a real beginning. Your reply?",
+      "back": "The BGV theorem is independent of the singularity and of pre-Planck physics — any universe expanding on average has a past boundary, even in quantum-gravity models. The beginning survives.",
+      "source": "ev-m-bigbang.html"
+    },
+    {
+      "id": "bigbang-how-does-the-multiverse-eternal-inflation-object",
+      "arg": "bigbang",
+      "argName": "The Argument from the Big Bang",
+      "category": "Science & Faith",
+      "front": "How does the multiverse / eternal inflation objection fail to remove the beginning?",
+      "back": "BGV applies to inflating multiverses too: if average expansion > 0, spacetime has a past boundary. Vilenkin himself says there are no known models of this kind that avoid a beginning — it’s just pushed up a level.",
+      "source": "ev-m-bigbang.html"
+    },
+    {
+      "id": "bigbang-why-must-the-cause-be-personal-not-an-impersonal",
+      "arg": "bigbang",
+      "argName": "The Argument from the Big Bang",
+      "category": "Science & Faith",
+      "front": "Why must the cause be personal, not an impersonal mechanism?",
+      "back": "A timeless mechanical cause with sufficient conditions would yield an eternal effect. Since the universe began a finite time ago, a timeless cause producing a temporal effect points to a free agent — agent causation.",
+      "source": "ev-m-bigbang.html"
+    },
+    {
+      "id": "cambrian-a-skeptic-says-the-ancestors-just-weren-t-fossil",
+      "arg": "cambrian",
+      "argName": "The Cambrian Explosion",
+      "category": "Science & Faith",
+      "front": "A skeptic says: \"The ancestors just weren’t fossilized.\" Your reply?",
+      "back": "The Precambrian record isn’t blank — we find soft-bodied microfossils and embryos. What’s missing is the graded series of intermediate body plans the gradual story predicts.",
+      "source": "ev-m-cambrian.html"
+    },
+    {
+      "id": "cambrian-why-doesn-t-evo-devo-and-gene-regulatory-network",
+      "arg": "cambrian",
+      "argName": "The Cambrian Explosion",
+      "category": "Science & Faith",
+      "front": "Why doesn’t \"evo-devo and gene regulatory networks\" solve it?",
+      "back": "Those describe the machinery, not the origin of the information. The core regulatory networks are highly resistant to change — perturb them early and you get death, not a new phylum.",
+      "source": "ev-m-cambrian.html"
+    },
+    {
+      "id": "cambrian-why-is-this-not-a-god-of-the-gaps-argument",
+      "arg": "cambrian",
+      "argName": "The Cambrian Explosion",
+      "category": "Science & Faith",
+      "front": "Why is this not a god-of-the-gaps argument?",
+      "back": "It’s a positive inference: the only known cause of large amounts of functional, specified information is a mind. It’s inference to the best explanation, not an appeal to ignorance.",
+      "source": "ev-m-cambrian.html"
+    },
+    {
+      "id": "cosmic-a-skeptic-says-entropy-means-the-universe-runs-d",
+      "arg": "cosmic",
+      "argName": "The Argument from Cosmic Purposiveness",
+      "category": "Science & Faith",
+      "front": "A skeptic says: \"Entropy means the universe runs down, not up.\" Reply?",
+      "back": "True — and that’s what makes the local rise telling. Against an entropy-increasing background, the cosmos reliably builds islands of staggering order: life, brains, reason.",
+      "source": "ev-m-cosmic.html"
+    },
+    {
+      "id": "cosmic-why-does-purposiveness-point-to-a-mind-premise-2",
+      "arg": "cosmic",
+      "argName": "The Argument from Cosmic Purposiveness",
+      "category": "Science & Faith",
+      "front": "Why does purposiveness point to a mind (Premise 2)?",
+      "back": "Aiming at a not-yet-existing good (final causation) is the signature of intention. Mindless matter pushes from behind; only minds pull toward ends held in view.",
+      "source": "ev-m-cosmic.html"
+    },
+    {
+      "id": "cosmic-why-doesn-t-natural-selection-dissolve-the-argum",
+      "arg": "cosmic",
+      "argName": "The Argument from Cosmic Purposiveness",
+      "category": "Science & Faith",
+      "front": "Why doesn’t natural selection dissolve the argument?",
+      "back": "Selection presupposes self-replicating life, stable laws, and a complexity-rewarding cosmos. It explains adaptation within the directional process, not why there’s a directional cosmos at all.",
+      "source": "ev-m-cosmic.html"
+    },
+    {
+      "id": "laws-a-skeptic-says-laws-are-just-descriptions-not-pr",
+      "arg": "laws",
+      "argName": "The Argument from the Laws of Nature",
+      "category": "Science & Faith",
+      "front": "A skeptic says: \"Laws are just descriptions, not prescriptions — no lawgiver needed.\" Your reply?",
+      "back": "Grant it: even if laws are descriptive, the deep question remains why nature shows such pervasive, precise, unified order at all. Calling it brute regularity restates the fact; theism explains it.",
+      "source": "ev-m-laws.html"
+    },
+    {
+      "id": "laws-why-doesn-t-a-multiverse-remove-the-need-for-a-l",
+      "arg": "laws",
+      "argName": "The Argument from the Laws of Nature",
+      "category": "Science & Faith",
+      "front": "Why doesn’t a multiverse remove the need for a Lawgiver?",
+      "back": "A multiverse still needs an orderly law-generating mechanism, pushing the question back; and it only explains life-permitting values, not the rational intelligibility and elegance of law itself.",
+      "source": "ev-m-laws.html"
+    },
+    {
+      "id": "laws-why-isn-t-the-laws-are-just-brute-facts-a-good-p",
+      "arg": "laws",
+      "argName": "The Argument from the Laws of Nature",
+      "category": "Science & Faith",
+      "front": "Why isn’t \"the laws are just brute facts\" a good place to stop?",
+      "back": "Stopping there is a choice, not a discovery. A self-existent rational Mind is a more natural terminus than an unexplained, finely-structured set of equations that could have been otherwise.",
+      "source": "ev-m-laws.html"
+    },
+    {
+      "id": "mathematics-why-doesn-t-mathematical-platonism-remove-the-ne",
+      "arg": "mathematics",
+      "argName": "The Argument from Mathematics",
+      "category": "Science & Faith",
+      "front": "Why doesn’t mathematical Platonism remove the need for God?",
+      "back": "It deepens the puzzle — how do causally-inert abstracta govern concrete physics, and why can our minds access them? Theism unifies abstract truth, physical order, and rational minds in one source.",
+      "source": "ev-m-mathematics.html"
+    },
+    {
+      "id": "originlife-a-skeptic-says-this-is-just-a-god-of-the-gaps-ar",
+      "arg": "originlife",
+      "argName": "The Origin of Life Argument",
+      "category": "Science & Faith",
+      "front": "A skeptic says: \"This is just a god-of-the-gaps argument.\"",
+      "back": "It’s an inference to a KNOWN cause: intelligence is the only observed source of specified information. It argues from what we do know and is defeasible by a demonstrated mechanism.",
+      "source": "ev-m-originlife.html"
+    },
+    {
+      "id": "originlife-why-can-t-natural-selection-build-the-first-info",
+      "arg": "originlife",
+      "argName": "The Origin of Life Argument",
+      "category": "Science & Faith",
+      "front": "Why can’t natural selection build the first information?",
+      "back": "Natural selection needs accurate self-replication to already exist — the very thing being explained. And self-organizing order (like crystals) is low-information repetition, not aperiodic specified information.",
+      "source": "ev-m-originlife.html"
+    },
+    {
+      "id": "originlife-why-doesn-t-given-enough-time-and-trials-rescue-",
+      "arg": "originlife",
+      "argName": "The Origin of Life Argument",
+      "category": "Science & Faith",
+      "front": "Why doesn’t \"given enough time and trials\" rescue the chance explanation?",
+      "back": "The universe’s probabilistic resources are finite (~10^80 particles, ~10^17 seconds). The improbability of a single functional fold can exceed every trial the cosmos could ever run.",
+      "source": "ev-m-originlife.html"
+    },
+    {
+      "id": "privileged-answer-copernicus-proved-earth-isn-t-special",
+      "arg": "privileged",
+      "argName": "The Privileged Planet Argument",
+      "category": "Science & Faith",
+      "front": "Answer: \"Copernicus proved Earth isn’t special.\"",
+      "back": "He moved Earth from the center; he didn’t show it was insignificant. \"Not central\" ≠ \"not significant.\" And it took our clear vantage to discover the Copernican fact in the first place.",
+      "source": "ev-m-privileged.html"
+    },
+    {
+      "id": "privileged-why-doesn-t-the-anthropic-principle-defeat-the-a",
+      "arg": "privileged",
+      "argName": "The Privileged Planet Argument",
+      "category": "Science & Faith",
+      "front": "Why doesn’t the anthropic principle defeat the argument?",
+      "back": "It explains why we find ourselves somewhere habitable, not why that same place is also great for science. Life needs a livable world, not a measurable one — so the correlation survives.",
+      "source": "ev-m-privileged.html"
+    },
+    {
+      "id": "appearances-it-was-bereavement-visions",
+      "arg": "appearances",
+      "argName": "The Resurrection Appearances",
+      "category": "The Resurrection",
+      "front": "It was bereavement visions.",
+      "back": "Grief visions are private, brief, and known to be visions. These were collective, interactive, included non-grievers, and produced the claim bodily risen.",
+      "source": "ev-m-appearances.html"
+    },
+    {
+      "id": "appearances-the-500-is-legendary-exaggeration",
+      "arg": "appearances",
+      "argName": "The Resurrection Appearances",
+      "category": "The Resurrection",
+      "front": "The 500 is legendary exaggeration.",
+      "back": "It sits in the earliest source with the most checkable line attached - most are still alive. An invitation to verify, issued while verification was possible.",
+      "source": "ev-m-appearances.html"
+    },
+    {
+      "id": "appearances-the-gospel-accounts-conflict",
+      "arg": "appearances",
+      "argName": "The Resurrection Appearances",
+      "category": "The Resurrection",
+      "front": "The Gospel accounts conflict.",
+      "back": "Core agreement with varied detail is the signature of independent testimony. Collusion harmonises; witnesses differ at the edges.",
+      "source": "ev-m-appearances.html"
+    },
+    {
+      "id": "burial-crucified-men-were-never-buried",
+      "arg": "burial",
+      "argName": "The Argument from the Burial",
+      "category": "The Resurrection",
+      "front": "Crucified men were never buried.",
+      "back": "Judea was the documented exception - Josephus on sunset burial, Philo on Roman deference, and the Yehohanan ossuary as physical proof.",
+      "source": "ev-m-burial.html"
+    },
+    {
+      "id": "burial-pilate-would-refuse-the-body",
+      "arg": "burial",
+      "argName": "The Argument from the Burial",
+      "category": "The Resurrection",
+      "front": "Pilate would refuse the body.",
+      "back": "Passover crowds plus the sunset command made release the safe move - and Philo and Josephus attest exactly such flexibility.",
+      "source": "ev-m-burial.html"
+    },
+    {
+      "id": "burial-why-does-joseph-of-arimathea-resist-invention",
+      "arg": "burial",
+      "argName": "The Argument from the Burial",
+      "category": "The Resurrection",
+      "front": "Why does Joseph of Arimathea resist invention?",
+      "back": "A named member of the condemning court honours Jesus while the disciples hide - embarrassing, checkable against a known council, and never contradicted.",
+      "source": "ev-m-burial.html"
+    },
+    {
+      "id": "disciplesbelief-cognitive-dissonance-explains-it",
+      "arg": "disciplesbelief",
+      "argName": "Why the Disciples Believed",
+      "category": "The Resurrection",
+      "front": "Cognitive dissonance explains it.",
+      "back": "Dissonance reinterprets; it does not invent a checkable physical claim in the city of the tomb. Failed-prophecy groups fade; this one grew under persecution.",
+      "source": "ev-m-disciplesbelief.html"
+    },
+    {
+      "id": "disciplesbelief-fanatics-die-for-falsehoods-all-the-time",
+      "arg": "disciplesbelief",
+      "argName": "Why the Disciples Believed",
+      "category": "The Resurrection",
+      "front": "Fanatics die for falsehoods all the time.",
+      "back": "Modern martyrs die for second-hand beliefs. The disciples died for what they said they saw - eyewitnesses cannot be sincerely mistaken about a shared meal.",
+      "source": "ev-m-disciplesbelief.html"
+    },
+    {
+      "id": "emptytomb-paul-never-mentions-the-empty-tomb",
+      "arg": "emptytomb",
+      "argName": "The Empty Tomb",
+      "category": "The Resurrection",
+      "front": "Paul never mentions the empty tomb.",
+      "back": "The creed runs died, buried, raised, appeared. For a Jew, raised after buried just IS an emptied grave - stating it would be redundant.",
+      "source": "ev-m-emptytomb.html"
+    },
+    {
+      "id": "emptytomb-victims-of-crucifixion-were-not-buried",
+      "arg": "emptytomb",
+      "argName": "The Empty Tomb",
+      "category": "The Resurrection",
+      "front": "Victims of crucifixion were not buried.",
+      "back": "Josephus says Judean practice buried even the crucified before sunset, and the bones of Yehohanan - a crucified man in a family tomb - prove it archaeologically.",
+      "source": "ev-m-emptytomb.html"
+    },
+    {
+      "id": "emptytomb-why-does-joseph-of-arimathea-matter",
+      "arg": "emptytomb",
+      "argName": "The Empty Tomb",
+      "category": "The Resurrection",
+      "front": "Why does Joseph of Arimathea matter?",
+      "back": "A named member of the court that condemned Jesus buries him honourably - too embarrassing to invent, easy for enemies to falsify, and never denied.",
+      "source": "ev-m-emptytomb.html"
+    },
+    {
+      "id": "minimal-extraordinary-claims-need-extraordinary-evidence",
+      "arg": "minimal",
+      "argName": "The Minimal Facts Argument",
+      "category": "The Resurrection",
+      "front": "Extraordinary claims need extraordinary evidence.",
+      "back": "The slogan assumes atheism in advance. Weigh explanations by scope and power: resurrection covers every fact; each rival fails at least one.",
+      "source": "ev-m-minimal.html"
+    },
+    {
+      "id": "minimal-sincere-belief-proves-nothing",
+      "arg": "minimal",
+      "argName": "The Minimal Facts Argument",
+      "category": "The Resurrection",
+      "front": "Sincere belief proves nothing.",
+      "back": "One believer, maybe. Groups, enemies, and a sceptical brother across varied settings, plus an unrefuted empty tomb - no psychological account covers it all.",
+      "source": "ev-m-minimal.html"
+    },
+    {
+      "id": "paul-he-only-saw-a-light-not-a-body",
+      "arg": "paul",
+      "argName": "The Conversion of Paul",
+      "category": "The Resurrection",
+      "front": "He only saw a light, not a body.",
+      "back": "As a Pharisee, resurrection meant body - he argues it at length in 1 Corinthians 15 and lists his appearance alongside those to Peter and the Twelve.",
+      "source": "ev-m-paul.html"
+    },
+    {
+      "id": "paul-it-was-guilt-driven-psychology",
+      "arg": "paul",
+      "argName": "The Conversion of Paul",
+      "category": "The Resurrection",
+      "front": "It was guilt-driven psychology.",
+      "back": "Paul reports zealous good conscience, not guilt - blameless under the law. The theory invents the very data it needs.",
+      "source": "ev-m-paul.html"
+    },
+    {
+      "id": "paul-why-is-paul-called-a-hostile-witness",
+      "arg": "paul",
+      "argName": "The Conversion of Paul",
+      "category": "The Resurrection",
+      "front": "Why is Paul called a hostile witness?",
+      "back": "He was actively persecuting the church - arrests, approval of executions - when he converted. Every bias he had ran against belief.",
+      "source": "ev-m-paul.html"
+    },
+    {
+      "id": "postresurrection-heavens-gate-proves-sincere-people-die-for-nonse",
+      "arg": "postresurrection",
+      "argName": "Post-Resurrection Behaviour",
+      "category": "The Resurrection",
+      "front": "Heavens Gate proves sincere people die for nonsense.",
+      "back": "They died for secondhand doctrine; the apostles died as eyewitnesses to checkable events. Sincerity eliminates fraud and forces the question of what they saw.",
+      "source": "ev-m-postresurrection.html"
+    },
+    {
+      "id": "postresurrection-sunday-worship-came-from-constantine",
+      "arg": "postresurrection",
+      "argName": "Post-Resurrection Behaviour",
+      "category": "The Resurrection",
+      "front": "Sunday worship came from Constantine.",
+      "back": "First-day gatherings are inside the New Testament - Acts 20, 1 Corinthians 16 - among Jews, centuries before Constantine, tied to the day the tomb was found empty.",
+      "source": "ev-m-postresurrection.html"
+    },
+    {
+      "id": "postresurrection-why-is-conduct-strong-evidence",
+      "arg": "postresurrection",
+      "argName": "Post-Resurrection Behaviour",
+      "category": "The Resurrection",
+      "front": "Why is conduct strong evidence?",
+      "back": "It is expensive to fake. Anyone can assert; sustaining costly public behaviour for decades under flogging and execution tracks genuine conviction.",
+      "source": "ev-m-postresurrection.html"
+    },
+    {
+      "id": "sceptics-two-converts-prove-nothing",
+      "arg": "sceptics",
+      "argName": "The Conversion of the Sceptics",
+      "category": "The Resurrection",
+      "front": "Two converts prove nothing.",
+      "back": "Quality over quantity: contemporaries, hostile, positioned to check the facts personally, each citing an appearance, each dying for it.",
+      "source": "ev-m-sceptics.html"
+    },
+    {
+      "id": "analogies-isn-t-light-from-light-a-creedal-endorsement-of-",
+      "arg": "analogies",
+      "argName": "Why Every Trinity Analogy Fails",
+      "category": "The Trinity",
+      "front": "Isn’t \"Light from Light\" a creedal endorsement of the sun analogy?",
+      "back": "No - the creed borrows light only for the Son’s co-eternity (radiance is never absent from its source) and leaves it. Pressed further, the Son becomes a dependent emanation (Arianism) or an impersonal mode (modalism).",
+      "source": "ev-m-analogies.html"
+    },
+    {
+      "id": "early_church_trinity-constantine-imposed-it",
+      "arg": "early_church_trinity",
+      "argName": "The Trinity in the Early Church",
+      "category": "The Trinity",
+      "front": "Constantine imposed it.",
+      "back": "He did not care which formula won, drifted Arian, was baptised by an Arian - and the empire enforced ARIANISM for decades after, exiling Athanasius five times. The doctrine won the argument while losing the politics.",
+      "source": "ev-m-early_church_trinity.html"
+    },
+    {
+      "id": "early_church_trinity-homoousios-is-philosophy-not-scripture",
+      "arg": "early_church_trinity",
+      "argName": "The Trinity in the Early Church",
+      "category": "The Trinity",
+      "front": "Homoousios is philosophy not scripture.",
+      "back": "A borrowed word guarding a biblical claim - the one term Arian exegesis could not absorb while affirming the Word was God. Translation, not replacement.",
+      "source": "ev-m-early_church_trinity.html"
+    },
+    {
+      "id": "eternal_generation-psalm-2-dates-the-begetting-today",
+      "arg": "eternal_generation",
+      "argName": "The Eternal Generation of the Son",
+      "category": "The Trinity",
+      "front": "Psalm 2 dates the begetting - TODAY.",
+      "back": "Enthronement declaration - a status ANNOUNCED; Acts 13 applies it to the resurrection as public appointing of the Son-in-power. You can only enthrone today one who is already the Son.",
+      "source": "ev-m-eternal_generation.html"
+    },
+    {
+      "id": "eternal_generation-why-not-drop-it-as-speculation",
+      "arg": "eternal_generation",
+      "argName": "The Eternal Generation of the Son",
+      "category": "The Trinity",
+      "front": "Why not drop it as speculation?",
+      "back": "Drop it and the Father BECAME a father, or the Son is a creature - and God-is-love loses its eternal object. The capstone holds the whole tracks claims together.",
+      "source": "ev-m-eternal_generation.html"
+    },
+    {
+      "id": "holy_spirit-it-is-just-personification-like-lady-wisdom",
+      "arg": "holy_spirit",
+      "argName": "The Deity and Personhood of the Holy Spirit",
+      "category": "The Trinity",
+      "front": "\"it is just personification, like Lady Wisdom.\"",
+      "back": "Wisdom is never lied to as God, never apportions gifts by will, is never set as an equal in the baptismal name, and never speaks to redirect a mission. The figure leaves a personal remainder it was not built to hold.",
+      "source": "ev-m-holy_spirit.html"
+    },
+    {
+      "id": "modalism-isaiah-9-6-calls-the-son-everlasting-father",
+      "arg": "modalism",
+      "argName": "Answering Modalism",
+      "category": "The Trinity",
+      "front": "Isaiah 9:6 calls the Son Everlasting Father.",
+      "back": "Father of Eternity - Semitic idiom for source and possessor, a ROLE title beside Prince of Peace. The persons are distinct; the perfections - eternity included - are shared.",
+      "source": "ev-m-modalism.html"
+    },
+    {
+      "id": "nt_trinity-the-word-trinity-is-not-in-the-bible",
+      "arg": "nt_trinity",
+      "argName": "The Trinity in the New Testament",
+      "category": "The Trinity",
+      "front": "The word Trinity is not in the Bible.",
+      "back": "Neither is monotheism or omnipotence. Labels summarise data - and the data is there: one God, three persons.",
+      "source": "ev-m-nt_trinity.html"
+    },
+    {
+      "id": "nt_trinity-why-does-each-rival-fail",
+      "arg": "nt_trinity",
+      "argName": "The Trinity in the New Testament",
+      "category": "The Trinity",
+      "front": "Why does each rival fail?",
+      "back": "Unitarianism deletes the deity texts; tritheism deletes the one-God texts; modalism deletes the distinction texts. The Trinity keeps ALL the data.",
+      "source": "ev-m-nt_trinity.html"
+    },
+    {
+      "id": "ot_trinity-let-us-make-is-the-royal-we",
+      "arg": "ot_trinity",
+      "argName": "Old Testament Foundations of the Trinity",
+      "category": "The Trinity",
+      "front": "Let us make is the royal we.",
+      "back": "Unattested for Hebrew verbs - kings say I. And the angel reading fails: man is in GODS image alone, and Isaiah 44:24 says YHWH created ALONE.",
+      "source": "ev-m-ot_trinity.html"
+    },
+    {
+      "id": "ot_trinity-the-angel-is-just-an-envoy",
+      "arg": "ot_trinity",
+      "argName": "Old Testament Foundations of the Trinity",
+      "category": "The Trinity",
+      "front": "The Angel is just an envoy.",
+      "back": "Envoys speak for kings; they do not accept worship - true angels refuse it (Rev 19:10) - or bear the Name (Ex 23:21). The texts blur what convention keeps crisp.",
+      "source": "ev-m-ot_trinity.html"
+    },
+    {
+      "id": "ot_trinity-why-does-the-two-powers-evidence-matter",
+      "arg": "ot_trinity",
+      "argName": "Old Testament Foundations of the Trinity",
+      "category": "The Trinity",
+      "front": "Why does the two-powers evidence matter?",
+      "back": "Rabbinic literature combats two-powers readings - proof the TEXTS generated the puzzle inside Judaism, before and apart from the church.",
+      "source": "ev-m-ot_trinity.html"
+    },
+    {
+      "id": "philosophical_trinity-all-the-analogies-fail",
+      "arg": "philosophical_trinity",
+      "argName": "The Philosophical Defence of the Trinity",
+      "category": "The Trinity",
+      "front": "All the analogies fail.",
+      "back": "They fail where creaturely categories run out - which the doctrine predicts. Physics keeps wave-particle data without a working picture; we keep revelations data the same way.",
+      "source": "ev-m-philosophical_trinity.html"
+    },
+    {
+      "id": "philosophical_trinity-mystery-is-just-contradiction-renamed",
+      "arg": "philosophical_trinity",
+      "argName": "The Philosophical Defence of the Trinity",
+      "category": "The Trinity",
+      "front": "Mystery is just contradiction renamed.",
+      "back": "Contradiction is statable - X and not-X. The doctrine never produces that form. Mystery is truth above our reach; contradiction is falsehood within it.",
+      "source": "ev-m-philosophical_trinity.html"
+    },
+    {
+      "id": "philosophical_trinity-why-is-the-trinity-needed-for-god-is-love",
+      "arg": "philosophical_trinity",
+      "argName": "The Philosophical Defence of the Trinity",
+      "category": "The Trinity",
+      "front": "Why is the Trinity needed for God IS love?",
+      "back": "A solitary God had no one to love before creation - love becomes acquired, dependent on creatures. Eternal Father-Son-Spirit love makes 1 John 4:8 true from eternity.",
+      "source": "ev-m-philosophical_trinity.html"
+    },
+    {
+      "id": "shema-through-whom-mere-instrument",
+      "arg": "shema",
+      "argName": "The Shema and the Trinity",
+      "category": "The Trinity",
+      "front": "Through whom = mere instrument.",
+      "back": "Isaiah 44:24 - YHWH ALONE stretched out the heavens. The one through whom ALL things came cannot be among the things.",
+      "source": "ev-m-shema.html"
+    },
+    {
+      "id": "shema-why-can-one-lord-not-mean-a-lesser-being",
+      "arg": "shema",
+      "argName": "The Shema and the Trinity",
+      "category": "The Trinity",
+      "front": "Why can one Lord not mean a lesser being?",
+      "back": "Kyrios in the quoted creed IS the divine name, and the chapter opposes many gods and many lords. A created creator-lord would be the idolatry Paul is refuting.",
+      "source": "ev-m-shema.html"
+    },
+    {
+      "id": "shema-why-does-who-said-it-matter",
+      "arg": "shema",
+      "argName": "The Shema and the Trinity",
+      "category": "The Trinity",
+      "front": "Why does WHO said it matter?",
+      "back": "A first-generation Pharisee handling Judaisms most protected sentence - not a fourth-century council. The Trinity is monotheism kept.",
+      "source": "ev-m-shema.html"
+    },
+    {
+      "id": "trinity_islam-the-trinity-is-shirk",
+      "arg": "trinity_islam",
+      "argName": "Answering Islam on the Trinity",
+      "category": "The Trinity",
+      "front": "The Trinity is shirk.",
+      "back": "Shirk is elevating CREATURES beside the Creator. The Trinity puts no creature in God - it describes what the one God eternally IS. Whether oneness excludes persons is the question; tawhid asserts, it does not argue.",
+      "source": "ev-m-trinity_islam.html"
+    },
+    {
+      "id": "trinity_islam-what-was-the-mihna-and-why-does-it-matter",
+      "arg": "trinity_islam",
+      "argName": "Answering Islam on the Trinity",
+      "category": "The Trinity",
+      "front": "What was the Mihna and why does it matter?",
+      "back": "The 833-848 inquisition over whether the Quran is created. Sunni orthodoxy settled: UNCREATED. Islam itself affirms an eternal divine Word - the conceptual door to John 1:1.",
+      "source": "ev-m-trinity_islam.html"
+    },
+    {
+      "id": "trinity_islam-word-just-means-the-command-be",
+      "arg": "trinity_islam",
+      "argName": "Answering Islam on the Trinity",
+      "category": "The Trinity",
+      "front": "Word just means the command Be.",
+      "back": "4:171 calls Jesus HIS WORD - a title, not a process; Adam, made by the same command, never gets it. And is Be itself created? The dilemma returns either way.",
+      "source": "ev-m-trinity_islam.html"
+    },
+    {
+      "id": "trinity_jw-the-father-is-greater-than-i",
+      "arg": "trinity_jw",
+      "argName": "Answering the Watchtower",
+      "category": "The Trinity",
+      "front": "The Father is greater than I.",
+      "back": "Spoken by the Son INCARNATE - made lower than the angels FOR A LITTLE WHILE (Heb 2:9). Greater is position, not nature - same Gospel: I and the Father are one.",
+      "source": "ev-m-trinity_jw.html"
+    },
+    {
+      "id": "trinity_mormons-the-fathers-taught-theosis",
+      "arg": "trinity_mormons",
+      "argName": "Answering Mormonism on the Trinity",
+      "category": "The Trinity",
+      "front": "The fathers taught theosis.",
+      "back": "Patristic theosis keeps the Creator/creature line - glorified creatures by grace, never same-species gods, and God NEVER progressed from manhood. Shared word, opposite doctrine.",
+      "source": "ev-m-trinity_mormons.html"
+    },
+    {
+      "id": "trinity_mormons-ye-are-gods-psalm-82",
+      "arg": "trinity_mormons",
+      "argName": "Answering Mormonism on the Trinity",
+      "category": "The Trinity",
+      "front": "Ye are gods, Psalm 82.",
+      "back": "Read to the end - the gods are condemned to DIE like men; a demotion scene. Jesus cites it about word-flexibility while claiming categorically more - hence the stones.",
+      "source": "ev-m-trinity_mormons.html"
+    }
+  ]
+}
