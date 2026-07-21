@@ -563,6 +563,22 @@
     let quizResults = [];
     const TOTAL_QUESTIONS = 5;
 
+    // ── TOPIC MODE ── a category-specific practice quiz (e.g. launched from a study
+    // plan via ?cat=god). Draws only from that topic's categories, is NOT subject to
+    // the once-a-day lock, and does not affect the daily streak.
+    const TOPIC_MAP = {
+      god: ["God's Existence","Philosophy of Religion","Cosmology","The Moral Argument","Science & Faith","Famous Arguments","Philosophy","The Problem of Evil"],
+      resurrection: ["The Resurrection","The Early Creed"],
+      jesus: ["Historical Jesus","Old Testament & Jesus","Messianic Prophecy","The Trinity"],
+      bible: ["Bible Reliability","Textual Criticism","Manuscript Evidence","New Testament Scholarship","Hermeneutics","Scripture","Historical Method"],
+      islam: ["Islamic Apologetics","Islamic Scholarship","World Religions"],
+      worldviews: ["Worldviews","World Religions","Islamic Apologetics","The Trinity"]
+    };
+    const TOPIC_LABEL = { god:"God's Existence", resurrection:"The Resurrection", jesus:"Jesus & His Claims", bible:"Bible Reliability", islam:"Islam", worldviews:"Worldviews" };
+    let TOPIC = '';
+    try { TOPIC = (new URLSearchParams(location.search).get('cat') || '').toLowerCase(); } catch(e) {}
+    const topicCats = TOPIC_MAP[TOPIC] || null;
+
     // ── DIFFICULTY ──
     function setDifficulty(diff) {
       difficulty = diff;
@@ -603,6 +619,27 @@
     function loadQuiz() {
       const today = new Date().toDateString();
       const completed = JSON.parse(localStorage.getItem('quizCompleted') || '[]');
+
+      if (topicCats) {
+        var _ds = document.getElementById('diff-selector'); if (_ds) _ds.style.display = 'none';
+        var tpool = [];
+        ['beginner','intermediate','expert'].forEach(function(d){ (questions[d]||[]).forEach(function(q){ if (topicCats.indexOf(q.category) !== -1) tpool.push(q); }); });
+        var epochDayT = Math.floor(new Date().setHours(0,0,0,0)/86400000);
+        var tseed = 53; for (var ci=0; ci<TOPIC.length; ci++) tseed = (tseed*31 + TOPIC.charCodeAt(ci))|0;
+        var cLen = Math.max(1, Math.floor(tpool.length / TOTAL_QUESTIONS));
+        var cyc = Math.floor(epochDayT / cLen), posT = epochDayT % cLen;
+        var rndT = mulberry32(cyc * 2654435761 + tseed);
+        var permT = tpool.slice();
+        for (var pi = permT.length - 1; pi > 0; pi--) { var pj = Math.floor(rndT() * (pi + 1)); var tmp = permT[pi]; permT[pi] = permT[pj]; permT[pj] = tmp; }
+        todayQuestions = permT.slice(posT * TOTAL_QUESTIONS, posT * TOTAL_QUESTIONS + TOTAL_QUESTIONS);
+        if (todayQuestions.length < TOTAL_QUESTIONS) todayQuestions = permT.slice(0, TOTAL_QUESTIONS);
+        var _lbl = TOPIC_LABEL[TOPIC] || 'Practice';
+        var _eb = document.querySelector('.quiz-eyebrow'); if (_eb) _eb.textContent = 'Practice Quiz';
+        var _tt = document.querySelector('.quiz-title'); if (_tt) _tt.innerHTML = 'Practice: <em>' + _lbl + '</em>';
+        var _sb = document.querySelector('.quiz-sub'); if (_sb) _sb.textContent = 'Five questions on ' + _lbl + '. This one is practice \u2014 it doesn\u2019t affect your daily streak.';
+        currentQ = 0; score = 0; quizResults = []; showQuestion();
+        return;
+      }
 
       if (completed.includes(today)) {
         const savedScore = localStorage.getItem('quizScore_' + today) || '0';
@@ -700,9 +737,11 @@
     function showResults() {
     if (window.showJourneyComplete) window.showJourneyComplete('You finished the Daily Quiz. Great progress!');
       const today = new Date().toDateString();
-      const completed = JSON.parse(localStorage.getItem('quizCompleted') || '[]');
-      if (!completed.includes(today)) { completed.push(today); localStorage.setItem('quizCompleted', JSON.stringify(completed)); }
-      localStorage.setItem('quizScore_' + today, score);
+      if (!topicCats) {
+        const completed = JSON.parse(localStorage.getItem('quizCompleted') || '[]');
+        if (!completed.includes(today)) { completed.push(today); localStorage.setItem('quizCompleted', JSON.stringify(completed)); }
+        localStorage.setItem('quizScore_' + today, score);
+      }
 
       /* Coach capture — record per-category quiz accuracy as signals */
       try{

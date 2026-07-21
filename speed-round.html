@@ -384,6 +384,9 @@ const ALL_QUESTIONS = {
 
 let gameMode = 'classic';
 let gameDiff = 'beginner';
+const SR_TOPIC_MAP = { god:["God's Existence","Science & Faith"], science:["Science & Faith"], resurrection:["The Resurrection"], jesus:["Jesus"], bible:["Biblical Reliability"] };
+let SR_TOPIC = ''; try { SR_TOPIC = (new URLSearchParams(location.search).get('cat')||'').toLowerCase(); } catch(e){}
+const SR_TOPIC_CATS = SR_TOPIC_MAP[SR_TOPIC] || null;
 let questions = [];
 let currentQ = 0;
 let score = 0;
@@ -426,7 +429,14 @@ function shuffle(arr) {
 }
 
 function startGame() {
-  const pool = ALL_QUESTIONS[gameDiff] || ALL_QUESTIONS.beginner;
+  let pool;
+  if (SR_TOPIC_CATS) {
+    pool = [];
+    ['beginner','intermediate','expert'].forEach(function(d){ (ALL_QUESTIONS[d]||[]).forEach(function(q){ if (SR_TOPIC_CATS.indexOf(q.cat) !== -1) pool.push(q); }); });
+    if (!pool.length) pool = ALL_QUESTIONS[gameDiff] || ALL_QUESTIONS.beginner;
+  } else {
+    pool = ALL_QUESTIONS[gameDiff] || ALL_QUESTIONS.beginner;
+  }
   questions = shuffle(pool).slice(0, gameMode === 'blitz' ? pool.length : 20);
   currentQ = 0;
   score = 0;
