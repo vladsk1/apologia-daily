@@ -283,6 +283,64 @@
       try { window.adTrack('pwa_installed', {}); } catch (x) {}
     });
 
+    /* iOS install — Safari on iPhone/iPad never fires `beforeinstallprompt`,
+       so the button above can't reach them. Instead show a one-time, dismissible
+       banner telling them the manual "Share → Add to Home Screen" steps. Only
+       Safari can do this on iOS (Chrome/Firefox/Edge for iOS cannot), and only
+       when not already installed. Respects the same engagement gate + a sticky
+       dismissal so we never nag. */
+    function adIsIOS() {
+      var ua = navigator.userAgent || '';
+      var dev = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+      var iPadOS = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1; // iPadOS 13+ poses as Mac
+      return dev || iPadOS;
+    }
+    function adIsStandalone() {
+      return (window.navigator.standalone === true) ||
+             (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
+    }
+    function adIsIOSSafari() {
+      var ua = navigator.userAgent || '';
+      return adIsIOS() && /Safari/.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS|GSA/.test(ua);
+    }
+    function adShowIOSInstall() {
+      if (document.getElementById('ad-ios-install')) return;
+      try { if (localStorage.getItem('ad_ios_install_dismissed')) return; } catch (x) {}
+      var share = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c8a951" ' +
+        'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px">' +
+        '<path d="M12 3v12"/><path d="M8 7l4-4 4 4"/>' +
+        '<path d="M5 12v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7"/></svg>';
+      var wrap = document.createElement('div');
+      wrap.id = 'ad-ios-install';
+      wrap.setAttribute('style',
+        'position:fixed;left:12px;right:12px;bottom:12px;z-index:99999;max-width:460px;margin:0 auto;' +
+        'background:#0a1628;color:#f5efe0;border:1px solid rgba(200,169,81,.5);border-radius:14px;' +
+        'padding:13px 14px;box-shadow:0 10px 30px rgba(0,0,0,.45);' +
+        'font:400 14px/1.45 "DM Sans",system-ui,-apple-system,sans-serif;' +
+        'display:flex;align-items:center;gap:12px');
+      wrap.innerHTML =
+        '<img src="/pwa-icon-192.png" alt="" width="40" height="40" ' +
+          'style="border-radius:9px;flex:0 0 auto">' +
+        '<div style="flex:1 1 auto">' +
+          '<div style="font-weight:600;margin-bottom:2px">Install Apologia</div>' +
+          '<div style="opacity:.85;font-size:13px">Tap ' + share +
+            ' then <b>&ldquo;Add to Home Screen&rdquo;</b></div>' +
+        '</div>' +
+        '<button aria-label="Dismiss" style="flex:0 0 auto;background:transparent;border:0;' +
+          'color:#f5efe0;opacity:.6;font-size:22px;line-height:1;cursor:pointer;padding:2px 4px">&times;</button>';
+      wrap.querySelector('button').onclick = function () {
+        try { localStorage.setItem('ad_ios_install_dismissed', '1'); } catch (x) {}
+        try { window.adTrack('pwa_ios_install_dismissed', {}); } catch (x) {}
+        wrap.remove();
+      };
+      document.body.appendChild(wrap);
+      try { window.adTrack('pwa_ios_install_offered', { where: location.pathname }); } catch (x) {}
+    }
+    if (adIsIOSSafari() && !adIsStandalone()) {
+      // engaged users see it sooner; first-timers get time to look around first
+      setTimeout(adShowIOSInstall, adEngaged() ? 9000 : 60000);
+    }
+
     /* ---- Push opt-in: "Daily reminder" bell, only for engaged users ----
        Asks permission only on explicit tap (never auto-prompts), subscribes via
        the VAPID public key, and registers the subscription server-side. */
