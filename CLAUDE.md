@@ -349,6 +349,36 @@ Two failure modes are defects even when the body is excellent:
   *lead* with the verdict; this rule requires every falsification piece to *state* it explicitly,
   cards and essays included.)
 
+## FALSE-COMMON-GROUND RULE — shared words are not shared belief (mandatory; `apologia-argument` + `apologia-neutrality` enforce it)
+
+**When a rival worldview uses the same vocabulary we do, never present the shared _words_ as shared
+_belief_.** Islam calls Jesus "Messiah" and "a word from God," affirms the virgin birth, "honors" Jesus,
+"awaits his return," and calls itself "monotheist" — but empties each term of the content that matters (it
+honors Jesus precisely by refusing him worship as God; awaits his return as a Muslim prophet, not as God;
+is monotheist while denying the Trinity). So framing this as "common ground worth treasuring," "shared
+reverence," "holy ground we stand on together," or "we both honor Jesus" **sells an agreement that does not
+exist and works against the page's goal.** It is a specific, high-frequency form of the over-concession /
+unearned-symmetry defect (see "Orthodoxy outranks charity" above and the `apologia-neutrality` failure modes).
+
+- **Concede the observation, refuse the inference.** You MAY state, as an accurate fact and a genuine
+  conversational on-ramp, that Islam grants Jesus these titles / affirms the virgin birth. You may NOT let
+  that stand as "shared faith," "common ground," or "shared reverence for the same Jesus."
+- **Name the divergence in the same breath.** After noting a shared term, state plainly that the meaning
+  diverges at the decisive point — and, where apt, that the very titles the rival grants actually strain
+  against its own frame (the Messiah / Word / virgin-born Jesus that Islam names overflows "merely a
+  prophet"). Ground the limit doctrinally where possible (e.g. **John 5:23** — to withhold worship from the
+  Son is not to honor him).
+- **Tells to rewrite:** "common ground worth treasuring"; "shared reverence/regard … is holy ground / the
+  right place to begin"; "we both honor / revere / await"; "we stand on common ground"; "that shared
+  reverence is a gift." Reframe to "shared words, not shared belief," "what Islam itself affirms," "how much
+  your friend already grants" — always paired with the divergence.
+- **Legitimate exceptions (keep):** (a) a shared _premise_ used to run an internal critique — e.g. the
+  Qur'an's own praise of the earlier Scriptures driving the Islamic Dilemma — is a real shared premise, not
+  false common ground; (b) numerical monotheism stated as a structural fact ("both bow before one Creator,
+  not many gods") is acceptable **only** when immediately reframed to "but the two pictures of that one God
+  diverge," and never as "the same God." When in doubt, fence with an `orthonote` ("A shared word, not a
+  shared doctrine"). (Established by the 2026-07-20 owner-directed Islam sweep.)
+
 ## The mission — a check every agent applies
 
 Apologia Daily exists to **strengthen Christians' confidence in the faith and equip them to give a
