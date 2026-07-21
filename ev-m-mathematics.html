@@ -546,6 +546,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <button onclick="setConf(this,3)">Solid</button>
           <button onclick="setConf(this,4)">Could teach it</button>
         </div>
+        <div id="calibNote" style="display:none"></div>
       </div>
     </div>
 
@@ -577,6 +578,7 @@ function adSave(full){
     var m = adAll(); var e = m[ARG_ID] || {};
     e.read = state.read; e.explain = state.explainPass;
     e.cards = state.cardsSeen.size; e.debate = state.debateTried;
+    e.explainScore = state.explainScore || e.explainScore || 0; if(state.conf) e.conf = state.conf;
     if(full){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
     m[ARG_ID] = e; localStorage.setItem('ad_mastery', JSON.stringify(m));
   }catch(e){}
@@ -585,6 +587,7 @@ function adRestore(){
   try{
     var e = adAll()[ARG_ID]; if(!e) return;
     state.read = !!e.read; state.explainPass = !!e.explain; state.debateTried = !!e.debate;
+    state.explainScore = e.explainScore || 0; state.conf = e.conf || 0;
     var fresh = e.fresh && (Date.now() - e.fresh) < FRESH_MS;
     if(e.cards >= cards.length && fresh){ for(var i=0;i<cards.length;i++) state.cardsSeen.add(i); }
     if(e.cards >= cards.length && !fresh){
@@ -629,6 +632,7 @@ function updateDial(){
   setCheck('ck-explain', state.explainPass);
   setCheck('ck-cards', state.cardsSeen.size >= cards.length);
   setCheck('ck-debate', state.debateTried);
+  try{ renderCalibration(); }catch(e){}
 
   if(pct===100){
     document.getElementById('ctaTitle').textContent = 'Mathematics mastered — it just turned gold on your shelf';
@@ -695,7 +699,7 @@ function renderScore(score, strengths, improvements){
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
   updateDial();
 }
 
@@ -718,7 +722,7 @@ function renderMockScore(txtRaw){
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
   updateDial();
 }
 
@@ -760,10 +764,29 @@ function markRead(){
   document.getElementById('readBtn').classList.add('ghost');
   updateDial();
 }
+function renderCalibration(){
+  try{
+    var el = document.getElementById('calibNote'); if(!el) return;
+    var conf = state.conf||0, best = state.explainScore||0;
+    var labels = {1:'Shaky',2:'Getting there',3:'Solid',4:'Could teach it'};
+    if(conf){ var _b=document.querySelectorAll('#confRow button'); if(_b[conf-1]){ [].forEach.call(_b,function(b){b.classList.remove('sel');}); _b[conf-1].classList.add('sel'); } }
+    if(conf>=3 && best<7){
+      var shown = best>0 ? ('your best Explain It Back so far is '+best+'/10') : 'you haven\u2019t scored an Explain It Back yet';
+      el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.8rem 1rem;';
+      el.innerHTML = '\u26A0 You rated yourself \u201C'+labels[conf]+'\u201D \u2014 but '+shown+'. Worth closing: confidence that holds up in a real conversation is confidence you\u2019ve <b>shown</b>, not just felt. <a href="#" onclick="var b=document.getElementById(\'explainBox\');if(b){b.scrollIntoView({behavior:\'smooth\'});b.focus();}return false;" style="color:#a88930;font-weight:600">Prove it on Explain It Back \u2192</a>';
+    } else if(conf>=3 && best>=7){
+      el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#2f7d4f;background:rgba(47,125,79,.08);border:1px solid rgba(47,125,79,.3);border-radius:6px;padding:.8rem 1rem;';
+      el.innerHTML = '\u2713 Calibrated \u2014 you feel ready and you\u2019ve shown it ('+best+'/10 on Explain It Back). That\u2019s earned confidence.';
+    } else {
+      el.style.display = 'none';
+    }
+  }catch(e){}
+}
 function setConf(btn, val){
   [...document.querySelectorAll('#confRow button')].forEach(b=>b.classList.remove('sel'));
   btn.classList.add('sel');
   state.conf = val;
+  adSave(); renderCalibration();
 }
 
 /* ---- Supabase auth + Pro gate (matches site conventions) ---- */
@@ -812,8 +835,11 @@ async function boot(){
     if(!isPro){ showGate(); return; }
   }
   /* build the track */
+  adRestore();
   renderCard();
   updateDial();
+  renderCalibration();
+  window._adLoaded = true;
 }
 /* "Understood it" is earned by opening every section in Phase 1 (defences + objections) */
 var _accs = Array.prototype.slice.call(document.querySelectorAll('#understand details.acc'));
@@ -872,8 +898,7 @@ function _shareDownload(canvas, btn){
 
 document.addEventListener('DOMContentLoaded', boot);
 </script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" integrity="sha384-ZZ1pncU3bQe8y31yfZdMFdSpttDoPmOZg2wguVK9almUodir1PghgT0eY7Mrty8H" crossorigin="anonymous">adRestore(); updateDial(); window._adLoaded = true;
-</script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" integrity="sha384-ZZ1pncU3bQe8y31yfZdMFdSpttDoPmOZg2wguVK9almUodir1PghgT0eY7Mrty8H" crossorigin="anonymous"></script>
 <div id="shareCard" style="position:fixed;left:-9999px;top:0;width:540px;height:675px;box-sizing:border-box;background:linear-gradient(160deg,#050d1a 0%,#0f2040 100%);padding:44px 44px 34px;display:flex;flex-direction:column;font-family:'DM Sans',sans-serif;">
   <div style="display:flex;align-items:center;gap:10px;">
     <span style="color:#c8a951;font-size:13px;">&#9670;</span>
