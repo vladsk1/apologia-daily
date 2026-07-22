@@ -20,11 +20,14 @@ research lead uses: (1) lead → verify the primary → `/sources` as `verified:
 optional our-own-words framing. Never a raw "video brief," never attributed to the video.
 
 ## Topic → note routing
-_(empty — no videos mined yet. Add a row per note as the library grows. Template below.)_
+_(Add a row per note as the library grows. Template kept at bottom.)_
 
 | Topic | Note → section | Strongest primaries to chase (all unverified until the pipeline confirms) |
 |---|---|---|
-| _example: 1 Cor 15 creed dating_ | _`craig-resurrection-defense.md` §2_ | _Gal 1:18–19; Kloppenborg CBQ 40 (1978); cross-check `book-research` **CFR Ch.3 n23–25**_ |
+| Early creed / pre-NT tradition dating | `habermas-early-high-christology.md` §Argument map 1–3 | 1 Cor 15:1–7; 1 Cor 11:23–26; Gal 1:18–19 & 2:1–2; Acts 1–5, 10, 13, 17; Josephus *Ant.* 20 (James, ~62 AD) |
+| Deity of Christ in the earliest sources ("Early High Christology") | `habermas-early-high-christology.md` §5 | Phil 2:6–11 + **Isa 45:23**; Rom 10:9,13 + **Joel 2:32**; **1 Cor 16:22 (maranatha)**; Mark 14:61–64 + Dan 7:13–14; Rom 9:5 |
+| The Sanhedrin trial as a blasphemy/deity scene | `habermas-early-high-christology.md` §5(ii) | Mark 14:61–64; Dan 7:13–14; Ps 110:1; **lead: Darrell Bock, *Blasphemy and Exaltation in Judaism*** |
+| _template: Topic_ | _`note.md` §N_ | _primary A; primary B; cross-check `book-research` X_ |
 
 ## ⚠ Standing "do not use / high-caution" flags (carry these into any pull)
 - **Apologetics YouTube overstates.** Popular talks round numbers up, compress scholarship, and drop

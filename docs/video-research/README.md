@@ -117,7 +117,7 @@ brief distilled from its certified-essay tie-in is live in `/briefs` · **—** 
 
 | Video (speaker · title) | id / URL | Note file | → /sources | → /briefs | Date |
 |---|---|---|---|---|---|
-| _(none yet — this scaffold is fresh)_ | — | — | — | — | — |
+| Gary Habermas · "CORE Christian Confessions BEFORE the New Testament" | `6C3uO-50YUw` | `habermas-early-high-christology.md` | — | — | 2026-07-21 |
 | _example: Craig · "The Kalam Cosmological Argument"_ | _`dQw4w9WgXcQ`_ | _`craig-kalam.md`_ | _—_ | _✓ `kalam-cause-of-universe`_ | _2026-07-22_ |
 
 **Rule of thumb:** a video isn't "briefed" until a row shows **✓briefs** (or **✓sources**). A row with only
