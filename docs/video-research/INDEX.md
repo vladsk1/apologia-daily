@@ -33,6 +33,8 @@ _(Add a row per note as the library grows. Template kept at bottom.)_
 | Minimal-facts method (skeptic-conceded data only) | `habermas-minimal-facts-two-texts.md` §Argument map 1,3–4,7 | 1 Cor 15:1–8, 11; concessions: Michael Martin, E. P. Sanders (*Historical Figure of Jesus*), Dale Allison, Ehrman, H. C. Kee; cross-check `book-research/case-for-the-resurrection-of-jesus.md` |
 | Ancient historiography / source-distance & Gospel genre | `habermas-minimal-facts-two-texts.md` §Argument map 2 | Alexander (Arrian/Plutarch ~+400); Tiberius (Tacitus/Suetonius ~+80, Cassius Dio ~+180); **Richard Burridge, *What Are the Gospels?*** — *note: source-DISTANCE, NOT the retired manuscript-count* |
 | 1 Cor 15 creed dating — archaeological anchor | `habermas-minimal-facts-two-texts.md` §Argument map 4 | **Gallio / Delphi inscription** (Paul at Corinth ~51–52 AD) *(net-new lead, not yet on-site)*; 1 Cor 11:23; Gal 1:18–19 (*historeō*) |
+| The Islamic Dilemma (Qur'an affirms → contradicts the Bible) | `frost-islamic-dilemma.md` §Argument map | Q 3:3; 5:46–48; 5:68; **10:94**; 4:157; 6:115; the *muṣaddiq* verses — *all already certified in `library/islam-dilemma.html`; live via the new `islamic-dilemma` brief* |
+| Tahrif / did Muslims allege the Bible was corrupted? | `frost-islamic-dilemma.md` §Guardrails + Q&A | Q 2:79→2:80 (vs Genesis Rabbah); *tahrif al-maʿnā* vs *al-naṣṣ*; al-Tabari, al-Razi, **Whittingham (De Gruyter 2020)**, Ibn Hazm; early witness **George of Bʿeltan** |
 | _template: Topic_ | _`note.md` §N_ | _primary A; primary B; cross-check `book-research` X_ |
 
 ## ⚠ Standing "do not use / high-caution" flags (carry these into any pull)
