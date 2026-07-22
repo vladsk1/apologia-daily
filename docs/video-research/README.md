@@ -126,7 +126,8 @@ brief distilled from its certified-essay tie-in is live in `/briefs` · **—** 
 | Christopher Frost · "The Islamic Dilemma" | `trWm75yjY-8` | `frost-islamic-dilemma.md` | — | ✓ `islamic-dilemma` (new brief, from certified `islam-dilemma.html`) | 2026-07-22 |
 | "Michael" · "Is Muhammad in the Bible? (the Biblical Prophet Dilemma)" | `ftjCI-xyCw0` | `muhammad-in-the-bible-prophet-dilemma.md` | — | — (answer already certified; leads flagged for a future strengthening pass — ⚠ toxic-tone source) | 2026-07-22 |
 | Avery Gio (Pfander Centre) · "Textual Corruption in the Islamic Traditions" | `LyFqfh8jqP4` | `avery-gio-quran-textual-preservation.md` | — | — (already served by the live `quran-preservation` brief; hadith examples flagged as essay leads — ⚠ provocative tone) | 2026-07-22 |
-| Gary Habermas × Sean McDowell · "On the Resurrection" interview | `WoSOoqSRPvg` | `habermas-mcdowell-on-the-resurrection-interview.md` | — | — (4th Habermas source; resurrection topic exhaustively served by the live briefs) | 2026-07-23 |
+| Gary Habermas × Sean McDowell · "On the Resurrection" interview (Vol. 1) | `WoSOoqSRPvg` | `habermas-mcdowell-on-the-resurrection-interview.md` | — | — (4th Habermas source; resurrection topic exhaustively served by the live briefs) | 2026-07-23 |
+| Gary Habermas × Sean McDowell · "Alternate Theories" interview (Vol. 2) | `qJC6pdEKxOA` | `habermas-mcdowell-alternate-theories-interview.md` | — | — (5th Habermas source; naturalistic-theory case already served by the live resurrection + pagan-myths briefs) | 2026-07-23 |
 | _example: Craig · "The Kalam Cosmological Argument"_ | _`dQw4w9WgXcQ`_ | _`craig-kalam.md`_ | _—_ | _✓ `kalam-cause-of-universe`_ | _2026-07-22_ |
 
 **Rule of thumb:** a video isn't "briefed" until a row shows **✓briefs** (or **✓sources**). A row with only
