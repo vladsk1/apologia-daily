@@ -30,6 +30,9 @@ _(Add a row per note as the library grows. Template kept at bottom.)_
 | Resurrection timeline / "everything within ~5–6 years of the cross" | `habermas-six-facts-before-36ad.md` §Argument map | 1 Cor 15:3–7; **Gal 1:18–19 (*historeō*)**; Gal 2:2, 2:9; 1 Cor 15:11; Acts 9; Rom 10:9; Rom 1:3–4 — *note: all already live in `earlycreed`/`paulconv`/`minimalfacts`* |
 | Paul as early + eyewitness (the fact-finding Jerusalem visit) | `habermas-six-facts-before-36ad.md` §Set 3 | **Gal 1:18–19** (*historeō* = "visit to inquire"); 1 Cor 15:8–11; cross-check `book-research/case-for-the-resurrection-of-jesus.md` |
 | James the brother of Jesus: sceptic → believer → martyr | `habermas-six-facts-before-36ad.md` §Set 1 | 1 Cor 15:7; Mark 3:21/6:3; John 7:5; Acts 1:14; Josephus *Ant.* 20.200; *(minor: Gospel of the Hebrews fragment via Jerome)* |
+| Minimal-facts method (skeptic-conceded data only) | `habermas-minimal-facts-two-texts.md` §Argument map 1,3–4,7 | 1 Cor 15:1–8, 11; concessions: Michael Martin, E. P. Sanders (*Historical Figure of Jesus*), Dale Allison, Ehrman, H. C. Kee; cross-check `book-research/case-for-the-resurrection-of-jesus.md` |
+| Ancient historiography / source-distance & Gospel genre | `habermas-minimal-facts-two-texts.md` §Argument map 2 | Alexander (Arrian/Plutarch ~+400); Tiberius (Tacitus/Suetonius ~+80, Cassius Dio ~+180); **Richard Burridge, *What Are the Gospels?*** — *note: source-DISTANCE, NOT the retired manuscript-count* |
+| 1 Cor 15 creed dating — archaeological anchor | `habermas-minimal-facts-two-texts.md` §Argument map 4 | **Gallio / Delphi inscription** (Paul at Corinth ~51–52 AD) *(net-new lead, not yet on-site)*; 1 Cor 11:23; Gal 1:18–19 (*historeō*) |
 | _template: Topic_ | _`note.md` §N_ | _primary A; primary B; cross-check `book-research` X_ |
 
 ## ⚠ Standing "do not use / high-caution" flags (carry these into any pull)
