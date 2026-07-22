@@ -124,6 +124,7 @@ brief distilled from its certified-essay tie-in is live in `/briefs` · **—** 
 | Gary Habermas · "Six Facts Before 36 AD" (resurrection timeline sliver) | `WkAAK57JuEw` | `habermas-six-facts-before-36ad.md` | — | — (already fully served by the live resurrection briefs) | 2026-07-22 |
 | Gary Habermas · full "Minimal Facts" lecture (two texts: 1 Cor 15 + Gal 1–2) | `-cbgVDj81fY` | `habermas-minimal-facts-two-texts.md` | — | — (topic fully served by the live resurrection briefs) | 2026-07-22 |
 | Christopher Frost · "The Islamic Dilemma" | `trWm75yjY-8` | `frost-islamic-dilemma.md` | — | ✓ `islamic-dilemma` (new brief, from certified `islam-dilemma.html`) | 2026-07-22 |
+| "Michael" · "Is Muhammad in the Bible? (the Biblical Prophet Dilemma)" | `ftjCI-xyCw0` | `muhammad-in-the-bible-prophet-dilemma.md` | — | — (answer already certified; leads flagged for a future strengthening pass — ⚠ toxic-tone source) | 2026-07-22 |
 | _example: Craig · "The Kalam Cosmological Argument"_ | _`dQw4w9WgXcQ`_ | _`craig-kalam.md`_ | _—_ | _✓ `kalam-cause-of-universe`_ | _2026-07-22_ |
 
 **Rule of thumb:** a video isn't "briefed" until a row shows **✓briefs** (or **✓sources**). A row with only
