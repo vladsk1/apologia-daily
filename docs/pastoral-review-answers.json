@@ -150,6 +150,91 @@
         "orthodoxy": "2026-07-16",
         "by": "opening-rewrite sweep 2026-07-16: rewrote a front-loaded opening to LEAD WITH THE ANSWER (the earlier gates had passed factually-honest-but-front-loaded openings; owner directive). argument+orthodoxy re-gated."
       }
+    },
+    {
+      "slug": "is-it-ok-to-have-doubts-as-a-christian",
+      "q": "Is it okay to have doubts as a Christian?",
+      "category": "Faith & Doubt",
+      "meta": "Yes. Doubt isn't the opposite of faith - it's often faith seeking understanding. Scripture is full of honest questions, and the answer is to investigate, not suppress.",
+      "reviewed": {
+        "orthodoxy": "2026-07-04",
+        "argument": "2026-07-04",
+        "by": "apologia argument+orthodoxy gates (session 2026-07-04)"
+      },
+      "a": "Yes - and you're in good company. The Bible is full of honest doubt: the psalmists cry \"How long, O Lord?\", John the Baptist sends to ask if Jesus is really the one, and Thomas refuses to believe until he sees. Jesus doesn't crush any of them; he meets them.\n\nDoubt isn't the opposite of faith - apathy is. Often doubt is faith seeking understanding. The healthy response isn't to suppress the questions or to abandon ship, but to bring them into the light and investigate. That's the whole reason a place like this exists: there are real, satisfying answers to most of the hard questions, and a faith that has examined itself stands far stronger than one that never asked.",
+      "related": "evidence-library.html",
+      "relatedLabel": "the Evidence Library",
+      "_pulled": {
+        "date": "2026-07-22",
+        "reason": "Pastoral-adjacent question held for the pastoral-pointer redesign (owner decision, 2026-07-22). Also removed from challenge-easter40.json and parents.html; disconnected from study groups.",
+        "from": "answers/_data.json"
+      }
+    },
+    {
+      "slug": "if-god-is-real-why-does-he-seem-hidden",
+      "q": "If God is real, why does he seem hidden?",
+      "category": "Faith & Doubt",
+      "meta": "If God is loving, why is he not obvious? A serious look at divine hiddenness - forced proof isn't love, and hiddenness isn't the same as absence.",
+      "a": "The ache behind this is real, and Scripture itself gives it voice - it is full of “how long, O Lord?” But seeming hidden is not the same as being absent: the God of the Bible stays deliberately findable rather than overwhelming, because he wants to be known and trusted, not merely acknowledged under proof no one could refuse.\n\nWith that ache honestly named, weigh two things. First, overwhelming proof might not be loving at all. A God who flooded the sky with undeniable evidence could compel your assent, but he couldn't win your trust freely given - and it's freely given love, not forced acknowledgment, that he seems to be after. Pascal put it that there is enough light for those who want to see, and enough shadow for those who don't. Second, hiddenness is not the same as absence. Across every culture and century, enormous numbers of ordinary people report encountering God. The philosopher Richard Swinburne points out an asymmetry here: one person's experience of God really is evidence for them, while another person's not-yet-experiencing him doesn't simply cancel it out.\n\nAnd Scripture consistently frames God as found through seeking, not ambush: 'you will seek me and find me when you seek me with all your heart' (Jeremiah 29:13); Paul says God ordered things so that people 'should seek him and perhaps reach out for him and find him' (Acts 17:27). If you're honestly searching and still in the dark, that's painful, and you're in good biblical company - but it's a door to keep knocking on, not proof that no one stands behind it.",
+      "related": "ev-m-religious.html",
+      "relatedLabel": "The Argument from Religious Experience",
+      "reviewed": {
+        "argument": "2026-07-16",
+        "orthodoxy": "2026-07-16",
+        "by": "opening-rewrite sweep 2026-07-16: rewrote a front-loaded opening to LEAD WITH THE ANSWER (the earlier gates had passed factually-honest-but-front-loaded openings; owner directive). argument+orthodoxy re-gated."
+      },
+      "_pulled": {
+        "date": "2026-07-22",
+        "reason": "Pastoral-adjacent question held for the pastoral-pointer redesign (owner decision, 2026-07-22). Also removed from challenge-easter40.json and parents.html; disconnected from study groups.",
+        "from": "answers/_data.json"
+      }
+    },
+    {
+      "slug": "what-about-those-who-never-heard-of-jesus",
+      "q": "What about those who have never heard of Jesus?",
+      "category": "Faith & Doubt",
+      "meta": "Billions never heard of Jesus. Scripture holds Christ as the only way and God as perfectly just - and calls us to real humility about the rest.",
+      "a": "Scripture never says anyone is condemned for failing to receive a message they never had the chance to hear - it says God judges justly, weighing each person by what they actually knew and did with it. This is one of the most morally serious questions anyone can ask, and it deserves an honest answer rather than a rushed one.\n\nHold together two things Scripture holds firmly. Jesus really is the only way - 'no one comes to the Father except through me' (John 14:6) - and salvation, for anyone who has it, comes through his work alone. And God is perfectly just. Abraham's question, 'Shall not the Judge of all the earth do what is right?' (Genesis 18:25), is answered yes. Paul says those who never received God's written law will be judged not by information that never reached them, but by the light they did have - conscience, and the witness of creation itself (Romans 2:12-16; cf. 1:19-20). No one will be condemned for failing to believe a message they never heard.\n\nWhat Scripture does not do is spell out exactly how God applies Christ's work to such a person, and sincere Christians hold a range of views on it. So here we should be genuinely humble rather than dogmatic in either direction. What we can say is this: the Judge is both perfectly just and the God who 'wants all people to be saved' (1 Timothy 2:4) - and he went to a cross to reach them. You can trust the fairness of the Judge even where you can't yet see the verdict. And if that fairness matters to you, it's worth remembering that you have heard, and can respond.",
+      "related": "",
+      "essay": "/evidence-library.html",
+      "relatedLabel": "the Evidence Library",
+      "clarifiers": [
+        {
+          "phrase": "the light they did have",
+          "heading": "On being judged by the light you have",
+          "is": "God judges every person justly, by the truth actually available to them, and no one is condemned merely for never hearing a message that never reached them. He applies Christ's saving work as he alone knows how.",
+          "not": "Not that anyone earns salvation by sincerity or a clear conscience apart from Christ. The light we are given leaves us needing grace — salvation is through Christ's work alone."
+        }
+      ],
+      "reviewed": {
+        "argument": "2026-07-16",
+        "orthodoxy": "2026-07-16",
+        "by": "opening-rewrite sweep 2026-07-16: rewrote a front-loaded opening to LEAD WITH THE ANSWER (the earlier gates had passed factually-honest-but-front-loaded openings; owner directive). argument+orthodoxy re-gated."
+      },
+      "_pulled": {
+        "date": "2026-07-22",
+        "reason": "Pastoral-adjacent question held for the pastoral-pointer redesign (owner decision, 2026-07-22). Also removed from challenge-easter40.json and parents.html; disconnected from study groups.",
+        "from": "answers/_data.json"
+      }
+    },
+    {
+      "slug": "does-the-bible-condone-slavery",
+      "q": "Does the Bible condone slavery?",
+      "category": "Bible Reliability",
+      "meta": "An honest answer: the Bible condemned man-stealing, regulated debt-servitude, and planted the truths - imago Dei, Exodus, Galatians 3:28 - that undid slavery.",
+      "a": "No — not the chattel slavery the question has in mind, and the distinction that shows why is the one the objection usually skips. The engine of the transatlantic slave trade was kidnapping human beings to buy and sell them — and that is precisely what the Mosaic law made a capital crime (Exodus 21:16), while the New Testament lists 'enslavers,' or slave-traders, among the worst lawbreakers (1 Timothy 1:10). What the Old Testament law regulates for Israel is something different: a debt-servitude the desperately poor entered to survive, hedged by mandatory release (Exodus 21:2) and — strikingly for the ancient world — a ban on returning a slave who had fled for refuge (Deuteronomy 23:15-16).\n\nAnd the Bible's own logic runs against the institution from the start. It opens by declaring that every human being bears God's image (Genesis 1:27); its founding national story is God freeing slaves out of Egypt; Paul tells a master to receive his runaway back 'no longer as a slave, but... as a beloved brother' (Philemon 16) and says that in Christ 'there is neither slave nor free' (Galatians 3:28). Those are depth charges laid under the whole system — which is why the people who led the fight to abolish slavery, like William Wilberforce, did so because they took the Bible seriously — and in the end it was their reading of it, not the slaveholders', that prevailed.\n\nThe honest hard case is Leviticus 25:44-46, which permitted Israel to hold foreign slaves as lasting property — real servitude, even without the kidnapping and racial ideology that drove the Atlantic trade. But a law that permits is not a law that commends: nowhere does Scripture call the practice good. It restrained an institution the whole ancient world took for granted, while laying down the very truths — every person an image-bearer, a God who frees slaves, a gospel in which there is 'neither slave nor free' — whose logic runs all the way to abolition. That is not a Bible that condones slavery; it is one that dismantles it from the inside.",
+      "related": "ev-m-consistency.html",
+      "relatedLabel": "The Internal Consistency of Scripture",
+      "reviewed": {
+        "argument": "2026-07-16",
+        "orthodoxy": "2026-07-16",
+        "by": "reworked per short-form rule: was front-loaded (opened 'Let's not soften this... genuinely unsettling') with 2 of 4 paragraphs building the difficulty. Now leads with the answer + the distinction (man-stealing criminalized; regulated debt-servitude != chattel), then the abolition trajectory; the hard text (Lev 25:44-46) kept honestly but brief, not front-loaded. 2026-07-16b: strengthened the CLOSE - the old final paragraph ended on the concession (Lev 25 detailed as 'real servitude, lasting property' across 2 sentences, rebuttal a single soft clause), so the answer trailed off on the objection's strongest ground. Rebalanced so the rebuttal is the weightier half ('a law that permits is not a law that commends'; the internal-abolition trajectory) and it lands on our own footing ('not a Bible that condones slavery; it is one that dismantles it from the inside'). argument+orthodoxy re-gated."
+      },
+      "_pulled": {
+        "date": "2026-07-22",
+        "reason": "Pastoral-adjacent question held for the pastoral-pointer redesign (owner decision, 2026-07-22). Also removed from challenge-easter40.json and parents.html; disconnected from study groups.",
+        "from": "answers/_data.json"
+      }
     }
   ]
 }
