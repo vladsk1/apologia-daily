@@ -222,6 +222,7 @@ ${NAV}
   <nav class="ad-crumbs"><a href="/">Home</a> &rsaquo; <a href="/answers/">Answers</a> &rsaquo; <span>${esc(e.category)}</span></nav>
   <article>
     <h1>${esc(e.q)}</h1>
+    <a class="ad-reviewed" href="/editorial-standards.html"><span class="ad-reviewed-ic">&#10003;</span><span>Fact-checked &amp; reviewed for Nicene orthodoxy</span><span class="ad-reviewed-more">How we review &rarr;</span></a>
     <div class="ad-answer">${paras}</div>
   </article>
 ${goDeeper(e)}
