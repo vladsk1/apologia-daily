@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "slug": "advent25",
+    "eyebrow": "The Advent Challenge",
+    "title": "25 Questions Before Christmas",
+    "length": 25,
+    "sub": "One question a day through Advent — from the ancient promises to the wonder of “the Word became flesh.” Twenty-five short, fully-cited answers building to Christmas morning. Walk it alone, or with your whole family or church.",
+    "completeTitle": "You reached Christmas. ✨",
+    "completeMsg": "From the first promise to “God with us” — you’ve traced why the child in the manger changes everything. Now you can give a reason for the hope you have.",
+    "shareText": "A 25-day Advent journey — one question a day, from the prophecies to the Incarnation, building to Christmas. Walk it with me?",
+    "seasonNote": "Made for Advent (Dec 1–25), but you can start any day.",
+    "kitLede": "Built for a family, a small group, or a whole church to walk together through Advent. Share the link, or print the full 25-question list for an apologetics Advent calendar."
+  },
+  "movements": [
+    {
+      "t": "The Promise",
+      "s": "Days 1–5 · Centuries of anticipation"
+    },
+    {
+      "t": "The Nativity, examined",
+      "s": "Days 6–10 · Can we trust the story?"
+    },
+    {
+      "t": "Who is this child?",
+      "s": "Days 11–15 · His identity"
+    },
+    {
+      "t": "God became man",
+      "s": "Days 16–20 · The Incarnation & the Trinity"
+    },
+    {
+      "t": "Why the Word became flesh",
+      "s": "Days 21–25 · The meaning, for Christmas"
+    }
+  ],
+  "days": [
+    {
+      "day": 1,
+      "m": 0,
+      "q": "Did Jesus really exist?",
+      "slug": "did-jesus-really-exist",
+      "why": "Before the manger scene — did the child of Christmas actually live?"
+    },
+    {
+      "day": 2,
+      "m": 0,
+      "q": "How many Old Testament prophecies did Jesus fulfill?",
+      "slug": "how-many-prophecies-did-jesus-fulfill",
+      "why": "Centuries of promises, all pointing forward to one coming."
+    },
+    {
+      "day": 3,
+      "m": 0,
+      "q": "Did Jesus fulfill Isaiah 53?",
+      "slug": "did-jesus-fulfill-prophecy-isaiah-53",
+      "why": "The servant’s portrait, written 700 years before Bethlehem."
+    },
+    {
+      "day": 4,
+      "m": 0,
+      "q": "What is the Daniel 70 weeks prophecy?",
+      "slug": "what-is-the-daniel-70-weeks-prophecy",
+      "why": "Daniel’s startling countdown to the Messiah’s arrival."
+    },
+    {
+      "day": 5,
+      "m": 0,
+      "q": "Is the Trinity in the Old Testament?",
+      "slug": "is-the-trinity-in-the-old-testament",
+      "why": "The Son was never absent — present long before the manger."
+    },
+    {
+      "day": 6,
+      "m": 1,
+      "q": "Were the Gospels written by eyewitnesses?",
+      "slug": "were-the-gospels-written-by-eyewitnesses",
+      "why": "Is the Christmas story memory, or later legend?"
+    },
+    {
+      "day": 7,
+      "m": 1,
+      "q": "When were the gospels written?",
+      "slug": "when-were-the-gospels-written",
+      "why": "Early enough that the first witnesses could still check it."
+    },
+    {
+      "day": 8,
+      "m": 1,
+      "q": "Is there archaeological evidence for the Bible?",
+      "slug": "is-there-archaeological-evidence-for-the-bible",
+      "why": "Bethlehem, Nazareth, the census world — does the spade agree?"
+    },
+    {
+      "day": 9,
+      "m": 1,
+      "q": "Is the virgin birth credible?",
+      "slug": "is-the-virgin-birth-credible",
+      "why": "The sign of Immanuel: can it be taken seriously?"
+    },
+    {
+      "day": 10,
+      "m": 1,
+      "q": "Was Jesus copied from pagan myths like Horus and Mithras?",
+      "slug": "was-jesus-copied-from-pagan-myths",
+      "why": "The “December 25 / Horus” objection, faced squarely."
+    },
+    {
+      "day": 11,
+      "m": 2,
+      "q": "Did Jesus actually claim to be God?",
+      "slug": "did-jesus-claim-to-be-god",
+      "why": "Did the baby of Bethlehem grow up to claim it himself?"
+    },
+    {
+      "day": 12,
+      "m": 2,
+      "q": "What is the evidence that Jesus is God?",
+      "slug": "what-is-the-evidence-that-jesus-is-god",
+      "why": "The case for the child’s divine identity, laid out plainly."
+    },
+    {
+      "day": 13,
+      "m": 2,
+      "q": "Why is Jesus called the Son of God?",
+      "slug": "why-is-jesus-called-the-son-of-god",
+      "why": "What the title means — and what it does not."
+    },
+    {
+      "day": 14,
+      "m": 2,
+      "q": "Wasn't Jesus just a good moral teacher?",
+      "slug": "was-jesus-just-a-good-moral-teacher",
+      "why": "The one thing a merely-good teacher can’t be."
+    },
+    {
+      "day": 15,
+      "m": 2,
+      "q": "Is Jesus God, or just a prophet?",
+      "slug": "is-jesus-god-or-just-a-prophet",
+      "why": "A prophet points to God. This child is worshipped as God."
+    },
+    {
+      "day": 16,
+      "m": 3,
+      "q": "Isn't the Trinity a contradiction?",
+      "slug": "isnt-the-trinity-a-contradiction",
+      "why": "How the one God can come to us as the Son."
+    },
+    {
+      "day": 17,
+      "m": 3,
+      "q": "Where is the Trinity in the Bible?",
+      "slug": "where-is-the-trinity-in-the-bible",
+      "why": "Not a later invention — woven through the text."
+    },
+    {
+      "day": 18,
+      "m": 3,
+      "q": "What does 'Son of Man' mean?",
+      "slug": "what-does-son-of-man-mean",
+      "why": "The humble title that is quietly a claim to heaven’s throne."
+    },
+    {
+      "day": 19,
+      "m": 3,
+      "q": "Was Jesus sinless?",
+      "slug": "was-jesus-sinless",
+      "why": "The spotless life the manger was heading toward."
+    },
+    {
+      "day": 20,
+      "m": 3,
+      "q": "Did Jesus empty himself of his deity? (Philippians 2)",
+      "slug": "did-jesus-empty-himself-of-his-deity",
+      "why": "Philippians 2: how God could become a baby without ceasing to be God."
+    },
+    {
+      "day": 21,
+      "m": 4,
+      "q": "What makes Christianity different from other religions?",
+      "slug": "what-makes-christianity-different-from-other-religions",
+      "why": "Every faith reaches up. Only here does God come down."
+    },
+    {
+      "day": 22,
+      "m": 4,
+      "q": "Do Muslims and Christians worship the same God?",
+      "slug": "do-muslims-and-christians-worship-the-same-god",
+      "why": "Islam honours Jesus but denies the Incarnation. Shared words, not shared belief."
+    },
+    {
+      "day": 23,
+      "m": 4,
+      "q": "If God is good, why is there so much suffering?",
+      "slug": "why-does-god-allow-suffering",
+      "why": "Immanuel — “God with us” — means he entered the ache himself."
+    },
+    {
+      "day": 24,
+      "m": 4,
+      "q": "What about those who have never heard of Jesus?",
+      "slug": "what-about-those-who-never-heard-of-jesus",
+      "why": "The light of Christmas was always meant for every nation."
+    },
+    {
+      "day": 25,
+      "m": 4,
+      "q": "Is there evidence that Jesus rose from the dead?",
+      "slug": "is-there-evidence-jesus-rose-from-the-dead",
+      "why": "Christmas Day. The child in the manger was born for the empty tomb."
+    }
+  ]
+}

@@ -144,16 +144,16 @@ h1{font-family:var(--fd);font-size:clamp(2.2rem,6vw,3.4rem);font-weight:700;line
 
 <div class="wrap">
   <div class="hero">
-    <div class="eyebrow">The 40-Day Challenge</div>
-    <h1>40 Questions Before Easter</h1>
-    <p class="sub">One honest question a day &mdash; from <em>&ldquo;does God exist?&rdquo;</em> to <em>&ldquo;did Jesus rise?&rdquo;</em> &mdash; building, over 40 days, to the morning everything turns on. Every answer is short, fully cited, and yours to keep. Walk it alone, or bring your whole group.</p>
+    <div class="eyebrow" id="chEyebrow">The 40-Day Challenge</div>
+    <h1 id="chTitle">40 Questions Before Easter</h1>
+    <p class="sub" id="chSub">One honest question a day &mdash; building to the day everything turns on.</p>
     <div class="ring-wrap">
       <div class="ring">
         <svg width="112" height="112" viewBox="0 0 112 112">
           <circle cx="56" cy="56" r="50" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="8"/>
           <circle id="ring-fill" cx="56" cy="56" r="50" fill="none" stroke="#c8a951" stroke-width="8" stroke-linecap="round" stroke-dasharray="314.16" stroke-dashoffset="314.16"/>
         </svg>
-        <div class="ring-txt"><span class="ring-num" id="ring-num">0</span><span class="ring-lbl">of 40</span></div>
+        <div class="ring-txt"><span class="ring-num" id="ring-num">0</span><span class="ring-lbl" id="ring-lbl">of 40</span></div>
       </div>
       <div style="text-align:left;">
         <button class="cta" id="startCta" onclick="jumpToday()">Start Day 1 &rarr;</button>
@@ -164,8 +164,8 @@ h1{font-family:var(--fd);font-size:clamp(2.2rem,6vw,3.4rem);font-weight:700;line
 
   <!-- completion -->
   <div class="done-banner" id="doneBanner">
-    <h2>You finished all 40. 🌅</h2>
-    <p>From &ldquo;is there a God?&rdquo; to &ldquo;He is risen&rdquo; &mdash; you&rsquo;ve walked the whole case. Now you can give a reason for the hope you have.</p>
+    <h2 id="doneTitle">You finished all 40. 🌅</h2>
+    <p id="doneMsg">From &ldquo;is there a God?&rdquo; to &ldquo;He is risen&rdquo; &mdash; you&rsquo;ve walked the whole case. Now you can give a reason for the hope you have.</p>
     <button class="b-gold" onclick="shareChallenge()">Share what you did</button>
   </div>
 
@@ -186,7 +186,7 @@ h1{font-family:var(--fd);font-size:clamp(2.2rem,6vw,3.4rem);font-weight:700;line
   <!-- group kit -->
   <div class="kit">
     <h3>Do it with your group</h3>
-    <p>This challenge is built for a small group, a family, or a whole church to walk together through Lent. Share the link, or print the full 40-question list to hand out.</p>
+    <p id="kitLede">This challenge is built for a small group, a family, or a whole church to walk together through Lent. Share the link, or print the full 40-question list to hand out.</p>
     <div class="kit-actions">
       <button class="b-gold" onclick="shareChallenge()">Share the challenge</button>
       <button class="b-ghost" onclick="window.print()">Print the 40 questions</button>
@@ -196,14 +196,16 @@ h1{font-family:var(--fd);font-size:clamp(2.2rem,6vw,3.4rem);font-weight:700;line
 
   <div class="foot">
     <span class="noprint">Every answer is drawn from the certified Evidence Library. </span>
-    Perfect for Lent, but you can start any day. Defending the faith with gentleness and respect.
+    <span id="seasonNote">Perfect for Lent, but you can start any day.</span> Defending the faith with gentleness and respect.
   </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
 <script>
-var MOVEMENTS = [], DAYS = [], DONE = [];
-var KEY = 'ad_ch_easter40';
+var MOVEMENTS = [], DAYS = [], DONE = [], META = {}, TOTAL = 0;
+var SLUG = 'easter40';
+try{ var _c=(new URLSearchParams(location.search).get('c')||'').toLowerCase().replace(/[^a-z0-9]/g,''); if(_c) SLUG=_c; }catch(e){}
+var KEY = 'ad_ch_' + SLUG;
 var CIRC = 314.16;
 
 function loadDone(){ try{ var s=JSON.parse(localStorage.getItem(KEY)||'{}'); DONE = s.completed||[]; }catch(e){ DONE=[]; } }
@@ -227,16 +229,16 @@ function markStreak(){
 function render(){
   var n = DONE.length;
   document.getElementById('ring-num').textContent = n;
-  document.getElementById('ring-fill').style.strokeDashoffset = CIRC - (CIRC * n / 40);
-  document.getElementById('doneBanner').style.display = n>=40 ? 'block' : 'none';
+  document.getElementById('ring-fill').style.strokeDashoffset = CIRC - (CIRC * n / (TOTAL||1));
+  document.getElementById('doneBanner').style.display = n>=TOTAL ? 'block' : 'none';
 
   // today card
   var cd = currentDay();
   var d = DAYS[cd-1] || DAYS[DAYS.length-1];
-  var allDone = n>=40;
+  var allDone = n>=TOTAL;
   document.getElementById('todayCard').style.display = allDone ? 'none' : 'block';
   if(!allDone){
-    document.getElementById('todayKick').textContent = (n===0?'Start here':'Today') + ' · Day ' + d.day + ' of 40';
+    document.getElementById('todayKick').textContent = (n===0?'Start here':'Today') + ' · Day ' + d.day + ' of ' + TOTAL;
     document.getElementById('todayQ').textContent = d.q;
     document.getElementById('todayWhy').textContent = d.why;
     document.getElementById('todayRead').href = '/answers/' + d.slug + '.html';
@@ -268,23 +270,23 @@ function render(){
 }
 function toggleMv(btn){ btn.nextElementSibling.classList.toggle('open'); }
 function jumpToday(){
-  if(DONE.length>=40){ document.getElementById('arc').scrollIntoView({behavior:'smooth'}); return; }
+  if(DONE.length>=TOTAL){ document.getElementById('arc').scrollIntoView({behavior:'smooth'}); return; }
   document.getElementById('todayCard').scrollIntoView({behavior:'smooth',block:'center'});
 }
 function markToday(){
   var day = parseInt(document.getElementById('todayDone').dataset.day,10);
   if(day && !isDone(day)){
     DONE.push(day); saveDone(); markStreak();
-    try{ if(window.adTrack) adTrack('challenge_day_done',{challenge:'easter40',day:day,total:DONE.length}); if(DONE.length>=40 && window.adTrack) adTrack('challenge_complete',{challenge:'easter40'}); }catch(e){}
+    try{ if(window.adTrack) adTrack('challenge_day_done',{challenge:SLUG,day:day,total:DONE.length}); if(DONE.length>=TOTAL && window.adTrack) adTrack('challenge_complete',{challenge:SLUG}); }catch(e){}
   }
   render();
-  if(DONE.length<40){ document.getElementById('todayCard').scrollIntoView({behavior:'smooth',block:'center'}); }
+  if(DONE.length<TOTAL){ document.getElementById('todayCard').scrollIntoView({behavior:'smooth',block:'center'}); }
   else { document.getElementById('doneBanner').scrollIntoView({behavior:'smooth'}); }
 }
 function shareChallenge(){
-  var url = location.origin + '/challenge.html?utm_source=share&utm_medium=challenge';
-  var d = { title:'40 Questions Before Easter', text:'A 40-day journey through the biggest questions about God, Jesus, and the resurrection — one answer a day, building to Easter. Walk it with me?', url:url };
-  try{ if(window.adTrack) adTrack('challenge_share',{challenge:'easter40'}); }catch(e){}
+  var url = location.origin + '/challenge.html?c=' + SLUG + '&utm_source=share&utm_medium=challenge';
+  var d = { title:(META.title||'Apologetics Challenge'), text:(META.shareText||'A daily apologetics challenge — walk it with me?'), url:url };
+  try{ if(window.adTrack) adTrack('challenge_share',{challenge:SLUG}); }catch(e){}
   if(navigator.share){ navigator.share(d).catch(function(){}); return; }
   if(navigator.clipboard){ navigator.clipboard.writeText(url); alert('Link copied — share it with your group.'); }
 }
@@ -306,16 +308,27 @@ async function navAuth(){
   }catch(e){}
 }
 async function signOut(){ try{ if(sb) await sb.auth.signOut(); }catch(e){} location.reload(); }
+function setText(id,val){ var el=document.getElementById(id); if(el&&val!=null) el.textContent=val; }
 async function boot(){
   loadDone();
   try{
-    var res = await fetch('/challenge-easter40.json',{cache:'no-store'});
+    var res = await fetch('/challenge-'+SLUG+'.json',{cache:'no-store'});
     var data = await res.json();
-    MOVEMENTS = data.movements||[]; DAYS = data.days||[];
-  }catch(e){ MOVEMENTS=[]; DAYS=[]; }
+    MOVEMENTS = data.movements||[]; DAYS = data.days||[]; META = data.meta||{};
+  }catch(e){ MOVEMENTS=[]; DAYS=[]; META={}; }
+  TOTAL = META.length || DAYS.length || 0;
+  if(META.title){ document.title = META.title + ' — Apologia Daily'; }
+  setText('chEyebrow', META.eyebrow);
+  setText('chTitle', META.title);
+  setText('chSub', META.sub);
+  setText('ring-lbl', 'of ' + TOTAL);
+  setText('doneTitle', META.completeTitle);
+  setText('doneMsg', META.completeMsg);
+  setText('kitLede', META.kitLede);
+  setText('seasonNote', META.seasonNote);
   render();
   navAuth();
-  try{ if(window.adTrack) adTrack('challenge_view',{challenge:'easter40',done:DONE.length}); }catch(e){}
+  try{ if(window.adTrack) adTrack('challenge_view',{challenge:SLUG,done:DONE.length}); }catch(e){}
 }
 document.addEventListener('DOMContentLoaded', boot);
 </script>
