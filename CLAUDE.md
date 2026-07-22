@@ -615,6 +615,16 @@ speaker cites — never a copy of the talk. START at [`docs/video-research/INDEX
   speaker. So "make a video inform live answers" = promote its verified primaries into `/sources` and/or
   distil a certified-essay brief into `/briefs`; never point the runtime at `docs/video-research/`.
 
+## Content backlog — the release map (`docs/content-backlog.md`)
+One prioritized queue for every **content update/addition the research libraries surfaced but haven't
+shipped** — so accuracy/currency fixes actually reach the site and nothing is lost between a mining run
+and a release. A mining run (book or video) logs any lead that would **correct / update / strengthen with
+a new primary / open a topic we lack** as a backlog row (corroboration-only leads are skipped). A content
+session then executes it in pipeline order — **update/create the certified essay (re-gate: citations →
+argument → orthodoxy, dual-consensus for deity/resurrection) → then the brief/`/sources` → rebuild the
+index** — and marks the row Done + flips the source note's ledger. This is how a "latest book/video says X"
+lead becomes a live, verified answer without skipping the essay-level citation check.
+
 ## Deploy workflow (security-critical)
 - Work on the feature branch; **never `git checkout main`** (a stale local main lacks
   `.claude/agents/` and de-registers the agent fleet).

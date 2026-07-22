@@ -76,9 +76,12 @@ twice-checked, our-own-words material (or a verified verbatim primary) reaches a
    thesis, an argument map (beats in our own words → **primaries to verify**), a "Guardrail fit" note
    (flag any overstatement / neutrality risk / heterodox drift), and a cross-map to our Evidence Library
    tabs/essays and existing `/answers`.
-4. **Log it in two places:** add a row to the **Mined-videos ledger** below (with its live-door status)
-   AND a topic row to `INDEX.md` so the next content session can route a topic → this note. Update the
-   ledger's `→ /sources` / `→ /briefs` columns whenever a primary or brief from it later goes live.
+4. **Log it in three places:** (a) a row in the **Mined-videos ledger** below (with its live-door status);
+   (b) a topic row in `INDEX.md` so the next content session can route a topic → this note; and (c) for any
+   lead that would **correct, update, strengthen (new primary), or open a topic/objection we lack**, a row
+   in **[`docs/content-backlog.md`](../content-backlog.md)** — the release map. (Corroboration-only leads
+   don't get a backlog row.) Update the ledger's `→ /sources` / `→ /briefs` columns whenever a primary or
+   brief from it later goes live, and mark the backlog row Done.
 5. **Verify before anything ships.** A primary from a note is quotable only after `apologia-citations`
    confirms it and it clears `apologia-argument` + `apologia-orthodoxy` — same as everything else.
 6. **Deploy** per the repo rule: commit the **note + INDEX row only** (never the transcript) and

@@ -1,0 +1,39 @@
+# Content backlog — the release map surfaced by the research libraries
+
+**Purpose.** One prioritized place for every **content update or addition** the research libraries
+(`docs/book-research/`, `docs/video-research/`, and the `/sources` corpus) have surfaced but not yet
+shipped — so accuracy/currency improvements actually reach the site and **nothing gets lost between a
+mining run and a release.** This is the "map for future content releases."
+
+**Why it exists.** A big reason for the book + video libraries is keeping our content **current and
+accurate** with the latest scholarship. A mining run surfaces leads; this backlog is where they queue
+until a content session executes them through the pipeline.
+
+## The flow (how a row moves)
+1. A note (book/video) surfaces a lead → **log a row here** (and keep it in the note's cross-map).
+2. A content session executes it:
+   - **Update/create the certified essay** → re-run `citations → argument → orthodoxy` (dual-consensus
+     for deity/resurrection/salvation/world-religions) → bump the `content-review` stamp.
+   - **Then** update/add the **brief** (distilled from the essay) → `node tools/build-briefs-index.mjs`.
+   - If a verified verbatim quote is involved, add/flip the `/sources` entry (`verified:true`) →
+     `node tools/build-sources-index.mjs`.
+3. Mark the row **Done**, and flip the source note's ledger (`→ /sources` / `→ /briefs`) to ✓.
+
+**Types:** `new-essay` · `update-essay` · `new-answer` · `correction` · `new-brief` · `update-brief` ·
+`new-source`. **Priority:** P1 (accuracy fix / correction) > P2 (new topic/objection we lack) >
+P3 (stronger primary / enrichment) > P4 (corroboration only — usually skip).
+
+## Open backlog
+| P | What to do | Type | Surfaced by | Target file(s) | Gate | Status |
+|---|---|---|---|---|---|---|
+| P3 | Add **1 Cor 16:22 (*maranatha*)** as Aramaic-early evidence of earliest devotion to Jesus | update-essay → update-brief | `video-research/habermas-early-high-christology.md` §5 | `library/jesus_as_god_nt.html` → then `deity-of-christ-nt` brief | citations + dual-consensus (orthodoxy+neutrality) | TODO |
+| P3 | Add **Rom 10:13 → Joel 2:32** as a second Yahweh-text applied to Jesus | update-essay → update-brief | `video-research/habermas-early-high-christology.md` §5(iv) | `library/jesus_as_god_nt.html` → then `deity-of-christ-nt` brief | citations + dual-consensus | TODO |
+
+## Done (shipped — kept for the audit trail)
+_(none yet)_
+
+## Notes
+- **Corroboration-only leads (P4) don't get a row** — they add nothing a visitor sees. Log a lead here
+  only if it corrects, updates, strengthens with a new primary, or opens a topic/objection we lack.
+- Book-note "open items" (e.g. the CHECK-level page-cites, the pending human/pastoral sign-offs) can be
+  rolled in here too as they're actioned, so the whole content pipeline has one queue.
