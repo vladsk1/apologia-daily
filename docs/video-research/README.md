@@ -38,17 +38,26 @@ the exact sibling of `docs/book-research/`: a **map of leads**, never a copy of 
   `book-research/INDEX.md` and the `/sources` corpus — consult whichever has the best material for the
   topic (a note may say "book X covers this better; skip"). Documented drafting convention, like the
   book notes.
-- **Answering questions LIVE (`/api/ask`) — NO, not directly.** Same hard limit as the book notes: the
-  live serverless endpoint **cannot** read `docs/` (not deployed/served), and these are unverified
-  copyrighted leads anyway. The **only** path from a video to a live answer is:
-  **lead → verify the primary → add it to `/sources` as `verified:true`** → it compiles into
-  `lib/sources-verified.js`, which `api/ask.js` retrieves. So "make a video inform live answers" =
-  promote its verified primaries into `/sources`, never point the runtime at this folder.
+- **Answering questions LIVE (`/api/ask`) — NO, not directly** (identical to the book notes: the live
+  serverless endpoint **cannot** read `docs/`, and these are unverified copyrighted leads). But
+  video-mined material **can** reach the live AI through the **same two gated doors any research lead
+  uses** — never as a raw "video brief":
+  1. **`/sources`** (verbatim quotes): **lead → verify the primary → add it to `/sources` as
+     `verified:true`** → compiles into `lib/sources-verified.js`, which `api/ask.js` retrieves and lets
+     the model quote with attribution.
+  2. **`/briefs`** (our-own-words framing — *the "option the AI looks at before answering"*):
+     **lead → verify the primaries → write/strengthen a CERTIFIED essay → distil a brief** in
+     `briefs/_data.json` (its `reviewed` object must stamp BOTH `argument` and `orthodoxy`, +neutrality
+     for the resurrection/deity set) → `node tools/build-briefs-index.mjs` compiles it into
+     `lib/briefs-verified.js`, which `api/ask.js` retrieves as **optional background framing**.
+  The brief is **our own words, twice-gated, and provenance-traced to the certified essay** — never to
+  the transcript, never attributed to the video or the speaker. The video is only the upstream lead.
 
 ## Trust boundary (why it's safe)
 `YouTube transcript` (copyrighted, error-prone lead) → an **our-own-words note** here → a **certified
-essay/answer** and/or a **verified `/sources` primary** → (only then) a live answer. The runtime never
-reads the raw transcript; only twice-checked, our-own-words material reaches a visitor.
+essay/answer**, a **verified `/sources` primary**, and/or a **gated `/briefs` entry distilled from that
+certified essay** → (only then) a live answer. The runtime never reads the raw transcript; only
+twice-checked, our-own-words material (or a verified verbatim primary) reaches a visitor.
 
 ## Workflow — mining a video
 1. **Fetch the transcript** (local session):

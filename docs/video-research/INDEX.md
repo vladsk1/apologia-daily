@@ -14,8 +14,10 @@ book or a PD source covers it better).
 mishear names/dates/numbers) until confirmed against the primary and run through
 `apologia-citations → apologia-argument → apologia-orthodoxy`. Transcript text never enters `/sources` or a
 live answer. The live `api/ask.js` endpoint does **not** read this folder (it can't — not deployed/served,
-and these are unverified leads); the only path from a video to a *live* answer is: lead → verify the
-primary → add it to `/sources` as `verified:true`.
+and these are unverified leads). A video reaches a *live* answer only through the two gated doors any
+research lead uses: (1) lead → verify the primary → `/sources` as `verified:true` (verbatim quotes), or
+(2) lead → verified primaries → a **certified essay** → a gated **`/briefs`** entry the live AI weighs as
+optional our-own-words framing. Never a raw "video brief," never attributed to the video.
 
 ## Topic → note routing
 _(empty — no videos mined yet. Add a row per note as the library grows. Template below.)_

@@ -605,10 +605,15 @@ speaker cites — never a copy of the talk. START at [`docs/video-research/INDEX
   `/sources` corpus, and use whichever has the best material (a note may say a book/PD source covers it
   better). Documented drafting convention, like the book notes.
 - **⚠ The live `/api/ask` endpoint does NOT (and cannot) read this folder** — same limit as the book
-  notes (not deployed/served; unverified copyrighted leads). The ONLY path from a video to a *live*
-  answer is: lead → verify the primary → add it to `/sources` as `verified:true` → it compiles into
-  `lib/sources-verified.js`, which `api/ask.js` retrieves. So "make a video inform live answers" =
-  promote its verified primaries into `/sources`, never point the runtime at `docs/video-research/`.
+  notes (not deployed/served; unverified copyrighted leads). A video reaches a *live* answer only
+  through the **same two gated doors any research lead uses** (never as a raw "video brief"):
+  (1) **`/sources`** — lead → verify the primary → `verified:true` → `lib/sources-verified.js` (verbatim
+  quotes the AI may quote); and (2) **`/briefs`** — lead → verified primaries → a **certified essay** →
+  a gated brief (`reviewed` stamps argument+orthodoxy, +neutrality for resurrection/deity) →
+  `lib/briefs-verified.js`, which `api/ask.js` retrieves as **optional our-own-words framing**. Both are
+  our-own-words/verified and provenance-traced to certified content — never to the transcript or the
+  speaker. So "make a video inform live answers" = promote its verified primaries into `/sources` and/or
+  distil a certified-essay brief into `/briefs`; never point the runtime at `docs/video-research/`.
 
 ## Deploy workflow (security-critical)
 - Work on the feature branch; **never `git checkout main`** (a stale local main lacks
