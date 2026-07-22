@@ -1,0 +1,123 @@
+{
+  "reviewed": {
+    "argument": "2026-07-22",
+    "orthodoxy": "2026-07-22",
+    "by": "Feature reel for Study Plans — leads with the feature, showcases the plans (Resurrection Deep Dive, the case for God, Deity of Christ, Answering Islam, Bible Reliability, Worldviews, Debate Prep), demotes Advent to a seasonal beat. apologia-orthodoxy gate CLEAN — resurrection beat honors the early-creed rule; Kalam/fine-tuning/moral named as labels only (no 'everything has a cause' / 'science proves design' / 'atheists can't be moral'); denominational neutrality held (topic list creedal-common, 'family or church' = invite, Advent/Lent = calendar on-ramp not obligation); 0 clarifier candidates; no manufactured confidence (mission held). Product claims self-checked accurate vs study-plans.html: 10 guided plans + 2 seasonal challenges, Beginner–Advanced, 14–30 day range, Read/Ask/Debate/Reflect activities. Supersedes study-plans-advent.json (retired)."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "pace": 1.4,
+  "keep_watching": "keep watching  ↓",
+  "voiceover": "Here's a feature on Apologia Daily worth knowing about: Study Plans. Instead of endlessly browsing, you get a guided, day-by-day path through the evidence — with a clear finish line, and your progress saved as you go. There are ten guided plans, from beginner to advanced, running fourteen to thirty days. Start with the thirty-day Resurrection Deep Dive: the empty tomb, the minimal facts, the earliest creed — then practise it all in real debates. Or build the case for God from the ground up — the Kalam, fine-tuning, the moral argument. There's the Deity of Christ, Answering Islam, Bible Reliability, Worldviews, and a twenty-eight-day Debate Prep. A plan for every question. And these aren't reading lists. Every day gives you something to do: read the evidence, ask the AI tutor, step into the Debate Arena, then reflect and make it your own. Study on your own, or with a group, your family, or your whole church. There are seasonal challenges too — twenty-five questions before Christmas, and forty days before Easter. Start free today at apologia daily dot com, slash study plans.",
+  "source": "study-plans.html — feature reel for Study Plans (10 guided plans + 2 seasonal challenges). Leads with the feature, showcases the plans, demotes Advent to a seasonal beat. No new doctrinal argument (Incarnation framing per John 1:14).",
+  "scenes": [
+    {
+      "dur": 3.6,
+      "big": [
+        { "t": "A feature on Apologia Daily:", "c": "cream", "s": 40 },
+        { "t": "Study Plans", "c": "gold", "s": 92 }
+      ],
+      "sub": [
+        { "t": "A guided, day-by-day path through the evidence.", "c": "dim", "f": "serif", "s": 30 }
+      ]
+    },
+    {
+      "kicker": "WHAT IS A STUDY PLAN?",
+      "dur": 4.4,
+      "lines": [
+        { "t": "Not endless browsing.", "c": "cream", "s": 48 },
+        { "t": "", "s": 14 },
+        { "t": "A day-by-day path —", "c": "cream", "s": 46 },
+        { "t": "with a finish line.", "c": "gold", "f": "serifb", "s": 50 }
+      ]
+    },
+    {
+      "kicker": "CHOOSE YOUR PATH",
+      "dur": 4.4,
+      "lines": [
+        { "t": "10 guided plans.", "c": "gold", "f": "serifb", "s": 58 },
+        { "t": "", "s": 16 },
+        { "t": "Beginner to Advanced.", "c": "cream", "s": 44 },
+        { "t": "14 to 30 days.", "c": "cream", "s": 44 }
+      ]
+    },
+    {
+      "kicker": "30-DAY RESURRECTION DEEP DIVE",
+      "dur": 5.0,
+      "lines": [
+        { "t": "The empty tomb.", "c": "cream", "s": 48 },
+        { "t": "The minimal facts.", "c": "cream", "s": 46 },
+        { "t": "The earliest creed.", "c": "cream", "s": 46 },
+        { "t": "", "s": 14 },
+        { "t": "Then practise it in real debates.", "c": "gold", "f": "serifb", "s": 38 }
+      ]
+    },
+    {
+      "kicker": "THE CASE FOR GOD",
+      "dur": 4.8,
+      "lines": [
+        { "t": "The Kalam. Fine-tuning.", "c": "cream", "s": 44 },
+        { "t": "The moral argument.", "c": "cream", "s": 46 },
+        { "t": "", "s": 14 },
+        { "t": "Build the whole case,", "c": "cream", "s": 44 },
+        { "t": "one day at a time.", "c": "gold", "f": "serifb", "s": 46 }
+      ]
+    },
+    {
+      "kicker": "A PLAN FOR EVERY QUESTION",
+      "dur": 5.0,
+      "lines": [
+        { "t": "The Deity of Christ", "c": "cream", "s": 42 },
+        { "t": "Answering Islam · Bible Reliability", "c": "cream", "s": 34 },
+        { "t": "Worldviews · Debate Prep", "c": "cream", "s": 38 },
+        { "t": "", "s": 12 },
+        { "t": "— and more.", "c": "gold", "f": "serifb", "s": 44 }
+      ]
+    },
+    {
+      "kicker": "EVERY DAY, SOMETHING TO DO",
+      "dur": 4.8,
+      "lines": [
+        { "t": "Read the evidence.", "c": "cream", "s": 44 },
+        { "t": "Ask the AI tutor.", "c": "cream", "s": 44 },
+        { "t": "Debate. Reflect.", "c": "gold", "f": "serifb", "s": 50 },
+        { "t": "", "s": 14 },
+        { "t": "Not just reading — practice.", "c": "cream", "s": 38 }
+      ]
+    },
+    {
+      "kicker": "BUILT TO STICK",
+      "dur": 4.6,
+      "lines": [
+        { "t": "Your progress saves", "c": "cream", "s": 46 },
+        { "t": "as you go.", "c": "cream", "s": 46 },
+        { "t": "", "s": 14 },
+        { "t": "Study solo — or with a group,", "c": "cream", "s": 38 },
+        { "t": "family, or your church.", "c": "gold", "f": "serifb", "s": 42 }
+      ]
+    },
+    {
+      "kicker": "SEASONAL CHALLENGES",
+      "dur": 4.4,
+      "lines": [
+        { "t": "25 questions before Christmas.", "c": "cream", "s": 40 },
+        { "t": "40 days before Easter.", "c": "cream", "s": 40 },
+        { "t": "", "s": 14 },
+        { "t": "Walk it with your people.", "c": "gold", "f": "serifb", "s": 44 }
+      ]
+    },
+    {
+      "dur": 4.8,
+      "big": [
+        { "t": "Start free today.", "c": "cream", "s": 74 },
+        { "t": "Find your plan.", "c": "gold", "s": 60 }
+      ],
+      "sub": [
+        { "t": "10 guided plans + 2 seasonal challenges.", "c": "dim", "f": "serif", "s": 30 },
+        { "t": "apologiadaily.com/study-plans", "c": "gold", "f": "serifb", "s": 42 }
+      ]
+    }
+  ]
+}
