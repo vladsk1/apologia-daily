@@ -37,6 +37,7 @@ _(Add a row per note as the library grows. Template kept at bottom.)_
 | Tahrif / did Muslims allege the Bible was corrupted? | `frost-islamic-dilemma.md` §Guardrails + Q&A | Q 2:79→2:80 (vs Genesis Rabbah); *tahrif al-maʿnā* vs *al-naṣṣ*; al-Tabari, al-Razi, **Whittingham (De Gruyter 2020)**, Ibn Hazm; early witness **George of Bʿeltan** |
 | Is Muhammad prophesied in the Bible? (proof-text rebuttals) | `muhammad-in-the-bible-prophet-dilemma.md` §Argument map 3–9 | Deut 18:15,18 ("brothers"=Israelites; Origen/Vulgate); Isa 42 (Servant=Israel, Kedar); Song of Songs 5:16 (*maḥmad*); Isa 21:7 (Babylon); Dan 2:44; John 16:7 — *all vs Q 7:157; certified home: `answers/does-the-bible-predict-muhammad.html`* |
 | Daniel 2 statue ≠ Islam | `muhammad-in-the-bible-prophet-dilemma.md` §Argument map 9 | Dan 2:44 ("in the days of those kings"); *olam*=permanent (**Sacha Stern**); **Buster & Walton**, **N. T. Wright** — *⚠ note's toxic tone; verify + pipeline before use* |
+| Was the Qur'an perfectly preserved? (textual transmission) | `avery-gio-quran-textual-preservation.md` §Argument map | Bukhari 4986/4987 (Abu Bakr→Uthman, burning), 4944 (Ibn Masud Q 92:3); Sahih Muslim 1452 (Aisha suckling verse) + Abu Musa's lost surahs; *sabʿa aḥruf* — *core already certified in `library/islam-preservation.html` + live brief `quran-preservation`* |
 | _template: Topic_ | _`note.md` §N_ | _primary A; primary B; cross-check `book-research` X_ |
 
 ## ⚠ Standing "do not use / high-caution" flags (carry these into any pull)
