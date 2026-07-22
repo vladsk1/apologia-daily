@@ -116,9 +116,12 @@ overlay — it is in the bedrock.
 | Philippians 2 hymn | `library/phil2.html` | Confirms/【possibly strengthens】the Isa 45:23 identification (already central there) |
 | The trial / Son of Man | `ev-s3` Jesus tab; `library/jesus_claims.html` | Mark 14:61–64 + Daniel 7 + the Bock blasphemy reading |
 
-**Likely genuine gaps worth chasing (verify first):** the **maranatha (1 Cor 16:22)** Aramaic argument and
-the **Romans 10:13 → Joel 2:32** Yahweh-text move did not surface in `earlycreed`/`jesus_as_god_nt`/`phil2`
-on a quick scan — if confirmed absent, these are the strongest net-new primaries this talk offers.
+**Net-new leads — STATUS UPDATE (2026-07-22, both resolved):**
+- **maranatha (1 Cor 16:22)** — on closer reading it was **already central** to `jesus_as_god_nt.html`
+  (spelled "Marana tha" — the quick scan missed it); footnote 14 + the whole "reply" section already carry it.
+- **Romans 10:13 → Joel 2:32 (MT 3:5)** — was genuinely absent; **now ADDED** to `jesus_as_god_nt.html`
+  (new sentence + footnote 7, dual-consensus re-gated CLEAN 2026-07-22) and distilled into the live
+  `deity-of-christ-nt` brief. This is what flipped this video's ledger row to **✓ `deity-of-christ-nt`**.
 
 ## Live-door status (decision recorded 2026-07-21, after verification)
 - `/sources`: **— (not the natural door).** This talk's primaries are NT Scripture + named scholars, not
@@ -134,8 +137,7 @@ on a quick scan — if confirmed absent, these are the strongest net-new primari
     "~2–5 years," and attributes "within months" to **Dunn** — exactly the discipline this note flags.
   So the video *reinforces* existing briefs rather than opening a new topic; forcing a brief would be
   redundant, and its net-new material isn't yet in a certified essay (see below), so it can't ground one.
-- **Essay-strengthening leads for a future content session** (verified primaries not yet on-site — a quick
-  scan found them absent from `earlycreed`/`jesus_as_god_nt`/`phil2`): **1 Cor 16:22 (maranatha)** as
-  Aramaic-early evidence, and **Rom 10:13 → Joel 2:32 (MT 3:5)** as a second Yahweh-text applied to Jesus.
-  If added to the certified `jesus_as_god_nt.html` (dual-consensus re-gate), they could then legitimately
-  strengthen the `deity-of-christ-nt` brief. Until an essay carries them, they stay here as leads.
+- **Essay-strengthening leads — DONE (2026-07-22).** Both leads are now resolved (see the "STATUS UPDATE"
+  above): maranatha was already present in `jesus_as_god_nt.html`; Rom 10:13 → Joel 2:32 was added there
+  (dual-consensus re-gate CLEAN) and folded into the live `deity-of-christ-nt` brief. This video has now
+  reached the `/briefs` door — nothing further outstanding from it.

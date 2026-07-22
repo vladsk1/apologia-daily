@@ -27,6 +27,9 @@ _(Add a row per note as the library grows. Template kept at bottom.)_
 | Early creed / pre-NT tradition dating | `habermas-early-high-christology.md` §Argument map 1–3 | 1 Cor 15:1–7; 1 Cor 11:23–26; Gal 1:18–19 & 2:1–2; Acts 1–5, 10, 13, 17; Josephus *Ant.* 20 (James, ~62 AD) |
 | Deity of Christ in the earliest sources ("Early High Christology") | `habermas-early-high-christology.md` §5 | Phil 2:6–11 + **Isa 45:23**; Rom 10:9,13 + **Joel 2:32**; **1 Cor 16:22 (maranatha)**; Mark 14:61–64 + Dan 7:13–14; Rom 9:5 |
 | The Sanhedrin trial as a blasphemy/deity scene | `habermas-early-high-christology.md` §5(ii) | Mark 14:61–64; Dan 7:13–14; Ps 110:1; **lead: Darrell Bock, *Blasphemy and Exaltation in Judaism*** |
+| Resurrection timeline / "everything within ~5–6 years of the cross" | `habermas-six-facts-before-36ad.md` §Argument map | 1 Cor 15:3–7; **Gal 1:18–19 (*historeō*)**; Gal 2:2, 2:9; 1 Cor 15:11; Acts 9; Rom 10:9; Rom 1:3–4 — *note: all already live in `earlycreed`/`paulconv`/`minimalfacts`* |
+| Paul as early + eyewitness (the fact-finding Jerusalem visit) | `habermas-six-facts-before-36ad.md` §Set 3 | **Gal 1:18–19** (*historeō* = "visit to inquire"); 1 Cor 15:8–11; cross-check `book-research/case-for-the-resurrection-of-jesus.md` |
+| James the brother of Jesus: sceptic → believer → martyr | `habermas-six-facts-before-36ad.md` §Set 1 | 1 Cor 15:7; Mark 3:21/6:3; John 7:5; Acts 1:14; Josephus *Ant.* 20.200; *(minor: Gospel of the Hebrews fragment via Jerome)* |
 | _template: Topic_ | _`note.md` §N_ | _primary A; primary B; cross-check `book-research` X_ |
 
 ## ⚠ Standing "do not use / high-caution" flags (carry these into any pull)

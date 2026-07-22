@@ -71,8 +71,13 @@ def via_api(vid, lang):
     from youtube_transcript_api import YouTubeTranscriptApi as YTA
     langs = [lang, "en", "en-US", "en-GB"]
     kind, tr = "unknown", None
+    # youtube-transcript-api >=1.0 replaced the classmethods list_transcripts()/
+    # get_transcript() with instance methods .list()/.fetch(); older 0.6.x used the
+    # classmethods. Support both so the fetcher keeps working across versions.
+    api = YTA()
+    listing = getattr(api, "list", None) or getattr(YTA, "list_transcripts", None)
     try:
-        tl = YTA.list_transcripts(vid)
+        tl = listing(vid)
         try:
             tr = tl.find_manually_created_transcript(langs).fetch()
             kind = "MANUAL (human captions — high accuracy)"
@@ -80,7 +85,8 @@ def via_api(vid, lang):
             tr = tl.find_generated_transcript(langs).fetch()
             kind = "AUTO / ASR (mishears names, dates, numbers — verify EVERY one)"
     except Exception:
-        tr = YTA.get_transcript(vid, languages=langs)
+        fetch = getattr(api, "fetch", None) or getattr(YTA, "get_transcript", None)
+        tr = fetch(vid, languages=langs)
         kind = "unknown (could not tell manual vs auto — treat as auto)"
     lines = []
     for seg in tr:
@@ -154,7 +160,8 @@ def main():
     print("    caption source: " + (kind or "unknown"))
     print("    (%d chars) — mine for argument shape + primaries; do not commit or quote." % len(body or ""))
     if kind and ("AUTO" in kind or "auto" in kind or "unknown" in kind):
-        print("    ⚠ Not human captions — distrust every name/date/number; verify against the primary.")
+        # ASCII-only (Windows consoles default to cp1252 and choke on non-ASCII).
+        print("    ! Not human captions - distrust every name/date/number; verify against the primary.")
 
 
 if __name__ == "__main__":
