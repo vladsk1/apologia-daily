@@ -328,11 +328,22 @@
           <div class="pulse-k">This week</div>
           <div class="pulse-n" id="pulse-n">0 of 0 studied</div>
           <div class="pulse-sub" id="pulse-sub">When your group shows up, it shows here.</div>
+          <div id="pulse-streak" style="display:none;margin-top:8px;font-family:var(--font-ui);font-size:0.84rem;font-weight:600;color:var(--gold);"></div>
         </div>
         <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
           <button class="pulse-btn" id="pulse-btn" onclick="markStudiedToday()">&#10003; I studied today</button>
           <button class="pulse-btn" id="share-btn" style="background:rgba(255,255,255,0.12);color:#fff;" onclick="shareGroupCard()">&#128228; Share</button>
         </div>
+      </div>
+
+      <!-- Consistency leaderboard — effort-based (days shown up), never correctness -->
+      <div id="leaderboard" style="display:none;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1rem 1.25rem;margin-bottom:1.5rem;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.85rem;">
+          <div style="font-family:var(--font-ui);font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);">Most consistent · last 30 days</div>
+          <div style="font-family:var(--font-ui);font-size:0.66rem;color:var(--text-muted);">days shown up</div>
+        </div>
+        <div id="leaderboard-rows"></div>
+        <div style="font-family:var(--font-ui);font-size:0.68rem;color:var(--text-muted);margin-top:0.75rem;line-height:1.55;">Ranked by showing up &mdash; not by being right. &ldquo;As iron sharpens iron&rdquo; (Proverbs 27:17).</div>
       </div>
 
       <div class="detail-grid">
@@ -855,22 +866,64 @@
   async function loadActivity(id){
     var pulse = document.getElementById('pulse');
     try {
-      var since = new Date(Date.now() - 6*864e5).toISOString().slice(0,10);
-      var res = await sb.from('group_activity').select('user_id, day').eq('group_id', id).gte('day', since);
+      var todayISO = new Date().toISOString().slice(0,10);
+      var since30 = new Date(Date.now() - 29*864e5).toISOString().slice(0,10);
+      var res = await sb.from('group_activity').select('user_id, display_name, day').eq('group_id', id).gte('day', since30);
       if (res.error) throw res.error;
       var rows = res.data || [];
-      var set = {}; rows.forEach(function(r){ set[r.user_id] = true; });
+
+      // ---- 7-day pulse ----
+      var since7 = new Date(Date.now() - 6*864e5).toISOString().slice(0,10);
+      var set = {}; rows.forEach(function(r){ if(r.day >= since7) set[r.user_id] = true; });
       window._activeSet = set;
       var activeCount = Object.keys(set).length;
       var mc = parseInt(document.getElementById('detail-member-count').textContent) || activeCount;
       document.getElementById('pulse-n').textContent = activeCount + ' of ' + mc + ' studied';
-      var didToday = rows.some(function(r){ return r.user_id===currentUser.id && r.day===new Date().toISOString().slice(0,10); });
+      var didToday = rows.some(function(r){ return r.user_id===currentUser.id && r.day===todayISO; });
       var btn = document.getElementById('pulse-btn');
       if (didToday) { btn.disabled = true; btn.innerHTML = '&#10003; Studied today'; }
       else { btn.disabled = false; btn.innerHTML = '&#10003; I studied today'; }
       document.getElementById('pulse-sub').textContent = activeCount>0 ? 'Members active in the last 7 days' : 'Be the first to show up this week.';
       pulse.style.display = 'flex';
-    } catch(e){ pulse.style.display = 'none'; }
+
+      // ---- group streak: consecutive days (ending today or yesterday) the group showed up ----
+      var dayset = {}; rows.forEach(function(r){ dayset[r.day] = true; });
+      var streak = 0, cur = new Date();
+      if (!dayset[todayISO]) { cur = new Date(Date.now() - 864e5); } // yesterday keeps it alive
+      while (dayset[cur.toISOString().slice(0,10)]) { streak++; cur = new Date(cur.getTime() - 864e5); }
+      var st = document.getElementById('pulse-streak');
+      if (streak >= 2) { st.style.display=''; st.innerHTML = '&#128293; Group streak: ' + streak + ' days'; }
+      else { st.style.display='none'; }
+
+      // ---- consistency leaderboard: distinct active days per member (30d, effort not correctness) ----
+      var byUser = {};
+      rows.forEach(function(r){
+        var u = byUser[r.user_id] || (byUser[r.user_id] = { name:(r.display_name||'Member'), days:{} });
+        u.days[r.day] = true;
+        if (r.display_name) u.name = r.display_name;
+      });
+      var board = Object.keys(byUser).map(function(uid){ return { uid:uid, name:byUser[uid].name, n:Object.keys(byUser[uid].days).length }; })
+        .sort(function(a,b){ return b.n - a.n; }).slice(0,8);
+      renderLeaderboard(board);
+    } catch(e){ pulse.style.display = 'none'; var lb=document.getElementById('leaderboard'); if(lb) lb.style.display='none'; }
+  }
+
+  function renderLeaderboard(board){
+    var host = document.getElementById('leaderboard');
+    var rowsEl = document.getElementById('leaderboard-rows');
+    if (!host || !rowsEl) return;
+    if (!board || board.length < 2) { host.style.display='none'; return; } // needs a real cohort to be social proof
+    var medals = ['#c8a951','#9fb0c3','#c08457'];
+    rowsEl.innerHTML = board.map(function(m, i){
+      var rankColor = medals[i] || 'var(--text-muted)';
+      var isMe = m.uid === currentUser.id;
+      return '<div style="display:flex;align-items:center;gap:0.7rem;padding:0.5rem 0;'+(i? 'border-top:1px solid var(--border);':'')+'">'
+        + '<span style="flex:0 0 18px;text-align:center;font-family:var(--font-ui);font-size:0.82rem;font-weight:700;color:'+rankColor+';">'+(i+1)+'</span>'
+        + '<span class="member-avatar" style="background:'+colorFor(m.uid)+';">'+esc(initials(m.name))+'</span>'
+        + '<span style="flex:1;font-family:var(--font-ui);font-size:0.85rem;color:var(--text-dark);">'+esc(m.name)+(isMe?' <span style="color:var(--text-muted);font-size:0.72rem;">(you)</span>':'')+'</span>'
+        + '<span style="flex:0 0 auto;font-family:var(--font-ui);font-size:0.9rem;font-weight:700;color:var(--text-dark);">'+m.n+'</span></div>';
+    }).join('');
+    host.style.display='';
   }
 
   async function markStudiedToday(){
