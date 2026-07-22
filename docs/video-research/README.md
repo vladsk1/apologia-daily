@@ -70,7 +70,9 @@ twice-checked, our-own-words material (or a verified verbatim primary) reaches a
    thesis, an argument map (beats in our own words → **primaries to verify**), a "Guardrail fit" note
    (flag any overstatement / neutrality risk / heterodox drift), and a cross-map to our Evidence Library
    tabs/essays and existing `/answers`.
-4. **Add a row to `INDEX.md`** so the next content session can route a topic → this note.
+4. **Log it in two places:** add a row to the **Mined-videos ledger** below (with its live-door status)
+   AND a topic row to `INDEX.md` so the next content session can route a topic → this note. Update the
+   ledger's `→ /sources` / `→ /briefs` columns whenever a primary or brief from it later goes live.
 5. **Verify before anything ships.** A primary from a note is quotable only after `apologia-citations`
    confirms it and it clears `apologia-argument` + `apologia-orthodoxy` — same as everything else.
 6. **Deploy** per the repo rule: commit the **note + INDEX row only** (never the transcript) and
@@ -100,5 +102,17 @@ Start with talks that *cite their sources* — those give the richest lead harve
 - **Capturing Christianity** — interviews with scholars (Craig, Swinburne, etc.).
 Cross-check every claim against the primary regardless of channel; even careful channels round numbers.
 
-## Current notes
-_(none yet — this scaffold is fresh. Mine a video and add the first note + an INDEX row.)_
+## Mined-videos ledger (the running list — update it every time)
+Like the book library's "Current notes," this is the canonical list of which videos have been mined —
+plus, unique to video, **whether each one actually reached the live doors** (`/sources` / `/briefs`).
+Every mining run MUST add a row here (and an `INDEX.md` topic row). Status keys: **note** = our-own-words
+map written · **✓sources** = a verified primary from it is live in `/sources` · **✓briefs** = a gated
+brief distilled from its certified-essay tie-in is live in `/briefs` · **—** = not (yet).
+
+| Video (speaker · title) | id / URL | Note file | → /sources | → /briefs | Date |
+|---|---|---|---|---|---|
+| _(none yet — this scaffold is fresh)_ | — | — | — | — | — |
+| _example: Craig · "The Kalam Cosmological Argument"_ | _`dQw4w9WgXcQ`_ | _`craig-kalam.md`_ | _—_ | _✓ `kalam-cause-of-universe`_ | _2026-07-22_ |
+
+**Rule of thumb:** a video isn't "briefed" until a row shows **✓briefs** (or **✓sources**). A row with only
+**note** means it's mined but nothing has cleared the gates into the live AI yet.
