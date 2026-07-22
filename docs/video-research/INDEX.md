@@ -42,6 +42,7 @@ _(Add a row per note as the library grows. Template kept at bottom.)_
 | Resurrection — the bodily-resurrection word study | `habermas-mcdowell-on-the-resurrection-interview.md` §bodily | *anastasis/egeirō*; Phil 3:21 (*sōma* not *pneuma*); N. T. Wright *Resurrection of the Son of God*; **John Granger Cook** — *→ `library/respred.html` (already the backbone)* |
 | Naturalistic theories of the resurrection (refutations) | `habermas-mcdowell-alternate-theories-interview.md` §Argument map | swoon (Strauss; Quintilian), stolen body (Reimarus), wrong tomb (Kirsopp Lake), copycat (Mettinger, J. Z. Smith, Pannenberg), hallucination (Lüdemann; Flew) — *all already in the live `resurrection-*` + `pagan-myths-copycat` briefs* |
 | Hume / can history study miracles? (meta-critique) | `habermas-mcdowell-alternate-theories-interview.md` §meta-critiques | Hume *Enquiry* §10 (circular-definition critique); CS Lewis; a-priori objection vs rejection — *possible net-new essay topic; not currently on-site* |
+| Early creeds — dating + the deity of the earliest layer | `habermas-childers-early-creeds.md` §Argument map | 1 Cor 15:3–7 (Lüdemann, **Pinchas Lapid**); Rom 10:9/10:13→Joel; Phil 2→Isa 45; 1 Cor 8:6 (Shema); Mark 14:61–64 + Dan 7 — *all already in note #1 + certified essays/briefs; leads: **Lapid**, **Vernon Neufeld**, the Habermas/Shaw Cullmann reprint* |
 | _template: Topic_ | _`note.md` §N_ | _primary A; primary B; cross-check `book-research` X_ |
 
 ## ⚠ Standing "do not use / high-caution" flags (carry these into any pull)
