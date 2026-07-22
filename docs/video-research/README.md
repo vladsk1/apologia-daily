@@ -76,6 +76,19 @@ twice-checked, our-own-words material (or a verified verbatim primary) reaches a
 6. **Deploy** per the repo rule: commit the **note + INDEX row only** (never the transcript) and
    fast-forward push to `main` (never `git checkout main`).
 
+## Quickstart — testing this from a local session
+You do **not** open YouTube or copy any transcript yourself. Just paste a link and ask. In a **local
+(or web-enabled) Claude Code session** — one whose machine can reach youtube.com — say something like:
+
+> **"Mine this video for the apologetics library, following `docs/video-research/README.md`:
+> `<paste YouTube URL>`. Fetch the transcript, pull the argument shape + the primary sources it cites,
+> write the note + an INDEX row, verify the primaries, and — if it strengthens a topic — draft a
+> `/sources` entry and/or a gated `/briefs` brief so the live AI can use it."**
+
+Claude then runs `python3 tools/fetch-transcript.py <url>` itself (the transcript lands in the
+git-ignored `_transcripts/`), reads it, and does the rest. Your only job is choosing the video and the
+final review. (This remote/CI sandbox can't reach YouTube — run the test from your local machine.)
+
 ## Channels worth mining first (trustworthy, primary-source-heavy)
 Start with talks that *cite their sources* — those give the richest lead harvest:
 - **Reasonable Faith** (William Lane Craig) — kalam, fine-tuning, resurrection, moral argument.
