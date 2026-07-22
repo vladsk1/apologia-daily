@@ -13,10 +13,16 @@ the exact sibling of `docs/book-research/`: a **map of leads**, never a copy of 
   Capture the argument's *shape* and its *citations* in **our own words** — no stored transcript
   excerpts, no quoting the video as if it were our content or a source. The note points at quotable
   **primaries**; it is not a copy of the talk.
-- **Auto-captions are error-prone.** Auto-generated captions mishear names, dates, and numbers. Treat
-  **everything** in a transcript as an **unverified lead** until confirmed against the primary source
-  and run through `apologia-citations → apologia-argument → apologia-orthodoxy`. Never cite a figure or
-  a scholar attribution straight off a transcript.
+- **Accuracy depends on the caption track (the fetcher prefers the good one).** Highest → lowest:
+  (1) **human/manual captions** — accurate, correct names/dates; (2) **Whisper (large) run on the
+  audio** — usually better than YouTube's auto-captions if you want a higher-fidelity transcript
+  (extra setup: `yt-dlp` the audio + run `faster-whisper` locally); (3) **auto/ASR captions** — the
+  default when there's no manual track; they mishear exactly what we cite (scholar names, dates,
+  numbers, Greek/Hebrew). `tools/fetch-transcript.py` **prefers the manual track and stamps
+  `caption source: MANUAL / AUTO` in the header** so you know how much to distrust it. Either way, treat
+  **everything** in a transcript as an **unverified lead** until confirmed against the primary and run
+  through `apologia-citations → apologia-argument → apologia-orthodoxy`. Never cite a figure or a scholar
+  attribution straight off a transcript — the accuracy that matters is the *primary's*, which we verify.
 - **Never store or commit the transcript.** `tools/fetch-transcript.py` writes to
   `docs/video-research/_transcripts/`, which is **git-ignored**. Mine it, then let it be. Only the
   our-own-words *note* (leads + argument map) is committed.
