@@ -1,0 +1,310 @@
+{
+  "movements": [
+    {
+      "t": "Is there a God at all?",
+      "s": "Days 1–6 · The foundation"
+    },
+    {
+      "t": "Can we trust the Bible?",
+      "s": "Days 7–12 · The text"
+    },
+    {
+      "t": "Who is Jesus?",
+      "s": "Days 13–19 · The central figure"
+    },
+    {
+      "t": "The honest hard questions",
+      "s": "Days 20–25 · Suffering, doubt, hiddenness"
+    },
+    {
+      "t": "What about other paths?",
+      "s": "Days 26–31 · Other worldviews"
+    },
+    {
+      "t": "He is risen — the evidence",
+      "s": "Days 32–40 · The climax, for Holy Week"
+    }
+  ],
+  "days": [
+    {
+      "day": 1,
+      "m": 0,
+      "q": "Is there any evidence that God exists?",
+      "slug": "does-god-exist",
+      "why": "Start at the foundation: does the evidence point to a Creator at all?"
+    },
+    {
+      "day": 2,
+      "m": 0,
+      "q": "What caused the universe?",
+      "slug": "what-caused-the-universe",
+      "why": "Everything that begins has a cause. What began the universe?"
+    },
+    {
+      "day": 3,
+      "m": 0,
+      "q": "Is the universe fine-tuned for life?",
+      "slug": "is-the-universe-fine-tuned-for-life",
+      "why": "The dials of physics sit on a razor’s edge. Why?"
+    },
+    {
+      "day": 4,
+      "m": 0,
+      "q": "Where do morality and human rights come from without God?",
+      "slug": "where-does-morality-come-from-without-god",
+      "why": "If right and wrong are real, where do they get their weight?"
+    },
+    {
+      "day": 5,
+      "m": 0,
+      "q": "Is consciousness evidence for God?",
+      "slug": "is-consciousness-evidence-for-god",
+      "why": "You are not just meat. Where does the mind come from?"
+    },
+    {
+      "day": 6,
+      "m": 0,
+      "q": "If God made everything, who made God?",
+      "slug": "who-made-god",
+      "why": "The classic comeback — and why it misunderstands the claim."
+    },
+    {
+      "day": 7,
+      "m": 1,
+      "q": "Can we trust the New Testament manuscripts?",
+      "slug": "can-we-trust-the-new-testament-manuscripts",
+      "why": "Before we ask if it’s true, can we even trust the text?"
+    },
+    {
+      "day": 8,
+      "m": 1,
+      "q": "Were the Gospels written by eyewitnesses?",
+      "slug": "were-the-gospels-written-by-eyewitnesses",
+      "why": "Legend, or the memory of people who were there?"
+    },
+    {
+      "day": 9,
+      "m": 1,
+      "q": "When were the gospels written?",
+      "slug": "when-were-the-gospels-written",
+      "why": "Early enough to be checked — or late enough to invent?"
+    },
+    {
+      "day": 10,
+      "m": 1,
+      "q": "Aren't there contradictions in the Bible?",
+      "slug": "are-there-contradictions-in-the-bible",
+      "why": "The honest look at the hard passages."
+    },
+    {
+      "day": 11,
+      "m": 1,
+      "q": "Is there archaeological evidence for the Bible?",
+      "slug": "is-there-archaeological-evidence-for-the-bible",
+      "why": "What the spade has turned up."
+    },
+    {
+      "day": 12,
+      "m": 1,
+      "q": "Who decided which books are in the Bible?",
+      "slug": "who-decided-which-books-are-in-the-bible",
+      "why": "Was the canon a power play, or a recognition?"
+    },
+    {
+      "day": 13,
+      "m": 2,
+      "q": "Did Jesus really exist?",
+      "slug": "did-jesus-really-exist",
+      "why": "Even sceptical historians agree on this much."
+    },
+    {
+      "day": 14,
+      "m": 2,
+      "q": "Did Jesus actually claim to be God?",
+      "slug": "did-jesus-claim-to-be-god",
+      "why": "The heart of it: did he actually say it?"
+    },
+    {
+      "day": 15,
+      "m": 2,
+      "q": "Wasn't Jesus just a good moral teacher?",
+      "slug": "was-jesus-just-a-good-moral-teacher",
+      "why": "The one thing a merely-good teacher can’t be."
+    },
+    {
+      "day": 16,
+      "m": 2,
+      "q": "What is the evidence that Jesus is God?",
+      "slug": "what-is-the-evidence-that-jesus-is-god",
+      "why": "The case, laid out plainly."
+    },
+    {
+      "day": 17,
+      "m": 2,
+      "q": "Did Jesus fulfill Isaiah 53?",
+      "slug": "did-jesus-fulfill-prophecy-isaiah-53",
+      "why": "A portrait written centuries before the cross."
+    },
+    {
+      "day": 18,
+      "m": 2,
+      "q": "Isn't the Trinity a contradiction?",
+      "slug": "isnt-the-trinity-a-contradiction",
+      "why": "One God, three persons — confusion, or coherence?"
+    },
+    {
+      "day": 19,
+      "m": 2,
+      "q": "Did the church invent Jesus' divinity at the Council of Nicaea?",
+      "slug": "did-the-church-invent-jesus-divinity-at-nicaea",
+      "why": "What actually happened in 325."
+    },
+    {
+      "day": 20,
+      "m": 3,
+      "q": "If God is good, why is there so much suffering?",
+      "slug": "why-does-god-allow-suffering",
+      "why": "The question that’s more than academic. Faced honestly."
+    },
+    {
+      "day": 21,
+      "m": 3,
+      "q": "How can a loving God send people to hell?",
+      "slug": "how-can-a-loving-god-send-people-to-hell",
+      "why": "Love and judgment — held together."
+    },
+    {
+      "day": 22,
+      "m": 3,
+      "q": "Isn't faith just believing without evidence?",
+      "slug": "isnt-faith-believing-without-evidence",
+      "why": "What the Bible actually means by “faith.”"
+    },
+    {
+      "day": 23,
+      "m": 3,
+      "q": "Is it okay to have doubts as a Christian?",
+      "slug": "is-it-ok-to-have-doubts-as-a-christian",
+      "why": "A word for the wrestling — doubt is not the enemy."
+    },
+    {
+      "day": 24,
+      "m": 3,
+      "q": "If God is real, why does he seem hidden?",
+      "slug": "if-god-is-real-why-does-he-seem-hidden",
+      "why": "On divine hiddenness — and why it may not be silence."
+    },
+    {
+      "day": 25,
+      "m": 3,
+      "q": "What about those who have never heard of Jesus?",
+      "slug": "what-about-those-who-never-heard-of-jesus",
+      "why": "The fairness question, taken seriously."
+    },
+    {
+      "day": 26,
+      "m": 4,
+      "q": "Aren't all religions basically the same?",
+      "slug": "arent-all-religions-basically-the-same",
+      "why": "Same words, very different claims. Do they really agree?"
+    },
+    {
+      "day": 27,
+      "m": 4,
+      "q": "What makes Christianity different from other religions?",
+      "slug": "what-makes-christianity-different-from-other-religions",
+      "why": "The one difference that changes everything."
+    },
+    {
+      "day": 28,
+      "m": 4,
+      "q": "Do Muslims and Christians worship the same God?",
+      "slug": "do-muslims-and-christians-worship-the-same-god",
+      "why": "Shared vocabulary is not shared belief."
+    },
+    {
+      "day": 29,
+      "m": 4,
+      "q": "Was Jesus a Muslim?",
+      "slug": "was-jesus-a-muslim",
+      "why": "What the Jesus of history actually claimed."
+    },
+    {
+      "day": 30,
+      "m": 4,
+      "q": "Did Jesus die on the cross, or does the Quran deny it?",
+      "slug": "did-jesus-die-on-the-cross-islam",
+      "why": "The one event the earliest evidence will not let go."
+    },
+    {
+      "day": 31,
+      "m": 4,
+      "q": "Is Islam true?",
+      "slug": "is-islam-true",
+      "why": "Weighing the claim honestly, on the evidence."
+    },
+    {
+      "day": 32,
+      "m": 5,
+      "q": "Is there evidence that Jesus rose from the dead?",
+      "slug": "is-there-evidence-jesus-rose-from-the-dead",
+      "why": "Now the climax. Is there real evidence he rose?"
+    },
+    {
+      "day": 33,
+      "m": 5,
+      "q": "What is the minimal facts argument for the resurrection?",
+      "slug": "what-is-the-minimal-facts-argument",
+      "why": "The facts even critics grant — and what best explains them."
+    },
+    {
+      "day": 34,
+      "m": 5,
+      "q": "Is there any evidence that the tomb was empty?",
+      "slug": "is-there-evidence-for-the-empty-tomb",
+      "why": "Enemy attestation: no one produced a body."
+    },
+    {
+      "day": 35,
+      "m": 5,
+      "q": "Did the disciples just hallucinate the risen Jesus?",
+      "slug": "did-the-disciples-just-hallucinate-jesus",
+      "why": "Groups don’t share the same hallucination."
+    },
+    {
+      "day": 36,
+      "m": 5,
+      "q": "Wasn't the resurrection just a legend that grew over time?",
+      "slug": "wasnt-the-resurrection-a-legend",
+      "why": "The creed is too early for legend to grow."
+    },
+    {
+      "day": 37,
+      "m": 5,
+      "q": "Why did Paul go from persecuting Christians to dying for Jesus?",
+      "slug": "why-did-paul-convert",
+      "why": "A persecutor turned martyr. What did he see?"
+    },
+    {
+      "day": 38,
+      "m": 5,
+      "q": "Why did the disciples die for their belief in the resurrection?",
+      "slug": "why-did-the-disciples-die-for-their-faith",
+      "why": "People die for lies they believe — not for what they know is false."
+    },
+    {
+      "day": 39,
+      "m": 5,
+      "q": "Why does it matter that women were the first witnesses to the empty tomb?",
+      "slug": "why-were-women-the-first-witnesses",
+      "why": "The detail no inventor of the era would choose."
+    },
+    {
+      "day": 40,
+      "m": 5,
+      "q": "Did Jesus really rise from the dead?",
+      "slug": "did-jesus-really-rise-from-the-dead",
+      "why": "Easter. Put it all together — and answer the question."
+    }
+  ]
+}

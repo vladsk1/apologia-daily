@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>40 Questions Before Easter — Apologia Daily</title>
+<meta name="description" content="A 40-day journey through the biggest questions about God, Jesus, the Bible, and the resurrection — one honest, fully-cited answer a day, building to Easter. Do it alone or with your group."/>
+<meta property="og:title" content="40 Questions Before Easter"/>
+<meta property="og:description" content="One big question a day for 40 days — from 'does God exist?' to 'did Jesus rise?' — building to Easter. Free. Do it with your group."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/ad-nav.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --n:#0a1628;--n2:#050d1a;--n3:#1e4278;
+  --g:#c8a951;--gl:#e8cf87;--w:#fff;
+  --mu:#8ea3bd;--b:#2a3f5f;--gr:#3fae74;
+  --fd:'Playfair Display',Georgia,serif;
+  --ui:'DM Sans',system-ui,sans-serif;
+}
+body{font-family:var(--ui);background:var(--n2);color:var(--w);min-height:100vh;overflow-x:hidden;}
+.wrap{max-width:760px;margin:0 auto;padding:2.5rem 1.25rem 4rem;}
+
+/* hero */
+.hero{text-align:center;padding:1rem 0 2rem;}
+.eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--g);margin-bottom:1rem;}
+h1{font-family:var(--fd);font-size:clamp(2.2rem,6vw,3.4rem);font-weight:700;line-height:1.08;margin-bottom:1rem;}
+.sub{font-size:1.05rem;line-height:1.6;color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 1.8rem;}
+.ring-wrap{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.8rem;}
+.ring{position:relative;width:112px;height:112px;flex:0 0 auto;}
+.ring svg{transform:rotate(-90deg);}
+.ring-txt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.ring-num{font-family:var(--fd);font-size:1.7rem;font-weight:700;color:var(--g);line-height:1;}
+.ring-lbl{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);margin-top:3px;}
+.cta{display:inline-block;padding:15px 40px;border-radius:6px;background:var(--g);color:var(--n);font-size:1.05rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:background .2s;}
+.cta:hover{background:var(--gl);}
+.meta-line{margin-top:1rem;font-size:.85rem;color:var(--mu);}
+
+/* today card */
+.today{background:linear-gradient(155deg,var(--n),var(--n2));border:1px solid rgba(200,169,81,.4);border-radius:14px;padding:1.8rem;margin-bottom:2.2rem;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.today-kick{font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--g);margin-bottom:.5rem;}
+.today-q{font-family:var(--fd);font-size:1.5rem;line-height:1.3;margin-bottom:.6rem;}
+.today-why{color:rgba(255,255,255,.65);font-size:.95rem;line-height:1.55;margin-bottom:1.3rem;}
+.today-actions{display:flex;gap:.7rem;flex-wrap:wrap;}
+.b-gold{padding:12px 24px;border-radius:5px;background:var(--g);color:var(--n);font-weight:600;font-size:.95rem;text-decoration:none;border:none;cursor:pointer;}
+.b-ghost{padding:12px 24px;border-radius:5px;background:transparent;border:1px solid rgba(255,255,255,.22);color:#fff;font-weight:600;font-size:.95rem;cursor:pointer;}
+.b-ghost:hover{border-color:var(--g);}
+
+/* movements + day rows */
+.movement{margin-bottom:1.4rem;border:1px solid var(--b);border-radius:12px;overflow:hidden;}
+.mv-head{width:100%;text-align:left;background:rgba(255,255,255,.03);border:none;color:#fff;padding:1rem 1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.mv-title{display:block;font-family:var(--fd);font-size:1.12rem;font-weight:700;}
+.mv-sub{font-size:.74rem;color:var(--mu);margin-top:2px;}
+.mv-count{font-size:.78rem;color:var(--g);white-space:nowrap;}
+.mv-body{display:none;}
+.mv-body.open{display:block;}
+.day-row{display:flex;align-items:flex-start;gap:.9rem;padding:.85rem 1.2rem;border-top:1px solid rgba(255,255,255,.06);text-decoration:none;color:inherit;}
+.day-row:hover{background:rgba(255,255,255,.03);}
+.day-check{flex:0 0 auto;width:24px;height:24px;border-radius:50%;border:1.5px solid var(--b);display:flex;align-items:center;justify-content:center;font-size:.8rem;color:var(--gr);margin-top:1px;}
+.day-check.done{background:rgba(63,174,116,.15);border-color:var(--gr);}
+.day-n{flex:0 0 auto;font-size:.72rem;color:var(--mu);width:44px;padding-top:3px;}
+.day-q{flex:1;font-size:.95rem;line-height:1.4;}
+.day-q .why{display:block;font-size:.78rem;color:var(--mu);margin-top:2px;}
+
+/* completion */
+.done-banner{display:none;text-align:center;background:linear-gradient(155deg,rgba(200,169,81,.14),rgba(63,174,116,.08));border:1px solid rgba(200,169,81,.45);border-radius:14px;padding:2rem;margin-bottom:2rem;}
+.done-banner h2{font-family:var(--fd);font-size:1.8rem;margin-bottom:.6rem;}
+.done-banner p{color:rgba(255,255,255,.75);line-height:1.6;margin-bottom:1.2rem;}
+
+/* group kit */
+.kit{margin-top:2.5rem;padding-top:1.8rem;border-top:1px solid rgba(255,255,255,.09);}
+.kit h3{font-family:var(--fd);font-size:1.3rem;margin-bottom:.5rem;}
+.kit p{color:rgba(255,255,255,.65);font-size:.92rem;line-height:1.6;margin-bottom:1rem;}
+.kit-actions{display:flex;gap:.7rem;flex-wrap:wrap;}
+.foot{margin-top:3rem;text-align:center;color:rgba(255,255,255,.35);font-size:.78rem;line-height:1.6;}
+@media print{
+  .adn-nav,.hero .cta,.today,.kit-actions,.mv-count,.day-check,.foot .noprint{display:none!important;}
+  body{background:#fff;color:#000;}
+  .movement,.day-row{border-color:#ccc;}
+  .mv-body{display:block!important;}
+  .day-q .why{color:#555;}
+}
+@media(max-width:560px){.today-q{font-size:1.28rem;}h1{font-size:2rem;}}
+</style>
+</head>
+<body>
+
+<nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/search.html" class="adn-search-link" aria-label="Search">&#128269; Search</a></li>
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/asked-and-answered.html">Asked &amp; Answered</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop adn-has-mega">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <div class="adn-mega">
+          <div class="adn-mega-in">
+            <div class="adn-mega-col">
+              <div class="adn-mega-h">Go deeper</div>
+              <a class="adn-mi" href="/library/"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Deep-Dive Essays</span><span class="adn-mi-dc">Long-form, fully-cited essays.</span></span></a>
+              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Answers</span><span class="adn-mi-dc">The questions people ask most.</span></span></a>
+              <a class="adn-mi" href="/sources.html"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Source Library</span><span class="adn-mi-dc">The creeds &amp; Church Fathers, verified.</span></span></a>
+              <a class="adn-mi" href="/whats-new.html"><span class="adn-mi-ic">&#128240;</span><span class="adn-mi-tx"><span class="adn-mi-nm">What&#39;s New</span><span class="adn-mi-dc">Latest essays, features &amp; reels.</span></span></a>
+            </div>
+            <div class="adn-mega-col">
+              <div class="adn-mega-h">Practice &amp; community</div>
+              <a class="adn-mi" href="/coach.html"><span class="adn-mi-ic">&#129305;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Coach</span><span class="adn-mi-dc">Your skill map &amp; a plan for your weak spots.</span></span></a>
+              <a class="adn-mi" href="/games.html"><span class="adn-mi-ic">&#127918;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Games</span><span class="adn-mi-dc">Quizzes that feed your streak.</span></span></a>
+              <a class="adn-mi" href="/study-groups.html"><span class="adn-mi-ic">&#128101;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Study Groups <span class="adn-mi-tag">New</span></span><span class="adn-mi-dc">Study with people you love.</span></span></a>
+              <a class="adn-mi" href="/reading-club.html"><span class="adn-mi-ic">&#128214;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Reading Clubs</span><span class="adn-mi-dc">The classics, chapter by chapter.</span></span></a>
+            </div>
+            <div class="adn-mega-col">
+              <div class="adn-mega-h">For you</div>
+              <a class="adn-mi" href="/parents.html"><span class="adn-mi-ic">&#128106;</span><span class="adn-mi-tx"><span class="adn-mi-nm">For Parents</span><span class="adn-mi-dc">Your kids&#39; hardest questions.</span></span></a>
+              <a class="adn-mi" href="/video-library.html"><span class="adn-mi-ic">&#127909;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Videos</span><span class="adn-mi-dc">Short, shareable explainers.</span></span></a>
+            </div>
+            <div class="adn-mega-foot">
+              <a href="/about.html">About</a>
+              <a href="/what-we-believe.html">What We Believe</a>
+              <a href="/editorial-standards.html">Editorial Standards</a>
+              <a href="/privacy.html">Privacy</a>
+              <a href="/terms.html">Terms</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <button class="adn-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="eyebrow">The 40-Day Challenge</div>
+    <h1>40 Questions Before Easter</h1>
+    <p class="sub">One honest question a day &mdash; from <em>&ldquo;does God exist?&rdquo;</em> to <em>&ldquo;did Jesus rise?&rdquo;</em> &mdash; building, over 40 days, to the morning everything turns on. Every answer is short, fully cited, and yours to keep. Walk it alone, or bring your whole group.</p>
+    <div class="ring-wrap">
+      <div class="ring">
+        <svg width="112" height="112" viewBox="0 0 112 112">
+          <circle cx="56" cy="56" r="50" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="8"/>
+          <circle id="ring-fill" cx="56" cy="56" r="50" fill="none" stroke="#c8a951" stroke-width="8" stroke-linecap="round" stroke-dasharray="314.16" stroke-dashoffset="314.16"/>
+        </svg>
+        <div class="ring-txt"><span class="ring-num" id="ring-num">0</span><span class="ring-lbl">of 40</span></div>
+      </div>
+      <div style="text-align:left;">
+        <button class="cta" id="startCta" onclick="jumpToday()">Start Day 1 &rarr;</button>
+        <div class="meta-line" id="metaLine">Free &middot; no sign-up &middot; go at your own pace</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- completion -->
+  <div class="done-banner" id="doneBanner">
+    <h2>You finished all 40. 🌅</h2>
+    <p>From &ldquo;is there a God?&rdquo; to &ldquo;He is risen&rdquo; &mdash; you&rsquo;ve walked the whole case. Now you can give a reason for the hope you have.</p>
+    <button class="b-gold" onclick="shareChallenge()">Share what you did</button>
+  </div>
+
+  <!-- today -->
+  <div class="today" id="todayCard">
+    <div class="today-kick" id="todayKick">Today &middot; Day 1</div>
+    <div class="today-q" id="todayQ">&hellip;</div>
+    <div class="today-why" id="todayWhy"></div>
+    <div class="today-actions">
+      <a class="b-gold" id="todayRead" href="#" target="_blank" rel="noopener">Read today&rsquo;s answer &rarr;</a>
+      <button class="b-ghost" id="todayDone" onclick="markToday()">Mark done &check;</button>
+    </div>
+  </div>
+
+  <!-- the arc -->
+  <div id="arc"></div>
+
+  <!-- group kit -->
+  <div class="kit">
+    <h3>Do it with your group</h3>
+    <p>This challenge is built for a small group, a family, or a whole church to walk together through Lent. Share the link, or print the full 40-question list to hand out.</p>
+    <div class="kit-actions">
+      <button class="b-gold" onclick="shareChallenge()">Share the challenge</button>
+      <button class="b-ghost" onclick="window.print()">Print the 40 questions</button>
+      <a class="b-ghost" href="/study-groups.html" style="text-decoration:none;display:inline-block;">Start a study group &rarr;</a>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span class="noprint">Every answer is drawn from the certified Evidence Library. </span>
+    Perfect for Lent, but you can start any day. Defending the faith with gentleness and respect.
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
+<script>
+var MOVEMENTS = [], DAYS = [], DONE = [];
+var KEY = 'ad_ch_easter40';
+var CIRC = 314.16;
+
+function loadDone(){ try{ var s=JSON.parse(localStorage.getItem(KEY)||'{}'); DONE = s.completed||[]; }catch(e){ DONE=[]; } }
+function saveDone(){ try{ localStorage.setItem(KEY, JSON.stringify({started:true,completed:DONE})); }catch(e){} }
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function isDone(n){ return DONE.indexOf(n)!==-1; }
+function currentDay(){ for(var i=0;i<DAYS.length;i++){ if(!isDone(DAYS[i].day)) return DAYS[i].day; } return DAYS.length; }
+
+function markStreak(){
+  try{
+    var iso=function(d){return d.toISOString().slice(0,10);};
+    var t=new Date(), td=iso(t), y1=iso(new Date(t.getTime()-864e5)), y2=iso(new Date(t.getTime()-1728e5));
+    var s=JSON.parse(localStorage.getItem('ad_streak')||'{"last":"","count":0,"freezes":0}');
+    if(s.last===td) return;
+    if(s.last===y1){ s.count+=1; } else if(s.last===y2 && s.freezes>0){ s.freezes-=1; s.count+=2; } else { s.count=1; }
+    s.last=td; if(s.count%7===0){ s.freezes=Math.min(3,(s.freezes||0)+1); }
+    localStorage.setItem('ad_streak', JSON.stringify(s));
+  }catch(e){}
+}
+
+function render(){
+  var n = DONE.length;
+  document.getElementById('ring-num').textContent = n;
+  document.getElementById('ring-fill').style.strokeDashoffset = CIRC - (CIRC * n / 40);
+  document.getElementById('doneBanner').style.display = n>=40 ? 'block' : 'none';
+
+  // today card
+  var cd = currentDay();
+  var d = DAYS[cd-1] || DAYS[DAYS.length-1];
+  var allDone = n>=40;
+  document.getElementById('todayCard').style.display = allDone ? 'none' : 'block';
+  if(!allDone){
+    document.getElementById('todayKick').textContent = (n===0?'Start here':'Today') + ' · Day ' + d.day + ' of 40';
+    document.getElementById('todayQ').textContent = d.q;
+    document.getElementById('todayWhy').textContent = d.why;
+    document.getElementById('todayRead').href = '/answers/' + d.slug + '.html';
+    var db=document.getElementById('todayDone'); db.dataset.day=d.day;
+  }
+  // hero cta
+  var cta=document.getElementById('startCta');
+  cta.textContent = n===0 ? 'Start Day 1 →' : (allDone ? 'Review the journey ↓' : 'Continue Day ' + cd + ' →');
+
+  // arc
+  var host = document.getElementById('arc'), html='';
+  for(var mi=0; mi<MOVEMENTS.length; mi++){
+    var mv=MOVEMENTS[mi];
+    var mdays = DAYS.filter(function(x){ return x.m===mi; });
+    var mdone = mdays.filter(function(x){ return isDone(x.day); }).length;
+    var openCls = (mdays.some(function(x){return x.day===cd;}) ? ' open' : '');
+    html += '<div class="movement">'
+      + '<button class="mv-head" onclick="toggleMv(this)"><span><span class="mv-title">'+esc(mv.t)+'</span><span class="mv-sub">'+esc(mv.s)+'</span></span><span class="mv-count">'+mdone+'/'+mdays.length+'</span></button>'
+      + '<div class="mv-body'+openCls+'">';
+    mdays.forEach(function(x){
+      html += '<a class="day-row" href="/answers/'+esc(x.slug)+'.html" target="_blank" rel="noopener">'
+        + '<span class="day-check'+(isDone(x.day)?' done':'')+'">'+(isDone(x.day)?'&check;':'')+'</span>'
+        + '<span class="day-n">Day '+x.day+'</span>'
+        + '<span class="day-q">'+esc(x.q)+'<span class="why">'+esc(x.why)+'</span></span></a>';
+    });
+    html += '</div></div>';
+  }
+  host.innerHTML = html;
+}
+function toggleMv(btn){ btn.nextElementSibling.classList.toggle('open'); }
+function jumpToday(){
+  if(DONE.length>=40){ document.getElementById('arc').scrollIntoView({behavior:'smooth'}); return; }
+  document.getElementById('todayCard').scrollIntoView({behavior:'smooth',block:'center'});
+}
+function markToday(){
+  var day = parseInt(document.getElementById('todayDone').dataset.day,10);
+  if(day && !isDone(day)){
+    DONE.push(day); saveDone(); markStreak();
+    try{ if(window.adTrack) adTrack('challenge_day_done',{challenge:'easter40',day:day,total:DONE.length}); if(DONE.length>=40 && window.adTrack) adTrack('challenge_complete',{challenge:'easter40'}); }catch(e){}
+  }
+  render();
+  if(DONE.length<40){ document.getElementById('todayCard').scrollIntoView({behavior:'smooth',block:'center'}); }
+  else { document.getElementById('doneBanner').scrollIntoView({behavior:'smooth'}); }
+}
+function shareChallenge(){
+  var url = location.origin + '/challenge.html?utm_source=share&utm_medium=challenge';
+  var d = { title:'40 Questions Before Easter', text:'A 40-day journey through the biggest questions about God, Jesus, and the resurrection — one answer a day, building to Easter. Walk it with me?', url:url };
+  try{ if(window.adTrack) adTrack('challenge_share',{challenge:'easter40'}); }catch(e){}
+  if(navigator.share){ navigator.share(d).catch(function(){}); return; }
+  if(navigator.clipboard){ navigator.clipboard.writeText(url); alert('Link copied — share it with your group.'); }
+}
+
+/* boot */
+var sb=null;
+async function navAuth(){
+  try{
+    if(window.supabase && window.supabase.createClient){
+      sb = window.supabase.createClient('https://noprgxkwniouukmrfozc.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw');
+      var r = await sb.auth.getSession();
+      if(r.data && r.data.session && r.data.session.user){
+        var dash=document.getElementById('nav-dashboard'); if(dash) dash.style.display='';
+        var si=document.getElementById('nav-signin'); if(si) si.style.display='none';
+        var cta=document.getElementById('nav-cta'); if(cta) cta.style.display='none';
+        var so=document.getElementById('nav-signout'); if(so) so.style.display='';
+      }
+    }
+  }catch(e){}
+}
+async function signOut(){ try{ if(sb) await sb.auth.signOut(); }catch(e){} location.reload(); }
+async function boot(){
+  loadDone();
+  try{
+    var res = await fetch('/challenge-easter40.json',{cache:'no-store'});
+    var data = await res.json();
+    MOVEMENTS = data.movements||[]; DAYS = data.days||[];
+  }catch(e){ MOVEMENTS=[]; DAYS=[]; }
+  render();
+  navAuth();
+  try{ if(window.adTrack) adTrack('challenge_view',{challenge:'easter40',done:DONE.length}); }catch(e){}
+}
+document.addEventListener('DOMContentLoaded', boot);
+</script>
+<script src="/ad-nav.js" defer></script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>
