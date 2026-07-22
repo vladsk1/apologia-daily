@@ -588,6 +588,28 @@ books*, not quotable text.
   Geisler–Turek note as the format template. Owned books only — never Perlego or any service whose
   terms forbid automated extraction.
 
+## Owned-video research notes (`docs/video-research/`)
+The **sibling of `book-research/`, for apologetics VIDEOS** (lectures, debates, talks). Same idea, same
+discipline: an in-our-own-words **map of leads** — the argument's shape + the **primary sources** the
+speaker cites — never a copy of the talk. START at [`docs/video-research/INDEX.md`](docs/video-research/INDEX.md)
+(the topic router) and read `docs/video-research/README.md` for the full rules.
+- **A transcript is a copyrighted LEAD, not quotable text**, and auto-captions **mishear names/dates/
+  numbers** — so treat *everything* as unverified until confirmed against the primary and run through
+  `apologia-citations → apologia-argument → apologia-orthodoxy`. Never quote the transcript; never cite
+  "someone said X in a video." We cite the **primary** the video pointed us to, verified.
+- **Fetch helper:** `python3 tools/fetch-transcript.py <youtube-url-or-id>` (local/web-enabled session)
+  writes the transcript to the **git-ignored** `docs/video-research/_transcripts/` — mine it, never
+  commit or paste it. Commit only the our-own-words note + its INDEX row.
+- **Drafting (ALL content — essays, `ev-s*` cards, AND `/answers/*`): assess this library per topic.**
+  Before writing on a topic, `Grep`/`Read` `INDEX.md` **alongside** `book-research/INDEX.md` and the
+  `/sources` corpus, and use whichever has the best material (a note may say a book/PD source covers it
+  better). Documented drafting convention, like the book notes.
+- **⚠ The live `/api/ask` endpoint does NOT (and cannot) read this folder** — same limit as the book
+  notes (not deployed/served; unverified copyrighted leads). The ONLY path from a video to a *live*
+  answer is: lead → verify the primary → add it to `/sources` as `verified:true` → it compiles into
+  `lib/sources-verified.js`, which `api/ask.js` retrieves. So "make a video inform live answers" =
+  promote its verified primaries into `/sources`, never point the runtime at `docs/video-research/`.
+
 ## Deploy workflow (security-critical)
 - Work on the feature branch; **never `git checkout main`** (a stale local main lacks
   `.claude/agents/` and de-registers the agent fleet).

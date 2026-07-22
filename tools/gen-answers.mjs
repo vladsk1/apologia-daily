@@ -14,7 +14,9 @@
    GROUNDING STEP (do this BEFORE drafting a new answer on resurrection / deity-of-Christ /
    general-apologetics topics): `Grep`/`Read` `docs/book-research/INDEX.md`, which routes the topic
    to the relevant owned-book research map (Habermas-Licona, Johnston, Geisler-Turek, Del Rosario)
-   plus the `/sources` public-domain corpus. Take the argument SHAPE and the strongest PRIMARIES to
+   plus the `/sources` public-domain corpus AND `docs/video-research/INDEX.md` (mined apologetics
+   talks — same lead discipline). Assess whichever has the best material for the topic; take the
+   argument SHAPE and the strongest PRIMARIES to
    cite from the map, then cite the primaries (verified). Every citation in a research map is an
    UNVERIFIED LEAD until confirmed against the primary and run through the pipeline; never reproduce
    a book's prose, and heed the map's "do not use / high-caution" flags. (This grounding is a

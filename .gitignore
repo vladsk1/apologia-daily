@@ -6,3 +6,6 @@
 # Python bytecode cache
 __pycache__/
 *.pyc
+
+# Copyrighted YouTube transcripts — research leads only, never commit (see docs/video-research/README.md)
+docs/video-research/_transcripts/

@@ -1,0 +1,35 @@
+# Video-research — topical index (consult this BEFORE drafting; sibling of `book-research/INDEX.md`)
+
+**Purpose.** This folder holds in-our-own-words maps of *copyrighted apologetics videos* (lectures,
+debates, talks). This index is the **"what's the best source for this topic?"** router for a content
+session: topic → the note(s) + section + the strongest **already-identified primary sources** to cite.
+
+**Workflow for any content session (essay, `ev-s*` card, `/answers/*`):** before drafting on one of these
+topics, `Grep`/`Read` the mapped note, take the *argument shape + the primaries to cite*, then quote the
+**primaries** (verified) — never the transcript. Consult this **alongside** `book-research/INDEX.md` and
+the `/sources` corpus and use whichever has the best material for the topic (the notes will say when a
+book or a PD source covers it better).
+
+**Hard rules (see `README.md`):** every citation in these notes is an **unverified lead** (transcripts
+mishear names/dates/numbers) until confirmed against the primary and run through
+`apologia-citations → apologia-argument → apologia-orthodoxy`. Transcript text never enters `/sources` or a
+live answer. The live `api/ask.js` endpoint does **not** read this folder (it can't — not deployed/served,
+and these are unverified leads); the only path from a video to a *live* answer is: lead → verify the
+primary → add it to `/sources` as `verified:true`.
+
+## Topic → note routing
+_(empty — no videos mined yet. Add a row per note as the library grows. Template below.)_
+
+| Topic | Note → section | Strongest primaries to chase (all unverified until the pipeline confirms) |
+|---|---|---|
+| _example: 1 Cor 15 creed dating_ | _`craig-resurrection-defense.md` §2_ | _Gal 1:18–19; Kloppenborg CBQ 40 (1978); cross-check `book-research` **CFR Ch.3 n23–25**_ |
+
+## ⚠ Standing "do not use / high-caution" flags (carry these into any pull)
+- **Apologetics YouTube overstates.** Popular talks round numbers up, compress scholarship, and drop
+  the honest concessions our guardrails require. Hold every pull to the `CLAUDE.md` argument-specific
+  rules (Kalam "begins to exist"; fine-tuning *data* conceded / *design* the contested inference;
+  resurrection leads with the early creed; morality = duties-need-a-ground; "orthodoxy outranks charity").
+- **Never cite the video.** If a talk is the *only* place a claim appears, it isn't verified — find the
+  primary or drop it.
+- **Debate clips especially** compress the opponent unfairly — re-steelman the other side from its own
+  best sources before we answer it (1 Peter 3:15 + the neutrality gate).
