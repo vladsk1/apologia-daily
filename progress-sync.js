@@ -25,10 +25,13 @@
 
   // Learning-PROGRESS keys only. Deliberately NOT synced: prefs, dismissals,
   // caches, one-off "seen" flags, analytics counters (device-local by design).
+  // NB: 'study_plans' / 'ad_plan_*' are intentionally NOT here — study-plans.html
+  // already syncs plan progress to its own `study_plans_progress` table; owning it
+  // in one place avoids two writers with different conflict rules racing on one key.
   var KEYS = ['ad_streak', 'ad_mastery', 'ad_visits', 'ad_today_done', 'ad_today_v1',
     'daily_arg_complete', 'ad_objdeck', 'ad_mix_done', 'quizCompleted', 'quizTotal',
-    'speedRoundHistory', 'study_plans', 'debateCount', 'ad_askcount'];
-  var PREFIXES = ['ad_ch_', 'quizScore_', 'ad_fc_', 'ad_coach', 'ad_plan_'];
+    'speedRoundHistory', 'debateCount', 'ad_askcount'];
+  var PREFIXES = ['ad_ch_', 'quizScore_', 'ad_fc_', 'ad_coach'];
 
   function keyMatches(k) {
     if (!k) return false;
@@ -64,44 +67,50 @@
   }
 
   function pj(s) { try { return JSON.parse(s); } catch (e) { return null; } }
+  function bad(k) { return k === '__proto__' || k === 'constructor' || k === 'prototype'; }
 
   function mergeVal(a, b) {
     if (a && b && typeof a === 'object' && typeof b === 'object' && !Array.isArray(a) && !Array.isArray(b)) {
       var o = {}, k;
-      for (k in a) o[k] = a[k];
-      for (k in b) o[k] = (k in o) ? mergeVal(o[k], b[k]) : b[k];
+      for (k in a) if (!bad(k)) o[k] = a[k];
+      for (k in b) if (!bad(k)) o[k] = (k in o) ? mergeVal(o[k], b[k]) : b[k];
       if (a.done || b.done) o.done = true;  // mastery: once done, always done
       return o;
     }
     var x = parseFloat(a), y = parseFloat(b);
     if (!isNaN(x) && !isNaN(y)) return Math.max(x, y);  // counters only go up
-    return (b != null) ? b : a;
+    if (a == null) return b; if (b == null) return a;
+    return (String(a) >= String(b)) ? a : b;  // later date / non-reverting flag
   }
 
   // Merge one key's server value into the local value; returns the string to store.
   function mergeKey(k, localStr, serverStr) {
-    if (k === 'ad_streak') {
+    if (k === 'ad_streak') {   // FIELD-WISE — never reduces a streak (later-day + max counts)
       var a = pj(localStr), b = pj(serverStr);
       if (!a) return serverStr; if (!b) return localStr;
-      if ((b.last || '') > (a.last || '')) return serverStr;   // later day wins
-      if ((a.last || '') > (b.last || '')) return localStr;
-      return ((b.count || 0) > (a.count || 0)) ? serverStr : localStr;
+      var out = {}, f;
+      for (f in a) if (!bad(f)) out[f] = a[f];
+      for (f in b) if (!bad(f) && !(f in out)) out[f] = b[f];
+      out.last = (a.last || '') >= (b.last || '') ? (a.last || '') : (b.last || '');
+      out.count = Math.max(a.count || 0, b.count || 0);
+      out.freezes = Math.max(a.freezes || 0, b.freezes || 0);
+      return JSON.stringify(out);
     }
     var oa = pj(localStr), ob = pj(serverStr);
     if (oa && ob && typeof oa === 'object' && typeof ob === 'object' && !Array.isArray(oa) && !Array.isArray(ob)) {
-      var out = {}, key;
-      for (key in oa) out[key] = oa[key];
-      for (key in ob) out[key] = (key in out) ? mergeVal(out[key], ob[key]) : ob[key];
-      return JSON.stringify(out);
+      var o2 = {}, key;
+      for (key in oa) if (!bad(key)) o2[key] = oa[key];
+      for (key in ob) if (!bad(key)) o2[key] = (key in o2) ? mergeVal(o2[key], ob[key]) : ob[key];
+      return JSON.stringify(o2);
     }
-    if (Array.isArray(oa) && Array.isArray(ob)) {   // history: union, cap length
+    if (Array.isArray(oa) && Array.isArray(ob)) {   // history: union, LOCAL-FIRST so newest survives the cap
       var seen = {}, res = [];
-      [].concat(ob, oa).forEach(function (x) { var s = JSON.stringify(x); if (!seen[s]) { seen[s] = 1; res.push(x); } });
+      [].concat(oa, ob).forEach(function (x) { var s = JSON.stringify(x); if (!seen[s]) { seen[s] = 1; res.push(x); } });
       return JSON.stringify(res.slice(0, 200));
     }
     var na = parseFloat(localStr), nb = parseFloat(serverStr);
     if (!isNaN(na) && !isNaN(nb)) return String(Math.max(na, nb));
-    return serverStr;
+    return (localStr >= serverStr) ? localStr : serverStr;  // later date / non-reverting flag (not blind server-wins)
   }
 
   function mergeIn(server) {
@@ -118,6 +127,11 @@
     return changed;
   }
 
+  // Expose the pure merge helpers for unit tests (Node/CJS only; no-op in the browser).
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { mergeKey: mergeKey, mergeVal: mergeVal, keyMatches: keyMatches };
+  }
+
   var S = session();
   if (!S) return;  // signed out → local-only, identical to today's behaviour
 
@@ -129,6 +143,7 @@
     var snap = snapshot();
     var body = JSON.stringify(snap);
     if (body === lastSent) return;
+    if (body.length > 90000) return;  // soft cap — avoid silent keepalive-body failures on a runaway blob
     lastSent = body;
     try {
       fetch(URL + '/rest/v1/user_progress?on_conflict=user_id', {

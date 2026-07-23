@@ -55,3 +55,17 @@ create policy up_update on public.user_progress
   device-local analytics counters. Edit `KEYS` / `PREFIXES` in `progress-sync.js` to change scope.
 - **Retention payoff:** this both (a) stops the self-destructing streak and (b) makes D7/D30 retention
   measurable server-side, and (c) becomes the flagship **Pro "your progress, everywhere"** benefit.
+
+## Known bounds (eventually-consistent by design; reviewed by apologia-engineer 2026-07-23)
+- **Whole-blob last-writer-wins.** A push replaces the `data` column with the pushing device's snapshot
+  (jsonb is not deep-merged server-side). Under *concurrent* multi-device use there's a brief window where
+  a not-yet-reloaded device can clobber another's newest key; it self-heals on that device's next page
+  load (pull→merge→push). Fine for progress; don't use this table for anything needing strict consistency.
+- **Deletions don't propagate.** Object/array keys merge by union, so deleting a mastery/challenge entry on
+  one device is resurrected from the server on the next pull. Progress is treated as monotonic (grow-only).
+- **Counters use `max` across devices** (`debateCount`, `ad_askcount`, `quizTotal`) — server totals derived
+  from them *understate* real usage; that's the safe (never-lower) direction and fine for a soft gate.
+- **RLS is own-row-only and fails closed** (verified): `auth.uid()` comes from the JWT, not the request
+  body, so a forged `user_id` in the POST is rejected by the `with check`; the anon key alone (signed out)
+  can read/write nothing. Merge helpers are unit-tested in `tests/progress-merge.test.mjs` (streak never
+  decreases, `done` sticks, counter-max, array-newest-survives, allow-list).
