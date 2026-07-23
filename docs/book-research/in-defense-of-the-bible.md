@@ -5,7 +5,7 @@ Apologetic for the Authority of Scripture* (Nashville: B&H Academic, 2013). Owne
 (photographed). Copyrighted — this is an **in-our-own-words map that points at quotable primaries**,
 NOT a store of the book's prose.
 
-**Chapters captured (2 of a multi-author volume):**
+**Chapters captured (4 of a multi-author volume):**
 - **ch. 6 — Daniel B. Wallace,** "Has the New Testament Text Been Hopelessly Corrupted?" (pp. 139–163).
   Wallace is a real, mainstream evangelical NT textual critic (founder of the Center for the Study of
   New Testament Manuscripts, csntm.org) and a frequent Bart Ehrman debate opponent — a strong,
@@ -15,16 +15,33 @@ NOT a store of the book's prose.
   longtime teaching/visiting fellow at Moore Theological College and Regent College) — a mainstream
   evangelical source for the historical-reliability case, and a prolific author on Christian origins.
   Added 2026‑07‑23.
+- **ch. 11 — Douglas S. Huffman,** "Are There Contradictions in the Bible?" (pp. 267–293). Huffman is a
+  credentialed evangelical NT scholar (professor of NT/biblical & theological studies, Talbot School of
+  Theology, Biola; formerly Northwestern College) and a contributor to reference works (he wrote the
+  "Genealogy" article in the *Dictionary of Jesus and the Gospels*). The internal-consistency /
+  alleged-contradictions case. Added 2026‑07‑23.
+- **ch. 16 — Paul D. Wegner, Terry L. Wilder & Darrell L. Bock,** "Do We Have the Right Canon?" (pp.
+  393–428). Three credentialed evangelical scholars (Wegner — OT/text; Wilder — NT/canonicity; Bock — a
+  well-known NT scholar at Dallas Theological Seminary and a frequent Ehrman/*Da Vinci Code* respondent).
+  The canon case: OT canon, NT canon, and the extrabiblical/"lost" gospels. Added 2026‑07‑23. **⚠ The
+  OT-canon/apocrypha portion is denominationally sensitive — see the ch. 16 flags.**
 
-> ## 🟢 STATUS: COMPLETE for **ch. 6 and ch. 10** (each full chapter read; all footnotes captured)
+> ## 🟢 STATUS: COMPLETE for **ch. 6, ch. 10, ch. 11, and ch. 16** (each full chapter read; all footnotes captured)
 > - **ch. 6:** full chapter pp. 140–163 + the papyri chart (pp. 148–149) + footnotes 1–51. ✅
 > - **ch. 10:** full chapter pp. 223–265 — all **eight theses** + the Conclusion + footnotes 1–93, incl.
 >   the miracle-diversity chart (p. 248) and the 1 Cor 15:3–7 creed block-diagram (p. 251). ✅
-> This note maps **two chapters** of a multi-author volume. **The rest of the book (its other chapters on
-> canon, inspiration, inerrancy, alleged contradictions, archaeology, science, the OT, translation, etc.)
-> is NOT captured** — photograph those chapters + the volume's general bibliography/index if we ever want
-> them. **Note on footnote numbering:** each chapter numbers its footnotes from 1, so "ch. 6 fn 14" and
-> "ch. 10 fn 14" are *different* citations — always cite the chapter with the footnote.
+> - **ch. 11:** full chapter pp. 267–293 — the **three cautionary principles** (with subcategories) + the
+>   applied resurrection-narrative case study + the resurrection-coordination chart (p. 292) + Conclusion
+>   + footnotes 1–75. ✅
+> - **ch. 16:** full chapter pp. 393–428 — the **OT canon**, the **NT canon** (criteria of canonicity),
+>   and the **extrabiblical/"lost" gospels** (Da Vinci Code / Ehrman refutation) + Conclusion + footnotes
+>   1–98. ✅
+> This note maps **four chapters** of a multi-author volume. **The rest of the book (its other chapters on
+> inspiration, inerrancy, understanding Scripture, genocide/slavery ethics, science, the OT reliability,
+> conflicting-theologies, translation, forgeries, etc.) is NOT captured** — photograph those chapters +
+> the volume's general bibliography/index if we ever want them. **Note on footnote numbering:** each
+> chapter numbers its footnotes from 1, so "ch. 6 fn 14" and "ch. 11 fn 14" are *different* citations —
+> always cite the chapter with the footnote.
 
 ## Usage rules (same as every note in this folder — do not bend)
 - **Never reproduce the book's prose.** Everything here is our paraphrase of the argument's *shape* +
@@ -489,3 +506,245 @@ already have rather than opening new topics:
 **primaries** above (not Barnett's chapter), verify every figure/quote/date, apply every ⚠ flag, and — because
 it touches Scripture's authority, the resurrection, and world religions — run the **dual-consensus** (orthodoxy
 + neutrality) gate before deploy.
+
+---
+
+# ═══════════ CHAPTER 11 — Douglas S. Huffman: "Are There Contradictions in the Bible?" (pp. 267–293) ═══════════
+
+**What it is:** a method-driven answer to the alleged-contradictions charge, focused on **internal historical
+consistency** (do the parts of the Bible report the same events consistently?). Huffman's two-part method: (1)
+a taxonomy of **cautionary principles** against mistaken contradiction-claims, then (2) applying them to the
+**resurrection narratives** as the test case (Christianity's central historical claim), closing with a
+coordination chart and a conclusion. Directly relevant to our existing `library/consistency.html` +
+`answers/are-there-contradictions-in-the-bible.html` + `answers/why-do-the-gospel-resurrection-accounts-differ.html`.
+
+**Guardrail fit (our use):** squarely inside the guardrails, and unusually well-disciplined for a popular
+volume — Huffman is a good model, not a liability, on method:
+- He **does not overclaim**. He cites **A. T. Robertson**'s rule that "even a *possible* explanation is
+  sufficient to meet the objector" and adds a whole third principle — **Mystery Does Not Necessitate
+  Contradiction** (not having an answer ≠ there being no answer). Keep that humility: present harmonizations
+  as *possible non-contradictory readings*, never as "the contradiction is definitively solved."
+- He warns against the *opposite* error too — **"illegitimate harmonization"** (the 16th-c. Osiander who
+  multiplied events to force-fit accounts). Good calibration; carry it.
+- The resurrection application leads with the **1 Cor 15:3–8 creed** — matches our resurrection rule.
+
+## ⚠️ Calibration flags for ch. 11
+- **Don't let the "no contradictions" conclusion become triumphal.** Huffman earns it carefully and leaves
+  genuine mysteries open (Judas's death is offered as a *possible* reconciliation, not a proof). Preserve the
+  "possible solution" framing and the "we need not have all the answers" humility.
+- **The genealogies (Matt 1 / Luke 3)** — he lays out **four** historic solutions (Tertullian; Luther; Calvin;
+  Julius Africanus/Augustine) without dogmatically picking one. Present the options honestly; it's an unresolved
+  scholarly question, not a settled harmonization.
+- **Mark's longer ending (16:9–20)** — he treats 16:8 as "the generally accepted ending of the original Gospel"
+  (matches our ch. 6 / `manuscript.html` handling). Keep that.
+- **Popular-level:** hold to the `CLAUDE.md` rules; verify every reference before use.
+
+## The method (our-own-words map)
+**Principle 1 — Misplaced Expectations Do Not Necessitate Contradiction** (five cautions):
+1. **Selection Is Not Denial** — authors are selective by purpose; omitting an event isn't denying it (John
+   21:25). Even Ehrman grants this "horizontal reading" (wise men vs. shepherds isn't a contradiction).
+2. **Different Is Not Discrepant** — differing order/detail ≠ irreconcilable (the temple-curtain sequence; all
+   three Synoptics still fix it at "the ninth hour"). Converse: similar ≠ same (talents vs. pounds parables).
+3. **Accuracy Is Not Precision** — "it rained last week" / "three miles from campus" are accurate without being
+   precise; "six days" (Matt/Mark) vs. "about eight days" (Luke) at the transfiguration.
+4. **Paraphrase Is Not Quotation** — the Gospels give truthful *paraphrase* (baptism-voice wording differs);
+   the exact-quotation convention is modern; *ipsissima verba* vs. *ipsissima vox* (Bock).
+5. **Thematic Ordering Is Not Errant** — arrangement by theme ≠ dishonesty (the temptation order differs
+   between Matt and Luke; each uses sequencing vs. non-sequencing connectives).
+
+**Principle 2 — Misconstrued Referents Do Not Necessitate Contradiction** (five subcategories):
+**Unrecognized Referents** (Matt 27:9 attributes a Zechariah quote to "Jeremiah" — Kaiser: Jeremiah headed the
+prophetic collection); **Undifferentiated Definitions** ("in the flesh" Rom 8 vs. Gal 2; Elijah-role vs.
+Elijah-person for John the Baptist; "the Twelve" as a nickname not a headcount); **Unclassified Causations**
+(David's census — God *permits* [2 Sam 24:1] / Satan *incites* [1 Chr 21:1]: ultimate vs. secondary cause; the
+centurion "asks" directly [Matt] / via elders [Luke] — the *shaliach* agency principle); **Unacknowledged
+Attention** (the Farewell Discourse "no one asks where are you going" [John 16:5] vs. Peter/Thomas — poor
+follow-through, not a contradiction); **Unseen Summary** (a compressed summary can be truthful — Matthew's
+telescoped Jairus account).
+
+**Principle 3 — Mystery Does Not Necessitate Contradiction** — some cases have no definitive answer yet; a
+*possible* non-contradictory solution suffices (Judas's death; the genealogies).
+
+**Applied to the resurrection (pp. 282–293):** eight story segments (A–H), each mapped across Matt 28 / Mark 16
+/ Luke 24 / John 20–21 / 1 Cor 15, using the cautionary principles to resolve apparent tensions (arrival "still
+dark" vs. "at sunrise"; one angel vs. two; the women's report; who saw Jesus first). Culminates in a
+**"Coordination of the New Testament Resurrection Narratives" chart (p. 292)** and Wenham's verdict that the
+"charge of irreconcilability… has not been proved." **Conclusion:** correct interpretation shows no
+contradictions; Jesus's rebuke to the Sadducees (Matt 22:29) is about *failing to know/interpret* Scripture,
+not about error *in* Scripture (Everett Harrison).
+
+## Primary-source & scholarly leads (ch. 11 footnotes 1–75 — ALL unverified until checked)
+> "fn N" = **ch. 11** footnote N.
+
+**Method / harmonization scholarship (the load-bearing set):** Craig L. Blomberg, "The Legitimacy and Limits of
+Harmonization," in *Hermeneutics, Authority, and Canon*, ed. Carson & Woodbridge (Zondervan, 1986), 139–74 (fn
+8), and *The Historical Reliability of the Gospels*, 2nd ed. (2007), 157–88 (fn 12, 17, 20, 33); Robert H. Stein,
+*Interpreting Puzzling Texts in the New Testament* (Baker, 1996), 21, 29, 36–37, 42, 46–50, 61, 66–69 (fn 13, 15,
+22, 27, 29–30, 33, 38); the **IVP *Hard Sayings* series** — Davids, *More Hard Sayings of the NT* (1991); Bruce,
+*Hard Sayings of Jesus* (1983); Kaiser, *Hard Sayings of the OT* (1988) & *More* (1992); Brauch, *Hard Sayings of
+Paul* (1989); combined *Hard Sayings of the Bible* (1996) (fn 1, 23, 26, 28, 35); John H. Feinberg, "The Meaning
+of Inerrancy," 299–301 (fn 16, 17); Darrell L. Bock, "The Words of Jesus in the Gospels: Live, Jive, or Memorex?"
+in *Jesus Under Fire*, ed. Wilkins & Moreland (Zondervan, 1995), 73–99 (fn 17); A. T. Robertson, in Broadus, *A
+Harmony of the Gospels* (1893), 232, + Plummer, *Luke* (ICC, 1922), 103 (fn 41); Kantzer, "Foreword," in Archer,
+*Encyclopedia of Bible Difficulties* (Zondervan, 1982) (fn 3).
+
+**Resurrection-harmonization set (Thesis-2 test case):** William Arndt, *Does the Bible Contradict Itself?*, 5th
+ed. (Concordia, 1955), 63–64, 79–87 (fn 42–43, 47, 49, 51, 55); **John Wenham, *Easter Enigma: Are the
+Resurrection Accounts in Conflict?*** (Zondervan, 1984), 43, 46–47, 53–54, 81, 85, 88–89, 94–97, 124 (fn 47, 51,
+54, 57, 60, 66, 70) — the key monograph; Grant R. Osborne, *The Resurrection Narratives: A Redactional Study*
+(Baker, 1984), 198–99, 208, 235 (fn 49, 51, 62); Michael R. Licona, *The Resurrection of Jesus* (IVP, 2010), 320,
+347–48 (fn 55, 57, 71); Murray J. Harris, *3 Crucial Questions about Jesus* (Baker, 1994), 107–9 (fn 57, 74);
+Gerald O'Collins (1973), Reginald H. Fuller (1971), Norman Perrin (1977) (fn 44); Robert H. Smith, *Easter
+Gospels* (Augsburg, 1983) (fn 46); H. B. Swete, *The Appearances of Our Lord After the Passion* (Macmillan, 1922)
+(fn 52, 66); N. T. Wright, *The Resurrection of the Son of God* (2003), 612–13 (fn 60); C. F. D. Moule, "The
+Post-Resurrection Appearances…," *NTS* 4 (1957–58): 58–61 (fn 70); the *Gospel of Peter* §14 (fn 70).
+
+**Genealogy leads:** J. Gresham Machen, *The Virgin Birth of Christ*, 3rd ed. (1987), 202–9 (fn 39); Raymond E.
+Brown, *The Birth of the Messiah*, 2nd ed. (Doubleday, 1993), 89 (fn 37); John Nolland, *Luke 1–9:20* (Word, 1989),
+170 (fn 40); Huffman, "Genealogy," in *Dictionary of Jesus and the Gospels* (IVP, 1992), 253–59 (fn 36) — Huffman's
+own article. **Skeptic foils (steelmen):** Bart Ehrman, *Jesus, Interrupted* (HarperCollins, 2009), 8–9, 22, 41,
+68 (fn 11, 14, 31, 24); Randel Helms, *Gospel Fictions* (Prometheus, 1988) (fn 65).
+
+## Cross-map to our Evidence Library (ch. 11)
+- **Biblical Reliability (`ev-s4`) — `library/consistency.html` + `answers/are-there-contradictions-in-the-bible.html`:**
+  Huffman's **cautionary-principles taxonomy** is a clean, teachable framework that could strengthen our
+  contradictions material. **→ logged to `content-backlog.md` (P3).**
+- **Resurrection (`ev-s2`) — `answers/why-do-the-gospel-resurrection-accounts-differ.html` + `library/appearances.html`:**
+  the eight-segment coordination approach + Wenham/*Easter Enigma* as the go-to monograph.
+- Keep our resurrection rule (lead with the 1 Cor 15:3–7 creed) and the Mark-16:8 ending handling.
+
+**If we ever build public content from ch. 11:** our own prose, cite the **primaries** (Blomberg/Stein/Wenham/
+the Scripture texts), verify every reference, preserve the "possible solution / mystery" humility, and run
+citations → argument → orthodoxy (dual-consensus for the resurrection material).
+
+---
+
+# ═══════════ CHAPTER 16 — Wegner, Wilder & Bock: "Do We Have the Right Canon?" (pp. 393–428) ═══════════
+
+**What it is:** a three-part defense of the canon against the **Bauer–Ehrman / *Da Vinci Code* thesis** (that
+there was no settled early orthodoxy and the canon was imposed in the 4th century for political reasons):
+(1) the **Old Testament canon** (Wegner), (2) the **New Testament canon** and criteria of canonicity (Wilder),
+(3) the **extrabiblical / "lost" gospels** (Bock). Maps to `library/canon.html`,
+`answers/who-decided-which-books-are-in-the-bible.html`, `answers/why-were-some-gospels-left-out-of-the-bible.html`,
+and the Da Vinci Code / "lost Christianities" material on `ev-s4`.
+
+## ⚠️⚠️ THE BIG FLAG — denominational neutrality on the OT canon / Apocrypha (read before any use)
+**This is the single most important calibration for this chapter.** The OT-canon section argues the
+**Protestant 66-book position** and *against* the canonicity of the **Apocrypha/deuterocanon**. But the
+**scope of the OT canon is a live intra-Christian dispute** — Roman Catholics and the Eastern Orthodox include
+the deuterocanonical books. Under our **denominational-neutrality rule** (defend the faith common to Catholics,
+Orthodox, and Protestants; don't adjudicate intra-Christian disputes as settled), we **may NOT** use this
+chapter's material to assert in our own voice that "the Apocrypha is not Scripture" or that the Protestant canon
+is *the* correct one. 
+- **Usable (shared across all three traditions):** the refutation of the *Da Vinci Code* / Constantine-invented-
+  the-Bible myth; the extrabiblical "lost gospels" are late, non-apostolic, and Gnostic; the criteria of
+  canonicity (apostolicity, catholicity, orthodoxy); the antiquity of a recognized core.
+- **NOT usable in our own voice:** "the apocryphal books are not canonical," the Trent-was-an-innovation framing,
+  or anything that settles the Protestant-vs-Catholic/Orthodox canon-scope question. If a topic requires touching
+  it, attribute positions to their traditions and stay neutral (fence with an `orthonote` if needed).
+- The chapter's own OT Conclusion actually *narrates* the dispute (Augustine for the Apocrypha; Jerome against;
+  Trent 1546) — use it descriptively, never as a verdict.
+
+## Other ⚠ flags for ch. 16
+- **"Prophecy ceased ~400 BC"** is a *Jewish-tradition* claim (bath kol; Josephus), not a neutral historical
+  fact — attribute it, don't assert it as history.
+- **James 2:24 vs. Paul on justification** (p. 412) is resolved irenically ("two aspects of the same thing") —
+  keep it that way; do **not** turn it into a Protestant *sola fide* polemic (justification has intra-Christian
+  nuance).
+- **Popular-level canon history** — "settled by the mid-to-late 4th century" glosses real nuance; present the
+  canon's formation with appropriate care and verify councils/dates (Carthage AD 397; Athanasius's 39th Festal
+  Letter AD 367).
+- **Gnostic-text descriptions** are fine to use (late, non-apostolic), but describe them accurately and without
+  caricature (1 Peter 3:15 tone).
+
+## The argument (our-own-words map)
+**Frame (pp. 393–394):** *kanōn* = "measuring reed" → "standard." The Bauer/Ehrman/*Da Vinci Code* claim: early
+Christianity was diverse, "orthodoxy" won politically, and the canon was a 4th-century imposition. Thesis: we
+*do* have the right books, and that political story is not what happened.
+
+**OT canon (Wegner, pp. 395–404):** early Jewish + Christian evidence that a recognized OT canon existed well
+before the 4th century — the "prophecy ceased ~400 BC" traditions; Josephus's **22 books** (*Contra Apion*
+1.37–42); **2 Esdras / 4 Ezra** 14:45–48 (24 books); Philo's three-part designation; Jesus "Abel to Zechariah"
+(= Genesis→Chronicles, Matt 23:34–35 / Luke 11:49–51) and Luke 24:44; Melito of Sardis (c. 170), the Jerusalem
+List, Origen (22), Athanasius (367), Jerome, Rufinus. **Josephus's implicit canonicity criteria:** no
+contradictions; prophetic/divinely-authoritative authorship; inspiration; acceptance by the community. The
+Apocrypha (15 books listed with dates) is argued *non-canonical* (**⚠ denominational flag above**): NT never
+cites it as inspired; it doesn't claim "the word of the LORD"; multiple witnesses list the same 39; some
+historical inaccuracies (e.g., Tobit 1:3–5).
+
+**NT canon (Wilder, pp. 404–413):** no need for a defined NT canon while the apostles lived; the need arose from
+**Marcion** (c. 144, truncated canon), Roman persecution, and the apostles' deaths. **Three criteria of
+canonicity:** (1) **apostolic origin** (written by an apostle or an apostolic associate — Mark via Peter, Luke
+via Paul); (2) **recognition by the churches** (catholicity); (3) **content / conformity to the rule of faith**
+(orthodoxy) — undergirded by intrinsic inspiration (*theopneustos*). Walks the disputed books (Hebrews — "God
+alone knows who wrote" it; 2 Peter; James — Luther's "right strawy epistle," resolved via James-vs-Paul; Jude;
+Revelation) and the orthodox-but-not-canonical ones (Didache, Shepherd of Hermas, 1 Clement, Ignatius — they
+lacked apostolicity). Athanasius's **39th Festal Letter (367)** lists the 27; **Council of Carthage (397)**.
+
+**Extrabiblical / "lost" gospels (Bock, pp. 413–427):** Nag Hammadi (1945); Dan Brown's "84 gospels" is
+exaggerated (the real count of gospel-ish works is ~39). Close looks at the **Gospel of Peter** (docetic; ended
+by Serapion, via Eusebius *H.E.* 6.12.1–6), **Gospel of Mary Magdalene** (fragmentary; Berlin Codex),
+**Gospel of Judas** (Tchacos ms; Irenaeus *AH* 1.31, c. 180; Sethian Gnostic), **Apocryphon of John** (fully
+Gnostic; Irenaeus "Barbelo Gnostics," dates ideas to 150–60), and the **Gospel of Thomas** (114 sayings;
+date disputed — Koester/Pagels early vs. most scholars 2nd-c.; Pagels overplays the Thomas/John contrast; Dunn
+vs. Koester on the apocalyptic kingdom). **Verdict:** these are 2nd-century, non-apostolic, and reflect a later
+Gnostic perspective (esp. on creation/matter) distinct from the earliest Jesus community — they can't reach the
+1st century and are not canonical candidates.
+
+**Conclusion (p. 428):** the 66-book Protestant canon is well-justified (**⚠** state as *the authors'*
+conclusion, not ours, on the OT-scope point); early Christians embraced the Hebrew books + the apostles' books;
+the NT canon rests on apostolic authority; the Gnostic gospels did not pass the tests.
+
+## Primary-source & scholarly leads (ch. 16 footnotes 1–98 — ALL unverified until checked)
+> "fn N" = **ch. 16** footnote N. Section sources: Wegner, "The Canon of Scripture in Jesus' Day," *Areopagus
+> Journal* 5.6 (2005): 4–9 (fn 4); Wilder, "New Testament Canonicity," *Areopagus Journal* 5.6 (2005): 10–15 (fn 27).
+
+**Skeptic foils (steelmen):** Dan Brown, *The Da Vinci Code* (Doubleday, 2003), 231, 234 (fn 2); Bart Ehrman,
+*Lost Christianities* (fn 3) and *The Lost Gospel of Judas Iscariot* (Oxford, 2006), 70–83 (fn 71); Elaine
+Pagels, *Beyond Belief: The Secret Gospel of Thomas* (Random House, 2003), 68, 75 (fn 90–91); Helmut Koester,
+*Ancient Christian Gospels* (Trinity Press Int'l, 1990), 75–128 (fn 94).
+
+**OT-canon primaries/scholarship:** Roger Beckwith, *The Old Testament Canon of the New Testament Church…*
+(Eerdmans, 1985), 112, 370, 386 (fn 5, 8, 12); Josephus, *Contra Apion* 1.37–42 (fn 10, 24); Philo, *De Vit.
+Cont.* 25 / *Contempl.* 3 §25 (fn 7, 13); *2 Esdras (4 Ezra)* 14:45–48; *Babylonian Talmud, Baba Batra* 14b (ed.
+Epstein, Soncino, 1935) (fn 6); *Seder Olam Rabbah* 30; the *bath kol* traditions (*T.B. Sanh.* 11a; *Yoma* 21b;
+*Baba Batra* 12a); 1 Macc 9:27; 2 Baruch 85:3; F. F. Bruce, *Books and the Parchments*, 5th ed. (1991), 96 (fn
+11); Paul E. Kahle, *The Cairo Geniza*, 2nd ed. (Blackwell, 1959), 88–89 (fn 14); Wegner, *The Journey from
+Texts to Translations* (Baker, 2004), 110, 125 (fn 15, 26); Eusebius *H.E.* IV.26 (Melito), VI.25.1–2 (Origen)
+(fn 16, 20); J. P. Audet, *JTS* n.s. 1 (1950): 135–54 (fn 19); Schaff & Wace, *NPNF* 2nd series (Athanasius,
+Jerome, Rufinus) (fn 21–23); George W. Anderson, "Canonical and Non-canonical," in *Cambridge History of the
+Bible* (1963–70), I:145 (fn 25).
+
+**NT-canon primaries/scholarship:** **F. F. Bruce, *The Canon of Scripture*** (IVP, 1988), 119–20, 128, 255–69,
+279–80 (fn 28–29, 34–35, 41–42); **Bruce M. Metzger, *The Canon of the New Testament*** (Oxford, 1987), 75–108,
+251–54 (fn 30–32, 40–41); Herman Ridderbos, *Redemptive History and the New Testament Scriptures*, 2nd ed. (P&R,
+1988), 12–24 (fn 28, 32, 35); E. E. Ellis, *Pauline Theology* (Baker, 1989), 66, 89–91 (fn 36); Eusebius *H.E.*
+3.39.15 (Papias on Mark), 6.25.11–14 (Origen on Hebrews) (fn 39, 47); Tertullian, *Against Marcion* 4.2.4 (fn 38);
+E. Randolph Richards, *Paul and First-Century Letter Writing* (IVP, 2004), 210–14 (fn 44) and "Silvanus Was Not
+Peter's Secretary," *JETS* 43.3 (2000): 417–32 (fn 49); E. J. Goodspeed, *New Solutions to New Testament
+Problems* (Univ. of Chicago, 1927), 1–64 (fn 45).
+
+**Extrabiblical-gospels primaries/scholarship (Bock):** Hans-Josef Klauck, *Apocryphal Gospels* (T&T Clark),
+22–35, 87, 90–91, 108, 152–70 (fn 52, 55, 58, 61, 66–68, 80, 83, 88–89); Darrell L. Bock, *Breaking the Da Vinci
+Code* (Thomas Nelson, 2004), 25–26, and *The Missing Gospels* (Thomas Nelson, 2006), 15–21 (fn 65, 75); Eusebius
+*H.E.* 6.12.1–6 (Serapion/*Gospel of Peter*) (fn 58); Raymond E. Brown, *The Death of the Messiah* (Doubleday,
+1994), 1317–49 (fn 62); Karen King, *The Gospel of Mary Magdala* (Polebridge, 2003) (fn 64, 68); Irenaeus,
+*Against Heresies* 1.29.1–4 (Barbelo/Apocryphon of John), 1.31 (Gospel of Judas) (fn 73, 78); Kasser/Meyer/Wurst,
+*The Gospel of Judas* (National Geographic, 2006) (fn 73–74); James M. Robinson, ed., *The Coptic Gnostic Library*
+(Brill, 2000) (fn 70, 77); Nicholas Perrin, *Thomas and Tatian* (Brill, 2002) (fn 85); Klyne Snodgrass, "The
+Gospel of Thomas: A Secondary Gospel," *Second Century* 7 (1989–90): 19–38 (fn 84); J. D. G. Dunn, *Jesus
+Remembered* (Eerdmans, 2003), 164–65 (fn 96); Bock, *Studying the Historical Jesus* (Baker, 2002), 199–203 (fn 98).
+
+## Cross-map to our Evidence Library (ch. 16)
+- **`library/canon.html` + `answers/who-decided-which-books-are-in-the-bible.html`:** the criteria of canonicity
+  (apostolicity / catholicity / orthodoxy) and the antiquity-of-the-core evidence — **shared-tradition parts only;
+  keep the OT-scope/Apocrypha question denominationally neutral.**
+- **`answers/why-were-some-gospels-left-out-of-the-bible.html` + the Da Vinci Code / "lost gospels" material:**
+  Bock's extrabiblical-gospels survey (late, non-apostolic, Gnostic) is the strongest, most citable part — a clean
+  refutation of the "suppressed gospels" narrative. **→ logged to `content-backlog.md` (P3).**
+- **`library/manuscript.html` / `hist_jesus`:** the "Constantine did NOT invent the Bible" refutation.
+
+**If we ever build public content from ch. 16:** our own prose, cite the **primaries** (Bruce/Metzger/Klauck/
+Eusebius/the councils), verify every date and council, **apply the denominational-neutrality flag rigorously**
+(especially on the Apocrypha), and — because it touches Scripture's authority and world-religion-adjacent
+"alternative Christianities" — run the **dual-consensus** (orthodoxy + neutrality) gate before deploy.

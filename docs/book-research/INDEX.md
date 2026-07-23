@@ -15,7 +15,8 @@ these books to a *live* answer is: lead → verify the primary → add it to `/s
 Notes: **CFR** = `case-for-the-resurrection-of-jesus.md` (Habermas & Licona) · **BOP** = `body-of-proof.md`
 (Johnston) · **IDHEF** = `i-dont-have-enough-faith-to-be-an-atheist.md` (Geisler & Turek) · **DJRS** =
 `did-jesus-really-say-he-was-god.md` (Del Rosario) · **IDB** = `in-defense-of-the-bible.md` (Cowan &
-Wilder, eds. — Wallace **ch. 6** on NT textual criticism + Barnett **ch. 10** on NT historical reliability).
+Wilder, eds. — Wallace **ch. 6** NT textual criticism + Barnett **ch. 10** NT historical reliability + Huffman
+**ch. 11** alleged contradictions + Wegner/Wilder/Bock **ch. 16** the canon).
 
 | Topic | Note → section | Strongest primaries to chase (all still unverified until the pipeline confirms) |
 |---|---|---|
@@ -35,6 +36,10 @@ Wilder, eds. — Wallace **ch. 6** on NT textual criticism + Barnett **ch. 10** 
 | **Gospel authorship / eyewitnesses / dating** | **IDB ch. 10 Thesis 2** (+ our `library/eyewitnesses.html`) | Papias via Eusebius *H.E.* 3.39.3–16; Bauckham, *Jesus and the Eyewitnesses*, 417–20; the Polycarp/1 Clement/Ignatius/Didache citation chain (early attestation) |
 | **NT archaeology (people/places confirmed)** | **IDB ch. 10 Thesis 5** | Gallio/Delphi inscription (Acts 18:12); Erastus pavement (Rom 16:23); Politarchs (Acts 17:6); Caiaphas ossuary; Pools of Bethesda (John 5)/Siloam (John 9); C. A. Evans, "Jesus and the Ossuaries" |
 | **Canon / public reading = canonical recognition** | **IDB ch. 10 Thesis 8** | Justin, *1 Apology* 66–67; Col 4:16; 1 Tim 4:13; Rev 1:3; Josephus, *Against Apion* 1.37–43 (Hebrew canon); Theodotus synagogue inscription |
+| **Bible contradictions / harmonization method** | **IDB ch. 11** (Huffman) | the 3 cautionary principles (Selection≠Denial, Different≠Discrepant, Accuracy≠Precision, Paraphrase≠Quotation, Thematic-Ordering≠Errant; Misconstrued-Referents subcats; Mystery≠Contradiction); A. T. Robertson "a *possible* explanation suffices"; ⚠ keep "possible solution / mystery" humility, don't overclaim |
+| **Resurrection-account differences (Gospels)** | **IDB ch. 11** (Huffman, resurrection case study) | the 8-segment coordination of Matt 28/Mark 16/Luke 24/John 20–21/1 Cor 15; **Wenham, *Easter Enigma*** (the key monograph); Osborne; Licona; Harris's 21-point harmonization. Lead with the 1 Cor 15:3–7 creed |
+| **The canon — do we have the right books?** | **IDB ch. 16** (Wegner/Wilder/Bock) | criteria of canonicity (apostolicity/catholicity/orthodoxy); Bruce, *Canon of Scripture*; Metzger, *Canon of the NT*; Athanasius 39th Festal Letter (367); Carthage (397). ⚠⚠ **OT-canon/Apocrypha scope is denominationally sensitive — use shared-tradition parts only, stay neutral** |
+| **"Lost gospels" / Da Vinci Code / suppressed gospels** | **IDB ch. 16** (Bock's section) | the extrabiblical gospels are late/non-apostolic/Gnostic; Dan Brown's "84 gospels" exaggerated (~39 real); Gospel of Peter/Mary/Judas/Thomas + Apocryphon of John; Klauck, *Apocryphal Gospels*; Bock, *The Missing Gospels* & *Breaking the Da Vinci Code*; "Constantine did NOT invent the Bible" |
 | **Deity of Christ** | **DJRS** (from Mark, via the enemies' reaction); IDHEF | Mark 2 (forgive-on-earth) / Mark 14 (judge-from-heaven) blasphemy scenes; ten data points + five best-explanation criteria |
 | **Naturalism / miracles / "science" objections** | CFR Ch. 8 | Behe, *Darwin's Black Box* (the elephant); Swinburne, "Violation of a Law of Nature," in *Miracles* (1989); Hume, *Enquiry*; Yamauchi (rival-religion miracles). ⚠ fine-tuning/ID: *data* conceded, *design* is the contested inference — never "science proves design" |
 | **Kalam / fine-tuning / moral argument / NT reliability** | **IDHEF** (Geisler & Turek — the broad-apologetics map) | per that note's chapter map; hold the argument-specific rules (Kalam "begins to exist"; fine-tuning data-vs-design; moral duties-need-a-ground) |
@@ -57,7 +62,14 @@ Wilder, eds. — Wallace **ch. 6** on NT textual criticism + Barnett **ch. 10** 
   **speculative/illustrative only**; never assert a specific event *was* the star.
 - **IDB ch. 10 fn 18 + p. 250 Qur'an lines** → neutrality gate; state Islam's actual crucifixion position
   (Qur'an 4:157) accurately, never as a comparative swipe.
-- General: **popular-level overstatement** in BOP/CFR/IDB ch. 10 — hold every pull to the `CLAUDE.md`
-  argument rules.
+- **IDB ch. 16 OT canon / Apocrypha (Wegner)** → **denominational-neutrality flag.** The chapter argues the
+  Protestant 66-book canon and against the Apocrypha's canonicity; the OT-canon *scope* is a live
+  Catholic/Orthodox/Protestant dispute. Use only the shared-tradition parts (Da Vinci Code refutation, criteria
+  of canonicity, "lost gospels" are late/Gnostic); **never** assert "the Apocrypha is not Scripture" in our own
+  voice.
+- **IDB ch. 11 harmonizations (Huffman)** → keep the "*possible* solution / mystery does not necessitate
+  contradiction" humility; present genealogy/Judas-death solutions as possible readings, not proven; don't let
+  "no contradictions" become triumphal.
+- General: **popular-level overstatement** in BOP/CFR/IDB — hold every pull to the `CLAUDE.md` argument rules.
 
 _Regenerate/expand this table when a note is added or materially updated._
