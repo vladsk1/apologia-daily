@@ -139,7 +139,11 @@ const FOOT = `<footer class="ad-foot">
   <div class="ad-foot-tag">Defending the faith with gentleness and respect.</div>
 </footer>`;
 
-const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+// For HTML ATTRIBUTE values only (meta/og content="..."): additionally escape double-quotes,
+// which would otherwise truncate the attribute. NOT used for body/text content (quotes are legal
+// in text, and escaping them there over-escapes and breaks the drift audit's _norm compare).
+const escAttr = (s) => esc(s).replace(/"/g, '&quot;');
 
 function goDeeper(e) {
   if (e.essay) {
@@ -201,12 +205,12 @@ function page(e) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${esc(e.q)} | Apologia Daily</title>
-<meta name="description" content="${esc(e.meta)}">
+<meta name="description" content="${escAttr(e.meta)}">
 <link rel="canonical" href="${url}">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Apologia Daily">
-<meta property="og:title" content="${esc(e.q)}">
-<meta property="og:description" content="${esc(e.meta)}">
+<meta property="og:title" content="${escAttr(e.q)}">
+<meta property="og:description" content="${escAttr(e.meta)}">
 <meta property="og:url" content="${url}">
 <meta property="og:image" content="https://apologiadaily.com/og-default.jpg">
 <meta name="twitter:image" content="https://apologiadaily.com/og-default.jpg">
