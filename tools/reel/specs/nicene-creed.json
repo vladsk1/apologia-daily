@@ -1,0 +1,115 @@
+{
+  "reviewed": {
+    "argument": "2026-07-23",
+    "orthodoxy": "2026-07-23",
+    "by": "Positive-case reel explaining the Nicene Creed (orthodoxy = the shared Christian core) + the richness of the text. On-screen quotes VERBATIM from verified Schaff PD (sources/creeds.json: nicene-creed-325 'God of God…' + nicene-creed-381 gospel/Spirit/hope), ellipses mark omissions; Jesus quote is a disclosed 325+381 composite. DUAL-CONSENSUS: apologia-orthodoxy CLEAN (quote fidelity confirmed; Trinity co-equal 'one God/three persons/fully God'; deity of Christ positive-case not Arian steelman; denominational neutrality held — filioque/procession clause omitted, only the uncontested co-glorification clause used; 'catholic = universal' gloss; 0 clarifier candidates) + apologia-neutrality CLEAN after one WEAK fix applied: voiceover 'the same words' → 'the same creed' (filioque is a dispute over the creed's words, so 'same words' overstated cross-tradition identity; scene-1 'still say together' kept, it's accurate). Positive-case only; Arianism named as the refuted error, never steelmanned."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "pace": 1.4,
+  "keep_watching": "keep watching  ↓",
+  "voiceover": "For seventeen hundred years, Christians of every tradition — Catholic, Orthodox, and Protestant — have confessed the same faith in the same creed: the Nicene Creed. That's what orthodoxy means. Not a denomination — the measuring line, the shared core every Christian holds. And every phrase is dense with meaning, forged to guard something precious. Of Jesus it says: God of God, Light of Light, very God of very God, begotten, not made, of one substance with the Father. So when some claimed the Son was only a creature, the church answered in one unbreakable phrase: begotten, not made. Then, in a single breath, the whole gospel: for our salvation he came down from heaven and was made man, was crucified under Pontius Pilate, and the third day he rose again, according to the Scriptures. The Spirit too — the Lord and Giver of life, who with the Father and the Son is worshiped and glorified. One God, three persons, fully divine. And it ends in hope: one holy, universal, apostolic church; the resurrection of the dead, and the life of the world to come. Not dry — dense. Every line worth knowing by heart.",
+  "source": "sources/creeds.json (verified: nicene-creed-325 + nicene-creed-381, Schaff PD translation); library/early_church_trinity.html; docs/STATEMENT_OF_FAITH.md. All on-screen quotes verbatim Schaff (ellipses mark omissions); positive-case only.",
+  "scenes": [
+    {
+      "dur": 3.6,
+      "big": [
+        { "t": "1,700 years.", "c": "gold", "s": 86 },
+        { "t": "One faith. Every tradition.", "c": "cream", "s": 46 }
+      ],
+      "sub": [
+        { "t": "The Nicene Creed — the words Christians still say together.", "c": "dim", "f": "serif", "s": 30 }
+      ]
+    },
+    {
+      "kicker": "WHAT “ORTHODOXY” MEANS",
+      "dur": 5.0,
+      "lines": [
+        { "t": "Not a denomination.", "c": "cream", "s": 48 },
+        { "t": "", "s": 14 },
+        { "t": "The measuring line —", "c": "cream", "s": 44 },
+        { "t": "the faith Catholics, Orthodox,", "c": "cream", "s": 38 },
+        { "t": "and Protestants all confess.", "c": "gold", "f": "serifb", "s": 42 }
+      ]
+    },
+    {
+      "kicker": "OF JESUS, THE CHURCH SAID:",
+      "dur": 5.4,
+      "lines": [
+        { "t": "“God of God, Light of Light,", "c": "cream", "s": 44 },
+        { "t": "very God of very God,", "c": "cream", "s": 46 },
+        { "t": "begotten, not made,", "c": "cream", "s": 46 },
+        { "t": "being of one substance", "c": "cream", "s": 44 },
+        { "t": "with the Father.”", "c": "gold", "f": "serifb", "s": 50 }
+      ]
+    },
+    {
+      "kicker": "IT DREW A LINE THAT HELD",
+      "dur": 4.8,
+      "lines": [
+        { "t": "When some claimed the Son", "c": "cream", "s": 42 },
+        { "t": "was only a creature,", "c": "cream", "s": 44 },
+        { "t": "the church answered", "c": "cream", "s": 44 },
+        { "t": "in one phrase:", "c": "cream", "s": 44 },
+        { "t": "“begotten, not made.”", "c": "gold", "f": "serifb", "s": 52 }
+      ]
+    },
+    {
+      "kicker": "THEN — THE WHOLE GOSPEL",
+      "dur": 5.6,
+      "lines": [
+        { "t": "“…for our salvation, came down", "c": "cream", "s": 36 },
+        { "t": "from heaven… and was made man;", "c": "cream", "s": 36 },
+        { "t": "was crucified… under Pontius Pilate;", "c": "cream", "s": 32 },
+        { "t": "the third day he rose again,", "c": "cream", "s": 40 },
+        { "t": "according to the Scriptures.”", "c": "gold", "f": "serifb", "s": 42 }
+      ]
+    },
+    {
+      "kicker": "AND THE SPIRIT — FULLY GOD",
+      "dur": 5.2,
+      "lines": [
+        { "t": "“the Lord and Giver of life…", "c": "cream", "s": 42 },
+        { "t": "who with the Father and the Son", "c": "cream", "s": 38 },
+        { "t": "together is worshiped and glorified.”", "c": "gold", "f": "serifb", "s": 34 },
+        { "t": "", "s": 14 },
+        { "t": "One God. Three persons. Fully God.", "c": "cream", "s": 38 }
+      ]
+    },
+    {
+      "kicker": "AND IT ENDS IN HOPE",
+      "dur": 5.4,
+      "lines": [
+        { "t": "“…one holy catholic and", "c": "cream", "s": 42 },
+        { "t": "apostolic Church…”", "c": "cream", "s": 42 },
+        { "t": "(catholic = universal — the whole church)", "c": "dim", "f": "serif", "s": 28 },
+        { "t": "“…the resurrection of the dead,", "c": "cream", "s": 38 },
+        { "t": "and the life of the world to come.”", "c": "gold", "f": "serifb", "s": 38 }
+      ]
+    },
+    {
+      "kicker": "NOT DRY — DENSE",
+      "dur": 4.6,
+      "lines": [
+        { "t": "Every phrase was forged", "c": "cream", "s": 46 },
+        { "t": "to protect something", "c": "cream", "s": 46 },
+        { "t": "Christians would die for:", "c": "cream", "s": 44 },
+        { "t": "", "s": 14 },
+        { "t": "who Jesus really is.", "c": "gold", "f": "serifb", "s": 52 }
+      ]
+    },
+    {
+      "dur": 4.6,
+      "big": [
+        { "t": "Worth knowing", "c": "cream", "s": 72 },
+        { "t": "by heart.", "c": "gold", "s": 78 }
+      ],
+      "sub": [
+        { "t": "Read the Nicene Creed in full — see how much it holds.", "c": "dim", "f": "serif", "s": 30 },
+        { "t": "apologiadaily.com/what-we-believe", "c": "gold", "f": "serifb", "s": 40 }
+      ]
+    }
+  ]
+}
