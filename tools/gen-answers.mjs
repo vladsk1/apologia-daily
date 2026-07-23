@@ -146,14 +146,19 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 const escAttr = (s) => esc(s).replace(/"/g, '&quot;');
 
 function goDeeper(e) {
+  let out = '';
   if (e.essay) {
-    return `  <p class="ad-related">Go deeper: <a href="${e.essay}">${esc(e.relatedLabel || 'Read the full essay')} &mdash; full essay &rarr;</a></p>`;
-  }
-  if (e.related) {
+    out = `Go deeper: <a href="${e.essay}">${esc(e.relatedLabel || 'Read the full essay')} &mdash; full essay &rarr;</a>`;
+  } else if (e.related) {
     const essayHref = '/library/' + e.related.replace(/^ev-m-/, '');
-    return `  <p class="ad-related">Go deeper: <a href="${essayHref}">${esc(e.relatedLabel || 'the full essay')} &mdash; full essay &rarr;</a> &middot; <a href="/${e.related}">practice it &rarr;</a></p>`;
+    out = `Go deeper: <a href="${essayHref}">${esc(e.relatedLabel || 'the full essay')} &mdash; full essay &rarr;</a> &middot; <a href="/${e.related}">practice it &rarr;</a>`;
   }
-  return '';
+  // Optional SECOND go-deeper essay link (e.essay2). Links belong here, not in the
+  // esc()'d answer body (raw <a> in "a" would be HTML-escaped into literal text).
+  if (e.essay2) {
+    out += (out ? ' &middot; ' : 'Go deeper: ') + `<a href="${e.essay2}">${esc(e.relatedLabel2 || 'Related essay')} &rarr;</a>`;
+  }
+  return out ? `  <p class="ad-related">${out}</p>` : '';
 }
 
 // Sibling cross-links: up to 5 other answers in the same category. Builds the
