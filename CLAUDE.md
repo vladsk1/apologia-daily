@@ -6,6 +6,28 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **2026-07-23 (Nicene Creed tab treatment + kalam essay strengthening + video mining).** Shipped a
+> **NEW Nicene Creed deep-dive** — [`library/nicene-creed.html`](library/nicene-creed.html), a
+> phrase-by-phrase walk through the Niceno-Constantinopolitan (325/381) creed (complements
+> `early_church_trinity.html`: that answers "was it invented," this reads what the text *means*) — plus its
+> full Trinity-tab treatment: **`ev-s6` card 16** (a bridge card, no separate mastery page — a creed
+> walkthrough is expository, not a single-syllogism argument), the gated **`nicene-creed-explained` brief**
+> so the live `/api/ask` AI draws on it, and wiring (sitemap, `library/index.html`, search index).
+> **Dual-consensus CLEAN** (argument + orthodoxy + neutrality) + citations; the **filioque is handled with
+> strict denominational neutrality** (the page takes no side). **Orthodoxy-tripwire baseline pass:** reviewed
+> all 52 previously-unbaselined whole-corpus matches (every one legitimate refutation/attribution context —
+> Ehrman *How Jesus Became God* book-title cites, the "do Muslims/Christians worship the same God?" refutation
+> pages, NWT/Mormon quotes-to-refute), accepted them on-record → `check-orthodoxy-tripwires` clean again.
+> **Video-research:** mined the six-part W. L. Craig "Defenders" **kalam** lecture series into one note
+> ([`docs/video-research/craig-kalam-defenders-series.md`](docs/video-research/craig-kalam-defenders-series.md))
+> + ledger/INDEX/backlog rows (a citations pass caught + fixed 2 note-only errors), then **executed the
+> backlog row to strengthen [`library/kalam.html`](library/kalam.html)** with four additions — the Grim
+> Reaper paradox (Pruss/Koons), Tolman + Aron Wall's 2013 generalized-2nd-law thermodynamics, and
+> Swinburne's personal-explanation route to the cause's personhood (Vilenkin-2015 was already fn7).
+> Footnotes renumbered 11→15 (sup↔li integrity 15/15); all gates CLEAN; **divine-temporality neutrality
+> kept** (Craig's own temporalism deliberately *not* adopted). **Open (human):** pastoral/elder sign-off is
+> still owed on the new Nicene Christology (the automated gates certify CLEAN, but the stamp says so).
+>
 > **2026-07-15 (orthodoxy-assurance hardening + Waves 1–3 answers + DNA reel).** Built a
 > defense-in-depth layer so faithfulness to Nicene orthodoxy is enforced by *process*, not just
 > intent. **NEW canonical anchor: [`docs/STATEMENT_OF_FAITH.md`](docs/STATEMENT_OF_FAITH.md)** — the
