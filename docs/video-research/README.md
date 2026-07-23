@@ -129,6 +129,7 @@ brief distilled from its certified-essay tie-in is live in `/briefs` · **—** 
 | Gary Habermas × Sean McDowell · "On the Resurrection" interview (Vol. 1) | `WoSOoqSRPvg` | `habermas-mcdowell-on-the-resurrection-interview.md` | — | — (4th Habermas source; resurrection topic exhaustively served by the live briefs) | 2026-07-23 |
 | Gary Habermas × Sean McDowell · "Alternate Theories" interview (Vol. 2) | `qJC6pdEKxOA` | `habermas-mcdowell-alternate-theories-interview.md` | — | — (5th Habermas source; naturalistic-theory case already served by the live resurrection + pagan-myths briefs) | 2026-07-23 |
 | Gary Habermas × Alisa Childers · "The Early Creeds of Christianity" | `dEzLTtXeqs4` | `habermas-childers-early-creeds.md` | — | — (6th Habermas source; a re-run of note #1's early-high-christology material — already served by the creed/deity briefs) | 2026-07-23 |
+| Gavin Ortlund (Truth Unites) · word-by-word commentary on the Nicene Creed | `2KuLiL0Am78` | `ortlund-nicene-creed-commentary.md` | — | — (best/on-topic source in the batch; points at a real gap — a NEW Nicene Creed essay; ⚠ filioque = keep neutral) | 2026-07-23 |
 | _example: Craig · "The Kalam Cosmological Argument"_ | _`dQw4w9WgXcQ`_ | _`craig-kalam.md`_ | _—_ | _✓ `kalam-cause-of-universe`_ | _2026-07-22_ |
 
 **Rule of thumb:** a video isn't "briefed" until a row shows **✓briefs** (or **✓sources**). A row with only

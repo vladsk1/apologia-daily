@@ -26,8 +26,9 @@ P3 (stronger primary / enrichment) > P4 (corroboration only — usually skip).
 ## Open backlog
 | P | What to do | Type | Surfaced by | Target file(s) | Gate | Status |
 |---|---|---|---|---|---|---|
+| P2 | Write a NEW deep-dive essay walking through the **Nicene Creed** phrase-by-phrase (history: Arius/325→381; terms: homoousios, begotten, procession; incarnation; the articles) — the site has no dedicated Nicene-Creed essay | **new-essay** → then brief + link from `what-we-believe.html`/Trinity tab | `video-research/ortlund-nicene-creed-commentary.md` | NEW `library/nicene-creed.html` (+ strengthen `answers/did-the-church-invent-jesus-divinity-at-nicaea.html`, `answers/did-jesus-empty-himself-of-his-deity.html`) | citations + **dual-consensus** + **strict denom-neutrality on the filioque** | TODO |
 | P3 | Add **1 Cor 16:22 (*maranatha*)** as Aramaic-early evidence of earliest devotion to Jesus | update-essay → update-brief | `video-research/habermas-early-high-christology.md` §5 | `library/jesus_as_god_nt.html` → then `deity-of-christ-nt` brief | citations + dual-consensus (orthodoxy+neutrality) | TODO |
-| P3 | Add **Rom 10:13 → Joel 2:32** as a second Yahweh-text applied to Jesus | update-essay → update-brief | `video-research/habermas-early-high-christology.md` §5(iv) | `library/jesus_as_god_nt.html` → then `deity-of-christ-nt` brief | citations + dual-consensus | TODO |
+| P3 | Add **Rom 10:13 → Joel 2:32** as a second Yahweh-text applied to Jesus | update-essay → update-brief | `video-research/habermas-early-high-christology.md` §5(iv) | `library/jesus_as_god_nt.html` → then `deity-of-christ-nt` brief | citations + dual-consensus | **DONE 2026-07-22** |
 
 ## Done (shipped — kept for the audit trail)
 _(none yet)_
