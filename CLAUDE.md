@@ -6,6 +6,23 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **2026-07-23 (book-research: In Defense of the Bible +3 chapters; + CI baseline fix).** Expanded the
+> owned-book note [`docs/book-research/in-defense-of-the-bible.md`](docs/book-research/in-defense-of-the-bible.md)
+> from 1 to **4 mapped chapters** of the Cowan & Wilder volume (all from owner photos): **ch. 10 Barnett**
+> "Is the NT Historically Reliable?" (8 theses; 93 fns), **ch. 11 Huffman** "Are There Contradictions in the
+> Bible?" (3 cautionary principles + resurrection coordination; 75 fns), **ch. 16 Wegner/Wilder/Bock** "Do We
+> Have the Right Canon?" (OT/NT canon + "lost gospels"; 98 fns), alongside the pre-existing **ch. 6 Wallace**.
+> Wired into `INDEX.md` + `README.md`; logged the additive leads to `content-backlog.md`. **Every citation is
+> an unverified lead** until run through the pipeline. Key flags recorded in the note: ch. 10 — do NOT
+> reproduce the full Testimonium Flavianum (neutral core only), census/Quirinius contested, Star-of-Bethlehem
+> speculative, Qur'an lines need neutrality reframe; ch. 16 — **the OT-canon/Apocrypha scope is
+> denominationally sensitive** (use shared-tradition parts only). Also logged a **P2 backlog row** to
+> pastorally redesign + re-add the "Suffering & Evil" answer category (pulled from main 2026-07-22 by
+> `573421c`/`5efdafc`, pending pastoral redesign). **Separately fixed a red `orthodoxy-guards` CI job on
+> main:** the tripwire baseline had drifted (52 already-reviewed refutation/attribution matches re-hashed
+> after later HTML edits — same file+pattern set, no new content); regenerated with `--update` (verified
+> identical pair-set) → all guards green again.
+>
 > **2026-07-23 (Nicene Creed tab treatment + kalam essay strengthening + video mining).** Shipped a
 > **NEW Nicene Creed deep-dive** — [`library/nicene-creed.html`](library/nicene-creed.html), a
 > phrase-by-phrase walk through the Niceno-Constantinopolitan (325/381) creed (complements
