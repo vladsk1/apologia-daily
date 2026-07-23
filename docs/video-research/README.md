@@ -129,8 +129,13 @@ brief distilled from its certified-essay tie-in is live in `/briefs` · **—** 
 | Gary Habermas × Sean McDowell · "On the Resurrection" interview (Vol. 1) | `WoSOoqSRPvg` | `habermas-mcdowell-on-the-resurrection-interview.md` | — | — (4th Habermas source; resurrection topic exhaustively served by the live briefs) | 2026-07-23 |
 | Gary Habermas × Sean McDowell · "Alternate Theories" interview (Vol. 2) | `qJC6pdEKxOA` | `habermas-mcdowell-alternate-theories-interview.md` | — | — (5th Habermas source; naturalistic-theory case already served by the live resurrection + pagan-myths briefs) | 2026-07-23 |
 | Gary Habermas × Alisa Childers · "The Early Creeds of Christianity" | `dEzLTtXeqs4` | `habermas-childers-early-creeds.md` | — | — (6th Habermas source; a re-run of note #1's early-high-christology material — already served by the creed/deity briefs) | 2026-07-23 |
-| Gavin Ortlund (Truth Unites) · word-by-word commentary on the Nicene Creed | `2KuLiL0Am78` | `ortlund-nicene-creed-commentary.md` | — | — (best/on-topic source in the batch; points at a real gap — a NEW Nicene Creed essay; ⚠ filioque = keep neutral) | 2026-07-23 |
-| _example: Craig · "The Kalam Cosmological Argument"_ | _`dQw4w9WgXcQ`_ | _`craig-kalam.md`_ | _—_ | _✓ `kalam-cause-of-universe`_ | _2026-07-22_ |
+| Gavin Ortlund (Truth Unites) · word-by-word commentary on the Nicene Creed | `2KuLiL0Am78` | `ortlund-nicene-creed-commentary.md` | — | ✓ `nicene-creed-explained` (new brief, from the new certified `library/nicene-creed.html` — essay + Trinity-tab card + brief all shipped 2026-07-23) | 2026-07-23 |
+| W. L. Craig (Reasonable Faith "Defenders") · Kalam pt.1 — intro + Premise 1 (causal principle) | `585Bl_tSipA` | `craig-kalam-defenders-series.md` | — | — (topic already served by `kalam-cause-of-universe`; strengthening leads → backlog) | 2026-07-23 |
+| W. L. Craig · Kalam pt.2 — Premise 2, the impossibility of an actual infinite (Hilbert's Hotel) | `MF_r_zdDFro` | `craig-kalam-defenders-series.md` | — | — (as above) | 2026-07-23 |
+| W. L. Craig · Kalam pt.3 — Premise 2, successive addition + the Grim Reaper Paradox (Pruss/Koons) | `dJ-_Ig5YF-4` | `craig-kalam-defenders-series.md` | — | — (as above) | 2026-07-23 |
+| W. L. Craig · Kalam pt.4 — Premise 2, scientific confirmation 1: cosmic expansion / Big Bang | `mErQyaw1vu8` | `craig-kalam-defenders-series.md` | — | — (as above) | 2026-07-23 |
+| W. L. Craig · Kalam pt.5 — Premise 2, the BGV theorem + Vilenkin's 2015 *Inference* article | `qupeLm-19Hk` | `craig-kalam-defenders-series.md` | — | — (as above) | 2026-07-23 |
+| W. L. Craig · Kalam pt.6 — thermodynamic confirmation (heat death) + the cause's attributes/personhood | `jDL5pY9l89k` | `craig-kalam-defenders-series.md` | — | — (as above) | 2026-07-23 |
 
 **Rule of thumb:** a video isn't "briefed" until a row shows **✓briefs** (or **✓sources**). A row with only
 **note** means it's mined but nothing has cleared the gates into the live AI yet.
