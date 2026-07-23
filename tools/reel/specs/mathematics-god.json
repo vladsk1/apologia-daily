@@ -1,0 +1,113 @@
+{
+  "reviewed": {
+    "argument": "2026-07-23",
+    "orthodoxy": "2026-07-23",
+    "by": "Positive-case reel from certified library/mathematics.html (CLEAN 2026-07-14): Wigner's 'unreasonable effectiveness of mathematics' as a pointer to a rational Mind — plain-English/accessible cut. apologia-orthodoxy CLEAN: the fine-tuning-shaped over-claim guard is INTACT (scene 7 'doesn't prove God by itself… a signpost, not the whole map… the big case rests elsewhere'; close 'the simplest reading… is that Reason wrote it' = inference, not proof; 'more sense if a Mind wrote it' comparative, never 'math proves God'); positive-case only; 0 clarifier candidates. Two accuracy NOTES from the gate APPLIED: (1) Wigner quote made verbatim 'a wonderful gift which we neither understand nor deserve' (was a paraphrase shown in quote-marks); (2) dropped the unsupported 'he died thinking it was useless' Riemann mind-read → 'pure abstraction, no use in sight'; also tightened '1962 an equation said' → 'the math predicted' (symmetry/group-theory, not a single equation)."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "pace": 1.4,
+  "keep_watching": "keep watching  ↓",
+  "voiceover": "In 1854, a young mathematician invented a strange new kind of geometry — curved, bendy space with no use in sight. Just a beautiful idea. Sixty years later, Einstein was stuck. He needed a math to describe gravity — and someone handed him that 'useless' geometry. It fit the universe perfectly. Our best theory of gravity is written in it. And here's the wild part: this keeps happening. Over and over, math invented for its sheer beauty — with no connection to the real world — turns out to be the hidden blueprint of atoms and stars. A Nobel physicist called it 'the unreasonable effectiveness of mathematics,' and admitted there is no rational explanation for it. It even runs ahead of us. In 1962, the math predicted a particle that nobody had ever seen. Two years later, they found it. The math knew first. That physicist's own words for all this? 'A wonderful gift which we neither understand nor deserve.' He reached for the word 'miracle.' Now — be honest. This doesn't prove God by itself; it's a signpost, not the whole map. But think about it: a universe that runs on elegant math we invented for fun makes far more sense if a Mind wrote it than if it's a lucky accident. A gift implies a giver — and the simplest reading of a cosmos written in reason is that Reason wrote it.",
+  "source": "library/mathematics.html (certified content-review CLEAN 2026-07-14) — Wigner 'unreasonable effectiveness'; Riemann→Einstein; the 1962→1964 particle prediction (Gell-Mann omega-minus); scope bound kept (a signpost / best explanation, NOT a proof). Positive-case only.",
+  "scenes": [
+    {
+      "dur": 3.8,
+      "big": [
+        { "t": "He invented", "c": "cream", "s": 58 },
+        { "t": "useless math.", "c": "gold", "s": 74 }
+      ],
+      "sub": [
+        { "t": "1854 — pure abstraction, no use in sight. Just a beautiful idea.", "c": "dim", "f": "serif", "s": 28 }
+      ]
+    },
+    {
+      "kicker": "60 YEARS LATER — EINSTEIN WAS STUCK",
+      "dur": 5.2,
+      "lines": [
+        { "t": "He needed a math", "c": "cream", "s": 46 },
+        { "t": "to describe gravity.", "c": "cream", "s": 46 },
+        { "t": "", "s": 14 },
+        { "t": "Someone handed him that", "c": "cream", "s": 40 },
+        { "t": "“useless” shape. It fit perfectly.", "c": "gold", "f": "serifb", "s": 36 }
+      ]
+    },
+    {
+      "kicker": "AND IT KEEPS HAPPENING",
+      "dur": 5.0,
+      "lines": [
+        { "t": "Over and over,", "c": "cream", "s": 46 },
+        { "t": "math invented for fun —", "c": "cream", "s": 44 },
+        { "t": "with no link to the real world —", "c": "cream", "s": 36 },
+        { "t": "turns out to run the universe.", "c": "gold", "f": "serifb", "s": 40 }
+      ]
+    },
+    {
+      "kicker": "A NOBEL PHYSICIST ON THIS",
+      "dur": 5.4,
+      "lines": [
+        { "t": "“The unreasonable", "c": "cream", "s": 46 },
+        { "t": "effectiveness of mathematics.”", "c": "cream", "s": 38 },
+        { "t": "— Eugene Wigner", "c": "dim", "f": "serif", "s": 32 },
+        { "t": "", "s": 12 },
+        { "t": "“There is no rational", "c": "cream", "s": 42 },
+        { "t": "explanation for it.”", "c": "gold", "f": "serifb", "s": 48 }
+      ]
+    },
+    {
+      "kicker": "THE MATH KNEW FIRST",
+      "dur": 5.4,
+      "lines": [
+        { "t": "1962: the math predicted", "c": "cream", "s": 42 },
+        { "t": "a particle nobody", "c": "cream", "s": 42 },
+        { "t": "had ever seen.", "c": "cream", "s": 42 },
+        { "t": "", "s": 14 },
+        { "t": "Two years later — they found it.", "c": "gold", "f": "serifb", "s": 38 }
+      ]
+    },
+    {
+      "kicker": "HIS WORD FOR IT",
+      "dur": 5.2,
+      "lines": [
+        { "t": "“A wonderful gift which we", "c": "cream", "s": 40 },
+        { "t": "neither understand", "c": "cream", "s": 44 },
+        { "t": "nor deserve.”", "c": "gold", "f": "serifb", "s": 52 },
+        { "t": "", "s": 14 },
+        { "t": "He reached for one word: miracle.", "c": "cream", "s": 36 }
+      ]
+    },
+    {
+      "kicker": "NOW — BE HONEST",
+      "dur": 5.0,
+      "lines": [
+        { "t": "This doesn’t prove God by itself.", "c": "cream", "s": 38 },
+        { "t": "It’s a signpost —", "c": "cream", "s": 46 },
+        { "t": "not the whole map.", "c": "gold", "f": "serifb", "s": 48 },
+        { "t": "(the big case rests elsewhere)", "c": "dim", "f": "serif", "s": 28 }
+      ]
+    },
+    {
+      "kicker": "BUT THINK ABOUT IT",
+      "dur": 5.0,
+      "lines": [
+        { "t": "A universe that runs on", "c": "cream", "s": 42 },
+        { "t": "elegant math we made up", "c": "cream", "s": 42 },
+        { "t": "makes far more sense", "c": "cream", "s": 42 },
+        { "t": "if a Mind wrote it.", "c": "gold", "f": "serifb", "s": 50 }
+      ]
+    },
+    {
+      "dur": 4.8,
+      "big": [
+        { "t": "A gift implies", "c": "cream", "s": 60 },
+        { "t": "a giver.", "c": "gold", "s": 82 }
+      ],
+      "sub": [
+        { "t": "A cosmos written in reason — the simplest reading is that Reason wrote it.", "c": "dim", "f": "serif", "s": 28 },
+        { "t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 40 }
+      ]
+    }
+  ]
+}
