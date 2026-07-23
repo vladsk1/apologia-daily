@@ -1,22 +1,30 @@
-# Research map — *In Defense of the Bible* (Cowan & Wilder, eds.), ch. 6: Wallace on NT textual reliability
+# Research map — *In Defense of the Bible* (Cowan & Wilder, eds.) — Wallace (ch. 6) + Barnett (ch. 10)
 
 **Book:** Steven B. Cowan & Terry L. Wilder, eds., *In Defense of the Bible: A Comprehensive
 Apologetic for the Authority of Scripture* (Nashville: B&H Academic, 2013). Owner's physical copy
 (photographed). Copyrighted — this is an **in-our-own-words map that points at quotable primaries**,
 NOT a store of the book's prose.
 
-**Chapter captured:** ch. 6 — **Daniel B. Wallace**, "Has the New Testament Text Been Hopelessly
-Corrupted?" (pp. 139–163). Wallace is a real, mainstream evangelical NT textual critic (founder of the
-Center for the Study of New Testament Manuscripts, csntm.org) and a frequent Bart Ehrman debate
-opponent — a strong, well-credentialed source for the manuscript-reliability case.
+**Chapters captured (2 of a multi-author volume):**
+- **ch. 6 — Daniel B. Wallace,** "Has the New Testament Text Been Hopelessly Corrupted?" (pp. 139–163).
+  Wallace is a real, mainstream evangelical NT textual critic (founder of the Center for the Study of
+  New Testament Manuscripts, csntm.org) and a frequent Bart Ehrman debate opponent — a strong,
+  well-credentialed source for the manuscript-reliability case.
+- **ch. 10 — Paul W. Barnett,** "Is the New Testament Historically Reliable?" (pp. 223–265). Barnett is
+  a real, well-credentialed Australian New Testament historian (Anglican bishop emeritus of North Sydney;
+  longtime teaching/visiting fellow at Moore Theological College and Regent College) — a mainstream
+  evangelical source for the historical-reliability case, and a prolific author on Christian origins.
+  Added 2026‑07‑23.
 
-> ## 🟢 STATUS: COMPLETE for **ch. 6 only** (full chapter pp. 140–163 read; all 51 footnotes captured)
-> This note maps **one chapter** of a multi-author volume. The full text of Wallace's chapter (body +
-> the papyri chart on pp. 148–149 + footnotes 1–51) was photographed and is mapped below. **The rest of
-> the book (its other chapters on canon, inspiration, inerrancy, alleged contradictions, archaeology,
-> science, the OT, translation, etc.) is NOT captured** — photograph those chapters + the volume's
-> general bibliography/index if we ever want them. Per the owner's instruction (2026‑07‑17), for now
-> only this essay is being added.
+> ## 🟢 STATUS: COMPLETE for **ch. 6 and ch. 10** (each full chapter read; all footnotes captured)
+> - **ch. 6:** full chapter pp. 140–163 + the papyri chart (pp. 148–149) + footnotes 1–51. ✅
+> - **ch. 10:** full chapter pp. 223–265 — all **eight theses** + the Conclusion + footnotes 1–93, incl.
+>   the miracle-diversity chart (p. 248) and the 1 Cor 15:3–7 creed block-diagram (p. 251). ✅
+> This note maps **two chapters** of a multi-author volume. **The rest of the book (its other chapters on
+> canon, inspiration, inerrancy, alleged contradictions, archaeology, science, the OT, translation, etc.)
+> is NOT captured** — photograph those chapters + the volume's general bibliography/index if we ever want
+> them. **Note on footnote numbering:** each chapter numbers its footnotes from 1, so "ch. 6 fn 14" and
+> "ch. 10 fn 14" are *different* citations — always cite the chapter with the footnote.
 
 ## Usage rules (same as every note in this folder — do not bend)
 - **Never reproduce the book's prose.** Everything here is our paraphrase of the argument's *shape* +
@@ -32,6 +40,10 @@ opponent — a strong, well-credentialed source for the manuscript-reliability c
   it to the argument-specific rules in `CLAUDE.md` — esp. the **Bible-reliability rule** (manuscripts
   prove *accurate preservation*, not that the content is *true* — argue truth separately) and the
   **resurrection rule** (lead with the 1 Cor 15:3–7 creed, ~2–5 years).
+
+---
+
+# ═══════════ CHAPTER 6 — Daniel B. Wallace: "Has the New Testament Text Been Hopelessly Corrupted?" (pp. 139–163) ═══════════
 
 **Guardrail fit (our use):** squarely inside the guardrails. The chapter's thesis — the NT text is
 recoverable and no cardinal doctrine hangs on any disputed variant — supports **accurate preservation**
@@ -262,3 +274,218 @@ essential doctrine is at stake" point are the highest-value additions. Secondary
 the **primaries** above (not Wallace's chapter), verify every figure/quote, and — because it touches
 Scripture's authority, world religions, and inerrancy — run the **dual-consensus** (orthodoxy +
 neutrality) gate before deploy.
+
+---
+
+# ═══════════ CHAPTER 10 — Paul W. Barnett: "Is the New Testament Historically Reliable?" (pp. 223–265) ═══════════
+
+**What it is:** a broad, popular-but-credentialed case that the NT is **historically reliable**, argued
+**by way of eight numbered theses** (pp. 223–265), building from "the texts are historical documents" up
+to "the authors were guided by the Spirit of truth," then a two-part Conclusion. Distinct in *scope* from
+Wallace's ch. 6: Wallace defends the *wording* of the text (textual criticism); Barnett defends the
+*historicity* of the documents and their portrait of Jesus.
+
+**Guardrail fit (our use):** squarely inside the guardrails, with a few calibration flags (below).
+- Barnett himself keeps the **Bible-reliability rule** we require: his Conclusion explicitly says the NT
+  is "reliable" in **two connected but distinct ways** — (1) *historically* reliable, so a thoughtful
+  person can judge it *factually* trustworthy by the ordinary rules of historical evidence, and (2), read
+  humbly, the *voice of God* that transforms lives. He does **not** collapse "historically reliable" into
+  "therefore its message is true/divine" — he argues those separately. That matches our rule (manuscripts/
+  historicity prove *reliability*, argue *truth* separately) and our **mission** (confidence earned by
+  truth, not overstatement). Use him as an ally on that discipline.
+- **Thesis 8 ("guided by the Spirit of truth")** is the doctrine-of-inspiration thesis — orthodox
+  (2 Tim 3:16–17; John 16:13–14). Keep it **denominationally neutral**: Barnett's canon material (public
+  reading conferring "canonical" status; Josephus on the Hebrew canon) is defensible as *common ground*,
+  but do not adjudicate a specific inspiration/inerrancy *formulation* as the settled Christian position
+  (same neutrality note as Wallace's inerrancy section in ch. 6).
+
+## ⚠️ Do-not-use / high-caution flags for ch. 10 (carry these into any pull)
+- **The full Testimonium Flavianum (Josephus, *Ant.* 18.63–64; ch. 10 fn 14).** Barnett **prints the
+  traditional text in full**, including the obviously-Christian interpolations ("if it be lawful to call
+  him a man," "He was the Christ," "he appeared to them alive again the third day"), and *then* gives the
+  interpolation caveat plus a 5-point "unembellished" core. **Our standing position (see the `INDEX.md`
+  Testimonium flag + the `hist_jesus`/`ev-s3` recalibration) is to quote ONLY the scholarly-reconstructed
+  neutral core, never the interpolated Christian phrases, and to lean on the authentic *Ant.* 20.200 James
+  passage.** Do not reproduce Barnett's full-Testimonium block; if we use Josephus-on-Jesus, use the
+  neutral core (verified) and attribute the reconstruction honestly.
+- **The census / Quirinius harmonization (Thesis 7, pp. 244–245).** Barnett floats the *prōtē* ("first")
+  = "before" reading of Luke 2:2 (ch. 10 fn 44, via Hoehner citing F. F. Bruce/Nigel Turner) to place the
+  registration "before Quirinius was governor." This is **one contested solution among several** to a
+  genuinely hard problem (Quirinius's Judean census is AD 6/7; Luke dates the birth to Herod, d. 4 BC). If
+  we ever open the census topic, present it **honestly as unresolved/debated** — do not present the "before"
+  reading as the settled answer.
+- **The Theudas / Judas-the-Galilean crux (ch. 10 fn 37, on Acts 5:37 / Gamaliel's speech).** A real
+  critical problem (Gamaliel's order of Theudas-then-Judas appears to clash with Josephus). Barnett
+  addresses it; handle **honestly**, don't paper over it.
+- **The Star of Bethlehem astronomy (pp. 245–247):** the 7–6 BC Jupiter/Saturn(/Mars) conjunction, the
+  1871 John Williams comet list ("Comet 52," 5 BC), and the *Time* magazine 1976 cover story (fn 46–47,
+  P. L. Maier). **Popular-level, speculative, illustrative only** — not load-bearing; never state as
+  established that a specific astronomical event *was* the star.
+- **Worldview-adjacent lines (neutrality gate):** fn 18 ("no outside sources contemporary with the
+  Qur'an" — a comparative swipe) and the p. 250 aside that one resurrection "alternative" is "the Romans
+  crucified the wrong man (the Qur'an)." If used, **state Islam's actual position accurately** (the
+  Qur'an 4:157 denial that Jesus was crucified / the substitution reading) — never as a caricature or a
+  scoreboard swipe. Same posture as the CFR p. 148 flag in `INDEX.md`.
+- **General popular-level overstatement:** it's a lay-apologetics volume. Hold every pull to the
+  `CLAUDE.md` argument-specific rules; verify every figure, date, and quotation against the primary.
+
+## The eight theses (the spine — our-own-words map)
+1. **The NT texts are *historical* texts** (pp. 223–224). 27 books by ~9 authors; not (here) arguing they
+   are *true*, only that they are historical documents — *missionary literature* written to real
+   congregations for identifiable purposes. His writer/text tally: Matthew 1, Mark 1, Luke 2 (Gospel +
+   Acts), John 5 (Gospel + 3 letters + Revelation), Paul 13, Hebrews 1, Peter 2, James 1, Jude 1 = 27.
+2. **The NT texts are *early* texts** (pp. 224–227). Written/circulated within a ~60-year band (Jesus'
+   death AD 30/33 → in use by the mid-90s). Three supports: (a) **early manuscripts** (Justin's "memoirs
+   of the apostles… called gospels," *1 Apol.* 66–67; 𝔓⁴⁵/𝔓⁴⁶/𝔓⁴⁷ codices; 𝔓⁵² of John 18, ~AD 125);
+   (b) **second-century citation** — *1 Clement* 13 (c. 95) adapting Matt 5:7; 6:14 / Luke 6:31, 36–38; the
+   *Didache*; Ignatius (*Phld.* 7:1 ↔ John 3:8); Polycarp *to the Philippians* (c. 110) drawing on nearly
+   every NT book except John, James, 2–3 John, Revelation; (c) **superscriptions/authorship** — the "the
+   Gospel according to…" titles fixed within 20–30 years; **Papias** (via Eusebius, *H.E.* 3.39.3–16) on
+   Mark (from Peter) and Matthew; **Bauckham**, *Jesus and the Eyewitnesses*, and the beloved-disciple =
+   John Zebedee argument. *(This whole thesis strongly overlaps our own `library/eyewitnesses.html` +
+   `answers/were-the-gospels-written-by-eyewitnesses` — it corroborates rather than adds.)*
+3. **The NT texts *surpass* the texts for the Roman Caesars** (pp. 228–229). The chief sources for the
+   Caesars (Tacitus, *Annals*, c. 116; Suetonius, *Lives*, c. 120) were written *further* from their
+   imperial subjects than the evangelists were from Jesus (a few decades). **This is the *temporal-gap*
+   comparison, NOT the discredited raw-manuscript-count comparison** — keep it that way (see the ch. 6
+   note's caution + our 2026‑07‑09 scrub of inflated count claims).
+4. **Hostile sources confirm Jesus' existence and the broad sweep of NT history** (pp. 229–235). **Josephus**
+   (*Ant.* 18.63–64 — ⚠ see the Testimonium flag above; the authentic 20.200 James passage; the John-the-
+   Baptist passage *Ant.* 18.116–19), **Tacitus** (*Annals* 15.44 — the Neronian-fire persecution, "Christus…
+   Pontius Pilatus"), **Pliny the Younger** (*Ep.* 10.96 — Christians "sang… to Christ as to a god"). Summary
+   (p. 235): these outsiders confirm the *who* (Pilate), *where* (Judea), and *when*, and that the movement
+   spread Judea→Rome — corroborating, from hostile pens, the NT's own frame.
+5. **Archaeology confirms the NT narratives** (pp. 236–239). The Gallio/Delphi inscription (Acts 18:12), the
+   Erastus pavement (Rom 16:23), the Politarchs inscription (Acts 17:6), the Yehohanan crucified-heel remains,
+   Sergius Paulus (Acts 13), the **Caiaphas ossuary**, the Pools of Bethesda (John 5) and Siloam (John 9), the
+   Magdala fishing boat, etc. *(Overlaps `answers/is-there-archaeological-evidence-for-the-bible` +
+   `library/archaeology.html`.)*
+6. **The NT is set in the *matrix* of historically important people and events** (pp. 239–241). Luke's
+   dense synchronisms (Herod; Tiberius's 15th year; Annas & Caiaphas; the tetrarchies; Pilate) and the Acts
+   roll-call (Gamaliel, Cornelius, the Claudius famine, Herod Agrippa I, Sergius Paulus, Gallio, Felix,
+   Festus, Agrippa II, Publius). **Martin Hengel** on Acts as reliable ancient history (fn 36).
+7. **We are able to answer objections to the integrity of the NT** (pp. 241–257) — the longest thesis. Sub-
+   objections answered: the **new atheism**/problem of evil (Dawkins/Harris/Hitchens/Dennett/Onfray, fn 38);
+   **the historical existence of Jesus** (vs. mythicism — Price, refuted by Johnson/Habermas/Bock, fn 39);
+   **the Nativity** (only two accounts; the Matthew↔Luke birth-detail chart showing agreement on the core;
+   the **census/Quirinius** problem — ⚠ see flag; the "fictional details" — Magi/star — ⚠ speculative);
+   **Miracles** (the Mark/John/Q/L/M miracle-diversity chart, p. 248; Blackburn's "multiple attestation";
+   Meier's *A Marginal Jew*; the contrast with Honi the Circle-Drawer & Hanina ben Dosa as *answered
+   prayers*, not Jesus-style immediate miracles); **the Resurrection** (the **1 Cor 15:3–8 creed
+   block-diagram**, p. 251 — received AD 34/36, formulated soon after the AD 33 death, Aramaic substratum;
+   the "no single agreed alternative theory" point; N. T. Wright); and **the transmission of Jesus' words**
+   (the ~40-yr "space," Aramaic-vs-Greek, orality + note-taking — Riesner, Neusner, Gerhardsson, Millard;
+   ⚠ Barnett *critiques* the Kenneth Bailey "informal controlled oral tradition" model that Dunn follows,
+   preferring an early-*written* case, fn 87).
+8. **The NT authors were guided by the Spirit of truth** (pp. 259–264) — the inspiration thesis. John's
+   "Spirit of truth" promise (John 16:13–14); three "windows" where the Spirit led the disciples to
+   *remember* + *understand* Jesus in light of Scripture (temple-cleansing, John 2:19–22 / Ps 69:9 / Zech
+   14:21; living water, John 7:37–38 / Ezek 47; Palm Sunday / Zech 9:9); and the NT texts **read publicly
+   in church** as canonical (Justin *1 Apol.* 66–67; the internal Col 4:16; 1 Tim 4:13; Rev 1:3), on a par
+   with how the synagogue read Law/Prophets/Writings. Grounds "God-breathed" (2 Tim 3:16–17).
+- **Conclusion (pp. 264–265):** on the eight theses, the NT is *missionary* literature and therefore
+  *historical* literature; its accuracy is impressive; historicity alone won't convert an outsider, but the
+  texts also prove, read humbly, to be the voice of God. Reliable **historically** (factually testable by
+  the historian's own rules) **and** as divine address.
+
+## Primary-source & scholarly leads to chase (ch. 10 footnotes 1–93 — ALL unverified until checked)
+> Verify each against the primary before any use. "fn N" = **ch. 10** footnote N (not ch. 6).
+
+**Barnett's own works (background, not citable as primary):** *Jesus and the Logic of History* (Eerdmans,
+1997); *Is the New Testament History?* (Aquila, 2004); *The Birth of Christianity* (Eerdmans, 2005); *Paul,
+Missionary of Jesus* (Eerdmans, 2008); *Finding the Historical Christ* (Eerdmans, 2009); *Messiah: Jesus—the
+Evidence of History* (IVP/UK, 2009). *(fn 1.)* Also "Indications of Earliness in the Gospel of John," *Reformed
+Theological Review* 64.2 (Aug 2005): 61–75 *(fn 13, 90).*
+
+**Extra-biblical / hostile witnesses (Thesis 4 — the highest-value leads; cross-check our recalibrations):**
+- **Josephus**, *Antiquities* 18.63–64 (Feldman, LCL) — ⚠ **full Testimonium; use neutral core only** *(fn
+  14)*; *Ant.* 20.200–201, 203 (the authentic James passage) *(fn 15)*; *Ant.* 18.116–19 (John the Baptist)
+  *(fn 34)*; *Ant.* 18.63 Greek *paradoxōn ergōn* ("surprising feats," on Jesus' miracles) *(fn 48)*; *Ant.*
+  14.22 (Honi/Onias) *(fn 56)*; *Ant.* 8.46–49 (Eleazar the exorcist) *(fn 59)*; *Jewish War* iv.287; vi.288–
+  300; vi.292 *(fn 54)*.
+- **Tacitus**, *Annals* 15.44 (Jackson, LCL) *(fn 16)*; *Histories* v.13 (the "mysterious prophecy") *(fn 45)*.
+- **Pliny the Younger**, *Epistle* 10.96.7 — trans. M. Harris, "References to Jesus in Early Classical Authors,"
+  in D. Wenham, ed., *Gospel Perspectives* 5 (Sheffield: JSOT, 1984), 345 *(fn 17)*.
+- **Rabbinics:** *b. Sanhedrin* 43a ("they hanged Yeshu"; sorcery) *(fn 49)*; *Mishnah, Taanith* 3.8 *(fn 57)*;
+  *b. Bava Metzia* 59b *(fn 60)*; *b. Berakhot* 34b (Hanina ben Dosa) *(fn 61)*. ⚠ verify tractate abbreviations.
+
+**Manuscripts / authorship / early citation (Thesis 2):** Justin, *First Apology* 66–67 *(fn 4, and again in
+Thesis 8)*; L. Hurtado, *The Earliest Christian Artifacts: Manuscripts and Christian Origins* (Eerdmans, 2006)
+*(fn 5)*; Eusebius, *Historia ecclesiastica* 3.39.3–16 (the Papias fragment) *(fn 8)*; R. Bauckham, *Jesus and
+the Eyewitnesses* (Eerdmans, 2006), 417–20 *(fn 9)*; E. E. Ellis, *The Making of the New Testament Documents*
+(Brill, 1999) *(fn 3)*.
+
+**Archaeology cluster (Thesis 5 — several were partly cut off at the gutter; ⚠ verify exact venues/pages):**
+C. J. Hemer, "Luke the Historian," *Bulletin of the John Rylands Library* 60 (1977–78): 28–51; **C. A. Evans,
+"Jesus and the Ossuaries," 21–46** (Barnett's most-cited archaeology source — *fn 19, 20, 25, 28, 31*; verify
+the exact journal/venue); J. H. Charlesworth, *Jesus within Judaism* (SPCK, 1988), 103–30; J. Finegan, *The
+Archaeology of the New Testament* (Princeton, 1969); E. M. Meyers & J. F. Strange, *Archaeology, the Rabbis and
+Early Christianity* (1981); J. McRay, *Archaeology and the New Testament* (Fortress, 1995); J. Rousseau & R.
+Arav, *Jesus and His World*, 74–78; G. H. R. Horsley, "Politarchs," *Anchor Bible Dictionary* *(fn 22)*; R.
+Riesner, "Synagogues in Jerusalem," in R. Bauckham, ed., *The Book of Acts in Its First-Century Setting* 4
+(Eerdmans, 1995), 192–200 *(fn 24, 91)*. ⚠ The Claudius-expulsion chronology note (fn 23) juggles Dio (*Hist.*
+60.6.6), Suetonius (*Claudius* 25.4), and Orosius — verify before repeating a date.
+
+**Historical-matrix / Acts reliability (Thesis 6):** Martin Hengel, *Acts and the History of Earliest
+Christianity* (SCM, 1979), 61 *(fn 36)*. ⚠ The Theudas/Judas-the-Galilean note (fn 37, Acts 5:37) — real crux,
+handle honestly.
+
+**Objections cluster (Thesis 7):** the "new atheists" — Dawkins, *The God Delusion* (Bantam, 2006); S. Harris,
+*The End of Faith* (Norton, 2004); C. Hitchens, *God Is Not Great* (Twelve, 2007); D. Dennett, *Breaking the
+Spell*; M. Onfray, *The Atheist Manifesto* (Melbourne Univ. Press, 2005) *(fn 38)*. Mythicism: R. M. Price in
+*The Historical Jesus: Five Views*, ed. Beilby & Eddy (IVP, 2009); refutations Johnson, Crossan, Habermas, and
+D. L. Bock (College Press, 1996), 27–46 *(fn 39)*. Census/nativity: H. Hoehner, *Chronological Aspects of the
+Life of Christ* (Zondervan, 1977), 15–16, 20 (⚠ the *prōtē* = "before" argument, via F. F. Bruce/Nigel Turner)
+*(fn 40, 41, 44)*; Josephus *Ant.* xvii.355; xviii.1–2; *J.W.* ii.433; vii.253; Acts 5:37 (the AD 6 census)
+*(fn 42)*. Star: P. L. Maier, *The First Christmas* (Mowbrays, 1971), 69–88 *(fn 46)*; "The Holy Light," *Time*
+(Dec 27, 1976): 31 *(fn 47)*. Miracles: B. Blackburn, "The Miracles of Jesus," in *Studying the Historical
+Jesus*, ed. C. A. Evans & B. Chilton (Brill, 1994), 353–94 *(fn 49, 51)*; J. P. Meier, *A Marginal Jew*, vol. 2
+(Doubleday, 1994), 631 *(fn 52)*; J. Jeremias, *New Testament Theology* 1 (SCM, 1971), 21 *(fn 50)*.
+
+**Resurrection (Thesis 7 sub-section):** N. T. Wright, *The Resurrection of the Son of God* (SPCK, 2003) *(fn
+62)* and "Resurrection in Q," in Horrell & Tuckett, eds., *Christology, Controversy and Community* (Brill,
+2000), 85–97 *(fn 68)*; Aeschylus, *Eumenides* 647–48 (Greek denial of bodily resurrection) *(fn 63)*; the
+1 Cor 15:3–8 creed with Gal 1:18–19 / Acts 9:17; 22:12–16 (Damascus → Jerusalem chain) *(fn 65)*; 1 Cor 11:23
+*(fn 66)*; the *taphos* (rock-cut tomb) point, Acts 13:29; Matt 27:61, 64 *(fn 67)*. **⚠ Overlaps our
+already-certified `library/earlycreed.html` / `library/emptytomb.html` / CFR note — our resurrection rule
+(lead with the 1 Cor 15:3–7 creed, ~2–5 yrs) is already in place; Barnett corroborates.**
+
+**Transmission of Jesus' words (Thesis 7 sub-section):** Alan Millard, *Reading and Writing in the Time of
+Jesus* (T&T Clark, 2005) *(fn 72, 73, 77, 79)*; J. Jeremias, *NT Theology* 1, 3–8 *(fn 72)*; S. E. Porter,
+"Jesus and His Use of Greek," *BBR* 10.1 (2000): 71–87 *(fn 74)*; R. Riesner, "Jesus as Preacher and Teacher,"
+in *Jesus and the Oral Gospel Traditions*, ed. H. Wansbrough (JSOT, 1991), 202, 208 (the "80% poetic form" +
+the Neusner quote) *(fn 75, 76)*; J. D. G. Dunn, *Jesus Remembered* (Eerdmans, 2003), 205–254 & "Jesus and Oral
+Memory" (SBL Seminar Papers 2000), 287–326 *(fn 87 — ⚠ Barnett critiques the Bailey/Dunn oral model)*; B.
+Gerhardsson, *The Origin of the Gospel Traditions* (SCM, 1977), 68 *(fn 81, 82)*; S. Lieberman, *Hellenism in
+Jewish Palestine* (JTS, 1962), 203 *(fn 80)*; E. E. Ellis, "Reading the Gospel as History," *Criswell
+Theological Review* 3.1 (1988): 3–15 *(fn 82)*; J. D. Crossan, *The Birth of Christianity* (HarperCollins,
+1998), ix (the 30s/40s as "lost years") *(fn 69)*; G. H. R. Horsley, *New Documents Illustrating Early
+Christianity* 5 (Macquarie, 1989), 19–26 *(fn 71)*.
+
+**Inspiration / canon (Thesis 8):** Josephus, *Against Apion* 1.37–43 (the Hebrew canon; Luke 24:44–45's
+threefold division) *(fn 88)*; the internal public-reading texts Col 4:16; 1 Tim 4:13; Rev 1:3 *(fn 92, 93)*;
+the Theodotus synagogue inscription (public reading of the Law).
+
+## Cross-map to our Evidence Library (ch. 10)
+Barnett's chapter is a **broad overview**, so it mostly **corroborates and can *strengthen*** content we
+already have rather than opening new topics:
+- **Biblical Reliability (`ev-s4`) / `library/manuscript.html` / `library/eyewitnesses.html`** — Theses 1–2
+  (historical + early texts; the Papias/Bauckham authorship case; the Polycarp/Clement/Ignatius citation
+  chain). Corroborates `answers/were-the-gospels-written-by-eyewitnesses` and `when-were-the-gospels-written`.
+- **`library/canon.html` / `answers/who-decided-which-books-are-in-the-bible`** — Thesis 8's **"public
+  reading in church = canonical recognition"** argument is a somewhat distinctive angle worth adding, with
+  fresh primaries (Justin *1 Apol.* 66–67; Col 4:16; 1 Tim 4:13; Rev 1:3; Josephus *Against Apion* on the
+  Hebrew canon; the Theodotus inscription). **→ logged to `content-backlog.md` (P3).**
+- **Extra-biblical Jesus — `library/hist_jesus.html` / `answers/is-there-evidence-for-jesus-outside-the-bible`**
+  — Thesis 4 (Tacitus/Pliny/Josephus). Corroborates our existing (recalibrated) treatment; **carry the
+  Testimonium do-not-use flag.**
+- **Archaeology — `library/archaeology.html` / `answers/is-there-archaeological-evidence-for-the-bible`** —
+  Thesis 5.
+- **Resurrection (`ev-s2`) — `library/earlycreed.html` / `library/emptytomb.html`** — Thesis 7's 1 Cor 15
+  creed block-diagram; corroborates, keep our resurrection rule.
+- **Islam / Worldviews** — the fn 18 + p. 250 Qur'an lines: **only** with the neutrality reframing above.
+
+**If we ever build public content from ch. 10:** write our **own** prose through the full pipeline, cite the
+**primaries** above (not Barnett's chapter), verify every figure/quote/date, apply every ⚠ flag, and — because
+it touches Scripture's authority, the resurrection, and world religions — run the **dual-consensus** (orthodoxy
++ neutrality) gate before deploy.

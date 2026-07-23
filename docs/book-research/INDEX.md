@@ -14,7 +14,8 @@ these books to a *live* answer is: lead → verify the primary → add it to `/s
 
 Notes: **CFR** = `case-for-the-resurrection-of-jesus.md` (Habermas & Licona) · **BOP** = `body-of-proof.md`
 (Johnston) · **IDHEF** = `i-dont-have-enough-faith-to-be-an-atheist.md` (Geisler & Turek) · **DJRS** =
-`did-jesus-really-say-he-was-god.md` (Del Rosario).
+`did-jesus-really-say-he-was-god.md` (Del Rosario) · **IDB** = `in-defense-of-the-bible.md` (Cowan &
+Wilder, eds. — Wallace **ch. 6** on NT textual criticism + Barnett **ch. 10** on NT historical reliability).
 
 | Topic | Note → section | Strongest primaries to chase (all still unverified until the pipeline confirms) |
 |---|---|---|
@@ -28,7 +29,12 @@ Notes: **CFR** = `case-for-the-resurrection-of-jesus.md` (Habermas & Licona) · 
 | **James's conversion** | CFR Fact 4 | Mark 3:21/6:3; John 7:5; 1 Cor 15:7; **Josephus *Ant.* 20** (authentic passage — NOT the disputed Testimonium); ⚠ James Ossuary is authenticity-disputed — don't lean on it |
 | **Hallucination / vision theories** | CFR Ch. 6; BOP | 1 Cor 15:5–7 group appearances; Lüdemann, *What Really Happened to Jesus?* (1995), 80 (CFR n68); illusion/delusion/hallucination distinctions |
 | **Legend / "copycat" pagan myths** | CFR Ch. 5 (copycat) | Metzger, *Historical & Literary Studies* (1968); Remus (1983); Wagner, *Pauline Baptism and the Pagan Mysteries*; Philostratus, *Life of Apollonius*; Rodinson, *Muhammad*. ⚠ Cross-check our recalibrated `/answers` **pagan-myths** page |
-| **Extra-biblical Jesus (Josephus/Tacitus)** | CFR Ch. 3 n42/n53; IDHEF | Van Voorst, *Jesus Outside the NT* (2000); the Testimonium = disputed/partly-interpolated → use only the neutral core / the *Ant.* 20 James passage (matches our `hist_jesus`/`ev-s3` recalibration) |
+| **Extra-biblical Jesus (Josephus/Tacitus/Pliny)** | CFR Ch. 3 n42/n53; **IDB ch. 10 Thesis 4**; IDHEF | Van Voorst, *Jesus Outside the NT* (2000); Tacitus *Annals* 15.44; Pliny *Ep.* 10.96 (Harris trans., *Gospel Perspectives* 5); the Testimonium = disputed/partly-interpolated → use only the neutral core / the *Ant.* 20 James passage (matches our `hist_jesus`/`ev-s3` recalibration). ⚠ IDB prints the *full* Testimonium — do NOT reproduce it |
+| **NT textual variants / "has it been corrupted?"** | **IDB ch. 6** (Wallace) | four-category viability×meaningfulness taxonomy (meaningful-AND-viable variants <1%); ~400,000 variants *because of* manuscript riches; Ehrman's "no essential doctrine jeopardized" concession (verify in *Misquoting Jesus* appendix); Metzger–Ehrman, *The Text of the NT*, 4th ed. |
+| **NT historical reliability (overview / 8 theses)** | **IDB ch. 10** (Barnett) | the 8-theses frame; Hengel, *Acts and the History of Earliest Christianity*, 61; the NT-vs-Roman-Caesars *temporal-gap* comparison (NOT raw manuscript counts). ⚠ census/Quirinius harmonization is contested; ⚠ full Testimonium do-not-use |
+| **Gospel authorship / eyewitnesses / dating** | **IDB ch. 10 Thesis 2** (+ our `library/eyewitnesses.html`) | Papias via Eusebius *H.E.* 3.39.3–16; Bauckham, *Jesus and the Eyewitnesses*, 417–20; the Polycarp/1 Clement/Ignatius/Didache citation chain (early attestation) |
+| **NT archaeology (people/places confirmed)** | **IDB ch. 10 Thesis 5** | Gallio/Delphi inscription (Acts 18:12); Erastus pavement (Rom 16:23); Politarchs (Acts 17:6); Caiaphas ossuary; Pools of Bethesda (John 5)/Siloam (John 9); C. A. Evans, "Jesus and the Ossuaries" |
+| **Canon / public reading = canonical recognition** | **IDB ch. 10 Thesis 8** | Justin, *1 Apology* 66–67; Col 4:16; 1 Tim 4:13; Rev 1:3; Josephus, *Against Apion* 1.37–43 (Hebrew canon); Theodotus synagogue inscription |
 | **Deity of Christ** | **DJRS** (from Mark, via the enemies' reaction); IDHEF | Mark 2 (forgive-on-earth) / Mark 14 (judge-from-heaven) blasphemy scenes; ten data points + five best-explanation criteria |
 | **Naturalism / miracles / "science" objections** | CFR Ch. 8 | Behe, *Darwin's Black Box* (the elephant); Swinburne, "Violation of a Law of Nature," in *Miracles* (1989); Hume, *Enquiry*; Yamauchi (rival-religion miracles). ⚠ fine-tuning/ID: *data* conceded, *design* is the contested inference — never "science proves design" |
 | **Kalam / fine-tuning / moral argument / NT reliability** | **IDHEF** (Geisler & Turek — the broad-apologetics map) | per that note's chapter map; hold the argument-specific rules (Kalam "begins to exist"; fine-tuning data-vs-design; moral duties-need-a-ground) |
@@ -42,6 +48,16 @@ Notes: **CFR** = `case-for-the-resurrection-of-jesus.md` (Habermas & Licona) · 
 - **CFR p. 131 fine-tuning "1:10²⁵"** figure is unsourced in the body → verify before any use.
 - **CFR p. 148 "Muslim must reject… Muhammad a deceiver"** line → neutrality gate; state Islam's actual
   reason (Qur'an 4:157) accurately, never as a swipe.
-- General: **popular-level overstatement** in BOP/CFR — hold every pull to the `CLAUDE.md` argument rules.
+- **IDB ch. 10 (Barnett) full Testimonium Flavianum** (*Ant.* 18.63–64, fn 14) — Barnett prints the whole
+  text incl. the Christian interpolations, then reconstructs the core. **Use ONLY the neutral core / the
+  authentic *Ant.* 20.200 James passage** — never reproduce the full block.
+- **IDB ch. 10 census/Quirinius** *prōtē* = "before" harmonization (fn 44) → **contested**, one solution
+  among several; present the census problem honestly as unresolved, never as settled.
+- **IDB ch. 10 Star of Bethlehem astronomy** (7–6 BC conjunction, "Comet 52," *Time* 1976; pp. 245–247) →
+  **speculative/illustrative only**; never assert a specific event *was* the star.
+- **IDB ch. 10 fn 18 + p. 250 Qur'an lines** → neutrality gate; state Islam's actual crucifixion position
+  (Qur'an 4:157) accurately, never as a comparative swipe.
+- General: **popular-level overstatement** in BOP/CFR/IDB ch. 10 — hold every pull to the `CLAUDE.md`
+  argument rules.
 
 _Regenerate/expand this table when a note is added or materially updated._

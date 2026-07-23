@@ -69,14 +69,22 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   the ten data points + five best-explanation criteria, and the critics (Hägerland/Ehrman/Casey/Kirk).
   Built from the already-gated reading behind the live reading-club demo; distinct from that demo.
 - `in-defense-of-the-bible.md` — Steven B. Cowan & Terry L. Wilder, eds., *In Defense of the Bible*
-  (B&H Academic, 2013) — **ch. 6 only, COMPLETE** (Daniel B. Wallace, "Has the New Testament Text Been
-  Hopelessly Corrupted?", pp. 140–163, all 51 footnotes captured). The NT textual-reliability case: the
-  two ditches (radical skepticism vs. KJV-Only), the ~400,000-variants-because-of-manuscript-riches
-  point, the four-category viability/meaningfulness taxonomy (meaningful-AND-viable variants are <1%),
-  and the payoff that no cardinal doctrine rests on a disputed variant (incl. Ehrman's own concession).
-  **Only this one chapter of the multi-author volume is captured** — its other chapters + general
-  bibliography are not. Feeds Biblical Reliability (`ev-s4`). Watch popular-level count overstatement
-  (Wallace himself tempers it) and keep the inerrancy material denominationally neutral.
+  (B&H Academic, 2013) — **two chapters captured, both COMPLETE.** (1) **ch. 6, Daniel B. Wallace,** "Has
+  the New Testament Text Been Hopelessly Corrupted?" (pp. 140–163, all 51 footnotes): the NT textual-
+  reliability case — the two ditches (radical skepticism vs. KJV-Only), the ~400,000-variants-because-of-
+  manuscript-riches point, the four-category viability/meaningfulness taxonomy (meaningful-AND-viable
+  variants <1%), no cardinal doctrine on a disputed variant (incl. Ehrman's own concession). (2) **ch. 10,
+  Paul W. Barnett,** "Is the New Testament Historically Reliable?" (pp. 223–265, all 93 footnotes): the
+  historical-reliability case argued as **eight theses** — historical + early texts (Papias/Bauckham), NT
+  vs. the Roman Caesars, hostile witnesses (Josephus/Tacitus/Pliny), archaeology, the Acts matrix,
+  answering objections (incl. the 1 Cor 15 creed block-diagram + miracle chart), and Spirit-guided
+  authorship/canon. **Only these two chapters of the multi-author volume are captured** — its other
+  chapters + general bibliography are not. Feeds Biblical Reliability (`ev-s4`), Resurrection (`ev-s2`),
+  extra-biblical Jesus (`hist_jesus`). **Flags:** watch popular-level overstatement; keep inerrancy/canon
+  denominationally neutral; and for ch. 10 specifically — **do NOT reproduce Barnett's full Testimonium
+  Flavianum** (use the neutral core only), treat the **census/Quirinius** harmonization as contested, treat
+  the **Star of Bethlehem astronomy** as speculative, and reframe the **Qur'an-comparison** lines per the
+  neutrality rule.
 - `case-for-the-resurrection-of-jesus.md` — Gary R. Habermas & Michael R. Licona, *The Case for the
   Resurrection of Jesus* (Kregel, 2004) — **mapped pp. 23–150 (the full positive + defensive case) + the
   complete A–Z bibliography (pp. 335–345) + all 70 Chapter-3 numbered notes (pp. 256–279)**: the
