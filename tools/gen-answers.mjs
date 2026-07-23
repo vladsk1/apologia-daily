@@ -139,7 +139,7 @@ const FOOT = `<footer class="ad-foot">
   <div class="ad-foot-tag">Defending the faith with gentleness and respect.</div>
 </footer>`;
 
-const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 function goDeeper(e) {
   if (e.essay) {
