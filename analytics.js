@@ -19,6 +19,18 @@
 (function () {
   'use strict';
 
+  /* ---- Cross-device progress sync (loads regardless of the analytics opt-out
+     below — it syncs the USER'S OWN learning progress, not tracking). Strict
+     no-op until signed in AND the user_progress migration is run. See
+     progress-sync.js + docs/PROGRESS_SYNC.md. ---- */
+  try {
+    if (!document.querySelector('script[src="/progress-sync.js"]')) {
+      var _ps = document.createElement('script');
+      _ps.defer = true; _ps.src = '/progress-sync.js';
+      (document.head || document.documentElement).appendChild(_ps);
+    }
+  } catch (e) {}
+
   var POSTHOG_KEY = 'phc_qrovkG3stLv8pvL5NWYuyghweekGuP2S8BscpTf9AFkJ';
   var POSTHOG_HOST = 'https://eu.i.posthog.com'; /* US: https://us.i.posthog.com */
 
