@@ -136,6 +136,11 @@ brief distilled from its certified-essay tie-in is live in `/briefs` · **—** 
 | W. L. Craig · Kalam pt.4 — Premise 2, scientific confirmation 1: cosmic expansion / Big Bang | `mErQyaw1vu8` | `craig-kalam-defenders-series.md` | — | — (as above) | 2026-07-23 |
 | W. L. Craig · Kalam pt.5 — Premise 2, the BGV theorem + Vilenkin's 2015 *Inference* article | `qupeLm-19Hk` | `craig-kalam-defenders-series.md` | — | — (as above) | 2026-07-23 |
 | W. L. Craig · Kalam pt.6 — thermodynamic confirmation (heat death) + the cause's attributes/personhood | `jDL5pY9l89k` | `craig-kalam-defenders-series.md` | — | — (as above) | 2026-07-23 |
+| W. L. Craig · Moral Argument pt.1 — the argument + Premise 1 (naturalism can't ground value/duty) | `1Q6sGVcShJY` | `craig-moral-argument-defenders-series.md` | — | — (topic already served by `moral-argument` brief; strengthening leads → backlog; ⚠ AUTO captions) | 2026-07-24 |
+| W. L. Craig · Moral pt.2 — ontology vs. epistemology + the Euthyphro dilemma resolved | `N4NSpV2c05M` | `craig-moral-argument-defenders-series.md` | — | — (as above) | 2026-07-24 |
+| W. L. Craig · Moral pt.3 — atheistic moral Platonism, Taylor's virtue-ethics, stubborn humanism | `0nAJpjrNMH4` | `craig-moral-argument-defenders-series.md` | — | — (as above) | 2026-07-24 |
+| W. L. Craig · Moral pt.4 — Premise 2 (properly-basic moral experience) + the evolutionary-debunking objection | `zl4qYQo2-FA` | `craig-moral-argument-defenders-series.md` | — | — (as above) | 2026-07-24 |
+| W. L. Craig · Moral pt.5 — cross-cultural relativism, the conclusion, + the cumulative-case reply | `OIGc28DTVB0` | `craig-moral-argument-defenders-series.md` | — | — (as above) | 2026-07-24 |
 
 **Rule of thumb:** a video isn't "briefed" until a row shows **✓briefs** (or **✓sources**). A row with only
 **note** means it's mined but nothing has cleared the gates into the live AI yet.
