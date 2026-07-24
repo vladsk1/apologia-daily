@@ -45,8 +45,8 @@ literature** — so a clinician's review is warranted.
 **1 · Hallucination hypotheses (the proponents to steelman).**
 - Celsus (2nd c.), via **Origen** (a "hysterical female… had a hallucination") — H. Chadwick, *Origen: Contra
   Celsum*, CUP 2003, 109; G. O'Collins, *Christology*, OUP 2009, 93.
-- **David F. Strauss** — "subjective visions"/"hallucinations" (*A New Life of Jesus*, vol. 1, London: Green,
-  1879, 414–31, 440).
+- **David F. Strauss** — "subjective visions"/"hallucinations" (*A New Life of Jesus*, vol. 1, London: Williams and
+  Norgate, 1879, 414–31, 440 — ⚠ the article's fn gives "Green and Sons"; the standard publisher is Williams and Norgate, verify when citing).
 - **Gerd Lüdemann** — Peter's grief-hallucination spreading by "contagious religious ecstasy" into a "shared
   hallucinatory fantasy," incl. Paul's Damascus vision as self-aggrandizing ecstasy (*The Resurrection of
   Christ*, Prometheus 2004, 172, 175–76; *The Resurrection of Jesus*, Fortress 1994, 48–54, 53; the *ōphthē/
@@ -57,7 +57,7 @@ literature** — so a clinician's review is warranted.
 **2 · Clinical appraisal of hallucination (the medical core — net-new value).**
 - Hallucination = a **symptom, not a diagnosis**; three etiologies (psychophysiologic / psychobiochemical /
   psychodynamic) — B. Teeple, J. Caplan & T. Stern, "Visual Hallucinations: Differential Diagnosis and
-  Treatment," *Journal of Clinical Psychiatry* 11 (2009): 26–32.
+  Treatment," *Primary Care Companion to the J. of Clinical Psychiatry* 11 (2009): 26–32.
 - Prevalence 10–39% in non-clinical populations, but that "continuum" is a *psychological*, not *medical*,
   view — A. Aleman & F. Larøi, *Hallucinations: The Science of Idiosyncratic Perception*, APA 2008, 9, 61–68
   (note: **no mention of collective group hallucinations**).
@@ -85,13 +85,13 @@ literature** — so a clinician's review is warranted.
 **3 · Conversion-disorder hypotheses.**
 - Proponents: **Jack A. Kent**, *The Psychological Origins of the Resurrection Myth*, Open Gate 1999, 21, 33,
   48, 54, 61 (Paul's Damascus = conversion disorder from Stephen's death + Gamaliel); **Michael Goulder**,
-  "The Explanatory Power of Conversion-Visions," in Copan & Tacelli (eds.), *Jesus' Resurrection*, 87–96, 94 —
+  "The Explanatory Power of Conversion-Visions," in Copan & Tacelli (eds.), *Jesus' Resurrection: Fact or Figment?*, IVP 2000, p. 94 (chapter pp. 86–103) —
   coins "conversion visions," cites **Carl Jung** (*Contributions to Analytical Psychology*, 1928, 9, 258–60)
   on "psychogenic blindness," and parallels Susan Atkins (Manson Family) + Ezekiel.
 - Clinical: the term traces to Freud (Breuer & Freud, *Studies in Hysteria*, trans. Strachey, 1957, 206);
   conversion disorder = neurologic symptoms without organic cause + a stressor, ~2× in women, comorbid
   mood/personality, resolving in days–30 days, marked by *la belle indifférence*, and **NOT associated with
-  hallucinations** (dual diagnosis if present) — Saddock & Saddock, *Kaplan & Saddock's Synopsis of
+  hallucinations** (dual diagnosis if present) — Sadock & Sadock, *Kaplan & Sadock's Synopsis of
   Psychiatry*, Lippincott 2003, 647, 649–50; Allin, Streeruwitz & Curtis, "Progress in Understanding Conversion
   Disorder," *Neuropsychiatric Disease and Treatment* 1 (2005): 205–209; Owens & Dein, "Conversion Disorder:
   The Modern Hysteria," *Advances in Psychiatric Treatment* 12 (2006): 152–57. Paul doesn't fit (zealous,
@@ -107,7 +107,7 @@ literature** — so a clinician's review is warranted.
   **Gurmeet Singh et al.**, "Acute Grief: The First Year of Bereavement," *Indian Journal of Psychiatry* 31
   (1989): 187–95 ("sense of presence" 11%→21%→4%; **bereavement *visions* not described**); **Naomi Simon et
   al.**, "Informing the Symptom Profile of Complicated Grief," *Depression and Anxiety* 28 (2011): 118–26 (782
-  spouses; visual appearances 4%, 10.8% in complicated grief); Saddock, *Synopsis of Psychiatry*, 61–63
+  spouses; visual appearances 4%, 10.8% in complicated grief); Sadock, *Synopsis of Psychiatry*, 61–63
   (mourning stages).
 - Why it fails: bereavement visions wouldn't strike *all* the disciples, wouldn't read as a *living* Jesus,
   tactile is rare/unpleasant, wouldn't launch public proclamation; most common in **widowhood after a long
