@@ -14,6 +14,14 @@
         "argument": "2026-07-24",
         "orthodoxy": "2026-07-24",
         "by": "apologia-argument SOUND (0 CRITICAL/MAJOR; 2 MINOR + 2 POLISH applied) + apologia-orthodoxy CLEAN-after-fix (2 evil.html standalone-pull-quote lines fixed). Rules held: kalam begins-to-exist; morality duties-need-a-ground + 'atheists can be good'; evil = Plantinga consistency-not-proof + no tidy theodicy + redemptive anchor; contingency/Five Ways/ontological = philosophical terminus not the Nicene God."
+      },
+      {
+        "batch": "Biblical Reliability + OT prophecy",
+        "essays": 14,
+        "takeaways": 110,
+        "argument": "2026-07-24",
+        "orthodoxy": "2026-07-24",
+        "by": "apologia-argument 109/110 SOUND (1 MINOR fixed: messianic 'Honest Objections' Stoner-retired) + apologia-orthodoxy 109/110 CLEAN (1 neutrality fix: canon deuterocanonical/Apocrypha dual-term). Rules held: manuscripts=preservation-not-truth, archaeology=setting-not-message, canon recognized-not-invented + Apocrypha un-adjudicated, prophecy cumulative-not-mathematical, typology retrospective."
       }
     ]
   },
@@ -196,5 +204,143 @@
     "The cross: not a theodicy but a presence": "Christianity offers not a tidy explanation but a God who entered suffering and promises to defeat it.",
     "The critic's last word — and a reply": "The skeptic's intuition retains real weight; the theist's reply is a defensible reframing that keeps faith reasonable, not a claimed victory.",
     "The honest state of the question": "The logical problem failed and the evidential remains unresolved — but the grief no argument can relieve is met by the God who entered it."
+  },
+  "manuscript": {
+    "Stating the Question Carefully": "The question is whether we can recover what the authors wrote—not whether it's true.",
+    "How the Argument Developed": "Textual criticism turned the classical method onto the New Testament; early apologists overstated its reach.",
+    "Premise 1: Why Abundance and Antiquity Make a Text Recoverable": "Many independent, branching copies expose each other's errors, letting scholars triangulate the original.",
+    "Premise 2: Does the New Testament Actually Meet the Standard?": "The New Testament's witnesses are unusually early and abundant, and show real copying stability.",
+    "The Strongest Objection, Stated at Full Strength": "Ehrman: hundreds of thousands of variants, some deliberate theological changes, and an early fluid text.",
+    "A Reply—and What It Can and Cannot Carry": "Variants abound because copies do; under 1% matter, and no doctrine hangs on them.",
+    "The Honest State of Scholarship": "Scholars broadly agree the text is well recovered; the live debates are narrow and technical.",
+    "Conclusion: What This Does and Does Not Establish": "The manuscripts show the text was accurately preserved—not that its contents are true."
+  },
+  "earlydate": {
+    "Stating the Argument Carefully": "An early date starves legend; the strongest case rests on Paul's letters and creeds.",
+    "Premise One: An Early Date Starves a Legend": "While eyewitnesses and hostile witnesses live, invented claims can be checked and challenged.",
+    "Premise Two: The New Testament Really Is Early": "The 1 Corinthians 15 creed and Paul's letters place the core claims strikingly early.",
+    "The Strongest Objection, Stated at Full Strength": "Most scholars date the Gospels 70–95, reading Jesus' Jerusalem prophecy as written after the event.",
+    "A Reply—and What It Can and Cannot Carry": "The prophecy is vague and Acts' silences telling, but the early creed stands regardless.",
+    "The Honest State of the Scholarship": "Gospel dating stays contested, but scholars broadly agree the earliest tradition is remarkably early.",
+    "Conclusion: What Early Dating Does and Does Not Establish": "Early dating rules out slow legend—but early is not the same as true."
+  },
+  "eyewitnesses": {
+    "Stating the Claim Carefully": "The claim is that the traditions trace to eyewitnesses—not that apostles signed the Gospels.",
+    "How the Question Was Framed—and Reframed": "Form critics saw anonymous folklore; Bauckham reframed the Gospels as rooted in eyewitness testimony.",
+    "The Case, Built in Three Strands": "Named minor characters, the right name frequencies, and early testimony point to eyewitness sources.",
+    "The Strongest Objections, Stated at Full Strength": "Critics: memory distorts over decades, and the onomastic and inclusio arguments remain contested.",
+    "The Reply—and What It Can and Cannot Carry": "Memory holds for central events, and embarrassing details survive—though the inclusio should be held lightly.",
+    "The Honest State of Scholarship": "The late-legend thesis is now the harder case, but eyewitness accuracy remains contested.",
+    "Conclusion: What This Does and Does Not Establish": "The Gospels read like testimony deserving a hearing—not proof of authorship or the miracles."
+  },
+  "names": {
+    "Stating the Argument Carefully": "Name frequencies are local and time-bound; the Gospel names match first-century Palestine.",
+    "How the Argument Developed": "Ilan catalogued Palestinian Jewish names; Bauckham tested the Gospels against that independent baseline.",
+    "Premise 1: Why Name Frequency Is a Watermark": "Name frequencies leak unconsciously from real life and are nearly impossible to fake.",
+    "Premise 2: Do the Gospel Names Actually Match?": "The Gospel names, ratios, and disambiguation habits match Palestine, not the diaspora.",
+    "The Strongest Objections, Stated at Full Strength": "Critics: the sample is small, and a well-informed outsider could reproduce the names.",
+    "A Reply—and What It Can and Cannot Carry": "The fit is real and unfaked, though it points to provenance, not proven eyewitnesses.",
+    "The Honest State of Scholarship": "The Palestinian match is accepted; how much it proves remains an ongoing debate.",
+    "Conclusion: What the Names Do and Do Not Establish": "The names establish early Palestinian provenance—not authorship, the events, or the miracles."
+  },
+  "jewishness": {
+    "Stating the Argument Carefully": "Jesus' thoroughly Jewish portrait points to early Palestinian origin—a claim about provenance, not truth.",
+    "How the Argument Developed: From the History-of-Religions School to the Third Quest": "The Hellenistic-myth thesis collapsed; scholars now recover Jesus firmly within first-century Judaism.",
+    "Premise 1: The Texture of the Portrait": "Incidental detail—legal debates, Aramaic phrases, names—fits pre-70 Palestine, not a later world.",
+    "Premise 2: Why Invention Is the Worse Explanation": "Invention is unlikely: the awkward Jewishness and vanished pre-war world resist later reconstruction.",
+    "The Strongest Objections, Stated at Full Strength": "A skilled Jewish author could write a convincing Jesus—and authentic setting proves no miracle.",
+    "The Replies—and What They Can and Cannot Carry": "Frictions and pre-70 detail resist invention, yet authentic setting still cannot prove the events.",
+    "The Honest State of Scholarship": "Early Palestinian provenance is near-settled; the leap to reliable events stays contested.",
+    "Conclusion: What This Does and Does Not Establish": "The Jewish Jesus is early and authentic—but that proves provenance, not the miracles."
+  },
+  "coincidences": {
+    "Stating the Argument Carefully": "Casual, unplanned interlocks between accounts suggest independent reports—a cumulative inference, not a proof.",
+    "How the Argument Developed": "Paley and Blunt pioneered the argument; the McGrews revived it with probabilistic rigor.",
+    "Premise 1: Why Unintended Interlocking Points Toward Truth": "Uncoordinated, incidental agreement is far likelier from real knowledge than from fabrication.",
+    "Premise 2: Are There Really Many Such Cases?": "Cases range from strong—Philip, Herod's court, Acts and the Epistles—to weaker ones.",
+    "The Strongest Objections, Stated at Full Strength": "Carrier: shared sources and literary dependence explain the fits; defenders ignore the misses.",
+    "A Reply — and What It Can and Cannot Carry": "Redaction predicts the wrong shape; the strongest cases survive, though weak ones must be dropped.",
+    "The Honest State of the Scholarship": "The revived argument is little-engaged academically—promising and suggestive, but genuinely contested.",
+    "Conclusion: What This Does and Does Not Establish": "The interlocks point to well-informed, independent sources—not to inerrancy or the miracles."
+  },
+  "consistency": {
+    "Stating the Question Carefully": "The Bible is a library, and a difference is not a contradiction—nor would consistency prove truth.",
+    "How the Argument Developed": "From Augustine's harmony to today's Ehrman-versus-Licona poles, the difficulty is old and seriously answered.",
+    "The Strongest Objection, Stated at Full Strength": "Ehrman: read the accounts side by side and real discrepancies appear that harmonizing only papers over.",
+    "A Reply—by Genre, Perspective, and Ancient Convention": "Ancient biography's conventions explain most differences as complementary—while the hardest cases are honestly conceded.",
+    "The Critic’s Last Word—and the Reply": "Accuracy is genre-relative; surface variation over a shared core is what honest testimony looks like.",
+    "The Honest State of Scholarship": "Scholars remain genuinely divided, but neither 'seamless' nor 'hopeless tangle' has real support.",
+    "Conclusion: What Consistency Does and Does Not Establish": "Consistency removes the contradiction charge but does not, by itself, prove the contents true."
+  },
+  "canon": {
+    "Stating the Question Carefully": "How the canon formed—recognized, not invented—is a separate question from whether it is inspired.",
+    "How the Canon Actually Formed: A Timeline": "The canon emerged gradually over centuries; its core was received early, long before any council.",
+    "Premise 1: The Criteria Were Principled, Not Arbitrary": "The church tested books by apostolicity, orthodoxy, and widespread use—as if discovering, not deciding.",
+    "Premise 2: A Functioning Core Long Before Any Council": "The four Gospels and Paul functioned as Scripture early; only the margins were ever disputed.",
+    "Treating the Disputed Books Honestly": "Some books were genuinely doubted for generations—evidence of careful sifting, not rubber-stamping.",
+    "The Strongest Objections, Stated at Full Strength": "Ehrman: early Christianity was diverse, orthodoxy simply won, and the criteria look circular.",
+    "A Reply—and What It Can and Cannot Carry": "The rejected gospels are demonstrably later; diversity is compatible with a genuinely principled sorting.",
+    "Denominational Differences: A Fair Statement, Not a Verdict": "Catholics, Orthodox, and Protestants differ over the Old Testament deuterocanonical books (the “Apocrypha”)—a disagreement this essay won't adjudicate.",
+    "The Honest State of Scholarship": "Historians agree no council created the canon; only refined questions of timing remain.",
+    "Conclusion: What This Does and Does Not Establish": "The canon was recognized, not invented—but recognition does not by itself prove it inspired."
+  },
+  "archaeology": {
+    "Stating the Question Carefully": "Archaeology cannot excavate a miracle; it tests the Bible's checkable setting, not its message.",
+    "How the Argument Developed": "Albright and Sherwin-White vindicated the biblical framework—of setting and persons, not theology.",
+    "Premise 1: Why Incidental Accuracy Earns Trust": "Getting shifting titles and local details right signals a well-informed author close to events.",
+    "Premise 2: The Confirmations, at Their Strongest": "Named persons and physical sites—House of David, Pilate, Belshazzar—repeatedly confirm the Bible's setting.",
+    "The Strongest Objections, Stated at Full Strength": "Critics: the spade contradicts the text on the Exodus, conquest, and united monarchy's scale.",
+    "A Reply—and What It Can and Cannot Carry": "Minimalism overreaches, and the confirmations are real—but archaeology yields no grand monarchy or conquest.",
+    "The Honest State of Scholarship": "Scholarship is a spectrum; neither 'proves the Bible' nor 'worthless' has serious support.",
+    "Conclusion: What This Does and Does Not Establish": "The writers knew their world; a reliable setting is not proof of every event or the theology."
+  },
+  "deadseascrolls": {
+    "Stating the Question Carefully": "The Scrolls test transmission, not truth; they are pre-Christian, Jewish, and contain no New Testament.",
+    "How the Argument Developed": "The Isaiah comparison launched the case; later scholarship gave a fuller, more honest picture.",
+    "Premise 1: A Thousand-Year Leap Backward": "The Scrolls push our copies a thousand years earlier, before Christ, across nearly every book.",
+    "Premise 2: How Stable Was the Text—Really?": "A recognizable text stayed stable, though several text-streams coexisted before the text was standardized.",
+    "The Strongest Objection, Stated at Full Strength": "Tov: the text was pluriform—Jeremiah existed in two editions—so 'never changed' is false.",
+    "A Reply—and What It Can and Cannot Carry": "The variation is bounded, and the stream that became our Bible was copied faithfully.",
+    "The Honest State of Scholarship": "Scholars agree on both real pluriformity and faithful transmission of the stream that endured.",
+    "Conclusion: What This Does and Does Not Establish": "The Old Testament was faithfully preserved—not proven true, and not literally 'never changed.'"
+  },
+  "prophecy": {
+    "Stating the Argument Carefully": "Fulfilled prophecy is a cumulative inference, defended at two hinges: dating and the inference itself.",
+    "How the Argument Developed": "Prophecy is the oldest Christian argument; Stoner's statistical one-in-10^17 version should be retired.",
+    "Premise 2 First: Did the Predictions Really Come Before?": "Isaiah, Micah, and the Psalms are provably pre-Christian—though Daniel's dating is genuinely disputed.",
+    "The Genuinely Striking Cases": "The strongest cases converge on uncontrivable details—birthplace, a rich man's burial, divided garments.",
+    "The Honest Difficulty: Psalm 22:16": "Psalm 22:16's 'pierced' reading is genuinely contested; the case should not rest on that word.",
+    "The Inference Hinge: Three Objections at Full Strength": "Three objections: the texts are vague, self-fulfilled, or the story built from Scripture.",
+    "The Hardest Cases: When the New Testament Quotes Out of Context": "Some citations, like Hosea 11:1 and Isaiah 7:14, are typology, not strict prediction.",
+    "The Suffering Servant: A Test Case": "Isaiah 53's referent is genuinely contested; the individual-messiah reading is an ancient Jewish option.",
+    "The Honest State of the Question": "The texts are pre-Christian, but the inference divides scholars, and much usage is typological.",
+    "Conclusion: What Fulfilled Prophecy Does and Does Not Establish": "Fulfilled prophecy corroborates within a cumulative case; taken alone it does not compel."
+  },
+  "daniel70": {
+    "The Most Dangerous Verse to Calculate": "Daniel's countdown is thrilling and contested; the task is neither to overclaim nor dismiss it.",
+    "The Prophecy, Stated Carefully": "Seventy 'sevens' likely means 490 years, and four buried questions decide its meaning.",
+    "Four Questions That Decide Everything": "The reading hinges on the decree, the anointed one, the year's length, and the final week.",
+    "The Apologetic Argument: A Date with the Triumphal Entry": "Conservative choices land on Jesus, and the prophecy's shape fits even without day-precise math.",
+    "The Critical Reading, Steelmanned": "Critics date Daniel to about 165 BC and read it of Onias III and Antiochus IV.",
+    "Where the Apologist Must Concede": "The 360-day year and the decree are contested; neither reading simply falls out of the text.",
+    "The Reply": "The dating isn't settled, and Jewish tradition itself tied Daniel's clock to the Second Temple's end.",
+    "What It Establishes — and What It Doesn't": "Not a mathematical proof, but a suggestive fit: an anointed one cut off before AD 70."
+  },
+  "messianic-prophecy": {
+    "An Argument as Old as the Church Itself": "Appealing to the prophets is the oldest Christian argument—and it must be made honestly.",
+    "How to Read Prophecy Honestly": "'Fulfill' has several senses; the case rests on uncontrivable predictions, not typological or stageable ones.",
+    "A Catalogue of the Prophecies": "Lineage, birthplace, passion, and vindication converge on Jesus—with each text's strength honestly flagged.",
+    "The Honest Objections": "Retrojection is met by uncontrivable, pre-dated cases; the out-of-context texts are read as typology, and Stoner's odds are frankly retired.",
+    "What the Argument Does — and Does Not — Establish": "The prophecies give a striking cumulative convergence, not a single knockdown mathematical proof."
+  },
+  "typology": {
+    "A Boy Carrying the Wood Up the Mountain": "Isaac carrying the wood up the mountain is not a prediction—but it rhymes with Christ.",
+    "What Typology Is — and What It Is Not": "Typology reads real history as a pattern fulfilled in Christ—recognized retrospectively, practiced by the apostles.",
+    "Persons Who Prefigure the Person": "Adam, Isaac, Melchizedek and others foreshadow Christ—some named by the New Testament, some only thematic.",
+    "Events and Institutions That Point Beyond Themselves": "Passover, the wilderness gifts, and the temple all lean forward and find completion in Christ.",
+    "The Three Offices That Converge": "Israel kept prophet, priest, and king apart; in Jesus the three anointed offices converge.",
+    "The Strongest Objection — Stated Fairly": "Typology can seem to prove anything, and to read Christian conclusions back into Israel's Scriptures.",
+    "The State of the Question": "Typology has been rehabilitated; scholars debate its extent, not whether the New Testament uses it.",
+    "What This Does — and Does Not — Establish": "Typology proves nothing alone; it supplies coherence once you already trust the resurrection."
   }
 }
