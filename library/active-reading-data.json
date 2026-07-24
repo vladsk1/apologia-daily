@@ -40,6 +40,23 @@
         "orthodoxy": "2026-07-24",
         "neutrality": "2026-07-24",
         "by": "DUAL-CONSENSUS: apologia-argument 48/53 SOUND + apologia-orthodoxy CLEAN-after-fix (titles adoptionism-boundary reworded to 'unique, eternal Sonship') + apologia-neutrality CLEAN-after-fix (jesuschar legend-horn attributed to critics; phil2 hymn hedged). 8 fixes applied. Rules held: full deity+humanity; John 1:1 'was God' not 'a god' + distinct-from-Father (not modalism); kenosis=added-humanity-not-deity-shed; Son-of-Man Danielic verdict; trilemma hedged; virginbirth honest historical bound."
+      },
+      {
+        "batch": 6,
+        "topic": "Trinity",
+        "essays": 14,
+        "takeaways": 113,
+        "reviewed": {
+          "argument": "2026-07-24",
+          "orthodoxy": "2026-07-24",
+          "neutrality": "2026-07-24",
+          "by": "apologia-argument+apologia-orthodoxy+apologia-neutrality (dual-consensus, Trinity/deity tier)"
+        },
+        "fixes": [
+          "modalism/\"The Texts Oneness Believers Press\": concede observation not inference (all 3 gates) — ‘build a real scriptural case’ → ‘marshal real texts’",
+          "modalism/\"The Biblical Case for Three Distinct Persons\": clarity (argument) — ‘concedes nothing modalism cares about’ → ‘gives up nothing modalism rightly cares about’",
+          "trinity_islam/\"The State of the Question\": scope parity to the philosophical question (orthodoxy NOTE)"
+        ]
       }
     ]
   },
@@ -539,5 +556,146 @@
     "The strongest objections, fairly stated": "Critics offer an 'agency' reading, disputed proof-texts, and Ehrman's development thesis.",
     "The reply — and the concession": "Agency breaks at worship, and the earliest devotion is too early for slow evolution.",
     "What this does, and does not, establish": "The New Testament presents Jesus sharing God's identity and worship—early and widespread."
+  },
+  "nt_trinity": {
+    "What the Doctrine Claims—and What It Does Not": "The Trinity is one God who exists eternally as three co-equal, co-eternal persons—not three gods, not one person in three masks, not a ranking of greater and lesser divinities: one what, three whos.",
+    "The First Given: The New Testament Keeps Strict Monotheism": "The New Testament never softens Jewish monotheism—there is only one God—which is exactly what makes its worship of Jesus so startling rather than one more god in a pantheon.",
+    "The Second Given: The Son and the Spirit Are God": "A convergence of texts places the Son and the Spirit on the Creator's side of the line, each treated as God, not as exalted creatures.",
+    "The Third Given: The Three Are Distinct": "Father, Son, and Spirit genuinely relate—one prays to another, is sent by another, sends another—so they cannot be a single person wearing three masks.",
+    "The Objection That Sounds Decisive: “The Word Is Not in the Bible”": "The word \"Trinity\" is post-biblical, but the absence of a label is not the absence of the thing: \"monotheism\" and \"incarnation\" aren't in Scripture either, and the data the word names is on every page.",
+    "The Serious Objection: The Biblical-Unitarian Case": "The strongest non-Trinitarian case—biblical unitarianism—argues the one God simply is the Father; it is a serious reading that must be answered on the merits, not waved away.",
+    "The Reply—Conceding What Should Be Conceded": "The Son is genuinely subordinate in role within his mission (sent, obeys, prays) but never lesser in being—and only the Trinity keeps every text, while each rival survives by deleting data.",
+    "Where the Argument Reaches Its Limit": "The New Testament hands us the materials and the church spent centuries finding the language; it shows the Trinity is the most faithful reading of the data, not a theorem proved beyond all dispute.",
+    "Conclusion: The Shape of the Gospel": "Extraordinarily high devotion to Jesus appears at the very earliest layer of the church, making \"Constantine invented it\" untenable: the one God of Israel is, and always has been, Father, Son, and Holy Spirit."
+  },
+  "ot_trinity": {
+    "Stating the Claim—and What It Is Not": "The Old Testament does not teach the doctrine of the Trinity, but it presents the one God as richer and more self-differentiated than a bare unit—foundations, not the finished house.",
+    "The Threads of Plurality": "Genesis's \"let us make,\" the Angel of the LORD, the Word/Wisdom/Spirit, and Daniel 7 each hint at plurality within the one God—genuinely present in the text, not invented by later readers.",
+    "The Witness from Within Judaism": "Ancient Judaism's own \"two powers in heaven\" debate shows the texts generated readings of a second divine figure from within Judaism—you do not legislate against an interpretation no one holds.",
+    "The Strongest Objection, at Full Strength": "The strongest Jewish and unitarian reply is that the canon relentlessly teaches undifferentiated oneness and that each \"plural\" text dissolves into ordinary ancient conventions on inspection.",
+    "The Reply—Conceding What Should Be Conceded": "Each thread has an innocent explanation taken alone; the case rests on convergence—why the same shape (of God, with God, acting as God, yet never a second god) keeps emerging from independent texts.",
+    "What the Pattern Will Not Bear": "The Old Testament alone reaches plurality-in-unity, not Nicaea; it does not by itself establish the persons' co-equality, and it teaches neither three gods, nor one God in masks, nor a lesser second god.",
+    "The State of the Scholarship": "The crude picture—rigid Jewish oneness on one side, a pagan Trinity invented centuries later on the other—has not survived the scholarship; the live questions are narrower and sharper.",
+    "Conclusion: Foundations, Not the House": "The Old Testament shows the triune God has deep, native roots in Israel's own Scriptures—so the Christian worships the God of Abraham, not three gods and not a God reinvented in Greek."
+  },
+  "shema": {
+    "Stating the Question Carefully": "The doctrine of the Trinity is a doctrine of monotheism; no one should claim the Shema \"states\" the Trinity, but confessing that God is one does not, by itself, settle the inner life of that one God.",
+    "A Lexical Argument to Handle With Care": "The popular claim that echad means \"compound unity\" is a discredited overreach—echad is simply the ordinary Hebrew \"one\"; it does not prove plurality in God, though neither does it forbid internal complexity.",
+    "The Heart of the Case: Paul Rewrites the Shema": "Paul, a Pharisee writing against idolatry, takes the Shema's own words for the one God and places Jesus inside it: \"one God, the Father… and one Lord, Jesus Christ.\"",
+    "The Strongest Objection, Stated at Full Strength": "The strongest objection is the traditional Jewish reading of strict, indivisible oneness, sharpened by scholars who argue Paul sets Jesus alongside the one God, not inside the Shema.",
+    "A Reply—and What It Can and Cannot Carry": "\"Lord\" (Kyrios) is the Shema's own rendering of the divine name, so placing Jesus there includes him within the one God's identity—the reading that actually preserves monotheism rather than adding a second power.",
+    "The Honest State of Scholarship": "The Bauckham–Wright reading of 1 Corinthians 8:6 is widely influential but genuinely contested, and the traditional Jewish reading is a serious, ancient interpretation held in good faith.",
+    "Conclusion: What This Does and Does Not Establish": "The argument does not prove the Trinity from Deuteronomy 6:4; it shows the earliest Christians kept the Shema and recited it with Jesus inside it—monotheism kept, not monotheism lost."
+  },
+  "early_church_trinity": {
+    "Stating the Question Carefully": "Nicaea did not invent belief in Jesus' divinity (the popular myth); the technical vocabulary of the doctrine developed over time, but the worship it defends long predates any council.",
+    "The Pre-Nicene Church at Worship": "Before there were technical terms, the earliest church already worshipped Jesus alongside the Father in ways Jews reserved for God alone—the worship came first, the definitions came to defend it.",
+    "The Ante-Nicene Fathers: Real Development, Honestly Told": "The early Fathers' language was uneven and still maturing, yet the tradition already knew it worshipped a Son who is fully God and not a creature, and a Spirit—working out how to say it without modalism or tritheism.",
+    "What Nicaea Actually Did—and the Real Vote": "Nicaea did not decide whether Jesus was divine (both sides assumed that) but rejected Arius's created Son; the vote was overwhelming, not the \"close vote\" of legend.",
+    "The Strongest Objection, Stated at Full Strength": "The serious challenge (Ehrman) grants the devotion is early but argues Christology \"evolved\" upward over time—so full Nicene deity is a later, contestable construction rather than a first-century datum.",
+    "A Reply—and What It Can and Cannot Carry": "The highest claims sit in the earliest strata, running the wrong direction for a slow evolution; the councils developed the words, not the worship—supplying a grammar for a faith already held.",
+    "Was It Borrowed from Paganism?": "Pagan triads are groupings of separate gods—polytheism; a shared number is not a shared doctrine, and strict Jewish monotheists are the least likely people on earth to smuggle one in.",
+    "The Honest State of the Scholarship": "No serious historian of any persuasion holds that Constantine or Nicaea invented Jesus' divinity; the genuine debate is only over how to interpret a devotion everyone agrees was early.",
+    "Conclusion: What This Does and Does Not Establish": "The record shows the church worshipped Father, Son, and Spirit before any emperor convened a council—removing the charge that Christians worship a god assembled by committee, though the true case is argued elsewhere."
+  },
+  "eternal_generation": {
+    "Stating the Doctrine Carefully": "The Son is eternally begotten of the Father—God from God—receiving the one whole divine nature without beginning, without inferiority, and without being created.",
+    "The Biblical Basis—and a Genuine Lexical Debate": "The doctrine never rested on the word monogenēs alone but on the whole pattern—a Son who is fully God, eternally, yet eternally from the Father (John 5:26).",
+    "How the Doctrine Developed": "Nicaea refused Arius's either/or with \"begotten, not made\": the Son is begotten eternally and is God from God, not a thing made from nothing.",
+    "The Strongest Objection, Stated at Full Strength": "The serious objection—raised from within Protestantism—is that the doctrine is thinly biblical and incoherent: a \"begetting\" that produces nothing new and has no beginning seems empty.",
+    "A Reply—and What It Can Carry": "Timeless begetting drops only the creaturely limits (time, change, division) while keeping the core—one nature communicated to another genuinely distinct—so no contradiction has been shown, even if the manner stays a mystery.",
+    "An Intramural Dispute: The Recent Subordination Debate": "Whether to speak of the Son's eternal submission (EFS) is an in-house debate the site reports but does not settle; the non-negotiable floor is that the Son is co-equal, co-eternal, and consubstantial—in no way inferior in being.",
+    "The Honest State of the Question": "A vigorous retrieval has made eternal generation the dominant view again, shifting the burden onto those who would set it aside—though the manner of the begetting remains, by the tradition's own admission, a mystery.",
+    "Conclusion: What the Doctrine Does and Does Not Establish": "Eternal generation shows how the persons are distinct—by relations of origin—without dividing the one essence: the Son is no creature and no mask, but God of God, begotten not made."
+  },
+  "philosophical_trinity": {
+    "Stating the Charge at Full Strength": "The gravest charge is that \"one God in three persons\" is a flat contradiction; because the objection is logical, the reply must show the doctrine, carefully stated, has no such form.",
+    "What Is—and Is Not—Being Claimed": "The doctrine counts being to one and persons to three—different things counted to different totals—so it never affirms and denies the same thing in the same respect, and rules out modalism, tritheism, and partialism alike.",
+    "How the Defence Developed": "The Cappadocians, Augustine, and Aquinas located the persons' distinction not in any difference of nature but in their relations of origin within one simple, undivided divine essence.",
+    "The First Family: Social Trinitarianism": "Social models start from the threeness—three centres of consciousness sharing one nature—and carry the burden of showing that \"one God\" is not merely a unanimous society, the standing tritheism worry.",
+    "The Second Family: Latin, Relative-Identity, and Constitution Models": "The other family starts from the oneness and labours to make room for real distinction—via relative identity or the statue-and-lump analogy—without collapsing the persons into modes.",
+    "The Honest State of the Scholarship": "There is no consensus model, but showing that no model is wholly satisfying is far weaker than showing the doctrine is contradictory—and no one has exhibited a contradiction in the doctrine as the church states it.",
+    "What This Defence Does and Does Not Establish": "A philosophical defence does not prove God is triune (that rests on revelation); it answers the charge of incoherence by showing the doctrine is a mystery, not nonsense."
+  },
+  "modalism": {
+    "What Modalism Claims": "Modalism (Sabellianism) says God is a single divine person appearing in three successive modes or masks—an admirable jealousy for God's oneness, but an error the church rejected.",
+    "The Texts Oneness Believers Press": "Oneness Pentecostals marshal real texts—the full deity of Jesus, John’s unity sayings, baptism “in Jesus’ name”—which deserve a fair hearing at full strength before any reply.",
+    "The Biblical Case for Three Distinct Persons": "Orthodoxy gives up nothing modalism rightly cares about (one God; Jesus fully God), yet the structure of the New Testament shows three genuinely distinct persons, not one person in three roles.",
+    "Answering the Oneness Texts": "Read in context, the Oneness proof-texts—John 10:30's neuter \"one,\" \"Everlasting Father,\" baptism in Jesus' name—do not require modalism, and several positively resist it.",
+    "The Strongest Objection, and the Honest Reply": "The deepest Oneness charge—that \"three persons\" is really tritheism—fails because the persons share one undivided essence, will, and power; refuting modalism must never drift into three gods.",
+    "The State of the Question": "Across Catholic, Orthodox, and Protestant lines there is no live dispute that modalism falls outside Nicene orthodoxy—a judgment settled in the third and fourth centuries.",
+    "Conclusion": "Modalism is right that God is one and Jesus is fully God, but it turns the Son's prayers into soliloquy and empties the eternal love of Father for Son: the truth is one God in three genuinely distinct, co-equal persons."
+  },
+  "holy_spirit": {
+    "What the Doctrine Claims": "The Holy Spirit is the third person of the one God—fully, co-equally, and co-eternally divine—not a mask, not a third god, and not an impersonal force.",
+    "The First Claim: The Spirit Is a Person": "The Spirit does what only a personal agent can do—speaks, teaches, wills, intercedes, and can be lied to and grieved—which no impersonal force can be.",
+    "The Second Claim: The Spirit Is God": "Lying to the Spirit simply is lying to God (Acts 5), and the Spirit holds the attributes and does the works—creating, giving life, being everywhere—that belong to God alone.",
+    "How the Church Settled It: Nicaea’s Unfinished Business": "The Cappadocians argued that the Spirit worshipped and glorified with the Father and the Son must be God; Constantinople (381) confessed it, naming what the church's baptism and praise already assumed.",
+    "The Strongest Objection, at Full Strength": "The serious objection is that the Spirit is spoken of like power (poured out, filled) and is never prayed to—so perhaps he is God's own presence rather than a distinct person.",
+    "The Reply—Conceding What Should Be Conceded": "Concede that no prayer is addressed to the Spirit and that his work is self-effacing, but the convergence of personal action, divine attribute, and coordinate rank is more than any \"force\" reading can carry.",
+    "Where the Argument Reaches Its Limit": "No single verse states the Spirit's co-equal deity outright; it is a right and forced inference from the convergence—and the East–West filioque dispute, which the site does not adjudicate, concerns the Spirit's relations, never whether he is God.",
+    "Conclusion: The One Who Makes God Near": "The \"active force\" reading cannot stand: the Spirit is a person who does what only God does—the Lord and Giver of life, who comes to dwell within us."
+  },
+  "analogies": {
+    "The Four Ways to Get It Wrong": "There are only four ways to get the Trinity wrong—modalism, tritheism, partialism, Arianism—and the doctrine is the narrow ridge between all four: one what, three whos.",
+    "The Gallery of Failed Analogies": "Every popular analogy—water/ice/steam, the egg, the shamrock, the sun, one man's roles—collapses into one of the four heresies the moment it is pressed.",
+    "Why They All Have to Fail": "The analogies fail for the best possible reason: in every creature being and person march in lockstep, so nothing in all creation is built the way the one God is.",
+    "What to Say Instead": "Don't illustrate the doctrine—state it: one God; Father, Son, and Spirit each fully God; the three genuinely distinct; one what, three whos.",
+    "Mystery Is Not Contradiction": "No picture works because God is infinite, not because the doctrine is muddled; affirming one being and three persons is mystery, never a contradiction.",
+    "Conclusion: Less, but Rightly": "The gentle, true thing to say is that the lovely picture teaches an old mistake—the doctrine says less than any analogy promised, with the singular advantage of being true."
+  },
+  "relations": {
+    "The Rules Behind the Confession": "Three disciplined rules—relations of origin, perichoresis, inseparable operations—let the church confess real distinction and real unity, \"neither confounding the persons nor dividing the substance.\"",
+    "Rule One: The Persons Differ Only in Their Relations of Origin": "The persons differ in nothing but their relations of origin—the Father unbegotten, the Son begotten, the Spirit proceeding—a distinction of order alone, never of rank, nature, or being.",
+    "Rule Two: The Persons Mutually Indwell One Another (Perichoresis)": "Perichoresis—the persons wholly indwelling one another—manifests the unity it presupposes; because a thing cannot indwell itself, mutual indwelling requires real distinction, not a blurring.",
+    "Rule Three: The Persons Work Inseparably in Every Outward Act": "Every outward work of God is the single, undivided act of all three persons; attributing a work especially to one person (appropriation) divides the naming, never the working.",
+    "How the Three Rules Thread the Needle": "Relations of origin bar modalism (a real, eternal three-fold distinction); perichoresis and inseparable operations bar tritheism (an unbreakable unity): distinction without division, unity without confusion.",
+    "The Strongest Objection, Stated at Full Strength": "The sharpest challenge is that a \"subsistent relation\" cannot think or love, so the persons seem either too thin to be persons (modalism) or too thick to be one God (tritheism).",
+    "The Honest Limits": "The rules are disciplined grammar that protect a mystery rather than dissolve it; and the East–West filioque difference over the Spirit's procession is reported, not adjudicated—both sides confessing his full, co-equal deity.",
+    "Conclusion: What the Grammar Does, and the Love It Guards": "The persons differ in relation and origin alone, in nothing of nature, power, or worth; because God is triune, love goes all the way down—the Father eternally loving the Son in the Spirit."
+  },
+  "nicene-creed": {
+    "Why a Creed at All?": "The creed is not new revelation but a faithful summary of Scripture; its few technical words (like homoousios) became a pastoral necessity once heretics used biblical words while emptying them of meaning.",
+    "“We Believe in One God, the Father Almighty”": "The creed opens with Israel's one God—but does not stop where a Unitarian would; the very next word is \"and,\" going on to confess the Son and the Spirit as that one God.",
+    "“And in One Lord Jesus Christ”—the Heart of the Creed": "Against Arius, the creed confesses the Son \"true God from true God, begotten not made, of one substance with the Father\"—on the Creator's side of the line, not the creature's.",
+    "“For Us and for Our Salvation”—the Incarnation": "In becoming man the Son added humanity and subtracted nothing—\"what He was He continued to be; what He was not He took to Himself\"—an event anchored to a real date under Pontius Pilate.",
+    "“And in the Holy Ghost, the Lord and Giver of Life”": "The creed confesses the Spirit's full deity by his works and his worship—\"the Lord,\" \"Giver of life,\" \"worshipped and glorified\" with the Father and the Son—against those who denied it.",
+    "“And the Son”: the Filioque": "The West says the Spirit proceeds \"from the Father and the Son,\" the East keeps the original \"from the Father\"—a genuine, still-unresolved dispute the creed's shared core does not hinge on, and the site takes no side.",
+    "The Final Articles": "The creed closes with the one church, one baptism, and the resurrection of the body—stating the shared confession while leaving disputed details (such as how baptism works) to be worked out elsewhere.",
+    "What the Creed Does—and Does Not—Do": "The creed is not a proof but a summary—it fixes the irreducible center of Christianity and marks the widest circle Catholics, Orthodox, and Protestants still stand inside together."
+  },
+  "trinity_islam": {
+    "The Charge: Tawhid and the Sin of Shirk": "Islam's tawhid—God's absolute oneness—makes shirk (associating a partner with God) the gravest sin, so the Muslim objection to the Trinity springs from genuine reverence, not stubbornness.",
+    "The Three Qur'anic Texts": "The Qur'an's key anti-Trinitarian texts forbid saying \"Three,\" reject \"the third of three,\" name a God-Jesus-Mary triad, and deny that God has a begotten offspring.",
+    "What Christians Do Not Claim": "The Qur'an's explicit targets are not the Nicene Trinity: no Christian places Mary in the Godhead, and \"three gods\" is tritheism—a heresy the church condemns as firmly as Islam does.",
+    "What Christians Do Claim": "The Trinity adds no partner from outside God; it is a claim about the one God's eternal inner life—one being, three persons—not the association of a creature with the Creator that shirk names.",
+    "“How Can God Have a Son?” The walad Question": "The Qur'an denies God has a walad (biological offspring), which Christians also deny; \"begotten\" means eternal generation, not procreation—so the objection, charitably read, misses the doctrine.",
+    "The Strongest Objection, Stated at Full Strength": "The strongest Muslim objection grants all of this and still presses: to call a man God and admit real distinction into the simple One is a refined and subtle form of shirk.",
+    "The Reply—and an Honest Concession": "Concede this is the real, hard disagreement; but it rests on the contested premise that divine oneness must exclude all internal distinction—a premise even Islam's own debate over God's eternal attributes unsettles.",
+    "The State of the Question": "On the philosophical question alone—whether divine unity can be internally relational—neither side has a knock-down proof; but the Qur’an’s textual targets are a doctrine the church itself rejects, so the objection does not, as it stands, refute the Trinity.",
+    "Conclusion: What This Argument Does and Does Not Establish": "Several of the Qur'an's anti-Trinitarian statements describe a doctrine the church itself rejects; the one objection that reaches Nicaea rests on a contested, unproven premise—so it does not, as it stands, refute the Trinity."
+  },
+  "trinity_jw": {
+    "What the Watchtower Actually Teaches": "The Watchtower holds that only the Father is God, the Son is God's first creation (formerly Michael the archangel), and the Spirit is an impersonal \"active force\"—structurally, a modern form of Arianism.",
+    "The Witness Case, Stated at Full Strength": "The Witness case runs a fixed set of texts—\"the Word was a god,\" \"firstborn of all creation,\" \"the Father is greater than I,\" Jesus as Michael—and deserves its strongest form before any reply.",
+    "John 1:1 and the Grammar of “a god”": "\"A god\" is the one reading the grammar will not bear: the article-less theos is qualitative, affirming the Word's full divine nature, and an indefinite \"a god\" would make John a polytheist.",
+    "“Firstborn of All Creation”: Rank, Not Sequence": "\"Firstborn\" means heir and preeminence, not first-created—Paul explains it himself (\"for by him all things were created\"), placing Christ on the Creator's side, not among the creatures.",
+    "Revelation 3:14 and Proverbs 8: “Beginning” Reconsidered": "Archē means source or origin, not \"first created thing,\" and Proverbs 8 is a wisdom poem, not a metaphysical claim that the Son was created.",
+    "“The Father Is Greater Than I”: The Strongest Objection": "\"The Father is greater\" speaks of position within the incarnation, not a lesser nature—Jesus says \"greater\" (rank), not \"better\" (kind), in the same Gospel that says \"I and the Father are one.\"",
+    "Is Jesus Michael the Archangel?": "The Jesus-is-Michael claim fails: Michael cannot rebuke Satan on his own authority, Hebrews 1 argues the Son is higher than every angel, and the Son accepts the worship faithful angels refuse.",
+    "The State of the Question": "The qualitative reading of John 1:1 affirming the Word's full deity is the settled judgment of the standard reference grammars; even the harshest academic critics of Nicaea do not defend \"the Word was a god.\"",
+    "What This Does and Doesn’t Establish": "The Watchtower's own prooftexts, read in context and even in its own translation, point the other way: the Son is the uncreated Creator, not the first creature."
+  },
+  "trinity_mormons": {
+    "Stating the Question Carefully": "Latter-day Saints use \"Godhead\" and confess Father, Son, and Holy Ghost—but as three separate beings, not one; the real question is whether God is one being or several.",
+    "What the Latter-day Saints Actually Believe": "LDS teaching, in its own official sources, is that the Father, Son, and Spirit are three separate beings \"one in purpose,\" the Father has a body of flesh and bone, God was once a man, and there is a plurality of gods.",
+    "The Historic Doctrine: One God in Three Persons": "Historic Christianity confesses one numerically single divine being in three co-equal persons—a God who is immutable and eternally God, who never became God and had no God before him.",
+    "The Case from Scripture: Strict Monotheism": "Isaiah's monotheism oracles—\"before me no god was formed, nor shall there be any after me\"—exclude both a God prior to Yahweh and any exalted gods after him.",
+    "The Strongest LDS Replies, Stated at Full Strength": "The best LDS replies—\"ye are gods\" (deification), the narrative scenes showing three, and Isaiah as mere anti-idol rhetoric—deserve their full height before any answer.",
+    "The Considered Reply": "Biblical theosis makes creatures \"partakers\" of God by grace—never gods of the same kind, and never with the Father once a man; the narrative scenes prove distinction, which the Trinity affirms, not three separate beings.",
+    "A Surprising Witness: The Book of Mormon Itself": "The Book of Mormon itself (Alma 11) confesses one unchangeable God; the plurality-of-gods and God-was-once-a-man doctrines come from Joseph Smith's later Nauvoo period, not the 1830 text.",
+    "The Deepest Issue: Did God Become God?": "A God who progressed to deity would be one link in an infinite regress that explains nothing; a God who became God is, by the Bible's own definition and the logic of ultimate explanation, not God at all.",
+    "The Honest State of the Question": "LDS theology really does teach three separate beings, a Father with a body, eternal progression, and a plurality of gods—its own self-description—and it cannot be squared with Isaiah's monotheism without straining it.",
+    "Conclusion: What This Does and Does Not Establish": "The LDS Godhead is not a variant within the Trinity debate but a departure from the biblical monotheism the Trinity protects: three separate beings \"one in purpose\" is not the one undivided God."
   }
 }
