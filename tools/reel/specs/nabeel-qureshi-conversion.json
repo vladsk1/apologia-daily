@@ -1,0 +1,81 @@
+{
+  "reviewed": {"argument": "2026-07-23", "orthodoxy": "2026-07-23", "by": "derived from the certified ev-s7.html conversion-stories card (Nabeel Qureshi, card 02, footnotes 4-6); biographical/testimony content, no doctrinal claim beyond the certified source. apologia-orthodoxy gate: doctrine + 1 Peter 3:15 tone toward Islam/the Ahmadi community CLEAN, 0 fabrication, 0 clarifier candidates; one NOTE applied (scene 9 'a hundred' -> 'more than 100 universities' to match source + voiceover). Positive-case testimony (reel rule); no steelmanning/overstatement."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "voiceover": "Nabeel Qureshi was a devout Ahmadi Muslim, and a gifted defender of Islam. At university he befriended a Christian, David Wood, and the two began years of respectful dialogue: the reliability of the Gospels, the evidence surrounding Jesus' death and resurrection, and the textual history of the Qur'an. He loved Islam. He did not want the conversation to go where it was going, and he resisted the conclusion. Following Jesus, he knew, would cost him nearly everything: his family, and the community that had raised him. But after years of study, prayer, and dreams he could not dismiss, he came to faith in Christ in 2005. He told the story in Seeking Allah, Finding Jesus, a New York Times bestseller. He became a physician and an apologist, speaking at Oxford, Cambridge, and more than a hundred universities for the faith he had once resisted. He died of cancer in 2017, at just thirty-four, faithful to the end. He followed the evidence, whatever it cost.",
+  "source": "ev-s7.html",
+  "scenes": [
+    { "dur": 3.0,
+      "big": [ {"t": "Nabeel Qureshi", "c": "gold", "s": 104}, {"t": "counted the cost", "c": "cream", "s": 92} ],
+      "sub": [ {"t": "A devout Muslim who followed the evidence.", "c": "dim", "f": "serif", "s": 40} ] },
+
+    { "kicker": "WHO HE WAS", "dur": 4.0, "lines": [
+      {"t": "Nabeel Qureshi (1983–2017)", "c": "cream", "s": 56},
+      {"t": "grew up a devout", "c": "cream", "s": 58},
+      {"t": "Ahmadi Muslim —", "c": "gold", "f": "serifb", "s": 64},
+      {"t": "", "s": 18},
+      {"t": "and a gifted defender of Islam.", "c": "cream", "s": 54} ] },
+
+    { "kicker": "A FRIENDSHIP", "dur": 4.2, "lines": [
+      {"t": "At university he befriended", "c": "cream", "s": 56},
+      {"t": "a Christian — David Wood.", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "", "s": 22},
+      {"t": "They began years of", "c": "cream", "s": 56},
+      {"t": "respectful dialogue.", "c": "cream", "s": 56} ] },
+
+    { "kicker": "THEY WEIGHED THE EVIDENCE", "dur": 5.0, "lines": [
+      {"t": "The reliability of the Gospels.", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "Jesus' death and resurrection.", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "The history of the Qur'an.", "c": "gold", "f": "serifb", "s": 50} ] },
+
+    { "kicker": "HE RESISTED IT", "dur": 4.4, "lines": [
+      {"t": "He loved Islam.", "c": "cream", "s": 62},
+      {"t": "", "s": 20},
+      {"t": "He did not want the conversation", "c": "cream", "s": 48},
+      {"t": "to go where it was going.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "THE COST", "dur": 4.8, "lines": [
+      {"t": "Following Jesus, he knew,", "c": "cream", "s": 54},
+      {"t": "would cost him", "c": "cream", "s": 54},
+      {"t": "nearly everything —", "c": "gold", "f": "serifb", "s": 62},
+      {"t": "", "s": 18},
+      {"t": "his family, and the", "c": "cream", "s": 50},
+      {"t": "community that raised him.", "c": "cream", "s": 50} ] },
+
+    { "kicker": "THE TURN", "dur": 5.2, "lines": [
+      {"t": "After years of study, prayer,", "c": "cream", "s": 52},
+      {"t": "and dreams he could not dismiss —", "c": "cream", "s": 48},
+      {"t": "", "s": 22},
+      {"t": "he came to faith in Christ.", "c": "gold", "f": "serifb", "s": 60},
+      {"t": "2005.", "c": "dim", "s": 52} ] },
+
+    { "kicker": "HE TOLD THE STORY", "dur": 4.4, "lines": [
+      {"t": "Seeking Allah,", "c": "gold", "f": "serifb", "s": 68},
+      {"t": "Finding Jesus", "c": "gold", "f": "serifb", "s": 68},
+      {"t": "", "s": 20},
+      {"t": "a New York Times bestseller.", "c": "cream", "s": 50} ] },
+
+    { "kicker": "THE FAITH HE ONCE RESISTED", "dur": 5.0, "lines": [
+      {"t": "He became a physician", "c": "cream", "s": 54},
+      {"t": "and an apologist —", "c": "cream", "s": 54},
+      {"t": "", "s": 20},
+      {"t": "speaking at Oxford, Cambridge,", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "and more than 100 universities.", "c": "gold", "f": "serifb", "s": 50} ] },
+
+    { "kicker": "FAITHFUL TO THE END", "dur": 4.4, "lines": [
+      {"t": "He died of cancer in 2017,", "c": "cream", "s": 54},
+      {"t": "at just 34.", "c": "cream", "s": 54},
+      {"t": "", "s": 22},
+      {"t": "He never took back", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "what he had found.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "dur": 4.0,
+      "big": [ {"t": "He followed", "c": "cream", "s": 92}, {"t": "the evidence.", "c": "gold", "s": 104} ],
+      "sub": [ {"t": "His story, and more, at", "c": "dim", "f": "serif", "s": 42},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52} ] }
+  ]
+}
