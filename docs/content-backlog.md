@@ -1,7 +1,7 @@
 # Content backlog — the release map surfaced by the research libraries
 
 **Purpose.** One prioritized place for every **content update or addition** the research libraries
-(`docs/book-research/`, `docs/video-research/`, and the `/sources` corpus) have surfaced but not yet
+(`docs/book-research/`, `docs/video-research/`, `docs/article-research/`, and the `/sources` corpus) have surfaced but not yet
 shipped — so accuracy/currency improvements actually reach the site and **nothing gets lost between a
 mining run and a release.** This is the "map for future content releases."
 

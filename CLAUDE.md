@@ -662,9 +662,9 @@ speaker cites — never a copy of the talk. START at [`docs/video-research/INDEX
   writes the transcript to the **git-ignored** `docs/video-research/_transcripts/` — mine it, never
   commit or paste it. Commit only the our-own-words note + its INDEX row.
 - **Drafting (ALL content — essays, `ev-s*` cards, AND `/answers/*`): assess this library per topic.**
-  Before writing on a topic, `Grep`/`Read` `INDEX.md` **alongside** `book-research/INDEX.md` and the
-  `/sources` corpus, and use whichever has the best material (a note may say a book/PD source covers it
-  better). Documented drafting convention, like the book notes.
+  Before writing on a topic, `Grep`/`Read` `INDEX.md` **alongside** `book-research/INDEX.md`,
+  `article-research/INDEX.md`, and the `/sources` corpus, and use whichever has the best material (a note
+  may say a book/PD/article source covers it better). Documented drafting convention, like the book notes.
 - **⚠ The live `/api/ask` endpoint does NOT (and cannot) read this folder** — same limit as the book
   notes (not deployed/served; unverified copyrighted leads). A video reaches a *live* answer only
   through the **same two gated doors any research lead uses** (never as a raw "video brief"):
