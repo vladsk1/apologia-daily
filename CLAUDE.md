@@ -6,6 +6,28 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **2026-07-24 (research-library audit execution + new miracles essay + Islam cluster + reel + 3rd research library).**
+> Executed the owned-library audit batch, all dual-consensus/gated + deployed: **resurrection-audit essay
+> enrichments** (Cook→`appearances`, Gallio/Delphi + Lapide + Kloppenborg→`earlycreed`, Burridge→`earlydate`,
+> Michael Martin→`paulconv`) + a **new `/answers/did-jesus-really-die-on-the-cross`** (medical/swoon) + a
+> **live nav-bug fix** (raw `<a>` in two answer bodies were esc()'d to literal text → moved to the go-deeper
+> row via new gen-answers `essay2` support); **`bigbang.html`** agnostic-Jastrow "band of theologians" close;
+> a **NEW Science-&-Faith deep-dive [`library/miracles.html`](library/miracles.html)** "Can Miracles Happen?
+> Answering Hume & Spinoza" (Hume *Enquiry* §10 + Spinoza *TTP* ch.6, both PD-verified; miracles-rule held;
+> wired into library index/sitemap/search — **`ev-s5` argument card still TODO**); and the **Islam cluster**
+> (dual-consensus+neutrality CLEAN): `islam-preservation` "Material once recited, now absent" (Muslim
+> 1050/1452a, Bukhari 4944/4992; laḥn narration NOT used), `islam-prophecy` (Isaiah 21 + Daniel 2, ʿalam via
+> BDB), `islam-dilemma` (accountability argument + Waraqah + 2:79; "Allah is evil" horn dropped). The
+> `jesus_claims` Caiaphas/judge-from-heaven items were **DECLINED as redundant** ("no unnecessary updates").
+> **Also:** a **Nabeel Qureshi conversion-story reel** (`tools/reel/specs/nabeel-qureshi-conversion.json`,
+> orthodoxy+tone gated CLEAN, from the certified `ev-s7` card); and a **NEW third research library**
+> [`docs/article-research/`](docs/article-research/) (sibling of book/video-research, for modern
+> open-access journal articles/essays — ToS/legality rules baked in) with its first **two PARTIAL notes**
+> (Bergeron&Habermas *ITQ* 2015 hallucination-clinical; Habermas *JSHJ* 2005 survey) — full-text mining
+> **blocked by sandbox egress**, flagged PENDING for a web-enabled finish. Fixed a stale-`search-index.json`
+> CI red (self-healed by the miracles-batch rebuild). **Open (human):** finish the two article-research
+> notes' full-text mining locally; pastoral/elder sign-off still owed on the new deity/Islam Christology.
+>
 > **2026-07-23 (book-research: In Defense of the Bible +3 chapters; + CI baseline fix).** Expanded the
 > owned-book note [`docs/book-research/in-defense-of-the-bible.md`](docs/book-research/in-defense-of-the-bible.md)
 > from 1 to **4 mapped chapters** of the Cowan & Wilder volume (all from owner photos): **ch. 10 Barnett**
