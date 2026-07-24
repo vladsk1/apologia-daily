@@ -654,6 +654,32 @@ speaker cites — never a copy of the talk. START at [`docs/video-research/INDEX
   speaker. So "make a video inform live answers" = promote its verified primaries into `/sources` and/or
   distil a certified-essay brief into `/briefs`; never point the runtime at `docs/video-research/`.
 
+## Article/essay research notes (`docs/article-research/`)
+The **third sibling** of `book-research/` and `video-research/`, for **modern copyrighted apologetics
+JOURNAL ARTICLES and ESSAYS** (open-access journals, scholars' own posted papers, reference-encyclopedia
+entries). Same discipline: an in-our-own-words **map of leads** — the argument's current shape + the
+**primary sources** the article cites — never a copy of the article. START at
+[`docs/article-research/INDEX.md`](docs/article-research/INDEX.md) (topic router) and read
+[`docs/article-research/README.md`](docs/article-research/README.md) for the full rules.
+- **An article is a copyrighted LEAD, not quotable text**, and we never cite "an article/essay said X" —
+  we cite the **primary** it pointed us to, verified through `apologia-citations → apologia-argument →
+  apologia-orthodoxy`.
+- **Legality/ToS is the load-bearing rule:** use only genuinely-free sources — publisher-hosted
+  **open-access** journals (Themelios, JETS free archive, Tyndale Bulletin), authors'/ministries' **own**
+  posted PDFs (garyhabermas.com, reasonablefaith.org, ntwrightpage.com), permission-based aggregators
+  (BiblicalStudies.org.uk), and peer-reviewed encyclopedias (SEP, IEP). **Sci-Hub = piracy, never;**
+  academia.edu/ResearchGate only if it's the author's **own** upload; **free-portion only** for
+  partly-paywalled journals (Philosophia Christi, Bulletin for Biblical Research); **read manually, don't
+  scrape**; downloaded PDFs go to the git-ignored `docs/article-research/_pdfs/`, never committed.
+- **Drafting (ALL content — essays, `ev-s*` cards, `/answers/*`): assess this library per topic** —
+  `Grep`/`Read` its `INDEX.md` alongside the book/video INDEXes and `/sources`, and use whichever has the
+  best material. Documented drafting convention, like the book/video notes.
+- **⚠ The live `/api/ask` endpoint does NOT (and cannot) read this folder** — same limit as the book/video
+  notes. An article reaches a *live* answer only through the same two gated doors: (1) lead → verify a
+  **public-domain** primary → `/sources` (`verified:true`); or (2) lead → verified primaries → a
+  **certified essay** → a gated **`/briefs`** entry. Never a raw "article brief," never attributed to the
+  article or author.
+
 ## Content backlog — the release map (`docs/content-backlog.md`)
 One prioritized queue for every **content update/addition the research libraries surfaced but haven't
 shipped** — so accuracy/currency fixes actually reach the site and nothing is lost between a mining run

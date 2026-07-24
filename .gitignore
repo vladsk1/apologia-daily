@@ -9,3 +9,6 @@ __pycache__/
 
 # Copyrighted YouTube transcripts — research leads only, never commit (see docs/video-research/README.md)
 docs/video-research/_transcripts/
+
+# Copyrighted article/essay PDFs — research leads only, never commit (see docs/article-research/README.md)
+docs/article-research/_pdfs/
