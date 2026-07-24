@@ -26,7 +26,8 @@ _(Add a row per note as the library grows. Template kept at bottom.)_
 
 | Topic | Note → section | Strongest primaries to chase (all unverified until the pipeline confirms) |
 |---|---|---|
-| _(none yet — first mining run pending)_ | | |
+| Hallucination / conversion-disorder / bereavement theories — CLINICAL refutation | `bergeron-habermas-psychiatric-hypotheses.md` §Argument map | 1 Cor 15:5–8 (group appearances, Paul, James); the psychiatric literature on hallucinations being individual-not-collective + conversion-disorder/grief-hallucination criteria — *⚠ exact clinical cites NOT yet extracted; full-text mining pending. Strengthens `appearances.html`/`disciplesbelief.html`/the hallucinate answer* |
+| Resurrection scholarship consensus (1975–2005 survey) + early-creed dating | `habermas-resurrection-research-1975.md` §Argument map | 1 Cor 15:3–7; Gal 1:18–19 (*historeō*); Gal 2:1–10; scholars to confirm (Hengel/Lüdemann/Pannenberg/Bauckham; Crossan↔Wright) — *mostly already certified in `earlycreed`/`minimalfacts`; consensus-confirmation. ⚠ full-text mining pending* |
 | _template: Topic_ | _`note.md` §N_ | _primary A; primary B; cross-check `book-research`/`video-research` X_ |
 
 ## ⚠ Standing "do not use / high-caution" flags (carry these into any pull)

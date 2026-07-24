@@ -146,7 +146,8 @@ brief distilled from its certified-essay tie-in is live in `/briefs` · **—** 
 
 | Article (author · title · venue) | Access | URL | Note file | → /sources | → /briefs | Date |
 |---|---|---|---|---|---|---|
-| _(none yet — first mining run pending)_ | | | | | | |
+| Bergeron **&** Habermas · "The Resurrection of Jesus: A Clinical Review of Psychiatric Hypotheses…" · *Irish Theological Quarterly* 80.2 (2015) | author-hosted | garyhabermas.com /articles/irish-theological-quarterly/ | `bergeron-habermas-psychiatric-hypotheses.md` | — | — (⚠ note = **PARTIAL**, full-text mining pending — sandbox egress blocked the host) | 2026-07-24 |
+| Gary Habermas (solo) · "Resurrection Research from 1975 to the Present" · *JSHJ* 3.2 (2005) | author-hosted | garyhabermas.com /articles/J_Study_Historical_Jesus_3-2_2005/ | `habermas-resurrection-research-1975.md` | — | — (⚠ note = **PARTIAL**, full-text mining pending; topic already served by live resurrection briefs) | 2026-07-24 |
 
 **Rule of thumb:** an article isn't "briefed" until a row shows **✓briefs** (or **✓sources**). A row
 with only **note** means it's mined but nothing has cleared the gates into the live AI yet.
