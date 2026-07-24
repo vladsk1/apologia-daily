@@ -53,6 +53,9 @@ function isBoilerplateLine(line) {
   if (/content-review/.test(s)) return true;
   if (/class="adn-|<nav\b|<\/nav>|adn-links|adn-right|<ul class=|<\/ul>|<li>\s*<a |mega-|adn-mega/.test(s)) return true;
   if (/<meta\b|og:|twitter:|<link\b|rel="canonical"|hreflang/.test(s)) return true;
+  // a bare <script> include (site-wide JS enhancement: nav, related, orthonote,
+  // active-reading, analytics, supabase CDN) is boilerplate, not doctrinal prose.
+  if (/^<script\b[^>]*>\s*<\/script>$|^<script\b[^>]*\bsrc=/.test(s)) return true;
   if (/^<\/?(ul|li|nav|div)[ >]/.test(s)) return true;
   // a line that is ONLY a single anchor element = a nav / menu / footer / crumb
   // link, not doctrinal prose (inline prose links share their line with text).
