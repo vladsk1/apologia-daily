@@ -705,12 +705,32 @@ entries). Same discipline: an in-our-own-words **map of leads** — the argument
 ## Content backlog — the release map (`docs/content-backlog.md`)
 One prioritized queue for every **content update/addition the research libraries surfaced but haven't
 shipped** — so accuracy/currency fixes actually reach the site and nothing is lost between a mining run
-and a release. A mining run (book or video) logs any lead that would **correct / update / strengthen with
-a new primary / open a topic we lack** as a backlog row (corroboration-only leads are skipped). A content
-session then executes it in pipeline order — **update/create the certified essay (re-gate: citations →
-argument → orthodoxy, dual-consensus for deity/resurrection) → then the brief/`/sources` → rebuild the
-index** — and marks the row Done + flips the source note's ledger. This is how a "latest book/video says X"
-lead becomes a live, verified answer without skipping the essay-level citation check.
+and a release.
+
+**MANDATORY CROSS-CHECK STEP — every mining run (book, video, OR article/journal).** Mining a source is
+**not finished when the note is written.** Before a mining run is done, it MUST scan our **current live
+content** against the source's leads and decide, for each substantive lead, whether the new material can
+*improve what we already have*. Concretely: for each substantive lead, `Grep`/`Read` the on-site home for
+that topic — the certified essay in `library/*.html`, the matching `/answers/*`, the `ev-s*` card, and any
+live `/briefs` or `/sources` entry — then classify it:
+- **Corroboration** — the point is already made, accurately and current → **no backlog row**, but record it
+  *as corroboration* in the note's "Live-door status" + the source ledger (so the record shows we *checked*
+  and found it covered, not that we skipped the comparison).
+- **Improvement** — the lead would **correct an error, update stale/superseded info, strengthen the case
+  with a new verified primary, or open a topic/objection we lack** → **log a `content-backlog.md` row**
+  (topic · the specific improvement · the primary to verify · the target page · priority).
+
+The whole point of the three research libraries is this comparison: a source we mine but never check against
+the site can't improve anything. The corroboration-vs-improvement classification must be **visible in the
+note** so a later reader can see the scan actually happened. (Standing example: the
+`peterson-academy-ot-canon-canonicity.md` note was logged corroboration-only *after* `library/canon.html`
+was read and found to already cover it — neutrally — so no row was warranted.)
+
+A content session then executes each backlog row in pipeline order — **update/create the certified essay
+(re-gate: citations → argument → orthodoxy, dual-consensus for deity/resurrection) → then the
+brief/`/sources` → rebuild the index** — and marks the row Done + flips the source note's ledger. This is
+how a "latest book/video/article says X" lead becomes a live, verified answer without skipping the
+essay-level citation check.
 
 ## Deploy workflow (security-critical)
 - Work on the feature branch; **never `git checkout main`** (a stale local main lacks

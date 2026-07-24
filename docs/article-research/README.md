@@ -77,15 +77,23 @@ our-own-words material (or a verified PD primary) reaches a visitor.
    argument map (beats in our own words → **primaries to verify**), a "Guardrail fit" note (flag
    overstatement / neutrality risk / heterodox drift / denominational tilt), and a cross-map to our
    Evidence Library tabs/essays and existing `/answers`.
-3. **Log it in three places:** (a) a row in the **Mined-articles ledger** below (with live-door
-   status); (b) a topic row in `INDEX.md`; and (c) for any lead that would **correct, update, strengthen
-   (new primary), or open a topic/objection we lack**, a row in
-   [`docs/content-backlog.md`](../content-backlog.md) — the release map. (Corroboration-only leads don't
-   get a backlog row.) Update the ledger's `→ /sources` / `→ /briefs` columns when a primary or brief
-   from it later goes live, and mark the backlog row Done.
-4. **Verify before anything ships.** A primary from a note is quotable only after `apologia-citations`
+3. **Cross-check every lead against our CURRENT live content (mandatory — the point of the library).** The
+   mining run is **not finished when the note is written.** For each substantive lead, `Grep`/`Read` the
+   on-site home for that topic — the certified `library/*.html` essay, the matching `/answers/*`, the
+   `ev-s*` card, and any live `/briefs` or `/sources` entry — and classify it: **corroboration** (already
+   covered accurately + current → no row) or **improvement** (corrects an error / updates stale info /
+   strengthens with a new verified primary / opens a topic or objection we lack → a backlog row). Make the
+   classification **visible in the note** (in "Live-door status") so a reader can see the scan happened. See
+   the "MANDATORY CROSS-CHECK STEP" in `CLAUDE.md` § *Content backlog*.
+4. **Log it in three places:** (a) a row in the **Mined-articles ledger** below (with live-door
+   status); (b) a topic row in `INDEX.md`; and (c) for any lead that step 3 classified as an
+   **improvement**, a row in [`docs/content-backlog.md`](../content-backlog.md) — the release map.
+   (Corroboration-only leads don't get a backlog row — but the ledger/Live-door status must still record
+   that the comparison was made.) Update the ledger's `→ /sources` / `→ /briefs` columns when a primary or
+   brief from it later goes live, and mark the backlog row Done.
+5. **Verify before anything ships.** A primary from a note is quotable only after `apologia-citations`
    confirms it and it clears `apologia-argument` + `apologia-orthodoxy` — same as everything else.
-5. **Deploy** per the repo rule: commit the **note + INDEX row only** (never the article/PDF) and
+6. **Deploy** per the repo rule: commit the **note + INDEX row only** (never the article/PDF) and
    fast-forward push to `main` (never `git checkout main`).
 
 ## Sources worth mining first (verified free/legal, mission-aligned)

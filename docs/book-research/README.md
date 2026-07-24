@@ -43,10 +43,20 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
    verify**), a per-chapter "Guardrail fit" note, a Capture-status table, and a cross-map to our
    Evidence Library tabs/essays.
 3. Keep a running **Capture-status** table so a later session can resume mid-book.
-4. The agents are already wired to find this folder (see the `docs/book-research/` section of
+4. **Cross-check every lead against our CURRENT live content (mandatory — the point of the library).**
+   Mining a book is **not finished when the note is written.** For each substantive lead, `Grep`/`Read`
+   the on-site home for that topic — the certified `library/*.html` essay, the matching `/answers/*`, the
+   `ev-s*` card, and any live `/briefs` or `/sources` entry — and classify it: **corroboration** (already
+   covered accurately + current → no action) or **improvement** (corrects an error / updates stale info /
+   strengthens with a new verified primary / opens a topic or objection we lack → log a row in
+   [`docs/content-backlog.md`](../content-backlog.md), the release map, with the target page + priority).
+   Make the classification **visible in the note** (in its cross-map / "Live-door status") so a reader can
+   see the scan happened. See the "MANDATORY CROSS-CHECK STEP" in `CLAUDE.md` § *Content backlog*.
+   (Corroboration-only leads don't get a backlog row — but the note must still show the comparison was made.)
+5. The agents are already wired to find this folder (see the `docs/book-research/` section of
    `CLAUDE.md` and the pointers in `apologia-author.md` / `apologia-evidence.md`) — no extra wiring
    needed per book.
-5. Deploy per the repo rule: commit the note and **fast-forward push to `main`** (never
+6. Deploy per the repo rule: commit the note and **fast-forward push to `main`** (never
    `git checkout main`).
 
 ## Current notes
