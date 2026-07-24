@@ -6,6 +6,24 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **2026-07-24 (Active-Reading curated takeaways — COMPLETE, 85/85 essays).** Finished the curated
+> version of the Active-Reading Layer: every deep-dive essay's recall checkpoint now reveals a
+> **hand-curated one-line "key point"** for that section (in our own words, distilled from the
+> already-certified prose) instead of the first-sentence memory-jog. Shipped in 7 gated batches —
+> **632/632 sections across all 85 essays** now curated (`library/active-reading-data.json`;
+> `active-reading.js` still falls back to the section's opening sentence for any sub-threshold or
+> future section, so there's no gap or upkeep). Every batch ran the full content pipeline; the
+> high-stakes tiers (Jesus/deity, Trinity, Islam, Paul's conversion) got **dual-consensus +
+> neutrality** (argument + orthodoxy + apologia-neutrality all CLEAN). This session landed the last
+> two: **batch 6 Trinity** (14 essays, 113 takeaways, `d954cb3` — 3 fixes) and **batch 7 Islam
+> cluster + paulconv** (17 essays, 130 takeaways, `00b1eaf` — 7 fixes). Zero HERESY/BREAK/MAJOR
+> across both; every fix stripped a standalone-pull-quote risk while keeping the essay's own bounded
+> verdict (concede the observation not the inference; "shared words, not shared belief"; explicit
+> verdict landed). Per-batch provenance (dates, gates, each fix) is in
+> `active-reading-data.json` → `_meta.batches`. Browser-verified live. Spec: `docs/ACTIVE_READING_SPEC.md`.
+> (The two standing stamp-integrity flags — `evil.html` category-pull, `worldviews.html` SEO schema —
+> are pre-existing, not from this work.)
+>
 > **2026-07-24 (video-research mining run + NEW mandatory cross-check rule + archaeology enrichment).**
 > Mined **5 apologetics videos** into `docs/video-research/` (notes + INDEX/ledger rows; transcripts stay
 > git-ignored): the **Peterson Academy OT-canon lecture** (`pkSoTR_vhmg` — ⚠ denominational-neutrality zone,
