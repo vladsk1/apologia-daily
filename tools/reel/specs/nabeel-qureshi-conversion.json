@@ -1,22 +1,23 @@
 {
-  "reviewed": {"argument": "2026-07-23", "orthodoxy": "2026-07-23", "by": "derived from the certified ev-s7.html conversion-stories card (Nabeel Qureshi, card 02, footnotes 4-6); biographical/testimony content, no doctrinal claim beyond the certified source. apologia-orthodoxy gate: doctrine + 1 Peter 3:15 tone toward Islam/the Ahmadi community CLEAN, 0 fabrication, 0 clarifier candidates; one NOTE applied (scene 9 'a hundred' -> 'more than 100 universities' to match source + voiceover). Positive-case testimony (reel rule); no steelmanning/overstatement."},
+  "reviewed": {"argument": "2026-07-23", "orthodoxy": "2026-07-23", "by": "derived from the certified ev-s7.html conversion-stories card (Nabeel Qureshi, card 02, footnotes 4-6); biographical/testimony content, no doctrinal claim beyond the certified source. apologia-orthodoxy gate: doctrine + 1 Peter 3:15 tone toward Islam/the Ahmadi community CLEAN, 0 fabrication, 0 clarifier candidates; one NOTE applied (scene 9 'a hundred' -> 'more than 100 universities' to match source + voiceover). Positive-case testimony (reel rule); no steelmanning/overstatement. | Edit: made the medicine->apologetics arc explicit (scene 2 'headed for a career in medicine'; scene 9 'He earned his MD -> then gave his life to apologetics') -- both facts already verified against the certified source in the prior gate (MD from Eastern Virginia Medical School; RZIM apologist from 2013); no new claim, no doctrine/tone change."},
   "aspect": "vertical",
   "theme": "navy",
   "fps": 30,
   "crossfade": 0.6,
-  "voiceover": "Nabeel Qureshi was a devout Ahmadi Muslim, and a gifted defender of Islam. At university he befriended a Christian, David Wood, and the two began years of respectful dialogue: the reliability of the Gospels, the evidence surrounding Jesus' death and resurrection, and the textual history of the Qur'an. He loved Islam. He did not want the conversation to go where it was going, and he resisted the conclusion. Following Jesus, he knew, would cost him nearly everything: his family, and the community that had raised him. But after years of study, prayer, and dreams he could not dismiss, he came to faith in Christ in 2005. He told the story in Seeking Allah, Finding Jesus, a New York Times bestseller. He became a physician and an apologist, speaking at Oxford, Cambridge, and more than a hundred universities for the faith he had once resisted. He died of cancer in 2017, at just thirty-four, faithful to the end. He followed the evidence, whatever it cost.",
+  "voiceover": "Nabeel Qureshi was a devout Ahmadi Muslim, a gifted defender of Islam, and a student headed for a career in medicine. At university he befriended a Christian, David Wood, and the two began years of respectful dialogue: the reliability of the Gospels, the evidence surrounding Jesus' death and resurrection, and the textual history of the Qur'an. He loved Islam. He did not want the conversation to go where it was going, and he resisted the conclusion. Following Jesus, he knew, would cost him nearly everything: his family, and the community that had raised him. But after years of study, prayer, and dreams he could not dismiss, he came to faith in Christ in 2005. He told the story in Seeking Allah, Finding Jesus, a New York Times bestseller. He earned his MD, then gave his life to apologetics, speaking at Oxford, Cambridge, and more than a hundred universities for the faith he had once resisted. He died of cancer in 2017, at just thirty-four, faithful to the end. He followed the evidence, whatever it cost.",
   "source": "ev-s7.html",
   "scenes": [
     { "dur": 3.0,
       "big": [ {"t": "Nabeel Qureshi", "c": "gold", "s": 104}, {"t": "counted the cost", "c": "cream", "s": 92} ],
       "sub": [ {"t": "A devout Muslim who followed the evidence.", "c": "dim", "f": "serif", "s": 40} ] },
 
-    { "kicker": "WHO HE WAS", "dur": 4.0, "lines": [
-      {"t": "Nabeel Qureshi (1983–2017)", "c": "cream", "s": 56},
-      {"t": "grew up a devout", "c": "cream", "s": 58},
-      {"t": "Ahmadi Muslim —", "c": "gold", "f": "serifb", "s": 64},
-      {"t": "", "s": 18},
-      {"t": "and a gifted defender of Islam.", "c": "cream", "s": 54} ] },
+    { "kicker": "WHO HE WAS", "dur": 4.6, "lines": [
+      {"t": "Nabeel Qureshi (1983–2017)", "c": "cream", "s": 54},
+      {"t": "grew up a devout", "c": "cream", "s": 56},
+      {"t": "Ahmadi Muslim —", "c": "gold", "f": "serifb", "s": 62},
+      {"t": "", "s": 16},
+      {"t": "a gifted defender of Islam,", "c": "cream", "s": 50},
+      {"t": "headed for a career in medicine.", "c": "cream", "s": 48} ] },
 
     { "kicker": "A FRIENDSHIP", "dur": 4.2, "lines": [
       {"t": "At university he befriended", "c": "cream", "s": 56},
@@ -59,12 +60,13 @@
       {"t": "", "s": 20},
       {"t": "a New York Times bestseller.", "c": "cream", "s": 50} ] },
 
-    { "kicker": "THE FAITH HE ONCE RESISTED", "dur": 5.0, "lines": [
-      {"t": "He became a physician", "c": "cream", "s": 54},
-      {"t": "and an apologist —", "c": "cream", "s": 54},
-      {"t": "", "s": 20},
-      {"t": "speaking at Oxford, Cambridge,", "c": "gold", "f": "serifb", "s": 50},
-      {"t": "and more than 100 universities.", "c": "gold", "f": "serifb", "s": 50} ] },
+    { "kicker": "FROM MEDICINE TO MINISTRY", "dur": 5.4, "lines": [
+      {"t": "He earned his MD —", "c": "cream", "s": 56},
+      {"t": "then gave his life", "c": "cream", "s": 54},
+      {"t": "to apologetics.", "c": "gold", "f": "serifb", "s": 62},
+      {"t": "", "s": 16},
+      {"t": "Oxford, Cambridge, and", "c": "cream", "s": 48},
+      {"t": "more than 100 universities.", "c": "cream", "s": 48} ] },
 
     { "kicker": "FAITHFUL TO THE END", "dur": 4.4, "lines": [
       {"t": "He died of cancer in 2017,", "c": "cream", "s": 54},
