@@ -98,5 +98,21 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   the numbered notes for the *other* chapters (Ch. 4 begins p. 279). The flagship "minimal facts" book
   and our own "Further study" rec on the resurrection answers.
 
+- `josephus-and-jesus.md` — T. C. Schmidt, *Josephus and Jesus: New Evidence for the One Called Christ*
+  (Oxford University Press, 2025; **open access**, CC BY-NC-ND) — a rigorous academic monograph on the
+  **Testimonium Flavianum** (*Antiquities* 18.63–64). Part 1 argues the TF has an **authentic Josephan core**
+  whose original wording was **neutral/ambiguous** (from the patristic reception history, the Jerome/Syriac
+  "*believed to be* the Christ" reading, and a stylometric analysis — 90 words/62 lexemes almost all
+  characteristic of Josephus); Part 2 argues Josephus had **first-hand sources near Jesus' trial** ("first men
+  *among us*" = personal acquaintance in Josephus's idiom; prime candidate **Ananus II**, who executed James
+  [*Ant.* 20.200] and whose father Ananus I + brother-in-law Caiaphas tried Jesus). **⭐ Key for us:** the
+  authentic TF *reports* the disciples' resurrection belief as **their claim** rather than affirming it — the
+  ideal neutral-core reading; pair with the *Ant.* 20.200 James passage and Tacitus. Feeds `library/hist_jesus.html`
+  (extra-biblical Jesus), Biblical Reliability (`ev-s4`), and the resurrection minimal-facts case (`ev-s2`).
+  **Flags:** distinguish Schmidt's *novel* source-theses (the Ananus II identification etc. — "one scholar's
+  case") from the mainstream authenticity claim; **never** write "Josephus attests the resurrection" (he
+  reports the disciples' claim); *Toledot Yeshu* (App. 4) is late polemic; the six Appendices + the full
+  ancient-source bibliography are an intentional nice-to-have deeper pass.
+
 **See [`INDEX.md`](INDEX.md) for the topical index** — it routes a topic → the right note + section + the
 strongest primaries, and is the file a content session should consult first.

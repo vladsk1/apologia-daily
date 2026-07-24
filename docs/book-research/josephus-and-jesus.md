@@ -1,0 +1,187 @@
+# Book note — T. C. Schmidt, *Josephus and Jesus: New Evidence for the One Called Christ*
+
+> **Research map of a book — leads only, not quotable text.** Our-own-words map of the argument's shape +
+> the **primary sources** to chase and verify. Never reproduce the book's prose. Every citation below is an
+> **unverified lead** until confirmed against the primary source and run through
+> `apologia-citations → apologia-argument → apologia-orthodoxy`. Copyrighted-book notes never go into
+> `/sources` (that corpus is public-domain verbatim only).
+>
+> **Publication:** T. C. Schmidt, *Josephus and Jesus: New Evidence for the One Called Christ* (Oxford:
+> Oxford University Press, 2025). ISBN 9780192866783; DOI 10.1093/9780191957697.001.0001. 337 pp.
+> **NOTE — this is an OPEN-ACCESS book** (CC BY-NC-ND 4.0), freely readable at academic.oup.com/book/60034.
+> It is still copyrighted; our discipline is unchanged (our own words, cite the verified primaries, nothing
+> quotable until pipeline-checked). A serious academic monograph (endorsed by Tobias Hägerland, Annette
+> Yoshiko Reed of Harvard Divinity, Peter Williams) — **not** popular apologetics, so the usual "watch for
+> popular overstatement" flag inverts: the risk here is treating Schmidt's *novel* reconstructions as settled
+> consensus (see Guardrail fit).
+
+## Thesis
+The **Testimonium Flavianum** (TF = Josephus, *Antiquities* 18.63–64, written 93/94 CE) — the oldest surviving
+description of Jesus by a non-Christian — is **authentically Josephan** (an authentic core, not a wholesale
+Christian forgery), and its original wording was **neutral/ambiguous, not a pro-Christian confession**. Schmidt
+argues this two ways (Part 1) and then makes his distinctive "new evidence" move (Part 2): Josephus had
+**direct, personal access to people connected to Jesus' trial** — he says the "first men *among us*" accused
+Jesus, and "*among us*" (παρ' ἡμῖν) elsewhere always marks Josephus's own first-hand acquaintance. Net effect
+for us: a rigorous scholarly case that a hostile-to-neutral first-century Jewish historian independently
+corroborates the core historical facts about Jesus **and** that his information traces to people who knew the
+events — while (crucially) the authentic TF *reports the disciples' resurrection belief as their claim* rather
+than affirming it (exactly the neutral-core reading our content should use).
+
+## Argument map (our own words → primaries to verify)
+
+### PART 1 — The authenticity of the Testimonium Flavianum
+
+**Ch. 1 — The Greek Reception (p. 13).** Ancient Greek Christian writers who *quote* the TF conspicuously never
+exploit its seemingly "spectacular" claims — evidence their text was mundane/ambiguous, not the glowing version
+a forger would produce. **Eusebius** cites the TF three times yet only ever uses it to show Jesus had *many
+followers*, never its (received-text) messiah/resurrection/prophecy lines — and is anxious that its word for
+Jesus' deeds (παράδοξα) could read as *sorcery*. Later writers do the same: **Isidore of Pelusium** (c. 450),
+**Oecumenius** (Comm. on Revelation, c. 550), the *Religious Discussion at the Court of the Sassanids* (6th c.).
+- *Primaries:* Eusebius, *Historia Ecclesiastica* 1.11.7–9; *Demonstratio Evangelica* 1.proem, 3.5.105–110;
+  *Theophany* 5.2–45. **Origen**, *Contra Celsum* 1.47 and *Commentary on Matthew* 10.17 (Josephus "did not
+  believe Jesus was the Christ"). Isidore of Pelusium, *Letter* 1259. (Key modern guide: **Alice Whealey**,
+  *Josephus on Jesus*.)
+
+**Ch. 2 — The Western and Eastern Reception (p. 35).** The decisive text-critical find: a **Syriac** version
+(traced to **Jacob of Edessa**, c. 708 CE, a top translator) reads *"he was **thought to be** the Christ"* — and
+**Jerome's** Latin (*De Viris Illustribus* 13, c. 393 CE) independently renders it *"he was **believed to be**
+the Christ"* (*credebatur esse Christus*). Two independent translators pointing to a non-confessional Greek
+original → the suspicious received line "he was **the** Christ" (ὁ χριστὸς οὗτος ἦν) is likely a later
+tightening; the original was neutral. This also explains why Origen said Josephus disbelieved Jesus' messiahship.
+- *Primaries:* Jerome, *De Viris Illustribus* 13; the Syriac TF (Jacob of Edessa; **Michael the Syrian**'s
+  chronicle); the **Arabic** version in **Agapius** of Hierapolis (10th c.) — the famous **Shlomo Pines**
+  "he was believed to be the Christ" argument. Cassiodorus, *Institutions* 1.17.1.
+
+**Ch. 3 — An Authorial Commentary on the TF (p. 64).** Clause-by-clause, the TF's content matches what
+*non-Christian* (Jewish and pagan) writers said about Jesus and matches Josephus's own idiom — so its content
+is not suspiciously Christian. E.g. **παράδοξα** ("incredible/paradoxical deeds") is genuinely *ambiguous* —
+anti-Christian writers used the very word to accuse Jesus of **magic/sorcery** (Celsus). Calling Christians a
+"**tribe**" (ϕῦλον) is neutral-to-derogatory, not something a Christian would insert.
+- *Primaries (non-Christian references to Jesus, to corroborate independently):* **Tacitus**, *Annals* 15.44;
+  **Suetonius**; **Lucian**, *Death of Peregrinus* ("that crucified sophist"); **Mara bar Serapion** (Syriac
+  letter); **Celsus** (via Origen, *Contra Celsum*). *(Verify each against the primary; note the standard
+  caution that Thallus/Mara datings are disputed.)*
+
+**Ch. 4 — Authenticity and Possible Translations (p. 108).** The quantitative "new evidence": a **stylometric**
+analysis. The TF is 90 words / 62 lexemes; **all** are abundant in Josephus's corpus except three, and even
+those have good Josephan explanations (e.g. χριστιανός "Christian" was rare even among first-century Christians
+— used 3× in the whole NT — and Tacitus/Suetonius each use "Christianus" once too). Common- and rare-word
+frequencies fall right where Josephan authorship predicts. Schmidt notes the scholarly drift toward an
+authentic core: **Meier** ("most of the vocabulary is characteristic of Josephus"), **Thackeray** (abandoned
+his interpolation view), **Mealand** (stylometry, "surprised himself"), **Bardet**, and even skeptics
+**Feldman** and **Mason** grant an authentic substratum. Also covers the TF's placement in *Antiquities* and
+translation options.
+- *Primaries/anchors:* Josephus, *Antiquities* 18.63–64 (the TF itself); Tacitus, *Annals* 15.44. *(Secondary
+  scholars here are structural leads, not things to quote as primaries.)*
+
+### PART 2 — The sources of Josephus and the meaning of the TF
+
+**Ch. 5 — Josephus' Sources: Clues in His Background (p. 141).** Josephus was born ~37 CE into an eminent
+Jerusalem priestly family, moved among the elite in the 30s–50s, knew Essenes/Sadducees/Pharisees, and was
+stationed in **Galilee** in the 60s (Cana, Capernaum — Jesus' own mission field). The linchpin linguistic
+argument: in the TF the accusers of Jesus are "the first men **among us**" (πρώτων ἀνδρῶν παρ' ἡμῖν); Josephus
+uses "**among us**" (παρ' ἡμῖν) **51 other times**, and in every case it marks a subject he was **personally,
+directly acquainted with**. So by his own idiom Josephus is claiming to have *personally known* some who
+accused Jesus. He repeatedly says he was close to the "first men" (πρῶτοι) and "chief priests" of Jerusalem
+from the early 50s CE onward.
+- *Primaries:* Josephus, *Life* 9, 20–21, 193–4, 217, 310; the 51 παρ' ἡμῖν usages (to be catalogued from the
+  Josephan corpus). *Antiquities* 18.116–119 (John the Baptist — a parallel neutral treatment of a Jesus-adjacent
+  figure).
+
+**Ch. 6 — Identifying the 'First Men among Us' (p. 159).** Reconstructs Josephus's social network across six
+leading families (Herodians; the house of Hillel; the high-priestly houses of Ananus I, Boethus, Camith,
+Phiabi), all of whom had members positioned to have encountered Jesus, some who helped accuse him. The prime
+candidate for a direct source: **the High Priest Ananus II** (son of Ananus I) — Josephus knew him directly
+(co-commanders early in the Jewish War, 67 CE; the plot by Simon son of Gamaliel), he was an adult (likely
+older than Jesus) at the crucifixion in 30/33 CE, his **father Ananus I and brother-in-law Caiaphas** presided
+over Jesus' trial and the apostles' interrogation (Acts 4:6), and Ananus II himself **executed James, Jesus'
+brother, in 62 CE**.
+- *Primaries:* Josephus, *War* 2.563–568; *Life* 194–204, 309–310; ***Antiquities* 20.200–203** (Ananus II
+  executes James "the brother of Jesus who was called Christ"); *Acts* 4:6, 6:12; the Gospel trial narratives
+  (Matt 26:59, 27:1; Mark 14:53–55, 15:1); **Mishnah**, *Sanhedrin* 1.5–6 (whole Sanhedrin convenes for a
+  false-prophet trial).
+
+**Ch. 7 — Summary and Conclusion: The Jesus of History (p. 198).** ⭐ **The payoff, and the guardrail-critical
+finding.** Gathered together, the TF "gives every sign of authenticity." A **neutral/ambiguous** account is
+exactly what Josephus's style and network predict — parallel to his neutral handling of **John the Baptist**
+and **James**. Crucially: *the authentic TF does **not** affirm Jesus' resurrection, messiahship, or prophetic
+fulfillment — it **reports these as things Jesus' followers believed.*** That is precisely the historically
+usable, orthodoxy-safe reading (a non-Christian independently attesting that the disciples **claimed** Jesus
+rose — a datum FOR the minimal-facts case, never a claim that Josephus endorsed it).
+
+### Appendices (each a targeted lead-cluster)
+- **App. 1 — Eusebius did NOT forge the TF** (rebuts the **Ken Olson** Eusebian-authorship thesis via Eusebius's
+  citational habits). *Anchor:* Eusebius's actual usage vs. the TF's vocabulary.
+- **App. 2 — James, *Antiquities* 20.200** ("the brother of Jesus who was called Christ") — the second, widely
+  accepted-as-authentic Josephan Jesus reference; Origen's knowledge of it.
+- **App. 3 — The Trial of Jesus and Passover** (do the Gospels put Jesus' arrest on Passover?).
+- **App. 4 — Ananus II and the Trial of Jesus** (whether the Jewish *Toledot Yeshu* independently attests Ananus'
+  role — ⚠ *Toledot Yeshu* is a late, polemical Jewish anti-Gospel text; handle as Schmidt does, as contested
+  reception evidence, never as neutral history).
+- **App. 5 — The Great Sanhedrin and its records of Jesus' trial.**
+- **App. 6 — Josephus' silence about Jesus in the *War*** (why the earlier work omits him).
+
+## Guardrail fit (calibration for our use)
+- **Strongly favorable + directly usable — this is a major primary-anchor upgrade for the extra-biblical-Jesus
+  case.** It gives the *scholarly backbone* for the exact discipline our `in-defense-of-the-bible.md` note
+  already flags: use the **neutral core** of the TF, never the interpolated confessional version.
+- **What the authentic/neutral TF lets us affirm (all attributable to a non-Christian):** Jesus existed; was a
+  "wise man" and a **reputed** wonder-worker (παράδοξα — state the *ambiguity*: a reputation for extraordinary
+  deeds, which hostile writers read as sorcery; NOT a Josephan endorsement of miracles); drew many followers
+  (Jews and Greeks); was **accused by leading Jewish men and crucified under Pilate**; his followers persisted
+  and **reported that he appeared to them alive on the third day**. Pair with the **James** (Ant. 20.200) and
+  **Tacitus** (Annals 15.44) references for the standard non-Christian trio.
+- **⚠ RESURRECTION — handle exactly as Schmidt frames it.** The value is *corroboration that the disciples
+  proclaimed the resurrection*, an independent non-Christian attestation of the disciples' **claim** — a plank
+  in the minimal-facts argument. Do **NOT** write "Josephus attests/proves the resurrection" (no non-Christian
+  source does), and do **NOT** let his phrase "how the resurrection claim developed" be read as a naturalistic
+  "it was a legend" — Schmidt means the *transmission/attestation* of the report, and his whole book supports
+  the disciples' early, sincere proclamation. Keep our resurrection rule: lead with the 1 Cor 15:3–7 creed;
+  Josephus is *corroboration of the claim*, not proof of the event.
+- **⚠ Distinguish mainstream from Schmidt's novel theses.** *Mainstream / safe to lean on:* the TF has an
+  authentic Josephan core; a neutral reconstruction is likely; James (Ant. 20.200) is authentic; Tacitus et al.
+  independently attest a crucified-under-Pilate Jesus. *Schmidt's distinctive, not-yet-consensus arguments*
+  (the "παρ' ἡμῖν = personal acquaintance" inference; the identification of **Ananus II** and specific named
+  individuals as Josephus's sources; the family-network reconstruction; the specific Syriac→Jacob-of-Edessa
+  transmission): present as **"one scholar's compelling case,"** attributed and provisional, never as settled
+  fact. Verify against the primaries before any of it ships.
+- **Denominational neutrality:** none of this touches an intra-Christian dispute; it's historical-Jesus /
+  extra-biblical-evidence material. Standard care only.
+- **Copyright:** open-access (CC BY-NC-ND) — legitimately free to read; our note rules are unchanged. No
+  Perlego-type extraction concern.
+- **Citation notes** (from an `apologia-citations` sanity-check, 2026-07-24 — all 23 headline leads above
+  verified, 0 fabrications, 0 corrections): (a) **Fernando Bermejo-Rubio**, if ever pulled from the book's
+  footnotes, *dissents* from the neutral-core reading (he argues the original TF was **hostile/negative**) —
+  so cite him as a **critic** of the neutral reconstruction, never as support for it. (b) **Title guard:**
+  this book is *Josephus **and** Jesus* (Schmidt, 2025); do not conflate it with **Alice Whealey's**
+  *Josephus **on** Jesus* (2003, the standard modern reception-history guide, cited above) — two different books.
+
+## Cross-map to our site
+- **Primary home:** `library/hist_jesus.html` (extra-biblical evidence for Jesus / Josephus + Tacitus) — the
+  single best fit; this book massively deepens the Josephus section and the TF handling.
+- **Also feeds:** Biblical Reliability (`ev-s4`) — corroboration of the Gospel trial/crucifixion; the
+  Resurrection tab (`ev-s2`) — Josephus as *independent attestation of the disciples' resurrection claim* (with
+  the guardrail above); `library/manuscript.html`/canon only tangentially.
+- **Book cross-ref:** `docs/book-research/in-defense-of-the-bible.md` **ch. 10 (Barnett)** already covers the
+  non-Christian witnesses (Josephus/Tacitus/Pliny) and flags "TF: neutral core only, do not reproduce the full
+  interpolated text" — Schmidt is the scholarly grounding for that flag. Also `case-for-the-resurrection-of-jesus.md`
+  (Habermas–Licona) for the minimal-facts frame the resurrection-claim datum plugs into.
+- **Answers:** candidate support for `answers/*` on "did Jesus exist / is there non-Christian evidence for Jesus."
+
+## Capture status
+| Part | Read | Notes |
+|---|---|---|
+| Front matter + full Introduction (roadmap of all 7 chs + 6 appendices) | ✅ | thesis + chapter summaries captured |
+| Ch. 1 Greek Reception | ✅ core | Eusebius/Isidore/Oecumenius; primaries captured |
+| Ch. 2 Western/Eastern Reception | ✅ key finding | Jacob of Edessa + Jerome "believed to be the Christ"; Agapius/Pines |
+| Ch. 3 Authorial Commentary | ✅ core | παράδοξα/sorcery, ϕῦλον; Tacitus/Celsus/Mara/Lucian parallels |
+| Ch. 4 Authenticity/Stylometry | ✅ core | 90 words/62 lexemes; Meier/Thackeray/Mealand/Bardet/Feldman/Mason |
+| Ch. 5 Josephus' Sources (background) | ✅ core | παρ' ἡμῖν = direct acquaintance (51 uses); Life citations |
+| Ch. 6 Identifying the 'First Men' | ✅ core | six families; **Ananus II** the prime candidate; War/Life/Ant 20.200 |
+| Ch. 7 Conclusion: Jesus of History | ✅ full | ⭐ TF *reports* (not affirms) the resurrection belief |
+| Appendices 1–6 | ◻ topics only | mapped from the Introduction + Ch. 6; the James (App. 2), Eusebius-forgery (App. 1), and Ananus/trial (App. 3–5) clusters are the priority for a future deep read |
+| Bibliography (primary + secondary) | ◻ partial | ancient-source citations to be fully catalogued in a follow-up pass; rich set already captured above |
+
+**Nice-to-have follow-up:** a page-precise pass through the six Appendices' footnotes and the full Bibliography's
+ancient-source entries (to complete the primary-citation index), and Ch. 2/Ch. 3 verbatim-neutral-TF
+reconstruction with pin-cites, before any of this is drafted into `hist_jesus.html`.

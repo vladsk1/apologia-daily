@@ -16,7 +16,9 @@ Notes: **CFR** = `case-for-the-resurrection-of-jesus.md` (Habermas & Licona) · 
 (Johnston) · **IDHEF** = `i-dont-have-enough-faith-to-be-an-atheist.md` (Geisler & Turek) · **DJRS** =
 `did-jesus-really-say-he-was-god.md` (Del Rosario) · **IDB** = `in-defense-of-the-bible.md` (Cowan &
 Wilder, eds. — Wallace **ch. 6** NT textual criticism + Barnett **ch. 10** NT historical reliability + Huffman
-**ch. 11** alleged contradictions + Wegner/Wilder/Bock **ch. 16** the canon).
+**ch. 11** alleged contradictions + Wegner/Wilder/Bock **ch. 16** the canon) · **JAJ** =
+`josephus-and-jesus.md` (T. C. Schmidt, OUP 2025 — the Testimonium Flavianum: authenticity, neutral
+reconstruction, and Josephus's first-hand sources for Jesus).
 
 | Topic | Note → section | Strongest primaries to chase (all still unverified until the pipeline confirms) |
 |---|---|---|
@@ -30,7 +32,9 @@ Wilder, eds. — Wallace **ch. 6** NT textual criticism + Barnett **ch. 10** NT 
 | **James's conversion** | CFR Fact 4 | Mark 3:21/6:3; John 7:5; 1 Cor 15:7; **Josephus *Ant.* 20** (authentic passage — NOT the disputed Testimonium); ⚠ James Ossuary is authenticity-disputed — don't lean on it |
 | **Hallucination / vision theories** | CFR Ch. 6; BOP | 1 Cor 15:5–7 group appearances; Lüdemann, *What Really Happened to Jesus?* (1995), 80 (CFR n68); illusion/delusion/hallucination distinctions |
 | **Legend / "copycat" pagan myths** | CFR Ch. 5 (copycat) | Metzger, *Historical & Literary Studies* (1968); Remus (1983); Wagner, *Pauline Baptism and the Pagan Mysteries*; Philostratus, *Life of Apollonius*; Rodinson, *Muhammad*. ⚠ Cross-check our recalibrated `/answers` **pagan-myths** page |
-| **Extra-biblical Jesus (Josephus/Tacitus/Pliny)** | CFR Ch. 3 n42/n53; **IDB ch. 10 Thesis 4**; IDHEF | Van Voorst, *Jesus Outside the NT* (2000); Tacitus *Annals* 15.44; Pliny *Ep.* 10.96 (Harris trans., *Gospel Perspectives* 5); the Testimonium = disputed/partly-interpolated → use only the neutral core / the *Ant.* 20 James passage (matches our `hist_jesus`/`ev-s3` recalibration). ⚠ IDB prints the *full* Testimonium — do NOT reproduce it |
+| **Extra-biblical Jesus (Josephus/Tacitus/Pliny)** | CFR Ch. 3 n42/n53; **IDB ch. 10 Thesis 4**; **JAJ** (the deep Josephus study); IDHEF | Van Voorst, *Jesus Outside the NT* (2000); Tacitus *Annals* 15.44; Pliny *Ep.* 10.96 (Harris trans., *Gospel Perspectives* 5); the Testimonium = disputed/partly-interpolated → use only the neutral core / the *Ant.* 20 James passage (matches our `hist_jesus`/`ev-s3` recalibration). ⚠ IDB prints the *full* Testimonium — do NOT reproduce it |
+| **Testimonium Flavianum — authenticity + neutral reconstruction** | **JAJ** (whole book) — Part 1 (authenticity), Ch. 7 (the neutral meaning) | Josephus *Ant.* 18.63–64; Jerome *De Viris Illustribus* 13 ("credebatur esse Christus"); the Syriac (Jacob of Edessa, c. 708) + Arabic (Agapius / **Pines**) "thought/believed to be the Christ"; Origen *C. Celsum* 1.47 + *Comm. Matt.* 10.17; Eusebius *H.E.* 1.11, *Dem. Ev.* 3.5; stylometry (90 words/62 lexemes); scholars Whealey/Meier/Bardet/Feldman/Mason. ⚠ authentic **neutral core only** — the TF *reports* the disciples' resurrection belief, it does **not** affirm it; and distinguish Schmidt's *novel* source-theses (par' hēmin = personal acquaintance; **Ananus II** as source) from the mainstream authenticity claim |
+| **Josephus's first-hand connection to Jesus' trial / sources** | **JAJ** Ch. 5–6 + App. 2, 4, 5 | "first men among us" (παρ' ἡμῖν = direct acquaintance, 51 uses); **Ananus II** (executed James, *Ant.* 20.200–203; father Ananus I + brother-in-law Caiaphas tried Jesus); *War* 2.563–568; *Life* 9, 194–204; *Acts* 4:6; Mishnah *Sanhedrin* 1.5–6. ⚠ Schmidt's identifications are a bold *new* case — present as "one scholar's argument," verify before use |
 | **NT textual variants / "has it been corrupted?"** | **IDB ch. 6** (Wallace) | four-category viability×meaningfulness taxonomy (meaningful-AND-viable variants <1%); ~400,000 variants *because of* manuscript riches; Ehrman's "no essential doctrine jeopardized" concession (verify in *Misquoting Jesus* appendix); Metzger–Ehrman, *The Text of the NT*, 4th ed. |
 | **NT historical reliability (overview / 8 theses)** | **IDB ch. 10** (Barnett) | the 8-theses frame; Hengel, *Acts and the History of Earliest Christianity*, 61; the NT-vs-Roman-Caesars *temporal-gap* comparison (NOT raw manuscript counts). ⚠ census/Quirinius harmonization is contested; ⚠ full Testimonium do-not-use |
 | **Gospel authorship / eyewitnesses / dating** | **IDB ch. 10 Thesis 2** (+ our `library/eyewitnesses.html`) | Papias via Eusebius *H.E.* 3.39.3–16; Bauckham, *Jesus and the Eyewitnesses*, 417–20; the Polycarp/1 Clement/Ignatius/Didache citation chain (early attestation) |
@@ -55,7 +59,10 @@ Wilder, eds. — Wallace **ch. 6** NT textual criticism + Barnett **ch. 10** NT 
   reason (Qur'an 4:157) accurately, never as a swipe.
 - **IDB ch. 10 (Barnett) full Testimonium Flavianum** (*Ant.* 18.63–64, fn 14) — Barnett prints the whole
   text incl. the Christian interpolations, then reconstructs the core. **Use ONLY the neutral core / the
-  authentic *Ant.* 20.200 James passage** — never reproduce the full block.
+  authentic *Ant.* 20.200 James passage** — never reproduce the full block. (**JAJ** = the deep scholarly
+  grounding for this discipline: it argues the authentic TF was *neutral/ambiguous* and merely *reports* the
+  disciples' claims — incl. the resurrection — rather than affirming them; so Josephus corroborates the
+  disciples' **claim**, never "attests the resurrection." Keep the resurrection rule: lead with 1 Cor 15:3–7.)
 - **IDB ch. 10 census/Quirinius** *prōtē* = "before" harmonization (fn 44) → **contested**, one solution
   among several; present the census problem honestly as unresolved, never as settled.
 - **IDB ch. 10 Star of Bethlehem astronomy** (7–6 BC conjunction, "Comet 52," *Time* 1976; pp. 245–247) →
