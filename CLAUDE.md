@@ -6,6 +6,27 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **2026-07-24 (video-research mining run + NEW mandatory cross-check rule + archaeology enrichment).**
+> Mined **5 apologetics videos** into `docs/video-research/` (notes + INDEX/ledger rows; transcripts stay
+> git-ignored): the **Peterson Academy OT-canon lecture** (`pkSoTR_vhmg` — ⚠ denominational-neutrality zone,
+> mine the shared history NOT the "Jerome is right" verdict; corroboration of the already-neutral
+> `canon.html`); the **Sean McDowell × Rob Bowman deity-of-Christ two-parter** (`dXxVS2B96Ns` + `72LX8_zwiVw`
+> — the HANDS framework; corroboration of our most-developed area, which already cites Bowman & Komoszewski);
+> **McDowell × Titus Kennedy "People of the Bible"** (`-4RwBPrsXVU` — 10 attested biblical figures); and
+> **McDowell × Spencer Klavan "Light of the Mind"** (`-gHic1q-0qg` — science/God). **Instituted a standing
+> process rule:** a **MANDATORY live-content cross-check** is now part of every mining run (book/video/article)
+> — encoded in `CLAUDE.md` § *Content backlog* + wired into all three research-library READMEs — so a mined
+> source is classified corroboration-vs-improvement against the live site, on-record, instead of sitting in a
+> note. The cross-checks surfaced **3 backlog items**: a **John 17:22 "shared glory" objection** gap (P3,
+> open); the **quantum-mechanics-→-Mind argument** (logged then **DECLINED** by owner — too contested to build
+> safely); and a **P3 archaeology enrichment, now DONE + LIVE** — [`library/archaeology.html`](library/archaeology.html)
+> now names two concrete *doubted-then-confirmed* figures (**Ahab** on the Kurkh Monolith; **Belshazzar** via
+> the Nabonidus Cylinder/Chronicle/Verse Account → co-regent → explains Dan 5:16's "third place"), new fn 8,
+> sup-li 16/16, all gates passed (citations 0 errors, argument SOUND + 3 scope/honesty refinements, orthodoxy
+> CLEAN; setting-not-truth rule held). ⚠ **This session the dedicated `apologia-argument`/`-orthodoxy` agents
+> were de-registered**, so those two lanes ran via general-purpose agents primed with the CLAUDE.md guardrails
+> (recorded in the essay's stamp). **Open (human):** the John 17:22 P3 row awaits execution.
+>
 > **2026-07-24 (research-library audit execution + new miracles essay + Islam cluster + reel + 3rd research library).**
 > Executed the owned-library audit batch, all dual-consensus/gated + deployed: **resurrection-audit essay
 > enrichments** (Cook→`appearances`, Gallio/Delphi + Lapide + Kloppenborg→`earlycreed`, Burridge→`earlydate`,
