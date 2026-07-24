@@ -5,7 +5,17 @@
       "argument": "2026-07-24",
       "orthodoxy": "2026-07-24",
       "by": "Science&Faith batch (9 essays, 69 takeaways): apologia-argument SOUND (0 CRITICAL/MAJOR; 2 optional MINOR applied) + apologia-orthodoxy CLEAN (0 heresy/drift; 1 optional NOTE applied). Argument-specific rules held: kalam begins-to-exist, fine-tuning data-conceded/design-inferred (never 'scientists agree it's designed'), laws describe-not-prescribe, miracles possible-not-proven. Single-gate (Science&Faith)."
-    }
+    },
+    "batches": [
+      {
+        "batch": "God's Existence",
+        "essays": 11,
+        "takeaways": 71,
+        "argument": "2026-07-24",
+        "orthodoxy": "2026-07-24",
+        "by": "apologia-argument SOUND (0 CRITICAL/MAJOR; 2 MINOR + 2 POLISH applied) + apologia-orthodoxy CLEAN-after-fix (2 evil.html standalone-pull-quote lines fixed). Rules held: kalam begins-to-exist; morality duties-need-a-ground + 'atheists can be good'; evil = Plantinga consistency-not-proof + no tidy theodicy + redemptive anchor; contingency/Five Ways/ontological = philosophical terminus not the Nicene God."
+      }
+    ]
   },
   "bigbang": {
     "Stating the Argument Carefully": "Whatever begins to exist has a cause; the universe began, so it has a cause—not yet God.",
@@ -93,5 +103,98 @@
     "Where Hume’s Argument Breaks Down": "Hume fails three ways: rare events can be well-attested, “uniform experience” is circular, and his weighing is skewed.",
     "The State of the Scholarship": "The confident a priori dismissal has collapsed; the debate has moved to weighing evidence case by case.",
     "Conclusion: What This Does and Does Not Establish": "This only unbars the door: miracles are possible and worth investigating, never that any actually occurred."
+  },
+  "thomistic": {
+    "The Hand, the Stick, and the Stone": "Aquinas's whole case hangs on the kind of causal series he means — misread it and you refute a phantom.",
+    "The Five Ways in Brief": "The Five Ways sketch five routes to God as the world's ultimate source; the First Way is the paradigm.",
+    "The Single Most Important Point": "The series is simultaneous and here-and-now, requiring a present sustainer, not a first event long ago.",
+    "The Metaphysics Beneath the First Way": "Change is a potential becoming actual, and only something purely actual can ground the chain.",
+    "The Objections — Steelmanned": "Aquinas never claimed everything has a cause; the inertia objection is the one demanding a real reply.",
+    "The Honest State of the Scholarship": "There is no consensus either way, but the lazy dismissals of the argument no longer survive.",
+    "What the Five Ways Do and Do Not Establish": "If sound, the Ways reach a sustaining first cause — not yet the good, personal, triune God."
+  },
+  "kalam": {
+    "A question that refuses to stay small": "Either the universe is eternal or it began — and which it is changes everything.",
+    "The argument, stated with care": "Whatever begins to exist has a cause; the universe began; so it has a cause.",
+    "Premise 1: out of nothing, nothing comes": "Being does not arise from non-being; the quantum vacuum is something, not nothing.",
+    "Premise 2: the case for a beginning": "Both philosophy and cosmology point to a beginning, though the science corroborates rather than proves it.",
+    "From a cause to a Creator": "The cause must be spaceless, timeless, immaterial, powerful, and plausibly a personal mind.",
+    "The strongest objections, fairly stated": "'What caused God?' misreads premise 1, but critics like Morriston and Oppy keep the debate open.",
+    "The honest state of the debate": "The argument stays live and contested; the step from cause to person is most disputed.",
+    "What Kalam does and does not establish": "Kalam makes a serious case for a transcendent cause, not a proof of any particular God."
+  },
+  "leibniz": {
+    "The Most Persistent Question": "The question 'why is there anything at all?' stands whether or not the universe began.",
+    "The Argument, Stated Carefully": "A contingent universe needs an explanation beyond itself: a necessary, transcendent being.",
+    "The Strongest Objections": "The deepest objections attack the Principle of Sufficient Reason and offer the cosmos as a brute stopping point.",
+    "The Honest State of the Scholarship": "Philosophers still divide over the PSR and whether the universe can simply be 'just there.'",
+    "What It Does, and Doesn't, Establish": "If sound, it reaches a necessary ground of being — one strand toward, not yet, the personal God."
+  },
+  "beauty": {
+    "The Datum: Beauty in Nature, Art, and Number": "Beauty in nature, art, and mathematics is a real datum any worldview must explain.",
+    "The Argument and Its History": "Beauty fits more naturally with a Creator who is its source than with blind matter.",
+    "The Case at Its Strongest": "The convergence of beauty, elegant laws, and minds that delight in them favors one Author.",
+    "The Objections, Steelmanned": "Evolution, aesthetic subjectivism, and nature's ugliness each press hard against the argument.",
+    "Replies — and Honest Concessions": "Real replies exist, but beauty's objectivity is contested and nature's ugliness blunts the argument's edge.",
+    "The State of Scholarship": "Even its defenders treat beauty as one modest strand, not a stand-alone proof.",
+    "Conclusion: What It Does and Does Not Establish": "Beauty does not prove God, but theism explains it more gracefully than naturalism does."
+  },
+  "consciousness": {
+    "The Hard Problem": "Why physical processes are accompanied by inner experience resists ordinary scientific reduction.",
+    "The Argument Stated": "Consciousness is more expected if reality is grounded in Mind than in blind matter.",
+    "The Force of the Argument": "Naturalism explains the mental by the non-mental — but consciousness is what will not reduce.",
+    "Objections, Stated at Full Strength": "Even if materialism fails, panpsychism and naturalistic dualism, not only God, remain live options.",
+    "The State of the Scholarship": "The hard problem is taken seriously, yet physicalism persists and this is no proof of God.",
+    "Conclusion: What It Establishes, and What It Does Not": "Consciousness favors a mental ground over pure physicalism — a clue, not a proof."
+  },
+  "desire": {
+    "The argument stated": "A longing nothing earthly satisfies is best explained, Lewis says, by our being made for more.",
+    "The longing and its history": "The restless longing Lewis called Joy runs from Augustine and Aquinas through Romanticism.",
+    "Why the argument has force": "Natural desires reliably track real objects, so a universal longing aimed at nothing would be strange.",
+    "The objections, stated at full strength": "Wanting something does not make it exist, and critics call the natural/artificial distinction rigged.",
+    "Replying—while conceding what must be conceded": "It is no proof; the case rests on the peculiar shape of a longing survival cannot fully explain.",
+    "The state of the question": "Philosophers treat the argument as serious but minor — a contributor, not a decisive proof.",
+    "What it does, and does not, establish": "It does not prove God, but argues our longing is as well explained by design as by mistake."
+  },
+  "reason": {
+    "The Argument Stated": "If our beliefs are merely the products of non-rational causes, the naturalist has no reason to trust his own reasoning.",
+    "A History of an Idea": "From Balfour and Haldane to Lewis, thinkers pressed that naturalism undercuts trust in reason.",
+    "Plantinga's Rigorous Cousin": "Plantinga argues naturalism plus evolution gives us a defeater for trusting our own minds.",
+    "The Strongest Objections": "Anscombe's level distinction and the 'true beliefs aid survival' reply are the strongest challenges.",
+    "The Honest State of the Scholarship": "The argument is unresolved — a live problem for naturalism, not a settled refutation.",
+    "What It Does — and Does Not — Establish": "It is a problem for naturalism, not a proof of God — reason fits a rational source better."
+  },
+  "religious": {
+    "The claim, stated carefully": "An apparent experience of God carries genuine, defeasible weight — not proof, but evidence.",
+    "Two modern defenses: Swinburne and Alston": "Swinburne and Alston argue religious experience deserves the same default trust we give perception.",
+    "The objections, taken at full strength": "Neuroscience, conflicting religious claims, and Freud's projection are the serious objections — diversity the strongest.",
+    "The honest state of the question": "Experience cannot settle which God is real, but gives the experiencer genuine, non-dismissable warrant."
+  },
+  "ontological": {
+    "The Argument That Tries to Reach God by Thought Alone": "The ontological argument tries to reach God from the bare concept of God alone.",
+    "Anselm's Original: Greatness That Cannot Be Thought Away": "Anselm argues the greatest conceivable being cannot coherently be thought of as failing to exist.",
+    "Descartes: Existence as a Perfection": "Descartes treats existence as a perfection the supremely perfect being must possess.",
+    "The Modern Modal Version: Plantinga": "If a maximally great being is even possible, Plantinga argues, it exists necessarily.",
+    "The Strongest Objections": "Kant retired the older forms; the modal version stalls on whether God is even possible.",
+    "What Plantinga Actually Claimed": "Plantinga claimed only that the argument shows theistic belief is rational, not that it proves God.",
+    "The Honest State of the Scholarship": "The argument is valid; the whole debate now rests on the contested possibility premise.",
+    "Conclusion: What It Does and Doesn't Establish": "It does not prove God, but shows a maximally great being is either necessary or impossible."
+  },
+  "moral": {
+    "The Argument and Its History": "If objective moral duties are real, they need a ground beyond human opinion.",
+    "Premise 2: That Some Things Are Really Wrong": "That some acts are really wrong is a properly basic conviction shared even by secular realists.",
+    "Premise 1: What Grounds the Moral Law?": "The claim is not that atheists cannot be good, but that objective morality needs grounding in God's nature.",
+    "The Euthyphro Dilemma": "Goodness is neither arbitrary command nor a standard above God, but God's own necessary nature.",
+    "The Strongest Objection: Wielenberg's Godless Normative Realism": "Wielenberg grounds morality in brute necessary facts; the theist replies duties must be owed to someone.",
+    "The Darwinian Dilemma — Which Cuts Both Ways": "Evolutionary debunking of moral intuitions cuts against secular realism at least as hard as theism.",
+    "What the Argument Does, and Does Not, Establish": "If sound, it reaches a good lawgiver — not the full Christian God — never impugning atheists' goodness."
+  },
+  "evil": {
+    "Stating the problem at its strongest": "The problem comes in three forms — logical, evidential, and existential — of rising difficulty.",
+    "The logical problem, and why most philosophers think it failed": "Plantinga's defense shows God and evil can consistently coexist — not why evil exists, only that it can.",
+    "The evidential problem: the genuinely hard one": "The hard version asks whether pointless suffering makes God unlikely; no reply is tidy or complete.",
+    "The cross: not a theodicy but a presence": "Christianity offers not a tidy explanation but a God who entered suffering and promises to defeat it.",
+    "The critic's last word — and a reply": "The skeptic's intuition retains real weight; the theist's reply is a defensible reframing that keeps faith reasonable, not a claimed victory.",
+    "The honest state of the question": "The logical problem failed and the evidential remains unresolved — but the grief no argument can relieve is met by the God who entered it."
   }
 }
