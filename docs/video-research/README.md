@@ -141,6 +141,7 @@ brief distilled from its certified-essay tie-in is live in `/briefs` · **—** 
 | W. L. Craig · Moral pt.3 — atheistic moral Platonism, Taylor's virtue-ethics, stubborn humanism | `0nAJpjrNMH4` | `craig-moral-argument-defenders-series.md` | — | — (as above) | 2026-07-24 |
 | W. L. Craig · Moral pt.4 — Premise 2 (properly-basic moral experience) + the evolutionary-debunking objection | `zl4qYQo2-FA` | `craig-moral-argument-defenders-series.md` | — | — (as above) | 2026-07-24 |
 | W. L. Craig · Moral pt.5 — cross-cultural relativism, the conclusion, + the cumulative-case reply | `OIGc28DTVB0` | `craig-moral-argument-defenders-series.md` | — | — (as above) | 2026-07-24 |
+| Peterson Academy (speaker unnamed in AUTO transcript) · "The Historical Reliability of the Bible," Lecture 1 — **OT canon / canonicity** | `pkSoTR_vhmg` | `peterson-academy-ot-canon-canonicity.md` | — | — (**corroboration** of the already-CLEAN + neutral `library/canon.html`; NO backlog row; ⚠ denominational-neutrality zone — mine shared history, NOT the "Jerome is right" verdict) | 2026-07-24 |
 
 **Rule of thumb:** a video isn't "briefed" until a row shows **✓briefs** (or **✓sources**). A row with only
 **note** means it's mined but nothing has cleared the gates into the live AI yet.
