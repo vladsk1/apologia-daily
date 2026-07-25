@@ -1,11 +1,12 @@
 import { overRateLimit, inputTooLong } from '../lib/ratelimit.js';
+import { parseBody } from '../lib/parse-body.js';
 
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') { res.setHeader('Access-Control-Allow-Origin', '*'); res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS'); res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); return res.status(200).end(); }
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    const body = req.body;
+    const body = parseBody(req);
     const { verse, reflection, userResponse } = body;
 
     const apiKey = process.env.ANTHROPIC_API_KEY;

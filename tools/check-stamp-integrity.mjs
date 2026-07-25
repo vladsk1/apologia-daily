@@ -47,12 +47,16 @@ const isGated = (p) => PATTERNS.some((re) => re.test(p));
 // A changed diff line is "boilerplate" (ignore) if it is nav markup, the stamp
 // itself, a sitemap/OG/meta tag, or pure whitespace. Anything else is treated
 // as doctrinal-bearing content.
-function isBoilerplateLine(line) {
+export function isBoilerplateLine(line) {
   const s = line.slice(1).trim(); // drop the +/-
   if (s === '') return true;
   if (/content-review/.test(s)) return true;
   if (/class="adn-|<nav\b|<\/nav>|adn-links|adn-right|<ul class=|<\/ul>|<li>\s*<a |mega-|adn-mega/.test(s)) return true;
   if (/<meta\b|og:|twitter:|<link\b|rel="canonical"|hreflang/.test(s)) return true;
+  // the <title> element is SEO/tab metadata, not doctrinal prose. (JSON-LD is
+  // deliberately NOT filtered: the FAQPage schema mirrors the essays' doctrinal
+  // FAQ answers, so a schema edit should still trip the flag — bias toward flagging.)
+  if (/<title[ >]|<\/title>/.test(s)) return true;
   // a bare <script> include (site-wide JS enhancement: nav, related, orthonote,
   // active-reading, analytics, supabase CDN) is boilerplate, not doctrinal prose.
   if (/^<script\b[^>]*>\s*<\/script>$|^<script\b[^>]*\bsrc=/.test(s)) return true;
@@ -76,40 +80,46 @@ function gatedFiles() {
   return [...set].sort();
 }
 
-const flagged = [];
-for (const file of gatedFiles()) {
-  // last commit that touched the stamp line
-  const stampCommit = sh(`git log -n1 --format=%H -G content-review -- "${file}"`).trim();
-  if (!stampCommit) continue; // no stamped history (unstamped is the content-review gate's job)
+function main() {
+  const flagged = [];
+  for (const file of gatedFiles()) {
+    // last commit that touched the stamp line
+    const stampCommit = sh(`git log -n1 --format=%H -G content-review -- "${file}"`).trim();
+    if (!stampCommit) continue; // no stamped history (unstamped is the content-review gate's job)
 
-  // commits that touched the file strictly after the stamp commit
-  const range = sh(`git log --format=%H ${stampCommit}..HEAD -- "${file}"`).trim();
-  if (!range) continue;
-  const laterCommits = range.split('\n').filter(Boolean);
+    // commits that touched the file strictly after the stamp commit
+    const range = sh(`git log --format=%H ${stampCommit}..HEAD -- "${file}"`).trim();
+    if (!range) continue;
+    const laterCommits = range.split('\n').filter(Boolean);
 
-  const offending = [];
-  for (const c of laterCommits) {
-    const diff = sh(`git show --format= --unified=0 ${c} -- "${file}"`);
-    const changed = diff.split('\n').filter((l) => /^[+-]/.test(l) && !/^(\+\+\+|---)/.test(l));
-    if (changed.some((l) => !isBoilerplateLine(l))) {
-      const subj = sh(`git show -s --format=%s ${c}`).trim();
-      offending.push({ c: c.slice(0, 9), subj });
+    const offending = [];
+    for (const c of laterCommits) {
+      const diff = sh(`git show --format= --unified=0 ${c} -- "${file}"`);
+      const changed = diff.split('\n').filter((l) => /^[+-]/.test(l) && !/^(\+\+\+|---)/.test(l));
+      if (changed.some((l) => !isBoilerplateLine(l))) {
+        const subj = sh(`git show -s --format=%s ${c}`).trim();
+        offending.push({ c: c.slice(0, 9), subj });
+      }
     }
+    if (offending.length) flagged.push({ file, offending });
   }
-  if (offending.length) flagged.push({ file, offending });
+
+  if (flagged.length === 0) {
+    console.log('✓ Stamp integrity: no gated file has doctrinal edits after its content-review stamp.');
+    process.exit(0);
+  }
+
+  console.error(`⚠ ${flagged.length} gated file(s) appear edited AFTER their content-review stamp (doctrinal lines changed with no re-stamp):\n`);
+  for (const f of flagged) {
+    console.error(`  ${f.file}`);
+    for (const o of f.offending) console.error(`     ${o.c}  ${o.subj}`);
+    console.error('');
+  }
+  console.error('Re-run the argument + orthodoxy gates on each, then bump the content-review stamp date.');
+  console.error('(If a flagged commit is genuinely non-doctrinal, it is safe to re-stamp with the same review.)');
+  process.exit(WARN_ONLY ? 0 : 1);
 }
 
-if (flagged.length === 0) {
-  console.log('✓ Stamp integrity: no gated file has doctrinal edits after its content-review stamp.');
-  process.exit(0);
-}
-
-console.error(`⚠ ${flagged.length} gated file(s) appear edited AFTER their content-review stamp (doctrinal lines changed with no re-stamp):\n`);
-for (const f of flagged) {
-  console.error(`  ${f.file}`);
-  for (const o of f.offending) console.error(`     ${o.c}  ${o.subj}`);
-  console.error('');
-}
-console.error('Re-run the argument + orthodoxy gates on each, then bump the content-review stamp date.');
-console.error('(If a flagged commit is genuinely non-doctrinal, it is safe to re-stamp with the same review.)');
-process.exit(WARN_ONLY ? 0 : 1);
+// Run the scan only when invoked directly (CLI), not when a test imports
+// isBoilerplateLine — importing must not kick off the git-history scan.
+if (process.argv[1] && process.argv[1].endsWith('check-stamp-integrity.mjs')) main();

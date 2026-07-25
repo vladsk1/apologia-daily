@@ -8,6 +8,14 @@
     },
     "batches": [
       {
+        "batch": "Science & Faith",
+        "essays": 9,
+        "takeaways": 69,
+        "argument": "2026-07-24",
+        "orthodoxy": "2026-07-24",
+        "by": "apologia-argument SOUND (0 CRITICAL/MAJOR; 2 optional MINOR applied) + apologia-orthodoxy CLEAN (0 heresy/drift; 1 optional NOTE applied). Rules held: kalam begins-to-exist; fine-tuning data-conceded/design-inferred (never ‘scientists agree it’s designed’); laws describe-not-prescribe; miracles possible-not-proven. Single-gate (Science & Faith). [Backfilled 2026-07-25: shipped in 80180ec but was recorded only in _meta.reviewed, not the batches[] array.]"
+      },
+      {
         "batch": "God's Existence",
         "essays": 11,
         "takeaways": 71,

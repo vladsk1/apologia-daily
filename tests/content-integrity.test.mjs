@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, globSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { runOffline, CASES } from '../tools/test-crisis-routing.mjs';
+import { isBoilerplateLine } from '../tools/check-stamp-integrity.mjs';
 
 // Every /answers/* opening must LEAD WITH THE ANSWER — the short-form rule.
 // The lint is a curated regex net for known front-loaded-opening tells; it
@@ -158,4 +159,35 @@ test('api/ask.js keeps the argument-brief block optional + guardrail-subordinate
     'not a quotable source',          // not to be quoted verbatim
   ];
   for (const s of required) assert.ok(ask_l.includes(s), `briefs block missing its safety instruction: "${s}"`);
+});
+
+// The stamp-integrity boilerplate classifier decides whether a changed diff line
+// on a gated page is non-doctrinal (nav/SEO/script-include → ignore) or doctrinal
+// prose (→ flag "edited after certification"). A regression here would either spam
+// false flags (SEO edits) or, worse, silently pass a doctrinal edit. isBoilerplateLine
+// takes a raw diff line (leading +/-). JSON-LD is deliberately NOT boilerplate: the
+// FAQPage schema mirrors the essays' doctrinal FAQ answers.
+test('stamp-integrity classifier: SEO/nav/script lines are boilerplate, doctrinal prose is not', () => {
+  // boilerplate (must be ignored by the stamp check)
+  const boilerplate = [
+    '+  <title>Christian Answers to Islam | Apologia Daily</title>',
+    '-<title>Old Title</title>',
+    '+<meta name="description" content="x">',
+    '+<link rel="canonical" href="https://apologiadaily.com/x">',
+    '+<script src="/library/active-reading.js" defer></script>',
+    '+  <script src="/library/orthonote.js" defer></script>',
+    '+<li><a href="/x">Nav link</a></li>',
+    '+   ',
+    '+  <!-- content-review: {"argument":"2026-07-25","orthodoxy":"2026-07-25","by":"x"} -->',
+  ];
+  for (const l of boilerplate) assert.equal(isBoilerplateLine(l), true, `should be boilerplate: ${l}`);
+
+  // doctrinal prose + JSON-LD (must NOT be treated as boilerplate → still flaggable)
+  const doctrinal = [
+    '+<p>The Son is fully and eternally God, co-equal with the Father.</p>',
+    '-<p>Jesus only appeared to die on the cross.</p>',
+    '+<script type="application/ld+json">{"@type":"FAQPage","mainEntity":[{"text":"the Son is God"}]}</script>',
+    '+<h2>Why the resurrection is the best explanation</h2>',
+  ];
+  for (const l of doctrinal) assert.equal(isBoilerplateLine(l), false, `should NOT be boilerplate: ${l}`);
 });

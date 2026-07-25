@@ -1,5 +1,6 @@
 // content-review: {"argument":"2026-07-24","orthodoxy":"2026-07-24","by":"2026-07-24 FIRST-TIME gate of this live endpoint (it both answers and GRADES students on deity/Trinity/Islam content, and had never been gated/stamped). Dual-consensus: apologia-argument (3 MAJOR + 4 MINOR) + apologia-orthodoxy (3 DRIFT) + apologia-neutrality — all applied, re-gate CLEAN. Fixes: (1) NEW grader-mode block — doctrinal accuracy + logical soundness outrank; a heterodox student explanation (modalism/Arian/tritheist/adoptionist/works-salvation/denial of deity-humanity-resurrection) is capped <=3/10 and corrected in 'improvements', never listed as a 'strength'; overstated/misstated-premise explanations scored down even if fluent; JSON-only, overrides the Q&A word-count/follow-up. (2) Orthodoxy boundaries brought to api/ask.js parity: co-equal/co-eternal; modalism/Arianism/subordinationism/tritheism/adoptionism/works-salvation named; ORTHODOXY-OUTRANKS-CHARITY tiebreak (concede observation not inference; pull-quote test). (3) NEW always-on ARGUMENT-SPECIFIC ACCURACY RAILS (kalam begins-to-exist; manuscripts=preservation-not-truth; fine-tuning data-conceded/design-contested; resurrection 1 Cor 15 creed lead; morality duties-need-a-ground) + calibration (contested inferences as probabilities not proofs). (4) Islam 'genuine common ground' -> 'SHARED WORDS, NOT SHARED BELIEF' (concede titles, refuse shared-faith, name divergence + John 5:23) — false-common-ground fix; other Islam rails (tahrif, tawhid/shirk 5:116, crucifixion minority reading hedged, Islamic Dilemma) confirmed sound. Functional: grader-mode detection; max_tokens 400->700 in grader mode (was truncating JSON into the keyword mock-scorer fallback); excerpt hardened as reference-content-only (prompt-injection). OPEN (apologia-engineer lane): client-supplied excerpt is still a prompt-injection surface — one-line mitigation added, fuller fix pending. Human/pastoral sign-off still owed on the live Christology this endpoint teaches + grades."}
 import { overRateLimit, inputTooLong } from '../lib/ratelimit.js';
+import { parseBody } from '../lib/parse-body.js';
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -10,7 +11,7 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    const { question, argument, category, excerpt } = req.body;
+    const { question, argument, category, excerpt } = parseBody(req);
 
     if (!question || !argument) {
       return res.status(400).json({ error: 'Missing required fields' });
