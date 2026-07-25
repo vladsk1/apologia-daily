@@ -1,0 +1,80 @@
+{
+  "reviewed": {"argument": "2026-07-25", "orthodoxy": "2026-07-25", "by": "argument SOUND (0 BREAK/MAJOR) + orthodoxy CLEAN + grounded in certified library/consistency.html. MINOR fixes applied: dropped ungrounded 'three continents' (only claim not in the essay); scoped the Luke 24 paraphrase to 'the Law, the Prophets, and the Psalms were written about him'; aligned the 'a thousand years' number to the ~1,500-year span. Denominational neutrality held (no '66 books' — 'a library of dozens of books'); dual (divine+human) authorship affirmed. Positive-case-only reel."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "voiceover": "One book — or so we call it. Open it, and you find a whole library: dozens of books, written by around forty authors, across roughly fifteen centuries. Kings and shepherds. A doctor, a tax collector, fishermen, a former enemy of the faith. They wrote in three languages — Hebrew, Aramaic, and Greek. Most of them never met. There was no committee, no shared outline, no way to coordinate across so many centuries. And yet it tells one story. It opens in a garden, with paradise lost, and closes in a garden restored, with the tree of life. A promise made on the very first pages — a deliverer who would crush evil — is traced through law and prophet and psalm, and lands on a single person. Jesus said the Law, the Prophets, and the Psalms were written about him. Forty voices. Fifteen centuries. One unfolding story — reading less like an anthology, and more like the fingerprint of a single Author.",
+  "source": "library/consistency.html",
+  "scenes": [
+    { "dur": 3.0,
+      "big": [ {"t": "Forty authors.", "c": "gold", "s": 104}, {"t": "Fifteen centuries.", "c": "cream", "s": 92} ],
+      "sub": [ {"t": "One book. One story.", "c": "dim", "f": "serif", "s": 46} ] },
+
+    { "kicker": "IT'S NOT ONE BOOK", "dur": 3.8, "lines": [
+      {"t": "Open the Bible and you find", "c": "cream", "s": 56},
+      {"t": "not one book, but a library —", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "", "s": 22},
+      {"t": "dozens of books,", "c": "cream", "s": 54},
+      {"t": "written across the ages.", "c": "cream", "s": 54} ] },
+
+    { "kicker": "FORTY VOICES", "dur": 4.2, "lines": [
+      {"t": "Around forty authors:", "c": "gold", "f": "serifb", "s": 60},
+      {"t": "", "s": 22},
+      {"t": "kings and shepherds,", "c": "cream", "s": 56},
+      {"t": "a doctor, a tax collector,", "c": "cream", "s": 54},
+      {"t": "fishermen, a former enemy.", "c": "cream", "s": 54} ] },
+
+    { "kicker": "THREE LANGUAGES, WORLDS APART", "dur": 4.2, "lines": [
+      {"t": "Three languages —", "c": "cream", "s": 58},
+      {"t": "Hebrew, Aramaic, Greek.", "c": "gold", "f": "serifb", "s": 60},
+      {"t": "", "s": 22},
+      {"t": "Most of them", "c": "cream", "s": 56},
+      {"t": "never met.", "c": "dim", "s": 56} ] },
+
+    { "kicker": "NO WAY TO COORDINATE", "dur": 3.8, "lines": [
+      {"t": "No committee.", "c": "cream", "s": 62},
+      {"t": "No shared outline.", "c": "cream", "s": 62},
+      {"t": "", "s": 22},
+      {"t": "Over a thousand years apart.", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "kicker": "AND YET —", "dur": 3.0, "lines": [
+      {"t": "it tells", "c": "cream", "s": 64},
+      {"t": "", "s": 16},
+      {"t": "one story.", "c": "gold", "f": "serifb", "s": 108} ] },
+
+    { "kicker": "IT OPENS IN A GARDEN", "dur": 4.4, "lines": [
+      {"t": "It begins in a garden —", "c": "cream", "s": 56},
+      {"t": "paradise lost.", "c": "dim", "s": 54},
+      {"t": "", "s": 22},
+      {"t": "It ends in a garden restored,", "c": "cream", "s": 52},
+      {"t": "the tree of life.", "c": "gold", "f": "serifb", "s": 62} ] },
+
+    { "kicker": "ONE PROMISE, TRACED THROUGH", "dur": 4.6, "lines": [
+      {"t": "A promise on the first pages —", "c": "cream", "s": 52},
+      {"t": "a deliverer who crushes evil —", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "", "s": 22},
+      {"t": "traced through law,", "c": "cream", "s": 56},
+      {"t": "prophet, and psalm.", "c": "cream", "s": 56} ] },
+
+    { "kicker": "...AND LANDING ON ONE PERSON", "dur": 4.8, "lines": [
+      {"t": "Every thread lands", "c": "cream", "s": 56},
+      {"t": "on a single person.", "c": "cream", "s": 56},
+      {"t": "", "s": 20},
+      {"t": "Jesus said the Law,", "c": "cream", "s": 52},
+      {"t": "Prophets, and Psalms", "c": "cream", "s": 52},
+      {"t": "were written about him.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "ONE STORY, ONE AUTHOR", "dur": 4.2, "lines": [
+      {"t": "Forty voices.", "c": "cream", "s": 60},
+      {"t": "Fifteen centuries.", "c": "cream", "s": 60},
+      {"t": "One unfolding story.", "c": "gold", "f": "serifb", "s": 64},
+      {"t": "", "s": 20},
+      {"t": "Less like an anthology —", "c": "dim", "s": 50} ] },
+
+    { "dur": 3.8,
+      "big": [ {"t": "more like a", "c": "cream", "s": 80}, {"t": "single Author.", "c": "gold", "s": 108} ],
+      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52} ] }
+  ]
+}
