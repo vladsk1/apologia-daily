@@ -78,6 +78,9 @@ const GLOBS = [
   'answers/*.html',
   'ev-s*.html',
   'worldviews.html',
+  // demo/ is publicly served (not blocked in vercel.json) and carries real
+  // doctrinal content, so it must be scanned like anything else a visitor reads.
+  'demo/*.html',
 ];
 
 function files() {
