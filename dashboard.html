@@ -662,6 +662,46 @@
       <a href="index.html#pricing" class="pro-banner-btn">Pro &mdash; launching soon</a>
     </div>
 
+    <!-- ACCOUNT — delete-account lives here.
+         Apple Guideline 5.1.1(v) requires an app that offers account creation to
+         let the user delete the account from INSIDE the app (an "email us" link
+         is not sufficient); Google Play requires the same. It is also what
+         privacy.html promises. Hidden until signed in. -->
+    <div id="account-card" style="display:none;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);">
+      <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.75rem;">Account</div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem;justify-content:space-between;">
+        <div style="font-size:0.82rem;color:rgba(255,255,255,0.6);line-height:1.6;max-width:46ch;">
+          Signed in as <span id="account-email" style="color:rgba(255,255,255,0.85);"></span>.
+          Deleting your account permanently removes your progress, flashcards, journal entries and group memberships. This cannot be undone.
+        </div>
+        <button type="button" id="delete-account-btn"
+          style="font-family:inherit;font-size:0.78rem;font-weight:600;background:transparent;color:#e07b6a;border:1px solid rgba(224,123,106,0.45);border-radius:4px;padding:8px 16px;cursor:pointer;white-space:nowrap;">
+          Delete account
+        </button>
+      </div>
+      <div id="delete-account-msg" style="display:none;font-size:0.8rem;line-height:1.6;margin-top:0.85rem;"></div>
+    </div>
+
+  </div>
+
+  <!-- DELETE ACCOUNT CONFIRMATION -->
+  <div id="delete-modal" style="display:none;position:fixed;inset:0;background:rgba(5,13,26,0.82);z-index:9999;align-items:center;justify-content:center;padding:1.25rem;">
+    <div style="background:#0a1628;border:1px solid rgba(255,255,255,0.12);border-radius:8px;max-width:440px;width:100%;padding:1.75rem;">
+      <div style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#fff;margin-bottom:0.75rem;">Delete your account?</div>
+      <div style="font-size:0.85rem;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:1rem;">
+        This permanently deletes your account and all of your data &mdash; progress, flashcards, journal entries, study-group membership and messages. <strong style="color:rgba(255,255,255,0.9);">It cannot be undone.</strong>
+      </div>
+      <label for="delete-confirm-input" style="display:block;font-size:0.78rem;color:rgba(255,255,255,0.55);margin-bottom:0.4rem;">Type <strong style="color:#e07b6a;">DELETE</strong> to confirm:</label>
+      <input id="delete-confirm-input" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false"
+        style="width:100%;font-family:inherit;font-size:0.9rem;background:#050d1a;color:#fff;border:1px solid rgba(255,255,255,0.18);border-radius:4px;padding:9px 12px;margin-bottom:1.1rem;" />
+      <div id="delete-modal-error" style="display:none;font-size:0.78rem;color:#e07b6a;margin-bottom:0.75rem;"></div>
+      <div style="display:flex;gap:0.6rem;justify-content:flex-end;">
+        <button type="button" id="delete-cancel"
+          style="font-family:inherit;font-size:0.82rem;background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.2);border-radius:4px;padding:8px 16px;cursor:pointer;">Cancel</button>
+        <button type="button" id="delete-confirm-btn" disabled
+          style="font-family:inherit;font-size:0.82rem;font-weight:600;background:#e07b6a;color:#0a1628;border:0;border-radius:4px;padding:8px 16px;cursor:pointer;opacity:0.5;">Delete my account</button>
+      </div>
+    </div>
   </div>
 
   <div class="loading-state" id="loading-state">Loading your dashboard&hellip;</div>
@@ -686,6 +726,89 @@
   function el(id) { return document.getElementById(id); }
   function setText(id, val) { var e = el(id); if (e) e.textContent = val; }
 
+  /* ---- Delete account (Apple Guideline 5.1.1(v) / Google Play) -------------
+     The server authenticates the caller by their own access token and ignores
+     any user id we might send, so this can only ever delete the signed-in
+     account. The typed DELETE confirmation guards against an accidental tap. */
+  function setupDeleteAccount(user) {
+    var card = el('account-card');
+    var modal = el('delete-modal');
+    if (!card || !modal) return;
+
+    var emailEl = el('account-email');
+    if (emailEl) emailEl.textContent = user.email || '';
+    card.style.display = 'block';
+
+    var input = el('delete-confirm-input');
+    var confirmBtn = el('delete-confirm-btn');
+    var errEl = el('delete-modal-error');
+
+    function closeModal() {
+      modal.style.display = 'none';
+      input.value = '';
+      errEl.style.display = 'none';
+      confirmBtn.disabled = true;
+      confirmBtn.style.opacity = '0.5';
+      confirmBtn.textContent = 'Delete my account';
+    }
+
+    el('delete-account-btn').onclick = function () {
+      modal.style.display = 'flex';
+      setTimeout(function () { input.focus(); }, 50);
+    };
+    el('delete-cancel').onclick = closeModal;
+    modal.onclick = function (e) { if (e.target === modal) closeModal(); };
+
+    // Enable the destructive button only on an exact match.
+    input.oninput = function () {
+      var ok = input.value.trim().toUpperCase() === 'DELETE';
+      confirmBtn.disabled = !ok;
+      confirmBtn.style.opacity = ok ? '1' : '0.5';
+    };
+
+    confirmBtn.onclick = async function () {
+      confirmBtn.disabled = true;
+      confirmBtn.textContent = 'Deleting…';
+      errEl.style.display = 'none';
+      try {
+        var s = await sb.auth.getSession();
+        var token = s.data && s.data.session && s.data.session.access_token;
+        if (!token) throw new Error('no session');
+
+        // Best-effort: drop this device's push subscription first. It is keyed by
+        // endpoint (not user id), so the server cannot remove it for us.
+        try { if (window.adDisablePush) await window.adDisablePush(); } catch (e) {}
+
+        var r = await fetch('/api/new-signup?do=delete-account', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + token },
+          body: JSON.stringify({ confirm: 'DELETE' })
+        });
+        var d = {};
+        try { d = await r.json(); } catch (e) {}
+
+        if (!r.ok || !d.ok) {
+          errEl.textContent = d.error || 'Something went wrong. Please try again, or email hello@apologiadaily.com.';
+          errEl.style.display = 'block';
+          confirmBtn.disabled = false;
+          confirmBtn.textContent = 'Delete my account';
+          return;
+        }
+
+        // Clear local traces, then leave. The account no longer exists, so a
+        // stale local session would only produce confusing errors.
+        try { await sb.auth.signOut(); } catch (e) {}
+        try { localStorage.clear(); sessionStorage.clear(); } catch (e) {}
+        window.location.href = 'index.html?deleted=1';
+      } catch (e) {
+        errEl.textContent = 'Could not reach the server. Please check your connection and try again.';
+        errEl.style.display = 'block';
+        confirmBtn.disabled = false;
+        confirmBtn.textContent = 'Delete my account';
+      }
+    };
+  }
+
   async function init() {
     try {
       var result = await sb.auth.getSession();
@@ -697,6 +820,7 @@
       var firstName = name.split(' ')[0];
       setText('user-name', firstName);
       setText('nav-user', name);
+      try { setupDeleteAccount(user); } catch (e) {}
 
       // Cross-device: hydrate onboarding prefs from the account if this device has none
       try {

@@ -27,12 +27,32 @@
 > 47→**52**, CI picks it up automatically). Billing plumbing is **RevenueCat** (`app-purchases.js`,
 > entitlement `pro`) but is **INERT — no keys, no paywall wired, cannot charge anyone**; prices are still
 > undecided (owner). **Full runbook: [`docs/APP_STORE.md`](docs/APP_STORE.md).**
-> ⚠ **Two BLOCKERS before submission, both needing a human:** (1) **in-app account deletion is NOT built** —
-> Apple 5.1.1(v) requires it for any app with signup, and `privacy.html` currently offers deletion only by
-> emailing us, which is an automatic rejection (sketch + the Supabase rows to clear are in the runbook);
-> (2) pricing/paywall decision + store products. Also open: Apple Developer ($99/yr) and Play ($25) accounts
-> aren't created; **the iOS `pod install` + Archive must run on the owner's iMac** (impossible on Linux —
-> that step was skipped here), and neither native project has been compiled or device-tested yet.
+> ⚠ **Open before submission:** pricing/paywall decision + store products; Apple Developer ($99/yr) and
+> Play ($25) accounts aren't created; **the iOS `pod install` + Archive must run on the owner's iMac**
+> (impossible on Linux — that step was skipped here), and neither native project has been compiled or
+> device-tested yet.
+>
+> **2026-07-26 (security fixes from the app review + IN-APP ACCOUNT DELETION built).** The
+> `apologia-engineer` review of the app work found one **CRITICAL** and three HIGH issues, all fixed
+> (`df8e75d`). **🔴 HUMAN ACTION STILL REQUIRED: rotate `METRICS_SECRET` in Vercel.** It was hardcoded
+> (`'Apologia2026!'`) in **`monitor.html`, which is publicly served** — a **pre-existing live exposure**, not
+> introduced by the app work — and it gates `api/metrics.js`, which reads Supabase with the **service-role**
+> key; the app bundle would have widened it into permanently-archived store binaries. The secret is now gone
+> from source (the operator types it at sign-in; verified server-side, held in `sessionStorage`),
+> monitor/logs/admin pages are excluded from the bundle, and a test scans the **built** bundle for secrets.
+> The old value is in git history → **treat as compromised**. Also fixed: **CORS was set only inside the
+> `OPTIONS` branch** on `ask`/`debate`/`devotional`/`feedback`, so the preflight passed but the POST response
+> had no `Access-Control-Allow-Origin` — invisible same-origin on the web, but it would have **silently
+> killed those features in the app**; the 8 drifted hand-copied blocks are now one **`lib/cors.js`** (allowlist
+> replaces `'*'` on token-spending endpoints). Added **`.vercelignore`** (`vercel.json` used a hand-maintained
+> redirect blocklist that every new top-level dir silently escaped — `tests/` was already exposed).
+> **NEW: in-app account deletion** (Apple 5.1.1(v) blocker) — `lib/verify-user.js` + `lib/delete-account.js`
+> + a `?do=delete-account` route folded into `api/new-signup.js` (**Vercel Hobby caps the project at 12
+> functions and we are AT the cap** — hence the `?do=` fold, matching `push.js`/`weekly-email.js`) + a
+> Dashboard "Account" card with a typed-DELETE modal + `privacy.html`. Identity comes **only** from a verified
+> token, fails closed with no service key, auth user deleted **last**. Tests **52 → 62**. ⚠ **Not yet
+> exercised against live Supabase** — test with a throwaway account before submitting; and
+> `push_subscriptions` has no `user_id`, so other devices' subs linger until they expire (fix: add the column).
 >
 > **2026-07-25 (live-AI routing + answer-format fixes + mathematics reel rebuild).** Three shipped, all
 > gated + live on `main`. (1) **Topic-classifier fix** (`api/ask.js`, dual-consensus CLEAN): a core Trinity

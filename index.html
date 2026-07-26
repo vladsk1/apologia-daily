@@ -838,6 +838,25 @@
 </head>
 <body>
 
+  <!-- Account-deleted confirmation. The Dashboard redirects here with ?deleted=1
+       after a successful deletion; closing the loop matters for an irreversible
+       action (and for App Store review, which checks the deletion flow). -->
+  <div id="account-deleted-banner" style="display:none;background:#0f2040;border-bottom:1px solid rgba(200,169,81,0.35);color:#e2eaf4;font-size:0.85rem;line-height:1.6;padding:0.85rem 1.25rem;text-align:center;">
+    Your account and all of its data have been permanently deleted. You&rsquo;re always welcome back &mdash; thank you for studying with us.
+  </div>
+  <script>
+    try {
+      if (new URLSearchParams(location.search).get('deleted') === '1') {
+        var b = document.getElementById('account-deleted-banner');
+        if (b) b.style.display = 'block';
+        // Drop the flag so a refresh or a shared link doesn't repeat the message.
+        if (window.history && history.replaceState) {
+          history.replaceState({}, '', location.pathname);
+        }
+      }
+    } catch (e) {}
+  </script>
+
   <!-- NAV -->
   <nav class="adn-nav">
   <a href="/" class="adn-logo">Apologia<span>Daily</span></a>

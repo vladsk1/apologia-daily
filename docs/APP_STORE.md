@@ -67,25 +67,48 @@ bundle contains no secrets or operator pages.
 3. Review Supabase logs for unexpected `/api/metrics` usage.
 
 
-### 1a. In-app account deletion (Apple Guideline 5.1.1(v)) — **hard blocker, not yet built**
+### 1a. In-app account deletion (Apple Guideline 5.1.1(v)) — **BUILT ✅, needs live testing**
 
 Apple requires that **any app supporting account creation must let the user delete the account
 from inside the app**. A "email us to delete" link is explicitly *not* sufficient, and this is a
-common, reliable rejection.
+common, reliable rejection. Google Play requires the same.
 
-Apologia Daily has signup (`signup.html`) and `privacy.html` currently offers deletion only by
-emailing `hello@apologiadaily.com`. **This needs to be built before iOS submission.** Sketch:
+**What was built:**
 
-- `api/delete-account.js` — verify the caller's Supabase JWT, then use the **service-role** key
-  to delete the auth user and their rows (`user_progress`, journal entries, group memberships,
-  push subscriptions, `ask_rate_limit`). Must fail closed, and must never accept a user id from
-  the request body — take it from the verified token only.
-- A "Delete my account" control in account settings with a confirmation step.
-- Update `privacy.html` to describe the in-app path.
-- Route it past `apologia-engineer` (it touches auth + service-role) before deploy.
+- **`lib/verify-user.js`** — resolves the caller from their own Supabase access token
+  (GoTrue `/auth/v1/user`, so revoked sessions are rejected). Returns `null` on *every* failure
+  mode — missing/malformed/expired token, network error — and callers must treat that as a reject.
+- **`lib/delete-account.js`** — deletes the user's rows across all user-scoped tables, then the
+  auth user **last** (so a mid-way failure cannot leave an unreachable account with orphaned
+  data). Fails closed with no service-role key: it deletes *nothing* rather than half-deleting.
+- **`api/new-signup.js?do=delete-account`** — the HTTP route. Folded into this existing endpoint
+  because **Vercel Hobby caps the project at 12 serverless functions and we are at the cap**
+  (the same reason `push.js` and `weekly-email.js` route by `?do=`). It is the other end of the
+  account lifecycle this file already handles. The user id comes **only** from the verified
+  token; a body-supplied id is ignored. Requires a typed `confirm: "DELETE"` and is rate limited.
+- **`dashboard.html`** — an "Account" section with a confirmation modal that requires typing
+  `DELETE`. It clears local state and signs out afterwards, and never reports success unless the
+  server confirmed it.
+- **`privacy.html`** — now documents the self-service path.
+- **`tests/delete-account.test.mjs`** — asserts the security invariants (identity only from a
+  verified token, fail-closed on misconfiguration, auth user deleted last, user id URL-encoded so
+  it cannot widen the PostgREST filter, and the delete route never falling through to the
+  shared-secret webhook path).
 
-Google Play has a matching requirement (a Data Safety "account deletion" URL plus in-app
-deletion), so this unblocks both stores.
+**Before submitting, verify on a real deploy** (this could not be exercised against live
+Supabase from the build environment):
+
+1. Create a throwaway account, add some progress/flashcards, then delete it from the Dashboard.
+2. Confirm in Supabase that the auth user **and** its rows are gone.
+3. Confirm the old session cannot be reused and that signing up again with the same email works.
+4. `SUPABASE_SERVICE_ROLE_KEY` must be set in Vercel — without it the endpoint correctly refuses
+   and returns an error rather than pretending to delete.
+
+**Known limit — `push_subscriptions`:** that table is keyed by `endpoint` with **no `user_id`**,
+so the server cannot remove a user's rows by id. The client unsubscribes this device before
+calling, and the cron prunes dead endpoints (410) on its next run — but a subscription made on a
+*different* device will linger until it expires. If you want this airtight, add a `user_id`
+column to `push_subscriptions` and delete by it in `lib/delete-account.js`.
 
 ### 1b. Payments — pricing is undecided and the paywall is still a stub
 
@@ -236,7 +259,9 @@ Test with a StoreKit sandbox account (iOS) and a Play licence tester (Android) b
 
 ## 8. Release checklist
 
-- [ ] **In-app account deletion built and deployed** (§1a) ← blocker
+- [ ] **`METRICS_SECRET` rotated in Vercel** (§1a-0) ← the old value is compromised
+- [x] In-app account deletion **built** (§1a) — still needs live end-to-end testing
+- [ ] Account deletion verified against live Supabase (throwaway account, rows gone)
 - [ ] Pricing decided; store products created; paywall wired to the `pro` entitlement (§1b)
 - [ ] Apple Developer + Google Play accounts active
 - [ ] `npm run sync` run after the final site change

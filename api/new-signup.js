@@ -1,4 +1,46 @@
 import { requireSecret } from '../lib/require-secret.js';
+import { applyCors } from '../lib/cors.js';
+import { verifyUser } from '../lib/verify-user.js';
+import { deleteAccount } from '../lib/delete-account.js';
+import { parseBody } from '../lib/parse-body.js';
+import { overRateLimit } from '../lib/ratelimit.js';
+
+/* Delete the CALLER'S OWN account and all their data (Apple Guideline 5.1.1(v);
+   Google Play has the same requirement). See lib/delete-account.js.
+
+   The identity comes solely from the verified access token — a user id in the
+   body is ignored, so this cannot be pointed at someone else's account. */
+async function handleDeleteAccount(req, res) {
+  // Cheap abuse guard before any auth work (deletion attempts should be rare).
+  if (await overRateLimit(req, 20, 'delete-account')) {
+    return res.status(429).json({ error: 'Too many requests. Please try again later.' });
+  }
+
+  const user = await verifyUser(req);
+  if (!user) {
+    return res.status(401).json({ error: 'Not signed in, or your session has expired.' });
+  }
+
+  // Typed confirmation, so a stray POST (or a mis-wired button) cannot erase an
+  // account. The UI asks the user to type DELETE.
+  const body = parseBody(req);
+  if (body.confirm !== 'DELETE') {
+    return res.status(400).json({ error: 'Confirmation required.' });
+  }
+
+  const result = await deleteAccount(user.id);
+
+  if (!result.ok) {
+    // Never claim success we did not achieve: a user told "deleted" when data
+    // remains has been misled about their own privacy.
+    console.error('delete-account failed', { error: result.error, failed: result.failed });
+    return res.status(500).json({
+      error: 'We could not complete the deletion. Nothing has been partially removed that we can leave in place — please contact hello@apologiadaily.com and we will finish it manually.',
+    });
+  }
+
+  return res.status(200).json({ ok: true });
+}
 /* New-signup notifier.
    Fired by a Supabase Database Webhook on INSERT into auth.users. Emails the
    founder so new signups land in real time, and (optionally) records a
@@ -21,9 +63,22 @@ import { requireSecret } from '../lib/require-secret.js';
    INSERT, type HTTP Request, URL https://www.apologiadaily.com/api/new-signup
    (add ?secret=... or an x-signup-secret header to match SIGNUP_HOOK_SECRET). */
 export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  if (req.method === 'OPTIONS') return res.status(200).end();
+  if (applyCors(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+
+  /* ---- Account lifecycle: DELETION (?do=delete-account) ------------------
+     Folded into this endpoint rather than added as api/delete-account.js
+     because Vercel's Hobby plan caps the project at 12 serverless functions
+     and we are at the cap (same reason push.js and weekly-email.js route by
+     ?do=). This is the other end of the lifecycle this file already handles.
+
+     NOTE THE DIFFERENT AUTH MODEL: the signup notifier below is a Supabase
+     webhook guarded by a SHARED SECRET. Deletion is a USER action, so it is
+     authenticated by the caller's own access token and must NEVER fall through
+     to the shared-secret path — hence the early return. */
+  if ((req.query && req.query.do) === 'delete-account') {
+    return handleDeleteAccount(req, res);
+  }
 
   // Shared-secret guard so randoms can't spam the notifier. FAIL CLOSED: if the
   // secret is not configured, reject — never leave this world-writable (matches
