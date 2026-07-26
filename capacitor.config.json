@@ -1,0 +1,30 @@
+{
+  "appId": "com.apologiadaily.app",
+  "appName": "Apologia Daily",
+  "webDir": "app/www",
+  "backgroundColor": "#0a1628",
+  "server": {
+    "androidScheme": "https",
+    "iosScheme": "https"
+  },
+  "ios": {
+    "backgroundColor": "#0a1628",
+    "contentInset": "always",
+    "limitsNavigationsToAppBoundDomains": false
+  },
+  "android": {
+    "backgroundColor": "#0a1628"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1200,
+      "launchAutoHide": true,
+      "backgroundColor": "#0a1628",
+      "showSpinner": false,
+      "androidScaleType": "CENTER_CROP"
+    },
+    "PushNotifications": {
+      "presentationOptions": ["badge", "sound", "alert"]
+    }
+  }
+}

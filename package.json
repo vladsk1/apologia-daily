@@ -1,0 +1,27 @@
+{
+  "name": "apologia-daily-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Native iOS + Android app wrapper for apologiadaily.com, built with Capacitor. The website itself is a static site on Vercel; this packages the client assets into a real offline-capable native app while dynamic data still comes from the live /api and Supabase.",
+  "scripts": {
+    "build:app": "node tools/build-app-bundle.mjs",
+    "sync": "npm run build:app && cap sync",
+    "open:android": "cap open android",
+    "open:ios": "cap open ios",
+    "assets": "capacitor-assets generate --assetPath app/assets"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/app": "^6.0.2",
+    "@capacitor/core": "^6.2.0",
+    "@capacitor/ios": "^6.2.0",
+    "@capacitor/push-notifications": "^6.0.4",
+    "@capacitor/splash-screen": "^6.0.3",
+    "@capacitor/status-bar": "^6.0.2",
+    "@revenuecat/purchases-capacitor": "^9.2.0"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^6.2.0"
+  }
+}

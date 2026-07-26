@@ -1,0 +1,11 @@
+{
+  "_comment": "Copy to the repo ROOT as revenuecat.json (git-ignored) and fill in the real public SDK keys from the RevenueCat dashboard (Project Settings -> API keys). These are PUBLIC/client SDK keys, safe to ship in an app binary — never put a RevenueCat SECRET key here. Purchases stay OFF while these read REPLACE_*. See docs/APP_STORE.md.",
+  "iosApiKey": "REPLACE_WITH_REVENUECAT_KEY_IOS",
+  "androidApiKey": "REPLACE_WITH_REVENUECAT_KEY_ANDROID",
+  "entitlement": "pro",
+  "_products": {
+    "_comment": "Product IDs must match App Store Connect + Play Console exactly. Final prices are a human decision — see docs/APP_STORE.md.",
+    "monthly": "apologia_pro_monthly",
+    "annual": "apologia_pro_annual"
+  }
+}

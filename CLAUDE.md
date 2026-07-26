@@ -13,6 +13,27 @@
 > `xcards/x-honor-the-son.json`. It's gated content (argument+orthodoxy; +neutrality for
 > deity/Trinity/Islam) — reuse the reel/essay's certified framing; details in the `make-reel` skill.
 >
+> **2026-07-26 (NATIVE APP scaffolding — iOS + Android via Capacitor; NOT yet submitted).** The site is now
+> also packaged as a **native app**: `capacitor.config.json` (appId `com.apologiadaily.app`), committed
+> **`ios/`** + **`android/`** projects, `tools/build-app-bundle.mjs` (assembles the git-ignored `app/www`,
+> 372 files — allowlisted to root client files + `answers/`/`library/`/`demo/`, so `api/`, `lib/`,
+> `sources/`, `briefs/`, `tools/`, `docs/`, `tests/` and dotfiles can never ship in a public binary), and
+> `tools/build-app-icons.mjs` → `@capacitor/assets` (113 icon/splash sizes; splash lifts the gold artwork off
+> its navy panel by luminance so the old oval/speck artifacts are gone). **Architecture: assets ship INSIDE
+> the binary** (offline-capable — deliberately not a remote-URL webview, which Apple rejects under 4.2);
+> only `/api/*` + Supabase go to the network, via a **Capacitor-only `fetch` shim** added to `analytics.js`
+> that rewrites relative `/api/*` → `https://apologiadaily.com/api/*`. That file loads on all 317 pages, so
+> the shim is a **strict no-op on the web** and is now guarded by **`tests/app-bridge.test.mjs`** (suite
+> 47→**52**, CI picks it up automatically). Billing plumbing is **RevenueCat** (`app-purchases.js`,
+> entitlement `pro`) but is **INERT — no keys, no paywall wired, cannot charge anyone**; prices are still
+> undecided (owner). **Full runbook: [`docs/APP_STORE.md`](docs/APP_STORE.md).**
+> ⚠ **Two BLOCKERS before submission, both needing a human:** (1) **in-app account deletion is NOT built** —
+> Apple 5.1.1(v) requires it for any app with signup, and `privacy.html` currently offers deletion only by
+> emailing us, which is an automatic rejection (sketch + the Supabase rows to clear are in the runbook);
+> (2) pricing/paywall decision + store products. Also open: Apple Developer ($99/yr) and Play ($25) accounts
+> aren't created; **the iOS `pod install` + Archive must run on the owner's iMac** (impossible on Linux —
+> that step was skipped here), and neither native project has been compiled or device-tested yet.
+>
 > **2026-07-25 (live-AI routing + answer-format fixes + mathematics reel rebuild).** Three shipped, all
 > gated + live on `main`. (1) **Topic-classifier fix** (`api/ask.js`, dual-consensus CLEAN): a core Trinity
 > coherence question ("the sending of the Son by the Father looks like a hierarchy") was misclassified DENOM

@@ -19,6 +19,36 @@
 (function () {
   'use strict';
 
+  /* ---- Native app (Capacitor) bridge ---------------------------------
+     When these web assets run INSIDE the iOS/Android app (Capacitor), the page
+     is served from localhost, so relative "/api/*" calls would resolve to the
+     app shell instead of the live backend. Rewrite them to the production
+     origin so the app's dynamic features (AI tutor, ask, devotional, push,
+     feedback) hit Vercel. Every /api call in the codebase uses a string URL
+     literal (fetch('/api/...')), so a string check covers them all.
+     STRICT NO-OP on the web: window.Capacitor is absent there, so nothing is
+     patched — safe to ship to apologiadaily.com unchanged. Override the origin
+     (e.g. for a staging build) by setting window.AD_API_BASE before this file. */
+  try {
+    var _cap = window.Capacitor;
+    var _inApp = !!(_cap && typeof _cap.isNativePlatform === 'function'
+      ? _cap.isNativePlatform() : (_cap && _cap.isNative));
+    window.__AD_IN_APP = _inApp;
+    if (_inApp && !window.__AD_FETCH_PATCHED && window.fetch) {
+      window.__AD_FETCH_PATCHED = true;
+      var _API_BASE = (window.AD_API_BASE || 'https://apologiadaily.com').replace(/\/+$/, '');
+      var _origFetch = window.fetch.bind(window);
+      window.fetch = function (input, init) {
+        try {
+          if (typeof input === 'string' && input.indexOf('/api/') === 0) {
+            input = _API_BASE + input;
+          }
+        } catch (e) {}
+        return _origFetch(input, init);
+      };
+    }
+  } catch (e) {}
+
   /* ---- Cross-device progress sync (loads regardless of the analytics opt-out
      below — it syncs the USER'S OWN learning progress, not tracking). Strict
      no-op until signed in AND the user_progress migration is run. See
@@ -229,7 +259,10 @@
       var m = document.createElement('meta'); m.name = 'apple-mobile-web-app-title'; m.content = 'Apologia'; return m;
     });
 
-    if ('serviceWorker' in navigator) {
+    /* Skip the service worker inside the native app: the web bundle already
+       ships locally in the app, so a localhost SW just adds a confusing second
+       cache layer (and offline is handled by the bundle itself). */
+    if (!window.__AD_IN_APP && 'serviceWorker' in navigator) {
       window.addEventListener('load', function () {
         navigator.serviceWorker.register('/sw.js').catch(function () {});
       });
