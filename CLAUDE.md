@@ -6,6 +6,13 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **STANDING RULE — X / social share-cards.** Every X-post image uses the brand card generator
+> `tools/reel/gen_xcard.py` (night-sky navy + gold underlined kicker + italic-serif cream/gold
+> headline + shield logo, 1600×900; specs in `tools/reel/xcards/`). **Never ship a flat frame
+> pulled from a reel MP4 as the X image.** Exemplars: `xcards/x-scripture-one-story.json`,
+> `xcards/x-honor-the-son.json`. It's gated content (argument+orthodoxy; +neutrality for
+> deity/Trinity/Islam) — reuse the reel/essay's certified framing; details in the `make-reel` skill.
+>
 > **2026-07-25 (live-AI routing + answer-format fixes + mathematics reel rebuild).** Three shipped, all
 > gated + live on `main`. (1) **Topic-classifier fix** (`api/ask.js`, dual-consensus CLEAN): a core Trinity
 > coherence question ("the sending of the Son by the Father looks like a hierarchy") was misclassified DENOM
@@ -355,7 +362,8 @@ site: long-form, fully-cited deep-dive essays.
 Every piece of written content **must** pass through this pipeline, in order. Do not
 deploy content that has skipped a stage. **This explicitly includes: deep-dive essays,
 Evidence Library fragments, `/answers/*` pages (the flywheel), short-form reel scripts
-(`tools/reel/specs/*`), and the live AI system prompts (`api/ask.js`, `api/*.js`).** The
+(`tools/reel/specs/*`), **X / social share-cards (`tools/reel/xcards/*`)**, and the live AI
+system prompts (`api/ask.js`, `api/*.js`).** The
 "answers" layer is NOT a lighter tier — the over-concession defects found on the JW/deity
 answer pages (2026-07-04) reached production precisely because the answers were treated as
 lower-stakes and shipped without the gate. There is no such thing as content too small to

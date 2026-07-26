@@ -72,6 +72,20 @@ Tooling lives in `tools/reel/`:
    kit: the `voiceover` script, a caption + hashtags, and a one-line note that the video is
    silent-but-captioned and voiceover is a one-pass editor step.
 
+## X / social share-cards — THE standard X-image style (use for EVERY X post image)
+When a thread or post needs an image, **always generate it with `tools/reel/gen_xcard.py`** — the
+brand card: a night-sky navy scene (soft moon + glow top-right, mountain silhouettes), a gold
+underlined kicker, an *italic-serif* headline (a cream line + a gold line), a sans sub-line, and the
+shield logo + apologiadaily.com bottom-left, 1600×900. **NEVER ship a flat frame extracted from the
+reel MP4 as the X image** — that plain title frame is not the brand style and must not be used.
+- **Spec:** a small JSON in `tools/reel/xcards/` — `{ "name", "kicker", "headline":[{t,c}], "sub":[...] }`
+  (`c` is `cream`/`gold`/`dim`). Keep the headline two short parallel lines (cream then gold).
+- **Render:** `python3 gen_xcard.py xcards/<name>.json` → `tools/reel/output/cards/<name>-xcard.png`.
+- **Exemplars (match these):** `xcards/x-scripture-one-story.json` ("Forty voices. / One Author.")
+  and `xcards/x-honor-the-son.json` ("Honor the Son. / Just as the Father.").
+- **It's content — gate it** (argument + orthodoxy; **+ neutrality** for deity/Trinity/Islam), reusing
+  the reel/essay's already-certified framing, and record the gate in the spec's `reviewed` field.
+
 ## Notes / limits
 - No TTS in this environment (Canva AI Voice is editor-only; external/neural TTS hosts are
   policy-blocked). Ship silent+captioned; the user adds voice in CapCut/Canva/InShot.
