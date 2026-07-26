@@ -87,3 +87,44 @@ test('monitor page carries no secret, and an unconfigured dashboard is distingui
   assert.ok(!captured.body.metrics, 'the unconfigured path must not return metrics');
   if (savedSecret !== undefined) process.env.METRICS_SECRET = savedSecret;
 });
+
+test('/api/health signals outages with 503 so uptime monitors can see them', async () => {
+  // Uptime tools (UptimeRobot, Better Stack, Pingdom) judge up-vs-down from the
+  // HTTP STATUS, not the body. This endpoint used to answer 200 even while
+  // reporting "degraded", so a monitor pointed at it stayed green through a
+  // database outage — false reassurance, which is worse than no monitoring.
+  const mkRes = () => { const R = {}; return { setHeader() {}, end() { return this; },
+    status(c) { R.code = c; return this; }, json(b) { R.body = b; return this; }, R }; };
+  const realFetch = globalThis.fetch;
+  const savedKey = process.env.ANTHROPIC_API_KEY;
+  const savedMetrics = process.env.METRICS_SECRET;
+  const savedHealth = process.env.HEALTH_SECRET;
+
+  try {
+    process.env.ANTHROPIC_API_KEY = 'present';
+    // The paid LLM pings stay off; a SKIPPED check must not count as an outage.
+    delete process.env.METRICS_SECRET;
+    delete process.env.HEALTH_SECRET;
+
+    globalThis.fetch = async () => ({ ok: true, json: async () => [{ day_number: 1 }] });
+    const { default: healthy } = await import('../api/health.js?case=ok');
+    let res = mkRes();
+    await healthy({ method: 'GET', query: {}, headers: {} }, res);
+    assert.equal(res.R.code, 200, 'a healthy site must return 200');
+    assert.equal(res.R.body.status, 'healthy');
+    assert.equal(res.R.body.checks.endpoints.status, 'skipped',
+      'the paid pings should be skipped, and skipping must not trip an alarm');
+
+    globalThis.fetch = async () => { throw new Error('database unreachable'); };
+    const { default: degraded } = await import('../api/health.js?case=down');
+    res = mkRes();
+    await degraded({ method: 'GET', query: {}, headers: {} }, res);
+    assert.equal(res.R.code, 503, 'an outage must return 503, not 200');
+    assert.equal(res.R.body.status, 'degraded');
+  } finally {
+    globalThis.fetch = realFetch;
+    if (savedKey === undefined) delete process.env.ANTHROPIC_API_KEY; else process.env.ANTHROPIC_API_KEY = savedKey;
+    if (savedMetrics !== undefined) process.env.METRICS_SECRET = savedMetrics;
+    if (savedHealth !== undefined) process.env.HEALTH_SECRET = savedHealth;
+  }
+});

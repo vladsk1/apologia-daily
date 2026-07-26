@@ -89,7 +89,19 @@ export default async function handler(req, res) {
   const totalMs = Date.now() - startTime;
   const allOk = Object.values(results).every(r => r.status === 'ok' || r.status === 'skipped');
 
-  return res.status(200).json({
+  /* Return 503 when degraded, not 200.
+     Uptime monitors (UptimeRobot, Better Stack, Pingdom, and Vercel's own checks)
+     decide up-vs-down from the HTTP STATUS, not the body. Always answering 200
+     meant this endpoint reported "OK" while telling anyone who read the JSON that
+     it was degraded — so an uptime check pointed here would stay green through a
+     database outage or an expired API key, which is worse than no monitoring at
+     all: it is false reassurance. 503 is the conventional "service unavailable"
+     signal every such tool understands.
+     The body is unchanged, and monitor.html reads res.json() without checking
+     res.ok, so the dashboard keeps working exactly as before.
+     Note `allOk` counts a SKIPPED check as fine — deliberately not run is not a
+     failure — so the paid LLM pings being off can never trip a false alarm. */
+  return res.status(allOk ? 200 : 503).json({
     status: allOk ? 'healthy' : 'degraded',
     timestamp: new Date().toISOString(),
     total_ms: totalMs,
