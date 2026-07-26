@@ -10,8 +10,9 @@
  *      null, and callers must reject.
  *   2. With no service-role key configured, NOTHING is deleted and the result
  *      reports failure — never a false "your data is gone".
- *   3. The auth user is deleted last, so a mid-way failure cannot leave an
- *      unreachable account with orphaned personal data.
+ *   3. The auth user is deleted last AND SKIPPED ENTIRELY if any table delete
+ *      failed, so a mid-way failure cannot leave an unreachable account with
+ *      orphaned personal data. (Deleting last only helps if we actually abort.)
  *   4. The user id is URL-encoded into the PostgREST filter, so it cannot be
  *      used to widen the delete.
  *
@@ -26,6 +27,9 @@ import path from 'node:path';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const LIB = (f) => path.join(ROOT, 'lib', f);
+
+// The service-role delete path now requires a UUID-shaped id.
+const UID = '11111111-2222-4333-8444-555555555555';
 
 const realFetch = globalThis.fetch;
 afterEach(() => { globalThis.fetch = realFetch; });
@@ -71,7 +75,7 @@ test('deleteAccount: without a service key it deletes NOTHING and reports failur
   const calls = [];
   globalThis.fetch = async (url, opt) => { calls.push(`${opt.method} ${url}`); return { ok: true, status: 200 }; };
 
-  const r = await deleteAccount('user-123');
+  const r = await deleteAccount(UID);
   assert.equal(r.ok, false);
   assert.equal(r.error, 'not_configured');
   assert.deepEqual(calls, [], 'a misconfigured deploy must not half-delete an account');
@@ -84,30 +88,86 @@ test('deleteAccount: removes app rows, then the auth user last', async () => {
   const calls = [];
   globalThis.fetch = async (url, opt) => { calls.push(`${opt.method} ${url}`); return { ok: true, status: 200 }; };
 
-  const r = await deleteAccount('user-123');
+  const r = await deleteAccount(UID);
   assert.equal(r.ok, true);
   assert.ok(calls.every((c) => c.startsWith('DELETE ')), 'only DELETEs may be issued');
   assert.ok(calls.some((c) => c.includes('/rest/v1/user_progress')), 'app rows must be deleted');
-  assert.ok(calls.at(-1).includes('/auth/v1/admin/users/user-123'),
+  assert.ok(calls.at(-1).includes(`/auth/v1/admin/users/${UID}`),
     'the auth user must be deleted LAST, so a failure cannot orphan personal data');
-  assert.ok(calls.filter((c) => c.includes('/rest/v1/')).every((c) => c.includes('user-123')),
+  assert.ok(calls.filter((c) => c.includes('/rest/v1/')).every((c) => c.includes(UID)),
     'every row delete must be filtered to the verified user');
 });
 
-test('deleteAccount: a missing table is tolerated, a real error is reported', async () => {
+test('deleteAccount: a table absent from THIS project is tolerated', async () => {
   process.env.SUPABASE_SERVICE_ROLE_KEY = 'svc-key';
   const deleteAccount = await freshDeleteAccount();
 
-  globalThis.fetch = async (url) => (url.includes('coach_signals') ? { ok: false, status: 404 } : { ok: true, status: 200 });
-  assert.equal((await deleteAccount('user-123')).ok, true, 'a table absent from this project is not an error');
+  // USER_TABLES is deliberately broader than the live schema, so "no such table"
+  // (identified by the PostgREST error CODE, not merely a 4xx) must not fail.
+  globalThis.fetch = async (url) => (url.includes('coach_signals')
+    ? { ok: false, status: 404, json: async () => ({ code: 'PGRST205' }) }
+    : { ok: true, status: 200 });
+  assert.equal((await deleteAccount(UID)).ok, true);
+});
 
-  globalThis.fetch = async (url) => (url.includes('flashcards') ? { ok: false, status: 500 } : { ok: true, status: 200 });
-  const r = await deleteAccount('user-123');
-  assert.equal(r.ok, false, 'a server error must not be reported as a completed deletion');
-  assert.ok(r.failed.includes('flashcards'));
+test('deleteAccount: a WRONG COLUMN is never mistaken for an absent table', async () => {
+  // The bug this guards: treating any 400/404 as "table absent" means a renamed
+  // or mistyped key column returns 400 (42703, undefined_column), every row
+  // survives, and the user is told their data was erased. Silent data retention.
+  process.env.SUPABASE_SERVICE_ROLE_KEY = 'svc-key';
+  const deleteAccount = await freshDeleteAccount();
 
-  globalThis.fetch = async (url) => (url.includes('/auth/v1/admin/users/') ? { ok: false, status: 500 } : { ok: true, status: 200 });
-  assert.equal((await deleteAccount('user-123')).error, 'auth_delete_failed');
+  globalThis.fetch = async (url) => (url.includes('study_plans_progress')
+    ? { ok: false, status: 400, json: async () => ({ code: '42703', message: 'column "user_id" does not exist' }) }
+    : { ok: true, status: 200 });
+
+  const r = await deleteAccount(UID);
+  assert.equal(r.ok, false, 'an undefined-column error must NOT be reported as success');
+  assert.ok(r.failed.includes('study_plans_progress'));
+});
+
+test('deleteAccount: a failed table delete ABORTS before the auth user is touched', async () => {
+  // Deleting the auth user "last" only protects the user if we actually stop.
+  // Otherwise the login is destroyed while rows survive: orphaned personal data
+  // the user can never reach, and cannot ask us to remove.
+  process.env.SUPABASE_SERVICE_ROLE_KEY = 'svc-key';
+  const deleteAccount = await freshDeleteAccount();
+
+  const calls = [];
+  globalThis.fetch = async (url) => {
+    calls.push(url);
+    return url.includes('journal_entries')
+      ? { ok: false, status: 500, json: async () => ({}) }
+      : { ok: true, status: 200 };
+  };
+
+  const r = await deleteAccount(UID);
+  assert.equal(r.ok, false);
+  assert.equal(r.error, 'rows_failed');
+  assert.ok(r.failed.includes('journal_entries'));
+  assert.ok(!calls.some((c) => c.includes('/auth/v1/admin/users/')),
+    'the auth user MUST NOT be deleted when any table delete failed');
+});
+
+test('deleteAccount: failure to delete the auth user is fatal', async () => {
+  process.env.SUPABASE_SERVICE_ROLE_KEY = 'svc-key';
+  const deleteAccount = await freshDeleteAccount();
+  globalThis.fetch = async (url) => (url.includes('/auth/v1/admin/users/')
+    ? { ok: false, status: 500 }
+    : { ok: true, status: 200 });
+  assert.equal((await deleteAccount(UID)).error, 'auth_delete_failed');
+});
+
+test('deleteAccount: a non-UUID id is refused before any delete is issued', async () => {
+  process.env.SUPABASE_SERVICE_ROLE_KEY = 'svc-key';
+  const deleteAccount = await freshDeleteAccount();
+  const calls = [];
+  globalThis.fetch = async (url) => { calls.push(url); return { ok: true, status: 200 }; };
+
+  const r = await deleteAccount('not-a-uuid');
+  assert.equal(r.ok, false);
+  assert.equal(r.error, 'bad_user_id');
+  assert.deepEqual(calls, [], 'nothing may be deleted for a malformed id');
 });
 
 test('deleteAccount: the user id cannot widen the delete filter', async () => {
@@ -115,17 +175,62 @@ test('deleteAccount: the user id cannot widen the delete filter', async () => {
   const deleteAccount = await freshDeleteAccount();
 
   const calls = [];
-  globalThis.fetch = async (url, opt) => { calls.push(url); return { ok: true, status: 200 }; };
-  await deleteAccount('abc&select=*');
+  globalThis.fetch = async (url) => { calls.push(url); return { ok: true, status: 200 }; };
 
-  assert.ok(calls.every((c) => !c.includes('abc&select=*')), 'the id must not be interpolated raw');
-  assert.ok(calls.some((c) => c.includes('abc%26select')), 'the id must be URL-encoded');
+  // Two independent defences. First: an id carrying PostgREST separators (`&`,
+  // `,`) is rejected outright by the UUID check, so it never reaches a filter.
+  const r = await deleteAccount('abc&select=*,other');
+  assert.equal(r.error, 'bad_user_id');
+  assert.deepEqual(calls, [], 'an id with query separators must never be sent');
+
+  // Second: the id that IS accepted is URL-encoded into the filter, and the
+  // filter is always present and always scoped with eq.
+  await deleteAccount(UID);
+  const rowDeletes = calls.filter((c) => c.includes('/rest/v1/'));
+  assert.ok(rowDeletes.length > 0);
+  assert.ok(rowDeletes.every((c) => /=eq\.[0-9a-f-]+$/i.test(c)),
+    'every row delete must carry an eq. filter on the user id — never an unfiltered DELETE');
+});
+
+test('CORS allows the Authorization header (without it the app cannot delete)', async () => {
+  // The delete call sends a bearer token, which forces a preflight. If
+  // Access-Control-Allow-Headers omits `authorization`, the browser blocks the
+  // request before sending it. Same-origin on the web hides this completely, so
+  // it would only surface in the native app — the platform that requires the feature.
+  const { applyCors } = await import(LIB('cors.js'));
+  const headers = {};
+  const res = { setHeader: (k, v) => { headers[k] = v; }, status() { return this; }, end() { return this; } };
+  applyCors({ method: 'OPTIONS', headers: { origin: 'https://localhost' } }, res);
+
+  assert.match(String(headers['Access-Control-Allow-Headers']).toLowerCase(), /authorization/,
+    'Authorization must be an allowed request header');
+  assert.match(String(headers['Access-Control-Allow-Headers']).toLowerCase(), /content-type/);
+});
+
+test('endpoint: only POST reaches the delete route, and the webhook secret cannot trigger it', () => {
+  const src = readFileSync(path.join(ROOT, 'api', 'new-signup.js'), 'utf8');
+
+  // Method check precedes the ?do= branch, so GET/DELETE get a 405.
+  const methodIdx = src.indexOf("req.method !== 'POST'");
+  const doIdx = src.indexOf("=== 'delete-account'");
+  assert.ok(methodIdx !== -1 && doIdx !== -1 && methodIdx < doIdx,
+    'non-POST requests must be rejected before the delete route');
+
+  // The shared-secret webhook path must never reach deleteAccount: the only call
+  // site is inside handleDeleteAccount, which is token-authenticated.
+  const calls = src.match(/deleteAccount\(/g) || [];
+  assert.equal(calls.length, 1, 'deleteAccount must have exactly one call site');
+  const handlerStart = src.indexOf('async function handleDeleteAccount');
+  const handlerEnd = src.indexOf('\n}', src.indexOf('return res.status(200).json({ ok: true });'));
+  const callIdx = src.indexOf('deleteAccount(user.id)');
+  assert.ok(callIdx > handlerStart && callIdx < handlerEnd,
+    'the only deleteAccount call must sit inside the token-authenticated handler');
 });
 
 test('endpoint: deletion is authenticated by token and never by a body-supplied id', () => {
   const src = readFileSync(path.join(ROOT, 'api', 'new-signup.js'), 'utf8');
 
-  assert.match(src, /verifyUser\(req\)/, 'the caller must be identified from their token');
+  assert.match(src, /verifyUserResult\(req\)/, 'the caller must be identified from their token');
   assert.match(src, /deleteAccount\(user\.id\)/,
     'deletion must use the VERIFIED user id — never one taken from the request body');
   assert.ok(!/deleteAccount\((body|req\.body)/.test(src),

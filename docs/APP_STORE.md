@@ -79,8 +79,11 @@ common, reliable rejection. Google Play requires the same.
   (GoTrue `/auth/v1/user`, so revoked sessions are rejected). Returns `null` on *every* failure
   mode — missing/malformed/expired token, network error — and callers must treat that as a reject.
 - **`lib/delete-account.js`** — deletes the user's rows across all user-scoped tables, then the
-  auth user **last** (so a mid-way failure cannot leave an unreachable account with orphaned
-  data). Fails closed with no service-role key: it deletes *nothing* rather than half-deleting.
+  auth user **last** — and **aborts entirely if any table delete failed**, so a mid-way failure
+  can never destroy the login while rows survive (orphaned data the user could no longer reach).
+  Fails closed with no service-role key: it deletes *nothing* rather than half-deleting. A
+  PostgREST error is only tolerated when it means "no such table" (`42P01`/`PGRST205`/`PGRST106`);
+  a wrong *column* (`42703`) is a failure, never a silent skip that would report a false success.
 - **`api/new-signup.js?do=delete-account`** — the HTTP route. Folded into this existing endpoint
   because **Vercel Hobby caps the project at 12 serverless functions and we are at the cap**
   (the same reason `push.js` and `weekly-email.js` route by `?do=`). It is the other end of the
@@ -90,10 +93,11 @@ common, reliable rejection. Google Play requires the same.
   `DELETE`. It clears local state and signs out afterwards, and never reports success unless the
   server confirmed it.
 - **`privacy.html`** — now documents the self-service path.
-- **`tests/delete-account.test.mjs`** — asserts the security invariants (identity only from a
-  verified token, fail-closed on misconfiguration, auth user deleted last, user id URL-encoded so
-  it cannot widen the PostgREST filter, and the delete route never falling through to the
-  shared-secret webhook path).
+- **`tests/delete-account.test.mjs`** — asserts the security invariants: identity only from a
+  verified token, fail-closed on misconfiguration, the auth delete **skipped** when any table
+  failed, a wrong column never mistaken for an absent table, a non-UUID id refused before any
+  delete is issued, `Authorization` present in the CORS allow-list (without it the app cannot
+  call this at all), and the delete route never falling through to the shared-secret webhook path.
 
 **Before submitting, verify on a real deploy** (this could not be exercised against live
 Supabase from the build environment):
@@ -101,8 +105,10 @@ Supabase from the build environment):
 1. Create a throwaway account, add some progress/flashcards, then delete it from the Dashboard.
 2. Confirm in Supabase that the auth user **and** its rows are gone.
 3. Confirm the old session cannot be reused and that signing up again with the same email works.
-4. `SUPABASE_SERVICE_ROLE_KEY` must be set in Vercel — without it the endpoint correctly refuses
-   and returns an error rather than pretending to delete.
+4. **Set BOTH env vars in Vercel** — `SUPABASE_SERVICE_ROLE_KEY` (to delete the rows) and
+   **`SUPABASE_ANON_KEY`** (to verify the caller's token). `SUPABASE_ANON_KEY` is **new to this
+   repo**: without it every deletion fails closed with a 503 and a server log, rather than
+   pretending to delete. The anon key is the public one already embedded in the site's HTML.
 
 **Known limit — `push_subscriptions`:** that table is keyed by `endpoint` with **no `user_id`**,
 so the server cannot remove a user's rows by id. The client unsubscribes this device before

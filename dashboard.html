@@ -672,14 +672,13 @@
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem;justify-content:space-between;">
         <div style="font-size:0.82rem;color:rgba(255,255,255,0.6);line-height:1.6;max-width:46ch;">
           Signed in as <span id="account-email" style="color:rgba(255,255,255,0.85);"></span>.
-          Deleting your account permanently removes your progress, flashcards, journal entries and group memberships. This cannot be undone.
+          Deleting your account permanently removes your progress, flashcards, journal entries and group memberships &mdash; and any study group you created is deleted for all of its members. This cannot be undone.
         </div>
         <button type="button" id="delete-account-btn"
           style="font-family:inherit;font-size:0.78rem;font-weight:600;background:transparent;color:#e07b6a;border:1px solid rgba(224,123,106,0.45);border-radius:4px;padding:8px 16px;cursor:pointer;white-space:nowrap;">
           Delete account
         </button>
       </div>
-      <div id="delete-account-msg" style="display:none;font-size:0.8rem;line-height:1.6;margin-top:0.85rem;"></div>
     </div>
 
   </div>
@@ -689,7 +688,7 @@
     <div style="background:#0a1628;border:1px solid rgba(255,255,255,0.12);border-radius:8px;max-width:440px;width:100%;padding:1.75rem;">
       <div style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#fff;margin-bottom:0.75rem;">Delete your account?</div>
       <div style="font-size:0.85rem;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:1rem;">
-        This permanently deletes your account and all of your data &mdash; progress, flashcards, journal entries, study-group membership and messages. <strong style="color:rgba(255,255,255,0.9);">It cannot be undone.</strong>
+        This permanently deletes your account and all of your data &mdash; progress, flashcards, journal entries, study-group membership and messages. If you created a study group, <strong style="color:rgba(255,255,255,0.9);">that group and its messages are deleted for everyone in it.</strong> <strong style="color:rgba(255,255,255,0.9);">This cannot be undone.</strong>
       </div>
       <label for="delete-confirm-input" style="display:block;font-size:0.78rem;color:rgba(255,255,255,0.55);margin-bottom:0.4rem;">Type <strong style="color:#e07b6a;">DELETE</strong> to confirm:</label>
       <input id="delete-confirm-input" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false"

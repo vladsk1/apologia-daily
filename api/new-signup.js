@@ -1,9 +1,9 @@
 import { requireSecret } from '../lib/require-secret.js';
 import { applyCors } from '../lib/cors.js';
-import { verifyUser } from '../lib/verify-user.js';
+import { verifyUserResult } from '../lib/verify-user.js';
 import { deleteAccount } from '../lib/delete-account.js';
 import { parseBody } from '../lib/parse-body.js';
-import { overRateLimit } from '../lib/ratelimit.js';
+import { overRateLimit, clientIp } from '../lib/ratelimit.js';
 
 /* Delete the CALLER'S OWN account and all their data (Apple Guideline 5.1.1(v);
    Google Play has the same requirement). See lib/delete-account.js.
@@ -11,18 +11,27 @@ import { overRateLimit } from '../lib/ratelimit.js';
    The identity comes solely from the verified access token — a user id in the
    body is ignored, so this cannot be pointed at someone else's account. */
 async function handleDeleteAccount(req, res) {
-  // Cheap abuse guard before any auth work (deletion attempts should be rare).
-  if (await overRateLimit(req, 20, 'delete-account')) {
-    return res.status(429).json({ error: 'Too many requests. Please try again later.' });
-  }
-
-  const user = await verifyUser(req);
+  const { user, reason } = await verifyUserResult(req);
   if (!user) {
+    if (reason === 'unavailable') {
+      return res.status(503).json({ error: 'We cannot reach our sign-in service right now. Please try again shortly.' });
+    }
     return res.status(401).json({ error: 'Not signed in, or your session has expired.' });
   }
 
+  /* Rate limit AFTER authenticating, keyed on the user — not the IP. Being able
+     to delete your account is the compliance requirement, and an IP-keyed cap
+     would let a stranger behind the same carrier NAT exhaust the bucket and lock
+     a real user out of deleting their own data. Deletion is idempotent and
+     already gated on a valid token, so a modest per-user cap is enough. */
+  if (await overRateLimit(req, 10, 'delete-account:' + user.id)) {
+    res.setHeader('Retry-After', '3600');
+    return res.status(429).json({ error: 'Too many attempts. Please try again later.' });
+  }
+
   // Typed confirmation, so a stray POST (or a mis-wired button) cannot erase an
-  // account. The UI asks the user to type DELETE.
+  // account. This is a safety interlock, not a security control — the real gate
+  // is the verified token above.
   const body = parseBody(req);
   if (body.confirm !== 'DELETE') {
     return res.status(400).json({ error: 'Confirmation required.' });
@@ -32,12 +41,27 @@ async function handleDeleteAccount(req, res) {
 
   if (!result.ok) {
     // Never claim success we did not achieve: a user told "deleted" when data
-    // remains has been misled about their own privacy.
-    console.error('delete-account failed', { error: result.error, failed: result.failed });
+    // remains has been misled about their own privacy. Note deleteAccount ABORTS
+    // before removing the login if any table failed, so in the 'rows_failed' and
+    // 'not_configured' cases the account genuinely still works and they can retry.
+    console.error('delete-account failed', { userId: user.id, error: result.error, failed: result.failed });
+    const stillIntact = result.error === 'rows_failed' || result.error === 'not_configured' || result.error === 'bad_user_id';
     return res.status(500).json({
-      error: 'We could not complete the deletion. Nothing has been partially removed that we can leave in place — please contact hello@apologiadaily.com and we will finish it manually.',
+      error: stillIntact
+        ? 'We could not complete the deletion, so we stopped without removing anything — your account is still intact. Please try again, or email hello@apologiadaily.com and we will finish it manually.'
+        : 'We could not finish the deletion. Please email hello@apologiadaily.com and we will complete it manually.',
     });
   }
+
+  /* Audit trail. This is an irreversible, service-role destruction of a person's
+     account; without a record there is nothing to answer "I never asked for this"
+     and nothing to spot a stolen token being used this way. */
+  console.log('account-deleted', {
+    userId: user.id,
+    ip: clientIp(req),
+    at: new Date().toISOString(),
+    deleted: result.deleted,
+  });
 
   return res.status(200).json({ ok: true });
 }
@@ -56,7 +80,10 @@ async function handleDeleteAccount(req, res) {
      SIGNUP_NOTIFY_FROM    (default: "Apologia Daily <onboarding@resend.dev>")
      SIGNUP_HOOK_SECRET    (optional; if set, the webhook must pass it as
                             ?secret=... or header x-signup-secret)
-     SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY  (optional; adds running total)
+     SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY  (optional for the notifier; REQUIRED
+                            for ?do=delete-account, which deletes the user's rows)
+     SUPABASE_ANON_KEY     (REQUIRED for ?do=delete-account: used to verify the
+                            caller's own access token against GoTrue)
      POSTHOG_KEY, POSTHOG_HOST                (optional; records the event)
 
    Supabase setup: Database > Webhooks > Create > table auth.users, event
