@@ -6,6 +6,13 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **LATEST — 2026-07-26:** shipped the **native app scaffolding** (Capacitor: `ios/` + `android/`, inert
+> RevenueCat), **in-app account deletion** (Apple 5.1.1(v) blocker — token-authenticated, aborts rather than
+> half-deletes), **app-review security fixes** (`lib/cors.js`; secret out of the public `monitor.html`;
+> `.vercelignore`), and **truthful monitoring** (`/api/health` now 503s when degraded, so UptimeRobot can
+> actually see an outage). Tests 47 → **70**. ⚠ Account deletion has **never run against live Supabase** —
+> test with a throwaway account before submitting. Detail below + `HANDOFF.md`.
+>
 > **STANDING RULE — X / social share-cards.** Every X-post image uses the brand card generator
 > `tools/reel/gen_xcard.py` (night-sky navy + gold underlined kicker + italic-serif cream/gold
 > headline + shield logo, 1600×900; specs in `tools/reel/xcards/`). **Never ship a flat frame
