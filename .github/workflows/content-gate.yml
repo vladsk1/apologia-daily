@@ -57,6 +57,8 @@ jobs:
         run: node tools/sync-nav.mjs --check
       - name: Check search index is in sync
         run: node tools/build-search-index.mjs --check
+      - name: Check editorial-standards figures are still true
+        run: node tools/update-trust-numbers.mjs --check
       - name: Check source library index is in sync
         run: node tools/build-sources-index.mjs --check
       - name: Check argument-briefs index is in sync

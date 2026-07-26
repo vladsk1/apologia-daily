@@ -240,8 +240,14 @@
           </div>
         </div>
         <div class="res-foot">
-          <span class="verify-badge" id="r-badge">&#10003; Reviewed for accuracy &amp; orthodoxy</span>
+          <!-- The badge asserts a review; link it to the page that shows what that
+               review actually is, so the claim is checkable rather than decorative. -->
+          <a class="verify-badge" id="r-badge" href="/editorial-standards.html" style="text-decoration:none;">&#10003; Reviewed for accuracy &amp; orthodoxy</a>
           <span class="ai-note" id="r-ai" style="display:none;"></span>
+          <!-- Shown in BOTH states. A freshly generated answer carries the honest
+               "not individually reviewed" note, which is exactly the moment a reader
+               most wants to know what our checks do and don't cover. -->
+          <a href="/editorial-standards.html" style="font-family:var(--font-ui);font-size:0.72rem;color:#6b7c93;text-decoration:none;white-space:nowrap;">How we check our work &rarr;</a>
         </div>
       </div>
     </div>
