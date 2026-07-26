@@ -11,6 +11,19 @@ import { requireSecret } from '../lib/require-secret.js';
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(204).end();
 
+  /* Distinguish "this dashboard was never configured" from "wrong secret" so the
+     monitor page can tell the operator which it is, instead of rejecting every
+     password they type with no way to tell why. requireSecret correctly fails
+     closed when the env var is unset, but both cases then look identical (401).
+     Disclosing "not configured" leaks nothing: the 401 message below already
+     says the same thing, and no data is returned on this path either way. */
+  if (!process.env.METRICS_SECRET) {
+    return res.status(503).json({
+      error: 'not_configured',
+      message: 'Product metrics are off: set METRICS_SECRET in the Vercel project settings to enable them.',
+    });
+  }
+
   if (!requireSecret(req, res, { envVars: ['METRICS_SECRET'], message: 'Unauthorized — set METRICS_SECRET in env and supply it.' })) return;
 
   var URL = process.env.SUPABASE_URL || 'https://noprgxkwniouukmrfozc.supabase.co';

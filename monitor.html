@@ -251,6 +251,15 @@
          defined by the sign-in gate below. */
       window.adLoadMetrics = function(){
       var secret = (window.adMonitorSecret && window.adMonitorSecret()) || '';
+      if (window.adMonitorLimited) {
+        cards.innerHTML='<div style="color:#7a8fa8;font-size:.85rem;line-height:1.7;">'
+          + 'Product metrics are <strong style="color:#c8a951;">off</strong>. '
+          + 'To turn them on, add an environment variable <code style="color:#e2eaf4;">METRICS_SECRET</code> '
+          + 'in the Vercel project settings, then reload this page and enter that value. '
+          + 'Everything else on this page works without it.</div>';
+        notes.innerHTML='';
+        return;
+      }
       if (!secret) { cards.innerHTML='<div style="color:#7a8fa8;font-size:.85rem;">Sign in to load metrics.</div>'; return; }
       fetch('/api/metrics?secret=' + encodeURIComponent(secret)).then(function(r){return r.json();}).then(function(d){
         var m=d.metrics||{};
@@ -480,6 +489,20 @@
       // sessionStorage already scopes this to the tab, so no manual expiry is
       // needed: closing the tab ends the session.
       if (window.adMonitorSecret()) { showMonitor(); return true; }
+
+      /* If METRICS_SECRET was never configured there is no password to ask for,
+         and demanding one would lock the operator out of the panels that need no
+         secret at all (Services / health). Probe once: if the server reports the
+         dashboard is unconfigured, open the page in limited mode. The gated
+         endpoints still refuse to return data, so nothing is bypassed. */
+      fetch('/api/metrics').then(function (r) {
+        if (r.status !== 503) return;
+        return r.json().then(function (d) {
+          if (!d || d.error !== 'not_configured') return;
+          window.adMonitorLimited = true;
+          showMonitor();
+        });
+      }).catch(function () {});
     } catch(e) {}
     // Focus the password input
     setTimeout(function() {

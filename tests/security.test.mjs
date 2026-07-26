@@ -57,3 +57,33 @@ test('secret-guarded endpoints use the shared requireSecret helper (no hardcoded
       `${f}: a secret must not have a hardcoded fallback (fail closed instead)`);
   }
 });
+
+test('monitor page carries no secret, and an unconfigured dashboard is distinguishable', async () => {
+  // The metrics secret used to be hardcoded in monitor.html, which is publicly
+  // served. It must never come back — the operator supplies it at sign-in.
+  const page = readFileSync(new URL('../monitor.html', import.meta.url), 'utf8');
+  assert.ok(!/ADMIN_PASSWORD\s*=\s*['"][^'"]+['"]/.test(page),
+    'monitor.html must not hardcode an admin password');
+  assert.ok(!/secret=['"]?\s*\+?\s*encodeURIComponent\(\s*['"][^'"]+['"]\s*\)/.test(page),
+    'monitor.html must not embed a literal metrics secret');
+  assert.match(page, /sessionStorage/, 'the typed secret should live in sessionStorage, not source');
+
+  // With METRICS_SECRET unset, /api/metrics must answer 503 not_configured rather
+  // than a bare 401. Otherwise "never set up" and "wrong password" are
+  // indistinguishable, and the operator is locked out of the panels that need no
+  // secret at all. It still returns NO data on this path.
+  const savedSecret = process.env.METRICS_SECRET;
+  delete process.env.METRICS_SECRET;
+  const { default: handler } = await import('../api/metrics.js?state=unset');
+  const captured = {};
+  const res = {
+    setHeader() {}, end() { return this; },
+    status(c) { captured.code = c; return this; },
+    json(b) { captured.body = b; return this; },
+  };
+  await handler({ method: 'GET', query: {}, headers: {} }, res);
+  assert.equal(captured.code, 503);
+  assert.equal(captured.body.error, 'not_configured');
+  assert.ok(!captured.body.metrics, 'the unconfigured path must not return metrics');
+  if (savedSecret !== undefined) process.env.METRICS_SECRET = savedSecret;
+});
