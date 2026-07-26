@@ -29,8 +29,15 @@
   'use strict';
 
   var PLACEHOLDER = 'REPLACE_WITH_REVENUECAT_KEY';
-  var ENTITLEMENT = 'pro';           // RevenueCat entitlement identifier
+  var DEFAULT_ENTITLEMENT = 'pro';   // RevenueCat entitlement identifier
   var cfg = null, ready = false, initPromise = null;
+
+  /* The entitlement name is also declared in app/revenuecat.example.json. Read
+     it from the config so the two cannot drift into checking different names
+     (which would silently deny access to paying users). */
+  function entitlement() {
+    return (cfg && cfg.entitlement) || DEFAULT_ENTITLEMENT;
+  }
 
   function inApp() {
     var c = window.Capacitor;
@@ -53,9 +60,23 @@
       .then(function (j) { cfg = j || {}; return cfg; });
   }
 
+  /* Accept ONLY a public SDK key. RevenueCat's public keys are prefixed
+     `appl_` (Apple) and `goog_` (Google); a SECRET key (`sk_...`) grants full
+     account API access and must never ship in a binary that anyone can unzip.
+     Positive-format matching (not just "isn't a placeholder") means a
+     mis-pasted secret key leaves purchases OFF rather than leaking. */
   function keyFor(c) {
     var k = platform() === 'ios' ? c.iosApiKey : c.androidApiKey;
-    return (k && k.indexOf(PLACEHOLDER) === -1 && k.indexOf('REPLACE') === -1) ? k : null;
+    if (!k || typeof k !== 'string') return null;
+    if (k.indexOf(PLACEHOLDER) !== -1 || k.indexOf('REPLACE') !== -1) return null;
+    if (!/^(appl_|goog_)/.test(k)) {
+      try {
+        console.error('[purchases] Ignoring RevenueCat key: expected a PUBLIC SDK key ' +
+          '(appl_… / goog_…). Never put a secret key (sk_…) in revenuecat.json.');
+      } catch (e) {}
+      return null;
+    }
+    return k;
   }
 
   function plugin() {
@@ -91,7 +112,7 @@
         return plugin().getCustomerInfo().then(function (res) {
           var info = (res && res.customerInfo) || res || {};
           var ent = info.entitlements && info.entitlements.active;
-          return !!(ent && ent[ENTITLEMENT]);
+          return !!(ent && ent[entitlement()]);
         }).catch(function () { return false; });
       });
     },

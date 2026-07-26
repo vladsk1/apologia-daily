@@ -5,6 +5,7 @@ import { retrieveSources } from '../lib/retrieve-sources.js';
 import { retrieveBriefs } from '../lib/retrieve-briefs.js';
 import { parseBody } from '../lib/parse-body.js';
 
+import { applyCors } from '../lib/cors.js';
 // Build the dynamic "verified primary sources" block appended to the system
 // prompt when retrieval finds relevant passages. Only fact-checked, public-domain
 // entries reach here (see lib/sources-verified.js). The instructions REINFORCE the
@@ -54,7 +55,7 @@ RULES FOR THIS FRAMING (these do not relax any rule above, and do not override y
 }
 
 export default async function handler(req, res) {
-  if (req.method === 'OPTIONS') { res.setHeader('Access-Control-Allow-Origin', '*'); res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS'); res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); return res.status(200).end(); }
+  if (applyCors(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {

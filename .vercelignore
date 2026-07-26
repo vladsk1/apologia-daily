@@ -1,0 +1,40 @@
+# Files NOT uploaded to Vercel.
+#
+# vercel.json blocks build/meta trees with a hand-maintained REDIRECT list
+# (/docs/*, /tools/*, /.claude/*, ...). That list drifts: every new top-level
+# directory is publicly served until someone remembers to add a rule — /tests/*
+# was already exposed that way, and the native-app work added android/, ios/ and
+# app/. This file is the deny-by-default complement: excluded paths are never
+# uploaded, so they cannot be served at all.
+#
+# ⚠ DO NOT exclude api/ or lib/ — the serverless functions are api/*.js and they
+# import from lib/ at runtime. Everything below is build-, docs- or app-only.
+
+# Native app projects and the generated web bundle (can contain signing config)
+android/
+ios/
+app/
+
+# App toolchain. The serverless functions import ONLY Node built-ins (verified:
+# no bare npm imports in api/ or lib/), so the site needs no npm install. Keeping
+# package.json out of the upload also preserves Vercel's existing build detection
+# for the website, which had no root package.json before the app work.
+node_modules/
+package.json
+package-lock.json
+capacitor.config.json
+
+# Build scripts, tests, and internal docs — never served
+tools/
+tests/
+docs/
+.claude/
+.github/
+
+# Local secrets (belt and braces; also git-ignored)
+revenuecat.json
+*.keystore
+*.jks
+*.p8
+*.p12
+*.mobileprovision

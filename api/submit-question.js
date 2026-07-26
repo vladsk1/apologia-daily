@@ -1,4 +1,5 @@
 import { overRateLimit } from '../lib/ratelimit.js';
+import { applyCors } from '../lib/cors.js';
 /* Question capture — the content flywheel intake.
    Visitors submit a question (from /answers/ or ask-anything); the founder gets
    an email so good questions can be drafted, run through the QA + orthodoxy
@@ -15,10 +16,7 @@ import { overRateLimit } from '../lib/ratelimit.js';
    Public browser form, so no shared secret. Spam is contained by a length cap,
    a required-field check, and an optional honeypot field ("website"). */
 export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  if (req.method === 'OPTIONS') return res.status(200).end();
+  if (applyCors(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   var body = req.body;

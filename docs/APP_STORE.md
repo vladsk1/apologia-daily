@@ -43,6 +43,30 @@ npm run sync         # rebuilds app/www AND copies it into ios/ + android/
 
 ## 1. BLOCKERS — do these before submitting
 
+### 1a-0. ROTATE `METRICS_SECRET` — **do this now, independently of the app**
+
+A code review of the app work found the production `METRICS_SECRET` hardcoded in
+`monitor.html` (`'Apologia2026!'`), in two places: the metrics fetch and a client-side
+"admin password" gate. `monitor.html` is **publicly served** (it is not blocked in
+`vercel.json`), so the value has been readable by anyone who viewed source — and
+`api/metrics.js` uses it to gate an endpoint that reads Supabase with the **service-role**
+key. The app work would have widened this into downloadable store binaries.
+
+**Fixed in code:** the secret is gone from `monitor.html` (the operator now types it at
+sign-in; it is verified server-side and held in `sessionStorage`), and `monitor.html` /
+`logs.html` / `admin.html` are excluded from the app bundle, with a test asserting the built
+bundle contains no secrets or operator pages.
+
+**Still required from you — the code fix cannot do this:**
+
+1. Set a **new** `METRICS_SECRET` in the Vercel dashboard (the old value is in git history
+   and has been publicly served; it must be treated as compromised).
+2. Consider blocking `/monitor.html` at the edge — add a `vercel.json` redirect, or put it
+   behind Vercel Access Protection. The server-side `requireSecret` gate is the real
+   protection, but the page need not be public.
+3. Review Supabase logs for unexpected `/api/metrics` usage.
+
+
 ### 1a. In-app account deletion (Apple Guideline 5.1.1(v)) — **hard blocker, not yet built**
 
 Apple requires that **any app supporting account creation must let the user delete the account

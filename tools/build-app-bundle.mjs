@@ -42,7 +42,11 @@ const CLIENT_EXT = new Set([
 const EXCLUDE_ROOT_FILES = new Set([
   'package.json', 'package-lock.json', 'npm-shrinkwrap.json',
   'capacitor.config.json', 'capacitor.config.ts', 'capacitor.config.js',
-  'vercel.json', 'jsconfig.json', 'tsconfig.json'
+  'vercel.json', 'jsconfig.json', 'tsconfig.json',
+  // Operator-only pages. These must NEVER ship in a store binary: an IPA/APK is
+  // trivially unzipped and is archived by third parties forever, so anything
+  // embedded in one cannot be cleanly rotated later.
+  'monitor.html', 'logs.html', 'admin.html'
 ]);
 
 async function rmrf(p) {

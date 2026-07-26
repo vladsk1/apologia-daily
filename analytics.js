@@ -29,6 +29,7 @@
      STRICT NO-OP on the web: window.Capacitor is absent there, so nothing is
      patched — safe to ship to apologiadaily.com unchanged. Override the origin
      (e.g. for a staging build) by setting window.AD_API_BASE before this file. */
+  window.__AD_IN_APP = false;   // set before the try: a throw must not leave this undefined
   try {
     var _cap = window.Capacitor;
     var _inApp = !!(_cap && typeof _cap.isNativePlatform === 'function'
@@ -381,7 +382,12 @@
       document.body.appendChild(wrap);
       try { window.adTrack('pwa_ios_install_offered', { where: location.pathname }); } catch (x) {}
     }
-    if (adIsIOSSafari() && !adIsStandalone()) {
+    /* Never inside the native app: adIsIOSSafari() is UA sniffing, and telling
+       someone who already installed the app to "Add to Home Screen" would be
+       nonsense (and a poor look in App Store review). Capacitor's WebView UA
+       happens to lack the Safari token today, but that is an accident of a UA
+       string, not a guard. */
+    if (!window.__AD_IN_APP && adIsIOSSafari() && !adIsStandalone()) {
       // engaged users see it sooner; first-timers get time to look around first
       setTimeout(adShowIOSInstall, adEngaged() ? 9000 : 60000);
     }
@@ -391,6 +397,11 @@
        the VAPID public key, and registers the subscription server-side. */
     window.adEnablePush = async function () {
       try {
+        /* In the native app no service worker is registered, so
+           navigator.serviceWorker.ready would never settle and this call would
+           hang forever (the dashboard reminder toggle just stops responding).
+           Native reminders will use @capacitor/push-notifications instead. */
+        if (window.__AD_IN_APP) return false;
         if (!('serviceWorker' in navigator) || !('PushManager' in window)) {
           alert('Notifications are not supported on this browser.'); return false;
         }
@@ -422,6 +433,11 @@
        now-dead endpoint (push service returns 410) on its next run. */
     window.adDisablePush = async function () {
       try {
+        /* In the native app no service worker is registered, so
+           navigator.serviceWorker.ready would never settle and this call would
+           hang forever (the dashboard reminder toggle just stops responding).
+           Native reminders will use @capacitor/push-notifications instead. */
+        if (window.__AD_IN_APP) return false;
         if (!('serviceWorker' in navigator)) return false;
         var reg = await navigator.serviceWorker.ready;
         var sub = reg.pushManager && (await reg.pushManager.getSubscription());
@@ -434,6 +450,11 @@
     /* Is this device currently subscribed to reminders? */
     window.adPushOn = async function () {
       try {
+        /* In the native app no service worker is registered, so
+           navigator.serviceWorker.ready would never settle and this call would
+           hang forever (the dashboard reminder toggle just stops responding).
+           Native reminders will use @capacitor/push-notifications instead. */
+        if (window.__AD_IN_APP) return false;
         if (!('serviceWorker' in navigator) || !('PushManager' in window)) return false;
         var reg = await navigator.serviceWorker.ready;
         return !!(reg.pushManager && (await reg.pushManager.getSubscription()));

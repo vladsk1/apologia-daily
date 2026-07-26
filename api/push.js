@@ -17,6 +17,7 @@ import { requireSecret } from '../lib/require-secret.js';
        auth text not null, created_at timestamptz default now()); */
 import crypto from 'crypto';
 
+import { applyCors } from '../lib/cors.js';
 /* SSRF guard: a PushSubscription endpoint must be an HTTPS URL on a known
    browser-push service. Without this, an attacker could store an arbitrary
    endpoint (e.g. an internal/metadata URL) that the ?do=send cron would then
@@ -124,8 +125,7 @@ function todayArg() {
 }
 
 export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  if (req.method === 'OPTIONS') return res.status(200).end();
+  if (applyCors(req, res)) return;
 
   var SB_URL = process.env.SUPABASE_URL || 'https://noprgxkwniouukmrfozc.supabase.co';
   var SB_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_KEY;

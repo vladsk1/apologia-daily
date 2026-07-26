@@ -157,11 +157,11 @@
       <div style="font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:0.25rem;">Apologia<span style="color:var(--gold);">Daily</span></div>
       <div style="font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem;">System Monitor</div>
       <div style="font-size:2rem;margin-bottom:1.25rem;">🔒</div>
-      <div id="login-error" style="display:none;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:#ef4444;font-size:0.78rem;padding:8px 12px;border-radius:4px;margin-bottom:1rem;">Incorrect password. Try again.</div>
+      <div id="login-error" style="display:none;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:#ef4444;font-size:0.78rem;padding:8px 12px;border-radius:4px;margin-bottom:1rem;">Incorrect secret. Try again.</div>
       <input
         type="password"
         id="pw-input"
-        placeholder="Enter admin password"
+        placeholder="Enter METRICS_SECRET"
         onkeydown="if(event.key==='Enter')checkPassword()"
         style="width:100%;font-family:var(--font);font-size:0.88rem;background:#0f2040;border:1px solid var(--border);color:var(--text);border-radius:4px;padding:10px 14px;outline:none;margin-bottom:0.75rem;transition:border 0.15s;"
         onfocus="this.style.borderColor='#4a7ab5'"
@@ -245,13 +245,22 @@
     (function(){
       var cards=document.getElementById('pm-cards'), notes=document.getElementById('pm-notes');
       function card(label,val){ return '<div style="background:#0f2040;border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:1rem;text-align:center;"><div style="font-family:\'Playfair Display\',serif;font-size:1.8rem;font-weight:700;color:#c8a951;line-height:1;">'+(val==null?'&mdash;':val)+'</div><div style="font-size:.68rem;color:#7a8fa8;text-transform:uppercase;letter-spacing:.06em;margin-top:6px;">'+label+'</div></div>'; }
-      fetch('/api/metrics?secret=' + encodeURIComponent('Apologia2026!')).then(function(r){return r.json();}).then(function(d){
+      /* The metrics secret is supplied by the operator at sign-in and held in
+         sessionStorage for the tab's lifetime — it is deliberately NOT embedded
+         in this page, which is publicly served. window.adMonitorSecret() is
+         defined by the sign-in gate below. */
+      window.adLoadMetrics = function(){
+      var secret = (window.adMonitorSecret && window.adMonitorSecret()) || '';
+      if (!secret) { cards.innerHTML='<div style="color:#7a8fa8;font-size:.85rem;">Sign in to load metrics.</div>'; return; }
+      fetch('/api/metrics?secret=' + encodeURIComponent(secret)).then(function(r){return r.json();}).then(function(d){
         var m=d.metrics||{};
         var html=card('Registered users',m.total_users)+card('Explain sessions',m.explain_sessions_total)+card('Explain · 7d',m.explain_sessions_7d)+card('Explain · 30d',m.explain_sessions_30d);
         if(m.coach_signals_total!=null) html+=card('Coach signals',m.coach_signals_total);
         cards.innerHTML=html;
         notes.innerHTML=(d.notes||[]).map(function(n){return '&bull; '+n;}).join('<br>');
       }).catch(function(){ cards.innerHTML='<div style="color:#b23b32;font-size:.85rem;">Could not load /api/metrics.</div>'; });
+      };
+      if (window.adMonitorSecret && window.adMonitorSecret()) window.adLoadMetrics();
     })();
     </script>
 
@@ -415,39 +424,51 @@
   function escHtml(str) {
     return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
-  // Change this password to whatever you want
-  var ADMIN_PASSWORD = 'Apologia2026!';
-  var SESSION_KEY = 'ad_monitor_auth';
-  var SESSION_DURATION = 8 * 60 * 60 * 1000; // 8 hours
+  /* ---- Operator sign-in -------------------------------------------------
+     This page is publicly served, so it must contain NO secret. The operator
+     types the METRICS_SECRET; it is verified against the server (the only real
+     gate — api/metrics.js -> requireSecret) and then held in sessionStorage,
+     which dies with the tab. Never localStorage, and never in source. */
+  var SESSION_KEY = 'ad_monitor_secret';
+
+  window.adMonitorSecret = function () {
+    try { return sessionStorage.getItem(SESSION_KEY) || ''; } catch (e) { return ''; }
+  };
 
   function checkPassword() {
     var input = document.getElementById('pw-input');
     var error = document.getElementById('login-error');
     if (!input) return;
     var val = input.value.trim();
-    // Simple hash check - not cryptographic but sufficient for admin page
-    if (val === ADMIN_PASSWORD) {
-      try {
-        localStorage.setItem(SESSION_KEY, JSON.stringify({ ts: Date.now() }));
-      } catch(e) {}
-      showMonitor();
-    } else {
+    if (!val) return;
+
+    function reject() {
       if (error) error.style.display = 'block';
       input.value = '';
       input.focus();
-      // Shake animation
       input.style.borderColor = '#ef4444';
-      setTimeout(function() { input.style.borderColor = 'var(--border)'; }, 1500);
+      setTimeout(function () { input.style.borderColor = 'var(--border)'; }, 1500);
     }
+
+    // Verify server-side: a wrong secret gets 401 from the real gate.
+    fetch('/api/metrics?secret=' + encodeURIComponent(val))
+      .then(function (r) {
+        if (!r.ok) { reject(); return; }
+        try { sessionStorage.setItem(SESSION_KEY, val); } catch (e) {}
+        showMonitor();
+      })
+      .catch(function () { reject(); });
   }
 
   function showMonitor() {
     document.getElementById('login-gate').style.display = 'none';
     document.getElementById('monitor-content').style.display = 'block';
+    // Metrics could not load before sign-in (no secret) — load them now.
+    if (window.adLoadMetrics) window.adLoadMetrics();
   }
 
   function signOutMonitor() {
-    try { localStorage.removeItem(SESSION_KEY); } catch(e) {}
+    try { sessionStorage.removeItem(SESSION_KEY); } catch(e) {}
     document.getElementById('monitor-content').style.display = 'none';
     document.getElementById('login-gate').style.display = 'flex';
     var input = document.getElementById('pw-input');
@@ -456,15 +477,9 @@
 
   function checkSession() {
     try {
-      var saved = localStorage.getItem(SESSION_KEY);
-      if (saved) {
-        var session = JSON.parse(saved);
-        if (Date.now() - session.ts < SESSION_DURATION) {
-          showMonitor();
-          return true;
-        }
-        localStorage.removeItem(SESSION_KEY);
-      }
+      // sessionStorage already scopes this to the tab, so no manual expiry is
+      // needed: closing the tab ends the session.
+      if (window.adMonitorSecret()) { showMonitor(); return true; }
     } catch(e) {}
     // Focus the password input
     setTimeout(function() {

@@ -31,7 +31,23 @@ ios/App/Pods/
 ios/App/App/public/
 ios/DerivedData/
 **/.DS_Store
-# Local RevenueCat / signing secrets — never commit real keys (see docs/APP_STORE.md)
+# Local RevenueCat keys — never commit real keys (see docs/APP_STORE.md).
+# docs/APP_STORE.md tells the operator to create revenuecat.json at the REPO
+# ROOT, so that exact path must be ignored (it would otherwise be committed AND
+# served at apologiadaily.com/revenuecat.json).
+revenuecat.json
+app/revenuecat.json
 app/revenuecat.local.json
-*.keystore
 !app/*.example.json
+
+# App signing material — losing OR leaking these is unrecoverable
+*.keystore
+*.jks
+key.properties
+android/key.properties
+google-services.json
+GoogleService-Info.plist
+*.p8
+*.p12
+*.mobileprovision
+*.cer
