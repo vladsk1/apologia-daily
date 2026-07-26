@@ -173,6 +173,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
               <a class="adn-mi" href="/games.html"><span class="adn-mi-ic">&#127918;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Games</span><span class="adn-mi-dc">Quizzes that feed your streak.</span></span></a>
               <a class="adn-mi" href="/study-groups.html"><span class="adn-mi-ic">&#128101;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Study Groups <span class="adn-mi-tag">New</span></span><span class="adn-mi-dc">Study with people you love.</span></span></a>
               <a class="adn-mi" href="/reading-club.html"><span class="adn-mi-ic">&#128214;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Reading Clubs</span><span class="adn-mi-dc">The classics, chapter by chapter.</span></span></a>
+              <a class="adn-mi" href="/conversation-journal.html"><span class="adn-mi-ic">&#128221;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Conversation Journal</span><span class="adn-mi-dc">Log real conversations, get AI coaching.</span></span></a>
             </div>
             <div class="adn-mega-col">
               <div class="adn-mega-h">For you</div>
@@ -394,6 +395,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
         if (navCta) navCta.style.display = 'none';
       }
     } catch(e) { console.warn('Auth check failed:', e); }
+    pullEntries(); // cross-device: pull + merge the user's cloud journal (no-op if signed out / table missing)
   }
   async function signOut() {
     try { await sb.auth.signOut(); } catch(e) {}
@@ -431,6 +433,55 @@ function loadEntries() {
 
 function saveEntries(entries) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+}
+
+/* ── CROSS-DEVICE SYNC ──────────────────────────────────────────────
+   Local-first with a private per-user cloud mirror (own-row RLS table
+   `journal_entries`; see docs/JOURNAL_SYNC.md). STRICT no-op until BOTH a
+   signed-in session AND the table exist — on any error we stay local-only,
+   exactly as before. Entries are immutable once saved (add/delete only), so
+   the merge is a grow-only union by millisecond `id`, preferring the copy
+   that carries AI coaching, sorted by date — two devices converge losslessly. */
+function mergeEntries(local, server) {
+  var byId = Object.create(null); // null-proto: a hostile '__proto__' id can't pollute
+  function add(e) {
+    if (!e || e.id == null) return;
+    var k = String(e.id);
+    if (!byId[k]) { byId[k] = e; return; }
+    if (!byId[k].coaching && e.coaching) byId[k] = e; // keep the richer copy
+  }
+  (local || []).forEach(add);
+  (server || []).forEach(add);
+  var out = Object.keys(byId).map(function (k) { return byId[k]; });
+  out.sort(function (a, b) { return new Date(a.date) - new Date(b.date); });
+  return out;
+}
+async function pushEntries() {
+  if (!sb) return;
+  try {
+    var r = await sb.auth.getSession();
+    var s = r.data && r.data.session;
+    if (!s) return;
+    await sb.from('journal_entries').upsert({
+      user_id: s.user.id, entries: loadEntries(), updated_at: new Date().toISOString()
+    });
+  } catch (e) { /* table missing / offline / RLS → local-only */ }
+}
+async function pullEntries() {
+  if (!sb) return;
+  try {
+    var r = await sb.auth.getSession();
+    var s = r.data && r.data.session;
+    if (!s) return;
+    var q = await sb.from('journal_entries').select('entries').eq('user_id', s.user.id).maybeSingle();
+    if (q.error) return; // table missing / RLS → stay local-only
+    var server = (q.data && q.data.entries) || [];
+    if (!server.length) { pushEntries(); return; } // seed the cloud from local
+    var merged = mergeEntries(loadEntries(), server);
+    saveEntries(merged);
+    renderEntries();
+    pushEntries(); // push the converged set back
+  } catch (e) { /* stay local-only */ }
 }
 
 function renderEntries() {
@@ -487,6 +538,7 @@ function deleteEntry(i) {
   entries.splice(i, 1);
   saveEntries(entries);
   renderEntries();
+  pushEntries(); // cross-device: reflect the deletion in the cloud mirror
 }
 
 function updateStats(entries) {
@@ -622,6 +674,7 @@ function saveEntry() {
   entries.push(entry);
   saveEntries(entries);
   renderEntries();
+  pushEntries(); // cross-device: mirror to the user's private cloud journal
 
   /* Coach capture — a real conversation is the strongest signal. Map the topic
      to a category and the outcome to a score, so real-world struggles feed the
