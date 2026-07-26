@@ -548,7 +548,7 @@
   function updateCheckCard(id, status, detail, ms) {
     var card = document.getElementById('check-' + id);
     if (!card) return;
-    var statusClass = status === 'ok' ? 'ok' : status === 'loading' ? 'loading' : 'error';
+    var statusClass = status === 'ok' ? 'ok' : (status === 'loading' || status === 'skipped') ? 'loading' : 'error';
     card.className = 'check-card ' + statusClass;
 
     var icon = card.querySelector('.check-icon');
@@ -631,6 +631,13 @@
             if (check.status !== 'ok') {
               errors.push({ time: new Date().toISOString(), msg: c.name + ': ' + check.detail });
             }
+          } else if (data.checks && data.checks.endpoints && data.checks.endpoints.status === 'skipped') {
+            /* Not a failure: api/health.js skips the live LLM pings unless a health
+               secret is supplied, because each one really calls Claude and costs
+               money. Reporting these as errors made a perfectly healthy site show
+               a red "Issues — 5 of 10 passing". */
+            checkResults[c.id] = { status: 'skipped', ms: null, detail: 'Not checked (live ping costs API credit)' };
+            updateCheckCard(c.id, 'skipped', 'Not checked — set HEALTH_SECRET to enable live pings', null);
           } else {
             checkResults[c.id] = { status: 'error', ms: null, detail: 'No data from health endpoint' };
             updateCheckCard(c.id, 'error', 'No data from health endpoint', null);
@@ -651,8 +658,10 @@
     await Promise.all([...pagePromises, healthPromise]);
 
     // Update summary
-    var total = Object.keys(checkResults).length;
-    var passing = Object.values(checkResults).filter(function(r) { return r.status === 'ok'; }).length;
+    var vals = Object.values(checkResults);
+    var skipped = vals.filter(function(r) { return r.status === 'skipped'; }).length;
+    var total = vals.length - skipped;          // only checks we actually ran
+    var passing = vals.filter(function(r) { return r.status === 'ok'; }).length;
     var allOk = passing === total;
     var avgMs = Math.round(Object.values(checkResults).filter(function(r) { return r.ms; }).reduce(function(a, r) { return a + r.ms; }, 0) / Math.max(1, Object.values(checkResults).filter(function(r) { return r.ms; }).length));
 
@@ -661,7 +670,7 @@
     document.getElementById('sum-status-sub').textContent = allOk ? 'All systems operational' : passing + ' of ' + total + ' passing';
     document.getElementById('sum-passing').textContent = passing;
     document.getElementById('sum-passing').className = 'summary-value ' + (passing === total ? 'green' : passing > total / 2 ? 'yellow' : 'red');
-    document.getElementById('sum-total').textContent = 'of ' + total + ' checks';
+    document.getElementById('sum-total').textContent = 'of ' + total + ' checks' + (skipped ? ' \u00b7 ' + skipped + ' skipped' : '');
     document.getElementById('sum-avg-ms').textContent = avgMs || '--';
     document.getElementById('sum-avg-ms').className = 'summary-value ' + (avgMs < 500 ? 'green' : avgMs < 2000 ? '' : 'yellow');
     document.getElementById('sum-time').textContent = new Date().toLocaleTimeString();
