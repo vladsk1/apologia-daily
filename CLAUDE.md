@@ -6,6 +6,23 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **2026-07-25 (live-AI routing + answer-format fixes + mathematics reel rebuild).** Three shipped, all
+> gated + live on `main`. (1) **Topic-classifier fix** (`api/ask.js`, dual-consensus CLEAN): a core Trinity
+> coherence question ("the sending of the Son by the Father looks like a hierarchy") was misclassified DENOM
+> (filioque/procession collision) and given the denominational brush-off — now routes subordination /
+> "hierarchy in the Trinity" / eternal-generation / sending-of-the-Son / monarchy-of-the-Father / taxis
+> worries to ONTOPIC as core Nicene anti-Arian defense, while DENOM still fires on actual East-West procession
+> side-taking (orthodoxy + neutrality both CLEAN; classifier routing only, answer generator/guardrails
+> unchanged). (2) **Origin-of-objection answer element** (`api/ask.js`, orthodoxy CLEAN): the Asked & Answered
+> hero promised "the skeptic who raised it first (often centuries ago)" but the format never delivered it —
+> added a conditional "WHERE THE OBJECTION CAME FROM" one-liner (Hume 1748, Celsus ~AD 178, etc.) with an
+> ABSOLUTE no-fabrication limit (OMIT rather than guess; "engaged ever since" not "answered" to avoid
+> tidy-theodicy overstatement). (3) **Mathematics reel rebuilt** (`tools/reel/specs/mathematics-god.json`,
+> argument SOUND + orthodoxy CLEAN) to foreground the argument explicitly ("AN ARGUMENT FOR GOD / Is
+> mathematics evidence for God?" → states the inference at scene 7 → "signpost, not the whole map" bound),
+> + matching X card + X thread + IG caption. Tests 47/47. (Parallel local session shipped the Bible-unity
+> "one story" reel + card alongside.)
+>
 > **2026-07-24 (Active-Reading curated takeaways — COMPLETE, 85/85 essays).** Finished the curated
 > version of the Active-Reading Layer: every deep-dive essay's recall checkpoint now reveals a
 > **hand-curated one-line "key point"** for that section (in our own words, distilled from the
