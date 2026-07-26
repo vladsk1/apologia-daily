@@ -1,0 +1,82 @@
+{
+  "reviewed": {"argument": "2026-07-25", "orthodoxy": "2026-07-25", "neutrality": "2026-07-25", "by": "DUAL-CONSENSUS + neutrality (deity-of-Christ tier): apologia-argument SOUND + apologia-orthodoxy CLEAN + apologia-neutrality no-BREAK. Grounded in certified library/hands.html (H — Honors). Fixes applied: kicker 'THE CONTRAST THAT PROVES IT' -> 'THE TELLING CONTRAST' (argument MAJOR + neutrality WEAK — essay refuses single-finger 'proof'); 'The Son asks for... and heaven gives it' -> 'By the Father's own design, the Son receives the Father's very own honor' (orthodoxy NOTE + neutrality POLISH — removes petitioner/adoptionist pull-quote read); honor->glory bridge made explicit in VO (argument MINOR). Distinct persons kept (Father who sent him); co-equal honor; worship of the Lamb orthodox (Rev 5); positive-case-only."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.75,
+  "voiceover": "Jesus had just healed a man on the Sabbath, and the religious leaders were furious. So he said something staggering. The Father, he said, has handed all judgment to the Son — so that all may honor the Son, just as they honor the Father. Not honor like the Father's. Honor identical to it. For a Jew raised on the Shema, that lands like a thunderclap — because that honor — that glory — belongs to God alone. The LORD says, my glory I give to no other. And Jesus doesn't soften it: whoever does not honor the Son does not honor the Father who sent him. You cannot honor God while refusing the Son. And heaven agrees. In Revelation, every creature sings the same honor to the One on the throne and to the Lamb. In that very same book, an angel refuses worship — worship God! — yet the Lamb receives what the angel forbids. This is the H in the HANDS of Christ's deity: Honors, Attributes, Names, Deeds, Seat. And so, by the Father's own design, the Son receives the very honor due to God himself.",
+  "source": "library/hands.html",
+  "scenes": [
+    { "dur": 4.2,
+      "big": [ {"t": "Honor the Son —", "c": "cream", "s": 92}, {"t": "just as the Father.", "c": "gold", "s": 94} ],
+      "sub": [ {"t": "John 5:23  ·  the deity of Christ", "c": "dim", "f": "serif", "s": 44} ] },
+
+    { "kicker": "THE MOMENT", "dur": 5.0, "lines": [
+      {"t": "Jesus had just healed", "c": "cream", "s": 56},
+      {"t": "a man on the Sabbath —", "c": "cream", "s": 56},
+      {"t": "", "s": 22},
+      {"t": "then he said something", "c": "cream", "s": 54},
+      {"t": "staggering.", "c": "gold", "f": "serifb", "s": 84} ] },
+
+    { "kicker": "WHAT HE CLAIMED", "dur": 6.0, "lines": [
+      {"t": "The Father has given", "c": "cream", "s": 54},
+      {"t": "all judgment to the Son —", "c": "cream", "s": 54},
+      {"t": "", "s": 22},
+      {"t": "“that all may honor the Son", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "just as they honor the Father.”", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "HEAR THE WEIGHT", "dur": 5.2, "lines": [
+      {"t": "Not honor", "c": "cream", "s": 58},
+      {"t": "like the Father's.", "c": "cream", "s": 58},
+      {"t": "", "s": 24},
+      {"t": "Honor identical to it.", "c": "gold", "f": "serifb", "s": 66} ] },
+
+    { "kicker": "WHY A JEW WOULD GASP", "dur": 5.6, "lines": [
+      {"t": "That honor belongs", "c": "cream", "s": 56},
+      {"t": "to God alone:", "c": "cream", "s": 56},
+      {"t": "", "s": 22},
+      {"t": "“My glory I give to no other.”", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "— Isaiah 42:8", "c": "dim", "s": 44} ] },
+
+    { "kicker": "AND THE FLIP SIDE", "dur": 5.8, "lines": [
+      {"t": "“Whoever does not honor the Son", "c": "cream", "s": 48},
+      {"t": "does not honor the Father", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "who sent him.”", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "", "s": 20},
+      {"t": "You cannot honor God", "c": "cream", "s": 52},
+      {"t": "while refusing the Son.", "c": "cream", "s": 52} ] },
+
+    { "kicker": "AND HEAVEN AGREES", "dur": 5.6, "lines": [
+      {"t": "In Revelation, every creature", "c": "cream", "s": 50},
+      {"t": "sings the same honor —", "c": "cream", "s": 50},
+      {"t": "", "s": 22},
+      {"t": "to the One on the throne", "c": "cream", "s": 52},
+      {"t": "and to the Lamb.", "c": "gold", "f": "serifb", "s": 60} ] },
+
+    { "kicker": "THE TELLING CONTRAST", "dur": 6.0, "lines": [
+      {"t": "In that same book,", "c": "cream", "s": 52},
+      {"t": "an angel refuses worship:", "c": "cream", "s": 52},
+      {"t": "“Worship God!”", "c": "gold", "f": "serifb", "s": 66},
+      {"t": "", "s": 20},
+      {"t": "The Lamb receives", "c": "cream", "s": 52},
+      {"t": "what the angel forbids.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "THE H IN HANDS", "dur": 5.4, "lines": [
+      {"t": "Jesus shares the Honors", "c": "cream", "s": 54},
+      {"t": "due to God alone —", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "", "s": 22},
+      {"t": "Honors · Attributes · Names", "c": "cream", "s": 46},
+      {"t": "Deeds · Seat", "c": "cream", "s": 46} ] },
+
+    { "kicker": "THE CLAIM, PLAINLY", "dur": 4.8, "lines": [
+      {"t": "By the Father's own design,", "c": "cream", "s": 50},
+      {"t": "the Son receives", "c": "cream", "s": 54},
+      {"t": "", "s": 20},
+      {"t": "the Father's very own honor.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "dur": 4.6,
+      "big": [ {"t": "God the Son.", "c": "cream", "s": 96}, {"t": "Worthy of worship.", "c": "gold", "s": 84} ],
+      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52} ] }
+  ]
+}
