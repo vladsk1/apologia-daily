@@ -1,8 +1,56 @@
 # Apologia Daily — Session Handoff
 
-_Last updated: 2026-07-04. Read this together with `CLAUDE.md` to resume with full
+_Last updated: 2026-07-26. Read this together with `CLAUDE.md` to resume with full
 context at minimal token cost. Everything below is already committed to git; the chat
 that produced it can be discarded._
+
+## Session 2026-07-26 — native app scaffolding, account deletion, monitoring truthfulness
+
+**All deployed to `main`** (`42d5c32`). Tests **47 → 70**. Two `apologia-engineer` reviews drove most of it.
+
+### What shipped
+1. **Native app scaffolding (Capacitor)** — `ios/` + `android/` committed, `capacitor.config.json`
+   (appId `com.apologiadaily.app`), `tools/build-app-bundle.mjs` → the git-ignored `app/www` (372 files,
+   **allowlisted** dirs so `api/`/`lib/`/`sources/`/`briefs/`/`tools/`/`docs/`/`tests/` can never ship in a
+   public binary), `tools/build-app-icons.mjs` → 113 icon/splash sizes. Assets ship **inside** the binary
+   (offline-capable; a remote-URL webview is rejected under Apple 4.2). A **Capacitor-only `fetch` shim** in
+   `analytics.js` rewrites `/api/*` → `https://apologiadaily.com/api/*`; strict no-op on the web, guarded by
+   `tests/app-bridge.test.mjs`. RevenueCat plumbing (`app-purchases.js`, entitlement `pro`) is **INERT** — no
+   keys, no paywall wired, cannot charge anyone. Runbook: `docs/APP_STORE.md`.
+2. **In-app account deletion** (Apple 5.1.1(v)) — see CLAUDE.md header for the full design. Key structural
+   fact: **Vercel Hobby caps the project at 12 serverless functions and `api/` is AT the cap**, so the route
+   is folded in as `api/new-signup.js?do=delete-account`. That file now has **two auth models** (shared-secret
+   webhook + user token); the user-authed branch returns before the secret gate.
+3. **Monitoring made truthful** — `/api/health` now returns **503 when degraded** (it always returned 200,
+   so the owner's UptimeRobot would have stayed green through a database outage — false reassurance).
+   `monitor.html` stopped counting deliberately-skipped LLM pings as failures, and stays usable when
+   `METRICS_SECRET` is unset.
+
+### Two mistakes worth remembering
+- **Over-rated a security finding.** The hardcoded `'Apologia2026!'` in the public `monitor.html` was called
+  CRITICAL and the owner was told to rotate urgently. **`METRICS_SECRET` had never been set**, and
+  `requireSecret` fails closed, so nothing was ever reachable. Correct severity: *latent*. **Check that an
+  env var exists before rating a hardcoded secret.**
+- **Wrote a docstring and a test for an invariant the code didn't implement.** `lib/delete-account.js` claimed
+  the auth user was deleted last "so a mid-way failure cannot orphan data" — but it never *aborted*, so a
+  failed table delete still destroyed the login while rows survived. The test asserted call *ordering*, not
+  the skip, which is how it passed review. **Assert the behaviour that makes the invariant true, not a proxy.**
+
+### Owner actions completed this session
+`SUPABASE_ANON_KEY` set in Vercel (**required** for deletion). UptimeRobot repointed from
+`apologia-daily.vercel.app` (wrong host — green through a DNS/domain failure) to `https://apologiadaily.com`,
+plus a new monitor on `/api/health`. `METRICS_SECRET` deliberately **not** set (PostHog + the Supabase
+dashboard already give user counts).
+
+### Open
+- ⚠ **Account deletion has never run against live Supabase.** Test with a throwaway account before submitting.
+- `push_subscriptions` has no `user_id` → other devices' subs linger until they expire. Fix: add the column,
+  then add `['push_subscriptions','user_id']` to `USER_TABLES`.
+- Pricing/paywall undecided; Apple ($99/yr) + Play ($25) accounts not created; **iOS `pod install` + Archive
+  must run on the owner's iMac** — never attempted on Linux, neither native project has been compiled or
+  device-tested.
+
+---
 
 ## Session 2026-07-04b — orthodoxy-over-charity policy + answers integrity sweep
 

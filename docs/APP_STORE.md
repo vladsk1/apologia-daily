@@ -43,29 +43,28 @@ npm run sync         # rebuilds app/www AND copies it into ios/ + android/
 
 ## 1. BLOCKERS — do these before submitting
 
-### 1a-0. ROTATE `METRICS_SECRET` — **do this now, independently of the app**
+### 1a-0. The `monitor.html` secret — RESOLVED, no action needed
 
-A code review of the app work found the production `METRICS_SECRET` hardcoded in
-`monitor.html` (`'Apologia2026!'`), in two places: the metrics fetch and a client-side
-"admin password" gate. `monitor.html` is **publicly served** (it is not blocked in
-`vercel.json`), so the value has been readable by anyone who viewed source — and
-`api/metrics.js` uses it to gate an endpoint that reads Supabase with the **service-role**
-key. The app work would have widened this into downloadable store binaries.
+**A note kept for the record, because an earlier version of this file told you to rotate a key
+urgently. That instruction was wrong and is withdrawn.**
 
-**Fixed in code:** the secret is gone from `monitor.html` (the operator now types it at
-sign-in; it is verified server-side and held in `sessionStorage`), and `monitor.html` /
-`logs.html` / `admin.html` are excluded from the app bundle, with a test asserting the built
-bundle contains no secrets or operator pages.
+`monitor.html` (which is publicly served) hardcoded `'Apologia2026!'` as the metrics secret. The
+first review rated this CRITICAL. On checking the Vercel dashboard, **`METRICS_SECRET` had never
+been set** — and `lib/require-secret.js` fails closed, so `/api/metrics` denied *everyone*,
+including anyone who read that value out of the page source. **No data was ever reachable through
+it, and there is nothing to rotate.**
 
-**Still required from you — the code fix cannot do this:**
+The correct severity was *latent*: it would have become a real hole the moment anyone set that
+variable to that value, and it would have been baked permanently into store binaries, which cannot
+be un-published. So the fix still stands:
 
-1. Set a **new** `METRICS_SECRET` in the Vercel dashboard (the old value is in git history
-   and has been publicly served; it must be treated as compromised).
-2. Consider blocking `/monitor.html` at the edge — add a `vercel.json` redirect, or put it
-   behind Vercel Access Protection. The server-side `requireSecret` gate is the real
-   protection, but the page need not be public.
-3. Review Supabase logs for unexpected `/api/metrics` usage.
+- the secret is gone from source (the operator types it at sign-in; verified server-side, kept in
+  `sessionStorage`),
+- `monitor.html` / `logs.html` / `admin.html` are excluded from the app bundle, and
+- `tests/app-bridge.test.mjs` scans the **built** bundle for secrets and operator pages.
 
+**Process lesson:** check whether an env var actually exists before rating a hardcoded secret.
+A fail-closed gate with no configured secret is a locked door, not an open one.
 
 ### 1a. In-app account deletion (Apple Guideline 5.1.1(v)) — **BUILT ✅, needs live testing**
 
@@ -265,7 +264,8 @@ Test with a StoreKit sandbox account (iOS) and a Play licence tester (Android) b
 
 ## 8. Release checklist
 
-- [ ] **`METRICS_SECRET` rotated in Vercel** (§1a-0) ← the old value is compromised
+- [x] `monitor.html` secret removed (§1a-0) — nothing to rotate; it was never configured
+- [x] `SUPABASE_ANON_KEY` set in Vercel — **required** for account deletion
 - [x] In-app account deletion **built** (§1a) — still needs live end-to-end testing
 - [ ] Account deletion verified against live Supabase (throwaway account, rows gone)
 - [ ] Pricing decided; store products created; paywall wired to the `pro` entitlement (§1b)

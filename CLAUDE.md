@@ -32,27 +32,59 @@
 > (impossible on Linux — that step was skipped here), and neither native project has been compiled or
 > device-tested yet.
 >
-> **2026-07-26 (security fixes from the app review + IN-APP ACCOUNT DELETION built).** The
-> `apologia-engineer` review of the app work found one **CRITICAL** and three HIGH issues, all fixed
-> (`df8e75d`). **🔴 HUMAN ACTION STILL REQUIRED: rotate `METRICS_SECRET` in Vercel.** It was hardcoded
-> (`'Apologia2026!'`) in **`monitor.html`, which is publicly served** — a **pre-existing live exposure**, not
-> introduced by the app work — and it gates `api/metrics.js`, which reads Supabase with the **service-role**
-> key; the app bundle would have widened it into permanently-archived store binaries. The secret is now gone
-> from source (the operator types it at sign-in; verified server-side, held in `sessionStorage`),
-> monitor/logs/admin pages are excluded from the bundle, and a test scans the **built** bundle for secrets.
-> The old value is in git history → **treat as compromised**. Also fixed: **CORS was set only inside the
-> `OPTIONS` branch** on `ask`/`debate`/`devotional`/`feedback`, so the preflight passed but the POST response
-> had no `Access-Control-Allow-Origin` — invisible same-origin on the web, but it would have **silently
-> killed those features in the app**; the 8 drifted hand-copied blocks are now one **`lib/cors.js`** (allowlist
-> replaces `'*'` on token-spending endpoints). Added **`.vercelignore`** (`vercel.json` used a hand-maintained
-> redirect blocklist that every new top-level dir silently escaped — `tests/` was already exposed).
-> **NEW: in-app account deletion** (Apple 5.1.1(v) blocker) — `lib/verify-user.js` + `lib/delete-account.js`
-> + a `?do=delete-account` route folded into `api/new-signup.js` (**Vercel Hobby caps the project at 12
-> functions and we are AT the cap** — hence the `?do=` fold, matching `push.js`/`weekly-email.js`) + a
-> Dashboard "Account" card with a typed-DELETE modal + `privacy.html`. Identity comes **only** from a verified
-> token, fails closed with no service key, auth user deleted **last**. Tests **52 → 62**. ⚠ **Not yet
-> exercised against live Supabase** — test with a throwaway account before submitting; and
-> `push_subscriptions` has no `user_id`, so other devices' subs linger until they expire (fix: add the column).
+> **2026-07-26 (app-review security fixes + IN-APP ACCOUNT DELETION + monitoring truthfulness — ALL LIVE on `main`).**
+> Two `apologia-engineer` reviews (one of the app work, one of the deletion endpoint) drove this; everything
+> below is deployed.
+>
+> **⚠ CORRECTION — `METRICS_SECRET` was NOT a live breach.** An earlier note in this file said the
+> hardcoded `'Apologia2026!'` in the publicly-served `monitor.html` was a CRITICAL live exposure needing
+> urgent rotation. **That was wrong, and the claim is withdrawn.** `METRICS_SECRET` had *never been set* in
+> Vercel (confirmed from the owner's dashboard + the monitor showing "Unauthorized"), and `requireSecret`
+> fails closed — so `/api/metrics` denied **everyone**, including anyone reading the value from page source.
+> No data was reachable. The right severity was *latent* (it would have become real the moment someone set
+> that variable to that value, and would have been baked permanently into store binaries). **Nothing to
+> rotate; no action outstanding.** Lesson for future sessions: **check whether the env var actually exists
+> before rating a hardcoded secret.** The removal itself still stands as correct.
+>
+> **Security fixes (`df8e75d`).** Secret gone from `monitor.html` (operator types it at sign-in, verified
+> server-side, held in `sessionStorage`); monitor/logs/admin excluded from the app bundle + a test scans the
+> **built** bundle for secrets. **CORS was set only inside the `OPTIONS` branch** on
+> `ask`/`debate`/`devotional`/`feedback`, so the preflight passed but the POST response had no
+> `Access-Control-Allow-Origin` — invisible same-origin on the web, but it would have **silently killed those
+> features in the app**; the 8 drifted hand-copied blocks are now one **`lib/cors.js`** (allowlist replaces
+> `'*'`; **`Authorization` is in `Access-Control-Allow-Headers`** — omitting it made the token-authenticated
+> delete call unreachable in-app). Added **`.vercelignore`** (`vercel.json` used a hand-maintained redirect
+> blocklist that every new top-level dir silently escaped — `tests/` was already exposed).
+>
+> **In-app account deletion** (Apple 5.1.1(v) blocker) — `lib/verify-user.js` + `lib/delete-account.js` + a
+> `?do=delete-account` route folded into `api/new-signup.js` (**Vercel Hobby caps the project at 12 functions
+> and we are AT the cap** — hence the `?do=` fold, matching `push.js`/`weekly-email.js`; that file now carries
+> **two auth models**, and the user-authed branch returns before the shared-secret gate) + a Dashboard
+> "Account" card with a typed-DELETE modal + `privacy.html` + an `index.html?deleted=1` confirmation.
+> Identity comes **only** from a verified token. The second review found the first cut **half-deleted**:
+> the auth user was removed even when a table delete had failed, and a 400/404 was swallowed as "table
+> absent" (so a wrong *column* would report success while every row survived). Both fixed — it now
+> **aborts before touching the auth user** if any table failed, and tolerates only genuine undefined-table
+> codes (`42P01`/`PGRST205`/`PGRST106`). Also: rate-limit **after** auth keyed on the user (an IP bucket let
+> a stranger on shared NAT block someone's deletion), success is audit-logged, `SUPABASE_ANON_KEY` is
+> **required** (now set by the owner) and its absence 503s loudly instead of 401-ing every real user.
+> ⚠ **STILL NOT exercised against live Supabase** — test with a throwaway account before submitting.
+> Known limit: `push_subscriptions` has no `user_id`, so other devices' subs linger until they expire
+> (fix: add the column, then add `['push_subscriptions','user_id']` to `USER_TABLES`).
+>
+> **Monitoring now tells the truth (this was giving false reassurance).** `/api/health` **always returned
+> HTTP 200**, even while its body said `"degraded"` — and the owner runs **UptimeRobot**, which judges
+> up/down by status code. So the monitor would have stayed green straight through a database outage or an
+> expired Anthropic key. It now returns **503 when degraded**, 200 when healthy; a **skipped** check counts
+> as fine, so the deliberately-off paid LLM pings can't raise a false alarm. `monitor.html` also stopped
+> reporting those skipped pings as failures (it showed a red "Issues — 5 of 10 passing" on a healthy site),
+> and stays usable when `METRICS_SECRET` is unset (`/api/metrics` answers `503 not_configured`, the page opens
+> in limited mode) — otherwise the new server-side sign-in would have locked the operator out entirely.
+> **Owner actions done:** `SUPABASE_ANON_KEY` set in Vercel; UptimeRobot repointed from
+> `apologia-daily.vercel.app` (wrong host — it would stay green through a DNS/domain failure) to
+> `https://apologiadaily.com`, plus a new monitor on `/api/health`. **Deliberately skipped:** `METRICS_SECRET`
+> (PostHog + the Supabase dashboard already give the user counts; the metrics page is redundant).
+> Tests **47 → 70**.
 >
 > **2026-07-25 (live-AI routing + answer-format fixes + mathematics reel rebuild).** Three shipped, all
 > gated + live on `main`. (1) **Topic-classifier fix** (`api/ask.js`, dual-consensus CLEAN): a core Trinity
