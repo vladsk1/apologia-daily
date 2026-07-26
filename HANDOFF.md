@@ -36,6 +36,40 @@ that produced it can be discarded._
   failed table delete still destroyed the login while rows survived. The test asserted call *ordering*, not
   the skip, which is how it passed review. **Assert the behaviour that makes the invariant true, not a proxy.**
 
+### Trust page (`editorial-standards.html`) — rebuilt, gated, live
+
+Extended the existing page rather than adding `/how-we-check`: it was already linked from ~100 pages, so a
+second page would have split authority for nothing. Three new sections — repo-counted figures, what the AI
+can and cannot do, and six published corrections. Wired from the pricing block and the answers footer (the
+"Reviewed for accuracy & orthodoxy" badge is now a link, so the assertion is checkable).
+
+**`tools/update-trust-numbers.mjs`** regenerates the figures into a marked block and runs `--check` in CI.
+It counts only **gated** briefs — `briefs-index.json` lists all of them and only `lib/briefs-verified.js` is
+filtered, so counting the index would have made the page assert a review that had not happened the moment an
+ungated brief landed.
+
+**What the gates caught (both were worth their cost):**
+- *argument* — 5 BREAK. The load-bearing one was an **implicature, not a sentence**: flagging only the
+  doctrinal stage as automated invited the reader to assume the rest were human, so a critic discovering
+  otherwise would re-read every figure as a model marking its own homework. The page now discloses the AI
+  reviewers outright, framed as how a tiny team gates everything rather than spot-checking. Also killed three
+  false guarantees — **"it cannot be quoted" is a non-sequitur** (the model knows the Fathers independently
+  of retrieval; the real guarantee is verified-only retrieval *plus* instruction), "answers from our reviewed
+  material" (contradicted by `retrieve-briefs.js`: at most one brief, high threshold, usually none), and
+  "every page before it ships" (the gate's globs are essays/answers/tabs).
+- *orthodoxy* ×2 — 0 HERESY both passes. The re-gate caught that, to make the confession vivid, the page had
+  published **the two exact strings `tools/check-answer-concessions.mjs` exists to catch**. One removed
+  entirely; the other kept with "wrongly" bound inside the same clause so the retraction survives a crop.
+  A later self-check found the phrase a third time — inside the review stamp documenting its removal.
+
+**Highest-value change, eight words:** the page said reviews run to "a fixed brief" without saying what the
+brief *is*, which let a wary reader imagine a machine improvising doctrine. It now names the standard (the
+creeds + `what-we-believe`) and links it.
+
+**Standing rule this reinforces:** claims on that page must be *mechanically* true. Where a claim was
+overstated we made the claim true rather than softening it — `demo/` was added to the tripwire globs so
+"every published page" is literal, and the CI check was wired so "a build check fails if this drifts" is real.
+
 ### Owner actions completed this session
 `SUPABASE_ANON_KEY` set in Vercel (**required** for deletion). UptimeRobot repointed from
 `apologia-daily.vercel.app` (wrong host — green through a DNS/domain failure) to `https://apologiadaily.com`,

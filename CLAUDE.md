@@ -13,6 +13,17 @@
 > actually see an outage). Tests 47 → **70**. ⚠ Account deletion has **never run against live Supabase** —
 > test with a throwaway account before submitting. Detail below + `HANDOFF.md`.
 >
+> **LATEST — 2026-07-26 (b):** rebuilt [`editorial-standards.html`](editorial-standards.html) as the public
+> **trust page** — repo-counted figures (`tools/update-trust-numbers.mjs`, CI-checked, counts only GATED
+> briefs), an honest construction-vs-instruction account of what the AI can and cannot do, six **published
+> corrections** incl. the drift that let a review certify a copy readers weren't seeing, and — the gates'
+> load-bearing catch — an explicit disclosure that **our reviewers are AI under human supervision, checking
+> against the creeds + `what-we-believe`**, since flagging only the doctrinal stage as automated implied the
+> rest were human. Linked from the pricing block + the answers footer (the "Reviewed" badge is now a link).
+> Gated argument + orthodoxy ×2 (0 HERESY; the re-gate caught that the page had published the two exact
+> strings `check-answer-concessions.mjs` exists to catch). **Still no pastoral sign-off — the page declines
+> to claim it.**
+>
 > **STANDING RULE — X / social share-cards.** Every X-post image uses the brand card generator
 > `tools/reel/gen_xcard.py` (night-sky navy + gold underlined kicker + italic-serif cream/gold
 > headline + shield logo, 1600×900; specs in `tools/reel/xcards/`). **Never ship a flat frame
