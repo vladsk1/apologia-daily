@@ -50,9 +50,15 @@ function counts() {
   const sourcesTotal = srcRows.length;
   const sourcesVerified = srcRows.filter((s) => s.verified === true).length;
 
-  // Argument briefs: only those stamped with BOTH gates reach the live module.
+  /* Argument briefs. Count ONLY the gated ones, because that is what the page
+     claims ("every one of which cleared both review gates"). briefs-index.json
+     lists ALL briefs regardless of gate status — only lib/briefs-verified.js is
+     filtered — so counting the index would, the moment an ungated brief is added,
+     silently make the page assert a review that had not happened. Mirror the
+     build's own predicate rather than trusting the index. */
   const briefs = JSON.parse(read('briefs-index.json'));
-  const briefRows = Array.isArray(briefs) ? briefs : (briefs.briefs || briefs.entries || []);
+  const allBriefs = Array.isArray(briefs) ? briefs : (briefs.briefs || briefs.entries || []);
+  const briefRows = allBriefs.filter((b) => b && b.reviewed && b.reviewed.argument && b.reviewed.orthodoxy);
 
   // Automated tests guarding the whole thing.
   const tests = globSync('tests/*.test.mjs', { cwd: ROOT })
@@ -70,8 +76,8 @@ function render(c) {
   <ul class="commit">
     <li><strong>${c.essays} deep-dive essays</strong> and <strong>${c.answers} answer pages</strong> published, each carrying a dated record of the reviews it passed &mdash; ${c.answersReviewed} of the ${c.answers} answers record both an argument and an orthodoxy review.</li>
     <li><strong>${c.sourcesVerified} of ${c.sourcesTotal} passages</strong> in our public-domain source library have been checked word-for-word against the original text. Only those may be quoted.</li>
-    <li><strong>${c.briefs} argument briefs</strong> in the layer our AI draws on, every one of which cleared both review gates before it could be used.</li>
-    <li><strong>${c.tests} automated checks</strong> run on every change to the site, including scans of every published page for doctrinal drift.</li>
+    <li><strong>${c.briefs} argument briefs</strong> &mdash; short summaries of our house framing that the assistant may draw on &mdash; every one of which cleared both review gates before it could be used.</li>
+    <li><strong>${c.tests} automated checks</strong> run on every change to the site, alongside a separate scan of every published page of prose against a list of known heterodox phrasings. That scan is a coarse net rather than a judge: it fails the build when a new match appears, so a person has to look.</li>
   </ul>
   ${END}`;
 }
