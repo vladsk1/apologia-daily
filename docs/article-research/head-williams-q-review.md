@@ -6,8 +6,13 @@
 > `apologia-citations → apologia-argument → apologia-orthodoxy`. Never cite the article; cite the
 > verified primary.
 
-> ✅ **MINING STATUS: COMPLETE — full text mined 2026-07-26** (publisher-hosted open-access PDF from
-> tyndalebulletin.org; downloaded to the git-ignored `_pdfs/`, never committed). 26 pp.
+> ⚠️ **MINING STATUS: PARTIAL — mined 2026-07-26, pp. 1–8 and 22–26 of 26 read** (publisher-hosted
+> open-access PDF from tyndalebulletin.org; downloaded to the git-ignored `_pdfs/`, never committed).
+> **Covered:** the framing, the survey of anti-Q work, the *Critical Edition of Q* critique, and the whole
+> Casey verdict + conclusion (the two parts with on-site consequences). **NOT read: pp. 9–21** — the
+> detailed treatment of *Documenta Q*, Kloppenborg Verbin's *Excavating Q*, and the bulk of the
+> Casey text-by-text analysis. The Casey defects listed below come from the pp. 22–26 stretch and are
+> reliable as far as they go, but this is **not** a complete map of the article.
 
 > ⚠ **WHY THIS NOTE EXISTS / BRIEF CORRECTION.** The mining brief (§2) queued **Peter J. Williams** and
 > said to "search the *Tyndale Bulletin* author index for a Williams article; if the best material is

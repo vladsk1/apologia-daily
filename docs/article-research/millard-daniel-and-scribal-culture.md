@@ -5,8 +5,11 @@
 > is an UNVERIFIED LEAD** until confirmed against the primary and run through `apologia-citations →
 > apologia-argument → apologia-orthodoxy`. Never cite the article; cite the verified primary.
 
-> ✅ **MINING STATUS: COMPLETE — both full texts mined 2026-07-26.** Downloaded to the git-ignored
-> `_pdfs/`, never committed.
+> ✅ **MINING STATUS: MINED 2026-07-26.** Downloaded to the git-ignored `_pdfs/`, never committed.
+> **A ("Daniel in Babylon," 18 pp.): pp. 1–18 read — ✅ complete.**
+> **B ("The Knowledge of Writing," 11 pp.): pp. 1–4 and 7–11 read — ⚠️ near-complete; pp. 5–6 were not
+> read** (they continue the Samaria-ostraca / comparative-epigraphy discussion between the Samaria section
+> and the Assur/Ur density material, both of which *are* captured below).
 
 | | |
 |---|---|

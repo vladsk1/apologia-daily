@@ -6,8 +6,14 @@
 > `apologia-citations → apologia-argument → apologia-orthodoxy`. Never cite the article; cite the
 > verified primary.
 
-> ✅ **MINING STATUS: COMPLETE — full text mined 2026-07-26** (publisher-hosted open-access PDF from
-> tyndalebulletin.org; 35 pp.; downloaded to the git-ignored `_pdfs/`, never committed).
+> ⚠️ **MINING STATUS: PARTIAL — mined 2026-07-26, pp. 1–14 and 30–33 of 35 read** (publisher-hosted
+> open-access PDF from tyndalebulletin.org; downloaded to the git-ignored `_pdfs/`, never committed).
+> **Covered:** the methodological frame, §I(a)–(d) on the external data, §II on the nature of the
+> patriarchal figures, §IV on the Merneptah Stele, and §V(A)–(B) on literary criticism and the conquest —
+> i.e. everything the Live-door section below acts on. **NOT read: pp. 15–29 and 34–35** — most of §II(B)
+> onward on the *dating* of the patriarchs, §III, and the rest of §V. Since the patriarchal-dating material
+> is exactly what the Thompson/Van Seters flag quarantines, the unread stretch is the part we have
+> **deliberately declined to use** — but this is still **not** a complete map of the article.
 
 > ⚠️⚠️ **AGE IS THE HEADLINE CAVEAT — READ FIRST. This article is from 1966.** It was written *before*
 > the single most important development in the field it addresses: the **Thompson (1974) / Van Seters

@@ -6,10 +6,22 @@
 > `apologia-citations → apologia-argument → apologia-orthodoxy`. Never cite the article; cite the
 > verified primary.
 
-> ✅ **MINING STATUS: COMPLETE — all four full texts mined 2026-07-26** (three publisher-hosted
-> open-access PDFs from tyndalebulletin.org; one permission-based legal mirror at biblicalstudies.org.uk,
-> linked from the author's own `ffbruce.com` bibliography page. All downloaded to the git-ignored
-> `_pdfs/`, never committed.)
+> ✅ **MINING STATUS: MINED 2026-07-26 — but read-coverage varies by text; check the table before relying
+> on any section.** Four publisher-hosted open-access PDFs from tyndalebulletin.org; one permission-based
+> legal mirror at biblicalstudies.org.uk, linked from the author's own `ffbruce.com` bibliography page.
+> All downloaded to the git-ignored `_pdfs/`, never committed.
+>
+> | Text | Pages | Read | Status |
+> |---|---|---|---|
+> | **A.** Hemer, Acts 27–28 (*TynBul* 36) | 31 | 1–31 | ✅ **complete** |
+> | **B.** Hemer, Speeches I / Miletus (*TynBul* 40.1) | 9 | 1–9 | ✅ **complete** |
+> | **C.** Hemer, Speeches II / Areopagus (*TynBul* 40.2) | 21 | **1–9 only** | ⚠️ **PARTIAL** — the setting + the speech's Stoic/Epicurean/Athenian texture are covered; **pp. 10–21 (his further corollaries, the close, and the full apparatus) were NOT read** |
+> | **D.** Seccombe, Dating Luke-Acts (*TynBul* 71.2) | 21 | 1–21 | ✅ **complete** |
+> | **E.** Bruce, *Speeches in the Acts* (Tyndale Press) | 21 | **1–8, 18–21 only** | ⚠️ **PARTIAL** — the Thucydidean frame, the Aramaic/kerygma core, and the conclusion are covered; **pp. 9–17 (much of the deliberative + apologetic speech-by-speech survey, incl. Stephen and the Areopagus) were NOT read** |
+>
+> **What this means in practice:** the argument map below is sound for what it covers, but for **C** and
+> **E** it is *not* a complete map of the article. A later session wanting the full picture should re-read
+> the unread ranges — the PDFs are already in `_pdfs/`.
 
 | | |
 |---|---|

@@ -6,8 +6,8 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
-> **LATEST — 2026-07-26 (c):** mined the **full Tyndale/evangelical article-research batch** (7 sources,
-> 10 texts) + the mandatory live cross-check → 6 article notes, 4 book notes, **11 backlog rows**.
+> **LATEST — 2026-07-26 (c):** mined the **Tyndale/evangelical article-research batch** (7 sources,
+> 11 texts — 6 read in full, 5 partial; each note states its own page range) + the mandatory live cross-check → 6 article notes, 4 book notes, **11 backlog rows**.
 > ⭐ **Top find: Synoptic preexistence is a real gap (P2)** — every preexistence argument on the site runs
 > through Paul/Hebrews/John, so the Synoptics sit exactly where the "Christology developed late" objection
 > puts them. **Research/docs only; no live content changed.** Detail below.
@@ -112,9 +112,13 @@
 >
 > **2026-07-26 (article-research: the Tyndale/evangelical mining batch — 7 sources, ALL mined).** Executed
 > `docs/article-research/MINING-BRIEF-tyndale-batch.md` from a local web-enabled session (the web sandbox's
-> egress policy had blocked these hosts). **Ten source texts harvested and read in full**, all
-> open-access / publisher-hosted / author-permitted — never a pirated or third-party copy; PDFs went to the
-> git-ignored `_pdfs/` and are **not** committed. Produced **6 article notes** (`lanier-critical-editions-stability`
+> egress policy had blocked these hosts). **Eleven source texts harvested** — all open-access /
+> publisher-hosted / author-permitted, never a pirated or third-party copy; PDFs went to the git-ignored
+> `_pdfs/` and are **not** committed. ⚠️ **Read-coverage varies and each note's header now states its own
+> page range:** six were read cover-to-cover (Lanier; Hemer *TynBul* 36; Hemer 40.1; Seccombe; Millard's
+> Daniel chapter; Gathercole); **five are PARTIAL** (Hemer 40.2, Bruce 1942, Head & Williams, Kitchen, and
+> — marginally — Millard's literacy article). The notes are sound for what they cover; they are **not**
+> complete maps of those five articles. Produced **6 article notes** (`lanier-critical-editions-stability`
 > · `acts-historicity-bruce-hemer-seccombe` · `millard-daniel-and-scribal-culture` · `head-williams-q-review`
 > · `gathercole-i-have-come-sayings` · `kitchen-historical-method-hebrew-tradition`) and **4 book notes**
 > (`gathercole-preexistent-son-and-thomas` · `can-we-trust-the-gospels` · `jesus-and-the-eyewitnesses` ·
