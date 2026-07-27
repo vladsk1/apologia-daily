@@ -20,6 +20,16 @@ Wilder, eds. — Wallace **ch. 6** NT textual criticism + Barnett **ch. 10** NT 
 `josephus-and-jesus.md` (T. C. Schmidt, OUP 2025 — the Testimonium Flavianum: authenticity, neutral
 reconstruction, and Josephus's first-hand sources for Jesus).
 
+**⚠ PARTIAL notes added 2026-07-26 (books NOT owned, NOT read — mapped at thesis/chapter level only from
+the authors' own open-access work, published open-access reviews, publisher frontmatter, and our own
+already-certified citations):** **PXS** = `gathercole-preexistent-son-and-thomas.md` (Simon Gathercole —
+*The Preexistent Son* [2006] + *The Composition of the Gospel of Thomas* [2012]) · **CWTG** =
+`can-we-trust-the-gospels.md` (Peter J. Williams, Crossway 2018) · **JATE** =
+`jesus-and-the-eyewitnesses.md` (Richard Bauckham, Eerdmans 2006 / 2nd ed. 2017 — ⚠ **universalism fence**,
+see below) · **OROT** = `on-the-reliability-of-the-old-testament.md` (K. A. Kitchen, Eerdmans 2003).
+Each carries a "TO COMPLETE (human action)" instruction; treat every page number in them as *reported*,
+not verified.
+
 | Topic | Note → section | Strongest primaries to chase (all still unverified until the pipeline confirms) |
 |---|---|---|
 | **Minimal-facts method** | CFR Part 2 intro; BOP | the two criteria (strongly-evidenced + granted by ~all critical scholars); Habermas survey (CFR n70) |
@@ -48,8 +58,45 @@ reconstruction, and Josephus's first-hand sources for Jesus).
 | **Naturalism / miracles / "science" objections** | CFR Ch. 8 | Behe, *Darwin's Black Box* (the elephant); Swinburne, "Violation of a Law of Nature," in *Miracles* (1989); Hume, *Enquiry*; Yamauchi (rival-religion miracles). ⚠ fine-tuning/ID: *data* conceded, *design* is the contested inference — never "science proves design" |
 | **Kalam / fine-tuning / moral argument / NT reliability** | **IDHEF** (Geisler & Turek — the broad-apologetics map) | per that note's chapter map; hold the argument-specific rules (Kalam "begins to exist"; fine-tuning data-vs-design; moral duties-need-a-ground) |
 | **Suffering / hope** | BOP (the suffering chapter) | concede the mystery first; Plantinga is a *defense*, not a proof |
+| ⭐ **Preexistence of Christ in the SYNOPTICS** | **PXS** §A (thesis-level only) — **and the FULL mining is in `article-research/gathercole-i-have-come-sayings.md`, which is where to actually go** | the *ēlthon* + purpose sayings (**Mark 2:17 // Matt 9:12 // Luke 5:32; Matt 5:17; 10:34–35; Luke 12:49, 51**); the angelic idiom (**Dan 9:22–23; 10:12, 14, 20; 11:2 OG; Tob 5:5 [א]; 4 Ezra 6:30; 7:2; 2 Bar 71:3**); steelman = **Mark 1:38**. ⚠⚠⚠ **The parallel is to the FORM of the saying, never the NATURE of the speaker — "Jesus speaks like an angel" is the Arian/JW claim. Dual-consensus + a mandatory `orthonote`.** Contested, not consensus |
+| **Gospel of Thomas — date & dependence** | **PXS** §B (publisher TOC + abstract) | *Thomas* is **Greek**, not a Semitic composition (which is the plank most "early and independent" theories rest on); traces of distinctively **Lukan** phraseology. ⚠ Live dispute — name **Goodacre** (*Thomas and the Gospels*, 2012) alongside, and the independence camp (**DeConick**, **Patterson**). ⚠ Gathercole is **neither** independence **nor** thoroughgoing dependence — don't flatten him. Keep `canon.html`'s bound: **chronology, not theology** |
+| **Gospel reliability — local knowledge (names / geography / undesigned coincidences)** | **CWTG** (chapter-level, from a published review) | **already saturated on-site** — `names.html` *already cites* Williams ch. 3. Only fresh lead: **Luke's *limnē* ("the lake") vs. Matthew/Mark/John's *thalassa* ("sea")** for Galilee — verify in a concordance. **Blunt, *Undesigned Coincidences* (1847) is PUBLIC DOMAIN** → a real `/sources` candidate |
+| **Eyewitness testimony / Papias / *inclusio* / onomastics** | **JATE** (chapter-level, from the OA *Themelios* review) — but see the ⚠ fence below | **Eusebius, *H.E.* 3.39**; **Ilan, *Lexicon of Jewish Names*** (2002); the *inclusio* (**Mark 1:16 / 16:7**, with **Lucian** and **Porphyry** parallels); **C. H. Turner** on Mark's plural-to-singular alternation (**Mark 14:32**); **Gal 2:9** (the reviewer's objection to the John-the-Elder thesis). ⚠ **Already saturated on-site** — corroboration, not a gap |
+| **OT historicity / ANE settings** | **OROT** (thesis-level only) — the *usable* Kitchen is the fully-mined `article-research/kitchen-historical-method-hebrew-tradition.md` | **Hittite treaty form** vs. the Sinai/Deuteronomy covenant (ch. 6) — *already live on `library/archaeology.html` with McConville's caution attached, which is the model*; **Merneptah Stele** (c. 1208 BC). ⚠⚠ avowed **maximalist** — bounded verdicts, never cited without his named critic; ⚠⚠ the **Nuzi/patriarchal-customs** argument is a **trap, not a gap** (Thompson 1974 / Van Seters 1975) |
 
 ## ⚠ Standing "do not use / high-caution" flags (carry these into any pull)
+- ⚠⚠⚠ **BAUCKHAM — UNIVERSALISM FENCE (JATE).** Richard Bauckham holds views on universal salvation that
+  fall outside what this site may affirm; `CLAUDE.md` lists **universalism-as-certain** among the
+  deploy-blocking departures from Nicene orthodoxy. **Mine ONLY his historiography** (eyewitness testimony,
+  Papias, onomastics, the *inclusio*, oral history, memory). Cite him **as a historian on a historical
+  question** — never as a theological authority, never with a general endorsement, and never in a
+  "further reading" list without naming the specific historiographical work. Same discipline as the
+  NTWrightPage flag. **This is a fence, not a smear:** his onomastic work is first-rate and already
+  load-bearing on our site.
+- ⚠ **JATE — the Beloved Disciple = "John the Elder, not John son of Zebedee"** is Bauckham's *contested*
+  conclusion, not a result. The reviewer's objection (where has John son of Zebedee gone, given **Gal 2:9**
+  and the Synoptic inner three?) must travel with it. Do not import the identification into our voice.
+- ⚠ **JATE — the Holocaust/Gospels testimony comparison** (Ricoeur, "uniquely unique events") is a
+  philosophy-of-testimony analogy inside a 500-page academic book. **Never** use it in a reel, card, answer
+  opening, or social post; only inside a full essay treatment, handled with due gravity.
+- ⚠ **JATE — "protective anonymity"** (the unnamed woman, the fleeing young man as Lazarus) is Bauckham's
+  most speculative move. Present as a suggestion, never as a finding.
+- ⚠⚠ **OROT / Kitchen — the Nuzi & patriarchal-customs parallels are a TRAP, not a gap.** Overturned by
+  **Thompson (1974)** and **Van Seters (1975)**; a deliberate **non-recommendation** is on the record in
+  `article-research/kitchen-historical-method-hebrew-tradition.md`. Do not import without working through
+  that literature and Kitchen's reply. Kitchen's polemical register is also incompatible with our voice.
+- ⚠⚠⚠ **PXS / Gathercole — the ANGEL problem.** See the topic row above. Compressed badly, "Jesus' 'I have
+  come' sayings pattern with angelic announcements" reads as **angel-Christology** (the Arian/JW claim
+  `library/trinity_jw.html` and `library/hands.html` refute). Form, not nature. **Dual-consensus +
+  `orthonote` mandatory.**
+- ⚠ **PXS / CWTG / JATE / OROT are all PARTIAL notes — the books are NOT owned and have NOT been read.**
+  Each is mapped only from the author's own open-access work, a published open-access review, publisher
+  frontmatter, and/or our own already-certified citations. **Do not treat any page number in them as
+  verified.** Each note carries a "TO COMPLETE (human action)" instruction; **Perlego is forbidden.**
+- 🚫 **Access decision on the record:** the free full text of Bauckham's *JSHJ* 1.1 (2003) article
+  circulating on **Scribd** is a third-party upload of a copyrighted Brill article — **not a legitimate
+  source, do not use it.** (`richardbauckham.co.uk` was unreachable on 2026-07-26: expired TLS
+  certificate. Worth retrying.)
 - **BOP Ch. 4 Islam-slavery material** is Bill-Warner/CSPI-sourced → **DO NOT USE.**
 - **BOP Ch. 7** has no endnotes → its demographic claims have **no citation trail**; don't cite.
 - **CFR NDE section (pp. 146–147)** — the book's most contestable leg; keep it OFF the minimal-facts case,

@@ -124,5 +124,34 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   reports the disciples' claim); *Toledot Yeshu* (App. 4) is late polemic; the six Appendices + the full
   ancient-source bibliography are an intentional nice-to-have deeper pass.
 
+### ⚠ PARTIAL notes — books NOT owned, NOT read (added 2026-07-26, Tyndale/evangelical mining batch)
+These four were queued as books by `docs/article-research/MINING-BRIEF-tyndale-batch.md`. Because we do
+**not** own them, each is mapped only at **thesis/chapter level**, and only from legitimate non-book
+sources: the author's own open-access articles, a published **open-access** review, publisher frontmatter,
+and our own already-certified on-site citations. **Every page number in them is *reported*, not verified.**
+Each carries a "**TO COMPLETE (human action)**" instruction — acquire a legitimate copy and map it
+properly per the workflow above. **Perlego is forbidden.**
+- `gathercole-preexistent-son-and-thomas.md` — Simon Gathercole, ***The Preexistent Son*** (Eerdmans,
+  2006) + ***The Composition of the Gospel of Thomas*** (SNTSMS 151, CUP, 2012). ⭐ **The most valuable
+  lead in the batch:** the Synoptic "I have come" sayings as evidence that Matthew, Mark and Luke already
+  presuppose Christ's preexistence — a topic **entirely absent** from our deity essays. The argument is
+  fully mined in the *article* library, from Gathercole's own open-access *TynBul* 75 (2024) restatement:
+  [`article-research/gathercole-i-have-come-sayings.md`](../article-research/gathercole-i-have-come-sayings.md).
+  ⚠⚠⚠ **The angelic parallel is to the FORM of the saying, never the NATURE of the speaker** —
+  dual-consensus + a mandatory `orthonote`.
+- `can-we-trust-the-gospels.md` — Peter J. Williams (Crossway, 2018). Chapter map from a published review;
+  **almost entirely corroboration** — `library/names.html` already cites ch. 3 by name. One small lead
+  (Luke's *limnē* vs. *thalassa*) and one PD `/sources` candidate (**Blunt, 1847**).
+- `jesus-and-the-eyewitnesses.md` — Richard Bauckham (Eerdmans, 2006; 2nd ed. 2017). Chapter map from the
+  **open-access *Themelios* review**. **Corroboration across the board** — the strongest "already covered"
+  result in the batch. ⚠⚠⚠ **Carries the standing UNIVERSALISM FENCE:** mine the historiography only, cite
+  him as a historian on a historical question, never as a theological authority.
+- `on-the-reliability-of-the-old-testament.md` — K. A. Kitchen (Eerdmans, 2003). Thesis-level only;
+  **corroboration** (his treaty-form argument is already live on `library/archaeology.html` with
+  McConville's caution attached — the model for every Kitchen pull). ⚠⚠ Avowed maximalist; the
+  **Nuzi/patriarchal-customs** material is a **trap, not a gap**. The genuinely free and *fully mined*
+  Kitchen is
+  [`article-research/kitchen-historical-method-hebrew-tradition.md`](../article-research/kitchen-historical-method-hebrew-tradition.md).
+
 **See [`INDEX.md`](INDEX.md) for the topical index** — it routes a topic → the right note + section + the
 strongest primaries, and is the file a content session should consult first.

@@ -1,4 +1,40 @@
-# Mining brief — Tyndale/evangelical batch (PENDING local harvest)
+# Mining brief — Tyndale/evangelical batch (✅ **EXECUTED 2026-07-26** — kept for the audit trail)
+
+> ✅ **STATUS: ALL 7 SOURCES MINED, 2026-07-26, from a local web-enabled session.** Ten source texts were
+> harvested and read in full; **six article notes** and **four book notes** were written; every lead was
+> cross-checked against the live site; **eleven backlog rows** were logged. The brief below is left
+> unchanged as the record of what was asked for. **Read the notes, not this file, for what was found.**
+>
+> **Notes produced —** `article-research/`: `lanier-critical-editions-stability.md` ·
+> `acts-historicity-bruce-hemer-seccombe.md` · `millard-daniel-and-scribal-culture.md` ·
+> `head-williams-q-review.md` · `gathercole-i-have-come-sayings.md` ·
+> `kitchen-historical-method-hebrew-tradition.md`. `book-research/`:
+> `gathercole-preexistent-son-and-thomas.md` · `can-we-trust-the-gospels.md` ·
+> `jesus-and-the-eyewitnesses.md` · `on-the-reliability-of-the-old-testament.md`.
+>
+> **Corrections to this brief, found by executing it (do not propagate the originals):**
+> - **§1 is NOT by Dirk Jongkind.** The author of the *TynBul* 71.1 (2020) stability article is **Gregory
+>   R. Lanier** (RTS); Jongkind appears *inside* it as co-editor of the THGNT. Cite **Lanier**.
+> - **§7's "bonus" Dating Luke-Acts article is by David Seccombe**, not Bruce or Hemer. Bruce's *Speeches
+>   in the Acts of the Apostles* lecture was **delivered Dec 1942**; the pamphlet's title page reads
+>   **1942**, not 1943.
+> - **§2 resolved BOTH ways.** Williams's onomastics/geography/undesigned-coincidences case is in the
+>   **book** (→ `book-research/can-we-trust-the-gospels.md`), but he *does* have a substantive
+>   open-access *TynBul* article, co-authored with **Peter M. Head**, on Q (→ `head-williams-q-review.md`).
+> - **§6's suggested free Bauckham article is NOT legitimately free** — the only free full text found is a
+>   **Scribd** third-party upload of a copyrighted Brill article. **Not usable.** (`richardbauckham.co.uk`
+>   was unreachable: expired TLS certificate.) The book note was built from the **open-access *Themelios*
+>   review** instead.
+> - **§3 Kitchen has more free material than the brief knew:** an open-access *TynBul* article (mined in
+>   full) **plus his complete *Ancient Orient and Old Testament* (1966) hosted with his own permission.**
+>
+> **Verdicts vs. the pre-scan:** the pre-scan was right on every count. **#5 Gathercole is the real gap**
+> (P2, the batch's top row — Synoptic preexistence returns *zero* hits site-wide). **#6 Bauckham** was the
+> purest corroboration. The batch also surfaced improvements the pre-scan did not predict: the **Acts
+> 27–28 voyage epigraphy**, the **speeches-in-Acts** topic, **Iron-Age literacy**, the **Merneptah Stele**,
+> and the **Greek OT/Septuagint** half of the text-stability story. One **deliberate non-recommendation**
+> is on the record: Kitchen's Nuzi/patriarchal-customs material (overturned by Thompson 1974 / Van Seters
+> 1975) is a **trap, not a gap**.
 
 > **Why this file exists.** These 7 sources were queued for the journal library (`article-research`),
 > but the **web-session egress policy blocks the source hosts** (`tyndalebulletin.org`,

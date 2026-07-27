@@ -6,6 +6,12 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **LATEST — 2026-07-26 (c):** mined the **full Tyndale/evangelical article-research batch** (7 sources,
+> 10 texts) + the mandatory live cross-check → 6 article notes, 4 book notes, **11 backlog rows**.
+> ⭐ **Top find: Synoptic preexistence is a real gap (P2)** — every preexistence argument on the site runs
+> through Paul/Hebrews/John, so the Synoptics sit exactly where the "Christology developed late" objection
+> puts them. **Research/docs only; no live content changed.** Detail below.
+>
 > **LATEST — 2026-07-26:** shipped the **native app scaffolding** (Capacitor: `ios/` + `android/`, inert
 > RevenueCat), **in-app account deletion** (Apple 5.1.1(v) blocker — token-authenticated, aborts rather than
 > half-deletes), **app-review security fixes** (`lib/cors.js`; secret out of the public `monitor.html`;
@@ -103,6 +109,37 @@
 > `https://apologiadaily.com`, plus a new monitor on `/api/health`. **Deliberately skipped:** `METRICS_SECRET`
 > (PostHog + the Supabase dashboard already give the user counts; the metrics page is redundant).
 > Tests **47 → 70**.
+>
+> **2026-07-26 (article-research: the Tyndale/evangelical mining batch — 7 sources, ALL mined).** Executed
+> `docs/article-research/MINING-BRIEF-tyndale-batch.md` from a local web-enabled session (the web sandbox's
+> egress policy had blocked these hosts). **Ten source texts harvested and read in full**, all
+> open-access / publisher-hosted / author-permitted — never a pirated or third-party copy; PDFs went to the
+> git-ignored `_pdfs/` and are **not** committed. Produced **6 article notes** (`lanier-critical-editions-stability`
+> · `acts-historicity-bruce-hemer-seccombe` · `millard-daniel-and-scribal-culture` · `head-williams-q-review`
+> · `gathercole-i-have-come-sayings` · `kitchen-historical-method-hebrew-tradition`) and **4 book notes**
+> (`gathercole-preexistent-son-and-thomas` · `can-we-trust-the-gospels` · `jesus-and-the-eyewitnesses` ·
+> `on-the-reliability-of-the-old-testament` — all four **PARTIAL**: those books are *not owned*, so each is
+> mapped only from the author's own OA work, an OA review, publisher frontmatter, and our own certified
+> citations, and each carries a "TO COMPLETE (human action)" instruction). Every lead was **cross-checked
+> against the live site** per the mandatory rule; **11 backlog rows** logged (+ 1 deliberate
+> *non-recommendation*). **⭐ The headline find: Synoptic preexistence is a real gap (P2, the batch's top
+> row).** Site-wide, *every* preexistence argument runs through Paul, Hebrews, or John — `jesus_as_god_nt.html`
+> and `titles.html` return **zero** hits, which leaves the Synoptics standing exactly where the
+> "Christology developed late" objection puts them. Gathercole's "I have come" sayings attack that premise
+> directly. **⚠⚠⚠ That row is dual-consensus + a MANDATORY `orthonote`:** the ancient parallel is to the
+> **form** of the saying (a heavenly being announcing a mission), **never the nature of the speaker** —
+> compressed badly it reads as Arian/JW angel-Christology. Other improvements: the Acts 27–28 voyage
+> epigraphy, Seccombe's three *non-silence* arguments for `earlydate.html`, edition-level text stability
+> (+ the Greek OT half we don't cover at all), a bounded Darius-the-Mede line, Iron-Age literacy, the
+> **Merneptah Stele**, and a specialist caveat on the Casey footnote in `jewishness.html`. **Corroboration**
+> (no rows): Bauckham's onomastics/eyewitness case (saturated), Williams's names plank (already cited),
+> Kitchen's treaty-form argument, Belshazzar/Nabonidus. **Three standing flags now on the record in the
+> libraries rather than only in the brief:** the **Bauckham universalism fence**; Kitchen's
+> **Nuzi/patriarchal-customs material is a trap, not a gap** (Thompson 1974 / Van Seters 1975); and the
+> **Scribd copy of Bauckham's *JSHJ* article is not a legitimate source**. Also corrected three brief
+> errors: the stability article is by **Gregory R. Lanier**, not Jongkind; "Dating Luke-Acts" is by
+> **David Seccombe**; Bruce's *Speeches* lecture is **1942**. Notes + ledger/INDEX/backlog only — no live
+> content changed, so nothing needed re-gating.
 >
 > **2026-07-25 (live-AI routing + answer-format fixes + mathematics reel rebuild).** Three shipped, all
 > gated + live on `main`. (1) **Topic-classifier fix** (`api/ask.js`, dual-consensus CLEAN): a core Trinity
@@ -796,7 +833,21 @@ books*, not quotable text.
   doctrine on a disputed variant [incl. Ehrman's own concession]; feeds Biblical Reliability `ev-s4` —
   **used 2026-07-17 to strengthen `library/manuscript.html`** with the taxonomy + worked examples [Rom
   5:1, Jesus Barabbas, Mark 1:41, John 1:18], dual-consensus re-gated CLEAN; only this one chapter of the
-  multi-author volume is captured). See each note's header for its own usage rules and citation-precision
+  multi-author volume is captured).
+  **⚠ Four PARTIAL notes added 2026-07-26 (books NOT owned, NOT read — mapped at thesis/chapter level only,
+  from the authors' own open-access work, an open-access review, publisher frontmatter, and our own already-
+  certified citations; every page number in them is *reported*, not verified; each carries a "TO COMPLETE
+  (human action)" instruction to acquire a legitimate copy):** `gathercole-preexistent-son-and-thomas.md`
+  (⭐ the Synoptic "I have come" preexistence case — **the top backlog row from the 2026-07-26 batch**;
+  ⚠⚠⚠ the ancient angelic parallel is to the **form** of the saying, **never the nature of the speaker** →
+  dual-consensus + a mandatory `orthonote`); `can-we-trust-the-gospels.md` (Williams — mostly corroboration;
+  `library/names.html` already cites ch. 3 by name); `jesus-and-the-eyewitnesses.md` (Bauckham —
+  corroboration throughout; ⚠⚠⚠ carries a standing **universalism fence**: mine the historiography only,
+  cite him as a historian on a historical question, never as a theological authority, never in a
+  further-reading list without naming the specific work); `on-the-reliability-of-the-old-testament.md`
+  (Kitchen — corroboration; ⚠⚠ avowed maximalist, never cite him without his named critic, and the
+  **Nuzi/patriarchal-customs argument is a trap, not a gap** — Thompson 1974 / Van Seters 1975).
+  See each note's header for its own usage rules and citation-precision
   flags, and `INDEX.md` for topic routing.
 - **Adding a book from page photos** (the user may do this from a phone session — upload ~5–10
   legible photos of a book they **own**, incl. footnote/bibliography pages): follow
