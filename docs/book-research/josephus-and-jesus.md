@@ -168,6 +168,54 @@ rose — a datum FOR the minimal-facts case, never a claim that Josephus endorse
   (Habermas–Licona) for the minimal-facts frame the resurrection-claim datum plugs into.
 - **Answers:** candidate support for `answers/*` on "did Jesus exist / is there non-Christian evidence for Jesus."
 
+## Live-door status — the MANDATORY cross-check (run 2026-07-28)
+
+> **Why this section exists.** The note shipped 2026-07-24 with a `Cross-map to our site` section, but that
+> section only says *where this material would go* (routing). CLAUDE.md's MANDATORY CROSS-CHECK STEP requires
+> something different: actually reading the live pages and classifying **each substantive lead** as
+> *corroboration* (already covered → no row) or *improvement* (→ a `content-backlog.md` row). That comparison
+> had never been run, and the backlog held **zero** rows from this book. Run now; results below.
+
+**⭐ Headline: the site was already well-calibrated on Josephus — independently, and BEFORE this note existed.**
+A dedicated **"Josephus Testimonium recalibration"** landed **2026-07-16** (commit `a4a8246`; `ev-s3.html`'s stamp
+names it explicitly), eight days *before* this note. That sweep already: stated partial-interpolation as the
+**majority view rather than settled fact**, named **T. C. Schmidt's 2025 Oxford study** as the notable minority,
+and de-weighted the TF so the case does not rest on it. So the live Schmidt citation on `hist_jesus.html` did
+**not** come from this mining run — the run inherited a page that already named him. **Most of this book is
+therefore corroboration, not improvement.**
+
+### Corroboration — already live and accurate (NO backlog row)
+| Lead | Where it's already covered |
+|---|---|
+| TF is disputed; **neutral core** only; never reproduce the interpolated text | `library/hist_jesus.html` ¶160 + fn 6; `ev-s3.html` (×3); `answers/is-there-evidence-for-jesus-outside-the-bible` |
+| **The case for Jesus's existence does not rest on the TF** | `hist_jesus.html` states this explicitly — and names over-reliance on a disputed TF as a weakness Carrier legitimately exposed |
+| ***Ant.* 20.200 (James) is the cleaner, near-undisputed passage** | `hist_jesus.html` fn 7; `ev-s3` (×7); `ev-s2` (×4); `ev-s4`; two answers |
+| Non-Christian trio/quartet (Tacitus *Ann.* 15.44, Pliny, Lucian, Mara) | `hist_jesus.html`, `ev-s3` — Tacitus quote already corrected in the same 2026-07-16 sweep |
+| Schmidt named as the minority authenticity case | `hist_jesus.html` body + fn 6 + FAQ/JSON-LD; `ev-s3` |
+| **⚠ The resurrection guardrail holds** — verified site-wide | No page claims Josephus attests/proves the resurrection. `ev-s2` uses him only for women's-testimony devaluation and James's death. Site-wide regex for `josephus … (confirms\|proves\|attests) … (resurrect\|rose)` returns **0** |
+
+### Improvements — logged to `docs/content-backlog.md` (2026-07-28)
+1. **P3 — the Jerome + Syriac convergence** (`De Viris Illustribus` 13 *credebatur esse Christus* + Jacob of Edessa's
+   Syriac "thought to be the Christ", via Michael the Syrian; Agapius/Pines). Our pages assert the neutral core as
+   the majority view but give the reader **no evidence for it**. This is the strongest single datum, and it
+   supports the **majority** reconstruction we already hold — it does *not* require adopting Schmidt's minority
+   thesis. Jerome is **public domain** (NPNF ser. 2 vol. 3) → also a `/sources` candidate, i.e. a live-door path.
+2. **P3 — Origen's testimony** (*Contra Celsum* 1.47; *Comm. Matt.* 10.17: Josephus "did not believe Jesus was the
+   Christ"). Explains *why* the received wording is suspect — a 3rd-century reader of Josephus saw no confession.
+   Public domain (ANF) → `/sources` candidate. Currently **absent** from the corpus.
+3. **P4 — the stylometric evidence + the hostile-witness concession** (90 words / 62 lexemes; Meier; Thackeray's
+   reversal; Mealand; Bardet — and even skeptics **Feldman** and **Mason** granting an authentic substratum).
+   Evidence for the "widely accept an authentic core" claim our answers already make.
+
+### Deliberate NON-recommendations (recorded so a later session doesn't mistake them for gaps)
+- **Ananus II as Josephus's source, and παρ' ἡμῖν = personal acquaintance.** Schmidt's *novel, not-yet-consensus*
+  theses. This note's own Guardrail-fit section says present them as "one scholar's compelling case," attributed
+  and provisional. **Do not put them on the site as fact** — logging them as a backlog row would invite exactly that.
+- ***Toledot Yeshu*** (App. 4) — late, polemical anti-Gospel text. Not usable as neutral history.
+- **Reproducing the full TF.** Already forbidden by the `in-defense-of-the-bible.md` flag; our pages correctly don't.
+- **Flipping our pages to "substantially authentic."** ⚠ The improvements above must **not** be used to move the
+  site off the majority partial-interpolation framing. Schmidt is a minority position and the pages say so correctly.
+
 ## Capture status
 | Part | Read | Notes |
 |---|---|---|
@@ -182,6 +230,20 @@ rose — a datum FOR the minimal-facts case, never a claim that Josephus endorse
 | Appendices 1–6 | ◻ topics only | mapped from the Introduction + Ch. 6; the James (App. 2), Eusebius-forgery (App. 1), and Ananus/trial (App. 3–5) clusters are the priority for a future deep read |
 | Bibliography (primary + secondary) | ◻ partial | ancient-source citations to be fully catalogued in a follow-up pass; rich set already captured above |
 
-**Nice-to-have follow-up:** a page-precise pass through the six Appendices' footnotes and the full Bibliography's
-ancient-source entries (to complete the primary-citation index), and Ch. 2/Ch. 3 verbatim-neutral-TF
-reconstruction with pin-cites, before any of this is drafted into `hist_jesus.html`.
+**⚠ OUTSTANDING (needs a network-enabled session).** The seven chapters were read; the **six Appendices and the
+Bibliography were not** — the appendices are mapped from the Introduction's roadmap and Ch. 6 only. This is a
+*sweep* gap, not a gap in understanding the argument. The book is **open access** (CC BY-NC-ND) at
+academic.oup.com/book/60034, so nothing needs buying — but **the web sandbox's egress policy denies
+`academic.oup.com`** (verified 2026-07-28: the agent proxy returns an explicit `connect_rejected` / 403 policy
+denial, and WebFetch 403s). Finish it from a local or web-enabled session, as with the Tyndale batch.
+
+**Priority when that session happens** — the appendices are not filler:
+- **App. 2 — James, *Ant.* 20.200.** The single most load-bearing item: this is the Josephus passage our content
+  actually leans on (`hist_jesus.html` fn 7, `ev-s3` ×7, `ev-s2` ×4), precisely because the TF is restricted to
+  its neutral core.
+- **App. 1 — the Ken Olson "Eusebius forged it" rebuttal.** The strongest live challenge to everything above.
+- Then App. 3–6, and the Bibliography's ancient-source entries (to complete the primary-citation index).
+
+**Cross-check status: ✅ DONE 2026-07-28** — see *Live-door status* above. 3 backlog rows logged + 5 explicit
+non-recommendations; the bulk of the book classified as **corroboration** of a site that was already correctly
+calibrated on Josephus by the independent 2026-07-16 recalibration.
