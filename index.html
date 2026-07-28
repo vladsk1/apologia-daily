@@ -220,13 +220,13 @@
       text-align: center;
       line-height: 1.55;
       opacity: 0;
-      animation: fadeUp 0.8s ease 1.2s forwards;
+      animation: fadeUpCentred 0.8s ease 1.2s forwards;
     }
     .hero-scroll {
       position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
       display: flex; flex-direction: column; align-items: center; gap: 6px;
       opacity: 0;
-      animation: fadeUp 0.8s ease 1.4s forwards;
+      animation: fadeUpCentred 0.8s ease 1.4s forwards;
     }
     .scroll-line {
       width: 1px; height: 40px;
@@ -764,6 +764,15 @@
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
+    /* For absolutely-positioned elements centred with translateX(-50%).
+       transform is a single property, so fadeUp's translateY(0) REPLACES the
+       centring rather than adding to it — once the animation settled, the element
+       lost its offset and its left edge sat at the 50% mark, pushing it right.
+       This variant carries the -50% through both keyframes. */
+    @keyframes fadeUpCentred {
+      from { opacity: 0; transform: translate(-50%, 20px); }
+      to   { opacity: 1; transform: translate(-50%, 0); }
+    }
     @keyframes scrollPulse {
       0%, 100% { opacity: 0.3; }
       50%       { opacity: 0.7; }
@@ -970,7 +979,7 @@
       <a href="#homechat" class="btn-primary" onclick="document.getElementById('homechat').scrollIntoView({behavior:'smooth'});return false;">Ask Your Hardest Question</a>
       <a href="#features" class="btn-ghost" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'});return false;">Explore the Platform</a>
     </div>
-    <p class="hero-verse">"Always be prepared to give an answer to everyone who asks." — 1 Peter 3:15</p>
+    <p class="hero-verse">&ldquo;Always be prepared to give an answer to everyone who asks.&rdquo;&nbsp;&mdash;&nbsp;1&nbsp;Peter&nbsp;3:15</p>
   </section>
 
   <!-- HOMEPAGE CHAT — the no-account "aha", first thing after the hero -->
