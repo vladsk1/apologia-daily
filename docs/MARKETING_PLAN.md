@@ -4,9 +4,9 @@
 > **Companion plans (2026-07-28).** Two channel-specific plans now sit alongside this one:
 > **[`SOCIAL_GROWTH_PLAN.md`](SOCIAL_GROWTH_PLAN.md)** (organic Instagram + X) and
 > **[`META_ADS_PLAN.md`](META_ADS_PLAN.md)** (paid). Both correct facts that were stale here — see
-> the ⚠ notes below. The single biggest correction: **the Instagram and X accounts do not exist**,
-> and the site links to no social profile from any of its 319 pages, so the organic plan starts from
-> registration, not optimisation.
+> the ⚠ notes below. The single biggest correction: **the site links to no social profile from any of
+> its 319 pages** — including an Instagram account that DOES exist (owner-confirmed 2026-07-28) — so
+> the organic plan starts by wiring the links, not by optimising posts.
 
 ## The one-sentence strategy
 Win **organic search + creator-driven word of mouth** among people who are *already asking the questions our 77 essays answer* — then convert them with the free AI tool and keep them with the spaced-repetition daily habit we've already built. Concentrate, instrument, compound. (Paid ads and original video production are deliberately *later*.)
@@ -50,7 +50,8 @@ Do **#1 and #2 this week** — #1 is the precondition for honestly judging every
 
 ### Organic social, by platform (what's working in the niche)
 > ⚠ **Superseded for Instagram and X by [`SOCIAL_GROWTH_PLAN.md`](SOCIAL_GROWTH_PLAN.md)**, which
-> starts from the fact that neither account exists. Two specifics below are now outdated: X is no
+> starts from the fact that no page links to a social profile (the existing Instagram account
+> included). Two specifics below are now outdated: X is no
 > longer thread-first (long single posts and replies out-perform threads), and the "ten ready content
 > briefs" assume scripting is needed — all **54 reel specs are already gated**, so distribution, not
 > production, is the bottleneck.

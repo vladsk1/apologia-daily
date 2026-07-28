@@ -22,6 +22,39 @@ into it.**
 
 ---
 
+## ⚠ Currency note — read before using any number below
+
+**All figures below are in pounds sterling (GBP)**, because the cost-side benchmarks (CPM, CPC, CPL)
+come from 2026 **UK** Meta data, which is the best-documented set available. **The site is operated
+from Australia** (`privacy.html`), so none of these are in the owner's home currency.
+
+**The `$8` price is treated as USD** in the LTV table (converted at ~£6.30). ⚠ **This is an
+assumption, not a fact from the repo:** `index.html:1408` renders a bare `$8` with no currency code,
+and there is no `USD`/`AUD`/`currency` marker anywhere in the codebase. **If `$8` means AUD, every
+LTV figure below is ~35% too high** (A$8/mo vs. ~A$12.40 for US$8/mo) — i.e. the case against
+spending gets *stronger*, not weaker.
+
+Indicative AUD restatement (approximate rates ~2.0 AUD/GBP, ~1.55 AUD/USD — **verify against live
+rates before quoting**):
+
+| | CAC | LTV (conservative → heroic) |
+|---|---|---|
+| If `$8` = USD | ~A$60–120 | A$3 → A$36 |
+| If `$8` = AUD | ~A$60–120 | A$1.92 → A$23 |
+
+Learning-phase wall in AUD: ~**A$570/day/ad set (~A$17,000/month)** to optimise to signup;
+~A$6,000/month for the proxy-event version; ~A$420–600 for the Option 1 creative test.
+
+**The verdict is currency-invariant** — CAC-vs-LTV is a ratio, so converting both sides consistently
+doesn't change the conclusion. Only the absolute budget figures move.
+
+**Separate live issue this surfaced:** a bare `$8` on the pricing card is ambiguous to *readers*, not
+just to this document — an Australian visitor reads AUD, an American reads USD. Harmless while
+nothing can transact; a billing-expectation problem the day Stripe goes live. **Owner decision:
+which dollar?**
+
+---
+
 ## The arithmetic
 
 **Cost side** (2026 UK benchmarks, Reels-heavy buy — where our creative fits):

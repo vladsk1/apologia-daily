@@ -8,19 +8,39 @@ re-verified against the working tree before being written down (see *Verified fa
 
 ---
 
-## The finding that reorders everything: there is nothing to grow yet
+## ⚠ CORRECTION (2026-07-28, from the owner) — an Instagram account DOES exist
 
-**Apologia Daily has no Instagram account and no X account.** Not a neglected one — none. And the
-site does not link to any social profile from any of its 319 pages.
+The research pass below concluded that neither account existed. **That was wrong for Instagram: the
+owner confirms an Instagram account exists — it is simply not linked from anywhere.** The web search
+that missed it looked for `@apologiadaily` and found nothing indexed; a differently-named, new, or
+low-content account would not have shown up. **Lesson for future sessions: absence from search is
+not absence of an account — ask the owner before asserting a brand asset doesn't exist.**
+
+**What this changes:** step 0.1 below is *register X + supply the existing IG handle*, not "register
+both." **What it does not change — and in fact sharpens:** every other step-zero item stands, and
+the linking work becomes *more* urgent, not less. An account that exists and is unlinked is worse
+than one that doesn't: the audience-building is already happening, and all 319 pages still point
+nowhere, so none of it compounds. The `twitter:site` finding is unaffected (that's about X).
+
+**Still needed from the owner: the actual Instagram handle**, so the footer icons, the `sameAs`
+schema property, and the bio-link destination can be wired.
+
+---
+
+## The finding that reorders everything: the site points at nothing
+
+**The site does not link to any social profile from any of its 319 pages** — including the
+Instagram account that does exist.
 
 Concretely, verified in the repo:
 
-- **Zero** `instagram.com` / `twitter.com/apologia` / `x.com/apologia` links anywhere on the site.
+- **Zero** `instagram.com` / `twitter.com/apologia` / `x.com/apologia` links anywhere on the site
+  (the existing Instagram account included — see the correction above).
   The footer (`index.html`) carries Features / Pricing / About / What We Believe / Blog / Privacy /
   Terms / Videos — no social icons.
 - **1,108 pages carry a `twitter:card` meta tag** — so every link shared to X already renders a
   proper image card — but **0 pages carry `twitter:site`**, so none of that attribution reaches an
-  account. Every share to X is free advertising for a handle that doesn't exist.
+  account. Every share to X is free advertising that credits nobody.
 - **No `sameAs` property in any structured data**, so Google has no link between the site and any
   social profile either.
 
@@ -28,14 +48,15 @@ Name-collision risk to settle at registration, not after: **@apologiastudios** (
 Apologia Christian Ministries, ~103K IG) and **@apologiaworld** (the Apologia homeschool curriculum
 brand) both exist and are much larger. Pick handles and bio wording that disambiguate deliberately.
 
-**So this is a from-zero launch, not an optimisation problem.** That is mostly good news: 54
-already-gated reel specs and 85 essays are a running head start with no legacy-voice debt to clean up.
+**So X is a from-zero launch; Instagram is an existing account that has never been connected to the
+site.** Either way the sequencing is the same — wire the links before optimising anything. The
+upside is real: 54 already-gated reel specs and 85 essays are a running head start.
 
 ### Step zero — before a single post
 
 | # | Task | Owner | Effort |
 |---|------|-------|--------|
-| 0.1 | Register matching handles on both platforms; write bios that disambiguate from the two "Apologia" collisions | Owner | 30 min |
+| 0.1 | **Supply the existing Instagram handle**; register the X handle to match; write bios that disambiguate from the two "Apologia" collisions | Owner | 30 min |
 | 0.2 | Add `twitter:site` site-wide once the X handle exists | Dev session | trivial, templated |
 | 0.3 | Add social icons to the footer + `sameAs` to the site schema | Dev session | trivial |
 | 0.4 | Decide the bio-link destination **before** posting — a static `/links` page on our own domain beats Linktree (free, on-brand, and the traffic is ours). Point it at the Ask-Anything tool + a rotating essay, not the bare homepage | Owner + dev | small |
@@ -210,6 +231,7 @@ Fold these in when the owner has acted on step zero.
 | Claim | Check | Result |
 |---|---|---|
 | No social profile links on the site | grep across all `*.html` | confirmed — 0 |
+| ~~Neither account exists~~ | **owner correction** | ⚠ **WRONG for Instagram** — an IG account exists, unlinked. X unconfirmed |
 | `twitter:card` present, `twitter:site` absent | `grep -rl` | 1,108 pages vs **0** |
 | No `sameAs` structured data | `grep -rn sameAs` | 0 hits |
 | 6 of 7 X cards ungated | read each JSON's `reviewed` key | confirmed |

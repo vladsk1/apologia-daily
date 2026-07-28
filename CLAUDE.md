@@ -15,10 +15,12 @@
 >
 > **LATEST — 2026-07-28:** shipped two channel plans — **[`docs/SOCIAL_GROWTH_PLAN.md`](docs/SOCIAL_GROWTH_PLAN.md)**
 > (organic IG + X) and **[`docs/META_ADS_PLAN.md`](docs/META_ADS_PLAN.md)** (paid) — and corrected two stale
-> claims in `docs/MARKETING_PLAN.md`. ⭐ **Two findings worth carrying forward.** (1) **The Instagram and X
-> accounts do not exist**, and no page links to any social profile: **1,108 pages carry `twitter:card` but
-> ZERO carry `twitter:site`**, so every share to X attributes to nothing. Organic growth starts at handle
-> registration, not optimisation. **6 of the 7 X-card specs carry no review stamp** (`x-jesus-god-mark` and
+> claims in `docs/MARKETING_PLAN.md`. ⭐ **Two findings worth carrying forward.** (1) **No page links to
+> any social profile** — including an **Instagram account that DOES exist** (owner-confirmed 2026-07-28;
+> the research pass wrongly reported it didn't, because it wasn't findable by web search — *absence from
+> search is not absence of an account; ask the owner*). **1,108 pages carry `twitter:card` but ZERO carry
+> `twitter:site`**, so every share to X credits nobody. Organic growth starts at wiring the links, not at
+> optimising posts. **6 of the 7 X-card specs carry no review stamp** (`x-jesus-god-mark` and
 > `x-nicene-creed` are deity/Trinity tier → dual-consensus) while all 54 reel specs are stamped — so
 > distribution, not production, is the bottleneck. (2) **Do not run Meta ads yet, and the blocker is
 > arithmetic, not the missing Pixel**: £30–60 CAC against £1.51–18 LTV at $8/mo, and optimising to signup
@@ -223,9 +225,11 @@
 >   data, unread. Read it before setting any acquisition target (funnels listed in `META_ADS_PLAN.md` §B).
 >   One live defect: **`signup_completed` fires before email confirmation**, so any downstream number
 >   built on it overcounts.
-> - **Register the Instagram and X handles** — neither exists, and no page links to a social profile.
->   Then add `twitter:site` + footer icons + `sameAs`, and decide the bio-link destination.
->   Step-zero checklist in `docs/SOCIAL_GROWTH_PLAN.md`.
+> - **Wire the social links** — no page links to any social profile. ⚠ An **Instagram account DOES
+>   exist** (owner-confirmed 2026-07-28; an earlier research pass wrongly reported it didn't — absence
+>   from web search is not absence of an account). **Owner must supply the IG handle**; X handle status
+>   unconfirmed. Then add `twitter:site` + footer icons + `sameAs`, and decide the bio-link
+>   destination. Step-zero checklist in `docs/SOCIAL_GROWTH_PLAN.md`.
 > - **Gate the 6 unstamped X-card specs** before any of them is posted (`x-jesus-god-mark` and
 >   `x-nicene-creed` need dual-consensus).
 > - **No Meta Pixel — and installing one requires owner sign-off first**: `privacy.html:202` promises
