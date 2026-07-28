@@ -13,6 +13,50 @@
 > *why* behind a past decision; read this file for current state. **Keep it that way:** when an entry
 > here stops affecting a decision, move it to `HANDOFF.md` rather than letting this file grow back.
 >
+> **LATEST — 2026-07-28 (d):** ⭐ **All 63 ungated mastery pages assessed — the pocket-card diagnosis, at ten
+> times the scale.** 16 reviews (argument ×63, orthodoxy ×63, neutrality ×15 on the dual-consensus tier);
+> ~139,000 words. **0 HERESY** — no page denies the Trinity, the two natures, the bodily resurrection or
+> salvation in Christ. But **~133 BREAK and 37 CONCERN**, and four reviewers independently reached the same
+> words: *"these pages were written without reading the essays."* The pattern is near-invariant — the
+> `.seo-summary` carries the essay's concession honestly, and the body below it states as settled what the
+> summary just called contested, **so pages contradict themselves on one screen.** Worked example:
+> `library/minimalfacts.html` says the case is *"weakest when it inflates 'majority' into 'virtually all'"*;
+> `ev-m-minimal.html`'s meta description, `og:description` and JSON-LD all print **"nearly all scholars."**
+> ⚠⚠ **TWO NEW STRUCTURAL FINDINGS.** (1) **`ARG_PREMISES` is the highest-stakes string on every page and had
+> never been reviewed** — it is POSTed to `/api/tutor` as the rubric a reader's explanation is *graded*
+> against, **and** rendered into a downloadable share-card PNG. Wrong on ≥14 pages, so the site **marks a
+> reader down for being right** (on `ev-m-postresurrection.html` it states the very conclusion
+> `library/postres.html` retires). Same for the `cards` flashcard deck, the `checks` quiz regexes and the
+> chip row — none visible to a prose review, all memorised. (2) **Two pages were entirely dead JavaScript**
+> (`ev-m-phil2.html`, `ev-m-daniel70.html` — an unescaped apostrophe in a single-quoted string killed the
+> whole inline block), and **`ev-m-daniel70.html` is one of only four mastery pages that CARRIES A STAMP** —
+> a doctrinal gate certified a page whose entire interactive layer was inert, because a doctrinal gate reads
+> prose and does not parse JavaScript. **`tests/inline-script-syntax.test.mjs`** now parses every inline
+> script on all 1,100+ pages and JSON.parses every `ld+json` block (suite 86 → **89**).
+> **SHIPPED:** the two dead pages, plus **20 factual corrections** each verified against the paired essay —
+> Constantine's grandfather "a boy" in AD 112 (born c. 272); the **Arabic Testimonium** (Whealey 2008: it
+> descends from the Syriac of Eusebius); *pelach* "only to God" in Daniel (3:12 uses it of Nebuchadnezzar's
+> gods); the empty tomb "attested across" Q/Tacitus/Josephus (it is in none); "untranslated Aramaic" (Mark
+> translates it — that IS the point); Nicaea on a faith "two centuries old" (nearly three); "1x1x1" attributed
+> to classical writers (no such source); **John 5:23 compressed to "honoring the Son AS the Father"** — the
+> same modalist-reading trap the owner caught on the pocket cards. Plus the CONCERN-level doctrinal fixes:
+> **will-to-will** in `modalism`/`nt_trinity` (the essays say *"one undivided essence, one will, one power"*
+> — and `modalism` contradicted itself four accordions apart), the unfenced *"receives his deity from the
+> Father"*, and *"a creature enthroned beside God"* in our own voice.
+> **⚠ STILL OPEN — the queue is [`docs/MASTERY_PAGE_AUDIT.md`](docs/MASTERY_PAGE_AUDIT.md), and nothing in it
+> is done.** Four pages need **rebuilding, not editing**: `trinity_islam` (two lenses converged — its central
+> premise appears nowhere in its essay, it equivocates *kalām Allāh*/*kalima*, and says in our own voice that
+> the Logos is *"distinct… from the essence"* — the Arian direction; the gate said a stricter reviewer could
+> call it HERESY, so **put it first in front of the pastoral reviewer**), `messianic_prophecy`, `cambrian`,
+> `evil`. Two corpus-level gaps: **the deism gap** (12 of 19 natural-theology pages never say the argument
+> reaches a necessary Mind, not yet the Triune God — a reader can be graded 10/10 on all 22 and finish a
+> deist; fix is one sentence in 12 files, wording already certified on `ev-m-ontological.html`) and the
+> **Chalcedon gap again** (only `jesus_as_god_nt` and `hands` affirm Christ's full humanity).
+> **⚠ LESSON THAT COST THREE AGENTS' WORK:** resolve each page's essay by its **`<link rel="canonical">`, not
+> its filename** — `minimal`→`minimalfacts`, `paul`→`paulconv`, `postresurrection`→`postres`,
+> `messianic_prophecy`→`messianic-prophecy`. I told three reviewers those pages had no essay; they do, and
+> they are among the worst contradictors.
+>
 > **LATEST — 2026-07-28 (c):** ⭐ **The 70 pocket cards were gated for the first time — and 23 of them were
 > blocking.** `pocket-cards.html` had **no review stamp and sat outside `CONTENT_PATTERNS` entirely**, so
 > nothing ever flagged it: 70 pieces of compressed doctrinal argument, designed to be screenshotted and

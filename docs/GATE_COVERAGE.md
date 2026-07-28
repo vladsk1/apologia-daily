@@ -44,7 +44,7 @@ Ordered by risk: how doctrinal the content is × how far it travels.
 
 | Files | What | Why it's P1 |
 |---|---|---|
-| **63 × `ev-m-*.html`** | Evidence Library **mastery pages**, median ~2,100 words each | ~130,000 words of doctrinal argument, never reviewed. ⚠ **`ev-m-shema.html` publishes the echad "composite unity" argument that `library/shema.html` calls "a discredited overreach"** — the exact claim removed from the pocket card on 2026-07-28. Four more run other retired arguments ("Statistical", "never refuted", "Let us make man"). |
+| **63 × `ev-m-*.html`** | Evidence Library **mastery pages**, median ~2,100 words each | ⭐ **ALL 63 ASSESSED 2026-07-28 — see [`MASTERY_PAGE_AUDIT.md`](MASTERY_PAGE_AUDIT.md).** 16 reviews (argument ×63, orthodoxy ×63, neutrality ×15). **0 heresy · ~133 BREAK · 37 CONCERN.** Two pages were dead JavaScript (one of them *stamped*). 20 factual errors fixed and deployed; the rest is a queue, not a pass. |
 | `ev-s7.html`, `ev-s7.mk.html` | Evidence Library hub fragment (Conversion Stories), ~4,400 words | **Already inside `CONTENT_PATTERNS`** — unstamped only because CI never audited, just diffed. Proof of hole #2. |
 | `scholars.html` | ~5,000 words on named apologists and their arguments | Longest ungated page on the site. Characterises living scholars — a citations risk as well as a doctrinal one. |
 | `library/index.html` | Library hub, ~3,400 words | Explicitly excluded by the `(?!index\.html$)` clause in `CONTENT_PATTERNS`. Carries framing prose, not just links. |
