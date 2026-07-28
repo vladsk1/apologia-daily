@@ -59,6 +59,8 @@ jobs:
         run: node tools/build-search-index.mjs --check
       - name: Check editorial-standards figures are still true
         run: node tools/update-trust-numbers.mjs --check
+      - name: Check the What's New feed is in sync
+        run: node tools/build-whats-new.mjs --check
       - name: Check source library index is in sync
         run: node tools/build-sources-index.mjs --check
       - name: Check argument-briefs index is in sync

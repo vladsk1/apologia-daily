@@ -1,7 +1,9 @@
 // Content-pipeline invariants that protect the gates themselves.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, globSync } from 'node:fs';
+import { readFileSync, globSync, existsSync } from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { runOffline, CASES } from '../tools/test-crisis-routing.mjs';
 import { isBoilerplateLine } from '../tools/check-stamp-integrity.mjs';
@@ -190,4 +192,40 @@ test('stamp-integrity classifier: SEO/nav/script lines are boilerplate, doctrina
     '+<h2>Why the resurrection is the best explanation</h2>',
   ];
   for (const l of doctrinal) assert.equal(isBoilerplateLine(l), false, `should NOT be boilerplate: ${l}`);
+});
+
+test("What's New feed is generated, in sync, and every link resolves", () => {
+  // The feed was hand-maintained and went six weeks stale on five entries from
+  // 2026-06-15 while ~100 answers and dozens of essays shipped — on a page linked
+  // from the nav of every page. It is now generated from the content-review
+  // stamps; these guard that it stays that way.
+  const ROOT2 = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+  const page = readFileSync(path.join(ROOT2, 'whats-new.html'), 'utf8');
+
+  const s = page.indexOf('/* whats-new:start */');
+  const e = page.indexOf('/* whats-new:end */');
+  assert.ok(s !== -1 && e !== -1 && e > s, 'generated markers missing from whats-new.html');
+  const block = page.slice(s, e);
+
+  const entries = [...block.matchAll(/date:\s*'(\d{4}-\d{2}-\d{2})'/g)].map((m) => m[1]);
+  assert.ok(entries.length >= 8, `expected a populated feed, found ${entries.length} entries`);
+
+  // Newest first — the page relies on this ordering for its "New" badges.
+  const sorted = [...entries].sort().reverse();
+  assert.deepEqual(entries, sorted, 'feed entries must be newest-first');
+
+  // A changelog that links to a 404 is worse than no changelog.
+  for (const [, href] of block.matchAll(/link:\s*'([^']+)'/g)) {
+    assert.ok(existsSync(path.join(ROOT2, href)), `What's New links to a missing page: ${href}`);
+  }
+
+  // No batch re-gate may flood the feed with one afternoon's work.
+  const perDate = entries.reduce((m, d) => m.set(d, (m.get(d) || 0) + 1), new Map());
+  for (const [d, n] of perDate) {
+    assert.ok(n <= 4, `${n} entries share ${d}; the per-date cap is 4`);
+  }
+
+  // The page must not promise a cadence it cannot keep.
+  assert.ok(!/added to Apologia Daily regularly/i.test(page),
+    'the page should not promise a publishing cadence');
 });

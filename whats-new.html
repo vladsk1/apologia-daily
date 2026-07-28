@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>What's New — Apologia Daily</title>
-  <meta name="description" content="The latest additions to Apologia Daily — new arguments, objections, and worldview content for everyday Christians learning to defend their faith." />
+  <meta name="description" content="Recently added and updated on Apologia Daily — arguments, answers to objections, and worldview content for Christians learning to defend their faith." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -159,8 +159,8 @@
   <div class="page-header">
     <div class="page-header-inner">
       <p class="page-eyebrow">What's New</p>
-      <h1 class="page-title">The latest <em>additions</em></h1>
-      <p class="page-sub">New arguments, objections, and worldview content are added to Apologia Daily regularly. Whenever something new lands, you'll find it here first.</p>
+      <h1 class="page-title">Recently added <em>and updated</em></h1>
+      <p class="page-sub">Arguments, answers and deep dives as they are published or revised. The date on each is when it last passed our review, so a revisited essay can appear here too &mdash; <a href="/editorial-standards.html">how we check our work</a>.</p>
     </div>
   </div>
 
@@ -192,65 +192,132 @@
     /* ==============================================================
        WHAT'S NEW — changelog feed
        --------------------------------------------------------------
-       HOW THIS WORKS:
-       - ENTRIES below is the list of everything you've added.
-       - The page sorts them NEWEST FIRST automatically by date and
-         tags the most recent few with a gold "New" badge.
-       - There is NO schedule and NO weekly promise. The page only
-         ever shows what you've actually added. Add nothing, and it
-         simply keeps showing the last things you added — always true.
+       THIS LIST IS GENERATED — do not hand-edit it.
+       The block between the whats-new:start / whats-new:end markers is
+       rebuilt by:
 
-       -------- TO ADD A NEW ENTRY (about 30 seconds) --------
-       Copy the block below, paste it at the TOP of the ENTRIES list,
-       and change the five fields. Date format: 'YYYY-MM-DD'.
+           node tools/build-whats-new.mjs
 
-         { date: '2026-07-01',
-           type: 'argument',                  // argument | objection | worldview | devotional | feature
-           title: 'Your new argument title',
-           desc: 'One or two plain sentences describing it.',
-           link: 'evidence-library.html',
-           cta: 'Read in Evidence Library' },
+       and CI fails if it drifts out of step with the site. It used to be
+       hand-maintained, and although adding an entry took "about 30
+       seconds", nobody did — the page sat on five items from 2026-06-15
+       while ~100 answers and dozens of essays shipped. It is linked from
+       the nav on every page, so a stale feed advertised a dead project.
 
-       IMPORTANT: only add an entry once the real content actually
-       exists and the link works. This page announces content — it
-       does not create it.
+       WHERE THE DATES COME FROM: each entry's date is the `orthodoxy`
+       date on that page's content-review stamp (library essays) or in its
+       answers/_data.json `reviewed` object — i.e. when the page was last
+       CERTIFIED. That is why this page says "added and updated" rather
+       than "new": a re-reviewed older essay can legitimately reappear.
+
+       Git add-dates were deliberately NOT used — this repo's history was
+       squashed, so 216 of 226 content files share a single add-date and
+       would have produced a fake changelog.
+
+       At most 4 entries share one date, so a batch re-gate cannot flood
+       the feed with a single afternoon's work.
        ============================================================== */
 
     var ENTRIES = [
-      { date: '2026-06-15',
+    /* whats-new:start */
+      { date: '2026-07-24',
         type: 'argument',
-        title: 'The Ontological Argument — Anselm and Plantinga',
-        desc: 'The argument that God\u2019s very concept entails his existence \u2014 one of the most discussed, and disputed, arguments in all of philosophy.',
-        link: 'evidence-library.html',
-        cta: 'Read in Evidence Library' },
+        title: 'The Moral Argument for God: Where Do Right and Wrong Come From?',
+        desc: 'If objective morality exists \u2014 and torturing a child for fun is really wrong \u2014 what best explains it? A rigorous, fair look at the moral argument.',
+        link: 'library/moral.html',
+        cta: 'Read the deep dive' },
 
-      { date: '2026-06-15',
+      { date: '2026-07-24',
         type: 'argument',
-        title: 'The Leibniz Contingency Argument',
-        desc: 'Why anything exists at all: the argument from contingent things to a necessary being, in a full deep dive.',
-        link: 'evidence-library.html',
-        cta: 'Read in Evidence Library' },
+        title: 'What Does Archaeology Really Prove About the Bible?',
+        desc: 'A scholarly look at biblical archaeology: the inscriptions and sites that confirm the record, the honest disputes, and what the evidence does and does not establish.',
+        link: 'library/archaeology.html',
+        cta: 'Read the deep dive' },
 
-      { date: '2026-06-15',
+      { date: '2026-07-23',
         type: 'argument',
-        title: 'The Argument from Consciousness',
-        desc: 'Why the existence of conscious experience is hard to explain on a purely material view of reality.',
-        link: 'evidence-library.html',
-        cta: 'Read in Evidence Library' },
+        title: '1 Corinthians 15:3-7: The Earliest Resurrection Creed',
+        desc: 'How critical scholars across the spectrum date the resurrection creed of 1 Corinthians 15:3-7 to within a few years of the cross \u2014 and what that proves.',
+        link: 'library/earlycreed.html',
+        cta: 'Read the deep dive' },
 
-      { date: '2026-06-15',
+      { date: '2026-07-23',
         type: 'argument',
-        title: 'Daniel\u2019s 70 Weeks',
-        desc: 'One interpretation of a prophetic timeline pointing to the time of Jesus \u2014 presented honestly as a model, not a proof.',
-        link: 'evidence-library.html',
-        cta: 'Read in Evidence Library' },
+        title: 'Are the New Testament Manuscripts Reliable?',
+        desc: 'A scholarly look at New Testament manuscript transmission: the copies, the variants, and what the evidence does and does not establish.',
+        link: 'library/manuscript.html',
+        cta: 'Read the deep dive' },
 
-      { date: '2026-06-15',
+      { date: '2026-07-23',
         type: 'argument',
-        title: 'The Philippians 2 Hymn',
-        desc: 'An early Christian hymn embedded in Paul\u2019s letter, showing Jesus was worshipped as God within years of the crucifixion.',
-        link: 'evidence-library.html',
-        cta: 'Read in Evidence Library' }
+        title: 'Are There Contradictions in the Bible?',
+        desc: 'A scholarly look at alleged biblical contradictions: the hard cases handled honestly, what counts as a contradiction, and what consistency does and does not prove.',
+        link: 'library/consistency.html',
+        cta: 'Read the deep dive' },
+
+      { date: '2026-07-23',
+        type: 'argument',
+        title: 'Can Miracles Happen? Answering Hume and Spinoza',
+        desc: 'Are miracles impossible, or never rationally believable? A scholarly look at the a priori arguments of Spinoza and Hume&mdash;and why both fail.',
+        link: 'library/miracles.html',
+        cta: 'Read the deep dive' },
+
+      { date: '2026-07-22',
+        type: 'objection',
+        title: 'Do miracles really happen?',
+        desc: 'Do miracles really happen?',
+        link: 'answers/do-miracles-really-happen.html',
+        cta: 'Read the answer' },
+
+      { date: '2026-07-22',
+        type: 'argument',
+        title: 'Is Jesus God in the New Testament? The Whole Witness, Surveyed',
+        desc: 'A synthesis of the New Testament\'s witness to Christ\'s deity \u2014 John, Paul, Hebrews, Revelation, and worship \u2014 through early high Christology.',
+        link: 'library/jesus_as_god_nt.html',
+        cta: 'Read the deep dive' },
+
+      { date: '2026-07-22',
+        type: 'objection',
+        title: 'Is there any evidence for life after death?',
+        desc: 'Is there any evidence for life after death?',
+        link: 'answers/is-there-evidence-for-life-after-death.html',
+        cta: 'Read the answer' },
+
+      { date: '2026-07-20',
+        type: 'argument',
+        title: 'Answering Islamic Objections to the Trinity',
+        desc: 'A scholarly, charitable reply to the Muslim case against the Trinity: tawhid and shirk, Qur\'an 4:171, 5:116, al-Ikhlas, and the walad question.',
+        link: 'library/trinity_islam.html',
+        cta: 'Read the deep dive' },
+
+      { date: '2026-07-20',
+        type: 'argument',
+        title: 'Does the Qur&rsquo;an Contain Scientific Miracles?',
+        desc: 'The claim that the Qur\'an contains scientific facts unknowable in the 7th century (i\'jaz \'ilmi) \u2014 embryology, the expanding universe, mountains, the seas \u2014 weighed…',
+        link: 'library/islam-science.html',
+        cta: 'Read the deep dive' },
+
+      { date: '2026-07-20',
+        type: 'objection',
+        title: 'Has the Quran been changed or corrupted?',
+        desc: 'Has the Quran been changed or corrupted?',
+        link: 'answers/is-the-quran-corrupted.html',
+        cta: 'Read the answer' },
+
+      { date: '2026-07-20',
+        type: 'argument',
+        title: 'Jesus in the Quran: What Isa Actually Says About Himself',
+        desc: 'What the Quran affirms and denies about Jesus (Isa)&mdash;virgin birth, miracles, \'Word\' and \'spirit,\' the crucifixion&mdash;compared with the historical Jesus.',
+        link: 'library/islam-jesus.html',
+        cta: 'Read the deep dive' },
+
+      { date: '2026-07-18',
+        type: 'objection',
+        title: 'Are there contradictions in the Quran?',
+        desc: 'Are there contradictions in the Quran?',
+        link: 'answers/are-there-contradictions-in-the-quran.html',
+        cta: 'Read the answer' },
+    /* whats-new:end */
     ];
 
     /* ---------- feed engine (no need to edit below) ---------- */
