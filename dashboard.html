@@ -840,6 +840,31 @@
       setText('nav-user', name);
       try { setupDeleteAccount(user); } catch (e) {}
 
+      /* ---- signup_confirmed — the TRUE conversion event -------------------
+         signup.html fires `signup_completed` at form-submit success, which is
+         BEFORE the confirmation email is clicked. It therefore counts people
+         who never finish, and any funnel (or ad-platform conversion) built on
+         it overcounts. This fires once the account demonstrably exists and the
+         user is actually in.
+
+         Two guards, both load-bearing:
+         1. localStorage — so a returning user doesn't re-fire it every visit.
+         2. a 7-day window on created_at — WITHOUT THIS, shipping the event
+            would fire it for every EXISTING user on their next dashboard load
+            and manufacture a huge false conversion spike in precisely the data
+            this fix exists to make trustworthy. */
+      try {
+        var confirmKey = 'ad_signup_confirmed_' + user.id;
+        var createdAt = Date.parse(user.created_at || '');
+        var isNewAccount = createdAt && (Date.now() - createdAt) < 7 * 24 * 60 * 60 * 1000;
+        if (isNewAccount && !localStorage.getItem(confirmKey)) {
+          localStorage.setItem(confirmKey, '1');
+          window.adTrack && window.adTrack('signup_confirmed', {
+            hours_to_confirm: Math.round((Date.now() - createdAt) / 3600000)
+          });
+        }
+      } catch (e) {}
+
       // Cross-device: hydrate onboarding prefs from the account if this device has none
       try {
         var um = user.user_metadata || {};

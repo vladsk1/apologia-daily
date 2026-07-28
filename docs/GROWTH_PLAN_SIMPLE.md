@@ -117,8 +117,16 @@ videos clearly win, *then* A$100/day has something worth pushing behind it.
 
 ### Two things to fix before any money is spent
 
-1. **`privacy.html` currently promises readers we don't use advertising cookies.** Installing Meta's tracking makes that untrue, and there's no cookie consent banner on the site. Needs your sign-off and a wording change first.
-2. **Our signup tracking fires too early** — before people confirm their email. If we hand that to Meta, it will go looking for people who never finish signing up.
+1. **✅ Fixed — our signup tracking used to fire too early**, before people confirmed their email. If
+   we'd handed that to Meta it would have gone looking for people who never finish signing up. There's
+   now a proper `signup_confirmed` event. One catch: it only counts people who joined *after* 28 July,
+   so it has no history yet.
+2. **⏳ Still needs your decision — the privacy policy.** `privacy.html` currently tells readers we
+   don't use advertising cookies. **That is true today** — there's no tracking pixel on the site. It
+   only becomes a problem *if* you decide to install Meta's pixel, and then it has to change first,
+   along with adding a cookie consent banner for UK/EU visitors. **Nothing to fix until you make that
+   call** — and on a site whose whole asset is being trustworthy, "we don't track you for ads" is
+   worth something.
 
 ### One thing not to advertise
 

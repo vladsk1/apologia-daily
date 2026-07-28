@@ -196,6 +196,15 @@
         return;
       }
 
+      /* NOTE — this fires at form-submit success, which is BEFORE the user
+         clicks the confirmation email. `confirmed` is false whenever email
+         confirmation is on, so this event counts people who may never finish.
+         It is a form-completion metric, NOT a conversion metric.
+         ⚠ Do NOT map this to an ad platform's registration conversion (e.g.
+         Meta's CompleteRegistration) — doing so optimises toward people who
+         abandon at the confirmation email. The true conversion event is
+         `signup_confirmed`, fired on first authenticated dashboard load
+         (see dashboard.html). */
       try {
         window.adTrack && window.adTrack('signup_completed', {
           referred: !!referredBy,

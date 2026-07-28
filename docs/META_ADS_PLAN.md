@@ -171,8 +171,15 @@ window.adTrack && window.adTrack('signup_completed', {
 
 It fires at form-submit success, **before email confirmation**. Map that to Meta's
 `CompleteRegistration` and **Meta will optimise toward people who abandon at the confirmation email** —
-we'd be paying to find non-users. Fix before any CAPI mapping: filter on `confirmed === true`, or add
-a `signup_confirmed` event on first authenticated dashboard load.
+we'd be paying to find non-users.
+
+**✅ FIXED 2026-07-28.** `dashboard.html` now emits **`signup_confirmed`** on first authenticated load —
+the true conversion event. Two guards, both deliberate: a per-user `localStorage` key so a returning
+user can't re-fire it, and a **7-day `created_at` window** — without which shipping the event would have
+fired it for *every existing user* on their next visit and manufactured a false conversion spike in
+exactly the data this fixes. `signup_completed` stays as a form-completion metric and now carries an
+in-place warning against mapping it to `CompleteRegistration`. Guarded by `tests/signup-conversion-event.test.mjs`.
+**Use `signup_confirmed` for the CAPI mapping, never `signup_completed`.**
 
 ### 3. Landing-page policy risk today
 
@@ -202,7 +209,9 @@ ad URL:
 
 This is Meta-independent ground truth, and it works today.
 
-**2. Fix `signup_completed`** (see blocker 2) — otherwise every downstream number lies.
+**2. ~~Fix `signup_completed`~~ ✅ DONE 2026-07-28** — `signup_confirmed` now exists (see blocker 2).
+⚠ It only fires for accounts created after the fix shipped, so it has **no history**: PostHog funnels
+covering earlier periods must still use `signup_completed` **filtered on `confirmed: true`**.
 
 **3. 🛑 Owner sign-off gate: privacy policy + consent.** Do not proceed past here without an explicit decision.
 
