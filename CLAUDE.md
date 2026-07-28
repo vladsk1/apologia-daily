@@ -13,6 +13,22 @@
 > *why* behind a past decision; read this file for current state. **Keep it that way:** when an entry
 > here stops affecting a decision, move it to `HANDOFF.md` rather than letting this file grow back.
 >
+> **LATEST — 2026-07-28:** shipped two channel plans — **[`docs/SOCIAL_GROWTH_PLAN.md`](docs/SOCIAL_GROWTH_PLAN.md)**
+> (organic IG + X) and **[`docs/META_ADS_PLAN.md`](docs/META_ADS_PLAN.md)** (paid) — and corrected two stale
+> claims in `docs/MARKETING_PLAN.md`. ⭐ **Two findings worth carrying forward.** (1) **The Instagram and X
+> accounts do not exist**, and no page links to any social profile: **1,108 pages carry `twitter:card` but
+> ZERO carry `twitter:site`**, so every share to X attributes to nothing. Organic growth starts at handle
+> registration, not optimisation. **6 of the 7 X-card specs carry no review stamp** (`x-jesus-god-mark` and
+> `x-nicene-creed` are deity/Trinity tier → dual-consensus) while all 54 reel specs are stamped — so
+> distribution, not production, is the bottleneck. (2) **Do not run Meta ads yet, and the blocker is
+> arithmetic, not the missing Pixel**: £30–60 CAC against £1.51–18 LTV at $8/mo, and optimising to signup
+> needs **£8,600/month for one ad set** to clear Meta's learning phase. Two repo blockers found:
+> **`privacy.html:202` promises readers we do NOT use advertising cookies** (a Pixel makes that false; there
+> is no consent mechanism anywhere in the repo), and **`signup_completed` fires before email confirmation**,
+> so mapping it to Meta's `CompleteRegistration` would optimise toward people who abandon at the confirmation
+> email. The plan recommends against paid distribution of the **Islam cluster** on ministry, account-survival
+> and brand grounds. Docs only — no live content or code changed. Detail in both files.
+>
 > **LATEST — 2026-07-26 (c):** mined the **Tyndale/evangelical article-research batch** (7 sources,
 > 11 texts — 6 read in full, 5 partial; each note states its own page range) + the mandatory live cross-check → 6 article notes, 4 book notes, **11 backlog rows**.
 > ⭐ **Top find: Synoptic preexistence is a real gap (P2)** — every preexistence argument on the site runs
@@ -202,9 +218,20 @@
 >   forbidden** — never extract from it.
 >
 > **Growth**
-> - **PostHog is under-instrumented** — plan in `docs/MARKETING_PLAN.md`. It has been collecting since
->   July and has never been reviewed.
-> - No Meta Pixel installed. Uptime alerting is the owner's UptimeRobot only.
+> - ⚠ **CORRECTED 2026-07-28 — PostHog is NOT under-instrumented.** It emits **34 distinct events**
+>   including `signup_completed`. The real gap is that **it has never been reviewed** — nine months of
+>   data, unread. Read it before setting any acquisition target (funnels listed in `META_ADS_PLAN.md` §B).
+>   One live defect: **`signup_completed` fires before email confirmation**, so any downstream number
+>   built on it overcounts.
+> - **Register the Instagram and X handles** — neither exists, and no page links to a social profile.
+>   Then add `twitter:site` + footer icons + `sameAs`, and decide the bio-link destination.
+>   Step-zero checklist in `docs/SOCIAL_GROWTH_PLAN.md`.
+> - **Gate the 6 unstamped X-card specs** before any of them is posted (`x-jesus-god-mark` and
+>   `x-nicene-creed` need dual-consensus).
+> - **No Meta Pixel — and installing one requires owner sign-off first**: `privacy.html:202` promises
+>   readers we use no advertising cookies, and the site has no consent mechanism for UK/EU traffic.
+>   Do not spend on Meta until the four trigger conditions in `docs/META_ADS_PLAN.md` are met.
+> - Uptime alerting is the owner's UptimeRobot only.
 >
 
 Apologia Daily (apologiadaily.com) is a commercial Christian apologetics platform: a
