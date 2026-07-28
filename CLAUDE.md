@@ -192,7 +192,12 @@
 > **App store (before submission)**
 > - **Account deletion has NEVER run against live Supabase.** Test with a throwaway account first.
 > - **Pricing/paywall decision** + create the store products. `isPro` is still hardcoded `true` and a
->   dead "$8/mo" is advertised. Do not run paid acquisition into it.
+>   dead "$8/mo" is advertised. Do not run paid acquisition into it. **Decide AUD vs USD as part of
+>   this** (owner, 2026-07-28: deferred until Stripe is wired) — `index.html:1408` renders a bare `$8`
+>   with no currency code anywhere in the repo, so an Australian reader sees AUD and an American sees
+>   USD. Harmless while nothing can transact; a billing-expectation problem the day checkout goes live.
+>   Whichever is chosen, stamp the currency on the pricing card and in `docs/META_ADS_PLAN.md`
+>   (its figures are GBP and currently *assume* USD).
 > - Apple Developer ($99/yr) and Play ($25) accounts are not created.
 > - **iOS `pod install` + Archive must run on the owner's iMac** — impossible on Linux, never done.
 >   Neither native project has been compiled or device-tested.
