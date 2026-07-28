@@ -40,6 +40,25 @@ const esc = (s) => String(s)
   .replace(/—/g, '\\u2014').replace(/–/g, '\\u2013')
   .replace(/\s+/g, ' ').trim();
 
+/* Decode HTML entities. Source titles and meta descriptions are HTML, so they
+   carry &mdash;, &quot;, &ldquo; and friends. The page renders each entry through
+   escapeHtml(), which turns the leading & into &amp; — so an undecoded entity
+   reaches the reader as the literal text "&mdash;". Decode here so the JS string
+   holds real characters and escapeHtml() has nothing to mangle.
+   &amp; MUST be decoded last, or "&amp;mdash;" would wrongly become an em dash. */
+function decodeEntities(str) {
+  const NAMED = {
+    mdash: '\u2014', ndash: '\u2013', hellip: '\u2026', nbsp: ' ',
+    lsquo: '\u2018', rsquo: '\u2019', ldquo: '\u201c', rdquo: '\u201d',
+    quot: '"', apos: "'", lt: '<', gt: '>',
+  };
+  return String(str)
+    .replace(/&([a-zA-Z]+);/g, (m, name) => (name in NAMED ? NAMED[name] : m))
+    .replace(/&#x([0-9a-fA-F]+);/g, (m, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (m, dec) => String.fromCodePoint(parseInt(dec, 10)))
+    .replace(/&amp;/g, '&');
+}
+
 /** Trim a page <title> down to the human part. */
 function cleanTitle(t) {
   return t.replace(/\s*[|—–-]\s*Apologia Daily.*$/i, '').trim();
@@ -69,8 +88,8 @@ function essays() {
     const desc = (src.match(/<meta name="description" content="([^"]*)"/) || [])[1];
     if (!title) continue;
     out.push({
-      date, type: 'argument', title: cleanTitle(title),
-      desc: shortDesc(desc) || 'A full deep dive, with sources.',
+      date, type: 'argument', title: decodeEntities(cleanTitle(title)),
+      desc: decodeEntities(shortDesc(desc)) || 'A full deep dive, with sources.',
       link: `library/${f}`, cta: 'Read the deep dive',
     });
   }
@@ -84,8 +103,8 @@ function answers() {
     const date = a && a.reviewed && a.reviewed.orthodoxy;
     if (!a || !a.slug || !a.q || !/^\d{4}-\d{2}-\d{2}$/.test(date || '')) return [];
     return [{
-      date, type: 'objection', title: a.q,
-      desc: shortDesc((a.meta && a.meta.description) || a.q),
+      date, type: 'objection', title: decodeEntities(a.q),
+      desc: decodeEntities(shortDesc((a.meta && a.meta.description) || a.q)),
       link: `answers/${a.slug}.html`, cta: 'Read the answer',
     }];
   });

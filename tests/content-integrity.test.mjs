@@ -229,3 +229,27 @@ test("What's New feed is generated, in sync, and every link resolves", () => {
   assert.ok(!/added to Apologia Daily regularly/i.test(page),
     'the page should not promise a publishing cadence');
 });
+
+test("What's New decodes HTML entities from source titles and descriptions", () => {
+  // Shipped bug: source meta descriptions are HTML and contain &mdash;, &quot;
+  // and friends. The generator copied them raw, and the page renders each entry
+  // through escapeHtml(), which turned the leading & into &amp; -- so readers
+  // saw the literal text "&mdash;" mid-sentence on a live page.
+  const ROOT3 = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+  const page = readFileSync(path.join(ROOT3, 'whats-new.html'), 'utf8');
+  const block = page.slice(page.indexOf('/* whats-new:start */'), page.indexOf('/* whats-new:end */'));
+
+  const raw = block.match(/&[a-zA-Z]+;|&#x?[0-9a-fA-F]+;/g) || [];
+  assert.deepEqual(raw, [],
+    `generated feed contains undecoded HTML entities: ${[...new Set(raw)].join(', ')}`);
+
+  // And the decoder itself still behaves, including the double-decode trap.
+  const src = readFileSync(path.join(ROOT3, 'tools', 'build-whats-new.mjs'), 'utf8');
+  const fn = src.match(/function decodeEntities\(str\) \{[\s\S]*?\n\}/);
+  assert.ok(fn, 'decodeEntities() missing from build-whats-new.mjs');
+  const decode = new Function(fn[0] + '; return decodeEntities;')();
+  assert.equal(decode('a&mdash;b'), 'a\u2014b');
+  assert.equal(decode('&#x2014;'), '\u2014');
+  assert.equal(decode('Q&amp;A'), 'Q&A');
+  assert.equal(decode('&amp;mdash;'), '&mdash;', '&amp; must decode last, or this double-decodes');
+});
