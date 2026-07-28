@@ -211,7 +211,14 @@
       font-size: 0.8rem;
       font-style: italic;
       color: rgba(255,255,255,0.3);
-      white-space: nowrap;
+      /* Was white-space:nowrap, which held the verse on one line at every width.
+         Absolutely positioned and centre-translated, a line wider than the viewport
+         simply bled off both edges — on a phone the reader saw "...to give an answe"
+         and nothing after it. max-width lets it wrap instead; at 0.8rem the 75-character
+         verse still fits on a single line up to 34rem, so desktop is unchanged. */
+      max-width: min(34rem, calc(100vw - 2.5rem));
+      text-align: center;
+      line-height: 1.55;
       opacity: 0;
       animation: fadeUp 0.8s ease 1.2s forwards;
     }
