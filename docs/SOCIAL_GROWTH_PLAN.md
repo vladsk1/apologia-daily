@@ -3,8 +3,13 @@
 *Companion to [`MARKETING_PLAN.md`](MARKETING_PLAN.md) (the whole-funnel strategy) and
 [`META_ADS_PLAN.md`](META_ADS_PLAN.md) (paid). This file covers organic Instagram and X only.*
 
-**Written 2026-07-28.** Research by `apologia-research`; every repo claim below was independently
-re-verified against the working tree before being written down (see *Verified facts* at the end).
+**Written 2026-07-28.**
+
+Research by `apologia-research`; every repo claim below was independently re-verified against the
+working tree before being written down (see *Verified facts* at the end).
+
+> 📄 **Want the short version?** [`GROWTH_PLAN_SIMPLE.md`](GROWTH_PLAN_SIMPLE.md) — one page, plain
+> English, covering Instagram, X and ads together.
 
 ---
 

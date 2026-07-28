@@ -1,6 +1,8 @@
 # Apologia Daily — Growth & Marketing Plan
 *Proven strategies, modeled on proven apps, grounded in what the site already has.*
 
+> 📄 **Short version of everything:** [`GROWTH_PLAN_SIMPLE.md`](GROWTH_PLAN_SIMPLE.md) — one page, plain English.
+>
 > **Companion plans (2026-07-28).** Two channel-specific plans now sit alongside this one:
 > **[`SOCIAL_GROWTH_PLAN.md`](SOCIAL_GROWTH_PLAN.md)** (organic Instagram + X) and
 > **[`META_ADS_PLAN.md`](META_ADS_PLAN.md)** (paid). Both correct facts that were stale here — see

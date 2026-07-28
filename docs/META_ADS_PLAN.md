@@ -3,8 +3,13 @@
 *Companion to [`MARKETING_PLAN.md`](MARKETING_PLAN.md) (whole-funnel strategy) and
 [`SOCIAL_GROWTH_PLAN.md`](SOCIAL_GROWTH_PLAN.md) (organic IG + X).*
 
-**Written 2026-07-28.** Research by `apologia-growth`; every repo-level claim was independently
-re-verified against the working tree before being written down (see *Verified facts* at the end).
+**Written 2026-07-28.**
+
+Research by `apologia-growth`; every repo-level claim was independently re-verified against the
+working tree before being written down (see *Verified facts* at the end).
+
+> 📄 **Want the short version?** [`GROWTH_PLAN_SIMPLE.md`](GROWTH_PLAN_SIMPLE.md) — one page, plain
+> English, covering Instagram, X and ads together, with **A$20/day and A$100/day modelled**.
 
 ---
 

@@ -13,6 +13,16 @@
 > *why* behind a past decision; read this file for current state. **Keep it that way:** when an entry
 > here stops affecting a decision, move it to `HANDOFF.md` rather than letting this file grow back.
 >
+> **LATEST — 2026-07-28 (b):** added **[`docs/GROWTH_PLAN_SIMPLE.md`](docs/GROWTH_PLAN_SIMPLE.md)** — a one-page
+> plain-English version of all three growth plans, with **A$20/day vs A$100/day Meta scenarios modelled**.
+> Key numbers: A$100/day ≈ 167k impressions → ~2,000 clicks → **13–80 confirmed signups/month at A$37–234
+> each**; A$20/day is a fifth of that and **misses Meta's 50-conversions/week learning threshold badly**
+> (~26–64/mo vs ~214 needed), so it can only buy a **hook-rate ranking of the 54 reels**, never a conversion
+> read. Cost-per-signup is **identical at both budgets** — more spend buys more signups, not cheaper ones.
+> Optimising to signup would need ~A$570/day. Neither budget pays back at A$3–36 LTV. ⭐ The plan names the
+> **ministry-vs-customers** distinction explicitly: as customer acquisition the answer is still no, but as
+> *reach* the spend is defensible, and that is the owner's call to make on its own terms.
+>
 > **LATEST — 2026-07-28:** shipped two channel plans — **[`docs/SOCIAL_GROWTH_PLAN.md`](docs/SOCIAL_GROWTH_PLAN.md)**
 > (organic IG + X) and **[`docs/META_ADS_PLAN.md`](docs/META_ADS_PLAN.md)** (paid) — and corrected two stale
 > claims in `docs/MARKETING_PLAN.md`. ⭐ **Two findings worth carrying forward.** (1) **No page links to
