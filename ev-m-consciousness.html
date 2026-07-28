@@ -306,7 +306,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <h2>The argument in brief</h2>
     <p>The argument from consciousness starts with the one fact you cannot doubt: there is something it is like to be you. You do not merely process information about red light wavelengths — you actually <em>experience</em> redness; you taste the coffee, feel the ache, hear the music from the inside. Philosophers call these felt qualities "qualia," and the difficulty of explaining them in purely physical terms is what David Chalmers famously named the "hard problem of consciousness." You could in principle map every neuron firing in a brain and still not have explained why any of it is accompanied by inner experience rather than going on in the dark.</p>
     <p>The argument presses the point: physical processes — atoms, chemistry, electrical signals — are the kind of thing we describe entirely from the outside, in terms of structure and function. Conscious experience is known from the inside. If mind cannot be reduced to matter, then a worldview that makes matter fundamental has a gap at its very center, and reality being grounded in a Mind makes better sense of why conscious minds exist at all.</p>
-    <p>In fairness, this is a contested area. Some philosophers argue consciousness will yield to future neuroscience, and others (panpsychists) put mind into matter without God. The argument does not claim to close the case single-handedly; it claims consciousness fits more naturally in a universe founded on Mind than on mindless stuff.</p>
+    <p>In fairness, this is a contested area. Some philosophers argue consciousness will yield to future neuroscience, and others (panpsychists) put mind into matter without God. The argument does not claim to close the case single-handedly; it claims consciousness fits more naturally in a universe founded on Mind than on mindless stuff. Note the scope: this argument reaches a Mind at the foundation of things — not yet the Father, Son and Holy Spirit. Identifying that being with the God revealed in Christ is the work of the other arguments and of revelation.</p>
   </section>
 
   <!-- mastery dial -->
@@ -655,7 +655,7 @@ function setCheck(id, on){
 var ARG_PREMISES = [
   'Genuine conscious experience exists - the felt what it is like.',
   'Purely physical processes cannot account for conscious experience.',
-  'So reality is fundamentally mental, best explained by a cosmic Mind.'
+  'So mind is not a late accident but grounded in realitys foundation - best explained by a cosmic Mind.'
 ];
 
 /* Real AI scoring via /api/tutor (same method as explain-it-back.html).
@@ -707,7 +707,7 @@ function renderMockScore(txtRaw){
     {ok:/conscious|experience|qualia|what it|subjective|felt/.test(t), hit:'Good - you centered conscious experience', miss:'Name the starting point - real conscious experience, the felt what it is like'},
     {ok:/hard problem|cannot explain|not explain|gap|physical/.test(t), hit:'Premise 2 - you pressed the hard problem', miss:'State Premise 2 - physical processes cannot account for experience'},
     {ok:/naturalism|brain|matter|reduce|emergen/.test(t), hit:'Nice - you engaged the physical-only story', miss:'Engage the physicalist reply - brain activity, emergence, reduction'},
-    {ok:/mind|god|theism|mental/.test(t), hit:'Conclusion - you reasoned to a Mind', miss:'Draw the conclusion: reality is fundamentally mental - a Mind'},
+    {ok:/mind|god|theism|mental/.test(t), hit:'Conclusion - you reasoned to a Mind', miss:'Draw the conclusion, and scope it: mind is more plausibly fundamental than matter - a Mind is the strongest candidate, not the only one'},
     {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth - you developed it, not just listed it', miss:'Go a bit deeper - a full reconstruction runs longer than this'}
   ];
   var score = 0, feed = '';
