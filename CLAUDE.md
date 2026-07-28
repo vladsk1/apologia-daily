@@ -65,6 +65,19 @@
 > strings `check-answer-concessions.mjs` exists to catch). **Still no pastoral sign-off — the page declines
 > to claim it.**
 >
+> **STANDING RULE — the named standard is "Checked Before Published."** The review method described in
+> this file (the mandatory content pipeline + `/sources` verification + the published corrections) now has
+> a public NAME, so it can be referenced consistently in marketing, the app-store listing, and on any
+> printed product. Its home is [`editorial-standards.html`](editorial-standards.html) — deliberately NOT a
+> second page, so the trust story is not split. The homepage trust card and hero echo it.
+> ⚠ **Scope discipline (do not widen it casually):** every public statement of the standard is currently
+> scoped to **essays** — "no essay published until it clears five review stages" — because 70 pocket cards
+> are still being gated. When that finishes, the site-wide wording becomes true and both the hero and the
+> meta description can drop "essay" for "nothing." Not before. A named standard that overstates is worse
+> than an unnamed one.
+> The name is one find/replace to change while it lives only in the repo; it gets expensive once it is on
+> a card box or a store listing.
+>
 > **STANDING RULE — X / social share-cards.** Every X-post image uses the brand card generator
 > `tools/reel/gen_xcard.py` (night-sky navy + gold underlined kicker + italic-serif cream/gold
 > headline + shield logo, 1600×900; specs in `tools/reel/xcards/`). **Never ship a flat frame
