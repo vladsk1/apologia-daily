@@ -44,6 +44,15 @@ jobs:
       - name: Check content-review stamps on changed files
         run: node tools/check-content-review.mjs --changed ${{ steps.base.outputs.ref }}
 
+      # Non-blocking coverage report over EVERY user-facing file, not just changed
+      # ones. Added 2026-07-28 after an audit found 95 unstamped pages — including 63
+      # ev-m-* mastery pages — while the old --audit reported 2, because it only
+      # looked at the enumerated CONTENT_PATTERNS. This keeps the size of the ungated
+      # surface visible on every run instead of rediscovered by accident.
+      # Triage and the exemption rationale: docs/GATE_COVERAGE.md
+      - name: Gate coverage report (non-blocking)
+        run: node tools/check-content-review.mjs --audit-all
+
   nav-consistency:
     # Fails if any non-gated page's nav menu has drifted from the canonical menu
     # in tools/sync-nav.mjs. Fix: run `node tools/sync-nav.mjs` and commit.

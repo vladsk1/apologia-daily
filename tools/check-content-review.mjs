@@ -37,7 +37,7 @@ import { execSync } from 'node:child_process';
 import { readFileSync, existsSync } from 'node:fs';
 import { globSync } from 'node:fs';
 
-// A file is "content" (subject to the pipeline) if it matches one of these.
+// A file is "content" (subject to the BLOCKING gate) if it matches one of these.
 // answers/*.html is intentionally excluded — it has its own gate in gen-answers.mjs.
 const CONTENT_PATTERNS = [
   /^library\/(?!index\.html$).+\.html$/,   // deep-dive essays incl. mk/ es/ mirrors
@@ -48,6 +48,64 @@ const CONTENT_PATTERNS = [
 ];
 
 const isContent = (p) => CONTENT_PATTERNS.some((re) => re.test(p));
+
+/* ────────────────────────────────────────────────────────────────────────────
+   THE AUDIT SCOPE — inverted default.
+
+   WHY THIS EXISTS. CONTENT_PATTERNS is an ENUMERATION: it lists what IS gated,
+   so anything nobody remembered to add is invisible. That is not hypothetical —
+   on 2026-07-28 it emerged that `pocket-cards.html` (70 compressed doctrinal
+   arguments, built to be exported as images) had never been reviewed, because it
+   was not on the list. Gating it revealed 23 blocking findings. The audit that
+   followed found 105 unstamped user-facing pages, including 63 `ev-m-*` mastery
+   pages averaging ~2,100 words each — one of which, `ev-m-shema.html`, was
+   publishing the very echad "composite unity" argument that `library/shema.html`
+   calls a discredited overreach.
+
+   CLAUDE.md says "there is no such thing as content too small to gate." That rule
+   was implemented as a list of six things. The gap between the rule and the list
+   is where those pages lived.
+
+   So the audit inverts the default: EVERYTHING user-facing needs a stamp unless
+   it appears in EXEMPT below WITH A REASON. Adding a page no longer requires
+   anyone to remember; skipping one requires them to justify it in writing.
+   ──────────────────────────────────────────────────────────────────────────── */
+const USER_FACING = [
+  /^[^/]+\.html$/,                          // every page served at the site root
+  /^library\/.+\.html$/,                    // essays + the library hub
+  /^tools\/reel\/(specs|xcards)\/.+\.json$/, // reel scripts AND X share-cards
+  /^api\/ask\.js$/,
+];
+
+/* Exempt = no doctrinal content of its own. Each entry states why, so a reader
+   can challenge the judgement. A page that RENDERS gated content (rather than
+   asserting anything itself) is exempt; a page that makes claims is not. */
+const EXEMPT = new Map([
+  // Legal / policy — reviewed by a human for accuracy, not for doctrine.
+  ['privacy.html', 'legal text, no doctrinal claims'],
+  ['terms.html', 'legal text, no doctrinal claims'],
+  // Authentication and account plumbing — forms only.
+  ['login.html', 'auth form'],
+  ['signup.html', 'auth form'],
+  ['update-password.html', 'auth form'],
+  ['join.html', 'invite redemption form'],
+  // Operator-only, excluded from the app bundle and not linked publicly.
+  ['monitor.html', 'operator dashboard, not public content'],
+  // Shells: the doctrinal content they display is gated at its source.
+  ['dashboard.html', 'app shell; renders gated content'],
+  ['today.html', 'shell; renders the gated daily items'],
+  ['search.html', 'renders search-index.json, which is generated from gated pages'],
+  ['shared-answer.html', 'renders a gated /answers entry'],
+  ['sources.html', 'renders the /sources corpus, gated by verified:true'],
+  ['ask-anything.html', 'shell for api/ask.js, which is itself gated'],
+  ['coach.html', 'shell; coaching prompts live in api/*'],
+  ['conversation-journal.html', 'shell; user-authored content'],
+  ['study-groups.html', 'shell; group plumbing'],
+  ['video-library.html', 'catalogue of third-party videos'],
+]);
+
+const isExempt = (p) => EXEMPT.has(p);
+const needsStamp = (p) => USER_FACING.some((re) => re.test(p)) && !isExempt(p);
 
 const HTML_RE = /content-review:\s*(\{[^}]*\})/;
 const JS_RE = /content-review:\s*(\{[^}]*\})/;
@@ -84,11 +142,46 @@ function allContentFiles() {
   return globSync('{library/**/*.html,ev-s*.html,worldviews.html,tools/reel/specs/*.json,api/ask.js}').filter(isContent);
 }
 
+/* Everything user-facing that is not explicitly exempt. This is the AUDIT scope,
+   deliberately much wider than the blocking scope — see the note above EXEMPT. */
+function allUserFacingFiles() {
+  return globSync('{*.html,library/**/*.html,tools/reel/specs/*.json,tools/reel/xcards/*.json,api/ask.js}')
+    .filter(needsStamp);
+}
+
 // ---- main ----
 const args = process.argv.slice(2);
 let files;
 if (args[0] === '--audit') {
   files = allContentFiles();
+} else if (args[0] === '--audit-all') {
+  /* Non-blocking coverage report over EVERY user-facing file. Wired into CI so
+     the size of the ungated surface is visible on every run, rather than being
+     rediscovered by accident. Always exits 0 — it reports, it does not gate. */
+  const all = allUserFacingFiles();
+  const missing = all.filter((f) => !stampFor(f).ok);
+  const groups = new Map();
+  for (const f of missing) {
+    const k = f.startsWith('ev-m-') ? 'ev-m-* mastery pages'
+      : f.startsWith('library/') ? 'library/'
+      : f.includes('/') ? f.split('/').slice(0, -1).join('/') + '/'
+      : 'root pages';
+    groups.set(k, [...(groups.get(k) || []), f]);
+  }
+  console.log(`Coverage: ${all.length - missing.length}/${all.length} user-facing files carry a review stamp.`);
+  console.log(`${EXEMPT.size} file(s) exempt by name, each with a recorded reason.\n`);
+  if (!missing.length) {
+    console.log('✓ Every non-exempt user-facing file is stamped.');
+  } else {
+    console.log(`⚠ ${missing.length} file(s) carry no valid stamp:\n`);
+    for (const [g, fs] of [...groups].sort((a, b) => b[1].length - a[1].length)) {
+      console.log(`  ${g} — ${fs.length}`);
+      for (const f of fs.slice(0, 8)) console.log(`      ${f}`);
+      if (fs.length > 8) console.log(`      … and ${fs.length - 8} more`);
+    }
+    console.log('\nThis report does not fail the build. Triage: docs/GATE_COVERAGE.md');
+  }
+  process.exit(0);
 } else if (args[0] === '--changed') {
   files = changedFiles(args[1]).filter(isContent);
 } else if (args.length) {

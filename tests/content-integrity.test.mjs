@@ -282,3 +282,39 @@ test('the "five review stages" claim matches the process it points to', () => {
   assert.match(home, /<span class="stat-num">5<\/span>\s*<span class="stat-lbl">Review stages/,
     'the trust strip should carry the review-stage figure');
 });
+
+test('Trinity and deity pocket cards each carry a oneness anchor', () => {
+  // WHY: the 2026-07-28 gate found the same defect three times — an anti-heresy
+  // card leaning so hard against one error that it lands in its opposite. The
+  // `modalism` card asserted personal distinction four times and never once said
+  // "one God"; `ot_trinity` lost its only unity statement when a bullet was
+  // retired, leaving four bullets that read as two YHWHs. Each was individually
+  // defensible and collectively ditheist — and a pocket card is read ALONE, as an
+  // exported image, with no essay around it.
+  //
+  // No phrase list catches that: the defect is an ABSENCE. This is the structural
+  // version of the check, and it is cheap.
+  const R = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+  const src = readFileSync(path.join(R, 'pocket-cards.html'), 'utf8');
+  const i = src.indexOf('var ARGS = {');
+  const j = src.indexOf('\n  };', i);
+  assert.ok(i > -1 && j > i, 'pocket-cards.html ARGS block not found');
+  const ARGS = new Function(src.slice(i, j + 5) + '; return ARGS;')();
+
+  // Any of these settles that we are describing ONE God.
+  const ONENESS = /one God|one divine|one essence|single God|the one God|not three gods|monotheis/i;
+
+  const offenders = [];
+  for (const cat of ['trinity', 'jesus']) {
+    for (const card of ARGS[cat] || []) {
+      const whole = [card.title, card.tagline, ...card.points, card.question].join(' ');
+      // Only cards that actually press plurality need the anchor.
+      const pressesPlurality = /three|persons|Father and (the )?Son|Spirit/i.test(whole);
+      if (pressesPlurality && !ONENESS.test(whole)) offenders.push(card.id);
+    }
+  }
+
+  assert.deepEqual(offenders, [],
+    `these cards press personal distinction with no statement that God is one — ` +
+    `read alone as a shared image they are indistinguishable from ditheism: ${offenders.join(', ')}`);
+});
