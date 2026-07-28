@@ -57,6 +57,32 @@
 > `messianic_prophecy`→`messianic-prophecy`. I told three reviewers those pages had no essay; they do, and
 > they are among the worst contradictors.
 >
+> **LATEST — 2026-07-28 (e):** ⭐ **Owner set the scope on the mastery-page fix, and it shipped.** The
+> question was whether to relabel the objections block instead of fixing it — a real option, not a dodge.
+> **The test that settled it:** relabelling fixes *our* exposure and changes nothing for the reader who is
+> actually in the conversation. So: **relabel AND route everywhere, transplant only the objections a reader
+> meets constantly, fix the contradictions everywhere.**
+> **① The promise is true now (67 pages).** *"Each one stated as its strongest defender would put it — never
+> a strawman"* was false on most pages → **"The objections you will actually meet."**
+> **② All 63 route to their own hardest objection** — a gold line naming the objection the paired essay calls
+> hardest, linking to it. The reader knows it exists, knows we didn't hide it, knows where the answer is.
+> **③ Three transplanted in full:** the **Jewish agency / *shaliach*** reading (absent from `jesus_as_god_nt`,
+> badged *Trickier* on `hands` — the objection that arrives at people's front doors; the reply is the essay's
+> ***Marana tha* is prayer** move); **Ehrman** on `jesus_claims` (was Schweitzer's tragic prophet, which
+> *invites* the prerogatives list — Ehrman's real case *absorbs* it) and `early_church_trinity` (was "the
+> winners' edited record," which he does not claim); the **multiverse** on `finetuning`/`cosmic` (steelman
+> omitted eternal inflation and the string landscape; both imputed a motive no physicist holds).
+> **④ 24 contradictions fixed** — Psalm 22:16 and the Targum on `messianic_prophecy`; Stoner's odds out of
+> `prophecy` **and out of the `palace.html` memorisation room**; Wallace's <1% figure taken out of Ehrman's
+> mouth on `manuscript`; "no rival burial tradition anywhere" (Acts 13:29); Finkelstein un-mislabelled;
+> `deadseascrolls`' reversed pluriformity finding; and the *"logic is airtight… every objection attacks P1 or
+> P2"* boilerplate on 7 pages, which each page refuted itself a few accordions later.
+> **⑤ Both corpus gaps closed** — the deism sentence on all 12 pages that lacked it, Chalcedon on the 4.
+> **⚠ STILL OPEN:** the four rebuild pages (`trinity_islam` first, and it needs the pastoral reviewer), the
+> ~100 remaining page-specific findings in [`docs/MASTERY_PAGE_AUDIT.md`](docs/MASTERY_PAGE_AUDIT.md), the
+> `cards`/`checks` diff on all 63, and **no page is stamped yet** — the stamp and the `CONTENT_PATTERNS`
+> entry must land in the same commit.
+>
 > **LATEST — 2026-07-28 (c):** ⭐ **The 70 pocket cards were gated for the first time — and 23 of them were
 > blocking.** `pocket-cards.html` had **no review stamp and sat outside `CONTENT_PATTERNS` entirely**, so
 > nothing ever flagged it: 70 pieces of compressed doctrinal argument, designed to be screenshotted and

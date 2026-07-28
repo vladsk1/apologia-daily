@@ -128,6 +128,54 @@ propagation discipline the pocket-card sweep found missing.
 
 ---
 
+## Round 2 — shipped 2026-07-28, after the owner set the scope
+
+The owner's call, and it was the right one: **relabel + route everywhere, transplant only the
+objections a reader meets constantly, and fix the contradictions everywhere — because that is
+the part that is actually wrong rather than merely incomplete.**
+
+**① The promise is now true (67 pages).** The block was headed *"Each one stated as its
+strongest defender would put it — never a strawman."* On most pages that was false. Now: *"The
+objections you will actually meet."*
+
+**② Every one of the 63 routes to its own hardest objection.** A gold line under the block
+names the objection the paired essay identifies as hardest and links to it — *"The one that
+matters most: the measure problem — 'improbable' relative to what? … take it with you, not just
+the replies below."* The reader now knows the hard one exists, knows we have not hidden it, and
+knows where the answer is. That is the site's designed architecture (page drills, essay goes
+deep) made explicit instead of assumed.
+
+**③ Three objections transplanted in full**, chosen because a reader meets them constantly:
+
+- **The Jewish agency reading** → `jesus_as_god_nt`, `hands`. Absent from the first entirely,
+  badged *Trickier* on the second, and it is the objection that arrives at people's front doors.
+  Now names the *shaliach* principle, concedes that the sent/given/appointed language fits an
+  agent reading, and answers with the essay's move: homage was never the line — *Marana tha* is
+  **prayer**, from the earliest Aramaic-speaking church. The framework explains the titles; it
+  breaks at the altar.
+- **Ehrman** → `jesus_claims` (was Schweitzer's tragic prophet, which *invites* the prerogatives
+  list; Ehrman's real case *absorbs* it), `early_church_trinity` (was "the winners' edited
+  record", which he does not claim — the essay says he explicitly rejects the Constantine myth).
+  Both re-badged **Hard**.
+- **The multiverse** → `finetuning`, `cosmic`. The steelman omitted eternal inflation and the
+  string landscape — the physics that makes it serious. Both pages imputed a motive ("to avoid a
+  designer") no physicist holds. The meta copy promised to *"dismantle"* it; the essay says
+  *"this deserves respect, not dismissal… that is a fair fight."*
+
+**④ 24 contradictions fixed** — the part no label change touches. `messianic_prophecy` ×4
+(Psalm 22:16, the Targum, "fits no nation", the motive-impugning line); Stoner's odds propagated
+out of `prophecy` **and** out of the `palace.html` memorisation room; Wallace's figure taken out
+of Ehrman's mouth on `manuscript`; `burial`'s "no rival tradition anywhere" (Acts 13:29);
+Finkelstein un-mislabelled on `archaeology`; `deadseascrolls`' reversed finding on pluriformity;
+plus `canon`, `uniqueness`, `consistency`, `earlydate`, `appearances`, `paul`, `sceptics`,
+`cambrian`, `respred`. And the *"logic is airtight… every objection attacks P1 or P2"*
+boilerplate on 7 pages — false on several, and each refuted it itself a few accordions later.
+
+**⑤ Both corpus gaps closed.** The deism sentence is on all 12 pages that lacked it; the
+Chalcedon sentence on the 4 deity pages that lacked it.
+
+---
+
 ## STILL OPEN — the work queue
 
 Nothing below is done. Ordered by risk.
