@@ -25,8 +25,16 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PAGE = path.join(ROOT, 'editorial-standards.html');
+const HOME = path.join(ROOT, 'index.html');
 const START = '<!-- trust-numbers:start -->';
 const END = '<!-- trust-numbers:end -->';
+/* The homepage carries the same figures in a compact strip, under its own markers.
+   It sits directly after the AI chat, where the "can I trust this?" doubt forms.
+   Generated from the SAME counts as the standards page so the two can never
+   disagree — a homepage claiming more than its own evidence page is exactly the
+   drift this tool exists to prevent. */
+const HOME_START = '<!-- trust-strip:start -->';
+const HOME_END = '<!-- trust-strip:end -->';
 
 const read = (p) => readFileSync(path.join(ROOT, p), 'utf8');
 
@@ -84,23 +92,61 @@ function render(c) {
   ${END}`;
 }
 
-const page = readFileSync(PAGE, 'utf8');
-const s = page.indexOf(START);
-const e = page.indexOf(END);
-if (s === -1 || e === -1) {
-  console.error(`✗ marker block not found in editorial-standards.html — expected ${START} ... ${END}`);
-  process.exit(1);
+function renderHome(c) {
+  // Compact strip for index.html. Every figure is mechanically counted; the
+  // "five review stages" claim is the ONLY hard-coded one and it must keep
+  // matching the five <li> items in editorial-standards.html's process list.
+  return `${HOME_START}
+    <div class="stat-item">
+      <span class="stat-num">${c.sourcesVerified}</span>
+      <span class="stat-lbl">Sources verified word-for-word</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">${c.essays}</span>
+      <span class="stat-lbl">Fully-cited deep dives</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">5</span>
+      <span class="stat-lbl">Review stages before publishing</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">${c.tests}</span>
+      <span class="stat-lbl">Automated checks per change</span>
+    </div>
+  ${HOME_END}`;
 }
 
-const next = page.slice(0, s) + render(counts()) + page.slice(e + END.length);
+const c = counts();
 
-if (process.argv.includes('--check')) {
-  if (next !== page) {
-    console.error('✗ editorial-standards.html figures are stale. Run: node tools/update-trust-numbers.mjs');
+/** Splice a generated block between markers, or fail loudly if they are missing. */
+function splice(file, label, startTag, endTag, body) {
+  const src = readFileSync(file, 'utf8');
+  const s = src.indexOf(startTag);
+  const e = src.indexOf(endTag);
+  if (s === -1 || e === -1) {
+    console.error(`✗ marker block not found in ${label} — expected ${startTag} ... ${endTag}`);
     process.exit(1);
   }
-  console.log('✓ editorial-standards.html figures match the repository.');
+  return { src, next: src.slice(0, s) + body + src.slice(e + endTag.length) };
+}
+
+const targets = [
+  { file: PAGE, label: 'editorial-standards.html', ...splice(PAGE, 'editorial-standards.html', START, END, render(c)) },
+  { file: HOME, label: 'index.html', ...splice(HOME, 'index.html', HOME_START, HOME_END, renderHome(c)) },
+];
+
+const stale = targets.filter((t) => t.next !== t.src);
+
+if (process.argv.includes('--check')) {
+  if (stale.length) {
+    for (const t of stale) console.error(`✗ ${t.label} figures are stale.`);
+    console.error('Run: node tools/update-trust-numbers.mjs');
+    process.exit(1);
+  }
+  console.log(`✓ trust figures match the repository (${targets.map((t) => t.label).join(', ')}).`);
 } else {
-  writeFileSync(PAGE, next);
-  console.log('✓ editorial-standards.html figures updated.');
+  for (const t of stale) writeFileSync(t.file, t.next);
+  console.log(stale.length
+    ? `✓ trust figures updated: ${stale.map((t) => t.label).join(', ')}.`
+    : '✓ trust figures already up to date.');
 }

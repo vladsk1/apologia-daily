@@ -253,3 +253,30 @@ test("What's New decodes HTML entities from source titles and descriptions", () 
   assert.equal(decode('Q&amp;A'), 'Q&A');
   assert.equal(decode('&amp;mdash;'), '&mdash;', '&amp; must decode last, or this double-decodes');
 });
+
+test('the "five review stages" claim matches the process it points to', () => {
+  // Three places now assert "five": index.html's meta description, the homepage
+  // trust strip, and editorial-standards.html's process list. Only the LIST is a
+  // real source of truth -- it is the thing a reader clicks through to check.
+  // The other two are hard-coded (every other figure in the strip is counted from
+  // the repo by tools/update-trust-numbers.mjs, but a pipeline stage cannot be
+  // counted mechanically). So if the published process is ever expanded or
+  // trimmed, the marketing claim silently overstates or understates it -- exactly
+  // the drift editorial-standards.html's own corrections log exists to catch.
+  const R = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+  const standards = readFileSync(path.join(R, 'editorial-standards.html'), 'utf8');
+  const home = readFileSync(path.join(R, 'index.html'), 'utf8');
+
+  const list = standards.match(/<ol class="steps">([\s\S]*?)<\/ol>/);
+  assert.ok(list, 'editorial-standards.html no longer has the <ol class="steps"> process list');
+  const stages = (list[1].match(/<li[\s>]/g) || []).length;
+
+  assert.equal(stages, 5,
+    `editorial-standards.html now publishes ${stages} review stages, but the homepage ` +
+    `meta description and trust strip both claim five. Update all three together.`);
+
+  assert.match(home, /no essay is published until it clears five review stages/,
+    'the homepage meta description should state the review-stage claim');
+  assert.match(home, /<span class="stat-lbl">Review stages before publishing<\/span>/,
+    'the trust strip should carry the review-stage figure');
+});
