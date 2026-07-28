@@ -1,6 +1,13 @@
 # Apologia Daily — Growth & Marketing Plan
 *Proven strategies, modeled on proven apps, grounded in what the site already has.*
 
+> **Companion plans (2026-07-28).** Two channel-specific plans now sit alongside this one:
+> **[`SOCIAL_GROWTH_PLAN.md`](SOCIAL_GROWTH_PLAN.md)** (organic Instagram + X) and
+> **[`META_ADS_PLAN.md`](META_ADS_PLAN.md)** (paid). Both correct facts that were stale here — see
+> the ⚠ notes below. The single biggest correction: **the Instagram and X accounts do not exist**,
+> and the site links to no social profile from any of its 319 pages, so the organic plan starts from
+> registration, not optimisation.
+
 ## The one-sentence strategy
 Win **organic search + creator-driven word of mouth** among people who are *already asking the questions our 77 essays answer* — then convert them with the free AI tool and keep them with the spaced-repetition daily habit we've already built. Concentrate, instrument, compound. (Paid ads and original video production are deliberately *later*.)
 
@@ -23,8 +30,8 @@ Ranked by impact ÷ effort for a small team with no live payments.
 
 | # | Move | Type | Effort | Models |
 |---|------|------|--------|--------|
-| 1 | **Instrument the funnel in PostHog** (it's live but only ~5 events; no `signup_completed`, no activation/retention/share events) | Measure | S | Duolingo (metric-driven growth) |
-| 2 | **Repoint the hero CTA** from the dead `#pricing` to the free AI tool/signup | Activation | S | Brilliant (free-tool aha) |
+| 1 | ⚠ **SUPERSEDED — instrumentation is largely DONE.** There are now **34 distinct PostHog events**, `signup_completed` among them (`signup.html:200`). The real gap is that **nobody has read nine months of data.** Replacement move: build the three funnels in `META_ADS_PLAN.md` §B step 0. (One live defect: `signup_completed` fires *before* email confirmation — see that plan.) | Measure | S | Duolingo (metric-driven growth) |
+| 2 | ⚠ **DONE.** Hero CTA is now "Ask Your Hardest Question" → `#homechat` | Activation | S | Brilliant (free-tool aha) |
 | 3 | **`/answers/` SEO push** — title = exact Google question, FAQ schema, two-way internal links to essays + AI chat | Acquisition | S | GotQuestions (13M visits/mo, ~58% organic) |
 | 4 | **Creator sponsorships** — 5–10 apologetics YouTubers (10K–200K), free access code + 60-sec end-of-video mention, per-creator landing URL | Acquisition | S | Brilliant; Wesley Huff funnel |
 | 5 | **Post-completion share prompt** — auto-surface a Pocket Card ("You just defended the Kalam — share it") after flashcards/debate/explain-it-back; instrument the existing "send to a skeptic" loop | Referral | S | YouVersion verse images (1.8M in weeks) |
@@ -42,6 +49,11 @@ Do **#1 and #2 this week** — #1 is the precondition for honestly judging every
 - **Deprioritize for now:** paid ads (no working checkout), broad low-intent posting, original podcast/video production (compete *through* creators, not against them).
 
 ### Organic social, by platform (what's working in the niche)
+> ⚠ **Superseded for Instagram and X by [`SOCIAL_GROWTH_PLAN.md`](SOCIAL_GROWTH_PLAN.md)**, which
+> starts from the fact that neither account exists. Two specifics below are now outdated: X is no
+> longer thread-first (long single posts and replies out-perform threads), and the "ten ready content
+> briefs" assume scripting is needed — all **54 reel specs are already gated**, so distribution, not
+> production, is the bottleneck.
 - **TikTok / Reels / Shorts:** 45–90s, pattern-interrupt in 1.5s, cuts every 2–3s, claim in first frame. 3–7×/week. Model: Wesley Huff, Testify, Inspiring Philosophy, CrossExamined, GodLogic (Islam). 75% of Shorts views are from non-subscribers → discovery engine.
 - **YouTube long-form:** our 77 essays are ready-made 20–40 min scripts. The "hostile sources only" and debate formats travel.
 - **Reddit/X:** value-first; r/Christianity, r/DebateAChristian, r/DebateReligion (Islam), r/Apologetics, r/OpenChristian. Build comment credibility for weeks *before* ever linking. X: 7–10 tweet evidence threads.
