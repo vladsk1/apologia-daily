@@ -45,6 +45,20 @@
     .welcome-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
     .welcome-title { font-family: var(--font-display); font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; color: var(--text-dark); margin-bottom: 0.25rem; }
     .welcome-title em { font-style: italic; color: var(--navy-600); }
+    .start-here { background:rgba(200,169,81,0.07); border:1px solid rgba(200,169,81,0.28);
+      border-radius:10px; padding:1.15rem 1.35rem; margin-bottom:2rem; }
+    .sh-lead { font-family:var(--font-display,'Playfair Display',serif); font-size:1.08rem;
+      color:#f2e9d2; margin-bottom:0.35rem; }
+    .sh-body { font-family:var(--font-ui); font-size:0.86rem; color:rgba(255,255,255,0.62);
+      line-height:1.65; margin:0 0 0.75rem; max-width:60ch; }
+    .sh-cta { font-family:var(--font-ui); font-size:0.82rem; font-weight:600; color:#c8a951;
+      text-decoration:none; white-space:nowrap; }
+    .sh-cta:hover { text-decoration:underline; }
+    .sh-goal { margin-top:0.9rem; padding-top:0.8rem; border-top:1px solid rgba(255,255,255,0.08);
+      display:flex; flex-wrap:wrap; align-items:baseline; gap:0.6rem 1rem; }
+    .sh-why { font-family:var(--font-ui); font-size:0.82rem; color:rgba(255,255,255,0.5);
+      line-height:1.6; flex:1 1 22ch; }
+    .sh-cta-alt { color:#e2eaf4; }
     .welcome-sub { font-size: 0.95rem; color: var(--text-muted); }
     .upgrade-btn { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; padding: 10px 22px; border-radius: 3px; background: var(--gold); color: var(--navy-950); border: none; cursor: pointer; text-decoration: none; white-space: nowrap; }
     .upgrade-btn:hover { background: var(--gold-light); }
@@ -254,6 +268,11 @@
       </div>
       <a href="index.html#pricing" class="upgrade-btn" id="upgrade-btn">Upgrade to Pro &rarr;</a>
     </div>
+
+    <!-- START HERE — personalised from the onboarding `level` + `goal` answers.
+         Hidden entirely when neither was captured, so returning users who
+         onboarded before these questions existed see no empty box. -->
+    <div class="start-here" id="start-here" style="display:none;"></div>
 
     <!-- STATS -->
     <div class="stats-grid">
@@ -911,6 +930,7 @@
       try {
         var prefs = JSON.parse(localStorage.getItem('ad_prefs') || '{}');
         applyIntent(prefs.intent);
+        applyStartHere();
         if (!prefs.onboarded) { showOnboarding(); }
         applyMode('guided'); // forced guided for now
       } catch(e) { applyMode('guided'); }
@@ -1177,6 +1197,9 @@
     } catch(e) {
       try { localStorage.setItem('ad_prefs', JSON.stringify(Object.assign({}, obAnswers, {onboarded:true}))); } catch(x) {}
     }
+    // Show the personalised Start-here card immediately, without a reload.
+    try { applyStartHere(); } catch(e) {}
+
     // Persist to the account so intent + focus survive across devices
     try {
       if (sb && sb.auth && sb.auth.updateUser) {
@@ -1221,6 +1244,55 @@
   }
 
   // Reflect the captured intent back to the user in the dashboard greeting
+  /* LEVEL + GOAL personalisation.
+     Onboarding asks five questions; `mode` and `focus` already drive the view,
+     `intent` swaps the welcome line. These two were captured, saved to the
+     account, and then read by nothing — so a "Complete beginner" saw exactly the
+     dashboard an "advanced" user saw, on a screen that promises to personalise.
+     LEVEL decides WHERE to send someone into the content (depth); GOAL decides
+     WHAT to send them to practise (activity). Both render in one "Start here"
+     card rather than scattering conditionals across the page. */
+  var LEVEL_MAP = {
+    beginner: { lead:'New to this? Start with the short answers.',
+                body:'Plain-English answers to the questions people actually ask &mdash; no jargon, each one linked to the fuller case when you want it.',
+                cta:'Browse the answers', href:'answers/' },
+    some:     { lead:'You know a few arguments. Time to go deeper.',
+                body:'The Evidence Library lays out each argument in full &mdash; the case, the strongest objection, and the honest limits.',
+                cta:'Open the Evidence Library', href:'evidence-library.html' },
+    advanced: { lead:'You have studied this before. Go for mastery.',
+                body:'The deep-dive essays carry the full scholarly apparatus &mdash; footnotes, bibliography, and the state of the debate.',
+                cta:'Open the deep-dive essays', href:'library/' }
+  };
+  var GOAL_MAP = {
+    faith:         { cta:'Build the daily habit',      href:'daily-devotional.html',
+                     why:'A short reading each day is what turns this from reading into remembering.' },
+    conversations: { cta:'Practise in the Debate Arena', href:'debate-arena.html',
+                     why:'Knowing an argument and being able to use it under pressure are different skills.' },
+    specific:      { cta:'Prepare for a specific challenge', href:'asked-and-answered.html',
+                     why:'Bring the actual objection you are facing and get a straight answer to it.' }
+  };
+
+  function applyStartHere() {
+    var card = document.getElementById('start-here');
+    if (!card) return;
+    var p = {};
+    try { p = JSON.parse(localStorage.getItem('ad_prefs') || '{}'); } catch(e) {}
+    var lvl = LEVEL_MAP[p.level], goal = GOAL_MAP[p.goal];
+    if (!lvl && !goal) return;                       // nothing captured — stay hidden
+    var html = '';
+    if (lvl) {
+      html += '<div class="sh-lead">' + lvl.lead + '</div>'
+           +  '<p class="sh-body">' + lvl.body + '</p>'
+           +  '<a class="sh-cta" href="' + lvl.href + '">' + lvl.cta + ' &rarr;</a>';
+    }
+    if (goal) {
+      html += '<div class="sh-goal"><span class="sh-why">' + goal.why + '</span>'
+           +  '<a class="sh-cta sh-cta-alt" href="' + goal.href + '">' + goal.cta + ' &rarr;</a></div>';
+    }
+    card.innerHTML = html;
+    card.style.display = 'block';
+  }
+
   var INTENT_COPY = {
     defend:   'You are here to be ready to give a reason. Today’s path is built around that.',
     doubts:   'You are working through honest questions — we will take them seriously, one at a time.',
