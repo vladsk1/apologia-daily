@@ -993,12 +993,6 @@
       </div>
       <div class="start-grid reveal" id="start-grid">
 
-        <div class="start-card" onclick="selectStart(this, 'new-christian')">
-          <div class="start-icon">&#127807;</div>
-          <div class="start-label">I'm a new Christian</div>
-          <div class="start-desc">I want to understand my faith more deeply and know why I believe what I believe.</div>
-        </div>
-
         <div class="start-card" onclick="selectStart(this, 'challenged')">
           <div class="start-icon">&#9878;</div>
           <div class="start-label">Someone challenged my faith</div>
@@ -1015,6 +1009,18 @@
           <div class="start-icon">&#128218;</div>
           <div class="start-label">I want deep academic study</div>
           <div class="start-desc">I'm ready for the scholarly arguments, the philosophy, and the serious intellectual work.</div>
+        </div>
+
+        <div class="start-card" onclick="selectStart(this, 'other-faith')">
+          <div class="start-icon">&#128506;&#65039;</div>
+          <div class="start-label">I'm answering another faith</div>
+          <div class="start-desc">A friend or relative follows another religion, and I want to understand it fairly and answer it well.</div>
+        </div>
+
+        <div class="start-card" onclick="selectStart(this, 'together')">
+          <div class="start-icon">&#128101;</div>
+          <div class="start-label">I want to study with others</div>
+          <div class="start-desc">I learn best alongside people &mdash; a group, a class, or a book worked through together.</div>
         </div>
 
 
@@ -1569,18 +1575,6 @@
 
     // ── WHERE DO I START ──
     var START_PATHS = {
-      'new-christian': {
-        eyebrow: 'Perfect starting point for you',
-        title: 'Start with the 5-Day Beginner\'s Path',
-        desc: 'We\'ve built a gentle 5-day introduction that walks you through the core foundations of Christian faith and apologetics — no prior knowledge needed. By the end you\'ll understand why Christianity is intellectually credible and how to explain it to others.',
-        steps: [
-          { text: '<strong>Day 1–2:</strong> Who is Jesus and why does it matter? The historical evidence examined simply.' },
-          { text: '<strong>Day 3–4:</strong> Does God exist? Three arguments explained in plain English.' },
-          { text: '<strong>Day 5:</strong> The moral argument — and how to share it all with gentleness and respect.' }
-        ],
-        btn1: { text: 'Start the Beginner\'s Path →', href: 'beginners-path.html' },
-        btn2: { text: 'Browse the Evidence Library', href: 'evidence-library.html' }
-      },
       'challenged': {
         eyebrow: 'We\'ve got you covered',
         title: 'Find the Answer to the Challenge You Faced',
@@ -1598,12 +1592,12 @@
         title: 'The Conversation Toolkit',
         desc: 'Knowing what you believe is only half the battle. Being able to explain it clearly and naturally in a real conversation is what Apologia Daily specialises in. Every argument has a plain-English summary and a ready-to-use conversation starter.',
         steps: [
-          { text: '<strong>Start here:</strong> The "Explain it Simply" sections in the Evidence Library — every argument translated into natural conversation language.' },
-          { text: '<strong>Then practice:</strong> The Debate Arena — choose a scenario that matches someone in your life (coworker, family member, friend) and practice the conversation.' },
-          { text: '<strong>Then track:</strong> The Conversation Journal — log real conversations, get AI coaching on what worked and what to improve.' }
+          { text: '<strong>Start here:</strong> Answers — every common question put plainly, in the words you would actually use, with the fuller case one link away.' },
+          { text: '<strong>Then go deeper:</strong> The "Explain it Simply" sections in the Evidence Library translate each argument into natural conversation language.' },
+          { text: '<strong>Then carry it with you:</strong> Pocket Cards — short, shareable versions of each argument you can send to someone or glance at before a conversation.' }
         ],
-        btn1: { text: 'Go to Evidence Library →', href: 'evidence-library.html' },
-        btn2: { text: 'Practice a Conversation', href: 'debate-arena.html' }
+        btn1: { text: 'Browse the Answers →', href: 'answers/' },
+        btn2: { text: 'See the Pocket Cards', href: 'pocket-cards.html' }
       },
       'deep-study': {
         eyebrow: 'The serious academic track',
@@ -1616,6 +1610,32 @@
         ],
         btn1: { text: 'Open Evidence Library →', href: 'evidence-library.html' },
         btn2: { text: 'Browse Scholar Profiles', href: 'scholars.html' }
+      },
+
+      'other-faith': {
+        eyebrow: 'Understand it fairly, then answer it',
+        title: 'Answering Another Faith, Honestly',
+        desc: 'The people who change their minds are the ones who felt understood first. So we state each position as its own adherents would recognise it &mdash; and then say plainly where we think it does not hold, and why. No strawmen, and no pretending the differences are smaller than they are.',
+        steps: [
+          { text: '<strong>Start here:</strong> Worldviews &mdash; Islam, Jehovah\u2019s Witnesses, Mormonism and atheism, each set out on its own terms before it is answered.' },
+          { text: '<strong>Then the specifics:</strong> Answers covers the exact claims that come up in real conversations, one question at a time.' },
+          { text: '<strong>Then go deep:</strong> The Evidence Library carries the full case on the points these conversations turn on &mdash; the Trinity, the crucifixion, and the reliability of the text.' }
+        ],
+        btn1: { text: 'Explore Worldviews \u2192', href: 'worldviews.html' },
+        btn2: { text: 'Browse the Answers', href: 'answers/' }
+      },
+
+      'together': {
+        eyebrow: 'Better with other people',
+        title: 'Study It With Someone Else',
+        desc: 'Most of this sticks better in company. Work through the material with a few friends, your small group, or your family &mdash; at whatever pace suits you.',
+        steps: [
+          { text: '<strong>Study Groups:</strong> Invite a few people, track what everyone is working through, and keep each other going.' },
+          { text: '<strong>Reading Clubs:</strong> Work through the classics chapter by chapter, together, with the discussion prompts written for you.' },
+          { text: '<strong>Study Plans:</strong> Structured multi-week paths a group can follow in step &mdash; the resurrection, the case for God, and more.' }
+        ],
+        btn1: { text: 'Start a Study Group \u2192', href: 'study-groups.html' },
+        btn2: { text: 'Join a Reading Club', href: 'reading-club.html' }
       }
     };
 
