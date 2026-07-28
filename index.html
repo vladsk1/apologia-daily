@@ -232,11 +232,9 @@
       background: var(--navy-900);
       border-top: 1px solid rgba(255,255,255,0.06);
       padding: 1.75rem 2rem 1.25rem;
-      display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;
+      display: flex; justify-content: center; gap: 1.5rem 3.5rem; flex-wrap: wrap;
     }
-    /* Capped so the longer trust labels wrap to two tidy lines instead of
-       stretching the flex row and forcing an awkward single-column stack. */
-    .stat-item { text-align: center; max-width: 190px; }
+    .stat-item { text-align: center; }
 
     /* Continues the navy band under the figures — same surface, one unit. */
     .trust-strip-note {
@@ -770,7 +768,13 @@
       .nav-mobile-toggle { display: flex; }
       .arena-inner, .daily-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .arena-visual { order: -1; }
-      .stats-bar { gap: 2rem; }
+      /* Two per row on a phone. Left to flex-wrap alone the items centre as a
+         single column, which turned the strip into a full-screen scroll. */
+      .stats-bar { gap: 1.75rem 1rem; padding: 1.5rem 1rem 1rem; }
+      .stat-item { flex: 0 0 calc(50% - 1rem); }
+      .stat-num { font-size: 1.6rem; }
+      .trust-strip-note { padding: 0 1.25rem 1.5rem; }
+      .trust-strip-note p { font-size: 0.8rem; }
       section { padding: 4rem 1.25rem; }
       .hero { padding: 7rem 1.25rem 5rem; }
     }
@@ -989,24 +993,24 @@
     <!-- trust-strip:start -->
     <div class="stat-item">
       <span class="stat-num">132</span>
-      <span class="stat-lbl">Sources verified word-for-word</span>
+      <span class="stat-lbl">Verified sources</span>
     </div>
     <div class="stat-item">
       <span class="stat-num">85</span>
-      <span class="stat-lbl">Fully-cited deep dives</span>
+      <span class="stat-lbl">Cited deep dives</span>
     </div>
     <div class="stat-item">
       <span class="stat-num">5</span>
-      <span class="stat-lbl">Review stages before publishing</span>
+      <span class="stat-lbl">Review stages</span>
     </div>
     <div class="stat-item">
-      <span class="stat-num">85</span>
-      <span class="stat-lbl">Automated checks per change</span>
+      <span class="stat-num">102</span>
+      <span class="stat-lbl">Answer pages</span>
     </div>
   <!-- trust-strip:end -->
   </div>
   <div class="trust-strip-note">
-    <p>Every essay clears five independent reviews before it is published &mdash; and when we get something wrong, we publish the correction. <a href="editorial-standards.html">See exactly how we check our work &rarr;</a></p>
+    <p>Every source checked word-for-word against the original. Every essay through five independent reviews before it is published. And when we get something wrong, we publish the correction. <a href="editorial-standards.html">See exactly how we check our work &rarr;</a></p>
   </div>
 
   <!-- WHERE DO I START -->

@@ -277,6 +277,8 @@ test('the "five review stages" claim matches the process it points to', () => {
 
   assert.match(home, /no essay is published until it clears five review stages/,
     'the homepage meta description should state the review-stage claim');
-  assert.match(home, /<span class="stat-lbl">Review stages before publishing<\/span>/,
+  // Match the FIGURE next to the label, not the label's exact wording — the label
+  // is copy and will be reworded; the "5" is the claim and must not drift.
+  assert.match(home, /<span class="stat-num">5<\/span>\s*<span class="stat-lbl">Review stages/,
     'the trust strip should carry the review-stage figure');
 });

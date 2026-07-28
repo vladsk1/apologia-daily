@@ -93,25 +93,29 @@ function render(c) {
 }
 
 function renderHome(c) {
-  // Compact strip for index.html. Every figure is mechanically counted; the
-  // "five review stages" claim is the ONLY hard-coded one and it must keep
+  // Compact strip for index.html. Labels are kept to TWO WORDS deliberately: the
+  // first cut used phrases like "Sources verified word-for-word", which wrapped to
+  // three lines each and collapsed the row into a full-screen vertical stack on a
+  // phone. The qualifying detail ("word-for-word", "before publishing") lives in the
+  // note underneath, where it has room. Every figure here is mechanically counted;
+  // the "five review stages" claim is the ONLY hard-coded one and it must keep
   // matching the five <li> items in editorial-standards.html's process list.
   return `${HOME_START}
     <div class="stat-item">
       <span class="stat-num">${c.sourcesVerified}</span>
-      <span class="stat-lbl">Sources verified word-for-word</span>
+      <span class="stat-lbl">Verified sources</span>
     </div>
     <div class="stat-item">
       <span class="stat-num">${c.essays}</span>
-      <span class="stat-lbl">Fully-cited deep dives</span>
+      <span class="stat-lbl">Cited deep dives</span>
     </div>
     <div class="stat-item">
       <span class="stat-num">5</span>
-      <span class="stat-lbl">Review stages before publishing</span>
+      <span class="stat-lbl">Review stages</span>
     </div>
     <div class="stat-item">
-      <span class="stat-num">${c.tests}</span>
-      <span class="stat-lbl">Automated checks per change</span>
+      <span class="stat-num">${c.answers}</span>
+      <span class="stat-lbl">Answer pages</span>
     </div>
   ${HOME_END}`;
 }
