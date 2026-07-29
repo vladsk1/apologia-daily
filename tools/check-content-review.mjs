@@ -134,8 +134,17 @@ function stampFor(path) {
 
 function changedFiles(base) {
   const b = base || 'origin/main';
-  // added/modified (exclude deleted) between base and working tree
-  const out = execSync(`git diff --name-only --diff-filter=d ${b}... 2>/dev/null; git diff --name-only --diff-filter=d`, { encoding: 'utf8' });
+  // added/modified (exclude deleted) between base and working tree.
+  // No shell redirection here: execSync uses cmd.exe on Windows, where
+  // `2>/dev/null` means "write stderr to the file \dev\null", which fails and
+  // takes the whole gate down with it. Swallow stderr via stdio instead, and
+  // tolerate a missing base ref rather than throwing.
+  const sh = (c) => {
+    try { return execSync(c, { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'] }); }
+    catch { return ''; }
+  };
+  // git emits forward slashes on every platform, so these need no normalizing.
+  const out = sh(`git diff --name-only --diff-filter=d ${b}...`) + sh('git diff --name-only --diff-filter=d');
   return [...new Set(out.split('\n').map((s) => s.trim()).filter(Boolean))];
 }
 

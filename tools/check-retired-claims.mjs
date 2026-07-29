@@ -87,7 +87,10 @@ function servedFiles(dir, acc = []) {
       servedFiles(full, acc);
     }
     else if ((entry.endsWith('.html') || entry.endsWith('.json')) && !SKIP_FILES.has(entry)) {
-      acc.push(path.relative(ROOT, full));
+      // Forward slashes always: the `allow` lists in retired-claims.json are
+      // written with '/', and path.relative() yields '\' on Windows, so without
+      // this every allow entry misses and legitimate refutation pages all fire.
+      acc.push(path.relative(ROOT, full).replace(/\\/g, '/'));
     }
   }
   return acc;

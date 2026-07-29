@@ -109,7 +109,11 @@ function ctxKey(file, name, m, text, idx) {
 function scan() {
   const hits = [];
   for (const file of files()) {
-    const text = textOf(readFileSync(file, 'utf8'));
+    // Normalize CRLF before scanning. ctxKey() slices a fixed 40-char window
+    // around each match, so on a Windows checkout the extra \r bytes shift that
+    // window by a character or more, changing the context hash and making every
+    // baselined key miss. Same file, same match, different fingerprint.
+    const text = textOf(readFileSync(file, 'utf8').replace(/\r\n/g, '\n'));
     for (const p of PATTERNS) {
       p.re.lastIndex = 0;
       let m;
