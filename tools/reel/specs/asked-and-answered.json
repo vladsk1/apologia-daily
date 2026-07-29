@@ -4,7 +4,7 @@
   "theme": "navy",
   "fps": 30,
   "crossfade": 0.6,
-  "voiceover": "You are not the first person to ask. The hardest question you have about the Christian faith is almost certainly older than you think. Open Matthew's Gospel, chapter 28, and the earliest answer his opponents gave is already written down — his disciples came by night and stole him away, while we were asleep. Read it again. They did not say the grave was full. They said someone had emptied it. And the church did not bury that. It wrote it down. Around AD 160 Justin Martyr names the same charge, still in circulation, generations later. Around 248 Origen answers the philosopher Celsus — who had written seventy years earlier — point by point, in writing. Twenty centuries, and the pattern never changes. Every generation brings its hardest question. Every generation answers it in writing. Nobody ever had to hide the question. It is printed in our own Gospel. That is what Asked and Answered is: a hundred and two questions, answered plainly, and every one carries the dated record of the reviews it passed. Bring the question you have been carrying. It has been asked before. Here is our answer.",
+  "voiceover": "You are not the first person to ask. The hardest question you have about the Christian faith is almost certainly older than you think. Open Matthew's Gospel, chapter 28, and the earliest answer his opponents gave on record is already written down — his disciples came by night and stole him away while we were asleep. Read it again. They did not say the grave was full. They said someone had emptied it. And the church did not bury that. It wrote it down. Around AD 160 Justin Martyr names the same charge, still in circulation, generations later. Around 248 Origen answers the philosopher Celsus — who had written seventy years earlier — point by point, in writing. Twenty centuries, and the pattern never changes. Every generation brings its hardest question. Every generation answers it in writing. This question was never hidden. It is printed in our own Gospel. That is what Asked and Answered is: a hundred and two questions, answered plainly, and every one carries the dated record of the reviews it passed. Bring the question you have been carrying. It has been asked before. Here is our answer.",
   "source": "answers/ (Asked & Answered, 102 questions); anchors resolved against library/emptytomb.html:151-153 + fn 204, ev-s2.html:160-162, editorial-standards.html:117",
   "scenes": [
     { "dur": 2.8,
@@ -17,18 +17,18 @@
       {"t": "", "s": 22},
       {"t": "is older than you think.", "c": "gold", "f": "serifb", "s": 68} ] },
 
-    { "kicker": "MATTHEW 28", "dur": 5.0, "lines": [
+    { "kicker": "MATTHEW 28 — THE COUNTER-STORY", "dur": 5.0, "lines": [
       {"t": "The earliest answer", "c": "cream", "s": 56},
-      {"t": "his opponents gave is", "c": "cream", "s": 56},
+      {"t": "his opponents gave, on record,", "c": "cream", "s": 52},
       {"t": "written in the Gospel itself:", "c": "cream", "s": 56},
       {"t": "", "s": 18},
       {"t": "“His disciples came by night", "c": "gold", "f": "serifb", "s": 50},
-      {"t": "and stole him away,", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "and stole him away", "c": "gold", "f": "serifb", "s": 50},
       {"t": "while we were asleep.”", "c": "gold", "f": "serifb", "s": 50} ] },
 
     { "kicker": "READ IT AGAIN", "dur": 4.6, "lines": [
-      {"t": "They did not say", "c": "cream", "s": 60},
-      {"t": "the grave was full.", "c": "cream", "s": 60},
+      {"t": "His opponents did not say", "c": "cream", "s": 54},
+      {"t": "the grave was full.", "c": "cream", "s": 58},
       {"t": "", "s": 22},
       {"t": "They said someone", "c": "gold", "f": "serifb", "s": 62},
       {"t": "had emptied it.", "c": "gold", "f": "serifb", "s": 62} ] },
@@ -62,8 +62,8 @@
       {"t": "answers in writing.", "c": "gold", "f": "serifb", "s": 60} ] },
 
     { "kicker": "STILL ON THE PAGE", "dur": 4.2, "lines": [
-      {"t": "Nobody ever had", "c": "cream", "s": 60},
-      {"t": "to hide the question.", "c": "cream", "s": 60},
+      {"t": "This question", "c": "cream", "s": 64},
+      {"t": "was never hidden.", "c": "cream", "s": 64},
       {"t": "", "s": 22},
       {"t": "It is printed", "c": "gold", "f": "serifb", "s": 64},
       {"t": "in our own Gospel.", "c": "gold", "f": "serifb", "s": 64} ] },
@@ -72,8 +72,8 @@
       {"t": "102 questions.", "c": "gold", "f": "serifb", "s": 74},
       {"t": "", "s": 18},
       {"t": "Answered plainly.", "c": "cream", "s": 56},
-      {"t": "Every answer reviewed —", "c": "cream", "s": 56},
-      {"t": "and the record is public.", "c": "cream", "s": 56} ] },
+      {"t": "Every one fact-checked", "c": "cream", "s": 56},
+      {"t": "and reviewed for orthodoxy.", "c": "cream", "s": 54} ] },
 
     { "dur": 3.8,
       "big": [ {"t": "Bring your", "c": "cream", "s": 100}, {"t": "question.", "c": "gold", "s": 100} ],
