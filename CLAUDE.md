@@ -462,15 +462,19 @@
 > - **Browser-verify:** the CSP; the nav mega-menu on desktop + mobile; SRI on the gated essays.
 > - Bring the nav mega-menu to the gated pages via a stamp pass.
 > - Two standing stamp-integrity flags: `evil.html` category-pull, `worldviews.html` SEO schema.
-> - ⚠ **`ev-s6.html` RUNS THE RETIRED LEXICAL BRIDGE and needs its own dual-consensus gate round.**
->   Found 2026-07-29 by the widened `quranic-title-compounds` net, on a fragment stamped 2026-07-23.
->   The compound error was corrected in place and a `kalima`≠`kalam` fence added, **but the argument
->   after it was left alone**: it still runs "is God's Word eternal? If yes, then there has always
->   existed an eternal, personal Word who is divine" straight off the Qur'an's Word-title for Jesus —
->   the retired inference — and describes the Qur'an as "distinct from Allah yet divine," which is the
->   Ash'ari formula shape the registry retires. Rewriting it properly means the structural reframing
->   (see `library/islam-eternalword.html`), which is gated work, not a wording fix. **The file is now
->   edited past its stamp, so it will show on `check-stamp-integrity.mjs` until that round runs.**
+> - ⚠ **`ev-s6.html` and `flashcards.html` were EDITED on 2026-07-29 and both now need a gate round.**
+>   The widened `quranic-title-compounds` net found the retired lexical bridge and the non-Quranic
+>   title compounds alive on four surfaces nobody had checked: `ev-s6.html` (a fragment stamped
+>   2026-07-23 — the bridge ran as a **numbered premise** *and* as the card's **recommended opener**),
+>   `flashcards.html` (the **memorised layer**, teaching "Kalimatullah — Word of God" as the answer),
+>   `ev-m-trinity_islam.html`, and `daily-args.json` (`p2` ran the whole bridge; a second entry stated
+>   the contested other-directed-love hinge as settled fact). **All were rewritten to the certified
+>   structural framing** from `library/islam-eternalword.html`, not merely patched. That wording is
+>   ported, not freshly gated — so both HTML files are now edited past their stamps and will show on
+>   `check-stamp-integrity.mjs` until argument + orthodoxy re-run on them.
+> - ⚠ **`flashcards.html` carries NO `content-review` stamp and is outside `CONTENT_PATTERNS`** — the
+>   same hole as `pocket-cards.html`. It is the memorised layer and it was never gated. The stamp and
+>   the `CONTENT_PATTERNS` entry must land in the same commit, or CI fails on the missing stamp.
 > - **`library/islam-preservation.html:208`** still carries "Jesus, whom the Quran itself calls the
 >   Word of God" — the compound retired 2026-07-29. Corrected on `worldviews.html`; the essay it links
 >   to was not, because editing a separately-certified essay would leave it un-gated with no way to

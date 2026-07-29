@@ -1,4 +1,4 @@
-64 clarifier(s) across 40 page(s) → docs/clarifiers.md
+65 clarifier(s) across 40 page(s) → docs/clarifiers.md
   1  answers/did-jesus-empty-himself-of-his-deity.html
   1  answers/do-muslims-and-christians-worship-the-same-god.html
   1  answers/doesnt-the-trinity-mean-three-gods.html
@@ -38,7 +38,7 @@
   1  library/trinity_mormons.html
   1  library/typology.html
   1  library/uniqueness.html
-  8  worldviews.html
+  9  worldviews.html
 t that Muslims are insincere, that Christians worship three gods, or that the two faiths have nothing in common &mdash; both are monotheists who look back to Abraham. Not a denial that a Muslim may be sincerely reaching for God: Christians have long distinguished who a person is reaching for from whether the God they describe is the true one. The claim is about who God is &mdash; not about the sincerity of the seeker, and not a verdict on any individual heart, which is God's to render.
 
 ## `answers/doesnt-the-trinity-mean-three-gods.html`
@@ -331,9 +331,12 @@ t that Muslims are insincere, that Christians worship three gods, or that the tw
 - **Phrase:** "dies" — _&ldquo;God died&rdquo; &mdash; in what sense Christians say it_
   - ✅ **Is saying:** The one who suffered and died is a divine person, God the Son. Scripture speaks this way: &ldquo;the Lord of glory&rdquo; was crucified (1 Cor 2:8); God bought the church &ldquo;with his own blood&rdquo; (Acts 20:28).
   - ⛔ **Not saying:** Not that the divine nature suffered or ceased to be. Christ is one person in two natures, fully God and fully man; he died in his true human nature, and God did not stop being God. The Father did not suffer on the cross.
+- **Phrase:** "The true parallel is the Qur&rsquo;an and Christ" — _A comparison of place, not of status_
+  - ✅ **Is saying:** Each faith locates its &ldquo;Word of God&rdquo; differently &mdash; Islam in a recited book, Christianity in a person &mdash; so the honest comparison is Qur&rsquo;an-to-Christ rather than Qur&rsquo;an-to-Bible. It is a point about where each tradition puts its central revelation.
+  - ⛔ **Not saying:** Not that the Qur&rsquo;an actually is God&rsquo;s eternal, uncreated Word, and not that the two occupy the same standing before God. That is Islam&rsquo;s claim about its book, described here, not conceded. Only the Son is the eternal Word of God, and he is a divine person, not a text (John 1:1, 14).
 - **Phrase:** "his own tradition affirms one" — _The same question, not the same answer_
   - ✅ **Is saying:** Both traditions affirm that the one God has an eternal Word, and both deny that this makes two gods &mdash; so the objection that an eternal Word with God is unthinkable is one Islam&rsquo;s own theology does not sustain.
-  - ⛔ **Not saying:** Not that the two &ldquo;Words&rdquo; are the same reality, or that the faiths agree about who God is. Islam&rsquo;s eternal Word is an impersonal attribute of God&rsquo;s speech; the Christian Word is God &mdash; a divine person, begotten not made, who became flesh (John 1:1, 14).
+  - ⛔ **Not saying:** Not that Christians and Muslims worship the same God, that the two &ldquo;Words&rdquo; are the same reality, or that the faiths agree about who God is. Islam&rsquo;s eternal Word is an impersonal attribute of God&rsquo;s speech; the Christian Word is God &mdash; a divine person, begotten not made, who became flesh (John 1:1, 14).
 - **Phrase:** "a communion of self-giving love" — _A communion of love &mdash; one God, not a committee_
   - ✅ **Is saying:** The Father, the Son and the Holy Spirit have loved one another from eternity &mdash; three persons who each fully know and love the others, so that love is what God eternally is, not something he took up when he made us.
   - ⛔ **Not saying:** Not three gods, and not three parts of God. Each person is fully God; there is one undivided divine being, one will, one power. And the Spirit is not merely the bond or atmosphere of that love &mdash; he is a person who loves and is loved.
