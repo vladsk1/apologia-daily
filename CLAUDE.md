@@ -83,6 +83,21 @@
 > very category** it tells Christians is incoherent. **A mastery page may legitimately compress a SIBLING
 > essay.** Now fixed: the page distinguishes *not lexically* from *structurally* in the key-move box, the
 > routing line and the flashcard, and links to the right essay.
+> 🔴 **THE ONE THING LEFT, AND IT IS THE FREE PUBLICLY-INDEXED SURFACE: `worldviews.html` (Islam cards 4, 12,
+> 13, 14) IS NOT STAMPED.** Its stamp predates 2026-07-29 and **must not be bumped without a fresh
+> dual-consensus pass** (orthodoxy AND neutrality — deity/Trinity tier). Three gate rounds ran on it today and
+> **all three returned NOT STAMPABLE**; ~30 findings were applied, 0 heresy throughout. The essay
+> (`library/islam-eternalword.html`) and the mastery page are both certified and aligned — **this card layer is
+> the weakest link in that chain and it is the one that is free and indexed.** ⚠ **Round 3 is the cautionary
+> one: FIVE of its findings were defects MY OWN fix pass had introduced**, including a **factual** one — I
+> replaced "commentators have struggled to explain" with the settled *kun fa-yakun* reading, but *kun* is the
+> settled reading of ***kalima***, not of ***rūḥ min-hu***, and that paragraph is about the **Spirit**-title.
+> The other four were broken text: a duplicated sentence and the fragment *"it is what that Word yes"* in the
+> line a reader says **aloud**; a dangling colon making the Qur'anic honour-title read as "the Word became
+> flesh"; an orphan sentence restoring the forbidden word-match in the gracious close; a duplicated
+> prepositional phrase in a premise list. **Route the replacement wording through `apologia-citations` before
+> re-stamping** — the gate flagged its own *rūḥ* correction as a scholarship judgement it wanted checked.
+>
 > ⭐ **NEW TOOL — `tools/check-retired-claims.mjs` + `tools/retired-claims.json` (19 claims, CI-blocking).**
 > When a certified essay retires an argument, nothing used to stop it surviving elsewhere. Seeding the
 > registry with everything retired on 07-28/29 **immediately found two more live survivals** nobody had
