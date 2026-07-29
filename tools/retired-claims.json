@@ -297,7 +297,9 @@
         "the Messiah, the Word of God",
         "called the Word of God, the Spirit of God",
         "whom the Quran itself calls the Word of God",
-        "Quran itself calls the Word of God"
+        "Quran itself calls the Word of God",
+        "(Qur'?an|Quran)[^.<]{0,40}(calls|names|gives)[^.<]{0,25}(Jesus|him)[^.<]{0,25}the (Word|Spirit) of God",
+        "(calls|names|titles|gives)[^.<]{0,25}(Jesus|him|Christ)[^.<]{0,15}(Kalimatull[aā]h|Kalimat ?[Aa]ll[aā]h|Ruh ?[Aa]ll[aā]h)"
       ],
       "allow": [
         "library/islam-preservation.html"

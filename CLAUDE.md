@@ -462,6 +462,34 @@
 > - **Browser-verify:** the CSP; the nav mega-menu on desktop + mobile; SRI on the gated essays.
 > - Bring the nav mega-menu to the gated pages via a stamp pass.
 > - Two standing stamp-integrity flags: `evil.html` category-pull, `worldviews.html` SEO schema.
+> - ⚠ **`ev-s6.html` RUNS THE RETIRED LEXICAL BRIDGE and needs its own dual-consensus gate round.**
+>   Found 2026-07-29 by the widened `quranic-title-compounds` net, on a fragment stamped 2026-07-23.
+>   The compound error was corrected in place and a `kalima`≠`kalam` fence added, **but the argument
+>   after it was left alone**: it still runs "is God's Word eternal? If yes, then there has always
+>   existed an eternal, personal Word who is divine" straight off the Qur'an's Word-title for Jesus —
+>   the retired inference — and describes the Qur'an as "distinct from Allah yet divine," which is the
+>   Ash'ari formula shape the registry retires. Rewriting it properly means the structural reframing
+>   (see `library/islam-eternalword.html`), which is gated work, not a wording fix. **The file is now
+>   edited past its stamp, so it will show on `check-stamp-integrity.mjs` until that round runs.**
+> - **`library/islam-preservation.html:208`** still carries "Jesus, whom the Quran itself calls the
+>   Word of God" — the compound retired 2026-07-29. Corrected on `worldviews.html`; the essay it links
+>   to was not, because editing a separately-certified essay would leave it un-gated with no way to
+>   re-gate it in that scope. It is **allow-listed on record** in `tools/retired-claims.json`
+>   (`quranic-title-compounds`), which is file-scoped and therefore silences that whole claim on that
+>   file — **remove the allow as part of the neutrality pass already owed on that essay.**
+> - **`.wv-pro` on `worldviews.html` is NOT paywalled** — `toggleArg()` only opens/closes, there is no
+>   `isPro` check and no `display:none`, so every "The Case, Plainly" and "Pro — Deep Dive" tier is
+>   publicly served and indexed behind a decorative "Pro — launching soon" prompt. Either an
+>   undocumented product decision or a paywall defect; **owner call.** Until it is settled, gate those
+>   tiers at free-surface stakes (the 2026-07-29 rounds did).
+> - **Two citation debts on the Islam cards, deliberately kept OFF the page rather than published.**
+>   `apologia-citations` was 403'd by the egress policy on every primary source, so (a) al-Tabari's
+>   enumeration of readings for *ruh minhu* at 4:171 and (b) the Wahb b. Munabbih / Ibn Ishaq
+>   three-hours death report at 3:55 are **unverified and were not used** — the Spirit-title rests on
+>   `library/islam-jesus.html` instead. Also unpublished for the same reason: the **Surah 58:22**
+>   pre-emption (the only other occurrence of *ruhin minhu*, said of believers), which a reader may
+>   raise. A web-enabled session should verify all three; best single source is Neal Robinson,
+>   *Christ in Islam and Christianity* (SUNY 1991).
 >
 > **Content backlog** (full queue: `docs/content-backlog.md`)
 > - **Synoptic preexistence is a real gap (P2)** — the top find of the Tyndale batch; every
