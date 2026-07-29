@@ -65,6 +65,10 @@ export function isBoilerplateLine(line) {
   // a line that is ONLY a single anchor element = a nav / menu / footer / crumb
   // link, not doctrinal prose (inline prose links share their line with text).
   if (/^<a\b[^>]*>[^<]*<\/a>[,;]?$/.test(s)) return true;
+  // ...and the same thing wrapped in its own <p>: a "Read the quick answer ->"
+  // cross-link paragraph is navigation, not doctrine. Tight on purpose — a <p>
+  // carrying prose AND a link shares the line with text and still trips the flag.
+  if (/^<p\b[^>]*>\s*<a\b[^>]*>[^<]*<\/a>\s*<\/p>$/.test(s)) return true;
   if (isScriptPlumbing(s)) return true;
   return false;
 }

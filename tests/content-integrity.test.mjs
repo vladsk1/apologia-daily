@@ -179,6 +179,9 @@ test('stamp-integrity classifier: SEO/nav/script lines are boilerplate, doctrina
     '+<script src="/library/active-reading.js" defer></script>',
     '+  <script src="/library/orthonote.js" defer></script>',
     '+<li><a href="/x">Nav link</a></li>',
+    // a link-only <p>: the "Read the quick answer ->" cross-link. Removing one when
+    // an answer category was pulled flagged library/evil.html as a doctrinal edit.
+    '-  <p class="art-shortanswer" style="font-size:.92rem"><a href="/answers/x.html" style="color:#1e4278">Short on time? Read the quick answer &rarr;</a></p>',
     '+   ',
     '+  <!-- content-review: {"argument":"2026-07-25","orthodoxy":"2026-07-25","by":"x"} -->',
   ];
@@ -190,6 +193,9 @@ test('stamp-integrity classifier: SEO/nav/script lines are boilerplate, doctrina
     '-<p>Jesus only appeared to die on the cross.</p>',
     '+<script type="application/ld+json">{"@type":"FAQPage","mainEntity":[{"text":"the Son is God"}]}</script>',
     '+<h2>Why the resurrection is the best explanation</h2>',
+    // a <p> carrying prose AND a link must still trip the flag — the link-only
+    // exemption above is deliberately tight.
+    '+<p>The empty tomb is attested early; see <a href="/library/emptytomb.html">the deep dive</a>.</p>',
   ];
   for (const l of doctrinal) assert.equal(isBoilerplateLine(l), false, `should NOT be boilerplate: ${l}`);
 });
