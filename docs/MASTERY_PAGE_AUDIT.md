@@ -289,12 +289,28 @@ Ordered by risk. The page-specific findings are cleared; what remains is structu
 after the re-gate found the rebuild had reached only three of the page's nine parts.
 The table below is kept as the record of what was wrong. **One item is NOT closed:**
 
-> ⚠ **`ev-m-trinity_islam.html` still declares a "key move" that appears nowhere in
-> `library/trinity_islam.html`.** Grepping the essay for `kalima`, `kalam Allah`, `Mihna`,
-> `created or uncreated` and `equivocat` returns nothing. The mastery page is supposed to
-> compress a certified essay; here it compresses material the essay does not contain.
-> Either the essay gains it and is re-gated, or the page stops presenting it as the key
-> move. **This page goes first in front of the pastoral reviewer.**
+> ✅ **RESOLVED 2026-07-29 — and the original finding was wrong in an instructive way.**
+> The claim was that `ev-m-trinity_islam.html`'s key move "appears nowhere in its essay."
+> It appears nowhere in `library/trinity_islam.html` — but that is not the only essay on
+> the subject. **`library/islam-eternalword.html` is a certified 6,200-word deep dive whose
+> entire subject is this argument.** The finding was resolved against the mastery page's
+> canonical pairing and stopped there.
+>
+> Worse, the "fix" made things actively wrong. The page was edited to say *"Do not run the
+> 'is Allah's Word created or uncreated?' dilemma as a bridge to Jesus. It equivocates"* —
+> which forbade the site's own certified argument, and misdescribed it. The essay does not
+> equivocate: it names the lexical reading as *"the standard and best response,"* grants it
+> in terms, and answers the wordplay charge head-on — ***"the real point is not lexical; it
+> is structural."*** Its argument is that Sunni orthodoxy, settling the Mihna, **built the
+> very category** it tells Christians is incoherent.
+>
+> The page now distinguishes the two versions — *not lexically*, *structurally* — in the
+> key-move box, the routing line and the flashcard, and links to the right essay.
+>
+> **The lesson generalises beyond this page: resolve a "the essay doesn't say this" finding
+> against the SUBJECT, not against the canonical link.** A mastery page can legitimately
+> compress a sibling essay. Two review rounds and an audit entry treated a mis-pairing as a
+> doctrinal defect, and the correction nearly deleted a good argument.
 
 | Page | Why |
 |---|---|

@@ -49,11 +49,13 @@
 > is not yet the Triune God. (⚠ **Correction to the 2026-07-28 (e) entry:** `ev-m-kalam.html` was reported as
 > having the same gap. **It does not** — it says *"the argument concludes to a transcendent cause, not yet to
 > the full God of Christianity"* in its own honest-scope paragraph. The earlier grep was too narrow.)
-> ⚠ **KNOWN DEFECT IN A CI TOOL — do not trust `check-stamp-integrity.mjs` output as-is.** It currently
-> flags **59 gated essays** as edited-after-stamp, but **58 of them trace to one commit (`0747dca97`)** that
-> only changed a `fetch()` call to pass the essay body to the tutor. Non-doctrinal. The tool's boilerplate
-> filter does not recognise script-body changes, so its output is noise nobody will read — **and noise is
-> where a real flag will hide.** Fixing that filter is a small, high-value job for a code session.
+> ✅ **`check-stamp-integrity.mjs` FIXED (was 59 flags, now 1).** 58 traced to one commit (`0747dca97`)
+> that only widened a `fetch()` call. The fix classifies the **payload, not the location**: a line is
+> plumbing when it is recognisably JS *and* none of its string literals is a natural-language sentence.
+> ⚠ **Do NOT 'simplify' this by exempting script bodies** — `ARG_PREMISES`, `cards` and `checks` live
+> there and are the most doctrinal strings on the site. `ev-m-*` is now on that tool's watch list too,
+> and `tests/content-integrity.test.mjs` pins both directions (suite → **90**). The one surviving flag,
+> `library/evil.html`, is the genuine standing item.
 > ⚠⚠ **THE SECOND LESSON, AND IT IS THE MORE IMPORTANT ONE: a fix is not verified until an INDEPENDENT
 > lens reads the fixed text.** Four rounds of self-checking missed all of the following; the confirmation
 > pass caught them in one. (1) Three more **unpropagated** fixes, all in the memorised layer —
@@ -66,14 +68,25 @@
 > counter-example. The same error was then found on **`ev-m-john11.html`, the page every other page had
 > been corrected against**, and on `trinity_jw`. All three fixed. **Never let a fix pass be its own
 > verifier.**
-> **⚠ STILL OPEN after this:** the four Tier-1 pages were rebuilt (commit `54162c1`) but
-> **`ev-m-trinity_islam.html` still declares a "key move" that appears NOWHERE in
-> `library/trinity_islam.html`** — the essay must gain the material and be re-gated, or the mastery page
-> must stop presenting it as the key move. **Put that page first in front of the pastoral reviewer.**
-> Also still open: `pocket-cards.html` is **still unstamped and still outside `CONTENT_PATTERNS`** (both must
-> land in the same commit); the `evil.html` track-vs-essay mismatch is an **owner decision** (rescope the
-> track, or commission a second essay); and the "missing critics" gap (Oppy, Allison, Morriston, Singer,
-> Wielenberg and others named in the essays as the strongest living critics, absent from the pages).
+> ⚠⚠⚠ **THE THIRD LESSON — RESOLVE "THE ESSAY DOESN'T SAY THIS" AGAINST THE *SUBJECT*, NOT THE CANONICAL
+> LINK.** Two review rounds and an audit entry recorded that `ev-m-trinity_islam.html` declares a "key move"
+> appearing **nowhere in its essay**. True of `library/trinity_islam.html` — and completely wrong, because
+> **`library/islam-eternalword.html` is a certified 6,200-word deep dive whose ENTIRE SUBJECT is that
+> argument.** Nobody checked past the canonical pairing. The "fix" then made the site actively worse: the
+> page was edited to say *"Do not run the created-or-uncreated dilemma — it equivocates,"* which **forbade
+> our own certified argument and misdescribed it.** The essay does not equivocate — it names the lexical
+> reading as *"the standard and best response,"* grants it, and answers the wordplay charge in terms:
+> ***"the real point is not lexical; it is structural"*** — Sunni orthodoxy, settling the Mihna, **built the
+> very category** it tells Christians is incoherent. **A mastery page may legitimately compress a SIBLING
+> essay.** Now fixed: the page distinguishes *not lexically* from *structurally* in the key-move box, the
+> routing line and the flashcard, and links to the right essay.
+> **⚠ STILL OPEN after this:** `pocket-cards.html` is **still unstamped and still outside
+> `CONTENT_PATTERNS`** (both must land in the same commit); `ev-s7.html` + `ev-s7.mk.html` are the last two
+> files failing `--audit` (~4,400 words, never gated); the `evil.html` track-vs-essay mismatch is an
+> **owner decision** (rescope the track, or commission a second essay); and the "missing critics" gap (Oppy,
+> Allison, Morriston, Singer, Wielenberg and others named in the essays as the strongest living critics,
+> absent from the pages). **Pastoral sign-off is still owed on all 67** — `docs/STATEMENT_OF_FAITH.md` logs
+> the reviewer as `_pending_`.
 >
 > **LATEST — 2026-07-28 (d):** ⭐ **All 63 ungated mastery pages assessed — the pocket-card diagnosis, at ten
 > times the scale.** 16 reviews (argument ×63, orthodoxy ×63, neutrality ×15 on the dual-consensus tier);
