@@ -83,8 +83,11 @@
 > very category** it tells Christians is incoherent. **A mastery page may legitimately compress a SIBLING
 > essay.** Now fixed: the page distinguishes *not lexically* from *structurally* in the key-move box, the
 > routing line and the flashcard, and links to the right essay.
-> 🔴 **THE ONE THING LEFT, AND IT IS THE FREE PUBLICLY-INDEXED SURFACE: `worldviews.html` (Islam cards 4, 12,
-> 13, 14) IS NOT STAMPED.** Its stamp predates 2026-07-29 and **must not be bumped without a fresh
+> ✅ **CLOSED 2026-07-29 — `worldviews.html` IS NOW STAMPED** (dual consensus, 0 heresy, sixteen fix rounds;
+> full account in the stamp's own `by` note, method + what it cost in `docs/SWEEP_HANDOVER.md`). The original
+> entry is kept below because its diagnosis is the reason the sweep is ordered the way it is.
+> 🔴 **~~THE ONE THING LEFT, AND IT IS THE FREE PUBLICLY-INDEXED SURFACE: `worldviews.html` (Islam cards 4, 12,
+> 13, 14) IS NOT STAMPED.~~** Its stamp predates 2026-07-29 and **must not be bumped without a fresh
 > dual-consensus pass** (orthodoxy AND neutrality — deity/Trinity tier). Three gate rounds ran on it today and
 > **all three returned NOT STAMPABLE**; ~30 findings were applied, 0 heresy throughout. The essay
 > (`library/islam-eternalword.html`) and the mastery page are both certified and aligned — **this card layer is
@@ -455,6 +458,18 @@
 >
 > **Infrastructure / verification**
 > - **Run `docs/STUDY_GROUPS_DISPLAY_NAME_FIX.md`** (M4 anti-spoof trigger) in Supabase.
+> - ⭐ **SWEEP HANDOVER — [`docs/SWEEP_HANDOVER.md`](docs/SWEEP_HANDOVER.md) (2026-07-29).** Ordered
+>   queue for gating the Evidence Library and then the rest of the site, what a web-enabled session
+>   actually buys (every primary-source host 403s on egress policy — but `WebSearch` works, and the
+>   line that matters is *verification* vs *research*), the per-file-vs-batch method with the evidence
+>   for it, and the traps that cost time. **Start a sweep session there.**
+> - ⚠ **CORRECTION — `library/islam-eternalword.html` DOES NOT owe a neutrality pass.** Its stamp
+>   records `apologia-neutrality` running **three times on 2026-07-29**, NOT STAMPABLE twice before
+>   certifying (it caught the essay running the *kalām*/*kalima* equivocation its own Reply 3
+>   disclaims, and the Ash'arī formula silently upgraded from "neither He nor other than He" to
+>   "neither God nor other than God"). **But its `argument`/`orthodoxy` date fields still read
+>   `2026-07-14`** — the note was appended without bumping the dates. Fix when next opened, and take
+>   the general warning: a date field and a `by` note can disagree, and the tooling reads the dates.
 > - **6 source passages still `verified:false`** (creeds + Athanasius §54) — the clean hosts
 >   (CCEL/ANF/Wikisource) are network-blocked in the sandbox; needs a local/web-enabled session.
 >   (A 7th, a Chrysostom eucharist passage, was **removed** 2026-07-26 — see `docs/source-library-held.md`.)
