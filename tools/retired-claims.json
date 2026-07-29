@@ -27,7 +27,13 @@
         "the Logos structure",
         "hands the title to Jesus",
         "marks with that very vocabulary",
-        "maps precisely onto the Christian claim"
+        "maps precisely onto the Christian claim",
+        "calls Jesus Kalimatullah",
+        "same Quran calls Jesus God's Word",
+        "Quran agrees that Jesus is a",
+        "the very parallel the text invites",
+        "the title carries eternal weight for a book",
+        "disagreeing only about whether that Word"
       ],
       "allow": []
     },
@@ -263,6 +269,31 @@
       "patterns": [
         "1x1x1",
         "1 x 1 x 1"
+      ],
+      "allow": []
+    },
+    {
+      "id": "mihna-motive-christology",
+      "retired": "2026-07-29",
+      "what": "Claiming as documented history — especially on the authority of 'the standard histories' — that the Mu'tazila pushed the created-Quran doctrine because they feared an uncreated Quran would vindicate the Christian doctrine of the uncreated Christ.",
+      "why": "The standard scholarly explanations of why al-Ma'mun imposed the Mihna are political and authority-based. Nawas 1994 — cited in library/islam-eternalword.html's own footnotes — reviews three current explanations and none of them is Christological. The claim traces to a single think-tank commentary, which worldviews.html then cited in its own 'Go deeper' list. Selling it as scholarly consensus is exactly the overstated-consensus defect the neutrality gate exists to catch.",
+      "instead": "Give the Mu'tazila's worry internally, which is well attested: anything genuinely eternal is uncaused and self-subsistent, and those are marks of deity, so an eternal Word beside God looked to them like shirk dressed in scripture. Christian writers under Muslim rule pressed the same structure from the other side (John of Damascus, before the Mihna crystallised the doctrine). Add the caution that the standard accounts of al-Ma'mun's motive turn on caliphal religious authority, and that nothing in the argument rests on the polemical motive.",
+      "patterns": [
+        "vindicate the Christian doctrine of the uncreated Christ",
+        "standard histories of the Mihna"
+      ],
+      "allow": []
+    },
+    {
+      "id": "quranic-title-compounds",
+      "retired": "2026-07-29",
+      "what": "Presenting 'Kalimatullah' or 'Ruh Allah' / 'Ruh min Allah' as titles the Qur'an itself applies to Jesus.",
+      "why": "Surah 4:171 has kalimatuhu ('His word') and ruhun minhu ('a spirit from Him'); 3:45 has kalimatin minhu. The compounds are post-Quranic — Ruh Allah is pervasive in hadith, not in the Qur'an, and kalimat Allah at 9:40 is not about Jesus. A Muslim who knows the text corrects this in one line, which is the same failure mode as the NWT/John 1:18 error: a sentence that hands the other side an easy win inside our own argument.",
+      "instead": "Say the Qur'an calls Jesus 'a word from Him' and 'a spirit from Him', and where the traditional title is worth naming, say plainly that Ruh Allah is a title Islamic tradition later drew from the verse rather than Quranic wording.",
+      "patterns": [
+        "calls Jesus Kalimatullah",
+        "The title Ruh min Allah",
+        "title Kalimatullah . Word of God"
       ],
       "allow": []
     }
