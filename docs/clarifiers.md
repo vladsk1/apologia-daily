@@ -166,7 +166,7 @@ t that Muslims are insincere, that Christians worship three gods, or that the tw
 
 ## `library/islam-preservation.html`
 
-- **Phrase:** "Jesus, whom the Quran itself calls the Word of God" — _"Word of God" &mdash; a doorway, not an agreement_
+- **Phrase:** "Jesus, whom the Quran itself calls &ldquo;a word from Him&rdquo;" — _"Word of God" &mdash; a doorway, not an agreement_
   - ✅ **Is saying:** The Qur'an does apply the title "Word" (kalima) to Jesus (Surah 4:171) &mdash; a natural conversational bridge toward the person at the center of Christian hope.
   - ⛔ **Not saying:** Not that the Qur'an's sense of "Word" affirms Christ's deity, or that Islam and Christianity agree about who Jesus is. The two faiths mean very different things by the title.
 
@@ -334,7 +334,7 @@ t that Muslims are insincere, that Christians worship three gods, or that the tw
 - **Phrase:** "The true parallel is the Qur&rsquo;an and Christ" — _A comparison of place, not of status_
   - ✅ **Is saying:** Each faith locates its &ldquo;Word of God&rdquo; differently &mdash; Islam in a recited book, Christianity in a person &mdash; so the honest comparison is Qur&rsquo;an-to-Christ rather than Qur&rsquo;an-to-Bible. It is a point about where each tradition puts its central revelation.
   - ⛔ **Not saying:** Not that the Qur&rsquo;an actually is God&rsquo;s eternal, uncreated Word, and not that the two occupy the same standing before God. That is Islam&rsquo;s claim about its book, described here, not conceded. Only the Son is the eternal Word of God, and he is a divine person, not a text (John 1:1, 14).
-- **Phrase:** "his own tradition affirms one" — _The same question, not the same answer_
+- **Phrase:** "his own tradition, in its mainstream Sunni form, affirms one" — _The same question, not the same answer_
   - ✅ **Is saying:** Both traditions affirm that the one God has an eternal Word, and both deny that this makes two gods &mdash; so the objection that an eternal Word with God is unthinkable is one Islam&rsquo;s own theology does not sustain.
   - ⛔ **Not saying:** Not that Christians and Muslims worship the same God, that the two &ldquo;Words&rdquo; are the same reality, or that the faiths agree about who God is. Islam&rsquo;s eternal Word is an impersonal attribute of God&rsquo;s speech; the Christian Word is God &mdash; a divine person, begotten not made, who became flesh (John 1:1, 14).
 - **Phrase:** "a communion of self-giving love" — _A communion of love &mdash; one God, not a committee_

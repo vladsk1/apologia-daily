@@ -475,12 +475,11 @@
 > - ⚠ **`flashcards.html` carries NO `content-review` stamp and is outside `CONTENT_PATTERNS`** — the
 >   same hole as `pocket-cards.html`. It is the memorised layer and it was never gated. The stamp and
 >   the `CONTENT_PATTERNS` entry must land in the same commit, or CI fails on the missing stamp.
-> - **`library/islam-preservation.html:208`** still carries "Jesus, whom the Quran itself calls the
->   Word of God" — the compound retired 2026-07-29. Corrected on `worldviews.html`; the essay it links
->   to was not, because editing a separately-certified essay would leave it un-gated with no way to
->   re-gate it in that scope. It is **allow-listed on record** in `tools/retired-claims.json`
->   (`quranic-title-compounds`), which is file-scoped and therefore silences that whole claim on that
->   file — **remove the allow as part of the neutrality pass already owed on that essay.**
+> - **`library/islam-preservation.html` was edited 2026-07-29** (four words: "calls the Word of God" →
+>   "calls 'a word from Him'"), closing the last allow entry in `tools/retired-claims.json` rather than
+>   carrying it — a documented hole is still a hole. **`quranic-title-compounds` now has an EMPTY allow
+>   list and should keep one**: the guard exempts genuine refutations on merit, not by filename. The
+>   essay is now edited past its stamp, so it joins the neutrality pass already owed on it.
 > - **`.wv-pro` on `worldviews.html` is NOT paywalled** — `toggleArg()` only opens/closes, there is no
 >   `isPro` check and no `display:none`, so every "The Case, Plainly" and "Pro — Deep Dive" tier is
 >   publicly served and indexed behind a decorative "Pro — launching soon" prompt. Either an
