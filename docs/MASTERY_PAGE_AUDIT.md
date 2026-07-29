@@ -176,9 +176,51 @@ Chalcedon sentence on the 4 deity pages that lacked it.
 
 ---
 
+## Round 3 — the backlog cleared, 2026-07-28
+
+**Code (74 files).** The share-card fell back to `KALAM_PREMISES`, a variable only `ev-m-kalam.html`
+defines — guarded, so never a live crash, but a trap that fires the moment anyone renames
+`ARG_PREMISES`, which is now edited often (48 pages). A copy-paste artefact told every reader they
+were on "1 of 22" (19 pages). Apostrophes stripped from memorised flashcards — "Pauls own", "Daniel
+7s" — restored with proper escaping now the syntax test guards them (7 pages).
+
+**The four rebuild pages.** `trinity_islam` rebuilt from its essay: the Mihna/Eternal-Word dilemma
+is gone (it appears nowhere in the essay, and it equivocated *kalām Allāh* with *kalima*), and so
+are "distinct in some sense from the essence" and "a parallel construction of it, lacking only the
+personal language" — the two strings the orthodoxy gate said a stricter reviewer could call heresy.
+`evil` gained the evidential problem: Rowe, the fawn, Wykstra, CORNEA, and the essay's honest
+verdict that it is unresolved by either side. `messianic_prophecy` lost Daniel 9 as a pillar and
+gained Isaiah 53:9. `cambrian` completed.
+
+**Doctrinal backlog.** Evolution neutrality on `cambrian`/`originlife` (young-earth, old-earth and
+evolutionary-creation Christians confess the same creeds — the opposite of taking a side, so it
+stands whatever is decided about the science tab). "Martyr-bishop" of James → church government.
+"The Apocrypha" alone → both names. Libertarian free will asserted in our own voice on `leibniz`
+and `evil`. `religious`'s perennialist-sounding "common core". And a pastoral referral on `evil`,
+which passed every pastoral test but pointed nowhere for help.
+
+**Citations (12).** Kepler's and Galileo's paraphrases printed as quotations. Five scholars enlisted
+for conclusions they reject — Chalmers, Davies, Nagel, Lapide, Mettinger — the same shape as the
+Francis Collins problem on the pocket cards. Mettinger in particular is now cited as the conceding
+witness he actually is, which is worth more than an advocate. Ignatius's "seven times" and Sibcy's
+unpublished survey removed; Allison replaces Sibcy in the sources.
+
+**Factual (5).** bar Kokhba dated to Jesus' era (he is AD 132). Acts 5's Gamaliel speech cited as
+period data despite the Theudas crux. "470 genes" attributed to a free-living organism (473 is
+JCVI-syn3.0, synthetic). P52 dated flatly. And Pompeii offered as a parallel for silence — Pliny
+the Younger is a contemporary eyewitness who describes the eruption.
+
+**Calibration (19).** "Never once falsified", "every time" ×2, "fails every test", "provably",
+"unfakeable", "recognised across scholarship", "virtually all scholars", "demonstrably held",
+"a trial even sceptical scholars accept as bedrock", "eyewitnesses cannot be sincerely mistaken"
+×2, and the graded rubric's "the ONLY formulation that keeps all the data" — which the essay's own
+"Where the Argument Reaches Its Limit" section retires.
+
+---
+
 ## STILL OPEN — the work queue
 
-Nothing below is done. Ordered by risk.
+Ordered by risk. The page-specific findings are cleared; what remains is structural.
 
 ### Tier 1 — pages that need rebuilding, not editing
 
