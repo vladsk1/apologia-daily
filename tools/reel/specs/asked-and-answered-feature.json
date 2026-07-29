@@ -1,5 +1,9 @@
 {
-  "reviewed": {"argument": "", "orthodoxy": "", "by": "PENDING"},
+  "reviewed": {
+    "argument": "2026-07-29",
+    "orthodoxy": "2026-07-29",
+    "by": "apologia-orthodoxy CLEAN (0 HERESY, 0 DRIFT, 5 NOTE). ARGUMENT + CITATIONS COVERAGE IS INHERITED, NOT RE-RUN, and named as inherited: the only historical claims are Celsus/Origen, verified by apologia-citations 2026-07-29 on the sibling cut (Celsus c.177-181, Origen c.248, eight books mirroring Celsus's, ~70-90% of The True Word surviving only inside Contra Celsum -- 'most' is the only figure in that range a fact-checker cannot touch and must NOT be sharpened); and the CTA was written from the start to the constraint apologia-argument established, api/ask.js:222, which includes the origin ONLY when identifiable and claims genealogy not priority. Gate verified all four product promises against asked-and-answered.html and api/ask.js: paste/screenshot/ask all exist, 'clear answer in plain language' matches the prompt's own TONE rules, and the conditional origin line is the tightest of the four. ⚠ NO FUTURE EDIT OR POST CAPTION MAY ADD 'reviewed', 'verified', 'checked' or 'scholar-written' to this reel -- the page labels its output AI-generated and not individually reviewed, which is why the CTA says 'A clear answer', indefinite, and it must stay indefinite. ⚠ NO HONORIFIC MAY BE ADDED TO ORIGEN ('the Church Father', 'the great') -- he is credited for a documented literary act, not doctrinal authority, and Origenism was anathematised at Constantinople II. ⚠ DO NOT put the CONTENT of Celsus's charge on a card: this cut's quiet virtue is that no frame, screenshotted alone, shows a denial of the resurrection in our own brand typography -- the sibling cut needed three named strings to fence exactly that. ⚠ SHELF LIFE, sharper here than on the sibling because this cut is a four-item feature list: asked-and-answered.html:291 hardcodes isPro=true, so every promise is true for everyone today. Re-open this reel in the same commit that flips it. ⚠ CURATION, not a defect: this cut names neither Christ nor Scripture, and its persuasive weight rests on 'this faith has a long record of answering its critics' -- a structure equally available to other traditions. It passes because it never claims the pedigree proves the truth, and the honesty card refuses that inference. Do not make it the first-touch piece for a cold viewer, and do not let a trim remove 'Recording an objection is not the same as answering it well.' ⚠ PROPAGATION OWED: asked-and-answered.html:199 still promises a 'clear, REVIEWED answer' and 'the skeptic who raised it FIRST' -- the landing page a viewer hits straight after this reel."
+  },
   "aspect": "vertical",
   "theme": "navy",
   "fps": 30,
@@ -7,70 +11,316 @@
   "voiceover": "Saw an objection online? It has been asked before. For two thousand years the hard questions have been asked — and answered in writing. In the second century a philosopher named Celsus wrote a full-length attack on the Christian faith. Origen answered him, point by point, across eight books — and quoted him so fully that most of what Celsus wrote survives only inside the reply. Every generation brings its hardest question. In every generation someone answers it in writing. So here is what Asked and Answered does. Paste the tweet. Paste the screenshot. Or just ask the question in your own words. You get a clear answer, in plain language. When the objection has a name on it, you get the person who pressed it — often centuries before you saw it. And you get where to read further, if you want the long version. Recording an objection is not the same as answering it well. Both are on the record. Bring the objection you saw. You are not the first to ask.",
   "source": "asked-and-answered.html (the AI Q&A feature). Celsus/Origen verified 2026-07-29 by apologia-citations: Celsus c.177-181, Origen c.248, eight books mirroring Celsus's, ~70-90% of The True Word surviving only in Contra Celsum ('most' is the safe figure). CTA scoped to api/ask.js:222, which includes the origin ONLY when identifiable.",
   "scenes": [
-    { "dur": 5.0,
-      "big": [ {"t": "Saw an objection", "c": "cream", "s": 92}, {"t": "online?", "c": "cream", "s": 92} ],
-      "sub": [ {"t": "It has been asked before.", "c": "dim", "f": "serif", "s": 46} ] },
-
-    { "kicker": "THE LONG VIEW", "dur": 8.0, "lines": [
-      {"t": "For two thousand years", "c": "cream", "s": 56},
-      {"t": "the hard questions", "c": "cream", "s": 56},
-      {"t": "have been asked —", "c": "cream", "s": 56},
-      {"t": "", "s": 20},
-      {"t": "and answered in writing.", "c": "gold", "f": "serifb", "s": 62} ] },
-
-    { "kicker": "SECOND CENTURY", "dur": 9.0, "lines": [
-      {"t": "A philosopher named Celsus", "c": "cream", "s": 52},
-      {"t": "wrote a full-length attack", "c": "cream", "s": 52},
-      {"t": "on the Christian faith.", "c": "cream", "s": 52},
-      {"t": "", "s": 18},
-      {"t": "Origen answered him —", "c": "gold", "f": "serifb", "s": 58},
-      {"t": "point by point,", "c": "gold", "f": "serifb", "s": 58},
-      {"t": "across eight books.", "c": "gold", "f": "serifb", "s": 58} ] },
-
-    { "kicker": "AND KEPT THE OBJECTION", "dur": 8.5, "lines": [
-      {"t": "He quoted Celsus so fully", "c": "cream", "s": 52},
-      {"t": "that most of what Celsus wrote", "c": "cream", "s": 50},
-      {"t": "", "s": 18},
-      {"t": "survives only inside", "c": "gold", "f": "serifb", "s": 58},
-      {"t": "the reply that answers it.", "c": "gold", "f": "serifb", "s": 58} ] },
-
-    { "kicker": "THE PATTERN", "dur": 7.5, "lines": [
-      {"t": "Every generation brings", "c": "cream", "s": 54},
-      {"t": "its hardest question.", "c": "cream", "s": 54},
-      {"t": "", "s": 20},
-      {"t": "In every generation", "c": "gold", "f": "serifb", "s": 58},
-      {"t": "someone answers in writing.", "c": "gold", "f": "serifb", "s": 54} ] },
-
-    { "kicker": "SO HERE IS THE TOOL", "dur": 8.0, "lines": [
-      {"t": "Paste the tweet.", "c": "cream", "s": 60},
-      {"t": "Paste the screenshot.", "c": "cream", "s": 60},
-      {"t": "", "s": 20},
-      {"t": "Or just ask the question", "c": "gold", "f": "serifb", "s": 56},
-      {"t": "in your own words.", "c": "gold", "f": "serifb", "s": 56} ] },
-
-    { "kicker": "WHAT YOU GET", "dur": 9.5, "lines": [
-      {"t": "A clear answer,", "c": "gold", "f": "serifb", "s": 62},
-      {"t": "in plain language.", "c": "gold", "f": "serifb", "s": 62},
-      {"t": "", "s": 20},
-      {"t": "When the objection has", "c": "cream", "s": 50},
-      {"t": "a name on it — the person", "c": "cream", "s": 50},
-      {"t": "who pressed it, often centuries", "c": "cream", "s": 48},
-      {"t": "before you saw it.", "c": "cream", "s": 50} ] },
-
-    { "kicker": "AND WHERE TO GO NEXT", "dur": 6.5, "lines": [
-      {"t": "Plus where to read further,", "c": "cream", "s": 52},
-      {"t": "", "s": 18},
-      {"t": "if you want", "c": "gold", "f": "serifb", "s": 58},
-      {"t": "the long version.", "c": "gold", "f": "serifb", "s": 58} ] },
-
-    { "kicker": "HONESTLY", "dur": 8.0, "lines": [
-      {"t": "Recording an objection is not", "c": "cream", "s": 48},
-      {"t": "the same as answering it well.", "c": "cream", "s": 48},
-      {"t": "", "s": 20},
-      {"t": "Both are on the record.", "c": "gold", "f": "serifb", "s": 58} ] },
-
-    { "dur": 5.5,
-      "big": [ {"t": "You are not", "c": "cream", "s": 92}, {"t": "the first to ask.", "c": "gold", "s": 92} ],
-      "sub": [ {"t": "apologiadaily.com", "c": "dim", "f": "serif", "s": 48} ] }
+    {
+      "dur": 5.0,
+      "big": [
+        {
+          "t": "Saw an objection",
+          "c": "cream",
+          "s": 92
+        },
+        {
+          "t": "online?",
+          "c": "cream",
+          "s": 92
+        }
+      ],
+      "sub": [
+        {
+          "t": "It has been asked before.",
+          "c": "dim",
+          "f": "serif",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "kicker": "THE LONG VIEW",
+      "dur": 8.0,
+      "lines": [
+        {
+          "t": "For two thousand years",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "the hard questions",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "have been asked —",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "and answered in writing.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 62
+        }
+      ]
+    },
+    {
+      "kicker": "SECOND CENTURY",
+      "dur": 9.0,
+      "lines": [
+        {
+          "t": "A philosopher named Celsus",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "wrote a full-length attack",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "on the Christian faith.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "Origen answered him —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        },
+        {
+          "t": "point by point,",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        },
+        {
+          "t": "across eight books.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        }
+      ]
+    },
+    {
+      "kicker": "AND KEPT THE OBJECTION",
+      "dur": 8.5,
+      "lines": [
+        {
+          "t": "He quoted Celsus so fully",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "that most of what Celsus wrote",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "survives only inside",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        },
+        {
+          "t": "the reply that answers it.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        }
+      ]
+    },
+    {
+      "kicker": "THE PATTERN",
+      "dur": 7.5,
+      "lines": [
+        {
+          "t": "Every generation brings",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "its hardest question.",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "In every generation",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        },
+        {
+          "t": "someone answers in writing.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        }
+      ]
+    },
+    {
+      "kicker": "SO HERE IS THE TOOL",
+      "dur": 8.0,
+      "lines": [
+        {
+          "t": "Paste the tweet.",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "Paste the screenshot.",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "Or just ask the question",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        },
+        {
+          "t": "in your own words.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        }
+      ]
+    },
+    {
+      "kicker": "WHAT YOU GET",
+      "dur": 9.5,
+      "lines": [
+        {
+          "t": "A clear answer,",
+          "c": "gold",
+          "f": "serifb",
+          "s": 62
+        },
+        {
+          "t": "in plain language.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 62
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "When the objection has",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "a name on it — the person",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "who pressed it, often centuries",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "before you saw it.",
+          "c": "cream",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "kicker": "AND WHERE TO GO NEXT",
+      "dur": 6.5,
+      "lines": [
+        {
+          "t": "Plus where to read further,",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "if you want",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        },
+        {
+          "t": "the long version.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        }
+      ]
+    },
+    {
+      "kicker": "HONESTLY",
+      "dur": 8.0,
+      "lines": [
+        {
+          "t": "Recording an objection is not",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "the same as answering it well.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "Both are on the record.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        }
+      ]
+    },
+    {
+      "dur": 5.5,
+      "big": [
+        {
+          "t": "You are not",
+          "c": "cream",
+          "s": 92
+        },
+        {
+          "t": "the first to ask.",
+          "c": "gold",
+          "s": 92
+        }
+      ],
+      "sub": [
+        {
+          "t": "apologiadaily.com",
+          "c": "dim",
+          "f": "serif",
+          "s": 48
+        }
+      ]
+    }
   ]
 }
