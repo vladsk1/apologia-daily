@@ -39,6 +39,7 @@ const WARN_ONLY = process.argv.includes('--warn');
 const PATTERNS = [
   /^library\/(?!index\.html$).+\.html$/,
   /^ev-s\d[a-z0-9.]*\.html$/,
+  /^ev-m-.+\.html$/,
   /^worldviews\.html$/,
   /^api\/ask\.js$/,
 ];
@@ -64,7 +65,54 @@ export function isBoilerplateLine(line) {
   // a line that is ONLY a single anchor element = a nav / menu / footer / crumb
   // link, not doctrinal prose (inline prose links share their line with text).
   if (/^<a\b[^>]*>[^<]*<\/a>[,;]?$/.test(s)) return true;
+  if (isScriptPlumbing(s)) return true;
   return false;
+}
+
+/* ── JS PLUMBING vs DOCTRINE INSIDE AN INLINE <script> ──────────────────────
+ *
+ * WHY THIS EXISTS. Until 2026-07-29 any changed line inside an inline script
+ * counted as doctrinal, so ONE commit (0747dca97 — which only widened a
+ * fetch() call to pass the essay body to the tutor) flagged 58 essays at once.
+ * The report became 59 entries of noise that nobody reads, and noise is where
+ * a real flag hides.
+ *
+ * WHY NOT JUST EXEMPT SCRIPT BODIES. Because the highest-stakes doctrinal
+ * strings on the site live in them. Every mastery page carries ARG_PREMISES
+ * (POSTed to /api/tutor as the rubric a reader is GRADED against, and printed
+ * into a share-card PNG), a `cards` flashcard deck built for memorisation, and
+ * the mock-scorer `checks` miss-text. The 2026-07-29 re-gate found that almost
+ * every surviving defect lived in exactly those arrays. Exempting script
+ * bodies would blind this tool to the layer it most needs to watch.
+ *
+ * SO CLASSIFY THE PAYLOAD, NOT THE LOCATION. A line is plumbing when it is
+ * recognisably JavaScript AND none of its string literals carries a
+ * natural-language sentence. Selectors, URLs, MIME types, header names and
+ * short labels are not sentences; a premise, a flashcard answer or a miss-text
+ * is. Ties go to flagging, per the file's standing bias. */
+const JS_SHAPE = /\b(import|export|require|document|window|localStorage|sessionStorage|JSON|fetch|await|function|return|var|const|let|querySelector|getElementById|addEventListener|classList|textContent|innerHTML)\b|=>|\)\s*;\s*$/;
+
+function stringLiterals(s) {
+  const out = [];
+  const re = /(['"`])((?:\\.|(?!\1)[^\\])*)\1/g;
+  let m;
+  while ((m = re.exec(s))) out.push(m[2]);
+  return out;
+}
+
+/* A sentence, for this purpose: three or more words and long enough to carry a
+ * claim. Deliberately generous — 'Evidence Library' (2 words) and '/api/tutor'
+ * are not claims; 'the Word was God as to essence' is. */
+function looksLikeProse(lit) {
+  if (lit.length < 18) return false;
+  if (/^(https?:|\/|\.|#)/.test(lit)) return false;        // URL, path, selector
+  if (/^[\w-]+\/[\w-]+$/.test(lit)) return false;           // MIME type
+  return lit.trim().split(/\s+/).length >= 3;
+}
+
+export function isScriptPlumbing(s) {
+  if (!JS_SHAPE.test(s)) return false;
+  return !stringLiterals(s).some(looksLikeProse);
 }
 
 function sh(cmd) {
@@ -74,7 +122,7 @@ function sh(cmd) {
 
 function gatedFiles() {
   const set = new Set();
-  for (const g of ['*.html', 'library/**/*.html', 'ev-s*.html', 'worldviews.html', 'api/ask.js']) {
+  for (const g of ['*.html', 'library/**/*.html', 'ev-s*.html', 'ev-m-*.html', 'worldviews.html', 'api/ask.js']) {
     for (const f of globSync(g)) if (isGated(f)) set.add(f);
   }
   return [...set].sort();

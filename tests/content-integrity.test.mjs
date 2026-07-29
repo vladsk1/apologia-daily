@@ -194,6 +194,40 @@ test('stamp-integrity classifier: SEO/nav/script lines are boilerplate, doctrina
   for (const l of doctrinal) assert.equal(isBoilerplateLine(l), false, `should NOT be boilerplate: ${l}`);
 });
 
+/* The script-body half of the same classifier, added 2026-07-29.
+ *
+ * Before this, ANY changed line inside an inline <script> counted as doctrinal,
+ * so one commit (0747dca97 — widening a fetch() call to pass the essay body to
+ * the tutor) flagged 58 essays at once and the report became noise nobody read.
+ *
+ * The fix must not overshoot in the other direction. The most doctrinal strings
+ * on the site live in script bodies: ARG_PREMISES is POSTed to /api/tutor as the
+ * rubric a reader is GRADED against and printed into a share-card PNG; `cards`
+ * is built for memorisation; the mock-scorer `checks` miss-text tells a reader
+ * what to say. The 2026-07-29 re-gate found almost every surviving defect in
+ * exactly those arrays. So this test pins BOTH directions: plumbing is ignored,
+ * doctrine in the same <script> block is still flagged. */
+test('stamp-integrity classifier: JS plumbing is boilerplate, doctrine inside a <script> is not', () => {
+  const plumbing = [
+    // the literal line from 0747dca97 that produced 58 false flags
+    "+    var _ab=document.querySelector('.art-body')||document.querySelector('main.art');var _ex=_ab?(_ab.innerText||_ab.textContent||'').replace(/\\s+/g,' ').trim().slice(0,16000):'';var r=await fetch('/api/tutor',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,argument:AD_ARG,category:'Evidence Library',excerpt:_ex})});",
+    "+  var fc = document.querySelector('.flashwrap') || document.getElementById('flash') || null;",
+    "+  document.getElementById('flash').classList.remove('flipped');",
+    "+    const ARG_ID = location.pathname.split('/').pop().replace('ev-m-','').replace('.html','');",
+  ];
+  for (const l of plumbing) assert.equal(isBoilerplateLine(l), true, `should be plumbing: ${l.slice(0, 70)}…`);
+
+  const doctrineInScript = [
+    // ARG_PREMISES — the grading rubric and the share-card text
+    "+  'The Watchtower teaches Jesus is Michael - Jehovahs first creation - resting on the NWTs John 1:1.',",
+    // a flashcard answer — the memorised layer
+    "+  {q:'Run the worship test.', a:'Rev 22:9 - an angel REFUSES worship: worship God. Heb 1:6 - all Gods angels worship the SON.'},",
+    // mock-scorer miss text — what the reader is coached to say
+    "+    {ok:/(worship|thomas)/i.test(t), hit:'You ran the worship test', miss:'Run worship - angels refuse it, the Son receives it'},",
+  ];
+  for (const l of doctrineInScript) assert.equal(isBoilerplateLine(l), false, `should stay flaggable: ${l.slice(0, 70)}…`);
+});
+
 test("What's New feed is generated, in sync, and every link resolves", () => {
   // The feed was hand-maintained and went six weeks stale on five entries from
   // 2026-06-15 while ~100 answers and dozens of essays shipped — on a page linked
