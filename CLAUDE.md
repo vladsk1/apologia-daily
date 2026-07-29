@@ -69,7 +69,10 @@
 > been corrected against**, and on `trinity_jw`. All three fixed. **Never let a fix pass be its own
 > verifier.**
 > ⚠⚠⚠ **THE THIRD LESSON — RESOLVE "THE ESSAY DOESN'T SAY THIS" AGAINST THE *SUBJECT*, NOT THE CANONICAL
-> LINK.** Two review rounds and an audit entry recorded that `ev-m-trinity_islam.html` declares a "key move"
+> LINK.** *(Closed 2026-07-29. `ev-m-trinity_islam.html` is re-gated by both lenses and re-stamped; the
+> lexical bridge is gone from every served surface. The one thing still owed is a **neutrality pass on
+> `library/islam-eternalword.html`** — stamped argument+orthodoxy only, never red-teamed, and now
+> load-bearing because the mastery page routes to it as the authority for its key move. **Start there.**)* Two review rounds and an audit entry recorded that `ev-m-trinity_islam.html` declares a "key move"
 > appearing **nowhere in its essay**. True of `library/trinity_islam.html` — and completely wrong, because
 > **`library/islam-eternalword.html` is a certified 6,200-word deep dive whose ENTIRE SUBJECT is that
 > argument.** Nobody checked past the canonical pairing. The "fix" then made the site actively worse: the
@@ -80,6 +83,14 @@
 > very category** it tells Christians is incoherent. **A mastery page may legitimately compress a SIBLING
 > essay.** Now fixed: the page distinguishes *not lexically* from *structurally* in the key-move box, the
 > routing line and the flashcard, and links to the right essay.
+> ⚠⚠⚠ **THE FOURTH LESSON, AND IT IS THE ONE THAT KEEPS COSTING MONEY: THE FIX MUST REACH THE GAME AND QUIZ
+> LAYER TOO.** Fixing the essay and the mastery page was not enough. **`daily-mix.html` was running the
+> retired lexical bridge as the GRADED CORRECT ANSWER** — including *"the Logos structure"* and *"something
+> eternal and divine yet distinguishable exists with Allah,"* the Arian-direction phrasing the orthodoxy gate
+> called the nearest thing to a deploy-blocker in its batch. A reader was **marked wrong for not reciting
+> it.** When you retire an argument, grep every served surface — `daily-mix`, `daily-quiz`, `speed-round`,
+> `who-said-it`, `challenge`, `objection-deck`, `palace`, `pocket-cards`, `objections.json`, `worldviews` —
+> **not just the essay and its mastery page.** Most of those are still ungated (`docs/GATE_COVERAGE.md` P2).
 > **⚠ STILL OPEN after this:** `pocket-cards.html` is **still unstamped and still outside
 > `CONTENT_PATTERNS`** (both must land in the same commit); `ev-s7.html` + `ev-s7.mk.html` are the last two
 > files failing `--audit` (~4,400 words, never gated); the `evil.html` track-vs-essay mismatch is an

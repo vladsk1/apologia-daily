@@ -279,6 +279,43 @@ honest-scope paragraph. The earlier grep pattern was too narrow.
 
 ---
 
+## Round 5 — the Islam realignment, 2026-07-29
+
+`ev-m-trinity_islam.html` re-gated by **both** lenses and re-stamped. Both returned NOT
+STAMPABLE on the first pass, independently, with the same diagnosis: **the thesis is right,
+the failure was propagation.** Findings applied in `ec7b6e7`, `4c4dc93`, `1c9812e`.
+
+**The sequence is worth reading as a case study**, because every step of it was a correct
+process producing a wrong result until the next lens ran:
+
+1. The audit found the page's key move "appears nowhere in its essay." True of the
+   canonical pairing — and nobody looked further. `library/islam-eternalword.html` is a
+   certified 6,200-word deep dive whose *entire subject* is that argument.
+2. Acting on that, I edited the page to forbid the argument outright. That made the site
+   contradict itself worse, not better: it now told readers not to use a case it publishes
+   an essay-length certified defence of, and described that case as an equivocation the
+   essay explicitly refuses to commit.
+3. The realignment fixed the key-move box and one flashcard — and left the unqualified
+   prohibition standing in the objection reply and flashcard 4. Both gates caught it.
+4. Fixing the page and the essay still wasn't enough. **`daily-mix.html` was running the
+   retired lexical bridge as the graded correct answer**, with "the Logos structure" and
+   the Arian-direction phrasing intact. A reader was marked *wrong* for not reciting it.
+
+**Four rounds of correction, each one incomplete in the same way.** The layer that keeps
+being missed is always the one nobody reads as prose: `ARG_PREMISES`, `cards`, `checks`,
+model answers — and now the games.
+
+Also fixed: `library/islam-eternalword.html`'s own FAQ and JSON-LD still printed "a real
+intellectual accomplishment" **after its own stamp records that phrase was removed as
+unearned praise.** Same disease, in the rich-result copy Google surfaces.
+
+⚠ **STILL OWED: a neutrality pass on `library/islam-eternalword.html`.** Stamped
+argument + orthodoxy only, never red-teamed, dual-consensus tier — and now load-bearing,
+because the mastery page routes readers to it as the authority for its key move. **This is
+the first job of the next session.**
+
+---
+
 ## STILL OPEN — the work queue
 
 Ordered by risk. The page-specific findings are cleared; what remains is structural.
