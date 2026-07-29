@@ -32,7 +32,8 @@
           "s": 46
         }
       ],
-      "dur": 5.5
+      "dur": 5.5,
+      "lines": null
     },
     {
       "lines": [
@@ -62,7 +63,8 @@
           "s": 62
         }
       ],
-      "dur": 8.5
+      "dur": 8.5,
+      "kicker": "THE LONG VIEW"
     },
     {
       "lines": [
@@ -110,7 +112,8 @@
           "s": 34
         }
       ],
-      "dur": 14.5
+      "dur": 14.5,
+      "kicker": "MATTHEW 28 — THE COUNTER-STORY"
     },
     {
       "lines": [
@@ -141,7 +144,8 @@
           "s": 60
         }
       ],
-      "dur": 8.5
+      "dur": 8.5,
+      "kicker": "READ IT AGAIN"
     },
     {
       "lines": [
@@ -183,16 +187,11 @@
           "s": 34
         }
       ],
-      "dur": 18.5
+      "dur": 18.5,
+      "kicker": "MATTHEW 28:15"
     },
     {
       "lines": [
-        {
-          "t": "AROUND AD 150",
-          "c": "dim",
-          "f": "serif",
-          "s": 36
-        },
         {
           "t": "Justin Martyr records",
           "c": "cream",
@@ -220,16 +219,11 @@
           "s": 54
         }
       ],
-      "dur": 10.5
+      "dur": 9.0,
+      "kicker": "AROUND AD 150"
     },
     {
       "lines": [
-        {
-          "t": "AROUND AD 248",
-          "c": "dim",
-          "f": "serif",
-          "s": 36
-        },
         {
           "t": "Origen answers",
           "c": "cream",
@@ -257,7 +251,8 @@
           "s": 62
         }
       ],
-      "dur": 8.0
+      "dur": 6.5,
+      "kicker": "AROUND AD 248"
     },
     {
       "lines": [
@@ -292,7 +287,8 @@
           "s": 54
         }
       ],
-      "dur": 12.5
+      "dur": 12.5,
+      "kicker": "TWENTY CENTURIES"
     },
     {
       "lines": [
@@ -327,7 +323,8 @@
           "s": 56
         }
       ],
-      "dur": 13.0
+      "dur": 13.0,
+      "kicker": "ASKED & ANSWERED"
     },
     {
       "big": [
@@ -350,7 +347,8 @@
           "s": 48
         }
       ],
-      "dur": 3.5
+      "dur": 3.5,
+      "lines": null
     }
   ]
 }
