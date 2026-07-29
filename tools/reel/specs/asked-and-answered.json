@@ -1,83 +1,85 @@
 {
   "reviewed": {
-    "argument": "2026-07-29",
-    "orthodoxy": "2026-07-29",
-    "by": "apologia-citations + apologia-argument + apologia-orthodoxy (x4). CLEAN: 0 HERESY, 0 DRIFT, 0 NOTE outstanding. FIVE fix rounds -- each gate found what the previous three had passed, and TWICE the fix pass produced the next round's finding. CITATIONS (4 errors, 5 checks): the Matthew 28:13 quotation was a PARAPHRASE printed inside quotation marks -- no translation reads 'stole the body'; the ESV is 'came by night and stole him away while we were asleep', and the clause that had been cut is the strongest beat available. 'Justin Martyr is still ANSWERING it' was false -- Dialogue with Trypho 108 REPORTS the charge and does not rebut it there, which our own footnote says. 'A century later' failed against the site's own gated dating of Matthew. And 'cited' was dropped: the answers layer has NO citation apparatus and the site reserves that word for essays. ARGUMENT (1 BREAK): 'this faith has never needed the question not to be asked' is a universal negative falsified by the Index, Galileo and Tyndale, AND a denominational trap -- every crisp counter-example is a Roman Catholic institutional act. It took THREE attempts to scope; the second ('nobody ever had to hide the question') was MORE exposed, not less. Also cut: a 'sleeping men' beat that rested the reel's only evidential punch on the guard narrative our own essay concedes critics reasonably question, and that undercut the honesty beat one scene later. 'It has an answer' -> 'Here is our answer', because the blanket promise contradicts our certified position on suffering. ORTHODOXY (3 DRIFT + 2 clarifier-wording): a hedge restored in the voiceover and punctuated into a non-restrictive ASIDE on screen, so the essay's concession survived in the audio and died on the layer that gets screenshotted; an argument-gate fix that had landed in the voiceover ONLY; the Matthew quote sitting in the site's own affirmation typography, now fenced by the kicker 'MATTHEW 28 - THE COUNTER-STORY' so no frame can be lifted as us asserting the theft; and an unmoored 'they' across a crossfade. RENDER BLOCKER caught by the gate and verified empirically: gen_reel.py does no HTML unescaping, so this spec's entities printed literally -- frame 1 read 'Asked &amp; Answered'. This was the only spec in specs/ using entities. POSITIVE-CASE ONLY per house rule and owner direction: the objection is never voiced AS an objection, only as something Christians themselves recorded and answered. NOT COVERED: the reel makes no resurrection-evidence claim -- it stops at what the polemic said and never steps to 'therefore he rose'. SOURCE DIVERGENCE FOR THE SWEEP: this reel and library/prophecy.html date Justin's Dialogue 'around AD 160'; library/emptytomb.html:153 says 'around 150'. Both sit inside c. 155-167 and nothing turns on the ten years, so it does not block -- but harmonise TOWARD emptytomb.html:153, which is the footnoted claim in the essay that owns this argument."
+    "argument": "",
+    "orthodoxy": "",
+    "by": "PENDING — RESCOPED 2026-07-29 to the Asked & Answered AI feature; the prior certification covered a version aimed at the wrong product"
   },
   "aspect": "vertical",
   "theme": "navy",
   "fps": 30,
   "crossfade": 0.6,
-  "voiceover": "You are not the first person to ask. The hardest question you have about the Christian faith is almost certainly older than you think. Open Matthew's Gospel, chapter 28, and the earliest answer his opponents gave on record is already written down — his disciples came by night and stole him away while we were asleep. Read it again. They did not say the grave was full. They said someone had emptied it. And the church did not bury that. It wrote it down. Around AD 160 Justin Martyr names the same charge, still in circulation, generations later. Around 248 Origen answers the philosopher Celsus — who had written seventy years earlier — point by point, in writing. Twenty centuries, and the pattern never changes. Every generation brings its hardest question. Every generation answers it in writing. That charge was never hidden. It is printed in Matthew's own Gospel. That is what Asked and Answered is: a hundred and two questions, answered plainly, and every one carries the dated record of the reviews it passed. Bring the question you have been carrying. It has been asked before. Here is our answer.",
-  "source": "answers/ (Asked & Answered, 102 questions); anchors resolved against library/emptytomb.html:151-153 + fn 204, ev-s2.html:160-162, editorial-standards.html:117 | Justin dating: this spec follows library/prophecy.html ('c. AD 160'); library/emptytomb.html:153 says 'around 150' -- harmonise toward emptytomb, it carries the footnote.",
+  "voiceover": "Saw an objection online? It has been asked before. For two thousand years the hard questions have been asked — and answered in writing. Open Matthew's Gospel, chapter twenty-eight. The earliest response Jesus' opponents left on record is already there: his disciples came by night and stole him away while we were asleep. Read it again. His opponents did not say the grave was full. They said someone had emptied it. And the church did not bury the charge. It wrote it down, and noted the charge was still being told — this story has been spread among the Jews to this day. Around AD 150, Justin Martyr records the same charge inside a long, public dialogue with a Jewish teacher — preserving the objection rather than omitting it. Around 248, Origen answers the philosopher Celsus point by point, across eight books. Twenty centuries, and in every generation someone answers in writing. Recording an objection is not the same as answering it well. Both are on the record. So bring the objection you saw. You will get the answer — and the skeptic who raised it first, often centuries ago.",
+  "source": "asked-and-answered.html (the AI Q&A feature -- NOT the 102 /answers/ pages). Historical anchors resolved against library/emptytomb.html:151-153 + fn 204 and ev-s2.html:160-162. Justin dated 'around AD 150' per emptytomb.html:153, which carries the footnote.",
   "scenes": [
     {
-      "dur": 6.0,
       "big": [
         {
-          "t": "You are not",
+          "t": "Saw an objection",
           "c": "cream",
-          "s": 106
+          "s": 92
         },
         {
-          "t": "the first to ask.",
-          "c": "gold",
-          "s": 106
+          "t": "online?",
+          "c": "cream",
+          "s": 92
         }
       ],
       "sub": [
         {
-          "t": "Asked & Answered",
+          "t": "It has been asked before.",
           "c": "dim",
           "f": "serif",
-          "s": 44
+          "s": 46
         }
-      ]
+      ],
+      "dur": 5.5
     },
     {
-      "kicker": "THE QUESTION YOU'RE CARRYING",
-      "dur": 7.5,
       "lines": [
         {
-          "t": "The hardest question",
+          "t": "For two thousand years",
           "c": "cream",
-          "s": 62
+          "s": 56
         },
         {
-          "t": "you have about the faith",
+          "t": "the hard questions",
           "c": "cream",
-          "s": 62
+          "s": 56
+        },
+        {
+          "t": "have been asked —",
+          "c": "cream",
+          "s": 56
         },
         {
           "t": "",
-          "s": 22
+          "s": 20
         },
         {
-          "t": "is older than you think.",
+          "t": "and answered in writing.",
           "c": "gold",
           "f": "serifb",
-          "s": 68
+          "s": 62
         }
-      ]
+      ],
+      "dur": 8.5
     },
     {
-      "kicker": "MATTHEW 28 — THE COUNTER-STORY",
-      "dur": 14.0,
       "lines": [
         {
-          "t": "The earliest answer",
+          "t": "The earliest response",
           "c": "cream",
-          "s": 56
+          "s": 54
         },
         {
-          "t": "his opponents gave on record,",
+          "t": "his opponents left on record",
           "c": "cream",
-          "s": 52
+          "s": 50
         },
         {
-          "t": "written in the Gospel itself:",
+          "t": "is already there:",
           "c": "cream",
-          "s": 56
+          "s": 54
         },
         {
           "t": "",
@@ -87,128 +89,130 @@
           "t": "“His disciples came by night",
           "c": "gold",
           "f": "serifb",
-          "s": 50
+          "s": 48
         },
         {
           "t": "and stole him away",
           "c": "gold",
           "f": "serifb",
-          "s": 50
+          "s": 48
         },
         {
           "t": "while we were asleep.”",
           "c": "gold",
           "f": "serifb",
-          "s": 50
+          "s": 48
         }
-      ]
+      ],
+      "dur": 13.0
     },
     {
-      "kicker": "READ IT AGAIN",
-      "dur": 8.5,
       "lines": [
         {
           "t": "His opponents did not say",
           "c": "cream",
-          "s": 54
+          "s": 52
         },
         {
           "t": "the grave was full.",
           "c": "cream",
-          "s": 58
-        },
-        {
-          "t": "",
-          "s": 22
-        },
-        {
-          "t": "They said someone",
-          "c": "gold",
-          "f": "serifb",
-          "s": 62
-        },
-        {
-          "t": "had emptied it.",
-          "c": "gold",
-          "f": "serifb",
-          "s": 62
-        }
-      ]
-    },
-    {
-      "kicker": "THEY DIDN'T HIDE IT",
-      "dur": 6.5,
-      "lines": [
-        {
-          "t": "The church did not",
-          "c": "cream",
-          "s": 62
-        },
-        {
-          "t": "bury that objection.",
-          "c": "cream",
-          "s": 62
-        },
-        {
-          "t": "",
-          "s": 22
-        },
-        {
-          "t": "It wrote it down.",
-          "c": "gold",
-          "f": "serifb",
-          "s": 76
-        }
-      ]
-    },
-    {
-      "kicker": "AROUND AD 160",
-      "dur": 7.0,
-      "lines": [
-        {
-          "t": "Justin Martyr names",
-          "c": "cream",
-          "s": 58
-        },
-        {
-          "t": "the same charge —",
-          "c": "cream",
-          "s": 58
+          "s": 56
         },
         {
           "t": "",
           "s": 20
         },
         {
-          "t": "still in circulation,",
+          "t": "They said someone",
           "c": "gold",
           "f": "serifb",
-          "s": 58
+          "s": 60
         },
         {
-          "t": "generations later.",
+          "t": "had emptied it.",
           "c": "gold",
           "f": "serifb",
-          "s": 58
+          "s": 60
         }
-      ]
+      ],
+      "dur": 8.5
     },
     {
-      "kicker": "AROUND AD 248",
-      "dur": 9.0,
       "lines": [
         {
-          "t": "Origen answers Celsus,",
+          "t": "And the church did not bury the charge.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "It wrote it down — and noted",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "the charge was still being told:",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "“spread among the Jews",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "to this day.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ],
+      "dur": 15.0
+    },
+    {
+      "lines": [
+        {
+          "t": "Justin Martyr records",
           "c": "cream",
           "s": 56
         },
         {
-          "t": "a philosopher who wrote",
+          "t": "the same charge —",
           "c": "cream",
           "s": 56
         },
         {
-          "t": "seventy years earlier —",
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "inside a long, public dialogue",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        },
+        {
+          "t": "with a Jewish teacher.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        }
+      ],
+      "dur": 9.0
+    },
+    {
+      "lines": [
+        {
+          "t": "Origen answers",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "the philosopher Celsus",
           "c": "cream",
           "s": 56
         },
@@ -220,128 +224,94 @@
           "t": "point by point,",
           "c": "gold",
           "f": "serifb",
-          "s": 64
+          "s": 62
         },
         {
-          "t": "in writing.",
+          "t": "across eight books.",
           "c": "gold",
           "f": "serifb",
-          "s": 64
+          "s": 62
         }
-      ]
+      ],
+      "dur": 6.5
     },
     {
-      "kicker": "TWENTY CENTURIES",
-      "dur": 6.5,
       "lines": [
         {
-          "t": "Every generation brings",
+          "t": "In every generation,",
           "c": "cream",
           "s": 56
         },
         {
-          "t": "its hardest question.",
+          "t": "someone answers in writing.",
           "c": "cream",
-          "s": 56
+          "s": 54
         },
         {
           "t": "",
-          "s": 22
+          "s": 20
         },
         {
-          "t": "Every generation",
-          "c": "gold",
-          "f": "serifb",
-          "s": 60
+          "t": "Recording an objection is not",
+          "c": "cream",
+          "s": 48
         },
         {
-          "t": "answers in writing.",
+          "t": "the same as answering it well.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "Both are on the record.",
           "c": "gold",
           "f": "serifb",
-          "s": 60
+          "s": 54
         }
-      ]
+      ],
+      "dur": 12.5
     },
     {
-      "kicker": "STILL ON THE PAGE",
-      "dur": 7.0,
       "lines": [
         {
-          "t": "That charge",
+          "t": "Bring the objection you saw.",
           "c": "cream",
-          "s": 64
-        },
-        {
-          "t": "was never hidden.",
-          "c": "cream",
-          "s": 64
-        },
-        {
-          "t": "",
-          "s": 22
-        },
-        {
-          "t": "It is printed",
-          "c": "gold",
-          "f": "serifb",
-          "s": 64
-        },
-        {
-          "t": "in Matthew's own Gospel.",
-          "c": "gold",
-          "f": "serifb",
-          "s": 58
-        }
-      ]
-    },
-    {
-      "kicker": "ASKED & ANSWERED",
-      "dur": 9.0,
-      "lines": [
-        {
-          "t": "102 questions.",
-          "c": "gold",
-          "f": "serifb",
-          "s": 74
+          "s": 52
         },
         {
           "t": "",
           "s": 18
         },
         {
-          "t": "Answered plainly.",
+          "t": "You get the answer —",
           "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "and the skeptic who",
+          "c": "gold",
+          "f": "serifb",
           "s": 56
         },
         {
-          "t": "Every one reviewed",
-          "c": "cream",
+          "t": "raised it first.",
+          "c": "gold",
+          "f": "serifb",
           "s": 56
-        },
-        {
-          "t": "for orthodoxy — with the",
-          "c": "cream",
-          "s": 52
-        },
-        {
-          "t": "date on the record.",
-          "c": "cream",
-          "s": 52
         }
-      ]
+      ],
+      "dur": 9.5
     },
     {
-      "dur": 3.5,
       "big": [
         {
-          "t": "Bring your",
+          "t": "Often centuries",
           "c": "cream",
-          "s": 100
+          "s": 86
         },
         {
-          "t": "question.",
+          "t": "ago.",
           "c": "gold",
-          "s": 100
+          "s": 86
         }
       ],
       "sub": [
@@ -351,7 +321,8 @@
           "f": "serif",
           "s": 48
         }
-      ]
+      ],
+      "dur": 3.5
     }
   ]
 }
