@@ -322,11 +322,11 @@
 - **Phrase:** "Jesus, to whom the Quran itself gives a Word-title" — _&ldquo;The Word of God&rdquo; in two faiths_
   - ✅ **Is saying:** The Qur&rsquo;an gives Jesus the title kalima &mdash; &ldquo;a Word from God&rdquo; (Surah 4:171) &mdash; a title it gives to no other prophet, which makes it a genuine doorway to talk about who Jesus is.
   - ⛔ **Not saying:** Not that the Qur&rsquo;an means by it what Christians mean. The standard Muslim reading takes &ldquo;Word&rdquo; as the created command &ldquo;Be!&rdquo;; only the Son is the eternal, uncreated Word of God (John 1:1, 14). The bridge is a conversation-opener, not a shared Christology.
-- **Phrase:** "grant outright that this is what the title means on the Quran's own reading" — _The Muslim reading, stated fairly &mdash; not granted_
+- **Phrase:** "grant outright that this is what the title means on the Quran's own reading" — _Granting the meaning, not the claim_
   - ✅ **Is saying:** The standard Islamic reading of the Word- and Spirit-titles &mdash; that Jesus was a soul God created by the command &lsquo;Be&rsquo;, as Adam was (Surah 3:59) &mdash; is the settled reading of the commentary tradition, and a Christian should state it plainly before answering it.
   - ⛔ **Not saying:** Not that Jesus is a creature. He is the uncreated Word, God the Son, &ldquo;begotten, not made,&rdquo; who became flesh (John 1:1, 14). Granting what the Qur&rsquo;an&rsquo;s title means for a Muslim reader is not granting what is true of Christ.
-- **Phrase:** "that is genuinely how the Quran&rsquo;s own commentators take them" — _How Muslims read the titles &mdash; stating it fairly is not granting it_
-  - ✅ **Is saying:** The standard Islamic reading &mdash; that Jesus was created by God's command &lsquo;Be&rsquo;, as Adam was (Surah 3:59) &mdash; is the settled reading of the commentary tradition, and we should state it without caricature before we answer it.
+- **Phrase:** "that is genuinely how the Quran&rsquo;s own commentators take them" — _Why this one prophet &mdash; the question the reading leaves open_
+  - ✅ **Is saying:** Granting the commentators' reading in full, the Quran still singles out this one prophet, and no other, with a Word-title and a Spirit-title. That surplus is what the reading does not explain, and it is the thing worth asking about.
   - ⛔ **Not saying:** Not that the reading is correct, or that denying Christ's full deity is warranted. Jesus is God incarnate, the uncreated Word made flesh (John 1:1, 14).
 - **Phrase:** "the Qur'an's own words raise a question its own theology does not close" — _A shared word, not a shared doctrine_
   - ✅ **Is saying:** The Qur'an's own words (Surah 19:33) speak of Jesus dying and being raised, which opens a gentle conversation; some Muslim scholars even soften the crucifixion denial.
