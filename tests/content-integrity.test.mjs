@@ -352,3 +352,50 @@ test('Trinity and deity pocket cards each carry a oneness anchor', () => {
     `these cards press personal distinction with no statement that God is one — ` +
     `read alone as a shared image they are indistinguishable from ditheism: ${offenders.join(', ')}`);
 });
+
+/* The retired-claims registry, added 2026-07-29.
+ *
+ * When a certified essay retires an argument, the argument does not only live in the
+ * essay. One retired Islam argument was found alive on SEVEN surfaces that day — the
+ * essay, its mastery page, that page's flashcard deck, a quiz in daily-mix.html where
+ * it was the GRADED CORRECT ANSWER, two cards in worldviews.html, the active-reading
+ * data and the daily-args feed. Every one was found because someone happened to look.
+ *
+ * This pins the two properties that make the registry worth having: the entries stay
+ * well-formed (a claim with no `instead` is a flag a future session cannot act on),
+ * and the matcher actually catches a retired string while respecting `allow`. */
+test('retired-claims registry is well-formed and every entry says what to say instead', async () => {
+  const raw = JSON.parse(
+    readFileSync(new URL('../tools/retired-claims.json', import.meta.url), 'utf8'));
+  assert.ok(Array.isArray(raw.claims) && raw.claims.length > 0, 'registry has no claims');
+
+  const ids = new Set();
+  for (const c of raw.claims) {
+    for (const field of ['id', 'retired', 'what', 'why', 'instead']) {
+      assert.ok(typeof c[field] === 'string' && c[field].trim(),
+        `claim ${c.id || '(unnamed)'} is missing "${field}" — a flag nobody can act on`);
+    }
+    assert.ok(!ids.has(c.id), `duplicate claim id: ${c.id}`);
+    ids.add(c.id);
+    assert.ok(Array.isArray(c.patterns) && c.patterns.length,
+      `claim ${c.id} has no patterns`);
+    for (const p of c.patterns) {
+      assert.doesNotThrow(() => new RegExp(p, 'gi'), `claim ${c.id}: bad regex ${p}`);
+    }
+    assert.ok(Array.isArray(c.allow), `claim ${c.id}: "allow" must be an array`);
+  }
+});
+
+test('retired-claims matcher catches a retired string and honours the allow list', async () => {
+  const { findHits } = await import('../tools/check-retired-claims.mjs');
+  // "never a strawman" is registered with an empty allow list.
+  const corpus = {
+    'fake-page.html': 'Each objection gets its strongest form first — never a strawman — then the reply.',
+    'ok-page.html': 'Each objection is stated as you will actually meet it, then answered.',
+  };
+  const hits = findHits(Object.keys(corpus), (f) => corpus[f]);
+  assert.ok(hits.some((h) => h.file === 'fake-page.html'),
+    'matcher failed to catch a registered retired claim');
+  assert.ok(!hits.some((h) => h.file === 'ok-page.html'),
+    'matcher flagged clean text');
+});

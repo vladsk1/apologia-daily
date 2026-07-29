@@ -94,6 +94,8 @@ jobs:
         run: node tools/check-answer-openings.mjs
       - name: Answer over-concession lint (blocking)
         run: node tools/check-answer-concessions.mjs
+      - name: Retired-claims scan (blocking)
+        run: node tools/check-retired-claims.mjs
       - name: Stamp-integrity report (non-blocking)
         run: node tools/check-stamp-integrity.mjs --warn
 
