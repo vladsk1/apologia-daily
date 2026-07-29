@@ -1710,6 +1710,12 @@ const plans = [
   }
 </script>
 <script src="study-plan-popup.js"></script>
+<!-- Plan popups inject ev-s* card fragments verbatim, including their doctrinal
+     clarifiers. Without this the .on-box contents render as raw running text
+     mid-paragraph, since the popup CSS has no .on rules. The script self-injects
+     its stylesheet and delegates from document, so it works on fragments swapped
+     in after load. -->
+<script src="/library/orthonote.js" defer></script>
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
 </body>
