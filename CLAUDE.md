@@ -13,8 +13,9 @@
 > *why* behind a past decision; read this file for current state. **Keep it that way:** when an entry
 > here stops affecting a decision, move it to `HANDOFF.md` rather than letting this file grow back.
 >
-> **LATEST — 2026-07-29:** ⭐ **The 63 mastery pages were re-gated against the current text, the blockers
-> cleared, and the pages stamped.** This closes the work opened by the 2026-07-28 (d) audit. Read the (d)
+> **LATEST — 2026-07-29:** ⭐ **The 63 mastery pages were re-gated, the blockers cleared, and all 67 are now
+> STAMPED** — 16 with a dual-consensus stamp (orthodoxy + neutrality), 51 with argument + orthodoxy, and
+> **`ev-m-*` is now in `CONTENT_PATTERNS`**, so CI checks them from here on.** This closes the work opened by the 2026-07-28 (d) audit. Read the (d)
 > and (e) entries below for *what was wrong*; read this one for *where it landed*.
 > **What the re-gate found.** 16 reviews again (argument ×63, orthodoxy ×63, neutrality ×16 on the
 > dual-consensus tier). **0 HERESY**, but a large number of NOT-STAMPABLE verdicts with a single dominant
@@ -53,6 +54,18 @@
 > only changed a `fetch()` call to pass the essay body to the tutor. Non-doctrinal. The tool's boilerplate
 > filter does not recognise script-body changes, so its output is noise nobody will read — **and noise is
 > where a real flag will hide.** Fixing that filter is a small, high-value job for a code session.
+> ⚠⚠ **THE SECOND LESSON, AND IT IS THE MORE IMPORTANT ONE: a fix is not verified until an INDEPENDENT
+> lens reads the fixed text.** Four rounds of self-checking missed all of the following; the confirmation
+> pass caught them in one. (1) Three more **unpropagated** fixes, all in the memorised layer —
+> `trinity_islam`'s flashcard restored the retired dilemma *in full* on the same objection whose prose
+> reply forbids it; `titles`' model answer kept the *pelach* overreach the page refutes 86 lines above;
+> `early_church_trinity`'s flashcard kept the round "300 bishops" the prose had replaced. (2) **A factual
+> error introduced BY THE FIX.** My Colwell rewrite said the NWT renders anarthrous *theos* as "God"
+> *throughout* John 1. It does not — **at 1:18 it prints "the only-begotten god," lowercase** — so the
+> sentence warning the reader that a well-read Witness would correct him handed that Witness the
+> counter-example. The same error was then found on **`ev-m-john11.html`, the page every other page had
+> been corrected against**, and on `trinity_jw`. All three fixed. **Never let a fix pass be its own
+> verifier.**
 > **⚠ STILL OPEN after this:** the four Tier-1 pages were rebuilt (commit `54162c1`) but
 > **`ev-m-trinity_islam.html` still declares a "key move" that appears NOWHERE in
 > `library/trinity_islam.html`** — the essay must gain the material and be re-gated, or the mastery page

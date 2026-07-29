@@ -42,6 +42,7 @@ import { globSync } from 'node:fs';
 const CONTENT_PATTERNS = [
   /^library\/(?!index\.html$).+\.html$/,   // deep-dive essays incl. mk/ es/ mirrors
   /^ev-s\d[a-z0-9.]*\.html$/,              // Evidence Library hub fragments (+ .mk/.es)
+  /^ev-m-.+\.html$/,                       // Evidence Library mastery pages (all 67, gated 2026-07-29)
   /^worldviews\.html$/,                    // worldviews cards (Islam Case tier etc.)
   /^tools\/reel\/specs\/.+\.json$/,        // short-form reel scripts
   /^api\/ask\.js$/,                        // the live "Ask Anything" AI system prompt
@@ -139,7 +140,7 @@ function changedFiles(base) {
 }
 
 function allContentFiles() {
-  return globSync('{library/**/*.html,ev-s*.html,worldviews.html,tools/reel/specs/*.json,api/ask.js}').filter(isContent);
+  return globSync('{library/**/*.html,ev-s*.html,ev-m-*.html,worldviews.html,tools/reel/specs/*.json,api/ask.js}').filter(isContent);
 }
 
 /* Everything user-facing that is not explicitly exempt. This is the AUDIT scope,

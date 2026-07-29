@@ -343,6 +343,36 @@ reviewer said a version of it:
 
 ---
 
+## The stamp — landed 2026-07-29
+
+All 67 mastery pages now carry a `content-review` stamp, and `ev-m-*` is in
+`CONTENT_PATTERNS`, so CI checks them from here on. **16 pages carry a dual-consensus
+stamp** (orthodoxy *and* neutrality, per the Trinity/deity/world-religions rule); 51 carry
+argument + orthodoxy. Four pages that were already stamped had their dates bumped — their
+old stamps certified a version that no longer existed.
+
+**The confirmation pass was worth running.** Both lenses read the fixed text independently
+and found:
+
+- **Three more unpropagated fixes**, all in the memorised layer: `trinity_islam`'s
+  flashcard 4 restored the retired *kalām*/*kalima* dilemma in full on the *same objection*
+  whose prose reply forbids it; `titles`' Drill 3 model answer kept the *pelach* overreach
+  the page refutes 86 lines above; `early_church_trinity`'s flashcard kept the round "300
+  bishops" the prose had replaced with the honest 250–318 range.
+- **A factual error introduced by the fix itself.** The Colwell rewrite on
+  `jesus_as_god_nt` said the NWT renders anarthrous *theos* as "God" *throughout* John 1.
+  It does not — at **1:18 it prints "the only-begotten god," lowercase**, and that is the
+  second-most-drilled verse in a Witness conversation. The sentence warning the reader that
+  a well-read Witness would correct him handed that Witness the counter-example. The same
+  error was then found on `ev-m-john11.html` — **the page every other page had been
+  corrected against** — and on `trinity_jw`. All three fixed.
+
+The lesson is the same one, one level up: **a fix is not verified until an independent lens
+reads the fixed text.** Four rounds of self-checking did not catch these; the confirmation
+pass caught all four.
+
+---
+
 ## Before any of these can be stamped
 
 1. **Resolve the essay pairing by `<link rel="canonical">`, not by filename.** Four pages use a
