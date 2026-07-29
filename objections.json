@@ -1,7 +1,7 @@
 {
   "generated": "tools/build-objections.mjs",
   "note": "Harvested VERBATIM (reply side) from certified ev-m-*.html mastery pages. Do not hand-edit; re-run the build.",
-  "count": 149,
+  "count": 148,
   "categories": {
     "Biblical Reliability": 20,
     "God's Existence": 24,
@@ -9,7 +9,7 @@
     "Old Testament & Jesus": 1,
     "Science & Faith": 18,
     "The Resurrection": 20,
-    "The Trinity": 24
+    "The Trinity": 23
   },
   "objections": [
     {
@@ -63,7 +63,7 @@
       "argName": "The Internal Consistency of Scripture",
       "category": "Biblical Reliability",
       "front": "A skeptic says: \"The Bible is full of contradictions.\"",
-      "back": "Most are differences of detail and emphasis from independent witnesses, not logical contradictions, and none touches the central storyline the argument rests on.",
+      "back": "Most are differences of detail and emphasis from independent witnesses, not logical contradictions. Two are genuinely hard - Judas death and the day of the crucifixion - and worth conceding; what both accounts report about the crucifixion itself stands.",
       "source": "ev-m-consistency.html"
     },
     {
@@ -99,7 +99,7 @@
       "argName": "The Early Date of the New Testament",
       "category": "Biblical Reliability",
       "front": "A skeptic says Mark 13 predicts the Temple’s fall, proving a post-70 date. Reply?",
-      "back": "That only follows if you assume prediction is impossible; the text is vague on how it fell, and the NT never mentions the destruction as past — fitting a pre-70 date.",
+      "back": "The after-the-fact reading is a legitimate historical inference, not hostility - do not caricature it. It is just less decisive than it sounds: the text is vague on how it fell, and the NT never mentions the destruction as past — fitting a pre-70 date.",
       "source": "ev-m-earlydate.html"
     },
     {
@@ -126,7 +126,7 @@
       "argName": "The Reliability of the Gospel Eyewitnesses",
       "category": "Biblical Reliability",
       "front": "A skeptic says the Gospels are anonymous. Reply?",
-      "back": "Anonymity in the text isn’t anonymity of origin: the titles are early and uniform with no rival names, and the texts embed their own named eyewitness sources.",
+      "back": "Anonymity in the text isn’t anonymity of origin: the titles are early and uniform in every manuscript that preserves one, though the earliest of those copies are second- and third-century, and the texts embed their own named eyewitness sources.",
       "source": "ev-m-eyewitnesses.html"
     },
     {
@@ -135,7 +135,7 @@
       "argName": "The Argument from the Jewishness of Jesus",
       "category": "Biblical Reliability",
       "front": "A skeptic says: \"A Jewish author just wrote a Jewish character\"",
-      "back": "That explains the flavor, not the frictions — the untranslated Aramaic, baffling disputes, and against-interest sayings point to memory, not skilled invention.",
+      "back": "That explains the flavor, not the frictions — the Aramaic the Greek must stop and translate, baffling disputes, and against-interest sayings point to memory, not skilled invention.",
       "source": "ev-m-jewishness.html"
     },
     {
@@ -369,7 +369,7 @@
       "argName": "The Argument from Religious Experience",
       "category": "God's Existence",
       "front": "Different religions contradict.",
-      "back": "Conflict over interpretation does not erase what these experiences point beyond themselves to - a transcendent, holy, personal reality. That argues to a Creator, not that every religion is equally true; eyewitnesses disagreeing on details does not mean nothing happened.",
+      "back": "It limits the argument; it does not kill it. The reports genuinely conflict - some traditions report no personal God at all - so experience alone cannot settle WHICH God is real; revelation does. What survives is narrower: across cultures people report encountering a reality beyond themselves, and naturalism still has to explain that. That argues to a Creator, not that every religion is equally true; eyewitnesses disagreeing on details does not mean nothing happened.",
       "source": "ev-m-religious.html"
     },
     {
@@ -504,7 +504,7 @@
       "argName": "The Historical Existence of Jesus",
       "category": "Jesus",
       "front": "The Josephus passage is forged.",
-      "back": "Partly retouched, yes - but a Josephan core remains, the Arabic version is neutral, and the second James reference is undisputed. Tacitus stands regardless.",
+      "back": "Partly retouched, yes - most scholars reconstruct an authentic Josephan core. Concede the whole passage if pressed: the second reference, James the brother of Jesus called Christ, is accepted by the large majority, and Tacitus stands regardless.",
       "source": "ev-m-hist_jesus.html"
     },
     {
@@ -531,7 +531,7 @@
       "argName": "Jesus as God in the New Testament",
       "category": "Jesus",
       "front": "Nicaea invented the deity.",
-      "back": "Ignatius calls Jesus our God in 107; Pliny reports hymns to Christ as God in 112. Nicaea defined terms for a worship already two centuries old.",
+      "back": "Ignatius calls Jesus our God in 107; Pliny in 112 reports Christians singing a hymn to Christ as to a god. Nicaea defined terms for a worship already approaching three centuries old.",
       "source": "ev-m-jesus_as_god_nt.html"
     },
     {
@@ -621,7 +621,7 @@
       "argName": "Messianic Prophecy \\u2014 the Statistical Case",
       "category": "Jesus",
       "front": "Isaiah 53 is about Israel.",
-      "back": "The servant there suffers FOR Israel, is innocent, and dies - fits no nation. Pre-Christian Jewish sources, including the Targum, read it messianically.",
+      "back": "The servant there suffers FOR Israel, is innocent, and dies - which fits awkwardly with a purely collective reading, though its defenders answer with a righteous remnant. An individual-messianic reading was live in ancient Judaism - the Targum on Isaiah 52:13 names my servant the Messiah, though it redirects the suffering elsewhere.",
       "source": "ev-m-messianic_prophecy.html"
     },
     {
@@ -724,21 +724,21 @@
       "source": "ev-m-titles.html"
     },
     {
-      "id": "titles-why-does-the-church-not-inventing-son-of-man-mat",
-      "arg": "titles",
-      "argName": "The Titles of Jesus",
-      "category": "Jesus",
-      "front": "Why does the church not inventing Son of Man matter?",
-      "back": "It appears about 80 times on Jesus lips and almost never in the epistles - a title the church did not use is a title the church did not invent.",
-      "source": "ev-m-titles.html"
-    },
-    {
       "id": "titles-why-is-son-of-man-a-divine-title",
       "arg": "titles",
       "argName": "The Titles of Jesus",
       "category": "Jesus",
       "front": "Why is Son of Man a DIVINE title?",
-      "back": "Daniel 7: he rides the clouds - YHWH-only transport - receives worship-service and an everlasting kingdom. Jesus claims it verbatim at his trial.",
+      "back": "Daniel 7: he rides the clouds - YHWH-only transport - and receives an everlasting kingdom and the service of all peoples. The clouds are the stronger half; the service-verb is suggestive, not decisive. Jesus claims that scene at his trial.",
+      "source": "ev-m-titles.html"
+    },
+    {
+      "id": "titles-why-is-son-of-man-hard-to-explain-as-a-church-in",
+      "arg": "titles",
+      "argName": "The Titles of Jesus",
+      "category": "Jesus",
+      "front": "Why is \"Son of Man\" hard to explain as a church invention?",
+      "back": "It appears about 80 times on Jesus' lips and almost never in the epistles - a title the church did not use is a title the church did not invent.",
       "source": "ev-m-titles.html"
     },
     {
@@ -801,7 +801,7 @@
       "argName": "The Argument from the Big Bang",
       "category": "Science & Faith",
       "front": "A skeptic says the Big Bang is just where our physics breaks down, not a real beginning. Your reply?",
-      "back": "The BGV theorem is independent of the singularity and of pre-Planck physics — any universe expanding on average has a past boundary, even in quantum-gravity models. The beginning survives.",
+      "back": "The BGV theorem is independent of the singularity and of pre-Planck physics — any universe expanding on average has a past boundary in CLASSICAL spacetime - which is where quantum gravity would take over. Vilenkin says probably; Guth is unpersuaded. Corroboration, not proof.",
       "source": "ev-m-bigbang.html"
     },
     {
@@ -1026,7 +1026,7 @@
       "argName": "Why the Disciples Believed",
       "category": "The Resurrection",
       "front": "Fanatics die for falsehoods all the time.",
-      "back": "Modern martyrs die for second-hand beliefs. The disciples died for what they said they saw - eyewitnesses cannot be sincerely mistaken about a shared meal.",
+      "back": "Modern martyrs die for second-hand beliefs. The disciples died for what they said they saw - they were in a position to know whether they were lying.",
       "source": "ev-m-disciplesbelief.html"
     },
     {
@@ -1219,12 +1219,12 @@
       "source": "ev-m-nt_trinity.html"
     },
     {
-      "id": "ot_trinity-let-us-make-is-the-royal-we",
+      "id": "ot_trinity-let-us-make-is-the-royal-we-or-god-addressing-an",
       "arg": "ot_trinity",
       "argName": "Old Testament Foundations of the Trinity",
       "category": "The Trinity",
-      "front": "Let us make is the royal we.",
-      "back": "Unattested for Hebrew verbs - kings say I. And the angel reading fails: man is in GODS image alone, and Isaiah 44:24 says YHWH created ALONE.",
+      "front": "Let us make is the royal we, or God addressing angels.",
+      "back": "Grant it. The divine-council reading is serious and may well be the plain sense - Heiser holds it and warns against proof-texting Gen 1:26. We do not use the verse. The case rests on convergence: the Angel of the LORD, LORD-from-LORD, Word/Wisdom/Spirit, Daniel 7.",
       "source": "ev-m-ot_trinity.html"
     },
     {
@@ -1309,21 +1309,12 @@
       "source": "ev-m-trinity_islam.html"
     },
     {
-      "id": "trinity_islam-what-was-the-mihna-and-why-does-it-matter",
-      "arg": "trinity_islam",
-      "argName": "Answering Islam on the Trinity",
-      "category": "The Trinity",
-      "front": "What was the Mihna and why does it matter?",
-      "back": "The 833-848 inquisition over whether the Quran is created. Sunni orthodoxy settled: UNCREATED - so an eternal divine Word inside strict monotheism is not foreign to Islam. But Islam locates that Word in a book, not in the Son made flesh: a decisive difference, not common ground. It is also an opening - the very vocabulary of an eternal Word, which John 1:1 fills with a Person, Islam already reaches for.",
-      "source": "ev-m-trinity_islam.html"
-    },
-    {
       "id": "trinity_islam-word-just-means-the-command-be",
       "arg": "trinity_islam",
       "argName": "Answering Islam on the Trinity",
       "category": "The Trinity",
       "front": "Word just means the command Be.",
-      "back": "4:171 calls Jesus HIS WORD - a title, not a process; Adam, made by the same command, never gets it. And is Be itself created? The dilemma returns either way.",
+      "back": "4:171 calls Jesus HIS WORD - a title given to him, not a description of how he was made; Adam, made by the very same command, never receives it, and no one else in the Quran does. Do not push this into the LEXICAL bridge - Quran-is-uncreated therefore Jesus-is-eternal equivocates between kalam nafsi and the kalima of 4:171. The STRUCTURAL argument is a different move and it holds. The narrow point is enough here: the title is unique, and Islam has never explained why.",
       "source": "ev-m-trinity_islam.html"
     },
     {
