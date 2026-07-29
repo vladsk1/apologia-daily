@@ -374,9 +374,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     </div>
 
     <div class="card">
-      <span class="kick">The hard part — objections, steelmanned</span>
+      <span class="kick">The hard part — objections, answered</span>
       <h4>The objections you will actually meet</h4>
-      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">This is what separates someone who <em>knows</em> the argument from someone who can <em>defend</em> it. We give the objection its best form first — never a strawman — then the reply.</p>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">This is what separates someone who <em>knows</em> the argument from someone who can <em>defend</em> it. Each gets its best form first, then the reply — and the hardest objection of all is flagged above.</p>
       <p class="hardest"><b>The one that matters most:</b> Ehrman&rsquo;s &mdash; that the orthodoxy criterion is circular, and apostolicity was enforced on judgments most critical scholars reject. The <a href="/library/canon.html">deep dive</a> answers it at length &mdash; take it with you, not just the replies below.</p>
 
       <details class="acc">
@@ -425,7 +425,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Catholics, Protestants, and the Orthodox don't agree on the Apocrypha, and the Ethiopian church has extra books. If recognition were reliable, the result would be uniform.</p>
           <p class="lbl reply">Reply</p>
-          <p>The remaining disagreements concern the Old Testament Apocrypha and a few peripheral texts — not the 27-book New Testament, on which these communions are unanimous. A near-total convergence across independent traditions, languages, and centuries is far better explained by recognition of genuine authority than by coordinated invention.</p>
+          <p>The remaining disagreements concern the Old Testament books Catholics and the Orthodox call deuterocanonical and Protestants call the Apocrypha and a few peripheral texts — not the 27-book New Testament, on which these communions are unanimous. A near-total convergence across independent traditions, languages, and centuries is far better explained by recognition of genuine authority than by coordinated invention.</p>
         </div>
       </details>
     </div>
@@ -704,7 +704,7 @@ function renderMockScore(txtRaw){
     {ok:/(recogn|received|receiv|discover|not creat|not invent|already)/.test(t) && /(authorit|scripture|canon)/.test(t), hit:'Premise 1 — you named recognition rather than creation', miss:'Premise 1 is missing — say the church recognized authority rather than creating it'},
     {ok:/(before|early|earlier|first century|second century|prior|long before)/.test(t) && /(council|nicaea|carthage|hippo|list)/.test(t), hit:'Premise 2 — you stated the books were used as authoritative before any council', miss:'Premise 2 is thin — state that the core books were received as authoritative before any council'},
     {ok:/therefore|so |conclu|not a (late |)invention|recognition of/.test(t), hit:'Conclusion — you drew out that the canon is a recognition, not an invention', miss:'Draw the conclusion explicitly: the canon recognizes books that already had authority'},
-    {ok:/(apostol|orthodox|universal|usage|antiquity|self-authenticat|criteria)/.test(t), hit:'Nice — you named the criteria the church actually used', miss:'Push further: what criteria did the church use (apostolicity, orthodoxy, universal usage)'},
+    {ok:/(apostol|orthodox|universal|usage|antiquity|criteria)/.test(t), hit:'Nice — you named the criteria the church actually used', miss:'Push further: what criteria did the church use (apostolicity, orthodoxy, universal usage)'},
     {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth — you developed it, not just listed it', miss:'Go a bit deeper — a full reconstruction runs longer than this'}
   ];
   var score = 0, feed = '';
