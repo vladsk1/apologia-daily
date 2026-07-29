@@ -218,11 +218,83 @@ the Younger is a contemporary eyewitness who describes the eruption.
 
 ---
 
+## Round 4 — the re-gate, 2026-07-29
+
+The whole corpus was reviewed again **against the current text**, not against the audit:
+argument ×63, orthodoxy ×63, neutrality ×16 on the dual-consensus tier, plus a
+confirmation pass of both doctrinal lenses over every page changed in the fix rounds.
+
+**0 HERESY. But a large number of NOT-STAMPABLE verdicts, and one cause behind almost
+all of them.** Every reviewer reached it independently:
+
+> The fixes landed in the prose and not in `ARG_PREMISES`, the `cards` deck, the
+> mock-scorer `checks`, or the drill model answers.
+
+Those are the strings a reader **memorises** and is **graded against**. A doctrinal gate
+reads prose. It does not read a JavaScript array.
+
+### The four blockers — three of them the same shape
+
+A fix that landed on one page and **not on its sibling**:
+
+| Page | What was still live |
+|---|---|
+| `ev-m-jesus_as_god_nt.html` | Attributed the **qualitative** reading of John 1:1c to **Colwell**. Colwell (1933) was about *definiteness*; the qualitative analysis is Harner, Dixon and Wallace — who explicitly warns against this misapplication. **`ev-m-john11.html` devotes a Hard objection to conceding that apologists overclaim Colwell.** The site conceded the error on one page and committed it on its sibling. The same line also claimed "the same Greek pattern in the same chapter is never rendered *a god* by anyone" — either empty (there is no second preverbal anarthrous predicate nominative in John 1) or the false-parallel claim a well-read Witness corrects on the spot. |
+| `ev-m-trinity_islam.html` | The syllogism retired the *kalām Allāh* / *kalima* bridge; **six other strings still ran it** — the "command Be" reply, the Hard objection heading, steelman and reply, the key-concept block, the attributes reply, and the **Drill 3 model answer**, the text the reader is coached to say aloud. That answer also still carried *"distinct in some way from the essence"* (the Arian direction) and a sentence duplicated by an earlier partial edit. And the `checks` array **marked a reader down for obeying the page's own instruction.** |
+| `ev-m-titles.html` | The flashcard *question* presupposed the conclusion the page had just been calibrated to stop asserting. |
+| `ev-m-trinity_jw.html` | P2 and flashcard 1 still pointed at the false Greek parallel after the objection reply had been corrected. |
+
+### The eight WEAK flags
+
+Three were overstated-consensus claims **each contradicted by its own page a few
+accordions later**: `hands` and `phil2` on "recognised across scholarship" (Bauckham's
+divine-identity category is disputed by Hurtado and McGrath; `phil2` concedes the hymn
+theory is challenged four accordions below asserting the consensus), and
+`philosophical_trinity` telling the reader critics *"cannot"* state the contradiction two
+lines above naming the transitivity-of-identity argument as its hardest objection. The
+rest: `eternal_generation` ("underived aseity, possessed from the Father" as a standalone
+flashcard, plus the 2016 EFS controversy narrated as closed), `nt_trinity` ("the only
+formulation that keeps all the data" against its own calibrated rubric),
+`trinity_mormons` ("devout, **Christ-centred** lives" — conceding the object of worship,
+not only the sincerity), `early_church_trinity` ("the floor that never moves", which
+Origen on prayer and Justin's *heteros theos* do wobble), and `jesus_claims` (*pelach*
+stated flatly where `titles` now concedes Daniel 3:12).
+
+### One page was dead JavaScript again
+
+`ev-m-multiatt.html` — an apostrophe in `'a standard historian's tool'` inside a
+single-quoted flashcard string, **introduced by this session's own calibration sweep**,
+killing the whole inline block: the Pro gate, the mastery dial, the flashcards, the
+`/api/tutor` call and the share-card generator. `tests/inline-script-syntax.test.mjs`
+caught it before deploy. **Third catch.** Run `node --test tests/*.test.mjs` after every
+content edit pass — it is the only thing between a prose edit and a silently inert page.
+
+### Also closed
+
+The last **deism gap**: `ev-m-cosmic.html` reached "a purposive mind" and never told the
+reader that is not yet the Triune God. **Correction to Round 2's record:**
+`ev-m-kalam.html` was listed as having the same gap. It does not — it says "the argument
+concludes to a transcendent cause, not yet to the full God of Christianity" in its own
+honest-scope paragraph. The earlier grep pattern was too narrow.
+
+---
+
 ## STILL OPEN — the work queue
 
 Ordered by risk. The page-specific findings are cleared; what remains is structural.
 
-### Tier 1 — pages that need rebuilding, not editing
+### Tier 1 — pages that needed rebuilding, not editing
+
+**All four were rebuilt in commit `54162c1`**, and `trinity_islam` again in `d329299`
+after the re-gate found the rebuild had reached only three of the page's nine parts.
+The table below is kept as the record of what was wrong. **One item is NOT closed:**
+
+> ⚠ **`ev-m-trinity_islam.html` still declares a "key move" that appears nowhere in
+> `library/trinity_islam.html`.** Grepping the essay for `kalima`, `kalam Allah`, `Mihna`,
+> `created or uncreated` and `equivocat` returns nothing. The mastery page is supposed to
+> compress a certified essay; here it compresses material the essay does not contain.
+> Either the essay gains it and is re-gated, or the page stops presenting it as the key
+> move. **This page goes first in front of the pastoral reviewer.**
 
 | Page | Why |
 |---|---|
@@ -253,7 +325,9 @@ Ordered by risk. The page-specific findings are cleared; what remains is structu
   essays' own ranking, that sentence is currently false on most of them.
 - **`ARG_PREMISES`, `cards` and `checks` need a line-by-line diff against the paired essay on
   all 63.** This is where the certified position was reversed, and it is invisible to prose
-  review.
+  review. **Done in Round 4** — and it was the right call: it produced almost every blocking
+  finding in the re-gate. Treat it as the *first* step of any future pass over these pages,
+  not the last.
 
 ### Tier 3 — everything else
 

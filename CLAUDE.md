@@ -13,6 +13,55 @@
 > *why* behind a past decision; read this file for current state. **Keep it that way:** when an entry
 > here stops affecting a decision, move it to `HANDOFF.md` rather than letting this file grow back.
 >
+> **LATEST — 2026-07-29:** ⭐ **The 63 mastery pages were re-gated against the current text, the blockers
+> cleared, and the pages stamped.** This closes the work opened by the 2026-07-28 (d) audit. Read the (d)
+> and (e) entries below for *what was wrong*; read this one for *where it landed*.
+> **What the re-gate found.** 16 reviews again (argument ×63, orthodoxy ×63, neutrality ×16 on the
+> dual-consensus tier). **0 HERESY**, but a large number of NOT-STAMPABLE verdicts with a single dominant
+> cause, which every reviewer named independently: **the earlier fixes landed in the prose and not in
+> `ARG_PREMISES`, the `cards` deck, the mock-scorer `checks`, or the drill model answers.** Those are the
+> strings a reader *memorises* and is *graded against*, and no prose review reads them. Four blockers, and
+> three of them were the same shape — **a fix that landed on one page and not on its sibling:**
+> `john11` concedes that apologists overclaim **Colwell's rule** while `jesus_as_god_nt` committed exactly
+> that error (Colwell 1933 is about *definiteness*; the *qualitative* reading is Harner/Dixon/Wallace, who
+> warns against this misapplication); `titles` calibrated *pelach* against Daniel 3:12 while `jesus_claims`
+> still stated it flatly; `trinity_islam`'s syllogism retired the *kalām Allāh*/*kalima* bridge while **six
+> other strings still ran it** — including the Drill 3 model answer the reader is coached to say aloud
+> (which also still carried *"distinct in some way from the essence"*, the Arian direction, plus a sentence
+> duplicated by an earlier partial edit) and the `checks` array, **which marked a reader down for obeying
+> the page's own instruction.** Also cleared: 8 WEAK flags, three of them overstated-consensus claims each
+> contradicted by its own page a few accordions later (`hands` and `phil2` on "recognised across
+> scholarship"; `philosophical_trinity` telling the reader critics *"cannot"* state the contradiction two
+> lines above naming the one serious attempt as its hardest objection).
+> ⚠ **THE LESSON, AND IT IS THE ONE TO CARRY FORWARD: a prose fix is not a fix.** Nine parts make up a
+> mastery page and four of them are invisible to a doctrinal gate — `ARG_PREMISES`, `cards`, `checks`, and
+> the model answers. **Diff those four against the paired essay BEFORE reading the prose**, and resolve the
+> essay by **`<link rel="canonical">`, not by filename** (`minimal`→`minimalfacts`, `paul`→`paulconv`,
+> `postresurrection`→`postres`, `messianic_prophecy`→`messianic-prophecy` — this cost three reviewers'
+> work in the previous round).
+> ⚠ **`tests/inline-script-syntax.test.mjs` earned its third catch.** `ev-m-multiatt.html` was **dead
+> JavaScript** — an apostrophe in `'a standard historian's tool'` inside a single-quoted flashcard string,
+> **introduced by this session's own calibration sweep**, killing the entire inline block (Pro gate, mastery
+> dial, flashcards, `/api/tutor` call, share-card generator). It is now the only thing standing between a
+> prose edit and a silently inert page. **Run `node --test tests/*.test.mjs` after every content edit pass.**
+> **Also closed:** the last **deism gap** — `ev-m-cosmic.html` reached "a purposive mind" and never said that
+> is not yet the Triune God. (⚠ **Correction to the 2026-07-28 (e) entry:** `ev-m-kalam.html` was reported as
+> having the same gap. **It does not** — it says *"the argument concludes to a transcendent cause, not yet to
+> the full God of Christianity"* in its own honest-scope paragraph. The earlier grep was too narrow.)
+> ⚠ **KNOWN DEFECT IN A CI TOOL — do not trust `check-stamp-integrity.mjs` output as-is.** It currently
+> flags **59 gated essays** as edited-after-stamp, but **58 of them trace to one commit (`0747dca97`)** that
+> only changed a `fetch()` call to pass the essay body to the tutor. Non-doctrinal. The tool's boilerplate
+> filter does not recognise script-body changes, so its output is noise nobody will read — **and noise is
+> where a real flag will hide.** Fixing that filter is a small, high-value job for a code session.
+> **⚠ STILL OPEN after this:** the four Tier-1 pages were rebuilt (commit `54162c1`) but
+> **`ev-m-trinity_islam.html` still declares a "key move" that appears NOWHERE in
+> `library/trinity_islam.html`** — the essay must gain the material and be re-gated, or the mastery page
+> must stop presenting it as the key move. **Put that page first in front of the pastoral reviewer.**
+> Also still open: `pocket-cards.html` is **still unstamped and still outside `CONTENT_PATTERNS`** (both must
+> land in the same commit); the `evil.html` track-vs-essay mismatch is an **owner decision** (rescope the
+> track, or commission a second essay); and the "missing critics" gap (Oppy, Allison, Morriston, Singer,
+> Wielenberg and others named in the essays as the strongest living critics, absent from the pages).
+>
 > **LATEST — 2026-07-28 (d):** ⭐ **All 63 ungated mastery pages assessed — the pocket-card diagnosis, at ten
 > times the scale.** 16 reviews (argument ×63, orthodoxy ×63, neutrality ×15 on the dual-consensus tier);
 > ~139,000 words. **0 HERESY** — no page denies the Trinity, the two natures, the bodily resurrection or
