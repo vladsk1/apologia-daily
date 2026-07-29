@@ -155,6 +155,51 @@ Ordered by risk = how doctrinal × how far it travels. Full detail in `GATE_COVE
 
 ---
 
+## 3b. ⚠ A LIVE TRUST-CLAIM DEFECT ON 103 SURFACES — found 2026-07-29, not yet fixed
+
+Recorded by `apologia-orthodoxy` as an out-of-lane finding while gating a reel. **Non-doctrinal — no
+heresy, no drift, no neutrality breach — but repo-checkable by a critic in about a minute.**
+
+`tools/gen-answers.mjs:237` emits this badge onto **every** answer page:
+
+> **Fact-checked &amp; reviewed for Nicene orthodoxy**
+
+The string appears **103 times across 103 files** — the generator plus all 102 committed
+`answers/*.html`. So this is **not a template fix**: the sweep must edit the generator *and*
+regenerate, or 102 stale pages keep serving the claim.
+
+**The record does not support it.** Across the 102 entries in `answers/_data.json` the `reviewed` keys
+are exactly `{orthodoxy: 102, argument: 102, by: 102}` — there is **no `citations` key at all** — and
+only **12** of the 102 `by` notes mention citations.
+
+Two things make it sharper than "unsupported":
+
+1. **The badge is refuted by the page it links to as its own warrant.** Its `How we review →` points at
+   `editorial-standards.html`, whose line 117 states the calibrated truth: *"102 of the 102 answers
+   record both an argument and an orthodoxy review."* Argument and orthodoxy — citations conspicuously
+   absent. A reader who clicks to check finds the enumeration that omits the stage the badge asserts.
+2. **It breaks the essay-scoping discipline in the one place that discipline exists to protect.**
+   `editorial-standards.html:111` scopes the strong claim precisely — *"our published **essays** have
+   been independently fact-checked."* The badge lifts `fact-checked` off essays and applies it to the
+   answers layer, whose enforced minimum in `gen-answers.mjs` is argument + orthodoxy.
+
+**Minimal fix**, one string, instantly true at 102/102:
+`Reviewed for argument &amp; Nicene orthodoxy`.
+
+**Better outcome if the work was actually done:** record `citations` in `answers/_data.json` for the
+answers where it genuinely ran (12 `by` notes suggest it did for at least those) and keep
+`fact-checked` only if it becomes true for all 102. Either way the badge string is gated content, so
+the change re-opens argument + orthodoxy.
+
+⚠ **This was the SECOND claim about our own review process to fail on inspection in one session.** The
+first was a reel asserting the answers are "cited" — caught by `apologia-citations` before it reached
+Instagram. **The claims we check least carefully are the ones about our own rigour.** Add "does this
+page overstate our own process?" to every sweep pass, and check it against
+`editorial-standards.html` — which also publishes CORRECTIONS, so a claim it has already retracted
+must not reappear.
+
+---
+
 ## 4. Method — what the 2026-07-29 rounds actually proved
 
 ### Per-file for doctrinal prose; batch for data-shaped pages
