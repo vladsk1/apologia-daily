@@ -17,7 +17,9 @@
     "rather than just deleting the sentence.",
     "",
     "NETTING. Each claim declares `netting`: \"claim\" means the pattern is built from tokens + predication + tempered negation gaps and generalises across wordings; \"phrase\" means it is a literal blocklist that only catches the wordings someone happened to find. RULE: any claim retired on a FREE, INDEXED, deity/Trinity-tier surface must be claim-shaped. A phrase blocklist there reports green over live error -- that is not a hypothetical, it happened twice on 2026-07-29, the second time one day after the entry was written.",
-    "CORPUS. A claim-shaped entry carries `corpus.must_fire` / `corpus.must_not_fire`, and tests/content-integrity.test.mjs EXECUTES them. Recording test cases in a prose note is not a test: the quranic-title-compounds regex was mis-tuned five times, and every one of those mis-tunes would have been caught in one second by the cases already written down beside it. must_not_fire matters as much as must_fire -- a net that flags our own refutations gets ignored, which is how check-stamp-integrity reached 59 unread flags."
+    "CORPUS. A claim-shaped entry carries `corpus.must_fire` / `corpus.must_not_fire`, and tests/content-integrity.test.mjs EXECUTES them. Recording test cases in a prose note is not a test: the quranic-title-compounds regex was mis-tuned five times, and every one of those mis-tunes would have been caught in one second by the cases already written down beside it. must_not_fire matters as much as must_fire -- a net that flags our own refutations gets ignored, which is how check-stamp-integrity reached 59 unread flags.",
+    "",
+    "SOME ENTRIES SHOULD STAY `phrase`, DELIBERATELY. stoner-odds, nicaea-300-bishops, trinity-arithmetic-1x1x1, echad-composite-unity and objections-never-a-strawman are artefact-shaped -- the retired thing IS a token, so a literal net is the correct tool and rebuilding them would dilute the claim/phrase rule until it stops meaning anything. Entries that SHOULD be rebuilt carry a `rebuild_debt` field saying why and in what order."
   ],
   "claims": [
     {
@@ -39,7 +41,8 @@
         "disagreeing only about whether that Word"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "rebuild_debt": "PHRASE-SHAPED ON A CLAIM-SHAPED SURFACE. This claim was retired on a free, indexed, deity/Trinity-tier surface (worldviews.html card 13, library/islam-eternalword.html), which the _readme rule says must be claim-shaped -- so the registry currently breaks its own rule in its first entry. Ten literal strings cover only the wordings someone happened to find; the distinctive MOVE (Qur'an-eternal-Word premise + Jesus-Word-title premise => shared eternity) has no general net. Known leak, verified by reading and NOT yet added as a must_fire because it would fail the suite before the rebuild lands: 'so the Muslim already believes in an uncreated Word - and his own book gives that title to Jesus' trips neither this entry nor quranic-title-compounds ('his own book' and 'that title' supply no Qur'an token, no Jesus token, no predicated title). REBUILD FIRST, then add that sentence as must_fire. Order after it: logos-distinct-from-essence (highest doctrinal stakes -- misses 'in some respect', 'somehow other than the essence', 'not wholly identical with the essence'), then ashari-formula-as-deity-predication ('neither Allah nor other than Allah' and 'not God and not other than God' both slip)."
     },
     {
       "id": "ashari-formula-as-deity-predication",
@@ -140,7 +143,8 @@
         "recognised across scholarship"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "rebuild_debt": "DO NOT PROMISE COVERAGE HERE. The overstated-consensus class is the least amenable to claim-netting: there is no fixed token, and 'recognised across scholarship' / 'universally accepted' / 'no serious scholar disputes' is an open set. This stays phrase-shaped on purpose. It is caught by reading -- by apologia-neutrality -- not by CI, and recording that here is better than leaving a false sense of coverage."
     },
     {
       "id": "pre-nicene-floor-never-moves",
@@ -363,13 +367,13 @@
       "id": "quran-predicts-resurrection",
       "retired": "2026-07-29",
       "what": "Saying flatly that the Qur'an has Jesus predict his own death and resurrection (Surah 19:33).",
-      "why": "On the dominant Muslim reading 19:33 places the death in the future -- a natural death at the end of history -- and the raising at the GENERAL resurrection. So it is not a prediction of Jesus's resurrection in the sense a Christian reader will hear. Stated flatly it is corrected in one line. Found live 2026-07-29 on flashcards.html (the memorised layer) and in three worldviews.html headings/subtitles. REBUILT 2026-07-29 after the neutrality lens proved the first version was ALREADY LEAKING, one day after it was written, on the very file it was created to clean: worldviews.html said 'The parallel with the Christian account of the resurrection is impossible to miss' and neither literal pattern could see it. The two phrasings it did carry were simply the ones that happened to be found. It is now token + verb + object with tempered negation gaps, and it requires a Qur'an anchor -- without one it would fire on the true and orthodox Christian statement that Jesus predicted his own resurrection.",
+      "why": "On the dominant Muslim reading 19:33 places the death in the future -- a natural death at the end of history -- and the raising at the GENERAL resurrection. So it is not a prediction of Jesus's resurrection in the sense a Christian reader will hear. Stated flatly it is corrected in one line. Found live 2026-07-29 on flashcards.html (the memorised layer) and in three worldviews.html headings/subtitles. REBUILT 2026-07-29 after the neutrality lens proved the first version was ALREADY LEAKING, one day after it was written, on the very file it was created to clean: worldviews.html said 'The parallel with the Christian account of the resurrection is impossible to miss' and neither literal pattern could see it. The two phrasings it did carry were simply the ones that happened to be found. It is now token + verb + object with tempered negation gaps, and it requires a Qur'an anchor -- without one it would fire on the true and orthodox Christian statement that Jesus predicted his own resurrection. Axis gaps closed 2026-07-29 (neutrality): the object alternation missed 'raised alive', which is the CARD'S OWN phrase for 19:33, and the verb axis missed prophesy/announces/foresees. Two escape tokens were also removed from the negation gaps -- 'verbal' and 'shared form' are topic words lifted from our own then-current sentence, not negations, so they made the net pass on that sentence rather than on the general property. Negation gaps must contain negations.",
       "instead": "'speaks of his own death and being raised (19:33) -- though the dominant Muslim reading places both in the future, at a natural death and the general resurrection.'",
       "patterns": [
-        "(?<!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form)[^.]{0,70})(?:Qur'?an|Quran|Quranic|19:33|Surah 19)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form))[^.]){0,70}(?:predicts?|predicting|foretells?|foretold)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form))[^.]){0,40}(?:resurrection|rising again)(?![^.]{0,70}(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form|no other|is not|does not))",
-        "(?<!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form)[^.]{0,70})(?:predicts?|predicting|foretells?|foretold)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form))[^.]){0,40}(?:resurrection|rising again)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form))[^.]){0,40}(?:Qur'?an|Quran|Quranic|19:33|Surah 19)(?![^.]{0,70}(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form|no other|is not|does not))",
-        "(?<!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form)[^.]{0,70})parallel with the Christian(?: account of the)? resurrection(?![^.]{0,70}(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form|no other|is not|does not))",
-        "(?<!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form)[^.]{0,70})19:33 on Jesus'?s resurrection(?![^.]{0,70}(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form|no other|is not|does not))"
+        "(?<!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t)[^.]{0,70})(?:Qur'?an|Quran|Quranic|19:33|Surah 19)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,70}(?:predicts?|predicting|foretells?|foretold|prophesie[sd]?|prophesy|announces?|foresees?)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,40}(?:resurrection|rising again|rising from the dead|raised (?:alive|from the dead))(?![^.]{0,70}(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|no other|is not|does not))",
+        "(?<!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t)[^.]{0,70})(?:predicts?|predicting|foretells?|foretold|prophesie[sd]?|prophesy|announces?|foresees?)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,40}(?:resurrection|rising again|rising from the dead|raised (?:alive|from the dead))(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,40}(?:Qur'?an|Quran|Quranic|19:33|Surah 19)(?![^.]{0,70}(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|no other|is not|does not))",
+        "(?<!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t)[^.]{0,70})parallel with the Christian(?: account of the)? resurrection(?![^.]{0,70}(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|no other|is not|does not))",
+        "(?<!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t)[^.]{0,70})19:33 on Jesus'?s resurrection(?![^.]{0,70}(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|no other|is not|does not))"
       ],
       "allow": [],
       "netting": "claim",
@@ -378,7 +382,9 @@
           "predicts his own death and resurrection (Surah 19:33)",
           "the Quran has Jesus predict his own resurrection",
           "The parallel with the Christian account of the resurrection is impossible to miss.",
-          "and Surah 19:33 on Jesus's resurrection"
+          "and Surah 19:33 on Jesus's resurrection",
+          "Surah 19:33 has Jesus predict that he will be raised alive from the dead",
+          "the Quran has Jesus prophesy his own rising from the dead"
         ],
         "must_not_fire": [
           "Jesus predicts his own death and resurrection in Mark 8:31",
