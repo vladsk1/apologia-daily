@@ -462,6 +462,12 @@
 > - **Browser-verify:** the CSP; the nav mega-menu on desktop + mobile; SRI on the gated essays.
 > - Bring the nav mega-menu to the gated pages via a stamp pass.
 > - Two standing stamp-integrity flags: `evil.html` category-pull, `worldviews.html` SEO schema.
+> - ⚠ **`ev-s6.html`, `flashcards.html` and `ev-m-trinity_islam.html` were EDITED on 2026-07-29 and need
+>   gate rounds.** Put **`ev-s6.html` first** — it is free, indexed, and was carrying the worst of it.
+>   Still owed there beyond the phrase fixes: `ev-m-trinity_islam.html:368` ("The verse does **not** say
+>   Jesus was created BY a word") flatly contradicts what `library/islam-jesus.html:166` and worldviews
+>   card 04 both grant as the standard *kun*/3:59 reading, and `:395` ("the Quran itself pushes personal")
+>   runs the lexical move card 04 forbids. Those are rewrites needing the essay open beside them.
 > - ⚠ **`ev-s6.html` and `flashcards.html` were EDITED on 2026-07-29 and both now need a gate round.**
 >   The widened `quranic-title-compounds` net found the retired lexical bridge and the non-Quranic
 >   title compounds alive on four surfaces nobody had checked: `ev-s6.html` (a fragment stamped

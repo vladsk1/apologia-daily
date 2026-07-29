@@ -60,8 +60,15 @@ const LIST_ONLY = process.argv.includes('--list');
    source covers them. docs/ is our own working notes and MUST be scannable text —
    the audit files quote retired claims in order to record that they were retired. */
 const SKIP_DIRS = new Set([
-  'node_modules', '.git', 'app', 'ios', 'android', '_pdfs', 'docs', 'tests', 'tools',
+  'node_modules', '.git', 'app', 'ios', 'android', '_pdfs', 'docs', 'tests',
 ]);
+
+/* tools/ is skipped EXCEPT tools/reel/**. The reel scripts and X-card specs are named in
+   CLAUDE.md as gated doctrinal content, and they are exactly the compressed, screenshot-first
+   layer where a retired claim survives longest — a blanket 'tools' skip made 51 reel specs and
+   7 X-card specs invisible to this check (found 2026-07-29). The rest of tools/ is scanner
+   baselines and this registry, which quote retired wording in order to catch it. */
+const TOOLS_SCANNED_SUBDIR = 'reel';
 
 /* Generated aggregates: they mirror content that is itself scanned, so a hit here is
    a duplicate of a hit at the source and just adds noise to the report. */
@@ -71,7 +78,14 @@ function servedFiles(dir, acc = []) {
   for (const entry of readdirSync(dir)) {
     if (entry.startsWith('.') || SKIP_DIRS.has(entry)) continue;
     const full = path.join(dir, entry);
-    if (statSync(full).isDirectory()) servedFiles(full, acc);
+    if (statSync(full).isDirectory()) {
+      if (path.relative(ROOT, full) === 'tools') {
+        const reel = path.join(full, TOOLS_SCANNED_SUBDIR);
+        if (existsSync(reel)) servedFiles(reel, acc);
+        continue;
+      }
+      servedFiles(full, acc);
+    }
     else if ((entry.endsWith('.html') || entry.endsWith('.json')) && !SKIP_FILES.has(entry)) {
       acc.push(path.relative(ROOT, full));
     }
