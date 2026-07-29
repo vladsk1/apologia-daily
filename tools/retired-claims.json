@@ -424,6 +424,37 @@
           "The Quran calls God al-Wadud, the Loving, and Muslims cherish that name rightly"
         ]
       }
+    },
+    {
+      "id": "actual-infinite-contradiction",
+      "retired": "2026-07-29",
+      "what": "Asserting that Hilbert's Hotel and transfinite arithmetic PROVE actual infinites are contradictory, and so cannot exist in physical reality.",
+      "why": "library/kalam.html concedes the opposite in its own voice: Cantorian set theory shows the actual infinite is perfectly coherent MATHEMATICALLY - Hilbert's Hotel is counterintuitive, not contradictory. Transfinite subtraction is undefined, not contradictory, and a numerate skeptic says so in one sentence. The essay calls whether an actual infinite can be CONCRETELY INSTANTIATED 'precisely the disputed hinge'.",
+      "instead": "Narrow the claim exactly as the essay does: the actual infinite is mathematically coherent, so the defensible claim is only that it cannot be concretely instantiated in the physical world - and that metaphysical claim is the disputed hinge. Offer the infinity arguments as serious reasons to doubt an endless past, not as knock-down demonstrations.",
+      "patterns": [
+        "produce contradictions when applied",
+        "cannot be instantiated in physical reality",
+        "showing that actual infinites cannot",
+        "proves that an actual infinite cannot exist",
+        "infinity is logically contradictory",
+        "mathematically contradictory"
+      ],
+      "allow": [],
+      "netting": "phrase",
+      "rebuild_debt": "PHRASE-SHAPED ON A CLAIM-SHAPED SURFACE. Retired from ev-s1.html card arg-kalam on 2026-07-29 after the card asserted it while its own certified essay disclaimed it. The patterns catch the overclaim wording, not the underlying argument, which remains legitimate in its narrowed form. A future page could restate the overclaim in wording these patterns miss.",
+      "corpus": {
+        "must_fire": [
+          "These mathematical operations produce contradictions when applied to the real world",
+          "showing that actual infinites cannot be instantiated in physical reality",
+          "an actual infinite is mathematically contradictory"
+        ],
+        "must_not_fire": [
+          "Hilbert's Hotel is counterintuitive, not contradictory",
+          "Cantorian set theory shows the actual infinite to be perfectly coherent mathematically",
+          "an actual infinite cannot be concretely instantiated in the physical world",
+          "Whether that metaphysical claim holds is precisely the disputed hinge"
+        ]
+      }
     }
   ]
 }
