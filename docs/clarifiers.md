@@ -1,4 +1,4 @@
-63 clarifier(s) across 40 page(s) → docs/clarifiers.md
+64 clarifier(s) across 40 page(s) → docs/clarifiers.md
   1  answers/did-jesus-empty-himself-of-his-deity.html
   1  answers/do-muslims-and-christians-worship-the-same-god.html
   1  answers/doesnt-the-trinity-mean-three-gods.html
@@ -38,7 +38,7 @@
   1  library/trinity_mormons.html
   1  library/typology.html
   1  library/uniqueness.html
-  7  worldviews.html
+  8  worldviews.html
 t that Muslims are insincere, that Christians worship three gods, or that the two faiths have nothing in common &mdash; both are monotheists who look back to Abraham. Not a denial that a Muslim may be sincerely reaching for God: Christians have long distinguished who a person is reaching for from whether the God they describe is the true one. The claim is about who God is &mdash; not about the sincerity of the seeker, and not a verdict on any individual heart, which is God's to render.
 
 ## `answers/doesnt-the-trinity-mean-three-gods.html`
@@ -322,15 +322,18 @@ t that Muslims are insincere, that Christians worship three gods, or that the tw
 - **Phrase:** "Jesus, to whom the Quran itself gives a Word-title" — _&ldquo;The Word of God&rdquo; in two faiths_
   - ✅ **Is saying:** The Qur&rsquo;an gives Jesus the title kalima &mdash; &ldquo;a Word from God&rdquo; (Surah 4:171) &mdash; a title it gives to no other prophet, which makes it a genuine doorway to talk about who Jesus is.
   - ⛔ **Not saying:** Not that the Qur&rsquo;an means by it what Christians mean. The standard Muslim reading takes &ldquo;Word&rdquo; as the created command &ldquo;Be!&rdquo;; only the Son is the eternal, uncreated Word of God (John 1:1, 14). The bridge is a conversation-opener, not a shared Christology.
-- **Phrase:** "that is genuinely how the Quran&rsquo;s own commentators take them" — _&ldquo;Coherent&rdquo; describes the reasoning, not the conclusion_
+- **Phrase:** "that is genuinely how the Quran&rsquo;s own commentators take them" — _How Muslims read the titles &mdash; stating it fairly is not granting it_
   - ✅ **Is saying:** The standard Islamic reading &mdash; that Jesus was created by God's command &lsquo;Be&rsquo;, as Adam was (Surah 3:59) &mdash; is the settled reading of the commentary tradition, and we should state it without caricature before we answer it.
   - ⛔ **Not saying:** Not that the reading is correct, or that denying Christ's full deity is warranted. Jesus is God incarnate, the uncreated Word made flesh (John 1:1, 14).
-- **Phrase:** "quietly leaning in the same direction" — _A shared word, not a shared doctrine_
+- **Phrase:** "the Qur'an's own words raise a question its own theology does not close" — _A shared word, not a shared doctrine_
   - ✅ **Is saying:** The Qur'an's own words (Surah 19:33) speak of Jesus dying and being raised, which opens a gentle conversation; some Muslim scholars even soften the crucifixion denial.
   - ⛔ **Not saying:** Not that the Qur'an teaches Christ's bodily crucifixion and resurrection &mdash; its dominant reading (Surah 4:157) denies the cross, which Scripture makes the hinge of salvation. The overlap is verbal and partial, never doctrinal.
 - **Phrase:** "dies" — _&ldquo;God died&rdquo; &mdash; in what sense Christians say it_
   - ✅ **Is saying:** The one who suffered and died is a divine person, God the Son. Scripture speaks this way: &ldquo;the Lord of glory&rdquo; was crucified (1 Cor 2:8); God bought the church &ldquo;with his own blood&rdquo; (Acts 20:28).
   - ⛔ **Not saying:** Not that the divine nature suffered or ceased to be. Christ is one person in two natures, fully God and fully man; he died in his true human nature, and God did not stop being God. The Father did not suffer on the cross.
+- **Phrase:** "his own tradition affirms one" — _The same question, not the same answer_
+  - ✅ **Is saying:** Both traditions affirm that the one God has an eternal Word, and both deny that this makes two gods &mdash; so the objection that an eternal Word with God is unthinkable is one Islam&rsquo;s own theology does not sustain.
+  - ⛔ **Not saying:** Not that the two &ldquo;Words&rdquo; are the same reality, or that the faiths agree about who God is. Islam&rsquo;s eternal Word is an impersonal attribute of God&rsquo;s speech; the Christian Word is God &mdash; a divine person, begotten not made, who became flesh (John 1:1, 14).
 - **Phrase:** "a communion of self-giving love" — _A communion of love &mdash; one God, not a committee_
   - ✅ **Is saying:** The Father, the Son and the Holy Spirit have loved one another from eternity &mdash; three persons who each fully know and love the others, so that love is what God eternally is, not something he took up when he made us.
   - ⛔ **Not saying:** Not three gods, and not three parts of God. Each person is fully God; there is one undivided divine being, one will, one power. And the Spirit is not merely the bond or atmosphere of that love &mdash; he is a person who loves and is loved.

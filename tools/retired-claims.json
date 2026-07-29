@@ -288,14 +288,21 @@
       "id": "quranic-title-compounds",
       "retired": "2026-07-29",
       "what": "Presenting 'Kalimatullah' or 'Ruh Allah' / 'Ruh min Allah' as titles the Qur'an itself applies to Jesus.",
-      "why": "Surah 4:171 has kalimatuhu ('His word') and ruhun minhu ('a spirit from Him'); 3:45 has kalimatin minhu. The compounds are post-Quranic — Ruh Allah is pervasive in hadith, not in the Qur'an, and kalimat Allah at 9:40 is not about Jesus. A Muslim who knows the text corrects this in one line, which is the same failure mode as the NWT/John 1:18 error: a sentence that hands the other side an easy win inside our own argument.",
+      "why": "Surah 4:171 has kalimatuhu ('His word') and ruhun minhu ('a spirit from Him'); 3:45 has kalimatin minhu. The compounds are post-Quranic — Ruh Allah is pervasive in hadith, not in the Qur'an, and kalimat Allah at 9:40 is not about Jesus. A Muslim who knows the text corrects this in one line, which is the same failure mode as the NWT/John 1:18 error: a sentence that hands the other side an easy win inside our own argument. ROUND-4 LESSON: the first patterns here were written around the three specific phrasings found on one tier and missed the general form entirely, so CI reported green while worldviews.html's FREE, INDEXED tier still said the Quran calls Jesus 'the Word of God, the Spirit of God' -- contradicting the same card's own deep tier. Patterns must catch the Quran-attribution CONTEXT, not one wording. Do not widen to a bare 'the Word of God': that is the ordinary Christian title for Christ and the net would cry wolf on every page.",
       "instead": "Say the Qur'an calls Jesus 'a word from Him' and 'a spirit from Him', and where the traditional title is worth naming, say plainly that Ruh Allah is a title Islamic tradition later drew from the verse rather than Quranic wording.",
       "patterns": [
         "calls Jesus Kalimatullah",
         "The title Ruh min Allah",
-        "title Kalimatullah . Word of God"
+        "title Kalimatullah . Word of God",
+        "the Messiah, the Word of God",
+        "called the Word of God, the Spirit of God",
+        "whom the Quran itself calls the Word of God",
+        "Quran itself calls the Word of God"
       ],
-      "allow": []
+      "allow": [
+        "library/islam-preservation.html"
+      ],
+      "note": "DEBT: library/islam-preservation.html still carries 'Jesus, whom the Quran itself calls the Word of God' in an orthonote anchor. worldviews.html was corrected 2026-07-29; the essay it links to was not, because editing a separately-certified essay would leave it un-gated and it could not be re-gated in that scope. Allow-listed so CI stays meaningful for NEW occurrences. Remove this allow as part of a gate round on that essay."
     }
   ]
 }
