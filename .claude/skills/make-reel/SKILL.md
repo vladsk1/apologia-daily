@@ -41,6 +41,43 @@ Tooling lives in `tools/reel/`:
    - No fabricated quotes/citations/stats. For a brand-new argument (not derived from an
      already-certified page), run it past the `apologia-orthodoxy` agent before delivering.
 
+1b. **Pick the gate tier — do NOT run the full stack by default.** Established 2026-07-29 after a
+   from-scratch reel cost five rounds and a from-scratch X thread another three. Re-checking a claim
+   the Evidence Library has already certified tells you nothing; what compression actually breaks is
+   different. Tier by what the reel *does*, not by how important it feels:
+
+   | The reel… | Gates |
+   |---|---|
+   | Compresses a certified page, no new claims | **source-diff + `apologia-orthodoxy`** |
+   | Adds a fact not in the source (date, number, name, quotation) | **+ `apologia-citations`, on that fact only** |
+   | Makes an inference the source does not make | **+ `apologia-argument`** |
+
+   **The source-diff is the one that matters and it is not a normal gate — do it yourself, first.**
+   Open the certified source beside the spec and check every claim appears there *and that the
+   compression preserved its bounds*. This is the failure mode: the essay says "the earliest
+   **recoverable** Jewish response"; a reel that says "the earliest answer" has silently dropped the
+   bound. The 2026-07-28 mastery audit found this across 63 pages — *"written without reading the
+   essays."*
+
+   **Three defects belong to the FORMAT and no content gate catches them. Check all three by eye:**
+   - **Typography carrying the wrong voice.** Gold `serifb` is the brand's *affirmation* type. A
+     quoted opponent's claim set in it reads as ours. Fence it in the `kicker`
+     (e.g. `MATTHEW 28 — THE COUNTER-STORY`), which cannot be cropped away.
+   - **Pronouns across a scene cut.** A frame is screenshotted alone and a crossfade is not a
+     paragraph. An unmoored "they"/"it" in a Christian post defaults to *the Gospels / the church*.
+     Name the subject on every frame that has one.
+   - **A fix landing in one layer only.** The `voiceover` and the `lines[]` are two surfaces. Change
+     one and you must change the other, or the concession survives in the audio and dies on the layer
+     people screenshot.
+
+   ⚠ **Entities render literally.** `gen_reel.py` and `gen_xcard.py` draw spec strings straight into
+   PIL with no HTML unescaping, and the kicker is letter-spaced per character. `&amp;` printed as
+   `Asked &amp;amp; Answered` on a title frame. **Use literal `&`.**
+
+   ⚠ **Check the runtime against the voiceover.** ~150 wpm: a 190-word `voiceover` needs ~76s. A reel
+   timed at 39s cannot carry its own narration. Budget ~2.0 words/sec of on-screen text
+   (`dur = 1.0 + words/2.0`, floor 3.5s) — 3.5+ words/sec is too fast to read.
+
 2. **Write the spec.** Copy `specs/was-jesus-a-muslim.json` as the template and adapt it.
    ~9–11 scenes, ~35–45s total. Structure that works: hook title → the claim → the pivot
    → 2–4 evidence beats (gold-highlight the payload line of each) → the dilemma/turn →

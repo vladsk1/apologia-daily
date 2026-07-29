@@ -8,7 +8,7 @@
   "theme": "navy",
   "fps": 30,
   "crossfade": 0.6,
-  "voiceover": "Saw an objection online? It has been asked before. For two thousand years the hard questions have been asked — and answered in writing. Open Matthew's Gospel, chapter twenty-eight. The earliest response Jesus' opponents left on record is already there: his disciples came by night and stole him away while we were asleep. Read it again. His opponents did not say the grave was full. They said someone had emptied it. And the church did not bury the charge. It wrote it down, and noted the charge was still being told — this story has been spread among the Jews to this day. Around AD 150, Justin Martyr records the same charge inside a long, public dialogue with a Jewish teacher — preserving the objection rather than omitting it. Around 248, Origen answers the philosopher Celsus point by point, across eight books. Twenty centuries, and in every generation someone answers in writing. Recording an objection is not the same as answering it well. Both are on the record. So bring the objection you saw. You will get the answer — and the skeptic who raised it first, often centuries ago.",
+  "voiceover": "Saw an objection online? It has been asked before. For two thousand years the hard questions have been asked — and answered in writing. Open Matthew's Gospel, chapter twenty-eight. The earliest response Jesus' opponents left on record is already there: his disciples came by night and stole him away while we were asleep. Read it again. His opponents did not say the grave was full. They said someone had emptied it. And the church did not bury the charge. It wrote it down, and noted the charge was still being told — this story has been spread among the Jews to this day. Around AD 150, Justin Martyr records the same charge inside a long, public dialogue with a Jewish teacher — preserving the objection rather than omitting it. Around 248, Origen answers the philosopher Celsus point by point, across eight books. Twenty centuries, and in every generation someone answers in writing. Recording an objection is not the same as answering it well. Both are on the record. So bring the objection you saw. You will get the answer — and, when the objection has a name on it, the skeptic who pressed it, often centuries before you did.",
   "source": "asked-and-answered.html (the AI Q&A feature -- NOT the 102 /answers/ pages). Historical anchors resolved against library/emptytomb.html:151-153 + fn 204 and ev-s2.html:160-162. Justin dated 'around AD 150' per emptytomb.html:153, which carries the footnote.",
   "scenes": [
     {
@@ -102,9 +102,15 @@
           "c": "gold",
           "f": "serifb",
           "s": 48
+        },
+        {
+          "t": "Matthew 28:13, ESV",
+          "c": "dim",
+          "f": "serif",
+          "s": 34
         }
       ],
-      "dur": 13.0
+      "dur": 14.5
     },
     {
       "lines": [
@@ -159,22 +165,34 @@
           "s": 18
         },
         {
-          "t": "“spread among the Jews",
+          "t": "“This story has been spread",
           "c": "gold",
           "f": "serifb",
-          "s": 52
+          "s": 48
         },
         {
-          "t": "to this day.”",
+          "t": "among the Jews to this day.”",
           "c": "gold",
           "f": "serifb",
-          "s": 52
+          "s": 48
+        },
+        {
+          "t": "Matthew 28:15, ESV",
+          "c": "dim",
+          "f": "serif",
+          "s": 34
         }
       ],
-      "dur": 15.0
+      "dur": 18.5
     },
     {
       "lines": [
+        {
+          "t": "AROUND AD 150",
+          "c": "dim",
+          "f": "serif",
+          "s": 36
+        },
         {
           "t": "Justin Martyr records",
           "c": "cream",
@@ -202,10 +220,16 @@
           "s": 54
         }
       ],
-      "dur": 9.0
+      "dur": 10.5
     },
     {
       "lines": [
+        {
+          "t": "AROUND AD 248",
+          "c": "dim",
+          "f": "serif",
+          "s": 36
+        },
         {
           "t": "Origen answers",
           "c": "cream",
@@ -233,7 +257,7 @@
           "s": 62
         }
       ],
-      "dur": 6.5
+      "dur": 8.0
     },
     {
       "lines": [
@@ -287,19 +311,23 @@
           "s": 54
         },
         {
-          "t": "and the skeptic who",
-          "c": "gold",
-          "f": "serifb",
-          "s": 56
+          "t": "and, when the objection",
+          "c": "cream",
+          "s": 50
         },
         {
-          "t": "raised it first.",
+          "t": "has a name on it,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "the skeptic who pressed it.",
           "c": "gold",
           "f": "serifb",
           "s": 56
         }
       ],
-      "dur": 9.5
+      "dur": 13.0
     },
     {
       "big": [
