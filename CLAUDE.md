@@ -507,6 +507,12 @@
 > - **Synoptic preexistence is a real gap (P2)** — the top find of the Tyndale batch; every
 >   preexistence argument on the site runs through Paul/Hebrews/John. Plus 10 further backlog rows
 >   from that batch, and the **John 17:22 "shared glory"** row (P3) from the video-research cross-check.
+> - **The CONTINUITY + COST argument for `library/islam-tawhid.html` (P2)** — the replacement the
+>   argument gate specified after `worldviews.html` card 14's "responsive love-language" survey claim
+>   was cut on 2026-07-29. Not a nice-to-have: the card now makes its metaphysical case and stops, and
+>   this is the step that carries it to the cross. Full brief + three mandatory guardrails in the
+>   backlog (the "Islam has no grace" overreach is the one that will get caught). Dual-consensus, and
+>   `apologia-citations` runs on the five Qur'anic references BEFORE drafting.
 > - **`ev-s5` argument card** for `library/miracles.html` is still TODO.
 > - Five Tyndale-batch article notes are **PARTIAL reads** — each states its own page range; they are
 >   not complete maps. PDFs are in the git-ignored `_pdfs/` for a later pass.
