@@ -392,6 +392,50 @@ test('retired-claims registry is well-formed and every entry says what to say in
   }
 });
 
+/* Executes the corpora recorded on claim-shaped entries.
+ *
+ * The `quranic-title-compounds` regex was mis-tuned FIVE times on 2026-07-29 — verb-anchored so it
+ * could not see "affirms that Jesus is"; a forward-only negation guard that fired on our own
+ * corrective; a gap class that stopped at an HTML tag; no "nowhere", so it flagged the correct
+ * refutation "The Qur'an nowhere calls Jesus the Word of God"; and finally bare adjacency, which
+ * fired on our own essay's orthodox "Christ, the eternal Word of God". Every one of those would
+ * have been caught in a second by cases that were, by then, already written down beside the regex
+ * in a prose note. A test case in a comment is not a test. This runs them.
+ *
+ * must_not_fire carries as much weight as must_fire: a net that flags our own refutations is a net
+ * that gets ignored, which is how check-stamp-integrity reached 59 unread flags. */
+test('retired-claims: every claim-shaped entry passes its recorded corpus, both directions', async () => {
+  const raw = JSON.parse(
+    readFileSync(new URL('../tools/retired-claims.json', import.meta.url), 'utf8'));
+
+  const withCorpus = raw.claims.filter((c) => c.corpus);
+  assert.ok(withCorpus.length > 0, 'no claim carries an executable corpus');
+
+  for (const c of raw.claims) {
+    assert.ok(c.netting === 'claim' || c.netting === 'phrase',
+      `claim ${c.id}: "netting" must be "claim" or "phrase"`);
+    // A claim-shaped net is the one that generalises, so it is the one that must be pinned.
+    if (c.netting === 'claim') {
+      assert.ok(c.corpus && Array.isArray(c.corpus.must_fire) && c.corpus.must_fire.length,
+        `claim ${c.id} is netting:"claim" but carries no corpus.must_fire`);
+      assert.ok(Array.isArray(c.corpus.must_not_fire) && c.corpus.must_not_fire.length,
+        `claim ${c.id}: corpus needs must_not_fire — a net that flags our own refutations gets ignored`);
+    }
+  }
+
+  for (const c of withCorpus) {
+    const res = c.patterns.map((p) => new RegExp(p, 'i'));
+    for (const t of c.corpus.must_fire) {
+      assert.ok(res.some((r) => r.test(t)),
+        `claim ${c.id}: pattern set MISSES a retired wording it must catch:\n    ${t}`);
+    }
+    for (const t of c.corpus.must_not_fire) {
+      assert.ok(!res.some((r) => r.test(t)),
+        `claim ${c.id}: pattern set FALSE-POSITIVES on text it must leave alone:\n    ${t}`);
+    }
+  }
+});
+
 test('retired-claims matcher catches a retired string and honours the allow list', async () => {
   const { findHits } = await import('../tools/check-retired-claims.mjs');
   // "never a strawman" is registered with an empty allow list.

@@ -14,7 +14,10 @@
     "as you can: a broad allow silently un-retires the claim.",
     "",
     "`instead` is not decoration. It is what the next person needs in order to fix a hit correctly",
-    "rather than just deleting the sentence."
+    "rather than just deleting the sentence.",
+    "",
+    "NETTING. Each claim declares `netting`: \"claim\" means the pattern is built from tokens + predication + tempered negation gaps and generalises across wordings; \"phrase\" means it is a literal blocklist that only catches the wordings someone happened to find. RULE: any claim retired on a FREE, INDEXED, deity/Trinity-tier surface must be claim-shaped. A phrase blocklist there reports green over live error -- that is not a hypothetical, it happened twice on 2026-07-29, the second time one day after the entry was written.",
+    "CORPUS. A claim-shaped entry carries `corpus.must_fire` / `corpus.must_not_fire`, and tests/content-integrity.test.mjs EXECUTES them. Recording test cases in a prose note is not a test: the quranic-title-compounds regex was mis-tuned five times, and every one of those mis-tunes would have been caught in one second by the cases already written down beside it. must_not_fire matters as much as must_fire -- a net that flags our own refutations gets ignored, which is how check-stamp-integrity reached 59 unread flags."
   ],
   "claims": [
     {
@@ -35,7 +38,8 @@
         "the title carries eternal weight for a book",
         "disagreeing only about whether that Word"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "ashari-formula-as-deity-predication",
@@ -46,7 +50,8 @@
       "patterns": [
         "neither God nor other than God"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "colwell-qualitative",
@@ -58,7 +63,8 @@
         "Colwell'?s? (rule|construction)[^.]{0,60}(marks|means|shows) qualit",
         "Colwell[^.]{0,40}qualitative, not indefinite"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "nwt-identical-construction",
@@ -75,7 +81,8 @@
         "ev-m-trinity_jw.html",
         "ev-m-john11.html",
         "ev-m-jesus_as_god_nt.html"
-      ]
+      ],
+      "netting": "phrase"
     },
     {
       "id": "pelach-only-to-God",
@@ -92,7 +99,8 @@
       ],
       "allow": [
         "ev-m-titles.html"
-      ]
+      ],
+      "netting": "phrase"
     },
     {
       "id": "son-of-man-never-disputed",
@@ -103,7 +111,8 @@
       "patterns": [
         "critics never accuse the church of inventing"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "only-formulation-keeps-all-data",
@@ -114,7 +123,8 @@
       "patterns": [
         "only formulation that keeps all the data"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "divine-identity-consensus",
@@ -129,7 +139,8 @@
         "recognized across critical scholarship",
         "recognised across scholarship"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "pre-nicene-floor-never-moves",
@@ -141,7 +152,8 @@
         "the floor that never moves",
         "expelled it almost unanimously"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "lds-christ-centred",
@@ -152,7 +164,8 @@
       "patterns": [
         "Christ-cent(re|er)ed lives"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "aseity-possessed-from-the-father",
@@ -163,7 +176,8 @@
       "patterns": [
         "underived aseity"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "logos-distinct-from-essence",
@@ -176,7 +190,8 @@
         "not simply identical to the essence",
         "Logos-shaped"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "objections-never-a-strawman",
@@ -187,7 +202,8 @@
       "patterns": [
         "never a strawman"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "nicaea-300-bishops",
@@ -198,7 +214,8 @@
       "patterns": [
         "(roughly|about|around) 300 bishops"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "unearned-praise-ashari",
@@ -211,7 +228,8 @@
         "marvel of careful thought",
         "model of theological seriousness"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "echad-composite-unity",
@@ -227,7 +245,8 @@
         "ev-m-shema.html",
         "ev-s6.html",
         "palace.html"
-      ]
+      ],
+      "netting": "phrase"
     },
     {
       "id": "stoner-odds",
@@ -247,7 +266,8 @@
         "answers/_data.json",
         "answers/how-many-prophecies-did-jesus-fulfill.html",
         "library/active-reading-data.json"
-      ]
+      ],
+      "netting": "phrase"
     },
     {
       "id": "isaiah53-fits-no-nation",
@@ -258,7 +278,8 @@
       "patterns": [
         "fits no nation"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "trinity-arithmetic-1x1x1",
@@ -270,7 +291,8 @@
         "1x1x1",
         "1 x 1 x 1"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "mihna-motive-christology",
@@ -282,7 +304,8 @@
         "vindicate the Christian doctrine of the uncreated Christ",
         "standard histories of the Mihna"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "quranic-title-compounds",
@@ -295,7 +318,33 @@
         "(?<!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t)[^.]{0,70})(?:(?:Qur'?an|Quran)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,55}(?:(?:calls?|called|calling|names?|naming|gives?|giving|titles?|describes?|refers? to|identifies|identified|designates?|labels?|speaks? of|honou?rs?|grants?|is|are|was|were|as)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,15}(?:Jesus|Isa|Christ|him)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,10}|(?:Jesus|Isa|Christ|him)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,15}(?:calls?|called|calling|names?|naming|gives?|giving|titles?|describes?|refers? to|identifies|identified|designates?|labels?|speaks? of|honou?rs?|grants?|is|are|was|were|as)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,10})(?:the |a )?(?:Word|Spirit) of (?:God|Allah)|(?:Jesus|Isa|Christ)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,30}(?:whom|which)?(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,4}the (?:Qur'?an|Quran)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,20}(?:calls?|called|calling|names?|naming|gives?|giving|titles?|describes?|refers? to|identifies|identified|designates?|labels?|speaks? of|honou?rs?|grants?|is|are|was|were|as)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,10}(?:the |a )?(?:Word|Spirit) of (?:God|Allah))(?![^.]{0,70}(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|no other|is not|does not))"
       ],
       "allow": [],
-      "note": "ALLOW LIST IS EMPTY, and should stay that way. library/islam-preservation.html was carried as a debt for one round, then simply corrected (four words) -- closing a hole costs less than documenting it. Nothing is allow-listed: the guard exempts genuine refutations on merit rather than by filename, which is what keeps the net honest.\nTUNING HISTORY -- this entry was mis-tuned THREE times in one day, each time in a different way, so read before editing. (1) Patterns written around the three phrasings found on one tier: silent while the free indexed tier still ran the compound. (2) Rewritten verb-anchored (calls|names|gives): silent on 'affirms that Jesus is', 'calling Jesus', and a bare flashcard list -- three live survivals on ev-s6.html, flashcards.html and ev-m-trinity_islam.html. (3) Compound-anchored with a forward-only negation guard: fired on our OWN corrective ('Do not say the Quran calls Jesus Kalimatullah'), because the negation precedes the compound. The guard is now BIDIRECTIONAL -- negation up to 60 chars before OR after. Anchor on the compound (it is the retired artefact and cannot appear innocently); never widen to a bare 'the Word of God', which is the ordinary Christian title for Christ; and (4) Guard written with [^.<], which stops at an HTML tag -- so it could not reach the 'never' on the other side of an </em> and fired on our own refutation again. The gap class is now [^.] (sentence-bounded, tag-permeable). Always test both directions AGAINST REAL MARKUP before committing -- a net that flags correct refutations gets ignored, which is how check-stamp-integrity reached 59 unread flags. (5) Pattern 2 was left forward-only and in one word order: it fired on 'the Quran never calls Jesus the Word of God' and was SILENT on 'Jesus, whom the Quran itself calls the Word of God' -- the exact phrasing then found live on library/islam-preservation.html. It now carries BOTH a sentence-level lookbehind and a verb-adjacent one, and handles the relative-clause order. Test set to preserve: it must fire on 'the Quran calls Jesus the Word of God' and on the whom-clause form, and stay silent on never/does not/do-not-say AND on 'the Quran itself is the Word of God', which is a true statement about the BOOK and must never be caught. (6) FOURTH mis-tune, and the last patch: the enumerated verb list could not see describes/refers to/identifies/is-called, had no 'Isa' (the word in card 04's own title), missed 'Word of Allah' entirely, and its negation guard had no 'nowhere' -- so it FIRED on the correct refutation 'The Qur'an nowhere calls Jesus the Word of God'. The verb list is now GONE: the pattern is Qur'an-token + Jesus-token + title adjacency, with TEMPERED gaps that may not themselves contain a negation (which is where 'nowhere' hid -- inside the match, invisible to both outer guards). Test corpus is 16 cases, both directions, and it must keep passing: it fires on describes/refers to/identifies/Isa/Word-of-Allah/is-the-Word forms, and stays silent on never/nowhere/does not/do-not-say/false, on 'the Quran itself is the Word of God' (true of the BOOK), and on 'For Islam the Quran is the Word of God. For Christianity, Jesus is the Word of God' (separate sentences, legitimate contrast). (7) Adjacency alone was still too loose: with no attribution link required it fired on our OWN essay's meta description, 'the parallel it opens to Christ, the eternal Word of God' -- orthodox confession, appositive, not a claim about the Qur'an. The title must now be PREDICATED of Jesus (an attribution verb or 'as' adjacent to the title, in either word order), not merely appositive to him. Corpus is 18 cases and both directions; keep it passing."
+      "note": "ALLOW LIST IS EMPTY, and should stay that way. library/islam-preservation.html was carried as a debt for one round, then simply corrected (four words) -- closing a hole costs less than documenting it. Nothing is allow-listed: the guard exempts genuine refutations on merit rather than by filename, which is what keeps the net honest.\nTUNING HISTORY -- this entry was mis-tuned THREE times in one day, each time in a different way, so read before editing. (1) Patterns written around the three phrasings found on one tier: silent while the free indexed tier still ran the compound. (2) Rewritten verb-anchored (calls|names|gives): silent on 'affirms that Jesus is', 'calling Jesus', and a bare flashcard list -- three live survivals on ev-s6.html, flashcards.html and ev-m-trinity_islam.html. (3) Compound-anchored with a forward-only negation guard: fired on our OWN corrective ('Do not say the Quran calls Jesus Kalimatullah'), because the negation precedes the compound. The guard is now BIDIRECTIONAL -- negation up to 60 chars before OR after. Anchor on the compound (it is the retired artefact and cannot appear innocently); never widen to a bare 'the Word of God', which is the ordinary Christian title for Christ; and (4) Guard written with [^.<], which stops at an HTML tag -- so it could not reach the 'never' on the other side of an </em> and fired on our own refutation again. The gap class is now [^.] (sentence-bounded, tag-permeable). Always test both directions AGAINST REAL MARKUP before committing -- a net that flags correct refutations gets ignored, which is how check-stamp-integrity reached 59 unread flags. (5) Pattern 2 was left forward-only and in one word order: it fired on 'the Quran never calls Jesus the Word of God' and was SILENT on 'Jesus, whom the Quran itself calls the Word of God' -- the exact phrasing then found live on library/islam-preservation.html. It now carries BOTH a sentence-level lookbehind and a verb-adjacent one, and handles the relative-clause order. Test set to preserve: it must fire on 'the Quran calls Jesus the Word of God' and on the whom-clause form, and stay silent on never/does not/do-not-say AND on 'the Quran itself is the Word of God', which is a true statement about the BOOK and must never be caught. (6) FOURTH mis-tune, and the last patch: the enumerated verb list could not see describes/refers to/identifies/is-called, had no 'Isa' (the word in card 04's own title), missed 'Word of Allah' entirely, and its negation guard had no 'nowhere' -- so it FIRED on the correct refutation 'The Qur'an nowhere calls Jesus the Word of God'. The verb list is now GONE: the pattern is Qur'an-token + Jesus-token + title adjacency, with TEMPERED gaps that may not themselves contain a negation (which is where 'nowhere' hid -- inside the match, invisible to both outer guards). Test corpus is 16 cases, both directions, and it must keep passing: it fires on describes/refers to/identifies/Isa/Word-of-Allah/is-the-Word forms, and stays silent on never/nowhere/does not/do-not-say/false, on 'the Quran itself is the Word of God' (true of the BOOK), and on 'For Islam the Quran is the Word of God. For Christianity, Jesus is the Word of God' (separate sentences, legitimate contrast). (7) Adjacency alone was still too loose: with no attribution link required it fired on our OWN essay's meta description, 'the parallel it opens to Christ, the eternal Word of God' -- orthodox confession, appositive, not a claim about the Qur'an. The title must now be PREDICATED of Jesus (an attribution verb or 'as' adjacent to the title, in either word order), not merely appositive to him. Corpus is 18 cases and both directions; keep it passing.",
+      "netting": "claim",
+      "corpus": {
+        "must_fire": [
+          "the Quran calls Jesus the Word of God",
+          "Jesus, whom the Quran itself calls the Word of God",
+          "the Quran describes Isa as the Word of God",
+          "the Quran refers to Jesus as the Word of Allah",
+          "In the Quran, Jesus is the Word of God",
+          "the Quran gives him the Spirit of God",
+          "The Quran affirms that Jesus is the Word of God (Kalimatullah)",
+          "the Quran identifies Jesus as the Spirit of God",
+          "1. Kalimatullah - Word of God (Surah 3:45, 4:171)"
+        ],
+        "must_not_fire": [
+          "The Qur'an nowhere calls Jesus the Word of God.",
+          "the Quran never calls Jesus the Word of God",
+          "the Quran does not call Jesus the Word of God",
+          "Do not say the Quran calls Jesus 'Kalimatullah' or 'Ruh Allah'",
+          "It is false that the Quran calls Jesus the Word of God",
+          "Muslims hold that the Quran itself is the Word of God",
+          "For Islam, the Quran is the Word of God. For Christianity, Jesus is the Word of God (John 1:1).",
+          "the Quran, which Muslims hold to be the eternal Word of God, denies that Jesus is divine",
+          "the parallel it opens to Christ, the eternal Word of God.",
+          "The compound Kalimatullah is never applied to Jesus in the Quran"
+        ]
+      }
     },
     {
       "id": "ashari-distinct-from-allah",
@@ -307,19 +356,38 @@
         "distinct from (?:Allah|God),? yet divine",
         "distinct from (?:Allah|God) yet (?:divine|eternal and divine)"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "phrase"
     },
     {
       "id": "quran-predicts-resurrection",
       "retired": "2026-07-29",
       "what": "Saying flatly that the Qur'an has Jesus predict his own death and resurrection (Surah 19:33).",
-      "why": "On the dominant Muslim reading 19:33 places the death in the future -- a natural death at the end of history -- and the raising at the GENERAL resurrection. So it is not a prediction of Jesus's resurrection in the sense a Christian reader will hear. Stated flatly it is corrected in one line. Found live 2026-07-29 on flashcards.html (the memorised layer) and in three worldviews.html headings/subtitles.",
+      "why": "On the dominant Muslim reading 19:33 places the death in the future -- a natural death at the end of history -- and the raising at the GENERAL resurrection. So it is not a prediction of Jesus's resurrection in the sense a Christian reader will hear. Stated flatly it is corrected in one line. Found live 2026-07-29 on flashcards.html (the memorised layer) and in three worldviews.html headings/subtitles. REBUILT 2026-07-29 after the neutrality lens proved the first version was ALREADY LEAKING, one day after it was written, on the very file it was created to clean: worldviews.html said 'The parallel with the Christian account of the resurrection is impossible to miss' and neither literal pattern could see it. The two phrasings it did carry were simply the ones that happened to be found. It is now token + verb + object with tempered negation gaps, and it requires a Qur'an anchor -- without one it would fire on the true and orthodox Christian statement that Jesus predicted his own resurrection.",
       "instead": "'speaks of his own death and being raised (19:33) -- though the dominant Muslim reading places both in the future, at a natural death and the general resurrection.'",
       "patterns": [
-        "predicts? his own death and resurrection",
-        "19:33 on Jesus's resurrection"
+        "(?<!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form)[^.]{0,70})(?:Qur'?an|Quran|Quranic|19:33|Surah 19)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form))[^.]){0,70}(?:predicts?|predicting|foretells?|foretold)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form))[^.]){0,40}(?:resurrection|rising again)(?![^.]{0,70}(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form|no other|is not|does not))",
+        "(?<!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form)[^.]{0,70})(?:predicts?|predicting|foretells?|foretold)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form))[^.]){0,40}(?:resurrection|rising again)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form))[^.]){0,40}(?:Qur'?an|Quran|Quranic|19:33|Surah 19)(?![^.]{0,70}(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form|no other|is not|does not))",
+        "(?<!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form)[^.]{0,70})parallel with the Christian(?: account of the)? resurrection(?![^.]{0,70}(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form|no other|is not|does not))",
+        "(?<!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form)[^.]{0,70})19:33 on Jesus'?s resurrection(?![^.]{0,70}(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|verbal|shared form|no other|is not|does not))"
       ],
-      "allow": []
+      "allow": [],
+      "netting": "claim",
+      "corpus": {
+        "must_fire": [
+          "predicts his own death and resurrection (Surah 19:33)",
+          "the Quran has Jesus predict his own resurrection",
+          "The parallel with the Christian account of the resurrection is impossible to miss.",
+          "and Surah 19:33 on Jesus's resurrection"
+        ],
+        "must_not_fire": [
+          "Jesus predicts his own death and resurrection in Mark 8:31",
+          "speaks of his own death and being raised (Surah 19:33) - though the dominant Muslim reading places both in the future",
+          "So this is a shared form of words, not a Quranic resurrection of Christ",
+          "a raising at the general resurrection, which Islam expects of everyone",
+          "The verbal parallel with Christian resurrection language is striking"
+        ]
+      }
     }
   ]
 }

@@ -478,9 +478,12 @@
 >   structural framing** from `library/islam-eternalword.html`, not merely patched. That wording is
 >   ported, not freshly gated — so both HTML files are now edited past their stamps and will show on
 >   `check-stamp-integrity.mjs` until argument + orthodoxy re-run on them.
-> - ⚠ **`flashcards.html` carries NO `content-review` stamp and is outside `CONTENT_PATTERNS`** — the
->   same hole as `pocket-cards.html`. It is the memorised layer and it was never gated. The stamp and
->   the `CONTENT_PATTERNS` entry must land in the same commit, or CI fails on the missing stamp.
+> - ⚠ **THREE served surfaces carry NO `content-review` stamp and sit outside `CONTENT_PATTERNS`:
+>   `pocket-cards.html`, `flashcards.html` and `explain-it-back.html`.** All three are the memorised /
+>   recall layer, and none has ever been gated. `explain-it-back.html` was found 2026-07-29 only because
+>   the rebuilt `quran-predicts-resurrection` net caught a retired claim on it — the phrase blocklist had
+>   missed it because it said "predicts his death" rather than "predicts his own death". For each: the
+>   stamp and the `CONTENT_PATTERNS` entry must land in the same commit, or CI fails on the missing stamp.
 > - **`library/islam-preservation.html` was edited 2026-07-29** (four words: "calls the Word of God" →
 >   "calls 'a word from Him'"), closing the last allow entry in `tools/retired-claims.json` rather than
 >   carrying it — a documented hole is still a hole. **`quranic-title-compounds` now has an EMPTY allow
