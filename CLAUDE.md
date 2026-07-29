@@ -83,6 +83,21 @@
 > very category** it tells Christians is incoherent. **A mastery page may legitimately compress a SIBLING
 > essay.** Now fixed: the page distinguishes *not lexically* from *structurally* in the key-move box, the
 > routing line and the flashcard, and links to the right essay.
+> ⭐ **NEW TOOL — `tools/check-retired-claims.mjs` + `tools/retired-claims.json` (19 claims, CI-blocking).**
+> When a certified essay retires an argument, nothing used to stop it surviving elsewhere. Seeding the
+> registry with everything retired on 07-28/29 **immediately found two more live survivals** nobody had
+> looked at (`library/active-reading-data.json` and `daily-args.json`). Each entry records what was
+> retired, why, the catching regexes, an `allow` list — and **what to say INSTEAD**, which is the field
+> that matters, because a future session hitting a flag must fix the sentence rather than delete it.
+> **When you retire a claim, add it here.** Run `--list` to read the registry. ⚠ Three tuning lessons are
+> in the commit (`da07a9d`): keep patterns narrow (the first *pelach* net caught the legitimate "worship
+> reserved for God alone" on 18 pages — a net that cries wolf gets ignored, which is exactly how
+> `check-stamp-integrity` reached 59 unread flags); `content-review` stamps legitimately *quote* retired
+> wording, so they are stripped before matching; and the module **must** guard its CLI body, since
+> importing it once ran `process.exit(0)` and silently collapsed the suite from 90 tests to 76, all green.
+> ⭐ **STANDING RULE NOW BINDING IN THE PIPELINE: a fix pass re-opens the gate.** See the boxed rule after
+> step 8 of the mandatory content pipeline. The orthodoxy gate is "the last check before deploy" — on
+> 2026-07-29 it was second-to-last **five times**, and the next lens found something every time.
 > ⚠⚠⚠ **THE FOURTH LESSON, AND IT IS THE ONE THAT KEEPS COSTING MONEY: THE FIX MUST REACH THE GAME AND QUIZ
 > LAYER TOO.** Fixing the essay and the mastery page was not enough. **`daily-mix.html` was running the
 > retired lexical bridge as the GRADED CORRECT ANSWER** — including *"the Logos structure"* and *"something
@@ -549,6 +564,34 @@ in order. Do not deploy content that has skipped a stage.
    push/teaser copy) can't host the ＊ box, so a candidate there routes to a **wording** fix
    instead. See the `orthonote` STANDARD section below and the registry `docs/clarifiers.md`.
 8. **Deploy** (see deploy workflow below).
+
+> ### ⚠ THE GATE RUNS ON WHAT YOU SHIP, NOT ON WHAT YOU FIX — A FIX PASS RE-OPENS THE GATE.
+>
+> Step 7 says "always the last check before deploy." On **2026-07-29 it was second-to-last
+> five times in one session**, and the cost was exact: a gate reported, fixes were applied,
+> the fixed text shipped **without being gated**, and the next lens to look found something
+> every time. Twice the defect was *introduced by the fix itself* — including a factual claim
+> about the New World Translation invented while correcting a different factual claim, in the
+> very sentence warning the reader that a well-read Witness would catch it.
+>
+> **So: when a gate returns findings and you apply them, that is new, un-gated content.**
+> Re-run the gate on the corrected text before deploy. Dual-consensus tiers re-run both
+> lenses. It costs one extra cycle per fix round; on 2026-07-29 it would have caught five
+> defects before they were live instead of after.
+>
+> **A fix pass cannot be its own verifier.** Re-reading your own edit is not a gate — you
+> read what you meant, not what is on the page. Four rounds of self-checking missed every one
+> of the defects an independent lens then caught in a single pass.
+>
+> **And the fix must reach every surface, not just the essay.** One retired Islam argument
+> was found alive on **seven**: the essay, the mastery page, its flashcard deck, a quiz in
+> `daily-mix.html` where it was the **graded correct answer**, two `worldviews.html` cards,
+> `library/active-reading-data.json`, and `daily-args.json`. That is what
+> **`tools/check-retired-claims.mjs`** now exists for — when you retire a claim, add it to
+> `tools/retired-claims.json` (with *what to say instead*) and CI blocks it from reappearing
+> anywhere. **Nine parts make up a mastery page and four are invisible to a doctrinal gate:**
+> `ARG_PREMISES` (the rubric a reader is graded against, and the share-card text), the `cards`
+> deck, the mock-scorer `checks`, and the drill model answers. Diff those *first*.
 
 Read-only agents (citations, argument, orthodoxy) report; a human-supervised step applies
 their fixes. The orthodoxy agent is an automated gate, **not** a substitute for eventual
