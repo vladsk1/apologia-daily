@@ -748,7 +748,7 @@ function renderMockScore(txtRaw){
 /* ---- flashcards (generated from this argument) ---- */
 const cards = [
   {q:'Name the triad that structures this case.', a:'Names, works, worship - Jesus receives the divine names in YHWH quotations, does what only God does, and accepts the worship angels refuse.'},
-  {q:'Give one names example with the freight loaded.', a:'Romans 10:13 - Joels everyone who calls on the name of YHWH will be saved - applied to Jesus. Philippians 2 gives him Isaiahs every-knee text.'},
+  {q:'Give one names example with the freight loaded.', a:'Romans 10:13 - Joel\'s everyone who calls on the name of YHWH will be saved - applied to Jesus. Philippians 2 gives him Isaiahs every-knee text.'},
   {q:'Reply to: John 1:1 should read a god.', a:'The article-less predicate marks quality - the Word was God by nature. Verse 3 seals it: all created things came through him, so he is not in the created column.'},
   {q:'Reply to: the Father is greater than I.', a:'Two registers on purpose - truly man, so he prays and hungers; truly God, so he creates and forgives. Greater is the sent ones deference, beside I and the Father are one.'},
   {q:'Reply to: Nicaea invented the deity.', a:'Ignatius calls Jesus our God in 107; Pliny in 112 reports Christians singing a hymn to Christ as to a god. Nicaea defined terms for a worship already approaching three centuries old.'}
@@ -875,7 +875,7 @@ _accs.forEach(function(d, i){
 /* ---- share-card: render this argument as a branded image ---- */
 function _shareSetMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
 function shareArgCard(btn){
-  var prem = (typeof ARG_PREMISES !== 'undefined') ? ARG_PREMISES : KALAM_PREMISES;
+  var prem = (typeof ARG_PREMISES !== 'undefined') ? ARG_PREMISES : [];
   document.getElementById('scTitle').textContent = document.querySelector('h1').textContent;
   document.getElementById('scP1').textContent = prem[0];
   document.getElementById('scP2').textContent = prem[1];

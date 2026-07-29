@@ -729,7 +729,7 @@ const cards = [
   {q:'What did conversion cost Paul?', a:'Status under Gamaliel, safety, and life: five whippings, three beatings, stoning, prison, prison - listed in his own undisputed letters; the execution comes from strong early tradition, not from Paul.'},
   {q:'Reply to: it was guilt-driven psychology.', a:'Paul reports zealous good conscience, not guilt - blameless under the law. The theory invents the very data it needs.'},
   {q:'Reply to: he only saw a light, not a body.', a:'As a Pharisee, resurrection meant body - he argues it at length in 1 Corinthians 15 and lists his appearance alongside those to Peter and the Twelve.'},
-  {q:'Why do the Acts variations not undermine the case?', a:'Minor retelling differences mark genuine testimony; the core is constant, and the primary evidence is Pauls own letters anyway.'}
+  {q:'Why do the Acts variations not undermine the case?', a:'Minor retelling differences mark genuine testimony; the core is constant, and the primary evidence is Paul\'s own letters anyway.'}
 ];
 let ci = 0;
 function renderCard(){
@@ -853,7 +853,7 @@ _accs.forEach(function(d, i){
 /* ---- share-card: render this argument as a branded image ---- */
 function _shareSetMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
 function shareArgCard(btn){
-  var prem = (typeof ARG_PREMISES !== 'undefined') ? ARG_PREMISES : KALAM_PREMISES;
+  var prem = (typeof ARG_PREMISES !== 'undefined') ? ARG_PREMISES : [];
   document.getElementById('scTitle').textContent = document.querySelector('h1').textContent;
   document.getElementById('scP1').textContent = prem[0];
   document.getElementById('scP2').textContent = prem[1];

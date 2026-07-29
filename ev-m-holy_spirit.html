@@ -655,7 +655,7 @@ function setCheck(id, on){
 /* ---- argument premises used to ground the AI scoring ---- */
 var ARG_PREMISES = [
   'The New Testament ascribes to the Spirit acts only a person can do - speaking, teaching, willing, interceding; he is lied to, grieved, and blasphemed - so the Spirit is a who, not a force.',
-  'The same Spirit is given what belongs to God alone - lying to him is lying to God (Acts 5:3-4), the divine attributes, coordinate rank in the one baptismal name and benediction, and speech that is Gods own speech.',
+  'The same Spirit is given what belongs to God alone - lying to him is lying to God (Acts 5:3-4), the divine attributes, coordinate rank in the one baptismal name and benediction, and speech that is God\'s own speech.',
   'Therefore the Holy Spirit is a distinct divine person, fully God, co-equal with the Father and the Son - confessed at Constantinople in 381.'
 ];
 
@@ -855,7 +855,7 @@ _accs.forEach(function(d, i){
 /* ---- share-card: render this argument as a branded image ---- */
 function _shareSetMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
 function shareArgCard(btn){
-  var prem = (typeof ARG_PREMISES !== 'undefined') ? ARG_PREMISES : KALAM_PREMISES;
+  var prem = (typeof ARG_PREMISES !== 'undefined') ? ARG_PREMISES : [];
   document.getElementById('scTitle').textContent = document.querySelector('h1').textContent;
   document.getElementById('scP1').textContent = prem[0];
   document.getElementById('scP2').textContent = prem[1];

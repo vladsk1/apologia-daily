@@ -737,7 +737,7 @@ function renderMockScore(txtRaw){
 /* ---- flashcards (generated from this argument) ---- */
 const cards = [
   {q:'Does echad in the Shema mean a compound unity?', a:'No, and we should say so plainly. Echad is the ordinary Hebrew numeral; the plurality in one flesh comes from the noun. Only the negative survives - it does not forbid internal complexity. The weight of the argument is on 1 Cor 8:6, not on the lexicon.'},
-  {q:'What does Paul do in 1 Cor 8:6?', a:'Restates the Shema with Jesus inside it - distributing the creeds two YHWH-titles, theos and kyrios, between Father and Son within the one.'},
+  {q:'What does Paul do in 1 Cor 8:6?', a:'Restates the Shema with Jesus inside it - distributing the creed\'s two YHWH-titles, theos and kyrios, between Father and Son within the one.'},
   {q:'Why can one Lord not mean a lesser being?', a:'Kyrios in the quoted creed IS the divine name, and the chapter opposes many gods and many lords. A created creator-lord would be the idolatry Paul is refuting.'},
   {q:'Reply to: through whom = mere instrument.', a:'Isaiah 44:24 - YHWH ALONE stretched out the heavens. The one through whom ALL things came cannot be among the things.'},
   {q:'Why does WHO said it matter?', a:'A first-generation Pharisee handling Judaisms most protected sentence - not a fourth-century council. The Trinity is monotheism kept.'}
@@ -864,7 +864,7 @@ _accs.forEach(function(d, i){
 /* ---- share-card: render this argument as a branded image ---- */
 function _shareSetMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
 function shareArgCard(btn){
-  var prem = (typeof ARG_PREMISES !== 'undefined') ? ARG_PREMISES : KALAM_PREMISES;
+  var prem = (typeof ARG_PREMISES !== 'undefined') ? ARG_PREMISES : [];
   document.getElementById('scTitle').textContent = document.querySelector('h1').textContent;
   document.getElementById('scP1').textContent = prem[0];
   document.getElementById('scP2').textContent = prem[1];

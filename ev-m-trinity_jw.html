@@ -654,7 +654,7 @@ function setCheck(id, on){
 /* ---- argument premises used to ground the AI scoring ---- */
 var ARG_PREMISES = [
   'The Watchtower teaches Jesus is Michael - Jehovahs first creation - resting on the NWTs John 1:1 and Colossians 1:15.',
-  'The position fails grammar, logic and worship - including by the New World Translations own renderings.',
+  'The position fails grammar, logic and worship - including by the New World the translation\'s own renderings.',
   'Therefore created-angel Christology contradicts the texts it cites - their own Bible makes the case.'
 ];
 
@@ -727,7 +727,7 @@ function renderMockScore(txtRaw){
 /* ---- flashcards (generated from this argument) ---- */
 const cards = [
   {q:'Name the three tests the Watchtower position fails.', a:'GRAMMAR - a god is rejected scholarship and applied inconsistently; LOGIC - John 1:3 and Col 1:16, the maker of all is not made; WORSHIP - angels refuse what Jesus accepts.'},
-  {q:'What is the added-word problem in Colossians 1?', a:'The NWT inserts OTHER four times - all OTHER things - with no Greek behind it, visible in the Watchtowers own Kingdom Interlinear. The doctrine required editing the verse.'},
+  {q:'What is the added-word problem in Colossians 1?', a:'The NWT inserts OTHER four times - all OTHER things - with no Greek behind it, visible in the the Watchtower\'s own Kingdom Interlinear. The doctrine required editing the verse.'},
   {q:'What does firstborn mean in Col 1:15?', a:'Preeminent HEIR - Psalm 89:27 appoints last-born David as firstborn; Israel is Gods firstborn without being created first. And v16 gives the reason: FOR by him all things were created.'},
   {q:'Run the worship test.', a:'Rev 22:9 - an angel REFUSES worship: worship God. Heb 1:6 - all Gods angels worship the SON. John 20:28 - my Lord and my God, blessed not corrected. Creatures refuse it; he accepts it.'},
   {q:'Reply to: the Father is greater than I.', a:'Spoken by the Son INCARNATE - made lower than the angels FOR A LITTLE WHILE (Heb 2:9). Greater is position, not nature - same Gospel: I and the Father are one.'}
@@ -854,7 +854,7 @@ _accs.forEach(function(d, i){
 /* ---- share-card: render this argument as a branded image ---- */
 function _shareSetMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
 function shareArgCard(btn){
-  var prem = (typeof ARG_PREMISES !== 'undefined') ? ARG_PREMISES : KALAM_PREMISES;
+  var prem = (typeof ARG_PREMISES !== 'undefined') ? ARG_PREMISES : [];
   document.getElementById('scTitle').textContent = document.querySelector('h1').textContent;
   document.getElementById('scP1').textContent = prem[0];
   document.getElementById('scP2').textContent = prem[1];
