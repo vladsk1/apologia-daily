@@ -1,0 +1,165 @@
+{
+  "reviewed": {
+    "argument": null,
+    "orthodoxy": null,
+    "by": "PENDING — gates not yet run on this spec"
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.7,
+  "source": "library/typology.html",
+  "voiceover": "A boy carries wood up a mountain. His father carries the fire and the knife. And the boy asks the question the whole Bible will spend two thousand years answering: the fire and the wood are here — but where is the lamb? His father says: God will provide himself a lamb. And then the story stops. No lamb is named. Centuries later, Israel is told to kill a lamb and mark the doorposts with its blood, and death passes over the house. Later still, three offices are set apart by anointing — the prophet who speaks God's word, the priest who mediates his presence, the king who rules his people. Israel kept them strictly apart. No prophet spoke the final word. No priest offered the final sacrifice. No king reigned forever. Then a man from Nazareth walks into the story, and the three converge in one person — the Prophet greater than Moses, the Priest after the order of Melchizedek, the King of David's everlasting line. And notice: the pattern never merely repeats. It escalates. Isaac is spared; the Son is not. The Passover lamb covers one household for one night; the Lamb of God takes away the sin of the world. Be honest about how this is read. It is read backward — in the light of the resurrection, not decoded in advance. It is not a probability proof, and the case for Christ begins at the empty tomb, not here. But once you have that, this is what you find: a library written across a millennium by people who never met, and it turns out to have one center. Not a forecast that came true. A symphony that finished. Isaac's question waited two thousand years. Then John the Baptist pointed and said: Behold, the Lamb of God.",
+  "scenes": [
+    {
+      "dur": 5.4,
+      "big": [
+        { "t": "Where is", "c": "cream", "s": 112 },
+        { "t": "the lamb?", "c": "gold", "s": 112 }
+      ],
+      "sub": [
+        { "t": "One question. Two thousand years.", "c": "dim", "f": "serif", "s": 42 }
+      ]
+    },
+    {
+      "kicker": "GENESIS 22",
+      "dur": 6.2,
+      "lines": [
+        { "t": "A boy carries the wood", "c": "cream", "s": 58 },
+        { "t": "up the mountain.", "c": "cream", "s": 58 },
+        { "t": "", "s": 22 },
+        { "t": "He asks his father:", "c": "dim", "s": 48 },
+        { "t": "“The fire and the wood —", "c": "gold", "f": "serifb", "s": 56 },
+        { "t": "but where is the lamb?”", "c": "gold", "f": "serifb", "s": 56 }
+      ]
+    },
+    {
+      "kicker": "THE ANSWER IS DEFERRED",
+      "dur": 6.0,
+      "lines": [
+        { "t": "“God will provide", "c": "cream", "s": 60 },
+        { "t": "himself a lamb.”", "c": "cream", "s": 60 },
+        { "t": "", "s": 22 },
+        { "t": "And then the story stops.", "c": "dim", "s": 50 },
+        { "t": "No lamb is named.", "c": "gold", "f": "serifb", "s": 58 }
+      ]
+    },
+    {
+      "kicker": "EXODUS 12",
+      "dur": 6.0,
+      "lines": [
+        { "t": "A lamb is killed.", "c": "cream", "s": 60 },
+        { "t": "Its blood marks the door.", "c": "cream", "s": 58 },
+        { "t": "", "s": 22 },
+        { "t": "And death", "c": "dim", "s": 50 },
+        { "t": "passes over the house.", "c": "gold", "f": "serifb", "s": 58 }
+      ]
+    },
+    {
+      "kicker": "THREE OFFICES, KEPT APART",
+      "dur": 6.6,
+      "lines": [
+        { "t": "The prophet spoke God’s word.", "c": "cream", "s": 52 },
+        { "t": "The priest mediated his presence.", "c": "cream", "s": 50 },
+        { "t": "The king ruled his people.", "c": "cream", "s": 52 },
+        { "t": "", "s": 22 },
+        { "t": "Israel held them", "c": "dim", "s": 48 },
+        { "t": "strictly apart.", "c": "gold", "f": "serifb", "s": 58 }
+      ]
+    },
+    {
+      "kicker": "AND NONE WAS ENOUGH",
+      "dur": 6.4,
+      "lines": [
+        { "t": "No prophet spoke", "c": "cream", "s": 56 },
+        { "t": "the final word.", "c": "cream", "s": 56 },
+        { "t": "No priest offered", "c": "cream", "s": 56 },
+        { "t": "the final sacrifice.", "c": "cream", "s": 56 },
+        { "t": "No king", "c": "dim", "s": 52 },
+        { "t": "reigned forever.", "c": "gold", "f": "serifb", "s": 58 }
+      ]
+    },
+    {
+      "kicker": "THEN THEY CONVERGE",
+      "dur": 6.6,
+      "lines": [
+        { "t": "The Prophet greater than Moses.", "c": "cream", "s": 50 },
+        { "t": "The Priest after Melchizedek.", "c": "cream", "s": 50 },
+        { "t": "The King of David’s line.", "c": "cream", "s": 50 },
+        { "t": "", "s": 22 },
+        { "t": "What Israel distributed among many,", "c": "dim", "s": 44 },
+        { "t": "one person holds together.", "c": "gold", "f": "serifb", "s": 54 }
+      ]
+    },
+    {
+      "kicker": "IT NEVER MERELY REPEATS",
+      "dur": 6.4,
+      "lines": [
+        { "t": "Isaac is spared.", "c": "cream", "s": 60 },
+        { "t": "The Son is not.", "c": "cream", "s": 60 },
+        { "t": "", "s": 22 },
+        { "t": "The Passover lamb covers", "c": "dim", "s": 46 },
+        { "t": "one house for one night.", "c": "dim", "s": 46 },
+        { "t": "The Lamb of God takes away", "c": "gold", "f": "serifb", "s": 50 },
+        { "t": "the sin of the world.", "c": "gold", "f": "serifb", "s": 50 }
+      ]
+    },
+    {
+      "kicker": "HOW THIS IS READ",
+      "dur": 6.8,
+      "lines": [
+        { "t": "Backward — in the light", "c": "cream", "s": 54 },
+        { "t": "of the resurrection.", "c": "cream", "s": 54 },
+        { "t": "", "s": 22 },
+        { "t": "Not a probability proof.", "c": "dim", "s": 48 },
+        { "t": "The case for Christ begins", "c": "dim", "s": 46 },
+        { "t": "at the empty tomb, not here.", "c": "gold", "f": "serifb", "s": 50 }
+      ]
+    },
+    {
+      "kicker": "AND THEN YOU SEE IT",
+      "dur": 6.6,
+      "lines": [
+        { "t": "A library written across", "c": "cream", "s": 54 },
+        { "t": "a millennium, by people", "c": "cream", "s": 54 },
+        { "t": "who never met —", "c": "cream", "s": 54 },
+        { "t": "", "s": 22 },
+        { "t": "and it has one center.", "c": "gold", "f": "serifb", "s": 58 }
+      ]
+    },
+    {
+      "kicker": "NOT A FORECAST",
+      "dur": 6.2,
+      "lines": [
+        { "t": "A theme sounded quietly", "c": "cream", "s": 54 },
+        { "t": "in the opening bars", "c": "cream", "s": 54 },
+        { "t": "returns, transfigured,", "c": "cream", "s": 54 },
+        { "t": "in the finale.", "c": "cream", "s": 54 },
+        { "t": "", "s": 22 },
+        { "t": "A symphony that finished.", "c": "gold", "f": "serifb", "s": 56 }
+      ]
+    },
+    {
+      "kicker": "THE QUESTION, ANSWERED",
+      "dur": 6.8,
+      "lines": [
+        { "t": "Isaac asked where the lamb was.", "c": "cream", "s": 50 },
+        { "t": "", "s": 22 },
+        { "t": "Two thousand years later,", "c": "dim", "s": 48 },
+        { "t": "John the Baptist pointed:", "c": "dim", "s": 48 },
+        { "t": "“Behold, the Lamb of God.”", "c": "gold", "f": "serifb", "s": 56 }
+      ]
+    },
+    {
+      "dur": 5.6,
+      "big": [
+        { "t": "One story.", "c": "cream", "s": 100 },
+        { "t": "One Author.", "c": "gold", "s": 110 }
+      ],
+      "sub": [
+        { "t": "The full case at", "c": "dim", "f": "serif", "s": 42 },
+        { "t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52 }
+      ]
+    }
+  ]
+}
