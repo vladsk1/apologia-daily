@@ -1,0 +1,139 @@
+{
+  "reviewed": {"argument": null, "orthodoxy": null, "by": "ROUND 3 — fixes applied from argument, orthodoxy x2, neutrality, citations. NOT YET RE-GATED. Deity-of-Christ tier: needs apologia-orthodoxy + apologia-neutrality on THIS text before any stamp."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "voiceover": "A prisoner stood before the high priest. The witnesses had contradicted each other and the case was falling apart. Then the high priest asked him directly: are you the Christ, the Son of the Blessed? He answered: I am, and you will see the Son of Man seated at the right hand of Power, and coming with the clouds of heaven. He did not invent that language. He was fusing two texts at once — Daniel 7 and Psalm 110. Centuries before that trial, Daniel had seen a vision: with the clouds of heaven there came one like a son of man. In the Hebrew Bible, that is God's own imagery. He makes the clouds his chariot, says Psalm 104. The LORD is riding on a swift cloud, says Isaiah. And Daniel watches someone else arrive that way — not a second God, and not a creature either. One God, and the Son is God. Then Daniel says what the figure receives: dominion and glory and a kingdom, and all peoples, nations, and languages serve him. His dominion is an everlasting dominion. And that phrase — an everlasting dominion — is word for word what the book of Daniel says of the Most High himself. This is not a creature promoted. What the Son receives as man, he never lacked as God: truly God and truly man. And the earliest surviving Jewish readings of that vision took the figure to be one person, a coming messiah. Jesus was not inventing a reading. He was claiming one. Son of Man was his own name for himself, about eighty times in the Gospels, almost always on his own lips. And on the night it mattered most, he took the one Daniel saw on the clouds and said: that is me. The high priest did not ask what he meant. He tore his robes and called it blasphemy. No single title settles the question on its own; the case is cumulative. But this is the language Israel reserved for her God, and Jesus took it as his own — because it was. Those clouds were always his.",
+  "source": "library/titles.html · ev-m-titles.html",
+  "scenes": [
+    { "dur": 3.6,
+      "big": [ {"t": "The most", "c": "cream", "s": 104}, {"t": "dangerous", "c": "gold", "s": 116}, {"t": "sentence", "c": "cream", "s": 104}, {"t": "Jesus said.", "c": "cream", "s": 104} ],
+      "sub": [ {"t": "Mark 14 · Daniel 7", "c": "dim", "f": "serif", "s": 44} ] },
+
+    { "kicker": "THE TRIAL", "dur": 6.0, "lines": [
+      {"t": "The witnesses had", "c": "cream", "s": 54},
+      {"t": "contradicted each other.", "c": "cream", "s": 54},
+      {"t": "The case was falling apart.", "c": "dim", "s": 50},
+      {"t": "", "s": 22},
+      {"t": "Then the high priest asked:", "c": "cream", "s": 50},
+      {"t": "“Are you the Christ,", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "the Son of the Blessed?”", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "kicker": "THE ANSWER", "dur": 6.2, "lines": [
+      {"t": "“I am —", "c": "cream", "s": 58},
+      {"t": "", "s": 18},
+      {"t": "and you will see", "c": "cream", "s": 54},
+      {"t": "the Son of Man seated", "c": "cream", "s": 54},
+      {"t": "at the right hand of Power,", "c": "cream", "s": 54},
+      {"t": "and coming with", "c": "cream", "s": 54},
+      {"t": "the clouds of heaven.”", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "HE WAS QUOTING SCRIPTURE", "dur": 4.6, "lines": [
+      {"t": "He did not invent", "c": "cream", "s": 58},
+      {"t": "that language.", "c": "cream", "s": 58},
+      {"t": "", "s": 22},
+      {"t": "He is fusing Daniel 7", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "and Psalm 110 — at once.", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "kicker": "CENTURIES BEFORE THE TRIAL", "dur": 5.4, "lines": [
+      {"t": "Daniel had seen a vision:", "c": "cream", "s": 54},
+      {"t": "", "s": 22},
+      {"t": "“with the clouds of heaven", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "there came one", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "like a son of man.”", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "", "s": 16},
+      {"t": "Daniel 7:13", "c": "dim", "s": 40} ] },
+
+    { "kicker": "WHOSE CLOUDS?", "dur": 5.8, "lines": [
+      {"t": "In the Hebrew Bible,", "c": "cream", "s": 56},
+      {"t": "that is God's own imagery.", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "", "s": 22},
+      {"t": "“He makes the clouds", "c": "cream", "s": 52},
+      {"t": "his chariot.”  Psalm 104:3", "c": "cream", "s": 50},
+      {"t": "", "s": 14},
+      {"t": "“The LORD is riding", "c": "cream", "s": 52},
+      {"t": "on a swift cloud.”  Isaiah 19:1", "c": "cream", "s": 48} ] },
+
+    { "kicker": "AND YET", "dur": 6.4, "lines": [
+      {"t": "Daniel watches", "c": "cream", "s": 60},
+      {"t": "someone else", "c": "gold", "f": "serifb", "s": 72},
+      {"t": "arrive that way.", "c": "cream", "s": 60},
+      {"t": "", "s": 22},
+      {"t": "Not a second God.", "c": "dim", "s": 46},
+      {"t": "Not a creature either.", "c": "dim", "s": 46},
+      {"t": "One God — and the Son is God.", "c": "dim", "s": 44} ] },
+
+    { "kicker": "WHAT THE VISION SAYS NEXT", "dur": 6.0, "lines": [
+      {"t": "“To him was given", "c": "cream", "s": 54},
+      {"t": "dominion and glory", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "and a kingdom,", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "", "s": 18},
+      {"t": "that all peoples, nations,", "c": "cream", "s": 50},
+      {"t": "and languages", "c": "cream", "s": 50},
+      {"t": "should serve him.”", "c": "cream", "s": 52} ] },
+
+    { "kicker": "AND IT NEVER ENDS", "dur": 5.0, "lines": [
+      {"t": "“His dominion is an", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "everlasting dominion.”", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "", "s": 20},
+      {"t": "Daniel 7:14", "c": "dim", "s": 40} ] },
+
+    { "kicker": "NOW COMPARE", "dur": 6.2, "lines": [
+      {"t": "Word for word —", "c": "cream", "s": 56},
+      {"t": "“an everlasting dominion” —", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "is what the book of Daniel", "c": "cream", "s": 50},
+      {"t": "says of the Most High.", "c": "cream", "s": 50},
+      {"t": "", "s": 20},
+      {"t": "Daniel 4:34", "c": "dim", "s": 40} ] },
+
+    { "kicker": "TWO THINGS AT ONCE", "dur": 5.8, "lines": [
+      {"t": "Not a creature promoted.", "c": "cream", "s": 54},
+      {"t": "", "s": 20},
+      {"t": "What the Son receives as man", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "he never lacked as God.", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "", "s": 16},
+      {"t": "Truly God and truly man.", "c": "dim", "s": 44} ] },
+
+    { "kicker": "HOW JEWS READ IT", "dur": 5.6, "lines": [
+      {"t": "The earliest surviving", "c": "cream", "s": 52},
+      {"t": "Jewish readings of that vision", "c": "cream", "s": 48},
+      {"t": "took the figure to be", "c": "cream", "s": 52},
+      {"t": "one person:", "c": "cream", "s": 52},
+      {"t": "", "s": 18},
+      {"t": "a coming messiah.", "c": "gold", "f": "serifb", "s": 64},
+      {"t": "", "s": 14},
+      {"t": "1 Enoch · 4 Ezra · later rabbinic", "c": "dim", "s": 34} ] },
+
+    { "kicker": "THE NIGHT IT MATTERED", "dur": 6.2, "lines": [
+      {"t": "“Son of Man” was his own", "c": "cream", "s": 52},
+      {"t": "name for himself — about", "c": "cream", "s": 52},
+      {"t": "eighty times in the Gospels.", "c": "cream", "s": 48},
+      {"t": "", "s": 22},
+      {"t": "That night he took the one", "c": "cream", "s": 48},
+      {"t": "Daniel saw on the clouds", "c": "cream", "s": 48},
+      {"t": "and said: that is me.", "c": "gold", "f": "serifb", "s": 60} ] },
+
+    { "kicker": "THE REACTION", "dur": 6.0, "lines": [
+      {"t": "The high priest did not", "c": "cream", "s": 52},
+      {"t": "ask what he meant.", "c": "cream", "s": 52},
+      {"t": "", "s": 22},
+      {"t": "He tore his robes", "c": "gold", "f": "serifb", "s": 66},
+      {"t": "and called it blasphemy.", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "", "s": 16},
+      {"t": "Mark 14:63–64", "c": "dim", "s": 40} ] },
+
+    { "kicker": "STATED HONESTLY", "dur": 5.8, "lines": [
+      {"t": "One title doesn't", "c": "cream", "s": 52},
+      {"t": "settle the question.", "c": "cream", "s": 52},
+      {"t": "", "s": 18},
+      {"t": "But this is the language", "c": "cream", "s": 48},
+      {"t": "Israel reserved for her God —", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "and Jesus took it as his own.", "c": "cream", "s": 46} ] },
+
+    { "dur": 4.8,
+      "big": [ {"t": "Those clouds", "c": "cream", "s": 96}, {"t": "were always his.", "c": "gold", "s": 96} ],
+      "sub": [ {"t": "The full case, fully sourced, at", "c": "dim", "f": "serif", "s": 40},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52} ] }
+  ]
+}
