@@ -4,7 +4,7 @@
   "theme": "navy",
   "fps": 30,
   "crossfade": 0.6,
-  "voiceover": "For a long time, one name in the Bible had no evidence outside it. Daniel chapter five tells of a feast in Babylon, a hand writing on the wall, and a king named Belshazzar. The problem was that no source outside the Bible knew him. The Babylonian king lists ended the dynasty with a king called Nabonidus. The classical historians agreed. There was no Belshazzar in the Babylonian records. So an earlier generation of critics drew the obvious conclusion: the author of Daniel did not know Babylon. He had got Babylon's kings wrong. It was treated as one of the telltale blunders — a mistake showing the book was written late, by someone far from the events. Then the cuneiform was read. A cylinder of Nabonidus names his eldest son. Bel-shar-usur. Belshazzar. And the Babylonian records say something stranger still. For years Nabonidus was not even in Babylon. He was at Tema, in Arabia, and he entrusted the kingship to his son. So Belshazzar was real, and he was ruling — but he was not the king. His father was. He was second, and he stayed second. Now go back to Daniel five. Belshazzar offers a reward to anyone who can read the writing. And what he offers is oddly specific: to be made the third ruler in the kingdom. Not second. Third. On the likely sense of the Aramaic, that is because the first two places were already taken — by Nabonidus, and by Belshazzar himself. An odd detail turns out to fit a political arrangement nobody knew about. Be careful what this does and does not show. It establishes the man and his authority. It does not, on its own, settle when Daniel was written, or the events it narrates. Archaeology does not prove the Bible, and anyone who tells you it does is overselling. What it does is this: on detail after detail, it shows the writers knew their world. And a source that reliable deserves to be weighed, not waved away.",
+  "voiceover": "For a long time, one name in the Bible had no evidence outside it. Daniel chapter five tells of a feast in Babylon, a hand writing on the wall, and a king named Belshazzar. The problem was that no source outside the Bible knew him. The Babylonian king lists ended the dynasty with a king called Nabonidus. The classical historians agreed. There was no Belshazzar in the Babylonian records. So an earlier generation of critics concluded: the author of Daniel did not know Babylon. He had got Babylon's kings wrong. It was treated as one of the telltale blunders — a mistake showing the book was written late, by someone far from the events. Then the cuneiform was read. A cylinder of Nabonidus names his eldest son. Bel-shar-usur. Belshazzar. And the Babylonian records say something stranger still. For years Nabonidus was not even in Babylon. He was at Tema, in Arabia, and he entrusted the kingship to his son. So Belshazzar was real, and he was ruling — but the crown was his father's. He was second, and he stayed second. Now go back to Daniel five. Belshazzar offers a reward to anyone who can read the writing. And what he offers is oddly specific: to be made the third ruler in the kingdom. Not second. Third. On the likely sense of the Aramaic, that is because the first two places were already taken — by Nabonidus, and by Belshazzar himself. An odd detail turns out to fit a political arrangement lost until the tablets were read. Be careful what this does and does not show. It establishes the man and his authority. It does not, on its own, settle when Daniel was written, or the events it narrates. Archaeology does not prove the Bible, and anyone who tells you it does is overselling. What it does is this: on detail after detail, it shows the writers knew their world. And a source that reliable deserves to be weighed, not waved away.",
   "source": "library/archaeology.html",
   "scenes": [
     { "dur": 3.8,
@@ -72,8 +72,8 @@
       {"t": "Belshazzar was real,", "c": "cream", "s": 52},
       {"t": "and he was ruling —", "c": "cream", "s": 52},
       {"t": "", "s": 20},
-      {"t": "but he was not the king.", "c": "gold", "f": "serifb", "s": 54},
-      {"t": "His father was.", "c": "cream", "s": 50},
+      {"t": "but the crown", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "was his father's.", "c": "gold", "f": "serifb", "s": 58},
       {"t": "", "s": 16},
       {"t": "He was second,", "c": "cream", "s": 48},
       {"t": "and he stayed second.", "c": "cream", "s": 48} ] },
@@ -106,8 +106,8 @@
       {"t": "and Belshazzar himself.", "c": "gold", "f": "serifb", "s": 54},
       {"t": "", "s": 20},
       {"t": "An odd detail turns out to fit", "c": "cream", "s": 44},
-      {"t": "a political arrangement", "c": "cream", "s": 46},
-      {"t": "nobody knew about.", "c": "cream", "s": 46} ] },
+      {"t": "a political arrangement lost", "c": "cream", "s": 44},
+      {"t": "until the tablets were read.", "c": "cream", "s": 44} ] },
 
     { "kicker": "STATED HONESTLY", "dur": 6.6, "lines": [
       {"t": "Be careful what this", "c": "cream", "s": 50},
