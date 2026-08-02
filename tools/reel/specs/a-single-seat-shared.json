@@ -1,0 +1,129 @@
+{
+  "reviewed": {"argument": null, "orthodoxy": null, "by": "PENDING — gates not yet run. DEITY-OF-CHRIST TIER: this needs DUAL CONSENSUS (apologia-orthodoxy AND apologia-neutrality) plus apologia-argument before any stamp. SOURCE IS library/hands.html, THE CERTIFIED ESSAY. STANDING CONSTRAINTS: (1) HANDS IS A CUMULATIVE CASE, NOT FIVE PROOFS. The essay says so explicitly and its FAQ repeats it: HANDS 'works as a cumulative case rather than a single proof text'. S is ONE FINGER OF FIVE and the reel must say so, or it claims for the Seat what only the five together carry. That is scope, not concession. (2) THE AGENCY / SHALIACH OBJECTION IS THE ESSAY'S OWN STRONGEST, and reels are positive-case-only so it is NOT voiced here. But the reel must not walk into it: never say merely that Jesus SITS AT God's right hand, which is exactly what the agency reading grants (the exalted Messiah of Psalm 110, the man at God's side). The load-bearing fact is the SINGLE SHARED THRONE of Revelation 22:1,3 — 'an agent represents the sender; he does not share the sender's throne'. Keep the Revelation beat; it is what the Psalm 110 beat alone cannot do. (3) STATE THE SECOND TEMPLE FRAME POSITIVELY, as the essay does: ruling from the one throne was an IDENTITY MARKER, not a job description a creature could be hired for. 'The function presupposes the identity.' Never present this as a rebuttal of an objection the reel has not voiced. (4) 'The most quoted Old Testament verse in the New Testament' is the essay's claim about Psalm 110:1 — keep it verbatim and let apologia-citations verify it. (5) The acronym is Bowman and Komoszewski's; the underlying divine-identity logic is Bauckham's and Hurtado's. Credit correctly and do not present HANDS as scholarship in its own right. (6) Do not claim the throne texts prove Chalcedon. The essay concedes 'you cannot read Chalcedon's metaphysics straight off the page of Mark'. (7) PACING is deliberately generous per the owner; gen_reel.py OVERLAPS crossfades so each real reading window is dur minus 0.6 except the last. (8) DIFF THE CARDS AGAINST THE VOICEOVER FIRST, before reading either for sense — on the previous reel every one of six card/VO divergences made the CARD less hedged than the VOICE."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "voiceover": "There is one seat in the universe that nobody may sit in. Not an angel. Not a prophet. Not the highest creature ever made. Robert Bowman and Ed Komoszewski built a memory device for how the New Testament presents Jesus. Five things that belong to God alone, arranged as the five fingers of a hand. Honors. Attributes. Names. Deeds. And Seat. This is the fifth finger. It starts with a line from the Psalms. The LORD says to my Lord — sit at my right hand. Psalm 110, verse 1. And here is the thing about that verse: it is the most quoted Old Testament verse in the whole New Testament. The first Christians could not stop reaching for it. Because to sit on God's throne is not to be near God's rule. It is to share it. But Revelation pushes further than the Psalm ever does. In its closing vision there is a river, flowing from — and now read the words slowly — the throne of God and of the Lamb. Not two thrones side by side. One. A single seat, shared. And a first-century Jew would feel the weight of that immediately. Second Temple Judaism did not define God mainly by a list of attributes. It defined him by identity — by what marks him out. He alone created all things. He alone rules all things. He alone bears the divine name. He alone is worshipped. So ruling from the one throne was never a job description a creature could be hired for. It was an identity marker. Now hold this the way the framework intends. The Seat is one finger of five, and HANDS works as a cumulative case, not as five separate proofs. But put the hand together and the New Testament, read in its own first-century Jewish context, presents Jesus of Nazareth as sharing the honors, the attributes, the names, the deeds and the throne of the one God of Israel. Early. Everywhere. And on purpose.",
+  "source": "library/hands.html",
+  "scenes": [
+    { "dur": 5.6,
+      "big": [ {"t": "There is one seat", "c": "cream", "s": 76}, {"t": "in the universe", "c": "cream", "s": 76}, {"t": "nobody may", "c": "cream", "s": 76}, {"t": "sit in.", "c": "gold", "s": 104} ],
+      "sub": [ {"t": "Not an angel. Not a prophet.", "c": "dim", "f": "serif", "s": 40},
+               {"t": "Not the highest creature ever made.", "c": "dim", "f": "serif", "s": 40} ] },
+
+    { "kicker": "A MEMORY DEVICE", "dur": 8.6, "lines": [
+      {"t": "Robert Bowman and", "c": "cream", "s": 50},
+      {"t": "Ed Komoszewski mapped", "c": "cream", "s": 48},
+      {"t": "how the New Testament", "c": "cream", "s": 48},
+      {"t": "presents Jesus:", "c": "cream", "s": 50},
+      {"t": "", "s": 20},
+      {"t": "five things that", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "belong to God alone.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "FIVE FINGERS OF A HAND", "dur": 9.4, "lines": [
+      {"t": "Honors.", "c": "cream", "s": 58},
+      {"t": "Attributes.", "c": "cream", "s": 58},
+      {"t": "Names.", "c": "cream", "s": 58},
+      {"t": "Deeds.", "c": "cream", "s": 58},
+      {"t": "", "s": 20},
+      {"t": "And Seat.", "c": "gold", "f": "serifb", "s": 78} ] },
+
+    { "kicker": "THIS IS THE FIFTH", "dur": 7.6, "lines": [
+      {"t": "It starts with a line", "c": "cream", "s": 52},
+      {"t": "from the Psalms.", "c": "cream", "s": 52},
+      {"t": "", "s": 22},
+      {"t": "“The LORD says to my Lord —", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "sit at my right hand.”", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "Psalm 110:1", "c": "dim", "s": 40} ] },
+
+    { "kicker": "AND HERE IS THE THING", "dur": 9.4, "lines": [
+      {"t": "That verse is the", "c": "cream", "s": 50},
+      {"t": "most quoted", "c": "gold", "f": "serifb", "s": 62},
+      {"t": "Old Testament verse", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "in the whole", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "New Testament.", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "", "s": 18},
+      {"t": "The first Christians", "c": "cream", "s": 46},
+      {"t": "could not stop reaching for it.", "c": "cream", "s": 42} ] },
+
+    { "kicker": "BECAUSE OF WHAT SITTING MEANS", "dur": 8.0, "lines": [
+      {"t": "To sit on God's throne", "c": "cream", "s": 50},
+      {"t": "is not to be", "c": "cream", "s": 52},
+      {"t": "near God's rule.", "c": "cream", "s": 52},
+      {"t": "", "s": 22},
+      {"t": "It is to share it.", "c": "gold", "f": "serifb", "s": 62} ] },
+
+    { "kicker": "BUT REVELATION GOES FURTHER", "dur": 9.4, "lines": [
+      {"t": "In its closing vision", "c": "cream", "s": 50},
+      {"t": "there is a river,", "c": "cream", "s": 52},
+      {"t": "flowing from —", "c": "cream", "s": 52},
+      {"t": "", "s": 20},
+      {"t": "and now read", "c": "cream", "s": 48},
+      {"t": "the words slowly —", "c": "cream", "s": 48} ] },
+
+    { "kicker": "REVELATION 22:1, 3", "dur": 8.6, "lines": [
+      {"t": "“the throne", "c": "gold", "f": "serifb", "s": 66},
+      {"t": "of God", "c": "gold", "f": "serifb", "s": 66},
+      {"t": "and of the Lamb.”", "c": "gold", "f": "serifb", "s": 66} ] },
+
+    { "kicker": "READ IT AGAIN", "dur": 8.6, "lines": [
+      {"t": "Not two thrones", "c": "cream", "s": 56},
+      {"t": "side by side.", "c": "cream", "s": 56},
+      {"t": "", "s": 22},
+      {"t": "One.", "c": "gold", "f": "serifb", "s": 96},
+      {"t": "", "s": 16},
+      {"t": "A single seat, shared.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "WHY A JEW WOULD FEEL THAT", "dur": 10.4, "lines": [
+      {"t": "Second Temple Judaism", "c": "cream", "s": 48},
+      {"t": "did not define God mainly", "c": "cream", "s": 46},
+      {"t": "by a list of attributes.", "c": "cream", "s": 48},
+      {"t": "", "s": 20},
+      {"t": "It defined him", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "by identity —", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "by what marks him out.", "c": "cream", "s": 48} ] },
+
+    { "kicker": "HE ALONE", "dur": 10.0, "lines": [
+      {"t": "created all things.", "c": "cream", "s": 52},
+      {"t": "", "s": 16},
+      {"t": "rules all things.", "c": "cream", "s": 52},
+      {"t": "", "s": 16},
+      {"t": "bears the divine name.", "c": "cream", "s": 52},
+      {"t": "", "s": 16},
+      {"t": "is worshipped.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "SO", "dur": 10.0, "lines": [
+      {"t": "Ruling from the one throne", "c": "cream", "s": 46},
+      {"t": "was never a job description", "c": "cream", "s": 44},
+      {"t": "a creature could be hired for.", "c": "cream", "s": 44},
+      {"t": "", "s": 20},
+      {"t": "It was an", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "identity marker.", "c": "gold", "f": "serifb", "s": 62} ] },
+
+    { "kicker": "HOLD IT AS THEY INTENDED", "dur": 9.4, "lines": [
+      {"t": "The Seat is one finger", "c": "cream", "s": 48},
+      {"t": "of five, and HANDS works", "c": "cream", "s": 46},
+      {"t": "as a cumulative case —", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "", "s": 18},
+      {"t": "not as five", "c": "cream", "s": 48},
+      {"t": "separate proofs.", "c": "cream", "s": 50} ] },
+
+    { "kicker": "BUT PUT THE HAND TOGETHER", "dur": 11.4, "lines": [
+      {"t": "and the New Testament,", "c": "cream", "s": 48},
+      {"t": "read in its own first-century", "c": "cream", "s": 42},
+      {"t": "Jewish context, presents", "c": "cream", "s": 46},
+      {"t": "Jesus of Nazareth as sharing", "c": "cream", "s": 44},
+      {"t": "", "s": 18},
+      {"t": "the honors, the attributes,", "c": "gold", "f": "serifb", "s": 44},
+      {"t": "the names, the deeds", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "and the throne", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "of the one God of Israel.", "c": "gold", "f": "serifb", "s": 46} ] },
+
+    { "dur": 7.6,
+      "big": [ {"t": "Early.", "c": "cream", "s": 92}, {"t": "Everywhere.", "c": "cream", "s": 84}, {"t": "And on purpose.", "c": "gold", "s": 88} ],
+      "sub": [ {"t": "The full case, and its limits, at", "c": "dim", "f": "serif", "s": 38},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}
