@@ -1,0 +1,126 @@
+{
+  "reviewed": {"argument": null, "orthodoxy": null, "by": "PENDING — gates not yet run. STANDING CONSTRAINTS, and constraint (1) is the reason this reel is shaped the way it is: (1) THE ECLIPSE IS THE CRITICS' OWN COUNTER-EXAMPLE, NOT OUR EVIDENCE. library/privileged.html records that total eclipses are 'a temporary accident of cosmic history' — the Moon recedes about 3.8cm a year, so they were impossible in the deep past and cease in a few hundred million years. So the eclipse may be used as the DOORWAY to the idea and as a true story about discovery; it must NEVER be run as evidence that the arrangement was designed, or the reel is built on the one plank the essay says is weakest. The reel's own word for it is the essay's: 'a coincidence of geometry'. (2) TWO LAYERS, AND THE REEL MUST STATE THE DISTINCTION IN OUR OWN VOICE. The astronomy is ordinary checkable science; the design inference is a philosophical step drawn from it, not a result of it, and it is genuinely contested. This is the same shape as the CLAUDE.md fine-tuning rule: the data is conceded, the design conclusion is not. Never 'scientists agree the universe is designed'. (3) Gonzalez and Richards are explicit that they reason to the best explanation rather than deducing God from a telescope — scene 13 puts that in THEIR mouths, which is both accurate and the strongest available form of the honest bound. (4) The reel makes NO claim that the correlation in Premise 1 is established; the essay says its strength 'is exactly where the science is debated, and that no single example settles it'. Do not add a second example to make it look cumulative — two examples is not a pattern and the essay warns that a list assembled after the fact is vulnerable. (5) Helium: Janssen observed the yellow line at a total eclipse in India in 1868; Lockyer independently confirmed it and, with Frankland, traced it to an element unknown on Earth. Do not compress this into 'Janssen discovered helium'. (6) The 1919 expeditions were Eddington's, to Principe and Sobral, on 29 May 1919, and they vindicated general relativity — not 'proved Einstein right about everything'."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "voiceover": "The sun is about four hundred times wider than the moon. It also happens to sit about four hundred times further away. So from the ground, the two discs look almost exactly the same size — and once or so a year, somewhere on Earth, the moon slides in front of the sun and the sky goes dark at midday. It is a coincidence of geometry. It is also, as it turns out, scientifically priceless. Because the moon blots out the blinding surface of the sun while leaving its faint outer atmosphere exposed — and that is the only way anyone could read it. In 1868, watching a total eclipse from India, Pierre Janssen caught a strange yellow line in the light of a solar prominence. Norman Lockyer confirmed it, and with Edward Frankland traced it to an element nobody had ever found on Earth. They named it after the sun. Helium. Then on the twenty-ninth of May 1919, Arthur Eddington sent expeditions to Principe and to Sobral, and measured starlight bending around the darkened sun. It was the observation that vindicated Einstein's general relativity. The same arrangement that makes our eclipses possible turned out to be a window for discovery. And that is the seed of a striking idea: what if the conditions that make a place a good home for life are also, again and again, the conditions that make it a good observatory? Be careful how you hold that. There are two layers here, and almost every argument about this turns on keeping them apart. The astronomy is ordinary, checkable science. The further step — that this pairing is best explained by a mind — is a philosophical inference drawn from the science, not a result of it, and it is genuinely contested. Even the authors who made the case say they are reasoning to the best explanation, not deducing God from a telescope. So this is not a proof. It is a question worth asking honestly: we live in a universe that lets us look.",
+  "source": "library/privileged.html",
+  "scenes": [
+    { "dur": 4.4,
+      "big": [ {"t": "The sun is", "c": "cream", "s": 82}, {"t": "400×", "c": "gold", "s": 132}, {"t": "wider than the moon.", "c": "cream", "s": 72} ],
+      "sub": [ {"t": "And 400× further away.", "c": "dim", "f": "serif", "s": 44} ] },
+
+    { "kicker": "A COINCIDENCE OF GEOMETRY", "dur": 6.6, "lines": [
+      {"t": "So from the ground,", "c": "cream", "s": 54},
+      {"t": "the two discs look", "c": "cream", "s": 54},
+      {"t": "almost exactly", "c": "gold", "f": "serifb", "s": 60},
+      {"t": "the same size.", "c": "gold", "f": "serifb", "s": 60} ] },
+
+    { "kicker": "ONCE OR SO A YEAR", "dur": 6.6, "lines": [
+      {"t": "somewhere on Earth,", "c": "cream", "s": 52},
+      {"t": "the moon slides in front", "c": "cream", "s": 50},
+      {"t": "of the sun —", "c": "cream", "s": 52},
+      {"t": "", "s": 20},
+      {"t": "and the sky goes dark", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "at midday.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "BEAUTIFUL", "dur": 5.6, "lines": [
+      {"t": "It is a coincidence", "c": "cream", "s": 56},
+      {"t": "of geometry.", "c": "cream", "s": 56},
+      {"t": "", "s": 22},
+      {"t": "It is also, as it turns out,", "c": "cream", "s": 48},
+      {"t": "scientifically priceless.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "WHY", "dur": 7.0, "lines": [
+      {"t": "The moon blots out the", "c": "cream", "s": 50},
+      {"t": "blinding surface of the sun —", "c": "cream", "s": 46},
+      {"t": "", "s": 20},
+      {"t": "and leaves its faint", "c": "cream", "s": 50},
+      {"t": "outer atmosphere exposed.", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "That is the only way", "c": "cream", "s": 46},
+      {"t": "anyone could read it.", "c": "cream", "s": 46} ] },
+
+    { "kicker": "INDIA, 1868", "dur": 7.4, "lines": [
+      {"t": "Watching a total eclipse,", "c": "cream", "s": 50},
+      {"t": "Pierre Janssen caught", "c": "cream", "s": 50},
+      {"t": "a strange yellow line", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "in the light of the sun.", "c": "cream", "s": 50} ] },
+
+    { "kicker": "NOBODY HAD SEEN IT", "dur": 7.4, "lines": [
+      {"t": "Norman Lockyer confirmed it,", "c": "cream", "s": 44},
+      {"t": "and with Edward Frankland", "c": "cream", "s": 46},
+      {"t": "traced it to an element", "c": "cream", "s": 48},
+      {"t": "nobody had ever", "c": "cream", "s": 48},
+      {"t": "found on Earth.", "c": "cream", "s": 48} ] },
+
+    { "kicker": "SO THEY NAMED IT", "dur": 5.6, "lines": [
+      {"t": "after the sun.", "c": "cream", "s": 58},
+      {"t": "", "s": 22},
+      {"t": "Helium.", "c": "gold", "f": "serifb", "s": 96} ] },
+
+    { "kicker": "29 MAY 1919", "dur": 7.6, "lines": [
+      {"t": "Arthur Eddington sent", "c": "cream", "s": 50},
+      {"t": "expeditions to Príncipe", "c": "cream", "s": 50},
+      {"t": "and to Sobral —", "c": "cream", "s": 52},
+      {"t": "", "s": 20},
+      {"t": "and measured starlight", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "bending around", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "the darkened sun.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "THAT WAS THE ONE", "dur": 6.0, "lines": [
+      {"t": "It was the observation", "c": "cream", "s": 50},
+      {"t": "that vindicated Einstein's", "c": "cream", "s": 48},
+      {"t": "general relativity.", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "kicker": "NOTICE WHAT HAPPENED", "dur": 7.0, "lines": [
+      {"t": "The same arrangement", "c": "cream", "s": 50},
+      {"t": "that makes our", "c": "cream", "s": 50},
+      {"t": "eclipses possible", "c": "cream", "s": 52},
+      {"t": "", "s": 20},
+      {"t": "turned out to be", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "a window for discovery.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "AND THE SEED OF AN IDEA", "dur": 8.6, "lines": [
+      {"t": "What if the conditions", "c": "cream", "s": 50},
+      {"t": "that make a place a good", "c": "cream", "s": 48},
+      {"t": "home for life", "c": "cream", "s": 52},
+      {"t": "", "s": 18},
+      {"t": "are also, again and again,", "c": "cream", "s": 48},
+      {"t": "the conditions that make it", "c": "cream", "s": 46},
+      {"t": "a good observatory?", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "NOW BE CAREFUL", "dur": 10.4, "lines": [
+      {"t": "There are two layers here,", "c": "cream", "s": 48},
+      {"t": "and almost every argument", "c": "cream", "s": 46},
+      {"t": "about this turns on", "c": "cream", "s": 48},
+      {"t": "keeping them apart.", "c": "cream", "s": 48},
+      {"t": "", "s": 18},
+      {"t": "The astronomy is ordinary,", "c": "cream", "s": 46},
+      {"t": "checkable science.", "c": "cream", "s": 48} ] },
+
+    { "kicker": "THE SECOND LAYER", "dur": 10.4, "lines": [
+      {"t": "That this pairing is best", "c": "cream", "s": 46},
+      {"t": "explained by a mind", "c": "cream", "s": 48},
+      {"t": "is a philosophical inference", "c": "cream", "s": 44},
+      {"t": "drawn from the science —", "c": "cream", "s": 46},
+      {"t": "not a result of it.", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "", "s": 16},
+      {"t": "And it is genuinely contested.", "c": "cream", "s": 44} ] },
+
+    { "kicker": "THEIR OWN WORDS", "dur": 7.6, "lines": [
+      {"t": "Even the authors who", "c": "cream", "s": 48},
+      {"t": "made the case say they are", "c": "cream", "s": 46},
+      {"t": "reasoning to the", "c": "cream", "s": 48},
+      {"t": "best explanation —", "c": "cream", "s": 48},
+      {"t": "", "s": 16},
+      {"t": "not deducing God", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "from a telescope.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "dur": 6.6,
+      "big": [ {"t": "So it is not a proof.", "c": "cream", "s": 62}, {"t": "It is a question", "c": "cream", "s": 78}, {"t": "worth asking:", "c": "cream", "s": 78}, {"t": "we live in a universe", "c": "gold", "s": 62}, {"t": "that lets us look.", "c": "gold", "s": 62} ],
+      "sub": [ {"t": "The full case, and its limits, at", "c": "dim", "f": "serif", "s": 38},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}
