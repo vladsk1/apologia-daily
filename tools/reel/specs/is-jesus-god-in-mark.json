@@ -1,0 +1,82 @@
+{
+  "reviewed": {"argument": "2026-08-02", "orthodoxy": "2026-08-02", "by": "deity-of-Christ = dual-consensus: apologia-orthodoxy CLEAN + apologia-neutrality no-BREAK; apologia-argument SOUND (threads the ego-eimi trap - rests on the Dan 7 + Ps 110 throne combination, not bare 'I am'); apologia-citations 0 errors (all Mark quotes verbatim ESV/NIV, 'Son of the Blessed' + Mark 14:62 'I am' confirmed Markan). Applied gate fixes: dropped the unearned 'only' in the sea line (Ps 107:29 allusion kept), softened 'Only God does these things' -> 'This is who God alone is' (cumulative not per-item proof), 'share God's throne' -> 'God's own throne' (essay-fenced phrase), 'enemies heard' -> 'how the room reacted' (disciples/centurion aren't enemies). Grounded in library/jesus_claims.html + jesus_as_god_nt.html."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "voiceover": "Is Jesus God? Open Mark — the earliest Gospel — and watch how the room reacted. In chapter two, a paralyzed man is lowered to him, and Jesus says, 'Son, your sins are forgiven.' The scribes are stunned: 'Who can forgive sins but God alone?' They knew exactly what he was claiming. He calls himself Lord even of the Sabbath — the day God himself made holy. He speaks to a storm and the sea goes still, and the disciples ask, 'Who then is this, that even the wind and the sea obey him?' — for in the Psalms, it is the LORD who stills the sea. Then, on trial for his life, the high priest asks, 'Are you the Christ, the Son of the Blessed?' Jesus answers, 'I am — and you will see the Son of Man at the right hand of Power, coming with the clouds of heaven.' The high priest tears his robes: 'You have heard the blasphemy.' A claim to God's own throne. And at the cross, a Roman centurion watches him die and says, 'Truly this man was the Son of God.' Forgiving sins. Lord of the Sabbath. Stilling the sea. Seated at God's right hand. This is who God alone is. Mark's Jesus is the Lord.",
+  "source": "library/jesus_claims.html",
+  "scenes": [
+    { "dur": 3.8,
+      "big": [ {"t": "Is Jesus God?", "c": "gold", "s": 108}, {"t": "Open Mark.", "c": "cream", "s": 108} ],
+      "sub": [ {"t": "The earliest Gospel —", "c": "dim", "f": "serif", "s": 44},
+               {"t": "watch how the room reacted.", "c": "dim", "f": "serif", "s": 44} ] },
+
+    { "kicker": "MARK 2", "dur": 6.0, "ref": "Mark 2:5", "lines": [
+      {"t": "A paralyzed man", "c": "cream", "s": 58},
+      {"t": "is lowered down to him.", "c": "cream", "s": 58},
+      {"t": "", "s": 22},
+      {"t": "Jesus says:", "c": "dim", "s": 50},
+      {"t": "“Son, your sins", "c": "gold", "f": "serifb", "s": 64},
+      {"t": "are forgiven.”", "c": "gold", "f": "serifb", "s": 64} ] },
+
+    { "kicker": "THE SCRIBES REACT", "dur": 6.0, "ref": "Mark 2:7", "lines": [
+      {"t": "“Who can forgive sins", "c": "gold", "f": "serifb", "s": 62},
+      {"t": "but God alone?”", "c": "gold", "f": "serifb", "s": 62},
+      {"t": "", "s": 26},
+      {"t": "They knew exactly", "c": "cream", "s": 54},
+      {"t": "what he was claiming.", "c": "cream", "s": 54} ] },
+
+    { "kicker": "MARK 2", "dur": 5.4, "ref": "Mark 2:28", "lines": [
+      {"t": "“The Son of Man is Lord", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "even of the Sabbath.”", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "", "s": 24},
+      {"t": "Lord of the day", "c": "cream", "s": 52},
+      {"t": "God himself made holy.", "c": "cream", "s": 52} ] },
+
+    { "kicker": "MARK 4", "dur": 6.2, "ref": "Mark 4:41", "lines": [
+      {"t": "He speaks to the storm.", "c": "cream", "s": 56},
+      {"t": "The sea goes still.", "c": "cream", "s": 56},
+      {"t": "", "s": 22},
+      {"t": "“Who then is this, that even", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "the wind and sea obey him?”", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "", "s": 16},
+      {"t": "In the Psalms, the LORD stills the sea.", "c": "dim", "s": 40} ] },
+
+    { "kicker": "ON TRIAL — MARK 14", "dur": 6.6, "ref": "Mark 14:61-62", "lines": [
+      {"t": "“Are you the Christ,", "c": "cream", "s": 56},
+      {"t": "the Son of the Blessed?”", "c": "cream", "s": 56},
+      {"t": "", "s": 22},
+      {"t": "“I am — and you will see", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "the Son of Man at the", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "right hand of Power,", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "coming with the clouds.”", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "THE VERDICT", "dur": 5.8, "ref": "Mark 14:63-64", "lines": [
+      {"t": "The high priest tears his robes:", "c": "cream", "s": 50},
+      {"t": "“You have heard", "c": "gold", "f": "serifb", "s": 62},
+      {"t": "the blasphemy.”", "c": "gold", "f": "serifb", "s": 62},
+      {"t": "", "s": 22},
+      {"t": "A claim to God's own throne.", "c": "dim", "s": 46} ] },
+
+    { "kicker": "AT THE CROSS — MARK 15", "dur": 6.0, "ref": "Mark 15:39", "lines": [
+      {"t": "A Roman centurion", "c": "cream", "s": 56},
+      {"t": "watches him die:", "c": "cream", "s": 56},
+      {"t": "", "s": 22},
+      {"t": "“Truly this man was", "c": "gold", "f": "serifb", "s": 62},
+      {"t": "the Son of God.”", "c": "gold", "f": "serifb", "s": 62} ] },
+
+    { "kicker": "ONE GOSPEL, ONE CLAIM", "dur": 6.4, "lines": [
+      {"t": "Forgiving sins.", "c": "cream", "s": 54},
+      {"t": "Lord of the Sabbath.", "c": "cream", "s": 54},
+      {"t": "Stilling the sea.", "c": "cream", "s": 54},
+      {"t": "Seated at God's right hand.", "c": "cream", "s": 54},
+      {"t": "", "s": 24},
+      {"t": "This is who God alone is.", "c": "gold", "f": "serifb", "s": 60} ] },
+
+    { "dur": 4.4,
+      "big": [ {"t": "Mark's Jesus", "c": "cream", "s": 96}, {"t": "is the Lord.", "c": "gold", "s": 116} ],
+      "sub": [ {"t": "Explore the full case at", "c": "dim", "f": "serif", "s": 42},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52} ] }
+  ]
+}
