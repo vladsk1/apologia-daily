@@ -1,0 +1,632 @@
+{
+  "reviewed": {
+    "argument": null,
+    "orthodoxy": null,
+    "by": "OWNER DECISION 2026-08-02: two scenes the first cut carried were REMOVED at the owner's direction — (a) the 'first cell, not evolution' scope scene, and (b) the clause 'and certainly not the God of the Creed'. Both are recorded here rather than silently dropped, because both were put in for a reason and a future session should know it was a decision and not an oversight. (a) library/originlife.html says 'Apologia Daily takes no position binding Christians to a particular view of evolutionary biology — faithful believers hold a range of views — and the information argument here is about the first cell, not about the mechanisms of descent thereafter'; CLAUDE.md also flags the whole science tab as an open owner decision on denominational-neutrality grounds. The reel never asserts anything about evolution, so removing the line leaves a possible MISREADING unaddressed rather than making the reel assert anything false. (b) The deism fence: this reel DOES reach 'a mind' in its closing line, which is precisely the case the fence exists for (contrast the four-hundred reel, where apologia-orthodoxy ruled the fence OUT because that reel concludes to nothing). What survives is 'It does not prove that life was designed' plus 'one lab result could overturn it tomorrow', and the reel never says the mind IS God. EXPECT THE ORTHODOXY GATE TO RAISE (b). || PENDING — gates not yet run. SOURCE IS library/originlife.html, THE CERTIFIED ESSAY. Do NOT source this topic from pocket-cards.html: that file is unstamped and outside CONTENT_PATTERNS, and its DNA card says 'the only source we know of for coded information is a mind' where the essay says 'the only UNCONTESTED known source' — the missing word is the whole difference. STANDING CONSTRAINTS: (1) THIS IS ABOUT THE FIRST CELL, NOT EVOLUTION, and the reel must say so in our own voice. The essay: 'Apologia Daily takes no position binding Christians to a particular view of evolutionary biology — faithful believers hold a range of views — and the information argument here is about the first cell, not about the mechanisms of descent thereafter.' Without this the reel reads as anti-evolution and breaches denominational neutrality on a question that divides Catholics, Orthodox and Protestants alike. CLAUDE.md flags the whole science tab (bigbang, dna, originlife, cambrian) as an open owner decision for exactly this reason. (2) THE DEISM FENCE IS THE ESSAY'S OWN AND IS MANDATORY: the inference 'does not prove that life was designed, and it certainly does not prove the God of the Nicene Creed'. A natural-theology reel that stops at 'a mind' and never distinguishes that from the Triune God is the standing corpus defect; this one must not add to it. (3) 'It could be overturned tomorrow by a laboratory result, and the honest defender should say so cheerfully' — the essay's words, and the reel says it. (4) Never 'science has proved life was designed' and never imply consensus; the essay calls the inference 'probabilistic, defeasible, comparative'. (5) Miller 1953: water, methane, ammonia, hydrogen, sparks for a week, amino acids — the BUILDING BLOCKS of proteins. Do not say he made life, or made proteins. (6) The 2016 minimal cell required 473 genes 'whose functions were not all understood' — do not inflate to 'we understand none of them'. (7) The Bill Gates line is quoted verbatim from the essay's footnote 2 and must stay verbatim or be dropped."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "voiceover": "In 1953, a graduate student sealed a flask. Water, methane, ammonia, hydrogen. He ran electric sparks through it for a week — and at the bottom he found a brownish sludge containing amino acids. The building blocks of proteins. For a moment it looked as though the gap between dead chemistry and living matter might be crossed in a week of lab time. More than seventy years later, the most honest thing that can be said is that we are still, in the deepest sense, staring at that flask. We can make some of the bricks. We cannot account for the building — and above all, we cannot account for the blueprint. Because the origin of life sounds like one problem, and it is at least three. Metabolism: it captures energy and repairs itself. Self-replication: it copies itself. And the third is the deepest, and the easiest to miss if you picture life as merely complicated chemistry. The origin of biological information. DNA stores instructions in a four-character alphabet — A, T, G and C. Transcribed, then translated into proteins, whose chains must be sequenced just so to fold into working shapes. Get it wrong and the protein is, in general, useless. This is not a loose analogy. Bill Gates put it this way: DNA is like a computer program, but far, far more advanced than any software ever created. And the floor is high. When synthetic biologists built a minimal cell in 2016, it still needed four hundred and seventy-three genes — and their functions were not all understood. So the question is not where the bricks came from. It is where the blueprint came from. And it is not a proof. It does not prove that life was designed. One lab result could overturn it tomorrow. But the confident assurance that science has essentially solved the origin of life outruns the evidence. There is a real mystery at the foundation of biology. And the only uncontested source we know of for code is a mind.",
+  "source": "library/originlife.html",
+  "scenes": [
+    {
+      "dur": 4.4,
+      "big": [
+        {
+          "t": "In 1953",
+          "c": "gold",
+          "s": 108
+        },
+        {
+          "t": "a student made",
+          "c": "cream",
+          "s": 74
+        },
+        {
+          "t": "life's building blocks",
+          "c": "cream",
+          "s": 66
+        },
+        {
+          "t": "in a week.",
+          "c": "cream",
+          "s": 74
+        }
+      ],
+      "sub": [
+        {
+          "t": "We are still staring at that flask.",
+          "c": "dim",
+          "f": "serif",
+          "s": 40
+        }
+      ]
+    },
+    {
+      "kicker": "THE EXPERIMENT",
+      "dur": 7.0,
+      "lines": [
+        {
+          "t": "He sealed a flask.",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "Water. Methane.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        },
+        {
+          "t": "Ammonia. Hydrogen.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "Then he ran electric sparks",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "through it for a week.",
+          "c": "cream",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "kicker": "AT THE BOTTOM",
+      "dur": 6.4,
+      "lines": [
+        {
+          "t": "a brownish sludge",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "containing amino acids —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "the building blocks",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "of proteins.",
+          "c": "cream",
+          "s": 52
+        }
+      ]
+    },
+    {
+      "kicker": "THE WORLD WAS ELECTRIFIED",
+      "dur": 5.4,
+      "lines": [
+        {
+          "t": "For a moment it looked",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "as though the gap between",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "dead chemistry and life",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 16
+        },
+        {
+          "t": "might be crossed",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        },
+        {
+          "t": "in a week.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        }
+      ]
+    },
+    {
+      "kicker": "SEVENTY YEARS LATER",
+      "dur": 7.4,
+      "lines": [
+        {
+          "t": "the most honest thing",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "that can be said is that",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "we are still, in the",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "deepest sense,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "staring at that flask.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        }
+      ]
+    },
+    {
+      "kicker": "WHY",
+      "dur": 7.4,
+      "lines": [
+        {
+          "t": "We can make",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "some of the bricks.",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "We cannot account",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "for the building —",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 16
+        },
+        {
+          "t": "and above all, we cannot",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        },
+        {
+          "t": "account for the blueprint.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "kicker": "IT SOUNDS LIKE ONE PROBLEM",
+      "dur": 6.0,
+      "lines": [
+        {
+          "t": "The origin of life",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "sounds like one problem.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "It is at least three.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        }
+      ]
+    },
+    {
+      "kicker": "ONE AND TWO",
+      "dur": 6.0,
+      "lines": [
+        {
+          "t": "Metabolism —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        },
+        {
+          "t": "it captures energy",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "and repairs itself.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "Self-replication —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        },
+        {
+          "t": "it copies itself.",
+          "c": "cream",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "kicker": "AND THE THIRD",
+      "dur": 7.0,
+      "lines": [
+        {
+          "t": "is the deepest, and the",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "easiest to miss if you picture",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "life as merely",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "complicated chemistry.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "Information.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 82
+        }
+      ]
+    },
+    {
+      "kicker": "A FOUR-LETTER ALPHABET",
+      "dur": 7.4,
+      "lines": [
+        {
+          "t": "DNA stores instructions",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "in four characters —",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "A · T · G · C",
+          "c": "gold",
+          "f": "serifb",
+          "s": 86
+        }
+      ]
+    },
+    {
+      "kicker": "AND THEY ARE READ",
+      "dur": 8.0,
+      "lines": [
+        {
+          "t": "Transcribed, then translated",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "into proteins — whose chains",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "must be sequenced just so",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        },
+        {
+          "t": "to fold into working shapes.",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 16
+        },
+        {
+          "t": "Get it wrong and the protein is,",
+          "c": "cream",
+          "s": 40
+        },
+        {
+          "t": "in general, useless.",
+          "c": "cream",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "kicker": "NOT A LOOSE ANALOGY",
+      "dur": 8.0,
+      "lines": [
+        {
+          "t": "Bill Gates put it this way:",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "“DNA is like a computer",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "program, but far, far more",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        },
+        {
+          "t": "advanced than any",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "software ever created.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "kicker": "AND THE FLOOR IS HIGH",
+      "dur": 8.0,
+      "lines": [
+        {
+          "t": "When synthetic biologists",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "built a minimal cell in 2016,",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "it still needed",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 16
+        },
+        {
+          "t": "473 genes —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 74
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "and their functions were",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "not all understood.",
+          "c": "cream",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "kicker": "SO THE QUESTION IS",
+      "dur": 6.4,
+      "lines": [
+        {
+          "t": "not where the bricks",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "came from.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "It is where the blueprint",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "came from.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        }
+      ]
+    },
+    {
+      "kicker": "AND IT IS NOT A PROOF",
+      "dur": 7.0,
+      "lines": [
+        {
+          "t": "It does not prove",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "that life was designed.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "One lab result could",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "overturn it tomorrow.",
+          "c": "cream",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "kicker": "WHAT IT DOES SHOW",
+      "dur": 7.0,
+      "lines": [
+        {
+          "t": "But the confident assurance",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "that science has essentially",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "solved the origin of life",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 16
+        },
+        {
+          "t": "outruns the evidence.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ]
+    },
+    {
+      "dur": 7.0,
+      "big": [
+        {
+          "t": "There is a real mystery",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "at the foundation",
+          "c": "cream",
+          "s": 62
+        },
+        {
+          "t": "of biology.",
+          "c": "cream",
+          "s": 62
+        },
+        {
+          "t": "And the only uncontested",
+          "c": "gold",
+          "s": 52
+        },
+        {
+          "t": "source we know of for code",
+          "c": "gold",
+          "s": 50
+        },
+        {
+          "t": "is a mind.",
+          "c": "gold",
+          "s": 62
+        }
+      ],
+      "sub": [
+        {
+          "t": "The full case, and its limits, at",
+          "c": "dim",
+          "f": "serif",
+          "s": 38
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    }
+  ]
+}
