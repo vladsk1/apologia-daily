@@ -1,14 +1,14 @@
 {
-  "reviewed": {"argument": null, "orthodoxy": null, "by": "PENDING — gates not yet run. STANDING CONSTRAINTS: (1) Never say archaeology 'proves the Bible' — library/archaeology.html opens by calling that leap a mistake, and scene 14 is the honest bound that keeps this reel inside the essay. (2) Never say no archaeological find has ever contradicted a biblical claim — that is a retired claim (2026-07-28 pocket-card gate). (3) The Belshazzar finds establish the MAN and his AUTHORITY, not the date of Daniel or the events it narrates — the essay states this explicitly and scene 13 carries it. (4) Do not claim critics doubted Pontius Pilate's existence — he is attested by Tacitus, Josephus and Philo; the Pilate Stone is the principal contemporary EPIGRAPHIC evidence, which is a different and smaller claim. (5) 'On the likely sense of Daniel 5:16' — the third-place reading is the natural one but the essay hedges it, so the reel says 'the natural reading' and never 'the only'."},
+  "reviewed": {"argument": null, "orthodoxy": null, "by": "ROUND 2 — fixes applied from apologia-argument (2 BREAK, 2 WEAK, 5 POLISH) and apologia-citations (1 ERROR, 8 CHECK). NOT YET RE-GATED; orthodoxy has never run. STANDING CONSTRAINTS, do not undo: (1) The CLOSE must not argue about date or authorship. The original close, 'details no forger would think to invent', was a claim about authorship and it contradicted the scope bound 12 seconds earlier; it is also invalid against the actual critical position, which is a LATE AUTHOR WITH ACCESS TO BABYLONIAN MEMORY, not an inventor. Daniel's date also divides orthodox Christians, so a date claim forfeits denominational neutrality. The close now uses the essay's own final sentence. (2) The hedge belongs on the RENDERING of Daniel 5:16/5:7, not on the downstream inference: the essay's stamp records a prior argument gate adding 'on the likely sense of Dan 5:16' and flagging it [contested rendering] -- Montgomery reads taltiy as an OFFICE title (Akkadian shalshu, 'thirdling'/triumvir), which would dissolve the whole payoff. Round 1 moved that hedge onto the inference and upgraded 'a natural reading' to 'the natural reading'. Do not re-harden it. (3) 'An earlier generation of critics' -- the essay's own words. No serious critic has used Belshazzar against Daniel since Dougherty 1929; the modern late-date case rests on the Greek loanwords, the Aramaic dialect, placement in the Ketuvim, and Daniel 11. Undated 'critics' misrepresents an abandoned position as a live one. (4) Belshazzar was ONE of the alleged blunders, never 'the giveaway' -- Darius the Mede is the one specialists call the book's hardest historical problem. (5) Keep 'not by itself' / 'on its own' in the scope bound: the essay says 'though not by itself the book's date', which leaves room for the cumulative case. (6) Never say archaeology 'proves the Bible' (the essay's opening calls that leap a mistake), and never say no find has ever contradicted a biblical claim (retired 2026-07-28; NOTE: that claim has NO entry in tools/retired-claims.json, so nothing catches it mechanically -- add one). (7) Do not claim critics doubted Pontius Pilate's existence; he is attested by Tacitus, Josephus and Philo. (8) Scene 14 is the man-and-authority bound; scene 15 is the archaeology-does-not-prove bound; scene 16 is the close. (Round 1's note had these numbers off by one.)"},
   "aspect": "vertical",
   "theme": "navy",
   "fps": 30,
   "crossfade": 0.6,
-  "voiceover": "For a long time, one name in the Bible had no evidence at all. Daniel chapter five tells of a feast in Babylon, a hand writing on the wall, and a king named Belshazzar. The problem was that no other source knew him. The Babylonian king lists ended the dynasty with a king called Nabonidus. The Greek historians agreed. There was no Belshazzar anywhere. So critics drew the obvious conclusion: the author of Daniel did not know Babylon. He had invented a king. It was treated as the giveaway — the mistake that showed the book was written late, by someone far from the events. Then the clay tablets were read. A cylinder of Nabonidus names his eldest son. Bel-shar-usur. Belshazzar. And the Babylonian records say something stranger still. Nabonidus was not in Babylon. He spent years at Tema, in Arabia, and he entrusted the kingship to his son. So Belshazzar was real, and he was ruling — but he was not the king. His father was. Now go back to Daniel five. The king offers a reward to anyone who can read the writing. And what he offers is oddly specific: to be made the third ruler in the kingdom. Not second. Third. On the natural reading, that is because the first two places were already taken — by Nabonidus, and by Belshazzar himself. A detail that made no sense for centuries turns out to fit a political arrangement nobody knew about. Be careful what this does and does not show. It establishes the man and his authority. It does not by itself settle when Daniel was written, or the events it narrates. Archaeology does not prove the Bible, and anyone who tells you it does is overselling. What it does is this: it keeps answering, on details no forger would think to invent.",
+  "voiceover": "For a long time, one name in the Bible had no evidence outside it. Daniel chapter five tells of a feast in Babylon, a hand writing on the wall, and a king named Belshazzar. The problem was that no source outside the Bible knew him. The Babylonian king lists ended the dynasty with a king called Nabonidus. The classical historians agreed. There was no Belshazzar in the Babylonian records. So an earlier generation of critics drew the obvious conclusion: the author of Daniel did not know Babylon. He had got Babylon's kings wrong. It was treated as one of the telltale blunders — a mistake showing the book was written late, by someone far from the events. Then the cuneiform was read. A cylinder of Nabonidus names his eldest son. Bel-shar-usur. Belshazzar. And the Babylonian records say something stranger still. For years Nabonidus was not even in Babylon. He was at Tema, in Arabia, and he entrusted the kingship to his son. So Belshazzar was real, and he was ruling — but he was not the king. His father was. He was second, and he stayed second. Now go back to Daniel five. Belshazzar offers a reward to anyone who can read the writing. And what he offers is oddly specific: to be made the third ruler in the kingdom. Not second. Third. On the likely sense of the Aramaic, that is because the first two places were already taken — by Nabonidus, and by Belshazzar himself. An odd detail turns out to fit a political arrangement nobody knew about. Be careful what this does and does not show. It establishes the man and his authority. It does not, on its own, settle when Daniel was written, or the events it narrates. Archaeology does not prove the Bible, and anyone who tells you it does is overselling. What it does is this: on detail after detail, it shows the writers knew their world. And a source that reliable deserves to be weighed, not waved away.",
   "source": "library/archaeology.html",
   "scenes": [
     { "dur": 3.8,
-      "big": [ {"t": "One name", "c": "cream", "s": 104}, {"t": "in the Bible", "c": "cream", "s": 96}, {"t": "had no", "c": "cream", "s": 96}, {"t": "evidence.", "c": "gold", "s": 112} ],
+      "big": [ {"t": "One name", "c": "cream", "s": 104}, {"t": "in the Bible", "c": "cream", "s": 96}, {"t": "had no evidence", "c": "cream", "s": 84}, {"t": "outside it.", "c": "gold", "s": 108} ],
       "sub": [ {"t": "Daniel 5 · Babylon", "c": "dim", "f": "serif", "s": 44} ] },
 
     { "kicker": "THE STORY", "dur": 5.6, "lines": [
@@ -19,39 +19,40 @@
       {"t": "and a king named", "c": "cream", "s": 52},
       {"t": "Belshazzar.", "c": "gold", "f": "serifb", "s": 72} ] },
 
-    { "kicker": "THE PROBLEM", "dur": 5.4, "lines": [
-      {"t": "No other source", "c": "cream", "s": 56},
-      {"t": "knew him.", "c": "cream", "s": 56},
+    { "kicker": "THE PROBLEM", "dur": 5.6, "lines": [
+      {"t": "No source outside", "c": "cream", "s": 54},
+      {"t": "the Bible knew him.", "c": "cream", "s": 54},
       {"t": "", "s": 22},
       {"t": "The Babylonian king lists", "c": "cream", "s": 48},
       {"t": "ended the dynasty", "c": "cream", "s": 50},
       {"t": "with Nabonidus.", "c": "gold", "f": "serifb", "s": 58} ] },
 
-    { "kicker": "NOWHERE", "dur": 4.6, "lines": [
-      {"t": "The Greek historians", "c": "cream", "s": 54},
+    { "kicker": "NOWHERE", "dur": 4.8, "lines": [
+      {"t": "The classical historians", "c": "cream", "s": 52},
       {"t": "agreed.", "c": "cream", "s": 54},
       {"t": "", "s": 22},
-      {"t": "There was no Belshazzar", "c": "gold", "f": "serifb", "s": 52},
-      {"t": "anywhere.", "c": "gold", "f": "serifb", "s": 56} ] },
+      {"t": "There was no Belshazzar", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "in the Babylonian records.", "c": "gold", "f": "serifb", "s": 48} ] },
 
     { "kicker": "THE VERDICT", "dur": 6.0, "lines": [
-      {"t": "So critics drew the", "c": "cream", "s": 52},
-      {"t": "obvious conclusion:", "c": "cream", "s": 52},
+      {"t": "So an earlier generation", "c": "cream", "s": 50},
+      {"t": "of critics concluded:", "c": "cream", "s": 50},
       {"t": "", "s": 20},
       {"t": "the author of Daniel", "c": "gold", "f": "serifb", "s": 54},
       {"t": "did not know Babylon.", "c": "gold", "f": "serifb", "s": 54},
       {"t": "", "s": 16},
-      {"t": "He had invented a king.", "c": "cream", "s": 50} ] },
+      {"t": "He had got Babylon's", "c": "cream", "s": 48},
+      {"t": "kings wrong.", "c": "cream", "s": 48} ] },
 
-    { "kicker": "THE GIVEAWAY", "dur": 5.4, "lines": [
-      {"t": "It was treated as", "c": "cream", "s": 52},
-      {"t": "the giveaway —", "c": "cream", "s": 52},
+    { "kicker": "ONE OF THE BLUNDERS", "dur": 5.4, "lines": [
+      {"t": "It was treated as one of", "c": "cream", "s": 50},
+      {"t": "the telltale blunders —", "c": "cream", "s": 50},
       {"t": "", "s": 20},
-      {"t": "the mistake that showed", "c": "dim", "s": 46},
-      {"t": "the book was written late,", "c": "dim", "s": 46},
+      {"t": "a mistake showing the book", "c": "dim", "s": 44},
+      {"t": "was written late,", "c": "dim", "s": 46},
       {"t": "by someone far away.", "c": "dim", "s": 46} ] },
 
-    { "kicker": "THEN THE TABLETS", "dur": 5.8, "lines": [
+    { "kicker": "THEN THE CUNEIFORM", "dur": 5.8, "lines": [
       {"t": "A cylinder of Nabonidus", "c": "cream", "s": 50},
       {"t": "names his eldest son.", "c": "cream", "s": 52},
       {"t": "", "s": 22},
@@ -59,23 +60,26 @@
       {"t": "", "s": 14},
       {"t": "Belshazzar.", "c": "gold", "f": "serifb", "s": 72} ] },
 
-    { "kicker": "AND SOMETHING STRANGER", "dur": 6.0, "lines": [
-      {"t": "Nabonidus was not", "c": "cream", "s": 54},
-      {"t": "in Babylon.", "c": "cream", "s": 54},
+    { "kicker": "AND SOMETHING STRANGER", "dur": 6.2, "lines": [
+      {"t": "For years Nabonidus was", "c": "cream", "s": 50},
+      {"t": "not even in Babylon.", "c": "cream", "s": 52},
       {"t": "", "s": 20},
-      {"t": "He spent years at Tema,", "c": "gold", "f": "serifb", "s": 52},
-      {"t": "in Arabia — and entrusted", "c": "cream", "s": 48},
-      {"t": "the kingship to his son.", "c": "cream", "s": 48} ] },
+      {"t": "He was at Tema, in Arabia —", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "and he entrusted the", "c": "cream", "s": 48},
+      {"t": "kingship to his son.", "c": "cream", "s": 48} ] },
 
-    { "kicker": "SO", "dur": 5.4, "lines": [
-      {"t": "Belshazzar was real,", "c": "cream", "s": 54},
-      {"t": "and he was ruling —", "c": "cream", "s": 54},
-      {"t": "", "s": 22},
-      {"t": "but he was not the king.", "c": "gold", "f": "serifb", "s": 56},
-      {"t": "His father was.", "c": "cream", "s": 52} ] },
+    { "kicker": "SO", "dur": 6.0, "lines": [
+      {"t": "Belshazzar was real,", "c": "cream", "s": 52},
+      {"t": "and he was ruling —", "c": "cream", "s": 52},
+      {"t": "", "s": 20},
+      {"t": "but he was not the king.", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "His father was.", "c": "cream", "s": 50},
+      {"t": "", "s": 16},
+      {"t": "He was second,", "c": "cream", "s": 48},
+      {"t": "and he stayed second.", "c": "cream", "s": 48} ] },
 
     { "kicker": "NOW GO BACK TO DANIEL 5", "dur": 5.8, "lines": [
-      {"t": "The king offers a reward", "c": "cream", "s": 50},
+      {"t": "Belshazzar offers a reward", "c": "cream", "s": 48},
       {"t": "to anyone who can read", "c": "cream", "s": 50},
       {"t": "the writing.", "c": "cream", "s": 50},
       {"t": "", "s": 20},
@@ -83,47 +87,47 @@
       {"t": "is oddly specific.", "c": "gold", "f": "serifb", "s": 54} ] },
 
     { "kicker": "THE OFFER", "dur": 5.6, "lines": [
-      {"t": "“You shall be the", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "“…shall be the", "c": "gold", "f": "serifb", "s": 58},
       {"t": "third ruler", "c": "gold", "f": "serifb", "s": 78},
       {"t": "in the kingdom.”", "c": "gold", "f": "serifb", "s": 58},
       {"t": "", "s": 18},
-      {"t": "Daniel 5:16", "c": "dim", "s": 40} ] },
+      {"t": "Daniel 5:7, ESV", "c": "dim", "s": 40} ] },
 
-    { "kicker": "WHY THIRD?", "dur": 5.4, "lines": [
+    { "kicker": "WHY THIRD?", "dur": 6.0, "lines": [
       {"t": "Not second.", "c": "cream", "s": 62},
       {"t": "Third.", "c": "gold", "f": "serifb", "s": 84},
-      {"t": "", "s": 22},
-      {"t": "On the natural reading,", "c": "cream", "s": 48},
-      {"t": "the first two places", "c": "cream", "s": 48},
-      {"t": "were already taken.", "c": "cream", "s": 48} ] },
+      {"t": "", "s": 20},
+      {"t": "On the likely sense", "c": "cream", "s": 48},
+      {"t": "of the Aramaic, the first two", "c": "cream", "s": 44},
+      {"t": "places were already taken.", "c": "cream", "s": 46} ] },
 
-    { "kicker": "BY WHOM", "dur": 5.6, "lines": [
+    { "kicker": "BY WHOM", "dur": 5.8, "lines": [
       {"t": "Nabonidus —", "c": "gold", "f": "serifb", "s": 64},
       {"t": "and Belshazzar himself.", "c": "gold", "f": "serifb", "s": 54},
       {"t": "", "s": 20},
-      {"t": "A detail that made no sense", "c": "cream", "s": 46},
-      {"t": "for centuries fits a political", "c": "cream", "s": 44},
-      {"t": "arrangement nobody knew.", "c": "cream", "s": 46} ] },
+      {"t": "An odd detail turns out to fit", "c": "cream", "s": 44},
+      {"t": "a political arrangement", "c": "cream", "s": 46},
+      {"t": "nobody knew about.", "c": "cream", "s": 46} ] },
 
-    { "kicker": "STATED HONESTLY", "dur": 6.4, "lines": [
+    { "kicker": "STATED HONESTLY", "dur": 6.6, "lines": [
       {"t": "Be careful what this", "c": "cream", "s": 50},
       {"t": "does and does not show.", "c": "cream", "s": 50},
       {"t": "", "s": 18},
       {"t": "It establishes the man", "c": "cream", "s": 48},
       {"t": "and his authority.", "c": "cream", "s": 48},
       {"t": "", "s": 14},
-      {"t": "Not when Daniel was written.", "c": "dim", "s": 42},
-      {"t": "Not the events it narrates.", "c": "dim", "s": 42} ] },
+      {"t": "Not, on its own, when", "c": "cream", "s": 44},
+      {"t": "Daniel was written.", "c": "cream", "s": 44} ] },
 
     { "kicker": "AND NOT THIS EITHER", "dur": 5.8, "lines": [
       {"t": "Archaeology does not", "c": "cream", "s": 52},
       {"t": "prove the Bible —", "c": "gold", "f": "serifb", "s": 56},
       {"t": "", "s": 20},
-      {"t": "and anyone who tells you", "c": "dim", "s": 44},
-      {"t": "it does is overselling.", "c": "dim", "s": 44} ] },
+      {"t": "and anyone who tells you", "c": "cream", "s": 44},
+      {"t": "it does is overselling.", "c": "cream", "s": 44} ] },
 
-    { "dur": 5.2,
-      "big": [ {"t": "It keeps", "c": "cream", "s": 92}, {"t": "answering", "c": "gold", "s": 104}, {"t": "on details no forger", "c": "cream", "s": 60}, {"t": "would think to invent.", "c": "cream", "s": 60} ],
+    { "dur": 5.4,
+      "big": [ {"t": "The writers", "c": "cream", "s": 92}, {"t": "knew their world.", "c": "gold", "s": 88}, {"t": "A source that reliable", "c": "cream", "s": 56}, {"t": "deserves to be weighed.", "c": "cream", "s": 56} ],
       "sub": [ {"t": "The full case, fully sourced, at", "c": "dim", "f": "serif", "s": 40},
                {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52} ] }
   ]
