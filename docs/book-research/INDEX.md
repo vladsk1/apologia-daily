@@ -18,7 +18,11 @@ Notes: **CFR** = `case-for-the-resurrection-of-jesus.md` (Habermas & Licona) · 
 Wilder, eds. — Wallace **ch. 6** NT textual criticism + Barnett **ch. 10** NT historical reliability + Huffman
 **ch. 11** alleged contradictions + Wegner/Wilder/Bock **ch. 16** the canon) · **JAJ** =
 `josephus-and-jesus.md` (T. C. Schmidt, OUP 2025 — the Testimonium Flavianum: authenticity, neutral
-reconstruction, and Josephus's first-hand sources for Jesus).
+reconstruction, and Josephus's first-hand sources for Jesus) · **ISLDIL** = `islamic-dilemma.md`
+(Christopher W. Frost, 2026 — the "Islamic Dilemma": the Qur'an affirms the Torah & Gospel as authoritative,
+yet contradicts them; taḥrīf, the corruption verses, and the Qur'an's Syriac/apocryphal sources.
+⚠ **popular counter-apologetics** — cite the mainstream academics it routes to, never the polemics layer;
+⚠ **highest-scrutiny Islam tier**, and the lexical "Word of God" bridge in it is **RETIRED** on our site).
 
 **⚠ PARTIAL notes added 2026-07-26 (books NOT owned, NOT read — mapped at thesis/chapter level only from
 the authors' own open-access work, published open-access reviews, publisher frontmatter, and our own
@@ -63,6 +67,7 @@ not verified.
 | **Gospel reliability — local knowledge (names / geography / undesigned coincidences)** | **CWTG** (chapter-level, from a published review) | **already saturated on-site** — `names.html` *already cites* Williams ch. 3. Only fresh lead: **Luke's *limnē* ("the lake") vs. Matthew/Mark/John's *thalassa* ("sea")** for Galilee — verify in a concordance. **Blunt, *Undesigned Coincidences* (1847) is PUBLIC DOMAIN** → a real `/sources` candidate |
 | **Eyewitness testimony / Papias / *inclusio* / onomastics** | **JATE** (chapter-level, from the OA *Themelios* review) — but see the ⚠ fence below | **Eusebius, *H.E.* 3.39**; **Ilan, *Lexicon of Jewish Names*** (2002); the *inclusio* (**Mark 1:16 / 16:7**, with **Lucian** and **Porphyry** parallels); **C. H. Turner** on Mark's plural-to-singular alternation (**Mark 14:32**); **Gal 2:9** (the reviewer's objection to the John-the-Elder thesis). ⚠ **Already saturated on-site** — corroboration, not a gap |
 | **OT historicity / ANE settings** | **OROT** (thesis-level only) — the *usable* Kitchen is the fully-mined `article-research/kitchen-historical-method-hebrew-tradition.md` | **Hittite treaty form** vs. the Sinai/Deuteronomy covenant (ch. 6) — *already live on `library/archaeology.html` with McConville's caution attached, which is the model*; **Merneptah Stele** (c. 1208 BC). ⚠⚠ avowed **maximalist** — bounded verdicts, never cited without his named critic; ⚠⚠ the **Nuzi/patriarchal-customs** argument is a **trap, not a gap** (Thompson 1974 / Van Seters 1975) |
+| ⭐ **Islam — the "Islamic Dilemma" (Qur'an affirms then contradicts the Bible)** | **ISLDIL** (whole book) — but the SPINE is **already live + certified** on `library/islam-dilemma.html` + the 16-essay `library/islam-*` library, so this is mostly corroboration | Mainstream academics the book routes to (**verify each**): **Reynolds** (*The Qur'an and Its Biblical Subtext* / *…and the Bible*), **Sinai** (*Key Terms of the Qur'an*), **Griffith** (*The Bible in Arabic*), **Whittingham** (*A History of Muslim Views of the Bible*), **Nickel** (*The Gentle Answer…*), **Witztum** (*The Syriac Milieu of the Quran*); Muslim concessions **Saeed / Ayoub / Galadari / Accad**; PD primaries **John of Damascus**, *Apology of al-Kindi*, Augustine *City of God*, Book of Jubilees, Targum Pseudo-Jonathan. ⚠⚠⚠ **DUAL-CONSENSUS + EXPLICIT-VERDICT (bounded) + FALSE-COMMON-GROUND.** ⚠⚠⚠ the **walad/*kalima*/Logos-as-*kun*** material = route through `library/islam-eternalword.html` **structural** framing, NOT the RETIRED lexical bridge (`tools/retired-claims.json`). ⚠ steelman = **Yaqeen/Facchine 2025, Qadhi 2025, Fatoohi 2010** |
 
 ## ⚠ Standing "do not use / high-caution" flags (carry these into any pull)
 - ⚠⚠⚠ **BAUCKHAM — UNIVERSALISM FENCE (JATE).** Richard Bauckham holds views on universal salvation that

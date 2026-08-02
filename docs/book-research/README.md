@@ -124,6 +124,22 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   reports the disciples' claim); *Toledot Yeshu* (App. 4) is late polemic; the six Appendices + the full
   ancient-source bibliography are an intentional nice-to-have deeper pass.
 
+- `islamic-dilemma.md` — Christopher W. Frost, *The Islamic Dilemma* (2026; Kindle, **read cover-to-cover**) —
+  the "Islamic Dilemma": the Qur'an affirms the Torah (Tawrat) & Gospel (Injil), *as the actual 7th-c. biblical
+  texts*, are inspired and authoritative, yet contradicts them on core doctrines (crucifixion, deity of Christ,
+  God as Father, Muhammad-in-the-Bible, holy war, God's love, heaven/hell, prophet stories) — so either the
+  Qur'an is incoherent or denying it contradicts the Qur'an. Maps the full argument (Parts 1–4), the *taḥrīf
+  maʿna* vs *lafẓ* distinction, the corruption verses (Q 2:79 etc.), the Qur'an's Syriac/apocryphal sources, the
+  complete Qur'an Passage Index, and the full bibliography. **⚠ POPULAR ONLINE COUNTER-APOLOGETICS** (David Wood
+  foreword) — its value is the **mainstream academics it routes to** (Reynolds, Sinai, Griffith, Whittingham,
+  Nickel, Witztum) and the **Muslim scholars who concede its premise** (Saeed, Ayoub, Galadari, Accad); **cite
+  those, never the polemics layer, and drop the triumphalism.** ⚠⚠⚠ **Highest-scrutiny Islam tier**
+  (dual-consensus + explicit-verdict + false-common-ground); the **lexical "Word of God"/*kalimatullāh* bridge in
+  it is RETIRED on our site** (`tools/retired-claims.json`) — use the **structural** framing of
+  `library/islam-eternalword.html`. ⭐ **The spine is already LIVE + certified** (`library/islam-dilemma.html`
+  names Frost's book), so the note is mostly corroboration; the genuine gaps (apocryphal-source plank; Nickel/
+  Witztum/Griffith/Sinai; the Garima Gospels) are logged P3 in `docs/content-backlog.md`.
+
 ### ⚠ PARTIAL notes — books NOT owned, NOT read (added 2026-07-26, Tyndale/evangelical mining batch)
 These four were queued as books by `docs/article-research/MINING-BRIEF-tyndale-batch.md`. Because we do
 **not** own them, each is mapped only at **thesis/chapter level**, and only from legitimate non-book
