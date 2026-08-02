@@ -1,148 +1,704 @@
 {
-  "reviewed": {"argument": null, "orthodoxy": null, "by": "PENDING — gates not yet run. SOURCE IS library/originlife.html, THE CERTIFIED ESSAY, which lays out Meyer's argument formally and footnotes Signature in the Cell (2009). Do NOT source this from pocket-cards.html — unstamped, and its DNA card drops the word UNCONTESTED. STANDING CONSTRAINTS: (1) THE HONEST SCOPE IS MEYER'S OWN CONCLUSION, NOT A CAVEAT WE ADDED. His conclusion is 'intelligent design is, AT PRESENT, the BEST EXPLANATION for the origin of biological information'. Those two qualifiers are part of the argument's structure — an inference to the best explanation — and removing them does not make the reel bolder, it misstates Meyer. Keep them. (2) PREMISE 2 IS THE ENGINE AND MUST BE STATED AS THE ESSAY STATES IT: 'only intelligent agency is KNOWN, FROM REPEATED EXPERIENCE, to produce specified information of this kind.' Never 'only a mind CAN produce it' — that is a different and indefensible claim. (3) The essay warns that the argument 'is only as strong as its key term' and must rest on a STRICTLY FUNCTIONAL definition of specified information, or it smuggles in the semantic sense and goes circular. That is why scene 5 defines it by the crystal / random-polymer / sentence contrast rather than by assertion. Do not compress that scene away. (4) 'Specified complexity' is Meyer FOLLOWING OTHERS — Orgel and Davies coined the usage, Dembski developed it for design theory. Do not present it as his coinage. (5) Miller 1953 produced BUILDING BLOCKS, not life and not proteins. (6) The 2016 minimal cell JCVI-syn3.0 needed 473 genes 'including many of unknown function' — do not inflate. (7) The Shakespeare line is the essay's own: 'a heap of amino acids is to a cell what a bucket of letter tiles is to the works of Shakespeare'. (8) PACING: durations are deliberately generous at the owner's request. gen_reel.py OVERLAPS crossfades, so each scene's real reading window is dur minus 0.6 except the last. If runtime is ever trimmed, take it from scenes 2-4, never from 11-14."},
+  "reviewed": {
+    "argument": null,
+    "orthodoxy": null,
+    "by": "PENDING — gates not yet run. SOURCE IS library/originlife.html, THE CERTIFIED ESSAY, which lays out Meyer's argument formally and footnotes Signature in the Cell (2009). Do NOT source this from pocket-cards.html — unstamped, and its DNA card drops the word UNCONTESTED. STANDING CONSTRAINTS: (1) THE HONEST SCOPE IS MEYER'S OWN CONCLUSION, NOT A CAVEAT WE ADDED. His conclusion is 'intelligent design is, AT PRESENT, the BEST EXPLANATION for the origin of biological information'. Those two qualifiers are part of the argument's structure — an inference to the best explanation — and removing them does not make the reel bolder, it misstates Meyer. Keep them. (2) PREMISE 2 IS THE ENGINE AND MUST BE STATED AS THE ESSAY STATES IT: 'only intelligent agency is KNOWN, FROM REPEATED EXPERIENCE, to produce specified information of this kind.' Never 'only a mind CAN produce it' — that is a different and indefensible claim. (3) The essay warns that the argument 'is only as strong as its key term' and must rest on a STRICTLY FUNCTIONAL definition of specified information, or it smuggles in the semantic sense and goes circular. That is why scene 5 defines it by the crystal / random-polymer / sentence contrast rather than by assertion. Do not compress that scene away. (4) 'Specified complexity' is Meyer FOLLOWING OTHERS — Orgel and Davies coined the usage, Dembski developed it for design theory. Do not present it as his coinage. (5) Miller 1953 produced BUILDING BLOCKS, not life and not proteins. (6) The 2016 minimal cell JCVI-syn3.0 needed 473 genes 'including many of unknown function' — do not inflate. (7) The Shakespeare line is the essay's own: 'a heap of amino acids is to a cell what a bucket of letter tiles is to the works of Shakespeare'. (8) PACING: durations are deliberately generous at the owner's request. gen_reel.py OVERLAPS crossfades, so each scene's real reading window is dur minus 0.6 except the last. If runtime is ever trimmed, take it from scenes 2-4, never from 11-14. || ROUND 2 — THE FINDING THAT MATTERS MOST, AND IT IS A METHOD FINDING: the gate diffed all 17 cards against the voiceover and found SIX substantive divergences, ALL SIX making the CARD less hedged than the VOICE, none going the other way. 'traced' for 'traced to its source'; 'There are three' for 'a third category'; 'the protein is useless' for 'is, in general, useless'; 'still unknown' for 'were unknown' (a 2016 claim turned present-tense); 'information of this kind' for 'SPECIFIED information of this kind'; and 'was never offered as a proof' (a claim about Meyer's intent) for 'This is not a proof' (our own assertion). That is the compression instinct pulling toward the punchier line, and because the muted card is the majority path it means the version most viewers receive was less hedged than the certified essay at every point the two surfaces disagreed. ON EVERY FUTURE REEL, DIFF THE CARD LINES AGAINST THE VOICEOVER STRING AS THE FIRST STEP, BEFORE READING EITHER FOR SENSE. Two specific repairs worth remembering: (a) dropping 'specified' from Premise 2 was the BREAK, because 'of this kind' back-references the PREVIOUS card and is gone by the time this one is on screen, so a screenshot asserted 'only intelligent agency is known to produce information of this kind' with no antecedent — and the natural reading, that only minds produce information, is straightforwardly false, since undirected processes generate Shannon information constantly. (b) 'information-rich THING' had to become 'information-rich ARTIFACT' on BOTH surfaces: 'artifact' restricts the class to MADE things, which is what keeps the inductive claim true. Under 'thing' the counterexample is immediate and fatal in this exact domain — we know the causal history of billions of information-rich things, every genome ever replicated, and the proximate cause of none of them is a mind. (c) Scene 2's 'someone who meant something by it' was where the circularity actually lived: under a universal kicker it defined the class SEMANTICALLY, which is the failure the essay names by name, and it was the sole source of the question-begging exposure in the hook and the close. 'The trail always ends at a mind' keeps the observation and drops the definitional move, so the reel now rests on the FUNCTIONAL definition throughout. CONFIRMED STRONG AND NOT TO BE UNDONE: Premise 2 never slips to 'only a mind CAN'; Axe's contested 10^77 is omitted deliberately; 'specified complexity' is never used as a term; Premise One is scoped to the FIRST life so nothing touches common descent; and the gate considered flagging the deism gap and deliberately did not, because the reel never names God, concludes only to 'a mind', and closes on 'the full case, AND ITS LIMITS'."
+  },
   "aspect": "vertical",
   "theme": "navy",
   "fps": 30,
   "crossfade": 0.6,
-  "voiceover": "Every code we have ever traced to its source came from a mind. Every one. A paragraph. A software program. A message in cipher. Trace it back far enough and you find someone who meant something by it. There is one we have never traced. And it is inside you. Start with a simpler question: what kinds of order are there? A crystal is highly ordered. But it repeats — and because it repeats, it carries almost no information. Random noise is the opposite. No pattern at all, and no message either. Life sits in a third category, and it is the strange one. Sequences that do not repeat, and are also functionally specific. Like the letters of a sentence. DNA stores its instructions in a four-character alphabet — A, T, G and C. Those are transcribed and translated into proteins, whose chains must be sequenced just so to fold into working shapes. Get the order wrong and the protein is, in general, useless. And the floor is high. When synthetic biologists built the simplest cell they could in 2016, it still needed four hundred and seventy-three genes — and many of their functions were unknown. In 1953 Stanley Miller made amino acids in a flask, and it was a real result. But a heap of amino acids is to a living cell what a bucket of letter tiles is to the works of Shakespeare. So here is the argument, and Stephen Meyer develops it at book length in Signature in the Cell. Premise one. The origin of the first life required the production of large amounts of functionally specified information. Premise two. Of the causes available to us — chance, physical necessity, the two combined, or intelligent agency — only intelligent agency is known, from repeated experience, to produce specified information of this kind. Therefore intelligent design is, at present, the best explanation for the origin of biological information. Notice the shape of that conclusion. At present. Best explanation. This is not a proof and it was never offered as one. It is an inference of the same kind a detective makes, or a scientist. And the engine of it is premise two. Because in every single case where we know the causal history of an information-rich thing — a paragraph, a program, a coded message — the cause turns out to be a mind. There is exactly one exception we have never been able to trace. And you are made of it.",
+  "voiceover": "Every code we have ever traced to its source came from a mind. Every one. A paragraph. A software program. A message in cipher. Trace it back far enough and the trail always ends at a mind. There is one we have never traced. And it is inside you. Start with a simpler question: what kinds of order are there? A crystal is highly ordered. But it repeats — and because it repeats, it carries almost no information. Random noise is the opposite. No pattern at all, and no message either. Life sits in a third category, and it is the strange one. Sequences that do not repeat, and are also functionally specific. Like the letters of a sentence. DNA stores its instructions in a four-character alphabet — A, T, G and C. Those are transcribed and translated into proteins, whose chains must be sequenced just so to fold into working shapes. Get the order wrong and the protein is, in general, useless. And the floor is high. When synthetic biologists built the simplest cell they could in 2016, it still needed four hundred and seventy-three genes — and many of their functions were unknown at the time. In 1953 Stanley Miller made amino acids in a flask, and it was a real result. But a heap of amino acids is to a living cell what a bucket of letter tiles is to the works of Shakespeare. So here is the argument, and Stephen Meyer develops it at book length in Signature in the Cell. Premise one. The origin of the first life required the production of large amounts of functionally specified information. Premise two. Of the causes available to us — chance, physical necessity, the two combined, or intelligent agency — only intelligent agency is known, from repeated experience, to produce specified information of this kind. Therefore intelligent design is, at present, the best explanation for the origin of biological information. Notice the shape of that conclusion. At present. Best explanation. It is not a proof, and was never offered as one. It is the kind of inference a forensic scientist makes. And the engine of it is premise two. Because in every single case where we know the causal history of an information-rich artifact — a paragraph, a program, a coded message — the cause turns out to be a mind. There is exactly one exception we have never been able to trace. And you are made of it.",
   "source": "library/originlife.html",
   "scenes": [
-    { "dur": 5.6,
-      "big": [ {"t": "Every code", "c": "cream", "s": 92}, {"t": "we have ever traced", "c": "cream", "s": 66}, {"t": "came from", "c": "cream", "s": 72}, {"t": "a mind.", "c": "gold", "s": 104} ],
-      "sub": [ {"t": "There is one we have never traced.", "c": "dim", "f": "serif", "s": 40},
-               {"t": "It is inside you.", "c": "gold", "f": "serifb", "s": 46} ] },
-
-    { "kicker": "EVERY ONE", "dur": 8.0, "lines": [
-      {"t": "A paragraph.", "c": "cream", "s": 56},
-      {"t": "A software program.", "c": "cream", "s": 54},
-      {"t": "A message in cipher.", "c": "cream", "s": 54},
-      {"t": "", "s": 22},
-      {"t": "Trace it back far enough", "c": "cream", "s": 48},
-      {"t": "and you find someone", "c": "gold", "f": "serifb", "s": 50},
-      {"t": "who meant something by it.", "c": "gold", "f": "serifb", "s": 46} ] },
-
-    { "kicker": "START SIMPLER", "dur": 7.0, "lines": [
-      {"t": "What kinds of order", "c": "cream", "s": 54},
-      {"t": "are there?", "c": "cream", "s": 56},
-      {"t": "", "s": 24},
-      {"t": "There are three,", "c": "gold", "f": "serifb", "s": 60},
-      {"t": "and life is the third.", "c": "gold", "f": "serifb", "s": 54} ] },
-
-    { "kicker": "ONE — A CRYSTAL", "dur": 8.4, "lines": [
-      {"t": "A crystal is", "c": "cream", "s": 54},
-      {"t": "highly ordered.", "c": "cream", "s": 54},
-      {"t": "", "s": 22},
-      {"t": "But it repeats —", "c": "cream", "s": 52},
-      {"t": "and because it repeats,", "c": "cream", "s": 48},
-      {"t": "it carries almost", "c": "gold", "f": "serifb", "s": 50},
-      {"t": "no information.", "c": "gold", "f": "serifb", "s": 52} ] },
-
-    { "kicker": "TWO — RANDOM NOISE", "dur": 7.0, "lines": [
-      {"t": "The opposite.", "c": "cream", "s": 56},
-      {"t": "", "s": 22},
-      {"t": "No pattern at all —", "c": "cream", "s": 52},
-      {"t": "and no message either.", "c": "gold", "f": "serifb", "s": 52} ] },
-
-    { "kicker": "THREE — LIFE", "dur": 9.4, "lines": [
-      {"t": "Sequences that", "c": "cream", "s": 54},
-      {"t": "do not repeat,", "c": "cream", "s": 54},
-      {"t": "and are also", "c": "cream", "s": 54},
-      {"t": "functionally specific.", "c": "gold", "f": "serifb", "s": 54},
-      {"t": "", "s": 22},
-      {"t": "Like the letters", "c": "gold", "f": "serifb", "s": 58},
-      {"t": "of a sentence.", "c": "gold", "f": "serifb", "s": 58} ] },
-
-    { "kicker": "A FOUR-LETTER ALPHABET", "dur": 7.6, "lines": [
-      {"t": "DNA stores its instructions", "c": "cream", "s": 48},
-      {"t": "in four characters —", "c": "cream", "s": 50},
-      {"t": "", "s": 22},
-      {"t": "A · T · G · C", "c": "gold", "f": "serifb", "s": 86} ] },
-
-    { "kicker": "AND THEY ARE READ", "dur": 9.4, "lines": [
-      {"t": "Transcribed, then translated", "c": "cream", "s": 46},
-      {"t": "into proteins — whose chains", "c": "cream", "s": 44},
-      {"t": "must be sequenced just so", "c": "gold", "f": "serifb", "s": 48},
-      {"t": "to fold into working shapes.", "c": "cream", "s": 44},
-      {"t": "", "s": 20},
-      {"t": "Get the order wrong,", "c": "cream", "s": 48},
-      {"t": "and the protein is useless.", "c": "cream", "s": 46} ] },
-
-    { "kicker": "AND THE FLOOR IS HIGH", "dur": 9.4, "lines": [
-      {"t": "When synthetic biologists", "c": "cream", "s": 46},
-      {"t": "built the simplest cell", "c": "cream", "s": 48},
-      {"t": "they could, in 2016,", "c": "cream", "s": 48},
-      {"t": "it still needed", "c": "cream", "s": 50},
-      {"t": "", "s": 18},
-      {"t": "473 genes —", "c": "gold", "f": "serifb", "s": 76},
-      {"t": "", "s": 14},
-      {"t": "many of their functions", "c": "cream", "s": 46},
-      {"t": "still unknown.", "c": "cream", "s": 48} ] },
-
-    { "kicker": "1953", "dur": 9.4, "lines": [
-      {"t": "Stanley Miller made", "c": "cream", "s": 50},
-      {"t": "amino acids in a flask,", "c": "cream", "s": 50},
-      {"t": "and it was a real result.", "c": "cream", "s": 48},
-      {"t": "", "s": 20},
-      {"t": "But a heap of amino acids", "c": "gold", "f": "serifb", "s": 46},
-      {"t": "is to a living cell", "c": "gold", "f": "serifb", "s": 50},
-      {"t": "what a bucket of letter tiles", "c": "gold", "f": "serifb", "s": 44},
-      {"t": "is to Shakespeare.", "c": "gold", "f": "serifb", "s": 50} ] },
-
-    { "kicker": "SO HERE IS THE ARGUMENT", "dur": 7.0, "lines": [
-      {"t": "Stephen Meyer develops it", "c": "cream", "s": 48},
-      {"t": "at book length in", "c": "cream", "s": 50},
-      {"t": "", "s": 20},
-      {"t": "Signature in the Cell.", "c": "gold", "f": "serifb", "s": 56} ] },
-
-    { "kicker": "PREMISE ONE", "dur": 9.0, "lines": [
-      {"t": "The origin of the first life", "c": "cream", "s": 46},
-      {"t": "required the production of", "c": "cream", "s": 46},
-      {"t": "", "s": 18},
-      {"t": "large amounts of", "c": "gold", "f": "serifb", "s": 52},
-      {"t": "functionally specified", "c": "gold", "f": "serifb", "s": 52},
-      {"t": "information.", "c": "gold", "f": "serifb", "s": 56} ] },
-
-    { "kicker": "PREMISE TWO", "dur": 12.0, "lines": [
-      {"t": "Of the causes available —", "c": "cream", "s": 46},
-      {"t": "chance, physical necessity,", "c": "cream", "s": 44},
-      {"t": "the two combined,", "c": "cream", "s": 48},
-      {"t": "or intelligent agency —", "c": "cream", "s": 46},
-      {"t": "", "s": 18},
-      {"t": "only intelligent agency", "c": "gold", "f": "serifb", "s": 48},
-      {"t": "is known, from repeated", "c": "gold", "f": "serifb", "s": 46},
-      {"t": "experience, to produce", "c": "gold", "f": "serifb", "s": 46},
-      {"t": "information of this kind.", "c": "gold", "f": "serifb", "s": 46} ] },
-
-    { "kicker": "THEREFORE", "dur": 10.0, "lines": [
-      {"t": "Intelligent design is,", "c": "cream", "s": 50},
-      {"t": "at present,", "c": "gold", "f": "serifb", "s": 56},
-      {"t": "the best explanation", "c": "gold", "f": "serifb", "s": 54},
-      {"t": "", "s": 20},
-      {"t": "for the origin of", "c": "cream", "s": 48},
-      {"t": "biological information.", "c": "cream", "s": 48} ] },
-
-    { "kicker": "NOTICE THE SHAPE OF IT", "dur": 9.4, "lines": [
-      {"t": "At present.", "c": "gold", "f": "serifb", "s": 60},
-      {"t": "Best explanation.", "c": "gold", "f": "serifb", "s": 56},
-      {"t": "", "s": 20},
-      {"t": "This was never offered", "c": "cream", "s": 48},
-      {"t": "as a proof. It is the kind", "c": "cream", "s": 46},
-      {"t": "of inference a detective", "c": "cream", "s": 46},
-      {"t": "makes. Or a scientist.", "c": "cream", "s": 46} ] },
-
-    { "kicker": "AND THE ENGINE IS PREMISE TWO", "dur": 10.4, "lines": [
-      {"t": "In every single case where", "c": "cream", "s": 46},
-      {"t": "we know the causal history", "c": "cream", "s": 46},
-      {"t": "of an information-rich thing —", "c": "cream", "s": 42},
-      {"t": "a paragraph, a program,", "c": "cream", "s": 46},
-      {"t": "a coded message —", "c": "cream", "s": 48},
-      {"t": "", "s": 18},
-      {"t": "the cause turns out", "c": "gold", "f": "serifb", "s": 52},
-      {"t": "to be a mind.", "c": "gold", "f": "serifb", "s": 56} ] },
-
-    { "dur": 8.0,
-      "big": [ {"t": "There is exactly one", "c": "cream", "s": 62}, {"t": "we have never", "c": "cream", "s": 68}, {"t": "been able to trace.", "c": "cream", "s": 68}, {"t": "And you are", "c": "gold", "s": 80}, {"t": "made of it.", "c": "gold", "s": 92} ],
-      "sub": [ {"t": "The full case, and its limits, at", "c": "dim", "f": "serif", "s": 38},
-               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+    {
+      "dur": 5.6,
+      "big": [
+        {
+          "t": "Every code",
+          "c": "cream",
+          "s": 92
+        },
+        {
+          "t": "we have traced",
+          "c": "cream",
+          "s": 70
+        },
+        {
+          "t": "to its source",
+          "c": "cream",
+          "s": 66
+        },
+        {
+          "t": "came from a mind.",
+          "c": "gold",
+          "s": 88
+        }
+      ],
+      "sub": [
+        {
+          "t": "There is one we have never traced.",
+          "c": "dim",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "It is inside you.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "kicker": "EVERY ONE",
+      "dur": 8.0,
+      "lines": [
+        {
+          "t": "A paragraph.",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "A software program.",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "A message in cipher.",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 22
+        },
+        {
+          "t": "Trace it back far enough",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "and the trail",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "always ends at a mind.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "kicker": "START SIMPLER",
+      "dur": 7.0,
+      "lines": [
+        {
+          "t": "What kinds of order",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "are there?",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "",
+          "s": 24
+        },
+        {
+          "t": "There are three worth naming,",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "and life is the third.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        }
+      ]
+    },
+    {
+      "kicker": "ONE — A CRYSTAL",
+      "dur": 8.4,
+      "lines": [
+        {
+          "t": "A crystal is",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "highly ordered.",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 22
+        },
+        {
+          "t": "But it repeats —",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "and because it repeats,",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "it carries almost",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "no information.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ]
+    },
+    {
+      "kicker": "TWO — RANDOM NOISE",
+      "dur": 7.0,
+      "lines": [
+        {
+          "t": "The opposite.",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "",
+          "s": 22
+        },
+        {
+          "t": "No pattern at all —",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "and no message either.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ]
+    },
+    {
+      "kicker": "THREE — LIFE",
+      "dur": 9.4,
+      "lines": [
+        {
+          "t": "Sequences that",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "do not repeat,",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "and are also",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "functionally specific.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 22
+        },
+        {
+          "t": "Like the letters",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        },
+        {
+          "t": "of a sentence.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        }
+      ]
+    },
+    {
+      "kicker": "A FOUR-LETTER ALPHABET",
+      "dur": 7.6,
+      "lines": [
+        {
+          "t": "DNA stores its instructions",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "in four characters —",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 22
+        },
+        {
+          "t": "A · T · G · C",
+          "c": "gold",
+          "f": "serifb",
+          "s": 86
+        }
+      ]
+    },
+    {
+      "kicker": "AND THEY ARE READ",
+      "dur": 9.4,
+      "lines": [
+        {
+          "t": "Transcribed, then translated",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "into proteins — whose chains",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "must be sequenced just so",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "to fold into working shapes.",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "Get the order wrong,",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "and in general",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "the protein is useless.",
+          "c": "cream",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "kicker": "AND THE FLOOR IS HIGH",
+      "dur": 9.4,
+      "lines": [
+        {
+          "t": "When synthetic biologists",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "built the simplest cell",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "they could, in 2016,",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "it still needed",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "473 genes —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 76
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "many of their functions",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "unknown at the time.",
+          "c": "cream",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "kicker": "1953",
+      "dur": 10.0,
+      "lines": [
+        {
+          "t": "Stanley Miller made",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "amino acids in a flask,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "and it was a real result.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "But a heap of amino acids",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        },
+        {
+          "t": "is to a living cell",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "what a bucket of letter tiles",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "is to Shakespeare.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "kicker": "SO HERE IS THE ARGUMENT",
+      "dur": 7.0,
+      "lines": [
+        {
+          "t": "Stephen Meyer develops it",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "at book length in",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "Signature in the Cell.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        }
+      ]
+    },
+    {
+      "kicker": "PREMISE ONE",
+      "dur": 9.0,
+      "lines": [
+        {
+          "t": "The origin of the first life",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "required the production of",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "large amounts of",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "functionally specified",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "information.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        }
+      ]
+    },
+    {
+      "kicker": "PREMISE TWO",
+      "dur": 12.0,
+      "lines": [
+        {
+          "t": "Of the causes available —",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "chance, physical necessity,",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "the two combined,",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "or intelligent agency —",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 16
+        },
+        {
+          "t": "only intelligent agency",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "is known, from repeated",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        },
+        {
+          "t": "experience, to produce",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        },
+        {
+          "t": "specified information",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        },
+        {
+          "t": "of this kind.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "kicker": "THEREFORE",
+      "dur": 10.0,
+      "lines": [
+        {
+          "t": "Intelligent design is,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "at present,",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        },
+        {
+          "t": "the best explanation",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "for the origin of",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "biological information.",
+          "c": "cream",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "kicker": "NOTICE THE SHAPE OF IT",
+      "dur": 9.4,
+      "lines": [
+        {
+          "t": "At present.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 60
+        },
+        {
+          "t": "Best explanation.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "It is not a proof, and",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "was never offered as one.",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "It is the kind of inference",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "a forensic scientist makes.",
+          "c": "cream",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "kicker": "AND THE ENGINE IS PREMISE TWO",
+      "dur": 10.4,
+      "lines": [
+        {
+          "t": "In every single case where",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "we know the causal history",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "of an information-rich artifact —",
+          "c": "cream",
+          "s": 40
+        },
+        {
+          "t": "a paragraph, a program,",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "a coded message —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "the cause turns out",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "to be a mind.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        }
+      ]
+    },
+    {
+      "dur": 8.0,
+      "big": [
+        {
+          "t": "There is exactly one",
+          "c": "cream",
+          "s": 62
+        },
+        {
+          "t": "we have never",
+          "c": "cream",
+          "s": 68
+        },
+        {
+          "t": "been able to trace.",
+          "c": "cream",
+          "s": 68
+        },
+        {
+          "t": "And you are",
+          "c": "gold",
+          "s": 80
+        },
+        {
+          "t": "made of it.",
+          "c": "gold",
+          "s": 92
+        }
+      ],
+      "sub": [
+        {
+          "t": "The full case, and its limits, at",
+          "c": "dim",
+          "f": "serif",
+          "s": 38
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    }
   ]
 }
