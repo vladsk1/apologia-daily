@@ -9,6 +9,34 @@ whole site.**
 
 ---
 
+## PROGRESS LOG — per-card Evidence Library re-gate
+
+> **2026-08-02 — ev-s3 (Jesus tab) COMPLETE. 3 of 14 tab fragments now fully re-gated.**
+> The per-card **faster-mode** method (self-read card + paired certified essay → `apologia-citations`
+> in discovery → `apologia-orthodoxy` + `apologia-neutrality` for verification; dual-consensus on the
+> deity/Trinity/resurrection/rival-worldview tiers; re-gate after every fix pass) has cleared:
+> - **`ev-s1.html`** — 12/12 cards ✅ stamped + live
+> - **`ev-s2.html`** — 8/8 cards ✅ stamped + live (commit `1a1f89b`)
+> - **`ev-s3.html`** — 16/16 cards ✅ stamped + live (final commit `6bad980`) — the Jesus/deity tab,
+>   the highest-stakes fragment. Every card's per-card record is in the `content-review` `by` note at
+>   the top of `ev-s3.html`.
+>
+> **NEXT, in order:** `ev-s4` Biblical Reliability (~11 cards), `ev-s5` Science (~7), **`ev-s6` Trinity
+> (~16 — hardest; has a known open BREAK re "needed the world in order to love")**, `ev-s7` Conversion
+> (~9), then the `.mk` mirrors. Each `ev-sN.html` carries its own `content-review` stamp; append per-card
+> records to its `by` note exactly as ev-s1/2/3 do, and push each fragment to `main` as it clears.
+>
+> **Recurring landmines the sweep keeps catching** (check these first on every card): the Daniel 7:14
+> *pelach* "worship" overclaim (it is homage to a sovereign — Dan 3:12 uses it of serving
+> Nebuchadnezzar's gods); Colwell's rule misused to "prove" John 1:1c (it is about definiteness — the
+> qualitative reading is Harner/Wallace); Markan priority (Matthew/Luke are NOT independent of Mark, so
+> "multiple attestation" and "third day across all three Synoptics" over-count one source as three);
+> "virtually all scholars" overstatement; fabricated skeptic-praise quotes; Stoner-style prophecy odds.
+> **ESSAY-LEVEL FOLLOW-UP owed:** `library/titles.html:185` still states the *pelach* claim backwards
+> (flagged on ev-s3 CARD 08). **Human/pastoral sign-off remains PENDING on all re-gated cards.**
+
+---
+
 ## 0. Read this first — what a local session does and does not buy you
 
 Tested from the sandbox on 2026-07-29. Every primary-source host answers **403 to CONNECT**
