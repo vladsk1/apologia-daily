@@ -8,7 +8,7 @@
   "scenes": [
     { "dur": 5.6,
       "big": [ {"t": "There is one seat", "c": "cream", "s": 78}, {"t": "in the universe", "c": "cream", "s": 78}, {"t": "that belongs to", "c": "cream", "s": 78}, {"t": "God alone.", "c": "gold", "s": 108} ],
-      "sub": [ {"t": "And the New Testament sits Jesus on it.", "c": "dim", "f": "serif", "s": 40} ] },
+      "sub": [ {"t": "And the New Testament says Jesus shares it.", "c": "dim", "f": "serif", "s": 40} ] },
 
     { "kicker": "HANDS", "dur": 8.0, "lines": [
       {"t": "Bowman and Komoszewski's", "c": "cream", "s": 46},
@@ -28,7 +28,7 @@
       {"t": "No Old Testament verse is quoted", "c": "cream", "s": 42},
       {"t": "and echoed more often in the New.", "c": "cream", "s": 42} ] },
 
-    { "kicker": "WHAT THAT SEAT MEANS", "dur": 7.0, "lines": [
+    { "kicker": "WHAT THE RIGHT HAND MEANS", "dur": 7.0, "lines": [
       {"t": "To be seated at God's", "c": "cream", "s": 50},
       {"t": "right hand is not", "c": "cream", "s": 52},
       {"t": "to stand near his rule.", "c": "cream", "s": 50},
@@ -49,15 +49,18 @@
       {"t": "A single seat, shared —", "c": "gold", "f": "serifb", "s": 52},
       {"t": "", "s": 14},
       {"t": "and the one who shares it", "c": "cream", "s": 44},
-      {"t": "is the Lamb who was slain.", "c": "cream", "s": 46} ] },
+      {"t": "is the Lamb who was slain.", "c": "cream", "s": 46},
+      {"t": "", "s": 12},
+      {"t": "Revelation 22:1, 3", "c": "dim", "s": 34} ] },
 
     { "kicker": "WHY THAT LANDED", "dur": 10.0, "lines": [
       {"t": "Richard Bauckham argues", "c": "cream", "s": 48},
       {"t": "Second Temple Judaism", "c": "cream", "s": 46},
-      {"t": "marked its God out by identity:", "c": "cream", "s": 44},
+      {"t": "marked its God out by identity.", "c": "cream", "s": 44},
+      {"t": "Two of its marks:", "c": "cream", "s": 44},
       {"t": "", "s": 16},
-      {"t": "he alone rules all things.", "c": "gold", "f": "serifb", "s": 48},
-      {"t": "he alone is worshipped.", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "Israel's God alone rules all things.", "c": "gold", "f": "serifb", "s": 44},
+      {"t": "Israel's God alone is worshipped.", "c": "gold", "f": "serifb", "s": 44},
       {"t": "", "s": 14},
       {"t": "Whether “identity” is even the right", "c": "dim", "s": 34},
       {"t": "category is argued over still.", "c": "dim", "s": 34} ] },
@@ -74,12 +77,14 @@
       {"t": "what the angel forbids.", "c": "gold", "f": "serifb", "s": 52} ] },
 
     { "kicker": "SO", "dur": 9.0, "lines": [
-      {"t": "Sharing the one throne —", "c": "cream", "s": 46},
-      {"t": "and the worship offered there —", "c": "cream", "s": 42},
-      {"t": "was never a job description", "c": "cream", "s": 44},
-      {"t": "a creature could be hired for.", "c": "cream", "s": 44},
+      {"t": "Sharing the one throne.", "c": "cream", "s": 48},
+      {"t": "Receiving the worship", "c": "cream", "s": 46},
+      {"t": "offered at it.", "c": "cream", "s": 48},
       {"t": "", "s": 18},
-      {"t": "It was an identity marker.", "c": "gold", "f": "serifb", "s": 50} ] },
+      {"t": "Neither was ever a job description", "c": "cream", "s": 42},
+      {"t": "a creature could be hired for.", "c": "cream", "s": 44},
+      {"t": "", "s": 14},
+      {"t": "They were identity markers.", "c": "gold", "f": "serifb", "s": 50} ] },
 
     { "kicker": "HOLD IT AS THEY INTENDED", "dur": 8.0, "lines": [
       {"t": "The Seat is one finger of five.", "c": "cream", "s": 46},
@@ -90,7 +95,7 @@
       {"t": "The other four are at the link.", "c": "dim", "s": 34} ] },
 
     { "dur": 8.6,
-      "big": [ {"t": "Honors. Attributes.", "c": "cream", "s": 56}, {"t": "Names. Deeds. Throne.", "c": "cream", "s": 56}, {"t": "All of them", "c": "cream", "s": 62}, {"t": "the one God of Israel's.", "c": "gold", "s": 60}, {"t": "All of them given to Jesus —", "c": "gold", "s": 50}, {"t": "early, and on purpose.", "c": "gold", "s": 54} ],
+      "big": [ {"t": "Honors. Attributes.", "c": "cream", "s": 56}, {"t": "Names. Deeds. Seat.", "c": "cream", "s": 56}, {"t": "All of them", "c": "cream", "s": 62}, {"t": "the one God of Israel's.", "c": "gold", "s": 60}, {"t": "All of them shared by Jesus —", "c": "gold", "s": 50}, {"t": "said early, and on purpose.", "c": "gold", "s": 50} ],
       "sub": [ {"t": "The full case, and its limits, at", "c": "dim", "f": "serif", "s": 38},
                {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
   ]
