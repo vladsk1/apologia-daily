@@ -1,4 +1,29 @@
-# Islam-section enrichments from *The Islamic Dilemma* (Frost, 2026) — DRAFTED, awaiting gate
+# Islam-section enrichments from *The Islamic Dilemma* (Frost, 2026) — SHIPPED 2026-08-03
+
+> **Status: SHIPPED / gated CLEAN (2026-08-03).** All three enrichments were inserted and taken
+> through the full pipeline. **Gate results (dual-consensus, deity/Trinity + rival-worldview tier):**
+> - `apologia-citations`: **0 errors** across 29 checked claims. Every scholar/work/date verified.
+>   Refinements applied: Nickel article page range **pp. 207–223** added; the Elliott page-cite (85/105)
+>   **kept omitted** as unverifiable (falls outside the IGT text range); "late antiquity" scoped to the
+>   *Infancy Gospel of Thomas* (the *Arabic Infancy Gospel*'s dating is disputed / possibly post-Islamic);
+>   the Nickel "~25-passage" figure **kept omitted** (unverified).
+> - `apologia-argument`: **0 BREAK.** Two POLISH items applied ("descends from"→"earliest home is";
+>   `worldviews` card gained "the later end of a contested range"). Garima confirmed as corroboration,
+>   not proof; the appended authorities do **not** harden the Whittingham *maʿna*/*naṣṣ* calibration.
+> - **DUAL-CONSENSUS** `apologia-orthodoxy`: **CLEAN** (0 heresy; manuscripts=preservation-not-truth held;
+>   apocrypha factual + explicitly non-canonical; no clarifier candidates) **AND** `apologia-neutrality`:
+>   **no BREAK.** One [WEAK] + one POLISH applied (Witztum factive verb softened to "have argued… stand
+>   closer"; Nickel standpoint disclosed "(a Christian scholar of Islam)", "documents" not "supports").
+> - **Fix pass re-gated by BOTH lenses → both returned CLEAN** (standing rule: a fix pass re-opens the gate).
+> - Files: `library/islam-jesus.html` (§1), `library/islam-dilemma.html` (§2, §3), `worldviews.html` (§3 nod),
+>   `briefs/_data.json` (§3 brief clause; briefs index rebuilt). All `content-review` stamps bumped 2026-08-03.
+> - ⚠ **Note on tooling:** the `apologia-argument`/`-orthodoxy`/`-neutrality` fleet types were **not registered**
+>   in this session, so each gate was run faithfully via a read-only `general-purpose` agent loaded with the
+>   exact `.claude/agents/*.md` definition. `apologia-citations` ran as its native registered type.
+> - All guardrails from the pre-gate draft (below) survived: Whittingham caution intact, Garima hedges intact,
+>   apocrypha non-mocking and not implying Christian canonicity.
+>
+> **Original pre-gate draft notes are retained below for the record.**
 
 > **Status: DRAFT / pre-gate.** These are drop-in-ready enrichments surfaced by
 > [`islamic-dilemma.md`](islamic-dilemma.md) and logged in
