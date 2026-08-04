@@ -11,20 +11,35 @@ whole site.**
 
 ## PROGRESS LOG — per-card Evidence Library re-gate
 
-> **2026-08-02 — ev-s3 (Jesus tab) COMPLETE. 3 of 14 tab fragments now fully re-gated.**
+> **2026-08-04 — ev-s4 (Biblical Reliability tab) COMPLETE. 4 of 14 tab fragments now fully re-gated.**
 > The per-card **faster-mode** method (self-read card + paired certified essay → `apologia-citations`
 > in discovery → `apologia-orthodoxy` + `apologia-neutrality` for verification; dual-consensus on the
 > deity/Trinity/resurrection/rival-worldview tiers; re-gate after every fix pass) has cleared:
 > - **`ev-s1.html`** — 12/12 cards ✅ stamped + live
 > - **`ev-s2.html`** — 8/8 cards ✅ stamped + live (commit `1a1f89b`)
-> - **`ev-s3.html`** — 16/16 cards ✅ stamped + live (final commit `6bad980`) — the Jesus/deity tab,
->   the highest-stakes fragment. Every card's per-card record is in the `content-review` `by` note at
->   the top of `ev-s3.html`.
+> - **`ev-s3.html`** — 16/16 cards ✅ stamped + live (final commit `6bad980`) — the Jesus/deity tab.
+> - **`ev-s4.html`** — 11/11 cards ✅ stamped + live (final commit `b480b6c`) — Biblical Reliability
+>   (manuscript, archaeology, canon, prophecy, consistency, eyewitnesses, deadseascrolls, earlydate,
+>   jewishness, coincidences, names). Per-card records in the `by` note at the top of `ev-s4.html`.
 >
-> **NEXT, in order:** `ev-s4` Biblical Reliability (~11 cards), `ev-s5` Science (~7), **`ev-s6` Trinity
-> (~16 — hardest; has a known open BREAK re "needed the world in order to love")**, `ev-s7` Conversion
-> (~9), then the `.mk` mirrors. Each `ev-sN.html` carries its own `content-review` stamp; append per-card
-> records to its `by` note exactly as ev-s1/2/3 do, and push each fragment to `main` as it clears.
+> **NEXT, in order:** `ev-s5` Science (~7 cards), **`ev-s6` Trinity (~15 — hardest; has a known open
+> BREAK re "needed the world in order to love")**, `ev-s7` Conversion (9 biographical profiles — lighter,
+> citation-heavy, not argument cards), then the `.mk` mirrors. Each `ev-sN.html` carries its own
+> `content-review` stamp; append per-card records to its `by` note exactly as ev-s1/2/3/4 do (⚠ use
+> SINGLE quotes inside the JSON `by` string — double-quotes break the stamp JSON), and push each fragment
+> to `main` as it clears.
+>
+> **⚠ ev-s4 lessons worth carrying:** (1) the **deadseascrolls** card ran the retired "virtually
+> identical / the OT is essentially unchanged" slogan in EVERY tier including the graded premises and the
+> spoken conversation script — scope all DSS stability claims to Isaiah-as-test-case / the proto-Masoretic
+> STREAM, never the whole OT, and give pluriformity (Jeremiah's two editions) its due. (2) **archaeology**
+> re-committed the Nuzi/patriarchal-customs trap (Thompson 1974 / Van Seters 1975) — drop it. (3) The
+> **prophecy** card's Psalm 22:16 "pierced ... supported by the DSS" is the same Nahal-Hever landmine as
+> ev-s3 (that fragment is ~1st-c AD, not pre-Christian; pre-Christian support is the Greek LXX only), and
+> its DSS-dating test is the WRONG test for the BC-fulfilled Tyre prophecy (judge Tyre by Ezekiel's 6th-c
+> composition date). (4) **Bauckham universalism fence** recurs on eyewitnesses + names — cite him as a
+> historian only. **OWNER FOLLOW-UP:** the prophecy card's "read the full essay" link points to the
+> MESSIANIC-prophecy essay, not its nations-prophecy subject.
 >
 > **Recurring landmines the sweep keeps catching** (check these first on every card): the Daniel 7:14
 > *pelach* "worship" overclaim (it is homage to a sovereign — Dan 3:12 uses it of serving
