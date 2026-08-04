@@ -11,23 +11,39 @@ whole site.**
 
 ## PROGRESS LOG — per-card Evidence Library re-gate
 
-> **2026-08-04 — ev-s4 (Biblical Reliability tab) COMPLETE. 4 of 14 tab fragments now fully re-gated.**
+> **2026-08-04 — ev-s5 (Science & Faith tab) COMPLETE. 5 of 14 tab fragments now fully re-gated.**
 > The per-card **faster-mode** method (self-read card + paired certified essay → `apologia-citations`
 > in discovery → `apologia-orthodoxy` + `apologia-neutrality` for verification; dual-consensus on the
 > deity/Trinity/resurrection/rival-worldview tiers; re-gate after every fix pass) has cleared:
 > - **`ev-s1.html`** — 12/12 cards ✅ stamped + live
 > - **`ev-s2.html`** — 8/8 cards ✅ stamped + live (commit `1a1f89b`)
 > - **`ev-s3.html`** — 16/16 cards ✅ stamped + live (final commit `6bad980`) — the Jesus/deity tab.
-> - **`ev-s4.html`** — 11/11 cards ✅ stamped + live (final commit `b480b6c`) — Biblical Reliability
->   (manuscript, archaeology, canon, prophecy, consistency, eyewitnesses, deadseascrolls, earlydate,
->   jewishness, coincidences, names). Per-card records in the `by` note at the top of `ev-s4.html`.
+> - **`ev-s4.html`** — 11/11 cards ✅ stamped + live (final commit `b480b6c`) — Biblical Reliability.
+> - **`ev-s5.html`** — 7/7 cards ✅ stamped + live (final commit `f0c1b30`) — Science & Faith (bigbang,
+>   originlife, mathematics, cambrian, cosmic, privileged, laws). Per-card records in the `by` note at
+>   the top of `ev-s5.html`.
 >
-> **NEXT, in order:** `ev-s5` Science (~7 cards), **`ev-s6` Trinity (~15 — hardest; has a known open
-> BREAK re "needed the world in order to love")**, `ev-s7` Conversion (9 biographical profiles — lighter,
-> citation-heavy, not argument cards), then the `.mk` mirrors. Each `ev-sN.html` carries its own
-> `content-review` stamp; append per-card records to its `by` note exactly as ev-s1/2/3/4 do (⚠ use
-> SINGLE quotes inside the JSON `by` string — double-quotes break the stamp JSON), and push each fragment
-> to `main` as it clears.
+> **NEXT, in order:** **`ev-s6` Trinity (~15 cards — the hardest tab; deity/Trinity dual-consensus on
+> every card; has a known open BREAK re "needed the world in order to love")**, `ev-s7` Conversion (9
+> biographical profiles — lighter, citation-heavy, not argument cards), then the `.mk` mirrors. Each
+> `ev-sN.html` carries its own `content-review` stamp; append per-card records to its `by` note exactly as
+> ev-s1..s5 do (⚠ use SINGLE quotes inside the JSON `by` string — double-quotes break the stamp JSON), and
+> push each fragment to `main` as it clears.
+>
+> **⚠ ev-s5 (Science) lessons worth carrying:** (1) the **natural-theology DEISM GAP** is the recurring
+> catch — every argument (bigbang, mathematics, cosmic, privileged, laws) reaches at most a rational
+> Mind/Author, NOT the Triune God; the caveat must appear in EVERY tier including the warm "Case, Plainly"
+> close (laws' "Father's house" and cosmic's "you are loved" both over-reached the free tier while the Pro
+> tier was fenced). Certified wording: "reaches a rational Author of order, not yet the personal or Triune
+> God of Christianity — that further step comes from revelation and the historical case." (2) The
+> **fine-tuning DATA/DESIGN rule**: the data is conceded by physicists, the design inference is the
+> contested conclusion — never assert the coincidence as settled fact, especially in the graded/deep-dive
+> tiers (privileged's GHZ/atmosphere claims and bigbang's "absolute beginning" both did). (3) **ID divides
+> Christians** (cambrian, originlife) — bind neither reading on the creed; the cambrian **false-grouping**
+> of Collins/Conway Morris/McGrath/Polkinghorne/Denis Alexander as ID supporters (they reject it) is a
+> permanent landmine — verify it stays fixed. (4) Recurring quote issues: the **Maxwell "none will work
+> without a God"** deathbed line (secondhand — mark "reportedly"), the **Penrose/BGV** overstatement, and
+> the **Kepler "thinking God's thoughts"** paraphrase (not a verbatim quote).
 >
 > **⚠ ev-s4 lessons worth carrying:** (1) the **deadseascrolls** card ran the retired "virtually
 > identical / the OT is essentially unchanged" slogan in EVERY tier including the graded premises and the
