@@ -546,6 +546,18 @@
 >   forbidden** — never extract from it.
 >
 > **Growth**
+> - ⭐ **[`docs/INSTAGRAM_GROWTH_STRATEGY.md`](docs/INSTAGRAM_GROWTH_STRATEGY.md) (2026-08-04)** — written
+>   from the account's real numbers (55 posts · **19 followers** · 2.4K views/30d · reels at 5–172).
+>   Diagnosis: reach dies in the first seed batch (silent reels → watch-through), but the **worse**
+>   failure is follow-conversion at ~0.1–0.3% vs a 1–2% par — 55 standalone facts give nobody a reason
+>   to come back. Fix order: **voice on the reels** (55 of 56 specs already carry a `voiceover` script
+>   the editor pass never uses) → **numbered series** → profile/social-proof → treat TikTok + Shorts as
+>   primary. Includes a 30-day daily calendar mapped to already-gated specs. **Corrects two standing
+>   claims:** `REEL_POSTING_PLAN.md` rule #1 (the screen-recording beat the branded cards 126 vs 5/16 on
+>   the same topic) and `SOCIAL_GROWTH_PLAN.md`'s "carousels not buildable" (**`gen_card.py` already
+>   renders N portrait 1080×1350 cards from one spec** — gating is the only cost). ⚠ New hook lines and
+>   carousel slides are **gated content**, not marketing copy — the pocket-card sweep is the precedent.
+>   **Owner is blocking on four things** (§6), the cheapest being 15 min of Insights numbers.
 > - ⚠ **CORRECTED 2026-07-28 — PostHog is NOT under-instrumented.** It emits **34 distinct events**
 >   including `signup_completed`. The real gap is that **it has never been reviewed** — nine months of
 >   data, unread. Read it before setting any acquisition target (funnels listed in `META_ADS_PLAN.md` §B).
