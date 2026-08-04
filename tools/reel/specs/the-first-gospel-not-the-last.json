@@ -1,0 +1,132 @@
+{
+  "reviewed": {"argument": null, "orthodoxy": null, "by": "PENDING — NEW BUILD 2026-08-03. Deity tier: needs apologia-argument + apologia-orthodoxy + apologia-neutrality (dual consensus is the two doctrinal lenses, NOT the whole bar). Cards-only, no voiceover field, so every hedge and bound must live on a card — there is no second surface. SOURCES: library/jesus_claims.html (the Mark 2 / Mark 14 spine, the 'earliest Gospel' wording, and the bracketing-John orthonote at :174), library/jesus_as_god_nt.html (:175-177 honest-scope paragraphs), docs/book-research/did-jesus-really-say-he-was-god.md (Del Rosario: the two blasphemy scenes as the structure; ch.12's 'authority over sacred things, nature, demons, disease, death'; the implicit-claim point that Jesus did not need the words 'I am God'). BUILT-IN FENCES — each one is a known trap on this argument: (1) THE THEME MUST NOT IMPLY JOHN IS UNHISTORICAL. Del Rosario calibration flag 6: Mark-not-John is a STRATEGIC choice — meeting the skeptic on his own ground — never a concession that John is late-and-therefore-doubtful. Scene 12 carries this and must not be cut; jesus_claims.html:174 fences the same move with an orthonote ('Bracketing John, not doubting it'). (2) INFERENCE TO BEST EXPLANATION, NEVER PROOF. Del Rosario flag 1. Scene 10 says 'only God could claim that' — the claim is about what the words amount to, not a demonstration. Do not upgrade any card to 'proves'. (3) HOSTILE TESTIMONY IS THE ENGINE. The argument runs from the ENEMIES' reaction (scribes in ch.2, high priest in ch.14), which is why it survives 'his followers said so'. Keep scene 9. (4) MARK NEVER WRITES 'JESUS IS GOD' AND THE REEL MUST SAY SO (scene 10). Claiming Mark states it is false and a well-read skeptic closes the whole reel with one verse. (5) CHALCEDON — scene 11 affirms full humanity from Mark's own text (asleep 4:38, hungry 11:12, dead 15:37). This is the standing corpus gap logged in CLAUDE.md; a deity reel without it can leave a functionally monophysite Christ. (6) MARK 2:6 SAYS THE SCRIBES QUESTIONED 'IN THEIR HEARTS' — scene 4 says 'think', not 'say'. (7) NO CLAIM OF SCHOLARLY CONSENSUS that Mark carries a high Christology — Ehrman disputes exactly this, and an unattributed consensus claim is the registry-retired class. The reel asserts what Mark NARRATES and what the characters in it REACT to, which is not contestable. (8) 'The last Gospel written' / 'the earliest Gospel' are the standard datings and jesus_claims.html states Markan priority flatly in its own voice."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "source": "library/jesus_claims.html",
+  "scenes": [
+    { "dur": 7.0,
+      "big": [ {"t": "They say Jesus only", "c": "cream", "s": 72},
+               {"t": "claims to be God", "c": "cream", "s": 72},
+               {"t": "in John.", "c": "gold", "s": 96} ],
+      "sub": [ {"t": "John is the last Gospel written.", "c": "dim", "f": "serif", "s": 38},
+               {"t": "So let's use the first one.", "c": "dim", "f": "serif", "s": 38} ] },
+
+    { "kicker": "MARK — THE EARLIEST GOSPEL", "dur": 7.5, "lines": [
+      {"t": "Written first.", "c": "cream", "s": 56},
+      {"t": "Shortest. Bluntest.", "c": "cream", "s": 54},
+      {"t": "No prologue about the Word.", "c": "cream", "s": 46},
+      {"t": "", "s": 20},
+      {"t": "Watch what happens anyway.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "MARK 1", "dur": 8.0, "lines": [
+      {"t": "“Prepare the way", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "of the Lord.”", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "", "s": 18},
+      {"t": "Mark opens by taking Isaiah's", "c": "cream", "s": 42},
+      {"t": "line about God's own coming —", "c": "cream", "s": 42},
+      {"t": "and pointing it at Jesus.", "c": "cream", "s": 44},
+      {"t": "", "s": 14},
+      {"t": "Mark 1:2–3", "c": "dim", "s": 36} ] },
+
+    { "kicker": "MARK 2", "dur": 8.5, "lines": [
+      {"t": "A paralysed man.", "c": "cream", "s": 48},
+      {"t": "A torn-open roof.", "c": "cream", "s": 48},
+      {"t": "“Your sins are forgiven.”", "c": "cream", "s": 46},
+      {"t": "", "s": 18},
+      {"t": "The scribes, sitting there, think:", "c": "cream", "s": 40},
+      {"t": "“Who can forgive sins", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "but God alone?”", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "", "s": 14},
+      {"t": "Mark 2:5, 7", "c": "dim", "s": 36} ] },
+
+    { "kicker": "MARK 4 · 5", "dur": 9.0, "lines": [
+      {"t": "He tells a storm to stop.", "c": "cream", "s": 46},
+      {"t": "It stops.", "c": "cream", "s": 52},
+      {"t": "“Who then is this?”", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "", "s": 18},
+      {"t": "He commands demons.", "c": "cream", "s": 46},
+      {"t": "He raises a dead girl", "c": "cream", "s": 46},
+      {"t": "by the hand.", "c": "cream", "s": 48},
+      {"t": "", "s": 14},
+      {"t": "Mark 4:39–41 · 5:41", "c": "dim", "s": 36} ] },
+
+    { "kicker": "MARK 12", "dur": 8.0, "lines": [
+      {"t": "He asks how David", "c": "cream", "s": 48},
+      {"t": "can call his own descendant", "c": "cream", "s": 44},
+      {"t": "“Lord”", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "", "s": 18},
+      {"t": "and quotes Psalm 110 to do it.", "c": "cream", "s": 42},
+      {"t": "", "s": 14},
+      {"t": "Mark 12:35–37", "c": "dim", "s": 36} ] },
+
+    { "kicker": "MARK 14 · THE TRIAL", "dur": 10.0, "lines": [
+      {"t": "“Are you the Christ,", "c": "cream", "s": 46},
+      {"t": "the Son of the Blessed?”", "c": "cream", "s": 46},
+      {"t": "", "s": 18},
+      {"t": "“I am — and you will see", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "the Son of Man seated", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "at the right hand of Power.”", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "", "s": 14},
+      {"t": "Mark 14:61–62", "c": "dim", "s": 36} ] },
+
+    { "kicker": "THE HIGH PRIEST'S VERDICT", "dur": 8.5, "lines": [
+      {"t": "He tears his garments.", "c": "cream", "s": 48},
+      {"t": "“You have heard his blasphemy.”", "c": "gold", "f": "serifb", "s": 44},
+      {"t": "", "s": 18},
+      {"t": "Nobody in that room thought", "c": "cream", "s": 42},
+      {"t": "he had merely claimed", "c": "cream", "s": 44},
+      {"t": "to be a prophet.", "c": "cream", "s": 46},
+      {"t": "", "s": 14},
+      {"t": "Mark 14:63–64", "c": "dim", "s": 36} ] },
+
+    { "kicker": "TWO CHARGES, ONE BOOK", "dur": 9.5, "lines": [
+      {"t": "Mark opens the ministry", "c": "cream", "s": 46},
+      {"t": "with a blasphemy charge", "c": "cream", "s": 46},
+      {"t": "and ends it with one.", "c": "cream", "s": 46},
+      {"t": "", "s": 20},
+      {"t": "That is hostile testimony —", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "his enemies telling us", "c": "cream", "s": 44},
+      {"t": "what they heard him claim.", "c": "cream", "s": 44} ] },
+
+    { "kicker": "HE NEVER SAYS THE WORDS", "dur": 8.5, "lines": [
+      {"t": "Mark never writes", "c": "cream", "s": 48},
+      {"t": "“Jesus is God.”", "c": "cream", "s": 50},
+      {"t": "", "s": 18},
+      {"t": "He doesn't have to.", "c": "cream", "s": 48},
+      {"t": "", "s": 16},
+      {"t": "Forgiving sins on earth,", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "judging from heaven —", "c": "gold", "f": "serifb", "s": 46},
+      {"t": "only God could claim that.", "c": "gold", "f": "serifb", "s": 46} ] },
+
+    { "kicker": "AND FULLY HUMAN", "dur": 9.5, "lines": [
+      {"t": "The same Gospel has him", "c": "cream", "s": 44},
+      {"t": "asleep in the boat,", "c": "cream", "s": 46},
+      {"t": "hungry on the road,", "c": "cream", "s": 46},
+      {"t": "and dead on a cross.", "c": "cream", "s": 46},
+      {"t": "", "s": 18},
+      {"t": "Fully God and fully man.", "c": "gold", "f": "serifb", "s": 48},
+      {"t": "Mark gives us both.", "c": "cream", "s": 46} ] },
+
+    { "kicker": "AND JOHN?", "dur": 10.0, "lines": [
+      {"t": "None of this doubts John.", "c": "cream", "s": 46},
+      {"t": "John says it most plainly", "c": "cream", "s": 44},
+      {"t": "of anyone.", "c": "cream", "s": 46},
+      {"t": "", "s": 20},
+      {"t": "The point is that you don't", "c": "cream", "s": 42},
+      {"t": "need him to find it.", "c": "cream", "s": 46},
+      {"t": "", "s": 16},
+      {"t": "It is already here, in the", "c": "gold", "f": "serifb", "s": 44},
+      {"t": "first Gospel ever written.", "c": "gold", "f": "serifb", "s": 44} ] },
+
+    { "dur": 9.0,
+      "big": [ {"t": "The earliest Gospel", "c": "cream", "s": 58},
+               {"t": "we have", "c": "cream", "s": 58},
+               {"t": "already has a Jesus", "c": "cream", "s": 56},
+               {"t": "who does what", "c": "gold", "s": 58},
+               {"t": "only God can do.", "c": "gold", "s": 62} ],
+      "sub": [ {"t": "The full case, and its limits, at", "c": "dim", "f": "serif", "s": 38},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 50} ] }
+  ]
+}
