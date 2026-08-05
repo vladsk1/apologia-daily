@@ -441,6 +441,21 @@
 > any of them: `HANDOFF.md` → *Archived project-guide status entries*.
 >
 > **Doctrinal / pastoral**
+> - ⭐ **[`docs/ETERNAL_GENERATION_GATE_FINDINGS.md`](docs/ETERNAL_GENERATION_GATE_FINDINGS.md) (2026-08-05)** —
+>   all four gates run on `library/eternal_generation.html` after an owner-supplied third-party review.
+>   **NOT STAMPABLE; the trial edit was REVERTED and the essay is byte-identical to its 2026-07-11
+>   certified state.** ⚠ **A pre-existing FACTUAL ERROR is live at line 181:** "They held this alongside
+>   (in Ware's case)… eternal generation" — Ware **rejected** eternal generation before Nov 2016, which is
+>   what Trueman's charge turned on; he reversed at ETS that November. **Fix it first** — two gates
+>   proposed downstream fixes that *restate* the error, having taken the essay as ground truth, and only
+>   `apologia-citations` caught it. Also BREAK-level: the FAQ **and its JSON-LD twin** answer "Is the Son
+>   eternally subordinate?" by leading with "we don't adjudicate"; the EFS steelman is one clause (1 Cor
+>   15:28 and the missions-reveal-processions move are absent, verified); and `ev-m-…:427` says EFS is
+>   "minus generation," false of Ware and of post-2020 Grudem. **Blocked on a web-enabled session** —
+>   citations was 403'd on every primary host and could not read Goligher's June 2016 posts, so the
+>   characterisation of the 2016 charge cannot be redrafted here. ⚠ The **"God is love eternally" hinge**
+>   at line 195 is stated as something "the Scriptures assert" — the same claim-shape already logged as a
+>   defect in `daily-args.json`, so it is a **`retired-claims.json` candidate**, not a one-off.
 > - **Recruit a standing pastoral/elder reviewer.** The sign-off log in `docs/STATEMENT_OF_FAITH.md`
 >   is still `_pending_`. Owed on: the Trinity + deity-of-Christ + Nicene Christology, the Islam
 >   cluster, and the "The Case, Plainly" tier (76 articles — automated gate CLEAN, no human pass).
