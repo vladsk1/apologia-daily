@@ -60,6 +60,7 @@ export const CANON = `<ul class="adn-links">
               <a href="/editorial-standards.html">Editorial Standards</a>
               <a href="/privacy.html">Privacy</a>
               <a href="/terms.html">Terms</a>
+              <a href="https://www.instagram.com/apologiadaily/" target="_blank" rel="me noopener">Instagram</a>
             </div>
           </div>
         </div>

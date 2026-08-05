@@ -546,18 +546,29 @@
 >   forbidden** — never extract from it.
 >
 > **Growth**
-> - ⭐ **[`docs/INSTAGRAM_GROWTH_STRATEGY.md`](docs/INSTAGRAM_GROWTH_STRATEGY.md) (2026-08-04)** — written
->   from the account's real numbers (55 posts · **19 followers** · 2.4K views/30d · reels at 5–172).
->   Diagnosis: reach dies in the first seed batch (silent reels → watch-through), but the **worse**
->   failure is follow-conversion at ~0.1–0.3% vs a 1–2% par — 55 standalone facts give nobody a reason
->   to come back. Fix order: **voice on the reels** (55 of 56 specs already carry a `voiceover` script
->   the editor pass never uses) → **numbered series** → profile/social-proof → treat TikTok + Shorts as
->   primary. Includes a 30-day daily calendar mapped to already-gated specs. **Corrects two standing
->   claims:** `REEL_POSTING_PLAN.md` rule #1 (the screen-recording beat the branded cards 126 vs 5/16 on
->   the same topic) and `SOCIAL_GROWTH_PLAN.md`'s "carousels not buildable" (**`gen_card.py` already
->   renders N portrait 1080×1350 cards from one spec** — gating is the only cost). ⚠ New hook lines and
->   carousel slides are **gated content**, not marketing copy — the pocket-card sweep is the precedent.
->   **Owner is blocking on four things** (§6), the cheapest being 15 min of Insights numbers.
+> - ⭐ **[`docs/INSTAGRAM_GROWTH_STRATEGY.md`](docs/INSTAGRAM_GROWTH_STRATEGY.md) — REWRITTEN 2026-08-05
+>   against real per-reel Insights data.** The 08-04 draft was written from a profile screenshot and
+>   **guessed the wrong half of the funnel**; §7 lists its five corrections. The measured picture across
+>   5 reels / 713 views: posted length **1:16–2:12**, avg watch **4–10s** = **~7% watch-through**, skip
+>   ~73%, **0 saves · 0 comments · 2 shares · 0 profile taps**, and **76–99% of views are
+>   NON-followers** (79.7% Reels tab). ⭐ **So distribution is NOT the problem** — Instagram is actively
+>   showing a 19-follower account to strangers and they leave at second 3. The retention curve is a
+>   cliff to <10% by 0:03 then **dead flat**, which means the ~7% who get past the opening *finish*: the
+>   arguments are fine, the first three seconds are not. ⚠ **The length is baked into the specs, not the
+>   editor pass** — measured across all 55: **median 43s, range 31–128s, only 5 under 35s, 11 over 60s**,
+>   so the "18 weeks of runway" is **not postable runway** until trimmed *and re-gated*. Fix order:
+>   **cut to 20–30s** → **rebuild the opening 3s** (≤5 words, animated, curiosity-gap not assertion —
+>   the one reel at 11.9% is the only gap-opener) → voice → engineer saves/shares → *then* profile.
+>   ⚠ **Profile work is week 4, NOT week 0** — at 0 profile taps there is nobody to convert.
+>   **Owner decisions settled 2026-08-05:** handle **@apologiadaily**; **no camera** (plan is
+>   faceless-optimised); owner does the daily 20-min engagement. ⚠ Trimmed reels are **re-compressed
+>   gated content** — cutting the qualifying scene is how an honest argument becomes an overstated one.
+> - ✅ **Instagram is now wired site-wide (2026-08-05).** `sameAs` on the standalone Organization entity
+>   (`index.html` — the other 172 `Organization` hits are `publisher` sub-objects inside Article schema
+>   and correctly did NOT get it), plus a footer link on all **14** `.footer-links` pages and, via the
+>   `tools/sync-nav.mjs` CANON SSOT, the `.adn-mega-foot` on all **296** nav pages. **`twitter:site` is
+>   still owed** (1,108 pages carry `twitter:card`, 0 carry `twitter:site`) — blocked on an X handle.
+>   `links.html` still does not exist; scheduled with the week-4 profile work.
 > - ⚠ **CORRECTED 2026-07-28 — PostHog is NOT under-instrumented.** It emits **34 distinct events**
 >   including `signup_completed`. The real gap is that **it has never been reviewed** — nine months of
 >   data, unread. Read it before setting any acquisition target (funnels listed in `META_ADS_PLAN.md` §B).
