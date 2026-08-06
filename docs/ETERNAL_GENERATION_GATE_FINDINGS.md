@@ -9,10 +9,14 @@ missions-reveal-processions), and the fix propagated in one commit to the FAQ + 
 re-ran dual-consensus: citations 0-error, argument SOUND, orthodoxy CLEAN, neutrality CLEAN — the
 neutrality lens caught (and I removed) a fresh Scott-Swain misattribution the fix pass had
 introduced, exactly the failure §7 predicts. Both files re-stamped 2026-08-06.
-**STILL OPEN — the §4 WEAK items NOT part of the §6 plan** (line 175 fn-10 Giles-2012-vs-Grudem-2020
-anachronism; autotheos orthonote Reformed-lean; John 5:26 economic-reading objection; monogenēs
-evidential-display tilt; the "God is love eternally" hinge → a retired-claims candidate) remain for
-a later pass. Pastoral sign-off still owed. The record below is kept for that work.
+**§4 WEAK items (follow-up).** Three of the five have since been fixed and shipped 2026-08-06
+(dual-consensus re-gate, all four gates clean): the **line-175 fn-10 Giles-2012-vs-Grudem-2020
+anachronism** (reworded to Giles's actual standing view), the **John 5:26 economic-reading objection**
+(now answered at the verse — a bounded concession + reweight to the cumulative case), and the **"God
+is love eternally" hinge** (grounded in 1 John 4:8 + John 17:24, run in the safe explanatory direction,
+not the retired "love needs an object → Trinity" inference). **STILL OPEN:** the autotheos orthonote's
+Reformed lean, and the *monogenēs* evidential-display tilt. Pastoral sign-off still owed. The record
+below is kept for that work.
 
 ---
 
