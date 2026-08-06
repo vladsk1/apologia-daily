@@ -141,7 +141,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
 .it-btn:disabled{opacity:.5;cursor:default;}
 .it-resp{margin-top:1rem;padding:.875rem 1rem;background:rgba(255,255,255,.05);border-radius:6px;border-left:2px solid var(--g);}
 .it-resp-label{font-family:var(--ui);font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--g);margin-bottom:.5rem;}
-.it-resp-text{font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.8;white-space:pre-wrap;}
+.it-resp-text{font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.8;overflow-wrap:anywhere;}
 
 .upgrade-prompt{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;background:var(--n);border-radius:6px;padding:1rem 1.25rem;margin-top:1.25rem;border:1px solid rgba(200,169,81,.2);}
 .up-left{display:flex;align-items:center;gap:10px;}
@@ -469,8 +469,34 @@ function activateTab(id) {
 function openArgCard(slug) {
   var el = document.getElementById('arg-' + slug); if (!el) return;
   el.classList.add('op');
+  currentArgSlug = slug;
   try { var ct = el.querySelector('.ct'); if (ct) { currentArgContext = ct.textContent.trim(); var lbl = document.getElementById('float-arg-label'); if (lbl) lbl.textContent = currentArgContext; } } catch (e) {}
   setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+}
+
+/* The AI tutor must answer FROM the card in front of the reader, not from the card's
+   title. /api/tutor treats `excerpt` as the source of truth for the page; without it the
+   model only sees a title like "The HANDS Framework" and invents the content (it answered
+   "D is for Design" — the card says Honors, Attributes, Names, Deeds, Seat). Deep-dive
+   essays in library/*.html already send their .art-body text; this is the hub's equivalent.
+   Uses textContent, not innerText, so a card that is collapsed (.cb is display:none) or a
+   tier the reader has not expanded still yields its text. */
+function argExcerpt(el) {
+  try {
+    if (typeof el === 'string') el = document.getElementById('arg-' + el);
+    if (!el) return '';
+    var card = el.closest ? (el.closest('.card') || el) : el;
+    var body = card.querySelector('.cb') || card;
+    // Clone so we can drop UI chrome (the tutor box's own placeholder text, the upgrade
+    // prompt) without touching the page the reader is looking at.
+    var clone = body.cloneNode(true);
+    var chrome = clone.querySelectorAll('.inline-tutor, .upgrade-prompt, script, style');
+    for (var i = 0; i < chrome.length; i++) chrome[i].parentNode.removeChild(chrome[i]);
+    var title = card.querySelector('.ct');
+    var txt = (title ? title.textContent + '\n\n' : '') + (clone.textContent || '');
+    // 18000 = the cap /api/tutor applies server-side; sending more is wasted.
+    return txt.replace(/\s+/g, ' ').trim().slice(0, 18000);
+  } catch (e) { return ''; }
 }
 function deepLinkArg() {
   try { var a = new URLSearchParams(location.search).get('arg'); if (!a && location.hash) a = location.hash.replace(/^#(arg-)?/, ''); return a || ''; } catch (e) { return ''; }
@@ -483,6 +509,7 @@ function tog(card) {
     for (var i = 0; i < o.length; i++) o[i].classList.remove('op');
     card.classList.add('op');
     // Update floating tutor context
+    currentArgSlug = (card.id || '').replace(/^arg-/, '');
     var titleEl = card.querySelector('.ct');
     if (titleEl) {
       currentArgContext = titleEl.textContent.trim();
@@ -505,7 +532,7 @@ async function askT(tid, arg) {
     var res = await fetch('/api/tutor', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({question: q, argument: arg, category: 'Evidence Library'})
+      body: JSON.stringify({question: q, argument: arg, category: 'Evidence Library', excerpt: argExcerpt(tid)})
     });
     if (res.ok) {
       var data = await res.json();
@@ -594,6 +621,7 @@ async function askInlineTutor(btn) {
   var tutor = btn.closest('.inline-tutor');
   if (!tutor) return;
   var arg = btn.getAttribute('data-arg');
+  var excerpt = argExcerpt(btn);
   var inp = tutor.querySelector('.it-input');
   var q = inp ? inp.value.trim() : '';
   if (!q) return;
@@ -606,11 +634,11 @@ async function askInlineTutor(btn) {
     var res = await fetch('/api/tutor', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ question: q, argument: arg, category: 'Evidence Library' })
+      body: JSON.stringify({ question: q, argument: arg, category: 'Evidence Library', excerpt: excerpt })
     });
     if (res.ok) {
       var data = await res.json();
-      if (text) text.textContent = data.answer || 'No response received.';
+      if (text) text.innerHTML = '<p style="margin:0;">' + mdToHtml(data.answer || 'No response received.') + '</p>';
       if (resp) resp.style.display = 'block';
       if (inp) inp.value = '';
     } else {
@@ -641,7 +669,7 @@ async function askInlineTutor(btn) {
     <div style="padding:1rem 1.25rem;">
       <textarea id="float-input" rows="2" placeholder="What are you unsure about? Ask anything..." style="width:100%;font-family:'DM Sans',sans-serif;font-size:0.85rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:4px;color:#fff;padding:8px 10px;resize:none;outline:none;" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendFloatQuestion();}"></textarea>
       <button onclick="sendFloatQuestion()" id="float-send-btn" style="margin-top:0.5rem;width:100%;font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:500;background:#c8a951;color:#050d1a;border:none;border-radius:4px;padding:9px;cursor:pointer;">Ask AI Tutor</button>
-      <div id="float-response" style="display:none;margin-top:0.75rem;background:rgba(255,255,255,0.04);border-radius:4px;padding:0.75rem;font-family:'Source Serif 4',serif;font-size:0.85rem;color:rgba(255,255,255,0.8);line-height:1.7;max-height:180px;overflow-y:auto;"></div>
+      <div id="float-response" style="display:none;margin-top:0.75rem;background:rgba(255,255,255,0.04);border-radius:4px;padding:0.75rem;font-family:'Source Serif 4',serif;font-size:0.85rem;color:rgba(255,255,255,0.8);line-height:1.7;max-height:180px;overflow-y:auto;overflow-x:hidden;overflow-wrap:anywhere;"></div>
     </div>
   </div>
 
@@ -686,13 +714,22 @@ async function askInlineTutor(btn) {
 
 var floatOpen = false;
 var currentArgContext = '';
+var currentArgSlug = '';
 var demoPlayed = false;
 var demoRunning = false;
 
 function mdToHtml(text) {
-  return text
-    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+  return String(text)
+    // escape first — the model's output is untrusted text, not markup
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    // line-level rules before inline ones, so a "* item" bullet is consumed as a bullet
+    // and never as the opening of an <em> run spanning to the next bullet's asterisk.
+    // Headings render as a bold line rather than printing a literal "#".
+    .replace(/^\s*#{1,6}\s+(.+)$/gm, '<strong>$1</strong>')
+    .replace(/^\s*[-*]\s+(.+)$/gm, '&bull; $1')
+    // inline emphasis, kept within a single line
+    .replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*([^*\n]+)\*/g, '<em>$1</em>')
     .replace(/\n\n/g, '</p><p style="margin-top:0.75rem;">')
     .replace(/\n/g, '<br>');
 }
@@ -886,11 +923,13 @@ async function sendFloatQuestion() {
   resp.style.display = 'block';
   resp.innerHTML = '<em style="color:rgba(255,255,255,0.4);">Thinking...</em>';
   var arg = currentArgContext || 'Christian apologetics';
+  // Ground the answer in the card the reader has open, not just its title.
+  var excerpt = currentArgSlug ? argExcerpt(currentArgSlug) : '';
   try {
     var res = await fetch('/api/tutor', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({question: q, argument: arg, category: 'Evidence Library'})
+      body: JSON.stringify({question: q, argument: arg, category: 'Evidence Library', excerpt: excerpt})
     });
     if (res.ok) {
       var data = await res.json();
