@@ -1,6 +1,22 @@
 # `library/eternal_generation.html` — four-gate findings, 2026-08-05
 
-**Status: NOT STAMPABLE. The trial edit was REVERTED. The essay is byte-identical to its
+**⭐ RESOLVED & SHIPPED 2026-08-06 (web-enabled session).** The §6 plan was executed: line 181
+fixed first, the primaries read (Goligher "Reinventing God" Jun 2016; Trueman "Fahrenheit 381"
+7 Jun 2016; the ETS Nov 2016 Ware/Grudem reversal), the closing paragraph redrafted (scoped,
+accurate charges, "not required" without "nor licensed"), the EFS steelman added (1 Cor 15:28 +
+missions-reveal-processions), and the fix propagated in one commit to the FAQ + its JSON-LD twin,
+`library/active-reading-data.json`, and `ev-m-eternal_generation.html` (397 + 427). All four gates
+re-ran dual-consensus: citations 0-error, argument SOUND, orthodoxy CLEAN, neutrality CLEAN — the
+neutrality lens caught (and I removed) a fresh Scott-Swain misattribution the fix pass had
+introduced, exactly the failure §7 predicts. Both files re-stamped 2026-08-06.
+**STILL OPEN — the §4 WEAK items NOT part of the §6 plan** (line 175 fn-10 Giles-2012-vs-Grudem-2020
+anachronism; autotheos orthonote Reformed-lean; John 5:26 economic-reading objection; monogenēs
+evidential-display tilt; the "God is love eternally" hinge → a retired-claims candidate) remain for
+a later pass. Pastoral sign-off still owed. The record below is kept for that work.
+
+---
+
+**[Original status — 2026-08-05, now superseded:] NOT STAMPABLE. The trial edit was REVERTED. The essay is byte-identical to its
 2026-07-11 certified state and its stamp is valid again.** Nothing here has shipped.
 
 **Why this file exists.** The owner brought a third-party (ChatGPT) review of the essay's closing
