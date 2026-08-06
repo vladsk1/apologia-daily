@@ -38,3 +38,11 @@ revenuecat.json
 *.p8
 *.p12
 *.mobileprovision
+
+# Un-deployed preview of the reworked homepage (docs/INSTAGRAM_GROWTH_STRATEGY.md
+# follow-up). Owner asked to see it, explicitly NOT to put it live. It carries no
+# content-review stamp, its streak figures are static placeholders, and the
+# replace-vs-A/B decision is unmade. Kept in the repo so it is version-controlled
+# and pullable; excluded here so Vercel never serves it. Delete this line when it
+# has been gated and the owner decides to ship it.
+homepage-v2.html

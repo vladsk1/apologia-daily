@@ -23,8 +23,26 @@
 > 250 to 318" on two cards; a **John 14:28 orthonote** added to the modalism card to match the deity card's fence.
 > Standing: pastoral sign-off still `_pending_`; the **duplicate `arg-early_church_trinity` id on ev-s6 cards 06 + 09**
 > remains an owner follow-up (left un-renamed mid-sweep). Latest commit on `origin/main`: `3db9527`.
+> **2026-08-05:** shipped **@apologiadaily site-wide** (`sameAs` on the standalone Organization
+> entity, footer link on all 14 `.footer-links` pages, `.adn-mega-foot` on all 296 nav pages via the
+> `sync-nav.mjs` CANON), **[`docs/INSTAGRAM_GROWTH_STRATEGY.md`](docs/INSTAGRAM_GROWTH_STRATEGY.md)**
+> rewritten against real per-reel Insights (~7% watch-through on 1:16–2:12 reels; **0 saves, 0 profile
+> taps, 76–99% non-follower** — distribution is fine, the first 3 seconds are not; ⚠ the length is baked
+> into the specs, median 43s), **[`docs/ETERNAL_GENERATION_GATE_FINDINGS.md`](docs/ETERNAL_GENERATION_GATE_FINDINGS.md)**
+> (four gates; trial edit REVERTED — ⚠ **a pre-existing factual error is live at `eternal_generation.html:181`**,
+> Ware is said to have held EFS *alongside* eternal generation when he rejected it until Nov 2016; **fix it
+> first**, two gates proposed downstream fixes restating it), and **[`docs/book-research/raised-on-the-third-day.md`](docs/book-research/raised-on-the-third-day.md)**
+> (Beck & Licona, chs. 11 + 16, PARTIAL) with 6 backlog rows. **`library/disciplesbelief.html` re-certified**
+> (+John 21:18–19 with Ehrman's concession, the Acts 12:2/Stephen internal contrast, 2 Cor 11:23–25, Schnabel;
+> footnotes 20/20). ⚠⚠ **Its stamp records an ACCEPTED, UNRESOLVED `apologia-argument` BREAK** — the essay
+> never states Candida Moss's objection while now carrying material that rebuts it; **owner accepted on
+> record**, closed by content-backlog rows 1–2. ⚠ **2 citations UNVERIFIED** (Ehrman p.84, Schnabel page
+> range) — egress 403'd every host; nothing on the page depends on them. **`homepage-v2.html` is in the repo
+> but `.vercelignore`d — NOT live, un-gated, placeholder streak figures.** ⭐ **Lesson, third time this
+> session: a fix pass produced the next defect — the orthodoxy [DRIFT] was in a sentence added to *prevent*
+> overstatement, which instead conceded away the section's own evidence.**
 >
-> **LATEST — 2026-07-29:** ⭐ **The 63 mastery pages were re-gated, the blockers cleared, and all 67 are now
+> **2026-07-29:** ⭐ **The 63 mastery pages were re-gated, the blockers cleared, and all 67 are now
 > STAMPED** — 16 with a dual-consensus stamp (orthodoxy + neutrality), 51 with argument + orthodoxy, and
 > **`ev-m-*` is now in `CONTENT_PATTERNS`**, so CI checks them from here on.** This closes the work opened by the 2026-07-28 (d) audit. Read the (d)
 > and (e) entries below for *what was wrong*; read this one for *where it landed*.
