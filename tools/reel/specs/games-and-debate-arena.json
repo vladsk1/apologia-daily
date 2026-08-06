@@ -1,0 +1,72 @@
+{
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.45,
+  "bg_dim": 0.72,
+  "source": "games.html + debate-arena.html (product showcase; game content per the Name the Heresy card description and library/modalism.html)",
+  "voiceover": "Round one. Name the heresy. God is one person who appears in three different modes. That one's modalism — one God wearing three masks, instead of three persons who are eternally distinct. It's a real error, and the creeds ruled it out. Ten rounds, free, and it teaches you the Trinity by its edges. There's a quote game too. Was it Lewis, or Dawkins? Then, when you want the harder practice, there's the Debate Arena. Four opponents, three difficulty levels, and coaching after every round. Practise the conversation before you have the real one.",
+  "scenes": [
+    { "dur": 2.6,
+      "kicker": "ROUND 1 OF 10",
+      "big": [ {"t": "Name the", "c": "cream", "s": 104}, {"t": "heresy.", "c": "gold", "s": 112} ] },
+
+    { "dur": 4.2,
+      "kicker": "SPOT THE ERROR",
+      "lines": [
+        {"t": "“God is one person", "c": "cream", "s": 58},
+        {"t": "who appears in three", "c": "cream", "s": 58},
+        {"t": "different modes.”", "c": "cream", "s": 58},
+        {"t": "", "s": 16},
+        {"t": "Orthodox, or not?", "c": "dim", "f": "serif", "s": 44} ] },
+
+    { "dur": 4.0,
+      "kicker": "THE ANSWER",
+      "big": [ {"t": "Modalism.", "c": "gold", "s": 96} ],
+      "sub": [
+        {"t": "One God wearing three masks —", "c": "cream", "f": "serif", "s": 42},
+        {"t": "not three persons, eternally distinct.", "c": "cream", "f": "serif", "s": 42},
+        {"t": "", "s": 12},
+        {"t": "The creeds ruled it out.", "c": "dim", "f": "serif", "s": 38} ] },
+
+    { "dur": 3.2,
+      "bg": "../assets/games-debate/g-free.png",
+      "bg_dim": 0.86,
+      "kicker": "NAME THE HERESY",
+      "lines": [
+        {"t": "Ten rounds.", "c": "cream", "s": 62},
+        {"t": "Free.", "c": "gold", "f": "serifb", "s": 68},
+        {"t": "", "s": 14},
+        {"t": "Learn the Trinity by its edges.", "c": "dim", "f": "serif", "s": 40} ] },
+
+    { "dur": 3.2,
+      "bg": "../assets/games-debate/g-free.png",
+      "bg_dim": 0.86,
+      "kicker": "WHO SAID IT?",
+      "lines": [
+        {"t": "Was it Lewis?", "c": "cream", "s": 62},
+        {"t": "Or Dawkins?", "c": "gold", "f": "serifb", "s": 62} ] },
+
+    { "dur": 3.6,
+      "bg": "../assets/games-debate/d-opps.png",
+      "bg_dim": 0.86,
+      "kicker": "THE DEBATE ARENA",
+      "lines": [
+        {"t": "Four opponents.", "c": "cream", "s": 58},
+        {"t": "Three difficulty levels.", "c": "cream", "s": 54},
+        {"t": "", "s": 14},
+        {"t": "Coaching after every round.", "c": "gold", "f": "serifb", "s": 46} ] },
+
+    { "dur": 4.4,
+      "bg": "../assets/games-debate/d-hero.png",
+      "bg_dim": 0.74,
+      "big": [ {"t": "Practise the", "c": "cream", "s": 76}, {"t": "conversation", "c": "cream", "s": 76}, {"t": "before you", "c": "gold", "s": 76}, {"t": "have the real one.", "c": "gold", "s": 68} ] },
+
+    { "dur": 3.4,
+      "big": [ {"t": "Free to play.", "c": "cream", "s": 84} ],
+      "sub": [
+        {"t": "Games · Debate Arena · Daily Quiz", "c": "dim", "f": "serif", "s": 40},
+        {"t": "", "s": 14},
+        {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 54} ] }
+  ]
+}

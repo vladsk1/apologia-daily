@@ -202,16 +202,37 @@ def render(spec, W, H, theme, frames_dir):
     scenes = spec["scenes"]; n = len(scenes); durs = []
     talkbg = spec.get("layout") == "talkbg"
     # optional full-bleed background image (cover-fit, darkened for caption legibility)
+    def _load_bg(path, dim):
+        """Cover-fit a background image and darken it so captions stay legible."""
+        if not os.path.isabs(path):
+            path = os.path.join(os.path.dirname(os.path.abspath(spec["__path__"])), path) \
+                if spec.get("__path__") else path
+        raw = ImageOps.fit(Image.open(path).convert("RGB"), (W, H), Image.LANCZOS)
+        return Image.blend(raw, Image.new("RGB", (W, H), th["top"]), dim)
+
+    # Spec-level background (one image for the whole reel).
     base_bg = None
-    bg_path = spec.get("bg_image")
-    if bg_path:
-        if not os.path.isabs(bg_path):
-            bg_path = os.path.join(os.path.dirname(os.path.abspath(spec["__path__"])), bg_path) \
-                if spec.get("__path__") else bg_path
-        raw = ImageOps.fit(Image.open(bg_path).convert("RGB"), (W, H), Image.LANCZOS)
-        base_bg = Image.blend(raw, Image.new("RGB", (W, H), th["top"]), spec.get("bg_dim", 0.5))
+    if spec.get("bg_image"):
+        base_bg = _load_bg(spec["bg_image"], spec.get("bg_dim", 0.5))
+
+    # Per-scene backgrounds: a scene may carry its own "bg" (and optional "bg_dim"),
+    # which overrides the spec-level image for that scene only. Added so a reel can
+    # show a different product screenshot behind each beat. Cached — the same file is
+    # usually reused across several scenes, and cover-fitting is the expensive part.
+    _bg_cache = {}
+    def _scene_bg(sc):
+        path = sc.get("bg")
+        if not path:
+            return base_bg
+        dim = sc.get("bg_dim", spec.get("bg_dim", 0.5))
+        key = (path, dim)
+        if key not in _bg_cache:
+            _bg_cache[key] = _load_bg(path, dim)
+        return _bg_cache[key]
+
     for i, sc in enumerate(scenes):
-        img = base_bg.copy() if base_bg is not None else gradient_bg(W, H, th)
+        sbg = _scene_bg(sc)
+        img = sbg.copy() if sbg is not None else gradient_bg(W, H, th)
         d = ImageDraw.Draw(img)
         has_k = bool(sc.get("kicker"))
         cy = int(H * 0.47)
