@@ -11,7 +11,7 @@ whole site.**
 
 ## PROGRESS LOG — per-card Evidence Library re-gate
 
-> **2026-08-04 — ev-s5 (Science & Faith tab) COMPLETE. 5 of 14 tab fragments now fully re-gated.**
+> **2026-08-05 — ev-s6 (Trinity tab) COMPLETE. 6 of 14 tab fragments now fully re-gated.**
 > The per-card **faster-mode** method (self-read card + paired certified essay → `apologia-citations`
 > in discovery → `apologia-orthodoxy` + `apologia-neutrality` for verification; dual-consensus on the
 > deity/Trinity/resurrection/rival-worldview tiers; re-gate after every fix pass) has cleared:
@@ -22,13 +22,34 @@ whole site.**
 > - **`ev-s5.html`** — 7/7 cards ✅ stamped + live (final commit `f0c1b30`) — Science & Faith (bigbang,
 >   originlife, mathematics, cambrian, cosmic, privileged, laws). Per-card records in the `by` note at
 >   the top of `ev-s5.html`.
+> - **`ev-s6.html`** — 16/16 cards ✅ stamped + live (final commit `a34d677`) — Trinity, the hardest tab
+>   (cards 01-04 on 2026-08-04; 05-16 on 2026-08-05). **0 HERESY across all 16.** Every card was
+>   dual-consensus (orthodoxy + neutrality). Per-card records in the `by` note at the top of `ev-s6.html`.
 >
-> **NEXT, in order:** **`ev-s6` Trinity (~15 cards — the hardest tab; deity/Trinity dual-consensus on
-> every card; has a known open BREAK re "needed the world in order to love")**, `ev-s7` Conversion (9
-> biographical profiles — lighter, citation-heavy, not argument cards), then the `.mk` mirrors. Each
-> `ev-sN.html` carries its own `content-review` stamp; append per-card records to its `by` note exactly as
-> ev-s1..s5 do (⚠ use SINGLE quotes inside the JSON `by` string — double-quotes break the stamp JSON), and
-> push each fragment to `main` as it clears.
+> **NEXT, in order:** **`ev-s7` Conversion (9 biographical profiles — lighter, citation-heavy, NOT
+> argument cards; `apologia-citations` matters as much as orthodoxy — see the P1 table row: `ev-s7.html`
+> + `ev-s7.mk.html` are the last two files failing `--audit`, ~4,400 words each, NEVER gated)**, then the
+> `.mk` mirrors. Each `ev-sN.html` carries its own `content-review` stamp; append per-card records to its
+> `by` note exactly as ev-s1..s6 do (⚠ use SINGLE quotes inside the JSON `by` string — double-quotes break
+> the stamp JSON), and push each fragment to `main` as it clears.
+>
+> **⚠ ev-s6 (Trinity) lessons worth carrying:** (1) the **rival-worldview cards (Islam/JW/Mormon/Oneness)
+> are the highest-stakes** — hold each to the **EXPLICIT-VERDICT** (land the verdict in our own voice,
+> bounded) and **FALSE-COMMON-GROUND** (shared words ≠ shared belief; numerical monotheism only as a
+> structural fact reframed to the divergence *in the same breath*) rules. Islam card: the retired lexical
+> *kalam/kalima* bridge stayed dead (runs structurally), Ash'ari formula must read "neither He nor other
+> than He" NOT "…than God". JW card: **BeDuhn defends "a god" as a LESSER divine being (Watchtower-aligned)
+> — never enlist him as conceding orthodoxy**; the Mantey protest quote must be verbatim (and it trips the
+> jw-john-1-1 tripwire in legit refutation context → `--update` the baseline). Mormon card: attribute
+> "henotheism/polytheism" to *critics* (LDS contest it); only Father+Son have bodies, the Holy Ghost is a
+> personage of spirit; Psalm 82:6 referent is debated. (2) **The "300 bishops" round number is a recurring
+> defect** — the certified range is "roughly 250 to 318" (318 symbolic); it survived on cards 06 AND 11.
+> (3) **John 14:28 "the Father is greater than I" needs an orthonote on any card that quotes it** (cards 04,
+> 13 now both fence it as functional/economic not ontological). (4) **Unpropagated fixes** — a Psalm 2:7
+> fix landed in the Pro tier but not the free-tier Q (card 14); diff every tier. (5) **filioque**: report
+> East/West without adjudicating; watch inadvertent echoes ("the Spirit who proceeds between them" →
+> "in the joy of the Holy Spirit"). (6) ⚠ **DUPLICATE id `arg-early_church_trinity`** on cards 06 + 09 —
+> invalid HTML, owner follow-up, do NOT rename mid-sweep.
 >
 > **⚠ ev-s5 (Science) lessons worth carrying:** (1) the **natural-theology DEISM GAP** is the recurring
 > catch — every argument (bigbang, mathematics, cosmic, privileged, laws) reaches at most a rational
