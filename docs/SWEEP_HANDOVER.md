@@ -25,13 +25,31 @@ whole site.**
 > - **`ev-s6.html`** — 16/16 cards ✅ stamped + live (final commit `a34d677`) — Trinity, the hardest tab
 >   (cards 01-04 on 2026-08-04; 05-16 on 2026-08-05). **0 HERESY across all 16.** Every card was
 >   dual-consensus (orthodoxy + neutrality). Per-card records in the `by` note at the top of `ev-s6.html`.
+> - **`ev-s7.html`** — 9/9 conversion testimonies ✅ **first-ever gate**, stamped + live (commit `725213e`)
+>   — the "Nine who changed their minds" tab (Strobel, Qureshi, Luckhoo, Lewis, Augustine, Pascal, Newton,
+>   Wallace, Butterfield). Whole-file (not per-card): citations 0-BREAK, argument SOUND, orthodoxy CLEAN,
+>   neutrality STAMPABLE. Fixes: Luckhoo "no room for doubt" reframed as his own verdict + the site's
+>   best-explanation standard added; Lewis 1929/McGrath date; intro over-generalization. **This clears one
+>   of the two files that were failing `--audit`.**
 >
-> **NEXT, in order:** **`ev-s7` Conversion (9 biographical profiles — lighter, citation-heavy, NOT
-> argument cards; `apologia-citations` matters as much as orthodoxy — see the P1 table row: `ev-s7.html`
-> + `ev-s7.mk.html` are the last two files failing `--audit`, ~4,400 words each, NEVER gated)**, then the
-> `.mk` mirrors. Each `ev-sN.html` carries its own `content-review` stamp; append per-card records to its
-> `by` note exactly as ev-s1..s6 do (⚠ use SINGLE quotes inside the JSON `by` string — double-quotes break
+> **NEXT, in order:** **`ev-s7.mk.html`** (the Macedonian mirror of the tab just done — the OTHER file
+> failing `--audit`; ~4,400 words, never gated; needs a native-MK doctrinal check per the standing MK
+> caveat), then the remaining **`.mk` mirrors** `ev-s1.mk`…`ev-s6.mk` (~98,000 words, stamped
+> argument+orthodoxy but no per-card faster-mode re-gate, and **no native-Macedonian human review** — see
+> the P-table). Each `ev-sN.html` carries its own `content-review` stamp; append per-card records to its
+> `by` note exactly as ev-s1..s7 do (⚠ use SINGLE quotes inside the JSON `by` string — double-quotes break
 > the stamp JSON), and push each fragment to `main` as it clears.
+>
+> **⚠ ev-s7 (Conversion) lessons worth carrying:** biographical testimony, so `apologia-citations` is the
+> heavy gate (dates/quotes/publishers) and the doctrinal surface is lighter — but two integrity items
+> recur: (1) the **argument-from-conversions fallacy** must be disclaimed up front (a changed life is not
+> itself proof); the intro already does this. (2) **Quoted absolutist claims** (Luckhoo's "leaves
+> absolutely no room for doubt") must be fenced as the *subject's* verdict and paired with the site's own
+> inference-to-best-explanation standard, or they read as the site's evidentiary bar. (3) Honor the lives
+> left behind without caricature or trophy-framing (Qureshi/Islam, Butterfield/queer-theory, Newton's slave
+> trade named plainly + honestly gradual). (4) Watch **hagiographic date/arc smoothing** — the Lewis 1929
+> conversion date is disputed (McGrath re-dates to 1930), and not all "hostile witnesses" were actually
+> hostile (Augustine/Pascal were restless/nominal believers, not atheists).
 >
 > **⚠ ev-s6 (Trinity) lessons worth carrying:** (1) the **rival-worldview cards (Islam/JW/Mormon/Oneness)
 > are the highest-stakes** — hold each to the **EXPLICIT-VERDICT** (land the verdict in our own voice,
