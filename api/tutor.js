@@ -17,8 +17,13 @@ export default async function handler(req, res) {
     const apiKey = process.env.ANTHROPIC_API_KEY;
     if (!apiKey) return res.status(500).json({ error: 'API key not configured' });
 
-    // excerpt = the text of the essay/card the student is reading (sent by the client)
-    const essayText = typeof excerpt === 'string' ? excerpt.slice(0, 18000) : '';
+    // excerpt = the text of the essay/card the student is reading (sent by the client).
+    // 40000 chars (~10k tokens) fits every page we send whole: the longest Evidence
+    // Library card is ~26,900 and the longest essay ~38,300. The old 18000 truncated
+    // 84 of 85 essays and 13 of 70 cards, and it always cut the TAIL — which is where
+    // the objections and the honest concessions live, so the tutor answered questions
+    // about them from general knowledge instead of from the certified page.
+    const essayText = typeof excerpt === 'string' ? excerpt.slice(0, 40000) : '';
     if (inputTooLong([question, argument, category], 8000)) return res.status(413).json({ error: 'input_too_long' });
     if (await overRateLimit(req, 80, 'tutor')) return res.status(429).json({ error: 'rate_limited' });
 
