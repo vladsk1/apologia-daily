@@ -13,6 +13,17 @@
 > *why* behind a past decision; read this file for current state. **Keep it that way:** when an entry
 > here stops affecting a decision, move it to `HANDOFF.md` rather than letting this file grow back.
 >
+> **LATEST — 2026-08-06:** ⭐ **Gate-sweep: the whole ENGLISH Evidence Library hub is now per-card dual-consensus
+> re-gated — `ev-s6` Trinity (16/16 cards, 0 heresy; commit `a34d677`) and `ev-s7` Conversion (9/9 testimonies,
+> first-ever gate + first content-review stamp; commit `725213e`) both stamped + live on `main`.** That completes
+> **ev-s1…ev-s7 (7 of 14 fragments — the 7 English tabs; the 7 `.mk` Macedonian mirrors remain).** Method + per-tab
+> lessons in `docs/SWEEP_HANDOVER.md` (updated). ev-s7 cleared one of the two files that were failing `--audit`;
+> `ev-s7.mk.html` is the other and is next. Top ev-s6 catches: the JW card had **misrepresented BeDuhn** as conceding
+> orthodoxy (he backs the Watchtower "a god" reading) → rewritten to refute; the round **"300 bishops"** → "roughly
+> 250 to 318" on two cards; a **John 14:28 orthonote** added to the modalism card to match the deity card's fence.
+> Standing: pastoral sign-off still `_pending_`; the **duplicate `arg-early_church_trinity` id on ev-s6 cards 06 + 09**
+> remains an owner follow-up (left un-renamed mid-sweep). Latest commit on `origin/main`: `3db9527`.
+>
 > **LATEST — 2026-07-29:** ⭐ **The 63 mastery pages were re-gated, the blockers cleared, and all 67 are now
 > STAMPED** — 16 with a dual-consensus stamp (orthodoxy + neutrality), 51 with argument + orthodoxy, and
 > **`ev-m-*` is now in `CONTENT_PATTERNS`**, so CI checks them from here on.** This closes the work opened by the 2026-07-28 (d) audit. Read the (d)
