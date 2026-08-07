@@ -68,6 +68,28 @@ essay** → (only then) a live answer. The runtime never reads the article; only
 our-own-words material (or a verified PD primary) reaches a visitor.
 
 ## Workflow — mining an article/essay
+
+> ### ⭐ STEP ZERO — READ THE PAIRED ESSAY(S) IN FULL, BEFORE OPENING THE ARTICLE. (Mandatory, 2026-08-06.)
+>
+> Before mining, work out which certified `library/*.html` essay(s) this article is the counterpart of —
+> usually 1, at most about 5; use the topic router in `INDEX.md` — and **read each one start to finish.**
+> Not `Grep`. Not headings and a snippet either side of a hit. **Read it.**
+>
+> **The order is the whole point.** Reading the essay *afterwards* means you search it for whatever the
+> article made you look for, and "we already cover this" becomes a guess. Reading it *first* means
+> mismatches surface on contact. **Searching is the safety net, not the method** — use it at the end to
+> confirm that what you believe is missing really is missing across every served surface.
+>
+> **This is cheap** (median essay ~5,200 words) and it matters especially here, because journal articles
+> are narrow: the difference between a genuine advance and a restatement of what our essay already cites
+> is usually invisible unless you know the essay's existing footnotes.
+>
+> **Record it in the note** — a "Paired essays read in full" line naming each essay.
+>
+> **Why this rule exists:** see the full statement in
+> [`docs/book-research/README.md`](../book-research/README.md) § *Step Zero* (the mastery-page finding, and
+> the `Lemaître`-returns-zero-hits near-miss of 2026-08-06).
+
 1. **Read it as a lead** (open-access URL, or download to the git-ignored `_pdfs/`). Pull out (a) the
    argument's spine in our own words and (b) every **primary source** cited — Scripture refs, scholars,
    books, dates, journal/data cites. The citations are the point.

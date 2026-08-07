@@ -35,6 +35,33 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
 - Send both the **argument pages** and the **notes/bibliography pages** — the citations are the point.
 
 ## What the session (Claude) does
+
+> ### ⭐ STEP ZERO — READ THE PAIRED ESSAY(S) IN FULL, BEFORE OPENING THE SOURCE. (Mandatory, 2026-08-06.)
+>
+> Before mining a single page, work out which certified `library/*.html` essay(s) this source is the
+> counterpart of — usually 1, at most about 5; use the topic router in `INDEX.md` — and **read each one
+> start to finish.** Not `Grep`. Not headings and a snippet either side of a hit. **Read it.**
+>
+> **The order is the whole point.** Reading the essay *afterwards* means you search it for whatever the
+> source made you look for, and "we already cover this" becomes a guess. Reading it *first* means you
+> already hold the argument, its concessions, and its deliberate refusals in mind, so mismatches surface
+> on contact — before you have formed an impression from the source.
+>
+> **Searching is the safety net, not the method.** Use it at the end to confirm that what you believe is
+> missing really is missing across every served surface — not to decide what is missing.
+>
+> **This is cheap.** The 85 essays have a median of ~5,200 words; most books pair with 1–3 of them, so
+> step zero is normally under 20,000 words against a whole book of mining.
+>
+> **Record it in the note** — a "Paired essays read in full" line naming each essay — so a later reader
+> can see the step happened, exactly as the cross-check classification must be visible (step 4).
+>
+> **Why this rule exists.** Two failures, one shape. (a) `CLAUDE.md` records four reviewers independently
+> concluding of the 67 mastery pages that *"these pages were written without reading the essays"* — that is
+> this same failure, one stage downstream. (b) On 2026-08-06 a `Lemaître` search returned **zero hits** in
+> `library/bigbang.html` and was nearly filed as a gap; he appears **eight times** and opens the essay — the
+> file stores him as `Lema&icirc;tre`. A search pattern cannot see what it cannot spell. Reading can.
+
 1. Read each page carefully. If a photo is too blurry to read a citation cleanly, **say so and ask
    for a re-shot** — never guess a source, date, or page number.
 2. Build one note per book at `docs/book-research/<slug>.md`, mirroring the Geisler–Turek note:

@@ -1081,6 +1081,33 @@ One prioritized queue for every **content update/addition the research libraries
 shipped** — so accuracy/currency fixes actually reach the site and nothing is lost between a mining run
 and a release.
 
+> ### ⭐ MANDATORY STEP ZERO — READ THE PAIRED ESSAY(S) IN FULL *BEFORE* MINING. (Every book, article/journal and video. Added 2026-08-06.)
+>
+> Before opening the source, identify which certified `library/*.html` essay(s) it is the counterpart of —
+> usually 1, at most about 5; use the relevant `INDEX.md` topic router — and **read each one start to
+> finish.** Not `Grep`. Not headings plus a snippet either side of a search hit. **Read it.**
+>
+> **The order is the whole point.** Reading the essay *afterwards* means you search it for whatever the
+> source made you look for, and *"we already cover this"* degrades into a guess. Reading it *first* means
+> you already hold the argument, its concessions and its deliberate refusals in mind, so mismatches surface
+> on contact. **Searching is the safety net, not the method** — use it at the end to confirm what you
+> believe is missing really is missing across every served surface, never to decide what is missing.
+>
+> **It is cheap.** The 85 essays have a median of ~5,200 words; most sources pair with 1–3, so step zero is
+> normally under 20,000 words against a whole source of mining.
+>
+> **Make it auditable.** The note must carry a **"Paired essays read in full"** line naming each essay —
+> same discipline as the cross-check classification below, which must be visible so a reader can see the
+> scan happened.
+>
+> **Why this rule exists — two failures, one shape.** (a) Four reviewers independently concluded of the 67
+> mastery pages that *"these pages were written without reading the essays"* (2026-07-28) — the same failure
+> one stage downstream. (b) On **2026-08-06**, mining *Return of the God Hypothesis*, a `Lemaître` search
+> returned **zero hits** in `library/bigbang.html` and was nearly filed as a gap. He appears **eight times**
+> and opens the essay; the file stores him as `Lema&icirc;tre`. **A search pattern cannot see what it cannot
+> spell.** The verdict most at risk is *"corroboration"* — declaring something already covered is precisely
+> the conclusion that stops you looking.
+
 **MANDATORY CROSS-CHECK STEP — every mining run (book, video, OR article/journal).** Mining a source is
 **not finished when the note is written.** Before a mining run is done, it MUST scan our **current live
 content** against the source's leads and decide, for each substantive lead, whether the new material can

@@ -66,6 +66,28 @@ certified essay** → (only then) a live answer. The runtime never reads the raw
 twice-checked, our-own-words material (or a verified verbatim primary) reaches a visitor.
 
 ## Workflow — mining a video
+
+> ### ⭐ STEP ZERO — READ THE PAIRED ESSAY(S) IN FULL, BEFORE WATCHING OR READING THE TRANSCRIPT. (Mandatory, 2026-08-06.)
+>
+> Before mining, work out which certified `library/*.html` essay(s) this talk is the counterpart of —
+> usually 1, at most about 5; use the topic router in `INDEX.md` — and **read each one start to finish.**
+> Not `Grep`. Not headings and a snippet either side of a hit. **Read it.**
+>
+> **The order is the whole point.** Reading the essay *afterwards* means you search it for whatever the
+> talk made you look for, and "we already cover this" becomes a guess. Reading it *first* means mismatches
+> surface on contact. **Searching is the safety net, not the method** — use it at the end to confirm that
+> what you believe is missing really is missing across every served surface.
+>
+> **This is cheap** (median essay ~5,200 words) and it matters more for video than for print, because
+> auto-captions mishear names, dates and numbers — knowing the essay first is often what tells you a
+> transcript has garbled something.
+>
+> **Record it in the note** — a "Paired essays read in full" line naming each essay.
+>
+> **Why this rule exists:** see the full statement in
+> [`docs/book-research/README.md`](../book-research/README.md) § *Step Zero* (the mastery-page finding, and
+> the `Lemaître`-returns-zero-hits near-miss of 2026-08-06).
+
 1. **Fetch the transcript** (local session):
    `python3 tools/fetch-transcript.py <youtube-url-or-id>` → writes `_transcripts/<id>.txt` (git-ignored;
    self-installs `youtube-transcript-api`, falls back to `yt-dlp`).
