@@ -323,6 +323,29 @@ on the topic. Concretely, a future session would have been sent to add four scho
 2. **`Sinai` is a search trap** — 5 raw hits in this essay, but 3 are **`Sinaiticus`**. Same family of error
    as `Lema&icirc;tre`. Reading the footnotes found all four scholars in minutes; searching would not have.
 
+### ⭐⭐ AND A GENUINE GAP THE 2026-08-03 CROSS-CHECK MISSED ENTIRELY → new P2 row
+
+The book's **"History of the dilemma — it is ANCIENT, not a modern invention"** section — which this very
+note calls *"the strongest scholarly asset in the book"* — **was never classified** on 2026-08-03, as either
+corroboration or improvement. It simply fell through.
+
+Reading `library/islam-dilemma.html` in full shows why that matters: the essay opens by calling this *"one of
+the most discussed arguments in **modern** Christian–Muslim conversation,"* popularised by **David Wood** of
+Acts 17 Apologetics — and then **never answers the obvious retort that it is therefore a recent apologetics
+gimmick.** Checked site-wide:
+
+| Antiquity witness | Status |
+|---|---|
+| **John of Damascus**, *Fount of Knowledge*, "On Heresies" 100/101 (c. 675/6–749) | On-site in 5 files — but **not in this essay**, and used there for the eternal-Word material |
+| **Apology of al-Kindi** (early 9th c.; PD tr. Muir 1882) | **Absent site-wide** |
+| **George of Be'eltan** (Syriac patriarch, 758–89) | **Absent site-wide** |
+| ⭐ **Leo III / ʿUmar II correspondence** (via Ghevond) — **the caliph himself names the Injīl as Matthew, Mark, Luke, John** | **Absent site-wide** — the single most striking item in the book |
+
+**This is the one place the book is genuinely stronger than our essay**, and it is now logged as a **P2** row.
+Note the shape of the miss: it was not a wrong verdict, it was **no verdict** — a whole section of the book
+never got compared to anything. A search-driven cross-check tests the leads you thought to search for;
+reading the essay is what tells you which of the book's sections have no counterpart at all.
+
 ### Residual, genuinely still absent (do NOT treat as a new row without checking intent)
 **Cave of Treasures** and **Life of Adam and Eve** remain absent site-wide. But row 110's Done note records
 that the shipped apocrypha subsection was **deliberately scoped** to the Infancy Gospel material. Treat this
