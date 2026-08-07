@@ -1133,6 +1133,20 @@ brief/`/sources` → rebuild the index** — and marks the row Done + flips the 
 how a "latest book/video/article says X" lead becomes a live, verified answer without skipping the
 essay-level citation check.
 
+> ⚠ **A DONE ROW AND A STALE NOTE MUST NOT SHIP IN DIFFERENT COMMITS. (Added 2026-08-06.)**
+> "Marks the row Done **+ flips the source note's ledger**" is one action, not two. Skip the second half
+> and the note keeps advertising work that is already live — and **sessions are pointed at the note**, not
+> at the backlog, by the drafting convention.
+> **This has already cost us once.** `docs/book-research/islamic-dilemma.md` ran its cross-check on
+> 2026-08-03, all three improvement rows were executed and shipped **the same day**, and the note was never
+> updated. For three days it told every reader to add **Gordon Nickel, Joseph Witztum, Sidney Griffith and
+> Nicolai Sinai** to `library/islam-dilemma.html` — an essay whose **footnotes 13, 16 and 18 and its
+> bibliography already cite all four**, on the exact verses and terms the row named. Caught 2026-08-06 by
+> the new Step Zero read-the-essay pass; **no search would have caught it**, and `Sinai` in particular
+> returns mostly `Sinaiticus`.
+> **So: when a row goes Done, update the note in the same commit, and mark the note's cross-map as history
+> rather than leaving it readable as a to-do list.**
+
 ## Deploy workflow (security-critical)
 - Work on the feature branch; **never `git checkout main`** (a stale local main lacks
   `.claude/agents/` and de-registers the agent fleet).

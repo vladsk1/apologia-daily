@@ -292,7 +292,49 @@ Verify each against the Shakir/standard text before any use.
 | Conclusion + appendix tables (Passage Index, Shared Figures) + full Bibliography | **Complete** |
 | Endnotes | **Substantive notes captured; ~200 pure verse-cross-reference notes (142–352) mapped via the Passage Index, not transcribed** |
 
+## ⭐ Paired essays read in full (Step Zero) — 2026-08-06
+
+**`library/islam-dilemma.html` — read start to finish (7,348 words incl. 28 footnotes + bibliography).**
+This book's counterpart essay. Secondary touchpoints (`islam-jesus`, `islam-preservation`, `islam-guard`,
+`islam-prophecy`, `islam-eternalword`) were consulted by search only and are **not** claimed as read.
+
+### What the retro-run found — and it is a workflow defect, not a research error
+
+The cross-check below was run on **2026-08-03** and was **correct on the day it was written**. All three of
+its improvement candidates were then **executed and shipped the same day** (`docs/content-backlog.md` rows
+marked *DONE 2026-08-03*, with footnote numbers and gate results recorded).
+
+**Nobody flipped this note.** So from 2026-08-03 until now it has told every reader that three improvements
+were still outstanding — and the drafting convention *instructs* sessions to read this note before writing
+on the topic. Concretely, a future session would have been sent to add four scholars to
+`library/islam-dilemma.html` who are **already in its footnotes**:
+
+| Scholar | The note said | Actually, in the paired essay |
+|---|---|---|
+| **Gordon Nickel** | "absent" | **fn 13** — *two* works, incl. the Brill chapter pp. 207–223, cited on the taḥrīf verbs at **2:75, 4:46, 5:13, 5:41** — the exact verses the row names |
+| **Joseph Witztum** | "absent" | **Bibliography** (and also live on `library/islam-jesus.html`) |
+| **Sidney Griffith** | "underused" | **fn 16**, on *"what Scripture the Arabic-speaking Christians of late antiquity actually held"* — the exact plank the row names |
+| **Nicolai Sinai** | "underused" | **fn 18**, on ***muhaymin*, *kitāb*, *ummī*** — the exact terms the row names |
+
+⚠ **Two lessons, and the second is new.**
+1. **The existing workflow rule was skipped:** *"Mark the row Done, **and flip the source note's ledger**."*
+   A Done row and a stale note disagree, and **sessions are pointed at the note.** When a row ships, the
+   note must be updated in the same commit.
+2. **`Sinai` is a search trap** — 5 raw hits in this essay, but 3 are **`Sinaiticus`**. Same family of error
+   as `Lema&icirc;tre`. Reading the footnotes found all four scholars in minutes; searching would not have.
+
+### Residual, genuinely still absent (do NOT treat as a new row without checking intent)
+**Cave of Treasures** and **Life of Adam and Eve** remain absent site-wide. But row 110's Done note records
+that the shipped apocrypha subsection was **deliberately scoped** to the Infancy Gospel material. Treat this
+as *possibly closed on purpose*, and check the gate record before reopening. (**Arabic Infancy Gospel** is
+live on `islam-jesus.html`; **Jubilees** appears on `daniel70.html` in an unrelated context.)
+
+---
+
 ## Cross-map to the Evidence Library (corroboration vs improvement) — live cross-check run 2026-08-03
+> ⚠ **STATUS, added 2026-08-06:** the "IMPROVEMENT candidates" at the foot of this section are **all three
+> SHIPPED** (see the Step Zero box above). The section is kept verbatim as the record of what was found on
+> 2026-08-03 — **read it as history, not as a to-do list.**
 ⭐ **This book's thesis is the BEST-covered topic in our Islam cluster. The spine is already LIVE and certified**
 — we have a **flagship essay `library/islam-dilemma.html`** ("The Islamic Dilemma: The Quran, the Bible, and a
 Two-Horned Trap") built the same way (opens on Q 10:94; states both horns; **already names David Wood *and*
@@ -325,7 +367,8 @@ book leans hard on the clean dichotomy and on Ibn Ḥazm as *the* pivot. **Keep 
 book's stronger claims as the thing to soften.**
 
 **IMPROVEMENT candidates → logged to `docs/content-backlog.md` (P3, all dual-consensus, all target the existing
-`islam-*` essays — no new essay needed):**
+`islam-*` essays — no new essay needed).** ✅ **ALL THREE SHIPPED 2026-08-03 — see the Step Zero box above.
+Kept verbatim below as the record of what was found; not a to-do list.**
 1. **Apocryphal-source plank is a genuine gap.** The **Arabic Infancy Gospel, Cave of Treasures, Life of Adam
    and Eve, Book of Jubilees** appear **nowhere** in the repo (only the Infancy Gospel of Thomas, once). If we
    want the "the Qur'an draws on post-biblical apocrypha/Syriac legend" plank, these + **Witztum** and **Rizk**
