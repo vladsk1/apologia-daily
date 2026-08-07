@@ -1,7 +1,7 @@
 # Return of the God Hypothesis — Stephen C. Meyer
 
 **Book:** Stephen C. Meyer, *Return of the God Hypothesis: Three Scientific Discoveries That Reveal the Mind Behind the Universe* (HarperOne, 2021).
-**Status:** ⚠ **PARTIAL — pp. 68–221 captured from owned-copy photographs (2026-08-06): chs. 4, 5, 7, 8, 9 and 10 complete; ch. 6 through p. 129; ch. 11 through p. 221 with pp. 216–217 missing.** The book runs to ~570 pages across four parts. Everything outside pp. 68–221 is unmapped, and **no endnote page has been photographed** (see usage rule 2).
+**Status:** ⚠ **PARTIAL — pp. 68–221 captured CONTINUOUSLY from owned-copy photographs (2026-08-06): chs. 4, 5, 7, 8, 9 and 10 complete; ch. 6 through p. 129; ch. 11 through p. 221.** No gaps. The book runs to ~570 pages across four parts. Everything outside pp. 68–221 is unmapped, and **no endnote page has been photographed** (see usage rule 2).
 **Owned copy:** yes (owner-photographed paperback). No prose is reproduced here; this is an our-own-words map of the argument's shape and of the **primary sources to chase down**.
 
 ---
@@ -231,7 +231,9 @@ Two further *types* of fine tuning beyond the laws and constants, then the natur
 
 ---
 
-## Chapter 11 — "How to Assess a Metaphysical Hypothesis" (pp. 215, 218–221 captured; ⚠ **pp. 216–217 missing**; chapter continues past p. 221)
+## Chapter 11 — "How to Assess a Metaphysical Hypothesis" (pp. 217–221, continuous; chapter continues past p. 221)
+
+> ⚠ **Numbering note (owner-corrected 2026-08-06):** ch. 10 ends on p. 213 and **ch. 11 opens on p. 217, with p. 216 blank.** An earlier pass read the rotated chapter-opening photograph as p. 215 and therefore recorded a phantom gap at pp. 216–217. **There is no gap.** pp. 214–215 are front-matter/divider leaves, not body text.
 
 **1. The Baylor conference, April 2000, "The Nature of Nature."** Meyer presented the design inference; **Christian de Duve** spoke directly after him. ⚠ **Meyer's account of the exchange — including de Duve at dinner "acknowledging… that such theories had not yet solved the crucial information problem" — is a personal recollection of a private conversation and is NOT citable** (see flag F7). What *is* on the record and usable is that **de Duve favoured a strictly naturalistic approach**, in his talk and in *Vital Dust*, which is the fence the P2 backlog row already requires.
 
@@ -338,7 +340,7 @@ Two further *types* of fine tuning beyond the laws and constants, then the natur
 | **Part II, ch. 8 "Extreme Fine Tuning — by Design?"** | **146–163** | ✅ **COMPLETE** |
 | **Part II, ch. 9 "The Origin of Life and the DNA Enigma"** | **164–188** | ✅ **COMPLETE** |
 | **Part II, ch. 10 "The Cambrian and Other Information Explosions"** | **189–213** | ✅ **COMPLETE** |
-| **Part II, ch. 11 "How to Assess a Metaphysical Hypothesis"** | **215, 218–221** | ⚠ **PARTIAL — pp. 216–217 missing**, and the chapter continues past p. 221 |
+| **Part II, ch. 11 "How to Assess a Metaphysical Hypothesis"** | **217–221** | ⚠ **PARTIAL** — continuous; the chapter continues past p. 221 |
 | Parts III–IV (incl. chs. 16–19, which Meyer forward-references on inflation, the multiverse and quantum cosmology) | — | ❌ not captured |
 | **Endnotes / bibliography** | — | ❌ **not captured — this is the gap that matters most**; every fn above is unread |
 
