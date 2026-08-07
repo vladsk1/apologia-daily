@@ -726,6 +726,44 @@ in order. Do not deploy content that has skipped a stage.
 > read what you meant, not what is on the page. Four rounds of self-checking missed every one
 > of the defects an independent lens then caught in a single pass.
 >
+> ### ⚠ BUT NINE ROUNDS IS A FAILURE TOO. HOW TO SPEND FEWER. (Added 2026-08-07.)
+>
+> On 2026-08-07 a **five-sentence paragraph** added to `library/islam-dilemma.html` took
+> **nine gate rounds** and ~900k review tokens. Rounds 5–9 were legitimate — they caught a
+> possible modalist reading and eleven broken footnote pointers. **Rounds 1–4 were avoidable,
+> and all four had the same four causes.** Do these and the next essay edit costs two rounds,
+> not nine.
+>
+> **1. Never write a characterisation of a source you cannot read.** The sentence that caused
+> most of rounds 1–4 was my description of what John of Damascus argued — taken from
+> `docs/book-research/islamic-dilemma.md`, which this file's own rules define as an
+> **unverified lead**. `apologia-citations` said it exactly: *"the 'already certified'
+> provenance does not cover the sentence that most needs covering."* If the primary is
+> unreachable, cite it for the **bare verifiable fact** (this chapter exists; it is dated to
+> the 740s) and write no summary of its argument.
+>
+> **2. One round = ALL applicable lenses on the SAME text, in parallel, findings merged, then
+> ONE fix pass.** Running them lens-by-lens is what produced nine: orthodoxy read v1,
+> neutrality read v1–v5, argument read v1 and v8, so the same text was re-litigated by
+> reviewers who had each seen a different version.
+>
+> **3. Fix ALL findings from a round together, never one at a time.** Rounds 3 and 4 pushed
+> the *same sentence* in opposite directions — under-landed, then overclaimed — because each
+> fix could only see the previous round.
+>
+> **4. Run the mechanical checks BEFORE spending a review round.** Round 3's blocker was
+> eleven stale `(note N)` cross-references — a script's job, not an agent's. That is what
+> `tools/check-footnote-integrity.mjs` now exists for. Before any gate: `node --test
+> tests/*.test.mjs`, `check-footnote-integrity`, `check-orthodoxy-tripwires`,
+> `check-retired-claims`.
+>
+> **And self-check the recurring shapes first.** These were each caught more than once and a
+> careful re-read would have found them: unverified paraphrase presented as summary ·
+> overstated continuity ("the question is not modern" when only the *exchange* is) ·
+> one-sided use of a source (quoting the half that helps, dropping the reply four lines later)
+> · a verdict implied but not landed · a quotation left unfenced in our own voice · an
+> antecedent broken by an edit · a load-bearing claim unsourced *at the point it is made*.
+>
 > **And the fix must reach every surface, not just the essay.** One retired Islam argument
 > was found alive on **seven**: the essay, the mastery page, its flashcard deck, a quiz in
 > `daily-mix.html` where it was the **graded correct answer**, two `worldviews.html` cards,

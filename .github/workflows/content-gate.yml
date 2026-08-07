@@ -96,6 +96,8 @@ jobs:
         run: node tools/check-answer-concessions.mjs
       - name: Retired-claims scan (blocking)
         run: node tools/check-retired-claims.mjs
+      - name: Footnote apparatus (markers + internal cross-references resolve)
+        run: node tools/check-footnote-integrity.mjs --changed
       - name: Stamp-integrity report (non-blocking)
         run: node tools/check-stamp-integrity.mjs --warn
 

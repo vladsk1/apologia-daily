@@ -449,3 +449,60 @@ test('retired-claims matcher catches a retired string and honours the allow list
   assert.ok(!hits.some((h) => h.file === 'ok-page.html'),
     'matcher flagged clean text');
 });
+
+// ── footnote apparatus ────────────────────────────────────────────────────────
+// Pins the two false-positive sources that made the first version of
+// check-footnote-integrity.mjs report 29 of 84 files broken when only 2 were,
+// plus the real bug it was written to catch. See the tool's header for the story.
+
+test('footnote checker catches a half-finished renumber (self-citing note)', async () => {
+  const { auditFile } = await import('../tools/check-footnote-integrity.mjs');
+  const html = `<p>a<sup>1</sup> b<sup>2</sup></p>
+    <h2>Footnotes</h2><ol>
+    <li>First.</li>
+    <li>See Whittingham (note 2) for the survey.</li>
+    </ol>`;
+  const r = auditFile('t.html', html);
+  assert.ok(r.problems.some((p) => /cites ITSELF/.test(p)),
+    'a note pointing at itself must be caught — this is the exact bug of 2026-08-07');
+});
+
+test('footnote checker resolves dangling cross-references', async () => {
+  const { auditFile } = await import('../tools/check-footnote-integrity.mjs');
+  const html = `<p>a<sup>1</sup></p><h2>Footnotes</h2><ol><li>See note 9.</li></ol>`;
+  const r = auditFile('t.html', html);
+  assert.ok(r.problems.some((p) => /does not exist/.test(p)),
+    'a pointer to a non-existent note must be caught');
+});
+
+test('footnote checker does NOT treat exponents as markers', async () => {
+  const { auditFile } = await import('../tools/check-footnote-integrity.mjs');
+  // 10^123 is mathematics, not a citation. library/finetuning.html is full of these.
+  const html = `<p>one part in 10<sup>123</sup>, and 10<sup>500</sup> vacua.<sup>1</sup></p>
+    <h2>Footnotes</h2><ol><li>Penrose.</li></ol>`;
+  const r = auditFile('t.html', html);
+  assert.deepEqual(r.problems, [],
+    'exponents must not be counted as footnote markers');
+});
+
+test('footnote checker allows legitimate reuse of a marker', async () => {
+  const { auditFile } = await import('../tools/check-footnote-integrity.mjs');
+  // Citing the same source twice reuses its marker — ordinary scholarly practice,
+  // live on library/relations.html (notes 1, 6) and library/trinity_mormons.html (7).
+  const html = `<p>a<sup>1</sup> b<sup>2</sup> c<sup>1</sup></p>
+    <h2>Footnotes</h2><ol><li>One.</li><li>Two.</li></ol>`;
+  const r = auditFile('t.html', html);
+  assert.deepEqual(r.problems, [],
+    'reusing a footnote marker is legitimate and must not be flagged');
+});
+
+test('footnote checker finds the list by position, not by the word "Footnotes"', async () => {
+  const { auditFile } = await import('../tools/check-footnote-integrity.mjs');
+  // The content-review stamp's `by` note often contains the word "footnotes" —
+  // splitting the document on that word cuts at the stamp and reports 0 markers.
+  const html = `<!-- content-review: {"by":"added footnotes 17/23-25, renumbered clean"} -->
+    <p>a<sup>1</sup></p><h2>Footnotes</h2><ol><li>One.</li></ol>`;
+  const r = auditFile('t.html', html);
+  assert.deepEqual(r.problems, [],
+    'the word "footnotes" inside the stamp must not truncate the body scan');
+});
