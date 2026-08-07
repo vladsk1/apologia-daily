@@ -298,6 +298,24 @@ Verify each against the Shakir/standard text before any use.
 This book's counterpart essay. Secondary touchpoints (`islam-jesus`, `islam-preservation`, `islam-guard`,
 `islam-prophecy`, `islam-eternalword`) were consulted by search only and are **not** claimed as read.
 
+### ⭐ STANDING OUTPUT — is the book better than our essay anywhere?
+
+**Yes, in two places. Everywhere else we are level or ahead.** Six-verdict sweep of the book's own sections:
+
+| Book section | Verdict | Detail |
+|---|---|---|
+| **History of the dilemma — it is ANCIENT** | **4. MISSING from ours** | Our essay attributes the argument to a modern YouTube apologist and never answers "so it's an internet gimmick." **P2 row.** |
+| **Whittingham's count: 119 verses positive on prior scripture vs 21 negative** (pp. 172, 179) | ⚠ **3. WEAKER in ours** | We evidence Premise 1 with "roughly a dozen" *musaddiq* occurrences (Abdelnour's twelve). The book has a **quantified 119-vs-21**, from **Whittingham — whom we already cite four times and treat as our most authoritative source.** Same premise, far stronger evidencing. **P3 row.** |
+| Muslim scholars conceding P1 | Mixed | Qadhi ✓, Whittingham ✓, al-Tabari ✓, al-Razi ✓, Ayoub ✓ (on `islam-jesus`). **Saeed, Accad, Galadari absent** cluster-wide — modest fair-representation value; folded into the P3 row. ⚠ Galadari is dual-use (also the *walad/kun* counter). |
+| PART 1–2 (identity + continuity of Torah/Gospel) | **1. Corroboration** | Q 3:3, 5:43–48, 5:68, 10:94, 6:115 all present and better footnoted. |
+| PART 3 — the eight contradictions | **1. Corroboration (deliberate scope)** | Our essay runs **three** (deity, crucifixion, resurrection) because Horn 2 only needs enough to bite. The other five live in `islam-contradictions.html` (Q 4:82) and `islam-jesus.html` (Q 5:116, Q 9:30). **Verified in the siblings — not a gap.** |
+| PART 4 — the taḥrīf verses | **1. Corroboration** | 2:42, 2:159, 3:71, 3:78, 4:46, and the 2:79 close reading with the *Eduyot* 2:10 parallel — which is **ours, not the book's.** |
+| The *maʿna* / *lafẓ* dichotomy; "Ibn Ḥazm invented it" | ✅ **5. HAZARD — ours is better** | The book leans on both; our essay follows **Whittingham** in complicating the dichotomy and in naming Ibn Ḥazm as *systematiser*, not inventor. **Do not let a later session harden ours to the book's version.** |
+| Triumphalist framing | ✅ **5. HAZARD — ours is better** | Ours closes "an open question asked in friendship, not a checkmate declared in triumph." |
+| The Qur'an Passage Index | **6. Non-recommendation** | A reference table. Useful for a drafter, wrong shape for an essay. |
+
+**No verdict-2 findings: the book exposes no error in our essay.**
+
 ### What the retro-run found — and it is a workflow defect, not a research error
 
 The cross-check below was run on **2026-08-03** and was **correct on the day it was written**. All three of

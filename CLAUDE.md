@@ -1100,6 +1100,20 @@ and a release.
 > same discipline as the cross-check classification below, which must be visible so a reader can see the
 > scan happened.
 >
+> ⚠ **AND WALK THE SOURCE'S OWN SECTION LIST — EVERY SECTION NEEDS A VERDICT, INCLUDING "NO COUNTERPART AT
+> ALL." (Added 2026-08-06.)** The dangerous miss is not a *wrong* verdict, it is **no verdict** — a whole
+> chapter of the source that never got compared to anything, because nobody thought to search for it.
+> Use the note's own headings as the checklist and tick each one off.
+> **This is exactly what happened on `islamic-dilemma.md`:** the book's *"History of the dilemma — it is
+> ANCIENT, not a modern invention"* section — which that note itself calls **"the strongest scholarly asset
+> in the book"** — was never classified on 2026-08-03, as corroboration or as improvement. It simply fell
+> through, and stayed missing until a full read on 2026-08-06. ⚠ Note also that the first Step-Zero pass on
+> that note *still* missed it: re-testing the note's **existing** verdicts is not the same as asking which
+> of the source's sections have **no** verdict. Do both.
+> ⚠ **Before calling a section absent, check the SIBLING essays too** — a lead can be correctly housed
+> elsewhere in the cluster. On the same pass, Q 4:82, Q 5:116 and Q 9:30 all looked missing from
+> `islam-dilemma.html` and are correctly carried by `islam-contradictions.html` and `islam-jesus.html`.
+>
 > **Why this rule exists — two failures, one shape.** (a) Four reviewers independently concluded of the 67
 > mastery pages that *"these pages were written without reading the essays"* (2026-07-28) — the same failure
 > one stage downstream. (b) On **2026-08-06**, mining *Return of the God Hypothesis*, a `Lemaître` search
@@ -1113,7 +1127,31 @@ and a release.
 content** against the source's leads and decide, for each substantive lead, whether the new material can
 *improve what we already have*. Concretely: for each substantive lead, `Grep`/`Read` the on-site home for
 that topic — the certified essay in `library/*.html`, the matching `/answers/*`, the `ev-s*` card, and any
-live `/briefs` or `/sources` entry — then classify it:
+live `/briefs` or `/sources` entry — then classify it.
+
+> ### ⭐⭐ THE CHECK IS A QUALITY COMPARISON, NOT A COVERAGE CHECK. (Rewritten 2026-08-06.)
+> "Does our site mention this?" is only one of the questions. The mining run exists to make our essays
+> **better**, so every lead and every section of the source gets one of **six** verdicts — and three of them
+> are about *quality*, not presence:
+>
+> | Verdict | Meaning | Action |
+> |---|---|---|
+> | **1. Corroboration** | We say it, accurately, and **at least as well** | No row — but record that the comparison was made |
+> | **2. ⚠ Error in ours** | The source shows something we assert is **wrong** | **P1 correction row** — highest priority |
+> | **3. ⚠ Weaker in ours** | We make the point, but the source makes it **better** — clearer, better ordered, better evidenced, more persuasive, or answering an objection we leave open | **Row to improve the WORDING**, not merely to add content |
+> | **4. Missing from ours** | We do not make it at all | Row |
+> | **5. ✅ Hazard — ours is better** | The source is **less accurate or less careful than we are** | **No row. Flag it**, so a later session cannot "improve" us backwards |
+> | **6. Non-recommendation** | A real gap we should deliberately **not** fill | Log it **with the reason** |
+>
+> **Verdict 3 is the one that keeps getting skipped, and it is often the most valuable.** A search can only
+> ever answer "present or absent." Whether the source argues something *better than we do* — a sharper
+> premise, a stronger number, a better order, an objection we leave hanging — is visible only by reading
+> both. That is the entire reason for Step Zero.
+>
+> **STANDING OUTPUT — the note MUST answer this explicitly, every time, even when the answer is "no":**
+> **"Is the source better than our essay anywhere? Where, and how?"** Nobody should have to ask.
+>
+> Then classify each lead:
 - **Corroboration** — the point is already made, accurately and current → **no backlog row**, but record it
   *as corroboration* in the note's "Live-door status" + the source ledger (so the record shows we *checked*
   and found it covered, not that we skipped the comparison).

@@ -99,6 +99,23 @@ our-own-words material (or a verified PD primary) reaches a visitor.
    argument map (beats in our own words → **primaries to verify**), a "Guardrail fit" note (flag
    overstatement / neutrality risk / heterodox drift / denominational tilt), and a cross-map to our
    Evidence Library tabs/essays and existing `/answers`.
+> ### ⭐⭐ THE CHECK IS A QUALITY COMPARISON, NOT A COVERAGE CHECK. (2026-08-06.)
+> "Does our site mention this?" is only one question. Every lead **and every section of the source** gets one
+> of six verdicts — three of which are about *quality*, not presence:
+> **1. Corroboration** (we say it, accurately, and at least as well) · **2. ⚠ Error in ours** (P1 correction) ·
+> **3. ⚠ Weaker in ours** — we make the point but the source makes it **better**: clearer, better ordered,
+> better evidenced, more persuasive, or answering an objection we leave open → **a row to improve the WORDING**,
+> not merely to add content · **4. Missing from ours** · **5. ✅ Hazard — ours is better** (flag it, so nobody
+> "improves" us backwards) · **6. Non-recommendation** (a real gap we deliberately leave, with the reason).
+>
+> **Verdict 3 is the one that keeps getting skipped and is often the most valuable** — a search can only answer
+> "present or absent"; whether the source argues something *better than we do* is visible only by reading both.
+>
+> **STANDING OUTPUT — the note MUST answer this explicitly every time, even when the answer is "no":**
+> **"Is the source better than our essay anywhere? Where, and how?"** Nobody should have to ask.
+>
+> Full statement: `CLAUDE.md` § *Content backlog* → the six-verdict table.
+
 3. **Cross-check every lead against our CURRENT live content (mandatory — the point of the library).** The
    mining run is **not finished when the note is written.** For each substantive lead, `Grep`/`Read` the
    on-site home for that topic — the certified `library/*.html` essay, the matching `/answers/*`, the
