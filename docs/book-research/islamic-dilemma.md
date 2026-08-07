@@ -359,7 +359,7 @@ gimmick.** Checked site-wide:
 | **George of Be'eltan** (Syriac patriarch, 758–89) | **Absent site-wide** |
 | ⭐ **Leo III / ʿUmar II correspondence** (via Ghevond) — **the caliph himself names the Injīl as Matthew, Mark, Luke, John** | **Absent site-wide** — the single most striking item in the book |
 
-**This is the one place the book is genuinely stronger than our essay**, and it is now logged as a **P2** row.
+**This is the one place the book is genuinely stronger than our essay.** ✅ **PARTLY EXECUTED 2026-08-07** &mdash; **John of Damascus only** is now live in `library/islam-dilemma.html` (new paragraph after the aim-of-essay paragraph, new fn 3, sup-li 29/29). Gates: neutrality ×5 (NOT STAMPABLE 1&ndash;4, CLEAN on 5), orthodoxy ×2 CLEAN, argument SOUND. ⚠ **The other three antiquity witnesses remain OPEN** &mdash; the *Apology of al-Kindi*, George of Be'eltan, and the Leo III / ʿUmar II correspondence (the strongest of the four, since the caliph himself names the four Gospels). The backlog row stays TODO for those three. ⚠ Also owed: `apologia-citations` on John's reported replies against Sahas's printed page &mdash; every primary host is egress-blocked.
 Note the shape of the miss: it was not a wrong verdict, it was **no verdict** — a whole section of the book
 never got compared to anything. A search-driven cross-check tests the leads you thought to search for;
 reading the essay is what tells you which of the book's sections have no counterpart at all.
