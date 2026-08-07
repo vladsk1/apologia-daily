@@ -455,6 +455,42 @@
           "Whether that metaphysical claim holds is precisely the disputed hinge"
         ]
       }
+    },
+    {
+      "id": "minimal-facts-virtually-all",
+      "retired": "2026-08-07",
+      "what": "Saying the minimal facts are accepted by 'virtually all' / 'nearly all' scholars or historians — and, worse, including the EMPTY TOMB in that set.",
+      "why": "library/minimalfacts.html states Habermas's second criterion as acceptance by 'the great majority' of scholars, and says in terms that the case 'is strongest when it leans on the facts the critics themselves grant, and weakest when it inflates \"majority\" into \"virtually all\".' It also records the live methodological critique (Carrier; Cavin & Colombetti; the GCRR dataset analysis) that Habermas's percentages are his own tally of the literature, not an auditable poll. library/emptytomb.html goes further: the empty tomb is 'noticeably less secure than the near-consensus that the disciples had experiences they took to be appearances', and Habermas himself flags it as the more disputed fifth item. So 'virtually all' overstates the consensus, and applying it to the empty tomb contradicts two of our own certified essays.",
+      "instead": "Say 'the great majority of critical scholars, sceptics included'. Keep the tiers distinct: crucifixion and the disciples' sincere belief are near-universally granted and can be named as such; group appearances by fewer; the empty tomb by fewer still — present it as the more disputed fifth item, exactly as Habermas does. NOTE the legitimate uses this must not catch: 'virtually all scholars' is accurate about the EXISTENCE of Jesus, about the authenticity of Josephus Ant. 20.9.1 and Tacitus Annals 15.44, and about Pauline authorship of Romans/1-2 Corinthians/Galatians. Those are different claims and they stay.",
+      "patterns": [
+        "five facts are accepted by virtually all",
+        "5 minimal facts accepted by virtually all",
+        "minimal facts accepted by virtually all",
+        "facts accepted by virtually all (critical )?(scholars|historians)",
+        "facts (are )?granted by nearly all scholars",
+        "facts granted by virtually the entire",
+        "these five facts are accepted by virtually all",
+        "minimal facts.{0,40}using only facts accepted by virtually all"
+      ],
+      "allow": [],
+      "netting": "claim",
+      "corpus": {
+        "must_fire": [
+          "Notice that these five facts are accepted by virtually all historians — not just Christians.",
+          "Name the 5 minimal facts accepted by virtually all critical scholars.",
+          "Five facts accepted by virtually all critical scholars point overwhelmingly to the resurrection.",
+          "A handful of facts are granted by nearly all scholars, believing or not.",
+          "Facts granted by virtually the entire scholarly spectrum — believer and skeptic alike."
+        ],
+        "must_not_fire": [
+          "The existence of Jesus of Nazareth is accepted by virtually all scholars, including sceptics and non-Christians.",
+          "Josephus's reference to James, the brother of Jesus, is accepted as authentic by virtually all scholars.",
+          "Romans, 1–2 Corinthians and Galatians are accepted as authentically Pauline by virtually all critical scholars.",
+          "The case is strongest when it leans on the facts the critics themselves grant, and weakest when it inflates “majority” into “virtually all”.",
+          "Five facts are accepted by the great majority of critical scholars, including atheists."
+        ]
+      },
+      "rebuild_debt": null
     }
   ]
 }

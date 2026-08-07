@@ -802,6 +802,42 @@ The book's aim is explicitly **equipping the ordinary believer to give a reasone
   overstate Ayer.** Steelman Hume before answering.
 
 
+## ⭐ Paired essays read in full (Step Zero) — 2026-08-07
+
+**Read start to finish before the note was opened:** `library/minimalfacts.html` (3,838w),
+`library/emptytomb.html` (3,681w), `library/paulconv.html` (4,381w) — the three this note's own
+cross-map routes to. Siblings (`earlycreed`, `burial`, `disciplesbelief`, `hist_jesus`, `appearances`)
+were consulted by search only and are **not** claimed as read.
+
+### ⭐ STANDING OUTPUT — is the book better than our essays anywhere?
+
+**Only in one place, and it is a place we deliberately do not go.** The 2004 book supplies
+**page-precise primary-source apparatus** our essays partly lack — the five non-Christian
+crucifixion witnesses as a set, the patristic martyrdom chain, Chapter 3's 70 numbered notes. But on
+every *argumentative* question our essays are ahead, because they carry twenty years of criticism the
+book predates (Allison 2005/2021, Cavin & Colombetti 2019, Carrier, the GCRR dataset analysis).
+
+**The one asymmetry worth acting on is not "the book is better" but "the book is more precise."**
+See the P3 row. And ⚠ **the book's own second criterion is the wording our essay retires** — see below.
+
+| Book section | Verdict | Detail |
+|---|---|---|
+| Part 2 intro — the two criteria, "**granted by virtually all scholars**" | ⚠⚠ **2. ERROR IN OURS — but not in the essay.** | `minimalfacts.html` states the criterion as "**the great majority**" and says the case is "**weakest when it inflates 'majority' into 'virtually all'**." Reading the book's phrasing against our essay exposed that **eight served surfaces still ran the retired wording** — including `daily-quiz.html` as the **graded correct answer**, and `flashcards.html` / `explain-it-back.html` listing the **empty tomb** inside the "virtually all" set, which `emptytomb.html` calls "noticeably less secure than the near-consensus." **FIXED 2026-08-07 + registered in `retired-claims.json`.** |
+| Ch. 3 Fact 1 — five non-Christian crucifixion witnesses (Josephus, Tacitus, Lucian, Mara bar-Serapion, Talmud) + Cicero | **1. Corroboration at cluster level** | `minimalfacts.html` names only Josephus and Tacitus, but Lucian and Mara bar-Serapion are correctly housed in `library/hist_jesus.html` and the `is-there-evidence-for-jesus-outside-the-bible` answer. **Checked the siblings before calling it a gap.** ⚠ *Talmud Sanhedrin 43a* and *Cicero* are absent site-wide — minor, and deliberately so on a page that keeps its tiers tight. |
+| Ch. 3 Fact 1 — Crossan "as sure as anything historical can ever be" | **1. Corroboration** | `minimalfacts.html`, cited to *Jesus: A Revolutionary Biography* 145 — same page the note gives. |
+| Part 2 close — "J-E-T" (Jerusalem, Enemy attested, Testimony of women) | ✅ **5. HAZARD — ours is better** | `emptytomb.html` runs **five** lines, not three: it adds the Joseph-of-Arimathea burial (Brown's "almost inexplicable") and multiple attestation / the pre-Markan source. Do not let a later session compress ours back to the book's mnemonic. |
+| Ch. 5 — legend theory; Ch. 6 — hallucination/vision; Ch. 7 — combination theories | **1. Corroboration**, and ours is more current | Our essays answer **Ehrman's bereavement-vision** case and **Lüdemann's "Christ complex"** (via Craig's assessment) by name — both post-date or post-develop the book's treatment. |
+| Ch. 8 — naturalism / "science has shown resurrection impossible" | **6. Non-recommendation** | Covered by `library/miracles.html` (Hume, Spinoza), which is the right home. No row. |
+| Ch. 3 n33–70 — the martyrdom chain (1 Clement 5:2–7; Ignatius *Smyrnaeans* 3:2, 3:4; Polycarp) ⚠ **NOT** the Hippolytus/Foxe apostle-fates lists, which the book's own n59/n63 flag as legendary | **4. Missing from these three essays**, but out of scope for them | This belongs to `library/disciplesbelief.html`, which I did **not** read in full. ⚠ Ignatius and Polycarp are on-site only in `early_church_trinity.html`, i.e. a *different* argument. **Flagged, not logged** — resolving it needs disciplesbelief read first, under Step Zero. |
+| Antony Flew — "my metaphysical bias is against resurrections" | **3. Weaker in ours** (candidate) | ⭐ `minimalfacts.html` argues at length that what stays Allison's hand is "a metaphysical prior, not a gap in the historical evidence." **Flew says exactly that in the atheist's own voice.** Flew is on-site (`miracles.html`, `who-said-it.html`) but **not in `minimalfacts.html`**. ⚠ Verify the quote, and fence it: Flew became a **deist** in 2004, so he must not be presented as an atheist conceding late in life. See P3 row. |
+| Reginald Fuller on the necessity of an appearance for Paul; W. Wand (1972); Karl Barth and Raymond Brown on the naturalistic theories being abandoned; Hartshorne; "conversion disorder" | **6. Non-recommendation** | All absent site-wide. `paulconv.html` already runs the hostile-witness case with Hengel, Wright and Michael Martin; `minimalfacts.html` already concedes the naturalistic theories are "defended by serious people," which is *more* honest than Barth's "unrespectable." Adding these would pad, not strengthen. |
+| Kloppenborg *CBQ* 40; Craig 1989; Gal 1:18–19 *historēsai* | **1. Corroboration** | Kloppenborg in `earlycreed.html`; Craig 1989 in `emptytomb.html`; *historēsai* in `paulconv.html`, correctly noted as the sole NT occurrence. |
+| Magness (burial archaeology); the James Ossuary ⚠ disputed | **1. Corroboration** | Magness in `library/burial.html` — the right home. The ossuary is correctly absent. |
+
+**No verdict-4 findings inside the three paired essays.** The book opens no topic they lack.
+
+---
+
 ## Cross-map to our Evidence Library
 - Resurrection tab **`ev-s2`**; essays **`library/minimalfacts.html`**, **`emptytomb.html`**,
   **`paulconv.html`**; the `/answers/*` resurrection set (several already list this book under
