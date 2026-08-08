@@ -7,6 +7,12 @@
 > This note is a **research map**, not the book.
 
 > ## 🟢 STATUS: COMPLETE (structure + argument mapped) — leads still need per-item verification
+> **Cross-check RUN 2026-08-08** under the Step Zero + six-verdict standard — see
+> *"Step Zero + six-verdict cross-check"* below for the full section-by-section verdicts and the
+> standing "is the source better than our essay?" answer. **Three P2 improvement rows and one P3 are
+> logged in `docs/content-backlog.md` and are NOT yet executed**; one live fix shipped
+> (`ev-s3.html`, the 1 Enoch Similitudes dating). The cross-map table at the foot of this file is
+> **history, not a to-do list** — read the verdict table instead.
 > **Unusual provenance (stronger than the other two notes):** this map is built from the **already
 > page-by-page-read and citations-gated** content behind the live **reading-club demo**
 > (`demo/del-rosario-companion-study.html`; status doc `docs/DEL_ROSARIO_READING_CLUB.md`). The book
@@ -196,6 +202,72 @@ authority**, escalating across the two scenes.
 5. **1 Enoch Similitudes dating is contested** (ch. 9) — use for the *concept*, don't over-date.
 6. **Mark-not-John is a *strategic* choice** (meeting skeptics on their ground), NOT a concession that
    John is unhistorical — say so if the point comes up.
+
+---
+
+## ⭐ Step Zero + six-verdict cross-check (2026-08-08)
+
+**Paired essays read in full (Step Zero):** `library/jesus_claims.html` (3,844 w) ·
+`library/jesus_as_god_nt.html` (3,697 w) · `library/hist_jesus.html` (3,300 w). The third was **not**
+in the cross-map below and was added on this pass: the book's whole Part One is historical *method*,
+and the note pointed it only at mastery pages. Sibling essays checked before calling anything absent:
+`hands.html`, `titles.html`, `nt_trinity.html`, `minimalfacts.html`, `multiatt.html`,
+`archaeology.html`, `burial.html`, `emptytomb.html`, `eyewitnesses.html`, plus `ev-s3`, `ev-s4`,
+`ev-m-jesus_claims` (incl. its `ARG_PREMISES`), `ev-m-titles`, `ev-m-hands`.
+
+### ⭐ STANDING OUTPUT — is the source better than our essays anywhere? Where, and how?
+
+**Yes, in three places, and one of them is on the load-bearing plank of our deity essay.**
+
+1. **Ch. 7 — the "nobody was there to report a private trial" objection.** Ours *concedes* it
+   (`jesus_claims.html`: "the historicity of Mark's night trial before the Sanhedrin is itself
+   disputed") and falls back on the implicit claims. Del Rosario *answers* it first — **a
+   transmission route need not be sympathetic**: Mark puts Peter in the courtyard (14:54, 66–72),
+   names Joseph of Arimathea as a council member (15:43), and Paul was a trained Pharisee. Ours is
+   the more honest about the dispute; **his is stronger at the point of contact, and the two are
+   compatible** — the reply can be added without touching the concession. Best single improvement
+   available from this book.
+2. **Ch. 4 — the parallel search.** Ours words the third-party-forgiveness point better than the book
+   does ("as if the offended party were standing there in his own skin") but **never names a
+   counter-example**, and the one a critic actually brings — **4Q242, the Prayer of Nabonidus**, where
+   a Jewish exorcist is read as forgiving sin — appears **nowhere on the site** (the only "Nabonidus"
+   hit is King Nabonidus in `archaeology.html`, unrelated). An unanswered named counter-example
+   sitting on the plank the whole essay opens with.
+3. **Ch. 10 — J. R. Daniel Kirk's "idealized human."** Our objection roster is Ehrman + Casey/Vermes +
+   Dunn. Kirk, *A Man Attested by God* (Eerdmans, 2016), is the strongest current **limited-authority**
+   reading and is six years more recent than Casey. This is a named instance of the standing
+   "missing critics" gap in `CLAUDE.md`.
+
+### Verdict table — every section of the book gets one, including "no counterpart at all"
+
+| Book section | Verdict | Note |
+|---|---|---|
+| Foreword (Bock) | 1 corroboration | Credibility anchor only; nothing to port. |
+| Intro — "More Than a Man?" (Mark-not-John strategy) | 1 corroboration | `jesus_claims.html` makes the identical strategic choice and fences it with the "Bracketing John, not doubting it" `orthonote`. |
+| Intro — "State of Theology" survey | 6 non-recommendation | Survey data, not our genre; lives only in the reading-club demo. Don't port. |
+| Ch. 1 — Let's Make History (historiography) | 4 missing, low value | No essay on historiography as such. `hist_jesus.html` is about *existence*, not method. Not worth an essay. |
+| Ch. 2 — Rules of Evidence (IBE, criteria, no appeal to inspiration) | 1 corroboration, **ours better placed** | `minimalfacts.html` owns this whole apparatus — IBE, explanatory scope/power/*ad hoc*, "without asking the sceptic to grant biblical inspiration" — and attributes the criteria properly (McCullagh via Licona) where the book does not. |
+| Ch. 3 — Core scene / miracle-worker bedrock | 1 corroboration | `hist_jesus.html` carries "teacher and reputed healer" in the skeptic-affirmed bedrock. |
+| Ch. 4 — Third-party forgiveness + parallel search | **3 weaker in ours** | See standing output #2. **4Q242 absent site-wide.** |
+| Ch. 5 — Hägerland on Mark 2:10 | 4 missing, **low priority — and say why** | Zero hits site-wide. But our essay rests on **Mark 2:5 + 2:7** (the pronouncement and the scribes' reaction), **not** on 2:10 — so the redaction objection bites *the book's* argument harder than ours. Worth one sentence, never a section. |
+| Ch. 6 — Caiaphas ossuary | 1 corroboration, **✅ 5 hazard — ours is better** | `archaeology.html` **and** `ev-s4.html` both carry the 1990 Abu Tor find with the "widely — though not universally — identified" hedge, and ours cites the primaries the note lacks (Greenhut and Reich, *BAR* 18.5, 1992). Do not "improve" this from the book. |
+| Ch. 7 — Mark 14:61–62, Dan 7 + Ps 110 | 1 corroboration on the exegesis; **3 weaker in ours** on the eyewitness objection | See standing output #1. |
+| Ch. 8 — Casey/Ehrman "it wasn't blasphemy"; "shares God's throne" | 1 corroboration, **✅ 5 hazard — ours is better** | The note's ⚠️ flag asks us to add an Is-saying/Not-saying fence on "share God's throne". **`jesus_claims.html` already carries exactly that `orthonote`** ("Not that Jesus is a second, lesser deity or a created deputy enthroned *alongside* God"). Already done — flagging so a later session doesn't add a duplicate. |
+| Ch. 9 — 1 Enoch Similitudes as heavenly judge | **2 error in ours (compressed layer)** | `ev-s3.html` stated the **contested** Similitudes date flat ("dated near Jesus's period") and rested a load-bearing inference on it ("read by some in quasi-divine terms **in Jesus's own period**"). No essay carries the hedge, so there was no certified backing anywhere. **Fixed 2026-08-08.** `ev-m-titles.html` and `ev-m-hands.html` use the text more carefully. |
+| Ch. 9 — Ehrman's concession is LITERARY, not historical | 1 corroboration, **ours better** | `jesus_claims.html` goes further: it reports Ehrman's view that the night trial is *likely a later construction* and bounds the argument accordingly. **Do not import the book's greater confidence in the trial.** |
+| Ch. 10 — the ten data points | 6 non-recommendation | A book-specific enumeration; our two +4s already track `minimalfacts.html`. Porting a count we cannot verify against the printed table is exactly the "reported, not verified" trap. |
+| Ch. 10 — Kirk's "idealized human" / bailiff image | **4 missing** | See standing output #3. ⚠ If ported, the bailiff picture stays tied to *"that limited-authority view"* and is never pull-quotable as ours. |
+| Ch. 11 — Table 11.1 scorecard (P/P/P/P/P) | 6 non-recommendation | Idiosyncratic presentation device. Our calibrated prose already does the work and `minimalfacts.html` owns the criteria with proper attribution. |
+| Ch. 12 — implicit-claim analogy ("my wife and I…") | 1 corroboration | `jesus_claims.html`'s whole architecture *is* the implicit-claim argument; it does not need the analogy. |
+| Ch. 12 — "authority over sacred things, nature, demons, disease, death" | **6 non-recommendation — log the reason** | **Do not import.** Miracle-working is not a divine-authority claim in Second Temple terms: Elijah and Elisha raised the dead. Adding those planks would dilute an argument that works precisely because it turns on prerogatives **no prophet exercised** — forgiveness on one's own authority, overruling Torah, being the hinge of final judgment, taking the Danielic throne. **Our narrower list is the stronger one.** |
+| Ch. 12 — continuity with the church's confession; Nicene Creed; 1 Cor 15:3–5 | 1 corroboration | `nicene-creed.html`, `earlycreed.html`. |
+| Cross-cutting — the −4…+4 confidence scale | 6 non-recommendation | Our calibrated language already carries the honesty this device is for; an idiosyncratic numeric scale would read as false precision. |
+| Back matter — Notes + Bibliography | — | Still the highest-value target if a deeper verification pass is ever run. |
+
+### Live-door status
+Nothing from this book has been promoted to `/sources` (copyrighted; no PD primaries surfaced here) or
+to `/briefs`. The one **live change** this cross-check produced is the `ev-s3.html` fix under Ch. 9
+above; the three improvement rows are logged in `docs/content-backlog.md` and are **not yet executed**.
 
 ## Cross-map to our Evidence Library
 Primary tab: **Jesus / deity of Christ (`ev-s3`)**. Feeds `library/jesus_claims.html`,
