@@ -43,6 +43,84 @@ NOT a store of the book's prose.
 > chapter numbers its footnotes from 1, so "ch. 6 fn 14" and "ch. 11 fn 14" are *different* citations —
 > always cite the chapter with the footnote.
 
+## ⭐ Step Zero + six-verdict cross-check (2026-08-08)
+
+> ### 🔴 READ THIS FIRST — THIS NOTE WAS A STALE TO-DO LIST.
+> **Every documented lead in this file has ALREADY SHIPPED.** Ch. 6's variant taxonomy went live in
+> `library/manuscript.html` on **2026-07-17**; the ch. 10, 11 and 16 rows all shipped on **2026-07-23**
+> in commit **`44c6786`**. Yet each chapter's "Cross-map" section below still reads as a to-do list
+> ("the highest-value additions", "→ logged to `content-backlog.md` (P3)", "If we ever build public
+> content from this…"). **That wording is history, not instruction.** This is the same failure recorded
+> for `islamic-dilemma.md` — and it is why `CLAUDE.md` now requires a done row and its note to ship in
+> the same commit. Read the verdict table below; treat the four cross-map sections as archive.
+
+**Paired essays read in full (Step Zero):** `library/manuscript.html` (5,232 w — ch. 6) ·
+`library/consistency.html` (4,627 w — ch. 11) · `library/canon.html` (5,286 w — ch. 16) ·
+`library/hist_jesus.html` (3,300 w — read in full earlier the same day for the Del Rosario sweep).
+⚠ **Coverage limit, stated honestly:** `library/eyewitnesses.html` was extracted but **not read in
+full**, and `library/archaeology.html` and `library/earlycreed.html` were checked only by targeted
+search. Those are ch. 10's Theses 2, 5 and 6 — the note's own text calls that chapter "corroborates
+rather than adds," and its two *distinctive* contributions (Thesis 3's temporal-gap comparison,
+Thesis 8's public-reading argument) land in `manuscript.html` and `canon.html`, both of which WERE
+read in full. **So the ch. 10 verdicts below are sound for its distinctive material and provisional
+for Theses 2, 5 and 6.**
+
+### ⭐ STANDING OUTPUT — is the source better than our essays anywhere? Where, and how?
+
+**Barely — and this is the first source in the run where the honest answer is essentially "no."**
+Two small additions are worth a row; everything else is either already live, correctly declined, or a
+place where **our essays are ahead of the book**. That is a real result, not a null one: it means the
+July execution was thorough, and it means a future session should be *defending* these essays from
+this chapter rather than mining it.
+
+1. **Mill (1707) and Bentley (1713) — the variant-count objection is three centuries old, and was
+   answered then.** John Mill's Greek NT listed ~30,000 variants from ~100 manuscripts and caused a
+   public storm; Richard Bentley's reply — more manuscripts means more anchors and *better* recovery —
+   is still the correct answer. `library/manuscript.html` makes exactly that argument in its own voice
+   ("a by-product of abundance, not of corruption") but has **no historical anchor for it**. Adding the
+   precedent turns a defensive-sounding reply into a demonstration that the objection is old and has
+   been met for 300 years. Cheap, and it strengthens the essay's best paragraph.
+2. **The Aland "Category I / strict text" classification — our early witnesses are *good*, not merely
+   early.** `manuscript.html` argues early + abundant + geographically spread, and uses the
+   P75/Vaticanus stability as its empirical check. It never argues that the earliest papyri are
+   *high-quality* copies by an independent scholarly classification. ⚠ Cite **Kurt & Barbara Aland**
+   directly and build our own table if one is wanted — the note is explicit that Wallace's chart must
+   not be reproduced.
+
+### Verdict table — every section gets one, including "no counterpart at all"
+
+| Section | Verdict | Note |
+|---|---|---|
+| **Ch. 6** — spine, the number/nature/theology of variants | 1 corroboration, **shipped 2026-07-17** | The four-category taxonomy, Rom 5:1, Jesus Barabbas, Mark 1:41, John 1:18, the <1% figure and the Ehrman concession (cited to the *Misquoting Jesus* Plus-edition appendix, p. 252) are all live in `manuscript.html`. |
+| Ch. 6 — Wallace's caution against the raw manuscript-count apologetic | 1 corroboration, **ours is explicit** | Our essay says it in its own voice: *"the raw total is not itself the argument."* |
+| Ch. 6 — Mill/Bentley | **4 missing** | Standing output #1. |
+| Ch. 6 — the papyri chart / Aland categories | **4 missing** | Standing output #2. |
+| Ch. 6 — internal vs. external evidence (the Phil 1:14 example) | 4 missing, **low value** | Our essay describes triangulation across branches but never names the internal/external distinction. A method refinement, not a gap in the case. |
+| Ch. 6 — the "two ditches" / KJV-Only framing | **6 non-recommendation** | Denominationally sensitive; `CLAUDE.md` forbids adjudicating an intra-Christian dispute as settled. The note flags it itself. Our essay handles Erasmus and the *Textus Receptus* **historically**, which is the correct scope. |
+| Ch. 6 — the 0.001% Wallace–Ehrman debate anecdote | **6 non-recommendation** | Popular-level; the note itself says verify and do not inflate. Our essay carries the same point with a *citable* Ehrman quotation instead. |
+| Ch. 6 — the inerrancy section (ETS, Calvin, Packer, Kantzer) | **6 non-recommendation — no counterpart at all, deliberately** | Intra-Christian. We defend the reliability and authority of Scripture without adjudicating an inerrancy formulation. |
+| Ch. 6 — P52/P66/P75 dating | **✅ 5 hazard — ours is better** | `manuscript.html` carries **Orsini & Clarysse** on P52 *and* the **Nongbri/Orsini** caution on P66 and P75, and fences the famous Kenyon quotation as *"Kenyon's strong summary judgment, not a consensus statement of the discipline."* The 2013 chapter has none of that. **Do not import the chapter's confidence on dates.** |
+| **Ch. 10** — Thesis 3, NT-vs-Caesars *temporal gap* | 1 corroboration, **shipped `44c6786`** | Live in `manuscript.html` with the apples-to-apples hedge. ⚠ It is the *temporal-gap* comparison, never the discredited raw-count one. |
+| Ch. 10 — Thesis 8, public reading = canonical recognition | 1 corroboration, **shipped `44c6786`** | Live in `canon.html` with Justin *1 Apol.* 66–67, Col 4:16, 1 Tim 4:13, Rev 1:3 — and correctly bounded there: *"This attests early functional authority; it does not by itself prove a closed canon at that date."* |
+| Ch. 10 — Theses 2, 5, 6 (early texts; archaeology; historical matrix) | 1 corroboration, **PROVISIONAL** | The note calls these "corroborates rather than adds," and `eyewitnesses.html` / `archaeology.html` were not read in full this pass. **Not independently confirmed — re-test if ch. 10 is ever mined again.** |
+| Ch. 10 — the full Testimonium; census/Quirinius; Star of Bethlehem; Theudas; the Qur'an asides | **6 non-recommendation** | All five already carry do-not-use or handle-honestly flags in this note, and we do not run any of them. The flags are correct and should stay. |
+| **Ch. 11** — the cautionary-principles taxonomy | 1 corroboration, **shipped `44c6786`** | `library/consistency.html` cites **Huffman by name and by volume** and runs all five principles plus misconstrued referent and mystery, with A. T. Robertson's "a possible reconciliation is enough" rule. |
+| Ch. 11 — Wenham, *Easter Enigma*, and the eight-segment coordination | **4 missing — the best remaining lead in this file** | `consistency.html` names the **Galilee-vs-Jerusalem appearance-location** divergence as *"the genuinely harder divergence"* and calls the usual harmonizations *"plausible but not airtight."* Wenham's monograph is the standard treatment of exactly that problem. This lead targets a spot our essay **openly marks as its weakest** — which is the best kind of improvement. The backlog row notes the `/answers/*` strengthenings remain available. |
+| Ch. 11 — the whole chapter, vs. our essay | **✅✅ 5 hazard — OURS IS A GENERATION AHEAD** | `consistency.html` is built on **Licona, *Why Are There Differences in the Gospels?* (2017)** — the Plutarch comparison case and the *progymnasmata* — which the **2013** volume predates entirely. It also names the **Geisler–Licona** intra-evangelical dispute, and concedes the crucifixion-day and Judas cases as genuinely hard. ⚠⚠ **A future session mining ch. 11 could improve us BACKWARDS** by replacing genre-based analysis with older harmonization. Do not. |
+| **Ch. 16** — Da Vinci Code / "lost gospels" refutation | 1 corroboration, **shipped `44c6786`** | Live in `canon.html`: Nicaea never discussed the canon, the ~40-title count against Brown's "eighty," Constantine selected nothing, and the late-and-Gnostic dating of Thomas/Peter/Judas/Mary. |
+| Ch. 16 — criteria of canonicity, Eusebius's three classes, Athanasius 367, Hippo/Carthage | 1 corroboration | All live, plus the Muratorian Fragment **with** the Hahneman/Sundberg minority dating our essay names and the chapter does not. |
+| Ch. 16 — the OT canon (Josephus's 22 books, 4 Ezra's 24, Melito, Origen) | **4 missing — but bounded, and low priority** | `canon.html` is NT-focused and touches the OT only through the Apocrypha dispute. Josephus, *Contra Apion* 1.37–42 is usable as a **historical datum about what first-century Jews received**, which is shared ground. ⚠ The **scope** question must stay neutral — see the row. |
+| Ch. 16 — the Apocrypha/deuterocanon argument | **6 non-recommendation, and ✅ 5 hazard** | The chapter argues the Protestant 66-book position and *against* deuterocanonicity. **`canon.html` handles this better than its source**: it presents Jerome and Trent as *"a real and reasonable disagreement… not the burden of this essay to settle it,"* and states plainly that *"this is not a case of one side inventing books and the other being faithful."* That is exactly our neutrality rule, executed. **Never import the chapter's verdict.** |
+| Ch. 16 — "prophecy ceased ~400 BC" | **6 non-recommendation** | A Jewish-tradition claim, not a neutral historical fact. The note's flag is right; we do not assert it. |
+
+### Live-door status
+Nothing from this volume is in `/sources` (copyrighted) or `/briefs`. **All four documented leads are
+executed and live**; this pass produced **no live content change** — only the ledger correction above
+and three new backlog rows (Mill/Bentley, the Aland classification, Wenham). The three "ours is
+better" hazards are the most important output: they are the reason a future session must not treat
+this chapter as an upgrade path for `consistency.html`, `manuscript.html`'s dating caution, or
+`canon.html`'s Apocrypha section.
+
 ## Usage rules (same as every note in this folder — do not bend)
 - **Never reproduce the book's prose.** Everything here is our paraphrase of the argument's *shape* +
   an index of the sources Wallace cites. No stored excerpts, no long quotations of the chapter.
