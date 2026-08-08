@@ -757,6 +757,35 @@ in order. Do not deploy content that has skipped a stage.
 > tests/*.test.mjs`, `check-footnote-integrity`, `check-orthodoxy-tripwires`,
 > `check-retired-claims`.
 >
+> **5. PORT, DON'T AUTHOR — and if you must author, expect it to be the next defect.** (Added
+> 2026-08-08, after a five-sentence card subsection took **six** rounds.) The signature was
+> unmistakable and it never varied: **every sentence I wrote myself generated the next round's
+> defect; every sentence ported verbatim from a certified essay survived untouched.** Authored prose
+> adds a claim with no essay underneath it — which is exactly the card-level-scholarship failure this
+> file already records from the ev-s3 card 16 sweep. So when a gate hands you replacement wording,
+> **use it verbatim**; when it doesn't, go find the sentence in the paired essay and port that. Invent
+> only when neither exists, and then flag it to the next round as new.
+>
+> **6. A FIX AIMED AT ONE LENS WIDENS PAST WHAT THE OTHER WILL ALLOW — this is what dual consensus is
+> FOR.** On 2026-08-08, `apologia-orthodoxy` fixed a monophysite-direction pull-quote ("not something
+> you hand to **a man**") by widening it to "**any creature**" — and `apologia-neutrality` then blocked
+> that exact clause, because at *that* width Daniel 7:27 falsifies it (it hands everlasting universal
+> dominion to "the holy people of the Most High"), and the card's **own Pro tier already conceded the
+> 7:27 problem**. Two lenses, two rounds, **two opposite failures on one clause**; a single gate ships
+> one of them. ⭐ **The resolution is never a differently-worded quantifier — it is a different
+> premise.** The sentence was rebuilt on cloud-coming, which the Hebrew Scriptures give to no one but
+> God, and both lenses cleared it.
+>
+> **7. A CONCESSION ADDED UPSTAIRS TURNS LATENT CONTRADICTIONS DOWNSTAIRS INTO MANIFEST ONES — so the
+> concession OWNS them.** Adding "the figure… is never seated" to the Pro tier was correct and both
+> lenses defended it. It also made **four** free-tier and memorised strings on the same card
+> ("shares God's throne") read as flat contradictions on one screen, where before they had merely
+> been uniformly wrong. `apologia-argument` **reversed a deferral** on exactly that ground, and it was
+> right to. ⚠ **When you add a hedge or a concession, grep every tier for the unhedged twin in the
+> SAME pass** — the deep dive, the free "In plain English" tier, the "How to explain this" script, the
+> spoken "In conversation:" line, and the `orthonote` box. On 2026-08-08 the same shape surfaced in
+> **four different layers**, and each successive lens found a surface the previous grep had missed.
+>
 > **And self-check the recurring shapes first.** These were each caught more than once and a
 > careful re-read would have found them: unverified paraphrase presented as summary ·
 > overstated continuity ("the question is not modern" when only the *exchange* is) ·

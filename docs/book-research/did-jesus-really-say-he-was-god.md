@@ -266,8 +266,22 @@ and the note pointed it only at mastery pages. Sibling essays checked before cal
 
 ### Live-door status
 Nothing from this book has been promoted to `/sources` (copyrighted; no PD primaries surfaced here) or
-to `/briefs`. The one **live change** this cross-check produced is the `ev-s3.html` fix under Ch. 9
-above; the three improvement rows are logged in `docs/content-backlog.md` and are **not yet executed**.
+to `/briefs`. The three improvement rows in the standing-output section are logged in
+`docs/content-backlog.md` and are **not yet executed**.
+
+**The one live change this cross-check produced SHIPPED on 2026-08-08** — the Ch. 9 finding above.
+It began as a two-clause hedge on `ev-s3.html` and ended as a **dual-consensus rebuild of the whole
+"Son of Man — the Daniel 7 connection" subsection across all three tiers, over six gate rounds.**
+Read the stamp in `ev-s3.html` for the full account; the short version is that the contested-date
+defect was real, and fixing it exposed a chain of larger ones the card had been carrying: the 1 Enoch
+Parables were card-level scholarship appearing in **no** certified essay (cut, not hedged); Daniel 7
+never seats the figure, so the enthronement had to be re-sourced to Psalm 110 on four other strings;
+and the **memorised, say-aloud line was teaching that Jesus' titles are ones "the Old Testament
+reserves for God alone"** — which that same card refutes three times in its own objections section.
+⚠ **`apologia-citations` has NOT run on the result** and its stamp date is deliberately unchanged;
+several references added during the rebuild (Tobit 12:16–22; Psalm 104:3 / Isaiah 19:1; Owen &
+Shepherd *JSNT* 2001 and Casey's *JSNT* 2002 reply; Mark 14:61) are gate-verified but not
+citations-gated.
 
 ## Cross-map to our Evidence Library
 Primary tab: **Jesus / deity of Christ (`ev-s3`)**. Feeds `library/jesus_claims.html`,
