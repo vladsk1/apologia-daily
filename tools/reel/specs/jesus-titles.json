@@ -1,0 +1,94 @@
+{
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "source": "library/titles.html (certified 2026-07-17) — Son of Man / Daniel 7 / the trial / Kyrios, plus the essay's own cumulative-pattern bound",
+  "voiceover": "Jesus' favourite name for himself was Son of Man. He used it about eighty times, almost always about himself. And to our ears it sounds humble. Son of man. A human being. That is how God addresses the prophet Ezekiel, and that ordinary sense is real. But the background is Daniel chapter seven. There the prophet sees one like a son of man, coming with the clouds of heaven. He approaches the Ancient of Days, and he is given dominion, and glory, and a kingdom, and the service of all nations, forever. And coming on the clouds is imagery the Hebrew Bible uses of God's own appearing. So at his trial, asked directly who he is, Jesus fuses Daniel seven with Psalm one hundred and ten, and claims to be the one enthroned beside God. Then there is Lord. Kyrios. In the Greek Old Testament, read across the synagogues, Kyrios is the word that stands in for the divine name itself. And Paul writes that everyone who calls on the name of the Lord will be saved, quoting a line about calling on YHWH, and applying it to Jesus. No single title settles it, and we should say so. Messiah and Son of David are royal, and human. But read together, the pattern is unmistakable.",
+  "scenes": [
+    { "dur": 3.4,
+      "kicker": "HIS OWN FAVOURITE TITLE",
+      "big": [ {"t": "The one", "c": "cream", "s": 92}, {"t": "everyone reads", "c": "cream", "s": 82}, {"t": "backwards.", "c": "gold", "s": 96} ] },
+
+    { "dur": 5.4,
+      "kicker": "SON OF MAN",
+      "lines": [
+        {"t": "Jesus' favourite name", "c": "cream", "s": 56},
+        {"t": "for himself — used about", "c": "cream", "s": 52},
+        {"t": "eighty times,", "c": "cream", "s": 56},
+        {"t": "almost always by him.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "dur": 5.2,
+      "kicker": "IT SOUNDS HUMBLE",
+      "lines": [
+        {"t": "“Son of man” can just", "c": "cream", "s": 56},
+        {"t": "mean “a human being.”", "c": "cream", "s": 56},
+        {"t": "", "s": 16},
+        {"t": "It is how God addresses", "c": "dim", "f": "serif", "s": 44},
+        {"t": "the prophet Ezekiel.", "c": "dim", "f": "serif", "s": 44} ] },
+
+    { "dur": 6.4,
+      "kicker": "THE BACKGROUND IS DANIEL 7",
+      "lines": [
+        {"t": "“One like a son of man”", "c": "cream", "s": 52},
+        {"t": "comes “with the clouds", "c": "cream", "s": 52},
+        {"t": "of heaven” — and receives", "c": "cream", "s": 50},
+        {"t": "dominion, glory, a kingdom,", "c": "cream", "s": 48},
+        {"t": "and the service", "c": "gold", "f": "serifb", "s": 52},
+        {"t": "of all nations.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "dur": 5.8,
+      "kicker": "AND THAT IMAGERY IS NOT NEUTRAL",
+      "lines": [
+        {"t": "Coming on the clouds", "c": "cream", "s": 56},
+        {"t": "is how the Hebrew Bible", "c": "cream", "s": 52},
+        {"t": "pictures God's own", "c": "gold", "f": "serifb", "s": 52},
+        {"t": "appearing.", "c": "gold", "f": "serifb", "s": 56},
+        {"t": "", "s": 14},
+        {"t": "Psalm 104:3 · Isaiah 19:1", "c": "dim", "f": "serif", "s": 40} ] },
+
+    { "dur": 6.4,
+      "kicker": "SO AT THE TRIAL",
+      "lines": [
+        {"t": "Asked directly who he is,", "c": "cream", "s": 50},
+        {"t": "Jesus fuses Daniel 7", "c": "cream", "s": 54},
+        {"t": "with Psalm 110 — claiming", "c": "cream", "s": 50},
+        {"t": "to be the one enthroned", "c": "gold", "f": "serifb", "s": 50},
+        {"t": "beside God himself.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "dur": 6.2,
+      "kicker": "THEN THERE IS “LORD”",
+      "lines": [
+        {"t": "In the Greek Old Testament,", "c": "cream", "s": 48},
+        {"t": "read across the synagogues,", "c": "cream", "s": 48},
+        {"t": "“Kyrios” stood in", "c": "cream", "s": 54},
+        {"t": "for the divine name itself.", "c": "gold", "f": "serifb", "s": 48} ] },
+
+    { "dur": 6.4,
+      "kicker": "AND PAUL USES IT OF JESUS",
+      "lines": [
+        {"t": "“Everyone who calls on", "c": "cream", "s": 52},
+        {"t": "the name of the Lord", "c": "cream", "s": 52},
+        {"t": "will be saved.”", "c": "cream", "s": 54},
+        {"t": "", "s": 14},
+        {"t": "Romans 10:13 quotes Joel 2:32 —", "c": "dim", "f": "serif", "s": 38},
+        {"t": "a line about calling on YHWH.", "c": "gold", "f": "serifb", "s": 44} ] },
+
+    { "dur": 6.2,
+      "kicker": "THE HONEST BOUND",
+      "lines": [
+        {"t": "No single title settles it.", "c": "cream", "s": 52},
+        {"t": "“Messiah” and “Son of David”", "c": "cream", "s": 46},
+        {"t": "are royal, and human.", "c": "cream", "s": 52},
+        {"t": "", "s": 14},
+        {"t": "It is the pattern,", "c": "gold", "f": "serifb", "s": 50},
+        {"t": "read together, that tells.", "c": "gold", "f": "serifb", "s": 48} ] },
+
+    { "dur": 4.4,
+      "big": [ {"t": "Who did he", "c": "cream", "s": 86}, {"t": "think he was?", "c": "gold", "s": 86} ],
+      "sub": [
+        {"t": "The full case, and its limits", "c": "dim", "f": "serif", "s": 42},
+        {"t": "", "s": 12},
+        {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 54} ] }
+  ]
+}
