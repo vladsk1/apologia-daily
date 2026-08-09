@@ -3,8 +3,13 @@
   "theme": "navy",
   "fps": 30,
   "crossfade": 0.5,
+  "reviewed": {
+    "argument": "2026-08-09",
+    "orthodoxy": "2026-08-09",
+    "by": "DUAL CONSENSUS (deity-of-Christ tier): apologia-orthodoxy CLEAN (0 HERESY, 0 DRIFT) + apologia-neutrality PASS/STAMPABLE (no BREAK). Distilled from library/titles.html (certified 2026-07-17); positive-case only per the make-reel rule, with the essay's own cumulative-pattern bound retained. TWO ROUNDS. Round 1 findings, all closed: (a) NEUTRALITY BREAK - the gold+serif payoff staging sat on 'the service of all nations', inverting the written 'instead' directive in tools/retired-claims.json #pelach-only-to-God ('the clouds are the stronger half of the case; treat the service-verb as suggestive, not decisive'). Wording was clean; the TYPOGRAPHY delivered the retired inference. Gold moved to the clouds. (b) ORTHODOXY DRIFT - no oneness anchor anywhere: scene 5 made cloud-coming God's own appearing, scene 6 put Jesus 'beside God himself', scenes 7-8 put YHWH's name on him, and no frame said 'one God'; a paused scene 6 read as Watchtower Christology. Scene 9 now closes on the essay's own 'inside what Israel reserved for her God alone'. Orthodoxy confirms 'beside' (distinction) + 'inside' (unity) holds the tension without tipping modalist. (c) the voiceover cancelled the on-screen bound with 'unmistakable'. (d) the LXX claim asserted what the manuscripts READ, exposed to Fouad 266 / 8HevXII gr / 4Q120 IAO - the Watchtower argument; now scoped to what was SPOKEN when read aloud. (e) scene 8 asserted the conclusion without the warrant; Rom 10:9 restored. Round 2 findings, all closed: (f) my restored quotation had INVERTED ellipsis honesty - 'with your mouth' and 'in your heart' dropped unmarked while a visible ellipsis marked the trivial 'from the dead'; now verbatim ESV v9 with one ellipsis at the real 10:10-12 jump. (g) no 'pace' key meant ~257 wpm (crossfades OVERLAP, so the window was 53.7s not 58.2s); since the cheapest words to cut are the qualifier, the window was widened (pace 1.25 -> ~212 wpm) rather than the script trimmed again. BOTH GATES WITHDREW A SUGGESTION OF THEIR OWN on re-read: orthodoxy retracted 'God's own throne' (Ps 110:1 is 'at my right hand', so it would have been a factual overstatement) and neutrality retracted its proposed 'Specialists still argue the Aramaic' line (an unredeemed caveat in an entry tier dignifies a minority position the essay itself calls minority). NOT COVERED: pastoral sign-off, still _pending_ in docs/STATEMENT_OF_FAITH.md, and this is deity tier. FLAGGED UPWARD BY NEUTRALITY: library/titles.html:159 says the divine name was 'regularly RENDERED Kyrios' - a manuscript claim Rosel/Kahle/Jellicoe dispute. This reel's 'spoken as' is the more defensible form, so the ESSAY is on the contested side where the reel is not. Backlog row owed against the essay."
+  },
   "source": "library/titles.html (certified 2026-07-17) — Son of Man / Daniel 7 / the trial / Kyrios, plus the essay's own cumulative-pattern bound",
-  "voiceover": "Jesus' favourite name for himself was Son of Man. It appears about eighty times in the Gospels, almost always on his own lips. And it sounds humble — a human being. That is how God addresses the prophet Ezekiel, and that ordinary sense is real. But the background is Daniel chapter seven. There the prophet sees one like a son of man, coming with the clouds of heaven. He approaches the Ancient of Days, and receives a kingdom that never ends. And coming with the clouds is imagery the Hebrew Bible uses of God's own appearing. So at his trial, Jesus fuses Daniel seven with Psalm one hundred and ten, and claims to be the heavenly figure enthroned beside God. Then there is Lord. Kyrios. When the Greek Old Testament was read aloud in the synagogues, the divine name was regularly spoken as Kyrios. And Paul writes: confess that Jesus is Lord, and believe God raised him from the dead, and you will be saved — for everyone who calls on the name of the Lord will be saved. He is quoting a line about calling on YHWH. No single title settles it, and we should say so. Messiah and Son of David are royal, and human. But read together, they place Jesus inside what Israel reserved for her God alone — and that is a remarkable place for the evidence to begin.",
+  "voiceover": "Jesus' favourite name for himself was Son of Man. It appears about eighty times in the Gospels, almost always on his own lips. And it sounds humble — a human being. That is how God addresses the prophet Ezekiel, and that ordinary sense is real. But the background is Daniel chapter seven. There the prophet sees one like a son of man, coming with the clouds of heaven. He approaches the Ancient of Days, and receives a kingdom that never ends. And coming with the clouds is imagery the Hebrew Bible uses of God's own appearing. So at his trial, Jesus fuses Daniel seven with Psalm one hundred and ten, and claims to be the heavenly figure enthroned beside God. Then there is Lord. Kyrios. When the Greek Old Testament was read aloud in the synagogues, the divine name was regularly spoken as Kyrios. And Paul writes: if you confess with your mouth that Jesus is Lord, and believe in your heart that God raised him from the dead, you will be saved — for everyone who calls on the name of the Lord will be saved. He is quoting a line about calling on YHWH. No single title settles it, and we should say so. Messiah and Son of David are royal, and human. But read together, they place Jesus inside what Israel reserved for her God alone — and that is a remarkable place for the evidence to begin.",
   "scenes": [
     {
       "dur": 3.4,
@@ -102,18 +107,23 @@
           "s": 52
         },
         {
-          "t": "of heaven” — and receives",
+          "t": "of heaven”",
           "c": "gold",
           "f": "serifb",
-          "s": 50
+          "s": 52
         },
         {
-          "t": "dominion, glory, and the",
+          "t": "— and receives dominion, glory,",
           "c": "cream",
-          "s": 48
+          "s": 44
         },
         {
-          "t": "service of all nations —",
+          "t": "and the service of all nations —",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "a kingdom that never ends.",
           "c": "cream",
           "s": 48
         },
@@ -227,29 +237,34 @@
       "kicker": "AND PAUL USES IT OF JESUS",
       "lines": [
         {
-          "t": "“If you confess that Jesus",
+          "t": "“If you confess with your mouth",
           "c": "cream",
-          "s": 48
+          "s": 42
         },
         {
-          "t": "is Lord and believe God",
+          "t": "that Jesus is Lord and believe",
           "c": "cream",
-          "s": 48
+          "s": 42
         },
         {
-          "t": "raised him… you will be saved…",
+          "t": "in your heart that God raised him",
           "c": "cream",
-          "s": 44
+          "s": 42
+        },
+        {
+          "t": "from the dead, you will be saved…",
+          "c": "cream",
+          "s": 42
         },
         {
           "t": "everyone who calls on the name",
           "c": "cream",
-          "s": 44
+          "s": 42
         },
         {
           "t": "of the Lord will be saved.”",
           "c": "cream",
-          "s": 46
+          "s": 44
         },
         {
           "t": "",
@@ -316,15 +331,15 @@
         },
         {
           "t": "Not the whole case — but a",
-          "c": "dim",
+          "c": "cream",
           "f": "serif",
-          "s": 38
+          "s": 40
         },
         {
           "t": "remarkable place to begin.",
-          "c": "dim",
+          "c": "cream",
           "f": "serif",
-          "s": 38
+          "s": 40
         }
       ]
     },
@@ -361,5 +376,6 @@
         }
       ]
     }
-  ]
+  ],
+  "pace": 1.25
 }
