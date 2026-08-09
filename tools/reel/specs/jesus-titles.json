@@ -4,93 +4,362 @@
   "fps": 30,
   "crossfade": 0.5,
   "source": "library/titles.html (certified 2026-07-17) — Son of Man / Daniel 7 / the trial / Kyrios, plus the essay's own cumulative-pattern bound",
-  "voiceover": "Jesus' favourite name for himself was Son of Man. He used it about eighty times in the Gospels, almost always about himself. And to our ears it sounds humble. Son of man. A human being. That is how God addresses the prophet Ezekiel, and that ordinary sense is real. But the background is Daniel chapter seven. There the prophet sees one like a son of man, coming with the clouds of heaven. He approaches the Ancient of Days, and he receives dominion, and glory, and the service of all nations — a kingdom that never ends. And coming with the clouds is imagery the Hebrew Bible uses of God's own appearing. So at his trial, asked directly who he is, Jesus fuses Daniel seven with Psalm one hundred and ten, and claims to be the heavenly figure enthroned beside God. Then there is Lord. Kyrios. When the Greek Old Testament was read aloud in the synagogues, the divine name was spoken as Kyrios. And Paul writes: confess that Jesus is Lord, and you will be saved — for everyone who calls on the name of the Lord will be saved. He is quoting a line about calling on YHWH. No single title settles it, and we should say so. Messiah and Son of David are royal, and human. But read together, they place Jesus inside what Israel reserved for her God alone — and that is a remarkable place for the evidence to begin.",
+  "voiceover": "Jesus' favourite name for himself was Son of Man. It appears about eighty times in the Gospels, almost always on his own lips. And it sounds humble — a human being. That is how God addresses the prophet Ezekiel, and that ordinary sense is real. But the background is Daniel chapter seven. There the prophet sees one like a son of man, coming with the clouds of heaven. He approaches the Ancient of Days, and receives a kingdom that never ends. And coming with the clouds is imagery the Hebrew Bible uses of God's own appearing. So at his trial, Jesus fuses Daniel seven with Psalm one hundred and ten, and claims to be the heavenly figure enthroned beside God. Then there is Lord. Kyrios. When the Greek Old Testament was read aloud in the synagogues, the divine name was regularly spoken as Kyrios. And Paul writes: confess that Jesus is Lord, and believe God raised him from the dead, and you will be saved — for everyone who calls on the name of the Lord will be saved. He is quoting a line about calling on YHWH. No single title settles it, and we should say so. Messiah and Son of David are royal, and human. But read together, they place Jesus inside what Israel reserved for her God alone — and that is a remarkable place for the evidence to begin.",
   "scenes": [
-    { "dur": 3.4,
+    {
+      "dur": 3.4,
       "kicker": "HIS OWN FAVOURITE TITLE",
-      "big": [ {"t": "The one", "c": "cream", "s": 92}, {"t": "everyone reads", "c": "cream", "s": 82}, {"t": "backwards.", "c": "gold", "s": 96} ] },
-
-    { "dur": 5.4,
+      "big": [
+        {
+          "t": "The one",
+          "c": "cream",
+          "s": 92
+        },
+        {
+          "t": "everyone reads",
+          "c": "cream",
+          "s": 82
+        },
+        {
+          "t": "backwards.",
+          "c": "gold",
+          "s": 96
+        }
+      ]
+    },
+    {
+      "dur": 5.4,
       "kicker": "SON OF MAN",
       "lines": [
-        {"t": "Jesus' favourite name", "c": "cream", "s": 56},
-        {"t": "for himself — about eighty", "c": "cream", "s": 50},
-        {"t": "times in the Gospels,", "c": "cream", "s": 54},
-        {"t": "almost always by him.", "c": "gold", "f": "serifb", "s": 52} ] },
-
-    { "dur": 5.2,
+        {
+          "t": "Jesus' favourite name",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "for himself — about eighty",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "times in the Gospels,",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "almost always on his own lips.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ]
+    },
+    {
+      "dur": 5.2,
       "kicker": "AT FIRST, IT SOUNDS HUMBLE",
       "lines": [
-        {"t": "“Son of man” can just", "c": "cream", "s": 56},
-        {"t": "mean “a human being.”", "c": "cream", "s": 56},
-        {"t": "", "s": 16},
-        {"t": "It is how God addresses", "c": "dim", "f": "serif", "s": 44},
-        {"t": "the prophet Ezekiel.", "c": "dim", "f": "serif", "s": 44} ] },
-
-    { "dur": 6.4,
-      "kicker": "THE BACKGROUND IS DANIEL 7",
+        {
+          "t": "“Son of man” can just",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "mean “a human being.”",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "",
+          "s": 16
+        },
+        {
+          "t": "It is how God addresses",
+          "c": "dim",
+          "f": "serif",
+          "s": 44
+        },
+        {
+          "t": "the prophet Ezekiel.",
+          "c": "dim",
+          "f": "serif",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "dur": 6.4,
+      "kicker": "THE VISION IN DANIEL 7",
       "lines": [
-        {"t": "“One like a son of man”", "c": "cream", "s": 52},
-        {"t": "comes “with the clouds", "c": "gold", "f": "serifb", "s": 52},
-        {"t": "of heaven” — and receives", "c": "gold", "f": "serifb", "s": 50},
-        {"t": "dominion, glory, and the", "c": "cream", "s": 48},
-        {"t": "service of all nations —", "c": "cream", "s": 48},
-        {"t": "a kingdom that never ends.", "c": "gold", "f": "serifb", "s": 50} ] },
-
-    { "dur": 5.8,
+        {
+          "t": "“One like a son of man”",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "comes “with the clouds",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "of heaven” — and receives",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "dominion, glory, and the",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "service of all nations —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "a kingdom that never ends.",
+          "c": "cream",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 5.8,
       "kicker": "AND THAT IMAGERY IS NOT NEUTRAL",
       "lines": [
-        {"t": "Coming with the clouds", "c": "cream", "s": 54},
-        {"t": "is imagery the Hebrew Bible", "c": "cream", "s": 48},
-        {"t": "uses of God's own", "c": "gold", "f": "serifb", "s": 52},
-        {"t": "appearing.", "c": "gold", "f": "serifb", "s": 56},
-        {"t": "", "s": 14},
-        {"t": "Psalm 104:3 · Isaiah 19:1", "c": "dim", "f": "serif", "s": 40} ] },
-
-    { "dur": 6.4,
+        {
+          "t": "Coming with the clouds",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "is imagery the Hebrew Bible",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "uses of God's own",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "appearing.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "Psalm 104:3 · Isaiah 19:1",
+          "c": "dim",
+          "f": "serif",
+          "s": 40
+        }
+      ]
+    },
+    {
+      "dur": 6.4,
       "kicker": "SO AT THE TRIAL",
       "lines": [
-        {"t": "Asked directly who he is,", "c": "cream", "s": 50},
-        {"t": "Jesus fuses Daniel 7", "c": "cream", "s": 54},
-        {"t": "with Psalm 110 — claiming", "c": "cream", "s": 50},
-        {"t": "to be the heavenly figure", "c": "gold", "f": "serifb", "s": 48},
-        {"t": "enthroned beside God.", "c": "gold", "f": "serifb", "s": 50} ] },
-
-    { "dur": 6.2,
+        {
+          "t": "Asked directly who he is,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Jesus fuses Daniel 7",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "with Psalm 110 — claiming",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "to be the heavenly figure",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "enthroned beside God.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 6.2,
       "kicker": "THEN THERE IS “LORD”",
       "lines": [
-        {"t": "When the Greek Old Testament", "c": "cream", "s": 46},
-        {"t": "was read in the synagogues,", "c": "cream", "s": 48},
-        {"t": "the divine name was spoken", "c": "cream", "s": 48},
-        {"t": "as “Kyrios” — Lord.", "c": "gold", "f": "serifb", "s": 52} ] },
-
-    { "dur": 6.8,
+        {
+          "t": "When the Greek Old Testament",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "was read aloud in the synagogues,",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "the divine name was regularly",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "spoken as “Kyrios” — Lord.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 7.4,
       "kicker": "AND PAUL USES IT OF JESUS",
       "lines": [
-        {"t": "“If you confess that", "c": "cream", "s": 50},
-        {"t": "Jesus is Lord… everyone", "c": "cream", "s": 50},
-        {"t": "who calls on the name of", "c": "cream", "s": 50},
-        {"t": "the Lord will be saved.”", "c": "cream", "s": 50},
-        {"t": "", "s": 14},
-        {"t": "Romans 10:9–13 — the last line", "c": "dim", "f": "serif", "s": 38},
-        {"t": "quotes Joel 2:32, about YHWH.", "c": "gold", "f": "serifb", "s": 44} ] },
-
-    { "dur": 6.8,
+        {
+          "t": "“If you confess that Jesus",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "is Lord and believe God",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "raised him… you will be saved…",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "everyone who calls on the name",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "of the Lord will be saved.”",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Romans 10:9–13 — the last line",
+          "c": "dim",
+          "f": "serif",
+          "s": 38
+        },
+        {
+          "t": "quotes Joel 2:32, about YHWH.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "dur": 7.6,
       "kicker": "THE HONEST BOUND",
       "lines": [
-        {"t": "No single title settles it.", "c": "cream", "s": 52},
-        {"t": "“Messiah” and “Son of David”", "c": "cream", "s": 46},
-        {"t": "are royal, and human.", "c": "cream", "s": 52},
-        {"t": "", "s": 14},
-        {"t": "But read together, they place", "c": "gold", "f": "serifb", "s": 44},
-        {"t": "Jesus inside what Israel", "c": "gold", "f": "serifb", "s": 46},
-        {"t": "reserved for her God alone.", "c": "gold", "f": "serifb", "s": 46} ] },
-
-    { "dur": 4.4,
-      "big": [ {"t": "Who did he", "c": "cream", "s": 86}, {"t": "think he was?", "c": "gold", "s": 86} ],
+        {
+          "t": "No single title settles it.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "“Messiah” and “Son of David”",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "are royal, and human.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "But read together, they place",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "Jesus inside what Israel",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        },
+        {
+          "t": "reserved for her God alone.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Not the whole case — but a",
+          "c": "dim",
+          "f": "serif",
+          "s": 38
+        },
+        {
+          "t": "remarkable place to begin.",
+          "c": "dim",
+          "f": "serif",
+          "s": 38
+        }
+      ]
+    },
+    {
+      "dur": 4.4,
+      "big": [
+        {
+          "t": "Who did he",
+          "c": "cream",
+          "s": 86
+        },
+        {
+          "t": "think he was?",
+          "c": "gold",
+          "s": 86
+        }
+      ],
       "sub": [
-        {"t": "The full case, and its limits", "c": "dim", "f": "serif", "s": 42},
-        {"t": "", "s": 12},
-        {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 54} ] }
+        {
+          "t": "The full case, and its limits",
+          "c": "dim",
+          "f": "serif",
+          "s": 42
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        }
+      ]
+    }
   ]
 }
