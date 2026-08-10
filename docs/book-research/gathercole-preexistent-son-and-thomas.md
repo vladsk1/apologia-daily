@@ -138,3 +138,17 @@ row.**
    Gate: citations → argument (the "contested, not settled" framing is the whole risk) → orthodoxy.
 - **`/sources`: —** (modern copyrighted monographs).
 - **`/briefs`: —** (canon is already served by the certified essay).
+
+## ✅ Six-verdict re-test 2026-08-10
+Both rows held and are still **open + logged** in `content-backlog.md`: the **P2 Synoptic-preexistence**
+gap (`jesus_as_god_nt` / `titles` still 0 hits for preexistence / "I have come" / Gathercole) and the **P4
+Thomas** sourcing upgrade (`canon.html` still has no Goodacre / Semitic-original / Gathercole material).
+⚠ **The P2 row has a PARKED DRAFT:** a git **stash** — *"Gathercole Synoptic-preexistence prose for
+`jesus_as_god_nt.html` — UNSTAMPED, mid-pipeline, awaiting owner decision"* — holds an in-progress attempt.
+**It is local-only, NOT on GitHub**; it is the natural starting point when the owner greenlights the row,
+and its **mandatory `orthonote` + dual-consensus** requirement still governs (the angelic parallel is to
+the FORM of the saying, never the NATURE of the speaker — the Arian/JW angel-Christology trap). **Standing
+output — is the source better anywhere?** Yes, in the two logged places — this is the **one note in the
+don't-own set with genuine open improvements**. ⚠ **Coverage caveat (unchanged): NEITHER book is owned or
+read** — mapped from Gathercole's OA 2024 article + the CUP frontmatter; a page-level read still awaits
+legitimate copies.

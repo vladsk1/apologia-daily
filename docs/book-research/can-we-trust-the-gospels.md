@@ -134,3 +134,14 @@ The pre-scan's prediction held. Specifically:
   live `/api/ask` quote the argument's originator directly.
 - **`/briefs`: —** the topic is already served by the certified `names.html` / `coincidences.html` /
   `eyewitnesses.html` cluster.
+
+## ✅ Six-verdict re-test 2026-08-10
+Ledger held: `names.html` still cites Williams ch. 3 (×6); the **thalassa/limnē** observation is still
+absent from `names`/`eyewitnesses`/`coincidences` (the **P4 row is still open + logged** in
+`content-backlog.md`); Blunt's *Undesigned Coincidences* (1847) is still absent from `/sources` (the PD
+live-door opportunity stands). **Standing output — is the source better anywhere?** Only the
+geography/local-usage plank (the *limnē* fingerprint, P4); everywhere else the certified cluster already
+covers Williams's battery. ⚠ **Coverage caveat (unchanged): the book is UNOWNED and UNREAD** — a map from
+a published review + Tyndale's description + our own certified citations. The re-test confirms
+corroboration and that the one row is still open; it **cannot** surface a verdict-3 "weaker in ours" the
+way a full read would. That still awaits a legitimate print/Kindle copy.

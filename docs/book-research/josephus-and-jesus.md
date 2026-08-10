@@ -290,6 +290,20 @@ academic.oup.com/book/60034, so nothing needs buying — but **the web sandbox's
 `academic.oup.com`** (verified 2026-07-28: the agent proxy returns an explicit `connect_rejected` / 403 policy
 denial, and WebFetch 403s). Finish it from a local or web-enabled session, as with the Tyndale batch.
 
+> **⚠ UPDATE 2026-08-10 — the blocker has CHANGED; the "egress-denied" line just above is now STALE.**
+> Re-tested from a local session: **`WebFetch` now reaches `academic.oup.com`** (no 403) and **`WebSearch`
+> works**. But the appendix TEXT is still not extractable here, for three *new* reasons: (1) OUP serves the
+> chapter pages as **interface-only HTML** (the body is JS-rendered), so WebFetch returns navigation only;
+> (2) the full OA PDF (`.../book-pdf/63104459/isbn-9780192866783.pdf`) **exceeds WebFetch's 10 MB limit**;
+> (3) a direct `curl -L` of that PDF lands on a **Cloudflare "Just a moment…" bot-challenge** (a real browser
+> is required; bypassing bot-detection is out of bounds). ⭐ **What WAS confirmed via WebSearch:** Ken Olson's
+> thesis (1999 *CBQ*) is that Eusebius authored the *entire* TF with no recoverable authentic substratum (a
+> minority view), and Schmidt's App. 1 is titled *"Eusebius, His Citational Practices, and the Testimonium
+> Flavianum"* — so the rebuttal runs via Eusebius's citation habits **exactly as the `hist_jesus.html`
+> backlog row already states, which verifies that row.** **Concrete path for the next session:** read the OA
+> book in a real **browser** (the OUP reader, or `josephusandjesus.com`), or pull the OA PDF from an
+> OAPEN/DOAB mirror for local PDF reading — do NOT plan around "egress-denied," which no longer holds.
+
 **Priority when that session happens** — the appendices are not filler:
 - **App. 2 — James, *Ant.* 20.200.** The single most load-bearing item: this is the Josephus passage our content
   actually leans on (`hist_jesus.html` fn 7, `ev-s3` ×7, `ev-s2` ×4), precisely because the TF is restricted to

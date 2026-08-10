@@ -15,7 +15,7 @@
 >
 > **BOOK-SWEEP HANDOVER — 2026-08-08. ⭐ START A RESEARCH-LIBRARY SWEEP SESSION AT
 > [`docs/BOOK_SWEEP_HANDOVER.md`](docs/BOOK_SWEEP_HANDOVER.md).** The cross-check has now run on
-> **9 of the 14 `docs/book-research/` notes**; that file carries the method, the per-note status
+> **13 of the 14 `docs/book-research/` notes** (only #10 remains, and it is blocked); that file carries the method, the per-note status
 > table, what is owed, and the failures worth not repeating. Headlines: **one live change**
 > (`ev-s3.html` card 08 — the Son of Man / Daniel 7 subsection rebuilt across three tiers and
 > dual-consensus stamped, in **six gate rounds**; its stamp carries the full account) and **~30
@@ -31,7 +31,7 @@
 > now carry **"ours is better"** hazards (`consistency.html` is a generation ahead of its source;
 > `canon.html` honours denominational neutrality better than its source; `evil.html` implements a
 > guardrail more carefully than the book that states it) — **do not mine those chapters.**
-> ⭐ **2026-08-10 — books 5, 8 + 9 done.** `body-of-proof.md` was **read cover to cover and its sweep redone**:
+> ⭐ **2026-08-10 — books 5, 8, 9, 11–14 done; #7 re-attempted.** `body-of-proof.md` was **read cover to cover and its sweep redone**:
 > the heading-level catch-all row (*"Ch. 5–7 … 1 corroboration"*) was hiding real gaps → **9 improvement
 > rows** (top: the resurrection-**restraint**/Dudrey argument, P2, absent site-wide; Holy Sepulchre vs
 > Garden Tomb, P3; the covenant-cup typology gap, P3) + a BCP `/sources` candidate + 5 hazard flags — the
@@ -39,9 +39,13 @@
 > ledger was **STALE** — three of its six rows had shipped to `disciplesbelief.html` on 2026-08-05 and were
 > never flipped (the failure this file warns about); corrected. `islamic-dilemma-enrichments.md` (#9) was
 > **verified SHIPPED** — a derived Frost work-order whose 3 enrichments are all live + gated and whose ledger
-> is *not* stale; not a fresh source, so do not re-mine Frost from it. ⬜ **Still owed:** `josephus-and-jesus.md`'s
-> six appendices need a **web-enabled** session (`academic.oup.com` egress-denied here);
-> `return-of-the-god-hypothesis.md` waits on the owner's endnote photos.
+> is *not* stale; not a fresh source, so do not re-mine Frost from it. ⭐ **Books 11–14 (the don't-own set)
+> re-tested** — corroboration confirmed, no stale ledgers, the **Bauckham universalism fence re-verified
+> corpus-wide** (~22 pages; divine-identity citations only); open rows unchanged; full reads still await
+> legitimate copies. **#7's appendix blocker CHANGED** — WebFetch now reaches OUP (not egress-denied), but the
+> OA PDF is >10 MB + Cloudflare-gated, so the next session needs a real browser or an OAPEN mirror. ⬜ **The
+> only note left is `return-of-the-god-hypothesis.md` (#10), and it is BLOCKED** on the owner's endnote photos
+> — every note checkable without those photos or a browser-based OA read is now done.
 >
 > **LATEST — 2026-08-10 (b):** 🔴 **THE PASTORAL CARE PATH EXISTED IN ONE ENDPOINT OUT OF SIX. It now exists in all
 > six, is enumerated from disk, and is CI-guarded** (`lib/crisis.js`, commits `00c9502`→`2699bb0`, live on `main`).

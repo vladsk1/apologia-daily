@@ -93,3 +93,13 @@ from here — see
 
 - **`/sources`: —** (modern copyrighted monograph).
 - **`/briefs`: —** (OT historicity is already served by the certified `archaeology.html`).
+
+## ✅ Six-verdict re-test 2026-08-10
+Ledger held: the treaty-form argument + its named critic **McConville** are still live on
+`archaeology.html`; **Nuzi is still 0 hits site-wide** (the patriarchal-customs trap stays avoided);
+**Merneptah is still absent** (that improvement lives as an **article-note** row, not this one — do not
+duplicate). **Standing output:** no new improvement from this note — corroboration only; the maximalist,
+never-cite-alone, Nuzi-trap, canon-neutrality and tone guardrails all hold. ⚠ **Coverage caveat
+(unchanged): UNOWNED, UNREAD** — mapped at thesis level from `archaeology.html` + Kitchen's OA earlier work
++ publisher data; a full read of the 662-pp. volume still awaits a legitimate copy, so no verdict-3
+"weaker in ours" could be surfaced here.

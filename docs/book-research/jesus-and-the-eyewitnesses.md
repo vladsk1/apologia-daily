@@ -155,3 +155,16 @@ unreachable) are recorded so a later session does not repeat the search or, wors
   public-domain translation — the Loeb (Lake, 1926) currently cited in `eyewitnesses.html` is **not**
   clearly PD for our purposes, so verify before storing.
 - **`/briefs`: —** the topic is already served by the certified `eyewitnesses.html` / `names.html` pair.
+
+## ✅ Six-verdict re-test 2026-08-10
+Corroboration held across `names` / `eyewitnesses` (saturated). ⭐ **The universalism fence was RE-VERIFIED
+across the FULL set of pages that cite Bauckham, not just the four checked on 2026-07-26.** He appears on
+~22 library pages; on every deity/Trinity page sampled (`jesus_as_god_nt`, `shema`, `nt_trinity`,
+`trinity_jw`, `hands`, `phil2`) he is cited **only for his "Christology of divine identity" thesis** (a
+historical NT-Christology argument), **never for eschatology or universalism** (0 hits pairing him with
+universal-salvation / eschatology), and the one "see also" that names him (`eyewitnesses.html` fn) names a
+**specific historical work** ("Eyewitnesses and Critical History"). **The fence HOLDS; its "verified"
+status is now earned corpus-wide, not just on 4 pages** — this closes the one real gap in the 2026-07-26
+pass. **Standing output:** no — the strongest already-covered result in the batch; no new gap. ⚠ **Coverage
+caveat (unchanged): UNOWNED, UNREAD** (mapped from Wenham's *Themelios* review + our certified citations);
+the 2nd ed. still awaits a legitimate copy.
