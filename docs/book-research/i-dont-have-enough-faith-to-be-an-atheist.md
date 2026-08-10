@@ -22,6 +22,67 @@
 > here (Behe, Dawkins, N.T. Wright, Greenleaf, the DNA-similarity percentages) are the book's
 > renderings — re-verify each against its own source before use.
 
+## ⭐ Step Zero + six-verdict cross-check (2026-08-08)
+
+> ### 🔴 THIS NOTE HAD NO CROSS-CHECK AND NO BACKLOG ROWS — YET CH. 8 SHIPPED AN ENTIRE ESSAY.
+> **`library/miracles.html` was CREATED on 2026-07-23 from this book's ch. 8 lead**, and its stamp says
+> so in terms: *"NEW essay (Science & Faith), grounded in Geisler-Turek ch.8 lead + PD primaries (Hume
+> *Enquiry* S10 1748; Spinoza *TTP* ch.6 Elwes 1670/1883)."* The same day, **`library/bigbang.html`**
+> was enriched from the same chapter with the agnostic **Robert Jastrow** "band of theologians" close
+> (*God and the Astronomers*, 1978, p. 116). Neither is recorded here, and this note has **zero rows in
+> `docs/content-backlog.md`** — so a reader would conclude nothing had ever been executed from it.
+> This is the third instance of the stale-ledger failure in this run (after `islamic-dilemma.md` and
+> `in-defense-of-the-bible.md`), and the worst, because there was no ledger at all.
+> ⭐ **The execution itself was exemplary and is the model to copy:** the essay was grounded in
+> **public-domain primaries** (Hume, Spinoza) rather than in Geisler's retelling of them — exactly what
+> "the note is a lead, not a source" is supposed to mean in practice.
+
+**Paired essays read in full (Step Zero):** `library/kalam.html` (5,419 w — ch. 3) ·
+`library/moral.html` (3,739 w — ch. 7) · plus `library/minimalfacts.html`, `library/emptytomb.html`,
+`library/evil.html`, `library/jesus_claims.html` and `library/jesus_as_god_nt.html`, all read in full
+earlier the same day for other sweeps in this run.
+⚠ **Coverage limit:** this book touches ~14 essays, far past Step Zero's "at most about 5." The two
+full reads were spent on the chapters whose arguments are most distinctive (the cosmological and moral
+arguments); `bigbang.html`, `finetuning.html`, `originlife.html`, `cambrian.html`, `miracles.html`,
+`manuscript.html`† and `canon.html`† were checked by targeted search († = read in full earlier in this
+run, for the *In Defense of the Bible* sweep). Verdicts resting on search-only essays are PROVISIONAL.
+
+### ⭐ STANDING OUTPUT — is the source better than our essays anywhere?
+
+**No — and this is the clearest "no" of the run.** Every chapter with a live counterpart is either
+already executed or covered more carefully by us, and the book's two most distinctive chapters map to
+essays that are now substantially deeper than it. The useful output of this pass is therefore **three
+warnings, not three additions.**
+
+⚠ **And one finding runs the other way: this note contains wording our own registry would block.**
+At its ch. 13 map the note describes **Daniel 7:13–14 as "a divine, worshipped figure."** That is the
+**`pelach-only-to-God` overreach retired in `tools/retired-claims.json`** — Daniel's Aramaic *pelach*
+can denote homage to a sovereign, and Daniel 3:12 uses it of Nebuchadnezzar's gods. It was retired
+across the site on 2026-07-29 and re-fixed on `ev-s3.html` **today**. **Do not port that phrase from
+this note.** Say what the certified wording says: the weight rests on the throne-approach and the
+coming on the clouds, not on the service-word.
+
+### Verdict table
+
+| Chapter | Verdict | Note |
+|---|---|---|
+| Ch. 8 — Miracles (Hume, Spinoza) | 1 corroboration — **SHIPPED 2026-07-23** | Produced `library/miracles.html` outright, grounded in PD primaries. Also seeded the Jastrow close in `bigbang.html`. |
+| Ch. 3 — SURGE (cosmological) | 1 corroboration; **the note's cross-map is misaddressed** | The note sends ch. 3 to `kalam.html` / `cosmic.html`. But SURGE is half philosophy and half *empirical* big-bang evidence, and the empirical half (expansion, cosmic background radiation, COBE, Einstein) lives in **`library/bigbang.html`** — which is in fact where the Jastrow lead landed. `kalam.html` covers the philosophy and covers it far more deeply than the book: al-Ghazali, Philoponus, Hilbert's Hotel **with Morriston's reply**, the Grim Reaper paradox, BGV **with its limits stated**, Vilenkin's measured wording, **Guth's dissent**, and the thermodynamic line with Tolman, Aron Wall **and Carroll's counter**. |
+| Ch. 7 — Moral argument | 1 corroboration, **✅ 5 hazard — ours is far ahead** | `moral.html` is anchored on **Adams**'s *Finite and Infinite Goods* rather than Craig the popularizer, runs Euthyphro **with the third option AND Morriston's counter**, names **Wielenberg** as the strongest living objection, cites **Antony**, grounds premise 2 in Plantinga's properly-basic epistemology, and carries an `orthonote` fencing "atheists cannot be moral." The book's "Mother Teresa vs. Hitler" framing appears nowhere on the site (0 hits) and should stay that way — our Kovno-ghetto diary opening is a primary document, not a rhetorical pairing. |
+| Ch. 6 — Macroevolution | **6 non-recommendation — the standing decline, reinforced** | The note already calls this "the most scientifically sensitive area." `library/cambrian.html` carries an open backlog row on adjacent material with a 🔴🔴 fence, and `originlife.html` already covers Behe/irreducible complexity in a bounded way. **Keep to the micro/macro definitional point and the information argument; import no "evolution is false" rhetoric**, and re-verify any 2004 percentage or quotation against current literature. |
+| Ch. 13 — Who is Jesus | 1 corroboration, **⚠ note wording is unusable** | `jesus_claims.html` and `jesus_as_god_nt.html` (both read in full today) cover this far more carefully. See the *pelach* warning above — the note's own framing is a retired claim. |
+| Ch. 4 — Divine Design; Ch. 5 — First Life | 1 corroboration, **PROVISIONAL** | `finetuning.html` and `originlife.html` both carry open, higher-quality rows from the *Return of the God Hypothesis* sweep (de Duve, Crick, Polanyi, Kenyon). Those supersede anything this 2004 popular treatment offers. |
+| Ch. 9–11 — NT reliability; Ch. 14 — Jesus on the Bible | 1 corroboration | Ground covered by three books already swept in this run (Wallace/Barnett/Huffman/Bock, Habermas–Licona, Del Rosario). |
+| Ch. 12 — Resurrection | 1 corroboration | `minimalfacts.html` (read in full) carries the Licona/McCullagh criteria with proper attribution. |
+| Appendix 1 — If God, Why Evil? | 1 corroboration, **✅ 5 hazard — ours is better** | `library/evil.html` runs Mackie, Plantinga, Rowe, Wykstra's CORNEA, Hick, Marilyn McCord Adams, the Draper/Bergmann cost-of-skeptical-theism critique, a Moltmann `orthonote` against patripassianism, and explicit neutrality on providence. Deeper than an appendix. |
+| Appendix 3 — the Jesus Seminar | 1 corroboration | Covered in `burial.html`, `emptytomb.html`, `minimalfacts.html` and `ev-s2.html`. |
+| Ch. 1–2 — truth, first principles, Hume/Kant | 4 missing, **low value / no essay counterpart** | Deliberately: this is prolegomena, and it is served by the relativism `/answers/*` pages rather than by a deep dive. No row. |
+
+### Live-door status
+Nothing from this book is in `/sources` or `/briefs`. **Ch. 8 is executed and live** (see the banner).
+This pass produced **no live content change** — its output is the ledger correction above, the *pelach*
+warning, and one non-recommendation row.
+
 ## ⚖️ What this file is (and the copyright line)
 
 This is an **owned copyrighted book used as research that points to primary sources**, per
