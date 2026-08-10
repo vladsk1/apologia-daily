@@ -4,6 +4,7 @@ import { overRateLimit, inputTooLong } from '../lib/ratelimit.js';
 import { retrieveSources } from '../lib/retrieve-sources.js';
 import { retrieveBriefs } from '../lib/retrieve-briefs.js';
 import { parseBody } from '../lib/parse-body.js';
+import { isCrisis } from '../lib/crisis.js';
 
 import { applyCors } from '../lib/cors.js';
 // Build the dynamic "verified primary sources" block appended to the system
@@ -80,7 +81,9 @@ export default async function handler(req, res) {
     // If the message shows an unmistakable first-person crisis signal, force the
     // pastoral fall-through regardless of the classifier verdict. False positives
     // are harmless here (the person just gets the warm pastoral answer).
-    const crisisBackstop = /\b(kill myself|killing myself|end my life|ending my life|want to die|wanna die|don'?t want to (be alive|live)|take my (own )?life|taking my (own )?life|suicidal|commit suicide|better off (dead|without me)|no reason to live|hurt myself|harm myself|cutting myself|stop (taking|my) (my )?(meds|medication)|end it all)\b/i.test(question);
+    // The pattern itself moved to lib/crisis.js on 2026-08-10 (unchanged) so the
+    // other endpoints share it. Routing and behaviour here are identical.
+    const crisisBackstop = isCrisis(question);
 
     // ── TOPIC GUARD ──
     // Classify the question before spending tokens on a full answer.

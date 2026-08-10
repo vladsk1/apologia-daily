@@ -38,7 +38,11 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const ASK = join(ROOT, 'api', 'ask.js');
+// The pattern moved out of api/ask.js into lib/crisis.js on 2026-08-10, so all
+// four Claude-calling endpoints share one backstop. This harness follows it there.
+const CRISIS_LIB = join(ROOT, 'lib', 'crisis.js');
+// Endpoints that take free text from a user and must therefore consult the guard.
+export const GUARDED_ENDPOINTS = ['ask.js', 'tutor.js', 'debate.js', 'submit-question.js'];
 
 // ── Labeled corpus ──────────────────────────────────────────────────────────
 // expect   — the route the message SHOULD take end-to-end (checked in --live).
@@ -77,13 +81,28 @@ export const CASES = [
   { msg: 'Should babies be baptized or only believers?',      expect: 'denom',    backstop: false },
 ];
 
-// ── Layer 1: extract the real backstop regex from api/ask.js ────────────────
-export function extractBackstop(src = readFileSync(ASK, 'utf8')) {
-  const m = src.match(/const crisisBackstop\s*=\s*(\/[\s\S]*?\/[gimsuy]*)\.test\(question\)/);
-  if (!m) throw new Error('Could not find `const crisisBackstop = /.../.test(question)` in api/ask.js');
+// ── Layer 1: extract the real backstop regex from lib/crisis.js ─────────────
+export function extractBackstop(src = readFileSync(CRISIS_LIB, 'utf8')) {
+  const m = src.match(/const CRISIS_RE\s*=\s*(\/[\s\S]*?\/[gimsuy]*);/);
+  if (!m) throw new Error('Could not find `const CRISIS_RE = /.../;` in lib/crisis.js');
   const lit = m[1];
   const lastSlash = lit.lastIndexOf('/');
   return new RegExp(lit.slice(1, lastSlash), lit.slice(lastSlash + 1));
+}
+
+// ── Layer 1b: every free-text endpoint actually consults the guard ──────────
+// The regex being correct is worthless if an endpoint never calls it — which was
+// the state of tutor/debate/submit-question until 2026-08-10. Returns one row per
+// endpoint so a new one cannot be added without this failing.
+export function checkEndpointsWired() {
+  return GUARDED_ENDPOINTS.map((f) => {
+    const src = readFileSync(join(ROOT, 'api', f), 'utf8');
+    return {
+      endpoint: 'api/' + f,
+      imports: /import\s*\{[^}]*\bisCrisis\b[^}]*\}\s*from\s*['"]\.\.\/lib\/crisis\.js['"]/.test(src),
+      calls: /\bisCrisis\s*\(/.test(src),
+    };
+  });
 }
 
 // ── Classify a LIVE answer body by which route produced it ──────────────────

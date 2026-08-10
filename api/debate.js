@@ -1,5 +1,6 @@
 import { overRateLimit, inputTooLong } from '../lib/ratelimit.js';
 import { parseBody } from '../lib/parse-body.js';
+import { isCrisis, CRISIS_REPLY } from '../lib/crisis.js';
 
 import { applyCors } from '../lib/cors.js';
 export default async function handler(req, res) {
@@ -19,6 +20,20 @@ export default async function handler(req, res) {
 
     if (inputTooLong([messages, topic], 30000)) return res.status(413).json({ error: 'input_too_long' })
     if (await overRateLimit(req, 150, 'debate')) return res.status(429).json({ error: 'rate_limited' })
+
+    // ── CRISIS BACKSTOP (before any model call) ──
+    // A roleplay opponent instructed never to break character is the worst place
+    // on the site for someone to say something true about their own life. Test
+    // only the user's OWN latest turn: the opponent's prior turns and the topic
+    // string are our copy, not theirs, and matching those would fire on debates
+    // that are legitimately ABOUT suffering. Answering deterministically here
+    // means the reply cannot be argued around by whatever the persona is doing.
+    const lastUserTurn = Array.isArray(messages)
+      ? [...messages].reverse().find((m) => m && m.role === 'user')
+      : null;
+    if (lastUserTurn && isCrisis(lastUserTurn.content)) {
+      return res.status(200).json({ reply: CRISIS_REPLY, crisis: true })
+    }
 
     let systemPrompt = '';
 

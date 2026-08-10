@@ -1,5 +1,6 @@
 import { overRateLimit } from '../lib/ratelimit.js';
 import { applyCors } from '../lib/cors.js';
+import { isCrisis, CRISIS_REPLY } from '../lib/crisis.js';
 /* Question capture — the content flywheel intake.
    Visitors submit a question (from /answers/ or ask-anything); the founder gets
    an email so good questions can be drafted, run through the QA + orthodoxy
@@ -41,6 +42,19 @@ export default async function handler(req, res) {
   var notes = [];
   var when = new Date().toISOString();
 
+  // ── CRISIS BACKSTOP ──
+  // The form on answers/index.html is standalone and fire-and-forget: it shows a
+  // canned "your question has been received" and nothing else, so a cry for help
+  // used to get a thank-you and a wait. (The other two callers — ask-anything and
+  // asked-and-answered — are sidecars that log a question already answered by
+  // /api/ask, which has its own pastoral path.)
+  //
+  // We still email it: the person may be reachable, and the owner should know. But
+  // the subject line is flagged so it is not read as ordinary content-pipeline
+  // input, and the client is handed the referral to show immediately rather than
+  // the thank-you.
+  var crisis = isCrisis(question);
+
   // Email the founder so the question feeds the content pipeline.
   var TO = process.env.QUESTION_NOTIFY_TO || process.env.SIGNUP_NOTIFY_TO || 'vkiparizov@gmail.com';
   var FROM = process.env.SIGNUP_NOTIFY_FROM || 'Apologia Daily <onboarding@resend.dev>';
@@ -56,7 +70,7 @@ export default async function handler(req, res) {
         '<p style="margin:6px 0;color:#888;font-size:13px">' + when + '</p>' +
         '<p style="margin:12px 0 0;color:#555;font-size:13px">If it is a good fit, draft a short answer, run it through citations + argument + orthodoxy, add it to answers/_data.json, and regenerate.</p>' +
         '</div>';
-      var subject = '❓ New question: ' + question.slice(0, 80);
+      var subject = (crisis ? '\u26A0\uFE0F URGENT \u2014 possible crisis message: ' : '\u2753 New question: ') + question.slice(0, 80);
       var r = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: { Authorization: 'Bearer ' + RESEND, 'Content-Type': 'application/json' },
@@ -87,5 +101,6 @@ export default async function handler(req, res) {
   }
 
   // Always 200 so the browser form gets a clean success.
+  if (crisis) return res.status(200).json({ ok: true, crisis: true, message: CRISIS_REPLY, notes: notes });
   return res.status(200).json({ ok: true, notes: notes });
 }

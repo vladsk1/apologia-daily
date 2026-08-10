@@ -228,7 +228,19 @@
     if(q.length<8){ msg.style.display='block'; msg.style.color='#a23'; msg.textContent='Please type a bit more of your question.'; return; }
     var askLink=document.getElementById('ask-now-link');
     try{ askLink.href='/asked-and-answered.html?q='+encodeURIComponent(q); }catch(e){}
-    fetch('/api/submit-question',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,email:email,website:hp,source:'answers-index'})}).catch(function(){});
+    // This form is otherwise fire-and-forget, but the endpoint answers crisis:true
+    // on a message that reads as a cry for help. Show the referral instead of the
+    // thank-you and the "ask the AI" nudge — the last thing that person needs is
+    // to be pointed at an apologetics answer. See lib/crisis.js.
+    fetch('/api/submit-question',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,email:email,website:hp,source:'answers-index'})})
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if(d && d.crisis && d.message){
+          msg.style.color='#0a1628';
+          msg.style.whiteSpace='pre-line';
+          msg.textContent=d.message;
+        }
+      }).catch(function(){});
     try{ if(window.posthog) window.posthog.capture('question_submitted',{source:'answers-index',has_email:!!email}); }catch(e){}
     msg.style.display='block'; msg.style.color='#3a7d44';
     msg.innerHTML='Thank you &mdash; your question has been received. Want an answer right now? <a href="'+askLink.href+'">Ask the AI &rarr;</a>';

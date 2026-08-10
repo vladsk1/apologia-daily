@@ -1,6 +1,7 @@
 // content-review: {"argument":"2026-07-24","orthodoxy":"2026-07-24","by":"2026-07-24 FIRST-TIME gate of this live endpoint (it both answers and GRADES students on deity/Trinity/Islam content, and had never been gated/stamped). Dual-consensus: apologia-argument (3 MAJOR + 4 MINOR) + apologia-orthodoxy (3 DRIFT) + apologia-neutrality — all applied, re-gate CLEAN. Fixes: (1) NEW grader-mode block — doctrinal accuracy + logical soundness outrank; a heterodox student explanation (modalism/Arian/tritheist/adoptionist/works-salvation/denial of deity-humanity-resurrection) is capped <=3/10 and corrected in 'improvements', never listed as a 'strength'; overstated/misstated-premise explanations scored down even if fluent; JSON-only, overrides the Q&A word-count/follow-up. (2) Orthodoxy boundaries brought to api/ask.js parity: co-equal/co-eternal; modalism/Arianism/subordinationism/tritheism/adoptionism/works-salvation named; ORTHODOXY-OUTRANKS-CHARITY tiebreak (concede observation not inference; pull-quote test). (3) NEW always-on ARGUMENT-SPECIFIC ACCURACY RAILS (kalam begins-to-exist; manuscripts=preservation-not-truth; fine-tuning data-conceded/design-contested; resurrection 1 Cor 15 creed lead; morality duties-need-a-ground) + calibration (contested inferences as probabilities not proofs). (4) Islam 'genuine common ground' -> 'SHARED WORDS, NOT SHARED BELIEF' (concede titles, refuse shared-faith, name divergence + John 5:23) — false-common-ground fix; other Islam rails (tahrif, tawhid/shirk 5:116, crucifixion minority reading hedged, Islamic Dilemma) confirmed sound. Functional: grader-mode detection; max_tokens 400->700 in grader mode (was truncating JSON into the keyword mock-scorer fallback); excerpt hardened as reference-content-only (prompt-injection). OPEN (apologia-engineer lane): client-supplied excerpt is still a prompt-injection surface — one-line mitigation added, fuller fix pending. Human/pastoral sign-off still owed on the live Christology this endpoint teaches + grades."}
 import { overRateLimit, inputTooLong } from '../lib/ratelimit.js';
 import { parseBody } from '../lib/parse-body.js';
+import { isCrisis, CRISIS_REPLY } from '../lib/crisis.js';
 
 import { applyCors } from '../lib/cors.js';
 export default async function handler(req, res) {
@@ -31,6 +32,26 @@ export default async function handler(req, res) {
     // (client sends a "score it 1-10 ... respond in this exact JSON" prompt). Grader mode gets a
     // doctrinal-accuracy-first rubric + more tokens so the JSON isn't truncated into the mock fallback.
     const graderMode = /\bscore it 1-?10\b|respond in this exact json|evaluate this student explanation/i.test(String(question || ''));
+
+    // ── CRISIS BACKSTOP (before any model call) ──
+    // This endpoint backs the "ask a question about this argument" box on 72
+    // pages — including ev-m-evil.html, the problem-of-evil page, which is the
+    // likeliest place on the site for someone to type something true about their
+    // own life. It also backs parents.html, whose client wraps whatever a parent
+    // types into 'My child is N years old and asked me: "..."'; the raw text
+    // survives inside that wrapper, so testing `question` still catches it.
+    //
+    // GRADER MODE IS DELIBERATELY EXCLUDED, and this is a judgement, not an
+    // oversight. Its input is an explanation of an apologetics argument, not a
+    // message addressed to anyone — it is not a help-seeking channel. Meanwhile a
+    // false positive there is NOT harmless the way it is in Q&A: a student
+    // writing "the atheist says there is no reason to live without God" would
+    // have their graded submission replaced by a crisis referral. Every client
+    // that can render a pastoral message is a Q&A client; the grader clients
+    // JSON.parse the response. So the trade runs the other way here.
+    if (!graderMode && isCrisis(question)) {
+      return res.status(200).json({ answer: CRISIS_REPLY, crisis: true });
+    }
 
     let systemPrompt = `You are an expert Christian apologetics tutor — warm, patient, and exceptionally good at explaining complex philosophical and theological arguments in clear, accessible language. You are helping a student reading the Evidence Library on Apologia Daily.
 
