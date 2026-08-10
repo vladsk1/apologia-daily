@@ -47,7 +47,7 @@ The method is written into `CLAUDE.md` (§ *MANDATORY CROSS-CHECK STEP* and the 
 | 4 | `in-defense-of-the-bible.md` | ✅ 2026-08-08 | **Full** — 3 essays + note cover to cover; `eyewitnesses.html` named as unread |
 | 5 | `body-of-proof.md` | ✅ 2026-08-10 (**redone**) | **Full** — note read cover to cover (1,262 lines); **19 essays read in full** across two passes; the heading-level catch-all row was replaced → **9 improvement rows + a BCP `/sources` candidate + 5 hazard flags**. Only `miracles`/`appearances`/`canon` stay PROVISIONAL (search-only). |
 | 6 | `i-dont-have-enough-faith-to-be-an-atheist.md` | ✅ 2026-08-08 | **Full, after a correction** — see §4. Essays + note both now read in full |
-| 7 | `josephus-and-jesus.md` | ✅ 2026-08-08 (redone) · appendix re-attempt 2026-08-10 | **Full check, partial source.** Cross-check DONE (the one non-stale ledger). ⚠ Appendix deep-read still owed, but the **blocker CHANGED 2026-08-10**: WebFetch now reaches OUP (not egress-denied); the real blockers are OUP's JS-interface + the OA PDF >10 MB + a Cloudflare bot-challenge. Olson's thesis + App. 1's title confirmed via WebSearch → the `hist_jesus.html` row is verified. Next session: read the OA book in a real browser or via an OAPEN mirror. |
+| 7 | `josephus-and-jesus.md` | ✅ 2026-08-08 (redone) · **appendix deep-read DONE 2026-08-11** | **Full check, FULL source now.** Cross-check DONE (the one non-stale ledger). ✅ **All six appendices + the Bibliography read in full** from the OA PDF (pulled from the OAPEN mirror via a real browser; read locally with `pdftotext`). Six-verdict verdicts in the note: App. 1 (Olson/Eusebius rebuttal) + App. 2 (James/*Ant.* 20.200 + Origen) **ground** existing rows; Apps. 3–6 = Schmidt's novel/peripheral reconstruction → **non-recommendations**. All four open backlog rows **re-verified against the primary text**. **No new rows** — the deep-read grounded the three improvement rows + the steelman-gap and added no site gaps. |
 | 8 | `raised-on-the-third-day.md` | ✅ 2026-08-10 | **Full check, PARTIAL source** — cross-check redone to the six-verdict standard; **stale ledger corrected** (rows 1 / 2-essay-half / 5 had shipped to `disciplesbelief.html` on 2026-08-05 and were never flipped). Still open: Moss (row 4) + defended-"none-recanted" (row 3), both owner-accepted; the `ev-m-postresurrection` half of row 2; Licona primacy-of-Paul (row 6, refined). Source stays PARTIAL (chs. 11 + 16 only; ch. 16 reason 5 unread). |
 | 9 | `islamic-dilemma-enrichments.md` | ✅ 2026-08-10 | **Verified SHIPPED (not a fresh source).** A derived work-order of 3 Frost enrichments, all shipped + gated CLEAN 2026-08-03. Ledger re-test: all 3 live, all guardrails intact (Whittingham caution + both Garima hedges), all 3 backlog rows DONE. **Derivative of `islamic-dilemma.md` (book #1, checked 2026-08-06) — do not re-mine Frost from it.** |
 | 10 | `return-of-the-god-hypothesis.md` | 🔴 **BLOCKED** | Owner is supplying endnote photographs. ~15 factual flags need them before a scoped citations pass |
@@ -61,12 +61,13 @@ The method is written into `CLAUDE.md` (§ *MANDATORY CROSS-CHECK STEP* and the 
   covenant-cup typology gap (P3). Full account in the note's redone section.
 - ✅ **`raised-on-the-third-day.md` checked (2026-08-10)** — and its ledger was **stale**: three of its six
   rows had already shipped. Flipped. See its redone cross-check + the corrected rows in `content-backlog.md`.
-- 🟡 **`josephus-and-jesus.md` — appendix deep-read still owed, but the blocker CHANGED (2026-08-10).**
-  WebFetch now REACHES `academic.oup.com` (no longer egress-denied); the real blockers are OUP's JS-only
-  interface + the OA PDF exceeding WebFetch's 10 MB limit + a Cloudflare bot-challenge on the direct PDF.
-  WebSearch confirmed Olson's thesis and App. 1's title, verifying the existing `hist_jesus.html` backlog
-  row. **Next session: read the OA book in a real browser (OUP reader / josephusandjesus.com) or pull it
-  from an OAPEN/DOAB mirror** — do NOT plan around "egress-denied."
+- ✅ **`josephus-and-jesus.md` — appendix deep-read DONE (2026-08-11).** All six appendices + the
+  Bibliography read in full from the OA PDF (OAPEN mirror `library.oapen.org/handle/20.500.12657/109937`,
+  reached with a real local browser, read with `pdftotext`). The four open backlog rows are re-verified
+  against the primary text; the note carries the six-verdict verdicts + a primary-source catalogue. **No
+  new rows.** ⚠ **Reachability varies by environment** — a different 2026-08-11 session had OUP + every OA
+  mirror + the browser fully egress-blocked; test freshly each session rather than planning around any one
+  recorded blocker.
 - ✅ **Books 11–14 (the don't-own set) re-tested 2026-08-10** — corroboration confirmed, no stale ledgers,
   Bauckham fence re-verified corpus-wide; open rows unchanged. Full reads still await legitimate copies.
 - 🔴 **`return-of-the-god-hypothesis.md` (#10) — the only note left, and it is BLOCKED** on the owner's

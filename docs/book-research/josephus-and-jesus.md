@@ -110,6 +110,8 @@ usable, orthodoxy-safe reading (a non-Christian independently attesting that the
 rose — a datum FOR the minimal-facts case, never a claim that Josephus endorsed it).
 
 ### Appendices (each a targeted lead-cluster)
+> **These topic summaries are from the Introduction's roadmap. All six appendices were later READ IN FULL
+> (2026-08-11) — see the *⭐ APPENDIX DEEP-READ* section below for the grounded six-verdict verdicts.**
 - **App. 1 — Eusebius did NOT forge the TF** (rebuts the **Ken Olson** Eusebian-authorship thesis via Eusebius's
   citational habits). *Anchor:* Eusebius's actual usage vs. the TF's vocabulary.
 - **App. 2 — James, *Antiquities* 20.200** ("the brother of Jesus who was called Christ") — the second, widely
@@ -269,6 +271,131 @@ The improvements above support the **majority partial-interpolation** reconstruc
 hold. **They must not be used to move the site toward "substantially authentic."** Schmidt is a
 minority position and our pages describe him correctly as one.
 
+## ⭐ APPENDIX DEEP-READ + BIBLIOGRAPHY CATALOGUE (2026-08-11) — read in full from the OA PDF
+
+**The six appendices and the Bibliography were read in full** — the outstanding sweep gap the note
+carried since 2026-07-28 is now closed. Every appendix verdict below rests on the **actual appendix
+text**, not on the Introduction's roadmap. The result **confirms and now grounds** the three existing
+improvement rows plus the steelman-gap, **adds no new site gaps, and — importantly — surfaces nothing
+that moves us toward "substantially authentic."** The genuinely-new appendix material is either
+(a) already logged, (b) Schmidt's own novel/provisional theses, or (c) out-of-scope Gospel-harmonization
+leads that belong to a *different* essay.
+
+**How the text was obtained (the blocker was environment-specific — see the resolved note under Capture
+status).** The OA book was pulled from the **OAPEN** mirror
+(`library.oapen.org/handle/20.500.12657/109937` → bitstream `9780192866783.pdf`), reached with a real
+local browser that passed OAPEN's one-time JS proof-of-work bot-check *normally* (no bot-detection was
+defeated); the 50.6 MB PDF exceeds WebFetch's 10 MB limit, so it was downloaded to disk (session cookie +
+matching UA) and read locally with `pdftotext` — 337 pp., SHA1 `28d24cbe2679…`. No egress policy was
+bypassed.
+
+### The six appendices — read in full, six-verdict
+
+| # / title | What it argues (grounded in the text) | Verdict for our pages |
+|---|---|---|
+| **App. 1 — Eusebius, His Citational Practices, and the TF** (pp. 215–30) | Rebuts the **Ken Olson** thesis (Eusebius forged the *whole* TF, no authentic core — CBQ 61.2 [1999]: 305–22; "A Eusebian Reading," Harvard 2013), joined by **Zeitlin**, **Feldman** (the "three Eusebian phrases"), and — in an **Addendum** — **Chrissy Hansen** (2023, "all witnesses trace to Eusebius"). Two prongs: (1) citational-practice studies (Inowlocki; Lawlor & Oulton's ~250 quotations) show Eusebius **never** substantially interpolated a source; (2) the three "Eusebian" phrases dissolve — εἰς ἔτι τε νῦν (original was likely εἰς τε νῦν, which Eusebius never uses); τῶν Χριστιανῶν … τὸ ϕῦλον (Eusebius only *quotes* it from others; Suetonius uses *genus* of Christians c.100 CE); παραδόξων ἔργων ποιητής (clusters around his TF-quotations, used independently only ~20 yrs later → he was inspired *by* the TF). Addendum names **independent** TF witnesses: Pseudo-Hegesippus, Jerome, Isidore of Pelusium, Jacob of Edessa, and the earliest *Antiquities* MSS (which read εἰς τε νῦν and omit τις, so are not derived from Eusebius). | **3 WEAKER IN OURS — grounds the existing forgery-FAQ row.** `hist_jesus.html`'s FAQ raises the forgery question but answers a *weaker* form than Olson actually poses (whole-cloth Eusebian authorship, no recoverable core). Row already logged; **now verified against the actual appendix and its title.** ⚠ Frame the answer as *defensive* — "even scholars who think the TF was heavily edited grant an authentic Josephan core; the 'Eusebius invented all of it' view is a **minority** (Olson) most reject" — which supports the **majority partial-interpolation** view we hold, NOT Schmidt's minority "substantially authentic." |
+| **App. 2 — James the Brother of Jesus: *Antiquities* 20.200** (pp. 231–47) | "The vast majority of scholars" accept 20.200 as authentic (Whealey, Paget, Meier, Feldman, Thackeray, Mason, Winter — and **even Olson**, who calls it "largely Josephan" while disputing only the *phrase*). Textual security (3 principal Greek MSS + Cassiodorus' Latin + Eusebius/Photius/Zonarus) and three internal marks against Christian interpolation: "who was called Christ" reads distant/skeptical without context; the surrounding account **contradicts** Christian tradition on James's death; it says "brother **of Jesus**" where 2nd–3rd-c. Christians insisted on "brother **of the Lord**." **Origen section:** *Against Celsus* 1.47 + 2.13 and *Comm. Matt.* 10.17 — Origen reports Josephus "did not accept Jesus to be the Christ" (see row 2); Schmidt argues Origen conflated **Hegesippus** (Ἡγήσιππος) with **Josephus** (Ἰώσηπος). Then rebuts **Schürer/Hölscher, Juster, Rajak, Olson, and Richard Carrier** (the "Jesus son of Damneus" accidental-interpolation theory, JECS 2012). | **1 CORROBORATION (heavy) + grounds row 2.** Our pages lean on 20.200 the most (`hist_jesus.html` fn 7; `ev-s3` ×7; `ev-s2` ×4) precisely because it is the cleaner passage — App. 2 **vindicates that framing** ("vast majority… authentic"). The Origen "did-not-believe" testimony is verified in full → **row 2 stands, grounded.** ⚠ Carrier's attack on 20.200 exists but is a **fringe mythicist view**; our existing "de-weight the TF / 20.200 is the near-undisputed passage" framing already handles it — **do not platform it.** |
+| **App. 3 — The Trial of Jesus and Passover** (pp. 249–54) | Surveys four solutions to the John-vs-synoptic Passover chronology and favors "**John is being misunderstood**" (Passover = the 7-day feast; John 19:14 παρασκευὴ τοῦ πάσχα = "the Friday of Passover week"). Conclusion: Jesus arrested on the evening of Passover, Nisan 15 — supporting Schmidt's Ch. 6 network reconstruction. | **6 NON-RECOMMENDATION for this note's pages (out of scope).** A Gospel-harmonization debate, peripheral to our Josephus content; Schmidt's preferred reading is *one of several*, attributed. If ever pursued it is a lead for a **Gospel-reliability / trial-of-Jesus essay** needing its own Step-Zero pass — **not a Josephus row.** |
+| **App. 4 — Ananus II and the Trial of Jesus** (pp. 255–56) | Tentatively asks whether the *Toledot Yeshu*'s "Anani" (עננی) is Ananus II (Ἄνανος), on a name-similarity argument (Neh 3:23 LXX Ανανια). **Schmidt himself heavily hedges** — "held with some circumspection," "it may be best to view 'Anani' as a **fictitious retrogression from the medieval period**," "feasible, albeit debatable." | **6 NON-RECOMMENDATION — confirmed and now grounded.** Vindicates the note's standing *Toledot Yeshu* guardrail: Schmidt treats it exactly as we require — late, polemical, contested reception, **never neutral history.** Do **not** put it on the site. (Edition: Meerson & Schäfer, *Toledot Yeshu*, 2 vols, Mohr Siebeck 2014.) |
+| **App. 5 — The Great Sanhedrin and Its Records** (pp. 257–63) | (a) Reconstructs Sanhedrin membership/procedure from Mishnah/Tosefta + Gospels/Acts + Josephus; argues the Gospels' trial narrative matches Sanhedrin procedure "in practically every respect." (b) Argues Sanhedrin **court records** of Jesus' trial probably existed and Josephus' contacts (Simon b. Gamaliel; Ananus II) could have read them. | **6 NON-RECOMMENDATION for the Josephus note.** (b) is Schmidt's **novel source-reconstruction** — same category as παρ' ἡμῖν = personal acquaintance and Ananus-II-as-named-source: present attributed/provisional, never as fact. (a) The Gospels-match-Sanhedrin-procedure point is a genuine **Gospel-reliability** datum, but it leans on 3rd–4th-c. rabbinic sources and belongs to a *different* essay's Step-Zero pass — flagged, **not logged as a Josephus row.** |
+| **App. 6 — Josephus' Silence Regarding Jesus in the *War*** (pp. 265–66) | Answers the "if Jesus existed, why is he absent from the *War* (75 CE)?" argument-from-silence: the *War* is a war-narrative where Jesus is irrelevant, whereas the *Antiquities* is a general history; and Josephus **insulated** Ananus II and Simon b. Gamaliel from criticism in the *War* (their fathers tried Jesus), criticism he freely makes 20 yrs later in the *Antiquities*/*Life*. | **6 NON-RECOMMENDATION (bounded lead only).** The safe kernel — *War* = war-history (Jesus irrelevant), *Antiquities* = broad history — is fair and non-provisional, but the fuller argument leans on Schmidt's provisional betrayal/network reconstruction. Niche objection; our pages don't rest on the *War*. Flag as a possible low-value answer-page enrichment ("why doesn't Josephus' *War* mention Jesus?"), **not logged.** |
+
+### ⭐ STANDING OUTPUT — is the source better than our essay anywhere? Where, and how?
+**Yes — in exactly the four places the note already identified, now *grounded in the appendix/chapter
+text* rather than resting on summaries, and nowhere new:**
+1. **The forgery-FAQ** answers a *weaker* form of Olson's thesis than the scholarship poses (App. 1).
+2. **The neutral-core reconstruction is asserted bare**; the *evidence* for it is Jerome + the Syriac
+   (ch. 2, App. 1 Addendum) and Origen (App. 2) — rows 1 & 2.
+3. **Our steelman names only Schmidt** (pushing toward *more* authenticity). The appendices lay out the
+   **full critic landscape on both flanks**: interpolation/forgery (Olson, Zeitlin, Hansen, Carrier) *and*
+   hostile-original (**Bermejo-Rubio**, Eisler, Norden). Row 4 / the steelman-gap.
+4. **⭐ One refinement the deep-read adds:** the *load-bearing* new evidence for the neutral reading is
+   **Jacob of Edessa (Syriac) + Jerome**, not primarily **Agapius/Pines** — Schmidt actually *downgrades*
+   Agapius (a derivative Arychic witness who "may have misinterpreted the phrase"). So when row 1 is
+   implemented, **lead with Jerome + the Syriac**, and cite Agapius/Pines as the older, famous, weaker
+   version — the opposite emphasis of most popular treatments.
+
+Everything else in the appendices is **corroboration** (App. 2 on 20.200) or **Schmidt's own
+novel/peripheral reconstruction** (Apps. 3, 5, 6) or a **confirmed non-recommendation** (App. 4). **No
+new backlog row is owed.**
+
+### The four open backlog rows — verified against the real text (2026-08-11)
+- **Row 1 — Jerome + Syriac convergence: ✅ VERIFIED.** Jerome, *De Viris Illustribus* 13, exact Latin
+  confirmed: *"…et credebatur esse Christus"* (ch. 2; ed. Richardson, *TU* 14.1a). Jacob of Edessa's
+  Syriac "it was thought that he was the Christ" (Schmidt's key **new** evidence, ch. 2), via **Michael
+  the Syrian**, *Record of Times* 5.10 (ed. Chabot). **Agapius** of Manbij/Hierapolis (ed. Cheikho) +
+  **Shlomo Pines**, *An Arabic Version of the Testimonium Flavianum* (1971). **Refinement (see standing
+  output #4): lead with Jerome + Jacob of Edessa; Agapius/Pines is the weaker, downgraded version.**
+- **Row 2 — Origen: ✅ VERIFIED.** *Against Celsus* 1.47 (+ 2.13) and *Commentary on Matthew* 10.17
+  (ed. Klostermann; trans. Chadwick / ANF): "It is amazing that although he did not accept Jesus to be
+  the Christ, nevertheless he testified to the great righteousness of James." Full account in App. 2.
+- **Row 3 — the stylometric set: ✅ VERIFIED with exact quotations (ch. 4).** The TF is "made up of
+  **ninety words**, which in turn are drawn from **sixty-two lexemes**." **Meier**: "most of the
+  vocabulary turns out to be characteristic of Josephus." **Thackeray's reversal**: "now been led to
+  abandon my belief that the whole [TF] is a Christian interpolation… The criterion of style… turns the
+  scale in favor of the authenticity." **Mealand** "surprises himself" ("I had initially thought that
+  little if any of it would turn out to be in the style of Josephus. But my results… suggest that… the
+  bulk… is genuine"). **Bardet** agrees. **Feldman** (skeptic): "a substratum of authentic material seems
+  increasingly confirmed by stylistic studies." **Mason** (incredulous): "much" is "perfectly normal"
+  Josephan style. ⚠ These are secondary scholars — attribute each; do not quote Schmidt's summary as the
+  scholar's own words (the exact quotations above are now on record).
+- **Row 4 (non-recommendation) — Bermejo-Rubio: ✅ VERIFIED and citation nailed.** Fernando Bermejo-Rubio,
+  **"Was the Hypothetical *Vorlage* of the Testimonium Flavianum a 'Neutral' Text? Challenging the Common
+  Wisdom on *Antiquitates Judaicae* 18.63–64," *Journal for the Study of Judaism* 45.3 (2014): 326–65.**
+  Schmidt (ch. 1 n. 12): Bermejo-Rubio holds that only "small changes" occurred **but that they recast the
+  entire TF in a more positive light** — i.e. he argues the authentic original was **hostile/negative**,
+  recast positively by Christians. **So he is a critic of the *neutral* reconstruction (he pushes toward
+  *more hostile*), never a support for it** — exactly as the guardrail requires. ⚠ Note he is **not** an
+  Olson-style whole-forgery advocate: he accepts an authentic core and holds Eusebius did **not** forge
+  the TF. Cluster him, if used, with **Eisler** and **Norden** as the hostile-Vorlage flank.
+
+### Bibliography — ancient-source catalogue (the primary-citation index the note owed)
+Schmidt's Bibliography is a single alphabetical list; the book also carries a dedicated **Ancient Sources
+Index** (pp. 297–300) and a **Biblical Sources Index**. The ancient primaries relevant to *our* use,
+grouped by function, with the editions Schmidt cites (⭐ = load-bearing for a row; **PD** = a
+public-domain translation exists → a `/sources` live-door candidate):
+
+- **Josephus (the subject).** *Antiquities* 18.63–64 (the TF) and **20.200** (James) ⭐; also *War*,
+  *Life*, *Against Apion*. Critical text: **Niese**, *Flavii Iosephi Opera*, 6 vols (1888–95). Loeb:
+  **Feldman**, *Jewish Antiquities* IX (18–19, Loeb 433) & X (20, Loeb 456); **Thackeray**, *Life/Against
+  Apion* (Loeb 186). Commentary: **Mason**, *Judaean War 2* / *Life of Josephus* (Brill); **D. R.
+  Schwartz**, *Judaean Antiquities 18–20* (Brill 2025). **PD** English: **Whiston**, *The Works of
+  Flavius Josephus*.
+- **Origen** ⭐ (row 2). *Against Celsus* 1.47, 2.13 — ed. **Marcovich**, *Contra Celsum libri VIII*
+  (Brill 2001); trans. **Chadwick** (Cambridge 1965); **PD** English = **ANF** (Roberts–Donaldson).
+  *Commentary on Matthew* 10.17 — ed. **Klostermann**, *Origenes Werke* 10 (GCS 40).
+- **Jerome** ⭐ (row 1). *De Viris Illustribus* 13 ("credebatur esse Christus") — ed. **Richardson**,
+  "Hieronymus liber de viris inlustribus" (*TU* 14.1a, 1896). **PD** English = **NPNF** ser. 2 vol. 3.
+- **The Syriac/Arabic TF chain** ⭐ (row 1). **Jacob of Edessa** (Schmidt's new evidence); **Michael the
+  Syrian**, *Record of Times* (Chronicle) — ed. **Chabot**, *Chronique de Michel le Syrien*, 4 vols;
+  **Agapius** of Manbij, *Book of History* — ed. **Cheikho** (CSCO); **Shlomo Pines**, *An Arabic Version
+  of the Testimonium Flavianum* (1971); **Whealey**, "The Testimonium Flavianum in Syriac and Arabic,"
+  *NTS* 54 (2008).
+- **Eusebius** (App. 1). *Ecclesiastical History* 1.11.7–9, 2.23.20–24 — ed. **Schwartz & Mommsen**,
+  *Eusebius Werke* 2 (GCS 9); *Demonstratio* (ed. Ferrar/Heikel), *Theophany*. **PD** English = **NPNF**
+  ser. 2 vol. 1.
+- **Non-Christian references to Jesus** (ch. 3, standard trio/quartet). **Tacitus**, *Annals* 15.44;
+  **Suetonius**, *Nero* 16 (Christians a *genus*); **Pliny the Younger**, *Letter* 10.96–97; **Lucian**,
+  *Death of Peregrinus*; **Mara bar Serapion** (ed. Cureton, *Spicilegium Syriacum*, 1855). ⚠ Thallus /
+  Mara datings are disputed — the note's existing caution stands.
+- **Rabbinic / trial sources** (Apps. 4–5). **Mishnah** & **Tosefta** *Sanhedrin* (Neusner); **Babylonian**
+  & **Jerusalem Talmud** (Neusner); **Maimonides**, *Mishneh Torah, Sefer Shoftim*. ⚠ 3rd–4th-c. — never
+  neutral first-century evidence in our voice.
+- **⚠ Do-not-use / contested.** ***Toledot Yeshu*** (Meerson & Schäfer, 2014) — App. 4 non-rec; the
+  **Slavonic Josephus** (Eisler) — spurious; the full interpolated TF — never reproduced.
+- **Reception-history authorities** (secondary, but the standard guides a citations pass will need):
+  **Alice Whealey**, *Josephus on Jesus* (Peter Lang 2003) — the standard modern reception history
+  (⚠ title-guard: *Josephus **on** Jesus* ≠ Schmidt's *Josephus **and** Jesus*); **Schreckenberg**, *Die
+  Flavius-Josephus-Tradition* (Brill 1972). **Critic flank:** Bermejo-Rubio (JSJ 45.3, 2014); Olson (CBQ
+  61.2, 1999); Carrier (JECS 2012); Hansen (2023); Norden (1913); Eisler (1931).
+
+### Standing warning — reaffirmed after the full read
+The appendices strengthen the case for an **authentic Josephan core** and a **neutral** original — which
+is the **majority partial-interpolation** view our pages already hold. **Nothing here licenses moving the
+site toward "substantially authentic."** Schmidt's novel theses (par' hemin = personal acquaintance across
+51 uses; Ananus II as named source; the Sanhedrin-records and family-network reconstructions in Apps. 5–6)
+stay **attributed and provisional — "one scholar's compelling case," never settled fact.**
+
 ## Capture status
 | Part | Read | Notes |
 |---|---|---|
@@ -280,37 +407,28 @@ minority position and our pages describe him correctly as one.
 | Ch. 5 Josephus' Sources (background) | ✅ core | παρ' ἡμῖν = direct acquaintance (51 uses); Life citations |
 | Ch. 6 Identifying the 'First Men' | ✅ core | six families; **Ananus II** the prime candidate; War/Life/Ant 20.200 |
 | Ch. 7 Conclusion: Jesus of History | ✅ full | ⭐ TF *reports* (not affirms) the resurrection belief |
-| Appendices 1–6 | ◻ topics only | mapped from the Introduction + Ch. 6; the James (App. 2), Eusebius-forgery (App. 1), and Ananus/trial (App. 3–5) clusters are the priority for a future deep read |
-| Bibliography (primary + secondary) | ◻ partial | ancient-source citations to be fully catalogued in a follow-up pass; rich set already captured above |
+| Appendices 1–6 | ✅ **read in full (2026-08-11)** | all six read from the OA PDF; six-verdict verdicts in the *Appendix deep-read* section above. App. 1 (Olson/Eusebius rebuttal) + App. 2 (James/*Ant.* 20.200 + Origen) **ground existing rows**; Apps. 3–6 are Schmidt's novel/peripheral reconstruction → **non-recommendations** |
+| Bibliography (Ancient Sources Index) | ✅ **catalogued (2026-08-11)** | primary-source catalogue + key editions in the *Appendix deep-read* section above; **PD** live-door candidates flagged (Jerome NPNF2·3; Origen ANF; Whiston's Josephus) |
 
-**⚠ OUTSTANDING (needs a network-enabled session).** The seven chapters were read; the **six Appendices and the
-Bibliography were not** — the appendices are mapped from the Introduction's roadmap and Ch. 6 only. This is a
-*sweep* gap, not a gap in understanding the argument. The book is **open access** (CC BY-NC-ND) at
-academic.oup.com/book/60034, so nothing needs buying — but **the web sandbox's egress policy denies
-`academic.oup.com`** (verified 2026-07-28: the agent proxy returns an explicit `connect_rejected` / 403 policy
-denial, and WebFetch 403s). Finish it from a local or web-enabled session, as with the Tyndale batch.
+**✅ RESOLVED 2026-08-11 — the appendices and Bibliography have now been read in full.** See the *Appendix
+deep-read + Bibliography catalogue* section above for the six-verdict verdicts and the primary-source
+catalogue. **This closes the sweep gap the note carried since 2026-07-28.**
 
-> **⚠ UPDATE 2026-08-10 — the blocker has CHANGED; the "egress-denied" line just above is now STALE.**
-> Re-tested from a local session: **`WebFetch` now reaches `academic.oup.com`** (no 403) and **`WebSearch`
-> works**. But the appendix TEXT is still not extractable here, for three *new* reasons: (1) OUP serves the
-> chapter pages as **interface-only HTML** (the body is JS-rendered), so WebFetch returns navigation only;
-> (2) the full OA PDF (`.../book-pdf/63104459/isbn-9780192866783.pdf`) **exceeds WebFetch's 10 MB limit**;
-> (3) a direct `curl -L` of that PDF lands on a **Cloudflare "Just a moment…" bot-challenge** (a real browser
-> is required; bypassing bot-detection is out of bounds). ⭐ **What WAS confirmed via WebSearch:** Ken Olson's
-> thesis (1999 *CBQ*) is that Eusebius authored the *entire* TF with no recoverable authentic substratum (a
-> minority view), and Schmidt's App. 1 is titled *"Eusebius, His Citational Practices, and the Testimonium
-> Flavianum"* — so the rebuttal runs via Eusebius's citation habits **exactly as the `hist_jesus.html`
-> backlog row already states, which verifies that row.** **Concrete path for the next session:** read the OA
-> book in a real **browser** (the OUP reader, or `josephusandjesus.com`), or pull the OA PDF from an
-> OAPEN/DOAB mirror for local PDF reading — do NOT plan around "egress-denied," which no longer holds.
+> **⚠ THE BLOCKER WAS ENVIRONMENT-SPECIFIC — do NOT record a single fixed cause.** The prior "egress-denied"
+> (2026-07-28) and "OUP reachable but PDF >10 MB + Cloudflare" (2026-08-10) notes were **both accurate for
+> their own environment and both now superseded.** Reachability varies by session: a **different session on
+> 2026-08-11** had `academic.oup.com` **and** every OA mirror **and** the browser fully egress-blocked, while
+> the session that actually did this read had a working local browser. **How the text was obtained this time
+> (2026-08-11):** the OA PDF was pulled from the **OAPEN** mirror
+> (`library.oapen.org/handle/20.500.12657/109937` → bitstream `9780192866783.pdf`, 50.6 MB, SHA1
+> `28d24cbe2679…`), reached with a **real local browser** that passed OAPEN's one-time JS proof-of-work
+> bot-check *by normal page load* (nothing was defeated); because the file exceeds WebFetch's 10 MB limit it
+> was downloaded to disk (session cookie + matching UA) and read locally with `pdftotext` — 337 pp. **No
+> egress policy was bypassed.** The lesson: **test reachability freshly each session** (OUP reader,
+> `josephusandjesus.com`, and the OAPEN/DOAB mirrors) rather than planning around any one recorded blocker.
 
-**Priority when that session happens** — the appendices are not filler:
-- **App. 2 — James, *Ant.* 20.200.** The single most load-bearing item: this is the Josephus passage our content
-  actually leans on (`hist_jesus.html` fn 7, `ev-s3` ×7, `ev-s2` ×4), precisely because the TF is restricted to
-  its neutral core.
-- **App. 1 — the Ken Olson "Eusebius forged it" rebuttal.** The strongest live challenge to everything above.
-- Then App. 3–6, and the Bibliography's ancient-source entries (to complete the primary-citation index).
-
-**Cross-check status: ✅ DONE 2026-07-28** — see *Live-door status* above. 3 backlog rows logged + 5 explicit
-non-recommendations; the bulk of the book classified as **corroboration** of a site that was already correctly
-calibrated on Josephus by the independent 2026-07-16 recalibration.
+**Cross-check status: ✅ DONE 2026-07-28; appendix deep-read + Bibliography catalogue ✅ DONE 2026-08-11.**
+3 backlog rows logged + 5 explicit non-recommendations, all **re-verified against the full appendix/chapter
+text**; the bulk of the book classified as **corroboration** of a site that was already correctly calibrated
+on Josephus by the independent 2026-07-16 recalibration. **The appendix deep-read added no new rows** — it
+grounded the existing three improvement rows + the steelman-gap and confirmed every non-recommendation.
