@@ -47,6 +47,33 @@
 > only note left is `return-of-the-god-hypothesis.md` (#10), and it is BLOCKED** on the owner's endnote photos
 > — every note checkable without those photos or a browser-based OA read is now done.
 >
+> **LATEST — 2026-08-10 (c):** **Confirmation pass on `api/debate.js` + `api/feedback.js` — the pass the 08-10 (b)
+> stamps said was owed. Both files now carry BOTH lenses' dates; live on `main` (`b3f4d4c`).** `debate.js` came back
+> **CLEAN from both**, and ⭐ **both noted the same reason independently: the rebuilt Muslim persona — the largest piece
+> of new prose in either file — survived because it was PORTED verbatim from `library/islam-tawhid.html`, not authored.**
+> `feedback.js` took three more rounds. ⚠⚠ **THE LESSON, AND IT IS NEW: A FIX APPLIED FOR ONE LENS REINSTATED THE OTHER
+> LENS'S EARLIER BREAK, IN STRONGER FORM.** Orthodoxy noted that `Do NOT mark down "virtually all" where it is ACCURATE`
+> lets Haiku judge accuracy for itself, so I closed it with *"specifically and only these:"* — a closed list of four
+> claims that **excluded the crucifixion and the disciples' sincere belief the same paragraph protects two sentences
+> earlier**. A model resolving that contradiction takes the narrower clause, so the rubric could mark a believer down
+> for saying *"virtually all scholars accept Jesus was crucified"* — which `library/minimalfacts.html` calls nearly
+> universally granted. **Neither lens alone would have caught it; it exists only in the seam between them.**
+> ⭐ **SECOND LESSON: A GATE OVERTURNED A JUDGEMENT CALL OF MINE AND WAS RIGHT.** I declined to re-flow a 450-word
+> paragraph, reasoning that re-flowing certified text is how I had just broken a parenthesis. Neutrality: *"right
+> principle, wrong result for this one sentence — the density of that paragraph is CAUSALLY what produced the delimiter
+> collision."* Nesting the tier carve-out inside the mark-down enumeration under a shared semicolon meant two **true**
+> statements parsed as items to penalise. **"Ship the words right and the shape uneven" cost two BREAKs.**
+> ⭐ **THIRD: THE RECURRING SHAPE ALL SESSION WAS FIX-PROPAGATION — a clause landing in 2 of 3 modes.** It happened four
+> separate times here, and *once because my own verification rationale was half-right*: I wrote that journal correctly
+> lacks the scoring carve-out since it is not scored — true of the carve-out, **false of the tier distinction**, which is
+> not a scoring instruction at all but a statement about where the field stands, and which governs what goes into a
+> script a believer says aloud. **Verify by capturing the live prompt per branch, never by re-reading the edit.**
+> ⚠ **STILL OWED:** neutrality's verification of the final two BREAK fixes was **cut short by a session token limit and
+> never returned**, and orthodoxy's certification predates the same reorder — so **neither lens has read the final
+> `feedback.js`**. Deployed anyway because holding it left strictly worse defects live; the stamp records this in full.
+> ⚠ **`tools/check-retired-claims.mjs` scans only `.html` and `.json` (line 89), so the registry has ZERO CI coverage
+> over the live system prompts** — both lenses flagged it; the prompt rails are the only enforcement.
+>
 > **LATEST — 2026-08-10 (b):** 🔴 **THE PASTORAL CARE PATH EXISTED IN ONE ENDPOINT OUT OF SIX. It now exists in all
 > six, is enumerated from disk, and is CI-guarded** (`lib/crisis.js`, commits `00c9502`→`2699bb0`, live on `main`).
 > ⭐ **The finding that generalises: `CLAUDE.md` has said since the pastoral exception was written that a cry for help
