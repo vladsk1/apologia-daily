@@ -45,7 +45,13 @@ const CONTENT_PATTERNS = [
   /^ev-m-.+\.html$/,                       // Evidence Library mastery pages (all 67, gated 2026-07-29)
   /^worldviews\.html$/,                    // worldviews cards (Islam Case tier etc.)
   /^tools\/reel\/specs\/.+\.json$/,        // short-form reel scripts
-  /^api\/ask\.js$/,                        // the live "Ask Anything" AI system prompt
+  /^api\/(ask|debate|feedback|tutor|devotional)\.js$/,  // live AI system prompts: Ask, the Debate
+                                           // personas, debate/conversation scoring + coaching,
+                                           // the Evidence Library tutor + grader, and the
+                                           // devotional reflection prompt. Added 2026-08-10:
+                                           // all five hold doctrinal instructions and only
+                                           // ask.js was ever gated.
+  /^lib\/crisis\.js$/,                     // CRISIS_REPLY — served verbatim to someone in crisis
 ];
 
 const isContent = (p) => CONTENT_PATTERNS.some((re) => re.test(p));

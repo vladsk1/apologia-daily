@@ -7,7 +7,7 @@
  * the actual state of the site until 2026-08-10: the pattern lived inline in
  * api/ask.js and FIVE other free-text endpoints had no crisis path at all —
  * /api/tutor (the ask box on library/*.html and the Explain It Back grader on all
- * 63 ev-m-*.html pages), /api/debate (personas told never to break character),
+ * 67 ev-m-*.html pages), /api/debate (personas told never to break character),
  * /api/devotional (a reflection box whose job is to ask a warm follow-up),
  * /api/feedback (journal coaching + the debate transcript), and
  * /api/submit-question (a form that answered a cry for help with a thank-you).
@@ -80,13 +80,33 @@ test('the guard runs before the key check, the rate limit and the model call', (
       firstIdx(body, /\.(some|every|filter|map)\s*\(\s*(isCrisis|anyCrisis)\s*\)/)
     );
     assert.ok(Number.isFinite(guard), `${r.endpoint}: no crisis call site found`);
+    // ⚠ A CALL SITE IS NOT A RETURN. api/ask.js computed `const crisisBackstop =
+    // isCrisis(question)` first and then fell through to a bare 500 and a bare
+    // 429 anyway, because the flag was only consumed much later by the classifier
+    // fall-through — and an offset-only assertion PASSED it. That is false
+    // assurance inside the file written to prevent false assurance. Require the
+    // endpoint to actually answer with CRISIS_REPLY, and require that answer to
+    // precede the key check, the rate limit and the model call.
+    const reply = firstIdx(body, /CRISIS_REPLY/);
+    assert.ok(Number.isFinite(reply), `${r.endpoint}: never returns CRISIS_REPLY`);
+    // Measure against the FAILURE RETURNS, not against the variable reads. The
+    // reply legitimately sits inside the `if (!apiKey)` branch on api/ask.js —
+    // there it IS the answer to the failed key check. What must never precede it
+    // is a bare error response or a model call.
     for (const [label, re] of [
       ['the model call', /api\.anthropic\.com/],
-      ['the rate limit', /overRateLimit\s*\(/],
-      ['the API-key check', /const apiKey\s*=/],
+      ['the bare 500 for a missing key', /res\.status\(500\)\.json\(\{\s*error:\s*'API key not configured'/],
+      ['the bare 429 for rate limiting', /res\.status\(429\)\.json/],
     ]) {
       const at = firstIdx(body, re);
+      if (!Number.isFinite(at)) continue;   // endpoint has no such branch
       assert.ok(guard < at, `${r.endpoint}: crisis guard runs AFTER ${label}`);
+      assert.ok(reply < at, `${r.endpoint}: crisis REPLY comes after ${label} — a flag set early is not a guard`);
+    }
+    // And the guard itself must still precede the rate-limit decrement.
+    const rl = firstIdx(body, /overRateLimit\s*\(/);
+    if (Number.isFinite(rl)) {
+      assert.ok(guard < rl, `${r.endpoint}: crisis guard runs AFTER the rate-limit decrement`);
     }
   }
 });

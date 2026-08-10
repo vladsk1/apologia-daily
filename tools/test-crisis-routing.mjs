@@ -39,7 +39,7 @@ import { dirname, join } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 // The pattern moved out of api/ask.js into lib/crisis.js on 2026-08-10, so all
-// four Claude-calling endpoints share one backstop. This harness follows it there.
+// six free-text endpoints share one backstop. This harness follows it there.
 const CRISIS_LIB = join(ROOT, 'lib', 'crisis.js');
 const API_DIR = join(ROOT, 'api');
 
@@ -217,14 +217,14 @@ if (isMain) {
     const failed = results.filter((r) => !r.ok);
     if (asJson) { console.log(JSON.stringify({ mode: 'offline', results }, null, 2)); }
     else {
-      console.log('CRISIS-ROUTING — offline (deterministic backstop vs api/ask.js source)\n');
+      console.log('CRISIS-ROUTING — offline (deterministic backstop vs lib/crisis.js source)\n');
       for (const r of results) {
         const mark = r.ok ? '✓' : '✗';
         const exp = r.backstop ? 'backstop SHOULD catch' : 'backstop should NOT catch';
         console.log(`  ${mark} [${r.hit ? 'match' : 'no-match'}] ${exp} — "${r.msg}"`);
       }
       console.log(`\n${failed.length ? '⛔' : '✓'} ${results.length - failed.length}/${results.length} passed (backstop layer).`);
-      if (failed.length) console.log('  A failure means the deployed crisisBackstop regex no longer matches its labeled corpus.');
+      if (failed.length) console.log('  A failure means the deployed crisis regex no longer matches its labeled corpus.');
       console.log('\nNote: offline validates the DETERMINISTIC backstop only. Run --live to');
       console.log('exercise the Haiku PASTORAL classifier end-to-end (abuse/harm-to-others cases).');
     }

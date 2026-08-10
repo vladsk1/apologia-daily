@@ -850,7 +850,6 @@
       }
       incrementDebateUsage();
       resetCrisisLatch();   // after the start guards: a blocked start must not clear it
-      state.turns = 0;      // startDebate never reset this; a stale count can short-circuit turn 1 straight into endDebate(), the one path /api/debate never sees
 
       const scenario = convoScenarios[convoState.scenario];
       const opening = scenario.opening[convoState.topic] || "Hey, I wanted to ask you about your faith...";

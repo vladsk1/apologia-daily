@@ -613,6 +613,24 @@ async function getCoaching() {
 
     if (res.ok) {
       const data = await res.json();
+      // A crisis referral is not coaching: it must not be labelled "AI Coaching",
+      // must not be captured as a study tag, and must not be stashed in
+      // _lastCoaching for saveEntry()/sync. See lib/crisis.js.
+      if (data && data.crisis) {
+        var lbl = document.querySelector('.cp-label');
+        if (lbl) lbl.textContent = 'Stepping out of the exercise';
+        var box = document.getElementById('coaching-content');
+        if (box) { box.style.whiteSpace = 'pre-wrap'; box.textContent = data.answer || ''; }
+        window._lastCoaching = null;
+        // .coaching-panel is display:none until .visible is added — an inline
+        // style would work but would diverge from the one reveal path.
+        document.getElementById('coaching-panel').classList.add('visible');
+        // Restore the button: the early return below skips the shared reset.
+        btn.disabled = false;
+        spin.style.display = 'none';
+        btnText.innerHTML = '&#129504; Get AI coaching on this conversation';
+        return;
+      }
       const text = data.answer || '';
 
       /* Extract the machine-readable study tag (specific argument), validate it,
