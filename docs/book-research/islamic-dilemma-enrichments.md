@@ -23,6 +23,28 @@
 > - All guardrails from the pre-gate draft (below) survived: Whittingham caution intact, Garima hedges intact,
 >   apocrypha non-mocking and not implying Christian canonicity.
 >
+> **✅ RE-VERIFIED LIVE 2026-08-10 (ledger re-test — book-sweep note #9).** All three enrichments confirmed
+> still on their target pages, all guardrails intact, and all three `content-backlog.md` rows marked
+> **DONE 2026-08-03** (ledger NOT stale):
+> - **§1** — `islam-jesus.html` carries the clay-birds / *Infancy Gospel of Thomas* / Witztum apocryphal-source
+>   strand (fns 18–19); the "the New Testament supplies the only account" verdict is landed, not implied.
+> - **§2** — `islam-dilemma.html` carries Nickel (fn 13), Griffith (fn 16), Sinai (fn 18), Witztum
+>   (bibliography); **the Whittingham *maʿna*/*naṣṣ* caution SURVIVED** — not hardened to "only meaning / Ibn
+>   Ḥazm invented textual corruption."
+> - **§3** — `islam-dilemma.html` carries the Garima / first-*hijra*-to-Aksum illustration (fns 24–25) + the
+>   `worldviews.html` Horn-1 nod + the `briefs/_data.json` clause; **both bounded hedges SURVIVED** ("roughly
+>   the fifth to seventh centuries"; "the Aksumite kingdom … not a documented particular church").
+>
+> **⭐ STANDING OUTPUT — is the source better than our essays anywhere?** On these three planks, **no longer** —
+> Frost was ahead of us on the apocryphal-source strand, the *taḥrīf* sourcing, and the Garima illustration,
+> and all three are now shipped and gated CLEAN. **This note is DERIVATIVE, not an independent source:** the
+> source is Frost's *The Islamic Dilemma*, mapped in [`islamic-dilemma.md`](islamic-dilemma.md) — the
+> source-level cross-check belongs there (done 2026-08-06, plus a further Step-Zero enrichment 2026-08-07: the
+> John of Damascus / *De Haeresibus* ch. 100 paragraph). **Do not re-mine Frost from this note.**
+> ⚠ One citation debt is on-record in the `islam-dilemma.html` stamp (tied to `islamic-dilemma.md`, not this
+> note): `apologia-citations` on John of Damascus's reported replies (against Sahas) + the Tov dating ranges,
+> both egress-blocked — needs a web-enabled session.
+>
 > **Original pre-gate draft notes are retained below for the record.**
 
 > **Status: DRAFT / pre-gate.** These are drop-in-ready enrichments surfaced by

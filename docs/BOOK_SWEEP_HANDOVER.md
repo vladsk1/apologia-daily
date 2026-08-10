@@ -37,7 +37,7 @@ The method is written into `CLAUDE.md` (§ *MANDATORY CROSS-CHECK STEP* and the 
 
 ---
 
-## 2. Status — 8 of 14 notes checked
+## 2. Status — 9 of 14 notes checked
 
 | # | Note | Checked | Standard met |
 |---|---|---|---|
@@ -49,7 +49,7 @@ The method is written into `CLAUDE.md` (§ *MANDATORY CROSS-CHECK STEP* and the 
 | 6 | `i-dont-have-enough-faith-to-be-an-atheist.md` | ✅ 2026-08-08 | **Full, after a correction** — see §4. Essays + note both now read in full |
 | 7 | `josephus-and-jesus.md` | ✅ 2026-08-08 (redone) | **Full check, partial source** — see §3 |
 | 8 | `raised-on-the-third-day.md` | ✅ 2026-08-10 | **Full check, PARTIAL source** — cross-check redone to the six-verdict standard; **stale ledger corrected** (rows 1 / 2-essay-half / 5 had shipped to `disciplesbelief.html` on 2026-08-05 and were never flipped). Still open: Moss (row 4) + defended-"none-recanted" (row 3), both owner-accepted; the `ev-m-postresurrection` half of row 2; Licona primacy-of-Paul (row 6, refined). Source stays PARTIAL (chs. 11 + 16 only; ch. 16 reason 5 unread). |
-| 9 | `islamic-dilemma-enrichments.md` | ⬜ | Not started |
+| 9 | `islamic-dilemma-enrichments.md` | ✅ 2026-08-10 | **Verified SHIPPED (not a fresh source).** A derived work-order of 3 Frost enrichments, all shipped + gated CLEAN 2026-08-03. Ledger re-test: all 3 live, all guardrails intact (Whittingham caution + both Garima hedges), all 3 backlog rows DONE. **Derivative of `islamic-dilemma.md` (book #1, checked 2026-08-06) — do not re-mine Frost from it.** |
 | 10 | `return-of-the-god-hypothesis.md` | 🔴 **BLOCKED** | Owner is supplying endnote photographs. ~15 factual flags need them before a scoped citations pass |
 | 11–14 | `can-we-trust-the-gospels.md` · `jesus-and-the-eyewitnesses.md` · `on-the-reliability-of-the-old-testament.md` · `gathercole-preexistent-son-and-thomas.md` | ⬜ | **Deliberately last.** Books we do not own, mapped from open-access material only — a cross-check would compare our essays against a map that is itself unverified |
 
