@@ -481,13 +481,13 @@
             <div class="opp-desc">A sibling or parent who thinks faith is a crutch. They love you but think you've been fooled. Conversations happen at the dinner table.</div>
           </div>
 
-          <div class="opponent-card" onclick="selectConvo('grieving', this)">
-            <div class="selected-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
-            <div class="opp-icon" style="background:#FAECE7;color:#993C1D;">💔</div>
-            <div class="opp-name">The Grieving Friend</div>
-            <div class="opp-style" style="color:#993C1D;">Emotional · Searching</div>
-            <div class="opp-desc">A close friend who has just suffered a loss and is asking "where was God?" This requires pastoral sensitivity, not arguments.</div>
-          </div>
+          <!-- REMOVED 2026-08-10: "The Grieving Friend". Its own card copy said
+               "this requires pastoral sensitivity, not arguments" — which is the
+               reason it does not belong here. Grief is the one scenario a user is
+               most likely to bring as their OWN, and /api/debate has no crisis
+               path (no backstop regex, no PASTORAL classifier, no referral) while
+               its personas are told "never break character." Do not restore it
+               without that path in place. See CLAUDE.md 2026-08-10. -->
 
           <div class="opponent-card" onclick="selectConvo('student', this)">
             <div class="selected-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
@@ -746,22 +746,11 @@
           'I just don\'t see any evidence for God': "I\'m not trying to be mean about it but I genuinely don\'t understand what you\'re basing this on. Like, what actual evidence is there? Not feelings, not what you were told — actual evidence that God exists?"
         }
       },
-      grieving: {
-        name: 'The Grieving Friend',
-        label: 'Friend',
-        topics: [
-          { topic: 'Where was God when this happened?', desc: 'After a sudden loss' },
-          { topic: 'Why would God let someone suffer like that?', desc: 'After a long illness' },
-          { topic: 'I can\'t pray anymore — it feels pointless', desc: 'A friend losing their faith through grief' },
-          { topic: 'How do I find meaning after this?', desc: 'Searching for hope' }
-        ],
-        opening: {
-          'Where was God when this happened?': "I just don\'t understand. I prayed. I genuinely believed God would come through. And now… I don\'t know what to think. Where was he? How do you explain that? Because I can\'t.",
-          'Why would God let someone suffer like that?': "I watched them suffer for months. Months. If God is so powerful and loving, why would he let that happen? What kind of love is that? I\'m so angry. I don\'t even know who I\'m angry at.",
-          'I can\'t pray anymore — it feels pointless': "I used to pray every day. But after this I just… can\'t. It feels like talking to an empty room. Has your faith ever felt like that? How did you keep going?",
-          'How do I find meaning after this?': "I keep asking why. Why them, why now, why this way. I need this to mean something. Does your faith give you actual answers to that or is it just… cope?"
-        }
-      },
+      // NOTE: the 'grieving' scenario was removed 2026-08-10 — see the comment on
+      // the scenario grid above. Its topic strings were first-person ("I can't
+      // pray anymore") under a second-person prompt ("What do you want to
+      // practise?"), so the one screen where a grieving user could read them as
+      // their own sentence was also the screen that led to an unguarded box.
       student: {
         name: 'The University Student',
         label: 'Student Friend',
@@ -1031,7 +1020,7 @@
 
     const oppNames = {
       atheist: 'The Atheist', muslim: 'The Muslim', agnostic: 'The Agnostic', secularist: 'The Secularist',
-      coworker: 'Coworker', family: 'Family Member', grieving: 'Friend',
+      coworker: 'Coworker', family: 'Family Member',
       student: 'Student Friend', teenager: 'Your Child', neighbour: 'Neighbour'
     };
 

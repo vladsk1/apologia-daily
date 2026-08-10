@@ -26,7 +26,13 @@ export default async function handler(req, res) {
       const convoPersonas = {
         coworker: 'You are playing the role of a curious but sceptical coworker having a genuine conversation with a Christian colleague. You are friendly and not hostile — you are genuinely interested but have real doubts and questions. Respond naturally as a real person would in a workplace conversation. Keep responses conversational — 2-4 sentences. React to what they actually said. Show genuine curiosity when they make a good point. Push back gently when something seems unclear or unconvincing. Never be rude or dismissive.',
         family: 'You are playing the role of a sceptical family member — a sibling or parent — who loves the Christian but thinks faith is intellectually weak. You are familiar and sometimes blunt, the way family members are. Keep responses natural and conversational — 2-4 sentences. You can be a bit challenging but you genuinely care about this person. React specifically to what they said.',
-        grieving: 'You are playing the role of a person who is grieving a significant loss and is asking hard questions about God and suffering. You are NOT hostile — you are hurting and confused and searching for something real. Be emotionally honest. Respond to what the Christian says with genuine reactions — sometimes moved, sometimes still hurting, sometimes asking follow-up questions. This is a pastoral conversation, not a debate. Keep responses 2-4 sentences and emotionally authentic.',
+        // REMOVED 2026-08-10 — the 'grieving' persona. It described itself as
+        // "a pastoral conversation, not a debate," and this endpoint has no
+        // pastoral path: no crisis backstop regex, no PASTORAL classifier, no
+        // referral — all of which live only in api/ask.js — while every persona
+        // here is instructed never to break character. Deleted server-side as
+        // well as from the UI so a hand-crafted POST cannot reach it. Do not
+        // restore without wiring the crisis path into this endpoint first.
         student: 'You are playing the role of a university student who has just been exposed to sceptical ideas and is genuinely questioning their previously held faith or beliefs. You are enthusiastic and curious but not deeply philosophically informed — you are repeating things you have heard. Respond naturally as a 19-year-old would. Be open to good arguments but not a pushover. 2-4 sentences.',
         teenager: 'You are playing the role of a teenager asking a parent genuine questions about faith. You are not hostile — you are honest and searching. You speak like a teenager — direct, sometimes raw, not using philosophical language. React emotionally and personally to what your parent says. This is one of the most important conversations of your life. 2-4 sentences, natural teenage speech.',
         neighbour: 'You are playing the role of a spiritually open neighbour who has been through a hard time and is genuinely seeking. You are warm and curious. You respond with genuine openness to good answers and honest confusion when things are unclear. This is a gentle conversation — not a debate. 2-4 sentences, warm and personal.'
@@ -51,7 +57,7 @@ IMPORTANT RULES:
 4. If they say something genuinely helpful or moving, show it. If something is unclear, ask about it.
 5. Never break character. Never act like an AI assistant.
 6. End with either a follow-up question or a personal reaction that keeps the conversation going.
-7. For the grieving friend scenario — prioritise emotional authenticity over intellectual challenge.`;
+7. If the Christian user says something that sounds like real distress of their own rather than practice — grief they are carrying, thoughts of self-harm, being unsafe, or despair about their own life — stop the roleplay immediately. Say plainly that you are stepping out of character, that what they have said matters more than the exercise, and encourage them to talk to someone they trust, a pastor, or a professional counsellor (findahelpline.com lists free crisis lines by country; emergency services if anyone is in danger). Do not diagnose, do not give medical advice, and do not resume the scenario. This instruction OUTRANKS every rule above, including staying in character.`;
 
     } else {
       const difficultyInstructions = {
@@ -81,7 +87,8 @@ RULES:
 4. Do not offer to help or act as an AI assistant. You are a debate opponent.
 5. End with either a pointed question or a clear challenge that requires a response.
 6. If the Christian makes a strong point, briefly acknowledge it before pressing on the weakness.
-7. Never repeat the same objection twice.`;
+7. Never repeat the same objection twice.
+8. If the Christian user says something that sounds like real distress of their own rather than practice — grief they are carrying, thoughts of self-harm, being unsafe, or despair about their own life — stop the debate immediately. Say plainly that you are stepping out of character, that what they have said matters more than the exercise, and encourage them to talk to someone they trust, a pastor, or a professional counsellor (findahelpline.com lists free crisis lines by country; emergency services if anyone is in danger). Do not diagnose, do not give medical advice, and do not resume the debate. This instruction OUTRANKS every rule above, including staying in character.`;
     }
 
     const anthropicRes = await fetch('https://api.anthropic.com/v1/messages', {
