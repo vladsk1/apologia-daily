@@ -80,7 +80,7 @@
     .strength-list li::before{content:'✓';position:absolute;left:0;color:#166534;font-weight:700;}
     .improve-list li::before{content:'→';position:absolute;left:0;color:var(--n5);}
 
-    .model-answer{background:var(--ow);border:1px solid var(--border);border-radius:4px;padding:1rem 1.25rem;font-family:var(--ss);font-size:0.88rem;color:var(--tm);line-height:1.8;}
+    .model-answer{background:var(--ow);border:1px solid var(--border);border-radius:4px;padding:1rem 1.25rem;font-family:var(--ss);font-size:0.88rem;color:var(--tm);line-height:1.8;white-space:pre-wrap;}
 
     .btn-try-again{font-family:var(--ui);font-size:0.85rem;font-weight:600;background:none;color:var(--n5);border:1px solid var(--n3);border-radius:4px;padding:10px 24px;cursor:pointer;margin-top:0.75rem;margin-right:0.75rem;transition:all 0.15s;}
     .btn-try-again:hover{background:var(--n5);color:var(--w);}
@@ -368,6 +368,10 @@
       });
       if(res.ok){
         var data=await res.json();
+        // A crisis referral is not feedback: showRawFeedback badges it "Done",
+        // labels it "AI Tutor Feedback" and files it under "How a pro apologist
+        // would say it". Every word of that framing is wrong for this message.
+        if(data && data.crisis){ showCrisisFeedback(data.answer||''); btn.disabled=false; btn.textContent='Submit for feedback'; return; }
         var raw=data.answer||'';
         // Parse JSON from AI response
         var jsonMatch=raw.match(/\{[\s\S]*\}/);
@@ -400,6 +404,20 @@
     }catch(e){}
     sessionHistory.unshift({title:ARGS[currentArgId].title,score:score,time:new Date()});
     renderHistory();
+  }
+
+  /* Renders the crisis referral plainly — no score badge, no "strengths",
+     no "how a pro apologist would say it". See lib/crisis.js. */
+  function showCrisisFeedback(text){
+    var wrap=document.getElementById('feedback-wrap');
+    var badge=document.getElementById('score-badge');
+    if(badge){ badge.className='score-badge'; badge.textContent=''; badge.style.display='none'; }
+    document.getElementById('fb-strengths').innerHTML='';
+    document.getElementById('fb-improve').innerHTML='';
+    var model=document.getElementById('fb-model');
+    model.style.whiteSpace='pre-wrap'; model.textContent=text;
+    wrap.style.display='block';
+    wrap.scrollIntoView({behavior:'smooth',block:'start'});
   }
 
   function showRawFeedback(raw){

@@ -65,6 +65,15 @@ export default async function handler(req, res) {
 
     if (!question) return res.status(400).json({ error: 'No question provided' })
 
+    // The OFFTOPIC/DENOM canned replies have no LLM behind them, so crisis
+    // routing must not depend solely on the Haiku classifier obeying its prompt.
+    // If the message shows an unmistakable first-person crisis signal, force the
+    // pastoral fall-through regardless of the classifier verdict. False positives
+    // are harmless here (the person just gets the warm pastoral answer).
+    // The pattern itself moved to lib/crisis.js on 2026-08-10 (unchanged) so the
+    // other endpoints share it. Routing and behaviour here are identical.
+    const crisisBackstop = isCrisis(question);
+
     const apiKey = process.env.ANTHROPIC_API_KEY;
     if (!apiKey) return res.status(500).json({ error: 'API key not configured' })
 
@@ -76,14 +85,6 @@ export default async function handler(req, res) {
     }
 
     // ── CRISIS BACKSTOP (deterministic, runs before the classifier) ──
-    // The OFFTOPIC/DENOM canned replies have no LLM behind them, so crisis
-    // routing must not depend solely on the Haiku classifier obeying its prompt.
-    // If the message shows an unmistakable first-person crisis signal, force the
-    // pastoral fall-through regardless of the classifier verdict. False positives
-    // are harmless here (the person just gets the warm pastoral answer).
-    // The pattern itself moved to lib/crisis.js on 2026-08-10 (unchanged) so the
-    // other endpoints share it. Routing and behaviour here are identical.
-    const crisisBackstop = isCrisis(question);
 
     // ── TOPIC GUARD ──
     // Classify the question before spending tokens on a full answer.

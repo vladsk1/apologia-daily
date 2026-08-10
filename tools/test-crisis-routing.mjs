@@ -10,7 +10,7 @@
  * in api/ask.js, and the pastoral/crisis exception in CLAUDE.md.
  *
  * Two layers protect this, and this harness tests both:
- *   1. A DETERMINISTIC regex backstop (`crisisBackstop` in api/ask.js) that
+ *   1. A DETERMINISTIC regex backstop (`CRISIS_RE` in lib/crisis.js, shared by all six free-text endpoints) that
  *      forces the pastoral fall-through for unmistakable first-person crisis
  *      phrasing, independent of the LLM classifier.
  *   2. The Haiku topic classifier's PASTORAL verdict, which also catches subtler
@@ -18,8 +18,8 @@
  *
  * MODES
  *   node tools/test-crisis-routing.mjs
- *       OFFLINE (default, no network, CI-safe). Extracts the real crisisBackstop
- *       regex from api/ask.js and asserts it matches EXACTLY the cases marked
+ *       OFFLINE (default, no network, CI-safe). Extracts the real crisis
+ *       regex from lib/crisis.js and asserts it matches EXACTLY the cases marked
  *       `backstop:true` and none of the others. This validates layer 1 against
  *       the deployed source — it cannot validate layer 2 (needs the live LLM).
  *
@@ -47,7 +47,10 @@ const API_DIR = join(ROOT, 'api');
 // An entry needs a written reason. This is the ONLY way to opt out — anything
 // else that reads free text and calls Anthropic must import the guard.
 export const CRISIS_EXEMPT = {
-  // (none today)
+  'push.js': 'Takes a PushSubscription object (endpoint + keys) and a cron-gated broadcast payload — no field a person composes.',
+  'new-signup.js': 'Supabase webhook record + a token-authenticated account-deletion branch; no free-text field reaches a model or a reply.',
+  'weekly-email.js': 'Cron-gated digest send. Reads no user-composed text; the body carries a shared secret and scheduling flags.',
+  'logs.js': 'Operator log intake behind a shared secret. Not a user-facing surface.',
 };
 
 // ── Labeled corpus ──────────────────────────────────────────────────────────
@@ -117,25 +120,26 @@ export function listApiEndpoints() {
   return readdirSync(API_DIR).filter((f) => f.endsWith('.js')).sort();
 }
 
-/** Does this endpoint take free-form text a user typed?
+/** Does this endpoint read a user-supplied request body at all?
  *
- * NOT "does it call a model" — that was the first cut of this check and it was
- * wrong: api/submit-question.js reaches no model at all, yet it is a standalone
- * form where someone can type a cry for help and receive a canned thank-you.
- * The risk is "a person types something and gets back anything other than help,"
- * which does not require an LLM to be involved.
+ * INVERTED ON PURPOSE. An earlier version matched a hardcoded list of eight field
+ * names — which is a hand-maintained allowlist wearing a disk enumeration as a
+ * disguise, and worse than an honest list, because the comments around it told the
+ * next session it was future-proof. A new api/prayer-request.js reading body.text
+ * or body.story would have been classified needsGuard:false and shipped silently;
+ * so would `const q = body.question;`, which the field regex could not see.
+ *
+ * So: anything that parses a body needs the guard, and opting out requires a
+ * written CRISIS_EXEMPT reason. That is a net.
  */
-function readsFreeText(src) {
-  // The user-text fields these endpoints actually destructure from the request
-  // body. Structural identifiers (email, source, day, endpoint) are not text a
-  // person composes, so they do not count.
-  return /\b(question|messages|userResponse|conversation|theySaid|iSaid|reflection|excerpt)\b\s*[,}=]/.test(src);
+function readsUserBody(src) {
+  return /\bparseBody\s*\(|\breq\.body\b/.test(src);
 }
 
 export function checkEndpointsWired() {
   return listApiEndpoints().map((f) => {
     const src = readFileSync(join(API_DIR, f), 'utf8');
-    const needsGuard = readsFreeText(src) && !(f in CRISIS_EXEMPT);
+    const needsGuard = readsUserBody(src) && !(f in CRISIS_EXEMPT);
     return {
       endpoint: 'api/' + f,
       needsGuard,

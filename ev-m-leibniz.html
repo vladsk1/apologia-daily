@@ -688,6 +688,11 @@ async function scoreExplain(btn){
     });
     if(!res.ok){ throw new Error('bad status'); }
     var data = await res.json();
+    // CRISIS: /api/tutor answers {crisis:true} with a pastoral referral instead of
+    // a score. It contains no JSON, so without this branch the parse below throws
+    // and the catch calls renderMockScore(txt) — scoring the person's own words
+    // and discarding the referral entirely. Never score a crisis disclosure.
+    if(data.crisis){ renderCrisis(data.answer || ''); if(btn){ btn.disabled=false; btn.textContent=btn.dataset.lbl||'Score my explanation'; } return; }
     var answer = data.answer || '';
     var m = answer.match(/\{[\s\S]*\}/);
     if(!m){ throw new Error('no json'); }
@@ -700,6 +705,23 @@ async function scoreExplain(btn){
 }
 
 function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+/* Renders the pastoral referral in place of a score. Deliberately does NOT touch
+   scoreNum/scoreVerdict/state.explainScore: nobody gets marked out of 10, and no
+   mastery progress is recorded, on a turn where they said something true about
+   their own life. See lib/crisis.js. */
+function renderCrisis(text){
+  var out = document.getElementById('scoreOut');
+  if(!out){ return; }
+  var num = document.getElementById('scoreNum'); if(num) num.innerHTML = '';
+  var vd = document.getElementById('scoreVerdict'); if(vd) vd.textContent = 'Stepping out of the exercise';
+  var feed = document.getElementById('scoreFeed');
+  if(feed){ feed.innerHTML = ''; var p = document.createElement('p');
+    p.style.cssText = 'white-space:pre-wrap;line-height:1.75;margin:0;';
+    p.textContent = text; feed.appendChild(p); }
+  out.classList.add('show');
+  out.scrollIntoView({behavior:'smooth', block:'center'});
+}
 
 function renderScore(score, strengths, improvements){
   score = Math.max(0, Math.min(10, Math.round(Number(score) || 0)));

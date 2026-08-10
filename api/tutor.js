@@ -15,6 +15,45 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
+    // ── CRISIS BACKSTOP ──
+    // FIRST, before the API-key check and before the rate limit. lib/crisis.js
+    // promises this reply works when the Anthropic key is dead or unset — it did
+    // not, because the !apiKey 500 ran first. And overRateLimit is keyed on IP,
+    // i.e. per NAT: a school, church or CGNAT range shares one bucket, so a
+    // stranger could exhaust the cap and a crisis message would get a bare 429.
+    // This needs no key, no network and no quota.
+    // This endpoint backs BOTH the "ask about this argument" box (library/*.html,
+    // parents.html) and the Explain It Back grader (all 63 ev-m-*.html pages).
+    //
+    // GRADER MODE IS GUARDED TOO, and an earlier cut of this that excluded it was
+    // wrong on its own terms. The reasoning was "grader input is an explanation of
+    // an argument, not a message to anyone" — but ev-m-evil.html, the page named
+    // as the likeliest disclosure surface, has NO Q&A box: its only tutor call IS
+    // the grader. So the exclusion left exactly the page it was worried about
+    // unguarded. The asymmetry also runs the other way from what was assumed: a
+    // false positive costs one re-click (the textarea is not cleared), while a
+    // false negative means someone writing "I need this argument to work because
+    // most days I don't want to be alive" into a long free-text drill on the
+    // problem of evil gets back "4/10 — premise 2 is missing."
+    //
+    // ⚠ The two grader clients did NOT behave the same way on a non-JSON reply,
+    // and an earlier version of this comment wrongly said they did.
+    // explain-it-back.html renders raw text (showRawFeedback), so the referral
+    // reached the person; all 67 ev-m-*.html pages DISCARDED it — scoreExplain()'s
+    // catch called renderMockScore(txt) on the USER'S OWN words, so a disclosure
+    // came back as a score out of 10 and "Have another go with the structure in
+    // mind". Note the irony: the more faithfully the model obeys "do NOT return
+    // the JSON scoring object" below, the more certainly its reply was thrown
+    // away. Those clients now key off `crisis` and render it via renderCrisis().
+    //
+    // parents.html wraps input as 'My child is N years old and asked me: "..."';
+    // the raw text survives the wrapper, so testing `question` still catches it —
+    // and CRISIS_REPLY carries a third-party sentence because on that page the
+    // person at risk is usually not the person typing.
+    if (isCrisis(question)) {
+      return res.status(200).json({ answer: CRISIS_REPLY, crisis: true });
+    }
+
     const apiKey = process.env.ANTHROPIC_API_KEY;
     if (!apiKey) return res.status(500).json({ error: 'API key not configured' });
 
@@ -32,31 +71,6 @@ export default async function handler(req, res) {
     // (client sends a "score it 1-10 ... respond in this exact JSON" prompt). Grader mode gets a
     // doctrinal-accuracy-first rubric + more tokens so the JSON isn't truncated into the mock fallback.
     const graderMode = /\bscore it 1-?10\b|respond in this exact json|evaluate this student explanation/i.test(String(question || ''));
-
-    // ── CRISIS BACKSTOP (before any model call) ──
-    // This endpoint backs BOTH the "ask about this argument" box (library/*.html,
-    // parents.html) and the Explain It Back grader (all 63 ev-m-*.html pages).
-    //
-    // GRADER MODE IS GUARDED TOO, and an earlier cut of this that excluded it was
-    // wrong on its own terms. The reasoning was "grader input is an explanation of
-    // an argument, not a message to anyone" — but ev-m-evil.html, the page named
-    // as the likeliest disclosure surface, has NO Q&A box: its only tutor call IS
-    // the grader. So the exclusion left exactly the page it was worried about
-    // unguarded. The asymmetry also runs the other way from what was assumed: a
-    // false positive costs one re-click (the textarea is not cleared), while a
-    // false negative means someone writing "I need this argument to work because
-    // most days I don't want to be alive" into a long free-text drill on the
-    // problem of evil gets back "4/10 — premise 2 is missing." Both grader clients
-    // degrade gracefully on non-JSON (explain-it-back.html showRawFeedback,
-    // ev-m-*.html renderMockScore), so the pastoral text renders either way.
-    //
-    // parents.html wraps input as 'My child is N years old and asked me: "..."';
-    // the raw text survives the wrapper, so testing `question` still catches it —
-    // and CRISIS_REPLY carries a third-party sentence because on that page the
-    // person at risk is usually not the person typing.
-    if (isCrisis(question)) {
-      return res.status(200).json({ answer: CRISIS_REPLY, crisis: true });
-    }
 
     let systemPrompt = `You are an expert Christian apologetics tutor — warm, patient, and exceptionally good at explaining complex philosophical and theological arguments in clear, accessible language. You are helping a student reading the Evidence Library on Apologia Daily.
 
@@ -116,6 +130,7 @@ ARGUMENT-SPECIFIC ACCURACY RAILS (always apply, whether or not an essay excerpt 
 
 WHEN YOU ARE GRADING (this request asks you to evaluate a student's explanation, score it 1-10, and return JSON):
 - Output ONLY the requested JSON object — no preamble, no 150-250-word answer, no follow-up line. The word-count and "one follow-up thought" instructions above apply to the Q&A role, NOT to grading.
+THE ONE EXCEPTION IS PASTORAL CARE: if the personal-distress or safety signal described in the PASTORAL CARE block above is present, that block overrides this one — do NOT grade and do NOT output JSON, and respond in plain prose exactly as it directs.
 - DOCTRINAL ACCURACY AND LOGICAL SOUNDNESS OUTRANK EVERYTHING ELSE IN THE SCORE. Judge whether the explanation is correct before you weigh its clarity, structure, or effort.
 - If the explanation DENIES or DISTORTS a core doctrine (modalism, Arianism/subordinationism, tritheism, adoptionism, denial of Christ's full deity or humanity, denial of the bodily resurrection, works-salvation, or "all religions lead to God"): cap the score at 3/10, do NOT list the heterodox claim among "strengths," and name and correct the specific error in "improvements," pointing to the orthodox statement.
 - If the explanation MISSTATES an argument-specific premise or overstates the case — e.g. kalam "everything has a cause" (vs "begins to exist"), "manuscripts prove the Bible is true," "science proves design"/"scientists agree it's designed," "atheists can't be moral," or presenting a contested inference as proof — lower the score and correct it in "improvements," even if the writing is fluent.

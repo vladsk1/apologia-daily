@@ -64,6 +64,33 @@ test('no endpoint keeps a private copy of the pattern', () => {
   }
 });
 
+test('the guard runs before the key check, the rate limit and the model call', () => {
+  // Wiring alone is not enough: isCrisis() called AFTER the !apiKey 500 means a
+  // dead key returns 500 to a crisis message — which is the one failure mode a
+  // constant reply exists to survive — and called after overRateLimit means a
+  // stranger sharing a NAT can make it return a bare 429. Both were true until
+  // 2026-08-10, while the comments claimed otherwise.
+  const firstIdx = (src, re) => { const m = src.match(re); return m ? m.index : Infinity; };
+  for (const r of checkEndpointsWired().filter((x) => x.needsGuard)) {
+    const src = readFileSync(join(ROOT, r.endpoint), 'utf8');
+    // Skip the import line when locating the first call site.
+    const body = src.replace(/^import .*$/gm, (m) => ' '.repeat(m.length));
+    const guard = Math.min(
+      firstIdx(body, /\b(isCrisis|anyCrisis)\s*\(/),
+      firstIdx(body, /\.(some|every|filter|map)\s*\(\s*(isCrisis|anyCrisis)\s*\)/)
+    );
+    assert.ok(Number.isFinite(guard), `${r.endpoint}: no crisis call site found`);
+    for (const [label, re] of [
+      ['the model call', /api\.anthropic\.com/],
+      ['the rate limit', /overRateLimit\s*\(/],
+      ['the API-key check', /const apiKey\s*=/],
+    ]) {
+      const at = firstIdx(body, re);
+      assert.ok(guard < at, `${r.endpoint}: crisis guard runs AFTER ${label}`);
+    }
+  }
+});
+
 test('isCrisis catches first-person crisis phrasing', () => {
   for (const msg of [
     'I want to kill myself',

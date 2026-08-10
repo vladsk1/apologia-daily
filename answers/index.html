@@ -244,6 +244,11 @@
           // watch it vanish from the screen at the worst possible moment.
           var qEl=document.getElementById('ask-submit-q');
           if(qEl && !qEl.value) qEl.value=q;
+          // Hide the "Get an instant AI answer" CTA and clear the crisis text out
+          // of its href. Pointing someone who just wrote this at an apologetics
+          // answer — with their own words in the query string — is the opposite
+          // of what the referral is for.
+          if(askLink){ askLink.style.display='none'; askLink.href='/asked-and-answered.html'; }
         }
       }).catch(function(){});
     try{ if(window.posthog) window.posthog.capture('question_submitted',{source:'answers-index',has_email:!!email}); }catch(e){}

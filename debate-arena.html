@@ -482,12 +482,13 @@
           </div>
 
           <!-- REMOVED 2026-08-10: "The Grieving Friend". Its own card copy said
-               "this requires pastoral sensitivity, not arguments" — which is the
-               reason it does not belong here. Grief is the one scenario a user is
-               most likely to bring as their OWN, and /api/debate has no crisis
-               path (no backstop regex, no PASTORAL classifier, no referral) while
-               its personas are told "never break character." Do not restore it
-               without that path in place. See CLAUDE.md 2026-08-10. -->
+               "this requires pastoral sensitivity, not arguments" — and a persona
+               whose whole subject is grief does not belong in an exercise scored
+               out of 100. /api/debate now carries a deterministic crisis backstop
+               and a PASTORAL CARE instruction, but not the Haiku PASTORAL
+               classifier api/ask.js has; a regex is a floor, and this persona is
+               built to invite the phrasings a regex misses. Do not restore it
+               without that classifier. See CLAUDE.md 2026-08-10. -->
 
           <div class="opponent-card" onclick="selectConvo('student', this)">
             <div class="selected-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
@@ -839,7 +840,6 @@
     }
 
     function startConvo() {
-      resetCrisisLatch();
       if (!convoState.scenario || !convoState.topic) return;
 
       // Check weekly limit (shared with debate)
@@ -849,6 +849,8 @@
         return;
       }
       incrementDebateUsage();
+      resetCrisisLatch();   // after the start guards: a blocked start must not clear it
+      state.turns = 0;      // startDebate never reset this; a stale count can short-circuit turn 1 straight into endDebate(), the one path /api/debate never sees
 
       const scenario = convoScenarios[convoState.scenario];
       const opening = scenario.opening[convoState.topic] || "Hey, I wanted to ask you about your faith...";
@@ -1085,7 +1087,6 @@
     }
 
     function startDebate() {
-      resetCrisisLatch();
       if (!state.opponent || !state.topic) return;
 
       // Check weekly limit
@@ -1095,6 +1096,8 @@
         return;
       }
       incrementDebateUsage();
+      resetCrisisLatch();   // after the start guards: a blocked start must not clear it
+      state.turns = 0;      // startDebate never reset this; a stale count can short-circuit turn 1 straight into endDebate(), the one path /api/debate never sees
       state.messages = [];
       state.debateStarted = false;
 
@@ -1528,17 +1531,20 @@
     }
 
     function showGenericFeedback() {
-      const score = 65 + Math.floor(Math.random() * 25);
-      document.getElementById('score-overall').textContent = score;
-      document.getElementById('score-argument').textContent = score + Math.floor(Math.random() * 10) - 5;
-      document.getElementById('score-objection').textContent = score - Math.floor(Math.random() * 15);
-      setTimeout(() => {
-        document.getElementById('bar-overall').style.width = score + '%';
-        document.getElementById('bar-argument').style.width = (score + 5) + '%';
-        document.getElementById('bar-objection').style.width = (score - 8) + '%';
-      }, 100);
-      document.getElementById('feedback-strengths').innerHTML = '<p>✓ You engaged with the topic and made an effort to defend your position under pressure.</p><p>✓ You stayed in the conversation and didn\'t avoid the hard questions.</p>';
-      document.getElementById('feedback-weaknesses').innerHTML = '<p>⚠ Study the specific arguments in the Evidence Library for this topic to sharpen your responses.</p><p>⚠ Try to directly address each point your opponent raises before moving to your own argument.</p>';
+      // No invented score, on any path. This runs whenever /api/feedback fails —
+      // including on the final turn, where that call is the ONLY server that sees
+      // the user's message, so a fabricated number could land in front of someone
+      // who just disclosed something real. A Math.random() score presented as
+      // performance is also manufactured confidence, which the site's own standard
+      // forbids: confidence must be earned by truth.
+      ['score-overall', 'score-argument', 'score-objection'].forEach(function (id) {
+        var el = document.getElementById(id); if (el) el.textContent = '\u2014';
+      });
+      ['bar-overall', 'bar-argument', 'bar-objection'].forEach(function (id) {
+        var el = document.getElementById(id); if (el) el.style.width = '0%';
+      });
+      document.getElementById('feedback-strengths').innerHTML = '<p>Coaching is unavailable right now, so there is no score for this session &mdash; that is a problem on our side, not a reflection of how you did.</p>';
+      document.getElementById('feedback-weaknesses').innerHTML = '<p>Your conversation is above. Try again in a moment, or take the topic to the <a href="evidence-library.html">Evidence Library</a>.</p>';
     }
 
     function retryDebate() {

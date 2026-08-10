@@ -34,11 +34,12 @@ test('no answer carries an over-concession tell (whole answer + meta)', () => {
 // The deterministic crisis backstop must catch every unmistakable first-person
 // crisis phrasing and stay silent on ordinary questions. This extracts the LIVE
 // regex from lib/crisis.js (it moved there from api/ask.js on 2026-08-10, so all
-// four free-text endpoints share one backstop) and asserts it against the labeled
+// six free-text endpoints share one backstop) and asserts it against the labeled
 // corpus, so a regression in the regex — or its accidental removal — fails CI.
 // That each endpoint actually CALLS it is a separate guard, in
 // tests/crisis-guard.test.mjs; the regex being right is worthless if nothing
-// consults it, which was the state of tutor/debate/submit-question until then.
+// consults it, which was the state of tutor/debate/devotional/feedback/
+// submit-question until then.
 // The full end-to-end classifier path is exercised separately by
 // `node tools/test-crisis-routing.mjs --live` (needs the deployed endpoint).
 test('crisis backstop regex matches its labeled corpus (deterministic layer)', () => {

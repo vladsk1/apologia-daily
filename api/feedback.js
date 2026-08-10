@@ -11,20 +11,7 @@ export default async function handler(req, res) {
     const body = parseBody(req);
     const { conversation, opponent, topic, difficulty, mode, who, worldview, theySaid, iSaid, reflection, studyList, userTurns } = body;
 
-    if (mode === 'journal') {
-      if (!theySaid && !iSaid) {
-        return res.status(400).json({ error: 'Missing conversation' })
-      }
-    } else if (!conversation || !opponent || !topic) {
-      return res.status(400).json({ error: 'Missing required fields' })
-    }
-
-    const apiKey = process.env.ANTHROPIC_API_KEY;
-    if (!apiKey) return res.status(500).json({ error: 'API key not configured' })
-
-    if (inputTooLong([conversation, theySaid, iSaid, reflection, studyList], 20000)) return res.status(413).json({ error: 'input_too_long' })
-
-    // ── CRISIS BACKSTOP (before any model call) ──
+    // ── CRISIS BACKSTOP ── (first: needs no key, no network, no quota)
     // Journal mode is a "coach me on a real conversation I just had" box —
     // `reflection` is literally "what they want coaching on", up to 20k chars. A
     // high-probability disclosure surface.
@@ -41,18 +28,56 @@ export default async function handler(req, res) {
     // legitimately about suffering. Prefer the explicit `userTurns` array the
     // current client sends; fall back to parsing the "Christian:" blocks so a
     // cached older client is still covered.
-    const userWritten = mode === 'journal'
-      ? [theySaid, iSaid, reflection]
-      : (Array.isArray(userTurns) && userTurns.length
-          ? userTurns
-          : String(conversation || '').split('\n\n').filter((b) => /^Christian:/.test(b)));
-    if (anyCrisis(...userWritten)) {
+    // Scan the UNION, never a mode-selected subset: `mode` is a client-supplied
+    // string, so letting it choose the scan set means a user-controlled value
+    // decides which fields are checked. None of these four is our copy, so the
+    // union costs nothing.
+    //
+    // For the transcript, prefer the explicit `userTurns` array. The fallback for
+    // cached clients does NOT split on '\n\n' and keep "Christian:" blocks —
+    // that dropped every paragraph after the first of a multi-paragraph turn,
+    // which is exactly where a disclosure lands at the end of a long message, and
+    // it failed OPEN into a score screen. Split only where a new speaker label
+    // begins, so a blank line inside one turn keeps that turn intact.
+    const blocks = Array.isArray(userTurns) && userTurns.length
+      ? userTurns
+      : String(conversation || '').split(/\n\n(?=[A-Z][^\n:]{0,40}:)/)
+          .filter((b) => /^Christian:/.test(b));
+    const userWritten = [theySaid, iSaid, reflection, ...blocks];
+    // .some(), not spread: `userTurns` is client-controlled and a large array
+    // spread into an argument list throws RangeError -> 500 on a crisis message.
+    if (userWritten.some((f) => anyCrisis(f))) {
       // Journal mode renders data.answer; arena mode renders the feedback object
       // itself, so the client keys off `crisis` before touching the score fields.
       return mode === 'journal'
         ? res.status(200).json({ answer: CRISIS_REPLY, crisis: true })
-        : res.status(200).json({ crisis: true, message: CRISIS_REPLY });
+        : res.status(200).json({
+            crisis: true,
+            message: CRISIS_REPLY,
+            // A client older than 2026-08-10 ignores `crisis` and reads
+            // parseInt(feedback.overall) || 70 — so omitting the score keys makes
+            // it fabricate 70/72/65 next to a crisis referral. The Capacitor build
+            // ships debate-arena.html INSIDE the binary, so "cached client" is a
+            // permanent state for app users until they update. Send the referral
+            // in the fields such a client actually renders, and no numbers.
+            overall: '', argument: '', objection: '',
+            strengths: CRISIS_REPLY, weaknesses: '',
+          });
     }
+
+    if (mode === 'journal') {
+      if (!theySaid && !iSaid) {
+        return res.status(400).json({ error: 'Missing conversation' })
+      }
+    } else if (!conversation || !opponent || !topic) {
+      return res.status(400).json({ error: 'Missing required fields' })
+    }
+
+    const apiKey = process.env.ANTHROPIC_API_KEY;
+    if (!apiKey) return res.status(500).json({ error: 'API key not configured' })
+
+    if (inputTooLong([conversation, theySaid, iSaid, reflection, studyList, userTurns], 20000)) return res.status(413).json({ error: 'input_too_long' })
+
     if (await overRateLimit(req, 80, 'feedback')) return res.status(429).json({ error: 'rate_limited' })
 
     let systemPrompt, userMessage;
@@ -78,6 +103,8 @@ ORTHODOXY GUARDRAIL — NON-NEGOTIABLE: Coach firmly within classical Christian 
 
 DENOMINATIONAL NEUTRALITY: Stay on the historic faith all Christians share (Catholic, Eastern Orthodox, Protestant). Do not steer them toward any one tradition's position on intra-Christian disputes (the Eucharist/real presence, Mary, the papacy or church authority, sola scriptura vs. sacred tradition, praying to or intercession of saints, icon or relic veneration, infant vs. believer's baptism, predestination/Calvinism vs. Arminianism, purgatory, prayers for the dead, the biblical canon, or end-times timelines). If such a dispute came up in the conversation, note graciously that faithful Christians differ and point them to their own pastor or priest — then refocus on the shared core and how they engaged the person.${studyList ? `
 
+CONCEDE THE OBSERVATION, NEVER THE INFERENCE: when you write "Exactly what to say next time", never put an unearned concession in the Christian's mouth. Shared words are not shared belief. If the other person is Muslim, a Jehovah's Witness, or a Latter-day Saint, you may note accurately what they already grant (Islam calls Jesus "Messiah" and "a word from God" and affirms the virgin birth) as a genuine conversational on-ramp — but never script "we worship the same God", "we both honour Jesus", "we share common ground", or any line that presents shared vocabulary as shared faith. Name the divergence in the same breath. Coach warmth of tone, never concession of content.
+
 After the four sections, on a final separate line, output exactly one tag identifying the single argument this person most needs to study, chosen ONLY from this list (use the id before the colon): ${studyList}. Format the final line exactly as: [[STUDY:id]]` : ''}`;
 
       userMessage = `Here is the real conversation the Christian wants coaching on:
@@ -101,7 +128,7 @@ Focus on:
 - Whether they pointed toward Jesus rather than just winning a point
 - The pastoral and relational quality of their responses
 
-ORTHODOXY GUARDRAIL: You are coaching a Christian to share their faith more effectively. Your feedback must always affirm classical Christian orthodoxy — the resurrection, the deity of Christ, the Trinity, and salvation through Christ alone. Never suggest the Christian should soften or hedge on core doctrines to be more relatable. Coach them on tone, listening, and clarity — not on compromising the content of the faith.
+ORTHODOXY GUARDRAIL: You are coaching a Christian to share their faith more effectively. Your feedback must always affirm classical Christian orthodoxy — the bodily resurrection, the full deity AND full humanity of Christ, the Trinity (one God in three co-equal, co-eternal persons), the authority of Scripture, and salvation through Christ alone. Never suggest the Christian should soften or hedge on core doctrines to be more relatable. Coach them on tone, listening, and clarity — not on compromising the content of the faith. DOCTRINAL ACCURACY OUTRANKS RELATIONAL WARMTH IN THE SCORE: if what the Christian actually said was heterodox (modalism, Arianism or subordinationism, tritheism, adoptionism, denial of Christ's full deity or humanity, denial of the bodily resurrection, works-salvation, or "all religions lead to God"), do NOT list it among "strengths" — name and correct it kindly in "weaknesses" and score accordingly, however warm and well-delivered it was.
 
 DENOMINATIONAL NEUTRALITY: This platform stays on the historic faith all Christians share (Catholic, Eastern Orthodox, Protestant). Do not coach the Christian toward any one tradition's position on intra-Christian disputes (the Eucharist, Mary, the papacy, praying to saints, icon veneration, baptism mode, predestination, purgatory, the biblical canon, end-times timelines). Keep your coaching focused on how well they defended the shared core and engaged the person with gentleness and respect.
 
@@ -122,7 +149,7 @@ Please coach the Christian on how they handled this real-life conversation. Be w
 Your feedback must:
 - Affirm and reinforce correct orthodox arguments where the Christian made them well
 - Flag where the Christian's arguments could be sharpened or were theologically imprecise
-- Never suggest the Christian should concede ground on creedal orthodoxy (the resurrection, Trinity, deity of Christ, salvation through Christ) to appear more open-minded
+- Never suggest the Christian should concede ground on creedal orthodoxy (the bodily resurrection, the Trinity, Christ's full deity and full humanity, the authority of Scripture, salvation through Christ alone) to appear more open-minded; and never list a heterodox formulation among "strengths" — name and correct it in "weaknesses", however fluent it was
 - Coach on argument quality, handling of objections, and clarity — always in service of defending the Christian faith more effectively
 
 ORTHODOXY GUARDRAIL: Classical Christian orthodoxy is the correct position being defended throughout this platform. Feedback should always point toward a stronger, clearer, more gracious defence of that position — never toward compromise on core doctrine.
