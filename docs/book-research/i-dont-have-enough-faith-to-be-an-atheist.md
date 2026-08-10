@@ -87,6 +87,25 @@ coming on the clouds, not on the service-word.
 | Appendix 3 — the Jesus Seminar | 1 corroboration | Covered in `burial.html`, `emptytomb.html`, `minimalfacts.html` and `ev-s2.html`. |
 | Ch. 1–2 — truth, first principles, Hume/Kant | 4 missing, **low value / no essay counterpart** | Deliberately: this is prolegomena, and it is served by the relativism `/answers/*` pages rather than by a deep dive. No row. |
 
+### ⭐ WHAT THE COVER-TO-COVER READ ADDED (2026-08-08, second pass under the new rule)
+
+The first pass on this note read its **headings, cross-map and one flag block**. Reading it top to
+bottom found three things that sit in "To confirm on use" and guardrail-fit blocks — **in no heading,
+reachable by no search:**
+
+| Finding | Verdict |
+|---|---|
+| 🔴 **The `/sources` live-door path for ch. 8 was flagged and never completed.** The note says twice that **Hume (d. 1776) and Spinoza (d. 1677) are public domain** and "could seed `/sources`". `library/miracles.html` was built on exactly those two primaries — and **neither is in `/sources`** (0 hits). So the chain *lead → verified PD primary → `/sources` → `lib/sources-verified.js` → live `/api/ask`* stops one step short. This is the only route by which any of this book's material can reach a **live AI answer**, and it is open. → row logged. |
+| **Simon Greenleaf is absent site-wide (0 hits) — and he is public domain.** Harvard law professor, author of the standard 19th-c. treatise on the law of evidence, who examined the Gospel witnesses under his own discipline and concluded they would be admitted "in any court of justice, without the slightest hesitation." Ch. 11 Reason 7 uses him for the **divergent-details** argument. PD (d. 1853) → also a `/sources` candidate. → row logged. |
+| **Habermas's "forty-one early creeds" (ch. 9, p. 245) — 0 hits site-wide.** `library/earlycreed.html` argues the 1 Cor 15 formula superbly but never says it is *one of dozens* of embedded creedal fragments. That framing makes the early-tradition case structural rather than resting on a single passage. ⚠ Attribute to Habermas's own work, and note our Dunn row already covers the adjacent dating issue. → folded into the Dunn row rather than opening a fourth. |
+
+**Two calibrations the cover-to-cover read confirms we already have right** (recorded so nobody
+"fixes" them): the note warns the *"women's testimony was legally inadmissible"* claim is commonly
+overstated and should be kept in the **cultural-devaluing** form — `/answers/why-were-women-the-first-witnesses`
+already does exactly that. And it warns that *"11 of the 12 apostles were martyred"* rests on
+**traditions of varying strength** — our resurrection material already leans on the safer
+sincerely-believed-and-suffered form, per Habermas/Licona.
+
 ### Live-door status
 Nothing from this book is in `/sources` or `/briefs`. **Ch. 8 is executed and live** (see the banner).
 This pass produced **no live content change** — its output is the ledger correction above, the *pelach*
