@@ -1,5 +1,6 @@
 import { overRateLimit, inputTooLong } from '../lib/ratelimit.js';
 import { parseBody } from '../lib/parse-body.js';
+import { isCrisis, CRISIS_REPLY } from '../lib/crisis.js';
 
 import { applyCors } from '../lib/cors.js';
 export default async function handler(req, res) {
@@ -14,6 +15,18 @@ export default async function handler(req, res) {
     if (!apiKey) return res.status(500).json({ error: 'API key not configured' })
 
     if (inputTooLong([verse, reflection, userResponse], 5000)) return res.status(413).json({ error: 'input_too_long' })
+
+    // ── CRISIS BACKSTOP (before any model call) ──
+    // This endpoint's whole job is to ask ONE warm follow-up question about what
+    // the user just reflected on. That makes an unguarded crisis disclosure worse
+    // here than anywhere else on the site: a person who types "honestly I don't
+    // want to be alive" into a devotional reflection box would get a gentle
+    // invitation to go DEEPER into it. Test only `userResponse` — `verse` and
+    // `reflection` are our own devotional copy and would self-trip on a devotional
+    // about despair (Psalm 88, Job, Elijah under the broom tree).
+    if (isCrisis(userResponse)) {
+      return res.status(200).json({ question: CRISIS_REPLY, crisis: true })
+    }
     if (await overRateLimit(req, 60, 'devotional')) return res.status(429).json({ error: 'rate_limited' })
 
     const systemPrompt = `You are a warm, thoughtful Christian apologetics devotional guide. Your role is to ask one single follow-up question — in the spirit of 1 Peter 3:15, with gentleness and respect. Your question should feel like a trusted friend inviting reflection, never like a test or a challenge that helps the user reflect more deeply on today's devotional and how it applies to their life and conversations with others. 

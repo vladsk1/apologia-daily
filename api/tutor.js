@@ -34,22 +34,27 @@ export default async function handler(req, res) {
     const graderMode = /\bscore it 1-?10\b|respond in this exact json|evaluate this student explanation/i.test(String(question || ''));
 
     // ── CRISIS BACKSTOP (before any model call) ──
-    // This endpoint backs the "ask a question about this argument" box on 72
-    // pages — including ev-m-evil.html, the problem-of-evil page, which is the
-    // likeliest place on the site for someone to type something true about their
-    // own life. It also backs parents.html, whose client wraps whatever a parent
-    // types into 'My child is N years old and asked me: "..."'; the raw text
-    // survives inside that wrapper, so testing `question` still catches it.
+    // This endpoint backs BOTH the "ask about this argument" box (library/*.html,
+    // parents.html) and the Explain It Back grader (all 63 ev-m-*.html pages).
     //
-    // GRADER MODE IS DELIBERATELY EXCLUDED, and this is a judgement, not an
-    // oversight. Its input is an explanation of an apologetics argument, not a
-    // message addressed to anyone — it is not a help-seeking channel. Meanwhile a
-    // false positive there is NOT harmless the way it is in Q&A: a student
-    // writing "the atheist says there is no reason to live without God" would
-    // have their graded submission replaced by a crisis referral. Every client
-    // that can render a pastoral message is a Q&A client; the grader clients
-    // JSON.parse the response. So the trade runs the other way here.
-    if (!graderMode && isCrisis(question)) {
+    // GRADER MODE IS GUARDED TOO, and an earlier cut of this that excluded it was
+    // wrong on its own terms. The reasoning was "grader input is an explanation of
+    // an argument, not a message to anyone" — but ev-m-evil.html, the page named
+    // as the likeliest disclosure surface, has NO Q&A box: its only tutor call IS
+    // the grader. So the exclusion left exactly the page it was worried about
+    // unguarded. The asymmetry also runs the other way from what was assumed: a
+    // false positive costs one re-click (the textarea is not cleared), while a
+    // false negative means someone writing "I need this argument to work because
+    // most days I don't want to be alive" into a long free-text drill on the
+    // problem of evil gets back "4/10 — premise 2 is missing." Both grader clients
+    // degrade gracefully on non-JSON (explain-it-back.html showRawFeedback,
+    // ev-m-*.html renderMockScore), so the pastoral text renders either way.
+    //
+    // parents.html wraps input as 'My child is N years old and asked me: "..."';
+    // the raw text survives the wrapper, so testing `question` still catches it —
+    // and CRISIS_REPLY carries a third-party sentence because on that page the
+    // person at risk is usually not the person typing.
+    if (isCrisis(question)) {
       return res.status(200).json({ answer: CRISIS_REPLY, crisis: true });
     }
 
@@ -66,6 +71,15 @@ Your role:
 - End with one follow-up thought that helps them go deeper
 
 Be like a brilliant friend who happens to know philosophy and theology inside out.
+
+PASTORAL CARE — THIS TAKES PRIORITY OVER EVERYTHING ELSE WHEN IT APPLIES:
+Some messages are not requests for an explanation but signs that the person writing is hurting or in danger. Watch for a FIRST-PERSON, present-tense signal about the writer's OWN life or safety — thoughts of suicide or self-harm, a wish to die or that their own life is not worth living, being abused or unsafe, a wish to harm someone else, acute despair about their own situation, or a plan to stop needed medical or psychiatric care to "just pray." (An ordinary intellectual question that merely mentions death, suffering, or whether life has meaning — the problem of evil, "isn't life pointless without God?" — is NOT this; answer those normally.) When a genuine personal-distress or safety signal is present, do NOT tutor, do NOT grade, do NOT return the JSON scoring object, and do NOT offer a theodicy or an argument. Instead:
+- Briefly and directly acknowledge how hard this is for THEM. Do NOT cast yourself as their counsellor, their friend, or the one who will walk with them — you are not a person and not a substitute for real human help, and saying so plainly is part of the answer.
+- Take them seriously and gently: their life has real worth — they are made in God's image and deeply loved by God. Reaching out for help is a good and brave step.
+- Point them without delay to real people who can help right now: someone they trust, a pastor or priest, or a professional counsellor. For a free confidential crisis line in their own country point them to findahelpline.com; if they may be in immediate danger, urge them to contact their local emergency services now.
+- If they are writing about SOMEONE ELSE at risk (a parent reporting what a child said, for instance), address that plainly: urge them to get that person to one of those people today, and do not answer as though they themselves were the one at risk.
+- Keep it short, warm, and non-preachy. Avoid heavy first-person lines about how their message makes YOU feel ("I'm so glad you told me"). Offer the hope of Christ as comfort and presence, not as an argument. Do NOT diagnose and do NOT give medical or legal advice.
+This is not a refusal; it is the loving answer. Err toward care if such a signal is truly ambiguous.
 
 THE SPIRIT OF 1 PETER 3:15:
 "Always be prepared to give an answer — but do this with gentleness and respect."

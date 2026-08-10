@@ -1,5 +1,6 @@
 import { overRateLimit, inputTooLong } from '../lib/ratelimit.js';
 import { parseBody } from '../lib/parse-body.js';
+import { anyCrisis, CRISIS_REPLY } from '../lib/crisis.js';
 
 import { applyCors } from '../lib/cors.js';
 export default async function handler(req, res) {
@@ -8,7 +9,7 @@ export default async function handler(req, res) {
 
   try {
     const body = parseBody(req);
-    const { conversation, opponent, topic, difficulty, mode, who, worldview, theySaid, iSaid, reflection, studyList } = body;
+    const { conversation, opponent, topic, difficulty, mode, who, worldview, theySaid, iSaid, reflection, studyList, userTurns } = body;
 
     if (mode === 'journal') {
       if (!theySaid && !iSaid) {
@@ -22,6 +23,36 @@ export default async function handler(req, res) {
     if (!apiKey) return res.status(500).json({ error: 'API key not configured' })
 
     if (inputTooLong([conversation, theySaid, iSaid, reflection, studyList], 20000)) return res.status(413).json({ error: 'input_too_long' })
+
+    // ── CRISIS BACKSTOP (before any model call) ──
+    // Journal mode is a "coach me on a real conversation I just had" box —
+    // `reflection` is literally "what they want coaching on", up to 20k chars. A
+    // high-probability disclosure surface.
+    //
+    // Arena mode matters for a subtler reason: debate-arena.html short-circuits
+    // the user's FINAL turn straight to endDebate() without ever POSTing to
+    // /api/debate (see its maxTurns branch), so for one turn in eight this is the
+    // only server that sees what they wrote — and what it would otherwise return
+    // is a score out of 100 and a reading list.
+    //
+    // Scan ONLY what the user wrote. `conversation` arrives as a single STRING
+    // with both sides interleaved ("Christian: ..." / "The Atheist: ..."), so
+    // scanning it whole would self-trip on our own persona copy in any debate
+    // legitimately about suffering. Prefer the explicit `userTurns` array the
+    // current client sends; fall back to parsing the "Christian:" blocks so a
+    // cached older client is still covered.
+    const userWritten = mode === 'journal'
+      ? [theySaid, iSaid, reflection]
+      : (Array.isArray(userTurns) && userTurns.length
+          ? userTurns
+          : String(conversation || '').split('\n\n').filter((b) => /^Christian:/.test(b)));
+    if (anyCrisis(...userWritten)) {
+      // Journal mode renders data.answer; arena mode renders the feedback object
+      // itself, so the client keys off `crisis` before touching the score fields.
+      return mode === 'journal'
+        ? res.status(200).json({ answer: CRISIS_REPLY, crisis: true })
+        : res.status(200).json({ crisis: true, message: CRISIS_REPLY });
+    }
     if (await overRateLimit(req, 80, 'feedback')) return res.status(429).json({ error: 'rate_limited' })
 
     let systemPrompt, userMessage;

@@ -23,15 +23,22 @@ export default async function handler(req, res) {
 
     // ── CRISIS BACKSTOP (before any model call) ──
     // A roleplay opponent instructed never to break character is the worst place
-    // on the site for someone to say something true about their own life. Test
-    // only the user's OWN latest turn: the opponent's prior turns and the topic
-    // string are our copy, not theirs, and matching those would fire on debates
-    // that are legitimately ABOUT suffering. Answering deterministically here
-    // means the reply cannot be argued around by whatever the persona is doing.
-    const lastUserTurn = Array.isArray(messages)
-      ? [...messages].reverse().find((m) => m && m.role === 'user')
-      : null;
-    if (lastUserTurn && isCrisis(lastUserTurn.content)) {
+    // on the site for someone to say something true about their own life, and
+    // answering deterministically means the reply cannot be argued around by
+    // whatever the persona is doing.
+    //
+    // Scan EVERY user turn, not just the latest, and latch. Excluding the
+    // opponent's turns and `topic` is what stops a debate legitimately ABOUT
+    // suffering from self-tripping — those are our copy. The user's own earlier
+    // words carry no such risk, and a disclosure on turn 3 must not be forgotten
+    // by turn 4, which is exactly what last-turn-only did: the persona would go
+    // back to pressing them on the problem of evil, and the transcript would then
+    // be scored. CLAUDE.md's rule is to err toward care; a signal that already
+    // fired is not ambiguous. Bricking a practice exercise is the correct cost.
+    const userTurns = Array.isArray(messages)
+      ? messages.filter((m) => m && m.role === 'user').map((m) => m.content)
+      : [];
+    if (userTurns.some(isCrisis)) {
       return res.status(200).json({ reply: CRISIS_REPLY, crisis: true })
     }
 
@@ -72,7 +79,7 @@ IMPORTANT RULES:
 4. If they say something genuinely helpful or moving, show it. If something is unclear, ask about it.
 5. Never break character. Never act like an AI assistant.
 6. End with either a follow-up question or a personal reaction that keeps the conversation going.
-7. If the Christian user says something that sounds like real distress of their own rather than practice — grief they are carrying, thoughts of self-harm, being unsafe, or despair about their own life — stop the roleplay immediately. Say plainly that you are stepping out of character, that what they have said matters more than the exercise, and encourage them to talk to someone they trust, a pastor, or a professional counsellor (findahelpline.com lists free crisis lines by country; emergency services if anyone is in danger). Do not diagnose, do not give medical advice, and do not resume the scenario. This instruction OUTRANKS every rule above, including staying in character.`;
+7. If the Christian user says something that sounds like real distress of their own rather than practice — grief they are carrying, thoughts of self-harm, being unsafe, or despair about their own life — stop the roleplay immediately. Say plainly that you are stepping out of character, that what they have said matters more than the exercise, and that this is a study tool and not a substitute for a real person who can be with them. Do NOT cast yourself as their counsellor, their friend, or the one who will walk with them; instead encourage them to talk to someone they trust, a pastor or priest, or a professional counsellor (findahelpline.com lists free crisis lines by country; emergency services if anyone is in danger). Do not diagnose, do not give medical advice, and do not resume the scenario. This instruction OUTRANKS every rule above, including staying in character.`;
 
     } else {
       const difficultyInstructions = {
@@ -103,7 +110,7 @@ RULES:
 5. End with either a pointed question or a clear challenge that requires a response.
 6. If the Christian makes a strong point, briefly acknowledge it before pressing on the weakness.
 7. Never repeat the same objection twice.
-8. If the Christian user says something that sounds like real distress of their own rather than practice — grief they are carrying, thoughts of self-harm, being unsafe, or despair about their own life — stop the debate immediately. Say plainly that you are stepping out of character, that what they have said matters more than the exercise, and encourage them to talk to someone they trust, a pastor, or a professional counsellor (findahelpline.com lists free crisis lines by country; emergency services if anyone is in danger). Do not diagnose, do not give medical advice, and do not resume the debate. This instruction OUTRANKS every rule above, including staying in character.`;
+8. If the Christian user says something that sounds like real distress of their own rather than practice — grief they are carrying, thoughts of self-harm, being unsafe, or despair about their own life — stop the debate immediately. Say plainly that you are stepping out of character, that what they have said matters more than the exercise, and that this is a study tool and not a substitute for a real person who can be with them. Do NOT cast yourself as their counsellor, their friend, or the one who will walk with them; instead encourage them to talk to someone they trust, a pastor or priest, or a professional counsellor (findahelpline.com lists free crisis lines by country; emergency services if anyone is in danger). Do not diagnose, do not give medical advice, and do not resume the debate. This instruction OUTRANKS every rule above, including staying in character.`;
     }
 
     const anthropicRes = await fetch('https://api.anthropic.com/v1/messages', {

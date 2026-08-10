@@ -5,10 +5,12 @@
  * regex matches the right phrases; tests/content-integrity.test.mjs runs it. But
  * a correct regex is worth nothing if an endpoint never calls it, and that was
  * the actual state of the site until 2026-08-10: the pattern lived inline in
- * api/ask.js and the other three free-text endpoints — /api/tutor (72 pages,
- * including the problem-of-evil page and parents.html), /api/debate (personas
- * told never to break character), /api/submit-question (a standalone form that
- * answered a cry for help with a canned thank-you) — had no crisis path at all.
+ * api/ask.js and FIVE other free-text endpoints had no crisis path at all —
+ * /api/tutor (the ask box on library/*.html and the Explain It Back grader on all
+ * 63 ev-m-*.html pages), /api/debate (personas told never to break character),
+ * /api/devotional (a reflection box whose job is to ask a warm follow-up),
+ * /api/feedback (journal coaching + the debate transcript), and
+ * /api/submit-question (a form that answered a cry for help with a thank-you).
  *
  * Nothing failed when that was true. These cases fail if it becomes true again.
  */
@@ -19,16 +21,34 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 import { isCrisis, CRISIS_REPLY, crisisPattern } from '../lib/crisis.js';
-import { checkEndpointsWired, GUARDED_ENDPOINTS } from '../tools/test-crisis-routing.mjs';
+import { checkEndpointsWired, GUARDED_ENDPOINTS, CRISIS_EXEMPT } from '../tools/test-crisis-routing.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 test('every free-text endpoint imports AND calls the shared crisis guard', () => {
-  const rows = checkEndpointsWired();
-  assert.equal(rows.length, GUARDED_ENDPOINTS.length);
+  // checkEndpointsWired() enumerates api/*.js from DISK, so a new endpoint that
+  // reads user text is caught here the moment it is added. Do not replace this
+  // with a hand-written list — a list checks itself, which is how devotional.js
+  // and feedback.js were missed on this change's own first pass.
+  const rows = checkEndpointsWired().filter((r) => r.needsGuard);
+  assert.ok(rows.length >= 6, `expected at least 6 guarded endpoints, found ${rows.length}`);
   for (const r of rows) {
-    assert.ok(r.imports, `${r.endpoint} does not import isCrisis from lib/crisis.js`);
-    assert.ok(r.calls, `${r.endpoint} imports isCrisis but never calls it`);
+    assert.ok(r.imports, `${r.endpoint} does not import the crisis guard from lib/crisis.js`);
+    assert.ok(r.calls, `${r.endpoint} imports the crisis guard but never calls it`);
+  }
+});
+
+test('every crisis exemption carries a written reason', () => {
+  for (const [file, reason] of Object.entries(CRISIS_EXEMPT)) {
+    assert.equal(typeof reason, 'string');
+    assert.ok(reason.length > 20, `api/${file} is exempt without a real reason`);
+  }
+});
+
+test('the six known free-text endpoints are all in scope', () => {
+  // Named explicitly so silently narrowing readsFreeText() cannot quietly drop one.
+  for (const f of ['ask.js', 'tutor.js', 'debate.js', 'devotional.js', 'feedback.js', 'submit-question.js']) {
+    assert.ok(GUARDED_ENDPOINTS.includes(f), `api/${f} fell out of the guarded set`);
   }
 });
 
@@ -53,6 +73,24 @@ test('isCrisis catches first-person crisis phrasing', () => {
     'I keep wanting to hurt myself',
     "There's no reason to live",
   ]) assert.ok(isCrisis(msg), `missed: ${msg}`);
+});
+
+test('isCrisis catches curly apostrophes as well as straight ones', () => {
+  // iOS and macOS substitute U+2019 by default, so /don'?t/ silently missed the
+  // phone-typed form — the majority of our traffic — while a straight-quote test
+  // corpus passed. Any apostrophe added to the pattern must accept both.
+  assert.ok(isCrisis('I don\u2019t want to be alive'), 'curly apostrophe not matched');
+  assert.ok(isCrisis("I don't want to be alive"), 'straight apostrophe not matched');
+  assert.ok(isCrisis('i DON\u2019T WANT TO LIVE'), 'curly + case not matched');
+});
+
+test('the reply does not presume the writer is the person at risk', () => {
+  // parents.html wraps input as 'My child is N years old and asked me: "..."',
+  // so the likeliest true positive there is a THIRD party. Without this the reply
+  // is addressed to the wrong person at the worst possible moment — and it is
+  // also what keeps the two known false positives ("do people who commit suicide
+  // go to hell?", asked by the bereaved) from being actively cruel.
+  assert.match(CRISIS_REPLY, /writing about someone else/i);
 });
 
 test('isCrisis does not fire on ordinary apologetics questions', () => {

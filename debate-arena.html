@@ -839,6 +839,7 @@
     }
 
     function startConvo() {
+      resetCrisisLatch();
       if (!convoState.scenario || !convoState.topic) return;
 
       // Check weekly limit (shared with debate)
@@ -1084,6 +1085,7 @@
     }
 
     function startDebate() {
+      resetCrisisLatch();
       if (!state.opponent || !state.topic) return;
 
       // Check weekly limit
@@ -1140,6 +1142,53 @@
       chatBox.appendChild(msg);
       chatBox.scrollTop = chatBox.scrollHeight;
       if (role === 'opp') speak(text);
+    }
+
+    /* The crisis referral must NOT go through addMessage('opp', ...). Rendered as
+       the opponent it appears under their name and avatar, is read aloud by TTS in
+       their voice, and loses its paragraph breaks (.msg-bubble sets no
+       white-space) — so the one message that most needs to read as sincere reads
+       as a persona glitch. This renders it out-of-character, ends the exercise,
+       and never routes to the scoring screen: nobody gets marked out of 100 on a
+       turn in which they said something true about their own life. */
+    let crisisLatched = false;
+
+    /* The latch is per-EXERCISE, not per-page. Without this, starting a second
+       debate after a crisis panel leaves a permanently dead arena: the input and
+       both buttons stay disabled and endDebate() returns early forever. Starting
+       a new exercise is the user's own choice, so clear it and restore the
+       controls the panel disabled. */
+    function resetCrisisLatch() {
+      crisisLatched = false;
+      const input = document.getElementById('debate-input');
+      if (input) { input.disabled = false; input.placeholder = 'Type your response to the opponent…'; }
+      ['send-btn', 'mic-btn'].forEach(function (id) {
+        const b = document.getElementById(id); if (b) b.disabled = false;
+      });
+    }
+
+    function showCrisisPanel(text) {
+      if (crisisLatched) return;
+      crisisLatched = true;
+      try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {}
+      const chatBox = document.getElementById('chat-box');
+      const panel = document.createElement('div');
+      panel.setAttribute('role', 'alert');
+      panel.style.cssText = 'margin:1.25rem 0;padding:1.1rem 1.2rem;border:1px solid rgba(200,169,81,0.45);border-left:3px solid var(--gold);border-radius:4px;background:rgba(200,169,81,0.07);';
+      const label = document.createElement('div');
+      label.style.cssText = "font-family:var(--font-ui);font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;";
+      label.textContent = 'Stepping out of the exercise';
+      const body = document.createElement('div');
+      body.style.cssText = 'font-family:var(--font-ui);font-size:0.92rem;line-height:1.75;color:rgba(255,255,255,0.92);white-space:pre-wrap;';
+      body.textContent = text;   // textContent, not innerHTML — never inject a server string
+      panel.appendChild(label); panel.appendChild(body);
+      chatBox.appendChild(panel);
+      chatBox.scrollTop = chatBox.scrollHeight;
+      const input = document.getElementById('debate-input');
+      if (input) { input.disabled = true; input.value = ''; input.placeholder = 'This practice session has ended.'; }
+      ['send-btn', 'mic-btn', 'end-btn'].forEach(function (id) {
+        const b = document.getElementById(id); if (b) b.disabled = true;
+      });
     }
 
     function showTyping() {
@@ -1252,6 +1301,12 @@
       if (state.turns >= state.maxTurns) {
         removeTyping();
         document.getElementById('send-btn').disabled = false;
+        // The last turn short-circuits to scoring WITHOUT posting to /api/debate,
+        // so the server-side backstop never sees it — and the turn people are
+        // likeliest to say something real on is the last one of a debate they
+        // feel they are losing. endDebate() posts the transcript to /api/feedback,
+        // which checks it there and answers {crisis:true}; this just makes sure
+        // the scoring screen is not what they get.
         endDebate();
         return;
       }
@@ -1278,6 +1333,7 @@
         const data = await response.json();
         removeTyping();
 
+        if (data.crisis) { removeTyping(); showCrisisPanel(data.reply); return; }
         if (data.reply) {
           addMessage('opp', data.reply);
           state.messages.push({ role: 'assistant', content: data.reply });
@@ -1314,6 +1370,12 @@
     });
 
     async function endDebate() {
+      // If a crisis already fired mid-debate the exercise is over: never fall
+      // back into the scoring flow. (For a disclosure on the FINAL turn the latch
+      // is not yet set — that turn never posts to /api/debate — so the screen
+      // switches briefly before /api/feedback answers {crisis:true} and routes
+      // back. No score is rendered in that window; the score fields hold "—".)
+      if (crisisLatched) return;
       if (micActive && recog) { try { recog.stop(); } catch(e) {} stopMic(); }
       if (TTS) TTS.cancel();
       const isConvo = state.mode === 'convo';
@@ -1391,6 +1453,10 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             conversation: conversationText,
+            // The transcript interleaves both sides, so the server cannot scan it
+            // for a crisis signal without self-tripping on our own persona copy.
+            // Send the user's turns separately.
+            userTurns: state.messages.filter(m => m.role === 'user').map(m => m.content),
             opponent: isConvo ? scenarioName : oppNames[state.opponent],
             topic: state.topic,
             difficulty: isConvo ? 'conversation' : state.difficulty,
@@ -1400,6 +1466,14 @@
 
         if (response.ok) {
           const feedback = await response.json();
+          // A crisis signal anywhere in what the USER wrote — including the final
+          // turn, which never reaches /api/debate — must not be answered with a
+          // score out of 100 and a reading list.
+          if (feedback.crisis) {
+            showScreen('screen-arena');
+            showCrisisPanel(feedback.message || '');
+            return;
+          }
           const overall = parseInt(feedback.overall) || 70;
           const argument = parseInt(feedback.argument) || 72;
           const objection = parseInt(feedback.objection) || 65;

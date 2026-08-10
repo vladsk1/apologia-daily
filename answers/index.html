@@ -239,6 +239,11 @@
           msg.style.color='#0a1628';
           msg.style.whiteSpace='pre-line';
           msg.textContent=d.message;
+          // Put their words back. The success path clears the textarea
+          // synchronously, so a person whose message was flagged would otherwise
+          // watch it vanish from the screen at the worst possible moment.
+          var qEl=document.getElementById('ask-submit-q');
+          if(qEl && !qEl.value) qEl.value=q;
         }
       }).catch(function(){});
     try{ if(window.posthog) window.posthog.capture('question_submitted',{source:'answers-index',has_email:!!email}); }catch(e){}
