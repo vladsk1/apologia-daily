@@ -51,17 +51,17 @@ export default async function handler(req, res) {
       // itself, so the client keys off `crisis` before touching the score fields.
       return mode === 'journal'
         ? res.status(200).json({ answer: CRISIS_REPLY, crisis: true })
-        : res.status(200).json({
+        : res.status(422).json({
             crisis: true,
             message: CRISIS_REPLY,
-            // A client older than 2026-08-10 ignores `crisis` and reads
-            // parseInt(feedback.overall) || 70 — so omitting the score keys makes
-            // it fabricate 70/72/65 next to a crisis referral. The Capacitor build
-            // ships debate-arena.html INSIDE the binary, so "cached client" is a
-            // permanent state for app users until they update. Send the referral
-            // in the fields such a client actually renders, and no numbers.
-            overall: '', argument: '', objection: '',
-            strengths: CRISIS_REPLY, weaknesses: '',
+            // 422, not 200, and the status is doing the work. A client older than
+            // 2026-08-10 ignores `crisis` and computes parseInt(feedback.overall)
+            // || 70 — and parseInt('') is NaN, so blanking the score fields does
+            // NOT avoid that fallback (verified: it still yields 70). A non-2xx
+            // makes such a client take its `response.ok` branch instead, which now
+            // renders em-dashes and "coaching is unavailable" rather than a
+            // fabricated score beside a crisis referral. Current clients read this
+            // body regardless of status and show the referral.
           });
     }
 

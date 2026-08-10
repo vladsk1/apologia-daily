@@ -1467,16 +1467,18 @@
           })
         });
 
+        // Read the body BEFORE branching on status: the crisis response is
+        // deliberately 422 so that older cached clients fall into their
+        // "coaching unavailable" path rather than fabricating a score.
+        let payload = null;
+        try { payload = await response.clone().json(); } catch (e) {}
+        if (payload && payload.crisis) {
+          showScreen('screen-arena');
+          showCrisisPanel(payload.message || '');
+          return;
+        }
         if (response.ok) {
-          const feedback = await response.json();
-          // A crisis signal anywhere in what the USER wrote — including the final
-          // turn, which never reaches /api/debate — must not be answered with a
-          // score out of 100 and a reading list.
-          if (feedback.crisis) {
-            showScreen('screen-arena');
-            showCrisisPanel(feedback.message || '');
-            return;
-          }
+          const feedback = payload || await response.json();
           const overall = parseInt(feedback.overall) || 70;
           const argument = parseInt(feedback.argument) || 72;
           const objection = parseInt(feedback.objection) || 65;
