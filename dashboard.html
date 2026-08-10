@@ -1139,13 +1139,24 @@
   // ── ONBOARDING ──
   // Each focus maps to a real seed argument (an ev-m-*.html page AND a
   // daily-args.json entry, so /today can open the first session right there).
+  // An entry may instead supply `href` to route somewhere that is not a single
+  // seed argument (the `explore` option opens the Evidence Library hub);
+  // `d2title`/`d2desc` then override the day-2 journey card, whose default copy
+  // ("read the free summary") only makes sense for a single argument page.
   var FOCUS_MAP = {
     god:          { arg:'kalam',         name:'The Kalam Cosmological Argument',       cat:"God's Existence",     label:'does God exist' },
     jesus:        { arg:'jesus_claims',  name:'Did Jesus Claim to Be God',             cat:'Jesus',               label:'who Jesus is' },
     resurrection: { arg:'minimal',       name:'The Minimal Facts Argument',            cat:'The Resurrection',    label:'the resurrection' },
     bible:        { arg:'manuscript',    name:'The Manuscript Reliability Argument',   cat:'Biblical Reliability',label:'whether the Bible is reliable' },
-    suffering:    { arg:'evil',          name:'The Problem of Evil as Evidence for God',cat:"God's Existence",    label:'the problem of suffering' },
-    islam:        { arg:'trinity_islam', name:'Answering Islam on the Trinity',        cat:'The Trinity',         label:'answering Islam' }
+    islam:        { arg:'trinity_islam', name:'Answering Islam on the Trinity',        cat:'The Trinity',         label:'answering Islam' },
+    explore:      { href:'evidence-library.html', name:'the Evidence Library',         cat:null,                  label:'getting the whole picture',
+                    d2title:'Explore the Evidence Library',
+                    d2desc:'You told us you want the whole picture — so start here. Every argument on the site, grouped by topic, each with a free summary you can read in a few minutes.' },
+    // LEGACY — no longer offered at onboarding. "Why is there suffering?" is as
+    // often a pastoral cry as an apologetics question, and a picker cannot tell
+    // the two apart (see the PASTORAL CARE path in api/ask.js). Kept so accounts
+    // that already chose it keep their personalisation.
+    suffering:    { arg:'evil',          name:'The Problem of Evil as Evidence for God',cat:"God's Existence",    label:'the problem of suffering' }
   };
   var OB_STEPS = [
     {id:'intent',title:'What brings you here?',sub:'This shapes everything we suggest you',options:[
@@ -1163,8 +1174,8 @@
       {val:'jesus',label:'Who is Jesus — and is he God?',desc:'His claims, and the Trinity'},
       {val:'resurrection',label:'Did Jesus rise from the dead?',desc:'The historical case for the resurrection'},
       {val:'bible',label:'Can I trust the Bible?',desc:'Manuscripts, reliability, and history'},
-      {val:'suffering',label:'Why is there suffering?',desc:'The problem of evil'},
-      {val:'islam',label:'Answering Islam',desc:'Responding to the strongest Muslim objections'}
+      {val:'islam',label:'Answering Islam',desc:'Responding to the strongest Muslim objections'},
+      {val:'explore',label:'I want the whole picture',desc:'Not one question yet — show me the full case and let me explore'}
     ]},
     {id:'goal',title:'What is your main goal?',sub:'We will focus your daily suggestions around this',options:[
       {val:'faith',label:'Strengthen my own faith',desc:'Understand why I believe what I believe'},
@@ -1244,7 +1255,7 @@
     if (titleEl) titleEl.textContent = 'Your path is ready';
     if (subEl) subEl.textContent = f ? 'Because of what you told us, here is where we are starting you' : 'Here is where we are starting you';
     if (!body) return;
-    var startHref = f ? ('ev-m-' + f.arg + '.html') : 'today.html';
+    var startHref = f ? (f.href || ('ev-m-' + f.arg + '.html')) : 'today.html';
     var startLabel = f ? f.name : "Today's session";
     var because = f ? ('You said you are here about <b>' + f.label + '</b> — so your first session is <b>' + startLabel + '</b>.') :
                       'Start with a focused 5-minute session built around what matters most to you.';
@@ -1398,9 +1409,9 @@
       var pf = getFocus();
       if (pf) {
         focus = Object.assign({}, focus, {
-          title: 'Read: ' + pf.name,
-          desc: 'You told us you are here about ' + pf.label + ' — so this is where we start you. Read the free summary, written to be clear enough to explain to a friend tonight.',
-          link: 'ev-m-' + pf.arg + '.html'
+          title: pf.d2title || ('Read: ' + pf.name),
+          desc: pf.d2desc || ('You told us you are here about ' + pf.label + ' — so this is where we start you. Read the free summary, written to be clear enough to explain to a friend tonight.'),
+          link: pf.href || ('ev-m-' + pf.arg + '.html')
         });
       }
     }
