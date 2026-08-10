@@ -89,6 +89,20 @@ our-own-words material (or a verified PD primary) reaches a visitor.
 > **Why this rule exists:** see the full statement in
 > [`docs/book-research/README.md`](../book-research/README.md) § *Step Zero* (the mastery-page finding, and
 > the `Lemaître`-returns-zero-hits near-miss of 2026-08-06).
+>
+> ⚠ **AND READ THE RESEARCH NOTE COVER TO COVER TOO. (Added 2026-08-08, owner-directed.)** Not its
+> headings, not its cross-map, not the sections a search surfaced — **the whole file, top to bottom.**
+> The section list you must walk is only as complete as your reading of it, and a heading tells you a
+> section exists without telling you what it claims. Two failures in one run came straight out of
+> skimming a note: a pass classified a book's leads and never noticed its six appendices existed as a
+> checklist, and another note turned out to contain a **retired claim** sitting quietly in a chapter map
+> nobody had read closely.
+>
+> ⚠⚠ **NEVER WRITE "READ IN FULL" UNLESS YOU READ IT IN FULL.** A note once recorded two essays as
+> "read in full" when a quarter of each had been read. The verdicts survived the full read — which is
+> luck, not method. **A verdict that turns out right is not the same as a verdict that was grounded when
+> it was made.** Same discipline as a `content-review` stamp: never stamp a check you did not run. If
+> you read part of it, say which part.
 
 1. **Read it as a lead** (open-access URL, or download to the git-ignored `_pdfs/`). Pull out (a) the
    argument's spine in our own words and (b) every **primary source** cited — Scripture refs, scholars,

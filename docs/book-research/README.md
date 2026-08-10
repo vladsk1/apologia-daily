@@ -61,6 +61,20 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
 > this same failure, one stage downstream. (b) On 2026-08-06 a `Lemaître` search returned **zero hits** in
 > `library/bigbang.html` and was nearly filed as a gap; he appears **eight times** and opens the essay — the
 > file stores him as `Lema&icirc;tre`. A search pattern cannot see what it cannot spell. Reading can.
+>
+> ⚠ **AND READ THE RESEARCH NOTE COVER TO COVER TOO. (Added 2026-08-08, owner-directed.)** Not its
+> headings, not its cross-map, not the sections a search surfaced — **the whole file, top to bottom.**
+> The section list you must walk is only as complete as your reading of it, and a heading tells you a
+> section exists without telling you what it claims. Two failures in one run came straight out of
+> skimming a note: a pass classified a book's leads and never noticed its six appendices existed as a
+> checklist, and another note turned out to contain a **retired claim** sitting quietly in a chapter map
+> nobody had read closely.
+>
+> ⚠⚠ **NEVER WRITE "READ IN FULL" UNLESS YOU READ IT IN FULL.** A note once recorded two essays as
+> "read in full" when a quarter of each had been read. The verdicts survived the full read — which is
+> luck, not method. **A verdict that turns out right is not the same as a verdict that was grounded when
+> it was made.** Same discipline as a `content-review` stamp: never stamp a check you did not run. If
+> you read part of it, say which part.
 
 1. Read each page carefully. If a photo is too blurry to read a citation cleanly, **say so and ask
    for a re-shot** — never guess a source, date, or page number.

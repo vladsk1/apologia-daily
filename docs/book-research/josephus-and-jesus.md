@@ -236,19 +236,33 @@ re-test found.** The site is well-calibrated on *what* to conclude about Josephu
 under-supplied on *why* — it asserts the majority reconstruction bare, and answers the forgery
 question in a weaker form than the scholarship poses it.
 
-### ⚠ WHAT THE EARLIER PASS MISSED — the appendices never got verdicts
-The 2026-07-28 cross-check classified the book's **leads** but walked past its **six appendices**.
-That is precisely the failure the standard now warns about: *the dangerous miss is not a wrong verdict,
-it is no verdict.* Giving each one now:
+### ⚠⚠ CORRECTION TO THIS SECTION'S OWN FIRST DRAFT (same day)
 
-| Appendix | Verdict |
+**An earlier version of this addendum said the 2026-07-28 pass "walked past the six appendices." That
+was wrong, and it was wrong because the addendum was written from this note's HEADINGS rather than from
+the note.** Read cover to cover (per the rule added to `CLAUDE.md` on 2026-08-08), the note plainly says
+the opposite in two places: its **Capture status** table marks *"Appendices 1–6 — ◻ topics only, mapped
+from the Introduction + Ch. 6"*, and its **⚠ OUTSTANDING** block states that the appendices and
+bibliography **were never read**, because `academic.oup.com` is egress-denied in this sandbox. It even
+ranks them: *"App. 1 — the Ken Olson 'Eusebius forged it' rebuttal. **The strongest live challenge to
+everything above.**"*
+
+So the appendices were not overlooked — they were **declared unread and explicitly prioritised**, and my
+"finding" restated a priority the note had already logged. ⭐ **This is the exact failure the
+cover-to-cover rule was written to stop, committed while writing up the book that produced the rule.**
+
+**What survives as genuinely new** from the appendix pass is narrower and still worth having: not that
+Olson is missing, but that **`library/hist_jesus.html` raises the forgery question by name in its own FAQ
+and answers a weaker version of it** — see the backlog row, which is retained on that ground.
+
+### ⭐ WHAT THE COVER-TO-COVER READ ADDED THAT NO HEADING PASS COULD
+
+| Finding | Verdict |
 |---|---|
-| **App. 1 — Eusebius did NOT forge the TF (rebutting Ken Olson)** | **4 MISSING — and it is a real gap.** `library/hist_jesus.html` carries an FAQ titled *"Isn't the Josephus passage about Jesus a Christian forgery?"* and answers the **generic** version (majority partial-interpolation vs. Schmidt's minority authenticity case). But **`Eusebius` returns 0 hits on that page**, and Olson's specific thesis — that Eusebius *composed* the passage — is the strongest scholarly form of the charge and the one Carrier leans on. We raise the question by name and answer a weaker cousin of it. **Same shape as the Casey finding on `ev-s3.html`.** → row logged. |
-| **App. 6 — Josephus's silence about Jesus in the *Jewish War*** | **4 missing.** `Jewish War` returns 0 hits on `hist_jesus.html`. "Why does Josephus's *earlier* book not mention him?" is a natural reader question and an argument-from-silence a critic can press. → folded into the same row. |
-| App. 2 — James, *Ant.* 20.200 | 1 corroboration — already the load-bearing passage on `hist_jesus.html` fn 7 and across `ev-s2`/`ev-s3`/`ev-s4`. |
-| App. 3 — The trial of Jesus and Passover | **6 non-recommendation.** Overlaps the crucifixion-day problem that `library/consistency.html` already handles carefully via Licona's ancient-biography framework. Adding a Josephan angle would complicate a section that is currently well-calibrated. |
-| App. 4 — Ananus II / *Toledot Yeshu* | 6 non-recommendation — already recorded above. Late, polemical, unusable as neutral history. |
-| App. 5 — The Great Sanhedrin and its records | **6 non-recommendation.** Speculative reconstruction; nothing on the site depends on it, and importing it would invite the "records that do not survive" objection for no gain. |
+| **Bermejo-Rubio dissents from the neutral-core reading** — he argues the original TF was **hostile**, not neutral. Buried in the note's *Citation notes*, not in any heading. **0 hits site-wide.** | **4 MISSING — a steelman gap.** `hist_jesus.html` and `ev-s3.html` assert the majority partial-interpolation reconstruction and name **Schmidt** as the minority pushing toward *more* authenticity — but name **no critic pushing the other way**. A reader is shown one flank of a two-sided debate. → row logged. |
+| **Ch. 1 — the Greek-reception argument.** Eusebius cites the TF three times and never once uses its spectacular messiah/resurrection/prophecy lines, only that Jesus had many followers; Isidore of Pelusium and Oecumenius do the same. | **3 weaker in ours.** This is *positive evidence* for the neutral core, and it is the same shape as the already-logged Jerome/Syriac row: our pages assert the reconstruction **bare**. Fold into that row rather than opening a second. |
+| **παράδοξα is genuinely ambiguous** — hostile writers used the very word to accuse Jesus of sorcery (Celsus), so it is *a reputation for extraordinary deeds*, never a Josephan endorsement of miracles. | **6 non-recommendation / calibration.** `hist_jesus.html` returns **0 hits** for παράδοξα, "wonder-worker" and "sorcery" — it simply does not make the wonder-worker move from Josephus, which sidesteps the trap entirely. **Correct as it stands; do not add the term without the ambiguity attached.** |
+| **Title guard: *Josephus and Jesus* (Schmidt 2025) ≠ *Josephus on Jesus* (Whealey 2003).** | Recorded. Neither is cited on-site yet; the guard matters the moment either is. |
 
 ### Standing warning, unchanged and reaffirmed
 The improvements above support the **majority partial-interpolation** reconstruction our pages already

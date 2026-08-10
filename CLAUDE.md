@@ -1183,6 +1183,22 @@ and a release.
 > **It is cheap.** The 85 essays have a median of ~5,200 words; most sources pair with 1–3, so step zero is
 > normally under 20,000 words against a whole source of mining.
 >
+> ⚠ **AND READ THE RESEARCH NOTE COVER TO COVER TOO. (Added 2026-08-08, owner-directed.)** Not its
+> headings, not its cross-map, not the sections a search surfaced — **the whole file, top to bottom.**
+> The section list you are required to walk is only as complete as your reading of it, and a heading
+> tells you a section exists without telling you what it claims. Two failures in this run came straight
+> out of skimming a note: the *Josephus* pass classified the book's leads and never noticed its six
+> appendices existed as a checklist, and the *Geisler & Turek* note turned out to contain a **retired
+> claim** (Daniel 7:13–14 as "a divine, worshipped figure") sitting quietly in a chapter map nobody had
+> read closely.
+>
+> ⚠⚠ **AND NEVER WRITE "READ IN FULL" UNLESS YOU READ IT IN FULL.** On 2026-08-08 a note recorded two
+> essays as "read in full" when about a quarter of each had been read. The verdicts happened to survive
+> the full read — which is luck, not method. **A verdict that turns out right is not the same as a
+> verdict that was grounded when it was made**, and the stamp discipline is identical to the one this
+> file already applies to `content-review`: *never stamp a check you did not run.* If you read part of
+> it, say which part.
+>
 > **Make it auditable.** The note must carry a **"Paired essays read in full"** line naming each essay —
 > same discipline as the cross-check classification below, which must be visible so a reader can see the
 > scan happened.
