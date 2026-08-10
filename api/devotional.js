@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     const { verse, reflection, userResponse } = body;
 
     // ── CRISIS BACKSTOP ──
-// FIRST, before the API-key check and before the rate limit. lib/crisis.js
+    // FIRST, before the API-key check and before the rate limit. lib/crisis.js
     // promises this reply works when the Anthropic key is dead or unset — it did
     // not, because the !apiKey 500 ran first. And overRateLimit is keyed on IP,
     // i.e. per NAT: a school, church or CGNAT range shares one bucket, so a
