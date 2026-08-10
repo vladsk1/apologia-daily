@@ -37,7 +37,7 @@ The method is written into `CLAUDE.md` (§ *MANDATORY CROSS-CHECK STEP* and the 
 
 ---
 
-## 2. Status — 7 of 14 notes checked
+## 2. Status — 8 of 14 notes checked
 
 | # | Note | Checked | Standard met |
 |---|---|---|---|
@@ -45,17 +45,22 @@ The method is written into `CLAUDE.md` (§ *MANDATORY CROSS-CHECK STEP* and the 
 | 2 | `case-for-the-resurrection-of-jesus.md` | ✅ 2026-08-07 | **Full** — 3 essays read start to finish; *refused to log* a finding until `disciplesbelief.html` is read |
 | 3 | `did-jesus-really-say-he-was-god.md` | ✅ 2026-08-08 | **Full** — 3 essays + note cover to cover |
 | 4 | `in-defense-of-the-bible.md` | ✅ 2026-08-08 | **Full** — 3 essays + note cover to cover; `eyewitnesses.html` named as unread |
-| 5 | `body-of-proof.md` | ✅ 2026-08-08 | **Partial** — 5 essays read in full, 6 search-only (declared PROVISIONAL). ⬜ **Note not yet read cover to cover (1,261 lines)** |
+| 5 | `body-of-proof.md` | ✅ 2026-08-10 (**redone**) | **Full** — note read cover to cover (1,262 lines); **19 essays read in full** across two passes; the heading-level catch-all row was replaced → **9 improvement rows + a BCP `/sources` candidate + 5 hazard flags**. Only `miracles`/`appearances`/`canon` stay PROVISIONAL (search-only). |
 | 6 | `i-dont-have-enough-faith-to-be-an-atheist.md` | ✅ 2026-08-08 | **Full, after a correction** — see §4. Essays + note both now read in full |
 | 7 | `josephus-and-jesus.md` | ✅ 2026-08-08 (redone) | **Full check, partial source** — see §3 |
-| 8 | `raised-on-the-third-day.md` | ⬜ | Not started. PARTIAL note (chs. 11 + 16); already has 6 open rows from 2026-08-05 |
+| 8 | `raised-on-the-third-day.md` | ✅ 2026-08-10 | **Full check, PARTIAL source** — cross-check redone to the six-verdict standard; **stale ledger corrected** (rows 1 / 2-essay-half / 5 had shipped to `disciplesbelief.html` on 2026-08-05 and were never flipped). Still open: Moss (row 4) + defended-"none-recanted" (row 3), both owner-accepted; the `ev-m-postresurrection` half of row 2; Licona primacy-of-Paul (row 6, refined). Source stays PARTIAL (chs. 11 + 16 only; ch. 16 reason 5 unread). |
 | 9 | `islamic-dilemma-enrichments.md` | ⬜ | Not started |
 | 10 | `return-of-the-god-hypothesis.md` | 🔴 **BLOCKED** | Owner is supplying endnote photographs. ~15 factual flags need them before a scoped citations pass |
 | 11–14 | `can-we-trust-the-gospels.md` · `jesus-and-the-eyewitnesses.md` · `on-the-reliability-of-the-old-testament.md` · `gathercole-preexistent-son-and-thomas.md` | ⬜ | **Deliberately last.** Books we do not own, mapped from open-access material only — a cross-check would compare our essays against a map that is itself unverified |
 
 ### Immediately owed
-- ⬜ **Read `body-of-proof.md` cover to cover** (book 5). Its verdicts stand, but they were written
-  from headings; the other two notes read that way both yielded findings on a full read.
+- ✅ **`body-of-proof.md` read cover to cover + sweep REDONE (2026-08-10).** The prediction held: the
+  heading-level catch-all row (*"Ch. 5–7 … 1 corroboration"*) was hiding real gaps. **9 improvement rows**
+  added — top three: the resurrection-**restraint**/Dudrey argument (P2, the sharpest thing the book has,
+  absent site-wide), Holy Sepulchre vs Garden Tomb archaeology (P3, a whole chapter we lack), and the
+  covenant-cup typology gap (P3). Full account in the note's redone section.
+- ✅ **`raised-on-the-third-day.md` checked (2026-08-10)** — and its ledger was **stale**: three of its six
+  rows had already shipped. Flipped. See its redone cross-check + the corrected rows in `content-backlog.md`.
 - 🔴 **`josephus-and-jesus.md` needs a web-enabled session.** Its six appendices and bibliography were
   **never read** — `academic.oup.com` is egress-denied here. App. 1 (the Ken Olson "Eusebius forged
   it" rebuttal) is ranked by the note itself as "the strongest live challenge to everything above."

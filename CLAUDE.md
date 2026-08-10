@@ -15,7 +15,7 @@
 >
 > **BOOK-SWEEP HANDOVER — 2026-08-08. ⭐ START A RESEARCH-LIBRARY SWEEP SESSION AT
 > [`docs/BOOK_SWEEP_HANDOVER.md`](docs/BOOK_SWEEP_HANDOVER.md).** The cross-check has now run on
-> **7 of the 14 `docs/book-research/` notes**; that file carries the method, the per-note status
+> **8 of the 14 `docs/book-research/` notes**; that file carries the method, the per-note status
 > table, what is owed, and the failures worth not repeating. Headlines: **one live change**
 > (`ev-s3.html` card 08 — the Son of Man / Daniel 7 subsection rebuilt across three tiers and
 > dual-consensus stamped, in **six gate rounds**; its stamp carries the full account) and **~30
@@ -31,8 +31,14 @@
 > now carry **"ours is better"** hazards (`consistency.html` is a generation ahead of its source;
 > `canon.html` honours denominational neutrality better than its source; `evil.html` implements a
 > guardrail more carefully than the book that states it) — **do not mine those chapters.**
-> ⬜ **Owed:** `body-of-proof.md` still needs a cover-to-cover read; `josephus-and-jesus.md`'s six
-> appendices need a **web-enabled** session (`academic.oup.com` is egress-denied here);
+> ⭐ **2026-08-10 — books 5 + 8 done.** `body-of-proof.md` was **read cover to cover and its sweep redone**:
+> the heading-level catch-all row (*"Ch. 5–7 … 1 corroboration"*) was hiding real gaps → **9 improvement
+> rows** (top: the resurrection-**restraint**/Dudrey argument, P2, absent site-wide; Holy Sepulchre vs
+> Garden Tomb, P3; the covenant-cup typology gap, P3) + a BCP `/sources` candidate + 5 hazard flags — the
+> prediction that "heading-read verdicts miss things" held. `raised-on-the-third-day.md` was checked and its
+> ledger was **STALE** — three of its six rows had shipped to `disciplesbelief.html` on 2026-08-05 and were
+> never flipped (the failure this file warns about); corrected. ⬜ **Still owed:** `josephus-and-jesus.md`'s
+> six appendices need a **web-enabled** session (`academic.oup.com` egress-denied here);
 > `return-of-the-god-hypothesis.md` waits on the owner's endnote photos.
 >
 > **LATEST — 2026-08-10:** **Onboarding: "Why is there suffering?" is no longer offered as a focus option**

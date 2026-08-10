@@ -166,31 +166,55 @@ event.
 
 ---
 
-## 🔎 MANDATORY CROSS-CHECK against live site content
+## 🔎 Step Zero + six-verdict cross-check — REDONE 2026-08-10
 
-### Corroboration — already covered, accurately (no backlog row)
+> **Why redone.** The original cross-check (2026-08-05) logged six improvement rows — and **three of
+> them shipped to `disciplesbelief.html` the very same day** (Schnabel, John 21:18–19 + Ehrman, the
+> Acts 12:2/Stephen contrast), yet this note was never flipped. That is the exact stale-ledger failure
+> `CLAUDE.md` warns about ("already cost us once" on `islamic-dilemma.md`): a session trusting this note
+> would have redone finished work. Re-tested against the live site 2026-08-10; the ledger is corrected below.
 
-| Site content | Finding |
-|---|---|
-| **`library/disciplesbelief.html:159`** | Already states the "all twelve apostles were martyred" claim **outruns the evidence**, cites McDowell's *Fate of the Apostles*, and names Peter, Paul and the two Jameses as firmest. **This is McDowell's own calibration, already on the page.** |
-| **`answers/why-did-the-disciples-die-for-their-faith.html`** | Already leads with sincerity-not-proof, already concedes the overreach, already cites *Fate of the Apostles* (2nd ed., Routledge, 2024). |
-| **`library/earlycreed.html`** | Already carries the transmission-verb and non-Pauline-vocabulary material — Habermas's reasons 1–2. |
+**Paired essays read in full (Step Zero):** `library/disciplesbelief.html` (this book's home — the
+apostles-deaths / sincerity argument), `library/sceptics.html` (James the brother), `library/postres.html`.
+⚠ **Coverage limits, stated not glossed:** `library/earlydate.html` and `ev-m-postresurrection.html`
+were checked by **targeted search only**, and `answers/why-did-the-disciples-die-for-their-faith.html`
+by its 2026-08-05 stamp record, not re-read. And the SOURCE is a **PARTIAL** map — only chs. 11 + 16
+were ever read (from photos), ch. 16's reason 5 (pp. 302–309) is unread, and the rest of the festschrift
+is unmapped; verdicts cover the mapped chapters only.
 
-**So the headline finding of this mining run is that our resurrection content is already
-well-calibrated on this argument.** The improvements below are additive, not corrective.
+### ⭐ STANDING OUTPUT — is the source better than our essays anywhere? Where, and how?
+**On the three rows that shipped, no longer.** McDowell's chapter is a *calibration-downward* correction,
+and its best net-new material — Schnabel's persecution survey, John 21:18–19 with Ehrman's concession, and
+the Acts 12:2/Stephen brevity contrast — **is now live on `disciplesbelief.html`** (2026-08-05). Where the
+book is **still ahead of us** is the two objections McDowell answers that our essay still does not raise —
+**Candida Moss's "never offered the chance to recant"** and the **defended** "nobody recanted" argument
+(both owner-accepted open, rows 3–4) — plus one framing move: Licona's **"Paul as a verifiable link to the
+Jerusalem apostles' preaching."** Those are the genuine open gaps.
 
-### Improvements — backlog rows warranted
+### Six-verdict cross-check (ledger corrected 2026-08-10)
 
-| # | Improvement | Primary to verify | Target | Priority |
-|---|---|---|---|---|
-| 1 | **The persecution backdrop is asserted but unsupported.** `disciplesbelief.html` says the disciples "faced real, lethal danger" with no citation. Schnabel's survey supplies a peer-reviewed datum: persecution attested in every Roman province except Cyprus, Cilicia and Pamphylia. | **Eckhard J. Schnabel, "The Persecution of Christians in the First Century," *JETS* 61.3 (2018): 545–46** | `library/disciplesbelief.html` | **P2** |
-| 2 | **John 21:18–19 is absent site-wide** (0 hits). It is a *first-century* reference to Peter's martyrdom, and **Ehrman concedes** it predicts an execution and a martyr's death. A hostile-witness concession we are not using. | John 21:18–19; **Ehrman, *Peter, Paul & Mary Magdalene* (OUP, 2006), 84** | `library/disciplesbelief.html`, `ev-m-postresurrection.html` | **P2** |
-| 3 | **We assert "none of them ever recanted" without defending it.** Add McDowell's two-move reply: the *lapsi* debates would have used such a tradition, and Celsus/Lucian/Porphyry would have seized on it. Turns a bare assertion into an argument. | Celsus, Lucian, Porphyry (via the standard collections) | `library/disciplesbelief.html`, `answers/could-the-disciples-have-stolen-the-body` | **P2** |
-| 4 | **Candida Moss's objections are not steelmanned.** Objection A ("never offered the chance to recant") is absent entirely; objection B is gestured at without naming her. Our steelman rule wants the strongest form of the strongest critic. | **Candida Moss, *The Myth of Persecution* (HarperOne, 2013), 17, 139** | `library/disciplesbelief.html` | **P2** |
-| 5 | **James son of Zebedee's brevity argument.** Acts 12:2 gets two lines where Stephen gets two chapters — the *absence* of embellishment as evidence. A distinctive move we do not run. | Acts 12:2; cf. Dunn, *Beginning from Jerusalem*, 2:209 | `library/disciplesbelief.html` | **P3** |
-| 6 | **Licona's "primacy of Paul" framing** — the *terminus ad quem* of AD 65 giving a hard 15–28 year window. ⚠ **Check `library/earlydate.html` and `library/sceptics.html` first** — this may well be corroboration; I did not verify it closely enough to assert a gap. | Gal 1:18–19; 2:1–10 | `library/earlydate.html` | **P3, verify first** |
+| Book section / lead | Verdict | Live status |
+|---|---|---|
+| McDowell's salvaged "willing to suffer → not liars" form | **1 corroboration** | `disciplesbelief.html:159` + `answers/why-did-the-disciples-die-for-their-faith.html` lead with sincerity-not-proof and concede the "all twelve" overreach (McDowell's own calibration). |
+| The three limits (not-all-martyred / sincerity-not-truth / not-unique) | **1 corroboration** | Ours holds all three. |
+| Precondition (a) — 1 Cor 15 creed / transmission verbs | **1 corroboration** | `earlycreed.html` carries the *paradidōmi*/*paralambanō* + non-Pauline-vocabulary material (Habermas reasons 1–2). |
+| Precondition (b) — **Schnabel** persecution survey | 4 was-missing → **✅ DONE 2026-08-05** | Shipped to `disciplesbelief.html:163` (fn 12) with 2 Cor 11:23–25; citation CONFIRMED 2026-08-06. ⚠ Ledger flip was overdue. |
+| Peter — **John 21:18–19 + Ehrman** concession | 4 was-missing → **✅ DONE (essay) 2026-08-05** | Shipped to `disciplesbelief.html:161` (fn 10). ⚠ The **`ev-m-postresurrection.html`** half is NOT done (0 hits, 2026-08-10) — still open for the mastery page. |
+| James son of Zebedee — **Acts 12:2 brevity** contrast | 4 was-missing → **✅ DONE 2026-08-05** | Shipped to `disciplesbelief.html:161` as the Acts 12:2/Stephen contrast. (Dunn 2:209 was dropped as probably the wrong page.) |
+| James brother of Jesus — Josephus *Ant.* 20.197–203 | **1 corroboration** | `sceptics.html` (read in full) covers it richly — the appearance, the Ananus stoning ~AD 62, Hegesippus flagged as more legendary. |
+| **"Nobody recanted" defended** (lapsi + Celsus/Lucian/Porphyry) | **4 missing — OPEN** | `disciplesbelief.html:159` still only *asserts* it. Owner-accepted open (backlog row 3). |
+| **Candida Moss** objections A/B | **4 missing — OPEN (owner-accepted)** | Essay never states Moss's objection while now carrying material that rebuts it; the stamp records this as an accepted BREAK. Backlog row 4. |
+| Objection B — eyewitness/secondhand distinction | **1 corroboration (PROVISIONAL)** | Present in substance; not specifically re-verified this pass. Keep out only the 9/11 example (non-rec below). |
+| Licona ch. 16 — Paul's letters *early* | **1 corroboration** | `earlydate.html` carries the undisputed letters at AD 48–60 as first-generation documents by a man who knew the apostles. |
+| Licona ch. 16 — **Paul as a verifiable LINK to Jerusalem preaching** (Gal 1:18–19; 2:1–10; Dodd's "not the weather") | **4 missing** | Neither `earlydate.html` nor `sceptics.html` runs the primacy-of-Paul-as-detection-tool move. Refined backlog row 6 (P3). |
+| Licona ch. 16 — bodily resurrection consistent with the Gospels | **1 corroboration (PROVISIONAL)** | `postres`/`earlycreed` carry the bodily-transformed frame; not specifically re-verified this pass. |
 
 ### Non-recommendation, on the record
+**Do not port the 9/11 illustration** (calibration flag 4). It is in the book, it is the author's own
+example, and it should still not go on our pages — keep the eyewitness/secondhand distinction, drop the case.
 
-**Do not port the 9/11 illustration** (flag 4 above). It is in the book, it is the author's own
-example, and it should still not go on our pages.
+### Backlog-row status (corrected 2026-08-10 — the rows live in `docs/content-backlog.md`)
+- **Row 1 (Schnabel) · Row 2 (John 21:18–19, essay half) · Row 5 (Acts 12:2)** — **✅ DONE 2026-08-05.**
+- **Row 2 (`ev-m-postresurrection` half)** — still open (mastery page only).
+- **Rows 3 (defended "none recanted") + 4 (Candida Moss)** — still open, **owner-accepted** on record.
+- **Row 6 (Licona primacy of Paul)** — refined: dating is corroboration; the "link to Jerusalem preaching" move is the genuine P3 gap.

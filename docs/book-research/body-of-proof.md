@@ -21,72 +21,151 @@
 > **not** treat any citation below as confirmed for publication until it is verified against the
 > **primary source** and run through the normal pipeline (citations → argument → orthodoxy).
 
-## ⭐ Step Zero + six-verdict cross-check (2026-08-08)
+## ⭐ Step Zero + six-verdict cross-check — REDONE 2026-08-10 (cover-to-cover)
 
-### 🟢 SAFETY CHECK FIRST — the DO-NOT-USE material never reached the site. Verified.
+> **Why redone.** The 2026-08-08 pass was run from the note's **headings**, and its verdict table
+> collapsed the whole of Part Three into one catch-all row (*"Ch. 5–7 — the seven reasons … 1
+> corroboration"*). Reading the **note cover to cover** (all 1,262 lines) and reading the paired
+> essays in full surfaced **eight distinct arguments that row had buried** — three of them real gaps,
+> one of them the single strongest thing the book has (the resurrection-restraint argument). This is
+> exactly the failure the cover-to-cover rule exists to catch. The 2026-08-08 verdicts that were
+> correct are kept; the catch-all is gone.
+
+### 🟢 SAFETY CHECK — the DO-NOT-USE material is still absent. Re-verified 2026-08-10.
 This note carries the strongest do-not-use flag in the whole `book-research/` folder: **ch. 4's
-Islam-slavery material is Bill-Warner/CSPI-sourced.** Searched the entire served corpus —
-**`Bill Warner`, `CSPI` and `Center for the Study of Political Islam` return ZERO hits.** So do the
-book's other loaded framings: **"chauvinistic"** (its Paul-and-women line) and **"hell on earth"**
+Islam-slavery material is Bill-Warner/CSPI-sourced.** Re-searched the entire served corpus —
+**`Bill Warner`, `CSPI` and `Center for the Study of Political Islam` still return ZERO hits.** So do
+the book's other loaded framings: **"chauvinistic"** (its Paul-and-women line) and **"hell on earth"**
 (its pre-Christian-pagan-world close). `Johnston` and `Body of Proof` appear only in
-`reading-club.html` and `evidence-library.html`, which is the partner-facing reading-club feature and
-is expected. **The flags held. Nothing leaked. Keep them.**
+`reading-club.html` and `evidence-library.html` (the partner-facing reading-club feature), which is
+expected. **The flags held. Nothing leaked. Keep them.**
 
-**Paired essays read in full (Step Zero):** `library/minimalfacts.html` · `library/emptytomb.html` ·
-`library/paulconv.html` (all three read earlier the same day for the Habermas–Licona sweep) ·
-`library/earlycreed.html` (3,879 w) · `library/evil.html` (3,925 w).
-⚠ **Coverage limit, stated rather than glossed:** `library/burial.html`, `library/disciplesbelief.html`,
-`library/archaeology.html`, `library/eyewitnesses.html`, `library/messianic-prophecy.html` and
-`library/coincidences.html` were **checked by targeted search only, not read in full.** This is a
-popular-level book that touches ~10 essays, well past Step Zero's "at most about 5," so the reads were
-spent on the two the note itself calls load-bearing (the 1 Cor 15 creed, and the suffering chapter
-whose guardrail the note calls "the most important calibration in the book for us") plus three already
-in hand. **Verdicts below are firm for those five and marked PROVISIONAL elsewhere.**
+### Paired essays READ IN FULL (Step Zero)
+The book is popular-level and touches ~15 essays — well past Step Zero's "at most about 5" — so the
+full reads were spread across the two passes:
+- **2026-08-08 (prior pass):** `minimalfacts` · `emptytomb` · `paulconv` · `earlycreed` · `evil`.
+- **2026-08-10 (this redo):** `burial` · `archaeology` · `disciplesbelief` · `sceptics` · `postres` ·
+  `respred` · `messianic-prophecy` · `uniqueness` · `coincidences` · `consistency` · `eyewitnesses` ·
+  `typology` · `early_church_trinity` · `islam-jesus`.
+
+That is **19 essays read in full** across the two passes — the whole resurrection cluster plus the
+covenant-typology, early-Trinity, and Islam-crucifixion homes.
+⚠ **Coverage limit, stated not glossed:** three essays were re-checked by **targeted search only, not
+read in full** this redo — `miracles.html` (Flew; confirmed it frames Flew correctly as the *atheist*
+definer of "miracle" and flags the paraphrase, so the "deist-not-Christian" warning is honored),
+`appearances.html`, and `canon.html`. **Verdicts for those three are PROVISIONAL; all others are now
+FIRM** (the 2026-08-08 PROVISIONALs on `burial`/`archaeology`/`disciplesbelief`/`eyewitnesses`/
+`messianic-prophecy`/`coincidences` are upgraded to FIRM by this pass's full reads).
 
 ### ⭐ STANDING OUTPUT — is the source better than our essays anywhere? Where, and how?
 
-**In two places, and the first one is a defect on our side that this book happens to expose.**
+**Yes — in more places than the 2026-08-08 pass found, but every one is a GAP the popular book happens
+to fill, never a correction. At every point of overlap our essays are equal or better.** The gaps,
+ranked, each now a `content-backlog.md` row:
 
-1. ⭐ **`library/earlycreed.html` does not cite J. D. G. Dunn — but `ev-s3.html` does.** The essay dates
-   the creed with **Lüdemann** ("not later than three years") and Wright, which is good discipline
-   (an atheist scholar carrying the early date). **Dunn's "within months of Jesus' death" is absent
-   from the essay entirely — 0 hits — while the card built on that essay cites him 4 times.** That is
-   the card-level-scholarship problem *in mirror image*: the compressed layer is carrying a scholar
-   the certified essay never establishes. ⚠ Note the history — a **fabricated** Dunn quote ("within
-   days of the crucifixion itself") was removed from that card on 2026-08-01 and replaced with an
-   accurate paraphrase, so the card's Dunn is correct but **unbacked**. Fixing the essay closes both
-   the gap and the provenance hole.
-2. **Basilides's docetic Simon-of-Cyrene substitution is absent site-wide (0 hits for `Basilides`).**
-   `library/islam-jesus.html` and `library/islam.html` cover the Qur'an's Surah 4:157 crucifixion
-   denial and the substitution reading, and `Simon of Cyrene` appears on three pages — but the
-   **second-century gnostic antecedent** of that reading does not. Irenaeus reports Basilides teaching
-   that Simon was crucified in Jesus' place while Jesus stood by, roughly five centuries before the
-   Qur'an. That is a genuine historical addition to the Islam cluster, and it is the kind our essays
-   like: it dates the idea rather than merely disputing it.
+1. ⭐ **The resurrection-RESTRAINT argument is absent site-wide** — the sharpest single move in the
+   book, and the 2026-08-08 catch-all buried it. The canonical Gospels contain **no eyewitness of the
+   resurrection *event itself*** (only the empty tomb, the angels, the appearances); the 2nd-c.
+   apocrypha (*Gospel of Peter*, *Acts of Pilate*) "improved" exactly that gap (guards + a centurion
+   watch the rising; a giant risen Christ). That restraint is an authenticity marker. Scholar-anchor
+   **Russ Dudrey** (*Stone-Campbell Journal* 3 [2000]: 55–78) — **0 hits.** The criterion of
+   embarrassment itself is well covered (`postres`, `consistency`, `uniqueness`); *this developed form*
+   is not. → **R-A, P2** (⚠ Jewish-sensitivity fence on the *Gospel of Peter* — use it only as a mark
+   of the apocryphon's lateness, never reproduce its Pilate-exoneration / Jewish-blame).
+2. **Holy Sepulchre vs Garden Tomb archaeology** — the whole of ch. 11, and we carry **none** of it
+   (all terms 0 hits): Agrippa I's north-wall extension putting the site outside the walls; Hadrian's
+   Aelia Capitolina temple inadvertently marking the tomb; Helena/Constantine; the 2016–17 Edicule
+   limestone-bench find; Barkay's Iron-Age dating disqualifying the Garden Tomb. → **R-B, P3** (strict
+   denominational neutrality — a historical/archaeological question, not "one tradition is right"; the
+   book's own verdict lands with mainstream scholarship on the Holy Sepulchre).
+3. **The Last Supper / new-covenant cluster** (Words of Institution × Exodus 24:8 × Jeremiah 31:31) is
+   absent from `typology.html`, which covers Passover and the Day of Atonement but not the covenant-cup
+   institution — an on-theme gap in an essay whose own spine is "institutions that point beyond
+   themselves." → **R-I, P3.**
+4. **The enumerated "lone survivor" catalogue** of ~10 failed first-century messianic movements
+   (Josephus/Acts) — our essays state the *principle* (Wright, RSG 697–701, in `postres`; one clause in
+   `disciplesbelief`) but never display the catalogue, and never touch the **Theudas / Acts 5:36 vs
+   Josephus *Ant.* 20.97–98 chronology crux**. → **R-C, P3** (any enumeration must handle that crux).
+5. **Second-Temple resurrection primaries** — **4Q521 and Isaiah 26:19 are absent from all served
+   content**, and **2 Maccabees 7:9 lives only as an objection to rebut** (`ev-m-uniqueness`). The
+   framework (Daniel 12:2 + Ezekiel 37 + Wright) is well covered in `uniqueness.html`; the fuller
+   primary set is not. → **R-D, P3** (2 Macc cited as Second-Temple historical background, never as our
+   Scripture — denominational neutrality).
+6. **Anti-copycat concrete assets** — Bowersock's *Fiction as History* reverse-influence (*Scheintod*)
+   thesis, the Asclepius/Epidaurus healings-not-resurrection point, and Aeschylus *Eumenides* 647–650.
+   All 0 hits; all reinforce `uniqueness.html`'s already-stronger "no resurrection category" case.
+   → **R-E, P3** (folded with R-D as one `uniqueness.html` enrichment row).
+7. **Keener's "Otho" comparison** (BBR 21 [2011]: 331–55) — the Gospels' discrepancies are fewer/less
+   severe than those among Greco-Roman historians on the *same* events; distinct from the Plutarch
+   material `consistency.html` already runs. 0 hits. → **R-F, P3.**
+8. **Two additive gaps** — the rabbinic criminal-burial apparatus (**m. Sanhedrin 6:5–6, Semahot
+   13.7**; the two Sanhedrin criminal grounds; the "neutral," locatable tomb; Craig Evans) is absent
+   from our otherwise-richer `burial.html` → **R-G, P3**; and the apostolic-eyewitness office-requirement
+   **Acts 1:21–22** is absent from `eyewitnesses.html` → **R-H, P3.**
 
-Everything else in this book that we would want, we already have — and in several places we have it
-better. That is the honest answer.
+Plus the two the 2026-08-08 pass already logged and that still stand: **Dunn absent from
+`earlycreed.html`** (backlog P2, standing output #1) and **Basilides absent site-wide** (backlog P3,
+standing output #2 — ⚠ frame as a docetic *antecedent*, never a derivation claim). And one fresh
+live-door candidate: the PD **BCP burial-office committal prayer** ("…in sure and certain hope of the
+resurrection…") is **not in `/sources`** (the BCP appears there only as the translation label on two
+creeds) → **`/sources` candidate, P3.**
 
-### Verdict table
+### ✅ Where OURS is better — HAZARD flags (verdict 5; do not "improve" us backwards)
+- **Hosea 6:2** — `respred.html` handles it *more* carefully than the book: it uses Hosea 6:2 *against*
+  the apologetic (a source the evangelists likely drew on to retroject the "third day" precision in
+  hindsight), never as a predictive proof-text. **Do not add Hosea 6:2 as a resurrection prophecy.**
+- **The Saul-persecution reference** — the book cites "Acts 7" for Saul persecuting the church; Acts 7
+  is Stephen's martyrdom, where Saul only *consents* (7:58–8:1). `sceptics.html` correctly grounds
+  Saul's persecution in **Galatians 1:13**. **Do not import the book's Acts-7 framing.**
+- **Markan-priority over-count** — `respred.html` cleanly frames the passion predictions as *Mark's*
+  "with parallels in Matthew and Luke," and rests multiple attestation on Mark+John. Keep it.
+- **evil.html theodicy** (carried from 2026-08-08) — implements the book's own "the resurrection does
+  not *solve* evil" guardrail better than the book, and fences Moltmann against patripassianism. **Do
+  not import the book's theodicy framing.**
+- **The tomb-stone square-stopper claim** — the book asserts the square "cork/stopper" stone as fact;
+  it is the minority (Amos Kloner) view and the Gospels say the stone was "rolled." **Our silence is
+  safe** — we assert nothing here, so there is nothing to fix, and nobody should add the square-stopper
+  claim as settled.
+
+### Verdict table (redone — every mapped section classified, no catch-all)
 
 | Section | Verdict | Note |
 |---|---|---|
-| Ch. 4 — Islam/slavery material | **6 non-recommendation — VERIFIED ABSENT** | Bill-Warner/CSPI-sourced. Zero hits site-wide. The flag did its job; do not soften it. |
-| Ch. 3 — Basilides → Surah 4:157 | **4 missing** | Standing output #2. |
-| Ch. 9 — the 1 Cor 15 creed, Dunn + Habermas page cites | **3 weaker in ours** | Standing output #1. Habermas is already cited in `earlycreed.html` (JSHJ 3.2 [2005]: 135–153) **with a methodology caveat the book does not carry** — see the hazard row. |
-| Ch. 9 — the creed's early date generally | 1 corroboration | `earlycreed.html` runs Conzelmann, Jeremias, Lüdemann, Wright, the Gallio-inscription anchor, and a Kloppenborg citation that **names his partial dissent**. Dense and well-bounded. |
-| Ch. 8 — suffering / theodicy | 1 corroboration, **✅ 5 hazard — ours is better** | The note's own guardrail is "do NOT say the resurrection *solves* the problem of evil." `library/evil.html` states the opposite of that error in its closing line — *"Whether that promise is true is the question the resurrection, not the problem of evil, is meant to decide"* — and fences **Moltmann** with an inline `orthonote` against **patripassianism**, which the book does not. It also stays neutral on providence across Reformed/Arminian/Catholic readings. **Do not import the book's theodicy framing.** |
-| Ch. 9–11 — burial archaeology (Magness, the tomb and stone material) | 1 corroboration | **Magness is live in `library/burial.html`.** ⚠ PROVISIONAL — that essay was searched, not read in full. |
-| Ch. 12 — the Antony Flew close | 1 corroboration, **flag stands** | Flew appears only in `library/miracles.html`. The note's warning — **Flew moved to deism and never became a Christian** — must survive any future use. ⚠ PROVISIONAL: not verified in context this pass. |
-| Ch. 5–7 — the seven reasons; minimal facts; skeptic conversions | 1 corroboration | `minimalfacts.html`, `paulconv.html` and `emptytomb.html` (all read in full) cover this ground more carefully than a popular-level treatment, and `minimalfacts.html` carries the Licona/McCullagh criteria with proper attribution. |
-| Ch. 8 — the Mark 16:9–20 dependent appearance lists | **6 non-recommendation** | Several of the book's appearance entries lean on the longer ending of Mark. `library/manuscript.html` treats 16:9–20 as almost certainly not original. **Any list built from those entries would contradict our own certified essay.** The note flags it; the flag is right. |
-| Ch. 11–12 — the Gospel of Peter material; Justin *Dialogue* | **6 non-recommendation** | Both carry Jewish-sensitivity flags in this note. The *Gospel of Peter* is notoriously anti-Jewish; the Porphyry "Mary Magdalene = prostitute" line is a slur. We do not run any of it, and should not. |
-| Ch. 2 / ch. 10 — "the pre-Christian pagan world was hell on earth"; "chauvinistic Paul" | **6 non-recommendation — VERIFIED ABSENT** | Both phrasings return zero hits. Rhetorically loaded, fails the 1 Peter 3:15 tone guardrail. |
-| Ch. 7 (no endnotes) and the unverified statistics — the "22% of Acts is dialogue" figure, the ~150,000 Mount of Olives burials, the square-stopper-stone claim, the Meyer/Carey/Lewis quotations | **6 non-recommendation until verified** | The note already marks each ⚠ verify. None is on the site. Given ch. 7 has **no endnotes at all**, treat that chapter as unciteable rather than merely unverified. |
+| Ch. 4 — Islam/slavery material | **6 non-rec — VERIFIED ABSENT** | Bill-Warner/CSPI-sourced. Zero hits, re-verified 2026-08-10. Do not soften. |
+| Ch. 2 / Ch. 4 — "pre-Christian pagan world was hell on earth"; "chauvinistic Paul"; atheism→Nazism | **6 non-rec — VERIFIED ABSENT** | All phrasings 0 hits. Rhetorically loaded; fails 1 Peter 3:15. Route any moral-argument core through `moral.html`, never "atheists caused the Holocaust." |
+| Ch. 7 (no endnotes) + unverified stats ("22% of Acts," ~150,000 Mt-of-Olives burials, square-stopper stone, Meyer/Carey/Lewis quotes) | **6 non-rec until verified** | Ch. 7 has **no endnotes at all** — unciteable, not merely unverified. |
+| Ch. 8 — Mark 16:9–20 dependent appearance lists | **6 non-rec** | Several appearance entries lean on the longer ending; `manuscript.html` treats 16:9–20 as almost certainly not original. |
+| Ch. 11–12 — *Gospel of Peter* / Justin *Dialogue* anti-Jewish glosses; Porphyry's Magdalene slur | **6 non-rec** | Jewish-sensitivity. Use the *Gospel of Peter* only as a mark of the apocryphon's lateness (see R-A), never reproduce its blame-shift. |
+| Ch. 3 — Basilides → Surah 4:157 | **4 missing** | Standing output #2 → backlog P3. Antecedent, not derivation. |
+| Ch. 12 — resurrection-restraint + canonical-vs-apocrypha (Dudrey) | **4 missing** | ⭐ Standing output #1 → **R-A, P2**. The strongest thing the book has; buried by the old catch-all. |
+| Ch. 11 — Holy Sepulchre vs Garden Tomb archaeology | **4 missing** | → **R-B, P3**. The old table had **no verdict** for Ch. 11. Neutrality-fenced. |
+| Ch. 5 — Last Supper / new-covenant cluster (Exod 24:8 / Jer 31:31) | **4 missing** | → **R-I, P3** (`typology.html`). |
+| Ch. 5/7 — messianic-pretenders "lone survivor" catalogue | **3 weaker in ours** | Principle present (Wright); enumeration + Theudas crux absent. → **R-C, P3**. |
+| Ch. 3/5 — Second-Temple resurrection primaries (4Q521, Isa 26:19, 2 Macc 7:9) | **4 missing / partial** | → **R-D, P3** (`uniqueness.html`). |
+| Ch. 12 — anti-copycat assets (Bowersock, Asclepius, Aeschylus) | **4 missing** | → **R-E, P3** (folded into R-D's `uniqueness.html` row). |
+| Ch. 12 (endnote n.33) — Keener "Otho" discrepancy comparison | **4 missing** | → **R-F, P3** (`consistency.html`); distinct from its existing Plutarch material. |
+| Ch. 8 — rabbinic criminal-burial apparatus (m. Sanh. 6:5–6, Semahot) | **4 missing (additive)** | → **R-G, P3**. Ours (McCane-based `burial.html`) is richer on the core; this apparatus is the addable part. |
+| Ch. 3/6 — apostolic-eyewitness office-requirement (Acts 1:21–22) | **4 missing (additive)** | → **R-H, P3** (`eyewitnesses.html`). Bauckham universalism fence RESPECTED on that page. |
+| Ch. 9 — the 1 Cor 15 creed, Dunn page cite | **3 weaker in ours** | Standing output #1 (Dunn absent from `earlycreed.html`, 0 hits; present on `ev-s3`) → backlog P2. |
+| Ch. 9 — the creed's early date generally | **1 corroboration** | `earlycreed.html` runs Jeremias/Conzelmann/Lüdemann/Wright/Ehrman + Lapide + Gallio anchor. Ours ≥ book. |
+| Ch. 5–9 — cui bono / crucifixion-disqualified-Messiah / James the sceptic / passion-predictions & ex-eventu / honest discrepancies / "no resurrection category" | **1 corroboration (ours ≥, several ours-better)** | Read in full this pass: `disciplesbelief`, `sceptics`, `respred`, `consistency`, `uniqueness`, `postres`. Each is equal or richer than the popular book, and `sceptics.html` avoids the book's Acts-7/Saul error (hazard flag). |
+| Ch. 6 — Trinity "word-not-in-Bible-but-concept-is" + Tertullian *trinitas* | **1 corroboration (ours better)** | `early_church_trinity.html:159` carries Tertullian exactly; the word-vs-concept point is the essay's spine. |
+| Ch. 8/11 — burial archaeology (Magness); crucified-body-not-left-hanging (Deut 21:23) | **1 corroboration (ours ≥)** | Magness correctly attributed in `burial.html`; the Passover-eve burial point is richer than the book (Josephus/Philo/Ulpian). FIRM now (read in full). |
+| Ch. 10 — the Antony Flew close | **1 corroboration** | ⚠ PROVISIONAL: `miracles.html` (targeted read) frames Flew correctly as atheist/deist and flags the paraphrase; the book's distinct resurrection-quote (Baggett-ed. IVP 2009, 85) is an optional low-value add. |
+| Ch. 8/10 — suffering / theodicy | **1 corroboration, ✅ 5 hazard — ours is better** | `evil.html` says the resurrection decides whether the *promise* is true, **not** what explains the evil; Moltmann fenced against patripassianism. Do not import the book's framing. |
 
 ### Live-door status
-Nothing from this book is in `/sources` (copyrighted) or `/briefs`, and this pass produced **no live
-content change**. Two backlog rows (Dunn; Basilides) and the safety verification above are the output.
+Nothing from this book is in `/sources` (copyrighted) or `/briefs`; this pass produced **no live
+content change**. Output: **nine improvement rows** (R-A…R-I) plus the **BCP `/sources` candidate**
+added/reconfirmed in `content-backlog.md`, the two prior rows (Dunn, Basilides) reconfirmed, **five
+hazard flags** recorded, and the safety re-verification above.
+
+⚠ **Note-internal corrections applied 2026-08-10** (defects in the 2026-08-08 heading-level version):
+the old verdict table mislabelled the **suffering/theodicy** row as "Ch. 8" (it is Ch. 10) and the
+**Flew** close as "Ch. 12" (it is Ch. 10's close); and its cross-maps pointed at a **nonexistent**
+`library/contradictions.html` (the real home is `consistency.html`), routed the **embarrassment**
+argument to `coincidences.html` (its real homes are `postres.html` + `consistency.html`), and routed
+the **Second-Temple background** to `messianic-prophecy.html` (its real home is `uniqueness.html`).
 ## ⚖️ What this file is (and the copyright line)
 
 An **owned copyrighted book used as research that points to primary sources**, per
