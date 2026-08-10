@@ -216,6 +216,45 @@ therefore corroboration, not improvement.**
 - **Flipping our pages to "substantially authentic."** ⚠ The improvements above must **not** be used to move the
   site off the majority partial-interpolation framing. Schmidt is a minority position and the pages say so correctly.
 
+## ⭐ Re-tested under the Step Zero + six-verdict standard (2026-08-08)
+
+**This is the only note in the folder whose ledger was NOT stale.** Its three backlog rows were
+re-checked against the live corpus and **all three remain accurate and open**: Jerome's
+*De Viris Illustribus* / *credebatur*, the Syriac chain (Jacob of Edessa, Michael the Syrian, Agapius),
+Origen's *Contra Celsum* 1.47 testimony, and the stylometric set (Thackeray, Mealand, Bardet, plus the
+Feldman/Mason concessions) all still return **zero hits** on the served corpus. The corroboration
+column also still holds. **The 2026-07-28 cross-check was done properly and has aged correctly** — it
+is the model the other notes in this folder should have followed.
+
+**Step Zero:** `library/hist_jesus.html` was read **in full** on 2026-08-08 (for the Del Rosario
+sweep), which satisfies the read-the-paired-essay requirement retroactively for this note.
+
+### ⭐ STANDING OUTPUT — is the source better than our essay anywhere?
+The 2026-07-28 pass answered this implicitly ("most of this book is corroboration, not improvement")
+but never stated it, so: **yes, in four places — the three already-logged rows, plus one this
+re-test found.** The site is well-calibrated on *what* to conclude about Josephus and consistently
+under-supplied on *why* — it asserts the majority reconstruction bare, and answers the forgery
+question in a weaker form than the scholarship poses it.
+
+### ⚠ WHAT THE EARLIER PASS MISSED — the appendices never got verdicts
+The 2026-07-28 cross-check classified the book's **leads** but walked past its **six appendices**.
+That is precisely the failure the standard now warns about: *the dangerous miss is not a wrong verdict,
+it is no verdict.* Giving each one now:
+
+| Appendix | Verdict |
+|---|---|
+| **App. 1 — Eusebius did NOT forge the TF (rebutting Ken Olson)** | **4 MISSING — and it is a real gap.** `library/hist_jesus.html` carries an FAQ titled *"Isn't the Josephus passage about Jesus a Christian forgery?"* and answers the **generic** version (majority partial-interpolation vs. Schmidt's minority authenticity case). But **`Eusebius` returns 0 hits on that page**, and Olson's specific thesis — that Eusebius *composed* the passage — is the strongest scholarly form of the charge and the one Carrier leans on. We raise the question by name and answer a weaker cousin of it. **Same shape as the Casey finding on `ev-s3.html`.** → row logged. |
+| **App. 6 — Josephus's silence about Jesus in the *Jewish War*** | **4 missing.** `Jewish War` returns 0 hits on `hist_jesus.html`. "Why does Josephus's *earlier* book not mention him?" is a natural reader question and an argument-from-silence a critic can press. → folded into the same row. |
+| App. 2 — James, *Ant.* 20.200 | 1 corroboration — already the load-bearing passage on `hist_jesus.html` fn 7 and across `ev-s2`/`ev-s3`/`ev-s4`. |
+| App. 3 — The trial of Jesus and Passover | **6 non-recommendation.** Overlaps the crucifixion-day problem that `library/consistency.html` already handles carefully via Licona's ancient-biography framework. Adding a Josephan angle would complicate a section that is currently well-calibrated. |
+| App. 4 — Ananus II / *Toledot Yeshu* | 6 non-recommendation — already recorded above. Late, polemical, unusable as neutral history. |
+| App. 5 — The Great Sanhedrin and its records | **6 non-recommendation.** Speculative reconstruction; nothing on the site depends on it, and importing it would invite the "records that do not survive" objection for no gain. |
+
+### Standing warning, unchanged and reaffirmed
+The improvements above support the **majority partial-interpolation** reconstruction our pages already
+hold. **They must not be used to move the site toward "substantially authentic."** Schmidt is a
+minority position and our pages describe him correctly as one.
+
 ## Capture status
 | Part | Read | Notes |
 |---|---|---|
