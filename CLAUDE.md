@@ -13,7 +13,27 @@
 > *why* behind a past decision; read this file for current state. **Keep it that way:** when an entry
 > here stops affecting a decision, move it to `HANDOFF.md` rather than letting this file grow back.
 >
-> **LATEST — 2026-08-06:** ⭐ **Gate-sweep: the whole ENGLISH Evidence Library hub is now per-card dual-consensus
+> **LATEST — 2026-08-10:** **Onboarding: "Why is there suffering?" is no longer offered as a focus option**
+> (`dashboard.html`, commit `8e98a68`, live on `main`). ⭐ **The reason generalises beyond this one option:
+> that question is as often a pastoral cry as an apologetics query, and a PICKER CANNOT TELL THE TWO APART** —
+> it routed straight to `ev-m-evil.html` with no path to the compassion-plus-referral response `CLAUDE.md`
+> and `api/ask.js` reserve for exactly that case. **The PASTORAL CARE exception is only wired into the
+> free-text `/api/ask` path; every fixed-choice surface on the site bypasses it by construction.** Owner
+> caught this one; treat it as a standing question to ask of any new picker, quiz option or menu.
+> Replaced with **"I want the whole picture"** → the Evidence Library hub. That needed a small structural
+> change, because `FOCUS_MAP`'s contract had been *"every focus is one seed argument"* (`ev-m-<arg>.html`
+> + a `daily-args.json` entry): entries may now carry **`href`** for a non-seed destination plus
+> **`d2title`/`d2desc`**, which override the day-2 journey card — its default *"read the free summary"* copy
+> is false of a hub page. Both URL-building sites honour `href` (`renderObFinish()` and the day-2 override in
+> `updateGuidedFocus()`); `cat:null` leaves the Coach skill strip un-highlighted, which is the existing
+> no-focus behaviour. **`suffering` is KEPT in `FOCUS_MAP` and in `today.html`'s `FOCUS_ARG`, marked legacy** —
+> accounts that already chose it keep their personalisation; it is simply unreachable from the picker.
+> `explore` deliberately has **no** `FOCUS_ARG` entry, so `/today` falls through to the normal rotation rather
+> than routing someone who asked to browse. ⚠ Note `today.html` duplicates the focus→argument map rather than
+> importing it — a second copy that must be kept in step by hand. `dashboard.html` is exempt from
+> `check-content-review` (app shell), so no gate was owed; 98/98 tests, all four content checks clean.
+>
+> **2026-08-06:** ⭐ **Gate-sweep: the whole ENGLISH Evidence Library hub is now per-card dual-consensus
 > re-gated — `ev-s6` Trinity (16/16 cards, 0 heresy; commit `a34d677`) and `ev-s7` Conversion (9/9 testimonies,
 > first-ever gate + first content-review stamp; commit `725213e`) both stamped + live on `main`.** That completes
 > **ev-s1…ev-s7 (7 of 14 fragments — the 7 English tabs; the 7 `.mk` Macedonian mirrors remain).** Method + per-tab

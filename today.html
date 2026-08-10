@@ -567,7 +567,12 @@
 
   /* Focus-first: before any practice history exists, open the first sessions on
      the topic the user chose at onboarding (dashboard). Yields to the Coach the
-     moment the user builds any real argument history. */
+     moment the user builds any real argument history.
+
+     Not every onboarding focus seeds an argument: `explore` deliberately has no
+     entry here, so it falls through to the normal rotation — that user asked to
+     browse, not to be routed. `suffering` is legacy (no longer offered) and is
+     kept for accounts that already chose it. */
   var FOCUS_ARG = { god:'kalam', jesus:'jesus_claims', resurrection:'minimal', bible:'manuscript', suffering:'evil', islam:'trinity_islam' };
   var FOCUS_LABEL = { god:'does God exist', jesus:'who Jesus is', resurrection:'the resurrection', bible:'whether the Bible is reliable', suffering:'the problem of suffering', islam:'answering Islam' };
   function focusFirstPick(rot){
