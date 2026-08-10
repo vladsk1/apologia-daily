@@ -43,7 +43,41 @@
 > six appendices need a **web-enabled** session (`academic.oup.com` egress-denied here);
 > `return-of-the-god-hypothesis.md` waits on the owner's endnote photos.
 >
-> **LATEST — 2026-08-10:** **Onboarding: "Why is there suffering?" is no longer offered as a focus option**
+> **LATEST — 2026-08-10 (b):** 🔴 **THE PASTORAL CARE PATH EXISTED IN ONE ENDPOINT OUT OF SIX. It now exists in all
+> six, is enumerated from disk, and is CI-guarded** (`lib/crisis.js`, commits `00c9502`→`2699bb0`, live on `main`).
+> ⭐ **The finding that generalises: `CLAUDE.md` has said since the pastoral exception was written that a cry for help
+> must never get an apologetics answer — and that rule was implemented in `api/ask.js` only.** `/api/tutor` (the ask
+> box on `library/*` + the Explain It Back grader on all 67 `ev-m-*`), `/api/debate`, `/api/devotional`,
+> `/api/feedback` and `/api/submit-question` took free text with nothing behind them. **`/api/devotional` was the
+> worst**: its whole job is to ask a warm follow-up question, so a disclosure there was *drawn deeper in*.
+> ⚠⚠ **THE LESSON THAT COST FOUR ROUNDS AND RECURRED FIVE TIMES: I WROTE COMMENTS ASSERTING SAFEGUARDS THAT DID NOT
+> EXIST.** A comment said `api/tutor.js` carried a break-character instruction (it carried none). A comment said both
+> grader clients degrade gracefully on non-JSON — **half false: all 67 `ev-m-*` pages called `renderMockScore(txt)` on
+> the USER'S OWN WORDS, so a crisis disclosure came back as a fabricated score out of 10** and no referral, on
+> `ev-m-evil.html` above all. A comment promised the reply "works when the key is dead" — the `!apiKey` 500 ran first
+> in all five. A comment called the endpoint list a net — it was **eight hardcoded field names**. And `api/ask.js`
+> *still* 500'd and 429'd a crisis message because its backstop only set a **flag**, while **my own ordering test
+> passed it** by measuring where `isCrisis()` is *called* rather than whether a crisis *return* precedes the failure
+> branches. **Every one was caught by a gate, none by re-reading my own work.** ⭐ **A comment is not a test. If a
+> comment claims a safeguard, write the assertion in the same commit.**
+> ⭐ **SECOND LESSON: THE GUARD MUST RUN FIRST — ahead of the API-key check and the rate limit, not merely "before the
+> model call."** `overRateLimit` is keyed per-IP, i.e. **per-NAT**: `submit-question` caps at 10/day for a whole
+> school or church, so a stranger could exhaust it and a cry for help got *"try again tomorrow."*
+> **Also shipped:** the **Grieving Friend** Debate Arena persona removed (UI *and* server, so a hand-crafted POST
+> cannot reach it — its own card said *"this requires pastoral sensitivity, not arguments"*); a **first-ever gate of
+> `api/debate.js`, `feedback.js`, `devotional.js`** (all held live doctrinal prompts, none stamped) which found the
+> **Chalcedon gap again** — 4 of 5 creedal statements omitted Christ's full humanity while rule 6 told personas to
+> acknowledge strong points, so the tool could praise a modalist defence; **`api/feedback.js` could reward "virtually
+> all scholars" claims `retired-claims.json` RETIRES** and mark down the honest concessions our own essays make; and
+> the **debate "expert" tier was weaker than our free essay** (Mackie only, while `library/evil.html` says the logical
+> problem *failed* and cites Rowe/Draper 13×). **`CONTENT_PATTERNS` now covers all five endpoints + `lib/crisis.js`.**
+> ⚠ **STILL OWED:** the neutrality-driven edits to `debate.js`/`feedback.js` were applied *after* that lens read them
+> and are **not re-read** (ported verbatim, but a confirmation pass is owed — recorded in both stamps); **pastoral
+> sign-off on `CRISIS_REPLY` itself**, which is the sentence the site says to someone in danger; back-porting the
+> third-party bullet from `tutor.js` into `api/ask.js`; and two accepted false positives named in `lib/crisis.js`
+> (*"Do people who commit suicide go to hell?"* is often asked **by the bereaved**).
+>
+> **2026-08-10:** **Onboarding: "Why is there suffering?" is no longer offered as a focus option**
 > (`dashboard.html`, commit `8e98a68`, live on `main`). ⭐ **The reason generalises beyond this one option:
 > that question is as often a pastoral cry as an apologetics query, and a PICKER CANNOT TELL THE TWO APART** —
 > it routed straight to `ev-m-evil.html` with no path to the compassion-plus-referral response `CLAUDE.md`
