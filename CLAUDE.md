@@ -13,6 +13,28 @@
 > *why* behind a past decision; read this file for current state. **Keep it that way:** when an entry
 > here stops affecting a decision, move it to `HANDOFF.md` rather than letting this file grow back.
 >
+> **BOOK-SWEEP HANDOVER — 2026-08-08. ⭐ START A RESEARCH-LIBRARY SWEEP SESSION AT
+> [`docs/BOOK_SWEEP_HANDOVER.md`](docs/BOOK_SWEEP_HANDOVER.md).** The cross-check has now run on
+> **7 of the 14 `docs/book-research/` notes**; that file carries the method, the per-note status
+> table, what is owed, and the failures worth not repeating. Headlines: **one live change**
+> (`ev-s3.html` card 08 — the Son of Man / Daniel 7 subsection rebuilt across three tiers and
+> dual-consensus stamped, in **six gate rounds**; its stamp carries the full account) and **~30
+> backlog rows**. ⚠ **`ev-s3.html`'s `citations` date is deliberately still 2026-08-02** — that gate
+> did **not** run on the rebuild and several new references are gate-verified but not
+> citations-gated. **That is the one real gap the day left open.** ⚠ **Three of the seven notes were
+> STALE LEDGERS** advertising work that had already shipped — one of them an entire essay
+> (`library/miracles.html`, created from Geisler & Turek ch. 8). ⭐ **TWO NEW RULES, both in the Step
+> Zero box:** *read the research note **cover to cover**, not its headings* — heading-reading produced
+> a wrong finding about a note's own contents, committed while writing up the very book that produced
+> the rule; and *never write "read in full" unless you did* — one note claimed it after a
+> quarter-read, and the verdicts happened to survive, which is **luck, not method**. ⭐ Three notes
+> now carry **"ours is better"** hazards (`consistency.html` is a generation ahead of its source;
+> `canon.html` honours denominational neutrality better than its source; `evil.html` implements a
+> guardrail more carefully than the book that states it) — **do not mine those chapters.**
+> ⬜ **Owed:** `body-of-proof.md` still needs a cover-to-cover read; `josephus-and-jesus.md`'s six
+> appendices need a **web-enabled** session (`academic.oup.com` is egress-denied here);
+> `return-of-the-god-hypothesis.md` waits on the owner's endnote photos.
+>
 > **LATEST — 2026-08-10:** **Onboarding: "Why is there suffering?" is no longer offered as a focus option**
 > (`dashboard.html`, commit `8e98a68`, live on `main`). ⭐ **The reason generalises beyond this one option:
 > that question is as often a pastoral cry as an apologetics query, and a PICKER CANNOT TELL THE TWO APART** —
