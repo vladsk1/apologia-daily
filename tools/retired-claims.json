@@ -524,6 +524,21 @@
         ]
       },
       "rebuild_debt": "Needs a negation-guarded CLAIM net. The three patterns are literal adjacencies and miss 'the figure in Daniel 7 is divine', 'Daniel's Son of Man is a divine individual', and 'this figure is standing on God's side of a line' - the last of which was LIVE on ev-s3.html:876, a free indexed deity-tier surface, and was found by apologia-neutrality rather than by this net. A fourth pattern was dropped on 2026-08-11 because it fired on library/titles.html's own statement of the objection it answers."
+    },
+    {
+      "id": "ehrman-preexistence-is-late",
+      "retired": "2026-08-11",
+      "what": "Attributing to Bart Ehrman (or to 'critics' generally) the thesis that a pre-existent or 'high' Christology is LATE — e.g. 'the premise that high Christology is necessarily late Christology', 'the pre-existent Word is the end-point of a long evolution', or answering him by showing pre-existence language is early.",
+      "why": "He does not hold it, and answering it is common ground rather than rebuttal. Ehrman dates an INCARNATION Christology — Christ as a pre-existent divine being who took human form — to the pre-Pauline Philippians 2 hymn, and calls that pre-Pauline dating a view held by 'almost every Pauline scholar on the planet'. What he dates late is CO-EQUALITY (homoousios), not pre-existence. A reader armed with the retired framing walks into a conversation with a rebuttal the critic concedes, and concludes we have not read him — the brittle-confidence failure the mission section forbids. Found on library/john11.html, ev-s3.html card 06 and ev-m-john11.html on 2026-08-11 and corrected after three gate rounds; all four lenses independently flagged it.",
+      "instead": "State the dispute as one about KIND, not DATE: 'the objection does not stand or fall on the date of pre-existence language — Ehrman takes the earliest Christology to be one of exaltation, but he also finds a pre-existent Christ in material older than Paul. What he denies of that early figure is his RANK: a subordinate being, God's chief angel or a divinity of a lesser order.' Then answer on that ground with the certified port from library/shema.html:174 — no intermediary figure was ever placed INSIDE the Shema; Wisdom is praised, Enoch is exalted, but no Jewish writer took the creed of divine uniqueness and wrote a second figure into it, and Paul did. ⚠ Do NOT answer it by asserting that Second Temple Judaism drew the Creator/creature line absolutely with every angel on the creature side — that is Bauckham's contested thesis and the exact proposition Ehrman denies, so using it as a premise begs the question (this was the SECOND failed fix). ⚠ And note that our own certified library/shema.html:180 calls the inside-the-Shema reading 'genuinely contested, not unanimous' (James McGrath reads 'one Lord' as set alongside the creed, not inside it), so attribute it rather than asserting it flat.",
+      "patterns": [
+        "high Christology is (necessarily )?late",
+        "the claim that high Christology is",
+        "end.?point of a long evolution",
+        "(pre-existence|pre-existent)[^.]{0,60}(is|was|are|were) (a )?late (invention|development)"
+      ],
+      "allow": [],
+      "netting": "phrase"
     }
   ]
 }
