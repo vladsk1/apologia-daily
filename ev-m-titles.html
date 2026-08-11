@@ -334,7 +334,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <h4>Trace each title to its source and see whose name it is.</h4>
       <div class="syllogism">
         <div class="prem"><div class="tag">P1</div><p>The New Testament gives Jesus a cluster of titles — <b>Son of Man, Lord (kyrios), I AM, Son of God</b> — each with a specific Old Testament address.</p></div>
-        <div class="prem"><div class="tag">P2</div><p>Traced to their sources, these are <b>divine identifiers</b>: Daniel 7's Son of Man receives worship and everlasting dominion; kyrios is the Septuagint's rendering of YHWH; I AM is the name from the burning bush.</p></div>
+        <div class="prem"><div class="tag">P2</div><p>Traced to their sources, these are <b>divine identifiers</b>: Daniel 7's Son of Man comes on the clouds &mdash; in the Hebrew Bible God's own conveyance; kyrios is how Greek-speaking Jews rendered YHWH; I AM is the name from the burning bush.</p></div>
         <div class="prem concl"><div class="tag">∴ C</div><p>Therefore the titles constitute a <b>deliberate, cumulative claim to deity</b> — made in the vocabulary his Jewish hearers could not mistake.</p></div>
       </div>
       <p class="formnote">The argument is cumulative — any single title can be quibbled; the convergence of all of them, plus the hearers' reaction (reaching for stones), settles what was being claimed.</p>
@@ -362,7 +362,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P2 — the addresses are divine</summary>
         <div class="body">
           <p class="lbl steel">Clouds</p>
-          <p>In the Old Testament, riding the clouds is exclusively YHWH's transport (Psalm 104:3, Isaiah 19:1). Daniel 7 hands that image to the Son of Man — who is then 'served' by all peoples, with a verb Daniel usually reserves for religious service.</p>
+          <p>In the Old Testament, riding the clouds is YHWH's alone (Psalm 104:3, Isaiah 19:1) — outside this vision, the Hebrew Scriptures give that way of coming to no one but God. Daniel 7 hands that image to the Son of Man, who is then 'served' by all peoples. The clouds are the stronger half: the service-verb is suggestive, not decisive, since Daniel uses it of pagan gods too (3:12, 18) and at 7:27 its object may be the holy people.</p>
           <p class="lbl steel">I AM</p>
           <p>In John 8:58 — 'before Abraham was, I AM' — the audience's instant response is stoning, the penalty for blasphemy. Grammar debates aside, the hearers heard Exodus 3:14.</p>
         </div>
@@ -664,7 +664,7 @@ function setCheck(id, on){
 /* ---- argument premises used to ground the AI scoring ---- */
 var ARG_PREMISES = [
   'Jesus bears a cluster of titles - Son of Man, kyrios, I AM, Son of God - each with an Old Testament address.',
-  'Traced to their sources these are divine identifiers - Daniel 7, the divine name, the burning bush.',
+  'Traced to their sources these are divine identifiers - Daniel 7 cloud-coming, the divine name, the burning bush.',
   'Therefore the titles are a deliberate cumulative claim to deity - and his hearers\' reactions prove they understood it.'
 ];
 
@@ -736,7 +736,7 @@ function renderScore(score, strengths, improvements){
 function renderMockScore(txtRaw){
   var t = (txtRaw||'').toLowerCase();
   var checks = [
-    {ok:/(son of man|daniel 7|daniel)/i.test(t), hit:'You used Son of Man with its Daniel 7 address', miss:'Trace Son of Man to Daniel 7 - clouds, worship, everlasting kingdom'},
+    {ok:/(son of man|daniel 7|daniel)/i.test(t), hit:'You used Son of Man with its Daniel 7 address', miss:'Trace Son of Man to Daniel 7 - coming on the clouds, God\'s own conveyance'},
     {ok:/(kyrios|lord|yhwh|i am|ego eimi|exodus)/i.test(t), hit:'You traced a divine name title', miss:'Trace kyrios to YHWH or I AM to Exodus 3:14'},
     {ok:/(trial|blasphem|stones|stoning|high priest|tore|robes)/i.test(t), hit:'You used the hearers reaction as evidence', miss:'Use the reaction - stones and the blasphemy verdict show they understood'},
     {ok:/(cumulative|together|cluster|converge|all)/i.test(t), hit:'You made the case cumulative', miss:'Stack the titles - the convergence is the argument, not any one alone'},
