@@ -68,8 +68,15 @@
 > caught by a reviewer — the guard tested a token OLD and NEW *share*. **Test a token unique to NEW.**
 > ⚠ **Owed and recorded, not hidden:** an argument pass on `titles.html` (last full read was round 3),
 > an orthodoxy round on `ev-s3.html` (edited past its stamp — clear the flag by gating, not re-stamping),
-> and a **product decision on the `custom` pocket card**, which renders arbitrary user text into a
-> branded PNG via unescaped `innerHTML` — brand exposure plus an XSS vector.
+> and a **product decision on the `custom` pocket card** — ✅ **RESOLVED 2026-08-12:** the custom card
+> was **removed entirely** (owner decision, so nothing unreviewed can carry the brand + domain + QR);
+> `renderCard()` now HTML-escapes every interpolated value via `escapeHtml()` and hex-validates the
+> colour (closing the injection sink, which also lived on the always-editable Conversation-starter field
+> on *every* card); `updateShareLink()` now points at `apologiadaily.com`. No content re-gate — the 70
+> certified cards are byte-identical, so gate dates are unchanged and a dated engineering note was
+> appended to the stamp. ⚠ Lesser residue left as an owner call: the Conversation-starter textarea is
+> still editable on curated cards (same class of exposure, now escaped + self-only) — lock to read-only
+> if it matters.
 >
 > **LATEST — 2026-08-10 (c):** **Confirmation pass on `api/debate.js` + `api/feedback.js` — the pass the 08-10 (b)
 > stamps said was owed. Both files now carry BOTH lenses' dates; live on `main` (`b3f4d4c`).** `debate.js` came back

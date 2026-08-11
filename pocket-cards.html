@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- content-review: {"argument":"2026-08-11","orthodoxy":"2026-08-11","neutrality":"2026-08-11","by":"2026-08-11 FIRST-EVER gate + first content-review stamp for pocket-cards.html (the file was never gated and sat outside CONTENT_PATTERNS, added in this same commit). Dual-consensus tier - Trinity, deity-of-Christ, salvation and world-religions end to end. CERTIFICATION COVERS THE 70 CURATED CARDS ONLY (existence 12, resurrection 8, jesus 17, bible 11, science 8, trinity 11, islam 3); the `custom` card is EXCLUDED - it renders arbitrary user text into a branded PNG via unescaped innerHTML (brand exposure + XSS vector), an owner decision routed to apologia-engineer. TWO gate rounds. Round 1: apologia-orthodoxy CLEAN 70/70 (0 heresy/drift); apologia-argument NOT STAMPABLE (13 WEAK + 1 POLISH); apologia-neutrality (never seen this file before) NOT STAMPABLE (2 CONCERN + 4 WEAK). ONE fix pass, 24 fields across 15 cards, every replacement PORTED verbatim from the paired ALREADY-CERTIFIED essay, fixes reaching TAGLINES and QUESTIONS not only points. Key fixes: messianic_prophecy retired counting frame (Dozens/independent/match-in-detail) -> constellation of uncontrollables (messianic-prophecy.html:195,241); philosophical_trinity Name-it dare -> non-contradiction analysis (:240); trinity_islam bounded EXPLICIT-VERDICT, no false common ground (:201,191); kalam deism-gap tagline + not-airtight premises (kalam.html:167,188,190); religious Billions->large-fractions + diversity concession (religious.html:145,163); archaeology + canon missing concessions supplied (Exodus/conquest/monarchy scale; the antilegomena); dna functional-information definition averts the circularity charge (originlife.html:168); trilemma + jesus_claims moved off contested Johannine ground onto Synoptic (jesus_claims.html:151,229,237); early_church_trinity pristine-creed overclaim -> development-not-invention with the one-God oneness anchor retained (early_church_trinity.html:161). The content-integrity oneness-anchor test caught early_church_trinity losing its anchor mid-pass; restored before re-gate. Round 2 (a fix pass re-opens the gate; all three lenses re-read the corrected text): orthodoxy CLEAN 70/70, neutrality STAMPABLE, argument STAMPABLE (2 non-blocking POLISH - messianic point 1 the-weightiest-OF-THESE restored to kill a lie-as-noun garden-path; moral left as a faithful port of the essay landed thesis). Mechanical guards green throughout: retired-claims 0 alive, tripwires 0 new, inline-script-syntax + content-integrity + footnote-integrity pass. NON-BLOCKING OWNER ITEMS ON RECORD: (1) Chalcedon gap - no deity card affirms Christ full humanity; fix is a NEW Fully-God-and-Fully-Man card, not an edit; (2) the deck has no defensive/pastoral suffering card (evil is offensive-only); (3) the custom-card XSS/brand exposure; (4) updateShareLink builds against apologia-daily.vercel.app while the card image prints apologiadaily.com. Human/pastoral sign-off still _pending_ per docs/STATEMENT_OF_FAITH.md."} -->
+<!-- content-review: {"argument":"2026-08-11","orthodoxy":"2026-08-11","neutrality":"2026-08-11","by":"2026-08-11 FIRST-EVER gate + first content-review stamp for pocket-cards.html (the file was never gated and sat outside CONTENT_PATTERNS, added in this same commit). Dual-consensus tier - Trinity, deity-of-Christ, salvation and world-religions end to end. CERTIFICATION COVERS THE 70 CURATED CARDS ONLY (existence 12, resurrection 8, jesus 17, bible 11, science 8, trinity 11, islam 3); the `custom` card is EXCLUDED - it renders arbitrary user text into a branded PNG via unescaped innerHTML (brand exposure + XSS vector), an owner decision routed to apologia-engineer. TWO gate rounds. Round 1: apologia-orthodoxy CLEAN 70/70 (0 heresy/drift); apologia-argument NOT STAMPABLE (13 WEAK + 1 POLISH); apologia-neutrality (never seen this file before) NOT STAMPABLE (2 CONCERN + 4 WEAK). ONE fix pass, 24 fields across 15 cards, every replacement PORTED verbatim from the paired ALREADY-CERTIFIED essay, fixes reaching TAGLINES and QUESTIONS not only points. Key fixes: messianic_prophecy retired counting frame (Dozens/independent/match-in-detail) -> constellation of uncontrollables (messianic-prophecy.html:195,241); philosophical_trinity Name-it dare -> non-contradiction analysis (:240); trinity_islam bounded EXPLICIT-VERDICT, no false common ground (:201,191); kalam deism-gap tagline + not-airtight premises (kalam.html:167,188,190); religious Billions->large-fractions + diversity concession (religious.html:145,163); archaeology + canon missing concessions supplied (Exodus/conquest/monarchy scale; the antilegomena); dna functional-information definition averts the circularity charge (originlife.html:168); trilemma + jesus_claims moved off contested Johannine ground onto Synoptic (jesus_claims.html:151,229,237); early_church_trinity pristine-creed overclaim -> development-not-invention with the one-God oneness anchor retained (early_church_trinity.html:161). The content-integrity oneness-anchor test caught early_church_trinity losing its anchor mid-pass; restored before re-gate. Round 2 (a fix pass re-opens the gate; all three lenses re-read the corrected text): orthodoxy CLEAN 70/70, neutrality STAMPABLE, argument STAMPABLE (2 non-blocking POLISH - messianic point 1 the-weightiest-OF-THESE restored to kill a lie-as-noun garden-path; moral left as a faithful port of the essay landed thesis). Mechanical guards green throughout: retired-claims 0 alive, tripwires 0 new, inline-script-syntax + content-integrity + footnote-integrity pass. NON-BLOCKING OWNER ITEMS ON RECORD: (1) Chalcedon gap - no deity card affirms Christ full humanity; fix is a NEW Fully-God-and-Fully-Man card, not an edit; (2) the deck has no defensive/pastoral suffering card (evil is offensive-only); (3) the custom-card XSS/brand exposure; (4) updateShareLink builds against apologia-daily.vercel.app while the card image prints apologiadaily.com. Human/pastoral sign-off still _pending_ per docs/STATEMENT_OF_FAITH.md. ENGINEERING UPDATE 2026-08-12 (owner decision; NO content re-gate - the certified 70 cards are byte-identical and no gate re-ran, so the argument/orthodoxy/neutrality dates above are deliberately UNCHANGED): the excluded `custom` card was REMOVED ENTIRELY (category option, input field, ARGS entry, and the custom branches in onCategoryChange/getCardData), closing owner item (3) - all card content is now the gate-certified deck, so nothing unreviewed can carry the brand + domain + QR. renderCard() now HTML-escapes every interpolated value via escapeHtml() and validates the custom colour against a hex pattern, closing the innerHTML injection sink - which lived on the always-editable Conversation-starter field (data.question) on EVERY card, not only the removed custom one. Owner item (4) closed - updateShareLink() now builds share links against apologiadaily.com to match the domain printed on the card image (was apologia-daily.vercel.app). Remaining note for a future owner call: the Conversation-starter textarea is still freely editable on curated cards, so a user can still replace a vetted question with arbitrary text under the brand+QR - lower surface than the custom card (one line, self-only, now escaped) but the same class of exposure; lock it to read-only if that matters."} -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -251,18 +251,12 @@
           <option value="science">Science &amp; Faith</option>
           <option value="trinity">The Trinity</option>
           <option value="islam">Islam</option>
-          <option value="custom">Custom argument</option>
         </select>
       </div>
 
       <div class="field" id="field-argument">
         <label>Argument</label>
         <select id="sel-argument" onchange="onArgumentChange()"></select>
-      </div>
-
-      <div class="field" id="field-custom" style="display:none;">
-        <label>Argument title</label>
-        <input type="text" id="inp-custom-title" placeholder="e.g. The Fine-Tuning Argument" oninput="renderCard()" />
       </div>
 
       <div class="field">
@@ -466,9 +460,6 @@
       { id: 'islamic_dilemma', title: 'The Islamic Dilemma', tagline: 'The Quran affirms the Bible as divine revelation — so the wholesale-corruption claim does not survive the Quran\u2019s own testimony.', points: ['Surah 5:46-47 — Allah gave the Gospel as guidance and light', 'Surah 10:94 — Muhammad told to consult the Bible when in doubt', 'Surah 3:3-4 — Torah and Gospel described as present-tense guidance', 'The charges are concealing and twisting meaning (3:78; 4:46). The verse most often pressed the other way, 2:79, rebukes a local fraud — it never names the Torah or Gospel'], question: 'Surah 10:94 sends Muhammad to those reading the Book before him. If that text was already corrupt, why send him to it?', link: 'worldviews.html' },
       { id: 'jesus_quran', title: 'Jesus in the Quran', tagline: 'The Quran honours Jesus with titles it gives no one else — and still denies the one thing they imply.', points: ['Surah 3:45 and 4:171 — Messiah, a word from God, a spirit from Him: titles no other prophet receives', 'The same book denies he is the Son of God, and on its dominant reading denies the cross (4:157; 5:72)', 'Shared words, not shared belief — and John 5:23 sets the bar: honour the Son “just as” the Father is honoured', 'A Jesus this exalted overflows the prophet the Quran allows him to be'], question: 'The Quran calls Jesus a word from God — kalima — a title it gives no other prophet, not even Muhammad. What do you think that means?', link: 'worldviews.html' },
       { id: 'paraclete', title: 'Does the Bible Predict Muhammad?', tagline: 'No — read in context, none of the standard proof-texts predicts Muhammad.', points: ['John 14:16-17 — the Paraclete is the Spirit of truth who lives in the disciples', 'No Greek manuscript of John reads Periklutos — every copy reads Parakletos', 'Deuteronomy 17:15 uses that same phrase, \u201cfrom among your brothers\u201d, to exclude foreigners — it means an Israelite', 'Acts 3:22-23 applies Deuteronomy 18 to Jesus — by the disciples who knew him'], question: 'Can we read John 14:16-17 together? The Paraclete is described as living inside the disciples. Muhammad came 600 years later as an external prophet. Does the text fit?', link: 'worldviews.html' },
-    ],
-    custom: [
-      { id: 'custom', title: '', tagline: 'Your custom argument', points: ['Add your first point', 'Add your second point', 'Add your third point', 'Add your fourth point'], question: 'Your conversation starter question goes here.', link: 'evidence-library.html' }
     ]
   };
 
@@ -478,23 +469,13 @@
   function onCategoryChange() {
     var cat = document.getElementById('sel-category').value;
     var argSel = document.getElementById('sel-argument');
-    var fieldCustom = document.getElementById('field-custom');
     var fieldArg = document.getElementById('field-argument');
 
-    if (cat === 'custom') {
-      fieldArg.style.display = 'none';
-      fieldCustom.style.display = 'block';
-      currentArg = ARGS.custom[0];
-      renderCard();
-      return;
-    }
-
     fieldArg.style.display = 'block';
-    fieldCustom.style.display = 'none';
 
     var args = ARGS[cat] || [];
     argSel.innerHTML = args.map(function(a) {
-      return '<option value="' + a.id + '">' + a.title + '</option>';
+      return '<option value="' + escapeHtml(a.id) + '">' + escapeHtml(a.title) + '</option>';
     }).join('');
 
     onArgumentChange();
@@ -523,16 +504,6 @@
 
   function getCardData() {
     var cat = document.getElementById('sel-category').value;
-    if (cat === 'custom') {
-      return {
-        title: document.getElementById('inp-custom-title').value || 'Custom Argument',
-        tagline: 'A Christian apologetics argument',
-        points: ['Your first point', 'Your second point', 'Your third point', 'Your fourth point'],
-        question: document.getElementById('inp-question').value || 'Your conversation starter',
-        link: 'evidence-library.html',
-        category: 'Custom'
-      };
-    }
     if (!currentArg) return null;
     var categoryNames = {
       existence: "God's Existence", resurrection: 'The Resurrection', jesus: 'Jesus',
@@ -548,27 +519,42 @@
     };
   }
 
+  // Escape every user-influenced value before it reaches innerHTML. The
+  // "Conversation starter" textarea is editable on every card, so data.question
+  // always carries free text; the other fields come from the hardcoded ARGS deck
+  // but are escaped too so this stays safe if any of them ever becomes editable.
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
   function renderCard() {
     var data = getCardData();
     if (!data) return;
 
     var styleClass = 'card-' + (currentStyle === 'custom' ? 'navy' : currentStyle);
-    var customBg = currentStyle === 'custom' ? document.getElementById('inp-color').value : '';
+    // Never trust the colour value in a style attribute — accept only #rrggbb.
+    var rawBg = currentStyle === 'custom' ? document.getElementById('inp-color').value : '';
+    var customBg = /^#[0-9a-fA-F]{6}$/.test(rawBg) ? rawBg : '';
 
     var pointsHtml = data.points.map(function(p) {
-      return '<li>' + p + '</li>';
+      return '<li>' + escapeHtml(p) + '</li>';
     }).join('');
 
     var cardHtml = '<div class="pocket-card ' + styleClass + '"' + (customBg ? ' style="background:' + customBg + '"' : '') + '>' +
       '<div class="card-top">' +
         '<span class="card-brand">ApologiaDaily</span>' +
-        '<span class="card-category">' + data.category + '</span>' +
+        '<span class="card-category">' + escapeHtml(data.category) + '</span>' +
       '</div>' +
       '<div class="card-body">' +
-        '<div class="card-title">' + data.title + '</div>' +
-        '<div class="card-tagline">' + data.tagline + '</div>' +
+        '<div class="card-title">' + escapeHtml(data.title) + '</div>' +
+        '<div class="card-tagline">' + escapeHtml(data.tagline) + '</div>' +
         '<ul class="card-points">' + pointsHtml + '</ul>' +
-        '<div class="card-question">' + data.question + '</div>' +
+        '<div class="card-question">' + escapeHtml(data.question) + '</div>' +
       '</div>' +
       '<div class="card-footer">' +
         '<span class="card-url">apologiadaily.com</span>' +
@@ -583,7 +569,7 @@
   function updateShareLink() {
     var cat = document.getElementById('sel-category').value;
     var argId = currentArg ? currentArg.id : '';
-    var baseUrl = 'https://apologia-daily.vercel.app/';
+    var baseUrl = 'https://apologiadaily.com/';
     var page = currentArg && currentArg.link ? currentArg.link : 'evidence-library.html';
     var link = baseUrl + page + (argId ? '?arg=' + argId : '');
     var input = document.getElementById('share-link-input');
@@ -701,6 +687,9 @@
     if (catParam) {
       var catSel = document.getElementById('sel-category');
       catSel.value = catParam;
+      // Unknown category (e.g. a stale ?cat=custom link) leaves selectedIndex -1
+      // and a blank preview — fall back to the first real category instead.
+      if (catSel.selectedIndex < 0) catSel.selectedIndex = 0;
     }
     onCategoryChange();
     if (argParam) {
