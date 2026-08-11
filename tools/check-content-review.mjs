@@ -52,6 +52,9 @@ const CONTENT_PATTERNS = [
                                            // all five hold doctrinal instructions and only
                                            // ask.js was ever gated.
   /^lib\/crisis\.js$/,                     // CRISIS_REPLY — served verbatim to someone in crisis
+  /^pocket-cards\.html$/,                  // 70 share-card arguments (gated 2026-08-11, dual-consensus);
+                                           // the `custom` user-text generator card is out of scope — see
+                                           // the file's content-review stamp for the certification scope.
 ];
 
 const isContent = (p) => CONTENT_PATTERNS.some((re) => re.test(p));
@@ -155,7 +158,7 @@ function changedFiles(base) {
 }
 
 function allContentFiles() {
-  return globSync('{library/**/*.html,ev-s*.html,ev-m-*.html,worldviews.html,tools/reel/specs/*.json,api/ask.js}').filter(isContent);
+  return globSync('{library/**/*.html,ev-s*.html,ev-m-*.html,worldviews.html,pocket-cards.html,tools/reel/specs/*.json,api/ask.js}').filter(isContent);
 }
 
 /* Everything user-facing that is not explicitly exempt. This is the AUDIT scope,
