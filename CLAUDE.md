@@ -47,6 +47,30 @@
 > only note left is `return-of-the-god-hypothesis.md` (#10), and it is BLOCKED** on the owner's endnote photos
 > — every note checkable without those photos or a browser-based OA read is now done.
 >
+> **⭐ START HERE — 2026-08-11. NEW SESSION? READ [`docs/HANDOVER_2026-08-11.md`](docs/HANDOVER_2026-08-11.md).**
+> The live task is **finishing `pocket-cards.html`** — 71 cards, **never stamped, still outside
+> `CONTENT_PATTERNS`**, both gates now run once and all blocking findings applied (22 ported strings).
+> **Owed: re-gate argument + orthodoxy, then run `apologia-neutrality`, which has NEVER seen the file**
+> (it is dual-consensus tier end to end — orthodoxy said its own certification is not sufficient).
+> Stamp + `CONTENT_PATTERNS` entry must land in one commit.
+> ⭐ **The day's headline: one retired claim (`pelach-only-to-God`) was alive on NINE served surfaces**,
+> including `daily-mix.html`, where it was the **GRADED CORRECT ANSWER** — readers were marked right for
+> reciting what the site had retired. The CI guard could not see the common phrasings; both holes are now
+> closed and `daniel7-figure-is-divine` was added, with a `rebuild_debt` recording what a real claim-net
+> still owes. ⭐ **`library/titles.html` + `ev-m-titles.html` are CERTIFIED and LIVE** after five gate
+> rounds (a footnote had cited Daniel 3:12 as proof of what that verse *disproves*, owed since
+> 2026-08-02; and the page claimed to state its strongest objection while carrying a weaker cousin).
+> ⚠⚠ **THE RULE THAT GOVERNED ALL FIVE ROUNDS: every sentence ported from certified text survived
+> untouched; nearly every sentence authored fresh produced the next defect.** Two refinements, each
+> costing a round: **a gate's *suggested* rewrite is NOT ported wording** (neutrality's supplied argument
+> was demolished by argument; orthodoxy overturned its own drafted clarifier), and **a ported predicate
+> detached from its qualifier is not a port**. ⚠ Two of my own fix scripts duplicated sentences, both
+> caught by a reviewer — the guard tested a token OLD and NEW *share*. **Test a token unique to NEW.**
+> ⚠ **Owed and recorded, not hidden:** an argument pass on `titles.html` (last full read was round 3),
+> an orthodoxy round on `ev-s3.html` (edited past its stamp — clear the flag by gating, not re-stamping),
+> and a **product decision on the `custom` pocket card**, which renders arbitrary user text into a
+> branded PNG via unescaped `innerHTML` — brand exposure plus an XSS vector.
+>
 > **LATEST — 2026-08-10 (c):** **Confirmation pass on `api/debate.js` + `api/feedback.js` — the pass the 08-10 (b)
 > stamps said was owed. Both files now carry BOTH lenses' dates; live on `main` (`b3f4d4c`).** `debate.js` came back
 > **CLEAN from both**, and ⭐ **both noted the same reason independently: the rebuilt Muslim persona — the largest piece
