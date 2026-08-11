@@ -45,6 +45,14 @@ const CONTENT_PATTERNS = [
   /^ev-m-.+\.html$/,                       // Evidence Library mastery pages (all 67, gated 2026-07-29)
   /^worldviews\.html$/,                    // worldviews cards (Islam Case tier etc.)
   /^tools\/reel\/specs\/.+\.json$/,        // short-form reel scripts
+  /^tools\/reel\/xcards\/.+\.json$/,       // X / social share-cards. CLAUDE.md's standing
+                                           // share-card rule has always called these gated
+                                           // content (argument+orthodoxy, +neutrality for
+                                           // deity/Trinity/Islam) — but they were never in
+                                           // this list, so nothing enforced it. Added
+                                           // 2026-08-11. Only CHANGED files are gated, so
+                                           // the 6 known-unstamped specs are caught the
+                                           // next time one is touched, as designed.
   /^api\/(ask|debate|feedback|tutor|devotional)\.js$/,  // live AI system prompts: Ask, the Debate
                                            // personas, debate/conversation scoring + coaching,
                                            // the Evidence Library tutor + grader, and the
@@ -135,6 +143,17 @@ function stampFor(path) {
   if (!obj || typeof obj !== 'object') return { ok: false, reason: 'no content-review stamp' };
   const missing = ['argument', 'orthodoxy'].filter((k) => !obj[k]);
   if (missing.length) return { ok: false, reason: `stamp missing: ${missing.join(' + ')}` };
+  // A gate date must LOOK like a date. Presence alone used to be enough, so a
+  // work-in-progress placeholder ("PENDING", "TODO", "n/a") satisfied the gate
+  // exactly as a real date would and shipped as certified. Found 2026-08-11 by
+  // apologia-neutrality on the John 1:1 reel specs, whose honest PENDING stamps
+  // passed this check clean.
+  const undated = ['argument', 'orthodoxy', 'neutrality']
+    .filter((k) => obj[k] && !/^\d{4}-\d{2}-\d{2}$/.test(String(obj[k])));
+  if (undated.length) {
+    const shown = undated.map((k) => `${k}="${obj[k]}"`).join(' + ');
+    return { ok: false, reason: `stamp date is not a YYYY-MM-DD date: ${shown}` };
+  }
   return { ok: true, reason: `argument ${obj.argument} · orthodoxy ${obj.orthodoxy}${obj.by ? ' · ' + obj.by : ''}` };
 }
 

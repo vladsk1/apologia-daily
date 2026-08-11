@@ -1,7 +1,7 @@
 // Content-pipeline invariants that protect the gates themselves.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, globSync, existsSync } from 'node:fs';
+import { readFileSync, globSync, existsSync, writeFileSync, rmSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
@@ -563,4 +563,44 @@ test('mirror parity module can be imported without exiting the process', async (
   const m = await import('../tools/check-mirror-parity.mjs');
   assert.equal(typeof m.findDivergences, 'function');
   assert.equal(typeof m.mirrorsOf, 'function');
+});
+
+// A content-review stamp date must LOOK like a date. `stampFor` used to test
+// only for presence, so a work-in-progress placeholder ("PENDING", "TODO",
+// "n/a") satisfied the gate exactly as a real date would — an un-gated file
+// could ship reading as certified. Found 2026-08-11 by apologia-neutrality on
+// the John 1:1 reel specs, whose honest PENDING stamps passed this check clean.
+// Both directions are pinned: a real date passes, a placeholder fails.
+test('content-review stamp rejects a non-date (PENDING/TODO) gate value', () => {
+  // The fixture must live at a path CONTENT_PATTERNS actually matches, or the
+  // CLI filters it out and exits 0 for reasons unrelated to the stamp.
+  const rel = 'tools/reel/specs/__stamp-check-fixture.json';
+  const abs = path.join(process.cwd(), rel);
+  const run = (obj) => {
+    writeFileSync(abs, JSON.stringify({ reviewed: obj }));
+    return execFileSync('node', ['tools/check-content-review.mjs', rel], {
+      cwd: process.cwd(), stdio: 'pipe', encoding: 'utf8',
+    });
+  };
+  try {
+
+  assert.doesNotThrow(
+    () => run({ argument: '2026-08-11', orthodoxy: '2026-08-11', by: 'test' }),
+    'a well-formed YYYY-MM-DD stamp must still pass',
+  );
+
+  for (const bad of [
+    { argument: 'PENDING', orthodoxy: '2026-08-11' },
+    { argument: '2026-08-11', orthodoxy: 'TODO' },
+    { argument: '2026-08-11', orthodoxy: '2026-08-11', neutrality: 'PENDING' },
+    { argument: '2026-8-11', orthodoxy: '2026-08-11' },
+  ]) {
+    assert.throws(
+      () => run(bad),
+      `a placeholder gate value must fail the stamp check: ${JSON.stringify(bad)}`,
+    );
+  }
+  } finally {
+    rmSync(abs, { force: true });
+  }
 });

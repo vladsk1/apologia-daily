@@ -3,14 +3,14 @@
     "argument": "PENDING",
     "orthodoxy": "PENDING",
     "neutrality": "PENDING",
-    "by": "PENDING — deity tier, dual consensus required."
+    "by": "PENDING — deity tier, dual consensus required. Round 1 complete (argument + orthodoxy + neutrality in parallel on the same text); all findings applied in one pass using each gate's own ported wording. Confirmation round owed on this corrected text."
   },
   "aspect": "vertical",
   "theme": "navy",
   "fps": 30,
   "crossfade": 0.6,
   "keep_watching": "keep watching  ↓",
-  "voiceover": "You know this verse. Watch the order. \"In the beginning was the Word, and the Word was with God, and the Word was God.\" Start with the verb. When John describes created things a few lines down, he uses a verb that means came to be — began, started. For the Word he uses a different verb: was. Already there. The Word did not begin when the beginning began. When the beginning happened, the Word already was. And three lines later: all things were made through him. That puts the Word on the Maker's side of the line between Creator and creation — not among the things made. Now the order. John could have written simply that the Word was God, and stopped. Instead he says first that the Word was with God, and only then that the Word was God — two claims set side by side, not collapsed into one. So the Word is genuinely distinct from the Father, and fully shares the one divine nature. God is one, yet there is real relationship within his own life. Two truths, held together, not one traded away for the other. And then John writes the line everything has been building toward: the Word became flesh, and lived among us.",
+  "voiceover": "You know this verse. Watch the order. \"In the beginning was the Word, and the Word was with God, and the Word was God.\" Start with the verb. The Word was in the beginning. When John describes created things a few lines down, he uses a verb that means came to be — began, started. Of the Word in the beginning he writes a different verb: was. Already there. The Word did not begin when the beginning began. When the beginning happened, the Word already was. And three lines later: all things were made through him, and without him was not any thing made that was made. That puts the Word on the Maker's side of the line between Creator and creation — not among the things made. Now the order. John could have written simply that the Word was God, and stopped. Instead he says first that the Word was with God, and only then that the Word was God — two claims set side by side, not collapsed into one. So the Word is genuinely distinct from the Father, and fully shares the one divine nature. God is one, yet there is real relationship within his own life. Two truths, held together, not one traded away for the other. And then John writes the line everything has been building toward: the Word became flesh, and dwelt among us. So when John says \"the Word,\" he means Jesus of Nazareth — the eternal self-expression of God became a particular man you could touch, walk beside, and eat with.",
   "source": "ev-s3.html card 06 (The Case, Plainly) + library/john11.html",
   "scenes": [
     {
@@ -20,7 +20,7 @@
         { "t": "Watch the order.", "c": "gold", "s": 92 }
       ],
       "sub": [
-        { "t": "Almost nobody does.", "c": "dim", "f": "serif", "s": 42 }
+        { "t": "John does something no one expects.", "c": "dim", "f": "serif", "s": 40 }
       ]
     },
     {
@@ -37,12 +37,12 @@
     },
     {
       "kicker": "START WITH THE VERB",
-      "dur": 4.0,
+      "dur": 4.2,
       "lines": [
-        { "t": "Of created things John", "c": "cream", "s": 50 },
-        { "t": "writes “came to be.”", "c": "cream", "s": 50 },
+        { "t": "Of the things that were made,", "c": "cream", "s": 46 },
+        { "t": "John writes “came to be.”", "c": "cream", "s": 48 },
         { "t": "", "s": 20 },
-        { "t": "Of the Word he writes", "c": "cream", "s": 50 },
+        { "t": "In the beginning, of the Word:", "c": "cream", "s": 46 },
         { "t": "“was.”", "c": "gold", "f": "serifb", "s": 76 }
       ],
       "ref": "John 1:1, 1:3"
@@ -72,18 +72,18 @@
     },
     {
       "kicker": "NOW THE ORDER",
-      "dur": 4.0,
+      "dur": 4.2,
       "lines": [
-        { "t": "John could have written", "c": "cream", "s": 50 },
+        { "t": "John could have written simply", "c": "cream", "s": 44 },
         { "t": "that the Word was God —", "c": "cream", "s": 48 },
-        { "t": "and stopped.", "c": "cream", "s": 52 },
+        { "t": "and stopped there.", "c": "cream", "s": 50 },
         { "t": "", "s": 20 },
-        { "t": "He didn’t.", "c": "gold", "f": "serifb", "s": 70 }
+        { "t": "He didn’t stop.", "c": "gold", "f": "serifb", "s": 66 }
       ]
     },
     {
       "kicker": "HE SAID BOTH",
-      "dur": 4.0,
+      "dur": 4.2,
       "lines": [
         { "t": "First: the Word was", "c": "cream", "s": 52 },
         { "t": "with God.", "c": "gold", "f": "serifb", "s": 64 },
@@ -91,16 +91,18 @@
         { "t": "Then: the Word", "c": "cream", "s": 52 },
         { "t": "was God.", "c": "gold", "f": "serifb", "s": 64 },
         { "t": "", "s": 18 },
-        { "t": "Side by side — not collapsed.", "c": "dim", "f": "serif", "s": 40 }
+        { "t": "Two claims, side by side —", "c": "dim", "f": "serif", "s": 38 },
+        { "t": "not collapsed into one.", "c": "dim", "f": "serif", "s": 38 }
       ]
     },
     {
       "kicker": "SO HERE IS THE CLAIM",
-      "dur": 4.2,
+      "dur": 4.6,
       "lines": [
         { "t": "Personally distinct", "c": "cream", "s": 54 },
-        { "t": "from the Father,", "c": "cream", "s": 54 },
-        { "t": "and fully God.", "c": "gold", "f": "serifb", "s": 60 },
+        { "t": "from the Father —", "c": "cream", "s": 54 },
+        { "t": "and fully sharing the", "c": "cream", "s": 50 },
+        { "t": "one divine nature.", "c": "gold", "f": "serifb", "s": 58 },
         { "t": "", "s": 18 },
         { "t": "God is one — yet real", "c": "cream", "s": 46 },
         { "t": "relationship within his own life.", "c": "cream", "s": 42 }
@@ -118,10 +120,13 @@
     },
     {
       "kicker": "AND THEN JOHN WRITES",
-      "dur": 4.0,
+      "dur": 4.6,
       "lines": [
         { "t": "“The Word became flesh", "c": "cream", "s": 52 },
-        { "t": "and dwelt among us.”", "c": "gold", "f": "serifb", "s": 56 }
+        { "t": "and dwelt among us.”", "c": "gold", "f": "serifb", "s": 56 },
+        { "t": "", "s": 18 },
+        { "t": "A particular man you could touch,", "c": "dim", "f": "serif", "s": 38 },
+        { "t": "walk beside, and eat with.", "c": "dim", "f": "serif", "s": 38 }
       ],
       "ref": "John 1:14"
     },
