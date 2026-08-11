@@ -1,18 +1,31 @@
 {
   "reviewed": {
-    "argument": "PENDING",
-    "orthodoxy": "PENDING",
-    "neutrality": "PENDING",
-    "by": "PENDING — deity tier, dual consensus required. Round 1 complete; the sub-line was replaced with the ev-s3.html:664 clause on which argument and neutrality independently converged, supplying the oneness anchor the card previously lacked."
+    "argument": "2026-08-11",
+    "orthodoxy": "2026-08-11",
+    "neutrality": "2026-08-11",
+    "by": "2026-08-11 X card paired with the in-the-beginning-was-the-word reel. Deity tier, dual consensus, two rounds. Round 2: CLEAN from all three lenses. Round-1 BREAK (argument + neutrality, independently): the card carried NO oneness anchor at all — headline 'The Word was with God. / The Word was God.' over a sub reading 'not collapsed into one', whose nearest referent once the fencing paragraph is stripped is God, not 'claim'. Every line was a clean port of ev-s3:654 and the card still read toward two Gods — the ot_trinity pocket-card failure exactly. Sub replaced with ev-s3:664. Recorded leave-as-is: the card carries no humanity clause (single-verse card on 1:1; both sub-lines are load-bearing anti-tritheism/anti-modalism fencing) — tracked under the corpus-level Chalcedon item."
   },
   "name": "x-in-the-beginning",
   "kicker": "JOHN 1:1",
   "headline": [
-    { "t": "The Word was with God.", "c": "cream" },
-    { "t": "The Word was God.", "c": "gold" }
+    {
+      "t": "The Word was with God.",
+      "c": "cream"
+    },
+    {
+      "t": "The Word was God.",
+      "c": "gold"
+    }
   ],
   "sub": [
     "Personally distinct from the Father —",
     "and fully sharing the one divine nature."
+  ],
+  "source": "ev-s3.html card 06 (The Case, Plainly) + library/john11.html",
+  "authored": [
+    {
+      "t": "and fully sharing the one divine nature.",
+      "why": "ev-s3:664 ('and yet fully shares the one divine nature') recast to run on from the first sub-line. Wording supplied by apologia-argument and apologia-neutrality independently, identical, applied verbatim."
+    }
   ]
 }
