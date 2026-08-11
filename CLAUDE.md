@@ -475,6 +475,29 @@
 > The name is one find/replace to change while it lives only in the repo; it gets expensive once it is on
 > a card box or a store listing.
 >
+> **STANDING RULE — A HANDOVER IS A RECORD, NOT AN IMPRESSION. MEASURE, DON'T ESTIMATE.**
+> (Added 2026-08-11.) Handovers, status entries in this file, and "what's left" summaries are acted
+> on by a session that cannot see what you saw. So every **number, count, date, filename, line
+> reference and status claim** in one must be **measured at the moment of writing**, not recalled
+> and not estimated. This is the same discipline as *never stamp a check you did not run* and
+> *never write "read in full" unless you did* — the failure mode is identical, and so is the cost:
+> the next session builds on a figure nobody verified.
+> - **If it is countable, count it.** A one-line `grep`/`awk` over the source of truth beats any
+>   recollection. ⚠ On 2026-08-11 a handover said "roughly 62 open, ~42 P3" where the real figures
+>   were **65 and 41** — small, but the file's whole job is to be the accurate record, and the
+>   backlog is the thing the next session sizes its work against.
+> - **State the basis.** "Counts measured 2026-08-11 by tallying the status column" tells a reader
+>   they can trust it. If you genuinely cannot measure something, **say it is an estimate in the
+>   same sentence** — an unmarked guess is indistinguishable from a fact.
+> - **Distinguish DONE from IN PROGRESS from NOT STARTED, in words.** "Roughly 62 open" reads as
+>   work underway; "the backlog is essentially untouched — treat it as the next session's main body
+>   of work" cannot be misread. Prefer the sentence that forecloses the wrong reading.
+> - **Record what did NOT run, not only what did.** Every stamp, handover and commit message on
+>   2026-08-11 names the lens that had not re-read the text and calls the pass owed. A handover that
+>   lists only successes is a handover that hides the debt.
+> - **Correct it in place the moment you find it wrong**, and say what the old figure was so nobody
+>   re-derives from it. A silently corrected number teaches the next reader nothing.
+>
 > **STANDING RULE — X / social share-cards.** Every X-post image uses the brand card generator
 > `tools/reel/gen_xcard.py` (night-sky navy + gold underlined kicker + italic-serif cream/gold
 > headline + shield logo, 1600×900; specs in `tools/reel/xcards/`). **Never ship a flat frame
