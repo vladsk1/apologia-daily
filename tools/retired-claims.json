@@ -73,10 +73,11 @@
       "id": "nwt-identical-construction",
       "retired": "2026-07-29",
       "what": "Claiming John 1:6, 1:12, 1:13 (or 1:18) are 'the identical construction' to John 1:1c, or that the NWT renders anarthrous theos 'God' THROUGHOUT John 1.",
-      "why": "Those are anarthrous genitives and accusatives, not preverbal predicate nominatives — there is no second instance in John 1. And at 1:18 the NWT prints 'the only-begotten god', lowercase, so 'throughout the chapter' is false. A well-read Witness has that verse ready.",
+      "why": "Those are anarthrous genitives and accusatives, not preverbal predicate nominatives — there is no second instance in John 1. And at 1:18 the NWT prints 'the only-begotten god', lowercase, so 'throughout the chapter' is false. A well-read Witness has that verse ready. NOTE 2026-08-11: the original patterns were TOO NARROW and missed two live surfaces for 13 days - library/john11.html said \"in numerous places the same construction is rendered God\" (no quantifier match) and daily-mix.html said \"elsewhere in the chapter\" (not \"in the same chapter\"), the latter as the GRADED CORRECT ANSWER. Pattern 1 now catches the claim shape regardless of quantifier.",
       "instead": "Say the NWT renders article-less theos as 'God' at 1:6, 1:12 and 1:13, explicitly warn that these are NOT the identical construction, and note 1:18 before the Witness does.",
       "patterns": [
-        "the same construction[^.]{0,40}(four times|in the same chapter)",
+        "(the same|identical) construction[^.]{0,60}(is |are )?(rendered|renders|translated)",
+        "the same construction[^.]{0,40}(four times|in the same chapter|elsewhere in the chapter)",
         "throughout (this same|the same) chapter",
         "identical construction in John"
       ],
