@@ -52,6 +52,11 @@ const CONTENT_PATTERNS = [
                                            // all five hold doctrinal instructions and only
                                            // ask.js was ever gated.
   /^lib\/crisis\.js$/,                     // CRISIS_REPLY — served verbatim to someone in crisis
+  /^reading-club-islamic-dilemma\.html$/,   // partner reading-club study (Frost, The Islamic
+                                           // Dilemma): 16 session summaries, 16 retention
+                                           // lines and an 8-card capstone, all doctrinal, on
+                                           // the Islam + deity-of-Christ dual-consensus tier
+                                           // and published under a living author's name.
   /^pocket-cards\.html$/,                  // 70 share-card arguments (gated 2026-08-11, dual-consensus);
                                            // the `custom` user-text generator card is out of scope — see
                                            // the file's content-review stamp for the certification scope.

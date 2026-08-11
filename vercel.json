@@ -18,6 +18,7 @@
   ],
   "redirects": [
     { "source": "/ask-anything.html", "destination": "/asked-and-answered.html", "permanent": true },
+    { "source": "/demo/frost-islamic-dilemma-companion-study.html", "destination": "/reading-club-islamic-dilemma.html", "permanent": true },
     { "source": "/daily-argument.html", "destination": "/today", "permanent": true },
     { "source": "/argument-or-fallacy.html", "destination": "/games.html", "permanent": true },
     { "source": "/CLAUDE.md", "destination": "/", "permanent": false },

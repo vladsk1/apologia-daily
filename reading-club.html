@@ -318,6 +318,19 @@
 
   var BOOKS = [
     {
+      id: 'islamic-dilemma',
+      href: '/reading-club-islamic-dilemma.html',
+      icon: '\u{1F54A}',
+      bg: '#0f2040',
+      title: 'The Islamic Dilemma',
+      author: 'Christopher W. Frost',
+      weeks: 16,
+      status: 'active',
+      desc: 'The Qur\'an calls the Torah and Gospel revelation from God \u2014 and contradicts them on central points. Sixteen sessions through the book, with discussion questions and a capstone. Published with the author\'s permission; the study is our own work.',
+      chapters: [],
+      readers_list: []
+    },
+    {
       id: 'mere-christianity',
       icon: '\u270D',
       bg: '#163058',
@@ -835,7 +848,10 @@
   function buildBookCard(b) {
     var isJoined = joinedBooks.indexOf(b.id) !== -1;
     var joinedBadge = isJoined ? ' <span style="color:var(--gold);font-size:0.75rem;">&#10003; Joined</span>' : '';
-    return '<div class="book-card" onclick="openBook(\'' + b.id + '\')">'
+    // A club with `href` lives on its own page (its sessions/capstone don't fit the
+    // chapters[] model), so the card navigates instead of opening the detail view.
+    var open = b.href ? 'location.href=\'' + b.href + '\'' : 'openBook(\'' + b.id + '\')';
+    return '<div class="book-card" onclick="' + open + '">'
       + '<div class="book-cover" style="background:' + b.bg + ';"><span style="z-index:1;position:relative;">' + b.icon + '</span><div class="book-weeks">' + b.weeks + ' weeks</div></div>'
       + '<div class="book-body">'
       + '<div class="book-title">' + b.title + '</div>'
@@ -848,6 +864,7 @@
   function openBook(id) {
     currentBook = BOOKS.find(function(b) { return b.id === id; });
     if (!currentBook) return;
+    if (currentBook.href) { window.location.href = currentBook.href; return; }
     document.getElementById('view-books').style.display = 'none';
     document.getElementById('view-detail').classList.add('open');
     renderBookDetail(currentBook);
