@@ -492,6 +492,38 @@
         ]
       },
       "rebuild_debt": null
+    },
+    {
+      "id": "daniel7-figure-is-divine",
+      "retired": "2026-08-11",
+      "what": "Asserting flatly that Daniel 7's 'one like a son of man' IS a divine figure.",
+      "why": "library/titles.html states the referent is genuinely unsettled - corporate (a symbol for Israel), angelic (Collins: most probably Michael) and individual-heavenly (Boyarin, a contested minority) readings all have serious defenders. The service-verb patterns on pelach-only-to-God do not catch this route, which is why it survived on pocket-cards.html and ev-s3.html.",
+      "instead": "Daniel 7's HEAVENLY figure, who comes on the clouds - elsewhere in the Hebrew Bible God's own conveyance. The argument runs through what Jesus DID with the scene, not through Daniel's referent.",
+      "patterns": [
+        "the divine figure (of|in) Daniel 7",
+        "Daniel 7'?s divine figure",
+        "Son of Man\\s*[—-]\\s*the divine figure"
+      ],
+      "allow": [
+        "ev-m-titles.html"
+      ],
+      "netting": "claim",
+      "corpus": {
+        "must_fire": [
+          "Son of Man - the divine figure of Daniel 7, not a humble title",
+          "in direct allusion to the divine figure of Daniel 7 who rides the clouds",
+          "Jesus takes up the divine figure in Daniel 7",
+          "Daniel 7's divine figure receives everlasting dominion",
+          "Son of Man — the divine figure who comes on the clouds"
+        ],
+        "must_not_fire": [
+          "that Daniel 7 never describes a divine figure at all",
+          "Whom Daniel's figure stands for is disputed",
+          "Daniel 7's heavenly figure who comes on the clouds",
+          "A contested minority case that Daniel 7's Son of Man was already a divine figure in Judaism.",
+          "the corporate reading takes the figure as a symbol for faithful Israel"
+        ]
+      }
     }
   ]
 }
