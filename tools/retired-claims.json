@@ -505,10 +505,8 @@
         "Daniel 7'?s divine figure",
         "Son of Man\\s*[—-]\\s*the divine figure"
       ],
-      "allow": [
-        "ev-m-titles.html"
-      ],
-      "netting": "claim",
+      "allow": [],
+      "netting": "phrase",
       "corpus": {
         "must_fire": [
           "Son of Man - the divine figure of Daniel 7, not a humble title",
@@ -524,7 +522,8 @@
           "A contested minority case that Daniel 7's Son of Man was already a divine figure in Judaism.",
           "the corporate reading takes the figure as a symbol for faithful Israel"
         ]
-      }
+      },
+      "rebuild_debt": "Needs a negation-guarded CLAIM net. The three patterns are literal adjacencies and miss 'the figure in Daniel 7 is divine', 'Daniel's Son of Man is a divine individual', and 'this figure is standing on God's side of a line' - the last of which was LIVE on ev-s3.html:876, a free indexed deity-tier surface, and was found by apologia-neutrality rather than by this net. A fourth pattern was dropped on 2026-08-11 because it fired on library/titles.html's own statement of the objection it answers."
     }
   ]
 }
