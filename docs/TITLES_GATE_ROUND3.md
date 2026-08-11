@@ -260,3 +260,104 @@ Three rows in `docs/content-backlog.md`, all against `library/titles.html` — t
 footnote error (owed since 2026-08-02), the P2 missing Daniel-7 objection, and the P3 *Kyrios*
 manuscript claim. **Mark them Done in the same commit that bumps the stamp, not later** —
 `CLAUDE.md`'s stale-ledger rule.
+
+---
+
+# ROUND 4 — added 2026-08-11 after the round-3 gates
+
+**Round-3 verdicts:** orthodoxy **`titles.html` CLEAN** (0 heresy, 0 drift, 4 NOTE — stampable pending
+neutrality) · **`ev-m-titles.html` FLAGGED** (1 DRIFT) · argument **3 BREAK, all in round-3's authored
+prose** · citations 1 ERROR (fixed) + 10 CHECK · neutrality still running when this was written.
+
+⭐ **The port-don't-author signature held a fourth round, and argument stated it outright:**
+*"every sentence ported from `ev-s3.html` survived this review untouched; every sentence authored fresh
+generated a finding."* **Round 4 should author nothing.** Every fix below has ported or gate-supplied
+wording.
+
+## R4-A — BLOCKERS
+
+**A1. The `orthonote` box rests on the one verse the NWT re-renders — and the box names Jehovah's
+Witnesses.** It quotes **Hebrews 1:8** ("Your throne, O God"). The NWT reads *"God is your throne
+forever,"* which the Watchtower turns into Jehovah being the *source* of the Son's authority — the
+opposite of our point. The Greek (Ps 45:6 LXX) genuinely permits both. ⚠ **This is the Colwell/NWT
+episode of 2026-07-29 repeating**: a sentence warning the reader a well-read Witness would correct him,
+which hands that Witness the counter-example. **Fix: swap to Hebrews 1:13** ("to which of the angels has
+he ever said, 'Sit at my right hand'") — NWT preserves it, and it chimes with the essay's own Psalm 110
+argument. 1:6 and 1:10–12 also work. *Cheapest high-value fix in the list.*
+
+**A2. The cumulative-method paragraph claims independence it does not have** (argument BREAK-1 +
+citations CHECK-7, found separately). The three strands are 1 Cor 16:22, Rom 10:13, 1 Cor 8:6 — **all
+Paul, two in one letter.** The paragraph written to defend the cumulative method hands the skeptic
+Bousset's thesis, which the essay itself calls "the most formidable." Two fixes, either sufficient:
+(a) drop "independence of the strands" and keep *"three different kinds of evidence — a prayer, a
+scriptural citation, and a creed"*, which is true; **(b) better — add the non-Pauline strand: "Son of
+Man" is absent from Paul entirely**, a fact already stated on `ev-s3.html:914`. Citations also offers
+**Didache 10:6** (*"Maranatha. Amen."*) as independent attestation of the same Aramaic invocation —
+verify at the primary before using, and do not state a date for the Didache.
+
+**A3. "the angelic reading has no independent precedent to lean on" is refuted by the commentary we
+cite Collins from** (argument BREAK-2). The Canaanite cloud-rider-beside-an-aged-high-god pattern is
+**Emerton, *JTS* 9 (1958)**, and Collins endorses it in the same Hermeneia volume at our footnote 5.
+⭐ **The correction strengthens us**: a Baal-type cloud-rider is a **deity**, not a patron angel, so
+granting the precedent damages the angelic reading. ⚠ Route the Emerton/Collins sentence through
+`apologia-citations` before it ships — argument verified the article exists and that Collins endorses
+the background, but not the page-level attribution.
+
+**A4. "from above" is ours, not Daniel's** (argument BREAK-3 + citations CHECK-6). Daniel 7:13 gives the
+vehicle and the destination, never the origin; a substantial critical line reads the movement as an
+**ascent to** the throne. ⚠⚠ **And 4 Ezra 13:3 has the man-figure come UP OUT OF THE SEA *and* fly with
+the clouds** — the exact combination the essay says the vision forbids — in a text **our own
+`ev-m-titles.html:434` cites as friendly evidence two clicks away.** A critic reading both pages gets a
+free hit. **Fix: keep the imagery contrast, delete the directional inference.** The cloud-riding plank
+is untouched by the ascent/descent debate and already carries the paragraph. Also state the corporate
+reading's standard absorption (the direction encodes the origin of the two *kingdoms*, not the
+ontology of the recipients) and soften "it is why" to "it is one reason."
+
+**A5. `ev-m-titles.html:394` [DRIFT].** *"Say 'I am God' … it means 'I am the Father' — **which is not
+the claim**."* Grammatically anti-modalist; screenshotted or said aloud it reads *"'I am God' … is not
+the claim."* Pre-existing text that two rounds passed. Orthodoxy's fix: *"…it lands as 'I am the
+Father' — a confusion of the persons, and not what Jesus was claiming; to Greek ears it would land as a
+pagan god-man."* Or record an explicit owner acceptance.
+
+## R4-B — the two ports I left behind
+
+**B1. I moved a sentence from `ev-s3.html:916` and left its `orthonote` box behind.** *"the Creator's own
+side of the line"* is fenced there and bare here. Orthodoxy drafted the port (header *"Seated at the
+right hand of Power"*); the box text is **already gated**, so porting costs nothing.
+
+**B2. The companion sentence at `ev-s3.html:916` is also still unported** (orthodoxy NOTE 4 + argument
+W-3): *"Second Temple Judaism did exalt intermediary figures very high, so the honest reply is not that
+no one was ever exalted."* Without it, **the essay's own 1 Enoch paragraph (62:5, 9 — the Son of Man
+enthroned, receiving the homage of kings) is a counterexample to its own conclusion, two screens
+apart.** Related: `ev-s3.html:918`'s angels-refuse-worship material (Tobit 12:16–22; Rev 19:10; 22:8–9,
+with Hurtado's hedge) is the strongest certified anti-angel-Christology plank and currently appears
+**only inside a tooltip, unfootnoted**, in an essay that footnotes everything. Both gates want it in the
+body.
+
+## R4-C — precision
+
+| # | Finding | Fix |
+|---|---|---|
+| C1 | The symbol/representative dichotomy partly survives. **Collins himself uses "symbolizes"** — his figure is a real being *that also symbolizes a group*, and his primary constituency is the angelic host, Israel derivatively. Mediating readings exist (Goldingay), so "rivals, not allies" overstates | argument supplied replacement wording |
+| C2 | **"Pre-existent" over-cites 1 Enoch 46:1–3** (which shows an individual, not pre-existence) and is itself contested — much scholarship reads 48:2–3 as *name*-preexistence. The essay's own gloss is the defensible form; the label is not | Drop "pre-existent"; keep "heavenly individual (46:1–3) — named before the stars were made (48:2–6)". Same fix on `ev-m-titles.html:434` |
+| C3 | **Footnote 7 kept "widely judged" after the body softened to "many scholars judge… though disputed."** Fix-propagation, again | Two words |
+| C4 | `ev-m-titles.html:434` — **"their dates are disputed" is wrong for 4 Ezra**: it is settled and *late* (c. AD 100), which is a worse caveat, not a milder one | citations supplied wording |
+| C5 | **Boyarin fn 6 says "a minority one among Jewish scholars"** — it is a minority position *in the field*, and every other contested claim in this essay names its opponent. **Schäfer, *Two Gods in Heaven* (2020)**, is the standing critic; Hurtado endorsed his review | Drop "among Jewish scholars"; name Schäfer |
+| C6 | `ev-m-titles.html:452` lists Boyarin with **no minority hedge** while the essay hedges him twice | Three words |
+| C7 | The Mark 2 fallback repeats the independence overclaim (3 of 4 items are Mark), and **"lordship over the Sabbath" (Mark 2:28) is Casey's own paradigm example** for the reading the essay just granted a hearing | Swap for the "but I say to you" antitheses (`ev-s3.html:920`); port ev-s3's public-scene sentence and its concession |
+| C8 | Mark's scribes question **"in their hearts"** — "draws the charge from the scribes" reads as public accusation, which is Luke 5:21, not Mark | "draws the identical verdict of blasphemy" |
+| C9 | Deut 33:26 and Ps 68:33 say **heavens/skies, not clouds** — defensible behind "cf.", but glossable | "and of riding the heavens more generally" |
+| C10 | The **third reading should be an individual *human*** in the standard survey; as framed, the essay can imply any individual reading is an exalted one | One clause |
+| C11 | `docs/clarifiers.md` lists **one** clarifier for `titles.html`; the page carries **three** | `node tools/list-clarifiers.mjs` |
+| C12 | Near-duplication between line 141 and the ported line 155 (both now say Psalm 110 seats a Davidic lord) | Trim one |
+| C13 | Pull-quote risk: *"either way, not a divine individual"* reads as ours; "of course" adds endorsing colour | "on either reading, he will say, we do not have a divine individual" |
+
+## R4-D — before deploy
+
+1. **Neutrality's round-3 report is not in this file** — it was still running. Read it first and merge.
+2. One pass, all findings. Mechanical checks first. Author nothing.
+3. Re-gate all four lenses; bump **all four** stamp dates (`argument`, `orthodoxy`, `neutrality`,
+   `citations` — every one still reads `2026-07-17`).
+4. Mark the three backlog rows Done **in the same commit** (§G).
+5. Still not done: no angelic-reading accordion on the mastery deck; `ev-s3.html` card 08 has neither
+   the objection nor a current `citations` date (still 2026-08-02).
