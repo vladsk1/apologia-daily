@@ -173,7 +173,7 @@ These were **missed**:
 
 | Line | Problem | Fix |
 |---|---|---|
-| **343** | [BREAK ×3] "receives **universal worship**" — the retired `pelach-only-to-God` claim, in the "key surprise" box, contradicting 365 and 762 on the same page | "…receives universal, everlasting dominion, and **is served by all peoples** — press the clouds, not the service-verb" |
+| **343** | ✅ FIXED 2026-08-11 (forced by the widened net; neutrality's wording). [BREAK ×3] "receives **universal worship**" — the retired `pelach-only-to-God` claim, in the "key surprise" box, contradicting 365 and 762 on the same page | "…receives universal, everlasting dominion, and **is served by all peoples** — press the clouds, not the service-verb" |
 | **434** | [BREAK] "**the oldest** Jewish readings — 1 Enoch, 4 Ezra, the Talmud's own discussion" — 4 Ezra is c. AD 100, the Talmudic material 3rd–6th c., and the essay says "nothing here should be built on them." Also smuggles in the b. Ḥagigah two-powers material deliberately kept out of the essay as un-gated | Neutrality supplied a full replacement |
 | **668** | [WEAK, high value] `ARG_PREMISES[2]`: "his hearers' reactions **prove** they understood it" — the grading rubric *and* the share-card PNG, asserting what the essay calls disputed | "prove" → "**are the strongest evidence that**" |
 | **414** | [WEAK] "seated at the right hand" listed as part of *Daniel's* address | Drop it from that list, or "— the seat is Psalm 110's, fused in at the trial" |
@@ -182,18 +182,56 @@ These were **missed**:
 
 ---
 
-## E. Downstream — LIVE DEFECTS ON `main`, not caused by this edit
+## E. Downstream — ✅ DONE 2026-08-11 (was: live defects on `main`)
 
-Found by the round-2 gates. **These are live right now and independent of the titles.html work.**
+**All of section E is applied.** Kept here as the record of what was wrong and why it survived.
+⚠ Two things are still owed and are listed at the end of this section.
+
+Found by the round-2 gates. These were live and **independent of the titles.html work** — none
+was caused by this session's edit; they were the retired `pelach-only-to-God` claim and the
+Daniel-7 seat error surviving on served surfaces nobody re-checked.
+
+⭐ **Widening the registry first surfaced a SIXTH surface no gate had flagged: `pocket-cards.html`**
+— the 70-card deck built to be screenshotted and shared, still unstamped and outside
+`CONTENT_PATTERNS`. Its bullet ran "The Son of Man of Daniel 7 receives worship," and its
+**tagline** ran the compressed twin ("Forgiving sins, receiving worship, taking the divine
+name"). Both fixed — the tagline as well as the bullet, per the 2026-07-28 pocket-card lesson
+that a fix which reaches only the `points` array leaves the card contradicting itself.
+
+⚠ **And the widened net immediately blocked on `ev-m-titles.html:343`** (section D's first row),
+so that one was fixed here too rather than exempted — adding an allow entry would have recreated
+the hole being closed.
+
+⚠⚠ **The inline-script test earned another catch, on my own fix.** Three of the replacement
+strings contained unescaped apostrophes inside single-quoted JS strings, which killed the entire
+inline block on `daily-mix.html` and `pocket-cards.html` — the exact failure mode `CLAUDE.md`
+records from `ev-m-multiatt.html`. Resolved per each file's own convention: `pocket-cards.html`
+uses `’` (12 existing occurrences), `daily-mix.html` escapes nothing at all, so its string
+was rephrased to avoid the apostrophe rather than introduce the file's first escape.
+**Run `node --test tests/*.test.mjs` after every content edit pass.**
+
+### Still owed from section E
+
+- **The two `/answers/*` entries' `reviewed` dates were NOT bumped.** The replacement wording was
+  supplied by `apologia-neutrality`, which had read both pages in context, and the openings +
+  concessions lints both pass — but that is not a re-gate, and `what-does-son-of-man-mean` gained
+  a real concession ("Who the figure stands for in Daniel's own vision is debated"), which is
+  substantive on a page governed by the SHORT-FORM ANSWER RULE. **Argument + orthodoxy are owed on
+  both entries.** Never stamp a check you did not run.
+- **`pocket-cards.html` is still unstamped and still outside `CONTENT_PATTERNS`** — unchanged by
+  this pass, and still the standing item `CLAUDE.md` records. The stamp and the `CONTENT_PATTERNS`
+  entry must land in the same commit.
+
+### What was fixed
 
 | File | Problem |
 |---|---|
-| **`daily-mix.html:158`** | 🔴 The **graded correct answer** says the figure "**receives worship**" — a reader is marked *correct* for reciting the retired claim. This is the precise 2026-07-29 failure `CLAUDE.md` records |
-| **`daily-args.json:361`** | 🔴 "the **worship** of all nations" — same retired claim |
-| **`daily-args.json:306`** | 🔴 "**Daniel 7's throne** at his trial" — the seat re-attributed to Daniel. Note `:309` in the *same entry* gets it right |
-| **`answers/is-the-trinity-in-the-old-testament.html:86`** | 🔴 "Daniel 7's 'son of man' **enthroned beside** the Ancient of Days" — free, indexed, SEO-surfaced |
-| **`answers/what-does-son-of-man-mean.html:86`** | 🟠 "This is no mere mortal" + unfenced clouds — settles Daniel's referent in one sentence |
-| **`tools/retired-claims.json`** | 🟠 **The net has a hole.** No `pelach-only-to-God` pattern catches "receives worship" / "receives universal worship" / "the worship of all nations" — which is why three surfaces survived. Add narrow Daniel-anchored patterns; audit "worship of all nations" for false positives first (Hebrews 1:6 is legitimate). ⚠ Also `ev-m-titles.html` sits on that rule's **allow-list** and no longer appears to need it |
+| **`daily-mix.html:158`** | ✅ FIXED. The **graded correct answer** says the figure "**receives worship**" — a reader is marked *correct* for reciting the retired claim. This is the precise 2026-07-29 failure `CLAUDE.md` records |
+| **`daily-args.json:361`** | ✅ FIXED. "the **worship** of all nations" — same retired claim |
+| **`daily-args.json:306`** | ✅ FIXED. "**Daniel 7's throne** at his trial" — the seat re-attributed to Daniel. Note `:309` in the *same entry* gets it right |
+| **`answers/is-the-trinity-in-the-old-testament.html:86`** | ✅ FIXED (in `_data.json` **and** both HTML copies — visible + JSON-LD). "Daniel 7's 'son of man' **enthroned beside** the Ancient of Days" — free, indexed, SEO-surfaced |
+| **`answers/what-does-son-of-man-mean.html:86`** | ✅ FIXED (both copies). "This is no mere mortal" + unfenced clouds — settles Daniel's referent in one sentence |
+| **`tools/retired-claims.json`** | ✅ FIXED — 3 Daniel-anchored patterns added (tested against the corpus first: **zero** false positives), and the `ev-m-titles.html` **allow entry removed, not carried**. **The net has a hole.** No `pelach-only-to-God` pattern catches "receives worship" / "receives universal worship" / "the worship of all nations" — which is why three surfaces survived. Add narrow Daniel-anchored patterns; audit "worship of all nations" for false positives first (Hebrews 1:6 is legitimate). ⚠ Also `ev-m-titles.html` sits on that rule's **allow-list** and no longer appears to need it |
 
 ✅ **`ev-m-jesus_claims.html:414` — round-1 flag WITHDRAWN** by neutrality on re-read: it derives
 from Mark 14:62's fusion, which is what the corrected essay teaches. No change needed.
