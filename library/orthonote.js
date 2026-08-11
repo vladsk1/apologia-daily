@@ -10,7 +10,7 @@
        <span class="on-phrase">the delicate phrase</span
        ><button class="on-mark" type="button" aria-label="Doctrinal clarification" aria-expanded="false">＊</button>
        <span class="on-box" role="tooltip">
-         <h4>Short heading</h4>
+         <span class="on-h">Short heading</span>   <!-- inline span, NEVER <h4> - see below -->
          <span class="on-row on-yes"><b>Is saying</b><span>…</span></span>
          <span class="on-row on-no"><b>Not saying</b><span>…</span></span>
        </span>

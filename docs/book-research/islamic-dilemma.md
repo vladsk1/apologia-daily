@@ -207,9 +207,20 @@ the error our CLAUDE.md flags). Abrogation (*naskh*) can only touch *legal* ruli
 5. **The command to wage warfare.** Q 9:111 (& 61:10–14) says fighting is "binding in the Tawrat and the Injil"
    — but Jesus's kingdom is "not of this world" (John 18:36).
 6. **God loves the unbelievers.** Gospel/Torah: God loves the world/enemies/foreigners (John 3:16, Luke 6:27–36,
-   Deut 10:17–19); Qur'an: Allah does *not* love the unbelievers (Q 3:32, 30:45). **A MODEL of honest argument** —
-   concedes the OT wrath passages, keeps the critique *internal*. ⚠ Distinguishes *raḥma* (mercy) from *maḥabba*
-   (love) — **the careful way; avoid the "Islam has no grace" overreach.**
+   Deut 10:17–19); Qur'an: Allah does *not* love the unbelievers (Q 3:32, 30:45). ⚠ Distinguishes *raḥma* (mercy)
+   from *maḥabba* (love) — **the careful way; avoid the "Islam has no grace" overreach.**
+   🔴 **DO NOT USE — THIS ROW IS RETIRED. It previously read "A MODEL of honest argument"; that label is
+   withdrawn (2026-08-11).** This is `unmerited-love-comparative` in `tools/retired-claims.json`, retired
+   2026-07-29 and CI-blocking. The contrast **loses**: Islam affirms a loving God in its own voice
+   (*al-Wadud*, "the Loving", Q 11:90; 85:14; "He loves them and they love Him", Q 5:54; the *hadith qudsi*
+   *sabaqat raḥmatī ghaḍabī*, written "when He decreed the Creation"), and **our own side is exposed by the
+   same move** — John 16:27 has Jesus say the Father loves you *because* you have loved him, plus John 14:21
+   and Psalms 5:5; 11:5. It was found **alive on `reading-club-islamic-dilemma.html` on 2026-08-11** by
+   `apologia-neutrality`, in wording the registry's patterns could not yet see; the net was widened the same
+   day. **Say instead** what `library/islam-tawhid.html:179` says: the difference is whether love is what God
+   eternally *is* (essence) or something God *does* (activity) — "not 'Islam has a needy God,' which is false."
+   ⚠ This row is exactly why a retired claim needs flagging in the NOTE that seeded it and not only in the
+   registry: a later mining session reads the note, not the guard.
 7. **Heaven and hell.** Q 87:18–19 puts hellfire "in the scriptures of Ibrahim and Musa" — but the Torah has only
    *Sheol* (Johnston, *Shades of Sheol*); plus marriage/sexual pleasure in *jannah* (Q 2:25, etc.) vs Jesus's "no
    marriage in the resurrection" (Matt 22:30). ⚠ Present the sexual-paradise material factually, never mockingly.

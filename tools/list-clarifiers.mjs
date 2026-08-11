@@ -14,13 +14,18 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const files = globSync('{library/**/*.html,ev-s*.html,worldviews.html,answers/*.html}', { cwd: ROOT });
+const files = globSync('{library/**/*.html,ev-s*.html,worldviews.html,answers/*.html,reading-club-islamic-dilemma.html}', { cwd: ROOT });
 
 // one clarifier block: <span class="on"><span class="on-phrase">PHRASE</span>…<h4>HEADING</h4>
 //   …on-yes…<span>IS</span>…on-no…<span>NOT</span>…<!--/onote--></span>
 // tolerant of clarifiers with or without the <!--onote--> drift markers (essays added
 // before the answer-page convention omit them; answer pages include them).
-const RE = /<span class="on"><span class="on-phrase">([\s\S]*?)<\/span>(?:<!--onote-->)?<button class="on-mark"[\s\S]*?<span class="on-h">([\s\S]*?)<\/span>[\s\S]*?<b>Is saying<\/b><span>([\s\S]*?)<\/span><\/span><span class="on-row on-no"><b>Not saying<\/b><span>([\s\S]*?)<\/span><\/span><\/span>/g;
+// ALSO tolerant of BACKSLASH-ESCAPED quotes: a clarifier inlined into a JavaScript string
+// literal (e.g. a card/session summary injected with innerHTML) must be written class=\"on\",
+// so the raw file carries the backslashes even though the DOM does not. Without this the
+// scanner is blind to those clarifiers and they never reach docs/clarifiers.md — which is
+// exactly how the reading-club clarifier shipped unaudited on 2026-08-11.
+const RE = /<span class=\\?"on\\?"><span class=\\?"on-phrase\\?">([\s\S]*?)<\/span>(?:<!--onote-->)?<button class=\\?"on-mark\\?"[\s\S]*?<span class=\\?"on-h\\?">([\s\S]*?)<\/span>[\s\S]*?<b>Is saying<\/b><span>([\s\S]*?)<\/span><\/span><span class=\\?"on-row on-no\\?"><b>Not saying<\/b><span>([\s\S]*?)<\/span><\/span><\/span>/g;
 
 const strip = (s) => String(s).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
 
