@@ -917,6 +917,59 @@ in order. Do not deploy content that has skipped a stage.
 > spoken "In conversation:" line, and the `orthonote` box. On 2026-08-08 the same shape surfaced in
 > **four different layers**, and each successive lens found a surface the previous grep had missed.
 >
+> ### ⚠⚠ 8–10: THE THREE RULES THAT WOULD HAVE MADE 2026-08-11 A TWO-ROUND JOB. (Added 2026-08-11.)
+>
+> A two-paragraph wording fix on `ev-s3.html` card 06 took **four rounds and ~1.2M review
+> tokens**. Rules 1–7 above were all in force and all read. They did not prevent it, because
+> they describe *what good content looks like* and the failure was in *how the fix pass was
+> operated*. The post-mortem is exact, and it is not a matter of judgement:
+>
+> **Across three rounds, ~8 strings on that card were authored rather than ported. ~8 became
+> defects. Every ported sentence survived untouched.** `apologia-neutrality` wrote it plainly in
+> round 3: *"every ported sentence survived this pass; both blockers are prose that was invented
+> rather than ported."* One authored clause — "the pattern is consistent," about anarthrous
+> predicate nouns — was independently flagged by **all four lenses**, and was false (John 1:49,
+> "you are **the** King of Israel"), wrong in scope (Harner covered Mark and John, not the NT),
+> and contradicted the same card two tiers down.
+>
+> **8. PORT-OR-DON'T-CLAIM. This is a hard rule, not a style note.** Rule 5 already said "port,
+> don't author"; it was read as advice and lost every round. Operate it as a constraint instead:
+> if the certified essay has no sentence for the point, you have two options — **drop the point**,
+> or **declare the sentence**. A declared sentence is named to every lens in the round brief
+> ("⚠ THIS STRING IS MINE"), and there should be at most one or two in a round. When a gate hands
+> you replacement wording, **use it verbatim** — every "improvement" made to a lens's own wording
+> in that session became the next round's defect. When no port exists and you need the claim,
+> **ask the gate for wording** rather than writing your own; the read-only lenses supply it.
+>
+> **9. FREEZE THE SCOPE OF A FIX PASS. Pre-existing findings become backlog rows, not bundle-ins.**
+> When round 1 volunteered five pre-existing defects, bundling them looked cheaper than a second
+> round. **That recommendation was wrong and it manufactured two rounds.** It turned a
+> two-paragraph review into a twelve-paragraph review across three tiers, and every added
+> paragraph pulled in more authored prose. The tell that a loop is not converging: round 1 finds
+> mostly *pre-existing* defects, and by round 3 it is finding mostly *your own* from round 2. A
+> healthy round finds fewer things than the last one, and mostly old ones. **If the round's
+> findings are mostly yours, stop widening and start porting.**
+>
+> **10. PROPAGATE BY GREP IN THE SAME COMMIT, NEVER FROM MEMORY — AND THE MIRRORS COUNT.** Rule 7
+> already said grep every tier; doing it from memory cost a round each time. On 2026-08-11
+> "divinity"→"deity" reached line 676 and missed 632 **on the same card**; Colossians was removed
+> from two of three surfaces; the `pros` fix reached the free tier and left a *stronger* version
+> standing in the Pro tier. And the whole English pass never touched `ev-s3.mk.html`, which kept
+> serving the retired claim verbatim through four rounds — found only because one reviewer opened
+> the mirror unprompted. **`tools/check-mirror-parity.mjs` now catches that last one** (non-blocking
+> in CI; `--audit` lists all 29 pairs; accept a deliberate lag in `tools/mirror-parity-ledger.json`
+> with a written reason). ⚠ **The other six `.mk` fragments were never audited and probably carry
+> the same retired claims.** For translated mirrors the owner's standing preference is **delete the
+> affected passage rather than hand-write translated doctrinal prose no native reviewer will gate** —
+> absent beats wrong on an ungated surface (`docs/STATEMENT_OF_FAITH.md` still logs Macedonian and
+> Spanish review as outstanding).
+>
+> ⚠ **And note what the mechanical checks CANNOT see.** Through all four rounds
+> `node --test`, `check-retired-claims` and `check-orthodoxy-tripwires` ran **green every single
+> time** while BREAK-level defects sat in the text. There is no tooling for "a claim with no essay
+> underneath it" or "a hedge present in one tier and absent in another." Green checks mean the
+> mechanical floor held; they say nothing about whether the prose is defensible.
+>
 > **And self-check the recurring shapes first.** These were each caught more than once and a
 > careful re-read would have found them: unverified paraphrase presented as summary ·
 > overstated continuity ("the question is not modern" when only the *exchange* is) ·

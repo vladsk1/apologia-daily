@@ -511,3 +511,56 @@ test('footnote checker finds the list by position, not by the word "Footnotes"',
   assert.deepEqual(r.problems, [],
     'the word "footnotes" inside the stamp must not truncate the body scan');
 });
+
+// ---------------------------------------------------------------------------
+// Mirror parity (tools/check-mirror-parity.mjs)
+//
+// Added 2026-08-11 after four gate rounds on ev-s3.html card 06 fixed a
+// falsifiable claim about `pros`, an unfenced Philo/syncretism passage and a
+// say-aloud line — while every one of those defects stayed live, verbatim, in
+// ev-s3.mk.html. No existing guard could see it: the retired-claims scan matches
+// English regexes, and stamp-integrity compares a file only to its own stamp.
+// ---------------------------------------------------------------------------
+
+test('mirror parity flags an English source changed without its mirror', async () => {
+  const { findDivergences } = await import('../tools/check-mirror-parity.mjs');
+  // The exact round-3 failure: ev-s3.html fixed, ev-s3.mk.html left carrying it.
+  const d = findDivergences({ changedFiles: ['ev-s3.html'], existsCheck: () => true });
+  assert.ok(d.some((x) => x.mirror === 'ev-s3.mk.html'),
+    'a changed ev-sN.html with an unchanged .mk mirror must be flagged');
+});
+
+test('mirror parity stays silent when both sides move together', async () => {
+  const { findDivergences } = await import('../tools/check-mirror-parity.mjs');
+  const d = findDivergences({
+    changedFiles: ['ev-s3.html', 'ev-s3.mk.html', 'ev-s3.es.html'],
+    existsCheck: () => true,
+  });
+  assert.deepEqual(d, [], 'a source and its mirrors changing together is correct, not a defect');
+});
+
+test('mirror parity never treats a mirror as a source', async () => {
+  const { findDivergences, isMirror } = await import('../tools/check-mirror-parity.mjs');
+  // Editing a translation alone is legitimate (a translation fix), and must not
+  // demand that the English "mirror of the mirror" change too.
+  assert.equal(isMirror('library/mk/kalam.html'), true);
+  assert.equal(isMirror('ev-s3.mk.html'), true);
+  assert.equal(isMirror('ev-s3.html'), false);
+  const d = findDivergences({ changedFiles: ['library/mk/kalam.html'], existsCheck: () => true });
+  assert.deepEqual(d, [], 'a mirror edited on its own must not be flagged');
+});
+
+test('mirror parity does not demand a mirror that does not exist', async () => {
+  const { findDivergences } = await import('../tools/check-mirror-parity.mjs');
+  // Most library essays have no translation yet; the guard must not nag about them.
+  const d = findDivergences({ changedFiles: ['ev-s3.html'], existsCheck: () => false });
+  assert.deepEqual(d, [], 'pages with no mirror on disk are not divergences');
+});
+
+test('mirror parity module can be imported without exiting the process', async () => {
+  // A sibling tool once ran process.exit(0) on import and silently collapsed this
+  // suite from 90 tests to 76, all green. The CLI body must stay guarded.
+  const m = await import('../tools/check-mirror-parity.mjs');
+  assert.equal(typeof m.findDivergences, 'function');
+  assert.equal(typeof m.mirrorsOf, 'function');
+});
