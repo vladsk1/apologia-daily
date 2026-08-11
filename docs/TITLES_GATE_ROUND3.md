@@ -361,3 +361,75 @@ body.
 4. Mark the three backlog rows Done **in the same commit** (§G).
 5. Still not done: no angelic-reading accordion on the mastery deck; `ev-s3.html` card 08 has neither
    the objection nor a current `citations` date (still 2026-08-02).
+
+## R4-E — neutrality's round-3 report (arrived last; merge into R4 before running it)
+
+**Verdict: BLOCKED. 6 BREAKs across FOUR files**, two of them free, indexed, screenshot-designed
+surfaces the round-3 sweep never reached. All round-2 findings verified closed, including the three
+downstream. ⭐ Neutrality confirmed the same signature independently: *"every sentence authored fresh
+generated the next defect; every sentence ported verbatim survived."*
+
+### 🔴 E1. `pocket-cards.html:419` — the `titles` card was NEVER fixed
+> `'Son of Man — **the divine figure of Daniel 7**, not a humble title'`
+
+⚠ **The 2026-08-11 fix landed on the `jesus_claims` card at `:415` and stopped there.** The `titles`
+card on the same page still asserts flatly what the essay calls "genuinely unsettled." Two more on the
+same card: the tagline says **each** title made monotheists tremble (contradicting its own bullet 4 and
+the essay's central concession that Messiah / Son of David / Son of God are royal and human), and
+bullet 1 runs the flat LXX claim the essay hedges at `:175`. Neutrality supplied all three rewrites.
+
+### 🔴 E2. `ev-s3.html:932` — an EIGHTH surface, on the card we ported the fix FROM
+> "…in direct allusion to **the divine figure of Daniel 7**…"
+
+This is the same card whose `:916` carries the corrected seat-alone paragraph. **The card contradicts
+itself sixteen lines apart, on the free indexed Evidence Library surface.** ⚠ Its `citations` date is
+already known-stale (2026-08-02); this compounds it.
+
+### 🔴 E3. `tools/retired-claims.json` is UNDER-SPECIFIED — this is why E1 and E2 survived
+The widened patterns catch only the **service-verb route** ("receives worship"). E1 and E2 assert the
+conclusion **directly, without the verb** — which is why a corpus-tested widening with zero false
+positives still missed them. Neutrality drafted a sibling entry, `daniel7-figure-is-divine`, with four
+patterns. ⚠ Run corpus-wide before committing: **`ev-m-titles.html:452` is a legitimate attribution**
+(describing Boyarin's book) and belongs on `allow`, not in a rewrite.
+
+### 🔴 E4. The Collins/Ugaritic gap — neutrality owns this as its own regression
+Deleting the Canaanite clause on its round-2 advice left the newly load-bearing cloud-plank with its
+strongest objection nowhere on the page. **Collins argues the Ugaritic/Baal provenance at length in the
+Hermeneia volume we cite** (pp. 280–294): "rider of the clouds" is Baal's standing epithet, and a
+younger god is granted everlasting kingship before an aged high god. So the angelic reading has exactly
+the thing we say it lacks — just not a *biblical* one. Full replacement paragraph supplied, which
+states Collins's reply and then answers it (the anomaly is relocated, not removed; he owes an account
+of the substitution, not merely a source for the imagery).
+
+### 🔴 E5. `ev-m-titles.html:668` `ARG_PREMISES[2]` now contradicts the essay — created by MY round-3 fix
+Round 3 added a sentence to the essay naming what carries the argument, and it is **not** the hearers'
+reactions — it is the Kyrios material, while the essay concedes the hearing is disputed. So the rubric
+readers are **graded against**, burned into the share-card PNG, ranks as "strongest" the item the essay
+flags as contested. Rewrite supplied.
+
+### 🔴 E6. The Kyrios section allows no reply — and it is what the conclusion rests on
+Bousset is answered in one sentence and closed; **his own reply is never given** (he sited the cult in
+*bilingual* Damascus and Antioch, which the essay half-states at `:181` and never carries into the
+rebuttal). **No living dissenter is named**: Dunn grants the early date and denies the inference
+outright (*Did the First Christians Worship Jesus?*, 2010), and McGrath disputes Bauckham's category —
+which `retired-claims.json` (`divine-identity-consensus`) already records. The essay gives Casey a
+three-round exchange and Bousset one sentence. Both replacement passages supplied.
+
+### Also from neutrality
+- **`ev-m-titles.html:343` promises an answer the site does not contain** — it names Vielhauer and
+  Perrin and says "answered below"; only Casey's *linguistic* version is. (Derives from neutrality's own
+  round-2 rewrite; it supplied the correction.)
+- **`:434` presupposes the representative reading the essay says is contested**, so a reader who uses
+  that reply walks into "yes, and the representative is Michael" with nothing on the page. ⭐ **The
+  cheapest sufficient fix is NOT a new accordion** — one sentence in the `:434` reply. That answers the
+  standing "no angelic accordion" question.
+- **`:414` "judging the nations" is not what Daniel 7 gives the figure** (the court judges, 7:10, 22).
+- **`answers/what-does-son-of-man-mean` has a pre-existing FRONT-LOADED opening** — the deflationary
+  reading runs three sentences before the answer arrives. `check-answer-openings.mjs` passes it because
+  it uses no baselined tell phrase; only a reading catches this class. Fix while the file is open. Its
+  ¶4 also asserts a rebuttal the essay now disowns.
+- **`daily-args.json:309/361`** — two residues; `:362`'s `practice_q` coaches the retired inference.
+- ✅ **`daily-mix.html:158` CLEAN.** The new concession in `what-does-son-of-man-mean` is **CLEAN** and
+  does not break the SHORT-FORM ANSWER RULE. The `is-the-trinity` edit is **CLEAN** — "the
+  best-calibrated of the touched surfaces."
+- ⚠ `ev-m-titles.html`'s stamp reads `2026-07-29` and is edited far past it.
