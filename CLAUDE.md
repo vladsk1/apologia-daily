@@ -601,6 +601,22 @@
 > - **~a dozen CHECK-level page-cites** need a human with the physical books.
 >
 > **App store (before submission)**
+> - ⭐ **RE-AUDITED 2026-08-11 — [`docs/APP_STORE.md`](docs/APP_STORE.md) §1.5 is the queue.** A
+>   verification pass found **six blockers the runbook did not know about**, and **owner decided the
+>   work starts once Stripe is set up**, so none are fixed. Two are rejection-grade: 🔴 **Android
+>   `targetSdk` is 34 and Play requires 36 from 2026-08-31** (a hard external deadline — it means a
+>   **Capacitor 6 → 8** upgrade, not a one-line bump, and it cannot be compile-verified from Linux);
+>   🔴 **the Cloudflare Turnstile widget on `login.html`/`signup.html` will likely reject the app's
+>   `https://localhost` origin, locking out every user AND the App Review team.** Then: the
+>   password-reset redirect resolves to `https://localhost/update-password.html` in-app;
+>   `@capacitor/push-notifications` ships as a dependency wired to **nothing** (no client call, no
+>   `google-services.json`, no iOS entitlement — and the site's web-push service worker does not run
+>   in a Capacitor webview, so push is dead in-app either way — **strip-or-wire is an owner
+>   decision**); there is no `PrivacyInfo.xcprivacy`; and **176 pages hardcode `isPro = true`** while
+>   `video-library.html:720` still advertises a live "$8/mo" button. ⚠ **Stripe intersects the last
+>   one and the intersection is a rejection risk** — Apple forbids a Stripe purchase path *inside*
+>   the app (3.1.1), so the build ships either the RevenueCat IAP path or no purchase path at all.
+>   ✅ **One blocker CLEARED: Sign in with Apple is NOT required** — auth is email+password only.
 > - **Account deletion has NEVER run against live Supabase.** Test with a throwaway account first.
 > - **Pricing/paywall decision** + create the store products. `isPro` is still hardcoded `true` and a
 >   dead "$8/mo" is advertised. Do not run paid acquisition into it. **Decide AUD vs USD as part of

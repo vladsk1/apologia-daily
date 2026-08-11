@@ -6,6 +6,100 @@ steps that must run on a Mac.
 
 > **Read the blockers in §1 first.** Both will cause a rejection if skipped, and neither is
 > something the scaffolding can fix on its own.
+>
+> ### ⚠ RE-AUDITED 2026-08-11 — READ §1.5 BEFORE §1.
+>
+> A verification pass re-checked every claim in this file against the live tree and found
+> **six blockers this document did not know about**, two of them rejection-grade and one on a
+> **hard 20-day external deadline**. §1.5 has them. It also *cleared* one blocker: Sign in
+> with Apple is **not** required. **Owner decision (2026-08-11): the app work starts once
+> Stripe is set up**, so nothing in §1.5 has been fixed yet — it is a queue, not a report.
+
+---
+
+## 1.5. BLOCKERS FOUND 2026-08-11 (none of these are fixed)
+
+Verified by reading the tree, not by trusting §0–§9. The suite passes **111/111** and
+`npm run build:app` produces **374** files (§0 says 372 — the allowlist is extension-based,
+so pages added since July ship automatically; that part is healthy).
+
+### 🔴 1.5a — Android `targetSdk` is 34; Google Play requires **36** from **2026-08-31**
+
+`android/variables.gradle:3` sets `targetSdkVersion = 34`. From **August 31, 2026** new apps
+and updates must target **Android 16 (API 36)**. Target SDK is tied to the Capacitor major
+version, so this is not a one-line bump — it means **upgrading Capacitor 6 → 8** (Cap 8:
+`minSdk 24`, `compileSdk`/`targetSdk 36`, **Node 22+**, and Swift Package Manager as the iOS
+default, which changes the iOS build steps in §3). An extension to **Nov 1, 2026** can be
+requested in Play Console; take it if Stripe/pricing slips past the deadline.
+
+⚠ The upgrade **cannot be compile-verified from the Linux session** — Android needs a Gradle
+build, iOS needs the iMac. Plan to do it in a session with a machine that can build.
+
+### 🔴 1.5b — the captcha will lock the App Review team out of the app
+
+`login.html:104` and `signup.html:104` render a Cloudflare Turnstile widget
+(sitekey `0x4AAAAAAD41xNE9t5rbRuaA`). **Inside the app the page origin is `https://localhost`**,
+and Turnstile validates the hostname against the widget's allowed-domain list. If `localhost`
+is not on that list, **sign-in and sign-up both fail in the app** — for every user, and for
+the reviewer, which is a reliable rejection ("we were unable to log in").
+
+Fix either way (both are cheap): add `localhost` to the widget's allowed hostnames in the
+Cloudflare dashboard, **or** skip the captcha when `window.__AD_IN_APP` is true (that flag is
+already set by the shim at the top of `analytics.js`). ⚠ Skipping the captcha in-app removes a
+real anti-abuse control from a build anyone can unpack — prefer the allowed-hostname route.
+**Test it on a device before submitting; this cannot be verified from the browser.**
+
+### 🟠 1.5c — password-reset emails contain a dead link in-app
+
+`login.html:207` builds the redirect as `window.location.origin + '/update-password.html'`.
+In the app that resolves to **`https://localhost/update-password.html`** — a link that cannot
+open. Fix: use the production origin when `window.__AD_IN_APP`.
+
+Related, lower severity: `signup.html:168` sets no `emailRedirectTo`, so confirmation falls
+back to the Supabase Site URL and opens the **website in a browser** rather than the app. That
+works, but it is a clunky first run and there are no deep links / associated domains
+configured. **Give the reviewer a pre-confirmed demo account** so they never hit it (§7).
+
+### 🟠 1.5d — push is a shipped dependency wired to nothing
+
+`@capacitor/push-notifications` is in `package.json` and configured in `capacitor.config.json`,
+but: **no client code calls the plugin** (nothing references `PushNotifications`), there is no
+`google-services.json` — `android/app/build.gradle:53` literally logs *"google-services.json
+not found … Push Notifications won't work"* — and there is **no iOS push entitlement**. The
+site's real push is **web push via a service worker** (`analytics.js:405–460`), which does not
+run inside a Capacitor webview.
+
+So push is dead in the app whichever way you go. **This is a decision, not a fix:**
+- **Strip from v1 (recommended)** — drop the plugin + config from the app build. Web push on
+  the website is untouched. Removes APNs certificates, Firebase setup and a schema change from
+  the critical path.
+- **Wire it natively** — APNs + `google-services.json` + registration code + a **native-token
+  store**, since `push_subscriptions` is keyed by web `endpoint` and has no `user_id` (the same
+  column gap already logged against account deletion in §1a).
+
+### 🟠 1.5e — no `PrivacyInfo.xcprivacy`
+
+`ios/App` carries no privacy manifest. Apple has required one since May 2024 (data collection
++ required-reason API declarations). Expect upload warnings and possible rejection without it.
+
+### 🟠 1.5f — the paywall is further from ready than §1b implies
+
+**176 pages** hardcode `var isPro = true`, `app-purchases.js` is referenced by **zero** HTML
+pages, and **`video-library.html:720` still advertises a live "Unlock Pro — $8/mo" button**
+pointing at `index.html#pricing` for a price nothing can charge. `ev-s1.mk.html` already
+neutralized this exact copy to "launching soon" — do the same here.
+
+⚠ **This is the item Stripe intersects, and the intersection is a rejection risk:** Apple
+forbids selling a digital subscription through Stripe *inside the app* (Guideline 3.1.1). If
+Stripe becomes the web checkout, the app build must either ship the IAP path (RevenueCat, §5)
+or ship with no purchase path at all — never a button that routes to Stripe.
+
+### ✅ CLEARED — Sign in with Apple is **not** required
+
+§7 left this open pending a check of which providers are enabled. Verified: auth is
+**email + password only** (`login.html:174` `signInWithPassword`, `signup.html:168` `signUp`;
+no `signInWithOAuth` anywhere). Sign in with Apple is only mandatory alongside third-party
+social login. **One less blocker.**
 
 ---
 
@@ -256,7 +350,8 @@ Test with a StoreKit sandbox account (iOS) and a Play licence tester (Android) b
   worldview pages are the ones a reviewer is most likely to sample, and they are the most
   heavily gated content on the site.
 - **Sign in with Apple.** Required *only if* you offer third-party social login (Google/Facebook).
-  If Supabase auth is email-only, you can skip it — confirm which providers are enabled.
+  ✅ **Confirmed 2026-08-11: auth is email+password only, so this is not required** (§1.5).
+  Re-check if a social provider is ever added.
 - **Demo account.** Give the reviewer working credentials in App Store Connect, or they cannot
   see anything behind auth. This is a frequent, avoidable rejection.
 
@@ -267,6 +362,13 @@ Test with a StoreKit sandbox account (iOS) and a Play licence tester (Android) b
 - [x] `monitor.html` secret removed (§1a-0) — nothing to rotate; it was never configured
 - [x] `SUPABASE_ANON_KEY` set in Vercel — **required** for account deletion
 - [x] In-app account deletion **built** (§1a) — still needs live end-to-end testing
+- [x] Sign in with Apple confirmed **not required** — email+password only (§1.5)
+- [ ] **Android `targetSdk` 36 / Capacitor 8 upgrade — hard Play deadline 2026-08-31** (§1.5a)
+- [ ] **Turnstile verified working in the app** — or captcha skipped in-app (§1.5b)
+- [ ] Password-reset redirect fixed for the app origin (§1.5c)
+- [ ] Push stripped from v1, **or** wired natively with a token store (§1.5d)
+- [ ] `PrivacyInfo.xcprivacy` added to `ios/App` (§1.5e)
+- [ ] Dead "$8/mo" button neutralized; no Stripe purchase path inside the app (§1.5f)
 - [ ] Account deletion verified against live Supabase (throwaway account, rows gone)
 - [ ] Pricing decided; store products created; paywall wired to the `pro` entitlement (§1b)
 - [ ] Apple Developer + Google Play accounts active
