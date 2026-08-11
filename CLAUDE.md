@@ -651,6 +651,17 @@
 > - **Monthly agent-sweep Routine was never created** (`create_trigger` hit a permission error).
 > - **Browser-verify:** the CSP; the nav mega-menu on desktop + mobile; SRI on the gated essays.
 > - Bring the nav mega-menu to the gated pages via a stamp pass.
+> - ⚠ **`ev-s3.html` card 08 is EDITED PAST ITS STAMP and owes a gate round (2026-08-11).** Three
+>   strings were corrected during the `library/titles.html` re-certification — `:876` (a
+>   neutrality **BREAK** on the free indexed tier: it made everlasting dominion weight-bearing,
+>   which the essay calls the wrong plank, and asserted in our own voice that Daniel's own figure
+>   stands on God's side of the line), `:912` ("the weight falls on the first two" → "the first"),
+>   and `:932` (the retired "the divine figure of Daniel 7"). **All three are `apologia-neutrality`'s
+>   own supplied ported wording**, and it stated that applying them exactly as written owes no
+>   further neutrality pass — but **`apologia-orthodoxy` has not re-read the card**, so the stamp
+>   was deliberately NOT bumped and `check-stamp-integrity` flags it. That flag is correct; clear it
+>   with an orthodoxy round, not by re-stamping. ⚠ Its `citations` date is separately still
+>   `2026-08-02` and did not run on the 2026-08-08 rebuild — these are two different debts.
 > - Two standing stamp-integrity flags: `evil.html` category-pull, `worldviews.html` SEO schema.
 > - ⚠ **`ev-s6.html`, `flashcards.html` and `ev-m-trinity_islam.html` were EDITED on 2026-07-29 and need
 >   gate rounds.** Put **`ev-s6.html` first** — it is free, indexed, and was carrying the worst of it.
