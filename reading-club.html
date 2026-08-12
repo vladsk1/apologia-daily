@@ -75,6 +75,13 @@
     .book-card { background: var(--white); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; cursor: pointer; transition: all 0.2s; }
     .book-card:hover { box-shadow: 0 6px 24px rgba(10,22,40,0.1); transform: translateY(-2px); }
     .book-cover { height: 180px; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; position: relative; }
+    /* A club whose real book has a cover renders a jacket instead of an emoji. Same
+       typographic treatment as the study page's own .detail-cover, so the two match.
+       Swap in real artwork by giving the entry a `coverImg` and rendering an <img>. */
+    .bk-jacket { width: 84px; aspect-ratio: 2/3; border-radius: 3px; background: linear-gradient(160deg,#1a2f52,#0c1a30); border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 10px 24px rgba(0,0,0,0.4); display: flex; flex-direction: column; justify-content: space-between; padding: 9px 8px; z-index: 1; position: relative; }
+    .bk-jacket .bkj-t { font-family: var(--font-display); font-style: italic; color: var(--gold-light); font-size: 0.62rem; line-height: 1.14; }
+    .bk-jacket .bkj-a { font-family: var(--font-ui); font-size: 0.4rem; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+    .book-credit { font-family: var(--font-ui); font-size: 0.7rem; line-height: 1.45; color: var(--text-muted); border-top: 1px solid var(--border); margin-top: 0.75rem; padding-top: 0.6rem; }
     .book-cover::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.3)); }
     .book-weeks { position: absolute; bottom: 0.75rem; right: 0.75rem; font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; background: rgba(0,0,0,0.5); color: rgba(255,255,255,0.9); padding: 3px 8px; border-radius: 20px; z-index: 1; }
     .book-body { padding: 1.25rem; }
@@ -320,13 +327,15 @@
     {
       id: 'islamic-dilemma',
       href: '/reading-club-islamic-dilemma.html',
-      icon: '\u{1F54A}',
+      icon: '\u{1F4D6}',
+      cover: '<div class="bk-jacket"><div class="bkj-t">The Islamic Dilemma</div><div class="bkj-a">C. W. Frost</div></div>',
       bg: '#0f2040',
       title: 'The Islamic Dilemma',
       author: 'Christopher W. Frost',
       weeks: 16,
       status: 'active',
-      desc: 'The Qur\'an calls the Torah and Gospel revelation from God \u2014 and contradicts them on central points. Sixteen sessions through the book, with discussion questions and a capstone. Published with the author\'s permission; the study is our own work.',
+      desc: 'The Qur\'an calls the Torah and Gospel revelation from God \u2014 and contradicts them on central points. Sixteen sessions through the book, with discussion questions and a capstone.',
+      credit: '&#128278; Published with Christopher&nbsp;W.&nbsp;Frost\'s permission. The summaries, questions and judgements are ours, not his.',
       chapters: [],
       readers_list: []
     },
@@ -852,11 +861,12 @@
     // chapters[] model), so the card navigates instead of opening the detail view.
     var open = b.href ? 'location.href=\'' + b.href + '\'' : 'openBook(\'' + b.id + '\')';
     return '<div class="book-card" onclick="' + open + '">'
-      + '<div class="book-cover" style="background:' + b.bg + ';"><span style="z-index:1;position:relative;">' + b.icon + '</span><div class="book-weeks">' + b.weeks + ' weeks</div></div>'
+      + '<div class="book-cover" style="background:' + b.bg + ';">' + (b.cover || '<span style="z-index:1;position:relative;">' + b.icon + '</span>') + '<div class="book-weeks">' + b.weeks + ' weeks</div></div>'
       + '<div class="book-body">'
       + '<div class="book-title">' + b.title + '</div>'
       + '<div class="book-author">' + b.author + '</div>'
       + '<div class="book-desc">' + b.desc.slice(0, 100) + '&hellip;</div>'
+      + (b.credit ? '<div class="book-credit">' + b.credit + '</div>' : '')
       + '<div class="book-footer"><div class="book-readers">' + joinedBadge + '</div><div class="book-status ' + STATUS_CLASSES[b.status] + '">' + STATUS_LABELS[b.status] + '</div></div>'
       + '</div></div>';
   }
