@@ -35,7 +35,11 @@ lenses had never seen it. The author then gave permission to publish, which made
 | `apologia-orthodoxy` | 4 DRIFT · 6 NOTE | 4 DRIFT · 5 NOTE | 1 DRIFT · 4 NOTE |
 | `apologia-neutrality` | 5 BREAK · 13 CONCERN | 5 BREAK · 6 WEAK | 2 BREAK · 3 WEAK |
 
-**0 HERESY in every round.** Round 4 (orthodoxy + neutrality) was in flight at the time of writing.
+**0 HERESY in every round.** Rounds 4 and 5 followed; the page was **CERTIFIED on 2026-08-12** with dual consensus — `apologia-orthodoxy` STAMPABLE (0 heresy, 0 drift, 1 note) and `apologia-neutrality` STAMPABLE, unconditional.
+
+⚠ **Round 4's orthodoxy blocker was NOT one of the fix-pass edits** — it was pre-existing text that survived rounds 1–3 precisely because those rounds were reading what had changed. Session 9's *"it explains why a Muslim need not become a Jew or a Christian"* pull-quotes, on a page read aloud, as granting strength to religious indifferentism. **The identical clause is still live on the certified essay `library/islam-dilemma.html:176`** — backlog P2.
+
+⚠⚠ **THREE PROVENANCE CLAIMS WRITTEN INTO EARLIER STAMPS AND BRIEFS WERE DISPROVED BY GREP.** A hadith reported as de-quoted that was not (there were two, and only one had been caught); an "all ports, nothing authored" claim falsified by a sentence taken from a gate's *suggested* wording; and a source line cited as `:176` that was a `:174`+`:176` splice, alongside a paragraph reported as ending on a port whose closing sentence was authored. **Never stamp a check you did not run — and a provenance claim is a check. Verify it with a command before writing it down.**
 
 ---
 
@@ -153,7 +157,11 @@ for a web-enabled session; the verification is still owed (backlog P1).
 
 | Item | Where |
 |---|---|
-| Round 4 (orthodoxy + neutrality) | in flight at time of writing |
+| ~~Round 4~~ / Round 5 | ✅ **DONE — CERTIFIED 2026-08-12.** orthodoxy STAMPABLE (0 heresy, 0 drift); neutrality STAMPABLE, unconditional. Five rounds total. |
+| Session 7's dropped balancing clause (`islam-dilemma.html:164`) | `apologia-neutrality` round 5, POLISH — scope-frozen |
+| The *muhaymin* foothold stated twice, two sentences apart (session 9) | pre-existing; fix is a pure deletion, not a rewrite |
+| Sidebar: "**the** two things the Gospel cannot do without" | `apologia-orthodoxy` round 5 NOTE — one-word fix; card 06 rests everything on the resurrection |
+| The other-directed-love clarifier (box text drafted by orthodoxy, ready to gate) | recommended, not blocking |
 | `apologia-citations` on ~a dozen new references | `content-backlog.md` P1 |
 | Q 9:111 exegesis, or leave it dropped | `content-backlog.md` P2 |
 | The Q 10:94 corpus gap (the "rhetorical address to doubters" reading) | `content-backlog.md` P3 |
