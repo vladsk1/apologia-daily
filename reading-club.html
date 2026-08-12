@@ -81,6 +81,10 @@
     .bk-jacket { width: 84px; aspect-ratio: 2/3; border-radius: 3px; background: linear-gradient(160deg,#1a2f52,#0c1a30); border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 10px 24px rgba(0,0,0,0.4); display: flex; flex-direction: column; justify-content: space-between; padding: 9px 8px; z-index: 1; position: relative; }
     .bk-jacket .bkj-t { font-family: var(--font-display); font-style: italic; color: var(--gold-light); font-size: 0.62rem; line-height: 1.14; }
     .bk-jacket .bkj-a { font-family: var(--font-ui); font-size: 0.4rem; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+    /* The real jacket art, layered over the typographic stand-in. If the file is missing
+       the <img> removes itself on error and the stand-in shows through — so this ships
+       safely before the artwork exists. */
+    .bk-cover-img { position: absolute; inset: 0; margin: auto; height: 148px; width: auto; max-width: 88%; object-fit: contain; border-radius: 3px; box-shadow: 0 10px 24px rgba(0,0,0,0.42); z-index: 2; }
     .book-credit { font-family: var(--font-ui); font-size: 0.7rem; line-height: 1.45; color: var(--text-muted); border-top: 1px solid var(--border); margin-top: 0.75rem; padding-top: 0.6rem; }
     .book-cover::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.3)); }
     .book-weeks { position: absolute; bottom: 0.75rem; right: 0.75rem; font-family: var(--font-ui); font-size: 0.68rem; font-weight: 500; background: rgba(0,0,0,0.5); color: rgba(255,255,255,0.9); padding: 3px 8px; border-radius: 20px; z-index: 1; }
@@ -328,7 +332,8 @@
       id: 'islamic-dilemma',
       href: '/reading-club-islamic-dilemma.html',
       icon: '\u{1F4D6}',
-      cover: '<div class="bk-jacket"><div class="bkj-t">The Islamic Dilemma</div><div class="bkj-a">C. W. Frost</div></div>',
+      cover: '<img src="/islamic-dilemma-cover.jpg" alt="The Islamic Dilemma by Christopher W. Frost" class="bk-cover-img" loading="lazy" onerror="this.remove();">'
+           + '<div class="bk-jacket"><div class="bkj-t">The Islamic Dilemma</div><div class="bkj-a">C. W. Frost</div></div>',
       bg: '#0f2040',
       title: 'The Islamic Dilemma',
       author: 'Christopher W. Frost',
