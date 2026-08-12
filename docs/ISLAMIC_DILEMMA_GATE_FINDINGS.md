@@ -5,9 +5,9 @@ was done about it, and why. It is written to the same shape as
 [`ETERNAL_GENERATION_GATE_FINDINGS.md`](ETERNAL_GENERATION_GATE_FINDINGS.md).
 
 ⚠ **It is NOT a byte-level changelog and does not claim to be.** The authoritative record of what
-changed is `git diff` on `claude/islamic-dilemma-reading-club-536nq0` (3 commits, 11 files,
-**95 content edits** — 50 in round 1, 24 in round 2, 21 in round 3; counts measured 2026-08-12 by
-tallying the applied edit lists, not estimated). The page's own `content-review` stamp carries the
+changed is `git diff` on `claude/islamic-dilemma-reading-club-536nq0` (6 commits, 12 files,
+**104 content edits** — 50 in round 1, 24 in round 2, 21 in round 3, 8 in round 4, 1 in round 5;
+counts measured 2026-08-12 by tallying the applied edit lists, not estimated). The page's own `content-review` stamp carries the
 round-by-round account. This file exists because the *reasons* would otherwise live only in a
 session that is about to end.
 
@@ -48,7 +48,7 @@ lenses had never seen it. The author then gave permission to publish, which made
 **1. Every blocker in rounds 2 and 3 sat in a string that was authored rather than ported.** Every
 sentence carried verbatim from a certified essay survived all three reads, without exception. This
 is the pattern `CLAUDE.md` already records from `titles.html` and `ev-s3.html`; it held here with no
-counter-example across ~95 edits.
+counter-example across ~104 edits, and rounds 4 and 5 held it too.
 
 **2. ⚠ A VERBATIM PORT CAN STILL BREAK IF THE STRUCTURE IT REFERENCES DIFFERS. This is new, and it
 is not covered by "port, don't author."** Session 1 ended *"which lands him back on the second
