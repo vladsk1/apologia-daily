@@ -1,0 +1,372 @@
+{
+  "_note": "INSTAGRAM CAROUSEL (9 slides, 4:5 portrait) — not a reel. Render: python3 tools/reel/gen_card.py tools/reel/specs/ig-minimal-facts-carousel.json --aspect portrait",
+  "reviewed": {
+    "argument": "_pending_",
+    "orthodoxy": "_pending_",
+    "neutrality": "_pending_",
+    "by": "NOT YET GATED — DO NOT POST. Resurrection tier requires argument + orthodoxy + neutrality (dual consensus). All wording is ported from the certified library/minimalfacts.html; the tier language is written to satisfy tools/retired-claims.json entry `minimal-facts-virtually-all`, which retires 'virtually all' / 'nearly all' AND retires including the empty tomb in that set."
+  },
+  "theme": "navy",
+  "aspect": "portrait",
+  "source": "library/minimalfacts.html",
+  "cards": [
+    {
+      "name": "01-hook",
+      "big": [
+        {
+          "t": "Start with what",
+          "c": "cream",
+          "s": 86
+        },
+        {
+          "t": "the sceptics grant.",
+          "c": "gold",
+          "s": 88
+        }
+      ],
+      "sub": [
+        {
+          "t": "The case for the resurrection,",
+          "c": "dim",
+          "f": "serif",
+          "s": 42
+        },
+        {
+          "t": "built only on facts its critics concede.",
+          "c": "dim",
+          "f": "serif",
+          "s": 42
+        }
+      ]
+    },
+    {
+      "name": "02-method",
+      "kicker": "THE METHOD",
+      "lines": [
+        {
+          "t": "Don't start with",
+          "c": "cream",
+          "s": 62
+        },
+        {
+          "t": "\"the Bible is reliable.\"",
+          "c": "cream",
+          "s": 62
+        },
+        {
+          "t": "",
+          "s": 24
+        },
+        {
+          "t": "Start further back —",
+          "c": "dim",
+          "f": "serif",
+          "s": 50
+        },
+        {
+          "t": "with the handful of facts",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "your opponent already grants.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        }
+      ]
+    },
+    {
+      "name": "03-two-tests",
+      "kicker": "TWO TESTS",
+      "lines": [
+        {
+          "t": "A fact qualifies only if:",
+          "c": "dim",
+          "f": "serif",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "1.  It has several strong,",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "independent lines of evidence.",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "2.  It is granted by the great",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "majority of scholars who study",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "the subject — sceptics included.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "name": "04-fact-one-two",
+      "kicker": "THE FIRST TWO",
+      "lines": [
+        {
+          "t": "Jesus died by crucifixion.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 62
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "His disciples sincerely believed",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        },
+        {
+          "t": "he rose and appeared to them.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 24
+        },
+        {
+          "t": "These two are granted",
+          "c": "dim",
+          "f": "serif",
+          "s": 46
+        },
+        {
+          "t": "near-universally.",
+          "c": "cream",
+          "s": 52
+        }
+      ]
+    },
+    {
+      "name": "05-paul-james",
+      "kicker": "THEN TWO CONVERSIONS",
+      "lines": [
+        {
+          "t": "Paul — who had been",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "persecuting the church —",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "changed sides, by what he took",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "to be an appearance.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        },
+        {
+          "t": "",
+          "s": 22
+        },
+        {
+          "t": "So did James,",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "Jesus' own sceptical brother.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        }
+      ]
+    },
+    {
+      "name": "06-honest-fifth",
+      "kicker": "AND BE HONEST",
+      "lines": [
+        {
+          "t": "The empty tomb is usually",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "counted fifth. It should be",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "labelled differently.",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "",
+          "s": 22
+        },
+        {
+          "t": "It is granted by fewer —",
+          "c": "dim",
+          "f": "serif",
+          "s": 48
+        },
+        {
+          "t": "the more disputed,",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        },
+        {
+          "t": "softer point in the chain.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        }
+      ]
+    },
+    {
+      "name": "07-the-creed",
+      "kicker": "WHY IT LANDS",
+      "lines": [
+        {
+          "t": "Paul quotes a creed he",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "received — 1 Corinthians 15:3–7.",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 22
+        },
+        {
+          "t": "It dates to within a few years",
+          "c": "gold",
+          "f": "serifb",
+          "s": 56
+        },
+        {
+          "t": "of the crucifixion.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 60
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "Far too early for legend",
+          "c": "dim",
+          "f": "serif",
+          "s": 48
+        },
+        {
+          "t": "to do its slow work.",
+          "c": "dim",
+          "f": "serif",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "name": "08-the-limit",
+      "kicker": "WHAT IT ISN'T",
+      "lines": [
+        {
+          "t": "This is an argument to the",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "best explanation.",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "",
+          "s": 22
+        },
+        {
+          "t": "It is not a mathematical proof,",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        },
+        {
+          "t": "and anyone who tells you",
+          "c": "dim",
+          "f": "serif",
+          "s": 46
+        },
+        {
+          "t": "otherwise has oversold it.",
+          "c": "dim",
+          "f": "serif",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "name": "09-close",
+      "kicker": "APOLOGIA DAILY",
+      "lines": [
+        {
+          "t": "The case is strongest",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "when it claims least.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 64
+        },
+        {
+          "t": "",
+          "s": 26
+        },
+        {
+          "t": "Full essay, fully cited:",
+          "c": "dim",
+          "f": "serif",
+          "s": 44
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "cream",
+          "s": 50
+        }
+      ]
+    }
+  ]
+}
