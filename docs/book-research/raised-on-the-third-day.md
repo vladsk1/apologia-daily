@@ -202,8 +202,8 @@ Jerusalem apostles' preaching."** Those are the genuine open gaps.
 | Peter — **John 21:18–19 + Ehrman** concession | 4 was-missing → **✅ DONE (essay) 2026-08-05** | Shipped to `disciplesbelief.html:161` (fn 10). ⚠ The **`ev-m-postresurrection.html`** half is NOT done (0 hits, 2026-08-10) — still open for the mastery page. |
 | James son of Zebedee — **Acts 12:2 brevity** contrast | 4 was-missing → **✅ DONE 2026-08-05** | Shipped to `disciplesbelief.html:161` as the Acts 12:2/Stephen contrast. (Dunn 2:209 was dropped as probably the wrong page.) |
 | James brother of Jesus — Josephus *Ant.* 20.197–203 | **1 corroboration** | `sceptics.html` (read in full) covers it richly — the appearance, the Ananus stoning ~AD 62, Hegesippus flagged as more legendary. |
-| **"Nobody recanted" defended** (lapsi + Celsus/Lucian/Porphyry) | **4 missing — OPEN** | `disciplesbelief.html:159` still only *asserts* it. Owner-accepted open (backlog row 3). |
-| **Candida Moss** objections A/B | **4 missing — OPEN (owner-accepted)** | Essay never states Moss's objection while now carrying material that rebuts it; the stamp records this as an accepted BREAK. Backlog row 4. |
+| **"Nobody recanted" defended** | ~~4 missing — OPEN~~ **DONE 2026-08-13** | Shipped in the new Candida Moss subsection of `disciplesbelief.html`. ⚠ Final form is **Celsus + Lucian only** (the published Licona/McDowell version); the *lapsi* bridge and Porphyry were drafted then **DROPPED** on `apologia-argument`'s [WEAK] (authored-beyond-source), so this note's original triad is superseded. Bounded as an argument from silence. |
+| **Candida Moss** objections A/B | ~~4 missing — OPEN~~ **DONE 2026-08-13** | Moss subsection added to `disciplesbelief.html`; the accepted BREAK is closed. `apologia-citations` corrected the leads: no page pins (p.17/139 wrong), and the eyewitness/secondhand line is McDowell's *reply*, not Moss's objection. Dual-consensus CLEAN/STAMPABLE. |
 | Objection B — eyewitness/secondhand distinction | **1 corroboration (PROVISIONAL)** | Present in substance; not specifically re-verified this pass. Keep out only the 9/11 example (non-rec below). |
 | Licona ch. 16 — Paul's letters *early* | **1 corroboration** | `earlydate.html` carries the undisputed letters at AD 48–60 as first-generation documents by a man who knew the apostles. |
 | Licona ch. 16 — **Paul as a verifiable LINK to Jerusalem preaching** (Gal 1:18–19; 2:1–10; Dodd's "not the weather") | **4 missing** | Neither `earlydate.html` nor `sceptics.html` runs the primacy-of-Paul-as-detection-tool move. Refined backlog row 6 (P3). |
@@ -216,5 +216,5 @@ example, and it should still not go on our pages — keep the eyewitness/secondh
 ### Backlog-row status (corrected 2026-08-10 — the rows live in `docs/content-backlog.md`)
 - **Row 1 (Schnabel) · Row 2 (John 21:18–19, essay half) · Row 5 (Acts 12:2)** — **✅ DONE 2026-08-05.**
 - **Row 2 (`ev-m-postresurrection` half)** — still open (mastery page only).
-- **Rows 3 (defended "none recanted") + 4 (Candida Moss)** — still open, **owner-accepted** on record.
+- **Rows 3 (defended "none recanted") + 4 (Candida Moss)** — **DONE 2026-08-13** (both folded into one new Moss subsection in `disciplesbelief.html`, dual-consensus certified; backlog P2-7 + P2-8).
 - **Row 6 (Licona primacy of Paul)** — refined: dating is corroboration; the "link to Jerusalem preaching" move is the genuine P3 gap.
