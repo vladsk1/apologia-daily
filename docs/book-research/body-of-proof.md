@@ -103,8 +103,8 @@ ranked, each now a `content-backlog.md` row:
    from our otherwise-richer `burial.html` → **R-G, P3**; and the apostolic-eyewitness office-requirement
    **Acts 1:21–22** is absent from `eyewitnesses.html` → **R-H, P3.**
 
-Plus the two the 2026-08-08 pass already logged and that still stand: **Dunn absent from
-`earlycreed.html`** (backlog P2, standing output #1) and **Basilides absent site-wide** (backlog P3,
+Plus the two the 2026-08-08 pass already logged: **Dunn added to
+`earlycreed.html`** (backlog P2-1, standing output #1 — **DONE 2026-08-13**) and the still-standing **Basilides absent site-wide** (backlog P3,
 standing output #2 — ⚠ frame as a docetic *antecedent*, never a derivation claim). And one fresh
 live-door candidate: the PD **BCP burial-office committal prayer** ("…in sure and certain hope of the
 resurrection…") is **not in `/sources`** (the BCP appears there only as the translation label on two
@@ -146,7 +146,7 @@ creeds) → **`/sources` candidate, P3.**
 | Ch. 12 (endnote n.33) — Keener "Otho" discrepancy comparison | **4 missing** | → **R-F, P3** (`consistency.html`); distinct from its existing Plutarch material. |
 | Ch. 8 — rabbinic criminal-burial apparatus (m. Sanh. 6:5–6, Semahot) | **4 missing (additive)** | → **R-G, P3**. Ours (McCane-based `burial.html`) is richer on the core; this apparatus is the addable part. |
 | Ch. 3/6 — apostolic-eyewitness office-requirement (Acts 1:21–22) | **4 missing (additive)** | → **R-H, P3** (`eyewitnesses.html`). Bauckham universalism fence RESPECTED on that page. |
-| Ch. 9 — the 1 Cor 15 creed, Dunn page cite | **3 weaker in ours** | Standing output #1 (Dunn absent from `earlycreed.html`, 0 hits; present on `ev-s3`) → backlog P2. |
+| Ch. 9 — the 1 Cor 15 creed, Dunn page cite | ~~3 weaker in ours~~ **DONE** | Standing output #1 (Dunn absent from `earlycreed.html`, 0 hits; present on `ev-s3`) → backlog P2-1. **DONE 2026-08-13 — Dunn added to `earlycreed.html` (State-of-the-Scholarship + fn 21 + bibliography), dual-consensus certified; quote verified genuine, p. 854-855 attested in secondary lit, not yet eyeballed against the book.** |
 | Ch. 9 — the creed's early date generally | **1 corroboration** | `earlycreed.html` runs Jeremias/Conzelmann/Lüdemann/Wright/Ehrman + Lapide + Gallio anchor. Ours ≥ book. |
 | Ch. 5–9 — cui bono / crucifixion-disqualified-Messiah / James the sceptic / passion-predictions & ex-eventu / honest discrepancies / "no resurrection category" | **1 corroboration (ours ≥, several ours-better)** | Read in full this pass: `disciplesbelief`, `sceptics`, `respred`, `consistency`, `uniqueness`, `postres`. Each is equal or richer than the popular book, and `sceptics.html` avoids the book's Acts-7/Saul error (hazard flag). |
 | Ch. 6 — Trinity "word-not-in-Bible-but-concept-is" + Tertullian *trinitas* | **1 corroboration (ours better)** | `early_church_trinity.html:159` carries Tertullian exactly; the word-vs-concept point is the essay's spine. |
