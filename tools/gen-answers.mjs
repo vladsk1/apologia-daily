@@ -220,6 +220,7 @@ function page(e) {
 <meta property="og:image" content="https://apologiadaily.com/og-default.jpg">
 <meta name="twitter:image" content="https://apologiadaily.com/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@apologiadaily">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
