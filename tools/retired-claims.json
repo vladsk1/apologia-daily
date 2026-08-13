@@ -105,7 +105,8 @@
         "worship of all (nations|peoples)"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "cannot_net": "2026-08-14: 'the service of all nations' CANNOT be phrase-netted. It surfaced UNFENCED as the graded-correct answer on daily-mix.html:158 (fixed 2026-08-14 by resting the answer on cloud-coming) — but the same phrase is used LEGITIMATELY and fenced on four certified served surfaces: library/titles.html:140 and ev-s3.html:912 (both name pelach, cite Daniel 3:12 + the 7:27 saints reading, and rest the weight on the clouds), daily-args.json:361 ('though it is the manner of his coming, not the extent of his rule, that carries the weight'), and tools/reel/specs/jesus-titles.json (recites Daniel 7:14 then pivots to 'that imagery is not neutral — coming with the clouds'). A phrase net on the words would cry wolf on all four; the distinguisher is the FENCE, which a regex cannot see. Fix future overclaims at the source, as with daily-mix:158."
     },
     {
       "id": "son-of-man-never-disputed",
@@ -532,7 +533,33 @@
           "the corporate reading takes the figure as a symbol for faithful Israel"
         ]
       },
-      "rebuild_debt": "Needs a negation-guarded CLAIM net. The three patterns are literal adjacencies and miss 'the figure in Daniel 7 is divine', 'Daniel's Son of Man is a divine individual', and 'this figure is standing on God's side of a line' - the last of which was LIVE on ev-s3.html:876, a free indexed deity-tier surface, and was found by apologia-neutrality rather than by this net. A fourth pattern was dropped on 2026-08-11 because it fired on library/titles.html's own statement of the objection it answers."
+      "rebuild_debt": "Needs a negation-guarded CLAIM net. The three patterns are literal adjacencies and miss 'the figure in Daniel 7 is divine', 'Daniel's Son of Man is a divine individual', and 'this figure is standing on God's side of a line' - the last of which was LIVE on ev-s3.html:876, a free indexed deity-tier surface, and was found by apologia-neutrality rather than by this net. A fourth pattern was dropped on 2026-08-11 because it fired on library/titles.html's own statement of the objection it answers. 2026-08-14: the predication form 'Son of Man ... actually a DIVINE claim' surfaced on daily-mix.html:158 (the GRADED quiz) and was fixed by softening the question to 'amount to a divine-status claim on his lips' + resting the answer on cloud-coming; the negation-guarded CLAIM net remains owed (a literal net risks firing on titles.html's hedged 'contested minority case that Daniel 7's Son of Man was already a divine figure', which must_not_fire)."
+    },
+    {
+      "id": "gethsemane-proves-distinct-wills",
+      "retired": "2026-08-14",
+      "what": "Using Gethsemane's 'not my will but yours' (Luke 22:42) to prove the Father and Son are distinct PERSONS, or to prove the persons have distinct/separate WILLS, WITHOUT fencing it as Christ's HUMAN will yielding to the one divine will. Includes the flat form 'three divine wills'.",
+      "why": "The three persons share ONE undivided divine will (guarding against tritheism); the TWO wills of orthodox dyothelitism are in the incarnate CHRIST by his two natures - it is his HUMAN will that says 'not my will but yours'. Resting the anti-modalism argument on the will-CONTRAST rather than on the real ADDRESS (the Son praying TO the Father) teaches, by implication, distinct divine wills. Found on daily-mix.html:181 (the GRADED explanation) at its first gate 2026-08-11 and fixed 2026-08-14 by porting ev-m-modalism.html:340's safe framing. ev-m-modalism.html:340 is the model - it fences the clause explicitly ('the incarnate Son's human will yielded to the Father's').",
+      "instead": "Prove distinct persons by the real ADDRESS - 'the Son prays TO the Father, real address to one who is really other' (ev-m-modalism.html:340) - plus John 17:24 (the Father loved the Son before creation). If Gethsemane is cited, fence the will as Christ's HUMAN will, never a second divine one.",
+      "patterns": [
+        "(?<!\\b(never|not|no|nor)\\b[^.]{0,25})three (divine )?wills",
+        "not my will,? but yours[^.]{0,80}(and (the|these|those|two) (persons?|wills?) (are|is)|prov(e|es|ing)[^.]{0,20}(persons?|wills?)|show(s|ing)?[^.]{0,20}(distinct|persons?|wills?)|so (the|they|these)[^.]{0,25}(distinct|persons?|real)|means (the|they|two|three))"
+      ],
+      "allow": [],
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "Add Gethsemane - not my will but yours - and John 17:24, and the persons are real and eternal",
+          "the Trinity means three divine wills in perfect harmony"
+        ],
+        "must_not_fire": [
+          "the incarnate Son's human will yielded to the Father's ('not my will but yours')",
+          "Christ has two wills, one human and one divine, in a single person",
+          "orthodoxy never envisions three divine wills at work in the world, but one",
+          "genuine prayer between two distinct persons - or it is divine play-acting"
+        ]
+      },
+      "rebuild_debt": "The first pattern negation-guards 'three (divine) wills' so it fires on the ASSERTION but not on the orthodox DENIAL ('orthodoxy never envisions three divine wills, but one', live on the Trinity essay). The second keys the Gethsemane will-contrast to an explicit conclusion connective ('and the persons are', 'proves/shows ... persons/wills', 'so the ... distinct') so it does NOT fire on the legitimate ADDRESS argument (ev-s6.html:1275: 'genuine prayer between two distinct persons', where the persons follow the PRAYER, not the will). If a future fenced use false-fires, tighten the window rather than adding a coarse whole-file allow (allow un-retires the claim for the entire file)."
     },
     {
       "id": "ehrman-preexistence-is-late",
