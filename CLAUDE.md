@@ -6,6 +6,13 @@
 > (repo root; committed but not web-served). Deploy rule unchanged: push your working
 > branch to `main`, never `git checkout main`.
 >
+> **Session-start rule — sync with `origin/main` first.** At the start of a *local* working
+> session, `git fetch origin` and bring the working branch up to `origin/main` (fast-forward or
+> rebase) **before editing**, so you never work from a stale clone. A local Claude Code hook
+> (`.claude/session-sync.mjs`, wired via `.claude/settings.local.json`) runs the fetch and reports
+> how far behind you are at every session start. Web sessions read GitHub directly and are already
+> current, so this is a no-op there.
+>
 > **Where the history went (2026-07-26).** This file loads into *every* session, so dated entries
 > older than 2026-07-26 now live in `HANDOFF.md` → *Archived project-guide status entries*. Nothing
 > was discarded and no rule moved — the standing rules below are byte-identical, and every OPEN item
