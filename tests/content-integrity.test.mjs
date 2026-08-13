@@ -1,7 +1,7 @@
 // Content-pipeline invariants that protect the gates themselves.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, globSync, existsSync } from 'node:fs';
+import { readFileSync, globSync, existsSync, writeFileSync, unlinkSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
@@ -563,4 +563,35 @@ test('mirror parity module can be imported without exiting the process', async (
   const m = await import('../tools/check-mirror-parity.mjs');
   assert.equal(typeof m.findDivergences, 'function');
   assert.equal(typeof m.mirrorsOf, 'function');
+});
+
+test('check-content-review rejects a placeholder stamp, not just a missing one', () => {
+  // 2026-08-12: a draft reel spec stamped "_pending_" on argument+orthodoxy passed
+  // the gate cleanly, because the predicate only tested truthiness. A non-empty
+  // string that SAYS the file is ungated must not clear the gate whose entire job
+  // is to block ungated content. Placeholders to keep rejected: _pending_, TODO, no.
+  const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+  const tmp = path.join(ROOT, 'tools', 'reel', 'specs', '__gate-probe.json');
+  const run = () => {
+    try {
+      // NOTE: pass the path REPO-RELATIVE. isContent() matches patterns anchored
+      // at the repo root, so an absolute path silently fails to match and the file
+      // is skipped rather than checked — which would make this test vacuously pass.
+      execFileSync('node', ['tools/check-content-review.mjs', 'tools/reel/specs/__gate-probe.json'],
+        { cwd: ROOT, stdio: 'pipe' });
+      return 0;
+    } catch (e) { return e.status; }
+  };
+  try {
+    for (const bad of ['_pending_', 'TODO', 'no', '2026-8-1', 'pending 2026-08-12']) {
+      writeFileSync(tmp, JSON.stringify(
+        { reviewed: { argument: bad, orthodoxy: bad, by: 'probe' }, scenes: [] }));
+      assert.equal(run(), 1, `placeholder stamp "${bad}" must FAIL the gate`);
+    }
+    writeFileSync(tmp, JSON.stringify(
+      { reviewed: { argument: '2026-08-12', orthodoxy: '2026-08-12', by: 'probe' }, scenes: [] }));
+    assert.equal(run(), 0, 'a real ISO date must PASS the gate');
+  } finally {
+    if (existsSync(tmp)) unlinkSync(tmp);
+  }
 });

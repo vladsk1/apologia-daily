@@ -143,6 +143,16 @@ function stampFor(path) {
   if (!obj || typeof obj !== 'object') return { ok: false, reason: 'no content-review stamp' };
   const missing = ['argument', 'orthodoxy'].filter((k) => !obj[k]);
   if (missing.length) return { ok: false, reason: `stamp missing: ${missing.join(' + ')}` };
+  // A stamp value must be an ISO date. Truthiness alone is not enough: "_pending_",
+  // "TODO" and "no" are all non-empty strings, so a file could carry a stamp that
+  // SAYS it is ungated and still clear the gate whose whole job is to block it.
+  // Found 2026-08-12 when a draft reel spec stamped "_pending_" passed cleanly.
+  const notDated = ['argument', 'orthodoxy'].filter(
+    (k) => !/^\d{4}-\d{2}-\d{2}$/.test(String(obj[k]).trim()));
+  if (notDated.length) {
+    return { ok: false, reason: `stamp not a date (${notDated.map((k) => `${k}="${obj[k]}"`).join(', ')}) `
+      + `— a gate date must be YYYY-MM-DD; a placeholder is not a review` };
+  }
   return { ok: true, reason: `argument ${obj.argument} · orthodoxy ${obj.orthodoxy}${obj.by ? ' · ' + obj.by : ''}` };
 }
 
