@@ -137,7 +137,7 @@ creeds) → **`/sources` candidate, P3.**
 | Ch. 8 — Mark 16:9–20 dependent appearance lists | **6 non-rec** | Several appearance entries lean on the longer ending; `manuscript.html` treats 16:9–20 as almost certainly not original. |
 | Ch. 11–12 — *Gospel of Peter* / Justin *Dialogue* anti-Jewish glosses; Porphyry's Magdalene slur | **6 non-rec** | Jewish-sensitivity. Use the *Gospel of Peter* only as a mark of the apocryphon's lateness (see R-A), never reproduce its blame-shift. |
 | Ch. 3 — Basilides → Surah 4:157 | **4 missing** | Standing output #2 → backlog P3. Antecedent, not derivation. |
-| Ch. 12 — resurrection-restraint + canonical-vs-apocrypha (Dudrey) | **4 missing** | ⭐ Standing output #1 → **R-A, P2**. The strongest thing the book has; buried by the old catch-all. |
+| Ch. 12 — resurrection-restraint + canonical-vs-apocrypha (Dudrey) | ~~4 missing~~ **DONE 2026-08-13** | ⭐ Standing output #1 → **R-A, P2 — SHIPPED** to `library/postres.html` (new "A Restraint the Legends Could Not Manage" section, dual-consensus certified; *Gospel of Peter* fenced to its emergence scene 9:35-42, no anti-Jewish content). |
 | Ch. 11 — Holy Sepulchre vs Garden Tomb archaeology | **4 missing** | → **R-B, P3**. The old table had **no verdict** for Ch. 11. Neutrality-fenced. |
 | Ch. 5 — Last Supper / new-covenant cluster (Exod 24:8 / Jer 31:31) | **4 missing** | → **R-I, P3** (`typology.html`). |
 | Ch. 5/7 — messianic-pretenders "lone survivor" catalogue | **3 weaker in ours** | Principle present (Wright); enumeration + Theudas crux absent. → **R-C, P3**. |
