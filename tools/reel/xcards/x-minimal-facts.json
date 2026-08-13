@@ -1,0 +1,18 @@
+{
+  "reviewed": {
+    "argument": "_pending_",
+    "orthodoxy": "_pending_",
+    "neutrality": "_pending_",
+    "by": "NOT YET GATED — DO NOT POST. Resurrection tier requires argument + orthodoxy + neutrality (dual consensus). Wording is ported from the certified library/minimalfacts.html and from the paired IG carousel spec (tools/reel/specs/ig-minimal-facts-carousel.json), which is itself ungated. ⚠ The headline deliberately does NOT list the facts or name a consensus level: tools/retired-claims.json entry `minimal-facts-virtually-all` retires 'virtually all' / 'nearly all' AND retires including the empty tomb in the near-universal set, and a 1600x900 card has no room to carry the tier distinction honestly. The card sells the METHOD and routes to the essay for the facts. Do not 'improve' it by adding the five facts."
+  },
+  "name": "minimal-facts",
+  "kicker": "THE RESURRECTION",
+  "headline": [
+    { "t": "Start with what", "c": "cream" },
+    { "t": "the sceptics grant.", "c": "gold" }
+  ],
+  "sub": [
+    "Not \"the Bible is reliable\" — start further back,",
+    "with the handful of facts your opponent already concedes."
+  ]
+}

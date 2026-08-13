@@ -45,6 +45,15 @@ const CONTENT_PATTERNS = [
   /^ev-m-.+\.html$/,                       // Evidence Library mastery pages (all 67, gated 2026-07-29)
   /^worldviews\.html$/,                    // worldviews cards (Islam Case tier etc.)
   /^tools\/reel\/specs\/.+\.json$/,        // short-form reel scripts
+  /^tools\/reel\/xcards\/.+\.json$/,       // X share-cards. Added 2026-08-12: CLAUDE.md has
+                                           // listed these as gated content since the standing
+                                           // X-card rule was written, and they were already in
+                                           // USER_FACING (the --audit scope) — but they were NOT
+                                           // in the BLOCKING list, so an unstamped X card could be
+                                           // pushed with CI green. That is why 6 of the 9 specs
+                                           // carry no stamp. Blocking is per-CHANGED-file, so this
+                                           // bites only when a card is touched; the 6 legacy ones
+                                           // are a backlog row, not an immediate CI break.
   /^api\/(ask|debate|feedback|tutor|devotional)\.js$/,  // live AI system prompts: Ask, the Debate
                                            // personas, debate/conversation scoring + coaching,
                                            // the Evidence Library tutor + grader, and the
