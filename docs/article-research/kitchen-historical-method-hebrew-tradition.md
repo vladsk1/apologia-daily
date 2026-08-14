@@ -138,7 +138,7 @@ entity** it names (a people? how large? where?) is genuinely debated. Land the b
 | Kitchen's covenant/treaty-form argument | `library/archaeology.html` (with McConville's caution) | **corroboration** — already live and already correctly labelled contested |
 | Minimalist vs. maximalist spectrum | `library/archaeology.html` (Thompson, Lemche, Davies / Dever / Finkelstein & Mazar / Kitchen) | **corroboration** — the spectrum is already mapped fairly |
 | "Absence of evidence" reasoning | `library/archaeology.html` (the doubted-then-confirmed list) | small **improvement** — Kitchen's 1966 David/Solomon case + the 1993 Tel Dan vindication is the cleanest possible illustration |
-| **Merneptah Stele** | **nothing on-site** (0 hits site-wide) | **improvement (gap)** — the earliest extra-biblical mention of Israel |
+| **Merneptah Stele** | **✅ SHIPPED 2026-08-14** to `library/archaeology.html` (Named-persons "Two further cases" para, fn 10; bounded to a people in Canaan by c.1208 BC, people-determinative footnoted as mainstream) | ~~improvement (gap)~~ — done |
 | Nuzi / patriarchal customs | **nothing on-site** (0 hits) | ⚠ **NOT recommended** — see the Thompson/Van Seters flag; a trap, not a gap |
 
 ## Live-door status (MANDATORY cross-check — performed 2026-07-26)
