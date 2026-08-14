@@ -44,10 +44,9 @@ Jesus' deeds (παράδοξα) could read as *sorcery*. Later writers do the sa
 
 **Ch. 2 — The Western and Eastern Reception (p. 35).** The decisive text-critical find: a **Syriac** version
 (traced to **Jacob of Edessa**, c. 708 CE, a top translator) reads *"he was **thought to be** the Christ"* — and
-**Jerome's** Latin (*De Viris Illustribus* 13, c. 393 CE) independently renders it *"he was **believed to be**
-the Christ"* (*credebatur esse Christus*). Two independent translators pointing to a non-confessional Greek
-original → the suspicious received line "he was **the** Christ" (ὁ χριστὸς οὗτος ἦν) is likely a later
-tightening; the original was neutral. This also explains why Origen said Josephus disbelieved Jesus' messiahship.
+**Jerome's** Latin (*De Viris Illustribus* 13, c. 393 CE) renders it *"he was **believed to be**
+the Christ"* (*credebatur esse Christus*). ⚠ **CORRECTION (citations, 2026-08-14): NOT "two independent translators."** Jerome and the Syriac reading both most likely **descend from Eusebius's citation** of Josephus (Alice Whealey, *NTS* 54 [2008]: 573–590), so they are one Eusebian tradition attesting an early non-confessional form — not two independent witnesses to Josephus's autograph. The suspicious received line "he was **the** Christ" (ὁ χριστὸς οὗτος ἦν) is likely a later
+tightening; the original was neutral. **Origen (writing earlier, and independently) is the genuinely independent plank** — which is *why* he could say Josephus disbelieved Jesus' messiahship (no confession stood in his copy).
 - *Primaries:* Jerome, *De Viris Illustribus* 13; the Syriac TF (Jacob of Edessa; **Michael the Syrian**'s
   chronicle); the **Arabic** version in **Agapius** of Hierapolis (10th c.) — the famous **Shlomo Pines**
   "he was believed to be the Christ" argument. Cassiodorus, *Institutions* 1.17.1.
@@ -195,13 +194,9 @@ therefore corroboration, not improvement.**
 | **⚠ The resurrection guardrail holds** — verified site-wide | No page claims Josephus attests/proves the resurrection. `ev-s2` uses him only for women's-testimony devaluation and James's death. Site-wide regex for `josephus … (confirms\|proves\|attests) … (resurrect\|rose)` returns **0** |
 
 ### Improvements — logged to `docs/content-backlog.md` (2026-07-28)
-1. **P3 — the Jerome + Syriac convergence** (`De Viris Illustribus` 13 *credebatur esse Christus* + Jacob of Edessa's
-   Syriac "thought to be the Christ", via Michael the Syrian; Agapius/Pines). Our pages assert the neutral core as
-   the majority view but give the reader **no evidence for it**. This is the strongest single datum, and it
-   supports the **majority** reconstruction we already hold — it does *not* require adopting Schmidt's minority
-   thesis. Jerome is **public domain** (NPNF ser. 2 vol. 3) → also a `/sources` candidate, i.e. a live-door path.
-2. **P3 — Origen's testimony** (*Contra Celsum* 1.47; *Comm. Matt.* 10.17: Josephus "did not believe Jesus was the
-   Christ"). Explains *why* the received wording is suspect — a 3rd-century reader of Josephus saw no confession.
+1. ✅ **SHIPPED 2026-08-14** to `library/hist_jesus.html` (body §162 + FAQ + fn 6) — ⚠⚠ **but the "convergence" framing here is WRONG and was corrected on publication.** citations (2026-08-14) found that **Jerome AND the Syriac reading most likely descend from Eusebius's citation** of Josephus (Alice Whealey, *NTS* 54 [2008]), so they are **one Eusebian tradition, not two independent witnesses** — the "Jerome + Syriac convergence"/"strongest single datum" claim below overstated it. **Origen (item 2) is the genuinely independent plank.** Agapius/Pines is Whealey-undercut and was demoted to a footnote caveat, not a body claim. Jerome ("believed to be Christ", *De Viris Illustribus* 13) shipped as evidence-consistent-with-a-non-confessional-original, not as an independent manuscript witness. HARD FENCE held (majority view only; Schmidt kept as minority). ~~the Jerome + Syriac convergence~~ (`De Viris Illustribus` 13 *credebatur esse Christus* + Jacob of Edessa's Syriac; Agapius/Pines). Jerome is **public domain** (NPNF ser. 2 vol. 3) → still a `/sources` candidate (follow-up, not yet done).
+2. ✅ **SHIPPED 2026-08-14** — **P3 — Origen's testimony** (*Contra Celsum* 1.47; *Comm. Matt.* 10.17: Josephus "did not believe Jesus was the
+   Christ"). Explains *why* the received wording is suspect — a 3rd-century reader of Josephus saw no confession. The **strong, independent plank** (Jerome/Syriac being Eusebius-dependent). Bounded: witness-to-text, non-confessional original only, NOT full authenticity. ANF (PD) → `/sources` candidate (follow-up, not yet done).
    Public domain (ANF) → `/sources` candidate. Currently **absent** from the corpus.
 3. **P4 — the stylometric evidence + the hostile-witness concession** (90 words / 62 lexemes; Meier; Thackeray's
    reversal; Mealand; Bardet — and even skeptics **Feldman** and **Mason** granting an authentic substratum).
