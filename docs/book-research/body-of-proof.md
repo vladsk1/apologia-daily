@@ -79,9 +79,11 @@ ranked, each now a `content-backlog.md` row:
    denominational neutrality — a historical/archaeological question, not "one tradition is right"; the
    book's own verdict lands with mainstream scholarship on the Holy Sepulchre).
 3. **The Last Supper / new-covenant cluster** (Words of Institution × Exodus 24:8 × Jeremiah 31:31) is
-   absent from `typology.html`, which covers Passover and the Day of Atonement but not the covenant-cup
-   institution — an on-theme gap in an essay whose own spine is "institutions that point beyond
-   themselves." → **R-I, P3.**
+   ~~absent from `typology.html`~~ **SHIPPED 2026-08-15** — new subsection "The blood of the covenant"
+   added after the Day of Atonement in the "Events and Institutions" section (Exodus 24:7-8 + Jeremiah
+   31:31-34 → Mark 14:24 / 1 Cor 11:25, Hebrews 9:18-22 + 8:8-12 as apostolic warrant). Kept in
+   typology's lane (type vs prediction distinguished); eucharist neutrality fenced. Single-consensus
+   gated CLEAN. → **R-I, P3 — DONE.**
 4. **The enumerated "lone survivor" catalogue** of ~10 failed first-century messianic movements
    (Josephus/Acts) — our essays state the *principle* (Wright, RSG 697–701, in `postres`; one clause in
    `disciplesbelief`) but never display the catalogue, and never touch the **Theudas / Acts 5:36 vs
@@ -139,7 +141,7 @@ creeds) → **`/sources` candidate, P3.**
 | Ch. 3 — Basilides → Surah 4:157 | **4 missing** | Standing output #2 → backlog P3. Antecedent, not derivation. |
 | Ch. 12 — resurrection-restraint + canonical-vs-apocrypha (Dudrey) | ~~4 missing~~ **DONE 2026-08-13** | ⭐ Standing output #1 → **R-A, P2 — SHIPPED** to `library/postres.html` (new "A Restraint the Legends Could Not Manage" section, dual-consensus certified; *Gospel of Peter* fenced to its emergence scene 9:35-42, no anti-Jewish content). |
 | Ch. 11 — Holy Sepulchre vs Garden Tomb archaeology | **4 missing** | → **R-B, P3**. The old table had **no verdict** for Ch. 11. Neutrality-fenced. |
-| Ch. 5 — Last Supper / new-covenant cluster (Exod 24:8 / Jer 31:31) | **4 missing** | → **R-I, P3** (`typology.html`). |
+| Ch. 5 — Last Supper / new-covenant cluster (Exod 24:8 / Jer 31:31) | ~~4 missing~~ **DONE 2026-08-15** | → **R-I, P3 — SHIPPED** to `library/typology.html` (new "The blood of the covenant" subsection; Heb 9:18-22 + 8:8-12 apostolic warrant; type-vs-prediction kept distinct; eucharist neutrality fenced; single-consensus CLEAN). |
 | Ch. 5/7 — messianic-pretenders "lone survivor" catalogue | **3 weaker in ours** | Principle present (Wright); enumeration + Theudas crux absent. → **R-C, P3**. |
 | Ch. 3/5 — Second-Temple resurrection primaries (4Q521, Isa 26:19, 2 Macc 7:9) | **4 missing / partial** | → **R-D, P3** (`uniqueness.html`). |
 | Ch. 12 — anti-copycat assets (Bowersock, Asclepius, Aeschylus) | **4 missing** | → **R-E, P3** (folded into R-D's `uniqueness.html` row). |
