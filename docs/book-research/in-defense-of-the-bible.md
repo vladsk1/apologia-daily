@@ -73,14 +73,14 @@ place where **our essays are ahead of the book**. That is a real result, not a n
 July execution was thorough, and it means a future session should be *defending* these essays from
 this chapter rather than mining it.
 
-1. **Mill (1707) and Bentley (1713) — the variant-count objection is three centuries old, and was
+1. ✅ **SHIPPED 2026-08-14** (`manuscript.html` fn 11-12; ⚠ Bentley PARAPHRASED not quoted — verbatim wording unverifiable against the 1713 primary; locus is *Remarks* Part I "to F. H., D.D." §32). **Mill (1707) and Bentley (1713) — the variant-count objection is three centuries old, and was
    answered then.** John Mill's Greek NT listed ~30,000 variants from ~100 manuscripts and caused a
    public storm; Richard Bentley's reply — more manuscripts means more anchors and *better* recovery —
    is still the correct answer. `library/manuscript.html` makes exactly that argument in its own voice
    ("a by-product of abundance, not of corruption") but has **no historical anchor for it**. Adding the
    precedent turns a defensive-sounding reply into a demonstration that the objection is old and has
    been met for 300 years. Cheap, and it strengthens the essay's best paragraph.
-2. **The Aland "Category I / strict text" classification — our early witnesses are *good*, not merely
+2. ✅ **SHIPPED 2026-08-14** (`manuscript.html` fn 6; ⚠⚠ anchored on P75 ALONE — only P75 is "strict"; P66/P45 are "free", so do NOT generalize to "the early papyri"; the strict/normal/free axis ≠ the five-category I–V scale). **The Aland "Category I / strict text" classification — our early witnesses are *good*, not merely
    early.** `manuscript.html` argues early + abundant + geographically spread, and uses the
    P75/Vaticanus stability as its empirical check. It never argues that the earliest papyri are
    *high-quality* copies by an independent scholarly classification. ⚠ Cite **Kurt & Barbara Aland**
@@ -93,7 +93,7 @@ this chapter rather than mining it.
 |---|---|---|
 | **Ch. 6** — spine, the number/nature/theology of variants | 1 corroboration, **shipped 2026-07-17** | The four-category taxonomy, Rom 5:1, Jesus Barabbas, Mark 1:41, John 1:18, the <1% figure and the Ehrman concession (cited to the *Misquoting Jesus* Plus-edition appendix, p. 252) are all live in `manuscript.html`. |
 | Ch. 6 — Wallace's caution against the raw manuscript-count apologetic | 1 corroboration, **ours is explicit** | Our essay says it in its own voice: *"the raw total is not itself the argument."* |
-| Ch. 6 — Mill/Bentley | **4 missing** | Standing output #1. |
+| Ch. 6 — Mill/Bentley | ✅ **SHIPPED 2026-08-14** to `manuscript.html` (fn 11-12; Bentley paraphrased, not quoted) | ~~Standing output #1~~ done |
 | Ch. 6 — the papyri chart / Aland categories | **4 missing** | Standing output #2. |
 | Ch. 6 — internal vs. external evidence (the Phil 1:14 example) | 4 missing, **low value** | Our essay describes triangulation across branches but never names the internal/external distinction. A method refinement, not a gap in the case. |
 | Ch. 6 — the "two ditches" / KJV-Only framing | **6 non-recommendation** | Denominationally sensitive; `CLAUDE.md` forbids adjudicating an intra-Christian dispute as settled. The note flags it itself. Our essay handles Erasmus and the *Textus Receptus* **historically**, which is the correct scope. |
