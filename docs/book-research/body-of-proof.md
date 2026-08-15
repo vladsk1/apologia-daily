@@ -102,8 +102,8 @@ ranked, each now a `content-backlog.md` row:
    material `consistency.html` already runs. 0 hits. → **R-F, P3.**
 8. **Two additive gaps** — the rabbinic criminal-burial apparatus (**m. Sanhedrin 6:5–6, Semahot
    13.7**; the two Sanhedrin criminal grounds; the "neutral," locatable tomb; Craig Evans) is absent
-   from our otherwise-richer `burial.html` → **R-G, P3**; and the apostolic-eyewitness office-requirement
-   **Acts 1:21–22** is absent from `eyewitnesses.html` → **R-H, P3.**
+   from our otherwise-richer `burial.html` → **R-G, P3** (still open); and the apostolic-eyewitness office-requirement
+   **Acts 1:21–22** is ~~absent from `eyewitnesses.html`~~ **SHIPPED 2026-08-15** (new Reply-section paragraph; dual-consensus CLEAN; Bauckham fence respected) → **R-H, P3 — DONE.**
 
 Plus the two the 2026-08-08 pass already logged: **Dunn added to
 `earlycreed.html`** (backlog P2-1, standing output #1 — **DONE 2026-08-13**) and the still-standing **Basilides absent site-wide** (backlog P3,
@@ -147,7 +147,7 @@ creeds) → **`/sources` candidate, P3.**
 | Ch. 12 — anti-copycat assets (Bowersock, Asclepius, Aeschylus) | **4 missing** | → **R-E, P3** (folded into R-D's `uniqueness.html` row). |
 | Ch. 12 (endnote n.33) — Keener "Otho" discrepancy comparison | ✅ **SHIPPED 2026-08-14** to `consistency.html` §186 (fn 19) | Keener's Suetonius-vs-Tacitus-on-Otho comparison added as a complementary control to the existing Plutarch material (two independent authors vs one author twice). Bounded to GENRE reliability, not inspiration/inerrancy; "as free as any two Gospels" (comparable, not "fewer"); its second thrust (convergence → source-dependence) stated. dual-consensus CLEAN. |
 | Ch. 8 — rabbinic criminal-burial apparatus (m. Sanh. 6:5–6, Semahot) | **4 missing (additive)** | → **R-G, P3**. Ours (McCane-based `burial.html`) is richer on the core; this apparatus is the addable part. |
-| Ch. 3/6 — apostolic-eyewitness office-requirement (Acts 1:21–22) | **4 missing (additive)** | → **R-H, P3** (`eyewitnesses.html`). Bauckham universalism fence RESPECTED on that page. |
+| Ch. 3/6 — apostolic-eyewitness office-requirement (Acts 1:21–22) | ~~4 missing (additive)~~ **DONE 2026-08-15** | → **R-H, P3 — SHIPPED** to `library/eyewitnesses.html` (new Reply-section paragraph; the form-critical *Sitz im Leben* legitimation reply named + answered; claim bounded to early-witness/living-memory; dual-consensus CLEAN). Bauckham universalism fence RESPECTED. |
 | Ch. 9 — the 1 Cor 15 creed, Dunn page cite | ~~3 weaker in ours~~ **DONE** | Standing output #1 (Dunn absent from `earlycreed.html`, 0 hits; present on `ev-s3`) → backlog P2-1. **DONE 2026-08-13 — Dunn added to `earlycreed.html` (State-of-the-Scholarship + fn 21 + bibliography), dual-consensus certified; quote verified genuine, p. 854-855 attested in secondary lit, not yet eyeballed against the book.** |
 | Ch. 9 — the creed's early date generally | **1 corroboration** | `earlycreed.html` runs Jeremias/Conzelmann/Lüdemann/Wright/Ehrman + Lapide + Gallio anchor. Ours ≥ book. |
 | Ch. 5–9 — cui bono / crucifixion-disqualified-Messiah / James the sceptic / passion-predictions & ex-eventu / honest discrepancies / "no resurrection category" | **1 corroboration (ours ≥, several ours-better)** | Read in full this pass: `disciplesbelief`, `sceptics`, `respred`, `consistency`, `uniqueness`, `postres`. Each is equal or richer than the popular book, and `sceptics.html` avoids the book's Acts-7/Saul error (hazard flag). |
@@ -449,8 +449,7 @@ the Resurrection tab intro framing.
     eyewitnesses began to die. Anchor text: when **Judas** was replaced, the requirement was a man who
     had **been with Jesus from the beginning** — **Acts 1:21–22 (NIV)** ("one of the men who have been
     with us the whole time… beginning from John's baptism to the time when Jesus was taken up… must
-    become a witness with us of his resurrection"). *Lead: verify Acts 1:21–22 verbatim; it's a strong,
-    quotable apostolic-eyewitness proof-text. Cross-map: `library/eyewitnesses.html`.*
+    become a witness with us of his resurrection"). *~~Lead: verify Acts 1:21–22 verbatim~~ **SHIPPED 2026-08-15** to `library/eyewitnesses.html` (Reply section). ⚠ The essay quotes the **ESV**, not the NIV — verified verbatim by apologia-citations. Dual-consensus CLEAN (R-H).*
   - **§ "Where Do We Find the Real, Historical Jesus?" (pp. 52–53):** argues the canonical four
     (Matthew, Mark, Luke, John) are the earliest/apostolic sources, while the **extracanonical
     "gospels"** are **late, non-apostolic, idiosyncratic**, and don't reflect Jesus' first-century
