@@ -88,7 +88,17 @@ const isContent = (p) => CONTENT_PATTERNS.some((re) => re.test(p));
 const USER_FACING = [
   /^[^/]+\.html$/,                          // every page served at the site root
   /^library\/.+\.html$/,                    // essays + the library hub
-  /^tools\/reel\/(specs|xcards)\/.+\.json$/, // reel scripts AND X share-cards
+  /^tools\/reel\/(specs|xcards|carousels|threads)\/.+\.json$/, // reel scripts, X share-cards,
+                                            // Instagram carousel decks AND X thread copy. The last
+                                            // two were added 2026-08-15 with the first of each: a
+                                            // carousel slide and a thread post carry exactly the
+                                            // compressed doctrinal argument a reel scene does, and
+                                            // this list is an ENUMERATION — anything nobody adds is
+                                            // invisible, which is how 70 pocket cards went 9 months
+                                            // ungated. They are deliberately NOT in CONTENT_PATTERNS
+                                            // yet: that list is CI-blocking, and the stamp must land
+                                            // in the same commit as the pattern (see CLAUDE.md), so
+                                            // it is added when the gates actually run on them.
   /^api\/ask\.js$/,
 ];
 

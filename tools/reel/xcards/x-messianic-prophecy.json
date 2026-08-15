@@ -1,0 +1,13 @@
+{
+  "gate_status": {"argument": "NOT RUN", "orthodoxy": "NOT RUN", "note": "NOT YET GATED — DO NOT POST. Drafted 2026-08-15 as the lead image for tools/reel/threads/x-messianic-prophecy.json. Headline and sub are PORTED from library/messianic-prophecy.html (certified), which was read cover to cover first: 'It should be retired' is that essay's own verdict on the statistical version of the argument (it has a registry entry in tools/retired-claims.json retiring the probability figures), and 'The probabilities are not real measurements; they are numbers assigned by guesswork... then multiplied as if independent' is the sentence the sub compresses. The card deliberately does NOT print any probability figure. Owed before posting: apologia-argument + apologia-orthodoxy."},
+  "name": "messianic-prophecy",
+  "kicker": "MESSIANIC PROPHECY",
+  "headline": [
+    { "t": "The famous version", "c": "cream" },
+    { "t": "should be retired.", "c": "gold" }
+  ],
+  "sub": [
+    "The odds you have heard are not measurements —",
+    "they are guesses, multiplied. The case never needed them."
+  ]
+}

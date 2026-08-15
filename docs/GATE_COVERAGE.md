@@ -71,6 +71,30 @@ a fetched JSON file, exactly as it did in `pocket-cards.html` (161 body words, 7
 `tools/reel/xcards/*.json` — already named in CLAUDE.md's mandatory pipeline, never
 stamped. Three need wording fixes first (recorded in `docs/SOCIAL_GROWTH_PLAN.md`);
 `x-jesus-god-mark` and `x-nicene-creed` are deity/Trinity tier and need dual-consensus.
+**Now 7:** `x-messianic-prophecy.json` was added 2026-08-15 (see P5).
+
+### P5 — the first carousel deck and the first X thread (added 2026-08-15)
+
+Two new social surfaces, each with exactly one file, and **neither has been gated**:
+
+- `tools/reel/carousels/messianic-prophecy.json` — 10 slides, rendered by the new
+  `tools/reel/gen_carousel.py`.
+- `tools/reel/threads/x-messianic-prophecy.json` — 11 posts, with
+  `tools/reel/xcards/x-messianic-prophecy.json` as its lead image.
+
+All three are drafted from `ev-s3.html` card 05 and its certified paired essay
+`library/messianic-prophecy.html` (read cover to cover first), and every doctrinal line is
+ported from one of those two rather than authored — but **a port is not a gate**, and the
+compression is new. Each file carries a `gate_status` object, deliberately **not** a
+`reviewed` one, so `check-content-review.mjs` reports them as unstamped instead of reading a
+`_pending_` placeholder as a date. Owed: `apologia-argument` + `apologia-orthodoxy` on all
+three; `apologia-neutrality` is advisable — this argument's compressed forms have a history
+of asserting what the essay retires (the probability figures; Psalm 22:16 as though it were
+secure), which is exactly what that lens exists to catch.
+
+Both directories are in `USER_FACING` (so `--audit-all` counts them) and deliberately **not**
+in `CONTENT_PATTERNS` (CI-blocking) — the pattern entry and the stamp must land in the same
+commit, so they go in when the gates actually run.
 
 ---
 
