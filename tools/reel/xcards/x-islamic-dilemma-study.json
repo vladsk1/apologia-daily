@@ -1,0 +1,13 @@
+{
+  "gate_status": {"argument": "NOT RUN", "orthodoxy": "NOT RUN", "neutrality": "NOT RUN", "note": "NOT YET GATED — DO NOT POST. Drafted 2026-08-15 as the lead image for tools/reel/threads/x-islamic-dilemma-study.json. Headline and sub are PORTED from the certified reading-club-islamic-dilemma.html hero (line 241): 'The Qur'an speaks warmly of the Torah (Tawrat) and the Gospel (Injil) — calling them revelation from God... Yet it also contradicts them on central points.' ISLAM + DEITY-OF-CHRIST TIER, so DUAL CONSENSUS is required: apologia-argument + apologia-orthodoxy + apologia-neutrality. Note the shared-premise carve-out this card relies on: CLAUDE.md's FALSE-COMMON-GROUND rule explicitly exempts the Qur'an's own praise of the earlier Scriptures when it is driving the internal critique, which is exactly the use here — but a reviewer should confirm the compression has not turned the premise into shared belief."},
+  "name": "islamic-dilemma-study",
+  "kicker": "THE ISLAMIC DILEMMA",
+  "headline": [
+    { "t": "The Qur'an confirms", "c": "cream" },
+    { "t": "the Torah and Gospel.", "c": "gold" }
+  ],
+  "sub": [
+    "Then it contradicts them on central points.",
+    "A free 16-session reading club for Christopher W. Frost's book."
+  ]
+}

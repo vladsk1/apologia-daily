@@ -88,10 +88,11 @@ const isContent = (p) => CONTENT_PATTERNS.some((re) => re.test(p));
 const USER_FACING = [
   /^[^/]+\.html$/,                          // every page served at the site root
   /^library\/.+\.html$/,                    // essays + the library hub
-  /^tools\/reel\/(specs|xcards|carousels|threads)\/.+\.json$/, // reel scripts, X share-cards,
-                                            // Instagram carousel decks AND X thread copy. The last
-                                            // two were added 2026-08-15 with the first of each: a
-                                            // carousel slide and a thread post carry exactly the
+  /^tools\/reel\/(specs|xcards|carousels|threads|posts)\/.+\.json$/, // reel scripts, X share-cards,
+                                            // Instagram carousel decks, X thread copy AND single
+                                            // Instagram posts. The last three were added 2026-08-15
+                                            // with the first of each: a
+                                            // carousel slide, a thread post and an IG caption carry exactly the
                                             // compressed doctrinal argument a reel scene does, and
                                             // this list is an ENUMERATION — anything nobody adds is
                                             // invisible, which is how 70 pocket cards went 9 months

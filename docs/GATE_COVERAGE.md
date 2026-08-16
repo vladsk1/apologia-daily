@@ -73,16 +73,29 @@ stamped. Three need wording fixes first (recorded in `docs/SOCIAL_GROWTH_PLAN.md
 `x-jesus-god-mark` and `x-nicene-creed` are deity/Trinity tier and need dual-consensus.
 **Now 7:** `x-messianic-prophecy.json` was added 2026-08-15 (see P5).
 
-### P5 — the first carousel deck and the first X thread (added 2026-08-15)
+### P5 — the first carousel deck, X threads and IG posts (added 2026-08-15)
 
-Two new social surfaces, each with exactly one file, and **neither has been gated**:
+Three new social surfaces, and **nothing in them has been gated**:
 
 - `tools/reel/carousels/messianic-prophecy.json` — 10 slides, rendered by the new
   `tools/reel/gen_carousel.py`.
 - `tools/reel/threads/x-messianic-prophecy.json` — 11 posts, with
   `tools/reel/xcards/x-messianic-prophecy.json` as its lead image.
+- `tools/reel/threads/x-islamic-dilemma-study.json` + `tools/reel/posts/ig-islamic-dilemma-study.json`
+  + `tools/reel/xcards/x-islamic-dilemma-study.json` — the reading-club announcement.
+  ⚠ **These three are Islam + deity-of-Christ tier: DUAL CONSENSUS, not the single orthodoxy
+  gate.** Each carries three named reviewer checks in its `gate_status` note, and they are not
+  the usual ones: the **author-approval claim is owner-supplied and not repo-verified** (the
+  certified page says only that he gave permission to publish); the **"ours, not his"
+  attribution fence is load-bearing** — round 1 of that page's gate found the study's modesty
+  credited to Frost by name on six surfaces while our own research note records the book as
+  triumphalist, and splitting virtue from content was the adjudication (finding 7 in
+  `ISLAMIC_DILEMMA_GATE_FINDINGS.md`); and the **book recommendation is an endorsement in our
+  own voice**, bounded to what `book-research/islamic-dilemma.md` verifies and deliberately not
+  extended to the book's triumphalism, which that note calls the tone our content must not
+  adopt. The Instagram handle `@SCApologia` is the **X** handle and is unconfirmed for IG.
 
-All three are drafted from `ev-s3.html` card 05 and its certified paired essay
+The messianic-prophecy three are drafted from `ev-s3.html` card 05 and its certified paired essay
 `library/messianic-prophecy.html` (read cover to cover first), and every doctrinal line is
 ported from one of those two rather than authored — but **a port is not a gate**, and the
 compression is new. Each file carries a `gate_status` object, deliberately **not** a
