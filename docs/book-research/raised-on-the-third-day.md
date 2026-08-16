@@ -206,7 +206,7 @@ Jerusalem apostles' preaching."** Those are the genuine open gaps.
 | **Candida Moss** objections A/B | ~~4 missing — OPEN~~ **DONE 2026-08-13** | Moss subsection added to `disciplesbelief.html`; the accepted BREAK is closed. `apologia-citations` corrected the leads: no page pins (p.17/139 wrong), and the eyewitness/secondhand line is McDowell's *reply*, not Moss's objection. Dual-consensus CLEAN/STAMPABLE. |
 | Objection B — eyewitness/secondhand distinction | **1 corroboration (PROVISIONAL)** | Present in substance; not specifically re-verified this pass. Keep out only the 9/11 example (non-rec below). |
 | Licona ch. 16 — Paul's letters *early* | **1 corroboration** | `earlydate.html` carries the undisputed letters at AD 48–60 as first-generation documents by a man who knew the apostles. |
-| Licona ch. 16 — **Paul as a verifiable LINK to Jerusalem preaching** (Gal 1:18–19; 2:1–10; Dodd's "not the weather") | **4 missing** | Neither `earlydate.html` nor `sceptics.html` runs the primacy-of-Paul-as-detection-tool move. Refined backlog row 6 (P3). |
+| Licona ch. 16 — **Paul as a verifiable LINK to Jerusalem preaching** (Gal 1:18–19; 2:1–10; Dodd's "not the weather") | ~~4 missing~~ **DONE 2026-08-17** | **SHIPPED** to `earlydate.html` (new paragraph in the creed subsection; dual-consensus CLEAN). ⚠⚠ **Do NOT frame Gal 2 as a memory cross-check** — both argument + neutrality caught that as an overreach: Gal 2 is independence-and-*endorsement*, and "added nothing" = the circumcision/Torah dispute, not a fact-audit of the resurrection tradition. Shipped form: the pillars "endorsed his gospel rather than corrected" it, with an explicit disclaimer that this is not the eyewitnesses auditing Paul's memory. Dodd line kept as a hedged quip; page pin dropped (unverifiable). |
 | Licona ch. 16 — bodily resurrection consistent with the Gospels | **1 corroboration (PROVISIONAL)** | `postres`/`earlycreed` carry the bodily-transformed frame; not specifically re-verified this pass. |
 
 ### Non-recommendation, on the record
@@ -217,4 +217,4 @@ example, and it should still not go on our pages — keep the eyewitness/secondh
 - **Row 1 (Schnabel) · Row 2 (John 21:18–19, essay half) · Row 5 (Acts 12:2)** — **✅ DONE 2026-08-05.**
 - **Row 2 (`ev-m-postresurrection` half)** — still open (mastery page only).
 - **Rows 3 (defended "none recanted") + 4 (Candida Moss)** — **DONE 2026-08-13** (both folded into one new Moss subsection in `disciplesbelief.html`, dual-consensus certified; backlog P2-7 + P2-8).
-- **Row 6 (Licona primacy of Paul)** — refined: dating is corroboration; the "link to Jerusalem preaching" move is the genuine P3 gap.
+- **Row 6 (Licona primacy of Paul)** — **DONE 2026-08-17**: dating was corroboration; the "link to Jerusalem preaching" gap is now shipped to `earlydate.html` (dual-consensus CLEAN). ⚠ Framed as endorsement, NOT a memory cross-check (both argument + neutrality flagged the audit reading as an overreach of Gal 2).
