@@ -101,8 +101,10 @@ ranked, each now a `content-backlog.md` row:
    severe than those among Greco-Roman historians on the *same* events; distinct from the Plutarch
    material `consistency.html` already runs. 0 hits. → **R-F, P3.**
 8. **Two additive gaps** — the rabbinic criminal-burial apparatus (**m. Sanhedrin 6:5–6, Semahot
-   13.7**; the two Sanhedrin criminal grounds; the "neutral," locatable tomb; Craig Evans) is absent
-   from our otherwise-richer `burial.html` → **R-G, P3** (still open); and the apostolic-eyewitness office-requirement
+   [ch. 2 + chs. 12-13, NOT 13.7 — that locus was wrong]**; the two Sanhedrin criminal grounds; Craig
+   Evans) is ~~absent from our otherwise-richer `burial.html`~~ **SHIPPED 2026-08-15** (new McCane-subsection
+   paragraph; dual-consensus CLEAN; ⚠ Evans corrected over 3 rounds — he is *more* optimistic than McCane,
+   not yoked to him) → **R-G, P3 — DONE**; and the apostolic-eyewitness office-requirement
    **Acts 1:21–22** is ~~absent from `eyewitnesses.html`~~ **SHIPPED 2026-08-15** (new Reply-section paragraph; dual-consensus CLEAN; Bauckham fence respected) → **R-H, P3 — DONE.**
 
 Plus the two the 2026-08-08 pass already logged: **Dunn added to
@@ -146,7 +148,7 @@ creeds) → **`/sources` candidate, P3.**
 | Ch. 3/5 — Second-Temple resurrection primaries (4Q521, Isa 26:19, 2 Macc 7:9) | **4 missing / partial** | → **R-D, P3** (`uniqueness.html`). |
 | Ch. 12 — anti-copycat assets (Bowersock, Asclepius, Aeschylus) | **4 missing** | → **R-E, P3** (folded into R-D's `uniqueness.html` row). |
 | Ch. 12 (endnote n.33) — Keener "Otho" discrepancy comparison | ✅ **SHIPPED 2026-08-14** to `consistency.html` §186 (fn 19) | Keener's Suetonius-vs-Tacitus-on-Otho comparison added as a complementary control to the existing Plutarch material (two independent authors vs one author twice). Bounded to GENRE reliability, not inspiration/inerrancy; "as free as any two Gospels" (comparable, not "fewer"); its second thrust (convergence → source-dependence) stated. dual-consensus CLEAN. |
-| Ch. 8 — rabbinic criminal-burial apparatus (m. Sanh. 6:5–6, Semahot) | **4 missing (additive)** | → **R-G, P3**. Ours (McCane-based `burial.html`) is richer on the core; this apparatus is the addable part. |
+| Ch. 8 — rabbinic criminal-burial apparatus (m. Sanh. 6:5–6, Semahot) | ~~4 missing (additive)~~ **DONE 2026-08-15** | → **R-G, P3 — SHIPPED** to `library/burial.html` (McCane-subsection paragraph + Craig Evans; dual-consensus CLEAN). ⚠ **Semahot 13.7 was the WRONG locus** (it is a restriction on moving remains) — corrected to ch. 2 + chs. 12-13; the "~1 year" is general ossilegium, not in the mishnah. ⚠ Evans is *more* optimistic than McCane (defends the known-tomb account) — took 3 neutrality rounds to get right. |
 | Ch. 3/6 — apostolic-eyewitness office-requirement (Acts 1:21–22) | ~~4 missing (additive)~~ **DONE 2026-08-15** | → **R-H, P3 — SHIPPED** to `library/eyewitnesses.html` (new Reply-section paragraph; the form-critical *Sitz im Leben* legitimation reply named + answered; claim bounded to early-witness/living-memory; dual-consensus CLEAN). Bauckham universalism fence RESPECTED. |
 | Ch. 9 — the 1 Cor 15 creed, Dunn page cite | ~~3 weaker in ours~~ **DONE** | Standing output #1 (Dunn absent from `earlycreed.html`, 0 hits; present on `ev-s3`) → backlog P2-1. **DONE 2026-08-13 — Dunn added to `earlycreed.html` (State-of-the-Scholarship + fn 21 + bibliography), dual-consensus certified; quote verified genuine, p. 854-855 attested in secondary lit, not yet eyeballed against the book.** |
 | Ch. 9 — the creed's early date generally | **1 corroboration** | `earlycreed.html` runs Jeremias/Conzelmann/Lüdemann/Wright/Ehrman + Lapide + Gallio anchor. Ours ≥ book. |
@@ -1216,8 +1218,10 @@ the leads to chase, not popular-level assertions).**
   Ch. 8. So Ch. 7's demographic/percentage claims (literacy, "who could have written this," the "no
   motivation" statistics) have **no citation trail in the book** and must be independently sourced before
   any use. *(This hardens the earlier Ch. 7 flag.)*
-- **Ch. 8 (empty tomb / burial):** the rabbinic burial law — **m. Sanhedrin 6:5**, **Semahot 13.7**,
-  **m. Sanhedrin 6:6** (honorable vs. dishonorable/criminal burial); and **Jodi Magness, "Jesus' Tomb —
+- **Ch. 8 (empty tomb / burial):** the rabbinic burial law — **m. Sanhedrin 6:5**, **m. Sanhedrin 6:6**,
+  and **Semahot ch. 2 + chs. 12-13** [⚠ NOT 13.7 — verified 2026-08-15 by apologia-citations; 13.7 is a
+  restriction on *moving* remains, mourning of the executed is ch. 2, ossilegium is chs. 12-13]
+  (honorable vs. dishonorable/criminal burial); and **Jodi Magness, "Jesus' Tomb —
   What Did It Look Like?" in Hershel Shanks (ed.), *Where Christianity Was Born* (Washington, DC: Biblical
   Archaeology Society, 2006), 212–26, quote p. 224** (Magness *contra* Crossan — Jesus was buried according
   to Jewish law). ✅ Resolves the Ch. 8 "verify Magness + the rabbinic-burial sources" flag; these are the
