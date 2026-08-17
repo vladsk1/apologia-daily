@@ -1,0 +1,18 @@
+{
+  "reviewed": {
+    "argument": "_pending_",
+    "orthodoxy": "_pending_",
+    "neutrality": "_pending_",
+    "by": "⚠ DRAFT — NOT GATED. Built 2026-08-17 in a session that was not permitted to call the gate agents. Every string is PORTED from already-certified text: the headline from tools/reel/specs/paul-the-enemy-who-switched-sides.json scene 8 ('Christianity's fiercest destroyer became its boldest witness'), gated argument+orthodoxy 2026-07-07; the sub from that spec's scene 2, quoting Galatians 1:13 as library/paulconv.html does (fn 3). NOTHING here is authored. Resurrection tier, so per CLAUDE.md this needs argument + orthodoxy + neutrality before it is posted anywhere. Do NOT commit this file until the stamp is real — tools/check-content-review.mjs gates tools/reel/xcards/*.json and will (correctly) fail on a _pending_ stamp."
+  },
+  "name": "paul-enemys-confession",
+  "kicker": "THE CONVERSION OF PAUL",
+  "headline": [
+    { "t": "The church's fiercest destroyer.", "c": "cream" },
+    { "t": "Its boldest witness.", "c": "gold" }
+  ],
+  "sub": [
+    "He wrote it himself: \"I persecuted the church of God",
+    "violently and tried to destroy it.\" (Galatians 1:13)"
+  ]
+}

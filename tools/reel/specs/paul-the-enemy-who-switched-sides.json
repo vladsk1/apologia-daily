@@ -2,7 +2,7 @@
   "reviewed": {
     "argument": "2026-07-07",
     "orthodoxy": "2026-07-07",
-    "by": "apologia-argument + apologia-orthodoxy (skeptic scenes cut; close reframed as Paul's confession naming the risen Jesus)"
+    "by": "apologia-argument + apologia-orthodoxy (skeptic scenes cut; close reframed as Paul's confession naming the risen Jesus) || 2026-08-17 TIMING-ONLY change (no re-gate owed): per-scene durations raised [3.4, 5.0, 5.0, 5.0, 4.8, 5.0, 4.6, 4.6] -> [5.6, 7.0, 7.4, 8.4, 5.6, 7.0, 8.0, 7.8] (37.4s -> 56.8s of scene time) so each scene can be comfortably read at Reels playback speed - owner request. NOT ONE WORD OF COPY CHANGED; every string is byte-identical to the 2026-07-07 argument+orthodoxy certification, so the gate dates are deliberately NOT bumped. Same discipline as the 2026-08-12 pocket-cards engineering note. NB this cuts against docs/INSTAGRAM_GROWTH_STRATEGY.md, which recommends 20-30s on measured ~7% watch-through; owner decided readability over retention and that trade is on the record here."
   },
   "aspect": "vertical",
   "theme": "navy",
@@ -13,7 +13,7 @@
   "source": "library/paulconv.html",
   "scenes": [
     {
-      "dur": 3.4,
+      "dur": 5.6,
       "big": [
         {
           "t": "This isn't a believer's",
@@ -42,7 +42,7 @@
     },
     {
       "kicker": "IN HIS OWN HAND",
-      "dur": 5.0,
+      "dur": 7.0,
       "lines": [
         {
           "t": "He wrote it himself:",
@@ -81,7 +81,7 @@
     },
     {
       "kicker": "HE HAD EVERY REASON NOT TO",
-      "dur": 5.0,
+      "dur": 7.4,
       "lines": [
         {
           "t": "Status. A career. His safety.",
@@ -112,7 +112,7 @@
     },
     {
       "kicker": "THE EASY ANSWERS DON'T FIT HIM",
-      "dur": 5.0,
+      "dur": 8.4,
       "lines": [
         {
           "t": "No grief — he wasn't mourning Jesus.",
@@ -144,7 +144,7 @@
     },
     {
       "kicker": "BUT HERE'S WHAT YOU HAVEN'T HEARD",
-      "dur": 4.8,
+      "dur": 5.6,
       "lines": [
         {
           "t": "He didn't just believe it.",
@@ -170,7 +170,7 @@
     },
     {
       "kicker": "HE WENT TO THE SOURCE",
-      "dur": 5.0,
+      "dur": 7.0,
       "lines": [
         {
           "t": "Fifteen days with Peter.",
@@ -207,7 +207,7 @@
     },
     {
       "kicker": "AND IT'S EARLY",
-      "dur": 4.6,
+      "dur": 8.0,
       "lines": [
         {
           "t": "Paul's letters predate the gospels.",
@@ -237,7 +237,7 @@
       ]
     },
     {
-      "dur": 4.6,
+      "dur": 7.8,
       "big": [
         {
           "t": "Christianity's fiercest destroyer",

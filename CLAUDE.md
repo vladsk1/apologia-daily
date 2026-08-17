@@ -947,8 +947,14 @@
 >   from web search is not absence of an account). **Owner must supply the IG handle**; X handle status
 >   unconfirmed. Then add `twitter:site` + footer icons + `sameAs`, and decide the bio-link
 >   destination. Step-zero checklist in `docs/SOCIAL_GROWTH_PLAN.md`.
-> - **Gate the 6 unstamped X-card specs** before any of them is posted (`x-jesus-god-mark` and
->   `x-nicene-creed` need dual-consensus).
+> - **Gate the 7 unstamped X-card specs** before any of them is posted (`x-jesus-god-mark` and
+>   `x-nicene-creed` need dual-consensus; **`x-paul-enemys-confession` was added 2026-08-17 and is
+>   resurrection tier, so it needs argument + orthodoxy + neutrality**. Its strings are all PORTED
+>   from the certified `paul-the-enemy-who-switched-sides` reel spec and Galatians 1:13, and its
+>   `reviewed` block is honestly stamped `_pending_` — it is committed so it is not lost, **not**
+>   because it is cleared to post. ⚠ Note `tools/reel/xcards/*.json` sits in the check's *audit*
+>   scope (`USER_FACING`), not the CI-blocking scope, so nothing mechanical will stop an unstamped
+>   card being posted — the discipline is the only guard.)
 > - **No Meta Pixel — and installing one requires owner sign-off first**: `privacy.html:202` promises
 >   readers we use no advertising cookies, and the site has no consent mechanism for UK/EU traffic.
 >   Do not spend on Meta until the four trigger conditions in `docs/META_ADS_PLAN.md` are met.
