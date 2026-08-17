@@ -29,6 +29,16 @@
       "acceptedAt": "2026-08-17",
       "sourceCommit": "same commit as this ledger entry (2026-08-17 backlog row 101, ev-s5 miracles card 08)",
       "reason": "English-ADD only (not a retired-claim fix): row 101 added a new argument card 08 ('Can Miracles Happen?', arg-miracles) to the English ev-s5.html Science & Faith fragment, ported from the certified library/miracles.html. The Macedonian mirror ev-s5.mk.html has no such card; nothing false is live in translation, only less complete. The mirror was ALREADY behind before this change (English last re-gated 2026-08-04 in the 7-card per-card dual-consensus pass, MK still at 2026-07-23 and never brought up to it), so this is added lag on a pre-existing lag, not a fresh regression. Per the owner's standing delete-or-lag preference (no hand-written translated doctrinal prose no native reviewer will gate), the mirror is NOT hand-translated. Macedonian/Spanish doctrinal review is outstanding (docs/STATEMENT_OF_FAITH.md). Clear this entry when a native Macedonian reviewer gates the mirror up to the English (including the seven earlier cards it is also missing)."
+    },
+    "library/kalam.html -> library/mk/kalam.html": {
+      "acceptedAt": "2026-08-17",
+      "sourceCommit": "2696efe",
+      "reason": "English-ADD only (not a retired-claim fix): the 2026-08-17 P2 addition (backlog row 184) adds a new objection subsection, \"Then isn't God infinitely old?\", answering the actual-infinite objection turned back on divine eternity. The mirror is not WRONG, only less complete - nothing false is live in translation. Deliberately NOT hand-translated, per the owner's standing preference against untranslated doctrinal prose that no native reviewer will gate; Macedonian and Spanish doctrinal review remain outstanding (docs/STATEMENT_OF_FAITH.md). The subsection turns on the classical-timelessness vs divine-temporality distinction and required three gate rounds and four lenses in English - exactly the material that must not be machine-translated onto an ungated surface."
+    },
+    "library/kalam.html -> library/es/kalam.html": {
+      "acceptedAt": "2026-08-17",
+      "sourceCommit": "2696efe",
+      "reason": "English-ADD only (not a retired-claim fix): the 2026-08-17 P2 addition (backlog row 184) adds a new objection subsection, \"Then isn't God infinitely old?\", answering the actual-infinite objection turned back on divine eternity. The mirror is not WRONG, only less complete - nothing false is live in translation. Deliberately NOT hand-translated, per the owner's standing preference against untranslated doctrinal prose that no native reviewer will gate; Macedonian and Spanish doctrinal review remain outstanding (docs/STATEMENT_OF_FAITH.md). The subsection turns on the classical-timelessness vs divine-temporality distinction and required three gate rounds and four lenses in English - exactly the material that must not be machine-translated onto an ungated surface."
     }
   }
 }
