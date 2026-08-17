@@ -118,7 +118,7 @@ rose — a datum FOR the minimal-facts case, never a claim that Josephus endorse
   role — ⚠ *Toledot Yeshu* is a late, polemical Jewish anti-Gospel text; handle as Schmidt does, as contested
   reception evidence, never as neutral history).
 - **App. 5 — The Great Sanhedrin and its records of Jesus' trial.**
-- **App. 6 — Josephus' silence about Jesus in the *War*** (why the earlier work omits him).
+- **App. 6 — Josephus' silence about Jesus in the *War*** (why the earlier work omits him). ✅ **SHIPPED 2026-08-17** to `library/hist_jesus.html` (new short paragraph in the "witnesses outside the church" section; the *War* is revolt-focused, the *Antiquities* is where marginal religious figures like John the Baptist appear, *Ant.* 18.5.2, likewise absent from the *War*; relevance-to-the-conflict, not existence, governs inclusion). ⚠⚠ HARD FENCE HELD (existence/scope only, no Testimonium-authenticity drift; de-weights Josephus). Dual-consensus CLEAN. Closes backlog row 63's remaining sub-part. ⚠ argued from general Josephus scholarship, not from an OA read of the appendix itself (still egress-blocked).
 
 ## Guardrail fit (calibration for our use)
 - **Strongly favorable + directly usable — this is a major primary-anchor upgrade for the extra-biblical-Jesus
