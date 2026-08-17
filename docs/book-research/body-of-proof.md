@@ -143,7 +143,7 @@ creeds) → **`/sources` candidate, P3.**
 | Ch. 7 (no endnotes) + unverified stats ("22% of Acts," ~150,000 Mt-of-Olives burials, square-stopper stone, Meyer/Carey/Lewis quotes) | **6 non-rec until verified** | Ch. 7 has **no endnotes at all** — unciteable, not merely unverified. |
 | Ch. 8 — Mark 16:9–20 dependent appearance lists | **6 non-rec** | Several appearance entries lean on the longer ending; `manuscript.html` treats 16:9–20 as almost certainly not original. |
 | Ch. 11–12 — *Gospel of Peter* / Justin *Dialogue* anti-Jewish glosses; Porphyry's Magdalene slur | **6 non-rec** | Jewish-sensitivity. Use the *Gospel of Peter* only as a mark of the apocryphon's lateness (see R-A), never reproduce its blame-shift. |
-| Ch. 3 — Basilides → Surah 4:157 | **4 missing** | Standing output #2 → backlog P3. Antecedent, not derivation. |
+| Ch. 3 — Basilides → Surah 4:157 | ~~4 missing~~ **NOT RECOMMENDED 2026-08-17** (for `islam-jesus.html`) | Drafted + fully gated: citations 0 errors (AH 1.24.4 verbatim-confirmed), orthodoxy CLEAN, but **apologia-neutrality BREAK** (+ argument WEAK converging): (1) FALSE GROUPING — the Islamic reading is NOT docetic; it shares only the surface mechanic with Basilides, so "docetic pedigree" mischaracterizes Islam; (2) derivation-by-insinuation (Quran-anchored dating); (3) no argumentative payload (essay already refutes substitution) → net effect is point-scoring the essay's ethos forbids. ⚠ **The row's own "places the substitution reading in a docetic lineage" premise was the error.** NOT inserted; `islam-jesus.html` untouched. ⭐ Legitimate home if wanted: a **non-Islam** crucifixion/substitution-refutation page (owner call). See backlog row 50 for the full account. |
 | Ch. 12 — resurrection-restraint + canonical-vs-apocrypha (Dudrey) | ~~4 missing~~ **DONE 2026-08-13** | ⭐ Standing output #1 → **R-A, P2 — SHIPPED** to `library/postres.html` (new "A Restraint the Legends Could Not Manage" section, dual-consensus certified; *Gospel of Peter* fenced to its emergence scene 9:35-42, no anti-Jewish content). |
 | Ch. 11 — Holy Sepulchre vs Garden Tomb archaeology | **4 missing** | → **R-B, P3**. The old table had **no verdict** for Ch. 11. Neutrality-fenced. |
 | Ch. 5 — Last Supper / new-covenant cluster (Exod 24:8 / Jer 31:31) | ~~4 missing~~ **DONE 2026-08-15** | → **R-I, P3 — SHIPPED** to `library/typology.html` (new "The blood of the covenant" subsection; Heb 9:18-22 + 8:8-12 apostolic warrant; type-vs-prediction kept distinct; eucharist neutrality fenced; single-consensus CLEAN). |
@@ -434,6 +434,14 @@ the Resurrection tab intro framing.
         `library/islam-*`) — the crucifixion-denial is exactly the naskh/Surah 4:157 material, and the
         gnostic-root observation is a strong, verifiable historical point. **Handle the Islam framing
         inside our "charity is accuracy" guardrail; verify Surah 4:157 wording directly.***
+        ⚠⚠ **NOT RECOMMENDED for the Islam tab — 2026-08-17.** A gated attempt hit an `apologia-neutrality`
+        **BREAK**: the "gnostic-root of the Qur'an's denial" framing is a **false grouping** (the Islamic
+        reading is NOT docetic — it affirms Jesus' real life + bodily ascension, sharing only the surface
+        "someone else on the cross" mechanic) and reads as **derivation-by-insinuation** / point-scoring on
+        an Islam page, with **no argumentative payload** (the essays already refute substitution on its
+        merits). The book's own "echoed in the Qur'an" phrasing is exactly the overreach to avoid. The
+        Irenaeus datum is real (AH 1.24.4, citations-verified) but belongs on a **non-Islam** crucifixion/
+        substitution-refutation page, not here. See backlog row 50.
     - **⚠️ Calibration:** the "real vs. phony Jesus" framing is rhetorically sharp; on use, keep it to
       the *historical* point (canonical Gospels are 1st-c./eyewitness-rooted; Thomas/gnostic texts are
       2nd-c.+ and theologically later) rather than a dismissive tone — 1 Peter 3:15.
