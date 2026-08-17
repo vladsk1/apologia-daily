@@ -85,6 +85,51 @@
 > still editable on curated cards (same class of exposure, now escaped + self-only) — lock to read-only
 > if it matters.
 >
+> **LATEST — 2026-08-17 (book-research):** ⭐ **NEW NOTE — [`docs/book-research/is-god-real.md`](docs/book-research/is-god-real.md)**
+> (Lee Strobel, *Is God Real?*, from the owner's own copy). **Captured: pp. 17–91 continuous — chs. 1–4 complete
+> — plus the FULL endnotes for the Introduction and chs. 1–4 (pp. 229–243).** Craig on the kalam, Strauss on
+> fine-tuning, Meyer on biological information, Licona on the resurrection. **Six paired essays read cover to
+> cover BEFORE classifying** (`kalam`, `bigbang`, `finetuning`, `privileged`, `originlife`, `minimalfacts`), per
+> Step Zero. **13 backlog rows logged (9 actionable + 4 non-recommendations).** Counts measured 2026-08-17 by
+> tallying the note's verdict table and the backlog rows. **No live content changed.**
+> ⚠⚠ **THE HEADLINE INVERTS THE USUAL SHAPE OF A MINING RUN: of 63 classified verdicts, 22 came back "hazard —
+> OURS IS BETTER" against only 4 "weaker in ours" and 8 "missing."** Our essays name the live critics (Morriston,
+> Oppy, Carroll, Guth, the McGrews, Sober, Allison, Carrier, Cavin); this book largely does not. Mine it for
+> **four** things: the *"then isn't God infinitely old?"* objection (absent from `kalam.html`, and to be answered
+> from **classical divine timelessness** — ⚠ **never** from Craig's contested "God could enter time"); **Lewis &
+> Barnes, *A Fortunate Universe* (CUP 2016)** as the citation for our load-bearing "the data is conceded" claim
+> (**zero hits site-wide**, and `finetuning.html` currently rests it on one paper); **Hossenfelder** as the
+> multiverse section's missing *non-theist* critic; and the **"why is the universe mostly empty?"** objection,
+> unanswered anywhere on the site.
+> 🔴🔴🔴 **THE ONE VERDICT POINTING THE OTHER WAY IS THE IMPORTANT ONE: ch. 4 p. 72 RUNS A CLAIM WE RETIRED** —
+> the Son of Man as "the divine figure in Daniel 7:13–14… sovereign, eternal, and **worshiped**," which trips
+> **both** `daniel7-figure-is-divine` and `pelach-only-to-God`, and which `library/titles.html` took **five gate
+> rounds** to remove. ⚠ **This is the SECOND book-research note found carrying that phrase** (Geisler & Turek,
+> 2026-08-08) — treat it as a recurring hazard in popular deity-of-Christ writing and grep every new note for it.
+> ⭐ **THE ENDNOTES EARNED THEIR PHOTOGRAPH TWICE OVER, AND BOTH TIMES BY DISCREDITING THE BODY.** (1) Ch. 1 n. 6
+> discloses that **every interview in the book is "edited for content, conciseness, and clarity"** — so **no
+> quotation attributed to Craig, Strauss, Meyer or Licona here is a verbatim record**, and none may be quoted as
+> one. (2) They expose four sources the body concealed: the **Cairns-Smith** line is sourced to a **Creation
+> Ministries International quote page** (young-earth quote-mining — same class as the Bill-Warner/CSPI flag on
+> `body-of-proof.md`); the **Hitchens** fine-tuning concession is a **YouTube video title**; **Kenyon's**
+> repudiation is an **ID advocacy documentary**; and a fine-tuning figure is credited to "a Christian apologist
+> who has a degree in physics." **All four are do-not-use.**
+> 🔴 **AND THE CROSS-CHECK FOUND A LIVE DEFECT IN OUR OWN RECORDS: two owned books disagree on the DUNN PAGE.**
+> `body-of-proof.md` and our live citation say *Jesus Remembered* **854–855**; this book says **825** — and the
+> live essay's own stamp already admits the span "was NOT eyeballed against the physical volume." The quotation
+> is verified; only the locus is in doubt. **Logged P2; needs the book in hand.**
+> ⚠ **A verdict in this note was WRONG and is corrected in place rather than silently fixed:** on the partial
+> capture I recorded the god-of-the-gaps objection as absent from ch. 3 and scored it "ours is better by
+> omission." The chapter raises **and answers** it at pp. 68–69. **A verdict formed on a partial read is not a
+> grounded verdict** — the Step Zero discipline, applied to the source rather than the essay. ⭐ The same
+> discipline stopped a bad row: **Mettinger's dying-and-rising-gods verdict looked like the strongest new lead in
+> the book until `library/uniqueness.html` was opened**, where it is already carried *with* his minority position
+> conceded and Carrier's use of it engaged. **Reading the essay is what turns a row into a non-row.**
+> ⚠ **Owed:** the **copyright page is still unphotographed**, so no publisher or year may be printed for this
+> book; ch. 5 onward and its notes (from p. 243) are uncaptured; **`library/paulconv.html` was NOT read**, so the
+> one genuinely promising ch. 4 lead (Paul's *primary-vs-secondary evidence* reply) is recorded **unresolved**
+> rather than guessed.
+>
 > **LATEST — 2026-08-10 (c):** **Confirmation pass on `api/debate.js` + `api/feedback.js` — the pass the 08-10 (b)
 > stamps said was owed. Both files now carry BOTH lenses' dates; live on `main` (`b3f4d4c`).** `debate.js` came back
 > **CLEAN from both**, and ⭐ **both noted the same reason independently: the rebuilt Muslim persona — the largest piece

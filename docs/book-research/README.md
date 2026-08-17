@@ -198,6 +198,31 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   names Frost's book), so the note is mostly corroboration; the genuine gaps (apocryphal-source plank; Nickel/
   Witztum/Griffith/Sinai; the Garima Gospels) are logged P3 in `docs/content-backlog.md`.
 
+- `is-god-real.md` — Lee Strobel, *Is God Real? Exploring the Ultimate Question of Life* (⚠ **PARTIAL —
+  pp. 17–85 captured continuously from the owner's own copy; the copyright page and ALL endnotes are
+  NOT photographed**). Strobel's interview format: **ch. 1 William Lane Craig** on the kalam (the three
+  steps, the actual-infinite marbles, the quantum-vacuum reply, the personhood inferences),
+  **ch. 2 Michael G. Strauss** on fine-tuning (parameters, habitability, the multiverse),
+  **ch. 3 Stephen C. Meyer** on biological information, **ch. 4 Michael Licona** on the resurrection
+  (the historian's three Rs and the five minimal facts; captured to p. 85). ⚠⚠ **THE HEADLINE IS THAT
+  OUR OWN ESSAYS ARE BETTER:** most classified leads came back *verdict 5 — hazard, ours is more
+  accurate*, because our essays name the live critics (Morriston, Oppy, Carroll, Guth, the McGrews,
+  Sober, Allison, Carrier, Cavin) and this book does not. Mine it for **four** things only: the
+  *"isn't God infinitely old?"* objection, **Lewis & Barnes's *A Fortunate Universe*** as the citation
+  for "the data is conceded", **Hossenfelder** as a non-theist multiverse critic, and the **"why so
+  much wasted space?"** reply. 🔴🔴🔴 **The one verdict pointing the other way: ch. 4 p. 72 runs a claim
+  this site RETIRED** — the Son of Man as "the divine figure in Daniel 7:13–14… sovereign, eternal, and
+  worshiped," which trips both `daniel7-figure-is-divine` and `pelach-only-to-God`, and which is the
+  **second** book-note found carrying that phrase. 🔴 **Other hard do-not-use flags:** Hugh Ross's
+  **concordism** (Isa 40:22 etc. as cosmic expansion) and his **322-parameters/10⁻³⁰⁴** figure; the
+  **multiverse dismissed rather than steelmanned**; the **steady-state-had-no-evidence** history, which
+  contradicts our certified `bigbang.html`; **Fazale Rana** and the **Francis Collins landmine** in
+  ch. 3; and the **"modern-day Islamic terrorist"** comparison in ch. 4. ⚠ Three factual slips our
+  essays already get right (Philoponus in the *fourth* century; the CMB at 3.7 K; Lemaître as merely
+  "the Belgium astronomer"). ⭐ **And one methodological lesson recorded in the note itself:** a verdict
+  written on a partial capture ("the book never raises god-of-the-gaps") turned out to be wrong once
+  the rest of the chapter arrived, and is corrected in place rather than silently fixed.
+
 ### ⚠ PARTIAL notes — books NOT owned, NOT read (added 2026-07-26, Tyndale/evangelical mining batch)
 These four were queued as books by `docs/article-research/MINING-BRIEF-tyndale-batch.md`. Because we do
 **not** own them, each is mapped only at **thesis/chapter level**, and only from legitimate non-book

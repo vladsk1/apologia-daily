@@ -22,7 +22,12 @@ reconstruction, and Josephus's first-hand sources for Jesus) · **ISLDIL** = `is
 (Christopher W. Frost, 2026 — the "Islamic Dilemma": the Qur'an affirms the Torah & Gospel as authoritative,
 yet contradicts them; taḥrīf, the corruption verses, and the Qur'an's Syriac/apocryphal sources.
 ⚠ **popular counter-apologetics** — cite the mainstream academics it routes to, never the polemics layer;
-⚠ **highest-scrutiny Islam tier**, and the lexical "Word of God" bridge in it is **RETIRED** on our site).
+⚠ **highest-scrutiny Islam tier**, and the lexical "Word of God" bridge in it is **RETIRED** on our site) ·
+**IGR** = `is-god-real.md` (Lee Strobel, *Is God Real?* — ⚠ **PARTIAL: pp. 17–85 captured, endnotes NOT
+captured**; the interview format: **Craig** on the kalam, **Strauss** on fine-tuning, **Meyer** on biological
+information, **Licona** on the resurrection. ⚠⚠ **Its dominant finding is that OUR ESSAYS ARE BETTER** —
+most classified leads came back "hazard, ours is more accurate." Mine it for four things only; see the
+topic rows. 🔴🔴🔴 **And ch. 4 p. 72 runs a RETIRED claim** — see the flag below).
 
 **⚠ PARTIAL notes added 2026-07-26 (books NOT owned, NOT read — mapped at thesis/chapter level only from
 the authors' own open-access work, published open-access reviews, publisher frontmatter, and our own
@@ -69,8 +74,83 @@ not verified.
 | **OT historicity / ANE settings** | **OROT** (thesis-level only) — the *usable* Kitchen is the fully-mined `article-research/kitchen-historical-method-hebrew-tradition.md` | **Hittite treaty form** vs. the Sinai/Deuteronomy covenant (ch. 6) — *already live on `library/archaeology.html` with McConville's caution attached, which is the model*; **Merneptah Stele** (c. 1208 BC). ⚠⚠ avowed **maximalist** — bounded verdicts, never cited without his named critic; ⚠⚠ the **Nuzi/patriarchal-customs** argument is a **trap, not a gap** (Thompson 1974 / Van Seters 1975) |
 | ⭐ **Islam — the "Islamic Dilemma" (Qur'an affirms then contradicts the Bible)** | **ISLDIL** (whole book) — but the SPINE is **already live + certified** on `library/islam-dilemma.html` + the 16-essay `library/islam-*` library, so this is mostly corroboration | Mainstream academics the book routes to (**verify each**): **Reynolds** (*The Qur'an and Its Biblical Subtext* / *…and the Bible*), **Sinai** (*Key Terms of the Qur'an*), **Griffith** (*The Bible in Arabic*), **Whittingham** (*A History of Muslim Views of the Bible*), **Nickel** (*The Gentle Answer…*), **Witztum** (*The Syriac Milieu of the Quran*); Muslim concessions **Saeed / Ayoub / Galadari / Accad**; PD primaries **John of Damascus**, *Apology of al-Kindi*, Augustine *City of God*, Book of Jubilees, Targum Pseudo-Jonathan. ⚠⚠⚠ **DUAL-CONSENSUS + EXPLICIT-VERDICT (bounded) + FALSE-COMMON-GROUND.** ⚠⚠⚠ the **walad/*kalima*/Logos-as-*kun*** material = route through `library/islam-eternalword.html` **structural** framing, NOT the RETIRED lexical bridge (`tools/retired-claims.json`). ⚠ steelman = **Yaqeen/Facchine 2025, Qadhi 2025, Fatoohi 2010** |
 | ⭐ **Beginning of the universe — the history of how it was established, and who actually declined the kalam move** | **RotGH** (⚠ **pp. 68-298 continuous**: chs. 4, 5 and 7-14 complete; ch. 6 through p. 129; Part IV opens p. 299; **endnotes unphotographed**) | **Aquinas (*ST* I q.46 a.2), Augustine, Maimonides** — affirmed a temporal beginning BY FAITH while holding reason could not decide it (the highest-value lead: `library/kalam.html` never mentions Aquinas); **Bonaventure** contra. For `library/bigbang.html`: **Olbers's paradox**, **Thomas Digges 1576**, **Poe's *Eureka* (1848 — PD)**; the distance ladder **Leavitt → Hertzsprung → Hubble's M31 Cepheid → the Great Debate (Shapley vs Curtis 1920) → Slipher + Humason** (Leavitt's Harvard Circulars and **Huggins 1868** are PD); ⭐⭐ the **steady-state contest as a falsification narrative** (Hoyle/Gold/Bondi, the C-field, the three fronts the big bang was losing on, **Alpher & Herman's 1948 CMBR prediction**, Baade 1952, Sandage, COBE) with **Eddington's and Dicke's own published anti-beginning sentences**; and ⭐⭐ **Hawking & Ellis's own concession** in *The Large Scale Structure of Space-Time* (1973), plus Meyer's own ch.-6 retreat — the theorems prove only a *near* singularity (10⁻¹²–10⁻³³ cm), and eternal inflation violates the energy conditions they require, so they no longer carry the weight popular apologetics gives them. ⚠ The **George Ellis quotation at p. 122 is an unpublished personal interview with Meyer — not citable.** ⚠⚠ **Meyer is the leading ID advocate and this book is the ID cumulative case — the science-tab/ID question is an OPEN OWNER DECISION in `CLAUDE.md`; mine the history, not the design inference, until it is settled.** ⚠ Do not carry the **Simon Singh** or **Hoyle-motive** claims in our own voice. ⚠ The book has a hard factual error (Doppler dated 1848; he published 1842) and its historical distance/age figures are period estimates, not modern values. 🔴 **Ch. 7 (fine tuning) is a HAZARD, not a gap** — see the flag below |
+| ⭐ **Kalam — the objection "then isn't God infinitely old?"** | **IGR** ch. 1 (p. 26) | **`library/kalam.html` never answers it** — only the softer "what caused God?". Answer from **classical divine timelessness**: **Augustine, *Confessions* XI.13–14; Boethius, *Consolation* V.6; Aquinas, *ST* I q.10 a.1** (all PD → also a `/sources` candidate). ⚠⚠ **Do NOT port Craig's "once God creates, he could enter time"** — divine temporality is his contested view, and the standing kalam instruction is to keep it NEUTRAL. Also from ch. 1: **Stuart Hackett, *The Resurrection of Theism* (1957)** as the revival's proximate cause (our essay says "almost single-handedly… Craig"), and **Quentin Smith** / **Kai Nielsen** / **George H. Smith** as *named* holders of the positions our Premise-1 section currently refutes anonymously |
+| ⭐⭐ **Fine-tuning — the citation for "the data is conceded"** | **IGR** ch. 2 (pp. 47–48) | **Lewis & Barnes, *A Fortunate Universe* (CUP)** — a survey of **200+ published papers** stating fine-tuning "has stood up well under the scrutiny of physicists" and is **not** a religious invention. **Zero hits site-wide**; `library/finetuning.html` rests its whole architecture on this claim and cites only Barnes's own 2012 PASA paper. ⚠⚠ **Geraint Lewis is the SKEPTIC of the pair — cite for the DATA, never the design inference.** Also: **Sabine Hossenfelder** (*Existential Physics*) as the multiverse section's missing **non-theist** critic (⚠ methodological objection, not an endorsement of design); and the **"why so much wasted space?"** objection, absent site-wide, answered by the third-generation-stars/age-implies-size reply (⚠ bound it — do not port "the smallest it could possibly be") |
+| **Origin of biological information / DNA-to-design** | **IGR** ch. 3 (pp. 53–69) | ✅ **Corroboration only, and `library/originlife.html` is ahead of it on every shared point** — Axe marked contested, Polanyi sourced, Dobzhansky with the fairness note, and the god-of-the-gaps objection answered at greater length (⚠ the book *does* raise it, at pp. 68–69; an earlier reading of a partial capture said otherwise). Optional-only: **Küppers, *Information and the Origin of Life*** and **Quastler** (both naturalists framing the problem). 🔴 See the IGR flags below before opening this chapter — especially **Rana**, **Kenyon**, and the fact that **Joyce and Cairns-Smith are not hostile witnesses** |
+| **Resurrection — minimal facts, the historian's method** | **IGR** ch. 4 (pp. 71–85) | ✅ **Corroboration, and `library/minimalfacts.html` is well ahead** — ours carries **Allison**, **Cavin & Colombetti**, **Carrier**, the **GCRR** dataset critique, **Peirce** on abduction, and **Hartshorne**, none of which the chapter has. ✅ One genuine match worth copying: Licona **flags the empty tomb as the soft point himself** and gives Habermas's figure as **about 75 percent**, not "virtually all". Only fresh lead: **Paula Fredriksen** ("historical bedrock, facts known past doubting"), absent site-wide → P4. ⭐ One lead left OPEN by design: Paul's **primary-vs-secondary evidence** reply (p. 83) — `library/paulconv.html` has not been read in full, so no verdict was guessed. 🔴🔴🔴 **See the retired-claim flag below before opening this chapter** |
 
 ## ⚠ Standing "do not use / high-caution" flags (carry these into any pull)
+- 🔴🔴🔴 **IGR ch. 4 p. 72 — A RETIRED CLAIM IS IN THE TEXT.** "The Son of Man, a reference to **the
+  divine figure in Daniel 7:13–14, who is sovereign, eternal, and worshiped**" trips **both**
+  `daniel7-figure-is-divine` (retired 2026-08-11) and `pelach-only-to-God` (retired 2026-07-28) in
+  `tools/retired-claims.json`. `library/titles.html` went through **five gate rounds** in August 2026
+  partly to remove that claim from the site. Use the registry's `instead` wording: the figure is
+  *heavenly* and *comes on the clouds* — God's own conveyance in the Hebrew Bible — and the argument
+  runs through **what Jesus did with the scene**, not through Daniel's referent. ⚠⚠ **This is the
+  SECOND book-research note found carrying the phrase** (Geisler & Turek, caught 2026-08-08). Treat it
+  as a recurring hazard in popular deity-of-Christ writing, and grep any new note for it.
+- 🔴🔴 **IGR ch. 4 p. 82 — THE "MODERN-DAY ISLAMIC TERRORIST" COMPARISON. DO NOT PORT.** The underlying
+  distinction is sound and our essays make it (later martyrs die for what they *believe*; the disciples
+  were positioned to *know*). Naming a modern group to make it fails the 1 Peter 3:15 accuracy rule —
+  and the sibling flag on **CFR p. 148** is already on this page. Related, same page: the slide from
+  "positioned to know" to "it was for the **truth** of the resurrection that they were willing to die,"
+  where `raised-on-the-third-day.md` insists the argument establishes **sincerity only**.
+- 🔴🔴 **IGR ch. 3 p. 69 — FAZALE RANA. DO NOT USE.** "Origin-of-life researchers have failed to
+  generate any tangible progress" is contradicted by our own `library/originlife.html` ("This is not a
+  stagnant field, and it would be a mistake to say otherwise"), and "the harmony between the Bible's
+  account of the origin of life and nature's record" is the **same Reasons to Believe concordism** as
+  the Hugh Ross passage below. Same chapter: **Dean Kenyon's** repudiation of his own textbook is
+  presented as a neutral scientist following the evidence, which flattens a contested biography.
+- ⚠⚠ **IGR ch. 3 pp. 64–65 — GERALD JOYCE AND GRAHAM CAIRNS-SMITH ARE NOT HOSTILE WITNESSES.** Joyce is
+  one of the RNA world's central researchers (our `originlife.html` cites him from *inside* the
+  programme, alongside the 2009 Sutherland and Szostak advances); Cairns-Smith was pressing his own
+  clay-mineral-first theory. Quoting either as conceding design inverts them — the same shape as the
+  Crick-without-his-hedge and de Duve problems our essay already handles correctly.
+- 🔴🔴 **IGR ch. 2 p. 50 — HUGH ROSS CONCORDISM. DO NOT USE.** Big Bang cosmology read out of Job 9:8 /
+  Ps 104:2 / **Isa 40:22** / Jer 10:12 ("stretching out the heavens"), unchanging law out of Jer 33:25,
+  the second law out of Eccl 1 / Rom 8:20–22. **`Isaiah 40:22` returns zero hits on our site and must
+  stay that way**: the phrase is ANE tent imagery for God's sovereignty, not metric expansion, and Rom
+  8:20–22 is futility under sin, not entropy. It also contradicts our own certified `library/bigbang.html`,
+  which cites **Ernan McMullin's consonance-is-not-support** distinction. Same chapter, same fence: the
+  **322 habitability parameters → 10⁻³⁰⁴** figure, the dime-covered-continents illustrations, and
+  **"a non-cyclical universe violates the tenets of Eastern religions"** (fails the 1 Peter 3:15
+  accuracy rule).
+- 🔴🔴 **IGR ch. 2 — THE MULTIVERSE IS DISMISSED, NOT STEELMANNED.** "You basically need blind faith";
+  **Barrow & Tipler's Final Anthropic Principle** offered as the naturalist's best effort; no eternal
+  inflation, no string landscape. This is the **identical defect** `CLAUDE.md` records our own gates
+  finding and fixing on `ev-m-finetuning`/`ev-m-cosmic` on 2026-07-28. Do not re-import it. Same
+  chapter: the eight deduced divine attributes ending in **"caring"**, which the constants cannot
+  deliver.
+- 🔴🔴 **IGR ch. 1 — THE STEADY-STATE ACCOUNT CONTRADICTS OUR CERTIFIED ESSAY.** "There was no
+  evidence… it never secured a single piece of experimental verification… motivated purely by a desire
+  to avoid a beginning." `library/bigbang.html`'s "The Theory That Could Have Died" section refutes
+  this at length (Baade 1952, Sandage, Alpher–Herman's risky 1948 prediction, Eddington's and Dicke's
+  own published anti-beginning sentences), and the **Hoyle-motive claim is already a standing
+  do-not-use flag** on this page under RotGH. Steady state was *falsified*, which is the point.
+- 🔴 **IGR ch. 3 — THE FRANCIS COLLINS LANDMINE, AGAIN** (p. 54): Collins quoted on "the language in
+  which God created life" inside a chapter arguing for intelligent design, which he founded BioLogos to
+  oppose. `CLAUDE.md` records this exact error being made and fixed on our own site once already. The
+  chapter also rests its "no evidence for the prebiotic soup" plank on **Brooks (1985)** and **Denton
+  (1985)** — forty years stale, presented as current — and quotes **Crick's "almost a miracle" without
+  the hedge Crick added in the next clause**, which our fn 15 carries. ⚠ And ch. 3 sits inside the
+  **open owner decision on ID and the science tab**: mine the information argument only.
+- ⚠⚠ **IGR — DAVIES, HAWKING, PENROSE, LEWIS, BARNES, LESLIE, HOSSENFELDER: DATA ONLY, NEVER THE
+  INFERENCE.** The book repeatedly reads design-friendly conclusions into physicists who do not hold
+  them ("the once-skeptical Paul Davies is now convinced there must be a purpose" overstates him). Our
+  standing fine-tuning guardrail governs every pull from ch. 2.
+- ⚠ **IGR — THREE FACTUAL SLIPS our essays already get right:** **Philoponus placed in the fourth
+  century** (he is sixth — `library/kalam.html` is correct); the **CMB given as 3.7 K** (≈2.725 K; our
+  essay gives no figure); and **Lemaître called only "the Belgium astronomer"**, with no mention that
+  he was a priest (`library/bigbang.html` opens on exactly that). Also an **unattributed quotation** at
+  p. 38 ("one scholar explained…") — locate it or drop it.
+- ⚠ **IGR — TRIUMPHALIST REGISTER THROUGHOUT.** "No rational objection could seriously jeopardize";
+  "I've never seen a good response… on the part of any atheist"; "plain silly"; "ain't gonna happen";
+  "the God hypothesis has no competitors"; "the atheist… feels very uncomfortable and marginalized
+  today." Our `library/kalam.html` says the argument "remains live and genuinely contested" and names
+  Guth's dissent *precisely* so those sentences cannot be written here. Import none of them.
+- ⚠ **IGR is PARTIAL and its ENDNOTES ARE NOT CAPTURED** — ~40 numbered references in the mapped pages
+  have no locus, and the **copyright page was not photographed**, so no publisher or year may be
+  printed on this note's authority.
 - 🔴🔴🔴 **RotGH ch. 14 — DO NOT MINE IT. It argues that theistic evolution / evolutionary creation is
   scientifically implausible (naming Denis Lamoureux), which is an intra-Christian dispute `CLAUDE.md`
   forbids us to adjudicate — held as it is by many Catholics, Orthodox and Protestants.** And the site has
