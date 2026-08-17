@@ -198,9 +198,9 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   names Frost's book), so the note is mostly corroboration; the genuine gaps (apocryphal-source plank; Nickel/
   Witztum/Griffith/Sinai; the Garima Gospels) are logged P3 in `docs/content-backlog.md`.
 
-- `is-god-real.md` — Lee Strobel, *Is God Real? Exploring the Ultimate Question of Life* (⚠ **PARTIAL —
-  pp. 17–85 captured continuously from the owner's own copy; the copyright page and ALL endnotes are
-  NOT photographed**). Strobel's interview format: **ch. 1 William Lane Craig** on the kalam (the three
+- `is-god-real.md` — Lee Strobel, *Is God Real? Exploring the Ultimate Question of Life* (**Zondervan, 2023**;
+  ⚠ **PARTIAL — pp. 17–91 captured continuously from the owner's own copy, plus the complete
+  Introduction/chs. 1–4 endnotes at pp. 229–243; ch. 5 onward not yet captured**). Strobel's interview format: **ch. 1 William Lane Craig** on the kalam (the three
   steps, the actual-infinite marbles, the quantum-vacuum reply, the personhood inferences),
   **ch. 2 Michael G. Strauss** on fine-tuning (parameters, habitability, the multiverse),
   **ch. 3 Stephen C. Meyer** on biological information, **ch. 4 Michael Licona** on the resurrection
@@ -219,7 +219,10 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   contradicts our certified `bigbang.html`; **Fazale Rana** and the **Francis Collins landmine** in
   ch. 3; and the **"modern-day Islamic terrorist"** comparison in ch. 4. ⚠ Three factual slips our
   essays already get right (Philoponus in the *fourth* century; the CMB at 3.7 K; Lemaître as merely
-  "the Belgium astronomer"). ⭐ **And one methodological lesson recorded in the note itself:** a verdict
+  "the Belgium astronomer"). 🔴🔴 **The copyright page confirms the interviews are RECYCLED** from *The Case for a Creator* and four
+  other Strobel books and "edited for content, conciseness, and clarity" — so nothing here is verbatim,
+  and a "recent years" claim in ch. 1 may be reporting cosmology as of **2004**. Date-check everything.
+  ⭐ **And one methodological lesson recorded in the note itself:** a verdict
   written on a partial capture ("the book never raises god-of-the-gaps") turned out to be wrong once
   the rest of the chapter arrived, and is corrected in place rather than silently fixed.
 

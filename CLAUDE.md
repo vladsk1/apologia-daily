@@ -125,10 +125,23 @@
 > discipline stopped a bad row: **Mettinger's dying-and-rising-gods verdict looked like the strongest new lead in
 > the book until `library/uniqueness.html` was opened**, where it is already carried *with* his minority position
 > conceded and Carrier's use of it engaged. **Reading the essay is what turns a row into a non-row.**
-> ⚠ **Owed:** the **copyright page is still unphotographed**, so no publisher or year may be printed for this
-> book; ch. 5 onward and its notes (from p. 243) are uncaptured; **`library/paulconv.html` was NOT read**, so the
-> one genuinely promising ch. 4 lead (Paul's *primary-vs-secondary evidence* reply) is recorded **unresolved**
-> rather than guessed.
+> ⭐ **UPDATE — the copyright page landed and settled the note's last open question.** Publication data is now
+> VERIFIED (**Zondervan, 2023**; ISBN 978-0-310-36788-8; LCCN 2023031050; Scripture defaults to **NIV 2011**).
+> 🔴🔴 **And it CONFIRMED what the note had only flagged as suspected: the interviews are RECYCLED.** The page
+> states that *"selected interviews were edited from some of Lee Strobel's earlier books, including **The Case
+> for a Creator**, *The Case for Miracles*, *The Case for Heaven*, *The Case for Faith*, and *In Defense of
+> Jesus*"* — and two Strauss-chapter endnotes cite *Case for a Creator* (**2004**) directly. With ch. 1 n. 6's
+> "edited for content, conciseness, and clarity," that means **nothing here is verbatim and nothing here is
+> necessarily current: a ch. 1 claim that the evidence "has accumulated" may be reporting cosmology as of 2004.**
+> Our `kalam.html`/`bigbang.html` rest on Wall 2013, Mithani–Vilenkin 2012, Vilenkin 2015 and Carroll 2014.
+> **Date-check every currency claim against the primary.**
+> ✅ **All three cross-checks the note left open are also now CLOSED, by reading rather than guessing** —
+> `library/paulconv.html` read cover to cover (**the gap is real**: it answers the *vision* objection at length
+> and never raises the conversion-frequency objection → P3); **John 10:30's neuter *hen*** is already carried,
+> better, on `modalism.html` + a certified `ev-s6.html` paragraph that adds the anti-modalist fence the book
+> lacks (no row); and **John 19:26–27** on the brothers' unbelief is genuinely absent from `sceptics.html` (P4).
+> **Backlog now 15 rows (11 actionable, 4 non-recommendations); no check against live content is outstanding
+> for chs. 1–4.** ⚠ **Still owed: ch. 5 onward and its notes from p. 243.**
 >
 > **LATEST — 2026-08-10 (c):** **Confirmation pass on `api/debate.js` + `api/feedback.js` — the pass the 08-10 (b)
 > stamps said was owed. Both files now carry BOTH lenses' dates; live on `main` (`b3f4d4c`).** `debate.js` came back

@@ -23,8 +23,8 @@ reconstruction, and Josephus's first-hand sources for Jesus) · **ISLDIL** = `is
 yet contradicts them; taḥrīf, the corruption verses, and the Qur'an's Syriac/apocryphal sources.
 ⚠ **popular counter-apologetics** — cite the mainstream academics it routes to, never the polemics layer;
 ⚠ **highest-scrutiny Islam tier**, and the lexical "Word of God" bridge in it is **RETIRED** on our site) ·
-**IGR** = `is-god-real.md` (Lee Strobel, *Is God Real?* — ⚠ **PARTIAL: pp. 17–85 captured, endnotes NOT
-captured**; the interview format: **Craig** on the kalam, **Strauss** on fine-tuning, **Meyer** on biological
+**IGR** = `is-god-real.md` (Lee Strobel, *Is God Real?*, **Zondervan 2023** — ⚠ **PARTIAL: pp. 17–91 + the complete
+Introduction/chs. 1–4 endnotes (pp. 229–243) captured; ch. 5 onward NOT captured**; the interview format: **Craig** on the kalam, **Strauss** on fine-tuning, **Meyer** on biological
 information, **Licona** on the resurrection. ⚠⚠ **Its dominant finding is that OUR ESSAYS ARE BETTER** —
 most classified leads came back "hazard, ours is more accurate." Mine it for four things only; see the
 topic rows. 🔴🔴🔴 **And ch. 4 p. 72 runs a RETIRED claim** — see the flag below).
@@ -148,9 +148,18 @@ not verified.
   "the God hypothesis has no competitors"; "the atheist… feels very uncomfortable and marginalized
   today." Our `library/kalam.html` says the argument "remains live and genuinely contested" and names
   Guth's dissent *precisely* so those sentences cannot be written here. Import none of them.
-- ⚠ **IGR is PARTIAL and its ENDNOTES ARE NOT CAPTURED** — ~40 numbered references in the mapped pages
-  have no locus, and the **copyright page was not photographed**, so no publisher or year may be
-  printed on this note's authority.
+- 🔴🔴 **IGR — THE INTERVIEWS ARE RECYCLED AND EDITED, AND THE COPYRIGHT PAGE SAYS SO.** *"Selected
+  interviews were edited from some of Lee Strobel's earlier books, including **The Case for a
+  Creator**, *The Case for Miracles*, *The Case for Heaven*, *The Case for Faith*, and *In Defense of
+  Jesus*."* Ch. 1 n. 6 adds that all interviews are *"edited for content, conciseness, and clarity."*
+  So (a) **no quotation attributed to Craig, Strauss, Meyer or Licona here is a verbatim record**, and
+  (b) **a "recent years" claim in ch. 1 may be reporting cosmology as of 2004** — two of the Strauss
+  chapter's own endnotes cite *Case for a Creator* (2004). Our `kalam.html`/`bigbang.html` rest on the
+  current literature. **Date-check every currency claim against the primary.**
+- ✅ **IGR publication data is VERIFIED** (copyright page captured 2026-08-17): **Zondervan, 2023**,
+  ISBN 978-0-310-36788-8 (hardcover), LCCN 2023031050. Scripture defaults to **NIV (2011)**, with some
+  ESV and KJV. ⚠ Still PARTIAL: **ch. 5 onward is uncaptured**, though the Introduction and chs. 1–4
+  notes are complete (pp. 229–243).
 - 🔴🔴🔴 **RotGH ch. 14 — DO NOT MINE IT. It argues that theistic evolution / evolutionary creation is
   scientifically implausible (naming Denis Lamoureux), which is an intra-Christian dispute `CLAUDE.md`
   forbids us to adjudicate — held as it is by many Catholics, Orthodox and Protestants.** And the site has

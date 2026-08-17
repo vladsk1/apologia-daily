@@ -6,7 +6,8 @@
 |---|---|
 | **Author** | Lee Strobel |
 | **Title** | *Is God Real? Exploring the Ultimate Question of Life* |
-| **Publisher / year** | ⚠ **NOT VERIFIED — the copyright page was not photographed.** Commonly listed as Zondervan, 2023. **Ask the owner for a photo of the copyright page before any citation of this book is published anywhere.** Do not print a publisher or year on the strength of this note. |
+| **Publisher / year** | ✅ **VERIFIED from the copyright page (captured 2026-08-17):** Grand Rapids, MI: **Zondervan, 2023**. Full title *Is God Real? Exploring the Ultimate Question of Life*. ISBN **978-0-310-36788-8** (hardcover) · **978-0-310-36787-1** (ebook) · **978-0-310-36823-6** (international trade paper) · 978-0-310-36852-6 (special ed.) · 978-0-310-36789-5 (audio). LCCN **2023031050** (print). LCC BT103.S775 2023; DDC 231. Author: Strobel, Lee, 1952–. *(This copy is the international trade paper edition, printed in Australia.)* |
+| **Scripture versions** | Default **NIV (2011)**; some quotations **ESV**; some **KJV**. Relevant to `apologia-citations` — do not assume a translation when checking a scripture quotation from this book. |
 | **Owned?** | Yes — mapped from the owner's own physical copy, photographed page by page. |
 | **Captured** | **pp. 17–85, continuous** (chs. 1–3 complete; ch. 4 through p. 85). See the Capture-status table. |
 | **Format** | Strobel's signature journalist-interview format: a framing narrative by Strobel, then a named expert interviewed at length. Ch. 1 = **William Lane Craig** (kalam). Ch. 2 = **Michael G. Strauss** (fine-tuning). Ch. 3 = **Stephen C. Meyer** (biological information). Ch. 4 = **Michael Licona** (the resurrection). |
@@ -21,10 +22,19 @@
   experts interviewed are real and credentialed; the framing around them is triumphalist in ways our
   own certified essays deliberately refuse. Roughly **half the substantive findings in this note are
   hazard flags — places where our essay is MORE accurate than the book.** That ratio is the headline.
-- ⚠⚠ **Ch. 1 appears to be substantially reworked from Strobel's earlier Craig interview in *The Case
-  for a Creator* (2004).** ⚠ **UNVERIFIED — flagged so a later session checks rather than assumes.**
-  If confirmed, treat ch. 1 as a *restatement*, not new material, and date-check every "recent" claim
-  in it.
+- 🔴🔴 **THE INTERVIEWS ARE RECYCLED FROM EARLIER BOOKS — CONFIRMED ON THE COPYRIGHT PAGE, NOT
+  INFERRED.** It states: *"Selected interviews were edited from some of Lee Strobel's earlier books,
+  including **The Case for a Creator**, **The Case for Miracles**, **The Case for Heaven**, **The Case
+  for Faith**, and **In Defense of Jesus**."* Combined with ch. 1 n. 6 (*"All interviews in this book
+  are edited for content, conciseness, and clarity"*), that means material here is **neither verbatim
+  nor necessarily current**. The endnotes corroborate it directly: two Strauss-chapter quotations are
+  cited as *"Quoted in Strobel, **Case for a Creator**, 136/137"* — a **2004** book.
+  ⚠⚠ **The practical consequence, and it is the sharpest dating caution in this note: a claim in ch. 1
+  that the scientific evidence "has accumulated" or that atheists have "been forced" to a new position
+  may be reporting the state of cosmology as of 2004, not 2023.** Our `kalam.html` and `bigbang.html`
+  are built on the current literature (Wall 2013, Mithani–Vilenkin 2012, Vilenkin 2015, Carroll's
+  2014 debate). **Never treat a "recent years" claim in this book as recent.** Date-check every one
+  against the primary before use.
 - ⚠ **Ch. 3 sits inside the site's OPEN intelligent-design owner decision** (`CLAUDE.md`: the science
   tab / ID question is unresolved, and the **Francis Collins landmine** is on record). Mine the
   *information* argument only, never the anti-evolution frame. See the ch. 3 hazards.
@@ -789,8 +799,8 @@ Step Zero box applies to essays and research notes, here applied to the source.
 
 ## TO COMPLETE (human action)
 
-1. 🔴 **Photograph the copyright page** — no citation of this book may print a publisher or year until
-   then.
+1. ✅ **DONE 2026-08-17 — the copyright page is captured and the publication block above is verified.**
+   It also **confirmed** the recycled-interviews flag, which had been recorded as unverified.
 2. ✅ **DONE — the endnotes for the Introduction and chs. 1–4 are captured (pp. 229–243).** Ch. 5's
    notes begin on p. 243 and are not yet photographed.
 3. ⬜ Continue in reading order from **p. 92** (ch. 5, "Experiencing God", and the later chapters).
