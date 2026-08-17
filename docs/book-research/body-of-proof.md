@@ -115,7 +115,7 @@ Plus the two the 2026-08-08 pass already logged: **Dunn added to
 standing output #2 — ⚠ frame as a docetic *antecedent*, never a derivation claim). And one fresh
 live-door candidate: the PD **BCP burial-office committal prayer** ("…in sure and certain hope of the
 resurrection…") is **not in `/sources`** (the BCP appears there only as the translation label on two
-creeds) → **`/sources` candidate, P3.**
+creeds) → **`/sources` candidate, P3.** ✅ **SHIPPED 2026-08-17** (backlog row 60): the full 1662 committal is now `sources/liturgy.json`, `verified:true`, citations 0 errors, compiled into `lib/sources-verified.js` (133 verified) so live `/api/ask` can quote it. Bound as Anglican-tradition / denom-neutral.
 
 ### ✅ Where OURS is better — HAZARD flags (verdict 5; do not "improve" us backwards)
 - **Hosea 6:2** — `respred.html` handles it *more* carefully than the book: it uses Hosea 6:2 *against*
