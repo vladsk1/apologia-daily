@@ -489,8 +489,14 @@ inflicted" (fn 5).
   Tertullian, Origen). The argument: liars make poor martyrs, so they held the belief sincerely — and,
   unlike later martyrs, the disciples "were on the scene and able to ascertain for sure" whether it
   happened. ⚠⚠ **The illustration used to make that distinction is a hazard — see the flags.**
-  **Paula Fredriksen**: the disciples' conviction that they had seen the risen Christ "is [part of]
-  historical bedrock, facts known past doubting" (fn 17).
+  **Paula Fredriksen**: the disciples' conviction that they had seen the risen Christ is "historical
+  bedrock, facts known past doubting" (fn 17). 🔴 **CORRECTED 2026-08-17 by `apologia-citations`: the "is
+  [part of]" rendering above was STROBEL'S EDITORIAL SURGERY, not her sentence.** Fredriksen wrote *"The
+  Disciples' conviction that they had seen the risen Christ, their relocation to Jerusalem, their principled
+  inclusion of Gentiles as Gentiles &mdash; **all these are** historical bedrock, facts known past doubting
+  about the earliest community after Jesus' death."* The bracket silently narrows a **three-item list** to
+  our topic. **Quote the full sentence, or the bare phrase "historical bedrock, facts known past doubting"
+  &mdash; never the "is [part of]" reconstruction.**
 
 **Fact #3 — the conversion of the persecutor Paul (pp. 83–84).** Paul's own claim to have encountered
 the risen Jesus (fn 18); six further ancient sources (Luke, Clement of Rome, Polycarp, Tertullian,
@@ -591,7 +597,8 @@ The notes did four things at once, and two of them are hazards the body alone co
    *A Fortunate Universe* (**CUP, 2016**), **241, 242, 291, 355**; Polkinghorne, *Science and Theology*
    (Fortress, 1998), **38**; Swinburne, *Is There a God?* (OUP, 1995), **68**; Küppers (MIT, **1990**),
    **xviii**; Quastler (Yale, 1964), **16**; Fredriksen, *Jesus of Nazareth, King of the Jews* (Vintage,
-   1999), **264**; Mettinger, *The Riddle of Resurrection* (Almqvist & Wiksell, 2001), **221**;
+   1999), **264** &mdash; ⚠ **that edition does not exist: Knopf hardcover 1999, Vintage paperback 2000, so p. 264
+   floats between two paginations and every attestation of it traces back to this endnote. DO NOT PRINT THE PAGE**; Mettinger, *The Riddle of Resurrection* (Almqvist & Wiksell, 2001), **221**;
    Polycarp, *To the Philippians* **9:2**; *1 Clement* **42:3**.
 2. ⚠⚠ **They disclose that the interviews are EDITED.** Ch. 1 n. 6: *"All interviews in this book are
    edited for content, conciseness, and clarity."* **So nothing in quotation marks attributed to Craig,
