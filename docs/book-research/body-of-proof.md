@@ -91,15 +91,15 @@ ranked, each now a `content-backlog.md` row:
    in the leader's *fall*, none claiming resurrection). ⚠ **The Theudas / Acts 5:36 vs Josephus *Ant.*
    20.97–98 chronology crux IS handled** in the expanded footnote 11 (both live resolutions named; the
    body never leans on the Acts synchronism). Dual-consensus CLEAN. → **R-C, P3 — DONE.**
-5. **Second-Temple resurrection primaries** — **4Q521 and Isaiah 26:19 are absent from all served
-   content**, and **2 Maccabees 7:9 lives only as an objection to rebut** (`ev-m-uniqueness`). The
-   framework (Daniel 12:2 + Ezekiel 37 + Wright) is well covered in `uniqueness.html`; the fuller
-   primary set is not. → **R-D, P3** (2 Macc cited as Second-Temple historical background, never as our
-   Scripture — denominational neutrality).
-6. **Anti-copycat concrete assets** — Bowersock's *Fiction as History* reverse-influence (*Scheintod*)
-   thesis, the Asclepius/Epidaurus healings-not-resurrection point, and Aeschylus *Eumenides* 647–650.
-   All 0 hits; all reinforce `uniqueness.html`'s already-stronger "no resurrection category" case.
-   → **R-E, P3** (folded with R-D as one `uniqueness.html` enrichment row).
+5. **Second-Temple resurrection primaries** — ~~4Q521 and Isaiah 26:19 absent~~ **SHIPPED 2026-08-17**
+   to `library/uniqueness.html` (both added to the Second-Temple roots, kept bodily/collective/future).
+   ⚠ **2 Macc 7:9 was NOT added** — denom-neutrality (can't foreground it as our Scripture) and Isaiah
+   26:19 + 4Q521 already carry the point; skipped deliberately. → **R-D, P3 — DONE.**
+6. **Anti-copycat concrete assets** — ~~Bowersock / Asclepius / Aeschylus absent~~ **SHIPPED 2026-08-17**
+   to `library/uniqueness.html`: Aeschylus *Eumenides* 647-648 (Apollo denies *anastasis*, citations-verified),
+   the Asclepius myth (raised the dead → struck down by Zeus, reframed as a punished transgression), and
+   Bowersock's reverse-influence thesis (flagged debated, not consensus). Dual-consensus CLEAN.
+   → **R-E, P3 — DONE.**
 7. **Keener's "Otho" comparison** (BBR 21 [2011]: 331–55) — the Gospels' discrepancies are fewer/less
    severe than those among Greco-Roman historians on the *same* events; distinct from the Plutarch
    material `consistency.html` already runs. 0 hits. → **R-F, P3.**
@@ -148,8 +148,8 @@ creeds) → **`/sources` candidate, P3.**
 | Ch. 11 — Holy Sepulchre vs Garden Tomb archaeology | **4 missing** | → **R-B, P3**. The old table had **no verdict** for Ch. 11. Neutrality-fenced. |
 | Ch. 5 — Last Supper / new-covenant cluster (Exod 24:8 / Jer 31:31) | ~~4 missing~~ **DONE 2026-08-15** | → **R-I, P3 — SHIPPED** to `library/typology.html` (new "The blood of the covenant" subsection; Heb 9:18-22 + 8:8-12 apostolic warrant; type-vs-prediction kept distinct; eucharist neutrality fenced; single-consensus CLEAN). |
 | Ch. 5/7 — messianic-pretenders "lone survivor" catalogue | ~~3 weaker in ours~~ **DONE 2026-08-17** | **SHIPPED** to `library/postres.html` (catalogue in the dissonance reply + expanded fn 11; Theudas/Acts 5:36 crux handled; dual-consensus CLEAN). → **R-C, P3 — DONE**. |
-| Ch. 3/5 — Second-Temple resurrection primaries (4Q521, Isa 26:19, 2 Macc 7:9) | **4 missing / partial** | → **R-D, P3** (`uniqueness.html`). |
-| Ch. 12 — anti-copycat assets (Bowersock, Asclepius, Aeschylus) | **4 missing** | → **R-E, P3** (folded into R-D's `uniqueness.html` row). |
+| Ch. 3/5 — Second-Temple resurrection primaries (4Q521, Isa 26:19, 2 Macc 7:9) | ~~4 missing / partial~~ **DONE 2026-08-17** | **SHIPPED** to `uniqueness.html` (4Q521 + Isaiah 26:19; 2 Macc deliberately skipped on denom-neutrality). Dual-consensus CLEAN. → **R-D, P3 — DONE**. |
+| Ch. 12 — anti-copycat assets (Bowersock, Asclepius, Aeschylus) | ~~4 missing~~ **DONE 2026-08-17** | **SHIPPED** to `uniqueness.html` (Aeschylus *anastasis*-denial [verified], Asclepius myth reframed, Bowersock flagged debated). → **R-E, P3 — DONE**. |
 | Ch. 12 (endnote n.33) — Keener "Otho" discrepancy comparison | ✅ **SHIPPED 2026-08-14** to `consistency.html` §186 (fn 19) | Keener's Suetonius-vs-Tacitus-on-Otho comparison added as a complementary control to the existing Plutarch material (two independent authors vs one author twice). Bounded to GENRE reliability, not inspiration/inerrancy; "as free as any two Gospels" (comparable, not "fewer"); its second thrust (convergence → source-dependence) stated. dual-consensus CLEAN. |
 | Ch. 8 — rabbinic criminal-burial apparatus (m. Sanh. 6:5–6, Semahot) | ~~4 missing (additive)~~ **DONE 2026-08-15** | → **R-G, P3 — SHIPPED** to `library/burial.html` (McCane-subsection paragraph + Craig Evans; dual-consensus CLEAN). ⚠ **Semahot 13.7 was the WRONG locus** (it is a restriction on moving remains) — corrected to ch. 2 + chs. 12-13; the "~1 year" is general ossilegium, not in the mishnah. ⚠ Evans is *more* optimistic than McCane (defends the known-tomb account) — took 3 neutrality rounds to get right. |
 | Ch. 3/6 — apostolic-eyewitness office-requirement (Acts 1:21–22) | ~~4 missing (additive)~~ **DONE 2026-08-15** | → **R-H, P3 — SHIPPED** to `library/eyewitnesses.html` (new Reply-section paragraph; the form-critical *Sitz im Leben* legitimation reply named + answered; claim bounded to early-witness/living-memory; dual-consensus CLEAN). Bauckham universalism fence RESPECTED. |
