@@ -39,6 +39,16 @@
       "acceptedAt": "2026-08-17",
       "sourceCommit": "2696efe",
       "reason": "English-ADD only (not a retired-claim fix): the 2026-08-17 P2 addition (backlog row 184) adds a new objection subsection, \"Then isn't God infinitely old?\", answering the actual-infinite objection turned back on divine eternity. The mirror is not WRONG, only less complete - nothing false is live in translation. Deliberately NOT hand-translated, per the owner's standing preference against untranslated doctrinal prose that no native reviewer will gate; Macedonian and Spanish doctrinal review remain outstanding (docs/STATEMENT_OF_FAITH.md). The subsection turns on the classical-timelessness vs divine-temporality distinction and required three gate rounds and four lenses in English - exactly the material that must not be machine-translated onto an ungated surface."
+    },
+    "library/finetuning.html -> library/mk/finetuning.html": {
+      "acceptedAt": "2026-08-17",
+      "sourceCommit": "pending-this-commit",
+      "reason": "English-ADD only (not a retired-claim fix): the 2026-08-17 additions for backlog rows 185/186 add a Lewis & Barnes citation to fn 1, a Sabine Hossenfelder untestability paragraph with a new fn 12, and a clause in 'The Honest State of the Scholarship' - which also RENUMBERED footnotes 12-15 to 13-16. The mirrors are not WRONG, only less complete and still at 15 footnotes; nothing false is live in translation. Deliberately NOT hand-translated per the owner's standing preference against untranslated doctrinal prose no native reviewer will gate. ⚠ NOTE FOR WHOEVER SYNCS THESE: the Hossenfelder passage is the one that must not be compressed or partially translated - it carries a mandatory symmetry disclosure (she applies the same untestability standard to an unobservable God), and translating the claim without the disclosure would turn a methodological critic into a witness for design. Absent beats half-translated here."
+    },
+    "library/finetuning.html -> library/es/finetuning.html": {
+      "acceptedAt": "2026-08-17",
+      "sourceCommit": "pending-this-commit",
+      "reason": "English-ADD only (not a retired-claim fix): the 2026-08-17 additions for backlog rows 185/186 add a Lewis & Barnes citation to fn 1, a Sabine Hossenfelder untestability paragraph with a new fn 12, and a clause in 'The Honest State of the Scholarship' - which also RENUMBERED footnotes 12-15 to 13-16. The mirrors are not WRONG, only less complete and still at 15 footnotes; nothing false is live in translation. Deliberately NOT hand-translated per the owner's standing preference against untranslated doctrinal prose no native reviewer will gate. ⚠ NOTE FOR WHOEVER SYNCS THESE: the Hossenfelder passage is the one that must not be compressed or partially translated - it carries a mandatory symmetry disclosure (she applies the same untestability standard to an unobservable God), and translating the claim without the disclosure would turn a methodological critic into a witness for design. Absent beats half-translated here."
     }
   }
 }
