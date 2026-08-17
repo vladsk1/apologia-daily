@@ -72,7 +72,7 @@ neighbouring material quotes the concessions without them.
 ## The book's spine
 
 A cumulative case for theism, built one interview at a time, moving outward from physics to biology to
-(presumably, in the unphotographed chapters) history and experience. The three chapters captured run:
+(in the uncaptured later chapters) history and experience. The four chapters captured run:
 
 1. **The cosmos requires a Creator** — the kalam cosmological argument, defended in Craig's standard
    three steps, with the twentieth-century cosmological evidence as corroboration of Premise 2.
@@ -568,8 +568,8 @@ here.**
 | Pages | Content | Status |
 |---|---|---|
 | Cover | Title/author | ✅ captured |
-| **Copyright page** | Publisher, year, ISBN | 🔴 **NOT captured — needed before any citation of this book ships.** |
-| Front matter / TOC | Chapter list | ⬜ not captured — would tell us how many chapters remain |
+| **Copyright page** | Publisher, year, ISBN, Scripture versions | ✅ **CAPTURED** — the publication block at the head of this note is verified from it, and it is what **confirmed the recycled-interviews flag**. |
+| Front matter / TOC | Chapter list | ⬜ not captured — not needed for chs. 1–4; get it first if the book is ever resumed |
 | pp. 17–34 | **Ch. 1, "The Cosmos Requires a Creator"** (Craig) | ✅ **complete** |
 | pp. 35–51 | **Ch. 2, "The Universe Needs a Fine-Tuner"** (Strauss) | ✅ **complete** |
 | pp. 53–69 | **Ch. 3, "Our DNA Demands a Designer"** (Meyer) | ✅ **complete** |
@@ -804,10 +804,45 @@ Step Zero box applies to essays and research notes, here applied to the source.
 2. ✅ **DONE — the endnotes for the Introduction and chs. 1–4 are captured (pp. 229–243).** Ch. 5's
    notes begin on p. 243 and are not yet photographed.
 3. ⬜ Continue in reading order from **p. 92** (ch. 5, "Experiencing God", and the later chapters).
-4. ⬜ **Verify whether ch. 1 is reworked from *The Case for a Creator* (2004).** If it is, this note's
-   ch. 1 section should say so at the top, and every "recent" claim in it needs re-dating.
+4. ✅ **DONE 2026-08-17 — CONFIRMED, from the copyright page and the endnotes, not by inference.** The
+   interviews are edited from *The Case for a Creator* and four other Strobel books; two Strauss-chapter
+   notes cite the 2004 volume directly. The dating caution now sits at the top of this note.
 5. ✅ **DONE 2026-08-17 — `library/paulconv.html` read cover to cover and row 59 settled** (the gap is
    real; P3 row logged). The two other checks left hanging were closed in the same pass: the **John 10:30
    neuter *hen*** argument is already carried, better, on `library/modalism.html` and `ev-s6.html` (no
    row), and **John 19:26–27** on the brothers' unbelief is genuinely absent from `library/sceptics.html`
    (P4 row logged). **No check against our live content is now outstanding for chs. 1–4.**
+
+---
+
+## Status of this note — CLOSED as a completed PARTIAL (2026-08-17)
+
+**The owner has stopped at ch. 4 for now, and this note is finished for what it covers.** It is not a
+work in progress: everything captured has been mined, cross-checked and logged, and nothing is left
+half-done inside chs. 1–4.
+
+**Complete and closed:**
+- Chs. 1–4 (pp. 17–91) mapped section by section, every section given one of the six verdicts.
+- The Introduction and chs. 1–4 endnotes (pp. 229–243) captured, with ~40 citations pinned to a locus.
+- The copyright page captured; publication data verified; the recycled-interviews flag confirmed.
+- **Six paired essays read cover to cover** before classification: `kalam`, `bigbang`, `finetuning`,
+  `privileged`, `originlife`, `minimalfacts` — plus `paulconv` and `sceptics` read afterwards to
+  close the three checks that were outstanding.
+- **63 classified verdicts**, re-tallied from the table at close: **20** corroboration · **1** error in
+  the source · **3** weaker in ours · **9** missing · **22** hazard (ours is better) · **8**
+  non-recommendation. *(Counts measured 2026-08-17 by tallying the verdict column, after row 59 moved
+  from "weaker" to "missing" when `paulconv.html` was read.)*
+- **15 backlog rows** logged in `docs/content-backlog.md` (11 actionable, 4 non-recommendations).
+- **No check against our live content is outstanding for chs. 1–4.**
+
+**Deliberately not done (and not owed):**
+- Ch. 5 ("Experiencing God") onward, and the notes from p. 243. The book's own structure means these
+  cover religious experience, miracles and testimony rather than the natural-theology and resurrection
+  material chs. 1–4 carry.
+- The table of contents.
+
+**If the book is ever resumed:** get the **TOC first**, then work forward from **p. 92** with each
+chapter's body followed by its notes — and apply Step Zero to the *new* chapters' paired essays before
+reading them (ch. 5's likely counterparts are `library/religious.html` and `library/miracles.html`;
+confirm against `INDEX.md` rather than assuming). Everything in this note stands as-is; nothing needs
+revisiting.

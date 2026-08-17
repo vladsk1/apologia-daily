@@ -93,7 +93,7 @@
 > Step Zero. **13 backlog rows logged (9 actionable + 4 non-recommendations).** Counts measured 2026-08-17 by
 > tallying the note's verdict table and the backlog rows. **No live content changed.**
 > ⚠⚠ **THE HEADLINE INVERTS THE USUAL SHAPE OF A MINING RUN: of 63 classified verdicts, 22 came back "hazard —
-> OURS IS BETTER" against only 4 "weaker in ours" and 8 "missing."** Our essays name the live critics (Morriston,
+> OURS IS BETTER" against only 3 "weaker in ours" and 9 "missing."** Our essays name the live critics (Morriston,
 > Oppy, Carroll, Guth, the McGrews, Sober, Allison, Carrier, Cavin); this book largely does not. Mine it for
 > **four** things: the *"then isn't God infinitely old?"* objection (absent from `kalam.html`, and to be answered
 > from **classical divine timelessness** — ⚠ **never** from Craig's contested "God could enter time"); **Lewis &
@@ -141,7 +141,11 @@
 > better, on `modalism.html` + a certified `ev-s6.html` paragraph that adds the anti-modalist fence the book
 > lacks (no row); and **John 19:26–27** on the brothers' unbelief is genuinely absent from `sceptics.html` (P4).
 > **Backlog now 15 rows (11 actionable, 4 non-recommendations); no check against live content is outstanding
-> for chs. 1–4.** ⚠ **Still owed: ch. 5 onward and its notes from p. 243.**
+> for chs. 1–4.** ✅ **THE NOTE IS CLOSED as a completed PARTIAL** — the owner stopped at ch. 4, and everything
+> captured is mined, cross-checked and logged, with nothing left half-done. Ch. 5 onward is **deliberately not
+> done and not owed**; if the book is ever resumed, get the **TOC first**, then work from **p. 92** with each
+> chapter's body followed by its notes, applying Step Zero to the new chapters' paired essays (ch. 5's likely
+> counterparts are `library/religious.html` and `library/miracles.html` — confirm against `INDEX.md`).
 >
 > **LATEST — 2026-08-10 (c):** **Confirmation pass on `api/debate.js` + `api/feedback.js` — the pass the 08-10 (b)
 > stamps said was owed. Both files now carry BOTH lenses' dates; live on `main` (`b3f4d4c`).** `debate.js` came back
