@@ -449,22 +449,33 @@
         "showing that actual infinites cannot",
         "proves that an actual infinite cannot exist",
         "infinity is logically contradictory",
-        "mathematically contradictory"
+        "mathematically contradictory",
+        "\\brul(e|es|ed|ing)\\s+out\\b[^.]{0,30}\\b(an infinite (elapsed )?past|a beginningless past|an infinite series of past events)",
+        "\\bexclud(e|es|ed|ing)\\b[^.]{0,30}\\b(an infinite (elapsed )?past|a beginningless past|an infinite series of past events)"
       ],
       "allow": [],
       "netting": "phrase",
-      "rebuild_debt": "PHRASE-SHAPED ON A CLAIM-SHAPED SURFACE. Retired from ev-s1.html card arg-kalam on 2026-07-29 after the card asserted it while its own certified essay disclaimed it. The patterns catch the overclaim wording, not the underlying argument, which remains legitimate in its narrowed form. A future page could restate the overclaim in wording these patterns miss.",
+      "rebuild_debt": "PHRASE-SHAPED ON A CLAIM-SHAPED SURFACE. Retired from ev-s1.html card arg-kalam on 2026-07-29 after the card asserted it while its own certified essay disclaimed it. The patterns catch the overclaim wording, not the underlying argument, which remains legitimate in its narrowed form. A future page could restate the overclaim in wording these patterns miss. CLOSED IN PART 2026-08-17: the predicted escape HAPPENED. A new 'then isn't God infinitely old?' subsection on library/kalam.html stated the two philosophical arguments FACTIVELY ('what they rule out... is an infinite elapsed past' / 'what the arguments exclude is an infinite past'), walking back the essay's own certified concession, and all six existing patterns passed GREEN over it. Caught by apologia-argument, not by CI. Two success-verb patterns added; the underlying claim-shaped debt REMAINS - a factive restatement using yet another verb would still escape. ⚠ TUNING NOTE (2026-08-17, apologia-argument round 2): these two patterns are deliberately POLARITY-BLIND - they fire on negated, conditional and attributed uses ('critics deny that Hilbert's Hotel rules out an infinite past'). That is accepted because the phrasings are rare, and a flag is a prompt to look, not a verdict. ⚠⚠ BUT a legitimate hedged or negated hit MUST be resolved by REWORDING, never by adding the file to `allow` - `allow` is scoped PER-FILE (check-retired-claims.mjs:113), so an allow entry would un-retire this claim across the whole file. Object-blindness also remains: line 163's 'a beginningless series of events' is a synonym no pattern here can see.",
       "corpus": {
         "must_fire": [
           "These mathematical operations produce contradictions when applied to the real world",
           "showing that actual infinites cannot be instantiated in physical reality",
-          "an actual infinite is mathematically contradictory"
+          "an actual infinite is mathematically contradictory",
+          "What they rule out, therefore, is an infinite elapsed past",
+          "What the arguments exclude is an infinite past",
+          "The arguments have ruled out an infinite past",
+          "ruling out an infinite past entirely",
+          "they rule out a beginningless past",
+          "they rule out an infinite series of past events"
         ],
         "must_not_fire": [
           "Hilbert's Hotel is counterintuitive, not contradictory",
           "Cantorian set theory shows the actual infinite to be perfectly coherent mathematically",
           "an actual infinite cannot be concretely instantiated in the physical world",
-          "Whether that metaphysical claim holds is precisely the disputed hinge"
+          "Whether that metaphysical claim holds is precisely the disputed hinge",
+          "What they give reason to doubt, therefore, is an infinite elapsed past",
+          "What the arguments tell against is an infinite elapsed past of the physical world",
+          "Does the argument's own philosophy rule out its own conclusion?"
         ]
       }
     },
