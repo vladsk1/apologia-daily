@@ -19,6 +19,11 @@
       "acceptedAt": "2026-08-17",
       "sourceCommit": "4b361b7",
       "reason": "English-ADD only (not a retired-claim fix): the 2026-08-17 P3 addition answers why Josephus's earlier Jewish War omits Jesus (existence/scope argument-from-silence). The mirror is not WRONG, only less complete; nothing false is live in translation. Deliberately NOT hand-translated per the owner's standing preference (no untranslated doctrinal prose no native reviewer will gate); Macedonian/Spanish doctrinal review is outstanding (docs/STATEMENT_OF_FAITH.md). Clear this entry when the mirror is gated up to the English by a native reviewer."
+    },
+    "ev-s3.html -> ev-s3.mk.html": {
+      "acceptedAt": "2026-08-17",
+      "sourceCommit": "same commit as this ledger entry (2026-08-17 card-08 dual-consensus re-gate, rows 42/43/68/69)",
+      "reason": "WORDING FIX, not an English-add: the card-08 re-gate applied row 42 to ev-s3.html (\"distributing the one God of the Shema\" -> \"the words of the Shema\", a low-severity partialist tidy that the next sentence already self-corrects) plus the HANDS :350 Hurtado worship-refusal port and four pre-existing fixes. The Macedonian mirror carries the SAME row-42 phrasing at ev-s3.mk.html:520 (\"распределувајќи го единиот Бог на Шемата\"), and its own next sentence self-corrects the same way the English does, so nothing false is live. Per the owner's standing delete-or-lag preference AND this mirror's own stamp (never gated by any lens; fixed BY DELETION not by hand-writing translated doctrinal prose), the mirror is NOT hand-edited; the English is fixed and this lag is recorded. NOTE the mirror's card-08 tiers were already heavily thinned/deleted in prior passes, so most of the English card's other changes have no mirror counterpart. The other six .mk fragments have never been audited. Clear this entry when a native Macedonian reviewer gates the mirror up to the English."
     }
   }
 }
