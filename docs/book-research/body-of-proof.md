@@ -85,9 +85,12 @@ ranked, each now a `content-backlog.md` row:
    typology's lane (type vs prediction distinguished); eucharist neutrality fenced. Single-consensus
    gated CLEAN. → **R-I, P3 — DONE.**
 4. **The enumerated "lone survivor" catalogue** of ~10 failed first-century messianic movements
-   (Josephus/Acts) — our essays state the *principle* (Wright, RSG 697–701, in `postres`; one clause in
-   `disciplesbelief`) but never display the catalogue, and never touch the **Theudas / Acts 5:36 vs
-   Josephus *Ant.* 20.97–98 chronology crux**. → **R-C, P3** (any enumeration must handle that crux).
+   (Josephus/Acts) — ~~our essays state the *principle* (Wright) but never display the catalogue~~
+   **SHIPPED 2026-08-17** to `library/postres.html` (catalogue added to the cognitive-dissonance reply;
+   Judas the Galilean, Simon + Athronges, Theudas, "the Egyptian", Menahem, Simon bar Giora, each ending
+   in the leader's *fall*, none claiming resurrection). ⚠ **The Theudas / Acts 5:36 vs Josephus *Ant.*
+   20.97–98 chronology crux IS handled** in the expanded footnote 11 (both live resolutions named; the
+   body never leans on the Acts synchronism). Dual-consensus CLEAN. → **R-C, P3 — DONE.**
 5. **Second-Temple resurrection primaries** — **4Q521 and Isaiah 26:19 are absent from all served
    content**, and **2 Maccabees 7:9 lives only as an objection to rebut** (`ev-m-uniqueness`). The
    framework (Daniel 12:2 + Ezekiel 37 + Wright) is well covered in `uniqueness.html`; the fuller
@@ -144,7 +147,7 @@ creeds) → **`/sources` candidate, P3.**
 | Ch. 12 — resurrection-restraint + canonical-vs-apocrypha (Dudrey) | ~~4 missing~~ **DONE 2026-08-13** | ⭐ Standing output #1 → **R-A, P2 — SHIPPED** to `library/postres.html` (new "A Restraint the Legends Could Not Manage" section, dual-consensus certified; *Gospel of Peter* fenced to its emergence scene 9:35-42, no anti-Jewish content). |
 | Ch. 11 — Holy Sepulchre vs Garden Tomb archaeology | **4 missing** | → **R-B, P3**. The old table had **no verdict** for Ch. 11. Neutrality-fenced. |
 | Ch. 5 — Last Supper / new-covenant cluster (Exod 24:8 / Jer 31:31) | ~~4 missing~~ **DONE 2026-08-15** | → **R-I, P3 — SHIPPED** to `library/typology.html` (new "The blood of the covenant" subsection; Heb 9:18-22 + 8:8-12 apostolic warrant; type-vs-prediction kept distinct; eucharist neutrality fenced; single-consensus CLEAN). |
-| Ch. 5/7 — messianic-pretenders "lone survivor" catalogue | **3 weaker in ours** | Principle present (Wright); enumeration + Theudas crux absent. → **R-C, P3**. |
+| Ch. 5/7 — messianic-pretenders "lone survivor" catalogue | ~~3 weaker in ours~~ **DONE 2026-08-17** | **SHIPPED** to `library/postres.html` (catalogue in the dissonance reply + expanded fn 11; Theudas/Acts 5:36 crux handled; dual-consensus CLEAN). → **R-C, P3 — DONE**. |
 | Ch. 3/5 — Second-Temple resurrection primaries (4Q521, Isa 26:19, 2 Macc 7:9) | **4 missing / partial** | → **R-D, P3** (`uniqueness.html`). |
 | Ch. 12 — anti-copycat assets (Bowersock, Asclepius, Aeschylus) | **4 missing** | → **R-E, P3** (folded into R-D's `uniqueness.html` row). |
 | Ch. 12 (endnote n.33) — Keener "Otho" discrepancy comparison | ✅ **SHIPPED 2026-08-14** to `consistency.html` §186 (fn 19) | Keener's Suetonius-vs-Tacitus-on-Otho comparison added as a complementary control to the existing Plutarch material (two independent authors vs one author twice). Bounded to GENRE reliability, not inspiration/inerrancy; "as free as any two Gospels" (comparable, not "fewer"); its second thrust (convergence → source-dependence) stated. dual-consensus CLEAN. |
