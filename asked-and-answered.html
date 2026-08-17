@@ -437,31 +437,107 @@
 
       // Follow-up mode folds the prior Q+A into the question so the AI continues the thread; a
       // fresh question is sent as-is. Either way it's the live AI under the orthodoxy guardrails.
-      let apiQ = text;
-      if (followUp && lastQ && lastA) {
-        apiQ =
-          'This is a follow-up question in an ongoing conversation about Christian apologetics. '
-          + 'For context, here is what was asked and answered just before.\n\n'
-          + 'Earlier question: "' + lastQ + '"\n\n'
-          + 'Your earlier answer:\n' + lastA + '\n\n'
-          + 'Follow-up question: "' + text + '"\n\n'
-          + 'Answer the follow-up directly, building on the earlier answer where relevant. '
-          + 'Do not repeat the earlier answer in full; address the new question. Keep the same format and tone.';
+      const composed = composeQuestion(text);
+      if (composed === null) {
+        // Only reachable when the NEW question alone busts the cap — buildFollowUp() can always
+        // fit a thread by trimming the older turns, but it will never trim what you just typed.
+        setStatus('That question is ' + (text.length - ASK_MAX).toLocaleString() + ' characters too long to send'
+          + ' (the limit is ' + ASK_MAX.toLocaleString() + '). Please paste a shorter extract — the part you'
+          + ' actually want answered — rather than the whole thing.', 'err');
+        return;
       }
 
       if (!isPro) { document.getElementById('result').classList.remove('show'); const g=document.getElementById('gate'); g.classList.add('show'); g.scrollIntoView({behavior:'smooth',block:'center'}); return; }
-      await liveAnswer(text, apiQ);
+      await liveAnswer(text, composed.q, composed.threadDropped);
+    }
+
+    /* ═══════ QUESTION LENGTH BUDGET ═══════
+       api/ask.js rejects a `question` longer than ASK_MAX with HTTP 413, and it measures the
+       COMPOSED string — not what you typed. Follow-up mode rebuilds the whole thread into that one
+       field (wrapper + earlier question + earlier answer + the new follow-up), so before 2026-08-15
+       a question that was comfortably under the cap on its own became un-followable-up the moment it
+       had an answer attached: the wrapper is ~390 chars and an answer is specified at 400-550 words,
+       so the earlier question had only ~1,200-2,100 chars of room left. Paste a transcript, a long
+       objection, or anything OCR'd from a screenshot (runOCR drops the whole recognised text into the
+       box), and the first question worked while every follow-up 413'd.
+
+       So the thread is now trimmed to fit here, client-side, instead of being rejected server-side.
+       ⚠ ASK_MAX MUST MATCH api/ask.js's cap. tests/ask-length-budget.test.mjs asserts that it does —
+       a comment could not, and this file cannot import from the API. */
+    const ASK_MAX = 5000;
+    const ASK_MARGIN = 100;   // slack so a small wrapper edit can't silently reintroduce the 413
+
+    // Keep the head of a string and say plainly that the rest was dropped, so the model treats it as
+    // an extract rather than as the whole thing. Cuts at a space when one is close, to avoid ending
+    // mid-word. Returns '' if there isn't room for a meaningful fragment.
+    function clipHead(s, max, marker){
+      if (s.length <= max) return s;
+      const room = max - marker.length;
+      if (room < 80) return '';
+      let cut = s.slice(0, room);
+      const sp = cut.lastIndexOf(' ');
+      if (sp > room - 120) cut = cut.slice(0, sp);
+      return cut + marker;
+    }
+
+    // Build the follow-up payload, trimming the OLDER turns until the whole thing fits. The new
+    // question is never trimmed. Returns null only if that new question alone cannot fit.
+    function buildFollowUp(text, priorQ, priorA){
+      const head = 'This is a follow-up question in an ongoing conversation about Christian apologetics. '
+        + 'For context, here is what was asked and answered just before.\n\n';
+      const tail = 'Answer the follow-up directly, building on the earlier answer where relevant. '
+        + 'Do not repeat the earlier answer in full; address the new question. Keep the same format and tone.';
+      const assemble = (q, a) => head + 'Earlier question: "' + q + '"\n\n'
+        + 'Your earlier answer:\n' + a + '\n\n'
+        + 'Follow-up question: "' + text + '"\n\n' + tail;
+
+      const budget = ASK_MAX - ASK_MARGIN - assemble('', '').length;
+      if (budget <= 0) return null;
+
+      let q = priorQ, a = priorA;
+      if (q.length + a.length > budget) {
+        // The earlier ANSWER is what the follow-up is told to build on, so it keeps the larger share;
+        // the earlier question is usually the pasted bulk and is trimmed first. Whichever is already
+        // short keeps all of itself and hands its slack to the other.
+        const aRoom = Math.min(a.length, Math.max(Math.floor(budget * 0.6), budget - q.length));
+        a = clipHead(a, aRoom, '\n\n[…answer truncated here for length…]');
+        q = clipHead(q, budget - a.length, ' […truncated for length…]');
+      }
+      const out = assemble(q, a);
+      // Belt and braces: if trimming still could not get under the cap, drop the thread entirely and
+      // send the bare question rather than a guaranteed 413.
+      return out.length <= ASK_MAX ? out : null;
+    }
+
+    // Returns { q, threadDropped }, or null if even the bare new question is too long.
+    // threadDropped is true when a follow-up was asked for but the thread could not be made to fit
+    // even trimmed — the question still goes through, but WITHOUT the earlier context, and the
+    // reader is told so rather than being left to wonder why the answer ignores what came before.
+    function composeQuestion(text){
+      const wanted = !!(followUp && lastQ && lastA);
+      if (wanted) {
+        const threaded = buildFollowUp(text, lastQ, lastA);
+        if (threaded) return { q: threaded, threadDropped: false };
+      }
+      if (text.length > ASK_MAX) return null;
+      return { q: text, threadDropped: wanted };
     }
 
     // displayQ = what we show the reader as "You asked"; apiQ = what /api/ask actually receives
     // (for a follow-up this carries the prior Q+A as context so the AI builds on it).
-    async function liveAnswer(displayQ, apiQ){
+    async function liveAnswer(displayQ, apiQ, threadDropped){
       const btn=document.getElementById('ask-btn'); const btnLabel=btn.textContent;
       btn.disabled=true; btn.textContent='Answering…';
-      setStatus('Finding the best answer…','work');
+      setStatus(threadDropped
+        ? 'Finding the best answer… (this one was too long to carry the earlier conversation with it, so it is being answered on its own)'
+        : 'Finding the best answer…', 'work');
       try {
         const res = await fetch('/api/ask', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ question: apiQ }) });
         if (res.status === 429) { setStatus("You've reached today's free limit for live answers. Please try again tomorrow, or browse the answered objections above.", 'err'); return; }
+        // 413 and 400 are PERMANENT for this input. Sending them down the generic
+        // "try again in a moment" path told the reader to do the one thing that cannot work.
+        if (res.status === 413) { setStatus('That question is too long to send, even after trimming the earlier part of the conversation. Please shorten the text you pasted, or start a new question with just the part you want answered.', 'err'); return; }
+        if (res.status === 400) { setStatus("The answer service couldn't read that question. Please rephrase it and try again.", 'err'); return; }
         if (!res.ok) throw new Error('API '+res.status);
         const data = await res.json();
         if (!data.answer) throw new Error('no answer');
