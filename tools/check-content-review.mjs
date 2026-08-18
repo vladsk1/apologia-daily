@@ -60,6 +60,10 @@ const CONTENT_PATTERNS = [
   /^pocket-cards\.html$/,                  // 70 share-card arguments (gated 2026-08-11, dual-consensus);
                                            // the `custom` user-text generator card is out of scope — see
                                            // the file's content-review stamp for the certification scope.
+  /^speed-round\.html$/,                   // 60-question graded quiz (first gated 2026-08-17, row 204,
+                                           // dual-consensus): the memorised/graded layer — readers are
+                                           // marked right/wrong, so a retired overclaim as the correct
+                                           // answer is the same failure mode as daily-mix.
 ];
 
 const isContent = (p) => CONTENT_PATTERNS.some((re) => re.test(p));
@@ -163,7 +167,7 @@ function changedFiles(base) {
 }
 
 function allContentFiles() {
-  return globSync('{library/**/*.html,ev-s*.html,ev-m-*.html,worldviews.html,pocket-cards.html,tools/reel/specs/*.json,api/ask.js}').filter(isContent);
+  return globSync('{library/**/*.html,ev-s*.html,ev-m-*.html,worldviews.html,pocket-cards.html,speed-round.html,tools/reel/specs/*.json,api/ask.js}').filter(isContent);
 }
 
 /* Everything user-facing that is not explicitly exempt. This is the AUDIT scope,
