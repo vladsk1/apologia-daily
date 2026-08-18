@@ -626,6 +626,13 @@ The notes did four things at once, and two of them are hazards the body alone co
 
 - 🔴 **THE DUNN PAGE NUMBER IS IN DISPUTE ACROSS TWO OWNED BOOKS, AND ONE OF THEM IS LIVE ON OUR SITE.**
   This book's ch. 4 n. 10 gives **Dunn, *Jesus Remembered* (Eerdmans, 2003), 825**.
+  🔴 **RESOLVED 2026-08-17 — STROBEL IS WRONG, AND OUR RECORD WAS RIGHT.** The owner opened a searchable
+  copy and read the sentence in place: it is on **p. 855**, immediately after *"...that was why he made sure to
+  pass it on to the Corinthians when they first believed (15.1-2)"*. Our live citation has been narrowed
+  **854–855 → 855** so that all four records agree. **825 is most likely a section-start cite or a digit slip.**
+  ⚠ The lesson is the cascade, not the page: `apologia-citations` could not settle this, because every
+  attestation of 855 sat inside one apologetics chain downstream of Habermas/Licona and **not one
+  peer-reviewed source cites it with a page**. Twenty agreeing hits were one hit. It took a human with the volume.
   `docs/book-research/body-of-proof.md` records **855**, and our live essay carries **854–855** — with
   its own stamp admitting the span "was NOT eyeballed against the physical volume." Two independently
   published books now disagree by ~30 pages. **Logged as a P2 correction row.**

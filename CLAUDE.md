@@ -152,8 +152,8 @@
 > *data*, which is exactly what makes the book probative). All corrected in `INDEX.md` + the backlog. The book is
 > **citable today on bare facts with no quotation**. For **Dunn**, the blast radius is **ONE live page cite**
 > (`library/earlycreed.html:219`); every "855" attestation sits inside a single citation cascade. ⭐ **One-minute
-> owner fix: borrow `jesusremembered0000dunn` on archive.org and search "within months"** — and if Dunn's §18 begins
-> near p. 825, Strobel cited the *section* and **our 854–855 is right**.
+> owner fix — ✅ **DONE 2026-08-17, and it settled the row: the sentence is on p. 855.** Our record was right;
+> **Strobel's 825 is wrong.** The live citation is narrowed 854–855 → 855 and all four records now agree.
 >
 > **LATEST — 2026-08-17 (book-research):** ⭐ **NEW NOTE — [`docs/book-research/is-god-real.md`](docs/book-research/is-god-real.md)**
 > (Lee Strobel, *Is God Real?*, from the owner's own copy). **Captured: pp. 17–91 continuous — chs. 1–4 complete
@@ -185,7 +185,7 @@
 > repudiation is an **ID advocacy documentary**; and a fine-tuning figure is credited to "a Christian apologist
 > who has a degree in physics." **All four are do-not-use.**
 > 🔴 **AND THE CROSS-CHECK FOUND A LIVE DEFECT IN OUR OWN RECORDS: two owned books disagree on the DUNN PAGE.**
-> `body-of-proof.md` and our live citation say *Jesus Remembered* **854–855**; this book says **825** — and the
+> ✅ **RESOLVED 2026-08-17 — WE WERE RIGHT, STROBEL IS WRONG.** The owner opened a searchable copy and read the sentence: it is on **p. 855**. The live citation is narrowed 854–855 → **855**, and all four records now agree. Strobel's **825** is wrong — most likely a section-start cite or a digit slip. ⚠ The lesson is the cascade, not the page: `apologia-citations` could not settle it because **every attestation of 855 traced to one apologetics chain downstream of Habermas/Licona**, and not one peer-reviewed source cites it with a page. Twenty agreeing hits were one hit. It took a human with the volume. *(Original entry: `body-of-proof.md` and our live citation say *Jesus Remembered* **854–855**; this book says **825** — and the
 > live essay's own stamp already admits the span "was NOT eyeballed against the physical volume." The quotation
 > is verified; only the locus is in doubt. **Logged P2; needs the book in hand.**
 > ⚠ **A verdict in this note was WRONG and is corrected in place rather than silently fixed:** on the partial
