@@ -39,6 +39,18 @@ The question "did the universe begin?" was argued for centuries on philosophical
 **3. ⭐ But Augustine, Aquinas and Maimonides did NOT take that route.** Meyer states plainly that these three **merely affirmed by faith** that the universe had a beginning, **holding that reason could not decide the question either way** (fn 9, 10). Bonaventure and others, by contrast, reaffirmed creation *ex nihilo* and a definite temporal beginning (fn 6).
 → **This is the chapter's highest-value item for us. See Live-door status: our kalām essay never mentions Aquinas.**
 
+> ✅ **SHIPPED 2026-08-20 (backlog row 166 DONE) — L1 + L2 executed.** A fairness paragraph is now live in
+> `library/kalam.html` ("The honest state of the debate") with Aquinas (*ST* I q.46 a.2, quote citations-verified
+> verbatim) as the load-bearing example and Maimonides (*Guide* II.16–17) corroborating. Full pipeline,
+> dual-consensus tier, all four lenses stamped.
+> 🔴 **CORRECTION TO MEYER'S CLAIM ABOVE — do not repeat it: AUGUSTINE does NOT belong in the "reason could not
+> decide either way" group.** `apologia-citations` (web-verified) found Augustine argued reason tells *against* an
+> eternal world (*City of God* XI.4–6, XII), the position Bonaventure later systematized — the *opposite* of the
+> Aquinas/Maimonides "undemonstrable" thesis. Augustine was therefore dropped from the body claim and appears only
+> in fn 17, correctly characterized (created *with* time; reason tells against eternity). L1/L2 = Aquinas +
+> Maimonides only. **L3 (Bonaventure) and L4 (the unattributed quote) remain unshipped** — L4 must not be used until
+> Meyer's fn 8 is read.
+
 **4. Space, separately from time.** Aristotle held the universe temporally infinite but *spatially* finite (an outermost sphere). The Stoics held infinite space. Descartes and Newton held infinite space — Newton on theological as well as scientific grounds (fn 12).
 
 **5. Olbers's paradox — the dark night sky.** Named for Heinrich Wilhelm Olbers (1758–1840), though the puzzle was noted by the Copernican astronomer **Thomas Digges in 1576** (fn 13, 14). If space is endless and uniformly filled with stars, every line of sight terminates on a star and the whole sky should blaze. It does not. Proposed escapes — light "tiring" over distance, ether or dark bodies absorbing it, infinite space with finite stars — all failed.
