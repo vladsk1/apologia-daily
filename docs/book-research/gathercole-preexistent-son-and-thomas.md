@@ -59,8 +59,13 @@ idiom carries its ordinary force, he is stating that he **came from somewhere**.
 2. **⚠ Contested, not consensus.** A serious and well-received argument, but a minority-to-moderate
    position in Synoptic Christology. Never "scholars agree the Synoptics teach preexistence."
 
-### Live-door status — ⭐ **IMPROVEMENT, the batch's top row (P2)**
-`library/jesus_as_god_nt.html` and `library/titles.html` contain **zero** preexistence material; site-wide,
+### Live-door status — ✅ **SHIPPED 2026-08-20 (backlog row 120 DONE)**
+> The Synoptic "I have come" strand is now live in `library/jesus_as_god_nt.html` (dual-consensus deity
+> tier, with the mandatory FORM-vs-NATURE orthonote). See the article note's "Live-door status" for the
+> full record. `library/titles.html` was the secondary target and was left unchanged. Text below retained
+> as the lead's record.
+
+*(Original status, retained:)* `library/jesus_as_god_nt.html` and `library/titles.html` contain **zero** preexistence material; site-wide,
 every preexistence argument runs through **Paul, Hebrews, or John**. `library/hands.html` states the
 developmental objection at full strength and answers it from Paul — leaving the Synoptics standing where
 the objection puts them. **Full cross-check evidence and the backlog row are recorded in the article

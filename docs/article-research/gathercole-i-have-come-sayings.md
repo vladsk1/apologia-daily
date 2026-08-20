@@ -131,6 +131,13 @@ returns zero.**
 **Classification: ⭐ IMPROVEMENT — a real, high-value gap, exactly as the mining brief predicted → backlog
 row logged (the batch's top priority).**
 
+> ✅ **SHIPPED 2026-08-20 (backlog row 120 DONE).** The Synoptic "I have come" strand is now live in
+> `library/jesus_as_god_nt.html` ("The reply — and the concession"): two paragraphs + footnotes 19–20 +
+> two bibliography entries + the **mandatory FORM-vs-NATURE orthonote**. Full pipeline, dual-consensus
+> deity tier (citations 0 errors, argument STRONG/CLEAN, orthodoxy CLEAN, neutrality STAMPABLE 0 BREAK).
+> The material below is retained as the record of the lead; the essay-update row is executed. The
+> `/sources` (4 Ezra / 2 Baruch PD) and `/briefs` follow-ons remain open future candidates.
+
 The gap is not merely "a missing argument"; it is **shaped like the objection**. `library/hands.html`
 states the developmental case in its strongest form — "an early 'exaltation' model… gave way to a later
 'incarnation' model… reaching its height in the latest Gospel, John" — and answers it by pushing the high
