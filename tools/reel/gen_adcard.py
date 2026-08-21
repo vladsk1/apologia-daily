@@ -124,19 +124,28 @@ def render(spec, W, H, out_path):
 
     # kicker + underline
     if spec.get("kicker"):
-        f = Fsans(int(W * 0.0255), bold=True)
         t = " ".join(spec["kicker"].upper())
+        sz = int(W * 0.0255)                       # auto-shrink so it never clips the frame
+        f = Fsans(sz, bold=True)
+        while sz > 10 and d.textlength(t, font=f) > maxw:
+            sz -= 1
+            f = Fsans(sz, bold=True)
         d.text((M, y), t, font=f, fill=GOLD)
         y += int(W * 0.040)
         d.line([(M, y), (M + int(W * 0.20), y)], fill=GOLD, width=2)
         y += int(W * 0.055)
 
     # headline — italic serif, one cream line then one gold line
-    hf = Fserif(int(W * 0.078), bold=False)
+    # one line per headline entry: shrink to fit rather than wrap, so the
+    # cream/gold pairing always reads as two balanced lines.
+    hsz = int(W * 0.078)
+    hf = Fserif(hsz, bold=False)
+    while hsz > 28 and any(d.textlength(ln["t"], font=hf) > maxw for ln in spec["headline"]):
+        hsz -= 2
+        hf = Fserif(hsz, bold=False)
     for ln in spec["headline"]:
-        for piece in wrap(d, ln["t"], hf, maxw):
-            d.text((M, y), piece, font=hf, fill=COL.get(ln.get("c", "cream"), CREAM))
-            y += int(W * 0.092)
+        d.text((M, y), ln["t"], font=hf, fill=COL.get(ln.get("c", "cream"), CREAM))
+        y += int(hsz * 1.18)
     y += int(H * 0.020)
 
     # sub-lines
