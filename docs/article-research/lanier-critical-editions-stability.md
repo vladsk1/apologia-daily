@@ -149,7 +149,7 @@ expected the new data to yield a substantially different text. → *Primaries:* 
 ## Cross-map — where this lands
 | Topic | On-site home (certified) | What this article adds |
 |---|---|---|
-| NT manuscript reliability / variants | `library/manuscript.html` (Biblical Reliability `ev-s4`) | **Improvement** — an *edition-level* stability layer the essay lacks (see below) |
+| NT manuscript reliability / variants | `library/manuscript.html` (Biblical Reliability `ev-s4`) | ✅ **SHIPPED 2026-08-21 (backlog row 121 DONE)** — the edition-level stability layer (THGNT/Byzantine/WH→NA + LXX Göttingen-vs-Rahlfs + outliers) is now live in "The Honest State of Scholarship"; led with the independent comparanda per the binding editorial-conservatism caveat; citations/argument/orthodoxy clean. ⚠ Six sub-figures rest on this note's full read (image-encoded OA PDF blocked citations' re-pull); prose hedges all of them. |
 | NT variant taxonomy (<1% meaningful+viable) | `library/manuscript.html`; `book-research/in-defense-of-the-bible.md` (ch. 6, Wallace) | corroboration — same conclusion by a different route |
 | Greek OT / Septuagint text | **nothing on-site** | **Improvement (gap)** — the OT half of the story is entirely absent |
 | "New discoveries will overturn the Bible" objection | `library/manuscript.html`; `answers/*` on manuscripts | **Improvement** — this is the direct empirical answer: a century of new data moved the text ~1.5% |
