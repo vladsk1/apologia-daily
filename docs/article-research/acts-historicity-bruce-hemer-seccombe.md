@@ -346,7 +346,7 @@ gist**, and therefore independent sources for primitive Christian history and th
 ## Cross-map — where this lands
 | Topic | On-site home (certified) | What this cluster adds |
 |---|---|---|
-| Archaeology confirming Acts | `library/archaeology.html` | **Improvement** — the entire Acts 27–28 voyage cluster is absent (see below) |
+| Archaeology confirming Acts | `library/archaeology.html` | ✅ **SHIPPED 2026-08-21 (backlog row 123 DONE)** — the Acts 27–28 voyage cluster (Lasaea, Cauda, *euroaquilo*, Phoenix, Malta's *prōtos*) is now live; Greek-inscription-only guardrail honored on-page; citations 6/6 defensible, argument STRONG, orthodoxy CLEAN |
 | Dating Luke-Acts | `library/earlydate.html` | **Improvement** — three non-silence arguments + post-2017 currency |
 | Speeches in Acts / Luke as historian | **nothing on-site** | **Improvement (gap)** — a whole sub-topic we don't treat |
 | Extra-biblical Jesus / mythicism | `library/hist_jesus.html` | not the right home — that essay answers *did Jesus exist*, not *is Luke a careful historian*. Corroboration only. |
