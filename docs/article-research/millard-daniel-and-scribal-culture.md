@@ -230,7 +230,7 @@ World of Ancient Israel*). Any use must check the current state of the question 
 | Doubted-then-confirmed pattern | `library/archaeology.html` (Hittites, David, Pilate's title, politarchs, five-portico pool, Ahab, Belshazzar) | **Sargon II / Isa 20:1 ✅ SHIPPED 2026-08-14** (Named-persons "Two further cases" para, fn 9; calibrated off "known only from the Bible" per the Ptolemy/Arkeanos caveat). Darius the Mede (same recommendation §1 below) DEFERRED — heaviest fences on the page, needs a standalone pass |
 | Darius the Mede | **nothing on-site** (0 hits site-wide) | **improvement (gap)** — but a *bounded, open-question* one |
 | Daniel's date / Maccabean thesis | `library/daniel70.html` (Seventy Weeks) | **corroboration only** — and see the ⚠⚠ dating guardrail; nothing here moves that essay |
-| Writing/literacy in Iron Age Israel | **nothing on-site** | **improvement (gap)** — underwrites the "could these texts have been written when they claim?" question |
+| Writing/literacy in Iron Age Israel | ✅ **SHIPPED 2026-08-21 (backlog row 127 DONE)** — new answer `answers/was-there-writing-in-early-israel.html`. Bounded to "writing was available" (a scribal culture existed); explicitly disclaims Mosaic-authorship/dating and any literacy-rate claim, per Rollston's post-1995 position. citations 6/6 OK, argument STRONG, orthodoxy CLEAN (denominational neutrality preserved). Arad/Horvat 'Uza strands held for a possible future deep-dive. |
 
 ## Live-door status (MANDATORY cross-check — performed 2026-07-26)
 **Read: `library/archaeology.html` in full (certified, ~7,000 words, 15+ footnotes) and
