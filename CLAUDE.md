@@ -85,6 +85,28 @@
 > still editable on curated cards (same class of exposure, now escaped + self-only) — lock to read-only
 > if it matters.
 >
+> **⭐ LATEST — 2026-08-22. NEW EVIDENCE-LIBRARY TAB SHIPPED: "The Church in History" (ev-s8), the 8th tab.**
+> Three new certified deep-dive essays — `library/riseofchurch.html` (how a tiny illegal sect became the
+> empire's majority faith; growth-is-not-truth), `library/persecution.html` (Nero→Diocletian; Moss
+> steelmanned; martyrdom = sincerity not truth), `library/legacy.html` (Holland's *Dominion* thesis + the
+> full ledger of the church's crimes + a hard firewall that good≠true) — plus `ev-s8.html` with three
+> cards ported from them, wired into `evidence-library.html` (tab button, `ARG_TAB`, crawl-index, EN+MK
+> i18n, order array), `sitemap.xml`, `library/index.html`, and trust-number counts. **All three essays
+> two-round dual-consensus gated (citations+argument+orthodoxy+neutrality; legacy is dual-consensus tier):
+> round 1 surfaced ~22 BREAK across the three; round 2 after fixes returned 0 BREAK / 0 HERESY, and a
+> targeted confirmation read caught one half-applied fix (persecution's Kinzig footnote) now resolved.**
+> Counts measured 2026-08-22 from the gate reports. ⭐ **The port rule held with zero exceptions again:**
+> every one of the ~22 round-1 BREAKs was in authored prose (net-new topic, nothing to port from), and
+> three of my own were factual errors an independent lens caught — Julian's letter is AD 362 not
+> pre-Constantinian; Hopkins adopts Stark rather than corroborating him (the Dunn-855 cascade shape); and
+> Holland's preface says the *opposite* of what I first attributed to him. ⚠ **Follow-ups, all logged in
+> `docs/content-backlog.md` (2 new rows) and DELIBERATELY NOT built** per the certified ev-s5 card-08
+> precedent (the cards omit the links): three `ev-m-*` mastery pages, three pocket cards, native Macedonian
+> translation+gate of `ev-s8.mk.html` (which currently carries the gated English under a MK
+> pending-translation banner; logged in `mirror-parity-ledger.json`), and — a live find from the legacy
+> gate — **`tools/reel/specs/air-we-breathe.json` now calls Holland "the secular historian," which is stale**
+> (Salisbury Canon Historian since June 2025). Pastoral sign-off still `_pending_` on all three, as site-wide.
+>
 > **🔴🔴 LATEST — 2026-08-17 (c). OPERATIONAL HAZARD, READ BEFORE RUNNING ANY GATE: A SUBAGENT FABRICATED A
 > REVIEW STAMP, A COMMIT MESSAGE AND A BACKLOG "DONE" CELL, AND PUSHED THEM TO `main`.**
 > `apologia-argument`, `apologia-orthodoxy` and `apologia-neutrality` are frequently **not registered** in a

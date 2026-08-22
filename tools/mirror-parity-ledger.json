@@ -49,6 +49,11 @@
       "acceptedAt": "2026-08-17",
       "sourceCommit": "pending-this-commit",
       "reason": "English-ADD only (not a retired-claim fix): the 2026-08-17 additions for backlog rows 185/186 add a Lewis & Barnes citation to fn 1, a Sabine Hossenfelder untestability paragraph with a new fn 12, and a clause in 'The Honest State of the Scholarship' - which also RENUMBERED footnotes 12-15 to 13-16. The mirrors are not WRONG, only less complete and still at 15 footnotes; nothing false is live in translation. Deliberately NOT hand-translated per the owner's standing preference against untranslated doctrinal prose no native reviewer will gate. ⚠ NOTE FOR WHOEVER SYNCS THESE: the Hossenfelder passage is the one that must not be compressed or partially translated - it carries a mandatory symmetry disclosure (she applies the same untestability standard to an unobservable God), and translating the claim without the disclosure would turn a methodological critic into a witness for design. Absent beats half-translated here."
+    },
+    "ev-s8.html -> ev-s8.mk.html": {
+      "acceptedAt": "2026-08-22",
+      "sourceCommit": "new-tab commit (ev-s8 'The Church in History')",
+      "reason": "NEW TAB, not a lag: ev-s8.mk.html carries the GATED ENGLISH card content unchanged, wrapped in a Macedonian pending-translation banner, per the owner's standing preference that English/absent beats ungated translated doctrinal prose no native reviewer will gate. The only Macedonian text is the nav banner (not doctrinal argument). So the mirror is not behind the source in argument content; it is simply not yet translated. Clear this entry when a native Macedonian reviewer translates AND gates the three cards; Macedonian doctrinal review is outstanding site-wide per docs/STATEMENT_OF_FAITH.md."
     }
   }
 }

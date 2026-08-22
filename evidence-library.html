@@ -297,6 +297,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
     <button class="tab" onclick="sw('s5',this)">Science &amp; Faith</button>
     <button class="tab" onclick="sw('s6',this)">The Trinity</button>
     <button class="tab" onclick="sw('s7',this)">Conversion Stories</button>
+    <button class="tab" onclick="sw('s8',this)">The Church in History</button>
   </div>
 </div>
 
@@ -309,6 +310,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
 <div id="s5" class="sec"><div id="s5-content"></div></div>
 <div id="s6" class="sec"><div id="s6-content"></div></div>
 <div id="s7" class="sec"><div id="s7-content"></div></div>
+<div id="s8" class="sec"><div id="s8-content"></div></div>
 
 </div>
 
@@ -408,6 +410,12 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
 <li><a href="/library/eternal_generation.html">The Eternal Generation of the Son</a></li>
 <li><a href="/library/relations.html">What Distinguishes the Persons?</a></li>
 </ul></div>
+<div class="cl-cat"><h3 class="cl-cat-title">The Church in History</h3>
+<ul class="cl-list">
+<li><a href="/library/riseofchurch.html">How Did the Church Take Over the Roman Empire?</a></li>
+<li><a href="/library/persecution.html">What the Early Church Actually Suffered</a></li>
+<li><a href="/library/legacy.html">Did Christianity Change the World?</a></li>
+</ul></div>
     </div>
   </div>
 </section>
@@ -458,7 +466,7 @@ function loadSection(id, cb) {
 /* Deep-linking: evidence-library.html?arg=<slug> (or #arg-<slug>) opens the tab
    containing that argument card and scrolls to it. Cards carry id="arg-<slug>";
    ARG_TAB (generated from the fragments) maps each slug to its tab. */
-var ARG_TAB = {"analogies":"s6","appearances":"s2","archaeology":"s4","beauty":"s1","bigbang":"s5","burial":"s2","cambrian":"s5","canon":"s4","coincidences":"s4","consciousness":"s1","consistency":"s4","cosmic":"s5","daniel70":"s3","deadseascrolls":"s4","desire":"s1","disciplesbelief":"s2","early_church_trinity":"s6","earlycreed":"s3","earlydate":"s4","emptytomb":"s2","eternal_generation":"s6","evil":"s1","eyewitnesses":"s4","finetuning":"s1","hands":"s3","hist_jesus":"s3","holy_spirit":"s6","jesus_as_god_nt":"s6","jesus_claims":"s3","jesuschar":"s3","jewishness":"s4","john11":"s3","kalam":"s1","laws":"s5","leibniz":"s1","manuscript":"s4","mathematics":"s5","messianic_prophecy":"s3","minimal":"s2","modalism":"s6","moral":"s1","multiatt":"s3","names":"s4","nt_trinity":"s6","ontological":"s1","originlife":"s5","ot_trinity":"s6","paul":"s2","phil2":"s3","philosophical_trinity":"s6","postresurrection":"s2","privileged":"s5","prophecy":"s4","reason":"s1","relations":"s6","religious":"s1","respred":"s3","sceptics":"s2","shema":"s6","thomistic":"s1","titles":"s3","trinity_islam":"s6","trinity_jw":"s6","trinity_mormons":"s6","typology":"s3","uniqueness":"s3","virginbirth":"s3"};
+var ARG_TAB = {"analogies":"s6","appearances":"s2","archaeology":"s4","beauty":"s1","bigbang":"s5","burial":"s2","cambrian":"s5","canon":"s4","coincidences":"s4","consciousness":"s1","consistency":"s4","cosmic":"s5","daniel70":"s3","deadseascrolls":"s4","desire":"s1","disciplesbelief":"s2","early_church_trinity":"s6","earlycreed":"s3","earlydate":"s4","emptytomb":"s2","eternal_generation":"s6","evil":"s1","eyewitnesses":"s4","finetuning":"s1","hands":"s3","hist_jesus":"s3","holy_spirit":"s6","jesus_as_god_nt":"s6","jesus_claims":"s3","jesuschar":"s3","jewishness":"s4","john11":"s3","kalam":"s1","laws":"s5","leibniz":"s1","manuscript":"s4","mathematics":"s5","messianic_prophecy":"s3","minimal":"s2","modalism":"s6","moral":"s1","multiatt":"s3","names":"s4","nt_trinity":"s6","ontological":"s1","originlife":"s5","ot_trinity":"s6","paul":"s2","phil2":"s3","philosophical_trinity":"s6","postresurrection":"s2","privileged":"s5","prophecy":"s4","reason":"s1","relations":"s6","religious":"s1","respred":"s3","sceptics":"s2","shema":"s6","thomistic":"s1","titles":"s3","trinity_islam":"s6","trinity_jw":"s6","trinity_mormons":"s6","typology":"s3","uniqueness":"s3","virginbirth":"s3","riseofchurch":"s8","persecution":"s8","legacy":"s8"};
 function activateTab(id) {
   var s = document.querySelectorAll('.sec'); for (var i = 0; i < s.length; i++) s[i].className = 'sec';
   var t = document.querySelectorAll('.tab'); for (var i = 0; i < t.length; i++) t[i].className = 'tab';
@@ -563,11 +571,11 @@ function fillT(tid, q) {
 var I18N = {
   en: { ey:'Evidence Library', ht:'The case for <em>Christian faith</em>',
     hs:'Every major argument examined — free summaries in plain English, Pro deep dives for those who want to go further.',
-    tabs:{s1:"God's Existence",s2:'The Resurrection',s3:'Jesus',s4:'Biblical Reliability',s5:'Science &amp; Faith',s6:'The Trinity',s7:'Conversion Stories'},
+    tabs:{s1:"God's Existence",s2:'The Resurrection',s3:'Jesus',s4:'Biblical Reliability',s5:'Science &amp; Faith',s6:'The Trinity',s7:'Conversion Stories',s8:'The Church in History'},
     floatLabel:'Open an argument card first', floatPlaceholder:'What are you unsure about? Ask anything...', floatBtn:'Ask AI Tutor' },
   mk: { ey:'Доказна библиотека', ht:'Случајот за <em>христијанската вера</em>',
     hs:'Секој главен аргумент разгледан — бесплатни резимеа на јасен јазик, Pro длабински осврти за оние што сакаат да продлабочат.',
-    tabs:{s1:'Постоењето на Бог',s2:'Воскресението',s3:'Исус',s4:'Веродостојност на Библијата',s5:'Наука и вера',s6:'Троица',s7:'Приказни за обраќање'},
+    tabs:{s1:'Постоењето на Бог',s2:'Воскресението',s3:'Исус',s4:'Веродостојност на Библијата',s5:'Наука и вера',s6:'Троица',s7:'Приказни за обраќање',s8:'Црквата во историјата'},
     floatLabel:'Прво отворете картичка со аргумент', floatPlaceholder:'Што не ви е јасно? Прашајте сѐ...', floatBtn:'Прашај го AI тутор' }
 };
 function applyChrome() {
@@ -575,7 +583,7 @@ function applyChrome() {
   var ey=document.querySelector('.hero .ey'); if(ey) ey.textContent=d.ey;
   var ht=document.querySelector('.hero .ht'); if(ht) ht.innerHTML=d.ht;
   var hs=document.querySelector('.hero .hs'); if(hs) hs.textContent=d.hs;
-  var tabs=document.querySelectorAll('.cni .tab'); var order=['s1','s2','s3','s4','s5','s6','s7'];
+  var tabs=document.querySelectorAll('.cni .tab'); var order=['s1','s2','s3','s4','s5','s6','s7','s8'];
   for(var i=0;i<tabs.length;i++){ var k=order[i]; if(d.tabs[k]) tabs[i].innerHTML=d.tabs[k]; }
   var fl=document.getElementById('float-arg-label');
   if(fl){ var t=fl.textContent.trim(); if(t===I18N.en.floatLabel||t===I18N.mk.floatLabel) fl.textContent=d.floatLabel; }
