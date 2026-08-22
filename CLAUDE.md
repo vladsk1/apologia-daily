@@ -20,6 +20,30 @@
 > *why* behind a past decision; read this file for current state. **Keep it that way:** when an entry
 > here stops affecting a decision, move it to `HANDOFF.md` rather than letting this file grow back.
 >
+> **⭐ LATEST — 2026-08-22. The ev-s8 "The Church in History" tab is now COMPLETE end-to-end and LIVE on `main`.**
+> On top of the three gated essays + tab cards shipped earlier the same day, this session added: **(1) full-length Pro
+> deep dives** on all three ev-s8 cards (~1,085 words each, ported from the certified essays to match the other tabs);
+> **(2) three mastery pages** `ev-m-riseofchurch/persecution/legacy.html` (all 9 layers ported from the essays); **(3)
+> three pocket cards** (new `church` category in `pocket-cards.html`); and **(4) the mastery-track + pocket-card links
+> wired back into the ev-s8 cards**. Everything gated **argument + orthodoxy + neutrality** with a confirmation round
+> (a fix pass re-opens the gate): **0 BREAK, 0 HERESY**. ⭐ **The PORT RULE held again with zero exceptions across the
+> whole batch** — every ported sentence survived; the only findings were in the few authored connective strings and in
+> compression drift. ⚠ **The one lesson worth carrying: Julian is a TRAP in early-church-growth content.** The emperor
+> Julian (AD 362) is *post-Constantine* and the essay is emphatic he is **not** evidence of the 2nd/3rd-century growth
+> (he is only a hostile emperor judging Christian charity the thing to beat); the vivid "impious Galilaeans" line is
+> from the *Letter to Arsacius*, which **Van Nuffelen argues is a forgery** — so ground him in the **undisputed
+> Fragment of a Letter to a Priest** and never list him among the *illegal-period* witnesses (Pliny c.112, Lucian c.165,
+> Cornelius 251). All three lenses independently caught a surface where that slipped through (the riseofchurch pocket
+> card + mastery flashcard); fixed. ⭐ **The legacy mastery page needed the essay's `orthonote` (＊) fence PORTED
+> verbatim** onto "God himself, in the person of the Son, had been executed," and on every screenshot-bound layer
+> (seo/syllogism/chip/`ARG_PREMISES`/flashcard + the pocket card) the person is named ("God the Son, crucified /
+> executed as a criminal") since a card/PNG cannot host the ＊. ⚠ One tripwire match — the orthonote's own "Not saying"
+> refutation text ("the divine nature suffered") — baselined on-record. **STILL OPEN (backlog row 29 c+d):** the
+> Macedonian mirror `ev-s8.mk.html` still serves gated English under a pending-translation banner (native MK
+> gate owed), and **pastoral sign-off** is owed on all three essays as site-wide (`STATEMENT_OF_FAITH.md` = pending).
+> Also open (row 30): `tools/reel/specs/air-we-breathe.json` still calls Tom Holland "the secular historian" — stale
+> (Salisbury Canon Historian, June 2025), re-word or pull before that reel is posted.
+>
 > **BOOK-SWEEP HANDOVER — 2026-08-08. ⭐ START A RESEARCH-LIBRARY SWEEP SESSION AT
 > [`docs/BOOK_SWEEP_HANDOVER.md`](docs/BOOK_SWEEP_HANDOVER.md).** The cross-check has now run on
 > **13 of the 14 `docs/book-research/` notes** (only #10 remains, and it is blocked); that file carries the method, the per-note status
