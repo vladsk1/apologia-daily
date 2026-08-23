@@ -302,7 +302,7 @@ images, not memory (the repo's "measure, don't estimate" rule). Solid enough to 
   **Peter Singer / QALY** and the Down-syndrome debate as the modern pressure point. ⚠ Doctrinally/pastorally
   delicate (disability, abortion-adjacent) — map primaries, not applications; not card material.
 
-### Ch. 3 — "Compassion" (pp. 66–77; opening ~60–65 NOT captured)
+### Ch. 3 — "Compassion" (pp. 66–79; opening ~60–65 NOT captured)
 
 **Thesis:** compassion — judging a society by its treatment of the weakest — is not natural ("red in tooth
 and claw") but entered because "Kindness himself appeared" (Titus 3:4), running "down and out" (the exodus;
@@ -321,7 +321,15 @@ Chrysostom), a "cascade of hospitals" (James William Brodman via Dickson), Bened
 natural** — Tennyson's "red in tooth and claw"; Christ the Fittest sacrificed for the weakest, inverting
 natural selection; (7) **servant leadership** — Mark 10:42–45; (8) **gladiators/games** — Christians
 boycotted the arena (Minucius Felix, *Octavius* 12), games outlawed AD 401 under Honorius; Lecky and Hurtado
-on the unparalleled Christian "love ethic."
+on the unparalleled Christian "love ethic." (9, pp. 78–79) **the abolition of the games** through **the monk
+Telemachus** — who stepped between the gladiators and was stoned by the crowd, and whose death moved the
+emperor Honorius to end them (Philip Schaff, *History of the Christian Church* §95 — **PD, CCEL**); and
+**the end of infant exposure**: the early church's charity ("welfare distribution centres," Dickson) and
+figures like **Macrina (330–379)** touring the rubbish dumps to rescue exposed infants, with **Valentinian
+I**'s late-4th-c. law against infanticide "catching up" to a change already in hearts. The close: "the
+stooping God" who descends to the garbage dump (where Rome set up its crucifixions) — Matthew 25:40,
+"whatever you do for the least of these, you do for me." ⚠ Scrivener quotes Nietzsche's "the weak, the low
+and the botched" here — attribute it as Nietzsche's contemptuous phrase, not as the site's voice.
 
 | Lead | Locus | Note |
 |---|---|---|
@@ -334,21 +342,85 @@ on the unparalleled Christian "love ethic."
 ⚠ Orthodoxy watch (beat 6): keep the resurrection/adoption attached to "Christ the Fittest," as Scrivener
 does ("raised up, forgiven, filled with his Spirit") — stripped bare it caricatures the atonement.
 
-### Ch. 4 — "Consent" (BODY pp. ~78–97 NOT captured; only the close, pp. 98–100)
+### Ch. 4 — "Consent" (pp. 81–100, COMPLETE)
 
-**⚠ Only the last three pages are in hand.** The close lands the **moral argument** through **Rachael
-Denhollander**'s victim-impact statement at the Larry Nassar trial and a **C. S. Lewis** line she leans on
-(*Mere Christianity*): "My argument against God was that the universe seems so cruel and unjust. But how did
-I get this idea of just, unjust? A man does not call a line crooked unless he first has some idea of
-straight." The straight line exists independently of perception, so she can name the abuse evil *and* forgive
-it. Scrivener's close: bodies as temples, sex as sacred, children as valuable, the powerful serving not
-exploiting the weak — "are Christian beliefs."
+**Thesis:** the modern conviction that *consent* is the line — that a person's body is their own and cannot
+be used without their willing agreement — did not exist in the ancient world, where **status, not consent,**
+governed sexual ethics. It is a Christian inheritance. ⚠⚠ **This is the most sensitive chapter in the book;
+see the guardrails at the end of this section before drafting anything from it.**
 
-⭐ **The loggable lead: this accessible form of the moral argument is exactly what `library/moral.html`
-lacks** (that essay is excellent but academic — Kant, Adams, Wielenberg, Street). The Lewis "crooked line
-implies a straight line" move + Denhollander is the version a reader can use. **Logged P3.** ⚠ Pastorally
-delicate (child sexual abuse) — the illustration is about the *reality of objective evil*, never a debating
-chip. **Full ch. 4 mapping waits for pp. 78–97.**
+**Argument beats (our words):**
+
+1. **"How much is a little girl worth?"** (pp. 81–82) — Rachael Denhollander's victim-impact statement at
+   the Larry Nassar trial (last of 169 women; Nassar abused ≥265 girls). We answer "Everything"; the Roman
+   world did not. Footnote 40 = the CNN transcript of her full statement.
+2. **The Roman sexual world** (pp. 82–86), on **Kyle Harper, *From Shame to Sin* (Harvard UP, 2016)** — the
+   scholarly anchor, the very book Scrivener routed to for "Consent." What mattered was the *status* of your
+   partner, not their consent or age or gender; it was "a world of shame, not of sin." A freeborn Roman man
+   held an unquestioned right to the bodies of lower-status women, children, prostitutes and slaves; "modesty"
+   was a gendered double standard; adultery was a property/social transgression, not a wrong against a body
+   or will. Tom Holland (*Dominion* p. 99): "Sex was nothing if not an exercise of power… *meio* meant both
+   ejaculate and urinate." William Linn Westermann, *The Slave Systems of Greek and Roman Antiquity* (1957);
+   the Stoic Musonius Rufus as the ancient moderation-voice (still within the classical frame).
+3. **"Inventing abuse"** (pp. 83–84) — Harper's striking claim: the *category* of sexual abuse was unknown
+   to the culture Christianity spread into; Christianity gave the world the concept. (⚠ This is the sentence
+   most open to misreading — see guardrails.)
+4. **The 1st-century sexual revolution** (pp. 86–91) — where the 1960s said "women can be as free as men,"
+   the Jesus revolution said "men must be as restricted as women," curtailing *male* licence. Matthew 19
+   (one-flesh, Genesis 1–2, divorce as concession to "hardness of heart"); "live like eunuchs" (Matt
+   19:11–12). Joseph Henrich's "Marriage and Family Program" (the church's monogamy program as, in his
+   secular analysis, the biggest single driver of the West's "WEIRD" psychology — *WEIRDest People* pp. 258,
+   267, 273). Harper: "all the world's diffuse erotic energy was to be cramped into one, frail, sacred
+   union" (*Shame to Sin* p. 163).
+5. **A higher view — bodies and mutuality** (pp. 92–94) — 1 Corinthians 6:19 (bodies as temples); Ephesians
+   5:25–32 (marriage as the Christ–church romance); and the radical one: **1 Corinthians 7:3–5**, where the
+   *husband* "does not have authority over his own body but yields it to his wife" — the words "in the same
+   way" asserting a mutuality no one in Paul's day would have granted, and bringing *mutual consent* into the
+   marriage bed.
+6. **Slaves, women and children** (pp. 94–97) — **Celsus'** sneer that Christianity convinces "only the
+   foolish, dishonourable and stupid, only slaves, women and little children" (Origen, *Contra Celsum* 3.44,
+   quoted in Michael J. Kruger, *Christianity at the Crossroads*, IVP Academic 2018) was, for the church, a
+   boast; **Galatians 3:26–28** ("neither Jew nor Gentile, slave nor free, male nor female… all one in Christ
+   Jesus"). 1 Corinthians 13:4–5 as the family ethic; "virtue" from *vir* = "manliness," redefined by Christ.
+   **Child protection:** where the classical world celebrated *paiderastia* (Juvenal, Petronius, Horace,
+   Strato, Lucian, Philostratus — Hurtado, *Destroyer of the gods* p. 167), Christians named it
+   *paidophthoros*, "destruction of children" (Harper, *Shame to Sin* pp. 98, 13); the emperor Justinian
+   (527–565) outlawed *paiderastia*. Paul Offit (*Bad Faith*, 2015, p. 127): "the single greatest
+   breakthrough against child abuse."
+7. **Crooked lines are crooked** (pp. 97–100) — Denhollander addressing Nassar ("you brought your Bible into
+   the courtroom… praying for forgiveness"), and the **C. S. Lewis** move (*Mere Christianity*): "a man does
+   not call a line crooked unless he first has some idea of straight." The straight line exists independent
+   of perception, so she can name the abuse evil *and* forgive it.
+
+**Primary/scholarly leads to verify (ch. 4):**
+
+| Lead | Locus | Note |
+|---|---|---|
+| ⭐ Status-not-consent governed Roman sexual ethics; Christianity introduced the *category* of abuse and the *consent* line | **Kyle Harper, *From Shame to Sin* (Harvard UP, 2016)**, pp. 3, 8, 13, 49, 56, 98, 163 | **0 site-wide hits for Harper.** The best-evidenced version of this claim on the market. **Logged P3 — with heavy guardrails.** |
+| Mutuality in marriage — the husband yields authority over his body (radical for its day) | **1 Corinthians 7:3–5**; Galatians 3:26–28 | Strong, and doctrinally safe as *historical* claim. |
+| Celsus' "slaves, women and children" sneer as a boast | **Origen, *Contra Celsum* 3.44** (PD, ANF) — via Kruger | ⭐ PD primary → `/sources` candidate. Celsus already cited 11× on-site. |
+| Christian child-protection: *paidophthoros*; Justinian outlaws *paiderastia* | Harper pp. 98, 13; Hurtado p. 167; Paul Offit, *Bad Faith* p. 127 | Verify Justinian's Novellae; the "greatest breakthrough" line is Offit's (a vaccine-safety author) — attribute, don't overstate. |
+| C. S. Lewis "crooked line implies a straight line" + Denhollander | *Mere Christianity* Bk 2 ch. 1; CNN transcript | For `library/moral.html`. **Already logged P3.** |
+
+⚠⚠ **GUARDRAILS — read before drafting a single sentence from this chapter (this is why I did NOT log it as
+a big enthusiastic P2):**
+- **The safe, defensible claim is HISTORICAL and BOUNDED:** in the Roman world sexual ethics turned on the
+  *status* of the parties, not on consent or the dignity of the body; Christianity introduced the conviction
+  that every body has a dignity that does not depend on rank, and that the powerful may not use the weak.
+  That claim is Kyle Harper's (Harvard), is mainstream, and is the one to port.
+- **Do NOT let it slide into contemporary sexual-ethics or gender debates.** Scrivener's chapter moves from
+  the historical case into marriage/divorce/celibacy/"the sexual revolution" framing that a modern reader
+  will map onto present controversies. That territory is (a) not the site's business, (b) denominationally
+  contested (Catholic/Orthodox/Protestant differ on divorce, remarriage, celibacy, contraception — do not
+  adjudicate), and (c) outside anything `legacy.html` currently does. **Mine the ancient-vs-Christian
+  contrast; stop there.**
+- **"Christianity invented abuse / gave us the category of abuse" must never be compressed onto a card** —
+  stripped of Harper's precise meaning it reads grotesquely backwards. If used at all, it is a full sentence
+  with Harper's sense intact ("the *concept* that using a lower-status body could itself be a wrong").
+- **Henrich's "Marriage and Family Program" is a non-recommendation** (same as the WEIRD row for the Intro):
+  the mechanism is specifically the *Western* church's canon law on marriage and cousin-marriage, which cuts
+  against denominational neutrality, and it is a large contested claim in cultural evolution. Cite Harper,
+  not Henrich, for the dignity point.
 
 ### Ch. 5 — "Enlightenment" (pp. 100–125, COMPLETE)
 
@@ -573,9 +645,8 @@ were appended, corrected once already; this running total is measured, not estim
 | 23–39 | **Ch. 1, "The Night Before Christmas"** | ✅ full (nn. 3–14) |
 | 41–59 | **Ch. 2, "Equality"** | ✅ captured (footnote-precise re-map still owed — see the ch. 2 section) |
 | ~60–65 | **Ch. 3 opening** ("3. COMPASSION" title + first spread) | 🔴 **MISSING — re-photograph** |
-| 66–77 | **Ch. 3, "Compassion"** (from p. 66) | ✅ captured (nn. 30–37) |
-| ~78–97 | **Ch. 4, "Consent" — the BODY** | 🔴 **MISSING — the whole argument; re-photograph pp. 78–97** |
-| 98–100 | **Ch. 4 close** (Denhollander / Nassar / Lewis) | ✅ captured |
+| 66–79 | **Ch. 3, "Compassion"** (from p. 66; ends p. 79) | ✅ captured (nn. 30–39) |
+| 81–100 | **Ch. 4, "Consent"** (title p. 81, p. 80 blank) | ✅ captured in full (nn. 40–61) |
 | 101–125 | **Ch. 5, "Enlightenment"** | ✅ full (nn. 62–86) |
 | 127 | **Ch. 6, "Science" — opening only** | ⬜ p. 126 blank; body pp. 128+ not captured |
 | 128– | **Ch. 6 body → Ch. 10 + closing address** | ⬜ not captured |
@@ -583,10 +654,10 @@ were appended, corrected once already; this running total is measured, not estim
 **⚠ Duplicates received (no action):** pp. 68–69 (×3), 70–71 (×2), **72–73 (×4)**.
 
 **To resume, in priority order:**
-1. **Ch. 4 body, pp. 78–97** — the biggest gap; the consent argument is entirely missing.
-2. **Ch. 3 opening, ~pp. 60–65** — the title page and first spread.
+1. **Ch. 3 opening, ~pp. 60–65** — the "3. COMPASSION" title page and first spread (now the only gap before
+   p. 100).
+2. **Ch. 6 from p. 128** onward, in reading order.
 3. **Table of contents** — one photo.
-4. **Ch. 6 from p. 128** onward, in reading order.
 
 This book prints footnotes at the foot of each page, so they arrive with the body automatically — no
 separate endnote pass is needed.
