@@ -489,14 +489,69 @@ Torquemada + ~3,000 over 300 yrs, set against the French Terror and Russian Red 
 largely ABSENT site-wide.** Universities, medieval science, the Sagan "millennium gap" as the myth's origin,
 Paine's coinage — a major apologetic topic we don't cover. **Logged P2 below.**
 
-### Ch. 6 — "Science" (opening only, p. 127; pp. 128+ NOT captured)
+### Ch. 6 — "Science" (pp. 127–137 captured; pp. 138+ NOT yet captured — chapter incomplete)
 
-Epigraph: **Boris Johnson, 2020** ("shining the light of science on this invisible killer… driven by the
-science"). Opens on COVID "follow the science" — who counts as "the science," whether sociologists/ethicists/
-historians count, and the historical role of priests leading through plague. **Chapter body not yet
-captured**; it will be the science-and-faith / conflict-thesis chapter, pairing with `library/laws.html`,
-`library/reason.html`, and possibly `library/bigbang.html`. **Read those in full (Step Zero) before mining
-ch. 6.**
+**Thesis:** science and faith at war is a *novel* view the founders of the scientific method would not have
+recognised; the "conflict thesis" was manufactured in the 19th century, and modern science was in fact
+*born from* three biblical convictions.
+
+⚠⚠ **CROSS-CHECK VERDICTS FOR THIS CHAPTER ARE DELIBERATELY DEFERRED (Step Zero not yet done).** The greps
+show `library/laws.html` already carries the intelligibility / theological-framing-of-science material —
+**Peter Harrison, Robert Boyle, contingency, comprehensibility** are all live there, and `legacy.html` fn 1
+already routes to Harrison/Brooke. So the "foundations of science" half of this chapter is very likely
+**corroboration (and possibly ours-is-better)**, not a gap — exactly the "we already cover this" trap the
+Step Zero rule exists to stop me guessing about. **Before logging any Ch. 6 backlog row I must read
+`library/laws.html` AND `library/reason.html` in full**, and confirm the chapter is complete (p. 138+).
+
+**Argument beats (our words), pp. 127–137:**
+
+1. **"Follow the science"** (pp. 127–128) — Boris Johnson's COVID rhetoric: science as our "light" that
+   "delivers us from evil," a description that "sounds suspiciously like the traditional role for God." Most
+   non-believers are not *anti*-God but pro-science/pro-modernity ("No thanks, I'm more of a scientist") —
+   but the chapter's point is *you don't have to choose*.
+2. **"Friends becoming foes?"** (pp. 128–130) — the warfare view is historically novel. Alexander Pope's
+   epitaph for Newton ("Nature, and Nature's Laws lay hid in Night: God said, 'Let Newton be!' and all was
+   light," *Oxford Essential Quotations*) shows science and faith "on the same team." Then the 19th century
+   manufactured the conflict: **Thomas Jefferson** ("Priests… dread the advance of science as witches do the
+   approach of day-light," Letter to José Correia da Serra, 11 April 1820); **John Draper**, *History of the
+   Conflict Between Religion and Science* (1874); **Andrew Dickson White**, *A History of the Warfare of
+   Science with Theology* (1896). ⭐ The modern scholarly refutation is named: **Hardin, Numbers & Binzley
+   (eds.), *The Warfare between Science and Religion: The Idea That Wouldn't Die* (Johns Hopkins, 2018)** —
+   which is the very book Scrivener routed to for "Science" in his intro reading list. **"conflict thesis"
+   is 0 hits site-wide; Draper/White absent.**
+3. **The scientific (r)evolution** (pp. 130–132) — revolution vs evolution framing. The Greek cosmos put
+   earth at the "sump" (not a boast); Aristotle & Ptolemy's earth-centred model rested on **fate and
+   necessity** — everything "must be" a certain way, orbits circular "because the circle is the most perfect
+   shape" — which made the Greeks brilliant reasoners but "indifferent to experimentation" (reason *upward*,
+   not investigate *outward*).
+4. **⭐ The genesis of modern science** (pp. 132–135) — three convictions from Genesis 1–3:
+   - **(a) The freedom of God** — God is unconstrained (Genesis 1:1, creation not from a pre-existing
+     world); so the universe "could be otherwise than it is," and you cannot deduce it a priori — **you have
+     to go and check** (the empirical turn). This is the direct answer to Greek "necessity."
+   - **(b) The world can be figured out** ("intelligibility"/"comprehensibility") *and* by humans — Genesis
+     1:26–27 (image of God, dominion). Einstein: "the eternal mystery of the world is its comprehensibility…
+     the fact that it is comprehensible is a miracle" (*Out of My Later Years*, 1956, p. 61); Neil deGrasse
+     Tyson, "Cosmic Perspective." "For an atheist it's a miracle without a miracle-maker."
+   - **(c) The fallibility of humans** (Genesis 3, the fall reaches the rational faculties) — so the method
+     must guard against self-deception. Steven Pinker (*Enlightenment Now*, p. 390): peer review / open
+     debate / double-blind methods "are designed to circumvent the sins to which scientists, being human,
+     are vulnerable"; Feynman, "the first principle is that you must not fool yourself — and you are the
+     easiest person to fool"; T. S. Eliot, "humankind cannot bear very much reality."
+5. **Standing on the shoulders of giants** (pp. 136–137+) — the *medieval* development. **Augustine**,
+   *Confessions* XII.7 (creation *ex nihilo* vs Aristotle's eternal world — "it was Christians who were most
+   comfortable challenging the classical assumptions"); **John Philoponus (c. 490–570)** questioning
+   Aristotle's theory of motion (impetus — objects can be *thrown*, not only pushed; the planets need no
+   spiritual pushers). Then the "natural philosophers" and the universities. *(Continues past p. 137 — not
+   yet captured.)*
+
+**Guardrail fit (ch. 6, provisional):** clean, and it holds the site's own argument-specific rule well —
+Scrivener does **not** say "science proves God"; he argues the weaker, correct thing (the theological
+*preconditions* of science). ⚠ One watch: beat 4(b)'s "comprehensibility is a miracle without a
+miracle-maker" must stay an *argument*, not an assertion that the intelligibility of nature *proves* a
+designer — which is the fine-tuning-adjacent overreach `laws.html`/`cosmic.html` are careful about. The
+existing **P2 "Dark Ages / conflict-thesis is a myth" backlog row already covers the headline of this
+chapter**; whether the theological-foundations material earns a *second* row (or is corroboration on
+`laws.html`) is the Step-Zero question to settle once the chapter is complete.
 
 ---
 
@@ -671,15 +726,19 @@ were appended, corrected once already; this running total is measured, not estim
 | 61–79 | **Ch. 3, "Compassion"** (title p. 61, p. 60 blank) | ✅ captured in full (nn. 21–39) |
 | 81–100 | **Ch. 4, "Consent"** (title p. 81, p. 80 blank) | ✅ captured in full (nn. 40–61) |
 | 101–125 | **Ch. 5, "Enlightenment"** | ✅ full (nn. 62–86) |
-| 127 | **Ch. 6, "Science" — opening only** | ⬜ p. 126 blank; body pp. 128+ not captured |
-| 128– | **Ch. 6 body → Ch. 10 + closing address** | ⬜ not captured |
+| 127–137 | **Ch. 6, "Science"** (title p. 127, p. 126 blank) | 🟡 captured through p. 137 (nn. 87–93); **chapter INCOMPLETE — continues p. 138+** |
+| 138– | **Ch. 6 tail → Ch. 10 + closing address** | ⬜ not captured |
 
 **⚠ Duplicates received (no action):** pp. 68–69 (×3), 70–71 (×2), **72–73 (×4)**.
 
-**To resume, in priority order:** everything through **p. 100 is now captured continuously.**
-1. **Ch. 6 from p. 128** onward, in reading order (I have only the p. 127 title page).
+**To resume, in priority order:** everything through **p. 137 is now captured continuously.**
+1. **Ch. 6 from p. 138** onward (the chapter is mid-argument at "natural philosophers / universities").
 2. **Ch. 7 "Freedom," Ch. 8 "Progress," Ch. 9, Ch. 10, and the closing address** — none captured.
 3. **Table of contents** — one photo, to confirm chapter/page boundaries.
+
+**⚠ Owed before Ch. 6 verdicts:** read `library/laws.html` + `library/reason.html` in full (Step Zero),
+then settle whether the theological-foundations-of-science material is corroboration on `laws.html` or a
+second backlog row. The conflict-thesis-is-a-myth headline is already logged (P2).
 
 This book prints footnotes at the foot of each page, so they arrive with the body automatically — no
 separate endnote pass is needed.
