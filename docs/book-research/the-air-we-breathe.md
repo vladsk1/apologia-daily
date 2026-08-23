@@ -302,11 +302,33 @@ images, not memory (the repo's "measure, don't estimate" rule). Solid enough to 
   **Peter Singer / QALY** and the Down-syndrome debate as the modern pressure point. ⚠ Doctrinally/pastorally
   delicate (disability, abortion-adjacent) — map primaries, not applications; not card material.
 
-### Ch. 3 — "Compassion" (pp. 66–79; opening ~60–65 NOT captured)
+### Ch. 3 — "Compassion" (pp. 61–79, COMPLETE)
 
 **Thesis:** compassion — judging a society by its treatment of the weakest — is not natural ("red in tooth
 and claw") but entered because "Kindness himself appeared" (Titus 3:4), running "down and out" (the exodus;
 Israel chosen *because* "the fewest of all peoples," Deuteronomy 7:6–8).
+
+**Opening (pp. 61–65) — the chapter's strongest and most distinctive apologetic move, and it is NEW to the
+site:** (0a) the **Richard Dawkins** 2014 tweet on a Down's-syndrome pregnancy — "Abort it and try again. It
+would be immoral to bring it into the world if you have the choice" — as a modern echo of the ancient world.
+(0b) **Ancient infanticide/exposure**, with the primaries: **Plato, *Republic* 5.460** ("dispose of them in
+secret"); **Aristotle, *Politics* 7.1335b** ("let there be a law that no deformed child shall be reared");
+**Soranus of Ephesus (98–138), *Gynecology*** — the first gynaecological treatise opens with "How to
+Recognise the Newborn That is Worth Rearing," and the advice for those that fail is "expose it and try
+again" (trans. Owsei Temkin, Johns Hopkins 1991, p. 79; the survey is **Darrel W. Amundsen**, "Medicine and
+the Birth of Defective Children," in *On Moral Medicine*, ed. Lammers & Verhey, Eerdmans 1998, p. 682).
+(0c) **⭐ "The poison of pity"** — **Nietzsche, *The Anti-Christ* §7**: "Pity on the whole thwarts the law of
+evolution, which is the law of selection"; "the weak and the ill-constituted shall perish… and one shall
+help them to do so"; "Christianity has taken the part of all the weak, the low, the botched" (ed. Anthony
+Uyl, Devoted Publishing 2016, pp. 121–122; also *The Birth of Tragedy*, p. 23, "disgust with life… dressed
+up as faith"). Scrivener's move: **Nietzsche was *right*** that Christianity is the champion of pity and
+that this is "anti-nature" — and that is exactly the point. (0d) **The is/ought firewall** — Nietzsche makes
+"law" do double duty (a *description* of selection and a *prescription* to obey it); to refuse the
+"genocidal conclusion" (Himmler: "there is nothing particular about man; he is but a part of this world,"
+Holland *Dominion* p. 521) you need "a morality beyond nature, above nature — something *super*-natural."
+Keep science as science and morality as morality. Christianity = the sacrifice of the Fittest (Christ) for
+the survival of the weakest (us). ⚠ Nietzsche/Himmler must be quoted **as the position being refuted**,
+never unfenced — this is a tripwire-sensitive passage (eugenics, the Holocaust).
 
 Beats: (1) "What images God? → *us*" (Genesis 1:26–27, imago Dei, pp. 66–67); (2) compassion flows down-and-
 out (Deut 7:6–8, exodus, Jeremiah 45:5); (3) **compassion incarnate** — Isaiah 61:1–2 as Jesus' inaugural
@@ -333,6 +355,8 @@ and the botched" here — attribute it as Nietzsche's contemptuous phrase, not a
 
 | Lead | Locus | Note |
 |---|---|---|
+| ⭐ **Nietzsche's "poison of pity" + the is/ought firewall** — the honest naturalist challenge to the compassion ethic | **Nietzsche, *The Anti-Christ* §7**; *Birth of Tragedy* p. 23; Himmler via Holland p. 521 | **0 site-wide hits** for "poison of pity," "law of selection," is/ought, "Anti-Christ." A distinctive form of the moral argument absent from `moral.html`. **Logged P2 below.** ⚠ tripwire-sensitive — quote as the refuted position. |
+| Ancient infanticide/exposure primaries | **Plato *Republic* 5.460; Aristotle *Politics* 7.1335b; Soranus *Gynecology*** (Temkin trans.) | Corroborate `legacy.html`'s infant-exposure claim with hostile primaries (0 hits for Soranus). Amundsen is the secondary map. |
 | *splanchnizomai* gut-compassion word study | Matt 20:34; Mark 1:41; Luke 7:13; 18:27; 15:20; 10:33 | 1 site hit for `splanchn`; enriches `jesuschar.html`, not `legacy.html`. |
 | Christian love-ethic "no known Roman-era parallel" | **Larry Hurtado, *Destroyer of the gods* (Baylor, 2017), pp. 64–65** | ⭐ Hurtado cited 35× already — verify this specific claim isn't live; strong for `legacy.html` compassion section. **Logged P3.** |
 | Rise of the hospital (Basil, Fabiola, Chrysostom) | **D. B. Hart, *Atheist Delusions* (Yale, 2010), p. 30** | ✅ `legacy.html` fn 7 covers it, and BETTER (Miller/Crislip + Horden/Nutton caution). **HAZARD — see below.** |
@@ -626,7 +650,7 @@ Classifications for everything in the captured range. **Six-verdict scheme per `
 | — | Inquisition death-toll comparison to the Terrors | `legacy.html` fn 10 (Kamen, sober) | **5 — hazard** | **No row. HAZARD 8.** Relativising move; keep our sober treatment. |
 | — | Stark: "the Crusades… no apologies are required" | `legacy.html` lists the 1096/1099 massacres in our own voice | **5 — hazard** | **No row. HAZARD 9.** Never without Dickson's answer. |
 
-**Rows logged from this book so far: 13 — three P2, seven P3, three P4** (plus several no-row hazard/
+**Rows logged from this book so far: 16 — four P2, nine P3, three P4** (plus several no-row hazard/
 non-recommendation classifications). Counts measured 2026-08-23 by tallying the rows appended to
 `docs/content-backlog.md`. Rows 1–8 (Intro + ch. 1) shipped in the first commit; rows 21–26 (ch. 2–5) are
 appended in the second. *(An earlier draft of the ch. 1 line said "7" — an estimate written before the rows
@@ -644,8 +668,7 @@ were appended, corrected once already; this running total is measured, not estim
 | 11–21 | **Introduction** — "What's water?" | ✅ full (nn. 1–2) |
 | 23–39 | **Ch. 1, "The Night Before Christmas"** | ✅ full (nn. 3–14) |
 | 41–59 | **Ch. 2, "Equality"** | ✅ captured (footnote-precise re-map still owed — see the ch. 2 section) |
-| ~60–65 | **Ch. 3 opening** ("3. COMPASSION" title + first spread) | 🔴 **MISSING — re-photograph** |
-| 66–79 | **Ch. 3, "Compassion"** (from p. 66; ends p. 79) | ✅ captured (nn. 30–39) |
+| 61–79 | **Ch. 3, "Compassion"** (title p. 61, p. 60 blank) | ✅ captured in full (nn. 21–39) |
 | 81–100 | **Ch. 4, "Consent"** (title p. 81, p. 80 blank) | ✅ captured in full (nn. 40–61) |
 | 101–125 | **Ch. 5, "Enlightenment"** | ✅ full (nn. 62–86) |
 | 127 | **Ch. 6, "Science" — opening only** | ⬜ p. 126 blank; body pp. 128+ not captured |
@@ -653,11 +676,10 @@ were appended, corrected once already; this running total is measured, not estim
 
 **⚠ Duplicates received (no action):** pp. 68–69 (×3), 70–71 (×2), **72–73 (×4)**.
 
-**To resume, in priority order:**
-1. **Ch. 3 opening, ~pp. 60–65** — the "3. COMPASSION" title page and first spread (now the only gap before
-   p. 100).
-2. **Ch. 6 from p. 128** onward, in reading order.
-3. **Table of contents** — one photo.
+**To resume, in priority order:** everything through **p. 100 is now captured continuously.**
+1. **Ch. 6 from p. 128** onward, in reading order (I have only the p. 127 title page).
+2. **Ch. 7 "Freedom," Ch. 8 "Progress," Ch. 9, Ch. 10, and the closing address** — none captured.
+3. **Table of contents** — one photo, to confirm chapter/page boundaries.
 
 This book prints footnotes at the foot of each page, so they arrive with the body automatically — no
 separate endnote pass is needed.
