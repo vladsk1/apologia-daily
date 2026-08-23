@@ -489,19 +489,28 @@ Torquemada + ~3,000 over 300 yrs, set against the French Terror and Russian Red 
 largely ABSENT site-wide.** Universities, medieval science, the Sagan "millennium gap" as the myth's origin,
 Paine's coinage — a major apologetic topic we don't cover. **Logged P2 below.**
 
-### Ch. 6 — "Science" (pp. 127–137 captured; pp. 138+ NOT yet captured — chapter incomplete)
+### Ch. 6 — "Science" (pp. 127–147, COMPLETE)
 
 **Thesis:** science and faith at war is a *novel* view the founders of the scientific method would not have
 recognised; the "conflict thesis" was manufactured in the 19th century, and modern science was in fact
 *born from* three biblical convictions.
 
-⚠⚠ **CROSS-CHECK VERDICTS FOR THIS CHAPTER ARE DELIBERATELY DEFERRED (Step Zero not yet done).** The greps
-show `library/laws.html` already carries the intelligibility / theological-framing-of-science material —
-**Peter Harrison, Robert Boyle, contingency, comprehensibility** are all live there, and `legacy.html` fn 1
-already routes to Harrison/Brooke. So the "foundations of science" half of this chapter is very likely
-**corroboration (and possibly ours-is-better)**, not a gap — exactly the "we already cover this" trap the
-Step Zero rule exists to stop me guessing about. **Before logging any Ch. 6 backlog row I must read
-`library/laws.html` AND `library/reason.html` in full**, and confirm the chapter is complete (p. 138+).
+**✅ STEP ZERO DONE (2026-08-23): `library/laws.html` and `library/reason.html` read in full.** Findings:
+- **`reason.html` is NOT actually a paired essay** — it is the Argument from Reason (Lewis/Plantinga/
+  Anscombe, naturalism can't ground rational inference). Unrelated to the science-origins material. My
+  earlier routing guess was wrong; recorded so no later session repeats it.
+- **`laws.html` IS the pairing, and it partly overlaps this chapter — on the *metaphysics*, not the
+  *history*.** `laws.html` carries **Peter Harrison & John Hedley Brooke** on "laws of nature" crystallising
+  in a 17th-c. Christian frame, **Newton's General Scholium, Kepler "thinking God's thoughts after him,"
+  Wigner and Davies on intelligibility** — i.e. the *comprehensibility/theological-framing* half of
+  Scrivener's ch. 6 is **corroboration, and `laws.html` is more careful** (it fences the inference as
+  "surprising, not proof," engages Oppy, distinguishes Humean vs necessitarian laws). **So the intelligibility
+  material is NOT a gap.**
+- **What `laws.html` does NOT carry — and is genuinely missing site-wide — is the *historical* case:** the
+  conflict-thesis historiography (Draper 1874, Andrew Dickson White 1896), the **Galileo affair** handled
+  carefully, the "science was genuinely against Copernicus and Galileo" point, and the medieval natural-
+  philosopher lineage. That is the real gap, and it is what the existing **P2 "Dark Ages / conflict-thesis"
+  backlog row** targets — this chapter supplies its whole evidence base.
 
 **Argument beats (our words), pp. 127–137:**
 
@@ -537,21 +546,66 @@ Step Zero rule exists to stop me guessing about. **Before logging any Ch. 6 back
      debate / double-blind methods "are designed to circumvent the sins to which scientists, being human,
      are vulnerable"; Feynman, "the first principle is that you must not fool yourself — and you are the
      easiest person to fool"; T. S. Eliot, "humankind cannot bear very much reality."
-5. **Standing on the shoulders of giants** (pp. 136–137+) — the *medieval* development. **Augustine**,
-   *Confessions* XII.7 (creation *ex nihilo* vs Aristotle's eternal world — "it was Christians who were most
-   comfortable challenging the classical assumptions"); **John Philoponus (c. 490–570)** questioning
-   Aristotle's theory of motion (impetus — objects can be *thrown*, not only pushed; the planets need no
-   spiritual pushers). Then the "natural philosophers" and the universities. *(Continues past p. 137 — not
-   yet captured.)*
+5. **Standing on the shoulders of giants** (pp. 136–139) — the *medieval* lineage: **Augustine**,
+   *Confessions* XII.7 (creation *ex nihilo* vs Aristotle's eternal world); **John Philoponus (c. 490–570)**
+   on impetus; **A. N. Whitehead** (*Science and the Modern World*, 1926, p. 16 — science's "faith in the
+   possibility of science… derivative from medieval theology"); the **"two books"** (Scripture + nature);
+   **William of Ockham** (Oxford, impetus/frictionless vacuum → forerunner of Newton's first law); **Nicole
+   d'Oresme** (Paris, earth turns on its axis); **Nicholas of Cusa** — the university culture of "robust
+   argumentation" as the *fallibility* conviction institutionalised.
+6. **The scientific (r)evolution was an evolution** (pp. 139–140) — **Copernicus** (1543) "job done! Except
+   it wasn't": his system was no better than Ptolemy's, still assumed circular orbits and scores of unobserved
+   epicycles (Stark, *Triumph of Christianity*, p. 280: everything in *De Revolutionibus* "is wrong, other
+   than the placement of the sun at the center"). **The evidence genuinely did not favour Copernicus or
+   Galileo — "the science" was against them.** It took **Kepler** (ellipses) and **Newton** (gravity) to
+   make a coherent system. I. Bernard Cohen: the Copernican "revolution" is "the invention of later
+   historians." Newton "shoulders of Giants" (Letter to Hooke).
+7. **⭐ "Hang on: the case of Galileo"** (pp. 140–143) — the conflict thesis's trump card, handled honestly
+   and this is the highest-value single item in the chapter. When Galileo championed Copernicanism, **both
+   the data and the scientific consensus were against him**; in 1616 the church, having consulted the leading
+   astronomers, **backed the scientific majority against a minority** (and declared heliocentrism heretical —
+   "the wrong kind of involvement," and with hindsight "backed the wrong horse"). All sides cited **Augustine**
+   (biblical interpretation must not oppose assured truths of nature); the church "put themselves on record as
+   willing to change their mind with incontrovertible evidence." Maurice Finocchiaro (*The Warfare Between
+   Science and Religion*, JHU 2018, p. 33): the real conflict was "progressives vs conservatives" criss-
+   crossing *both* church and science. The 1632 *Dialogue*, "Simplicio," the 1633 trial, house arrest.
+   D. B. Hart (*Atheist Delusions* pp. 65–66): "an idiotic… conflict between men of titanic egotism," and
+   "it was the church that was demanding proof, and Galileo who was demanding blind assent — to a model that
+   was wrong." ⚠ **Do not whitewash: Scrivener grants the church was wrong to condemn Galileo** — the point
+   is that it is not a clean "faith vs science" story, not that the church was right.
+8. **"Modern science was invented nowhere else but among devout Christians in a devoutly Christian age"**
+   (p. 143) — Hart on Christian universities overturning pagan cosmology.
+9. **The miracle of science** (pp. 144–145) — the founders' faith quotes (Copernicus, Galileo "the glory of
+   God marvellously discerned in all his works," Kepler "geometry… a reflection of the mind of God," Newton
+   "this most beautiful system… could only proceed from… an Intelligent Powerful Being"), tied to Einstein's
+   "miracle of comprehensibility." ⚠ Sources are mixed quality (Van Norman 1907; Koestler's *Sleepwalkers*;
+   the Galileo *Letter to Christina* 1615 is solid) — **verify each founder-quote against a primary before
+   any use; devotional-anthology attributions are a known trap.**
+10. **The advance of the light** (pp. 145–147) — why the conflict story persists though "historically bogus":
+    it is a secularised retelling of the Christian master-story (Christ the light, John 8:12/8:32, opposed by
+    the priests, killed, risen). Jefferson's "enlightenment vs the priests." The close: the conflict story
+    "turns out to be a religious myth," and "science emerged in a Christian context for Christian reasons."
 
-**Guardrail fit (ch. 6, provisional):** clean, and it holds the site's own argument-specific rule well —
-Scrivener does **not** say "science proves God"; he argues the weaker, correct thing (the theological
-*preconditions* of science). ⚠ One watch: beat 4(b)'s "comprehensibility is a miracle without a
-miracle-maker" must stay an *argument*, not an assertion that the intelligibility of nature *proves* a
-designer — which is the fine-tuning-adjacent overreach `laws.html`/`cosmic.html` are careful about. The
-existing **P2 "Dark Ages / conflict-thesis is a myth" backlog row already covers the headline of this
-chapter**; whether the theological-foundations material earns a *second* row (or is corroboration on
-`laws.html`) is the Step-Zero question to settle once the chapter is complete.
+**Guardrail fit (ch. 6):** clean, and it holds the site's own rules well — Scrivener does **not** say "science
+proves God"; he argues the weaker, correct thing (the theological *preconditions* of science) and, on Galileo,
+concedes the church was wrong. Three watches for any port: (a) beat 4(b)'s "comprehensibility is a miracle
+without a miracle-maker" must stay an *argument*, not a design *proof* — `laws.html` fences exactly this; (b)
+**denominational neutrality on Galileo** — it is the *Roman* church that erred, and Scrivener himself flags the
+Protestant "point-scoring" (Boyle, Milton) as missing the wood for the trees; keep it as *shared* history, do
+not turn it into an anti-Catholic or pro-Protestant lesson; (c) the strong **"modern science was born from
+Christianity"** thesis is contested among historians — port the *careful* Harrison/Hannam/Numbers version,
+never the triumphal "no Christianity, no science" popular form.
+
+**Cross-check verdicts (Step Zero complete):**
+- Intelligibility / "two books" / theological framing of law / founders' piety → **1 — corroboration**, and
+  `laws.html` is *more careful* (Harrison/Brooke, Newton's Scholium, Kepler, Wigner, Davies all already live,
+  fenced as "surprising not proof"). **No row.**
+- The conflict-thesis-is-a-myth *history* (Draper/White, the manufactured "warfare") → **4 — missing.**
+  **Already covered by the existing P2 backlog row**, now updated to name ch. 6 as its evidence base.
+- **The Galileo affair, handled honestly** → **4 — missing**, 0 site-wide hits, and it is the single
+  most-weaponised "science vs faith" example. **New P3 row logged below.**
+- Neil deGrasse Tyson / Einstein comprehensibility quotes → corroboration (Wigner/Davies already carry the
+  point on `laws.html`). No row.
 
 ---
 
@@ -705,7 +759,7 @@ Classifications for everything in the captured range. **Six-verdict scheme per `
 | — | Inquisition death-toll comparison to the Terrors | `legacy.html` fn 10 (Kamen, sober) | **5 — hazard** | **No row. HAZARD 8.** Relativising move; keep our sober treatment. |
 | — | Stark: "the Crusades… no apologies are required" | `legacy.html` lists the 1096/1099 massacres in our own voice | **5 — hazard** | **No row. HAZARD 9.** Never without Dickson's answer. |
 
-**Rows logged from this book so far: 16 — four P2, nine P3, three P4** (plus several no-row hazard/
+**Rows logged from this book so far: 17 — four P2, ten P3, three P4** (plus several no-row hazard/
 non-recommendation classifications). Counts measured 2026-08-23 by tallying the rows appended to
 `docs/content-backlog.md`. Rows 1–8 (Intro + ch. 1) shipped in the first commit; rows 21–26 (ch. 2–5) are
 appended in the second. *(An earlier draft of the ch. 1 line said "7" — an estimate written before the rows
@@ -726,19 +780,19 @@ were appended, corrected once already; this running total is measured, not estim
 | 61–79 | **Ch. 3, "Compassion"** (title p. 61, p. 60 blank) | ✅ captured in full (nn. 21–39) |
 | 81–100 | **Ch. 4, "Consent"** (title p. 81, p. 80 blank) | ✅ captured in full (nn. 40–61) |
 | 101–125 | **Ch. 5, "Enlightenment"** | ✅ full (nn. 62–86) |
-| 127–137 | **Ch. 6, "Science"** (title p. 127, p. 126 blank) | 🟡 captured through p. 137 (nn. 87–93); **chapter INCOMPLETE — continues p. 138+** |
-| 138– | **Ch. 6 tail → Ch. 10 + closing address** | ⬜ not captured |
+| 127–147 | **Ch. 6, "Science"** (title p. 127, p. 126 blank) | ✅ captured in full (nn. 87–105) |
+| 149– | **Ch. 7 "Freedom" → Ch. 10 + closing address** | ⬜ not captured |
 
 **⚠ Duplicates received (no action):** pp. 68–69 (×3), 70–71 (×2), **72–73 (×4)**.
 
-**To resume, in priority order:** everything through **p. 137 is now captured continuously.**
-1. **Ch. 6 from p. 138** onward (the chapter is mid-argument at "natural philosophers / universities").
-2. **Ch. 7 "Freedom," Ch. 8 "Progress," Ch. 9, Ch. 10, and the closing address** — none captured.
+**To resume, in priority order:** everything through **p. 147 is now captured continuously.**
+1. **Ch. 7 "Freedom" from p. 149** onward (p. 148 likely blank).
+2. **Ch. 8 "Progress," Ch. 9, Ch. 10, and the closing address** — none captured.
 3. **Table of contents** — one photo, to confirm chapter/page boundaries.
 
-**⚠ Owed before Ch. 6 verdicts:** read `library/laws.html` + `library/reason.html` in full (Step Zero),
-then settle whether the theological-foundations-of-science material is corroboration on `laws.html` or a
-second backlog row. The conflict-thesis-is-a-myth headline is already logged (P2).
+**✅ Ch. 6 Step Zero + verdicts are DONE** (see the Ch. 6 section). Owed for Ch. 7: identify and read its
+paired essay(s) before mining — likely `library/legacy.html` (the abolition material is already there) and
+possibly a moral-argument essay; confirm against `library/index.html` first.
 
 This book prints footnotes at the foot of each page, so they arrive with the body automatically — no
 separate endnote pass is needed.
