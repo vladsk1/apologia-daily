@@ -51,9 +51,19 @@
       "reason": "English-ADD only (not a retired-claim fix): the 2026-08-17 additions for backlog rows 185/186 add a Lewis & Barnes citation to fn 1, a Sabine Hossenfelder untestability paragraph with a new fn 12, and a clause in 'The Honest State of the Scholarship' - which also RENUMBERED footnotes 12-15 to 13-16. The mirrors are not WRONG, only less complete and still at 15 footnotes; nothing false is live in translation. Deliberately NOT hand-translated per the owner's standing preference against untranslated doctrinal prose no native reviewer will gate. ⚠ NOTE FOR WHOEVER SYNCS THESE: the Hossenfelder passage is the one that must not be compressed or partially translated - it carries a mandatory symmetry disclosure (she applies the same untestability standard to an unobservable God), and translating the claim without the disclosure would turn a methodological critic into a witness for design. Absent beats half-translated here."
     },
     "ev-s8.html -> ev-s8.mk.html": {
-      "acceptedAt": "2026-08-22",
-      "sourceCommit": "new-tab commit (ev-s8 'The Church in History')",
-      "reason": "NEW TAB, not a lag: ev-s8.mk.html carries the GATED ENGLISH card content unchanged, wrapped in a Macedonian pending-translation banner, per the owner's standing preference that English/absent beats ungated translated doctrinal prose no native reviewer will gate. The only Macedonian text is the nav banner (not doctrinal argument). So the mirror is not behind the source in argument content; it is simply not yet translated. Clear this entry when a native Macedonian reviewer translates AND gates the three cards; Macedonian doctrinal review is outstanding site-wide per docs/STATEMENT_OF_FAITH.md."
+      "acceptedAt": "2026-08-23",
+      "sourceCommit": "652e747",
+      "reason": "REBUILT TAB (2026-08-23): ev-s8 was rebuilt positive-first as 'The Christian Revolution' with 7 cards (riseofchurch, persecution, equality, compassion, science-history, abolition, progress), each ported from its certified deep-dive essay. ev-s8.mk.html carries the GATED ENGLISH card content unchanged under a Macedonian pending-translation banner (the only Macedonian text on the page), per the owner's standing preference that reviewed-English/absent beats ungated translated doctrinal prose no native reviewer will gate. The mirror is not behind the source in argument content; it is simply not yet translated. Clear this entry when a native Macedonian reviewer translates AND gates the seven cards; Macedonian doctrinal review is outstanding site-wide per docs/STATEMENT_OF_FAITH.md."
+    },
+    "library/index.html -> library/mk/index.html": {
+      "acceptedAt": "2026-08-23",
+      "sourceCommit": "652e747",
+      "reason": "NAV-INDEX LAG (2026-08-23): the English library/index.html 'Church in History' section was rebuilt as 'The Christian Revolution' (7 essays) when the ev-s8 tab was rebuilt. The localized library-index mirrors (library/mk/index.html, library/es/index.html) still show the old 3-essay 'Church in History' listing. This is a navigation index, not doctrinal argument prose; nothing false is live (the links resolve). Per the owner's standing delete-or-lag preference, the localized index nav is not hand-translated here. Clear when a native reviewer updates the localized library-index church section; Macedonian/Spanish review is outstanding (docs/STATEMENT_OF_FAITH.md)."
+    },
+    "library/index.html -> library/es/index.html": {
+      "acceptedAt": "2026-08-23",
+      "sourceCommit": "652e747",
+      "reason": "NAV-INDEX LAG (2026-08-23): the English library/index.html 'Church in History' section was rebuilt as 'The Christian Revolution' (7 essays) when the ev-s8 tab was rebuilt. The localized library-index mirrors (library/mk/index.html, library/es/index.html) still show the old 3-essay 'Church in History' listing. This is a navigation index, not doctrinal argument prose; nothing false is live (the links resolve). Per the owner's standing delete-or-lag preference, the localized index nav is not hand-translated here. Clear when a native reviewer updates the localized library-index church section; Macedonian/Spanish review is outstanding (docs/STATEMENT_OF_FAITH.md)."
     }
   }
 }
