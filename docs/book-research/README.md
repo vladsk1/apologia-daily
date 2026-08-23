@@ -226,6 +226,29 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   written on a partial capture ("the book never raises god-of-the-gaps") turned out to be wrong once
   the rest of the chapter arrived, and is corrected in place rather than silently fixed.
 
+- `the-air-we-breathe.md` — Glen Scrivener, *The Air We Breathe: How We All Came to Believe in Freedom,
+  Kindness, Progress, and Equality* (**The Good Book Company, © 2022**, reprinted 2022/2023; ISBN
+  9781784987497; Scripture = **NIV 2011**) — ⚠ **PARTIAL, from the owner's own copy: cover, copyright page,
+  Introduction (pp. 11–21) and ch. 1 (pp. 23–39) captured with their footnotes; ch. 2 onward NOT captured,
+  and the table of contents has not been photographed.** The thesis: seven modern values — equality,
+  compassion, consent, enlightenment, science, freedom, progress — are a minority report in world history
+  that reached us through the Jesus revolution, invisible because we are breathing them; and the seven
+  standard *accusations* against Christianity are those seven values reversed. ⭐ **The spine is already LIVE
+  and CERTIFIED** — `library/legacy.html` cites this book at fn 5 — so the note is largely corroboration.
+  **Its value is the ancient-world half our essay is thinnest on:** the pagan origin myths (*Enuma Elish*,
+  *Atrahasis* — humanity made from a murdered god's blood **to carry the gods' workload**, which is the
+  anthropology imago Dei was carried *against*, and the batch's top find), the Ciceronian crucifixion-shame
+  texts (*Pro Rabirio* 5.16; *Against Verres* 2.5.169–170), Pedanius Secundus (*Annals* 14.42–45 — 400 slaves
+  crucified, argued for on **greater-good** grounds), the **Alexamenos graffito**, and ancient justice as the
+  *enforcement* of inequality (Siedentop p. 51 — a page-precise quotation from a source we already cite).
+  Also worth more than the book itself: **the scholarly reading list it routes to**, one book per value
+  (Siedentop, Hurtado, Kyle Harper, Seb Falk, Hardin ed., David Brion Davis, Alec Ryrie). **8 backlog rows
+  logged** (1 P2, 5 P3, 2 P4). 🔴🔴 **Hard do-not-use: the p. 30 epigraph attributes CALLICLES (*Gorgias*
+  483c–d) to PLATO** — a view Socrates refutes — with a backwards date; and its "nobody in antiquity attacked
+  slavery" line is **weaker than what our essay already says correctly**, so it is a hazard, not a gap.
+  🔴 Also do-not-use: the HuffPost-sourced "more Christians in China than the US by 2030" projection.
+  ⚠ Any port of "God himself hung on a cross" **must carry `legacy.html`'s `orthonote` fence**.
+
 ### ⚠ PARTIAL notes — books NOT owned, NOT read (added 2026-07-26, Tyndale/evangelical mining batch)
 These four were queued as books by `docs/article-research/MINING-BRIEF-tyndale-batch.md`. Because we do
 **not** own them, each is mapped only at **thesis/chapter level**, and only from legitimate non-book

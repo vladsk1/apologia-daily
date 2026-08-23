@@ -1,0 +1,427 @@
+# *The Air We Breathe* — Glen Scrivener (research map)
+
+> **⚠ PARTIAL — capture in progress.** See the **Capture status** table below for exactly which pages are
+> mapped and which are not. Nothing outside the captured range has been read, and no verdict below covers it.
+
+**Book:** Glen Scrivener, *The Air We Breathe: How We All Came to Believe in Freedom, Kindness, Progress,
+and Equality*.
+**Publisher:** The Good Book Company. **© 2022 Glen Scrivener. Reprinted 2022, 2023.**
+**ISBN:** 9781784987497. Printed in Turkey. Cover design by Faceout Studio; art direction and design by
+André Parker.
+**Scripture:** "Unless indicated, all Scripture references are taken from the Holy Bible, New International
+Version. Copyright © 2011 Biblica, Inc." — i.e. **NIV 2011 is the book's default**; check any Scripture
+wording against NIV 2011 before assuming it matches whatever translation our page uses.
+
+*(All of the above is read directly off the owner's own copy — cover and copyright page photographed
+2026-08-23 — not from a catalogue or a web lookup. ⚠ The copyright page prints **no place of publication**.
+Our live citation in `library/legacy.html` gives "Epsom: The Good Book Company, 2022"; the year and
+publisher are now confirmed against the book, the **place is not** and came from elsewhere.)*
+
+## How to use this note (read before mining)
+
+- **This is a map of leads, not a source.** Never reproduce Scrivener's prose. Everything below is in our
+  own words, capturing the *shape* of the argument and the *primary sources* it points at.
+- **Every citation here is UNVERIFIED** until confirmed against the primary and run through
+  `apologia-citations` → `apologia-argument` → `apologia-orthodoxy`. The note is a lead.
+- **Popular level, and it says so.** Scrivener writes: philosophy/theology background, "more of an 'ideas'
+  person", "a relatively short book" (p. 19). He names his own scholarly upstream (see *The reading list
+  Scrivener hands you*, below) — **that list is the mining target, not the book's own prose.**
+- **We already cite this book.** `library/legacy.html` fn 5 + bibliography carries it, and it is named in
+  `tools/reel/specs/air-we-breathe.json`. So the spine is live and certified: **this note is mostly
+  corroboration, and its value is in four or five specific things the essay does not have.**
+- **⚠⚠ The one hard do-not-use is on p. 30 — see HAZARD 1 (the Plato/Callicles epigraph). It is the kind of
+  error that would be caught by a hostile reader instantly and would cost the page its authority.**
+
+### Paired essays read in full (Step Zero, 2026-08-23)
+
+Read **start to finish before opening the book** — article body, footnotes and bibliography of each
+(page chrome, nav and CSS excluded, which is not content):
+
+1. **`library/legacy.html`** — *Did Christianity Change the World?* (the direct counterpart; Holland's
+   *Dominion* thesis, the ledger of the church's crimes, the good≠true firewall). **Primary pairing.**
+2. **`library/riseofchurch.html`** — *How Did the Church Take Over the Roman Empire?*
+3. **`library/persecution.html`** — *What the Early Church Actually Suffered.*
+4. **`library/moral.html`** — *The Moral Argument for God.*
+
+Routing basis: `library/index.html` blurbs + the `ev-s8` "The Church in History" tab, which is the tab
+this book sits under. The four above are the whole of the on-site counterpart; no fifth essay came close.
+
+---
+
+## The thesis / spine
+
+**One sentence:** the moral convictions a modern Westerner treats as obvious — equality, compassion,
+consent, education for all, science, freedom, progress — are *not* obvious, are a minority report in world
+history, and reached us through the Jesus revolution; you cannot see them because you are breathing them.
+
+Scrivener's framing devices, in his own structure:
+
+- **The goldfish / "what's water?"** opening: the most pervasive influence is the least visible.
+- **"Focus on your breathing"** — the book as an attention exercise on the *world of ideas* you inhabit,
+  borrowed deliberately from the spiritual-teacher register.
+- **The two-sentence summary of the whole book** (p. 13): the impact of Christianity is shown by the fact
+  that you *don't notice it*; you already hold "Christian-ish" views, and taking them for natural is itself
+  the evidence.
+- **Three named audiences** (pp. 13–15): the **"nones"** (unfamiliar, curious), the **"dones"** (familiar,
+  rejected it), the **"wons"** (Christians). To the "dones" he makes a specific move worth noting — *take
+  your critiques more seriously, not less*, because owning those standards fully may lead back toward the
+  faith's essence.
+- **The seven values are the reversed seven accusations** (p. 14). This is the book's cleverest structural
+  move and it is *not* on our site in any form: the charges laid against Christianity (unequal, cruel,
+  coercive, ignorant, anti-science, restrictive, backwards) are the photographic negative of the seven
+  values, and the values bite *because* they are Christian. "Our problems with Christianity… turn out to be
+  *Christian* problems."
+
+### The seven values, as Scrivener defines them (pp. 16–17)
+
+His own one-line definitions, paraphrased — each becomes a chapter:
+
+| # | Value | Scrivener's definition (paraphrased) | Chapter era |
+|---|---|---|---|
+| 1 | **Equality** | equal moral status of every member of the human family, whatever rank, race, religion, gender or sexuality | OT / start of the Bible |
+| 2 | **Compassion** | a society is judged by how it treats its weakest members | the arrival of Jesus (NT) |
+| 3 | **Consent** | the powerful have no right to force themselves on others | the early church's moral revolution |
+| 4 | **Enlightenment** | education for all, and its power to transform a society | fall of Rome (410) → Reformation |
+| 5 | **Science** | its ability to help us understand the world and improve our lives | 16th–17th c., the founders of the method |
+| 6 | **Freedom** | persons are not property; each should control their own life | abolition of the trans-Atlantic trade, 18th–19th c. |
+| 7 | **Progress** | moral improvement over time; continued reform of former evils | the 20th c. — Hitler as moral monster, MLK as moral hero |
+
+Arc: "**from Genesis to George Floyd**." Chapters 9 and 10 then reflect (ch. 9: where the West now stands;
+ch. 10: how the Bible charted this course in advance), followed by a closing address to nones/dones/wons.
+
+### Scrivener's own scope disclaimers (pp. 17–19) — worth borrowing, not just noting
+
+He pre-empts the two objections our own essay also has to handle, and does it up front:
+
+- **"Not because 'West is best'. It's not."** He promises horrendous evils and mixed "successes".
+- **Christianity is not a Western phenomenon.** Christian history is far more global than his telling:
+  Ethiopia among the first Christian countries; a 1,000-year Christianised Byzantium that in many ways
+  outshone its "younger brother" in the West.
+- **Two stated reasons for the Western focus:** (a) the West's outsized global impact, for good and ill;
+  (b) he is writing to an English-speaking UK/US/Australia readership — "I'm writing about the air I
+  breathe, and I'm assuming it's the kind of air you breathe too."
+- **The timeline is deliberately uneven** — the seven values, not chronology, drive the structure.
+
+### The reading list Scrivener hands you (pp. 19–20) — *this is the real mining target*
+
+Per value:
+
+| Value | Book he routes to |
+|---|---|
+| Equality | **Larry Siedentop, *Inventing the Individual*** |
+| Compassion | **Larry Hurtado, *Destroyer of the gods*** |
+| Consent | **Kyle Harper, *From Shame to Sin*** |
+| Enlightenment | **Seb Falk, *The Light Ages*** |
+| Science | **Jeff Hardin (ed.), *The Warfare between Science and Religion: The Idea That Wouldn't Die*** |
+| Freedom | **David Brion Davis, *In the Image of God*** |
+| Progress | **Alec Ryrie, *Protestants*** |
+
+For the larger sweep: **Tom Holland, *Dominion*** · **D. B. Hart, *Atheist Delusions*** · **Vishal
+Mangalwadi, *The Book That Made Your World*** · **Rodney Stark, *The Triumph of Christianity*** · **John
+Dickson, *Bullies and Saints*** · **Joseph Henrich, *The WEIRDest People in the World***.
+
+⚠ **Name collision to avoid:** Scrivener recommends **Stark's** *The Triumph of Christianity* (2011).
+`library/riseofchurch.html` fn 7 cites **Ehrman's** *The Triumph of Christianity* (2018) — a different book
+with the same title, used for a *lower* estimate of Christian numbers. Do not let these merge in a citation.
+
+### W.E.I.R.D. (pp. 20–21)
+
+Scrivener's closing move in the Introduction: historians, scientists and sociologists, "whether Christian
+or not (mostly they're not)", converge that modern Western values are **W.E.I.R.D.** — Western, Educated,
+Industrialised, Rich, Democratic (Henrich's acronym, coined with other social scientists) — and that our
+outlook is "a minority report in world history". Henrich and the others then argue **Christianity made the
+difference**: the WEIRD West has its roots in the Jesus revolution.
+
+⚠ Note the care needed here, and note that **Scrivener does not call Holland "secular"** — he says of the
+whole list "mostly they're not [Christian]", which is a claim about the group, not about any individual.
+See the *Live-door status* row on the reel spec.
+
+---
+
+## Chapter map
+
+### Introduction (pp. 11–21) — "What's water?"
+
+Captured in full. Mapped above (thesis, seven values, three audiences, scope disclaimers, reading list,
+WEIRD). Its two footnotes:
+
+- **n. 1** — Pew Research Center, *The Future of World Religions: Population Growth Projections, 2010–2050*
+  (pewforum.org, 2015): as of 2010, roughly a quarter of the global Christian population in Europe (26%),
+  a quarter in Latin America and the Caribbean (25%), a quarter in sub-Saharan Africa (24%), with Asia-
+  Pacific (13%) and North America (12%). **Usable primary** — Pew is a legitimate, citable source and the
+  2010 baseline is stable.
+  🔴 **But the second half of n. 1 is do-not-use:** the claim that China's Christian growth has run ~10% per
+  annum for 40 years and that China will have more Christians than the United States "by the year 2030" is
+  sourced to a **HuffPost news article (2014)** reporting what "experts say" — a journalistic secondary,
+  not a study. It is also now **testable and looking wrong**: we are in 2026 and the widely-cited
+  estimates have not tracked that curve. **Do not put a projection like this on the site.**
+- **n. 2** — *Communities of Faith in Africa and the African Diaspora*, ed. Casely B. Essamuah and David K.
+  Ngaruiya (Pickwick Publications, 2014), p. 321, behind the line that the average Anglican in the world
+  today is a black teenage girl from Nigeria (and that Nigeria has more Anglicans than Britain has people).
+  Vivid; **verify before use** — this is a much-repeated popular formulation and the page cite needs eyes on.
+
+**Guardrail fit:** clean. The Introduction is unusually careful for a popular book — it disclaims Western
+triumphalism, promises the ledger of evils, and concedes that Christian history is global. Nothing here
+trips orthodoxy, denominational neutrality, or the false-common-ground rule. ⚠ The one thing to watch is
+that the whole framing is *utility*-shaped ("look what it gave you"), which is exactly the inference
+`library/legacy.html` exists to refuse. **Mine the history; never let the frame do argumentative work.**
+
+### Ch. 1 — "The Night Before Christmas" (pp. 23–39)
+
+**Thesis:** step into Roman sandals and look at a cross. The ancient world was a "vertiginously steep
+hierarchy" — and not merely of rank or role but **a hierarchy of *being***. Crucifixion was the
+enforcement of that hierarchy. So the Christian claim that the man on the cross was *God* is "the most
+revolutionary notion the world has ever entertained."
+
+**Argument beats (our words):**
+
+1. **The art-gallery hook.** A visitor's quip — Western art is "a thousand years of crucifixions, then
+   stripes" — reported on Twitter, 2017 (n. 3). Reductionistic, and yet: we stroll past dozens of
+   depictions of death by torture and murmur "sacred art". *The incongruity goes unnoticed, and that is
+   the proof of the revolution* — the cross changed the way we see, so we can no longer see the cross.
+2. **The Alexamenos graffito.** The earliest surviving depiction of Christ's crucifixion is *mockery* —
+   scratched into plaster on Rome's Palatine Hill: a crucified figure with a donkey's head, a devotee
+   below, captioned "Alexamenos worships his god". Scrivener's point: this joke still lands, and that is
+   the ancient verdict — a man on a cross is not a god, he's an ass, and his venerator a fool at best.
+   **Who sees the cross more clearly, the Roman mocker or the sacred artist?**
+3. **Shame was the point, not just pain.** "Excruciating" is *ex crucis*. But worse than the pain was the
+   public un-personing: impaled, naked, before a watching world.
+4. **Crucifixion as the enforcement of a hierarchy of being.** Certain classes could be crucified and
+   certain classes could not. The same act was "appropriate" or an unspeakable evil *depending on who was
+   on the cross*.
+5. **Pedanius Secundus, AD 61.** A Roman senator murdered by one of his slaves; custom required all
+   **four hundred** household slaves crucified. Some in the Senate "shrank from extreme rigour"; the
+   majority followed **Cassius** — tradition trumps pity, the ancients had spoken, and "there is some
+   injustice in every great precedent… compensated by the public advantage." *Terror* is what holds a
+   motley rabble; only by terror can a few nobles live safely "among a trembling throng". 400 men, women
+   and children went to 400 crosses.
+   ⭐ Scrivener's aside is sharp and worth keeping: this is an argument for **the greater good** in which
+   individuals are sacrificed to public advantage — *the very opposite of today's belief in progress*.
+6. **Deterrence, and the un-personing of the victim.** To see "the slaves' punishment" inflicted publicly
+   on hundreds, sometimes on innocents, was to see their worthlessness stated in the starkest terms — and
+   the more they butchered, the more they felt able to. To watch a crucifixion was to watch an un-personing
+   and hear the message: *do not go the way of this wretch*.
+7. **Executions were popular, not merely tolerated.** Public, sometimes part of the games, crucifixions as
+   half-time entertainment; wild beasts devouring prisoners; the *bestiarii* boasting they could train a
+   bull to attack its victim sexually — re-enacting myths in which gods take animal form to rape women.
+   Under **Caligula (AD 37–41)**, when beast-meat grew expensive, the emperor ordered the city's prisoners
+   — tried or untried — fed to the animals. "In Rome some kinds of people could be pet food."
+8. **And the hierarchy was not lamented but *lauded*. It was *just*. It is what "Nature herself" taught.**
+9. **What nature teaches** (pp. 30–31). Ancient philosophers did not think of themselves as *defending*
+   inequality — they were describing the furniture of the universe. Superior races (Greeks over
+   barbarians), superior sexes (men over women), superior classes (free men over slaves). Justice **was**
+   your superiors ruling over you; the position fate assigned you was your just deserts. Modern "justice"
+   means the *equalising* of persons; the classical world meant the *enforcement* of inequality.
+   Siedentop, quoted: "At the core of ancient thinking [was] the assumption of natural inequality" (n. 11).
+   ⚠⚠ **See HAZARD 1 on the Plato epigraph and HAZARD 2 on "no one was attacking it".**
+10. **What religion teaches** (pp. 32–35). The sacred/secular divide would have been *alien* to the ancient
+    world — and Scrivener's claim (developed at ch. 5) is that we only distinguish the two *because of* the
+    Christian revolution. Politics was the affairs of the *polis*, and the polis was an aggregation not of
+    individuals but of **families**, each headed by a *paterfamilias* with life-or-death power and a
+    priestly role in the family cult. To be a citizen was to share the worship of the city's gods. Even
+    Athenian "democracy" was thoroughly religious — the *fathers* voted, options were pre-limited by lot
+    and by consulting the Delphic oracle; "it was divination more than democracy that ruled Athens."
+11. **Origin stories: "Born to slave"** (pp. 34–36). The ancient Near East: chaos → rebellion → war →
+    slavery → us. *Enuma Elish* — Marduk slays Tiamat, her body split into sky and land, 300 gods to the
+    sky and 600 to the land, and humanity made from **Kingu's blood** so that "the toil of the gods will be
+    laid on humans" (n. 12). *Atrahasis* — "Create primeval man, that he may bear the yoke… Let man bear
+    the load of the gods!", humanity again made by sacrificing a god (Geshtu-E) and pressed into hard
+    labour (n. 13). Greek myth: chaos, warfare, slavery — plus jealousy and sex (Gaia/Ouranos/Kronos/Zeus;
+    Prometheus forming man from dust and punished for the theft of fire). Rome rebrands rather than
+    rewrites, with one significant update: **Mars**. Where the Greeks found Ares destructive and
+    contemptible, the Romans made their war-god the picture of virility, second only to Jupiter — and the
+    founders of Rome, Romulus and Remus, are his offspring **by his rape of Rhea Silvia**. "That city was
+    born of war and rape."
+    ⭐ **This is the beat with the most value for us: the ancient anthropology is that humans exist to be
+    the gods' labour force, made from a murdered god's blood.** Set against Genesis 1:27 that is a
+    contrast of *kind*, not of degree — and it is the missing first half of the imago-Dei argument
+    `library/legacy.html` already makes.
+12. **Propping up the cosmos** (pp. 37–39). Standing at the foot of a cross a Roman had "a gutter-level
+    view of the whole terrifying structure of reality that towered above": the cross came down from violent
+    powers on high to crush the contemptible and maintain the "just" order of the empire — of the cosmos.
+    Then Christians said, *we see something else*: **God himself had hung on a cross.** Not Mars — when
+    Mars came in peace he sheathed his spear; this God had a spear plunged into his heart by a Roman
+    soldier, and died the death of a slave.
+13. **And the first people to call this figure "God" were the last you would expect.** Christianity began
+    as a **Jewish** movement; Christ's earliest followers were Jews, and when a Jew said "God" he did not
+    mean a member of the pantheon or a squabbling Babylonian deity but "the Maker of heaven and earth, the
+    Source of life and being". It was Jews who first looked at a crucified man and said *Behold our God*.
+14. **Paul knew how it sounded.** "The message of the cross is foolishness… but to us who are being saved
+    it is the power of God" (1 Corinthians 1:18) — and he summarised his whole message as "Christ and him
+    crucified" (1 Corinthians 2:2). Naturally speaking a first-century hearer could only find it stupid,
+    and a *particularly shameful* kind of stupid. Yet it made sense of their lives: they had been met by
+    the God of heaven who had deigned to stoop. **"Rock bottom became ground zero."**
+15. **Close:** humble sacrifice has gone from shameful to glorious; we now wander blithely through
+    galleries to gaze on a thousand years of crucifixions. Whatever moral earthquake occurred, its impact
+    has been seismic.
+
+**Primary-source leads to verify (ch. 1):**
+
+| Lead | Locus as the book gives it | Note |
+|---|---|---|
+| "Wretched is the loss of one's good name… the very word 'cross' [kept] far from the bodies, thoughts, eyes and ears of Roman citizens" | **Cicero, *Pro Rabirio*** (n. 4 gives *Speech before Roman Citizens on Behalf of Gaius Rabirius, Defendant Against the Charge of Treason*, ed. W. B. Tyrrell, Perseus, ch. 5 §16) | The classic shame text. **Verify at *Pro Rabirio Perduellionis Reo* 5.16.** |
+| Crucifixion "the most miserable and most painful punishment, appropriate to slaves alone" | **Cicero, *Against Verres*** (n. 7, Perseus, Yonge ed., 2.5 §169) | |
+| "It is a crime to bind a Roman citizen; to scourge him is a wickedness; to put him to death is almost parricide. What shall I say of crucifying him?" | **Cicero, *Against Verres*** (n. 8, Perseus, §170) | The owner has underlined this one in the copy. |
+| Crucifixion as "the extreme penalty" | **Tacitus, *Histories* 4.11** (n. 5) | ⚠ Scrivener prints "Historiae 4.11". Verify — the famous *supplicium extremum* / "extreme penalty" phrase our essays associate with Tacitus is usually cited from *Annals* 15.44. **Check both before citing.** |
+| The cross as "the slave's punishment" | **Tacitus, *Annals* 15.44** (n. 6) | The *servile supplicium* idea. |
+| Pedanius Secundus: 400 slaves crucified, AD 61; Cassius' speech; "only by terror"; "some injustice in every great precedent" | **Tacitus** (n. 9 cites a university course page hosting the passage) | 🔴 **The book's cited URL is a course web page, not an edition.** The passage is **Tacitus, *Annals* 14.42–45**. Cite the *Annals* directly, verified. |
+| "[our torturers were commanded] to think and act as if we no longer existed" | **"The Writings of Phileas the Martyr describing the Occurrences at Alexandria"**, CCEL/NPNF (n. 10) | ⭐ **PD and already in our wheelhouse** — NPNF is exactly the translation class `/sources` accepts. **`/sources` candidate.** |
+| "Nature herself intimates that it is just for the better to have more than the worse… Justice consists in the superior ruling over and having more than the inferior" | printed as **"(Plato, 428–438 BC)"** | 🔴🔴 **HAZARD 1 — DO NOT PORT. See below.** |
+| "For that some should rule and others be ruled is a thing not only necessary, but expedient; from the hour of their birth, some are marked out for subjection, others for rule" | printed as **"(Aristotle, 384–322 BC)"** | **Genuine Aristotle, in his own voice — *Politics* 1254a21–24.** `library/legacy.html` already cites *Politics* 1.3–7 (1253b–1255b); this is the sharpest single line inside that range. |
+| "At the core of ancient thinking [was] the assumption of natural inequality" | **Larry Siedentop, *Inventing the Individual* (Penguin, 2015), p. 51** (n. 11) | ⭐ **Siedentop is already in `library/legacy.html` fn 12** — but only as a general pointer, with no quotation and no page. **This is a page-precise, quotable line from a source we already trust.** |
+| Humanity made from Kingu's blood to bear the gods' toil | ***Enuma Elish* 29–34** (n. 12, via a USU lecture PDF) | Cite a real edition/translation, not the lecture PDF. |
+| "Create primeval man, that he may bear the yoke… Let man bear the load of the gods!" | ***Atrahasis*, Tablet 1** (n. 13, via a UFSC-hosted PDF) | Same — cite an edition (Lambert & Millard). |
+| Alexamenos graffito, Palatine Hill | described, not footnoted | Verify independently; standard dating is c. AD 200 (range 1st–3rd c.), Palatine Antiquarium. |
+| Caligula feeding untried prisoners to the beasts | described, not footnoted | Almost certainly **Suetonius, *Caligula* 27**. Verify. |
+| *bestiarii* / mythological re-enactment executions | described, not footnoted | The scholarly locus is K. M. Coleman, "Fatal Charades," *JRS* 80 (1990). **Verify before any use — this is lurid material and the site should not run it uncited.** |
+
+**Guardrail fit (ch. 1):** doctrinally clean and, at one point, notably good. Scrivener's "God himself had
+hung on a cross" is exactly the claim `library/legacy.html` carries **with an `orthonote` fence** ("God
+himself, in the person of the Son, had been executed" — Is saying / Not saying). ⚠ **Any port of this beat
+must carry that fence.** Scrivener's own wording — "God did not sheath his spear… he died the death of a
+slave" — is unfenced, and compressed onto a card it could read patripassian. His Jewish-monotheism
+paragraph (beat 13) is a real strength and is orthodox as it stands: it locates the scandal correctly
+(Jews, of all people, saying *Behold our God*) rather than in a pagan register.
+
+---
+
+## 🔴 HAZARDS — things in this book we must NOT copy
+
+**HAZARD 1 — the Plato epigraph on p. 30 is misattributed, and the date is malformed. DO NOT PORT.**
+The epigraph "Nature herself intimates that it is just for the better to have more than the worse… Justice
+consists in the superior ruling over and having more than the inferior" is credited to **"(Plato, 428–438
+BC)"**. Two separate problems:
+- **It is not Plato's view. It is *Callicles'* speech in the *Gorgias* (483c–d)** — the immoralist position
+  that Socrates spends the rest of the dialogue **refuting**. Quoting it as "Plato" inverts the dialogue
+  and hands a knowledgeable reader an instant, page-discrediting correction. (Scrivener's *body* text is
+  more careful — he says "no ancient would have quibbled with the views expressed above" — but the
+  epigraph as printed attributes the words to Plato.)
+- **The dates run backwards.** Plato is c. 428/427 – c. 348/347 BC; "428–438 BC" is not a life span.
+- **What to do instead:** for the ancient-hierarchy point use **Aristotle, *Politics* 1254a** (the second
+  epigraph), which Aristotle really does assert in his own voice, and which `library/legacy.html` already
+  stands on. If Plato is wanted at all, cite *Republic* on the ordering of souls, or cite the *Gorgias*
+  **as Callicles**, explicitly.
+
+**HAZARD 2 — "Plato and Aristotle did not defend slavery, because no one was attacking it" (p. 30) is
+weaker than what our own essay already says, and is arguably false.** `library/legacy.html` states the
+more precise and better-evidenced version: *"Aristotle defends slavery as natural precisely because others
+were calling it a mere convention against nature"* — which is what *Politics* 1253b20–23 actually reports,
+and which the essay pairs with Seneca (*Ep.* 47), Ulpian (*Digest* 50.17.32) and Florentinus (*Digest*
+1.5.4.1). ✅ **Verdict 5 — ours is better. Do not "improve" our sentence toward Scrivener's.** Our version
+concedes the existence of dissenting ancient voices *and* explains why they never became a movement; his
+denies they existed.
+
+**HAZARD 3 — the utility frame.** The book's entire architecture is "look what this gave you". That is the
+inference `library/legacy.html` exists to refuse, in its own words: *"nothing here is evidence that
+Christianity is true… Christianity's claim on anyone is that it is true, not that it is useful."* Mine the
+history and the primaries; never let Scrivener's frame carry argumentative weight on our pages, and never
+let a compressed card imply good⇒true.
+
+**HAZARD 4 — the China projection in n. 1 (see Introduction above).** HuffPost-sourced, "experts say",
+and now overtaken by events. Do not use.
+
+**HAZARD 5 — three of the book's footnotes cite teaching pages and lecture PDFs rather than editions**
+(Tacitus on Pedanius via a university course page; *Enuma Elish* via a lecture PDF; *Atrahasis* via a
+hosted PDF). Those are fine as *finding aids* and unusable as *citations*. Always go to a real edition.
+
+**HAZARD 6 — the games material (beat 7) is lurid and largely unfootnoted in the book.** If any of it
+reaches the site it needs a specialist citation (Coleman, *JRS* 1990) and a reason to be there. It is not
+needed for the argument, and on a share-card it would be gratuitous.
+
+---
+
+## ⭐ STANDING OUTPUT: is the source better than our essays anywhere? Where, and how?
+
+**Yes — in three places, and all three are about the *ancient world half* of the argument, not the
+Christian half.**
+
+1. **⭐ The ancient origin stories (verdict 4 — missing from ours).** *Enuma Elish* and *Atrahasis* make
+   humanity out of a murdered god's blood **in order to carry the gods' workload**. Our
+   `library/legacy.html` says the image of God (Genesis 1:27) is a Jewish doctrine that Christianity
+   carried into the Gentile world — true, and well fenced — but it never shows **what it was carried
+   *against***. The contrast is not "a nicer anthropology"; it is *humans-as-divine-labour* versus
+   *humans-as-divine-image*. This is the single most valuable thing in the captured range. Zero hits
+   site-wide for `Enuma Elish` or `Atrahasis`.
+
+2. **⭐ Hierarchy of *being*, not of rank (verdict 3 — weaker in ours).** Our essay says the ancient world
+   lacked "any settled conviction that the weak have a claim on the strong simply by being human". True,
+   but stated as an *absence*. Scrivener states the **positive** doctrine that occupied that space:
+   inequality was not a regrettable fact but *what nature taught*, and justice **was** the enforcement of
+   it — so ancient "justice" and modern "justice" are near-opposites. Siedentop, p. 51, supplies the
+   quotable line, and Siedentop is already in our footnotes. **This is a wording-improvement row, not a
+   content-addition row.**
+
+3. **⭐ The reversed-accusations structure (verdict 4 — missing from ours).** The seven modern charges
+   against Christianity are the negatives of the seven values, and they bite because the values are
+   Christian. This is a genuinely useful apologetic move that appears nowhere on the site. ⚠ It must be
+   built with the firewall attached (HAZARD 3) — "your objection borrows my standard" is one short step
+   from "therefore I'm right", which is the laundering structure `apologia-argument` dismantled in
+   `legacy.html`'s round 1.
+
+**And where ours is better (verdict 5 — flag, do not mine):** the ancient dissenting voices (HAZARD 2);
+the ledger of the church's crimes, which Scrivener promises but which our essay actually itemises with
+specialist citations; the causal honesty on abolition (Christopher Leslie Brown's *Moral Capital*, which
+Scrivener's freedom chapter is unlikely to match — **to be confirmed when ch. 7 is captured**); and the
+whole good≠true firewall, which our essay states three times and this book, by design, does not state at all.
+
+---
+
+## Live-door status — the mandatory cross-check
+
+Classifications for everything in the captured range. **Six-verdict scheme per `CLAUDE.md`.**
+
+| # | Lead | On-site home | Verdict | Action |
+|---|---|---|---|---|
+| 1 | Book's bibliographic data (subtitle, publisher, 2022) | `library/legacy.html` fn 5 + bibliography | **1 — corroboration** ✅ | Subtitle checked **word-for-word against the cover**: matches. Year + publisher match the copyright page. No row. ⚠ "Epsom" (place) is not on the copyright page — unverified, harmless. |
+| 2 | The values feel like atmosphere because we've never been without them | `library/legacy.html` (the Scrivener sentence at fn 5) | **1 — corroboration** | Already the exact use we make of him. No row. |
+| 3 | Crucifixion = the slave's death, engineered to strip dignity | `library/legacy.html` ("crucifixion was engineered to strip a human being of dignity in public"); `library/persecution.html` | **1 — corroboration** | Covered. But see rows 4–6 for the *primaries*, which we do not have. |
+| 4 | **Cicero *Pro Rabirio* 5.16 + *Against Verres* 2.5.169–170** as the shame texts | nothing — **0 hits site-wide** | **4 — missing** | **Row: P3.** Our crucifixion-shame claim currently rests on our own assertion; these give it a Roman voice. |
+| 5 | **Pedanius Secundus — 400 slaves crucified, AD 61 (*Annals* 14.42–45)** | nothing — **0 hits site-wide** | **4 — missing** | **Row: P3.** The single most concrete illustration of "a hierarchy of being" available. ⚠ Cite the *Annals*, not the book's course-page URL. |
+| 6 | **The Alexamenos graffito** | nothing — **0 hits site-wide** | **4 — missing** | **Row: P3.** Earliest depiction of the crucifixion is a mockery — an unusually good, shareable, *hostile-witness* item. |
+| 7 | **Ancient origin stories: humanity made to be the gods' slaves (*Enuma Elish*, *Atrahasis*)** | nothing — **0 hits site-wide** | **4 — missing** ⭐ | **Row: P2 — the batch's top find.** See STANDING OUTPUT 1. |
+| 8 | **Hierarchy of *being*; ancient justice = enforcement of inequality; Siedentop p. 51** | `library/legacy.html` states the absence, not the positive doctrine; Siedentop cited at fn 12 without page or quotation | **3 — weaker in ours** ⭐ | **Row: P3 (wording).** See STANDING OUTPUT 2. |
+| 9 | **The seven accusations reversed into the seven values** | nothing site-wide | **4 — missing** ⭐ | **Row: P3.** See STANDING OUTPUT 3 — and the firewall caveat. |
+| 10 | Aristotle: some marked from birth for subjection (*Politics* 1254a) | `library/legacy.html` fn 4 cites *Politics* 1.3–7 (1253b–1255b) | **1 — corroboration** | Already covered, and covered *better* (with the dissenting-voices context). No row. |
+| 11 | "Plato" on natural inequality | — | **5 — hazard / error in the SOURCE** 🔴 | **No row. HAZARD 1.** Never port. |
+| 12 | "No one was attacking slavery in antiquity" | `library/legacy.html` says the opposite, correctly | **5 — hazard, ours is better** ✅ | **No row. HAZARD 2.** Do not let a future session "improve" us backwards. |
+| 13 | God himself hung on a cross / the crucified God | `library/legacy.html`, **with the `orthonote` fence** | **1 — corroboration**, with a fence our source lacks | No row. ⚠ Any port carries the fence. |
+| 14 | Christianity's first worshippers of the crucified were **Jews**, meaning the Maker of heaven and earth | `library/legacy.html` (imago Dei credited as Jewish); `library/jesus_as_god_nt.html`, `library/shema.html` for the monotheism | **1 — corroboration** | Covered across the deity cluster. No row. |
+| 15 | 1 Cor 1:18 / 1:23 / 2:2 — the cross as folly | `library/legacy.html` quotes 1 Cor 1:23 | **1 — corroboration** | No row. |
+| 16 | Sacred/secular divide is itself a Christian product (flagged for his ch. 5) | nothing site-wide | **deferred** | Cannot classify — the argument is in ch. 5, not yet captured. Re-check when ch. 5 arrives. |
+| 17 | Christianity is *not* a Western phenomenon (Pew 2015; global south) | `library/legacy.html` concedes the ledger is "weighted toward the West" but makes no global-Christianity point | **4 — missing (minor)** | **Row: P4.** Small but it strengthens the essay's own self-limitation. ⚠ Pew only — **not** the HuffPost China projection (HAZARD 4). |
+| 18 | W.E.I.R.D. / Henrich | nothing — **0 hits site-wide** | **6 — non-recommendation** | **No row, and here is the reason:** Henrich's causal thesis (the church's medieval marriage-and-family programme rewrote Western psychology) is a large, contested claim in cultural evolution, and importing the acronym without the thesis is decoration. It also cuts against denominational neutrality — the mechanism is specifically the *Western* church's canon law on cousin marriage. Logged deliberately, not overlooked. |
+| 19 | Reel spec calls Holland "the secular historian" | `tools/reel/specs/air-we-breathe.json` (kicker + voiceover) | **2 — error in ours** 🔴 | **Already logged — `docs/content-backlog.md` row 30.** This capture *strengthens* it: the book itself never calls Holland secular (it says of the whole list "mostly they're not"), and `library/legacy.html` fn 2 records that Holland was made **Canon Historian at Salisbury Cathedral by 2025**. So the reel's "EVEN A SECULAR HISTORIAN" is **our own addition and is now false**. No new row; noted here so the existing row is not weakened. |
+| 20 | Phileas the Martyr on being treated as if they no longer existed | nothing site-wide | **4 — missing (`/sources` candidate)** | **Row: P4.** NPNF text = public domain, which is exactly what `/sources` takes. |
+
+**Rows logged: 8 — one P2, five P3, two P4.** Counts measured 2026-08-23 by tallying the rows actually
+appended to `docs/content-backlog.md`, not by tallying this table. *(An earlier draft of this line said
+"7 (one P2, four P3, two P4)" — that was an estimate written before the rows were appended, and it was
+wrong. Corrected in place.)*
+
+---
+
+## Capture status
+
+| Pages | Content | Status |
+|---|---|---|
+| Cover | Title, subtitle, author, Holland endorsement | ✅ captured |
+| Copyright page | Publisher, ©2022, reprints, ISBN, NIV 2011 | ✅ captured |
+| — | **Table of contents** | ⬜ **NOT captured — worth one photo; it would confirm the chapter titles and page ranges** |
+| 11–21 | **Introduction** | ✅ captured in full (incl. nn. 1–2) |
+| 23–39 | **Ch. 1, "The Night Before Christmas"** | ✅ captured in full (incl. nn. 3–14) |
+| 40– | **Ch. 2 onward** | ⬜ not captured |
+| — | Chs. 2–10, the closing address, and any endnote/index apparatus | ⬜ not captured |
+
+**To resume:** photograph the **table of contents** first, then continue from **p. 40** in reading order,
+sending each chapter's body followed by its footnotes (this book prints footnotes at the foot of the page,
+so they arrive with the body automatically — a real advantage over endnote-only books).
+
+**Chapters expected, from the Introduction's own sketch:** 2 Equality (OT) · 3 Compassion (Jesus) ·
+4 Consent (early church) · 5 Enlightenment (410 → Reformation) · 6 Science (16th–17th c.) · 7 Freedom
+(abolition) · 8 Progress (20th c.) · 9 where the West now stands · 10 how the Bible charted the course ·
+closing address to nones/dones/wons. ⚠ That is the *Introduction's* description, not a table of contents —
+treat the chapter numbering as provisional until the TOC is photographed.
+
+**Step Zero for later chapters:** chs. 5–6 (enlightenment, science) will pair with essays *not* in the four
+read above — most likely `library/laws.html` and `library/reason.html`, and possibly `library/bigbang.html`.
+**Read those in full before mining ch. 5–6**, and confirm the routing against `library/index.html` first.
