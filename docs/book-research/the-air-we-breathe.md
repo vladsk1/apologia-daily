@@ -682,7 +682,7 @@ twice over (medieval Europe, then the Atlantic trade), was Christian-driven.
   presents only Brown's deflationary account as "the best modern account"). **New P3 row (balance, bounded).**
 - **Gregory of Nyssa (379) + medieval abolition of European slavery** → **4 — missing.** **New P3 row.**
 
-### Ch. 8 — "Progress" (pp. 167–177 captured; continues p. 178+ — chapter INCOMPLETE)
+### Ch. 8 — "Progress" (pp. 167–185, COMPLETE)
 
 **Thesis:** belief in *progress* — that history is an arrow bending toward justice, not a cycle — is not a
 human universal but a biblical inheritance; and once detached from "a pole star above us," it curdles into
@@ -731,9 +731,29 @@ handled crudely, so it is flagged, not rushed.
    of Abraham" (Matt 1:1) — an impossible task; "Nazi Jesus is not Jesus," Hitler was "very literally,
    anti-Christ." The honest close: *the point is not that heroic Christian resisters existed* (they did) *but
    that if we'd lived through it, our own resistance is "painfully slight"* — no room to feel superior.
-6. **"Humanity" to the rescue** (p. 177+) — the 1941 Atlantic Charter (Churchill/Roosevelt), "faith in…
-   human rights"; Roosevelt updating Jefferson — where Jefferson said "self-evident," Roosevelt admits it is
-   "faith." *(Continues past p. 177 — not yet captured.)*
+6. **"Humanity" to the rescue** (pp. 177–182) — the 1941 Atlantic Charter and the 1948 Universal Declaration
+   of Human Rights, whose grounds are pointed *backward* ("barbarous acts which have outraged the conscience
+   of mankind") — the pit is named, the foundations are not. The Declaration "nails the *what* of human
+   worth and dignity" but "fails the *why*." Nuremberg needed a standard **above both** Nazis and Allies;
+   the old standard was God/natural law, now "too lofty," so "crimes against humanity" put it "down to
+   earth" — but "humanity" includes victims *and* perpetrators (Goebbels: "the Jew is also a man… but the
+   flea is also an animal"), so it cannot by itself say fascism is wrong. T. S. Eliot on "man… no more than
+   an extremely clever, adaptable, and mischievous little animal."
+7. **Fleeing the pit and losing our way** (pp. 182–185) — Jesus and Hitler are "the two most potent figures
+   in the Western moral imagination"; Holland: "we no longer need the devil because we had Hitler… no hell
+   because we had Auschwitz." The post-war order *inverts* Nazism (racial equality, care for the weak — the
+   NHS as "the real state religion of the UK") but, being itself an inversion of Christianity, does not
+   *restore* the original vision; it pursues "humanity, rights, freedom, progress" **divorced from their
+   source** and so "no longer grounded in the Christian story that first gave them meaning." Then MLK's "I
+   have been to the mountaintop" (Moses/Nebo) as the *Christian* alternative — a U-shaped arc that plumbs
+   suffering before rising; "progress can be found in going back to the source."
+
+**Cross-check verdict for pp. 178–185: CORROBORATION.** This is the book's grounding climax, and it is the
+same argument `library/legacy.html` already makes ("these convictions are not self-evident… anyone who
+holds them owes an account of *why* they hold, rather than treating them as the air") and `library/moral.html`
+makes about moral ontology. The Nuremberg / UDHR "nails the *what*, not the *why*" framing is a vivid
+*illustration* of that argument, not a new one — it may optionally enrich the existing progress P3 row, but
+earns no row of its own. The MLK close is gospel proclamation. **No new row.**
 
 **Cross-check verdicts (PROVISIONAL — worldviews.html atheism cards + evil.html not yet read):**
 - **"Was Hitler a Christian? / Nazi Jesus"** → **4 — missing** (0 site hits for the topic). A common,
@@ -748,6 +768,89 @@ handled crudely, so it is flagged, not rushed.
 - **Marx-as-secularised-Christianity; Luther's pamphlet in the ledger** → **6 — non-recommendations.** Marx
   is niche; adding *Luther by name* to `legacy.html`'s ledger would break its deliberate denominational
   even-handedness (it "does not distribute the blame among the traditions"). Logged, not built.
+
+### Ch. 9 — "The Kingdom Without the King" (pp. 187–203, COMPLETE)
+
+**⚠⚠ VERDICT: mostly OFF-LIMITS. This is the book's most contemporary-culture-war chapter, and almost none
+of it is portable to the site.** It reads the 2020 George-Floyd/BLM moment, "taking the knee," cancel
+culture, the transgender debate (the David Mackereth tribunal), "competitive victimhood," and the
+sexual-ethics debate through the borrowed-capital lens. The abstract genealogical/grounding core (contested
+modern values still run on Christian moral capital; "the kingdom without the King is a place of judgment,
+not liberation — values can only judge you, persons can forgive you") is **corroboration** of `legacy.html`
++ `moral.html`. But every *specific application* — BLM, trans, sexual ethics, "competitive victimhood,"
+Douglas Murray's *Madness of Crowds* cultural diagnosis — is exactly the contested, denominationally- and
+politically-divisive territory the site's guardrails tell us not to touch. **No rows.** See **HAZARD 12.**
+
+Beats, for the record: George Floyd as an unwitting "Christ figure" (Antonio García Martínez: "the Western
+mind is a tuning fork calibrated to… the Christ story"); "taking the knee" ↔ the Wedgwood abolitionist
+medallion + King kneeling in prayer 1965; the Mackereth case (a judge ruling belief in Genesis 1:27 male/
+female "incompatible with human dignity" — Spencer Klavan: "akin to insisting seeds are incompatible with
+flowers"); Matthew Arnold's "Sea of Faith" ("Dover Beach"); equality→radical individualism, compassion→
+competitive victimhood, consent→"sex as a leisure activity"; "cancelling" as secular excommunication (Jon
+Ronson); the Dostoevsky "without God all things are permitted" inversion ("everything is *preachy*");
+Douglas Murray on guilt-without-grace; Spurgeon on "semi-Christianity." The **usable core is already on the
+site** (grounding argument); the wrapper is not ours to run.
+
+### Ch. 10 — "Choose Your Miracle" (pp. 205–219, COMPLETE)
+
+**VERDICT: CORROBORATION of the resurrection / messianic-prophecy / Gospel-reliability clusters — plus ONE
+CRITICAL HAZARD (Daniel 7). No rows.** This is the apologetic climax.
+
+- **"Choose your miracle"** (pp. 205–208) — Jordan Peterson ("acts as though God exists," wept "drawn against
+  his will"), Sam Harris, the "Jesus-smuggling" charge inverted (the *secularists* are the Bible bootleggers).
+  Peterson: the choice is between *two* "impossible" things — God incarnate and risen, **or** humans inventing
+  "this preposterous story that has stretched into every atom of culture." ⭐ A distinctive parity frame, but
+  it is a rhetorical restatement of `legacy.html`'s "these values are not self-evident; you owe an account."
+  ⚠ Scrivener *concedes the good≠true firewall in terms* here ("none of this makes Christianity inevitable or
+  true") — consistent with our own `legacy.html`. **Corroboration; Jordan Peterson is 0 site-wide but adds no
+  argument we lack.**
+- **Predicting the peculiar** (pp. 208–211) — messianic prophecy: Genesis 3:15, 49:10; Isaiah 9:6–7; Daniel
+  2:34–35; **Daniel 7:13–14.** Covered by `messianic-prophecy.html`, `prophecy.html`, `typology.html`,
+  `daniel70.html` → corroboration. 🔴🔴🔴 **EXCEPT Daniel 7:13–14 — see HAZARD 13. Scrivener frames the "son
+  of man" as a divine, worshipped figure ("worshipped him… everlasting dominion," "God's right-hand man"),
+  which is the RETIRED claim `library/titles.html` removed over five gate rounds. DO NOT MINE Daniel 7 from
+  this chapter.**
+- **"Was the Jesus story fabricated?"** (pp. 214–216) — the "writers' room" thought experiment (who could
+  *invent* this Jesus?), Peter Williams "which genius comes up with this?" Covered by `eyewitnesses.html`,
+  `multiatt.html`, `names.html` (which already cites Williams), `minimalfacts.html` → corroboration.
+- **Life from the dead** (pp. 216–219) — the resurrection as the "Big Bang" inference (a cause adequate to
+  the observed explosion of the Jesus movement); Revelation 5:6 / 7:9,17. Covered by the whole resurrection
+  cluster (`earlycreed`, `minimalfacts`, `appearances`, `emptytomb`, `disciplesbelief`) → corroboration.
+
+### Final Words — to the "nones," "dones," and "won" (pp. 221–232, COMPLETE — book ends p. 232)
+
+**VERDICT: CORROBORATION + gospel proclamation. No rows.** The closing appeal.
+- **To the "nones": don't leap** — the "leap of faith" picture is wrong; the whole culture already took the
+  leap (we treat each other as bearers of "a dignity that cannot be proved or earned… on faith"). Siedentop:
+  Christianity taught us to "wager on the moral equality of humans" (*Inventing the Individual* p. 65 — a
+  third page-precise Siedentop quote, reinforcing the equality genealogy already logged; **no new row**). The
+  ask is not a leap but to "meet Jesus" in the Gospels — evangelistic, not an Evidence-Library gap.
+- **To the "dones": don't leave** — every criticism of the church is aired *in the first person* and shown to
+  rest on Christian standards ("we wrestle with them *for Christian reasons*"). This is `legacy.html`'s
+  firewall exactly (the standard by which the church is judged is itself Christian). ⚠ Sensitively handles
+  **church abuse** (Lori Anne Thompson / Ravi Zacharias) and John Dickson's song-vs-singers analogy — pastoral
+  content, not apologetic argument. Corroboration of the firewall; the abuse material is not ours to
+  repurpose.
+- **To the "won": be weird** (pp. 228–232) — the closing call to Christians: Matthew 5:13–16 (salt and light
+  are potent *because* distinct); Christian influence was strongest when *peculiar* (opposing the games,
+  infanticide, pederasty, slavery when that was "crazy"). Tim Keller / Larry Hurtado on the early church
+  defying the modern left/right spectrum (⚠ **HAZARD 12** — the abortion / left-wing / right-wing framing is
+  off-limits). Chesterton: "Christianity has died many times and risen again, for it had a God who knew the
+  way out of the grave" (*The Everlasting Man*). Pew's 2060 projection — ⚠ a *legitimate* Pew source (unlike
+  the Intro's HuffPost China projection, HAZARD 4), but still a forward projection; use with care. Ends on
+  Matthew 16:18. **Pure proclamation; no row.**
+
+---
+
+## ✅ MINING STATUS: the book is FULLY captured and mined (2026-08-23)
+
+The **entire book (Introduction → Final Words, pp. 11–232) has been read from the owner's photos and
+cross-checked.** The book ends at p. 232 (Matthew 16:18); nothing substantive remains (a possible
+acknowledgements/index page after 232 carries no argument). **Total logged: 22 backlog rows (6 P2, 13 P3,
+3 P4)**, all from Introduction → Ch. 8. **Chs. 9–10 + Final Words produced zero rows** (corroboration of
+existing site content / off-limits culture-war / gospel proclamation) — the correct disciplined result, not
+an oversight. **This note is now a completed research map, not a work in progress.** ⚠ Page-capture note:
+pp. 230–231 were photographed twice (a harmless duplicate); no page is missing.
 
 ---
 
@@ -819,6 +922,30 @@ p. 234) is offered by Scrivener as only *one* way to tell the story, immediately
 without the Dickson answer** — and note `legacy.html` already lists the 1096 Rhineland and 1099 Jerusalem
 massacres in its own voice. The apologetic value here is the *self-critical* half (Dickson, Francis of
 Assisi, Alcuin), not the exculpatory half.
+
+**HAZARD 13 — 🔴🔴🔴 Ch. 10 (p. 211) runs a RETIRED CLAIM: Daniel 7:13–14 as a divine, worshipped figure.
+DO NOT MINE Daniel 7 from this book.** Scrivener quotes Daniel 7:14 ("all nations… **worshipped him**… his
+dominion is an **everlasting dominion**") and frames the "one like a son of man" as "God's right-hand man"
+who shares God's authority — i.e. a straightforwardly divine, worship-receiving figure. This trips **both**
+`daniel7-figure-is-divine` **and** `pelach-only-to-God` in `tools/retired-claims.json` — the exact claim
+`library/titles.html` spent **five gate rounds** removing (the Aramaic *pelach* is used of serving created
+powers too, so 7:14 does not prove the figure's deity; the essay makes the deity case on other grounds).
+⚠⚠ **This is now the THIRD book-research note found carrying this phrasing** — after Geisler & Turek
+(`i-dont-have-enough-faith…`, 2026-08-08) and Strobel (`is-god-real.md` ch. 4 p. 72). It is a recurring
+hazard in popular deity-of-Christ writing; **grep every new note for "worshipped"/"son of man"/"everlasting
+dominion" near Daniel 7.** If Daniel is ever wanted for messianic prophecy, route through
+`library/daniel70.html` (the seventy weeks) or `library/messianic-prophecy.html`, never this chapter's
+worship-of-the-son-of-man framing.
+
+**HAZARD 12 — Ch. 9 ("The Kingdom Without the King") and the political-spectrum passages (ch. 9; Final Words
+p. 230) are CONTEMPORARY CULTURE-WAR content the site does not touch.** BLM / "taking the knee," the
+transgender debate (the Mackereth tribunal), sexual ethics, "competitive victimhood," "left wing vs right
+wing" framings of the early church, abortion/infanticide as live political markers — all of it is contested,
+denominationally and politically divisive, and outside what the Evidence Library does. The *only* portable
+core is the abstract genealogical/grounding claim (contested modern values still run on Christian moral
+capital), which `legacy.html` + `moral.html` already carry. **Mine the grounding argument if at all; never
+the culture-war wrapper.** Scrivener handles it thoughtfully for his audience, but his audience and register
+are not ours.
 
 **HAZARD 11 — the 20th-century body-count comparison (ch. 8, pp. 172–173) is the relativizing move again,
 now at its most tempting. DO NOT run "atheism killed more."** Scrivener sets the Inquisition's ~5,000 against
@@ -936,19 +1063,20 @@ were appended, corrected once already; this running total is measured, not estim
 | 101–125 | **Ch. 5, "Enlightenment"** | ✅ full (nn. 62–86) |
 | 127–147 | **Ch. 6, "Science"** (title p. 127, p. 126 blank) | ✅ captured in full (nn. 87–105) |
 | 149–166 | **Ch. 7, "Freedom"** (abolition; title p. 149) | ✅ captured in full (nn. 106–122) |
-| 167–177 | **Ch. 8, "Progress"** (title p. 167) | 🟡 captured through p. 177 (nn. 123–136); **INCOMPLETE — continues p. 178** |
-| 178– | **Ch. 8 tail → Ch. 9, Ch. 10 + closing address** | ⬜ not captured |
+| 167–185 | **Ch. 8, "Progress"** (title p. 167) | ✅ captured in full |
+| 187–203 | **Ch. 9, "The Kingdom Without the King"** (title p. 187, p. 186 blank) | ✅ captured in full |
+| 205–219 | **Ch. 10, "Choose Your Miracle"** (title p. 205, p. 204 blank) | ✅ captured in full |
+| 221–232 | **Final Words** (title p. 221, p. 220 blank) — book ends p. 232 | ✅ captured in full |
 
-**⚠ Duplicates received (no action):** pp. 68–69 (×3), 70–71 (×2), **72–73 (×4)**.
+**⚠ Duplicates received (no action):** pp. 68–69 (×3), 70–71 (×2), **72–73 (×4)**, 230–231 (×2).
 
-**To resume, in priority order:** everything through **p. 177 is now captured continuously.**
-1. **Ch. 8 "Progress" from p. 178** onward (mid-argument at "'Humanity' to the rescue").
-2. **Ch. 9, Ch. 10, and the closing address** — none captured.
-3. **Table of contents** — one photo, to confirm chapter/page boundaries.
+**✅ CAPTURE COMPLETE — the whole book (pp. 11–232) is in hand.** The only page not yet photographed is the
+**table of contents** (optional; the chapter/page boundaries are all confirmed from the body). No content
+pages are missing.
 
-**⚠ Owed before finalising Ch. 8 verdicts:** read `worldviews.html`'s atheism cards and `library/evil.html`
-in full (Step Zero) to confirm the "Was Hitler a Christian? / atheist atrocities" topic really is uncovered
-before the P2 row is executed. Ch. 6 + Ch. 7 Step Zero + verdicts are DONE.
+**⚠ One Step-Zero debt still owed before the Ch. 8 "Was Hitler a Christian?" P2 row is *executed*** (not
+before it was *logged*): read `worldviews.html`'s atheism cards and `library/evil.html` in full to confirm
+that topic is genuinely uncovered. All other chapters' Step Zero + verdicts are DONE.
 
 This book prints footnotes at the foot of each page, so they arrive with the body automatically — no
 separate endnote pass is needed.
