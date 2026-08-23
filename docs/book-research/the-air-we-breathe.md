@@ -607,6 +607,148 @@ never the triumphal "no Christianity, no science" popular form.
 - Neil deGrasse Tyson / Einstein comprehensibility quotes → corroboration (Wigner/Davies already carry the
   point on `laws.html`). No row.
 
+### Ch. 7 — "Freedom" (abolition of slavery) (pp. 149–166, COMPLETE)
+
+**✅ STEP ZERO: `library/legacy.html` read in full (2026-08-23, at the start of this note).** Its **Abolition**
+section is substantial and *careful* — it carries Christopher Leslie Brown's *Moral Capital* (the
+"necessary-not-sufficient," imperial-crisis account), Wilberforce, Equiano, the man-stealer texts (Exod 21:16
+/ 1 Tim 1:10), and the honest "abolition was won *against* Christians" point (Mark Noll). So the **core claim
+— abolition as a Christian achievement — is corroboration, and `legacy.html` is arguably *more careful* on
+the causal nuance** than Scrivener's more providential telling. Three things Scrivener has that `legacy.html`
+does **not** (all verified 0 site-wide): David Brion Davis, Frederick Douglass, the black church/spirituals,
+Gregory of Nyssa, and the medieval abolition of European slavery.
+
+**Thesis:** the conviction that freedom is everyone's birthright — that no human may be owned — is not
+self-evident (all known complex societies were slave societies) but a Christian inheritance; and abolition,
+twice over (medieval Europe, then the Atlantic trade), was Christian-driven.
+
+**Argument beats (our words), pp. 149–166:**
+
+1. **Edward Colston** (pp. 149–151) — the toppled Bristol statue (June 2020, post-George-Floyd); Colston
+   (1636–1721), Royal Africa Company, ~84,000 Africans in 12 years; the Atlantic trade, 12M+, "mainly white,
+   mainly Christian owners"; "revering to reviling" in three centuries.
+2. **A secular creed** (pp. 150–153) — the Declaration of Independence "self-evident… all men created equal"
+   as the American "secular creed" (Rebecca McLaughlin, *The Secular Creed*, 2021). Jefferson owned 600
+   slaves — "truths espoused are not always truths owned and applied." **Equality is NOT self-evident**
+   (that's "triangles have three sides"); Bentham "nonsense on stilts"; Stark (*Triumph* p. 376) "all known
+   societies above the primitive level have been slave societies"; **Harari (*Sapiens* p. 109)** "the
+   Americans got the idea of equality from Christianity… if we do not believe [in] souls, what does it mean
+   that all people are 'equal'?"; Holland (*Dominion* p. 400) "the truest… seedbed of the American republic…
+   was the book of Genesis." **[Reinforces the existing Harari P2 equality row — second page cite p. 109.]**
+3. **Abolition as a Christian achievement** (pp. 154–155) — **David Brion Davis** (the pre-eminent historian
+   of transatlantic slavery): "religion was the central concern of all the British abolitionist leaders,"
+   without which "the fall of New World slavery could not have occurred," "a moral achievement that may have
+   no parallel" (*Slavery and Human Progress* 1986 p. 139; *Inhuman Bondage* 2006 p. 331). Rowan Williams: if
+   abolition "had been left to enlightened secularists… we would still be waiting" (via Dickson p. 111).
+4. **⭐ "Isn't Christianity pro-slavery?" answered via the enslaved themselves** (pp. 155–163) — the reply
+   `legacy.html` lacks. Enslaved believers found in the OT not justification but the exodus pattern and the
+   man-stealer condemnation. **Frederick Douglass** (1817–1895), born a slave, became preacher-abolitionist;
+   "There can be no more a law for the enslavement of man, made in the image of God, than for the enslavement
+   of God himself"; reserved his most scathing words for the churches that were "the bulwark of American
+   slavery," calling his devout ex-master an "agent of hell" *and* "a brother" (Letter to Thomas Auld, 1848).
+   The **black church and the spirituals** (identifying with Moses in Egypt and Christ the Sufferer — "Nobody
+   knows the trouble I've seen," "swing low, sweet chariot"); **Howard Thurman** (via James Cone, *The Cross
+   and the Lynching Tree*, p. 133–34): "the slave undertook the redemption of the religion that the master had
+   profaned"; **Rebecca McLaughlin** (*Confronting Christianity* p. 190): "if slavery is the founding sin of
+   America, the… black church is perhaps its greatest miracle"; Mary's Magnificat (Luke 1:52–54).
+5. **⭐ The pre-modern abolition of slavery** (pp. 160–161) — the point `legacy.html` entirely lacks:
+   **Gregory of Nyssa (379)** condemned the *institution* of slavery and demanded its abolition (an outlier,
+   even among Christians — Scrivener flags this); and after Rome fell, **slavery dissolved across medieval
+   Europe** — gone from northern Europe by the 9th c., largely from England by 1200 (Hugh Thomas, *The Slave
+   Trade*, 2013, p. 794) — driven partly by baptism/Eucharist making it "impossible to deny the full
+   personhood" of a fellow member. **Slavery was abolished once already, in Christendom, before 1492 revived
+   it.** ⚠ Scrivener himself concedes "many factors were involved… economic and technological" — so this is
+   *a* factor, not a monocause.
+6. **The Atlantic revival and the firewall** (pp. 161–163) — after 1492 the evil erupted again; the
+   conquistadors reached for **Aristotle's natural slavery, not the Church Fathers** (Hugh Thomas; Holland
+   *Dominion* p. 307–08). The now-familiar move: the point is not that these evils "weren't so bad" — they are
+   **Evil with a capital E**, and "their evil is judged by the good which they pretended to value." **This is
+   exactly `legacy.html`'s firewall** ("being handed the standard aggravates the failure"). Corroboration.
+7. **Preaching and politics** (pp. 164–166) — the 1787 Committee (Quakers + evangelicals), Wedgwood's "Am I
+   not a man and a brother?", petitions/boycotts, 1807/1833. Alec Ryrie (*Protestants* p. 196): Britain banned
+   "one of the principal props of its own empire… because of abolitionism: a religious movement first and
+   last." Holland (*Dominion* p. 430–31): "crime against humanity" coined 1842; the Moroccan sultan's "on
+   which all sects and nations have agreed from the time of Adam" — right about history, on the wrong side of
+   it within a generation.
+
+**Cross-check verdicts (Step Zero complete):**
+- Core "abolition is a Christian achievement" + the firewall + man-stealer texts → **1 — corroboration**,
+  `legacy.html` at least as careful (more so on causation). No row.
+- Equality-is-not-self-evident (Harari/Bentham/Stark/Holland) → reinforces the **existing Harari P2 row**
+  (now with *Sapiens* p. 109 + Holland p. 400). No new row.
+- **The enslaved's own Christian abolitionism / Douglass / black church / spirituals** → **4 — missing**, 0
+  site hits, and it is the reply to the strongest form of "Christianity is pro-slavery." **New P2 row.**
+- **David Brion Davis's pro-religion verdict (+ Ryrie)** → **3 — our treatment is one-sided** (`legacy.html`
+  presents only Brown's deflationary account as "the best modern account"). **New P3 row (balance, bounded).**
+- **Gregory of Nyssa (379) + medieval abolition of European slavery** → **4 — missing.** **New P3 row.**
+
+### Ch. 8 — "Progress" (pp. 167–177 captured; continues p. 178+ — chapter INCOMPLETE)
+
+**Thesis:** belief in *progress* — that history is an arrow bending toward justice, not a cycle — is not a
+human universal but a biblical inheritance; and once detached from "a pole star above us," it curdles into
+the license that produced the 20th century's atrocities.
+
+⚠⚠ **TWO SENSITIVE TOPICS HERE; verdicts are PROVISIONAL pending a Step Zero read of `worldviews.html`'s
+atheism cards (not yet read — 429 KB) and `library/evil.html`.** Greps confirm Hitler/Nazi-Jesus, Stalin,
+Mao, Dikötter, "moral arc," Theodore Parker are all **absent as apologetic topics** site-wide — but the
+"Was Hitler a Christian?" and "atheist regimes' body count" material is exactly the kind that goes wrong if
+handled crudely, so it is flagged, not rushed.
+
+**Argument beats (our words), pp. 167–177:**
+
+1. **The moral arc** (pp. 167–169) — Theodore Parker (1853) "the arc of the moral universe… bends toward
+   justice" (King's favourite; woven into Obama's Oval Office rug). Progress is **not** a human universal:
+   antiquity saw decline (Hesiod's five ages, Golden → Iron). The Bible gave history an **arrow, not a
+   cycle** — exodus → promised land; the prophets (Amos 5:24 "justice roll on like a river"; swords into
+   ploughshares; Jubilee). King's "I have a dream" — "more Scripture than many a church sermon."
+2. **Pinker reaching for biblical phrases** (pp. 169–170) — Steven Pinker (*Enlightenment Now*, 2018),
+   atheist/humanist, "cannot help but reach for biblical phrases": "the ultimate beating of swords into
+   plowshares" (p. 149), "the sanctity of life" / "Life is sacred" (p. 215), "does justice roll on like a
+   river?" (p. 223). Parker could "only divine [the arc] by conscience"; Pinker offers "a more objective
+   way" — but both agree the arc exists.
+3. **Problems with progress** (pp. 171–172) — the 19th-c. prophets of progress (Darwin/biological,
+   Hegel/historical, Freud/psychological, Marx/economic). **Marx's communism "unthinkable without"
+   Christianity** — an attempt to make the state into the church (Acts 4:32; "from each according to his
+   ability…"); the difference is *who* equalises — God, or humans by "bloody revolution." Progress without a
+   pole star → "historical inevitability" as a license, and "one of many reasons the century of progress was
+   followed by an unparalleled century of violence."
+4. **The murder century** (pp. 172–173) — WWI (20M), WWII (75M), Stalin's purges, **Mao's Great Leap Forward
+   / famine, ≥45M** (Frank Dikötter, *Mao's Great Famine*, 2010). Auschwitz as the fixed "pole star… a pit
+   to avoid." ⚠⚠ **Scrivener runs the relativizing comparison** (Inquisition "5,000 in 350 years" vs Stalin
+   "as many each week") — **HAZARD, see HAZARD 11 below.**
+5. **⭐ "Nazi Jesus?"** (pp. 173–177) — the answer to "was Hitler a Christian / did Christianity cause the
+   Nazis," handled with real honesty. Hitler in private (*Table Talk*): Christianity is "this filthy reptile…
+   a fairy story invented by the Jews," to be "stamped on"; the "Jew Paul" introduced "the deliberate lie"
+   of equality and compassion; "all of nature is a violent struggle… victory of the strong over the weak"
+   (Weikart, *Hitler's Religion*, 2016) — **Nietzschean, the opposite of the Sermon on the Mount.** BUT — and
+   this is the concession that makes it honest — **many German Christians DID nazify Christianity**: the
+   "German Christians" movement demanded "liberation from the Old Testament… the… theology of the Rabbi Paul…
+   renounced" (Ryrie p. 275), a Reich bishop preached a love with "a hard, warrior-like face" that "hates
+   everything soft and weak" (Doris Bergen, *Twisted Cross*, 1996). And **Christian antisemitism was real and
+   fed it** — "Christ-killers," the blood libel, expulsions, and **Luther's *The Jews and Their Lies*** (Ryrie:
+   "the best that can be said is that it does not openly call for genocide"). Scrivener's verdict: to nazify
+   the faith you had to tear up the OT and half the NT (Paul), leaving "Jesus the Messiah, son of David, son
+   of Abraham" (Matt 1:1) — an impossible task; "Nazi Jesus is not Jesus," Hitler was "very literally,
+   anti-Christ." The honest close: *the point is not that heroic Christian resisters existed* (they did) *but
+   that if we'd lived through it, our own resistance is "painfully slight"* — no room to feel superior.
+6. **"Humanity" to the rescue** (p. 177+) — the 1941 Atlantic Charter (Churchill/Roosevelt), "faith in…
+   human rights"; Roosevelt updating Jefferson — where Jefferson said "self-evident," Roosevelt admits it is
+   "faith." *(Continues past p. 177 — not yet captured.)*
+
+**Cross-check verdicts (PROVISIONAL — worldviews.html atheism cards + evil.html not yet read):**
+- **"Was Hitler a Christian? / Nazi Jesus"** → **4 — missing** (0 site hits for the topic). A common,
+  high-traffic objection. **New P2 row logged below, with a Step-Zero-pending flag and heavy guardrails** —
+  the honest answer *concedes* that German Christians nazified the faith and that Christian antisemitism
+  (Luther) was real, and does NOT claim Hitler was a tidy atheist (his religion is genuinely contested).
+- **Belief in progress / the moral arc is a Christian inheritance** (linear vs cyclical; Pinker's borrowed
+  phrases) → **4 — missing**, pairs with `legacy.html`. **New P3 row.**
+- **The 20th-c atheist-regime body count** → ⚠ **HAZARD 11**, not a clean row. The defensible core (morality
+  needs a ground above human will) is already the **Nietzsche P2 row**; the *body-count comparison* is the
+  same relativizing move `legacy.html` refuses. Flag, don't mine.
+- **Marx-as-secularised-Christianity; Luther's pamphlet in the ledger** → **6 — non-recommendations.** Marx
+  is niche; adding *Luther by name* to `legacy.html`'s ledger would break its deliberate denominational
+  even-handedness (it "does not distribute the blame among the traditions"). Logged, not built.
+
 ---
 
 ## 🔴 HAZARDS — things in this book we must NOT copy
@@ -677,6 +819,18 @@ p. 234) is offered by Scrivener as only *one* way to tell the story, immediately
 without the Dickson answer** — and note `legacy.html` already lists the 1096 Rhineland and 1099 Jerusalem
 massacres in its own voice. The apologetic value here is the *self-critical* half (Dickson, Francis of
 Assisi, Alcuin), not the exculpatory half.
+
+**HAZARD 11 — the 20th-century body-count comparison (ch. 8, pp. 172–173) is the relativizing move again,
+now at its most tempting. DO NOT run "atheism killed more."** Scrivener sets the Inquisition's ~5,000 against
+Stalin's weekly toll and Mao's 45M. The *facts* (Dikötter on Mao) are citable; the **"look how much worse the
+secularists were" framing is not** — it is HAZARD 8 at scale, and it hands a reader a crude tu-quoque that a
+knowledgeable atheist dismantles in one move ("the Crusaders had no nuclear weapons; scale tracks capability,
+not creed"). The **defensible** point in this chapter is entirely different and is already the Nietzsche P2
+row: *a morality with no ground above human will licenses whatever the powerful decide* — the is/ought
+firewall, not a scoreboard of corpses. Port that; never the comparison. ⚠ And the "Hitler was really an
+atheist" over-correction is its own trap: his religion is genuinely contested (Weikart), and German Christians
+*did* nazify the faith — the honest claim is that Nazism inverted the Sermon on the Mount, not that no Nazi
+ever called himself Christian.
 
 **HAZARD 10 — the hospital roll-call (ch. 3, p. 73) is LESS careful than `legacy.html` already is.**
 Scrivener lists Basil, Fabiola, Chrysostom heroically; `legacy.html` fn 7 makes the *bounded* claim
@@ -759,7 +913,7 @@ Classifications for everything in the captured range. **Six-verdict scheme per `
 | — | Inquisition death-toll comparison to the Terrors | `legacy.html` fn 10 (Kamen, sober) | **5 — hazard** | **No row. HAZARD 8.** Relativising move; keep our sober treatment. |
 | — | Stark: "the Crusades… no apologies are required" | `legacy.html` lists the 1096/1099 massacres in our own voice | **5 — hazard** | **No row. HAZARD 9.** Never without Dickson's answer. |
 
-**Rows logged from this book so far: 17 — four P2, ten P3, three P4** (plus several no-row hazard/
+**Rows logged from this book so far: 22 — six P2, thirteen P3, three P4** (plus several no-row hazard/
 non-recommendation classifications). Counts measured 2026-08-23 by tallying the rows appended to
 `docs/content-backlog.md`. Rows 1–8 (Intro + ch. 1) shipped in the first commit; rows 21–26 (ch. 2–5) are
 appended in the second. *(An earlier draft of the ch. 1 line said "7" — an estimate written before the rows
@@ -781,18 +935,20 @@ were appended, corrected once already; this running total is measured, not estim
 | 81–100 | **Ch. 4, "Consent"** (title p. 81, p. 80 blank) | ✅ captured in full (nn. 40–61) |
 | 101–125 | **Ch. 5, "Enlightenment"** | ✅ full (nn. 62–86) |
 | 127–147 | **Ch. 6, "Science"** (title p. 127, p. 126 blank) | ✅ captured in full (nn. 87–105) |
-| 149– | **Ch. 7 "Freedom" → Ch. 10 + closing address** | ⬜ not captured |
+| 149–166 | **Ch. 7, "Freedom"** (abolition; title p. 149) | ✅ captured in full (nn. 106–122) |
+| 167–177 | **Ch. 8, "Progress"** (title p. 167) | 🟡 captured through p. 177 (nn. 123–136); **INCOMPLETE — continues p. 178** |
+| 178– | **Ch. 8 tail → Ch. 9, Ch. 10 + closing address** | ⬜ not captured |
 
 **⚠ Duplicates received (no action):** pp. 68–69 (×3), 70–71 (×2), **72–73 (×4)**.
 
-**To resume, in priority order:** everything through **p. 147 is now captured continuously.**
-1. **Ch. 7 "Freedom" from p. 149** onward (p. 148 likely blank).
-2. **Ch. 8 "Progress," Ch. 9, Ch. 10, and the closing address** — none captured.
+**To resume, in priority order:** everything through **p. 177 is now captured continuously.**
+1. **Ch. 8 "Progress" from p. 178** onward (mid-argument at "'Humanity' to the rescue").
+2. **Ch. 9, Ch. 10, and the closing address** — none captured.
 3. **Table of contents** — one photo, to confirm chapter/page boundaries.
 
-**✅ Ch. 6 Step Zero + verdicts are DONE** (see the Ch. 6 section). Owed for Ch. 7: identify and read its
-paired essay(s) before mining — likely `library/legacy.html` (the abolition material is already there) and
-possibly a moral-argument essay; confirm against `library/index.html` first.
+**⚠ Owed before finalising Ch. 8 verdicts:** read `worldviews.html`'s atheism cards and `library/evil.html`
+in full (Step Zero) to confirm the "Was Hitler a Christian? / atheist atrocities" topic really is uncovered
+before the P2 row is executed. Ch. 6 + Ch. 7 Step Zero + verdicts are DONE.
 
 This book prints footnotes at the foot of each page, so they arrive with the body automatically — no
 separate endnote pass is needed.
