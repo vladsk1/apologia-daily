@@ -283,6 +283,125 @@ slave" — is unfenced, and compressed onto a card it could read patripassian. H
 paragraph (beat 13) is a real strength and is orthodox as it stands: it locates the scandal correctly
 (Jews, of all people, saying *Behold our God*) rather than in a pagan register.
 
+### Ch. 2 — "Equality" (pp. 41–59)
+
+**Received (earlier batch); page-precise footnote mapping deferred to a later commit** so it is done from the
+images, not memory (the repo's "measure, don't estimate" rule). Solid enough to record now:
+
+- **Thesis:** human equality is not a fact of nature but a borrowed conviction. Biologically we are *not*
+  equal; "all humans are of equal worth" is a value, not a measurement, and it entered the West through the
+  Genesis 1:27 image-of-God doctrine.
+- **⭐ The sharpest lead — and a HAZARD to handle with care: Yuval Noah Harari, *Sapiens*.** Harari:
+  "there are no such things as rights in biology… Homo sapiens has no natural rights"; the Declaration's
+  "all men are created equal" is, biologically, a myth. Scrivener agrees with the *diagnosis* and reverses
+  the *conclusion*: equality is not a fact of nature, which is exactly why it needs its theological ground.
+  **Best atheist-in-his-own-words witness in the book for `legacy.html`'s "not self-evident" claim.** Harari
+  = **0 site-wide hits.** ⚠ Port the diagnosis only, never Harari's nihilism about worth. **Logged P2 below.**
+- Nicholas **Wolterstorff** (*Justice: Rights and Wrongs*, 2008) as the scholarly ground for rights-in-the-
+  image-of-God (already 1 site hit — verify locus); the **Himmler** "more than a part of this world" line;
+  **Peter Singer / QALY** and the Down-syndrome debate as the modern pressure point. ⚠ Doctrinally/pastorally
+  delicate (disability, abortion-adjacent) — map primaries, not applications; not card material.
+
+### Ch. 3 — "Compassion" (pp. 66–77; opening ~60–65 NOT captured)
+
+**Thesis:** compassion — judging a society by its treatment of the weakest — is not natural ("red in tooth
+and claw") but entered because "Kindness himself appeared" (Titus 3:4), running "down and out" (the exodus;
+Israel chosen *because* "the fewest of all peoples," Deuteronomy 7:6–8).
+
+Beats: (1) "What images God? → *us*" (Genesis 1:26–27, imago Dei, pp. 66–67); (2) compassion flows down-and-
+out (Deut 7:6–8, exodus, Jeremiah 45:5); (3) **compassion incarnate** — Isaiah 61:1–2 as Jesus' inaugural
+sermon (Luke 4:18–21), and the Gospel word *splanchnizomai*, gut-pity from *splanchna* "intestines" (Matt
+20:34; Mark 1:41; Luke 7:13; Matt 18:27; Luke 15:20; Good Samaritan Luke 10:33); (4) **the two ends of the
+spear** — Rome's "son of God" was the emperor (Augustus "Lord, Saviour, Son of God"; the divine Julius'
+greatness *included* killing a million Gauls, a boast), vs Christ "the image of the invisible God… making
+peace through his blood" (Colossians 1:15, 20); (5) **compassion shared → healthcare for all** — Greek
+physicians and Roman "sick bays" served *usefulness*; Christians cared for the sick as such (David Bentley
+Hart's roll-call: Ephrem, Basil's leper ward, Benedict, **Fabiola's first public hospital in W. Europe**,
+Chrysostom), a "cascade of hospitals" (James William Brodman via Dickson), Benedictines 2,000+; (6) **super-
+natural** — Tennyson's "red in tooth and claw"; Christ the Fittest sacrificed for the weakest, inverting
+natural selection; (7) **servant leadership** — Mark 10:42–45; (8) **gladiators/games** — Christians
+boycotted the arena (Minucius Felix, *Octavius* 12), games outlawed AD 401 under Honorius; Lecky and Hurtado
+on the unparalleled Christian "love ethic."
+
+| Lead | Locus | Note |
+|---|---|---|
+| *splanchnizomai* gut-compassion word study | Matt 20:34; Mark 1:41; Luke 7:13; 18:27; 15:20; 10:33 | 1 site hit for `splanchn`; enriches `jesuschar.html`, not `legacy.html`. |
+| Christian love-ethic "no known Roman-era parallel" | **Larry Hurtado, *Destroyer of the gods* (Baylor, 2017), pp. 64–65** | ⭐ Hurtado cited 35× already — verify this specific claim isn't live; strong for `legacy.html` compassion section. **Logged P3.** |
+| Rise of the hospital (Basil, Fabiola, Chrysostom) | **D. B. Hart, *Atheist Delusions* (Yale, 2010), p. 30** | ✅ `legacy.html` fn 7 covers it, and BETTER (Miller/Crislip + Horden/Nutton caution). **HAZARD — see below.** |
+| Imperial cult "Lord / Saviour / Son of God" (Augustus) | Hurtado, pp. 64–65 | Relevant to `library/titles.html`. Verify. |
+| Christians abhor the games | **Minucius Felix, *Octavius* 12** (PD, ANF) | Cite the primary, not the book's secondary. Possible `/sources`. |
+
+⚠ Orthodoxy watch (beat 6): keep the resurrection/adoption attached to "Christ the Fittest," as Scrivener
+does ("raised up, forgiven, filled with his Spirit") — stripped bare it caricatures the atonement.
+
+### Ch. 4 — "Consent" (BODY pp. ~78–97 NOT captured; only the close, pp. 98–100)
+
+**⚠ Only the last three pages are in hand.** The close lands the **moral argument** through **Rachael
+Denhollander**'s victim-impact statement at the Larry Nassar trial and a **C. S. Lewis** line she leans on
+(*Mere Christianity*): "My argument against God was that the universe seems so cruel and unjust. But how did
+I get this idea of just, unjust? A man does not call a line crooked unless he first has some idea of
+straight." The straight line exists independently of perception, so she can name the abuse evil *and* forgive
+it. Scrivener's close: bodies as temples, sex as sacred, children as valuable, the powerful serving not
+exploiting the weak — "are Christian beliefs."
+
+⭐ **The loggable lead: this accessible form of the moral argument is exactly what `library/moral.html`
+lacks** (that essay is excellent but academic — Kant, Adams, Wielenberg, Street). The Lewis "crooked line
+implies a straight line" move + Denhollander is the version a reader can use. **Logged P3.** ⚠ Pastorally
+delicate (child sexual abuse) — the illustration is about the *reality of objective evil*, never a debating
+chip. **Full ch. 4 mapping waits for pp. 78–97.**
+
+### Ch. 5 — "Enlightenment" (pp. 100–125, COMPLETE)
+
+**Thesis:** the "Dark Ages" is a myth. The medieval period gave universities, Magna Carta, cathedrals,
+human rights and the foundations of science; the conflict thesis was largely *invented* by Enlightenment
+writers; and conversion-by-persuasion-not-force is itself a Christian inheritance.
+
+Beats: **the myth's origin** (*Family Guy*; Carl Sagan's *Cosmos* "millennium gap"; **Thomas Paine, *Age of
+Reason* I.12**, "age of ignorance," PD → possible `/sources`); **fall and rise** (410 Rome; **Augustine's
+*City of God*** and the birth of "the secular"/*saeculum*, Holland *Dominion* p. 214); **threat or
+persuasion** (Gregory → Augustine of Canterbury "gentle means"; Boniface "to convert was to *educate*,"
+Holland p. 206; **Alcuin of York** "faith arises from the will, not from compulsion," Dickson *Bullies and
+Saints* pp. 152, 150 — vs **Charlemagne's ~4,500 Saxons beheaded at Verden**, "Charlemagne's Jihad," Yitzhak
+Hen in Dickson p. 150); **the Crusades** (Stark *Triumph of Christianity* p. 234 "no apologies are required"
+offered as *one* telling, balanced by **Dickson** staring "the crookedness full in the face," the 1099
+eyewitness "a just and splendid judgement of God," p. 3); **the Spanish Inquisition** (~2,000 under
+Torquemada + ~3,000 over 300 yrs, set against the French Terror and Russian Red Terror — W. Bruce Lincoln,
+*Red Victory* p. 384 — ⚠ HAZARD, see below); then the **five medieval developments**:
+
+- **Technology** — monks replaced slave labour ("living tools," Aristotle/Plato) with machines: wind/water
+  power, the heavy plough, three-field rotation, eyeglasses, cathedrals (flying buttress, Gothic arch),
+  pipe organs, mechanical clocks (13th c., for monastic prayer hours). Busts "Christians destroyed classical
+  learning": the Carolingian schools taught "Plato, Aristotle, Galen, Pliny, Cicero, Seneca, Virgil, Livy,
+  Ovid… ~60 others" (Dickson p. 164–5), ~50,000 books copied in the 8th–9th c. (Dickson p. 165), a 12th-c.
+  "veritable flood of translations" (Stark *Triumph* p. 251).
+- **⭐ Human rights** — the Gregorian reform / "papal revolution" (Gregory VII, 1020–1085) codified in canon
+  law the shift from *obligations* to *rights*: the poor have a **claim** on the wealthy. "Free and equal
+  individuals under law with inalienable rights was not an Enlightenment discovery but a biblical truth,
+  planted by Genesis, cultivated by the church" — **Siedentop, *Inventing the Individual*, p. 249.**
+  Pairs directly with `legacy.html`'s equality genealogy, and gives it a *medieval-legal* mechanism it
+  lacks. **Logged P3.**
+- **Universities** — a new institution (unlike Greek schools or Chinese academies), for higher learning +
+  innovation; Bologna, Paris, Oxford, Cambridge in the 1200s; Oxford's motto *Dominus illuminatio mea*.
+- **Parliaments** — rights → limited rulers who "minister"; the OT covenant as the model of ruler
+  accountability; Magna Carta 1215; Parliament 1275, extended to commoners 1295/1327.
+- **🔴 The Reformation — DO NOT PORT the framing. See HAZARD 7.** Luther "the last medieval man and the
+  first modern man"; Romans 1:16–17 and justification by faith; the marriage/rich-prince–poor-prostitute
+  analogy; *Luther's Works* 34:337 "I felt altogether born again… entered paradise through open gates"
+  (Kolb & Arand, *The Genius of Luther's Theology*, Baker 2008, p. 36).
+
+**⭐ The chapter's most valuable NEW thing for us: the whole "Dark Ages / conflict-thesis is a myth" topic is
+largely ABSENT site-wide.** Universities, medieval science, the Sagan "millennium gap" as the myth's origin,
+Paine's coinage — a major apologetic topic we don't cover. **Logged P2 below.**
+
+### Ch. 6 — "Science" (opening only, p. 127; pp. 128+ NOT captured)
+
+Epigraph: **Boris Johnson, 2020** ("shining the light of science on this invisible killer… driven by the
+science"). Opens on COVID "follow the science" — who counts as "the science," whether sociologists/ethicists/
+historians count, and the historical role of priests leading through plague. **Chapter body not yet
+captured**; it will be the science-and-faith / conflict-thesis chapter, pairing with `library/laws.html`,
+`library/reason.html`, and possibly `library/bigbang.html`. **Read those in full (Step Zero) before mining
+ch. 6.**
+
 ---
 
 ## 🔴 HAZARDS — things in this book we must NOT copy
@@ -327,6 +446,39 @@ hosted PDF). Those are fine as *finding aids* and unusable as *citations*. Alway
 **HAZARD 6 — the games material (beat 7) is lurid and largely unfootnoted in the book.** If any of it
 reaches the site it needs a specialist citation (Coleman, *JRS* 1990) and a reason to be there. It is not
 needed for the argument, and on a share-card it would be gratuitous.
+
+**HAZARD 7 — the Reformation section (ch. 5, pp. 122–123) TAKES THE PROTESTANT SIDE of intra-Christian
+disputes. DO NOT PORT its framing.** Scrivener presents justification **by faith alone** as Luther's
+"breakthrough," the medieval penitential system as something to be "trapped" by and "never forgiven"
+under, and Luther "downgrading tradition and institutional authority" as a gain. **Sola fide, the authority
+of tradition, and the nature of justification are precisely the Catholic/Protestant disputes the
+denominational-neutrality guardrail forbids us to adjudicate.** The chapter's *usable* material (medieval
+science, universities, human rights, persuasion-not-force) is shared Christian history; the Reformation
+subsection is not. Mine the former, leave the latter. Likewise treat the approving Gregory/Boniface/
+monastic-orders material as *shared* history, never as endorsement of Catholic ecclesiology.
+
+**HAZARD 8 — the Inquisition death-toll COMPARISON (ch. 5, pp. 115–116) is a relativising move our essay
+deliberately avoids.** Scrivener sets ~5,000 Inquisition executions against the French Terror (17,000) and
+the Russian Red Terror (~100,000) — "an execution rate 1,400 times that of the Spanish Inquisition." The
+numbers themselves (via Henry Kamen, whom `legacy.html` fn 10 already cites) are fine; the *"look how much
+worse the secularists were"* framing is not — it shades into using others' crimes to shrink the church's,
+which is a cousin of the laundering move `legacy.html` refuses. `legacy.html` names the Inquisition soberly
+and does not score it against the guillotine. Keep it that way.
+
+**HAZARD 9 — Stark's Crusades apologetic (ch. 5, p. 112–113) is one-sided, and Scrivener himself balances
+it.** Stark's "the Crusades were not unprovoked… no apologies are required" (*Triumph of Christianity*,
+p. 234) is offered by Scrivener as only *one* way to tell the story, immediately answered by Dickson's
+"stare the crookedness full in the face" and the 1099 massacre eyewitness. **Never port the Stark line
+without the Dickson answer** — and note `legacy.html` already lists the 1096 Rhineland and 1099 Jerusalem
+massacres in its own voice. The apologetic value here is the *self-critical* half (Dickson, Francis of
+Assisi, Alcuin), not the exculpatory half.
+
+**HAZARD 10 — the hospital roll-call (ch. 3, p. 73) is LESS careful than `legacy.html` already is.**
+Scrivener lists Basil, Fabiola, Chrysostom heroically; `legacy.html` fn 7 makes the *bounded* claim
+(institutional priority in charitable care of the sick poor) **with the Horden/Nutton cautionary view
+attached.** ✅ **Ours is better — do not "improve" our hospital paragraph toward the roll-call.** Fabiola /
+"first public hospital in Western Europe" and the Brodman "cascade" are the only specific additions worth a
+low-priority row, and only with the existing caution kept.
 
 ---
 
@@ -392,11 +544,21 @@ Classifications for everything in the captured range. **Six-verdict scheme per `
 | 18 | W.E.I.R.D. / Henrich | nothing — **0 hits site-wide** | **6 — non-recommendation** | **No row, and here is the reason:** Henrich's causal thesis (the church's medieval marriage-and-family programme rewrote Western psychology) is a large, contested claim in cultural evolution, and importing the acronym without the thesis is decoration. It also cuts against denominational neutrality — the mechanism is specifically the *Western* church's canon law on cousin marriage. Logged deliberately, not overlooked. |
 | 19 | Reel spec calls Holland "the secular historian" | `tools/reel/specs/air-we-breathe.json` (kicker + voiceover) | **2 — error in ours** 🔴 | **Already logged — `docs/content-backlog.md` row 30.** This capture *strengthens* it: the book itself never calls Holland secular (it says of the whole list "mostly they're not"), and `library/legacy.html` fn 2 records that Holland was made **Canon Historian at Salisbury Cathedral by 2025**. So the reel's "EVEN A SECULAR HISTORIAN" is **our own addition and is now false**. No new row; noted here so the existing row is not weakened. |
 | 20 | Phileas the Martyr on being treated as if they no longer existed | nothing site-wide | **4 — missing (`/sources` candidate)** | **Row: P4.** NPNF text = public domain, which is exactly what `/sources` takes. |
+| 21 | **Harari (*Sapiens*): "no such thing as rights in biology"; equality is a myth** (ch. 2) | nothing — **0 hits site-wide** | **4 — missing** ⭐ | **Row: P2.** Best atheist-in-his-own-words witness for `legacy.html`'s "equality is not self-evident." ⚠ Port the diagnosis only, not the nihilism. |
+| 22 | **The "Dark Ages" / conflict-thesis is a myth** (ch. 5) — medieval universities, science, Sagan's "millennium gap," Paine's "age of ignorance" | largely **absent site-wide** | **4 — missing** ⭐ | **Row: P2.** A whole apologetic topic we don't cover. Pairs with `laws.html`/`reason.html` or a new essay. Paine PD → `/sources`. |
+| 23 | **The moral argument, accessibly: Lewis's "crooked line implies a straight line" + Denhollander** (ch. 4 tail) | `library/moral.html` is academic (Kant/Adams/Wielenberg/Street); lacks the accessible form | **3 — weaker in ours** ⭐ | **Row: P3.** ⚠ Pastorally delicate (abuse); the point is the reality of objective evil. |
+| 24 | **Human-rights genealogy via canon law: obligations→rights, the poor's *claim*** (ch. 5); Siedentop p. 249 | `library/legacy.html` argues equality's genealogy but has no medieval-legal mechanism | **3/4 — enrichment** ⭐ | **Row: P3.** A concrete mechanism (the Gregorian "papal revolution") for a claim the essay makes abstractly. |
+| 25 | **Hurtado: Christian "love ethic" has no known Roman-era parallel** (ch. 3); *Destroyer of the gods* pp. 64–65 | `legacy.html` compassion section makes the point weakly | **3 — weaker in ours** | **Row: P3.** ⚠ Hurtado is cited 35× — verify this exact claim isn't already live before writing a row-execution. |
+| 26 | Fabiola "first public hospital in W. Europe" + Brodman "cascade of hospitals" (ch. 3) | `legacy.html` fn 7 covers hospitals, **better**, with the Horden caution | **5 → P4 at most** | **Low-priority row.** Specific items we lack, but subordinate to HAZARD 10 — never at the cost of the Horden/Nutton caution. |
+| — | Reformation section (sola fide, tradition downgraded) | `what-we-believe.html` / denominational-neutrality guardrail | **6 — non-recommendation** 🔴 | **No row. HAZARD 7.** Intra-Christian dispute we do not adjudicate. |
+| — | Inquisition death-toll comparison to the Terrors | `legacy.html` fn 10 (Kamen, sober) | **5 — hazard** | **No row. HAZARD 8.** Relativising move; keep our sober treatment. |
+| — | Stark: "the Crusades… no apologies are required" | `legacy.html` lists the 1096/1099 massacres in our own voice | **5 — hazard** | **No row. HAZARD 9.** Never without Dickson's answer. |
 
-**Rows logged: 8 — one P2, five P3, two P4.** Counts measured 2026-08-23 by tallying the rows actually
-appended to `docs/content-backlog.md`, not by tallying this table. *(An earlier draft of this line said
-"7 (one P2, four P3, two P4)" — that was an estimate written before the rows were appended, and it was
-wrong. Corrected in place.)*
+**Rows logged from this book so far: 13 — three P2, seven P3, three P4** (plus several no-row hazard/
+non-recommendation classifications). Counts measured 2026-08-23 by tallying the rows appended to
+`docs/content-backlog.md`. Rows 1–8 (Intro + ch. 1) shipped in the first commit; rows 21–26 (ch. 2–5) are
+appended in the second. *(An earlier draft of the ch. 1 line said "7" — an estimate written before the rows
+were appended, corrected once already; this running total is measured, not estimated.)*
 
 ---
 
@@ -406,15 +568,28 @@ wrong. Corrected in place.)*
 |---|---|---|
 | Cover | Title, subtitle, author, Holland endorsement | ✅ captured |
 | Copyright page | Publisher, ©2022, reprints, ISBN, NIV 2011 | ✅ captured |
-| — | **Table of contents** | ⬜ **NOT captured — worth one photo; it would confirm the chapter titles and page ranges** |
-| 11–21 | **Introduction** | ✅ captured in full (incl. nn. 1–2) |
-| 23–39 | **Ch. 1, "The Night Before Christmas"** | ✅ captured in full (incl. nn. 3–14) |
-| 40– | **Ch. 2 onward** | ⬜ not captured |
-| — | Chs. 2–10, the closing address, and any endnote/index apparatus | ⬜ not captured |
+| — | **Table of contents** | ⬜ **NOT captured — one photo would confirm chapter titles + page ranges** |
+| 11–21 | **Introduction** — "What's water?" | ✅ full (nn. 1–2) |
+| 23–39 | **Ch. 1, "The Night Before Christmas"** | ✅ full (nn. 3–14) |
+| 41–59 | **Ch. 2, "Equality"** | ✅ captured (footnote-precise re-map still owed — see the ch. 2 section) |
+| ~60–65 | **Ch. 3 opening** ("3. COMPASSION" title + first spread) | 🔴 **MISSING — re-photograph** |
+| 66–77 | **Ch. 3, "Compassion"** (from p. 66) | ✅ captured (nn. 30–37) |
+| ~78–97 | **Ch. 4, "Consent" — the BODY** | 🔴 **MISSING — the whole argument; re-photograph pp. 78–97** |
+| 98–100 | **Ch. 4 close** (Denhollander / Nassar / Lewis) | ✅ captured |
+| 101–125 | **Ch. 5, "Enlightenment"** | ✅ full (nn. 62–86) |
+| 127 | **Ch. 6, "Science" — opening only** | ⬜ p. 126 blank; body pp. 128+ not captured |
+| 128– | **Ch. 6 body → Ch. 10 + closing address** | ⬜ not captured |
 
-**To resume:** photograph the **table of contents** first, then continue from **p. 40** in reading order,
-sending each chapter's body followed by its footnotes (this book prints footnotes at the foot of the page,
-so they arrive with the body automatically — a real advantage over endnote-only books).
+**⚠ Duplicates received (no action):** pp. 68–69 (×3), 70–71 (×2), **72–73 (×4)**.
+
+**To resume, in priority order:**
+1. **Ch. 4 body, pp. 78–97** — the biggest gap; the consent argument is entirely missing.
+2. **Ch. 3 opening, ~pp. 60–65** — the title page and first spread.
+3. **Table of contents** — one photo.
+4. **Ch. 6 from p. 128** onward, in reading order.
+
+This book prints footnotes at the foot of each page, so they arrive with the body automatically — no
+separate endnote pass is needed.
 
 **Chapters expected, from the Introduction's own sketch:** 2 Equality (OT) · 3 Compassion (Jesus) ·
 4 Consent (early church) · 5 Enlightenment (410 → Reformation) · 6 Science (16th–17th c.) · 7 Freedom

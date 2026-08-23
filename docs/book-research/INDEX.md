@@ -29,8 +29,9 @@ information, **Licona** on the resurrection. ⚠⚠ **Its dominant finding is th
 most classified leads came back "hazard, ours is more accurate." Mine it for four things only; see the
 topic rows. 🔴🔴🔴 **And ch. 4 p. 72 runs a RETIRED claim** — see the flag below). ·
 **TAWB** = `the-air-we-breathe.md` (Glen Scrivener, *The Air We Breathe*, **The Good Book Company, © 2022**, ISBN 9781784987497 —
-⚠ **PARTIAL: the cover, copyright page, Introduction (pp. 11–21) and ch. 1 (pp. 23–39) captured with their
-footnotes; ch. 2 onward NOT captured, and the table of contents has not been photographed**. The seven
+⚠ **PARTIAL: cover, copyright page, Introduction (pp. 11–21), ch. 1 (pp. 23–39), ch. 2 (pp. 41–59),
+ch. 3 (pp. 66–77), ch. 4 CLOSE only (pp. 98–100), and ch. 5 (pp. 101–125) captured with footnotes; ch. 4
+BODY (pp. 78–97), ch. 3 opening (~60–65), ch. 6 onward, and the table of contents NOT captured**. The seven
 "WEIRD" values — equality, compassion, consent, enlightenment, science, freedom, progress — as a Christian
 inheritance you cannot see because you are breathing it. ⭐ **The spine is ALREADY LIVE AND CERTIFIED** on
 `library/legacy.html`, which cites this book at fn 5, so the note is largely corroboration; its value is the
