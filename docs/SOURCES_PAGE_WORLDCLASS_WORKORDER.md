@@ -3,13 +3,20 @@
 > **✅ STATUS: EXECUTED 2026-08-24 (local session, hosts reachable) — LIVE on `main` (commit
 > `03b67d7`).** Both parts shipped.
 > **Part A (all of A1–A5) done in `sources.html`:** hero breadth line (JS-computed
-> `152 passages · 39 voices · from AD 96`), era pills with the gold pre-Nicaea cue, shareable
+> `155 passages · 40 voices · from AD 96`), era pills with the gold pre-Nicaea cue, shareable
 > `#p-<id>` deep-links (Link button + on-load scroll/highlight), static `CollectionPage` +
 > runtime `ItemList` structured data, and the 7 topic intros. **Intros GATED** (argument +
 > orthodoxy on all 7, + neutrality on Church & Worship) — all STAMPABLE, 0 HERESY/DRIFT; a
 > fix pass (Cross intro re-matched to the bucket's real motifs; "breaking of bread" / "a
 > Sunday gathering" for neutrality; absolutes softened) re-opened the gate and came back CLEAN.
-> **Part B: +19 verified passages over five passes (133 → 152; 32 → 39 authors).**
+> **Part B: +22 verified passages over six passes (133 → 155; 32 → 40 authors).**
+> *Pass 6 (same day, "more on the Trinity")* added Irenaeus *AH* IV.20.1 (the "two hands of
+> God" — Son and Spirit co-eternal), Hilary of Poitiers *On the Trinity* II.1 ("the Father is
+> One… the Son is One… the Spirit is One"; new author, the great Latin Nicene defender), and
+> Basil *On the Holy Spirit* 18 (the Spirit's coequal deity). Trinity bucket 17 → 20. Citation
+> gate reversed a caution: the Basil quote was EXPANDED to the full sentence because the
+> reciprocal "and conversely…" clause is Basil's own guard (taxis runs both ways = co-equality),
+> and /api/ask does not see the curator note.
 > *Pass 5 (same day)* added Perpetua of Carthage, *Passion* 1 (her prison-diary confession —
 > new author, one of the earliest texts by a Christian woman), Clement of Rome *1 Clement* 5 (the
 > earliest witness to Peter and Paul's martyrdoms), and Minucius Felix *Octavius* 34 (resurrection
@@ -32,7 +39,7 @@
 > Resurrection bucket 9 → 12. All PD/PD, citation-verified word-for-word, then `verified:true`;
 > index + `lib/sources-verified.js` rebuilt. **Melito HELD** — the only PD Melito is
 > disputed-attribution fragments that would weaken the pre-Nicaea provenance stat.
-> **Next-session lead:** the corpus is now mature (152 passages; Ignatius, Athanasius, the
+> **Next-session lead:** the corpus is now mature (155 passages; Ignatius, Athanasius, the
 > Cappadocians, Augustine all well-covered), so clean high-value adds are getting scarcer. Two
 > known-hazard candidates were deliberately HELD: **Melito** (only disputed-attribution PD
 > fragments; the *Peri Pascha* has no PD translation) and the **Muratorian Fragment** (its early
