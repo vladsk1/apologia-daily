@@ -12,5 +12,19 @@
     "tags": ["monotheism", "apologetics", "natural knowledge of god", "providence", "pre-nicene", "early church"],
     "note": "An early Latin apologist (c. AD 200) argues from the order of nature to one Ruler — the classic monotheistic argument, aimed at pagan polytheism. New author for the corpus. Filed under Trinity via the 'monotheism' tag, matching the existing Tertullian Apology 17 precedent (both are pagan-facing 'one God' arguments). Dating hinges on the Minucius-vs-Tertullian priority debate; 'c. 200' is the standard compromise. Verified verbatim against source_url (apologia-citations, web, 2026-08-24; Wallis, ANF vol. 4).",
     "text": "The bees have one king; the flocks one leader; among the herds there is one ruler. Can you believe that in heaven there is a division of the supreme power, and that the whole authority of that true and divine empire is sundered, when it is manifest that God, the Parent of all, has neither beginning nor end—that He who gives birth to all gives perpetuity to Himself—that He who was before the world, was Himself to Himself instead of the world?"
+  },
+  {
+    "id": "minucius-octavius-34",
+    "author": "Minucius Felix",
+    "work": "Octavius",
+    "year": 200,
+    "section": "ch. 34",
+    "translation": "Robert Ernest Wallis (ANF vol. 4), public domain",
+    "pd": true,
+    "source_url": "https://www.newadvent.org/fathers/0410.htm",
+    "verified": true,
+    "tags": ["resurrection", "bodily resurrection", "natural theology", "apologetics", "pre-nicene", "early church"],
+    "note": "c. AD 200 — the classic argument from nature for the resurrection (kin to Paul's seed analogy in 1 Cor 15): the sun, the seasons, and the buried seed all die and return, so the buried body is like the trees in winter. Fills the Resurrection bucket. The digital ANF prints a stray period ('flourish again. unless they are rotted'); we correct it to the true reading with no break, since the Latin 'semina non nisi corrupta revirescunt' is a single non…nisi clause (a break inverts the argument). Verified verbatim against source_url (apologia-citations, web, 2026-08-24).",
+    "text": "The sun sinks down and arises, the stars pass away and return, the flowers die and revive again, after their wintry decay the shrubs resume their leaves, seeds do not flourish again unless they are rotted: thus the body in the sepulchre is like the trees which in winter hide their verdure with a deceptive dryness."
   }
 ]
