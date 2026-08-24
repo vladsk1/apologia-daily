@@ -375,6 +375,19 @@ Euraquilo | Publius | Malta`** (two hits total, neither on topic: a generic Thuc
    answers the essay's own most honestly-stated weakness. The currency refresh (Mittelstaedt 2006,
    Armstrong 2017, Keener 2012's own "best guesses" line, Pervo/Tyson as the second-century steelman) also
    updates a section whose named proponents stop at Robinson 1976 and Hemer. **P3.**
+   **✅ SHIPPED 2026-08-24 (backlog row 126).** Seccombe's arguments **1 and 2** (political inappropriateness;
+   Gentile-inclusion apologia) added to the Silence-of-Acts section; currency (Mittelstaedt 2006, Armstrong
+   2017, Seccombe 2020, Keener as centrist early-70s) added to "The Honest State of the Scholarship." ⚠ Two
+   things did NOT ship, on `apologia-citations` verify-or-drop: (a) the **imperial Saviour/Lord "dangerous
+   titles" sub-claim** — not in Seccombe's verified text, so dropped; (b) the **"Keener calls a first-century
+   date secure (p. 401)" quote** — could not confirm p. 401, so softened to "early 70s, 60s/80s plausible" (p.
+   400, verified). Seccombe framed as offering "further/cumulative" arguments, not an unconfirmable "has not
+   closed the discussion" quote. Cited inline (no footnote renumber). Dual-consensus gated: citations verified,
+   argument STRONG, orthodoxy CLEAN, neutrality STAMPABLE (after attributing "lost its occasion" to Seccombe +
+   adding a "both points are contested" clause). The respected-minority-not-consensus honesty was preserved
+   exactly, per the guardrail. **Seccombe's argument 3 (the disproportionate voyage) was NOT added** — it is a
+   cousin of the argument-from-silence the essay already carries via Hemer; only the two genuinely-positive
+   arguments were used.
 3. **NEW COVERAGE — "Are the speeches in Acts invented?" is a topic we do not treat at all.** It is a
    standard, frequently-raised objection (Dibelius's charge is in every critical introduction) with a
    genuinely strong answer: the Thucydidean convention stated at full strength, then Luke's testable
