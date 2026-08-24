@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Source Library — Apologia Daily</title>
+  <title>Church Fathers &amp; Creeds — Apologia Daily</title>
   <link rel="canonical" href="https://apologiadaily.com/sources">
   <meta name="description" content="The words of the early church, in the original public-domain translations — the creeds and the Church Fathers, every passage verified against its source." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -150,7 +150,7 @@
 
   <div class="hero">
     <div class="hero-inner">
-      <p class="eyebrow">Source Library</p>
+      <p class="eyebrow">Church Fathers &amp; Creeds</p>
       <h1>The words of the <em>early church</em></h1>
       <p class="hero-sub">The creeds and the Church Fathers, in their original public-domain translations — every passage verified word-for-word against its source, so you can quote the real thing. When Ignatius calls Jesus &ldquo;our God&rdquo; in AD 107, that is the actual text.</p>
     </div>
@@ -191,28 +191,32 @@
     var INDEX = [];
     var filter = 'all';
 
-    // group each passage into a browsable collection
-    // The creeds share one collection; every Father gets his own, keyed off the author name.
-    // A few names need explicit handling (multi-word titles; the two Gregories; grouping
-    // the Martyrdom of Polycarp with Polycarp) so the generic "strip ' of X'" heuristic
-    // doesn't mangle them.
+    // Group each passage by DOCTRINAL TOPIC (not by author) so a reader can browse
+    // "what the early church said about the Trinity / the deity of Christ / salvation."
+    // Each passage lands in ONE primary topic — the first match, in the priority order
+    // below — while the author stays on every quote. The order here is also the display
+    // order of the topic headings and the filter chips.
+    var TOPIC_CATS = [
+      { key: 'deity',        label: 'Deity of Christ',               tags: ['deity of christ','logos','co-equality','one god'] },
+      { key: 'trinity',      label: 'The Trinity',                   tags: ['trinity','holy spirit','monotheism'] },
+      { key: 'incarnation',  label: 'The Incarnation & Two Natures', tags: ['incarnation','two natures','humanity of christ','virgin birth','communicatio idiomatum','hypostatic union','one person of christ','chalcedon','christology','docetism','divine dilemma'] },
+      { key: 'salvation',    label: 'The Cross & Salvation',         tags: ['salvation','grace','atonement','cross','crucifixion','sanctification','theosis','repentance','sin','justification','restoration','fall','corruption','image of god','creation'] },
+      { key: 'resurrection', label: 'Resurrection & Eternal Life',   tags: ['resurrection','bodily resurrection','eternal life','eschatology','death'] },
+      { key: 'church',       label: 'The Church & Worship',          tags: ['church unity','eucharist','baptism','bishop','bishops','liturgy','rule of faith','confession','creed','council','church order','ministry','apostolic ministry','apostolic succession','apostolic tradition','bishops and deacons','presbyters','orderly succession','canon','scripture','four gospels','bible reliability'] },
+      { key: 'life',         label: 'The Christian Life',            tags: ['martyrdom','conversion','discipleship','devotional','pastoral','prayer','faith and reason','apologetics','apologetic method','fulfilled prophecy','messianic prophecy','providence','love','charity','christian virtue'] }
+    ];
+    var TOPIC_LABEL = {}, TOPIC_ORDER = {};
+    TOPIC_CATS.forEach(function (c, i) { TOPIC_LABEL[c.key] = c.label; TOPIC_ORDER[c.key] = i; });
+
     function groupKey(rec) {
-      var a = rec.author || 'other';
-      if (/Creed|Definition/i.test(rec.work || '')) return 'creeds';
-      if (/Didache/i.test(a)) return 'didache';
-      if (/Polycarp/i.test(a)) return 'polycarp';          // Epistle + Martyrdom together
-      if (/Nazianzus/i.test(a)) return 'gregory-naz';
-      if (/Nyssa/i.test(a)) return 'gregory-nyssa';
-      return a.toLowerCase().replace(/\s+of\s+.*$/, '').replace(/[^a-z0-9]+/g, '-');
+      var tl = (rec.tags || []).map(function (t) { return String(t).trim().toLowerCase(); });
+      for (var i = 0; i < TOPIC_CATS.length; i++) {
+        var trig = TOPIC_CATS[i].tags;
+        for (var j = 0; j < tl.length; j++) { if (trig.indexOf(tl[j]) !== -1) return TOPIC_CATS[i].key; }
+      }
+      return 'life'; // safety net; the tag map above covers every current passage
     }
-    var GROUP_LABELS = {
-      creeds: 'The Creeds', didache: 'The Didache', polycarp: 'Polycarp',
-      'gregory-naz': 'Gregory of Nazianzus', 'gregory-nyssa': 'Gregory of Nyssa'
-    };
-    function groupLabel(rec) {
-      var k = groupKey(rec);
-      return GROUP_LABELS[k] || (rec.author || 'Other').replace(/\s+of\s+.*$/, '');
-    }
+    function groupLabel(rec) { return TOPIC_LABEL[groupKey(rec)] || 'Other'; }
     var GROUPS = {}; // key -> { label, order, count } — built after the index loads
 
     function esc(s) {
@@ -243,7 +247,7 @@
     }
     function dateStr(rec) {
       if (!rec.year) return '';
-      var councils = groupKey(rec) === 'creeds' && /Council|Nicaea|Constantinople|Chalcedon|Definition/i.test((rec.author || '') + (rec.work || ''));
+      var councils = /Creed|Definition|Council|Nicaea|Constantinople|Chalcedon/i.test((rec.author || '') + (rec.work || ''));
       return (councils ? 'AD ' : 'c. AD ') + rec.year;
     }
 
@@ -365,9 +369,8 @@
       // Build the group registry: creeds first, then each Father by earliest year.
       INDEX.forEach(function (rec) {
         var k = rec._g;
-        if (!GROUPS[k]) GROUPS[k] = { label: groupLabel(rec), order: (k === 'creeds' ? -1 : (rec.year || 9999)), count: 0 };
+        if (!GROUPS[k]) GROUPS[k] = { label: TOPIC_LABEL[k], order: TOPIC_ORDER[k], count: 0 };
         GROUPS[k].count++;
-        if (k !== 'creeds' && rec.year && rec.year < GROUPS[k].order) GROUPS[k].order = rec.year;
       });
       INDEX.sort(function (a, b) {
         if (GROUPS[a._g].order !== GROUPS[b._g].order) return GROUPS[a._g].order - GROUPS[b._g].order;
