@@ -132,7 +132,7 @@ Mary to **Ehrman, *Lost Christianities*** and **Metzger, *Canon of the New Testa
 
 **Classification: corroboration on the conclusion + a modest IMPROVEMENT on the *evidence* → one backlog
 row.**
-1. **`library/canon.html` — upgrade the sourcing behind "Thomas is second-century."** The essay's
+1. **`library/canon.html` — upgrade the sourcing behind "Thomas is second-century."** ✅ **SHIPPED 2026-08-24 (backlog row 130 DONE)** — the literary dependence argument (Lukan/Matthean redaction ⇒ downstream of the Synoptics) is now live, stating the debate (Goodacre + Gathercole vs DeConick + Patterson; Gathercole's middle preserved) and keeping chronology-not-theology. citations 6/6 OK, argument STRONG, orthodoxy CLEAN. Text below retained as the lead's record. — The essay's
    *conclusion* is right and already live; what it currently lacks is the **specialist compositional
    evidence**, and its two cited authorities are both general works. A reader who meets the "Thomas is an
    early independent source" claim in the wild will be met with the **Semitic-original** argument, which
