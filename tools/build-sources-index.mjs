@@ -27,11 +27,16 @@ for (const file of readdirSync(DIR).filter((f) => f.endsWith('.json'))) {
   for (const e of arr) {
     for (const k of REQUIRED) if (!(k in e)) problems.push(`${file} · ${e.id || '?'}: missing "${k}"`);
     if (e.pd !== true) problems.push(`${file} · ${e.id}: pd must be true (public domain only)`);
-    entries.push({
+    const entry = {
       id: e.id, author: e.author, work: e.work, year: e.year || null,
       section: e.section, translation: e.translation, source_url: e.source_url,
       verified: !!e.verified, tags: e.tags || [], text: e.text,
-    });
+    };
+    // Optional explicit topic-bucket override for sources.html grouping — used when a
+    // passage's accurate tags would otherwise file it under an earlier-priority bucket
+    // (e.g. a Trinity creed tagged "deity of christ"). Preserves all tags; only steers display.
+    if (e.bucket) entry.bucket = e.bucket;
+    entries.push(entry);
   }
 }
 

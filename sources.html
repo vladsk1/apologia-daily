@@ -257,6 +257,10 @@
     TOPIC_CATS.forEach(function (c, i) { TOPIC_LABEL[c.key] = c.label; TOPIC_ORDER[c.key] = i; });
 
     function groupKey(rec) {
+      // Explicit bucket override (set in sources/<file>.json) wins over the tag map — used
+      // where a passage's accurate tags would otherwise mis-file it (e.g. a Trinity creed
+      // that is correctly tagged "deity of christ" landing in the Deity bucket).
+      if (rec.bucket && TOPIC_LABEL[rec.bucket]) return rec.bucket;
       var tl = (rec.tags || []).map(function (t) { return String(t).trim().toLowerCase(); });
       for (var i = 0; i < TOPIC_CATS.length; i++) {
         var trig = TOPIC_CATS[i].tags;
