@@ -198,9 +198,18 @@ therefore corroboration, not improvement.**
 2. ✅ **SHIPPED 2026-08-14** — **P3 — Origen's testimony** (*Contra Celsum* 1.47; *Comm. Matt.* 10.17: Josephus "did not believe Jesus was the
    Christ"). Explains *why* the received wording is suspect — a 3rd-century reader of Josephus saw no confession. The **strong, independent plank** (Jerome/Syriac being Eusebius-dependent). Bounded: witness-to-text, non-confessional original only, NOT full authenticity. ANF (PD) → `/sources` candidate (follow-up, not yet done).
    Public domain (ANF) → `/sources` candidate. Currently **absent** from the corpus.
-3. **P4 — the stylometric evidence + the hostile-witness concession** (90 words / 62 lexemes; Meier; Thackeray's
-   reversal; Mealand; Bardet — and even skeptics **Feldman** and **Mason** granting an authentic substratum).
-   Evidence for the "widely accept an authentic core" claim our answers already make.
+3. ✅ **SHIPPED 2026-08-24 (backlog row line 139) — but the hostile-witness half of the lead was DEAD and was dropped.**
+   The stylometric point (90 words / 62 lexemes; Meier: "most of the vocabulary is characteristic of Josephus") is sound.
+   ⚠⚠ **But the "even skeptics Feldman and Mason grant an authentic substratum" move is NOT usable and was not shipped.**
+   `apologia-citations` (web, 2026-08-24) found: **Feldman REVERSED** c. 2011/12 (in *Josephus und das Neue Testament*),
+   moving toward the TF being a **wholesale Eusebian interpolation** — so citing him as granting a core is now false;
+   **Mason** could not be verified as granting a core (cautious/agnostic). **Do not resurface Feldman/Mason as a
+   hostile-witness concession — verify against their latest position first.** The clean, verified substitute shipped
+   instead is **Geza Vermes** (Jewish, non-Christian historian; affirmed an authentic Josephan core, vocabulary
+   characteristically Josephan) into `answers/is-there-evidence-for-jesus-outside-the-bible` — framed **"non-Christian,"
+   NOT "sceptic"** (Vermes affirmed Jesus's historicity; "even sceptics grant it" would overclaim). argument [STRONG] +
+   orthodoxy [CLEAN]. ⚠ The mining-map entries at lines 71 and 274 still list Feldman/Mason as granting a core; that
+   was the book's claim, now known unreliable — treat those two names there as **superseded by this note**.
 
 ### Deliberate NON-recommendations (recorded so a later session doesn't mistake them for gaps)
 - **Ananus II as Josephus's source, and παρ' ἡμῖν = personal acquaintance.** Schmidt's *novel, not-yet-consensus*
