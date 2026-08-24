@@ -117,7 +117,7 @@ The pre-scan's prediction held. Specifically:
 - **`library/hist_jesus.html`** covers Tacitus, Pliny, Josephus (*Ant.* 18.63–64 and 20.200) with the
   Meier partial-interpolation reconstruction and the Schmidt 2025 monograph. Nothing to add.
 
-**One small IMPROVEMENT → one backlog row.**
+**One small IMPROVEMENT → one backlog row.** ✅ **SHIPPED 2026-08-24 (backlog row 129 DONE)** — the *thalassa*/*limnē* geography plank is now live in `library/names.html` (reply section, inline cite to Williams ch. 3). citations 4/4 OK (Greek concordance-verified; Luke *never* uses *thalassa* of the Galilee body; Antioch = patristic tradition, correctly labelled), argument STRONG (cumulative strand, suggestive-not-proof), orthodoxy CLEAN. Text below retained as the lead's record.
 1. **`library/names.html` (or `library/eyewitnesses.html`) — the *thalassa* / *limnē* observation.** Of
    Williams's ch. 3 battery, the site has adopted the **names** plank thoroughly but not the
    **geography/local-usage** plank, and the single sharpest item there is Luke's consistent "**the lake**"
