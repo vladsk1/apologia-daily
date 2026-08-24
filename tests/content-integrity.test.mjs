@@ -31,6 +31,18 @@ test('no answer carries an over-concession tell (whole answer + meta)', () => {
   );
 });
 
+// Every indexable content page (library essays + answers flywheel) must be in
+// sitemap.xml, and no sitemap URL may point at a deleted file. Catches the
+// legacy.html class of bug — a live, self-canonical, certified essay that
+// silently fell out of the sitemap with nothing to flag it. Retired pages are
+// exempt automatically when they 301 in vercel.json.
+test('every indexable library/answers page is in the sitemap (no orphans, no stale entries)', () => {
+  assert.doesNotThrow(
+    () => execFileSync('node', ['tools/check-sitemap-parity.mjs'], { cwd: process.cwd(), stdio: 'pipe' }),
+    'a page is missing from or stale in sitemap.xml — run: node tools/check-sitemap-parity.mjs',
+  );
+});
+
 // The deterministic crisis backstop must catch every unmistakable first-person
 // crisis phrasing and stay silent on ordinary questions. This extracts the LIVE
 // regex from lib/crisis.js (it moved there from api/ask.js on 2026-08-10, so all

@@ -21,6 +21,7 @@
     { "source": "/demo/frost-islamic-dilemma-companion-study.html", "destination": "/reading-club-islamic-dilemma.html", "permanent": true },
     { "source": "/daily-argument.html", "destination": "/today", "permanent": true },
     { "source": "/argument-or-fallacy.html", "destination": "/games.html", "permanent": true },
+    { "source": "/library/legacy.html", "destination": "/evidence-library.html?arg=riseofchurch", "permanent": true },
     { "source": "/CLAUDE.md", "destination": "/", "permanent": false },
     { "source": "/HANDOFF.md", "destination": "/", "permanent": false },
     { "source": "/docs/:path*", "destination": "/", "permanent": false },
