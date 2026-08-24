@@ -3,13 +3,17 @@
 > **✅ STATUS: EXECUTED 2026-08-24 (local session, hosts reachable) — LIVE on `main` (commit
 > `03b67d7`).** Both parts shipped.
 > **Part A (all of A1–A5) done in `sources.html`:** hero breadth line (JS-computed
-> `140 passages · 34 voices · from AD 96`), era pills with the gold pre-Nicaea cue, shareable
+> `143 passages · 36 voices · from AD 96`), era pills with the gold pre-Nicaea cue, shareable
 > `#p-<id>` deep-links (Link button + on-load scroll/highlight), static `CollectionPage` +
 > runtime `ItemList` structured data, and the 7 topic intros. **Intros GATED** (argument +
 > orthodoxy on all 7, + neutrality on Church & Worship) — all STAMPABLE, 0 HERESY/DRIFT; a
 > fix pass (Cross intro re-matched to the bucket's real motifs; "breaking of bread" / "a
 > Sunday gathering" for neutrality; absolutes softened) re-opened the gate and came back CLEAN.
-> **Part B: +7 verified pre-Nicene passages (133 → 140; 32 → 34 authors).** Theophilus,
+> **Part B: +10 verified pre-Nicene passages over two passes (133 → 143; 32 → 36 authors).**
+> *Pass 2 (same day)* added Minucius Felix (*Octavius* 18, monotheism) and Aristides of
+> Athens (*Apology* 2, a c. AD 125 deity-of-Christ witness; *Apology* 15, Christian love) —
+> two new early voices, citation-gated (the gate caught a dropped "and in God" in Aristides 15,
+> now restored). *Pass 1* was: Theophilus,
 > *To Autolycus* II.15 (earliest "Trinity"/trias, new file); Athenagoras, *Plea* 10 +
 > *On the Resurrection* 3 (new file); Irenaeus, *AH* III.6.1 (deity); Justin, *1 Apol.* 19
 > (resurrection); Tertullian, *On the Resurrection of the Flesh* 63 + *Against Praxeas* 27.
