@@ -1,0 +1,30 @@
+[
+  {
+    "id": "aristides-apology-2",
+    "author": "Aristides of Athens",
+    "work": "The Apology of Aristides",
+    "year": 125,
+    "section": "ch. 2",
+    "translation": "D. M. Kay, from the Syriac (ANF vol. 9), public domain",
+    "pd": true,
+    "source_url": "http://www.earlychristianwritings.com/text/aristides-kay.html",
+    "verified": true,
+    "tags": ["deity of christ", "incarnation", "virgin birth", "son of god", "pre-nicene", "early church"],
+    "note": "One of the earliest Christian apologies — a very early witness that Christians confessed Christ as the Son of God Most High, God come down and made flesh. Strengthens the pre-Nicaea deity-of-Christ record. Dating: the Syriac addressee is read as either Hadrian (c. AD 125, the Eusebian tradition) or Antoninus Pius (c. AD 140); either way it is well before Nicaea. Quote ends before the Syriac idiom 'the Son of God lived in a daughter of man,' which is orthodox (birth from the virgin) but reads awkwardly out of context. Verified verbatim against source_url (apologia-citations, web, 2026-08-24; ECW hosts the Kay ANF vol. 9 translation).",
+    "text": "The Christians, then, trace the beginning of their religion from Jesus the Messiah; and he is named the Son of God Most High. And it is said that God came down from heaven, and from a Hebrew virgin assumed and clothed himself with flesh."
+  },
+  {
+    "id": "aristides-apology-15",
+    "author": "Aristides of Athens",
+    "work": "The Apology of Aristides",
+    "year": 125,
+    "section": "ch. 15",
+    "translation": "D. M. Kay, from the Syriac (ANF vol. 9), public domain",
+    "pd": true,
+    "source_url": "http://www.earlychristianwritings.com/text/aristides-kay.html",
+    "verified": true,
+    "tags": ["love", "charity", "christian virtue", "community", "pre-nicene", "early church"],
+    "note": "c. AD 125–140 — Aristides' famous description of Christian love to the emperor: care for widows and orphans, generosity to the poor, hospitality to strangers as brothers. Fills the Christian Life bucket with one of the earliest outside-in portraits of the church. (Same addressee-dating debate as the ch. 2 entry.) Verified verbatim against source_url (apologia-citations, web, 2026-08-24) — the closing 'and in God' was restored after the gate caught its omission.",
+    "text": "Falsehood is not found among them; and they love one another, and from widows they do not turn away their esteem; and they deliver the orphan from him who treats him harshly. And he, who has, gives to him who has not, without boasting. And when they see a stranger, they take him in to their homes and rejoice over him as a very brother; for they do not call them brethren after the flesh, but brethren after the spirit and in God."
+  }
+]
