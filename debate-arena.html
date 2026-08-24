@@ -1514,14 +1514,23 @@
           const strengths = feedback.strengths || 'You engaged with the debate and made a genuine effort to defend your position.';
           const weaknesses = feedback.weaknesses || 'Study the specific arguments in the Evidence Library to sharpen your responses for next time.';
 
+          // Escape model-generated feedback before it touches innerHTML — the same
+          // discipline ask-anything.html applies to every AI response. Without this,
+          // markup in the model's reply would be rendered instead of shown as text.
+          function escHtml(t) {
+            const d = document.createElement('div');
+            d.textContent = String(t == null ? '' : t);
+            return d.innerHTML;
+          }
+
           document.getElementById('feedback-strengths').innerHTML =
             strengths.split('. ').filter(s => s.trim()).map(s =>
-              `<p style="margin-bottom:8px;">✓ ${s.trim()}${s.trim().endsWith('.') ? '' : '.'}</p>`
+              `<p style="margin-bottom:8px;">✓ ${escHtml(s.trim())}${s.trim().endsWith('.') ? '' : '.'}</p>`
             ).join('');
 
           document.getElementById('feedback-weaknesses').innerHTML =
             weaknesses.split('. ').filter(s => s.trim()).map(s =>
-              `<p style="margin-bottom:8px;">⚠ ${s.trim()}${s.trim().endsWith('.') ? '' : '.'}</p>`
+              `<p style="margin-bottom:8px;">⚠ ${escHtml(s.trim())}${s.trim().endsWith('.') ? '' : '.'}</p>`
             ).join('');
         } else {
           showGenericFeedback();

@@ -1,4 +1,5 @@
 import { requireSecret } from '../lib/require-secret.js';
+import { overRateLimit } from '../lib/ratelimit.js';
 /* Consolidated push endpoint — kept as ONE serverless function to stay under
    the Hobby plan's 12-function limit. Routes by query/method:
      GET  /api/push?do=public           -> VAPID public key (client subscribes)
@@ -133,6 +134,13 @@ export default async function handler(req, res) {
 
   // ---- POST: store a subscription ----
   if (req.method === 'POST') {
+    // Cap subscribe attempts per IP/day. Subscribing happens once per device, so
+    // the cap is generous (a shared church/school NAT enabling notifications is
+    // fine) but a script cannot spam thousands of junk rows. The SSRF allowlist
+    // below already restricts endpoints to real push services.
+    if (await overRateLimit(req, 60, 'push-sub')) {
+      return res.status(429).json({ error: 'rate_limited' });
+    }
     var body = req.body;
     try { if (typeof body === 'string') body = JSON.parse(body); } catch (e) { body = {}; }
     body = body || {};

@@ -261,7 +261,7 @@
         return;
       }
       if (!secret) { cards.innerHTML='<div style="color:#7a8fa8;font-size:.85rem;">Sign in to load metrics.</div>'; return; }
-      fetch('/api/metrics?secret=' + encodeURIComponent(secret)).then(function(r){return r.json();}).then(function(d){
+      fetch('/api/metrics', { headers: { Authorization: 'Bearer ' + secret } }).then(function(r){return r.json();}).then(function(d){
         var m=d.metrics||{};
         var html=card('Registered users',m.total_users)+card('Explain sessions',m.explain_sessions_total)+card('Explain · 7d',m.explain_sessions_7d)+card('Explain · 30d',m.explain_sessions_30d);
         if(m.coach_signals_total!=null) html+=card('Coach signals',m.coach_signals_total);
@@ -460,7 +460,9 @@
     }
 
     // Verify server-side: a wrong secret gets 401 from the real gate.
-    fetch('/api/metrics?secret=' + encodeURIComponent(val))
+    // Sent as an Authorization header, not a ?secret= query param, so the
+    // secret never lands in server access logs or browser history.
+    fetch('/api/metrics', { headers: { Authorization: 'Bearer ' + val } })
       .then(function (r) {
         if (!r.ok) { reject(); return; }
         try { sessionStorage.setItem(SESSION_KEY, val); } catch (e) {}

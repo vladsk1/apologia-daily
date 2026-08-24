@@ -449,12 +449,18 @@
       const section = document.getElementById('history-section');
       const list = document.getElementById('history-list');
       section.style.display = 'block';
-      list.innerHTML = history.map(q =>
-        `<div class="history-item" onclick="fillQuestion('${q.replace(/'/g,"\\'")}')">
-          <span class="history-q">${q}</span>
+      // Escape the display text and drive the click from a data-index rather than
+      // an inline onclick built by string-substitution — a stored question with a
+      // quote or angle bracket can no longer break the attribute or the markup.
+      list.innerHTML = history.map((q, i) =>
+        `<div class="history-item" data-idx="${i}">
+          <span class="history-q">${escHtml(q)}</span>
           <span class="history-arrow">→</span>
         </div>`
       ).join('');
+      list.querySelectorAll('.history-item').forEach(el => {
+        el.addEventListener('click', () => fillQuestion(history[Number(el.dataset.idx)]));
+      });
     }
 
     async function askQuestion() {

@@ -169,7 +169,8 @@ export default async function handler(req, res) {
     }
 
   } catch(e) {
-    return res.status(500).json({ error: e.message });
+    console.error('weekly-email failed:', e);
+    return res.status(500).json({ error: 'internal_error' });
   }
 
   return res.status(200).json({

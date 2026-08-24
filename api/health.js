@@ -1,3 +1,11 @@
+import { safeEqual } from '../lib/require-secret.js';
+
+// Public Supabase anon key (safe to ship — it is the "anon" role JWT, the same
+// value embedded in every client page). Prefer the env var; fall back to the
+// known constant. Defined once so the apikey and Authorization headers can't drift.
+const SB_URL = process.env.SUPABASE_URL || 'https://noprgxkwniouukmrfozc.supabase.co';
+const SB_ANON = process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw';
+
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
@@ -12,11 +20,11 @@ export default async function handler(req, res) {
   try {
     const sbStart = Date.now();
     const sbRes = await fetch(
-      'https://noprgxkwniouukmrfozc.supabase.co/rest/v1/devotionals?day_number=eq.1&select=day_number,theme',
+      SB_URL + '/rest/v1/devotionals?day_number=eq.1&select=day_number,theme',
       {
         headers: {
-          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw',
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
+          'apikey': SB_ANON,
+          'Authorization': 'Bearer ' + SB_ANON
         }
       }
     );
@@ -49,7 +57,7 @@ export default async function handler(req, res) {
   // Basic checks above (Supabase + key presence) stay public and free.
   const HSECRET = process.env.HEALTH_SECRET || process.env.METRICS_SECRET;
   const givenSecret = (req.query && req.query.secret) || req.headers['x-health-secret'] || '';
-  const runPings = !!HSECRET && givenSecret === HSECRET;
+  const runPings = !!HSECRET && safeEqual(givenSecret, HSECRET);
 
   const endpoints = runPings ? [
     { name: 'ask', path: '/api/ask', body: { question: '__health_check__' } },
