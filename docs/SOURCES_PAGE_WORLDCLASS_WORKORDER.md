@@ -1,5 +1,32 @@
 # Work-order — make `/sources` (Church Fathers & Creeds) a world-class resource
 
+> **✅ STATUS: EXECUTED 2026-08-24 (local session, hosts reachable) — LIVE on `main` (commit
+> `03b67d7`).** Both parts shipped.
+> **Part A (all of A1–A5) done in `sources.html`:** hero breadth line (JS-computed
+> `140 passages · 34 voices · from AD 96`), era pills with the gold pre-Nicaea cue, shareable
+> `#p-<id>` deep-links (Link button + on-load scroll/highlight), static `CollectionPage` +
+> runtime `ItemList` structured data, and the 7 topic intros. **Intros GATED** (argument +
+> orthodoxy on all 7, + neutrality on Church & Worship) — all STAMPABLE, 0 HERESY/DRIFT; a
+> fix pass (Cross intro re-matched to the bucket's real motifs; "breaking of bread" / "a
+> Sunday gathering" for neutrality; absolutes softened) re-opened the gate and came back CLEAN.
+> **Part B: +7 verified pre-Nicene passages (133 → 140; 32 → 34 authors).** Theophilus,
+> *To Autolycus* II.15 (earliest "Trinity"/trias, new file); Athenagoras, *Plea* 10 +
+> *On the Resurrection* 3 (new file); Irenaeus, *AH* III.6.1 (deity); Justin, *1 Apol.* 19
+> (resurrection); Tertullian, *On the Resurrection of the Flesh* 63 + *Against Praxeas* 27.
+> Resurrection bucket 9 → 12. All PD/PD, citation-verified word-for-word, then `verified:true`;
+> index + `lib/sources-verified.js` rebuilt. **Melito HELD** — the only PD Melito is
+> disputed-attribution fragments that would weaken the pre-Nicaea provenance stat.
+> **Next-session lead:** more can still be added (target was +6–10; shipped +7 at the high-
+> quality end). Good next adds: more pre-Nicene deity (Hippolytus, Origen, Novatian *On the
+> Trinity* has punchy lines that took fishing), a Muratorian-fragment / canon entry, and — if a
+> defensible PD text is found — Melito's *Peri Pascha* (no PD translation exists today).
+> ⚠ Note the local Windows test harness fails 12 pre-existing `delete-account`/`cors`/`verify-
+> user` tests with `ERR_UNSUPPORTED_ESM_URL_SCHEME` (a `c:`-path import bug); these are NOT
+> from this work and pass on Linux CI. And `build-sources-index.mjs --check` reports "stale"
+> locally purely from CRLF line-endings — `git diff HEAD` shows no real change.
+>
+> ---
+> *Original hand-off note (kept for the record):*
 > **Status: HANDED OFF to a local / web-enabled session (2026-08-24).**
 > A remote web session **cannot** finish this: the content-expansion half needs to fetch and
 > verify public-domain source texts, and this sandbox's egress is **blocked** from every
