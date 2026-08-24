@@ -7,6 +7,7 @@ const data = JSON.parse(readFileSync(new URL('../answers/_data.json', import.met
 const CATS = new Set([
   "God's Existence", 'The Resurrection', 'Bible Reliability', 'Science & Faith',
   'Who Jesus Is', 'Suffering & Evil', 'Faith & Doubt', 'Islam & World Religions',
+  'The Christian Revolution',
 ]);
 
 test('answers array exists and is non-empty', () => {
