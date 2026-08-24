@@ -1,0 +1,25 @@
+{
+  "reviewed": {
+    "argument": "2026-08-24",
+    "orthodoxy": "2026-08-24",
+    "neutrality": "2026-08-24",
+    "by": "Instagram 4:5 (1080x1350) card for the Church Fathers & Creeds page (/sources). Rendered CENTERED via gen_card.py --aspect portrait (gen_adcard's top-aligned layout left dead space in the frame). Copy is IDENTICAL to the dual-consensus-STAMPABLE X card x-fathers-before-nicaea.json (kicker/headline/sub verbatim) — no new claim, so no re-gate. Ignatius 'our God' = Ephesians 18, AD 107, short/genuine recension, verified in sources-index.json. Render: python3 tools/reel/gen_card.py tools/reel/cards/ig-fathers-before-nicaea.card.json --aspect portrait --theme navy"
+  },
+  "theme": "navy",
+  "aspect": "portrait",
+  "cards": [
+    {
+      "name": "fathers-before-nicaea-ig",
+      "kicker": "TWO CENTURIES BEFORE NICAEA",
+      "big": [
+        {"t": "Ignatius already called", "c": "cream", "s": 78},
+        {"t": "Jesus “our God.”", "c": "gold", "s": 78}
+      ],
+      "sub": [
+        {"t": "He wrote it around AD 107 — one of 133 quotes from", "s": 34},
+        {"t": "the creeds and church fathers, each verified", "s": 34},
+        {"t": "against its source.", "s": 34}
+      ]
+    }
+  ]
+}
