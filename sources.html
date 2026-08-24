@@ -6,6 +6,33 @@
   <title>Church Fathers &amp; Creeds — Apologia Daily</title>
   <link rel="canonical" href="https://apologiadaily.com/sources">
   <meta name="description" content="The words of the early church, in the original public-domain translations — the creeds and the Church Fathers, every passage verified against its source." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Church Fathers & Creeds",
+    "headline": "The words of the early church, verified",
+    "description": "A searchable library of the creeds and the Church Fathers in their public-domain translations — from Clement of Rome (AD 96) through Chalcedon (451) — every passage verified word-for-word against its source. The primary texts behind the case that the deity of Christ and the Trinity were confessed long before the Council of Nicaea.",
+    "url": "https://apologiadaily.com/sources",
+    "inLanguage": "en",
+    "about": [
+      { "@type": "Thing", "name": "Church Fathers" },
+      { "@type": "Thing", "name": "Early Christianity" },
+      { "@type": "Thing", "name": "Christian creeds" },
+      { "@type": "Thing", "name": "Patristics" }
+    ],
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Apologia Daily",
+      "url": "https://apologiadaily.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Apologia Daily",
+      "url": "https://apologiadaily.com"
+    }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -86,6 +113,17 @@
     .fcop { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
     .toast { position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--n); color: var(--w); font-family: var(--ui); font-size: 0.85rem; padding: 10px 18px; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); opacity: 0; pointer-events: none; transition: all 0.25s; z-index: 60; }
     .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* Part A: breadth line, era pills, topic intros, share-target highlight */
+    .hero-stats { font-family: var(--ui); font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-top: 1rem; letter-spacing: 0.02em; }
+    .hero-stats b { color: var(--g); font-weight: 600; font-variant-numeric: tabular-nums; }
+    .hero-stats .dot { color: rgba(255,255,255,0.25); margin: 0 0.55rem; }
+    .psg-era { font-family: var(--ui); font-size: 0.6rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--n3); background: var(--n4); border: 1px solid var(--b); border-radius: 4px; padding: 3px 8px; white-space: nowrap; }
+    .psg-era.pre { color: #8a6d1f; background: #fbf6e6; border-color: #e6d9a8; }
+    .psg-head-tags { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+    .grp-intro { font-family: var(--bo); font-size: 0.95rem; color: var(--m); line-height: 1.7; margin: -0.3rem 0 1.1rem; max-width: 680px; }
+    .grp-intro b { color: var(--n); font-weight: 600; }
+    .psg.target { border-left-color: var(--n3); box-shadow: 0 0 0 2px rgba(30,66,120,0.22); }
   </style>
 </head>
 <body>
@@ -153,6 +191,7 @@
       <p class="eyebrow">Church Fathers &amp; Creeds</p>
       <h1>The words of the <em>early church</em></h1>
       <p class="hero-sub">The creeds and the Church Fathers, in their original public-domain translations — every passage verified word-for-word against its source, so you can quote the real thing. When Ignatius calls Jesus &ldquo;our God&rdquo; in AD 107, that is the actual text.</p>
+      <p class="hero-stats" id="hero-stats"></p>
     </div>
   </div>
   <div class="search-wrap">
@@ -197,14 +236,23 @@
     // below — while the author stays on every quote. The order here is also the display
     // order of the topic headings and the filter chips.
     var TOPIC_CATS = [
-      { key: 'deity',        label: 'Deity of Christ',               tags: ['deity of christ','logos','co-equality','one god'] },
-      { key: 'trinity',      label: 'The Trinity',                   tags: ['trinity','holy spirit','monotheism'] },
-      { key: 'incarnation',  label: 'The Incarnation & Two Natures', tags: ['incarnation','two natures','humanity of christ','virgin birth','communicatio idiomatum','hypostatic union','one person of christ','chalcedon','christology','docetism','divine dilemma'] },
-      { key: 'salvation',    label: 'The Cross & Salvation',         tags: ['salvation','grace','atonement','cross','crucifixion','sanctification','theosis','repentance','sin','justification','restoration','fall','corruption','image of god','creation'] },
-      { key: 'resurrection', label: 'Resurrection & Eternal Life',   tags: ['resurrection','bodily resurrection','eternal life','eschatology','death'] },
-      { key: 'church',       label: 'The Church & Worship',          tags: ['church unity','eucharist','baptism','bishop','bishops','liturgy','rule of faith','confession','creed','council','church order','ministry','apostolic ministry','apostolic succession','apostolic tradition','bishops and deacons','presbyters','orderly succession','canon','scripture','four gospels','bible reliability'] },
-      { key: 'life',         label: 'The Christian Life',            tags: ['martyrdom','conversion','discipleship','devotional','pastoral','prayer','faith and reason','apologetics','apologetic method','fulfilled prophecy','messianic prophecy','providence','love','charity','christian virtue'] }
+      { key: 'deity',        label: 'Deity of Christ',               tags: ['deity of christ','logos','co-equality','one god'],
+        intro: 'Was the divinity of Jesus voted into existence at the Council of Nicaea in 325? These are the receipts. Most of the passages here were written <b>before</b> Nicaea — Ignatius calls Jesus &ldquo;our God&rdquo; around AD 107, two centuries early. The doctrine was not invented at the council; it was defended there.' },
+      { key: 'trinity',      label: 'The Trinity',                   tags: ['trinity','holy spirit','monotheism'],
+        intro: 'Critics call the Trinity a fourth-century invention. Yet Father after Father — long before the creeds fixed the vocabulary — names the one God as Father, Son, and Spirit. Theophilus of Antioch already writes of the &ldquo;Trinity&rdquo; around AD 180. Watch the <b>language</b> sharpen over time; the reality it describes is here from our earliest witnesses.' },
+      { key: 'incarnation',  label: 'The Incarnation & Two Natures', tags: ['incarnation','two natures','humanity of christ','virgin birth','communicatio idiomatum','hypostatic union','one person of christ','chalcedon','christology','docetism','divine dilemma'],
+        intro: 'How can one person be fully God and fully man? The early church worked this out in the open, against real rivals — that Jesus only <b>seemed</b> human, or was two persons loosely joined. This is that hard-won clarity: one Christ, in two natures, unconfused.' },
+      { key: 'salvation',    label: 'The Cross & Salvation',         tags: ['salvation','grace','atonement','cross','crucifixion','sanctification','theosis','repentance','sin','justification','restoration','fall','corruption','image of god','creation'],
+        intro: 'What did the first Christians believe the cross actually <b>did</b>? Here they say it in their own words — the curse borne, our corruption undone, and the great exchange.' },
+      { key: 'resurrection', label: 'Resurrection & Eternal Life',   tags: ['resurrection','bodily resurrection','eternal life','eschatology','death'],
+        intro: 'The resurrection was no metaphor to the early church. They expected their own bodies to rise, and said so — some of them on the way to the executioner.' },
+      { key: 'church',       label: 'The Church & Worship',          tags: ['church unity','eucharist','baptism','bishop','bishops','liturgy','rule of faith','confession','creed','council','church order','ministry','apostolic ministry','apostolic succession','apostolic tradition','bishops and deacons','presbyters','orderly succession','canon','scripture','four gospels','bible reliability'],
+        intro: 'Baptism, the breaking of bread, the reading of the apostles&rsquo; writings — this is what a Sunday gathering looked like in the second century, described by the people who were there.' },
+      { key: 'life',         label: 'The Christian Life',            tags: ['martyrdom','conversion','discipleship','devotional','pastoral','prayer','faith and reason','apologetics','apologetic method','fulfilled prophecy','messianic prophecy','providence','love','charity','christian virtue'],
+        intro: 'More than a system of doctrine, the faith was a way of dying well and living generously — the martyrs, the converts, and the pastors, on courage, prayer, and love.' }
     ];
+    var TOPIC_INTRO = {};
+    TOPIC_CATS.forEach(function (c) { if (c.intro) TOPIC_INTRO[c.key] = c.intro; });
     var TOPIC_LABEL = {}, TOPIC_ORDER = {};
     TOPIC_CATS.forEach(function (c, i) { TOPIC_LABEL[c.key] = c.label; TOPIC_ORDER[c.key] = i; });
 
@@ -250,6 +298,15 @@
       var councils = /Creed|Definition|Council|Nicaea|Constantinople|Chalcedon/i.test((rec.author || '') + (rec.work || ''));
       return (councils ? 'AD ' : 'c. AD ') + rec.year;
     }
+    // Era label — the visual apologetic cue. Pre-Nicaea eras get the gold `.pre` style.
+    function eraOf(rec) {
+      var y = parseInt(rec.year, 10); if (!y) return null;
+      if (y < 150)  return { label: 'Apostolic Father', pre: true };
+      if (y < 325)  return { label: 'Ante-Nicene',      pre: true };   // written BEFORE Nicaea
+      if (y <= 381) return { label: 'Nicene era',        pre: false };
+      if (y < 600)  return { label: 'Post-Nicene',       pre: false };
+      return { label: 'Later witness', pre: false };                   // BCP 1662 etc.
+    }
 
     function card(rec, toks) {
       var tags = (rec.tags || []).map(function (t) {
@@ -261,8 +318,13 @@
       var citeInner = (rec.section && workLc && secLc.indexOf(workLc) === 0)
         ? '<b>' + esc(rec.section) + '</b>'
         : '<b>' + esc(rec.work) + '</b>' + (rec.section ? ', ' + esc(rec.section) : '');
-      return '<article class="psg">' +
-        '<div class="psg-top"><span class="psg-au">' + esc(rec.author) + '</span>' +
+      var era = eraOf(rec);
+      var eraPill = era
+        ? '<span class="psg-era' + (era.pre ? ' pre' : '') + '"' +
+          (era.pre ? ' title="Written before the Council of Nicaea (AD 325)"' : '') + '>' + esc(era.label) + '</span>'
+        : '';
+      return '<article class="psg" id="p-' + esc(rec.id) + '">' +
+        '<div class="psg-top"><span class="psg-head-tags"><span class="psg-au">' + esc(rec.author) + '</span>' + eraPill + '</span>' +
           '<span class="psg-badge">&#10003; verified</span></div>' +
         '<blockquote class="psg-q">' + highlight(rec.text, toks) + '</blockquote>' +
         '<div class="psg-cite">' + citeInner +
@@ -270,6 +332,7 @@
         '<div class="psg-foot"><span class="psg-tr">' + esc(rec.translation) + '</span>' +
           '<span class="psg-actions">' +
             '<button class="psg-btn psg-copy" data-id="' + esc(rec.id) + '">Copy quote</button>' +
+            '<button class="psg-btn psg-link" data-id="' + esc(rec.id) + '">Link</button>' +
             '<a class="psg-btn" href="' + esc(rec.source_url) + '" target="_blank" rel="noopener">Source &#8599;</a>' +
           '</span></div>' +
         (tags ? '<div class="psg-tags">' + tags + '</div>' : '') +
@@ -302,6 +365,7 @@
           lastG = r._g;
           var n = hits.filter(function (x) { return x._g === lastG; }).length;
           html += '<div class="grp-h">' + esc(GROUPS[lastG].label) + ' <span>&middot; ' + n + '</span></div>';
+          if (TOPIC_INTRO[lastG]) html += '<p class="grp-intro">' + TOPIC_INTRO[lastG] + '</p>';
         }
         html += card(r, toks);
       }
@@ -309,6 +373,9 @@
 
       results.querySelectorAll('.psg-copy').forEach(function (b) {
         b.onclick = function () { copyQuote(b.getAttribute('data-id')); };
+      });
+      results.querySelectorAll('.psg-link').forEach(function (b) {
+        b.onclick = function () { copyLink(b.getAttribute('data-id')); };
       });
       results.querySelectorAll('.psg-tag').forEach(function (b) {
         b.onclick = function () {
@@ -335,10 +402,26 @@
       try { document.execCommand('copy'); } catch (e) {}
       document.body.removeChild(ta);
     }
+    function copyLink(id) {
+      var url = location.origin + location.pathname + '#p-' + id;
+      var done = function () { highlightTarget(id); showToast('Link copied'); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done, function () { fallbackCopy(url); done(); });
+      } else { fallbackCopy(url); done(); }
+    }
     var toastT;
-    function showToast() {
-      var el = document.getElementById('toast'); el.classList.add('show');
+    function showToast(msg) {
+      var el = document.getElementById('toast');
+      el.textContent = msg || 'Copied to clipboard';
+      el.classList.add('show');
       clearTimeout(toastT); toastT = setTimeout(function () { el.classList.remove('show'); }, 1600);
+    }
+    var hlT;
+    function highlightTarget(id) {
+      var el = document.getElementById('p-' + id);
+      if (!el) return;
+      el.classList.add('target');
+      clearTimeout(hlT); hlT = setTimeout(function () { el.classList.remove('target'); }, 2500);
     }
 
     function buildChips() {
@@ -354,6 +437,38 @@
       });
     }
 
+    // A4 — runtime ItemList of Quotation objects (Googlebot renders JS). The static
+    // CollectionPage block in <head> covers crawlers that do not.
+    function injectItemList() {
+      try {
+        var items = INDEX.map(function (rec, i) {
+          var cite = rec.author + ', ' + rec.work + (rec.section ? ' ' + rec.section : '') +
+            (rec.year ? ' (c. AD ' + rec.year + ')' : '');
+          return {
+            '@type': 'ListItem',
+            'position': i + 1,
+            'item': {
+              '@type': 'Quotation',
+              'text': rec.text,
+              'citation': cite,
+              'creator': { '@type': 'Person', 'name': rec.author }
+            }
+          };
+        });
+        var ld = {
+          '@context': 'https://schema.org',
+          '@type': 'ItemList',
+          'name': 'Church Fathers & Creeds — verified passages',
+          'numberOfItems': items.length,
+          'itemListElement': items
+        };
+        var s = document.createElement('script');
+        s.type = 'application/ld+json';
+        s.textContent = JSON.stringify(ld);
+        document.head.appendChild(s);
+      } catch (e) {}
+    }
+
     window.onInput = function () {
       var q = document.getElementById('q').value;
       try { history.replaceState(null, '', q ? '/sources.html?q=' + encodeURIComponent(q) : '/sources.html'); } catch (e) {}
@@ -363,7 +478,8 @@
     fetch('/sources-index.json').then(function (r) { return r.json(); }).then(function (data) {
       INDEX = (data || []).filter(function (r) { return r.verified; }).map(function (rec) {
         rec._g = groupKey(rec);
-        rec._b = norm([rec.text, rec.author, rec.work, rec.section, (rec.tags || []).join(' ')].join(' '));
+        var era = eraOf(rec);
+        rec._b = norm([rec.text, rec.author, rec.work, rec.section, (rec.tags || []).join(' '), (era ? era.label : '')].join(' '));
         return rec;
       });
       // Build the group registry: creeds first, then each Father by earliest year.
@@ -381,10 +497,27 @@
         'Every passage is public-domain and has been verified word-for-word against its cited source. ' +
         'These are the primary texts the <a href="/evidence-library.html">Evidence Library</a> quotes from. ' +
         'Now spanning the creeds and the Fathers &mdash; Clement of Rome, the Didache, Ignatius, Polycarp, Justin Martyr, Irenaeus, Tertullian, Cyprian, Athanasius, Eusebius, the Cappadocians, and Augustine &mdash; ' + INDEX.length + ' verified passages, and still growing.';
+      // A1 — hero "breadth" line, computed so it never drifts from the corpus.
+      var years = INDEX.map(function (r) { return parseInt(r.year, 10); }).filter(Boolean);
+      var minY = years.length ? Math.min.apply(null, years) : null;
+      var voices = new Set(INDEX.map(function (r) { return r.author; })).size;
+      var hs = document.getElementById('hero-stats');
+      if (hs) {
+        hs.innerHTML = '<b>' + INDEX.length + '</b> passages<span class="dot">&middot;</span>' +
+          '<b>' + voices + '</b> voices<span class="dot">&middot;</span>' +
+          'from <b>AD ' + (minY || '') + '</b> to Chalcedon';
+      }
       buildChips();
+      injectItemList();
       var pre = new URLSearchParams(location.search).get('q');
       if (pre) document.getElementById('q').value = pre;
       render();
+      // A3 — deep-link to a single passage (#p-<id>): scroll it in and flash the highlight.
+      var m = (location.hash || '').match(/^#p-(.+)$/);
+      if (m) {
+        var el = document.getElementById('p-' + m[1]);
+        if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); highlightTarget(m[1]); }
+      }
     }).catch(function () {
       document.getElementById('results').innerHTML =
         '<div class="empty">The library is temporarily unavailable. Browse the <a href="/evidence-library.html" style="color:#8a6d1f;">Evidence Library</a> instead.</div>';
