@@ -133,7 +133,7 @@ unreliable**. Specific, checkable defects to verify against Casey's own pages:
 ## Cross-map — where this lands
 | Topic | On-site home (certified) | What this article adds |
 |---|---|---|
-| Aramaic substratum behind the Gospels | `library/jewishness.html` (fn 9 cites both Casey monographs) | **Improvement** — a specialist caveat our essay currently lacks (below) |
+| Aramaic substratum behind the Gospels | `library/jewishness.html` (fn 9 cites both Casey monographs) | ✅ **SHIPPED 2026-08-24 (backlog row 128 DONE)** — the specialist caveat (Head & Williams on Casey's reconstructions; the Mark 14:72 *peal*/*pael* case; the "can be detached from… the reconstructions he makes" concession) is now in fn 9. It does not weaken the essay (body leans only on the milieu point). citations 3/3 OK, argument STRONG, orthodoxy CLEAN. ⚠ peal/pael detail corroborated via this note's full-text capture; a PDF-capable session should re-confirm the *šdā*/*šarrī* forms against the primary (pp. 119–144). |
 | The two-source hypothesis / Q | `library/coincidences.html` (uses it as an honest concession), `library/hist_jesus.html` (names Q in passing) | corroboration — both already handle Q modestly and correctly |
 | Synoptic Problem as a topic | **no dedicated treatment** | *not* a gap worth filling — intramural, non-doctrinal, and better left alone |
 
