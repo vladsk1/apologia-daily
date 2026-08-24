@@ -3,13 +3,17 @@
 > **✅ STATUS: EXECUTED 2026-08-24 (local session, hosts reachable) — LIVE on `main` (commit
 > `03b67d7`).** Both parts shipped.
 > **Part A (all of A1–A5) done in `sources.html`:** hero breadth line (JS-computed
-> `146 passages · 37 voices · from AD 96`), era pills with the gold pre-Nicaea cue, shareable
+> `149 passages · 38 voices · from AD 96`), era pills with the gold pre-Nicaea cue, shareable
 > `#p-<id>` deep-links (Link button + on-load scroll/highlight), static `CollectionPage` +
 > runtime `ItemList` structured data, and the 7 topic intros. **Intros GATED** (argument +
 > orthodoxy on all 7, + neutrality on Church & Worship) — all STAMPABLE, 0 HERESY/DRIFT; a
 > fix pass (Cross intro re-matched to the bucket's real motifs; "breaking of bread" / "a
 > Sunday gathering" for neutrality; absolutes softened) re-opened the gate and came back CLEAN.
-> **Part B: +13 verified pre-Nicene passages over three passes (133 → 146; 32 → 37 authors).**
+> **Part B: +16 verified passages over four passes (133 → 149; 32 → 38 authors).**
+> *Pass 4 (same day)* added Irenaeus *AH* II.28.2 (Scripture's inspiration/authority — a core
+> guardrail cluster that was thin), Vincent of Lérins *Commonitory* 2 (the Vincentian Canon —
+> "believed everywhere, always, by all"; new author, the site's own neutrality ethos), and the
+> Epistle to Diognetus 6 (the "soul in the body" image) — all citation-gated CLEAN.
 > *Pass 3 (same day)* added the Epistle to Diognetus 9 (the "sweet exchange" atonement, new
 > author), Irenaeus *AH* V.7.1 (bodily resurrection), and Justin *Dialogue with Trypho* 8 (his
 > conversion) — citation-gated (the gate caught a wrong translator credit on the Justin Dialogue
@@ -24,10 +28,17 @@
 > Resurrection bucket 9 → 12. All PD/PD, citation-verified word-for-word, then `verified:true`;
 > index + `lib/sources-verified.js` rebuilt. **Melito HELD** — the only PD Melito is
 > disputed-attribution fragments that would weaken the pre-Nicaea provenance stat.
-> **Next-session lead:** more can still be added (target was +6–10; shipped +7 at the high-
-> quality end). Good next adds: more pre-Nicene deity (Hippolytus, Origen, Novatian *On the
-> Trinity* has punchy lines that took fishing), a Muratorian-fragment / canon entry, and — if a
-> defensible PD text is found — Melito's *Peri Pascha* (no PD translation exists today).
+> **Next-session lead:** the corpus is now mature (149 passages; Ignatius, Athanasius, the
+> Cappadocians, Augustine all well-covered), so clean high-value adds are getting scarcer. Two
+> known-hazard candidates were deliberately HELD: **Melito** (only disputed-attribution PD
+> fragments; the *Peri Pascha* has no PD translation) and the **Muratorian Fragment** (its early
+> date is genuinely contested — Sundberg/Hahneman argue 4th c. — so leaning on it for "the canon
+> was early" could backfire; handle with a heavy dating caveat or skip). Lactantius exists as a
+> new-author option but his Christology is subordination-adjacent (mine only his safe
+> providence/one-God material). Owner asked (2026-08-24) about hosting FULL letters: recommended
+> AGAINST for /sources — it would duplicate New Advent/CCEL, the per-passage "Source ↗" link
+> already reaches the full text, and a full letter breaks the search-and-quote + retrieval model.
+> A separate "primary-texts reader" page would be its own feature/decision.
 > ⚠ Note the local Windows test harness fails 12 pre-existing `delete-account`/`cors`/`verify-
 > user` tests with `ERR_UNSUPPORTED_ESM_URL_SCHEME` (a `c:`-path import bug); these are NOT
 > from this work and pass on Linux CI. And `build-sources-index.mjs --check` reports "stale"
