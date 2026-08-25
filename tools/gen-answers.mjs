@@ -91,7 +91,7 @@ for (const lint of ['check-answer-openings.mjs', 'check-answer-concessions.mjs']
 
 // ── DRIFT AUDIT ──
 // Every answer's text lives in THREE places that must agree: the visible <div class="ad-answer">,
-// the QAPage JSON-LD acceptedAnswer, and _data.json "a". If the visible page is hand-edited
+// the FAQPage JSON-LD acceptedAnswer, and _data.json "a". If the visible page is hand-edited
 // without updating _data.json, the gate (which reads _data.json) certifies the wrong copy —
 // exactly the 2026-07-04 finding on the Bible-reliability pages. This runs on every invocation
 // and loudly warns on any page whose live visible text has drifted from its _data.json source.
@@ -200,9 +200,13 @@ function page(e) {
     if (idx === -1) throw new Error(`clarifier phrase not found in ${e.slug}: "${c.phrase}"`);
     paras = paras.slice(0, idx) + clarifierMarkup(c) + paras.slice(idx + target.length);
   }
+  // FAQPage (not QAPage): these are single, site-authored authoritative answers, which is
+  // what FAQPage is for. QAPage is for community/forum pages with user-submitted, voted
+  // answers, and Google validates it against fields that don't apply here (answerCount,
+  // upvoteCount, author, etc.) — which produced 14 "invalid Q&A" errors in Search Console.
   const ld = JSON.stringify({
-    '@context': 'https://schema.org', '@type': 'QAPage',
-    mainEntity: { '@type': 'Question', name: e.q, acceptedAnswer: { '@type': 'Answer', text: String(e.a).replace(/\n\n/g, '  ') } }
+    '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: [{ '@type': 'Question', name: e.q, acceptedAnswer: { '@type': 'Answer', text: String(e.a).replace(/\n\n/g, '  ') } }]
   });
   return `<!DOCTYPE html>
 <html lang="en">
