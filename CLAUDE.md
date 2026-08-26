@@ -20,6 +20,29 @@
 > *why* behind a past decision; read this file for current state. **Keep it that way:** when an entry
 > here stops affecting a decision, move it to `HANDOFF.md` rather than letting this file grow back.
 >
+> **⭐ LATEST — 2026-08-26. TWO NEW READER-TRUST UI COMPONENTS SHIPPED to `main` (owner-requested).**
+> **(1) `library/reviewed-badge.js`** — a small green "Reviewed & current — `<Mon YYYY>`" badge under each essay title,
+> reading the date **at runtime from the page's own `content-review` stamp** (the most recent of the four lens dates),
+> so it can never drift and updates itself on any future re-review. Pure display of existing data — no new content, no
+> gate. **Rolled out to all 92 deep-dive essays** via an assert-guarded script (commit `c637b41`); it auto-attaches
+> after `.art-meta`. Skipped `library/index.html` (the index, not an essay) and `library/legacy.html` (a "Coming soon"
+> placeholder). `check-stamp-integrity` treats the `<script>` include as plumbing, so **no essay is flagged**.
+> **(2) `library/evidence.js`** — a "See the evidence" tap-to-open panel (a **Source** row + a **Who holds it** row) that
+> re-presents a claim's certified footnotes inline; hover/focus/tap, keyboard-accessible, stays on-screen on mobile.
+> **LIVE on `library/earlycreed.html` ONLY** so far — 3 panels (pre-Pauline formula / 2–5-year dating / "reaches behind
+> the Gospels"), each ported from this essay's own footnotes 2/8/9/10 (commit `67a4d9d`). **DUAL-CONSENSUS certified
+> 2026-08-26** via READ-ONLY Explore agents (no write tools, per the write-access hazard rule): orthodoxy CLEAN (0 heresy,
+> 0 clarifiers), argument SOUND, neutrality STAMPABLE (0 BREAK/0 WEAK); **citations NOT STAMPABLE round 1 → 2 fixes →
+> STAMPABLE.** Stamp bumped to 2026-08-26 on all four lenses.
+> ⭐ **THE PORT RULE HELD AGAIN, EXACTLY:** the only two citations defects were the two strings I had altered/authored —
+> a dropped word in the Lüdemann quote ("not later than three" → "not later than three years") and an **authored**
+> "c. AD 65–95" Gospel-dating claim found nowhere in the essay (reworded to "the Gospels were all written later"). Every
+> verbatim-ported row survived clean.
+> ⬜ **OPEN / NEXT STEP: the evidence panels exist on ONE essay.** Rolling them out further is per-essay CONTENT work,
+> not a mechanical sweep — each new panel's Source + Who-holds-it text must be **ported from that essay's own certified
+> footnotes** (never authored) and gated (citations at minimum; + argument/orthodoxy/neutrality at the page's tier). The
+> badge, by contrast, is done site-wide and needs nothing further.
+>
 > **⭐ LATEST — 2026-08-22. The ev-s8 "The Church in History" tab is now COMPLETE end-to-end and LIVE on `main`.**
 > On top of the three gated essays + tab cards shipped earlier the same day, this session added: **(1) full-length Pro
 > deep dives** on all three ev-s8 cards (~1,085 words each, ported from the certified essays to match the other tabs);
