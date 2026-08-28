@@ -38,10 +38,19 @@
 > a dropped word in the Lüdemann quote ("not later than three" → "not later than three years") and an **authored**
 > "c. AD 65–95" Gospel-dating claim found nowhere in the essay (reworded to "the Gospels were all written later"). Every
 > verbatim-ported row survived clean.
-> ⬜ **OPEN / NEXT STEP: the evidence panels exist on ONE essay.** Rolling them out further is per-essay CONTENT work,
-> not a mechanical sweep — each new panel's Source + Who-holds-it text must be **ported from that essay's own certified
-> footnotes** (never authored) and gated (citations at minimum; + argument/orthodoxy/neutrality at the page's tier). The
-> badge, by contrast, is done site-wide and needs nothing further.
+> ⭐ **UPDATE 2026-08-28 — evidence panels are now LIVE on FOUR essays.** The small rollout added one panel each to
+> **`hist_jesus.html`** (Ehrman concedes Jesus existed), **`minimalfacts.html`** (Crossan/Lüdemann/Ehrman concede
+> crucifixion + the disciples' sincere belief), and **`finetuning.html`** (Lewis=multiverse vs Barnes=designer; DATA
+> conceded / DESIGN inferred), joining `earlycreed.html`. All three panels ported from each essay's own certified
+> footnotes and **dual-consensus certified** (citations STAMPABLE, orthodoxy CLEAN, argument SOUND, neutrality
+> STAMPABLE) via READ-ONLY Explore agents; stamps bumped to 2026-08-28 (commit `461cf14`). ⭐ **PORT RULE HELD AGAIN:**
+> the only gate findings were the two/three strings that departed from verbatim (an authored finetuning opener that
+> **argument + neutrality independently converged on** as erasing Stenger's window-narrowness dispute → deleted; a
+> 'founder'→'co-founder' verbatim correction; a 'no. 4' cite detail). ⬜ **STILL OPEN: further rollout is per-essay
+> CONTENT work**, not a mechanical sweep — each new panel's Source + Who-holds-it text must be **ported from that
+> essay's own certified footnotes** (never authored) and gated (citations at minimum; + argument/orthodoxy/neutrality at
+> the page's tier). ⚠ **Fine-tuning is the fragile one** — any panel there must respect the Stenger row (never claim
+> unanimity on window-narrowness). The badge, by contrast, is done site-wide and needs nothing further.
 >
 > **⭐ LATEST — 2026-08-22. The ev-s8 "The Church in History" tab is now COMPLETE end-to-end and LIVE on `main`.**
 > On top of the three gated essays + tab cards shipped earlier the same day, this session added: **(1) full-length Pro
