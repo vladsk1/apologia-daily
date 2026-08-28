@@ -38,12 +38,15 @@
 > a dropped word in the Lüdemann quote ("not later than three" → "not later than three years") and an **authored**
 > "c. AD 65–95" Gospel-dating claim found nowhere in the essay (reworded to "the Gospels were all written later"). Every
 > verbatim-ported row survived clean.
-> ⭐ **UPDATE 2026-08-28 — evidence panels are now LIVE on FOUR essays.** The small rollout added one panel each to
-> **`hist_jesus.html`** (Ehrman concedes Jesus existed), **`minimalfacts.html`** (Crossan/Lüdemann/Ehrman concede
-> crucifixion + the disciples' sincere belief), and **`finetuning.html`** (Lewis=multiverse vs Barnes=designer; DATA
-> conceded / DESIGN inferred), joining `earlycreed.html`. All three panels ported from each essay's own certified
-> footnotes and **dual-consensus certified** (citations STAMPABLE, orthodoxy CLEAN, argument SOUND, neutrality
-> STAMPABLE) via READ-ONLY Explore agents; stamps bumped to 2026-08-28 (commit `461cf14`). ⭐ **PORT RULE HELD AGAIN:**
+> ⭐ **UPDATE 2026-08-29 — evidence panels are now LIVE on SEVEN essays.** Batch 1 (2026-08-28, commit `461cf14`) added
+> one panel each to **`hist_jesus.html`** (Ehrman concedes Jesus existed), **`minimalfacts.html`** (Crossan/Lüdemann/Ehrman
+> concede crucifixion + the disciples' sincere belief), and **`finetuning.html`** (Lewis=multiverse vs Barnes=designer;
+> DATA conceded / DESIGN inferred). Batch 2 (2026-08-29, commit `8bb43a1`) added **`kalam.html`** (Premise 2 "the universe
+> began" — BGV theorem *with* co-author Guth's dissent and "corroboration not proof"), **`manuscript.html`** (Ehrman:
+> no cardinal doctrine hangs on a variant; preservation≠truth fenced in-panel), and **`uniqueness.html`** (Mettinger —
+> the mythicists' own source — refutes the borrowing thesis). All join `earlycreed.html` = **7 essays**. Every panel
+> ported from its essay's own certified footnotes and **dual-consensus certified** (citations STAMPABLE, orthodoxy CLEAN,
+> argument SOUND, neutrality STAMPABLE) via READ-ONLY Explore agents. ⭐ **PORT RULE HELD AGAIN:**
 > the only gate findings were the two/three strings that departed from verbatim (an authored finetuning opener that
 > **argument + neutrality independently converged on** as erasing Stenger's window-narrowness dispute → deleted; a
 > 'founder'→'co-founder' verbatim correction; a 'no. 4' cite detail). ⬜ **STILL OPEN: further rollout is per-essay
