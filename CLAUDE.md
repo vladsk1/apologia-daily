@@ -769,6 +769,27 @@
 > `xcards/x-honor-the-son.json`. It's gated content (argument+orthodoxy; +neutrality for
 > deity/Trinity/Islam) — reuse the reel/essay's certified framing; details in the `make-reel` skill.
 >
+> **🔴 STANDING RULE — NO TRINITY DIAGRAM ON ANY PAGE. OWNER RULING, 2026-08-29. NOT A JUDGEMENT CALL.**
+> No diagram, figure, chart or illustration of the Trinity may be built or shipped on any surface —
+> essay, `ev-s*` tab card, `ev-m-*` mastery page, pocket card, flashcard, reel, X card, share-card PNG,
+> or app screen. This is a **blanket prohibition, not a quality bar to clear**: it is not waiting on a
+> better drawing, a gate round, or a cleverer design, and it may not be reopened by a future session on
+> its own initiative. Only the owner can lift it.
+> **Why, so nobody re-litigates it:** every popular Trinity diagram teaches a heresy the moment doctrine
+> is compressed into shapes — Venn circles and the "shield" read as partialism, the three-leaf clover and
+> water/ice/steam as modalism, three separate figures as tritheism. Even the historic Scutum Fidei asserts
+> identity and distinction across six labelled edges, each of which would need `apologia-orthodoxy` AND
+> `apologia-neutrality` word by word. And a picture is the worst possible carrier for a correction: no
+> `orthonote` ＊ can be attached to it, no gate can read it, `check-retired-claims` and
+> `check-orthodoxy-tripwires` are blind to it, and once it is screenshotted and shared it cannot be
+> recalled. This file already records the same compression failure in text form repeatedly (the pocket
+> cards' inverted John 5:23, the `trinity_islam` Arian-direction flashcard, the modalist "honoring the Son
+> AS the Father"). A diagram is that failure mode with the safety net removed.
+> **Scope note:** this bans diagrams *of the Trinity itself* — the relations of the persons. It does not
+> ban a figure on a page that happens to discuss the Trinity (a timeline of Nicaea's date, a list of what
+> a named critic concedes), provided the figure does not depict the divine persons or their relations.
+> Enforced in the header of `library/diagram.js`, which implements no Trinity figure type.
+>
 > **2026-07-26 (NATIVE APP scaffolding — iOS + Android via Capacitor; NOT yet submitted).** The site is now
 > also packaged as a **native app**: `capacitor.config.json` (appId `com.apologiadaily.app`), committed
 > **`ios/`** + **`android/`** projects, `tools/build-app-bundle.mjs` (assembles the git-ignored `app/www`,

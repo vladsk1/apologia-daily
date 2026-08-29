@@ -64,13 +64,26 @@
    Include it wherever the source paragraph has one; omit it only when it genuinely
    has none.
 
-   ⚠ NOT IMPLEMENTED ON PURPOSE: any figure of the Trinity. Every popular attempt
-   (Venn circles, the three-leaf clover, water/ice/steam) teaches partialism or
-   modalism the moment doctrine is compressed into shapes, and the one safe
-   historic diagram — the Scutum Fidei — asserts identity and distinction across
-   six labelled edges that must be gated word by word by apologia-orthodoxy AND
-   apologia-neutrality before a line of it is drawn. That is a content task, not
-   a rendering task.
+   🔴 NO TRINITY DIAGRAM, ON ANY PAGE. OWNER RULING, 2026-08-29 — a blanket
+   prohibition, not a quality bar to clear, and not reopenable by a future
+   session on its own initiative. Only the owner can lift it. Do not add a
+   Trinity type to this file, and do not build one anywhere else either: essay,
+   tab card, mastery page, pocket card, flashcard, reel, X card, share-card PNG
+   or app screen. The standing rule lives in CLAUDE.md; this is its enforcement
+   point in code.
+     Why: every popular attempt teaches a heresy the moment doctrine is
+   compressed into shapes — Venn circles and the shield read as partialism, the
+   clover and water/ice/steam as modalism, three figures as tritheism. Even the
+   historic Scutum Fidei asserts identity and distinction across six labelled
+   edges. And a picture is the worst possible carrier for a correction: no
+   orthonote ＊ attaches to it, no gate reads it, check-retired-claims and
+   check-orthodoxy-tripwires are blind to it, and a screenshot cannot be
+   recalled. CLAUDE.md records this same compression failure in text form
+   repeatedly; a diagram is that failure with the safety net removed.
+     Scope: this bans depicting the Trinity itself — the relations of the
+   persons. A timeline of Nicaea's date, or a concessions figure, on a page that
+   discusses the Trinity is fine, so long as it does not depict the divine
+   persons or their relations.
 
    ── USAGE ───────────────────────────────────────────────────────────────────
 
