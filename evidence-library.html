@@ -584,8 +584,46 @@ function selectingInside(card) {
   return false;
 }
 
+/* How far down the viewport is obscured by the fixed chrome: the site nav plus
+   the sticky tab row. Measured rather than hard-coded, so it stays right if
+   either bar changes height (the tab row wraps on narrow screens). */
+function chromeTop() {
+  var tabs = document.querySelector('.cn');
+  return 64 + (tabs ? tabs.getBoundingClientRect().height : 0);
+}
+
+/* Keep the reader with the card they just clicked.
+   An open card runs 7.4 screens on desktop and 25.8 on a phone, so collapsing
+   one removes thousands of pixels of page. Measured on the Kalam card: the
+   document goes from 12,548px to 4,332px, which drops max-scroll below where the
+   reader was standing — so the browser clamps them to the very bottom of the
+   page and the card they just closed ends up 2,569px ABOVE the viewport, out of
+   sight. Reported by the owner; this is the second half of the same complaint as
+   the text-selection bug.
+   Two corrections, in order. The delta step handles a card moving because
+   ANOTHER card above it opened or closed; the second step handles the shrink,
+   pulling the card back to just under the fixed chrome whenever the collapse has
+   left it off the top of the screen. Together they mean the card you acted on is
+   always where you left it, or at the top if it could not be. */
+function keepInView(card, fn) {
+  var before = card.getBoundingClientRect().top;
+  var wasOpen = card.classList.contains('op');
+  fn();
+  var delta = card.getBoundingClientRect().top - before;
+  if (delta) window.scrollTo(0, Math.max(0, window.scrollY + delta));
+  if (wasOpen) {
+    var floor = chromeTop() + 12;
+    var top = card.getBoundingClientRect().top;
+    if (top < floor) window.scrollTo(0, Math.max(0, window.scrollY + top - floor));
+  }
+}
+
 function tog(card) {
   if (selectingInside(card)) return;
+  keepInView(card, function () { togInner(card); });
+}
+
+function togInner(card) {
   if (card.classList.contains('op')) { card.classList.remove('op'); }
   else {
     var o = document.querySelectorAll('.card.op');
