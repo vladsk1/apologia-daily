@@ -212,7 +212,28 @@
                           the top of this file: this is our claim about our own
                           conclusion, not an objection, and dropping it makes the
                           figure claim more than the prose it sits beside. */
-    syllogism: function (spec) {
+    syllogism: function (spec, el) {
+      /* PREFERRED MODE — `fromList`: harvest the premises from an <ol> the host
+         page already prints, instead of repeating them in the data attribute.
+         Doing it the other way round would put the same three doctrinal
+         sentences in two places in one file, and this repo's whole history is
+         fixes that landed on one surface and not its twin. Here the <ol> stays
+         the single source of truth: the gates read exactly the markup they
+         always have, an editor has one place to change, and if this script never
+         runs the reader still sees the ordered list. `scope` is harvested the
+         same way, from a contained .fig-scope element. */
+      if (spec.fromList && el) {
+        var lis = el.querySelectorAll('ol > li, ul > li');
+        var got = [];
+        for (var k = 0; k < lis.length; k++) got.push(lis[k].textContent.trim());
+        if (got.length) {
+          spec = Object.assign({}, spec);
+          spec.premises = spec.conclusionIsLast ? got.slice(0, -1) : got;
+          if (spec.conclusionIsLast) spec.conclusion = got[got.length - 1];
+        }
+        var sc = el.querySelector('.fig-scope');
+        if (sc && !spec.scope) spec.scope = sc.textContent.trim();
+      }
       var out = '';
       (spec.premises || []).forEach(function (p, i) {
         if (i) out += '<div class="adf-join">' + ARROW + '</div>';
@@ -318,8 +339,14 @@
     injectCSS();
     var fn = TYPES[spec && spec.type];
     if (!fn) return false;
+    /* Build first, assign second: `fromList` reads markup out of `el`, so
+       overwriting innerHTML before the html string exists would destroy the very
+       list it harvests. It also means a throw mid-build leaves the fallback
+       markup on the page untouched. */
+    var html = fn(spec, el);
+    if (!html) return false;
     el.classList.add('ad-fig');
-    el.innerHTML = fn(spec);
+    el.innerHTML = html;
     return true;
   }
 
