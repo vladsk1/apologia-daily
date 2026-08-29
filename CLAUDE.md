@@ -38,13 +38,17 @@
 > a dropped word in the Lüdemann quote ("not later than three" → "not later than three years") and an **authored**
 > "c. AD 65–95" Gospel-dating claim found nowhere in the essay (reworded to "the Gospels were all written later"). Every
 > verbatim-ported row survived clean.
-> ⭐ **UPDATE 2026-08-29 — evidence panels are now LIVE on SEVEN essays.** Batch 1 (2026-08-28, commit `461cf14`) added
+> ⭐ **UPDATE 2026-08-29 — evidence panels are now LIVE on TEN essays.** Batch 1 (2026-08-28, commit `461cf14`) added
 > one panel each to **`hist_jesus.html`** (Ehrman concedes Jesus existed), **`minimalfacts.html`** (Crossan/Lüdemann/Ehrman
 > concede crucifixion + the disciples' sincere belief), and **`finetuning.html`** (Lewis=multiverse vs Barnes=designer;
 > DATA conceded / DESIGN inferred). Batch 2 (2026-08-29, commit `8bb43a1`) added **`kalam.html`** (Premise 2 "the universe
 > began" — BGV theorem *with* co-author Guth's dissent and "corroboration not proof"), **`manuscript.html`** (Ehrman:
 > no cardinal doctrine hangs on a variant; preservation≠truth fenced in-panel), and **`uniqueness.html`** (Mettinger —
-> the mythicists' own source — refutes the borrowing thesis). All join `earlycreed.html` = **7 essays**. Every panel
+> the mythicists' own source — refutes the borrowing thesis). Batch 3 (2026-08-29, commit `6cc772bf`) added
+> **`paulconv.html`** (even the atheist Michael Martin grants Paul is the sole named first-hand witness; sincerity≠resurrection
+> fenced), **`bigbang.html`** (Lemaître→Hubble→CMB; the classical beginning is science, the Creator inference kept separate),
+> and **`earlydate.html`** (the seven undisputed letters, ~AD 48–60; early attestation≠truth fenced). All join
+> `earlycreed.html` = **10 essays**. Every panel
 > ported from its essay's own certified footnotes and **dual-consensus certified** (citations STAMPABLE, orthodoxy CLEAN,
 > argument SOUND, neutrality STAMPABLE) via READ-ONLY Explore agents. ⭐ **PORT RULE HELD AGAIN:**
 > the only gate findings were the two/three strings that departed from verbatim (an authored finetuning opener that
