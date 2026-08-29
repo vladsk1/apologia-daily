@@ -463,8 +463,47 @@ function loadSection(id, cb) {
   if (!container) { if (cb) cb(); return; }
   fetch('ev-' + id + (LANG === 'mk' ? '.mk' : '') + '.html')
     .then(function(r) { return r.text(); })
-    .then(function(html) { container.innerHTML = html; if (cb) cb(); })
+    .then(function(html) { container.innerHTML = html; enhanceSection(container, id); if (cb) cb(); })
     .catch(function() { container.innerHTML = '<p style="padding:2rem;color:red;">Failed to load. Please refresh.</p>'; });
+}
+
+/* Post-injection passes over a freshly loaded fragment.
+   Fragments are injected with innerHTML, and <script> tags inside injected HTML
+   never execute — so a fragment cannot enhance itself. Anything that has to run
+   over fragment content is called from here. */
+function enhanceSection(container, id) {
+  try { fixCategoryEyebrow(container, id); } catch (e) {}
+  try { if (window.ADCrossLink) window.ADCrossLink.apply(container); } catch (e) {}
+}
+
+/* ── The "Category N of M" eyebrow ──────────────────────────────────────────
+   Each fragment hard-codes its own position in the tab set, and the number has
+   drifted every time a tab was added: the eight fragments shipped 1-of-5,
+   2-of-5, 3-of-6, 4-of-5, 5-of-5, 6-of-6 and 8-of-8, so six of the seven
+   counters were wrong and no two agreed on the total. A position in a list is
+   derived data and should never have been written down eight times.
+
+   So it is derived here instead, from TAB_ORDER — the same array applyChrome()
+   already uses — which makes it self-correcting the next time a tab is added.
+   Overwriting the fragment text is safe and complete because the fragments are
+   never served on their own: they are absent from sitemap.xml and no page links
+   one, so this hub is the only way any reader ever sees them.
+
+   The rewrite is deliberately conditional. It fires only on text that already
+   IS a counter, so ev-s7's topical eyebrow ("Hostile Witnesses") is left exactly
+   as its authors wrote it rather than being overwritten with a number. That tab
+   therefore shows no counter — it never made a false claim, and silently
+   replacing certified wording is not this function's job. */
+var TAB_ORDER = ['s1','s2','s3','s4','s5','s6','s7','s8'];
+var COUNTER_RE = /^\s*(Category|Категорија)\s+\d+\s+(of|од)\s+\d+\s*$/;
+function fixCategoryEyebrow(container, id) {
+  var el = container.querySelector('.iey');
+  if (!el || !COUNTER_RE.test(el.textContent)) return;
+  var i = TAB_ORDER.indexOf(id);
+  if (i === -1) return;
+  el.textContent = (LANG === 'mk')
+    ? 'Категорија ' + (i + 1) + ' од ' + TAB_ORDER.length
+    : 'Category ' + (i + 1) + ' of ' + TAB_ORDER.length;
 }
 
 /* Deep-linking: evidence-library.html?arg=<slug> (or #arg-<slug>) opens the tab
@@ -587,7 +626,7 @@ function applyChrome() {
   var ey=document.querySelector('.hero .ey'); if(ey) ey.textContent=d.ey;
   var ht=document.querySelector('.hero .ht'); if(ht) ht.innerHTML=d.ht;
   var hs=document.querySelector('.hero .hs'); if(hs) hs.textContent=d.hs;
-  var tabs=document.querySelectorAll('.cni .tab'); var order=['s1','s2','s3','s4','s5','s6','s7','s8'];
+  var tabs=document.querySelectorAll('.cni .tab'); var order=TAB_ORDER;
   for(var i=0;i<tabs.length;i++){ var k=order[i]; if(d.tabs[k]) tabs[i].innerHTML=d.tabs[k]; }
   var fl=document.getElementById('float-arg-label');
   if(fl){ var t=fl.textContent.trim(); if(t===I18N.en.floatLabel||t===I18N.mk.floatLabel) fl.textContent=d.floatLabel; }
@@ -985,5 +1024,6 @@ async function sendFloatQuestion() {
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
   <script src="/library/orthonote.js" defer></script>
+  <script src="/library/crosslink.js" defer></script>
 </body>
 </html>
