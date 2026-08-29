@@ -1,5 +1,10 @@
 {
-  "reviewed": {"argument": "2026-08-24", "orthodoxy": "2026-08-24", "neutrality": "2026-08-24", "by": "Positive-case reel + X card for library/compassion.html — Jesus as the Almighty who identified with the weak (Matthew 25:40). Dual-consensus: argument + orthodoxy + neutrality all STAMPABLE, 0 BREAK / 0 heresy. Incarnation affirmed on BOTH natures ('God himself came down' + 'became one of them'); orthodoxy confirmed no modalism/patripassianism/adoptionism and pull-quote-safe. Fixes applied, all ports of the essay's own wording or gate-supplied: (1) Aristotle's verbatim law 'no deformed child shall live' (compassion.html fn2, Jowett) sharpens the broader 'Plato and Aristotle recommended' the classicist could dent; (2) restored 'one of' in Matt 25:40 (card + captions; reel keeps the compression); (3) added 'the God of Israel' to the close to credit the Hebrew root of human dignity (essay: image-of-God is Jewish, older than the church). Hospital claim held to the essay's bound ('for the poor', not 'invented medicine/hospitals'); Julian grounded in the undisputed Fragment of a Letter to a Priest. NOT pastoral sign-off (pending site-wide)."},
+  "reviewed": {
+    "argument": "2026-08-24",
+    "orthodoxy": "2026-08-24",
+    "neutrality": "2026-08-24",
+    "by": "Positive-case reel + X card for library/compassion.html — Jesus as the Almighty who identified with the weak (Matthew 25:40). Dual-consensus: argument + orthodoxy + neutrality all STAMPABLE, 0 BREAK / 0 heresy. Incarnation affirmed on BOTH natures ('God himself came down' + 'became one of them'); orthodoxy confirmed no modalism/patripassianism/adoptionism and pull-quote-safe. Fixes applied, all ports of the essay's own wording or gate-supplied: (1) Aristotle's verbatim law 'no deformed child shall live' (compassion.html fn2, Jowett) sharpens the broader 'Plato and Aristotle recommended' the classicist could dent; (2) restored 'one of' in Matt 25:40 (card + captions; reel keeps the compression); (3) added 'the God of Israel' to the close to credit the Hebrew root of human dignity (essay: image-of-God is Jewish, older than the church). Hospital claim held to the essay's bound ('for the poor', not 'invented medicine/hospitals'); Julian grounded in the undisputed Fragment of a Letter to a Priest. NOT pastoral sign-off (pending site-wide). — 2026-08-24 PRESENTATION ONLY (no wording/gate change): title & CTA big-font sizes reduced (96->72 / 92->82) so the opening line no longer clips the frame edges; scene durations lengthened (~39s -> ~55s) for easier reading."
+  },
   "aspect": "vertical",
   "theme": "navy",
   "fps": 30,
@@ -7,70 +12,313 @@
   "source": "library/compassion.html",
   "voiceover": "Who taught the world to care for the weak? For most of history, it wasn't obvious. Strength ruled, and the weak were spent. Unwanted infants were left out to die — and the best minds of the ancient world defended it. Aristotle wanted it written into law: no deformed child shall live. Then the Almighty did the unthinkable: God himself stooped to the very bottom of the human heap, and became one of them. Jesus tied his own identity to the powerless — whatever you did for one of the least of these, he said, you did for me. The hungry, the sick, the outcast stranger — this is where the King is found. So his followers cared for the sick as the sick, opened hospitals for the poor, and, as even the pagan emperor Julian complained when he tried to revive the old gods, cared for the poor who were not their own. The decency we now take for granted — that a society is judged by how it treats its weakest — was learned. And this is where it was learned: from the God of Israel who came down and made himself the friend of the powerless.",
   "scenes": [
-    { "dur": 2.8,
-      "big": [ {"t": "Who taught the world", "c": "cream", "s": 96}, {"t": "to care for the weak?", "c": "gold", "s": 96} ],
-      "sub": [ {"t": "It was not always obvious.", "c": "dim", "f": "serif", "s": 44} ] },
-
-    { "kicker": "THE WORLD BEFORE", "dur": 4.2, "lines": [
-      {"t": "For most of history,", "c": "cream", "s": 60},
-      {"t": "the strong ruled —", "c": "cream", "s": 60},
-      {"t": "", "s": 22},
-      {"t": "and the weak", "c": "dim", "s": 56},
-      {"t": "were spent.", "c": "gold", "f": "serifb", "s": 74} ] },
-
-    { "kicker": "THE ANCIENT NORM", "dur": 4.8, "lines": [
-      {"t": "Unwanted infants were", "c": "cream", "s": 56},
-      {"t": "left out to die —", "c": "gold", "f": "serifb", "s": 62},
-      {"t": "", "s": 18},
-      {"t": "Aristotle wanted a law:", "c": "dim", "s": 46},
-      {"t": "“no deformed child shall live.”", "c": "cream", "s": 48} ] },
-
-    { "kicker": "THEN THE ALMIGHTY STOOPED", "dur": 4.6, "lines": [
-      {"t": "God himself came down", "c": "cream", "s": 58},
-      {"t": "to the bottom", "c": "cream", "s": 58},
-      {"t": "of the human heap —", "c": "gold", "f": "serifb", "s": 60},
-      {"t": "", "s": 20},
-      {"t": "and became one of them.", "c": "cream", "s": 56} ] },
-
-    { "kicker": "MATTHEW 25:40", "dur": 5.2, "lines": [
-      {"t": "“Whatever you did for", "c": "cream", "s": 54},
-      {"t": "one of the least of these,", "c": "cream", "s": 54},
-      {"t": "you did for me.”", "c": "gold", "f": "serifb", "s": 70},
-      {"t": "", "s": 18},
-      {"t": "— Jesus", "c": "dim", "f": "serif", "s": 46} ] },
-
-    { "kicker": "WHERE THE KING IS FOUND", "dur": 4.4, "lines": [
-      {"t": "The hungry, the sick,", "c": "cream", "s": 58},
-      {"t": "the outcast stranger —", "c": "cream", "s": 58},
-      {"t": "", "s": 22},
-      {"t": "this is where", "c": "dim", "s": 52},
-      {"t": "the King is found.", "c": "gold", "f": "serifb", "s": 64} ] },
-
-    { "kicker": "SO THE CHURCH", "dur": 4.6, "lines": [
-      {"t": "cared for the sick", "c": "cream", "s": 58},
-      {"t": "as the sick —", "c": "gold", "f": "serifb", "s": 64},
-      {"t": "", "s": 20},
-      {"t": "and opened hospitals", "c": "cream", "s": 54},
-      {"t": "for the poor.", "c": "cream", "s": 54} ] },
-
-    { "kicker": "EVEN THEIR ENEMIES SAW IT", "dur": 5.2, "lines": [
-      {"t": "The pagan emperor Julian", "c": "cream", "s": 52},
-      {"t": "complained that they cared", "c": "cream", "s": 52},
-      {"t": "", "s": 20},
-      {"t": "even for the poor", "c": "gold", "f": "serifb", "s": 58},
-      {"t": "who were not their own.", "c": "gold", "f": "serifb", "s": 58} ] },
-
-    { "kicker": "WHERE IT WAS LEARNED", "dur": 5.0, "lines": [
-      {"t": "The decency we now", "c": "cream", "s": 56},
-      {"t": "take for granted", "c": "cream", "s": 56},
-      {"t": "was learned —", "c": "dim", "s": 52},
-      {"t": "", "s": 16},
-      {"t": "from the God of Israel", "c": "gold", "f": "serifb", "s": 54},
-      {"t": "who befriended the powerless.", "c": "gold", "f": "serifb", "s": 48} ] },
-
-    { "dur": 3.8,
-      "big": [ {"t": "The mighty", "c": "cream", "s": 92}, {"t": "knelt for the weak.", "c": "gold", "s": 92} ],
-      "sub": [ {"t": "The whole story is in the Evidence Library", "c": "dim", "f": "serif", "s": 38},
-               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52} ] }
+    {
+      "dur": 3.4,
+      "big": [
+        {
+          "t": "Who taught the world",
+          "c": "cream",
+          "s": 72
+        },
+        {
+          "t": "to care for the weak?",
+          "c": "gold",
+          "s": 72
+        }
+      ],
+      "sub": [
+        {
+          "t": "It was not always obvious.",
+          "c": "dim",
+          "f": "serif",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "kicker": "THE WORLD BEFORE",
+      "dur": 5.2,
+      "lines": [
+        {
+          "t": "For most of history,",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "the strong ruled —",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "",
+          "s": 22
+        },
+        {
+          "t": "and the weak",
+          "c": "dim",
+          "s": 56
+        },
+        {
+          "t": "were spent.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 74
+        }
+      ]
+    },
+    {
+      "kicker": "THE ANCIENT NORM",
+      "dur": 6.0,
+      "lines": [
+        {
+          "t": "Unwanted infants were",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "left out to die —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 62
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "Aristotle wanted a law:",
+          "c": "dim",
+          "s": 46
+        },
+        {
+          "t": "“no deformed child shall live.”",
+          "c": "cream",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "kicker": "THEN THE ALMIGHTY STOOPED",
+      "dur": 5.8,
+      "lines": [
+        {
+          "t": "God himself came down",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "to the bottom",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "of the human heap —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 60
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "and became one of them.",
+          "c": "cream",
+          "s": 56
+        }
+      ]
+    },
+    {
+      "kicker": "MATTHEW 25:40",
+      "dur": 6.6,
+      "lines": [
+        {
+          "t": "“Whatever you did for",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "one of the least of these,",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "you did for me.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 70
+        },
+        {
+          "t": "",
+          "s": 18
+        },
+        {
+          "t": "— Jesus",
+          "c": "dim",
+          "f": "serif",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "kicker": "WHERE THE KING IS FOUND",
+      "dur": 5.6,
+      "lines": [
+        {
+          "t": "The hungry, the sick,",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "the outcast stranger —",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "",
+          "s": 22
+        },
+        {
+          "t": "this is where",
+          "c": "dim",
+          "s": 52
+        },
+        {
+          "t": "the King is found.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 64
+        }
+      ]
+    },
+    {
+      "kicker": "SO THE CHURCH",
+      "dur": 5.8,
+      "lines": [
+        {
+          "t": "cared for the sick",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "as the sick —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 64
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "and opened hospitals",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "for the poor.",
+          "c": "cream",
+          "s": 54
+        }
+      ]
+    },
+    {
+      "kicker": "EVEN THEIR ENEMIES SAW IT",
+      "dur": 6.6,
+      "lines": [
+        {
+          "t": "The pagan emperor Julian",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "complained that they cared",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 20
+        },
+        {
+          "t": "even for the poor",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        },
+        {
+          "t": "who were not their own.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        }
+      ]
+    },
+    {
+      "kicker": "WHERE IT WAS LEARNED",
+      "dur": 6.2,
+      "lines": [
+        {
+          "t": "The decency we now",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "take for granted",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "was learned —",
+          "c": "dim",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 16
+        },
+        {
+          "t": "from the God of Israel",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        },
+        {
+          "t": "who befriended the powerless.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 4.4,
+      "big": [
+        {
+          "t": "The mighty",
+          "c": "cream",
+          "s": 82
+        },
+        {
+          "t": "knelt for the weak.",
+          "c": "gold",
+          "s": 82
+        }
+      ],
+      "sub": [
+        {
+          "t": "The whole story is in the Evidence Library",
+          "c": "dim",
+          "f": "serif",
+          "s": 38
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ]
+    }
   ]
 }
