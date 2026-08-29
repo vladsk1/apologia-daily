@@ -558,7 +558,34 @@ function deepLinkArg() {
   try { var a = new URLSearchParams(location.search).get('arg'); if (!a && location.hash) a = location.hash.replace(/^#(arg-)?/, ''); return a || ''; } catch (e) { return ''; }
 }
 
+/* Is the reader mid-selection inside THIS card?
+   `onclick="tog(this)"` sits on the whole .card, not on its header, so every
+   click in the body toggles the card — and the click that ENDS a drag-select is
+   still a click. The result: highlight a sentence to copy it, and on mouse-up
+   the card slams shut, the selection is wiped, and the page loses ~6,000px of
+   height so the scroll position jumps. Reported by the owner, reproduced in
+   Chromium.
+   The whole-card handler is not a bug by accident — it is the only practical way
+   out of a card that runs 7.4 screens on desktop and 25.8 on a phone (measured).
+   So this does NOT move the handler to the header, which would strand a phone
+   reader 26 screens from the close control. It removes only the one gesture that
+   is never a toggle: a click that completes a text selection.
+   Scoped to selections inside this card, so a stray highlight elsewhere on the
+   page cannot make a card refuse to close. A plain click clears any selection on
+   mousedown, so ordinary open/close is untouched. */
+function selectingInside(card) {
+  var sel = window.getSelection && window.getSelection();
+  if (!sel || sel.isCollapsed || !String(sel).trim()) return false;
+  try {
+    for (var i = 0; i < sel.rangeCount; i++) {
+      if (card.contains(sel.getRangeAt(i).commonAncestorContainer)) return true;
+    }
+  } catch (e) {}
+  return false;
+}
+
 function tog(card) {
+  if (selectingInside(card)) return;
   if (card.classList.contains('op')) { card.classList.remove('op'); }
   else {
     var o = document.querySelectorAll('.card.op');
