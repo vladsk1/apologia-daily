@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Figure layer — preview (NOT live)</title>
+<!--
+  PREVIEW ONLY — this file lives in docs/, which .vercelignore excludes from the
+  Vercel upload entirely, so it is never served and carries no content-review
+  stamp. It exists so the figure layer can be looked at before any decision is
+  made to put a figure on a live card.
+
+  EVERY WORD IN THE FIGURES BELOW IS PORTED VERBATIM from a certified essay or
+  tab card. Each figure names its source in its own caption. Nothing here is
+  authored: that is the point of the exercise, and it is the rule that must hold
+  when these move to a live page.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400&display=swap" rel="stylesheet"/>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --n:#0a1628;--n2:#050d1a;--n3:#1e4278;--n4:#f0f6fb;
+    --g:#c8a951;--o:#f8f7f4;--m:#3a4a62;--mu:#7a8fa8;--b:#d4e0ec;
+    --gr:#0f6e56;--gr2:#e1f5ee;
+    --fd:'Playfair Display',Georgia,serif;--ui:'DM Sans',sans-serif;--bo:'Source Serif 4',Georgia,serif;
+  }
+  body{font-family:var(--bo);background:var(--o);color:var(--n);line-height:1.7}
+  header{background:var(--n2);padding:3rem 1.5rem 2.5rem}
+  .wrap{max-width:760px;margin:0 auto}
+  .ey{font-family:var(--ui);font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--g);margin-bottom:.7rem}
+  h1{font-family:var(--fd);font-size:2rem;font-weight:700;color:#fff;line-height:1.15;margin-bottom:.7rem}
+  h1 em{font-style:italic;color:var(--g)}
+  header p{color:rgba(255,255,255,.62);font-size:.98rem;max-width:600px}
+  main{padding:2.5rem 1.5rem 5rem}
+  h2{font-family:var(--fd);font-size:1.35rem;font-weight:700;margin:2.6rem 0 .4rem}
+  h2:first-of-type{margin-top:0}
+  .lede{font-size:.92rem;color:var(--m);margin-bottom:1rem}
+  .note{font-family:var(--ui);font-size:.8rem;background:#fff;border:1px solid var(--b);
+        border-left:3px solid var(--n3);border-radius:0 5px 5px 0;padding:.8rem 1rem;color:var(--m);margin-bottom:1.6rem}
+  .note b{color:var(--n)}
+  .darkdemo{background:var(--n2);border-radius:8px;padding:1.3rem;margin-top:.6rem}
+  .darkdemo .lbl{font-family:var(--ui);font-size:.62rem;font-weight:600;letter-spacing:.14em;
+                 text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.9rem}
+  footer{border-top:1px solid var(--b);margin-top:3rem;padding-top:1.4rem;
+         font-family:var(--ui);font-size:.78rem;color:var(--mu)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="ey">Preview &middot; not live &middot; not stamped</p>
+    <h1>The figure layer, on <em>real certified text</em></h1>
+    <p>Three figure types. Every word below is ported verbatim from a certified essay or tab card &mdash;
+       nothing is authored. Each figure names its source underneath itself.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <h2>1. The argument, as a chain</h2>
+  <p class="lede">The card already prints these three lines as a numbered list. This is the same three
+     lines, shown as the chain the reader is being asked to follow.</p>
+
+  <div class="ad-fig" data-fig='{
+    "type":"syllogism",
+    "kicker":"The Kalam Cosmological Argument",
+    "title":"Everything that begins to exist has a cause &mdash; including the universe",
+    "premises":[
+      "Everything that begins to exist has a cause.",
+      "The universe began to exist."
+    ],
+    "conclusion":"Therefore the universe has a cause of its existence.",
+    "scope":"That is a long way toward theism — but it is not yet the triune God of the Nicene Creed, nor even a morally good or worship-worthy being.",
+    "source":"ev-s1.html, card 01 &mdash; the argument list and the essay&rsquo;s own honest-scope paragraph, both verbatim."
+  }'></div>
+
+  <div class="note"><b>On the grey box at the bottom.</b> That sentence is ours, not a critic&rsquo;s &mdash; it is
+    the essay bounding its own conclusion, and the site&rsquo;s guardrails require it (the Kalam reaches a
+    transcendent cause, not yet the God of the creed). Without it the picture would claim more than the
+    paragraph beside it, which is how a reader gets ambushed the first time they meet a real objection.</div>
+
+  <h2>2. The gap, shown instead of asserted</h2>
+  <p class="lede">The most common objection the site answers is &ldquo;written decades later.&rdquo; Every date
+     here is already in the essay. Drawn, the answer takes about a second.</p>
+
+  <div class="ad-fig" data-fig='{
+    "type":"timeline",
+    "kicker":"The early creed &middot; 1 Corinthians 15:3&ndash;7",
+    "title":"How close to the events the creed actually sits",
+    "min":28,"max":60,
+    "span":{"from":30,"to":36},
+    "events":[
+      {"at":31,"when":"c. AD 30&ndash;33","what":"The crucifixion. Most historians place it here.","key":true},
+      {"at":34,"when":"c. AD 33&ndash;35","what":"Paul&rsquo;s conversion &mdash; within a year or three of it.","key":true},
+      {"at":35.5,"when":"c. AD 35&ndash;36","what":"Paul&rsquo;s Jerusalem visit. The two men he names there, Cephas and James, are two of the named recipients of appearances in the creed.","key":true},
+      {"at":51.5,"when":"c. AD 51&ndash;52","what":"The Gallio inscription from Delphi fixes Gallio&rsquo;s proconsulship &mdash; the firmest external anchor for Pauline chronology."},
+      {"at":55,"when":"mid-50s","what":"1 Corinthians is written. The creed is already old when Paul quotes it."},
+      {"when":"later","what":"The written Gospels. The formula was being recited decades before."}
+    ],
+    "gap":"That pushes its origin into the first half of the 30s — within roughly two to five years of the crucifixion.",
+    "source":"library/earlycreed.html &mdash; every date and the closing line ported verbatim from the certified essay and its evidence panels."
+  }'></div>
+
+  <h2>3. What the critics themselves grant</h2>
+  <p class="lede">The strongest affirmative evidence on the site, and the hardest to wave away. It quotes what
+     a sceptic <em>concedes</em> &mdash; never what a sceptic argues, so there is no position here to
+     misrepresent.</p>
+
+  <div class="ad-fig" data-fig='{
+    "type":"concessions",
+    "kicker":"Hostile witnesses",
+    "title":"Granted by named non-Christian and sceptical scholars",
+    "items":[
+      {
+        "who":"John Dominic Crossan",
+        "credentials":"co-founder of the Jesus Seminar",
+        "grants":"&ldquo;That he was crucified is as sure as anything historical can ever be.&rdquo;",
+        "cite":"Jesus: A Revolutionary Biography (HarperSanFrancisco, 1994), p. 145."
+      },
+      {
+        "who":"Bart D. Ehrman",
+        "credentials":"agnostic New Testament scholar who built a career challenging traditional Christian claims",
+        "grants":"Jesus &ldquo;certainly existed, as virtually every competent scholar of antiquity, Christian or non-Christian, agrees.&rdquo;",
+        "cite":"Forged (HarperOne, 2011), p. 285; Did Jesus Exist? (HarperOne, 2012), written expressly to rebut mythicism."
+      },
+      {
+        "who":"Gerd L&uuml;demann",
+        "credentials":"atheist New Testament scholar",
+        "grants":"Dated the elements of the creed &ldquo;to the first two years after the crucifixion&hellip; not later than three years.&rdquo;",
+        "cite":"Cited in library/earlycreed.html, evidence panel 2."
+      }
+    ],
+    "note":"Not a believers’ huddle: the crucifixion and the disciples’ sincere experience are granted by named non-Christian and sceptical scholars on the merits of the evidence, apart from any survey.",
+    "source":"library/minimalfacts.html, library/hist_jesus.html and library/earlycreed.html &mdash; all three ported verbatim from the certified evidence panels."
+  }'></div>
+
+  <h2>The same figures on a dark tier</h2>
+  <p class="lede">The Pro deep dive is navy. The figures re-theme themselves rather than needing a second set.</p>
+
+  <div class="darkdemo pro">
+    <div class="lbl">Pro &mdash; Deep Dive</div>
+    <div class="ad-fig" data-fig='{
+      "type":"syllogism",
+      "kicker":"The Kalam Cosmological Argument",
+      "premises":[
+        "Everything that begins to exist has a cause.",
+        "The universe began to exist."
+      ],
+      "conclusion":"Therefore the universe has a cause of its existence.",
+      "scope":"That is a long way toward theism — but it is not yet the triune God of the Nicene Creed, nor even a morally good or worship-worthy being."
+    }'></div>
+  </div>
+
+  <footer>
+    Preview only &mdash; <code>docs/</code> is excluded from the Vercel upload, so this page is never served.
+    No live card or essay has been changed. Renderer: <code>library/diagram.js</code>.
+  </footer>
+
+</main>
+
+<script src="../library/diagram.js" defer></script>
+</body>
+</html>
