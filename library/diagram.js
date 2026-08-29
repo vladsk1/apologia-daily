@@ -64,6 +64,22 @@
    Include it wherever the source paragraph has one; omit it only when it genuinely
    has none.
 
+   ⚠⚠ A HARVESTED FIELD CANNOT HOST AN `orthonote` ＊ — established by the
+   orthodoxy gate on the first live figure (Kalam, 2026-08-29). `fromList` and
+   `scope` read their text with `.textContent`, which FLATTENS an ＊ clarifier:
+   the "Is saying / Not saying" box would be dragged into the sentence as inline
+   garbage. So a figure is a NON-INTERACTIVE FORMAT in exactly the sense
+   CLAUDE.md's clarifier standard means, and a clarifier candidate here routes to
+   a WORDING fix — port the ＊'s own "Is saying" / "Not saying" rows into the
+   prose as plain sentences — never to an ＊ inside the figure.
+     The same gate round showed why this matters. Porting a fenced sentence
+   without its fence leaves a box that is net-negative: the first cut carried
+   "not yet the triune God of the Nicene Creed, nor even a morally good or
+   worship-worthy being" under a heading promising "what this DOES and does not
+   show", with no "does" content at all. Both lenses converged on it
+   independently. When porting into a figure, carry the POSITIVE half of the
+   source passage too, and check the heading's promise is actually met.
+
    🔴 NO TRINITY DIAGRAM, ON ANY PAGE. OWNER RULING, 2026-08-29 — a blanket
    prohibition, not a quality bar to clear, and not reopenable by a future
    session on its own initiative. Only the owner can lift it. Do not add a
