@@ -58,6 +58,21 @@ export function isBoilerplateLine(line) {
   // deliberately NOT filtered: the FAQPage schema mirrors the essays' doctrinal
   // FAQ answers, so a schema edit should still trip the flag — bias toward flagging.)
   if (/<title[ >]|<\/title>/.test(s)) return true;
+  // ...with ONE structured-data exception, keyed to the schema TYPE rather than
+  // to JSON-LD in general. A BreadcrumbList is a trail of page names and URLs
+  // (Home / Evidence Library / this page) carrying no argument of any kind — the
+  // structured-data twin of the nav markup filtered above. FAQPage, Article and
+  // every other type stay flaggable, so the reason JSON-LD is watched at all is
+  // untouched.
+  //
+  // WHY IT EARNS AN EXCEPTION. On 2026-08-29 all 76 outstanding flags traced to
+  // ONE commit (d83be712b, "SEO quick wins"), and the offending change in every
+  // one of the 76 was a single breadcrumb line — audited per file, 76 breadcrumb
+  // lines and 0 unexplained, with not one word of prose altered. Without this
+  // rule the next metadata sweep re-flags the same 76, and 76 standing false
+  // alarms is how this tool reached 59 unread flags before. A report nobody
+  // reads is not a check, and noise is where a real flag hides.
+  if (isBreadcrumbOnly(s)) return true;
   // a bare <script> include (site-wide JS enhancement: nav, related, orthonote,
   // active-reading, analytics, supabase CDN) is boilerplate, not doctrinal prose.
   if (/^<script\b[^>]*>\s*<\/script>$|^<script\b[^>]*\bsrc=/.test(s)) return true;
@@ -71,6 +86,24 @@ export function isBoilerplateLine(line) {
   if (/^<p\b[^>]*>\s*<a\b[^>]*>[^<]*<\/a>\s*<\/p>$/.test(s)) return true;
   if (isScriptPlumbing(s)) return true;
   return false;
+}
+
+/* A JSON-LD line that is a breadcrumb trail and NOTHING else.
+ *
+ * Deliberately strict on three counts, because this is the only hole in the
+ * "all structured data is flaggable" rule and it must not become a doorway:
+ *   1. the line must actually be a JSON-LD script, not prose mentioning the word;
+ *   2. it must declare BreadcrumbList; and
+ *   3. every @type on the line must be BreadcrumbList or its own ListItem
+ *      entries — so a graph that bundles a breadcrumb together with FAQPage,
+ *      Article or anything else still trips the flag.
+ * The only free text a breadcrumb carries is page names, and the <title>
+ * element — the same strings — is already exempt two lines above. */
+export function isBreadcrumbOnly(s) {
+  if (!/<script\b[^>]*application\/ld\+json/.test(s)) return false;
+  if (!/"@type":\s*"BreadcrumbList"/.test(s)) return false;
+  const types = [...s.matchAll(/"@type":\s*"([^"]+)"/g)].map((m) => m[1]);
+  return types.length > 0 && types.every((t) => t === 'BreadcrumbList' || t === 'ListItem');
 }
 
 /* ── JS PLUMBING vs DOCTRINE INSIDE AN INLINE <script> ──────────────────────

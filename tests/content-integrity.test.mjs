@@ -201,6 +201,10 @@ test('stamp-integrity classifier: SEO/nav/script lines are boilerplate, doctrina
     '-  <p class="art-shortanswer" style="font-size:.92rem"><a href="/answers/x.html" style="color:#1e4278">Short on time? Read the quick answer &rarr;</a></p>',
     '+   ',
     '+  <!-- content-review: {"argument":"2026-07-25","orthodoxy":"2026-07-25","by":"x"} -->',
+    // BreadcrumbList is the ONE exempt schema type: page names and URLs, no
+    // argument. Added 2026-08-29 after a single SEO commit flagged 76 essays on
+    // nothing but this line. Every other @type stays flaggable — see below.
+    '+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://apologiadaily.com/"}, {"@type": "ListItem", "position": 2, "name": "Evidence Library", "item": "https://apologiadaily.com/evidence-library.html"}, {"@type": "ListItem", "position": 3, "name": "How the Old Testament Foreshadows Jesus (Typology)"}]}</script>',
   ];
   for (const l of boilerplate) assert.equal(isBoilerplateLine(l), true, `should be boilerplate: ${l}`);
 
@@ -213,6 +217,12 @@ test('stamp-integrity classifier: SEO/nav/script lines are boilerplate, doctrina
     // a <p> carrying prose AND a link must still trip the flag — the link-only
     // exemption above is deliberately tight.
     '+<p>The empty tomb is attested early; see <a href="/library/emptytomb.html">the deep dive</a>.</p>',
+    // The breadcrumb exemption is keyed to the schema TYPE and must not become a
+    // doorway for doctrine. A graph that bundles a breadcrumb WITH FAQPage still
+    // trips the flag; so does prose that merely names the type.
+    '+<script type="application/ld+json">{"@graph":[{"@type": "BreadcrumbList", "itemListElement":[{"@type":"ListItem","name":"Home"}]},{"@type":"FAQPage","mainEntity":[{"text":"the Son is God"}]}]}</script>',
+    '+<script type="application/ld+json">{"@type": "Article", "articleBody": "Jesus is not God."}</script>',
+    '+<p>Our BreadcrumbList "@type": "BreadcrumbList" trail is fine but the Son is a creature.</p>',
   ];
   for (const l of doctrinal) assert.equal(isBoilerplateLine(l), false, `should NOT be boilerplate: ${l}`);
 });
