@@ -38,7 +38,7 @@
 > a dropped word in the Lüdemann quote ("not later than three" → "not later than three years") and an **authored**
 > "c. AD 65–95" Gospel-dating claim found nowhere in the essay (reworded to "the Gospels were all written later"). Every
 > verbatim-ported row survived clean.
-> ⭐ **UPDATE 2026-08-29 — evidence panels are now LIVE on TEN essays.** Batch 1 (2026-08-28, commit `461cf14`) added
+> ⭐ **UPDATE 2026-08-29 — evidence panels are now LIVE on THIRTEEN essays, and now cover the RIVAL-WORLDVIEW side.** Batch 1 (2026-08-28, commit `461cf14`) added
 > one panel each to **`hist_jesus.html`** (Ehrman concedes Jesus existed), **`minimalfacts.html`** (Crossan/Lüdemann/Ehrman
 > concede crucifixion + the disciples' sincere belief), and **`finetuning.html`** (Lewis=multiverse vs Barnes=designer;
 > DATA conceded / DESIGN inferred). Batch 2 (2026-08-29, commit `8bb43a1`) added **`kalam.html`** (Premise 2 "the universe
@@ -47,8 +47,14 @@
 > the mythicists' own source — refutes the borrowing thesis). Batch 3 (2026-08-29, commit `6cc772bf`) added
 > **`paulconv.html`** (even the atheist Michael Martin grants Paul is the sole named first-hand witness; sincerity≠resurrection
 > fenced), **`bigbang.html`** (Lemaître→Hubble→CMB; the classical beginning is science, the Creator inference kept separate),
-> and **`earlydate.html`** (the seven undisputed letters, ~AD 48–60; early attestation≠truth fenced). All join
-> `earlycreed.html` = **10 essays**. Every panel
+> and **`earlydate.html`** (the seven undisputed letters, ~AD 48–60; early attestation≠truth fenced). Batch 4
+> (2026-08-29, commit `11172a3d`) added the FIRST rival-worldview / reliability set: **`islam-dilemma.html`** (the
+> Qur'an's OWN command that Christians judge by the Gospel — a shared PREMISE for an internal critique, **false-common-ground
+> fenced in-sentence**: "not a claim that the two faiths teach the same thing"), **`canon.html`** (the canonical four are
+> 1st-c., the rejected gospels 2nd-c.+; chronology-not-theology), and **`archaeology.html`** (the Tel Dan Stele "House of
+> David"; corroborates≠proves). All join `earlycreed.html` = **13 essays**. ⭐ **The panels are NOT only the positive case** —
+> hist_jesus/uniqueness/manuscript already refute skeptical claims, and islam-dilemma now shows the pattern extends to a
+> world-religion refutation under its stricter guardrails (EXPLICIT-VERDICT + FALSE-COMMON-GROUND, both gated CLEAN). Every panel
 > ported from its essay's own certified footnotes and **dual-consensus certified** (citations STAMPABLE, orthodoxy CLEAN,
 > argument SOUND, neutrality STAMPABLE) via READ-ONLY Explore agents. ⭐ **PORT RULE HELD AGAIN:**
 > the only gate findings were the two/three strings that departed from verbatim (an authored finetuning opener that
