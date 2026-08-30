@@ -74,7 +74,7 @@
       2:  "Did Jesus Claim to Be God?",
       3:  "The Titles of Jesus",
       5:  "John 1:1 and the Pre-existence of Christ",
-      8:  "Messianic Prophecy - the Statistical Case",
+      8:  "Messianic Prophecy — Foretold and Fulfilled",
       9:  "Daniel's 70 Weeks",
       10: "The Early Creed of 1 Corinthians 15"
     },
@@ -83,7 +83,7 @@
       2:  "The Variant Readings (Qira'at)",
       4:  "The Preservation Promise vs the Lost Verses",
       8:  { f: "ev-s3.html", t: "Did Jesus Claim to Be God?" },
-      9:  { f: "ev-s3.html", t: "Messianic Prophecy - the Statistical Case" },
+      9:  { f: "ev-s3.html", t: "Messianic Prophecy — Foretold and Fulfilled" },
       11: "The Sira"
     },
     "existence-god": {
@@ -105,7 +105,7 @@
       2:  "Jesus as God in the New Testament",
       4:  "Did Jesus Claim to Be God?",
       8:  { f: "ev-s2.html", t: "The Minimal Facts Argument" },
-      9:  "Messianic Prophecy - the Statistical Case",
+      9:  "Messianic Prophecy — Foretold and Fulfilled",
       11: "The Early Creed of 1 Corinthians 15"
     },
     "worldview-comparison": {
@@ -229,7 +229,13 @@
 
     var pop = document.createElement('div');
     pop.id = 'ev-pop';
-    pop.style.cssText = 'display:none;position:fixed;inset:0;background:rgba(5,13,26,.85);z-index:400;overflow-y:auto;padding:2rem 1rem;';
+    /* z-index MUST stay above the study-plan modal, which is z-index:2000
+       (study-plans.html, `.plan-modal`). This popup is ALWAYS opened from inside
+       that modal — the "Open Read" link lives in an expanded day row — so at 400
+       it rendered underneath it and was invisible. The click intercepted, the
+       card fetched and rendered correctly, and the reader saw nothing happen.
+       Reported as "the links don't open"; the links were never the problem. */
+    pop.style.cssText = 'display:none;position:fixed;inset:0;background:rgba(5,13,26,.85);z-index:2500;overflow-y:auto;padding:2rem 1rem;';
     pop.innerHTML =
       '<div style="background:#f8f7f4;border-radius:8px;max-width:760px;width:100%;margin:auto;overflow:hidden;">' +
         '<div style="background:#050d1a;padding:1.25rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;">' +
@@ -253,9 +259,7 @@
     return (s || '').toLowerCase().replace(/[\u2018\u2019']/g, '').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
   }
   /* The "main title" before any dash (hyphen / en / em) \u2014 lets a day match a card
-     whose subtitle has since been reworded (e.g. map "Messianic Prophecy - the
-     Statistical Case" still finds the card "Messianic Prophecy \u2014 Foretold and
-     Fulfilled"). Normalised; used only as a fallback after exact/substring. */
+     whose subtitle has since been reworded (kept as a safety net for any future rename). Normalised; used only as a fallback after exact/substring. */
   function evHead(s) {
     return evNorm((s || '').split(/[\u2014\u2013-]/)[0]);
   }
