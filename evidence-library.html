@@ -47,6 +47,34 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96)
 .dbi{background:#faeeda;color:#854f0b;}
 .dba{background:#eeedfe;color:#3c3489;}
 .cn{position:sticky;top:64px;z-index:90;background:#0a1628;border-bottom:1px solid rgba(255,255,255,.08);padding:0 2rem;}
+/* ── Open-card bar ────────────────────────────────────────────────────────
+   Deep inside an open card there is nothing on screen telling a reader how to
+   get out: the header and its chevron are gone, and no control anywhere says
+   close. Measured on a 390x844 phone, an open card runs 25.8 screens (tallest
+   39), and it is 31,400px — 37.2 screens — from the top of card 01 to the top
+   of card 02. The card can be closed by clicking its text, but nothing says so.
+   This pins the card's title and a Close button while its real header is off
+   screen. It sits at top:64px and z-index 95, so it COVERS the sticky tab row
+   (z-index 90) rather than stacking below it: a third fixed bar would have
+   taken about a fifth of a phone screen, and hiding the tab row instead would
+   pull it out of normal flow and jolt the page by its own height. The tab row
+   is not needed while reading one argument, and returns the moment the card
+   closes or the reader scrolls back to its header. */
+.ocb{position:fixed;left:0;right:0;top:64px;z-index:95;display:none;align-items:center;gap:.9rem;
+     padding:.62rem 2rem;background:#0a1628;border-bottom:1px solid rgba(200,169,81,.35);
+     box-shadow:0 6px 18px rgba(5,13,26,.3);}
+/* state class is ocb-on, NOT "on": library/orthonote.js injects .on{position:relative}
+   at runtime for its clarifier boxes, and that later rule beat .ocb{position:fixed}
+   at equal specificity — the bar rendered in the page flow instead of pinned. */
+.ocb.ocb-on{display:flex;}
+.ocb-n{font-family:var(--fd);font-weight:700;font-size:.95rem;color:var(--g);flex:0 0 auto;}
+.ocb-t{font-family:var(--fd);font-weight:700;font-size:.92rem;color:#fff;flex:1;
+       white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.ocb-x{flex:0 0 auto;font-family:var(--ui);font-size:.76rem;font-weight:500;cursor:pointer;
+       color:var(--n);background:var(--g);border:0;border-radius:3px;padding:7px 15px;}
+.ocb-x:hover{background:#d4b96a;}
+@media(max-width:768px){.ocb{padding:.55rem 1rem;gap:.6rem;}.ocb-t{font-size:.82rem;}
+  .ocb-x{padding:6px 12px;font-size:.72rem;}}
 .cni{max-width:1100px;margin:0 auto;display:flex;overflow-x:auto;}
 .tab{font-family:var(--ui);font-size:.82rem;font-weight:500;padding:1rem 1.25rem;background:none;border:none;color:rgba(255,255,255,.55);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;}
 .tab:hover{color:rgba(255,255,255,.85);}
@@ -458,6 +486,7 @@ function sw(id, btn) {
   document.getElementById(id).className = 'sec go';
   btn.className = 'tab on';
   loadSection(id);
+  syncCardBar();   /* a tab switch changes which card (if any) is open */
 }
 
 function loadSection(id, cb) {
@@ -527,7 +556,7 @@ function openArgCard(slug) {
   el.classList.add('op');
   currentArgSlug = slug;
   try { var ct = el.querySelector('.ct'); if (ct) { currentArgContext = ct.textContent.trim(); var lbl = document.getElementById('float-arg-label'); if (lbl) lbl.textContent = currentArgContext; } } catch (e) {}
-  setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+  setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); syncCardBar(); }, 60);
 }
 
 /* The AI tutor must answer FROM the card in front of the reader, not from the card's
@@ -618,9 +647,55 @@ function keepInView(card, fn) {
   }
 }
 
+/* ── The open-card bar ──────────────────────────────────────────────────────
+   Built once, reused. It shows only while an open card's own header is off the
+   top of the screen, so a reader who can still see the header (and its chevron)
+   is not given a second, redundant control. Because the bar covers the tab row
+   rather than adding to it, chromeTop() stays correct without adjustment: both
+   sit at 64px and both are about the same height. */
+var _ocb = null;
+function cardBar() {
+  if (_ocb) return _ocb;
+  _ocb = document.createElement('div');
+  _ocb.className = 'ocb';
+  _ocb.innerHTML = '<span class="ocb-n"></span><span class="ocb-t"></span>' +
+                   '<button class="ocb-x" type="button">&#10005; Close</button>';
+  _ocb.querySelector('.ocb-x').addEventListener('click', function (e) {
+    e.stopPropagation();
+    var card = document.querySelector('.sec.go .card.op');
+    if (!card) { syncCardBar(); return; }
+    keepInView(card, function () { card.classList.remove('op'); });
+    syncCardBar();
+  });
+  document.body.appendChild(_ocb);
+  return _ocb;
+}
+
+function syncCardBar() {
+  var bar = cardBar();
+  var card = document.querySelector('.sec.go .card.op');
+  if (!card) { bar.classList.remove('ocb-on'); return; }
+  var head = card.querySelector('.ch');
+  var r = card.getBoundingClientRect();
+  var top = chromeTop();
+  /* show only when the real header has scrolled past AND the card is still the
+     thing on screen — otherwise the bar would linger over the list below it */
+  if (head.getBoundingClientRect().bottom < top && r.bottom > top) {
+    var n = card.querySelector('.cnum'), t = card.querySelector('.ct');
+    bar.querySelector('.ocb-n').textContent = n ? n.textContent.trim() : '';
+    bar.querySelector('.ocb-t').textContent = t ? t.textContent.trim() : '';
+    bar.classList.add('ocb-on');
+  } else {
+    bar.classList.remove('ocb-on');
+  }
+}
+addEventListener('scroll', syncCardBar, { passive: true });
+addEventListener('resize', syncCardBar);
+
 function tog(card) {
   if (selectingInside(card)) return;
   keepInView(card, function () { togInner(card); });
+  syncCardBar();
 }
 
 function togInner(card) {
