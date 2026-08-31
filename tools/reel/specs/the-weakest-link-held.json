@@ -1,0 +1,95 @@
+{
+  "reviewed": {"argument": "_pending_", "orthodoxy": "_pending_", "by": "_pending_ — NOT CLEARED TO POST. Every claim is ported from certified text: ev-s8.html card 'What the Early Church Suffered — and Why It Held' (.pe + key points 1-5) and library/persecution.html. Positive-case only per the reel rule: no objection is voiced and Candida Moss is not restated. The scope bound IS kept, as the rule requires — 'dying for a belief proves sincerity, not truth' is our own bound on our own claim, verbatim from key point 5, not a steelman. ⚠ JULIAN IS DELIBERATELY ABSENT: he is AD 362, post-Constantine, and CLAUDE.md forbids listing him among the illegal-period witnesses (Pliny c.112, Lucian c.165, Cornelius 251). Named hostile witnesses are only those the card names for this period. The 'forty-six certificates' figure and the Pliny release-on-recanting detail are the card's own."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "voiceover": "The early Christians were not victims of a manhunt they could not escape. They were people who were handed an exit, and refused to take it. Around AD 112 the Roman governor Pliny interrogated Christians three times, on pain of death. Everyone who would offer a pinch of incense to the emperor and curse Christ was released. The ones who died, died because they would not. Under Trajan's policy the crime was the name. Not arson. Not sedition. Only being a Christian, and admitting it aloud. A small public gesture won release. Refusing it cost your life. And we are not depending on legend. Roughly forty-six certificates of sacrifice from the Decian order of 250 survive on papyrus, and the earliest martyr accounts — Polycarp, the Scillitan martyrs, Lyons, Perpetua — are sober, dated, and singled out even by the most sceptical specialists. The strongest evidence comes from their enemies. Pliny, Tacitus, Lucian and Galen — none of them friends of the church — record the executions, and the Christians' startling readiness to face them. They concede the courage. They cannot explain it. Rome kept assuming its cruelty would find the weakest link: a slave, a girl, a mother. Again and again, the weakest link held. This does not by itself prove Christianity true. Dying for a belief proves sincerity, not truth. What it rules out is cynical pretence — you do not face the beasts to keep up an act. Why these people were so sure is a different question, and the evidence for it is waiting for you.",
+  "source": "ev-s8.html — What the Early Church Suffered; library/persecution.html",
+  "scenes": [
+    { "dur": 4.2,
+      "big": [ {"t": "They were handed", "c": "cream", "s": 104}, {"t": "an exit.", "c": "gold", "s": 118} ],
+      "sub": [ {"t": "They refused to take it.", "c": "dim", "f": "serif", "s": 46} ] },
+
+    { "kicker": "ROME, AROUND AD 112", "dur": 7.0, "lines": [
+      {"t": "The governor Pliny", "c": "cream", "s": 58},
+      {"t": "interrogated Christians", "c": "cream", "s": 58},
+      {"t": "three times,", "c": "cream", "s": 58},
+      {"t": "on pain of death.", "c": "cream", "s": 58},
+      {"t": "", "s": 26},
+      {"t": "And released everyone", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "who would recant.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "THE PRICE OF WALKING FREE", "dur": 7.0, "lines": [
+      {"t": "A pinch of incense", "c": "cream", "s": 60},
+      {"t": "to the emperor.", "c": "cream", "s": 60},
+      {"t": "", "s": 22},
+      {"t": "A curse on Christ.", "c": "cream", "s": 60},
+      {"t": "", "s": 26},
+      {"t": "The ones who died", "c": "gold", "f": "serifb", "s": 60},
+      {"t": "died because", "c": "gold", "f": "serifb", "s": 60},
+      {"t": "they would not.", "c": "gold", "f": "serifb", "s": 60} ] },
+
+    { "kicker": "THE CRIME WAS THE NAME", "dur": 6.6, "lines": [
+      {"t": "Not arson.", "c": "dim", "s": 58},
+      {"t": "Not sedition.", "c": "dim", "s": 58},
+      {"t": "", "s": 24},
+      {"t": "Only being a Christian —", "c": "cream", "s": 56},
+      {"t": "and admitting it aloud.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "NOT LEGEND. PAPYRUS.", "dur": 7.4, "lines": [
+      {"t": "Roughly forty-six", "c": "cream", "s": 56},
+      {"t": "certificates of sacrifice", "c": "cream", "s": 56},
+      {"t": "from the Decian order of 250", "c": "cream", "s": 52},
+      {"t": "survive to this day.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "SOBER, DATED RECORDS", "dur": 7.0, "lines": [
+      {"t": "Polycarp.", "c": "cream", "s": 62},
+      {"t": "The Scillitan martyrs.", "c": "cream", "s": 56},
+      {"t": "Lyons. Perpetua.", "c": "cream", "s": 62},
+      {"t": "", "s": 24},
+      {"t": "Singled out even by", "c": "dim", "s": 52},
+      {"t": "the most sceptical specialists.", "c": "gold", "f": "serifb", "s": 48} ] },
+
+    { "kicker": "THE BEST EVIDENCE IS HOSTILE", "dur": 7.6, "lines": [
+      {"t": "Pliny. Tacitus.", "c": "cream", "s": 60},
+      {"t": "Lucian. Galen.", "c": "cream", "s": 60},
+      {"t": "", "s": 22},
+      {"t": "None of them friends", "c": "dim", "s": 52},
+      {"t": "of the church.", "c": "dim", "s": 52},
+      {"t": "", "s": 24},
+      {"t": "They concede the courage.", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "They cannot explain it.", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "THE WEAKEST LINK", "dur": 7.4, "lines": [
+      {"t": "Rome kept assuming", "c": "cream", "s": 58},
+      {"t": "its cruelty would find", "c": "cream", "s": 58},
+      {"t": "the weakest link —", "c": "cream", "s": 58},
+      {"t": "", "s": 22},
+      {"t": "a slave, a girl, a mother.", "c": "dim", "s": 52},
+      {"t": "", "s": 26},
+      {"t": "Again and again,", "c": "gold", "f": "serifb", "s": 60},
+      {"t": "the weakest link held.", "c": "gold", "f": "serifb", "s": 60} ] },
+
+    { "kicker": "THE HONEST LIMIT", "dur": 7.6, "lines": [
+      {"t": "This does not by itself", "c": "cream", "s": 54},
+      {"t": "prove Christianity true.", "c": "cream", "s": 54},
+      {"t": "", "s": 22},
+      {"t": "Dying for a belief proves", "c": "dim", "s": 50},
+      {"t": "sincerity, not truth.", "c": "dim", "s": 50},
+      {"t": "", "s": 24},
+      {"t": "What it rules out", "c": "gold", "f": "serifb", "s": 56},
+      {"t": "is cynical pretence.", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "kicker": "WHY THEY WERE SO SURE", "dur": 6.4, "lines": [
+      {"t": "You do not face the beasts", "c": "cream", "s": 52},
+      {"t": "to keep up an act.", "c": "cream", "s": 52},
+      {"t": "", "s": 26},
+      {"t": "So what did they see?", "c": "gold", "f": "serifb", "s": 60} ] },
+
+    { "dur": 5.0,
+      "big": [ {"t": "The weakest", "c": "cream", "s": 96}, {"t": "link held.", "c": "gold", "s": 108} ],
+      "sub": [ {"t": "The full case — free", "c": "dim", "f": "serif", "s": 46},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serif", "s": 50} ] }
+  ]
+}
