@@ -38,10 +38,33 @@ const HOME_END = '<!-- trust-strip:end -->';
 
 const read = (p) => readFileSync(path.join(ROOT, p), 'utf8');
 
+/* Library pages that vercel.json permanently redirects away. Such a page never
+   serves — a visitor asking for it is sent somewhere else — so it is not a
+   published essay and must not be counted as one. Reading the redirect table is
+   the principled test rather than a hardcoded filename: it stays true the next
+   time a page is retired, and it cannot drift out of step with what the site
+   actually serves.
+
+   ⚠ This exists because it went wrong. library/legacy.html is a "Coming soon"
+   placeholder AND is 301'd to the evidence library, yet it was being counted,
+   so the homepage trust strip and editorial-standards.html both advertised 93
+   deep-dive essays against a real 92 — on the two pages whose entire subject is
+   that we check our work. Caught 2026-09-01 by the orthodoxy gate reviewing an
+   ad that quoted the figure. Do NOT "simplify" this back to a bare glob. */
+function redirectedLibraryPages() {
+  const vercel = JSON.parse(read('vercel.json'));
+  return new Set((vercel.redirects || [])
+    .map((r) => String(r.source || '').replace(/^\//, ''))
+    .filter((s) => /^library\/[^/]+\.html$/.test(s)));
+}
+
 function counts() {
-  // Deep-dive essays (exclude the index and any language mirrors' indexes)
+  // Deep-dive essays (exclude the index, any language mirrors' indexes, and
+  // any page the site redirects away — see redirectedLibraryPages above)
+  const retired = redirectedLibraryPages();
   const essays = globSync('library/*.html', { cwd: ROOT })
-    .filter((f) => !/index\.html$/.test(f)).length;
+    .filter((f) => !/index\.html$/.test(f))
+    .filter((f) => !retired.has(f.split(path.sep).join('/'))).length;
 
   // Answer pages, and how many carry both gate dates in their provenance
   const answersData = JSON.parse(read('answers/_data.json'));
