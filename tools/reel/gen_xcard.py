@@ -112,7 +112,8 @@ def render(spec, out_path):
     # 108px with no fit, wrap or shrink logic, so a headline wider than the card
     # was silently CLIPPED MID-WORD and the PNG still wrote successfully. It
     # happened: "Know the reason for the hope you have." measured 1718px against
-    # 1504px of usable width and shipped reading "...the hope you h" -- on a card
+    # 1408px of usable width (W - 2*MARGIN; a review that put it at 1504 had
+    # subtracted one margin, not two) and shipped reading "...the hope you h" -- on a card
     # alluding to 1 Peter 3:15, for a ministry whose whole differentiator is that
     # it checks things. A gate caught it; nothing mechanical would have.
     # Shrinking (rather than wrapping) keeps the two-line cream/gold structure
