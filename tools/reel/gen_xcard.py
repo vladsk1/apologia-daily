@@ -107,12 +107,35 @@ def render(spec, out_path):
     if spec.get("kicker"):
         draw_kicker(d, spec["kicker"], y)
     # headline (italic serif, left-aligned, big)
+    #
+    # ⚠ SHRINK-TO-FIT IS NOT COSMETIC. Until 2026-09-01 this drew at a hardcoded
+    # 108px with no fit, wrap or shrink logic, so a headline wider than the card
+    # was silently CLIPPED MID-WORD and the PNG still wrote successfully. It
+    # happened: "Know the reason for the hope you have." measured 1718px against
+    # 1504px of usable width and shipped reading "...the hope you h" -- on a card
+    # alluding to 1 Peter 3:15, for a ministry whose whole differentiator is that
+    # it checks things. A gate caught it; nothing mechanical would have.
+    # Shrinking (rather than wrapping) keeps the two-line cream/gold structure
+    # every card in xcards/ depends on. Do NOT restore a fixed size.
     hy = 250
+    usable = W - 2 * MARGIN
+    sizes = []
     for ln in spec["headline"]:
-        f = Fserif(108)
+        size = 108
+        while size > 48:
+            f = Fserif(size)
+            if d.textlength(ln["t"], font=f) <= usable:
+                break
+            size -= 2
+        sizes.append(size)
+    size = min(sizes) if sizes else 108                                          # one size for all lines
+    if size < 108:
+        print("NOTE headline shrunk 108 -> %d to fit %dpx" % (size, usable))
+    for ln in spec["headline"]:
+        f = Fserif(size)
         d.text((MARGIN + 2, hy + 3), ln["t"], font=f, fill=(0, 0, 0))           # shadow
         d.text((MARGIN, hy), ln["t"], font=f, fill=COL.get(ln.get("c", "cream"), CREAM))
-        hy += 128
+        hy += int(128 * size / 108)
     # sub (sans, lighter)
     sy = hy + 22
     for s in spec.get("sub", []):
