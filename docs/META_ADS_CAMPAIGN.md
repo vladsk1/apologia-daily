@@ -354,6 +354,98 @@ angles above touches it, and none should.
 
 ---
 
+## Part 8 — A competitor's ad, torn down (added 2026-09-01)
+
+The owner captured a **sponsored Instagram Reel** for **Memorise.bible** — a Bible-memorisation app —
+in the wild. It is the single most useful artefact in this document, because it is a real Christian app
+buying installs in the exact channel, placement and format this plan proposes.
+
+### What could and could not be established
+
+⚠ **Read this before using anything below.** The app itself has **no findable public footprint**: it does
+not appear in app-store search results, in any 2026 "best Bible memory apps" roundup, or in any press.
+Separately, **this environment's network policy blocked every primary source** — `memorise.bible`,
+`apps.apple.com`, `play.google.com`, `remem.me` and `faith.tools` all returned egress denials, confirmed
+against the proxy status endpoint. So:
+
+- **First-hand and high confidence:** everything visible in the screenshot itself.
+- **Search-snippet sourced, not verified against the primary:** every category figure below.
+- **Not established at all:** Memorise.bible's own downloads, ratings, revenue, pricing, or developer.
+
+**The absence is itself the finding.** An app with zero organic footprint running paid installs is buying
+its first users — the same position Apologia Daily would be in. Its ad showed **10 likes**, which is
+consistent with a small or very new campaign.
+
+### The ad, feature by feature
+
+| Element | What they did | What it tells us |
+|---|---|---|
+| **Format** | A single phone mockup on plain white, showing the real UI — a "Select Verses" grid of all 66 books | **Product demo, not narrative.** No talking head, no scene sequence. The whole message lands in one frame with no watch-time required — which is exactly the argument in Part 3 for statics over reels at low budget. |
+| **Headline** | **"Know the Bible by Heart"** — four words, elegant italic serif, top of frame | ⭐ **This is a better headline than the one I wrote for us, and it is safer.** It is an imperative with **no second person and no attribute assigned to the viewer**, so it clears the Part 1 "you" rule cleanly, while our `"Know the reason for the hope you have."` does not. Four words, one benefit, zero setup. |
+| **Caption** | Opens with a Scripture quote — *"Humbly receive the implanted word, whic… more"* (James 1:21) | The verse **is** the hook. No sales sentence, no feature list above the fold. It self-selects the audience Meta can no longer target by religion — precisely the workaround Part 5 argues the creative has to perform. |
+| **CTA** | A green **"Download"** button | App-install objective. Not available to us: `ios/` and `android/` are scaffolded but unsubmitted, so our CTA stays the website. |
+| **Placement** | Reels tab, `Sponsored` label | Matches our own organic data, where **79.7% of reach came from the Reels tab**. |
+
+### The category, and the number that should change a decision
+
+Search-sourced; primaries unreachable.
+
+| App | Scale | Price |
+|---|---|---|
+| **Remember Me** (Poimena, Switzerland) | **2.2M downloads** across both stores | **Free forever** — open source, no ads, no premium tier. 44 languages, 284 translations |
+| **The Bible Memory App** / ScriptureTyper | **2M+ users, 30M+ verses memorised** | Free tier, or **$9.99/year**; lifetime plans |
+| **Versify** | **35,000+ monthly users**, 700,000+ verses memorised | — |
+| **Verses** | — | **$4.99/yr** basic, **$9.99/yr** pro |
+| **MemoryVerses** | — | Free; 6 practice methods, 7 games, family accounts |
+
+🔴 **The pricing anchor is the finding that reaches outside this document.** The category leader has
+**2M+ users at US$9.99 a *year*** and the download leader is **free forever**. Apologia Daily's
+provisional **$8 a *month*** is roughly **12× the annual price** of the most successful paid app in an
+adjacent Christian-app category.
+
+⚠ **This is an adjacency argument, not a like-for-like one, and it should not be over-read.** Memorisation
+is a utility with near-zero marginal content cost; we publish gated long-form scholarship, which is
+genuinely more expensive to make. Hallow and Glorify charge US$70–90/yr and sustain it. But it is a real
+data point on what Christians in the app market are *conditioned* to pay, and the pricing/currency
+decision is still open (CLAUDE.md, OPEN items). It belongs in that decision.
+
+### Features worth taking — and the one I was wrong about
+
+**⚠ Checked against the repo before claiming anything, and my first instinct was wrong.** I assumed
+spaced repetition would be our gap. It is not: `flashcards.html:586` already implements **SM-2**, with
+`reps`/`interval` mastery tracking at `:507` and the schedule persisted to the account.
+
+Genuine gaps, in order of value:
+
+1. **Audio and speech recognition — a real absence.** Zero hits for `SpeechRecognition`,
+   `SpeechSynthesis` or audio across `flashcards.html`, `explain-it-back.html` and `palace.html`. The
+   category leader's paid tier is built on **speech recognition and audio recording**. For us the
+   equivalent is obvious and better: `explain-it-back.html` already grades a typed explanation — letting
+   a reader *say* the argument aloud is nearer to the actual use case, since the product's whole premise
+   is a conversation. ⚠ It is also a content-gate surface: whatever a grader marks is a rubric, and this
+   repo has already recorded a case where 67 pages scored a reader's own words with a fabricated mark.
+2. **The book-grid selector is a genuinely good pattern.** All 66 books, one tappable screen, no scroll,
+   no search box. Our equivalent — 8 categories and 92 essays — is currently reached through tabs and a
+   hub. A single dense grid is worth prototyping for the library index; it is presentation-only, so it
+   costs no gate.
+3. **Family accounts** (MemoryVerses) map directly onto the **A$99/yr group licence** that
+   `META_ADS_PLAN.md` names as the only offer that makes paid acquisition solvent. `study-groups.html`
+   already has the group infrastructure; what is missing is the *packaging*, not the plumbing.
+
+**Not worth taking:** first-letter mode. It is the category's core mechanic and it suits verbatim recall
+of a fixed text. Our unit is an *argument*, where the point is that the reader can reconstruct it in their
+own words — `explain-it-back.html` is already the right shape, and a first-letter scaffold would train the
+wrong skill.
+
+### The one line to steal
+
+**"Know the Bible by Heart."** Not the words — the *shape*: **a four-word imperative naming a benefit,
+assigning nothing to the viewer.** Ours in that shape would be *"Know why the faith holds"* or
+*"Answer the hard questions"* — both policy-clean under Part 1, both shorter than anything in Part 4.
+Any such line is doctrinal compression and owes the gate before it runs.
+
+---
+
 ## Sources
 
 Market figures are third-party medians, not our data.
@@ -367,3 +459,15 @@ Market figures are third-party medians, not our data.
 - [Thumbstop rate: 18–28% Meta hook benchmark](https://www.adsights.ai/resources/glossary/metrics/thumbstop-rate-tsr)
 - [Facebook Ads CPC benchmarks for nonprofit](https://www.superads.ai/facebook-ads-costs/cpc-cost-per-click/nonprofit)
 - [12 advanced Meta ads strategies profitable brands use in 2026](https://www.modernmarketinginstitute.com/blog/12-advanced-meta-ads-strategies-that-profitable-brands-are-using-in-2026) (creative testing order; refresh cadence)
+
+Part 8 — the competitor teardown. ⚠ Every one of these was reached only through **search snippets**; the
+primary pages are blocked by this environment's egress policy, so no figure below was verified against
+the source. Re-check them from an unrestricted session before acting on the pricing argument.
+
+- [Remember Me — Bible memory app](https://www.remem.me/) (2.2M downloads; free forever, open source) — *primary blocked*
+- [The Bible Memory App](https://biblememory.com/) (2M+ users, 30M+ verses; $9.99/yr) — *primary blocked*
+- [Verses](https://www.getverses.com/) ($4.99/yr basic, $9.99/yr pro) — *primary blocked*
+- [7 best Bible memory apps for 2026, compared](https://www.biblememorygoal.com/memory-methods/best-bible-memory-apps/)
+- [faith.tools — Bible memory apps](https://faith.tools/bible-memory) — *primary blocked*
+- **Memorise.bible** — the app in the captured ad. **No findable public footprint**; `memorise.bible` is
+  egress-blocked here. Nothing about it is established beyond what the screenshot shows.
