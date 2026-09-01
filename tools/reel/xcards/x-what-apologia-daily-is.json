@@ -2,17 +2,17 @@
   "reviewed": {
     "argument": "_pending_",
     "orthodoxy": "_pending_",
-    "by": "_pending_ — NOT CLEARED TO POST. Brand / product-introduction card, companion to specs/what-apologia-daily-is.json. Headline is 1 Peter 3:15 shaped ('always be prepared to give an answer... for the hope that is in you') without quoting or paraphrasing the verse as Scripture. Sub-line figures measured from the repo 2026-09-01: 93 deep-dive essays (library/*.html less index.html), 110 answer pages, 156 verified source passages. ⚠ FOR THE GATE: no doctrinal proposition is asserted; the only checkable claims are the counts and the review-stage claim, and the latter is deliberately NOT on this card — the card says 'Checked before published', the site's named standard, rather than a scoped review claim that would need the word 'essay' to stay true.",
+    "by": "_pending_ — NOT CLEARED TO POST. ROUND 2 (2026-09-01). Brand / product-introduction card, companion to specs/what-apologia-daily-is.json; both were reviewed together. Round 1: argument found the card's headline CLEAN and flagged the sub-line; orthodoxy certified the card CLEAN but raised the headline as a clarifier candidate. Both findings applied. ⚠ HEADLINE — a CROSS-LENS SPLIT resolved toward the stronger statement. Argument saw nothing to change in 'Know why you believe. / Be ready to say it.' Orthodoxy found that it narrows 1 Peter 3:15's object from HOPE to knowledge: the verse's readiness is grounded in reverence for Christ and a living hope, not in information possessed, and cognitive narrowing is the standing occupational drift of an apologetics brand — one that CLAUDE.md's own mission sentence resists in terms ('equip them to give a reason for the hope they have'). Took orthodoxy's supplied rewrite VERBATIM per the port rule; the sibling card xcards/x-reason-for-hope.json already sets this register. Still alludes to the verse without quoting it, so no fabrication surface. ⚠ SUB-LINE — carried argument's BREAK 1 verbatim from the reel: 'answers from checked sources' is false of api/ask.js, where retrieval is optional ('If none fit, ignore them and answer normally', line 27). Replaced with what the code actually enforces. ⚠ COUNT: 93 -> 92; library/legacy.html is a 'Coming soon' placeholder and is 301-redirected in vercel.json, so it never serves. tools/update-trust-numbers.mjs was counting it and the live homepage strip said 93; tool fixed in commit d4c8974. ⚠ The five-stage review claim is deliberately still NOT on this card — only 31 of 92 essays carry a dated citations field (measured 2026-09-01), so that claim is not supportable as stated on any surface. ⚠ A FIX PASS RE-OPENS THE GATE: every changed string is un-gated until both lenses re-read this file.",
     "measured": "2026-09-01"
   },
   "name": "what-apologia-daily-is",
   "kicker": "APOLOGIA DAILY",
   "headline": [
-    { "t": "Know why you believe.", "c": "cream" },
-    { "t": "Be ready to say it.", "c": "gold" }
+    { "t": "Know the hope you hold.", "c": "cream" },
+    { "t": "Be ready to say why.", "c": "gold" }
   ],
   "sub": [
-    "93 cited deep dives, 110 short answers, and an",
-    "assistant that answers from checked sources."
+    "92 cited deep dives, 110 short answers, and an",
+    "assistant that names its sources as it answers."
   ]
 }
