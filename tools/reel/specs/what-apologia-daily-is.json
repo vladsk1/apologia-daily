@@ -1,0 +1,110 @@
+{
+  "reviewed": {
+    "argument": "_pending_",
+    "orthodoxy": "_pending_",
+    "by": "_pending_ — NOT CLEARED TO POST. BRAND / PRODUCT-INTRODUCTION reel, intended for PAID distribution, so every factual claim about the site is measured from the repo on 2026-09-01 rather than recalled: 93 deep-dive essays (library/*.html less index.html), 8 Evidence Library categories (ev-s1..ev-s8), 156 public-domain source passages all verified:true (sources-index.json), 110 answer pages of 110 carrying both gate dates, five review stages (editorial-standards.html, 'Checked Before Published'). ⚠ FOR THE GATE, three deliberate scope decisions: (1) the review claim is scoped to ESSAYS ('No essay goes live') per the CLAUDE.md standing rule — pocket-cards.html, flashcards.html and explain-it-back.html remain unstamped, so the site-wide 'nothing' wording is NOT yet true and must not be used; (2) 'There are good answers' is deliberately weaker than 'the answer' — the site concedes mystery on suffering and does not claim a complete theodicy, so no scene promises an answer to every question; (3) no doctrinal proposition is asserted anywhere in this reel — it describes the product, not the case — so there is no claim here for orthodoxy to certify beyond tone. LENGTH is set by measured data, not the skill default: docs/INSTAGRAM_GROWTH_STRATEGY.md records ~7% watch-through on 1:16–2:12 reels with the retention cliff at 0:03, so this is 28.6s with a five-word opening. POSITIVE-CASE ONLY: no objection is voiced.",
+    "measured": "2026-09-01"
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.45,
+  "voiceover": "Someone asked. And you froze. Not because there is nothing to say. There are good answers — you just were not carrying them. Apologia Daily is where you go and get them. Ninety-three deep-dive essays across eight categories, every source checked word for word. An assistant that answers from those cited sources, and shows you where each one came from. And then you practise: argue against a sparring partner, drill the flashcards, explain it back in your own words and get marked. Five minutes a day. One question, one argument, and it compounds. And the standard behind all of it — no essay goes live until it clears five stages of review. So the next time someone asks, you will have it. Apologia Daily. Start free.",
+  "source": "index.html trust strip + editorial-standards.html; feature set enumerated from the repo 2026-09-01",
+  "scenes": [
+    {
+      "dur": 2.8,
+      "big": [
+        { "t": "Someone asked.", "c": "cream", "s": 92 },
+        { "t": "You froze.", "c": "gold", "s": 110 }
+      ],
+      "sub": [
+        { "t": "Not because there was nothing to say.", "c": "dim", "f": "serif", "s": 40 }
+      ]
+    },
+    {
+      "dur": 3.0,
+      "lines": [
+        { "t": "There are", "c": "cream", "s": 62 },
+        { "t": "good answers.", "c": "cream", "s": 62 },
+        { "t": "", "s": 26 },
+        { "t": "You just were not", "c": "gold", "f": "serifb", "s": 58 },
+        { "t": "carrying them.", "c": "gold", "f": "serifb", "s": 58 }
+      ]
+    },
+    {
+      "kicker": "THE EVIDENCE LIBRARY",
+      "dur": 3.4,
+      "lines": [
+        { "t": "93 deep-dive essays.", "c": "cream", "s": 56 },
+        { "t": "8 categories.", "c": "cream", "s": 56 },
+        { "t": "", "s": 24 },
+        { "t": "156 source passages,", "c": "gold", "f": "serifb", "s": 52 },
+        { "t": "each checked word for word.", "c": "gold", "f": "serifb", "s": 48 }
+      ]
+    },
+    {
+      "kicker": "ASK ANYTHING",
+      "dur": 3.2,
+      "lines": [
+        { "t": "An assistant that", "c": "cream", "s": 58 },
+        { "t": "answers from those", "c": "cream", "s": 58 },
+        { "t": "cited sources —", "c": "cream", "s": 58 },
+        { "t": "", "s": 24 },
+        { "t": "and shows you", "c": "gold", "f": "serifb", "s": 56 },
+        { "t": "where each one came from.", "c": "gold", "f": "serifb", "s": 48 }
+      ]
+    },
+    {
+      "kicker": "THEN YOU PRACTISE",
+      "dur": 3.2,
+      "lines": [
+        { "t": "Argue against", "c": "cream", "s": 58 },
+        { "t": "a sparring partner.", "c": "cream", "s": 58 },
+        { "t": "Drill the flashcards.", "c": "cream", "s": 58 },
+        { "t": "", "s": 24 },
+        { "t": "Explain it back —", "c": "gold", "f": "serifb", "s": 56 },
+        { "t": "and get marked.", "c": "gold", "f": "serifb", "s": 56 }
+      ]
+    },
+    {
+      "kicker": "FIVE MINUTES A DAY",
+      "dur": 3.0,
+      "lines": [
+        { "t": "One question.", "c": "cream", "s": 60 },
+        { "t": "One argument.", "c": "cream", "s": 60 },
+        { "t": "", "s": 26 },
+        { "t": "It compounds.", "c": "gold", "f": "serifb", "s": 64 }
+      ]
+    },
+    {
+      "kicker": "THE STANDARD BEHIND IT",
+      "dur": 3.4,
+      "lines": [
+        { "t": "No essay goes live", "c": "cream", "s": 58 },
+        { "t": "until it clears", "c": "cream", "s": 58 },
+        { "t": "five stages of review.", "c": "gold", "f": "serifb", "s": 58 }
+      ]
+    },
+    {
+      "dur": 2.8,
+      "lines": [
+        { "t": "So the next time", "c": "cream", "s": 60 },
+        { "t": "someone asks —", "c": "cream", "s": 60 },
+        { "t": "", "s": 26 },
+        { "t": "you will have it.", "c": "gold", "f": "serifb", "s": 66 }
+      ]
+    },
+    {
+      "dur": 4.5,
+      "big": [
+        { "t": "Apologia", "c": "cream", "s": 100 },
+        { "t": "Daily", "c": "gold", "s": 112 }
+      ],
+      "sub": [
+        { "t": "Start free", "c": "dim", "f": "serif", "s": 46 },
+        { "t": "apologiadaily.com", "c": "gold", "f": "serif", "s": 52 }
+      ]
+    }
+  ]
+}

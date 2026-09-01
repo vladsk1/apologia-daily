@@ -1,0 +1,18 @@
+{
+  "reviewed": {
+    "argument": "_pending_",
+    "orthodoxy": "_pending_",
+    "by": "_pending_ — NOT CLEARED TO POST. Brand / product-introduction card, companion to specs/what-apologia-daily-is.json. Headline is 1 Peter 3:15 shaped ('always be prepared to give an answer... for the hope that is in you') without quoting or paraphrasing the verse as Scripture. Sub-line figures measured from the repo 2026-09-01: 93 deep-dive essays (library/*.html less index.html), 110 answer pages, 156 verified source passages. ⚠ FOR THE GATE: no doctrinal proposition is asserted; the only checkable claims are the counts and the review-stage claim, and the latter is deliberately NOT on this card — the card says 'Checked before published', the site's named standard, rather than a scoped review claim that would need the word 'essay' to stay true.",
+    "measured": "2026-09-01"
+  },
+  "name": "what-apologia-daily-is",
+  "kicker": "APOLOGIA DAILY",
+  "headline": [
+    { "t": "Know why you believe.", "c": "cream" },
+    { "t": "Be ready to say it.", "c": "gold" }
+  ],
+  "sub": [
+    "93 cited deep dives, 110 short answers, and an",
+    "assistant that answers from checked sources."
+  ]
+}
