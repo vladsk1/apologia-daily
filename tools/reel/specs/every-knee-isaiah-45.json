@@ -1,0 +1,89 @@
+{
+  "reviewed": {"argument": "2026-09-02", "orthodoxy": "2026-09-02", "neutrality": "2026-09-02", "by": "2026-09-02 deity-tier DUAL-CONSENSUS via READ-ONLY Explore agent, ported from certified library/phil2.html (Isaiah 45:23 applied to Jesus in Phil 2:9-11). orthodoxy CLEAN (full deity AND humanity - the servant/cross humbling is kept, not monophysite; monotheism intact, 'to the glory of God the Father', 'not a second god'; the Bauckham divine-identity claim is bounded by the adjacent 'monotheism stays intact' scene; 0 clarifiers). argument SOUND, neutrality CLEAN after fixes. Gate conditionally cleared pending 3 fixes, all applied verbatim: (1) blocking Isaiah misquote in the X post - 'every tongue confess' (Philippians' verb) corrected to 'every tongue shall swear' (Isaiah 45:23); (2) the same in the IG caption; (3) softened this reel's 'the oldest song' superlative to 'one of the oldest'. The reel VO + on-screen scenes kept the Isaiah/Philippians verb distinction correct throughout. Human/pastoral sign-off still owed."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "source": "library/phil2.html",
+  "voiceover": "Philippians 2 carries one of the oldest songs of the church. The one every knee will honor first emptied himself — he took the form of a servant and was obedient to death on a cross. Therefore God highly exalted him and gave him the name above every name, so that at the name of Jesus every knee should bow, and every tongue confess that Jesus Christ is Lord. But those are borrowed words. Paul is reaching back centuries, to Isaiah 45 — one of the most fiercely monotheistic texts in all of Scripture. There the LORD declares, 'I am God, and there is no other,' and swears that to him every knee shall bow, every tongue shall swear. It is worship owed to the one God of Israel, and to no one else. And Paul takes that very text — the honor YHWH claims for himself alone — and applies it to Jesus. The name Jesus receives is the divine name itself: Kyrios, the Lord. Jesus is placed inside the identity of the one God, receiving the worship and the name that belong to YHWH alone. And monotheism stays intact — it is all to the glory of God the Father. One God. And Jesus is Lord.",
+  "scenes": [
+    { "dur": 3.4,
+      "big": [ {"t": "Every knee", "c": "gold", "s": 118}, {"t": "will bow.", "c": "cream", "s": 118} ],
+      "sub": [ {"t": "Philippians 2 — one of the", "c": "dim", "f": "serif", "s": 42},
+               {"t": "church's earliest songs.", "c": "dim", "f": "serif", "s": 42} ] },
+
+    { "kicker": "THE ONE WHO IS WORSHIPPED", "dur": 6.0, "lines": [
+      {"t": "The one every knee will honor", "c": "cream", "s": 52},
+      {"t": "first emptied himself —", "c": "cream", "s": 52},
+      {"t": "", "s": 20},
+      {"t": "took the form of a servant,", "c": "cream", "s": 52},
+      {"t": "obedient to death", "c": "cream", "s": 52},
+      {"t": "on a cross.", "c": "gold", "f": "serifb", "s": 66} ] },
+
+    { "kicker": "THEREFORE GOD EXALTED HIM", "dur": 6.0, "lines": [
+      {"t": "God gave him", "c": "cream", "s": 56},
+      {"t": "the name above every name,", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "", "s": 22},
+      {"t": "so that at the name of Jesus", "c": "cream", "s": 52},
+      {"t": "every knee should bow.", "c": "cream", "s": 52} ] },
+
+    { "kicker": "AND EVERY TONGUE CONFESS", "dur": 5.2, "lines": [
+      {"t": "“Jesus Christ", "c": "gold", "f": "serifb", "s": 88},
+      {"t": "is Lord” —", "c": "gold", "f": "serifb", "s": 88},
+      {"t": "", "s": 20},
+      {"t": "in heaven, on earth,", "c": "cream", "s": 52},
+      {"t": "and under the earth.", "c": "cream", "s": 52} ] },
+
+    { "kicker": "BUT THESE ARE BORROWED WORDS", "dur": 6.0, "lines": [
+      {"t": "The climax is a quotation.", "c": "cream", "s": 56},
+      {"t": "", "s": 22},
+      {"t": "Paul is reaching back", "c": "cream", "s": 54},
+      {"t": "across the centuries —", "c": "cream", "s": 54},
+      {"t": "to Isaiah 45.", "c": "gold", "f": "serifb", "s": 72} ] },
+
+    { "kicker": "WHAT ISAIAH 45 SAYS", "dur": 6.8, "lines": [
+      {"t": "“I am God, and", "c": "cream", "s": 56},
+      {"t": "there is no other.”", "c": "cream", "s": 56},
+      {"t": "", "s": 20},
+      {"t": "“To me every knee shall bow,", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "every tongue shall swear.”", "c": "gold", "f": "serifb", "s": 52} ] },
+
+    { "kicker": "THE MOST MONOTHEISTIC TEXT", "dur": 5.6, "lines": [
+      {"t": "Worship owed", "c": "cream", "s": 58},
+      {"t": "to the one God of Israel —", "c": "cream", "s": 56},
+      {"t": "", "s": 22},
+      {"t": "and to no one else.", "c": "gold", "f": "serifb", "s": 68} ] },
+
+    { "kicker": "THE MOVE", "dur": 6.4, "lines": [
+      {"t": "Paul takes that text —", "c": "cream", "s": 56},
+      {"t": "the honor YHWH claims", "c": "cream", "s": 54},
+      {"t": "for himself alone —", "c": "cream", "s": 54},
+      {"t": "", "s": 20},
+      {"t": "and applies it to Jesus.", "c": "gold", "f": "serifb", "s": 62} ] },
+
+    { "kicker": "THE NAME ABOVE EVERY NAME", "dur": 6.0, "lines": [
+      {"t": "The name Jesus receives", "c": "cream", "s": 54},
+      {"t": "is the divine name itself:", "c": "cream", "s": 54},
+      {"t": "", "s": 22},
+      {"t": "Kyrios. The Lord.", "c": "gold", "f": "serifb", "s": 74} ] },
+
+    { "kicker": "A CHRISTOLOGY OF DIVINE IDENTITY", "dur": 6.8, "lines": [
+      {"t": "Jesus is placed inside", "c": "cream", "s": 54},
+      {"t": "the identity of the one God —", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "", "s": 20},
+      {"t": "the worship and the name", "c": "cream", "s": 52},
+      {"t": "that belong to YHWH alone.", "c": "cream", "s": 52} ] },
+
+    { "kicker": "AND MONOTHEISM STAYS INTACT", "dur": 6.0, "lines": [
+      {"t": "Not a second god.", "c": "cream", "s": 58},
+      {"t": "", "s": 22},
+      {"t": "It is all", "c": "cream", "s": 52},
+      {"t": "“to the glory of", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "God the Father.”", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "dur": 4.4,
+      "big": [ {"t": "One God.", "c": "cream", "s": 92}, {"t": "Jesus is Lord.", "c": "gold", "s": 108} ],
+      "sub": [ {"t": "The full case at", "c": "dim", "f": "serif", "s": 42},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52} ] }
+  ]
+}
