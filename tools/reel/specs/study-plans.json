@@ -1,11 +1,11 @@
 {
-  "reviewed": {"argument": "_pending_", "orthodoxy": "_pending_", "neutrality": "_pending_", "by": "_pending_ — product/feature reel for study-plans.html; names the nine live plans and their curriculum only, makes no compressed doctrinal argument. Bounded per guardrails: Bible-reliability page says the text 'reached us' (preservation), not that it proves truth; Islam page is descriptive/non-triumphalist ('the honest comparison'), no false common ground. Owes argument + orthodoxy + neutrality (Islam + deity named) via READ-ONLY Explore agents before posting."},
+  "reviewed": {"argument": "2026-09-03", "orthodoxy": "2026-09-03", "neutrality": "2026-09-03", "by": "2026-09-03 argument + orthodoxy + neutrality (Islam + deity named) via READ-ONLY agents. Product/feature reel for study-plans.html's ten live plans + curriculum; no compressed doctrinal argument. Round 1: all three lenses converged on TWO fixes, both applied verbatim from their supplied wording — (1) 'Every claim reviewed before it's published' overstated the essay-scoped standard (neutrality BREAK / orthodoxy DRIFT) → rescoped to 'five stages of review on every deep-dive essay'; (2) 'Nine plans' undercounted (page renders TEN; Daily Defender is the 10th) → 'Ten plans'. Confirmation pass (a fix re-opens the gate): orthodoxy CLEAN, both facts re-verified against study-plans.html. Preserved on merit: 'The objections, answered' (argument verified STRONG — Week 3 IS objections + day-18 refutation); Bible 'how the text reached us' (preservation, not truth); Islam scene (no false common ground, 1 Peter 3:15). Human/pastoral sign-off still owed site-wide."},
   "aspect": "vertical",
   "theme": "navy",
   "fps": 30,
   "crossfade": 0.6,
   "source": "study-plans.html",
-  "voiceover": "Where do you even start with apologetics? Apologia Daily gives you a path. Pick a study plan and get one short lesson a day — the evidence, laid out in order, until it is yours. Start with the thirty-day Resurrection Deep Dive: the early creed, the empty tomb, the appearances, the objections answered. Or God's Existence, in twenty-one or thirty days — the cosmological, design, and moral arguments, one at a time. Fourteen days on the divine identity of Jesus — his own claims, the titles, the resurrection. Fourteen days on the reliability of the Bible — the manuscripts, the archaeology, the prophecy. Fourteen days answering Islam — the questions, the history, the honest comparison. Then compare the worldviews, and prepare for the hardest conversations in the Debate Arena. Nine plans. One lesson a day. Every claim reviewed before it is published. Start free at apologiadaily.com.",
+  "voiceover": "Where do you even start with apologetics? Apologia Daily gives you a path. Pick a study plan and get one short lesson a day — the evidence, laid out in order, until it is yours. Start with the thirty-day Resurrection Deep Dive: the early creed, the empty tomb, the appearances, the objections answered. Or God's Existence, in twenty-one or thirty days — the cosmological, design, and moral arguments, one at a time. Fourteen days on the divine identity of Jesus — his own claims, the titles, the resurrection. Fourteen days on the reliability of the Bible — the manuscripts, the archaeology, the prophecy. Fourteen days answering Islam — the questions, the history, the honest comparison. Then compare the worldviews, and prepare for the hardest conversations in the Debate Arena. Ten plans. One lesson a day. And every deep-dive essay behind them clears five stages of review before it's published. Start free at apologiadaily.com.",
   "scenes": [
     { "dur": 3.2,
       "big": [ {"t": "Where do you", "c": "cream", "s": 104}, {"t": "even start?", "c": "gold", "s": 104} ],
@@ -62,12 +62,12 @@
       {"t": "the hardest conversations", "c": "cream", "s": 52},
       {"t": "in the Debate Arena.", "c": "gold", "f": "serifb", "s": 58} ] },
 
-    { "kicker": "THE APOLOGIA STANDARD", "dur": 4.6, "lines": [
-      {"t": "Nine plans.", "c": "cream", "s": 60},
+    { "kicker": "THE APOLOGIA STANDARD", "dur": 4.8, "lines": [
+      {"t": "Ten plans.", "c": "cream", "s": 60},
       {"t": "One lesson a day.", "c": "cream", "s": 60},
       {"t": "", "s": 22},
-      {"t": "Every claim reviewed", "c": "gold", "f": "serifb", "s": 54},
-      {"t": "before it's published.", "c": "gold", "f": "serifb", "s": 54} ] },
+      {"t": "Five stages of review", "c": "gold", "f": "serifb", "s": 52},
+      {"t": "on every deep-dive essay.", "c": "gold", "f": "serifb", "s": 52} ] },
 
     { "dur": 4.2,
       "big": [ {"t": "Start free.", "c": "cream", "s": 100}, {"t": "Today.", "c": "gold", "s": 116} ],
