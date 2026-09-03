@@ -1,0 +1,77 @@
+{
+  "reviewed": {"argument": "_pending_", "orthodoxy": "_pending_", "neutrality": "_pending_", "by": "_pending_ — product/feature reel for study-plans.html; names the nine live plans and their curriculum only, makes no compressed doctrinal argument. Bounded per guardrails: Bible-reliability page says the text 'reached us' (preservation), not that it proves truth; Islam page is descriptive/non-triumphalist ('the honest comparison'), no false common ground. Owes argument + orthodoxy + neutrality (Islam + deity named) via READ-ONLY Explore agents before posting."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "source": "study-plans.html",
+  "voiceover": "Where do you even start with apologetics? Apologia Daily gives you a path. Pick a study plan and get one short lesson a day — the evidence, laid out in order, until it is yours. Start with the thirty-day Resurrection Deep Dive: the early creed, the empty tomb, the appearances, the objections answered. Or God's Existence, in twenty-one or thirty days — the cosmological, design, and moral arguments, one at a time. Fourteen days on the divine identity of Jesus — his own claims, the titles, the resurrection. Fourteen days on the reliability of the Bible — the manuscripts, the archaeology, the prophecy. Fourteen days answering Islam — the questions, the history, the honest comparison. Then compare the worldviews, and prepare for the hardest conversations in the Debate Arena. Nine plans. One lesson a day. Every claim reviewed before it is published. Start free at apologiadaily.com.",
+  "scenes": [
+    { "dur": 3.2,
+      "big": [ {"t": "Where do you", "c": "cream", "s": 104}, {"t": "even start?", "c": "gold", "s": 104} ],
+      "sub": [ {"t": "Apologetics can feel like an ocean.", "c": "dim", "f": "serif", "s": 42},
+               {"t": "We give you a path.", "c": "dim", "f": "serif", "s": 42} ] },
+
+    { "kicker": "STUDY PLANS", "dur": 4.0, "lines": [
+      {"t": "Pick a plan.", "c": "gold", "f": "serifb", "s": 82},
+      {"t": "", "s": 22},
+      {"t": "One short lesson a day —", "c": "cream", "s": 54},
+      {"t": "the evidence, in order,", "c": "cream", "s": 54},
+      {"t": "until it's yours.", "c": "cream", "s": 54} ] },
+
+    { "kicker": "30 DAYS · THE RESURRECTION", "dur": 5.6, "lines": [
+      {"t": "Resurrection", "c": "gold", "f": "serifb", "s": 72},
+      {"t": "Deep Dive", "c": "gold", "f": "serifb", "s": 72},
+      {"t": "", "s": 22},
+      {"t": "The early creed. The empty tomb.", "c": "cream", "s": 46},
+      {"t": "The appearances.", "c": "cream", "s": 46},
+      {"t": "The objections, answered.", "c": "cream", "s": 46} ] },
+
+    { "kicker": "21 OR 30 DAYS · DOES GOD EXIST?", "dur": 5.6, "lines": [
+      {"t": "God's Existence", "c": "gold", "f": "serifb", "s": 70},
+      {"t": "", "s": 22},
+      {"t": "The cosmological,", "c": "cream", "s": 50},
+      {"t": "design, and moral arguments —", "c": "cream", "s": 50},
+      {"t": "one at a time.", "c": "cream", "s": 50} ] },
+
+    { "kicker": "14 DAYS · WHO IS JESUS?", "dur": 5.4, "lines": [
+      {"t": "The Divine Identity", "c": "gold", "f": "serifb", "s": 62},
+      {"t": "of Jesus", "c": "gold", "f": "serifb", "s": 62},
+      {"t": "", "s": 22},
+      {"t": "His own claims. The titles.", "c": "cream", "s": 48},
+      {"t": "The resurrection.", "c": "cream", "s": 48} ] },
+
+    { "kicker": "14 DAYS · CAN WE TRUST IT?", "dur": 5.4, "lines": [
+      {"t": "Bible Reliability", "c": "gold", "f": "serifb", "s": 66},
+      {"t": "", "s": 22},
+      {"t": "How the text reached us —", "c": "cream", "s": 50},
+      {"t": "the manuscripts, the archaeology,", "c": "cream", "s": 46},
+      {"t": "the prophecy.", "c": "cream", "s": 50} ] },
+
+    { "kicker": "14 DAYS · ANSWERING ISLAM", "dur": 5.4, "lines": [
+      {"t": "Answering Islam", "c": "gold", "f": "serifb", "s": 64},
+      {"t": "", "s": 22},
+      {"t": "The questions. The history.", "c": "cream", "s": 50},
+      {"t": "An honest comparison —", "c": "cream", "s": 50},
+      {"t": "with gentleness and respect.", "c": "dim", "s": 46} ] },
+
+    { "kicker": "AND WHEN YOU'RE READY", "dur": 5.2, "lines": [
+      {"t": "Compare the worldviews.", "c": "cream", "s": 52},
+      {"t": "", "s": 20},
+      {"t": "Then prepare for", "c": "cream", "s": 52},
+      {"t": "the hardest conversations", "c": "cream", "s": 52},
+      {"t": "in the Debate Arena.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "THE APOLOGIA STANDARD", "dur": 4.6, "lines": [
+      {"t": "Nine plans.", "c": "cream", "s": 60},
+      {"t": "One lesson a day.", "c": "cream", "s": 60},
+      {"t": "", "s": 22},
+      {"t": "Every claim reviewed", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "before it's published.", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "dur": 4.2,
+      "big": [ {"t": "Start free.", "c": "cream", "s": 100}, {"t": "Today.", "c": "gold", "s": 116} ],
+      "sub": [ {"t": "Pick your plan at", "c": "dim", "f": "serif", "s": 42},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 54} ] }
+  ]
+}
