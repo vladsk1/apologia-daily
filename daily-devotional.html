@@ -103,6 +103,8 @@
     .ai-response { background: var(--navy-50); border-left: 3px solid var(--navy-300); border-radius: 0 4px 4px 0; padding: 1rem 1.25rem; margin-top: 1rem; display: none; }
     .ai-response.visible { display: block; }
     .ai-response-text { font-size: 0.95rem; color: var(--text-mid); line-height: 1.75; white-space: pre-wrap; }
+    .ai-response-label { font-family: var(--font-ui); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy-600, #1e4278); margin-bottom: 0.5rem; }
+    .ai-response-close { font-family: var(--font-ui); font-size: 0.82rem; color: var(--text-muted, #7a8fa8); line-height: 1.7; margin-top: 0.75rem; }
 
     /* RELATED CONTENT */
     .related-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
@@ -274,7 +276,9 @@
       <textarea class="ai-input" id="ai-input" placeholder="Type your reflection here…" rows="3"></textarea>
       <button class="ai-submit" id="ai-submit" onclick="submitReflection()" disabled>Submit reflection →</button>
       <div class="ai-response" id="ai-response">
+        <div class="ai-response-label">Carry this with you today</div>
         <div class="ai-response-text" id="ai-response-text"></div>
+        <div class="ai-response-close">Sit with it through the day, pray it over, and notice what God brings to mind &mdash; there&rsquo;s no need to type a reply here.</div>
       </div>
     </div>
 
@@ -619,17 +623,22 @@
             userResponse: input
           })
         });
+        var CLOSING = 'Thank you for your reflection. Continue holding that thought through the day and see what God brings to mind.';
         if (res.ok) {
           const data = await res.json();
-          document.getElementById('ai-response-text').textContent = data.question;
-          document.getElementById('ai-response').classList.add('visible');
+          document.getElementById('ai-response-text').textContent = data.question || CLOSING;
+        } else {
+          document.getElementById('ai-response-text').textContent = CLOSING;
         }
       } catch {
         document.getElementById('ai-response-text').textContent = 'Thank you for your reflection. Continue holding that thought through the day and see what God brings to mind.';
-        document.getElementById('ai-response').classList.add('visible');
       }
-      document.getElementById('ai-submit').disabled = false;
-      document.getElementById('ai-submit').textContent = 'Submit reflection';
+      document.getElementById('ai-response').classList.add('visible');
+      // Option A: the follow-up is ONE closing prompt to carry through the day, not a
+      // back-and-forth. Lock the reflection (keep it on screen) and remove the submit
+      // affordance, so it no longer looks like it is waiting for another answer.
+      var _inp = document.getElementById('ai-input'); if (_inp) { _inp.readOnly = true; _inp.style.opacity = '0.75'; }
+      var _sub = document.getElementById('ai-submit'); if (_sub) _sub.style.display = 'none';
     }
 
     document.getElementById('ai-input').addEventListener('input', function() {
