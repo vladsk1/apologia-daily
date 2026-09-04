@@ -39,6 +39,16 @@ inheritance you cannot see because you are breathing it. ⭐ **The spine is ALRE
 as the *enforcement* of inequality. 🔴🔴 **HARD DO-NOT-USE: the p. 30 epigraph misattributes CALLICLES
 (*Gorgias* 483c–d) to PLATO** — a view Socrates refutes — with a malformed date; and its "nobody in antiquity
 attacked slavery" line is **weaker than what `library/legacy.html` already says correctly**).
+**ONG** = `on-guard.md` (William Lane Craig, *On Guard*, **David C. Cook, 2010**, ISBN 978-1-4347-6488-1 —
+the **popular-level distillation of *Reasonable Faith* 3rd ed. [2008]**; all 10 chapters mapped: absurdity
+of life without God, Leibniz contingency, kalam, fine-tuning, moral argument, suffering, historical Jesus,
+resurrection, religious pluralism. ⚠⚠ **DOMINANT FINDING: OUR ESSAYS ARE BETTER OR EQUAL EVERYWHERE** — like
+the Strobel run, almost pure corroboration + several "ours is more careful" hazards (kalam engages
+Morriston/Oppy/Wall; fine-tuning handles the multiverse + Barnes/Stenger; both far past a popular book).
+**Net actionable output ≈ zero new rows.** For real citation-chasing use *RF* 3rd ed., not this. 🔴🔴 **And
+ch. 8 p. 262 runs a RETIRED claim** — the Daniel 7:13–14 "divine-human figure" whose dominion "belongs to
+God alone," tripping BOTH `daniel7-figure-is-divine` **and** `pelach-only-to-God`. **THIRD popular book found
+carrying it** (after Geisler–Turek + Strobel) — do NOT mine ch. 8's Son-of-Man material).
 
 **⚠ PARTIAL notes added 2026-07-26 (books NOT owned, NOT read — mapped at thesis/chapter level only from
 the authors' own open-access work, published open-access reviews, publisher frontmatter, and our own
