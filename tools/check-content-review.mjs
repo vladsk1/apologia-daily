@@ -57,6 +57,11 @@ const CONTENT_PATTERNS = [
                                            // lines and an 8-card capstone, all doctrinal, on
                                            // the Islam + deity-of-Christ dual-consensus tier
                                            // and published under a living author's name.
+  /^reading-club-on-guard\.html$/,          // reading-club study for On Guard (W. L. Craig):
+                                           // 10 session summaries, 10 retention lines and an
+                                           // 8-card capstone, all doctrinal, on the deity-of-
+                                           // Christ + resurrection dual-consensus tier. An
+                                           // independent companion — no author permission.
   /^pocket-cards\.html$/,                  // 70 share-card arguments (gated 2026-08-11, dual-consensus);
                                            // the `custom` user-text generator card is out of scope — see
                                            // the file's content-review stamp for the certification scope.
