@@ -883,6 +883,10 @@
     document.getElementById('view-books').style.display = 'none';
     document.getElementById('view-detail').classList.add('open');
     renderBookDetail(currentBook);
+    // Record a browser-history entry for this in-page view change, so the
+    // phone/browser Back button returns to the book list (popstate below)
+    // instead of navigating off the page to the previous menu.
+    try { history.pushState({ rcDetail: currentBook.id }, ''); } catch (e) {}
   }
 
   function renderBookDetail(b) {
@@ -1008,10 +1012,26 @@
     showToast('You\'ve joined this reading club!');
   }
 
-  function backToBooks() {
+  function closeDetailView() {
     document.getElementById('view-books').style.display = '';
     document.getElementById('view-detail').classList.remove('open');
     currentBook = null;
+  }
+
+  // Browser / OS Back while a book detail is open should return to the book
+  // list, not leave the page. openBook() pushes a history entry; popping it
+  // (the Back button, or history.back() from the in-page button) closes the
+  // detail here.
+  window.addEventListener('popstate', function () {
+    var d = document.getElementById('view-detail');
+    if (d && d.classList.contains('open')) { closeDetailView(); }
+  });
+
+  function backToBooks() {
+    // Prefer going Back so the pushed history entry is consumed and the two
+    // Back paths stay in sync; fall back to a direct close if nothing to pop.
+    if (history.state && history.state.rcDetail) { history.back(); }
+    else { closeDetailView(); }
   }
 
   function scrollToBooks() {
@@ -1020,7 +1040,10 @@
     // is open. scrollIntoView on a hidden element is a no-op, so the button appeared
     // dead in detail view — return to the list first, then scroll.
     var detail = document.getElementById('view-detail');
-    if (detail && detail.classList.contains('open')) { backToBooks(); }
+    if (detail && detail.classList.contains('open')) {
+      if (history.state && history.state.rcDetail) { history.back(); }
+      closeDetailView();
+    }
     var books = document.getElementById('view-books');
     if (books) { books.style.display = ''; }
     var anchor = document.getElementById('books-anchor');
