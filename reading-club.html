@@ -1015,7 +1015,16 @@
   }
 
   function scrollToBooks() {
-    document.getElementById('books-anchor').scrollIntoView({ behavior: 'smooth' });
+    // The hero's "Browse books" button is always visible, but #books-anchor lives
+    // inside #view-books, which openBook() sets to display:none while a book detail
+    // is open. scrollIntoView on a hidden element is a no-op, so the button appeared
+    // dead in detail view — return to the list first, then scroll.
+    var detail = document.getElementById('view-detail');
+    if (detail && detail.classList.contains('open')) { backToBooks(); }
+    var books = document.getElementById('view-books');
+    if (books) { books.style.display = ''; }
+    var anchor = document.getElementById('books-anchor');
+    if (anchor) { anchor.scrollIntoView({ behavior: 'smooth' }); }
   }
 
   function showToast(msg) {
