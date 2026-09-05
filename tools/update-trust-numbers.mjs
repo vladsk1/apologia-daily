@@ -73,8 +73,14 @@ function counts() {
     .map((f) => read(f))
     .reduce((n, src) => n + (src.match(/^\s*test\(/gm) || []).length, 0);
 
+  // Evidence-Library arguments = one mastery page per argument (ev-m-*.html);
+  // this matches the ev-s* tab cards one-to-one. Stated on the homepage and the
+  // flashcards page; see ARG_FILES below for why it is managed by replacement.
+  const args = globSync('ev-m-*.html', { cwd: ROOT })
+    .filter((f) => !/index\.html$/.test(f)).length;
+
   return { essays, answers, answersReviewed, sourcesTotal, sourcesVerified,
-    briefs: briefRows.length, tests };
+    briefs: briefRows.length, tests, args };
 }
 
 function render(c) {
@@ -134,9 +140,31 @@ function splice(file, label, startTag, endTag, body) {
   return { src, next: src.slice(0, s) + body + src.slice(e + endTag.length) };
 }
 
+/* The Evidence-Library argument count is stated in prose and pricing links that
+   sit OUTSIDE any marker block — the "N in-depth arguments" feature card and the
+   "all N arguments" lines on the homepage, and the flashcards Pro-limit line. It
+   drifted to a stale "63"/"61" because nothing regenerated it. Manage it here by
+   targeted replacement, folded into the same stale-detection + --check machinery
+   as the marker blocks, so it self-heals and CI catches future drift. */
+const withArgs = (src, n) => src
+  .replace(/\b\d+ in-depth arguments\b/g, `${n} in-depth arguments`)
+  .replace(/\ball \d+ arguments\b/g, `all ${n} arguments`);
+
+const ARG_ONLY_FILES = [
+  { file: path.join(ROOT, 'homepage-v2.html'), label: 'homepage-v2.html' }, // .vercelignored, kept in sync anyway
+  { file: path.join(ROOT, 'flashcards.html'), label: 'flashcards.html' },
+];
+
+const homeSplice = splice(HOME, 'index.html', HOME_START, HOME_END, renderHome(c));
+
 const targets = [
   { file: PAGE, label: 'editorial-standards.html', ...splice(PAGE, 'editorial-standards.html', START, END, render(c)) },
-  { file: HOME, label: 'index.html', ...splice(HOME, 'index.html', HOME_START, HOME_END, renderHome(c)) },
+  // index.html carries BOTH the trust-strip block and the arg-count strings; apply both to one buffer so a single write covers it.
+  { file: HOME, label: 'index.html', src: homeSplice.src, next: withArgs(homeSplice.next, c.args) },
+  ...ARG_ONLY_FILES.map(({ file, label }) => {
+    const src = readFileSync(file, 'utf8');
+    return { file, label, src, next: withArgs(src, c.args) };
+  }),
 ];
 
 const stale = targets.filter((t) => t.next !== t.src);
