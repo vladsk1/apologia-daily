@@ -31,6 +31,17 @@ docs/
 .claude/
 .github/
 
+# Internal markdown docs anywhere in the tree (CLAUDE.md, HANDOFF.md, the root
+# and per-folder READMEs, sources/PENDING_VERIFICATION.md, etc.). None is served
+# as site content — the site is HTML — and CLAUDE.md/HANDOFF.md in particular
+# carry internal handoff and security notes. vercel.json already REDIRECTS
+# /CLAUDE.md and /HANDOFF.md to "/", but that only stops serving, not uploading:
+# the files still shipped in every deployment, inflating Deployment Storage and
+# leaning on a single redirect rule this file's header calls drift-prone. Excluding
+# them here is the deny-by-default fix — never uploaded, so never served and never
+# stored. robots.txt is .txt, not .md, so it is unaffected and keeps serving.
+*.md
+
 # Local secrets (belt and braces; also git-ignored)
 revenuecat.json
 *.keystore
