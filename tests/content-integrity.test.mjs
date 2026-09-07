@@ -31,6 +31,20 @@ test('no answer carries an over-concession tell (whole answer + meta)', () => {
   );
 });
 
+// No served page may attribute wording to a source ("which he called …", "in
+// his own words …", "as X put it …") with a long phrase left OUTSIDE quotation
+// marks. This is the blind spot that let a certified Frederick Douglass
+// misquotation ship on library/abolition.html (2026-09-07): the citations agent
+// verifies QUOTED strings, so a quote-shaped phrase left unquoted was invisible
+// to it. Forcing such wording into quotes is what makes it checkable. Baselined
+// paraphrases are accepted on-record; a NEW unquoted attribution fails.
+test('no new quote-shaped-but-unquoted attribution (Douglass-misquote guard)', () => {
+  assert.doesNotThrow(
+    () => execFileSync('node', ['tools/check-unquoted-attributions.mjs'], { cwd: process.cwd(), stdio: 'pipe' }),
+    'a source is quoted-in-effect without quotation marks — run: node tools/check-unquoted-attributions.mjs',
+  );
+});
+
 // Every indexable content page (library essays + answers flywheel) must be in
 // sitemap.xml, and no sitemap URL may point at a deleted file. Catches the
 // legacy.html class of bug — a live, self-canonical, certified essay that
