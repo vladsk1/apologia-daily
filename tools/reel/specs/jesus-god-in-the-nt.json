@@ -1,0 +1,96 @@
+{
+  "reviewed": {"argument": "_ported_", "orthodoxy": "_ported_", "neutrality": "_ported_", "by": "Ported verbatim from the dual-consensus-certified essay library/jesus_as_god_nt.html (citations+argument+orthodoxy+neutrality all 2026-09-01). Positive-case only; scope bound (creedal vocabulary came later) retained as accuracy. Reel-spec itself NOT independently re-gated — argument+orthodoxy+neutrality pass owed before posting (deity tier)."},
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.6,
+  "voiceover": "Is Jesus God in the New Testament? Don't pull on one verse — pull on all of them at once. The New Testament isn't a single line; it's a library of twenty-seven documents, written by independent authors, across half a century, in two languages. In a locked room, Thomas reaches toward the wounds of the risen Jesus and says what no devout Jew said to anyone but the LORD: My Lord and my God. John opens his Gospel reaching behind Genesis: in the beginning was the Word, and the Word was God. Paul says that in Christ the whole fullness of deity dwells bodily. Hebrews records the Father speaking to the Son: Your throne, O God, is forever and ever. And Revelation gives Jesus the LORD's own name from Isaiah: I am the first and the last. Then look at what they did — they worshipped him, the honor angels themselves refuse. And it was early. Marana tha — our Lord, come — is Aramaic, pre-Pauline, from the Jerusalem church of the thirties. Not a late legend. Independent authors, two languages, half a century, all placing Jesus inside the identity of the one God of Israel. The creed's vocabulary came later. The evidence it organized was already here. God in the flesh — written from the start.",
+  "source": "library/jesus_as_god_nt.html",
+  "scenes": [
+    { "dur": 3.2,
+      "big": [ {"t": "Is Jesus God", "c": "cream", "s": 104}, {"t": "in the New Testament?", "c": "gold", "s": 78} ],
+      "sub": [ {"t": "The whole witness, surveyed.", "c": "dim", "f": "serif", "s": 44} ] },
+
+    { "kicker": "NOT ONE VERSE", "dur": 5.4, "lines": [
+      {"t": "Pick one verse and a reader", "c": "cream", "s": 54},
+      {"t": "can propose another reading.", "c": "cream", "s": 54},
+      {"t": "", "s": 22},
+      {"t": "But the New Testament is", "c": "cream", "s": 54},
+      {"t": "a library of 27 documents —", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "independent authors,", "c": "cream", "s": 52},
+      {"t": "two languages, 50 years.", "c": "cream", "s": 52} ] },
+
+    { "kicker": "THOMAS · JOHN 20:28", "dur": 5.6, "lines": [
+      {"t": "A week after the cross,", "c": "cream", "s": 56},
+      {"t": "Thomas sees the risen Jesus", "c": "cream", "s": 56},
+      {"t": "and says what no Jew said", "c": "cream", "s": 54},
+      {"t": "to anyone but the LORD:", "c": "cream", "s": 54},
+      {"t": "", "s": 22},
+      {"t": "“My Lord and my God.”", "c": "gold", "f": "serifb", "s": 66} ] },
+
+    { "kicker": "JOHN 1:1", "dur": 5.0, "lines": [
+      {"t": "The Gospel opens by", "c": "cream", "s": 56},
+      {"t": "reaching behind Genesis:", "c": "cream", "s": 56},
+      {"t": "", "s": 22},
+      {"t": "“In the beginning was the Word,", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "and the Word was God.”", "c": "gold", "f": "serifb", "s": 56} ] },
+
+    { "kicker": "PAUL · COLOSSIANS 2:9", "dur": 5.0, "lines": [
+      {"t": "Paul, writing decades earlier,", "c": "cream", "s": 54},
+      {"t": "is anything but quiet:", "c": "cream", "s": 54},
+      {"t": "", "s": 22},
+      {"t": "“In him the whole fullness", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "of deity dwells bodily.”", "c": "gold", "f": "serifb", "s": 54} ] },
+
+    { "kicker": "HEBREWS 1:8", "dur": 5.0, "lines": [
+      {"t": "The Father himself", "c": "cream", "s": 56},
+      {"t": "speaks to the Son:", "c": "cream", "s": 56},
+      {"t": "", "s": 22},
+      {"t": "“Your throne, O God,", "c": "gold", "f": "serifb", "s": 62},
+      {"t": "is forever and ever.”", "c": "gold", "f": "serifb", "s": 62} ] },
+
+    { "kicker": "REVELATION · ISAIAH", "dur": 5.4, "lines": [
+      {"t": "The risen Christ takes", "c": "cream", "s": 56},
+      {"t": "the LORD's own name", "c": "cream", "s": 56},
+      {"t": "from Isaiah:", "c": "cream", "s": 56},
+      {"t": "", "s": 20},
+      {"t": "“I am the first", "c": "gold", "f": "serifb", "s": 64},
+      {"t": "and the last.”", "c": "gold", "f": "serifb", "s": 64} ] },
+
+    { "kicker": "AND THEY WORSHIPPED HIM", "dur": 5.6, "lines": [
+      {"t": "Harder to argue away", "c": "cream", "s": 54},
+      {"t": "is what they did:", "c": "cream", "s": 54},
+      {"t": "", "s": 22},
+      {"t": "they worshipped Jesus —", "c": "gold", "f": "serifb", "s": 60},
+      {"t": "the honor angels", "c": "cream", "s": 52},
+      {"t": "themselves refuse.", "c": "cream", "s": 52} ] },
+
+    { "kicker": "AND IT WAS EARLY", "dur": 5.6, "lines": [
+      {"t": "“Marana tha” — our Lord, come —", "c": "gold", "f": "serifb", "s": 50},
+      {"t": "is Aramaic, pre-Pauline,", "c": "cream", "s": 54},
+      {"t": "from the Jerusalem church", "c": "cream", "s": 54},
+      {"t": "of the 30s.", "c": "cream", "s": 54},
+      {"t": "", "s": 20},
+      {"t": "Not a late legend.", "c": "gold", "f": "serifb", "s": 60} ] },
+
+    { "kicker": "THE PATTERN", "dur": 5.4, "lines": [
+      {"t": "Independent authors.", "c": "cream", "s": 56},
+      {"t": "Two languages. 50 years.", "c": "cream", "s": 56},
+      {"t": "", "s": 22},
+      {"t": "All placing Jesus inside", "c": "cream", "s": 54},
+      {"t": "the identity of the", "c": "gold", "f": "serifb", "s": 58},
+      {"t": "one God of Israel.", "c": "gold", "f": "serifb", "s": 58} ] },
+
+    { "kicker": "HONEST SCOPE", "dur": 5.0, "lines": [
+      {"t": "The creed's vocabulary", "c": "cream", "s": 56},
+      {"t": "came later.", "c": "cream", "s": 56},
+      {"t": "", "s": 24},
+      {"t": "The evidence it organized", "c": "gold", "f": "serifb", "s": 54},
+      {"t": "was already here.", "c": "gold", "f": "serifb", "s": 60} ] },
+
+    { "dur": 4.2,
+      "big": [ {"t": "God in the flesh.", "c": "cream", "s": 92}, {"t": "Written from the start.", "c": "gold", "s": 72} ],
+      "sub": [ {"t": "Read the full, sourced case at", "c": "dim", "f": "serif", "s": 42},
+               {"t": "apologiadaily.com", "c": "gold", "f": "serifb", "s": 52} ] }
+  ]
+}
