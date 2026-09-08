@@ -116,6 +116,13 @@
     .bonus a{color:var(--g);}
 
     .done-banner{background:linear-gradient(135deg,#166534,#15803d);border-radius:8px;padding:1.1rem 1.4rem;margin-bottom:1rem;display:none;align-items:center;gap:0.9rem;}
+    .signup-banner{background:linear-gradient(135deg,var(--n8),var(--n7));border:1px solid rgba(200,169,81,0.35);border-radius:10px;padding:0.9rem 1.15rem;margin-bottom:1.1rem;display:none;align-items:center;gap:0.75rem 1rem;flex-wrap:wrap;}
+    .signup-banner .sb-tx{font-family:var(--ui);font-size:0.9rem;color:#e8eef7;line-height:1.5;flex:1;min-width:210px;}
+    .signup-banner .sb-tx b{color:var(--gl);font-weight:600;}
+    .signup-banner a.sb-cta{font-family:var(--ui);font-size:0.85rem;font-weight:600;background:var(--g);color:var(--n8);text-decoration:none;padding:0.5rem 1.05rem;border-radius:7px;white-space:nowrap;}
+    .signup-banner a.sb-cta:hover{background:var(--gl);}
+    .signup-banner a.sb-signin{font-family:var(--ui);font-size:0.82rem;color:#aec7e6;text-decoration:none;white-space:nowrap;}
+    .signup-banner a.sb-signin:hover{color:#fff;}
     .done-banner span{font-family:var(--ui);font-size:0.86rem;color:rgba(255,255,255,0.92);line-height:1.5;}
 
     @media(max-width:560px){.main{padding:1.25rem 1rem 2.5rem;}.hero{padding:1.5rem 1rem 1.25rem;}}
@@ -209,6 +216,13 @@
   </div>
 
   <div class="main">
+
+    <!-- Logged-out on-ramp: revealed by init() only when there is no signed-in user. -->
+    <div class="signup-banner" id="signup-banner">
+      <span class="sb-tx">You&rsquo;re viewing today&rsquo;s <b>free session</b> &mdash; sign up to save your streak and get review cards that come back at the right moment.</span>
+      <a href="/signup.html" class="sb-cta">Start free</a>
+      <a href="/login.html" class="sb-signin">Sign in</a>
+    </div>
 
     <a href="/dashboard.html" class="back-link">&larr; Back to dashboard</a>
 
@@ -429,6 +443,7 @@
     renderStreak();
     track('today_opened',{day:dayNum});
     await navAuth();
+    if(!currentUser){ var _sub=$('signup-banner'); if(_sub) _sub.style.display='flex'; }
     await loadArgument();
 
     // already completed today?
