@@ -974,7 +974,14 @@
 >   until they expire. Fix: add the column, then add `['push_subscriptions','user_id']` to `USER_TABLES`.
 >
 > **Infrastructure / verification**
-> - **Run `docs/STUDY_GROUPS_DISPLAY_NAME_FIX.md`** (M4 anti-spoof trigger) in Supabase.
+> - ✅ **DONE 2026-09-08 (owner ran the SQL in Supabase):** the four owed migrations —
+>   `docs/STUDY_GROUPS_RLS_FIX.md` (critical group-access privilege-escalation fix),
+>   `docs/STUDY_GROUPS_DISPLAY_NAME_FIX.md` (M4 anti-spoof trigger), `docs/PROGRESS_SYNC.md`
+>   (`user_progress` cross-device sync table), and `docs/JOURNAL_SYNC.md` (`journal_entries`
+>   table). So `progress-sync.js` and the Conversation Journal sync are now LIVE (no longer
+>   no-ops), and the Study Groups access model is hardened. ⚠ **Not yet independently verified
+>   against the live DB from a session** — owner-reported. The two throwaway-account tests below
+>   are still owed: account deletion, and the new-user starter-deck seed (item 8, 2026-09-08).
 > - ⭐ **SWEEP HANDOVER — [`docs/SWEEP_HANDOVER.md`](docs/SWEEP_HANDOVER.md) (2026-07-29).** Ordered
 >   queue for gating the Evidence Library and then the rest of the site, what a web-enabled session
 >   actually buys (every primary-source host 403s on egress policy — but `WebSearch` works, and the

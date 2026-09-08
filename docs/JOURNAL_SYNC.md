@@ -1,4 +1,9 @@
-# Conversation Journal — cross-device sync (RUN THIS to activate)
+# Conversation Journal — cross-device sync
+
+> **✅ STATUS: RUN 2026-09-08 (owner, in the Supabase SQL Editor).** The `journal_entries`
+> table + RLS policies below are live, so the Conversation Journal now syncs across devices
+> (no longer a no-op). Kept for reference / re-run (the SQL is idempotent). Not yet
+> independently verified against the live DB from a session.
 
 **Why:** the Conversation Journal (`conversation-journal.html`) let a user record real
 faith conversations and get AI coaching, but entries were **`localStorage`-only** — so a
