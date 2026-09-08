@@ -178,7 +178,7 @@
       '.toc-h{font-family:"DM Sans",sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.12em;',
       'text-transform:uppercase;color:#8a6d1f;margin:0 0 .6em .7em}',
       // fixed sidebar (wide screens)
-      '.toc-side{position:fixed;top:110px;left:max(16px,calc(50vw - 580px));width:190px;',
+      '.toc-side{position:fixed;top:110px;left:24px;width:190px;',
       'max-height:calc(100vh - 150px);overflow:auto;z-index:20;display:none;',
       'padding-right:6px;-webkit-overflow-scrolling:touch}',
       // inline collapsible (narrow screens)
