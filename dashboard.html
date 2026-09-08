@@ -192,6 +192,7 @@
   <div class="adn-collapse">
     <ul class="adn-links">
       <li><a href="/search.html" class="adn-search-link" aria-label="Search">&#128269; Search</a></li>
+      <li><a href="/today">Today</a></li>
       <li><a href="/evidence-library.html">Evidence Library</a></li>
       <li><a href="/daily-devotional.html">Daily Devotional</a></li>
       <li><a href="/debate-arena.html">Debate Arena</a></li>
@@ -1190,9 +1191,26 @@
   ];
   var obAnswers = {}; var obStep = 0;
 
+  // Homepage "Where do you start?" -> onboarding intent. If the visitor already
+  // answered the picker on the homepage (persisted as ad_start), reuse it so we
+  // don't ask "what brings you here?" a second time. Imperfect but honest maps;
+  // the reader can still change every other answer.
+  var START_TO_INTENT = { challenged:'defend', explain:'defend', together:'defend',
+                          'deep-study':'academic', 'other-faith':'skeptic' };
   function showOnboarding() {
     var modal = document.getElementById('onboarding-modal');
-    if (modal) { modal.style.display = 'flex'; renderObStep(); }
+    if (!modal) return;
+    try {
+      var s = localStorage.getItem('ad_start');
+      // Only skip when the FIRST step is the intent question we can answer from s.
+      if (s && START_TO_INTENT[s] && OB_STEPS[0] && OB_STEPS[0].id === 'intent') {
+        obAnswers.intent = START_TO_INTENT[s];
+        obStep = 1;                       // skip the duplicate intent step
+        localStorage.removeItem('ad_start');
+      }
+    } catch(e) {}
+    modal.style.display = 'flex';
+    renderObStep();
   }
 
   function renderObStep() {

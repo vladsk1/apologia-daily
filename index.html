@@ -919,6 +919,7 @@
   <div class="adn-collapse">
     <ul class="adn-links">
       <li><a href="/search.html" class="adn-search-link" aria-label="Search">&#128269; Search</a></li>
+      <li><a href="/today">Today</a></li>
       <li><a href="/evidence-library.html">Evidence Library</a></li>
       <li><a href="/daily-devotional.html">Daily Devotional</a></li>
       <li><a href="/debate-arena.html">Debate Arena</a></li>
@@ -979,7 +980,7 @@
     <p class="hero-sub">Fully-cited answers to the hardest questions about Christianity. Every citation verified, every objection answered at its strongest, and no essay published until it clears five review stages.</p>
     <div class="hero-actions">
       <a href="#homechat" class="btn-primary" onclick="document.getElementById('homechat').scrollIntoView({behavior:'smooth'});return false;">Ask Your Hardest Question</a>
-      <a href="#features" class="btn-ghost" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'});return false;">Explore the Platform</a>
+      <a href="/today" class="btn-ghost">See today&rsquo;s session &rarr;</a>
     </div>
     <p class="hero-verse">&ldquo;Always be prepared to give an answer to everyone who asks.&rdquo;&nbsp;&mdash;&nbsp;1&nbsp;Peter&nbsp;3:15</p>
   </section>
@@ -1003,7 +1004,7 @@
       <div id="hcLimit" class="hc-limit" style="display:none">
         <h4>You&rsquo;ve used today&rsquo;s free questions</h4>
         <p>Create a free account to keep asking &mdash; and save your conversations, build flashcards, and start the 7-day journey.</p>
-        <a class="hc-cta" href="signup.html">Create your free account &rarr;</a>
+        <a class="hc-cta" href="signup.html">Start Free &rarr;</a>
         <span class="hc-login">Already have an account? <a href="login.html">Log in</a> &middot; or come back tomorrow</span>
       </div>
       <p class="hc-note">Powered by the same AI as Asked &amp; Answered &middot; <a href="/asked-and-answered.html">open the full experience &rarr;</a></p>
@@ -1455,7 +1456,7 @@
               2 free games &mdash; Daily Quiz &amp; Who Said It?
             </li>
           </ul>
-          <a href="signup.html" class="btn-pricing btn-pricing-outline">Get started free</a>
+          <a href="signup.html" class="btn-pricing btn-pricing-outline">Start Free</a>
           <p style="text-align:center;font-family:var(--font-ui);font-size:0.72rem;color:var(--text-muted);margin-top:0.75rem;">Browse Evidence Library &amp; Glossary without an account</p>
         </div>
 
@@ -1534,7 +1535,7 @@
       <h2 class="section-title reveal">Are you ready to <em>defend</em><br />what you believe?</h2>
       <p class="section-sub reveal">Join thousands of Christians building a confident, evidence-based faith — one day at a time.</p>
       <div class="hero-actions reveal">
-        <a href="signup.html" class="btn-primary">Start for Free</a>
+        <a href="signup.html" class="btn-primary">Start Free</a>
         <a href="#features" class="btn-ghost">See All Features</a>
       </div>
     </div>
@@ -1700,6 +1701,8 @@
     };
 
     function selectStart(el, type) {
+      try { localStorage.setItem('ad_start', type); } catch(e) {}  /* remembered so the dashboard
+         onboarding can skip the duplicate "what brings you here?" question (see dashboard.html). */
       document.querySelectorAll('.start-card').forEach(function(c) { c.classList.remove('selected'); });
       el.classList.add('selected');
       var path = START_PATHS[type];
