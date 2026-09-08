@@ -81,6 +81,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96)
 .tab.on{color:var(--g);border-bottom-color:var(--g);}
 .main{max-width:1100px;margin:0 auto;padding:2.5rem 2rem 6rem;}
 .sec{display:none;}
+.card[data-a11y]:focus-visible{outline:2px solid #c8a951;outline-offset:3px;border-radius:6px;}
 .sec.go{display:block;}
 .intro{margin-bottom:2.5rem;}
 .iey{font-family:var(--ui);font-size:.65rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.5rem;}
@@ -504,7 +505,37 @@ function loadSection(id, cb) {
    Fragments are injected with innerHTML, and <script> tags inside injected HTML
    never execute — so a fragment cannot enhance itself. Anything that has to run
    over fragment content is called from here. */
+function syncCardAria() {
+  var cards = document.querySelectorAll('.card[data-a11y]');
+  for (var i = 0; i < cards.length; i++)
+    cards[i].setAttribute('aria-expanded', cards[i].classList.contains('op') ? 'true' : 'false');
+}
+/* Make the click-to-expand argument cards operable by keyboard and screen reader.
+   The cards ship as <div class="card" onclick="tog(this)"> with no role/tabindex,
+   so a keyboard or screen-reader user could switch tabs but open no argument. We
+   add the semantics at RUNTIME (never touching the gated fragment markup) — the
+   same no-gate route library/reviewed-badge.js uses. Re-run after each fragment
+   injection; idempotent via data-a11y. */
+function enhanceCardsA11y(container) {
+  var cards = container.querySelectorAll('.card[onclick]');
+  for (var i = 0; i < cards.length; i++) {
+    var c = cards[i];
+    if (c.getAttribute('data-a11y')) continue;
+    c.setAttribute('data-a11y', '1');
+    c.setAttribute('role', 'button');
+    c.setAttribute('tabindex', '0');
+    c.setAttribute('aria-expanded', c.classList.contains('op') ? 'true' : 'false');
+    c.addEventListener('keydown', function (e) {
+      if (e.target !== this) return;           // keys from inner controls (tutor input, buttons) pass through
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();                     // Space must not scroll the page
+        tog(this);
+      }
+    });
+  }
+}
 function enhanceSection(container, id) {
+  try { enhanceCardsA11y(container); } catch (e) {}
   try { fixCategoryEyebrow(container, id); } catch (e) {}
   try { if (window.ADCrossLink) window.ADCrossLink.apply(container); } catch (e) {}
   try { if (window.ADDiagram) window.ADDiagram.auto(container); } catch (e) {}
@@ -672,6 +703,7 @@ function cardBar() {
 }
 
 function syncCardBar() {
+  syncCardAria();
   var bar = cardBar();
   var card = document.querySelector('.sec.go .card.op');
   if (!card) { bar.classList.remove('ocb-on'); return; }
