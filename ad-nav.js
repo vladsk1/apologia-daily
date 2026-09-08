@@ -21,7 +21,7 @@
       if(ap===path || (ap.length>1 && path.indexOf(ap)===0)) links[i].classList.add('adn-active');
     }
     var burger=nav.querySelector('.adn-burger');
-    if(burger){burger.addEventListener('click',function(){var o=nav.classList.toggle('adn-menu-open');burger.setAttribute('aria-expanded',o?'true':'false');});}
+    if(burger){burger.addEventListener('click',function(){var o=nav.classList.toggle('adn-menu-open');burger.setAttribute('aria-expanded',o?'true':'false');if(o){var lk=nav.querySelector('.adn-links');if(lk)lk.scrollTop=0;}});}
     var more=nav.querySelector('.adn-more'), hd=nav.querySelector('.adn-has-drop');
     if(more&&hd){more.addEventListener('click',function(e){e.stopPropagation();var o=hd.classList.toggle('adn-open');more.setAttribute('aria-expanded',o?'true':'false');});}
     document.addEventListener('click',function(e){if(hd&&!hd.contains(e.target))hd.classList.remove('adn-open');});
