@@ -468,6 +468,7 @@
       var today = new Date().toISOString().split('T')[0];
       var r = await sb.from('flashcards').select('*').eq('user_id', currentUser.id).order('next_review');
       var deck = (r.data||[]);
+      if(!deck.length){ deck = (await seedStarterDeck(today)) || []; }  // brand-new user: seed a starter deck (A4)
       dueCards = deck.filter(function(c){ return c.next_review <= today; }).slice(0, RV_MAX);
     }catch(e){ dueCards = []; }
     if(!dueCards.length){
@@ -477,6 +478,51 @@
     }
     rvIdx = 0; renderReviewCard();
   }
+
+  /* A brand-new user's flashcard deck is empty, so their very first Review step
+     would read "Nothing due today" (usability fix A4). Seed a small starter deck
+     of core arguments the first time only. The IDs come from /deck-seeds.json; the
+     card question/answer is built from the certified /daily-args.json via
+     fromRotation() — the SAME transform the post-session auto-seed uses — so no
+     doctrinal text is duplicated or left ungated. Idempotent: only runs when the
+     deck is empty AND a per-account localStorage flag is unset, and the flag is
+     set only on a confirmed insert. Returns the seeded rows (with ids) or null. */
+  async function seedStarterDeck(today){
+    if(!currentUser) return null;
+    try{ if(localStorage.getItem('ad_deck_seeded') === currentUser.id) return null; }catch(e){}
+    try{
+      var rot = await loadRotation();
+      if(!Array.isArray(rot) || !rot.length) rot = FALLBACK_ARGS;
+      var sres = await fetch('/deck-seeds.json', {cache:'default'});
+      if(!sres.ok) return null;
+      var seeds = await sres.json();
+      var ids = (seeds && Array.isArray(seeds.seeds)) ? seeds.seeds : [];
+      var rows = [];
+      ids.forEach(function(id){
+        var entry = rot.find(function(e){ return (e.id || e.argument_id) === id; });
+        if(!entry) return;
+        var card = entry.p1 ? fromRotation(entry) : entry;   // daily-args entry vs FALLBACK_ARGS shape
+        var back = [card.premise_1, card.premise_2, card.premise_3].filter(Boolean).join(' • ');
+        if(card.key_evidence) back += ' — ' + card.key_evidence;
+        rows.push({
+          user_id: currentUser.id, argument_id: card.argument_id,
+          argument_title: card.argument_title, category: card.category || '',
+          front: card.practice_q || ('State the ' + card.argument_title + ' from memory.'),
+          back: back,
+          interval: 1, ease_factor: 2.5, reps: 0, next_review: today
+        });
+      });
+      if(!rows.length) return null;
+      var ins = await sb.from('flashcards').insert(rows).select();
+      if(ins && ins.data && ins.data.length){
+        try{ localStorage.setItem('ad_deck_seeded', currentUser.id); }catch(e){}
+        track('today_deck_seeded', { count: ins.data.length });
+        return ins.data;
+      }
+      return null;   // insert failed → leave unseeded, retry next visit
+    }catch(e){ return null; }
+  }
+
   function renderReviewCard(){
     if(rvIdx >= dueCards.length){ finishReview(false); return; }
     var c = dueCards[rvIdx]; rvFlipped = false;

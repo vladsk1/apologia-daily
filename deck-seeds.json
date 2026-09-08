@@ -1,0 +1,5 @@
+{
+  "_comment": "Starter flashcard deck for a brand-new user's first /today session. Usability fix A4: an empty deck otherwise makes step 1 (Review) read 'Nothing due today', a dead-end first impression. This file lists ARGUMENT IDs ONLY — the card question/answer text is built at seed time from the certified /daily-args.json (today.html seedStarterDeck() -> fromRotation(), the SAME transform the post-session auto-seed uses). No doctrinal prose is duplicated here, so this file carries no doctrinal content and needs no separate content-review gate; its safety rides on daily-args.json's certification. Each id MUST exist in daily-args.json. To change the starter set, edit `seeds` (kept to one accessible, high-confidence argument per core beginner category; deliberately no Islam/Trinity-tier cards in the very first session).",
+  "version": 1,
+  "seeds": ["kalam", "moral", "minimal", "manuscript", "finetuning", "jesus_claims"]
+}
