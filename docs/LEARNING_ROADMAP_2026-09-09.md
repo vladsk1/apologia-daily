@@ -17,8 +17,11 @@ content gate. This is a roadmap, not a commitment — nothing here is built.
 - **Feynman teach-back = "Explain It Back"** — already live and AI-graded on all 67 `ev-m-*.html` mastery pages
   (`api/tutor.js`). Candidate idea #4 is **already built**.
 - **Real SM-2 spaced repetition** runs against Supabase `flashcards`, surfaced in `flashcards.html`, `palace.html`,
-  and the 4-step guided daily session `today.html` (Review → Learn → Prove it → Done). Per the usability doc,
-  `/today` is "the best learning surface on the site" but is linked from only 5 pages and absent from nav/homepage.
+  and the 4-step guided daily session `today.html` (Review → Learn → Prove it → Done). The usability doc calls
+  `/today` "the best learning surface on the site." ⚠ **CORRECTED 2026-09-09:** the agent's original line here
+  repeated the usability doc's finding that `/today` was "linked from only 5 pages and absent from nav/homepage" —
+  that was stale. Tier B (commit `3582e16`, earlier the same day) put **Today in the nav** (`tools/sync-nav.mjs:27`)
+  and on the homepage; it is now linked from 320 pages. The discoverability problem is already fixed.
 - **Read-along TTS**, sticky TOC + progress bar (`library/toc.js`), select-to-ask tutor (`library/ask-selection.js`),
   recall checkpoints (`library/active-reading.js`), "See the evidence" panels (`library/evidence.js`), and the
   "Read it with the AI tutor" cue (`library/tutor-help.js`) are live on all essays.
