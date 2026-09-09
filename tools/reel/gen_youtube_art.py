@@ -120,9 +120,10 @@ def banner():
     d = ImageDraw.Draw(img)
     cx = W // 2
     # everything below sits inside the centred 1546x423 mobile-safe box (y 508..931)
-    y = 512
-    draw_shield(img, cx, y, 132, 156); d = ImageDraw.Draw(img)
-    y += 180
+    y = 500
+    sh = real_shield(190)
+    img.paste(sh, (cx - sh.width // 2, y), sh); d = ImageDraw.Draw(img)
+    y += 214
     # wordmark: "Apologia" cream + " Daily" gold, centred as one line
     f = Fserif(118)
     a, b = "Apologia", " Daily"
@@ -140,6 +141,22 @@ def banner():
     os.makedirs(OUT, exist_ok=True)
     p = os.path.join(OUT, "youtube-banner.png")
     img.save(p); return p
+
+
+def real_shield(target_h):
+    """The ACTUAL gold shield-and-cross from the social logo (pwa-icon-512.png),
+    lifted out of its navy background by luminance so only the gold linework
+    remains on transparency — the exact mark used on X/Instagram, ready to sit on
+    the banner scene. The shield's interior stays open, so the scene shows through
+    it just as the navy does in the logo."""
+    ic = Image.open(os.path.join(ROOT, "pwa-icon-512.png")).convert("RGB")
+    crop = ic.crop((140, 55, 372, 345))              # shield only (above the wordmark, inside the brackets)
+    lum = crop.convert("L")
+    lo, hi = 62, 112                                  # navy < lo -> transparent; gold > hi -> opaque
+    alpha = lum.point(lambda v: 0 if v < lo else (255 if v > hi else int((v - lo) / (hi - lo) * 255)))
+    rgba = crop.convert("RGBA"); rgba.putalpha(alpha)
+    w, h = rgba.size
+    return rgba.resize((int(w * target_h / h), target_h), Image.LANCZOS)
 
 
 def clean_icon(S):
