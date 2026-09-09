@@ -2,7 +2,7 @@
   "_comment": "Maps a deep-dive essay (by its slug = filename without .html) to its short 'video lesson' — a certified reel spec (tools/reel/specs/<reel>.json) rendered in 16:9 and uploaded to YouTube. library/video-lesson.js reads this file and, ONLY when an entry has a non-empty youtube id, injects the 'watch the short version' card at the top of that essay. An empty youtube id keeps the entry inert (nothing renders), so this whole layer is dark until the owner uploads the videos and pastes their ids. See docs/VIDEO_LESSONS.md for the runbook. Reels are HOOKS, not full lessons — the essay does the teaching; the card copy says so. Unmapped reels (duplicates, feature promos, and topics with no confident essay match) are listed under _unassigned for the owner to review.",
   "_note_privacy": "Playback uses youtube-nocookie.com and is click-to-load (no iframe until the reader taps play), so no video cookies are set on page view — consistent with privacy.html. The still thumbnail is a cookieless image from i.ytimg.com.",
   "lessons": {
-    "hist_jesus":            { "reel": "did-jesus-really-exist",                 "youtube": "" },
+    "hist_jesus":            { "reel": "did-jesus-really-exist",                 "youtube": "bkCqnb9k4wU" },
     "kalam":                 { "reel": "kalam-cosmological",                     "youtube": "YUxY5VjUYkk" },
     "finetuning":            { "reel": "is-the-universe-fine-tuned-for-life",    "youtube": "MsVLnEmYmm4" },
     "originlife":            { "reel": "can-science-explain-the-origin-of-life", "youtube": "" },
@@ -10,7 +10,7 @@
     "consistency":           { "reel": "arent-there-contradictions-in-the-bible","youtube": "" },
     "appearances":           { "reel": "did-the-disciples-hallucinate",          "youtube": "" },
     "earlycreed":            { "reel": "how-soon-did-people-say-jesus-rose",      "youtube": "" },
-    "minimalfacts":          { "reel": "the-minimal-facts-case",                 "youtube": "" },
+    "minimalfacts":          { "reel": "the-minimal-facts-case",                 "youtube": "5OKHo3QPy2E" },
     "jesus_claims":          { "reel": "did-jesus-claim-to-be-god",              "youtube": "" },
     "jesus_as_god_nt":       { "reel": "jesus-god-in-the-nt",                    "youtube": "" },
     "philosophical_trinity": { "reel": "isnt-the-trinity-a-contradiction",       "youtube": "" },
