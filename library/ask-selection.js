@@ -14,8 +14,62 @@
 
   var MIN = 8, MAX = 400;          // selection length window (chars)
   var btn = null, lastText = '';
+  var HINT_KEY = 'ad_ask_hint_seen';
+  var hintEl = null, hintTimer = null;
 
   function tutorReady(){ return typeof window.toggleFloatTutor === 'function' && document.getElementById('float-input'); }
+
+  // One-time, dismissible coachmark so readers discover the select-to-ask
+  // feature instead of stumbling on it. Shows once per browser (localStorage),
+  // auto-hides after a few seconds, and vanishes the moment the reader either
+  // makes a real selection (they've found it) or opens the tutor from it.
+  function killHint(){
+    if(hintTimer){ clearTimeout(hintTimer); hintTimer = null; }
+    if(!hintEl) return;
+    var el = hintEl; hintEl = null;
+    el.classList.remove('is-in');
+    setTimeout(function(){ try{ el.remove(); }catch(e){} }, 260);
+  }
+
+  function showHintOnce(){
+    if(hintEl || !tutorReady() || !document.querySelector('.art-body')) return;
+    try{ if(localStorage.getItem(HINT_KEY)) return; }catch(e){ return; } // storage blocked → can't dedupe, so don't nag
+    try{ localStorage.setItem(HINT_KEY, '1'); }catch(e){}
+
+    var touch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+    var verb = touch ? 'Tap and hold' : 'Highlight';
+
+    var s = document.createElement('style');
+    s.textContent =
+      '.ask-hint{position:fixed;left:16px;bottom:16px;z-index:530;max-width:330px;' +
+      "font-family:'DM Sans',system-ui,sans-serif;background:#0a1628;color:#fff;" +
+      'border:1px solid rgba(200,169,81,.5);border-radius:12px;padding:.85rem 1rem;' +
+      'box-shadow:0 12px 32px rgba(10,22,40,.3);display:flex;gap:.6rem;align-items:flex-start;' +
+      'opacity:0;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease}' +
+      '.ask-hint.is-in{opacity:1;transform:translateY(0)}' +
+      '.ask-hint .ah-ic{color:#c8a951;font-size:1.1em;line-height:1.35;flex:0 0 auto}' +
+      '.ask-hint .ah-tx{font-size:.86rem;line-height:1.45}' +
+      '.ask-hint .ah-tx b{color:#c8a951;font-weight:700}' +
+      '.ask-hint .ah-x{flex:0 0 auto;background:none;border:0;color:#9fb0c8;font-size:1.15rem;' +
+      'line-height:1;cursor:pointer;padding:0 .1em;margin-left:.1em}' +
+      '.ask-hint .ah-x:hover{color:#fff}' +
+      '.ask-hint .ah-x:focus-visible{outline:2px solid #c8a951;outline-offset:2px}' +
+      '@media (max-width:640px){.ask-hint{left:12px;right:12px;bottom:84px;max-width:none}}' +
+      '@media (prefers-reduced-motion:reduce){.ask-hint{transition:none}}';
+    document.head.appendChild(s);
+
+    hintEl = document.createElement('div');
+    hintEl.className = 'ask-hint'; hintEl.setAttribute('role', 'status');
+    hintEl.innerHTML =
+      '<span class="ah-ic" aria-hidden="true">&#128172;</span>' +
+      '<span class="ah-tx"><b>Tip:</b> ' + verb + ' any sentence in the essay to ask the AI tutor about it.</span>' +
+      '<button type="button" class="ah-x" aria-label="Dismiss tip">&times;</button>';
+    document.body.appendChild(hintEl);
+    requestAnimationFrame(function(){ if(hintEl) hintEl.classList.add('is-in'); });
+    hintEl.querySelector('.ah-x').addEventListener('click', killHint);
+    hintTimer = setTimeout(killHint, 9000);
+    if(window.adTrack){ try{ window.adTrack('essay_ask_hint_shown', {}); }catch(e){} }
+  }
 
   function ensureBtn(){
     if(btn) return btn;
@@ -62,6 +116,7 @@
     var s = currentSelectionInBody();
     if(!s || !s.rect || (!s.rect.width && !s.rect.height)){ hide(); return; }
     lastText = s.text;
+    killHint();   // they've found it — the coachmark is redundant now
     var b = ensureBtn();
     var top = Math.max(46, s.rect.top - 8);       // sit just above the selection, clear of the nav
     var left = Math.min(Math.max(70, s.rect.left + s.rect.width/2), window.innerWidth - 70);
@@ -92,4 +147,9 @@
   document.addEventListener('keyup', function(e){ if(e.shiftKey || e.key === 'Shift') setTimeout(onSelect, 0); });
   document.addEventListener('scroll', hide, { passive: true });
   document.addEventListener('mousedown', function(e){ if(btn && e.target !== btn && !btn.contains(e.target)) hide(); });
+
+  // gentle one-time nudge, a beat after the page settles
+  function initHint(){ setTimeout(showHintOnce, 700); }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initHint);
+  else initHint();
 })();
