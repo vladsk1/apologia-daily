@@ -38,11 +38,13 @@ def _find(*c):
 
 SERIF_IT  = _find("/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf")
 SERIF_BIT = _find("/usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf", SERIF_IT)
+SERIF_B   = _find("/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf")
 SANS      = _find("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
 SANS_B    = _find("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf")
 
 
 def Fserif(sz, bold=True): return ImageFont.truetype(SERIF_BIT if bold else SERIF_IT, sz)
+def Fserifup(sz):          return ImageFont.truetype(SERIF_B, sz)   # upright bold serif (the wordmark)
 def Fsans(sz, bold=True):  return ImageFont.truetype(SANS_B if bold else SANS, sz)
 
 
@@ -81,19 +83,29 @@ def scene(W, H, moon=(0.81, 0.20)):
     return Image.alpha_composite(img.convert("RGBA"), ov).convert("RGB")
 
 
-def draw_shield(img, cx, ty, sw, sh):
-    """A clean gold shield-and-cross mark, drawn to scale (no raster icon, so it
-    stays crisp and carries no duplicate wordmark)."""
-    d = ImageDraw.Draw(img, "RGBA")
+def _shield_pts(cx, ty, sw, sh):
     l, r = cx - sw / 2, cx + sw / 2
-    shoulder = ty + 0.50 * sh
-    pts = [(l, ty + 0.06 * sh), (l, ty), (r, ty), (r, ty + 0.06 * sh),
-           (r, shoulder), (cx, ty + sh), (l, shoulder)]
-    d.polygon(pts, fill=(20, 36, 66, 255), outline=GOLD, width=max(3, int(sw * .035)))
-    # cross
-    vw = sw * 0.13
-    d.rectangle([cx - vw / 2, ty + 0.16 * sh, cx + vw / 2, ty + 0.74 * sh], fill=GOLD)
-    d.rectangle([cx - sw * 0.23, ty + 0.31 * sh, cx + sw * 0.23, ty + 0.31 * sh + vw], fill=GOLD)
+    shoulder = ty + 0.52 * sh
+    return [(l, ty + 0.07 * sh), (l, ty), (r, ty), (r, ty + 0.07 * sh),
+            (r, shoulder), (cx, ty + sh), (l, shoulder)]
+
+
+def draw_shield(img, cx, ty, sw, sh):
+    """The Apologia Daily gold shield-and-cross, matching the social logo:
+    a double-outlined shield with a slender cross, drawn vector so it stays
+    crisp and composites seamlessly on the navy scene."""
+    d = ImageDraw.Draw(img, "RGBA")
+    d.polygon(_shield_pts(cx, ty, sw, sh), fill=(19, 34, 62, 255),
+              outline=GOLD, width=max(3, int(sw * .042)))
+    # inner hairline border, inset
+    ins = sw * 0.11
+    d.polygon(_shield_pts(cx, ty + 0.055 * sh, sw - 2 * ins, sh - 2.1 * ins),
+              outline=(176, 149, 84, 255), width=max(2, int(sw * .016)))
+    # slender cross, upper-weighted
+    vw = sw * 0.115
+    d.rectangle([cx - vw / 2, ty + 0.155 * sh, cx + vw / 2, ty + 0.82 * sh], fill=GOLD)
+    hy = ty + 0.33 * sh
+    d.rectangle([cx - sw * 0.205, hy, cx + sw * 0.205, hy + vw], fill=GOLD)
 
 
 def centered(d, cx, y, text, font, fill):
@@ -130,28 +142,42 @@ def banner():
     img.save(p); return p
 
 
+def clean_icon(S):
+    """The real social logo (pwa-icon-512.png), scaled to S and with the four
+    corner registration brackets painted out in the icon's own corner-navy — so
+    it reads as a clean square logo. This is literally the mark used on X and
+    Instagram, tidied for a profile picture."""
+    ic = Image.open(os.path.join(ROOT, "pwa-icon-512.png")).convert("RGB")
+    corner = ic.getpixel((5, 5))            # flat navy in the very corner
+    ic = ic.resize((S, S), Image.LANCZOS)
+    d = ImageDraw.Draw(ic)
+    m = int(S * 0.135)
+    for x0, y0, x1, y1 in [(0, 0, m, m), (S - m, 0, S, m), (0, S - m, m, S), (S - m, S - m, S, S)]:
+        d.rectangle([x0, y0, x1, y1], fill=corner)
+    return ic
+
+
 def avatar():
     S = 800
-    img = scene(S, S, moon=(0.72, 0.24))
-    # gold ring just inside the circle crop
-    d = ImageDraw.Draw(img)
-    d.ellipse([26, 26, S - 26, S - 26], outline=GOLD, width=6)
-    draw_shield(img, S // 2, 196, 250, 300); d = ImageDraw.Draw(img)
-    f = Fsans(52)
-    w = d.textlength("APOLOGIA", font=f)
-    d.text((S / 2 - w / 2, 548), "APOLOGIA", font=f, fill=CREAM)
-    w2 = d.textlength("DAILY", font=f)
-    d.text((S / 2 - w2 / 2, 606), "DAILY", font=f, fill=GOLD)
-    # circular preview so we see what YouTube crops to
-    mask = Image.new("L", (S, S), 0); ImageDraw.Draw(mask).ellipse([0, 0, S, S], fill=255)
+    img = clean_icon(S)          # the genuine logo, brackets removed
     os.makedirs(OUT, exist_ok=True)
     p = os.path.join(OUT, "youtube-avatar.png")
     img.save(p)
-    circ = Image.new("RGBA", (S, S), (0, 0, 0, 0)); circ.paste(img, (0, 0), mask)
+    # circular preview so you see what YouTube crops the square to
+    mask = Image.new("L", (S, S), 0); ImageDraw.Draw(mask).ellipse([0, 0, S, S], fill=255)
+    circ = Image.new("RGBA", (S, S), (0, 0, 0, 0)); circ.paste(img.convert("RGB"), (0, 0), mask)
     circ.save(os.path.join(OUT, "youtube-avatar-circle-preview.png"))
+    return p
+
+
+def clean_logo():
+    os.makedirs(OUT, exist_ok=True)
+    p = os.path.join(OUT, "apologia-logo.png")
+    clean_icon(1024).save(p)
     return p
 
 
 if __name__ == "__main__":
     print("banner :", banner())
     print("avatar :", avatar())
+    print("logo   :", clean_logo())
