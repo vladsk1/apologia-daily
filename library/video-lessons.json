@@ -1,0 +1,55 @@
+{
+  "_comment": "Maps a deep-dive essay (by its slug = filename without .html) to its short 'video lesson' — a certified reel spec (tools/reel/specs/<reel>.json) rendered in 16:9 and uploaded to YouTube. library/video-lesson.js reads this file and, ONLY when an entry has a non-empty youtube id, injects the 'watch the short version' card at the top of that essay. An empty youtube id keeps the entry inert (nothing renders), so this whole layer is dark until the owner uploads the videos and pastes their ids. See docs/VIDEO_LESSONS.md for the runbook. Reels are HOOKS, not full lessons — the essay does the teaching; the card copy says so. Unmapped reels (duplicates, feature promos, and topics with no confident essay match) are listed under _unassigned for the owner to review.",
+  "_note_privacy": "Playback uses youtube-nocookie.com and is click-to-load (no iframe until the reader taps play), so no video cookies are set on page view — consistent with privacy.html. The still thumbnail is a cookieless image from i.ytimg.com.",
+  "lessons": {
+    "hist_jesus":            { "reel": "did-jesus-really-exist",                 "youtube": "" },
+    "kalam":                 { "reel": "kalam-cosmological",                     "youtube": "" },
+    "finetuning":            { "reel": "is-the-universe-fine-tuned-for-life",    "youtube": "" },
+    "originlife":            { "reel": "can-science-explain-the-origin-of-life", "youtube": "" },
+    "manuscript":            { "reel": "can-we-trust-the-new-testament-manuscripts", "youtube": "" },
+    "consistency":           { "reel": "arent-there-contradictions-in-the-bible","youtube": "" },
+    "appearances":           { "reel": "did-the-disciples-hallucinate",          "youtube": "" },
+    "earlycreed":            { "reel": "how-soon-did-people-say-jesus-rose",      "youtube": "" },
+    "minimalfacts":          { "reel": "the-minimal-facts-case",                 "youtube": "" },
+    "jesus_claims":          { "reel": "did-jesus-claim-to-be-god",              "youtube": "" },
+    "jesus_as_god_nt":       { "reel": "jesus-god-in-the-nt",                    "youtube": "" },
+    "philosophical_trinity": { "reel": "isnt-the-trinity-a-contradiction",       "youtube": "" },
+    "disciplesbelief":       { "reel": "why-did-the-disciples-die-for-their-faith", "youtube": "" },
+    "emptytomb":             { "reel": "why-were-women-the-first-witnesses",     "youtube": "" },
+    "eyewitnesses":          { "reel": "were-the-gospels-written-by-eyewitnesses","youtube": "" },
+    "uniqueness":            { "reel": "was-jesus-copied-from-pagan-myths",      "youtube": "" },
+    "evil":                  { "reel": "if-god-is-good-why-suffering",           "youtube": "" },
+    "coincidences":          { "reel": "undesigned-coincidences",               "youtube": "" },
+    "islam-preservation":    { "reel": "was-the-quran-perfectly-preserved",      "youtube": "" },
+    "islam-jesusmuslim":     { "reel": "was-jesus-a-muslim",                     "youtube": "" },
+    "nicene-creed":          { "reel": "nicene-creed",                          "youtube": "" },
+    "titles":                { "reel": "jesus-titles",                          "youtube": "" },
+    "phil2":                 { "reel": "phil2-deity",                           "youtube": "" },
+    "early_church_trinity":  { "reel": "early-church-trinity",                  "youtube": "" },
+    "hands":                 { "reel": "is-jesus-god-hands",                    "youtube": "" },
+    "typology":              { "reel": "how-the-old-testament-foreshadows-the-cross", "youtube": "" },
+    "names":                 { "reel": "gospel-names",                          "youtube": "" },
+    "paulconv":              { "reel": "paul-the-enemy-who-switched-sides",      "youtube": "" },
+    "mathematics":           { "reel": "mathematics-god",                       "youtube": "" },
+    "compassion":            { "reel": "care-for-the-weak",                     "youtube": "" },
+    "messianic-prophecy":    { "reel": "isaiah53",                              "youtube": "" }
+  },
+  "_unassigned": {
+    "_comment": "Reels not yet mapped to an essay — owner to confirm the target (and, where two reels cover one topic, which to use). Some are feature promos with no single essay and should stay unmapped.",
+    "duplicate_or_alt_of_a_mapped_topic": [
+      "what-is-the-minimal-facts-argument", "did-jesus-say-he-was-god-mark", "is-jesus-god-in-mark",
+      "jesus-god-nt", "phil2-everyknee", "every-knee-isaiah-45", "was-jesus-a-muslim-evidence",
+      "is-the-quran-corrupted", "why-uthman-burned-the-other-qurans", "the-gospel-before-the-gospels",
+      "early-church-fathers-talkbg", "undesigned-coincidences-talkbg"
+    ],
+    "needs_an_essay_decision": [
+      "who-made-god", "honor-the-son", "light-of-the-world", "god-pitched-his-tent", "isaac-and-jesus",
+      "the-lawyer-who-tried-the-resurrection", "nabeel-qureshi-conversion", "doesnt-science-disprove-god",
+      "early-church-fathers-deity", "did-the-church-invent-jesus-divinity-at-nicaea",
+      "why-the-old-testament-keeps-pointing-to-jesus", "arent-all-religions-the-same", "air-we-breathe"
+    ],
+    "feature_promos_no_essay": [
+      "answer-cards", "games-and-debate-arena", "study-plans", "study-plans-feature", "scripture-one-story"
+    ]
+  }
+}
