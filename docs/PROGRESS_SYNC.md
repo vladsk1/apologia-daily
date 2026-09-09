@@ -1,4 +1,9 @@
-# Cross-device progress sync — Supabase migration (RUN THIS to activate)
+# Cross-device progress sync — Supabase migration
+
+> **✅ STATUS: RUN 2026-09-08 (owner, in the Supabase SQL Editor).** The `user_progress`
+> table + RLS policies below are live, so `progress-sync.js` is now active (no longer a
+> no-op). Kept for reference / re-run (the SQL is idempotent). Not yet independently
+> verified against the live DB from a session.
 
 **Why:** learning progress (`ad_streak`, `ad_mastery`, challenge/quiz/deck progress) was
 **`localStorage`-only** — so it evaporated when a user cleared their browser or switched

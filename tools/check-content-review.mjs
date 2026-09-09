@@ -44,6 +44,8 @@ const CONTENT_PATTERNS = [
   /^ev-s\d[a-z0-9.]*\.html$/,              // Evidence Library hub fragments (+ .mk/.es)
   /^ev-m-.+\.html$/,                       // Evidence Library mastery pages (all 67, gated 2026-07-29)
   /^worldviews\.html$/,                    // worldviews cards (Islam Case tier etc.)
+  /^flashcards\.html$/,                    // ALL_ARGS recited deck — first gated 2026-09-07
+  /^explain-it-back\.html$/,               // ARGS grading rubric — first gated 2026-09-07
   /^tools\/reel\/specs\/.+\.json$/,        // short-form reel scripts
   /^api\/(ask|debate|feedback|tutor|devotional)\.js$/,  // live AI system prompts: Ask, the Debate
                                            // personas, debate/conversation scoring + coaching,

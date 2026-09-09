@@ -1,8 +1,8 @@
 # Study Groups — display-name spoofing fix (M4, run once)
 
-> **Status: human step (you).** Run the SQL in the Supabase SQL editor.
-> Idempotent, **no front-end deploy needed** (backward-compatible — the client
-> keeps sending a name; the database now ignores it and stamps the real one).
+> **✅ Status: RUN 2026-09-08 (owner, in the Supabase SQL editor).** The trigger is live —
+> the DB now stamps the real name and ignores whatever the client sends. Kept for reference /
+> re-run (idempotent). No front-end deploy was needed (backward-compatible).
 
 ## The issue (M4, medium)
 

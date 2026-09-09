@@ -919,6 +919,7 @@
   <div class="adn-collapse">
     <ul class="adn-links">
       <li><a href="/search.html" class="adn-search-link" aria-label="Search">&#128269; Search</a></li>
+      <li><a href="/today">Today</a></li>
       <li><a href="/evidence-library.html">Evidence Library</a></li>
       <li><a href="/daily-devotional.html">Daily Devotional</a></li>
       <li><a href="/debate-arena.html">Debate Arena</a></li>
@@ -979,7 +980,7 @@
     <p class="hero-sub">Fully-cited answers to the hardest questions about Christianity. Every citation verified, every objection answered at its strongest, and no essay published until it clears five review stages.</p>
     <div class="hero-actions">
       <a href="#homechat" class="btn-primary" onclick="document.getElementById('homechat').scrollIntoView({behavior:'smooth'});return false;">Ask Your Hardest Question</a>
-      <a href="#features" class="btn-ghost" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'});return false;">Explore the Platform</a>
+      <a href="/today" class="btn-ghost">See today&rsquo;s session &rarr;</a>
     </div>
     <p class="hero-verse">&ldquo;Always be prepared to give an answer to everyone who asks.&rdquo;&nbsp;&mdash;&nbsp;1&nbsp;Peter&nbsp;3:15</p>
   </section>
@@ -1003,7 +1004,7 @@
       <div id="hcLimit" class="hc-limit" style="display:none">
         <h4>You&rsquo;ve used today&rsquo;s free questions</h4>
         <p>Create a free account to keep asking &mdash; and save your conversations, build flashcards, and start the 7-day journey.</p>
-        <a class="hc-cta" href="signup.html">Create your free account &rarr;</a>
+        <a class="hc-cta" href="signup.html">Start Free &rarr;</a>
         <span class="hc-login">Already have an account? <a href="login.html">Log in</a> &middot; or come back tomorrow</span>
       </div>
       <p class="hc-note">Powered by the same AI as Asked &amp; Answered &middot; <a href="/asked-and-answered.html">open the full experience &rarr;</a></p>
@@ -1455,7 +1456,7 @@
               2 free games &mdash; Daily Quiz &amp; Who Said It?
             </li>
           </ul>
-          <a href="signup.html" class="btn-pricing btn-pricing-outline">Get started free</a>
+          <a href="signup.html" class="btn-pricing btn-pricing-outline">Start Free</a>
           <p style="text-align:center;font-family:var(--font-ui);font-size:0.72rem;color:var(--text-muted);margin-top:0.75rem;">Browse Evidence Library &amp; Glossary without an account</p>
         </div>
 
@@ -1512,7 +1513,7 @@
       <!-- TRUST NOTE — the last question before paying is "can I trust this?" -->
       <div class="reveal" style="max-width:640px;margin:2.5rem auto 0;text-align:center;">
         <p style="font-family:var(--font-ui);font-size:0.85rem;color:var(--text-muted);line-height:1.7;">
-          <strong style="color:rgba(255,255,255,0.75);font-weight:600;">Every page here is checked before it is published</strong> &mdash; sources verified, reasoning reviewed, and measured against the historic creeds. Our AI can only quote from source texts a human has already checked word-for-word.
+          <strong style="color:var(--text-dark);font-weight:600;">Every page here is checked before it is published</strong> &mdash; sources verified, reasoning reviewed, and measured against the historic creeds. And our AI never invents quotations: it can only quote from source texts that a person has already verified word-for-word.
           <a href="editorial-standards.html" style="color:var(--gold);text-decoration:none;white-space:nowrap;">See how we check our work &rarr;</a>
         </p>
       </div>
@@ -1534,7 +1535,7 @@
       <h2 class="section-title reveal">Are you ready to <em>defend</em><br />what you believe?</h2>
       <p class="section-sub reveal">Join thousands of Christians building a confident, evidence-based faith — one day at a time.</p>
       <div class="hero-actions reveal">
-        <a href="signup.html" class="btn-primary">Start for Free</a>
+        <a href="signup.html" class="btn-primary">Start Free</a>
         <a href="#features" class="btn-ghost">See All Features</a>
       </div>
     </div>
@@ -1641,7 +1642,7 @@
         desc: 'Someone raised a hard question and you weren\'t sure how to respond. That\'s exactly what the Evidence Library and Objection Catcher are built for. Here\'s how to find your answer fast.',
         steps: [
           { text: '<strong>Step 1:</strong> Go to the Evidence Library and find the section that matches your challenge — God\'s Existence, Resurrection, Jesus, Bible Reliability, or Science & Faith.' },
-          { text: '<strong>Step 2:</strong> Read the "Explain it Simply" section of the relevant argument — plain English, ready to use in conversation.' },
+          { text: '<strong>Step 2:</strong> Read the "In plain English" section of the relevant argument — plain English, ready to use in conversation.' },
           { text: '<strong>Step 3:</strong> Practice your response in the Debate Arena against an AI opponent using the same objection.' }
         ],
         btn1: { text: 'Search the Evidence Library →', href: 'evidence-library.html' },
@@ -1653,7 +1654,7 @@
         desc: 'Knowing what you believe is only half the battle. Being able to explain it clearly and naturally in a real conversation is what Apologia Daily specialises in. Every argument has a plain-English summary and a ready-to-use conversation starter.',
         steps: [
           { text: '<strong>Start here:</strong> Answers — every common question put plainly, in the words you would actually use, with the fuller case one link away.' },
-          { text: '<strong>Then go deeper:</strong> The "Explain it Simply" sections in the Evidence Library translate each argument into natural conversation language.' },
+          { text: '<strong>Then go deeper:</strong> The "In plain English" sections in the Evidence Library translate each argument into natural conversation language.' },
           { text: '<strong>Then carry it with you:</strong> Pocket Cards — short, shareable versions of each argument you can send to someone or glance at before a conversation.' }
         ],
         btn1: { text: 'Browse the Answers →', href: 'answers/' },
@@ -1700,6 +1701,8 @@
     };
 
     function selectStart(el, type) {
+      try { localStorage.setItem('ad_start', type); } catch(e) {}  /* remembered so the dashboard
+         onboarding can skip the duplicate "what brings you here?" question (see dashboard.html). */
       document.querySelectorAll('.start-card').forEach(function(c) { c.classList.remove('selected'); });
       el.classList.add('selected');
       var path = START_PATHS[type];

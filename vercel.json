@@ -17,6 +17,7 @@
     { "source": "/api/unsubscribe", "destination": "/api/weekly-email?do=unsubscribe" }
   ],
   "redirects": [
+    { "source": "/argument-map.html", "destination": "/palace.html", "permanent": true },
     { "source": "/ask-anything.html", "destination": "/asked-and-answered.html", "permanent": true },
     { "source": "/demo/frost-islamic-dilemma-companion-study.html", "destination": "/reading-club-islamic-dilemma.html", "permanent": true },
     { "source": "/daily-argument.html", "destination": "/today", "permanent": true },

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- content-review: {"citations":"2026-08-24","argument":"2026-08-24","orthodoxy":"2026-08-24","by":"2026-08-24 backlog row 129 (P4, from book-research can-we-trust-the-gospels ch.3): added Peter J. Williams's GEOGRAPHY plank as a converging line in the reply section - Matthew/Mark/John call the Sea of Galilee a 'sea' (thalassa, the grand local term), while Luke, an outsider connected by tradition with Antioch, calls it a 'lake' (limne), the geographically precise word - an incidental local-usage marker that tracks the writers' own backgrounds and, like the onomastic pattern, resists the 'skilled diaspora mimic' hypothesis. Cited inline to Williams's already-cited ch. 3 (no new footnote, sup-li unchanged). FULL PIPELINE (argument+orthodoxy tier): apologia-citations 4/4 OK 0 errors (Greek usage web-verified in a concordance: Matt 4:18/Mark 1:16/John 6:1 thalassa; Luke 5:1/8:22-23/33 limne, and Luke NEVER uses thalassa of the Galilee body - only generically at 17:2/17:6/21:25; Williams's argument represented faithfully; the Luke-Antioch link confirmed as a genuine patristic TRADITION - Anti-Marcionite Prologue, Eusebius HE 3.4.6 - correctly labelled); apologia-argument STRONG (one strand of a cumulative case not a proof, Antioch link stated as suggestive-because-traditional, genuine convergence not repetition), apologia-orthodoxy CLEAN (Lukan authorship/Antioch treated as tradition not dogma, Synoptic problem/dating not adjudicated). Fixes applied: argument POLISH - 'the Gospels most closely tied to Galilee' softened to 'whose narratives are steeped in the Palestinian scene' (John's Galilee tie is looser/contested); citations tightening - 'almost never' -> 'never' (Luke never applies thalassa to the Galilee lake). A citations markup flag (malformed em tags at 208/212/215) was checked and was a FALSE POSITIVE - those lines use proper em tags. Pastoral sign-off _pending_. | 2026-07-14 first-time content-review gate (nav-pass prerequisite). apologia-argument ran in the 2026-07-14 objection/over-concession audit (verdict CLEAN/sound); apologia-orthodoxy first-time certification CLEAN (0 heresy; argument-specific rules held -- Kalam begins-to-exist, manuscripts=preservation-not-truth, fine-tuning data-conceded/design-inferred, resurrection 1 Cor 15 creed lead, no unearned Bible/Quran symmetry)."} -->
+<!-- content-review: {"citations":"2026-08-24","argument":"2026-08-24","orthodoxy":"2026-08-24","by":"2026-09-09 STAMP-INTEGRITY RE-BASELINE (no gate ran; no review date changed): the read-aloud inline script was extracted to the shared /library/read-along.js and a /library/ask-selection.js include was added; UI/interaction plumbing only; zero doctrinal prose altered. The classifier flagged the removed alert and button-label strings as prose (a false positive on plumbing it cannot distinguish from doctrine); re-baselined per the tool guidance. | 2026-08-24 backlog row 129 (P4, from book-research can-we-trust-the-gospels ch.3): added Peter J. Williams's GEOGRAPHY plank as a converging line in the reply section - Matthew/Mark/John call the Sea of Galilee a 'sea' (thalassa, the grand local term), while Luke, an outsider connected by tradition with Antioch, calls it a 'lake' (limne), the geographically precise word - an incidental local-usage marker that tracks the writers' own backgrounds and, like the onomastic pattern, resists the 'skilled diaspora mimic' hypothesis. Cited inline to Williams's already-cited ch. 3 (no new footnote, sup-li unchanged). FULL PIPELINE (argument+orthodoxy tier): apologia-citations 4/4 OK 0 errors (Greek usage web-verified in a concordance: Matt 4:18/Mark 1:16/John 6:1 thalassa; Luke 5:1/8:22-23/33 limne, and Luke NEVER uses thalassa of the Galilee body - only generically at 17:2/17:6/21:25; Williams's argument represented faithfully; the Luke-Antioch link confirmed as a genuine patristic TRADITION - Anti-Marcionite Prologue, Eusebius HE 3.4.6 - correctly labelled); apologia-argument STRONG (one strand of a cumulative case not a proof, Antioch link stated as suggestive-because-traditional, genuine convergence not repetition), apologia-orthodoxy CLEAN (Lukan authorship/Antioch treated as tradition not dogma, Synoptic problem/dating not adjudicated). Fixes applied: argument POLISH - 'the Gospels most closely tied to Galilee' softened to 'whose narratives are steeped in the Palestinian scene' (John's Galilee tie is looser/contested); citations tightening - 'almost never' -> 'never' (Luke never applies thalassa to the Galilee lake). A citations markup flag (malformed em tags at 208/212/215) was checked and was a FALSE POSITIVE - those lines use proper em tags. Pastoral sign-off _pending_. | 2026-07-14 first-time content-review gate (nav-pass prerequisite). apologia-argument ran in the 2026-07-14 objection/over-concession audit (verdict CLEAN/sound); apologia-orthodoxy first-time certification CLEAN (0 heresy; argument-specific rules held -- Kalam begins-to-exist, manuscripts=preservation-not-truth, fine-tuning data-conceded/design-inferred, resurrection 1 Cor 15 creed lead, no unearned Bible/Quran symmetry)."} -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -57,6 +57,7 @@
   <div class="adn-collapse">
     <ul class="adn-links">
       <li><a href="/search.html" class="adn-search-link" aria-label="Search">&#128269; Search</a></li>
+      <li><a href="/today">Today</a></li>
       <li><a href="/evidence-library.html">Evidence Library</a></li>
       <li><a href="/daily-devotional.html">Daily Devotional</a></li>
       <li><a href="/debate-arena.html">Debate Arena</a></li>
@@ -333,76 +334,11 @@ async function sendFloatQuestion(){
   <span class="mp-title" id="mp-title"></span>
   <button class="mp-stop" type="button" onclick="adStopListen()">Stop</button>
 </div>
-<script>
-(function(){
-  var synth = window.speechSynthesis;
-  var items = [], idx = 0, playing = false, paused = false, curEl = null;
-  function gather(){
-    var body = document.querySelector('.art-body'); items = [];
-    if(!body) return;
-    body.querySelectorAll('h2,h3,p').forEach(function(n){
-      var clone = n.cloneNode(true);
-      clone.querySelectorAll('sup').forEach(function(s){ s.remove(); });
-      var t = clone.textContent.replace(/\s+/g,' ').trim();
-      if(t) items.push({ text:t, el:n });
-    });
-  }
-  function pickVoice(){
-    var vs = synth.getVoices();
-    return vs.find(function(v){ return /en[-_]?(US|GB)/i.test(v.lang) && /natural|google|samantha|daniel|aria|jenny|libby/i.test(v.name); })
-        || vs.find(function(v){ return /^en/i.test(v.lang); }) || vs[0];
-  }
-  function highlight(el){
-    if(curEl) curEl.classList.remove('ad-reading');
-    curEl = el || null;
-    if(el){
-      el.classList.add('ad-reading');
-      var r = el.getBoundingClientRect();
-      if(r.top < 80 || r.bottom > (window.innerHeight - 110)) el.scrollIntoView({ behavior:'smooth', block:'center' });
-    }
-  }
-  function setUI(){
-    var top = document.getElementById('listen-btn'), stopTop = document.getElementById('listen-stop');
-    var mp = document.getElementById('ad-miniplayer');
-    if(playing){
-      var label = paused ? '&#9654;&nbsp; Resume' : '&#10074;&#10074;&nbsp; Pause';
-      mp.style.display = 'flex';
-      mp.querySelector('.mp-pp').innerHTML = label;
-      if(top) top.innerHTML = label;
-      if(stopTop) stopTop.style.display = 'inline-block';
-      document.getElementById('mp-prog').textContent = Math.min(idx+1, items.length) + ' / ' + items.length;
-      document.getElementById('mp-title').textContent = curEl ? curEl.textContent.replace(/\s+/g,' ').trim().slice(0,70) : '';
-    } else {
-      mp.style.display = 'none';
-      if(top) top.innerHTML = '&#9654;&nbsp; Listen to this essay';
-      if(stopTop) stopTop.style.display = 'none';
-    }
-  }
-  function speakNext(){
-    if(idx >= items.length){ adStopListen(); return; }
-    highlight(items[idx].el); setUI();
-    var u = new SpeechSynthesisUtterance(items[idx].text);
-    var v = pickVoice(); if(v) u.voice = v; u.rate = 1.0; u.pitch = 1.0;
-    u.onend = function(){ idx++; if(playing && !paused) speakNext(); };
-    synth.speak(u);
-  }
-  window.adToggleListen = function(){
-    if(!('speechSynthesis' in window)){ alert('Your browser does not support read-aloud.'); return; }
-    if(!playing){ gather(); idx = 0; playing = true; paused = false; speakNext(); }
-    else if(!paused){ try{ synth.pause(); }catch(e){} paused = true; setUI(); }
-    else { try{ synth.resume(); }catch(e){} paused = false; setUI(); }
-  };
-  window.adStopListen = function(){
-    playing = false; paused = false;
-    try{ synth.cancel(); }catch(e){}
-    if(curEl){ curEl.classList.remove('ad-reading'); curEl = null; }
-    setUI();
-  };
-  if(synth && typeof synth.onvoiceschanged !== 'undefined'){ synth.onvoiceschanged = function(){}; }
-  window.addEventListener('beforeunload', function(){ try{ synth.cancel(); }catch(e){} });
-})();
-</script>
+<script src="/library/read-along.js" defer></script>
+<script src="/library/ask-selection.js" defer></script>
+<script src="/library/tutor-help.js" defer></script>
   <script src="/library/active-reading.js" defer></script>
+  <script src="/library/toc.js" defer></script>
   <script src="/library/reviewed-badge.js" defer></script>
 </body>
 </html>

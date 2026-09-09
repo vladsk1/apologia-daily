@@ -64,6 +64,25 @@ rather than adds," and its two *distinctive* contributions (Thesis 3's temporal-
 Thesis 8's public-reading argument) land in `manuscript.html` and `canon.html`, both of which WERE
 read in full. **So the ch. 10 verdicts below are sound for its distinctive material and provisional
 for Theses 2, 5 and 6.**
+>
+> ✅ **RE-TESTED 2026-09-09 (owner-requested; the provisional verdicts are now CONFIRMED).**
+> `library/archaeology.html` and `library/eyewitnesses.html` were read **in full** and compared against
+> ch. 10's Theses 5/6 (archaeology, matrix) and Thesis 2 (early texts). **Result: no errors, no
+> corrections owed.** Both essays corroborate Barnett and are, in several respects, **ahead of the 2013
+> book** — `eyewitnesses.html` carries Ehrman's 2016 *Jesus Before the Gospels* rejoinder, the Gregor–Blais
+> (2023, *JSHJ*) onomastic-statistics challenge with the Wilson–van de Weghe reply, Lydia McGrew on
+> undesigned coincidences, and Alan Kirk's memory-studies critique, none of which the chapter has; and both
+> essays already enforce Barnett's own historicity-≠-proof discipline. Every high-value Thesis-5 find
+> (Gallio/Delphi, Erastus, politarchs, Yehohanan, Sergius Paulus, Caiaphas, Bethesda's five porticoes) is
+> live and **hedged more carefully than the chapter** (Erastus/Sergius Paulus/Caiaphas all fenced).
+> **Two minor NT-side candidates only, both LOW priority:** (1) the **Pool of Siloam (John 9:7)** — the
+> stepped Second-Temple pool Reich & Shukron uncovered in 2004 in the City of David — is a genuine NT
+> confirmation matching the essay's own Bethesda "five porticoes" move, and is **absent** (the essay carries
+> the OT *Siloam Inscription* from Hezekiah's Tunnel, a different thing) → logged to `content-backlog.md`;
+> (2) the **Magdala/Galilee first-century fishing boat** (Barnett's Thesis 5) is atmospheric — it confirms
+> no specific text — so it is a **non-recommendation** (do not add). The eyewitnesses essay's deliberate
+> restraint on the *positive* title-uniformity argument (Hengel/Gathercole) is defensible and left as-is.
+> **Theses 2/5/6 are no longer provisional; the row below is updated.**
 
 ### ⭐ STANDING OUTPUT — is the source better than our essays anywhere? Where, and how?
 
@@ -102,7 +121,7 @@ this chapter rather than mining it.
 | Ch. 6 — P52/P66/P75 dating | **✅ 5 hazard — ours is better** | `manuscript.html` carries **Orsini & Clarysse** on P52 *and* the **Nongbri/Orsini** caution on P66 and P75, and fences the famous Kenyon quotation as *"Kenyon's strong summary judgment, not a consensus statement of the discipline."* The 2013 chapter has none of that. **Do not import the chapter's confidence on dates.** |
 | **Ch. 10** — Thesis 3, NT-vs-Caesars *temporal gap* | 1 corroboration, **shipped `44c6786`** | Live in `manuscript.html` with the apples-to-apples hedge. ⚠ It is the *temporal-gap* comparison, never the discredited raw-count one. |
 | Ch. 10 — Thesis 8, public reading = canonical recognition | 1 corroboration, **shipped `44c6786`** | Live in `canon.html` with Justin *1 Apol.* 66–67, Col 4:16, 1 Tim 4:13, Rev 1:3 — and correctly bounded there: *"This attests early functional authority; it does not by itself prove a closed canon at that date."* |
-| Ch. 10 — Theses 2, 5, 6 (early texts; archaeology; historical matrix) | 1 corroboration, **PROVISIONAL** | The note calls these "corroborates rather than adds," and `eyewitnesses.html` / `archaeology.html` were not read in full this pass. **Not independently confirmed — re-test if ch. 10 is ever mined again.** |
+| Ch. 10 — Theses 2, 5, 6 (early texts; archaeology; historical matrix) | 1 corroboration, ✅ **CONFIRMED 2026-09-09** (+ 1 low-priority missing) | `eyewitnesses.html` and `archaeology.html` were re-read **in full** (2026-09-09) against Theses 2/5/6: **no errors, corroboration throughout, and ours is ahead of the 2013 book** on critics and hedging. Only gap found: the **NT Pool of Siloam (John 9:7)**, Reich & Shukron 2004 — absent from `archaeology.html` (which carries the OT Siloam *Inscription*, a different find) → **logged to `content-backlog.md` (P3)**. Barnett's Magdala boat = non-recommendation. |
 | Ch. 10 — the full Testimonium; census/Quirinius; Star of Bethlehem; Theudas; the Qur'an asides | **6 non-recommendation** | All five already carry do-not-use or handle-honestly flags in this note, and we do not run any of them. The flags are correct and should stay. |
 | **Ch. 11** — the cautionary-principles taxonomy | 1 corroboration, **shipped `44c6786`** | `library/consistency.html` cites **Huffman by name and by volume** and runs all five principles plus misconstrued referent and mystery, with A. T. Robertson's "a possible reconciliation is enough" rule. |
 | Ch. 11 — Wenham, *Easter Enigma*, and the eight-segment coordination | ✅ **SHIPPED 2026-08-14** to `consistency.html` §186 (fn 20) | Wenham added as the fullest Galilee/Jerusalem harmonization — kept strictly MODAL ("can be fitted... necessarily conjectural... no *demonstrable* contradiction, not the actual order events took") so it PRESERVES the essay's "plausible but not airtight" honesty rather than overturning it. Osborne (1984) footnoted correctly as a *redaction-critic*, not a second harmonizer. The `/answers/*` strengthenings remain available. dual-consensus CLEAN. |

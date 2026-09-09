@@ -1,10 +1,10 @@
 # Study Groups — RLS privilege-escalation fix (run once)
 
-> **Status: human step (you).** Run the SQL below in the Supabase SQL editor,
-> same as the original Study Groups migration. It is **idempotent** and safe to
-> re-run. **No front-end deploy is needed** — the fix is backward-compatible with
-> the current `study-groups.html` (group creation, public join, and invite-code
-> join all keep working unchanged).
+> **✅ Status: RUN 2026-09-08 (owner, in the Supabase SQL editor).** The hardened
+> `gm_insert` policy + helper functions are live, closing the C1 privilege-escalation
+> hole. Kept for reference / re-run (idempotent). No front-end deploy was needed — the
+> fix is backward-compatible with the current `study-groups.html` (group creation,
+> public join, and invite-code join all keep working unchanged).
 
 ## The vulnerability (C1, critical)
 

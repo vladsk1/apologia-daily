@@ -3,14 +3,21 @@
  * Builds search-index.json — the client-side index powering /search.html.
  * Sources (structured, already-certified content — no re-authoring):
  *   - Evidence Library essays  ← library/index.html  (libcard title + blurb)
+ *   - Mastery pages            ← ev-m-*.html          (<title> + meta description)
  *   - Answers                  ← answers/_data.json  (question + short answer)
+ *   - Feature / tool pages     ← FEATURE_PAGES list   (<title> + meta description)
  *   - Glossary terms           ← glossary.html        (var TERMS array)
  *
+ * Titles/descriptions for the HTML-sourced records are read from each page's
+ * own <title> and <meta name="description"> — no copy is re-authored here, so a
+ * page's search entry can never drift from the page. (Usability item 13.)
+ *
  * Each record: { t:title, u:url, d:description, c:category, y:type }
+ * type y ∈ essay | mastery | answer | feature | term
  * Run:  node tools/build-search-index.mjs   (re-run after adding essays/answers/terms)
  * A CI check (--check) fails if the committed index is stale.
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, globSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 // fileURLToPath (not .pathname) so this works on Windows too — .pathname yields
@@ -74,7 +81,67 @@ function terms() {
     }));
 }
 
-const index = [...essays(), ...answers(), ...terms()];
+// ── shared: pull a page's own <title> + meta description, cleaned ──
+const ENT = { '&amp;': '&', '&#38;': '&', '&mdash;': '—', '&ndash;': '–',
+  '&#8212;': '—', '&#8211;': '–', '&rsquo;': '’', '&lsquo;': '‘',
+  '&#8217;': '’', '&#39;': "'", '&#x27;': "'", '&apos;': "'", '&quot;': '"',
+  '&ldquo;': '“', '&rdquo;': '”', '&nbsp;': ' ', '&hellip;': '…' };
+function decode(s) {
+  return (s || '')
+    .replace(/<[^>]+>/g, '')                                  // strip any stray tags
+    .replace(/&#x?[0-9a-f]+;|&[a-z]+;/gi, (m) => ENT[m.toLowerCase()] ?? ENT[m] ?? m)
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+function pageMeta(html) {
+  const t = html.match(/<title>([\s\S]*?)<\/title>/i);
+  const d = html.match(/<meta\s+name=["']description["']\s+content=["']([\s\S]*?)["']/i);
+  // drop the " | Apologia Daily" (or "— Apologia Daily") site suffix from titles
+  const title = decode(t ? t[1] : '').replace(/\s*[|–—-]\s*Apologia Daily\s*$/i, '');
+  return { title, desc: decode(d ? d[1] : '') };
+}
+
+// ── Mastery pages (ev-m-*.html) — each reads its own <title> + meta desc ──
+function mastery() {
+  const out = [];
+  for (const f0 of globSync('ev-m-*.html')) {
+    const f = f0.replace(/\\/g, '/');
+    const { title, desc } = pageMeta(read('/' + f));
+    if (!title) continue;
+    out.push({ t: title, u: '/' + f, d: desc, c: 'Mastery Track', y: 'mastery' });
+  }
+  return out.sort((a, b) => a.t.localeCompare(b.t));
+}
+
+// ── Feature / tool pages — a curated list of destinations a reader might search
+// for by name. Only the LIST (file + category) is maintained here; the title and
+// blurb are read from each page's own <title>/<meta>, so they cannot drift. ──
+const FEATURE_PAGES = [
+  ['games.html', 'Practice'], ['flashcards.html', 'Practice'], ['daily-quiz.html', 'Practice'],
+  ['daily-mix.html', 'Practice'], ['speed-round.html', 'Practice'], ['who-said-it.html', 'Practice'],
+  ['challenge.html', 'Practice'], ['objection-deck.html', 'Practice'], ['objection-catcher.html', 'Practice'],
+  ['palace.html', 'Practice'], ['explain-it-back.html', 'Practice'], ['conversation-journal.html', 'Practice'],
+  ['name-the-heresy.html', 'Practice'],
+  ['evidence-library.html', 'Guides & Tools'], ['worldviews.html', 'Guides & Tools'],
+  ['pocket-cards.html', 'Guides & Tools'], ['debate-arena.html', 'Guides & Tools'],
+  ['daily-devotional.html', 'Guides & Tools'], ['study-plans.html', 'Guides & Tools'],
+  ['beginners-path.html', 'Guides & Tools'], ['today.html', 'Guides & Tools'],
+  ['coach.html', 'Guides & Tools'], ['scholars.html', 'Guides & Tools'],
+  ['ask-anything.html', 'Guides & Tools'],
+];
+function features() {
+  const out = [];
+  for (const [f, cat] of FEATURE_PAGES) {
+    let html;
+    try { html = read('/' + f); } catch { continue; }   // skip a missing page rather than break the build
+    const { title, desc } = pageMeta(html);
+    if (!title) continue;
+    out.push({ t: title, u: '/' + f, d: desc, c: cat, y: 'feature' });
+  }
+  return out;
+}
+
+const index = [...essays(), ...mastery(), ...answers(), ...features(), ...terms()];
 const json = JSON.stringify(index);
 
 const CHECK = process.argv.includes('--check');

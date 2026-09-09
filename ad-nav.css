@@ -28,7 +28,11 @@ body{padding-top:0 !important}
   .adn-burger{display:flex;order:3;margin-left:.4rem}
   /* keep the bar as a row; only the links drop down behind the burger */
   .adn-collapse{display:flex;order:2;flex:1;min-width:0;gap:0}
-  .adn-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;flex:none;background:#0a1628;border-bottom:1px solid rgba(255,255,255,.1);padding:6px 0 12px;max-height:calc(100vh - 64px);overflow:auto;z-index:1001}
+  /* justify-content:flex-start is REQUIRED here: the base rule sets
+     justify-content:center for the desktop horizontal row, but on this vertical,
+     scrollable column a centered overflow pushes the TOP items above the
+     container edge where they are clipped and cannot be scrolled to. */
+  .adn-links{display:none;position:fixed;top:64px;left:0;right:0;flex-direction:column;justify-content:flex-start;align-items:stretch;gap:0;flex:none;background:#0a1628;border-bottom:1px solid rgba(255,255,255,.1);padding:6px 0 12px;max-height:calc(100vh - 64px);max-height:calc(100dvh - 64px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;z-index:1001}
   .adn-nav.adn-menu-open .adn-links{display:flex}
   .adn-links>li{width:100%}
   .adn-links>li>a,.adn-more{width:100%;padding:13px 1.5rem;font-size:.95rem}

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Search — Apologia Daily</title>
   <link rel="canonical" href="https://apologiadaily.com/search">
-  <meta name="description" content="Search the whole of Apologia Daily — every deep-dive essay, answer, and glossary term in one place." />
+  <meta name="description" content="Search the whole of Apologia Daily — every deep-dive essay, mastery guide, answer, tool and glossary term in one place." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -52,7 +52,9 @@
     .result-top { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; flex-wrap: wrap; }
     .r-type { font-family: var(--ui); font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; }
     .r-essay { background: #f5edd6; color: #8a6d1f; }
+    .r-mastery { background: #e7f0e7; color: #2f7a48; }
     .r-answer { background: #e4eefb; color: #1e4278; }
+    .r-feature { background: #f0e9f6; color: #6a4a8a; }
     .r-term { background: #eceff3; color: #556; }
     .r-cat { font-family: var(--ui); font-size: 0.74rem; color: var(--mu); }
     .r-title { font-family: var(--fd); font-size: 1.12rem; font-weight: 600; color: var(--n); line-height: 1.3; }
@@ -80,6 +82,7 @@
   <div class="adn-collapse">
     <ul class="adn-links">
       <li><a href="/search.html" class="adn-search-link" aria-label="Search">&#128269; Search</a></li>
+      <li><a href="/today">Today</a></li>
       <li><a href="/evidence-library.html">Evidence Library</a></li>
       <li><a href="/daily-devotional.html">Daily Devotional</a></li>
       <li><a href="/debate-arena.html">Debate Arena</a></li>
@@ -171,8 +174,8 @@
   (function () {
     var INDEX = [];
     var filter = 'all';
-    var TYPE_LABEL = { essay: 'Essay', answer: 'Answer', term: 'Term' };
-    var TYPE_ORDER = { essay: 0, answer: 1, term: 2 };
+    var TYPE_LABEL = { essay: 'Essay', mastery: 'Mastery', answer: 'Answer', feature: 'Tool', term: 'Term' };
+    var TYPE_ORDER = { essay: 0, mastery: 1, answer: 2, feature: 3, term: 4 };
 
     function esc(s) {
       return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
@@ -224,7 +227,7 @@
 
       if (!toks.length) {
         results.innerHTML = '<div class="empty">Start typing to search <strong>' + INDEX.length +
-          '</strong> essays, answers &amp; terms.</div>';
+          '</strong> essays, mastery guides, answers, tools &amp; terms.</div>';
         meta.textContent = '';
         return;
       }
@@ -264,7 +267,7 @@
     }
 
     function buildChips() {
-      var defs = [['all', 'All'], ['essay', 'Essays'], ['answer', 'Answers'], ['term', 'Glossary']];
+      var defs = [['all', 'All'], ['essay', 'Essays'], ['mastery', 'Mastery'], ['answer', 'Answers'], ['feature', 'Tools'], ['term', 'Glossary']];
       var el = document.getElementById('chips');
       el.innerHTML = defs.map(function (d) {
         return '<button class="chip' + (d[0] === filter ? ' active' : '') +

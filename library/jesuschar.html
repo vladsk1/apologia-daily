@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- content-review: {"citations":"2026-09-01","argument":"2026-09-01","orthodoxy":"2026-09-01","neutrality":"2026-09-01","by":"2026-09-01 positive-evidence sweep (owner-requested), Jesus tab topic 11 — FIRST DUAL-CONSENSUS UPGRADE (prior stamp was argument+orthodoxy only, 2026-07-14). Strengthened the CHARACTER premise (the essay's namesake), which had rested only on four confessional NT texts: added two paragraphs to 'The Claim and the Character' giving the moral portrait corroborative historical purchase via (1) non-sanitization/embarrassment (Mark 3:21 'out of his mind'; Gethsemane; the Psalm 22 cry of dereliction) and (2) the SHAPE of the hostile charges (sorcerer/deceiver/blasphemer/illegitimate-pretender concern the source of his power, the truth of his claims, and his birth — not a ledger of cruelty, greed, or exploitation; Celsus's one personal jab was borrowed from the Gospels' own Gethsemane record). +Origen Contra Celsum (Chadwick) to the bibliography; ZERO new numbered footnotes (Gospel/Talmud/Celsus cited inline, house style). WEB CITATIONS PRE-CHECK ran BEFORE drafting and DEMOLISHED the sweeping argument-from-silence: Celsus DID mock him as cowardly (Gethsemane), 'glutton and a drunkard' (Matt 11:19) IS a canonical self-indulgence gibe, and 'deceiver'/planos is the single most pervasive hostile charge — so the paragraph concedes all three openly and makes only the narrow, bounded claim. Full 4-lens gate via READ-ONLY Explore agents. Round 1: orthodoxy CLEAN 0 heresy; argument NOT-STAMPABLE 1 WEAK (absolute 'always'); neutrality NOT-STAMPABLE 1 BREAK/3 WEAK (the BREAK: 'never a rival catalogue of a cruel, rapacious, or lecherous life' falsified by the glutton gibe + the Panthera/mamzer strand). ONE merged fix pass: dropped the absolutes ('always'->'runs again and again'; 'lecherous' cut; narrowed to 'cruelty, greed, or exploitation' with the glutton gibe + birth-slanders conceded in-line); reclassified the deceit charge honestly ('does touch his honesty'); downgraded to 'corroborative rather than decisive / weighed lightly, the record thin and late'; granted the critic's counter that Mark had theological reasons to keep the embarrassing scenes; named the Psalm 22 source of the dereliction cry (closes orthodoxy's optional note). Round 2 confirmation: orthodoxy CLEAN, argument STAMPABLE (verified NOT over-conceded — both paragraphs end affirmative), neutrality STAMPABLE 0 BREAK (one residual low-severity WEAK on 'un-retouched' -> narrowed to 'was not sanitized'). Port rule held — every gate finding landed on authored connective prose. Citations satisfied by the pre-check on the exact verified claims used. Supersedes 2026-07-14 stamp. Pastoral sign-off still _pending_ (site-wide)."} -->
+<!-- content-review: {"citations":"2026-09-01","argument":"2026-09-01","orthodoxy":"2026-09-01","neutrality":"2026-09-01","by":"2026-09-09 STAMP-INTEGRITY RE-BASELINE (no gate ran; no review date changed): the read-aloud inline script was extracted to the shared /library/read-along.js and a /library/ask-selection.js include was added; UI/interaction plumbing only; zero doctrinal prose altered. The classifier flagged the removed alert and button-label strings as prose (a false positive on plumbing it cannot distinguish from doctrine); re-baselined per the tool guidance. | 2026-09-01 positive-evidence sweep (owner-requested), Jesus tab topic 11 — FIRST DUAL-CONSENSUS UPGRADE (prior stamp was argument+orthodoxy only, 2026-07-14). Strengthened the CHARACTER premise (the essay's namesake), which had rested only on four confessional NT texts: added two paragraphs to 'The Claim and the Character' giving the moral portrait corroborative historical purchase via (1) non-sanitization/embarrassment (Mark 3:21 'out of his mind'; Gethsemane; the Psalm 22 cry of dereliction) and (2) the SHAPE of the hostile charges (sorcerer/deceiver/blasphemer/illegitimate-pretender concern the source of his power, the truth of his claims, and his birth — not a ledger of cruelty, greed, or exploitation; Celsus's one personal jab was borrowed from the Gospels' own Gethsemane record). +Origen Contra Celsum (Chadwick) to the bibliography; ZERO new numbered footnotes (Gospel/Talmud/Celsus cited inline, house style). WEB CITATIONS PRE-CHECK ran BEFORE drafting and DEMOLISHED the sweeping argument-from-silence: Celsus DID mock him as cowardly (Gethsemane), 'glutton and a drunkard' (Matt 11:19) IS a canonical self-indulgence gibe, and 'deceiver'/planos is the single most pervasive hostile charge — so the paragraph concedes all three openly and makes only the narrow, bounded claim. Full 4-lens gate via READ-ONLY Explore agents. Round 1: orthodoxy CLEAN 0 heresy; argument NOT-STAMPABLE 1 WEAK (absolute 'always'); neutrality NOT-STAMPABLE 1 BREAK/3 WEAK (the BREAK: 'never a rival catalogue of a cruel, rapacious, or lecherous life' falsified by the glutton gibe + the Panthera/mamzer strand). ONE merged fix pass: dropped the absolutes ('always'->'runs again and again'; 'lecherous' cut; narrowed to 'cruelty, greed, or exploitation' with the glutton gibe + birth-slanders conceded in-line); reclassified the deceit charge honestly ('does touch his honesty'); downgraded to 'corroborative rather than decisive / weighed lightly, the record thin and late'; granted the critic's counter that Mark had theological reasons to keep the embarrassing scenes; named the Psalm 22 source of the dereliction cry (closes orthodoxy's optional note). Round 2 confirmation: orthodoxy CLEAN, argument STAMPABLE (verified NOT over-conceded — both paragraphs end affirmative), neutrality STAMPABLE 0 BREAK (one residual low-severity WEAK on 'un-retouched' -> narrowed to 'was not sanitized'). Port rule held — every gate finding landed on authored connective prose. Citations satisfied by the pre-check on the exact verified claims used. Supersedes 2026-07-14 stamp. Pastoral sign-off still _pending_ (site-wide)."} -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -59,6 +59,7 @@
   <div class="adn-collapse">
     <ul class="adn-links">
       <li><a href="/search.html" class="adn-search-link" aria-label="Search">&#128269; Search</a></li>
+      <li><a href="/today">Today</a></li>
       <li><a href="/evidence-library.html">Evidence Library</a></li>
       <li><a href="/daily-devotional.html">Daily Devotional</a></li>
       <li><a href="/debate-arena.html">Debate Arena</a></li>
@@ -317,76 +318,11 @@ async function sendFloatQuestion(){
   <span class="mp-title" id="mp-title"></span>
   <button class="mp-stop" type="button" onclick="adStopListen()">Stop</button>
 </div>
-<script>
-(function(){
-  var synth = window.speechSynthesis;
-  var items = [], idx = 0, playing = false, paused = false, curEl = null;
-  function gather(){
-    var body = document.querySelector('.art-body'); items = [];
-    if(!body) return;
-    body.querySelectorAll('h2,h3,p').forEach(function(n){
-      var clone = n.cloneNode(true);
-      clone.querySelectorAll('sup').forEach(function(s){ s.remove(); });
-      var t = clone.textContent.replace(/\s+/g,' ').trim();
-      if(t) items.push({ text:t, el:n });
-    });
-  }
-  function pickVoice(){
-    var vs = synth.getVoices();
-    return vs.find(function(v){ return /en[-_]?(US|GB)/i.test(v.lang) && /natural|google|samantha|daniel|aria|jenny|libby/i.test(v.name); })
-        || vs.find(function(v){ return /^en/i.test(v.lang); }) || vs[0];
-  }
-  function highlight(el){
-    if(curEl) curEl.classList.remove('ad-reading');
-    curEl = el || null;
-    if(el){
-      el.classList.add('ad-reading');
-      var r = el.getBoundingClientRect();
-      if(r.top < 80 || r.bottom > (window.innerHeight - 110)) el.scrollIntoView({ behavior:'smooth', block:'center' });
-    }
-  }
-  function setUI(){
-    var top = document.getElementById('listen-btn'), stopTop = document.getElementById('listen-stop');
-    var mp = document.getElementById('ad-miniplayer');
-    if(playing){
-      var label = paused ? '&#9654;&nbsp; Resume' : '&#10074;&#10074;&nbsp; Pause';
-      mp.style.display = 'flex';
-      mp.querySelector('.mp-pp').innerHTML = label;
-      if(top) top.innerHTML = label;
-      if(stopTop) stopTop.style.display = 'inline-block';
-      document.getElementById('mp-prog').textContent = Math.min(idx+1, items.length) + ' / ' + items.length;
-      document.getElementById('mp-title').textContent = curEl ? curEl.textContent.replace(/\s+/g,' ').trim().slice(0,70) : '';
-    } else {
-      mp.style.display = 'none';
-      if(top) top.innerHTML = '&#9654;&nbsp; Listen to this essay';
-      if(stopTop) stopTop.style.display = 'none';
-    }
-  }
-  function speakNext(){
-    if(idx >= items.length){ adStopListen(); return; }
-    highlight(items[idx].el); setUI();
-    var u = new SpeechSynthesisUtterance(items[idx].text);
-    var v = pickVoice(); if(v) u.voice = v; u.rate = 1.0; u.pitch = 1.0;
-    u.onend = function(){ idx++; if(playing && !paused) speakNext(); };
-    synth.speak(u);
-  }
-  window.adToggleListen = function(){
-    if(!('speechSynthesis' in window)){ alert('Your browser does not support read-aloud.'); return; }
-    if(!playing){ gather(); idx = 0; playing = true; paused = false; speakNext(); }
-    else if(!paused){ try{ synth.pause(); }catch(e){} paused = true; setUI(); }
-    else { try{ synth.resume(); }catch(e){} paused = false; setUI(); }
-  };
-  window.adStopListen = function(){
-    playing = false; paused = false;
-    try{ synth.cancel(); }catch(e){}
-    if(curEl){ curEl.classList.remove('ad-reading'); curEl = null; }
-    setUI();
-  };
-  if(synth && typeof synth.onvoiceschanged !== 'undefined'){ synth.onvoiceschanged = function(){}; }
-  window.addEventListener('beforeunload', function(){ try{ synth.cancel(); }catch(e){} });
-})();
-</script>
+<script src="/library/read-along.js" defer></script>
+<script src="/library/ask-selection.js" defer></script>
+<script src="/library/tutor-help.js" defer></script>
   <script src="/library/active-reading.js" defer></script>
+  <script src="/library/toc.js" defer></script>
   <script src="/library/reviewed-badge.js" defer></script>
 </body>
 </html>
