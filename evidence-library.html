@@ -542,6 +542,7 @@ function enhanceSection(container, id) {
      card is the essay CTA the fragment shipped with (one per card), so card-video
      resolves the essay slug from it cleanly, never from a later cross-link. */
   try { if (window.ADCardVideo) window.ADCardVideo.apply(container); } catch (e) {}
+  try { if (window.ADTabIntro) window.ADTabIntro.apply(container, id); } catch (e) {}
   try { if (window.ADCrossLink) window.ADCrossLink.apply(container); } catch (e) {}
   try { if (window.ADDiagram) window.ADDiagram.auto(container); } catch (e) {}
 }
@@ -1207,6 +1208,7 @@ async function sendFloatQuestion() {
   <script src="/analytics.js" defer></script>
   <script src="/library/orthonote.js" defer></script>
   <script src="/library/card-video.js" defer></script>
+  <script src="/library/tab-intro.js" defer></script>
   <script src="/library/crosslink.js" defer></script>
   <script src="/library/diagram.js" defer></script>
 </body>

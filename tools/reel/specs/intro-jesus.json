@@ -1,0 +1,100 @@
+{
+  "reviewed": {"argument": "2026-09-11", "orthodoxy": "2026-09-11", "neutrality": "2026-09-11", "by": "2026-09-11 deity-tier dual-consensus gate, run as READ-ONLY Explore agents (write-access hazard rule). Round 1: argument STAMPABLE (0 BREAK/0 WEAK), orthodoxy CLEAN (0 HERESY, 0 retired claims — grepped), neutrality STAMPABLE (0 BREAK). All three converged on ONE line ('each strong objection stated at its best, then answered') — it echoed the retired 'strongest defender' overpromise and could screenshot as claiming total victory. Narrowed to 'the strongest objections are stated fairly, then answered' (VO) / 'The strongest objections stated fairly, then answered' (scene 6), using the gates' own supplied wording. Confirmation re-gate (combined 3-lens Explore): CONFIRMED-CLEAN, no new defect. Resurrection led by the early creed 'within a few years'; deity framed as an honest question; 'makes the case', never 'proves'. NOT pastoral sign-off (site-wide pending)."},
+  "aspect": "wide",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1.0,
+  "source": "Orientation video for the Jesus tab (ev-s3) of the Evidence Library. Subject + arguments drawn from the certified ev-s3 essays (hist_jesus, jesus_claims, jesus_as_god_nt, messianic-prophecy, typology, uniqueness, earlycreed). Feature tour describes site capabilities (deep-dive essays, AI tutor, mastery/Explain-It-Back, daily practice /today, pocket cards, Debate Arena, tiered reading + read-aloud) by capability, not screen position. Honest framing throughout: 'makes the case', never 'proves'.",
+  "voiceover": "At the center of the Christian faith stands one man — Jesus of Nazareth. This section of the Evidence Library takes the honest questions about him one at a time, and shows you where the evidence points. Did he even exist? Virtually every historian, believer or not, says yes. What did he claim about himself — and did his earliest followers worship him as God, not merely admire him as a teacher? How did the first Christians read the Hebrew Scriptures as pointing toward him, and is his story genuinely unlike the older dying-and-rising myths sceptics compare it to? And the question everything turns on: did he rise? The case there begins with a creed the church was already reciting within a few years of the crucifixion — not a legend invented lifetimes later. Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. None of this can do your believing for you. What this section makes the case for is that trusting Jesus is not a leap in the dark — it rests on real evidence, honestly weighed. Start anywhere, and follow it where it leads.",
+  "scenes": [
+    { "dur": 7.0,
+      "big": [ {"t": "Who was", "c": "cream", "s": 88}, {"t": "Jesus of Nazareth?", "c": "gold", "s": 92} ],
+      "sub": [
+        {"t": "The honest questions —", "c": "cream", "f": "serif", "s": 44},
+        {"t": "one at a time, following the evidence.", "c": "dim", "f": "serif", "s": 40} ] },
+
+    { "dur": 5.0,
+      "kicker": "DID HE EVEN EXIST?",
+      "lines": [
+        {"t": "Virtually every historian —", "c": "cream", "s": 52},
+        {"t": "believer or not —", "c": "cream", "s": 52},
+        {"t": "says yes.", "c": "gold", "f": "serifb", "s": 66} ] },
+
+    { "dur": 7.5,
+      "kicker": "WHAT DID HE CLAIM?",
+      "lines": [
+        {"t": "Did his earliest followers", "c": "cream", "s": 50},
+        {"t": "worship him as God —", "c": "gold", "f": "serifb", "s": 58},
+        {"t": "", "s": 12},
+        {"t": "not merely admire", "c": "cream", "s": 48},
+        {"t": "a great teacher?", "c": "cream", "s": 48} ] },
+
+    { "dur": 8.0,
+      "kicker": "THE SCRIPTURES — AND THE MYTHS",
+      "lines": [
+        {"t": "Do the Hebrew Scriptures", "c": "cream", "s": 50},
+        {"t": "point toward him?", "c": "gold", "f": "serifb", "s": 56},
+        {"t": "", "s": 12},
+        {"t": "And is his story really", "c": "cream", "s": 48},
+        {"t": "just borrowed from older myths?", "c": "cream", "s": 46} ] },
+
+    { "dur": 9.5,
+      "kicker": "AND DID HE RISE?",
+      "lines": [
+        {"t": "The case begins with a creed", "c": "cream", "s": 50},
+        {"t": "the church was reciting within", "c": "cream", "s": 48},
+        {"t": "a few years of the cross —", "c": "gold", "f": "serifb", "s": 54},
+        {"t": "", "s": 12},
+        {"t": "not a later legend.", "c": "dim", "f": "serif", "s": 42} ] },
+
+    { "dur": 9.0,
+      "kicker": "EVERY ARGUMENT, IN FULL",
+      "big": [ {"t": "Fully-cited", "c": "cream", "s": 78}, {"t": "deep-dive essays.", "c": "cream", "s": 78} ],
+      "sub": [
+        {"t": "Every claim sourced. The strongest", "c": "cream", "f": "serif", "s": 40},
+        {"t": "objections stated fairly, then answered.", "c": "cream", "f": "serif", "s": 40},
+        {"t": "", "s": 12},
+        {"t": "Checked Before Published.", "c": "gold", "f": "serifb", "s": 46} ] },
+
+    { "dur": 8.0,
+      "kicker": "AN AI TUTOR ON EVERY ESSAY",
+      "lines": [
+        {"t": "Ask it anything.", "c": "gold", "f": "serifb", "s": 60},
+        {"t": "", "s": 14},
+        {"t": "Or highlight one sentence", "c": "cream", "s": 48},
+        {"t": "and ask about that exact line.", "c": "cream", "s": 48} ] },
+
+    { "dur": 8.0,
+      "kicker": "LEARN IT — DON'T JUST READ IT",
+      "lines": [
+        {"t": "Explain the argument back", "c": "cream", "s": 50},
+        {"t": "in your own words — an AI grades it.", "c": "gold", "f": "serifb", "s": 44},
+        {"t": "", "s": 12},
+        {"t": "Daily practice brings it back", "c": "cream", "s": 46},
+        {"t": "just before you forget.", "c": "cream", "s": 46} ] },
+
+    { "dur": 8.0,
+      "kicker": "AND WHEN YOU'RE READY",
+      "lines": [
+        {"t": "Pocket cards to share.", "c": "cream", "s": 52},
+        {"t": "", "s": 12},
+        {"t": "A Debate Arena to practise", "c": "cream", "s": 48},
+        {"t": "against an AI sceptic —", "c": "gold", "f": "serifb", "s": 52},
+        {"t": "before the real conversation.", "c": "cream", "s": 46} ] },
+
+    { "dur": 6.5,
+      "kicker": "READ IT YOUR WAY",
+      "lines": [
+        {"t": "Plain-English, or the full deep dive.", "c": "cream", "s": 48},
+        {"t": "", "s": 12},
+        {"t": "With read-aloud audio.", "c": "gold", "f": "serifb", "s": 50} ] },
+
+    { "dur": 9.5,
+      "big": [ {"t": "Not a leap", "c": "cream", "s": 84}, {"t": "in the dark.", "c": "gold", "s": 88} ],
+      "sub": [
+        {"t": "It rests on real evidence, honestly weighed.", "c": "cream", "f": "serif", "s": 40},
+        {"t": "", "s": 12},
+        {"t": "Start anywhere  ·  apologiadaily.com", "c": "gold", "f": "serifb", "s": 48} ] }
+  ]
+}
