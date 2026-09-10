@@ -98,6 +98,58 @@ The reels are **gated content**. Changing any spoken/on-screen wording re-opens 
 bump the spec's `reviewed` dates before rendering. Changing only the **aspect ratio** (9:16 → 16:9)
 changes no words and needs no re-gate.
 
+## Video placement plan (owner-directed 2026-09-10)
+
+Three placements, keeping the essay one:
+
+1. **Essay video** — the matching argument's short video at the top of each `library/*.html`. **Live.**
+   Catches direct/search arrivals who never saw the tab.
+2. **Argument-card video (#2)** — the SAME video, shown inside its argument card when that card is
+   expanded in the Evidence Library tab. Reuses `video-lessons.json` + the essay link already in each
+   card. **Plumbing, no new content, no gate.** Build this first (see the prompt the owner has).
+3. **Tab intro video (#3)** — a NEW, purpose-made overview video, one per Evidence Library tab
+   (`ev-s1..ev-s8`): God's Existence, Jesus, Resurrection, Trinity, Biblical Reliability, Conversions,
+   Church in History, etc. **New content → full gate. Pilot on the Jesus tab first.**
+
+### #3 — tab intro videos: the brief
+
+Each tab intro is an *orientation* video (not an argument reel). Content approach, owner-directed:
+
+- **Lean on the subject and its arguments** (this is the evergreen part): name the subject and its
+  central question, then walk through the arguments this tab makes (what each one argues), and end with
+  what the tab makes the case **for** — honest framing, **"makes the case," never "proves."**
+- **Give a GOOD, clear tour of the features** so people know what's possible (owner wants this detailed,
+  not just a light mention). Cover, by capability rather than exact clicks:
+  - 90+ **fully-cited deep-dive essays**, "Checked Before Published" (every claim sourced, objections
+    steelmanned).
+  - The **AI tutor** on every essay — ask it anything, or highlight a sentence to ask about that exact line.
+  - **Mastery mode** — flashcards + "Explain It Back" (you explain the argument back and an AI grades it).
+  - **Daily practice / spaced repetition** (`/today`) — it brings back what you're about to forget.
+  - **Pocket cards** — shareable summaries; the **Debate Arena** — practise against an AI skeptic.
+  - Tiered reading — a plain-English version and a deep dive — and read-aloud audio.
+- **Describe features by what they DO, not by where they sit on screen**, so a future UI change doesn't
+  instantly date the video. If the UI does change materially, we just re-render the affected intro(s) —
+  the owner has accepted that maintenance cost in exchange for the fuller feature tour.
+- **Gate every intro script** like any content: `apologia-argument` + `apologia-orthodoxy`, plus
+  `apologia-neutrality` for the God's-Existence / Jesus / Resurrection / Trinity / Islam tabs (they preview
+  deity/resurrection claims). It must not overstate what the essays deliver.
+
+### #3 pilot — how to build it (Jesus tab first)
+
+1. Write a reel spec `tools/reel/specs/intro-jesus.json` in the house format (navy theme, scenes with
+   `big`/`lines`, a `voiceover` script, a `reviewed` block). Draft the voiceover to the brief above:
+   the subject + the arguments in the Jesus tab (existence, claims, deity, resurrection creed, prophecy,
+   titles, uniqueness) + the feature tour + an honest "here's what this section makes the case for" close.
+2. Gate it (argument + orthodoxy + neutrality — deity tier). Fix + re-gate until clean; stamp `reviewed`.
+3. Render + voice: `python3 tools/reel/render-lessons.py` won't pick it up (it's not an essay lesson) —
+   render directly: `python3 tools/reel/gen_reel.py tools/reel/specs/intro-jesus.json --aspect wide
+   --out tools/reel/output/lessons/intro-jesus.mp4`, then add voice with edge-tts + mux (same as the
+   lessons). Make a thumbnail too.
+4. Upload to YouTube; add a `"tab-intro"` section to `video-lessons.json` (e.g. an `intros` map:
+   `{"ev-s3": {"spec": "intro-jesus", "youtube": "<id>"}}`) and a small script/placement that puts a
+   **"▶ New here? Start with the 1-minute overview"** card at the TOP of the `ev-s3` tab fragment.
+5. Review the feel with the owner before rolling out the other 7 tabs.
+
 ## Not built yet (easy follow-ups)
 
 - **A "Apologia originals" grid on `video-library.html`** listing all the uploaded lessons in one place.
