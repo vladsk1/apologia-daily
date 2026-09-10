@@ -36,11 +36,19 @@ def _find(*c):
     return c[-1]
 
 
-SERIF_IT  = _find("/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf")
-SERIF_BIT = _find("/usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf", SERIF_IT)
-SERIF_B   = _find("/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf")
-SANS      = _find("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
-SANS_B    = _find("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf")
+# Prefer the Linux face (Debian/Ubuntu/CI), then Windows (Georgia/Arial), then macOS —
+# the same cross-platform fallback gen_reel.py uses, so thumbnails render on a Mac or
+# Windows local session too (the documented "render on your Mac" workflow), not only CI.
+SERIF_IT  = _find("/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf",
+                  "C:/Windows/Fonts/georgiai.ttf", "/System/Library/Fonts/Supplemental/Georgia Italic.ttf")
+SERIF_BIT = _find("/usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf",
+                  "C:/Windows/Fonts/georgiaz.ttf", "/System/Library/Fonts/Supplemental/Georgia Bold Italic.ttf", SERIF_IT)
+SERIF_B   = _find("/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf",
+                  "C:/Windows/Fonts/georgiab.ttf", "/System/Library/Fonts/Supplemental/Georgia Bold.ttf")
+SANS      = _find("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+                  "C:/Windows/Fonts/arial.ttf", "/System/Library/Fonts/Supplemental/Arial.ttf")
+SANS_B    = _find("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+                  "C:/Windows/Fonts/arialbd.ttf", "/System/Library/Fonts/Supplemental/Arial Bold.ttf")
 
 
 def Fserif(sz, bold=True): return ImageFont.truetype(SERIF_BIT if bold else SERIF_IT, sz)
