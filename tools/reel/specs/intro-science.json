@@ -1,0 +1,370 @@
+{
+  "reviewed": {
+    "argument": "2026-09-11",
+    "orthodoxy": "2026-09-11",
+    "by": "2026-09-11 gate (argument + orthodoxy) as READ-ONLY Explore agents. R1: CLEAN — fine-tuning data-conceded/design-contested, 'a pointer, not a proof' close, no ID/old-earth as settled doctrine; 1 WEAK — 'many scientists see a signpost' overstated → 'some'; polishes: kalam 'whatever begins to exist', kicker de-ID'd. Confirmation re-gate: CONFIRMED-CLEAN. Feature-tour ported verbatim from certified intro-jesus.json. NOT pastoral sign-off."
+  },
+  "aspect": "wide",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Orientation video for the Science & Faith tab (ev-s5). Arguments from the certified ev-s5 essays (bigbang, originlife, mathematics, cambrian, cosmic, privileged, laws, miracles). GUARDRAILS: design is an INFERENCE, contested — never 'science proves God'; fine-tuning DATA conceded/DESIGN inferred; do NOT present intelligent-design or old-earth cosmology as settled Christian doctrine (denominationally divisive); kalam-adjacent = 'whatever begins', not 'everything has a cause'. 'makes the case', never 'proves'.",
+  "voiceover": "Does modern science point away from God, or toward him? This section looks at what we've actually discovered — and where some scientists see a signpost. The evidence that the universe had a beginning — that space, time, and matter came into being — invites the question of a cause. The laws and constants are finely set for life. The data is granted even by sceptics; what it means is genuinely debated. The origin of life, the sudden burst of the Cambrian, the uncanny power of mathematics to describe reality — each raises the question of design. And if a mind stands behind the laws of nature, then a miracle — that mind acting within them — is not ruled out in advance. Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. Design is an inference, not a laboratory result, and honest people still disagree. What this section makes the case for is that the universe looks more like the work of a mind than an accident — a pointer worth following. Start anywhere, and follow it where it leads.",
+  "scenes": [
+    {
+      "dur": 9.8,
+      "big": [
+        {
+          "t": "Science,",
+          "c": "cream",
+          "s": 88
+        },
+        {
+          "t": "or faith?",
+          "c": "gold",
+          "s": 92
+        }
+      ],
+      "sub": [
+        {
+          "t": "Does what we've discovered point",
+          "c": "cream",
+          "f": "serif",
+          "s": 42
+        },
+        {
+          "t": "toward a mind — or away?",
+          "c": "dim",
+          "f": "serif",
+          "s": 42
+        }
+      ],
+      "vo": "Does modern science point away from God, or toward him? This section looks at what we've actually discovered — and where some scientists see a signpost."
+    },
+    {
+      "dur": 7.8,
+      "kicker": "THE UNIVERSE HAD A BEGINNING",
+      "lines": [
+        {
+          "t": "The Big Bang: space, time",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "and matter began.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Whatever begins to exist",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "invites a cause.",
+          "c": "cream",
+          "s": 48
+        }
+      ],
+      "vo": "The evidence that the universe had a beginning — that space, time, and matter came into being — invites the question of a cause."
+    },
+    {
+      "dur": 8.8,
+      "kicker": "TUNED FOR LIFE",
+      "lines": [
+        {
+          "t": "The laws and constants",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "are finely set for life.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "The data is granted;",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "the meaning is debated.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "vo": "The laws and constants are finely set for life. The data is granted even by sceptics; what it means is genuinely debated."
+    },
+    {
+      "dur": 8.8,
+      "kicker": "ORIGINS AND COMPLEXITY",
+      "lines": [
+        {
+          "t": "The origin of life.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "The Cambrian burst.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "The strange reach",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "of mathematics.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ],
+      "vo": "The origin of life, the sudden burst of the Cambrian, the uncanny power of mathematics to describe reality — each raises the question of design."
+    },
+    {
+      "dur": 7.5,
+      "kicker": "AND CAN MIRACLES HAPPEN?",
+      "lines": [
+        {
+          "t": "If a mind made",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "the laws of nature,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "acting within them",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "is not ruled out.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ],
+      "vo": "And if a mind stands behind the laws of nature, then a miracle — that mind acting within them — is not ruled out in advance."
+    },
+    {
+      "dur": 12.5,
+      "kicker": "EVERY ARGUMENT, IN FULL",
+      "big": [
+        {
+          "t": "Fully-cited",
+          "c": "cream",
+          "s": 78
+        },
+        {
+          "t": "deep-dive essays.",
+          "c": "cream",
+          "s": 78
+        }
+      ],
+      "sub": [
+        {
+          "t": "Every claim sourced. The strongest",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "objections stated fairly, then answered.",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Checked Before Published.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ],
+      "vo": "Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published."
+    },
+    {
+      "dur": 10.1,
+      "kicker": "AN AI TUTOR ON EVERY ESSAY",
+      "lines": [
+        {
+          "t": "Ask it anything.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 60
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "Or highlight one sentence",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "and ask about that exact line.",
+          "c": "cream",
+          "s": 48
+        }
+      ],
+      "vo": "And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line."
+    },
+    {
+      "dur": 9.4,
+      "kicker": "LEARN IT — DON'T JUST READ IT",
+      "lines": [
+        {
+          "t": "Explain the argument back",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "in your own words — an AI grades it.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Daily practice brings it back",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "just before you forget.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "vo": "Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them."
+    },
+    {
+      "dur": 7.1,
+      "kicker": "AND WHEN YOU'RE READY",
+      "lines": [
+        {
+          "t": "Pocket cards to share.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "A Debate Arena to practise",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "against an AI sceptic —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "before the real conversation.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "vo": "There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation."
+    },
+    {
+      "dur": 5.9,
+      "kicker": "READ IT YOUR WAY",
+      "lines": [
+        {
+          "t": "Plain-English, or the full deep dive.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "With read-aloud audio.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ],
+      "vo": "Every essay comes in a plain-English version and a full deep dive, with read-aloud audio."
+    },
+    {
+      "dur": 15.1,
+      "big": [
+        {
+          "t": "A pointer,",
+          "c": "cream",
+          "s": 82
+        },
+        {
+          "t": "not a proof.",
+          "c": "gold",
+          "s": 84
+        }
+      ],
+      "sub": [
+        {
+          "t": "The case that the universe looks more like",
+          "c": "cream",
+          "f": "serif",
+          "s": 38
+        },
+        {
+          "t": "the work of a mind than an accident.",
+          "c": "dim",
+          "f": "serif",
+          "s": 38
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Start anywhere  ·  apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ],
+      "vo": "Design is an inference, not a laboratory result, and honest people still disagree. What this section makes the case for is that the universe looks more like the work of a mind than an accident — a pointer worth following. Start anywhere, and follow it where it leads."
+    }
+  ]
+}

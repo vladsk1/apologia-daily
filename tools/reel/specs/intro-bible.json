@@ -1,0 +1,355 @@
+{
+  "reviewed": {
+    "argument": "2026-09-11",
+    "orthodoxy": "2026-09-11",
+    "by": "2026-09-11 gate (argument + orthodoxy) as READ-ONLY Explore agents. R1: CLEAN — manuscripts-prove-PRESERVATION-not-truth guardrail explicit in scene 2 + close; 1 WEAK — scene 4 stated contested early-dating/eyewitness as bald fact → 'the tab makes the case that…'. Confirmation re-gate: CONFIRMED-CLEAN. Feature-tour ported verbatim from certified intro-jesus.json. 'makes the case', never 'proves'. NOT pastoral sign-off."
+  },
+  "aspect": "wide",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Orientation video for the Biblical Reliability tab (ev-s4). Arguments from the certified ev-s4 essays (manuscript, archaeology, canon, prophecy, consistency, eyewitnesses, deadseascrolls, earlydate, jewishness, coincidences, names). GUARDRAIL: manuscripts prove ACCURATE PRESERVATION, not that the content is true — stated explicitly. 'makes the case', never 'proves'.",
+  "voiceover": "Can you trust the Bible — or has it been changed beyond recognition over two thousand years? This section takes the reliability question apart, piece by piece. Thousands of manuscripts let scholars reconstruct what was originally written, and see exactly where copies differ. That establishes faithful transmission — a separate question from whether the content is true. Archaeology, the Dead Sea Scrolls, and small undesigned coincidences keep showing the text meeting the real world it claims to describe. The tab makes the case that the Gospels are early and rooted in eyewitness memory, and that they carry the personal names that actually fit first-century Palestine. The alleged contradictions and the question of how the canon was chosen are raised plainly, then answered. Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. None of this by itself proves the Bible true — that is a further question. What it makes the case for is that the text you hold is essentially what was written: a reliable record to weigh, not a corrupted one. Start anywhere, and follow it where it leads.",
+  "scenes": [
+    {
+      "dur": 10.4,
+      "big": [
+        {
+          "t": "Can you trust",
+          "c": "cream",
+          "s": 82
+        },
+        {
+          "t": "the Bible?",
+          "c": "gold",
+          "s": 90
+        }
+      ],
+      "sub": [
+        {
+          "t": "Has it been changed",
+          "c": "cream",
+          "f": "serif",
+          "s": 44
+        },
+        {
+          "t": "in two thousand years?",
+          "c": "dim",
+          "f": "serif",
+          "s": 42
+        }
+      ],
+      "vo": "Can you trust the Bible — or has it been changed beyond recognition over two thousand years? This section takes the reliability question apart, piece by piece."
+    },
+    {
+      "dur": 11.8,
+      "kicker": "HAS THE TEXT SURVIVED?",
+      "lines": [
+        {
+          "t": "Thousands of manuscripts",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "reconstruct what was written —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "that is faithful transmission,",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "a separate question from truth.",
+          "c": "cream",
+          "s": 44
+        }
+      ],
+      "vo": "Thousands of manuscripts let scholars reconstruct what was originally written, and see exactly where copies differ. That establishes faithful transmission — a separate question from whether the content is true."
+    },
+    {
+      "dur": 8.3,
+      "kicker": "DOES IT MEET THE REAL WORLD?",
+      "lines": [
+        {
+          "t": "Archaeology.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "The Dead Sea Scrolls.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Undesigned coincidences.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ],
+      "vo": "Archaeology, the Dead Sea Scrolls, and small undesigned coincidences keep showing the text meeting the real world it claims to describe."
+    },
+    {
+      "dur": 8.9,
+      "kicker": "WHO WROTE IT, AND WHEN?",
+      "lines": [
+        {
+          "t": "Early dating.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "Eyewitness memory.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Names that fit",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "first-century Palestine.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ],
+      "vo": "The tab makes the case that the Gospels are early and rooted in eyewitness memory, and that they carry the personal names that actually fit first-century Palestine."
+    },
+    {
+      "dur": 6.3,
+      "kicker": "STATED FAIRLY",
+      "lines": [
+        {
+          "t": "The alleged contradictions,",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "the canon question —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "raised plainly, then answered.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ],
+      "vo": "The alleged contradictions and the question of how the canon was chosen are raised plainly, then answered."
+    },
+    {
+      "dur": 12.5,
+      "kicker": "EVERY ARGUMENT, IN FULL",
+      "big": [
+        {
+          "t": "Fully-cited",
+          "c": "cream",
+          "s": 78
+        },
+        {
+          "t": "deep-dive essays.",
+          "c": "cream",
+          "s": 78
+        }
+      ],
+      "sub": [
+        {
+          "t": "Every claim sourced. The strongest",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "objections stated fairly, then answered.",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Checked Before Published.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ],
+      "vo": "Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published."
+    },
+    {
+      "dur": 10.1,
+      "kicker": "AN AI TUTOR ON EVERY ESSAY",
+      "lines": [
+        {
+          "t": "Ask it anything.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 60
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "Or highlight one sentence",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "and ask about that exact line.",
+          "c": "cream",
+          "s": 48
+        }
+      ],
+      "vo": "And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line."
+    },
+    {
+      "dur": 9.4,
+      "kicker": "LEARN IT — DON'T JUST READ IT",
+      "lines": [
+        {
+          "t": "Explain the argument back",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "in your own words — an AI grades it.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Daily practice brings it back",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "just before you forget.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "vo": "Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them."
+    },
+    {
+      "dur": 7.1,
+      "kicker": "AND WHEN YOU'RE READY",
+      "lines": [
+        {
+          "t": "Pocket cards to share.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "A Debate Arena to practise",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "against an AI sceptic —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "before the real conversation.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "vo": "There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation."
+    },
+    {
+      "dur": 5.9,
+      "kicker": "READ IT YOUR WAY",
+      "lines": [
+        {
+          "t": "Plain-English, or the full deep dive.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "With read-aloud audio.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ],
+      "vo": "Every essay comes in a plain-English version and a full deep dive, with read-aloud audio."
+    },
+    {
+      "dur": 14.9,
+      "big": [
+        {
+          "t": "A reliable",
+          "c": "cream",
+          "s": 84
+        },
+        {
+          "t": "record.",
+          "c": "gold",
+          "s": 90
+        }
+      ],
+      "sub": [
+        {
+          "t": "The case that what you read is",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "essentially what was written — to weigh, not a corruption.",
+          "c": "dim",
+          "f": "serif",
+          "s": 36
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Start anywhere  ·  apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ],
+      "vo": "None of this by itself proves the Bible true — that is a further question. What it makes the case for is that the text you hold is essentially what was written: a reliable record to weigh, not a corrupted one. Start anywhere, and follow it where it leads."
+    }
+  ]
+}

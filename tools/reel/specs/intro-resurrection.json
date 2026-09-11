@@ -1,0 +1,371 @@
+{
+  "reviewed": {
+    "argument": "2026-09-11",
+    "orthodoxy": "2026-09-11",
+    "neutrality": "2026-09-11",
+    "by": "2026-09-11 resurrection-tier dual-consensus gate as READ-ONLY Explore agents. R1: argument STAMPABLE / orthodoxy CLEAN (early creed leads); neutrality 1 BREAK — scene 5 mislabelled James an 'outright enemy' (he was Jesus's sceptical brother, NOT a persecutor like Paul) + martyrdom overreach → distinguished persecutor(Paul)/sceptic(James), pinned disciples to willingness/sincerity; empty tomb reframed as the site's claim. Confirmation re-gate (orthodoxy+neutrality): CONFIRMED-CLEAN. Feature-tour ported verbatim from certified intro-jesus.json. 'best explanation', never 'proves'. NOT pastoral sign-off."
+  },
+  "aspect": "wide",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Orientation video for the Resurrection tab (ev-s2). Arguments from the certified ev-s2 essays (minimal, emptytomb, paul, appearances, disciplesbelief, sceptics, burial, postresurrection). Guardrail: LEAD with the 1 Cor 15:3-7 early creed 'within a few years'; never 'merely decades later'; 'best explanation', never 'proves'.",
+  "voiceover": "Did Jesus of Nazareth rise from the dead? Everything in Christianity stands or falls on the answer, so this section examines it as carefully as any claim in history. It begins with a handful of facts even sceptical scholars grant, and asks what best explains them — the minimal-facts approach. The core is not late. Paul hands on a creed the church was reciting within a few years of the crucifixion — not a legend that grew over lifetimes. The evidence points to an empty tomb; the appearances were too many and too varied to explain away as hallucinations. Frightened disciples became willing to suffer and die rather than deny what they said they saw. And men with every reason not to believe — Paul, who had persecuted the church, and James, Jesus's own sceptical brother — came to faith. Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. History's own tools cannot compel faith, but they can weigh explanations — and the case here is that the best one is that he rose. Weigh it yourself. Start anywhere, and follow it where it leads.",
+  "scenes": [
+    {
+      "dur": 10.2,
+      "big": [
+        {
+          "t": "Did Jesus",
+          "c": "cream",
+          "s": 90
+        },
+        {
+          "t": "rise?",
+          "c": "gold",
+          "s": 104
+        }
+      ],
+      "sub": [
+        {
+          "t": "The one claim Christianity",
+          "c": "cream",
+          "f": "serif",
+          "s": 44
+        },
+        {
+          "t": "stands or falls on.",
+          "c": "dim",
+          "f": "serif",
+          "s": 42
+        }
+      ],
+      "vo": "Did Jesus of Nazareth rise from the dead? Everything in Christianity stands or falls on the answer, so this section examines it as carefully as any claim in history."
+    },
+    {
+      "dur": 7.9,
+      "kicker": "START WITH WHAT SCEPTICS GRANT",
+      "lines": [
+        {
+          "t": "A handful of facts",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "even sceptical scholars accept —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "then ask what",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "best explains them.",
+          "c": "cream",
+          "s": 48
+        }
+      ],
+      "vo": "It begins with a handful of facts even sceptical scholars grant, and asks what best explains them — the minimal-facts approach."
+    },
+    {
+      "dur": 9.3,
+      "kicker": "THE EVIDENCE IS EARLY",
+      "lines": [
+        {
+          "t": "A creed the church recited",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "within a few years",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "of the crucifixion —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "not a later legend.",
+          "c": "dim",
+          "f": "serif",
+          "s": 42
+        }
+      ],
+      "vo": "The core is not late. Paul hands on a creed the church was reciting within a few years of the crucifixion — not a legend that grew over lifetimes."
+    },
+    {
+      "dur": 7.3,
+      "kicker": "THE TOMB AND THE WITNESSES",
+      "lines": [
+        {
+          "t": "An empty tomb.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Appearances too many and",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "too varied to be hallucinations.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "vo": "The evidence points to an empty tomb; the appearances were too many and too varied to explain away as hallucinations."
+    },
+    {
+      "dur": 13.5,
+      "kicker": "AND THE PEOPLE WHO CHANGED",
+      "lines": [
+        {
+          "t": "Frightened disciples — willing",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "to suffer and die for what they saw.",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "A persecutor: Paul.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "A sceptic: James, his brother.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "Both came to faith.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "vo": "Frightened disciples became willing to suffer and die rather than deny what they said they saw. And men with every reason not to believe — Paul, who had persecuted the church, and James, Jesus's own sceptical brother — came to faith."
+    },
+    {
+      "dur": 12.5,
+      "kicker": "EVERY ARGUMENT, IN FULL",
+      "big": [
+        {
+          "t": "Fully-cited",
+          "c": "cream",
+          "s": 78
+        },
+        {
+          "t": "deep-dive essays.",
+          "c": "cream",
+          "s": 78
+        }
+      ],
+      "sub": [
+        {
+          "t": "Every claim sourced. The strongest",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "objections stated fairly, then answered.",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Checked Before Published.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ],
+      "vo": "Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published."
+    },
+    {
+      "dur": 10.1,
+      "kicker": "AN AI TUTOR ON EVERY ESSAY",
+      "lines": [
+        {
+          "t": "Ask it anything.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 60
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "Or highlight one sentence",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "and ask about that exact line.",
+          "c": "cream",
+          "s": 48
+        }
+      ],
+      "vo": "And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line."
+    },
+    {
+      "dur": 9.4,
+      "kicker": "LEARN IT — DON'T JUST READ IT",
+      "lines": [
+        {
+          "t": "Explain the argument back",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "in your own words — an AI grades it.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Daily practice brings it back",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "just before you forget.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "vo": "Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them."
+    },
+    {
+      "dur": 7.1,
+      "kicker": "AND WHEN YOU'RE READY",
+      "lines": [
+        {
+          "t": "Pocket cards to share.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "A Debate Arena to practise",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "against an AI sceptic —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "before the real conversation.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "vo": "There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation."
+    },
+    {
+      "dur": 5.9,
+      "kicker": "READ IT YOUR WAY",
+      "lines": [
+        {
+          "t": "Plain-English, or the full deep dive.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "With read-aloud audio.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ],
+      "vo": "Every essay comes in a plain-English version and a full deep dive, with read-aloud audio."
+    },
+    {
+      "dur": 12.6,
+      "big": [
+        {
+          "t": "The best",
+          "c": "cream",
+          "s": 82
+        },
+        {
+          "t": "explanation.",
+          "c": "gold",
+          "s": 86
+        }
+      ],
+      "sub": [
+        {
+          "t": "The evidence makes the case that he rose.",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "Weigh it yourself.",
+          "c": "dim",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Start anywhere  ·  apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ],
+      "vo": "History's own tools cannot compel faith, but they can weigh explanations — and the case here is that the best one is that he rose. Weigh it yourself. Start anywhere, and follow it where it leads."
+    }
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "reviewed": {
+    "argument": "2026-09-11",
+    "orthodoxy": "2026-09-11",
+    "by": "2026-09-11 gate (argument + orthodoxy) as READ-ONLY Explore agents. R1: orthodoxy CLEAN (influence-is-not-truth firewall explicit; Tom Holland = 'the historian'); 1 WEAK — scene 4 on-screen list stated contested causal theses with no hedge → gold '— each with deep Christian roots.'; scene 1 'quietly Christian?' → 'quietly downstream of Christianity?'. Confirmation re-gate: CONFIRMED-CLEAN. Feature-tour ported verbatim from certified intro-jesus.json. 'makes the case', never 'proves'. NOT pastoral sign-off."
+  },
+  "aspect": "wide",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Orientation video for the Christian Revolution tab (ev-s8): Holland's Dominion thesis (riseofchurch, persecution, equality, compassion, science-history, abolition, progress). GUARDRAIL: influence/goodness is NOT truth — a faith can shape the world and still be false; stated plainly. Tom Holland = 'the historian' (NOT 'secular historian' [stale] and NOT 'apologist'). 'makes the case', never 'proves'.",
+  "voiceover": "How much of the modern world is quietly downstream of Christianity? This section traces the fingerprints — including the ones sceptics rarely notice. A tiny, illegal sect became the faith of the Roman Empire — not by the sword, but while being persecuted for three centuries. The convictions that every human being has equal worth, and that the weak deserve protection, were not obvious to the ancient world. The historian Tom Holland traces them to a Christian revolution. The rise of modern science, the movement that abolished the slave trade, even the very idea that history can progress — each has deep Christian roots. None of this proves Christianity true — a faith can be enormously influential and still be false, and we say so plainly. Influence is not truth. Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. What this section makes the case for is narrower, and harder to shrug off: that the moral world a sceptic takes for granted is more Christian than they know — reason enough to look again. Start anywhere, and follow it where it leads.",
+  "scenes": [
+    {
+      "dur": 9.8,
+      "big": [
+        {
+          "t": "The water",
+          "c": "cream",
+          "s": 86
+        },
+        {
+          "t": "we swim in.",
+          "c": "gold",
+          "s": 86
+        }
+      ],
+      "sub": [
+        {
+          "t": "How much of the modern world",
+          "c": "cream",
+          "f": "serif",
+          "s": 42
+        },
+        {
+          "t": "is quietly downstream of Christianity?",
+          "c": "dim",
+          "f": "serif",
+          "s": 42
+        }
+      ],
+      "vo": "How much of the modern world is quietly downstream of Christianity? This section traces the fingerprints — including the ones sceptics rarely notice."
+    },
+    {
+      "dur": 7.8,
+      "kicker": "THE UNLIKELY TAKEOVER",
+      "lines": [
+        {
+          "t": "A tiny, illegal sect",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "became the empire's faith —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "not by the sword,",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "but under persecution.",
+          "c": "cream",
+          "s": 48
+        }
+      ],
+      "vo": "A tiny, illegal sect became the faith of the Roman Empire — not by the sword, but while being persecuted for three centuries."
+    },
+    {
+      "dur": 11.3,
+      "kicker": "IDEAS WE TAKE FOR GRANTED",
+      "lines": [
+        {
+          "t": "That every human is equal.",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "That the weak deserve care.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "These were not obvious",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "to the ancient world.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "vo": "The convictions that every human being has equal worth, and that the weak deserve protection, were not obvious to the ancient world. The historian Tom Holland traces them to a Christian revolution."
+    },
+    {
+      "dur": 8.8,
+      "kicker": "SCIENCE, SLAVERY, PROGRESS",
+      "lines": [
+        {
+          "t": "The rise of modern science.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "The abolition of slavery.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "The very idea of progress.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "— each with deep Christian roots.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ],
+      "vo": "The rise of modern science, the movement that abolished the slave trade, even the very idea that history can progress — each has deep Christian roots."
+    },
+    {
+      "dur": 9.9,
+      "kicker": "BUT INFLUENCE ISN'T TRUTH",
+      "lines": [
+        {
+          "t": "That Christianity shaped the world",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "does not make it true.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "We say so plainly.",
+          "c": "cream",
+          "s": 48
+        }
+      ],
+      "vo": "None of this proves Christianity true — a faith can be enormously influential and still be false, and we say so plainly. Influence is not truth."
+    },
+    {
+      "dur": 12.5,
+      "kicker": "EVERY ARGUMENT, IN FULL",
+      "big": [
+        {
+          "t": "Fully-cited",
+          "c": "cream",
+          "s": 78
+        },
+        {
+          "t": "deep-dive essays.",
+          "c": "cream",
+          "s": 78
+        }
+      ],
+      "sub": [
+        {
+          "t": "Every claim sourced. The strongest",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "objections stated fairly, then answered.",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Checked Before Published.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ],
+      "vo": "Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published."
+    },
+    {
+      "dur": 10.1,
+      "kicker": "AN AI TUTOR ON EVERY ESSAY",
+      "lines": [
+        {
+          "t": "Ask it anything.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 60
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "Or highlight one sentence",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "and ask about that exact line.",
+          "c": "cream",
+          "s": 48
+        }
+      ],
+      "vo": "And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line."
+    },
+    {
+      "dur": 9.4,
+      "kicker": "LEARN IT — DON'T JUST READ IT",
+      "lines": [
+        {
+          "t": "Explain the argument back",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "in your own words — an AI grades it.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Daily practice brings it back",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "just before you forget.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "vo": "Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them."
+    },
+    {
+      "dur": 7.1,
+      "kicker": "AND WHEN YOU'RE READY",
+      "lines": [
+        {
+          "t": "Pocket cards to share.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "A Debate Arena to practise",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "against an AI sceptic —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "before the real conversation.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "vo": "There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation."
+    },
+    {
+      "dur": 5.9,
+      "kicker": "READ IT YOUR WAY",
+      "lines": [
+        {
+          "t": "Plain-English, or the full deep dive.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "With read-aloud audio.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ],
+      "vo": "Every essay comes in a plain-English version and a full deep dive, with read-aloud audio."
+    },
+    {
+      "dur": 12.5,
+      "big": [
+        {
+          "t": "Look",
+          "c": "cream",
+          "s": 88
+        },
+        {
+          "t": "again.",
+          "c": "gold",
+          "s": 92
+        }
+      ],
+      "sub": [
+        {
+          "t": "The case that the modern moral world is",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "more Christian than it knows — worth a second look.",
+          "c": "dim",
+          "f": "serif",
+          "s": 36
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Start anywhere  ·  apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ],
+      "vo": "What this section makes the case for is narrower, and harder to shrug off: that the moral world a sceptic takes for granted is more Christian than they know — reason enough to look again. Start anywhere, and follow it where it leads."
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "reviewed": {
+    "argument": "2026-09-11",
+    "orthodoxy": "2026-09-11",
+    "neutrality": "2026-09-11",
+    "by": "2026-09-11 deity-tier dual-consensus gate as READ-ONLY Explore agents (argument+orthodoxy; independent neutrality). R1: argument STAMPABLE / orthodoxy CLEAN (kalam 'begins to exist', fine-tuning data-conceded/design-contested, moral duties need a ground, evil faced, deism gap honoured); neutrality 1 WEAK — 'atheist physicists grant the fine-tuning' overstated (Stenger trap) → named Penrose. Confirmation re-gate (orthodoxy+neutrality): CONFIRMED-CLEAN. Feature-tour scenes ported verbatim from certified intro-jesus.json. 'makes the case', never 'proves'. NOT pastoral sign-off (site-wide pending)."
+  },
+  "aspect": "wide",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Orientation video for the God's Existence tab (ev-s1). Arguments drawn from the certified ev-s1 essays (kalam, finetuning, leibniz, moral, consciousness, reason, desire, beauty, ontological, religious, thomistic, evil). Honest framing: the arguments reach a mind behind the universe, NOT yet the Triune God (deism gap); kalam = 'whatever BEGINS to exist has a cause'; fine-tuning data conceded/design contested; evil is the objection, faced. 'makes the case', never 'proves'.",
+  "voiceover": "Is there a God? This section takes the great arguments for God's existence one at a time, and follows each honestly, as far as it actually reaches. Whatever begins to exist has a cause. The universe began to exist — so what caused it? That is the kalam argument. Its constants sit in the narrow band that permits life. Even leading atheist physicists — Penrose among them — grant the fine-tuning; what it means is the open question. Why is there something rather than nothing? Where do binding moral obligations come from? Add consciousness, reason, our deepest desires, and beauty — each a signpost. And the hardest objection — the problem of evil — is met head-on, not sidestepped. Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. None of these is a knock-down proof, and we don't pretend otherwise. Together they make the case that a mind stands behind the universe — not yet the God of the gospel, but the door he walks through. Start anywhere, and follow it where it leads.",
+  "scenes": [
+    {
+      "dur": 9.6,
+      "big": [
+        {
+          "t": "Is there",
+          "c": "cream",
+          "s": 92
+        },
+        {
+          "t": "a God?",
+          "c": "gold",
+          "s": 96
+        }
+      ],
+      "sub": [
+        {
+          "t": "The great arguments —",
+          "c": "cream",
+          "f": "serif",
+          "s": 44
+        },
+        {
+          "t": "each followed as far as it really reaches.",
+          "c": "dim",
+          "f": "serif",
+          "s": 40
+        }
+      ],
+      "vo": "Is there a God? This section takes the great arguments for God's existence one at a time, and follows each honestly, as far as it actually reaches."
+    },
+    {
+      "dur": 9.0,
+      "kicker": "DID THE UNIVERSE BEGIN?",
+      "lines": [
+        {
+          "t": "Whatever begins to exist",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "has a cause.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "The universe began —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "so what caused it?",
+          "c": "cream",
+          "s": 48
+        }
+      ],
+      "vo": "Whatever begins to exist has a cause. The universe began to exist — so what caused it? That is the kalam argument."
+    },
+    {
+      "dur": 10.6,
+      "kicker": "WHY IS IT FINE-TUNED?",
+      "lines": [
+        {
+          "t": "The constants sit in a",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "razor-thin band for life.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Even atheist physicists like Penrose grant it —",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "what it means is the question.",
+          "c": "cream",
+          "s": 44
+        }
+      ],
+      "vo": "Its constants sit in the narrow band that permits life. Even leading atheist physicists — Penrose among them — grant the fine-tuning; what it means is the open question."
+    },
+    {
+      "dur": 11.7,
+      "kicker": "AND WHY ANYTHING AT ALL?",
+      "lines": [
+        {
+          "t": "Why is there something",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "rather than nothing?",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Where do real moral",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "obligations come from?",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "vo": "Why is there something rather than nothing? Where do binding moral obligations come from? Add consciousness, reason, our deepest desires, and beauty — each a signpost."
+    },
+    {
+      "dur": 5.8,
+      "kicker": "FACING THE HARDEST OBJECTION",
+      "lines": [
+        {
+          "t": "And the problem of evil —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "the strongest case against God —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "met head-on, not sidestepped.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "vo": "And the hardest objection — the problem of evil — is met head-on, not sidestepped."
+    },
+    {
+      "dur": 12.5,
+      "kicker": "EVERY ARGUMENT, IN FULL",
+      "big": [
+        {
+          "t": "Fully-cited",
+          "c": "cream",
+          "s": 78
+        },
+        {
+          "t": "deep-dive essays.",
+          "c": "cream",
+          "s": 78
+        }
+      ],
+      "sub": [
+        {
+          "t": "Every claim sourced. The strongest",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "objections stated fairly, then answered.",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Checked Before Published.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ],
+      "vo": "Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published."
+    },
+    {
+      "dur": 10.1,
+      "kicker": "AN AI TUTOR ON EVERY ESSAY",
+      "lines": [
+        {
+          "t": "Ask it anything.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 60
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "Or highlight one sentence",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "and ask about that exact line.",
+          "c": "cream",
+          "s": 48
+        }
+      ],
+      "vo": "And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line."
+    },
+    {
+      "dur": 9.4,
+      "kicker": "LEARN IT — DON'T JUST READ IT",
+      "lines": [
+        {
+          "t": "Explain the argument back",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "in your own words — an AI grades it.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Daily practice brings it back",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "just before you forget.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "vo": "Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them."
+    },
+    {
+      "dur": 7.1,
+      "kicker": "AND WHEN YOU'RE READY",
+      "lines": [
+        {
+          "t": "Pocket cards to share.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "A Debate Arena to practise",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "against an AI sceptic —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "before the real conversation.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "vo": "There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation."
+    },
+    {
+      "dur": 5.9,
+      "kicker": "READ IT YOUR WAY",
+      "lines": [
+        {
+          "t": "Plain-English, or the full deep dive.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "With read-aloud audio.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ],
+      "vo": "Every essay comes in a plain-English version and a full deep dive, with read-aloud audio."
+    },
+    {
+      "dur": 14.2,
+      "big": [
+        {
+          "t": "Not a proof.",
+          "c": "cream",
+          "s": 80
+        },
+        {
+          "t": "A trail of clues.",
+          "c": "gold",
+          "s": 82
+        }
+      ],
+      "sub": [
+        {
+          "t": "Together they make the case for a mind behind the universe —",
+          "c": "cream",
+          "f": "serif",
+          "s": 38
+        },
+        {
+          "t": "the door the gospel walks through.",
+          "c": "dim",
+          "f": "serif",
+          "s": 38
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Start anywhere  ·  apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ],
+      "vo": "None of these is a knock-down proof, and we don't pretend otherwise. Together they make the case that a mind stands behind the universe — not yet the God of the gospel, but the door he walks through. Start anywhere, and follow it where it leads."
+    }
+  ]
+}
