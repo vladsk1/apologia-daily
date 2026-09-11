@@ -1324,11 +1324,13 @@ in order. Do not deploy content that has skipped a stage.
 > serving the retired claim verbatim through four rounds — found only because one reviewer opened
 > the mirror unprompted. **`tools/check-mirror-parity.mjs` now catches that last one** (non-blocking
 > in CI; `--audit` lists all 29 pairs; accept a deliberate lag in `tools/mirror-parity-ledger.json`
-> with a written reason). ⚠ **The other six `.mk` fragments were never audited and probably carry
-> the same retired claims.** For translated mirrors the owner's standing preference is **delete the
-> affected passage rather than hand-write translated doctrinal prose no native reviewer will gate** —
-> absent beats wrong on an ungated surface (`docs/STATEMENT_OF_FAITH.md` still logs Macedonian and
-> Spanish review as outstanding).
+> with a written reason). ⚠ **UPDATED 2026-09-11 — the owner has SUPERSEDED the old "delete-or-lag"
+> preference for the Evidence Library.** The rule now is: **an Evidence-Library change is mirrored to
+> Macedonian in the same commit** (AI-translated, stamped "pending native-Macedonian gate"), never left
+> lagging — see the 🔴 STANDING RULE in the *Deploy workflow* section. The old "absent beats wrong /
+> delete the passage" posture now survives ONLY at the level of an individual **tripwire-sensitive
+> passage** that cannot be translated with its fence intact. `docs/STATEMENT_OF_FAITH.md` still logs
+> native Macedonian and Spanish doctrinal review as outstanding.
 >
 > ⚠ **And note what the mechanical checks CANNOT see.** Through all four rounds
 > `node --test`, `check-retired-claims` and `check-orthodoxy-tripwires` ran **green every single
@@ -1892,3 +1894,42 @@ essay-level citation check.
   The clarifier's box text is DOCTRINAL content and must pass the argument + orthodoxy gates like
   any content. Registry of every live clarifier: `docs/clarifiers.md` (regenerate with
   `node tools/list-clarifiers.mjs`).
+
+> ### 🔴 STANDING RULE — EVIDENCE-LIBRARY CHANGES MUST BE MIRRORED TO MACEDONIAN IN THE SAME CHANGE. (Owner ruling, 2026-09-11. SUPERSEDES the old "delete-or-lag / absent-beats-wrong" preference for the Evidence Library.)
+>
+> When you change **any** English Evidence Library surface that has a Macedonian mirror, you MUST bring
+> the Macedonian mirror up to match **in the same commit / PR** — never leave it lagging. This covers the
+> deep-dive essays (`library/*.html` → `library/mk/*.html`), the hub fragments (`ev-sN.html` →
+> `ev-sN.mk.html`), and the localized library index (`library/index.html` → `library/mk/index.html`).
+> The Spanish mirrors (`library/es/*`) follow the same rule where they exist.
+>
+> **What "match" means:** the Macedonian mirror carries the same argument content, the same passages, the
+> same footnotes (same count, same numbering), and the same tripwire fencing as the current English. If
+> the English gained a section, footnote, concession, or `orthonote` fence, the mirror gains its
+> translation; if the English retired or reworded a claim, the mirror is reworded the same way (never left
+> serving the old claim — that is the exact failure `check-mirror-parity.mjs` exists to catch).
+>
+> **The gate status is honest, not skipped.** These translations are AI-produced and **cannot be
+> doctrinally certified in Macedonian by this pipeline** — no native-Macedonian reviewer is in the loop.
+> So every synced mirror carries its stamp `by`-note marked **"AI-translated, pending native-Macedonian
+> doctrinal gate"** (the standing caveat every MK file already carries), and native-Macedonian sign-off
+> stays logged as outstanding in `docs/STATEMENT_OF_FAITH.md`. Flagged-and-current beats silently-stale:
+> a reader on the MK side gets the same case the EN reader gets, transparently marked as awaiting native
+> review, rather than a months-old snapshot.
+>
+> **⚠ Tripwire-sensitive passages are translated WITH their fence in the same breath, or not at all.**
+> Some material is unsafe to lift into another language without the guardrail that governs it — e.g. the
+> Nietzsche "Is/Ought Firewall" on `moral` (eugenics-adjacent lines that read as endorsement if the "this
+> is the position the moral argument rejects" fencing is dropped), the Sabine Hossenfelder untestability
+> passage on `finetuning` (must carry her symmetry disclosure or a methodological critic becomes a witness
+> for design), and every deity-of-Christ / Trinity / Islam passage. If you cannot carry the fence intact
+> into Macedonian, leave that one passage untranslated and log it, rather than shipping a half-fenced
+> translation. This is the one residue of the old "absent beats wrong" rule, and it applies at the level
+> of the individual fenced passage, not the whole file.
+>
+> **Enforcement.** `tools/check-mirror-parity.mjs` flags any English source that changed without its
+> mirror changing in the same range (`--audit` lists all pairs; ledger accepts a *deliberate* lag with a
+> written reason in `tools/mirror-parity-ledger.json`). Under this rule the ledger is for genuine
+> exceptions only (e.g. a tripwire passage held back per the paragraph above) — the default is to sync,
+> not to accept a lag. A mirror-sync task belongs in the same worklist as the English change, not a
+> follow-up someone may forget.
