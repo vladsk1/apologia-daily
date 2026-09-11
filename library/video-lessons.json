@@ -36,7 +36,7 @@
   },
   "_intros_comment": "Tab-intro overview videos, one per Evidence Library tab, keyed by fragment name (ev-sN). NEW purpose-made content (not an essay reel), each gated as its reel spec (tools/reel/specs/<spec>.json). library/tab-intro.js places a 'New here? Start with the 1-minute overview' card at the top of the tab ONLY when the entry has a non-empty youtube id — dark until the owner uploads. Pilot: the Jesus tab (ev-s3).",
   "intros": {
-    "ev-s1": { "spec": "intro-god",         "youtube": "ZiGKkImUv1E" },
+    "ev-s1": { "spec": "intro-god",         "youtube": "GlVfJWn4CXY" },
     "ev-s2": { "spec": "intro-resurrection", "youtube": "D3qMWJsXAt0" },
     "ev-s3": { "spec": "intro-jesus",        "youtube": "anP6qWLjnXE" },
     "ev-s4": { "spec": "intro-bible",        "youtube": "vPXhuIaximo" },
