@@ -33,6 +33,51 @@
       sync();
       try{ new MutationObserver(sync).observe(so,{attributes:true,attributeFilter:['style']}); }catch(e){}
     }
+    try{ navAuthSwap(); }catch(e){}
+  }
+
+  /* Global signed-in nav swap (usability fix). Answer pages ship no auth JS and the
+     deep-dive essays only check the pro-gate, so their nav always read "Sign in"
+     even when the reader was logged in. Reflect the login on EVERY page by reading
+     the persisted Supabase session straight from localStorage — no supabase-js load,
+     no network call. DISPLAY ONLY: this never authorizes anything; every protected
+     action still re-validates the token server-side. If a page's own navAuth() has
+     already filled nav-user, we defer to it. */
+  var SB_TOKEN_KEY='sb-noprgxkwniouukmrfozc-auth-token';
+  function readSession(){
+    try{
+      var raw=localStorage.getItem(SB_TOKEN_KEY); if(!raw) return null;
+      var o=JSON.parse(raw); var s=(o&&(o.currentSession||o))||null;
+      if(!s||!s.access_token) return null;
+      if(s.expires_at && (s.expires_at*1000) < Date.now()) return null; /* expired → treat as logged out */
+      var u=s.user||{}, md=u.user_metadata||{};
+      return { name:(md.full_name||md.name||(u.email?String(u.email).split('@')[0]:'')||'Account') };
+    }catch(e){ return null; }
+  }
+  function navAuthSwap(){
+    var signin=document.getElementById('nav-signin'); if(!signin) return; /* page has no auth nav */
+    var user=document.getElementById('nav-user');
+    if(user && (user.textContent||'').trim()) return; /* a page's own navAuth already ran */
+    var sess=readSession(); if(!sess) return; /* logged out → leave "Sign in" as-is */
+    if(user){ user.textContent=sess.name; user.style.display='inline-block'; }
+    signin.style.display='none';
+    var cta=document.getElementById('nav-cta'); if(cta) cta.style.display='none';
+    var d=document.getElementById('nav-dashboard'); if(d) d.style.display='inline-block';
+    var out=document.getElementById('nav-signout');
+    if(out){
+      out.style.display='inline-block';
+      if(!out.getAttribute('onclick') && !out.__adWired){ out.__adWired=1;
+        out.addEventListener('click',function(e){ e.preventDefault(); adSignOut(); }); }
+    }
+  }
+  /* Fallback sign-out for pages that ship no supabase-js (answers/essays): clearing
+     the persisted session token IS the client sign-out here. It intentionally does
+     NOT revoke the refresh token server-side (no client to call) — pages that load
+     supabase-js keep their own onclick="signOut()" which does the full revoke, and
+     this fallback only binds when no such handler exists. */
+  function adSignOut(){
+    try{ for(var i=localStorage.length-1;i>=0;i--){ var k=localStorage.key(i); if(k&&/^sb-.*-auth-token$/.test(k)) localStorage.removeItem(k); } }catch(e){}
+    window.location.href='/index.html';
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();

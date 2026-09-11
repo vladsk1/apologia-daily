@@ -1728,7 +1728,27 @@
         result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }, 100);
     }
-  
+
+    /* Usability: "Where to start" is first-visit onboarding. Once the reader has
+       already chosen a path (ad_start set) OR is signed in (they have an account),
+       collapse the section on load so it doesn't keep re-asking. Display only —
+       localStorage + the persisted Supabase session, no network. */
+    (function(){
+      function hideStartIfReturning(){
+        var sec=document.getElementById('where-to-start'); if(!sec) return;
+        var done=false;
+        try{ if(localStorage.getItem('ad_start')) done=true; }catch(e){}
+        if(!done){ try{
+          var raw=localStorage.getItem('sb-noprgxkwniouukmrfozc-auth-token');
+          if(raw){ var s=JSON.parse(raw); s=(s&&(s.currentSession||s))||null;
+            if(s&&s.access_token&&(!s.expires_at||s.expires_at*1000>Date.now())) done=true; }
+        }catch(e){} }
+        if(done) sec.style.display='none';
+      }
+      if(document.readyState!=='loading') hideStartIfReturning();
+      else document.addEventListener('DOMContentLoaded', hideStartIfReturning);
+    })();
+
   // ── NAV AUTH ──
   /* ---- homepage chat ---- */
   var HC_FREE = 2;
