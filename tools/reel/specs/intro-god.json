@@ -3,7 +3,7 @@
     "argument": "2026-09-11",
     "orthodoxy": "2026-09-11",
     "neutrality": "2026-09-11",
-    "by": "2026-09-11 deity-tier dual-consensus gate as READ-ONLY Explore agents (argument+orthodoxy; independent neutrality). R1: argument STAMPABLE / orthodoxy CLEAN (kalam 'begins to exist', fine-tuning data-conceded/design-contested, moral duties need a ground, evil faced, deism gap honoured); neutrality 1 WEAK — 'atheist physicists grant the fine-tuning' overstated (Stenger trap) → named Penrose. Confirmation re-gate (orthodoxy+neutrality): CONFIRMED-CLEAN. Feature-tour scenes ported verbatim from certified intro-jesus.json. 'makes the case', never 'proves'. NOT pastoral sign-off (site-wide pending)."
+    "by": "2026-09-11 REWORKED opening to INTRODUCE the arguments (kalam framed as a question, fine-tuning held contested, suffering named as the hardest objection). Deity-tier dual-consensus re-gate: CLEAN; both lenses flagged scene 4 on-screen \"The moral law.\" (asserted conclusion) -> \"Our moral sense.\". Confirmation CONFIRMED-CLEAN. Deism gap stays in the unchanged close. Feature tour + close verbatim from prior certified spec. 'makes the case', never 'proves'. NOT pastoral sign-off (site-wide pending)."
   },
   "aspect": "wide",
   "theme": "navy",
@@ -11,10 +11,10 @@
   "crossfade": 0.5,
   "pace": 1,
   "source": "Orientation video for the God's Existence tab (ev-s1). Arguments drawn from the certified ev-s1 essays (kalam, finetuning, leibniz, moral, consciousness, reason, desire, beauty, ontological, religious, thomistic, evil). Honest framing: the arguments reach a mind behind the universe, NOT yet the Triune God (deism gap); kalam = 'whatever BEGINS to exist has a cause'; fine-tuning data conceded/design contested; evil is the objection, faced. 'makes the case', never 'proves'.",
-  "voiceover": "Is there a God? This section takes the great arguments for God's existence one at a time, and follows each honestly, as far as it actually reaches. Whatever begins to exist has a cause. The universe began to exist — so what caused it? That is the kalam argument. Its constants sit in the narrow band that permits life. Even leading atheist physicists — Penrose among them — grant the fine-tuning; what it means is the open question. Why is there something rather than nothing? Where do binding moral obligations come from? Add consciousness, reason, our deepest desires, and beauty — each a signpost. And the hardest objection — the problem of evil — is met head-on, not sidestepped. Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. None of these is a knock-down proof, and we don't pretend otherwise. Together they make the case that a mind stands behind the universe — not yet the God of the gospel, but the door he walks through. Start anywhere, and follow it where it leads.",
+  "voiceover": "Is there a God? This section lays out the great arguments for God's existence — here is what each one asks. It opens with the cosmic questions — does a universe that began, and that did not have to exist, need a cause? Then the fine-tuning of the universe for life, and the debate over what best explains it. You will find the arguments from consciousness and reason, from our moral sense, from beauty, and from our deepest desires. And the hardest objection of all — the problem of suffering — faced head-on, not dodged. Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. None of these is a knock-down proof, and we don't pretend otherwise. Together they make the case that a mind stands behind the universe — not yet the God of the gospel, but the door he walks through. Start anywhere, and follow it where it leads.",
   "scenes": [
     {
-      "dur": 9.6,
+      "dur": 7.9,
       "big": [
         {
           "t": "Is there",
@@ -35,136 +35,94 @@
           "s": 44
         },
         {
-          "t": "each followed as far as it really reaches.",
+          "t": "and what each one asks.",
           "c": "dim",
           "f": "serif",
           "s": 40
         }
       ],
-      "vo": "Is there a God? This section takes the great arguments for God's existence one at a time, and follows each honestly, as far as it actually reaches."
+      "vo": "Is there a God? This section lays out the great arguments for God's existence — here is what each one asks."
     },
     {
-      "dur": 9.0,
-      "kicker": "DID THE UNIVERSE BEGIN?",
+      "dur": 7.1,
+      "kicker": "DOES THE UNIVERSE NEED A CAUSE?",
       "lines": [
         {
-          "t": "Whatever begins to exist",
+          "t": "Why anything",
           "c": "cream",
-          "s": 50
-        },
-        {
-          "t": "has a cause.",
-          "c": "gold",
-          "f": "serifb",
-          "s": 58
-        },
-        {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "The universe began —",
-          "c": "cream",
-          "s": 48
-        },
-        {
-          "t": "so what caused it?",
-          "c": "cream",
-          "s": 48
-        }
-      ],
-      "vo": "Whatever begins to exist has a cause. The universe began to exist — so what caused it? That is the kalam argument."
-    },
-    {
-      "dur": 10.6,
-      "kicker": "WHY IS IT FINE-TUNED?",
-      "lines": [
-        {
-          "t": "The constants sit in a",
-          "c": "cream",
-          "s": 50
-        },
-        {
-          "t": "razor-thin band for life.",
-          "c": "gold",
-          "f": "serifb",
-          "s": 50
-        },
-        {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "Even atheist physicists like Penrose grant it —",
-          "c": "cream",
-          "s": 44
-        },
-        {
-          "t": "what it means is the question.",
-          "c": "cream",
-          "s": 44
-        }
-      ],
-      "vo": "Its constants sit in the narrow band that permits life. Even leading atheist physicists — Penrose among them — grant the fine-tuning; what it means is the open question."
-    },
-    {
-      "dur": 11.7,
-      "kicker": "AND WHY ANYTHING AT ALL?",
-      "lines": [
-        {
-          "t": "Why is there something",
-          "c": "cream",
-          "s": 50
-        },
-        {
-          "t": "rather than nothing?",
-          "c": "gold",
-          "f": "serifb",
           "s": 52
         },
         {
+          "t": "exists at all.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        }
+      ],
+      "vo": "It opens with the cosmic questions — does a universe that began, and that did not have to exist, need a cause?"
+    },
+    {
+      "dur": 5.8,
+      "kicker": "IS IT FINE-TUNED FOR LIFE?",
+      "lines": [
+        {
+          "t": "The design",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "question.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        }
+      ],
+      "vo": "Then the fine-tuning of the universe for life, and the debate over what best explains it."
+    },
+    {
+      "dur": 7.4,
+      "kicker": "MIND, MORALITY, MEANING",
+      "lines": [
+        {
+          "t": "Consciousness and reason.",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "Our moral sense.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
           "t": "",
           "s": 12
         },
         {
-          "t": "Where do real moral",
+          "t": "Beauty, and our deepest desires.",
           "c": "cream",
-          "s": 46
-        },
-        {
-          "t": "obligations come from?",
-          "c": "cream",
-          "s": 46
+          "s": 44
         }
       ],
-      "vo": "Why is there something rather than nothing? Where do binding moral obligations come from? Add consciousness, reason, our deepest desires, and beauty — each a signpost."
+      "vo": "You will find the arguments from consciousness and reason, from our moral sense, from beauty, and from our deepest desires."
     },
     {
-      "dur": 5.8,
-      "kicker": "FACING THE HARDEST OBJECTION",
+      "dur": 5.9,
+      "kicker": "AND WHAT ABOUT SUFFERING?",
       "lines": [
         {
-          "t": "And the problem of evil —",
+          "t": "The hardest objection —",
           "c": "cream",
           "s": 48
         },
         {
-          "t": "the strongest case against God —",
+          "t": "faced, not dodged.",
           "c": "gold",
           "f": "serifb",
-          "s": 44
-        },
-        {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "met head-on, not sidestepped.",
-          "c": "cream",
-          "s": 46
+          "s": 52
         }
       ],
-      "vo": "And the hardest objection — the problem of evil — is met head-on, not sidestepped."
+      "vo": "And the hardest objection of all — the problem of suffering — faced head-on, not dodged."
     },
     {
       "dur": 12.5,

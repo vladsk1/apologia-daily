@@ -2,7 +2,7 @@
   "reviewed": {
     "argument": "2026-09-11",
     "orthodoxy": "2026-09-11",
-    "by": "2026-09-11 gate (argument + orthodoxy) as READ-ONLY Explore agents. R1: orthodoxy CLEAN (testimony≠proof landed); 2 WEAK — scene 1 overgeneralised the investigator arc onto all nine → 'never expected to believe — and did'; scene 2 wrongly applied 'expecting to bury it' to Luckhoo (his exam followed conversion) → scoped to Strobel/Wallace, Luckhoo a separate accurate line; Pascal 'doubt to faith' softened. Confirmation re-gate: CONFIRMED-CLEAN (authored Luckhoo clause verified accurate + attributed). Scene-6 feature opener adapted ('Every argument across the Evidence Library'); scenes 7-10 ported verbatim from certified intro-jesus.json. NOT pastoral sign-off."
+    "by": "2026-09-11 REWORKED opening to INTRODUCE the nine testimonies (investigators/thinkers/transformed). Re-gate (argument+orthodoxy): CLEAN; testimony-not-proof kept; bios accurate, no fabricated quotes. Fix: scene 1 headline \"They set out\" -> \"Some set out to disprove it\" (not all nine did; matches hedged VO). Confirmation CONFIRMED-CLEAN. Feature tour + close verbatim from prior certified spec. 'makes the case', never 'proves'. NOT pastoral sign-off."
   },
   "aspect": "wide",
   "theme": "navy",
@@ -10,13 +10,13 @@
   "crossfade": 0.5,
   "pace": 1,
   "source": "Orientation video for the Conversion Stories tab (ev-s7): nine testimonies (Strobel, Qureshi, Luckhoo, C.S. Lewis, Augustine, Pascal, Newton, J. Warner Wallace, Rosaria Butterfield). GUARDRAIL: a changed life is evidence of sincerity, NOT a proof of the resurrection — stated plainly. No unverified direct quotations. 'makes the case', never 'proves'. NOTE: scene 6 vo says 'Every argument across the Evidence Library' (adapted from the certified 'Every one of these arguments' — testimonies are not arguments).",
-  "voiceover": "Some of the most formidable witnesses for the faith are people who set out to disprove it. This section tells nine of their stories. A legal journalist and a cold-case homicide detective each ran the evidence for the resurrection expecting to bury it — and were turned by it. And one of the world's most successful trial lawyers weighed it by the standard he used to win his cases, and judged it beyond reasonable doubt. C. S. Lewis came to belief reluctantly, against his own will. Augustine and Pascal each travelled a long road to deep conviction. John Newton, a slave trader, ended up writing Amazing Grace. A devout Muslim and a tenured professor each arrived where they never meant to go. A single changed life proves nothing on its own, and we don't pretend it does. But this many people, this unwilling, is a pattern worth reckoning with. Every argument across the Evidence Library gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. These are not proofs; they are evidence with a face — an invitation to look at what they saw. Start anywhere, and follow it where it leads.",
+  "voiceover": "Some of the most formidable witnesses for the faith set out to disprove it. This section tells nine of their stories. The investigators — a legal journalist, a cold-case detective, and one of the world's most successful trial lawyers. The thinkers — C. S. Lewis, Augustine, and Pascal. And the transformed — a slave trader who wrote Amazing Grace, a devout Muslim, and a tenured professor. None of them is a proof on its own — but together, this many and this unwilling, they are a pattern worth reckoning with. Every argument across the Evidence Library gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. These are not proofs; they are evidence with a face — an invitation to look at what they saw. Start anywhere, and follow it where it leads.",
   "scenes": [
     {
-      "dur": 8.5,
+      "dur": 8.0,
       "big": [
         {
-          "t": "They set out",
+          "t": "Some set out",
           "c": "cream",
           "s": 82
         },
@@ -28,22 +28,22 @@
       ],
       "sub": [
         {
-          "t": "Nine who never expected to believe —",
+          "t": "Nine people who never expected",
           "c": "cream",
           "f": "serif",
-          "s": 38
+          "s": 40
         },
         {
-          "t": "and did.",
+          "t": "to believe.",
           "c": "dim",
           "f": "serif",
-          "s": 40
+          "s": 42
         }
       ],
-      "vo": "Some of the most formidable witnesses for the faith are people who set out to disprove it. This section tells nine of their stories."
+      "vo": "Some of the most formidable witnesses for the faith set out to disprove it. This section tells nine of their stories."
     },
     {
-      "dur": 14.8,
+      "dur": 7.5,
       "kicker": "THE INVESTIGATORS",
       "lines": [
         {
@@ -57,118 +57,72 @@
           "s": 48
         },
         {
-          "t": "A top trial lawyer.",
-          "c": "cream",
-          "s": 48
-        },
-        {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "Each weighed the evidence — and was convinced.",
-          "c": "gold",
-          "f": "serifb",
-          "s": 44
-        }
-      ],
-      "vo": "A legal journalist and a cold-case homicide detective each ran the evidence for the resurrection expecting to bury it — and were turned by it. And one of the world's most successful trial lawyers weighed it by the standard he used to win his cases, and judged it beyond reasonable doubt."
-    },
-    {
-      "dur": 8.9,
-      "kicker": "THE THINKERS",
-      "lines": [
-        {
-          "t": "C. S. Lewis —",
-          "c": "cream",
-          "s": 52
-        },
-        {
-          "t": "a reluctant convert,",
+          "t": "A trial lawyer.",
           "c": "gold",
           "f": "serifb",
           "s": 50
-        },
+        }
+      ],
+      "vo": "The investigators — a legal journalist, a cold-case detective, and one of the world's most successful trial lawyers."
+    },
+    {
+      "dur": 5.5,
+      "kicker": "THE THINKERS",
+      "lines": [
         {
-          "t": "against his own will.",
+          "t": "C. S. Lewis.",
           "c": "cream",
-          "s": 48
-        },
-        {
-          "t": "",
-          "s": 12
+          "s": 54
         },
         {
           "t": "Augustine. Pascal.",
-          "c": "cream",
-          "s": 48
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
         }
       ],
-      "vo": "C. S. Lewis came to belief reluctantly, against his own will. Augustine and Pascal each travelled a long road to deep conviction."
+      "vo": "The thinkers — C. S. Lewis, Augustine, and Pascal."
     },
     {
-      "dur": 9.5,
+      "dur": 6.8,
       "kicker": "THE TRANSFORMED",
       "lines": [
         {
-          "t": "A slave-trader who wrote",
+          "t": "A slave trader.",
           "c": "cream",
-          "s": 46
+          "s": 50
         },
         {
-          "t": "“Amazing Grace.”",
+          "t": "A devout Muslim.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "A professor.",
           "c": "gold",
           "f": "serifb",
           "s": 52
-        },
-        {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "A devout Muslim. A professor",
-          "c": "cream",
-          "s": 44
-        },
-        {
-          "t": "who never expected this.",
-          "c": "cream",
-          "s": 44
         }
       ],
-      "vo": "John Newton, a slave trader, ended up writing Amazing Grace. A devout Muslim and a tenured professor each arrived where they never meant to go."
+      "vo": "And the transformed — a slave trader who wrote Amazing Grace, a devout Muslim, and a tenured professor."
     },
     {
-      "dur": 9.5,
-      "kicker": "WHAT A STORY CAN AND CAN'T DO",
+      "dur": 6.9,
+      "kicker": "EVIDENCE WITH A FACE",
       "lines": [
         {
-          "t": "A changed life is not",
+          "t": "Not a proof on its own —",
           "c": "cream",
           "s": 48
         },
         {
-          "t": "a proof on its own.",
+          "t": "but a pattern.",
           "c": "gold",
           "f": "serifb",
-          "s": 48
-        },
-        {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "But this many, this unwilling,",
-          "c": "cream",
-          "s": 44
-        },
-        {
-          "t": "is a pattern.",
-          "c": "cream",
-          "s": 48
+          "s": 52
         }
       ],
-      "vo": "A single changed life proves nothing on its own, and we don't pretend it does. But this many people, this unwilling, is a pattern worth reckoning with."
+      "vo": "None of them is a proof on its own — but together, this many and this unwilling, they are a pattern worth reckoning with."
     },
     {
       "dur": 13.1,

@@ -2,7 +2,7 @@
   "reviewed": {
     "argument": "2026-09-11",
     "orthodoxy": "2026-09-11",
-    "by": "2026-09-11 gate (argument + orthodoxy) as READ-ONLY Explore agents. R1: CLEAN — fine-tuning data-conceded/design-contested, 'a pointer, not a proof' close, no ID/old-earth as settled doctrine; 1 WEAK — 'many scientists see a signpost' overstated → 'some'; polishes: kalam 'whatever begins to exist', kicker de-ID'd. Confirmation re-gate: CONFIRMED-CLEAN. Feature-tour ported verbatim from certified intro-jesus.json. NOT pastoral sign-off."
+    "by": "2026-09-11 REWORKED opening to INTRODUCE (beginning/cause as a question, fine-tuning meaning kept open, life/information/maths, miracles). Re-gate (argument+orthodoxy): PASS/CLEAN, 0 fixes; no \"science proves God\", no ID/old-earth as settled. No confirmation needed. Feature tour + close verbatim from prior certified spec. 'makes the case', never 'proves'. NOT pastoral sign-off."
   },
   "aspect": "wide",
   "theme": "navy",
@@ -10,10 +10,10 @@
   "crossfade": 0.5,
   "pace": 1,
   "source": "Orientation video for the Science & Faith tab (ev-s5). Arguments from the certified ev-s5 essays (bigbang, originlife, mathematics, cambrian, cosmic, privileged, laws, miracles). GUARDRAILS: design is an INFERENCE, contested — never 'science proves God'; fine-tuning DATA conceded/DESIGN inferred; do NOT present intelligent-design or old-earth cosmology as settled Christian doctrine (denominationally divisive); kalam-adjacent = 'whatever begins', not 'everything has a cause'. 'makes the case', never 'proves'.",
-  "voiceover": "Does modern science point away from God, or toward him? This section looks at what we've actually discovered — and where some scientists see a signpost. The evidence that the universe had a beginning — that space, time, and matter came into being — invites the question of a cause. The laws and constants are finely set for life. The data is granted even by sceptics; what it means is genuinely debated. The origin of life, the sudden burst of the Cambrian, the uncanny power of mathematics to describe reality — each raises the question of design. And if a mind stands behind the laws of nature, then a miracle — that mind acting within them — is not ruled out in advance. Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. Design is an inference, not a laboratory result, and honest people still disagree. What this section makes the case for is that the universe looks more like the work of a mind than an accident — a pointer worth following. Start anywhere, and follow it where it leads.",
+  "voiceover": "Does modern science point away from God, or toward him? Here is what this section explores. The evidence that the universe had a beginning, and the question of a cause. The fine-tuning of the laws and constants for life, and the debate over what it means. The origin of life, the sudden burst of the Cambrian, and the strange reach of mathematics. And whether miracles are even possible — the question the section takes on. Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. Design is an inference, not a laboratory result, and honest people still disagree. What this section makes the case for is that the universe looks more like the work of a mind than an accident — a pointer worth following. Start anywhere, and follow it where it leads.",
   "scenes": [
     {
-      "dur": 9.8,
+      "dur": 7.2,
       "big": [
         {
           "t": "Science,",
@@ -28,87 +28,59 @@
       ],
       "sub": [
         {
-          "t": "Does what we've discovered point",
+          "t": "Does what we've discovered",
           "c": "cream",
           "f": "serif",
           "s": 42
         },
         {
-          "t": "toward a mind — or away?",
+          "t": "point toward a mind?",
           "c": "dim",
           "f": "serif",
           "s": 42
         }
       ],
-      "vo": "Does modern science point away from God, or toward him? This section looks at what we've actually discovered — and where some scientists see a signpost."
+      "vo": "Does modern science point away from God, or toward him? Here is what this section explores."
     },
     {
-      "dur": 7.8,
-      "kicker": "THE UNIVERSE HAD A BEGINNING",
+      "dur": 5.1,
+      "kicker": "DID THE UNIVERSE BEGIN?",
       "lines": [
         {
-          "t": "The Big Bang: space, time",
+          "t": "The Big Bang,",
           "c": "cream",
-          "s": 48
-        },
-        {
-          "t": "and matter began.",
-          "c": "gold",
-          "f": "serifb",
           "s": 52
         },
         {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "Whatever begins to exist",
-          "c": "cream",
-          "s": 48
-        },
-        {
-          "t": "invites a cause.",
-          "c": "cream",
-          "s": 48
-        }
-      ],
-      "vo": "The evidence that the universe had a beginning — that space, time, and matter came into being — invites the question of a cause."
-    },
-    {
-      "dur": 8.8,
-      "kicker": "TUNED FOR LIFE",
-      "lines": [
-        {
-          "t": "The laws and constants",
-          "c": "cream",
-          "s": 48
-        },
-        {
-          "t": "are finely set for life.",
+          "t": "and what it invites.",
           "c": "gold",
           "f": "serifb",
           "s": 50
-        },
-        {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "The data is granted;",
-          "c": "cream",
-          "s": 46
-        },
-        {
-          "t": "the meaning is debated.",
-          "c": "cream",
-          "s": 46
         }
       ],
-      "vo": "The laws and constants are finely set for life. The data is granted even by sceptics; what it means is genuinely debated."
+      "vo": "The evidence that the universe had a beginning, and the question of a cause."
     },
     {
-      "dur": 8.8,
-      "kicker": "ORIGINS AND COMPLEXITY",
+      "dur": 5.7,
+      "kicker": "IS IT TUNED FOR LIFE?",
+      "lines": [
+        {
+          "t": "The laws",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "and the constants.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ],
+      "vo": "The fine-tuning of the laws and constants for life, and the debate over what it means."
+    },
+    {
+      "dur": 6.2,
+      "kicker": "LIFE, INFORMATION AND MATHS",
       "lines": [
         {
           "t": "The origin of life.",
@@ -116,61 +88,36 @@
           "s": 50
         },
         {
-          "t": "The Cambrian burst.",
+          "t": "The Cambrian.",
           "c": "cream",
           "s": 50
         },
         {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "The strange reach",
+          "t": "The reach of mathematics.",
           "c": "gold",
           "f": "serifb",
-          "s": 48
-        },
-        {
-          "t": "of mathematics.",
-          "c": "gold",
-          "f": "serifb",
-          "s": 48
+          "s": 46
         }
       ],
-      "vo": "The origin of life, the sudden burst of the Cambrian, the uncanny power of mathematics to describe reality — each raises the question of design."
+      "vo": "The origin of life, the sudden burst of the Cambrian, and the strange reach of mathematics."
     },
     {
-      "dur": 7.5,
+      "dur": 5.3,
       "kicker": "AND CAN MIRACLES HAPPEN?",
       "lines": [
         {
-          "t": "If a mind made",
+          "t": "The question",
           "c": "cream",
-          "s": 50
+          "s": 54
         },
         {
-          "t": "the laws of nature,",
-          "c": "cream",
-          "s": 50
-        },
-        {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "acting within them",
+          "t": "the tab takes on.",
           "c": "gold",
           "f": "serifb",
-          "s": 48
-        },
-        {
-          "t": "is not ruled out.",
-          "c": "gold",
-          "f": "serifb",
-          "s": 48
+          "s": 52
         }
       ],
-      "vo": "And if a mind stands behind the laws of nature, then a miracle — that mind acting within them — is not ruled out in advance."
+      "vo": "And whether miracles are even possible — the question the section takes on."
     },
     {
       "dur": 12.5,

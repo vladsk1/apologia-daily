@@ -3,7 +3,7 @@
     "argument": "2026-09-11",
     "orthodoxy": "2026-09-11",
     "neutrality": "2026-09-11",
-    "by": "2026-09-11 Trinity-tier dual-consensus gate as READ-ONLY Explore agents. R1: argument + orthodoxy CLEAN (one God / distinct co-equal persons / anti-modalism / anti-tritheism; no diagram per owner ruling); neutrality 1 BREAK — 'the evidence of Scripture forces' violated the never-proves standard → 'points to'; scene 4 on-screen restored the early-devotion hedge ('worshipped Jesus as God'). Confirmation re-gate (orthodoxy+neutrality): CONFIRMED-CLEAN. Feature-tour ported verbatim from certified intro-jesus.json. NOT pastoral sign-off."
+    "by": "2026-09-11 REWORKED opening to INTRODUCE (one God; Son+Spirit given what belongs to God alone; where the doctrine came from; is it coherent). Trinity-tier dual-consensus re-gate: CLEAN; NO \"Nicaea\" (voice mispronounces it) and no diagram (owner ruling), verified; monotheism firm before deity introduced. Fix: scene 1 colors rebalanced so the ORTHODOX horn (\"or the truth Scripture teaches?\") is the bright line, not the \"contradiction\" objection (pull-quote test). Confirmation CONFIRMED-CLEAN. Feature tour + close verbatim from prior certified spec. 'makes the case', never 'proves'. NOT pastoral sign-off (site-wide pending)."
   },
   "aspect": "wide",
   "theme": "navy",
@@ -11,10 +11,10 @@
   "crossfade": 0.5,
   "pace": 1,
   "source": "Orientation video for the Trinity tab (ev-s6). Arguments from the certified ev-s6 essays (shema, nt_trinity, ot_trinity, jesus_as_god_nt, holy_spirit, early_church_trinity, philosophical_trinity, analogies, modalism, trinity_islam/jw/mormons, etc.). DOCTRINE: one God, three co-equal co-eternal persons — NEVER modalism ('one person in three masks') or tritheism ('three gods'); persons distinct, essence one. NO diagram (owner ruling). 'makes the case', never 'proves'.",
-  "voiceover": "One God, eternally three persons. Is that a contradiction the church invented — or the truth the evidence of Scripture points to? This section makes the case. It starts where Israel starts — there is one God, and only one. The Trinity never adds a second; that oneness is non-negotiable. Yet the New Testament gives to the Son and to the Spirit what belongs to God alone — the divine name, the divine works, and worship. This was not voted into being at Nicaea. The earliest Christians already prayed to Jesus and lived as though Father, Son, and Spirit were each fully God. It is not one person wearing three masks, and it is not three gods — the persons are distinct, the essence one. And the section answers the Muslim, the Jehovah's Witness, and the Mormon on their own terms. Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. The Trinity is beyond full comprehension, but it is not a contradiction. What this section makes the case for is that it is exactly where the evidence of Scripture points — and that it holds together. Start anywhere, and follow it where it leads.",
+  "voiceover": "One God, eternally three persons. Is that a contradiction — or the truth Scripture teaches? Here is how the section makes the case. It starts where Israel starts — there is one God, and only one. Yet the New Testament gives to the Son and to the Spirit what belongs to God alone. Where the doctrine actually came from — and whether the earliest Christians already lived it. And whether it holds together — with answers to modalism, and to Muslims, Jehovah's Witnesses, and Mormons. Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. The Trinity is beyond full comprehension, but it is not a contradiction. What this section makes the case for is that it is exactly where the evidence of Scripture points — and that it holds together. Start anywhere, and follow it where it leads.",
   "scenes": [
     {
-      "dur": 10.9,
+      "dur": 10.1,
       "big": [
         {
           "t": "One God,",
@@ -30,142 +30,95 @@
       "sub": [
         {
           "t": "A contradiction the church invented —",
-          "c": "cream",
+          "c": "dim",
           "f": "serif",
           "s": 40
         },
         {
-          "t": "or the truth Scripture points to?",
-          "c": "dim",
-          "f": "serif",
+          "t": "or the truth Scripture teaches?",
+          "c": "gold",
+          "f": "serifb",
           "s": 42
         }
       ],
-      "vo": "One God, eternally three persons. Is that a contradiction the church invented — or the truth the evidence of Scripture points to? This section makes the case."
+      "vo": "One God, eternally three persons. Is that a contradiction — or the truth Scripture teaches? Here is how the section makes the case."
     },
     {
-      "dur": 8.9,
+      "dur": 5.3,
       "kicker": "IT STARTS WITH ONE GOD",
       "lines": [
         {
-          "t": "The Bible's bedrock:",
+          "t": "The Bible's",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "bedrock.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 58
+        }
+      ],
+      "vo": "It starts where Israel starts — there is one God, and only one."
+    },
+    {
+      "dur": 5.1,
+      "kicker": "YET THE SON AND SPIRIT ARE GOD",
+      "lines": [
+        {
+          "t": "What the New Testament",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "gives to them.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ],
+      "vo": "Yet the New Testament gives to the Son and to the Spirit what belongs to God alone."
+    },
+    {
+      "dur": 5.6,
+      "kicker": "DID THE CHURCH INVENT IT?",
+      "lines": [
+        {
+          "t": "Where the doctrine",
           "c": "cream",
           "s": 50
         },
         {
-          "t": "God is one.",
+          "t": "actually came from.",
           "c": "gold",
           "f": "serifb",
-          "s": 58
-        },
-        {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "The Trinity never",
-          "c": "cream",
-          "s": 48
-        },
-        {
-          "t": "adds a second god.",
-          "c": "cream",
-          "s": 48
+          "s": 50
         }
       ],
-      "vo": "It starts where Israel starts — there is one God, and only one. The Trinity never adds a second; that oneness is non-negotiable."
+      "vo": "Where the doctrine actually came from — and whether the earliest Christians already lived it."
     },
     {
-      "dur": 7.8,
-      "kicker": "YET THE SON AND SPIRIT ARE GOD",
+      "dur": 7.2,
+      "kicker": "IS IT EVEN COHERENT?",
       "lines": [
         {
-          "t": "The New Testament gives them",
+          "t": "Answering modalism —",
           "c": "cream",
-          "s": 46
+          "s": 48
         },
         {
-          "t": "what belongs to God alone —",
+          "t": "and Muslims,",
           "c": "gold",
           "f": "serifb",
-          "s": 44
+          "s": 50
         },
         {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "the divine name, the divine works,",
+          "t": "Jehovah's Witnesses, and Mormons.",
           "c": "cream",
           "s": 42
-        },
-        {
-          "t": "and worship.",
-          "c": "cream",
-          "s": 46
         }
       ],
-      "vo": "Yet the New Testament gives to the Son and to the Spirit what belongs to God alone — the divine name, the divine works, and worship."
-    },
-    {
-      "dur": 9.7,
-      "kicker": "THE CHURCH DIDN'T INVENT IT",
-      "lines": [
-        {
-          "t": "Not voted in at Nicaea.",
-          "c": "gold",
-          "f": "serifb",
-          "s": 48
-        },
-        {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "The earliest Christians already",
-          "c": "cream",
-          "s": 44
-        },
-        {
-          "t": "worshipped Jesus as God.",
-          "c": "cream",
-          "s": 46
-        }
-      ],
-      "vo": "This was not voted into being at Nicaea. The earliest Christians already prayed to Jesus and lived as though Father, Son, and Spirit were each fully God."
-    },
-    {
-      "dur": 12.3,
-      "kicker": "COHERENT — AND TESTED",
-      "lines": [
-        {
-          "t": "Not one person in three masks.",
-          "c": "cream",
-          "s": 44
-        },
-        {
-          "t": "Not three gods.",
-          "c": "cream",
-          "s": 48
-        },
-        {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "The persons distinct,",
-          "c": "gold",
-          "f": "serifb",
-          "s": 46
-        },
-        {
-          "t": "the essence one.",
-          "c": "gold",
-          "f": "serifb",
-          "s": 48
-        }
-      ],
-      "vo": "It is not one person wearing three masks, and it is not three gods — the persons are distinct, the essence one. And the section answers the Muslim, the Jehovah's Witness, and the Mormon on their own terms."
+      "vo": "And whether it holds together — with answers to modalism, and to Muslims, Jehovah's Witnesses, and Mormons."
     },
     {
       "dur": 12.5,

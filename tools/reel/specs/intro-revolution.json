@@ -2,7 +2,7 @@
   "reviewed": {
     "argument": "2026-09-11",
     "orthodoxy": "2026-09-11",
-    "by": "2026-09-11 gate (argument + orthodoxy) as READ-ONLY Explore agents. R1: orthodoxy CLEAN (influence-is-not-truth firewall explicit; Tom Holland = 'the historian'); 1 WEAK — scene 4 on-screen list stated contested causal theses with no hedge → gold '— each with deep Christian roots.'; scene 1 'quietly Christian?' → 'quietly downstream of Christianity?'. Confirmation re-gate: CONFIRMED-CLEAN. Feature-tour ported verbatim from certified intro-jesus.json. 'makes the case', never 'proves'. NOT pastoral sign-off."
+    "by": "2026-09-11 REWORKED opening to INTRODUCE (sect->empire, equality/care, Christian roots of science/abolition/progress) with the \"influence is NOT truth\" firewall kept plain in the opening. Re-gate (argument+orthodoxy): SOUND/CLEAN, 0 fixes; Tom Holland no longer named (avoids the stale/attribution issue). No confirmation needed. Feature tour + close verbatim from prior certified spec. 'makes the case', never 'proves'. NOT pastoral sign-off."
   },
   "aspect": "wide",
   "theme": "navy",
@@ -10,10 +10,10 @@
   "crossfade": 0.5,
   "pace": 1,
   "source": "Orientation video for the Christian Revolution tab (ev-s8): Holland's Dominion thesis (riseofchurch, persecution, equality, compassion, science-history, abolition, progress). GUARDRAIL: influence/goodness is NOT truth — a faith can shape the world and still be false; stated plainly. Tom Holland = 'the historian' (NOT 'secular historian' [stale] and NOT 'apologist'). 'makes the case', never 'proves'.",
-  "voiceover": "How much of the modern world is quietly downstream of Christianity? This section traces the fingerprints — including the ones sceptics rarely notice. A tiny, illegal sect became the faith of the Roman Empire — not by the sword, but while being persecuted for three centuries. The convictions that every human being has equal worth, and that the weak deserve protection, were not obvious to the ancient world. The historian Tom Holland traces them to a Christian revolution. The rise of modern science, the movement that abolished the slave trade, even the very idea that history can progress — each has deep Christian roots. None of this proves Christianity true — a faith can be enormously influential and still be false, and we say so plainly. Influence is not truth. Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. What this section makes the case for is narrower, and harder to shrug off: that the moral world a sceptic takes for granted is more Christian than they know — reason enough to look again. Start anywhere, and follow it where it leads.",
+  "voiceover": "How much of the modern world is quietly downstream of Christianity? This section traces the fingerprints. How a tiny, illegal, persecuted sect became the faith of an empire. Where our deepest assumptions came from — that every human being is equal, and that the weak deserve care. The Christian roots of modern science, the end of the slave trade, and the very idea of progress. And the honest question the section refuses to dodge — does shaping the world make a faith true? It does not, and we say so plainly. Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. What this section makes the case for is narrower, and harder to shrug off: that the moral world a sceptic takes for granted is more Christian than they know — reason enough to look again. Start anywhere, and follow it where it leads.",
   "scenes": [
     {
-      "dur": 9.8,
+      "dur": 7.7,
       "big": [
         {
           "t": "The water",
@@ -34,48 +34,34 @@
           "s": 42
         },
         {
-          "t": "is quietly downstream of Christianity?",
+          "t": "is quietly downstream of the faith?",
           "c": "dim",
           "f": "serif",
-          "s": 42
+          "s": 40
         }
       ],
-      "vo": "How much of the modern world is quietly downstream of Christianity? This section traces the fingerprints — including the ones sceptics rarely notice."
+      "vo": "How much of the modern world is quietly downstream of Christianity? This section traces the fingerprints."
     },
     {
-      "dur": 7.8,
+      "dur": 5.5,
       "kicker": "THE UNLIKELY TAKEOVER",
       "lines": [
         {
-          "t": "A tiny, illegal sect",
+          "t": "From illegal sect",
           "c": "cream",
-          "s": 48
+          "s": 50
         },
         {
-          "t": "became the empire's faith —",
+          "t": "to the empire's faith.",
           "c": "gold",
           "f": "serifb",
-          "s": 46
-        },
-        {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "not by the sword,",
-          "c": "cream",
-          "s": 48
-        },
-        {
-          "t": "but under persecution.",
-          "c": "cream",
           "s": 48
         }
       ],
-      "vo": "A tiny, illegal sect became the faith of the Roman Empire — not by the sword, but while being persecuted for three centuries."
+      "vo": "How a tiny, illegal, persecuted sect became the faith of an empire."
     },
     {
-      "dur": 11.3,
+      "dur": 6.7,
       "kicker": "IDEAS WE TAKE FOR GRANTED",
       "lines": [
         {
@@ -88,70 +74,42 @@
           "c": "gold",
           "f": "serifb",
           "s": 44
-        },
-        {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "These were not obvious",
-          "c": "cream",
-          "s": 46
-        },
-        {
-          "t": "to the ancient world.",
-          "c": "cream",
-          "s": 46
         }
       ],
-      "vo": "The convictions that every human being has equal worth, and that the weak deserve protection, were not obvious to the ancient world. The historian Tom Holland traces them to a Christian revolution."
+      "vo": "Where our deepest assumptions came from — that every human being is equal, and that the weak deserve care."
     },
     {
-      "dur": 8.8,
+      "dur": 6.5,
       "kicker": "SCIENCE, SLAVERY, PROGRESS",
       "lines": [
         {
-          "t": "The rise of modern science.",
+          "t": "Their Christian",
           "c": "cream",
-          "s": 48
+          "s": 50
         },
         {
-          "t": "The abolition of slavery.",
-          "c": "cream",
-          "s": 48
-        },
-        {
-          "t": "The very idea of progress.",
-          "c": "cream",
-          "s": 48
-        },
-        {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "— each with deep Christian roots.",
+          "t": "roots.",
           "c": "gold",
           "f": "serifb",
-          "s": 46
+          "s": 58
         }
       ],
-      "vo": "The rise of modern science, the movement that abolished the slave trade, even the very idea that history can progress — each has deep Christian roots."
+      "vo": "The Christian roots of modern science, the end of the slave trade, and the very idea of progress."
     },
     {
-      "dur": 9.9,
-      "kicker": "BUT INFLUENCE ISN'T TRUTH",
+      "dur": 8.6,
+      "kicker": "BUT IS INFLUENCE TRUTH?",
       "lines": [
         {
-          "t": "That Christianity shaped the world",
+          "t": "Shaping the world",
           "c": "cream",
-          "s": 42
+          "s": 48
         },
         {
           "t": "does not make it true.",
           "c": "gold",
           "f": "serifb",
-          "s": 48
+          "s": 46
         },
         {
           "t": "",
@@ -160,10 +118,10 @@
         {
           "t": "We say so plainly.",
           "c": "cream",
-          "s": 48
+          "s": 46
         }
       ],
-      "vo": "None of this proves Christianity true — a faith can be enormously influential and still be false, and we say so plainly. Influence is not truth."
+      "vo": "And the honest question the section refuses to dodge — does shaping the world make a faith true? It does not, and we say so plainly."
     },
     {
       "dur": 12.5,

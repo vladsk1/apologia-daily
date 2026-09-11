@@ -3,7 +3,7 @@
     "argument": "2026-09-11",
     "orthodoxy": "2026-09-11",
     "neutrality": "2026-09-11",
-    "by": "2026-09-11 resurrection-tier dual-consensus gate as READ-ONLY Explore agents. R1: argument STAMPABLE / orthodoxy CLEAN (early creed leads); neutrality 1 BREAK — scene 5 mislabelled James an 'outright enemy' (he was Jesus's sceptical brother, NOT a persecutor like Paul) + martyrdom overreach → distinguished persecutor(Paul)/sceptic(James), pinned disciples to willingness/sincerity; empty tomb reframed as the site's claim. Confirmation re-gate (orthodoxy+neutrality): CONFIRMED-CLEAN. Feature-tour ported verbatim from certified intro-jesus.json. 'best explanation', never 'proves'. NOT pastoral sign-off."
+    "by": "2026-09-11 REWORKED opening to INTRODUCE (minimal facts, tomb+appearances, the people who changed, best explanation). Resurrection-tier dual-consensus re-gate: CLEAN; the prior Paul=persecutor / James=SCEPTIC distinction confirmed intact; no martyrdom overreach; 1 neutrality polish (scene 2 kicker -> \"START WHERE THE FACTS ARE AGREED\"). Confirmation CONFIRMED-CLEAN. Feature tour + close verbatim from prior certified spec. 'makes the case', never 'proves'. NOT pastoral sign-off (site-wide pending)."
   },
   "aspect": "wide",
   "theme": "navy",
@@ -11,10 +11,10 @@
   "crossfade": 0.5,
   "pace": 1,
   "source": "Orientation video for the Resurrection tab (ev-s2). Arguments from the certified ev-s2 essays (minimal, emptytomb, paul, appearances, disciplesbelief, sceptics, burial, postresurrection). Guardrail: LEAD with the 1 Cor 15:3-7 early creed 'within a few years'; never 'merely decades later'; 'best explanation', never 'proves'.",
-  "voiceover": "Did Jesus of Nazareth rise from the dead? Everything in Christianity stands or falls on the answer, so this section examines it as carefully as any claim in history. It begins with a handful of facts even sceptical scholars grant, and asks what best explains them — the minimal-facts approach. The core is not late. Paul hands on a creed the church was reciting within a few years of the crucifixion — not a legend that grew over lifetimes. The evidence points to an empty tomb; the appearances were too many and too varied to explain away as hallucinations. Frightened disciples became willing to suffer and die rather than deny what they said they saw. And men with every reason not to believe — Paul, who had persecuted the church, and James, Jesus's own sceptical brother — came to faith. Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. History's own tools cannot compel faith, but they can weigh explanations — and the case here is that the best one is that he rose. Weigh it yourself. Start anywhere, and follow it where it leads.",
+  "voiceover": "Did Jesus rise from the dead? Everything in Christianity stands or falls on it, so this section examines it carefully. Here is what is inside. It starts with the facts even sceptical scholars grant, and asks what best explains them. You will find the case for the empty tomb, and for the appearances the first Christians reported. And the people who changed — frightened disciples, a persecutor named Paul, and James, Jesus's own sceptical brother. The question the whole section weighs — what best explains it all? Every one of these arguments gets a fully-cited deep-dive essay. Each claim is sourced, and the strongest objections are stated fairly, then answered. That is our standard — Checked Before Published. And you will not just read. On every essay an AI tutor answers your questions — ask it anything, or highlight a single sentence and ask about that exact line. Mastery mode lets you explain the argument back in your own words and have it graded. Daily practice brings the key points back just as you are about to forget them. There are pocket cards to share, and a Debate Arena to practise against an AI sceptic before the real conversation. Every essay comes in a plain-English version and a full deep dive, with read-aloud audio. History's own tools cannot compel faith, but they can weigh explanations — and the case here is that the best one is that he rose. Weigh it yourself. Start anywhere, and follow it where it leads.",
   "scenes": [
     {
-      "dur": 10.2,
+      "dur": 10.3,
       "big": [
         {
           "t": "Did Jesus",
@@ -41,137 +41,97 @@
           "s": 42
         }
       ],
-      "vo": "Did Jesus of Nazareth rise from the dead? Everything in Christianity stands or falls on the answer, so this section examines it as carefully as any claim in history."
+      "vo": "Did Jesus rise from the dead? Everything in Christianity stands or falls on it, so this section examines it carefully. Here is what is inside."
     },
     {
-      "dur": 7.9,
-      "kicker": "START WITH WHAT SCEPTICS GRANT",
+      "dur": 6.1,
+      "kicker": "START WHERE THE FACTS ARE AGREED",
       "lines": [
         {
-          "t": "A handful of facts",
+          "t": "The minimal-facts",
           "c": "cream",
           "s": 50
         },
         {
-          "t": "even sceptical scholars accept —",
+          "t": "approach.",
           "c": "gold",
           "f": "serifb",
-          "s": 44
-        },
-        {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "then ask what",
-          "c": "cream",
-          "s": 48
-        },
-        {
-          "t": "best explains them.",
-          "c": "cream",
-          "s": 48
+          "s": 56
         }
       ],
-      "vo": "It begins with a handful of facts even sceptical scholars grant, and asks what best explains them — the minimal-facts approach."
+      "vo": "It starts with the facts even sceptical scholars grant, and asks what best explains them."
     },
     {
-      "dur": 9.3,
-      "kicker": "THE EVIDENCE IS EARLY",
-      "lines": [
-        {
-          "t": "A creed the church recited",
-          "c": "cream",
-          "s": 48
-        },
-        {
-          "t": "within a few years",
-          "c": "gold",
-          "f": "serifb",
-          "s": 52
-        },
-        {
-          "t": "of the crucifixion —",
-          "c": "cream",
-          "s": 48
-        },
-        {
-          "t": "",
-          "s": 12
-        },
-        {
-          "t": "not a later legend.",
-          "c": "dim",
-          "f": "serif",
-          "s": 42
-        }
-      ],
-      "vo": "The core is not late. Paul hands on a creed the church was reciting within a few years of the crucifixion — not a legend that grew over lifetimes."
-    },
-    {
-      "dur": 7.3,
+      "dur": 6.0,
       "kicker": "THE TOMB AND THE WITNESSES",
       "lines": [
         {
-          "t": "An empty tomb.",
+          "t": "The empty tomb.",
           "c": "gold",
           "f": "serifb",
-          "s": 58
+          "s": 54
         },
         {
           "t": "",
           "s": 12
         },
         {
-          "t": "Appearances too many and",
+          "t": "The appearances",
           "c": "cream",
-          "s": 46
+          "s": 48
         },
         {
-          "t": "too varied to be hallucinations.",
+          "t": "the first Christians reported.",
           "c": "cream",
           "s": 46
         }
       ],
-      "vo": "The evidence points to an empty tomb; the appearances were too many and too varied to explain away as hallucinations."
+      "vo": "You will find the case for the empty tomb, and for the appearances the first Christians reported."
     },
     {
-      "dur": 13.5,
-      "kicker": "AND THE PEOPLE WHO CHANGED",
+      "dur": 7.9,
+      "kicker": "THE PEOPLE WHO CHANGED",
       "lines": [
         {
-          "t": "Frightened disciples — willing",
+          "t": "Frightened disciples.",
           "c": "cream",
-          "s": 46
-        },
-        {
-          "t": "to suffer and die for what they saw.",
-          "c": "cream",
-          "s": 44
+          "s": 50
         },
         {
           "t": "",
           "s": 12
         },
         {
-          "t": "A persecutor: Paul.",
+          "t": "A persecutor — Paul.",
           "c": "gold",
           "f": "serifb",
           "s": 48
         },
         {
-          "t": "A sceptic: James, his brother.",
-          "c": "gold",
-          "f": "serifb",
-          "s": 44
-        },
-        {
-          "t": "Both came to faith.",
+          "t": "A sceptic — James, his brother.",
           "c": "cream",
-          "s": 46
+          "s": 44
         }
       ],
-      "vo": "Frightened disciples became willing to suffer and die rather than deny what they said they saw. And men with every reason not to believe — Paul, who had persecuted the church, and James, Jesus's own sceptical brother — came to faith."
+      "vo": "And the people who changed — frightened disciples, a persecutor named Paul, and James, Jesus's own sceptical brother."
+    },
+    {
+      "dur": 4.9,
+      "kicker": "WHAT BEST EXPLAINS IT?",
+      "lines": [
+        {
+          "t": "The question",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "the section weighs.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ],
+      "vo": "The question the whole section weighs — what best explains it all?"
     },
     {
       "dur": 12.5,
