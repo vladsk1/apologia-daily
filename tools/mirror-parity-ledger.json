@@ -18,7 +18,7 @@
     "ev-s5.html -> ev-s5.mk.html": {
       "acceptedAt": "2026-08-17",
       "sourceCommit": "same commit as this ledger entry (2026-08-17 backlog row 101, ev-s5 miracles card 08)",
-      "reason": "English-ADD only (not a retired-claim fix): row 101 added a new argument card 08 ('Can Miracles Happen?', arg-miracles) to the English ev-s5.html Science & Faith fragment, ported from the certified library/miracles.html. The Macedonian mirror ev-s5.mk.html has no such card; nothing false is live in translation, only less complete. The mirror was ALREADY behind before this change (English last re-gated 2026-08-04 in the 7-card per-card dual-consensus pass, MK still at 2026-07-23 and never brought up to it), so this is added lag on a pre-existing lag, not a fresh regression. Per the owner's standing delete-or-lag preference (no hand-written translated doctrinal prose no native reviewer will gate), the mirror is NOT hand-translated. Macedonian/Spanish doctrinal review is outstanding (docs/STATEMENT_OF_FAITH.md). Clear this entry when a native Macedonian reviewer gates the mirror up to the English (including the seven earlier cards it is also missing)."
+      "reason": "SCIENCE & FAITH tab (8 cards). Measured 2026-09-12: MK mirror has 7 of 8 cards (missing the 'Can Miracles Happen?' card 08) and ~87 <p> vs English ~240 <p> - each present card's 'The Case, Plainly' narrative + expanded Pro deep-dive is absent, plus the whole miracles card. Science-tier (lower doctrinal risk) but large; the fine-tuning DATA-not-DESIGN fence and the miracles bounded-thesis fence must be carried intact. Per the standing EN->MK mirror rule the DEFAULT is to sync, but this fragment is a large per-card Pro-tier delta (the EN cards each gained a 'The Case, Plainly' narrative + an expanded Pro deep-dive, and some cards are net-new) that cannot be responsibly bulk-machine-translated in one pass onto the free, indexed surface. Recorded as a deliberate, written exception. Native-Macedonian doctrinal review is outstanding (docs/STATEMENT_OF_FAITH.md). Clear this entry when a native reviewer translates AND gates the fragment up to the current English."
     },
     "library/kalam.html -> library/es/kalam.html": {
       "acceptedAt": "2026-08-17",
@@ -43,12 +43,32 @@
     "library/index.html -> library/mk/index.html": {
       "acceptedAt": "2026-08-23",
       "sourceCommit": "652e747",
-      "reason": "NAV-INDEX LAG (2026-08-23): the English library/index.html 'Church in History' section was rebuilt as 'The Christian Revolution' (7 essays) when the ev-s8 tab was rebuilt. The localized library-index mirrors (library/mk/index.html, library/es/index.html) still show the old 3-essay 'Church in History' listing. This is a navigation index, not doctrinal argument prose; nothing false is live (the links resolve). Per the owner's standing delete-or-lag preference, the localized index nav is not hand-translated here. Clear when a native reviewer updates the localized library-index church section; Macedonian/Spanish review is outstanding (docs/STATEMENT_OF_FAITH.md)."
+      "reason": "SUPERSEDED 2026-09-12: library/mk/index.html is a deliberately curated FLAT list of the 10 translated MK essays (with a note that the rest remain in English), NOT a structural mirror of the categorized English full index. Verified 2026-09-12: it links all 10 MK essays 1:1 and is current. The English 'The Christian Revolution / 7 essays' category exists only in the categorized English index and the ev-s8 hub tab, which the flat MK index does not use. No MK index change is warranted; kept here only to document the reconciliation. (The Spanish entry below is unaffected.)"
     },
     "library/index.html -> library/es/index.html": {
       "acceptedAt": "2026-08-23",
       "sourceCommit": "652e747",
       "reason": "NAV-INDEX LAG (2026-08-23): the English library/index.html 'Church in History' section was rebuilt as 'The Christian Revolution' (7 essays) when the ev-s8 tab was rebuilt. The localized library-index mirrors (library/mk/index.html, library/es/index.html) still show the old 3-essay 'Church in History' listing. This is a navigation index, not doctrinal argument prose; nothing false is live (the links resolve). Per the owner's standing delete-or-lag preference, the localized index nav is not hand-translated here. Clear when a native reviewer updates the localized library-index church section; Macedonian/Spanish review is outstanding (docs/STATEMENT_OF_FAITH.md)."
+    },
+    "ev-s1.html -> ev-s1.mk.html": {
+      "acceptedAt": "2026-09-12",
+      "sourceCommit": "pending-this-commit",
+      "reason": "GOD'S EXISTENCE tab (12 cards, natural-theology + deity-adjacent). The MK mirror carries the older, shorter cards (~311 <p>) against the current English (~565 <p>); no card is missing but every card's Pro tier is behind. Per the standing EN->MK mirror rule the DEFAULT is to sync, but this fragment is a large per-card Pro-tier delta (the EN cards each gained a 'The Case, Plainly' narrative + an expanded Pro deep-dive, and some cards are net-new) that cannot be responsibly bulk-machine-translated in one pass onto the free, indexed surface. Recorded as a deliberate, written exception. Native-Macedonian doctrinal review is outstanding (docs/STATEMENT_OF_FAITH.md). Clear this entry when a native reviewer translates AND gates the fragment up to the current English."
+    },
+    "ev-s2.html -> ev-s2.mk.html": {
+      "acceptedAt": "2026-09-12",
+      "sourceCommit": "pending-this-commit",
+      "reason": "THE RESURRECTION tab (8 cards, resurrection tier). MK mirror ~233 <p> vs English ~391 <p>; same 8 cards, each Pro tier behind. Resurrection-tier: the empty-tomb/creed/appearances fences must be carried intact. Per the standing EN->MK mirror rule the DEFAULT is to sync, but this fragment is a large per-card Pro-tier delta (the EN cards each gained a 'The Case, Plainly' narrative + an expanded Pro deep-dive, and some cards are net-new) that cannot be responsibly bulk-machine-translated in one pass onto the free, indexed surface. Recorded as a deliberate, written exception. Native-Macedonian doctrinal review is outstanding (docs/STATEMENT_OF_FAITH.md). Clear this entry when a native reviewer translates AND gates the fragment up to the current English."
+    },
+    "ev-s4.html -> ev-s4.mk.html": {
+      "acceptedAt": "2026-09-12",
+      "sourceCommit": "pending-this-commit",
+      "reason": "BIBLICAL RELIABILITY tab (11 cards). MK mirror ~127 <p> vs English ~332 <p>; same 11 cards, each Pro tier well behind. Per the standing EN->MK mirror rule the DEFAULT is to sync, but this fragment is a large per-card Pro-tier delta (the EN cards each gained a 'The Case, Plainly' narrative + an expanded Pro deep-dive, and some cards are net-new) that cannot be responsibly bulk-machine-translated in one pass onto the free, indexed surface. Recorded as a deliberate, written exception. Native-Macedonian doctrinal review is outstanding (docs/STATEMENT_OF_FAITH.md). Clear this entry when a native reviewer translates AND gates the fragment up to the current English."
+    },
+    "ev-s6.html -> ev-s6.mk.html": {
+      "acceptedAt": "2026-09-12",
+      "sourceCommit": "pending-this-commit",
+      "reason": "THE TRINITY tab (16 cards, DEITY/TRINITY tier - the highest-stakes fragment). The MK mirror has only 10 of the 16 cards and ~208 <p> vs English ~543 <p> - i.e. 6 whole cards are missing AND the present cards are behind. This is precisely the tripwire-sensitive material the owner's rule fences: every Trinity/deity passage (and the Islam/JW cards) must be translated WITH its orthonote/anti-modalist/anti-Arian fencing in the same breath or left untranslated. It must NOT be bulk-machine-translated. Requires careful per-card native translation + dual-consensus-equivalent review. Per the standing EN->MK mirror rule the DEFAULT is to sync, but this fragment is a large per-card Pro-tier delta (the EN cards each gained a 'The Case, Plainly' narrative + an expanded Pro deep-dive, and some cards are net-new) that cannot be responsibly bulk-machine-translated in one pass onto the free, indexed surface. Recorded as a deliberate, written exception. Native-Macedonian doctrinal review is outstanding (docs/STATEMENT_OF_FAITH.md). Clear this entry when a native reviewer translates AND gates the fragment up to the current English."
     }
   }
 }
