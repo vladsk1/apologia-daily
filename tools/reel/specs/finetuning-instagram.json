@@ -1,0 +1,202 @@
+{
+  "reviewed": {
+    "argument": "2026-09-13",
+    "orthodoxy": "2026-09-13",
+    "by": "2026-09-13 scene-locked vertical (Instagram) POSITIVE-CASE reel. VO ported from certified is-the-universe-fine-tuned-for-life; hedges removed per owner. Gated READ-ONLY (Explore): orthodoxy CLEAN; argument found 1 BREAK - FIXED by reverting to the certified split ('Even atheist physicists concede the data. The dials really are set with breathtaking precision.') so the Stenger-sensitive precision claim is our own voice, NOT attributed to atheist concession. Fine-tuning guardrail honored: no claim scientists agree the universe is designed; design = our inference ('points beyond itself'). Closes Ps 19:1. NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) POSITIVE-CASE reel on cosmic fine-tuning. Positive sentences ported from the certified reel is-the-universe-fine-tuned-for-life.json (library/finetuning.html); the three-options survey and 'contested / design is the inference' caveats removed per owner (positive case only). Guardrail kept: does NOT claim scientists agree the universe is designed; the design inference is stated as our reading ('points beyond itself'), not as consensus or proof. Closes on Psalm 19:1.",
+  "voiceover": "Is the universe fine-tuned for life? The fundamental constants of physics — the force of gravity, the balance of the forces, the expansion rate of the cosmos — sit inside an astonishingly narrow range that permits life. Move any of those dials a hair's width, and there are no stars, no planets, no chemistry, no us. This isn't fringe science. Even atheist physicists concede the data. The dials really are set with breathtaking precision. A cosmos balanced this finely for life points beyond itself — to a Mind that meant for us to be here. As the psalmist wrote, long before the physics: the heavens declare the glory of God.",
+  "scenes": [
+    {
+      "dur": 3.9,
+      "vo": "Is the universe fine-tuned for life?",
+      "big": [
+        {
+          "t": "Is the universe",
+          "c": "cream",
+          "s": 66
+        },
+        {
+          "t": "fine-tuned",
+          "c": "gold",
+          "s": 82
+        },
+        {
+          "t": "for life?",
+          "c": "cream",
+          "s": 70
+        }
+      ]
+    },
+    {
+      "dur": 10.3,
+      "vo": "The fundamental constants of physics — the force of gravity, the balance of the forces, the expansion rate of the cosmos — sit inside an astonishingly narrow range that permits life.",
+      "kicker": "THE CONSTANTS",
+      "lines": [
+        {
+          "t": "Gravity. The forces.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "The expansion rate",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "of the cosmos.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "All set in a",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "razor-thin range.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ]
+    },
+    {
+      "dur": 7.3,
+      "vo": "Move any of those dials a hair's width, and there are no stars, no planets, no chemistry, no us.",
+      "kicker": "MOVE A DIAL A HAIR'S WIDTH",
+      "lines": [
+        {
+          "t": "No stars.",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "No planets.",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "No chemistry.",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "No us.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 60
+        }
+      ]
+    },
+    {
+      "dur": 9.1,
+      "vo": "This isn't fringe science. Even atheist physicists concede the data. The dials really are set with breathtaking precision.",
+      "kicker": "NOT FRINGE SCIENCE",
+      "lines": [
+        {
+          "t": "Even atheist",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "physicists concede",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "the data.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "The precision is real.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 6.4,
+      "vo": "A cosmos balanced this finely for life points beyond itself — to a Mind that meant for us to be here.",
+      "big": [
+        {
+          "t": "Balanced this finely",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "for life,",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "it points beyond",
+          "c": "gold",
+          "s": 58
+        },
+        {
+          "t": "itself.",
+          "c": "gold",
+          "s": 64
+        }
+      ],
+      "sub": [
+        {
+          "t": "To a Mind that meant us to be here.",
+          "c": "cream",
+          "f": "serif",
+          "s": 42
+        }
+      ]
+    },
+    {
+      "dur": 5.8,
+      "vo": "As the psalmist wrote, long before the physics: the heavens declare the glory of God.",
+      "big": [
+        {
+          "t": "“The heavens declare",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "the glory of God.”",
+          "c": "gold",
+          "s": 60
+        }
+      ],
+      "sub": [
+        {
+          "t": "— Psalm 19:1",
+          "c": "dim",
+          "f": "serif",
+          "s": 42
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    }
+  ]
+}
