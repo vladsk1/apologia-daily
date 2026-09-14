@@ -45,11 +45,6 @@
       "sourceCommit": "652e747",
       "reason": "NAV-INDEX LAG (2026-08-23): the English library/index.html 'Church in History' section was rebuilt as 'The Christian Revolution' (7 essays) when the ev-s8 tab was rebuilt. The localized library-index mirrors (library/mk/index.html, library/es/index.html) still show the old 3-essay 'Church in History' listing. This is a navigation index, not doctrinal argument prose; nothing false is live (the links resolve). Per the owner's standing delete-or-lag preference, the localized index nav is not hand-translated here. Clear when a native reviewer updates the localized library-index church section; Macedonian/Spanish review is outstanding (docs/STATEMENT_OF_FAITH.md)."
     },
-    "ev-s2.html -> ev-s2.mk.html": {
-      "acceptedAt": "2026-09-12",
-      "sourceCommit": "pending-this-commit",
-      "reason": "THE RESURRECTION tab (8 cards, resurrection tier). MK mirror ~233 <p> vs English ~391 <p>; same 8 cards, each Pro tier behind. Resurrection-tier: the empty-tomb/creed/appearances fences must be carried intact. Per the standing EN->MK mirror rule the DEFAULT is to sync, but this fragment is a large per-card Pro-tier delta (the EN cards each gained a 'The Case, Plainly' narrative + an expanded Pro deep-dive, and some cards are net-new) that cannot be responsibly bulk-machine-translated in one pass onto the free, indexed surface. Recorded as a deliberate, written exception. Native-Macedonian doctrinal review is outstanding (docs/STATEMENT_OF_FAITH.md). Clear this entry when a native reviewer translates AND gates the fragment up to the current English."
-    },
     "ev-s6.html -> ev-s6.mk.html": {
       "acceptedAt": "2026-09-12",
       "sourceCommit": "pending-this-commit",
