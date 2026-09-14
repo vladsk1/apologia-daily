@@ -47,6 +47,12 @@
     return m ? m[1] : '';
   }
 
+  /* PREVIEW: cards whose slug is here render the COMPACT layout (smaller video on
+     the left, the argument's title + a one-line note on the right). Everything
+     else keeps the current full-width layout. This is a live A/B look — widen the
+     set (or make compact the default) once the style is approved. */
+  var COMPACT = { 'minimalfacts': 1 };
+
   function apply(container) {
     if (!container) return;
     getLessons().then(function (lessons) {
@@ -54,33 +60,55 @@
       for (var i = 0; i < cards.length; i++) {
         var card = cards[i];
         if (card.querySelector('.cardvid')) continue;          // idempotent
-        var e = lessons[slugFor(card)];
+        var slug = slugFor(card);
+        var e = lessons[slug];
         if (!e || !e.youtube) continue;                         // no video / not uploaded yet
         if (!/^[A-Za-z0-9_-]{6,20}$/.test(e.youtube)) continue; // guard: plausible YouTube id only
         var cb = card.querySelector('.cb');
         if (!cb) continue;
+        var titleEl = card.querySelector('.ct');
+        var title = titleEl ? (titleEl.textContent || '').trim() : '';
         injectCss();
-        insert(cb, e.youtube);
+        insert(cb, e.youtube, title, !!COMPACT[slug]);
       }
     });
   }
 
-  function insert(cb, ytid) {
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function insert(cb, ytid, title, compact) {
     var card = document.createElement('aside');
-    card.className = 'cardvid';
+    card.className = 'cardvid' + (compact ? ' cardvid-c' : '');
     card.setAttribute('aria-label', 'Watch the short version of this argument');
     var poster = 'https://i.ytimg.com/vi/' + ytid + '/hqdefault.jpg';
-    card.innerHTML =
-      '<div class="cv-head">' +
-        '<span class="cv-eyebrow">&#9654;&nbsp;The short version</span>' +
-        '<span class="cv-note">Watch first, then read the case below</span>' +
-      '</div>' +
+    var frame =
       '<button type="button" class="cv-frame" aria-label="Play the video">' +
         '<img class="cv-poster" src="' + poster + '" alt="" loading="lazy" width="480" height="270">' +
         '<span class="cv-play" aria-hidden="true"><span class="cv-tri"></span></span>' +
-      '</button>' +
-      '<p class="cv-cap">A ~1-minute, fully-captioned summary&mdash;the same argument, compressed. ' +
-        'It&rsquo;s a starting point; the case below is where it&rsquo;s actually made.</p>';
+      '</button>';
+    if (compact) {
+      card.innerHTML =
+        frame +
+        '<div class="cv-copy">' +
+          '<span class="cv-eyebrow">&#9654;&nbsp;The short version</span>' +
+          (title ? '<span class="cv-title">' + esc(title) + '</span>' : '') +
+          '<span class="cv-note2">A ~1-minute, captioned overview of this argument. ' +
+            'Watch first, then read the case below.</span>' +
+        '</div>';
+    } else {
+      card.innerHTML =
+        '<div class="cv-head">' +
+          '<span class="cv-eyebrow">&#9654;&nbsp;The short version</span>' +
+          '<span class="cv-note">Watch first, then read the case below</span>' +
+        '</div>' +
+        frame +
+        '<p class="cv-cap">A ~1-minute, fully-captioned summary&mdash;the same argument, compressed. ' +
+          'It&rsquo;s a starting point; the case below is where it&rsquo;s actually made.</p>';
+    }
     cb.insertBefore(card, cb.firstChild);
 
     var btn = card.querySelector('.cv-frame');
@@ -123,7 +151,18 @@
       ".cardvid .cv-cap{font-family:'DM Sans',system-ui,sans-serif;font-size:.78rem;line-height:1.5;",
       'color:rgba(255,255,255,.62);margin:9px 4px 8px}',
       '.cardvid .cv-embed{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#000}',
-      '.cardvid .cv-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}'
+      '.cardvid .cv-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}',
+      /* compact (intro-style) layout: smaller video left, title + note right */
+      '.cardvid-c{display:flex;gap:16px;align-items:center;padding:14px}',
+      '.cardvid-c .cv-frame{flex:0 0 42%;max-width:320px;width:auto}',
+      '.cardvid-c .cv-play{width:56px;height:56px}',
+      '.cardvid-c .cv-tri{margin-left:4px;border-width:10px 0 10px 17px}',
+      '.cardvid-c .cv-copy{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}',
+      ".cardvid-c .cv-title{font-family:Georgia,'Times New Roman',serif;font-size:1.05rem;font-weight:700;color:#fff;line-height:1.25}",
+      ".cardvid-c .cv-note2{font-family:'DM Sans',system-ui,sans-serif;font-size:.8rem;line-height:1.5;color:rgba(255,255,255,.62)}",
+      '.cardvid-c .cv-embed{flex:0 0 42%;max-width:320px}',
+      '@media(max-width:640px){.cardvid-c{flex-direction:column;align-items:stretch}',
+      '.cardvid-c .cv-frame,.cardvid-c .cv-embed{flex:none;max-width:none;width:100%}}'
     ].join('');
     var st = document.createElement('style'); st.id = 'card-video-css'; st.textContent = css;
     document.head.appendChild(st);
