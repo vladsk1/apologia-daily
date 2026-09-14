@@ -1,10 +1,5 @@
 {
   "accepted": {
-    "library/kalam.html -> library/es/kalam.html": {
-      "acceptedAt": "2026-08-17",
-      "sourceCommit": "2696efe",
-      "reason": "English-ADD only (not a retired-claim fix): the 2026-08-17 P2 addition (backlog row 184) adds a new objection subsection, \"Then isn't God infinitely old?\", answering the actual-infinite objection turned back on divine eternity. The mirror is not WRONG, only less complete - nothing false is live in translation. Deliberately NOT hand-translated, per the owner's standing preference against untranslated doctrinal prose that no native reviewer will gate; Macedonian and Spanish doctrinal review remain outstanding (docs/STATEMENT_OF_FAITH.md). The subsection turns on the classical-timelessness vs divine-temporality distinction and required three gate rounds and four lenses in English - exactly the material that must not be machine-translated onto an ungated surface."
-    },
     "library/finetuning.html -> library/es/finetuning.html": {
       "acceptedAt": "2026-08-17",
       "sourceCommit": "pending-this-commit",
