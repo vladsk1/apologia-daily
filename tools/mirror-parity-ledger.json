@@ -1,10 +1,5 @@
 {
   "accepted": {
-    "library/moral.html -> library/es/moral.html": {
-      "acceptedAt": "2026-08-24",
-      "sourceCommit": "pending-this-commit",
-      "reason": "English-ADD only (not a retired-claim fix): the 2026-08-24 additions for backlog rows 224/229 (the-air-we-breathe.md) add (1) a Premise-2 paragraph on C.S. Lewis's crooked-line point + Denhollander's 2018 statement, and (2) a new section 'The Is/Ought Firewall' using Nietzsche as the refuted naturalist position, plus footnote 15. The mirror is not WRONG, only less complete (still 14 footnotes); nothing false is live in translation. Deliberately NOT hand-translated per the owner's standing preference against untranslated doctrinal prose no native reviewer will gate. ⚠ NOTE FOR WHOEVER SYNCS THIS: the Nietzsche section is tripwire-sensitive (eugenics-adjacent lines) - it must NOT be machine-translated without its explicit 'the position the moral argument rejects' fencing carried in the same breath, or a lifted line reads as endorsement. Absent beats half-fenced here. Spanish doctrinal review is outstanding (docs/STATEMENT_OF_FAITH.md)."
-    },
     "library/index.html -> library/mk/index.html": {
       "acceptedAt": "2026-08-23",
       "sourceCommit": "652e747",
