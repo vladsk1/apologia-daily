@@ -92,6 +92,10 @@
     var body = document.querySelector('.art-body'); items = [];
     if(!body) return;
     body.querySelectorAll('h2,h3,p').forEach(function(n){
+      // Skip the boxes injected above the essay prose — the video card, the
+      // AI-tutor help box, and the Listen bar — so narration starts at the
+      // essay's own text, not the widget copy.
+      if(n.closest('.vlesson, .reader-help, .cardvid, #ad-listen')) return;
       var clone = n.cloneNode(true);
       // Exclude footnote markers, the "See the evidence" button, and the hidden
       // evidence-panel box — so the narration reads the prose, not the widget
