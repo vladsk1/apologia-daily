@@ -39,11 +39,6 @@
       "acceptedAt": "2026-08-23",
       "sourceCommit": "652e747",
       "reason": "NAV-INDEX LAG (2026-08-23): the English library/index.html 'Church in History' section was rebuilt as 'The Christian Revolution' (7 essays) when the ev-s8 tab was rebuilt. The localized library-index mirrors (library/mk/index.html, library/es/index.html) still show the old 3-essay 'Church in History' listing. This is a navigation index, not doctrinal argument prose; nothing false is live (the links resolve). Per the owner's standing delete-or-lag preference, the localized index nav is not hand-translated here. Clear when a native reviewer updates the localized library-index church section; Macedonian/Spanish review is outstanding (docs/STATEMENT_OF_FAITH.md)."
-    },
-    "ev-s6.html -> ev-s6.mk.html": {
-      "acceptedAt": "2026-09-12",
-      "sourceCommit": "pending-this-commit",
-      "reason": "THE TRINITY tab (16 cards, DEITY/TRINITY tier - the highest-stakes fragment). The MK mirror has only 10 of the 16 cards and ~208 <p> vs English ~543 <p> - i.e. 6 whole cards are missing AND the present cards are behind. This is precisely the tripwire-sensitive material the owner's rule fences: every Trinity/deity passage (and the Islam/JW cards) must be translated WITH its orthonote/anti-modalist/anti-Arian fencing in the same breath or left untranslated. It must NOT be bulk-machine-translated. Requires careful per-card native translation + dual-consensus-equivalent review. Per the standing EN->MK mirror rule the DEFAULT is to sync, but this fragment is a large per-card Pro-tier delta (the EN cards each gained a 'The Case, Plainly' narrative + an expanded Pro deep-dive, and some cards are net-new) that cannot be responsibly bulk-machine-translated in one pass onto the free, indexed surface. Recorded as a deliberate, written exception. Native-Macedonian doctrinal review is outstanding (docs/STATEMENT_OF_FAITH.md). Clear this entry when a native reviewer translates AND gates the fragment up to the current English."
     }
   }
 }
