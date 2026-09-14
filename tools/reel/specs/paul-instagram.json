@@ -1,0 +1,344 @@
+{
+  "reviewed": {
+    "argument": "2026-09-14",
+    "orthodoxy": "2026-09-14",
+    "neutrality": "2026-09-14",
+    "by": "2026-09-14 scene-locked vertical (Instagram) POSITIVE-CASE reel, DUAL-CONSENSUS tier (resurrection). Ported near-verbatim from certified paul-the-enemy-who-switched-sides. Gated READ-ONLY (Explore): argument STAMPABLE, orthodoxy CLEAN ('He had met the risen Jesus' pull-quote-safe; leads with the early creed). Neutrality found 1 BREAK - the closing caption asserted the resurrection appearance in the site's voice - FIXED by restoring the on-screen 'The enemy's own confession -' fence directly above the gold claim; re-gated neutrality STAMPABLE 0 BREAK/0 WEAK. Gal 1:13 + Gal 1:18-19 citations restored. Gal 1:18-19 (15 days/Peter then James) and the ~2-5yr creed dating verified. NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) POSITIVE-CASE reel on Paul's conversion (the enemy's confession). Ported near-verbatim from certified paul-the-enemy-who-switched-sides.json (library/paulconv.html). Already positive; no 'not proof' hedge to remove. Dual-consensus tier (resurrection): argument + orthodoxy + neutrality.",
+  "voiceover": "This isn't a believer's story about Jesus. It's an enemy's confession. In his own hand, Saul of Tarsus wrote that he persecuted the church of God violently and tried to destroy it. He had every earthly reason not to switch sides — status, a career, his safety — and he burned all of it, escaping one city lowered in a basket through a hole in the wall. And the easy explanations don't fit him. He wasn't grieving Jesus. He wasn't hoping Jesus was alive — he thought the movement was blasphemy worth killing for. He wasn't swept along by the group — he was leading the other side. But here's the part most people never hear. He didn't just believe it. He went and cross-examined the other witnesses: fifteen days with Peter, then with James — the very men who said they saw Jesus alive. And it's early — Paul's letters come before the Gospels, and the creed he quotes dates to within a few years of the cross. Even atheist scholars grant that dating. Christianity's fiercest destroyer became its boldest witness. Not a fan. Not a follower. This is the enemy's own confession: he had met the risen Jesus.",
+  "scenes": [
+    {
+      "dur": 6.1,
+      "vo": "This isn't a believer's story about Jesus. It's an enemy's confession.",
+      "big": [
+        {
+          "t": "Not a believer's",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "story.",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "An enemy's",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "confession.",
+          "c": "gold",
+          "s": 74
+        }
+      ]
+    },
+    {
+      "dur": 6.8,
+      "vo": "In his own hand, Saul of Tarsus wrote that he persecuted the church of God violently and tried to destroy it.",
+      "kicker": "IN HIS OWN HAND",
+      "lines": [
+        {
+          "t": "Saul of Tarsus wrote:",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "“I persecuted the church",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "of God violently —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "and tried to destroy it.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 42
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "— Galatians 1:13",
+          "c": "dim",
+          "f": "serif",
+          "s": 38
+        }
+      ]
+    },
+    {
+      "dur": 10.1,
+      "vo": "He had every earthly reason not to switch sides — status, a career, his safety — and he burned all of it, escaping one city lowered in a basket through a hole in the wall.",
+      "kicker": "HE BURNED IT ALL",
+      "lines": [
+        {
+          "t": "Status. Career. Safety.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "He burned all of it —",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "escaping one city in",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "a basket through the wall.",
+          "c": "cream",
+          "s": 42
+        }
+      ]
+    },
+    {
+      "dur": 10.7,
+      "vo": "And the easy explanations don't fit him. He wasn't grieving Jesus. He wasn't hoping Jesus was alive — he thought the movement was blasphemy worth killing for.",
+      "kicker": "THE EASY ANSWERS DON'T FIT",
+      "lines": [
+        {
+          "t": "Not grieving.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "Not hoping.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "He thought it was",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "blasphemy worth",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "killing for.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 4.8,
+      "vo": "He wasn't swept along by the group — he was leading the other side.",
+      "big": [
+        {
+          "t": "Not swept",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "along by the crowd —",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "he was leading",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "the other side.",
+          "c": "gold",
+          "s": 60
+        }
+      ]
+    },
+    {
+      "dur": 12.9,
+      "vo": "But here's the part most people never hear. He didn't just believe it. He went and cross-examined the other witnesses: fifteen days with Peter, then with James — the very men who said they saw Jesus alive.",
+      "kicker": "WHAT MOST NEVER HEAR",
+      "lines": [
+        {
+          "t": "He cross-examined",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "the witnesses —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "15 days with Peter,",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "then with James.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "— Galatians 1:18–19",
+          "c": "dim",
+          "f": "serif",
+          "s": 38
+        }
+      ]
+    },
+    {
+      "dur": 9.8,
+      "vo": "And it's early — Paul's letters come before the Gospels, and the creed he quotes dates to within a few years of the cross. Even atheist scholars grant that dating.",
+      "kicker": "AND IT'S EARLY",
+      "lines": [
+        {
+          "t": "Paul's letters predate",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "the Gospels.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "The creed he quotes:",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "within a few years",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "of the cross.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 4.7,
+      "vo": "Christianity's fiercest destroyer became its boldest witness.",
+      "big": [
+        {
+          "t": "Its fiercest",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "destroyer",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "became its",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "boldest witness.",
+          "c": "gold",
+          "s": 60
+        }
+      ]
+    },
+    {
+      "dur": 7.8,
+      "vo": "Not a fan. Not a follower. This is the enemy's own confession: he had met the risen Jesus.",
+      "big": [
+        {
+          "t": "Not a fan.",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "Not a follower.",
+          "c": "cream",
+          "s": 54
+        }
+      ],
+      "sub": [
+        {
+          "t": "The enemy's own confession —",
+          "c": "cream",
+          "f": "serif",
+          "s": 42
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "he had met the risen Jesus.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        }
+      ]
+    }
+  ]
+}
