@@ -47,12 +47,6 @@
     return m ? m[1] : '';
   }
 
-  /* PREVIEW: cards whose slug is here render the COMPACT layout (smaller video on
-     the left, the argument's title + a one-line note on the right). Everything
-     else keeps the current full-width layout. This is a live A/B look — widen the
-     set (or make compact the default) once the style is approved. */
-  var COMPACT = { 'minimalfacts': 1 };
-
   function apply(container) {
     if (!container) return;
     getLessons().then(function (lessons) {
@@ -60,8 +54,7 @@
       for (var i = 0; i < cards.length; i++) {
         var card = cards[i];
         if (card.querySelector('.cardvid')) continue;          // idempotent
-        var slug = slugFor(card);
-        var e = lessons[slug];
+        var e = lessons[slugFor(card)];
         if (!e || !e.youtube) continue;                         // no video / not uploaded yet
         if (!/^[A-Za-z0-9_-]{6,20}$/.test(e.youtube)) continue; // guard: plausible YouTube id only
         var cb = card.querySelector('.cb');
@@ -69,7 +62,7 @@
         var titleEl = card.querySelector('.ct');
         var title = titleEl ? (titleEl.textContent || '').trim() : '';
         injectCss();
-        insert(cb, e.youtube, title, !!COMPACT[slug]);
+        insert(cb, e.youtube, title);
       }
     });
   }
@@ -80,35 +73,22 @@
     });
   }
 
-  function insert(cb, ytid, title, compact) {
+  function insert(cb, ytid, title) {
     var card = document.createElement('aside');
-    card.className = 'cardvid' + (compact ? ' cardvid-c' : '');
+    card.className = 'cardvid cardvid-c';
     card.setAttribute('aria-label', 'Watch the short version of this argument');
     var poster = 'https://i.ytimg.com/vi/' + ytid + '/hqdefault.jpg';
-    var frame =
+    card.innerHTML =
       '<button type="button" class="cv-frame" aria-label="Play the video">' +
         '<img class="cv-poster" src="' + poster + '" alt="" loading="lazy" width="480" height="270">' +
         '<span class="cv-play" aria-hidden="true"><span class="cv-tri"></span></span>' +
-      '</button>';
-    if (compact) {
-      card.innerHTML =
-        frame +
-        '<div class="cv-copy">' +
-          '<span class="cv-eyebrow">&#9654;&nbsp;The short version</span>' +
-          (title ? '<span class="cv-title">' + esc(title) + '</span>' : '') +
-          '<span class="cv-note2">A ~1-minute, captioned overview of this argument. ' +
-            'Watch first, then read the case below.</span>' +
-        '</div>';
-    } else {
-      card.innerHTML =
-        '<div class="cv-head">' +
-          '<span class="cv-eyebrow">&#9654;&nbsp;The short version</span>' +
-          '<span class="cv-note">Watch first, then read the case below</span>' +
-        '</div>' +
-        frame +
-        '<p class="cv-cap">A ~1-minute, fully-captioned summary&mdash;the same argument, compressed. ' +
-          'It&rsquo;s a starting point; the case below is where it&rsquo;s actually made.</p>';
-    }
+      '</button>' +
+      '<div class="cv-copy">' +
+        '<span class="cv-eyebrow">&#9654;&nbsp;The short version</span>' +
+        (title ? '<span class="cv-title">' + esc(title) + '</span>' : '') +
+        '<span class="cv-note2">A ~1-minute, captioned overview of this argument. ' +
+          'Watch first, then read the case below.</span>' +
+      '</div>';
     cb.insertBefore(card, cb.firstChild);
 
     var btn = card.querySelector('.cv-frame');
