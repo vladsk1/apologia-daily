@@ -10,7 +10,7 @@
    Bump CACHE_VERSION to force-update clients after a deploy. */
 'use strict';
 
-var CACHE_VERSION = 'apd-v9';
+var CACHE_VERSION = 'apd-v10';
 var SHELL = [
   '/',
   '/index.html',
@@ -66,9 +66,10 @@ self.addEventListener('fetch', function (e) {
     return;
   }
 
-  // Scripts & styles: network-first so code updates land on the next visit;
-  // fall back to cache when offline.
-  if (/\.(?:js|css)$/i.test(url.pathname)) {
+  // Scripts, styles & HTML fragments (e.g. the ev-s*.html cards the hub fetches):
+  // network-first so code/content updates land on the next visit; fall back to
+  // cache when offline.
+  if (/\.(?:js|css|html)$/i.test(url.pathname)) {
     e.respondWith(
       fetch(req).then(function (res) {
         if (res && res.status === 200) {
