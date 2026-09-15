@@ -101,6 +101,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96)
 .chev{width:18px;height:18px;stroke:var(--mu);fill:none;stroke-width:2;flex-shrink:0;transition:transform .2s;}
 .card.op .chev{transform:rotate(180deg);}
 .cb{display:none;padding:0 1.5rem 1.5rem 4.5rem;border-top:1px solid var(--b);}
+/* Mobile: reclaim the wasted side space. The desktop .cb left-indent (aligns the
+   opened content under the title, past the number gutter) is far too large on a
+   phone, and the .main side padding compounds it. Tighten both so an opened card
+   uses nearly the full screen width. */
+@media(max-width:768px){
+  .main{padding:2rem 1rem 5rem;}
+  .cb{padding:0 1rem 1.25rem 1rem;}
+  .pro{padding:1.25rem 1rem;}
+  .ap,.ob{padding:1rem 1rem;}
+}
 .card.op .cb{display:block;}
 .fl{font-family:var(--ui);font-size:.62rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gr);background:var(--gr2);padding:3px 10px;border-radius:20px;display:inline-block;margin:1.25rem 0 .75rem;}
 .pe{font-family:var(--ui);font-size:.85rem;background:var(--n4);border-left:3px solid var(--g);padding:10px 14px;border-radius:0 4px 4px 0;color:var(--m);margin-bottom:1.25rem;line-height:1.6;}
