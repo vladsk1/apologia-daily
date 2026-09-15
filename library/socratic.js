@@ -68,6 +68,9 @@
       '@media(min-width:880px){.soc-modal{left:auto;top:64px;right:0;bottom:0;width:400px;height:auto;border-radius:12px 0 0 12px;box-shadow:-10px 0 44px rgba(0,0,0,.22)}',
       'html.soc-open .art,html.soc-open .main{margin-left:24px;margin-right:424px}}',
       '.art,.main{transition:margin .2s ease}',
+      // while the tutor panel is open, hide the floating launch tabs and nudge pills
+      // so nothing (e.g. the "Daily reminder" bell) overlaps the conversation controls
+      'html.soc-open #float-tutor,html.soc-open #ad-notify,html.soc-open #ad-install,html.soc-open #ad-ios-install{display:none!important}',
       '.soc-hd{background:linear-gradient(135deg,#0a1628,#12294a);color:#fff;padding:15px 18px;display:flex;align-items:center;gap:11px;flex:0 0 auto}',
       '.soc-hd .ic{font-size:1.35rem}',
       '.soc-hd .h1{font-family:"DM Sans",system-ui,sans-serif;font-weight:600;font-size:.98rem;margin:0}',
@@ -242,6 +245,7 @@
     var argName = (window.AD_ARG && String(window.AD_ARG).trim()) ||
       (document.title || '').replace(/\s*[|—-].*$/, '').trim();
     if (!body || !argName) return;
+    argName = argName.replace(/\\(['’])/g, '$1');
     ensureStyles();
     function essayExcerpt() {
       var ab = document.querySelector('.art-body');
@@ -287,8 +291,11 @@
           // argument name: prefer the inline-tutor's data-arg, else the card title
           var btn = card.querySelector('[data-arg]');
           var titleEl = card.querySelector('.ct');
-          var argName = (btn && btn.getAttribute('data-arg')) ||
-            (titleEl ? titleEl.textContent.trim() : 'this argument');
+          // prefer the clean card title; some data-arg attributes carry a stray
+          // escaping backslash (e.g. "Paul\'s"), so strip \ before a quote either way
+          var argName = (titleEl ? titleEl.textContent.trim() : '') ||
+            (btn && btn.getAttribute('data-arg')) || 'this argument';
+          argName = argName.replace(/\\(['’])/g, '$1');
           var launch = makeLauncher(true);
           launch.addEventListener('click', function (e) {
             e.stopPropagation();  // the whole .card toggles on click; don't close it
