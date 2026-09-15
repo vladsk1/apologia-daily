@@ -56,9 +56,11 @@
       '.soc-launch .go{color:#c8a951;font-weight:600;font-size:.82rem;white-space:nowrap}',
       '.soc-launch.soc-card{margin:0 0 16px}',
       // right-edge launcher tab for essays (stacks above the "Ask AI Tutor" tab)
-      '.soc-tab{background:#0a1628;color:#fff;border:1px solid rgba(200,169,81,.55);border-right:0;border-radius:7px 0 0 7px;padding:11px 14px;font-family:"DM Sans",system-ui,sans-serif;font-size:.82rem;font-weight:600;cursor:pointer;box-shadow:-4px 0 16px rgba(10,22,40,.28);display:flex;align-items:center;gap:7px;white-space:nowrap}',
+      '.soc-tab{background:#0a1628;color:#fff;border:1px solid rgba(200,169,81,.55);border-right:0;border-radius:7px 0 0 7px;padding:9px 13px;font-family:"DM Sans",system-ui,sans-serif;cursor:pointer;box-shadow:-4px 0 16px rgba(10,22,40,.28);display:flex;align-items:center;gap:9px;white-space:nowrap;text-align:left}',
       '.soc-tab:hover{background:#12294a}',
-      '.soc-tab .ic{font-size:1rem;line-height:1}',
+      '.soc-tab .ic{font-size:1.15rem;line-height:1}',
+      '.soc-tab .t1{display:block;font-size:.82rem;font-weight:600;line-height:1.2}',
+      '.soc-tab .t2{display:block;font-size:.66rem;font-weight:400;color:#c9d5e8;line-height:1.2;margin-top:1px}',
       // conversation container: NO backdrop, does not block or capture clicks on the essay
       '.soc-ov{position:fixed;inset:0;z-index:1900;pointer-events:none}',
       // mobile: a bottom sheet leaving the top of the essay visible
@@ -259,7 +261,7 @@
     tab.type = 'button';
     tab.className = 'soc-tab';
     tab.setAttribute('aria-label', 'Teach me this — guided tutor');
-    tab.innerHTML = '<span class="ic">&#127891;</span> Teach me this';
+    tab.innerHTML = '<span class="ic">&#127891;</span><span><span class="t1">Teach me this</span><span class="t2">Guided, step by step</span></span>';
     tab.addEventListener('click', function () {
       openSocratic({ argument: argName, getExcerpt: essayExcerpt });
     });
@@ -267,6 +269,17 @@
     if (host) {
       // stack it in the same right-edge column, just above the Ask AI Tutor button
       host.insertBefore(tab, host.firstChild);
+      // give the sibling "Ask AI Tutor" button a matching descriptor so the two tabs
+      // read as two distinct tools (ask vs be taught). Runs once, guarded.
+      var ask = document.getElementById('float-btn');
+      if (ask && !ask.__socDesc) {
+        ask.__socDesc = true;
+        ask.style.alignItems = 'center';
+        ask.innerHTML = '<span style="font-size:1.15rem;line-height:1;">&#129504;</span>' +
+          '<span style="text-align:left;">' +
+          '<span style="display:block;font-size:.82rem;font-weight:600;line-height:1.2;">Ask AI Tutor</span>' +
+          '<span style="display:block;font-size:.66rem;font-weight:400;line-height:1.2;margin-top:1px;opacity:.82;">Ask any question</span></span>';
+      }
     } else {
       // fallback: a standalone right-edge tab, vertically centred
       tab.style.position = 'fixed';
