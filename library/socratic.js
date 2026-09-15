@@ -76,6 +76,8 @@
       '.soc-msg{max-width:88%;font-family:"Source Serif 4",Georgia,serif;font-size:1rem;line-height:1.55;padding:11px 14px;border-radius:13px}',
       '.soc-msg p{margin:0 0 .6em}.soc-msg p:last-child{margin:0}',
       '.soc-ai{align-self:flex-start;background:#fff;border:1px solid #e8e2d8;color:#1a2740;border-bottom-left-radius:4px}',
+      // one-time intro shown when the walkthrough opens (what it is + scroll hint)
+      '.soc-intro{align-self:stretch;max-width:100%;background:#fbf7ee;border:1px solid #e7dcc2;border-left:3px solid #c8a951;color:#3a3222;font-family:"DM Sans",system-ui,sans-serif;font-size:.9rem;line-height:1.5}',
       '.soc-you{align-self:flex-end;background:#0a1628;color:#fff;border-bottom-right-radius:4px}',
       '.soc-crisis{align-self:stretch;max-width:100%;background:#fff;border:1px solid #d9c4c4;border-left:3px solid #b4534f}',
       '.soc-typing{align-self:flex-start;color:#7a8699;font-family:"DM Sans",sans-serif;font-size:.85rem;padding:6px 4px}',
@@ -142,6 +144,22 @@
     return d;
   }
 
+  // A one-time note at the top of the conversation: says what the walkthrough is
+  // (guided, not a Q&A) and that the argument stays on the page to scroll through.
+  // Pure UI copy — never added to cur.history, so it is not sent to the tutor.
+  function intro() {
+    var d = document.createElement('div');
+    d.className = 'soc-msg soc-intro';
+    d.innerHTML =
+      '<p><b>How this works:</b> this is a guided walkthrough &mdash; I won&rsquo;t just give ' +
+      'you the answer. I&rsquo;ll ask one short question at a time and help you reason the ' +
+      'argument out for yourself.</p>' +
+      '<p>The full argument stays on the page &mdash; <b>scroll up and down</b> any time to ' +
+      'reread it as you answer.</p>';
+    log.appendChild(d);
+    log.scrollTop = log.scrollHeight;
+  }
+
   function openSocratic(opts) {
     opts = opts || {};
     ensureStyles(); buildModal();
@@ -152,6 +170,7 @@
     };
     hdTitle.textContent = cur.argument;
     log.innerHTML = '';
+    intro();                    // static UI note: what this is + scroll hint (not sent to the API)
     input.value = ''; input.style.height = 'auto';
     ov.style.display = 'block';
     document.documentElement.classList.add('soc-open');
