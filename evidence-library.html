@@ -190,6 +190,21 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
     .nav-cta { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.78rem; font-weight:500; background:var(--g,#c8a951); color:var(--n2,#050d1a); padding:6px 16px; border-radius:3px; text-decoration:none; }
       .nav-dashboard { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.8rem; color:rgba(255,255,255,0.65); text-decoration:none; border:1px solid rgba(255,255,255,0.2); padding:5px 12px; border-radius:3px; transition:all 0.15s; }
     .nav-dashboard:hover { color:#fff; border-color:rgba(255,255,255,0.4); }
+    /* Premise-evidence panels ("Research the evidence, premise by premise") */
+    .pv{border:1px solid var(--b,#e2ddd3);border-radius:5px;margin:9px 0;overflow:hidden;background:var(--w,#fff);}
+    .pv[open]{border-color:rgba(200,169,81,.5);}
+    .pv>summary{list-style:none;cursor:pointer;padding:12px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+    .pv>summary::-webkit-details-marker{display:none;}
+    .pv>summary:hover{background:var(--n4,#f7f4ef);}
+    .pv .pvn{font-family:var(--ui,'DM Sans',sans-serif);font-size:.64rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--g,#a88930);}
+    .pv .pvt{font-family:var(--fd,'Playfair Display',serif);font-weight:700;font-size:.98rem;color:var(--n,#0a1628);}
+    .pv .pvchev{margin-left:auto;color:var(--n3,#8a94a3);font-size:.8rem;transition:transform .15s;}
+    .pv[open] .pvchev{transform:rotate(180deg);}
+    .pvb{padding:2px 14px 14px;border-top:1px solid var(--b,#eee7db);}
+    .pvb .pvr{margin:9px 0;font-size:.92rem;line-height:1.55;color:var(--n2,#26364d);}
+    .pvb .pvl{display:block;margin-bottom:1px;font-family:var(--ui,'DM Sans',sans-serif);font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--n3,#8a94a3);}
+    .pv-more{display:inline-block;margin-top:6px;font-family:var(--ui,'DM Sans',sans-serif);font-size:.8rem;font-weight:600;color:var(--g,#a88930);text-decoration:none;border-bottom:1px solid transparent;}
+    .pv-more:hover{border-color:var(--g,#c8a951);}
   </style>
   <link rel="stylesheet" href="/ad-nav.css">
 
