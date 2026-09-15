@@ -3,12 +3,12 @@
  * Instead of answering questions (the float-tutor / ask-selection do that), this leads
  * the reader to BUILD an argument for themselves, one step at a time, in a back-and-forth.
  *
- * Two entry points, one engine:
- *   • Deep-dive essays: auto-inserts a launcher at the top of .art-body, teaching from the
- *     essay's own text (window.AD_ARG + .art-body).
- *   • Evidence Library hub: window.ADSocratic.apply(container) adds a launcher to each card,
- *     teaching from that card's own certified text — so a reader learns the argument without
- *     leaving the card. (evidence-library.html calls this from enhanceSection.)
+ * Two entry points, one engine — both present the launcher the SAME way: a right-edge
+ * tab stacked above the "Ask AI Tutor" tab, so the two tools read as a matched pair.
+ *   • Deep-dive essays: the tab teaches from the essay's own text (window.AD_ARG + .art-body).
+ *   • Evidence Library hub: window.ADSocratic.apply(container) mounts the same tab and it
+ *     teaches whichever card the reader is currently looking at (opening it if needed), from
+ *     that card's own certified text. (evidence-library.html calls apply() from enhanceSection.)
  *   • window.openSocratic({argument, getExcerpt}) opens the conversation programmatically.
  *
  * It talks to the SAME endpoint the float-tutor uses (/api/tutor) with mode:"socratic",
@@ -47,15 +47,8 @@
     if (stylesDone) return; stylesDone = true;
     var st = document.createElement('style');
     st.textContent = [
-      '.soc-launch{display:flex;gap:12px;align-items:center;background:linear-gradient(135deg,#0a1628,#12294a);color:#fff;border:0;border-radius:12px;padding:15px 18px;margin:0 0 22px;cursor:pointer;width:100%;text-align:left;font-family:"DM Sans",system-ui,sans-serif;box-shadow:0 6px 18px rgba(10,22,40,.14)}',
-      '.soc-launch:hover{box-shadow:0 8px 24px rgba(10,22,40,.22)}',
-      '.soc-launch .ic{font-size:1.5rem;line-height:1}',
-      '.soc-launch .tx{flex:1}',
-      '.soc-launch .t1{font-weight:600;font-size:.98rem;display:block}',
-      '.soc-launch .t2{font-size:.82rem;color:#c9d5e8;display:block;margin-top:2px}',
-      '.soc-launch .go{color:#c8a951;font-weight:600;font-size:.82rem;white-space:nowrap}',
-      '.soc-launch.soc-card{margin:0 0 16px}',
-      // right-edge launcher tab for essays (stacks above the "Ask AI Tutor" tab)
+      // right-edge launcher tab (stacks above the "Ask AI Tutor" tab) — essays + hub
+
       '.soc-tab{background:#0a1628;color:#fff;border:1px solid rgba(200,169,81,.55);border-right:0;border-radius:7px 0 0 7px;padding:9px 13px;font-family:"DM Sans",system-ui,sans-serif;cursor:pointer;box-shadow:-4px 0 16px rgba(10,22,40,.28);display:flex;align-items:center;gap:9px;white-space:nowrap;text-align:left}',
       '.soc-tab:hover{background:#12294a}',
       '.soc-tab .ic{font-size:1.15rem;line-height:1}',
@@ -227,15 +220,28 @@
       });
   }
 
-  function makeLauncher(cardClass) {
-    var b = document.createElement('button');
-    b.type = 'button';
-    b.className = 'soc-launch' + (cardClass ? ' soc-card' : '');
-    b.innerHTML = '<span class="ic">&#127891;</span><span class="tx">' +
-      '<span class="t1">Teach me this</span>' +
-      '<span class="t2">Reason through the argument step by step with the AI tutor &mdash; you do the thinking.</span>' +
-      '</span><span class="go">Start &rarr;</span>';
-    return b;
+  // Builds the right-edge "Teach me this" tab (used by both the essay and the hub).
+  function makeTab() {
+    var tab = document.createElement('button');
+    tab.type = 'button';
+    tab.className = 'soc-tab';
+    tab.setAttribute('aria-label', 'Teach me this — guided tutor');
+    tab.innerHTML = '<span class="ic">&#127891;</span><span><span class="t1">Teach me this</span>' +
+      '<span class="t2">Guided, step by step</span></span>';
+    return tab;
+  }
+
+  // Gives the sibling "Ask AI Tutor" button a matching descriptor so the two tabs read
+  // as two distinct tools (ask vs be taught). Runs once, guarded.
+  function addAskDescriptor() {
+    var ask = document.getElementById('float-btn');
+    if (!ask || ask.__socDesc) return;
+    ask.__socDesc = true;
+    ask.style.alignItems = 'center';
+    ask.innerHTML = '<span style="font-size:1.15rem;line-height:1;">&#129504;</span>' +
+      '<span style="text-align:left;">' +
+      '<span style="display:block;font-size:.82rem;font-weight:600;line-height:1.2;">Ask AI Tutor</span>' +
+      '<span style="display:block;font-size:.66rem;font-weight:400;line-height:1.2;margin-top:1px;opacity:.82;">Ask any question</span></span>';
   }
 
   // ── essay launcher: a right-edge tab stacked above the "Ask AI Tutor" tab ──
@@ -257,29 +263,14 @@
       for (var i = 0; i < chrome.length; i++) chrome[i].parentNode.removeChild(chrome[i]);
       return (clone.textContent || '').replace(/\s+/g, ' ').trim();
     }
-    var tab = document.createElement('button');
-    tab.type = 'button';
-    tab.className = 'soc-tab';
-    tab.setAttribute('aria-label', 'Teach me this — guided tutor');
-    tab.innerHTML = '<span class="ic">&#127891;</span><span><span class="t1">Teach me this</span><span class="t2">Guided, step by step</span></span>';
+    var tab = makeTab();
     tab.addEventListener('click', function () {
       openSocratic({ argument: argName, getExcerpt: essayExcerpt });
     });
     var host = document.getElementById('float-tutor');
     if (host) {
-      // stack it in the same right-edge column, just above the Ask AI Tutor button
-      host.insertBefore(tab, host.firstChild);
-      // give the sibling "Ask AI Tutor" button a matching descriptor so the two tabs
-      // read as two distinct tools (ask vs be taught). Runs once, guarded.
-      var ask = document.getElementById('float-btn');
-      if (ask && !ask.__socDesc) {
-        ask.__socDesc = true;
-        ask.style.alignItems = 'center';
-        ask.innerHTML = '<span style="font-size:1.15rem;line-height:1;">&#129504;</span>' +
-          '<span style="text-align:left;">' +
-          '<span style="display:block;font-size:.82rem;font-weight:600;line-height:1.2;">Ask AI Tutor</span>' +
-          '<span style="display:block;font-size:.66rem;font-weight:400;line-height:1.2;margin-top:1px;opacity:.82;">Ask any question</span></span>';
-      }
+      host.insertBefore(tab, host.firstChild); // stack above the Ask AI Tutor button
+      addAskDescriptor();
     } else {
       // fallback: a standalone right-edge tab, vertically centred
       tab.style.position = 'fixed';
@@ -291,40 +282,79 @@
     }
   });
 
-  // ── Evidence Library hub: one launcher per card ──
+  // ── Evidence Library hub: one floating "Teach me this" tab (paired with the
+  // "Ask AI Tutor" tab), teaching whichever card the reader is currently looking at ──
+  function cardTeachOpts(card) {
+    // argument name: prefer the clean card title; some data-arg attributes carry a
+    // stray escaping backslash (e.g. "Paul\'s"), so strip \ before a quote either way
+    var btn = card.querySelector('[data-arg]');
+    var titleEl = card.querySelector('.ct');
+    var argName = (titleEl ? titleEl.textContent.trim() : '') ||
+      (btn && btn.getAttribute('data-arg')) || 'this argument';
+    argName = argName.replace(/\\(['’])/g, '$1');
+    return {
+      argument: argName,
+      getExcerpt: function () {
+        if (typeof window.argExcerpt === 'function') {
+          var x = window.argExcerpt(card); if (x) return x;
+        }
+        var body = card.querySelector('.cb') || card;
+        return (body.innerText || body.textContent || '').replace(/\s+/g, ' ').trim();
+      }
+    };
+  }
+
+  // The card the reader is most likely reading: an open card nearest the top of the
+  // viewport; if none is open, the card nearest the top overall.
+  function pickTargetCard() {
+    var cards = document.querySelectorAll('.card');
+    if (!cards.length) return null;
+    var open = [], all = [];
+    for (var i = 0; i < cards.length; i++) {
+      all.push(cards[i]);
+      if (cards[i].classList.contains('op')) open.push(cards[i]);
+    }
+    var pool = open.length ? open : all;
+    var vh = window.innerHeight || 800, best = pool[0], bestScore = Infinity;
+    for (var j = 0; j < pool.length; j++) {
+      var r = pool[j].getBoundingClientRect();
+      var score = Math.abs(r.top - vh * 0.2);
+      if (r.bottom < 0 || r.top > vh) score += 1e6; // fully off-screen: last resort
+      if (score < bestScore) { bestScore = score; best = pool[j]; }
+    }
+    return best;
+  }
+
+  var hubTabDone = false;
+  function ensureHubTab() {
+    if (hubTabDone) return;
+    var host = document.getElementById('float-tutor');
+    if (!host) return; // not mounted yet; a later apply() will retry
+    hubTabDone = true;
+    var tab = makeTab();
+    tab.addEventListener('click', function () {
+      var card = pickTargetCard();
+      if (!card) return;
+      if (!card.classList.contains('op')) {
+        var head = card.querySelector('.ch'); // open it so the reader can follow along
+        if (head) head.click();
+      }
+      openSocratic(cardTeachOpts(card));
+    });
+    host.insertBefore(tab, host.firstChild); // stack above the Ask AI Tutor button
+    addAskDescriptor();
+  }
+
   window.ADSocratic = {
+    // Called by enhanceSection() on every section load/tab switch. Idempotent: it just
+    // ensures the single floating tab exists. No-op on pages without cards (essays).
     apply: function (container) {
       try {
-        if (!container) return;
+        var hasCard = (container && container.querySelector && container.querySelector('.card')) ||
+          document.querySelector('.card');
+        if (!hasCard) return;
         ensureStyles();
-        var cards = container.querySelectorAll ? container.querySelectorAll('.card') : [];
-        for (var i = 0; i < cards.length; i++) (function (card) {
-          if (card.__soc) return; card.__soc = true;
-          var cb = card.querySelector('.cb') || card;
-          // argument name: prefer the inline-tutor's data-arg, else the card title
-          var btn = card.querySelector('[data-arg]');
-          var titleEl = card.querySelector('.ct');
-          // prefer the clean card title; some data-arg attributes carry a stray
-          // escaping backslash (e.g. "Paul\'s"), so strip \ before a quote either way
-          var argName = (titleEl ? titleEl.textContent.trim() : '') ||
-            (btn && btn.getAttribute('data-arg')) || 'this argument';
-          argName = argName.replace(/\\(['’])/g, '$1');
-          var launch = makeLauncher(true);
-          launch.addEventListener('click', function (e) {
-            e.stopPropagation();  // the whole .card toggles on click; don't close it
-            openSocratic({
-              argument: argName,
-              getExcerpt: function () {
-                if (typeof window.argExcerpt === 'function') {
-                  var x = window.argExcerpt(card); if (x) return x;
-                }
-                var body = card.querySelector('.cb') || card;
-                return (body.innerText || body.textContent || '').replace(/\s+/g, ' ').trim();
-              }
-            });
-          });
-          cb.insertBefore(launch, cb.firstChild);
-        })(cards[i]);
+        ensureHubTab();
       } catch (e) {}
     }
   };
