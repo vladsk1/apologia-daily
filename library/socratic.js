@@ -63,8 +63,11 @@
       '.soc-ov{position:fixed;inset:0;z-index:1900;pointer-events:none}',
       // mobile: a bottom sheet leaving the top of the essay visible
       '.soc-modal{pointer-events:auto;position:fixed;left:0;right:0;bottom:0;height:min(64vh,600px);background:#f7f4ef;border-radius:16px 16px 0 0;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 -10px 40px rgba(0,0,0,.28)}',
-      // desktop: a right-side rail, essay stays readable to its left',
-      '@media(min-width:880px){.soc-modal{left:auto;top:64px;right:0;bottom:0;width:400px;height:auto;border-radius:12px 0 0 12px;box-shadow:-10px 0 44px rgba(0,0,0,.22)}}',
+      // desktop: a right-side rail, and the article/hub column shifts left so its text
+      // sits fully beside the rail (not under it) — the essay stays readable while asking
+      '@media(min-width:880px){.soc-modal{left:auto;top:64px;right:0;bottom:0;width:400px;height:auto;border-radius:12px 0 0 12px;box-shadow:-10px 0 44px rgba(0,0,0,.22)}',
+      'html.soc-open .art,html.soc-open .main{margin-left:24px;margin-right:424px}}',
+      '.art,.main{transition:margin .2s ease}',
       '.soc-hd{background:linear-gradient(135deg,#0a1628,#12294a);color:#fff;padding:15px 18px;display:flex;align-items:center;gap:11px;flex:0 0 auto}',
       '.soc-hd .ic{font-size:1.35rem}',
       '.soc-hd .h1{font-family:"DM Sans",system-ui,sans-serif;font-weight:600;font-size:.98rem;margin:0}',
@@ -130,7 +133,7 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && ov && ov.style.display !== 'none') close(); });
   }
 
-  function close() { if (ov) ov.style.display = 'none'; }
+  function close() { if (ov) ov.style.display = 'none'; document.documentElement.classList.remove('soc-open'); }
 
   function bubble(cls, html) {
     var d = document.createElement('div');
@@ -153,6 +156,7 @@
     log.innerHTML = '';
     input.value = ''; input.style.height = 'auto';
     ov.style.display = 'block';
+    document.documentElement.classList.add('soc-open');
     kickoff();
     setTimeout(function () { input && input.focus(); }, 80);
   }
