@@ -55,10 +55,16 @@
       '.soc-launch .t2{font-size:.82rem;color:#c9d5e8;display:block;margin-top:2px}',
       '.soc-launch .go{color:#c8a951;font-weight:600;font-size:.82rem;white-space:nowrap}',
       '.soc-launch.soc-card{margin:0 0 16px}',
-      '.soc-ov{position:fixed;inset:0;z-index:2000;background:rgba(6,13,26,.55);display:flex;align-items:flex-end;justify-content:center;padding:0}',
-      '@media(min-width:640px){.soc-ov{align-items:center;padding:24px}}',
-      '.soc-modal{background:#f7f4ef;width:100%;max-width:620px;height:88vh;max-height:760px;border-radius:16px 16px 0 0;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 -8px 40px rgba(0,0,0,.3)}',
-      '@media(min-width:640px){.soc-modal{border-radius:16px;height:80vh}}',
+      // right-edge launcher tab for essays (stacks above the "Ask AI Tutor" tab)
+      '.soc-tab{background:#0a1628;color:#fff;border:1px solid rgba(200,169,81,.55);border-right:0;border-radius:7px 0 0 7px;padding:11px 14px;font-family:"DM Sans",system-ui,sans-serif;font-size:.82rem;font-weight:600;cursor:pointer;box-shadow:-4px 0 16px rgba(10,22,40,.28);display:flex;align-items:center;gap:7px;white-space:nowrap}',
+      '.soc-tab:hover{background:#12294a}',
+      '.soc-tab .ic{font-size:1rem;line-height:1}',
+      // conversation container: NO backdrop, does not block or capture clicks on the essay
+      '.soc-ov{position:fixed;inset:0;z-index:1900;pointer-events:none}',
+      // mobile: a bottom sheet leaving the top of the essay visible
+      '.soc-modal{pointer-events:auto;position:fixed;left:0;right:0;bottom:0;height:min(64vh,600px);background:#f7f4ef;border-radius:16px 16px 0 0;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 -10px 40px rgba(0,0,0,.28)}',
+      // desktop: a right-side rail, essay stays readable to its left',
+      '@media(min-width:880px){.soc-modal{left:auto;top:64px;right:0;bottom:0;width:400px;height:auto;border-radius:12px 0 0 12px;box-shadow:-10px 0 44px rgba(0,0,0,.22)}}',
       '.soc-hd{background:linear-gradient(135deg,#0a1628,#12294a);color:#fff;padding:15px 18px;display:flex;align-items:center;gap:11px;flex:0 0 auto}',
       '.soc-hd .ic{font-size:1.35rem}',
       '.soc-hd .h1{font-family:"DM Sans",system-ui,sans-serif;font-weight:600;font-size:.98rem;margin:0}',
@@ -146,7 +152,7 @@
     hdTitle.textContent = cur.argument;
     log.innerHTML = '';
     input.value = ''; input.style.height = 'auto';
-    ov.style.display = 'flex';
+    ov.style.display = 'block';
     kickoff();
     setTimeout(function () { input && input.focus(); }, 80);
   }
@@ -223,28 +229,45 @@
     return b;
   }
 
-  // ── essay auto-launcher ──
+  // ── essay launcher: a right-edge tab stacked above the "Ask AI Tutor" tab ──
+  // Deliberately NOT inserted into the essay body: the walkthrough should be reachable
+  // from anywhere in the essay, not assume the reader has scrolled to the top; and the
+  // conversation opens as a side rail / bottom sheet so the essay stays readable.
   ready(function () {
     var body = document.querySelector('.art-body');
     var argName = (window.AD_ARG && String(window.AD_ARG).trim()) ||
       (document.title || '').replace(/\s*[|—-].*$/, '').trim();
     if (!body || !argName) return;
     ensureStyles();
-    var launch = makeLauncher(false);
-    launch.addEventListener('click', function () {
-      openSocratic({
-        argument: argName,
-        getExcerpt: function () {
-          var ab = document.querySelector('.art-body');
-          if (!ab) return '';
-          var clone = ab.cloneNode(true);
-          var chrome = clone.querySelectorAll('.soc-launch, script, style');
-          for (var i = 0; i < chrome.length; i++) chrome[i].parentNode.removeChild(chrome[i]);
-          return (clone.textContent || '').replace(/\s+/g, ' ').trim();
-        }
-      });
+    function essayExcerpt() {
+      var ab = document.querySelector('.art-body');
+      if (!ab) return '';
+      var clone = ab.cloneNode(true);
+      var chrome = clone.querySelectorAll('.soc-launch, .soc-tab, script, style');
+      for (var i = 0; i < chrome.length; i++) chrome[i].parentNode.removeChild(chrome[i]);
+      return (clone.textContent || '').replace(/\s+/g, ' ').trim();
+    }
+    var tab = document.createElement('button');
+    tab.type = 'button';
+    tab.className = 'soc-tab';
+    tab.setAttribute('aria-label', 'Teach me this — guided tutor');
+    tab.innerHTML = '<span class="ic">&#127891;</span> Teach me this';
+    tab.addEventListener('click', function () {
+      openSocratic({ argument: argName, getExcerpt: essayExcerpt });
     });
-    body.insertBefore(launch, body.firstChild);
+    var host = document.getElementById('float-tutor');
+    if (host) {
+      // stack it in the same right-edge column, just above the Ask AI Tutor button
+      host.insertBefore(tab, host.firstChild);
+    } else {
+      // fallback: a standalone right-edge tab, vertically centred
+      tab.style.position = 'fixed';
+      tab.style.right = '0';
+      tab.style.top = '50%';
+      tab.style.transform = 'translateY(-50%)';
+      tab.style.zIndex = '500';
+      document.body.appendChild(tab);
+    }
   });
 
   // ── Evidence Library hub: one launcher per card ──
