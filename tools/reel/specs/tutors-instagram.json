@@ -1,0 +1,255 @@
+{
+  "reviewed": {
+    "argument": "2026-09-15",
+    "orthodoxy": "2026-09-15",
+    "by": "2026-09-15 scene-locked vertical (Instagram) COMBINED feature-promo reel showing BOTH tutors (Ask AI Tutor + the new 'Teach me this' Socratic tutor) as the matched pair they are in the UI. Every claim recombined from the two already-gated, code-verified feature reels (ask-tutor-instagram + teach-me-instagram, both STAMPABLE/CLEAN 2026-09-15). Verification gate READ-ONLY (Explore), both lenses: accuracy STAMPABLE 0 BREAK/0 WEAK, orthodoxy CLEAN 0 HERESY/0 DRIFT. Shared-rail wording verified accurate for BOTH modes ('grounded in the certified page', not the Ask-mode-overclaiming 'only from the page'); pastoral crisis backstop (lib/crisis.js) confirmed to run ahead of key/rate-limit for every mode. POLISH applied: opening hook scoped 'on every page' -> 'on every essay and evidence card' to match the accurate close. Not an apologetics claim. NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) COMBINED feature-promo reel presenting BOTH AI tutors as the matched pair they are in the UI (library/socratic.js stacks 'Teach me this' above 'Ask AI Tutor'). Claims recombined from the certified ask-tutor-instagram.json + teach-me-instagram.json; verified against api/tutor.js + library/socratic.js + lib/crisis.js.",
+  "voiceover": "Apologia Daily has two AI tutors on every essay and evidence card — and together they change how you learn the faith. Tutor one: Ask AI Tutor. Hit a question mid-argument — what does that mean? isn't this circular? — and just ask. It answers in plain English, grounded in the certified text of the page you're reading — not random answers off the internet. Tutor two, brand new: Teach me this. Instead of giving you the answer, it teaches you to build the argument yourself. One short question at a time, step by step, until you've reasoned the whole case out — so you can explain it in your own words. Both are grounded in the certified page you're reading. Both stay inside the historic creeds — gentle, honest, and accurate. And if you're ever hurting, both stop and point you to real help. Ask it, or be taught by it. Two tutors for the hardest questions of the faith — free, on every essay and card.",
+  "scenes": [
+    {
+      "dur": 7.6,
+      "vo": "Apologia Daily has two AI tutors on every essay and evidence card — and together they change how you learn the faith.",
+      "big": [
+        {
+          "t": "Two AI tutors.",
+          "c": "cream",
+          "s": 62
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "On every essay",
+          "c": "gold",
+          "s": 58
+        },
+        {
+          "t": "& evidence card.",
+          "c": "gold",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 9.7,
+      "vo": "Tutor one: Ask AI Tutor. Hit a question mid-argument — what does that mean? isn't this circular? — and just ask.",
+      "kicker": "TUTOR ONE · ASK AI TUTOR",
+      "lines": [
+        {
+          "t": "Hit a question",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "mid-argument?",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "“What does that mean?”",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "Just ask.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        }
+      ]
+    },
+    {
+      "dur": 7.3,
+      "vo": "It answers in plain English, grounded in the certified text of the page you're reading — not random answers off the internet.",
+      "kicker": "GROUNDED, NOT GUESSING",
+      "lines": [
+        {
+          "t": "Answers grounded in",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "the certified page —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "not random answers",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "off the internet.",
+          "c": "cream",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "dur": 8.4,
+      "vo": "Tutor two, brand new: Teach me this. Instead of giving you the answer, it teaches you to build the argument yourself.",
+      "kicker": "TUTOR TWO · TEACH ME THIS",
+      "big": [
+        {
+          "t": "It teaches you",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "to build it",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "yourself.",
+          "c": "gold",
+          "s": 80
+        }
+      ]
+    },
+    {
+      "dur": 7.5,
+      "vo": "One short question at a time, step by step, until you've reasoned the whole case out — so you can explain it in your own words.",
+      "kicker": "ONE STEP AT A TIME",
+      "lines": [
+        {
+          "t": "One question at a time,",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "step by step —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "until you can explain it",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "in your own words.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 8.4,
+      "vo": "Both are grounded in the certified page you're reading. Both stay inside the historic creeds — gentle, honest, and accurate.",
+      "kicker": "WHAT THEY SHARE",
+      "lines": [
+        {
+          "t": "Grounded in the",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "certified page.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Inside the creeds —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "gentle, honest, accurate.",
+          "c": "cream",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "dur": 4.8,
+      "vo": "And if you're ever hurting, both stop and point you to real help.",
+      "big": [
+        {
+          "t": "And if you're",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "ever hurting —",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "both point you",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "to real help.",
+          "c": "gold",
+          "s": 60
+        }
+      ]
+    },
+    {
+      "dur": 8.2,
+      "vo": "Ask it, or be taught by it. Two tutors for the hardest questions of the faith — free, on every essay and card.",
+      "big": [
+        {
+          "t": "Ask it.",
+          "c": "cream",
+          "s": 64
+        },
+        {
+          "t": "Or be taught.",
+          "c": "gold",
+          "s": 68
+        }
+      ],
+      "sub": [
+        {
+          "t": "Two tutors, free, on every essay & card.",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    }
+  ]
+}
