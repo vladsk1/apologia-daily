@@ -148,12 +148,13 @@
   // (guided, not a Q&A) and that the argument stays on the page to scroll through.
   // Pure UI copy — never added to cur.history, so it is not sent to the tutor.
   function intro() {
+    var name = esc(cur && cur.argument ? cur.argument : 'this argument');
     var d = document.createElement('div');
     d.className = 'soc-msg soc-intro';
     d.innerHTML =
-      '<p><b>How this works:</b> this is a guided walkthrough &mdash; I won&rsquo;t just give ' +
-      'you the answer. I&rsquo;ll ask one short question at a time and help you reason the ' +
-      'argument out for yourself.</p>' +
+      '<p><b>How this works:</b> this is a guided walkthrough of <b>' + name + '</b> &mdash; ' +
+      'I won&rsquo;t just give you the answer. I&rsquo;ll ask one short question at a time and ' +
+      'help you reason the argument out for yourself.</p>' +
       '<p>The full argument stays on the page &mdash; <b>scroll up and down</b> any time to ' +
       'reread it as you answer.</p>';
     log.appendChild(d);
