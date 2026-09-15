@@ -545,6 +545,7 @@ function enhanceSection(container, id) {
   try { if (window.ADTabIntro) window.ADTabIntro.apply(container, id); } catch (e) {}
   try { if (window.ADCrossLink) window.ADCrossLink.apply(container); } catch (e) {}
   try { if (window.ADDiagram) window.ADDiagram.auto(container); } catch (e) {}
+  try { if (window.ADSocratic) window.ADSocratic.apply(container); } catch (e) {}
 }
 
 /* ── The "Category N of M" eyebrow ──────────────────────────────────────────
@@ -612,7 +613,7 @@ function argExcerpt(el) {
     // Clone so we can drop UI chrome (the tutor box's own placeholder text, the upgrade
     // prompt) without touching the page the reader is looking at.
     var clone = body.cloneNode(true);
-    var chrome = clone.querySelectorAll('.inline-tutor, .upgrade-prompt, script, style');
+    var chrome = clone.querySelectorAll('.inline-tutor, .upgrade-prompt, .soc-launch, script, style');
     for (var i = 0; i < chrome.length; i++) chrome[i].parentNode.removeChild(chrome[i]);
     var title = card.querySelector('.ct');
     var txt = (title ? title.textContent + '\n\n' : '') + (clone.textContent || '');
@@ -1211,5 +1212,6 @@ async function sendFloatQuestion() {
   <script src="/library/tab-intro.js" defer></script>
   <script src="/library/crosslink.js" defer></script>
   <script src="/library/diagram.js" defer></script>
+  <script src="/library/socratic.js" defer></script>
 </body>
 </html>

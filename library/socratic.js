@@ -1,20 +1,24 @@
-/* socratic.js — "Teach me this" guided-reasoning tutor for the deep-dive essays.
+/* socratic.js — "Teach me this" guided-reasoning tutor.
  *
- * Adds a launcher button near the top of an essay. Instead of answering questions
- * (the existing float-tutor / ask-selection do that), this leads the reader to BUILD
- * the argument for themselves, one step at a time, in a back-and-forth conversation.
+ * Instead of answering questions (the float-tutor / ask-selection do that), this leads
+ * the reader to BUILD an argument for themselves, one step at a time, in a back-and-forth.
+ *
+ * Two entry points, one engine:
+ *   • Deep-dive essays: auto-inserts a launcher at the top of .art-body, teaching from the
+ *     essay's own text (window.AD_ARG + .art-body).
+ *   • Evidence Library hub: window.ADSocratic.apply(container) adds a launcher to each card,
+ *     teaching from that card's own certified text — so a reader learns the argument without
+ *     leaving the card. (evidence-library.html calls this from enhanceSection.)
+ *   • window.openSocratic({argument, getExcerpt}) opens the conversation programmatically.
  *
  * It talks to the SAME endpoint the float-tutor uses (/api/tutor) with mode:"socratic",
- * sending the essay text as reference and the running dialogue as history. All the
+ * sending the certified text as reference and the running dialogue as history. All the
  * endpoint's rails apply automatically: the pastoral/crisis path runs first, and the
- * orthodoxy / neutrality / argument-accuracy boundaries are in the system prompt.
+ * orthodoxy / neutrality / argument-accuracy boundaries are in the (gated) system prompt.
  *
- * The Socratic SYSTEM PROMPT is doctrinal content and is gated in api/tutor.js. This
- * file is interaction plumbing + UI copy — it adds no doctrinal claim of its own.
- *
- * Usage: one include per essay — <script src="/library/socratic.js" defer></script>
- * Requires window.AD_ARG (the argument name, set inline on every deep-dive essay)
- * and a .art-body container (the certified essay text, sent as reference).
+ * The Socratic SYSTEM PROMPT is doctrinal content and is gated in api/tutor.js. This file
+ * is interaction plumbing + UI copy — it adds no doctrinal claim of its own, and it teaches
+ * only from certified text supplied at call time.
  */
 (function () {
   if (window.__socratic) return; window.__socratic = true;
@@ -30,7 +34,6 @@
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
     });
   }
-  // Render assistant text as safe HTML: escape, then paragraph/line breaks + **bold**.
   function fmt(s) {
     return esc(s)
       .replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')
@@ -38,17 +41,10 @@
       .replace(/\n/g, '<br>');
   }
 
-  ready(function () {
-    var body = document.querySelector('.art-body');
-    var argName = (window.AD_ARG && String(window.AD_ARG).trim()) ||
-      (document.title || '').replace(/\s*[|—-].*$/, '').trim();
-    if (!body || !argName) return;
-
-    var history = [];      // [{role, content}] — includes the hidden kickoff user turn
-    var busy = false;
-    var started = false;
-
-    // ── styles ──
+  // ── styles (injected once) ──
+  var stylesDone = false;
+  function ensureStyles() {
+    if (stylesDone) return; stylesDone = true;
     var st = document.createElement('style');
     st.textContent = [
       '.soc-launch{display:flex;gap:12px;align-items:center;background:linear-gradient(135deg,#0a1628,#12294a);color:#fff;border:0;border-radius:12px;padding:15px 18px;margin:0 0 22px;cursor:pointer;width:100%;text-align:left;font-family:"DM Sans",system-ui,sans-serif;box-shadow:0 6px 18px rgba(10,22,40,.14)}',
@@ -58,6 +54,7 @@
       '.soc-launch .t1{font-weight:600;font-size:.98rem;display:block}',
       '.soc-launch .t2{font-size:.82rem;color:#c9d5e8;display:block;margin-top:2px}',
       '.soc-launch .go{color:#c8a951;font-weight:600;font-size:.82rem;white-space:nowrap}',
+      '.soc-launch.soc-card{margin:0 0 16px}',
       '.soc-ov{position:fixed;inset:0;z-index:2000;background:rgba(6,13,26,.55);display:flex;align-items:flex-end;justify-content:center;padding:0}',
       '@media(min-width:640px){.soc-ov{align-items:center;padding:24px}}',
       '.soc-modal{background:#f7f4ef;width:100%;max-width:620px;height:88vh;max-height:760px;border-radius:16px 16px 0 0;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 -8px 40px rgba(0,0,0,.3)}',
@@ -84,130 +81,221 @@
       '.soc-note{font-family:"DM Sans",sans-serif;font-size:.68rem;color:#96a0b0;text-align:center;margin:7px 0 0}'
     ].join('');
     document.head.appendChild(st);
+  }
 
-    // ── launcher ──
-    var launch = document.createElement('button');
-    launch.type = 'button';
-    launch.className = 'soc-launch';
-    launch.innerHTML = '<span class="ic">&#127891;</span><span class="tx">' +
+  // ── modal singleton ──
+  var ov, log, input, sendBtn, hdTitle, cur = null;
+
+  function buildModal() {
+    if (ov) return;
+    ov = document.createElement('div');
+    ov.className = 'soc-ov';
+    ov.setAttribute('role', 'dialog');
+    ov.setAttribute('aria-modal', 'true');
+    ov.setAttribute('aria-label', 'Teach me this — guided tutor');
+    ov.style.display = 'none';
+    ov.innerHTML =
+      '<div class="soc-modal">' +
+        '<div class="soc-hd"><span class="ic">&#127891;</span><div><p class="h1">Teach me this</p>' +
+          '<p class="h2"></p></div>' +
+          '<button class="soc-x" type="button" aria-label="Close">&#10005;</button></div>' +
+        '<div class="soc-log" aria-live="polite"></div>' +
+        '<div class="soc-ft"><div class="soc-row">' +
+          '<textarea class="soc-in" rows="1" placeholder="Type your answer&hellip;" aria-label="Your answer"></textarea>' +
+          '<button class="soc-send" type="button">Send</button></div>' +
+          '<p class="soc-note">AI tutor &middot; guided by this argument. If you&rsquo;re struggling with something serious, it will point you to real help.</p>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(ov);
+    log = ov.querySelector('.soc-log');
+    input = ov.querySelector('.soc-in');
+    sendBtn = ov.querySelector('.soc-send');
+    hdTitle = ov.querySelector('.soc-hd .h2');
+
+    ov.querySelector('.soc-x').addEventListener('click', close);
+    ov.addEventListener('click', function (e) { if (e.target === ov) close(); });
+    sendBtn.addEventListener('click', function () { submit(); });
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); submit(); }
+    });
+    input.addEventListener('input', function () {
+      input.style.height = 'auto'; input.style.height = Math.min(input.scrollHeight, 120) + 'px';
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && ov && ov.style.display !== 'none') close(); });
+  }
+
+  function close() { if (ov) ov.style.display = 'none'; }
+
+  function bubble(cls, html) {
+    var d = document.createElement('div');
+    d.className = 'soc-msg ' + cls;
+    d.innerHTML = '<p>' + html + '</p>';
+    log.appendChild(d);
+    log.scrollTop = log.scrollHeight;
+    return d;
+  }
+
+  function openSocratic(opts) {
+    opts = opts || {};
+    ensureStyles(); buildModal();
+    cur = {
+      argument: (opts.argument || 'this argument'),
+      getExcerpt: (typeof opts.getExcerpt === 'function' ? opts.getExcerpt : function () { return ''; }),
+      history: [], busy: false
+    };
+    hdTitle.textContent = cur.argument;
+    log.innerHTML = '';
+    input.value = ''; input.style.height = 'auto';
+    ov.style.display = 'flex';
+    kickoff();
+    setTimeout(function () { input && input.focus(); }, 80);
+  }
+  window.openSocratic = openSocratic;
+
+  function kickoff() {
+    cur.history.push({ role: 'user', content: KICKOFF });   // kept in history, not shown
+    callAPI();
+  }
+
+  function submit() {
+    if (!cur) return;
+    var t = (input.value || '').trim();
+    if (!t || cur.busy) return;
+    input.value = ''; input.style.height = 'auto';
+    bubble('soc-you', fmt(t));
+    cur.history.push({ role: 'user', content: t });
+    callAPI();
+  }
+
+  function callAPI() {
+    cur.busy = true; if (sendBtn) sendBtn.disabled = true;
+    var typing = document.createElement('div');
+    typing.className = 'soc-typing'; typing.textContent = 'Tutor is thinking…';
+    log.appendChild(typing); log.scrollTop = log.scrollHeight;
+
+    var excerpt = '';
+    try { excerpt = (cur.getExcerpt() || '').toString().slice(0, 40000); } catch (e) { excerpt = ''; }
+    var prior = cur.history.slice(0, -1);
+    var question = cur.history[cur.history.length - 1].content;
+    var session = cur; // guard against a close+reopen mid-flight
+
+    fetch('/api/tutor', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        mode: 'socratic', question: question, argument: cur.argument,
+        category: 'Evidence Library', excerpt: excerpt, history: prior
+      })
+    }).then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+      .then(function (res) {
+        if (session !== cur) return;   // a different session was opened; drop stale reply
+        typing.remove();
+        var ans = res.d && res.d.answer;
+        if (res.d && res.d.crisis) {
+          bubble('soc-crisis', fmt(ans || ''));
+        } else if (res.ok && ans) {
+          bubble('soc-ai', fmt(ans));
+          cur.history.push({ role: 'assistant', content: ans });
+        } else {
+          bubble('soc-ai', 'Sorry — I couldn&rsquo;t reach the tutor just now. Please try again in a moment.');
+          cur.history.pop();
+        }
+      }).catch(function () {
+        if (session !== cur) return;
+        typing.remove();
+        bubble('soc-ai', 'Sorry — something went wrong reaching the tutor. Please try again.');
+        cur.history.pop();
+      }).then(function () {
+        if (session !== cur) return;
+        cur.busy = false; if (sendBtn) sendBtn.disabled = false;
+        if (input) input.focus();
+      });
+  }
+
+  function makeLauncher(cardClass) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'soc-launch' + (cardClass ? ' soc-card' : '');
+    b.innerHTML = '<span class="ic">&#127891;</span><span class="tx">' +
       '<span class="t1">Teach me this</span>' +
       '<span class="t2">Reason through the argument step by step with the AI tutor &mdash; you do the thinking.</span>' +
       '</span><span class="go">Start &rarr;</span>';
+    return b;
+  }
+
+  // ── essay auto-launcher ──
+  ready(function () {
+    var body = document.querySelector('.art-body');
+    var argName = (window.AD_ARG && String(window.AD_ARG).trim()) ||
+      (document.title || '').replace(/\s*[|—-].*$/, '').trim();
+    if (!body || !argName) return;
+    ensureStyles();
+    var launch = makeLauncher(false);
+    launch.addEventListener('click', function () {
+      openSocratic({
+        argument: argName,
+        getExcerpt: function () {
+          var ab = document.querySelector('.art-body');
+          if (!ab) return '';
+          var clone = ab.cloneNode(true);
+          var chrome = clone.querySelectorAll('.soc-launch, script, style');
+          for (var i = 0; i < chrome.length; i++) chrome[i].parentNode.removeChild(chrome[i]);
+          return (clone.textContent || '').replace(/\s+/g, ' ').trim();
+        }
+      });
+    });
     body.insertBefore(launch, body.firstChild);
+  });
 
-    var ov, log, input, sendBtn;
-
-    function buildModal() {
-      ov = document.createElement('div');
-      ov.className = 'soc-ov';
-      ov.setAttribute('role', 'dialog');
-      ov.setAttribute('aria-modal', 'true');
-      ov.setAttribute('aria-label', 'Teach me this — guided tutor');
-      ov.innerHTML =
-        '<div class="soc-modal">' +
-          '<div class="soc-hd"><span class="ic">&#127891;</span><div><p class="h1">Teach me this</p>' +
-            '<p class="h2">' + esc(argName) + '</p></div>' +
-            '<button class="soc-x" type="button" aria-label="Close">&#10005;</button></div>' +
-          '<div class="soc-log" aria-live="polite"></div>' +
-          '<div class="soc-ft"><div class="soc-row">' +
-            '<textarea class="soc-in" rows="1" placeholder="Type your answer&hellip;" aria-label="Your answer"></textarea>' +
-            '<button class="soc-send" type="button">Send</button></div>' +
-            '<p class="soc-note">AI tutor &middot; guided by this essay. If you&rsquo;re struggling with something serious, it will point you to real help.</p>' +
-          '</div>' +
-        '</div>';
-      document.body.appendChild(ov);
-      log = ov.querySelector('.soc-log');
-      input = ov.querySelector('.soc-in');
-      sendBtn = ov.querySelector('.soc-send');
-
-      ov.querySelector('.soc-x').addEventListener('click', close);
-      ov.addEventListener('click', function (e) { if (e.target === ov) close(); });
-      sendBtn.addEventListener('click', function () { submit(); });
-      input.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); submit(); }
-      });
-      input.addEventListener('input', function () {
-        input.style.height = 'auto'; input.style.height = Math.min(input.scrollHeight, 120) + 'px';
-      });
-      document.addEventListener('keydown', escClose);
+  // ── Evidence Library hub: one launcher per card ──
+  window.ADSocratic = {
+    apply: function (container) {
+      try {
+        if (!container) return;
+        ensureStyles();
+        var cards = container.querySelectorAll ? container.querySelectorAll('.card') : [];
+        for (var i = 0; i < cards.length; i++) (function (card) {
+          if (card.__soc) return; card.__soc = true;
+          var cb = card.querySelector('.cb') || card;
+          // argument name: prefer the inline-tutor's data-arg, else the card title
+          var btn = card.querySelector('[data-arg]');
+          var titleEl = card.querySelector('.ct');
+          var argName = (btn && btn.getAttribute('data-arg')) ||
+            (titleEl ? titleEl.textContent.trim() : 'this argument');
+          var launch = makeLauncher(true);
+          launch.addEventListener('click', function (e) {
+            e.stopPropagation();  // the whole .card toggles on click; don't close it
+            openSocratic({
+              argument: argName,
+              getExcerpt: function () {
+                if (typeof window.argExcerpt === 'function') {
+                  var x = window.argExcerpt(card); if (x) return x;
+                }
+                var body = card.querySelector('.cb') || card;
+                return (body.innerText || body.textContent || '').replace(/\s+/g, ' ').trim();
+              }
+            });
+          });
+          cb.insertBefore(launch, cb.firstChild);
+        })(cards[i]);
+      } catch (e) {}
     }
+  };
 
-    function escClose(e) { if (e.key === 'Escape' && ov) close(); }
-
-    function open() {
-      if (!ov) buildModal();
-      ov.style.display = 'flex';
-      if (!started) { started = true; kickoff(); }
-      setTimeout(function () { input && input.focus(); }, 80);
-    }
-    function close() { if (ov) ov.style.display = 'none'; }
-
-    function bubble(cls, html) {
-      var d = document.createElement('div');
-      d.className = 'soc-msg ' + cls;
-      d.innerHTML = '<p>' + html + '</p>';
-      log.appendChild(d);
-      log.scrollTop = log.scrollHeight;
-      return d;
-    }
-
-    function kickoff() {
-      history.push({ role: 'user', content: KICKOFF });   // kept in history, not shown
-      callAPI();
-    }
-
-    function submit() {
-      var t = (input.value || '').trim();
-      if (!t || busy) return;
-      input.value = ''; input.style.height = 'auto';
-      bubble('soc-you', fmt(t));
-      history.push({ role: 'user', content: t });
-      callAPI();
-    }
-
-    function callAPI() {
-      busy = true; if (sendBtn) sendBtn.disabled = true;
-      var typing = document.createElement('div');
-      typing.className = 'soc-typing'; typing.textContent = 'Tutor is thinking…';
-      log.appendChild(typing); log.scrollTop = log.scrollHeight;
-
-      var ab = document.querySelector('.art-body');
-      var excerpt = ab ? (ab.innerText || ab.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 40000) : '';
-      // send prior turns as history; the latest turn is `question` (crisis-checked server-side)
-      var prior = history.slice(0, -1);
-      var question = history[history.length - 1].content;
-
-      fetch('/api/tutor', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          mode: 'socratic', question: question, argument: argName,
-          category: 'Evidence Library', excerpt: excerpt, history: prior
-        })
-      }).then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
-        .then(function (res) {
-          typing.remove();
-          var ans = res.d && res.d.answer;
-          if (res.d && res.d.crisis) {
-            bubble('soc-crisis', fmt(ans || ''));
-            // do not keep pressing the lesson after a crisis reply
-          } else if (res.ok && ans) {
-            bubble('soc-ai', fmt(ans));
-            history.push({ role: 'assistant', content: ans });
-          } else {
-            bubble('soc-ai', 'Sorry — I couldn&rsquo;t reach the tutor just now. Please try again in a moment.');
-            history.pop(); // drop the unanswered turn so retry works cleanly
-          }
-        }).catch(function () {
-          typing.remove();
-          bubble('soc-ai', 'Sorry — something went wrong reaching the tutor. Please try again.');
-          history.pop();
-        }).then(function () {
-          busy = false; if (sendBtn) sendBtn.disabled = false;
-          if (input) input.focus();
-        });
-    }
-
-    launch.addEventListener('click', open);
+  // Close the load-order race on the hub: the first section's enhanceSection() can run
+  // before this deferred script defines window.ADSocratic (later tab switches are fine
+  // because it is defined by then). A MutationObserver catches cards whenever they are
+  // injected — initial section, tab switches, or any re-render — independent of timing.
+  // apply() is idempotent (card.__soc guard); this is a no-op on essays (no cards ever).
+  ready(function () {
+    if (!('MutationObserver' in window)) { window.ADSocratic.apply(document); return; }
+    var queued = false;
+    function flush() { queued = false; window.ADSocratic.apply(document); }
+    var mo = new MutationObserver(function () {
+      if (queued) return; queued = true;
+      (window.requestAnimationFrame || setTimeout)(flush);
+    });
+    mo.observe(document.body, { childList: true, subtree: true });
+    window.ADSocratic.apply(document); // catch anything already present
   });
 })();
