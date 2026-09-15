@@ -66,6 +66,12 @@
       // while the tutor panel is open, hide the floating launch tabs and nudge pills
       // so nothing (e.g. the "Daily reminder" bell) overlaps the conversation controls
       'html.soc-open #float-tutor,html.soc-open #ad-notify,html.soc-open #ad-install,html.soc-open #ad-ios-install{display:none!important}',
+      // while open, stop any stray horizontal overflow from pushing the fixed panel
+      // off the right edge on mobile (that clips the close button / Send on some iPhones)
+      'html.soc-open,html.soc-open body{overflow-x:hidden}',
+      // keep the right-edge tabs a hair off the screen edge on phones so the last
+      // word (and the close affordance) is never clipped by the very edge or a scrollbar
+      '@media(max-width:879px){#float-tutor{right:6px!important}}',
       '.soc-hd{background:linear-gradient(135deg,#0a1628,#12294a);color:#fff;padding:15px 18px;display:flex;align-items:center;gap:11px;flex:0 0 auto}',
       '.soc-hd .ic{font-size:1.35rem}',
       '.soc-hd .h1{font-family:"DM Sans",system-ui,sans-serif;font-weight:600;font-size:.98rem;margin:0}',
@@ -81,7 +87,7 @@
       '.soc-you{align-self:flex-end;background:#0a1628;color:#fff;border-bottom-right-radius:4px}',
       '.soc-crisis{align-self:stretch;max-width:100%;background:#fff;border:1px solid #d9c4c4;border-left:3px solid #b4534f}',
       '.soc-typing{align-self:flex-start;color:#7a8699;font-family:"DM Sans",sans-serif;font-size:.85rem;padding:6px 4px}',
-      '.soc-ft{flex:0 0 auto;border-top:1px solid #e2dccf;background:#f7f4ef;padding:11px 14px}',
+      '.soc-ft{flex:0 0 auto;border-top:1px solid #e2dccf;background:#f7f4ef;padding:11px 14px calc(11px + env(safe-area-inset-bottom, 0px))}',
       '.soc-row{display:flex;gap:9px;align-items:flex-end}',
       '.soc-in{flex:1;font-family:"DM Sans",sans-serif;font-size:.92rem;padding:10px 12px;border:1px solid #d5cdbf;border-radius:9px;background:#fff;color:#0f1f38;resize:none;max-height:120px;outline:none}',
       '.soc-in:focus{border-color:#c8a951;box-shadow:0 0 0 3px rgba(200,169,81,.16)}',
