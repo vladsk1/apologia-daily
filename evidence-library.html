@@ -286,7 +286,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
       <span style="color:rgba(255,255,255,0.25);">&middot;</span>
       <span id="ev-lang-mk" onclick="setLang('mk')" style="cursor:pointer;margin:0 4px;color:rgba(255,255,255,0.5);font-weight:400;">Македонски</span>
       <span style="color:rgba(255,255,255,0.25);">&middot;</span>
-      <a href="/library/es/" style="margin:0 4px;color:rgba(255,255,255,0.5);font-weight:400;text-decoration:none;">Español</a>
+      <span id="ev-lang-es" onclick="setLang('es')" style="cursor:pointer;margin:0 4px;color:rgba(255,255,255,0.5);font-weight:400;">Español</span>
     </div>
   </div>
 </div>
@@ -478,7 +478,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
 
 <script>
 var loaded = {};
-var LANG = (function(){ try { var u = new URLSearchParams(location.search).get('lang'); if (u==='mk'||u==='en') return u; return localStorage.getItem('ev_lang') || 'en'; } catch(e){ return 'en'; } })();
+var LANG = (function(){ try { var u = new URLSearchParams(location.search).get('lang'); if (u==='mk'||u==='en'||u==='es') return u; var s = localStorage.getItem('ev_lang'); return (s==='mk'||s==='es') ? s : 'en'; } catch(e){ return 'en'; } })();
 
 function sw(id, btn) {
   var s = document.querySelectorAll('.sec');
@@ -496,7 +496,7 @@ function loadSection(id, cb) {
   loaded[id] = true;
   var container = document.getElementById(id + '-content');
   if (!container) { if (cb) cb(); return; }
-  fetch('ev-' + id + (LANG === 'mk' ? '.mk' : '') + '.html')
+  fetch('ev-' + id + (LANG === 'en' ? '' : '.' + LANG) + '.html')
     .then(function(r) { return r.text(); })
     .then(function(html) { container.innerHTML = html; enhanceSection(container, id); if (cb) cb(); })
     .catch(function() { container.innerHTML = '<p style="padding:2rem;color:red;">Failed to load. Please refresh.</p>'; });
@@ -566,7 +566,7 @@ function enhanceSection(container, id) {
    therefore shows no counter — it never made a false claim, and silently
    replacing certified wording is not this function's job. */
 var TAB_ORDER = ['s1','s2','s3','s4','s5','s6','s7','s8'];
-var COUNTER_RE = /^\s*(Category|Категорија)\s+\d+\s+(of|од)\s+\d+\s*$/;
+var COUNTER_RE = /^\s*(Category|Категорија|Categoría)\s+\d+\s+(of|од|de)\s+\d+\s*$/;
 function fixCategoryEyebrow(container, id) {
   var el = container.querySelector('.iey');
   if (!el || !COUNTER_RE.test(el.textContent)) return;
@@ -574,6 +574,8 @@ function fixCategoryEyebrow(container, id) {
   if (i === -1) return;
   el.textContent = (LANG === 'mk')
     ? 'Категорија ' + (i + 1) + ' од ' + TAB_ORDER.length
+    : (LANG === 'es')
+    ? 'Categoría ' + (i + 1) + ' de ' + TAB_ORDER.length
     : 'Category ' + (i + 1) + ' of ' + TAB_ORDER.length;
 }
 
@@ -793,7 +795,7 @@ function fillT(tid, q) {
   else { loadSection('s1'); }
 })();
 
-// ── Bilingual hub (English / Macedonian) ──
+// ── Multilingual hub (English / Macedonian / Spanish) ──
 var I18N = {
   en: { ey:'Evidence Library', ht:'The case for <em>Christian faith</em>',
     hs:'Every major argument examined — free summaries in plain English, Pro deep dives for those who want to go further.',
@@ -802,7 +804,11 @@ var I18N = {
   mk: { ey:'Доказна библиотека', ht:'Случајот за <em>христијанската вера</em>',
     hs:'Секој главен аргумент разгледан — бесплатни резимеа на јасен јазик, Pro длабински осврти за оние што сакаат да продлабочат.',
     tabs:{s1:'Постоењето на Бог',s2:'Воскресението',s3:'Исус',s4:'Веродостојност на Библијата',s5:'Наука и вера',s6:'Троица',s7:'Приказни за обраќање',s8:'Христијанската револуција'},
-    floatLabel:'Прво отворете картичка со аргумент', floatPlaceholder:'Што не ви е јасно? Прашајте сѐ...', floatBtn:'Прашај го AI тутор' }
+    floatLabel:'Прво отворете картичка со аргумент', floatPlaceholder:'Што не ви е јасно? Прашајте сѐ...', floatBtn:'Прашај го AI тутор' },
+  es: { ey:'Biblioteca de evidencias', ht:'El caso por la <em>fe cristiana</em>',
+    hs:'Cada argumento principal examinado — resúmenes gratuitos en lenguaje sencillo, análisis Pro para quienes desean profundizar.',
+    tabs:{s1:'La existencia de Dios',s2:'La resurrección',s3:'Jesús',s4:'Fiabilidad de la Biblia',s5:'Ciencia y fe',s6:'La Trinidad',s7:'Historias de conversión',s8:'La revolución cristiana'},
+    floatLabel:'Primero abre una tarjeta de argumento', floatPlaceholder:'¿Qué te genera dudas? Pregunta lo que quieras...', floatBtn:'Pregunta al tutor de IA' }
 };
 function applyChrome() {
   var d = I18N[LANG] || I18N.en;
@@ -812,15 +818,16 @@ function applyChrome() {
   var tabs=document.querySelectorAll('.cni .tab'); var order=TAB_ORDER;
   for(var i=0;i<tabs.length;i++){ var k=order[i]; if(d.tabs[k]) tabs[i].innerHTML=d.tabs[k]; }
   var fl=document.getElementById('float-arg-label');
-  if(fl){ var t=fl.textContent.trim(); if(t===I18N.en.floatLabel||t===I18N.mk.floatLabel) fl.textContent=d.floatLabel; }
+  if(fl){ var t=fl.textContent.trim(); if(t===I18N.en.floatLabel||t===I18N.mk.floatLabel||t===I18N.es.floatLabel) fl.textContent=d.floatLabel; }
   var fi=document.getElementById('float-input'); if(fi) fi.placeholder=d.floatPlaceholder;
   var fb=document.getElementById('float-send-btn'); if(fb) fb.textContent=d.floatBtn;
-  var en=document.getElementById('ev-lang-en'), mk=document.getElementById('ev-lang-mk');
+  var en=document.getElementById('ev-lang-en'), mk=document.getElementById('ev-lang-mk'), es=document.getElementById('ev-lang-es');
   if(en){ en.style.fontWeight=LANG==='en'?'700':'400'; en.style.color=LANG==='en'?'#fff':'rgba(255,255,255,0.5)'; }
   if(mk){ mk.style.fontWeight=LANG==='mk'?'700':'400'; mk.style.color=LANG==='mk'?'#fff':'rgba(255,255,255,0.5)'; }
+  if(es){ es.style.fontWeight=LANG==='es'?'700':'400'; es.style.color=LANG==='es'?'#fff':'rgba(255,255,255,0.5)'; }
 }
 function setLang(lang){
-  if(lang!=='mk') lang='en';
+  if(lang!=='mk'&&lang!=='es') lang='en';
   LANG=lang;
   try{ localStorage.setItem('ev_lang',lang); }catch(e){}
   try{ var u=new URL(location.href); u.searchParams.set('lang',lang); history.replaceState({},'',u); }catch(e){}
