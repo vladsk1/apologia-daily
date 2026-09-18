@@ -116,5 +116,7 @@ weighs (Vermes, Goulder, Lüdemann, Crossan, Craffert) — these belong in `libr
 
 ## Live-door status
 - `library/minimalfacts.html` — **already cites this paper (fn 2–3); best-in-market; primary-grounded.**
-  Four enrichments queued (1× P2, 3× P3) — see `docs/content-backlog.md`.
+  ✅ **All four enrichments (1× P2, 3× P3) SHIPPED 2026-09-18** in one gated pass — four-lens dual-consensus
+  (citations STAMPABLE verbatim, argument STAMPABLE, orthodoxy CLEAN, neutrality 2 WEAK → fixed → STAMPABLE);
+  footnotes 2/3/4/20 enriched with no renumber. Backlog rows all DONE.
 - `/briefs`, `/sources` — no change owed (no new verbatim PD quote; the primaries are copyrighted).
