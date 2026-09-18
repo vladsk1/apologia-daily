@@ -10,7 +10,7 @@
    Bump CACHE_VERSION to force-update clients after a deploy. */
 'use strict';
 
-var CACHE_VERSION = 'apd-v34';
+var CACHE_VERSION = 'apd-v35';
 var SHELL = [
   '/',
   '/index.html',
