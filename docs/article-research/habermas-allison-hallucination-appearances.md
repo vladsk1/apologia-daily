@@ -16,4 +16,4 @@
 Collective-hallucination clinical literature (Zusne & Jones 135–136; O'Connell *TynBul* 60); conversion-disorder critique (Kent/Goulder; Sadock). The 2001 article restates the same primaries — bergeron owns them.
 
 ## Live-door status
-`appearances.html` — strong; 4 enrichments queued. `/sources`: Keim 6:353 is PD → could become a `/sources` verbatim entry if quoted.
+`appearances.html` — ✅ **all 4 enrichments SHIPPED 2026-09-18** (four-lens dual-consensus; citations verified Keim 6:353 against the archive.org scan; one merged fix pass then all STAMPABLE/CLEAN). `/sources`: Keim 6:353 is PD → could become a `/sources` verbatim entry if quoted.
