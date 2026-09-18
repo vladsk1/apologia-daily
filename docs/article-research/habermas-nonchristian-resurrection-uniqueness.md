@@ -17,4 +17,4 @@
 - 1989-Price's "mythological hypothesis untenable" concession is pre-mythicist-turn — anachronistic; the essay rightly uses Carrier as the live mythicist.
 
 ## Live-door status
-`uniqueness.html` — strong & current; 1 real enrichment (Apollonius).
+`uniqueness.html` — ✅ **Apollonius enrichment SHIPPED 2026-09-18** (four-lens; citations corrected Ferguson John-not-James vs archive.org + Cornell UP). Row B (Romulus) left as optional P4.
