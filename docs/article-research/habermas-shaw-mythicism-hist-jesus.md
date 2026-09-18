@@ -20,4 +20,4 @@
 Casey's idiosyncratic early Gospel dates (as our voice); 1 Cor 15:6 "500 witnesses" (crosses the existence-only fence into resurrection); "no world religion has earlier founder-records" (a reliability/earliness argument, not existence — protects the essay's tight scope).
 
 ## Live-door status
-`hist_jesus.html` — an outside review already judged it strong; these are additive planks, own-words. `/sources`: Sandmel 1962 is not PD (1962). No `/sources` add.
+`hist_jesus.html` — ✅ **4 planks SHIPPED 2026-09-18** (Pauline silence, late-dating fallacy, evidence-free interpolation, pagan-parallels; four-lens gated, round-2 all STAMPABLE/CLEAN). Row 6 (P4 siblings/Doherty) left OPEN — Mark 6:3 already present. `/sources`: Sandmel 1962 not PD.
