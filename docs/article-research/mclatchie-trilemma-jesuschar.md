@@ -17,4 +17,4 @@
 - Undesigned-coincidences apparatus (McGrew/Blunt/Bauckham) — genre mismatch; our essay stays conditional on reliability by design.
 
 ## Live-door status
-`jesuschar.html` — the better, more honest treatment of the argument's core; 3 additive Step-2 rows. `/sources`: Justin *Dial.* (ANF) is PD → candidate `/sources` entry.
+`jesuschar.html` — ✅ **all 3 Step-2 rows SHIPPED 2026-09-18** (liar-horn cursed-crucifixion, Mark 14:61-64 concrete, trilemma history; dual-consensus gated, round-2 all STAMPABLE/CLEAN). `/sources`: Justin *Dial.* (ANF) is PD → candidate `/sources` entry.
