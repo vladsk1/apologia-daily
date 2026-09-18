@@ -1,0 +1,20 @@
+# Jonathan McLatchie — "Liar, Lunatic, or Lord? Reviving C.S. Lewis' Trilemma (Revised & Expanded)" → `jesuschar.html`
+
+> Our-own-words map of a copyrighted apologetics essay (author-hosted; HTML in git-ignored `_pdfs/`). ⚠ McLatchie is a Christian apologist/popularizer (Discovery Institute fellow) — treat as a LEAD; cite the PRIMARIES he points to, never "McLatchie says X." Every citation is UNVERIFIED until gated. Deity/messiah material = **dual-consensus tier**.
+
+> ✅ **MINED IN FULL 2026-09-18.** **PAIRED ESSAY READ IN FULL FIRST (Step Zero):** `library/jesuschar.html`.
+
+**Structural finding:** McLatchie runs a *different* trilemma (liar / sincerely-mistaken / Lord, "lunatic" a sub-case) and a **two-step** argument, but **explicitly declines to defend Step 1** ("treats the historicity of Jesus' divine self-claims as a given"). Step 1 — the legend/fourth-horn — is exactly what OUR essay interrogates. **Is the source better anywhere?** Only on Step 2 (three narrow additive rows). ⚠⚠ **On the argument's core weakness — the legend/fourth-horn, Ehrman, circularity, the honest scholarly state — OURS IS DECISIVELY BETTER** (he's silent). Do NOT let his assume-reliability confidence bleed in; preserve our conditional framing.
+
+## Executable rows
+- **Row B (P2, MED-HIGH; dual-consensus) — strengthen the "liar" horn with the self-chosen cursed crucifixion.** Currently ours defends "liar" only by character. Add an independent leg: a deceiver angling to be received as Israel's Messiah would not center his mission on his *own crucifixion* — which marked a man "cursed" (**Deut 21:22–23**) and was "a stumbling block to Jews, folly to Gentiles" (**1 Cor 1:23**, Paul c. 53 CE — early & uncontested), cutting against the militaristic messianic hope (**Psalms of Solomon 17:21–32**; Josephus *JW* 6.5.4 §312–313; Trypho's objection, **Justin, *Dial.* 32, 89** — ANF vol. 1, PUBLIC DOMAIN). Target: "The Claim and the Character" / "Reply, with Concessions." ⚠ Frame *conditionally* (presupposes the passion-predictions are roughly historical), consistent with the essay's whole stance; the load-bearing premises (cross = curse/scandal) are themselves early and uncontested.
+- **Row C (P3, MED; dual-consensus) — make "high claims are not confined to John" concrete.** Name the strongest Synoptic datum: before Caiaphas Jesus affirms he is the Danielic Son of Man who will sit "at the right hand of Power" and come "with the clouds" — the claim that draws the death sentence (**Mark 14:61–64**; par. Matt 26:63–64; Luke 22:67–70). Target: the "not confined to John" paragraph in "Reply, with Concessions." ⚠ The trial saying's authenticity is itself contested (Ehrman) — present it as *embedded in our earliest Gospel and integral to the passion narrative*, not uncontested ipsissima verba.
+- **Row A (P4, LOW-MED) — trilemma history.** Lewis *popularized* but did not originate it: anticipated by **G.K. Chesterton, *The Everlasting Man* (1925)** and **W.H. Turton, *The Truth of Christianity* (9th ed. 1919), ch. 21**. Target: the "made famous by C.S. Lewis" line. ⚠ Verify Turton actually frames a character/trilemma argument before crediting him; cite as *anticipation*.
+
+## Non-recommendations (verdict 6)
+- **Miracles as the reply to the guru/sincerely-mistaken horn** (McLatchie's flagship). DECLINED: relocates the burden onto miracle-historicity (more contested than the self-claims) and reintroduces the circularity our essay carefully owns — trades our modest conditional thesis for reach it can't honestly cash.
+- John 1:1 (Wallace qualitative θεός), John 12:41 Isaiah-6 glory, Samaritan Taheb — proper home is a deity-of-Christ / Johannine-authorship essay.
+- Undesigned-coincidences apparatus (McGrew/Blunt/Bauckham) — genre mismatch; our essay stays conditional on reliability by design.
+
+## Live-door status
+`jesuschar.html` — the better, more honest treatment of the argument's core; 3 additive Step-2 rows. `/sources`: Justin *Dial.* (ANF) is PD → candidate `/sources` entry.
