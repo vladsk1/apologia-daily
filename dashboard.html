@@ -809,7 +809,7 @@
         try { d = await r.json(); } catch (e) {}
 
         if (!r.ok || !d.ok) {
-          errEl.textContent = d.error || 'Something went wrong. Please try again, or email hello@apologiadaily.com.';
+          errEl.textContent = d.error || 'Something went wrong. Please try again, or email contact@apologiadaily.com.';
           errEl.style.display = 'block';
           confirmBtn.disabled = false;
           confirmBtn.textContent = 'Delete my account';
