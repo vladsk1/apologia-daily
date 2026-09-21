@@ -207,12 +207,17 @@ we are *right* not to make).
 Classified against the five paired essays read in full at the top of this note.
 
 **→ Improvements (backlog rows logged in `docs/content-backlog.md`):**
-- ⭐ **[Missing → P2] Ch. 7 combination-hypotheses + the "telephone game" / memory-distortion objection** →
-  a NEW subsection in `library/disciplesbelief.html` (and/or `minimalfacts.html`). Port the *structure*
-  and cite the **primaries**: Vansina 1965 (pp. 36, 53, 109) on foundational traditions + method-over-time;
-  Rubin 1995, *Memory in Oral Traditions* (the net-vs-chain distinction, ~p. 134); Kirk 2017 / Rodríguez
-  2016 on Ehrman's misreading; Keim 1883 (PD) on the ecstasy stopping. **Verify each primary; do NOT cite
-  "Loke."** Grep-confirmed absent site-wide.
+- ✅ **[Missing → P2] Ch. 7 combination-hypotheses + the "telephone game" / memory-distortion objection —
+  SHIPPED 2026-09-21** to `library/disciplesbelief.html` as the subsection *"The telephone game: didn't the
+  story change in the retelling?"* (fns 24–26). The two replies: (a) the belief's origin is fixed early by
+  the 1 Cor 15 creed, upstream of the transmission; (b) the telephone analogy misdescribes communal/controlled
+  transmission. Primaries used (all web-verified before drafting): **Ehrman, *Jesus Before the Gospels*
+  (2016)** [the objection]; **Kirk, *JSHJ* 15.1 (2017): 88–114** [chain-vs-community + Ehrman's careless
+  sourcing]; **Vansina, *Oral Tradition as History* (1985)** [controlled traditions]; **Rubin, *Memory in
+  Oral Traditions* (1995)** [structural constraints]. ⚠ **Loke's "net-vs-chain" attribution to Rubin was
+  DROPPED** — Rubin's actual thesis is structural constraints (theme/imagery/sound), not that metaphor; the
+  citations lens confirmed the corrected framing. Keim was not used (it fits the appearances/hallucination
+  essay, not this one). Four-lens dual-consensus (one fix pass + confirmation round), all CLEAN/STAMPABLE.
 - **[Missing → P3] Ch. 3 monotheistic false-witness lever (1 Cor 15:15)** → `library/disciplesbelief.html`,
   strengthening the anti-hoax step. Clean and distinctive; grep-confirmed absent.
 - **[Weaker-in-ours → P3] Ch. 4 ground the "no clinical mechanism" claim in the literature** →
