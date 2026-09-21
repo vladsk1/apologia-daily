@@ -249,6 +249,20 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   🔴 Also do-not-use: the HuffPost-sourced "more Christians in China than the US by 2030" projection.
   ⚠ Any port of "God himself hung on a cross" **must carry `legacy.html`'s `orthonote` fence**.
 
+- `investigating-the-resurrection-loke.md` — Andrew Loke, *Investigating the Resurrection of Jesus Christ:
+  A New Transdisciplinary Approach* (**Routledge 2020**, **Open Access** CC BY-NC-ND) — **fully mined**: a
+  top-tier analytic-philosophy monograph that argues by **provably-exhaustive elimination** (6
+  appearance-hypotheses + 8 body-hypotheses). Paired essays read in full first: `appearances`, `emptytomb`,
+  `minimalfacts`, `disciplesbelief`, `miracles`. ⭐ **Three genuine improvements** (backlog): ch. 7's
+  **combination-hypotheses / "telephone game" memory-science** answer (Vansina/Rubin/Schudson/Kirk —
+  **absent from our cluster**); the **monotheistic false-witness lever** (1 Cor 15:15); and **Bergeron &
+  Habermas 2015** grounding our "no clinical mechanism" claim. ⚠⚠ **Ours is better in three places — do NOT
+  upgrade us backwards:** he over-includes the empty tomb in the consensus (we tier it as the soft point),
+  concludes "historical certainty" (we stop at "best explanation"), and rests the tomb on **Matthew's
+  guards** (minority position). ⚠ **Denominational tripwire:** debunks **Marian apparitions** — general
+  point only, never in our voice. ⚠ Loke is a **committed defender** (dedicated to W. L. Craig) — port his
+  primaries, weigh his verdicts.
+
 ### ⚠ PARTIAL notes — books NOT owned, NOT read (added 2026-07-26, Tyndale/evangelical mining batch)
 These four were queued as books by `docs/article-research/MINING-BRIEF-tyndale-batch.md`. Because we do
 **not** own them, each is mapped only at **thesis/chapter level**, and only from legitimate non-book
