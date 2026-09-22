@@ -1,0 +1,364 @@
+{
+  "reviewed": {
+    "argument": "2026-09-22",
+    "orthodoxy": "2026-09-22",
+    "neutrality": "2026-09-22",
+    "by": "2026-09-22 scene-locked vertical (Instagram) reel on the Islamic Dilemma, pointing to the live reading club (reading-club-islamic-dilemma.html; hook echoes that page's line). Owner: POSITIVE CASE for the argument, no strawman. Ported from certified library/islam-dilemma.html (fence 'not a claim that the two faiths teach the same thing' verbatim) + framed per docs/book-research/islamic-dilemma.md (Christopher Frost). DUAL-CONSENSUS (Islam tier), gated READ-ONLY (Explore): orthodoxy CLEAN (crucifixion + deity of Christ affirmed orthodox; false-common-ground fenced in 3 places; 'same God' is audio-only, attributed to the Qur'an, and fenced), argument STAMPABLE 0 BREAK/0 WEAK (verses 3:3/5:47/4:157/sonship accurate; verdict bounded not triumphal; retired preservation/DSS overreach actively fenced OUT). Neutrality found 1 BREAK - strawman-by-omission (the strongest Muslim reply, muhaymin, was missing; the objection scene asserted the contested premise) - FIXED by adding the muhaymin reply ('the Qur'an guards the true Gospel, needn't ratify every line', conceded to narrow the argument) + a bounded rejoinder (10:94 'sent Muhammad to the book in their hands'; 'never needed a perfect Bible'); re-gated neutrality STAMPABLE. EXPLICIT-VERDICT landed bounded ('the Qur'an confirms a book that contradicts it'), NOT the book's maximal 'Islam is false'. Does NOT adopt Frost's triumphal tone or cite its polemics layer (David Wood/AnsweringIslam). NOT pastoral sign-off (Islam cluster owes standing pastoral review per docs/STATEMENT_OF_FAITH.md)."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) reel on the ISLAMIC DILEMMA, pointing to the live reading club (reading-club-islamic-dilemma.html; hook echoes that page's own line 'Does the Qur'an confirm the very Scriptures it contradicts?'). Ported from certified library/islam-dilemma.html (the 'shared premise ... not a claim that the two faiths teach the same thing' fence is verbatim from the essay) and framed per docs/book-research/islamic-dilemma.md (Christopher Frost, The Islamic Dilemma). Owner: POSITIVE CASE for the argument, no strawman. RIVAL-WORLDVIEW / Islam tier: EXPLICIT-VERDICT landed in our own voice at the BOUNDED level ('the Qur'an confirms a book that contradicts it' - the internal incoherence), NOT the book's maximal triumphal 'Islam is false / Muhammad not a prophet' (1 Peter 3:15). FALSE-COMMON-GROUND fenced ('a shared premise, not a shared belief'). Represents Islam fairly: the Qur'an genuinely DOES affirm the prior scripture (musaddiq); the tahrif/'Bible was corrupted' reply is accounted for by Frost's DECOUPLING move (the argument doesn't need a perfect Bible) which ALSO protects our own retired Dead-Sea-Scrolls preservation overreach - so no 'the Bible is perfectly preserved' claim is made. Verses essay-certified (3:3 confirming; 5:47; crucifixion denial 4:157; sonship denial). Does NOT adopt the Frost-polemics tone or cite its polemics layer (David Wood / AnsweringIslam).",
+  "voiceover": "Does the Qur'an confirm the very Scriptures it contradicts? The Qur'an calls itself musaddiq — the confirmer of the Scriptures that came before it. It affirms the Torah given to Moses and the Gospel given to Jesus as revelation from the same God — 'confirming what was before it.' It even tells Christians to judge by their own book: 'let the People of the Gospel judge by what Allah has revealed therein.' So the Qur'an holds up the Gospel as a true standard from God. But that Gospel — the one in the hands of the Christians of Muhammad's day — teaches what Islam denies. It says Jesus was crucified, and that he is the divine Son of God. The Qur'an denies both. So the Qur'an confirms a book that contradicts it. And the whole case is built from the Qur'an's own words. A Muslim will answer: the Qur'an guards the true Gospel — it needn't ratify every line of today's Bible. That's a fair reply, and it genuinely narrows the argument. But the Qur'an still sent Muhammad to consult the Scripture the people of his own day held in their hands — and the case never needed a perfect Bible, only the one they already had. A shared premise, turned on the system by its own words — not a claim that the two faiths teach the same thing. That's the dilemma. It's the argument at the heart of Christopher Frost's book, The Islamic Dilemma. Read it together, chapter by chapter, in our reading club.",
+  "scenes": [
+    {
+      "dur": 4.6,
+      "vo": "Does the Qur'an confirm the very Scriptures it contradicts?",
+      "big": [
+        {
+          "t": "The Islamic",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "Dilemma.",
+          "c": "gold",
+          "s": 84
+        }
+      ],
+      "sub": [
+        {
+          "t": "Does the Qur'an confirm the very",
+          "c": "cream",
+          "f": "serif",
+          "s": 38
+        },
+        {
+          "t": "Scriptures it contradicts?",
+          "c": "cream",
+          "f": "serif",
+          "s": 38
+        }
+      ]
+    },
+    {
+      "dur": 5.6,
+      "vo": "The Qur'an calls itself musaddiq — the confirmer of the Scriptures that came before it.",
+      "kicker": "MUSADDIQ · ‘THE CONFIRMER’",
+      "lines": [
+        {
+          "t": "The Qur'an calls itself",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "the confirmer of the",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "Scriptures before it.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 7.5,
+      "vo": "It affirms the Torah given to Moses and the Gospel given to Jesus as revelation from the same God — 'confirming what was before it.'",
+      "kicker": "IT AFFIRMS THE PRIOR SCRIPTURE",
+      "lines": [
+        {
+          "t": "The Torah given to Moses.",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "The Gospel given to Jesus.",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "“Confirming what",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        },
+        {
+          "t": "was before it.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 7.1,
+      "vo": "It even tells Christians to judge by their own book: 'let the People of the Gospel judge by what Allah has revealed therein.'",
+      "kicker": "QUR'AN 5:47",
+      "lines": [
+        {
+          "t": "“Let the People",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "of the Gospel judge",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "by what Allah has",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "revealed therein.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "dur": 10.1,
+      "vo": "So the Qur'an holds up the Gospel as a true standard from God. But that Gospel — the one in the hands of the Christians of Muhammad's day — teaches what Islam denies.",
+      "big": [
+        {
+          "t": "But that Gospel",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "teaches what",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Islam denies.",
+          "c": "gold",
+          "s": 62
+        }
+      ]
+    },
+    {
+      "dur": 7.0,
+      "vo": "It says Jesus was crucified, and that he is the divine Son of God. The Qur'an denies both.",
+      "kicker": "THE CONTRADICTION",
+      "lines": [
+        {
+          "t": "The Gospel: Jesus was",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "crucified, and is the",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "divine Son of God.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "The Qur'an denies both.",
+          "c": "cream",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "dur": 7.1,
+      "vo": "So the Qur'an confirms a book that contradicts it. And the whole case is built from the Qur'an's own words.",
+      "big": [
+        {
+          "t": "The Qur'an confirms",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "a book that",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "contradicts it.",
+          "c": "gold",
+          "s": 60
+        }
+      ],
+      "sub": [
+        {
+          "t": "Built entirely from the Qur'an's own words.",
+          "c": "cream",
+          "f": "serif",
+          "s": 38
+        }
+      ]
+    },
+    {
+      "dur": 10.4,
+      "vo": "A Muslim will answer: the Qur'an guards the true Gospel — it needn't ratify every line of today's Bible. That's a fair reply, and it genuinely narrows the argument.",
+      "kicker": "THE STRONGEST REPLY",
+      "lines": [
+        {
+          "t": "“The Qur'an guards",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "the true Gospel —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "not every line of",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "today's Bible.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "A fair reply — it narrows it.",
+          "c": "dim",
+          "f": "serif",
+          "s": 42
+        }
+      ]
+    },
+    {
+      "dur": 9.5,
+      "vo": "But the Qur'an still sent Muhammad to consult the Scripture the people of his own day held in their hands — and the case never needed a perfect Bible, only the one they already had.",
+      "kicker": "BUT NOTICE",
+      "lines": [
+        {
+          "t": "Yet it still sent Muhammad",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "to the book in",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "their hands —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "it never needed",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "a perfect Bible.",
+          "c": "cream",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "dur": 8.4,
+      "vo": "A shared premise, turned on the system by its own words — not a claim that the two faiths teach the same thing. That's the dilemma.",
+      "kicker": "A SHARED PREMISE, NOT A SHARED BELIEF",
+      "lines": [
+        {
+          "t": "The Qur'an's own testimony,",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "turned by its own words.",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Not “we believe the same.”",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "That's the dilemma.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 9.1,
+      "vo": "It's the argument at the heart of Christopher Frost's book, The Islamic Dilemma. Read it together, chapter by chapter, in our reading club.",
+      "big": [
+        {
+          "t": "Frost's book,",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "The Islamic Dilemma.",
+          "c": "gold",
+          "s": 50
+        }
+      ],
+      "sub": [
+        {
+          "t": "Read it together, chapter by chapter,",
+          "c": "cream",
+          "f": "serif",
+          "s": 38
+        },
+        {
+          "t": "in the reading club.",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ]
+    }
+  ]
+}
