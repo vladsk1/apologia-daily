@@ -983,10 +983,11 @@ def starfield(img, gt, th):
     d = ImageDraw.Draw(img); W, H = img.size
     for i, (u, v_, b) in enumerate(_SKY):
         layer_ = 1 if i % 3 else 2
-        x = (u * W - gt * (4 if layer_ == 1 else 11)) % W; y = v_ * H
-        tw = 0.55 + 0.45 * math.sin(gt * (0.6 + b) + i)
-        a = int((40 + 90 * b) * tw) if layer_ == 1 else int((90 + 120 * b) * tw)
-        r_ = 1 if layer_ == 1 else 1.8
+        # steady brightness (no twinkle) and whole-pixel steps: frames stay near-identical
+        # between moves, which keeps long videos small enough to share
+        x = int((u * W - gt * (4 if layer_ == 1 else 11)) % W); y = int(v_ * H)
+        a = int(0.75 * (40 + 90 * b)) if layer_ == 1 else int(0.75 * (90 + 120 * b))
+        r_ = 1 if layer_ == 1 else 2
         d.ellipse([x - r_, y - r_, x + r_, y + r_], fill=(250, 238, 218, a))
 
 VISUALS = dict(title=v_title, end=v_end, fork=v_fork, syllogism=v_syllogism, vacuum=v_vacuum, hotel=v_hotel,
