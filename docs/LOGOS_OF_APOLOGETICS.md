@@ -325,3 +325,89 @@ All figures are **estimates** for planning. None are quotes.
 - Apologetics app landscape: <https://blog.scriptured.app/alternatives/apologetics-apps/> ·
   <https://faith.tools/apologetics> · <https://play.google.com/store/apps/details?id=com.subsplash.thechurchapp.southernevangelicalseminary>
 - Earlier sources: see §9 of `MARKET_RESEARCH_2026-09-03.md` and `COMPETITIVE_LANDSCAPE.md`.
+
+---
+
+## Addendum (2026-09-23): why people love Logos, and how we would build a library
+
+### What users love about Logos, and what they complain about [web, reviews]
+
+**What they love:**
+1. **Everything is connected.** Every Bible reference in every book is a live link, and every
+   book is searchable together. Reviewers keep coming back to "search the whole library for a
+   word, theme or argument instead of thumbing through thick texts".
+2. **One question, the whole library answers.** Passage Guide, Exegetical Guide and word
+   studies gather what all your books say about a verse on one screen.
+3. **Original languages made usable.** Word studies and interlinears give non-specialists the
+   Greek and Hebrew.
+4. **Sermon Builder.** It turns research into an outline and exports slides to PowerPoint. Pastors
+   call it the reason they stay.
+5. **Ownership and sync.** Books you buy are yours for good, with notes and highlights synced
+   across desktop, mobile and web. A library that grows over decades is also what keeps users
+   from leaving.
+6. **Breadth across traditions.** Logos deliberately sells books from many theological
+   perspectives so users can study both sides of a disputed question. It runs a Catholic
+   edition (Verbum) alongside.
+7. **Courses and training inside the tool** (Mobile Ed) and a big library of tutorials.
+
+**What they complain about:**
+- **Cost.** Base packages run to hundreds of dollars and full libraries to thousands.
+- **The learning curve.** Users report "weeks or months" before feeling fluent, and describe the
+  first hour as "intimidating".
+- **Confusing bundles.** Subscriptions overlap with one-time purchases.
+
+➡ **The lesson for us:** copy the connectedness, the guides, the builder and the ownership/sync.
+Beat them on price and on ease: a first-hour experience a teenager can use (see the Objection
+Guide mockup).
+
+### How Logos built 120,000 books
+
+- **About 30 years** (Logos 1.0 shipped in 1991) and **500+ publisher partnerships**, each an ebook
+  licence with a revenue share. The early "Logos Library System" (1995) made them the platform
+  publishers wanted to be on.
+- **Public-domain digitising, funded by the users.** Under "Community Pricing", users bid on
+  public-domain or out-of-print titles. Once the bids cover the estimated production cost, the
+  book is produced, and the more bidders, the lower the price for everyone. Logos's own worked
+  example is a book costing $10,000 to produce.
+- **Pre-publication sales** fund new titles before they are built.
+- **Acquisitions.** WORDsearch (2020) brought its library and users.
+- **An in-house imprint.** Lexham Press, which **Faithlife sold to Baker Publishing Group on
+  2025-09-23**, is a sign that owning a publisher was not core to the model.
+
+**We should not try to match 120,000.** That number is Logos's 30-year moat and is mostly Bible
+study, not apologetics. The apologetics canon that matters is **a few hundred to about a thousand
+works** (estimate). The goal is to be complete *for apologetics*, not large.
+
+### How we would build an apologetics library, in order of cost and risk
+
+| Tier | What | Rights | Cost / effort | Notes |
+|---|---|---|---|---|
+| **1. Public domain** | Full texts: Ante-/Nicene & Post-Nicene Fathers (Schaff), Augustine, Aquinas (the early-20th-c. Dominican translation), Pascal, Paley, Butler, Chesterton's *Orthodoxy*, Josephus (Whiston), Tacitus, Pliny, Origen's *Against Celsus* | Free; **check the translation, not just the work** (same rule as `/sources`) | Low–medium: conversion, reference tagging, proofreading | Grows `/sources` from **156 passages** into a reading library. ⚠ Only `verified:true` passages feed the live AI; a hosted book is not automatically AI-quotable |
+| **2. Open-access scholarship** | OA monographs and articles (OAPEN, JSTOR OA, publisher OA). We have already mined Loke's *Investigating the Resurrection* (OA) | **Licence by licence**: CC BY allows hosting; BY-NC-ND restricts commercial use and changes | Low per title; the licence check is the work | Highest scholarly value per dollar |
+| **3. Ministry and author partnerships** | Syndicate articles, talks and courses from ministries and scholars with written permission (Apologist Project's model with GotQuestions, STR and others) | Written agreements; revenue share or free distribution | Medium: relationships, not code | ⚠ Every piece still passes our gates before it carries our standard, and denominational neutrality limits which partners fit |
+| **4. Publisher ebook licensing** (the Logos route) | Modern apologetics books: IVP, Crossway, B&H, Baker, Kregel, Zondervan/Thomas Nelson (HarperCollins Christian), Moody, Eerdmans; plus Ignatius (Catholic) and St Vladimir's Seminary Press (Orthodox) for neutrality | Distribution licence with revenue share; needs a reader with rights management and a store | **High: a secure reader, a store and legal work, plus years of business development** | ⚠ **AI use is a separate right.** HarperCollins' 2024 Microsoft deal paid about $5,000 per title for AI training, split with authors. Letting our AI *quote or retrieve from* a licensed book would need its own clause |
+| **5. Commissioned originals** | Short books or essay series written for us by named scholars (the Lexham idea) | We own or license outright | Medium: author fees + editing + gates | Doubles as the "named human faculty" the certificate and trust plans need |
+| **6. Index, don't host** | Public, our-own-words maps of the key books: argument, chapter map, the primaries cited, where to buy. The `docs/book-research/` notes made public-grade | Summaries in our own words, properly cited; no reproduced prose | Low; the pipeline already exists | **The fastest way to "cover" the modern canon legally**, and it fits the graph: each book becomes a node linked to the claims it argues |
+
+### Recommended sequence
+
+1. **Now (no licences needed):** Tier 1 (public domain) + Tier 6 (book maps) + Tier 2 (open access).
+   Together they give a searchable, cross-linked apologetics library that is legally clean.
+2. **Next:** Tier 3 partnerships and Tier 5 commissions. These also supply named authors.
+3. **Only once there is revenue and a native app:** Tier 4 publisher licensing. Start with **one
+   friendly publisher and ~20 core titles**, negotiating the AI-retrieval clause up front.
+4. **Consider the reverse partnership:** offer our argument graph as a dataset **inside
+   Logos**, the way Factbook data works there, rather than rebuilding their store.
+
+**Rough scale (estimate):** Tiers 1, 2 and 6 could reach **a few hundred works in about 12
+months** with the lean team in §6, because the tools (`/sources`, book-research notes, the
+gates) already exist. Tier 4 is a multi-year business-development effort and should not be
+planned before the paywall and app exist.
+
+Sources: <https://overviewbible.com/logos-bible-software-review/> ·
+<https://brandonhilgemann.com/logos-10-review/> · <https://www.capterra.com/p/275095/Logos/reviews/> ·
+<https://www.knowableword.com/2025/11/21/logos-bible-software-the-subscription-model-seems-to-be-working/> ·
+<https://www.logos.com/grow/how_community_pricing_works/> · <https://www.logos.com/distribution-philosophy> ·
+<https://faithlife.com/history> · <https://en.wikipedia.org/wiki/Logos_Bible_Software> ·
+<https://authorsguild.org/news/harpercollins-ai-licensing-deal/> ·
+<https://www.theologyandreligiononline.com/open-access> · <https://guides.library.duke.edu/c.php?g=289800&p=1931314>
