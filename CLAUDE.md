@@ -20,6 +20,20 @@
 > *why* behind a past decision; read this file for current state. **Keep it that way:** when an entry
 > here stops affecting a decision, move it to `HANDOFF.md` rather than letting this file grow back.
 >
+> **🅿 PARKED FOR LATER — 2026-09-23 (owner: "keep all this for later"). Strategy only, nothing below is built
+> except the date fix.** Five docs + two mockups, read them before re-deriving any of it:
+> `docs/LOGOS_OF_APOLOGETICS.md` (what "the Logos of apologetics" means: an argument graph + guides + a talk
+> builder + paragraph-cited AI; resources/costs; addendum on what users love about Logos and how to build a
+> library in 6 tiers), `docs/APOLOGETICS_CERTIFICATE_BENCHMARK.md` (Biola/OCCA/STR/Magis/SES/HCU vs a 3-level
+> certificate built by sequencing certified pages), `docs/FREE_LIBRARY_CANDIDATES.md` (~60 public-domain /
+> open-access works mapped to the ev-s tabs; HOST vs LINK; start with the ~20 primaries our essays cite),
+> and `docs/mockups/` (resurrection Objection Guide + On Guard book page; answer text ported from certified
+> essays / the reading club, labels + "DRAFT" strings ungated). Measured: ~58% of essay footnotes cite 1930+
+> work (can't be hosted), ~23% ancient/classic/Scripture only. ⭐ **SHIPPED the same day:**
+> `tools/sync-date-modified.mjs` (JSON-LD `dateModified` was older than the latest review on 109 of 113 stamped
+> pages; now synced + CI-checked; `check-stamp-integrity` cancels date-only line pairs) and regenerated the
+> trust figures + What's New feed, which had kept `main`'s nav-consistency job red for 5+ pushes.
+>
 > **⭐ LATEST — 2026-08-26. TWO NEW READER-TRUST UI COMPONENTS SHIPPED to `main` (owner-requested).**
 > **(1) `library/reviewed-badge.js`** — a small green "Reviewed & current — `<Mon YYYY>`" badge under each essay title,
 > reading the date **at runtime from the page's own `content-review` stamp** (the most recent of the four lens dates),

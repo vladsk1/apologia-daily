@@ -1,0 +1,329 @@
+<title>On Guard Book Guide</title>
+<meta name="description" content="Clickable mockup of an Apologia Daily book page for William Lane Craig's On Guard">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=DM+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --ground:#f7f4ef; --surface:#ffffff; --surface-2:#efe9df; --ink:#0a1628; --ink-2:#2a3950; --muted:#5a6b82; --line:#ddd3c2;
+  --navy:#0a1628; --navy-2:#132a52; --on-navy:#f3ede2; --gold:#c8a951; --gold-ink:#8a6d1c; --gold-soft:#f3ead0;
+  --ok:#1d7a2c; --ok-soft:#e5f2e3; --warn:#9a4a14; --warn-soft:#f8e9dc;
+  --serif:"Source Serif 4",Georgia,serif; --display:"Playfair Display",Georgia,serif; --sans:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;
+  --ground:#07101f; --surface:#0f2040; --surface-2:#132a52; --ink:#eee9df; --ink-2:#cdd8e8; --muted:#93a3bb; --line:#223a63;
+  --navy:#050d1a; --navy-2:#0f2040; --on-navy:#eee9df; --gold:#d6ba68; --gold-ink:#e0c67a; --gold-soft:#2a2a1e;
+  --ok:#7fd08a; --ok-soft:#12321f; --warn:#f0a36b; --warn-soft:#3a2415;}}
+:root[data-theme="dark"]{color-scheme:dark;
+  --ground:#07101f; --surface:#0f2040; --surface-2:#132a52; --ink:#eee9df; --ink-2:#cdd8e8; --muted:#93a3bb; --line:#223a63;
+  --navy:#050d1a; --navy-2:#0f2040; --on-navy:#eee9df; --gold:#d6ba68; --gold-ink:#e0c67a; --gold-soft:#2a2a1e;
+  --ok:#7fd08a; --ok-soft:#12321f; --warn:#f0a36b; --warn-soft:#3a2415;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);line-height:1.5}
+a{color:var(--gold-ink)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.mock{background:var(--gold-soft);color:var(--gold-ink);font-size:12.5px;padding:8px 16px;text-align:center;border-bottom:1px solid var(--line)}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px}
+
+/* hero */
+.hero{background:var(--navy);color:var(--on-navy)}
+.hero .wrap{display:grid;grid-template-columns:200px 1fr;gap:36px;padding-block:40px 36px;align-items:start}
+.crumb{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.crumb a{color:var(--gold);text-decoration:none}
+.cover{aspect-ratio:2/3;width:100%;max-width:200px;border-radius:4px 10px 10px 4px;background:linear-gradient(160deg,#1b3a6b,#0a1628 70%);border:1px solid rgba(200,169,81,.45);box-shadow:inset 6px 0 0 rgba(0,0,0,.25),0 14px 30px rgba(0,0,0,.35);display:flex;flex-direction:column;justify-content:space-between;padding:22px 16px;color:#f3ede2}
+.cover .ct{font-family:var(--display);font-size:30px;line-height:1.05}
+.cover .cs{font-family:var(--serif);font-style:italic;font-size:12.5px;color:#d9c79a;margin-top:8px}
+.cover .ca{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#c8a951}
+.hero h1{font-family:var(--display);font-size:clamp(34px,5vw,48px);line-height:1.05;margin:0}
+.hero .sub{font-family:var(--serif);font-style:italic;font-size:19px;color:#d9c79a;margin:6px 0 12px}
+.hero .by{font-size:14.5px;color:#cdd8e8;margin:0 0 18px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.fact{font-size:12.5px;border:1px solid rgba(200,169,81,.4);border-radius:999px;padding:5px 11px;color:#eee9df}
+.fact b{color:var(--gold);font-weight:600}
+.oneline{font-family:var(--serif);font-size:18px;line-height:1.55;max-width:62ch;margin:0 0 20px;color:#f3ede2}
+.ctas{display:flex;flex-wrap:wrap;gap:10px}
+.btn{font:inherit;font-size:14.5px;font-weight:600;border-radius:10px;padding:11px 16px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;cursor:pointer;border:1px solid transparent}
+.btn.gold{background:var(--gold);color:#0a1628}
+.btn.ghost{border-color:rgba(200,169,81,.55);color:#f3ede2;background:transparent}
+.indep{font-size:12.5px;color:#93a3bb;margin-top:14px;max-width:62ch}
+@media (max-width:720px){.hero .wrap{grid-template-columns:1fr;gap:20px}.cover{max-width:140px}.cover .ct{font-size:22px}}
+
+/* section nav */
+.snav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+.snav .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.snav a{flex:none;font-size:13.5px;font-weight:600;color:var(--muted);text-decoration:none;padding:13px 10px;border-bottom:2px solid transparent}
+.snav a.on{color:var(--ink);border-bottom-color:var(--gold)}
+
+main .wrap{display:flex;flex-direction:column;gap:44px;padding-block:36px 56px}
+section{scroll-margin-top:60px}
+.eyebrow{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink);font-weight:700;margin:0 0 6px}
+h2{font-family:var(--display);font-size:28px;line-height:1.15;margin:0 0 8px;text-wrap:balance}
+.lede{font-family:var(--serif);font-size:17px;color:var(--ink-2);max-width:66ch;margin:0 0 18px}
+.ph{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--surface-2);color:var(--muted);border-radius:6px;padding:2px 7px;margin-left:6px;vertical-align:middle}
+
+/* at a glance */
+.glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.gl{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.gl .k{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.gl .v{font-family:var(--serif);font-size:16px;margin-top:4px}
+
+/* big ideas */
+.tools{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:center}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface)}
+.seg button{font:inherit;font-size:13.5px;font-weight:600;padding:8px 13px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--navy);color:var(--on-navy)}
+.score{font-size:13.5px;color:var(--muted)}
+.ideas{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px}
+.idea{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.idea .n{font-size:12px;font-weight:700;color:var(--gold-ink);letter-spacing:.06em;text-transform:uppercase}
+.idea .q{font-family:var(--display);font-size:19px;line-height:1.25;margin:0}
+.idea .a{font-family:var(--serif);font-size:15.5px;line-height:1.55;color:var(--ink-2);margin:0}
+.idea .reveal{align-self:flex-start;font:inherit;font-size:13.5px;font-weight:600;background:var(--surface-2);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 13px;cursor:pointer}
+.idea .rate{display:flex;gap:6px;flex-wrap:wrap}
+.idea .rate button{font:inherit;font-size:12.5px;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:5px 10px;cursor:pointer}
+.idea .rate button[aria-pressed="true"]{background:var(--ok-soft);border-color:var(--ok);color:var(--ok)}
+.idea .links{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:4px}
+.pill{font-size:12.5px;font-weight:600;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--ink);background:var(--surface-2)}
+.pill.obj{border-color:var(--gold);background:var(--gold-soft);color:var(--gold-ink)}
+
+/* chapters */
+.chap{background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.chap + .chap{margin-top:8px}
+.chap summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:13px 16px}
+.chap summary::-webkit-details-marker{display:none}
+.chap .cn{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+.chap .ctitle{font-family:var(--serif);font-size:16.5px;font-weight:600}
+.chap .ctopic{display:block;font-family:var(--sans);font-weight:400;font-size:12.5px;color:var(--muted)}
+.chap .chev{color:var(--gold-ink);transition:transform .15s}
+.chap[open] .chev{transform:rotate(90deg)}
+.chap .body{padding:0 16px 16px 92px;display:flex;flex-direction:column;gap:10px}
+.chap .take{font-family:var(--serif);font-size:16px;line-height:1.55;margin:0;border-left:3px solid var(--gold);padding-left:12px}
+.chap .note{font-size:13.5px;color:var(--muted);margin:0}
+@media (max-width:600px){.chap summary{grid-template-columns:1fr auto}.chap .cn{grid-column:1/-1}.chap .body{padding:0 16px 16px}}
+
+/* careful */
+.careful{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px}
+.cf{background:var(--warn-soft);border-radius:12px;padding:15px 16px}
+.cf h3{font-size:15px;margin:0 0 6px;color:var(--warn)}
+.cf p{font-family:var(--serif);font-size:15.5px;margin:0;color:var(--ink-2);line-height:1.55}
+.cf .where{font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:8px}
+
+/* sources + next */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:720px){.two{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.panel h3{font-family:var(--display);font-size:20px;margin:0 0 10px}
+.refs{display:flex;flex-direction:column;gap:8px}
+.ref{display:grid;grid-template-columns:108px 1fr;gap:10px;font-size:14px;align-items:baseline}
+.ref b{font-weight:700}
+.ref span{font-family:var(--serif);font-size:15px;color:var(--ink-2)}
+.next{display:flex;flex-direction:column;gap:10px}
+.nx{display:flex;flex-direction:column;gap:2px;padding:11px 13px;border-radius:10px;border:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.nx b{font-size:14.5px}
+.nx span{font-size:13px;color:var(--muted)}
+.club{background:var(--navy);color:var(--on-navy);border-radius:16px;padding:24px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.club h3{font-family:var(--display);font-size:24px;margin:0}
+.club p{margin:4px 0 0;color:#cdd8e8;font-size:14.5px;max-width:56ch}
+footer{border-top:1px solid var(--line);padding-block:20px 32px;font-size:12.5px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+
+<div class="mock">Clickable mockup. The summaries and answers come from our existing reviewed <em>On Guard</em> reading club. Anything marked <b>DRAFT</b> is new wording that has not been through review.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="cover" aria-label="Book cover stand-in">
+      <div><div class="ct">On Guard</div><div class="cs">Defending your faith with reason and precision</div></div>
+      <div class="ca">William Lane Craig</div>
+    </div>
+    <div>
+      <div class="crumb"><a href="https://apologiadaily.com/library/index.html" target="_blank" rel="noopener">Library</a> / Books / Case for God &amp; Christ</div>
+      <h1>On Guard</h1>
+      <p class="sub">Defending Your Faith with Reason and Precision</p>
+      <p class="by">William Lane Craig · Foreword by Lee Strobel · David C. Cook, 2010</p>
+      <div class="facts">
+        <span class="fact"><b>Level</b> Beginner-friendly</span>
+        <span class="fact"><b>Length</b> 10 chapters</span>
+        <span class="fact"><b>Covers</b> God's existence → the resurrection</span>
+        <span class="fact"><b>Reading club</b> 10 sessions</span>
+      </div>
+      <p class="oneline">A step-by-step tour of the central arguments of Christian apologetics: why anything exists at all, why the universe began and why it is fine-tuned, whether we can be good without God, what to make of suffering, who Jesus was, and whether he rose from the dead. It is the accessible, popular-level companion to his scholarly work.</p>
+      <div class="ctas">
+        <a class="btn gold" href="#ideas">Learn the 8 big ideas</a>
+        <a class="btn ghost" href="https://apologiadaily.com/reading-club-on-guard.html" target="_blank" rel="noopener">Read it with a group</a>
+        <a class="btn ghost" href="#buy">Get the book</a>
+      </div>
+      <p class="indep">An independent guide, not affiliated with or endorsed by the author. The summaries and judgements are ours; nothing on this page reproduces the book's text.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="snav" aria-label="On this page"><div class="wrap">
+  <a href="#glance" class="on">At a glance</a><a href="#ideas">8 big ideas</a><a href="#chapters">Chapter map</a><a href="#careful">Read carefully</a><a href="#sources">What it cites</a><a href="#next">Where next</a>
+</div></nav>
+
+<main><div class="wrap">
+
+<section id="glance">
+  <p class="eyebrow">At a glance</p>
+  <h2>Is this the right book for you?</h2>
+  <div class="glance">
+    <div class="gl"><div class="k">Best for <span class="ph">Draft</span></div><div class="v">Your first apologetics book, or a small group working through the whole case together.</div></div>
+    <div class="gl"><div class="k">You'll come away able to <span class="ph">Draft</span></div><div class="v">Walk someone through eight core arguments, from why anything exists to the resurrection.</div></div>
+    <div class="gl"><div class="k">Tone</div><div class="v">A reasoned defence given with gentleness and respect (1&nbsp;Peter&nbsp;3:15), not a quarrel to be won.</div></div>
+    <div class="gl"><div class="k">Going deeper <span class="ph">Draft</span></div><div class="v">It is a popular distillation of Craig's scholarly <em>Reasonable Faith</em> (3rd ed., 2008), which has the full footnotes.</div></div>
+  </div>
+</section>
+
+<section id="ideas">
+  <p class="eyebrow">What you'll learn</p>
+  <h2>The 8 big ideas, in our own words</h2>
+  <p class="lede">The whole book in eight questions. Read them, or switch to self-test: answer each one in your head, reveal our model answer, and rate yourself.</p>
+  <div class="tools">
+    <div class="seg" role="group" aria-label="Mode"><button id="mRead" aria-pressed="true">Read</button><button id="mTest" aria-pressed="false">Test yourself</button></div>
+    <span class="score" id="score" hidden></span>
+  </div>
+  <div class="ideas" id="ideaGrid"></div>
+</section>
+
+<section id="chapters">
+  <p class="eyebrow">Chapter map</p>
+  <h2>What each chapter does</h2>
+  <p class="lede">One line per chapter, so you know where you are. For full summaries and discussion questions, use the <a href="https://apologiadaily.com/reading-club-on-guard.html" target="_blank" rel="noopener">reading club</a>.</p>
+  <div id="chapList"></div>
+</section>
+
+<section id="careful">
+  <p class="eyebrow">Read carefully</p>
+  <h2>Four things to know as you read</h2>
+  <p class="lede">Every book has places where scholarship has moved on or where Christians disagree. We say where, gently, so you can read with confidence.</p>
+  <div class="careful">
+    <div class="cf"><h3>The science is from 2010 <span class="ph">Draft</span></h3><p>The cosmology chapters reflect research up to about 2008. The core argument stands, but check newer work, and hold the science as strong corroboration, not proof.</p><div class="where">Chapters 4–5 · Updated in our <a href="https://apologiadaily.com/library/kalam.html" target="_blank" rel="noopener">Kalam</a> and <a href="https://apologiadaily.com/library/bigbang.html" target="_blank" rel="noopener">Big Bang</a> essays</div></div>
+    <div class="cf"><h3>Morality: the ground, not good behaviour</h3><p>The claim is about the foundation of morality, never the bald "you can't be good without God." Atheists can live good lives and know right from wrong; the question is what grounds objective moral values and duties.</p><div class="where">Chapter 6 · <a href="https://apologiadaily.com/library/moral.html" target="_blank" rel="noopener">The Moral Argument</a></div></div>
+    <div class="cf"><h3>The "Son of Man" section <span class="ph">Draft</span></h3><p>Chapter 8 treats the figure in Daniel 7 as itself divine. We don't rest on that reading. The stronger case runs through the clouds, elsewhere in the Hebrew Bible God's own conveyance, and through what Jesus did with the scene. The chapter's other evidence stands.</p><div class="where">Chapter 8 · <a href="https://apologiadaily.com/library/titles.html" target="_blank" rel="noopener">The titles of Jesus</a></div></div>
+    <div class="cf"><h3>Where Christians disagree</h3><p>On the fate of those who never hear, and the nature of final judgment, Craig defends particular positions of his own. Orthodox Christians hold a genuine range of views on these questions, and we don't settle in-house disputes.</p><div class="where">Chapter 10 · <a href="https://apologiadaily.com/library/religious.html" target="_blank" rel="noopener">Is Jesus the only way?</a></div></div>
+  </div>
+</section>
+
+<section id="sources">
+  <div class="two">
+    <div class="panel">
+      <p class="eyebrow">What it cites</p>
+      <h3>Key passages</h3>
+      <div class="refs">
+        <div class="ref"><b>1 Peter 3:15</b><span>The call to give a reason, with gentleness and respect</span></div>
+        <div class="ref"><b>Philippians 2</b><span>Jesus worshipped by monotheists within about twenty years</span></div>
+        <div class="ref"><b>Malachi 3:1</b><span>The one whose way is prepared is the coming LORD himself</span></div>
+        <div class="ref"><b>Matthew 11:27</b><span>A unique, mutual knowing of the Father</span></div>
+        <div class="ref"><b>Psalm 110:1</b><span>At his trial: the right hand of God, heard as blasphemy</span></div>
+        <div class="ref"><b>1 Cor 15:3–7</b><span>The early tradition, its core creed within a few years of the crucifixion</span></div>
+        <div class="ref"><b>Acts 4:12</b><span>Salvation found in Christ</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <p class="eyebrow">Thinkers it engages <span class="ph">Draft</span></p>
+      <h3>Names you'll meet</h3>
+      <div class="refs">
+        <div class="ref"><b>Leibniz</b><span>Why is there something rather than nothing?</span></div>
+        <div class="ref"><b>Augustine</b><span>The world created with time, not in it</span></div>
+        <div class="ref"><b>Borde–Guth–Vilenkin</b><span>The 2003 theorem on a cosmic beginning</span></div>
+        <div class="ref"><b>Plantinga</b><span>The free-will defence against the logical problem of evil</span></div>
+      </div>
+      <p class="cf where" style="background:none;padding:0;margin-top:12px">In the real page, each name links to its scholar page in the argument graph.</p>
+    </div>
+  </div>
+</section>
+
+<section id="next">
+  <p class="eyebrow">Where next</p>
+  <h2>Keep going</h2>
+  <div class="club" id="buy">
+    <div>
+      <h3>Reading it with a group?</h3>
+      <p>Ten sessions, one per chapter, with discussion questions and an eight-prompt capstone. The book is all you need.</p>
+    </div>
+    <div class="ctas">
+      <a class="btn gold" href="https://apologiadaily.com/reading-club-on-guard.html" target="_blank" rel="noopener">Open the reading club</a>
+      <a class="btn ghost" href="https://www.google.com/search?q=On+Guard+William+Lane+Craig+David+C.+Cook" target="_blank" rel="noopener">Get the book</a>
+    </div>
+  </div>
+  <div class="two" style="margin-top:16px">
+    <div class="panel">
+      <h3>Go deeper</h3>
+      <div class="next">
+        <a class="nx" href="https://apologiadaily.com/library/kalam.html" target="_blank" rel="noopener"><b>The Kalam Cosmological Argument</b><span>Our essay, with the living critics named and answered</span></a>
+        <a class="nx" href="https://apologiadaily.com/library/finetuning.html" target="_blank" rel="noopener"><b>The Fine-Tuning Argument</b><span>Data vs. design, and the multiverse</span></a>
+        <a class="nx" href="https://apologiadaily.com/library/minimalfacts.html" target="_blank" rel="noopener"><b>The Minimal Facts of the Resurrection</b><span>The case, step by step</span></a>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>Next book <span class="ph">Draft</span></h3>
+      <div class="next">
+        <div class="nx"><b>Reasonable Faith (3rd ed.)</b><span>Craig's scholarly version of the same case, fully footnoted. Book page coming.</span></div>
+        <div class="nx"><b>The Case for the Resurrection of Jesus</b><span>Habermas &amp; Licona: the minimal-facts case in depth. Book page coming.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div></main>
+<footer><div class="wrap"><em>On Guard</em> is © William Lane Craig. This is an independent guide from Apologia Daily, not affiliated with or endorsed by the author. Mockup only, not a live page.</div></footer>
+
+<script>
+const SITE="https://apologiadaily.com/library/";
+const IDEAS=[
+ {n:"01 · The approach",q:"What is Christian apologetics, and what is it for?",a:"Giving a reasoned defence of the faith (the apologia of 1 Peter 3:15) with gentleness and respect. Its job is to show the faith is true and reasonable and to open honest conversations. It undergirds a believer's trust; it never replaces it, and it is never a quarrel to be won.",links:[]},
+ {n:"02 · Contingency",q:"Why is there something rather than nothing?",a:"Everything that exists has an explanation, in the necessity of its own nature or in an external cause. The universe exists and could have been otherwise, so it has an explanation beyond itself: a necessary, self-existent being. And “what explains God?” doesn't regress: a necessary being is explained by its own nature, not a further cause.",links:[["leibniz.html","The Contingency Argument"]],obj:"“Then what explains God?”"},
+ {n:"03 · The beginning",q:"Why did the universe have a cause?",a:"Whatever begins to exist has a cause (not “everything has a cause”). The universe began, supported both philosophically and by the evidence that it traces back to a beginning. So it has a cause beyond space and time: immaterial, powerful, and personal. We hold the science as strong corroboration, not proof.",links:[["kalam.html","The Kalam Argument"],["bigbang.html","The Big Bang"]],obj:"“What caused God?”"},
+ {n:"04 · Fine-tuning",q:"What does fine-tuning show, and what does it not?",a:"The constants sit in an extraordinarily narrow life-permitting range: the data, widely granted, including by many atheist physicists. Design is the inference, weighed against necessity and chance as the best of the three, never a scientific consensus. Keep “fine-tuned” (data) and “designed” (conclusion) apart.",links:[["finetuning.html","The Fine-Tuning Argument"]],obj:"“The multiverse explains it”"},
+ {n:"05 · Morality",q:"Can we be good without God?",a:"Yes: atheists can live good lives and know right from wrong. The real question is the ground: if God does not exist, is there any objective basis for moral values and duties? The argument says no, and their reality points to God. Euthyphro is answered by the third option: God wills the good because he is good.",links:[["moral.html","The Moral Argument"]],obj:"“The Euthyphro dilemma”"},
+ {n:"06 · Suffering",q:"How should a Christian face the problem of suffering?",a:"Separate the emotional problem, answered first and often by presence rather than argument, from the intellectual one. The logical version fails: a free-will defence shows God and suffering are consistent (it need only be possible). The evidential version is met by our poor vantage point and the total evidence. The mystery is conceded, not explained away.",links:[["evil.html","The Problem of Evil"]]},
+ {n:"07 · Who Jesus was",q:"How do we know Jesus claimed, and shared, God's identity?",a:"Not from one sentence but a pattern: he was worshipped by monotheists within about twenty years (Philippians 2); he steps into roles Scripture keeps for God (the coming LORD of Malachi 3:1; the beloved Son and heir; the unique knowing of Matthew 11:27; the right hand of God at his trial, Psalm 110:1, heard as blasphemy). The church confesses one person, fully God and fully man.",links:[["jesus_as_god_nt.html","Jesus as God in the NT"],["jesus_claims.html","Did Jesus claim to be God?"]],obj:"“Jesus never claimed to be God”"},
+ {n:"08 · The resurrection",q:"What is the case that Jesus rose?",a:"Two steps: the facts, then the best explanation. Three facts a wide majority of scholars grant: the empty tomb, the appearances (the very early creed of 1 Corinthians 15), and a belief the disciples couldn't have invented. Fraud, swoon and hallucination each leave part unexplained; God raised him explains all three.",links:[["minimalfacts.html","The Minimal Facts"],["earlycreed.html","The Early Creed"]],obj:"“It was just hallucinations”"}
+];
+const CH=[
+ ["Ch. 1","What apologetics is, and how to use this book","Method","Apologetics is a reasoned defence given gently (1 Peter 3:15): reasons that undergird trust, never replace it."],
+ ["Ch. 2","What difference does it make if God exists?","Meaning, value, purpose","We can't consistently live as if life is meaningless, and if the question comes from despair, the answer is a friend, not a debate."],
+ ["Ch. 3","Why does anything at all exist?","The contingency argument","Everything that exists has an explanation, and a necessary being's explanation is in its own nature, so the buck really can stop there."],
+ ["Ch. 4","Why did the universe begin?","The kalam argument","Whatever begins to exist has a cause; the universe began; so it has a cause, beyond space and time, and personal."],
+ ["Ch. 5","Why is the universe fine-tuned for life?","The fine-tuning argument","“Fine-tuned” is the conceded data; “designed” is the inferred, best-of-three conclusion, never a claimed consensus."],
+ ["Ch. 6","Can we be good without God?","The moral argument","The question isn't whether atheists can be good, but whether, without God, there is any objective ground for good and evil."],
+ ["Ch. 7","What about suffering?","The problem of evil","For the pain of suffering, be a present friend; for the argument, a free-will defence shows God and evil are consistent, mystery intact."],
+ ["Ch. 8","Who was Jesus?","The identity of Jesus","Within about twenty years, monotheists worshipped Jesus, and his own words step into roles Scripture keeps for God alone."],
+ ["Ch. 9","Did Jesus rise from the dead?","The resurrection","Empty tomb, appearances (the very early creed), and a belief the disciples couldn't have invented: best explained by the resurrection."],
+ ["Ch. 10","Is Jesus the only way to God?","Christ and other faiths","Salvation is in Christ (Acts 4:12); “that's arrogant” is not a disproof, and on the hardest edges, orthodox Christians hold a real range of views."]
+];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let mode="read"; const revealed=new Set(); const rating={};
+function drawIdeas(){
+  const g=document.getElementById("ideaGrid");
+  g.innerHTML=IDEAS.map((d,i)=>{
+    const show = mode==="read" || revealed.has(i);
+    const links = d.links.map(([u,t])=>`<a class="pill" href="${SITE}${u}" target="_blank" rel="noopener">${esc(t)} →</a>`).join("") + (d.obj?`<span class="pill obj" title="Opens the Objection Guide in the real page">Objection: ${esc(d.obj)}</span>`:"");
+    const test = mode==="test" ? (show
+      ? `<div class="rate" role="group" aria-label="How did you do?">${["Got it","Partly","Not yet"].map(r=>`<button data-rate="${i}" data-v="${r}" aria-pressed="${rating[i]===r}">${r}</button>`).join("")}</div>`
+      : `<button class="reveal" data-rev="${i}">Reveal our answer</button>`) : "";
+    return `<article class="idea"><div class="n">${esc(d.n)}</div><h3 class="q">${esc(d.q)}</h3>${show?`<p class="a">${esc(d.a)}</p>`:""}${test}<div class="links">${links}</div></article>`;
+  }).join("");
+  const s=document.getElementById("score");
+  if(mode==="test"){ const got=Object.values(rating).filter(v=>v==="Got it").length; s.hidden=false; s.textContent=`${Object.keys(rating).length} of 8 rated · ${got} got it`; } else s.hidden=true;
+}
+function drawChapters(){
+  document.getElementById("chapList").innerHTML=CH.map(([n,t,topic,take],i)=>`
+    <details class="chap"${i===0?" open":""}><summary><span class="cn">${n}</span><span class="ctitle">${esc(t)}<span class="ctopic">${esc(topic)}</span></span><span class="chev" aria-hidden="true">›</span></summary>
+    <div class="body"><p class="take">${esc(take)}</p><p class="note">Full summary and discussion questions: <a href="https://apologiadaily.com/reading-club-on-guard.html" target="_blank" rel="noopener">reading club, ${i===0?"start here":"session "+i}</a></p></div></details>`).join("");
+}
+document.addEventListener("click",e=>{
+  const r=e.target.closest("[data-rev]"); if(r){revealed.add(+r.dataset.rev);drawIdeas();return;}
+  const t=e.target.closest("[data-rate]"); if(t){rating[t.dataset.rate]=t.dataset.v;drawIdeas();return;}
+});
+const mR=document.getElementById("mRead"), mT=document.getElementById("mTest");
+mR.onclick=()=>{mode="read";mR.setAttribute("aria-pressed","true");mT.setAttribute("aria-pressed","false");drawIdeas();};
+mT.onclick=()=>{mode="test";mT.setAttribute("aria-pressed","true");mR.setAttribute("aria-pressed","false");revealed.clear();drawIdeas();};
+// highlight current section in the sticky nav
+const links=[...document.querySelectorAll(".snav a")];
+const io=new IntersectionObserver(es=>es.forEach(en=>{ if(en.isIntersecting){ links.forEach(l=>l.classList.toggle("on",l.getAttribute("href")==="#"+en.target.id)); }}),{rootMargin:"-40% 0px -55% 0px"});
+document.querySelectorAll("main section").forEach(s=>io.observe(s));
+drawIdeas(); drawChapters();
+</script>
