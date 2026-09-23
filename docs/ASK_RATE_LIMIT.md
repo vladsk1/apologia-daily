@@ -1,10 +1,13 @@
 # AI rate limit — `bump_ask_rate` migration (run once)
 
-> **Status: ⏳ IN PROGRESS 2026-09-23 — NOT yet confirmed applied.** The owner started
-> running the Migration block below in the Supabase SQL editor via Claude in Chrome; it
-> had not finished when this was written. (A commit earlier the same day, `9b4b9be`,
-> wrongly recorded it as APPLIED — corrected here.) Until confirmed, treat it as un-run.
-> The SQL is **idempotent** and safe to re-run.
+> **Status: ✅ APPLIED + VERIFIED 2026-09-23** (production project, SQL Editor, run by the
+> owner via Claude in Chrome; results relayed to a session). Pre-check: `public.ask_rate`
+> and `bump_ask_rate` **already existed** (an earlier run — `HANDOFF.md` had logged it as
+> RUN); `ask_rate_limit` did **not** exist. The re-run therefore left the table's columns
+> untouched but (re)applied RLS, the grants/revokes and the function body. Verify: bump →
+> 1 then 2; `anon` execute on the function = false; `authenticated` select on the table =
+> false; test row deleted. `lib/ratelimit.js` calls the RPC with the service-role key, which
+> is the only role that can. The SQL is **idempotent** and safe to re-run.
 > ⚠ This is the ONLY `bump_ask_rate` definition to use — the older snippet in
 > `docs/ASKED_AND_ANSWERED_SPEC.md` (table `ask_rate_limit`) is SUPERSEDED; running it
 > would silently repoint the function at a different table.

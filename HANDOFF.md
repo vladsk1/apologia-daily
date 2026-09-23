@@ -252,7 +252,7 @@ Read these for the *why* behind a past decision. For current state, read `CLAUDE
 > `ev-s1`–`ev-s6` are four-agent-swept** (God's Existence + Science & Faith were finished by the LOCAL
 > session on `main`, commits `bed086b`/`841faa3`); only Conversion Stories (`ev-s7`) is intentionally
 > unswept. **Top open item: the `ask_rate_limit` Supabase migration is still un-run (human step) — do
-> it before any traffic/reels push.** *(2026-09-23: the migration to run is `docs/ASK_RATE_LIMIT.md` — table `ask_rate`; the `ask_rate_limit` snippet is superseded. Owner was running it that day; NOT yet confirmed applied.)*
+> it before any traffic/reels push.** *(2026-09-23: the migration to run is `docs/ASK_RATE_LIMIT.md` — table `ask_rate`; the `ask_rate_limit` snippet is superseded. ✅ Re-applied and VERIFIED on production that day — table + function already existed from the earlier run.)*
 
 >
 > **2026-07-09 (web session) — handoff: `docs/SESSION_HANDOFF_2026-07-09.md`.** Shipped:
