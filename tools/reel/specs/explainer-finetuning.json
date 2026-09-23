@@ -1,0 +1,433 @@
+{
+  "format": "explainer",
+  "title": "Is the Universe Fine-Tuned for Life? The Fine-Tuning Argument",
+  "source": "library/finetuning.html",
+  "aspect": "wide",
+  "theme": "navy",
+  "fps": 30,
+  "voice": "am_michael",
+  "speed": 0.95,
+  "tempo": 1.1,
+  "motion": true,
+  "port_note": "Every narrated sentence is PORTED from the certified library/finetuning.html (stamped citations/argument/orthodoxy/neutrality 2026-08-28), verbatim or trimmed at a clause boundary, EXCEPT these DECLARED strings. NARRATION: (1) Penrose's and Susskind's superscript figures are written 10^10^123 and 10^500 (the essay's <sup> markup); (2) the Kragh caution drops its enclosing parentheses; (3) Hossenfelder: 'presses it further than this essay will' → 'presses it further than we will' (the hedge kept, per argument round 1); the rest, INCLUDING her full symmetry, is verbatim (no-compression constraint recorded for ev-m-finetuning); (4) Stenger: the appositive '(1935–2014), an emeritus professor … University of Hawaii,' is dropped; (5) 'Luke Barnes's technical review was written largely to answer him, Barnes himself calling it “a critique of Stenger's book”; Stenger replied in turn.' = the essay sentence with 'The review this essay rests on at note 1' → 'Luke Barnes's technical review' and 'its author' → 'Barnes himself'; (6) 'Note the scope: this argument reaches a designing intelligence behind the constants — not yet the Father, Son and Holy Spirit.' is PORTED from the certified ev-m-finetuning.html; (7) Wasted Universe: 'this essay has been using' → 'we have been using'; the hospitable-window sentence drops its leading 'Third,' and 'the opening section' → 'the opening'; the '“Waste” is not a measurement…' reply drops its leading 'Second,'. ON-SCREEN LABELS are verbatim fragments or compressions of adjacent narration; MINE: the six dial names, 'THE DATA / THE DESIGN', the Λ animation text and Susskind's full book title (from essay fn 3), 'Penrose is no theist. The figure is his.', the Hoyle-quote and Kragh labels, the forces/slider labels, 'Chance / Necessity / Design', 'Confirmation — not proof', 'Pushed back, not erased', 'Boltzmann brains', 'No agreed, decisive test — at present', the Hossenfelder label (her full symmetry + 'She is not a witness for design.'), the multiverse verdict (restores 'scientific'), the puddle/firing labels and 'Blanks — or an astonishing fluke?', the measure labels and verdict 'Not yet a formal proof — nor does it show the fine-tuning is an illusion', the wasted-universe verdict (neutrality round 2's wording), the Lewis/Barnes/Stenger/SEP survey labels, the four seats with their bills (Design's own: 'the measure problem: genuine unfinished business'), the rope title 'One strand in a cumulative case — not the whole rope' and strand names, and the scope label 'This argument reaches a designer — not yet the Father, Son and Holy Spirit'. NOT USED (cut for length, whole sentences): 'This essay takes that argument seriously…' framing paragraph; 'The list grew…' + 'What rattled them…'; 'We could hardly find ourselves anywhere else.'; the Wasted Universe 'First,' reply (the previous-objection symmetry) and the Sun / ~9-billion-year sentence (a recorded antecedent trap); the essay's final Barnes/Stenger venues detail (footnote material); 'The narrowness of the life-permitting window is not what Sober and the McGrews dispute; what they contest is how to price it.' (the preceding kept sentence makes the same point); the framing sentences 'Three things can be added.' and 'So where do matters stand?'. ROUND 1 (2026-09-23, three lenses in parallel): orthodoxy NOTE-only; neutrality NOT STAMPABLE (1 BREAK: Stenger exchange cut); argument NOT STAMPABLE (6 WEAK incl. two undeclared cuts) — all applied. ROUND 2: orthodoxy CLEAN; neutrality 0 BREAK / 2 WEAK (wasted-universe verdict label; its likelihood-form steelman missing); argument 0 BREAK / 3 WEAK (same steelman + the 'Second' reply; re-anchor 'Sober and the McGrews' with 'The strongest form of the measure-problem objection deserves a plain statement.'; this port_note contradicted itself) — all applied from ported wording. ROUND 3: argument STAMPABLE (0 BREAK/0 WEAK; 2 POLISH = undeclared cuts, now listed under NOT USED), neutrality STAMPABLE (1 POLISH: 'the size is cost' → 'most of the size is cost', applied in neutrality's own wording AFTER its read), orthodoxy CLEAN.",
+  "lexicon": {
+    "Λ": "lambda",
+    "10^10^123": "ten to the power of ten to the one hundred and twenty-third",
+    "10^500": "ten to the five hundred",
+    "7.65 MeV": "seven point six five M.E.V.",
+    "carbon-12": "carbon twelve",
+    "Boltzmann": "Boltsmann",
+    "Kragh": "Krog",
+    "Hossenfelder": "Hossen-felder",
+    "Vestrup": "Vest-rup",
+    "Stenger": "Stenger",
+    "1 Peter 3:15": "first Peter, three fifteen",
+    "(1989)": "",
+    "(2004)": "",
+    "(2005)": "",
+    "(2011)": ""
+  },
+  "scenes": [
+    {
+      "visual": {
+        "type": "ft_title",
+        "big": [
+          "Is the universe",
+          "fine-tuned for life?"
+        ],
+        "sub": "The fine-tuning argument"
+      },
+      "say": []
+    },
+    {
+      "kicker": "THE NUMBERS",
+      "visual": {
+        "type": "dials",
+        "n": 6,
+        "settle_at": 3,
+        "knife_at": 1
+      },
+      "say": [
+        "In the late 1970s, the physicist Paul Davies began collecting a strange inventory.",
+        "Not of particles or galaxies, but of coincidences — places where the universe seemed to balance on a knife's edge.",
+        "Turn one of nature's dials a hair too far in either direction, and there would be no stars, no carbon, no chemistry, no observers to notice the difference.",
+        "The deep constants of physics — the numbers that govern how strongly particles attract, how fast space expands, how matter clumps — do not appear to be arbitrary in the way one might expect of a cosmos thrown together by accident.",
+        "They sit, with eerie precision, inside the narrow windows that permit complex structure to exist at all."
+      ]
+    },
+    {
+      "kicker": "A LINE WE WILL NOT BLUR",
+      "visual": {
+        "type": "split",
+        "left": "THE DATA",
+        "left_sub": "Measured physics, widely accepted across worldviews",
+        "left_at": 1,
+        "right": "THE DESIGN",
+        "right_sub": "A philosophical inference — a contested one",
+        "right_at": 2
+      },
+      "say": [
+        "Here a crucial line must be drawn at the outset.",
+        "That the constants fall in life-permitting ranges is measured physics, widely accepted across worldviews.",
+        "That this points to a designer is a philosophical inference — a contested one.",
+        "No honest treatment conflates the two, and this one will not."
+      ]
+    },
+    {
+      "kicker": "WHAT FINE-TUNING MEANS",
+      "visual": {
+        "type": "window_dial",
+        "lethal_at": 0,
+        "window_at": 1
+      },
+      "say": [
+        "Fine-tuning is not the claim that the universe is hospitable to life everywhere; it is mostly lethal vacuum and radiation.",
+        "The claim is narrower and stranger: that the fundamental parameters — the constants in our physical laws and the initial conditions of the cosmos — lie within ranges so slim that small departures would forbid the chemistry on which any conceivable life depends.",
+        "Four examples have become canonical."
+      ]
+    },
+    {
+      "kicker": "1 · THE COSMOLOGICAL CONSTANT",
+      "visual": {
+        "type": "cancel",
+        "gap_at": 1,
+        "weinberg_at": 2,
+        "digits_at": 3,
+        "label_at": 4,
+        "label": "A recognized puzzle in physics — not a faith claim",
+        "cite": "Susskind, The Cosmic Landscape: String Theory and the Illusion of Intelligent Design (2005)"
+      },
+      "say": [
+        "The most cited case is the cosmological constant, Λ, the energy density of empty space that drives cosmic acceleration.",
+        "When physicists estimate the vacuum energy predicted by quantum field theory and compare it to the tiny value actually observed, the two differ by roughly 120 orders of magnitude.",
+        "In 1987 Steven Weinberg argued, on anthropic grounds, that Λ must be vanishingly small — or galaxies could never have formed.",
+        "Leonard Susskind put the point with characteristic bluntness: to make the first 119 decimal places of the vacuum energy cancel “is almost certainly no accident.”",
+        "This is the “cosmological constant problem,” and it is a recognized puzzle in physics, not a faith claim."
+      ]
+    },
+    {
+      "kicker": "2 · THE UNIVERSE'S IMPROBABLE ORDER",
+      "visual": {
+        "type": "penrose",
+        "figure_at": 2,
+        "note_at": 3,
+        "note": "Penrose is no theist. The figure is his."
+      },
+      "say": [
+        "The second example comes from Roger Penrose.",
+        "The early universe began in a state of extraordinarily low entropy — extraordinarily ordered — which is what allowed structure to develop.",
+        "In The Emperor's New Mind (1989) and again in The Road to Reality (2004), Penrose estimated the precision of the Big Bang's initial state at roughly one part in 10^10^123 — a number so vast that, as he noted, you could not write out its zeros even if you inscribed one on every particle in the observable universe.",
+        "Penrose, it should be said immediately, is no theist; he reads this as a clue about physics we do not yet have.",
+        "The figure is his."
+      ]
+    },
+    {
+      "kicker": "3 · THE CARBON RESONANCE",
+      "visual": {
+        "type": "carbon",
+        "found_at": 1,
+        "quote_at": 2,
+        "caution_at": 3,
+        "caution": "Kragh: the “anthropic prediction” is legend — the physics is real"
+      },
+      "say": [
+        "In 1953 Fred Hoyle reasoned that for stars to forge carbon — and hence life — there had to exist a specific, then-undiscovered energy level in the carbon-12 nucleus near 7.65 MeV, allowing the “triple-alpha” fusion of three helium nuclei to proceed.",
+        "The resonance was found, essentially where he said it would be.",
+        "Hoyle, an avowed unbeliever for most of his life, later wrote that “a common-sense interpretation of the facts suggests that a superintellect has monkeyed with physics, as well as with chemistry and biology.”",
+        "A caution worth flagging: the historian of science Helge Kragh has shown that Hoyle did not actually reason from the existence of life to the resonance in 1953 — the “anthropic” gloss was added decades later.",
+        "The resonance prediction is real and striking physics; the legend that it was an anthropic prediction is not history."
+      ]
+    },
+    {
+      "kicker": "4 · THE BALANCE OF FORCES",
+      "visual": {
+        "type": "forces",
+        "ratio_at": 1,
+        "slider_at": 1
+      },
+      "say": [
+        "The fourth is the ratio of the forces themselves.",
+        "Gravity and electromagnetism differ in strength (for like charges such as protons) by some thirty-six orders of magnitude; the strong nuclear force is tuned such that a few-percent change would prevent the formation of either hydrogen or the heavier elements.",
+        "Stars burn, and chemistry works, because these balances hold."
+      ]
+    },
+    {
+      "kicker": "THREE DOORS",
+      "visual": {
+        "type": "doors",
+        "labels": [
+          "Chance",
+          "Necessity",
+          "Design"
+        ],
+        "open_at": 1,
+        "focus": [
+          [
+            2,
+            1
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            6,
+            2
+          ]
+        ]
+      },
+      "say": [
+        "Granting the data, what explains them?",
+        "The philosopher Robin Collins frames the choices as three: the values are what they are by chance, by physical necessity, or by design.",
+        "Necessity — the hope that a future “theory of everything” will show the constants had to take these values — remains a live aspiration.",
+        "In its strongest form it grants that some quantities we now treat as freely dialable “constants” may turn out not to be free parameters at all, but derivable from deeper theory or tightly constrained by considerations of naturalness, shrinking the apparent fine-tuning.",
+        "Even so, it merely relocates the puzzle: why a law-structure that itself permits life?",
+        "Chance, on a single universe, is the option fine-tuning presses hardest against.",
+        "That leaves design as a contender, and Collins makes the case in the disciplined language of probability rather than rhetoric."
+      ]
+    },
+    {
+      "kicker": "THE LIKELIHOOD PRINCIPLE",
+      "visual": {
+        "type": "scales",
+        "left": "Single universe, no designer",
+        "right": "Theism",
+        "tip_at": 2,
+        "verdict_at": 3,
+        "verdict": "Confirmation — not proof"
+      },
+      "say": [
+        "His tool is the likelihood principle: evidence supports the hypothesis that makes it more probable.",
+        "Collins argues that the fine-tuning evidence is enormously improbable under the atheistic single-universe hypothesis but not improbable under theism — a God might well will a life-bearing, ordered cosmos.",
+        "So the evidence confirms theism over its denial.",
+        "Notice the modesty of the conclusion: not proof, but confirmation — a tilting of the scales.",
+        "It is an inference to the best explanation, offered as one strand in a larger cumulative case."
+      ]
+    },
+    {
+      "kicker": "OBJECTION 1 · THE MULTIVERSE",
+      "visual": {
+        "type": "multiverse",
+        "landscape_at": 2,
+        "respect_at": 4,
+        "diffs": [
+          [
+            "Pushed back, not erased",
+            7
+          ],
+          [
+            "Boltzmann brains",
+            8
+          ],
+          [
+            "No agreed, decisive test — at present",
+            9
+          ]
+        ],
+        "hoss_at": 10,
+        "hoss": "Hossenfelder: believing in them is not science; denying them is equally unscientific; an unobservable God is a posit of the same kind. She is not a witness for design.",
+        "verdict_at": 12,
+        "verdict": "A metaphysical posit against a metaphysical posit — a fair fight, but not a scientific refutation"
+      },
+      "say": [
+        "The most powerful reply is the multiverse.",
+        "If reality contains a vast ensemble of universes with randomly varying constants, then somewhere life-permitting ones are bound to arise — and observers, by necessity, find themselves in one of those.",
+        "This is not idle speculation: Susskind's The Cosmic Landscape (2005) marshals string theory's “landscape” of perhaps 10^500 possible vacua, each with different physics, to give the ensemble a physical basis.",
+        "On this view, fine-tuning is no more surprising than the fact that, among countless planets, we live on a habitable one.",
+        "This deserves respect, not dismissal.",
+        "It is a coherent, physically motivated proposal, and if true it would defuse the argument.",
+        "But three honest difficulties remain.",
+        "First, a multiverse-generating mechanism — eternal inflation, a string landscape — is itself a richly structured piece of physics that appears to require its own fine-tuning to get going; the problem is pushed back, not erased.",
+        "Second is the Boltzmann brain problem: in many multiverse models, freak observers fluctuating momentarily out of chaos vastly outnumber observers like us who arose through orderly cosmic history — which, if so, undermines our reasons for trusting any observation at all, including the ones that motivated the multiverse.",
+        "Third, and most simply: at present there is no agreed, decisive observational test that distinguishes a multiverse from a single universe — and the untestability is not only a theist's complaint.",
+        "The physicist Sabine Hossenfelder presses it further than we will, arguing that no observation could establish the other universes even in principle, so that believing in them is not science; she holds the standard evenly, adding that denying them is equally unscientific, and that an unobservable God is a posit of the same kind.",
+        "She is not a witness for design.",
+        "What her argument supports is only this: it is, for now, a metaphysical posit competing with another metaphysical posit.",
+        "That is a fair fight — but it is not a scientific refutation."
+      ]
+    },
+    {
+      "kicker": "OBJECTION 2 · THE PUDDLE",
+      "visual": {
+        "type": "firing",
+        "squad_at": 3,
+        "fire_at": 4,
+        "verdict_at": 6,
+        "verdict": "Blanks — or an astonishing fluke?"
+      },
+      "say": [
+        "The second objection is the charge of anthropic triviality, captured in Douglas Adams's parable of the puddle that marvels at how perfectly its hole fits its shape — just before the sun dries it up.",
+        "Of course we observe a life-permitting universe; a non-life-permitting one would have no observers to do the observing.",
+        "So where is the surprise?",
+        "John Leslie's firing-squad analogy is the standard reply, and it is a good one.",
+        "Imagine fifty trained marksmen aim at you and every one misses.",
+        "True, if you had died you could not now be puzzling over it — but your survival still cries out for explanation.",
+        "“I'm not dead, so I shouldn't be surprised” is not an adequate response; either the guns were loaded with blanks (design) or you witnessed an astonishing fluke (chance).",
+        "The fact that we could only ever observe a survivable outcome does not dissolve the improbability of the outcome itself."
+      ]
+    },
+    {
+      "kicker": "OBJECTION 3 · THE MEASURE PROBLEM",
+      "visual": {
+        "type": "measure",
+        "zoom_at": 2,
+        "q_at": 3,
+        "planck_at": 6,
+        "verdict_at": 10,
+        "verdict": "Not yet a formal proof — nor does it show the fine-tuning is an illusion"
+      },
+      "say": [
+        "The third objection is the most serious, and I concede it is the hardest for the argument to answer.",
+        "To say a constant is “improbably” fine-tuned, you need a probability distribution over its possible values.",
+        "But if the constant could in principle range over an infinite span, there is no way to assign a uniform probability that sums to one — the distribution is, in the technical term, non-normalizable.",
+        "In a 2001 paper in Mind, Timothy McGrew, Lydia McGrew, and Eric Vestrup argued precisely this: the life-permitting interval may be narrow, but “narrow” relative to what?",
+        "Against an infinite range, the ratio is mathematically ill-defined, and the probabilistic intuition collapses.",
+        "The atheist philosopher Elliott Sober presses a kindred point: we have no independent, theory-neutral way to gauge how probable the constants were, since our only sample is the universe we already inhabit.",
+        "Defenders reply that physics already treats certain ranges as natural (a finite “Planck-scale” window, say) and that we routinely reason probabilistically over such ranges in practice.",
+        "That has force.",
+        "But the measure problem is not a debating point to be waved off; it is genuine unfinished business, and the most intellectually honest proponents — Collins among them — treat it as such rather than as solved.",
+        "What it does not do is reverse the inference: physicists reason probabilistically over restricted, physically motivated ranges as a matter of course, and within any such range the life-permitting window is extraordinarily narrow.",
+        "The measure problem shows the argument is not yet a formal proof; it does not show the fine-tuning is an illusion."
+      ]
+    },
+    {
+      "kicker": "OBJECTION 4 · THE WASTED UNIVERSE",
+      "visual": {
+        "type": "cosmic_cost",
+        "forge_at": 5,
+        "verdict_at": 8,
+        "verdict": "Part of the reply: most of the size is cost. It does not answer the emptiness — which is the datum the argument started from"
+      },
+      "say": [
+        "The fourth objection presses on the shape of the cosmos rather than its constants.",
+        "If this universe was made with life in mind, why is it so overwhelmingly hostile to life, so close to empty, and so old — vast reaches of vacuum and radiation between the rare places anything could live, and thirteen billion years of cosmic history before there was anyone to see it?",
+        "The objection is not merely a complaint about taste.",
+        "Put in the same likelihood terms we have been using, it runs: a cosmos on this scale, this empty and this indifferent to us is roughly what one would expect if nobody intended it, and not what one would expect of a designer with our welfare in view — so the scale, on this view, is evidence of indifference in precisely the way the constants are said to be evidence of intent.",
+        "Part of the reply is that, given the physics we have, most of the scale is not extravagance but cost.",
+        "The elements life is built from did not exist at the beginning: carbon, oxygen and iron are forged inside stars and scattered by their deaths, so stars must live and die, and their debris be gathered into later ones, before a rocky planet is chemically possible at all.",
+        "That takes billions of years, and a universe that has been expanding for billions of years is vast on any scale a human being can picture.",
+        "On this much the objection has the causal arrow backwards: the size of the observable universe is largely a consequence of the time the chemistry of life took, not a measure of waste.",
+        "That answers the size; it does not answer the emptiness, and the reply should not be made to sound more complete than it is.",
+        "“Waste” is not a measurement but a judgement relative to a purpose, and the purpose the objection assumes — that the cosmos exists for our habitation — is one this argument has never claimed.",
+        "The argument here never depended on the universe being hospitable; it turns on the narrowness of the windows that make any chemistry possible at all, which is why the opening defined fine-tuning against a cosmos that is mostly lethal vacuum.",
+        "So the emptiness is not fresh evidence against the argument. It is the datum the argument started from."
+      ]
+    },
+    {
+      "kicker": "THE HONEST STATE OF THE SCHOLARSHIP",
+      "visual": {
+        "type": "survey",
+        "book": "A Fortunate Universe (2016)",
+        "left": "Geraint Lewis",
+        "left_sub": "reads it as pointing to a multiverse",
+        "right": "Luke Barnes",
+        "right_sub": "reads it as pointing to a designer",
+        "stenger_at": 1,
+        "stenger": "Stenger: the range is “not infinitesimal, as often claimed” — Barnes answered; Stenger replied in turn — unfinished",
+        "sep_at": 6,
+        "sep": "Design · Multiverse · Normalizability — all live, unsettled positions"
+      },
+      "say": [
+        "The data are widely accepted: the constants do fall in narrow life-permitting ranges, and the figures from Weinberg, Penrose, and Hoyle are drawn from mainstream physics, not apologetics — which is why the fullest book-length survey of the literature could be co-written by an astrophysicist who reads it as pointing to a multiverse and one who reads it as pointing to a designer.",
+        "The dissent that exists should be named rather than left for a reader to discover: the physicist Victor Stenger argued in The Fallacy of Fine-Tuning (2011) that the life-permitting range is “not infinitesimal, as often claimed,” his method being to vary the constants jointly rather than one at a time.",
+        "His quarrel was with how narrow the windows had been claimed to be rather than with the physics itself — he maintained he had “no significant disagreement” with the technical literature.",
+        "Luke Barnes's technical review was written largely to answer him, Barnes himself calling it “a critique of Stenger's book”; Stenger replied in turn.",
+        "The exchange is public, technical and unfinished — which is not what a field quietly agreeing that the fine-tuning is an artefact would look like.",
+        "What divides thoughtful people is the interpretation.",
+        "The Stanford Encyclopedia of Philosophy's entry on fine-tuning treats the design inference, the multiverse, and the normalizability critique all as live, unsettled positions — which is the correct summary.",
+        "This is contested terrain, and labeling it so is not weakness but accuracy."
+      ]
+    },
+    {
+      "kicker": "WEIGHING THE WHOLE",
+      "visual": {
+        "type": "table",
+        "seats": [
+          [
+            "Design",
+            "the measure problem: genuine unfinished business"
+          ],
+          [
+            "Multiverse",
+            "untestable · Boltzmann brains"
+          ],
+          [
+            "Chance",
+            "staggering improbability"
+          ],
+          [
+            "Necessity",
+            "an unredeemed promissory note"
+          ]
+        ],
+        "bills_at": 5,
+        "seat_at": 7
+      },
+      "say": [
+        "The strongest form of the measure-problem objection deserves a plain statement.",
+        "Sober and the McGrews can fairly say: until you can specify, on independent grounds, the space of possible universes and a defensible probability measure over it, the leap from “narrow window” to “improbable, therefore designed” is not yet rigorous.",
+        "That is a real limit — a limit on how tightly the design inference can be formalized, not evidence that the universe is not finely tuned.",
+        "The reply is not to deny the limit but to weigh the whole.",
+        "The design hypothesis does not need to prove a probability measure to be the more reasonable explanation; it needs only to explain the pattern better than its rivals.",
+        "And the rivals carry their own unpaid bills — the multiverse its untestability and its Boltzmann brains, brute chance its staggering improbability, necessity its unredeemed promissory note.",
+        "Fine-tuning does not close the case.",
+        "It earns design a seat at the table among serious explanations of why there is an ordered, life-bearing cosmos at all."
+      ]
+    },
+    {
+      "kicker": "WHAT IT DOES, AND DOES NOT, ESTABLISH",
+      "visual": {
+        "type": "rope",
+        "strands": [
+          "Fine-tuning",
+          "The Kalam",
+          "Moral value",
+          "Contingency",
+          "The resurrection"
+        ],
+        "weave_at": 3,
+        "note_at": 4,
+        "note": "This argument reaches a designer — not yet the Father, Son and Holy Spirit",
+        "title": "One strand in a cumulative case — not the whole rope"
+      },
+      "say": [
+        "The fine-tuning argument, even at its strongest, does not deliver the God of Abraham, Isaac, and Jacob.",
+        "It points, if it succeeds, to a cosmic fine-tuner — an intelligence behind the constants — and no further.",
+        "It says nothing of incarnation, resurrection, or covenant.",
+        "It is one strand in a cumulative natural theology, not the whole rope.",
+        "Note the scope: this argument reaches a designing intelligence behind the constants — not yet the Father, Son and Holy Spirit."
+      ]
+    },
+    {
+      "kicker": "WHERE THIS LEAVES US",
+      "visual": {
+        "type": "ft_close",
+        "ref": "1 Peter 3:15"
+      },
+      "say": [
+        "Nor does it claim that “scientists agree the universe is designed.”",
+        "They do not, and the argument needs no such claim.",
+        "What can be said is gentler and sturdier: that a thoughtful person, surveying the same numbers an atheist like Penrose finds so haunting, may reasonably judge that a mind behind the dials explains them better than the alternatives.",
+        "That judgment is defensible. It is also, honestly, resistible.",
+        "The argument invites, it does not coerce — which is perhaps fitting for a question this large.",
+        "As the old counsel has it, such a case is offered with gentleness and respect, leaving the reader free, before the immensity of those numbers, to wonder."
+      ]
+    },
+    {
+      "visual": {
+        "type": "end",
+        "big": [
+          "Go deeper"
+        ],
+        "sub": "The full essay, fully sourced, at apologiadaily.com"
+      },
+      "say": []
+    }
+  ],
+  "reviewed": {
+    "argument": "2026-09-23",
+    "orthodoxy": "2026-09-23",
+    "neutrality": "2026-09-23",
+    "by": "PILOT 2 2026-09-23 — narrated explainer ported from certified library/finetuning.html (+ one scope sentence ported from certified ev-m-finetuning.html); declared adaptations in port_note. THREE LENSES, three rounds, each round all lenses in parallel on the same text, read-only agents, spec hashed before/after every round (no agent edits). R1: orthodoxy NOTE-only (scope label could read as about God) · neutrality NOT STAMPABLE (1 BREAK: cutting the Barnes↔Stenger exchange made the narrowness dispute read as settled) · argument NOT STAMPABLE (6 WEAK, incl. two undeclared cuts that weakened steelmen, and the Wasted-Universe cut leaving 'mostly lethal vacuum' conceded but unanswered). R2: orthodoxy CLEAN · neutrality 0 BREAK/2 WEAK · argument 0 BREAK/3 WEAK (the likelihood-form wasted-universe steelman; a stale self-contradicting port_note). R3: all three STAMPABLE/CLEAN. Applied AFTER R3 and NOT re-read: neutrality's own POLISH wording on one label ('most of the size is cost') + port_note bookkeeping. Every defect across three rounds was in a CUT or an authored LABEL, never in a verbatim-ported sentence. Not run: apologia-citations (no reference beyond the essay's certified ones; Susskind's title shown on screen is essay fn 3). Owner question noted by orthodoxy, not a defect: old-earth figures ('thirteen billion years') in our voice, same as the certified essay. Pastoral sign-off pending, as site-wide."
+  }
+}
