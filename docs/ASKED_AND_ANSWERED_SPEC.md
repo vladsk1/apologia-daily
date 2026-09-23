@@ -104,8 +104,7 @@ Built and deployed:
   live answers paid-only; retrieval-hit library answers stay free.
 
 ### ⛔ SUPERSEDED — DO NOT RUN THIS SQL (kept for history only)
-Replaced by **`docs/ASK_RATE_LIMIT.md`**, which was applied to the live project on
-2026-09-23 and is what `lib/ratelimit.js` targets (table `ask_rate`). This older block
+Replaced by **`docs/ASK_RATE_LIMIT.md`**, which is what `lib/ratelimit.js` targets (table `ask_rate`). This older block
 defines the SAME function name `bump_ask_rate` against a DIFFERENT table
 (`ask_rate_limit`), so running it would silently repoint the live rate limiter.
 ```sql

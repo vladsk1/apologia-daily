@@ -1,9 +1,10 @@
 # AI rate limit — `bump_ask_rate` migration (run once)
 
-> **Status: ✅ APPLIED 2026-09-23** — owner ran the Migration block below in the
-> Supabase SQL editor (via Claude in Chrome) and reported it working. Owner-reported:
-> the individual Verify results were not relayed back to a session, so re-run the
-> Verify block if you ever need proof. The SQL is **idempotent** and safe to re-run.
+> **Status: ⏳ IN PROGRESS 2026-09-23 — NOT yet confirmed applied.** The owner started
+> running the Migration block below in the Supabase SQL editor via Claude in Chrome; it
+> had not finished when this was written. (A commit earlier the same day, `9b4b9be`,
+> wrongly recorded it as APPLIED — corrected here.) Until confirmed, treat it as un-run.
+> The SQL is **idempotent** and safe to re-run.
 > ⚠ This is the ONLY `bump_ask_rate` definition to use — the older snippet in
 > `docs/ASKED_AND_ANSWERED_SPEC.md` (table `ask_rate_limit`) is SUPERSEDED; running it
 > would silently repoint the function at a different table.
