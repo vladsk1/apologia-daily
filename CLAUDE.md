@@ -974,6 +974,13 @@
 >   until they expire. Fix: add the column, then add `['push_subscriptions','user_id']` to `USER_TABLES`.
 >
 > **Infrastructure / verification**
+> - ✅ **DONE 2026-09-23 (owner ran it in Supabase via Claude in Chrome):** the AI rate-limit
+>   migration `docs/ASK_RATE_LIMIT.md` (`ask_rate` table + `bump_ask_rate` RPC), so the per-IP
+>   daily caps on ask/debate/tutor/devotional/feedback now hold across all Vercel instances.
+>   Owner-reported; Verify results not relayed to a session. The older `ask_rate_limit` snippet
+>   in `docs/ASKED_AND_ANSWERED_SPEC.md` is marked SUPERSEDED — never run it (same function
+>   name, different table). ⚠ From **2026-10-30** Supabase stops auto-granting Data API access
+>   to NEW `public` tables: every migration doc now carries explicit `GRANT`s — keep adding them.
 > - ✅ **DONE 2026-09-08 (owner ran the SQL in Supabase):** the four owed migrations —
 >   `docs/STUDY_GROUPS_RLS_FIX.md` (critical group-access privilege-escalation fix),
 >   `docs/STUDY_GROUPS_DISPLAY_NAME_FIX.md` (M4 anti-spoof trigger), `docs/PROGRESS_SYNC.md`

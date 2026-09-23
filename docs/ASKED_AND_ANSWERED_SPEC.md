@@ -103,8 +103,11 @@ Built and deployed:
   `var isPro = !!(session.user.user_metadata.is_pro===true)` in `asked-and-answered.html` to make
   live answers paid-only; retrieval-hit library answers stay free.
 
-### ⚠️ ONE MANUAL STEP — run this SQL once in Supabase (enables the IP rate limit)
-Until this runs, the per-IP cap fails open (endpoint still works, just less protected):
+### ⛔ SUPERSEDED — DO NOT RUN THIS SQL (kept for history only)
+Replaced by **`docs/ASK_RATE_LIMIT.md`**, which was applied to the live project on
+2026-09-23 and is what `lib/ratelimit.js` targets (table `ask_rate`). This older block
+defines the SAME function name `bump_ask_rate` against a DIFFERENT table
+(`ask_rate_limit`), so running it would silently repoint the live rate limiter.
 ```sql
 create table if not exists public.ask_rate_limit (
   ip  text not null,
