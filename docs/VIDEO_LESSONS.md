@@ -150,6 +150,31 @@ Each tab intro is an *orientation* video (not an argument reel). Content approac
    **"▶ New here? Start with the 1-minute overview"** card at the TOP of the `ev-s3` tab fragment.
 5. Review the feel with the owner before rolling out the other 7 tabs.
 
+## Long-form explainers (the "full" field) — added 2026-09-23
+
+Alongside its ~1-minute reel, an essay can carry a **long-form narrated, animated explainer** rendered
+by `tools/reel/gen_explainer.py` (spec: `tools/reel/specs/explainer-<topic>.json`, gated like any reel).
+Pilot: **Kalam** (`explainer-kalam`, 11:54, certified argument + orthodoxy 2026-09-23).
+
+It is wired in `library/video-lessons.json` on the same entry:
+
+```json
+"kalam": { "reel": "kalam-cosmological", "youtube": "VF_1E5DWePY",
+           "full": "", "full_spec": "explainer-kalam", "full_dur": "12 min" }
+```
+
+Paste the YouTube id into `"full"` and two placements switch on; while it is empty, neither shows:
+- **Evidence Library card:** a "▶ The full explainer · 12 min" box at the top of the card's
+  **Pro — Deep Dive** tier (`library/card-video.js`; the short-version box at the top of the card
+  is unchanged).
+- **Videos page (`video-library.html`):** our own "Animated Explainer" card under God's Existence /
+  Lectures, right after Reasonable Faith's Kalam video. It is hidden (`.vc-pending`) until the id exists.
+
+Upload steps: render with `python3 tools/reel/gen_explainer.py tools/reel/specs/explainer-kalam.json`,
+then upload the `.mp4` **with its `.srt`** as the caption track, so YouTube shows real captions rather
+than auto-generated ones. ⚠ `sw.js` serves `video-lessons.json` cache-first with a background refresh,
+so returning visitors see a newly pasted id one visit later (the same applies to the short videos).
+
 ## Not built yet (easy follow-ups)
 
 - **A "Apologia originals" grid on `video-library.html`** listing all the uploaded lessons in one place.
