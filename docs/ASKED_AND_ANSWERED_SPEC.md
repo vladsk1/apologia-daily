@@ -114,6 +114,13 @@ create table if not exists public.ask_rate_limit (
 );
 alter table public.ask_rate_limit enable row level security; -- service role bypasses RLS
 
+-- Explicit Data API grants. From 2026-10-30 Supabase no longer auto-grants new
+-- public tables to the API roles, so a fresh run (new project, preview branch,
+-- `supabase db reset`) needs these. Harmless on a project where they already exist.
+-- Service role only: the anon/authenticated roles never touch this table.
+revoke all on public.ask_rate_limit from anon, authenticated;
+grant  all on public.ask_rate_limit to service_role;
+
 create or replace function public.bump_ask_rate(p_ip text)
 returns int language plpgsql security definer as $$
 declare cur int;
