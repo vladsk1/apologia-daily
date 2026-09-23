@@ -7,7 +7,7 @@
   "fps": 30,
   "voice": "am_michael",
   "speed": 0.95,
-  "port_note": "Every narrated sentence is PORTED from the certified library/kalam.html (stamped citations/argument/orthodoxy 2026-08-29), verbatim or trimmed at a clause boundary. DECLARED AUTHORED/ADAPTED strings, for the gates: (1) title card 'Did the universe begin?' (the essay title, shortened) and end card 'Go deeper — The full essay, fully sourced, at apologiadaily.com'; (2) the Borde–Guth–Vilenkin sentence drops the paper's quoted title; (3) 'Suppose the argument succeeds: the universe has a cause. What can be said about that cause?' drops 'working purely from the premises, before importing any religious commitment'; (4) 'Whatever is timeless…' drops the leading 'First,'; 'One of the theorem's own co-authors…' drops the leading 'And yet'; (5) 'Kalam is one strand in a cumulative case that, with fine-tuning, moral value, and the resurrection, points to the personal, Triune God.' = the essay's certified orthonote 'Is saying' text with its head 'Kalam by itself reaches only a … cause — one strand' shortened to 'Kalam is one strand' (orthodoxy round-1 fix 2b); (6) the close drops '(1 Peter 3:15)' from the narration (shown on screen); (7) every on-screen label in the visual blocks — each a verbatim fragment or a compression of an adjacent narrated sentence; the 'What brought it into being?', 'Hilbert's Hotel', 'Built up one event at a time', 'The cause of the universe is…', 'Moments added so far / Still to add before an infinite collection is complete: ∞' and '→ the personal, Triune God' labels are mine. DELIBERATELY OMITTED: 'Kalam, on its own, is consistent with deism' (the essay fences it with an orthonote a video cannot host; the scope point is carried by 'not yet the triune God…' + the cumulative-case sentence + 'freely brought the universe into being'). CUT FOR LENGTH (whole sentences): agent-causation, the Vilenkin quotes, thermodynamics, Swinburne, 'Then isn't God infinitely old?', Oppy, Hartle–Hawking, the Aquinas/Maimonides history. ROUND 1 (2026-09-23): argument NOT STAMPABLE (1 BREAK, 5 WEAK, 4 POLISH) + orthodoxy FLAGGED (0 HERESY, 1 DRIFT, 4 NOTE); all fixes applied from ported essay wording except argument POLISH 2 (no-boundary sentence needs the Hartle–Hawking setup, which is cut) — declined.",
+  "port_note": "Every narrated sentence is PORTED from the certified library/kalam.html (stamped citations/argument/orthodoxy 2026-08-29), verbatim or trimmed at a clause boundary. DECLARED AUTHORED/ADAPTED strings, for the gates: (1) title card 'Did the universe begin?' (the essay title, shortened) and end card 'Go deeper — The full essay, fully sourced, at apologiadaily.com'; (2) the Borde–Guth–Vilenkin sentence drops the paper's quoted title; (3) 'Suppose the argument succeeds: the universe has a cause. What can be said about that cause?' drops 'working purely from the premises, before importing any religious commitment'; (4) 'Whatever is timeless…' drops the leading 'First,'; 'One of the theorem's own co-authors…' drops the leading 'And yet'; (5) 'Kalam is one strand in a cumulative case that, with fine-tuning, moral value, and the resurrection, points to the personal, Triune God.' = the essay's certified orthonote 'Is saying' text with its head 'Kalam by itself reaches only a … cause — one strand' shortened to 'Kalam is one strand' (orthodoxy round-1 fix 2b); (6) the close drops '(1 Peter 3:15)' from the narration (shown on screen); (7) every on-screen label in the visual blocks — each a verbatim fragment or a compression of an adjacent narrated sentence; the 'What brought it into being?', 'Hilbert's Hotel', 'Built up one event at a time', 'The cause of the universe is…', 'Moments added so far / Still to add before an infinite collection is complete: ∞' and '→ the personal, Triune God' labels are mine. DELIBERATELY OMITTED: 'Kalam, on its own, is consistent with deism' (the essay fences it with an orthonote a video cannot host; the scope point is carried by 'not yet the triune God…' + the cumulative-case sentence + 'freely brought the universe into being'). CUT FOR LENGTH (whole sentences): agent-causation, the Vilenkin quotes, thermodynamics, Swinburne, 'Then isn't God infinitely old?', Oppy, Hartle–Hawking, the Aquinas/Maimonides history. ROUND 1 (2026-09-23): argument NOT STAMPABLE (1 BREAK, 5 WEAK, 4 POLISH) + orthodoxy FLAGGED (0 HERESY, 1 DRIFT, 4 NOTE); all fixes applied from ported essay wording except argument POLISH 2 (no-boundary sentence needs the Hartle–Hawking setup, which is cut) — declined. ROUND 2 (2026-09-23): orthodoxy CLEAN (2 NOTE — footnote timing applied; destination label kept, centre label shares the frame); argument NOT STAMPABLE (0 BREAK, 4 WEAK, 3 POLISH) — all applied from ported wording: 'classical' in the BGV sub-label (label adapted); Premise-1 metaphysical-warrant sentence; the agent-causation pair + 'First,' restored; 'The cause of the universe is itself beginningless.'; the positive verdict + 'What it accomplishes…' in the close; the hotel's 'If so…' conclusion; the bachelor joke's point. The hotel verdict label 'Mathematically coherent — but concretely instantiated? The disputed hinge' is an ADAPTED label built from essay phrases.",
   "lexicon": {
     "Kalam": "Kah-lahm",
     "ex nihilo nihil fit": "ex nih-hih-loh, nih-hil fit",
@@ -90,7 +90,7 @@
         "type": "vacuum",
         "motto": "ex nihilo nihil fit",
         "motto_sub": "out of nothing, nothing comes",
-        "split_at": 4,
+        "split_at": 5,
         "left": "The quantum vacuum",
         "left_sub": "a real sea of fluctuating energy, with laws",
         "right": "Nothing",
@@ -99,6 +99,7 @@
       "say": [
         "The principle that being does not arise from non-being — ex nihilo nihil fit — is among the most secure intuitions we have.",
         "If things could simply pop into existence uncaused, out of nothing, it becomes inexplicable why we do not see it happening constantly and everywhere.",
+        "Premise 1 is also confirmed throughout ordinary experience — though its deepest warrant is the metaphysical intuition just named, not the inductive track record alone.",
         "The most serious scientific challenge points to quantum mechanics.",
         "In the quantum vacuum, “virtual particles” appear and vanish in ways that are not deterministically caused; doesn't this show that things can begin without a cause?",
         "The quantum vacuum is emphatically not “nothing.”",
@@ -113,14 +114,15 @@
         "type": "hotel",
         "rooms": 9,
         "shift_at": 3,
-        "verdict": "Counterintuitive — not contradictory",
-        "verdict_at": 4
+        "verdict": "Mathematically coherent — but concretely instantiated? The disputed hinge",
+        "verdict_at": 5
       },
       "say": [
         "The controversial premise is the second.",
         "It is defended along two independent lines — one philosophical, one scientific.",
         "The first philosophical argument holds that an actual infinite — an infinite collection existing all at once in reality — cannot exist, because it generates absurdities.",
         "Imagine a hotel with infinitely many rooms, all occupied. A new guest arrives; the manager simply moves the guest in room 1 to room 2, room 2 to room 3, and so on forever, freeing room 1 — so a “full” hotel takes another guest.",
+        "If so, the series of past events cannot be actually infinite — so the past is finite, and the universe began.",
         "The strongest reply is that Cantorian set theory shows the actual infinite to be perfectly coherent mathematically — Hilbert's Hotel is counterintuitive, not contradictory — so the defender's claim must be narrowed to this: an actual infinite cannot be concretely instantiated in the physical world.",
         "Whether that metaphysical claim holds, given the mathematical consistency of the infinite, is precisely the disputed hinge."
       ]
@@ -150,7 +152,7 @@
         "age": "13.8 billion years",
         "bgv_at": 2,
         "bgv": "Borde–Guth–Vilenkin (2003)",
-        "bgv_sub": "any on-average expanding spacetime is past-incomplete",
+        "bgv_sub": "any on-average expanding classical spacetime is past-incomplete",
         "verdict": "Powerful corroboration that the universe as we know it had a beginning — not an airtight proof",
         "verdict_at": 6
       },
@@ -191,12 +193,12 @@
           },
           {
             "t": "Plausibly personal",
-            "at": 8,
+            "at": 9,
             "tag": "inference, not proof"
           }
         ],
         "footnote": "Not yet the triune God of the Nicene Creed",
-        "footnote_at": 11
+        "footnote_at": 9
       },
       "say": [
         "Suppose the argument succeeds: the universe has a cause. What can be said about that cause?",
@@ -204,10 +206,13 @@
         "Therefore the cause cannot itself be spatial, temporal, or material; it must be spaceless, timeless, and immaterial, transcending the very framework it produced.",
         "It must be unimaginably powerful, having brought the entire cosmos into existence.",
         "And it must be uncaused — for if it began to exist it would, by Premise 1, require a cause of its own.",
+        "The cause of the universe is itself beginningless.",
         "One further inference, more tentative but powerful, points toward a personal cause — a mind rather than a mechanism.",
-        "Whatever is timeless, spaceless, and immaterial seems to fall into one of only two categories we can conceive: an abstract object (like a number or a set) or an unembodied mind.",
+        "First, whatever is timeless, spaceless, and immaterial seems to fall into one of only two categories we can conceive: an abstract object (like a number or a set) or an unembodied mind.",
         "But abstract objects, by their nature, stand in no causal relations — the number seven does not do anything.",
         "By elimination, the cause is plausibly a mind.",
+        "Second, there is the puzzle of how a timeless cause produces a temporal effect at all.",
+        "The most natural explanation for how a changeless, eternal cause gives rise to an effect with a beginning is a free act of will — an agent who can bring about a new state of affairs without any prior determining change.",
         "These last steps are best understood as inference to the best explanation, not deductive proof.",
         "One can resist them.",
         "But taken together they make a personal Creator the most reasonable account — a transcendent mind that freely brought the universe into being."
@@ -227,7 +232,7 @@
         "Kalam never claims that everything has a cause; it claims that everything which begins to exist has a cause.",
         "God, by definition, did not begin to exist.",
         "So He is not an unexplained exception to a universal rule — He simply falls outside the scope of a rule that was about beginnings all along.",
-        "The question “what caused God?” is, as defenders like to put it, rather like asking what the bachelor's wife is doing this evening."
+        "The question “what caused God?” is, as defenders like to put it, rather like asking what the bachelor's wife is doing this evening: it presupposes what the case has already ruled out."
       ]
     },
     {
@@ -287,10 +292,13 @@
       "kicker": "WHERE THIS LEAVES US",
       "visual": {
         "type": "close",
-        "ref": "1 Peter 3:15"
+        "ref": "1 Peter 3:15",
+        "close_at": 3
       },
       "say": [
+        "Stated without exaggeration, the Kalam cosmological argument makes a serious, defensible case that the universe began to exist and therefore has a transcendent cause — one that is spaceless, timeless, immaterial, beginningless, enormously powerful, and most plausibly a personal mind.",
         "It does not, by itself, prove the existence of the God of any particular religion, and it does not silence every objection; the best critics remain in the field, and an honest advocate names them rather than waving them away.",
+        "What it accomplishes is to put the deepest question back on the table and to show that “the universe just exists, inexplicably” is not the only rational option — and perhaps not the most reasonable one.",
         "For the believer, it is not the whole house but a load-bearing wall: a reminder, offered “with gentleness and respect,” that the heavens still declare something, and that the oldest question a child can ask may have the most consequential answer of all."
       ]
     },
@@ -308,6 +316,6 @@
   "reviewed": {
     "argument": "_pending_",
     "orthodoxy": "_pending_",
-    "by": "PILOT 2026-09-23 — script ported from certified library/kalam.html; gates not yet run."
+    "by": "PILOT 2026-09-23 — script ported from certified library/kalam.html. Round 1: argument NOT STAMPABLE, orthodoxy FLAGGED (0 heresy) → fixed. Round 2: orthodoxy CLEAN, argument NOT STAMPABLE (0 BREAK) → fixed. Round 3 owed on both lenses before any date is stamped."
   }
 }

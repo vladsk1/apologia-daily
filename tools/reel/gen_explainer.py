@@ -459,10 +459,12 @@ def v_objection(base, ctx, v):
 
 def v_close(base, ctx, v):
     th = ctx.th; W = ctx.W
-    a0 = ease(ctx.t / 0.8) * (1 - ctx.p(1, 0.6))
-    draw_fade(base, ctx, a0, lambda d: wrapped_c(d, W / 2, 330, "The best critics remain in the field.",
-                                                R.F("serifb", 64), CREAM(th), 1300))
-    a1 = ctx.p(1, 0.9)
+    k = v.get("close_at", 1); gone = 1 - ctx.p(k, 0.6)
+    draw_fade(base, ctx, ease(ctx.t / 0.8) * gone, lambda d: text_c(d, W / 2, 280, "A serious, defensible case",
+                                                                    R.F("serifb", 68), GOLD(th)))
+    draw_fade(base, ctx, ctx.p(1, 0.8) * gone, lambda d: text_c(d, W / 2, 420, "The best critics remain in the field.",
+                                                                R.F("serif", 52), CREAM(th)))
+    a1 = ctx.p(k, 0.9)
     def f(d):
         text_c(d, W / 2, 260, "Not the whole house —", R.F("serif", 62), CREAM(th))
         text_c(d, W / 2, 350, "a load-bearing wall.", R.F("serifb", 72), GOLD(th))
