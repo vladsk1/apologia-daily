@@ -87,6 +87,12 @@ def speakable(text, lexicon):
         t = t.replace(k, lexicon[k])
     return t.replace("—", ", ").replace("–", "-").replace("“", '"').replace("”", '"')
 
+def stretch(a, tempo):
+    if abs(tempo - 1.0) < 1e-3: return a
+    r = subprocess.run([FF, "-loglevel", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-",
+                        "-filter:a", f"atempo={tempo}", "-f", "f32le", "-"], input=a.tobytes(), capture_output=True, check=True)
+    return np.frombuffer(r.stdout, dtype=np.float32).copy()
+
 def synth_all(spec, voice, speed):
     """Synthesize every sentence (cached by content hash). Returns {text: np.float32 array}."""
     lex = spec.get("lexicon", {}); cache = os.path.join(TTS_DIR, "cache"); os.makedirs(cache, exist_ok=True)
@@ -107,7 +113,7 @@ def synth_all(spec, voice, speed):
     return out
 
 # ---------------------------------------------------------------- timing
-LEAD, GAP, TAIL, SILENT_SCENE = 0.7, 0.45, 1.1, 3.6
+LEAD, GAP, TAIL, SILENT_SCENE = 0.6, 0.38, 1.0, 3.4
 
 def build_timeline(spec, audio):
     """Scene start/end + per-sentence cue times (absolute seconds)."""
@@ -211,8 +217,8 @@ def v_fork(base, ctx, v):
     for side, (lab, sub, delay) in enumerate([(v["left"], v["left_sub"], 0.4), (v["right"], v["right_sub"], 3.2)]):
         a = ctx.p(0, 0.9, delay)
         def f(d, side=side, lab=lab, sub=sub):
-            cx = W * (0.29 if side == 0 else 0.71); x0, x1 = cx - 380, cx + 380
-            rrect(d, [x0, 200, x1, 620], fill=PANEL, outline=DIM(th, 90), width=2)
+            cx = W * (0.27 if side == 0 else 0.73); x0, x1 = cx - 350, cx + 350
+            rrect(d, [x0, 200, x1, 640], fill=PANEL, outline=DIM(th, 90), width=2)
             if side == 0:  # an endless line of moments fading into the past
                 for i in range(18):
                     x = x1 - 70 - i * 36; al = int(255 * max(0, 1 - i / 18))
@@ -226,7 +232,7 @@ def v_fork(base, ctx, v):
                             (cxx + r1 * math.cos(ang), cy + r1 * math.sin(ang))], fill=GOLD(th, 170), width=3)
                 d.ellipse([cxx - 16, cy - 16, cxx + 16, cy + 16], fill=GOLD(th))
             text_c(d, cx, 440, lab, R.F("serifb", 56), CREAM(th))
-            wrapped_c(d, cx, 520, sub, R.F("serif", 34), DIM(th), 680)
+            wrapped_c(d, cx, 520, sub, R.F("serif", 34), DIM(th), 640)
         draw_fade(base, ctx, a, f)
     a = ctx.p(1, 0.8)
     draw_fade(base, ctx, a, lambda d: text_c(d, W / 2, 380, "or", R.F("serif", 44), DIM(th)))
@@ -346,8 +352,9 @@ def v_succession(base, ctx, v):
         n_added = int(ctx.t * speed)
         d.text((260, y + 90), "Moments added so far:", font=R.F("sans", 30), fill=DIM(th))
         d.text((690, y + 84), f"{n_added:,}", font=R.F("serifb", 40), fill=CREAM(th))
-        d.text((260, y + 150), "Still to add before an infinite collection is complete:", font=R.F("sans", 30), fill=DIM(th))
-        d.text((1140, y + 140), "∞", font=R.F("serifb", 52), fill=GOLD(th))
+        lab = "Still to add before an infinite collection is complete:"; fl = R.F("sans", 30)
+        d.text((260, y + 150), lab, font=fl, fill=DIM(th))
+        d.text((260 + d.textlength(lab, font=fl) + 20, y + 132), "∞", font=R.F("serifb", 52), fill=GOLD(th))
         text_c(d, W / 2, 210, "Built up one event at a time", R.F("serif", 46), CREAM(th))
     draw_fade(base, ctx, a, f)
     verdict(base, ctx, v["verdict"], v.get("verdict_at", 3), y=770)
@@ -356,10 +363,10 @@ _STARS = [(random.Random(i + 900).random(), random.Random(i + 1900).random() * 2
            random.Random(i + 2900).random()) for i in range(220)]
 
 def v_timeline(base, ctx, v):
-    th = ctx.th; W = ctx.W; xl, xr, cy = 250, W - 250, 440
+    th = ctx.th; W = ctx.W; xl, xr, cy = 250, W - 250, 510
     grow = ease((ctx.t - 0.3) / 3.0)
     def half(x):  # cone half-height at x
-        u = (x - xl) / (xr - xl); return 12 + 190 * (u ** 0.7)
+        u = (x - xl) / (xr - xl); return 10 + 150 * (u ** 0.7)
     def f(d):
         xe = xl + (xr - xl) * grow
         pts_top = [(x, cy - half(x)) for x in range(int(xl), int(xe) + 1, 12)]
@@ -370,11 +377,11 @@ def v_timeline(base, ctx, v):
                 x = xl + u * (xe - xl); yy = cy + vv * half(x) * 0.9
                 d.ellipse([x - 2, yy - 2, x + 2, yy + 2], fill=CREAM(th, int(90 + 140 * b)))
         d.ellipse([xl - 10, cy - 10, xl + 10, cy + 10], fill=GOLD(th))
-        text_c(d, xl, cy + 240, "past boundary", R.F("sans", 28), GOLD(th))
+        text_c(d, xl, cy + 185, "past boundary", R.F("sans", 28), GOLD(th))
         if grow > 0.95:
-            text_c(d, xr, cy + 240, "today", R.F("sans", 28), CREAM(th))
-            d.line([(xl + 20, cy + 300), (xr - 20, cy + 300)], fill=DIM(th, 160), width=2)
-            text_c(d, (xl + xr) / 2, cy + 275, v["age"], R.F("serif", 34), DIM(th))
+            text_c(d, xr, cy + 185, "today", R.F("sans", 28), CREAM(th))
+            d.line([(xl + 140, cy + 205), (xr - 90, cy + 205)], fill=DIM(th, 160), width=2)
+            text_c(d, (xl + xr) / 2, cy + 225, v["age"], R.F("serif", 34), DIM(th))
         # scan marker tracing the expansion back
         sm = ctx.p(1, 4.0, 0.5)
         if 0 < sm < 1:
@@ -382,11 +389,11 @@ def v_timeline(base, ctx, v):
     draw_fade(base, ctx, ease(ctx.t / 0.6), f)
     b = ctx.p(v.get("bgv_at", 2), 0.8)
     def g(d):
-        rrect(d, [W / 2 - 520, 130, W / 2 + 520, 230], fill=(10, 20, 36, 220), outline=GOLD(th), width=2, r=14)
-        text_c(d, W / 2, 140, v["bgv"], R.F("serifb", 40), GOLD(th))
-        text_c(d, W / 2, 190, v["bgv_sub"], R.F("serif", 28), CREAM(th))
+        rrect(d, [W / 2 - 520, 165, W / 2 + 520, 265], fill=(10, 20, 36, 220), outline=GOLD(th), width=2, r=14)
+        text_c(d, W / 2, 175, v["bgv"], R.F("serifb", 40), GOLD(th))
+        text_c(d, W / 2, 225, v["bgv_sub"], R.F("serif", 28), CREAM(th))
     draw_fade(base, ctx, b * (1 - ctx.p(v.get("verdict_at", 5), 0.6)), g)
-    verdict(base, ctx, v["verdict"], v.get("verdict_at", 5), y=140)
+    verdict(base, ctx, v["verdict"], v.get("verdict_at", 5), y=175)
 
 def v_attributes(base, ctx, v):
     th = ctx.th; W = ctx.W
@@ -399,7 +406,9 @@ def v_attributes(base, ctx, v):
         def f(d, i=i, it=it):
             r, c = divmod(i, cols); x = x0 + c * (tw + gx); y = 320 + r * (th_ + gy)
             rrect(d, [x, y, x + tw, y + th_], fill=(255, 255, 255, 18), outline=GOLD(th, 200), width=2, r=60)
-            text_c(d, x + tw / 2, y + 32, it["t"], R.F("serifb", 44), CREAM(th))
+            fs = 44
+            while d.textlength(it["t"], font=R.F("serifb", fs)) > tw - 60: fs -= 2
+            text_c(d, x + tw / 2, y + 60 - fs * 0.62, it["t"], R.F("serifb", fs), CREAM(th))
             if it.get("tag"): text_c(d, x + tw / 2, y + th_ + 14, it["tag"], R.F("serif", 30), GOLD(th))
         draw_fade(base, ctx, a, f)
     if v.get("footnote"):
@@ -420,13 +429,13 @@ def v_contrast(base, ctx, v):
               lambda d: text_c(d, W / 2, 640, "God did not begin to exist.", R.F("serif", 50), CREAM(th)))
 
 def v_strands(base, ctx, v):
-    th = ctx.th; W = ctx.W; cx, cy, R0 = W / 2, 470, 300
+    th = ctx.th; W = ctx.W; cx, cy, R0 = W / 2, 480, 300
     items = v["items"]; n = len(items)
     def c(d):
-        d.ellipse([cx - 150, cy - 70, cx + 150, cy + 70], fill=(10, 20, 36, 230), outline=GOLD(th), width=3)
-        wrapped_c(d, cx, cy - 44, v["center"], R.F("serifb", 38), GOLD(th), 260, lh=46)
+        d.ellipse([cx - 235, cy - 62, cx + 235, cy + 62], fill=(10, 20, 36, 240), outline=GOLD(th), width=3)
+        text_c(d, cx, cy - 24, v["center"], R.F("serifb", 38), GOLD(th))
     for i, it in enumerate(items):
-        ang = -math.pi / 2 + i * 2 * math.pi / n; x = cx + R0 * 1.55 * math.cos(ang); y = cy + R0 * 0.95 * math.sin(ang)
+        ang = -math.pi / 2 + i * 2 * math.pi / n; x = cx + R0 * 1.55 * math.cos(ang); y = cy + R0 * 0.78 * math.sin(ang)
         a = ctx.p(it["at"], 0.8, 0.35 * i if it["at"] else 0.3)
         def f(d, it=it, x=x, y=y):
             d.line([(cx, cy), (x, y)], fill=GOLD(th, 120), width=2)
@@ -438,7 +447,7 @@ def v_strands(base, ctx, v):
     draw_fade(base, ctx, ctx.p(v.get("dest_at", 2), 0.8), c)
     if v.get("dest"):
         draw_fade(base, ctx, ctx.p(v.get("dest_at", 2), 0.8, 1.5),
-                  lambda d: text_c(d, cx, cy + 90, v["dest"], R.F("serif", 36), CREAM(th)))
+                  lambda d: text_c(d, cx + 330, cy + 70, v["dest"], R.F("serif", 34), CREAM(th)))
 
 def v_objection(base, ctx, v):
     th = ctx.th; W = ctx.W
@@ -547,6 +556,9 @@ def render_scene(job):
     print(f"  scene {i:02d} done ({dur:.1f}s)", flush=True); return out
 
 # ---------------------------------------------------------------- main
+def _still_time(rel, dur):  # preview: just after the last sentence starts (everything revealed)
+    return (rel[-1][0] + 1.5) if rel else dur * 0.6
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("spec"); ap.add_argument("--out"); ap.add_argument("--voice"); ap.add_argument("--speed", type=float)
@@ -562,6 +574,8 @@ def main():
     work = os.path.join(HERE, f".build_{name}"); os.makedirs(work, exist_ok=True)
     print(f"narration ({voice}, speed {speed})…")
     audio = synth_all(spec, voice, speed)
+    tempo = float(spec.get("tempo", 1.0))
+    if tempo != 1.0: audio = {k: stretch(v, tempo) for k, v in audio.items()}
     tl, total = build_timeline(spec, audio)
     probe = ImageDraw.Draw(Image.new("RGB", (10, 10)))
     caps = []
@@ -570,7 +584,7 @@ def main():
     print(f"runtime {int(total // 60)}:{int(total % 60):02d} · {len(spec['scenes'])} scenes · {len(caps)} captions")
     burn = not a.no_burn_captions
     if a.preview:
-        still = lambda rel, dur: (rel[-1][0] + 1.5) if rel else dur * 0.6
+        still = _still_time
         jobs = [(i, spec, sc, tl[i], total, caps, W, H, fps, burn, os.path.join(work, f"still_{i:02d}.png"), still)
                 for i, sc in enumerate(spec["scenes"])]
         with Pool(a.jobs) as p: print("\n".join(p.map(render_scene, jobs))); return
