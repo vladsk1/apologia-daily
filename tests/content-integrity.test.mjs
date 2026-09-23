@@ -6,7 +6,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { runOffline, CASES } from '../tools/test-crisis-routing.mjs';
-import { isBoilerplateLine } from '../tools/check-stamp-integrity.mjs';
+import { isBoilerplateLine, dropDateModifiedOnlyPairs } from '../tools/check-stamp-integrity.mjs';
+import { latestReviewDate, syncHtml } from '../tools/sync-date-modified.mjs';
 
 // Every /answers/* opening must LEAD WITH THE ANSWER — the short-form rule.
 // The lint is a curated regex net for known front-loaded-opening tells; it
@@ -599,4 +600,37 @@ test('mirror parity module can be imported without exiting the process', async (
   const m = await import('../tools/check-mirror-parity.mjs');
   assert.equal(typeof m.findDivergences, 'function');
   assert.equal(typeof m.mirrorsOf, 'function');
+});
+
+// JSON-LD dateModified must never be older than the page's latest review date —
+// the freshness signal search engines and AI answer engines read. On 2026-09-23,
+// 109 of 113 stamped pages had drifted (e.g. manuscript.html reviewed 2026-08-29,
+// schema still 2026-06-28). Fix: node tools/sync-date-modified.mjs
+test('dateModified is on or after each page\'s latest review date', () => {
+  assert.doesNotThrow(
+    () => execFileSync('node', ['tools/sync-date-modified.mjs', '--check'], { cwd: process.cwd(), stdio: 'pipe' }),
+    'a stamped page has a stale dateModified — run: node tools/sync-date-modified.mjs',
+  );
+});
+
+test('sync-date-modified: latest lens date wins, later dates are kept', () => {
+  assert.equal(latestReviewDate({ argument: '2026-07-01', orthodoxy: '2026-08-29', citations: '2026-08-02 (note)', by: '2027-01-01' }), '2026-08-29',
+    'the `by` note must not count as a review date');
+  const html = '{"datePublished":"2026-06-28","dateModified":"2026-06-28"} {"dateModified": "2026-09-30"}';
+  const { html: out, stale } = syncHtml(html, '2026-08-29');
+  assert.equal(stale.length, 1);
+  assert.match(out, /"datePublished":"2026-06-28","dateModified":"2026-08-29"/);
+  assert.match(out, /"dateModified": "2026-09-30"/, 'a dateModified later than the review is left alone');
+});
+
+// The stamp-integrity exemption for date syncs must be a PAIR rule: a line whose
+// ONLY change is the dateModified value is cancelled, but the same JSON-LD line
+// with its description rewritten must still be flagged.
+test('stamp-integrity ignores dateModified-only changes and nothing else', () => {
+  const before = '-<script type="application/ld+json">{"@type":"Article","description":"Old words","dateModified":"2026-06-28"}</script>';
+  const after = '+<script type="application/ld+json">{"@type":"Article","description":"Old words","dateModified":"2026-08-29"}</script>';
+  assert.deepEqual(dropDateModifiedOnlyPairs([before, after]), []);
+  const rewritten = '+<script type="application/ld+json">{"@type":"Article","description":"New words","dateModified":"2026-08-29"}</script>';
+  assert.equal(dropDateModifiedOnlyPairs([before, rewritten]).length, 2);
+  assert.equal(dropDateModifiedOnlyPairs(['+<p>prose "dateModified":"2026-01-01"</p>']).length, 1);
 });

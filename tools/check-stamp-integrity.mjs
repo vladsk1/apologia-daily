@@ -152,6 +152,44 @@ export function isScriptPlumbing(s) {
   return !stringLiterals(s).some(looksLikeProse);
 }
 
+/* A removed/added line pair that is IDENTICAL except for its JSON-LD
+ * `dateModified` value is not a content edit — it is tools/sync-date-modified.mjs
+ * raising the freshness date to the latest review date. Cancel such pairs out.
+ *
+ * Deliberately a PAIR rule, not a line rule: the JSON-LD Article line also carries
+ * the headline and description, so exempting "any line containing dateModified"
+ * would let a description rewrite through. Here the removed and added lines must
+ * match character for character once the date value is masked, so any other
+ * change on the line still trips the flag. (Added 2026-09-23 with the first sync,
+ * which touched 109 stamped pages and must not become 109 standing false alarms.) */
+export function dropDateModifiedOnlyPairs(lines) {
+  const mask = (l) => l.slice(1).replace(/("dateModified"\s*:\s*")\d{4}-\d{2}-\d{2}"/g, '$1*"');
+  const removed = new Map();
+  for (const l of lines) if (l[0] === '-' && /"dateModified"/.test(l)) {
+    const k = mask(l); removed.set(k, (removed.get(k) || 0) + 1);
+  }
+  const cancelled = new Map();
+  const kept = [];
+  for (const l of lines) {
+    if (l[0] === '+' && /"dateModified"/.test(l)) {
+      const k = mask(l);
+      if ((removed.get(k) || 0) > 0) {
+        removed.set(k, removed.get(k) - 1);
+        cancelled.set(k, (cancelled.get(k) || 0) + 1);
+        continue;
+      }
+    }
+    kept.push(l);
+  }
+  // drop the matching '-' lines, once per cancelled pair
+  return kept.filter((l) => {
+    if (l[0] !== '-' || !/"dateModified"/.test(l)) return true;
+    const k = mask(l);
+    if ((cancelled.get(k) || 0) > 0) { cancelled.set(k, cancelled.get(k) - 1); return false; }
+    return true;
+  });
+}
+
 function sh(cmd) {
   try { return execSync(cmd, { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'] }); }
   catch { return ''; }
@@ -180,7 +218,9 @@ function main() {
     const offending = [];
     for (const c of laterCommits) {
       const diff = sh(`git show --format= --unified=0 ${c} -- "${file}"`);
-      const changed = diff.split('\n').filter((l) => /^[+-]/.test(l) && !/^(\+\+\+|---)/.test(l));
+      const changed = dropDateModifiedOnlyPairs(
+        diff.split('\n').filter((l) => /^[+-]/.test(l) && !/^(\+\+\+|---)/.test(l))
+      );
       if (changed.some((l) => !isBoilerplateLine(l))) {
         const subj = sh(`git show -s --format=%s ${c}`).trim();
         offending.push({ c: c.slice(0, 9), subj });
