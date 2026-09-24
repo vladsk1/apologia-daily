@@ -14,7 +14,11 @@ these books to a *live* answer is: lead → verify the primary → add it to `/s
 
 Notes: **CFR** = `case-for-the-resurrection-of-jesus.md` (Habermas & Licona) · **BOP** = `body-of-proof.md`
 (Johnston) · **IDHEF** = `i-dont-have-enough-faith-to-be-an-atheist.md` (Geisler & Turek) · **DJRS** =
-`did-jesus-really-say-he-was-god.md` (Del Rosario) · **IDB** = `in-defense-of-the-bible.md` (Cowan &
+`did-jesus-really-say-he-was-god.md` (Del Rosario) · **PJP** = `putting-jesus-in-his-place.md`
+(Bowman & Komoszewski, Kregel 2007 — **the HANDS framework** [Honors/Attributes/Names/Deeds/Seat]; **the source
+`library/hands.html` is built on**; the deity of Christ across all five categories; ✅ **READ IN FULL, chs. 1–21**.
+⚠ **ch. 5 runs the RETIRED Daniel-7 *pelach* "all nations serve him → divine status" claim — DO-NOT-PORT**; ch. 19's
+Mark 14:62 **cloud-coming** treatment is the SAFE version and matches our approach) · **IDB** = `in-defense-of-the-bible.md` (Cowan &
 Wilder, eds. — Wallace **ch. 6** NT textual criticism + Barnett **ch. 10** NT historical reliability + Huffman
 **ch. 11** alleged contradictions + Wegner/Wilder/Bock **ch. 16** the canon) · **JAJ** =
 `raised-on-the-third-day.md` (Beck & Licona, eds. — Habermas festschrift; ⚠ **PARTIAL**, **ch. 11** McDowell on the apostles' deaths [pp. 179–199, complete] + **ch. 16** Licona on the primacy of Paul [pp. 289–301, 310–313; **pp. 302–309 NOT read**]) · **JAJ** = `josephus-and-jesus.md` (T. C. Schmidt, OUP 2025 — the Testimonium Flavianum: authenticity, neutral
