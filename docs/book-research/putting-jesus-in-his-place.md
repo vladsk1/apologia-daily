@@ -79,8 +79,26 @@ recommendations above as **history**, not a live to-do list.
 
 Commits: `a3152ba1` (N: 1 Cor 8:6 + Granville Sharp) · `e27ce3bc` (A: Col 2:9) · `9cbf9ccb` (H: Pliny) ·
 `4e58df83` (N: 1 Pet 3:15) · plus the earlier Batch 1 (H: prayer/Heb 1:6) and Batch 2 (A: Synoptic
-pre-existence) commits, and this commit (trinity_jw.html Jehovah-237). ⚠ **Pastoral sign-off still `_pending_`
-on all of it**, as site-wide.
+pre-existence) commits, and `2ad8c586` (trinity_jw.html Jehovah-237 + this ledger). ⚠ **Pastoral sign-off still
+`_pending_` on all of it**, as site-wide.
+
+**⭐ FOUR-SURFACE CROSS-CHECK COMPLETED 2026-09-24 (via READ-ONLY Explore agents).** The initial mining/execution
+had checked the **essays only**; this closes the full `/answers/*` + `ev-s*` + `/briefs` + `/sources` scan the
+MANDATORY CROSS-CHECK rule requires. **Result across all four surface-types: NO mandatory fixes — zero factual
+errors, and the retired `daniel7-figure-is-divine`/`pelach-only-to-God` claim is alive on NONE of them.** Every
+surface that touches Daniel 7 hangs the deity claim on the SAFE clouds-coming plank and leaves the figure's
+referent open; the `titles-of-jesus-son-of-man-kyrios` brief is the site's strongest explicit *pelach* guard
+(verdict 5, ours-is-better — do not touch). The book's two most portable JW leads are already LIVE on the answer
+pages: **Heb 1:6 angel-worship** (`answers/is-jesus-michael-the-archangel`) and the **NWT "[other]" insertion**
+with the Kingdom Interlinear tell + Metzger (`answers/is-the-new-world-translation-accurate`). ev-s3 carries all
+the HANDS deity leads as corroboration (Pliny/Heb 1:6/1 Cor 8:6/Col 2:9/Kyrios), several *more* cautious than the
+book. **Optional enrichment rows found (both P3, routed elsewhere by design — logged in `content-backlog.md`, NOT
+owed):** (a) `ev-s6.html` firstborn block lacks the **Rev 3:14 archē=origin** leg (Col 1:15 + Prov 8:22 present;
+the full created-Christ trio lives on `trinity_jw.html` and is linked from the card) — ⚠ ev-s6 has pre-existing
+gate debts, so any edit there inherits them; (b) `ev-s3.html` could name **Granville Sharp** at Titus 2:13 / 2
+Pet 1:1 (very low value; the named version is on `hands.html`). **Informational (not a defect):** no **Pliny
+`/sources`** entry exists — the corpus is patristic-only by design, so adding Pliny *Letters* 10.96 as a citable
+external witness would be a scope expansion (owner call), not a gap.
 
 ## ⚖️ Why this book matters to us
 This is **the source `library/hands.html` is built on** — the HANDS acronym (Honors, Attributes, Names,
