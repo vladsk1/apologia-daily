@@ -138,6 +138,37 @@ our-own-words material (or a verified PD primary) reaches a visitor.
    strengthens with a new verified primary / opens a topic or objection we lack → a backlog row). Make the
    classification **visible in the note** (in "Live-door status") so a reader can see the scan happened. See
    the "MANDATORY CROSS-CHECK STEP" in `CLAUDE.md` § *Content backlog*.
+
+   > ### ⬜→✅ REQUIRED IN EVERY NOTE — the four-surface cross-check checklist. (Added 2026-09-24.)
+   > The cross-check is **not done, and the note is not finished,** until it carries this block with **every
+   > box ticked** — each either naming what you scanned + its verdict, or marked **N/A with the reason** the
+   > surface doesn't exist for this topic. A ticked box is a claim you actually scanned that surface; **never
+   > tick one you didn't** (same discipline as a `content-review` stamp — *never stamp a check you did not run*).
+   >
+   > **Why this box exists:** on **2026-09-24** a mining run did the cross-check against the **essays only** and
+   > shipped. Nothing flagged it — the essay work was real and correct — and the three-surface gap stayed
+   > invisible until the owner asked "did it scan all of them?" and an audit found it hadn't. The soft
+   > instruction "make the comparison visible" was not enough; this is that instruction as a hard, un-skippable
+   > checklist. (That run came back clean when finally completed — *luck confirmed by a check*, not a reason the
+   > check was optional.)
+   >
+   > Paste this into the note (in its cross-map / Live-door section) and fill it:
+   >
+   > ```
+   > ## Four-surface cross-check — <date> (run by <session>)
+   > - [ ] library/*.html essay(s)  — <which essay(s), read in full; verdict summary>
+   > - [ ] /answers/*               — <which matched; or "no matching answer" + why>
+   > - [ ] ev-s*.html tab card(s)   — <which card(s); or "no card for this topic">
+   > - [ ] /briefs                  — <which matched; or "none">
+   > - [ ] /sources                 — <which matched; or "none / out of scope (PD-patristic only)">
+   > - Mandatory-fix findings (verdict 2 — errors / retired claims): <list with file+string, or "none">
+   > - Backlog rows logged (verdicts 3/4): <content-backlog.md row refs, or "none">
+   > - "Is the source better than our essay anywhere?" — <where + how, or "no">
+   > ```
+   >
+   > ⚠ The essay box is necessary but **not sufficient** — an essay-only tick with the other four blank is
+   > exactly the failure this checklist exists to make visible. All five surface boxes get an answer (a
+   > verdict *or* an N/A-with-reason) before the note is considered complete.
 4. **Log it in three places:** (a) a row in the **Mined-articles ledger** below (with live-door
    status); (b) a topic row in `INDEX.md`; and (c) for any lead that step 3 classified as an
    **improvement**, a row in [`docs/content-backlog.md`](../content-backlog.md) — the release map.
