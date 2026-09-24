@@ -50,6 +50,35 @@ export function authorOf(liHtml) {
   return a.length > 70 ? '' : a;
 }
 
+// Works whose bibliography line has no parseable personal author (scriptures, creeds,
+// church manuals, hadith collections) or an irregular one. Keyed by the parsed title;
+// the value is the author shown. Found by the 2026-09-24 citations gate.
+export const AUTHOR_OVERRIDES = {
+  'Sahih Muslim': 'Muslim ibn al-Hajjaj',
+  'Sahih al-Bukhari': 'Muhammad al-Bukhari',
+  'Virtues of the Qur’an': 'Muhammad al-Bukhari',
+  'Quicunque vult': 'Anonymous (the Athanasian Creed)',
+  'Muhammad in the Bible': 'ʿAbd al-Aḥad Dāwūd (David Benjamin Keldani)',
+  'The Origins of Prebiological Systems and of Their Molecular Matrices': 'Theodosius Dobzhansky',
+  'Doctrine and Covenants': 'The Church of Jesus Christ of Latter-day Saints',
+  'Teachings of Presidents of the Church: Lorenzo Snow': 'The Church of Jesus Christ of Latter-day Saints',
+  'The King Follett Sermon': 'Joseph Smith',
+  'Trinity > History of Trinitarian Doctrines': 'Stanford Encyclopedia of Philosophy',
+  'Ecclesiastical History': 'Eusebius',
+  'Sensed Presence and Mystical Experiences Are Predicted by Suggestibility, Not by the Application of Transcranial Weak Complex Magnetic Fields': 'Pehr Granqvist et al.',
+  "Defenders of Reason in Islam: Mu'tazilism from Medieval School to Modern Symbol": 'Richard C. Martin & Mark R. Woodward, with Dwi S. Atmaja',
+  'Seder Olam Rabbah': 'Attributed to Yose ben Halafta',
+  'The Great Isaiah Scroll': 'The Israel Museum, Jerusalem',
+  'The Great Isaiah Scroll (1QIsaa)': 'The Israel Museum, Jerusalem',
+};
+
+// Organisation names the "Surname, Given and Co-author" parser splits apart.
+const AUTHOR_FIXES = {
+  'Tract Society Watch Tower Bible': 'Watch Tower Bible and Tract Society',
+  'Canon Institute Text': 'Text & Canon Institute',
+  'Israel Museum': 'The Israel Museum, Jerusalem',
+};
+
 /** Parse one essay's bibliography into [{a,s,t,v,y}]. */
 export function parseBibliography(html) {
   const m = html.match(/<h2[^>]*>[^<]*Bibliograph[^<]*<\/h2>([\s\S]*?)<\/(?:ul|ol)>/);
@@ -57,16 +86,23 @@ export function parseBibliography(html) {
   const out = [];
   for (const [, li] of m[1].matchAll(/<li>([\s\S]*?)<\/li>/g)) {
     const em = li.match(/<em>([\s\S]*?)<\/em>/);
-    if (!em) continue; // Scripture-only or unformatted lines carry no work title
     const txt = clean(li);
-    const emTxt = clean(em[1]).replace(/[.,]+$/, '');
     const q = txt.match(/[“"]([^”"]+)[”"]/);
+    // An article cited only by its quoted title has no <em>; keep it. A line with
+    // neither (Scripture-only or unformatted) names no work, so skip it.
+    if (!em && !q) continue;
+    const emTxt = em ? clean(em[1]).replace(/[.,]+$/, '') : '';
     let title = (q ? q[1] : emTxt).replace(/[.,]+$/, '');
     // A book review: list it as the reviewer's "Review of <book>", not as the book itself.
-    if (/\breview of\b/i.test(clean(li.split('<em>')[0]))) title = `Review of ${title.split('. ')[0]}`;
+    if (em && /\breview of\b/i.test(clean(li.split('<em>')[0]))) title = `Review of ${title.split('. ')[0]}`;
     const surname = (txt.split(/,|\(|\.| and /)[0].trim().split(' ').pop() || '');
     const year = (txt.match(/\b(1[5-9]\d\d|20[0-2]\d)\b/) || [''])[0];
-    out.push({ a: authorOf(li) || surname, s: surname, t: title, v: q ? emTxt : '', y: year });
+    const o = AUTHOR_OVERRIDES[title];
+    // A line that opens with its quoted title names no author (usually a web reference).
+    const unsigned = !o && /^[“"‘]/.test(txt);
+    let a = o || (unsigned ? 'No named author' : authorOf(li) || surname);
+    a = AUTHOR_FIXES[a] || a;
+    out.push({ a, s: o ? o.split(' ').pop() : unsigned ? 'zz-unsigned' : surname, t: title, v: q ? emTxt : '', y: year });
   }
   return out;
 }
