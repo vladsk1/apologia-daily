@@ -185,6 +185,19 @@ create policy gact_select on public.group_activity for select
 create policy gact_insert on public.group_activity for insert
   with check (user_id = auth.uid() and public.is_group_member(group_id, auth.uid()));
 
+-- ========== DATA API GRANTS ==========
+-- Explicit Data API grants. From 2026-10-30 Supabase no longer auto-grants new
+-- public tables to the API roles, so a fresh run (new project, preview branch,
+-- `supabase db reset`) needs these. Harmless on a project where they already exist.
+-- Signed-in users only (study-groups.html requires sign-in); never anon. Each grant
+-- matches the policies above. No UPDATE on group_members / messages / activity:
+-- there is no UPDATE policy, and the grant keeps it that way at the API layer too.
+grant select, insert, update, delete on public.groups         to authenticated;
+grant select, insert, delete         on public.group_members  to authenticated;
+grant select, insert                 on public.group_messages to authenticated;
+grant select, insert                 on public.group_activity to authenticated;
+grant all on public.groups, public.group_members, public.group_messages, public.group_activity to service_role;
+
 -- ========== REALTIME ==========
 alter publication supabase_realtime add table public.group_messages;
 alter publication supabase_realtime add table public.group_activity;

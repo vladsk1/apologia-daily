@@ -8,7 +8,10 @@
     },
     "kalam": {
       "reel": "kalam-cosmological",
-      "youtube": "VF_1E5DWePY"
+      "youtube": "VF_1E5DWePY",
+      "full": "zkP4n49_MtU",
+      "full_spec": "explainer-kalam",
+      "full_dur": "12 min"
     },
     "finetuning": {
       "reel": "is-the-universe-fine-tuned-for-life",
@@ -200,5 +203,6 @@
       "study-plans-feature",
       "scripture-one-story"
     ]
-  }
+  },
+  "_full_comment": "Optional long-form explainer per essay: 'full' = YouTube id of the narrated, animated explainer (tools/reel/gen_explainer.py, spec in 'full_spec', gated like any reel), 'full_dur' = the label shown. library/card-video.js places a 'The full explainer' box at the top of the card's Pro Deep Dive tier, and video-library.html un-hides its matching card, ONLY when 'full' is a non-empty plausible id — dark until the owner uploads."
 }
