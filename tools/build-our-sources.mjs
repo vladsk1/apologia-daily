@@ -36,6 +36,7 @@ export function authorOf(liHtml) {
   head = head.replace(/,?\s*\(?(?:ed|eds|trans)\.?\)?(?:\s*(?:and|&)\s*\(?(?:ed|eds|trans)\.?\)?)?$/i, '').replace(/[.,\s]+$/, '');
   // "Surname, Given[, Jr.][, Co-author, … and Last]" -> "Given Surname Jr. & Co-author & Last"
   head = head.replace(/\s*\(with [^)]*\)/, '');
+  head = head.replace(/[.,]?\s+review of\b.*$/i, ''); // "Tuckett, C. M. Review of Richard Bauckham," -> the reviewer
   const parts = head.split(/\s*,\s*(?:and\s+|&\s+)?|\s+(?:and|&)\s+/).map((x) => x.replace(/[.\s]+$/, '')).filter(Boolean);
   let names = [];
   if (parts.length >= 2 && parts[0].split(' ').length <= 3) {
@@ -60,7 +61,9 @@ export function parseBibliography(html) {
     const txt = clean(li);
     const emTxt = clean(em[1]).replace(/[.,]+$/, '');
     const q = txt.match(/[“"]([^”"]+)[”"]/);
-    const title = (q ? q[1] : emTxt).replace(/[.,]+$/, '');
+    let title = (q ? q[1] : emTxt).replace(/[.,]+$/, '');
+    // A book review: list it as the reviewer's "Review of <book>", not as the book itself.
+    if (/\breview of\b/i.test(clean(li.split('<em>')[0]))) title = `Review of ${title.split('. ')[0]}`;
     const surname = (txt.split(/,|\(|\.| and /)[0].trim().split(' ').pop() || '');
     const year = (txt.match(/\b(1[5-9]\d\d|20[0-2]\d)\b/) || [''])[0];
     out.push({ a: authorOf(li) || surname, s: surname, t: title, v: q ? emTxt : '', y: year });
