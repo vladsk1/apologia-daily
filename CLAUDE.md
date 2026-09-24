@@ -1806,8 +1806,9 @@ and a release.
 **not finished when the note is written.** Before a mining run is done, it MUST scan our **current live
 content** against the source's leads and decide, for each substantive lead, whether the new material can
 *improve what we already have*. Concretely: for each substantive lead, `Grep`/`Read` the on-site home for
-that topic — the certified essay in `library/*.html`, the matching `/answers/*`, the `ev-s*` card, and any
-live `/briefs` or `/sources` entry — then classify it.
+that topic — the certified essay in `library/*.html`, the matching `/answers/*`, the `ev-s*` tab card, the
+`ev-m*` mastery page (a distinct surface from the tab card — a lead can be right on one and stale on the
+other), and any live `/briefs` or `/sources` entry — then classify it.
 
 > ### ⭐⭐ THE CHECK IS A QUALITY COMPARISON, NOT A COVERAGE CHECK. (Rewritten 2026-08-06.)
 > "Does our site mention this?" is only one of the questions. The mining run exists to make our essays

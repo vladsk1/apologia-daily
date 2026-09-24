@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * check-crosscheck-block.mjs — machine guard for the FOUR-SURFACE CROSS-CHECK
+ * check-crosscheck-block.mjs — machine guard for the FIVE-SURFACE CROSS-CHECK
  * checklist that every research-library mining note must carry.
  *
  * WHY IT EXISTS. On 2026-09-24 a mining run (Putting Jesus in His Place) ran the
@@ -9,12 +9,14 @@
  * ev-s*, /briefs+/sources) stayed invisible until the owner asked "did it scan all
  * of them?" and an audit found it hadn't. The three research-library READMEs now
  * require a filled checklist block in every note; this check makes that hard.
+ * (2026-09-24: the ev-m* mastery page was added as a sixth surface line — the block
+ * heading kept the name "Five-surface cross-check", but six surface boxes are required.)
  *
  * THE CONTRACT. Every research note — docs/{book,video,article}-research/*.md,
  * excluding README.md, INDEX.md and MINING-BRIEF-*.md — that is NOT grandfathered
- * in the baseline must carry a "Four-surface cross-check" block that is COMPLETE:
+ * in the baseline must carry a "Five-surface cross-check" block that is COMPLETE:
  *   - the block heading is present;
- *   - all five surface lines are present (library essay, /answers, ev-s, /briefs, /sources);
+ *   - all six surface lines are present (library essay, /answers, ev-s card, ev-m mastery, /briefs, /sources);
  *   - every checkbox is CHECKED ("- [x]") — none left "- [ ]" (an unchecked box = an
  *     admitted-unscanned surface, which is the exact failure this guards);
  *   - no template placeholder (<date>, <which…>, <where…>, etc.) still remains.
@@ -48,8 +50,9 @@ const GLOBS = [
   'docs/article-research/*.md',
 ];
 
-// The five surfaces the cross-check rule names. A complete block mentions all five.
-const SURFACE_KEYWORDS = ['library/', '/answers/', 'ev-s', '/briefs', '/sources'];
+// The six surface lines the cross-check rule names (ev-m mastery page added 2026-09-24).
+// A complete block mentions all six. 'ev-s' = Evidence-tab card, 'ev-m' = mastery page (distinct).
+const SURFACE_KEYWORDS = ['library/', '/answers/', 'ev-s', 'ev-m', '/briefs', '/sources'];
 
 // Distinctive fragments of the template's fill-in placeholders. If any survives in the
 // block, the block was pasted but not filled. Precise (won't fire on ordinary prose).
@@ -69,13 +72,14 @@ export function noteFiles() {
   return [...set].sort();
 }
 
-// The cross-check block: from the heading matching /four-surface cross-check/i to the
-// next markdown heading (or EOF). Returns null when there is no such heading.
+// The cross-check block: from the heading matching /...surface cross-check/i (count-word
+// agnostic — "four-surface"/"five-surface" both match, so an old block heading still parses)
+// to the next markdown heading (or EOF). Returns null when there is no such heading.
 function blockOf(text) {
   const lines = text.split('\n');
   let start = -1;
   for (let i = 0; i < lines.length; i++) {
-    if (/^#{1,6}\s.*four-surface cross-check/i.test(lines[i])) { start = i; break; }
+    if (/^#{1,6}\s.*surface cross-check/i.test(lines[i])) { start = i; break; }
   }
   if (start === -1) return null;
   let end = lines.length;
@@ -88,7 +92,7 @@ function blockOf(text) {
 // Reason the note fails the contract, or null if it passes. `text` should be LF-normalized.
 export function violationReason(text) {
   const block = blockOf(text);
-  if (block === null) return 'no "Four-surface cross-check" block found';
+  if (block === null) return 'no "Five-surface cross-check" block found';
   const lower = block.toLowerCase();
   const missing = SURFACE_KEYWORDS.filter((k) => !lower.includes(k.toLowerCase()));
   if (missing.length) return `block does not mention surface(s): ${missing.join(', ')}`;
@@ -96,7 +100,7 @@ export function violationReason(text) {
   const ph = PLACEHOLDERS.filter((p) => lower.includes(p.toLowerCase()));
   if (ph.length) return `block still contains unfilled template placeholder(s): ${ph.join(', ')}`;
   const checked = (block.match(/^\s*-\s*\[[xX]\]/gm) || []).length;
-  if (checked < 5) return `block has only ${checked} checked box(es); expected the 5 surface boxes checked`;
+  if (checked < 6) return `block has only ${checked} checked box(es); expected the 6 surface boxes checked`;
   return null;
 }
 
@@ -132,11 +136,11 @@ function main() {
   const violations = findViolations();
   if (violations.length === 0) {
     const total = noteFiles().length;
-    console.log(`✓ Cross-check block: ${total - exempt.size} enforced note(s) carry a filled four-surface cross-check block; ${exempt.size} grandfathered.`);
+    console.log(`✓ Cross-check block: ${total - exempt.size} enforced note(s) carry a filled five-surface cross-check block; ${exempt.size} grandfathered.`);
     process.exit(0);
   }
 
-  console.error(`⛔ ${violations.length} research note(s) missing or with an incomplete four-surface cross-check block:\n`);
+  console.error(`⛔ ${violations.length} research note(s) missing or with an incomplete five-surface cross-check block:\n`);
   for (const { file, reason } of violations) console.error(`  ${file}\n     ${reason}\n`);
   console.error('Fill the checklist block (copy the template from the folder README and answer every surface box),');
   console.error(`or — only for a deliberate, reasoned exception — add the note's path to "exempt" in ${BASELINE}.`);

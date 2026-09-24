@@ -138,7 +138,7 @@ twice-checked, our-own-words material (or a verified verbatim primary) reaches a
    classification **visible in the note** (in "Live-door status") so a reader can see the scan happened. See
    the "MANDATORY CROSS-CHECK STEP" in `CLAUDE.md` § *Content backlog*.
 
-   > ### ⬜→✅ REQUIRED IN EVERY NOTE — the four-surface cross-check checklist. (Added 2026-09-24.)
+   > ### ⬜→✅ REQUIRED IN EVERY NOTE — the five-surface cross-check checklist. (Added 2026-09-24; ev-m mastery page added same day → six boxes.)
    > The cross-check is **not done, and the note is not finished,** until it carries this block with **every
    > box ticked** — each either naming what you scanned + its verdict, or marked **N/A with the reason** the
    > surface doesn't exist for this topic. A ticked box is a claim you actually scanned that surface; **never
@@ -154,10 +154,11 @@ twice-checked, our-own-words material (or a verified verbatim primary) reaches a
    > Paste this into the note (in its cross-map / Live-door section) and fill it:
    >
    > ```
-   > ## Four-surface cross-check — <date> (run by <session>)
+   > ## Five-surface cross-check — <date> (run by <session>)
    > - [ ] library/*.html essay(s)  — <which essay(s), read in full; verdict summary>
    > - [ ] /answers/*               — <which matched; or "no matching answer" + why>
    > - [ ] ev-s*.html tab card(s)   — <which card(s); or "no card for this topic">
+   > - [ ] ev-m*.html mastery page(s) — <which mastery page(s); or "no mastery page for this topic">
    > - [ ] /briefs                  — <which matched; or "none">
    > - [ ] /sources                 — <which matched; or "none / out of scope (PD-patristic only)">
    > - Mandatory-fix findings (verdict 2 — errors / retired claims): <list with file+string, or "none">
@@ -165,9 +166,10 @@ twice-checked, our-own-words material (or a verified verbatim primary) reaches a
    > - "Is the source better than our essay anywhere?" — <where + how, or "no">
    > ```
    >
-   > ⚠ The essay box is necessary but **not sufficient** — an essay-only tick with the other four blank is
-   > exactly the failure this checklist exists to make visible. All five surface boxes get an answer (a
-   > verdict *or* an N/A-with-reason) before the note is considered complete.
+   > ⚠ The essay box is necessary but **not sufficient** — an essay-only tick with the other five blank is
+   > exactly the failure this checklist exists to make visible. All six surface boxes get an answer (a
+   > verdict *or* an N/A-with-reason) before the note is considered complete. (ev-s = the Evidence-tab card;
+   > ev-m = the mastery page — they are distinct surfaces and a lead can be right on one and stale on the other.)
    >
    > **Machine-enforced (CI-blocking):** `tools/check-crosscheck-block.mjs` (also a `tests/content-integrity.test.mjs`
    > case) fails the build for any note here that lacks a filled block — an unchecked `- [ ]` box, a leftover

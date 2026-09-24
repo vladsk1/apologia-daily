@@ -636,35 +636,40 @@ test('stamp-integrity ignores dateModified-only changes and nothing else', () =>
 });
 
 // Every research-library mining note (docs/{book,video,article}-research/*.md, minus
-// README/INDEX/MINING-BRIEF) that is not grandfathered must carry a FILLED four-surface
-// cross-check block. This is the machine backstop for the checklist the READMEs require —
-// added after a 2026-09-24 run did the cross-check on the essays only and shipped.
-test('research notes carry a filled four-surface cross-check block (non-grandfathered)', () => {
+// README/INDEX/MINING-BRIEF) that is not grandfathered must carry a FILLED five-surface
+// cross-check block (six surface boxes since ev-m was added 2026-09-24). This is the
+// machine backstop for the checklist the READMEs require — added after a 2026-09-24 run
+// did the cross-check on the essays only and shipped.
+test('research notes carry a filled five-surface cross-check block (non-grandfathered)', () => {
   assert.doesNotThrow(
     () => execFileSync('node', ['tools/check-crosscheck-block.mjs'], { cwd: process.cwd(), stdio: 'pipe' }),
-    'a research note is missing/incomplete its four-surface cross-check block — run: node tools/check-crosscheck-block.mjs',
+    'a research note is missing/incomplete its five-surface cross-check block — run: node tools/check-crosscheck-block.mjs',
   );
 });
 
 // Prove the guard is not vacuous: with the whole corpus grandfathered, the live check is
 // always green, so the matcher itself must be pinned. violationReason() must PASS a filled
 // block and CATCH each way a note can fake or skip it (missing block, unchecked box,
-// unfilled placeholder, missing surface line).
+// unfilled placeholder, missing surface line). Six surface boxes required (ev-s tab card
+// AND ev-m mastery page are distinct surfaces).
 test('cross-check block matcher catches every incomplete-block failure mode', async () => {
   const { violationReason } = await import('../tools/check-crosscheck-block.mjs');
   const filled = [
-    '## Four-surface cross-check — 2026-09-24 (run by session)',
+    '## Five-surface cross-check — 2026-09-24 (run by session)',
     '- [x] library/foo.html essay — read in full; corroboration',
     '- [x] /answers/bar — no matching answer',
     '- [x] ev-s3.html card — corroboration',
+    '- [x] ev-m-foo.html mastery page — corroboration',
     '- [x] /briefs — none',
     '- [x] /sources — none / out of scope',
     '- Mandatory-fix findings: none',
     '## Next',
   ].join('\n');
   assert.equal(violationReason(filled), null, 'a properly filled block must pass');
-  assert.match(violationReason('# note\n\nprose only\n'), /no "Four-surface cross-check" block/);
+  assert.match(violationReason('# note\n\nprose only\n'), /no "Five-surface cross-check" block/);
   assert.match(violationReason(filled.replace('- [x] /briefs — none', '- [ ] /briefs')), /UNCHECKED box/);
   assert.match(violationReason(filled.replace('read in full; corroboration', '<which essay(s), read in full>')), /placeholder/);
   assert.match(violationReason(filled.replace('- [x] /sources — none / out of scope', '- [x] misc — n/a')), /does not mention surface/);
+  // Dropping the ev-m line must be caught (the surface added 2026-09-24).
+  assert.match(violationReason(filled.replace('- [x] ev-m-foo.html mastery page — corroboration\n', '')), /does not mention surface|6 surface boxes/);
 });
