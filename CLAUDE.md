@@ -42,6 +42,18 @@
 > divinity?" essay, Christ's full humanity in Paul (the recurring Chalcedon gap), and the OT YHWH-texts Paul applies to
 > Jesus. Follow `docs/book-research/README.md` + Step Zero; Fee is Pentecostal, so cite him on exegesis only.
 >
+> **⭐ MINING CROSS-CHECK COVERAGE — 2026-09-24.** All **49 research-library notes** are now cross-checked
+> against **all six live surfaces** (library essay · `/answers` · `ev-s` tab card · `ev-m` mastery page ·
+> `/briefs` · `/sources`). The `ev-m` mastery surface was the last one added to the standard and the last
+> swept — 4 stale claims found and fixed (`ev-m-burial` Acts 13:29 burial-agent overclaim; `ev-m-early_church_trinity`
+> "three hundred bishops" → "about 250 and 318"; `ev-m-postresurrection` hallucination-verdict bounding +
+> martyrdom "willing to suffer"; `ev-m-jesus_as_god_nt` flat Shema reading → attributed McGrath hedge), all
+> dual-consensus re-gated CLEAN (commit `55377f28`); the rest of the 75 mastery pages clean. Each fix is logged
+> in its source note's ledger (`12ef91a4`). ⚠ **Scope, so nobody overreads it:** this means the *mining
+> cross-check* is complete **for the current note set** — it is **NOT** a claim that every library page is fully
+> gated or **pastorally signed off** (still `_pending_` site-wide), and "clean" is a **2026-09-24 snapshot**: any
+> new research note, or a content edit by another session, re-opens the six-surface work for what it touches.
+>
 > **⭐ LATEST — 2026-08-26. TWO NEW READER-TRUST UI COMPONENTS SHIPPED to `main` (owner-requested).**
 > **(1) `library/reviewed-badge.js`** — a small green "Reviewed & current — `<Mon YYYY>`" badge under each essay title,
 > reading the date **at runtime from the page's own `content-review` stamp** (the most recent of the four lens dates),
