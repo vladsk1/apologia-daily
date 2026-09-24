@@ -34,6 +34,14 @@
 > pages; now synced + CI-checked; `check-stamp-integrity` cancels date-only line pairs) and regenerated the
 > trust figures + What's New feed, which had kept `main`'s nav-consistency job red for 5+ pushes.
 >
+> Also parked the same day: `docs/DEBATE_BREAKDOWNS.md` (reviewed public breakdowns of big online debates; first pilot =
+> the viral Hijab vs GodLogic *Islamic Dilemma* exchange), and a **pending owned book**: Gordon D. Fee, *Jesus the Lord
+> according to Paul the Apostle* (Baker Academic, 2018; the concise version of his *Pauline Christology*, which
+> `jesus_as_god_nt.html` already cites). **Owner owns it and will send page photos (or a slow page-turn video; ffmpeg is
+> installable via `pip install imageio-ffmpeg` to pull frames).** Intended use: the missing "Did Paul invent Jesus's
+> divinity?" essay, Christ's full humanity in Paul (the recurring Chalcedon gap), and the OT YHWH-texts Paul applies to
+> Jesus. Follow `docs/book-research/README.md` + Step Zero; Fee is Pentecostal, so cite him on exegesis only.
+>
 > **⭐ LATEST — 2026-08-26. TWO NEW READER-TRUST UI COMPONENTS SHIPPED to `main` (owner-requested).**
 > **(1) `library/reviewed-badge.js`** — a small green "Reviewed & current — `<Mon YYYY>`" badge under each essay title,
 > reading the date **at runtime from the page's own `content-review` stamp** (the most recent of the four lens dates),
