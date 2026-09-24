@@ -23,6 +23,15 @@ until a content session executes them through the pipeline.
 `new-source`. **Priority:** P1 (accuracy fix / correction) > P2 (new topic/objection we lack) >
 P3 (stronger primary / enrichment) > P4 (corroboration only — usually skip).
 
+## ⭐ Card build program — OWNER-LOCKED 2026-09-25 (full-stack cards from the Fee *Jesus the Lord* mining run)
+Each = **deep-dive essay + `ev-s*` card (free "In plain English" + "Pro — Deep Dive") + `ev-m-*` mastery page**, dual-consensus gated, then wired into the tab hub + `evidence-library.html` + `library/index.html` + `sitemap.xml` + trust-numbers (log the `.mk` mirror as pending). Build order **LOCKED**:
+1. **The Full Humanity of Christ** → `library/humanity.html` + card in the **Jesus tab (ev-s3)** + `ev-m-humanity.html`. The one real **GAP**. ⏳ Essay drafted + dual-consensus gated (0 heresy / 0 BREAK; fixes applied + re-gated STAMPABLE) — **card + mastery + wiring TODO.**
+2. **Did Paul Invent Jesus's Divinity?** → new card (Jesus tab). **CONSOLIDATION.** ⚠ The Fee cross-check logged this as a *non-recommendation as a doctrinal gap* (the material is already made + certified across `jesus_as_god_nt`/`phil2`/`shema`/`paulconv`). **The owner deliberately OVERRODE that** for a valid product reason: a top-traffic reader question (the Ehrman "How Jesus Became God" objection) with no single home. **Build by ASSEMBLING certified prose from those four essays (port-heavy, low-risk), NOT as new research.**
+3. **A — Paul the Proto-Trinitarian: the Trinity Before Nicaea** → new card (likely **Trinity tab, ev-s6**). Consolidation **+ the one partial-gap** (the Spirit's personhood argued *from Paul*, backlog P2 below). Answers "the Trinity was invented at Nicaea (325)."
+4. **D — Did the First Christians Worship Jesus as God?** → new card (Jesus tab). Consolidation — the earliest-devotion / Hurtado case (the Lord's Supper as a meal "in honour of Christ as deity," hymns sung *to* Christ, prayer to Christ / *Marana tha*). Answers "the worship of Jesus developed slowly over centuries."
+Then (approved, lower priority — the most redundant with existing essays, build after 1–4): **B — Jesus Is Yahweh (the Divine-Name argument)**; **C — Christ Before Bethlehem (Preexistence in Paul)**; **F — Why a Crucified Messiah? (the scandal)**.
+**Fold-ins, NOT cards** (into their home essays when next touched — see the P2/P3/P4 rows below): the `phil2` presuppositional-argument add, the `paulconv` crucified-Messiah thickening, and the small enrichment rows.
+
 ## Open backlog
 | P | What to do | Type | Surfaced by | Target file(s) | Gate | Status |
 |---|---|---|---|---|---|---|
