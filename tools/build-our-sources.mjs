@@ -75,6 +75,7 @@ export const AUTHOR_OVERRIDES = {
   'Sensed Presence and Mystical Experiences Are Predicted by Suggestibility, Not by the Application of Transcranial Weak Complex Magnetic Fields': 'Pehr Granqvist et al.',
   "Defenders of Reason in Islam: Mu'tazilism from Medieval School to Modern Symbol": 'Richard C. Martin & Mark R. Woodward, with Dwi S. Atmaja',
   'Seder Olam Rabbah': 'Attributed to Yose ben Halafta',
+  'Deception in Minimal Facts Apologetics': 'Global Center for Religious Research (GCRR)',
   'The Great Isaiah Scroll': 'The Israel Museum, Jerusalem',
   'The Great Isaiah Scroll (1QIsaa)': 'The Israel Museum, Jerusalem',
 };
@@ -99,13 +100,25 @@ export function parseBibliography(html) {
     // neither (Scripture-only or unformatted) names no work, so skip it.
     if (!em && !q) continue;
     const emTxt = em ? clean(em[1]).replace(/[.,]+$/, '') : '';
+    const ems = [...li.matchAll(/<em>([\s\S]*?)<\/em>/g)].map((x) => clean(x[1]).replace(/[.,]+$/, ''));
+    // An italic title that itself opens with a quote mark is a book title containing a quotation.
+    const emIsTitle = em && /^[“"‘]/.test(emTxt);
     // An italic title that comes BEFORE a quoted string is the work; the quote is then a
     // chapter or section inside it. A quote before the italic is an article in that journal.
     const emFirst = em && q && txt.indexOf(emTxt) !== -1 && txt.indexOf(emTxt) < txt.indexOf(q[0]);
-    const quoted = q && !emFirst;
-    let title = (quoted ? q[1] : emTxt).replace(/[.,]+$/, '');
+    const quoted = q && !emFirst && !emIsTitle;
+    let title = (quoted ? q[1] : emTxt).replace(/[.,]+(?=[’'”"]?$)/, '').replace(/[.,]+$/, '');
+    // The venue is the first italic AFTER the quoted title; italics inside the quote belong to the title.
+    let venue = '';
+    if (quoted) {
+      const qEnd = txt.indexOf(q[0]) + q[0].length;
+      venue = ems.find((e) => txt.indexOf(e, qEnd) !== -1) || '';
+    }
+    const pre = clean(li.split('<em>')[0]);
+    // A review symposium: "Review symposium on <book>. <journal>".
+    if (em && /review symposium on\s*$/i.test(pre)) { title = `Review symposium on ${emTxt}`; venue = ems[1] || ''; }
     // A book review: list it as the reviewer's "Review of <book>", not as the book itself.
-    if (em && !/^Review of/i.test(title) && /\breview of\b/i.test(clean(li.split('<em>')[0]))) title = `Review of ${title.split('. ')[0]}`;
+    else if (em && !/^Review of/i.test(title) && /\breview of\b/i.test(pre)) title = `Review of ${title.split('. ')[0]}`;
     const surname = (txt.split(/,|\(|\.| and /)[0].trim().split(' ').pop() || '');
     const rest = txt.replace(title, '').replace(emTxt, '');
     const year = (rest.match(/(?<![\d.:])(1[5-9]\d\d|20[0-2]\d)(?!\d|\.\d)/) || [''])[0];
@@ -115,7 +128,7 @@ export function parseBibliography(html) {
     const wiki = unsigned && /wikipedia\.org/i.test(txt);
     let a = o || (wiki ? 'Wikipedia' : unsigned ? 'No named author' : authorOf(li) || surname);
     a = AUTHOR_FIXES[a] || a;
-    out.push({ a, s: o ? o.split(' ').pop() : unsigned ? 'zz-unsigned' : surname, t: title, v: quoted ? emTxt : '', y: year });
+    out.push({ a, s: o ? o.split(' ').pop() : unsigned ? 'zz-unsigned' : surname, t: title, v: venue, y: year });
   }
   return out;
 }
