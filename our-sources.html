@@ -142,7 +142,7 @@
               <a class="adn-mi" href="/library/"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Deep-Dive Essays</span><span class="adn-mi-dc">Long-form, fully-cited essays.</span></span></a>
               <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Answers</span><span class="adn-mi-dc">The questions people ask most.</span></span></a>
               <a class="adn-mi" href="/sources.html"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Church Fathers &amp; Creeds</span><span class="adn-mi-dc">The early church in its own words, verified.</span></span></a>
-              <a class="adn-mi" href="/our-sources.html"><span class="adn-mi-ic">&#128218;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Our Sources</span><span class="adn-mi-dc">Every book our essays cite.</span></span></a>
+              <a class="adn-mi" href="/our-sources.html"><span class="adn-mi-ic">&#128218;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Our Sources</span><span class="adn-mi-dc">Books and articles our essays cite.</span></span></a>
               <a class="adn-mi" href="/whats-new.html"><span class="adn-mi-ic">&#128240;</span><span class="adn-mi-tx"><span class="adn-mi-nm">What&#39;s New</span><span class="adn-mi-dc">Latest essays, features &amp; reels.</span></span></a>
             </div>
             <div class="adn-mega-col">
@@ -198,7 +198,7 @@
     <div class="pulse" aria-hidden="true"></div>
     <div>
       <h2 id="lv">Always being updated</h2>
-      <p>This list is built from our essays&rsquo; bibliographies, not kept by hand. Each time an essay changes, an automatic check flags the list if it no longer matches, and we rebuild it. Each essay&rsquo;s own bibliography is always the final word. We re-check essays against newer scholarship. When it changes a point, we update the essay, send it back through review, and log the change below.</p>
+      <p>The list of works is built from our essays&rsquo; bibliographies, not kept by hand. Each time an essay changes, an automatic check flags the list if it no longer matches, and we rebuild it. Each essay&rsquo;s own bibliography is always the final word. We re-check essays against newer scholarship. When it changes a point, we update the essay, send it back through review, and log the change below.</p>
       <details>
         <summary>Recent source updates</summary>
         <ul class="log">
@@ -350,7 +350,7 @@
       Array.prototype.forEach.call(document.querySelectorAll('.mode'), function(b){ b.setAttribute('aria-selected', String(b.getAttribute('data-m') === state.mode)); });
       if (state.mode === 'studied') {
         view.innerHTML = '<h2 class="sec">Talks &amp; papers we studied</h2>' +
-          '<p class="rule"><b>How we use these.</b> Talks and papers point us to evidence. We don&rsquo;t cite the talk itself. We go to the original sources it mentions, check them, and cite those. These talks and papers are by Christian scholars and apologists. For the sceptical side we read the critics&rsquo; own work, listed under Critics we answer.</p>' +
+          '<p class="rule"><b>How we use these.</b> Talks and papers point us to evidence. We don&rsquo;t cite the talk itself. We go to the original sources it mentions, check them, and cite those. These talks and papers are by Christian scholars and apologists. For the sceptical side we read the critics&rsquo; own work; see Critics we answer and Books &amp; articles.</p>' +
           '<h3 class="sub">Talks and lectures (' + VIDEOS.length + ')</h3><div class="cards">' + VIDEOS.map(card).join('') + '</div>' +
           '<h3 class="sub">Journal articles and papers (' + ARTICLES.length + ')</h3><div class="cards">' + ARTICLES.map(card).join('') + '</div>';
         return;
@@ -363,7 +363,7 @@
       if (!D) { view.innerHTML = '<p class="count">Loading the source list&hellip;</p>'; return; }
       if (state.mode === 'critics') {
         return renderList(D.works.filter(isCritic), 'Critics we answer',
-          'A strong case answers the strongest objections, not the weakest. These are works by sceptics, scholars of other faiths, and scholars who dispute a particular claim we make. Mostly we set out their objections and answer them; sometimes we cite them for what they grant. This tab is a selection: every work our essays cite, including other critics, is under Books &amp; articles.',
+          'A strong case answers the strongest objections, not the weakest. These are works by sceptics, scholars of other faiths, and scholars who dispute a particular claim we make. Mostly we set out their objections and answer them; sometimes we cite them for what they grant. This tab is a selection. Many more works, including by other critics, are under Books &amp; articles, and each essay&rsquo;s own bibliography and notes list everything it cites.',
           '<div class="why"><div><b>Stated at full strength</b>We aim to state each objection as its strongest defenders would, before we answer it.</div><div><b>Quoted in context</b>Where a critic grants a point, we quote it in context and claim only what it grants.</div><div><b>Named, not hidden</b>Where serious scholars dispute a point we rely on, we aim to say so and name them.</div></div>');
       }
       var multi = D.works.filter(function(w){ return w.e.length > 1; }).length;

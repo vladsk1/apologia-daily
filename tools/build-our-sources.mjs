@@ -33,7 +33,9 @@ const clean = (s) => decode(s.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim
 /** Author display name from the text before the title: "Wright, N. T." -> "N. T. Wright". */
 export function authorOf(liHtml) {
   let head = clean(liHtml.split('<em>')[0]).split(/[“"]/)[0].replace(/[.,\s]+$/, '');
-  head = head.replace(/,?\s*\(?(?:ed|eds|trans)\.?\)?(?:\s*(?:and|&)\s*\(?(?:ed|eds|trans)\.?\)?)?$/i, '').replace(/[.,\s]+$/, '');
+  head = head.replace(/(?:,\s*|\s*\()\b(?:eds?|trans)\.?\)?(?:\s*(?:and|&)\s*\(?(?:eds?|trans)\.?\)?)?$/i, '').replace(/[.,\s]+$/, '');
+  const etAl = /,?\s*et al\.?$/i.test(head);
+  head = head.replace(/,?\s*et al\.?$/i, '');
   // "Surname, Given[, Jr.][, Co-author, … and Last]" -> "Given Surname Jr. & Co-author & Last"
   head = head.replace(/\s*\(with [^)]*\)/, '');
   head = head.replace(/[.,]?\s+review of\b.*$/i, ''); // "Tuckett, C. M. Review of Richard Bauckham," -> the reviewer
@@ -46,6 +48,7 @@ export function authorOf(liHtml) {
     names = names.concat(parts.slice(i));
   } else names = parts;
   let a = names.length > 2 ? `${names.slice(0, -1).join(', ')} & ${names.at(-1)}` : names.join(' & ');
+  if (etAl) a += ' et al.';
   a = a.replace(/\b([A-Z])(?=\s|$)/g, '$1.').replace(/\.\./g, '.').replace(/\.\s+Review symposium.*$/, '').trim();
   return a.length > 70 ? '' : a;
 }
@@ -55,15 +58,17 @@ export function authorOf(liHtml) {
 // the value is the author shown. Found by the 2026-09-24 citations gate.
 export const AUTHOR_OVERRIDES = {
   'Sahih Muslim': 'Muslim ibn al-Hajjaj',
+  'The Holy Bible, English Standard Version': 'Crossway',
+  'The Bridges’ Translation of the Ten Qira’at of the Noble Qur’an': 'Fadel Soliman et al.',
   'Sahih al-Bukhari': 'Muhammad al-Bukhari',
   'Virtues of the Qur’an': 'Muhammad al-Bukhari',
   'Quicunque vult': 'Anonymous (the Athanasian Creed)',
   'Muhammad in the Bible': 'ʿAbd al-Aḥad Dāwūd (David Benjamin Keldani)',
-  'The Origins of Prebiological Systems and of Their Molecular Matrices': 'Theodosius Dobzhansky',
+  'The Origins of Prebiological Systems and of Their Molecular Matrices': 'Theodosius Dobzhansky (discussion remark; volume ed. Sidney W. Fox)',
   'Doctrine and Covenants': 'The Church of Jesus Christ of Latter-day Saints',
   'Teachings of Presidents of the Church: Lorenzo Snow': 'The Church of Jesus Christ of Latter-day Saints',
   'The King Follett Sermon': 'Joseph Smith',
-  'Trinity > History of Trinitarian Doctrines': 'Stanford Encyclopedia of Philosophy',
+  'Trinity > History of Trinitarian Doctrines': 'Dale Tuggy',
   'Ecclesiastical History': 'Eusebius',
   'Sensed Presence and Mystical Experiences Are Predicted by Suggestibility, Not by the Application of Transcranial Weak Complex Magnetic Fields': 'Pehr Granqvist et al.',
   "Defenders of Reason in Islam: Mu'tazilism from Medieval School to Modern Symbol": 'Richard C. Martin & Mark R. Woodward, with Dwi S. Atmaja',
@@ -96,11 +101,13 @@ export function parseBibliography(html) {
     // A book review: list it as the reviewer's "Review of <book>", not as the book itself.
     if (em && /\breview of\b/i.test(clean(li.split('<em>')[0]))) title = `Review of ${title.split('. ')[0]}`;
     const surname = (txt.split(/,|\(|\.| and /)[0].trim().split(' ').pop() || '');
-    const year = (txt.match(/\b(1[5-9]\d\d|20[0-2]\d)\b/) || [''])[0];
+    const rest = txt.replace(title, '').replace(emTxt, '');
+    const year = (rest.match(/(?<![\d.:])(1[5-9]\d\d|20[0-2]\d)(?!\d|\.\d)/) || [''])[0];
     const o = AUTHOR_OVERRIDES[title];
     // A line that opens with its quoted title names no author (usually a web reference).
     const unsigned = !o && /^[“"‘]/.test(txt);
-    let a = o || (unsigned ? 'No named author' : authorOf(li) || surname);
+    const wiki = unsigned && /wikipedia\.org/i.test(txt);
+    let a = o || (wiki ? 'Wikipedia' : unsigned ? 'No named author' : authorOf(li) || surname);
     a = AUTHOR_FIXES[a] || a;
     out.push({ a, s: o ? o.split(' ').pop() : unsigned ? 'zz-unsigned' : surname, t: title, v: q ? emTxt : '', y: year });
   }
