@@ -148,6 +148,10 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
 6. Deploy per the repo rule: commit the note and **fast-forward push to `main`** (never
    `git checkout main`).
 
+> **Our Sources page:** a book reaches the public `our-sources.html` list automatically once an essay's
+> bibliography cites it (run `node tools/build-our-sources.mjs` after the essay edit). A research note alone does
+> not put it there.
+
 ## Current notes
 - `i-dont-have-enough-faith-to-be-an-atheist.md` — Geisler & Turek (**complete**): cosmological /
   teleological / moral arguments, NT reliability, resurrection, deity of Christ, miracles, and the

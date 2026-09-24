@@ -204,6 +204,12 @@ Start with talks that *cite their sources* — those give the richest lead harve
 - **Capturing Christianity** — interviews with scholars (Craig, Swinburne, etc.).
 Cross-check every claim against the primary regardless of channel; even careful channels round numbers.
 
+> ### ⚠ Also update the public "Our Sources" page (owner rule, 2026-09-24)
+> Every note added here needs a card on `our-sources.html` (the `VIDEOS` array) in the **same commit**, with
+> `n:"<this note's file stem>"`, and the card's title, speaker/author, venue, year and URL checked against the
+> note (citations gate). `node tools/build-our-sources.mjs --check` fails in CI on a note with no card. To leave a
+> note off, record why in `STUDIED_EXCLUDED` in `tools/build-our-sources.mjs`.
+
 ## Mined-videos ledger (the running list — update it every time)
 Like the book library's "Current notes," this is the canonical list of which videos have been mined —
 plus, unique to video, **whether each one actually reached the live doors** (`/sources` / `/briefs`).

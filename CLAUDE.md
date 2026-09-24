@@ -794,6 +794,23 @@
 > - **Correct it in place the moment you find it wrong**, and say what the old figure was so nobody
 >   re-derives from it. A silently corrected number teaches the next reader nothing.
 >
+> **STANDING RULE — THE "OUR SOURCES" PAGE TRACKS THE RESEARCH LIBRARIES. (Owner rule, 2026-09-24.)**
+> [`our-sources.html`](our-sources.html) is the public list of what our work rests on, and it must be updated
+> whenever the library grows:
+> - **A book or article an essay cites** reaches the page automatically. The list is generated from every
+>   essay's bibliography by `node tools/build-our-sources.mjs` into `our-sources.json`. **Run it after any essay
+>   edit and commit the result.** CI (`--check`) fails if it is stale.
+> - **A new video or article research note** (`docs/video-research/*.md`, `docs/article-research/*.md`) needs a
+>   card in the page's `VIDEOS` / `ARTICLES` array **in the same commit**, carrying `n:"<note-file-stem>"`. The
+>   card is gated copy (citations at minimum: title, speaker, venue, year and URL checked against the note). CI
+>   fails on a note with no card, or a card with no note. To leave a note off (e.g. an unverified speaker),
+>   record the reason in `STUDIED_EXCLUDED` in `tools/build-our-sources.mjs`.
+> - **A new owned-book note** (`docs/book-research/`) appears once an essay cites the book, through its
+>   bibliography. The page has no "books we studied" section yet.
+> - Labels and "How we use it" notes about **named people** (`CRITICS`, `NOTES`) are gated copy: citations +
+>   argument + orthodoxy + neutrality. Port each label from how the essays actually use the person, never from
+>   memory. Allison, Stenger and Vermes were all mislabelled on the first draft of this page.
+>
 > **STANDING RULE — X / social share-cards.** Every X-post image uses the brand card generator
 > `tools/reel/gen_xcard.py` (night-sky navy + gold underlined kicker + italic-serif cream/gold
 > headline + shield logo, 1600×900; specs in `tools/reel/xcards/`). **Never ship a flat frame

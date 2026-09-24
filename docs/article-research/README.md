@@ -230,6 +230,12 @@ in brackets; carry the flags into every pull.
 author's own; any "free full-text" of a still-copyrighted book/article on an aggregator that isn't the
 publisher/author — that's an owned-access candidate, not a source.
 
+> ### ⚠ Also update the public "Our Sources" page (owner rule, 2026-09-24)
+> Every note added here needs a card on `our-sources.html` (the `ARTICLES` array) in the **same commit**, with
+> `n:"<this note's file stem>"`, and the card's title, speaker/author, venue, year and URL checked against the
+> note (citations gate). `node tools/build-our-sources.mjs --check` fails in CI on a note with no card. To leave a
+> note off, record why in `STUDIED_EXCLUDED` in `tools/build-our-sources.mjs`.
+
 ## Mined-articles ledger (the running list — update it every time)
 The canonical list of which articles have been mined — plus whether each reached the live doors.
 Every mining run MUST add a row here (and an `INDEX.md` topic row). Status keys: **note** = our-own-words

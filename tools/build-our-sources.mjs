@@ -140,6 +140,31 @@ export function build(root = '.') {
 
 export const serialize = (d) => JSON.stringify(d) + '\n';
 
+/* ── Talks & papers we studied ────────────────────────────────────────────────
+ * The page's VIDEOS/ARTICLES cards are gated copy, so they are hand-written, not
+ * generated. But the SET of cards must track the research libraries: every note in
+ * docs/video-research/ and docs/article-research/ needs a card carrying its note id
+ * (n:"<file-stem>"), or an entry below saying why it is left off. --check fails on a
+ * note with no card, or a card whose note no longer exists. (Owner rule, 2026-09-24:
+ * the page is updated whenever a talk or paper is added to the library.)
+ */
+export const STUDIED_DIRS = ['docs/video-research', 'docs/article-research'];
+export const STUDIED_EXCLUDED = {
+  'muhammad-in-the-bible-prophet-dilemma': 'speaker not identified in the note ("Michael", surname not captured); list once verified',
+};
+const NON_NOTES = /^(INDEX|README|MINING-BRIEF.*)\.md$/;
+
+export function studiedCoverage(root = '.') {
+  const notes = STUDIED_DIRS.flatMap((d) =>
+    readdirSync(`${root}/${d}`).filter((f) => f.endsWith('.md') && !NON_NOTES.test(f)).map((f) => f.slice(0, -3)));
+  const page = readFileSync(`${root}/our-sources.html`, 'utf8');
+  const cards = [...page.matchAll(/\bn:"([a-z0-9-]+)"/g)].map((m) => m[1]);
+  const missing = notes.filter((n) => !cards.includes(n) && !(n in STUDIED_EXCLUDED)).sort();
+  const orphans = cards.filter((c) => !notes.includes(c)).sort();
+  const staleExclusions = Object.keys(STUDIED_EXCLUDED).filter((n) => !notes.includes(n) || cards.includes(n));
+  return { notes: notes.length, cards: cards.length, missing, orphans, staleExclusions };
+}
+
 function main() {
   const next = serialize(build('.'));
   if (process.argv.includes('--check')) {
@@ -149,6 +174,19 @@ function main() {
       process.exit(1);
     }
     console.log(`${OUT} is current.`);
+    const cov = studiedCoverage('.');
+    const bad = [
+      ...cov.missing.map((n) => `  research note with no card on our-sources.html: ${n}`),
+      ...cov.orphans.map((n) => `  card whose research note does not exist: ${n}`),
+      ...cov.staleExclusions.map((n) => `  STUDIED_EXCLUDED entry is stale (note gone, or it now has a card): ${n}`),
+    ];
+    if (bad.length) {
+      console.error('Talks & papers we studied is out of step with the research libraries:\n' + bad.join('\n') +
+        '\nAdd a card (n:"<note-file-stem>") to VIDEOS or ARTICLES in our-sources.html and gate it, ' +
+        'or record a reason in STUDIED_EXCLUDED in tools/build-our-sources.mjs.');
+      process.exit(1);
+    }
+    console.log(`Talks & papers: ${cov.cards} cards cover ${cov.notes} research notes.`);
     return;
   }
   writeFileSync(OUT, next);
