@@ -73,3 +73,43 @@ the physical book. Owning them lets us verify page numbers and quotations, and d
   "Kindle Deals in … Apologetics" page). Academic titles (Blackwell, Oxford, Cambridge) rarely hit $2.99
   but do drop; used print via ThriftBooks is often cheapest.
 - **Rough cost (estimate):** Tier 1 about US$200–350 total; all 30 about US$800–1,300 (new; less used or on sale).
+
+## Kindle links and prices found (2026-09-24)
+
+Amazon and every other ebook store were blocked from the research session, so **no price below was
+confirmed on a product page**. Prices are search-result figures only ("unconfirmed"), and Christianbook
+figures may be list prices. Check before buying.
+
+| # | Book | Price seen (unconfirmed) | Kindle / store link |
+|---|---|---|---|
+| 1 | Wright, *Resurrection of the Son of God* | ~$40 Kindle | https://www.amazon.com/dp/B008HHAIP0 |
+| 2 | Gathercole, *Preexistent Son* | no ebook found (print) | https://www.eerdmans.com/9780802829016/the-preexistent-son/ |
+| 3 | Craig, *Reasonable Faith* 3rd ed. | not found | https://www.amazon.com/dp/B00G5M1BFK |
+| 4 | Hurtado, *Lord Jesus Christ* | not found | https://www.amazon.com/dp/B003HGQKG2 |
+| 5 | Bauckham, *Jesus and the God of Israel* | not found (Kobo ebook exists) | https://www.kobo.com/ww/en/ebook/jesus-and-the-god-of-israel |
+| 6 | *Blackwell Companion to Natural Theology* | not found | https://www.amazon.com/dp/B003VIWZEM |
+| 7 | Licona, *Resurrection of Jesus* | $59.99 (Christianbook list) | https://www.amazon.com/dp/B005LUJDNE |
+| 8 | Allison, *Resurrection of Jesus* | not found | https://www.amazon.com/dp/B08WK5H6T6 |
+| 9 | Ehrman, *How Jesus Became God* | $15.99 (ebooks.com) | https://www.amazon.com/dp/B00DB39V2Q |
+| 10 | Oppy, *Arguing about Gods* | €37.46 (Amazon.de) | https://www.amazon.de/dp/0521122643 |
+| 11 | Mackie, *Miracle of Theism* | not found | https://www.amazon.com/dp/B004EWFZUK |
+| 12 | BeDuhn, *Truth in Translation* | not found | https://www.amazon.com/dp/B014XTTAMM |
+| 13 | Siddiqui, *Christians, Muslims, and Jesus* | not found | https://www.amazon.com/dp/B00C7QB00E |
+| 14 | Schellenberg, *Divine Hiddenness and Human Reason* | no ebook found (print) | — |
+| 15 | Howard-Snyder & Moser, *Divine Hiddenness* | not found | https://www.amazon.com/dp/B001UV3S2A |
+| 16 | Copan & Flannagan, *Did God Really Command Genocide?* | $18.99 (Christianbook list) | https://www.amazon.com/dp/B00OY906CA |
+| 17 | Copan, *Is God a Moral Monster?* | $10.49 (Christianbook) | Christianbook ebook ISBN 9781441214546 |
+| 18 | Stump, *Wandering in Darkness* | not found | https://www.amazon.com/dp/B00N4V6SY4 |
+| 19 | Keener, *Miracles* | not found | https://www.amazon.com/dp/B007KOI2PY |
+| 20 | *Four Views on Hell* (2nd ed.) | $7.99 (Christianbook) | https://www.amazon.com/dp/B010R9L4BC |
+| 21 | *Four Views on Creation, Evolution, and ID* | not found | https://www.amazon.com/dp/B06XFN3TW6 |
+| 22 | Ayres, *Nicaea and Its Legacy* | $49.59 Kindle | https://www.amazon.com/dp/B000VI6ZA0 |
+| 23 | Anatolios, *Retrieving Nicaea* | ~$40 Kindle | https://www.amazon.com/dp/B005GMY9X6 |
+| 24 | Metzger & Ehrman, *Text of the NT* | not found (check edition) | — |
+| 25 | Kruger, *Canon Revisited* | not found | https://www.amazon.com/dp/B007RPROCS |
+| 26 | Blomberg, *Historical Reliability of the Gospels* 2nd ed. | not found (IVP ebook exists) | https://www.ivpress.com/the-historical-reliability-of-the-gospels-ebook |
+| 27 | Reynolds, *The Qur'an and the Bible* | no ebook found (print) | — |
+| 28 | Stark, *Rise of Christianity* | not found | https://www.amazon.com/dp/B08783D3C1 |
+| 29 | Baggett & Walls, *Good God* | not found | https://www.amazon.com/dp/B004WN4WK0 |
+| 30 | Lewis & Barnes, *A Fortunate Universe* | not found | https://www.amazon.com/dp/B01L27MSZE |
+| 31 | *The New Mormon Challenge* | $11.99 (Christianbook) | https://www.amazon.com/dp/B004BA51FE |
