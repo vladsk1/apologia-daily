@@ -1,5 +1,10 @@
 {
   "accepted": {
+    "ev-s2.html -> ev-s2.mk.html": {
+      "acceptedAt": "2026-09-24",
+      "sourceCommit": "f5d819a8",
+      "reason": "Numeric-sync-only lag: the 2026-09-24 English creed-window harmonization (receipt '36-39 AD / within 3-9 years'; conversion premise '33-36 AD') was mirrored into ev-s2.mk.html as LANGUAGE-NEUTRAL NUMBERS only (33-35->33-36, 36-38->36-39, 3-8->3-9 години), so nothing false or stale is live in translation. The mk's argument/orthodoxy review dates deliberately stay 2026-07-23 because no native-Macedonian re-gate ran (owner's standing preference: do not hand-write/date translated doctrinal prose no native reviewer will gate). Clear this entry when the mirror is natively re-gated up to the English."
+    },
     "library/jesus_claims.html -> library/mk/jesus_claims.html": {
       "acceptedAt": "2026-08-17",
       "sourceCommit": "1f8f6c9",
