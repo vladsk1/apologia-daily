@@ -234,37 +234,37 @@
     // Talks and papers we took research notes on (docs/video-research, docs/article-research).
     // We cite the primary sources they point to, never the talk itself.
     var VIDEOS = [
-      {k:"Resurrection",t:"Six facts before AD 36 (timeline lecture)",s:"Gary Habermas",u:"https://www.youtube.com/watch?v=WkAAK57JuEw"},
-      {k:"Resurrection",t:"The minimal facts lecture: 1 Corinthians 15 and Galatians 1–2",s:"Gary Habermas",u:"https://www.youtube.com/watch?v=-cbgVDj81fY"},
-      {k:"Resurrection",t:"The Early Creeds of Christianity",s:"Gary Habermas with Alisa Childers",u:"https://www.youtube.com/watch?v=dEzLTtXeqs4"},
-      {k:"Resurrection",t:"On the Resurrection: the minimal facts revisited",s:"Gary Habermas with Sean McDowell",u:"https://www.youtube.com/watch?v=WoSOoqSRPvg"},
-      {k:"Resurrection",t:"On the Resurrection, Vol. 2 (Refutations): the alternative theories",s:"Gary Habermas with Sean McDowell",u:"https://www.youtube.com/watch?v=qJC6pdEKxOA"},
-      {k:"Deity of Christ",t:"CORE Christian Confessions BEFORE the New Testament",s:"Gary Habermas",u:"https://www.youtube.com/watch?v=6C3uO-50YUw"},
-      {k:"Deity of Christ",t:"The Incarnate Christ and His Critics",s:"Rob Bowman with Sean McDowell",u:"https://www.youtube.com/watch?v=dXxVS2B96Ns"},
-      {k:"Trinity",t:"A word-by-word commentary on the Nicene Creed",s:"Gavin Ortlund (Truth Unites)",u:"https://www.youtube.com/watch?v=2KuLiL0Am78"},
-      {k:"God’s existence",t:"Defenders class series on the kalam cosmological argument",s:"William Lane Craig",u:"https://www.youtube.com/watch?v=585Bl_tSipA"},
-      {k:"God’s existence",t:"Defenders class series on the moral argument",s:"William Lane Craig",u:"https://www.youtube.com/watch?v=1Q6sGVcShJY"},
-      {k:"Science",t:"Light of the Mind, Light of the World",s:"Spencer Klavan with Sean McDowell",u:"https://www.youtube.com/watch?v=-gHic1q-0qg"},
-      {k:"Bible reliability",t:"Archaeology and the People of the Bible",s:"Titus Kennedy with Sean McDowell",u:"https://www.youtube.com/watch?v=-4RwBPrsXVU"},
-      {k:"Bible reliability",t:"The Historical Reliability of the Bible, Lecture 1: the Old Testament canon",s:"Peterson Academy",u:"https://www.youtube.com/watch?v=pkSoTR_vhmg"},
-      {k:"Islam",t:"The Islamic Dilemma",s:"Christopher Frost",u:"https://www.youtube.com/watch?v=trWm75yjY-8"},
-      {k:"Islam",t:"Textual corruption in the Islamic traditions",s:"Avery Gio",u:"https://www.youtube.com/watch?v=LyFqfh8jqP4"}
+      {n:"habermas-six-facts-before-36ad",k:"Resurrection",t:"Six facts before AD 36 (timeline lecture)",s:"Gary Habermas",u:"https://www.youtube.com/watch?v=WkAAK57JuEw"},
+      {n:"habermas-minimal-facts-two-texts",k:"Resurrection",t:"The minimal facts lecture: 1 Corinthians 15 and Galatians 1–2",s:"Gary Habermas",u:"https://www.youtube.com/watch?v=-cbgVDj81fY"},
+      {n:"habermas-childers-early-creeds",k:"Resurrection",t:"The Early Creeds of Christianity",s:"Gary Habermas with Alisa Childers",u:"https://www.youtube.com/watch?v=dEzLTtXeqs4"},
+      {n:"habermas-mcdowell-on-the-resurrection-interview",k:"Resurrection",t:"On the Resurrection: the minimal facts revisited",s:"Gary Habermas with Sean McDowell",u:"https://www.youtube.com/watch?v=WoSOoqSRPvg"},
+      {n:"habermas-mcdowell-alternate-theories-interview",k:"Resurrection",t:"On the Resurrection, Vol. 2 (Refutations): the alternative theories",s:"Gary Habermas with Sean McDowell",u:"https://www.youtube.com/watch?v=qJC6pdEKxOA"},
+      {n:"habermas-early-high-christology",k:"Deity of Christ",t:"CORE Christian Confessions BEFORE the New Testament",s:"Gary Habermas",u:"https://www.youtube.com/watch?v=6C3uO-50YUw"},
+      {n:"mcdowell-bowman-incarnate-christ-deity",k:"Deity of Christ",t:"The Incarnate Christ and His Critics",s:"Rob Bowman with Sean McDowell",u:"https://www.youtube.com/watch?v=dXxVS2B96Ns"},
+      {n:"ortlund-nicene-creed-commentary",k:"Trinity",t:"A word-by-word commentary on the Nicene Creed",s:"Gavin Ortlund (Truth Unites)",u:"https://www.youtube.com/watch?v=2KuLiL0Am78"},
+      {n:"craig-kalam-defenders-series",k:"God’s existence",t:"Defenders class series on the kalam cosmological argument",s:"William Lane Craig",u:"https://www.youtube.com/watch?v=585Bl_tSipA"},
+      {n:"craig-moral-argument-defenders-series",k:"God’s existence",t:"Defenders class series on the moral argument",s:"William Lane Craig",u:"https://www.youtube.com/watch?v=1Q6sGVcShJY"},
+      {n:"klavan-light-of-the-mind-science-god",k:"Science",t:"Light of the Mind, Light of the World",s:"Spencer Klavan with Sean McDowell",u:"https://www.youtube.com/watch?v=-gHic1q-0qg"},
+      {n:"kennedy-people-of-the-bible-archaeology",k:"Bible reliability",t:"Archaeology and the People of the Bible",s:"Titus Kennedy with Sean McDowell",u:"https://www.youtube.com/watch?v=-4RwBPrsXVU"},
+      {n:"peterson-academy-ot-canon-canonicity",k:"Bible reliability",t:"The Historical Reliability of the Bible, Lecture 1: the Old Testament canon",s:"Peterson Academy",u:"https://www.youtube.com/watch?v=pkSoTR_vhmg"},
+      {n:"frost-islamic-dilemma",k:"Islam",t:"The Islamic Dilemma",s:"Christopher Frost",u:"https://www.youtube.com/watch?v=trWm75yjY-8"},
+      {n:"avery-gio-quran-textual-preservation",k:"Islam",t:"Textual corruption in the Islamic traditions",s:"Avery Gio",u:"https://www.youtube.com/watch?v=LyFqfh8jqP4"}
     ];
     var ARTICLES = [
-      {k:"Resurrection",t:"Resurrection Research from 1975 to the Present: What Are Critical Scholars Saying?",s:"Gary Habermas"},
-      {k:"Resurrection",t:"The Minimal Facts Approach to the Resurrection of Jesus: The Role of Methodology as a Crucial Component in Establishing Historicity",s:"Gary Habermas"},
-      {k:"Resurrection",t:"Dale Allison’s Resurrection Skepticism: A Critique",s:"Gary Habermas"},
-      {k:"Resurrection",t:"Resurrection Claims in Non-Christian Religions",s:"Gary Habermas, Religious Studies (1989)"},
-      {k:"Resurrection",t:"The Resurrection of Jesus: A Clinical Review of Psychiatric Hypotheses for the Biblical Story of Easter",s:"Joseph Bergeron & Gary Habermas"},
-      {k:"Resurrection",t:"Crucifixion in the Ancient World: A Historical Analysis",s:"Gary Habermas & Benjamin Shaw, Eleutheria (2021)"},
-      {k:"Historical Jesus",t:"Agnostic Historical Jesus Scholars Decimate the Mythical Jesus Popularists",s:"Gary Habermas & Benjamin Shaw, Philosophia Christi (2016)"},
-      {k:"Historical Jesus",t:"Liar, Lunatic, or Lord? Reviving C. S. Lewis’ Trilemma",s:"Jonathan McLatchie"},
-      {k:"Deity of Christ",t:"Another ‘I Have Come’ Saying from Ancient Judaism: A Note on De Sampsone 13",s:"Simon Gathercole"},
-      {k:"Gospels",t:"Q Review",s:"Peter M. Head & P. J. Williams"},
-      {k:"Acts",t:"The historical reliability of Acts (four articles and a lecture)",s:"F. F. Bruce, Colin Hemer & David Seccombe"},
-      {k:"Bible text",t:"The Critical Editions of the Greek NT and OT: Stability, Change, and Implications",s:"Gregory R. Lanier"},
-      {k:"Old Testament",t:"Historical Method and Early Hebrew Tradition",s:"K. A. Kitchen"},
-      {k:"Old Testament",t:"Daniel in Babylon, and the knowledge of writing in Iron Age Palestine (two pieces)",s:"Alan R. Millard"}
+      {n:"habermas-resurrection-research-1975",k:"Resurrection",t:"Resurrection Research from 1975 to the Present: What Are Critical Scholars Saying?",s:"Gary Habermas"},
+      {n:"habermas-minimal-facts-methodology",k:"Resurrection",t:"The Minimal Facts Approach to the Resurrection of Jesus: The Role of Methodology as a Crucial Component in Establishing Historicity",s:"Gary Habermas"},
+      {n:"habermas-allison-hallucination-appearances",k:"Resurrection",t:"Dale Allison’s Resurrection Skepticism: A Critique",s:"Gary Habermas"},
+      {n:"habermas-nonchristian-resurrection-uniqueness",k:"Resurrection",t:"Resurrection Claims in Non-Christian Religions",s:"Gary Habermas, Religious Studies (1989)"},
+      {n:"bergeron-habermas-psychiatric-hypotheses",k:"Resurrection",t:"The Resurrection of Jesus: A Clinical Review of Psychiatric Hypotheses for the Biblical Story of Easter",s:"Joseph Bergeron & Gary Habermas"},
+      {n:"habermas-shaw-crucifixion-2021",k:"Resurrection",t:"Crucifixion in the Ancient World: A Historical Analysis",s:"Gary Habermas & Benjamin Shaw, Eleutheria (2021)"},
+      {n:"habermas-shaw-mythicism-hist-jesus",k:"Historical Jesus",t:"Agnostic Historical Jesus Scholars Decimate the Mythical Jesus Popularists",s:"Gary Habermas & Benjamin Shaw, Philosophia Christi (2016)"},
+      {n:"mclatchie-trilemma-jesuschar",k:"Historical Jesus",t:"Liar, Lunatic, or Lord? Reviving C. S. Lewis’ Trilemma",s:"Jonathan McLatchie"},
+      {n:"gathercole-i-have-come-sayings",k:"Deity of Christ",t:"Another ‘I Have Come’ Saying from Ancient Judaism: A Note on De Sampsone 13",s:"Simon Gathercole"},
+      {n:"head-williams-q-review",k:"Gospels",t:"Q Review",s:"Peter M. Head & P. J. Williams"},
+      {n:"acts-historicity-bruce-hemer-seccombe",k:"Acts",t:"The historical reliability of Acts (four articles and a lecture)",s:"F. F. Bruce, Colin Hemer & David Seccombe"},
+      {n:"lanier-critical-editions-stability",k:"Bible text",t:"The Critical Editions of the Greek NT and OT: Stability, Change, and Implications",s:"Gregory R. Lanier"},
+      {n:"kitchen-historical-method-hebrew-tradition",k:"Old Testament",t:"Historical Method and Early Hebrew Tradition",s:"K. A. Kitchen"},
+      {n:"millard-daniel-and-scribal-culture",k:"Old Testament",t:"Daniel in Babylon, and the knowledge of writing in Iron Age Palestine (two pieces)",s:"Alan R. Millard"}
     ];
     // Who each critic is, stated as the position our essays engage. Keyed by the exact
     // author string the generator produces. Doctrinal-adjacent copy about named people:

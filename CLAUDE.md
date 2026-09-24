@@ -806,7 +806,8 @@
 >   fails on a note with no card, or a card with no note. To leave a note off (e.g. an unverified speaker),
 >   record the reason in `STUDIED_EXCLUDED` in `tools/build-our-sources.mjs`.
 > - **A new owned-book note** (`docs/book-research/`) appears once an essay cites the book, through its
->   bibliography. The page has no "books we studied" section yet.
+>   bibliography. **Owner decision (2026-09-24): books we own that no essay cites are NOT listed** — the page
+>   shows only what the site actually uses. The "Talks & papers we studied" tab stays.
 > - Labels and "How we use it" notes about **named people** (`CRITICS`, `NOTES`) are gated copy: citations +
 >   argument + orthodoxy + neutrality. Port each label from how the essays actually use the person, never from
 >   memory. Allison, Stenger and Vermes were all mislabelled on the first draft of this page.
