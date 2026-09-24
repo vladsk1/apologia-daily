@@ -309,7 +309,10 @@
       "John Wansbrough":"Cited for the revisionist late-dating of the Qur’an; our essays grant that this dating has not survived the manuscript evidence."
     };
     // Works by a labelled author that are cited as tools, not engaged as arguments.
-    var NOT_ENGAGED = {"The Apostolic Fathers":"His Loeb translation of the Apostolic Fathers is cited as a translation."};
+    var NOT_ENGAGED = {
+      "The Apostolic Fathers":"His Loeb translation of the Apostolic Fathers is cited as a translation.",
+      "Trinity > History of Trinitarian Doctrines":"His encyclopedia survey of the history of the doctrine is cited as a historical reference."
+    };
     function isCritic(w){ return CRITICS[w.a] && !NOT_ENGAGED[w.t]; }
     var HISTORIC = 156;
     var D = null;

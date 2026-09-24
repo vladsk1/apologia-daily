@@ -21,12 +21,14 @@ const OUT = 'our-sources.json';
 
 const ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', mdash: '—', ndash: '–',
   rsquo: '’', lsquo: '‘', rdquo: '”', ldquo: '“', hellip: '…', eacute: 'é', egrave: 'è', uuml: 'ü',
-  ouml: 'ö', auml: 'ä', icirc: 'î', aacute: 'á', iacute: 'í', oacute: 'ó', ccedil: 'ç', shy: '' };
+  ouml: 'ö', auml: 'ä', icirc: 'î', aacute: 'á', iacute: 'í', oacute: 'ó', ccedil: 'ç', shy: '',
+  amacr: 'ā', imacr: 'ī', umacr: 'ū', acirc: 'â', ecirc: 'ê', ucirc: 'û', ocirc: 'ô',
+  Tau: 'Τ', Upsilon: 'Υ', Pi: 'Π', Omicron: 'Ο', Sigma: 'Σ', Alpha: 'Α', Epsilon: 'Ε', Omega: 'Ω' };
 export function decode(s) {
   return s
     .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
     .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)))
-    .replace(/&([a-z]+);/gi, (m, n) => (n.toLowerCase() in ENTITIES ? ENTITIES[n.toLowerCase()] : m));
+    .replace(/&([a-z]+);/gi, (m, n) => (n in ENTITIES ? ENTITIES[n] : n.toLowerCase() in ENTITIES ? ENTITIES[n.toLowerCase()] : m));
 }
 const clean = (s) => decode(s.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
 
@@ -97,9 +99,13 @@ export function parseBibliography(html) {
     // neither (Scripture-only or unformatted) names no work, so skip it.
     if (!em && !q) continue;
     const emTxt = em ? clean(em[1]).replace(/[.,]+$/, '') : '';
-    let title = (q ? q[1] : emTxt).replace(/[.,]+$/, '');
+    // An italic title that comes BEFORE a quoted string is the work; the quote is then a
+    // chapter or section inside it. A quote before the italic is an article in that journal.
+    const emFirst = em && q && txt.indexOf(emTxt) !== -1 && txt.indexOf(emTxt) < txt.indexOf(q[0]);
+    const quoted = q && !emFirst;
+    let title = (quoted ? q[1] : emTxt).replace(/[.,]+$/, '');
     // A book review: list it as the reviewer's "Review of <book>", not as the book itself.
-    if (em && /\breview of\b/i.test(clean(li.split('<em>')[0]))) title = `Review of ${title.split('. ')[0]}`;
+    if (em && !/^Review of/i.test(title) && /\breview of\b/i.test(clean(li.split('<em>')[0]))) title = `Review of ${title.split('. ')[0]}`;
     const surname = (txt.split(/,|\(|\.| and /)[0].trim().split(' ').pop() || '');
     const rest = txt.replace(title, '').replace(emTxt, '');
     const year = (rest.match(/(?<![\d.:])(1[5-9]\d\d|20[0-2]\d)(?!\d|\.\d)/) || [''])[0];
@@ -109,7 +115,7 @@ export function parseBibliography(html) {
     const wiki = unsigned && /wikipedia\.org/i.test(txt);
     let a = o || (wiki ? 'Wikipedia' : unsigned ? 'No named author' : authorOf(li) || surname);
     a = AUTHOR_FIXES[a] || a;
-    out.push({ a, s: o ? o.split(' ').pop() : unsigned ? 'zz-unsigned' : surname, t: title, v: q ? emTxt : '', y: year });
+    out.push({ a, s: o ? o.split(' ').pop() : unsigned ? 'zz-unsigned' : surname, t: title, v: quoted ? emTxt : '', y: year });
   }
   return out;
 }
