@@ -64,6 +64,8 @@ const CONTENT_PATTERNS = [
                                            // 8-card capstone, all doctrinal, on the deity-of-
                                            // Christ + resurrection dual-consensus tier. An
                                            // independent companion — no author permission.
+  /^our-sources\.html$/,                   // public source list: critic labels + notes on NAMED people,
+                                           // an update log and the talks list (added 2026-09-24).
   /^pocket-cards\.html$/,                  // 70 share-card arguments (gated 2026-08-11, dual-consensus);
                                            // the `custom` user-text generator card is out of scope — see
                                            // the file's content-review stamp for the certification scope.
