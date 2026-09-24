@@ -995,10 +995,13 @@ VISUALS = dict(title=v_title, end=v_end, fork=v_fork, syllogism=v_syllogism, vac
                strands=v_strands, objection=v_objection, close=v_close, **MOTION_VISUALS)
 
 # ---------------------------------------------------------------- captions
-def caption_chunks(cues, d, font, max_w):
-    """Split each sentence into ≤2-line chunks, timed in proportion to word count."""
+def caption_chunks(cues, d, font, max_w, cmap=None):
+    """Split each sentence into ≤2-line chunks, timed in proportion to word count.
+    cmap: spec "caption_map" — display-only rewrites (e.g. 10^500 → 10⁵⁰⁰); the narration
+    and the TTS cache key always use the spec's original sentence."""
     out = []
     for a0, a1, s in cues:
+        for k, v in (cmap or {}).items(): s = s.replace(k, v)
         lines = R.wrap(d, s, font, max_w); groups = [lines[i:i + 2] for i in range(0, len(lines), 2)]
         words = [sum(len(l.split()) for l in g) for g in groups]; tot = sum(words); t = a0
         for g, wc in zip(groups, words):
@@ -1102,7 +1105,7 @@ def main():
     tl, total = build_timeline(spec, audio)
     probe = ImageDraw.Draw(Image.new("RGB", (10, 10)))
     caps = []
-    for t in tl: caps += caption_chunks(t["cues"], probe, R.F("sans", CAP_FONT), W - 360)
+    for t in tl: caps += caption_chunks(t["cues"], probe, R.F("sans", CAP_FONT), W - 360, spec.get("caption_map"))
     write_subs(caps, base)
     print(f"runtime {int(total // 60)}:{int(total % 60):02d} · {len(spec['scenes'])} scenes · {len(caps)} captions")
     burn = not a.no_burn_captions
