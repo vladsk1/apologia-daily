@@ -76,6 +76,8 @@ jobs:
         run: node tools/build-briefs-index.mjs --check
       - name: Check JSON-LD dateModified is not older than the latest review
         run: node tools/sync-date-modified.mjs --check
+      - name: Check the Our Sources list matches the essays' bibliographies
+        run: node tools/build-our-sources.mjs --check
 
   orthodoxy-guards:
     # Doctrinal regression guards over the WHOLE corpus (not just changed files).
