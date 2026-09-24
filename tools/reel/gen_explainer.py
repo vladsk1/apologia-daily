@@ -625,7 +625,7 @@ def v_penrose(base, ctx, v):
         def zeros(d):   # a river of zeros that never finishes
             font = R.F("serif", 28)
             for row in range(16):
-                y = 140 + row * 44; off = (tt * (60 + 13 * row)) % 40
+                y = 140 + row * 44; off = (int(tt * 30) * (1 + row % 3)) % 40
                 for c_ in range(52):
                     x = -40 + c_ * 40 + off
                     d.text((x, y), "0", font=font, fill=DIM(th, 40 + int(40 * _rnd(row, c_))))
@@ -752,10 +752,10 @@ def v_multiverse(base, ctx, v):
     def f(d):
         gx, gy = 560, 800
         d.ellipse([gx - 70, gy - 30, gx + 70, gy + 30], fill=(40, 60, 100, 255), outline=GOLD(th, 160), width=2)
-        for i in range(34):
+        for i in range(24):
             life = (t * 0.22 + _rnd(i)) % 1.0
-            x = gx + (_rnd(i, 1) - 0.5) * 900 * life + 30 * math.sin(t + i)
-            y = gy - 40 - life * 700; r_ = 18 + 50 * _rnd(i, 2) * min(1, life * 3)
+            x = int(gx + (_rnd(i, 1) - 0.5) * 900 * life + 12 * math.sin(t * 0.5 + i))
+            y = int(gy - 40 - life * 700); r_ = int(18 + 50 * _rnd(i, 2) * min(1, life * 3))
             gold = (i % 11 == 3)
             a = int(220 * min(1, life * 4) * (1 - max(0, life - 0.85) / 0.15))
             col = GOLD(th, a) if gold else (120, 140, 180, a // 2)
@@ -1118,7 +1118,7 @@ def main():
     lst = os.path.join(work, "parts.txt")
     open(lst, "w").write("".join(f"file '{x}'\n" for x in parts))
     r = subprocess.run([FF, "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst, "-i", wav,
-                        "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", out])
+                        "-c:v", "copy", "-c:a", "aac", "-b:a", "64k", "-shortest", "-movflags", "+faststart", out])
     if r.returncode: sys.exit("final mux failed")
     print(f"✓ {out}\n✓ {base}.srt / .vtt")
 
