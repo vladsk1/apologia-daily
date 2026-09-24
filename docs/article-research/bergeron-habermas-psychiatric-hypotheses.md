@@ -141,6 +141,14 @@ literature** — so a clinician's review is warranted.
 | Naturalistic theories (overview) | live `resurrection-*` briefs; `video-research/habermas-mcdowell-alternate-theories-interview.md` | the medical citations are the distinctive value |
 
 ## Live-door status
+
+> **ev-m mastery-surface audit — 2026-09-24 (commit `55377f28`).** Sixth cross-check surface.
+> `ev-m-postresurrection.html` stated in three layers (:428 objection reply, :524 model answer, :759
+> flashcard) that the hallucination option had "already fallen" / "closed the door" — firmer than this
+> note's bounded rule (*never "medically impossible"; the hypotheses "don't fit the clinical profile"; do
+> not flatten O'Connell's concession that rare collective visionary experiences exist*). Softened by porting
+> `ev-m-appearances.html:369`'s "without documented precedent, carrying a burden the theory has not
+> discharged." Dual-consensus re-gated CLEAN.
 - **`/sources`: —** (modern copyrighted article; nothing PD to add).
 - **`/briefs`: —** (would flow only via a strengthened certified `appearances.html`/hallucinate answer → then
   the existing resurrection briefs — after the clinical primaries are verified).

@@ -86,6 +86,14 @@ Confessor — authenticity debated; the idea has Cappadocian roots) is a possibl
   gets right. A positive model, unlike the Islam-apologetics videos.
 
 ## Live-door status (decision recorded 2026-07-23)
+
+> **ev-m mastery-surface audit — 2026-09-24 (commit `55377f28`).** The mastery pages were the sixth
+> cross-check surface, never audited before. `ev-m-early_church_trinity.html:525` (the Drill-3 model
+> answer readers copy) still ran the RETIRED round figure **"three hundred bishops"**; corrected to this
+> note's **"about 250 and 318"** (318 = traditional/symbolic per Gen 14:14; actual attendance ~250–320).
+> The page's own P2 and flashcard already carried the right figure — only the copied-out model answer
+> lagged. Dual-consensus re-gated CLEAN (argument SOUND / orthodoxy CLEAN / neutrality STAMPABLE). The
+> rest of the Nicene mastery surface is clean.
 - **`/sources`: —** for the video itself (Scripture + modern scholars). *BUT* it names verified **PD
   patristic primaries** we could add to `/sources` (Athanasius *De Decretis*, Basil *On the Holy Spirit*,
   Gregory of Nazianzus/Nyssa, the Justin Martyr "atheists" line) — several Fathers are already in our corpus.

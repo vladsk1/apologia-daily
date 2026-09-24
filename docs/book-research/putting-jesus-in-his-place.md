@@ -43,6 +43,13 @@
 
 ## ✅ EXECUTION LEDGER (2026-09-24) — what shipped, what was corroboration
 
+> **ev-m mastery-surface follow-up audit — 2026-09-24 (commit `55377f28`).** A later sweep of the sixth
+> cross-check surface (mastery pages) found `ev-m-jesus_as_god_nt.html:417` stated the "1 Cor 8:6 splitting
+> the Shema" reading FLAT / unattributed, where sibling pages hedge it. Corrected by porting
+> `ev-m-john11.html:407`'s attributed **James McGrath** hedge ("dividing the Shema around Christ — the
+> dominant reading, though McGrath contests it"), the port-outward its own stamp prescribed. Dual-consensus
+> re-gated CLEAN. The `hands.html` / deity mastery pages this note's Recs 1–6 fed are clean.
+
 Counts/status measured 2026-09-24 by tallying the commits below. This block is the record; treat the
 recommendations above as **history**, not a live to-do list.
 

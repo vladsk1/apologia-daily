@@ -841,6 +841,14 @@ See the P3 row. And ⚠ **the book's own second criterion is the wording our ess
 ---
 
 ## Cross-map to our Evidence Library
+
+> **ev-m mastery-surface audit — 2026-09-24 (commit `55377f28`).** Sixth cross-check surface (mastery
+> pages), audited for the first time. `ev-m-burial.html` (seo-summary :310 + creed-objection reply :428)
+> claimed "no competing / the only burial tradition" — contradicting its own P1 and this note's Fact-5
+> point that **Acts 13:29 credits the burial to the Jerusalem authorities generically** (a burial-agent
+> variant). Re-worded to the P1 form: every surviving line has him buried; the variation is over *who*,
+> never *whether*. Dual-consensus re-gated CLEAN. The minimal-facts / empty-tomb / appearances mastery
+> pages are otherwise clean (`ev-m-appearances.html` exemplary on the bounded hallucination verdict).
 - Resurrection tab **`ev-s2`**; essays **`library/minimalfacts.html`**, **`emptytomb.html`**,
   **`paulconv.html`**; the `/answers/*` resurrection set (several already list this book under
   "Further study"). This note should feed *primary-source precision* into those, not new prose.
