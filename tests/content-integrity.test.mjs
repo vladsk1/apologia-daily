@@ -634,3 +634,37 @@ test('stamp-integrity ignores dateModified-only changes and nothing else', () =>
   assert.equal(dropDateModifiedOnlyPairs([before, rewritten]).length, 2);
   assert.equal(dropDateModifiedOnlyPairs(['+<p>prose "dateModified":"2026-01-01"</p>']).length, 1);
 });
+
+// Every research-library mining note (docs/{book,video,article}-research/*.md, minus
+// README/INDEX/MINING-BRIEF) that is not grandfathered must carry a FILLED four-surface
+// cross-check block. This is the machine backstop for the checklist the READMEs require —
+// added after a 2026-09-24 run did the cross-check on the essays only and shipped.
+test('research notes carry a filled four-surface cross-check block (non-grandfathered)', () => {
+  assert.doesNotThrow(
+    () => execFileSync('node', ['tools/check-crosscheck-block.mjs'], { cwd: process.cwd(), stdio: 'pipe' }),
+    'a research note is missing/incomplete its four-surface cross-check block — run: node tools/check-crosscheck-block.mjs',
+  );
+});
+
+// Prove the guard is not vacuous: with the whole corpus grandfathered, the live check is
+// always green, so the matcher itself must be pinned. violationReason() must PASS a filled
+// block and CATCH each way a note can fake or skip it (missing block, unchecked box,
+// unfilled placeholder, missing surface line).
+test('cross-check block matcher catches every incomplete-block failure mode', async () => {
+  const { violationReason } = await import('../tools/check-crosscheck-block.mjs');
+  const filled = [
+    '## Four-surface cross-check — 2026-09-24 (run by session)',
+    '- [x] library/foo.html essay — read in full; corroboration',
+    '- [x] /answers/bar — no matching answer',
+    '- [x] ev-s3.html card — corroboration',
+    '- [x] /briefs — none',
+    '- [x] /sources — none / out of scope',
+    '- Mandatory-fix findings: none',
+    '## Next',
+  ].join('\n');
+  assert.equal(violationReason(filled), null, 'a properly filled block must pass');
+  assert.match(violationReason('# note\n\nprose only\n'), /no "Four-surface cross-check" block/);
+  assert.match(violationReason(filled.replace('- [x] /briefs — none', '- [ ] /briefs')), /UNCHECKED box/);
+  assert.match(violationReason(filled.replace('read in full; corroboration', '<which essay(s), read in full>')), /placeholder/);
+  assert.match(violationReason(filled.replace('- [x] /sources — none / out of scope', '- [x] misc — n/a')), /does not mention surface/);
+});

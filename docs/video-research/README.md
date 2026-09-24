@@ -168,6 +168,12 @@ twice-checked, our-own-words material (or a verified verbatim primary) reaches a
    > ⚠ The essay box is necessary but **not sufficient** — an essay-only tick with the other four blank is
    > exactly the failure this checklist exists to make visible. All five surface boxes get an answer (a
    > verdict *or* an N/A-with-reason) before the note is considered complete.
+   >
+   > **Machine-enforced (CI-blocking):** `tools/check-crosscheck-block.mjs` (also a `tests/content-integrity.test.mjs`
+   > case) fails the build for any note here that lacks a filled block — an unchecked `- [ ]` box, a leftover
+   > `<placeholder>`, or a missing surface line all trip it. The pre-existing corpus is grandfathered in
+   > `tools/crosscheck-baseline.json`; a **new** note must fill the block, not be added to the baseline (there
+   > is deliberately no `--update` that would auto-grandfather a fresh skip). `--audit` lists every note's status.
 5. **Log it in three places:** (a) a row in the **Mined-videos ledger** below (with its live-door status);
    (b) a topic row in `INDEX.md` so the next content session can route a topic → this note; and (c) for any
    lead that step 4 classified as an **improvement**, a row in
