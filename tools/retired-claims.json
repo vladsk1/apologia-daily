@@ -525,7 +525,8 @@
       "patterns": [
         "the divine figure (of|in) Daniel 7",
         "Daniel 7'?s divine figure",
-        "Son of Man\\s*[—-]\\s*the divine figure"
+        "Son of Man\\s*[—-]\\s*the divine figure",
+        "divine Son of Man"
       ],
       "allow": [],
       "netting": "phrase",
@@ -535,7 +536,9 @@
           "in direct allusion to the divine figure of Daniel 7 who rides the clouds",
           "Jesus takes up the divine figure in Daniel 7",
           "Daniel 7's divine figure receives everlasting dominion",
-          "Son of Man — the divine figure who comes on the clouds"
+          "Son of Man — the divine figure who comes on the clouds",
+          "his claim to be the divine Son of Man of Daniel 7",
+          "at his trial accepts the divine Son of Man identity"
         ],
         "must_not_fire": [
           "that Daniel 7 never describes a divine figure at all",
@@ -545,7 +548,7 @@
           "the corporate reading takes the figure as a symbol for faithful Israel"
         ]
       },
-      "rebuild_debt": "Needs a negation-guarded CLAIM net. The three patterns are literal adjacencies and miss 'the figure in Daniel 7 is divine', 'Daniel's Son of Man is a divine individual', and 'this figure is standing on God's side of a line' - the last of which was LIVE on ev-s3.html:876, a free indexed deity-tier surface, and was found by apologia-neutrality rather than by this net. A fourth pattern was dropped on 2026-08-11 because it fired on library/titles.html's own statement of the objection it answers. 2026-08-14: the predication form 'Son of Man ... actually a DIVINE claim' surfaced on daily-mix.html:158 (the GRADED quiz) and was fixed by softening the question to 'amount to a divine-status claim on his lips' + resting the answer on cloud-coming; the negation-guarded CLAIM net remains owed (a literal net risks firing on titles.html's hedged 'contested minority case that Daniel 7's Son of Man was already a divine figure', which must_not_fire)."
+      "rebuild_debt": "Needs a negation-guarded CLAIM net. The three patterns are literal adjacencies and miss 'the figure in Daniel 7 is divine', 'Daniel's Son of Man is a divine individual', and 'this figure is standing on God's side of a line' - the last of which was LIVE on ev-s3.html:876, a free indexed deity-tier surface, and was found by apologia-neutrality rather than by this net. A fourth pattern was dropped on 2026-08-11 because it fired on library/titles.html's own statement of the objection it answers. 2026-08-14: the predication form 'Son of Man ... actually a DIVINE claim' surfaced on daily-mix.html:158 (the GRADED quiz) and was fixed by softening the question to 'amount to a divine-status claim on his lips' + resting the answer on cloud-coming; the negation-guarded CLAIM net remains owed (a literal net risks firing on titles.html's hedged 'contested minority case that Daniel 7's Son of Man was already a divine figure', which must_not_fire). 2026-09-24: added literal pattern \"divine Son of Man\" after the four-surface audit found \"the divine Son of Man of Daniel 7\" LIVE and unfenced on ev-s3.html:652 + :693 (free indexed deity tab) — the mechanical net was green over it. Pattern validated: fires on both found strings, does not fire on the must_not_fire hedge. The broader negation-guarded CLAIM net remains owed."
     },
     {
       "id": "gethsemane-proves-distinct-wills",
