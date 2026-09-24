@@ -58,8 +58,8 @@ of the whole scholarly landscape; Vol. 4 application/theology/grief).
   remains the mapped one, but this supersedes it as Habermas's fullest statement. **A future book-research
   note could map Vol. 1** if the owner acquires it (owned-book rules apply).
 - **Baylor medical article** — *"Medical views on the death by crucifixion of Jesus Christ,"* **Baylor
-  University Medical Center Proceedings** 34:6 (2021), 748–52 — Habermas, **Benjamin C. F. Shaw**, and
-  **Jonathan Kopel** (Texas Tech HSC; **NOT "Coppel"**); a landscape of medical opinion (consensus:
+  University Medical Center Proceedings** 34:6 (2021), 748–52 — Habermas, **Jonathan Kopel** (Texas Tech HSC; **NOT "Coppel"**), and
+  **Benjamin C. F. Shaw** (published author order confirmed 2026-09-24 vs PubMed/PMC: Habermas, Kopel, Shaw); a landscape of medical opinion (consensus:
   asphyxiation-dominant). **Essay-strengthening lead** for `library/was-jesus-dead.html` — treat as one
   *supporting* layer, not the core (the historical case carries the weight).
 - **John Granger Cook** (LaGrange College) — real; *Crucifixion in the Mediterranean World* (Mohr Siebeck,

@@ -80,10 +80,11 @@ accepts, and ask the skeptic to name a *single* naturalistic theory that account
   point; even the narrower "can history study miracles / historian-qua-historian" angle (J.K. Elliott / Michael
   Grant) is on `ev-s2.html`. **Corroboration — do NOT commission a duplicate essay.**
 - **McDowell, *The Fate of the Apostles*, 2nd edition** — **NB: this is Sean McDowell's book
-  (Routledge/Ashgate; 1st ed. 2015), NOT Habermas's** (the ASR blurs the speakers). A **2nd edition** is reported (⚠ **year unconfirmed and inconsistent across our records** — the live answer
-  `why-did-the-disciples-die-for-their-faith` cites Routledge **2024**, while `raised-on-the-third-day.md` and
-  `investigating-the-resurrection-loke.md` cite the **2015** 1st ed.; verify against the publisher before
-  asserting any 2nd-ed. year on a served surface), and it slightly *reassesses ~5 apostles' martyrdom cases* while keeping the core
+  (Routledge/Ashgate; 1st ed. 2015), NOT Habermas's** (the ASR blurs the speakers). A genuine **2nd edition** exists (**Routledge, 2024**; ISBN 9781032580548 — confirmed 2026-09-24 via
+  publisher + PubMed-level sources; ⚠ Routledge's own product page shows **2025**, likely a reprint/release slip,
+  but **2024** is the widely-listed year and is what the live answer `why-did-the-disciples-die-for-their-faith`
+  correctly cites; the 1st ed. is Routledge/Ashgate **2015**, which `raised-on-the-third-day.md` and
+  `investigating-the-resurrection-loke.md` map), and it slightly *reassesses ~5 apostles' martyrdom cases* while keeping the core
   (Peter, Paul, James the brother of Jesus have first-century martyrdom sources). A lead for
   `library/eyewitnesses.html` / martyrdom material — **attribute to McDowell.**
 
