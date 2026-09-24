@@ -41,6 +41,47 @@
 > (retired `ehrman-preexistence-is-late` / `divine-identity-consensus`) — fence per `shema.html`.
 > **Every item is deity tier ⇒ dual-consensus + `apologia-citations` on the loci before shipping.**
 
+## ✅ EXECUTION LEDGER (2026-09-24) — what shipped, what was corroboration
+
+Counts/status measured 2026-09-24 by tallying the commits below. This block is the record; treat the
+recommendations above as **history**, not a live to-do list.
+
+**SHIPPED & CERTIFIED (all four-lens gated via READ-ONLY Explore agents, each with a confirmation round):**
+- **Rec 1 — Synoptic pre-existence** → `hands.html` A (Gathercole "I have come" + mandatory "Form, not nature"
+  orthonote; fn 10 Gathercole 2006). **DONE.**
+- **Rec 2 — thicken `hands.html` H** → prayer to Jesus (Stephen, Acts 7:59; 1 Cor 1:2), Heb 1:6 angel-worship,
+  **and Pliny** (*Letters* 10.96, "a hymn to Christ, as to a god" — first external witness). **DONE (all 3).**
+- **Rec 3 — thicken `hands.html` N** → 1 Cor 8:6 Shema-rework (+ "Split, not demoted" orthonote) + Granville
+  Sharp (Titus 2:13 / 2 Pet 1:1). **DONE.** ⬜ *Not added (marginal / better-housed): Colwell-free John 1:1c
+  (owned by `john11.html`), Heb 1:8-9 "God has a God", Murray Harris ref, the "I am"/Isaiah echo (John 8:58
+  already in N). Low-value; skipped, not owed.*
+- **Rec 4 — thicken `hands.html` A** → Col 2:9 "the whole fullness of deity dwells bodily." **DONE.**
+  ⬜ *Two-natures "Paradoxical Person"/Chalcedon device NOT added — `hands.html` already carries the
+  functional-vs-ontological material (line ~248) and affirms Christ's full humanity; redundant.*
+- **Rec 5 — 1 Peter 3:15 gem** → added to `hands.html` N as a deity text (Isa 8:13 substitution). **DONE**
+  (delivered as an essay addition rather than only a reel/about line).
+- **Rec 6 — JW cluster: the "restore Jehovah 237x" rebuttal** → NEW subsection on `library/trinity_jw.html`
+  ("The Divine Name Their Own Translation Cannot Place"; Phil 2:11 vs Rom 14:11 on Isa 45:23). **DONE.**
+
+**CORROBORATION — reading the essays turned these into non-rows (no add; flagged so nobody re-mines them):**
+- **Rec 6 — the "created Christ" kit proper (Col 1:15 / Prov 8:22 / Rev 3:14 / NWT "[other]")** → ✅ **HAZARD:
+  OURS IS BETTER.** `library/trinity_jw.html` already covers all of it, more carefully than the book — rank-not-
+  sequence firstborn (Ps 89:27 / Exod 4:22), *archē*=origin (Alpha-Omega/Isa 44:6), the NWT "[other]" insertion
+  *with* the Kingdom Interlinear tell, and a Prov 8:22 treatment that "resists over-reading in **either**
+  direction." **Do not mine that section — do not add the book's flatter version.**
+- **Rec 7 — Vermes "charismatic Hasid" rebuttal** → ✅ **CORROBORATION; the note's `hist_jesus`/`miracles`
+  routing was WRONG.** `hist_jesus.html` = mythicism (did Jesus exist), `miracles.html` = Hume/Spinoza — neither
+  is the Vermes home. The thesis is already engaged on the RIGHT essays: `jewishness.html` steelmans Vermes and
+  grants the Jewishness *by design* (its conclusion routes the deity question onward), and `jesus_claims.html`
+  rebuts the reductionism directly ("the objection strains to account for its **shape** — an agent… does not
+  seat himself on the king's throne"). Forcing a Bowman/Eve add would break jewishness.html's scope or duplicate
+  jesus_claims.html. **No row.**
+
+Commits: `a3152ba1` (N: 1 Cor 8:6 + Granville Sharp) · `e27ce3bc` (A: Col 2:9) · `9cbf9ccb` (H: Pliny) ·
+`4e58df83` (N: 1 Pet 3:15) · plus the earlier Batch 1 (H: prayer/Heb 1:6) and Batch 2 (A: Synoptic
+pre-existence) commits, and this commit (trinity_jw.html Jehovah-237). ⚠ **Pastoral sign-off still `_pending_`
+on all of it**, as site-wide.
+
 ## ⚖️ Why this book matters to us
 This is **the source `library/hands.html` is built on** — the HANDS acronym (Honors, Attributes, Names,
 Deeds, Seat) is Bowman & Komoszewski's. Our essay compresses the whole book into ~2,000 words with one or
