@@ -120,6 +120,16 @@ try {
       if (b) { const m = s.clipMargin ?? 8; clip = { x: Math.max(0, b.x - m), y: Math.max(0, b.y - m), width: b.w + 2 * m, height: b.h + 2 * m, scale: 1 }; }
       else console.warn(`  ! ${s.name}: clip selector ${s.clip} not found; capturing viewport`);
     }
+    // Optional "clipAbove": a CSS selector (or {text: "..."} to match an element's own
+    // text); the PNG is the visible viewport cut off just above that element — e.g. to
+    // end a frame before a paragraph that should not be on screen.
+    if (!clip && s.clipAbove) {
+      const r = await c.send('Runtime.evaluate', { returnByValue: true, expression:
+        `(()=>{const q=${JSON.stringify(s.clipAbove)};const e=typeof q==='string'?document.querySelector(q):[...document.querySelectorAll('body *')].filter(x=>x.children.length<4&&x.textContent.trim().toLowerCase().startsWith(q.text.toLowerCase())).sort((a,b)=>a.textContent.length-b.textContent.length)[0];if(!e)return null;return {top:e.getBoundingClientRect().top,sy:scrollY};})()` });
+      const b = r.result && r.result.value;
+      if (b && b.top > 40) clip = { x: 0, y: b.sy, width: W, height: Math.min(H, Math.floor(b.top) - 6), scale: 1 };
+      else console.warn(`  ! ${s.name}: clipAbove target not found/visible; capturing viewport`);
+    }
     const shot = await c.send('Page.captureScreenshot', clip ? { format: 'png', clip, captureBeyondViewport: true } : { format: 'png' });
     const file = join(outDir, `${s.name}.png`);
     writeFileSync(file, Buffer.from(shot.data, 'base64'));
