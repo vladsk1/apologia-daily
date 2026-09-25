@@ -42,6 +42,37 @@ that they will come out able to teach the argument:**
 layer proposed below can be built by **porting certified text** (the port rule in `CLAUDE.md`, 8–10), so it
 costs gate rounds proportional to the few genuinely new sentences, not to the size of the feature.
 
+## 0.1 What is actually live today vs. what this document proposes
+
+**Basis:** apologiadaily.com itself could not be fetched from this session (the environment's egress policy
+blocks the host). Vercel deploys `main`, and `origin/main` (`316bc0d`) is exactly the tree audited here,
+so this table reflects what `main` serves. Rows that depend on the live database or API keys are marked
+**unverified**: this session cannot log in or call production.
+
+| Feature | Status on the live site | Evidence |
+|---|---|---|
+| Evidence Library essays (101), tab cards, 81 mastery pages | **LIVE** | Served HTML on `main` |
+| Pro paywall | **NOT BUILT.** Everything is open to everyone; "Pro" is labelling only | `isPro = true` hard-coded on 205 pages; "launching soon" on 221; pricing card says "Pro — $8 planned price · launching soon"; no checkout (Stripe not wired) |
+| Explain It Back / AI tutor / Debate Arena / Asked & Answered | **LIVE in code; working depends on the API key** (unverified from here) | `api/tutor.js`, `api/debate.js`, `api/ask.js` |
+| Flashcards (SM-2), `/today`, Coach, progress sync | **LIVE for signed-in users** (unverified: needs Supabase) | `progress-sync.js`; migrations owner-reported run 2026-09-08 |
+| Memory Palace rooms | **LIVE** on 37 of 81 mastery pages | `palace.html` links |
+| Study Plans (10) + Advent / Easter challenges | **LIVE**, but ungated copy and no mastery-page links (§2.4, §2.6) | `study-plans.html`, `challenge.html` |
+| Study Groups | **Built; whether it works for real accounts is UNVERIFIED.** It shows "being switched on" if the tables are missing | `study-groups.html:671/688/1145` |
+| Reading Clubs | **LIVE, uneven depth.** 6 books listed; 2 have full club pages (On Guard, Islamic Dilemma); the page shows a fake "Week 5 of 12" banner to everyone | `reading-club*.html` |
+| Del Rosario companion study | **Private preview, not a public feature** (served under `/demo/`, `noindex`) | `demo/del-rosario-companion-study.html` |
+| Video lessons on essays | **Configured for 31 essays** (all have YouTube IDs); whether the videos play was not checked | `library/video-lessons.json` |
+| For Parents | **LIVE** (AI "explain to my kid" tool + age path) | `parents.html` |
+| **Certificates / diplomas / credentials** | **DO NOT EXIST.** No page, no feature. Every "certificate" string on the site is historical (the Decian *libelli*) or a review-stamp comment | grep over all served HTML; the plan is parked in `docs/APOLOGETICS_CERTIFICATE_BENCHMARK.md` |
+| **Church / leader features** (leader guides, facilitator training, church licence, `/churches`, group-leader tools, present mode) | **DO NOT EXIST.** The only church touches are copy ("Perfect for a family or church"), a "church small group" label in Study Groups, and "talk to your pastor" referrals | No served page matches leader-guide/facilitator/church-licence terms, apart from the private demo |
+
+**Two live claims worth checking** while here: the pricing card's "Join **thousands** of Christians" has no
+figure behind it anywhere in the repo, and the Instagram data in `CLAUDE.md` (2026-08-05) records a
+19-follower account. The pricing card also lists no Mastery Tracks, while every mastery page calls itself
+"a Pro feature".
+
+**So:** everything in §5 (the Leaders section) and every credential mentioned in this document is
+**proposed, not existing**. §2–§3 are findings about what is live.
+
 ---
 
 ## 1. What is genuinely strong (keep it; lead with it)
@@ -72,7 +103,7 @@ costs gate rounds proportional to the few genuinely new sentences, not to the si
 | 2.1 | **Mastery sequence is alphabetical.** | The "of 19" set runs archaeology 1, bigbang 2, cambrian 3, canon 4 … kalam 12 … prophecy 19, mixing God's-existence and Bible-reliability arguments in A–Z order. | "Argument 12 of 19" tells a learner nothing about what to learn first. Kalam, usually the *first* argument taught, is 12th. |
 | 2.2 | **Set sizes contradict themselves.** | Seven different set sizes are in use (7, 8, 13, 15, 16, 19, 22). The "of 22" set has only 11 pages (numbers 2–12). `ev-m-typology` is "16 of 16" alone. 7 pages have no position line. | A learner cannot trust the map. |
 | 2.3 | **Stale hard-coded copy.** | 20 pages say "Twenty-one more core arguments" or "Twenty more"; 22 of 81 have no "Next:" link. | Dead ends break a path, and wrong counts look careless to a vetting pastor. |
-| 2.4 | **Study plans never reach a mastery page.** | `study-plans.html`: 9 plans, 200 days, **0 links to `ev-m-*`**, 66 links to the bare `evidence-library.html` hub, 39 empty links, 13 to essays. | The structured path (the thing a church would actually use) skips the best teaching surface on the site. |
+| 2.4 | **Study plans never reach a mastery page.** | `study-plans.html`: 10 plans (incl. the ongoing Daily Defender), 200 scheduled days, **0 links to `ev-m-*`**, 66 links to the bare `evidence-library.html` hub, 39 empty links, 13 to essays. | The structured path (the thing a church would actually use) skips the best teaching surface on the site. |
 | 2.5 | **`/today` and the Coach don't link to mastery pages either.** | 0 `ev-m-` references in `today.html` or `coach.html`. Only the `ev-s*` tab cards, `dashboard.html` and `parents.html` link to them. | The mastery library is reachable mostly by browsing. |
 | 2.6 | **Study plans are ungated doctrinal copy, with overclaims.** | `study-plans.html` has no `content-review` stamp and is outside `CONTENT_PATTERNS`. Day 1 of the resurrection plan: "Learn the five facts that **even atheist historians accept**". The certified `library/minimalfacts.html` says the case is "weakest when it inflates 'majority' into 'virtually all'". | This is the same "compressed surface contradicts its certified essay" failure `CLAUDE.md` records repeatedly, on the surface a church would assign as homework. **Gate before promoting plans to churches.** |
 | 2.7 | **The Reading Clubs page shows fake progress.** | `reading-club.html:276–289` hard-codes "Mere Christianity — Week 5 of 12" at 42%. It is static HTML shown to every visitor. | A leader previewing the product sees invented progress. Small fix, real trust cost. |
@@ -202,15 +233,18 @@ series:
 5. **Staying inside the lines:** denominational neutrality in practice ("that's a question for our church's
    teaching, not this study") and the church's authority.
 
-**Leader credential:** complete the five modules, master the series' arguments (using the stricter §7.1
-mastery rule), and run one practice session. This produces a "Certified Apologia Daily Facilitator"
-badge. It slots under Level 1 of the certificate ladder in `APOLOGETICS_CERTIFICATE_BENCHMARK.md` rather
-than competing with it. Be precise in wording: it certifies that someone has **completed training**, not
+**Leader credential (NEW; nothing like it exists today):** complete the five modules, master the series'
+arguments (using the stricter mastery rule in §7.2, item 11), and run one practice session. This would produce a
+"Certified Apologia Daily Facilitator" badge. ⚠ **The site has no certificate or credential feature of any
+kind.** The three-level certificate in `APOLOGETICS_CERTIFICATE_BENCHMARK.md` is a **parked strategy
+document, not built** (`CLAUDE.md`, 2026-09-23 "PARKED FOR LATER"). This badge would be the site's
+*first* credential and would need its own build (records, issuing, verification); it cannot "slot under"
+anything existing. Be precise in wording: it certifies that someone has **completed training**, not
 that they are theologically qualified.
 
 ### 5.5 Leader tools (product)
 
-- **Group dashboard:** extend `study-groups.html` so a leader assigns a *series* (not just a study plan) and
+- **Group dashboard:** extend `study-groups.html` (which exists, but see §0.1: whether it works for real accounts is unverified) so a leader assigns a *series* (not just a study plan) and
   sees the group's progress **by argument** (who has explained it, who is stuck). Keep the existing
   principle: "ranked by showing up — not by being right". Show leaders participation, never public scores.
 - **Present mode** on every mastery page (`?present=1`).
