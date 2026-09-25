@@ -99,7 +99,7 @@
 > the page's tier). ⚠ **Fine-tuning is the fragile one** — any panel there must respect the Stenger row (never claim
 > unanimity on window-narrowness). The badge, by contrast, is done site-wide and needs nothing further.
 >
-> **⭐ LATEST — 2026-08-22. The ev-s8 "The Church in History" tab is now COMPLETE end-to-end and LIVE on `main`.**
+> **⭐ LATEST — 2026-08-22. The ev-s8 "The Church in History" tab (⚠ since renamed **"The Christian Revolution"** on the live site — `evidence-library.html:363`, checked 2026-09-25) is now COMPLETE end-to-end and LIVE on `main`.**
 > On top of the three gated essays + tab cards shipped earlier the same day, this session added: **(1) full-length Pro
 > deep dives** on all three ev-s8 cards (~1,085 words each, ported from the certified essays to match the other tabs);
 > **(2) three mastery pages** `ev-m-riseofchurch/persecution/legacy.html` (all 9 layers ported from the essays); **(3)
@@ -188,7 +188,7 @@
 > still editable on curated cards (same class of exposure, now escaped + self-only) — lock to read-only
 > if it matters.
 >
-> **⭐ LATEST — 2026-08-22. NEW EVIDENCE-LIBRARY TAB SHIPPED: "The Church in History" (ev-s8), the 8th tab.**
+> **⭐ LATEST — 2026-08-22. NEW EVIDENCE-LIBRARY TAB SHIPPED: "The Church in History" (ev-s8), the 8th tab (⚠ since renamed **"The Christian Revolution"** — checked 2026-09-25).**
 > Three new certified deep-dive essays — `library/riseofchurch.html` (how a tiny illegal sect became the
 > empire's majority faith; growth-is-not-truth), `library/persecution.html` (Nero→Diocletian; Moss
 > steelmanned; martyrdom = sincerity not truth), `library/legacy.html` (Holland's *Dominion* thesis + the
