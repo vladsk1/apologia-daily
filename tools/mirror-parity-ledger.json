@@ -45,6 +45,11 @@
       "sourceCommit": "2696efe",
       "reason": "English-ADD only (not a retired-claim fix): the 2026-08-17 P2 addition (backlog row 184) adds a new objection subsection, \"Then isn't God infinitely old?\", answering the actual-infinite objection turned back on divine eternity. The mirror is not WRONG, only less complete - nothing false is live in translation. Deliberately NOT hand-translated, per the owner's standing preference against untranslated doctrinal prose that no native reviewer will gate; Macedonian and Spanish doctrinal review remain outstanding (docs/STATEMENT_OF_FAITH.md). The subsection turns on the classical-timelessness vs divine-temporality distinction and required three gate rounds and four lenses in English - exactly the material that must not be machine-translated onto an ungated surface."
     },
+    "ev-s6.html -> ev-s6.mk.html": {
+      "acceptedAt": "2026-09-25",
+      "sourceCommit": "pending-this-commit",
+      "reason": "English-ADD only (not a retired-claim fix): the 2026-09-25 addition splices a new CARD 17 ('Paul the Proto-Trinitarian: The Trinity Before Nicaea', card A of the Fee program) into the English ev-s6.html Trinity fragment, ported from the certified library/proto-trinitarian.html and dual-consensus gated (TRINITY TIER, 0 BREAK/0 HERESY). The Macedonian mirror ev-s6.mk.html still serves 16 cards; it is not WRONG, only less complete - nothing false is live in translation. The mirror was ALREADY behind before this change (English re-gated 2026-08-06 per-card; MK never brought up to it), so this is added lag on a pre-existing lag. Deliberately NOT hand-translated per the owner's standing delete-or-lag preference (no untranslated doctrinal prose no native reviewer will gate). ⚠ Card 17 carries the Spirit personhood-vs-DEFINED-deity boundary (raw material now, Constantinople 381 later) and a modalism fence on 2 Cor 3:17 - exactly the material that must not be machine-translated onto an ungated surface. Macedonian/Spanish doctrinal review outstanding (docs/STATEMENT_OF_FAITH.md). Clear this entry when a native Macedonian reviewer gates the mirror up to the English (including the earlier cards it is also missing)."
+    },
     "library/finetuning.html -> library/mk/finetuning.html": {
       "acceptedAt": "2026-08-17",
       "sourceCommit": "pending-this-commit",
