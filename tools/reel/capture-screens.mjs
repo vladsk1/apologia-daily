@@ -103,6 +103,13 @@ try {
       if (r.exceptionDetails) console.warn(`  ! ${s.name}: setup script threw: ${r.exceptionDetails.exception?.description || r.exceptionDetails.text}`);
       await sleep(s.wait ?? 1200);
     }
+    // Optional "report": a JS expression evaluated in the page and printed (e.g. to
+    // measure document.documentElement.scrollWidth at this viewport).
+    if (s.report) {
+      const r = await c.send('Runtime.evaluate', { expression: s.report, returnByValue: true });
+      console.log(`  = ${s.name}: ${JSON.stringify(r.result && r.result.value)}`);
+    }
+    if (s.noShot) continue;
     // Optional "clip": a CSS selector; the PNG is cropped to that element (plus a small
     // margin) instead of the viewport — e.g. to show one card without surrounding layout.
     let clip;
