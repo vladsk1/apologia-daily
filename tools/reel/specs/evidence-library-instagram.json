@@ -1,0 +1,374 @@
+{
+  "reviewed": {
+    "argument": "2026-09-25",
+    "orthodoxy": "2026-09-25",
+    "by": "2026-09-25 scene-locked vertical (Instagram) FEATURE-PROMO reel for the Evidence Library (tabs, cards, tiers, tap-to-open research, essays, two AI tutors, Mastery Tracks, pocket cards, Debate Arena). Counts measured from the repo 2026-09-25. Gated READ-ONLY (Explore agents; file hash-verified unchanged by reviewers), 2 rounds. R1: feature-accuracy (argument lens, every claim traced to file:line) 0 BREAK / 5 WEAK - 'every card' tiers overclaimed (ev-s7 stories have none) -> 'every argument card'; sc5 three-part list was Kalam-specific -> lens wording 'the evidence behind it, where it's contested, and what it honestly can - and can't - show'; '96 essays behind the cards' (cards link 78) -> 'across the site'; 'any argument' pocket card (78/80) -> 'an argument'; 'PRO' kicker misleading (Pro launching soon, tracks currently open) -> dropped; POLISH 'live objection' (pre-written, not AI) -> 'a skeptic's objection'. Orthodoxy CLEAN, 3 optional notes applied: 'gathered in one place'; 'hardest objections answered' -> 'strongest objections fairly stated and answered'; close adds 'with gentleness and respect' (1 Pet 3:15). R2: feature-accuracy STAMPABLE (optional caption polish on sc5 not applied - scope frozen); orthodoxy CLEAN, clarifier candidates none. NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) FEATURE-PROMO reel for the Evidence Library hub (evidence-library.html + ev-s1..ev-s8 fragments + ev-m-* mastery pages + library/*). Counts measured 2026-09-25 from the repo: 8 tab buttons; 89 cards = 80 argument cards + 9 conversion stories (ev-s7); 96 cited deep dives = the generated trust figure (index.html trust strip / editorial-standards). Features traced to the pages: plain English -> 'The Case, Plainly' -> Pro Deep Dive tiers; 'Research the argument, premise by premise' tap-to-open section; Ask AI Tutor + Teach me this (per the gated tutors-instagram reel); Mastery Tracks (labelled Pro on the pages, Pro launching soon, currently open - kicker deliberately omits PRO) with four checkpoints understand/explain/drill/defend, Explain It Back AI scoring (/api/tutor), flashcards, a pre-written skeptic objection; tiers + tap-to-open claimed only for ARGUMENT cards (ev-s7 stories have none); 96 essays are site-wide (cards link 78); pocket cards on 78 of 80 cards (hence 'an argument'); pocket-card generator; Debate Arena link. Standard: 'no essay published until it clears five review stages' (index.html hero). Closes on 1 Peter 3:15.",
+  "voiceover": "This is the Evidence Library on Apologia Daily — the case for the Christian faith, gathered in one place. Eight sections: God's existence, the Resurrection, Jesus, Biblical reliability, science and faith, the Trinity, conversion stories, and the Christian revolution. Eighty argument cards — plus nine conversion stories. Every argument card starts in plain English. Then the case, plainly. Then a deeper dive, with the strongest objections fairly stated and answered. Tap any line of an argument to see the evidence behind it, where it's contested, and what it honestly can — and can't — show. And across the site, ninety-six fully cited deep-dive essays — no essay is published until it clears five review stages. On every essay and card, two AI tutors. Ask AI Tutor answers your questions in plain English, grounded in the page you're reading. Teach me this helps you build the argument yourself, one question at a time. Then make it yours. Mastery Tracks take you through four checkpoints: understand it, explain it, drill it, defend it — with an AI-scored Explain It Back, flashcards, and a skeptic's objection to answer. Turn an argument into a pocket card to share, or step into the Debate Arena and practise it. Not just reading about the faith — being ready to give a reason for the hope you have, with gentleness and respect. Explore the Evidence Library at apologiadaily.com.",
+  "scenes": [
+    {
+      "dur": 7.3,
+      "vo": "This is the Evidence Library on Apologia Daily — the case for the Christian faith, gathered in one place.",
+      "kicker": "APOLOGIA DAILY",
+      "big": [
+        {
+          "t": "The Evidence",
+          "c": "cream",
+          "s": 70
+        },
+        {
+          "t": "Library",
+          "c": "gold",
+          "s": 88
+        }
+      ],
+      "sub": [
+        {
+          "t": "The case for the faith, in one place.",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        }
+      ]
+    },
+    {
+      "dur": 11.5,
+      "vo": "Eight sections: God's existence, the Resurrection, Jesus, Biblical reliability, science and faith, the Trinity, conversion stories, and the Christian revolution.",
+      "kicker": "EIGHT SECTIONS",
+      "lines": [
+        {
+          "t": "God's Existence",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "The Resurrection",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "Jesus",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "Biblical Reliability",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "Science & Faith",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "The Trinity",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "Conversion Stories",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "The Christian Revolution",
+          "c": "gold",
+          "s": 42,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 5.0,
+      "vo": "Eighty argument cards — plus nine conversion stories.",
+      "big": [
+        {
+          "t": "80",
+          "c": "gold",
+          "s": 120
+        },
+        {
+          "t": "argument cards",
+          "c": "cream",
+          "s": 56
+        }
+      ],
+      "sub": [
+        {
+          "t": "+ 9 conversion stories",
+          "c": "cream",
+          "f": "serif",
+          "s": 42
+        }
+      ]
+    },
+    {
+      "dur": 10.5,
+      "vo": "Every argument card starts in plain English. Then the case, plainly. Then a deeper dive, with the strongest objections fairly stated and answered.",
+      "kicker": "EVERY ARGUMENT, LAYER BY LAYER",
+      "lines": [
+        {
+          "t": "1. In plain English",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "2. The Case, Plainly",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "3. The deep dive —",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        },
+        {
+          "t": "strongest objections,",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        },
+        {
+          "t": "fairly answered.",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 8.0,
+      "vo": "Tap any line of an argument to see the evidence behind it, where it's contested, and what it honestly can — and can't — show.",
+      "kicker": "LINE BY LINE",
+      "lines": [
+        {
+          "t": "Tap any line:",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "the evidence behind it,",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "where it's contested,",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "and its honest limits.",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 8.3,
+      "vo": "And across the site, ninety-six fully cited deep-dive essays — no essay is published until it clears five review stages.",
+      "kicker": "CHECKED BEFORE PUBLISHED",
+      "big": [
+        {
+          "t": "96",
+          "c": "gold",
+          "s": 120
+        },
+        {
+          "t": "cited deep-dive essays",
+          "c": "cream",
+          "s": 50
+        }
+      ],
+      "sub": [
+        {
+          "t": "Each clears five review stages",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "before it's published.",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        }
+      ]
+    },
+    {
+      "dur": 13.9,
+      "vo": "On every essay and card, two AI tutors. Ask AI Tutor answers your questions in plain English, grounded in the page you're reading. Teach me this helps you build the argument yourself, one question at a time.",
+      "kicker": "TWO AI TUTORS",
+      "lines": [
+        {
+          "t": "Ask AI Tutor",
+          "c": "gold",
+          "s": 54,
+          "f": "serifb"
+        },
+        {
+          "t": "Your questions, answered —",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "grounded in the page.",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Teach me this",
+          "c": "gold",
+          "s": 54,
+          "f": "serifb"
+        },
+        {
+          "t": "Build the argument yourself,",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "one question at a time.",
+          "c": "cream",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "dur": 13.4,
+      "vo": "Then make it yours. Mastery Tracks take you through four checkpoints: understand it, explain it, drill it, defend it — with an AI-scored Explain It Back, flashcards, and a skeptic's objection to answer.",
+      "kicker": "MASTERY TRACKS",
+      "lines": [
+        {
+          "t": "Understand it.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Explain it.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Drill it.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Defend it.",
+          "c": "gold",
+          "s": 56,
+          "f": "serifb"
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Explain It Back · flashcards",
+          "c": "cream",
+          "s": 40
+        },
+        {
+          "t": "a skeptic's objection to answer",
+          "c": "cream",
+          "s": 38
+        }
+      ]
+    },
+    {
+      "dur": 6.4,
+      "vo": "Turn an argument into a pocket card to share, or step into the Debate Arena and practise it.",
+      "kicker": "SHARE IT · PRACTISE IT",
+      "lines": [
+        {
+          "t": "Pocket cards",
+          "c": "gold",
+          "s": 54,
+          "f": "serifb"
+        },
+        {
+          "t": "to share.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "The Debate Arena",
+          "c": "gold",
+          "s": 52,
+          "f": "serifb"
+        },
+        {
+          "t": "to practise.",
+          "c": "cream",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 10.5,
+      "vo": "Not just reading about the faith — being ready to give a reason for the hope you have, with gentleness and respect. Explore the Evidence Library at apologiadaily.com.",
+      "big": [
+        {
+          "t": "Ready to give",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "a reason",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "for the hope.",
+          "c": "gold",
+          "s": 76
+        }
+      ],
+      "sub": [
+        {
+          "t": "With gentleness and respect.",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "1 Peter 3:15",
+          "c": "cream",
+          "f": "serif",
+          "s": 36
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    }
+  ]
+}
