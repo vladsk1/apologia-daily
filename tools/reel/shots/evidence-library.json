@@ -1,0 +1,65 @@
+{
+  "base": "https://apologiadaily.com",
+  "width": 390,
+  "height": 640,
+  "scale": 2,
+  "prep": "document.documentElement.style.scrollBehavior='auto';document.body.style.scrollBehavior='auto';window.__hideFloats=()=>{for(const el of document.querySelectorAll('body *')){const cs=getComputedStyle(el);if(cs.position==='fixed'&&el.getBoundingClientRect().top>90)el.style.visibility='hidden';}};window.__find=(re,root)=>[...(root||document).querySelectorAll('body *')].filter(x=>x.children.length<4&&re.test(x.textContent.trim())).sort((a,b)=>a.textContent.length-b.textContent.length)[0];",
+  "shots": [
+    {
+      "name": "01-hub",
+      "path": "/evidence-library.html",
+      "settle": 2500,
+      "js": "__hideFloats();"
+    },
+    {
+      "name": "02-tabs",
+      "path": "/evidence-library.html",
+      "settle": 2500,
+      "js": "const t=document.querySelector('.tab'); t.scrollIntoView({block:'start'}); window.scrollBy(0,-80); await new Promise(r=>setTimeout(r,400)); __hideFloats();"
+    },
+    {
+      "name": "03-cards",
+      "path": "/evidence-library.html",
+      "settle": 3000,
+      "js": "const c=document.querySelectorAll('.card')[0]; c.scrollIntoView({block:'start'}); window.scrollBy(0,-120); await new Promise(r=>setTimeout(r,400)); __hideFloats();"
+    },
+    {
+      "name": "04-layers",
+      "path": "/evidence-library.html",
+      "settle": 3000,
+      "js": "const c=document.getElementById('arg-moral'); togInner(c); await new Promise(r=>setTimeout(r,700)); const e=__find(/^In plain English/,c); (e||c).scrollIntoView({block:'start'}); window.scrollBy(0,-150); await new Promise(r=>setTimeout(r,400)); __hideFloats();"
+    },
+    {
+      "name": "05-research",
+      "path": "/evidence-library.html",
+      "settle": 3000,
+      "js": "const c=document.getElementById('arg-moral'); togInner(c); await new Promise(r=>setTimeout(r,700)); const p=c.querySelector('.pv-sec'); p.scrollIntoView({block:'start'}); window.scrollBy(0,-260); await new Promise(r=>setTimeout(r,400)); __hideFloats();"
+    },
+    {
+      "name": "06-essay",
+      "path": "/library/moral.html",
+      "settle": 2500,
+      "js": "__hideFloats();"
+    },
+    {
+      "name": "07-tutors",
+      "path": "/library/moral.html",
+      "settle": 3000,
+      "js": "const e=__find(/^Read it with the AI tutor/i); if(e){e.scrollIntoView({block:'center'}); window.scrollBy(0,40);}"
+    },
+    {
+      "name": "08-mastery",
+      "path": "/ev-m-moral.html",
+      "settle": 2500,
+      "js": "const e=document.getElementById('proveit'); if(e){e.scrollIntoView({block:'start'}); window.scrollBy(0,-80);} await new Promise(r=>setTimeout(r,500)); __hideFloats();"
+    },
+    {
+      "name": "09-pocket",
+      "path": "/pocket-cards.html",
+      "settle": 3000,
+      "js": "const e=document.querySelector('#card-output .pocket-card')||document.getElementById('card-output'); e.scrollIntoView({block:'start'}); await new Promise(r=>setTimeout(r,500)); for(const el of document.querySelectorAll('body *')){const cs=getComputedStyle(el); if((cs.position==='fixed'||cs.position==='sticky')&&!el.closest('#card-output')) el.style.visibility='hidden';}",
+      "clip": "#card-output .pocket-card",
+      "clipMargin": 0
+    }
+  ]
+}

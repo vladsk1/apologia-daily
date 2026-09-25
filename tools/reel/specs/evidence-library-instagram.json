@@ -2,7 +2,7 @@
   "reviewed": {
     "argument": "2026-09-25",
     "orthodoxy": "2026-09-25",
-    "by": "2026-09-25 scene-locked vertical (Instagram) FEATURE-PROMO reel for the Evidence Library (tabs, cards, tiers, tap-to-open research, essays, two AI tutors, Mastery Tracks, pocket cards, Debate Arena). Counts measured from the repo 2026-09-25. Gated READ-ONLY (Explore agents; file hash-verified unchanged by reviewers), 2 rounds. R1: feature-accuracy (argument lens, every claim traced to file:line) 0 BREAK / 5 WEAK - 'every card' tiers overclaimed (ev-s7 stories have none) -> 'every argument card'; sc5 three-part list was Kalam-specific -> lens wording 'the evidence behind it, where it's contested, and what it honestly can - and can't - show'; '96 essays behind the cards' (cards link 78) -> 'across the site'; 'any argument' pocket card (78/80) -> 'an argument'; 'PRO' kicker misleading (Pro launching soon, tracks currently open) -> dropped; POLISH 'live objection' (pre-written, not AI) -> 'a skeptic's objection'. Orthodoxy CLEAN, 3 optional notes applied: 'gathered in one place'; 'hardest objections answered' -> 'strongest objections fairly stated and answered'; close adds 'with gentleness and respect' (1 Pet 3:15). R2: feature-accuracy STAMPABLE (optional caption polish on sc5 not applied - scope frozen); orthodoxy CLEAN, clarifier candidates none. NOT pastoral sign-off."
+    "by": "2026-09-25 scene-locked vertical (Instagram) FEATURE-PROMO reel for the Evidence Library (tabs, cards, tiers, tap-to-open research, essays, two AI tutors, Mastery Tracks, pocket cards, Debate Arena). Counts measured from the repo 2026-09-25. Gated READ-ONLY (Explore agents; file hash-verified unchanged by reviewers), 2 rounds. R1: feature-accuracy (argument lens, every claim traced to file:line) 0 BREAK / 5 WEAK - 'every card' tiers overclaimed (ev-s7 stories have none) -> 'every argument card'; sc5 three-part list was Kalam-specific -> lens wording 'the evidence behind it, where it's contested, and what it honestly can - and can't - show'; '96 essays behind the cards' (cards link 78) -> 'across the site'; 'any argument' pocket card (78/80) -> 'an argument'; 'PRO' kicker misleading (Pro launching soon, tracks currently open) -> dropped; POLISH 'live objection' (pre-written, not AI) -> 'a skeptic's objection'. Orthodoxy CLEAN, 3 optional notes applied: 'gathered in one place'; 'hardest objections answered' -> 'strongest objections fairly stated and answered'; close adds 'with gentleness and respect' (1 Pet 3:15). R2: feature-accuracy STAMPABLE (optional caption polish on sc5 not applied - scope frozen); orthodoxy CLEAN, clarifier candidates none. NOT pastoral sign-off. | 2026-09-25 post-stamp: owner asked for real screenshots. Each scene 1-9 now carries a 'shot' (phone screenshot of the LIVE site, captured by tools/reel/capture-screens.mjs from tools/reel/shots/evidence-library.json) shown in a frame above its UNCHANGED caption (wording verified identical). Screenshot gate READ-ONLY (Explore), 2 rounds: feature-accuracy R1 STAMPABLE 0 BREAK / 2 WEAK, both on sc9 (Pocket Card Generator hero said 'any apologetics argument', reinstating the removed 'any'; builder form overflowed a 390px screen) -> sc9 re-shot as one finished certified pocket card (Kalam) cropped to the card; sc2 reframed (polish). Opening a premise on sc5 was tried and REJECTED: it exposes the child-torture example the owner removed from the moral reel, so sc5 stays collapsed. R2 feature-accuracy STAMPABLE; orthodoxy CLEAN both rounds (no Trinity diagram; sc5 shows the site's own 'never about whether atheists can be good'; sc9 Kalam card keeps 'begins to exist' + both 'not a proof' hedges; clarifier candidate (card reaches 'a personal mind' without a not-yet-the-Triune-God line) left as-is). Pocket-cards page wording + mobile overflow logged as a separate task."
   },
   "aspect": "vertical",
   "theme": "navy",
@@ -35,7 +35,8 @@
           "f": "serif",
           "s": 40
         }
-      ]
+      ],
+      "shot": "../shots/evidence-library/01-hub.png"
     },
     {
       "dur": 11.5,
@@ -83,7 +84,8 @@
           "s": 42,
           "f": "serifb"
         }
-      ]
+      ],
+      "shot": "../shots/evidence-library/02-tabs.png"
     },
     {
       "dur": 5.0,
@@ -107,7 +109,8 @@
           "f": "serif",
           "s": 42
         }
-      ]
+      ],
+      "shot": "../shots/evidence-library/03-cards.png"
     },
     {
       "dur": 10.5,
@@ -142,7 +145,8 @@
           "s": 48,
           "f": "serifb"
         }
-      ]
+      ],
+      "shot": "../shots/evidence-library/04-layers.png"
     },
     {
       "dur": 8.0,
@@ -174,7 +178,8 @@
           "s": 48,
           "f": "serifb"
         }
-      ]
+      ],
+      "shot": "../shots/evidence-library/05-research.png"
     },
     {
       "dur": 8.3,
@@ -205,7 +210,8 @@
           "f": "serif",
           "s": 40
         }
-      ]
+      ],
+      "shot": "../shots/evidence-library/06-essay.png"
     },
     {
       "dur": 13.9,
@@ -248,7 +254,8 @@
           "c": "cream",
           "s": 44
         }
-      ]
+      ],
+      "shot": "../shots/evidence-library/07-tutors.png"
     },
     {
       "dur": 13.4,
@@ -290,7 +297,8 @@
           "c": "cream",
           "s": 38
         }
-      ]
+      ],
+      "shot": "../shots/evidence-library/08-mastery.png"
     },
     {
       "dur": 6.4,
@@ -323,7 +331,8 @@
           "c": "cream",
           "s": 48
         }
-      ]
+      ],
+      "shot": "../shots/evidence-library/09-pocket.png"
     },
     {
       "dur": 10.5,
