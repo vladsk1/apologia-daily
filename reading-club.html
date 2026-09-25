@@ -273,19 +273,17 @@
     <div id="view-books">
 
       <!-- ACTIVE CLUB BANNER -->
-      <div class="active-club-banner" id="active-banner">
+      <!-- Shown only when this visitor has joined a club (ad_joined_books); filled by renderActiveBanner().
+           It used to be static HTML showing every visitor an invented "Week 5 of 12" at 42%. -->
+      <div class="active-club-banner" id="active-banner" style="display:none">
         <div class="acb-left">
           <div class="acb-cover">&#9997;</div>
           <div>
-            <div class="acb-title">Mere Christianity &mdash; Week 5 of 12</div>
-            <div class="acb-sub">Currently reading: Book III, Chapter 2 &mdash; The Three Parts of Morality</div>
+            <div class="acb-title" id="acb-title"></div>
+            <div class="acb-sub" id="acb-sub"></div>
           </div>
         </div>
-        <div class="acb-progress">
-          <div style="font-family:var(--font-ui);font-size:0.72rem;color:rgba(255,255,255,0.4);text-align:right;margin-bottom:0.25rem;">Week 5 of 12</div>
-          <div class="acb-pbar"><div class="acb-pfill" style="width:42%;"></div></div>
-        </div>
-        <button class="acb-btn" onclick="openBook('mere-christianity')">Continue reading &rarr;</button>
+        <button class="acb-btn" id="acb-btn">Continue reading &rarr;</button>
       </div>
 
       <p class="section-label" id="books-anchor">All reading clubs</p>
@@ -843,6 +841,7 @@
       html += buildBookCard(b);
     });
     grid.innerHTML = html;
+    renderActiveBanner();
   }
 
   function buildBookCard(b) {
@@ -906,7 +905,6 @@
           + '<span class="chapter-num">Ch. ' + ch.num + '</span>'
           + '<span class="chapter-title">' + ch.title + '</span>'
           + '<span class="chapter-week">' + ch.week + '</span>'
-          + '<span class="chapter-status-dot ' + ch.status + '"></span>'
           + '<svg class="chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>'
           + '</div>'
           + '<div class="chapter-body">'
@@ -989,6 +987,20 @@
     showToast('Comment added');
   }
 
+  function renderActiveBanner() {
+    var el = document.getElementById('active-banner');
+    var b = null;
+    for (var i = joinedBooks.length - 1; i >= 0 && !b; i--) {
+      b = BOOKS.find(function(x){ return x.id === joinedBooks[i]; }) || null;
+    }
+    if (!b) { el.style.display = 'none'; return; }
+    document.getElementById('acb-title').textContent = b.title;
+    document.getElementById('acb-sub').textContent = 'You joined this club' + (b.weeks ? ' \u00b7 ' + b.weeks + '-week reading schedule' : '');
+    var btn = document.getElementById('acb-btn');
+    btn.onclick = function(){ openBook(b.id); };
+    el.style.display = '';
+  }
+
   function joinBook(id) {
     if (joinedBooks.indexOf(id) === -1) {
       joinedBooks.push(id);
@@ -1002,6 +1014,7 @@
     document.getElementById('view-books').style.display = '';
     document.getElementById('view-detail').classList.remove('open');
     currentBook = null;
+    renderActiveBanner();
   }
 
   // Browser / OS Back while a book detail is open should return to the book

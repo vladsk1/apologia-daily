@@ -93,6 +93,11 @@ function decode(s) {
     .replace(/\s+/g, ' ')
     .trim();
 }
+// A page that asks search engines not to index it (a "coming soon" placeholder,
+// a private preview) should not be offered by our own site search either.
+function isNoindex(html) {
+  return /<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(html);
+}
 function pageMeta(html) {
   const t = html.match(/<title>([\s\S]*?)<\/title>/i);
   const d = html.match(/<meta\s+name=["']description["']\s+content=["']([\s\S]*?)["']/i);
@@ -106,7 +111,9 @@ function mastery() {
   const out = [];
   for (const f0 of globSync('ev-m-*.html')) {
     const f = f0.replace(/\\/g, '/');
-    const { title, desc } = pageMeta(read('/' + f));
+    const html = read('/' + f);
+    if (isNoindex(html)) continue;
+    const { title, desc } = pageMeta(html);
     if (!title) continue;
     out.push({ t: title, u: '/' + f, d: desc, c: 'Mastery Track', y: 'mastery' });
   }
@@ -134,6 +141,7 @@ function features() {
   for (const [f, cat] of FEATURE_PAGES) {
     let html;
     try { html = read('/' + f); } catch { continue; }   // skip a missing page rather than break the build
+    if (isNoindex(html)) continue;
     const { title, desc } = pageMeta(html);
     if (!title) continue;
     out.push({ t: title, u: '/' + f, d: desc, c: cat, y: 'feature' });
