@@ -824,6 +824,32 @@
 >   argument + orthodoxy + neutrality. Port each label from how the essays actually use the person, never from
 >   memory. Allison, Stenger and Vermes were all mislabelled on the first draft of this page.
 >
+> **STANDING RULE — WHEN CONTENT IS ADDED, REGENERATE THE WEBSITE'S COUNTED FIGURES IN THE SAME
+> COMMIT. (Owner rule, 2026-09-27.)** The site states counted claims — "N deep-dive essays", "N answer
+> pages", "N verified sources", "N argument briefs" (homepage trust strip + `editorial-standards.html`),
+> and the `our-sources.html` list of books/articles/talks we study. **These are generated from the repo,
+> never hand-typed.** So any time you add or remove a research note (`docs/book-research/*`,
+> `docs/article-research/*`, `docs/video-research/*`), an essay (`library/*.html`), an answer, a `/sources`
+> passage, or a `/briefs` entry, **run all three generators and commit their output in the same commit as
+> the content:**
+> - `node tools/build-sources-index.mjs` — rebuilds `sources-index.json` + `lib/sources-verified.js` (the verified-source count + what the live AI may quote).
+> - `node tools/build-our-sources.mjs` — rebuilds `our-sources.json` (the Our Sources list; a new video/article note ALSO needs its gated card added by hand — see the Our Sources rule above).
+> - `node tools/update-trust-numbers.mjs` — rewrites the essay / answer / verified-source / brief / test figures on the homepage + editorial-standards page.
+>
+> **CI already fails a push that leaves any of them stale** (`content-gate.yml` runs each with `--check`),
+> so this is a "you can't forget it silently" rule, not a new mechanism — the point is to run them
+> *before* you push instead of being bounced by red CI.
+>
+> ⚠ **Be honest about which number a book actually moves — this is the part people get wrong.** Adding an
+> **owned copyrighted book** (Gordon Fee, etc.) or a copyrighted article updates the **Our Sources LIST**
+> once an essay cites it — it does **not** raise the "Verified sources" figure, because that figure counts
+> only **public-domain, word-for-word-checked `/sources` passages**, which a copyrighted book can never
+> become (the whole point of the research-note → verified-primary → `/sources` pipeline). A headline number
+> moves only when you **add an essay** (essay count), an **answer**, a **gated brief**, or a **verified PD
+> `/sources` passage**. So "I added a book, why didn't the source count go up?" is expected behaviour, not a
+> bug. If the owner ever wants a *visible* "books & articles studied" counter, that is a new trust claim and
+> a separate, owner-approved change (declined 2026-09-27) — do not add one on your own initiative.
+>
 > **STANDING RULE — X / social share-cards.** Every X-post image uses the brand card generator
 > `tools/reel/gen_xcard.py` (night-sky navy + gold underlined kicker + italic-serif cream/gold
 > headline + shield logo, 1600×900; specs in `tools/reel/xcards/`). **Never ship a flat frame
