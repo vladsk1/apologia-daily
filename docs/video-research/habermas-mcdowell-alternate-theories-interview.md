@@ -70,15 +70,21 @@ accepts, and ask the skeptic to name a *single* naturalistic theory that account
   probability of resurrection. (Standard; also his close: the discrepancies/"Swiss-cheese Bible" reply.)
 
 ## Genuinely net-new references (verify — recorded as leads only)
-- **New book:** *On the Resurrection, Vol. 2: Alternate Theories* (B&H Academic, ~900 pp) — the fullest
+- **New book:** *On the Resurrection, Vol. 2: Refutations* (B&H Academic; page count unconfirmed) — ⚠ the published subtitle is **"Refutations," NOT "Alternate Theories"** (this note's header verified it; "Alternate Theories" is the ASR's mishearing), and the "~900 pp" once written here was unverified — do not cite either. The fullest
   treatment of naturalistic theories; the updated reference for `was-jesus-dead` / `appearances` /
   `pagan-myths` content. *(Vols. 3–4 also named: Vol. 3 the ~140-question survey, Vol. 4 application.)*
-- **Hume-on-miracles material** — a possible essay lead if the site ever wants a dedicated
-  philosophy-of-miracles / "can history study miracles?" piece (the circular-definition critique + the
-  a-priori-objection-vs-rejection distinction). Not currently a standalone on-site topic.
+- **Hume-on-miracles material** — ⚠ **CORRECTION (four-surface audit, 2026-09-24): NOT a gap — this is a fully
+  built standalone topic.** The certified essay `library/miracles.html`, the gated `miracles-hume-spinoza` brief,
+  and `answers/do-miracles-really-happen.html` already carry Hume's a-priori bar, the "a violation smuggles the
+  conclusion" circular-definition critique, and the C.S. Lewis "uniform experience assumes every report false"
+  point; even the narrower "can history study miracles / historian-qua-historian" angle (J.K. Elliott / Michael
+  Grant) is on `ev-s2.html`. **Corroboration — do NOT commission a duplicate essay.**
 - **McDowell, *The Fate of the Apostles*, 2nd edition** — **NB: this is Sean McDowell's book
-  (Routledge/Ashgate; 1st ed. 2015), NOT Habermas's** (the ASR blurs the speakers). The **2nd edition is
-  already published (2024)**, and it slightly *reassesses ~5 apostles' martyrdom cases* while keeping the core
+  (Routledge/Ashgate; 1st ed. 2015), NOT Habermas's** (the ASR blurs the speakers). A genuine **2nd edition** exists (**Routledge, 2024**; ISBN 9781032580548 — confirmed 2026-09-24 via
+  publisher + PubMed-level sources; ⚠ Routledge's own product page shows **2025**, likely a reprint/release slip,
+  but **2024** is the widely-listed year and is what the live answer `why-did-the-disciples-die-for-their-faith`
+  correctly cites; the 1st ed. is Routledge/Ashgate **2015**, which `raised-on-the-third-day.md` and
+  `investigating-the-resurrection-loke.md` map), and it slightly *reassesses ~5 apostles' martyrdom cases* while keeping the core
   (Peter, Paul, James the brother of Jesus have first-century martyrdom sources). A lead for
   `library/eyewitnesses.html` / martyrdom material — **attribute to McDowell.**
 
@@ -98,10 +104,11 @@ accepts, and ask the skeptic to name a *single* naturalistic theory that account
   `resurrection-hallucination-vision`, `resurrection-was-jesus-dead`, `resurrection-empty-tomb`, and
   `pagan-myths-copycat` — all distilled from certified essays and gated. This is the *fifth* Habermas source;
   **nothing net-new to brief.**
-- **Essay-strengthening leads for a future session (verify first):** *On the Resurrection* Vol. 2 as the
-  updated reference (a `docs/book-research/` map if the owner acquires it); a possible **Hume / "can history
-  study miracles?"** essay if the site wants one; and the **McDowell *Fate of the Apostles* 2nd ed. (2025)**
-  reassessment for the martyrdom material. None reach the live AI except through the normal pipeline.
+- **Essay-strengthening leads for a future session (verify first):** *On the Resurrection* Vol. 2 (subtitle
+  **Refutations**) as an updated reference — a `docs/book-research/` map **if the owner acquires it**. (The Hume /
+  philosophy-of-miracles lead once listed here is **withdrawn** — that topic is already fully built on
+  `library/miracles.html` + the `miracles-hume-spinoza` brief + `answers/do-miracles-really-happen.html`; see the
+  correction above.) Neither reaches the live AI except through the normal pipeline.
 - **Coverage note:** long transcript (~2,940 lines / 122 min), read end-to-end (meta-critiques → each
   naturalistic theory → the agnostic/near-death "back doors" → the close); confirmed no net-new primary hides
   in it. The pagan-myths scholars (Mettinger, J. Z. Smith, Pannenberg) and Kirsopp Lake / Reimarus are

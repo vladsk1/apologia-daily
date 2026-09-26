@@ -1,9 +1,16 @@
 # AI rate limit — `bump_ask_rate` migration (run once)
 
-> **Status: human step (you).** Run the SQL in the Supabase SQL editor, same as
-> the other migrations. It is **idempotent**. Until it runs, the Claude-calling
-> endpoints still throttle via a per-instance in-memory fallback (best-effort),
-> but the durable, cross-instance cap only kicks in once this is applied.
+> **Status: ✅ APPLIED + VERIFIED 2026-09-23** (production project, SQL Editor, run by the
+> owner via Claude in Chrome; results relayed to a session). Pre-check: `public.ask_rate`
+> and `bump_ask_rate` **already existed** (an earlier run — `HANDOFF.md` had logged it as
+> RUN); `ask_rate_limit` did **not** exist. The re-run therefore left the table's columns
+> untouched but (re)applied RLS, the grants/revokes and the function body. Verify: bump →
+> 1 then 2; `anon` execute on the function = false; `authenticated` select on the table =
+> false; test row deleted. `lib/ratelimit.js` calls the RPC with the service-role key, which
+> is the only role that can. The SQL is **idempotent** and safe to re-run.
+> ⚠ This is the ONLY `bump_ask_rate` definition to use — the older snippet in
+> `docs/ASKED_AND_ANSWERED_SPEC.md` (table `ask_rate_limit`) is SUPERSEDED; running it
+> would silently repoint the function at a different table.
 
 ## Why
 
@@ -30,6 +37,13 @@ create table if not exists public.ask_rate (
 -- Only the service role (which bypasses RLS) ever touches this table; enabling
 -- RLS with no policies blocks direct anon/authenticated access.
 alter table public.ask_rate enable row level security;
+
+-- Explicit Data API grants. From 2026-10-30 Supabase no longer auto-grants new
+-- public tables to the API roles, so a fresh run (new project, preview branch,
+-- `supabase db reset`) needs these. Harmless on a project where they already exist.
+-- Service role only: the anon/authenticated roles never touch this table.
+revoke all on public.ask_rate from anon, authenticated;
+grant  all on public.ask_rate to service_role;
 
 create or replace function public.bump_ask_rate(p_ip text)
 returns int language plpgsql security definer set search_path = public as $$

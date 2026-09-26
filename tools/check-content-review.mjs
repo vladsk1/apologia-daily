@@ -64,6 +64,8 @@ const CONTENT_PATTERNS = [
                                            // 8-card capstone, all doctrinal, on the deity-of-
                                            // Christ + resurrection dual-consensus tier. An
                                            // independent companion — no author permission.
+  /^our-sources\.html$/,                   // public source list: critic labels + notes on NAMED people,
+                                           // an update log and the talks list (added 2026-09-24).
   /^pocket-cards\.html$/,                  // 70 share-card arguments (gated 2026-08-11, dual-consensus);
                                            // the `custom` user-text generator card is out of scope — see
                                            // the file's content-review stamp for the certification scope.
@@ -75,6 +77,11 @@ const CONTENT_PATTERNS = [
                                            // dual-consensus): same memorised/graded layer as speed-round;
                                            // the answer-length tell (correct = longest option) and
                                            // several doctrinal errors were fixed at first gate.
+  /^study-plans\.html$/,                   // 10 guided study plans, 200 day entries (first gated
+                                           // 2026-09-25, dual-consensus: deity/Trinity/resurrection/
+                                           // Islam plans). Assigned-homework copy: a plan that tells
+                                           // a reader to "learn" a retired overclaim is the same
+                                           // compressed-surface failure as the quiz layer.
 ];
 
 const isContent = (p) => CONTENT_PATTERNS.some((re) => re.test(p));
@@ -178,7 +185,7 @@ function changedFiles(base) {
 }
 
 function allContentFiles() {
-  return globSync('{library/**/*.html,ev-s*.html,ev-m-*.html,worldviews.html,pocket-cards.html,speed-round.html,daily-mix.html,tools/reel/specs/*.json,api/ask.js}').filter(isContent);
+  return globSync('{library/**/*.html,ev-s*.html,ev-m-*.html,worldviews.html,pocket-cards.html,speed-round.html,daily-mix.html,study-plans.html,tools/reel/specs/*.json,api/ask.js}').filter(isContent);
 }
 
 /* Everything user-facing that is not explicitly exempt. This is the AUDIT scope,

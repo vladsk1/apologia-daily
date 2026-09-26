@@ -20,6 +20,40 @@
 > *why* behind a past decision; read this file for current state. **Keep it that way:** when an entry
 > here stops affecting a decision, move it to `HANDOFF.md` rather than letting this file grow back.
 >
+> **🅿 PARKED FOR LATER — 2026-09-23 (owner: "keep all this for later"). Strategy only, nothing below is built
+> except the date fix.** Five docs + two mockups, read them before re-deriving any of it:
+> `docs/LOGOS_OF_APOLOGETICS.md` (what "the Logos of apologetics" means: an argument graph + guides + a talk
+> builder + paragraph-cited AI; resources/costs; addendum on what users love about Logos and how to build a
+> library in 6 tiers), `docs/APOLOGETICS_CERTIFICATE_BENCHMARK.md` (Biola/OCCA/STR/Magis/SES/HCU vs a 3-level
+> certificate built by sequencing certified pages), `docs/FREE_LIBRARY_CANDIDATES.md` (~60 public-domain /
+> open-access works mapped to the ev-s tabs; HOST vs LINK; start with the ~20 primaries our essays cite),
+> and `docs/mockups/` (resurrection Objection Guide + On Guard book page; answer text ported from certified
+> essays / the reading club, labels + "DRAFT" strings ungated). Measured: ~58% of essay footnotes cite 1930+
+> work (can't be hosted), ~23% ancient/classic/Scripture only. ⭐ **SHIPPED the same day:**
+> `tools/sync-date-modified.mjs` (JSON-LD `dateModified` was older than the latest review on 109 of 113 stamped
+> pages; now synced + CI-checked; `check-stamp-integrity` cancels date-only line pairs) and regenerated the
+> trust figures + What's New feed, which had kept `main`'s nav-consistency job red for 5+ pushes.
+>
+> Also parked the same day: `docs/DEBATE_BREAKDOWNS.md` (reviewed public breakdowns of big online debates; first pilot =
+> the viral Hijab vs GodLogic *Islamic Dilemma* exchange), and a **pending owned book**: Gordon D. Fee, *Jesus the Lord
+> according to Paul the Apostle* (Baker Academic, 2018; the concise version of his *Pauline Christology*, which
+> `jesus_as_god_nt.html` already cites). **Owner owns it and will send page photos (or a slow page-turn video; ffmpeg is
+> installable via `pip install imageio-ffmpeg` to pull frames).** Intended use: the missing "Did Paul invent Jesus's
+> divinity?" essay, Christ's full humanity in Paul (the recurring Chalcedon gap), and the OT YHWH-texts Paul applies to
+> Jesus. Follow `docs/book-research/README.md` + Step Zero; Fee is Pentecostal, so cite him on exegesis only.
+>
+> **⭐ MINING CROSS-CHECK COVERAGE — 2026-09-24.** All **49 research-library notes** are now cross-checked
+> against **all six live surfaces** (library essay · `/answers` · `ev-s` tab card · `ev-m` mastery page ·
+> `/briefs` · `/sources`). The `ev-m` mastery surface was the last one added to the standard and the last
+> swept — 4 stale claims found and fixed (`ev-m-burial` Acts 13:29 burial-agent overclaim; `ev-m-early_church_trinity`
+> "three hundred bishops" → "about 250 and 318"; `ev-m-postresurrection` hallucination-verdict bounding +
+> martyrdom "willing to suffer"; `ev-m-jesus_as_god_nt` flat Shema reading → attributed McGrath hedge), all
+> dual-consensus re-gated CLEAN (commit `55377f28`); the rest of the 75 mastery pages clean. Each fix is logged
+> in its source note's ledger (`12ef91a4`). ⚠ **Scope, so nobody overreads it:** this means the *mining
+> cross-check* is complete **for the current note set** — it is **NOT** a claim that every library page is fully
+> gated or **pastorally signed off** (still `_pending_` site-wide), and "clean" is a **2026-09-24 snapshot**: any
+> new research note, or a content edit by another session, re-opens the six-surface work for what it touches.
+>
 > **⭐ LATEST — 2026-08-26. TWO NEW READER-TRUST UI COMPONENTS SHIPPED to `main` (owner-requested).**
 > **(1) `library/reviewed-badge.js`** — a small green "Reviewed & current — `<Mon YYYY>`" badge under each essay title,
 > reading the date **at runtime from the page's own `content-review` stamp** (the most recent of the four lens dates),
@@ -65,7 +99,7 @@
 > the page's tier). ⚠ **Fine-tuning is the fragile one** — any panel there must respect the Stenger row (never claim
 > unanimity on window-narrowness). The badge, by contrast, is done site-wide and needs nothing further.
 >
-> **⭐ LATEST — 2026-08-22. The ev-s8 "The Church in History" tab is now COMPLETE end-to-end and LIVE on `main`.**
+> **⭐ LATEST — 2026-08-22. The ev-s8 "The Church in History" tab (⚠ since renamed **"The Christian Revolution"** on the live site — `evidence-library.html:363`, checked 2026-09-25) is now COMPLETE end-to-end and LIVE on `main`.**
 > On top of the three gated essays + tab cards shipped earlier the same day, this session added: **(1) full-length Pro
 > deep dives** on all three ev-s8 cards (~1,085 words each, ported from the certified essays to match the other tabs);
 > **(2) three mastery pages** `ev-m-riseofchurch/persecution/legacy.html` (all 9 layers ported from the essays); **(3)
@@ -154,7 +188,7 @@
 > still editable on curated cards (same class of exposure, now escaped + self-only) — lock to read-only
 > if it matters.
 >
-> **⭐ LATEST — 2026-08-22. NEW EVIDENCE-LIBRARY TAB SHIPPED: "The Church in History" (ev-s8), the 8th tab.**
+> **⭐ LATEST — 2026-08-22. NEW EVIDENCE-LIBRARY TAB SHIPPED: "The Church in History" (ev-s8), the 8th tab (⚠ since renamed **"The Christian Revolution"** — checked 2026-09-25).**
 > Three new certified deep-dive essays — `library/riseofchurch.html` (how a tiny illegal sect became the
 > empire's majority faith; growth-is-not-truth), `library/persecution.html` (Nero→Diocletian; Moss
 > steelmanned; martyrdom = sincerity not truth), `library/legacy.html` (Holland's *Dominion* thesis + the
@@ -772,6 +806,24 @@
 > - **Correct it in place the moment you find it wrong**, and say what the old figure was so nobody
 >   re-derives from it. A silently corrected number teaches the next reader nothing.
 >
+> **STANDING RULE — THE "OUR SOURCES" PAGE TRACKS THE RESEARCH LIBRARIES. (Owner rule, 2026-09-24.)**
+> [`our-sources.html`](our-sources.html) is the public list of what our work rests on, and it must be updated
+> whenever the library grows:
+> - **A book or article an essay cites** reaches the page automatically. The list is generated from every
+>   essay's bibliography by `node tools/build-our-sources.mjs` into `our-sources.json`. **Run it after any essay
+>   edit and commit the result.** CI (`--check`) fails if it is stale.
+> - **A new video or article research note** (`docs/video-research/*.md`, `docs/article-research/*.md`) needs a
+>   card in the page's `VIDEOS` / `ARTICLES` array **in the same commit**, carrying `n:"<note-file-stem>"`. The
+>   card is gated copy (citations at minimum: title, speaker, venue, year and URL checked against the note). CI
+>   fails on a note with no card, or a card with no note. To leave a note off (e.g. an unverified speaker),
+>   record the reason in `STUDIED_EXCLUDED` in `tools/build-our-sources.mjs`.
+> - **A new owned-book note** (`docs/book-research/`) appears once an essay cites the book, through its
+>   bibliography. **Owner decision (2026-09-24): books we own that no essay cites are NOT listed** — the page
+>   shows only what the site actually uses. The "Talks & papers we studied" tab stays.
+> - Labels and "How we use it" notes about **named people** (`CRITICS`, `NOTES`) are gated copy: citations +
+>   argument + orthodoxy + neutrality. Port each label from how the essays actually use the person, never from
+>   memory. Allison, Stenger and Vermes were all mislabelled on the first draft of this page.
+>
 > **STANDING RULE — X / social share-cards.** Every X-post image uses the brand card generator
 > `tools/reel/gen_xcard.py` (night-sky navy + gold underlined kicker + italic-serif cream/gold
 > headline + shield logo, 1600×900; specs in `tools/reel/xcards/`). **Never ship a flat frame
@@ -974,6 +1026,13 @@
 >   until they expire. Fix: add the column, then add `['push_subscriptions','user_id']` to `USER_TABLES`.
 >
 > **Infrastructure / verification**
+> - ✅ **DONE + VERIFIED 2026-09-23:** the AI rate-limit migration `docs/ASK_RATE_LIMIT.md`
+>   (`ask_rate` table + `bump_ask_rate` RPC) re-applied on production by the owner via Claude in
+>   Chrome, verify results relayed (1→2, anon/authenticated locked out). Table + function
+>   already existed from an earlier run; grants/RLS/function body now confirmed current. The older `ask_rate_limit` snippet
+>   in `docs/ASKED_AND_ANSWERED_SPEC.md` is marked SUPERSEDED — never run it (same function
+>   name, different table). ⚠ From **2026-10-30** Supabase stops auto-granting Data API access
+>   to NEW `public` tables: every migration doc now carries explicit `GRANT`s — keep adding them.
 > - ✅ **DONE 2026-09-08 (owner ran the SQL in Supabase):** the four owed migrations —
 >   `docs/STUDY_GROUPS_RLS_FIX.md` (critical group-access privilege-escalation fix),
 >   `docs/STUDY_GROUPS_DISPLAY_NAME_FIX.md` (M4 anti-spoof trigger), `docs/PROGRESS_SYNC.md`
@@ -1761,8 +1820,9 @@ and a release.
 **not finished when the note is written.** Before a mining run is done, it MUST scan our **current live
 content** against the source's leads and decide, for each substantive lead, whether the new material can
 *improve what we already have*. Concretely: for each substantive lead, `Grep`/`Read` the on-site home for
-that topic — the certified essay in `library/*.html`, the matching `/answers/*`, the `ev-s*` card, and any
-live `/briefs` or `/sources` entry — then classify it.
+that topic — the certified essay in `library/*.html`, the matching `/answers/*`, the `ev-s*` tab card, the
+`ev-m*` mastery page (a distinct surface from the tab card — a lead can be right on one and stale on the
+other), and any live `/briefs` or `/sources` entry — then classify it.
 
 > ### ⭐⭐ THE CHECK IS A QUALITY COMPARISON, NOT A COVERAGE CHECK. (Rewritten 2026-08-06.)
 > "Does our site mention this?" is only one of the questions. The mining run exists to make our essays

@@ -1,0 +1,261 @@
+{
+  "reviewed": {
+    "argument": "2026-09-14",
+    "orthodoxy": "2026-09-14",
+    "by": "2026-09-14 scene-locked vertical (Instagram) POSITIVE-CASE reel. Ported near-verbatim from certified did-jesus-really-exist. Gated READ-ONLY (Explore): argument STAMPABLE (Tacitus/Josephus/Ehrman attributions verified), orthodoxy CLEAN. POLISH applied: Tacitus caption de-quoted to a paraphrase ('records that Christus was executed under Pontius Pilate') since it is not a verbatim quotation. Consensus calibrated ('almost no historian'), not overstated. NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) POSITIVE-CASE reel on the historicity of Jesus. Ported near-verbatim from certified did-jesus-really-exist.json (library/hist_jesus.html). Already objection-light and positive; no hedges to remove. Not a strawman — accurately states almost no historian holds mythicism, and Ehrman (agnostic) refuted it.",
+  "voiceover": "Did Jesus really exist — or is he just a myth? Almost no historian agrees with the myth. Believer and atheist alike, scholars treat his existence as settled. Tacitus, a Roman senator, records that Christus was executed under Pontius Pilate. The Jewish historian Josephus mentions Jesus — and the execution of his brother James. Pliny, Suetonius, Lucian, the Talmud — a chain of Roman and Jewish sources corroborate the picture. Even the agnostic scholar Bart Ehrman wrote a whole book refuting the idea that Jesus never existed. And here's the tell: no one invents a crucified messiah. An executed criminal was a scandal, not a marketing plan. You can debate who Jesus was. That he lived is not seriously in doubt.",
+  "scenes": [
+    {
+      "dur": 4.6,
+      "vo": "Did Jesus really exist — or is he just a myth?",
+      "big": [
+        {
+          "t": "Did Jesus",
+          "c": "cream",
+          "s": 66
+        },
+        {
+          "t": "really",
+          "c": "cream",
+          "s": 64
+        },
+        {
+          "t": "exist?",
+          "c": "gold",
+          "s": 88
+        }
+      ]
+    },
+    {
+      "dur": 7.8,
+      "vo": "Almost no historian agrees with the myth. Believer and atheist alike, scholars treat his existence as settled.",
+      "kicker": "THE SCHOLARLY VERDICT",
+      "lines": [
+        {
+          "t": "Believer and atheist",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "alike —",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "his existence",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "is treated as settled.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 6.2,
+      "vo": "Tacitus, a Roman senator, records that Christus was executed under Pontius Pilate.",
+      "kicker": "ROMAN RECORD",
+      "lines": [
+        {
+          "t": "Tacitus, a Roman senator,",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "records that —",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Christus was executed",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        },
+        {
+          "t": "under Pontius Pilate.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "dur": 6.1,
+      "vo": "The Jewish historian Josephus mentions Jesus — and the execution of his brother James.",
+      "kicker": "JEWISH RECORD",
+      "lines": [
+        {
+          "t": "Josephus mentions Jesus —",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "and the execution",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "of his brother James.",
+          "c": "cream",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 7.3,
+      "vo": "Pliny, Suetonius, Lucian, the Talmud — a chain of Roman and Jewish sources corroborate the picture.",
+      "kicker": "A CHAIN OF SOURCES",
+      "lines": [
+        {
+          "t": "Pliny. Suetonius.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Lucian. The Talmud.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Roman and Jewish",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "sources agree.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 6.4,
+      "vo": "Even the agnostic scholar Bart Ehrman wrote a whole book refuting the idea that Jesus never existed.",
+      "lines": [
+        {
+          "t": "Even the agnostic",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "Bart Ehrman",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "wrote a book refuting",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "the myth theory.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 8.4,
+      "vo": "And here's the tell: no one invents a crucified messiah. An executed criminal was a scandal, not a marketing plan.",
+      "kicker": "THE TELL",
+      "lines": [
+        {
+          "t": "No one invents",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "a crucified messiah.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "A scandal —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "not a marketing plan.",
+          "c": "cream",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "dur": 5.9,
+      "vo": "You can debate who Jesus was. That he lived is not seriously in doubt.",
+      "big": [
+        {
+          "t": "You can debate",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "WHO he was.",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "That he lived",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "is not in doubt.",
+          "c": "gold",
+          "s": 60
+        }
+      ],
+      "sub": [
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    }
+  ]
+}

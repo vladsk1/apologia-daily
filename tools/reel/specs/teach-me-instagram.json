@@ -1,0 +1,258 @@
+{
+  "reviewed": {
+    "argument": "2026-09-15",
+    "orthodoxy": "2026-09-15",
+    "by": "2026-09-15 scene-locked vertical (Instagram) FEATURE-PROMO reel for the NEW 'Teach me this' Socratic tutor (library/socratic.js + api/tutor.js mode:socratic, added 2026-09-15). Gated READ-ONLY (Explore): orthodoxy CLEAN ('build it yourself / in your own words' = pedagogy from the certified page, not doctrine-as-construction), argument+feature-accuracy STAMPABLE 0 BREAK - every claim traced to code (new, beside Ask AI Tutor on essays+cards; one question at a time; teaches ONLY from the page which stays open; 'won't let a wrong step slide' matches the socratic prompt's before-affirming accuracy check + same-turn correction). WEAK-2 (soft reliability promise) acceptable as written. Not an apologetics claim. NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) FEATURE-PROMO reel for the NEW 'Teach me this' Socratic tutor (library/socratic.js + api/tutor.js mode:'socratic', added 2026-09-15). Describes the real feature: a guided one-question-at-a-time walkthrough that leads the reader to BUILD the argument from the page's certified text; keeps the reasoning accurate (won't affirm a rail-violating step); same pastoral/orthodoxy rails. Makes no apologetics claim of its own.",
+  "voiceover": "What if, instead of handing you the answer, it taught you to build the argument yourself? That's the new 'Teach me this' tutor — right beside Ask AI Tutor, on every essay and evidence card. It doesn't lecture. It asks one short question at a time, and walks with you — step by step — until you've reasoned the whole argument out. You're not memorizing a case. You're building it yourself. It teaches straight from the page in front of you — and the full argument stays there to reread as you go. And it keeps you honest: it won't let a wrong step slide, so what you build actually holds up when someone pushes back. Read the essay and you can recite the case. Work through this and you can make it — in your own words. The difference between reading an argument, and being able to make it. Try 'Teach me this.'",
+  "scenes": [
+    {
+      "dur": 6.0,
+      "vo": "What if, instead of handing you the answer, it taught you to build the argument yourself?",
+      "big": [
+        {
+          "t": "Don't just read",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "the argument.",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Build it.",
+          "c": "gold",
+          "s": 90
+        }
+      ]
+    },
+    {
+      "dur": 6.8,
+      "vo": "That's the new 'Teach me this' tutor — right beside Ask AI Tutor, on every essay and evidence card.",
+      "kicker": "NEW · TEACH ME THIS",
+      "lines": [
+        {
+          "t": "The new",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "“Teach me this” tutor —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "on every essay",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "and evidence card.",
+          "c": "cream",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "dur": 9.1,
+      "vo": "It doesn't lecture. It asks one short question at a time, and walks with you — step by step — until you've reasoned the whole argument out.",
+      "kicker": "ONE STEP AT A TIME",
+      "lines": [
+        {
+          "t": "It doesn't lecture.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "One short question",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "at a time —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "step by step.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ]
+    },
+    {
+      "dur": 5.3,
+      "vo": "You're not memorizing a case. You're building it yourself.",
+      "big": [
+        {
+          "t": "Not memorizing.",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Building it",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "yourself.",
+          "c": "gold",
+          "s": 80
+        }
+      ]
+    },
+    {
+      "dur": 6.3,
+      "vo": "It teaches straight from the page in front of you — and the full argument stays there to reread as you go.",
+      "kicker": "STRAIGHT FROM THE PAGE",
+      "lines": [
+        {
+          "t": "It teaches from the",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "certified page —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "which stays open",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "to reread as you go.",
+          "c": "cream",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "dur": 7.1,
+      "vo": "And it keeps you honest: it won't let a wrong step slide, so what you build actually holds up when someone pushes back.",
+      "kicker": "IT KEEPS YOU HONEST",
+      "lines": [
+        {
+          "t": "It won't let a",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "wrong step slide —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "so what you build",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "holds up under pressure.",
+          "c": "cream",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "dur": 7.1,
+      "vo": "Read the essay and you can recite the case. Work through this and you can make it — in your own words.",
+      "big": [
+        {
+          "t": "Recite it?",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Or actually",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "make it —",
+          "c": "gold",
+          "s": 64
+        },
+        {
+          "t": "in your own words.",
+          "c": "cream",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "dur": 6.6,
+      "vo": "The difference between reading an argument, and being able to make it. Try 'Teach me this.'",
+      "big": [
+        {
+          "t": "Reading it,",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "vs making it.",
+          "c": "gold",
+          "s": 64
+        }
+      ],
+      "sub": [
+        {
+          "t": "Try “Teach me this.”",
+          "c": "cream",
+          "f": "serif",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    }
+  ]
+}

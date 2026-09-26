@@ -86,19 +86,27 @@ Confessor — authenticity debated; the idea has Cappadocian roots) is a possibl
   gets right. A positive model, unlike the Islam-apologetics videos.
 
 ## Live-door status (decision recorded 2026-07-23)
+
+> **ev-m mastery-surface audit — 2026-09-24 (commit `55377f28`).** The mastery pages were the sixth
+> cross-check surface, never audited before. `ev-m-early_church_trinity.html:525` (the Drill-3 model
+> answer readers copy) still ran the RETIRED round figure **"three hundred bishops"**; corrected to this
+> note's **"about 250 and 318"** (318 = traditional/symbolic per Gen 14:14; actual attendance ~250–320).
+> The page's own P2 and flashcard already carried the right figure — only the copied-out model answer
+> lagged. Dual-consensus re-gated CLEAN (argument SOUND / orthodoxy CLEAN / neutrality STAMPABLE). The
+> rest of the Nicene mastery surface is clean.
 - **`/sources`: —** for the video itself (Scripture + modern scholars). *BUT* it names verified **PD
   patristic primaries** we could add to `/sources` (Athanasius *De Decretis*, Basil *On the Holy Spirit*,
   Gregory of Nazianzus/Nyssa, the Justin Martyr "atheists" line) — several Fathers are already in our corpus.
-- **`/briefs`: — for now** (no certified Nicene-Creed essay yet to distil from — see below).
-- **★ The real opportunity — a NEW deep-dive essay.** Unlike the redundant Habermas/Islam videos, this points
-  at a **genuine gap**: the site explains the Trinity (`early_church_trinity`, `holy_spirit`, `relations`) and
-  answers "did the church invent Jesus's divinity at Nicaea?" — but has **no dedicated essay that walks
-  through the Nicene Creed phrase by phrase.** This video is the ideal *blueprint* for one (`library/
-  nicene-creed.html`), and it even names the two best scholarly commentaries to ground it: **Phillip Cary** and
-  **Jared Ortiz & Daniel Keating (Baker Academic)**. Such an essay would: run the full pipeline with
-  **dual-consensus**; treat the **filioque and other intra-Christian points neutrally**; and quote **verified
-  primaries** (Athanasius, Basil, the Gregories, Justin) — not the video. Once certified, it could feed a
-  `/briefs` entry and link from `what-we-believe.html` + the Trinity tab.
+- **`/briefs`: ✅ SHIPPED** — a dual-consensus-certified Nicene-Creed brief is now live (`briefs/_data.json`,
+  `from: library/nicene-creed.html`).
+- **★ ✅ DONE — the "NEW deep-dive essay" gap is CLOSED (confirmed by the four-surface audit, 2026-09-24; not
+  re-do work).** `library/nicene-creed.html` exists (the phrase-by-phrase walk this note called for), `ev-s6.html`
+  carries a full clause-by-clause Nicene chapter (lines ~2510–2539), the certified brief above is live, and
+  filioque neutrality is GREEN on every served surface (`ev-s6` says "Apologia Daily takes no side" three times;
+  the brief says "take NO side"; `answers/is-the-trinity-like-water-ice-and-steam.html` carries a
+  sending-vs-procession orthonote; `what-we-believe.html` brackets the clause). The Athanasius/Basil/Gregories/
+  Justin primaries remain a standing `/sources` enrichment lead (above), but the essay/brief/tab work this bullet
+  requested is **already done — do not rebuild it.**
 - **Also strengthenable:** `answers/did-the-church-invent-jesus-divinity-at-nicaea.html` (the "there was a
   *when* he was not" / homoousios / 325→381 material) and `answers/did-jesus-empty-himself-of-his-deity.html`
   (the anti-kenotic "he remained what he was").

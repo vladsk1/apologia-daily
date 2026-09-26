@@ -46,6 +46,13 @@ create policy je_update on public.journal_entries
   for update using (auth.uid() = user_id) with check (auth.uid() = user_id);
 
 -- (No delete policy: on-account-delete the row cascades automatically.)
+
+-- Explicit Data API grants. From 2026-10-30 Supabase no longer auto-grants new
+-- public tables to the API roles, so a fresh run (new project, preview branch,
+-- `supabase db reset`) needs these. Harmless on a project where they already exist.
+-- Signed-in users only (RLS still limits them to their own row); never anon.
+grant select, insert, update on public.journal_entries to authenticated;
+grant all on public.journal_entries to service_role;
 ```
 
 ## How to verify after running

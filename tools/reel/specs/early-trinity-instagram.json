@@ -1,0 +1,310 @@
+{
+  "reviewed": {
+    "argument": "2026-09-18",
+    "orthodoxy": "2026-09-18",
+    "neutrality": "2026-09-18",
+    "by": "2026-09-18 scene-locked vertical (Instagram) POSITIVE-CASE reel (Trinity tab). Reworked from certified early-church-trinity into a purely positive 'how early was Jesus worshipped as God' case. 'Invented at a council in 325' objection-framing removed AND the words Nicaea/Nicene avoided per owner (TTS). Gated READ-ONLY (Explore) dual-consensus: argument STAMPABLE, orthodoxy CLEAN (Pliny 'to a god' safe as an attributed pagan witness, fenced by Ignatius 'Jesus Christ our God'), neutrality STAMPABLE. POLISH applied: 'within eighty years' -> 'within about eighty years'. Hurtado 'big bang' quote verified genuine (Lord Jesus Christ, 2003, ~p.135). Pliny c.112 / Ignatius c.107 / Tertullian c.210 all verified. NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) POSITIVE-CASE reel (Trinity tab / ev-s6). Reworked from certified early-church-trinity.json (library/early_church_trinity.html) into a PURELY POSITIVE 'how early was Jesus worshipped as God' case (Pliny c.112, Ignatius c.107, marana tha, Trinitarian baptism, Tertullian c.210, Hurtado 'big bang'). The 'invented at a council in 325' objection-framing removed (positive case) AND the words 'Nicaea'/'Nicene' avoided entirely per owner (TTS mispronounces them). Dual-consensus tier.",
+  "voiceover": "How early did Christians worship Jesus as God? Astonishingly early — and the evidence comes from long before any council ever wrote it down. Start with a hostile witness. Around the year 112, the Roman governor Pliny wrote to his emperor about the Christians he was executing, and reported their strange habit: they met before dawn to sing a hymn 'to Christ, as to a god.' A pagan official, no friend of the faith — describing worship of Jesus within about eighty years of the cross. Go earlier. Around the year 107, Ignatius, a bishop being marched to the arena to die, writes plainly of 'Jesus Christ our God.' No argument, no apology — just the settled speech of his churches. Earlier still, the first Aramaic-speaking Christians prayed 'marana tha' — 'Our Lord, come!' — a prayer addressed to Jesus. And it was never Jesus only. From the beginning the church baptized 'in the name of the Father, and of the Son, and of the Holy Spirit,' and praised the three together. Around the year 210, Tertullian had already put it in Latin: three persons, one substance — the Trinity. The historian Larry Hurtado, studying this not as an apologist but as a scholar, called the rise of the worship of Jesus a 'big bang': explosively rapid, erupting in the earliest years after the cross. The worship came first. The definitions came later, to guard what the church had prayed all along.",
+  "scenes": [
+    {
+      "dur": 4.5,
+      "vo": "How early did Christians worship Jesus as God?",
+      "big": [
+        {
+          "t": "How early",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "did they worship",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "Jesus as God?",
+          "c": "gold",
+          "s": 60
+        }
+      ]
+    },
+    {
+      "dur": 5.9,
+      "vo": "Astonishingly early — and the evidence comes from long before any council ever wrote it down.",
+      "big": [
+        {
+          "t": "Astonishingly",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "early.",
+          "c": "gold",
+          "s": 88
+        }
+      ],
+      "sub": [
+        {
+          "t": "Long before any council wrote it down.",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        }
+      ]
+    },
+    {
+      "dur": 13.5,
+      "vo": "Start with a hostile witness. Around the year 112, the Roman governor Pliny wrote to his emperor about the Christians he was executing, and reported their strange habit: they met before dawn to sing a hymn 'to Christ, as to a god.'",
+      "kicker": "A HOSTILE WITNESS · c.112 AD",
+      "lines": [
+        {
+          "t": "The Roman governor Pliny:",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "they met before dawn",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "to sing a hymn",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "“to Christ, as to a god.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "dur": 7.0,
+      "vo": "A pagan official, no friend of the faith — describing worship of Jesus within about eighty years of the cross.",
+      "big": [
+        {
+          "t": "A pagan official.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "About 80 years",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "from the cross.",
+          "c": "gold",
+          "s": 60
+        }
+      ]
+    },
+    {
+      "dur": 13.9,
+      "vo": "Go earlier. Around the year 107, Ignatius, a bishop being marched to the arena to die, writes plainly of 'Jesus Christ our God.' No argument, no apology — just the settled speech of his churches.",
+      "kicker": "IGNATIUS · c.107 AD",
+      "lines": [
+        {
+          "t": "A bishop marched",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "to the arena to die",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "writes, plainly:",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "“Jesus Christ our God.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 9.1,
+      "vo": "Earlier still, the first Aramaic-speaking Christians prayed 'marana tha' — 'Our Lord, come!' — a prayer addressed to Jesus.",
+      "kicker": "EARLIER STILL",
+      "lines": [
+        {
+          "t": "The first Aramaic",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "Christians prayed:",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "“Marana tha” —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "“Our Lord, come!”",
+          "c": "cream",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 9.7,
+      "vo": "And it was never Jesus only. From the beginning the church baptized 'in the name of the Father, and of the Son, and of the Holy Spirit,' and praised the three together.",
+      "kicker": "NEVER JESUS ONLY",
+      "lines": [
+        {
+          "t": "From the start, baptized",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "“in the name of the Father,",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "and of the Son, and of",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "the Holy Spirit.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "dur": 7.5,
+      "vo": "Around the year 210, Tertullian had already put it in Latin: three persons, one substance — the Trinity.",
+      "kicker": "TERTULLIAN · c.210 AD",
+      "lines": [
+        {
+          "t": "Already in Latin:",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "three persons,",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "one substance —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "the Trinity.",
+          "c": "cream",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 11.1,
+      "vo": "The historian Larry Hurtado, studying this not as an apologist but as a scholar, called the rise of the worship of Jesus a 'big bang': explosively rapid, erupting in the earliest years after the cross.",
+      "kicker": "A HISTORIAN'S VERDICT",
+      "lines": [
+        {
+          "t": "Larry Hurtado, historian:",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "the worship of Jesus",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "was a “big bang” —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "explosively rapid.",
+          "c": "cream",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "dur": 7.2,
+      "vo": "The worship came first. The definitions came later, to guard what the church had prayed all along.",
+      "big": [
+        {
+          "t": "The worship",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "came first.",
+          "c": "gold",
+          "s": 68
+        }
+      ],
+      "sub": [
+        {
+          "t": "The definitions came to guard it.",
+          "c": "cream",
+          "f": "serif",
+          "s": 42
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ]
+    }
+  ]
+}

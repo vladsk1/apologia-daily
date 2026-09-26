@@ -3,11 +3,14 @@
    - /api/* and auth calls: NEVER cached (always live).
    - Page navigations: network-first (fresh content), fall back to cache, then
      to a cached shell — so the app still opens offline.
-   - Static assets (css/js/png/svg/fonts): cache-first, refreshed in background.
+   - Scripts & styles (js/css): NETWORK-FIRST so code updates land on the very
+     next visit (with a cache fallback so the app still opens offline). These are
+     small; the freshness matters more than shaving a few ms.
+   - Other static assets (png/svg/fonts): cache-first, refreshed in background.
    Bump CACHE_VERSION to force-update clients after a deploy. */
 'use strict';
 
-var CACHE_VERSION = 'apd-v3';
+var CACHE_VERSION = 'apd-v37';
 var SHELL = [
   '/',
   '/index.html',
@@ -63,7 +66,23 @@ self.addEventListener('fetch', function (e) {
     return;
   }
 
-  // Static assets: cache-first, refresh in background.
+  // Scripts, styles & HTML fragments (e.g. the ev-s*.html cards the hub fetches):
+  // network-first so code/content updates land on the next visit; fall back to
+  // cache when offline.
+  if (/\.(?:js|css|html)$/i.test(url.pathname)) {
+    e.respondWith(
+      fetch(req).then(function (res) {
+        if (res && res.status === 200) {
+          var copy = res.clone();
+          caches.open(CACHE_VERSION).then(function (c) { c.put(req, copy); });
+        }
+        return res;
+      }).catch(function () { return caches.match(req); })
+    );
+    return;
+  }
+
+  // Other static assets (images/fonts): cache-first, refresh in background.
   e.respondWith(
     caches.match(req).then(function (hit) {
       var net = fetch(req).then(function (res) {

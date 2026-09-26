@@ -111,11 +111,54 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
    Make the classification **visible in the note** (in its cross-map / "Live-door status") so a reader can
    see the scan happened. See the "MANDATORY CROSS-CHECK STEP" in `CLAUDE.md` § *Content backlog*.
    (Corroboration-only leads don't get a backlog row — but the note must still show the comparison was made.)
+
+   > ### ⬜→✅ REQUIRED IN EVERY NOTE — the five-surface cross-check checklist. (Added 2026-09-24; ev-m mastery page added same day → six boxes.)
+   > The cross-check is **not done, and the note is not finished,** until it carries this block with **every
+   > box ticked** — each either naming what you scanned + its verdict, or marked **N/A with the reason** the
+   > surface doesn't exist for this topic. A ticked box is a claim you actually scanned that surface; **never
+   > tick one you didn't** (same discipline as a `content-review` stamp — *never stamp a check you did not run*).
+   >
+   > **Why this box exists:** on **2026-09-24** a mining run did the cross-check against the **essays only** and
+   > shipped. Nothing flagged it — the essay work was real and correct — and the three-surface gap stayed
+   > invisible until the owner asked "did it scan all of them?" and an audit found it hadn't. The soft
+   > instruction "make the comparison visible" was not enough; this is the same instruction as a hard,
+   > un-skippable checklist. (That run came back clean when finally completed — which is *luck confirmed by a
+   > check*, not a reason the check was optional.)
+   >
+   > Paste this into the note (in its cross-map section) and fill it:
+   >
+   > ```
+   > ## Five-surface cross-check — <date> (run by <session>)
+   > - [ ] library/*.html essay(s)  — <which essay(s), read in full; verdict summary>
+   > - [ ] /answers/*               — <which matched; or "no matching answer" + why>
+   > - [ ] ev-s*.html tab card(s)   — <which card(s); or "no card for this topic">
+   > - [ ] ev-m*.html mastery page(s) — <which mastery page(s); or "no mastery page for this topic">
+   > - [ ] /briefs                  — <which matched; or "none">
+   > - [ ] /sources                 — <which matched; or "none / out of scope (PD-patristic only)">
+   > - Mandatory-fix findings (verdict 2 — errors / retired claims): <list with file+string, or "none">
+   > - Backlog rows logged (verdicts 3/4): <content-backlog.md row refs, or "none">
+   > - "Is the source better than our essay anywhere?" — <where + how, or "no">
+   > ```
+   >
+   > ⚠ The essay box is necessary but **not sufficient** — an essay-only tick with the other five blank is
+   > exactly the failure this checklist exists to make visible. All six surface boxes get an answer (a
+   > verdict *or* an N/A-with-reason) before the note is considered complete. (ev-s = the Evidence-tab card;
+   > ev-m = the mastery page — they are distinct surfaces and a lead can be right on one and stale on the other.)
+   >
+   > **Machine-enforced (CI-blocking):** `tools/check-crosscheck-block.mjs` (also a `tests/content-integrity.test.mjs`
+   > case) fails the build for any note here that lacks a filled block — an unchecked `- [ ]` box, a leftover
+   > `<placeholder>`, or a missing surface line all trip it. The pre-existing corpus is grandfathered in
+   > `tools/crosscheck-baseline.json`; a **new** note must fill the block, not be added to the baseline (there
+   > is deliberately no `--update` that would auto-grandfather a fresh skip). `--audit` lists every note's status.
 5. The agents are already wired to find this folder (see the `docs/book-research/` section of
    `CLAUDE.md` and the pointers in `apologia-author.md` / `apologia-evidence.md`) — no extra wiring
    needed per book.
 6. Deploy per the repo rule: commit the note and **fast-forward push to `main`** (never
    `git checkout main`).
+
+> **Our Sources page:** a book reaches the public `our-sources.html` list automatically once an essay's
+> bibliography cites it (run `node tools/build-our-sources.mjs` after the essay edit). A research note alone does
+> not put it there.
 
 ## Current notes
 - `i-dont-have-enough-faith-to-be-an-atheist.md` — Geisler & Turek (**complete**): cosmological /
@@ -248,6 +291,20 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   slavery" line is **weaker than what our essay already says correctly**, so it is a hazard, not a gap.
   🔴 Also do-not-use: the HuffPost-sourced "more Christians in China than the US by 2030" projection.
   ⚠ Any port of "God himself hung on a cross" **must carry `legacy.html`'s `orthonote` fence**.
+
+- `investigating-the-resurrection-loke.md` — Andrew Loke, *Investigating the Resurrection of Jesus Christ:
+  A New Transdisciplinary Approach* (**Routledge 2020**, **Open Access** CC BY-NC-ND) — **fully mined**: a
+  top-tier analytic-philosophy monograph that argues by **provably-exhaustive elimination** (6
+  appearance-hypotheses + 8 body-hypotheses). Paired essays read in full first: `appearances`, `emptytomb`,
+  `minimalfacts`, `disciplesbelief`, `miracles`. ⭐ **Three genuine improvements** (backlog): ch. 7's
+  **combination-hypotheses / "telephone game" memory-science** answer (Vansina/Rubin/Schudson/Kirk —
+  **absent from our cluster**); the **monotheistic false-witness lever** (1 Cor 15:15); and **Bergeron &
+  Habermas 2015** grounding our "no clinical mechanism" claim. ⚠⚠ **Ours is better in three places — do NOT
+  upgrade us backwards:** he over-includes the empty tomb in the consensus (we tier it as the soft point),
+  concludes "historical certainty" (we stop at "best explanation"), and rests the tomb on **Matthew's
+  guards** (minority position). ⚠ **Denominational tripwire:** debunks **Marian apparitions** — general
+  point only, never in our voice. ⚠ Loke is a **committed defender** (dedicated to W. L. Craig) — port his
+  primaries, weigh his verdicts.
 
 ### ⚠ PARTIAL notes — books NOT owned, NOT read (added 2026-07-26, Tyndale/evangelical mining batch)
 These four were queued as books by `docs/article-research/MINING-BRIEF-tyndale-batch.md`. Because we do

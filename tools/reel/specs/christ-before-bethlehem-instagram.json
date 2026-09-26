@@ -1,0 +1,308 @@
+{
+  "reviewed": {
+    "argument": "2026-09-25",
+    "orthodoxy": "2026-09-25",
+    "neutrality": "2026-09-25",
+    "by": "2026-09-25 scene-locked vertical (Instagram) POSITIVE-CASE reel 'Christ Before Bethlehem' (ev-s3 #arg-christ-before-bethlehem + library/christ-before-bethlehem.html). DEITY/PERSON-OF-CHRIST tier -> DUAL-CONSENSUS: argument + orthodoxy + neutrality, READ-ONLY (Explore; spec hash-verified unchanged by reviewers), reel + IG/X captions gated together, 2 rounds. R1: argument 0 BREAK/4 WEAK, neutrality 1 BREAK/2 WEAK, orthodoxy CLEAN (3 NOTE) - every finding in AUTHORED/compressed on-screen or caption text; every ported VO sentence survived. Fixes: sc4 on-screen 'The sending comes before the birth' (event order; card concedes 'sent' alone need not imply preexistence) -> card's 'The sending is named before the birth'; sc7 'the agent of creation is not among the created things' (a creature-or-Creator RANK claim the card leaves to the divine-identity essays; Prov 8:22 counter) -> card key-claim 'the agent of creation stands before and outside it' + on-screen 'Before and outside the world he made', ref 1 Cor 8:6; Col 1:16 - LENS SEAM: orthodoxy had valued the old line as anti-Arian; resolved by a different premise plus the ported scope line 'This is preexistence - a step toward the deity of Christ' in the close (VO + screen + IG); sc9 'Not a promotion' -> 'Not a man promoted' (Phil 2:9 exaltation); sc5 quote cut marked '...' and 'for someone's sake' restored; sc2 kicker 'THE STORY WE EXPECT' with the rival punchline in cream, not payload gold; X opener attributed ('People say...', card's In-conversation line), close 'Not a man promoted. A descent.' R2: argument STAMPABLE (0 BREAK/0 WEAK), neutrality STAMPABLE (0 BREAK/0 WEAK), orthodoxy CLEAN 0 HERESY (Arian check: no creaturely affirmation; scope line points to deity; clarifier candidates routed to leave-as-is, incl. sc6 'form of God before...' kenotic misread fenced by 'already himself'). Optional polish declined to avoid re-opening the gate: X 'a god' lowercase (orthodoxy note; it is the card's own attributed wording). Full humanity carried by 'born of woman' / 'born in the likeness of men'. NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) POSITIVE-CASE reel 'Christ Before Bethlehem' from the ev-s3 card #arg-christ-before-bethlehem (essay library/christ-before-bethlehem.html). VO PORTED from the card's certified 'In plain English' tier (the upward story; sent/rich/form-of-God key claims), 'The Case, Plainly' Moves 3 + verdict ('Paul never sets out to prove Christ preexisted; he assumes it'; the card's key claim that the agent of creation 'stands, by the logic of the claim, before and outside it';'not the language of a man slowly promoted to heaven; it is the language of a descent - a Christ who was already himself before Bethlehem') and the card's 'In conversation' line ('You can't become poor for someone's sake unless you were rich first'). No objection beat (reel rule): the Dunn/second-Adam and 'firstborn' moves are omitted. Scripture as quoted on the card (ESV wording). Scope: the reel claims PREEXISTENCE only and says so in its close ('This is preexistence - a step toward the deity of Christ', from the card/essay's 'preexistence is a step toward the deity of Christ, not identical with it'); creature-or-Creator is left to the divine-identity essays.",
+  "voiceover": "Did the apostle Paul believe Jesus existed before he was born? Most stories about Jesus run one way — upward: a teacher so revered that, over time, his followers lifted him higher until they called him God. The striking thing about Paul, our earliest Christian writer, is that his story runs the other way. His Christ is sent from the Father — “God sent forth his Son, born of woman.” The sending is named before the birth. “Though he was rich, yet for your sake he became poor.” You can't become poor for someone's sake unless you were rich first. He was “in the form of God” before he was “born in the likeness of men.” He is the one “through whom” the world was made — the agent of creation stands before and outside it. Paul never sets out to prove Christ preexisted; he assumes it, pressed into letter after letter. That is not the language of a man slowly promoted to heaven. It is the language of a descent — a Christ who was already himself before Bethlehem. This is preexistence — a step toward the deity of Christ.",
+  "scenes": [
+    {
+      "dur": 5.2,
+      "vo": "Did the apostle Paul believe Jesus existed before he was born?",
+      "big": [
+        {
+          "t": "Christ",
+          "c": "cream",
+          "s": 96
+        },
+        {
+          "t": "before Bethlehem",
+          "c": "gold",
+          "s": 74
+        }
+      ],
+      "sub": [
+        {
+          "t": "Did Paul believe Jesus existed",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "before he was born?",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        }
+      ]
+    },
+    {
+      "dur": 9.4,
+      "vo": "Most stories about Jesus run one way — upward: a teacher so revered that, over time, his followers lifted him higher until they called him God.",
+      "kicker": "THE STORY WE EXPECT",
+      "lines": [
+        {
+          "t": "A revered teacher,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "lifted higher and higher",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "until his followers",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "called him God.",
+          "c": "cream",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 6.6,
+      "vo": "The striking thing about Paul, our earliest Christian writer, is that his story runs the other way.",
+      "kicker": "PAUL, OUR EARLIEST WRITER",
+      "big": [
+        {
+          "t": "His story runs",
+          "c": "cream",
+          "s": 62
+        },
+        {
+          "t": "the other way.",
+          "c": "gold",
+          "s": 74
+        }
+      ]
+    },
+    {
+      "dur": 8.3,
+      "vo": "His Christ is sent from the Father — “God sent forth his Son, born of woman.” The sending is named before the birth.",
+      "kicker": "SENT",
+      "ref": "Galatians 4:4",
+      "lines": [
+        {
+          "t": "“God sent forth his Son,",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "born of woman.”",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "The sending is named",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        },
+        {
+          "t": "before the birth.",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 8.1,
+      "vo": "“Though he was rich, yet for your sake he became poor.” You can't become poor for someone's sake unless you were rich first.",
+      "kicker": "RICH, THEN POOR",
+      "ref": "2 Corinthians 8:9",
+      "lines": [
+        {
+          "t": "“Though he was rich…",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "…he became poor.”",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "You can't become poor",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        },
+        {
+          "t": "for someone's sake",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        },
+        {
+          "t": "unless you were rich first.",
+          "c": "gold",
+          "s": 44,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 4.9,
+      "vo": "He was “in the form of God” before he was “born in the likeness of men.”",
+      "kicker": "IN THE FORM OF GOD",
+      "ref": "Philippians 2:6–7",
+      "lines": [
+        {
+          "t": "“In the form of God”",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "before he was",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "“born in the",
+          "c": "gold",
+          "s": 52,
+          "f": "serifb"
+        },
+        {
+          "t": "likeness of men.”",
+          "c": "gold",
+          "s": 52,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 6.8,
+      "vo": "He is the one “through whom” the world was made — the agent of creation stands before and outside it.",
+      "kicker": "THROUGH WHOM",
+      "ref": "1 Corinthians 8:6; Colossians 1:16",
+      "lines": [
+        {
+          "t": "The one “through whom",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "are all things.”",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Before and outside",
+          "c": "gold",
+          "s": 52,
+          "f": "serifb"
+        },
+        {
+          "t": "the world he made.",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 6.9,
+      "vo": "Paul never sets out to prove Christ preexisted; he assumes it, pressed into letter after letter.",
+      "kicker": "NOT ARGUED — ASSUMED",
+      "lines": [
+        {
+          "t": "Paul never argues it.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "He assumes it —",
+          "c": "gold",
+          "s": 54,
+          "f": "serifb"
+        },
+        {
+          "t": "letter after letter.",
+          "c": "cream",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 13.2,
+      "vo": "That is not the language of a man slowly promoted to heaven. It is the language of a descent — a Christ who was already himself before Bethlehem. This is preexistence — a step toward the deity of Christ.",
+      "big": [
+        {
+          "t": "Not a man promoted.",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "A descent.",
+          "c": "gold",
+          "s": 84
+        }
+      ],
+      "sub": [
+        {
+          "t": "A Christ who was already himself",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "before Bethlehem.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "Preexistence — a step toward",
+          "c": "cream",
+          "f": "serif",
+          "s": 34
+        },
+        {
+          "t": "the deity of Christ.",
+          "c": "cream",
+          "f": "serif",
+          "s": 34
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        }
+      ]
+    }
+  ]
+}

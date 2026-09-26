@@ -63,7 +63,14 @@
   } catch (e) {}
 
   var POSTHOG_KEY = 'phc_qrovkG3stLv8pvL5NWYuyghweekGuP2S8BscpTf9AFkJ';
-  var POSTHOG_HOST = 'https://eu.i.posthog.com'; /* US: https://us.i.posthog.com */
+  /* Reverse-proxied through our OWN domain via the /ingest rewrites in vercel.json.
+     Real-world ad/tracker blockers (uBlock, Brave, Safari/Firefox ETP, Pi-hole) drop the
+     known third-party host eu.i.posthog.com, which is why PostHog counted a small fraction
+     of Vercel's first-party pageviews. '/ingest' is same-origin, so those blockers can no
+     longer domain-match it — and it needs no CSP change ('self' already covers it).
+     Direct hosts kept for reference: EU ingest https://eu.i.posthog.com ·
+     EU assets https://eu-assets.i.posthog.com · US https://us.i.posthog.com */
+  var POSTHOG_HOST = '/ingest';
 
   /* ---- Self-exclusion (owner / internal traffic) --------------------
      Visiting ANY page with ?nocount=1 sets a per-browser flag that turns
@@ -98,6 +105,7 @@
     try {
       window.posthog.init(POSTHOG_KEY, {
         api_host: POSTHOG_HOST,
+        ui_host: 'https://eu.posthog.com',
         capture_pageview: true,
         autocapture: true,
         persistence: 'localStorage+cookie'
@@ -464,7 +472,26 @@
     try {
       if (adEngaged() && 'Notification' in window && Notification.permission === 'default') {
         var bottom = (deferred || !installShown) ? 60 : 14;
-        adPill('ad-notify', '🔔 Daily reminder', bottom, function () { window.adEnablePush(); });
+        // Tap enables reminders, confirms, then the pill dismisses itself (its job is
+        // done). Guard against double-taps; on failure/denial let them try again.
+        adPill('ad-notify', '🔔 Daily reminder', bottom, function () {
+          var el = document.getElementById('ad-notify');
+          if (!el || el.dataset.busy) return;
+          el.dataset.busy = '1'; el.style.opacity = '0.7';
+          window.adEnablePush().then(function (ok) {
+            el = document.getElementById('ad-notify'); if (!el) return;
+            if (ok) {
+              el.textContent = '✓ Reminders on'; el.style.opacity = '1';
+              setTimeout(function () {
+                el = document.getElementById('ad-notify'); if (!el) return;
+                el.style.transition = 'opacity .4s ease'; el.style.opacity = '0';
+                setTimeout(function () { if (el) el.remove(); }, 450);
+              }, 1600);
+            } else {
+              delete el.dataset.busy; el.style.opacity = '1'; // denied/unsupported — allow retry
+            }
+          });
+        });
       }
     } catch (e) {}
   } catch (e) {}

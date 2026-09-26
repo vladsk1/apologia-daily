@@ -108,6 +108,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96)
 .chev{width:18px;height:18px;stroke:var(--mu);fill:none;stroke-width:2;flex-shrink:0;transition:transform .2s;}
 .card.op .chev{transform:rotate(180deg);}
 .cb{display:none;padding:0 1.5rem 1.5rem 4.5rem;border-top:1px solid var(--b);}
+/* Mobile: reclaim the wasted side space. The desktop .cb left-indent (aligns the
+   opened content under the title, past the number gutter) is far too large on a
+   phone, and the .main side padding compounds it. Tighten both so an opened card
+   uses nearly the full screen width. */
+@media(max-width:768px){
+  .main{padding:2rem 1rem 5rem;}
+  .cb{padding:0 1rem 1.25rem 1rem;}
+  .pro{padding:1.25rem 1rem;}
+  .ap,.ob{padding:1rem 1rem;}
+}
 .card.op .cb{display:block;}
 .fl{font-family:var(--ui);font-size:.62rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gr);background:var(--gr2);padding:3px 10px;border-radius:20px;display:inline-block;margin:1.25rem 0 .75rem;}
 .pe{font-family:var(--ui);font-size:.85rem;background:var(--n4);border-left:3px solid var(--g);padding:10px 14px;border-radius:0 4px 4px 0;color:var(--m);margin-bottom:1.25rem;line-height:1.6;}
@@ -197,6 +207,24 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
     .nav-cta { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.78rem; font-weight:500; background:var(--g,#c8a951); color:var(--n2,#050d1a); padding:6px 16px; border-radius:3px; text-decoration:none; }
       .nav-dashboard { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.8rem; color:rgba(255,255,255,0.65); text-decoration:none; border:1px solid rgba(255,255,255,0.2); padding:5px 12px; border-radius:3px; transition:all 0.15s; }
     .nav-dashboard:hover { color:#fff; border-color:rgba(255,255,255,0.4); }
+    /* Premise-evidence panels ("Research the evidence, premise by premise") */
+    .pv{border:1px solid var(--b,#e2ddd3);border-radius:5px;margin:9px 0;overflow:hidden;background:var(--w,#fff);}
+    .pv[open]{border-color:rgba(200,169,81,.5);}
+    .pv>summary{list-style:none;cursor:pointer;padding:12px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+    .pv>summary::-webkit-details-marker{display:none;}
+    .pv>summary:hover{background:var(--n4,#f7f4ef);}
+    .pv .pvn{font-family:var(--ui,'DM Sans',sans-serif);font-size:.64rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--g,#a88930);}
+    .pv .pvt{font-family:var(--fd,'Playfair Display',serif);font-weight:700;font-size:.98rem;color:var(--n,#0a1628);}
+    .pv .pvchev{margin-left:auto;color:var(--n3,#8a94a3);font-size:.8rem;transition:transform .15s;}
+    .pv[open] .pvchev{transform:rotate(180deg);}
+    .pvb{padding:2px 14px 14px;border-top:1px solid var(--b,#eee7db);}
+    .pvb .pvr{margin:9px 0;font-size:.92rem;line-height:1.55;color:var(--n2,#26364d);}
+    .pvb .pvl{display:block;margin-bottom:1px;font-family:var(--ui,'DM Sans',sans-serif);font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--n3,#8a94a3);}
+    .pvb ol.pvlist{margin:8px 0;padding-left:1.2rem;}
+    .pvb ol.pvlist li{font-size:.92rem;line-height:1.55;color:var(--n2,#26364d);margin:9px 0;}
+    .pvb ol.pvlist li b{color:var(--n,#0a1628);}
+    .pv-more{display:inline-block;margin-top:6px;font-family:var(--ui,'DM Sans',sans-serif);font-size:.8rem;font-weight:600;color:var(--g,#a88930);text-decoration:none;border-bottom:1px solid transparent;}
+    .pv-more:hover{border-color:var(--g,#c8a951);}
   </style>
   <link rel="stylesheet" href="/ad-nav.css">
 
@@ -238,6 +266,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
               <a class="adn-mi" href="/library/"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Deep-Dive Essays</span><span class="adn-mi-dc">Long-form, fully-cited essays.</span></span></a>
               <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Answers</span><span class="adn-mi-dc">The questions people ask most.</span></span></a>
               <a class="adn-mi" href="/sources.html"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Church Fathers &amp; Creeds</span><span class="adn-mi-dc">The early church in its own words, verified.</span></span></a>
+              <a class="adn-mi" href="/our-sources.html"><span class="adn-mi-ic">&#128218;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Our Sources</span><span class="adn-mi-dc">Books and articles our essays cite.</span></span></a>
               <a class="adn-mi" href="/whats-new.html"><span class="adn-mi-ic">&#128240;</span><span class="adn-mi-tx"><span class="adn-mi-nm">What&#39;s New</span><span class="adn-mi-dc">Latest essays, features &amp; reels.</span></span></a>
             </div>
             <div class="adn-mega-col">
@@ -409,6 +438,8 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
 <li><a href="/library/virginbirth.html">The Virgin Birth and Isaiah 7:14: What the Gospels Claim and What History Can Say</a></li>
 <li><a href="/library/respred.html">Did Jesus Predict His Own Resurrection?</a></li>
 <li><a href="/library/typology.html">Christ in All the Scriptures: How the Old Testament Foreshadows Jesus Through Typology</a></li>
+<li><a href="/library/humanity.html">The Full Humanity of Christ: Why It Matters That God Took Real Flesh</a></li>
+<li><a href="/library/paul-divinity.html">Did Paul Invent Jesus's Divinity?</a></li><li><a href="/library/worship-of-jesus.html">Did the First Christians Worship Jesus as God?</a></li><li><a href="/library/jesus-is-yahweh.html">Is Jesus Yahweh? The Divine-Name Argument</a></li><li><a href="/library/christ-before-bethlehem.html">Christ Before Bethlehem: Preexistence in Paul</a></li><li><a href="/library/crucified-messiah.html">Why a Crucified Messiah? The Scandal of the Cross</a></li>
 </ul></div>
 <div class="cl-cat"><h3 class="cl-cat-title">Biblical Reliability</h3>
 <ul class="cl-list">
@@ -450,6 +481,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
 <li><a href="/library/modalism.html">Answering Modalism: One God in Three Persons</a></li>
 <li><a href="/library/eternal_generation.html">The Eternal Generation of the Son</a></li>
 <li><a href="/library/relations.html">What Distinguishes the Persons?</a></li>
+<li><a href="/library/proto-trinitarian.html">Paul the Proto-Trinitarian: The Trinity Before Nicaea</a></li>
 </ul></div>
 <div class="cl-cat"><h3 class="cl-cat-title">The Christian Revolution</h3>
 <ul class="cl-list">
@@ -552,6 +584,8 @@ function enhanceSection(container, id) {
   try { if (window.ADTabIntro) window.ADTabIntro.apply(container, id); } catch (e) {}
   try { if (window.ADCrossLink) window.ADCrossLink.apply(container); } catch (e) {}
   try { if (window.ADDiagram) window.ADDiagram.auto(container); } catch (e) {}
+  try { if (window.ADSocratic) window.ADSocratic.apply(container); } catch (e) {}
+  try { if (window.ADTutorHelp) window.ADTutorHelp.apply(container); } catch (e) {}
 }
 
 /* ── The "Category N of M" eyebrow ──────────────────────────────────────────
@@ -589,7 +623,7 @@ function fixCategoryEyebrow(container, id) {
 /* Deep-linking: evidence-library.html?arg=<slug> (or #arg-<slug>) opens the tab
    containing that argument card and scrolls to it. Cards carry id="arg-<slug>";
    ARG_TAB (generated from the fragments) maps each slug to its tab. */
-var ARG_TAB = {"analogies":"s6","appearances":"s2","archaeology":"s4","beauty":"s1","bigbang":"s5","burial":"s2","cambrian":"s5","canon":"s4","coincidences":"s4","consciousness":"s1","consistency":"s4","cosmic":"s5","daniel70":"s3","deadseascrolls":"s4","desire":"s1","disciplesbelief":"s2","early_church_trinity":"s6","earlycreed":"s3","earlydate":"s4","emptytomb":"s2","eternal_generation":"s6","evil":"s1","eyewitnesses":"s4","finetuning":"s1","hands":"s3","hist_jesus":"s3","holy_spirit":"s6","jesus_as_god_nt":"s6","jesus_claims":"s3","jesuschar":"s3","jewishness":"s4","john11":"s3","kalam":"s1","laws":"s5","leibniz":"s1","manuscript":"s4","mathematics":"s5","messianic_prophecy":"s3","minimal":"s2","modalism":"s6","moral":"s1","multiatt":"s3","names":"s4","nt_trinity":"s6","ontological":"s1","originlife":"s5","ot_trinity":"s6","paul":"s2","phil2":"s3","philosophical_trinity":"s6","postresurrection":"s2","privileged":"s5","prophecy":"s4","reason":"s1","relations":"s6","religious":"s1","respred":"s3","sceptics":"s2","shema":"s6","thomistic":"s1","titles":"s3","trinity_islam":"s6","trinity_jw":"s6","trinity_mormons":"s6","typology":"s3","uniqueness":"s3","virginbirth":"s3","riseofchurch":"s8","persecution":"s8","equality":"s8","compassion":"s8","science-history":"s8","abolition":"s8","progress":"s8"};
+var ARG_TAB = {"analogies":"s6","appearances":"s2","archaeology":"s4","beauty":"s1","bigbang":"s5","burial":"s2","cambrian":"s5","canon":"s4","coincidences":"s4","consciousness":"s1","consistency":"s4","cosmic":"s5","daniel70":"s3","deadseascrolls":"s4","desire":"s1","disciplesbelief":"s2","early_church_trinity":"s6","earlycreed":"s3","earlydate":"s4","emptytomb":"s2","eternal_generation":"s6","evil":"s1","eyewitnesses":"s4","finetuning":"s1","hands":"s3","hist_jesus":"s3","humanity":"s3","paul-divinity":"s3","worship-of-jesus":"s3","jesus-is-yahweh":"s3","christ-before-bethlehem":"s3","crucified-messiah":"s3","holy_spirit":"s6","jesus_as_god_nt":"s6","jesus_claims":"s3","jesuschar":"s3","jewishness":"s4","john11":"s3","kalam":"s1","laws":"s5","leibniz":"s1","manuscript":"s4","mathematics":"s5","messianic_prophecy":"s3","minimal":"s2","modalism":"s6","moral":"s1","multiatt":"s3","names":"s4","nt_trinity":"s6","ontological":"s1","originlife":"s5","ot_trinity":"s6","paul":"s2","phil2":"s3","philosophical_trinity":"s6","postresurrection":"s2","privileged":"s5","prophecy":"s4","reason":"s1","relations":"s6","proto-trinitarian":"s6","religious":"s1","respred":"s3","sceptics":"s2","shema":"s6","thomistic":"s1","titles":"s3","trinity_islam":"s6","trinity_jw":"s6","trinity_mormons":"s6","typology":"s3","uniqueness":"s3","virginbirth":"s3","riseofchurch":"s8","persecution":"s8","equality":"s8","compassion":"s8","science-history":"s8","abolition":"s8","progress":"s8"};
 function activateTab(id) {
   var s = document.querySelectorAll('.sec'); for (var i = 0; i < s.length; i++) s[i].className = 'sec';
   var t = document.querySelectorAll('.tab'); for (var i = 0; i < t.length; i++) t[i].className = 'tab';
@@ -621,7 +655,7 @@ function argExcerpt(el) {
     // Clone so we can drop UI chrome (the tutor box's own placeholder text, the upgrade
     // prompt) without touching the page the reader is looking at.
     var clone = body.cloneNode(true);
-    var chrome = clone.querySelectorAll('.inline-tutor, .upgrade-prompt, script, style');
+    var chrome = clone.querySelectorAll('.inline-tutor, .upgrade-prompt, .soc-launch, script, style');
     for (var i = 0; i < chrome.length; i++) chrome[i].parentNode.removeChild(chrome[i]);
     var title = card.querySelector('.ct');
     var txt = (title ? title.textContent + '\n\n' : '') + (clone.textContent || '');
@@ -1225,5 +1259,8 @@ async function sendFloatQuestion() {
   <script src="/library/tab-intro.js" defer></script>
   <script src="/library/crosslink.js" defer></script>
   <script src="/library/diagram.js" defer></script>
+  <script src="/library/socratic.js" defer></script>
+  <script src="/library/ask-selection.js" defer></script>
+  <script src="/library/tutor-help.js" defer></script>
 </body>
 </html>

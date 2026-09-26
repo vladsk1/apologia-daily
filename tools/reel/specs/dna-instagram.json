@@ -1,0 +1,260 @@
+{
+  "reviewed": {
+    "argument": "2026-09-13",
+    "orthodoxy": "2026-09-13",
+    "by": "2026-09-13 scene-locked vertical (Instagram) POSITIVE-CASE reel. VO ported from certified can-science-explain-the-origin-of-life; hedges/objection-handling removed per owner. Gated READ-ONLY (Explore): argument STAMPABLE, orthodoxy CLEAN (0 heresy; deism-drift test passed - concludes to 'a Mind', not the Trinity; closes Ps 139:14). 1 WEAK applied: 'three billion letters' scoped to a single HUMAN cell (was false as a universal). NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) POSITIVE-CASE reel on DNA / the coded information in the cell. Positive sentences ported from the certified reel can-science-explain-the-origin-of-life.json (library/dna.html + originlife); objection-handling and 'not a proof / argument from ignorance' caveats removed per owner (positive case only). No strawman. Closes on Psalm 139:14.",
+  "voiceover": "Inside every living cell is a code. DNA isn't just a molecule. It's information — written in a four-letter alphabet, spelling out the instructions to build and run a living thing. In a single human cell: three billion letters, in exactly the right order, packed into a space far too small to see. Now, be fair to the science. Real progress has been made — the famous Miller-Urey experiment showed some of life's building blocks can form on their own. But building blocks aren't a living cell. The astonishing part is the coded information itself — the instructions in the very first self-replicating cell. And here is what we know from every case we can observe: coded information — a language, a program, a written message — traces back to a mind. So the code at the root of all life points to a mind behind it. The first cell didn't only need chemistry. It needed a message. As the psalmist wrote, long before anyone had seen a strand of DNA: I am fearfully and wonderfully made.",
+  "scenes": [
+    {
+      "dur": 4.0,
+      "vo": "Inside every living cell is a code.",
+      "big": [
+        {
+          "t": "Inside every cell",
+          "c": "cream",
+          "s": 70
+        },
+        {
+          "t": "— a code.",
+          "c": "gold",
+          "s": 78
+        }
+      ]
+    },
+    {
+      "dur": 9.0,
+      "vo": "DNA isn't just a molecule. It's information — written in a four-letter alphabet, spelling out the instructions to build and run a living thing.",
+      "kicker": "DNA",
+      "lines": [
+        {
+          "t": "Not just a molecule.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Information —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        },
+        {
+          "t": "written in a",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "four-letter alphabet.",
+          "c": "cream",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 7.9,
+      "vo": "In a single human cell: three billion letters, in exactly the right order, packed into a space far too small to see.",
+      "lines": [
+        {
+          "t": "In one human cell:",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "three billion letters,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "in exactly the right order —",
+          "c": "gold",
+          "f": "serifb",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "in a space too",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "small to see.",
+          "c": "cream",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "dur": 9.3,
+      "vo": "Now, be fair to the science. Real progress has been made — the famous Miller-Urey experiment showed some of life's building blocks can form on their own.",
+      "kicker": "BE FAIR TO THE SCIENCE",
+      "lines": [
+        {
+          "t": "Miller-Urey showed",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "life's building blocks",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "can form on their own.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "A real landmark.",
+          "c": "dim",
+          "f": "serif",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "dur": 9.4,
+      "vo": "But building blocks aren't a living cell. The astonishing part is the coded information itself — the instructions in the very first self-replicating cell.",
+      "kicker": "THE ASTONISHING PART",
+      "lines": [
+        {
+          "t": "Building blocks",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "aren't a living cell.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "The coded information",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "is the wonder.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ]
+    },
+    {
+      "dur": 9.0,
+      "vo": "And here is what we know from every case we can observe: coded information — a language, a program, a written message — traces back to a mind.",
+      "kicker": "WHAT WE ALWAYS SEE",
+      "lines": [
+        {
+          "t": "Every code we can trace —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "language, software,",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "a written message —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "comes from a mind.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        }
+      ]
+    },
+    {
+      "dur": 8.9,
+      "vo": "So the code at the root of all life points to a mind behind it. The first cell didn't only need chemistry. It needed a message.",
+      "big": [
+        {
+          "t": "The first cell",
+          "c": "cream",
+          "s": 66
+        },
+        {
+          "t": "needed more",
+          "c": "cream",
+          "s": 66
+        },
+        {
+          "t": "than chemistry.",
+          "c": "gold",
+          "s": 70
+        }
+      ],
+      "sub": [
+        {
+          "t": "It needed a message.",
+          "c": "cream",
+          "f": "serif",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "dur": 7.0,
+      "vo": "As the psalmist wrote, long before anyone had seen a strand of DNA: I am fearfully and wonderfully made.",
+      "big": [
+        {
+          "t": "“Fearfully and",
+          "c": "cream",
+          "s": 68
+        },
+        {
+          "t": "wonderfully made.”",
+          "c": "gold",
+          "s": 66
+        }
+      ],
+      "sub": [
+        {
+          "t": "— Psalm 139:14",
+          "c": "dim",
+          "f": "serif",
+          "s": 42
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    }
+  ]
+}

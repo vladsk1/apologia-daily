@@ -1,14 +1,16 @@
-/* ask-selection.js — active-reading helper for the deep-dive essays. Select any
-   passage in the essay body and a small "Ask about this" button appears; tapping
-   it opens the existing AI Tutor with your selection pre-filled, so a reader can
-   interrogate the exact sentence that puzzles them without retyping it.
+/* ask-selection.js — active-reading helper for the deep-dive essays AND the
+   Evidence Library hub cards. Select any passage in an essay body (.art-body) or
+   an argument card's body (.cb) and a small "Ask about this" button appears;
+   tapping it opens the existing AI Tutor with your selection pre-filled, so a
+   reader can interrogate the exact sentence that puzzles them without retyping it.
 
    It only surfaces the tutor that is already on the page (window.toggleFloatTutor
    + #float-input + sendFloatQuestion) — it adds no new endpoint and no new
    content. Interaction plumbing only; no doctrinal gate.
 
-   Usage: one include per essay — <script src="/library/ask-selection.js" defer></script>
-   Requires the essay's inline float-tutor (present on all deep-dive essays). */
+   Usage: one include per essay AND on evidence-library.html —
+     <script src="/library/ask-selection.js" defer></script>
+   Requires the page's float-tutor (present on all deep-dive essays and the hub). */
 (function(){
   if(window.__askSelection) return; window.__askSelection = true;
 
@@ -44,16 +46,24 @@
 
   function hide(){ if(btn) btn.style.display = 'none'; }
 
+  // The essay body (.art-body) or a single argument card body (.cb), never the
+  // tutor panel, the nav, or the "Read it with the AI tutor" helper box itself.
+  function containerOf(node){
+    var el = node && (node.nodeType === 1 ? node : node.parentElement);
+    if(!el) return null;
+    if(el.closest('.reader-help')) return null;
+    return el.closest('.art-body, .cb');
+  }
+
   function currentSelectionInBody(){
     var sel = window.getSelection && window.getSelection();
     if(!sel || sel.isCollapsed || !sel.rangeCount) return null;
     var text = sel.toString().replace(/\s+/g, ' ').trim();
     if(text.length < MIN || text.length > MAX) return null;
-    var body = document.querySelector('.art-body');
-    if(!body) return null;
     var range = sel.getRangeAt(0);
-    // both ends must sit inside the essay body (not the tutor panel or nav)
-    if(!body.contains(range.startContainer) || !body.contains(range.endContainer)) return null;
+    // both ends must sit inside the SAME essay body or card body
+    var c1 = containerOf(range.startContainer), c2 = containerOf(range.endContainer);
+    if(!c1 || c1 !== c2) return null;
     return { text: text, rect: range.getBoundingClientRect() };
   }
 
@@ -79,7 +89,7 @@
       if(!isOpen) window.toggleFloatTutor();
       var input = document.getElementById('float-input');
       if(input){
-        input.value = 'Help me understand this part of the essay: "' + text + '"';
+        input.value = 'Help me understand this passage: "' + text + '"';
         setTimeout(function(){ try{ input.focus(); input.selectionStart = input.selectionEnd = input.value.length; }catch(e){} }, 120);
       }
       if(window.adTrack) window.adTrack('essay_ask_selection', { len: text.length });

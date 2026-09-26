@@ -273,7 +273,8 @@
         "daily-quiz.html",
         "answers/_data.json",
         "answers/how-many-prophecies-did-jesus-fulfill.html",
-        "library/active-reading-data.json"
+        "library/active-reading-data.json",
+        "our-sources.json"
       ],
       "netting": "phrase"
     },
@@ -483,7 +484,7 @@
     {
       "id": "minimal-facts-virtually-all",
       "retired": "2026-08-07",
-      "what": "Saying the minimal facts are accepted by 'virtually all' / 'nearly all' scholars or historians — and, worse, including the EMPTY TOMB in that set.",
+      "what": "Saying the minimal facts are accepted by 'virtually all' / 'nearly all' scholars or historians — and, worse, including the EMPTY TOMB in that set. Or saying all five 'even atheist historians accept', which carries the empty tomb into the set sceptics grant.",
       "why": "library/minimalfacts.html states Habermas's second criterion as acceptance by 'the great majority' of scholars, and says in terms that the case 'is strongest when it leans on the facts the critics themselves grant, and weakest when it inflates \"majority\" into \"virtually all\".' It also records the live methodological critique (Carrier; Cavin & Colombetti; the GCRR dataset analysis) that Habermas's percentages are his own tally of the literature, not an auditable poll. library/emptytomb.html goes further: the empty tomb is 'noticeably less secure than the near-consensus that the disciples had experiences they took to be appearances', and Habermas himself flags it as the more disputed fifth item. So 'virtually all' overstates the consensus, and applying it to the empty tomb contradicts two of our own certified essays.",
       "instead": "Say 'the great majority of critical scholars, sceptics included'. Keep the tiers distinct: crucifixion and the disciples' sincere belief are near-universally granted and can be named as such; group appearances by fewer; the empty tomb by fewer still — present it as the more disputed fifth item, exactly as Habermas does. NOTE the legitimate uses this must not catch: 'virtually all scholars' is accurate about the EXISTENCE of Jesus, about the authenticity of Josephus Ant. 20.9.1 and Tacitus Annals 15.44, and about Pauline authorship of Romans/1-2 Corinthians/Galatians. Those are different claims and they stay.",
       "patterns": [
@@ -494,7 +495,9 @@
         "facts (are )?granted by nearly all scholars",
         "facts granted by virtually the entire",
         "these five facts are accepted by virtually all",
-        "minimal facts.{0,40}using only facts accepted by virtually all"
+        "minimal facts.{0,40}using only facts accepted by virtually all",
+        "(five|5|the minimal|the five) (minimal )?facts (that )?even atheist (historians|scholars) accept",
+        "(five|5) (minimal )?facts accepted (even )?by (even )?atheist (historians|scholars)"
       ],
       "allow": [],
       "netting": "claim",
@@ -504,14 +507,23 @@
           "Name the 5 minimal facts accepted by virtually all critical scholars.",
           "Five facts accepted by virtually all critical scholars point overwhelmingly to the resurrection.",
           "A handful of facts are granted by nearly all scholars, believing or not.",
-          "Facts granted by virtually the entire scholarly spectrum — believer and skeptic alike."
+          "Facts granted by virtually the entire scholarly spectrum — believer and skeptic alike.",
+          "Learn the five facts that even atheist historians accept.",
+          "Five facts accepted by atheist historians. One conclusion: Jesus rose from the dead.",
+          "The five minimal facts accepted even by atheist historians."
         ],
         "must_not_fire": [
           "The existence of Jesus of Nazareth is accepted by virtually all scholars, including sceptics and non-Christians.",
           "Josephus's reference to James, the brother of Jesus, is accepted as authentic by virtually all scholars.",
           "Romans, 1–2 Corinthians and Galatians are accepted as authentically Pauline by virtually all critical scholars.",
           "The case is strongest when it leans on the facts the critics themselves grant, and weakest when it inflates “majority” into “virtually all”.",
-          "Five facts are accepted by the great majority of critical scholars, including atheists."
+          "Five facts are accepted by the great majority of critical scholars, including atheists.",
+          "This is the bedrock that even skeptical historians affirm.",
+          "Learn the facts accepted by the great majority of scholars who study the subject, including the sceptical ones.",
+          "There are core facts even atheist historians accept — the crucifixion, the disciples' experiences, and Paul's conversion.",
+          "Stick to the facts even atheist historians accept.",
+          "Start with the facts even atheist historians accept — the crucifixion and the disciples' experiences.",
+          "Not all the facts even atheist historians accept carry the same weight."
         ]
       },
       "rebuild_debt": null
@@ -525,7 +537,9 @@
       "patterns": [
         "the divine figure (of|in) Daniel 7",
         "Daniel 7'?s divine figure",
-        "Son of Man\\s*[—-]\\s*the divine figure"
+        "Son of Man\\s*[—-]\\s*the divine figure",
+        "divine Son of Man",
+        "each title a divine claim"
       ],
       "allow": [],
       "netting": "phrase",
@@ -535,17 +549,47 @@
           "in direct allusion to the divine figure of Daniel 7 who rides the clouds",
           "Jesus takes up the divine figure in Daniel 7",
           "Daniel 7's divine figure receives everlasting dominion",
-          "Son of Man — the divine figure who comes on the clouds"
+          "Son of Man — the divine figure who comes on the clouds",
+          "his claim to be the divine Son of Man of Daniel 7",
+          "at his trial accepts the divine Son of Man identity",
+          "Son of Man from Daniel 7, Kyrios as the divine name YHWH, and I AM from Exodus 3 — understand the Jewish background that makes each title a divine claim."
         ],
         "must_not_fire": [
           "that Daniel 7 never describes a divine figure at all",
           "Whom Daniel's figure stands for is disputed",
           "Daniel 7's heavenly figure who comes on the clouds",
           "A contested minority case that Daniel 7's Son of Man was already a divine figure in Judaism.",
-          "the corporate reading takes the figure as a symbol for faithful Israel"
+          "the corporate reading takes the figure as a symbol for faithful Israel",
+          "Focus on the Jewish background of Son of Man (Daniel 7), Kyrios and I AM, and on what Jesus did with each."
         ]
       },
-      "rebuild_debt": "Needs a negation-guarded CLAIM net. The three patterns are literal adjacencies and miss 'the figure in Daniel 7 is divine', 'Daniel's Son of Man is a divine individual', and 'this figure is standing on God's side of a line' - the last of which was LIVE on ev-s3.html:876, a free indexed deity-tier surface, and was found by apologia-neutrality rather than by this net. A fourth pattern was dropped on 2026-08-11 because it fired on library/titles.html's own statement of the objection it answers. 2026-08-14: the predication form 'Son of Man ... actually a DIVINE claim' surfaced on daily-mix.html:158 (the GRADED quiz) and was fixed by softening the question to 'amount to a divine-status claim on his lips' + resting the answer on cloud-coming; the negation-guarded CLAIM net remains owed (a literal net risks firing on titles.html's hedged 'contested minority case that Daniel 7's Son of Man was already a divine figure', which must_not_fire)."
+      "rebuild_debt": "Needs a negation-guarded CLAIM net. The three patterns are literal adjacencies and miss 'the figure in Daniel 7 is divine', 'Daniel's Son of Man is a divine individual', and 'this figure is standing on God's side of a line' - the last of which was LIVE on ev-s3.html:876, a free indexed deity-tier surface, and was found by apologia-neutrality rather than by this net. A fourth pattern was dropped on 2026-08-11 because it fired on library/titles.html's own statement of the objection it answers. 2026-08-14: the predication form 'Son of Man ... actually a DIVINE claim' surfaced on daily-mix.html:158 (the GRADED quiz) and was fixed by softening the question to 'amount to a divine-status claim on his lips' + resting the answer on cloud-coming; the negation-guarded CLAIM net remains owed (a literal net risks firing on titles.html's hedged 'contested minority case that Daniel 7's Son of Man was already a divine figure', which must_not_fire). 2026-09-24: added literal pattern \"divine Son of Man\" after the four-surface audit found \"the divine Son of Man of Daniel 7\" LIVE and unfenced on ev-s3.html:652 + :693 (free indexed deity tab) — the mechanical net was green over it. Pattern validated: fires on both found strings, does not fire on the must_not_fire hedge. The broader negation-guarded CLAIM net remains owed. 2026-09-26: the added phrase pattern 'each title a divine claim' (from study-plans.html) has no negation guard, so 'does not make each title a divine claim' would fire; 0 hits today, accepted as phrase-netted."
+    },
+    {
+      "id": "mark-attests-appearances",
+      "retired": "2026-09-26",
+      "what": "Presenting Mark's undisputed text as NARRATING resurrection appearances, or counting Mark among the appearance sources without noting that its undisputed text breaks off at the empty tomb (e.g. 'Paul, Mark, Luke, and John each provide independent attestation of the appearances').",
+      "why": "library/appearances.html:144 says Mark 'points forward to appearances in Galilee (Mark 16:7) even though its undisputed text breaks off at the empty tomb', and goes on: 'Mark's own narrator promises the Galilee meetings he simply does not stay to narrate. Absence of narration is not absence of tradition.' The essay therefore DOES count Mark as a line of attestation, via 16:7. The defect is the missing fence: implying Mark narrates the appearances. Mark 16:9-20 is widely judged by textual critics to be a later addition (it is held as canonical Scripture by several traditions; that is a separate question). Found live on study-plans.html (resurrection D8) by the 2026-09-25 first gate.",
+      "instead": "Port library/appearances.html:144: 'Mark, the earliest Gospel, points forward to appearances in Galilee (Mark 16:7) even though its undisputed text breaks off at the empty tomb … Mark's own narrator promises the Galilee meetings he simply does not stay to narrate. Absence of narration is not absence of tradition.' Mark may be counted among the streams on the essay's own terms, fenced this way.",
+      "patterns": [
+        "Mark,? Luke,? and John (each )?(provides?|gives?|offers?) independent attestation of the (resurrection )?appearances",
+        "(?<!longer ending of )Mark('s Gospel)? (narrates|records|describes) (the )?(resurrection )?appearances"
+      ],
+      "allow": [],
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "Focus on the independence of the sources — Paul, Mark, Luke, and John each provide independent attestation of the appearances.",
+          "Mark records the resurrection appearances in Galilee."
+        ],
+        "must_not_fire": [
+          "Mark, the earliest Gospel, points forward to appearances in Galilee (Mark 16:7) even though its undisputed text breaks off at the empty tomb.",
+          "Mark's own narrator promises the Galilee meetings he simply does not stay to narrate.",
+          "Mark attests the appearance tradition through the promise of Mark 16:7.",
+          "The longer ending of Mark narrates appearances, but it is widely judged a later addition.",
+          "Focus on the independence of the sources — and on how the essay handles Mark."
+        ]
+      }
     },
     {
       "id": "gethsemane-proves-distinct-wills",

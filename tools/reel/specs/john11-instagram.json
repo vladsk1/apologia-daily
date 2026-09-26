@@ -1,0 +1,365 @@
+{
+  "reviewed": {
+    "argument": "2026-09-24",
+    "orthodoxy": "2026-09-24",
+    "neutrality": "2026-09-24",
+    "by": "2026-09-24 scene-locked vertical (Instagram) reel + X card on John 1:1 (ev-s3 #arg-john11). POSITIVE CASE, no objection beat. Wording PORTED from the certified card's 'The Case, Plainly' tier + library/john11.html. Deity/Trinity tier -> DUAL-CONSENSUS, gated READ-ONLY (Explore), 3 rounds. R1: orthodoxy CLEAN (1 NOTE, X post 1:3 gloss); argument 0 BREAK/4 WEAK; neutrality 0 BREAK/5 WEAK - fixes: John 1:3 quoted in full (ESV, 'without him was not any thing made that was made') before 'not among the things made'; 'face-to-face' gloss dropped (pros only 'suggests' relationship); 'THE WHOLE GOSPEL AGREES' -> 'THE THREAD RUNS THROUGH JOHN'; Thomas '- and Jesus receives it'; 17:5 framed as prayer; birth/family-tree/baptism list ported. R2: neutrality BREAK / orthodoxy CONCERN - the R1 fix had ported 'There are two who can be with one another', which the OWNER DECLINED for compressed tiers (john11.html stamp, 2026-08-11: reads 'like two Gods') -> replaced with the card's 'two claims side by side, not collapsed into one'; X card/post 1:3 completed with 'that was made'. R3: argument STAMPABLE 0 BREAK/0 WEAK, orthodoxy CLEAN 0 HERESY (clarifier candidates: none), neutrality STAMPABLE 0 BREAK. Full humanity carried by John 1:14. Scene durs ESTIMATED (edge-tts host blocked in the cloud sandbox) - render-intro.py rewrites them from real speech when voiced locally (timing only, no re-gate). NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) reel on John 1:1 (Evidence Library, Jesus tab, ev-s3 card 06 'John 1:1 and the Pre-existence of Christ'). POSITIVE CASE ONLY - no objection beat (the JW 'a god' reply stays in the essay/card). Wording PORTED from the certified card's 'The Case, Plainly' tier (was-not-began; with God = personally distinct, not another name for the Father; 'all things were made through him' puts the Word on the Maker's side of the line; 'two truths, held together, not one traded away for the other'; 17:5; 20:28; 'that Word became flesh, and lived among us') and library/john11.html. Deity/Trinity tier -> dual-consensus (argument + orthodoxy + neutrality). Calibration: 'fully shares the one divine nature' is grounded by John 1:3 context + the distinction clause, not asserted from the missing-article grammar alone (per john11.html stamp). Full humanity carried by 'the Word became flesh' (John 1:14). Per-scene dur ESTIMATED; render-intro.py rewrites them from the real speech length when voiced locally.",
+  "voiceover": "Almost any story about Jesus starts where a life starts — a birth, a family tree, a river baptism. The Gospel of John starts before the beginning of anything at all. In the beginning was the Word, and the Word was with God, and the Word was God. Who is the Word? A few lines later John tells us: the Word became flesh and dwelt among us. The Word is Jesus of Nazareth. First, notice the verb. Of created things, John uses a verb that means came to be. Of the Word, he says: was. When the beginning happened, the Word already was. Second: the Word was with God. John sets two claims side by side, not collapsed into one. The Word is personally distinct from the Father — not another name for him. Third: the Word was God. And two verses later John says: all things were made through him, and without him was not any thing made that was made. So the Word is not among the things made. He stands on the Maker's side of the line between Creator and creation. So John holds two truths together. Distinct from the Father. And fully sharing the one divine nature. Not one traded away for the other. And the theme runs all through John's Gospel. Jesus prays: Father, glorify me in your own presence with the glory that I had with you before the world existed. And when Thomas sees the risen Jesus, he answers him: My Lord and my God — and Jesus receives it. In the beginning was the Word. The Word was God. And that Word became flesh, and lived among us. Read the full case — the Greek, the history, and the questions people ask — at apologiadaily.com.",
+  "scenes": [
+    {
+      "dur": 11.3,
+      "vo": "Almost any story about Jesus starts where a life starts — a birth, a family tree, a river baptism. The Gospel of John starts before the beginning of anything at all.",
+      "big": [
+        {
+          "t": "Before the",
+          "c": "cream",
+          "s": 64
+        },
+        {
+          "t": "beginning",
+          "c": "cream",
+          "s": 64
+        },
+        {
+          "t": "began.",
+          "c": "gold",
+          "s": 82
+        }
+      ]
+    },
+    {
+      "dur": 5.4,
+      "vo": "In the beginning was the Word, and the Word was with God, and the Word was God.",
+      "kicker": "JOHN 1:1",
+      "lines": [
+        {
+          "t": "“In the beginning",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "was the Word,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "and the Word",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "was with God,",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "and the Word",
+          "c": "gold",
+          "s": 52,
+          "f": "serifb"
+        },
+        {
+          "t": "was God.”",
+          "c": "gold",
+          "s": 60,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 10.0,
+      "vo": "Who is the Word? A few lines later John tells us: the Word became flesh and dwelt among us. The Word is Jesus of Nazareth.",
+      "kicker": "WHO IS THE WORD? · JOHN 1:14",
+      "lines": [
+        {
+          "t": "“The Word became flesh",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "and dwelt among us.”",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "The Word is",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "Jesus of Nazareth.",
+          "c": "gold",
+          "s": 52,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 13.2,
+      "vo": "First, notice the verb. Of created things, John uses a verb that means came to be. Of the Word, he says: was. When the beginning happened, the Word already was.",
+      "kicker": "ONE · “WAS,” NOT “BEGAN”",
+      "lines": [
+        {
+          "t": "Created things",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "came to be.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "When the beginning",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "happened, the Word",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "already was.",
+          "c": "gold",
+          "s": 56,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 11.9,
+      "vo": "Second: the Word was with God. John sets two claims side by side, not collapsed into one. The Word is personally distinct from the Father — not another name for him.",
+      "kicker": "TWO · “WITH GOD”",
+      "lines": [
+        {
+          "t": "Two claims, side by side —",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "not collapsed into one.",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Personally distinct",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        },
+        {
+          "t": "from the Father.",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 16.5,
+      "vo": "Third: the Word was God. And two verses later John says: all things were made through him, and without him was not any thing made that was made. So the Word is not among the things made. He stands on the Maker's side of the line between Creator and creation.",
+      "kicker": "THREE · “WAS GOD”",
+      "lines": [
+        {
+          "t": "“All things were made",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "through him, and without him",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "was not any thing made",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "that was made.” (1:3)",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "On the Maker's side",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        },
+        {
+          "t": "of the line.",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 10.7,
+      "vo": "So John holds two truths together. Distinct from the Father. And fully sharing the one divine nature. Not one traded away for the other.",
+      "big": [
+        {
+          "t": "Two truths,",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "held together.",
+          "c": "gold",
+          "s": 66
+        }
+      ],
+      "sub": [
+        {
+          "t": "Distinct from the Father —",
+          "c": "cream",
+          "s": 38,
+          "f": "serif"
+        },
+        {
+          "t": "fully sharing the one divine nature.",
+          "c": "cream",
+          "s": 36,
+          "f": "serif"
+        }
+      ]
+    },
+    {
+      "dur": 16.1,
+      "vo": "And the theme runs all through John's Gospel. Jesus prays: Father, glorify me in your own presence with the glory that I had with you before the world existed. And when Thomas sees the risen Jesus, he answers him: My Lord and my God — and Jesus receives it.",
+      "kicker": "THE THREAD RUNS THROUGH JOHN",
+      "lines": [
+        {
+          "t": "“The glory that I had",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "with you before",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "the world existed.” (17:5)",
+          "c": "cream",
+          "s": 40
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Thomas, to Jesus:",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "“My Lord and my God!”",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        },
+        {
+          "t": "(20:28)",
+          "c": "cream",
+          "s": 38
+        }
+      ]
+    },
+    {
+      "dur": 8.1,
+      "vo": "In the beginning was the Word. The Word was God. And that Word became flesh, and lived among us.",
+      "big": [
+        {
+          "t": "The Word was God.",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "And the Word",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "became flesh.",
+          "c": "gold",
+          "s": 68
+        }
+      ],
+      "sub": [
+        {
+          "t": "And lived among us.",
+          "c": "cream",
+          "s": 40,
+          "f": "serif"
+        }
+      ]
+    },
+    {
+      "dur": 7.4,
+      "vo": "Read the full case — the Greek, the history, and the questions people ask — at apologiadaily.com.",
+      "big": [
+        {
+          "t": "John 1:1",
+          "c": "gold",
+          "s": 72
+        },
+        {
+          "t": "The full case",
+          "c": "cream",
+          "s": 52
+        }
+      ],
+      "sub": [
+        {
+          "t": "The Greek, the history, the questions.",
+          "c": "cream",
+          "s": 36,
+          "f": "serif"
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        }
+      ]
+    }
+  ]
+}

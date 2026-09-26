@@ -6,7 +6,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { runOffline, CASES } from '../tools/test-crisis-routing.mjs';
-import { isBoilerplateLine } from '../tools/check-stamp-integrity.mjs';
+import { isBoilerplateLine, dropDateModifiedOnlyPairs } from '../tools/check-stamp-integrity.mjs';
+import { latestReviewDate, syncHtml } from '../tools/sync-date-modified.mjs';
 
 // Every /answers/* opening must LEAD WITH THE ANSWER — the short-form rule.
 // The lint is a curated regex net for known front-loaded-opening tells; it
@@ -599,4 +600,76 @@ test('mirror parity module can be imported without exiting the process', async (
   const m = await import('../tools/check-mirror-parity.mjs');
   assert.equal(typeof m.findDivergences, 'function');
   assert.equal(typeof m.mirrorsOf, 'function');
+});
+
+// JSON-LD dateModified must never be older than the page's latest review date —
+// the freshness signal search engines and AI answer engines read. On 2026-09-23,
+// 109 of 113 stamped pages had drifted (e.g. manuscript.html reviewed 2026-08-29,
+// schema still 2026-06-28). Fix: node tools/sync-date-modified.mjs
+test('dateModified is on or after each page\'s latest review date', () => {
+  assert.doesNotThrow(
+    () => execFileSync('node', ['tools/sync-date-modified.mjs', '--check'], { cwd: process.cwd(), stdio: 'pipe' }),
+    'a stamped page has a stale dateModified — run: node tools/sync-date-modified.mjs',
+  );
+});
+
+test('sync-date-modified: latest lens date wins, later dates are kept', () => {
+  assert.equal(latestReviewDate({ argument: '2026-07-01', orthodoxy: '2026-08-29', citations: '2026-08-02 (note)', by: '2027-01-01' }), '2026-08-29',
+    'the `by` note must not count as a review date');
+  const html = '{"datePublished":"2026-06-28","dateModified":"2026-06-28"} {"dateModified": "2026-09-30"}';
+  const { html: out, stale } = syncHtml(html, '2026-08-29');
+  assert.equal(stale.length, 1);
+  assert.match(out, /"datePublished":"2026-06-28","dateModified":"2026-08-29"/);
+  assert.match(out, /"dateModified": "2026-09-30"/, 'a dateModified later than the review is left alone');
+});
+
+// The stamp-integrity exemption for date syncs must be a PAIR rule: a line whose
+// ONLY change is the dateModified value is cancelled, but the same JSON-LD line
+// with its description rewritten must still be flagged.
+test('stamp-integrity ignores dateModified-only changes and nothing else', () => {
+  const before = '-<script type="application/ld+json">{"@type":"Article","description":"Old words","dateModified":"2026-06-28"}</script>';
+  const after = '+<script type="application/ld+json">{"@type":"Article","description":"Old words","dateModified":"2026-08-29"}</script>';
+  assert.deepEqual(dropDateModifiedOnlyPairs([before, after]), []);
+  const rewritten = '+<script type="application/ld+json">{"@type":"Article","description":"New words","dateModified":"2026-08-29"}</script>';
+  assert.equal(dropDateModifiedOnlyPairs([before, rewritten]).length, 2);
+  assert.equal(dropDateModifiedOnlyPairs(['+<p>prose "dateModified":"2026-01-01"</p>']).length, 1);
+});
+
+// Every research-library mining note (docs/{book,video,article}-research/*.md, minus
+// README/INDEX/MINING-BRIEF) that is not grandfathered must carry a FILLED five-surface
+// cross-check block (six surface boxes since ev-m was added 2026-09-24). This is the
+// machine backstop for the checklist the READMEs require — added after a 2026-09-24 run
+// did the cross-check on the essays only and shipped.
+test('research notes carry a filled five-surface cross-check block (non-grandfathered)', () => {
+  assert.doesNotThrow(
+    () => execFileSync('node', ['tools/check-crosscheck-block.mjs'], { cwd: process.cwd(), stdio: 'pipe' }),
+    'a research note is missing/incomplete its five-surface cross-check block — run: node tools/check-crosscheck-block.mjs',
+  );
+});
+
+// Prove the guard is not vacuous: with the whole corpus grandfathered, the live check is
+// always green, so the matcher itself must be pinned. violationReason() must PASS a filled
+// block and CATCH each way a note can fake or skip it (missing block, unchecked box,
+// unfilled placeholder, missing surface line). Six surface boxes required (ev-s tab card
+// AND ev-m mastery page are distinct surfaces).
+test('cross-check block matcher catches every incomplete-block failure mode', async () => {
+  const { violationReason } = await import('../tools/check-crosscheck-block.mjs');
+  const filled = [
+    '## Five-surface cross-check — 2026-09-24 (run by session)',
+    '- [x] library/foo.html essay — read in full; corroboration',
+    '- [x] /answers/bar — no matching answer',
+    '- [x] ev-s3.html card — corroboration',
+    '- [x] ev-m-foo.html mastery page — corroboration',
+    '- [x] /briefs — none',
+    '- [x] /sources — none / out of scope',
+    '- Mandatory-fix findings: none',
+    '## Next',
+  ].join('\n');
+  assert.equal(violationReason(filled), null, 'a properly filled block must pass');
+  assert.match(violationReason('# note\n\nprose only\n'), /no "Five-surface cross-check" block/);
+  assert.match(violationReason(filled.replace('- [x] /briefs — none', '- [ ] /briefs')), /UNCHECKED box/);
+  assert.match(violationReason(filled.replace('read in full; corroboration', '<which essay(s), read in full>')), /placeholder/);
+  assert.match(violationReason(filled.replace('- [x] /sources — none / out of scope', '- [x] misc — n/a')), /does not mention surface/);
+  // Dropping the ev-m line must be caught (the surface added 2026-09-24).
+  assert.match(violationReason(filled.replace('- [x] ev-m-foo.html mastery page — corroboration\n', '')), /does not mention surface|6 surface boxes/);
 });

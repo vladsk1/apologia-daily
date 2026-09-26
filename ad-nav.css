@@ -22,9 +22,19 @@ body{padding-top:0 !important}
 .adn-signout{font-size:.8rem;background:none;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);padding:6px 12px;border-radius:4px;cursor:pointer}
 .adn-cta{font-size:.82rem;font-weight:500;background:#c8a951;color:#0a1628;padding:8px 18px;border-radius:4px;text-decoration:none;white-space:nowrap}
 .adn-cta:hover{background:#e8cf87}
+/* The full row (logo + 9 links + Sign in/Start Free) needs ~1,350px. Between the
+   burger breakpoint (1280px) and 1440px, tighten it so it fits instead of pushing
+   the page wider than the screen (measured: 1331px of content at 1024-1280px). */
+@media(min-width:1281px) and (max-width:1440px){
+  .adn-nav{gap:1rem}
+  .adn-collapse{gap:1rem}
+  .adn-links{gap:1.05rem}
+  .adn-links a,.adn-more{font-size:.78rem;letter-spacing:.02em}
+  .adn-right{gap:.75rem}
+}
 .adn-burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px;margin-left:auto}
 .adn-burger i{display:block;width:23px;height:2px;background:#fff;border-radius:2px}
-@media(max-width:860px){
+@media(max-width:1280px){
   .adn-burger{display:flex;order:3;margin-left:.4rem}
   /* keep the bar as a row; only the links drop down behind the burger */
   .adn-collapse{display:flex;order:2;flex:1;min-width:0;gap:0}
@@ -66,7 +76,7 @@ body{padding-top:0 !important}
 .adn-mega-foot a:hover{color:#c8a951}
 
 /* mobile: the mega unfolds into the burger drawer as grouped, stacked sections */
-@media(max-width:860px){
+@media(max-width:1280px){
   .adn-links>li.adn-has-mega{position:static}
   .adn-mega{display:block;position:static;box-shadow:none;border-bottom:0;background:transparent}
   .adn-mega-in{display:block;max-width:none;padding:0}

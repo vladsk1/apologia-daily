@@ -20,7 +20,7 @@ Needs internet for edge-tts (blocked in the cloud sandbox; run locally). Output 
 git-ignored. Usage:
     python tools/reel/render-intro.py tools/reel/specs/intro-god.json \
         --out tools/reel/output/lessons/intro-god.mp4
-    [--aspect wide|vertical|square] [--voice-name en-GB-RyanNeural] [--rate +15%]
+    [--aspect wide|vertical|square] [--voice-name en-GB-RyanNeural] [--rate +10%]
     [--pad 0.5] [--lead 0.3]
 """
 import argparse, os, sys, json, subprocess, re, asyncio
@@ -56,7 +56,7 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--aspect", default="wide")
     ap.add_argument("--voice-name", default="en-GB-RyanNeural")
-    ap.add_argument("--rate", default="+15%")
+    ap.add_argument("--rate", default="+10%")  # owner standard 2026-09-24: +15% sounded slightly fast
     ap.add_argument("--pad", type=float, default=0.5)
     ap.add_argument("--lead", type=float, default=0.3)
     a = ap.parse_args()

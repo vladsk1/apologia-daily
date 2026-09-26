@@ -141,6 +141,7 @@
 
     /* ── VIDEO GRID ── */
     .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+    .video-card.vc-pending { display: none !important; }
     .video-card { background: var(--white); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; cursor: pointer; transition: all 0.2s; }
     .video-card:hover { border-color: var(--navy-300); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(10,22,40,0.08); }
     .video-card.hidden { display: none; }
@@ -240,6 +241,7 @@
               <a class="adn-mi" href="/library/"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Deep-Dive Essays</span><span class="adn-mi-dc">Long-form, fully-cited essays.</span></span></a>
               <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Answers</span><span class="adn-mi-dc">The questions people ask most.</span></span></a>
               <a class="adn-mi" href="/sources.html"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Church Fathers &amp; Creeds</span><span class="adn-mi-dc">The early church in its own words, verified.</span></span></a>
+              <a class="adn-mi" href="/our-sources.html"><span class="adn-mi-ic">&#128218;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Our Sources</span><span class="adn-mi-dc">Books and articles our essays cite.</span></span></a>
               <a class="adn-mi" href="/whats-new.html"><span class="adn-mi-ic">&#128240;</span><span class="adn-mi-tx"><span class="adn-mi-nm">What&#39;s New</span><span class="adn-mi-dc">Latest essays, features &amp; reels.</span></span></a>
             </div>
             <div class="adn-mega-col">
@@ -406,6 +408,30 @@
           <div class="video-presenter">Reasonable Faith (animated)</div>
           <div class="video-footer">
             <span class="video-views">3.4M views</span>
+            <span class="video-action">Watch now →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- OUR FULL KALAM EXPLAINER — hidden (.vc-pending) until library/video-lessons.json
+           carries lessons.kalam.full (a YouTube id); the loader at the foot of the page
+           fills data-id and reveals it. Rendered by tools/reel/gen_explainer.py from the
+           gated spec tools/reel/specs/explainer-kalam.json. -->
+      <div class="video-card vc-pending" data-lesson="kalam" data-topic="existence" data-format="lecture" data-id="" data-title="Did the Universe Begin? The Kalam Cosmological Argument" data-desc="Our own animated, narrated walk through the Kalam: both premises, the Big Bang and the Borde–Guth–Vilenkin theorem, Hilbert's Hotel, the strongest objections (including Wes Morriston's), and what the argument does and does not establish. The narration is drawn from our reviewed deep-dive essay. Captioned." data-presenter="Apologia Daily" data-duration="12m" onclick="playVideo(this)">
+        <div class="video-thumb">
+          <div class="video-thumb-bg" style="background:linear-gradient(135deg,#0a1628,#1f3a66);">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="rgba(200,169,81,0.18)"/><polygon points="16,12 30,20 16,28" fill="rgba(200,169,81,0.9)"/></svg>
+          </div>
+          <div class="play-overlay"><div class="play-circle"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <span class="duration-tag">12m</span>
+          <span class="format-tag" style="background:rgba(200,169,81,0.2);color:#c8a951;">Animated Explainer</span>
+        </div>
+        <div class="video-info">
+          <div class="video-topic">God's Existence</div>
+          <div class="video-title">Did the Universe Begin? The Kalam Cosmological Argument</div>
+          <div class="video-presenter">Apologia Daily (animated)</div>
+          <div class="video-footer">
+            <span class="video-views">New</span>
             <span class="video-action">Watch now →</span>
           </div>
         </div>
@@ -808,7 +834,7 @@
     }
 
     function applyFilters() {
-      const cards = document.querySelectorAll('#video-grid .video-card');
+      const cards = document.querySelectorAll('#video-grid .video-card:not(.vc-pending)');
       let count = 0;
       cards.forEach(card => {
         const topic = (card.getAttribute('data-topic') || '').trim();
@@ -928,6 +954,28 @@
     window.location.href = 'index.html';
   }
 </script>
+  <script>
+  /* Reveal our own long-form explainers once their YouTube id is in
+     library/video-lessons.json ("full"). Until then the card stays hidden. */
+  (function () {
+    var pending = document.querySelectorAll('#video-grid .video-card.vc-pending[data-lesson]');
+    if (!pending.length) return;
+    fetch('/library/video-lessons.json', { credentials: 'omit' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        var L = (d && d.lessons) || {};
+        pending.forEach(function (card) {
+          var e = L[card.getAttribute('data-lesson')];
+          var id = e && e.full;
+          if (!id || !/^[A-Za-z0-9_-]{6,20}$/.test(id)) return;
+          card.setAttribute('data-id', id);
+          card.classList.remove('vc-pending');
+        });
+        if (typeof applyFilters === 'function') applyFilters();
+      })
+      .catch(function () {});
+  })();
+  </script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>

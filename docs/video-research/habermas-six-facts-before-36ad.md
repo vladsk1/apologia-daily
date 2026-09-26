@@ -39,7 +39,7 @@ already live on-site.)
    Peter, Luke 24) named only to show how *few* are to individuals.
 2. **Appearance to James, the brother of Jesus** — who was a *sceptic* before (Mark 3:21, 31–35; Mark 6:3;
    John 7:5 — the brothers "did not believe"; in Mark 3 the family thinks him "beside himself"). By Acts
-   1:14 (the upper-room list of ~120, "Mary and his brothers") James is *among the believers*. → **Primaries:**
+   1:14 ("Mary and his brothers" — James is *among the believers*; note the ~120 count is the next verse, Acts 1:15, not 1:14). → **Primaries:**
    1 Cor 15:7 (the only place the James appearance is recorded); Acts 1:14; the unbelief texts above.
    → **Minor non-canonical lead (footnote-level only):** a fragment of the **Gospel of the Hebrews**
    describing the risen Jesus appearing to James — *non-canonical, 2nd-century, fragmentary; **preserved by

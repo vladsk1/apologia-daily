@@ -1,0 +1,261 @@
+{
+  "reviewed": {
+    "argument": "2026-09-15",
+    "orthodoxy": "2026-09-15",
+    "by": "2026-09-15 scene-locked vertical (Instagram) FEATURE-PROMO reel for the Ask AI Tutor feature (api/tutor.js Q&A + float-tutor UI). Gated READ-ONLY (Explore): orthodoxy CLEAN (creeds-as-floor wording safe; denominational neutrality accurate), argument+feature-accuracy STAMPABLE 0 BREAK - every claim traced to code (on every essay+card; grounded in the certified page; creeds/neutral/1 Peter 3:15; lib/crisis.js pastoral path runs first). WEAK-1 applied: 'answers from' -> 'grounded in' the certified page (Q&A can supplement with rail-bounded general knowledge for asides). POLISH-1 applied: close 'on every page' -> 'on every essay and card' (launcher not on homepage/dashboard). Not an apologetics claim. NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) FEATURE-PROMO reel for the Ask AI Tutor feature (api/tutor.js Q&A mode + the float-tutor / ask-selection UI on every library/*.html essay and evidence-library card). Describes the real feature: grounded in the certified page text, plain-language, inside the creeds, denominationally neutral, 1 Peter 3:15 tone, with the pastoral/crisis path (lib/crisis.js) that stops and refers to real help. Makes no apologetics claim of its own.",
+  "voiceover": "Ever read a deep argument and hit a question you wish you could just ask someone? On Apologia Daily, you can. Every deep-dive essay and evidence card has an 'Ask AI Tutor' button. Ask anything, in plain English. What does that word mean? Isn't this circular? How would I say this to a friend? It's grounded in the certified text of the page you're reading — not random answers off the internet. Clear, short and patient — like a brilliant friend who knows philosophy and theology inside out, with everyday analogies for the hard parts. It stays inside historic Christian orthodoxy — the creeds — and won't take sides on the things Christians disagree on. Always with gentleness and respect. And if someone types something that shows they're hurting or in danger, it stops teaching, and gently points them to real help — a trusted person, a pastor, a crisis line. A patient tutor for the hardest questions of the faith. Free, on every essay and card.",
+  "scenes": [
+    {
+      "dur": 5.2,
+      "vo": "Ever read a deep argument and hit a question you wish you could just ask someone?",
+      "big": [
+        {
+          "t": "A question",
+          "c": "cream",
+          "s": 64
+        },
+        {
+          "t": "mid-argument?",
+          "c": "gold",
+          "s": 72
+        }
+      ],
+      "sub": [
+        {
+          "t": "Now you can just ask.",
+          "c": "cream",
+          "f": "serif",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "dur": 7.7,
+      "vo": "On Apologia Daily, you can. Every deep-dive essay and evidence card has an 'Ask AI Tutor' button.",
+      "kicker": "ASK AI TUTOR",
+      "lines": [
+        {
+          "t": "On every deep-dive essay",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "and evidence card —",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "an “Ask AI Tutor”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "button.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ]
+    },
+    {
+      "dur": 9.3,
+      "vo": "Ask anything, in plain English. What does that word mean? Isn't this circular? How would I say this to a friend?",
+      "kicker": "ASK ANYTHING",
+      "lines": [
+        {
+          "t": "“What does that mean?”",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "“Isn't this circular?”",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "“How would I say this",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "to a friend?”",
+          "c": "cream",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 6.1,
+      "vo": "It's grounded in the certified text of the page you're reading — not random answers off the internet.",
+      "kicker": "GROUNDED, NOT GUESSING",
+      "lines": [
+        {
+          "t": "It's grounded in the",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "certified page",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        },
+        {
+          "t": "in front of you —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "not the open internet.",
+          "c": "cream",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "dur": 8.6,
+      "vo": "Clear, short and patient — like a brilliant friend who knows philosophy and theology inside out, with everyday analogies for the hard parts.",
+      "kicker": "LIKE A BRILLIANT FRIEND",
+      "lines": [
+        {
+          "t": "Clear. Short. Patient.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Everyday analogies",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "for the hard parts.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 10.1,
+      "vo": "It stays inside historic Christian orthodoxy — the creeds — and won't take sides on the things Christians disagree on. Always with gentleness and respect.",
+      "kicker": "INSIDE THE CREEDS",
+      "lines": [
+        {
+          "t": "Rooted in the creeds.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Neutral on the things",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "Christians debate.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Gentleness and respect.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 10.1,
+      "vo": "And if someone types something that shows they're hurting or in danger, it stops teaching, and gently points them to real help — a trusted person, a pastor, a crisis line.",
+      "kicker": "IT CARES FIRST",
+      "lines": [
+        {
+          "t": "If you're hurting,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "it stops teaching —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "and points you to",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "real help.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        }
+      ]
+    },
+    {
+      "dur": 6.8,
+      "vo": "A patient tutor for the hardest questions of the faith. Free, on every essay and card.",
+      "big": [
+        {
+          "t": "A tutor for the",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "hardest questions.",
+          "c": "gold",
+          "s": 58
+        }
+      ],
+      "sub": [
+        {
+          "t": "Free, on every essay & card.",
+          "c": "cream",
+          "f": "serif",
+          "s": 42
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    }
+  ]
+}

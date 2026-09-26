@@ -1,0 +1,364 @@
+{
+  "reviewed": {
+    "argument": "2026-09-12",
+    "orthodoxy": "2026-09-12",
+    "by": "2026-09-12 scene-locked vertical (Instagram) rebuild of the certified OT-typology reel (how-the-old-testament-foreshadows-the-cross). Voiceover PORTED VERBATIM (byte-identical, verified); per-scene split + on-screen captions authored. Argument+orthodoxy gate (READ-ONLY Explore): STAMPABLE/CLEAN, 0 BREAK/0 heresy; positive case (Isaac/Passover/manna->Christ), no strawman; the honest \"not proof, not prophecy - a pattern in hindsight\" caution kept on-screen (scene 9); 4 Scripture quotes verified; 1 POLISH applied (scene 10 \"Then the whole\" to keep the conditional). NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) rebuild of the certified reel how-the-old-testament-foreshadows-the-cross.json (typology / library/typology.html). Voiceover PORTED VERBATIM from that certified reel; per-scene split + on-screen captions authored so the voice locks to each page. Positive case (Isaac / Passover / manna → Christ), honest 'not proof, not prophecy — a pattern in hindsight' note kept (per the essay's parallelomania caution).",
+  "voiceover": "Two thousand years before the cross, God said to Abraham: take your son, your only son, whom you love, and offer him. Genesis 22. They walk three days to a mountain in the region where Jerusalem's temple would later stand. And Isaac, the beloved only son, carries the wood for his own sacrifice up the hill on his own back. Isaac asks, where is the lamb? And Abraham says, God will provide the lamb himself. At the last moment the knife is stayed, and a ram, caught in a thicket, dies in Isaac's place. This isn't a prediction. It's Abraham's true history. But it rhymes with a hill outside that same city, where another beloved only Son carried his own wood — and where the knife was not stayed, because this time the Father provided the Lamb. Christians call this typology: a real event God shaped to foreshadow something greater. Look at the Passover. Each household took a lamb without blemish and painted its blood on the doorframe, so that when judgment came, it passed over the house marked by blood. Not one of its bones was to be broken. Centuries later, the soldiers found Jesus already dead and broke no bone of his — and Paul says plainly, Christ, our Passover lamb, has been sacrificed. Look at the manna. God rained bread from heaven to keep Israel alive in the wilderness. And Jesus said, I am the bread of life; the bread that comes down from heaven. The gift that kept them alive was a shadow of the One who is life. Now, honestly: this isn't proof by odds, and it isn't prophecy. It's a pattern you see in hindsight, once you already trust that Jesus rose. But once you do, the whole Old Testament turns and points one way. Isaac asked, where is the lamb? And one day John the Baptist pointed and said: behold, the Lamb of God.",
+  "scenes": [
+    {
+      "dur": 10.1,
+      "vo": "Two thousand years before the cross, God said to Abraham: take your son, your only son, whom you love, and offer him. Genesis 22.",
+      "kicker": "GENESIS 22",
+      "lines": [
+        {
+          "t": "Two thousand years",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "before the cross —",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "“Take your son,",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        },
+        {
+          "t": "your only son.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        }
+      ]
+    },
+    {
+      "dur": 11.0,
+      "vo": "They walk three days to a mountain in the region where Jerusalem's temple would later stand. And Isaac, the beloved only son, carries the wood for his own sacrifice up the hill on his own back.",
+      "lines": [
+        {
+          "t": "Isaac — the beloved",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "only son —",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "carries the wood",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        },
+        {
+          "t": "for his own sacrifice.",
+          "c": "cream",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 12.3,
+      "vo": "Isaac asks, where is the lamb? And Abraham says, God will provide the lamb himself. At the last moment the knife is stayed, and a ram, caught in a thicket, dies in Isaac's place.",
+      "lines": [
+        {
+          "t": "Isaac asks:",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "“Where is the lamb?”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "“God will provide",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "the lamb himself.”",
+          "c": "cream",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 13.8,
+      "vo": "This isn't a prediction. It's Abraham's true history. But it rhymes with a hill outside that same city, where another beloved only Son carried his own wood — and where the knife was not stayed, because this time the Father provided the Lamb.",
+      "kicker": "IT RHYMES",
+      "lines": [
+        {
+          "t": "Another hill. Another",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "beloved Son —",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "carrying his own wood.",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "This time, the Father",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "provided the Lamb.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 5.9,
+      "vo": "Christians call this typology: a real event God shaped to foreshadow something greater.",
+      "big": [
+        {
+          "t": "Typology.",
+          "c": "gold",
+          "s": 92
+        }
+      ],
+      "sub": [
+        {
+          "t": "Real history God shaped",
+          "c": "cream",
+          "f": "serif",
+          "s": 44
+        },
+        {
+          "t": "to foreshadow something greater.",
+          "c": "dim",
+          "f": "serif",
+          "s": 40
+        }
+      ]
+    },
+    {
+      "dur": 12.7,
+      "vo": "Look at the Passover. Each household took a lamb without blemish and painted its blood on the doorframe, so that when judgment came, it passed over the house marked by blood. Not one of its bones was to be broken.",
+      "kicker": "THE PASSOVER LAMB",
+      "lines": [
+        {
+          "t": "Blood on the doorframe —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "judgment passes over.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "“Not one of its bones",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "shall be broken.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 9.9,
+      "vo": "Centuries later, the soldiers found Jesus already dead and broke no bone of his — and Paul says plainly, Christ, our Passover lamb, has been sacrificed.",
+      "lines": [
+        {
+          "t": "They found Jesus",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "already dead —",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "broke no bone of his.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "“Christ, our Passover",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "lamb, has been sacrificed.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "dur": 14.0,
+      "vo": "Look at the manna. God rained bread from heaven to keep Israel alive in the wilderness. And Jesus said, I am the bread of life; the bread that comes down from heaven. The gift that kept them alive was a shadow of the One who is life.",
+      "kicker": "THE MANNA",
+      "lines": [
+        {
+          "t": "Bread from heaven",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "kept Israel alive.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "“I am the bread of life,”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "Jesus said.",
+          "c": "cream",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 9.5,
+      "vo": "Now, honestly: this isn't proof by odds, and it isn't prophecy. It's a pattern you see in hindsight, once you already trust that Jesus rose.",
+      "kicker": "HONESTLY",
+      "lines": [
+        {
+          "t": "Not proof by odds.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Not prophecy.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "A pattern you see",
+          "c": "dim",
+          "f": "serif",
+          "s": 46
+        },
+        {
+          "t": "in hindsight.",
+          "c": "dim",
+          "f": "serif",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "dur": 5.1,
+      "vo": "But once you do, the whole Old Testament turns and points one way.",
+      "big": [
+        {
+          "t": "Then the whole",
+          "c": "cream",
+          "s": 74
+        },
+        {
+          "t": "Old Testament",
+          "c": "cream",
+          "s": 78
+        },
+        {
+          "t": "points one way.",
+          "c": "gold",
+          "s": 80
+        }
+      ]
+    },
+    {
+      "dur": 7.8,
+      "vo": "Isaac asked, where is the lamb? And one day John the Baptist pointed and said: behold, the Lamb of God.",
+      "big": [
+        {
+          "t": "“Behold,",
+          "c": "cream",
+          "s": 84
+        },
+        {
+          "t": "the Lamb of God.”",
+          "c": "gold",
+          "s": 82
+        }
+      ],
+      "sub": [
+        {
+          "t": "Isaac asked: where is the lamb?",
+          "c": "dim",
+          "f": "serif",
+          "s": 42
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    }
+  ]
+}

@@ -70,7 +70,7 @@ export default async function handler(req, res) {
     if (!usersRes.ok) {
       // Fallback: if no service key, send a test email to the admin
       if (!SB_SERVICE_KEY) {
-        const testEmail = process.env.ADMIN_EMAIL || 'hello@apologiadaily.com';
+        const testEmail = process.env.ADMIN_EMAIL || 'contact@apologiadaily.com';
         await sendWeeklyEmail(RESEND_KEY, testEmail, 'Admin', null, null);
         return res.status(200).json({ status: 'test_sent', note: 'Add SUPABASE_SERVICE_KEY for full user list access' });
       }
@@ -246,7 +246,7 @@ async function resendSend(resendKey, to, subject, html, unsub) {
   const response = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: { 'Authorization': `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ from: 'Apologia Daily <hello@apologiadaily.com>', to: to, subject: subject, html: html,
+    body: JSON.stringify({ from: 'Apologia Daily <contact@apologiadaily.com>', to: to, subject: subject, html: html,
       headers: unsub ? { 'List-Unsubscribe': `<${unsub}>`, 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' } : undefined })
   });
   if (!response.ok) { const err = await response.text(); throw new Error(`Resend ${response.status}: ${err}`); }
@@ -314,7 +314,7 @@ async function sendWeeklyEmail(resendKey, email, name, fc, ex, unsub) {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      from: 'Apologia Daily <hello@apologiadaily.com>',
+      from: 'Apologia Daily <contact@apologiadaily.com>',
       to: email,
       subject: subject,
       html: html,

@@ -1,0 +1,232 @@
+{
+  "reviewed": {
+    "argument": "2026-09-14",
+    "orthodoxy": "2026-09-14",
+    "by": "2026-09-14 scene-locked vertical (Instagram) POSITIVE-CASE reel. Ported from certified can-we-trust-the-new-testament-manuscripts. 'Preservation not truth' caveat removed per owner. Gated READ-ONLY (Explore): argument STAMPABLE, orthodoxy CLEAN. Reliability guardrail HONORED BY SCOPE: every claim stays on copying fidelity ('you are reading what they wrote'); no line implies preservation proves truth. 5,800+ mss and 800-1,000-yr classical gap verified. NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) POSITIVE-CASE reel on NT manuscript reliability. Ported from certified can-we-trust-the-new-testament-manuscripts.json (library/manuscript.html). The 'this shows preservation, not truth' caveat removed per owner (positive case only) — but the reel's claim is scoped to PRESERVATION throughout ('you are reading what they wrote'), never overclaiming that preservation proves truth, so the guardrail is honored by scope, not by a caveat sentence.",
+  "voiceover": "Can we trust the New Testament after centuries of hand-copying? By the standard historians use for every ancient text, yes — and it isn't close. Caesar's Gallic Wars survives in about ten copies. The New Testament survives in more than 5,800 Greek manuscripts, plus tens of thousands more in Latin, Syriac, and Coptic. The best-attested document of the ancient world. Some fragments sit within a generation of the originals — where most classical works have a gap of eight hundred to a thousand years. And the abundance skeptics call a problem is actually the solution: a scribe in Egypt and a scribe in Italy couldn't coordinate their mistakes, so where the copies agree, they point back to the original. Yes, the manuscripts differ in hundreds of thousands of places — but the vast majority are spelling and word order, and no core teaching hangs on them. You are reading what they wrote.",
+  "scenes": [
+    {
+      "dur": 4.8,
+      "vo": "Can we trust the New Testament after centuries of hand-copying?",
+      "big": [
+        {
+          "t": "Can we trust",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "the New Testament",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "after hand-copying?",
+          "c": "gold",
+          "s": 54
+        }
+      ]
+    },
+    {
+      "dur": 5.7,
+      "vo": "By the standard historians use for every ancient text, yes — and it isn't close.",
+      "big": [
+        {
+          "t": "By the standard",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "used for every",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "ancient text —",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "yes.",
+          "c": "gold",
+          "s": 88
+        }
+      ]
+    },
+    {
+      "dur": 11.9,
+      "vo": "Caesar's Gallic Wars survives in about ten copies. The New Testament survives in more than 5,800 Greek manuscripts, plus tens of thousands more in Latin, Syriac, and Coptic.",
+      "kicker": "THE NUMBERS",
+      "lines": [
+        {
+          "t": "Caesar's Gallic Wars:",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "about 10 copies.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "The New Testament:",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "5,800+ Greek manuscripts.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "Tens of thousands more.",
+          "c": "cream",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "dur": 10.5,
+      "vo": "The best-attested document of the ancient world. Some fragments sit within a generation of the originals — where most classical works have a gap of eight hundred to a thousand years.",
+      "kicker": "AND EARLY",
+      "lines": [
+        {
+          "t": "Fragments within a",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "generation of the originals —",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "where most classics",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "have an 800-1,000",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "year gap.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 10.7,
+      "vo": "And the abundance skeptics call a problem is actually the solution: a scribe in Egypt and a scribe in Italy couldn't coordinate their mistakes, so where the copies agree, they point back to the original.",
+      "kicker": "THE ABUNDANCE IS THE SOLUTION",
+      "lines": [
+        {
+          "t": "Scribes in Egypt and Italy",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "couldn't coordinate errors.",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Where the copies agree,",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "they point back",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "to the original.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        }
+      ]
+    },
+    {
+      "dur": 8.8,
+      "vo": "Yes, the manuscripts differ in hundreds of thousands of places — but the vast majority are spelling and word order, and no core teaching hangs on them.",
+      "kicker": "WHAT ABOUT THE VARIANTS?",
+      "lines": [
+        {
+          "t": "Most are spelling",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "and word order.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "No core teaching",
+          "c": "gold",
+          "f": "serifb",
+          "s": 50
+        },
+        {
+          "t": "hangs on them.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 52
+        }
+      ]
+    },
+    {
+      "dur": 3.1,
+      "vo": "You are reading what they wrote.",
+      "big": [
+        {
+          "t": "You are reading",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "what they wrote.",
+          "c": "gold",
+          "s": 68
+        }
+      ],
+      "sub": [
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    }
+  ]
+}

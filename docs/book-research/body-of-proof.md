@@ -162,6 +162,14 @@ creeds) → **`/sources` candidate, P3.** ✅ **SHIPPED 2026-08-17** (backlog ro
 | Ch. 8/10 — suffering / theodicy | **1 corroboration, ✅ 5 hazard — ours is better** | `evil.html` says the resurrection decides whether the *promise* is true, **not** what explains the evil; Moltmann fenced against patripassianism. Do not import the book's framing. |
 
 ### Live-door status
+
+> **ev-m mastery-surface audit — 2026-09-24 (commit `55377f28`).** The resurrection mastery pages (this
+> note's territory) were swept as the sixth cross-check surface. Two live fixes shipped, each logged in its
+> own source note: `ev-m-burial.html`'s "no rival burial tradition" → the Acts 13:29-aware P1 form (see the
+> *case-for-the-resurrection* note); and `ev-m-postresurrection.html`'s hallucination "already fallen" → the
+> bounded "without documented precedent" verdict + its martyrdom flashcard "the apostles died" → "willing to
+> suffer" (see the *raised-on-the-third-day* / *bergeron* notes). No fix traced specifically to this note's
+> leads; its resurrection pages are otherwise clean.
 Nothing from this book is in `/sources` (copyrighted) or `/briefs`; this pass produced **no live
 content change**. Output: **nine improvement rows** (R-A…R-I) plus the **BCP `/sources` candidate**
 added/reconfirmed in `content-backlog.md`, the two prior rows (Dunn, Basilides) reconfirmed, **five

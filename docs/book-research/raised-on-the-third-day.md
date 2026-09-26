@@ -193,6 +193,12 @@ Jerusalem apostles' preaching."** Those are the genuine open gaps.
 
 ### Six-verdict cross-check (ledger corrected 2026-08-10)
 
+> **ev-m mastery-surface audit — 2026-09-24 (commit `55377f28`).** Sixth cross-check surface.
+> `ev-m-postresurrection.html`'s martyrdom flashcard (:758) generalised to "the apostles **died** as
+> eyewitnesses"; corrected to **"were willing to suffer"** per this note's McDowell calibration (ch. 11:
+> *"willing to suffer," never "all were martyred" — only a few apostolic deaths are well attested*). The
+> page's prose was already bounded; only the memorised flashcard lagged. Dual-consensus re-gated CLEAN.
+
 | Book section / lead | Verdict | Live status |
 |---|---|---|
 | McDowell's salvaged "willing to suffer → not liars" form | **1 corroboration** | `disciplesbelief.html:159` + `answers/why-did-the-disciples-die-for-their-faith.html` lead with sincerity-not-proof and concede the "all twelve" overreach (McDowell's own calibration). |

@@ -74,6 +74,10 @@ jobs:
         run: node tools/build-sources-index.mjs --check
       - name: Check argument-briefs index is in sync
         run: node tools/build-briefs-index.mjs --check
+      - name: Check JSON-LD dateModified is not older than the latest review
+        run: node tools/sync-date-modified.mjs --check
+      - name: Check the Our Sources list matches the essays' bibliographies
+        run: node tools/build-our-sources.mjs --check
 
   orthodoxy-guards:
     # Doctrinal regression guards over the WHOLE corpus (not just changed files).
@@ -98,6 +102,8 @@ jobs:
         run: node tools/check-unquoted-attributions.mjs
       - name: Retired-claims scan (blocking)
         run: node tools/check-retired-claims.mjs
+      - name: Five-surface cross-check block on research notes (blocking)
+        run: node tools/check-crosscheck-block.mjs
       - name: Footnote apparatus (markers + internal cross-references resolve)
         run: node tools/check-footnote-integrity.mjs --changed
       - name: Stamp-integrity report (non-blocking)

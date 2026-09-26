@@ -196,6 +196,61 @@ def line_blocks(lines, th):
                     th.get(ln.get("c", "cream"), th["cream"]), ln.get("gap", 16)))
     return out
 
+# ---- framed screenshot scenes ("shot") ----
+def draw_shot(img, W, H, sc, spec, th):
+    """Paste sc["shot"] (a screenshot) into a rounded, gold-edged frame in the upper part
+    of the canvas. Returns the frame's bottom y so the caption band can sit beneath it.
+    Optional per-scene "shot_h" (fraction of H, default 0.50) sets the frame's max height."""
+    path = sc["shot"]
+    if not os.path.isabs(path) and spec.get("__path__"):
+        path = os.path.join(os.path.dirname(os.path.abspath(spec["__path__"])), path)
+    shot = Image.open(path).convert("RGB")
+    max_w, max_h = int(W * 0.80), int(H * float(sc.get("shot_h", 0.50)))
+    scale = min(max_w / shot.width, max_h / shot.height)
+    sw, sh = int(shot.width * scale), int(shot.height * scale)
+    shot = shot.resize((sw, sh), Image.LANCZOS)
+    x, y = (W - sw) // 2, int(H * 0.06)
+    r = max(18, int(sw * 0.045))
+    # soft drop shadow
+    sh_mask = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(sh_mask).rounded_rectangle([x - 6, y + 10, x + sw + 6, y + sh + 22], r + 6, fill=150)
+    sh_mask = sh_mask.filter(ImageFilter.GaussianBlur(26))
+    img.paste(Image.new("RGB", (W, H), (0, 0, 0)), (0, 0), sh_mask)
+    # rounded screenshot + gold border
+    mask = Image.new("L", (sw, sh), 0)
+    ImageDraw.Draw(mask).rounded_rectangle([0, 0, sw - 1, sh - 1], r, fill=255)
+    img.paste(shot, (x, y), mask)
+    ImageDraw.Draw(img).rounded_rectangle([x - 2, y - 2, x + sw + 1, y + sh + 1], r + 2,
+                                          outline=th["gold"], width=4)
+    return y + sh
+
+def shot_text(d, W, H, sc, th, top, bot):
+    """Draw a scene's kicker + big/lines + sub centred in the band [top, bot], shrinking
+    every font uniformly until the whole group fits (never below 55% of spec size)."""
+    def build(k):
+        rows = []
+        for key, dflt_f, dflt_s, dflt_c, gap in (("big", "serifb", 110, "cream", 14),
+                                                 ("lines", "serif", 56, "cream", 10),
+                                                 ("sub", "serif", 44, "dim", 8)):
+            for x in sc.get(key, []):
+                if x.get("t", "") == "":
+                    rows.append((" ", F("serif", max(6, int(x.get("s", 12) * k))), th["top"], 0))
+                    continue
+                rows.append((x["t"], F(x.get("f", dflt_f), max(10, int(x.get("s", dflt_s) * k))),
+                             th.get(x.get("c", dflt_c), th["cream"]), int(gap * k)))
+        return rows
+    kh = (KICKER_H + int(H * 0.02)) if sc.get("kicker") else 0
+    k = 0.82
+    rows = build(k)
+    while k > 0.55 and (kh + blocks_height(rows) > bot - top or
+                        any(d.textlength(t, font=f) > W - 120 for t, f, _, _ in rows)):
+        k -= 0.03; rows = build(k)
+    y = top + max(0, ((bot - top) - (kh + blocks_height(rows))) // 2)
+    if sc.get("kicker"):
+        f, spaced, w = measure_kicker(d, W, sc["kicker"])
+        y = kicker_at(d, W, f, spaced, w, y, th) + int(H * 0.02)
+    center_block(d, W, rows, 0, th["shadow"], top=y)
+
 # ---- render all scenes ----
 def render(spec, W, H, theme, frames_dir):
     th = THEMES[theme]; os.makedirs(frames_dir, exist_ok=True)
@@ -236,6 +291,19 @@ def render(spec, W, H, theme, frames_dir):
         d = ImageDraw.Draw(img)
         has_k = bool(sc.get("kicker"))
         cy = int(H * 0.47)
+        if sc.get("shot"):
+            # Framed-screenshot scene: the screenshot sits in a rounded, gold-edged frame
+            # in the upper part of the canvas and the scene's own kicker/big/lines/sub are
+            # drawn, scaled to fit, in the band beneath it. Added so a feature reel can
+            # show the real page each beat describes; scenes without "shot" are untouched.
+            band_bot = draw_shot(img, W, H, sc, spec, th)
+            d = ImageDraw.Draw(img)
+            shot_text(d, W, H, sc, th, band_bot + int(H * 0.035), H - 300)
+            if sc.get("ref"): ref_line(d, W, H, sc["ref"], th)
+            footer(d, W, H, th); progress(d, W, H, i, n, th)
+            img.save(os.path.join(frames_dir, f"scene_{i:02d}.png"))
+            durs.append(float(sc.get("dur", 3.5)))
+            continue
         if talkbg:
             # single "talk-over" card: slogan anchored HIGH, lower two-thirds left
             # clear so the creator's own TikTok/CapCut captions have room. No

@@ -137,6 +137,45 @@ twice-checked, our-own-words material (or a verified verbatim primary) reaches a
    strengthens with a new verified primary / opens a topic or objection we lack → a backlog row). Make the
    classification **visible in the note** (in "Live-door status") so a reader can see the scan happened. See
    the "MANDATORY CROSS-CHECK STEP" in `CLAUDE.md` § *Content backlog*.
+
+   > ### ⬜→✅ REQUIRED IN EVERY NOTE — the five-surface cross-check checklist. (Added 2026-09-24; ev-m mastery page added same day → six boxes.)
+   > The cross-check is **not done, and the note is not finished,** until it carries this block with **every
+   > box ticked** — each either naming what you scanned + its verdict, or marked **N/A with the reason** the
+   > surface doesn't exist for this topic. A ticked box is a claim you actually scanned that surface; **never
+   > tick one you didn't** (same discipline as a `content-review` stamp — *never stamp a check you did not run*).
+   >
+   > **Why this box exists:** on **2026-09-24** a mining run did the cross-check against the **essays only** and
+   > shipped. Nothing flagged it — the essay work was real and correct — and the three-surface gap stayed
+   > invisible until the owner asked "did it scan all of them?" and an audit found it hadn't. The soft
+   > instruction "make the comparison visible" was not enough; this is that instruction as a hard, un-skippable
+   > checklist. (That run came back clean when finally completed — *luck confirmed by a check*, not a reason the
+   > check was optional.)
+   >
+   > Paste this into the note (in its cross-map / Live-door section) and fill it:
+   >
+   > ```
+   > ## Five-surface cross-check — <date> (run by <session>)
+   > - [ ] library/*.html essay(s)  — <which essay(s), read in full; verdict summary>
+   > - [ ] /answers/*               — <which matched; or "no matching answer" + why>
+   > - [ ] ev-s*.html tab card(s)   — <which card(s); or "no card for this topic">
+   > - [ ] ev-m*.html mastery page(s) — <which mastery page(s); or "no mastery page for this topic">
+   > - [ ] /briefs                  — <which matched; or "none">
+   > - [ ] /sources                 — <which matched; or "none / out of scope (PD-patristic only)">
+   > - Mandatory-fix findings (verdict 2 — errors / retired claims): <list with file+string, or "none">
+   > - Backlog rows logged (verdicts 3/4): <content-backlog.md row refs, or "none">
+   > - "Is the source better than our essay anywhere?" — <where + how, or "no">
+   > ```
+   >
+   > ⚠ The essay box is necessary but **not sufficient** — an essay-only tick with the other five blank is
+   > exactly the failure this checklist exists to make visible. All six surface boxes get an answer (a
+   > verdict *or* an N/A-with-reason) before the note is considered complete. (ev-s = the Evidence-tab card;
+   > ev-m = the mastery page — they are distinct surfaces and a lead can be right on one and stale on the other.)
+   >
+   > **Machine-enforced (CI-blocking):** `tools/check-crosscheck-block.mjs` (also a `tests/content-integrity.test.mjs`
+   > case) fails the build for any note here that lacks a filled block — an unchecked `- [ ]` box, a leftover
+   > `<placeholder>`, or a missing surface line all trip it. The pre-existing corpus is grandfathered in
+   > `tools/crosscheck-baseline.json`; a **new** note must fill the block, not be added to the baseline (there
+   > is deliberately no `--update` that would auto-grandfather a fresh skip). `--audit` lists every note's status.
 5. **Log it in three places:** (a) a row in the **Mined-videos ledger** below (with its live-door status);
    (b) a topic row in `INDEX.md` so the next content session can route a topic → this note; and (c) for any
    lead that step 4 classified as an **improvement**, a row in
@@ -172,6 +211,12 @@ Start with talks that *cite their sources* — those give the richest lead harve
 - **Inspiring Philosophy** — fine-tuning, consciousness, Trinity, philosophy of religion.
 - **Capturing Christianity** — interviews with scholars (Craig, Swinburne, etc.).
 Cross-check every claim against the primary regardless of channel; even careful channels round numbers.
+
+> ### ⚠ Also update the public "Our Sources" page (owner rule, 2026-09-24)
+> Every note added here needs a card on `our-sources.html` (the `VIDEOS` array) in the **same commit**, with
+> `n:"<this note's file stem>"`, and the card's title, speaker/author, venue, year and URL checked against the
+> note (citations gate). `node tools/build-our-sources.mjs --check` fails in CI on a note with no card. To leave a
+> note off, record why in `STUDIED_EXCLUDED` in `tools/build-our-sources.mjs`.
 
 ## Mined-videos ledger (the running list — update it every time)
 Like the book library's "Current notes," this is the canonical list of which videos have been mined —

@@ -1,0 +1,284 @@
+{
+  "reviewed": {
+    "argument": "2026-09-22",
+    "orthodoxy": "2026-09-22",
+    "neutrality": "2026-09-22",
+    "by": "2026-09-22 OWNER REVISION (v2) of the Islamic Dilemma reel. Owner: positive case only - REMOVED the muhaymin 'fair reply / narrows it' beat and the 'shared premise not shared belief' fence; ADDED Qur'an 10:94 (command to the Prophet, 'if you are in doubt, ask those who have been reading the Scripture before you' - quoted as the COMMAND only, tafsir-safe, NOT asserting he doubted); dropped 'same God'. To avoid strawman-by-omission without an on-reel reply, the reel does not claim to refute Islam - it lands the bounded observation ('the Qur'an confirms the very books that contradict it'), asks 'Is there a way out of it?', and points to Frost's book / the reading club. DUAL-CONSENSUS (Islam tier), gated READ-ONLY (Explore): argument STAMPABLE 0 BREAK (verdict bounded; 10:94 tafsir-safe - keeps the conditional, never says he doubted; no false-common-ground fence needed since 'same God' dropped), orthodoxy CLEAN (crucifixion + deity affirmed orthodox; contradiction-thrust discharges the fence; 'from God' = the Qur'an's own claim, sanctioned shared-premise exception). Neutrality found 1 BREAK - 'Built entirely from the Qur'an's own words' overclaimed airtight self-refutation (hides Premises 2/3: the manuscript record + the Gospel's content) - FIXED by scoping to 'The tension comes from the Qur'an's own words'; re-gated neutrality STAMPABLE. Ported from certified library/islam-dilemma.html. Audio respells 'Qur'an'->'Koran' for edge-tts; captions keep 'Qur'an'. Does NOT adopt Frost's triumphal tone or cite its polemics layer. NOT pastoral sign-off (Islam cluster owes standing pastoral review per docs/STATEMENT_OF_FAITH.md)."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) reel on the ISLAMIC DILEMMA (OWNER REVISION 2026-09-22), pointing to the live reading club (reading-club-islamic-dilemma.html) + Frost's book. Ported from certified library/islam-dilemma.html. OWNER DIRECTIVE: positive case only - REMOVED the on-reel muhaymin 'fair reply / it narrows the argument' beat and the 'shared premise, not a shared belief' fence (a short reel can't answer the reply properly); ADDED Qur'an 10:94 (the command 'if you are in doubt, ask those who have been reading the Scripture before you', addressed to the Prophet - quoted as the COMMAND only, NOT asserting Muhammad actually doubted, per the essay's tafsir-safe framing at line 171/213). Dropped the 'same God' phrase (so no fence is needed for it). To AVOID strawman-by-omission without an on-reel reply: the reel does NOT claim to refute Islam - it lands the bounded internal-tension observation ('the Qur'an confirms the very books that contradict it') and then explicitly asks 'Is there a way out of it?' and points to Frost's book / the reading club where the Muslim replies (muhaymin etc.) are engaged in full. EXPLICIT-VERDICT satisfied at the bounded level; no maximal 'Islam is false'. Islam tier -> dual-consensus re-gate (argument + orthodoxy + neutrality) REQUIRED. Audio respells 'Qur'an'->'Koran' for edge-tts; captions keep 'Qur'an'. Does NOT adopt Frost's triumphal tone or cite its polemics layer.",
+  "voiceover": "Does the Koran confirm the very Scriptures it contradicts? The Koran calls itself musaddiq — the confirmer of the Scriptures that came before it. It affirms the Torah given to Moses and the Gospel given to Jesus as true revelation from God — 'confirming what was before it.' It even tells Christians to judge by their own book: 'let the People of the Gospel judge by what Allah has revealed therein.' And it commands the Prophet himself: if you are in doubt, ask those who have been reading the Scripture before you. So the Koran sends everyone back to the Torah and the Gospel as a trustworthy standard from God. But that Gospel — the one Christians actually held — teaches what Islam denies. It says Jesus was crucified, and that he is the divine Son of God. The Koran denies both. So the Koran points to, and confirms, the very books that contradict it. And the tension comes from the Koran's own words. Is there a way out of it? That's the question at the heart of Christopher Frost's book, The Islamic Dilemma. Read it together, chapter by chapter, in our reading club.",
+  "scenes": [
+    {
+      "dur": 4.7,
+      "vo": "Does the Koran confirm the very Scriptures it contradicts?",
+      "big": [
+        {
+          "t": "The Islamic",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "Dilemma.",
+          "c": "gold",
+          "s": 84
+        }
+      ],
+      "sub": [
+        {
+          "t": "Does the Qur'an confirm the very",
+          "c": "cream",
+          "f": "serif",
+          "s": 38
+        },
+        {
+          "t": "Scriptures it contradicts?",
+          "c": "cream",
+          "f": "serif",
+          "s": 38
+        }
+      ]
+    },
+    {
+      "dur": 5.7,
+      "vo": "The Koran calls itself musaddiq — the confirmer of the Scriptures that came before it.",
+      "kicker": "MUSADDIQ · ‘THE CONFIRMER’",
+      "lines": [
+        {
+          "t": "The Qur'an calls itself",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "the confirmer of the",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "Scriptures before it.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 7.4,
+      "vo": "It affirms the Torah given to Moses and the Gospel given to Jesus as true revelation from God — 'confirming what was before it.'",
+      "kicker": "IT AFFIRMS THE PRIOR SCRIPTURE",
+      "lines": [
+        {
+          "t": "The Torah given to Moses.",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "The Gospel given to Jesus —",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "true revelation from God.",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "“Confirming what was before it.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 42
+        }
+      ]
+    },
+    {
+      "dur": 7.1,
+      "vo": "It even tells Christians to judge by their own book: 'let the People of the Gospel judge by what Allah has revealed therein.'",
+      "kicker": "QUR'AN 5:47",
+      "lines": [
+        {
+          "t": "“Let the People of the Gospel",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "judge by what Allah has",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "revealed therein.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    },
+    {
+      "dur": 6.6,
+      "vo": "And it commands the Prophet himself: if you are in doubt, ask those who have been reading the Scripture before you.",
+      "kicker": "QUR'AN 10:94",
+      "lines": [
+        {
+          "t": "To the Prophet himself:",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "“If you are in doubt, ask",
+          "c": "gold",
+          "f": "serifb",
+          "s": 44
+        },
+        {
+          "t": "those who have been reading",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "the Scripture before you.”",
+          "c": "gold",
+          "f": "serifb",
+          "s": 42
+        }
+      ]
+    },
+    {
+      "dur": 10.8,
+      "vo": "So the Koran sends everyone back to the Torah and the Gospel as a trustworthy standard from God. But that Gospel — the one Christians actually held — teaches what Islam denies.",
+      "big": [
+        {
+          "t": "But that Gospel",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "teaches what",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Islam denies.",
+          "c": "gold",
+          "s": 62
+        }
+      ]
+    },
+    {
+      "dur": 7.1,
+      "vo": "It says Jesus was crucified, and that he is the divine Son of God. The Koran denies both.",
+      "kicker": "THE CONTRADICTION",
+      "lines": [
+        {
+          "t": "The Gospel: Jesus was",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "crucified, and is the",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "divine Son of God.",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "The Qur'an denies both.",
+          "c": "cream",
+          "s": 46
+        }
+      ]
+    },
+    {
+      "dur": 8.4,
+      "vo": "So the Koran points to, and confirms, the very books that contradict it. And the tension comes from the Koran's own words.",
+      "big": [
+        {
+          "t": "It confirms",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "the very books that",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "contradict it.",
+          "c": "gold",
+          "s": 60
+        }
+      ],
+      "sub": [
+        {
+          "t": "The tension comes from the Qur'an's own words.",
+          "c": "cream",
+          "f": "serif",
+          "s": 38
+        }
+      ]
+    },
+    {
+      "dur": 10.9,
+      "vo": "Is there a way out of it? That's the question at the heart of Christopher Frost's book, The Islamic Dilemma. Read it together, chapter by chapter, in our reading club.",
+      "big": [
+        {
+          "t": "Is there",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "a way out?",
+          "c": "gold",
+          "s": 76
+        }
+      ],
+      "sub": [
+        {
+          "t": "The question at the heart of Frost's",
+          "c": "cream",
+          "f": "serif",
+          "s": 38
+        },
+        {
+          "t": "book, The Islamic Dilemma.",
+          "c": "cream",
+          "f": "serif",
+          "s": 40
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Read it with us · apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 42
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "reviewed": {
+    "argument": "2026-09-25",
+    "orthodoxy": "2026-09-25",
+    "by": "2026-09-25 scene-locked vertical (Instagram) FEATURE-PROMO reel for Asked & Answered, Study Plans and Reading Clubs, with framed phone screenshots of the LIVE pages (tools/reel/shots/ask-plans-clubs.json). Reel + screenshots + IG/X captions gated in ONE round, READ-ONLY (Explore agents; spec hash-verified unchanged), 2 rounds. R1: feature-accuracy (every claim traced to file:line incl. api/ask.js) 0 BREAK / 2 WEAK: (1) 'the skeptic who raised it first' stated as guaranteed, but api/ask.js adds a first-skeptic ONLY where there is a genuine identifiable origin -> lens wording 'and, where it's known, the skeptic who raised it first' (VO, captions, IG); (2) screenshot 01 showed the page's own 'clear, reviewed answer' hero line, but live answers are AI-written and not individually reviewed (page's own disclosure; badge never fires) -> 01 cropped to kicker+headline (real crop, nothing hidden); live-site copy logged as a separate task. 'reviewed' also deliberately dropped from the VO. Orthodoxy CLEAN (0 HERESY): optional crop of 02 so Celsus's charge is not on screen without Origen's reply -> applied. X link -> homepage (polish). R2: feature-accuracy STAMPABLE; orthodoxy CLEAN, clarifier candidates none. No price claim either way (A&A live answers are Pro-gated in code but the gate is off until Stripe; reading-club hub needs sign-in, the per-book pages shown are public). Counts measured 2026-09-25: 10 plans (14-30 days), 6 reading-club books (active/joining). NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) FEATURE-PROMO reel for three features, with phone screenshots of the LIVE pages (tools/reel/shots/ask-plans-clubs.json). Asked & Answered: VO from the page's own stamped hero ('Saw an objection online? It's been asked before.', paste a tweet/objection/screenshot, 'the skeptic who raised it first (often centuries ago), and where to dig deeper', 'For 2,000 years the hard questions have been asked - and seriously answered, not dodged') - 'reviewed' deliberately DROPPED from 'a clear, reviewed answer' because the page itself says live answers are AI-generated and not individually human-reviewed. Live answers are Pro-gated in code but the gate is switched off until Stripe (isPro=true), so no price is claimed either way. Study Plans: VO ported from the certified study-plans-feature.json; counts re-measured 2026-09-25 (10 plans, Beginner/Intermediate/Advanced + All levels, 14-30 days). Reading Clubs: from reading-club.html meta ('Read the great Christian apologists together. Chapter-by-chapter guides, discussion questions') + the On Guard club page ('worked through at your own pace', 'so a group can work through the whole case together'); 6 books in the hub data, all status active/joining. The hub (reading-club.html) requires sign-in; the per-book pages shown are public.",
+  "voiceover": "Saw an objection online? It's been asked before. On Asked and Answered, paste a tweet, an objection, or a screenshot — or just ask any question about the Christian faith. You get a clear answer — and, where it's known, the skeptic who raised it first, often centuries ago — and where to dig deeper. For two thousand years, the hard questions have been asked — and seriously answered, not dodged. Then there's Study Plans. Instead of endlessly browsing, you get a guided, day-by-day path through the evidence — with a clear finish line, and your progress saved as you go. There are ten guided plans, from beginner to advanced, running fourteen to thirty days — from the thirty-day Resurrection Deep Dive to a twenty-eight-day Debate Prep. And these aren't reading lists. Every day gives you something to do: read the evidence, ask the AI tutor, step into the Debate Arena, then reflect and make it your own. And Reading Clubs: read the great Christian apologists together — chapter by chapter, with discussion questions for each. Six books so far, from C.S. Lewis's Mere Christianity to William Lane Craig's On Guard. Read at your own pace, or work through them with a group. Ask it. Study it. Read it together. Find all three at apologiadaily.com.",
+  "scenes": [
+    {
+      "dur": 5.4,
+      "vo": "Saw an objection online? It's been asked before.",
+      "shot": "../shots/ask-plans-clubs/01-aa-hero.png",
+      "big": [
+        {
+          "t": "Saw an objection online?",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "It's been asked before.",
+          "c": "gold",
+          "s": 64
+        }
+      ]
+    },
+    {
+      "dur": 8.3,
+      "vo": "On Asked and Answered, paste a tweet, an objection, or a screenshot — or just ask any question about the Christian faith.",
+      "shot": "../shots/ask-plans-clubs/02-aa-ask.png",
+      "kicker": "ASKED & ANSWERED",
+      "lines": [
+        {
+          "t": "Paste a tweet,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "an objection, or a screenshot —",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "or ask any question",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        },
+        {
+          "t": "about the faith.",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 8.4,
+      "vo": "You get a clear answer — and, where it's known, the skeptic who raised it first, often centuries ago — and where to dig deeper.",
+      "shot": "../shots/ask-plans-clubs/03-aa-early.png",
+      "kicker": "WHO ASKED IT FIRST",
+      "lines": [
+        {
+          "t": "A clear answer.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Where it's known, the skeptic",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "who raised it first —",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "often centuries ago.",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "And where to dig deeper.",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 6.7,
+      "vo": "For two thousand years, the hard questions have been asked — and seriously answered, not dodged.",
+      "shot": "../shots/ask-plans-clubs/04-aa-modern.png",
+      "kicker": "2,000 YEARS OF HARD QUESTIONS",
+      "lines": [
+        {
+          "t": "Asked for 2,000 years —",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "and seriously answered,",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        },
+        {
+          "t": "not dodged.",
+          "c": "gold",
+          "s": 54,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 11.2,
+      "vo": "Then there's Study Plans. Instead of endlessly browsing, you get a guided, day-by-day path through the evidence — with a clear finish line, and your progress saved as you go.",
+      "shot": "../shots/ask-plans-clubs/05-sp-hero.png",
+      "kicker": "STUDY PLANS",
+      "lines": [
+        {
+          "t": "A guided, day-by-day path",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "through the evidence —",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "a clear finish line,",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        },
+        {
+          "t": "progress saved as you go.",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 10.1,
+      "vo": "There are ten guided plans, from beginner to advanced, running fourteen to thirty days — from the thirty-day Resurrection Deep Dive to a twenty-eight-day Debate Prep.",
+      "shot": "../shots/ask-plans-clubs/06-sp-plans.png",
+      "kicker": "TEN GUIDED PLANS",
+      "lines": [
+        {
+          "t": "Beginner to advanced.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "14 to 30 days.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "From the Resurrection",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        },
+        {
+          "t": "Deep Dive to Debate Prep.",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 10.9,
+      "vo": "And these aren't reading lists. Every day gives you something to do: read the evidence, ask the AI tutor, step into the Debate Arena, then reflect and make it your own.",
+      "shot": "../shots/ask-plans-clubs/07-sp-days.png",
+      "kicker": "EVERY DAY, SOMETHING TO DO",
+      "lines": [
+        {
+          "t": "Read the evidence.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "Ask the AI tutor.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "Step into the Debate Arena.",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "Reflect — make it your own.",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 7.7,
+      "vo": "And Reading Clubs: read the great Christian apologists together — chapter by chapter, with discussion questions for each.",
+      "shot": "../shots/ask-plans-clubs/08-rc-hero.png",
+      "kicker": "READING CLUBS",
+      "lines": [
+        {
+          "t": "Read the great apologists",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "together —",
+          "c": "gold",
+          "s": 54,
+          "f": "serifb"
+        },
+        {
+          "t": "chapter by chapter,",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "with discussion questions.",
+          "c": "cream",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "dur": 10.3,
+      "vo": "Six books so far, from C.S. Lewis's Mere Christianity to William Lane Craig's On Guard. Read at your own pace, or work through them with a group.",
+      "shot": "../shots/ask-plans-clubs/09-rc-how.png",
+      "kicker": "SIX BOOKS SO FAR",
+      "lines": [
+        {
+          "t": "Mere Christianity",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "On Guard · and more",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "At your own pace,",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        },
+        {
+          "t": "or with a group.",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 8.7,
+      "vo": "Ask it. Study it. Read it together. Find all three at apologiadaily.com.",
+      "big": [
+        {
+          "t": "Ask it.",
+          "c": "cream",
+          "s": 76
+        },
+        {
+          "t": "Study it.",
+          "c": "cream",
+          "s": 76
+        },
+        {
+          "t": "Read it together.",
+          "c": "gold",
+          "s": 72
+        }
+      ],
+      "sub": [
+        {
+          "t": "Asked & Answered · Study Plans · Reading Clubs",
+          "c": "cream",
+          "f": "serif",
+          "s": 36
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "f": "serifb",
+          "s": 48
+        }
+      ]
+    }
+  ]
+}

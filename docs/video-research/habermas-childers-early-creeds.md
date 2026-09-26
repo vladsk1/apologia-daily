@@ -32,7 +32,7 @@ name), not a low Christology that evolved upward.
   sermon-summaries) and **Oscar Cullmann** (*The Earliest Christian Confessions*) as the founding studies.
   ~15 major creeds, mostly in the epistles; Acts sermon-summaries in Acts 1–5, 10 (Petrine), 13 (Pauline).
 - **1 Cor 15:3–7** — the flagship creed; dated to **30–33 AD** by **Gerd Lüdemann** (atheist) and **Pinchas
-  Lapid** (non-Christian Jewish NT scholar, ~9 formal reasons it's a creed); "died *for our sins*" =
+  Lapide** (non-Christian Jewish NT scholar, ~9 formal reasons it's a creed); "died *for our sins*" =
   substitutionary hint; the longest + earliest appearance list; 1 Cor 15:11 ("whether they or I, so we
   preach") = shared message.
 - **The deity creeds** ("earliest = highest"; the **High Christology Club** = Hengel, Hurtado, Dunn,
@@ -88,7 +88,7 @@ name), not a low Christology that evolved upward.
 - **`/briefs`: — (topic exhaustively served).** The creed-dating + deity-of-the-earliest-creeds case is
   already carried by `resurrection-creed-dating`, `deity-of-christ-nt`, and `shema-trinity` — all distilled
   from certified essays. This is the *sixth* Habermas source and a re-run of note #1; **nothing net-new.**
-- **Essay-strengthening leads for a future session (verify first):** **Pinchas Lapid** (a non-Christian
+- **Essay-strengthening leads for a future session (verify first):** **Pinchas Lapide** (a non-Christian
   Jewish concession on the 1 Cor 15 creed) and **Vernon Neufeld** as additional scholarly support for
   `library/earlycreed.html`; the cheap **Habermas/Shaw Cullmann reprint** as a citable edition. None reach
   the live AI except through the normal pipeline.

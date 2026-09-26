@@ -48,8 +48,8 @@ async function handleDeleteAccount(req, res) {
     const stillIntact = result.error === 'rows_failed' || result.error === 'not_configured' || result.error === 'bad_user_id';
     return res.status(500).json({
       error: stillIntact
-        ? 'We could not complete the deletion, so we stopped without removing anything — your account is still intact. Please try again, or email hello@apologiadaily.com and we will finish it manually.'
-        : 'We could not finish the deletion. Please email hello@apologiadaily.com and we will complete it manually.',
+        ? 'We could not complete the deletion, so we stopped without removing anything — your account is still intact. Please try again, or email contact@apologiadaily.com and we will finish it manually.'
+        : 'We could not finish the deletion. Please email contact@apologiadaily.com and we will complete it manually.',
     });
   }
 

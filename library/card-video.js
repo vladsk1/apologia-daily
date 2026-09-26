@@ -18,6 +18,11 @@
    /library/*.html link in a card is the essay CTA the fragment shipped with (one
    per card) — never a cross-link ADCrossLink would later inject.
 
+   LONG FORM: when the lesson entry also carries a "full" youtube id (the narrated,
+   animated explainer from tools/reel/gen_explainer.py), a second box — "The full
+   explainer" — goes at the top of the card's Pro Deep Dive tier. Same data file,
+   same click-to-load privacy, dark until the id is filled in.
+
    PRIVACY: identical to video-lesson.js — click-to-load. The card body is
    display:none until the card is expanded, so the single cookieless poster image
    (i.ytimg.com, loading="lazy") is not fetched until the reader opens the card;
@@ -53,35 +58,70 @@
       var cards = container.querySelectorAll('.card');
       for (var i = 0; i < cards.length; i++) {
         var card = cards[i];
-        if (card.querySelector('.cardvid')) continue;          // idempotent
         var e = lessons[slugFor(card)];
-        if (!e || !e.youtube) continue;                         // no video / not uploaded yet
-        if (!/^[A-Za-z0-9_-]{6,20}$/.test(e.youtube)) continue; // guard: plausible YouTube id only
+        if (!e) continue;
         var cb = card.querySelector('.cb');
         if (!cb) continue;
-        injectCss();
-        insert(cb, e.youtube);
+        var titleEl = card.querySelector('.ct');
+        var title = titleEl ? (titleEl.textContent || '').trim() : '';
+        // 1. the ~1-minute reel, at the top of the card body
+        if (okId(e.youtube) && !card.querySelector('.cardvid-short')) {
+          injectCss();
+          insert(cb, cb.firstChild, e.youtube, {
+            cls: 'cardvid-short', label: 'Watch the short version of this argument',
+            eyebrow: '&#9654;&nbsp;The short version', title: title, event: 'card_video_play',
+            note: 'A ~1-minute, captioned overview of this argument. Watch first, then read the case below.' });
+        }
+        // 2. the long-form narrated explainer, at the top of the Pro Deep Dive tier
+        var deep = okId(e.full) && !card.querySelector('.cardvid-full') && deepDive(card);
+        if (deep) {
+          injectCss();
+          insert(deep, deep.firstChild, e.full, {
+            cls: 'cardvid-full', label: 'Watch the full explainer of this argument',
+            eyebrow: '&#9654;&nbsp;The full explainer' + (e.full_dur ? ' &middot; ' + esc(e.full_dur) : ''),
+            title: title, event: 'card_video_full_play',
+            note: 'An animated, narrated walk through the whole case: both premises, the evidence, and the ' +
+                  'strongest objections. Captioned. The deep dive below goes further still.' });
+        }
       }
     });
   }
 
-  function insert(cb, ytid) {
+  function okId(id) { return !!id && /^[A-Za-z0-9_-]{6,20}$/.test(id); }  // plausible YouTube id only
+
+  /* The card's "Pro — Deep Dive" tier: the .pro block whose badge says "Deep Dive"
+     (not "The Case, Plainly"). Returns its .pro-explain body, or null. */
+  function deepDive(card) {
+    var pros = card.querySelectorAll('.pro');
+    for (var i = 0; i < pros.length; i++) {
+      var b = pros[i].querySelector('.prob');
+      if (b && /deep dive/i.test(b.textContent || '')) return pros[i].querySelector('.pro-explain');
+    }
+    return null;
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function insert(parent, before, ytid, o) {
     var card = document.createElement('aside');
-    card.className = 'cardvid';
-    card.setAttribute('aria-label', 'Watch the short version of this argument');
+    card.className = 'cardvid cardvid-c ' + o.cls;
+    card.setAttribute('aria-label', o.label);
     var poster = 'https://i.ytimg.com/vi/' + ytid + '/hqdefault.jpg';
     card.innerHTML =
-      '<div class="cv-head">' +
-        '<span class="cv-eyebrow">&#9654;&nbsp;The short version</span>' +
-        '<span class="cv-note">Watch first, then read the case below</span>' +
-      '</div>' +
       '<button type="button" class="cv-frame" aria-label="Play the video">' +
         '<img class="cv-poster" src="' + poster + '" alt="" loading="lazy" width="480" height="270">' +
         '<span class="cv-play" aria-hidden="true"><span class="cv-tri"></span></span>' +
       '</button>' +
-      '<p class="cv-cap">A ~1-minute, fully-captioned summary&mdash;the same argument, compressed. ' +
-        'It&rsquo;s a starting point; the case below is where it&rsquo;s actually made.</p>';
-    cb.insertBefore(card, cb.firstChild);
+      '<div class="cv-copy">' +
+        '<span class="cv-eyebrow">' + o.eyebrow + '</span>' +
+        (o.title ? '<span class="cv-title">' + esc(o.title) + '</span>' : '') +
+        '<span class="cv-note2">' + o.note + '</span>' +
+      '</div>';
+    parent.insertBefore(card, before);
 
     var btn = card.querySelector('.cv-frame');
     btn.addEventListener('click', function (ev) {
@@ -96,7 +136,7 @@
       f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
       wrap.appendChild(f);
       this.replaceWith(wrap);
-      if (window.adTrack) { try { window.adTrack('card_video_play', { id: ytid }); } catch (e) {} }
+      if (window.adTrack) { try { window.adTrack(o.event, { id: ytid }); } catch (e) {} }
     });
   }
 
@@ -123,7 +163,18 @@
       ".cardvid .cv-cap{font-family:'DM Sans',system-ui,sans-serif;font-size:.78rem;line-height:1.5;",
       'color:rgba(255,255,255,.62);margin:9px 4px 8px}',
       '.cardvid .cv-embed{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#000}',
-      '.cardvid .cv-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}'
+      '.cardvid .cv-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}',
+      /* compact (intro-style) layout: smaller video left, title + note right */
+      '.cardvid-c{display:flex;gap:16px;align-items:center;padding:14px}',
+      '.cardvid-c .cv-frame{flex:0 0 42%;max-width:320px;width:auto}',
+      '.cardvid-c .cv-play{width:56px;height:56px}',
+      '.cardvid-c .cv-tri{margin-left:4px;border-width:10px 0 10px 17px}',
+      '.cardvid-c .cv-copy{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}',
+      ".cardvid-c .cv-title{font-family:Georgia,'Times New Roman',serif;font-size:1.05rem;font-weight:700;color:#fff;line-height:1.25}",
+      ".cardvid-c .cv-note2{font-family:'DM Sans',system-ui,sans-serif;font-size:.8rem;line-height:1.5;color:rgba(255,255,255,.62)}",
+      '.cardvid-c .cv-embed{flex:0 0 42%;max-width:320px}',
+      '@media(max-width:640px){.cardvid-c{flex-direction:column;align-items:stretch}',
+      '.cardvid-c .cv-frame,.cardvid-c .cv-embed{flex:none;max-width:none;width:100%}}'
     ].join('');
     var st = document.createElement('style'); st.id = 'card-video-css'; st.textContent = css;
     document.head.appendChild(st);

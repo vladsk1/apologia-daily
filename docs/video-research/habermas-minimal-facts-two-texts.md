@@ -82,7 +82,7 @@ within ~5 years of the cross, and the disciples' post-death experiences are conc
 ## Named-scholar LEADS (ASR-mangled names de-mangled; verify EACH — see 2026-07-22 citations pass)
 - **Michael Martin** — atheist philosopher (*The Case Against Christianity*, 1991); concedes Paul is the **only
   *contemporary eyewitness* account** of a post-resurrection appearance (1 Cor 15:8) — *use that exact scope,
-  "only contemporary eyewitness," not a looser "best source."* *Net-new (not on-site).*
+  "only contemporary eyewitness," not a looser "best source."* *⚠ CORRECTION (audit 2026-09-24): already LIVE on `ev-s2.html:126` (atheist philosopher Michael Martin, "drawing no theistic conclusion") — NOT net-new. Essays aside, the non-essay surface already carries him.*
 - **Dale Allison** — *Resurrecting Jesus* (2005); as an undecided/skeptical historian he grants the disciples
   had experiences they took to be the risen Jesus, and judges the empty-tomb case *slightly* stronger than its
   denial. *"By a short margin" is a paraphrase — verify the verbatim page before quoting.* *Already on-site*
