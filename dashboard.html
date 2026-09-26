@@ -321,6 +321,9 @@
       <span id="due-today-cta" style="font-family:var(--font-ui);font-size:0.82rem;font-weight:600;padding:8px 16px;border-radius:5px;background:var(--gold);color:#050d1a;white-space:nowrap;">Review now &rarr;</span>
     </a>
 
+    <!-- MASTERY REVIEWS DUE (local, works logged-out; filled by /lib/review-queue.js from ad_reviews) -->
+    <div id="ad-review-due" style="display:none;background:linear-gradient(135deg,#0a1628,#0f2040);border:1px solid rgba(200,169,81,0.45);border-radius:8px;padding:0.95rem 1.25rem;margin:0 0 1.25rem;"></div>
+
     <!-- MODE TOGGLE (always visible) -->
     <div style="display:flex;align-items:center;justify-content:flex-end;gap:0.5rem;margin-bottom:1rem;">
       <span style="font-family:var(--font-ui);font-size:0.72rem;color:var(--text-muted);">View:</span>
@@ -2020,5 +2023,12 @@ function closeBeltInfo(){ var m = document.getElementById('belt-modal'); if(m) m
   window.addEventListener('load',function(){ try{ if(window.Coach&&Coach.sync) Coach.sync(function(){ try{ var _gf=(typeof getFocus==='function')?getFocus():null; Coach.renderPanel('coach-body'); Coach.renderSkillStrip('coach-skill-strip', _gf?_gf.cat:null); renderWeakSpot(); }catch(e){} }); }catch(e){} });</script>
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
+  <script src="/lib/review-queue.js" defer></script>
+  <script>
+    /* Surface mastery arguments due for a spaced review (local, works logged-out). */
+    document.addEventListener('DOMContentLoaded', function () {
+      try { if (window.ADReview) window.ADReview.renderDueInto(document.getElementById('ad-review-due')); } catch (e) {}
+    });
+  </script>
 </body>
 </html>
