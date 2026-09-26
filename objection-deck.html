@@ -74,6 +74,12 @@ h1{font-family:var(--fd);font-size:clamp(2rem,5vw,2.8rem);font-weight:700;line-h
 .btn2.ghost{background:transparent;border:1px solid rgba(255,255,255,.25);color:#fff;}
 .foot{margin-top:3rem;text-align:center;color:rgba(255,255,255,.35);font-size:.78rem;}
 @media(max-width:560px){.obj{font-size:1.28rem;}.rate-row{grid-template-columns:repeat(2,1fr);}}
+.mine-wrap{margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.1);}
+.mine-label{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gl);margin-bottom:.5rem;}
+.mine-box{width:100%;box-sizing:border-box;min-height:70px;resize:vertical;background:rgba(255,255,255,.05);border:1px solid rgba(200,169,81,.3);border-radius:6px;color:#fff;font-family:var(--ui);font-size:.95rem;line-height:1.55;padding:10px 12px;outline:none;}
+.mine-box:focus{border-color:var(--g);}
+.mine-hint{font-size:.72rem;color:var(--mu);margin-top:.45rem;line-height:1.5;}
+.mine-saved{color:var(--gl);font-weight:600;}
 </style>
 </head>
 <body>
@@ -149,7 +155,7 @@ h1{font-family:var(--fd);font-size:clamp(2rem,5vw,2.8rem);font-weight:700;line-h
     <div class="topics" id="topics"></div>
     <button class="start-btn" id="startBtn" onclick="startSession()">Start drilling &rarr;</button>
     <div class="howto">
-      <b>How it works.</b> Read the objection, say your reply out loud (or in your head), then flip to check your move against the certified answer. Rate yourself honestly &mdash; the deck uses spaced repetition to bring the ones you miss back sooner and space out the ones you own. Every answer is drawn from the Evidence Library&rsquo;s certified mastery tracks.
+      <b>How it works.</b> Read the objection &mdash; <em>if they say this</em> &mdash; and say your reply out loud (or in your head), then flip to check your move against the certified answer. Then write it in your own words: your <em>&ldquo;if they say that, I&rsquo;ll say&hellip;&rdquo;</em> plan, saved just for you, so it comes out naturally in a real conversation. Rate yourself honestly &mdash; the deck uses spaced repetition to bring the ones you miss back sooner, and mixes topics so you practise spotting <em>which</em> reply a moment calls for. Every answer is drawn from the Evidence Library&rsquo;s certified mastery tracks.
     </div>
   </section>
 
@@ -163,12 +169,17 @@ h1{font-family:var(--fd);font-size:clamp(2rem,5vw,2.8rem);font-weight:700;line-h
     <div class="card">
       <div class="card-tag" id="cardTag">The Trinity</div>
       <div class="card-arg" id="cardArg">The Kalam Cosmological Argument</div>
-      <div class="obj-label">The objection</div>
+      <div class="obj-label">If they say this&hellip;</div>
       <div class="obj" id="objText">&hellip;</div>
       <div class="move-wrap" id="moveWrap">
-        <div class="move-label">Your move</div>
+        <div class="move-label">&hellip;then your move</div>
         <div class="move" id="moveText"></div>
         <div class="src" id="srcLink"></div>
+        <div class="mine-wrap">
+          <div class="mine-label">Now make it yours &mdash; how would <em>you</em> say it?</div>
+          <textarea class="mine-box" id="mineBox" placeholder="If they say that, I&rsquo;ll say&hellip; (in your own words)"></textarea>
+          <div class="mine-hint" id="mineHint">Saved just for you. Putting the reply in your own words &mdash; a plan for what you&rsquo;ll actually say &mdash; is what makes it come out naturally when it counts.</div>
+        </div>
       </div>
       <button class="flip-btn" id="flipBtn" onclick="flipCard()">Show the move &darr;</button>
       <div class="rate" id="rateBox">
@@ -205,11 +216,16 @@ var SCHED = {};               // { id: {ef, reps, interval, due} }
 var SESSION = [];             // queue of objection objects for this run
 var SI = 0, REVIEWED = 0, MISSED = 0, MARKED = false;
 var FILTER = null;            // category filter, null = all
+var ARGFILTER = null;         // single-argument filter (from ?arg=), overrides category
 var SKEY = 'ad_objdeck';
+var PKEY = 'ad_ifthen';       // { objId: "the learner's own if-then plan" } — private, local only
+var PLANS = {};
 var SESSION_MAX = 15, SESSION_MIN = 8;
 
 function loadSched(){ try{ SCHED = JSON.parse(localStorage.getItem(SKEY) || '{}'); }catch(e){ SCHED = {}; } }
 function saveSched(){ try{ localStorage.setItem(SKEY, JSON.stringify(SCHED)); }catch(e){} }
+function loadPlans(){ try{ PLANS = JSON.parse(localStorage.getItem(PKEY) || '{}'); }catch(e){ PLANS = {}; } }
+function savePlans(){ try{ localStorage.setItem(PKEY, JSON.stringify(PLANS)); }catch(e){} }
 function todayISO(){ return new Date().toISOString().slice(0,10); }
 function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } return a; }
@@ -252,7 +268,7 @@ function pickTopic(btn, cat){
 
 /* ---------------- session ---------------- */
 function buildQueue(){
-  var pool = OBJ.filter(function(o){ return !FILTER || o.category===FILTER; });
+  var pool = OBJ.filter(function(o){ return ARGFILTER ? o.arg===ARGFILTER : (!FILTER || o.category===FILTER); });
   var due = shuffle(pool.filter(isDue));
   var rest = shuffle(pool.filter(function(o){ return !isDue(o); }));
   // interleave-by-category so consecutive cards jump topics (only meaningful when FILTER is null)
@@ -285,6 +301,8 @@ function showCard(){
   document.getElementById('objText').textContent = o.front;
   document.getElementById('moveText').textContent = o.back;
   document.getElementById('srcLink').innerHTML = '<a href="/ev-m-'+esc(o.arg)+'.html">Study this argument &rarr;</a>';
+  var mb = document.getElementById('mineBox'); if(mb){ mb.value = PLANS[o.id] || ''; }
+  var mh = document.getElementById('mineHint'); if(mh){ mh.innerHTML = PLANS[o.id] ? '<span class="mine-saved">&#10003; Your saved plan</span> &mdash; tweak it any time. Practising your own words is what makes it come out naturally when it counts.' : 'Saved just for you. Putting the reply in your own words &mdash; a plan for what you&rsquo;ll actually say &mdash; is what makes it come out naturally when it counts.'; }
   document.getElementById('moveWrap').style.display='none';
   document.getElementById('rateBox').style.display='none';
   document.getElementById('flipBtn').style.display='inline-block';
@@ -359,8 +377,30 @@ async function navAuth(){
   }catch(e){}
 }
 async function signOut(){ try{ if(sb) await sb.auth.signOut(); }catch(e){} location.reload(); }
+/* Save the learner's own if-then plan as they type (private, local only). */
+function wirePlanBox(){
+  var mb = document.getElementById('mineBox'); if(!mb) return;
+  var t;
+  mb.addEventListener('input', function(){
+    var o = SESSION[SI]; if(!o) return;
+    var v = mb.value.trim();
+    if(v){ PLANS[o.id] = v; } else { delete PLANS[o.id]; }
+    clearTimeout(t); t = setTimeout(function(){
+      savePlans();
+      var mh = document.getElementById('mineHint');
+      if(mh && v){ mh.innerHTML = '<span class="mine-saved">&#10003; Saved</span> &mdash; your own words, ready for next time.'; }
+    }, 400);
+  });
+}
 async function boot(){
   loadSched();
+  loadPlans();
+  // Deep-link filters: ?arg=<slug> drills one argument's objections; ?cat=<Category> pre-selects a topic.
+  try{
+    var qs = new URLSearchParams(location.search);
+    if(qs.get('arg')){ ARGFILTER = qs.get('arg'); }
+    if(qs.get('cat')){ FILTER = qs.get('cat'); }
+  }catch(e){}
   try{
     var res = await fetch('/objections.json', { cache:'no-store' });
     var data = await res.json();
@@ -372,6 +412,9 @@ async function boot(){
     return;
   }
   renderLobby();
+  wirePlanBox();
+  // If deep-linked to a single argument, start that focused drill straight away.
+  if(ARGFILTER && OBJ.some(function(o){ return o.arg===ARGFILTER; })){ startSession(); }
   navAuth();
 }
 document.addEventListener('DOMContentLoaded', boot);
