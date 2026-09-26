@@ -740,7 +740,7 @@ function renderMockScore(txtRaw){
   var checks = [
     {ok:/(scroll|qumran|cave|manuscript)/.test(t) && /(old|ancient|thousand|millenni|before christ|bc|pre-?christ)/.test(t), hit:'Premise 1 — you noted the Scrolls push our manuscripts back a thousand years', miss:'Premise 1 is missing — say the Scrolls are ~1000 years older than previous Hebrew copies'},
     {ok:/(agree|match|identical|same|accura|preserv|95|ninety)/.test(t) && /(masoretic|medieval|later|text)/.test(t), hit:'Premise 2 — you stated the old copies match the later text accurately', miss:'Premise 2 is thin — state that the older scrolls agree with the later text in all essentials'},
-    {ok:/therefore|so |conclu|reliab|faithful|trustworth|preserv/.test(t), hit:'Conclusion — you drew out that the OT text is reliably preserved', miss:'Draw the conclusion explicitly: therefore the OT we read faithfully preserves the ancient text'},
+    {ok:/therefore|so |conclu|reliab|faithful|trustworth|preserv/.test(t), hit:'Conclusion — you drew out that the OT text is reliably preserved', miss:'Draw the conclusion explicitly: therefore the Hebrew text behind most modern Old Testament translations faithfully preserves the ancient text'},
     {ok:/(isaiah|1qisa|spelling|variant|copyist|essential|meaning|doctrine)/.test(t), hit:'Nice — you grounded it in the Isaiah comparison or the nature of the variants', miss:'Push further: cite the Great Isaiah Scroll and that variants were spelling, not meaning'},
     {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth — you developed it, not just listed it', miss:'Go a bit deeper — a full reconstruction runs longer than this'}
   ];
