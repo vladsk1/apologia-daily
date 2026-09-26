@@ -33,7 +33,12 @@
       'transform:translateX(-50%) rotate(45deg)}' +
       '.ask-sel .as-ic{color:#c8a951}' +
       '.ask-sel:hover{border-color:#c8a951}' +
-      '.ask-sel:focus-visible{outline:2px solid #c8a951;outline-offset:2px}';
+      '.ask-sel:focus-visible{outline:2px solid #c8a951;outline-offset:2px}' +
+      // "below" variant: on touch the button sits UNDER the selection so it clears
+      // the OS copy/paste callout (which pops up above the selection); arrow flips up.
+      '.ask-sel.below{transform:translate(-50%,0)}' +
+      '.ask-sel.below::after{top:-6px;bottom:auto;' +
+      'border:0;border-left:1px solid rgba(200,169,81,.5);border-top:1px solid rgba(200,169,81,.5)}';
     document.head.appendChild(s);
     btn = document.createElement('button');
     btn.type = 'button'; btn.className = 'ask-sel';
@@ -67,15 +72,26 @@
     return { text: text, rect: range.getBoundingClientRect() };
   }
 
+  var coarse = false;
+  try { coarse = window.matchMedia && window.matchMedia('(pointer:coarse)').matches; } catch(e){}
+
   function onSelect(){
     if(!tutorReady()) return;
     var s = currentSelectionInBody();
     if(!s || !s.rect || (!s.rect.width && !s.rect.height)){ hide(); return; }
     lastText = s.text;
     var b = ensureBtn();
-    var top = Math.max(46, s.rect.top - 8);       // sit just above the selection, clear of the nav
     var left = Math.min(Math.max(70, s.rect.left + s.rect.width/2), window.innerWidth - 70);
-    b.style.top = top + 'px'; b.style.left = left + 'px'; b.style.display = 'inline-flex';
+    // On touch, drop the button below the selection so it doesn't collide with the
+    // OS selection callout (Copy/Share…), which appears above; desktop keeps it above.
+    if(coarse){
+      b.classList.add('below');
+      b.style.top = Math.min(window.innerHeight - 12, s.rect.bottom + 12) + 'px';
+    } else {
+      b.classList.remove('below');
+      b.style.top = Math.max(46, s.rect.top - 8) + 'px';
+    }
+    b.style.left = left + 'px'; b.style.display = 'inline-flex';
   }
 
   function ask(){
@@ -102,4 +118,16 @@
   document.addEventListener('keyup', function(e){ if(e.shiftKey || e.key === 'Shift') setTimeout(onSelect, 0); });
   document.addEventListener('scroll', hide, { passive: true });
   document.addEventListener('mousedown', function(e){ if(btn && e.target !== btn && !btn.contains(e.target)) hide(); });
+
+  // MOBILE: touch text-selection fires neither mouseup nor keyup, so the two
+  // listeners above never ran on a phone and the button never appeared. The
+  // selectionchange event DOES fire on touch (repeatedly, as the handles move),
+  // so debounce it and act once the selection settles. touchend catches the
+  // lift. Both also work on desktop; the debounce keeps them cheap.
+  var sct = null;
+  document.addEventListener('selectionchange', function(){
+    clearTimeout(sct);
+    sct = setTimeout(onSelect, 350);
+  });
+  document.addEventListener('touchend', function(){ setTimeout(onSelect, 60); }, { passive: true });
 })();

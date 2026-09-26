@@ -41,8 +41,15 @@
     '.on-box::before{content:"";position:absolute;left:50%;top:-7px;width:12px;height:12px;',
     'background:#fff;border-left:1px solid rgba(200,169,81,.55);border-top:1px solid rgba(200,169,81,.55);',
     'transform:translateX(-50%) rotate(45deg)}',
-    '.on:hover .on-box,.on:focus-within .on-box,.on-box.is-open{',
+    // is-open (tap) and focus-within (keyboard) always reveal. Hover-reveal is
+    // gated to devices that actually hover: on a touch screen a sticky :hover
+    // would keep the box open after a tap, so it could never be tapped shut.
+    '.on:focus-within .on-box,.on-box.is-open{',
     'opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}',
+    '@media (hover:hover){.on:hover .on-box{',
+    'opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}}',
+    // bigger, easier tap target on touch screens (the desktop badge is ~15px)
+    '@media (pointer:coarse){.on-mark{min-width:22px;min-height:22px;font-size:.8em}}',
     // heading is an inline <span> (NOT <h4>): a block element here would auto-close the
     // surrounding <p> during HTML parsing and eject the box's content. display:block via CSS.
     '.on-box .on-h{display:block;margin:0 0 .5rem;font-family:\'DM Sans\',sans-serif;font-size:.7rem;letter-spacing:.13em;',
@@ -86,15 +93,24 @@
   function onOf(el) { return el && el.closest ? el.closest('.on') : null; }
   document.addEventListener('mouseover', function (e) { var on = onOf(e.target); if (on) place(on.querySelector('.on-box')); });
   document.addEventListener('focusin', function (e) { var on = onOf(e.target); if (on) place(on.querySelector('.on-box')); });
+  // CAPTURE phase (the `true` below) is load-bearing: an orthonote can sit
+  // inside an Evidence Library .card whose inline onclick="tog(this)" toggles the
+  // card. A bubble-phase document listener runs AFTER that inline handler, so its
+  // stopPropagation() is too late — tapping the ＊ on mobile (no hover) would open
+  // the box AND collapse the card. Handling the mark in capture lets us stop the
+  // event before it reaches the card. preventDefault() also guards the case where
+  // a mark ever sits inside a link/label, so a tap can never navigate away.
   document.addEventListener('click', function (e) {
     var mark = e.target.closest ? e.target.closest('.on-mark') : null;
-    if (!mark) { closeAll(null); return; }
+    if (!mark) { closeAll(null); return; }   // let non-mark clicks proceed normally
+    e.preventDefault();
     e.stopPropagation();
+    if (e.stopImmediatePropagation) e.stopImmediatePropagation();
     var box = mark.parentElement.querySelector('.on-box');
     var open = box.classList.toggle('is-open');
     mark.setAttribute('aria-expanded', open ? 'true' : 'false');
     closeAll(box);
     if (open) place(box);
-  });
+  }, true);
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(null); });
 })();
