@@ -1,0 +1,72 @@
+{
+  "base": "https://apologiadaily.com",
+  "width": 390,
+  "height": 640,
+  "scale": 2,
+  "prep": "document.documentElement.style.scrollBehavior='auto';document.body.style.scrollBehavior='auto';window.__hideFloats=()=>{for(const el of document.querySelectorAll('body *')){const cs=getComputedStyle(el);if(cs.position==='fixed'&&el.getBoundingClientRect().top>90)el.style.visibility='hidden';}};window.__find=(re,root)=>[...(root||document).querySelectorAll('body *')].filter(x=>x.children.length<4&&re.test(x.textContent.trim())).sort((a,b)=>a.textContent.length-b.textContent.length)[0];window.__tab=async(i,id)=>{document.querySelectorAll('.tab')[i].click();for(let k=0;k<40&&!document.getElementById(id);k++)await new Promise(r=>setTimeout(r,250));await new Promise(r=>setTimeout(r,600));return document.getElementById(id);};",
+  "shots": [
+    {
+      "name": "01-card",
+      "path": "/evidence-library.html",
+      "settle": 2500,
+      "js": "const c=await __tab(2,'arg-paul-divinity'); c.scrollIntoView({block:'start'}); window.scrollBy(0,-90); await new Promise(r=>setTimeout(r,400)); __hideFloats();"
+    },
+    {
+      "name": "02-jesus-list",
+      "path": "/evidence-library.html",
+      "settle": 2500,
+      "js": "const c=await __tab(2,'arg-christ-before-bethlehem'); c.scrollIntoView({block:'start'}); window.scrollBy(0,-90); await new Promise(r=>setTimeout(r,400)); __hideFloats();"
+    },
+    {
+      "name": "03-trinity",
+      "path": "/evidence-library.html",
+      "settle": 2500,
+      "js": "const c=await __tab(5,'arg-proto-trinitarian'); c.scrollIntoView({block:'start'}); window.scrollBy(0,-90); await new Promise(r=>setTimeout(r,400)); __hideFloats();"
+    },
+    {
+      "name": "04-plain",
+      "path": "/evidence-library.html",
+      "settle": 2500,
+      "js": "const c=await __tab(2,'arg-paul-divinity'); togInner(c); await new Promise(r=>setTimeout(r,700)); const e=__find(/^In plain English/,c); (e||c).scrollIntoView({block:'start'}); window.scrollBy(0,-150); await new Promise(r=>setTimeout(r,400)); __hideFloats();"
+    },
+    {
+      "name": "05-case-plainly",
+      "path": "/evidence-library.html",
+      "settle": 2500,
+      "js": "const c=await __tab(2,'arg-paul-divinity'); togInner(c); await new Promise(r=>setTimeout(r,700)); const e=__find(/The Case, Plainly/,c); (e||c).scrollIntoView({block:'start'}); window.scrollBy(0,-120); await new Promise(r=>setTimeout(r,400)); __hideFloats();"
+    },
+    {
+      "name": "06-deep-dive",
+      "path": "/evidence-library.html",
+      "settle": 2500,
+      "js": "const c=await __tab(2,'arg-paul-divinity'); togInner(c); await new Promise(r=>setTimeout(r,700)); const e=__find(/^Pro (—|&mdash;) Deep Dive$|^Pro — Deep Dive/,c)||__find(/Deep Dive/,c); (e||c).scrollIntoView({block:'start'}); window.scrollBy(0,-120); await new Promise(r=>setTimeout(r,400)); __hideFloats();",
+      "report": "(()=>{const c=document.getElementById('arg-paul-divinity');const e=__find(/Deep Dive/,c);return e?e.textContent.trim().slice(0,80):'none'})()"
+    },
+    {
+      "name": "07-research",
+      "path": "/evidence-library.html",
+      "settle": 2500,
+      "js": "const c=await __tab(2,'arg-paul-divinity'); togInner(c); await new Promise(r=>setTimeout(r,700)); const p=c.querySelector('.pv-sec'); p.scrollIntoView({block:'start'}); window.scrollBy(0,-260); await new Promise(r=>setTimeout(r,400)); __hideFloats();"
+    },
+    {
+      "name": "08-essay",
+      "path": "/library/paul-divinity.html",
+      "settle": 2500,
+      "js": "__hideFloats();"
+    },
+    {
+      "name": "09-tutors",
+      "path": "/library/paul-divinity.html",
+      "settle": 3000,
+      "js": "const e=__find(/^Read it with the AI tutor/i); if(e){e.scrollIntoView({block:'center'}); window.scrollBy(0,40);}",
+      "report": "(()=>{const e=__find(/^Read it with the AI tutor/i);return e?'found':'missing'})()"
+    },
+    {
+      "name": "10-mastery",
+      "path": "/ev-m-worship-of-jesus.html",
+      "settle": 2500,
+      "js": "const e=document.getElementById('proveit'); if(e){e.scrollIntoView({block:'start'}); window.scrollBy(0,-80);} await new Promise(r=>setTimeout(r,500)); __hideFloats();",
+      "report": "(()=>!!document.getElementById('proveit'))()"
+    }
+  ]
+}

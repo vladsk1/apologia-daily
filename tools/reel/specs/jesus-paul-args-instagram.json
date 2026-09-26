@@ -1,0 +1,293 @@
+{
+  "reviewed": {
+    "argument": "2026-09-27",
+    "orthodoxy": "2026-09-27",
+    "neutrality": "2026-09-27",
+    "by": "2026-09-27 scene-locked vertical (Instagram) FEATURE-PROMO reel for the seven arguments added from the Gordon Fee program (ev-s3 cards 16/18/19/20/21/22 + ev-s6 card 17), with live-site screenshots from tools/reel/shots/jesus-paul-args.json. Gated READ-ONLY (Explore agents; files hash-verified unchanged by reviewers), dual-consensus tier, 2 rounds. R1: argument/feature-accuracy STAMPABLE 0 BREAK 0 WEAK (every 'every card/each' claim verified on all 7 cards, essays, ev-m pages; 5 POLISH); orthodoxy CLEAN 0 HERESY 0 DRIFT, 2 NOTE (bare 'Is Jesus Yahweh?' modalist risk; Nicaea question left unanswered), no Trinity diagram; neutrality STAMPABLE 0 BREAK, 2 WEAK: W1 bare 'Is Jesus Yahweh?' -> full card title 'Is Jesus Yahweh? The Divine-Name Argument' (caption + VO); W2 'drawn largely from the letters of Paul' overclaimed per card and handed skeptics a pull-quote -> 'many drawn from Paul, the earliest Christian writer' (ported ev-s6.html:2645), caption now names the Trinity. Also applied: sc3 sub 'No. The raw material of the Trinity is already in Paul, roughly 250 years before Nicaea.' (ported ev-s6.html:2645); sc11 caption 'With gentleness and respect.' (ported, certified evidence-library reel). R2 (all three lenses on the fixed text): argument STAMPABLE, orthodoxy CLEAN (clarifier candidates: Yahweh title + 'raw material' line, both leave-as-is), neutrality STAMPABLE; two optional POLISH ('earliest Christian writer we have'; softer sc3 opener) NOT applied - scope frozen. VO says 'fourth century' for Nicaea (TTS mispronounces Nicaea; card's own framing ev-s6.html:2651). NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) FEATURE-PROMO reel for the seven Evidence Library arguments added from the Gordon D. Fee (Jesus the Lord according to Paul the Apostle, 2018) program: ev-s3 cards 16 humanity, 18 paul-divinity, 19 worship-of-jesus, 20 jesus-is-yahweh, 21 christ-before-bethlehem, 22 crucified-messiah; ev-s6 card 17 proto-trinitarian. Each card: In plain English + key claims, The Case, Plainly, Pro Deep Dive, 'Research the evidence, line by line' tap-to-open section, link to its library essay (which loads Ask AI Tutor + Teach me this), and an ev-m-* mastery page (Prove it: four checkpoints). Screenshots of the LIVE site from tools/reel/shots/jesus-paul-args.json. Titles ported from the card headers; sc7 wording ported from the card's own research intro; sc9 tutor wording from the essay's tutor box; sc10/sc11 ported from the certified evidence-library reel. VO says 'in the fourth century' for Nicaea (TTS mispronounces Nicaea; caption keeps the title).",
+  "voiceover": "Seven new arguments on Apologia Daily — on who Jesus is, and on the Trinity — many drawn from Paul, the earliest Christian writer. In the Jesus section: The Full Humanity of Christ. Did Paul invent Jesus's divinity? Did the first Christians worship Jesus as God? Is Jesus Yahweh? The divine-name argument. Christ Before Bethlehem. And why a crucified Messiah? And in the Trinity section: was the Trinity invented in the fourth century? Every card starts in plain English, with the key claims set out. Then The Case, Plainly — the positive case, before the deep dive. Then a deeper dive — the full case, with the objections it faces. Tap any line to see the texts, what they do and do not claim, and the honest limit. Each argument has its own fully cited deep-dive essay. On every essay, two AI tutors. Ask AI Tutor answers your questions. Teach me this walks you through the argument, one question at a time. Then make it yours. Each one has a Mastery Track: understand it, explain it, drill it, defend it. Not just reading about Jesus — being ready to give a reason for the hope you have, with gentleness and respect. Explore them at apologiadaily.com.",
+  "scenes": [
+    {
+      "dur": 9.0,
+      "vo": "Seven new arguments on Apologia Daily — on who Jesus is, and on the Trinity — many drawn from Paul, the earliest Christian writer.",
+      "kicker": "NEW IN THE EVIDENCE LIBRARY",
+      "big": [
+        {
+          "t": "Seven new",
+          "c": "cream",
+          "s": 70
+        },
+        {
+          "t": "arguments",
+          "c": "gold",
+          "s": 80
+        }
+      ],
+      "sub": [
+        {
+          "t": "On who Jesus is, and the Trinity — many drawn from Paul, the earliest Christian writer.",
+          "c": "cream",
+          "s": 32,
+          "f": "serif"
+        }
+      ],
+      "shot": "../shots/jesus-paul-args/01-card.png"
+    },
+    {
+      "dur": 18.4,
+      "vo": "In the Jesus section: The Full Humanity of Christ. Did Paul invent Jesus's divinity? Did the first Christians worship Jesus as God? Is Jesus Yahweh? The divine-name argument. Christ Before Bethlehem. And why a crucified Messiah?",
+      "kicker": "IN THE JESUS SECTION",
+      "lines": [
+        {
+          "t": "The Full Humanity of Christ",
+          "c": "cream",
+          "s": 38
+        },
+        {
+          "t": "Did Paul Invent Jesus's Divinity?",
+          "c": "cream",
+          "s": 38
+        },
+        {
+          "t": "Did the First Christians Worship Jesus as God?",
+          "c": "cream",
+          "s": 38
+        },
+        {
+          "t": "Is Jesus Yahweh? The Divine-Name Argument",
+          "c": "cream",
+          "s": 38
+        },
+        {
+          "t": "Christ Before Bethlehem",
+          "c": "cream",
+          "s": 38
+        },
+        {
+          "t": "Why a Crucified Messiah?",
+          "c": "cream",
+          "s": 38
+        }
+      ],
+      "shot": "../shots/jesus-paul-args/02-jesus-list.png"
+    },
+    {
+      "dur": 5.1,
+      "vo": "And in the Trinity section: was the Trinity invented in the fourth century?",
+      "kicker": "IN THE TRINITY SECTION",
+      "big": [
+        {
+          "t": "Was the Trinity",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "Invented at Nicaea?",
+          "c": "gold",
+          "s": 58
+        }
+      ],
+      "shot": "../shots/jesus-paul-args/03-trinity.png",
+      "sub": [
+        {
+          "t": "No. The raw material of the Trinity is already in Paul, roughly 250 years before Nicaea.",
+          "c": "cream",
+          "s": 32,
+          "f": "serif"
+        }
+      ]
+    },
+    {
+      "dur": 5.1,
+      "vo": "Every card starts in plain English, with the key claims set out.",
+      "kicker": "START SIMPLE",
+      "big": [
+        {
+          "t": "In plain English",
+          "c": "gold",
+          "s": 64
+        }
+      ],
+      "sub": [
+        {
+          "t": "Then the key claims, set out.",
+          "c": "cream",
+          "s": 38,
+          "f": "serif"
+        }
+      ],
+      "shot": "../shots/jesus-paul-args/04-plain.png"
+    },
+    {
+      "dur": 5.5,
+      "vo": "Then The Case, Plainly — the positive case, before the deep dive.",
+      "kicker": "THE CASE, PLAINLY",
+      "big": [
+        {
+          "t": "The positive case,",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "before the deep dive",
+          "c": "gold",
+          "s": 52
+        }
+      ],
+      "shot": "../shots/jesus-paul-args/05-case-plainly.png"
+    },
+    {
+      "dur": 5.3,
+      "vo": "Then a deeper dive — the full case, with the objections it faces.",
+      "kicker": "DEEP DIVE",
+      "big": [
+        {
+          "t": "The full case,",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "objections included",
+          "c": "gold",
+          "s": 54
+        }
+      ],
+      "shot": "../shots/jesus-paul-args/06-deep-dive.png"
+    },
+    {
+      "dur": 6.2,
+      "vo": "Tap any line to see the texts, what they do and do not claim, and the honest limit.",
+      "kicker": "LINE BY LINE",
+      "big": [
+        {
+          "t": "Tap any line",
+          "c": "gold",
+          "s": 64
+        }
+      ],
+      "sub": [
+        {
+          "t": "The texts, what they do and do not claim, and the honest limit.",
+          "c": "cream",
+          "s": 34,
+          "f": "serif"
+        }
+      ],
+      "shot": "../shots/jesus-paul-args/07-research.png"
+    },
+    {
+      "dur": 4.7,
+      "vo": "Each argument has its own fully cited deep-dive essay.",
+      "kicker": "THE ESSAY",
+      "big": [
+        {
+          "t": "A fully cited",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "deep-dive essay",
+          "c": "gold",
+          "s": 58
+        }
+      ],
+      "shot": "../shots/jesus-paul-args/08-essay.png"
+    },
+    {
+      "dur": 10.9,
+      "vo": "On every essay, two AI tutors. Ask AI Tutor answers your questions. Teach me this walks you through the argument, one question at a time.",
+      "kicker": "TWO AI TUTORS",
+      "lines": [
+        {
+          "t": "Ask AI Tutor",
+          "c": "gold",
+          "s": 50
+        },
+        {
+          "t": "answers your questions",
+          "c": "cream",
+          "s": 38
+        },
+        {
+          "t": "Teach me this",
+          "c": "gold",
+          "s": 50
+        },
+        {
+          "t": "one question at a time",
+          "c": "cream",
+          "s": 38
+        }
+      ],
+      "shot": "../shots/jesus-paul-args/09-tutors.png"
+    },
+    {
+      "dur": 8.3,
+      "vo": "Then make it yours. Each one has a Mastery Track: understand it, explain it, drill it, defend it.",
+      "kicker": "MASTERY TRACK",
+      "lines": [
+        {
+          "t": "Understand it",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "Explain it",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "Drill it",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "Defend it",
+          "c": "gold",
+          "s": 48
+        }
+      ],
+      "shot": "../shots/jesus-paul-args/10-mastery.png"
+    },
+    {
+      "dur": 9.8,
+      "vo": "Not just reading about Jesus — being ready to give a reason for the hope you have, with gentleness and respect. Explore them at apologiadaily.com.",
+      "kicker": "1 PETER 3:15",
+      "big": [
+        {
+          "t": "Be ready to give",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "a reason for the hope",
+          "c": "gold",
+          "s": 56
+        },
+        {
+          "t": "you have",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "With gentleness and respect.",
+          "c": "cream",
+          "s": 40
+        }
+      ],
+      "sub": [
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "s": 40
+        }
+      ]
+    }
+  ]
+}
