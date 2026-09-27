@@ -1,0 +1,245 @@
+{
+  "reviewed": {
+    "argument": "2026-09-27",
+    "orthodoxy": "2026-09-27",
+    "neutrality": "2026-09-27",
+    "by": "2026-09-27 scene-locked vertical (Instagram) FEATURE-PROMO reel for tap-to-read Scripture (library/verse-popup.js). Gated READ-ONLY (Explore agents; files hash-verified unchanged by reviewers), dual-consensus tier (sc3/sc8 carry the divine-name argument, ported verbatim from library/jesus-is-yahweh.html:150), 2 rounds. R1: argument/feature-accuracy STAMPABLE 0 BREAK 3 WEAK (W1 sc3 dropped the Joel link and the Rom 10:9 'Jesus is Lord' premise -> VO adds ported 'That last line quotes Joel 2:32' and sc3 re-shot on the body ref Romans 10:9-13; W2 STEP screenshots are the interlinear view but the link opens STEP's default English view -> VO 'Switch on the interlinear, and you can see the Greek word by word' + captions '(interlinear view)'; W3 'Tap any Bible reference' overclaimed (chapter-only refs, footnotes not linked) -> 'Bible references, now tappable'); orthodoxy CLEAN 0 HERESY 0 DRIFT (2 NOTE, clarifier candidates leave-as-is); neutrality STAMPABLE 0 BREAK 2 WEAK (STEP link vs visual, same fix; sc5 frame put an unlabelled NIV 'in very nature God' beside the BSB popup 'in the form of God' -> re-shot on answers/is-there-evidence-for-life-after-death.html tapping 1 Corinthians 15:3-7, no translation clash). Also: sc4 'Inside every card' -> 'Inside Evidence Library cards'; sc9 'free for everyone' -> 'in the public domain'. R2 (all three lenses on the fixed text + new frames): argument STAMPABLE, orthodoxy CLEAN (3 clarifier candidates, all leave-as-is; the re-shot sc3 popup shows Rom 10:9 'God raised Him', keeping the persons distinct), neutrality STAMPABLE; optional POLISH ('The popup's verse text…'; en dash vs hyphen) not applied - scope frozen; stale `source` metadata corrected (non-user-facing). Owner-facing product note from both R1 lenses: the popup's own label 'See the Greek/Hebrew on STEP' opens STEP's default English view (verse-popup.js:108/131) - consider adding interlinear options to the URL. NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) FEATURE-PROMO reel for tap-to-read Scripture (library/verse-popup.js, commits 10e68b4b + 82f4660a): Bible references on essays, Evidence Library cards, mastery pages and answers open a popup with the verse (Berean Standard Bible, public domain) and a 'See the Greek/Hebrew on STEP' link. Screenshots of the LIVE site from tools/reel/shots/verse-popup.json (sc1-6; sc3 re-shot on the body ref Romans 10:9-13, sc5 re-shot on answers/is-there-evidence-for-life-after-death.html 1 Corinthians 15:3-7); sc7/sc8 are STEP Bible (captured via tools/reel/shots/verse-popup-step.json) (stepbible.org, third-party) in its interlinear ESV+SBLG / ESV+OHB view, which is one setting away from the page the link opens (the link opens the verse in STEP's default view; the reel says 'Each verse links to STEP Bible, a free study tool. Switch on the interlinear, and you can see the Greek word by word', and the sc7/sc8 captions say '(interlinear view)'/'(interlinear)'). sc3 and sc8 VO ported from library/jesus-is-yahweh.html ('That last line quotes Joel 2:32, where the Lord upon whose name one calls is YHWH himself. Paul takes a text about calling on the covenant name of God and, without a word of apology, makes it a text about calling on Jesus.'). VO says 'Yahweh' (TTS cannot voice 'YHWH'); caption keeps YHWH.",
+  "voiceover": "New on Apologia Daily: Bible references across the site are now tappable. Tap Joel 2:32, and the verse opens right there on the page. You never leave what you're reading. Then tap Romans 10, verses 9 to 13. That last line quotes Joel 2:32. Paul takes a text about calling on the covenant name of God and, without a word of apology, makes it a text about calling on Jesus. It works inside Evidence Library cards, without closing the card. On answer pages. And on Mastery Tracks. Want the original language? Each verse links to STEP Bible, a free study tool. Switch on the interlinear, and you can see the Greek word by word. Here, Lord is Kyrios. And the Hebrew behind it. In Joel 2:32, the Lord upon whose name one calls is Yahweh himself. The verse text is the Berean Standard Bible, in the public domain. Scripture, one tap away, at apologiadaily.com.",
+  "scenes": [
+    {
+      "dur": 6.0,
+      "vo": "New on Apologia Daily: Bible references across the site are now tappable.",
+      "kicker": "NEW ON APOLOGIA DAILY",
+      "big": [
+        {
+          "t": "Bible references,",
+          "c": "cream",
+          "s": 62
+        },
+        {
+          "t": "now tappable",
+          "c": "gold",
+          "s": 68
+        }
+      ],
+      "shot": "../shots/verse-popup/01-refs.png"
+    },
+    {
+      "dur": 8.0,
+      "vo": "Tap Joel 2:32, and the verse opens right there on the page. You never leave what you're reading.",
+      "kicker": "READ IT IN PLACE",
+      "big": [
+        {
+          "t": "The verse opens",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "right on the page",
+          "c": "gold",
+          "s": 56
+        }
+      ],
+      "sub": [
+        {
+          "t": "Joel 2:32",
+          "c": "cream",
+          "s": 36,
+          "f": "serif"
+        }
+      ],
+      "shot": "../shots/verse-popup/02-joel.png"
+    },
+    {
+      "dur": 14.9,
+      "vo": "Then tap Romans 10, verses 9 to 13. That last line quotes Joel 2:32. Paul takes a text about calling on the covenant name of God and, without a word of apology, makes it a text about calling on Jesus.",
+      "kicker": "SEE THE CONNECTION",
+      "big": [
+        {
+          "t": "Romans 10:9–13",
+          "c": "gold",
+          "s": 60
+        }
+      ],
+      "sub": [
+        {
+          "t": "That last line quotes Joel 2:32.",
+          "c": "cream",
+          "s": 34,
+          "f": "serif"
+        },
+        {
+          "t": "Paul takes a text about calling on",
+          "c": "cream",
+          "s": 34,
+          "f": "serif"
+        },
+        {
+          "t": "the covenant name of God and makes it",
+          "c": "cream",
+          "s": 34,
+          "f": "serif"
+        },
+        {
+          "t": "a text about calling on Jesus.",
+          "c": "cream",
+          "s": 34,
+          "f": "serif"
+        }
+      ],
+      "shot": "../shots/verse-popup/03-romans.png"
+    },
+    {
+      "dur": 5.5,
+      "vo": "It works inside Evidence Library cards, without closing the card.",
+      "kicker": "EVIDENCE LIBRARY",
+      "big": [
+        {
+          "t": "Inside Evidence Library cards",
+          "c": "cream",
+          "s": 50
+        }
+      ],
+      "sub": [
+        {
+          "t": "Philippians 2:10–11",
+          "c": "cream",
+          "s": 36,
+          "f": "serif"
+        }
+      ],
+      "shot": "../shots/verse-popup/04-card.png"
+    },
+    {
+      "dur": 3.0,
+      "vo": "On answer pages.",
+      "kicker": "ANSWERS",
+      "big": [
+        {
+          "t": "On answer pages",
+          "c": "cream",
+          "s": 58
+        }
+      ],
+      "sub": [
+        {
+          "t": "1 Corinthians 15:3–7",
+          "c": "cream",
+          "s": 36,
+          "f": "serif"
+        }
+      ],
+      "shot": "../shots/verse-popup/05-answer.png"
+    },
+    {
+      "dur": 3.2,
+      "vo": "And on Mastery Tracks.",
+      "kicker": "MASTERY TRACKS",
+      "big": [
+        {
+          "t": "On Mastery Tracks",
+          "c": "cream",
+          "s": 58
+        }
+      ],
+      "sub": [
+        {
+          "t": "Isaiah 45:23",
+          "c": "cream",
+          "s": 36,
+          "f": "serif"
+        }
+      ],
+      "shot": "../shots/verse-popup/06-mastery.png"
+    },
+    {
+      "dur": 13.2,
+      "vo": "Want the original language? Each verse links to STEP Bible, a free study tool. Switch on the interlinear, and you can see the Greek word by word. Here, Lord is Kyrios.",
+      "kicker": "THE GREEK",
+      "big": [
+        {
+          "t": "The Greek,",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "word by word",
+          "c": "gold",
+          "s": 60
+        }
+      ],
+      "sub": [
+        {
+          "t": "Romans 10:13 on STEP Bible (interlinear view)",
+          "c": "cream",
+          "s": 34,
+          "f": "serif"
+        }
+      ],
+      "shot": "../shots/verse-popup/07-step.png"
+    },
+    {
+      "dur": 8.6,
+      "vo": "And the Hebrew behind it. In Joel 2:32, the Lord upon whose name one calls is Yahweh himself.",
+      "kicker": "THE HEBREW",
+      "big": [
+        {
+          "t": "The Hebrew",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "behind it",
+          "c": "gold",
+          "s": 60
+        }
+      ],
+      "sub": [
+        {
+          "t": "Joel 2:32 on STEP Bible (interlinear): the Lord is YHWH",
+          "c": "cream",
+          "s": 34,
+          "f": "serif"
+        }
+      ],
+      "shot": "../shots/verse-popup/08-step-hebrew.png"
+    },
+    {
+      "dur": 9.2,
+      "vo": "The verse text is the Berean Standard Bible, in the public domain. Scripture, one tap away, at apologiadaily.com.",
+      "kicker": "SCRIPTURE, ONE TAP AWAY",
+      "big": [
+        {
+          "t": "Tap. Read.",
+          "c": "cream",
+          "s": 70
+        },
+        {
+          "t": "Go deeper.",
+          "c": "gold",
+          "s": 70
+        }
+      ],
+      "sub": [
+        {
+          "t": "Verse text: Berean Standard Bible",
+          "c": "cream",
+          "s": 34,
+          "f": "serif"
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "s": 40
+        }
+      ]
+    }
+  ]
+}

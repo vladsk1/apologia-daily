@@ -1,0 +1,22 @@
+{
+  "base": "https://www.stepbible.org",
+  "width": 390,
+  "height": 640,
+  "scale": 2,
+  "shots": [
+    {
+      "name": "07-step",
+      "path": "/?q=version=ESV|version=SBLG|reference=Rom.10.13&options=HVGUN&display=INTERLINEAR",
+      "settle": 10000,
+      "js": "for(const b of [...document.querySelectorAll('*')].filter(e=>e.children.length===0&&e.textContent.trim()==='×'&&e.offsetParent)){b.click();} await new Promise(r=>setTimeout(r,1200)); for(const e of document.querySelectorAll('.modal,.modal-backdrop,.introjs-overlay,.introjs-tooltip')){e.style.display='none';} await new Promise(r=>setTimeout(r,500)); for(const e of document.querySelectorAll('.popover,.tooltip,[role=tooltip]')){e.style.display='none';} for(const e of [...document.querySelectorAll('div')].filter(x=>/You are currently viewing the text in interlinear/.test(x.textContent)&&x.textContent.length<400)){e.style.display='none';} await new Promise(r=>setTimeout(r,300));",
+      "report": "document.body.innerText.split('\\n').join(' ').slice(0,700)"
+    },
+    {
+      "name": "08-step-hebrew",
+      "path": "/?q=version=ESV|version=OHB|reference=Joel.2.32&options=HVGUN&display=INTERLINEAR",
+      "settle": 10000,
+      "js": "for(const b of [...document.querySelectorAll('*')].filter(e=>e.children.length===0&&e.textContent.trim()==='×'&&e.offsetParent)){b.click();} await new Promise(r=>setTimeout(r,1200)); for(const e of document.querySelectorAll('.modal,.modal-backdrop,.introjs-overlay,.introjs-tooltip')){e.style.display='none';} await new Promise(r=>setTimeout(r,500)); for(const e of document.querySelectorAll('.popover,.tooltip,[role=tooltip]')){e.style.display='none';} for(const e of [...document.querySelectorAll('div')].filter(x=>/You are currently viewing the text in interlinear/.test(x.textContent)&&x.textContent.length<400)){e.style.display='none';} await new Promise(r=>setTimeout(r,300));",
+      "report": "document.body.innerText.split('\\n').join(' ').slice(0,700)"
+    }
+  ]
+}
