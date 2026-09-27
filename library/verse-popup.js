@@ -18,7 +18,7 @@
 (function () {
   if (window.__versePopup) return; window.__versePopup = true;
 
-  var BSB = '/library/bible/BSB/', GRC = '/library/bible/GRC/';
+  var BSB = '/library/bible/BSB/', GRC = '/library/bible/GRC/', HBO = '/library/bible/HBO/';
 
   var BOOKS = {
     GEN:['genesis','gen'],EXO:['exodus','exod','exo','ex'],LEV:['leviticus','lev'],NUM:['numbers','num'],
@@ -82,14 +82,38 @@
     return code;
   }
 
+  // Hebrew (OpenScriptures morphology, as used by STEP TAHOT)
+  var HPOS = {A:'adjective',C:'conjunction',D:'adverb',N:'noun',P:'pronoun',R:'preposition',S:'suffix',T:'particle',V:'verb'};
+  var HG={m:'masculine',f:'feminine',c:'common',b:'both'},HN={s:'singular',p:'plural',d:'dual'},HST={a:'absolute',c:'construct',d:'determined'};
+  var HSTEM={q:'qal',N:'niphal',p:'piel',P:'pual',h:'hiphil',H:'hophal',t:'hithpael',o:'polel',O:'polal',r:'poel',R:'poal',v:'hishtaphel'};
+  var HCONJ={p:'perfect',q:'sequential perfect',i:'imperfect',w:'sequential imperfect',h:'cohortative',j:'jussive',v:'imperative',r:'participle',s:'passive participle',a:'infinitive absolute',c:'infinitive construct'};
+  function hgn(seg) {
+    if (!seg) return ''; var out = [], i = 0;
+    if (/^[123]/.test(seg)) { out.push(ORD[seg[0]] + ' person'); i = 1; }
+    if (HG[seg[i]]) { out.push(HG[seg[i]]); i++; } if (HN[seg[i]]) { out.push(HN[seg[i]]); i++; } if (HST[seg[i]]) out.push(HST[seg[i]]);
+    return out.join(' ');
+  }
+  function decodeHeb(code) {
+    if (!code) return ''; var aram = code[0] === 'A', c = code.replace(/^[HA]/, ''), pos = c[0];
+    if (pos === 'N') { var t = c[1]; if (t === 'p') return 'proper noun'; if (t === 'g') return 'gentilic noun'; var d = [HG[c[2]], HN[c[3]], HST[c[4]]].filter(Boolean).join(' '); return 'noun' + (d ? ' — ' + d : ''); }
+    if (pos === 'V') { var ex = hgn(c.slice(3)); return 'verb — ' + [HSTEM[c[1]], HCONJ[c[2]]].filter(Boolean).join(' ') + (ex ? ', ' + ex : ''); }
+    if (pos === 'A') { var d2 = [HG[c[2]], HN[c[3]], HST[c[4]]].filter(Boolean).join(' '); return 'adjective' + (d2 ? ' — ' + d2 : ''); }
+    if (pos === 'P') { var d3 = hgn(c.slice(2)); return 'pronoun' + (d3 ? ' — ' + d3 : ''); }
+    return (aram ? 'Aramaic ' : '') + (HPOS[pos] || code);
+  }
+  function decode(code, lang) { return lang === 'hbo' ? decodeHeb(code) : decodeMorph(code); }
+
   var INDEX = null, BOOKCACHE = {}, GKCACHE = {};
   function loadBook(usfm) {
     if (!BOOKCACHE[usfm]) BOOKCACHE[usfm] = fetch(BSB + usfm + '.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
     return BOOKCACHE[usfm];
   }
-  function loadGreek(usfm, ch) {
-    var k = usfm + '/' + ch;
-    if (!GKCACHE[k]) GKCACHE[k] = fetch(GRC + usfm + '/' + ch + '.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
+  function origBase(usfm) { return NT[usfm] ? GRC : HBO; }
+  function origLang(usfm) { return NT[usfm] ? 'grc' : 'hbo'; }
+  function origLabel(usfm) { return NT[usfm] ? 'Greek' : 'Hebrew'; }
+  function loadOrig(usfm, ch) {
+    var k = origBase(usfm) + usfm + '/' + ch;
+    if (!GKCACHE[k]) GKCACHE[k] = fetch(origBase(usfm) + usfm + '/' + ch + '.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
     return GKCACHE[k];
   }
   function valid(usfm, ch, v) { var b = INDEX && INDEX[usfm]; return !!(b && ch >= 1 && ch <= b.length && v >= 1 && v <= b[ch - 1]); }
@@ -165,9 +189,8 @@
     elRef.textContent = el.textContent.replace(/^\(|\)$/g, '');
     var osis = OSIS[usfm] || usfm;
     elStep.href = 'https://www.stepbible.org/?q=reference=' + osis + '.' + ch + '.' + v1 + (v2 > v1 ? '-' + v2 : '');
-    var isNT = !!NT[usfm];
-    elTog.className = 'vpop-tog' + (isNT ? ' show' : '');
-    if (!isNT) mode = 'en';
+    elTog.className = 'vpop-tog show';                 // every book has an original (Greek NT / Hebrew OT)
+    elTog.querySelector('button[data-m="gk"]').textContent = origLabel(usfm);
     render();
     pop.classList.add('open'); place();
   }
@@ -185,7 +208,7 @@
     elGk.className = 'vpop-gk' + (enOn ? '' : ' show');
     if (enOn) {
       elSrc.textContent = 'Berean Standard Bible · public domain';
-      elStep.textContent = NT[cur.usfm] ? 'Full study on STEP →' : 'See the Hebrew on STEP →';
+      elStep.textContent = 'Full study on STEP →';
       elTxt.textContent = '…';
       var c = cur;
       loadBook(c.usfm).then(function (data) {
@@ -195,17 +218,18 @@
         elTxt.innerHTML = parts.length ? parts.join(' ') : 'Verse text unavailable.'; place();
       });
     } else {
-      elSrc.textContent = 'Greek: STEPBible / Tyndale House · CC BY';
+      var lang = origLang(cur.usfm), rtl = lang === 'hbo';
+      elSrc.textContent = origLabel(cur.usfm) + ': STEPBible / Tyndale House · CC BY';
       elStep.textContent = 'Full study on STEP →';
       elGk.innerHTML = '<span style="font-size:12px;color:#8a94a3">Loading…</span>';
       curWords = []; var c2 = cur;
-      loadGreek(c2.usfm, c2.ch).then(function (data) {
+      loadOrig(c2.usfm, c2.ch).then(function (data) {
         if (!cur || cur !== c2 || mode !== 'gk') return;
         var html = '', gi = 0; curWords = [];
         for (var v = c2.v1; v <= c2.v2; v++) {
           var ws = data[v]; if (!ws) continue;
           if (c2.v2 > c2.v1) html += '<div class="vpop-vlabel">verse ' + v + '</div>';
-          html += '<div class="vpop-words">';
+          html += '<div class="vpop-words"' + (rtl ? ' dir="rtl"' : '') + '>';
           for (var i = 0; i < ws.length; i++) {
             var w = ws[i]; curWords.push(w);
             html += '<button class="vw" type="button" data-i="' + gi + '"><span class="vwg">' + esc(w[0]) + '</span><span class="vwt">' + esc(w[1]) + '</span><span class="vwm">' + esc(w[2]) + '</span></button>';
@@ -213,7 +237,7 @@
           }
           html += '</div>';
         }
-        elGk.innerHTML = (html || '<span style="font-size:12px;color:#8a94a3">Greek is not available for this verse.</span>') + '<div class="vpop-detail"></div>';
+        elGk.innerHTML = (html || '<span style="font-size:12px;color:#8a94a3">Not available for this verse.</span>') + '<div class="vpop-detail"></div>';
         elDetail = elGk.querySelector('.vpop-detail');
         if (curWords.length) selectWord(0, elGk.querySelector('.vw'));
         place();
@@ -225,7 +249,7 @@
     var w = curWords[i]; if (!w) return;
     [].forEach.call(elGk.querySelectorAll('.vw'), function (b) { b.className = 'vw'; });
     if (node) node.className = 'vw sel';
-    var morph = decodeMorph(w[5]);
+    var morph = decode(w[5], cur ? origLang(cur.usfm) : 'grc');
     elDetail.innerHTML = '<span class="dg">' + esc(w[0]) + '</span><span class="dt"> · ' + esc(w[1]) + '</span> — ' + esc(w[4] || w[2]) +
       '<br><span class="dm">from ' + esc(w[3]) + (morph ? ' · ' + esc(morph) : '') + '</span>';
   }
@@ -288,7 +312,6 @@
       if (e.key === 'Escape') { close(); return; }
       if ((e.key === 'Enter' || e.key === ' ') && e.target.classList && e.target.classList.contains('vref')) { e.preventDefault(); open(e.target); }
     });
-    window.addEventListener('scroll', function () { if (pop && pop.classList.contains('open') && !isMobile()) close(); }, { passive: true });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
 })();
