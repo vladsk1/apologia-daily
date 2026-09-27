@@ -12,10 +12,12 @@
  * (library/para-anchors.js) can assign the same ids for the links to land.
  *
  * Output:
- *   essay-index.json   [ { slug, title, section, anchor, text }, ... ]
+ *   essay-index.json          [ { slug, title, section, anchor, text }, ... ]
+ *   lib/essays-verified.js     export const ESSAY_PARAS = [...]  (bundled into api/ask.js)
+ *   essay-slugs.json           [ "<slug>", ... ]  (tiny; the client validates citations against it)
  *
  * Usage:  node tools/build-essay-index.mjs [--check]
- *   --check exits non-zero if essay-index.json is out of date (for CI).
+ *   --check exits non-zero if the outputs are out of date (for CI).
  */
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 
@@ -45,15 +47,20 @@ function build() {
     const slug = f.replace(/\.html$/, '');
     const title = stripTags((html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || slug);
     const body = artBody(html);
-    let section = '', pIndex = 0;
-    // walk headings and paragraphs in order
-    const tok = /<h2\b[^>]*>([\s\S]*?)<\/h2>|<p\b[^>]*>([\s\S]*?)<\/p>/g;
+    let section = '', pIndex = 0, div = 0;
+    // Count only TOP-LEVEL paragraphs (direct children of .art-body, i.e. not nested
+    // in a <div>). This matches the runtime, which anchors `.art-body > p` — so
+    // JS-injected boxes (reader-help, evidence panels) never shift the numbering.
+    const tok = /<div\b|<\/div>|<h2\b[^>]*>([\s\S]*?)<\/h2>|<p\b[^>]*>([\s\S]*?)<\/p>/g;
     let t;
     while ((t = tok.exec(body))) {
-      if (t[1] !== undefined) { section = stripTags(t[1]); continue; }
+      if (t[0] === '</div>') { if (div > 0) div--; continue; }
+      if (t[0].charAt(1) === 'd') { div++; continue; }          // <div
+      if (t[1] !== undefined) { if (div === 0) section = stripTags(t[1]); continue; }
+      if (div !== 0) continue;                                   // <p> nested in a div — not a top-level paragraph
       const anchor = 'p' + pIndex; pIndex++;
       const text = stripTags(t[2]);
-      if (text.length < 40) continue;                  // skip labels / captions
+      if (text.length < 40) continue;                            // skip labels / captions
       rows.push({ slug, title, section, anchor, text });
     }
   }
@@ -62,12 +69,16 @@ function build() {
 
 const rows = build();
 const json = JSON.stringify(rows);
+const slugs = [...new Set(rows.map((r) => r.slug))];
+const slugsJson = JSON.stringify(slugs);
+const lib = 'export const ESSAY_PARAS = ' + json + ';\n';
 if (process.argv.includes('--check')) {
   let cur = ''; try { cur = readFileSync('essay-index.json', 'utf8'); } catch (e) {}
   if (cur.trim() !== json.trim()) { console.error('✗ essay-index.json is stale — run: node tools/build-essay-index.mjs'); process.exit(1); }
   console.log('✓ essay-index.json is up to date (' + rows.length + ' paragraphs)');
 } else {
   writeFileSync('essay-index.json', json + '\n');
-  const essays = new Set(rows.map((r) => r.slug)).size;
-  console.log(`Wrote essay-index.json: ${rows.length} paragraphs from ${essays} essays.`);
+  writeFileSync('lib/essays-verified.js', lib);
+  writeFileSync('essay-slugs.json', slugsJson + '\n');
+  console.log(`Wrote essay-index.json, lib/essays-verified.js, essay-slugs.json: ${rows.length} paragraphs from ${slugs.length} essays.`);
 }

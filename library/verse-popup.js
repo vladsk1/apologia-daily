@@ -294,6 +294,18 @@
   }
 
   function boot() {
+    // Stable ids on essay paragraphs so the AI's citation links (/library/<slug>.html#p<N>)
+    // land on the exact paragraph. Order matches build-essay-index.mjs (Nth .art-body <p>).
+    // defer scripts run after the browser's initial hash scroll, so re-scroll if we arrived
+    // via a #p<N> link once the ids exist.
+    try {
+      var ps = document.querySelectorAll('.art-body > p');
+      for (var pi = 0; pi < ps.length; pi++) if (!ps[pi].id) ps[pi].id = 'p' + pi;
+      if (ps.length && /^#p\d+$/.test(location.hash)) {
+        var tgt = document.getElementById(location.hash.slice(1));
+        if (tgt) window.scrollTo(0, Math.max(0, tgt.getBoundingClientRect().top + window.pageYOffset - 76));
+      }
+    } catch (e) {}
     css();
     fetch(BSB + 'index.json').then(function (r) { return r.json(); }).then(function (idx) {
       INDEX = idx; enhance(document.body);

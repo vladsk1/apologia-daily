@@ -355,6 +355,7 @@
       document.getElementById('r-obj-k').textContent = o.objLabel || 'The objection, in plain terms';
       document.getElementById('r-obj').textContent = o.obj || 'Your question';
       document.getElementById('r-ans').innerHTML = o.ans;
+      try { if (window.ADCite) ADCite.process(document.getElementById('r-ans')); } catch (e) {}
       const gc = document.getElementById('goodco');
       if (o.good) { gc.style.display=''; document.getElementById('r-good').innerHTML = o.good; } else { gc.style.display='none'; }
       document.getElementById('r-links').innerHTML = (o.links||[]).map(l => `<a class="deeper-link" href="${l.href}"${/^https?:|^\//.test(l.href)?'':''} target="_blank" rel="noopener">${l.label} &rarr;</a>`).join('');
@@ -514,5 +515,6 @@
   </script>
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
+  <script src="/citations.js" defer></script>
 </body>
 </html>

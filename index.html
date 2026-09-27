@@ -1850,6 +1850,7 @@
       var foot = '<div class="hc-foot"><span>' + leftTxt + '</span><span><a href="#" onclick="hcClose();return false;" style="color:rgba(255,255,255,.55);margin-right:1rem">Close</a><a href="/asked-and-answered.html">Continue in Asked &amp; Answered &rarr;</a></span></div>';
       box.innerHTML = '<button class="hc-close" onclick="hcClose()" aria-label="Close">&times;</button><div class="hc-q">' + hcEsc(q) + '</div><div class="hc-topnote">For study &mdash; not personal, pastoral, medical, or legal advice. If you’re wrestling with real doubt, please also talk with a trusted pastor or minister.</div><div class="hc-a">' + hcFormat(data.answer) + '</div>' + foot;
       var aEl = box.querySelector('.hc-a');
+      try { if (window.ADCite && aEl) ADCite.process(aEl); } catch (e) {}
       if (aEl && aEl.scrollHeight > 560){
         aEl.classList.add('hc-clamp');
         var more = document.createElement('button');
@@ -1895,5 +1896,6 @@
 <script>(function(){try{var p=new URLSearchParams(location.search);if(p.get('nocount')==='1')localStorage.setItem('ad-nocount','1');if(p.get('nocount')==='0')localStorage.removeItem('ad-nocount');if(localStorage.getItem('ad-nocount')==='1')return;}catch(e){}var s=document.createElement('script');s.defer=true;s.src='/_vercel/insights/script.js';document.head.appendChild(s);})();</script>
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
+  <script src="/citations.js" defer></script>
 </body>
 </html>

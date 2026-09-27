@@ -496,6 +496,7 @@
 
         document.getElementById('answer-question').textContent = question;
         document.getElementById('answer-body').innerHTML = formatAnswer(data.answer);
+        if (window.ADCite) ADCite.process(document.getElementById('answer-body'));
         document.getElementById('answer-card').classList.add('visible');
         document.getElementById('answer-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
 
@@ -674,5 +675,6 @@
 <script>(function(){try{var p=new URLSearchParams(location.search);if(p.get('nocount')==='1')localStorage.setItem('ad-nocount','1');if(p.get('nocount')==='0')localStorage.removeItem('ad-nocount');if(localStorage.getItem('ad-nocount')==='1')return;}catch(e){}var s=document.createElement('script');s.defer=true;s.src='/_vercel/insights/script.js';document.head.appendChild(s);})();</script>
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
+  <script src="/citations.js" defer></script>
 </body>
 </html>
