@@ -631,6 +631,24 @@
       ],
       "allow": [],
       "netting": "phrase"
+    },
+    {
+      "id": "rival-same-christ-concession",
+      "retired": "2026-09-27",
+      "what": "Conceding a shared relationship to Christ to Latter-day Saints or Jehovah's Witnesses: 'genuinely in love with Jesus', 'Latter-day Saints sincerely love Jesus', 'Witnesses love Jesus'.",
+      "why": "Shared words are not shared belief (CLAUDE.md FALSE-COMMON-GROUND RULE). The certified answer is-the-mormon-jesus-the-same-as-the-bible concludes the two 'share a name but describe genuinely different beings: a different account of God, and so a different Jesus'; the Watchtower's Christ is a creature. The phrasing was removed from the answers layer on 2026-07-16 but survived on ev-s6.html card 12 until 2026-09-27, because the answer-concessions lint only scans /answers.",
+      "instead": "Concede sincerity and devoutness, never the Christ-relationship: 'many are sincere, moral, and devout; many plainly are' (library/trinity_mormons.html :140), then name the divergence: 'the name is shared, but Latter-day Saint teaching sets Jesus within a different doctrine of God than Scripture and the creeds confess.'",
+      "patterns": [
+        "(Latter-day Saints?|Mormons?)[^.<]{0,60}\\b(genuinely |deeply |sincerely |truly )?(in love with|love|loves) (Jesus|Christ)\\b",
+        "genuinely in love with Jesus",
+        "(Jehovah'?s Witnesses|Witnesses)[^.<]{0,40}\\b(love|loves) (Jesus|Christ)\\b",
+        "love Jesus with their whole hearts",
+        "enamorados de Jes(ú|&uacute;)s",
+        "aman a Jes(ú|&uacute;)s con todo su coraz",
+        "заљубени во Исус"
+      ],
+      "allow": [],
+      "netting": "phrase"
     }
   ]
 }
