@@ -526,8 +526,23 @@ function sw(id, btn) {
   for (var i = 0; i < t.length; i++) t[i].className = 'tab';
   document.getElementById(id).className = 'sec go';
   btn.className = 'tab on';
-  loadSection(id);
+  loadSection(id, function () { scrollToNewTab(id); });
   syncCardBar();   /* a tab switch changes which card (if any) is open */
+}
+
+/* On a manual tab switch, reset the scroll to the top of the new tab's content.
+   The tab row (.cn) is sticky under the 64px nav, so a reader sitting at the
+   bottom of a long tab would otherwise stay at the bottom when the next tab
+   loads, landing partway down (or below) its list. Runs from loadSection's
+   callback so it fires after an async-fetched fragment is in the DOM. Deep-links
+   (?arg=<slug>) don't come through sw(); they use openArgCard's own scroll. */
+function scrollToNewTab(id) {
+  var sec = document.getElementById(id);
+  if (!sec) return;
+  var cn = document.querySelector('.cn');            // sticky tab row
+  var sticky = 64 + (cn ? cn.offsetHeight : 0);      // 64px fixed nav + tab row
+  var y = sec.getBoundingClientRect().top + window.pageYOffset - sticky - 8;
+  window.scrollTo(0, Math.max(0, y));                // instant (no CSS smooth on this page)
 }
 
 function loadSection(id, cb) {
@@ -1261,7 +1276,6 @@ async function sendFloatQuestion() {
   <script src="/library/diagram.js" defer></script>
   <script src="/library/socratic.js" defer></script>
   <script src="/library/ask-selection.js" defer></script>
-  <script src="/library/a11y-cards.js" defer></script>
   <script src="/library/tutor-help.js" defer></script>
 </body>
 </html>
