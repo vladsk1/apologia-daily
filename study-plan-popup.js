@@ -216,7 +216,30 @@
     + '#ev-pop .wv-pro-subtitle{font-family:var(--ui);font-size:.82rem;color:rgba(255,255,255,.5);}'
     + '#ev-pop .wv-pro-section-label{font-family:var(--ui);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--g);margin:1.25rem 0 .6rem;}'
     + '#ev-pop .wv-pro-text,#ev-pop .wv-explain{font-size:.95rem;color:rgba(255,255,255,.78);line-height:1.85;margin-bottom:1rem;}'
-    + '#ev-pop .wv-pro-text strong,#ev-pop .wv-explain strong{color:#fff;}';
+    + '#ev-pop .wv-pro-text strong,#ev-pop .wv-explain strong{color:#fff;}'
+    /* "Research the evidence, line by line" — the .pv <details> rows. Ported from
+       the evidence-library.html hub (its .pv/.pvb rules), scoped to #ev-pop and
+       mapped onto this popup's palette. The <summary> is display:flex here, which
+       is what separates the .pvn label from the .pvt sub-label; without these
+       rules the two spans ran together and the whole block rendered unstyled and
+       dim on the dark Pro tier. The boxes are white on the dark tier, as in the hub. */
+    + '#ev-pop .pv{border:1px solid var(--b);border-radius:5px;margin:9px 0;overflow:hidden;background:#fff;}'
+    + '#ev-pop .pv[open]{border-color:rgba(200,169,81,.5);}'
+    + '#ev-pop .pv>summary{list-style:none;cursor:pointer;padding:12px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}'
+    + '#ev-pop .pv>summary::-webkit-details-marker{display:none;}'
+    + '#ev-pop .pv>summary:hover{background:var(--o);}'
+    + '#ev-pop .pv .pvn{font-family:var(--ui);font-size:.64rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--g);}'
+    + '#ev-pop .pv .pvt{font-family:var(--fd);font-weight:700;font-size:.98rem;color:var(--n);}'
+    + '#ev-pop .pv .pvchev{margin-left:auto;color:var(--mu);font-size:.8rem;transition:transform .15s;}'
+    + '#ev-pop .pv[open] .pvchev{transform:rotate(180deg);}'
+    + '#ev-pop .pvb{padding:2px 14px 14px;border-top:1px solid var(--b);}'
+    + '#ev-pop .pvb .pvr{margin:9px 0;font-size:.92rem;line-height:1.55;color:var(--m);}'
+    + '#ev-pop .pvb .pvl{display:block;margin-bottom:1px;font-family:var(--ui);font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mu);}'
+    + '#ev-pop .pvb ol.pvlist{margin:8px 0;padding-left:1.2rem;}'
+    + '#ev-pop .pvb ol.pvlist li{font-size:.92rem;line-height:1.55;color:var(--m);margin:9px 0;}'
+    + '#ev-pop .pvb ol.pvlist li b{color:var(--n);}'
+    + '#ev-pop .pv-more{display:inline-block;margin-top:6px;font-family:var(--ui);font-size:.8rem;font-weight:600;color:var(--g);text-decoration:none;border-bottom:1px solid transparent;}'
+    + '#ev-pop .pv-more:hover{border-color:var(--g);}';
 
   /* Build the popup shell once and add it to the page */
   function ensurePopup() {
