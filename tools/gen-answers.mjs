@@ -264,6 +264,7 @@ window.addEventListener('load',function(){try{if(new URLSearchParams(location.se
 </script>
   <script src="/analytics.js" defer></script>
   <script src="/ad-nav.js" defer></script>
+  <script src="/library/verse-popup.js" defer></script>
 ${(e.clarifiers && e.clarifiers.length) ? '  <script src="/library/orthonote.js" defer></script>\n' : ''}</body>
 </html>
 `;
