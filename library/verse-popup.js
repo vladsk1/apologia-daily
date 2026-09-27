@@ -1,26 +1,25 @@
-/* verse-popup.js — tap-to-read Scripture, site-wide. Turns every Bible reference
-   in readable content into a link that opens a small popup with the verse text,
-   WITHOUT leaving the page. Text is the Berean Standard Bible (public domain /
-   CC0), split into per-book files under /library/bible/BSB/ by
-   tools/build-bible-data.mjs and loaded ON DEMAND (only the book a reader taps
-   into is fetched, then cached) so pages stay light. A small index.json ships up
-   front so a reference is only linked when the verse really exists (no dead links).
-   Each popup also offers "See the Greek/Hebrew on STEP" (opens STEPBible for that
-   verse, with English word meanings) — the slot the future inline word-study fills.
+/* verse-popup.js — tap-to-read Scripture, site-wide, with inline Greek (Phase 2a).
+   Tap any Bible reference and the verse opens in a popup on the page (no leaving).
+   For New Testament verses a small "English / Greek" toggle reveals the verse
+   word-by-word — each Greek word with its transliteration and meaning, tap a word
+   for its dictionary meaning and grammar.
 
-   Interaction plumbing only — it displays existing public-domain Scripture and
-   adds no doctrinal content, so it needs no gate (same class as reviewed-badge.js).
+   English text: Berean Standard Bible (public domain / CC0), per-book under
+     /library/bible/BSB/<USFM>.json  (+ index.json for validation).
+   Greek text + meanings: STEP TAGNT (Tyndale House / STEPBible.org, CC BY),
+     per-chapter under /library/bible/GRC/<USFM>/<chapter>.json as
+     [word, translit, gloss, lemma, dictMeaning, morphCode] arrays.
+   Both load ON DEMAND and cache, so pages stay light. Displays existing
+   public-domain / openly-licensed reference data; adds no doctrinal content, so
+   it needs no gate (same class as reviewed-badge.js).
 
    Include once per page, after the content:
-     <script src="/library/verse-popup.js" defer></script>
-   Works on essays (.art-body), the Evidence Library hub (incl. tab fragments that
-   load after page load) and its cards, mastery pages, answers, and worldviews. */
+     <script src="/library/verse-popup.js" defer></script> */
 (function () {
   if (window.__versePopup) return; window.__versePopup = true;
 
-  var BASE = '/library/bible/BSB/';
+  var BSB = '/library/bible/BSB/', GRC = '/library/bible/GRC/';
 
-  // book token (normalised: lowercase, no spaces/periods) -> USFM code
   var BOOKS = {
     GEN:['genesis','gen'],EXO:['exodus','exod','exo','ex'],LEV:['leviticus','lev'],NUM:['numbers','num'],
     DEU:['deuteronomy','deut','deu'],JOS:['joshua','josh','jos'],JDG:['judges','judg','jdg'],RUT:['ruth','rut'],
@@ -42,8 +41,6 @@
   };
   var TOKEN2USFM = {};
   for (var uu in BOOKS) for (var ii = 0; ii < BOOKS[uu].length; ii++) TOKEN2USFM[BOOKS[uu][ii]] = uu;
-
-  // USFM -> STEPBible / OSIS book name (for the "see the Greek/Hebrew" link)
   var OSIS = {
     GEN:'Gen',EXO:'Exod',LEV:'Lev',NUM:'Num',DEU:'Deut',JOS:'Josh',JDG:'Judg',RUT:'Ruth','1SA':'1Sam','2SA':'2Sam',
     '1KI':'1Kgs','2KI':'2Kgs','1CH':'1Chr','2CH':'2Chr',EZR:'Ezra',NEH:'Neh',EST:'Esth',JOB:'Job',PSA:'Ps',PRO:'Prov',
@@ -53,122 +50,205 @@
     '2TH':'2Thess','1TI':'1Tim','2TI':'2Tim',TIT:'Titus',PHM:'Phlm',HEB:'Heb',JAS:'Jas','1PE':'1Pet','2PE':'2Pet',
     '1JN':'1John','2JN':'2John','3JN':'3John',JUD:'Jude',REV:'Rev'
   };
+  var NT = {MAT:1,MRK:1,LUK:1,JHN:1,ACT:1,ROM:1,'1CO':1,'2CO':1,GAL:1,EPH:1,PHP:1,COL:1,'1TH':1,'2TH':1,'1TI':1,'2TI':1,TIT:1,PHM:1,HEB:1,JAS:1,'1PE':1,'2PE':1,'1JN':1,'2JN':1,'3JN':1,JUD:1,REV:1};
 
   var REF_RE = /(\b(?:[1-3]\s*)?[A-Za-z]{2,}\.?)\s*(\d+)[:.](\d+)(?:[-–](\d+))?/g;
   function norm(t) { return t.toLowerCase().replace(/[\s.]/g, ''); }
 
-  var INDEX = null;                 // { USFM: [versesInCh1, ...] }
-  var BOOKCACHE = {};               // USFM -> Promise<{"ch.v": text}>
-  function loadBook(usfm) {
-    if (!BOOKCACHE[usfm]) {
-      BOOKCACHE[usfm] = fetch(BASE + usfm + '.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
+  // ---- decode a Robinson morphology code into readable grammar -------------
+  var WHOLE = {PREP:'preposition',CONJ:'conjunction',ADV:'adverb',PRT:'particle',INJ:'interjection',COND:'conditional particle','N-PRI':'proper noun','A-NUI':'numeral','N-LI':'indeclinable letter','N-OI':'indeclinable noun',ARAM:'Aramaic word',HEB:'Hebrew word'};
+  var POS = {N:'noun',A:'adjective',T:'the (article)',V:'verb',R:'relative pronoun',C:'reciprocal pronoun',D:'demonstrative pronoun',K:'correlative pronoun',I:'interrogative pronoun',X:'indefinite pronoun',Q:'correlative pronoun',F:'reflexive pronoun',S:'possessive pronoun',P:'personal pronoun'};
+  var CASE={N:'nominative',G:'genitive',D:'dative',A:'accusative',V:'vocative'},NUM={S:'singular',P:'plural'},GEN={M:'masculine',F:'feminine',N:'neuter'};
+  var TENSE={P:'present',I:'imperfect',F:'future',A:'aorist',X:'perfect',Y:'pluperfect'},VOICE={A:'active',M:'middle',P:'passive',E:'middle/passive',D:'middle deponent',O:'passive deponent',N:'deponent'},MOOD={I:'indicative',S:'subjunctive',O:'optative',M:'imperative',N:'infinitive',P:'participle'};
+  var ORD={'1':'1st','2':'2nd','3':'3rd'};
+  function nominal(seg) {
+    if (!seg) return ''; var out = [], i = 0;
+    if (/^[123]/.test(seg)) { out.push(ORD[seg[0]] + ' person'); i = 1; }
+    if (CASE[seg[i]]) out.push(CASE[seg[i]]); if (NUM[seg[i+1]]) out.push(NUM[seg[i+1]]); if (GEN[seg[i+2]]) out.push(GEN[seg[i+2]]);
+    return out.join(' ');
+  }
+  function decodeMorph(code) {
+    if (!code) return ''; if (WHOLE[code]) return WHOLE[code];
+    var p = code.split('-'), pos = p[0];
+    if (pos === 'V') {
+      var seg = p[1] || '', second = ''; if (seg[0] === '2') { second = 'second '; seg = seg.slice(1); }
+      var g = [(second + (TENSE[seg[0]] || '')).trim(), VOICE[seg[1]], MOOD[seg[2]]].filter(Boolean).join(' ');
+      var pn = p[2] || '', extra = '';
+      if (MOOD[seg[2]] === 'participle' || MOOD[seg[2]] === 'infinitive') { var nd = nominal(pn); if (nd) extra = ', ' + nd; }
+      else if (pn) { var per = /^[123]/.test(pn) ? ORD[pn[0]] + ' person ' : ''; extra = ', ' + (per + (NUM[pn[pn.length - 1]] || '')).trim(); }
+      return ('verb — ' + g + extra).replace(/\s+/g, ' ').trim();
     }
+    if (POS[pos]) { var d = nominal(p[1] || ''); return POS[pos] + (d ? ' — ' + d : ''); }
+    return code;
+  }
+
+  var INDEX = null, BOOKCACHE = {}, GKCACHE = {};
+  function loadBook(usfm) {
+    if (!BOOKCACHE[usfm]) BOOKCACHE[usfm] = fetch(BSB + usfm + '.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
     return BOOKCACHE[usfm];
   }
-  // does this reference exist? (validated against the small index, no text load)
-  function valid(usfm, ch, v) {
-    var b = INDEX && INDEX[usfm];
-    return !!(b && ch >= 1 && ch <= b.length && v >= 1 && v <= b[ch - 1]);
+  function loadGreek(usfm, ch) {
+    var k = usfm + '/' + ch;
+    if (!GKCACHE[k]) GKCACHE[k] = fetch(GRC + usfm + '/' + ch + '.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
+    return GKCACHE[k];
   }
+  function valid(usfm, ch, v) { var b = INDEX && INDEX[usfm]; return !!(b && ch >= 1 && ch <= b.length && v >= 1 && v <= b[ch - 1]); }
+  function esc(s) { return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
 
   function css() {
     var s = document.createElement('style');
     s.textContent = [
-      // color:inherit so it reads on light essays AND dark card tiers; gold marks it tappable
-      '.vref{color:inherit;text-decoration:none;cursor:pointer;',
-      'border-bottom:1px solid rgba(200,169,81,.65);background:rgba(200,169,81,.13);border-radius:2px;padding:0 .05em}',
-      '.vref:hover{background:rgba(200,169,81,.28)}',
-      '.vref:focus-visible{outline:2px solid #c8a951;outline-offset:1px}',
-      '.vpop{position:absolute;z-index:2147483000;width:min(360px,calc(100vw - 24px));background:#fff;',
-      "border:1px solid rgba(200,169,81,.55);border-radius:12px;box-shadow:0 16px 44px rgba(10,22,40,.28);",
-      "padding:.85rem 1rem 1rem;font-family:'DM Sans',system-ui,sans-serif;display:none;text-align:left}",
+      '.vref{color:inherit;text-decoration:none;cursor:pointer;border-bottom:1px solid rgba(200,169,81,.65);background:rgba(200,169,81,.13);border-radius:2px;padding:0 .05em}',
+      '.vref:hover{background:rgba(200,169,81,.28)}.vref:focus-visible{outline:2px solid #c8a951;outline-offset:1px}',
+      ".vpop{position:absolute;z-index:2147483000;width:min(380px,calc(100vw - 24px));max-height:min(72vh,600px);overflow:auto;background:#fff;border:1px solid rgba(200,169,81,.55);border-radius:12px;box-shadow:0 16px 44px rgba(10,22,40,.28);padding:.85rem 1rem 1rem;font-family:'DM Sans',system-ui,sans-serif;display:none;text-align:left}",
       '.vpop.open{display:block}',
-      '.vpop-ref{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:1rem;color:#0a1628;margin:0 0 .4rem;padding-right:1.2rem}',
-      '.vpop-txt{font-size:.96rem;line-height:1.6;color:#26364e;margin:0 0 .7rem}',
-      '.vpop-txt .vn{font-size:.62em;font-weight:700;color:#a88930;vertical-align:super;margin-right:2px}',
-      '.vpop-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid #eee7db;padding-top:.6rem}',
-      '.vpop-src{font-size:.68rem;color:#8a94a3;line-height:1.35}',
-      '.vpop-step{font-size:.76rem;font-weight:600;color:#1e4278;text-decoration:none;white-space:nowrap;border-bottom:1px solid rgba(30,66,120,.35)}',
-      '.vpop-step:hover{border-bottom-color:#1e4278}',
+      '.vpop-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 .5rem;padding-right:1rem}',
+      '.vpop-ref{font-family:"Playfair Display",Georgia,serif;font-weight:500;font-size:16px;color:#0a1628}',
+      '.vpop-tog{display:none;border:1px solid #e0dccf;border-radius:999px;overflow:hidden;font-size:11px;flex:0 0 auto}',
+      '.vpop-tog.show{display:inline-flex}',
+      '.vpop-tog button{border:0;background:none;padding:3px 11px;color:#8a94a3;cursor:pointer;font:inherit}',
+      '.vpop-tog button.on{background:#0a1628;color:#fff}',
+      '.vpop-txt{font-size:15px;line-height:1.6;color:#26364e}.vpop-txt .vn{font-size:.62em;font-weight:700;color:#a88930;vertical-align:super;margin-right:2px}',
+      '.vpop-gk{display:none}.vpop-gk.show{display:block}',
+      '.vpop-vlabel{font-size:11px;color:#a88930;font-weight:700;margin:.4rem 0 .3rem}',
+      '.vpop-words{display:flex;flex-wrap:wrap;gap:6px}',
+      '.vw{text-align:center;border:1px solid #eee7db;border-radius:8px;padding:5px 8px;background:none;cursor:pointer;font:inherit}',
+      '.vw:hover{background:rgba(200,169,81,.10)}.vw.sel{border-color:#c8a951;background:rgba(200,169,81,.18)}',
+      '.vw .vwg{font-size:17px;color:#0a1628;line-height:1.25}.vw .vwt{font-size:11px;color:#a88930}.vw .vwm{font-size:12px;color:#26364e}',
+      '.vpop-detail{margin-top:10px;background:rgba(200,169,81,.10);border-radius:8px;padding:8px 11px;font-size:12px;line-height:1.55;color:#26364e;min-height:1px}',
+      '.vpop-detail .dg{font-family:"Playfair Display",Georgia,serif;font-size:16px;color:#0a1628}.vpop-detail .dt{color:#a88930}.vpop-detail .dm{color:#8a94a3}',
+      '.vpop-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid #eee7db;padding-top:.6rem;margin-top:.7rem}',
+      '.vpop-src{font-size:11px;color:#8a94a3;line-height:1.35}',
+      '.vpop-step{font-size:12px;font-weight:500;color:#1e4278;text-decoration:none;white-space:nowrap;border-bottom:1px solid rgba(30,66,120,.35)}.vpop-step:hover{border-bottom-color:#1e4278}',
       '.vpop-x{position:absolute;top:6px;right:8px;background:none;border:0;font-size:1rem;color:#8a94a3;cursor:pointer;line-height:1;padding:4px}',
-      '@media (max-width:560px){.vpop{position:fixed;left:0;right:0;bottom:0;top:auto!important;width:auto;',
-      'border-radius:14px 14px 0 0;box-shadow:0 -12px 40px rgba(10,22,40,.32);padding-bottom:calc(1rem + env(safe-area-inset-bottom))}}'
+      '@media (max-width:560px){.vpop{position:fixed;left:0;right:0;bottom:0;top:auto!important;width:auto;max-height:80vh;border-radius:14px 14px 0 0;box-shadow:0 -12px 40px rgba(10,22,40,.32);padding-bottom:calc(1rem + env(safe-area-inset-bottom))}}'
     ].join('');
     document.head.appendChild(s);
   }
 
-  var pop, popRef, popTxt, popStep;
+  var pop, elRef, elTog, elTxt, elGk, elWords, elDetail, elSrc, elStep;
+  var mode = 'en', cur = null, curWords = [];
   function ensurePop() {
     if (pop) return;
-    pop = document.createElement('div');
-    pop.className = 'vpop'; pop.setAttribute('role', 'dialog');
-    pop.innerHTML = '<button class="vpop-x" type="button" aria-label="Close">✕</button>' +
-      '<p class="vpop-ref"></p><p class="vpop-txt"></p>' +
-      '<div class="vpop-foot"><span class="vpop-src">Berean Standard Bible (public domain)</span>' +
-      '<a class="vpop-step" target="_blank" rel="noopener">See the Greek/Hebrew on STEP →</a></div>';
+    pop = document.createElement('div'); pop.className = 'vpop'; pop.setAttribute('role', 'dialog');
+    pop.innerHTML =
+      '<button class="vpop-x" type="button" aria-label="Close">✕</button>' +
+      '<div class="vpop-head"><span class="vpop-ref"></span>' +
+      '<span class="vpop-tog"><button type="button" data-m="en" class="on">English</button><button type="button" data-m="gk">Greek</button></span></div>' +
+      '<div class="vpop-txt"></div>' +
+      '<div class="vpop-gk"><div class="vpop-words"></div><div class="vpop-detail"></div></div>' +
+      '<div class="vpop-foot"><span class="vpop-src"></span><a class="vpop-step" target="_blank" rel="noopener"></a></div>';
     document.body.appendChild(pop);
-    popRef = pop.querySelector('.vpop-ref'); popTxt = pop.querySelector('.vpop-txt'); popStep = pop.querySelector('.vpop-step');
+    elRef = pop.querySelector('.vpop-ref'); elTog = pop.querySelector('.vpop-tog'); elTxt = pop.querySelector('.vpop-txt');
+    elGk = pop.querySelector('.vpop-gk'); elWords = pop.querySelector('.vpop-words'); elDetail = pop.querySelector('.vpop-detail');
+    elSrc = pop.querySelector('.vpop-src'); elStep = pop.querySelector('.vpop-step');
     pop.querySelector('.vpop-x').addEventListener('click', close);
+    pop.addEventListener('click', function (e) {
+      var t = e.target.closest('.vpop-tog button'); if (t) { setMode(t.getAttribute('data-m')); return; }
+      var w = e.target.closest('.vw'); if (w) { selectWord(+w.getAttribute('data-i'), w); }
+    });
   }
   function close() { if (pop) pop.classList.remove('open'); }
-
   function isMobile() { try { return window.matchMedia('(max-width:560px)').matches; } catch (e) { return false; } }
-
-  function place(el) {
-    if (isMobile()) return;               // CSS pins it to the bottom on phones
-    var r = el.getBoundingClientRect(), pr = pop.getBoundingClientRect();
-    var top = r.bottom + window.pageYOffset + 8;
-    var left = Math.min(r.left + window.pageXOffset, window.pageXOffset + window.innerWidth - pr.width - 12);
-    pop.style.top = top + 'px'; pop.style.left = Math.max(window.pageXOffset + 12, left) + 'px';
+  function place() {
+    if (isMobile() || !cur || !cur.el) return;
+    var r = cur.el.getBoundingClientRect(), pr = pop.getBoundingClientRect();
+    pop.style.top = (r.bottom + window.pageYOffset + 8) + 'px';
+    pop.style.left = Math.max(window.pageXOffset + 12, Math.min(r.left + window.pageXOffset, window.pageXOffset + window.innerWidth - pr.width - 12)) + 'px';
   }
 
   function open(el) {
     ensurePop();
     var usfm = el.getAttribute('data-b'), ch = +el.getAttribute('data-c'),
         v1 = +el.getAttribute('data-v'), v2 = +(el.getAttribute('data-v2') || el.getAttribute('data-v'));
-    popRef.textContent = el.textContent.replace(/^\(|\)$/g, '');
+    cur = { usfm: usfm, ch: ch, v1: v1, v2: v2, el: el };
+    elRef.textContent = el.textContent.replace(/^\(|\)$/g, '');
     var osis = OSIS[usfm] || usfm;
-    popStep.href = 'https://www.stepbible.org/?q=reference=' + osis + '.' + ch + '.' + v1 + (v2 > v1 ? '-' + v2 : '');
-    popTxt.textContent = '…';
-    pop.classList.add('open'); place(el);
-    loadBook(usfm).then(function (data) {
-      var parts = [];
-      for (var v = v1; v <= v2; v++) {
-        var t = data[ch + '.' + v];
-        if (t) parts.push((v2 > v1 ? '<span class="vn">' + v + '</span>' : '') + t);
-      }
-      popTxt.innerHTML = parts.length ? parts.join(' ') : 'Verse text unavailable.';
-      if (pop.classList.contains('open')) place(el);
-    });
+    elStep.href = 'https://www.stepbible.org/?q=reference=' + osis + '.' + ch + '.' + v1 + (v2 > v1 ? '-' + v2 : '');
+    var isNT = !!NT[usfm];
+    elTog.className = 'vpop-tog' + (isNT ? ' show' : '');
+    if (!isNT) mode = 'en';
+    render();
+    pop.classList.add('open'); place();
   }
 
-  // wrap references inside a text node, returning a fragment (or null if none)
+  function setMode(m) {
+    mode = m;
+    [].forEach.call(elTog.querySelectorAll('button'), function (b) { b.className = b.getAttribute('data-m') === m ? 'on' : ''; });
+    render();
+    place();
+  }
+
+  function render() {
+    var enOn = mode === 'en';
+    elTxt.style.display = enOn ? '' : 'none';
+    elGk.className = 'vpop-gk' + (enOn ? '' : ' show');
+    if (enOn) {
+      elSrc.textContent = 'Berean Standard Bible · public domain';
+      elStep.textContent = NT[cur.usfm] ? 'Full study on STEP →' : 'See the Hebrew on STEP →';
+      elTxt.textContent = '…';
+      var c = cur;
+      loadBook(c.usfm).then(function (data) {
+        if (!cur || cur !== c) return;
+        var parts = [];
+        for (var v = c.v1; v <= c.v2; v++) { var t = data[c.ch + '.' + v]; if (t) parts.push((c.v2 > c.v1 ? '<span class="vn">' + v + '</span>' : '') + esc(t)); }
+        elTxt.innerHTML = parts.length ? parts.join(' ') : 'Verse text unavailable.'; place();
+      });
+    } else {
+      elSrc.textContent = 'Greek: STEPBible / Tyndale House · CC BY';
+      elStep.textContent = 'Full study on STEP →';
+      elGk.innerHTML = '<span style="font-size:12px;color:#8a94a3">Loading…</span>';
+      curWords = []; var c2 = cur;
+      loadGreek(c2.usfm, c2.ch).then(function (data) {
+        if (!cur || cur !== c2 || mode !== 'gk') return;
+        var html = '', gi = 0; curWords = [];
+        for (var v = c2.v1; v <= c2.v2; v++) {
+          var ws = data[v]; if (!ws) continue;
+          if (c2.v2 > c2.v1) html += '<div class="vpop-vlabel">verse ' + v + '</div>';
+          html += '<div class="vpop-words">';
+          for (var i = 0; i < ws.length; i++) {
+            var w = ws[i]; curWords.push(w);
+            html += '<button class="vw" type="button" data-i="' + gi + '"><span class="vwg">' + esc(w[0]) + '</span><span class="vwt">' + esc(w[1]) + '</span><span class="vwm">' + esc(w[2]) + '</span></button>';
+            gi++;
+          }
+          html += '</div>';
+        }
+        elGk.innerHTML = (html || '<span style="font-size:12px;color:#8a94a3">Greek is not available for this verse.</span>') + '<div class="vpop-detail"></div>';
+        elDetail = elGk.querySelector('.vpop-detail');
+        if (curWords.length) selectWord(0, elGk.querySelector('.vw'));
+        place();
+      });
+    }
+  }
+
+  function selectWord(i, node) {
+    var w = curWords[i]; if (!w) return;
+    [].forEach.call(elGk.querySelectorAll('.vw'), function (b) { b.className = 'vw'; });
+    if (node) node.className = 'vw sel';
+    var morph = decodeMorph(w[5]);
+    elDetail.innerHTML = '<span class="dg">' + esc(w[0]) + '</span><span class="dt"> · ' + esc(w[1]) + '</span> — ' + esc(w[4] || w[2]) +
+      '<br><span class="dm">from ' + esc(w[3]) + (morph ? ' · ' + esc(morph) : '') + '</span>';
+  }
+
   function wrapNode(node) {
     var text = node.nodeValue;
     if (!text || text.length < 4 || !/\d/.test(text)) return null;
-    REF_RE.lastIndex = 0;
-    var m, last = 0, frag = null;
+    REF_RE.lastIndex = 0; var m, last = 0, frag = null;
     while ((m = REF_RE.exec(text))) {
-      var usfm = TOKEN2USFM[norm(m[1])];
-      if (!usfm) continue;
-      var ch = +m[2], v1 = +m[3];
-      if (!valid(usfm, ch, v1)) continue;    // unknown/nonexistent verse -> leave as plain text
+      var usfm = TOKEN2USFM[norm(m[1])]; if (!usfm) continue;
+      var ch = +m[2], v1 = +m[3]; if (!valid(usfm, ch, v1)) continue;
       if (!frag) frag = document.createDocumentFragment();
       if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
       var a = document.createElement('a');
       a.className = 'vref'; a.setAttribute('role', 'button'); a.setAttribute('tabindex', '0');
       a.setAttribute('data-b', usfm); a.setAttribute('data-c', ch); a.setAttribute('data-v', v1);
       if (m[4]) a.setAttribute('data-v2', m[4]);
-      a.textContent = m[0];
-      frag.appendChild(a);
-      last = m.index + m[0].length;
+      a.textContent = m[0]; frag.appendChild(a); last = m.index + m[0].length;
     }
     if (frag && last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
     return frag;
   }
 
-  // Skip chrome / interactive / non-prose. Verse refs only live in Bible-quoting
-  // prose, so processing readable text and skipping these is safe everywhere.
   var SKIP_TAG = { A:1, SCRIPT:1, STYLE:1, SUP:1, BUTTON:1, INPUT:1, TEXTAREA:1, SELECT:1, OPTION:1, NAV:1, HEADER:1, FOOTER:1, CODE:1, PRE:1, H1:1 };
   var SKIP_CLASS = /\b(vref|vpop|on-box|art-refs|art-crumbs|art-meta|art-eyebrow|adn-|footer|float-|toc-|upgrade-prompt|inline-tutor|reader-help|ask-sel)\b/;
   var SKIP_ID = { 'float-tutor':1, 'ev-pop':1, 'ad-miniplayer':1, proGate:1 };
@@ -182,39 +262,23 @@
     }
     return false;
   }
-
   function enhance(root) {
     if (!root || root.nodeType !== 1 || !INDEX) return;
-    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
-    var nodes = [], n;
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null), nodes = [], n;
     while ((n = walker.nextNode())) if (n.nodeValue && /\d/.test(n.nodeValue) && !skip(n.parentNode)) nodes.push(n);
-    for (var i = 0; i < nodes.length; i++) {
-      var frag = wrapNode(nodes[i]);
-      if (frag && nodes[i].parentNode) nodes[i].parentNode.replaceChild(frag, nodes[i]);
-    }
+    for (var i = 0; i < nodes.length; i++) { var frag = wrapNode(nodes[i]); if (frag && nodes[i].parentNode) nodes[i].parentNode.replaceChild(frag, nodes[i]); }
   }
 
   function boot() {
     css();
-    fetch(BASE + 'index.json').then(function (r) { return r.json(); }).then(function (idx) {
-      INDEX = idx;
-      enhance(document.body);
-      // Evidence Library hub swaps tab fragments in after load — enhance new content.
+    fetch(BSB + 'index.json').then(function (r) { return r.json(); }).then(function (idx) {
+      INDEX = idx; enhance(document.body);
       try {
         new MutationObserver(function (muts) {
-          for (var i = 0; i < muts.length; i++)
-            for (var j = 0; j < muts[i].addedNodes.length; j++) {
-              var nn = muts[i].addedNodes[j];
-              if (nn.nodeType === 1 && !skip(nn)) enhance(nn);
-            }
+          for (var i = 0; i < muts.length; i++) for (var j = 0; j < muts[i].addedNodes.length; j++) { var nn = muts[i].addedNodes[j]; if (nn.nodeType === 1 && !skip(nn)) enhance(nn); }
         }).observe(document.body, { childList: true, subtree: true });
       } catch (e) {}
     }).catch(function () {});
-
-    // CAPTURE phase: a .vref can sit inside an Evidence Library .card whose inline
-    // onclick="tog(this)" would otherwise collapse the card on tap. Stopping the
-    // event in capture beats that bubble-phase handler; preventDefault stops any
-    // stray navigation. Non-vref clicks fall through untouched (just close the popup).
     document.addEventListener('click', function (e) {
       var v = e.target.closest ? e.target.closest('.vref') : null;
       if (v) { e.preventDefault(); e.stopPropagation(); if (e.stopImmediatePropagation) e.stopImmediatePropagation(); open(v); return; }
@@ -222,12 +286,9 @@
     }, true);
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') { close(); return; }
-      if ((e.key === 'Enter' || e.key === ' ') && e.target.classList && e.target.classList.contains('vref')) {
-        e.preventDefault(); open(e.target);
-      }
+      if ((e.key === 'Enter' || e.key === ' ') && e.target.classList && e.target.classList.contains('vref')) { e.preventDefault(); open(e.target); }
     });
     window.addEventListener('scroll', function () { if (pop && pop.classList.contains('open') && !isMobile()) close(); }, { passive: true });
   }
-
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
 })();
