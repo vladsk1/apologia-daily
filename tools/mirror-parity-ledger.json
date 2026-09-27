@@ -65,6 +65,11 @@
       "sourceCommit": "499a036",
       "reason": "Cross-reference renumber only: the 2026-09-26 English fix corrected three '(note N)' pointers inside footnote prose (13->16 x2, 9->10) to match the English footnote list. The Spanish mirror has its own footnote numbering and its own pointers ('nota 11'), so the English numbers do not carry over; no doctrinal text changed. Verify the ES pointers against the ES list when the mirror is next natively reviewed."
     },
+    "library/manuscript.html -> library/mk/manuscript.html": {
+      "acceptedAt": "2026-09-27",
+      "sourceCommit": "878ed182",
+      "reason": "English-ADD, HOST PARAGRAPH ABSENT in the MK mirror: the 2026-09-27 add-a-source (backlog P2 #46) wove a CBGM (Coherence-Based Genealogical Method; Wasserman & Gurry 2017) sentence INTO the English essay's quantitative edition-comparison paragraph (Lanier collation; Tyndale House ~98.8%, Byzantine ~92-93%, Westcott-Hort ~1.5%, Goettingen Septuagint ~98.5% with Daniel / 1-2 Kingdoms outliers). That entire host paragraph does not exist in library/mk/manuscript.html - the MK mirror lags earlier than the ES one, which already had the Lanier paragraph (synced 2026-09-14) and received the CBGM sentence THIS commit. Syncing the one CBGM sentence into MK would require first translating the whole ~400-word technical host paragraph, which is out of scope for an add-a-source sync and is exactly the untranslated-doctrinal-prose case the owner's standing preference guards. Nothing false is live in the MK mirror; it is only less complete. ES mirror synced this commit. Clear when a native reviewer brings the MK manuscript stability section up to the current English. Macedonian doctrinal review outstanding (docs/STATEMENT_OF_FAITH.md)."
+    },
     "ev-s1.html -> ev-s1.es.html": {
       "acceptedAt": "2026-09-26",
       "sourceCommit": "4f24abc0",
