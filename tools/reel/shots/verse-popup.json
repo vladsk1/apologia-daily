@@ -3,7 +3,7 @@
   "width": 390,
   "height": 640,
   "scale": 2,
-  "prep": "document.documentElement.style.scrollBehavior='auto';document.body.style.scrollBehavior='auto';window.__hideFloats=()=>{for(const el of document.querySelectorAll('body *')){const cs=getComputedStyle(el);if(cs.position==='fixed'&&el.getBoundingClientRect().top>90&&!el.classList.contains('vpop'))el.style.visibility='hidden';}};window.__ref=(re,root)=>[...(root||document).querySelectorAll('.vref')].find(a=>re.test(a.textContent));window.__tab=async(i,id)=>{document.querySelectorAll('.tab')[i].click();for(let k=0;k<40&&!document.getElementById(id);k++)await new Promise(r=>setTimeout(r,250));await new Promise(r=>setTimeout(r,900));return document.getElementById(id);};window.__tap=async(a)=>{a.scrollIntoView({block:'center'});window.scrollBy(0,-120);await new Promise(r=>setTimeout(r,300));a.click();await new Promise(r=>setTimeout(r,1800));};",
+  "prep": "document.documentElement.style.scrollBehavior='auto';document.body.style.scrollBehavior='auto';window.__hideFloats=()=>{for(const el of document.querySelectorAll('body *')){const cs=getComputedStyle(el);if(cs.position==='fixed'&&el.getBoundingClientRect().top>90&&!el.classList.contains('vpop'))el.style.visibility='hidden';}};window.__ref=(re,root)=>[...(root||document).querySelectorAll('.vref')].find(a=>re.test(a.textContent));window.__tab=async(i,id)=>{document.querySelectorAll('.tab')[i].click();for(let k=0;k<40&&!document.getElementById(id);k++)await new Promise(r=>setTimeout(r,250));await new Promise(r=>setTimeout(r,900));return document.getElementById(id);};window.__tap=async(a)=>{a.scrollIntoView({block:'center'});window.scrollBy(0,-120);await new Promise(r=>setTimeout(r,300));a.click();await new Promise(r=>setTimeout(r,1800));};window.__orig=async(re)=>{const b=document.querySelector('.vpop-tog button[data-m=gk]');b.click();for(let k=0;k<40&&!document.querySelector('.vpop .vw');k++)await new Promise(r=>setTimeout(r,250));await new Promise(r=>setTimeout(r,500));const w=[...document.querySelectorAll('.vpop .vw')].find(x=>re.test(x.textContent));if(w){w.click();w.scrollIntoView({block:'nearest'});}await new Promise(r=>setTimeout(r,600));return !!w;};",
   "shots": [
     {
       "name": "01-refs",
@@ -46,6 +46,20 @@
       "settle": 2500,
       "js": "const a=__ref(/^Isaiah 45:23/)||document.querySelector('.vref'); await __tap(a); __hideFloats();",
       "report": "(()=>{const p=document.querySelector('.vpop');return (p?p.innerText.slice(0,160):'no pop')})()"
+    },
+    {
+      "name": "07-greek",
+      "path": "/library/jesus-is-yahweh.html",
+      "settle": 3000,
+      "js": "const a=__ref(/^Romans 10:13/); await __tap(a); window.__ok=await __orig(/κυρ/); __hideFloats();",
+      "report": "(()=>window.__ok+' | '+(document.querySelector('.vpop')||{}).innerText.slice(0,400))()"
+    },
+    {
+      "name": "08-hebrew",
+      "path": "/library/jesus-is-yahweh.html",
+      "settle": 3000,
+      "js": "const a=__ref(/^Isaiah 45:23/); await __tap(a); window.__ok=await __orig(/to me/); __hideFloats();",
+      "report": "(()=>window.__ok+' | '+(document.querySelector('.vpop')||{}).innerText.slice(0,400))()"
     }
   ]
 }
