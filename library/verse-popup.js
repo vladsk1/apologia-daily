@@ -1,14 +1,19 @@
-/* verse-popup.js — tap-to-read Scripture, site-wide, with inline Greek (Phase 2a).
+/* verse-popup.js — tap-to-read Scripture, site-wide, with inline original languages.
    Tap any Bible reference and the verse opens in a popup on the page (no leaving).
-   For New Testament verses a small "English / Greek" toggle reveals the verse
-   word-by-word — each Greek word with its transliteration and meaning, tap a word
-   for its dictionary meaning and grammar.
+   A small "English / Greek" (NT) or "English / Hebrew" (OT) toggle reveals the verse
+   word-by-word — each original word with its transliteration and meaning; tap a word
+   for its dictionary meaning and grammar (Hebrew reads right-to-left, and a pronominal
+   suffix is named, e.g. "preposition + 1st person singular suffix").
 
    English text: Berean Standard Bible (public domain / CC0), per-book under
      /library/bible/BSB/<USFM>.json  (+ index.json for validation).
-   Greek text + meanings: STEP TAGNT (Tyndale House / STEPBible.org, CC BY),
-     per-chapter under /library/bible/GRC/<USFM>/<chapter>.json as
-     [word, translit, gloss, lemma, dictMeaning, morphCode] arrays.
+   Greek NT: STEP TAGNT (SBL text); Hebrew OT: STEP TAHOT (Leningrad/Masoretic) —
+     both Tyndale House / STEPBible.org, CC BY. Greek per-chapter under
+     /library/bible/GRC/<USFM>/<chapter>.json; Hebrew under /library/bible/HBO/...,
+     each [word, translit, gloss, lemma, dictMeaning, morphCode]. Morphology is
+     decoded to readable grammar at runtime (Robinson for Greek, OpenScriptures for
+     Hebrew). A few verses the source text omits (e.g. Mark 16:9-20 and John 7:53-8:11,
+     absent from the SBL Greek) show "not available" — no data is invented.
    Both load ON DEMAND and cache, so pages stay light. Displays existing
    public-domain / openly-licensed reference data; adds no doctrinal content, so
    it needs no gate (same class as reviewed-badge.js).
@@ -93,13 +98,33 @@
     if (HG[seg[i]]) { out.push(HG[seg[i]]); i++; } if (HN[seg[i]]) { out.push(HN[seg[i]]); i++; } if (HST[seg[i]]) out.push(HST[seg[i]]);
     return out.join(' ');
   }
-  function decodeHeb(code) {
+  function decodeHebOne(code) {
     if (!code) return ''; var aram = code[0] === 'A', c = code.replace(/^[HA]/, ''), pos = c[0];
     if (pos === 'N') { var t = c[1]; if (t === 'p') return 'proper noun'; if (t === 'g') return 'gentilic noun'; var d = [HG[c[2]], HN[c[3]], HST[c[4]]].filter(Boolean).join(' '); return 'noun' + (d ? ' — ' + d : ''); }
     if (pos === 'V') { var ex = hgn(c.slice(3)); return 'verb — ' + [HSTEM[c[1]], HCONJ[c[2]]].filter(Boolean).join(' ') + (ex ? ', ' + ex : ''); }
     if (pos === 'A') { var d2 = [HG[c[2]], HN[c[3]], HST[c[4]]].filter(Boolean).join(' '); return 'adjective' + (d2 ? ' — ' + d2 : ''); }
     if (pos === 'P') { var d3 = hgn(c.slice(2)); return 'pronoun' + (d3 ? ' — ' + d3 : ''); }
     return (aram ? 'Aramaic ' : '') + (HPOS[pos] || code);
+  }
+  // A pronominal suffix ("Sp1cs", "Sp3ms"...) carries the load-bearing "me / his / them".
+  // The build appends it as "<stem>+<suffix>"; name its person/gender/number here.
+  function decodeHebSuffix(seg) {
+    var c = (seg || '').replace(/^[HA]/, '');
+    if (c[0] !== 'S' || c[1] !== 'p') return '';
+    var r = c.slice(2), out = [];                          // e.g. "1cs" / "3ms" / "2fp"
+    if (ORD[r[0]]) out.push(ORD[r[0]] + ' person');
+    if (r[1] === 'm') out.push('masculine'); else if (r[1] === 'f') out.push('feminine');
+    if (HN[r[2]]) out.push(HN[r[2]]);
+    var s = out.join(' ');
+    return (s ? s + ' ' : '') + 'suffix';
+  }
+  function decodeHeb(code) {
+    if (!code) return '';
+    var plus = code.indexOf('+'), sfx = '';
+    if (plus > -1) { sfx = decodeHebSuffix(code.slice(plus + 1)); code = code.slice(0, plus); }
+    var main = decodeHebOne(code);
+    if (sfx) main += (main ? ' + ' : '') + sfx;
+    return main;
   }
   function decode(code, lang) { return lang === 'hbo' ? decodeHeb(code) : decodeMorph(code); }
 
@@ -188,8 +213,13 @@
     cur = { usfm: usfm, ch: ch, v1: v1, v2: v2, el: el };
     elRef.textContent = el.textContent.replace(/^\(|\)$/g, '');
     var osis = OSIS[usfm] || usfm;
-    elStep.href = 'https://www.stepbible.org/?q=reference=' + osis + '.' + ch + '.' + v1 + (v2 > v1 ? '-' + v2 : '');
-    elTog.className = 'vpop-tog show';                 // every book has an original (Greek NT / Hebrew OT)
+    // Open STEP straight to the interlinear (ESV alongside the original: SBL Greek for
+    // the NT, OHB Hebrew for the OT) rather than STEP's default English view.
+    var origVer = NT[usfm] ? 'SBLG' : 'OHB';
+    elStep.href = 'https://www.stepbible.org/?q=version=ESV|version=' + origVer + '|reference=' +
+      osis + '.' + ch + '.' + v1 + (v2 > v1 ? '-' + v2 : '') + '&display=INTERLINEAR';
+    elTog.className = 'vpop-tog show';                 // offer the toggle for every verse (Greek NT / Hebrew OT);
+                                                       // verses the source omits render a "not available" note
     elTog.querySelector('button[data-m="gk"]').textContent = origLabel(usfm);
     render();
     pop.classList.add('open'); place();

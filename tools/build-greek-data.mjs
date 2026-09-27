@@ -34,8 +34,23 @@ async function ensure(local, remote) {
   return t;
 }
 
+// A data line: "<Book>.<ch>.<v>#<word>=...". We take only refs with NO versification
+// annotation. TAGNT's primary ref is NRSV versification; where a verse carries a
+// [KJV]/(NA)/{other} bracket, NRSV and BSB (Berean) numbering can DIFFER (e.g. BSB
+// follows KJV's 14-verse 2 Cor 13, so NRSV 13:13 = BSB 13:14). Keying such a line by
+// its NRSV primary ref would put the Greek on the WRONG BSB verse. Rather than shift a
+// verse, we leave those (few) versification-boundary verses out — the popup shows
+// "not available", which is honest. The genuinely-absent verses (Mark 16:9-20, the
+// pericope adulterae, etc.) are omitted by the SBL text itself and stay out too.
 const DATA_RE = /^[0-9A-Za-z]+\.\d+\.\d+#\d+=/;
-function stripPunct(s) { return s.replace(/^[\s,.;:·’'"“”·’\-]+|[\s,.;:·’'"“”·’\-]+$/g, ''); }
+// Strip TAGNT editorial markup that can appear anywhere on a word — the pilcrow ¶
+// paragraph mark, the ¬ segment mark, and the [[ ]] disputed-text brackets (e.g.
+// Rom 10:13 "σωθήσεται.¶", Mat 11:17 "ὠρχήσασθε,¶¬", Mrk 16:8 "ἀμήν.¶]]") — then
+// trim leading/trailing whitespace and punctuation.
+function stripPunct(s) {
+  return s.replace(/[¶¬[\]]/g, '')
+          .replace(/^[\s,.;:·’'"“”·’\-]+|[\s,.;:·’'"“”·’\-]+$/g, '');
+}
 
 function parseWord(line) {
   const f = line.split('\t');
@@ -52,7 +67,9 @@ function parseWord(line) {
   const pi = g1.lastIndexOf('(');
   const greek = stripPunct(pi > -1 ? g1.slice(0, pi) : g1);
   const translit = pi > -1 ? g1.slice(pi + 1).replace(/\)\s*$/, '').trim() : '';
-  const gloss = stripPunct((f[2] || '').replace(/[[\]]/g, ''));   // context gloss "In [the]" -> "In the"
+  // context gloss "In [the]" -> "In the"; first drop a "[NN]" KJV verse-number marker
+  // TAGNT prefixes at a KJV-verse boundary inside an NRSV verse (e.g. "[14] I have written").
+  const gloss = stripPunct((f[2] || '').replace(/\[\d+\]/g, '').replace(/[[\]]/g, ''));
   // f[3] = "G1722=PREP" ; f[4] = "ἐν=in/on/among"
   const morph = ((f[3] || '').split('=')[1] || '').trim();
   const l4 = (f[4] || '').split('=');

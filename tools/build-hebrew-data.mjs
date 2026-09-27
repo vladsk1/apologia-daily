@@ -8,9 +8,20 @@
  *   library/bible/HBO/<USFM>/<chapter>.json
  *     { "<verse>": [ [word, translit, gloss, lemma, dictMeaning, morphCode], ... ] }
  *
+ * KEYED BY ENGLISH (NRSV) NUMBERING so the output lines up with library/bible/BSB
+ * (the English index the popup looks up). TAHOT's reference column is
+ * "Eng (+Heb)#Heb.word" — e.g. "Psa.3.1(3.2)#01" means English 3:1 = Hebrew 3:2.
+ * We key by the ENGLISH part and drop the (Heb) bracket. An earlier version keyed
+ * by the whole field and a regex that rejected any bracketed ref, silently dropping
+ * ~8.5% of OT verses (every psalm title offset, Joel 2:28-3:21, Malachi 4, etc.).
+ * English "verse 0" (a psalm title, which has no English verse number) is omitted —
+ * never shifted onto a real verse.
+ *
  * The morphCode (OpenScriptures Hebrew morphology) is decoded to readable grammar
- * at RUNTIME by library/verse-popup.js. Attribution required (CC BY):
- * "STEPBible / Tyndale House". Hebrew renders right-to-left in the popup.
+ * at RUNTIME by library/verse-popup.js. A pronominal suffix (Sp...) is a separate
+ * morpheme and is preserved as "<stem>+<suffix>" (e.g. "HR+Sp1cs" for li, preposition
+ * + 1st-person-singular suffix) so the grammar line can name the "me/his/them".
+ * Attribution required (CC BY): "STEPBible / Tyndale House". Hebrew renders RTL.
  *
  * Usage:  node tools/build-hebrew-data.mjs [--test]
  *   Downloads the four TAHOT files to _tahot_*.txt (gitignored) if not present.
@@ -33,19 +44,32 @@ async function ensure(local, remote) {
   const t = await res.text(); writeFileSync(local, t); return t;
 }
 
-const DATA_RE = /^[0-9A-Za-z]+\.\d+\.\d+#\d+=/;
+// A data line: "<Book>.<ch>.<v>[(<hebRef>)]#<word>=<group>\t..." — the optional
+// (hebRef) bracket appears only where English and Hebrew numbering differ.
+const DATA_RE = /^[0-9A-Za-z]+\.\d+\.\d+(?:\([^)]*\))?#\d+=/;
 function firstSeg(s) { return (s || '').split('\\')[0]; }     // drop trailing \punctuation
 
 function parseWord(line) {
   const f = line.split('\t');
   const c0 = f[0];
   const grp = (c0.split('=')[1] || '');
-  if (!/L/.test(grp)) return null;                            // Leningrad (Masoretic) base text
-  const ref = c0.slice(0, c0.indexOf('#'));
-  const parts = ref.split('.');
+  // Base text = Leningrad (L). Also accept Restored (R): TAHOT's own text-type for the two
+  // verses missing from the Leningrad codex (Jos.21.36-37 from 1Ch.6.63-64; Neh.7.67b from
+  // Ezr.2.66), restored from parallels. R exists ONLY at those loci and never coexists with L,
+  // so this adds those verses without mixing readings elsewhere. Qere (Q) / Ketiv (K) variants
+  // and bracketed manuscript sigla (A/B/C/D...) are still excluded.
+  if (!/[LR]/.test(grp)) return null;
+  const hashIdx = c0.indexOf('#');
+  const refField = c0.slice(0, hashIdx);                      // "Psa.3.1(3.2)" or "Job.1.1"
+  const bracket = refField.match(/\(([^)]*)\)\s*$/);          // Hebrew ref, when it differs
+  const engRef = refField.replace(/\([^)]*\)\s*$/, '');       // "Psa.3.1" — English/NRSV numbering (== BSB)
+  const parts = engRef.split('.');
   const usfm = parts[0].toUpperCase();
   const ch = +parts[1], v = +parts[2];
-  const pos = parseInt(c0.slice(c0.indexOf('#') + 1), 10);
+  if (!Number.isFinite(ch) || !Number.isFinite(v)) return null;
+  if (v === 0) return null;                                   // English "v0" = psalm title, no English verse — omit
+  const hebRef = bracket ? bracket[1] : (ch + '.' + v);       // used only to de-dupe words within an English verse
+  const pos = parseInt(c0.slice(hashIdx + 1), 10);
   const word = firstSeg(f[1]).replace(/\//g, '').trim();      // join morphemes into the whole word
   const translit = firstSeg(f[2]).replace(/\//g, '').trim();
   const gloss = firstSeg(f[3]).replace(/\//g, ' ').replace(/[[\]]/g, '').replace(/\s+/g, ' ').trim();
@@ -55,13 +79,20 @@ function parseWord(line) {
   const lemmas = firstSeg(f[11]).split('/');
   let ci = 0;
   for (let i = 0; i < morphs.length; i++) { const p0 = (morphs[i] || '').replace(/^[HA]/, '')[0]; if (p0 === 'N' || p0 === 'V' || p0 === 'A') { ci = i; break; } }
-  const morph = (morphs[ci] || '').trim();
+  let morph = (morphs[ci] || '').trim();
+  // Keep a pronominal suffix (Sp...) — a separate morpheme carrying the load-bearing
+  // "me/his/them" (e.g. Isa 45:23 li). Appended as "<stem>+<suffix>" for the runtime decoder.
+  for (let i = 0; i < morphs.length; i++) {
+    if (i === ci) continue;
+    const s = (morphs[i] || '').replace(/^[HA]/, '');
+    if (s[0] === 'S' && s[1] === 'p') { morph += '+' + s; break; }
+  }
   let lemma = '', dict = '';
   const seg = (lemmas[ci] || '').replace(/[{}]/g, '');        // {Hxxxx=lemma=gloss»...}
   const p = seg.split('=');
   if (p.length >= 3) { lemma = (p[1] || '').trim(); dict = p.slice(2).join('=').split('»')[0].replace(/^[:\s]+/, '').split('@')[0].trim(); }
   if (!word) return null;
-  return { usfm, ch, v, pos, word: [word, translit, gloss, lemma, dict || gloss, morph] };
+  return { usfm, ch, v, hebRef, pos, word: [word, translit, gloss, lemma, dict || gloss, morph] };
 }
 
 async function main() {
@@ -76,14 +107,17 @@ async function main() {
       if (!w) continue;
       const b = (books[w.usfm] = books[w.usfm] || {});
       const key = w.ch + '.' + w.v;
-      const verse = (b[key] = b[key] || {});
-      if (!(w.pos in verse)) verse[w.pos] = w.word;
+      // Accumulate in file order (correct English reading order), de-duping by the
+      // Hebrew ref + word position so a merged/variant word can't collide with another.
+      const verse = (b[key] = b[key] || { seen: new Set(), words: [] });
+      const dk = w.hebRef + '#' + w.pos;
+      if (!verse.seen.has(dk)) { verse.seen.add(dk); verse.words.push(w.word); }
     }
   }
   if (test) {
-    const d = books.DEU['6.4'];
-    console.log('Deut 6:4 words:', Object.keys(d).length);
-    Object.keys(d).map(Number).sort((a, b) => a - b).forEach((p) => console.log('  ', JSON.stringify(d[p])));
+    const d = (books.DEU && books.DEU['6.4'] && books.DEU['6.4'].words) || [];
+    console.log('Deut 6:4 words:', d.length);
+    d.forEach((w) => console.log('  ', JSON.stringify(w)));
     return;
   }
   mkdirSync(OUTDIR, { recursive: true });
@@ -93,8 +127,7 @@ async function main() {
     const byCh = {};
     for (const key of Object.keys(books[usfm])) {
       const [ch, v] = key.split('.');
-      const verse = books[usfm][key];
-      const arr = Object.keys(verse).map(Number).sort((a, b) => a - b).map((x) => verse[x]);
+      const arr = books[usfm][key].words;
       words += arr.length; (byCh[ch] = byCh[ch] || {})[v] = arr;
     }
     for (const ch of Object.keys(byCh)) {
