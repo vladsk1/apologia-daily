@@ -106,3 +106,16 @@ This file holds what was deliberately NOT applied. CLAUDE.md rule 9 says pre-exi
   - The Gathercole notes and backlog row 186 still describe `hands.html`'s old Paul-only wording.
   - The Fee note gives *Pauline Christology* as Baker Academic, 740 pp.; jlib found Hendrickson 2007, 707 pp. This needs checking against the copyright page.
   - Two Loke leads have no backlog rows: James Ware (*NTS* 2014) and Bolt 1996.
+
+## Citation checks: DONE 2026-09-29 (later)
+Every item under "Citation checks" was web-verified. Fixes that could be verified were applied. The main one: earlycreed fn 19 (the 2016 blog) is replaced by Alter & Slade, *SHERM* 3.2 (2021). Unverifiable claims that carried weight were hedged.
+
+Still needing a human with the book:
+- earlycreed: C5 (*Did Jesus Exist?* pp. 4–5), and the Ehrman list attribution
+- john11 fn 17: pp. 27–78
+- virginbirth: Brown p. 66 and Brown 145–149, plus a Brown 1973 bibliography line
+- uniqueness: Lüdemann pp. 97–109
+- messianic-prophecy: Swanson pp. 408–9
+- daniel70: Goldingay pages
+
+Found out of scope: the same 2016 blog still props up the 75% empty-tomb figure in `library/emptytomb.html` and its MK/ES mirrors. Handle it in the Resurrection-tab sweep.
