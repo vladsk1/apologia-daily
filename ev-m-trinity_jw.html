@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- content-review: {"argument": "2026-07-29", "orthodoxy": "2026-07-29", "by": "2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: DUAL-CONSENSUS (Trinity / deity / world-religions tier). 2026-07-28/29 full-corpus gate: apologia-argument x63, apologia-orthodoxy x63, apologia-neutrality x16 on this tier, plus a confirmation pass of both doctrinal lenses against the current text - both certified this page CLEAN. 0 HERESY across the corpus. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\">; the compressed layers were where the certified position had been reversed on this tier, invisible to prose review. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending, and ev-m-trinity_islam.html is first in the queue for them. Queue: docs/MASTERY_PAGE_AUDIT.md."} -->
+<!-- content-review: {"argument": "2026-09-28", "orthodoxy": "2026-09-28", "by": "2026-09-28 OWNER-DIRECTED OVER-CHARITY SWEEP of the 15 Trinity mastery pages, after the ev-s6 cards and the 16 paired essays: every layer diffed against the certified essays FIRST (ARG_PREMISES grading rubric, flashcards, mock-scorer checks, model answers, chips, syllogism, seo/meta/JSON-LD), then prose. Removed same-Jesus/common-ground concessions and praise beyond sincerity; retired claims purged from the memorised layers (Daniel 7 'enthroned figure', Angel 'accepts worship', echad compound-unity, 'God is love so he needs another' as settled, Colwell/Metzger, Ehrman timeline, Tertullian overstatement); verdicts landed and bounded; hardest objections stated at full strength. Scorer checks rewritten and node-tested against sample answers so the corrected answer scores RIGHT and the retired claim does not. GATES: READ-ONLY Explore agents, four lenses, hashes verified; round 1 full read, round 2 confirmation (caught two check-regex regressions, fixed), final narrow confirmation -> all 15 STAMPABLE, 0 HERESY; last two must-fixes (philosophical_trinity model answer, modalism line 370) and three reviewer-tested polish items applied verbatim, not re-read. Inline scripts parse (tests/inline-script-syntax). Pastoral sign-off still _pending_. || 2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: DUAL-CONSENSUS (Trinity / deity / world-religions tier). 2026-07-28/29 full-corpus gate: apologia-argument x63, apologia-orthodoxy x63, apologia-neutrality x16 on this tier, plus a confirmation pass of both doctrinal lenses against the current text - both certified this page CLEAN. 0 HERESY across the corpus. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\">; the compressed layers were where the certified position had been reversed on this tier, invisible to prose review. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending, and ev-m-trinity_islam.html is first in the queue for them. Queue: docs/MASTERY_PAGE_AUDIT.md.", "citations": "2026-09-28", "neutrality": "2026-09-28"} -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Answering Jehovah&#x27;s Witnesses on the Trinity | Apologia Daily</title>
@@ -310,7 +310,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <h2>The argument in brief</h2>
     <p>Jehovah's Witnesses (the Watchtower Bible and Tract Society) reject the Trinity. They teach that only the Father, Jehovah, is truly God, that Jesus is God's first and greatest creation (identified with the archangel Michael), and that the Holy Spirit is God's impersonal active force rather than a person. Their New World Translation reflects this, rendering John 1:1 as "the Word was a god." Witnesses hold this sincerely, believing they are defending God's uniqueness, and the conversation should honour that earnestness.</p>
     <p>The historic Christian response engages the key texts directly and respectfully. In John 1:1, the grammar (a predicate noun preceding the verb) indicates that the Word is fully divine in nature, not "a god" among others; reputable Greek scholarship overwhelmingly reads it as a statement of the Word's deity. Other passages weigh in too: Thomas calls the risen Jesus "my Lord and my God" (John 20:28) without rebuke, and Colossians 1:16-17 says all things were created "through him and for him," which is hard to square with his being a creature himself.</p>
-    <p>The aim is not to win an argument but to think carefully together. Christians affirm the Witnesses' concern that there is only one God, then ask whether the biblical evidence is better explained by Jesus being fully that one God in person rather than a created being — a question best pursued patiently, text by text.</p>
+    <p>The aim is not to win an argument but to think carefully together. The conclusion should be stated plainly: the texts the Watchtower cites point the other way &mdash; the Son is the uncreated Creator, not the first creature. That is one load-bearing piece of the historic Trinity &mdash; one God, eternally Father, Son and Holy Spirit; the personhood of the Spirit is a separate case. Pursue it patiently, text by text.</p>
   </section>
 
   <!-- mastery dial -->
@@ -338,14 +338,14 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <span class="kick">The argument, formally</span>
       <h4>Three tests the created-angel Christology cannot pass.</h4>
       <div class="syllogism">
-        <div class="prem"><div class="tag">P1</div><p>Jehovah's Witnesses teach that Jesus is <b>Michael the Archangel — Jehovah's first creation</b> — resting on the New World Translation's John 1:1 ('a god') and on 'firstborn of all creation' (Col 1:15).</p></div>
+        <div class="prem"><div class="tag">P1</div><p>Jehovah's Witnesses teach that Jesus is <b>Jehovah's first creation</b> (in his prehuman life, Michael the archangel) — resting chiefly on the New World Translation's John 1:1 ('a god') and on 'firstborn of all creation' (Col 1:15).</p></div>
         <div class="prem"><div class="tag">P2</div><p>The position fails three independent tests: <b>grammar</b> (the construction's normal force is qualitative, not indefinite &mdash; the Word is everything God is), <b>logic</b> (John 1:3 — ALL created things came through the Word, so the Word is uncreated; Col 1:16-17 makes the same move), and <b>worship</b> (Jesus receives the worship Revelation's angels explicitly refuse, and Thomas's 'my Lord and my God' is blessed, not corrected).</p></div>
-        <div class="prem concl"><div class="tag">∴ C</div><p>Therefore the created-angel Christology contradicts the very texts it cites — and the Witness at your door is best served by <b>their own Bible, read one chapter at a time</b>.</p></div>
+        <div class="prem concl"><div class="tag">∴ C</div><p>Therefore the created-angel Christology contradicts the very texts it cites: the Son is <b>the uncreated Creator, not the first creature</b> &mdash; one load-bearing piece of the Trinity, not the whole doctrine. And the Witness at your door is best served by their own Bible, read one chapter at a time.</p></div>
       </div>
       <p class="formnote">Practical register: Witnesses are trained for verse ping-pong. Slow everything down — one passage, full context, their translation — and ask questions rather than lecture. You are talking to a person under organisational pressure, not an argument.</p>
 
       <span class="kick" style="margin-top:22px">The key concept — win with their own translation.</span>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">Almost every decisive text works in the NWT itself: 'all OTHER things' in Colossians 1 requires a word ('other') the Greek does not contain — visible in the Watchtower's own Kingdom Interlinear; Thomas's confession stands unaltered in John 20:28; Revelation's angels still refuse worship. The case can be made without opening your Bible once.</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">Almost every decisive text works in the NWT itself: 'all OTHER things' in Colossians 1 requires a word ('other') the Greek does not contain — visible in the Watchtower's own Kingdom Interlinear; Thomas's confession stands unaltered in John 20:28; Revelation's angels still refuse worship. The case can be made from the NWT alone.</p>
       <div class="chiprow">
         <span class="chip">NWT John 1:1 — 'a god'</span><span class="chip">John 1:3 — the all-things test</span><span class="chip">Col 1:15 — firstborn = heir</span><span class="chip">'all OTHER things' — added word</span><span class="chip">Rev 22:9 — angels refuse worship</span><span class="chip gold">John 20:28 — unedited</span>
       </div>
@@ -358,9 +358,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P2a — grammar and consistency</summary>
         <div class="body">
           <p class="lbl steel">The construction</p>
-          <p>Anarthrous predicate theos before the verb ascribes nature — 'the Word was God as to essence' — standard Greek (Harris, Wallace); 'a god' would commit the monotheist John to polytheism.</p>
+          <p>Anarthrous predicate theos before the verb ascribes nature — the Word &ldquo;had the nature of <em>theos</em>&rdquo; (Harner; so Wallace, Harris); 'a god' would commit the monotheist John to polytheism.</p>
           <p class="lbl steel">The NWT's own inconsistency</p>
-          <p>Be precise here, because the popular version of this point is wrong and a trained Witness will say so: John 1:6, 1:12 and 1:13 are anarthrous <em>genitives</em>, not preverbal predicate nominatives, so they are not the identical construction. What is true, and enough, is that the NWT renders article-less <em>theos</em> as 'God' at 1:6, 1:12 and 1:13, and reaches for 'a god' only at 1:1c. That is not a grammatical rule applied consistently; it is a rendering chosen where doctrine requires it. And the closest real parallel, 1:18, the NWT also declines to make indefinite. One rule, selectively applied, is not translation.</p>
+          <p>Be precise here, because the popular version of this point is wrong and a trained Witness will say so: John 1:6, 1:12 and 1:13 are anarthrous <em>genitives</em>, not preverbal predicate nominatives, so they are not the identical construction. What is true, and enough, is that the NWT renders article-less <em>theos</em> as 'God' at 1:6, 1:12 and 1:13, and reaches for 'a god' only at 1:1c. That is not a grammatical rule applied consistently; it is a rendering chosen where doctrine requires it. At 1:18 the NWT prints &lsquo;the only-begotten god,&rsquo; lower case &mdash; say so before the Witness does. Witnesses rightly reply that context, not a mechanical rule, governs each verse; grant it. So this point decides no single verse; its force is that &lsquo;a god&rsquo; is theology-driven rather than rule-driven. What rules it out is John&rsquo;s monotheism and verse 3.</p>
         </div>
       </details>
       <details class="acc">
@@ -377,7 +377,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <div class="card">
       <span class="kick">The hard part — objections, answered</span>
       <h4>The objections you will actually meet</h4>
-      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Each of these gets its strongest form first, then the reply — and the hardest objection of all is flagged above.</p>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Each of these gets its strongest form first, then the reply — and the hardest objection of all is flagged below.</p>
       <p class="hardest"><b>The one that matters most:</b> the cumulative subordination pattern, not any single verse. The <a href="/library/trinity_jw.html">deep dive</a> answers it at length &mdash; take it with you, not just the replies below.</p>
 
       <details class="acc">
@@ -386,7 +386,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Apologists overstate the grammar. Qualitative, definite, indefinite — the construction is debated, so 'a god' is defensible.</p>
           <p class="lbl reply">Reply</p>
-          <p>Take the reading most Greek grammarians now follow — qualitative — and the Watchtower still loses: 'the Word was fully divine in nature' is the death of created-angel Christology, not its rescue. 'A god' is the one option the context forbids (John's monotheism) and verse 3 refutes (the maker of all is not a made thing). And the grammar the Watchtower leans on does not deliver an indefinite reading in the first place: an anarthrous preverbal predicate nominative is normally qualitative (Harner, Wallace), only rarely indefinite.</p>
+          <p>Grant the first half: Colwell&rsquo;s rule does not run in reverse, and leaning on it to prove &lsquo;the Word was <em>the</em> God&rsquo; is an overreach. Take the reading most Greek grammarians now follow — qualitative — and the Watchtower still loses: 'the Word was fully divine in nature' is the death of created-angel Christology, not its rescue. 'A god' is the one option the context forbids (John's monotheism) and verse 3 refutes (the maker of all is not a made thing). And the grammar the Watchtower leans on does not deliver an indefinite reading in the first place: an anarthrous preverbal predicate nominative is normally qualitative (Harner, Wallace), only rarely indefinite. The one published scholar who defends &lsquo;a god,&rsquo; Jason BeDuhn, reads it as a lesser divine being &mdash; answer him, do not enlist him.</p>
         </div>
       </details>
 
@@ -406,7 +406,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>The word you translate worship is used of bowing to human kings. Honouring Jesus with proskuneo proves court etiquette, not deity.</p>
           <p class="lbl reply">Reply</p>
-          <p>Context again — and the contexts are merciless: the SAME word is refused by Revelation's angel ('worship GOD') and by Peter from Cornelius, yet accepted by the risen Jesus from Thomas alongside 'my Lord and my God,' and commanded of ALL God's angels toward the Son in Hebrews 1:6 — a quotation of a worship-of-YHWH text. Obeisance to kings exists; what cannot exist is faithful angels accepting, in heaven, what faithful angels refuse on earth.</p>
+          <p>Context again — and the contexts are merciless: the SAME word is refused by Revelation's angel ('worship GOD') and by Peter from Cornelius, yet accepted by the risen Jesus (Matthew 28:9, 17), who also blesses Thomas&rsquo;s &lsquo;my Lord and my God,&rsquo; and commanded of ALL God's angels toward the Son in Hebrews 1:6 — a quotation of a worship-of-YHWH text. Obeisance to kings exists; what no created-angel Christology explains is why the Son accepts in heaven what every other faithful creature refuses.</p>
         </div>
       </details>
 
@@ -426,7 +426,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>John 14:28 from Jesus own lips. Plus he prays, learns, dies, and does not know the hour. Your own texts give us a lesser being.</p>
           <p class="lbl reply">Reply</p>
-          <p>All true of the Son INCARNATE — and the doctrine teaches exactly that: he 'emptied himself,' made 'lower than the angels FOR A LITTLE WHILE' (Heb 2:9 — note: lower than the beings you say he is one of). 'Greater' is position — the sender than the sent, the Father in glory than the Son in flesh — in the same Gospel as 'I and the Father are one' and 17:5's shared pre-creation glory. The Watchtower must make 'greater' mean 'a different kind of being'; John's own context will not let it.</p>
+          <p>All true of the Son INCARNATE — and the doctrine teaches exactly that: he 'emptied himself,' made 'lower than the angels FOR A LITTLE WHILE' (Heb 2:9). Not knowing the hour (Mark 13:32) belongs to the limits of his human mind, not to the divine nature he never ceased to possess. 'Greater' is position — the sender than the sent, the Father in glory than the Son in flesh — in the same Gospel as 'I and the Father are one' and 17:5's shared pre-creation glory. The Watchtower must make 'greater' mean 'a different kind of being'; John's own context will not let it.</p>
         </div>
       </details>
 
@@ -436,7 +436,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>We honour Jesus as Jehovah's appointed king — worship passing THROUGH him to God, like saluting an ambassador. Sophisticated Witnesses are not idolaters.</p>
           <p class="lbl reply">Reply</p>
-          <p>Scripture knows the through-pattern — and breaks it deliberately for the Son: Revelation 5 has every creature worship the Lamb AND the One on the throne, jointly, terminally; John 5:23 demands all honour the Son JUST AS they honour the Father; Stephen's dying prayer goes TO Jesus, not through him. And the relative-worship theory faces the angel test it cannot pass: John offered an angel exactly that relative honour and was refused — if creatures must refuse it, the one who accepts it is no creature. (Notably, the Watchtower itself once directed worship to Jesus and changed its position — the theory is patching, not exegesis.)</p>
+          <p>Scripture knows the through-pattern — and breaks it deliberately for the Son: Revelation 5 has every creature worship the Lamb AND the One on the throne, jointly, terminally; John 5:23 demands all honour the Son JUST AS they honour the Father; Stephen's dying prayer goes TO Jesus, not through him. And the relative-worship theory faces the angel test it cannot pass: John offered an angel exactly that relative honour and was refused — if creatures must refuse it, the one who accepts it is no creature.</p>
         </div>
       </details>
     </div>
@@ -473,7 +473,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <div class="practicecard">
       <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back</span>
       <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument in your own words</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Write it from memory: run the three tests — grammar (NWT inconsistency), logic (all-things in John 1:3 and the added 'other'), worship (angels refuse, Jesus accepts).</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Write it from memory: run the three tests — grammar (qualitative, not indefinite &mdash; and John&rsquo;s monotheism), logic (all-things in John 1:3 and the added 'other'), worship (angels refuse, Jesus accepts).</p>
       <textarea id="explainBox" placeholder="Start with: The Watchtower's case rests on two verses — so test them three ways..."></textarea>
       <div class="btnrow">
         <button class="btn primary" onclick="scoreExplain(this)">Score my explanation</button>
@@ -522,7 +522,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       </div>
       <div class="modelans" id="modelAns">
         <div class="lbl">One strong way to answer — in a 1 Peter 3:15 tone</div>
-        <p>"Then let us use only YOUR translation and two questions. First: John 1:3, New World Translation — all things came into existence through him, and apart from him not even one thing came into existence. If the Word is created, he is one of the all things — who created him, through him? The verse closes the category you need. Second: Revelation 22 — John bows to an angel and is refused: worship God! Yet in John 20 Thomas says to Jesus 'my Lord and my God' — unchanged in the NWT — and Jesus blesses him. If Jesus were Michael, that was his moment to say what every faithful angel says. He said the opposite. Your own Bible will not let him be an angel; the question it leaves is the one Thomas answered."</p>
+        <p>"On the Greek first: the construction is normally qualitative, not indefinite (Harner, Wallace) &mdash; &lsquo;the Word was fully divine in nature,&rsquo; which no creature is; and your translation itself renders article-less <em>theos</em> &lsquo;God&rsquo; at 1:6, 12 and 13. Then let us use only YOUR translation and two questions. First: John 1:3, New World Translation — all things came into existence through him, and apart from him not even one thing came into existence. If the Word is created, he is one of the all things — who created him, through him? The verse closes the category you need. Second: Revelation 22 — John bows to an angel and is refused: worship God! Yet in John 20 Thomas says to Jesus 'my Lord and my God' — unchanged in the NWT — and Jesus blesses him. If Jesus were Michael, that was his moment to say what every faithful angel says. He said the opposite. Your own Bible will not let him be an angel; the question it leaves is the one Thomas answered: the Word is the Creator, not a creature."</p>
       </div>
     </div>
   </section>
@@ -658,9 +658,9 @@ function setCheck(id, on){
 /* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
 /* ---- argument premises used to ground the AI scoring ---- */
 var ARG_PREMISES = [
-  'The Watchtower teaches Jesus is Michael - Jehovahs first creation - resting on the NWTs John 1:1 and Colossians 1:15.',
+  'The Watchtower teaches Jesus is Jehovahs first creation (in his prehuman life, Michael the archangel) - resting chiefly on the NWT John 1:1 and Colossians 1:15.',
   'The position fails grammar, logic and worship - including by the New World Translation\'s own renderings.',
-  'Therefore created-angel Christology contradicts the texts it cites - their own Bible makes the case.'
+  'Therefore the Son is the uncreated Creator, not the first creature - the Watchtower texts point the other way. That is one load-bearing piece of the Trinity - one God, eternally Father, Son and Holy Spirit - which rests on the whole of Scripture; the Spirit is argued separately.'
 ];
 
 /* Real AI scoring via /api/tutor (same method as explain-it-back.html).
@@ -731,8 +731,8 @@ function renderScore(score, strengths, improvements){
 function renderMockScore(txtRaw){
   var t = (txtRaw||'').toLowerCase();
   var checks = [
-    {ok:/(a god|nwt|new world|article|grammar|inconsistent)/i.test(t), hit:'You ran the grammar test', miss:'Run grammar - the construction is qualitative, not indefinite: the Word was God by nature'},
-    {ok:/(1:3|all things|other|col|creator|made)/i.test(t), hit:'You ran the logic test', miss:'Run logic - all things through him (1:3), and the inserted OTHER in Colossians'},
+    {ok:/(qualitative|nature|harner|wallace|grammar|monothe)/i.test(t), hit:'You ran the grammar test', miss:'Run grammar - the construction is qualitative, not indefinite: the Word was God by nature'},
+    {ok:/(1:3|all things|all other|1:16|creator|uncreated)/i.test(t), hit:'You ran the logic test', miss:'Run logic - all things through him (1:3), and the inserted OTHER in Colossians'},
     {ok:/(worship|proskuneo|angel.{0,20}refus|thomas|20:28|heb)/i.test(t), hit:'You ran the worship test', miss:'Run worship - angels refuse it, the Son receives it, Thomas is blessed'},
     {ok:/(firstborn|heir|psalm 89|rank|preeminent)/i.test(t), hit:'You handled firstborn correctly', miss:'Handle firstborn - rank and heirship (Ps 89:27), not first-created'},
     {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth - you developed it, not just listed it', miss:'Go a bit deeper - a full reconstruction runs longer than this'}
@@ -757,7 +757,8 @@ const cards = [
   {q:'What is the added-word problem in Colossians 1?', a:'The NWT inserts OTHER four times - all OTHER things - with no Greek behind it, visible in the Watchtower\'s own Kingdom Interlinear. The doctrine required editing the verse.'},
   {q:'What does firstborn mean in Col 1:15?', a:'Preeminent HEIR - Psalm 89:27 appoints last-born David as firstborn; Israel is Gods firstborn without being created first. And v16 gives the reason: FOR by him all things were created.'},
   {q:'Run the worship test.', a:'Rev 22:9 - an angel REFUSES worship: worship God. Heb 1:6 - all Gods angels worship the SON. John 20:28 - my Lord and my God, blessed not corrected. Creatures refuse it; he accepts it.'},
-  {q:'Reply to: the Father is greater than I.', a:'Spoken by the Son INCARNATE - made lower than the angels FOR A LITTLE WHILE (Heb 2:9). Greater is position, not nature - same Gospel: I and the Father are one.'}
+  {q:'Reply to: the Father is greater than I.', a:'Spoken by the Son INCARNATE - made lower than the angels FOR A LITTLE WHILE (Heb 2:9). Greater is position, not nature - same Gospel: I and the Father are one.'},
+  {q:'What does this argument establish - and not?', a:'That the Son is the uncreated Creator, not the first creature - one load-bearing piece of the Trinity. The personhood of the Spirit is a separate case.'}
 ];
 let ci = 0;
 function renderCard(){
