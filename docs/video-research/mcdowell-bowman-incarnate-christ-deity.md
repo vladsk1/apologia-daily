@@ -106,7 +106,10 @@ Each audience objection + Bowman's reply (every one already answered on-site unl
 9. **Mark 10:18 / Luke 18:19** ("why do you call me good? none is good but God") — *Reply:* a *diagnostic*
    question exposing the man's assumptions, **not a denial** of his own goodness; Mark 10:45 "ransom for
    many" implies sinlessness. → *our `jesuschar.html` / `jesus_claims.html` /
-   `answers/was-jesus-just-a-good-moral-teacher.html` cover it.*
+   `answers/was-jesus-just-a-good-moral-teacher.html` cover it.* ⚠ **CORRECTED 2026-09-29: they do NOT.**
+   Mark 10:18 returns 0 hits on all three (only a passing phrase in the `ev-m-jesuschar.html` flashcard layer);
+   the objection is unanswered on-site and is carried as a deferred item in the Jesus-tab essays row of
+   `docs/content-backlog.md`.
 10. **Immaterial = nothing?** (skeptic) — *Reply:* immaterial things have properties (thoughts, numbers,
     souls, God); "nothing" has none — an equivocation. Also rebuts **Mormon materialism** (1 Kings 8:27
     Solomon; Isa 66:1 throne/footstool as metaphor). → *our `library/trinity_mormons.html` covers this.*
@@ -117,7 +120,11 @@ Each audience objection + Bowman's reply (every one already answered on-site unl
 12. **Evolutionary Christology** (low view → high view over time) — *Reply:* the *disciples' understanding*
     grew (Luke 24 Emmaus; Thomas' "my Lord and my God," John 20:28; Acts 2 "Lord and Messiah" at once), but
     the *Christology didn't evolve* — **Martin Hengel: "more development in Christology in the first 30 years
-    than in the next 600."** → *our `early_church_trinity.html` / `earlycreed.html` + the Habermas
+    than in the next 600."** ⚠ **CORRECTED 2026-09-29: those figures are WRONG — do not port "30 / 600".**
+    It is Bowman's loose, auto-captioned paraphrase. Hengel, *The Son of God* (1976), p. 2, says "less than two
+    decades" vs "the whole of the next seven centuries" (**20 / 700**), as the live pages have it
+    (`library/paul-divinity.html`, `phil2.html`, `jesus-is-yahweh.html`). The routing that follows is also
+    wrong: Hengel has 0 hits on `early_church_trinity.html` and `earlycreed.html`. → *our `early_church_trinity.html` / `earlycreed.html` + the Habermas
     early-high-Christology note already carry the Hengel point.*
 13. **"The Word made flesh" but wrote nothing** — *Reply:* *logos* ≠ a written text; it's God's
     self-expression / the pre-existent agent of creation. Inspiration handled separately (2 Tim 3:16; 2 Pet
@@ -141,6 +148,8 @@ Each audience objection + Bowman's reply (every one already answered on-site unl
   illustration, never as an explanation.
 - **The "big bang of Christology" / Hengel quote** are already live on-site — verify wording if ever
   re-cited (Hurtado, *Lord Jesus Christ*; Hengel, *Between Jesus and Paul* / *The Son of God*).
+  ⚠ **CORRECTED 2026-09-29:** only the Hengel quote is live (paul-divinity, phil2, jesus-is-yahweh, titles);
+  Hurtado's "big bang of Christology" phrase has **0 hits** in `library/`.
 - **Every AUTO name is unverified** — esp. **Komoszewski** `[AUTO: "keski/kashfi"]`, **Greg Stafford**
   (quasi-JW writer Bowman engages), **Michael Kruger** (canon, mentioned in passing). The book title,
   authors, and HANDS acronym are confirmed by our *existing* `library/hands.html` bibliography.
@@ -153,10 +162,10 @@ Each audience objection + Bowman's reply (every one already answered on-site unl
 | **Phil 2:9** exaltation objection | `library/phil2.html` — answers it at/above the video's level (exaltation = public vindication + a *name*, not a new *nature*; Bauckham/Isa 45) | **Corroboration** |
 | **Col 1:15** "firstborn," **Mark 13:32** day/hour, **John 14:28**, **John 1:1 "a god"**, **John 20:17** | `library/trinity_jw.html` (+ `ev-m-trinity_jw.html`, `answers/do-jehovahs-witnesses-believe-jesus-is-god.html`) | **Corroboration** |
 | **Ps 82 / John 10:34** "you are gods"; **Mormon materialism** (immaterial≠nothing) | `library/trinity_mormons.html`, `ot_trinity.html`, `nt_trinity.html` | **Corroboration** |
-| **"Why do you call me good"** (Mark 10:18) | `library/jesuschar.html`, `library/jesus_claims.html`, `answers/was-jesus-just-a-good-moral-teacher.html` | **Corroboration** |
+| **"Why do you call me good"** (Mark 10:18) | `library/jesuschar.html`, `library/jesus_claims.html`, `answers/was-jesus-just-a-good-moral-teacher.html` | ~~**Corroboration**~~ ⚠ **CORRECTED 2026-09-29 — 4 MISSING:** 0 hits on all three pages; deferred item in `docs/content-backlog.md` (Jesus-tab essays row) |
 | **Mark 13:32 / "if God why pray"** paradox | `answers/if-jesus-is-god-why-did-he-pray.html` | **Corroboration** |
 | **Modalism / Oneness** | `library/modalism.html` (+ `ev-m-modalism.html`) | **Corroboration** |
-| **Evolutionary-Christology** rebuttal + **Hengel "first 30 years > next 600"** | `library/early_church_trinity.html`, `library/earlycreed.html`, `video-research/habermas-early-high-christology.md` | **Corroboration** |
+| **Evolutionary-Christology** rebuttal + **Hengel "first 30 years > next 600"** (⚠ CORRECTED 2026-09-29: read "less than two decades > the next seven centuries", i.e. 20 / 700, *Son of God* p. 2; Hengel is live on `paul-divinity`/`phil2`/`jesus-is-yahweh`/`titles`, not on the two pages listed) | `library/early_church_trinity.html`, `library/earlycreed.html`, `video-research/habermas-early-high-christology.md` | **Corroboration** |
 | **John 17:22 "shared glory" objection** (shared glory ⇒ glory≠deity) with the *unshareable* only-begotten glory vs. *shareable* moral glory of unity/love | **NO home** — John 17:21 is used only for *perichoresis* (`relations.html`); John 17:22 appears only in *Mormon-deification* framing (`trinity_mormons.html`). The specific **deity-of-Christ rebuttal is absent from the JW-objection content.** | ✅ **SHIPPED 2026-08-20 (backlog row 112 DONE)** — the "Two Glories, Not One" subsection is now live in `library/trinity_jw.html` (dual-consensus deity tier). The unshareable glory rests on Isaiah 42:8 + the had/given distinction (NOT on "creatures didn't pre-exist," which begs the question against JW firstborn-creature Christology — a neutrality BREAK caught and fixed). John 17:24 pre-emption is a P4 follow-up. |
 | Citation freshness — the **2024** *Incarnate Christ and His Critics* (3× expanded; adds the historicity layer) | `library/hands.html` cites only the **2007** *Putting Jesus in His Place* | **Minor freshness option** (folded into the same row) |
 

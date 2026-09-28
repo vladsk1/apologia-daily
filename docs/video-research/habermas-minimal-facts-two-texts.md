@@ -58,7 +58,8 @@ within ~5 years of the cross, and the disciples' post-death experiences are conc
    apostles," Paul. → **Primaries:** 1 Cor 15:3–8, 11; cf. 1 Cor 11:23. **Dating anchor:** Paul *preached* it at
    Corinth ~51–52 AD — the **Gallio / Delphi inscription** fixes **Gallio's proconsulship of Achaia to ~AD 51–52**,
    which (with Acts 18:12, Paul hauled before Gallio) **anchors** Paul's Corinth stay — *say it dates Gallio and
-   anchors Paul, not that it "dates Paul" directly. Net-new lead; not yet on-site.*
+   anchors Paul, not that it "dates Paul" directly. Net-new lead; not yet on-site.* ✅ **CORRECTED 2026-09-29:
+   SHIPPED 2026-07-23** to `library/earlycreed.html` (Gallio backlog row DONE, `737fb34`).
 5. **Galatians 1–2 — Paul got it early, from the eyewitnesses.** Conversion ~+2; Arabia 3 yrs; then the
    Jerusalem visit ~35 AD (~+5), **15 days with Peter and James** (Gal 1:18–19). The verb is *historeō*
    (ἱστορέω, root of "history") — "to visit for firsthand **inquiry**" (two word-studies conclude this: **G. D. Kilpatrick 1959** [in the T. W. Manson memorial vol.] and **J. D. G. Dunn, *NTS* 28 (1982)**). Gal 2:1–2 (later visit; Koester dates
@@ -93,7 +94,7 @@ within ~5 years of the cross, and the disciples' post-death experiences are conc
   experience-claim. *(Carry the standing correction from the other notes: do NOT attribute a "15 extra-biblical
   sources" crucifixion tally to Ehrman — that's Habermas/Licona's aggregation.)*
 - **Hurtado / Bauckham / Dunn** — the creed's deity+resurrection content to ~30 AD; **"within months" = Dunn
-  only** (*Jesus Remembered* 854–55). *(All three already verified in the early-high-christology note.)*
+  only** (*Jesus Remembered* 855 — ⚠ CORRECTED 2026-09-29 from "854–55"; owner-settled 2026-08-17). *(All three already verified in the early-high-christology note.)*
 - **C. H. Dodd** — the "15 days… more than the weather" remark on Gal 1:18. *(Dodd already verified there.)*
 - **Oscar Cullmann** — *The Earliest Christian Confessions* (Bauckham's recommended standard work; **French/
   Alsatian**, not German — carry the correction from the first note).
@@ -131,7 +132,7 @@ within ~5 years of the cross, and the disciples' post-death experiences are conc
 | Topic | On-site home (certified + live) | Net-new this talk offers (verify first) |
 |---|---|---|
 | Minimal-facts method | `library/minimalfacts.html`; brief `resurrection-minimal-facts` | The clean "inspired/reliable/unreliable → still the resurrection" framing; the survey figures (attribute) |
-| 1 Cor 15 creed dating | `library/earlycreed.html`; brief `resurrection-creed-dating` | The **Gallio/Delphi inscription** anchoring Paul-at-Corinth ~51–52 AD *(net-new)* |
+| 1 Cor 15 creed dating | `library/earlycreed.html`; brief `resurrection-creed-dating` | The **Gallio/Delphi inscription** anchoring Paul-at-Corinth ~51–52 AD *(net-new — ✅ SHIPPED 2026-07-23 to `earlycreed.html`; CORRECTED 2026-09-29)* |
 | Paul early + eyewitness | `library/paulconv.html`; brief `resurrection-paul-james` | Already uses Gal 1:18 *historeō*; **Michael Martin** concession *(net-new)*; von Campenhausen line *(net-new)* |
 | Appearances / skeptic concessions | `library/appearances.html`; brief `resurrection-hallucination-vision` | Already has Allison; **E. P. Sanders / Ehrman "no objection"** framings to verify-and-add |
 | Empty tomb | `library/emptytomb.html`; brief `resurrection-empty-tomb` | The ~2/3–3/4 survey figure (attribute to Habermas) |
@@ -147,7 +148,8 @@ within ~5 years of the cross, and the disciples' post-death experiences are conc
   `resurrection-minimal-facts` + `resurrection-creed-dating` + `resurrection-paul-james`.
 - **Essay-strengthening leads for a FUTURE content session** (verified primaries not yet on-site — chase these,
   don't force them): the **Gallio/Delphi inscription** (archaeological anchor for the 1 Cor 51–52 dating →
-  `earlycreed`/`earlydate`); the **Michael Martin** and **Hans von Campenhausen** hostile-witness concessions
+  `earlycreed`/`earlydate`) [✅ SHIPPED 2026-07-23 to `earlycreed.html`, as was Michael Martin to `paulconv.html`
+  — CORRECTED 2026-09-29]; the **Michael Martin** and **Hans von Campenhausen** hostile-witness concessions
   (→ `paulconv`/`minimalfacts`); **Richard Burridge** by name for the Gospels-as-*bioi* genre point
   (→ `earlydate`/`hist_jesus`); and confirming **E. P. Sanders** is credited by name where his concession is
   used. All must clear `apologia-citations → apologia-argument → apologia-orthodoxy` before landing.

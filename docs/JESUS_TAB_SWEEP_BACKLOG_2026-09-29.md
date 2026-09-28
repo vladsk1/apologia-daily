@@ -97,3 +97,12 @@ This file holds what was deliberately NOT applied. CLAUDE.md rule 9 says pre-exi
 - The christ-before-bethlehem stamp lists 1 Cor 10:4, but the body never uses it.
 - The TAWB cross-map still shows 0 hits for Pro Rabirio and Alexamenos.
 - `putting-jesus-in-his-place.md:600` should be flipped to "hazard — ours is better".
+
+## Status update 2026-09-29 (later)
+- **Stale research-library ledgers above: DONE.** The corrections went into 17 notes and backlog files. Each is annotated in place with "✅ CORRECTED 2026-09-29" and keeps the old value as history. New OPEN backlog rows were added for three leads that had never been logged: the Josephus Greek-reception point, Phlegon via Origen *C. Cels.* 2.59, and Habermas's "forty-one creeds". Not changed: the christ-before-bethlehem stamp's mention of 1 Cor 10:4, because it lives in an essay file.
+- **Further stale items the notes pass found (not yet fixed):**
+  - content-backlog.md:28 still says "card + mastery + wiring TODO" for humanity, although both now exist.
+  - Four notes send bodily-resurrection material and John Granger Cook to `respred.html`. That material is on `appearances.html`.
+  - The Gathercole notes and backlog row 186 still describe `hands.html`'s old Paul-only wording.
+  - The Fee note gives *Pauline Christology* as Baker Academic, 740 pp.; jlib found Hendrickson 2007, 707 pp. This needs checking against the copyright page.
+  - Two Loke leads have no backlog rows: James Ware (*NTS* 2014) and Bolt 1996.

@@ -10,7 +10,10 @@
 > **Cross-check RUN 2026-08-08** under the Step Zero + six-verdict standard — see
 > *"Step Zero + six-verdict cross-check"* below for the full section-by-section verdicts and the
 > standing "is the source better than our essay?" answer. **Three P2 improvement rows and one P3 are
-> logged in `docs/content-backlog.md` and are NOT yet executed**; one live fix shipped
+> logged in `docs/content-backlog.md`** — ✅ **CORRECTED 2026-09-29: all four are DONE and live in
+> `library/jesus_claims.html`** (transmission-route reply, 4Q242 and Kirk on 2026-08-13; Hägerland on
+> 2026-08-17 — see the verdict table and the backlog rows). The header's old "NOT yet executed" was stale.
+> Also: one live fix shipped
 > (`ev-s3.html`, the 1 Enoch Similitudes dating). The cross-map table at the foot of this file is
 > **history, not a to-do list** — read the verdict table instead.
 > **Unusual provenance (stronger than the other two notes):** this map is built from the **already
@@ -267,7 +270,8 @@ and the note pointed it only at mastery pages. Sibling essays checked before cal
 ### Live-door status
 Nothing from this book has been promoted to `/sources` (copyrighted; no PD primaries surfaced here) or
 to `/briefs`. The three improvement rows in the standing-output section are logged in
-`docs/content-backlog.md` and are **not yet executed**.
+`docs/content-backlog.md` and were recorded here as **not yet executed** — ✅ **CORRECTED 2026-09-29: they
+(and the P3 Hägerland row) are all DONE and live in `library/jesus_claims.html`.**
 
 **The one live change this cross-check produced SHIPPED on 2026-08-08** — the Ch. 9 finding above.
 It began as a two-clause hedge on `ev-s3.html` and ended as a **dual-consensus rebuild of the whole

@@ -222,6 +222,14 @@ therefore corroboration, not improvement.**
 
 ## ⭐ Re-tested under the Step Zero + six-verdict standard (2026-08-08)
 
+> ✅ **CORRECTED 2026-09-29 (Jesus-tab sweep cross-check): the paragraph below is now STALE and is kept as
+> history.** It was true on 2026-08-08, but all three rows have since SHIPPED (see items 1–3 in *Improvements*
+> above): Jerome (*De Viris Illustribus* 13, *credebatur*) and Origen (*Contra Celsum* 1.47) are live in
+> `library/hist_jesus.html` (body + FAQ + fn 6, 2026-08-14, with the Syriac chain treated as Eusebius-dependent
+> per Whealey); the stylometric point shipped 2026-08-24 in bounded form (Vermes) on
+> `answers/is-there-evidence-for-jesus-outside-the-bible.html`. The "remain accurate and open" / "zero hits"
+> wording below no longer describes the site.
+
 **This is the only note in the folder whose ledger was NOT stale.** Its three backlog rows were
 re-checked against the live corpus and **all three remain accurate and open**: Jerome's
 *De Viris Illustribus* / *credebatur*, the Syriac chain (Jacob of Edessa, Michael the Syrian, Agapius),
@@ -264,7 +272,7 @@ and answers a weaker version of it** — see the backlog row, which is retained 
 | Finding | Verdict |
 |---|---|
 | **Bermejo-Rubio dissents from the neutral-core reading** — he argues the original TF was **hostile**, not neutral. Buried in the note's *Citation notes*, not in any heading. **0 hits site-wide.** | **4 MISSING — a steelman gap.** `hist_jesus.html` and `ev-s3.html` assert the majority partial-interpolation reconstruction and name **Schmidt** as the minority pushing toward *more* authenticity — but name **no critic pushing the other way**. A reader is shown one flank of a two-sided debate. → row logged. |
-| **Ch. 1 — the Greek-reception argument.** Eusebius cites the TF three times and never once uses its spectacular messiah/resurrection/prophecy lines, only that Jesus had many followers; Isidore of Pelusium and Oecumenius do the same. | **3 weaker in ours.** This is *positive evidence* for the neutral core, and it is the same shape as the already-logged Jerome/Syriac row: our pages assert the reconstruction **bare**. Fold into that row rather than opening a second. |
+| **Ch. 1 — the Greek-reception argument.** Eusebius cites the TF three times and never once uses its spectacular messiah/resurrection/prophecy lines, only that Jesus had many followers; Isidore of Pelusium and Oecumenius do the same. | **3 weaker in ours.** This is *positive evidence* for the neutral core, and it is the same shape as the already-logged Jerome/Syriac row: our pages assert the reconstruction **bare**. Fold into that row rather than opening a second. ⚠ **CORRECTED 2026-09-29: never folded.** The Jerome/Syriac row went DONE 2026-08-14 without it, and `library/hist_jesus.html` does not make the Eusebius/Isidore/Oecumenius point — it was neither shipped nor declined. Now logged as its own OPEN row in `docs/content-backlog.md` (Jesus-tab sweep cross-check 2026-09-29). |
 | **παράδοξα is genuinely ambiguous** — hostile writers used the very word to accuse Jesus of sorcery (Celsus), so it is *a reputation for extraordinary deeds*, never a Josephan endorsement of miracles. | **6 non-recommendation / calibration.** `hist_jesus.html` returns **0 hits** for παράδοξα, "wonder-worker" and "sorcery" — it simply does not make the wonder-worker move from Josephus, which sidesteps the trap entirely. **Correct as it stands; do not add the term without the ambiguity attached.** |
 | **Title guard: *Josephus and Jesus* (Schmidt 2025) ≠ *Josephus on Jesus* (Whealey 2003).** | Recorded. Neither is cited on-site yet; the guard matters the moment either is. |
 

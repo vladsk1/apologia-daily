@@ -238,6 +238,9 @@ Classified against the five paired essays read in full at the top of this note.
 - **[Missing → P4] James Ware, *NTS* 2014** (*egeirō*/*anastasis* = bodily revivification) → a peer-reviewed
   reinforcement for the bodily-resurrection point on `appearances.html`/`emptytomb.html`. Also **Phlegon**
   (Origen *C. Cels.* 2.59) as a checkable extra-biblical crucifixion notice → `hist_jesus.html`.
+  ⚠ **CORRECTED 2026-09-29:** this Phlegon lead never received a backlog row (Ware and Bolt above did not
+  either); Phlegon is now logged OPEN in `docs/content-backlog.md` (Jesus-tab sweep cross-check). Still absent
+  from `hist_jesus.html` (0 hits site-wide, 2026-09-29).
 
 **→ Corroboration (no row — comparison made, already covered accurately and at least as well):**
 enemy attestation of the empty tomb (Justin *Dial.* 108 + Tertullian *De Spect.* 30 — already

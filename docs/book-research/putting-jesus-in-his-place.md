@@ -599,8 +599,13 @@ divine-identity, not in `hands.html`).
 **John's three "God" texts (1:1, 1:18, 20:28 — preincarnate / incarnate / postresurrection; Murray Harris):**
 - ⭐ **John 1:1c handled WITHOUT Colwell** — from John's own usage: anarthrous *theos* occurs 5× in the prologue
   (vv. 1, 6, 12, 13, 18) and everyone agrees the first four mean "God," not "a god." **This is exactly the argument
-  our `john11.html` says to use** (it concedes apologists overclaim Colwell). ✅ *Safe to port; confirms our
-  concession.* Plus the killer simple point (from 20:28/20:17): the Father is called "my God" **anarthrously**
+  our `john11.html` says to use** (it concedes apologists overclaim Colwell). ~~✅ *Safe to port; confirms our
+  concession.*~~ ✅ **5 HAZARD — OURS IS BETTER (CORRECTED 2026-09-29; do NOT port as written).**
+  `library/john11.html` (~line 180) deliberately bounds this: 1:6, 1:12 and 1:13 are anarthrous *genitives*,
+  not the preverbal predicate-nominative construction of 1:1c, so "the first four mean God" is not the
+  identical construction — the move retired claim `nwt-identical-construction` forbids. And at John 20:17
+  *theon mou* stands under the single article of *ton patera… kai theon*, so it is not a clean anarthrous
+  case either. Plus the killer simple point (from 20:28/20:17): the Father is called "my God" **anarthrously**
   (John 20:17), so "the use or nonuse of the article is irrelevant." → *Colwell-free rebuttal of the JW "a god."*
 - **John 1:14** — tabernacle/*eskēnōsen* + Exod 34:6 "grace and truth" typology (divine-identity add).
 - **John 1:18** — "God the only Son" (*monogenēs theos*; P66, P75). ⚠ Textual-variant dependent — present as "the

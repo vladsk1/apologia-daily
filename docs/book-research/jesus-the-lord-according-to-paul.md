@@ -71,7 +71,9 @@
    it is not a settled point. Mine Fee's **"truly human, real temptations, no divine robot"** Chalcedon point
    (the site's gap); **do not** present a verdict on whether Christ *could* have sinned.
 
-## ⭐ Paired essays to READ IN FULL at Step Zero — NOT YET DONE
+## ⭐ Paired essays to READ IN FULL at Step Zero — ✅ DONE 2026-09-25
+> **CORRECTED 2026-09-29:** this heading read "NOT YET DONE"; Step Zero ran on 2026-09-25 (see the header
+> and *Live-door status*). The list below is the record of what was paired, not a to-do list.
 Before mining/classifying, read each of these start to finish (per `CLAUDE.md` Step Zero). The book's four
 parts map to:
 - **`library/jesus_as_god_nt.html`** — the deity of Christ in Paul (PRIMARY pair; already cites *Pauline
@@ -427,6 +429,15 @@ invent Jesus's divinity?" essay + `nt_trinity.html` / `holy_spirit.html` / `rela
 
 ## Live-door status — six-verdict cross-check RUN 2026-09-25 (via 6 READ-ONLY Explore agents, Step Zero done)
 
+> ✅ **UPDATE 2026-09-29 (Jesus-tab sweep cross-check) — what this note spawned; the findings below are the
+> 2026-09-25 record, not a to-do list.** The owner-locked card programme (`docs/content-backlog.md`, "Card
+> build program", QUEUE COMPLETE) built **seven full stacks** from this book, all live:
+> `library/humanity.html` (the P1 "Truly Human Savior of Paul" gap below — SHIPPED), `library/paul-divinity.html`
+> ("Did Paul Invent Jesus's Divinity?" — ⚠ the owner **overrode** the "NO … essay needed" verdict below),
+> `library/proto-trinitarian.html`, `library/worship-of-jesus.html`, `library/jesus-is-yahweh.html`,
+> `library/christ-before-bethlehem.html` and `library/crucified-messiah.html`, each with its `ev-s*` card and
+> `ev-m-*` mastery page.
+
 Every paired essay was read in full; all six surfaces checked. **Verdict distribution: almost entirely
 CORROBORATION** — our essays already carry Fee's core moves and cite the stronger source behind them (his 2007
 *Pauline Christology* and *Philippians* NICNT, both already in `/sources`, and Hengel 1976). **Zero verdict-2
@@ -470,8 +481,11 @@ Everywhere else our essays equal or exceed the book.
   matter (title/copyright pub-data VERIFIED, TOC, Preface pp. xvii–xx, Abbreviations, Foreword ix–xiii) and
   the Glossary (p. 189+). **Continuity verified page-by-page: no pages missed.** (Foreword pp. xiv–xvi and the
   Subject/Scripture indexes pp. 191–202 were not photographed — both reference-only, not mineable; not owed.)
-- ⬜ **NOT DONE:** Step Zero (read the ~8 paired essays in full) and the six-surface cross-check. Until those
-  run, every lead above is UNVERIFIED and no backlog rows exist. This is the next work-phase before commit.
+- ✅ **CORRECTED 2026-09-29 — DONE 2026-09-25.** Step Zero and the six-surface cross-check ran (see the
+  header and *Live-door status*), 11 backlog rows + 6 non-recommendations were logged, and the card programme
+  built seven essays from this book. *(Superseded text, kept as history: "⬜ **NOT DONE:** Step Zero (read the
+  ~8 paired essays in full) and the six-surface cross-check. Until those run, every lead above is UNVERIFIED
+  and no backlog rows exist. This is the next work-phase before commit.")*
 
 ## ⭐ Headline for the mining phase (first impressions — TEST at Step Zero, do not trust yet)
 This book is unusually on-target for the site's **three standing Pauline gaps** named in `CLAUDE.md`'s PARKED

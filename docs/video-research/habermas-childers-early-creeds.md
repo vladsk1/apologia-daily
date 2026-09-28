@@ -60,7 +60,8 @@ name), not a low Christology that evolved upward.
   resurrection's historicity), *The Resurrection of Jesus: A Jewish Perspective* (ET 1983) — the formal
   characteristics of the 1 Cor 15 creed; a *hostile-witness* lead. *(Soften Habermas's "German NT doctorate";
   the "~9 characteristics" exact count is unconfirmed.) Not currently cited on-site — a possible addition to
-  `earlycreed.html`.*
+  `earlycreed.html`.* ✅ **CORRECTED 2026-09-29: now cited** — `library/earlycreed.html` body + fn 20, SHIPPED
+  2026-07-23 (Lapide/Martin backlog row DONE, `737fb34`).
 - **Vernon H. Neufeld**, *The Earliest Christian Confessions* (Eerdmans, 1963) — **published in Bruce
   Metzger's NTTS series** (a Princeton dissertation; *"written under Metzger" as supervisor is unconfirmed —
   say "in Metzger's series"*); a rigorous study of the NT *homologia*. *A lead for `earlycreed.html`.*
@@ -89,7 +90,7 @@ name), not a low Christology that evolved upward.
   already carried by `resurrection-creed-dating`, `deity-of-christ-nt`, and `shema-trinity` — all distilled
   from certified essays. This is the *sixth* Habermas source and a re-run of note #1; **nothing net-new.**
 - **Essay-strengthening leads for a future session (verify first):** **Pinchas Lapide** (a non-Christian
-  Jewish concession on the 1 Cor 15 creed) and **Vernon Neufeld** as additional scholarly support for
+  Jewish concession on the 1 Cor 15 creed) [✅ SHIPPED 2026-07-23 to `earlycreed.html` — CORRECTED 2026-09-29] and **Vernon Neufeld** as additional scholarly support for
   `library/earlycreed.html`; the cheap **Habermas/Shaw Cullmann reprint** as a citable edition. None reach
   the live AI except through the normal pipeline.
 - **Coverage note:** full transcript read (1,478 lines / ~53 min); confirmed it is the early-high-christology

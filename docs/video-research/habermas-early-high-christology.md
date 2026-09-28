@@ -80,7 +80,7 @@ overlay — it is in the bedrock.
   Do NOT tag him "Jesus Seminar" or count him as a Jesus-Seminar concession.
 - **Larry Hurtado** ✓ (transcript "Herado"; *Lord Jesus Christ*, *One God, One Lord*) — devotion to Jesus in
   the earliest days/months; a central EHCC figure.
-- **James D. G. Dunn** ✓ — the creed formed "within months" of the crucifixion (*Jesus Remembered*, 854–55).
+- **James D. G. Dunn** ✓ — the creed formed "within months" of the crucifixion (*Jesus Remembered*, 855 — ⚠ CORRECTED 2026-09-29 from "854–55": the owner read the sentence in a searchable copy on 2026-08-17 and it is on p. 855; see the Dunn-page row in `docs/content-backlog.md`).
   *(Attribute "within months" to Dunn ONLY, never our own voice; our voice = "~2–5 years.")*
 - **Marcus Borg** ✓ — **a prominent *fellow* of the Jesus Seminar (NOT a "co-founder"** — founded by Robert
   Funk, 1985, with Crossan); on historical grounds one can hardly deny Jesus was a healer. *(The healer line
