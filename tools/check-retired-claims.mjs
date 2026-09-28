@@ -22,6 +22,15 @@
  * Nothing in CI would have caught any of them. A reader drilling the quiz was being
  * marked WRONG for not reciting an argument the essay had already withdrawn.
  *
+ * COVERAGE (widened 2026-09-28, backlog P2 #87). The scan reads .html, .json AND served
+ * .js — root client scripts, api/ and lib/. The .js hole was not hypothetical either:
+ * on 2026-08-29 study-plan-popup.js rendered "Messianic Prophecy — the Statistical Case"
+ * (retired framing) as a popup HEADING to readers, and the scanner, then .html/.json only,
+ * was blind to it. tools/ stays excluded (build tooling, incl. this scanner and the
+ * baselines) except tools/reel/** which is gated doctrinal content; generated JS aggregates
+ * (lib/sources-verified.js, lib/briefs-verified.js, lib/essays-verified.js) are skipped as
+ * duplicates of their scanned .json / essay-.html sources.
+ *
  * WHY THE ORTHODOXY TRIPWIRES DON'T COVER IT. check-orthodoxy-tripwires.mjs guards
  * a curated list of HETERODOX phrasings — things that are wrong in themselves. Most
  * retired claims are not heterodox at all. "Stoner's odds", "roughly 300 bishops"
@@ -77,7 +86,12 @@ const SKIP_FILES = new Set(['search-index.json', 'sources-index.json', 'objectio
   // certified essays; they mirror essay prose verbatim (incl. legitimate refutation-context
   // quotes of retired claims, which the source essays already carry under their own allow
   // entries), so scanning them just duplicates the source hit.
-  'essay-index.json', 'essay-slugs.json']);
+  'essay-index.json', 'essay-slugs.json',
+  // Generated JS aggregates: lib/sources-verified.js is emitted by build-sources-index.mjs
+  // from the sources/*.json corpus, and lib/briefs-verified.js by build-briefs-index.mjs
+  // from briefs/*.json — both are scanned at their source, so scanning the generated bundle
+  // just duplicates the hit.
+  'sources-verified.js', 'briefs-verified.js', 'essays-verified.js']);
 
 function servedFiles(dir, acc = []) {
   for (const entry of readdirSync(dir)) {
@@ -91,7 +105,7 @@ function servedFiles(dir, acc = []) {
       }
       servedFiles(full, acc);
     }
-    else if ((entry.endsWith('.html') || entry.endsWith('.json')) && !SKIP_FILES.has(entry)) {
+    else if ((entry.endsWith('.html') || entry.endsWith('.json') || entry.endsWith('.js')) && !SKIP_FILES.has(entry)) {
       // Forward slashes always: the `allow` lists in retired-claims.json are
       // written with '/', and path.relative() yields '\' on Windows, so without
       // this every allow entry misses and legitimate refutation pages all fire.
