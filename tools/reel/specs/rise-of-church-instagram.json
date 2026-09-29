@@ -1,0 +1,301 @@
+{
+  "reviewed": {
+    "argument": "2026-09-29",
+    "orthodoxy": "2026-09-29",
+    "neutrality": "2026-09-29",
+    "by": "2026-09-29 NEW scene-locked vertical (Instagram) POSITIVE-CASE reel, ported from certified library/riseofchurch.html. Gated READ-ONLY (Explore), argument+orthodoxy+neutrality+citations. Round 1 NOT STAMPABLE: 'majority faith' + 'not by force, by love' implied the post-Constantine majority was won by love (essay: state's thumb on the scale) -> replaced with the essay's pre-Constantine 'millions, while illegal'; Pliny paraphrase labelled '(paraphrased)'; Dionysius scoped to Alexandria. Round 2: one fix (faith was no longer illegal when Constantine acted - Galerius 311) -> 'grown into the millions, while it was still illegal'. Orthodoxy CLEAN; Julian not used; no growth-proves-truth claim. NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) POSITIVE-CASE reel for the Christian Revolution tab (ev-s8), ported from the certified library/riseofchurch.html (re-read 2026-09-29): Pliny c.112, Dionysius on the plague nursing, the rescue of abandoned infants, Cornelius's 251 relief roll, and the essay's closing line. Guardrails: Julian NOT used (post-Constantine trap); no claim that growth proves truth - the reel attributes the conduct to what the Christians believed.",
+  "voiceover": "Around the year thirty, a Galilean teacher was executed on a Roman cross — and his movement should have died with him. No army. No wealth. At most a few hundred followers, in one corner of an empire. Three centuries later the emperor himself was a Christian — but by then the faith had already grown into the millions, while it was still illegal. Around the year 112 the Roman governor Pliny reported that it had spread through the cities, the villages and the countryside, among people of every age and rank. When plague struck Alexandria, its bishop wrote that Christians stayed with the dying and nursed them — many perishing as a result — while frightened neighbours abandoned their own. And they took in the children a whole civilisation discarded. By the year 251, one illegal congregation in Rome was supporting more than fifteen hundred widows and people in distress. Why live like that? Because they believed Jesus had been raised — and would one day ask what they had done. A tiny, powerless, illegal movement outlasted the empire that tried to kill it — not by force, which it never had, but by love, which it could not stop giving away.",
+  "scenes": [
+    {
+      "dur": 7.9,
+      "vo": "Around the year thirty, a Galilean teacher was executed on a Roman cross — and his movement should have died with him.",
+      "big": [
+        {
+          "t": "It should have",
+          "c": "cream",
+          "s": 64
+        },
+        {
+          "t": "died",
+          "c": "cream",
+          "s": 64
+        },
+        {
+          "t": "with him.",
+          "c": "gold",
+          "s": 88
+        }
+      ]
+    },
+    {
+      "dur": 7.9,
+      "vo": "No army. No wealth. At most a few hundred followers, in one corner of an empire.",
+      "kicker": "AROUND AD 30",
+      "lines": [
+        {
+          "t": "No army.",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "No wealth.",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "At most a few hundred",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "in one corner of an empire.",
+          "c": "gold",
+          "s": 42,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 8.4,
+      "vo": "Three centuries later the emperor himself was a Christian — but by then the faith had already grown into the millions, while it was still illegal.",
+      "kicker": "THREE CENTURIES LATER",
+      "lines": [
+        {
+          "t": "The emperor himself",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "was a Christian.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Grown while illegal:",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "already millions.",
+          "c": "gold",
+          "s": 52,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 9.6,
+      "vo": "Around the year 112 the Roman governor Pliny reported that it had spread through the cities, the villages and the countryside, among people of every age and rank.",
+      "kicker": "WHAT ROME SAW · c. AD 112",
+      "lines": [
+        {
+          "t": "Spread through",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "the cities, the villages",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "and the countryside —",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "every age and rank.",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "— Pliny, Letters 10.96 (paraphrased)",
+          "c": "dim",
+          "s": 34,
+          "f": "serif"
+        }
+      ]
+    },
+    {
+      "dur": 9.9,
+      "vo": "When plague struck Alexandria, its bishop wrote that Christians stayed with the dying and nursed them — many perishing as a result — while frightened neighbours abandoned their own.",
+      "kicker": "PLAGUE IN ALEXANDRIA",
+      "lines": [
+        {
+          "t": "Neighbours fled.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Christians stayed",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "with the dying.",
+          "c": "gold",
+          "s": 54,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 4.5,
+      "vo": "And they took in the children a whole civilisation discarded.",
+      "kicker": "THE ABANDONED",
+      "lines": [
+        {
+          "t": "They took in",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "the children",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "a civilisation discarded.",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 8.2,
+      "vo": "By the year 251, one illegal congregation in Rome was supporting more than fifteen hundred widows and people in distress.",
+      "kicker": "AN ILLEGAL CHURCH · AD 251",
+      "lines": [
+        {
+          "t": "One congregation",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "in Rome supported",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "more than 1,500",
+          "c": "gold",
+          "s": 56,
+          "f": "serifb"
+        },
+        {
+          "t": "widows and people",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        },
+        {
+          "t": "in distress.",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        }
+      ]
+    },
+    {
+      "dur": 7.5,
+      "vo": "Why live like that? Because they believed Jesus had been raised — and would one day ask what they had done.",
+      "kicker": "WHY?",
+      "lines": [
+        {
+          "t": "They believed",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "Jesus had been raised.",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "And that he would ask",
+          "c": "cream",
+          "s": 44
+        },
+        {
+          "t": "what they had done.",
+          "c": "cream",
+          "s": 44
+        }
+      ]
+    },
+    {
+      "dur": 10.5,
+      "vo": "A tiny, powerless, illegal movement outlasted the empire that tried to kill it — not by force, which it never had, but by love, which it could not stop giving away.",
+      "big": [
+        {
+          "t": "Not by force.",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "By love.",
+          "c": "gold",
+          "s": 92
+        }
+      ],
+      "sub": [
+        {
+          "t": "It outlasted the empire",
+          "c": "cream",
+          "s": 40,
+          "f": "serif"
+        },
+        {
+          "t": "that tried to kill it.",
+          "c": "cream",
+          "s": 40,
+          "f": "serif"
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        }
+      ]
+    }
+  ]
+}
