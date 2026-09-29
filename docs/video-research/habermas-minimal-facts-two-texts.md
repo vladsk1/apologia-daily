@@ -136,7 +136,7 @@ within ~5 years of the cross, and the disciples' post-death experiences are conc
 | Paul early + eyewitness | `library/paulconv.html`; brief `resurrection-paul-james` | Already uses Gal 1:18 *historeō*; **Michael Martin** concession *(net-new)*; von Campenhausen line *(net-new)* |
 | Appearances / skeptic concessions | `library/appearances.html`; brief `resurrection-hallucination-vision` | Already has Allison; **E. P. Sanders / Ehrman "no objection"** framings to verify-and-add |
 | Empty tomb | `library/emptytomb.html`; brief `resurrection-empty-tomb` | The ~2/3–3/4 survey figure (attribute to Habermas) |
-| Gospel dating / genre / reliability | `library/earlydate.html`, `library/hist_jesus.html` | Already have Alexander source-distance; **Burridge / Greco-Roman-biography by name** *(net-new-ish)* |
+| Gospel dating / genre / reliability | `library/earlydate.html`, `library/hist_jesus.html` | Already have Alexander source-distance; **Burridge / Greco-Roman-biography by name** *(net-new-ish)* — *(corrected 2026-09-29, Biblical-Reliability sweep: previously listed as an open lead; ✅ SHIPPED 2026-07-23 to `earlydate.html` (backlog row 163, `737fb34`), confirmed live 2026-09-29)* |
 
 ## Live-door status (decision recorded 2026-07-22)
 - **`/sources`: — (not the natural door).** Every primary is NT Scripture or a named modern scholar; `/sources`
@@ -151,5 +151,6 @@ within ~5 years of the cross, and the disciples' post-death experiences are conc
   `earlycreed`/`earlydate`) [✅ SHIPPED 2026-07-23 to `earlycreed.html`, as was Michael Martin to `paulconv.html`
   — CORRECTED 2026-09-29]; the **Michael Martin** and **Hans von Campenhausen** hostile-witness concessions
   (→ `paulconv`/`minimalfacts`); **Richard Burridge** by name for the Gospels-as-*bioi* genre point
-  (→ `earlydate`/`hist_jesus`); and confirming **E. P. Sanders** is credited by name where his concession is
+  (→ `earlydate`/`hist_jesus`) [✅ SHIPPED 2026-07-23 to `earlydate.html`, backlog row 163 — corrected
+  2026-09-29, Biblical-Reliability sweep; previously listed here as a future lead]; and confirming **E. P. Sanders** is credited by name where his concession is
   used. All must clear `apologia-citations → apologia-argument → apologia-orthodoxy` before landing.

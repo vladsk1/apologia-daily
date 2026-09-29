@@ -98,7 +98,9 @@ from here — see
 Ledger held: the treaty-form argument + its named critic **McConville** are still live on
 `archaeology.html`; **Nuzi is still 0 hits site-wide** (the patriarchal-customs trap stays avoided);
 **Merneptah is still absent** (that improvement lives as an **article-note** row, not this one — do not
-duplicate). **Standing output:** no new improvement from this note — corroboration only; the maximalist,
+duplicate). *(corrected 2026-09-29, Biblical-Reliability sweep: **superseded** — true on 2026-08-10, but the
+Merneptah Stele has been live in `archaeology.html`'s Named-persons "Two further cases" paragraph since
+2026-08-14 (backlog row 193 DONE); confirmed live 2026-09-29.)* **Standing output:** no new improvement from this note — corroboration only; the maximalist,
 never-cite-alone, Nuzi-trap, canon-neutrality and tone guardrails all hold. ⚠ **Coverage caveat
 (unchanged): UNOWNED, UNREAD** — mapped at thesis level from `archaeology.html` + Kitchen's OA earlier work
 + publisher data; a full read of the 662-pp. volume still awaits a legitimate copy, so no verdict-3

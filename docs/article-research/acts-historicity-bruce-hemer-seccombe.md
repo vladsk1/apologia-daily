@@ -332,7 +332,11 @@ gist**, and therefore independent sources for primitive Christian history and th
 - **⚠ Minority-position honesty.** The early-60s dating of Acts is a **respected minority** view, not the
   consensus (Keener's ~AD 75 is nearer the centre). `library/earlydate.html` already says this exactly
   right. Seccombe's arguments strengthen the minority case; they do not convert it into the consensus, and
-  Seccombe himself says he has not closed the discussion.
+  Seccombe himself says he has not closed the discussion. *(corrected 2026-09-29, Biblical-Reliability sweep:
+  ⚠ **DO NOT RE-IMPORT this characterisation to a live page** — `apologia-citations` could not confirm a
+  "has not closed the discussion" statement in Seccombe's text at the 2026-08-24 gate, so it was dropped and
+  `earlydate.html` frames him only as offering "further/cumulative" arguments. The guardrail — minority, not
+  consensus — still stands on its own.)*
 - **⚠ Sherwin-White caution (already live on-site).** The famous "any attempt to reject its basic
   historicity … must now appear absurd" line is about the **framework of persons, events and customs** —
   `archaeology.html` fn 3 already fences it. Keep the fence.
@@ -347,7 +351,7 @@ gist**, and therefore independent sources for primitive Christian history and th
 | Topic | On-site home (certified) | What this cluster adds |
 |---|---|---|
 | Archaeology confirming Acts | `library/archaeology.html` | ✅ **SHIPPED 2026-08-21 (backlog row 123 DONE)** — the Acts 27–28 voyage cluster (Lasaea, Cauda, *euroaquilo*, Phoenix, Malta's *prōtos*) is now live; Greek-inscription-only guardrail honored on-page; citations 6/6 defensible, argument STRONG, orthodoxy CLEAN |
-| Dating Luke-Acts | `library/earlydate.html` | **Improvement** — three non-silence arguments + post-2017 currency |
+| Dating Luke-Acts | `library/earlydate.html` | ~~**Improvement** — three non-silence arguments + post-2017 currency~~ *(corrected 2026-09-29, Biblical-Reliability sweep: previously read "Improvement — three non-silence arguments + post-2017 currency". ✅ **SHIPPED 2026-08-24 (backlog row 126)** — Seccombe's arguments 1 and 2 + the currency refresh are live; argument 3 (the disproportionate voyage) was **deliberately declined** — see Live-door item 2 below)* |
 | Speeches in Acts / Luke as historian | ✅ **SHIPPED 2026-08-21 (backlog row 124 DONE)** — new answer `answers/are-the-speeches-in-acts-made-up.html` (dual-consensus; Christology guardrail honored by framing the "primitive" strand as purely linguistic). Only 3 strands used (short answer); Dodd/testimonia/Aeschylus remain for a future deep-dive. | ~~Improvement (gap) — a whole sub-topic we don't treat~~ (now shipped) |
 | Extra-biblical Jesus / mythicism | `library/hist_jesus.html` | not the right home — that essay answers *did Jesus exist*, not *is Luke a careful historian*. Corroboration only. |
 | Gallio / Pauline chronology anchor | `library/archaeology.html`, `library/earlycreed.html` | corroboration — already covered, accurately and with the right bound |

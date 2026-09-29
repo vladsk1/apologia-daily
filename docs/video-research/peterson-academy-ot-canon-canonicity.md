@@ -97,7 +97,7 @@ here — and, unlike the deuterocanon *verdict*, this is neutral shared-traditio
 - **Athanasius, 39th Festal Letter (Easter, AD 367)** — the canonical books are "the **springs of
   salvation**"; other books are "**to be read**" but "not canonized"; and a *third* category (the NT-apocryphal
   gospels) is rejected outright — a **three-fold scheme: canonical / readable-but-not-doctrinal / apocryphal.**
-  → *Primary: Athanasius, 39th Festal Letter* (already fn10 in `canon.html`).
+  → *Primary: Athanasius, 39th Festal Letter* (already fn10 in `canon.html` → *(corrected 2026-09-29, Biblical-Reliability sweep: now **fn 7**)*).
 - **Gregory of Nazianzus** (4th c.) — defends **22 books, matched to the 22 letters of the Hebrew alphabet**
   (the numerological reason the "22" keeps recurring). → *Primary: Gregory Naz.'s canon poem.*
 - **Paul, Romans 3:1–2** — the Jews were "**entrusted with the oracles of God**" (the lecture's warrant for
@@ -112,12 +112,12 @@ verdict).** Two ancient Christian instincts, *both* with real precedent:
   translated the **Latin Vulgate**; reportedly consulted **rabbis in Jerusalem** on what the Jews received;
   yet he *did* render the disputed books into the Vulgate (the lecture says "at least coerced to some degree"
   by the bishop of Rome). → *Primaries: Jerome's Vulgate prefaces / Prologus Galeatus* (already fn16/fn19 in
-  `canon.html`).
+  `canon.html` → *(corrected 2026-09-29, Biblical-Reliability sweep: Jerome is now **fn 16** only; the essay has 19 footnotes and fn 19 is the Muratorian-dating note)*).
 - **Augustine** — weighted **catholicity / wide church reception** (Greek *kata holos*, "concerning the
   whole" = universal): if more of the church than not received Maccabees as Scripture, the church recognizes
   it. This is the reception-history route to the **fuller** canon. (Historically ratified regionally at the
   **Synod of Hippo 393 / Council of Carthage 397**.) → *Primaries: Augustine, De Doctrina Christiana 2.8;
-  Hippo/Carthage* (Carthage already fn11 in `canon.html`).
+  Hippo/Carthage* (Carthage already fn11 in `canon.html` → *(corrected 2026-09-29, Biblical-Reliability sweep: Hippo/Carthage is now **fn 8**)*).
 - **The lecture's neutral hinge (usable):** whether Augustine or Jerome is "right" **turns on your doctrine
   of the church's authority** — if the church has an infallible right to *define* the canon, Augustine's
   reception route follows; if canon is *recognition* of what was given, Jerome's antiquity route follows.
@@ -145,7 +145,7 @@ verdict).** Two ancient Christian instincts, *both* with real precedent:
   all their parts," attaching an **anathema**. The lecture's careful point: earlier councils (e.g.
   **Florence, 1442**) had *listed* 73 books **without** an anathema, and Vatican-released Trent records show
   participants `[AUTO: "Bonuccio"]` uneasy that an anathema was binding consciences on "questions long disputed
-  among reputable theologians." → *Primaries: Trent Session 4 decree* (already fn17/fn20 in `canon.html`);
+  among reputable theologians." → *Primaries: Trent Session 4 decree* (already fn17/fn20 in `canon.html` → *(corrected 2026-09-29, Biblical-Reliability sweep: Trent is now **fn 17** only; there is no fn 20)*);
   *Florence 1442; the Trent acta.* ⚠ Present Trent's action *historically*, never polemically.
 
 **E · Conclusion (the neutral, usable payoff).** After all the data is sifted, what stands is **a shared
@@ -178,7 +178,7 @@ draws). The speaker's *personal* Protestant tie-break is **not** part of what we
 | Topic | On-site home (certified) | What this video adds |
 |---|---|---|
 | OT/NT canon formation; the "Constantine/Nicaea invented the Bible" myth; denominational canons | `library/canon.html` (already CLEAN + neutral: §"A Fair Statement, Not a Verdict"; fns on Athanasius 39th Letter, Jerome, Trent 1546, Carthage 397, the deuterocanon) | **Corroboration** — richer on the *pre-Christian Jewish* OT witnesses (Josephus 22 / 4 Ezra 24 / Sirach prologue / 1QS bipartite / Philo / Melito's list) than the NT-canon-focused essay, but nothing the essay's argument lacks or gets wrong |
-| OT-canon Jewish evidence (Josephus, criteria, Hebrew-letter counts) | `book-research/in-defense-of-the-bible.md` (ch. 16 note) | Same shared-tradition ground — overlapping leads, already the basis for `canon.html` |
+| OT-canon Jewish evidence (Josephus, criteria, Hebrew-letter counts) | `book-research/in-defense-of-the-bible.md` (ch. 16 note) | Same shared-tradition ground — overlapping leads, ~~already the basis for `canon.html`~~ *(corrected 2026-09-29, Biblical-Reliability sweep: previously said "already the basis for `canon.html`" — false; as of 2026-09-29 `canon.html` cites none of Josephus *Ag. Ap.* 1.37–43, 4 Ezra 14, the Sirach Prologue, 1QS or Philo. See `content-backlog.md` row 112, SKIP)* |
 | Textual reliability / "translation of a translation" myth / DSS as OT *text* / manuscripts | `library/manuscript.html` | **Not in this video** (deferred to the course's later lectures) — no leads harvested here |
 
 ## Live-door status
