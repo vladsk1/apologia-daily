@@ -119,3 +119,21 @@ Still needing a human with the book:
 - daniel70: Goldingay pages
 
 Found out of scope: the same 2016 blog still props up the 75% empty-tomb figure in `library/emptytomb.html` and its MK/ES mirrors. Handle it in the Resurrection-tab sweep.
+
+## Objections: DONE 2026-09-29 (later, owner request)
+New sections were added, each stating the objection at full strength and refuting it with an explicit, bounded own-voice verdict. They went through dual consensus over three rounds and were rated STRONG, with 0 HERESY.
+- Mark 10:18 and Matthew 11:27 → jesus_claims
+- The unfulfilled messianic tasks (Maimonides, Hilchot Melachim 11:4; two comings; Sukkah 52a) → messianic-prophecy
+- Ehrman's angel Christology (including the Angel of the LORD and Galatians 4:14) → phil2
+- The late dating of the dying-and-rising gods (J. Z. Smith) → uniqueness
+- Hosea 11:1 in Matthew 2:15 → typology
+
+Resurrection tab, same pass:
+- Mark 16:8, with Bolt's 1996 *TynBul* article answering the "hero" parallel → emptytomb
+- Carrier's two-body reading, with Bergeron & Habermas 2015 → appearances
+- Temporal-lobe epilepsy → paulconv
+- Herod's "John the Baptist has been raised" (Mark 6:14–16) → disciplesbelief
+
+The MK and ES versions of jesus_claims, emptytomb and paulconv were synced.
+
+Still open from the lists above: the other structural gaps (e.g. Mark 13:32 as its own objection, John 10:34–36, Price's interpolation claim) and the page checks that need the book in hand.
