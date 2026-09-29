@@ -46,8 +46,15 @@ const EXCLUDE_ROOT_FILES = new Set([
   // Operator-only pages. These must NEVER ship in a store binary: an IPA/APK is
   // trivially unzipped and is archived by third parties forever, so anything
   // embedded in one cannot be cleanly rotated later.
-  'monitor.html', 'logs.html', 'admin.html'
+  'monitor.html', 'logs.html', 'admin.html',
+  // IVP's permission for the Del Rosario reading club covers ONE page on the
+  // apologiadaily.com website only — not an app binary. Keep both copies out unless
+  // IVP agrees otherwise in writing (see docs/DEL_ROSARIO_READING_CLUB.md).
+  'reading-club-did-jesus-say-he-was-god.html'
 ]);
+
+// ...and these files inside INCLUDE_DIRS (see step 3 in main()).
+const EXCLUDE_DIR_FILES = ['demo/del-rosario-companion-study.html'];
 
 async function rmrf(p) {
   await fs.rm(p, { recursive: true, force: true });
@@ -120,6 +127,12 @@ async function main() {
       const st = await fs.stat(src);
       if (st.isDirectory()) await copyDir(src, path.join(OUT, dir));
     } catch { /* dir absent — skip */ }
+  }
+
+  // 3) Per-file exclusions inside the copied directories. The Del Rosario demo is the
+  //    same IVP-permissioned study (website-only), so it must not ship in a binary.
+  for (const rel of EXCLUDE_DIR_FILES) {
+    await fs.rm(path.join(OUT, rel), { force: true });
   }
 
   // Sanity: the app entry point must exist.

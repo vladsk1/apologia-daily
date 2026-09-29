@@ -64,6 +64,11 @@ const CONTENT_PATTERNS = [
                                            // 8-card capstone, all doctrinal, on the deity-of-
                                            // Christ + resurrection dual-consensus tier. An
                                            // independent companion — no author permission.
+  /^reading-club-did-jesus-say-he-was-god\.html$/, // partner reading-club study (Del Rosario, Did Jesus
+                                           // Really Say He Was God?), published by permission of
+                                           // InterVarsity Press: 13 session summaries, retention
+                                           // lines and an 8-card capstone on the deity-of-Christ
+                                           // dual-consensus tier. English only (IVP condition 3).
   /^our-sources\.html$/,                   // public source list: critic labels + notes on NAMED people,
                                            // an update log and the talks list (added 2026-09-24).
   /^pocket-cards\.html$/,                  // 70 share-card arguments (gated 2026-08-11, dual-consensus);

@@ -1,5 +1,49 @@
 # Handoff — Dr. Mikel Del Rosario reading-club companion study
 
+> ## ⭐ 2026-09-29 — IVP PERMISSION GRANTED. Launch copy built; NOT launched.
+> **InterVarsity Press** (Ellen Hsu, Director, Rights & Contracts) granted **non-exclusive gratis
+> permission** for Apologia Daily to post the Reading Club resource on apologiadaily.com. IVP reviewed
+> the demo link (the version with the takeaways + flashcards/quiz), so those extras are part of what
+> was permitted. There was **no attachment** — the email itself is the permission; the owner keeps a
+> PDF of it outside the repo. **The six conditions:**
+> 1. **One-year term**; after it the page may stay up, but must be **removed on request** of IVP or
+>    the current copyright holder. No renewal needed.
+> 2. **One web page only.** Anywhere else = an intro of **under 200 words** linking to that page. So:
+>    do NOT fold the sessions into `reading-club.html`'s `BOOKS[]`; a hub card + homepage card only.
+> 3. **English only** — never create an MK/ES mirror of this page.
+> 4. Permission **excludes third-party copyrighted matter** (hence the Crossway ESV notice).
+> 5. Page must say it **follows the book**, **encourage reading it**, and carry exactly:
+>    *"Created and distributed by permission of InterVarsity Press."*
+> 6. Must link, and keep working: https://www.ivpress.com/did-jesus-really-say-he-was-god
+>
+> Plus: IVP "trusts" we keep working with Dr. Del Rosario so the content stays **acceptable to him**.
+> **Change rule:** corrections/his edits → his OK; substantial additions → his OK **plus a short note
+> to Ellen**; anything touching the conditions (second page, translation, app, new format) → **IVP must
+> approve**. Keep a dated change log below. **Public wording:** say only "created and distributed by
+> permission of InterVarsity Press" — never "approved/endorsed by IVP" or "partnered with IVP", no IVP
+> logo; "reviewed by the author" or a quote only if he agrees in writing.
+>
+> **Built 2026-09-29:** `reading-club-did-jesus-say-he-was-god.html` (the launch copy; `noindex`,
+> unlinked, not in the sitemap). vs the demo: IVP credit line (under the author line + footer), IVP link
+> as the primary buy button (Amazon secondary, pending his preferred store), Crossway ESV notice, two
+> book-sounding phrases reworded (Intro Q2; Ch12 anniversary example), demo ribbon/title/author-note
+> sidebar/private footer/join stub removed. Added to `CONTENT_PATTERNS`; **both** this file and the demo
+> are excluded from the app bundle (`tools/build-app-bundle.mjs`). **The demo is unchanged** — it is the
+> link sent to Dr. Del Rosario for review.
+>
+> **Still to do, in order:** (a) Dr. Del Rosario's edits, preferred buy link, OK on the two rewordings,
+> written sign-off; (b) dedicated argument + orthodoxy + neutrality gates (read-only Explore agents) —
+> the stamp's 2026-07-09 dates are apologia-evidence stand-ins; watch the ch8 line "share God's own
+> heavenly throne" (near retired claim `daniel7-figure-is-divine`); (c) launch: drop `noindex`, add
+> canonical + sitemap, redirect `/demo/del-rosario-companion-study.html` here (as done for Frost),
+> Reading Clubs hub card + homepage card (<200 words each, with the credit line), run the generators;
+> (d) email Ellen the live URL; reminder ~Sept 2027 to check the IVP link. Ask Ellen whether the term
+> runs from the letter date or go-live.
+>
+> **Change log:** 2026-09-29 — IVP-compliance launch copy built (above); not yet approved by the author.
+
+---
+
 **Status (updated 2026-07-09): the ENTIRE book has now been read page by page, and all 13 session
 summaries + questions are CONFIRMED against it with ZERO changes.** The copy was first written
 (2026-07-08) from a partial read; it was then verified (2026-07-09) against a **complete
