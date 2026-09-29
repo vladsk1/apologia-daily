@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- content-review: {"argument": "2026-07-29", "orthodoxy": "2026-07-29", "by": "2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md."} -->
+<!-- content-review: {"argument": "2026-09-29", "orthodoxy": "2026-09-29", "by": "2026-09-29 OVER-CHARITY + FACT-CHECK SWEEP (owner-directed, Jesus tab), mastery layer. Read-only Explore gates, files hashed each round: (1) four-lens review with the GRADED/MEMORISED layers diffed first (ARG_PREMISES, cards, checks regexes, model answers, chips, SEO/meta/JSON-LD) against the paired essay and ev-s3 card re-certified 2026-09-29, plus web fact-check; (2) four-lens confirmation; (3) narrow final gate - STAMPABLE, 0 HERESY. Changed checks regexes node-tested (corrected answer scores; retired answer does not); inline JS parsed. Pastoral sign-off still _pending_. || 2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md.", "citations": "2026-09-29", "neutrality": "2026-09-29"} -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Did Jesus of Nazareth Really Exist? | Apologia Daily</title>
@@ -308,7 +308,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
   <section class="seo-summary">
     <h2>The argument in brief</h2>
     <p>Did Jesus of Nazareth actually exist? Among professional historians the answer is settled: yes, with a confidence equal to or greater than what we grant most figures of the ancient world. The claim that Jesus was a pure myth (sometimes called "mythicism") has essentially no standing in the academy, including among non-Christian and atheist scholars.</p>
-    <p>The case rests on three convergent lines. First, hostile non-Christian sources: the Roman historian Tacitus reports Jesus's execution under Pontius Pilate (<em>Annals</em> 15.44), and the Jewish historian Josephus refers to him twice, including the widely accepted notice of "James, the brother of Jesus who was called Christ" (<em>Antiquities</em> 20). Second, the earliest Christian sources are remarkably early: Paul's undisputed letters date to within about 25 years of the crucifixion, and Paul says he personally met Jesus's brother James (Galatians 1:19). Third, a telling silence: ancient critics attacked Jesus as a deceiver or sorcerer, but no ancient opponent ever claimed he had not existed.</p>
+    <p>The case rests on three convergent lines. First, hostile non-Christian sources: the Roman historian Tacitus reports Jesus's execution under Pontius Pilate (<em>Annals</em> 15.44), and the Jewish historian Josephus refers to him twice, including the widely accepted notice of "James, the brother of Jesus who was called Christ" (<em>Antiquities</em> 20). Second, the earliest Christian sources are remarkably early: Paul's undisputed letters date to within about 25 years of the crucifixion, and Paul says he personally met Jesus's brother James (Galatians 1:19). Third, a telling silence: Celsus charged that Jesus was a sorcerer, a deceiver, and of illegitimate birth; what no ancient opponent is known to have argued is that there had been no such man at all.</p>
     <p>Honest scope: this argument establishes only that Jesus lived, was crucified under Pilate, and founded a movement. It does not by itself prove any claim about his identity or resurrection. It clears the ground so those larger questions can be examined on the evidence. The agnostic scholar Bart Ehrman makes this same case at book length in <em>Did Jesus Exist?</em></p>
   </section>
   <!-- mastery dial -->
@@ -336,16 +336,16 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <span class="kick">The argument, formally</span>
       <h4>Hostile sources, early sources, and a silence that speaks.</h4>
       <div class="syllogism">
-        <div class="prem"><div class="tag">P1</div><p>Jesus is attested by <b>hostile non-Christian sources</b> — Tacitus on his execution under Pilate, Josephus on his life and the death of his brother James — within living memory of the events.</p></div>
-        <div class="prem"><div class="tag">P2</div><p>The <b>earliest Christian sources</b> — the undisputed letters of Paul, within 25 years — treat him as a recent, known man with a brother Paul had met; and <b>no ancient opponent</b>, Jewish or pagan, ever claimed he did not exist.</p></div>
-        <div class="prem concl"><div class="tag">∴ C</div><p>Therefore the existence of Jesus is <b>historically certain</b> by the standards applied to any ancient figure.</p></div>
+        <div class="prem"><div class="tag">P1</div><p><b>Outside witnesses</b> — the hostile Tacitus and the hostile-neutral Josephus — take for granted that a man called Christ was executed under Pilate.</p></div>
+        <div class="prem"><div class="tag">P2</div><p>The <b>earliest Christian sources</b> — the undisputed letters of Paul, within 25 years — treat him as a recent, known man with a brother Paul had met; and <b>no ancient opponent</b> is known to have argued that there had been no such man at all.</p></div>
+        <div class="prem concl"><div class="tag">∴ C</div><p>Therefore the historical evidence establishes, <b>to the ordinary standard of ancient history</b>, that Jesus of Nazareth lived and was crucified under Pontius Pilate.</p></div>
       </div>
       <p class="formnote">This argument clears the ground: mythicism is a position with essentially no standing in scholarship. Win it quickly and graciously, then move to the questions that matter.</p>
 
       <span class="kick" style="margin-top:22px">Then the standard — how ancient existence is established</span>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">For most ancient figures we accept far less: sources centuries removed, no hostile corroboration. Jesus has enemy attestation, friendly attestation within a generation, a named brother known to a correspondent, and a movement whose explosive origin requires a founder.</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">For most ancient figures we accept far less: sources centuries removed, no hostile corroboration. Jesus has enemy attestation, friendly attestation within a generation, and a named brother known to a correspondent.</p>
       <div class="chiprow">
-        <span class="chip">Tacitus</span><span class="chip">Josephus</span><span class="chip">Paul within 25 years</span><span class="chip">met his brother</span><span class="chip">no ancient denial</span><span class="chip gold">scholarly consensus</span>
+        <span class="chip">Tacitus</span><span class="chip">Josephus</span><span class="chip">Paul within 25 years</span><span class="chip">met his brother</span><span class="chip">no known ancient denial</span><span class="chip gold">scholarly consensus</span>
       </div>
     </div>
 
@@ -356,18 +356,18 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P1 — the hostile sources hold</summary>
         <div class="body">
           <p class="lbl steel">Tacitus</p>
-          <p>Rome’s greatest historian, no friend of Christians, records that Christus suffered the extreme penalty under Pontius Pilate in Tiberius’s reign — an enemy confirming the core fact.</p>
+          <p>The Roman historian, no friend of Christians, records that Christus suffered the extreme penalty under Pontius Pilate in Tiberius’s reign — an enemy confirming the core fact.</p>
           <p class="lbl steel">Josephus</p>
-          <p>The James passage — the brother of Jesus who was called Christ — is accepted as authentic by the overwhelming majority of scholars, though a minority question the phrase 'who was called Christ'; the longer passage, trimmed of Christian touches, still attests Jesus’s life and crucifixion.</p>
+          <p>The James passage — the brother of Jesus who was called Christ — is regarded by the large majority of scholars as authentic, though a minority question the phrase 'who was called Christ'; of the more famous passage, the Testimonium Flavianum (Antiquities 18.3.3), on the majority reconstruction a Christian copyist later shaped the received wording around an authentic Josephan core mentioning Jesus as a teacher crucified under Pilate; a notable minority dissents both ways.</p>
         </div>
       </details>
       <details class="acc">
         <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P2 — the early and the silent</summary>
         <div class="body">
           <p class="lbl steel">Paul knew the family</p>
-          <p>Galatians 1:19 — Paul met James the Lord’s brother. Mythical figures do not have brothers you can have dinner with.</p>
+          <p>Galatians 1:19 — Paul met James the Lord’s brother. A purely heavenly figure is an odd sort of being to have a flesh-and-blood brother walking among Paul’s contemporaries; historical persons are not.</p>
           <p class="lbl steel">The dog that did not bark</p>
-          <p>Celsus, the Talmud, every ancient polemic attacks Jesus as illegitimate, a sorcerer, a deceiver — never as nonexistent. The easiest refutation was never used because it was never available.</p>
+          <p>Celsus charged that Jesus was a sorcerer, a deceiver, and of illegitimate birth; what no ancient opponent is known to have argued is that there had been no such man at all. They argued about what he was, not whether he was.</p>
         </div>
       </details>
     </div>
@@ -384,7 +384,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>The Testimonium Flavianum calls Jesus the Christ and reports his resurrection — obviously Christian scribes wrote it. Strike Josephus from the list.</p>
           <p class="lbl reply">Reply</p>
-          <p>Scholars divide: most reconstruct an authentic Josephan core later retouched by a Christian copyist. (Do not use the Arabic version here — Whealey showed it descends from the Syriac of Eusebius, not from an independent Josephan line.) Strike the whole passage anyway: the second reference — James, brother of Jesus called Christ — is virtually undisputed, and Tacitus stands untouched.</p>
+          <p>Scholars divide: most reconstruct an authentic Josephan core later retouched by a Christian copyist. (Do not use the Arabic version here — Whealey showed it descends from the Syriac of Eusebius, not from an independent Josephan line.) Strike the whole passage anyway: the second reference — James, brother of Jesus called Christ — is regarded by the large majority of scholars as authentic, and Tacitus stands untouched.</p>
         </div>
       </details>
 
@@ -392,9 +392,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Tacitus just repeated what Christians told him" <span class="badge mid">Trickier</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>Writing in 115 AD, Tacitus had no records — he passed along the Christians’ own origin story, so his report is not independent.</p>
+          <p>Writing around AD 116, Tacitus had no records — he passed along the Christians’ own origin story, so his report is not independent.</p>
           <p class="lbl reply">Reply</p>
-          <p>Tacitus despised Christians (a pernicious superstition) and was a senator with access to imperial records; he names the procurator and emperor precisely and reports the execution as fact, not as what they claim — his standard practice when relaying mere hearsay. Even minimally, a hostile Roman found the man’s execution beyond doubt.</p>
+          <p>This is widely treated as independent of Christian sources—though some scholars suspect Tacitus may be relaying what Christians of his own day reported—and either way it shows a hostile Roman writer took the bedrock fact for granted: a man called Christ was executed under Pilate. (Tacitus calls Pilate a “procurator,” the title of his own era; Pilate was technically a prefect—a minor anachronism that does not affect the point.)</p>
         </div>
       </details>
 
@@ -404,7 +404,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Carrier’s mythicism: Paul’s Jesus is a heavenly being crucified in the lower heavens; the Gospels later historicised him. The earliest source knows no man.</p>
           <p class="lbl reply">Reply</p>
-          <p>Paul’s Jesus is born of a woman, born under the law, of David’s seed according to the flesh, with a brother Paul met, who instituted a supper on the night he was betrayed and was crucified by the rulers of this age. The celestial reading requires explaining away each phrase — brother becomes spiritual brother, born becomes manufactured — an exegesis driven by the theory rather than the text, which is why it persuades almost no professional historian, including secular ones.</p>
+          <p>Paul’s Jesus is born of a woman, born under the law, of David’s seed according to the flesh, with a brother Paul met, who instituted a supper on the night he was betrayed and was crucified (Galatians 3:1) and buried (1 Corinthians 15:3–4). The celestial reading requires explaining away each phrase — “brother of the Lord” becomes a cultic title for which there is no clear evidence, while Josephus independently calls James “the brother of Jesus who was called Christ” — an exegesis driven by the theory rather than the text, which is why it persuades almost no professional historian, including secular ones.</p>
         </div>
       </details>
 
@@ -414,7 +414,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>The Jesus story matches a pagan template — virgin births, December 25th, resurrection. One more solar myth dressed in Jewish clothes.</p>
           <p class="lbl reply">Reply</p>
-          <p>The parallels collapse on inspection: Horus was not virgin-born, Mithras was born from a rock, Osiris was reassembled to rule the underworld — not raised bodily into history; December 25th appears nowhere in the New Testament. The genuine background is Jewish — messiah, Passover, resurrection at the end of history — and the claim is anchored to a named man under a named governor, checkable within living memory; myths are anchored to once upon a time.</p>
+          <p>A few such figures were genuine (Mettinger grants Dumuzi, Baal, Melqart), but the parallels to Jesus are late, loose, or too unlike the resurrection: Horus was not virgin-born, Mithras was born from a rock, Osiris was reassembled to rule the underworld — not raised bodily into history; December 25th appears nowhere in the New Testament. Even if some motif had been borrowed, it would bear on how the story was later told, not on whether the man at its center existed. The genuine background is Jewish — messiah, Passover, resurrection at the end of history — and the claim is anchored to a named man under a named governor, checkable within living memory; myths are anchored to once upon a time.</p>
         </div>
       </details>
 
@@ -424,7 +424,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Strip the interested Christian writings and what is left would not convict anyone of existing.</p>
           <p class="lbl reply">Reply</p>
-          <p>First, the rule is backwards: historians use interested sources critically — most of what we know of Socrates comes from devoted pupils. Second, the New Testament is not one source but a collection — Paul, Mark, Q, John — independently attesting the man. Third, the non-Christian evidence is not nothing: Tacitus, Josephus twice, Pliny, the Talmudic polemic — more enemy attestation than almost any private individual of antiquity.</p>
+          <p>First, the rule is backwards: historians use interested sources critically — most of what we know of Socrates comes from devoted pupils. Second, the New Testament is not one source but a collection — Paul, Mark, Q, John — independently attesting the man. Third, the non-Christian evidence is not nothing: Tacitus and Josephus — and Pliny, who confirms the movement though not its founder.</p>
         </div>
       </details>
 
@@ -434,7 +434,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Philo, Seneca, dozens of writers covered the era — none notices Jesus. A miracle-working sensation should leave a contemporary footprint.</p>
           <p class="lbl reply">Reply</p>
-          <p>The expectation is anachronistic: a peasant preacher executed in a minor province is exactly what elite Roman literature ignored — surviving elite literature says almost nothing about most of the named prefects and procurators of Judea either. What such a figure would leave is a movement and traditions within a generation — which is precisely what we have, plus enemy notices once the movement reached Rome.</p>
+          <p>The expectation is anachronistic: a peasant preacher executed in a minor province is exactly what elite Roman literature ignored — almost nothing written about Hannibal in his own lifetime survives, and the earliest substantial sources for Alexander the Great postdate him by centuries. What such a figure would leave is a movement and traditions within a generation — which is precisely what we have, plus enemy notices once the movement reached Rome.</p>
         </div>
       </details>
     </div>
@@ -449,7 +449,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         </div>
         <div class="row">
           <div class="who"><b>Josephus</b><span><em>Antiquities</em> 18 & 20</span></div>
-          <div class="what">Two references; the James passage virtually undisputed.</div>
+          <div class="what">Two references; the James passage regarded by the large majority of scholars as authentic.</div>
         </div>
         <div class="row">
           <div class="who"><b>Bart Ehrman</b><span>agnostic scholar · <em>Did Jesus Exist?</em></span></div>
@@ -457,7 +457,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         </div>
         <div class="row">
           <div class="who"><b>Paul</b><span>Galatians 1–2</span></div>
-          <div class="what">Met James the Lord’s brother — within two decades of the cross. (We paraphrase — the originals reward the time.)</div>
+          <div class="what">Met James the Lord’s brother — in a letter written within roughly twenty-five years of the crucifixion. (We paraphrase — the originals reward the time.)</div>
         </div>
       </div>
     </div>
@@ -472,7 +472,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back</span>
       <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument in your own words</h4>
       <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Write it from memory: the hostile sources, the early Christian sources, the silence of ancient critics, and the scholarly verdict.</p>
-      <textarea id="explainBox" placeholder="Start with: Two hostile non-Christian historians attest Jesus within living memory..."></textarea>
+      <textarea id="explainBox" placeholder="Start with: Outside witnesses - the hostile Tacitus and the hostile-neutral Josephus - take for granted that a man called Christ was executed under Pilate..."></textarea>
       <div class="btnrow">
         <button class="btn primary" onclick="scoreExplain(this)">Score my explanation</button>
         <button class="btn ghost" onclick="document.getElementById('explainBox').value='';document.getElementById('scoreOut').classList.remove('show')">Clear</button>
@@ -520,7 +520,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       </div>
       <div class="modelans" id="modelAns">
         <div class="lbl">One strong way to answer — in a 1 Peter 3:15 tone</div>
-        <p>"Apply that standard consistently and antiquity empties out — we would lose Hannibal and most of the procurators of Judea, who also lack contemporary records. What ancient existence actually runs on is what Jesus has in unusual abundance: enemy attestation — Tacitus recording the execution under Pilate with contempt, Josephus naming his brother’s execution; friendly sources within a generation — Paul, who personally knew that brother; and a telling silence — every ancient opponent attacked Jesus as a deceiver or sorcerer, never as fictional, because that move was not available to people living within memory of him. The myths comparison cuts the other way: Osiris was never given a trial date under a named Roman governor. That is why mythicism has found almost no purchase among working historians — Bart Ehrman, no Christian, wrote the book answering it."</p>
+        <p>"Apply that standard consistently and antiquity empties out — almost nothing written about Hannibal in his own lifetime survives, and the earliest substantial sources for Alexander the Great postdate him by centuries. What ancient existence actually runs on is what Jesus has in unusual abundance: enemy attestation — Tacitus recording the execution under Pilate with contempt, Josephus naming his brother’s execution; friendly sources within a generation — Paul, who says he met that brother face to face; and a telling silence — his ancient opponents attacked him as a deceiver or sorcerer, but no ancient opponent is known to have argued there was no such man. The myths comparison cuts the other way: Osiris was never given a trial date under a named Roman governor. That is why mythicism has found almost no purchase among working historians — Bart Ehrman, no Christian, wrote the book answering it."</p>
       </div>
     </div>
     <!-- memory palace (folded in from the standalone tool) -->
@@ -666,9 +666,9 @@ function setCheck(id, on){
 /* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
 /* ---- argument premises used to ground the AI scoring ---- */
 var ARG_PREMISES = [
-  'Hostile sources - Tacitus and Josephus - attest Jesus within living memory.',
-  'The earliest Christian sources are within 25 years, and no ancient opponent denied he existed.',
-  'Therefore the existence of Jesus is historically certain by normal standards.'
+  'Outside witnesses - the hostile Tacitus and the hostile-neutral Josephus - take for granted that a man called Christ was executed under Pilate.',
+  'The earliest Christian sources are within 25 years, and no ancient opponent is known to have argued that there had been no such man at all.',
+  'Therefore the historical evidence establishes, to the ordinary standard of ancient history, that Jesus of Nazareth lived and was crucified under Pontius Pilate.'
 ];
 
 /* Real AI scoring via /api/tutor (same method as explain-it-back.html).
@@ -741,8 +741,8 @@ function renderMockScore(txtRaw){
   var checks = [
     {ok:/tacitus|josephus|hostile|roman/.test(t), hit:'You used the hostile attestation', miss:'Use the enemies - Tacitus on the execution, Josephus on Jesus and James'},
     {ok:/paul|25|twenty|brother|james|early/.test(t), hit:'You anchored the early Christian evidence', miss:'Anchor it early - Pauls letters within 25 years; he met the brother of Jesus'},
-    {ok:/never|no ancient|denial|denied|silence/.test(t), hit:'You used the silence of the critics', miss:'Use the silence - no ancient critic ever claimed Jesus did not exist'},
-    {ok:/myth|standard|historian|consensus|certain/.test(t), hit:'You drew the historical verdict', miss:'Draw the verdict - by normal historical standards his existence is certain'},
+    {ok:/never|no ancient|denial|denied|silence/.test(t), hit:'You used the silence of the critics', miss:'Use the silence - no ancient critic is known to have claimed Jesus did not exist'},
+    {ok:/myth|standard|historian|consensus|certain/.test(t), hit:'You drew the historical verdict', miss:'Draw the verdict - his existence is established to the ordinary standard of ancient history'},
     {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth - you developed it, not just listed it', miss:'Go a bit deeper - a full reconstruction runs longer than this'}
   ];
   var score = 0, feed = '';
@@ -761,11 +761,11 @@ function renderMockScore(txtRaw){
 
 /* ---- flashcards (generated from this argument) ---- */
 const cards = [
-  {q:'Name the two key hostile sources.', a:'Tacitus - execution under Pontius Pilate, Annals 15.44 - and Josephus, whose James the brother of Jesus passage is virtually undisputed.'},
+  {q:'Name the two key hostile sources.', a:'Tacitus - execution under Pontius Pilate, Annals 15.44 - and Josephus, whose James the brother of Jesus passage is regarded by the large majority of scholars as authentic.'},
   {q:'What is the earliest Christian evidence?', a:'The undisputed letters of Paul, within about 25 years - and Paul personally met James, the brother of Jesus.'},
   {q:'Reply to: the Josephus passage is forged.', a:'Partly retouched, yes - most scholars reconstruct an authentic Josephan core. Concede the whole passage if pressed: the second reference, James the brother of Jesus called Christ, is accepted by the large majority, and Tacitus stands regardless.'},
-  {q:'Reply to: he is another dying-rising god.', a:'The parallels collapse - rock-born Mithras, underworld Osiris. Jesus is anchored to a named governor and living memory; myths float in once-upon-a-time.'},
-  {q:'Why is the silence of ancient critics evidence?', a:'Celsus and the Talmud attack Jesus as sorcerer and deceiver - never as nonexistent. The easiest refutation was unavailable to those closest to the facts.'}
+  {q:'Reply to: he is another dying-rising god.', a:'A few such figures were genuine (Mettinger grants Dumuzi, Baal, Melqart), but the parallels to Jesus are late, loose, or too unlike the resurrection; and even a borrowed motif would bear on how the story was told, not on whether the man existed.'},
+  {q:'Why is the silence of ancient critics evidence?', a:'Celsus charged that Jesus was a sorcerer, a deceiver, and of illegitimate birth; what no ancient opponent is known to have argued is that there had been no such man at all. They argued about what he was, not whether he was.'}
 ];
 let ci = 0;
 function renderCard(){
