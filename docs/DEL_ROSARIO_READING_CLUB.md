@@ -41,7 +41,9 @@
 > runs from the letter date or go-live.
 >
 > **Change log:** 2026-09-29 — IVP-compliance launch copy built (above); not yet approved by the author.
-> 2026-09-29 — Instagram DM sent to Dr. Del Rosario (IVP news + demo link; asked for edits and his preferred buy link; offered to forward IVP's email). Acceptance reply to Ellen drafted; owner sending from laptop.
+> 2026-09-29 — Instagram DM sent to Dr. Del Rosario (IVP news + demo link; asked for edits and his preferred buy link; offered to forward IVP's email). Acceptance reply to Ellen drafted.
+> 2026-09-29 — Acceptance email SENT to Ellen Hsu (confirms all six conditions; says Dr. Del Rosario has been told and must review before publishing; asks whether the one-year term runs from the letter date or go-live; promises the live URL). IVP's email has NOT been forwarded to him yet — only offered.
+> **Planned homepage feature (owner-approved design, build at launch only):** ONE full "Featured Reading Club" card directly under the hero (after the 1 Peter 3:15 line), above the "Try it right now" Ask box; hero text + both buttons unchanged. Card: typographic cover stand-in (no IVP cover art without IVP's OK), title, author, IVP Academic 2025, foreword by Darrell L. Bock, the IVP credit line in bold in a gold-edged box directly under the author line (exact wording, never a badge/seal/logo), one-line description, About-the-author bio + photo ONLY in words/image he supplies or approves, "Start the study" + "Get the book from IVP". Label "Featured", not "New" (long-term placement). Under 200 words. Must be switchable off in one change (takedown on request). Watch Ask-box use/signups in PostHog after launch.
 
 ---
 
