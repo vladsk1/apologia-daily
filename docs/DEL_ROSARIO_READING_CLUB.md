@@ -41,6 +41,7 @@
 > runs from the letter date or go-live.
 >
 > **Change log:** 2026-09-29 — IVP-compliance launch copy built (above); not yet approved by the author.
+> 2026-09-29 — Instagram DM sent to Dr. Del Rosario (IVP news + demo link; asked for edits and his preferred buy link; offered to forward IVP's email). Acceptance reply to Ellen drafted; owner sending from laptop.
 
 ---
 
