@@ -56,6 +56,24 @@ body{padding-top:0 !important}
   .adn-signin,.adn-dash{font-size:.82rem}
   .adn-cta{padding:7px 13px;font-size:.82rem}
   .adn-signout{font-size:.76rem;padding:5px 10px}
+  /* Signed in on a phone, the row is logo + Dashboard + Sign out + burger. The page's
+     navAuth() sets the name span's display INLINE, which beat the display:none above,
+     so the name squeezed Sign out into two lines under the burger. !important wins
+     over that inline style; nowrap + no-shrink keep Sign out on one line. */
+  .adn-user{display:none !important}
+  .adn-signout,.adn-dash,.adn-signin{white-space:nowrap;flex-shrink:0}
+}
+/* Narrow phones: tighten the bar so the signed-in row fits without overflowing. */
+@media(max-width:420px){
+  .adn-nav{padding:0 .9rem;gap:.6rem}
+  .adn-logo{font-size:1.08rem}
+  .adn-right{gap:6px}
+  .adn-burger{margin-left:.15rem}
+}
+@media(max-width:350px){
+  .adn-logo{font-size:.98rem}
+  .adn-dash,.adn-signin{font-size:.76rem}
+  .adn-signout{padding:4px 8px}
 }
 
 /* ── rich "More" mega panel (opt-in: li.adn-has-mega + .adn-mega; gated pages keep the simple .adn-drop) ── */
