@@ -650,6 +650,33 @@
       ],
       "allow": [],
       "netting": "phrase"
+    },
+    {
+      "id": "agent-never-shared-throne-or-name",
+      "retired": "2026-09-29",
+      "what": "The Jewish-agency ceiling stated as 'no agent/shaliach ever shared God's (the sender's) throne or bore his (exclusive) name'.",
+      "why": "False as stated: Second Temple texts give exalted figures a throne and the divine name (Moses enthroned in Ezekiel the Tragedian, Exagoge 68-89; the Elect One on 'the throne of glory', 1 Enoch 51:3, 61:8, 62:2-5; the angel Yahoel bearing the Name, Apocalypse of Abraham 10, cf. Exod 23:21). library/hands.html conceded this in its own body while its FAQ, JSON-LD, ev-s3 card, mastery page and the hands brief still denied it (web fact-check + library cross-check, 2026-09-29).",
+      "instead": "Draw the line at worship and creation, ported from library/hands.html: 'No shaliach in Jewish thought ever received the cultic worship - offered to God, alongside God - that the New Testament gives Jesus; agency conferred authority, not that adoration.' and 'Grant, for argument's sake, that God's name and authority could be entrusted to a supreme agent; the worship still could not be, and neither could the work of creation.'",
+      "patterns": [
+        "(agent|shaliach|intermediar\\w*|viceroy)[^.<\"]{0,160}\\b(shared?|shares|sharing) (the sender(&rsquo;|'|’)?s|God(&rsquo;|'|’)?s|his) throne",
+        "(agent|shaliach|intermediar\\w*)[^.<\"]{0,160}\\b(bore|bears) (his|the sender(&rsquo;|'|’)?s|God(&rsquo;|'|’)?s) (exclusive )?name"
+      ],
+      "allow": [],
+      "netting": "claim",
+      "corpus": {
+        "must_fire": [
+          "no shaliach ever received cultic worship alongside God, shared the sender's throne, bore his exclusive name, or did his unshareable work of creating",
+          "An agent represents the sender; he does not share the sender&rsquo;s throne (Rev. 22:1), bear the sender's exclusive name",
+          "no agent in Jewish thought ever received cultic worship offered alongside God, shared God's throne, bore his exclusive name, or did his unshareable work of creating all things"
+        ],
+        "must_not_fire": [
+          "No shaliach in Jewish thought ever received the cultic worship — offered to God, alongside God — that the New Testament gives Jesus; agency conferred authority, not that adoration.",
+          "Grant, for argument's sake, that God's name and authority could be entrusted to a supreme agent; the worship still could not be, and neither could the work of creation.",
+          "a viceroy may share rule, never that worship",
+          "He shares God's throne, creation, eternal name, and worship.",
+          "\"shaliach\", \"jesus gods agent\", \"share gods throne\", \"worship the lamb\""
+        ]
+      }
     }
   ]
 }
