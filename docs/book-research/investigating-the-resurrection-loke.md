@@ -50,7 +50,7 @@ So a later reader can see the comparison was grounded, not guessed:
   hallucination hypothesis at full strength (**Ehrman** bereavement visions, **Lüdemann** guilt/Christ
   complex, **Goulder** collective delusion); rebuttals — group appearances vs the privacy of hallucination
   (clinical psychiatry; Marian cases = vague stimuli), **Allison** concedes collective-hallucination
-  evidence is thin, the un-grieving/hostile witnesses (James, Paul), the un-primed witnesses (Wright, no
+  evidence is thin, [✅ CORRECTED 2026-09-29: WRONG as corroboration — the essay's "even Allison concedes … thin" line was unsourced and misrepresented him (he gathers apparition data to argue group experiences are not as impossible as apologists claim, and judges the evidence equivocal). The 2026-09-29 sweep replaced it with his equivocal verdict + O'Connell, *TynBul* 60 (2009), fn 12.] the un-grieving/hostile witnesses (James, Paul), the un-primed witnesses (Wright, no
   Jewish template), visions-don't-empty-tombs, appearances-≠-later-visions (**Keim** vs Strauss); the three
   counter-replies (legendary growth of the 500; Allison's methodological point; parsimony). **Meier** on
   multiple attestation; **Craig** on Lüdemann.
@@ -239,7 +239,7 @@ Classified against the five paired essays read in full at the top of this note.
   reinforcement for the bodily-resurrection point on `appearances.html`/`emptytomb.html`. Also **Phlegon**
   (Origen *C. Cels.* 2.59) as a checkable extra-biblical crucifixion notice → `hist_jesus.html`.
   ⚠ **CORRECTED 2026-09-29:** this Phlegon lead never received a backlog row (Ware and Bolt above did not
-  either); Phlegon is now logged OPEN in `docs/content-backlog.md` (Jesus-tab sweep cross-check). Still absent
+  either); [✅ CORRECTED 2026-09-29: (later pass) Bolt 1996 and Ware 2014 are now logged OPEN in `docs/content-backlog.md` too, Resurrection-tab sweep cross-check.] Phlegon is now logged OPEN in `docs/content-backlog.md` (Jesus-tab sweep cross-check). Still absent
   from `hist_jesus.html` (0 hits site-wide, 2026-09-29).
 
 **→ Corroboration (no row — comparison made, already covered accurately and at least as well):**

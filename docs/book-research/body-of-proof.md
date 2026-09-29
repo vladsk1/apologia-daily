@@ -4,6 +4,7 @@
 > Resurrection of Jesus — and Why It Matters Today.* Foreword by **Gary Habermas**.
 > Publisher/year: **TBD — need the copyright-page photo** (likely Bethany House, ~2023; do
 > not treat as confirmed until the copyright page is captured).
+> ✅ CORRECTED 2026-09-29: publisher/year confirmed from retailer listings as **Bethany House, 14 March 2023** (ISBN 978-0-7642-3083-7), which is what `library/postres.html` already prints ("Bethany House, 2023"). The copyright page itself has still not been photographed.
 > This note is a **research map**, not the book.
 
 > ## ✅ STATUS: COMPLETE (finalized as-is 2026-07-14) — Intro + Chs. 1, 3–12 + full Notes captured
@@ -14,7 +15,7 @@
 > hard **Ch. 4 Bill-Warner/CSPI do-not-use** flag). **Two gaps were intentionally left un-captured** (not
 > blockers for using the note): the **Ch. 2 body (pp. 33–42)** — the skeptical-case chapter, anchored on
 > E. P. Sanders, whose thesis is already summarized from the TOC + resolved via its endnote — and the
-> **copyright page** (publisher/year still listed as "TBD — assumed Bethany House ~2023"). Add either
+> **copyright page** (publisher/year still listed as "TBD — assumed Bethany House ~2023"). [✅ CORRECTED 2026-09-29: publisher/year now confirmed as Bethany House, 2023 — see the header; only the photo is outstanding.] Add either
 > later if the pages are sent; the note is otherwise finished. See the capture-status table at the foot.
 >
 > **Standing rule:** this is a *research map of a copyrighted book*, not a quotable source. Do
