@@ -421,7 +421,13 @@
         'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
       );
       init();
-    } else { setTimeout(initSb, 50); }
+    } else if ((initSb.tries = (initSb.tries || 0) + 1) < 60) { setTimeout(initSb, 50); }
+    else {
+      /* The Supabase library never loaded (school/church firewall, ad-blocker, offline).
+         Stop waiting after ~3s and run the signed-out session: every sb call below is
+         inside try/catch and falls back to the local rotation. */
+      sb = null; init();
+    }
   }
   document.addEventListener('DOMContentLoaded', initSb);
 
