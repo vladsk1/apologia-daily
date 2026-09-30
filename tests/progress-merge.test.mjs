@@ -63,3 +63,23 @@ test('keyMatches allow-list: syncs progress, ignores prefs and the study-plans k
   assert.ok(!keyMatches('study_plans'), 'plans owned by study-plans.html sync');
   assert.ok(!keyMatches('ad_ios_install_dismissed'), 'dismissals not synced');
 });
+
+test('beginners_path days: union across devices, never drops a finished day', () => {
+  const local = JSON.stringify({ days: [1, 2] });
+  const server = JSON.stringify({ days: [1, 2, 3] });
+  const m = JSON.parse(mergeKey('beginners_path', local, server));
+  assert.deepEqual(m.days.slice().sort(), [1, 2, 3]);
+});
+
+test('ad_reviews: the further-along review step and later due date win', () => {
+  const local = JSON.stringify({ kalam: { step: 1, due: '2026-10-01' } });
+  const server = JSON.stringify({ kalam: { step: 3, due: '2026-10-20' }, moral: { step: 0, due: '2026-10-02' } });
+  const m = JSON.parse(mergeKey('ad_reviews', local, server));
+  assert.equal(m.kalam.step, 3);
+  assert.equal(m.kalam.due, '2026-10-20');
+  assert.ok(m.moral, 'server-only review kept');
+});
+
+test('keyMatches: the fuller learning record now syncs', () => {
+  for (const k of ['ad_reviews', 'ad_calibration', 'beginners_path', 'completed', 'ad_joined_books']) assert.ok(keyMatches(k), k);
+});

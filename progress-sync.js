@@ -30,7 +30,11 @@
   // in one place avoids two writers with different conflict rules racing on one key.
   var KEYS = ['ad_streak', 'ad_mastery', 'ad_visits', 'ad_today_done', 'ad_today_v1',
     'daily_arg_complete', 'ad_objdeck', 'ad_mix_done', 'quizCompleted', 'quizTotal',
-    'speedRoundHistory', 'debateCount', 'ad_askcount'];
+    'speedRoundHistory', 'debateCount', 'ad_askcount',
+    // 2026-09-30: the rest of the learning record, so a new device picks it up too —
+    // mastery-refresh schedule, confidence calibration, the Beginner's Path, devotional
+    // completions and joined reading-club books.
+    'ad_reviews', 'ad_calibration', 'beginners_path', 'completed', 'ad_joined_books'];
   var PREFIXES = ['ad_ch_', 'quizScore_', 'ad_fc_', 'ad_coach'];
 
   function keyMatches(k) {
@@ -66,6 +70,7 @@
     return o;
   }
 
+  function isNum(v) { return typeof v === 'number' ? isFinite(v) : (typeof v === 'string' && /^-?\d+(\.\d+)?$/.test(v.trim())); }
   function pj(s) { try { return JSON.parse(s); } catch (e) { return null; } }
   function bad(k) { return k === '__proto__' || k === 'constructor' || k === 'prototype'; }
 
@@ -77,8 +82,14 @@
       if (a.done || b.done) o.done = true;  // mastery: once done, always done
       return o;
     }
-    var x = parseFloat(a), y = parseFloat(b);
-    if (!isNaN(x) && !isNaN(y)) return Math.max(x, y);  // counters only go up
+    if (Array.isArray(a) && Array.isArray(b)) {   // e.g. beginners_path.days: union, never drop a day
+      var seenV = {}, outV = [];
+      [].concat(a, b).forEach(function (x) { var s = JSON.stringify(x); if (!seenV[s]) { seenV[s] = 1; outV.push(x); } });
+      return outV;
+    }
+    // Only real numbers compare numerically. parseFloat('2026-10-01') is 2026, so a date
+    // string must never take this branch (it would be merged into a bare number).
+    if (isNum(a) && isNum(b)) return Math.max(Number(a), Number(b));  // counters only go up
     if (a == null) return b; if (b == null) return a;
     return (String(a) >= String(b)) ? a : b;  // later date / non-reverting flag
   }
@@ -108,8 +119,7 @@
       [].concat(oa, ob).forEach(function (x) { var s = JSON.stringify(x); if (!seen[s]) { seen[s] = 1; res.push(x); } });
       return JSON.stringify(res.slice(0, 200));
     }
-    var na = parseFloat(localStr), nb = parseFloat(serverStr);
-    if (!isNaN(na) && !isNaN(nb)) return String(Math.max(na, nb));
+    if (isNum(localStr) && isNum(serverStr)) return String(Math.max(Number(localStr), Number(serverStr)));
     return (localStr >= serverStr) ? localStr : serverStr;  // later date / non-reverting flag (not blind server-wins)
   }
 
@@ -134,6 +144,13 @@
 
   var S = session();
   if (!S) return;  // signed out → local-only, identical to today's behaviour
+
+  var T0 = Date.now(), interacted = false;
+  try {
+    ['pointerdown', 'keydown', 'scroll'].forEach(function (ev) {
+      window.addEventListener(ev, function () { interacted = true; }, { once: true, passive: true, capture: true });
+    });
+  } catch (e) {}
 
   var H = { 'apikey': ANON, 'Authorization': 'Bearer ' + S.token, 'Content-Type': 'application/json' };
   var lastSent = '', timer = null;
@@ -161,7 +178,20 @@
       .then(function (r) { if (!r.ok) throw 0; return r.json(); })
       .then(function (rows) {
         var server = (rows && rows[0] && rows[0].data) || null;
-        if (mergeIn(server)) { try { window.dispatchEvent(new Event('ad-progress-synced')); } catch (e) {} }
+        if (mergeIn(server)) {
+          try { window.dispatchEvent(new Event('ad-progress-synced')); } catch (e) {}
+          // Pages read progress once, on load. If the account brought in progress this
+          // device did not have (a new phone, a cleared browser), reload ONCE so the page
+          // shows it — only in the first few seconds and only before the reader has
+          // touched anything, so nothing they are doing is interrupted.
+          try {
+            if (!interacted && (Date.now() - T0) < 4000 && !sessionStorage.getItem('ad_sync_reloaded')) {
+              sessionStorage.setItem('ad_sync_reloaded', '1');
+              location.reload();
+              return;
+            }
+          } catch (e) {}
+        }
         schedulePush(true);
       })
       .catch(function () { /* table missing / offline / RLS → stay local-only */ });
