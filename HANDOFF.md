@@ -647,3 +647,7 @@ re-sign from an env that has the key.
 
 ## A reusable check before deploying translated content
 For any AI-translated page, verify: (a) `<sup>`↔`<li>` footnote parity vs the English; (b) no scripts altered and the Supabase key / API URLs are ASCII-clean; (c) **no mixed Cyrillic+Latin words** (Latin look-alikes a/e/o/c/p/x slipping into Cyrillic words — this happened several times this session); (d) run the orthodoxy gate for neutrality (no Eastern-Orthodox drift).
+
+## 2026-09-30 — Legacy pages retired permanently
+
+`library/legacy.html` and `ev-m-legacy.html` were deleted (owner ruling). "The Christian Revolution" (the `ev-s8` tab and its seven essays: riseofchurch, persecution, equality, compassion, science-history, abolition, progress) has taken over that material for good; the legacy pages are **not** coming back. Both old URLs 301 to `/evidence-library.html?arg=riseofchurch`. The trust figures dropped to 99 essays / 81 arguments because the placeholder had been counted.

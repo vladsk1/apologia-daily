@@ -857,6 +857,17 @@
 > `xcards/x-honor-the-son.json`. It's gated content (argument+orthodoxy; +neutrality for
 > deity/Trinity/Islam) — reuse the reel/essay's certified framing; details in the `make-reel` skill.
 >
+> **🔴 STANDING NOTE — THE "LEGACY" PAGES ARE GONE FOR GOOD. OWNER RULING, 2026-09-30. DO NOT RECREATE THEM.**
+> `library/legacy.html` (the *Dominion*/"Did Christianity change the world?" essay) and its mastery page
+> `ev-m-legacy.html` were **replaced by "The Christian Revolution" (the `ev-s8` tab)** and its seven live,
+> gated essays — `library/{riseofchurch,persecution,equality,compassion,science-history,abolition,progress}.html`.
+> Both legacy files were **deleted on 2026-09-30**; both old addresses **301-redirect** to
+> `/evidence-library.html?arg=riseofchurch` (`vercel.json`). The legacy material is **not coming back** and is
+> not "pending a rebuild" — the Christian Revolution **is** the rebuild. So: never re-create a `legacy` essay,
+> mastery page, pocket card, `defend-live` mapping or sitemap entry; if an older doc, backlog row or status entry
+> in this file (including the 2026-08-22 entries below) points at `legacy.html` / `ev-m-legacy.html`, treat it as
+> **history** and re-target the work to the Christian Revolution essays. Only the owner can reverse this.
+>
 > **🔴 STANDING RULE — NO TRINITY DIAGRAM ON ANY PAGE. OWNER RULING, 2026-08-29. NOT A JUDGEMENT CALL.**
 > No diagram, figure, chart or illustration of the Trinity may be built or shipped on any surface —
 > essay, `ev-s*` tab card, `ev-m-*` mastery page, pocket card, flashcard, reel, X card, share-card PNG,
