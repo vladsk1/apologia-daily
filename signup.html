@@ -121,7 +121,10 @@
   <script>
     const SUPABASE_URL = 'https://noprgxkwniouukmrfozc.supabase.co';
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw';
-    const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    // If the sign-in service is blocked (a school, church or office network, or an
+    // ad-blocker), keep the page working and explain instead of doing nothing.
+    const sb = (window.supabase && window.supabase.createClient) ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+    const SB_BLOCKED_MSG = 'We couldn\u2019t reach our sign-in service. Your network may be blocking it \u2014 please try another connection.';
 
     function nextDest(){
       try {
@@ -131,7 +134,7 @@
       return 'dashboard.html';
     }
 
-    sb.auth.getSession().then(({ data: { session } }) => {
+    if (sb) sb.auth.getSession().then(({ data: { session } }) => {
       if (session) window.location.href = nextDest();
     });
 
@@ -145,6 +148,7 @@
       const btnText = document.getElementById('btn-text');
 
       errorBox.classList.remove('visible');
+      if (!sb) { showError(SB_BLOCKED_MSG); return; }
 
       const password2 = document.getElementById('password2').value;
 

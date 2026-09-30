@@ -566,8 +566,13 @@
         'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
       );
       navAuth(); init();
-    } else {
+    } else if ((initSb.tries = (initSb.tries || 0) + 1) < 80) {
       setTimeout(initSb, 50);
+    } else {
+      // The sign-in service never loaded (often a school, church or office network,
+      // or an ad-blocker). Say so instead of leaving "Loading your groups…" forever.
+      var el = document.getElementById('my-groups-loading');
+      if (el) el.textContent = 'We couldn\u2019t reach our sign-in service. Your network may be blocking it \u2014 please try another connection.';
     }
   }
   document.addEventListener('DOMContentLoaded', initSb);
