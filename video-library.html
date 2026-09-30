@@ -326,7 +326,6 @@
           </div>
           <div class="player-actions">
             <a href="#" class="player-btn player-btn-primary" onclick="goToArena()">Practice this topic in Debate Arena →</a>
-            <button class="player-btn player-btn-secondary" onclick="saveVideo()">Save video</button>
           </div>
           <button class="player-close" onclick="closePlayer()">✕ Close player</button>
           <div style="margin-top:1.5rem;">
@@ -922,7 +921,6 @@
     }
 
     function goToArena() { window.location.href = 'index.html#debate'; }
-    function saveVideo() { alert('Save feature coming soon with your Pro account!'); }
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });

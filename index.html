@@ -995,7 +995,7 @@
     <div class="hc-card">
       <div class="hc-kick">TRY IT RIGHT NOW &mdash; NO ACCOUNT NEEDED</div>
       <h2 class="hc-title">Ask the hardest question about Christianity you&rsquo;ve got</h2>
-      <p class="hc-sub">A real answer in seconds &mdash; grounded in classical Christian orthodoxy, gentle in tone, honest about difficulty. Your first two questions are free, no sign-up.</p>
+      <p class="hc-sub">A real answer in seconds &mdash; grounded in classical Christian orthodoxy, gentle in tone, honest about difficulty. Two free questions a day with no sign-up, or three a day with a free account.</p>
       <div class="hc-chips">
         <button class="hc-chip" onclick="hcUse(this)">Isn&rsquo;t the Bible full of contradictions?</button>
         <button class="hc-chip" onclick="hcUse(this)">Hasn&rsquo;t science made God unnecessary?</button>
@@ -1008,7 +1008,7 @@
       <div id="hcAnswer" class="hc-answer" style="display:none"></div>
       <div id="hcLimit" class="hc-limit" style="display:none">
         <h4>You&rsquo;ve used today&rsquo;s free questions</h4>
-        <p>Create a free account to keep asking &mdash; and save your conversations, build flashcards, and start the 7-day journey.</p>
+        <p>Create a free account for three questions a day &mdash; and save your conversations, build flashcards, and start the 7-day journey.</p>
         <a class="hc-cta" href="signup.html">Start Free &rarr;</a>
         <span class="hc-login">Already have an account? <a href="login.html">Log in</a> &middot; or come back tomorrow</span>
       </div>
@@ -1804,7 +1804,7 @@
     try{ if(window.adTrack) adTrack('homechat_wall_hit',{loggedIn:!!loggedIn}); }catch(e){}
     var el = document.getElementById('hcLimit');
     if (loggedIn){
-      el.innerHTML = '<h4>You&rsquo;ve used today&rsquo;s 3 free questions</h4>' +
+      el.innerHTML = '<h4>You&rsquo;ve used today&rsquo;s ' + HC_ACCT_FREE + ' free questions</h4>' +
         '<p>Pro is unlimited \u2014 plus the full Debate Arena, the AI Tutor, and every Mastery Track.</p>' +
         '<a class="hc-cta" href="#pricing">Upgrade to Pro &rarr;</a>' +
         '<span class="hc-login">Your free questions reset daily</span>';
