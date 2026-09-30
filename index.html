@@ -1189,14 +1189,13 @@
           <span class="feature-tag">Play &amp; learn →</span>
         </div>
 
-        <div class="feature-card" style="opacity:0.65;position:relative;">
-          <div style="position:absolute;top:12px;right:12px;font-family:var(--font-ui);font-size:0.65rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;background:var(--navy-100);color:var(--navy-600);padding:3px 10px;border-radius:20px;">Coming Soon</div>
+        <div class="feature-card" onclick="window.location='study-groups.html'" style="cursor:pointer;">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <div class="feature-title">Community</div>
-          <div class="feature-desc">A moderated forum where Christians sharpen each other — discuss arguments, share stories, and prepare together for the conversations that matter.</div>
-          <span class="feature-tag" style="color:var(--text-muted);border-color:var(--border);">Coming soon</span>
+          <div class="feature-title">Study Groups &amp; Reading Clubs</div>
+          <div class="feature-desc">Work through the evidence together &mdash; an invite-only group with friends, family or your church small group, or a guided read-through of a book.</div>
+          <span class="feature-tag">Start a group &rarr;</span>
         </div>
 
       </div>
@@ -1287,9 +1286,10 @@
               Linked directly to study resources for each weakness
             </li>
           </ul>
-          <a href="signup.html" class="btn-primary">Try the Arena</a>
+          <a href="debate-arena.html" class="btn-primary">Try the Arena</a>
         </div>
         <div class="arena-visual reveal">
+          <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.6rem;">Example exchange</div>
           <div class="arena-vs-bar">
             <div class="arena-side">
               <div class="arena-side-name">You</div>
@@ -1307,7 +1307,7 @@
           </div>
           <div class="arena-msg user">
             <div class="arena-msg-label">You</div>
-            Science explains the how — but not the why there is something rather than nothing. The Kalam argument shows the universe began to exist and therefore requires a cause outside itself...
+            Science explains the how — but not the why there is something rather than nothing. The Kalam argument makes the case that the universe began to exist and therefore has a cause outside itself...
           </div>
           <div class="arena-msg opp">
             <div class="arena-msg-label">Atheist</div>
@@ -1324,9 +1324,9 @@
       <div class="daily-inner">
         <div class="daily-card reveal">
           <div class="daily-date" id="daily-date">Today</div>
-          <div class="daily-verse">"Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have — but do this with gentleness and respect."</div>
-          <div class="daily-ref">1 Peter 3:15</div>
-          <div class="daily-reflection">Apologetics is not about winning arguments. It is about loving people enough to think carefully on their behalf. Today, consider who in your life is asking hard questions — and how you might meet them with both truth and grace.</div>
+          <div class="daily-verse" id="daily-verse">"Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have — but do this with gentleness and respect."</div>
+          <div class="daily-ref" id="daily-ref">1 Peter 3:15</div>
+          <div class="daily-reflection" id="daily-reflection">Apologetics is not about winning arguments. It is about loving people enough to think carefully on their behalf. Today, consider who in your life is asking hard questions — and how you might meet them with both truth and grace.</div>
           <div class="daily-actions">
             <a class="daily-btn" href="/daily-devotional.html">Open today&rsquo;s devotional &rarr;</a>
             <a class="daily-btn" href="/today">Start today&rsquo;s session &rarr;</a>
@@ -1339,6 +1339,32 @@
               document.getElementById('daily-date').textContent = 'Today \u00b7 ' +
                 new Date().toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
             } catch(e){} })();
+            /* Today's real devotional verse (2026-09-30): the same entry, day number and
+               cache ('devo_cache') as daily-devotional.html, so the two always match.
+               The 1 Peter 3:15 text above stays as the fallback if the fetch fails. */
+            (function(){
+              function show(d){
+                if(!d || !d.verse || !d.ref) return;
+                document.getElementById('daily-verse').textContent = '\u201c' + d.verse + '\u201d';
+                document.getElementById('daily-ref').textContent = d.ref;
+                if(d.theme) document.getElementById('daily-reflection').textContent = 'Today\u2019s theme: ' + d.theme + '. Read the full reflection and prayer in today\u2019s devotional.';
+              }
+              try {
+                var now = new Date(), start = new Date(now.getFullYear(), 0, 0);
+                var day = ((Math.floor((now - start) / 864e5) - 1) % 365) + 1;
+                var c = JSON.parse(localStorage.getItem('devo_cache') || 'null');
+                if(c && c.day === day && c.date === now.toDateString()){ show(c.devo); return; }
+                var K = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw';
+                fetch('https://noprgxkwniouukmrfozc.supabase.co/rest/v1/devotionals?day_number=eq.' + day + '&select=*',
+                      { headers: { apikey: K, Authorization: 'Bearer ' + K } })
+                  .then(function(r){ return r.ok ? r.json() : null; })
+                  .then(function(data){
+                    if(!data || !data.length) return;
+                    try { localStorage.setItem('devo_cache', JSON.stringify({ day: day, date: now.toDateString(), devo: data[0] })); } catch(e){}
+                    show(data[0]);
+                  }).catch(function(){});
+              } catch(e){}
+            })();
           </script>
         </div>
         <div class="reveal">
@@ -1507,8 +1533,7 @@
               Full video library (coming soon)
             </li>
           </ul>
-          <a href="signup.html" class="btn-pricing btn-pricing-gold">Create a free account</a>
-          <p style="text-align:center;font-family:var(--font-ui);font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:0.75rem;">Pro is launching soon &mdash; we'll email you the moment it's ready.</p>
+          <p style="text-align:center;font-family:var(--font-ui);font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:0.75rem;">Pro is launching soon &mdash; start with a free account and we'll email you the moment it's ready.</p>
         </div>
 
       </div>
