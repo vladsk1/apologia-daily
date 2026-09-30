@@ -240,7 +240,6 @@
               <a class="adn-mi" href="/games.html"><span class="adn-mi-ic">&#127918;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Games</span><span class="adn-mi-dc">Quizzes that feed your streak.</span></span></a>
               <a class="adn-mi" href="/study-groups.html"><span class="adn-mi-ic">&#128101;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Study Groups <span class="adn-mi-tag">New</span></span><span class="adn-mi-dc">Study with people you love.</span></span></a>
               <a class="adn-mi" href="/reading-club.html"><span class="adn-mi-ic">&#128214;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Reading Clubs</span><span class="adn-mi-dc">The classics, chapter by chapter.</span></span></a>
-              <a class="adn-mi" href="/conversation-journal.html"><span class="adn-mi-ic">&#128221;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Conversation Journal</span><span class="adn-mi-dc">Log real conversations, get AI coaching.</span></span></a>
             </div>
             <div class="adn-mega-col">
               <div class="adn-mega-h">For you</div>
@@ -1371,7 +1370,28 @@
         });
       }
       try { initVoice(); } catch(e) {}
+      try { preselectFromLink(); } catch(e) {}
     });
+
+    /* "Defend it live" links from the mastery pages (2026-09-30):
+       debate-arena.html?opp=<opponent id>&topic=<preset topic text>.
+       Only an EXACT match to one of this page's own preset topics is accepted,
+       so a link can pre-fill the setup but can never inject its own prompt. */
+    function preselectFromLink() {
+      const p = new URLSearchParams(location.search);
+      const opp = p.get('opp'), topic = p.get('topic');
+      if (!opp || !topicsByOpponent[opp]) return;
+      const card = document.getElementById('opp-' + opp);
+      if (!card) return;
+      selectOpponent(opp, card);
+      if (topic && topicsByOpponent[opp].some(t => t.topic === topic)) {
+        const btn = [...document.querySelectorAll('#topic-grid .topic-btn')]
+          .find(b => b.querySelector('.topic-name').textContent === topic);
+        if (btn) selectTopic(topic, btn);
+      }
+      const target = document.getElementById('start-btn');
+      if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
+    }
 
     async function endDebate() {
       // If a crisis already fired mid-debate the exercise is over: never fall

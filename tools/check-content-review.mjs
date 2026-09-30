@@ -136,7 +136,6 @@ const EXEMPT = new Map([
   ['sources.html', 'renders the /sources corpus, gated by verified:true'],
   ['ask-anything.html', 'shell for api/ask.js, which is itself gated'],
   ['coach.html', 'shell; coaching prompts live in api/*'],
-  ['conversation-journal.html', 'shell; user-authored content'],
   ['study-groups.html', 'shell; group plumbing'],
   ['video-library.html', 'catalogue of third-party videos'],
 ]);

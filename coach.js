@@ -266,12 +266,8 @@
         convoLink();
     }
   }
-  /* link to log a real-world conversation for coaching (feeds the profile) */
-  function convoLink() {
-    return '<div style="margin-top:0.9rem;border-top:1px solid rgba(255,255,255,0.08);padding-top:0.8rem;">' +
-      '<a href="conversation-journal.html" style="font-family:\'DM Sans\',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.55);text-decoration:none;">' +
-      '&#128172; Had a real debate or got a question you couldn&rsquo;t answer? <span style="color:#c8a951;font-weight:600;">Log it for coaching &rarr;</span></a></div>';
-  }
+  /* The Conversation Journal was retired (2026-09-30); this used to link to it. */
+  function convoLink() { return ''; }
 
   function dial(pct) {
     var r = 20, c = 2 * Math.PI * r, off = c * (1 - pct / 100);
