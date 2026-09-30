@@ -152,7 +152,6 @@ const withArgs = (src, n) => src
 
 const ARG_ONLY_FILES = [
   { file: path.join(ROOT, 'homepage-v2.html'), label: 'homepage-v2.html' }, // .vercelignored, kept in sync anyway
-  { file: path.join(ROOT, 'flashcards.html'), label: 'flashcards.html' },
 ];
 
 const homeSplice = splice(HOME, 'index.html', HOME_START, HOME_END, renderHome(c));

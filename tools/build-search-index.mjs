@@ -124,7 +124,7 @@ function mastery() {
 // for by name. Only the LIST (file + category) is maintained here; the title and
 // blurb are read from each page's own <title>/<meta>, so they cannot drift. ──
 const FEATURE_PAGES = [
-  ['games.html', 'Practice'], ['flashcards.html', 'Practice'], ['daily-quiz.html', 'Practice'],
+  ['games.html', 'Practice'], ['daily-quiz.html', 'Practice'],
   ['daily-mix.html', 'Practice'], ['speed-round.html', 'Practice'], ['who-said-it.html', 'Practice'],
   ['challenge.html', 'Practice'], ['objection-deck.html', 'Practice'], ['objection-catcher.html', 'Practice'],
   ['palace.html', 'Practice'], ['explain-it-back.html', 'Practice'],

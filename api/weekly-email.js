@@ -348,14 +348,14 @@ function buildEmailHtml(name, fc, ex, unsub) {
         <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#c8a951;margin-bottom:0.5rem;">Your Flashcard Deck</div>
         <div style="font-size:0.9rem;color:rgba(255,255,255,0.8);margin-bottom:0.25rem;">${dueText} &nbsp;&middot;&nbsp; ${fc.total} total cards &nbsp;&middot;&nbsp; ${fc.mastered} mastered</div>
         <div style="font-size:0.8rem;color:rgba(255,255,255,0.45);margin-top:0.5rem;">Spaced repetition only works when you review on schedule. Even 3 minutes today makes a difference.</div>
-        <a href="https://apologiadaily.com/flashcards.html" style="display:inline-block;margin-top:0.875rem;font-size:0.8rem;font-weight:600;background:#c8a951;color:#050d1a;padding:7px 16px;border-radius:3px;text-decoration:none;">Review cards now</a>
+        <a href="https://apologiadaily.com/today" style="display:inline-block;margin-top:0.875rem;font-size:0.8rem;font-weight:600;background:#c8a951;color:#050d1a;padding:7px 16px;border-radius:3px;text-decoration:none;">Review cards now</a>
       </div>`;
   } else {
     flashcardSection = `
       <div style="background:#0f2040;border-radius:6px;padding:1.25rem 1.5rem;margin-bottom:1rem;">
         <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#c8a951;margin-bottom:0.5rem;">Flashcard Deck</div>
-        <div style="font-size:0.88rem;color:rgba(255,255,255,0.7);margin-bottom:0.75rem;">You have not started your flashcard deck yet. This is the single most effective thing you can do to remember arguments long term.</div>
-        <a href="https://apologiadaily.com/flashcards.html" style="display:inline-block;font-size:0.8rem;font-weight:600;background:#c8a951;color:#050d1a;padding:7px 16px;border-radius:3px;text-decoration:none;">Build your deck</a>
+        <div style="font-size:0.88rem;color:rgba(255,255,255,0.7);margin-bottom:0.75rem;">You have not started your daily review yet. Five minutes on Today is the single most effective thing you can do to remember arguments long term.</div>
+        <a href="https://apologiadaily.com/today" style="display:inline-block;font-size:0.8rem;font-weight:600;background:#c8a951;color:#050d1a;padding:7px 16px;border-radius:3px;text-decoration:none;">Start today&rsquo;s session</a>
       </div>`;
   }
 

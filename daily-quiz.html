@@ -64,7 +64,8 @@
     /* DIFFICULTY SELECTOR */
     .diff-selector { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
     .diff-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
-    .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .diff-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    @media (max-width: 640px) { .diff-grid { grid-template-columns: repeat(2, 1fr); } }
     .diff-card { border: 1px solid var(--border); border-radius: 6px; padding: 1rem; cursor: pointer; transition: all 0.15s; text-align: center; background: var(--off-white); }
     .diff-card:hover { border-color: var(--navy-300); background: var(--navy-50); }
     .diff-card.active { border: 2px solid var(--navy-600); background: var(--navy-50); }
@@ -273,7 +274,7 @@
     {day:1,title:'Start with the Daily Devotional',page:'daily-devotional.html'},
     {day:2,title:'Read the Kalam Argument',page:'evidence-library.html'},
     {day:3,title:"Today's Session -- the daily 5-minute loop",page:'today.html'},
-    {day:4,title:'Build your flashcard deck',page:'flashcards.html'},
+    {day:4,title:'Drill the objections people raise',page:'objection-deck.html'},
     {day:5,title:'Play the Daily Quiz',page:'daily-quiz.html'},
     {day:6,title:'Enter the Debate Arena',page:'debate-arena.html'},
     {day:7,title:'Complete your journey',page:'index.html#pricing'}
@@ -366,6 +367,11 @@
           <div class="diff-card-name">Expert</div>
           <div class="diff-card-desc">Deep knowledge — philosophy, theology, technical details</div>
         </div>
+        <a class="diff-card" href="daily-mix.html" style="text-decoration:none;color:inherit;display:block;">
+          <div class="diff-card-icon">🎲</div>
+          <div class="diff-card-name">Mixed</div>
+          <div class="diff-card-desc">Every topic, no labels — eight questions from across the library</div>
+        </a>
       </div>
     </div>
 
