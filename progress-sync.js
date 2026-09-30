@@ -71,7 +71,12 @@
   }
 
   function tstamp() { var args = arguments; return function (r) { if (!r || typeof r !== 'object') return ''; for (var i = 0; i < args.length; i++) if (r[args[i]]) return String(r[args[i]]); return ''; }; }
-  var RECORD_KEYS = { ad_reviews: tstamp('last', 'added', 'due'), ad_calibration: tstamp('at') };
+  // ad_reviews: a record that has been reviewed (has 'last') always outranks one that has only
+  // been scheduled ('added'); 'added' only breaks a tie. A reset sets 'last', so it still wins.
+  var RECORD_KEYS = {
+    ad_reviews: function (r) { return (r && typeof r === 'object') ? (r.last ? '1' : '0') + String(r.last || '') + '|' + String(r.added || '') : ''; },
+    ad_calibration: tstamp('at')
+  };
   function isNum(v) { return typeof v === 'number' ? isFinite(v) : (typeof v === 'string' && /^-?\d+(\.\d+)?$/.test(v.trim())); }
   function pj(s) { try { return JSON.parse(s); } catch (e) { return null; } }
   function bad(k) { return k === '__proto__' || k === 'constructor' || k === 'prototype'; }
@@ -135,11 +140,11 @@
     }
     if (Array.isArray(oa) && Array.isArray(ob)) {
       // Append-order lists (newest LAST): union with the other device's entries first and
-      // this device's after, then keep the newest end. 'completed' (devotional days) is
-      // small strings and feeds a streak, so it is never trimmed below 2000.
+      // this device's after, then keep the newest end. 'completed' (devotional days) and
+      // 'quizCompleted' are small date strings that feed streaks, so they keep 2000.
       var seen = {}, res = [];
       [].concat(ob, oa).forEach(function (x) { var s = JSON.stringify(x); if (!seen[s]) { seen[s] = 1; res.push(x); } });
-      return JSON.stringify(res.slice(k === 'completed' ? -2000 : -200));
+      return JSON.stringify(res.slice((k === 'completed' || k === 'quizCompleted') ? -2000 : -200));
     }
     if (isNum(localStr) && isNum(serverStr)) return String(Math.max(Number(localStr), Number(serverStr)));
     return (localStr >= serverStr) ? localStr : serverStr;  // later date / non-reverting flag (not blind server-wins)

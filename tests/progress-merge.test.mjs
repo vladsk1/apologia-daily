@@ -103,3 +103,14 @@ test('append-order lists keep the NEWEST entries when capped (devotional days ne
 test('keyMatches: the fuller learning record now syncs', () => {
   for (const k of ['ad_reviews', 'ad_calibration', 'beginners_path', 'completed', 'ad_joined_books']) assert.ok(keyMatches(k), k);
 });
+
+test('ad_reviews: a reviewed record beats one that was only scheduled later', () => {
+  const m = JSON.parse(mergeKey('ad_reviews', JSON.stringify({ k: { step: 0, added: '2026-09-25' } }), JSON.stringify({ k: { step: 3, last: '2026-09-20' } })));
+  assert.equal(m.k.step, 3);
+});
+
+test('quizCompleted streak dates are not trimmed at 200', () => {
+  const local = JSON.stringify(Array.from({ length: 230 }, (_, i) => 'Q' + i));
+  const m = JSON.parse(mergeKey('quizCompleted', local, JSON.stringify(['Q0'])));
+  assert.equal(m.length, 230);
+});
