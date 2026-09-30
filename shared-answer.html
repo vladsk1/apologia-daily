@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A friend shared this answer with you | Apologia Daily</title>
-  <meta name="description" content="Someone shared a thoughtful, evidence-based answer to a hard question about God, Jesus, and the Christian faith. Read it — then ask your own, free." />
+  <title>A question shared with you | Apologia Daily</title>
+  <meta name="description" content="Someone shared a hard question about God, Jesus, and the Christian faith. Get a fresh, sourced answer from Apologia Daily." />
   <meta name="robots" content="noindex" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -118,8 +118,8 @@
 
   <header class="page-header">
     <div class="page-eyebrow">Someone shared this with you</div>
-    <h1 class="page-title">A hard question, <em>answered honestly</em></h1>
-    <p class="page-sub">A friend thought you might find this worth reading. No sign-up needed — just read.</p>
+    <h1 class="page-title">A hard question, <em>worth asking</em></h1>
+    <p class="page-sub">Shared links carry the question, not the answer. That way no one can put words in our mouth. Ask it here for a fresh answer.</p>
   </header>
 
   <div class="wrap">
@@ -179,19 +179,24 @@
         if (d) payload = JSON.parse(b64urlDecode(d));
       } catch (e) { payload = null; }
 
+      // SECURITY (2026-09-30): never render an answer carried in the URL. The old
+      // #d= payload was unsigned, so anyone could craft a link that displayed any
+      // text as an "Apologia Daily answer". We now show only the question (as the
+      // visitor's shared question, escaped) and send them to get a real answer.
       var wrap = document.getElementById('answer-wrap');
-      if (!payload || !payload.q || !payload.a) {
-        wrap.innerHTML = '<div class="missing">This shared answer could not be loaded.<br><a href="/asked-and-answered.html">Ask your own question instead →</a></div>';
+      var q = (payload && typeof payload.q === 'string') ? payload.q.trim().slice(0, 300) : '';
+      if (payload && !ref && payload.ref) ref = payload.ref;
+      if (!q) {
+        wrap.innerHTML = '<div class="missing">This shared link could not be loaded.<br><a href="/asked-and-answered.html">Ask your own question instead →</a></div>';
       } else {
-        if (!ref && payload.ref) ref = payload.ref;
         var card = document.createElement('div');
         card.className = 'answer-card';
         card.innerHTML =
-          '<div class="answer-question">“' + escHtml(payload.q) + '”</div>' +
-          '<div class="answer-body">' + formatAnswer(payload.a) + '</div>' +
-          '<div class="trust">🛡️ <strong>How this works:</strong> this answer engages the strongest form of the objection and names its sources where possible. It’s AI-generated, so verify specific facts and quotes against the primary sources.</div>';
+          '<div class="page-eyebrow" style="color:var(--text-muted);">The question someone shared</div>' +
+          '<div class="answer-question">“' + escHtml(q) + '”</div>' +
+          '<p style="font-family:var(--font-ui);font-size:0.9rem;color:var(--text-mid);margin-top:0.8rem;">Answers are not stored in shared links, so the reply you get is always generated fresh by Apologia Daily.</p>' +
+          '<p style="margin-top:1rem;"><a class="btn-gold" id="cta-this-q" href="/asked-and-answered.html?q=' + encodeURIComponent(q) + '">Get the answer to this question →</a></p>';
         wrap.appendChild(card);
-        try { document.title = '“' + payload.q.slice(0, 60) + '” — answered | Apologia Daily'; } catch (e) {}
       }
 
       if (ref) {

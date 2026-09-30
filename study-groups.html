@@ -168,6 +168,8 @@
     .member-avatar { width: 30px; height: 30px; border-radius: 50%; background: var(--navy-600); color: var(--white); font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .member-name { font-family: var(--font-ui); font-size: 0.82rem; color: var(--text-dark); flex: 1; }
     .member-role { font-family: var(--font-ui); font-size: 0.68rem; color: var(--text-muted); }
+    .mod-btn { font-family: var(--font-ui); font-size: 0.7rem; background: none; border: 1px solid var(--border); color: var(--text-muted); border-radius: 3px; padding: 2px 8px; margin-left: 6px; cursor: pointer; min-height: 28px; }
+    .mod-btn:hover { border-color: var(--navy-400); color: var(--navy-600); }
     .member-active { width:7px; height:7px; border-radius:50%; background:#1d7064; flex-shrink:0; }
     .plan-assignment { background: var(--navy-50); border: 1px solid var(--navy-100); border-radius: 3px; padding: 0.85rem; }
     .plan-name { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500; color: var(--navy-700); margin-bottom: 0.25rem; }
@@ -280,6 +282,7 @@
         <span class="fw-chip">✝️ A church small group</span>
         <span class="fw-chip">🌐 An online group</span>
       </div>
+      <p class="hero-sub" style="font-size:0.85rem;margin-top:1rem;">Groups are invite-only and for adults (18+). Under 18? Ask a parent, youth leader or pastor to run the group.</p>
     </div>
   </div>
 
@@ -302,13 +305,6 @@
         </div>
       </div>
 
-      <!-- BROWSE -->
-      <div style="margin-top:2.5rem;">
-        <p class="section-label">Browse public groups</p>
-        <div class="groups-grid" id="public-groups-grid">
-          <div class="loading-row" id="public-groups-loading">Loading&hellip;</div>
-        </div>
-      </div>
     </div>
 
     <!-- GROUP DETAIL VIEW -->
@@ -453,10 +449,7 @@
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">Who can join</label>
-            <select class="form-select" id="group-privacy">
-              <option value="invite">Invite only — join by link</option>
-              <option value="public">Public — listed for anyone</option>
-            </select>
+            <div class="form-hint" style="padding-top:0.5rem;">Invite only: people join with your link. (Public groups were switched off for safety.)</div>
           </div>
           <div class="form-group">
             <label class="form-label">Study plan (optional)</label>
@@ -672,22 +665,8 @@
       renderMyGroups([]);
     }
 
-    // Public groups
-    try {
-      var pub = await sb.from('groups')
-        .select('*, members:group_members(count)')
-        .eq('privacy','public')
-        .order('created_at', { ascending:false })
-        .limit(30);
-      if (pub.error) throw pub.error;
-      var pubGroups = (pub.data||[])
-        .filter(function(g){ return !myGroupIds[g.id]; })
-        .map(function(g){ return Object.assign({}, g, { role:'none', member_count: countOf(g) }); });
-      renderPublicGroups(pubGroups);
-    } catch(e) {
-      if (isMissingTable(e)) { showSetupNotice(); return; }
-      renderPublicGroups([]);
-    }
+    // Public group discovery was removed (2026-09-30, safety): strangers could
+    // browse and join open chat. Groups are joined only by invite link now.
   }
   function countOf(g){
     try { return (g.members && g.members[0] && g.members[0].count) || 0; } catch(e){ return 0; }
@@ -696,10 +675,7 @@
   function showSetupNotice(){
     document.getElementById('setup-notice').classList.add('show');
     document.getElementById('my-groups-grid').innerHTML = '';
-    document.getElementById('public-groups-grid').innerHTML = '';
     document.getElementById('my-groups-section').style.display = 'none';
-    var browse = document.querySelector('#view-groups > div[style]');
-    if (browse) browse.style.display = 'none';
   }
 
   function renderMyGroups(groups) {
@@ -707,21 +683,12 @@
     if (!groups.length) {
       grid.innerHTML = '<div class="empty-state"><div class="empty-icon">&#128101;</div>'+
         '<div class="empty-title">You&rsquo;re not in a group yet</div>'+
-        '<div class="empty-sub">Groups make it stick. Start one with a friend, your family, or a skeptic you&rsquo;re walking with &mdash; or browse the public groups below.</div>'+
+        '<div class="empty-sub">Groups make it stick. Start one with a friend, your family, or a skeptic you&rsquo;re walking with &mdash; or ask a friend for their invite link.</div>'+
         '<button class="btn-gold" onclick="openCreateModal()">+ Start a group</button></div>';
       return;
     }
     grid.innerHTML = groups.map(function(g){ return buildGroupCard(g, true); }).join('');
   }
-  function renderPublicGroups(groups) {
-    var grid = document.getElementById('public-groups-grid');
-    if (!groups.length) {
-      grid.innerHTML = '<div class="loading-row">No public groups yet &mdash; be the first to start one.</div>';
-      return;
-    }
-    grid.innerHTML = groups.map(function(g){ return buildGroupCard(g, false); }).join('');
-  }
-
   function buildGroupCard(g, isMine) {
     var kind = KINDS.find(function(k){ return k.id===g.kind; });
     var badgeHtml = '';
@@ -752,15 +719,7 @@
 
     // If not a member and it's public, offer to join first
     if (group.role === 'none') {
-      if (group.privacy === 'public') {
-        var ok = confirm('Join "' + group.name + '"?');
-        if (!ok) return;
-        var joined = await joinGroup(id);
-        if (!joined) return;
-        group.role = 'member';
-      } else {
-        showToast('This group is invite-only.'); return;
-      }
+      showToast('This group is invite-only. Ask its host for the invite link.'); return;
     }
 
     currentGroup = group;
@@ -860,7 +819,10 @@
         var active = window._activeSet[m.user_id];
         return '<div class="member-row"><div class="member-avatar" style="background:'+colorFor(m.user_id)+';">'+esc(initials(nm))+'</div>'+
           '<div class="member-name">'+esc(nm)+(active?' <span class="member-active" title="Studied this week" style="display:inline-block;margin-left:4px;"></span>':'')+'</div>'+
-          '<div class="member-role">'+(m.role==='host'?'Host':'Member')+'</div></div>';
+          '<div class="member-role">'+(m.role==='host'?'Host':'Member')+'</div>'+
+          ((currentGroup && currentGroup.role==='host' && m.role!=='host' && m.user_id!==currentUser.id)
+            ? '<button type="button" class="mod-btn" onclick="removeMember(\''+m.user_id+'\')">Remove</button>' : '')+
+          '</div>';
       }).join('');
       document.getElementById('detail-member-count').textContent = members.length + ' member' + (members.length!==1?'s':'');
     } catch(e){
@@ -975,7 +937,11 @@
     list.innerHTML = msgs.map(function(m){
       var nm = m.display_name || 'Member';
       return '<div class="msg"><div class="msg-avatar" style="background:'+colorFor(m.user_id)+';">'+esc(initials(nm))+'</div>'+
-        '<div class="msg-body"><div class="msg-meta"><span class="msg-name">'+esc(nm)+'</span><span class="msg-time">'+timeAgo(m.created_at)+'</span></div>'+
+        '<div class="msg-body"><div class="msg-meta"><span class="msg-name">'+esc(nm)+'</span><span class="msg-time">'+timeAgo(m.created_at)+'</span>'+
+          ((m.user_id===currentUser.id || (currentGroup && currentGroup.role==='host'))
+            ? '<button type="button" class="mod-btn" onclick="deleteMessage(\''+m.id+'\',\''+m.channel+'\')">Delete</button>' : '')+
+          (m.user_id!==currentUser.id ? '<button type="button" class="mod-btn" onclick="reportMessage(\''+m.id+'\',\''+m.channel+'\')">Report</button>' : '')+
+          '</div>'+
         '<div class="msg-text">'+esc(m.body)+'</div></div></div>';
     }).join('');
     list.scrollTop = list.scrollHeight;
@@ -1024,6 +990,55 @@
         })
         .subscribe();
     } catch(e){}
+  }
+
+  /* ---- Moderation (2026-09-30) ----
+     Report: emails the team (works with no backend change).
+     Remove member: host only; allowed by the existing gm_delete policy.
+     Delete message: author or host; needs the gmsg_delete policy in
+     docs/STUDY_GROUPS_SAFETY_MIGRATION.md. Until that runs, it fails with a clear message. */
+  function findMsg(id, channel){
+    return (loadedMessages[channel]||[]).find(function(m){ return m.id===id; }) || null;
+  }
+  function reportMessage(id, channel){
+    var m = findMsg(id, channel); if (!m || !currentGroup) return;
+    var body = 'I want to report a message in an Apologia Daily study group.\n\n' +
+      'Group: ' + currentGroup.name + ' (' + currentGroup.id + ')\n' +
+      'Message id: ' + m.id + '\n' + 'Posted by: ' + (m.display_name||'Member') + ' (' + m.user_id + ')\n' +
+      'Posted at: ' + m.created_at + '\n\nMessage:\n' + String(m.body).slice(0, 1500) + '\n\nWhy I am reporting it:\n';
+    window.location.href = 'mailto:contact@apologiadaily.com?subject=' +
+      encodeURIComponent('Study group report') + '&body=' + encodeURIComponent(body);
+    showToast('Opening your email app. If you or someone else is in danger, contact local emergency services now.');
+  }
+  async function deleteMessage(id, channel){
+    if (!confirm('Delete this message for everyone in the group?')) return;
+    try {
+      var del = await sb.from('group_messages').delete().eq('id', id).select('id');
+      if (del.error) throw del.error;
+      if (!del.data || !del.data.length) throw new Error('not permitted');
+      loadedMessages[channel] = (loadedMessages[channel]||[]).filter(function(m){ return m.id!==id; });
+      renderMessages(channel);
+      showToast('Message deleted.');
+    } catch(e){
+      showToast('Could not delete the message yet. Please use Report and we will remove it.');
+    }
+  }
+  async function removeMember(userId){
+    if (!currentGroup || currentGroup.role!=='host') return;
+    if (!confirm('Remove this person from the group? They will need a new invite link to rejoin.')) return;
+    try {
+      var del = await sb.from('group_members').delete().eq('group_id', currentGroup.id).eq('user_id', userId).select('user_id');
+      if (del.error) throw del.error;
+      if (!del.data || !del.data.length) throw new Error('not permitted');
+      showToast('Removed from the group.');
+      await loadMembers(currentGroup.id);
+    } catch(e){ showToast('Could not remove that member.'); }
+  }
+  function adultOk(){
+    try { if (localStorage.getItem('ad_groups_adult_ok')==='1') return true; } catch(e){}
+    var ok = confirm('Study Groups are for adults (18+).\n\nPress OK to confirm you are 18 or older. Under 18? Ask a parent, youth leader or pastor to run the group.');
+    if (ok) { try { localStorage.setItem('ad_groups_adult_ok','1'); } catch(e){} }
+    return ok;
   }
 
   async function joinGroup(id){
@@ -1105,9 +1120,10 @@
   async function createGroup() {
     var name = document.getElementById('group-name').value.trim();
     var desc = document.getElementById('group-desc').value.trim();
-    var privacy = document.getElementById('group-privacy').value;
+    var privacy = 'invite';   // public groups switched off (safety, 2026-09-30)
     var plan = document.getElementById('group-plan').value;
     if (!name) { showToast('Please give your group a name.'); return; }
+    if (!adultOk()) return;
 
     var btn = document.getElementById('create-btn');
     btn.disabled = true; btn.innerHTML = '<span class="spinner"></span>';

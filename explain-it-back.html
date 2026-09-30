@@ -381,6 +381,7 @@
         if(jsonMatch){
           try{
             var fb=JSON.parse(jsonMatch[0]);
+            fb.score=validScore(fb.score);
             showFeedback(fb,txt);
             if(currentUser){saveFeedback(fb,txt);}
           }catch(e){showRawFeedback(raw);}
@@ -389,21 +390,31 @@
     }catch(e){btn.disabled=false;btn.textContent='Submit for feedback';alert('Something went wrong. Please try again.');}
   }
 
+  /* A real 0-10 number, or null. Never invent a score: a missing or malformed
+     grade shows as "—" (a made-up number would be manufactured confidence). */
+  function validScore(v){
+    var n=(typeof v==='number')?v:parseFloat(v);
+    return (isFinite(n)&&n>=0&&n<=10)?Math.round(n):null;
+  }
+  function escText(t){var d=document.createElement('div');d.textContent=String(t==null?'':t);return d.innerHTML;}
+  function asList(v){return Array.isArray(v)?v:(v?[v]:[]);}
+
   function showFeedback(fb, userText){
-    var score=fb.score||5;
-    var badgeCls=score>=8?'excellent':score>=6?'good':score>=4?'ok':'poor';
+    var score=validScore(fb.score);
+    var badgeCls=score===null?'ok':score>=8?'excellent':score>=6?'good':score>=4?'ok':'poor';
     var wrap=document.getElementById('feedback-wrap');
+    document.getElementById('score-badge').style.display='';
     document.getElementById('score-badge').className='score-badge '+badgeCls;
-    document.getElementById('score-badge').textContent=score+'/10';
-    document.getElementById('fb-strengths').innerHTML=(fb.strengths||[]).map(function(s){return'<li>'+s+'</li>';}).join('');
-    document.getElementById('fb-improve').innerHTML=(fb.improvements||[]).map(function(s){return'<li>'+s+'</li>';}).join('');
+    document.getElementById('score-badge').textContent=score===null?'\u2014':score+'/10';
+    document.getElementById('fb-strengths').innerHTML=asList(fb.strengths).map(function(s){return'<li>'+escText(s)+'</li>';}).join('');
+    document.getElementById('fb-improve').innerHTML=asList(fb.improvements).map(function(s){return'<li>'+escText(s)+'</li>';}).join('');
     document.getElementById('fb-model').textContent=fb.model_answer||'';
     wrap.style.display='block';
     wrap.scrollIntoView({behavior:'smooth',block:'start'});
     /* Coach capture — map this tool's arg ids to the registry, then record the score */
     try{
       var _eib2arg={kalam:'kalam',finetuning:'finetuning',moral:'moral',consciousness:'consciousness',minimal:'minimal',emptytomb:'emptytomb',paul_creed:'earlycreed',trilemma:'jesus_claims',divinity:'jesus_as_god_nt',manuscript:'manuscript',deadseascrolls:'deadseascrolls',islamic_dilemma:'trinity_islam',jesus_quran:'trinity_islam'};
-      if(window.Coach && _eib2arg[currentArgId]) Coach.recordExplain(_eib2arg[currentArgId], score, ARGS[currentArgId].title);
+      if(score!==null && window.Coach && _eib2arg[currentArgId]) Coach.recordExplain(_eib2arg[currentArgId], score, ARGS[currentArgId].title);
     }catch(e){}
     sessionHistory.unshift({title:ARGS[currentArgId].title,score:score,time:new Date()});
     renderHistory();
@@ -440,7 +451,7 @@
         user_id:currentUser.id,argument_id:currentArgId,
         argument_title:ARGS[currentArgId].title,
         user_explanation:userText,
-        ai_feedback:JSON.stringify(fb),score:fb.score||null
+        ai_feedback:JSON.stringify(fb),score:validScore(fb.score)
       });
     }catch(e){console.warn('Failed to save session',e);}
   }
@@ -470,9 +481,9 @@
     if(sessionHistory.length===0){section.style.display='none';return;}
     section.style.display='block';
     list.innerHTML=sessionHistory.slice(0,10).map(function(h){
-      var cls=h.score>=8?'hi-ex':h.score>=6?'hi-gd':h.score>=4?'hi-ok':'hi-pr';
+      var cls=h.score===null?'hi-ok':h.score>=8?'hi-ex':h.score>=6?'hi-gd':h.score>=4?'hi-ok':'hi-pr';
       var time=h.time.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-      return'<div class="history-item"><div><div class="hi-title">'+h.title+'</div><div class="hi-meta">Today at '+time+'</div></div><div class="hi-score '+cls+'">'+h.score+'/10</div></div>';
+      return'<div class="history-item"><div><div class="hi-title">'+h.title+'</div><div class="hi-meta">Today at '+time+'</div></div><div class="hi-score '+cls+'">'+(h.score===null?'\u2014':h.score+'/10')+'</div></div>';
     }).join('');
   }
 

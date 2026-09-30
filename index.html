@@ -525,7 +525,7 @@
       border-top: 1px solid rgba(255,255,255,0.1);
     }
     .daily-actions {
-      display: flex; gap: 10px; margin-top: 1.5rem;
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.5rem;
     }
     .daily-btn {
       font-family: var(--font-ui);
@@ -537,6 +537,10 @@
       color: rgba(255,255,255,0.6);
       cursor: pointer;
       transition: all 0.2s;
+      text-decoration: none;
+      display: inline-block;
+      min-height: 44px;
+      line-height: 28px;
     }
     .daily-btn:hover { border-color: var(--gold); color: var(--gold); }
     .streak-row {
@@ -1320,24 +1324,23 @@
     <div class="container">
       <div class="daily-inner">
         <div class="daily-card reveal">
-          <div class="daily-date">Today · Wednesday, 4 June 2026</div>
+          <div class="daily-date" id="daily-date">Today</div>
           <div class="daily-verse">"Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have — but do this with gentleness and respect."</div>
           <div class="daily-ref">1 Peter 3:15</div>
           <div class="daily-reflection">Apologetics is not about winning arguments. It is about loving people enough to think carefully on their behalf. Today, consider who in your life is asking hard questions — and how you might meet them with both truth and grace.</div>
           <div class="daily-actions">
-            <button class="daily-btn">▶ Listen</button>
-            <button class="daily-btn">✦ Pray</button>
-            <button class="daily-btn">↗ Share</button>
+            <a class="daily-btn" href="/daily-devotional.html">Open today&rsquo;s devotional &rarr;</a>
+            <a class="daily-btn" href="/today">Start today&rsquo;s session &rarr;</a>
           </div>
-          <div class="streak-row">
-            <div class="streak-day done">M</div>
-            <div class="streak-day done">T</div>
-            <div class="streak-day done">W</div>
-            <div class="streak-day done">T</div>
-            <div class="streak-day done">F</div>
-            <div class="streak-day today">S</div>
-            <div class="streak-day empty">S</div>
-          </div>
+          <script>
+            /* Live date (was a hardcoded "4 June 2026"). No streak is shown here:
+               this card has no access to the visitor's real progress, and a
+               pre-filled streak would be a fabricated one. */
+            (function(){ try {
+              document.getElementById('daily-date').textContent = 'Today \u00b7 ' +
+                new Date().toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
+            } catch(e){} })();
+          </script>
         </div>
         <div class="reveal">
           <p class="section-eyebrow">Daily Devotional</p>

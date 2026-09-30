@@ -132,7 +132,7 @@ const EXEMPT = new Map([
   ['dashboard.html', 'app shell; renders gated content'],
   ['today.html', 'shell; renders the gated daily items'],
   ['search.html', 'renders search-index.json, which is generated from gated pages'],
-  ['shared-answer.html', 'renders a gated /answers entry'],
+  ['shared-answer.html', 'shows only a shared question (escaped); never renders answer text'],
   ['sources.html', 'renders the /sources corpus, gated by verified:true'],
   ['ask-anything.html', 'shell for api/ask.js, which is itself gated'],
   ['coach.html', 'shell; coaching prompts live in api/*'],

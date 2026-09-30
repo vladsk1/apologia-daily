@@ -1480,19 +1480,23 @@
         }
         if (response.ok) {
           const feedback = payload || await response.json();
-          const overall = parseInt(feedback.overall) || 70;
-          const argument = parseInt(feedback.argument) || 72;
-          const objection = parseInt(feedback.objection) || 65;
+          // Never invent a score. A missing or malformed number (or a genuine 0,
+          // which the old `|| 70` fallback turned into 70) is shown as-is or "—".
+          const sc = (v) => { const n = parseInt(v, 10); return (Number.isFinite(n) && n >= 0 && n <= 100) ? n : null; };
+          const show = (n) => (n === null ? '\u2014' : n);
+          const overall = sc(feedback.overall);
+          const argument = sc(feedback.argument);
+          const objection = sc(feedback.objection);
 
-          document.getElementById('score-overall').textContent = overall;
+          document.getElementById('score-overall').textContent = show(overall);
           if(typeof adMark==='function'){ adMark(); }
           if (window.showJourneyComplete) window.showJourneyComplete('You completed your first debate! That is the hardest step.');
-          document.getElementById('score-argument').textContent = argument;
-          document.getElementById('score-objection').textContent = objection;
+          document.getElementById('score-argument').textContent = show(argument);
+          document.getElementById('score-objection').textContent = show(objection);
 
           /* Coach capture — record this debate as a category-level signal */
           try{
-            if(window.Coach && state && state.opponent){
+            if(overall !== null && window.Coach && state && state.opponent){
               var _opp2cat={atheist:"God's Existence",agnostic:"God's Existence",secularist:"God's Existence",muslim:"The Trinity",jw:"The Trinity",mormon:"The Trinity"};
               Coach.recordDebate('cat:'+(_opp2cat[state.opponent]||"God's Existence"), overall, state.topic||'');
             }
@@ -1504,13 +1508,13 @@
             var ctaEl = document.getElementById('post-debate-upgrade');
             var scoreEl = document.getElementById('post-debate-score');
             if (ctaEl) ctaEl.style.display = 'block';
-            if (scoreEl) scoreEl.textContent = overall;
+            if (scoreEl) scoreEl.textContent = show(overall);
           }
 
           setTimeout(() => {
-            document.getElementById('bar-overall').style.width = overall + '%';
-            document.getElementById('bar-argument').style.width = argument + '%';
-            document.getElementById('bar-objection').style.width = objection + '%';
+            document.getElementById('bar-overall').style.width = (overall || 0) + '%';
+            document.getElementById('bar-argument').style.width = (argument || 0) + '%';
+            document.getElementById('bar-objection').style.width = (objection || 0) + '%';
           }, 100);
 
           const strengths = feedback.strengths || 'You engaged with the debate and made a genuine effort to defend your position.';
