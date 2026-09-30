@@ -120,7 +120,6 @@
     .card-navy .card-question { background: rgba(200,169,81,0.1); border-left: 3px solid var(--g); padding: 0.75rem 1rem; margin-bottom: 1.25rem; font-family: var(--ss); font-size: 0.82rem; color: rgba(255,255,255,0.85); line-height: 1.6; font-style: italic; }
     .card-navy .card-footer { background: rgba(255,255,255,0.05); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
     .card-navy .card-url { font-family: var(--ui); font-size: 0.7rem; color: var(--g); letter-spacing: 0.05em; }
-    .card-navy .card-qr-placeholder { width: 36px; height: 36px; background: var(--g); border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 0.55rem; font-family: var(--ui); color: var(--n); font-weight: 700; text-align: center; line-height: 1.2; }
 
     /* STYLE 2: Gold */
     .card-gold { background: var(--g); color: var(--n); }
@@ -136,7 +135,6 @@
     .card-gold .card-question { background: rgba(5,13,26,0.08); border-left: 3px solid var(--n); padding: 0.75rem 1rem; margin-bottom: 1.25rem; font-family: var(--ss); font-size: 0.82rem; color: rgba(5,13,26,0.85); line-height: 1.6; font-style: italic; }
     .card-gold .card-footer { background: rgba(5,13,26,0.1); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
     .card-gold .card-url { font-family: var(--ui); font-size: 0.7rem; color: var(--n); letter-spacing: 0.05em; font-weight: 600; }
-    .card-gold .card-qr-placeholder { width: 36px; height: 36px; background: var(--n); border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 0.55rem; font-family: var(--ui); color: var(--g); font-weight: 700; text-align: center; line-height: 1.2; }
 
     /* STYLE 3: White */
     .card-white { background: var(--w); color: var(--td); border: 1px solid var(--border); }
@@ -152,7 +150,6 @@
     .card-white .card-question { background: var(--ow); border-left: 3px solid var(--g); padding: 0.75rem 1rem; margin-bottom: 1.25rem; font-family: var(--ss); font-size: 0.82rem; color: var(--tm); line-height: 1.6; font-style: italic; }
     .card-white .card-footer { background: var(--ow); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); }
     .card-white .card-url { font-family: var(--ui); font-size: 0.7rem; color: var(--n5); letter-spacing: 0.05em; }
-    .card-white .card-qr-placeholder { width: 36px; height: 36px; background: var(--n); border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 0.55rem; font-family: var(--ui); color: var(--g); font-weight: 700; text-align: center; line-height: 1.2; }
 
     /* SHARE LINK BOX */
     .share-box { background: var(--w); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem; }
@@ -162,6 +159,11 @@
     .btn-copy { font-family: var(--ui); font-size: 0.78rem; font-weight: 500; background: var(--n); color: var(--w); border: none; border-radius: 3px; padding: 8px 16px; cursor: pointer; white-space: nowrap; transition: background 0.15s; }
     .btn-copy:hover { background: var(--n7); }
     .btn-copy.copied { background: #0f6e56; }
+    .card-footer { gap: 12px; }
+    .card-url { min-width: 0; overflow-wrap: anywhere; line-height: 1.35; }
+    .card-url b { display: block; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.6rem; opacity: 0.8; }
+    .card-qr { width: 58px; height: 58px; flex: 0 0 58px; display: block; border-radius: 3px; image-rendering: pixelated; background: #fff; }
+    .essay-link { display: inline-block; margin-top: 0.9rem; font-family: var(--ui); font-size: 0.9rem; font-weight: 600; color: var(--n); }
     .share-note { font-family: var(--ui); font-size: 0.72rem; color: var(--tm); margin-top: 0.5rem; line-height: 1.5; }
 
     /* TOAST */
@@ -311,6 +313,7 @@
       <div class="card-preview-wrap">
         <div id="card-output"></div>
       </div>
+      <a class="essay-link" id="essay-link" href="/library/">Read the full essay behind this card &rarr;</a>
 
       <!-- SHARE BOX -->
       <div class="share-box">
@@ -319,14 +322,14 @@
           <button class="btn-copy" onclick="shareCard()" style="background:var(--g);color:var(--n);">&#8679; Share image</button>
           <button class="btn-copy" onclick="downloadCard()">&#8681; Download PNG</button>
         </div>
-        <p class="share-note">On mobile — tapping Share opens your device share sheet so you can send the card image directly to WhatsApp, iMessage, Instagram, or email. On desktop — the image is copied to your clipboard, ready to paste anywhere. The card has <strong>apologiadaily.com</strong> printed on it so recipients can find the full argument.</p>
+        <p class="share-note">On mobile — tapping Share opens your device share sheet so you can send the card image directly to WhatsApp, iMessage, Instagram, or email. On desktop — the image is copied to your clipboard, ready to paste anywhere. The card has the address of its full essay and a QR code printed on it, so anyone who receives it can read the whole argument.</p>
         <div class="divider" style="margin:0.75rem 0;"></div>
-        <h3>Or share a link to this argument</h3>
+        <h3>Or share a link to the full essay</h3>
         <div class="link-row">
           <input class="link-input" type="text" id="share-link-input" readonly />
           <button class="btn-copy" id="btn-copy-text" onclick="copyShareLink()">Copy</button>
         </div>
-        <p class="share-note">This link opens this argument on Apologia Daily.</p>
+        <p class="share-note">This link opens the full essay behind this card.</p>
       </div>
     </div>
 
@@ -350,6 +353,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
+  <script src="/lib/pocket-qr.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" integrity="sha384-ZZ1pncU3bQe8y31yfZdMFdSpttDoPmOZg2wguVK9almUodir1PghgT0eY7Mrty8H" crossorigin="anonymous"></script>
   <script>
   var sb = null;
@@ -558,6 +562,8 @@
   function renderCard() {
     var data = getCardData();
     if (!data) return;
+    var essay = essayFor(currentArg);
+    var qr = (window.POCKET_QR || {})[essay] || '';
 
     var styleClass = 'card-' + (currentStyle === 'custom' ? 'navy' : currentStyle);
     // Never trust the colour value in a style attribute — accept only #rrggbb.
@@ -580,27 +586,26 @@
         '<div class="card-question">' + escapeHtml(data.question) + '</div>' +
       '</div>' +
       '<div class="card-footer">' +
-        '<span class="card-url">apologiadaily.com</span>' +
-        '<div class="card-qr-placeholder">SCAN<br>ME</div>' +
+        '<span class="card-url"><b>Read the full essay</b>apologiadaily.com/' + escapeHtml(essay) + '</span>' +
+        (qr ? '<img class="card-qr" src="' + qr + '" alt="QR code for the full essay" width="58" height="58">' : '') +
       '</div>' +
     '</div>';
 
     document.getElementById('card-output').innerHTML = cardHtml;
+    var el = document.getElementById('essay-link');
+    if (el) { el.href = '/' + essay; el.textContent = 'Read the full essay behind this card \u2192'; }
     updateShareLink();
   }
 
+  /* The certified essay behind a card (lib/pocket-qr.js, generated by
+     tools/build-pocket-qr.py). Every card has one; the library index is only a fallback. */
+  function essayFor(arg) {
+    var m = window.POCKET_ESSAY || {};
+    return (arg && m[arg.id]) || 'library/';
+  }
+
   function updateShareLink() {
-    var cat = document.getElementById('sel-category').value;
-    var argId = currentArg ? currentArg.id : '';
-    var baseUrl = 'https://apologiadaily.com/';
-    var page = currentArg && currentArg.link ? currentArg.link : 'evidence-library.html';
-    // evidence-library.html opens the card whose id is "arg-<slug>" from ?arg=<slug>.
-    // These pocket-card ids differ from their hub card's slug, so map them; any other
-    // page (a library essay) is already the argument itself and needs no parameter.
-    var HUB_SLUG = { trilemma: 'jesus_claims', divinity: 'paul-divinity', manuscripts: 'manuscript',
-                     dna: 'originlife', lawsofnature: 'laws', trinity_biblical: 'nt_trinity' };
-    var slug = HUB_SLUG[argId] || argId;
-    var link = baseUrl + page + (slug && page === 'evidence-library.html' ? '?arg=' + slug : '');
+    var link = 'https://apologiadaily.com/' + essayFor(currentArg);
     var input = document.getElementById('share-link-input');
     if (input) input.value = link;
   }

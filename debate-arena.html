@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Debate Arena — Apologia Daily</title>
-  <meta name="description" content="Practice defending your faith against real AI opponents. Choose your topic, pick your difficulty, and get scored feedback after every debate." />
+  <meta name="description" content="Practice defending your faith against real AI opponents. Choose your topic, pick your difficulty, and get written coaching after every debate." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -149,16 +149,13 @@
     .feedback-title { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem; }
     .feedback-title em { font-style: italic; color: var(--navy-600); }
     .feedback-sub { font-family: var(--font-ui); font-size: 0.9rem; color: var(--text-muted); }
-    .score-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2.5rem; }
-    .score-card { background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; text-align: center; }
-    .score-card.score-overall { background: var(--navy-900); border-color: var(--navy-700); }
-    .score-num { font-family: var(--font-display); font-size: 2.8rem; font-weight: 700; line-height: 1; margin-bottom: 6px; }
-    .score-overall .score-num { color: var(--gold); }
-    .score-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
-    .score-overall .score-label { color: rgba(255,255,255,0.4); }
-    .score-bar-wrap { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
-    .score-overall .score-bar-wrap { background: rgba(255,255,255,0.1); }
-    .score-bar { height: 100%; border-radius: 2px; transition: width 1s ease; }
+    .band-card { background: var(--navy-900); border: 1px solid var(--navy-700); border-radius: 4px; padding: 1.5rem 1.75rem; margin-bottom: 2.5rem; }
+    .band-kicker { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 8px; }
+    .band-name { font-family: var(--font-display); font-size: 2rem; font-weight: 700; line-height: 1.1; color: var(--gold); }
+    .band-scale { display: flex; gap: 6px; margin: 12px 0 14px; }
+    .band-scale span { flex: 1; height: 4px; border-radius: 2px; background: rgba(255,255,255,0.12); }
+    .band-scale span.on { background: var(--gold); }
+    .band-summary { font-family: var(--font-body); font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,0.8); }
     .fb-section { background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: 1.75rem; margin-bottom: 1rem; }
     .fb-section-head { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
     .fb-icon { width: 32px; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -196,7 +193,7 @@
     .footer-copy { font-family: var(--font-ui); font-size: 0.75rem; color: rgba(255,255,255,0.2); width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: none; }
-    @media (max-width: 768px) { .score-grid { grid-template-columns: 1fr; } .arena-wrap { padding: 1.25rem; } }
+    @media (max-width: 768px) { .arena-wrap { padding: 1.25rem; } }
       .nav-right { display:flex; align-items:center; gap:10px; }
     .nav-user { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.82rem; color:rgba(255,255,255,0.65); }
     .nav-signout { font-family:var(--font-ui,'DM Sans',sans-serif); font-size:0.78rem; background:none; border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.6); padding:5px 12px; border-radius:3px; cursor:pointer; }
@@ -580,22 +577,11 @@
         <h2 class="feedback-title">Here's how you <em>performed</em></h2>
         <p class="feedback-sub" id="feedback-sub">vs The Atheist · Does God exist? · Challenging</p>
       </div>
-      <div class="score-grid reveal">
-        <div class="score-card score-overall">
-          <div class="score-num" id="score-overall">—</div>
-          <div class="score-label" style="color:rgba(255,255,255,0.4);">Overall Score</div>
-          <div class="score-bar-wrap" style="background:rgba(255,255,255,0.1);"><div class="score-bar" id="bar-overall" style="background:var(--gold);width:0%"></div></div>
-        </div>
-        <div class="score-card">
-          <div class="score-num" id="score-argument" style="color:var(--navy-600);">—</div>
-          <div class="score-label">Argument Strength</div>
-          <div class="score-bar-wrap"><div class="score-bar" id="bar-argument" style="background:var(--navy-500);width:0%"></div></div>
-        </div>
-        <div class="score-card">
-          <div class="score-num" id="score-objection" style="color:var(--navy-600);">—</div>
-          <div class="score-label">Handling Objections</div>
-          <div class="score-bar-wrap"><div class="score-bar" id="bar-objection" style="background:var(--navy-500);width:0%"></div></div>
-        </div>
+      <div class="band-card reveal" id="band-card">
+        <div class="band-kicker">Coach&rsquo;s verdict</div>
+        <div class="band-name" id="band-name">&mdash;</div>
+        <div class="band-scale" aria-hidden="true"><span id="band-s1"></span><span id="band-s2"></span><span id="band-s3"></span></div>
+        <div class="band-summary" id="band-summary"></div>
       </div>
       <div class="fb-section reveal">
         <div class="fb-section-head">
@@ -611,6 +597,13 @@
         </div>
         <div class="fb-content" id="feedback-weaknesses"><div class="fb-loading"><div class="fb-loading-dot"></div><div class="fb-loading-dot"></div><div class="fb-loading-dot"></div><span style="margin-left:6px;">Identifying areas to grow…</span></div></div>
       </div>
+      <div class="fb-section reveal" id="next-section" style="display:none;">
+        <div class="fb-section-head">
+          <div class="fb-icon" style="background:#E6F1FB;"><svg viewBox="0 0 24 24" stroke="#0C447C"><polyline points="9 18 15 12 9 6"/></svg></div>
+          <div class="fb-section-title">Try this next time</div>
+        </div>
+        <div class="fb-content" id="feedback-next"></div>
+      </div>
       <div class="fb-section reveal">
         <div class="fb-section-head">
           <div class="fb-icon" style="background:#EEEDFE;"><svg viewBox="0 0 24 24" stroke="#534AB7"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
@@ -625,7 +618,7 @@
         <a href="evidence-library.html" class="btn-outline">Study the Evidence Library</a>
         <div id="post-debate-upgrade" style="display:none;background:linear-gradient(135deg,var(--navy-950),#0f2040);border:1px solid rgba(200,169,81,0.25);border-radius:8px;padding:1.5rem;margin-top:1.5rem;">
           <div style="font-family:var(--font-display,serif);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">That was your free debate this week</div>
-          <div style="font-family:var(--font-ui,sans-serif);font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:1.25rem;">Your score was <span id="post-debate-score" style="color:#c8a951;font-weight:600;">--</span>/100. Pro users debate every day &mdash; one session a week is not enough to build the muscle. Consistent practice is how confidence in real conversations develops.</div>
+          <div style="font-family:var(--font-ui,sans-serif);font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:1.25rem;">Coach&rsquo;s verdict: <span id="post-debate-score" style="color:#c8a951;font-weight:600;">&mdash;</span>. Pro users debate every day &mdash; one session a week is not enough to build the muscle. Consistent practice is how confidence in real conversations develops.</div>
           <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
             <a href="index.html#pricing" style="font-family:var(--font-ui,sans-serif);font-size:0.85rem;font-weight:600;background:#c8a951;color:#050d1a;padding:10px 22px;border-radius:4px;text-decoration:none;">Pro &mdash; launching soon</a>
             <a href="evidence-library.html" style="font-family:var(--font-ui,sans-serif);font-size:0.85rem;font-weight:500;background:none;color:rgba(255,255,255,0.55);padding:10px 18px;border-radius:4px;text-decoration:none;border:1px solid rgba(255,255,255,0.15);">Study the arguments</a>
@@ -1412,22 +1405,17 @@
         ? `${scenarioName} · ${state.topic}`
         : `vs ${oppNames[state.opponent]} · ${state.topic} · ${state.difficulty.charAt(0).toUpperCase() + state.difficulty.slice(1)}`;
 
-      // Show/hide score cards for conversation mode
-      document.getElementById('score-overall').textContent = '—';
-      document.getElementById('score-argument').textContent = '—';
-      document.getElementById('score-objection').textContent = '—';
-      document.getElementById('bar-overall').style.width = '0%';
-      document.getElementById('bar-argument').style.width = '0%';
-      document.getElementById('bar-objection').style.width = '0%';
+      setBand(null, '');
+      document.getElementById('next-section').style.display = 'none';
 
       if (isConvo) {
-        document.querySelector('.score-grid').style.display = 'none';
+        document.getElementById('band-card').style.display = 'none';
         document.getElementById('feedback-strengths').innerHTML = '<div class="fb-loading"><div class="fb-loading-dot"></div><div class="fb-loading-dot"></div><div class="fb-loading-dot"></div><span style="margin-left:6px;">Reviewing your conversation…</span></div>';
         document.getElementById('feedback-weaknesses').innerHTML = '<div class="fb-loading"><div class="fb-loading-dot"></div><div class="fb-loading-dot"></div><div class="fb-loading-dot"></div><span style="margin-left:6px;">Preparing your coaching…</span></div>';
         document.querySelectorAll('.fb-section')[0].querySelector('.fb-section-title').textContent = 'What you did well';
         document.querySelectorAll('.fb-section')[1].querySelector('.fb-section-title').textContent = 'How to grow from this conversation';
       } else {
-        document.querySelector('.score-grid').style.display = 'grid';
+        document.getElementById('band-card').style.display = '';
         document.getElementById('feedback-strengths').innerHTML = '<div class="fb-loading"><div class="fb-loading-dot"></div><div class="fb-loading-dot"></div><div class="fb-loading-dot"></div><span style="margin-left:6px;">Analysing your arguments…</span></div>';
         document.getElementById('feedback-weaknesses').innerHTML = '<div class="fb-loading"><div class="fb-loading-dot"></div><div class="fb-loading-dot"></div><div class="fb-loading-dot"></div><span style="margin-left:6px;">Identifying areas to grow…</span></div>';
       }
@@ -1500,25 +1488,20 @@
         }
         if (response.ok) {
           const feedback = payload || await response.json();
-          // Never invent a score. A missing or malformed number (or a genuine 0,
-          // which the old `|| 70` fallback turned into 70) is shown as-is or "—".
-          const sc = (v) => { const n = parseInt(v, 10); return (Number.isFinite(n) && n >= 0 && n <= 100) ? n : null; };
-          const show = (n) => (n === null ? '\u2014' : n);
-          const overall = sc(feedback.overall);
-          const argument = sc(feedback.argument);
-          const objection = sc(feedback.objection);
-
-          document.getElementById('score-overall').textContent = show(overall);
+          // Three bands and written coaching, never a number (2026-09-30). A missing
+          // or unknown band is shown as "—", never guessed.
+          const band = BANDS[feedback.band] ? feedback.band : null;
+          setBand(band, feedback.summary || '');
           if(typeof adMark==='function'){ adMark(); }
           if (window.showJourneyComplete) window.showJourneyComplete('You completed your first debate! That is the hardest step.');
-          document.getElementById('score-argument').textContent = show(argument);
-          document.getElementById('score-objection').textContent = show(objection);
 
-          /* Coach capture — record this debate as a category-level signal */
+          /* Coach capture — record this debate as a category-level signal. The Coach
+             keeps a private 0-100 mastery estimate, so each band maps to one value;
+             the user never sees it as a score. */
           try{
-            if(overall !== null && window.Coach && state && state.opponent){
-              var _opp2cat={atheist:"God's Existence",agnostic:"God's Existence",secularist:"God's Existence",muslim:"The Trinity",jw:"The Trinity",mormon:"The Trinity"};
-              Coach.recordDebate('cat:'+(_opp2cat[state.opponent]||"God's Existence"), overall, state.topic||'');
+            if(band && window.Coach && state && state.opponent){
+              var _opp2cat={atheist:"God's Existence",agnostic:"God's Existence",secularist:"God's Existence",muslim:"The Trinity"};
+              Coach.recordDebate('cat:'+(_opp2cat[state.opponent]||"God's Existence"), BANDS[band].coach, state.topic||'', BANDS[band].name);
             }
           }catch(e){}
 
@@ -1528,14 +1511,8 @@
             var ctaEl = document.getElementById('post-debate-upgrade');
             var scoreEl = document.getElementById('post-debate-score');
             if (ctaEl) ctaEl.style.display = 'block';
-            if (scoreEl) scoreEl.textContent = show(overall);
+            if (scoreEl) scoreEl.textContent = band ? BANDS[band].name : '\u2014';
           }
-
-          setTimeout(() => {
-            document.getElementById('bar-overall').style.width = (overall || 0) + '%';
-            document.getElementById('bar-argument').style.width = (argument || 0) + '%';
-            document.getElementById('bar-objection').style.width = (objection || 0) + '%';
-          }, 100);
 
           const strengths = feedback.strengths || 'You engaged with the debate and made a genuine effort to defend your position.';
           const weaknesses = feedback.weaknesses || 'Study the specific arguments in the Evidence Library to sharpen your responses for next time.';
@@ -1558,12 +1535,31 @@
             weaknesses.split('. ').filter(s => s.trim()).map(s =>
               `<p style="margin-bottom:8px;">⚠ ${escHtml(s.trim())}${s.trim().endsWith('.') ? '' : '.'}</p>`
             ).join('');
+
+          if (feedback.next) {
+            document.getElementById('feedback-next').innerHTML = `<p>${escHtml(feedback.next)}</p>`;
+            document.getElementById('next-section').style.display = '';
+          }
         } else {
           showGenericFeedback();
         }
       } catch (error) {
         showGenericFeedback();
       }
+    }
+
+    const BANDS = {
+      strong:     { name: 'Strong defence', level: 3, coach: 85 },
+      developing: { name: 'Getting there',  level: 2, coach: 60 },
+      needs_work: { name: 'Keep practising', level: 1, coach: 35 }
+    };
+    function setBand(band, summary) {
+      const b = band ? BANDS[band] : null;
+      document.getElementById('band-name').textContent = b ? b.name : '\u2014';
+      document.getElementById('band-summary').textContent = summary || '';
+      [1, 2, 3].forEach(function (i) {
+        document.getElementById('band-s' + i).className = b && i <= b.level ? 'on' : '';
+      });
     }
 
     function showGenericFeedback() {
@@ -1573,13 +1569,8 @@
       // who just disclosed something real. A Math.random() score presented as
       // performance is also manufactured confidence, which the site's own standard
       // forbids: confidence must be earned by truth.
-      ['score-overall', 'score-argument', 'score-objection'].forEach(function (id) {
-        var el = document.getElementById(id); if (el) el.textContent = '\u2014';
-      });
-      ['bar-overall', 'bar-argument', 'bar-objection'].forEach(function (id) {
-        var el = document.getElementById(id); if (el) el.style.width = '0%';
-      });
-      document.getElementById('feedback-strengths').innerHTML = '<p>Coaching is unavailable right now, so there is no score for this session &mdash; that is a problem on our side, not a reflection of how you did.</p>';
+      setBand(null, '');
+      document.getElementById('feedback-strengths').innerHTML = '<p>Coaching is unavailable right now, so there is no verdict for this session &mdash; that is a problem on our side, not a reflection of how you did.</p>';
       document.getElementById('feedback-weaknesses').innerHTML = '<p>Your conversation is above. Try again in a moment, or take the topic to the <a href="evidence-library.html">Evidence Library</a>.</p>';
     }
 
@@ -1656,22 +1647,21 @@
   </div>
   <div style="color:rgba(255,255,255,.55);font-size:12.5px;letter-spacing:.16em;font-weight:500;margin-top:36px;">DEBATE ARENA &middot; MY RESULT</div>
   <div style="display:flex;align-items:baseline;gap:8px;margin-top:14px;">
-    <span id="dsScore" style="font-family:'Playfair Display',Georgia,serif;font-size:92px;font-weight:700;color:#c8a951;line-height:1;">--</span>
-    <span style="font-family:'Playfair Display',Georgia,serif;font-size:30px;color:rgba(255,255,255,.5);">/100</span>
+    <span id="dsScore" style="font-family:'Playfair Display',Georgia,serif;font-size:56px;font-weight:700;color:#c8a951;line-height:1.05;">&mdash;</span>
   </div>
   <div id="dsMeta" style="color:rgba(255,255,255,.65);font-size:14.5px;margin-top:14px;letter-spacing:.02em;"></div>
   <div style="width:56px;height:2px;background:#c8a951;margin:26px 0;"></div>
   <div style="font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:600;color:#fff;line-height:1.3;">Could you defend your faith against an AI skeptic?</div>
   <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(200,169,81,.3);padding-top:16px;">
-    <div style="color:rgba(255,255,255,.55);font-size:12.5px;">Take the challenge &mdash; beat my score</div>
+    <div style="color:rgba(255,255,255,.55);font-size:12.5px;">Take the challenge yourself</div>
     <div style="color:#c8a951;font-size:13px;font-weight:600;">apologiadaily.com</div>
   </div>
 </div>
 <script>
 function _dsMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
 function shareDebateCard(btn){
-  var sc = document.getElementById('score-overall');
-  document.getElementById('dsScore').textContent = sc ? sc.textContent : '--';
+  var sc = document.getElementById('band-name');
+  document.getElementById('dsScore').textContent = sc ? sc.textContent : '\u2014';
   var meta = document.getElementById('feedback-sub');
   document.getElementById('dsMeta').textContent = meta ? meta.textContent : '';
   if (typeof html2canvas === 'undefined'){ _dsMsg(btn, 'Still loading - try again'); return; }

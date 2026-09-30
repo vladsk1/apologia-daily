@@ -1,4 +1,6 @@
-// Every pocket card's share link must land on the argument it promises.
+// Every pocket card must carry the way back to its full essay (2026-09-30: the card
+// prints the essay address + a real QR code, and the share link opens the essay).
+// Earlier history: every pocket card's share link must land on the argument it promises.
 //
 // pocket-cards.html builds the link in updateShareLink(): evidence-library.html?arg=<slug>
 // (the hub opens the card with id="arg-<slug>", listed in its ARG_TAB), or a library
@@ -15,31 +17,22 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = (f) => readFileSync(join(ROOT, f), 'utf8');
 
-test('every pocket card share link resolves to its argument', () => {
+test('every pocket card links to its full essay (card print, QR and share link)', () => {
   const pc = read('pocket-cards.html');
-  const cards = [...pc.matchAll(/\{\s*id:\s*'([^']+)'[^\n]*?link:\s*'([^']+)'/g)].map((m) => ({ id: m[1], link: m[2] }));
-  assert.ok(cards.length >= 70, `expected the full deck, parsed ${cards.length}`);
+  const ids = [...pc.matchAll(/\{\s*id:\s*'([^']+)'[^\n]*?link:\s*'([^']+)'/g)].map((m) => m[1]);
+  assert.ok(ids.length >= 70, `expected the full deck, parsed ${ids.length}`);
+  assert.match(pc, /<script src="\/lib\/pocket-qr\.js"><\/script>/, 'pocket-cards.html must load lib/pocket-qr.js');
 
-  const mapSrc = pc.match(/var HUB_SLUG = (\{[\s\S]*?\});/);
-  assert.ok(mapSrc, 'HUB_SLUG map not found in updateShareLink()');
-  const HUB_SLUG = Function(`return (${mapSrc[1]})`)();
-
-  const hub = read('evidence-library.html');
-  const ARG_TAB = JSON.parse(hub.match(/var ARG_TAB = (\{[^;]*\});/)[1]);
-  const hubCards = new Set();
-  for (let i = 1; i <= 8; i++) {
-    const f = `ev-s${i}.html`;
-    if (!existsSync(join(ROOT, f))) continue;
-    for (const m of read(f).matchAll(/id="arg-([^"]+)"/g)) hubCards.add(m[1]);
-  }
+  const js = read('lib/pocket-qr.js');
+  const ESSAY = JSON.parse(js.match(/window\.POCKET_ESSAY = (\{[\s\S]*?\});/)[1]);
+  const QR = JSON.parse(js.match(/window\.POCKET_QR = (\{[\s\S]*?\});/)[1]);
 
   const broken = [];
-  for (const { id, link } of cards) {
-    if (!existsSync(join(ROOT, link))) { broken.push(`${id}: target ${link} does not exist`); continue; }
-    if (link === 'evidence-library.html') {
-      const slug = HUB_SLUG[id] || id;
-      if (!hubCards.has(slug) || !ARG_TAB[slug]) broken.push(`${id}: ?arg=${slug} matches no hub card`);
-    }
+  for (const id of ids) {
+    const path = ESSAY[id];
+    if (!path) { broken.push(`${id}: no essay mapped (run python3 tools/build-pocket-qr.py)`); continue; }
+    if (!/^library\/[\w-]+\.html$/.test(path) || !existsSync(join(ROOT, path))) broken.push(`${id}: ${path} does not exist`);
+    if (!/^data:image\/png;base64,/.test(QR[path] || '')) broken.push(`${id}: no QR code for ${path}`);
   }
-  assert.deepEqual(broken, [], 'pocket-card share links that would not open their argument:\n' + broken.join('\n'));
+  assert.deepEqual(broken, [], 'pocket cards without a working essay link:\n' + broken.join('\n'));
 });

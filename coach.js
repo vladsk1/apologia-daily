@@ -147,8 +147,10 @@
   function recordQuiz(idOrCat, pct, label) {
     record({ id: idOrCat, src: 'quiz', score: Math.max(0, Math.min(1, Number(pct) / 100)), note: 'Quiz \u2014 ' + Math.round(Number(pct)) + '%' + (label ? ' (' + label + ')' : '') });
   }
-  function recordDebate(idOrCat, score100, label) {
-    record({ id: idOrCat, src: 'debate', score: Math.max(0, Math.min(1, Number(score100) / 100)), note: 'Debate Arena \u2014 scored ' + Math.round(Number(score100)) + '/100' + (label ? ' (' + label + ')' : '') });
+  /* verdict: the Arena's band name ('Strong defence' etc.). The Arena no longer shows
+     numbers, so the note names the band; score100 stays a private mastery input. */
+  function recordDebate(idOrCat, score100, label, verdict) {
+    record({ id: idOrCat, src: 'debate', score: Math.max(0, Math.min(1, Number(score100) / 100)), note: 'Debate Arena \u2014 ' + (verdict ? verdict : 'scored ' + Math.round(Number(score100)) + '/100') + (label ? ' (' + label + ')' : '') });
   }
   function recordFlashcards(id, ok) {
     record({ id: id, src: 'flashcard', score: ok ? 0.7 : 0.3, note: ok ? 'Cleared the flashcard deck' : 'Struggled on flashcards' });
