@@ -22,7 +22,7 @@ BASE = 'https://apologiadaily.com/'
 # Pocket-card ids whose essay filename differs from the id (checked against each
 # ev-m page's <link rel="canonical">, never guessed from the filename).
 ALIAS = {
-    'trilemma': 'jesus_claims', 'divinity': 'paul-divinity', 'manuscripts': 'manuscript',
+    'trilemma': 'jesuschar', 'divinity': 'paul-divinity', 'manuscripts': 'manuscript',
     'dna': 'originlife', 'lawsofnature': 'laws', 'trinity_biblical': 'nt_trinity',
     'minimal': 'minimalfacts', 'paul': 'paulconv', 'postresurrection': 'postres',
     'messianic_prophecy': 'messianic-prophecy',
