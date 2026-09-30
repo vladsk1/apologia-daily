@@ -1490,7 +1490,7 @@
           const feedback = payload || await response.json();
           // Three bands and written coaching, never a number (2026-09-30). A missing
           // or unknown band is shown as "—", never guessed.
-          const band = BANDS[feedback.band] ? feedback.band : null;
+          const band = (!isConvo && BANDS[feedback.band]) ? feedback.band : null;
           setBand(band, feedback.summary || '');
           if(typeof adMark==='function'){ adMark(); }
           if (window.showJourneyComplete) window.showJourneyComplete('You completed your first debate! That is the hardest step.');
@@ -1661,6 +1661,7 @@
 function _dsMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
 function shareDebateCard(btn){
   var sc = document.getElementById('band-name');
+  if (!sc || sc.textContent === '\u2014') { _dsMsg(btn, 'No verdict to share'); return; }
   document.getElementById('dsScore').textContent = sc ? sc.textContent : '\u2014';
   var meta = document.getElementById('feedback-sub');
   document.getElementById('dsMeta').textContent = meta ? meta.textContent : '';
