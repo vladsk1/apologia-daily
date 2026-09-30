@@ -1,6 +1,6 @@
 # Study Groups safety migration (2026-09-30)
 
-**Status: NOT YET RUN. The owner must run this once in the Supabase SQL editor.**
+**Status: RUN 2026-09-30 by the owner via Claude in Chrome in the Supabase SQL Editor ("Success. No rows returned").** The two verify queries below were reported by Claude in Chrome as passing (invite-only constraint + `gmsg_delete` policy in place) but were not independently seen from a session. The site code only ever inserts `privacy = 'invite'` (`study-groups.html`), so nothing in the app conflicts with the new constraint. Still owed: the throwaway-account test of Delete / Report / Remove.
 
 ## Why
 
