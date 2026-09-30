@@ -218,7 +218,7 @@ try{ var _c=(new URLSearchParams(location.search).get('c')||'').toLowerCase().re
 var KEY = 'ad_ch_' + SLUG;
 var CIRC = 314.16;
 
-function loadDone(){ try{ var s=JSON.parse(localStorage.getItem(KEY)||'{}'); DONE = s.completed||[]; }catch(e){ DONE=[]; } }
+function loadDone(){ try{ var s=JSON.parse(localStorage.getItem(KEY)||'{}'); DONE = Array.isArray(s.completed) ? s.completed : []; }catch(e){ DONE=[]; } }
 function saveDone(){ try{ localStorage.setItem(KEY, JSON.stringify({started:true,completed:DONE})); }catch(e){} }
 function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 function isDone(n){ return DONE.indexOf(n)!==-1; }
