@@ -26,6 +26,9 @@ ALIAS = {
     'dna': 'originlife', 'lawsofnature': 'laws', 'trinity_biblical': 'nt_trinity',
     'minimal': 'minimalfacts', 'paul': 'paulconv', 'postresurrection': 'postres',
     'messianic_prophecy': 'messianic-prophecy',
+    # 'Evil as Evidence' runs the moral argument's premise 2 (evil presupposes an
+    # objective good); library/evil.html is the problem-of-evil essay, which does not.
+    'evil': 'moral',
 }
 
 def main():
