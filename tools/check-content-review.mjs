@@ -76,6 +76,11 @@ const CONTENT_PATTERNS = [
   /^objection-catcher\.html$/,             // 15-item graded quiz: pick the best reply to a real objection
                                            // (first gated 2026-09-30, four lenses, dual-consensus because
                                            // it carries deity / resurrection / Islam items).
+  /^daily-quiz\.html$/,                    // 90-question graded daily quiz (first gated 2026-09-30,
+                                           // four lenses, dual-consensus: deity / resurrection / Islam
+                                           // items; answer-length + answer-position tells fixed).
+  /^who-said-it\.html$/,                   // 26-quote graded attribution game (first gated 2026-09-30,
+                                           // four lenses; Scripture items removed at owner direction).
   /^daily-mix\.html$/,                      // 43-item graded quiz (first gated 2026-08-19, row 29,
                                            // dual-consensus): same memorised/graded layer as speed-round;
                                            // the answer-length tell (correct = longest option) and
@@ -187,7 +192,7 @@ function changedFiles(base) {
 }
 
 function allContentFiles() {
-  return globSync('{library/**/*.html,ev-s*.html,ev-m-*.html,worldviews.html,pocket-cards.html,speed-round.html,objection-catcher.html,daily-mix.html,study-plans.html,tools/reel/specs/*.json,api/ask.js}').filter(isContent);
+  return globSync('{library/**/*.html,ev-s*.html,ev-m-*.html,worldviews.html,pocket-cards.html,speed-round.html,objection-catcher.html,daily-quiz.html,who-said-it.html,daily-mix.html,study-plans.html,tools/reel/specs/*.json,api/ask.js}').filter(isContent);
 }
 
 /* Everything user-facing that is not explicitly exempt. This is the AUDIT scope,
