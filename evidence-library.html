@@ -43,8 +43,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96)
 .ht em{font-style:italic;color:var(--g);}
 .hs{font-size:1.05rem;color:rgba(255,255,255,.6);max-width:560px;line-height:1.8;}
 .bb{background:rgba(200,169,81,.08);border-bottom:1px solid rgba(200,169,81,.2);padding:10px 2rem;text-align:center;display:none;}
-.bb span{font-family:var(--ui);font-size:.82rem;color:var(--g);}
-.bb a{color:var(--g);font-weight:600;text-decoration:underline;}
+.bb span{font-family:var(--ui);font-size:.82rem;color:#7a5c12;}
+.bb a{color:#7a5c12;font-weight:600;text-decoration:underline;}
 .leg{background:var(--o);border-bottom:1px solid var(--b);padding:.6rem 2rem;}
 .li{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
 .ll{font-family:var(--ui);font-size:.68rem;color:var(--mu);font-weight:500;text-transform:uppercase;letter-spacing:.08em;}
@@ -106,6 +106,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96)
 .cg{font-family:var(--ui);font-size:.78rem;color:var(--mu);}
 .cm{display:flex;align-items:center;gap:10px;}
 .chev{width:18px;height:18px;stroke:var(--mu);fill:none;stroke-width:2;flex-shrink:0;transition:transform .2s;}
+/* Beginner banner inside each tab (2026-09-30): the fragments set color:var(--g) inline,
+   which is 2.0:1 on the cream banner. Deeper gold = 5.5:1. */
+.intro span[style*="color:var(--g)"]{color:#7a5c12 !important;}
+/* Phones (2026-09-30): number beside the title, badge + chevron on their own row. */
+@media(max-width:600px){
+  .ch{flex-wrap:wrap;align-items:flex-start;gap:.5rem .6rem;padding:1.1rem;}
+  .cnum{min-width:auto;font-size:.9rem;line-height:1.7;}
+  .ci{flex:1 1 0;min-width:0;}
+  .cm{flex-basis:100%;justify-content:space-between;padding-left:1.6rem;}
+}
 .card.op .chev{transform:rotate(180deg);}
 .cb{display:none;padding:0 1.5rem 1.5rem 4.5rem;border-top:1px solid var(--b);}
 /* Mobile: reclaim the wasted side space. The desktop .cb left-indent (aligns the
@@ -213,7 +223,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
     .pv>summary{list-style:none;cursor:pointer;padding:12px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
     .pv>summary::-webkit-details-marker{display:none;}
     .pv>summary:hover{background:var(--n4,#f7f4ef);}
-    .pv .pvn{font-family:var(--ui,'DM Sans',sans-serif);font-size:.64rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--g,#a88930);}
+    .pv .pvn{font-family:var(--ui,'DM Sans',sans-serif);font-size:.64rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#7a5c12;}
     .pv .pvt{font-family:var(--fd,'Playfair Display',serif);font-weight:700;font-size:.98rem;color:var(--n,#0a1628);}
     .pv .pvchev{margin-left:auto;color:var(--n3,#8a94a3);font-size:.8rem;transition:transform .15s;}
     .pv[open] .pvchev{transform:rotate(180deg);}
@@ -223,7 +233,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
     .pvb ol.pvlist{margin:8px 0;padding-left:1.2rem;}
     .pvb ol.pvlist li{font-size:.92rem;line-height:1.55;color:var(--n2,#26364d);margin:9px 0;}
     .pvb ol.pvlist li b{color:var(--n,#0a1628);}
-    .pv-more{display:inline-block;margin-top:6px;font-family:var(--ui,'DM Sans',sans-serif);font-size:.8rem;font-weight:600;color:var(--g,#a88930);text-decoration:none;border-bottom:1px solid transparent;}
+    .pv-more{display:inline-block;margin-top:6px;font-family:var(--ui,'DM Sans',sans-serif);font-size:.8rem;font-weight:600;color:#7a5c12;text-decoration:none;border-bottom:1px solid transparent;}
     .pv-more:hover{border-color:var(--g,#c8a951);}
   </style>
   <link rel="stylesheet" href="/ad-nav.css">

@@ -62,6 +62,14 @@ body{padding-top:0 !important}
      over that inline style; nowrap + no-shrink keep Sign out on one line. */
   .adn-user{display:none !important}
   .adn-signout,.adn-dash,.adn-signin{white-space:nowrap;flex-shrink:0}
+  /* Touch targets (2026-09-30 review): the header buttons measured 15-29px tall on a
+     phone, under the 44px minimum. An invisible ::after enlarges only the tappable
+     area; the buttons look exactly the same. Horizontal insets stay small so
+     neighbouring targets do not overlap. */
+  .adn-logo,.adn-signin,.adn-dash,.adn-signout,.adn-cta,.adn-burger{position:relative}
+  .adn-logo::after,.adn-signin::after,.adn-dash::after,.adn-signout::after,.adn-cta::after,.adn-burger::after{content:'';position:absolute;left:-4px;right:-4px;top:50%;height:44px;transform:translateY(-50%)}
+  .adn-cta::after{left:0;right:0}
+  .adn-burger::after{left:50%;width:44px;transform:translate(-50%,-50%);right:auto}
 }
 /* Narrow phones: tighten the bar so the signed-in row fits without overflowing. */
 @media(max-width:420px){
