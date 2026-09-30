@@ -39,7 +39,7 @@
     holy_spirit: DEITY, analogies: DEITY, trinity_islam: DEITY, trinity_jw: DEITY,
     trinity_mormons: DEITY,
     // The Christian Revolution
-    riseofchurch: HARM, persecution: HARM, legacy: HARM, compassion: HARM, progress: HARM,
+    riseofchurch: HARM, persecution: HARM, compassion: HARM, progress: HARM,
     abolition: OPPRESS, equality: OPPRESS
   };
   var WHO = { atheist: 'an atheist', muslim: 'a Muslim', agnostic: 'an agnostic', secularist: 'a secularist' };
