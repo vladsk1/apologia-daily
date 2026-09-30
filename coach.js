@@ -253,7 +253,10 @@
         '<p style="font-family:\'DM Sans\',sans-serif;font-size:0.74rem;color:rgba(255,255,255,0.4);margin-bottom:1rem;">' + esc(p.evidence) + '</p>' +
         '<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:9px;padding:0.4rem 1rem;margin-bottom:1.1rem;">' + steps + '</div>' +
         '<div style="display:flex;gap:0.6rem;flex-wrap:wrap;">' +
-          '<a href="' + esc(p.startHref) + '" style="font-family:\'DM Sans\',sans-serif;font-size:0.85rem;font-weight:600;background:#c8a951;color:#050d1a;padding:10px 22px;border-radius:4px;text-decoration:none;">Start session &rarr;</a>' +
+          /* One site-wide "today's step" (lib/today-step.js): the Coach's pick is
+             carried into Today's session, which puts a Beginner's Path or Study Plan
+             day first when one is active, so this button opens Today (2026-09-30). */
+          '<a href="/today" style="font-family:\'DM Sans\',sans-serif;font-size:0.85rem;font-weight:600;background:#c8a951;color:#050d1a;padding:10px 22px;border-radius:4px;text-decoration:none;">Start today&rsquo;s session &rarr;</a>' +
           '<a href="coach.html" style="font-family:\'DM Sans\',sans-serif;font-size:0.85rem;font-weight:500;color:rgba(255,255,255,0.7);padding:10px 16px;border-radius:4px;text-decoration:none;border:1px solid rgba(255,255,255,0.14);">Full training log</a></div>' +
         convoLink();
     } else {

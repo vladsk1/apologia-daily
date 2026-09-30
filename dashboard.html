@@ -45,6 +45,11 @@
     .welcome-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
     .welcome-title { font-family: var(--font-display); font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; color: var(--text-dark); margin-bottom: 0.25rem; }
     .welcome-title em { font-style: italic; color: var(--navy-600); }
+    /* One "today's step" (2026-09-30, lib/today-step.js): the other per-page
+       suggestions are retired so the dashboard gives a single answer. */
+    #start-here, #also-today-label, #also-today, #rec-card, #weakspot-strip { display: none !important; }
+    #journey-task { display: none; }
+    #journey-block.open #journey-task { display: block; }
     .start-here { background:linear-gradient(rgba(200,169,81,0.06),rgba(200,169,81,0.06)),#0f2040;
       border:1px solid rgba(200,169,81,0.28);
       border-radius:10px; padding:1.15rem 1.35rem; margin-bottom:2rem; }
@@ -342,10 +347,13 @@
             <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#c8a951;margin-bottom:0.2rem;">&#127919; Your First Week &mdash; Guided Journey</div>
             <div style="font-family:var(--font-ui);font-size:0.8rem;color:rgba(255,255,255,0.6);" id="journey-progress-text">You are on day 1 of 7 &mdash; building the foundation</div>
           </div>
-          <div style="font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:#c8a951;" id="journey-day-badge">1/7</div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <button type="button" onclick="document.getElementById('journey-block').classList.toggle('open');this.textContent=document.getElementById('journey-block').classList.contains('open')?'Hide task':'Show this week\u2019s task';" style="font-family:var(--font-ui);font-size:0.72rem;font-weight:600;background:none;border:1px solid rgba(200,169,81,0.45);color:#c8a951;border-radius:4px;padding:6px 10px;cursor:pointer;">Show this week&rsquo;s task</button>
+            <div style="font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:#c8a951;" id="journey-day-badge">1/7</div>
+          </div>
         </div>
       </div>
-      <div style="background:var(--navy-950);border:1px solid rgba(200,169,81,0.25);border-radius:0 0 8px 8px;border-top:none;padding:1.5rem;">
+      <div id="journey-task" style="background:var(--navy-950);border:1px solid rgba(200,169,81,0.25);border-radius:0 0 8px 8px;border-top:none;padding:1.5rem;">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
           <div style="flex:1;">
             <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;" id="focus-step">Day 1 of 7</div>
@@ -368,7 +376,7 @@
       <a href="today.html" id="today-hero" style="display:flex;align-items:center;gap:1.25rem;text-decoration:none;background:var(--navy-950);border:1px solid rgba(200,169,81,0.4);border-radius:8px;padding:1.15rem 1.5rem;margin-bottom:0.75rem;transition:border-color 0.15s;flex-wrap:wrap;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(200,169,81,0.4)'">
         <span style="font-size:1.9rem;flex-shrink:0;" id="today-hero-icon">&#9654;&#65039;</span>
         <div style="flex:1;min-width:220px;">
-          <div style="font-family:var(--font-ui);font-size:0.62rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:2px;">Start here every day</div>
+          <div id="today-hero-kick" style="font-family:var(--font-ui);font-size:0.62rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:2px;">Start here every day</div>
           <div id="today-hero-title" style="font-family:var(--font-serif);font-size:1.3rem;font-weight:700;color:#fff;">Today&rsquo;s session</div>
           <div id="today-hero-sub" style="font-family:var(--font-ui);font-size:0.8rem;color:rgba(255,255,255,0.55);margin-top:2px;">5 minutes &mdash; review what&rsquo;s due &middot; learn today&rsquo;s argument &middot; prove you can say it</div>
         </div>
@@ -2037,6 +2045,27 @@ function closeBeltInfo(){ var m = document.getElementById('belt-modal'); if(m) m
   <script src="/analytics.js" defer></script>
   <script src="/lib/review-queue.js" defer></script>
   <script src="/lib/study-queue.js" defer></script>
+  <script src="/lib/today-step.js" defer></script>
+  <script>
+    /* The Today card carries the single site-wide step (lib/today-step.js):
+       a Beginner's Path day, a Study Plan day or a Coach target when one applies. */
+    function applyTodayStep(){
+      try{
+        if(!window.ADToday) return;
+        var s = ADToday.step(); if(!s || s.source === 'daily') return;
+        var hero = document.getElementById('today-hero'); if(!hero) return;
+        hero.setAttribute('href', s.href);
+        var k = document.getElementById('today-hero-kick'); if(k) k.textContent = 'Your step today \u00b7 ' + s.label;
+        var t = document.getElementById('today-hero-title'); if(t) t.textContent = s.title;
+        var sub = document.getElementById('today-hero-sub'); if(sub) sub.textContent = s.note || '';
+        var b = document.getElementById('today-hero-btn'); if(b) b.textContent = s.source === 'coach' ? 'Start \u2192' : 'Continue \u2192';
+      }catch(e){}
+    }
+    window.addEventListener('load', function(){
+      applyTodayStep();
+      try{ if(window.Coach && Coach.sync) Coach.sync(applyTodayStep); }catch(e){}
+    });
+  </script>
   <!-- Mastery refreshes are now counted in the single "due today" card above and
        reviewed on /today (2026-09-30), so the separate #ad-review-due panel stays hidden. -->
 </body>

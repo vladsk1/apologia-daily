@@ -232,6 +232,8 @@
     </div>
 
     <!-- STEP 1: REVIEW -->
+    <div id="today-step" style="display:none;"></div>
+
     <div class="step open" id="step-1">
       <div class="step-head">
         <div class="step-chip" id="chip-1">1</div>
@@ -338,6 +340,7 @@
 
   <script src="/lib/review-queue.js"></script>
   <script src="/lib/study-queue.js"></script>
+  <script src="/lib/today-step.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
   <script>
   var sb = null, currentUser = null;
@@ -452,6 +455,10 @@
     track('today_opened',{day:dayNum});
     await navAuth();
     if(!currentUser){ var _sub=$('signup-banner'); if(_sub) _sub.style.display='flex'; }
+    // One site-wide "today's step" (lib/today-step.js): shown here when it is a
+    // Beginner's Path day or a Study Plan day.
+    // (coach is skipped here because the Learn step below already targets it)
+    try{ if(window.ADToday) ADToday.render($('today-step'), { skip:['daily','coach'] }); }catch(e){}
     await loadArgument();
 
     // already completed today?

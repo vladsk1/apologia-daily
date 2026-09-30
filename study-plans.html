@@ -1526,6 +1526,19 @@ const plans = [
       var de = document.getElementById('active-plan-day'); if (de) de.textContent = 'Day ' + (done + 1) + ' of ' + active.days;
       var fe = document.getElementById('active-plan-fill'); if (fe) fe.style.width = pct + '%';
     } else { banner.classList.remove('visible'); }
+    recordNextStep(active);
+  }
+
+  /* Record the active plan's next unfinished day so the rest of the site shows the
+     same "today's step" (lib/today-step.js reads 'ad_plan_next'; plumbing only). */
+  function recordNextStep(active) {
+    try {
+      if (!active) { localStorage.removeItem('ad_plan_next'); return; }
+      var pr = getSaved()[active.id] || {}, done = pr.completed || [], next = null;
+      active.weeks.forEach(function (w) { w.days.forEach(function (d) { if (!next && done.indexOf(d.day) === -1) next = d; }); });
+      if (!next) { localStorage.removeItem('ad_plan_next'); return; }
+      localStorage.setItem('ad_plan_next', JSON.stringify({ id: active.id, title: active.title, day: next.day, total: active.days, text: next.text || '' }));
+    } catch (e) {}
   }
 
   function continueActivePlan() {
