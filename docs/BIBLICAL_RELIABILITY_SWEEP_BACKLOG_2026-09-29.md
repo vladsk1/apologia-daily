@@ -81,9 +81,9 @@ This file holds what was deliberately NOT applied. CLAUDE.md rule 9 says pre-exi
   - ✅ DONE 2026-10-01 — P2: The early church actively rejected known pseudepigrapha:
     - Serapion on the Gospel of Peter (Eusebius, *HE* 6.12);
     - Tertullian on the Acts of Paul (*De baptismo* 17).
-  - P3: The rule of faith predates the lists (circularity reply).
-  - P3: Add Colossians 4:16 as the first-century Pauline-collection anchor.
-  - P3: Augustine / Florence as the Catholic-side precedent (neutral symmetry).
+  - ✅ DONE 2026-10-01 — P3: The rule of faith predates the lists (circularity reply).
+  - ✅ DONE 2026-10-01 — P3: Add Colossians 4:16 as the first-century Pauline-collection anchor.
+  - ✅ DONE 2026-10-01 — P3: Augustine / Florence as the Catholic-side precedent (neutral symmetry; Athanasius added for the other side).
   - P4: The Ethiopian and Assyrian NT canons.
   - P4: Melito of Sardis.
   - P4: Cite *Dei Filius* / *Dei Verbum* for the Catholic recognition claim.
@@ -98,7 +98,7 @@ This file holds what was deliberately NOT applied. CLAUDE.md rule 9 says pre-exi
 - **prophecy**
   - ✅ DONE 2026-10-01 — P2: FAQ questions on Isaiah 53 and Crossan.
   - ✅ DONE 2026-10-01 — P2: Boyarin, *The Jewish Gospels*, on pre-Christian suffering-messiah readings (bounded: the rabbinic texts are post-Jesus in their present form; Schäfer's critique included).
-  - P3: Answer the "we = the nations' kings" (52:15) reading and Isa 49:3's Israel-to-Israel mission (49:5–6).
+  - ✅ DONE 2026-10-01 — P3: Answer the "we = the nations' kings" (52:15) reading and Isa 49:3's Israel-to-Israel mission (49:5–6).
   - P3: The Crossan crucifixion concession; the *ka'ari* verbless-clause point; fact-check "most NT scholars … history scripturalized".
   - P4: Isaiah LXX is usually mid-2nd century.
 - **coincidences**
@@ -120,10 +120,10 @@ This file holds what was deliberately NOT applied. CLAUDE.md rule 9 says pre-exi
   - P3: Keith & Le Donne on the criteria.
   - P4: The heading "the objection that should get the last word" → "the objection to answer last".
 - **earlydate**
-  - P3: The Pervo/Tyson second-century steelman.
-  - P3: The 1 Clement / Polycarp / Ignatius terminus.
-  - P3: Wright and France Olivet claims need footnotes.
-  - P3: Move the Sanders "probably pre-70" clause into reply one.
+  - ✅ DONE 2026-10-01 — P3: The Pervo/Tyson second-century steelman.
+  - ✅ DONE 2026-10-01 — P3: The 1 Clement / Polycarp / Ignatius terminus.
+  - ✅ DONE 2026-10-01 — P3: Wright and France Olivet claims need footnotes (claim narrowed to what Adams documents; pages via Adams, not eyeballed).
+  - ✅ DONE 2026-10-01 — P3: Move the Sanders "probably pre-70" clause into reply one.
   - P4: The Gallio anchor.
   - P4: Harmonize Papias's date (c. 110–130 here vs c. 95–110 in `/sources`).
 - **eyewitnesses**
