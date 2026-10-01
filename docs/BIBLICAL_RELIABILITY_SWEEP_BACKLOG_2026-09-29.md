@@ -16,7 +16,20 @@ All 11 finished STAMPABLE with 0 HERESY.
 
 This file holds what was deliberately NOT applied. CLAUDE.md rule 9 says pre-existing optional improvements become backlog rows, not bundle-ins. Each row needs its own gated pass before it ships. **Nothing below is done.**
 
-## Owed next in the same sweep (not optional)
+## ✅ UPDATE 2026-10-01 — cards, mirrors and mastery pages DONE (status measured at commit time)
+- **ev-s4.html cards (11):** swept, gated four lenses, stamped 2026-09-29. Markup fixed (orphan tutor fragments on manuscript + archaeology, unclosed divs on coincidences + names that nested arg-names inside arg-coincidences).
+- **ev-s4.mk.html + ev-s4.es.html:** all 11 cards re-translated card-by-card from the certified English, fidelity-checked FAITHFUL / 0 heresy, polish pass re-checked; stamped 2026-10-01 as AI-translated, pending native-language doctrinal gate.
+- **11 ev-m-* mastery pages:** two fix rounds + narrow final gate + two confirmation passes; all four lenses STAMPABLE, 0 HERESY; stamped 2026-10-01. Changed `checks` regexes tested with node.
+- **library/deadseascrolls.html:** one resurrection-pointer clause added after certification, gated, stamp note r3 (2026-10-01).
+- The card/essay mismatch rows below were settled IN THE CARDS by bounding the cards to their essays. Two remain as **owner decisions** (not defects): whether the **prophecy** card's Tyre/Cyrus/Jeremiah material and the **consistency** card's unity/typology material should get a certified essay section underneath them.
+
+### New rows from the 2026-10-01 mastery gates (not applied; each needs its own gated pass)
+- **ev-m-consistency (P2, structural):** the page argues unity → a single guiding Author (P1–C); `library/consistency.html` is about contradiction vs difference and does not argue that. Same owner decision as the consistency card above.
+- **ev-m-prophecy + library/prophecy.html (P3):** "the way a Roman court would sentence him" (essay line ~173) — no OT text prophesies a Roman sentence; and "distinguished from “my people” who go astray" (essay ~193) blends Isa 53:8 with 53:6. Fix essay and page together.
+- **ev-m-eyewitnesses (P4):** the drill asks for "the honest limit" but neither `checks` nor ARG_PREMISES scores it.
+- **ev-m-deadseascrolls + library/deadseascrolls.html (P4):** "older than any previously available" slightly overclaims (Nash Papyrus is older); "dating to before the time of Christ" could be "some dating to…". Fix at the essay level first.
+
+## (History) Owed next in the same sweep — as written 2026-09-29
 - **Propagate to the other ev-s4 surfaces.** The essay fixes must be carried to:
   - the ev-s4 cards, including `ev-s4.mk.html` and `ev-s4.es.html`;
   - the 11 `ev-m-*` mastery pages, including `ARG_PREMISES`, cards, checks and drill answers.
