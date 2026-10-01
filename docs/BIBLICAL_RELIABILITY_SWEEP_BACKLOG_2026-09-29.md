@@ -25,7 +25,7 @@ This file holds what was deliberately NOT applied. CLAUDE.md rule 9 says pre-exi
 
 ### New rows from the 2026-10-01 mastery gates (not applied; each needs its own gated pass)
 - **ev-m-consistency (P2, structural):** the page argues unity → a single guiding Author (P1–C); `library/consistency.html` is about contradiction vs difference and does not argue that. Same owner decision as the consistency card above.
-- **ev-m-prophecy + library/prophecy.html (P3):** "the way a Roman court would sentence him" (essay line ~173) — no OT text prophesies a Roman sentence; and "distinguished from “my people” who go astray" (essay ~193) blends Isa 53:8 with 53:6. Fix essay and page together.
+- ✅ DONE 2026-10-01 (commit 3358dc6d) — **ev-m-prophecy + library/prophecy.html (P3):** "the way a Roman court would sentence him" (essay line ~173) — no OT text prophesies a Roman sentence; and "distinguished from “my people” who go astray" (essay ~193) blends Isa 53:8 with 53:6. Fix essay and page together.
 - **ev-m-eyewitnesses (P4):** the drill asks for "the honest limit" but neither `checks` nor ARG_PREMISES scores it.
 - **ev-m-deadseascrolls + library/deadseascrolls.html (P4):** "older than any previously available" slightly overclaims (Nash Papyrus is older); "dating to before the time of Christ" could be "some dating to…". Fix at the essay level first.
 
@@ -78,7 +78,7 @@ This file holds what was deliberately NOT applied. CLAUDE.md rule 9 says pre-exi
   - P3: Add the owner's truth-model pointer (resurrection / Jesus' endorsement of Israel's Scriptures) to the conclusion.
   - P4: Bound "already the dominant Jewish text across the land".
 - **canon**
-  - P2: The early church actively rejected known pseudepigrapha:
+  - ✅ DONE 2026-10-01 — P2: The early church actively rejected known pseudepigrapha:
     - Serapion on the Gospel of Peter (Eusebius, *HE* 6.12);
     - Tertullian on the Acts of Paul (*De baptismo* 17).
   - P3: The rule of faith predates the lists (circularity reply).
@@ -88,16 +88,16 @@ This file holds what was deliberately NOT applied. CLAUDE.md rule 9 says pre-exi
   - P4: Melito of Sardis.
   - P4: Cite *Dei Filius* / *Dei Verbum* for the Catholic recognition claim.
 - **archaeology**
-  - P2: Positive Exodus plausibility (Hoffmeier) and the *'eleph* reading.
-  - P2: Kenyon on erosion at Jericho.
+  - ✅ DONE 2026-10-01 — P2: Positive Exodus plausibility (Hoffmeier) and the *'eleph* reading.
+  - ✅ DONE 2026-10-01 — P2: Kenyon on erosion at Jericho.
   - P3: Qeiyafa / Ben-Yosef.
   - P3: A source for Sayce's 1880/1881 paper.
   - P3: The Incirli trilingual *p'l* datum in the Darius paragraph.
   - P3: Cross-link `/answers/was-there-writing-in-early-israel.html`.
   - P4: The Tell Halaf bilingual; Kitchen 1966; the Hezekiah bulla citation (E. Mazar); bibliography gaps for inline-cited works.
 - **prophecy**
-  - P2: FAQ questions on Isaiah 53 and Crossan.
-  - P2: Boyarin, *The Jewish Gospels*, on pre-Christian suffering-messiah readings.
+  - ✅ DONE 2026-10-01 — P2: FAQ questions on Isaiah 53 and Crossan.
+  - ✅ DONE 2026-10-01 — P2: Boyarin, *The Jewish Gospels*, on pre-Christian suffering-messiah readings (bounded: the rabbinic texts are post-Jesus in their present form; Schäfer's critique included).
   - P3: Answer the "we = the nations' kings" (52:15) reading and Isa 49:3's Israel-to-Israel mission (49:5–6).
   - P3: The Crossan crucifixion concession; the *ka'ari* verbless-clause point; fact-check "most NT scholars … history scripturalized".
   - P4: Isaiah LXX is usually mid-2nd century.
@@ -115,7 +115,7 @@ This file holds what was deliberately NOT applied. CLAUDE.md rule 9 says pre-exi
   - P4: Blomberg, "Legitimacy and Limits of Harmonization" (1986).
   - P4: Greenleaf as a `/sources` PD candidate.
 - **jewishness**
-  - P2: The post-70 anachronism objection (John 9:22 *aposynagogos*; Matt 22:7; Matt 23).
+  - ✅ DONE 2026-10-01 — P2: The post-70 anachronism objection (John 9:22 *aposynagogos*; Matt 22:7; Matt 23).
   - P3: Hengel as the answer to Bousset.
   - P3: Keith & Le Donne on the criteria.
   - P4: The heading "the objection that should get the last word" → "the objection to answer last".
@@ -127,7 +127,7 @@ This file holds what was deliberately NOT applied. CLAUDE.md rule 9 says pre-exi
   - P4: The Gallio anchor.
   - P4: Harmonize Papias's date (c. 110–130 here vs c. 95–110 in `/sources`).
 - **eyewitnesses**
-  - P2: Luke 1:1–4 and John 19:35 / 21:24 (port from the ev-s4 card).
+  - ✅ DONE 2026-10-01 — P2: Luke 1:1–4 and John 19:35 / 21:24 (port from the ev-s4 card).
   - P3: Hengel on the uniform Gospel titles.
   - P3: Weeden's critique of Bailey.
   - P4: C. H. Turner's Markan plural-to-singular pattern.
