@@ -57,3 +57,10 @@ revenuecat.json
 # and pullable; excluded here so Vercel never serves it. Delete this line when it
 # has been gated and the owner decides to ship it.
 homepage-v2.html
+
+# For Parents page — RETIRED from the live site 2026-10-01 (owner decision), KEPT in the
+# repo for reintroduction. It presented popular survey statistics as research and was never
+# content-gated. To bring it back: delete this line and the /parents.html redirect in
+# vercel.json, re-add the 'For Parents' item to the nav CANON in tools/sync-nav.mjs (and
+# the dashboard tile), and run it through the content pipeline first. See HANDOFF.md.
+parents.html

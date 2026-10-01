@@ -651,3 +651,7 @@ For any AI-translated page, verify: (a) `<sup>`↔`<li>` footnote parity vs the 
 ## 2026-09-30 — Legacy pages retired permanently
 
 `library/legacy.html` and `ev-m-legacy.html` were deleted (owner ruling). "The Christian Revolution" (the `ev-s8` tab and its seven essays: riseofchurch, persecution, equality, compassion, science-history, abolition, progress) has taken over that material for good; the legacy pages are **not** coming back. Both old URLs 301 to `/evidence-library.html?arg=riseofchurch`. The trust figures dropped to 99 essays / 81 arguments because the placeholder had been counted.
+
+## 2026-10-01 — For Parents page parked (kept for reintroduction)
+
+`parents.html` removed from the live site at the owner's request but kept in the repo: excluded via `.vercelignore`, `/parents.html` 302s to `/`, and its links removed from the nav CANON, `worldviews.html`'s old menu and the dashboard tools grid. Reason: popular survey statistics presented as research; never content-gated. To bring it back: gate it (fix the statistics), then reverse those four changes. See the CLAUDE.md parked note.

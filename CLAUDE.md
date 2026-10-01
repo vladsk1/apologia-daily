@@ -857,6 +857,15 @@
 > `xcards/x-honor-the-son.json`. It's gated content (argument+orthodoxy; +neutrality for
 > deity/Trinity/Islam) — reuse the reel/essay's certified framing; details in the `make-reel` skill.
 >
+> **🅿 PARKED — THE "FOR PARENTS" PAGE IS OFF THE LIVE SITE BUT KEPT FOR LATER. OWNER DECISION, 2026-10-01.**
+> `parents.html` stays **in the repo** but is **not deployed** (`.vercelignore`) and `/parents.html` redirects
+> **temporarily (302)** to `/` (`vercel.json`). Removed from the nav CANON (`tools/sync-nav.mjs`), the old
+> `worldviews.html` menu and the `dashboard.html` tools grid. **Unlike the legacy pages, this one MAY come
+> back** — but only when the owner asks. Why it was pulled: it presented popular survey statistics (Barna-style
+> figures) as research and has **never been content-gated**. To reintroduce: run it through the full content
+> pipeline first (fix the statistics), then undo the four changes above. Its `/api/tutor` parent-question mode
+> and the crisis guard's handling of it are left in place.
+>
 > **🔴 STANDING NOTE — THE "LEGACY" PAGES ARE GONE FOR GOOD. OWNER RULING, 2026-09-30. DO NOT RECREATE THEM.**
 > `library/legacy.html` (the *Dominion*/"Did Christianity change the world?" essay) and its mastery page
 > `ev-m-legacy.html` were **replaced by "The Christian Revolution" (the `ev-s8` tab)** and its seven live,
