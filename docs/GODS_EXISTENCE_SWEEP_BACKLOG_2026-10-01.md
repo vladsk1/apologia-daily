@@ -60,3 +60,47 @@ Corrected in the same commit: `docs/book-research/INDEX.md`, `is-god-real.md`, `
 `on-guard.md`, and `docs/content-backlog.md` rows 214, 289 and 304. Still open: the Meyer list on
 `return-of-the-god-hypothesis.md` line 16 also wrongly lists kalam, finetuning, privileged and moral, where the only "Meyer" is inside the
 review stamp, and canon, whose hit is Marvin Meyer. Only originlife and cambrian actually cite Stephen Meyer.
+
+## Cards phase (ev-s1.html + .mk/.es), 2026-10-02 — logged, not fixed (rule 9)
+
+**Status.** All 12 cards were swept. Four gate rounds returned 0 HERESY. Both mirrors were rebuilt card by card from the
+certified English, and their fidelity was gated FAITHFUL.
+
+Open items:
+
+- **Stale subtitles.** The old card subtitles are still live in `api/push.js` and `daily-args.json`:
+  - "calibrated to extraordinary precision"
+  - "cannot be explained by matter alone"
+  - "we can't trust our own reasoning"
+
+  These need replacing with the new certified subtitles. Gate them as content.
+- **"Fair-minded" Morriston.** `library/kalam.html` still calls Morriston "a fair-minded and persistent critic". The
+  card dropped "fair-minded"; the essay should match. The same applies to the MK mirror's "Морисон" spelling: the cards
+  now use "Мористон".
+- **Kalam timelessness tension.** In `library/kalam.html`, "From a cause to a Creator" says the cause "must be spaceless,
+  timeless", but the fence says the Kalam "settles none" of the God-and-time question. The card mirrors this tension.
+  Settle it essay-first.
+- **Desire card.** The "surprised by Joy … found at last in the God of Christianity" line is loose. In the book, Joy
+  loses its importance after conversion, and the theistic conversion (1929) came before the Christian one (1931). The
+  Pascal, anthropology and Memorial sections have no essay underneath them.
+- **Consciousness card.** "On atheism, consciousness is an accidental by-product" should say naturalism, not atheism.
+- **Religious card.** The mystical-tradition section (Paul; the Teresa/John/Julian portraits; Aquinas as "great Christian
+  mystic") has no essay underneath it.
+- **Reason card.** The FAQ's "Churchland … evolution largely indifferent to truth" overreads her 1987 point. The Pro text
+  "far exceed what survival requires" restates the retired abstract-reasoning reply.
+- **Leibniz and Thomistic cards.** The Pro tier lacks the essay's Russell "just there" exchange, the taxicab objection,
+  Hume/Kant, and the Third Way quantifier-shift note.
+- **Ontological card.** The Gödel deep-dive section has no essay underneath it.
+- **Evil card.** The free Q&A #2 line "The questioner already believes in objective moral reality" overclaims against the
+  internal-critique questioner. The "defence"/"defense" spelling is mixed.
+- **Hub AI-tutor demo.** The demo text on `evidence-library.html` says the universe's "constants are fine-tuned to a
+  precision no human engineer could match" and is "infinitely more complex than any watch". That is unhedged, outside the
+  certified fine-tuning wording, and ungated.
+- **Orthonote box on mobile.** At phone width the "NOT SAYING" label pill clips slightly at the box's left edge. This
+  affects every orthonote (shared CSS), not just the new one.
+- **Native review.** Every Macedonian and Spanish card is still owed a native doctrinal gate. Translator-flagged terms
+  for the native reviewer:
+  - MK "интенционално внатрепостоење" (Brentano)
+  - MK "ортодоксни" (chosen over "православни" for neutrality)
+  - MK "Принцип на доверба" (Credulity)
+  - ES "garantía" (warrant)
