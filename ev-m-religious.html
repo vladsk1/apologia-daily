@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- content-review: {"argument": "2026-07-29", "orthodoxy": "2026-07-29", "by": "2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md."} -->
+<!-- content-review: {"argument": "2026-10-02", "orthodoxy": "2026-10-02", "by": "2026-10-02 OVER-CHARITY + FACT-CHECK SWEEP of the God's Existence mastery pages (owner-directed), following the certified essay (b33206c0) and cards (0575b1ab). Read-only Explore gates, md5-checked, four lenses (citations, argument, orthodoxy incl. clarifier verdict, neutrality). Round 1 reviewed all nine layers, graded layers first (ARG_PREMISES, cards, checks regexes, drill model answer). Fixes were applied by assert-guarded scripts on scratch copies. Rounds 2, 3 and 4 were confirmation gates on the fixed text. All lenses STAMPABLE, 0 HERESY. Every changed checks regex was node-tested: the essay-correct bounded answer passes, and the retired/overclaimed/negated answer fails (contractions handled). Every inline script compiles and the JSON-LD parses. The page now claims no more than its essay, carries the deism-gap fence plus a resurrection pointer, and states a bounded own-voice verdict. NOT RUN: pastoral sign-off (pending site-wide). Remaining pre-existing gaps are logged in docs/GODS_EXISTENCE_SWEEP_BACKLOG_2026-10-01.md, not fixed (rule 9). PRIOR: 2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md.", "citations": "2026-10-02", "neutrality": "2026-10-02"} -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Argument from Religious Experience | Apologia Daily</title>
@@ -310,7 +310,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <h2>The argument in brief</h2>
     <p>Across every culture and century, enormous numbers of people report a direct experience of God or a transcendent reality — not just belief in him, but a sense of encountering him. The argument from religious experience asks us to take this seriously as evidence. The philosopher Richard Swinburne framed its core with what he called the Principle of Credulity: as a basic rule of rationality, if it seems to you that something is present, you should believe it is, unless you have positive reason to doubt it. We apply this trust to ordinary perception all the time. If religious experience is a form of perception, the same default should apply to it.</p>
     <p>So the conclusion is measured: these experiences are genuine, <em>defeasible</em> evidence that God exists. "Defeasible" means it can be overturned by good reasons against it — but in the absence of such defeaters, it carries real weight, especially for the person who has the experience.</p>
-    <p>The honest defender concedes the limits. The experiences are most compelling first-hand and less so as second-hand testimony; and there are serious proposed defeaters — neurological explanations, conflicting reports between religions, the danger of self-deception. The work of the argument is to show that these defeaters, taken fairly, do not succeed in cancelling the experience out, much as the existence of dreams does not make all waking perception untrustworthy.</p>
+    <p>The honest defender concedes the limits. The experiences are most compelling first-hand and less so as second-hand testimony; and there are serious proposed defeaters — neurological explanations, conflicting reports between religions, the danger of self-deception. The work of the argument is to show that these defeaters, taken fairly, do not succeed in cancelling the experience out, much as the existence of dreams does not make all waking perception untrustworthy. Even then, it does not establish on its own which God is real; that rests on revelation — on Christ and Scripture — and on the historical case for the resurrection.</p>
   </section>
 
   <!-- mastery dial -->
@@ -342,7 +342,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         <div class="prem"><div class="tag">P2</div><p>By the <b>principle of credulity</b>, we take experiences at face value unless we have positive reason to doubt them.</p></div>
         <div class="prem concl"><div class="tag">∴ C</div><p>So these experiences are genuine, <b>defeasible evidence</b> that God exists.</p></div>
       </div>
-      <p class="formnote">This argument offers evidence, not proof — and it knows it. The honest defender concedes it is defeasible (it can be overturned by a defeater) and strongest for the experiencer. Most objections are attempts to supply such a defeater; the work is showing they fail.</p>
+      <p class="formnote">This argument offers evidence, not proof — and it knows it. The honest defender concedes it is defeasible (it can be overturned by a defeater) and strongest for the experiencer. Most objections are attempts to supply such a defeater; the work is showing they do not cancel it — though the diversity objection does limit how far it reaches.</p>
 
       <span class="kick" style="margin-top:22px">Then the conceptual step — what kind of case is this?</span>
       <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">Not a deductive proof but a perceptual one: if it seems to someone that God is present, that is some evidence God is present — the same trust we extend to sight and memory — and the sheer scale of such reports is a public datum every worldview must explain.</p>
@@ -360,16 +360,16 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">How we trust all perception</p>
           <p>Swinburne’s principle: if it seems to someone that X is present, then probably X is present, absent special reason to doubt. This is exactly how we trust sight, hearing, and memory.</p>
           <p class="lbl steel">Singling out religion needs a reason</p>
-          <p>To distrust religious perception while trusting all other perception is special pleading — unless a specific defeater is given. The default is to take seeming-experiences seriously.</p>
+          <p>To distrust religious perception while trusting all other perception is special pleading — unless a specific defeater is given. The default is to take seeming-experiences seriously. Critics reply that this parity proves too much — astrology could claim the same shelter — and whether the Principle of Credulity is too permissive is disputed. Our answer: astrology has no coherent object and no morally transforming, self-correcting tradition; a mature religious practice is not epistemically on all fours with it.</p>
         </div>
       </details>
       <details class="acc">
         <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P1 — the scope of the data</summary>
         <div class="body">
           <p class="lbl steel">Not fringe</p>
-          <p>Billions across every culture and era report experience of the transcendent, often life-transforming — changed character sustained over decades, not a passing mood.</p>
-          <p class="lbl steel">Convergent testimony</p>
-          <p>The reports differ sharply in what they describe &mdash; but the sheer volume of testimony to <em>some</em> encounter beyond the self is a public datum every worldview has to place. The principle of testimony adds the weight of many independent witnesses to the same kind of thing.</p>
+          <p>Large numbers of people across radically different societies report experiences they describe as contact with a transcendent reality, often life-transforming — changed character sustained over decades, not a passing mood.</p>
+          <p class="lbl steel">The weight of testimony</p>
+          <p>The reports conflict over <em>what</em> was encountered &mdash; a shared report, not a shared object &mdash; but the sheer volume of such testimony is a genuine data point a complete worldview must explain rather than ignore. Swinburne’s Principle of Testimony says we should normally believe what others report.</p>
         </div>
       </details>
     </div>
@@ -386,7 +386,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Temporal-lobe stimulation and certain drugs can produce religious experiences. They are brain events, not perceptions of God.</p>
           <p class="lbl reply">Reply</p>
-          <p>Every experience has a neural correlate — including your perception of this page. Showing the brain is involved does not show the experience is non-veridical, any more than locating visual-cortex activity disproves the tree you are seeing. A receiver having circuitry does not mean there is no signal.</p>
+          <p>Every experience has a neural correlate — including your perception of this page. Showing the brain is involved does not show the experience is non-veridical, any more than locating visual-cortex activity disproves the tree you are seeing. A receiver having circuitry does not mean there is no signal. And the most cited “debunking” result, Persinger’s “God helmet,” failed a 2005 double-blind replication: suggestibility, not the magnetic field, predicted the reported experiences.</p>
         </div>
       </details>
 
@@ -394,9 +394,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Different religions contradict each other" <span class="badge hard">Hard</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>Hindus meet Krishna, Christians meet Christ, and so on. The conflict cancels the evidential value of all of them.</p>
+          <p>The Advaita Vedantin meets an impersonal Brahman, the Theravada Buddhist no self and no God at all, the Christian a personal, triune God. A practice that systematically delivers incompatible outputs is exactly what an unreliable practice looks like, and you cannot quarantine your own tradition’s reports without special pleading.</p>
           <p class="lbl reply">Reply</p>
-          <p>This limits the argument rather than killing it. The reports conflict at the level of description &mdash; some traditions report no personal God at all &mdash; so experience alone cannot settle <em>which</em> God is real, and that is a real concession. What survives is the more minimal claim: across cultures people report encountering a reality beyond themselves, which is data naturalism must explain. Who has been encountered is settled by revelation, not by the experience. Eyewitnesses disagreeing about details does not mean nothing happened; it weakens specific claims, not the general case — and a Christian can argue some experiences are more veridical than others.</p>
+          <p>This limits the argument rather than killing it. The reports conflict over <em>what</em> was encountered &mdash; some traditions report no personal God at all &mdash; so experience alone cannot settle <em>which</em> God is real, and that is a real concession. What survives the diversity is only the thinner claim that many experiencers took themselves to meet something beyond the physical. That is a shared report, not a shared object: it does not suggest the traditions met the same reality under different names. It leaves the experiencer’s own warrant largely intact while sharply reducing the experience’s force as public proof. Which God is true is settled not by experience but by God’s self-revelation in Christ (John 1:18; 14:9), in Scripture, and by <a href="/library/minimalfacts.html">the historical case for the resurrection</a>.</p>
         </div>
       </details>
 
@@ -421,12 +421,12 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       </details>
 
       <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "It is just wish-fulfilment" <span class="badge mid">Trickier</span></summary>
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "It is just wish-fulfillment" <span class="badge mid">Trickier</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>Freud was right: religious experience is the mind manufacturing the comfort it craves.</p>
+          <p>Freud: religious belief is an “illusion” driven by wish — the helpless psyche projecting a protective cosmic Father. And many experiences do arrive exactly when people most want comfort, in grief, fear, and crisis; that fit is suspicious.</p>
           <p class="lbl reply">Reply</p>
-          <p>That is the genetic fallacy — explaining why someone might want a belief does not show it false (the desire for food does not make food imaginary). And much religious experience is not comforting at all: it is convicting, demanding, even fearful. Wish-fulfilment poorly predicts experiences people would rather not have had.</p>
+          <p>That is the genetic fallacy — explaining why someone might want a belief does not show it false (the desire for food does not make food imaginary). And much religious experience is not comforting at all: it is convicting, demanding, even fearful. Wish-fulfillment poorly predicts experiences people would rather not have had. As a partial account it has value; as a universal solvent it overreaches.</p>
         </div>
       </details>
 
@@ -436,7 +436,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Your experience might be evidence for you, but it is not evidence for me.</p>
           <p class="lbl reply">Reply</p>
-          <p>Partly right — it is strongest for the experiencer. But testimony transmits evidential weight (we believe a great deal on others’ reports), and the cumulative testimony of billions across cultures is a public datum any worldview has to explain. It is one strand in a cumulative case, not a stand-alone proof.</p>
+          <p>Partly right — it is strongest for the experiencer. But testimony transmits evidential weight (we believe a great deal on others’ reports), and the testimony of enormous numbers of people across cultures is a public datum any worldview has to explain. It is one strand in a cumulative case, not a stand-alone proof.</p>
         </div>
       </details>
     </div>
@@ -460,6 +460,10 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         <div class="row">
           <div class="who"><b>Alvin Plantinga</b><span>contemporary · <em>Warranted Christian Belief</em></span></div>
           <div class="what">Argues belief in God can be properly basic via a sensus divinitatis. (We paraphrase — read the originals.)</div>
+        </div>
+        <div class="row">
+          <div class="who"><b>William Alston</b><span>contemporary · <em>Perceiving God</em></span></div>
+          <div class="what">Argued that Christian mystical practice is a belief-forming practice that cannot be shown unreliable without arguments that would also discredit sense perception. (We paraphrase — read the originals.)</div>
         </div>
       </div>
     </div>
@@ -522,7 +526,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       </div>
       <div class="modelans" id="modelAns">
         <div class="lbl">One strong way to answer — in a 1 Peter 3:15 tone</div>
-        <p>"That research is real and fascinating — but notice it proves less than it seems. Every experience you have ever had is brain activity: reading these words is neurons firing in your visual cortex, and we do not conclude the words are not really there. Finding the neural machinery of an experience tells you the brain is the receiver; it does not tell you there is no signal coming in. If God made us to know him, you would expect brain states to be involved when we do — a radio having circuits does not mean the broadcast is imaginary. So the brain data is neutral: it is equally what you would see whether the experiences are hallucinations or genuine perceptions. The interesting questions are the ones it cannot settle — the cross-cultural convergence, the life-transformation, the experiences nobody wanted."</p>
+        <p>"Two things. First, the most famous version — Persinger’s “God helmet” — did not hold up: in 2005 a Swedish double-blind team led by Pehr Granqvist found the magnetic field made no measurable difference — suggestibility predicted the reported experiences instead. Second, even where real brain correlates are found, notice what they show. Every experience you have ever had is brain activity: reading these words is neurons firing in your visual cortex, and we do not conclude the words are not really there. Finding the neural machinery of an experience tells you the brain is the receiver; it does not tell you there is no signal coming in. If God made us to know him, you would expect brain states to be involved when we do — a radio having circuits does not mean the broadcast is imaginary. So the brain data is neutral: it is equally what you would see whether the experiences are hallucinations or genuine perceptions. The interesting questions are the ones it cannot settle — the sheer scale of the reports, the life-transformation, the experiences nobody wanted."</p>
       </div>
     </div>
   </section>
@@ -658,7 +662,7 @@ function setCheck(id, on){
 /* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
 /* ---- argument premises used to ground the AI scoring ---- */
 var ARG_PREMISES = [
-  'Vast numbers of people across cultures report direct experience of God.',
+  'Enormous numbers of people across cultures report not merely belief but encounter - contact with something beyond the world and, in the theistic traditions, with God.',
   'By the principle of credulity, take experiences at face value absent reason to doubt.',
   'So religious experience is genuine, defeasible evidence that God exists.'
 ];
@@ -734,7 +738,7 @@ function renderMockScore(txtRaw){
     {ok:/experience|perceiv|encounter|report/.test(t), hit:'Premise 1 - you noted the breadth of religious experience', miss:'State Premise 1 - across cultures people report experiencing God'},
     {ok:/credulity|face value|testimon|trust|seem/.test(t), hit:'Premise 2 - you invoked the principle of credulity', miss:'State Premise 2 - take experience at face value absent a defeater'},
     {ok:/brain|neur|wish|culture|different relig|chemistry/.test(t), hit:'Good - you engaged a defeater', miss:'Engage at least one defeater - brain chemistry, priming, or conflicting religions'},
-    {ok:/evidence|god|defeasible|not proof/.test(t), hit:'Conclusion - you framed it as evidence for God', miss:'Draw the conclusion: defeasible evidence that God exists'},
+    {ok:/defeasible|(not|n[^\sa-z]t) (a )?proof|(not|n[^\sa-z]t) prove|evidence,? not proof|some evidence|(real|genuine|rational) (evidence|warrant)|evidence (that|for|of) god|strongest for the (experiencer|person|one who)|(?<!(?:\bnot|never|cannot|n[^\sa-z]t) (?:be )?)overturn/.test(t), hit:'Conclusion - you framed it as evidence for God', miss:'Draw the conclusion: defeasible evidence that God exists'},
     {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth - you developed it, not just listed it', miss:'Go a bit deeper - a full reconstruction runs longer than this'}
   ];
   var score = 0, feed = '';
@@ -755,9 +759,9 @@ function renderMockScore(txtRaw){
 const cards = [
   {q:'State the principle of credulity.', a:'If it seems to someone that X is present, then probably X is present - unless there is special reason to doubt. It is how we trust all perception.'},
   {q:'Reply to: it is just brain chemistry.', a:'Every experience has a neural correlate, including seeing a tree. A brain mechanism does not show the experience is false - a receiver having circuitry does not mean there is no signal.'},
-  {q:'Reply to: different religions contradict.', a:'It limits the argument; it does not kill it. The reports genuinely conflict - some traditions report no personal God at all - so experience alone cannot settle WHICH God is real; revelation does. What survives is narrower: across cultures people report encountering a reality beyond themselves, and naturalism still has to explain that. That argues to a Creator, not that every religion is equally true; eyewitnesses disagreeing on details does not mean nothing happened.'},
-  {q:'Reply to: it is wish-fulfilment.', a:'Genetic fallacy - wanting a belief does not make it false. And much religious experience is unwelcome: convicting, fearful, demanding - a poor fit for comfort-projection.'},
-  {q:'How strong is the argument meant to be?', a:'Defeasible evidence, not proof - strongest for the experiencer, but the cumulative testimony of billions is a public datum every worldview must explain.'}
+  {q:'Reply to: different religions contradict.', a:'It limits the argument; it does not kill it. The reports conflict over WHAT was encountered - some traditions report no personal God at all - so experience alone cannot settle which God is real. What survives is only the thinner claim that many experiencers took themselves to meet something beyond the physical: a shared report, not a shared object. It leaves the experiencer’s own warrant largely intact while sharply reducing the experience’s force as public proof. Which God is true rests on revelation - on Christ and Scripture - and on the historical case for the resurrection.'},
+  {q:'Reply to: it is wish-fulfillment.', a:'Genetic fallacy - wanting a belief does not make it false. And much religious experience is unwelcome: convicting, fearful, demanding - a poor fit for comfort-projection.'},
+  {q:'How strong is the argument meant to be?', a:'Defeasible evidence, not proof - for the experiencer, real rational warrant a third party is not entitled to dismiss as obviously irrational; for everyone, a genuine data point a complete worldview must explain. One strand in a cumulative case.'}
 ];
 let ci = 0;
 function renderCard(){

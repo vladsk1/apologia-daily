@@ -104,3 +104,34 @@ Open items:
   - MK "ортодоксни" (chosen over "православни" for neutrality)
   - MK "Принцип на доверба" (Credulity)
   - ES "garantía" (warrant)
+
+## Mastery-page phase (12 ev-m-* pages), 2026-10-02: logged, not fixed (rule 9)
+
+**Status.** All 12 pages were swept and passed 4 gate rounds with 0 HERESY. Every changed answer-checker regex was tested in node.
+
+Open items:
+
+- **Answer checkers (regex gaps).**
+  - **Thomistic:** "never sustains" / "does not now sustain" still pass the sustainer check.
+  - **Religious:** "cant / cannot possibly / impossible to overturn" still pass the defeasibility check. Other branches accept those answers anyway.
+  - **Leibniz:** "matter-energy is the necessary being" (no article) slips the guard. checks[1] credits "the universe is not contingent", and checks[3] `god` matches "godless".
+  - **Kalam:** checks[1] uses a 40-character window.
+  - **Desire:** `real` matches "really".
+  - **No page has a check that rewards a bounded verdict.**
+- **Pages without an essay underneath them.**
+  - **Beauty:** the "surplus" framing (P2 label, SEO, flashcard 5) has no essay base, since the essay argues "two residues". The brain-reward objection also has none.
+  - **Desire:** the wish-fulfillment accordion and card 4 have no essay base. The Pascal and anthropology sections, and "scent not flower", are unattributed or unsourced.
+  - **Ontological:** the Gödel section and the Malcolm row have no essay base. The formnote says "standard modal system S5" without the caveat.
+  - **Leibniz:** the Taylor row has no essay base, and there is no van Inwagen objection.
+  - **Fine-tuning:** the Martin Rees SEO mention, "billions of them", "rarely disputed", and the measure-problem and "mostly empty universe" objections are not on the page.
+- **Objections still to add.**
+  - **Kalam:** Oppy's brute-fact objection, "Isn't God infinitely old?", and the Aquinas/Maimonides seam.
+  - **Thomistic:** the Oppy objection (needs the simplicity/Trinity fence), Hume/Kant, the Third Way quantifier shift, and the card-1 non-sequitur.
+  - **Consciousness:** the phenomenal-concept reply.
+  - **Reason:** a teleosemantics accordion.
+  - **Moral:** the "evil commanded in the Bible" accordion has no essay underneath it, and Mackie's queerness argument is missing.
+  - **Evil:** answer Draper. "Evil as Evidence" is paired with a defensive essay, which is the owner decision already logged.
+- **Navigation and labelling.**
+  - **Mismatched argument counters.** The library counters across pages do not agree ("12 of 19" vs "1 of 22", "Four more…").
+  - **End-of-page CTAs.** The ontological and religious end-of-page calls to action count evil among the "cases for God".
+  - **Template boxes.** The "hardest objection" boxes on a few pages still say "answers it at length".

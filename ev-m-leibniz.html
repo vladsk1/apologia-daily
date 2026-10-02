@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- content-review: {"argument": "2026-07-29", "orthodoxy": "2026-07-29", "by": "2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md."} -->
+<!-- content-review: {"argument": "2026-10-02", "orthodoxy": "2026-10-02", "by": "2026-10-02 OVER-CHARITY + FACT-CHECK SWEEP of the God's Existence mastery pages (owner-directed), following the certified essay (b33206c0) and cards (0575b1ab). Read-only Explore gates, md5-checked, four lenses (citations, argument, orthodoxy incl. clarifier verdict, neutrality). Round 1 reviewed all nine layers, graded layers first (ARG_PREMISES, cards, checks regexes, drill model answer). Fixes were applied by assert-guarded scripts on scratch copies. Rounds 2, 3 and 4 were confirmation gates on the fixed text. All lenses STAMPABLE, 0 HERESY. Every changed checks regex was node-tested: the essay-correct bounded answer passes, and the retired/overclaimed/negated answer fails (contractions handled). Every inline script compiles and the JSON-LD parses. The page now claims no more than its essay, carries the deism-gap fence plus a resurrection pointer, and states a bounded own-voice verdict. NOT RUN: pastoral sign-off (pending site-wide). Remaining pre-existing gaps are logged in docs/GODS_EXISTENCE_SWEEP_BACKLOG_2026-10-01.md, not fixed (rule 9). PRIOR: 2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md.", "citations": "2026-10-02", "neutrality": "2026-10-02"} -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Contingency Argument (Leibniz) | Apologia Daily</title>
@@ -310,7 +310,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <h2>The argument in brief</h2>
     <p>The Leibnizian cosmological argument starts from a famous question Gottfried Leibniz pressed: "Why is there something rather than nothing?" Its engine is the Principle of Sufficient Reason — the idea that whatever exists has an explanation of its existence, either in the necessity of its own nature or in an external cause. The universe, by contrast, looks contingent: it exists, but there seems to be no reason it <em>had</em> to exist, and it could have been otherwise. If the universe is contingent, it cannot be the explanation of itself, so its explanation must lie in a being that exists necessarily — a being whose non-existence is impossible. That necessary, self-existent ground is what believers call God.</p>
     <p>Unlike the Kalam argument, this one does not depend on the universe having a beginning. Even an eternal universe would still be contingent and still require an explanation for why it exists at all. The whole case therefore turns on two points: whether the Principle of Sufficient Reason holds, and whether the universe is genuinely contingent rather than itself necessary.</p>
-    <p>In fairness, a skeptic can call the universe a "brute fact" needing no explanation, or treat the cosmos itself as the necessary being. The argument does not claim to be a knock-down proof; it claims that a necessary, personal ground is a more satisfying explanation than an unexplained brute fact, and it leaves further questions about that being's character to other arguments.</p>
+    <p>In fairness, a skeptic can call the universe a "brute fact" needing no explanation, or treat the cosmos itself as the necessary being. The argument does not claim to be a knock-down proof; our judgment, held with confidence rather than certainty, is that "the universe is just there" is a possible answer but not the better one: it stops explaining exactly where the question begins. That is not yet the whole Christian faith, which rests on revelation and on the historical evidence for the resurrection of Jesus.</p>
   </section>
 
   <!-- mastery dial -->
@@ -340,12 +340,12 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <div class="syllogism">
         <div class="prem"><div class="tag">P1</div><p>Whatever exists has an <b>explanation</b> of its existence — in the necessity of its own nature or in an external cause.</p></div>
         <div class="prem"><div class="tag">P2</div><p>The <b>universe is contingent</b> — it exists, but it could have failed to exist.</p></div>
-        <div class="prem concl"><div class="tag">∴ C</div><p>Therefore the universe’s explanation lies in a <b>necessary being</b> — which is God.</p></div>
+        <div class="prem concl"><div class="tag">∴ C</div><p>Therefore the universe’s explanation lies in a <b>necessary being</b> — the terminus Leibniz called God.</p></div>
       </div>
-      <p class="formnote">The form is valid — deny the conclusion and you must reject a premise. So every objection lands on either the Principle of Sufficient Reason (P1) or the claim that the universe is contingent (P2). Spot which one, and you are halfway to the answer.</p>
+      <p class="formnote">The conclusion follows with one step the deep dive makes explicit: the cause of all contingent things cannot itself be one more contingent thing, on pain of needing a further explanation. So objections land on the Principle of Sufficient Reason (P1), the claim that the universe is contingent (P2), or that extra step. Spot which one, and you are halfway to the answer.</p>
 
       <span class="kick" style="margin-top:22px">Then the conceptual step — what must this necessary being be?</span>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">A being whose explanation lies in its own nature cannot be contingent, cannot depend on anything, and cannot fail to exist. That rules out matter and energy, which come in arbitrary amounts and could always have been otherwise.</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">A being whose explanation lies in its own nature cannot be contingent, cannot depend on anything, and cannot fail to exist. That makes matter and energy, which come in arbitrary amounts and seemingly could have been otherwise, poor candidates.</p>
       <div class="chiprow">
         <span class="chip">necessary</span><span class="chip">self-existent</span><span class="chip">uncaused</span><span class="chip">eternal</span><span class="chip">the ground of all contingent things</span><span class="chip gold">and plausibly personal</span>
       </div>
@@ -357,8 +357,8 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <details class="acc">
         <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P1 — the Principle of Sufficient Reason</summary>
         <div class="body">
-          <p class="lbl steel">The bedrock of reason</p>
-          <p>Every rational inquiry assumes things have explanations — that is what it means to look for a reason at all. Deny the principle and science, history, and ordinary thought collapse into magic.</p>
+          <p class="lbl steel">The intuition</p>
+          <p>Things do not just happen to be the case for no reason whatsoever; reality is, at bottom, intelligible. To deny the principle is to say some things exist for no reason at all — which, on reflection, is harder to believe than the premise.</p>
           <p class="lbl steel">A modest version</p>
           <p>The argument needs only the modest claim that whatever exists has some explanation — in its own nature or in a cause. That avoids overreach while still ruling out sheer brute existence.</p>
         </div>
@@ -367,7 +367,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P2 — the universe is contingent</summary>
         <div class="body">
           <p class="lbl steel">It could have been otherwise</p>
-          <p>Nothing about the universe is self-explanatory: the constants, the amount of matter, the laws could all have been different, or absent. A thing that could have failed to exist does not carry the reason for its own existence.</p>
+          <p>Nothing about the universe is self-explanatory: we can readily conceive the constants, the amount of matter, and the laws as different, or absent altogether. A thing that could have failed to exist does not carry the reason for its own existence.</p>
           <p class="lbl steel">Necessity belongs elsewhere</p>
           <p>Matter and energy are exactly the kind of thing that comes in arbitrary quantities and configurations. A truly necessary being could not be otherwise — which is not how the physical world looks.</p>
         </div>
@@ -377,7 +377,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <div class="card">
       <span class="kick">The hard part — objections, answered</span>
       <h4>The objections you will actually meet</h4>
-      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">This is what separates someone who has heard of the argument from someone who can defend it. Each of these gets its strongest form first, then the reply — and the hardest objection of all is flagged above.</p>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">This is what separates someone who has heard of the argument from someone who can defend it. Each of these gets its strongest form first, then the reply — and the hardest objection of all is flagged below.</p>
       <p class="hardest"><b>The one that matters most:</b> Oppy&rsquo;s &mdash; a necessary God is a terminus too, and on a bare count of entities his ledger is shorter. The <a href="/library/leibniz.html">deep dive</a> answers it at length &mdash; take it with you, not just the replies below.</p>
 
       <details class="acc">
@@ -386,7 +386,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Why add God? Maybe the universe just exists necessarily — it is the brute necessary thing, and no further explanation is required.</p>
           <p class="lbl reply">Reply</p>
-          <p>The universe shows every mark of contingency: different constants, a different amount of matter, or no universe at all were all genuinely possible. A necessary being could not be otherwise in any possible world — and the universe plainly could. Matter is the wrong kind of thing to be necessary.</p>
+          <p>The universe does not look necessary. A necessary being must exist in every possible world and could not have been otherwise in any respect. But we can readily conceive the universe with different laws, different particles, or not at all — and a being whose every part could have been different is a poor candidate for something that exists by the sheer necessity of its own nature.</p>
         </div>
       </details>
 
@@ -396,7 +396,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Russell’s line: the universe is just there, and that is all. We can simply reject the Principle of Sufficient Reason for the universe itself — some things have no explanation.</p>
           <p class="lbl reply">Reply</p>
-          <p>A brute fact is an admission of defeat, not an explanation — and we accept it nowhere else in rational life. Applying the principle everywhere inside the universe but suspending it for the universe itself is the taxicab fallacy: using the rule until it becomes inconvenient. The modest principle leads to no absurdity, so there is no principled reason to exempt the universe.</p>
+          <p>If the universe is brute, the principle — even in its modest form — has been abandoned at the crucial point, and the naturalist owes an account of why this universe rather than any other. A brute initial state explains nothing about why it obtains, while a necessary ground that freely chooses to create explains both that there is a world and why it is contingent. So "the universe is just there" is a possible answer but not the better one. That is our judgment, held with confidence rather than certainty.</p>
         </div>
       </details>
 
@@ -406,7 +406,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>If you explain every contingent thing by a prior contingent thing — even an infinite chain — you have explained everything. Asking for a further explanation of the whole collection is a fallacy.</p>
           <p class="lbl reply">Reply</p>
-          <p>Even an infinite chain of contingent things is itself contingent. Explaining each link by the previous link never answers why there is any chain at all rather than nothing. A contingent series, however long, still needs a non-contingent ground outside the series.</p>
+          <p>Explaining each link by the previous link never answers why there is any chain at all rather than nothing. A contingent series, however long, still seems to need explaining. Whether contingency transfers from parts to whole is exactly the question, and some properties do transfer (a wall built entirely of brick is itself brick). A whole composed entirely of contingent things, with no necessary member anywhere in it, has nothing within it that grounds its existence.</p>
         </div>
       </details>
 
@@ -416,7 +416,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>If every fact has a sufficient reason that necessitates it, then nothing is contingent and no choice is free — the principle leads to modal collapse and refutes itself.</p>
           <p class="lbl reply">Reply</p>
-          <p>The argument uses the modest principle (everything has an explanation), not the strong rationalist one (every fact is necessitated). That is enough to run the argument, and it is why the modal-collapse worry does not arise: the modest principle asks for an explanation, not for a necessitating cause.</p>
+          <p>The theist has two moves. First, Gale and Pruss reformulate the principle as a weak PSR — not "every fact has an explanation" but "every fact possibly has an explanation." This far more modest claim is meant to run a cosmological argument while sidestepping the modal-collapse worry — though Oppy has argued that, given the argument's other modal premises, the weak principle entails the strong one after all, which is why the second move matters. Second, explanation by free choice explains the world without making it necessary: a free agent could have chosen otherwise. The reply leans on a libertarian view of free will, itself disputed — but the defender's position is reasonable, not desperate.</p>
         </div>
       </details>
 
@@ -436,7 +436,17 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Even granting the universe has an explanation, you cannot leap straight to God. It could be some unknown necessary cause we have no concept of.</p>
           <p class="lbl reply">Reply</p>
-          <p>The argument does not start from the word God. It reasons to the properties the explanation must have — necessary, self-existent, the cause of all space, time, and matter, plausibly personal — and notes these are exactly the core attributes classical theism ascribes to God. It is an inference to what the ground must be like, not a label slapped on a mystery.</p>
+          <p>The argument does not start from the word God. It reasons to the properties the explanation must have — necessary, self-existent, the cause of all space, time, and matter, plausibly personal — and notes these are exactly the core attributes classical theism ascribes to God. It is an inference to what the ground must be like, not a label slapped on a mystery. Still, it is not yet the full God of Christian worship: the inference to the triune God revealed in Jesus Christ requires the rest of the case — moral, historical, and revelatory.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "The cosmos itself can be the stopping point" <span class="badge hard">Hard</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>Explanation must stop somewhere — but the naturalist can take the stopping point to be the cosmos itself, or its <em>initial state</em>. Either way, naturalism has a terminus. And by a principle of parsimony, whatever explanatory role the theist assigns to God, the naturalist can assign to nature itself — positing one fewer entity, and so winning on simplicity.</p>
+          <p class="lbl reply">Reply</p>
+          <p>But parsimony only breaks ties between explanations that explain equally well, and these do not: a brute initial state explains nothing about why it obtains, while a necessary ground that freely chooses to create explains both that there is a world and why it is contingent. The exchange ends in a judgment about which terminus is more plausibly necessary and more genuinely explanatory — and on both counts the theist's is the better one.</p>
         </div>
       </details>
     </div>
@@ -446,11 +456,11 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <h4>Where this comes from — primary sources, not our summary</h4>
       <div class="src">
         <div class="row">
-          <div class="who"><b>Gottfried Leibniz</b><span>18th c. · <em>Monadology</em></span></div>
+          <div class="who"><b>Gottfried Leibniz</b><span>1714 · <em>Principles of Nature and Grace</em>; <em>Monadology</em></span></div>
           <div class="what">Framed the Principle of Sufficient Reason and the question behind the whole argument: why is there something rather than nothing?</div>
         </div>
         <div class="row">
-          <div class="who"><b>Samuel Clarke</b><span>18th c. · <em>Leibniz–Clarke correspondence</em></span></div>
+          <div class="who"><b>Samuel Clarke</b><span>1705 · <em>A Demonstration of the Being and Attributes of God</em></span></div>
           <div class="what">Developed the contingency argument in detail and defended it against early objections.</div>
         </div>
         <div class="row">
@@ -459,7 +469,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         </div>
         <div class="row">
           <div class="who"><b>William Lane Craig</b><span>contemporary</span></div>
-          <div class="what">Gave the clean three-line formulation used here and defends the link from a necessary being to God. (We paraphrase — the originals reward the time.)</div>
+          <div class="what">Gave the argument's most widely discussed modern formulation (<em>Reasonable Faith</em>, ch. 3) and defends the link from a necessary being to God. (We paraphrase — the originals reward the time.)</div>
         </div>
       </div>
     </div>
@@ -522,7 +532,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       </div>
       <div class="modelans" id="modelAns">
         <div class="lbl">One strong way to answer — in a 1 Peter 3:15 tone</div>
-        <p>"I get the instinct, but notice we never accept a brute fact anywhere else — every science assumes things have explanations. To switch that rule off only for the universe is the taxicab fallacy: you cannot ride everything-has-a-reason your whole life and then wave the cab away at the one question that points beyond the physical. And the universe looks deeply contingent — different constants, a different amount of matter, or nothing at all were all possible. Contingent things get their explanation from something outside themselves. Follow that all the way down and you reach something that cannot fail to exist."</p>
+        <p>"I get the instinct, and &lsquo;the universe is just there&rsquo; is a possible answer — but not the better one: it stops explaining exactly where the question begins. Things do not just happen to be the case for no reason whatsoever; if the universe is brute, the principle has been abandoned at the crucial point, and you still owe an account of why this universe rather than any other, or none. And the universe doesn't look necessary: we can readily conceive it with different laws, different particles, or not at all. Follow its explanation all the way down and you reach something that cannot fail to exist — the kind of thing that could actually answer the question."</p>
       </div>
     </div>
     <!-- memory palace (folded in from the standalone tool) -->
@@ -670,7 +680,7 @@ function setCheck(id, on){
 var ARG_PREMISES = [
   'Everything that exists has an explanation, in its own necessity or in an external cause.',
   'The universe is contingent - it exists but could have failed to.',
-  'Therefore the universes explanation lies in a necessary, transcendent being - what classical theism calls God, though naming that being the Father, Son and Holy Spirit is the work of revelation.'
+  'Therefore the universe’s explanation lies in a necessary, transcendent being - what classical theism calls God, though naming that being the Father, Son and Holy Spirit is the work of revelation.'
 ];
 
 /* Real AI scoring via /api/tutor (same method as explain-it-back.html).
@@ -742,8 +752,8 @@ function renderMockScore(txtRaw){
   var t = (txtRaw||'').toLowerCase();
   var checks = [
     {ok:/explanation|sufficient reason|psr/.test(t) && /exist/.test(t), hit:'Premise 1 - you named the principle that what exists has an explanation', miss:'Premise 1 is missing - say that whatever exists has an explanation, in its nature or a cause'},
-    {ok:/contingent|could have|might not|necessary being|necessary/.test(t), hit:'Premise 2 - you flagged the universe as contingent', miss:'Premise 2 is thin - say the universe is contingent and could have failed to exist'},
-    {ok:/necessary being|external cause|ground|self-exist/.test(t), hit:'Good - you reasoned to a necessary, self-existent ground', miss:'Push to the necessary being - the ground that cannot fail to exist'},
+    {ok:/\bcontingen|could have (failed|been otherwise|not existed|been different)|might not have existed|need not have existed|could fail to exist/.test(t), hit:'Premise 2 - you flagged the universe as contingent', miss:'Premise 2 is thin - say the universe is contingent and could have failed to exist'},
+    {ok:/necessar(y|ily) (being|ground|mind|cause|foundation|exist\w*)|exists? necessarily|self-exist|cannot fail to exist|could not (have )?fail(ed)? to exist/.test(t) && !/(?<!of )\b(the|this|our|a) ?(universe|cosmos|world|multiverse|matter-energy|matter|physical reality) (itself )?(exists? necessarily|necessarily exists?|is (itself )?(the |a )?(necessary|self-exist))/.test(t), hit:'Good - you reasoned to a necessary, self-existent ground', miss:'Push to the necessary being - the ground that cannot fail to exist'},
     {ok:/god|mind|personal/.test(t), hit:'Nice - you connected the necessary being to God', miss:'Close the loop: the necessary being is what theism calls God'},
     {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth - you developed it, not just listed it', miss:'Go a bit deeper - a full reconstruction runs longer than this'}
   ];
@@ -764,10 +774,10 @@ function renderMockScore(txtRaw){
 /* ---- flashcards (generated from this argument) ---- */
 const cards = [
   {q:'State the Principle of Sufficient Reason (P1).', a:'Everything that exists has an explanation of its existence - either in the necessity of its own nature or in an external cause.'},
-  {q:'What is the taxicab fallacy?', a:'Using the Principle of Sufficient Reason everywhere, then dismissing it the moment it points beyond the universe. You cannot ride the cab your whole life and wave it away at your stop.'},
-  {q:'Reply to: the universe is just a brute fact.', a:'A brute fact is a refusal to explain, not an explanation. We accept it nowhere else, so exempting only the universe is arbitrary - the taxicab fallacy.'},
-  {q:'Reply to: explaining each part explains the whole.', a:'Even an infinite chain of contingent causes is itself contingent. Why this chain rather than none? The whole series still needs a non-contingent ground.'},
-  {q:'Why must the necessary being be more than a number?', a:'Abstract objects are causally impotent - a number cannot cause a universe. The ground of contingent reality must be able to cause, and plausibly chooses - so it is a mind, not a number.'}
+  {q:'Reply to the taxicab objection: the theist uses the PSR, then dismisses it at God.', a:'Premise 1 never said everything has an external cause; God satisfies the principle as the being whose explanation lies in his own necessary nature. The taxi is not dismissed; it arrives at its proper destination.'},
+  {q:'Reply to: the universe is just a brute fact.', a:'A brute initial state explains nothing about why it obtains, while a necessary ground that freely chooses to create explains both that there is a world and why it is contingent. “The universe is just there” is a possible answer but not the better one.'},
+  {q:'Reply to: explaining each part explains the whole.', a:'Why this chain rather than none? A whole composed entirely of contingent things, with no necessary member anywhere in it, has nothing within it that grounds its existence.'},
+  {q:'Why must the necessary being be more than a number?', a:'Abstract objects are causally impotent - a number cannot cause a universe. The ground of contingent reality must be able to cause, and plausibly chooses - so it is plausibly a mind, not a number.'}
 ];
 let ci = 0;
 function renderCard(){
