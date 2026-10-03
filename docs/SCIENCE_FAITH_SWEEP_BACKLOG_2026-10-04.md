@@ -132,3 +132,56 @@ Macedonian style inconsistencies that do not change meaning:
 - "Move N" rendered three ways;
 - "brute" rendered as суров/гол;
 - Мајер/Мејер and Акс/Екс spellings.
+
+## Mastery pages (ev-m-*.html) — swept 2026-10-04
+
+All 7 are re-gated and stamped. ev-m-cosmic was re-based on its essay, and the other six were edited. The items below were logged and not fixed (rule 9).
+
+### Off-page twins still carrying retired wording
+- **palace.html, Memory-Palace rooms:**
+  - originlife room (~l.396): "Chemistry alone never writes language" and "only ever traces back to a mind" (overclaim).
+  - laws room (l.408–410): "imply a Lawgiver" and "signature of a Lawgiver" (retired pun).
+  - "First Light" (bigbang) room: "flare into being from nothing" and "Cosmology points to an absolute beginning".
+  - Each needs its own gate.
+- **daily-args.json:**
+  - bigbang: "Atheist cosmologist Alexander Vilenkin", "cannot be past-eternal", and the Penzias "five Books of Moses" quote (INDEX flags it as do-not-use).
+  - cosmic: "many careful thinkers".
+- **ev-s5.html #arg-laws headline:** "best explained by a rational Lawgiver" (the same pun as the subtitle twins already logged).
+- **Rebuild** objections.json (`tools/build-objections.mjs`) and search-index.json after the mastery card changes, if they draw from the ev-m decks.
+
+### Corpus boilerplate (all ev-m pages)
+- The library counters disagree: "Argument N of 19" vs "1 of 22" vs "Twenty-one more".
+- The drill prompt "State both premises, the conclusion, and what the cause must be like" is a kalam leftover on the design pages.
+- "Each gets its best form first" and the "Strongest form" labels sit close to the retired `objections-never-a-strawman` wording. The swept pages now say "Each is stated as you will actually meet it, then answered", but many un-swept pages still carry the old line. Consider a retired-claims entry.
+- **Scorer residue:** the "proves" overclaim cap added to ev-m-privileged should also go onto ev-m-beauty, which has the same gap.
+
+### Per page
+- **bigbang:**
+  - chip "a beginning that demands a cause" → "asks for a cause";
+  - the M8c reply's "it should be labeled as such" reads oddly in a reply.
+- **cosmic:**
+  - h1 and breadcrumb still read "Cosmic Purposiveness";
+  - "the hardest objection of all is flagged above" (it is below);
+  - Aristotle row "every purposiveness argument";
+  - Wigner row "a fact begging explanation";
+  - the discoverability port could add "a suggestive pattern, not a demonstrated correlation".
+- **mathematics:**
+  - meta/og "is what you'd expect if a mind made it" → "more at home";
+  - Platonism reply's "owes an account of the bridge" → "sharpens rather than solves".
+- **laws:**
+  - Support-P2 "there's no reason a mindless cosmos should be ordered" overclaims (port: "There is no obvious reason a physical cosmos should be transparent to thought");
+  - Support-P1 title and meta "governed by … laws" presuppose the governing view and lack "so far as we can measure";
+  - Drill 3 has nested straight quotes;
+  - check 4 includes `brute`, which check 2 also requires.
+- **originlife:**
+  - cards[3] could add "one strand of a convergent case".
+- **cambrian:**
+  - visible P1 vs ARG_PREMISES[0] wording differs;
+  - conclusion "best explanation" vs the essay's "best current explanation";
+  - the SEO summary says "sudden origin" (the chip now says "rapid");
+  - the "Working biologists…" sentence sits after the resurrection pointer.
+- **privileged:**
+  - cards[4] "our clear vantage" → "comparatively";
+  - the eyes/atmosphere caveat appears four times (trim);
+  - the common-cause objection is missing (P3);
+  - no Jefferys row in "Touch the originals".
