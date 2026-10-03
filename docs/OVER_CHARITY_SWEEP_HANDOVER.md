@@ -34,7 +34,7 @@ Key commits: e1d48130, 8837947f, a943383c (Jesus); 790641b4, 42d06b8f, 51589c4c 
 ### Next, in the owner's order
 1. ~~**Biblical Reliability (ev-s4)**~~ — ✅ COMPLETE 2026-10-01 (essays 185d2045; cards + MK/ES mirrors + 11 mastery pages in the 2026-10-01 commit). Leftovers: docs/BIBLICAL_RELIABILITY_SWEEP_BACKLOG_2026-09-29.md
 2. ~~**God's Existence (ev-s1)**~~ — ✅ COMPLETE 2026-10-02 (essays b33206c0; cards + MK/ES rebuilt 0575b1ab; 12 mastery pages acfbfbb6). Leftovers: docs/GODS_EXISTENCE_SWEEP_BACKLOG_2026-10-01.md
-3. **Science & Faith (ev-s5)**
+3. ~~**Science & Faith (ev-s5)**~~ — ✅ COMPLETE 2026-10-04 (8 essays 7da9efd1; 8 cards + MK/ES rebuilt 86a0e8d7; 7 mastery pages ec74f3eb — ev-m-cosmic RE-BASED on its essay; there is no ev-m-miracles). Leftovers: docs/SCIENCE_FAITH_SWEEP_BACKLOG_2026-10-04.md. ⚠ objections.json is STALE site-wide (148 harvested vs 178 on rebuild, incl. a new 'General' bucket) and `tools/build-objections.mjs` fails on Windows (URL-pathname bug) — rebuild deliberately as its own reviewed change, not as a sweep side-effect.
 4. **The Christian Revolution (ev-s8)**
 
 ev-s7 has no cards. For each tab work in this order: **essays → cards (+ ev-sN.mk.html / .es.html) → mastery pages (ev-m-*)**. Find a tab's essays and mastery pages from the card links in ev-sN.html. Resolve each mastery page's essay by its `<link rel="canonical">`, not by filename.
