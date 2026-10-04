@@ -17,7 +17,7 @@ Here is what each currently covers:
 
 Several essays used to promise that "companion essays set them out in full". Those promises have been corrected, so they no longer claim it.
 
-**Decision needed:** should this record have a certified home? The options are a new essay, or a section in an existing essay such as `progress` or `riseofchurch`.
+**✅ DECIDED 2026-10-04 (owner): leave it as is.** No new essay and no new section. The seven essays keep their per-topic admissions of failure (abolition, equality, science-history), and that is the intended scope. Do not re-raise this as a gap.
 
 ## Book check: page numbers taken only from Scrivener's footnotes, NOT added
 Scrivener's editions may be paginated differently from ours, so each needs checking against the edition our essay cites:
