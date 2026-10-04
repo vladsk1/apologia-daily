@@ -220,7 +220,7 @@ Classified against the five paired essays read in full at the top of this note.
   essay, not this one). Four-lens dual-consensus (one fix pass + confirmation round), all CLEAN/STAMPABLE.
 - **[Missing → P3] Ch. 3 monotheistic false-witness lever (1 Cor 15:15)** → `library/disciplesbelief.html`,
   strengthening the anti-hoax step. Clean and distinctive; grep-confirmed absent.
-- **[Weaker-in-ours → P3] Ch. 4 ground the "no clinical mechanism" claim in the literature** →
+- ✅ **DONE (shipped 2026-09-29, commit `850a934e`; row flipped 2026-10-04)** — `appearances.html` now cites Bergeron & Habermas, *ITQ* 80.2 (2015). *History:* **[Weaker-in-ours → P3] Ch. 4 ground the "no clinical mechanism" claim in the literature** →
   `library/appearances.html`: cite **Bergeron & Habermas 2015** (collective hallucinations absent from the
   peer-reviewed medical literature) for the sentence currently resting on assertion. ⚠ This primary is
   already partly mapped in `docs/article-research/bergeron-habermas-psychiatric-hypotheses.md` — check that
@@ -233,7 +233,7 @@ Classified against the five paired essays read in full at the top of this note.
 - **[Weaker/clarity → P4] Ch. 8 "causal pathways, not frequencies" + explicit prior-vs-posterior** →
   `library/miracles.html` (McGrew, SEP "Miracles"). Modest clarity upgrade; we already carry Earman +
   the rare-≠-weak-evidence point. **Do NOT import the 99.4% figure.**
-- **[Missing → P4] Ch. 6 Bolt 1996 (*Tyndale Bulletin*, open-access) "empty tomb of a hero?"** → a lead for
+- ✅ **DONE (shipped 2026-09-29, commit `850a934e`; row flipped 2026-10-04)** — `emptytomb.html` now carries Bolt 1996 at length. *History:* **[Missing → P4] Ch. 6 Bolt 1996 (*Tyndale Bulletin*, open-access) "empty tomb of a hero?"** → a lead for
   `library/emptytomb.html` or `library/uniqueness.html` (rebuts the Hellenistic hero-translation parallel).
 - **[Missing → P4] James Ware, *NTS* 2014** (*egeirō*/*anastasis* = bodily revivification) → a peer-reviewed
   reinforcement for the bodily-resurrection point on `appearances.html`/`emptytomb.html`. Also **Phlegon**
