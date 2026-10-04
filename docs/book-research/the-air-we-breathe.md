@@ -2,6 +2,29 @@
 
 > **⚠ PARTIAL — capture in progress.** See the **Capture status** table below for exactly which pages are
 > mapped and which are not. Nothing outside the captured range has been read, and no verdict below covers it.
+> *(Superseded: the capture is now complete — see **MINING STATUS** below.)*
+
+> **🔴 RE-HOMED 2026-10-04 — `library/legacy.html` IS GONE; READ EVERY `legacy.html` MENTION BELOW AS HISTORY.**
+> The note's original counterpart essay, `library/legacy.html`, was live only 22–23 Aug 2026, replaced by a
+> "coming soon" placeholder on 23 Aug, redirected on 24 Aug, and **deleted on 30 Sep 2026** (owner ruling:
+> never recreate it). Its material now lives in the seven ev-s8 **"The Christian Revolution"** essays —
+> `library/{riseofchurch,persecution,equality,compassion,science-history,abolition,progress}.html` — swept and
+> certified 2026-10-04 (essays `fa58eff1`, cards `5256b10a`, mastery pages `282cc81d`). The **Live-door status**
+> table, the **Standing output**, the **Hazards** and the ch. 7/8 cross-check verdicts have been re-pointed to
+> those essays, each re-home checked against the live file on 2026-10-04. Chapter-map prose that says what
+> `legacy.html` "lacks" or "already makes" is a dated 2026-08-23 verdict, kept as a record — **not a to-do.**
+> ⚠ The owner decided on 2026-10-04 that the church's crimes ledger (Crusades, Inquisition, etc.) has **no
+> dedicated home**; the seven essays' per-topic admissions (abolition, equality, science-history) are the
+> intended scope. That is **not a gap** and must not be re-logged as one.
+> **Fact corrections applied the same day** (old → new, so nobody re-derives from the old figure): the two
+> Tacitus loci were **swapped** (*Histories* 4.11 is *servili supplicio*, the slave's punishment; *Annals* 15.44
+> is the "extreme penalty"); Minucius Felix's Christian voice is ***Octavius* 37**, not 12; Telemachus is
+> **c. 404**, not 401; Aristotle *Politics* 7.1335b reads "no deformed child shall **live**", not "shall be
+> reared"; Temkin's Soranus is **1956** (repr. 1991), not 1991; Hurtado's *Destroyer of the gods* is **2016**,
+> not 2017; Harper's *From Shame to Sin* is **2013**, not 2016; the Thurman line is from Thurman's own ***Deep
+> River*** (Cone only quotes it); Douglass's 1848 letter to Auld closes **"your fellow man, but not your
+> slave"**, not with "a brother"; and (not on the sweep's list, but measured against `abolition.html` fn 10)
+> Davis's *Slavery and Human Progress* is **1984**, not 1986.
 
 **Book:** Glen Scrivener, *The Air We Breathe: How We All Came to Believe in Freedom, Kindness, Progress,
 and Equality*.
@@ -14,8 +37,10 @@ wording against NIV 2011 before assuming it matches whatever translation our pag
 
 *(All of the above is read directly off the owner's own copy — cover and copyright page photographed
 2026-08-23 — not from a catalogue or a web lookup. ⚠ The copyright page prints **no place of publication**.
-Our live citation in `library/legacy.html` gives "Epsom: The Good Book Company, 2022"; the year and
-publisher are now confirmed against the book, the **place is not** and came from elsewhere.)*
+Our live citation in `library/legacy.html` gave "Epsom: The Good Book Company, 2022"; the year and
+publisher are now confirmed against the book, the **place is not** and came from elsewhere. History, measured 2026-10-04: the
+five essays that now cite the book give "The Good Book Company, 2022" with no place, so the unverified
+"Epsom" is no longer on the site.)*
 
 ## How to use this note (read before mining)
 
@@ -26,7 +51,10 @@ publisher are now confirmed against the book, the **place is not** and came from
 - **Popular level, and it says so.** Scrivener writes: philosophy/theology background, "more of an 'ideas'
   person", "a relatively short book" (p. 19). He names his own scholarly upstream (see *The reading list
   Scrivener hands you*, below) — **that list is the mining target, not the book's own prose.**
-- **We already cite this book.** `library/legacy.html` fn 5 + bibliography carries it, and it is named in
+- **We already cite this book.** *(Updated 2026-10-04.)* Five of the seven Christian Revolution essays cite
+  it in footnote and bibliography — `equality.html` fn 15, `compassion.html` fn 6, `science-history.html` fn 6,
+  `abolition.html` fn 10, `progress.html` fn 10/11/12/14 (measured 2026-10-04); it was originally cited at
+  `library/legacy.html` fn 5 (deleted 2026-09-30). It is also named in
   `tools/reel/specs/air-we-breathe.json`. So the spine is live and certified: **this note is mostly
   corroboration, and its value is in four or five specific things the essay does not have.**
 - **⚠⚠ The one hard do-not-use is on p. 30 — see HAZARD 1 (the Plato/Callicles epigraph). It is the kind of
@@ -45,6 +73,12 @@ Read **start to finish before opening the book** — article body, footnotes and
 
 Routing basis: `library/index.html` blurbs + the `ev-s8` "The Church in History" tab, which is the tab
 this book sits under. The four above are the whole of the on-site counterpart; no fifth essay came close.
+
+*(History, 2026-10-04: this Step Zero list is the 2026-08-23 state. `legacy.html` no longer exists; the tab
+is now "The Christian Revolution" with seven essays — `riseofchurch`, `persecution`, `equality`,
+`compassion`, `science-history`, `abolition`, `progress`. The 2026-10-04 over-charity + fact-check sweep
+cross-checked all seven against this note; its residue is in
+`docs/CHRISTIAN_REVOLUTION_SWEEP_BACKLOG_2026-10-04.md`.)*
 
 ---
 
@@ -121,7 +155,7 @@ Mangalwadi, *The Book That Made Your World*** · **Rodney Stark, *The Triumph of
 Dickson, *Bullies and Saints*** · **Joseph Henrich, *The WEIRDest People in the World***.
 
 ⚠ **Name collision to avoid:** Scrivener recommends **Stark's** *The Triumph of Christianity* (2011).
-`library/riseofchurch.html` fn 7 cites **Ehrman's** *The Triumph of Christianity* (2018) — a different book
+`library/riseofchurch.html` fn 5 (was fn 7 before the 2026-10-04 sweep; re-measured 2026-10-04) cites **Ehrman's** *The Triumph of Christianity* (2018) — a different book
 with the same title, used for a *lower* estimate of Christian numbers. Do not let these merge in a citation.
 
 ### W.E.I.R.D. (pp. 20–21)
@@ -235,7 +269,8 @@ revolutionary notion the world has ever entertained."
     ⭐ **This is the beat with the most value for us: the ancient anthropology is that humans exist to be
     the gods' labour force, made from a murdered god's blood.** Set against Genesis 1:27 that is a
     contrast of *kind*, not of degree — and it is the missing first half of the imago-Dei argument
-    `library/legacy.html` already makes.
+    `library/legacy.html` already made. *(✅ Now made on `library/equality.html`, "What the old stories took for
+    granted" — verified 2026-10-04.)*
 12. **Propping up the cosmos** (pp. 37–39). Standing at the foot of a cross a Roman had "a gutter-level
     view of the whole terrifying structure of reality that towered above": the cross came down from violent
     powers on high to crush the contemptible and maintain the "just" order of the empire — of the cosmos.
@@ -262,13 +297,13 @@ revolutionary notion the world has ever entertained."
 | "Wretched is the loss of one's good name… the very word 'cross' [kept] far from the bodies, thoughts, eyes and ears of Roman citizens" | **Cicero, *Pro Rabirio*** (n. 4 gives *Speech before Roman Citizens on Behalf of Gaius Rabirius, Defendant Against the Charge of Treason*, ed. W. B. Tyrrell, Perseus, ch. 5 §16) | The classic shame text. **Verify at *Pro Rabirio Perduellionis Reo* 5.16.** |
 | Crucifixion "the most miserable and most painful punishment, appropriate to slaves alone" | **Cicero, *Against Verres*** (n. 7, Perseus, Yonge ed., 2.5 §169) | |
 | "It is a crime to bind a Roman citizen; to scourge him is a wickedness; to put him to death is almost parricide. What shall I say of crucifying him?" | **Cicero, *Against Verres*** (n. 8, Perseus, §170) | The owner has underlined this one in the copy. |
-| Crucifixion as "the extreme penalty" | **Tacitus, *Histories* 4.11** (n. 5) | ⚠ Scrivener prints "Historiae 4.11". Verify — the famous *supplicium extremum* / "extreme penalty" phrase our essays associate with Tacitus is usually cited from *Annals* 15.44. **Check both before citing.** |
-| The cross as "the slave's punishment" | **Tacitus, *Annals* 15.44** (n. 6) | The *servile supplicium* idea. |
+| Crucifixion as "the extreme penalty" | as the book gives it: **Tacitus, *Histories* 4.11** (n. 5) | 🔴 **CORRECTED 2026-10-04 — the two Tacitus loci in this note were SWAPPED.** The "extreme penalty" (Christus *supplicio adfectus*) is ***Annals* 15.44**; *Histories* 4.11 is the *servili supplicio* passage (next row). |
+| The cross as "the slave's punishment" | as the book gives it: **Tacitus, *Annals* 15.44** (n. 6) | 🔴 **CORRECTED 2026-10-04:** the *servili supplicio* ("the slave's punishment") is ***Histories* 4.11** — which is how `library/equality.html` cites it, alongside Cicero and Hengel. Not *Annals* 15.44. |
 | Pedanius Secundus: 400 slaves crucified, AD 61; Cassius' speech; "only by terror"; "some injustice in every great precedent" | **Tacitus** (n. 9 cites a university course page hosting the passage) | 🔴 **The book's cited URL is a course web page, not an edition.** The passage is **Tacitus, *Annals* 14.42–45**. Cite the *Annals* directly, verified. |
 | "[our torturers were commanded] to think and act as if we no longer existed" | **"The Writings of Phileas the Martyr describing the Occurrences at Alexandria"**, CCEL/NPNF (n. 10) | ⭐ **PD and already in our wheelhouse** — NPNF is exactly the translation class `/sources` accepts. **`/sources` candidate.** |
 | "Nature herself intimates that it is just for the better to have more than the worse… Justice consists in the superior ruling over and having more than the inferior" | printed as **"(Plato, 428–438 BC)"** | 🔴🔴 **HAZARD 1 — DO NOT PORT. See below.** |
-| "For that some should rule and others be ruled is a thing not only necessary, but expedient; from the hour of their birth, some are marked out for subjection, others for rule" | printed as **"(Aristotle, 384–322 BC)"** | **Genuine Aristotle, in his own voice — *Politics* 1254a21–24.** `library/legacy.html` already cites *Politics* 1.3–7 (1253b–1255b); this is the sharpest single line inside that range. |
-| "At the core of ancient thinking [was] the assumption of natural inequality" | **Larry Siedentop, *Inventing the Individual* (Penguin, 2015), p. 51** (n. 11) | ⭐ **Siedentop is already in `library/legacy.html` fn 12** — but only as a general pointer, with no quotation and no page. **This is a page-precise, quotable line from a source we already trust.** |
+| "For that some should rule and others be ruled is a thing not only necessary, but expedient; from the hour of their birth, some are marked out for subjection, others for rule" | printed as **"(Aristotle, 384–322 BC)"** | **Genuine Aristotle, in his own voice — *Politics* 1254a21–24.** `library/legacy.html` already cited *Politics* 1.3–7 (1253b–1255b). ✅ **2026-10-04: `library/equality.html` now quotes this exact line**, cited *Politics* 1.5 (1254a21–24), Jowett. |
+| "At the core of ancient thinking [was] the assumption of natural inequality" | **Larry Siedentop, *Inventing the Individual* (Penguin, 2015), p. 51** (n. 11) | ⭐ Siedentop was in `library/legacy.html` fn 12 only as a general pointer. ✅ **2026-10-04: `library/equality.html` now quotes the line** in its "world that ran the other way" section. (The sweep backlog still owes a check that p. 51 reads "both ancient thinking and ancient society".) |
 | Humanity made from Kingu's blood to bear the gods' toil | ***Enuma Elish* 29–34** (n. 12, via a USU lecture PDF) | Cite a real edition/translation, not the lecture PDF. |
 | "Create primeval man, that he may bear the yoke… Let man bear the load of the gods!" | ***Atrahasis*, Tablet 1** (n. 13, via a UFSC-hosted PDF) | Same — cite an edition (Lambert & Millard). |
 | Alexamenos graffito, Palatine Hill | described, not footnoted | Verify independently; standard dating is c. AD 200 (range 1st–3rd c.), Palatine Antiquarium. |
@@ -276,8 +311,9 @@ revolutionary notion the world has ever entertained."
 | *bestiarii* / mythological re-enactment executions | described, not footnoted | The scholarly locus is K. M. Coleman, "Fatal Charades," *JRS* 80 (1990). **Verify before any use — this is lurid material and the site should not run it uncited.** |
 
 **Guardrail fit (ch. 1):** doctrinally clean and, at one point, notably good. Scrivener's "God himself had
-hung on a cross" is exactly the claim `library/legacy.html` carries **with an `orthonote` fence** ("God
-himself, in the person of the Son, had been executed" — Is saying / Not saying). ⚠ **Any port of this beat
+hung on a cross" is exactly the claim `library/legacy.html` carried **with an `orthonote` fence** ("God
+himself, in the person of the Son, had been executed" — Is saying / Not saying); ✅ that fenced sentence now
+lives on **`library/equality.html`** (verified 2026-10-04). ⚠ **Any port of this beat
 must carry that fence.** Scrivener's own wording — "God did not sheath his spear… he died the death of a
 slave" — is unfenced, and compressed onto a card it could read patripassian. His Jewish-monotheism
 paragraph (beat 13) is a real strength and is orthodox as it stands: it locates the scandal correctly
@@ -296,7 +332,9 @@ images, not memory (the repo's "measure, don't estimate" rule). Solid enough to 
   "all men are created equal" is, biologically, a myth. Scrivener agrees with the *diagnosis* and reverses
   the *conclusion*: equality is not a fact of nature, which is exactly why it needs its theological ground.
   **Best atheist-in-his-own-words witness in the book for `legacy.html`'s "not self-evident" claim.** Harari
-  = **0 site-wide hits.** ⚠ Port the diagnosis only, never Harari's nihilism about worth. **Logged P2 below.**
+  = **0 site-wide hits** (as of 2026-08-23). ⚠ Port the diagnosis only, never Harari's nihilism about worth.
+  **Logged P2 below.** ✅ **DONE — now on `library/equality.html`** ("The honest atheist witness"; backlog row
+  DONE 2026-09-07; re-checked 2026-10-04).
 - Nicholas **Wolterstorff** (*Justice: Rights and Wrongs*, 2008) as the scholarly ground for rights-in-the-
   image-of-God (already 1 site hit — verify locus); the **Himmler** "more than a part of this world" line;
   **Peter Singer / QALY** and the Down-syndrome debate as the modern pressure point. ⚠ Doctrinally/pastorally
@@ -312,10 +350,12 @@ Israel chosen *because* "the fewest of all peoples," Deuteronomy 7:6–8).
 site:** (0a) the **Richard Dawkins** 2014 tweet on a Down's-syndrome pregnancy — "Abort it and try again. It
 would be immoral to bring it into the world if you have the choice" — as a modern echo of the ancient world.
 (0b) **Ancient infanticide/exposure**, with the primaries: **Plato, *Republic* 5.460** ("dispose of them in
-secret"); **Aristotle, *Politics* 7.1335b** ("let there be a law that no deformed child shall be reared");
+secret"); **Aristotle, *Politics* 7.1335b** ("let there be a law that no deformed child shall live" — ⚠ corrected
+2026-10-04 from "shall be reared"; Jowett reads "shall live", as `library/compassion.html` quotes it);
 **Soranus of Ephesus (98–138), *Gynecology*** — the first gynaecological treatise opens with "How to
 Recognise the Newborn That is Worth Rearing," and the advice for those that fail is "expose it and try
-again" (trans. Owsei Temkin, Johns Hopkins 1991, p. 79; the survey is **Darrel W. Amundsen**, "Medicine and
+again" (trans. Owsei Temkin, Johns Hopkins **1956** [repr. 1991] — ⚠ corrected 2026-10-04 from "1991", which
+is the reprint; p. 79 as the book gives it; the survey is **Darrel W. Amundsen**, "Medicine and
 the Birth of Defective Children," in *On Moral Medicine*, ed. Lammers & Verhey, Eerdmans 1998, p. 682).
 (0c) **⭐ "The poison of pity"** — **Nietzsche, *The Anti-Christ* §7**: "Pity on the whole thwarts the law of
 evolution, which is the law of selection"; "the weak and the ill-constituted shall perish… and one shall
@@ -342,10 +382,14 @@ Hart's roll-call: Ephrem, Basil's leper ward, Benedict, **Fabiola's first public
 Chrysostom), a "cascade of hospitals" (James William Brodman via Dickson), Benedictines 2,000+; (6) **super-
 natural** — Tennyson's "red in tooth and claw"; Christ the Fittest sacrificed for the weakest, inverting
 natural selection; (7) **servant leadership** — Mark 10:42–45; (8) **gladiators/games** — Christians
-boycotted the arena (Minucius Felix, *Octavius* 12), games outlawed AD 401 under Honorius; Lecky and Hurtado
+boycotted the arena (Minucius Felix, *Octavius* — ⚠ corrected 2026-10-04: ch. 12 is the *pagan* Caecilius
+reporting that Christians shun the shows; the **Christian** voice explaining the abstention is ***Octavius*
+37**, which is what `library/compassion.html` cites), games ended under Honorius (⚠ the "AD 401" here is
+superseded: the traditional Telemachus date is **c. 404**, as `compassion.html` gives it); Lecky and Hurtado
 on the unparalleled Christian "love ethic." (9, pp. 78–79) **the abolition of the games** through **the monk
-Telemachus** — who stepped between the gladiators and was stoned by the crowd, and whose death moved the
-emperor Honorius to end them (Philip Schaff, *History of the Christian Church* §95 — **PD, CCEL**); and
+Telemachus** (c. 404) — who stepped between the gladiators and was stoned by the crowd, and whose death moved the
+emperor Honorius to end them (Philip Schaff, *History of the Christian Church* §95 — **PD, CCEL**; the
+primary is Theodoret, *Ecclesiastical History* 5.26, which `library/compassion.html` cites); and
 **the end of infant exposure**: the early church's charity ("welfare distribution centres," Dickson) and
 figures like **Macrina (330–379)** touring the rubbish dumps to rescue exposed infants, with **Valentinian
 I**'s late-4th-c. law against infanticide "catching up" to a change already in hearts. The close: "the
@@ -356,12 +400,12 @@ and the botched" here — attribute it as Nietzsche's contemptuous phrase, not a
 | Lead | Locus | Note |
 |---|---|---|
 | ⭐ **Nietzsche's "poison of pity" + the is/ought firewall** — the honest naturalist challenge to the compassion ethic | **Nietzsche, *The Anti-Christ* §7**; *Birth of Tragedy* p. 23; Himmler via Holland p. 521 | **0 site-wide hits** for "poison of pity," "law of selection," is/ought, "Anti-Christ." A distinctive form of the moral argument absent from `moral.html`. **✅ SHIPPED 2026-08-24 to `library/moral.html`** (backlog row 229) as a new "Is/Ought Firewall" section. ⚠ Two citation corrections applied: the "weak and botched shall perish" line is **§2 not §7**, and it is **"botched" not "ill-constituted"** (Mencken PD used throughout; Kaufmann is copyright). 🔴 **The Himmler line was DROPPED** — `apologia-citations` CANNOT VERIFY it (absent even from Wikiquote); the is/ought firewall stands without it. Gated argument [STRONG] + orthodoxy [CLEAN]; tripwire scan 0 new. ⚠ tripwire-sensitive — quoted as the refuted position. |
-| Ancient infanticide/exposure primaries | **Plato *Republic* 5.460; Aristotle *Politics* 7.1335b; Soranus *Gynecology*** (Temkin trans.) | Corroborate `legacy.html`'s infant-exposure claim with hostile primaries (0 hits for Soranus). Amundsen is the secondary map. |
-| *splanchnizomai* gut-compassion word study | Matt 20:34; Mark 1:41; Luke 7:13; 18:27; 15:20; 10:33 | 1 site hit for `splanchn`; enriches `jesuschar.html`, not `legacy.html`. |
-| Christian love-ethic "no known Roman-era parallel" | **Larry Hurtado, *Destroyer of the gods* (Baylor, 2017), pp. 64–65** | ⭐ Hurtado cited 35× already — verify this specific claim isn't live; strong for `legacy.html` compassion section. **Logged P3.** |
-| Rise of the hospital (Basil, Fabiola, Chrysostom) | **D. B. Hart, *Atheist Delusions* (Yale, 2010), p. 30** | ✅ `legacy.html` fn 7 covers it, and BETTER (Miller/Crislip + Horden/Nutton caution). **HAZARD — see below.** |
-| Imperial cult "Lord / Saviour / Son of God" (Augustus) | Hurtado, pp. 64–65 | Relevant to `library/titles.html`. Verify. |
-| Christians abhor the games | **Minucius Felix, *Octavius* 12** (PD, ANF) | Cite the primary, not the book's secondary. Possible `/sources`. |
+| Ancient infanticide/exposure primaries | **Plato *Republic* 5.460; Aristotle *Politics* 7.1335b; Soranus *Gynecology*** (Temkin trans., 1956) | Was: corroborate `legacy.html`'s infant-exposure claim with hostile primaries (0 hits for Soranus). ✅ **2026-10-04: all three are now on `library/compassion.html`** (Aristotle as "shall live"; Temkin 1956, repr. 1991). Amundsen is the secondary map. |
+| *splanchnizomai* gut-compassion word study | Matt 20:34; Mark 1:41; Luke 7:13; 18:27; 15:20; 10:33 | Was: 1 site hit for `splanchn`; enriches `jesuschar.html`. 2026-10-04: `library/compassion.html` now uses the word (the sweep backlog logs its phrasing as awkward, P4). |
+| Christian love-ethic "no known Roman-era parallel" | **Larry Hurtado, *Destroyer of the gods* (Baylor, 2016 — ⚠ corrected 2026-10-04 from "2017"), pp. 64–65** | ⭐ Was logged P3 for `legacy.html`'s compassion section. ✅ **DONE — `library/compassion.html` carries Hurtado on the distinctive Christian love ethic** (backlog row DONE 2026-09-07; re-checked 2026-10-04). Its page numbers are still owed (sweep backlog, "Book check"). |
+| Rise of the hospital (Basil, Fabiola, Chrysostom) | **D. B. Hart, *Atheist Delusions* (Yale, 2010), p. 30** | ✅ `legacy.html` fn 7 covered it, and BETTER (Miller/Crislip + Horden/Nutton caution); that bounded treatment, with the Horden caution, is now on **`library/compassion.html`** (verified 2026-10-04). **HAZARD — see below.** |
+| Imperial cult "Lord / Saviour / Son of God" (Augustus) | Hurtado, pp. 64–65 | Relevant to `library/titles.html`. Verify. (Not used on any Christian Revolution essay as of 2026-10-04.) |
+| Christians abhor the games | **Minucius Felix, *Octavius* 37** (PD, ANF) — ⚠ corrected 2026-10-04 from "12" (ch. 12 is the pagan speaker) | ✅ `library/compassion.html` cites *Octavius* 37 (Roberts–Donaldson, ANF 4). Possible `/sources`. |
 
 ⚠ Orthodoxy watch (beat 6): keep the resurrection/adoption attached to "Christ the Fittest," as Scrivener
 does ("raised up, forgiven, filled with his Spirit") — stripped bare it caricatures the atonement.
@@ -378,7 +422,7 @@ see the guardrails at the end of this section before drafting anything from it.*
 1. **"How much is a little girl worth?"** (pp. 81–82) — Rachael Denhollander's victim-impact statement at
    the Larry Nassar trial (last of 169 women; Nassar abused ≥265 girls). We answer "Everything"; the Roman
    world did not. Footnote 40 = the CNN transcript of her full statement.
-2. **The Roman sexual world** (pp. 82–86), on **Kyle Harper, *From Shame to Sin* (Harvard UP, 2016)** — the
+2. **The Roman sexual world** (pp. 82–86), on **Kyle Harper, *From Shame to Sin* (Harvard UP, 2013 — ⚠ corrected 2026-10-04 from "2016"; `library/equality.html` cites Harvard 2013)** — the
    scholarly anchor, the very book Scrivener routed to for "Consent." What mattered was the *status* of your
    partner, not their consent or age or gender; it was "a world of shame, not of sin." A freeborn Roman man
    held an unquestioned right to the bodies of lower-status women, children, prostitutes and slaves; "modesty"
@@ -420,7 +464,7 @@ see the guardrails at the end of this section before drafting anything from it.*
 
 | Lead | Locus | Note |
 |---|---|---|
-| ⭐ Status-not-consent governed Roman sexual ethics; Christianity introduced the *category* of abuse and the *consent* line | **Kyle Harper, *From Shame to Sin* (Harvard UP, 2016)**, pp. 3, 8, 13, 49, 56, 98, 163 | **0 site-wide hits for Harper.** The best-evidenced version of this claim on the market. **Logged P3 — with heavy guardrails.** |
+| ⭐ Status-not-consent governed Roman sexual ethics; Christianity introduced the *category* of abuse and the *consent* line | **Kyle Harper, *From Shame to Sin* (Harvard UP, 2013 — ⚠ corrected 2026-10-04 from "2016")**, pp. 3, 8, 13, 49, 56, 98, 163 | **0 site-wide hits for Harper** (as of 2026-08-23). The best-evidenced version of this claim on the market. **Logged P3 — with heavy guardrails.** ✅ **DONE — a narrowly fenced Harper sentence on the dignity of the enslaved body is on `library/equality.html` fn 12** (backlog row DONE 2026-09-07; re-checked 2026-10-04). |
 | Mutuality in marriage — the husband yields authority over his body (radical for its day) | **1 Corinthians 7:3–5**; Galatians 3:26–28 | Strong, and doctrinally safe as *historical* claim. |
 | Celsus' "slaves, women and children" sneer as a boast | **Origen, *Contra Celsum* 3.44** (PD, ANF) — via Kruger | ⭐ PD primary → `/sources` candidate. Celsus already cited 11× on-site. |
 | Christian child-protection: *paidophthoros*; Justinian outlaws *paiderastia* | Harper pp. 98, 13; Hurtado p. 167; Paul Offit, *Bad Faith* p. 127 | Verify Justinian's Novellae; the "greatest breakthrough" line is Offit's (a vaccine-safety author) — attribute, don't overstate. |
@@ -436,7 +480,8 @@ a big enthusiastic P2):**
   the historical case into marriage/divorce/celibacy/"the sexual revolution" framing that a modern reader
   will map onto present controversies. That territory is (a) not the site's business, (b) denominationally
   contested (Catholic/Orthodox/Protestant differ on divorce, remarriage, celibacy, contraception — do not
-  adjudicate), and (c) outside anything `legacy.html` currently does. **Mine the ancient-vs-Christian
+  adjudicate), and (c) outside anything `legacy.html` did (and outside anything the seven Christian Revolution
+  essays do, as of 2026-10-04). **Mine the ancient-vs-Christian
   contrast; stop there.**
 - **"Christianity invented abuse / gave us the category of abuse" must never be compressed onto a card** —
   stripped of Harper's precise meaning it reads grotesquely backwards. If used at all, it is a full sentence
@@ -475,7 +520,10 @@ Torquemada + ~3,000 over 300 yrs, set against the French Terror and Russian Red 
   individuals under law with inalienable rights was not an Enlightenment discovery but a biblical truth,
   planted by Genesis, cultivated by the church" — **Siedentop, *Inventing the Individual*, p. 249.**
   Pairs directly with `legacy.html`'s equality genealogy, and gives it a *medieval-legal* mechanism it
-  lacks. **Logged P3.**
+  lacks. **Logged P3.** ⚠ **Status, measured 2026-10-04:** the backlog row is marked DONE (2026-09-07,
+  re-targeted to `library/equality.html`), but `equality.html` carries only a one-clause pointer ("his book
+  traces the equal individual through medieval canon law") — **no Gregorian "papal revolution", no p. 249.**
+  The 2026-10-04 sweep backlog re-logs it as an open `equality` item; treat it as **NOT shipped**.
 - **Universities** — a new institution (unlike Greek schools or Chinese academies), for higher learning +
   innovation; Bologna, Paris, Oxford, Cambridge in the 1200s; Oxford's motto *Dominus illuminatio mea*.
 - **Parliaments** — rights → limited rulers who "minister"; the OT covenant as the model of ruler
@@ -487,7 +535,10 @@ Torquemada + ~3,000 over 300 yrs, set against the French Terror and Russian Red 
 
 **⭐ The chapter's most valuable NEW thing for us: the whole "Dark Ages / conflict-thesis is a myth" topic is
 largely ABSENT site-wide.** Universities, medieval science, the Sagan "millennium gap" as the myth's origin,
-Paine's coinage — a major apologetic topic we don't cover. **Logged P2 below.**
+Paine's coinage — a major apologetic topic we don't cover. **Logged P2 below.** ✅ **DONE — now covered by
+`library/science-history.html`** ("The war that was invented": Draper, White, the medieval universities,
+the Galileo affair; backlog row DONE 2026-09-07; re-checked 2026-10-04). Measured 2026-10-04: Sagan's
+"millennium gap" and Paine's "age of ignorance" are **not** cited there (0 hits each) — optional extras, not owed.
 
 ### Ch. 6 — "Science" (pp. 127–147, COMPLETE)
 
@@ -602,8 +653,12 @@ never the triumphal "no Christianity, no science" popular form.
   fenced as "surprising not proof"). **No row.**
 - The conflict-thesis-is-a-myth *history* (Draper/White, the manufactured "warfare") → **4 — missing.**
   **Already covered by the existing P2 backlog row**, now updated to name ch. 6 as its evidence base.
+  ✅ **DONE — `library/science-history.html` names Draper (1874) and Andrew Dickson White (1896) and frames
+  the warfare thesis as a 19th-century invention** (verified 2026-10-04; backlog row DONE 2026-09-07).
 - **The Galileo affair, handled honestly** → **4 — missing**, 0 site-wide hits, and it is the single
-  most-weaponised "science vs faith" example. **New P3 row logged below.**
+  most-weaponised "science vs faith" example. **New P3 row logged below.** ✅ **DONE — `library/science-history.html`
+  section "The Galileo affair, without the myth"** (Finocchiaro cited; verified 2026-10-04; backlog row DONE
+  2026-09-07).
 - Neil deGrasse Tyson / Einstein comprehensibility quotes → corroboration (Wigner/Davies already carry the
   point on `laws.html`). No row.
 
@@ -617,6 +672,8 @@ section is substantial and *careful* — it carries Christopher Leslie Brown's *
 the causal nuance** than Scrivener's more providential telling. Three things Scrivener has that `legacy.html`
 does **not** (all verified 0 site-wide): David Brion Davis, Frederick Douglass, the black church/spirituals,
 Gregory of Nyssa, and the medieval abolition of European slavery.
+*(History, 2026-10-04: `legacy.html` is deleted; all of these now live on **`library/abolition.html`** —
+see the ✅ markers in the cross-check verdicts below.)*
 
 **Thesis:** the conviction that freedom is everyone's birthright — that no human may be owned — is not
 self-evident (all known complex societies were slave societies) but a Christian inheritance; and abolition,
@@ -638,20 +695,28 @@ twice over (medieval Europe, then the Atlantic trade), was Christian-driven.
 3. **Abolition as a Christian achievement** (pp. 154–155) — **David Brion Davis** (the pre-eminent historian
    of transatlantic slavery): "religion was the central concern of all the British abolitionist leaders,"
    without which "the fall of New World slavery could not have occurred," "a moral achievement that may have
-   no parallel" (*Slavery and Human Progress* 1986 p. 139; *Inhuman Bondage* 2006 p. 331). Rowan Williams: if
+   no parallel" (*Slavery and Human Progress* **1984** — ⚠ corrected 2026-10-04 from "1986", matching
+   `library/abolition.html` fn 10 — p. 139; *Inhuman Bondage* 2006 p. 331). Rowan Williams: if
    abolition "had been left to enlightened secularists… we would still be waiting" (via Dickson p. 111).
 4. **⭐ "Isn't Christianity pro-slavery?" answered via the enslaved themselves** (pp. 155–163) — the reply
-   `legacy.html` lacks. Enslaved believers found in the OT not justification but the exodus pattern and the
+   `legacy.html` lacked (✅ now on `library/abolition.html`, verified 2026-10-04). Enslaved believers found in the OT not justification but the exodus pattern and the
    man-stealer condemnation. **Frederick Douglass** (1817–1895), born a slave, became preacher-abolitionist;
    "There can be no more a law for the enslavement of man, made in the image of God, than for the enslavement
    of God himself"; reserved his most scathing words for the churches that were "the bulwark of American
-   slavery," calling his devout ex-master an "agent of hell" *and* "a brother" (Letter to Thomas Auld, 1848).
+   slavery," calling his devout ex-master an "agent of hell" — yet refusing to hate him (Letter to Thomas
+   Auld, *The North Star*, 8 September 1848). ⚠ **Corrected 2026-10-04:** the letter does not close on "a
+   brother"; it closes **"your fellow man, but not your slave"**, which `library/abolition.html` fn 15 paraphrases
+   ("closes by insisting he remains Auld's fellow-man and not his slave"). And the "bulwark of American slavery" charge is from the 1852 oration *What to the Slave Is the
+   Fourth of July?*, not from this letter (`abolition.html` fn 15 sources it there).
    The **black church and the spirituals** (identifying with Moses in Egypt and Christ the Sufferer — "Nobody
-   knows the trouble I've seen," "swing low, sweet chariot"); **Howard Thurman** (via James Cone, *The Cross
-   and the Lynching Tree*, p. 133–34): "the slave undertook the redemption of the religion that the master had
-   profaned"; **Rebecca McLaughlin** (*Confronting Christianity* p. 190): "if slavery is the founding sin of
+   knows the trouble I've seen," "swing low, sweet chariot"); **Howard Thurman** (as the book gives it, via
+   James Cone, *The Cross and the Lynching Tree*, p. 133–34): "the slave undertook the redemption of the
+   religion that the master had profaned" — ⚠ **corrected 2026-10-04: the line is Thurman's own, from *Deep
+   River: Reflections on the Religious Insight of Certain of the Negro Spirituals* (1945; rev. 1955); Cone only
+   quotes it.** `library/abolition.html` fn 16 cites both; **Rebecca McLaughlin** (*Confronting Christianity* p. 190): "if slavery is the founding sin of
    America, the… black church is perhaps its greatest miracle"; Mary's Magnificat (Luke 1:52–54).
-5. **⭐ The pre-modern abolition of slavery** (pp. 160–161) — the point `legacy.html` entirely lacks:
+5. **⭐ The pre-modern abolition of slavery** (pp. 160–161) — the point `legacy.html` entirely lacked (✅ now
+   on `library/abolition.html`, "The abolition nobody remembers"):
    **Gregory of Nyssa (379)** condemned the *institution* of slavery and demanded its abolition (an outlier,
    even among Christians — Scrivener flags this); and after Rome fell, **slavery dissolved across medieval
    Europe** — gone from northern Europe by the 9th c., largely from England by 1200 (Hugh Thomas, *The Slave
@@ -664,6 +729,7 @@ twice over (medieval Europe, then the Atlantic trade), was Christian-driven.
    *Dominion* p. 307–08). The now-familiar move: the point is not that these evils "weren't so bad" — they are
    **Evil with a capital E**, and "their evil is judged by the good which they pretended to value." **This is
    exactly `legacy.html`'s firewall** ("being handed the standard aggravates the failure"). Corroboration.
+   *(History: that firewall is now `library/abolition.html`'s "Say the guilt first" section.)*
 7. **Preaching and politics** (pp. 164–166) — the 1787 Committee (Quakers + evangelicals), Wedgwood's "Am I
    not a man and a brother?", petitions/boycotts, 1807/1833. Alec Ryrie (*Protestants* p. 196): Britain banned
    "one of the principal props of its own empire… because of abolitionism: a religious movement first and
@@ -673,14 +739,25 @@ twice over (medieval Europe, then the Atlantic trade), was Christian-driven.
 
 **Cross-check verdicts (Step Zero complete):**
 - Core "abolition is a Christian achievement" + the firewall + man-stealer texts → **1 — corroboration**,
-  `legacy.html` at least as careful (more so on causation). No row.
+  `legacy.html` at least as careful (more so on causation). No row. *(Now carried by `library/abolition.html`,
+  which keeps Brown's *Moral Capital*, Noll, Equiano and the man-stealer texts — verified 2026-10-04.)*
 - Equality-is-not-self-evident (Harari/Bentham/Stark/Holland) → reinforces the **existing Harari P2 row**
   (now with *Sapiens* p. 109 + Holland p. 400). No new row.
 - **The enslaved's own Christian abolitionism / Douglass / black church / spirituals** → **4 — missing**, 0
   site hits, and it is the reply to the strongest form of "Christianity is pro-slavery." **New P2 row.**
+  ✅ **DONE — on `library/abolition.html`** ("The hardest objection: isn't the Bible pro-slavery?": Douglass
+  with fn 15, the spirituals + Thurman/Cone at fn 16, McLaughlin; verified 2026-10-04; backlog row DONE
+  2026-09-07). Douglass's "image of God" line itself is **not** carried — the sweep backlog logs it as an open
+  `abolition` item.
 - **David Brion Davis's pro-religion verdict (+ Ryrie)** → **3 — our treatment is one-sided** (`legacy.html`
-  presents only Brown's deflationary account as "the best modern account"). **New P3 row (balance, bounded).**
+  presented only Brown's deflationary account as "the best modern account"). **New P3 row (balance, bounded).**
+  ✅ **DONE — `library/abolition.html` balances Brown's *Moral Capital* with Davis (fn 10, *Slavery and Human
+  Progress*, 1984) and Ryrie (fn 11)** (verified 2026-10-04; backlog row DONE 2026-09-07). Davis's "a moral
+  achievement that may have no parallel" (*Inhuman Bondage*, 331) is not carried — open in the sweep backlog.
 - **Gregory of Nyssa (379) + medieval abolition of European slavery** → **4 — missing.** **New P3 row.**
+  ✅ **DONE — `library/abolition.html` "The abolition nobody remembers": Gregory of Nyssa c. 379 (fn 5) and
+  the fading of slavery in northern Europe, gone from England by c. 1200** (verified 2026-10-04; backlog row
+  DONE 2026-09-07).
 
 ### Ch. 8 — "Progress" (pp. 167–185, COMPLETE)
 
@@ -749,25 +826,34 @@ handled crudely, so it is flagged, not rushed.
    suffering before rising; "progress can be found in going back to the source."
 
 **Cross-check verdict for pp. 178–185: CORROBORATION.** This is the book's grounding climax, and it is the
-same argument `library/legacy.html` already makes ("these convictions are not self-evident… anyone who
+same argument `library/legacy.html` already made (now `library/progress.html`) ("these convictions are not self-evident… anyone who
 holds them owes an account of *why* they hold, rather than treating them as the air") and `library/moral.html`
 makes about moral ontology. The Nuremberg / UDHR "nails the *what*, not the *why*" framing is a vivid
 *illustration* of that argument, not a new one — it may optionally enrich the existing progress P3 row, but
-earns no row of its own. The MLK close is gospel proclamation. **No new row.**
+earns no row of its own. The MLK close is gospel proclamation. **No new row.** *(History, 2026-10-04: that
+grounding argument, including the UDHR "what, not why" point, now lives on `library/progress.html` —
+"Progress without a pole star", with Scrivener at fn 14.)*
 
 **Cross-check verdicts (PROVISIONAL — worldviews.html atheism cards + evil.html not yet read):**
 - **"Was Hitler a Christian? / Nazi Jesus"** → **4 — missing** (0 site hits for the topic). A common,
   high-traffic objection. **New P2 row logged below, with a Step-Zero-pending flag and heavy guardrails** —
   the honest answer *concedes* that German Christians nazified the faith and that Christian antisemitism
   (Luther) was real, and does NOT claim Hitler was a tidy atheist (his religion is genuinely contested).
+  ⛔ **DROPPED 2026-09-07 — owner declined this material during the `progress.html` rebuild** (on record in
+  that essay's stamp; backlog row DROPPED). Not a gap; do not re-raise.
 - **Belief in progress / the moral arc is a Christian inheritance** (linear vs cyclical; Pinker's borrowed
-  phrases) → **4 — missing**, pairs with `legacy.html`. **New P3 row.**
+  phrases) → **4 — missing**, paired with `legacy.html` at the time. **New P3 row.** ✅ **DONE — it is the whole
+  of `library/progress.html`** (Hesiod's declining ages, the biblical arrow, Amos 5:24, swords into
+  ploughshares, Theodore Parker's moral arc, Pinker; verified 2026-10-04; backlog row DONE 2026-09-07,
+  re-targeted from `legacy.html` to `progress.html` 2026-10-04).
 - **The 20th-c atheist-regime body count** → ⚠ **HAZARD 11**, not a clean row. The defensible core (morality
   needs a ground above human will) is already the **Nietzsche P2 row**; the *body-count comparison* is the
-  same relativizing move `legacy.html` refuses. Flag, don't mine.
+  same relativizing move `legacy.html` refused. Flag, don't mine.
 - **Marx-as-secularised-Christianity; Luther's pamphlet in the ledger** → **6 — non-recommendations.** Marx
-  is niche; adding *Luther by name* to `legacy.html`'s ledger would break its deliberate denominational
-  even-handedness (it "does not distribute the blame among the traditions"). Logged, not built.
+  is niche; adding *Luther by name* to `legacy.html`'s ledger would have broken its deliberate denominational
+  even-handedness (it "does not distribute the blame among the traditions"). Logged, not built. *(History:
+  that ledger was deleted with `legacy.html`, and the owner decided 2026-10-04 it gets no dedicated home — so
+  this non-recommendation now has nothing to attach to. Still do not add it.)*
 
 ### Ch. 9 — "The Kingdom Without the King" (pp. 187–203, COMPLETE)
 
@@ -777,7 +863,7 @@ culture, the transgender debate (the David Mackereth tribunal), "competitive vic
 sexual-ethics debate through the borrowed-capital lens. The abstract genealogical/grounding core (contested
 modern values still run on Christian moral capital; "the kingdom without the King is a place of judgment,
 not liberation — values can only judge you, persons can forgive you") is **corroboration** of `legacy.html`
-+ `moral.html`. But every *specific application* — BLM, trans, sexual ethics, "competitive victimhood,"
++ `moral.html` (since 2026-09-30: of `progress.html` + `moral.html`). But every *specific application* — BLM, trans, sexual ethics, "competitive victimhood,"
 Douglas Murray's *Madness of Crowds* cultural diagnosis — is exactly the contested, denominationally- and
 politically-divisive territory the site's guardrails tell us not to touch. **No rows.** See **HAZARD 12.**
 
@@ -800,9 +886,9 @@ CRITICAL HAZARD (Daniel 7). No rows.** This is the apologetic climax.
   his will"), Sam Harris, the "Jesus-smuggling" charge inverted (the *secularists* are the Bible bootleggers).
   Peterson: the choice is between *two* "impossible" things — God incarnate and risen, **or** humans inventing
   "this preposterous story that has stretched into every atom of culture." ⭐ A distinctive parity frame, but
-  it is a rhetorical restatement of `legacy.html`'s "these values are not self-evident; you owe an account."
+  it is a rhetorical restatement of `legacy.html`'s (now `progress.html`'s) "these values are not self-evident; you owe an account."
   ⚠ Scrivener *concedes the good≠true firewall in terms* here ("none of this makes Christianity inevitable or
-  true") — consistent with our own `legacy.html`. **Corroboration; Jordan Peterson is 0 site-wide but adds no
+  true") — consistent with our own `legacy.html` (now: each Christian Revolution essay's closing good≠true section). **Corroboration; Jordan Peterson is 0 site-wide but adds no
   argument we lack.**
 - **Predicting the peculiar** (pp. 208–211) — messianic prophecy: Genesis 3:15, 49:10; Isaiah 9:6–7; Daniel
   2:34–35; **Daniel 7:13–14.** Covered by `messianic-prophecy.html`, `prophecy.html`, `typology.html`,
@@ -827,7 +913,7 @@ CRITICAL HAZARD (Daniel 7). No rows.** This is the apologetic climax.
   ask is not a leap but to "meet Jesus" in the Gospels — evangelistic, not an Evidence-Library gap.
 - **To the "dones": don't leave** — every criticism of the church is aired *in the first person* and shown to
   rest on Christian standards ("we wrestle with them *for Christian reasons*"). This is `legacy.html`'s
-  firewall exactly (the standard by which the church is judged is itself Christian). ⚠ Sensitively handles
+  firewall exactly (now `abolition.html`'s "Say the guilt first") (the standard by which the church is judged is itself Christian). ⚠ Sensitively handles
   **church abuse** (Lori Anne Thompson / Ravi Zacharias) and John Dickson's song-vs-singers analogy — pastoral
   content, not apologetic argument. Corroboration of the firewall; the abuse material is not ours to
   repurpose.
@@ -847,7 +933,8 @@ CRITICAL HAZARD (Daniel 7). No rows.** This is the apologetic climax.
 The **entire book (Introduction → Final Words, pp. 11–232) has been read from the owner's photos and
 cross-checked.** The book ends at p. 232 (Matthew 16:18); nothing substantive remains (a possible
 acknowledgements/index page after 232 carries no argument). **Total logged: 22 backlog rows (6 P2, 13 P3,
-3 P4)**, all from Introduction → Ch. 8. **Chs. 9–10 + Final Words produced zero rows** (corroboration of
+3 P4)**, all from Introduction → Ch. 8. **Status 2026-10-04: 20 DONE, 2 DROPPED, 0 OPEN** (see the re-tally
+under the Live-door table). **Chs. 9–10 + Final Words produced zero rows** (corroboration of
 existing site content / off-limits culture-war / gospel proclamation) — the correct disciplined result, not
 an oversight. **This note is now a completed research map, not a work in progress.** ⚠ Page-capture note:
 pp. 230–231 were photographed twice (a harmless duplicate); no page is missing.
@@ -867,22 +954,26 @@ BC)"**. Two separate problems:
   epigraph as printed attributes the words to Plato.)
 - **The dates run backwards.** Plato is c. 428/427 – c. 348/347 BC; "428–438 BC" is not a life span.
 - **What to do instead:** for the ancient-hierarchy point use **Aristotle, *Politics* 1254a** (the second
-  epigraph), which Aristotle really does assert in his own voice, and which `library/legacy.html` already
-  stands on. If Plato is wanted at all, cite *Republic* on the ordering of souls, or cite the *Gorgias*
+  epigraph), which Aristotle really does assert in his own voice, and which `library/legacy.html` stood on
+  and **`library/equality.html` now quotes** (*Politics* 1.5, 1254a21–24; verified 2026-10-04). If Plato is wanted at all, cite *Republic* on the ordering of souls, or cite the *Gorgias*
   **as Callicles**, explicitly.
 
 **HAZARD 2 — "Plato and Aristotle did not defend slavery, because no one was attacking it" (p. 30) is
-weaker than what our own essay already says, and is arguably false.** `library/legacy.html` states the
+weaker than what our own essay already says, and is arguably false.** `library/legacy.html` stated the
 more precise and better-evidenced version: *"Aristotle defends slavery as natural precisely because others
 were calling it a mere convention against nature"* — which is what *Politics* 1253b20–23 actually reports,
-and which the essay pairs with Seneca (*Ep.* 47), Ulpian (*Digest* 50.17.32) and Florentinus (*Digest*
-1.5.4.1). ✅ **Verdict 5 — ours is better. Do not "improve" our sentence toward Scrivener's.** Our version
+and which the essay paired with Seneca (*Ep.* 47), Ulpian (*Digest* 50.17.32) and Florentinus (*Digest*
+1.5.4.1). *(Re-homed 2026-10-04: **`library/equality.html`** now makes the same point in its own words —
+Aristotle argues for natural slavery "because others in his own day were calling slavery a mere human
+convention", with Seneca and Ulpian; measured 2026-10-04, Florentinus is **not** cited there.)* ✅ **Verdict 5 — ours is better. Do not "improve" our sentence toward Scrivener's.** Our version
 concedes the existence of dissenting ancient voices *and* explains why they never became a movement; his
 denies they existed.
 
 **HAZARD 3 — the utility frame.** The book's entire architecture is "look what this gave you". That is the
-inference `library/legacy.html` exists to refuse, in its own words: *"nothing here is evidence that
-Christianity is true… Christianity's claim on anyone is that it is true, not that it is useful."* Mine the
+inference `library/legacy.html` existed to refuse, in its own words: *"nothing here is evidence that
+Christianity is true… Christianity's claim on anyone is that it is true, not that it is useful."* *(History:
+that quotation died with `legacy.html`. As of 2026-10-04 the refusal is carried by each of the seven Christian
+Revolution essays in its closing "what this shows — and what it doesn't" section; the hazard is unchanged.)* Mine the
 history and the primaries; never let Scrivener's frame carry argumentative weight on our pages, and never
 let a compressed card imply good⇒true.
 
@@ -910,17 +1001,20 @@ monastic-orders material as *shared* history, never as endorsement of Catholic e
 **HAZARD 8 — the Inquisition death-toll COMPARISON (ch. 5, pp. 115–116) is a relativising move our essay
 deliberately avoids.** Scrivener sets ~5,000 Inquisition executions against the French Terror (17,000) and
 the Russian Red Terror (~100,000) — "an execution rate 1,400 times that of the Spanish Inquisition." The
-numbers themselves (via Henry Kamen, whom `legacy.html` fn 10 already cites) are fine; the *"look how much
+numbers themselves (via Henry Kamen, whom `legacy.html` fn 10 cited) are fine; the *"look how much
 worse the secularists were"* framing is not — it shades into using others' crimes to shrink the church's,
-which is a cousin of the laundering move `legacy.html` refuses. `legacy.html` names the Inquisition soberly
-and does not score it against the guillotine. Keep it that way.
+which is a cousin of the laundering move `legacy.html` refused. `legacy.html` named the Inquisition soberly
+and did not score it against the guillotine. *(History, 2026-10-04: with `legacy.html` deleted, no live
+essay carries the Inquisition ledger or Kamen — by owner decision, not a gap. The hazard still stands: never
+port the comparison anywhere.)*
 
 **HAZARD 9 — Stark's Crusades apologetic (ch. 5, p. 112–113) is one-sided, and Scrivener himself balances
 it.** Stark's "the Crusades were not unprovoked… no apologies are required" (*Triumph of Christianity*,
 p. 234) is offered by Scrivener as only *one* way to tell the story, immediately answered by Dickson's
 "stare the crookedness full in the face" and the 1099 massacre eyewitness. **Never port the Stark line
-without the Dickson answer** — and note `legacy.html` already lists the 1096 Rhineland and 1099 Jerusalem
-massacres in its own voice. The apologetic value here is the *self-critical* half (Dickson, Francis of
+without the Dickson answer** — and note `legacy.html` listed the 1096 Rhineland and 1099 Jerusalem
+massacres in its own voice *(history: deleted 2026-09-30; no live essay carries them, by the owner's
+2026-10-04 decision — not a gap)*. The apologetic value here is the *self-critical* half (Dickson, Francis of
 Assisi, Alcuin), not the exculpatory half.
 
 **HAZARD 13 — 🔴🔴🔴 Ch. 10 (p. 211) runs a RETIRED CLAIM: Daniel 7:13–14 as a divine, worshipped figure.
@@ -943,7 +1037,7 @@ transgender debate (the Mackereth tribunal), sexual ethics, "competitive victimh
 wing" framings of the early church, abortion/infanticide as live political markers — all of it is contested,
 denominationally and politically divisive, and outside what the Evidence Library does. The *only* portable
 core is the abstract genealogical/grounding claim (contested modern values still run on Christian moral
-capital), which `legacy.html` + `moral.html` already carry. **Mine the grounding argument if at all; never
+capital), which `legacy.html` + `moral.html` already carried (now `progress.html` + `moral.html`). **Mine the grounding argument if at all; never
 the culture-war wrapper.** Scrivener handles it thoughtfully for his audience, but his audience and register
 are not ours.
 
@@ -959,27 +1053,33 @@ atheist" over-correction is its own trap: his religion is genuinely contested (W
 *did* nazify the faith — the honest claim is that Nazism inverted the Sermon on the Mount, not that no Nazi
 ever called himself Christian.
 
-**HAZARD 10 — the hospital roll-call (ch. 3, p. 73) is LESS careful than `legacy.html` already is.**
-Scrivener lists Basil, Fabiola, Chrysostom heroically; `legacy.html` fn 7 makes the *bounded* claim
+**HAZARD 10 — the hospital roll-call (ch. 3, p. 73) is LESS careful than `legacy.html` was.**
+Scrivener lists Basil, Fabiola, Chrysostom heroically; `legacy.html` fn 7 made the *bounded* claim
 (institutional priority in charitable care of the sick poor) **with the Horden/Nutton cautionary view
 attached.** ✅ **Ours is better — do not "improve" our hospital paragraph toward the roll-call.** Fabiola /
 "first public hospital in Western Europe" and the Brodman "cascade" are the only specific additions worth a
-low-priority row, and only with the existing caution kept.
+low-priority row, and only with the existing caution kept. *(Re-homed 2026-10-04: the bounded hospital claim,
+with Horden, is now on **`library/compassion.html`**, and the Fabiola + Brodman row is DONE there at fn 12 —
+backlog row DONE 2026-09-07; verified 2026-10-04.)*
 
 ---
 
 ## ⭐ STANDING OUTPUT: is the source better than our essays anywhere? Where, and how?
 
 **Yes — in three places, and all three are about the *ancient world half* of the argument, not the
-Christian half.**
+Christian half.** *(2026-08-23 verdicts, measured against the now-deleted `legacy.html`. Status as of
+2026-10-04: **1 DONE** on `equality.html`; **2 DONE** on `equality.html`; **3 DROPPED** by the owner on
+2026-09-07. The answer to "is the source better than our essays anywhere?" is now **no, on the three points
+above** — re-check only if a new chapter of the book is mined.)*
 
 1. **⭐ The ancient origin stories (verdict 4 — missing from ours).** *Enuma Elish* and *Atrahasis* make
    humanity out of a murdered god's blood **in order to carry the gods' workload**. Our
-   `library/legacy.html` says the image of God (Genesis 1:27) is a Jewish doctrine that Christianity
+   `library/legacy.html` (2026-08-23) said the image of God (Genesis 1:27) is a Jewish doctrine that Christianity
    carried into the Gentile world — true, and well fenced — but it never shows **what it was carried
    *against***. The contrast is not "a nicer anthropology"; it is *humans-as-divine-labour* versus
    *humans-as-divine-image*. This is the single most valuable thing in the captured range. Zero hits
-   site-wide for `Enuma Elish` or `Atrahasis`.
+   site-wide for `Enuma Elish` or `Atrahasis` (as of 2026-08-23). ✅ **DONE — `library/equality.html` "What the
+   old stories took for granted" now carries the *Enuma Elish* / *Atrahasis* contrast** (verified 2026-10-04).
 
 2. **⭐ Hierarchy of *being*, not of rank (verdict 3 — weaker in ours).** Our essay says the ancient world
    lacked "any settled conviction that the weak have a claim on the strong simply by being human". True,
@@ -987,20 +1087,24 @@ Christian half.**
    inequality was not a regrettable fact but *what nature taught*, and justice **was** the enforcement of
    it — so ancient "justice" and modern "justice" are near-opposites. Siedentop, p. 51, supplies the
    quotable line, and Siedentop is already in our footnotes. **This is a wording-improvement row, not a
-   content-addition row.**
+   content-addition row.** ✅ **DONE — `library/equality.html` states the positive doctrine ("justice did not
+   mean the levelling of persons; it meant the opposite") and quotes Siedentop's line** (verified 2026-10-04).
 
 3. **⭐ The reversed-accusations structure (verdict 4 — missing from ours).** The seven modern charges
    against Christianity are the negatives of the seven values, and they bite because the values are
    Christian. This is a genuinely useful apologetic move that appears nowhere on the site. ⚠ It must be
    built with the firewall attached (HAZARD 3) — "your objection borrows my standard" is one short step
    from "therefore I'm right", which is the laundering structure `apologia-argument` dismantled in
-   `legacy.html`'s round 1.
+   `legacy.html`'s round 1. ⛔ **DROPPED 2026-09-07 (owner decision)** — a cross-essay framing device, not a
+   single-essay improvement. Not a gap.
 
-**And where ours is better (verdict 5 — flag, do not mine):** the ancient dissenting voices (HAZARD 2);
-the ledger of the church's crimes, which Scrivener promises but which our essay actually itemises with
-specialist citations; the causal honesty on abolition (Christopher Leslie Brown's *Moral Capital*, which
-Scrivener's freedom chapter is unlikely to match — **to be confirmed when ch. 7 is captured**); and the
-whole good≠true firewall, which our essay states three times and this book, by design, does not state at all.
+**And where ours is better (verdict 5 — flag, do not mine):** the ancient dissenting voices (HAZARD 2 —
+now on `equality.html`); the causal honesty on abolition (Christopher Leslie Brown's *Moral Capital*, now on
+`abolition.html`; ch. 7 was since captured and confirmed it — see the ch. 7 verdicts); and the whole
+good≠true firewall, which each Christian Revolution essay states in its closing section and this book, by
+design, does not state at all. *(History: this list also named "the ledger of the church's crimes, which
+our essay actually itemises with specialist citations" — that was `legacy.html`, deleted 2026-09-30. The
+owner decided on 2026-10-04 that the ledger has no dedicated home; that is the intended scope, not a gap.)*
 
 ---
 
@@ -1010,41 +1114,53 @@ Classifications for everything in the captured range. **Six-verdict scheme per `
 
 | # | Lead | On-site home | Verdict | Action |
 |---|---|---|---|---|
-| 1 | Book's bibliographic data (subtitle, publisher, 2022) | `library/legacy.html` fn 5 + bibliography | **1 — corroboration** ✅ | Subtitle checked **word-for-word against the cover**: matches. Year + publisher match the copyright page. No row. ⚠ "Epsom" (place) is not on the copyright page — unverified, harmless. |
-| 2 | The values feel like atmosphere because we've never been without them | `library/legacy.html` (the Scrivener sentence at fn 5) | **1 — corroboration** | Already the exact use we make of him. No row. |
-| 3 | Crucifixion = the slave's death, engineered to strip dignity | `library/legacy.html` ("crucifixion was engineered to strip a human being of dignity in public"); `library/persecution.html` | **1 — corroboration** | Covered. But see rows 4–6 for the *primaries*, which we do not have. |
+| 1 | Book's bibliographic data (subtitle, publisher, 2022) | ~~`library/legacy.html` fn 5~~ (deleted 2026-09-30) → now `equality.html` fn 15, `compassion.html` fn 6, `science-history.html` fn 6, `abolition.html` fn 10, `progress.html` fn 10/11/12/14 + bibliographies (re-homed 2026-10-04) | **1 — corroboration** ✅ | Subtitle checked **word-for-word against the cover**: matches. Year + publisher match the copyright page. No row. ⚠ "Epsom" (place) is not on the copyright page — unverified; measured 2026-10-04, no live essay prints it any more. |
+| 2 | The values feel like atmosphere because we've never been without them | ~~`library/legacy.html` fn 5~~ → `library/equality.html` fn 15 | **1 — corroboration** | Already the exact use we make of him. No row. *(Re-homed 2026-10-04: `equality.html` fn 15 now makes this use of him — "whose title supplies the image used here".)* |
+| 3 | Crucifixion = the slave's death, engineered to strip dignity | ~~`library/legacy.html`~~ → `library/equality.html` ("Four hundred crosses": crucifixion as the slave's punishment that stripped its victim of dignity in public, fn 8); `library/persecution.html` | **1 — corroboration** | Covered. But see rows 4–6 for the *primaries*, which we do not have. |
 | 4 | **Cicero *Pro Rabirio* 5.16 + *Against Verres* 2.5.169–170** as the shame texts | nothing — **0 hits site-wide** | **4 — missing** | **Row: P3.** Our crucifixion-shame claim currently rests on our own assertion; these give it a Roman voice. ✅ **CORRECTED 2026-09-29: now live** — both texts on `library/equality.html`, *Pro Rabirio* 5.16 also on `library/crucified-messiah.html` (backlog row DONE 2026-09-07); the "0 hits" column is history. |
 | 5 | **Pedanius Secundus — 400 slaves crucified, AD 61 (*Annals* 14.42–45)** | nothing — **0 hits site-wide** | **4 — missing** | **Row: P3.** The single most concrete illustration of "a hierarchy of being" available. ⚠ Cite the *Annals*, not the book's course-page URL. ✅ **CORRECTED 2026-09-29: now live** on `library/equality.html` (backlog row DONE 2026-09-07). |
 | 6 | **The Alexamenos graffito** | nothing — **0 hits site-wide** | **4 — missing** | **Row: P3.** Earliest depiction of the crucifixion is a mockery — an unusually good, shareable, *hostile-witness* item. ✅ **CORRECTED 2026-09-29: now live** on `library/equality.html` (fn 10; backlog row DONE 2026-09-07). |
 | 7 | **Ancient origin stories: humanity made to be the gods' slaves (*Enuma Elish*, *Atrahasis*)** | nothing — **0 hits site-wide** | **4 — missing** ⭐ | **Row: P2 — the batch's top find.** See STANDING OUTPUT 1. ✅ **CORRECTED 2026-09-29: now live** — *Enuma Elish* / *Atrahasis* on `library/equality.html` (backlog row DONE 2026-09-07). |
-| 8 | **Hierarchy of *being*; ancient justice = enforcement of inequality; Siedentop p. 51** | `library/legacy.html` states the absence, not the positive doctrine; Siedentop cited at fn 12 without page or quotation | **3 — weaker in ours** ⭐ | **Row: P3 (wording).** See STANDING OUTPUT 2. |
-| 9 | **The seven accusations reversed into the seven values** | nothing site-wide | **4 — missing** ⭐ | **Row: P3.** See STANDING OUTPUT 3 — and the firewall caveat. |
-| 10 | Aristotle: some marked from birth for subjection (*Politics* 1254a) | `library/legacy.html` fn 4 cites *Politics* 1.3–7 (1253b–1255b) | **1 — corroboration** | Already covered, and covered *better* (with the dissenting-voices context). No row. |
+| 8 | **Hierarchy of *being*; ancient justice = enforcement of inequality; Siedentop p. 51** | ~~`library/legacy.html`~~ stated the absence, not the positive doctrine; Siedentop cited at fn 12 without page or quotation → now `library/equality.html` | **3 — weaker in ours** ⭐ | **Row: P3 (wording).** See STANDING OUTPUT 2. ✅ **DONE** — `library/equality.html` now states the positive doctrine and quotes Siedentop's "assumption of natural inequality" (backlog row DONE 2026-09-07; verified 2026-10-04). |
+| 9 | **The seven accusations reversed into the seven values** | nothing site-wide | **4 — missing** ⭐ | **Row: P3.** See STANDING OUTPUT 3 — and the firewall caveat. ⛔ **DROPPED 2026-09-07 (owner decision)** — a cross-essay framing device; not a gap. |
+| 10 | Aristotle: some marked from birth for subjection (*Politics* 1254a) | ~~`library/legacy.html` fn 4~~ → `library/equality.html` (*Politics* 1.5, 1254a21–24, Jowett) | **1 — corroboration** | Already covered, and covered *better* (with the dissenting-voices context). No row. *(Re-homed 2026-10-04: `library/equality.html` quotes *Politics* 1.5, 1254a21–24, inside 1.3–7, with the dissenting-voices context.)* |
 | 11 | "Plato" on natural inequality | — | **5 — hazard / error in the SOURCE** 🔴 | **No row. HAZARD 1.** Never port. |
-| 12 | "No one was attacking slavery in antiquity" | `library/legacy.html` says the opposite, correctly | **5 — hazard, ours is better** ✅ | **No row. HAZARD 2.** Do not let a future session "improve" us backwards. |
-| 13 | God himself hung on a cross / the crucified God | `library/legacy.html`, **with the `orthonote` fence** | **1 — corroboration**, with a fence our source lacks | No row. ⚠ Any port carries the fence. |
-| 14 | Christianity's first worshippers of the crucified were **Jews**, meaning the Maker of heaven and earth | `library/legacy.html` (imago Dei credited as Jewish); `library/jesus_as_god_nt.html`, `library/shema.html` for the monotheism | **1 — corroboration** | Covered across the deity cluster. No row. |
-| 15 | 1 Cor 1:18 / 1:23 / 2:2 — the cross as folly | `library/legacy.html` quotes 1 Cor 1:23 | **1 — corroboration** | No row. |
+| 12 | "No one was attacking slavery in antiquity" | ~~`library/legacy.html`~~ → `library/equality.html` says the opposite, correctly (Aristotle vs the "mere convention" view; Seneca; Ulpian — verified 2026-10-04) | **5 — hazard, ours is better** ✅ | **No row. HAZARD 2.** Do not let a future session "improve" us backwards. |
+| 13 | God himself hung on a cross / the crucified God | ~~`library/legacy.html`~~ → `library/equality.html`, **with the `orthonote` fence** ("God himself, in the person of the Son, had been executed" — verified 2026-10-04) | **1 — corroboration**, with a fence our source lacks | No row. ⚠ Any port carries the fence. |
+| 14 | Christianity's first worshippers of the crucified were **Jews**, meaning the Maker of heaven and earth | ~~`library/legacy.html`~~ → `library/equality.html` (imago Dei credited as Jewish); `library/jesus_as_god_nt.html`, `library/shema.html` for the monotheism | **1 — corroboration** | Covered across the deity cluster. No row. |
+| 15 | 1 Cor 1:18 / 1:23 / 2:2 — the cross as folly | ~~`library/legacy.html`~~ → `library/equality.html` quotes 1 Cor 1:23 (verified 2026-10-04) | **1 — corroboration** | No row. |
 | 16 | Sacred/secular divide is itself a Christian product (flagged for his ch. 5) | nothing site-wide | **deferred** | Cannot classify — the argument is in ch. 5, not yet captured. Re-check when ch. 5 arrives. |
-| 17 | Christianity is *not* a Western phenomenon (Pew 2015; global south) | `library/legacy.html` concedes the ledger is "weighted toward the West" but makes no global-Christianity point | **4 — missing (minor)** | **Row: P4.** Small but it strengthens the essay's own self-limitation. ⚠ Pew only — **not** the HuffPost China projection (HAZARD 4). |
+| 17 | Christianity is *not* a Western phenomenon (Pew 2015; global south) | ~~`library/legacy.html`~~ conceded its ledger was "weighted toward the West" but made no global-Christianity point → now `library/riseofchurch.html` | **4 — missing (minor)** | **Row: P4.** Small but it strengthens the essay's own self-limitation. ⚠ Pew only — **not** the HuffPost China projection (HAZARD 4). ✅ **DONE** — the Pew demographic bookend is on `library/riseofchurch.html` fn 19, framed as a factual correction and not as evidence of truth (backlog row DONE 2026-09-07; verified 2026-10-04). |
 | 18 | W.E.I.R.D. / Henrich | nothing — **0 hits site-wide** | **6 — non-recommendation** | **No row, and here is the reason:** Henrich's causal thesis (the church's medieval marriage-and-family programme rewrote Western psychology) is a large, contested claim in cultural evolution, and importing the acronym without the thesis is decoration. It also cuts against denominational neutrality — the mechanism is specifically the *Western* church's canon law on cousin marriage. Logged deliberately, not overlooked. |
-| 19 | Reel spec calls Holland "the secular historian" | `tools/reel/specs/air-we-breathe.json` (kicker + voiceover) | **2 — error in ours** 🔴 | **Already logged — `docs/content-backlog.md` row 30.** This capture *strengthens* it: the book itself never calls Holland secular (it says of the whole list "mostly they're not"), and `library/legacy.html` fn 2 records that Holland was made **Canon Historian at Salisbury Cathedral by 2025**. So the reel's "EVEN A SECULAR HISTORIAN" is **our own addition and is now false**. No new row; noted here so the existing row is not weakened. |
-| 20 | Phileas the Martyr on being treated as if they no longer existed | nothing site-wide | **4 — missing (`/sources` candidate)** | **Row: P4.** NPNF text = public domain, which is exactly what `/sources` takes. |
-| 21 | **Harari (*Sapiens*): "no such thing as rights in biology"; equality is a myth** (ch. 2) | nothing — **0 hits site-wide** | **4 — missing** ⭐ | **Row: P2.** Best atheist-in-his-own-words witness for `legacy.html`'s "equality is not self-evident." ⚠ Port the diagnosis only, not the nihilism. |
-| 22 | **The "Dark Ages" / conflict-thesis is a myth** (ch. 5) — medieval universities, science, Sagan's "millennium gap," Paine's "age of ignorance" | largely **absent site-wide** | **4 — missing** ⭐ | **Row: P2.** A whole apologetic topic we don't cover. Pairs with `laws.html`/`reason.html` or a new essay. Paine PD → `/sources`. |
+| 19 | Reel spec calls Holland "the secular historian" | `tools/reel/specs/air-we-breathe.json` (kicker + voiceover) | **2 — error in ours** 🔴 | ✅ **DONE 2026-09-09** — the reel spec's own `reviewed` stamp records the de-stale ("The historian Tom Holland"; kicker "A HISTORIAN'S VERDICT"), and measured 2026-10-04 the word "secular" appears in neither `air-we-breathe.json` nor `intro-revolution.json` outside their review stamps. *(Original entry:* **Already logged — `docs/content-backlog.md` row 30.** This capture *strengthens* it: the book itself never calls Holland secular (it says of the whole list "mostly they're not"), and `library/legacy.html` fn 2 (deleted 2026-09-30) recorded that Holland was made **Canon Historian at Salisbury Cathedral by 2025**. So the reel's "EVEN A SECULAR HISTORIAN" is **our own addition and is now false**. No new row; noted here so the existing row is not weakened.)* |
+| 20 | Phileas the Martyr on being treated as if they no longer existed | nothing site-wide | **4 — missing (`/sources` candidate)** | **Row: P4.** NPNF text = public domain, which is exactly what `/sources` takes. ✅ **DONE 2026-08-25** (`/sources`, `sources/eusebius.json`; backlog row DONE). |
+| 21 | **Harari (*Sapiens*): "no such thing as rights in biology"; equality is a myth** (ch. 2) | nothing — **0 hits site-wide** | **4 — missing** ⭐ | **Row: P2.** Best atheist-in-his-own-words witness for (then) `legacy.html`'s "equality is not self-evident." ⚠ Port the diagnosis only, not the nihilism. ✅ **DONE** — `library/equality.html` "The honest atheist witness" (backlog row DONE 2026-09-07; verified 2026-10-04). |
+| 22 | **The "Dark Ages" / conflict-thesis is a myth** (ch. 5) — medieval universities, science, Sagan's "millennium gap," Paine's "age of ignorance" | largely **absent site-wide** | **4 — missing** ⭐ | **Row: P2.** A whole apologetic topic we don't cover. Pairs with `laws.html`/`reason.html` or a new essay. Paine PD → `/sources`. ✅ **DONE** — `library/science-history.html` (Draper 1874, White 1896, the Galileo affair; backlog row DONE 2026-09-07; verified 2026-10-04). Sagan/Paine not cited — optional. |
 | 23 | **The moral argument, accessibly: Lewis's "crooked line implies a straight line" + Denhollander** (ch. 4 tail) | `library/moral.html` is academic (Kant/Adams/Wielenberg/Street); lacks the accessible form | **3 — weaker in ours** ⭐ | **✅ SHIPPED 2026-08-24 (backlog row 224).** Handled the pastoral sensitivity with restraint (Denhollander shown illustrating premise 2; justice + forgiveness kept paired). |
-| 24 | **Human-rights genealogy via canon law: obligations→rights, the poor's *claim*** (ch. 5); Siedentop p. 249 | `library/legacy.html` argues equality's genealogy but has no medieval-legal mechanism | **3/4 — enrichment** ⭐ | **Row: P3.** A concrete mechanism (the Gregorian "papal revolution") for a claim the essay makes abstractly. |
-| 25 | **Hurtado: Christian "love ethic" has no known Roman-era parallel** (ch. 3); *Destroyer of the gods* pp. 64–65 | `legacy.html` compassion section makes the point weakly | **3 — weaker in ours** | **Row: P3.** ⚠ Hurtado is cited 35× — verify this exact claim isn't already live before writing a row-execution. |
-| 26 | Fabiola "first public hospital in W. Europe" + Brodman "cascade of hospitals" (ch. 3) | `legacy.html` fn 7 covers hospitals, **better**, with the Horden caution | **5 → P4 at most** | **Low-priority row.** Specific items we lack, but subordinate to HAZARD 10 — never at the cost of the Horden/Nutton caution. |
+| 24 | **Human-rights genealogy via canon law: obligations→rights, the poor's *claim*** (ch. 5); Siedentop p. 249 | ~~`library/legacy.html`~~ argued equality's genealogy with no medieval-legal mechanism → now `library/equality.html` | **3/4 — enrichment** ⭐ | **Row: P3.** A concrete mechanism (the Gregorian "papal revolution") for a claim the essay makes abstractly. ⚠ **Backlog says DONE (2026-09-07, re-targeted to `equality.html`), but measured 2026-10-04 it is NOT shipped:** `equality.html` has only a one-clause canon-law pointer, no Gregorian mechanism, no p. 249. Re-logged as open in `docs/CHRISTIAN_REVOLUTION_SWEEP_BACKLOG_2026-10-04.md`. |
+| 25 | **Hurtado: Christian "love ethic" has no known Roman-era parallel** (ch. 3); *Destroyer of the gods* pp. 64–65 | ~~`legacy.html` compassion section~~ → `library/compassion.html` | **3 — weaker in ours** | **Row: P3.** ⚠ Hurtado is cited 35× — verify this exact claim isn't already live before writing a row-execution. ✅ **DONE** — `library/compassion.html` carries Hurtado on the distinctive love ethic (backlog row DONE 2026-09-07; verified 2026-10-04). Hurtado is **2016** (corrected 2026-10-04 from 2017); page numbers still owed per the sweep backlog. |
+| 26 | Fabiola "first public hospital in W. Europe" + Brodman "cascade of hospitals" (ch. 3) | ~~`legacy.html` fn 7~~ → `library/compassion.html` (fn 11–12) covers hospitals, **better**, with the Horden caution | **5 → P4 at most** | **Low-priority row.** Specific items we lack, but subordinate to HAZARD 10 — never at the cost of the Horden/Nutton caution. ✅ **DONE** — Fabiola (Jerome, *Letter* 77) + Brodman on `library/compassion.html` fn 12, with the Horden caution kept (backlog row DONE 2026-09-07; verified 2026-10-04). |
 | — | Reformation section (sola fide, tradition downgraded) | `what-we-believe.html` / denominational-neutrality guardrail | **6 — non-recommendation** 🔴 | **No row. HAZARD 7.** Intra-Christian dispute we do not adjudicate. |
-| — | Inquisition death-toll comparison to the Terrors | `legacy.html` fn 10 (Kamen, sober) | **5 — hazard** | **No row. HAZARD 8.** Relativising move; keep our sober treatment. |
-| — | Stark: "the Crusades… no apologies are required" | `legacy.html` lists the 1096/1099 massacres in our own voice | **5 — hazard** | **No row. HAZARD 9.** Never without Dickson's answer. |
+| — | Inquisition death-toll comparison to the Terrors | ~~`legacy.html` fn 10 (Kamen, sober)~~ → none (owner decision) | **5 — hazard** | **No row. HAZARD 8.** Relativising move; keep our sober treatment. *(History: `legacy.html` deleted 2026-09-30; no live essay carries the Inquisition ledger, by owner decision 2026-10-04 — not a gap. Hazard stands.)* |
+| — | Stark: "the Crusades… no apologies are required" | ~~`legacy.html` listed the 1096/1099 massacres in our own voice~~ → none (owner decision) | **5 — hazard** | **No row. HAZARD 9.** Never without Dickson's answer. *(History: deleted with `legacy.html`; no dedicated home by owner decision 2026-10-04 — not a gap. Hazard stands.)* |
 
 **Rows logged from this book so far: 22 — six P2, thirteen P3, three P4** (plus several no-row hazard/
 non-recommendation classifications). Counts measured 2026-08-23 by tallying the rows appended to
 `docs/content-backlog.md`. Rows 1–8 (Intro + ch. 1) shipped in the first commit; rows 21–26 (ch. 2–5) are
 appended in the second. *(An earlier draft of the ch. 1 line said "7" — an estimate written before the rows
 were appended, corrected once already; this running total is measured, not estimated.)*
+
+**⭐ RE-TALLY 2026-10-04 — every row from this book is closed.** Counts measured 2026-10-04 by tallying the
+status column of the 22 `docs/content-backlog.md` rows whose source cell names this note: **22 rows — 20
+DONE, 2 DROPPED, 0 OPEN.** By priority: **P2 6** (5 DONE, 1 DROPPED — "Was Hitler a Christian?", owner
+declined), **P3 13** (12 DONE, 1 DROPPED — the reversed-accusations device, owner decision), **P4 3** (3
+DONE). The 6 / 13 / 3 split is unchanged from 2026-08-23. *(Previous status line: the 2026-09-07 banner in
+the backlog said 16 DONE, 4 OPEN, 2 DROPPED; the 4 then-open rows — Alexamenos, global Christianity,
+Fabiola/Brodman, Harper — were executed and gated the same day and their cells now read DONE.)*
+⚠ **One DONE is not borne out by the live page:** the Gregorian "papal revolution" / Siedentop p. 249 row
+(live-door row 24) is marked DONE in the backlog, but `library/equality.html` carries only a one-clause
+canon-law pointer (measured 2026-10-04). It is re-logged as open in
+`docs/CHRISTIAN_REVOLUTION_SWEEP_BACKLOG_2026-10-04.md`; the backlog cell itself was left unchanged.
 
 ---
 

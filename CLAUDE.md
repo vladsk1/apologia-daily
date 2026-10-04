@@ -121,7 +121,9 @@
 > Macedonian mirror `ev-s8.mk.html` still serves gated English under a pending-translation banner (native MK
 > gate owed), and **pastoral sign-off** is owed on all three essays as site-wide (`STATEMENT_OF_FAITH.md` = pending).
 > Also open (row 30): `tools/reel/specs/air-we-breathe.json` still calls Tom Holland "the secular historian" — stale
-> (Salisbury Canon Historian, June 2025), re-word or pull before that reel is posted.
+> (Salisbury Canon Historian, June 2025), re-word or pull before that reel is posted. ✅ **DONE 2026-09-09**
+> (commit `ae035f00`; re-verified 2026-10-04: the spec says "The historian Tom Holland" and "secular" survives
+> only inside its `reviewed` stamp, which records the old wording as history).
 >
 > **BOOK-SWEEP HANDOVER — 2026-08-08. ⭐ START A RESEARCH-LIBRARY SWEEP SESSION AT
 > [`docs/BOOK_SWEEP_HANDOVER.md`](docs/BOOK_SWEEP_HANDOVER.md).** The cross-check has now run on
