@@ -39,6 +39,18 @@ Scrivener's editions may be paginated differently from ours, so each needs check
 - **persecution:** Van Nuffelen's page range was deleted as unverified (riseofchurch fn17). Restore it if JSTOR or Brill confirms it.
 
 ## Per-essay items (BACKLOG, P2–P4)
+**✅ SHIPPED 2026-10-04 (commit `99f684a8`)**: every item below EXCEPT the following.
+- **Skipped by owner rule (low-priority objections):** compassion's ANE "widow and orphan" objection; naming Parfit and Wielenberg in equality.
+- **Skipped as unverifiable** (needs the book in hand):
+  - Davis, "a moral achievement that may have no parallel" (*Inhuman Bondage*, 331);
+  - Pinker, "does justice roll on like a river?";
+  - Siedentop p. 249 (the canonist step was added without a page).
+- **Adjusted:**
+  - Maritain's remark is attributed to a UNESCO national-commission meeting, not the UDHR drafters.
+  - Phileas is dated "c. 306".
+- **Still open, P4:** the card (ev-s8.html:34/62/77) says "roughly 2.5–3 million" while the essay says "about two and a half or three million" (same meaning). Hanke's *Aristotle and the American Indians* (abolition n. 3) is not in the bibliography.
+
+The "Stale records" section below was also done in the same commit.
 - **riseofchurch:**
   - The Ehrman figure in the body, fn5 and the FAQ is only "roughly" in parity.
   - fn18's Fragment citation sits under a "state power" heading.
