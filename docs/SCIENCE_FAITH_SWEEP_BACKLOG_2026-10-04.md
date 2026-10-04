@@ -46,13 +46,17 @@ The owner's rule is to fix a tab's logged issues before the next tab, except low
 - **scholars.html Axe bio:** "Director of Biologic Institute" may be outdated (he is now at Biola), and "MRC Centre" should read "MRC Centre for Protein Engineering". Unverified, so not changed.
 - **ev-m-privileged and ev-m-beauty:** the overclaim-cap regex was widened. Other pages that carry a 'proves' guard still use the older form.
 - **Book checks:** McMullin page (bigbang fn 27); Leslie pp. 13–14 and the "fifty" marksmen (cosmic); Penrose *Road to Reality* §§28.6–28.7 locus (cosmic).
-- **Owner decisions:**
-  - laws "a gift … has a giver" (essay l.214; ev-s5 l.411/478/1102);
-  - re-base the cosmic card's Conway Morris / Rare Earth / Polkinghorne sections on the essay;
-  - rename "Cosmic Purposiveness" site-wide;
-  - the essay laws meta "governed by … laws";
-  - build ev-m-miracles?;
-  - the pocket bigbang "what Genesis 1:1 always implied".
+- **Owner decisions (2026-10-04):**
+  - ✅ **gift→Giver FIXED.** Wigner's "gift" is now named as a figure of speech everywhere: laws + mathematics essays, ev-s5 + MK/ES.
+  - ✅ **Cosmic card RE-BASED** on its essay (ev-s5 + MK/ES, daily-args).
+  - ❌ ev-m-miracles: NOT to be built (owner).
+  - ❌ "Cosmic Purposiveness" rename: NOT to be done (owner).
+  - Still open: the essay laws meta "governed by … laws"; the pocket bigbang "what Genesis 1:1 always implied"; book page checks (left as is).
+  - Logged, not fixed — similar figure→literal slides not involving Wigner:
+    - ev-s5 laws Case Plainly Move 2: "a book that can be read … tends to have an author";
+    - ev-s5 privileged ~l.931/981: "extra gift … who gave them";
+    - ev-s5 kalam l.72: "who gave the gift";
+    - reel specs mathematics-god / mathematics-instagram: "A gift implies a giver".
 - **Other tabs / corpus:**
   - "flagged above" (actually below) and "Each gets its best form first" on ~58 other ev-m pages;
   - the counters on s1/s4/s8;
