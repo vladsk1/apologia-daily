@@ -211,6 +211,62 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 .seo-summary p:last-child{margin-bottom:0}
 .hero{padding-bottom:48px}
 .seo-summary + .dialcard{margin-top:24px}
+
+/* ---------- mastery levels (Bronze / Silver / Gold) ---------- */
+.levels{display:grid;gap:10px;margin-top:4px;width:100%}
+.lvl{display:grid;grid-template-columns:42px 1fr auto;gap:14px;align-items:center;border:1px solid var(--border);border-radius:11px;padding:13px 16px;background:var(--w);transition:.2s}
+.lvl .medal{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;background:#eef0f3;filter:grayscale(1);opacity:.45}
+.lvl.earned{border-color:#cfe6da;background:var(--okl)}
+.lvl.earned .medal{filter:none;opacity:1;background:#fff}
+.lvl .lt b{font-family:var(--fd);font-size:16px;display:block;color:var(--td)}
+.lvl .lt span{font-family:var(--ui);font-size:12.5px;color:var(--tm)}
+.lvl .ls{font-family:var(--ui);font-size:12px;font-weight:600;color:var(--tm);text-align:right;white-space:nowrap}
+.lvl.earned .ls{color:var(--ok)}
+.lvl.current{border-color:var(--g);box-shadow:0 0 0 1px var(--g) inset}
+
+/* ---------- key-terms glossary (pretraining) ---------- */
+.glossary{display:grid;gap:0;margin-top:6px}
+.gt{display:grid;grid-template-columns:168px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--border);font-family:var(--ui)}
+.gt:last-child{border-bottom:none}
+.gt b{font-size:14px;color:var(--td)}
+.gt b em{color:var(--gd);font-style:italic}
+.gt span{font-size:13.5px;color:var(--tm);line-height:1.5}
+@media(max-width:560px){.gt{grid-template-columns:1fr;gap:2px}}
+
+/* ---------- premise case: supports with strength pills ---------- */
+.stp{font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:5px;white-space:nowrap}
+.stp.proof{background:#e7eefb;color:#1e4278}
+.stp.strong{background:#fbf3e2;color:#9a7416}
+.stp.sugg{background:#eef0f3;color:#5a6b82}
+.support{border-left:3px solid #dbe6f4;padding:3px 0 3px 15px;margin:14px 0}
+.support .sh{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px}
+.support .sh b{font-family:var(--ui);font-size:14.5px;color:var(--td)}
+.support p{font-size:15px;margin-bottom:4px}
+.honest{font-family:var(--ui);font-size:13.5px;color:var(--td);background:#fbf8f0;border-left:3px solid var(--g);padding:9px 13px;border-radius:0 8px 8px 0;margin-top:6px}
+.honest b{color:var(--gd)}
+.whoholds{font-family:var(--ui);font-size:13px;color:var(--tm);background:#f4f7fb;border-radius:8px;padding:10px 14px;margin-top:12px}
+.whoholds b{color:var(--n5)}
+.precise{font-family:var(--ui);font-size:13px;color:var(--n7);background:#eef3fa;border:1px solid #dbe6f4;border-radius:8px;padding:9px 13px;margin:2px 0 10px}
+
+/* ---------- reveal-on-reason drill ---------- */
+.derive{display:grid;gap:10px;margin-top:10px}
+.dr{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:var(--ow);border:1px solid var(--border);border-radius:10px;padding:12px 15px}
+.dr .q{font-size:15px;font-family:var(--ss)}
+.dr .q em{color:var(--n5);font-style:italic}
+.dr .rev{font-family:var(--ui);font-size:12.5px;font-weight:600;color:var(--n5);background:#fff;border:1px solid #cfdcee;border-radius:7px;padding:6px 12px;cursor:pointer;white-space:nowrap}
+.dr .rev:hover{background:#f3f7fc}
+.dr .ans{display:none;font-family:var(--ui);font-weight:700;font-size:14px;color:var(--gd)}
+.dr.shown .rev{display:none}
+.dr.shown .ans{display:inline}
+@media(max-width:560px){.dr{grid-template-columns:1fr}.dr .ans,.dr .rev{justify-self:start}}
+
+/* ---------- retrieval gate ---------- */
+.recall{background:var(--w);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-top:14px}
+.recall .q{font-family:var(--ui);font-size:14.5px;font-weight:600;color:var(--td);margin-bottom:10px}
+.gradeline{font-family:var(--ui);font-size:13.5px;font-weight:600;margin-top:12px;display:none}
+.gradeline.show{display:block}
+.gradeline.pass{color:var(--ok)}
+.gradeline.fail{color:var(--gd)}
 </style>
   <link rel="stylesheet" href="/ad-nav.css">
 <meta name="description" content="Master the moral argument: if objective morality exists, God is its best ground - and learn to answer the evolutionary and Euthyphro replies.">
@@ -324,15 +380,37 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     </div>
     <div class="dialmeta">
       <h2>Your mastery of this argument</h2>
-      <p>Four checkpoints: understand it, explain it, drill it, defend it. Complete them in any order — your progress saves to your account.</p>
+      <p>Three earned levels — <b>Bronze</b> (rebuild it), <b>Silver</b> (defend it cold), <b>Gold</b> (handle an objection you&rsquo;ve never seen, then prove it again weeks later). Clicking through no longer counts; demonstrated recall does. Progress saves to your account.</p>
       <span class="libnote">◆ &nbsp;Argument 4 of 22 in the mastery library</span>
     </div>
+  </div>
+
+  <div class="levels" id="levels">
+    <div class="lvl" id="lvl-bronze"><div class="medal">&#129353;</div><div class="lt"><b>Bronze · Understand</b><span>Rebuild the argument and what the moral ground must be, from memory (&ge;80%)</span></div><div class="ls">Locked</div></div>
+    <div class="lvl" id="lvl-silver"><div class="medal">&#129352;</div><div class="lt"><b>Silver · Defend</b><span>Explain it &ge;8/10 <em>and</em> field its objections cold</span></div><div class="ls">Locked</div></div>
+    <div class="lvl" id="lvl-gold"><div class="medal">&#129351;</div><div class="lt"><b>Gold · Master</b><span>Answer an unseen objection, then re-prove it on 3 spaced reviews</span></div><div class="ls">Locked</div></div>
   </div>
 
   <!-- ===================== PHASE 1: UNDERSTAND ===================== -->
   <section id="understand">
     <div class="phasehead"><span class="phasenum">1</span><h3>Understand it</h3></div>
-    <p class="phasesub">Not more prose — the load-bearing structure. See the skeleton, then learn to defend each bone.</p>
+    <p class="phasesub">Not more prose — the load-bearing structure, defended bone by bone, then proven from memory. Work top to bottom; the checkpoint at the end asks you to rebuild it with nothing in front of you.</p>
+
+    <div class="card">
+      <span class="kick">Before you start · key terms</span>
+      <h4>Eight terms this argument turns on</h4>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:6px">Learn these first — above all the ontology/epistemology distinction, which is where the argument is most often caricatured.</p>
+      <div class="glossary">
+        <div class="gt"><b><em>Objective</em></b><span>Independent of human opinion. Not that moral views vary across cultures (they do) — that beneath the variation some things are really, mind-independently wrong.</span></div>
+        <div class="gt"><b>Values vs. duties</b><span>Craig&rsquo;s distinction: <em>values</em> concern what is good or bad; <em>duties</em> concern what is right or wrong &mdash; what we are <em>obligated</em> to do. The argument is about both, but the sharp end is duties.</span></div>
+        <div class="gt"><b>Ontology vs. epistemology</b><span>Ontology: what makes moral facts <em>true at all</em>. Epistemology: who can <em>know and follow</em> the law &mdash; anyone, atheist included. The argument is about ontology; confusing the two is the classic caricature.</span></div>
+        <div class="gt"><b>Properly basic</b><span>A belief accepted directly, as a deliverance of experience, not from a prior argument (Plantinga). That torturing a child for fun is wrong is held this way &mdash; and rightly.</span></div>
+        <div class="gt"><b>Euthyphro dilemma</b><span>Plato&rsquo;s trap: is something good because God commands it, or does God command it because it is good? The ancient objection the argument must answer.</span></div>
+        <div class="gt"><b>Modified divine command theory</b><span>Robert Adams&rsquo;s view and the project&rsquo;s scholarly anchor: moral wrongness is being contrary to the commands of a <em>loving</em> God; values are grounded in God&rsquo;s own nature as the Good.</span></div>
+        <div class="gt"><b>Secular moral realism</b><span>The view (Wielenberg, Shafer-Landau, Enoch) that objective moral facts exist with <em>no</em> God. It grants premise 2 and denies premise 1 &mdash; the live opposition.</span></div>
+        <div class="gt"><b>Transcendent moral ground</b><span>The most the argument reaches: a personal source whose nature is the Good &mdash; a moral lawgiver, <em>not yet</em> the triune God of Christian worship.</span></div>
+      </div>
+    </div>
 
     <div class="card">
       <span class="kick">The argument, formally</span>
@@ -343,41 +421,44 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         <div class="prem concl"><div class="tag">∴ C</div><p>Therefore, <b>God exists</b>.</p></div>
       </div>
       <p class="formnote">Valid as it stands: accept both premises and the conclusion follows. P2 is, if anything, common ground between the theist and the secular moral realist; the interesting fight is over P1 — granting that morality is objective, what grounds it? Know which move your interlocutor is making.</p>
+    </div>
 
-      <span class="kick" style="margin-top:22px">Then the conceptual step — what must ground morality?</span>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">Duties bind persons; a real moral law that stands over everyone needs a foundation beyond human opinion, beyond evolution, beyond any one culture — a transcendent personal source whose own nature is the standard of good.</p>
-      <div class="chiprow">
-        <span class="chip">transcendent</span><span class="chip">personal</span><span class="chip">the standard of goodness itself</span><span class="chip">grounds real duties</span><span class="chip">not human convention</span><span class="chip gold">not an evolutionary accident</span>
+    <div class="card">
+      <span class="kick">From the moral law to a Lawgiver</span>
+      <h4>Don&rsquo;t read the conclusion — reason to it</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:4px">Start from the intuition everyone shares, then follow it down — and note exactly how far it reaches, and how far it does not.</p>
+      <div class="derive">
+        <div class="dr"><div class="q">You say the Holocaust was really, objectively wrong — not merely out of fashion. Is that a claim about human opinion, or about reality?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">about reality — wrong mind-independently (that is P2)</span></div>
+        <div class="dr"><div class="q">A wrong that binds everyone, regardless of what anyone feels — can mere opinion, evolution, or culture ground it?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">no — each only reports what we prefer or agree, not what we owe</span></div>
+        <div class="dr"><div class="q">So a real, binding duty needs a foundation…?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">beyond human opinion — a standard that stands over everyone</span></div>
+        <div class="dr"><div class="q">Why <em>personal</em> — a lawgiver — rather than a free-floating value?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">duties seem owed <em>to someone</em>; a command needs a commander</span></div>
+        <div class="dr"><div class="q">How far does the inference reach?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">a transcendent ground of the Good — a moral lawgiver — no further</span></div>
       </div>
+      <p class="honest" style="margin-top:14px"><b>Honestly stated:</b> if it succeeds the argument reaches a transcendent ground of objective morality — a lawgiver whose nature is the Good. That is a great deal, but not yet the full God of Christian worship. The inference to <em>personhood</em> is a further step (though not arbitrary: duties are owed to someone, and the Good is best understood as a person&rsquo;s nature). Identifying this lawgiver with the triune God revealed in Jesus Christ requires the rest of the case — <a href="/library/minimalfacts.html">historical</a> and revelatory. It is <em>one strand</em> in a cumulative case, held with confidence rather than certainty. And a standing caution: the argument never claims atheists cannot be moral — it asks what makes morality real, for believer and unbeliever alike.</p>
     </div>
 
     <div class="card">
       <span class="kick">Defending the premises</span>
       <h4>Why each premise is more plausible than its denial</h4>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P1 — no God, no objective morality</summary>
-        <div class="body">
-          <p class="lbl steel">On naturalism, ought vanishes</p>
-          <p>If humans are accidental byproducts of a mindless process, our moral feelings are survival mechanisms, not perceptions of real obligations. A universe of pure matter contains no oughts woven into it — only what is.</p>
-          <p class="lbl steel">Even an atheist saw it</p>
-          <p>J.L. Mackie, an atheist, agreed that objective moral values would be deeply strange entities — the kind of thing that fits a theistic universe far better than a naturalistic one (<em>The Miracle of Theism</em>, 1982, ch. 6).</p>
-        </div>
-      </details>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P2 — objective moral values exist</summary>
-        <div class="body">
-          <p class="lbl steel">We know some things are really wrong</p>
-          <p>Torturing a child for fun, or the Holocaust, is not merely unfashionable — it is wrong, full stop. This moral knowledge is as secure as our knowledge of the external world.</p>
-          <p class="lbl steel">No one can live the denial</p>
-          <p>Even those who deny objective morality protest real injustice done to them. Moral experience is properly basic — we are right to trust it unless given strong reason not to.</p>
-        </div>
-      </details>
+      <p class="precise">The conclusion is valid; the fight is P1 (without God, no objective morality) and P2 (objective morality is real). The sharpest objections to each are answered in the bank below.</p>
+
+      <div class="support">
+        <div class="sh"><b>P1 — without God, no objective moral values or duties</b> <span class="stp strong">The contested premise</span></div>
+        <p>If humans are accidental byproducts of a mindless process, our moral sense is a survival mechanism, not a perception of real obligations. A universe of pure matter contains no oughts woven into it — only what <em>is</em>. Even the atheist J.L. Mackie granted that objective moral values would be metaphysically &ldquo;queer&rdquo; entities, fitting a theistic universe far better than a naturalistic one — and so, consistently, denied they exist.</p>
+        <p class="honest"><b>Honest narrowing:</b> read it correctly — the claim is about <em>ontology</em> (what makes moral facts true), never that atheists cannot be good or know right from wrong (they plainly can, often putting believers to shame). And it is genuinely contested: secular moral realists argue objective morality needs no God at all (see Wielenberg in the bank).</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>P2 — objective moral values and duties exist</b> <span class="stp strong">Common ground, widely granted</span></div>
+        <p>Most people are far more certain that torturing a child for fun is wrong than of any theory that would deny it. We apprehend such wrongs the way we apprehend the external world — directly, not by argument. The atheist Louise Antony pressed the point against Craig: any argument for moral skepticism must be built from premises less obvious than the moral truths it denies, so the skeptic&rsquo;s footing is always the less secure.</p>
+        <p class="honest"><b>Honest narrowing:</b> this premise is shared by a large camp of secular moral realists — Wielenberg, Shafer-Landau, Enoch — who agree wholeheartedly that some acts are objectively evil. So P2 is, if anything, common ground. Candor also requires noting that debunking arguments (Sharon Street&rsquo;s) have at least dented the intuition it rests on.</p>
+      </div>
+      <div class="whoholds"><b>The room:</b> the modern form is associated with William Lane Craig, and its scholarly anchor is Robert Adams&rsquo;s modified divine command theory; Kant is an ancestor (with a caveat — he denied God is the ground of obligation). The live opposition grants P2 and denies P1: the secular realists Wielenberg, Shafer-Landau and Enoch. J.L. Mackie runs the other way — granting the conditional, denying P2. Wes Morriston presses the Euthyphro reply.</div>
     </div>
 
     <div class="card">
       <span class="kick">The hard part — objections, answered</span>
       <h4>The objections you will actually meet</h4>
-      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">This is where a defender is made. Each of these in its strongest form first, then the reply — and the hardest objection of all is flagged above.</p>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">This is where a defender is made. Each of these in its strongest form first, then the reply — and the hardest objection of all is flagged below.</p>
       <p class="hardest"><b>The one that matters most:</b> Wielenberg&rsquo;s &mdash; necessary moral facts need no God, and both accounts bottom out somewhere. The <a href="/library/moral.html">deep dive</a> answers it at length &mdash; take it with you, not just the replies below.</p>
 
       <details class="acc">
@@ -450,30 +531,60 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <div class="what">Opens with the Law of Human Nature — the universal sense of a real right and wrong that we did not invent and cannot fully keep.</div>
         </div>
         <div class="row">
+          <div class="who"><b>Robert M. Adams</b><span>20th c. · <em>Finite and Infinite Goods</em> (1999)</span></div>
+          <div class="what">The scholarly anchor: values grounded in God as the Good itself; duties as the commands of a loving God. The sophisticated form behind the popular syllogism.</div>
+        </div>
+        <div class="row">
           <div class="who"><b>Immanuel Kant</b><span>18th c. · <em>Critique of Practical Reason</em></span></div>
           <div class="what">Argued that practical reason must postulate God and immortality as conditions of the highest good — while denying that God is the ground of obligation.</div>
         </div>
         <div class="row">
           <div class="who"><b>J.L. Mackie</b><span>20th c. · <em>Ethics</em>; <em>The Miracle of Theism</em> (1982), ch. 6</span></div>
-          <div class="what">An atheist who conceded that objective values would be metaphysically queer — and so denied they exist. A model of where the argument bites.</div>
-        </div>
-        <div class="row">
-          <div class="who"><b>William Lane Craig</b><span>contemporary</span></div>
-          <div class="what">Popularised the syllogism and value/duty distinction used here, and adopts the Euthyphro reply sharpened by Robert Adams, the scholarly anchor of the project. (We paraphrase — read the originals.)</div>
+          <div class="what">An atheist who conceded that objective values would be metaphysically queer — and so denied they exist. A model of where the argument bites. (We paraphrase — read the originals.)</div>
         </div>
       </div>
+    </div>
+
+    <div class="card">
+      <span class="kick">The honest state of the scholarship</span>
+      <h4>Where the argument really stands</h4>
+      <p>Among philosophers the moral argument is taken seriously; Robert Adams&rsquo;s modified divine command theory is its scholarly anchor, and the live battleground is premise 1 — against secular moral realists, Erik Wielenberg above all, who hold that objective moral facts exist as brute, necessary truths needing no God. Premise 2 is, by contrast, common ground: the secular realists grant it wholeheartedly.</p>
+      <p class="honest"><b>The real fork:</b> whether objective morality can stand as brute, impersonal necessities owed to no one, or whether genuine obligation needs a personal ground. Honest thinkers part ways here — naming it is accuracy, not weakness.</p>
+      <p><b>The bounded verdict:</b> if it succeeds, the argument reaches a transcendent ground of the Good — a moral lawgiver — not yet the personal, good, triune God of worship. The conviction that some things are really, objectively wrong fits more naturally in a universe grounded in a good God than in one of brute, impersonal fact — but it does not coerce; it invites. That is our judgment, held with confidence rather than certainty — one strand in a cumulative case that rests, above all, on the <a href="/library/minimalfacts.html">historical evidence for the resurrection</a>.</p>
+    </div>
+
+    <div class="card" id="bronzeGate">
+      <span class="kick">Checkpoint · earn Bronze</span>
+      <h4>Rebuild it from memory — nothing in front of you</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:4px">Close the sections above. This is the retrieval that turns reading into knowing — and it is how this argument reaches <b>Bronze&nbsp;· Understand</b> on your shelf. Opening accordions no longer counts; showing you can rebuild the structure does.</p>
+      <div class="recall">
+        <div class="q">1 &middot; Put the argument in order — tap the three lines in sequence.</div>
+        <div id="orderPool" class="btnrow"></div>
+        <div id="orderSeq" style="font-family:var(--ui);font-size:13.5px;color:var(--tm);margin-top:10px;min-height:1.2em"></div>
+      </div>
+      <div class="recall" style="margin-top:12px">
+        <div class="q">2 &middot; What must the moral ground be? Select every property the argument establishes — and nothing it doesn&rsquo;t.</div>
+        <div id="propPool" style="display:flex;flex-wrap:wrap;gap:9px;margin-top:4px"></div>
+      </div>
+      <div class="btnrow"><button class="btn primary" onclick="gradeBronze()">Check my reconstruction</button><button class="btn ghost" onclick="resetBronze()">Reset</button></div>
+      <div class="gradeline" id="bronzeGrade"></div>
     </div>
   </section>
 
   <!-- ===================== PHASE 2: PRACTICE ===================== -->
   <section id="practice">
     <div class="phasehead"><span class="phasenum">2</span><h3>Practice it</h3></div>
-    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Four drills that route this argument through tools you already have — including a room in the Memory Palace.</p>
+    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Five drills that route this argument through tools you already have — including a room in the Memory Palace.</p>
 
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back</span>
-      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument in your own words</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Reconstruct the moral argument from memory: the link between God and objective morality (P1), the reality of objective values (P2), and the conclusion. Then handle Euthyphro in a sentence.</p>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back &mdash; free recall</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument with nothing in front of you</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:12px">Scroll the sections away and generate it from memory — recalling is what builds durable memory; re-reading only feels like it does. Keep the scope honest (a moral lawgiver, not yet the full God) and never claim atheists cannot be moral. Pick your level; the bar rises as you go. Scored out of 10, accuracy first. An 8+ is one half of <b>Silver</b>.</p>
+      <div class="btnrow" id="explainLevels" style="margin:0 0 10px">
+        <button class="btn ghost sel" type="button" data-lv="1" onclick="setExplainLevel(this,1)">1 · State it</button>
+        <button class="btn ghost" type="button" data-lv="2" onclick="setExplainLevel(this,2)">2 · &hellip;and answer &ldquo;atheists are moral too&rdquo;</button>
+        <button class="btn ghost" type="button" data-lv="3" onclick="setExplainLevel(this,3)">3 · &hellip;to a hostile grad student</button>
+      </div>
       <textarea id="explainBox" placeholder="Start with: If God does not exist, then objective moral values..."></textarea>
       <div class="btnrow">
         <button class="btn primary" onclick="scoreExplain(this)">Score my explanation</button>
@@ -491,7 +602,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <div class="practicecard">
       <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 2 · Flashcards</span>
       <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Drilled straight from this argument</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Five cards from the moral argument and its hardest replies — including Euthyphro and the ontology/epistemology distinction.</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Twelve cards drawn from the premises, the Euthyphro reply, the objections, and the honest limits above. <b>Answer out loud before you flip</b> — the effort of recall is the whole point; a card you merely recognise hasn't stuck. They drop into your spaced-repetition deck so they return right before you'd forget.</p>
       <div class="flashwrap">
         <div class="flash" id="flash" onclick="this.classList.toggle('flipped')">
           <div class="face front"><div class="qlbl">Prompt</div><p id="fFront"></p><span class="tap">tap to flip</span></div>
@@ -506,9 +617,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     </div>
 
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · Live objection</span>
-      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Answer the friendly atheist</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">A seeded scenario from the Debate Arena. Draft your reply, then reveal a model answer to compare.</p>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · The friendly atheist (worked example)</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Hold the ontology/epistemology line</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Start here: draft your reply, then reveal a model answer to compare. This is the <em>worked example</em> — Drill 4 then makes you do it cold across the objection set.</p>
       <div class="interloc">
         <div class="av">SK</div>
         <div>
@@ -525,9 +636,38 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         <p>"You are absolutely right that you do not need to believe in God to live a good life, and I would never suggest otherwise. But notice that is a different question. I am not asking who can know or follow the moral law — atheists do that as well as anyone. I am asking what makes it a real law rather than a strong feeling. If right and wrong are just evolution and empathy, then torturing a child is wrong really only means most of us feel a deep distaste for it — which can tell the torturer he is outvoted, not that he is mistaken. When you say cruelty is genuinely wrong, not merely unpopular, you are reaching for a standard above human opinion. Where does that standard come from?"</p>
       </div>
     </div>
+
+    <!-- answer the objections cold -->
+    <div class="practicecard" id="objDrill">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 4 · Answer the objections cold</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Four objections, no notes — reply, then check</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">The other half of <b>Silver</b>. Draft a reply from memory, reveal the certified answer, and rate yourself honestly. Clear all four with a &ldquo;nailed it&rdquo; and you can field them in the wild — not just recognise them on the page.</p>
+      <div class="interloc">
+        <div class="av" id="odAv">SK</div>
+        <div><div class="who2" id="odWho">Skeptic</div><div class="bub" id="odQ"></div></div>
+      </div>
+      <textarea id="odBox" placeholder="Your reply, from memory..."></textarea>
+      <div class="btnrow">
+        <button class="btn gold" type="button" onclick="odReveal()">Reveal the certified answer</button>
+      </div>
+      <div class="modelans" id="odModel">
+        <div class="lbl">A strong reply — ported from this page&rsquo;s certified answer</div>
+        <p id="odModelText"></p>
+        <div class="confrow" style="margin-top:12px">
+          <button type="button" onclick="odRate(1)">Shaky — I&rsquo;ll redo this one</button>
+          <button type="button" onclick="odRate(2)">Nailed it &#10003;</button>
+        </div>
+      </div>
+      <div class="flashnav">
+        <button class="btn ghost" type="button" onclick="odPrev()">&lsaquo; Prev</button>
+        <span id="odCount"></span>
+        <button class="btn ghost" type="button" onclick="odNext()">Next &rsaquo;</button>
+      </div>
+    </div>
+
     <!-- memory palace (folded in from the standalone tool) -->
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 4 · Memory Palace</span>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 5 · Memory Palace</span>
       <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Lock it into a room you can walk</h4>
       <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">This argument has its own room in the Memory Palace — a single vivid scene that encodes the premises and the conclusion. Walk it once to learn the picture, then switch on the recall walk and say the argument back from memory. The method of loci is how memory champions hold long lists; here it is built for this case.</p>
       <div class="btnrow">
@@ -540,19 +680,23 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
   <!-- ===================== PHASE 3: PROVE IT ===================== -->
   <section id="proveit">
     <div class="phasehead"><span class="phasenum">3</span><h3>Prove it</h3></div>
-    <p class="phasesub">Mastery isn't a feeling — it's four things done. Clear them and this argument turns gold on your shelf.</p>
+    <p class="phasesub">Mastery isn't a feeling — it's three levels, each earned by <em>showing</em> you can do the thing, then proven again over time. Don't trust the warm glow of having read it; prove it cold.</p>
 
     <div class="card">
-      <div class="checklist">
-        <div class="cl" id="ck-read"><div class="box">✓</div><div class="txt"><b>Understood it</b><span>Read the structure, defences, and all objections</span></div><div class="state">Open every section</div></div>
-        <div class="cl" id="ck-explain"><div class="box">✓</div><div class="txt"><b>Explained it</b><span>Score 7+ on Explain It Back</span></div><div class="state">Not yet</div></div>
-        <div class="cl" id="ck-cards"><div class="box">✓</div><div class="txt"><b>Drilled it</b><span>Cycle through every flashcard once</span></div><div class="state">Not yet</div></div>
-        <div class="cl" id="ck-debate"><div class="box">✓</div><div class="txt"><b>Defended it</b><span>Attempt the live objection</span></div><div class="state">Not yet</div></div>
+      <span class="kick">Your levels on this argument</span>
+      <h4>What each one takes</h4>
+      <div class="checklist" id="levelReqs">
+        <div class="cl" id="rq-bronze"><div class="box">✓</div><div class="txt"><b>Bronze · Understand</b><span>Rebuild the argument + what the moral ground must be, from memory (&ge;80%) — the checkpoint at the end of &ldquo;Understand it.&rdquo;</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-explain"><div class="box">✓</div><div class="txt"><b>Silver · part 1 · Explain it</b><span>Score 8+ on Explain It Back (free recall)</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-objections"><div class="box">✓</div><div class="txt"><b>Silver · part 2 · Objections cold</b><span>Answer all four objection drills with &ldquo;nailed it&rdquo;</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-unseen"><div class="box">✓</div><div class="txt"><b>Gold · part 1 · The unseen objection</b><span>Face one objection the page never drilled (below)</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-spaced"><div class="box">✓</div><div class="txt"><b>Gold · part 2 · Prove it again</b><span>Clear this argument on 3 spaced reviews — it returns on its own</span></div><div class="state">0 of 3</div></div>
       </div>
-      <div style="margin-top:26px;border-top:1px solid var(--border);padding-top:20px">
+      <p style="font-family:var(--ui);font-size:13px;color:var(--tm);margin-top:14px">Gold can slip back to Silver if you stop turning up for the spaced reviews — real mastery is perishable, which is why it's worth something. The dashboard brings this one back when it's due.</p>
+      <div style="margin-top:22px;border-top:1px solid var(--border);padding-top:18px">
         <span class="kick">One more thing — be honest</span>
         <h4 style="font-size:17px">If a friend challenged you on this tomorrow, how ready are you?</h4>
-        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Your self-rating is tracked over time so you can watch confidence climb across the library.</p>
+        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Rate yourself — then see whether your Explain It Back score backs it up. Felt-confidence and shown-confidence are not the same thing, and the gap is worth knowing before a real conversation.</p>
         <div class="confrow" id="confRow">
           <button onclick="setConf(this,1)">Shaky</button>
           <button onclick="setConf(this,2)">Getting there</button>
@@ -560,6 +704,26 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <button onclick="setConf(this,4)">Could teach it</button>
         </div>
         <div id="calibNote" style="display:none"></div>
+      </div>
+    </div>
+
+    <div class="card" id="unseenGate">
+      <span class="kick">Gold gate · the unseen objection</span>
+      <h4>One you weren&rsquo;t coached on</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Everything above rehearsed objections the page showed you. Here is the real test: an objection we deliberately did <em>not</em> drill — the claim that nature itself, not God, grounds our care for the weak. Reason it out cold, then reveal how the argument handles it. An honest &ldquo;nailed it&rdquo; is the first half of <b>Gold</b>.</p>
+      <div class="interloc">
+        <div class="av">NT</div>
+        <div><div class="who2">Naturalist</div><div class="bub">"You say caring for the weak needs God to ground it. But that's backwards — compassion is just an evolved instinct: kin selection, reciprocal altruism. Nature explains why we protect the vulnerable perfectly well. No lawgiver required."</div></div>
+      </div>
+      <textarea id="unseenBox" placeholder="Reason it out — does 'nature explains the feeling' settle what we ought to do?"></textarea>
+      <div class="btnrow"><button class="btn gold" type="button" onclick="unseenReveal()">Reveal how the argument handles it</button></div>
+      <div class="modelans" id="unseenModel">
+        <div class="lbl">How the argument answers it — ported from the deep dive</div>
+        <p>Notice the quiet jump from <em>is</em> to <em>ought</em>. Grant that evolution gave us compassionate feelings — that is a fact about biology. It still does not tell us we <em>ought</em> to act on them, or that the weak are genuinely owed care. In fact nature, left to itself, points the other way: the strong outlast the weak. The most honest naturalist here was Nietzsche, who saw clearly that protecting the weak is &ldquo;anti-nature&rdquo; — and drew the chilling inference that the moral argument exists to reject. His error was not the description but the silent leap from what <em>is</em> to what we <em>ought</em> to do. David Hume named the gap: no catalogue of what <em>is</em> the case, however complete, entails by itself a single claim about what we <em>ought</em> to do. So the conviction that the weak really do have a claim on the strong — that the child and the dying are owed care precisely when they can offer nothing in return — cannot be read off nature, because nature points the other way. It needs a standard above the natural order. That is a real signpost — though it points only to a moral order that transcends nature, not yet to the God of the creeds.</p>
+        <div class="confrow" style="margin-top:12px">
+          <button type="button" onclick="unseenRate(1)">Shaky — I&rsquo;ll sit with it</button>
+          <button type="button" onclick="unseenRate(2)">Nailed it &#10003;</button>
+        </div>
       </div>
     </div>
 
@@ -579,37 +743,47 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
 <script>
-/* ---- in-memory state (swap for localStorage/Supabase in production) ---- */
-const state = { read:false, explainPass:false, cardsSeen:new Set(), debateTried:false, conf:0 };
+/* ---- state: three earned levels (Bronze / Silver / Gold) ----
+   bronze = reconstruction checkpoint passed (>=80%); explainScore = best Explain It Back
+   (Silver part 1 needs >=8); objCold = objection-drill indices self-rated "nailed it"
+   (Silver part 2 = all); unseen = Gold part 1; Gold part 2 = 3 spaced recalls (ad_reviews step). */
+const state = { bronze:false, explainScore:0, objCold:new Set(), unseen:false, cardsSeen:new Set(), conf:0, explainLevel:1 };
 
-/* ---- persistence + site streak (ad_mastery / ad_streak) ---- */
 const ARG_ID = location.pathname.split('/').pop().replace('ev-m-','').replace('.html','');
-const FRESH_MS = 30*24*60*60*1000; /* 30 days */
 function adAll(){ try{ return JSON.parse(localStorage.getItem('ad_mastery')||'{}'); }catch(e){ return {}; } }
-function adSave(full){
+function spacedCount(){ try{ var r = (JSON.parse(localStorage.getItem('ad_reviews')||'{}'))[ARG_ID]; return (r && r.step) ? r.step : 0; }catch(e){ return 0; } }
+
+function levelOf(){
+  var silver = state.bronze && state.explainScore>=8 && state.objCold.size>=OBJ.length;
+  if(silver && state.unseen && spacedCount()>=3) return 3;
+  if(silver) return 2;
+  if(state.bronze) return 1;
+  return 0;
+}
+
+function adSave(){
   try{
-    var m = adAll(); var e = m[ARG_ID] || {};
-    e.read = state.read; e.explain = state.explainPass;
-    e.cards = state.cardsSeen.size; e.debate = state.debateTried;
-    e.explainScore = state.explainScore || e.explainScore || 0; if(state.conf) e.conf = state.conf;
-    if(full){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
+    var m = adAll(); var e = m[ARG_ID] || {}; var lv = levelOf();
+    e.bronze = state.bronze;
+    e.explainScore = Math.max(state.explainScore||0, e.explainScore||0);
+    e.objCold = Array.from(state.objCold);
+    e.unseen = state.unseen;
+    e.cards = state.cardsSeen.size;
+    if(state.conf) e.conf = state.conf;
+    e.level = lv;
+    e.read = state.bronze; e.explain = state.explainScore>=8; e.debate = state.objCold.size>0;
+    if(lv>=2){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
     m[ARG_ID] = e; localStorage.setItem('ad_mastery', JSON.stringify(m));
   }catch(e){}
 }
 function adRestore(){
   try{
     var e = adAll()[ARG_ID]; if(!e) return;
-    state.read = !!e.read; state.explainPass = !!e.explain; state.debateTried = !!e.debate;
-    state.explainScore = e.explainScore || 0; state.conf = e.conf || 0;
-    var fresh = e.fresh && (Date.now() - e.fresh) < FRESH_MS;
-    if(e.cards >= cards.length && fresh){ for(var i=0;i<cards.length;i++) state.cardsSeen.add(i); }
-    if(e.cards >= cards.length && !fresh){
-      var note = document.createElement('div');
-      note.style.cssText = 'font-family:var(--ui);font-size:.8rem;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.7rem 1rem;margin:0 0 1rem;';
-      note.innerHTML = '&#9888; Memory fades \u2014 it has been a while. Flip through the flashcards again to restore this argument to gold.';
-      var fc = document.querySelector('.flashwrap') || document.getElementById('flash') || null;
-      if(fc && fc.parentNode){ fc.parentNode.insertBefore(note, fc); }
-    }
+    state.bronze = !!e.bronze || !!e.read;
+    state.explainScore = e.explainScore || 0;
+    state.unseen = !!e.unseen;
+    state.conf = e.conf || 0;
+    if(Array.isArray(e.objCold)){ e.objCold.forEach(function(i){ state.objCold.add(i); }); }
   }catch(e){}
 }
 function adMark(){
@@ -627,51 +801,67 @@ function adMark(){
   }catch(e){}
 }
 
-/* ---- mastery dial ---- */
+/* ---- mastery dial + level ladder ---- */
 const CIRC = 263.9;
+function setLvl(id, earned, current){
+  var el = document.getElementById(id); if(!el) return;
+  el.classList.toggle('earned', earned);
+  el.classList.toggle('current', current && !earned);
+  var s = el.querySelector('.ls'); if(s) s.textContent = earned ? 'Earned ✓' : (current ? 'Next up' : 'Locked');
+}
+function setReq(id, done, txt){
+  var el = document.getElementById(id); if(!el) return;
+  el.classList.toggle('done', done);
+  var s = el.querySelector('.state'); if(s) s.textContent = txt;
+}
 function updateDial(){
-  let done = 0;
-  if(state.read) done++;
-  if(state.explainPass) done++;
-  if(state.cardsSeen.size >= cards.length) done++;
-  if(state.debateTried) done++;
-  const pct = Math.round(done/4*100);
-  adSave(pct===100);
-  if(window._adLoaded && done>0) adMark();
-  document.getElementById('pctNum').textContent = pct + '%';
-  document.getElementById('ring').style.strokeDashoffset = CIRC - (CIRC*pct/100);
+  var lv = levelOf();
+  var pct = [0,34,67,100][lv];
+  adSave();
+  if(window._adLoaded && (state.bronze || state.explainScore || state.objCold.size || state.unseen)) adMark();
+  var pn = document.getElementById('pctNum'); if(pn) pn.textContent = pct + '%';
+  var ring = document.getElementById('ring'); if(ring) ring.style.strokeDashoffset = CIRC - (CIRC*pct/100);
 
-  setCheck('ck-read', state.read);
-  setCheck('ck-explain', state.explainPass);
-  setCheck('ck-cards', state.cardsSeen.size >= cards.length);
-  setCheck('ck-debate', state.debateTried);
+  setLvl('lvl-bronze', lv>=1, lv===0);
+  setLvl('lvl-silver', lv>=2, lv===1);
+  setLvl('lvl-gold',   lv>=3, lv===2);
+
+  setReq('rq-bronze', state.bronze, state.bronze ? 'Done' : 'Not yet');
+  setReq('rq-explain', state.explainScore>=8, state.explainScore>=8 ? ('Done · '+state.explainScore+'/10') : (state.explainScore ? ('Best '+state.explainScore+'/10') : 'Not yet'));
+  setReq('rq-objections', (typeof OBJ!=='undefined' && state.objCold.size>=OBJ.length), (typeof OBJ!=='undefined' && state.objCold.size>=OBJ.length) ? 'Done' : (state.objCold.size + ' of ' + (typeof OBJ!=='undefined'?OBJ.length:4)));
+  setReq('rq-unseen', state.unseen, state.unseen ? 'Done' : 'Not yet');
+  var sc = Math.min(spacedCount(), 3); setReq('rq-spaced', sc>=3, sc>=3 ? 'Done' : (sc + ' of 3'));
+
   try{ renderCalibration(); }catch(e){}
 
-  if(pct===100){
-    document.getElementById('ctaTitle').textContent = 'the Moral Argument mastered - it just turned gold on your shelf';
-    document.getElementById('ctaText').textContent = 'That is 4 of 22. The same path is waiting for every argument in the library. Keep the streak going.';
-    document.querySelector('.libnote').innerHTML = '&#9670; &nbsp;the Moral Argument mastered - 4 of 22 core arguments complete';
-  }
-}
-function setCheck(id, on){
-  const el = document.getElementById(id);
-  el.classList.toggle('done', on);
-  var stEl = el.querySelector('.state');
-  if(on){ stEl.textContent = 'Done'; return; }
-  if(id==='ck-read'){
-    stEl.textContent = (typeof _accOpened !== 'undefined' && _accs.length) ? (_accOpened.size + ' of ' + _accs.length + ' opened') : 'Open every section';
-  } else {
-    stEl.textContent = 'Not yet';
+  var ln = document.querySelector('.libnote');
+  if(lv>=3){
+    var ct = document.getElementById('ctaTitle'); if(ct) ct.textContent = 'the Moral Argument mastered — Gold on your shelf';
+    var cx = document.getElementById('ctaText'); if(cx) cx.textContent = 'You rebuilt it, defended it cold, met an objection you had never seen, and proved it again weeks later. That confidence is earned — keep it alive on the spaced reviews.';
+    if(ln) ln.innerHTML = '&#9670; &nbsp;the Moral Argument — Gold · mastered';
+  } else if(lv>=1 && ln){
+    ln.innerHTML = '&#9670; &nbsp;the Moral Argument — ' + (lv===2?'Silver':'Bronze') + ' · keep going';
   }
 }
 
-/* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
-/* ---- argument premises used to ground the AI scoring ---- */
+/* ---- explain it back (real AI scoring via /api/tutor; mock fallback) ---- */
+/* ARG_PREMISES: the certified rubric POSTed to /api/tutor and rendered into the share-card. */
 var ARG_PREMISES = [
   'If God does not exist, objective moral values and duties do not exist.',
   'Objective moral values and duties do exist.',
-  'Therefore, God exists.'
+  'Therefore God exists - a transcendent ground of the moral law, though identifying that lawgiver with the Father, Son and Holy Spirit is the work of revelation. The argument never claims atheists cannot be moral.'
 ];
+
+function setExplainLevel(btn, lv){
+  state.explainLevel = lv;
+  [].forEach.call(document.querySelectorAll('#explainLevels button'), function(b){ b.classList.remove('sel'); });
+  if(btn) btn.classList.add('sel');
+  var box = document.getElementById('explainBox');
+  var ph = lv===3 ? 'Explain it to a hostile, well-read skeptic — anticipate the pushback (Euthyphro, the Darwinian debunking, Wielenberg) and answer it...'
+         : lv===2 ? 'From memory: the argument AND your best answer to "atheists are moral too" (the ontology vs epistemology distinction)...'
+         : 'Start with: If God does not exist, then objective moral values...';
+  if(box) box.setAttribute('placeholder', ph);
+}
 
 /* Real AI scoring via /api/tutor (same method as explain-it-back.html).
    Falls back to a local heuristic if the API is unreachable (e.g. preview). */
@@ -681,7 +871,10 @@ async function scoreExplain(btn){
   if(!txt){ return; }
   if(btn){ btn.disabled = true; btn.dataset.lbl = btn.textContent; btn.textContent = 'Scoring...'; }
   try{
-    var prompt = 'Please evaluate this student explanation of "The Moral Argument". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
+    var lvAsk = state.explainLevel>=3 ? '\n\nThe student was asked to explain it to a hostile, well-read skeptic: weight whether they anticipated and answered the obvious pushback (the Euthyphro dilemma, the evolutionary debunking of morality, Wielenberg’s godless moral realism), not merely stated the argument. Keep the scope honest: a transcendent moral lawgiver, not yet the full God of Christian worship; and never let the explanation claim atheists cannot be moral (the claim is about ontology, not epistemology).'
+              : state.explainLevel===2 ? '\n\nThe student was ALSO asked to answer the "atheists are moral too" objection: weight whether they drew the ontology/epistemology distinction honestly (the argument is about what grounds morality, not who can follow it) rather than claiming atheists cannot be moral.'
+              : '';
+    var prompt = 'Please evaluate this student explanation of "The Moral Argument". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + lvAsk + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
     var res = await fetch('/api/tutor', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
@@ -727,14 +920,14 @@ function renderCrisis(text){
 function renderScore(score, strengths, improvements){
   score = Math.max(0, Math.min(10, Math.round(Number(score) || 0)));
   var feed = '';
-  (strengths||[]).forEach(function(s){ feed += '<li class="hit"><span class="mk">\u2713</span>'+esc(s)+'</li>'; });
-  (improvements||[]).forEach(function(s){ feed += '<li class="miss"><span class="mk">\u25CB</span>'+esc(s)+'</li>'; });
+  (strengths||[]).forEach(function(s){ feed += '<li class="hit"><span class="mk">✓</span>'+esc(s)+'</li>'; });
+  (improvements||[]).forEach(function(s){ feed += '<li class="miss"><span class="mk">○</span>'+esc(s)+'</li>'; });
   document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
-  var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
+  var verdict = score>=8?'Strong — you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way — fill the gaps below' : 'Have another go with the structure in mind';
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score);
   updateDial();
 }
 
@@ -750,25 +943,32 @@ function renderMockScore(txtRaw){
   ];
   var score = 0, feed = '';
   checks.forEach(function(c){
-    if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">\u2713</span>'+c.hit+'</li>'; }
-    else{ feed += '<li class="miss"><span class="mk">\u25CB</span>'+c.miss+'</li>'; }
+    if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">✓</span>'+c.hit+'</li>'; }
+    else{ feed += '<li class="miss"><span class="mk">○</span>'+c.miss+'</li>'; }
   });
   document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
-  var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
+  var verdict = score>=8?'Strong — you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way — fill the gaps below' : 'Have another go with the structure in mind';
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score);
   updateDial();
 }
 
 /* ---- flashcards (generated from this argument) ---- */
 const cards = [
-  {q:'State the moral argument in three lines.', a:'If God does not exist, objective moral values and duties do not exist. They do exist. Therefore God exists.'},
-  {q:'Answer the Euthyphro dilemma.', a:'A false dilemma. Good is not an arbitrary command, nor a standard above God - it is grounded in God’s own necessary nature (the exchange with critics such as Morriston is live).'},
-  {q:'Ontology vs epistemology - the atheist-can-be-good reply.', a:'Agreed: you do not need to believe in God to act morally (epistemology). The claim is that objective morality needs God to exist at all (ontology).'},
-  {q:'Why does evolution not ground morality?', a:'It may explain why we have moral feelings, not whether any are true. If ought is just a survival trick it has no binding authority - that debunks morality, not grounds it.'},
-  {q:'Reply to moral relativism from cultural variation.', a:'Disagreement does not disprove truth - science varies too. We rightly judge slavery and genocide wrong across cultures, which assumes a standard above culture.'}
+  {q:'State the moral argument in three lines.', a:'If God does not exist, objective moral values and duties do not exist. They do exist. Therefore God - a transcendent ground of the moral law - exists.'},
+  {q:'Values vs. duties - Craig’s distinction.', a:'Values concern what is good or bad; duties concern what is right or wrong - what we are obligated to do. "Objective" means independent of human opinion.'},
+  {q:'Ontology vs. epistemology - the "atheists can be good" reply.', a:'Agreed: you do not need to believe in God to know or follow the moral law (epistemology). The claim is that objective morality needs God to be real at all (ontology). Atheists keep the law as well as anyone; the question is what grounds it.'},
+  {q:'Answer the Euthyphro dilemma.', a:'A false dilemma: it omits a third option. Good is neither an arbitrary command nor a standard above God - it is grounded in God’s own necessary nature, and his commands express what he is. (The exchange with critics such as Morriston is live.)'},
+  {q:'Why doesn’t evolution ground morality?', a:'It may explain why we have moral beliefs, not whether any are true. If ought is just a survival trick it has no binding authority - that debunks morality rather than grounds it.'},
+  {q:'Sharon Street’s Darwinian Dilemma - and why it cuts both ways.', a:'Our intuitions were shaped by selection for fitness, not truth - so realists owe an account of why they track moral reality. But Street is an anti-realist: the dagger wounds secular moral realism at least as hard, since its causally inert facts could not have shaped our brains.'},
+  {q:'Reply to moral relativism from cultural variation.', a:'Disagreement does not disprove truth - science varies too. Much variation is over facts (who counts as a person), not core values; and we rightly judge slavery and genocide wrong across cultures, which assumes a standard above culture.'},
+  {q:'What is a "properly basic" moral belief?', a:'One accepted directly, as a deliverance of experience, not from a prior argument (Plantinga). Antony’s point: any argument for moral skepticism rests on premises less obvious than the wrongness of torturing a child.'},
+  {q:'Wielenberg’s parsimony challenge - and the reply.', a:'He grounds morality in brute necessary facts, one fewer entity. Reply: that is the wrong ledger - explanatory power, not entity-counting, is the measure; and an impersonal, causally inert fact struggles to generate a genuine obligation, which seems owed to someone.'},
+  {q:'What is Adams’s modified divine command theory?', a:'Moral wrongness is being contrary to the commands of a loving God - not just any conceivable deity; and values are grounded in God’s own nature as the Good, which finite goods resemble. The scholarly anchor of the argument.'},
+  {q:'The Is/Ought firewall - what does nature settle?', a:'Nature describes what survives; it is silent on what we ought to do. Hume’s gap: no set of "is" facts entails an "ought." So the duty to protect the weak - which nature, left to itself, works against - needs a standard above the natural order.'},
+  {q:'What does the moral argument establish - and not?', a:'A transcendent ground of the Good - a moral lawgiver - NOT yet the personal, triune God of worship, and never that atheists cannot be moral. One strand in a cumulative case; the full identification rests on revelation and the resurrection.'}
 ];
 let ci = 0;
 function renderCard(){
@@ -782,37 +982,97 @@ function renderCard(){
 function nextCard(){ ci = (ci+1)%cards.length; renderCard(); }
 function prevCard(){ ci = (ci-1+cards.length)%cards.length; renderCard(); }
 
-/* ---- debate ---- */
-document.getElementById('debateBox').addEventListener('input', ()=>{
-  if(document.getElementById('debateBox').value.trim().length > 8 && !state.debateTried){
-    state.debateTried = true; updateDial();
+/* ---- Bronze reconstruction gate (retrieval-earned "Understand") ---- */
+var ORDER = [
+  'If God does not exist, objective moral values and duties do not exist.',
+  'Objective moral values and duties do exist.',
+  'Therefore God - a transcendent moral lawgiver - exists.'
+];
+var PROPS = [
+  {t:'transcendent (above opinion and culture)', ok:true}, {t:'personal - a lawgiver', ok:true}, {t:'the standard of goodness itself', ok:true}, {t:'grounds real, binding duties', ok:true},
+  {t:'the triune God of worship', ok:false}, {t:'proven with certainty', ok:false}, {t:'shown that atheists can’t be moral', ok:false}, {t:'an evolved instinct', ok:false}
+];
+var _ordSel = [];
+function _shuf(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } return a; }
+function injectBronze(){
+  var pool=document.getElementById('orderPool');
+  if(pool && !pool.children.length){
+    _shuf([0,1,2]).forEach(function(k){
+      var b=document.createElement('button'); b.type='button'; b.className='btn ghost'; b.textContent=ORDER[k];
+      b.onclick=function(){ if(b.disabled) return; b.disabled=true; b.style.opacity=.4; _ordSel.push(k); _ordSeq(); };
+      pool.appendChild(b);
+    });
   }
-});
-document.querySelector('[onclick*="modelAns"]').addEventListener('click', ()=>{
-  state.debateTried = true; updateDial();
-});
-
-/* ---- prove it ---- */
-function markRead(){
-  state.read = true;
-  document.getElementById('readBtn').textContent = 'Marked as understood \u2713';
-  document.getElementById('readBtn').classList.remove('primary');
-  document.getElementById('readBtn').classList.add('ghost');
-  updateDial();
+  var pp=document.getElementById('propPool');
+  if(pp && !pp.children.length){
+    _shuf(PROPS).forEach(function(p){
+      var b=document.createElement('button'); b.type='button'; b.className='btn ghost'; b.textContent=p.t; b.setAttribute('data-ok', p.ok?'1':'0');
+      b.onclick=function(){ b.classList.toggle('sel'); };
+      pp.appendChild(b);
+    });
+  }
 }
+function _ordSeq(){ var el=document.getElementById('orderSeq'); if(el) el.textContent = _ordSel.length ? _ordSel.map(function(k,i){ return (i+1)+'. '+ORDER[k]; }).join('    ') : ''; }
+function resetBronze(){
+  _ordSel=[]; _ordSeq();
+  var pool=document.getElementById('orderPool'); if(pool){ [].forEach.call(pool.children,function(b){ b.disabled=false; b.style.opacity=1; }); }
+  var pp=document.getElementById('propPool'); if(pp){ [].forEach.call(pp.children,function(b){ b.classList.remove('sel'); }); }
+  var g=document.getElementById('bronzeGrade'); if(g){ g.className='gradeline'; g.textContent=''; }
+}
+function gradeBronze(){
+  var orderOK = _ordSel.length===3 && _ordSel[0]===0 && _ordSel[1]===1 && _ordSel[2]===2;
+  var pp=document.getElementById('propPool'); var right=0;
+  if(pp){ [].forEach.call(pp.children,function(b){ var want=b.getAttribute('data-ok')==='1'; var got=b.classList.contains('sel'); if(want===got) right++; }); }
+  var decisions = PROPS.length + 1, scored = right + (orderOK?1:0), pctOK = scored/decisions;
+  var g=document.getElementById('bronzeGrade'); if(!g) return;
+  g.className='gradeline show '+(pctOK>=0.8?'pass':'fail');
+  if(pctOK>=0.8){
+    state.bronze=true; updateDial();
+    g.textContent='✓ Bronze earned — you rebuilt the structure from memory ('+Math.round(pctOK*100)+'%). Now go defend it in Practice.';
+  } else {
+    g.textContent='Not yet — '+Math.round(pctOK*100)+'%. '+(orderOK?'':'Check the order of the three lines. ')+'Re-read the structure above, then try again — this rep is what makes it stick.';
+  }
+}
+
+/* ---- Drill 4: answer the objections cold (replies ported from the page) ---- */
+var OBJ = [
+  {who:'Philosopher', q:'Is something good because God commands it, or does God command it because it is good? Either morality is arbitrary, or there is a standard above God — making God unnecessary.', model:'A false dilemma — it omits the third option. God neither invents the good by fiat nor consults a standard outside himself: God’s own necessary nature is the Good. His commands are not arbitrary, because they express what he essentially is; and the good is not above him, because it just is his nature. The reply is not cost-free — Morriston presses why God’s nature counts as good, and that exchange is live — but the original dilemma, as a forced choice between an arbitrary God and a standard above him, does not hold.'},
+  {who:'Skeptic', q:'Cooperation and altruism helped our ancestors survive, so morality is just a biological adaptation — fully explained without God.', model:'Evolution might explain why we have moral beliefs, but not whether any are true. If our sense of ought is just a survival trick, it carries no real authority — which debunks morality rather than grounding it. Sharon Street’s "Darwinian dilemma" presses exactly this, but it is not an argument for theism: it cuts at least as hard against secular moral realism, whose causally inert moral facts could not have shaped our evolving brains.'},
+  {who:'Skeptic', q:'Plenty of atheists live good lives. Clearly you do not need God to be moral.', model:'Completely agreed — and the argument never says otherwise. That is a question of epistemology: who can know and follow the moral law — anyone, believer or not. The argument is about ontology: what makes it a real law at all rather than a strong feeling. Atheists keep the moral law as well as anyone; the question is what grounds it.'},
+  {who:'Philosopher', q:'Erik Wielenberg: moral truths are brute, necessary, non-natural facts needing no foundation, God included. Both sides bottom out in something necessary — and his ledger has one fewer entity.', model:'On a bare count of entities his ledger is shorter — a point apologists too rarely concede — but that is the wrong ledger: explanatory power, not entity-counting, is the measure, and one personal ground unifies values, duties, moral knowledge and the obligatory force of morality. More pointedly, it is hard to see how an impersonal, causally inert fact could generate a genuine obligation: duties seem owed to someone; a command needs a commander. Wielenberg replies that obligations can rest on the value of persons; the theist claims not that his view is incoherent but that it is less explanatorily satisfying — an obligation that floats, owed to no one.'}
+];
+var _od = 0;
+function odRender(){
+  var o=OBJ[_od];
+  var q=document.getElementById('odQ'); if(q) q.textContent='"'+o.q+'"';
+  var who=document.getElementById('odWho'); if(who) who.textContent=o.who;
+  var av=document.getElementById('odAv'); if(av) av.textContent=o.who.slice(0,2).toUpperCase();
+  var mt=document.getElementById('odModelText'); if(mt) mt.textContent=o.model;
+  var mm=document.getElementById('odModel'); if(mm) mm.classList.remove('show');
+  var bx=document.getElementById('odBox'); if(bx) bx.value='';
+  var c=document.getElementById('odCount'); if(c) c.textContent=(_od+1)+' of '+OBJ.length+(state.objCold.has(_od)?' · nailed ✓':'');
+}
+function odReveal(){ var mm=document.getElementById('odModel'); if(mm) mm.classList.add('show'); }
+function odRate(v){ if(v===2){ state.objCold.add(_od); } else { state.objCold.delete(_od); } updateDial(); if(_od<OBJ.length-1){ _od++; } odRender(); }
+function odNext(){ _od=(_od+1)%OBJ.length; odRender(); }
+function odPrev(){ _od=(_od-1+OBJ.length)%OBJ.length; odRender(); }
+
+/* ---- Gold part 1: the unseen objection ---- */
+function unseenReveal(){ var m=document.getElementById('unseenModel'); if(m) m.classList.add('show'); }
+function unseenRate(v){ state.unseen = (v===2); updateDial(); }
 function renderCalibration(){
   try{
     var el = document.getElementById('calibNote'); if(!el) return;
     var conf = state.conf||0, best = state.explainScore||0;
     var labels = {1:'Shaky',2:'Getting there',3:'Solid',4:'Could teach it'};
     if(conf){ var _b=document.querySelectorAll('#confRow button'); if(_b[conf-1]){ [].forEach.call(_b,function(b){b.classList.remove('sel');}); _b[conf-1].classList.add('sel'); } }
-    if(conf>=3 && best<7){
-      var shown = best>0 ? ('your best Explain It Back so far is '+best+'/10') : 'you haven\u2019t scored an Explain It Back yet';
+    if(conf>=3 && best<8){
+      var shown = best>0 ? ('your best Explain It Back so far is '+best+'/10') : 'you haven’t scored an Explain It Back yet';
       el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.8rem 1rem;';
-      el.innerHTML = '\u26A0 You rated yourself \u201C'+labels[conf]+'\u201D \u2014 but '+shown+'. Worth closing: confidence that holds up in a real conversation is confidence you\u2019ve <b>shown</b>, not just felt. <a href="#" onclick="var b=document.getElementById(\'explainBox\');if(b){b.scrollIntoView({behavior:\'smooth\'});b.focus();}return false;" style="color:#a88930;font-weight:600">Prove it on Explain It Back \u2192</a>';
-    } else if(conf>=3 && best>=7){
+      el.innerHTML = '⚠ You rated yourself “'+labels[conf]+'” — but '+shown+'. Worth closing: confidence that holds up in a real conversation is confidence you’ve <b>shown</b>, not just felt. <a href="#" onclick="var b=document.getElementById(\'explainBox\');if(b){b.scrollIntoView({behavior:\'smooth\'});b.focus();}return false;" style="color:#a88930;font-weight:600">Prove it on Explain It Back →</a>';
+    } else if(conf>=3 && best>=8){
       el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#2f7d4f;background:rgba(47,125,79,.08);border:1px solid rgba(47,125,79,.3);border-radius:6px;padding:.8rem 1rem;';
-      el.innerHTML = '\u2713 Calibrated \u2014 you feel ready and you\u2019ve shown it ('+best+'/10 on Explain It Back). That\u2019s earned confidence.';
+      el.innerHTML = '✓ Calibrated — you feel ready and you’ve shown it ('+best+'/10 on Explain It Back). That’s earned confidence.';
     } else {
       el.style.display = 'none';
     }
@@ -871,23 +1131,14 @@ async function boot(){
     if(!isPro){ showGate(); return; }
   }
   /* build the track */
+  injectBronze();
   adRestore();
   renderCard();
+  odRender();
   updateDial();
   renderCalibration();
   window._adLoaded = true;
 }
-/* "Understood it" is earned by opening every section in Phase 1 (defences + objections) */
-var _accs = Array.prototype.slice.call(document.querySelectorAll('#understand details.acc'));
-var _accOpened = new Set();
-_accs.forEach(function(d, i){
-  d.addEventListener('toggle', function(){
-    if(!d.open || state.read){ return; }
-    _accOpened.add(i);
-    if(_accOpened.size >= _accs.length){ state.read = true; }
-    updateDial();
-  });
-});
 
 /* ---- share-card: render this argument as a branded image ---- */
 function _shareSetMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
