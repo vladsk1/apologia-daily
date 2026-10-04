@@ -33,7 +33,7 @@
 The improvement rows this note generated were executed the same day and are live (see `docs/content-backlog.md` → TKCA-1…12 for the full account):
 - **DONE:** TKCA-1, -2, -3, -4, -5, -6, -8 → `library/kalam.html` (TKCA-3 also propagated to `ev-s1.html`, `ev-m-kalam.html`, three `/answers` pages and the `kalam-cause-of-universe` brief); TKCA-7 → `library/bigbang.html`; TKCA-9, -10, -12 → `library/finetuning.html`. All gated read-only (citations + argument + orthodoxy + neutrality) to STAMPABLE/CLEAN; the kalam and fine-tuning MK/ES mirrors were resynced (AI-translated, pending native gate).
 - **Leads in this note that were deliberately NOT used** (unverified, port-or-don't-claim): Isham 1997 and Barrow 1991 (TKCA-8), Topham 2010 p. 66 (TKCA-10), Sober's *Element* p. 73 (TKCA-12 — the verified Sober 2004 pp. 138–139 was used instead).
-- **BLOCKED:** TKCA-11 (Lewis & Barnes page pins) — needs the book in hand.
+- **CLOSED (owner decision, 2026-10-04):** TKCA-11 (Lewis & Barnes page pins) — the owner does not have the book; it stays cited on bare facts only, with no page numbers. Reopen only if a copy is acquired.
 - ⚠ So the "Live-door status" and cross-check sections below record what was **missing at mining time**. Do not re-add any of the DONE items.
 
 ## ⭐ Paired essays read IN FULL (Step Zero, 2026-10-04, before the book was opened)
