@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- content-review: {"argument": "2026-10-02", "orthodoxy": "2026-10-02", "by": "2026-10-02 OVER-CHARITY + FACT-CHECK SWEEP of the God's Existence mastery pages (owner-directed), following the certified essay (b33206c0) and cards (0575b1ab). Read-only Explore gates, md5-checked, four lenses (citations, argument, orthodoxy incl. clarifier verdict, neutrality). Round 1 reviewed all nine layers, graded layers first (ARG_PREMISES, cards, checks regexes, drill model answer). Fixes were applied by assert-guarded scripts on scratch copies. Rounds 2, 3 and 4 were confirmation gates on the fixed text. All lenses STAMPABLE, 0 HERESY. Every changed checks regex was node-tested: the essay-correct bounded answer passes, and the retired/overclaimed/negated answer fails (contractions handled). Every inline script compiles and the JSON-LD parses. The page now claims no more than its essay, carries the deism-gap fence plus a resurrection pointer, and states a bounded own-voice verdict. NOT RUN: pastoral sign-off (pending site-wide). Remaining pre-existing gaps are logged in docs/GODS_EXISTENCE_SWEEP_BACKLOG_2026-10-01.md, not fixed (rule 9). PRIOR: 2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md.", "citations": "2026-10-02", "neutrality": "2026-10-02"} -->
+<!-- content-review: {"argument": "2026-10-04", "orthodoxy": "2026-10-04", "citations": "2026-10-04", "neutrality": "2026-10-04", "by": "2026-10-04 WIP REBUILD (gates pending) — Bronze/Silver/Gold mastery rebuild of the Argument from Desire, ported from the certified essay library/desire.html (four-lens 2026-10-01). Retrieval-earned levels replace the activity dial; adds a 9-term glossary (the major premise + the shape of Joy foregrounded), a trace-the-inference derive drill ending on the scope fence, premise supports (P2 the longing barely-disputed; P1 the contested hinge) with honest narrowing + who-holds, an honest-state card, a Bronze reconstruction checkpoint, a wanting-isnt-proof worked example (Drill 3), an objections-cold drill (Drill 4: Beversluis circularity [flagged hardest], wanting-isnt-proof, evolutionary byproduct, scope — replies ported from the accordions), and a Gold unseen objection (Beversluis propositional-content + equivocation charges, answered from the Pilgrim-s-Regress dialectic-of-Desire + the structural-parallel point, essay l.173). Flashcards 5->12. No palace room for desire, so 4 drills. Lewis quotes kept short per the essay copyright trim. The honest fences hold in every layer incl. the graded ones (ARG_PREMISES, cards, PROPS which marks proof / creedal-God-by-longing / wanting-makes-it-exist / natural-artificial-settles-it as WRONG selections, OBJ, unseenModel): most-probable-explanation not a proof, the major premise a contested hinge, the natural/artificial distinction suggestive NOT load-bearing (Beversluis circularity conceded; weight shifted to the phenomenological surplus/shape of Joy), and it reaches an unknown X / a reality beyond the world NOT the creedal God (that rests on revelation + the resurrection). Last God-s-Existence shelf page; evil parked on an owner scoping decision (track-vs-essay mismatch). FOUR READ-ONLY EXPLORE GATES PENDING — this stamp will be re-written with real results before deploy."} -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Argument from Desire (C. S. Lewis) | Apologia Daily</title>
+<title>The Argument from Desire | Apologia Daily</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -211,19 +211,75 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 .seo-summary p:last-child{margin-bottom:0}
 .hero{padding-bottom:48px}
 .seo-summary + .dialcard{margin-top:24px}
+
+/* ---------- mastery levels (Bronze / Silver / Gold) ---------- */
+.levels{display:grid;gap:10px;margin-top:4px;width:100%}
+.lvl{display:grid;grid-template-columns:42px 1fr auto;gap:14px;align-items:center;border:1px solid var(--border);border-radius:11px;padding:13px 16px;background:var(--w);transition:.2s}
+.lvl .medal{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;background:#eef0f3;filter:grayscale(1);opacity:.45}
+.lvl.earned{border-color:#cfe6da;background:var(--okl)}
+.lvl.earned .medal{filter:none;opacity:1;background:#fff}
+.lvl .lt b{font-family:var(--fd);font-size:16px;display:block;color:var(--td)}
+.lvl .lt span{font-family:var(--ui);font-size:12.5px;color:var(--tm)}
+.lvl .ls{font-family:var(--ui);font-size:12px;font-weight:600;color:var(--tm);text-align:right;white-space:nowrap}
+.lvl.earned .ls{color:var(--ok)}
+.lvl.current{border-color:var(--g);box-shadow:0 0 0 1px var(--g) inset}
+
+/* ---------- key-terms glossary (pretraining) ---------- */
+.glossary{display:grid;gap:0;margin-top:6px}
+.gt{display:grid;grid-template-columns:168px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--border);font-family:var(--ui)}
+.gt:last-child{border-bottom:none}
+.gt b{font-size:14px;color:var(--td)}
+.gt b em{color:var(--gd);font-style:italic}
+.gt span{font-size:13.5px;color:var(--tm);line-height:1.5}
+@media(max-width:560px){.gt{grid-template-columns:1fr;gap:2px}}
+
+/* ---------- premise case: supports with strength pills ---------- */
+.stp{font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:5px;white-space:nowrap}
+.stp.proof{background:#e7eefb;color:#1e4278}
+.stp.strong{background:#fbf3e2;color:#9a7416}
+.stp.sugg{background:#eef0f3;color:#5a6b82}
+.support{border-left:3px solid #dbe6f4;padding:3px 0 3px 15px;margin:14px 0}
+.support .sh{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px}
+.support .sh b{font-family:var(--ui);font-size:14.5px;color:var(--td)}
+.support p{font-size:15px;margin-bottom:4px}
+.honest{font-family:var(--ui);font-size:13.5px;color:var(--td);background:#fbf8f0;border-left:3px solid var(--g);padding:9px 13px;border-radius:0 8px 8px 0;margin-top:6px}
+.honest b{color:var(--gd)}
+.whoholds{font-family:var(--ui);font-size:13px;color:var(--tm);background:#f4f7fb;border-radius:8px;padding:10px 14px;margin-top:12px}
+.whoholds b{color:var(--n5)}
+.precise{font-family:var(--ui);font-size:13px;color:var(--n7);background:#eef3fa;border:1px solid #dbe6f4;border-radius:8px;padding:9px 13px;margin:2px 0 10px}
+
+/* ---------- reveal-on-reason drill ---------- */
+.derive{display:grid;gap:10px;margin-top:10px}
+.dr{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:var(--ow);border:1px solid var(--border);border-radius:10px;padding:12px 15px}
+.dr .q{font-size:15px;font-family:var(--ss)}
+.dr .q em{color:var(--n5);font-style:italic}
+.dr .rev{font-family:var(--ui);font-size:12.5px;font-weight:600;color:var(--n5);background:#fff;border:1px solid #cfdcee;border-radius:7px;padding:6px 12px;cursor:pointer;white-space:nowrap}
+.dr .rev:hover{background:#f3f7fc}
+.dr .ans{display:none;font-family:var(--ui);font-weight:700;font-size:14px;color:var(--gd)}
+.dr.shown .rev{display:none}
+.dr.shown .ans{display:inline}
+@media(max-width:560px){.dr{grid-template-columns:1fr}.dr .ans,.dr .rev{justify-self:start}}
+
+/* ---------- retrieval gate ---------- */
+.recall{background:var(--w);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-top:14px}
+.recall .q{font-family:var(--ui);font-size:14.5px;font-weight:600;color:var(--td);margin-bottom:10px}
+.gradeline{font-family:var(--ui);font-size:13.5px;font-weight:600;margin-top:12px;display:none}
+.gradeline.show{display:block}
+.gradeline.pass{color:var(--ok)}
+.gradeline.fail{color:var(--gd)}
 </style>
   <link rel="stylesheet" href="/ad-nav.css">
-<meta name="description" content="Learn to make Lewis&#x27;s argument from desire: why our deepest longings point to God, and how to weigh Beversluis’s critique and the evolutionary objection.">
+<meta name="description" content="Master the argument from desire: Lewis's Joy, Kreeft's syllogism, the natural/artificial distinction, and how to answer the logical gap, Beversluis, and the evolutionary objection.">
 <link rel="canonical" href="https://apologiadaily.com/library/desire.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The Argument from Desire (C. S. Lewis) | Apologia Daily">
-<meta property="og:description" content="Learn to make Lewis&#x27;s argument from desire: why our deepest longings point to God, and how to weigh Beversluis’s critique and the evolutionary objection.">
+<meta property="og:title" content="The Argument from Desire | Apologia Daily">
+<meta property="og:description" content="Master the argument from desire: Lewis's Joy, Kreeft's syllogism, the natural/artificial distinction, and how to answer the logical gap, Beversluis, and the evolutionary objection.">
 <meta property="og:url" content="https://apologiadaily.com/ev-m-desire.html">
 <meta property="og:image" content="https://apologiadaily.com/og-default.jpg">
 <meta name="twitter:image" content="https://apologiadaily.com/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@apologiadaily">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"The Argument from Desire (C. S. Lewis)","description":"Learn to make Lewis's argument from desire: why our deepest longings point to God, and how to weigh Beversluis’s critique and the evolutionary objection.","learningResourceType":"Self-paced mastery track","educationalLevel":"Intermediate","inLanguage":"en","isAccessibleForFree":true,"about":"Christian apologetics","url":"https://apologiadaily.com/ev-m-desire.html","publisher":{"@type":"Organization","name":"Apologia Daily","url":"https://apologiadaily.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://apologiadaily.com/ev-m-desire.html"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"The Argument from Desire","description":"Master the argument from desire: Lewis's Joy, Kreeft's syllogism, the natural/artificial distinction, and how to answer the logical gap, Beversluis, and the evolutionary objection.","learningResourceType":"Self-paced mastery track","educationalLevel":"Intermediate","inLanguage":"en","isAccessibleForFree":true,"about":"Christian apologetics","url":"https://apologiadaily.com/ev-m-desire.html","publisher":{"@type":"Organization","name":"Apologia Daily","url":"https://apologiadaily.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://apologiadaily.com/ev-m-desire.html"}}</script>
 </head>
 <body>
 
@@ -300,7 +356,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <div class="crumbs"><a href="evidence-library.html">Evidence Library</a> &nbsp;›&nbsp; God's Existence &nbsp;›&nbsp; <span style="color:var(--gl)">Desire</span></div>
     <span class="eyebrow"><span class="dot"></span> Pro · Mastery Track</span>
     <h1>The Argument from Desire</h1>
-    <p class="lede">The deep dive explains the argument. This track makes you able to <em>wield</em> it — rebuild it from memory, meet its hardest objections, and name exactly what it concludes.</p>
+    <p class="lede">The deep dive explains the argument. This track makes you able to <em>wield</em> it — rebuild it from memory, meet its hardest objections, and locate exactly where its weight rests.</p>
   </div>
 </header>
 
@@ -308,9 +364,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
   <!-- public, search-indexable summary (always visible) -->
   <section class="seo-summary">
     <h2>The argument in brief</h2>
-    <p>The argument from desire, associated above all with C.S. Lewis, begins with a pattern in human nature: our innate, natural desires generally correspond to real things that can satisfy them. We feel hunger, and food exists; thirst, and there is water; sexual desire, and there is sex; curiosity, and there is knowledge to be had. These are not learned cravings but built-in ones, and each points to a real object that answers it.</p>
-    <p>Yet there is one desire, Lewis observed, that nothing in this world finally satisfies — a recurring longing he called "Joy," an ache for something more that even our best earthly joys awaken without fulfilling. Beautiful music, a landscape, a moment of love can stir it, but when we reach for them as the thing itself, they turn out to be the scent and not the flower. If this longing is a genuine innate desire, and innate desires track real objects, then its object must lie beyond this world — which points toward God and a life with him.</p>
-    <p>In candor, this is an abductive, suggestive argument, not a proof — Lewis himself offered it as a signpost rather than a demonstration. A skeptic can reply that some desires (like the desire never to die in this life) may simply go unmet, or that the longing is a by-product of evolution. The believer answers with Lewis’s “most probable explanation”: a real, persistent, near-universal hunger is better explained by there being something real to meet it than by our being mistaken. Honest people divide over its weight; our judgment is that it is real evidence — not a proof, but a clue the naturalist must explain away and the theist can take at face value. Even at full strength it points to a reality beyond the world; that this is the triune God, made known in Jesus Christ, rests on revelation and on the historical case for the resurrection.</p>
+    <p>It usually arrives unbidden — a bar of music, woodsmoke on an autumn evening, distant hills under a clearing sky — and for a moment the heart leaps toward something it cannot name. The feeling is not quite happiness; it carries an ache, and no object in the scene actually contains what the heart reached for. C. S. Lewis gave that experience a name — <em>Joy</em> — and built the argument from desire around it. In his words: &ldquo;If I find in myself a desire which no experience in this world can satisfy, the most probable explanation is that I was made for another world.&rdquo; Note the hedging — &ldquo;the most probable explanation,&rdquo; not &ldquo;therefore God exists.&rdquo; It is an inference to the best explanation, not a demonstration.</p>
+    <p>Peter Kreeft tightened it into a syllogism: every <em>natural</em>, innate desire corresponds to a real object that can satisfy it (hunger to food, thirst to water); there exists in us a desire that nothing in time, on earth, no creature can satisfy; therefore there exists something beyond time and earth that can. The engine is a distinction between <em>natural</em> desires (innate, universal, reliably tracking real objects) and <em>artificial</em> ones (conditioned by advertising or fantasy, varying from person to person) — with the empirical wager that no innate desire has ever been found for a nonexistent object.</p>
+    <p>In candor, this is a serious but minor argument, rarely anyone's primary case and best understood as one strand in a cumulative one. It is not a proof: wanting something does not make it exist, and the major premise is a contested hinge that cannot be strictly proved. The natural/artificial distinction draws a sharp charge of circularity (John Beversluis), so the honest defender treats it as suggestive, not load-bearing, and rests the case on the peculiar <em>shape</em> of the longing itself — a homesickness for a place we have never been, that intensifies rather than fades precisely when every earthly good has been secured. And even at full strength it points to a reality beyond the world that can satisfy the heart — an unknown &ldquo;X&rdquo; whose direction is known but not its full nature; that this is the triune God made known in Jesus rests on revelation and <a href="/library/minimalfacts.html">the resurrection</a>.</p>
   </section>
 
   <!-- mastery dial -->
@@ -324,119 +380,125 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     </div>
     <div class="dialmeta">
       <h2>Your mastery of this argument</h2>
-      <p>Four checkpoints: understand it, explain it, drill it, defend it. Complete them in any order — your progress saves to your account.</p>
+      <p>Three earned levels — <b>Bronze</b> (rebuild it), <b>Silver</b> (defend it cold), <b>Gold</b> (handle an objection you&rsquo;ve never seen, then prove it again weeks later). Clicking through no longer counts; demonstrated recall does. Progress saves to your account.</p>
       <span class="libnote">◆ &nbsp;Argument 12 of 22 in the mastery library</span>
     </div>
+  </div>
+
+  <div class="levels" id="levels">
+    <div class="lvl" id="lvl-bronze"><div class="medal">&#129353;</div><div class="lt"><b>Bronze · Understand</b><span>Rebuild the argument and exactly what it does (and does not) establish, from memory (&ge;80%)</span></div><div class="ls">Locked</div></div>
+    <div class="lvl" id="lvl-silver"><div class="medal">&#129352;</div><div class="lt"><b>Silver · Defend</b><span>Explain it &ge;8/10 <em>and</em> field its objections cold</span></div><div class="ls">Locked</div></div>
+    <div class="lvl" id="lvl-gold"><div class="medal">&#129351;</div><div class="lt"><b>Gold · Master</b><span>Answer an unseen objection, then re-prove it on 3 spaced reviews</span></div><div class="ls">Locked</div></div>
   </div>
 
   <!-- ===================== PHASE 1: UNDERSTAND ===================== -->
   <section id="understand">
     <div class="phasehead"><span class="phasenum">1</span><h3>Understand it</h3></div>
-    <p class="phasesub">Not more prose — the load-bearing structure. See the skeleton, then learn to defend each bone.</p>
+    <p class="phasesub">Not more prose — the load-bearing structure, defended bone by bone, then proven from memory. Work top to bottom; the checkpoint at the end asks you to rebuild it with nothing in front of you.</p>
 
     <div class="card">
-      <span class="kick">The argument, formally</span>
-      <h4>Three lines from a pattern in our desires to their hidden object.</h4>
-      <div class="syllogism">
-        <div class="prem"><div class="tag">P1</div><p>Every <b>innate, natural desire</b> corresponds to a real object that can satisfy it — hunger to food, thirst to water.</p></div>
-        <div class="prem"><div class="tag">P2</div><p>Humans have an <b>innate desire</b> (Lewis’s Joy) that nothing in this world satisfies.</p></div>
-        <div class="prem concl"><div class="tag">∴ C</div><p>So the most probable explanation is that its object lies <b>beyond this world</b> — what people call God.</p></div>
+      <span class="kick">Before you start · key terms</span>
+      <h4>Nine terms this argument turns on</h4>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:6px">Learn these first — above all the <em>major premise</em> and the <em>shape of Joy</em>, because the argument&rsquo;s hinge is contested and the honest defender rests the case on the phenomenology, not on the natural/artificial distinction a critic can call circular.</p>
+      <div class="glossary">
+        <div class="gt"><b>The argument from desire</b><span>Lewis&rsquo;s claim that a longing nothing in this world satisfies is a <em>clue</em> &mdash; &ldquo;the most probable explanation is that I was made for another world.&rdquo; An inference to the best explanation, never a proof.</span></div>
+        <div class="gt"><b>Joy / <em>Sehnsucht</em></b><span>Lewis&rsquo;s name for the desire: &ldquo;an unsatisfied desire which is itself more desirable than any other satisfaction.&rdquo; An inconsolable longing, distinct from happiness or pleasure &mdash; a wistful ache for a far-off, half-remembered home.</span></div>
+        <div class="gt"><b>Natural vs artificial desire</b><span>Kreeft&rsquo;s distinction: <em>natural</em> desires (hunger, thirst, friendship, beauty) arise from within, are universal, and track real objects; <em>artificial</em> ones (for a sports car, for Oz) come from without and vary. The claim is that every <em>natural</em> one has a real object.</span></div>
+        <div class="gt"><b>&ldquo;Most probable explanation&rdquo;</b><span>Lewis&rsquo;s own hedge. The argument is abductive and cumulative &mdash; a suggestive pointer, not a demonstration. Any defender who treats it as a proof has overreached.</span></div>
+        <div class="gt"><b>The major premise</b><span>The contested hinge: &ldquo;every natural desire corresponds to a real object.&rdquo; It rests on an inductive wager (&ldquo;no innate desire for a nonexistent object has ever been found&rdquo;) that cannot be strictly proved.</span></div>
+        <div class="gt"><b>The circularity charge <em>(Beversluis)</em></b><span>The sharpest objection: a desire is called &ldquo;natural&rdquo; only if it has a real object &mdash; the very thing to be proved &mdash; so the inconvenient cases (immortality) get filed under &ldquo;artificial&rdquo; by fiat.</span></div>
+        <div class="gt"><b>The dialectic of Desire</b><span>Lewis&rsquo;s reply (from <em>The Pilgrim&rsquo;s Regress</em>): each finite object the longing fastens on is tried and found <em>not</em> to be it, and the desire survives every substitution &mdash; so it is not a desire for nothing, but for something no finite thing is.</span></div>
+        <div class="gt"><b>The phenomenological surplus</b><span>Where the honest case really rests: the specific <em>shape</em> of Joy &mdash; a homesickness for a place never visited, intensifying precisely when every earthly good is secured. Harder for a survival story to explain than mere restlessness.</span></div>
+        <div class="gt"><b>An unknown &ldquo;X&rdquo;</b><span>What the argument reaches even at its best: a reality beyond the world that can satisfy the heart &mdash; its direction known (more beauty, more joy, more reality), its full nature <em>not</em>. Not the creedal God by the longing alone.</span></div>
       </div>
-      <p class="formnote">An abductive argument with a clear logical form. It rests on two contestable claims: that innate desires track real objects (P1), and that we have an innate desire nothing here satisfies (P2). Objections target one or the other — or the leap to God in the conclusion.</p>
+    </div>
 
-      <span class="kick" style="margin-top:22px">Then the conceptual step — what is the object of the longing?</span>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">If the deepest human longing follows the same pattern as every other innate desire, it too has a real object — not a finite thing in the world, since none of them satisfies it, but a transcendent fulfillment the world only points toward.</p>
-      <div class="chiprow">
-        <span class="chip">innate, not acquired</span><span class="chip">points beyond the world</span><span class="chip">joy as a signpost</span><span class="chip">made for transcendence</span><span class="chip gold">the ache no finite thing fills</span>
+    <div class="card">
+      <span class="kick">The argument, as a syllogism</span>
+      <h4>Kreeft&rsquo;s form — but read Lewis&rsquo;s hedge first.</h4>
+      <div class="syllogism">
+        <div class="prem"><div class="tag">P1</div><p>Every <b>natural, innate desire</b> in us corresponds to some real object that can satisfy it (hunger to food, thirst to water).</p></div>
+        <div class="prem"><div class="tag">P2</div><p>There exists in us a <b>desire</b> which nothing in time, nothing on earth, no creature can satisfy &mdash; Lewis&rsquo;s <em>Joy</em>.</p></div>
+        <div class="prem concl"><div class="tag">∴ C</div><p>Therefore there exists <b>something beyond time and earth</b> that can satisfy it &mdash; a reality the heart was made for. Offered as &ldquo;the most probable explanation,&rdquo; <b>not a proof</b>; and it reaches an unknown &ldquo;X,&rdquo; not the creedal God.</p></div>
       </div>
+      <p class="formnote">Lewis's own form is softer than the syllogism — "the most probable explanation," an inference to the best explanation. P1 is the contested hinge; P2 is the near-universal experience (Joy). Nearly every objection either denies that wanting proves existing, challenges P1 as circular, or offers a rival (evolutionary) reading of the longing — spot which, and you are halfway to the answer.</p>
+    </div>
+
+    <div class="card">
+      <span class="kick">From an ache to an inference</span>
+      <h4>Don&rsquo;t read the conclusion — reason to it</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:4px">Follow the moves, then reveal — and note exactly where the weight rests and how far the conclusion reaches.</p>
+      <div class="derive">
+        <div class="dr"><div class="q">Does Lewis say &ldquo;I long for it, therefore God exists&rdquo;?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">no &mdash; &ldquo;the most probable explanation&rdquo;; it is abductive, a clue, never a proof</span></div>
+        <div class="dr"><div class="q">What distinction is the syllogism&rsquo;s engine?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">natural desires (innate, universal, track real objects) vs artificial ones (conditioned, vary)</span></div>
+        <div class="dr"><div class="q">Beversluis says that distinction is circular. Does the honest defender rest the case on it?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">no &mdash; it is suggestive but not load-bearing; the weight shifts to the shape of Joy</span></div>
+        <div class="dr"><div class="q">So what does the case really rest on?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">the phenomenological surplus &mdash; a homesickness for a place never been, intensifying when every earthly good is secured</span></div>
+        <div class="dr"><div class="q">How far does it reach, even at full strength?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">a reality beyond the world that satisfies the heart &mdash; an unknown &ldquo;X,&rdquo; not the creedal God (revelation + the resurrection)</span></div>
+      </div>
+      <p class="honest" style="margin-top:14px"><b>Honestly stated:</b> this is a suggestive, experiential, cumulative-case pointer, not a proof — wanting something never makes it exist, and the major premise is a contested hinge no neutral instrument can settle. The natural/artificial distinction draws a fair circularity charge, so the honest defender rests little weight on it and leans on the <em>shape</em> of Joy: a longing that feels like homesickness for a place we have never been, and that intensifies precisely when every earthly good has been secured. Honest people divide over how much that surplus weighs. And even at full strength it points to an unknown &ldquo;X&rdquo; — a reality beyond the world, its direction known but not its full nature; that this is the triune God made known in Jesus rests on revelation and <a href="/library/minimalfacts.html">the historical case for the resurrection</a>.</p>
     </div>
 
     <div class="card">
       <span class="kick">Defending the premises</span>
       <h4>Why each premise is more plausible than its denial</h4>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P1 — natural desires have real objects</summary>
-        <div class="body">
-          <p class="lbl steel">A reliable pattern</p>
-          <p>Innate desires — not learned cravings — reliably map to real satisfiers: hunger to food, thirst to water, curiosity to knowledge, romantic desire to union. Nature does not generally manufacture innate desires for things that do not exist.</p>
-          <p class="lbl steel">Innate, not artificial</p>
-          <p>The premise restricts itself to innate, universal desires, not artificial or imaginary ones (to fly like a bird, to be famous). It is an inductive generalization — the contested hinge — and cannot be proved: a critic can always say it has met its first exception in the very case under dispute.</p>
-        </div>
-      </details>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P2 — a desire nothing here satisfies</summary>
-        <div class="body">
-          <p class="lbl steel">The longing Lewis called Joy</p>
-          <p>A recurrent, piercing longing — triggered by beauty, music, distant hills — that no achievement, relationship, or pleasure ever fully satisfies. Get the thing you thought you wanted, and the longing remains, pointing past it.</p>
-          <p class="lbl steel">Sharpest when life is fullest</p>
-          <p>The longing intensifies rather than diminishes precisely when every earthly good has been secured — the opposite of an unmet need quieting once met.</p>
-        </div>
-      </details>
+      <p class="precise">P2 (the longing exists) is barely disputed — even the naturalist grants the experience. The fight is P1, the major premise — whether a natural desire reliably has a real object — and that is where the honest defender concedes most and relocates the weight.</p>
+
+      <div class="support">
+        <div class="sh"><b>P2 — the longing is real and nearly universal</b> <span class="stp strong">Barely disputed as experience</span></div>
+        <p>The argument begins not with an abstraction but with an experience nearly everyone recognises once it is named &mdash; Lewis&rsquo;s Joy, the German Romantic <em>Sehnsucht</em>, Augustine&rsquo;s restless heart. The defender does not have to prove you ought to feel a transcendent longing; he points, and trusts that you have already felt it. That is why the argument moves readers untouched by cosmological or design arguments.</p>
+        <p class="honest"><b>Honest narrowing:</b> the naturalist grants the experience and denies only the interpretation &mdash; so the datum alone settles nothing. The work is all in what best explains it.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>P1 — natural desires track real objects</b> <span class="stp strong">The contested hinge</span></div>
+        <p>Natural kinds of desire are not free-floating: eyes presuppose light, lungs presuppose air, hunger presupposes food. There is something genuinely odd about a species-wide hunger pointed at <em>nothing whatever</em> &mdash; an appetite with no possible object anywhere in reality &mdash; and Kreeft presses the empirical wager that no innate desire for a nonexistent object has ever been found.</p>
+        <p class="honest"><b>Honest narrowing:</b> this is exactly where the argument is weakest, and candor is required. The wager is an inductive generalisation the critic can say meets its first exception in the very case under dispute; it cannot be strictly proved. Worse, the natural/artificial distinction is open to Beversluis&rsquo;s circularity charge (&ldquo;natural&rdquo; is defined as &ldquo;having a real object&rdquo;), and &ldquo;arises spontaneously and universally&rdquo; is not the same criterion as &ldquo;has a real object&rdquo; &mdash; the desire never to die looks spontaneous and universal yet, in this life, has no such object. So the honest defender treats the distinction as <em>suggestive, not load-bearing</em>, and rests the case on the phenomenological surplus instead.</p>
+      </div>
+      <div class="whoholds"><b>The room:</b> the intuition runs from Augustine (&ldquo;our heart is restless until it rests in you,&rdquo; <em>Confessions</em> I.1) through Thomas Aquinas (a natural desire cannot be in vain) to C. S. Lewis (Joy; <em>Mere Christianity</em>, <em>Surprised by Joy</em>, &ldquo;The Weight of Glory&rdquo;) and Peter Kreeft, who gave it its syllogism. Its sharpest critic is John Beversluis (<em>C. S. Lewis and the Search for Rational Religion</em>), with the evolutionary-byproduct account as the standing naturalist rival; Robert Holyer (<em>Faith and Philosophy</em>, 1988) defends a reformulated version, and William Lauinger and a recent Bayesian treatment (Simek, <em>Sophia</em> 2022) keep the project live. Among philosophers it is treated as serious but minor &mdash; rarely a primary case, often a contributor to a cumulative one; no consensus that it succeeds, none that Beversluis buried it.</div>
     </div>
 
     <div class="card">
       <span class="kick">The hard part — objections, answered</span>
       <h4>The objections you will actually meet</h4>
-      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">A poetic-sounding argument with a real logical spine. Strongest form first, then the reply — and the hardest objection of all is flagged above.</p>
-      <p class="hardest"><b>The one that matters most:</b> Beversluis&rsquo;s &mdash; &ldquo;desire&rdquo; equivocates between an appetite and a metaphysical yearning. The <a href="/library/desire.html">deep dive</a> weighs it at length &mdash; take it with you, not just the replies below.</p>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Three objections deserve full strength, plus the scope question every honest version must face. The hardest of all is flagged below.</p>
+      <p class="hardest"><b>The one that matters most:</b> Beversluis&rsquo;s circularity charge &mdash; the natural/artificial distinction does all the work but is drawn precisely so the inconvenient cases get excluded. The <a href="/library/desire.html">deep dive</a> concedes the distinction is not load-bearing and relocates the case &mdash; take that move with you, not just the reply below.</p>
 
       <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Not every desire has a real object" <span class="badge hard">Hard</span></summary>
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Wanting something doesn't make it exist" <span class="badge easy">Common</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>People desire impossible things: to fly unaided, to be young forever, never to die in this life. And the natural/artificial line looks rigged: a desire counts as “natural” only if it has a real object — the very thing to be proved (Beversluis’s circularity charge).</p>
+          <p>People desire all manner of impossible things — to escape death in this life, to be young forever, to fly unaided, to undo the past. The desires are real; the objects are not. So the bare inference "I long for X, therefore X exists" is plainly invalid, and devastating if the argument is read as a proof.</p>
           <p class="lbl reply">Reply</p>
-          <p>Grant the first point at once: wanting something does not make it exist. The argument retreats to natural, innate desires — but this much must be conceded plainly: “arises spontaneously and universally” is not the same criterion as “has a real object,” and the desire never to die looks spontaneous and universal yet, in this life, has no such object. So the honest defender treats the distinction as suggestive but not load-bearing, and rests the case on the shape of the longing itself: a desire that survives every finite substitution is not a desire for nothing; it is a desire for something no finite thing is.</p>
+          <p>Grant it at once — and any defender who treats the argument as a proof has overreached. Lewis said "the most probable explanation," not "the necessary conclusion"; properly understood this is an abductive, cumulative-case consideration, not a deduction. The claim is not that every wish has a real object, only the narrower one about <em>natural</em> desires — and many impossible desires (to fly, to escape death now) are a <em>genuine</em> good (mobility, continued life) misdirected onto an impossible mode. But that retreat is exactly where the next critic strikes.</p>
         </div>
       </details>
 
       <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "It is just unmet psychological needs" <span class="badge easy">Common</span></summary>
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "The 'natural desire' distinction is rigged" (Beversluis) <span class="badge hard">Hardest</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>A restless, never-quite-satisfied disposition is adaptive, driving us to keep striving and exploring; the ache for elsewhere is a byproduct of a future-modeling brain. The longing is real; it points to nothing transcendent.</p>
+          <p>Beversluis: the crucial distinction between "natural" and "artificial" desires does all the work but is never independently established — the categories are drawn precisely so the inconvenient counterexamples (immortality, the perfect lover) get filed under "artificial." That is circular: a desire counts as natural only if it has a real object, which is the very thing to be proved.</p>
           <p class="lbl reply">Reply</p>
-          <p>The theist’s strongest reply is not refutation but a question about adequacy: evolution explains why we keep striving, but it is less clear that it explains a longing that intensifies rather than diminishes precisely when every earthly good has been secured.</p>
+          <p>This is the strongest objection and it must be taken seriously, not waved off. Defenders (Holyer) argue the distinction is not <em>merely</em> stipulated — there does seem a real difference in kind between appetites that arise spontaneously and universally and those manufactured by culture. But candor requires conceding plainly that this does not answer the charge: "arises spontaneously and universally" is not the same criterion as "has a real object," and the desire never to die looks spontaneous and universal yet, in this life, has no such object. (Answering that with the Christian hope of resurrection, true as it is, would here assume what the argument is trying to show.) So the honest defender rests <em>little</em> weight on the distinction and shifts to the phenomenological point — the peculiar shape of Joy — where the real case lies.</p>
         </div>
       </details>
 
       <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "It is wish-fulfillment" <span class="badge mid">Trickier</span></summary>
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "It's just an evolutionary byproduct" <span class="badge mid">Trickier</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>You want heaven, so you imagine it. The longing manufactures its own object.</p>
+          <p>A critic need not attack the logic; he can offer a rival explanation. A restless, never-quite-satisfied disposition could be adaptive — driving organisms to keep striving, exploring, reproducing rather than settling into contented stagnation; the "ache for elsewhere" a byproduct of a large, future-modeling brain that can imagine states better than any it will inhabit. The longing is real and universal, but points to nothing transcendent.</p>
           <p class="lbl reply">Reply</p>
-          <p>That is the genetic fallacy — wanting something does not make it false (the desire for food does not make food imaginary). And the argument runs the other way: the existence of the innate desire itself is the datum needing explanation. Why are we built with a hunger nothing in the world can feed? Wish-fulfillment explains the wish, not the faculty that aims past the whole world.</p>
+          <p>The theist's strongest reply here is not refutation but a question about <em>adequacy</em>. An evolutionary story explains why we keep striving; it is less clear that it explains the specific <em>shape</em> of Joy — a longing that feels like homesickness for a place we have never been, and that intensifies rather than diminishes precisely when every earthly good has been secured. Why would a desire aimed at survival present itself as a desire that no survival, no pleasure, no human love could ever satisfy? That phenomenological surplus is what the argument trades on. Honest people divide over its weight; our judgment is that it is real evidence — not a proof, but a clue the naturalist must explain away and the theist can take at face value.</p>
         </div>
       </details>
 
       <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Maybe this longing just has no object" <span class="badge hard">Hard</span></summary>
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "At best it gives a vague 'something', not God" <span class="badge mid">Trickier</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>Perhaps this is the one innate desire that happens to be in vain — an absurd feature of consciousness.</p>
+          <p>Even if the longing points beyond the world, it gives you an unknown "something," not the personal, triune God of Christianity, and certainly not Jesus.</p>
           <p class="lbl reply">Reply</p>
-          <p>Possible — and candor requires the concession that the critic can always say the generalization has met its first exception here; there is no neutral instrument to settle it. Our judgment is that a species-wide hunger pointed at nothing would be a strange exception to an otherwise reliable rule (innate desire to real object), so the longing is real evidence — not a proof, but a clue the naturalist must explain away and the theist can take at face value.</p>
-        </div>
-      </details>
-
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "It only shows a vague something more" <span class="badge mid">Trickier</span></summary>
-        <div class="body">
-          <p class="lbl steel">Strongest form</p>
-          <p>Even if real, the longing points beyond the world but not specifically to the Christian God.</p>
-          <p class="lbl reply">Reply</p>
-          <p>Limited, not vague: even at full strength the argument points to a reality beyond the world that can satisfy the heart — a desire that survives every finite substitution is a desire for something no finite thing is. It does not, by itself, reach the specifically Christian God. That this is the triune God, made known in Jesus Christ — the one in whom the restless heart finds rest — is not something the longing itself yields; that rests on revelation and on <a href="/library/minimalfacts.html">the historical case for the resurrection</a>. As natural theology, it points the direction; revelation gives the face.</p>
-        </div>
-      </details>
-
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "This is just poetry, not an argument" <span class="badge easy">Common</span></summary>
-        <div class="body">
-          <p class="lbl steel">Strongest form</p>
-          <p>It trades on feelings, not logic.</p>
-          <p class="lbl reply">Reply</p>
-          <p>It has a clear logical form — two premises and a conclusion — and rests on two examinable, contestable claims: that innate desires track real objects, and that humans have an innate desire nothing here satisfies. It is abductive and cumulative, not a coercive proof, but the data — the near-universal longing — is real and asks to be explained.</p>
+          <p>Exactly right, and Kreeft says so himself: what it points to is an unknown "X" whose <em>direction</em> is known (more beauty, more joy, more reality) but whose full nature it cannot supply. Even at full strength the argument reaches a reality beyond the world that can satisfy the heart — no more. That this reality is the triune God, made known in Jesus of Nazareth and raised from the dead, is not something the longing itself yields; it rests on revelation and <a href="/library/minimalfacts.html">the historical case for the resurrection</a>. Augustine did not argue that the restless heart <em>proves</em> God; he confessed that the heart was restless and that he had found its rest.</p>
         </div>
       </details>
     </div>
@@ -446,35 +508,65 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <h4>Where this comes from — primary sources, not our summary</h4>
       <div class="src">
         <div class="row">
-          <div class="who"><b>C.S. Lewis</b><span>20th c. · <em>Mere Christianity</em> / <em>The Weight of Glory</em></span></div>
-          <div class="what">The classic statement: if I find in myself a desire no experience in this world can satisfy, “the most probable explanation is that I was made for another world.”</div>
+          <div class="who"><b>C. S. Lewis</b><span><em>Mere Christianity</em> · <em>Surprised by Joy</em> · "The Weight of Glory"</span></div>
+          <div class="what">"The most probable explanation is that I was made for another world"; Joy defined as "an unsatisfied desire which is itself more desirable than any other satisfaction"; the "inconsolable secret." (Quoted briefly — read the originals.)</div>
         </div>
         <div class="row">
-          <div class="who"><b>Augustine</b><span>4th–5th c. · <em>Confessions</em></span></div>
-          <div class="what">Our heart is restless, he wrote, until it rests in God — the longing named centuries before Lewis.</div>
+          <div class="who"><b>Augustine</b><span><em>Confessions</em> I.1 (c. 397&ndash;401)</span></div>
+          <div class="what">"You have made us for yourself, O Lord, and our heart is restless until it rests in you" — the heart built with a direction, a tilt toward what it does not yet possess.</div>
         </div>
         <div class="row">
-          <div class="who"><b>Blaise Pascal</b><span>17th c. · <em>Pensées</em></span></div>
-          <div class="what">The infinite abyss in each person that only an infinite and unchanging object — God — can fill.</div>
+          <div class="who"><b>Thomas Aquinas</b><span><em>Summa Contra Gentiles</em> III.48</span></div>
+          <div class="what">A natural desire cannot be in vain, since nature does nothing in vain; so humanity's natural desire for perfect happiness must be capable of fulfilment.</div>
         </div>
         <div class="row">
-          <div class="who"><b>Peter Kreeft</b><span>contemporary</span></div>
-          <div class="what">Systematized the argument from desire into its modern premise-and-conclusion form. (We paraphrase — read the originals.)</div>
+          <div class="who"><b>Kreeft · Beversluis</b><span>the syllogism &amp; its sharpest critic</span></div>
+          <div class="what">Kreeft &amp; Tacelli, <em>Handbook of Christian Apologetics</em> (1994), the natural/artificial syllogism; John Beversluis, <em>C. S. Lewis and the Search for Rational Religion</em> (1985; rev. 2007), the circularity critique.</div>
         </div>
       </div>
+    </div>
+
+    <div class="card">
+      <span class="kick">The honest state of the scholarship</span>
+      <h4>Where the argument really stands</h4>
+      <p>Among philosophers of religion the argument from desire is treated as serious but minor — rarely anyone's primary case for theism, frequently a contributor to a cumulative one. Few think it succeeds as a stand-alone proof; many grant it genuine evidential and persuasive weight as a "pointer" within a larger argument. The conversation is still developing: William Lauinger has worked to ground a desire-based argument in a theory of well-being and the Thomistic "nature does nothing in vain" tradition, and a recent Bayesian reconstruction (Simek, 2022) asks how much such a longing should raise one's probability of theism.</p>
+      <p class="honest"><b>The real fork:</b> whether the phenomenological surplus — the peculiar shape of Joy — is better explained by "we are made for more" or by "we are a striving animal that imagines more." No neutral instrument settles it; no consensus exists that the argument is sound, and none that Beversluis has buried it.</p>
+      <p><b>The bounded verdict:</b> it does not prove God, does not deliver the God of any creed on its own, and does not refute the naturalist, who can reinterpret the same experience. What it does, at its best, is quieter: it takes a near-universal feature of inner life — the recurring sense that we are made for more than the world contains — and argues that the hypothesis that we <em>are</em> made for more explains it better than the hypothesis that we are mistaken. Suggestive, experiential, confirmatory rather than coercive. Even at full strength it reaches an unknown "X," a reality beyond the world; that this is the triune God rests on revelation and <a href="/library/minimalfacts.html">the resurrection</a>. For the person already wrestling with the question, it can turn a private ache into a reason to look further.</p>
+    </div>
+
+    <div class="card" id="bronzeGate">
+      <span class="kick">Checkpoint · earn Bronze</span>
+      <h4>Rebuild it from memory — nothing in front of you</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:4px">Close the sections above. This is the retrieval that turns reading into knowing — and it is how this argument reaches <b>Bronze&nbsp;· Understand</b> on your shelf. Opening accordions no longer counts; showing you can rebuild the structure does.</p>
+      <div class="recall">
+        <div class="q">1 &middot; Put the argument in order — tap the three lines in sequence.</div>
+        <div id="orderPool" class="btnrow"></div>
+        <div id="orderSeq" style="font-family:var(--ui);font-size:13.5px;color:var(--tm);margin-top:10px;min-height:1.2em"></div>
+      </div>
+      <div class="recall" style="margin-top:12px">
+        <div class="q">2 &middot; What does the argument establish? Select every claim it makes — and nothing it doesn&rsquo;t.</div>
+        <div id="propPool" style="display:flex;flex-wrap:wrap;gap:9px;margin-top:4px"></div>
+      </div>
+      <div class="btnrow"><button class="btn primary" onclick="gradeBronze()">Check my reconstruction</button><button class="btn ghost" onclick="resetBronze()">Reset</button></div>
+      <div class="gradeline" id="bronzeGrade"></div>
     </div>
   </section>
 
   <!-- ===================== PHASE 2: PRACTICE ===================== -->
   <section id="practice">
     <div class="phasehead"><span class="phasenum">2</span><h3>Practice it</h3></div>
-    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Three drills that route this argument through tools you already have.</p>
+    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Four drills that route this argument through tools you already have.</p>
 
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back</span>
-      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument in your own words</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Reconstruct the argument from memory: that innate desires have real objects (P1), that we have an innate desire nothing here satisfies (P2), and where its object must lie — then name exactly what the conclusion claims.</p>
-      <textarea id="explainBox" placeholder="Start with: Every innate desire we have corresponds to a real object, and..."></textarea>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back &mdash; free recall</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument with nothing in front of you</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:12px">Scroll the sections away and generate it from memory — recalling is what builds durable memory; re-reading only feels like it does. Name Lewis's hedge ("most probable explanation"), where the weight really rests (the shape of Joy, not the natural/artificial distinction), and keep the scope honest (a clue not a proof; an unknown "X," not the creedal God). Pick your level; the bar rises as you go. Scored out of 10, accuracy first. An 8+ is one half of <b>Silver</b>.</p>
+      <div class="btnrow" id="explainLevels" style="margin:0 0 10px">
+        <button class="btn ghost sel" type="button" data-lv="1" onclick="setExplainLevel(this,1)">1 · State it</button>
+        <button class="btn ghost" type="button" data-lv="2" onclick="setExplainLevel(this,2)">2 · &hellip;and answer Beversluis&rsquo;s circularity charge</button>
+        <button class="btn ghost" type="button" data-lv="3" onclick="setExplainLevel(this,3)">3 · &hellip;to a hostile grad student</button>
+      </div>
+      <textarea id="explainBox" placeholder="Start with: Lewis noticed a longing nothing in this world satisfies..."></textarea>
       <div class="btnrow">
         <button class="btn primary" onclick="scoreExplain(this)">Score my explanation</button>
         <button class="btn ghost" onclick="document.getElementById('explainBox').value='';document.getElementById('scoreOut').classList.remove('show')">Clear</button>
@@ -491,7 +583,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <div class="practicecard">
       <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 2 · Flashcards</span>
       <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Drilled straight from this argument</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Five cards on innate versus artificial desires, the longing that persists when needs are met, and what the argument actually concludes.</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Twelve cards drawn from the syllogism, the objections, and the honest limits above. <b>Answer out loud before you flip</b> — the effort of recall is the whole point; a card you merely recognise hasn't stuck. They drop into your spaced-repetition deck so they return right before you'd forget.</p>
       <div class="flashwrap">
         <div class="flash" id="flash" onclick="this.classList.toggle('flipped')">
           <div class="face front"><div class="qlbl">Prompt</div><p id="fFront"></p><span class="tap">tap to flip</span></div>
@@ -506,14 +598,14 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     </div>
 
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · Live objection</span>
-      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Answer the it-is-just-unmet-needs reply</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">A seeded scenario from the Debate Arena. Draft your reply, then reveal a model answer to compare.</p>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · The wanting-isn't-proof charge (worked example)</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Defuse the wishing-makes-it-so charge</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Start here: draft your reply, then reveal a model answer to compare. This is the <em>worked example</em> — Drill 4 then makes you do it cold across the objection set.</p>
       <div class="interloc">
         <div class="av">SK</div>
         <div>
           <div class="who2">Skeptic</div>
-          <div class="bub">"That deep longing you talk about is just brain chemistry and unmet needs. It does not point to God — it is the same restlessness everyone feels, and therapy or a good relationship handles it fine."</div>
+          <div class="bub">"This is wishful thinking dressed up. People want all kinds of things that aren't real — to live forever, to fly, to win the lottery. Wanting something doesn't conjure it into existence. Case closed."</div>
         </div>
       </div>
       <textarea id="debateBox" placeholder="Your response..."></textarea>
@@ -522,27 +614,60 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       </div>
       <div class="modelans" id="modelAns">
         <div class="lbl">One strong way to answer — in a 1 Peter 3:15 tone</div>
-        <p>"I would love that to be true, and for a lot of restlessness it is — therapy and love and meaningful work really do meet real needs. But notice something about this particular longing: it does not behave like an unmet need. An unmet need quiets when you meet it — you eat and the hunger goes. This one shows up most sharply exactly when life is most full: the beautiful evening with people you love, and underneath the joy a strange ache, as if the moment is pointing past itself to something it cannot quite deliver. Every other innate hunger we have — food, water, companionship, knowledge — corresponds to a real thing that satisfies it. It would be a strange exception if this one deep, near-universal hunger were aimed at nothing. The more natural reading is that, like all the others, it has an object — just not one you will find inside the world. That isn’t a proof — you can call this the first exception — but in my judgment it’s real evidence: a clue the naturalist must explain away and the theist can take at face value. And who that object is, the longing can’t tell you; that rests on revelation and on the historical case for the resurrection."</p>
+        <p>"You're right, and I'll grant it straight away — wanting something never makes it exist, and if I were offering this as a proof I'd have overreached. Lewis himself only said 'the most probable explanation,' not a demonstration; it's a clue, one strand in a bigger case. And notice the impossible wishes you listed are mostly a real good aimed at an impossible mode — the wish to fly is a real wish for mobility, the wish to live forever a real wish for continued life. But here's what I'm actually pointing at, and it's not the natural-versus-artificial sorting, which I think a critic can fairly call circular. It's the peculiar <em>shape</em> of one particular longing: a homesickness for a place you've never been, that gets <em>sharper</em>, not duller, exactly when you finally get everything you wanted. A survival instinct that's satisfied by nothing you could ever attain is a strange survival instinct. I can't prove that points to God. I'm asking what you make of it — and whether 'we were made for more' explains it better than 'we're mistaken.'"</p>
       </div>
     </div>
+
+    <!-- answer the objections cold -->
+    <div class="practicecard" id="objDrill">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 4 · Answer the objections cold</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Four objections, no notes — reply, then check</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">The other half of <b>Silver</b>. Draft a reply from memory, reveal the certified answer, and rate yourself honestly. Clear all four with a &ldquo;nailed it&rdquo; and you can field them in the wild — not just recognise them on the page.</p>
+      <div class="interloc">
+        <div class="av" id="odAv">SK</div>
+        <div><div class="who2" id="odWho">Skeptic</div><div class="bub" id="odQ"></div></div>
+      </div>
+      <textarea id="odBox" placeholder="Your reply, from memory..."></textarea>
+      <div class="btnrow">
+        <button class="btn gold" type="button" onclick="odReveal()">Reveal the certified answer</button>
+      </div>
+      <div class="modelans" id="odModel">
+        <div class="lbl">A strong reply — ported from this page&rsquo;s certified answer</div>
+        <p id="odModelText"></p>
+        <div class="confrow" style="margin-top:12px">
+          <button type="button" onclick="odRate(1)">Shaky — I&rsquo;ll redo this one</button>
+          <button type="button" onclick="odRate(2)">Nailed it &#10003;</button>
+        </div>
+      </div>
+      <div class="flashnav">
+        <button class="btn ghost" type="button" onclick="odPrev()">&lsaquo; Prev</button>
+        <span id="odCount"></span>
+        <button class="btn ghost" type="button" onclick="odNext()">Next &rsaquo;</button>
+      </div>
+    </div>
+
   </section>
 
   <!-- ===================== PHASE 3: PROVE IT ===================== -->
   <section id="proveit">
     <div class="phasehead"><span class="phasenum">3</span><h3>Prove it</h3></div>
-    <p class="phasesub">Mastery isn't a feeling — it's four things done. Clear them and this argument turns gold on your shelf.</p>
+    <p class="phasesub">Mastery isn't a feeling — it's three levels, each earned by <em>showing</em> you can do the thing, then proven again over time. Don't trust the warm glow of having read it; prove it cold.</p>
 
     <div class="card">
-      <div class="checklist">
-        <div class="cl" id="ck-read"><div class="box">✓</div><div class="txt"><b>Understood it</b><span>Read the structure, defences, and all objections</span></div><div class="state">Open every section</div></div>
-        <div class="cl" id="ck-explain"><div class="box">✓</div><div class="txt"><b>Explained it</b><span>Score 7+ on Explain It Back</span></div><div class="state">Not yet</div></div>
-        <div class="cl" id="ck-cards"><div class="box">✓</div><div class="txt"><b>Drilled it</b><span>Cycle through every flashcard once</span></div><div class="state">Not yet</div></div>
-        <div class="cl" id="ck-debate"><div class="box">✓</div><div class="txt"><b>Defended it</b><span>Attempt the live objection</span></div><div class="state">Not yet</div></div>
+      <span class="kick">Your levels on this argument</span>
+      <h4>What each one takes</h4>
+      <div class="checklist" id="levelReqs">
+        <div class="cl" id="rq-bronze"><div class="box">✓</div><div class="txt"><b>Bronze · Understand</b><span>Rebuild the argument + exactly what it does and does not establish, from memory (&ge;80%) — the checkpoint at the end of &ldquo;Understand it.&rdquo;</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-explain"><div class="box">✓</div><div class="txt"><b>Silver · part 1 · Explain it</b><span>Score 8+ on Explain It Back (free recall)</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-objections"><div class="box">✓</div><div class="txt"><b>Silver · part 2 · Objections cold</b><span>Answer all four objection drills with &ldquo;nailed it&rdquo;</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-unseen"><div class="box">✓</div><div class="txt"><b>Gold · part 1 · The unseen objection</b><span>Face one objection the page never drilled (below)</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-spaced"><div class="box">✓</div><div class="txt"><b>Gold · part 2 · Prove it again</b><span>Clear this argument on 3 spaced reviews — it returns on its own</span></div><div class="state">0 of 3</div></div>
       </div>
-      <div style="margin-top:26px;border-top:1px solid var(--border);padding-top:20px">
+      <p style="font-family:var(--ui);font-size:13px;color:var(--tm);margin-top:14px">Gold can slip back to Silver if you stop turning up for the spaced reviews — real mastery is perishable, which is why it's worth something. The dashboard brings this one back when it's due.</p>
+      <div style="margin-top:22px;border-top:1px solid var(--border);padding-top:18px">
         <span class="kick">One more thing — be honest</span>
         <h4 style="font-size:17px">If a friend challenged you on this tomorrow, how ready are you?</h4>
-        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Your self-rating is tracked over time so you can watch confidence climb across the library.</p>
+        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Rate yourself — then see whether your Explain It Back score backs it up. Felt-confidence and shown-confidence are not the same thing, and the gap is worth knowing before a real conversation.</p>
         <div class="confrow" id="confRow">
           <button onclick="setConf(this,1)">Shaky</button>
           <button onclick="setConf(this,2)">Getting there</button>
@@ -553,9 +678,29 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       </div>
     </div>
 
+    <div class="card" id="unseenGate">
+      <span class="kick">Gold gate · the unseen objection</span>
+      <h4>One you weren&rsquo;t coached on</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">The objections above attacked the inference, the distinction, or offered a rival cause. Here is a subtler one, aimed at the very <em>idea</em> of Joy as a desire. Reason it out cold, then reveal how the argument handles it. An honest &ldquo;nailed it&rdquo; is the first half of <b>Gold</b>.</p>
+      <div class="interloc">
+        <div class="av">PH</div>
+        <div><div class="who2">Philosopher</div><div class="bub">"You say Joy is a desire <em>for</em> something — but you also insist you can't say what its object is. A desire with no describable object isn't a desire 'for' anything; it's just a free-floating mood you're dressing up. And you equivocate: 'desire' means one thing for hunger (an appetite for an experienceable object) and something completely different for this 'metaphysical yearning' whose object lies outside all possible experience. The analogy your whole argument rides on is broken."</div></div>
+      </div>
+      <textarea id="unseenBox" placeholder="Reason it out — can a desire have an object it can't name? And does the hunger analogy really need the object to be experienceable like food?"></textarea>
+      <div class="btnrow"><button class="btn gold" type="button" onclick="unseenReveal()">Reveal how the argument handles it</button></div>
+      <div class="modelans" id="unseenModel">
+        <div class="lbl">How the argument answers it — ported from the deep dive</div>
+        <p>Two fair charges, and the honest defender meets them without pretending they are small. On propositional content: Lewis never claimed Joy&rsquo;s object could be <em>named</em> from inside the experience &mdash; he claimed it could be located by <em>elimination</em>. In the preface to <em>The Pilgrim&rsquo;s Regress</em> he describes a &ldquo;dialectic of Desire&rdquo;: each finite object the longing fastens on &mdash; a place, a person, an aesthetic thrill &mdash; is tried and found <em>not</em> to be what was wanted, and the desire survives every substitution. A desire whose object is fixed by what repeatedly fails to satisfy it is not a desire for nothing; it is a desire for something no finite thing is. On equivocation: the analogy with hunger does not require that the transcendent object be experienced the way food is &mdash; only that a desire rooted in our nature be the <em>kind of thing</em> that has an object. Whether that structural parallel holds is exactly what is disputed, which is why the honest version does not rest on the analogy alone but on the shape of the longing itself. And either way the ceiling is the same: this is a clue, not a proof, and it reaches an unknown &ldquo;X&rdquo; &mdash; a reality beyond the world, not the creedal God, which rests on revelation and <a href="/library/minimalfacts.html">the resurrection</a>.</p>
+        <div class="confrow" style="margin-top:12px">
+          <button type="button" onclick="unseenRate(1)">Shaky — I&rsquo;ll sit with it</button>
+          <button type="button" onclick="unseenRate(2)">Nailed it &#10003;</button>
+        </div>
+      </div>
+    </div>
+
     <div class="bigcta">
-      <h4 id="ctaTitle">Master the Argument from Desire, then take the next one</h4>
-      <p id="ctaText">That completes the God’s Existence shelf — twelve arguments, learned and defended. The Resurrection set is next, with the same path from understanding to defence.</p>
+      <h4 id="ctaTitle">Master the Argument from Desire — and finish the shelf</h4>
+      <p id="ctaText">That completes the God&rsquo;s Existence shelf &mdash; twelve arguments, learned and defended. The Resurrection set is next, with the same path from understanding to defence.</p>
       <button class="btn gold" onclick="location.href='evidence-library.html'">Back to the Evidence Library →</button>
       <div style="margin-top:18px"><button class="btn" onclick="shareArgCard(this)" style="background:transparent;color:var(--gl);border:1px solid rgba(200,169,81,.45);">Share this argument as an image</button></div>
       <div><a href="dashboard.html" style="display:inline-block;margin-top:14px;font-family:var(--ui);font-size:13.5px;color:rgba(255,255,255,.6);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:1px">Back to dashboard</a></div>
@@ -569,37 +714,47 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
 <script>
-/* ---- in-memory state (swap for localStorage/Supabase in production) ---- */
-const state = { read:false, explainPass:false, cardsSeen:new Set(), debateTried:false, conf:0 };
+/* ---- state: three earned levels (Bronze / Silver / Gold) ----
+   bronze = reconstruction checkpoint passed (>=80%); explainScore = best Explain It Back
+   (Silver part 1 needs >=8); objCold = objection-drill indices self-rated "nailed it"
+   (Silver part 2 = all); unseen = Gold part 1; Gold part 2 = 3 spaced recalls (ad_reviews step). */
+const state = { bronze:false, explainScore:0, objCold:new Set(), unseen:false, cardsSeen:new Set(), conf:0, explainLevel:1 };
 
-/* ---- persistence + site streak (ad_mastery / ad_streak) ---- */
 const ARG_ID = location.pathname.split('/').pop().replace('ev-m-','').replace('.html','');
-const FRESH_MS = 30*24*60*60*1000; /* 30 days */
 function adAll(){ try{ return JSON.parse(localStorage.getItem('ad_mastery')||'{}'); }catch(e){ return {}; } }
-function adSave(full){
+function spacedCount(){ try{ var r = (JSON.parse(localStorage.getItem('ad_reviews')||'{}'))[ARG_ID]; return (r && r.step) ? r.step : 0; }catch(e){ return 0; } }
+
+function levelOf(){
+  var silver = state.bronze && state.explainScore>=8 && state.objCold.size>=OBJ.length;
+  if(silver && state.unseen && spacedCount()>=3) return 3;
+  if(silver) return 2;
+  if(state.bronze) return 1;
+  return 0;
+}
+
+function adSave(){
   try{
-    var m = adAll(); var e = m[ARG_ID] || {};
-    e.read = state.read; e.explain = state.explainPass;
-    e.cards = state.cardsSeen.size; e.debate = state.debateTried;
-    e.explainScore = state.explainScore || e.explainScore || 0; if(state.conf) e.conf = state.conf;
-    if(full){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
+    var m = adAll(); var e = m[ARG_ID] || {}; var lv = levelOf();
+    e.bronze = state.bronze;
+    e.explainScore = Math.max(state.explainScore||0, e.explainScore||0);
+    e.objCold = Array.from(state.objCold);
+    e.unseen = state.unseen;
+    e.cards = state.cardsSeen.size;
+    if(state.conf) e.conf = state.conf;
+    e.level = lv;
+    e.read = state.bronze; e.explain = state.explainScore>=8; e.debate = state.objCold.size>0;
+    if(lv>=2){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
     m[ARG_ID] = e; localStorage.setItem('ad_mastery', JSON.stringify(m));
   }catch(e){}
 }
 function adRestore(){
   try{
     var e = adAll()[ARG_ID]; if(!e) return;
-    state.read = !!e.read; state.explainPass = !!e.explain; state.debateTried = !!e.debate;
-    state.explainScore = e.explainScore || 0; state.conf = e.conf || 0;
-    var fresh = e.fresh && (Date.now() - e.fresh) < FRESH_MS;
-    if(e.cards >= cards.length && fresh){ for(var i=0;i<cards.length;i++) state.cardsSeen.add(i); }
-    if(e.cards >= cards.length && !fresh){
-      var note = document.createElement('div');
-      note.style.cssText = 'font-family:var(--ui);font-size:.8rem;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.7rem 1rem;margin:0 0 1rem;';
-      note.innerHTML = '&#9888; Memory fades \u2014 it has been a while. Flip through the flashcards again to restore this argument to gold.';
-      var fc = document.querySelector('.flashwrap') || document.getElementById('flash') || null;
-      if(fc && fc.parentNode){ fc.parentNode.insertBefore(note, fc); }
-    }
+    state.bronze = !!e.bronze || !!e.read;
+    state.explainScore = e.explainScore || 0;
+    state.unseen = !!e.unseen;
+    state.conf = e.conf || 0;
+    if(Array.isArray(e.objCold)){ e.objCold.forEach(function(i){ state.objCold.add(i); }); }
   }catch(e){}
 }
 function adMark(){
@@ -617,51 +772,67 @@ function adMark(){
   }catch(e){}
 }
 
-/* ---- mastery dial ---- */
+/* ---- mastery dial + level ladder ---- */
 const CIRC = 263.9;
+function setLvl(id, earned, current){
+  var el = document.getElementById(id); if(!el) return;
+  el.classList.toggle('earned', earned);
+  el.classList.toggle('current', current && !earned);
+  var s = el.querySelector('.ls'); if(s) s.textContent = earned ? 'Earned ✓' : (current ? 'Next up' : 'Locked');
+}
+function setReq(id, done, txt){
+  var el = document.getElementById(id); if(!el) return;
+  el.classList.toggle('done', done);
+  var s = el.querySelector('.state'); if(s) s.textContent = txt;
+}
 function updateDial(){
-  let done = 0;
-  if(state.read) done++;
-  if(state.explainPass) done++;
-  if(state.cardsSeen.size >= cards.length) done++;
-  if(state.debateTried) done++;
-  const pct = Math.round(done/4*100);
-  adSave(pct===100);
-  if(window._adLoaded && done>0) adMark();
-  document.getElementById('pctNum').textContent = pct + '%';
-  document.getElementById('ring').style.strokeDashoffset = CIRC - (CIRC*pct/100);
+  var lv = levelOf();
+  var pct = [0,34,67,100][lv];
+  adSave();
+  if(window._adLoaded && (state.bronze || state.explainScore || state.objCold.size || state.unseen)) adMark();
+  var pn = document.getElementById('pctNum'); if(pn) pn.textContent = pct + '%';
+  var ring = document.getElementById('ring'); if(ring) ring.style.strokeDashoffset = CIRC - (CIRC*pct/100);
 
-  setCheck('ck-read', state.read);
-  setCheck('ck-explain', state.explainPass);
-  setCheck('ck-cards', state.cardsSeen.size >= cards.length);
-  setCheck('ck-debate', state.debateTried);
+  setLvl('lvl-bronze', lv>=1, lv===0);
+  setLvl('lvl-silver', lv>=2, lv===1);
+  setLvl('lvl-gold',   lv>=3, lv===2);
+
+  setReq('rq-bronze', state.bronze, state.bronze ? 'Done' : 'Not yet');
+  setReq('rq-explain', state.explainScore>=8, state.explainScore>=8 ? ('Done · '+state.explainScore+'/10') : (state.explainScore ? ('Best '+state.explainScore+'/10') : 'Not yet'));
+  setReq('rq-objections', (typeof OBJ!=='undefined' && state.objCold.size>=OBJ.length), (typeof OBJ!=='undefined' && state.objCold.size>=OBJ.length) ? 'Done' : (state.objCold.size + ' of ' + (typeof OBJ!=='undefined'?OBJ.length:4)));
+  setReq('rq-unseen', state.unseen, state.unseen ? 'Done' : 'Not yet');
+  var sc = Math.min(spacedCount(), 3); setReq('rq-spaced', sc>=3, sc>=3 ? 'Done' : (sc + ' of 3'));
+
   try{ renderCalibration(); }catch(e){}
 
-  if(pct===100){
-    document.getElementById('ctaTitle').textContent = 'the Argument from Desire mastered - it just turned gold on your shelf';
-    document.getElementById('ctaText').textContent = 'That is 12 of 22. The same path is waiting for every argument in the library. Keep the streak going.';
-    document.querySelector('.libnote').innerHTML = '&#9670; &nbsp;the Argument from Desire mastered - 12 of 22 core arguments complete';
-  }
-}
-function setCheck(id, on){
-  const el = document.getElementById(id);
-  el.classList.toggle('done', on);
-  var stEl = el.querySelector('.state');
-  if(on){ stEl.textContent = 'Done'; return; }
-  if(id==='ck-read'){
-    stEl.textContent = (typeof _accOpened !== 'undefined' && _accs.length) ? (_accOpened.size + ' of ' + _accs.length + ' opened') : 'Open every section';
-  } else {
-    stEl.textContent = 'Not yet';
+  var ln = document.querySelector('.libnote');
+  if(lv>=3){
+    var ct = document.getElementById('ctaTitle'); if(ct) ct.textContent = 'the Argument from Desire mastered — Gold, and the shelf is complete';
+    var cx = document.getElementById('ctaText'); if(cx) cx.textContent = 'You rebuilt it, defended it cold, met an objection you had never seen, and proved it again weeks later. That is the God’s Existence shelf finished — keep it alive on the spaced reviews, and the Resurrection set is waiting.';
+    if(ln) ln.innerHTML = '&#9670; &nbsp;the Argument from Desire — Gold · mastered';
+  } else if(lv>=1 && ln){
+    ln.innerHTML = '&#9670; &nbsp;the Argument from Desire — ' + (lv===2?'Silver':'Bronze') + ' · keep going';
   }
 }
 
-/* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
-/* ---- argument premises used to ground the AI scoring ---- */
+/* ---- explain it back (real AI scoring via /api/tutor; mock fallback) ---- */
+/* ARG_PREMISES: the certified rubric POSTed to /api/tutor and rendered into the share-card. */
 var ARG_PREMISES = [
-  'Every innate, natural desire corresponds to a real object that can satisfy it.',
-  'Humans have an innate desire nothing in this world satisfies.',
-  'So the most probable explanation is that its object lies beyond this world - what people call God (a pointer, not a proof).'
+  'Every natural, innate desire in us corresponds to some real object that can satisfy it (hunger to food, thirst to water).',
+  'There exists in us a desire which nothing in time, nothing on earth, no creature can satisfy - Lewis’s Joy.',
+  'Therefore there exists something beyond time and earth that can satisfy it - offered as "the most probable explanation" (abductive), NOT a proof; wanting never makes a thing exist, the major premise is a contested hinge, and it reaches an unknown "X" (a reality beyond the world), not the creedal God, which rests on revelation and the resurrection.'
 ];
+
+function setExplainLevel(btn, lv){
+  state.explainLevel = lv;
+  [].forEach.call(document.querySelectorAll('#explainLevels button'), function(b){ b.classList.remove('sel'); });
+  if(btn) btn.classList.add('sel');
+  var box = document.getElementById('explainBox');
+  var ph = lv===3 ? 'Explain it to a hostile, well-read skeptic — anticipate the pushback (wanting isn’t proof; Beversluis’s circularity; the evolutionary byproduct; and that it only reaches an unknown X not God) and answer it, keeping the scope honest...'
+         : lv===2 ? 'From memory: the argument AND your best answer to Beversluis’s circularity charge - why the honest defender concedes the natural/artificial distinction is NOT load-bearing and shifts the weight to the shape of Joy...'
+         : 'Start with: Lewis noticed a longing nothing in this world satisfies...';
+  if(box) box.setAttribute('placeholder', ph);
+}
 
 /* Real AI scoring via /api/tutor (same method as explain-it-back.html).
    Falls back to a local heuristic if the API is unreachable (e.g. preview). */
@@ -671,7 +842,10 @@ async function scoreExplain(btn){
   if(!txt){ return; }
   if(btn){ btn.disabled = true; btn.dataset.lbl = btn.textContent; btn.textContent = 'Scoring...'; }
   try{
-    var prompt = 'Please evaluate this student explanation of "The Argument from Desire". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
+    var lvAsk = state.explainLevel>=3 ? '\n\nThe student was asked to explain it to a hostile, well-read skeptic: weight whether they anticipated and answered the obvious pushback (wanting does not make a thing exist; Beversluis’s circularity charge against the natural/artificial distinction; the evolutionary-byproduct rival; and that it reaches only an unknown "X" not the creedal God), not merely stated the argument. Keep the scope honest: a clue (most probable explanation) not a proof; the major premise is a contested hinge; it reaches a reality beyond the world, not the God of the creeds (that rests on revelation and the resurrection).'
+              : state.explainLevel===2 ? '\n\nThe student was ALSO asked to answer Beversluis’s circularity charge (the natural/artificial distinction is rigged so inconvenient cases get excluded): weight whether they CONCEDE the distinction is not load-bearing ("arises spontaneously and universally" is not the same as "has a real object"; the desire never to die looks natural yet has no object in this life) and shift the weight to the phenomenological surplus - the shape of Joy.'
+              : '';
+    var prompt = 'Please evaluate this student explanation of "The Argument from Desire". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + lvAsk + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
     var res = await fetch('/api/tutor', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
@@ -717,47 +891,54 @@ function renderCrisis(text){
 function renderScore(score, strengths, improvements){
   score = Math.max(0, Math.min(10, Math.round(Number(score) || 0)));
   var feed = '';
-  (strengths||[]).forEach(function(s){ feed += '<li class="hit"><span class="mk">\u2713</span>'+esc(s)+'</li>'; });
-  (improvements||[]).forEach(function(s){ feed += '<li class="miss"><span class="mk">\u25CB</span>'+esc(s)+'</li>'; });
+  (strengths||[]).forEach(function(s){ feed += '<li class="hit"><span class="mk">✓</span>'+esc(s)+'</li>'; });
+  (improvements||[]).forEach(function(s){ feed += '<li class="miss"><span class="mk">○</span>'+esc(s)+'</li>'; });
   document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
-  var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
+  var verdict = score>=8?'Strong — you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way — fill the gaps below' : 'Have another go with the structure in mind';
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score);
   updateDial();
 }
 
 function renderMockScore(txtRaw){
   var t = (txtRaw||'').toLowerCase();
   var checks = [
-    {ok:/innate|natural desire|every natural|built-in|inborn/.test(t), hit:'Premise 1 - you stated that innate desires have real objects', miss:'State Premise 1 - every innate desire corresponds to a real object'},
-    {ok:/nothing.*satisf|no(thing)? in this world|beyond this world|unsatisfied|persist/.test(t), hit:'Premise 2 - you named the longing nothing here satisfies', miss:'State Premise 2 - we have an innate desire nothing in this world satisfies'},
-    {ok:/object|real|corresponds|fulfil/.test(t), hit:'Good - you kept the desire-to-object link in view', miss:'Keep the pattern in view - innate desires correspond to real objects'},
-    {ok:/god|transcend|beyond|points to|another world/.test(t), hit:'Conclusion - you pointed beyond the world to God', miss:'Draw the conclusion: the most probable explanation is that its object lies beyond this world - God, a pointer not a proof'},
+    {ok:/desire|long|joy|ache|sehnsucht|restless/.test(t), hit:'Premise 2 - you named the longing (Joy / the desire nothing satisfies)', miss:'Name the datum - a desire nothing in this world satisfies (Lewis’s Joy)'},
+    {ok:/natural|innate|real object|hunger|thirst|corresponds/.test(t), hit:'Premise 1 - you brought in the natural-desire-tracks-a-real-object premise', miss:'State Premise 1 - every natural, innate desire corresponds to a real object'},
+    {ok:/circular|beversluis|evolution|byproduct|wanting|wish|most probable|not a proof|abduct|shape of joy|phenomenolog/.test(t), hit:'Good - you engaged an objection or named the honest limit', miss:'Engage a defeater - wanting-isn’t-proof, Beversluis’s circularity, or the evolutionary byproduct'},
+    {ok:/(not|n[^\sa-z]t) (a )?proof|most probable|clue|pointer|abduct|cumulative|unknown ?.?x|a reality beyond|not .*(creed|christian god|god of)|rests on revelation|contested hinge|suggestive/.test(t), hit:'Conclusion - you kept the scope honest (a clue not a proof; an unknown X, not the creedal God)', miss:'Draw the bounded conclusion: "most probable explanation" not a proof; it reaches an unknown X / a reality beyond the world, not the creedal God'},
     {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth - you developed it, not just listed it', miss:'Go a bit deeper - a full reconstruction runs longer than this'}
   ];
   var score = 0, feed = '';
   checks.forEach(function(c){
-    if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">\u2713</span>'+c.hit+'</li>'; }
-    else{ feed += '<li class="miss"><span class="mk">\u25CB</span>'+c.miss+'</li>'; }
+    if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">✓</span>'+c.hit+'</li>'; }
+    else{ feed += '<li class="miss"><span class="mk">○</span>'+c.miss+'</li>'; }
   });
   document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
-  var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
+  var verdict = score>=8?'Strong — you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way — fill the gaps below' : 'Have another go with the structure in mind';
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score);
   updateDial();
 }
 
 /* ---- flashcards (generated from this argument) ---- */
 const cards = [
-  {q:'State the argument from desire.', a:'Every innate desire has a real object that satisfies it. We have an innate desire nothing in this world satisfies. So the most probable explanation is that its object lies beyond this world - God (a pointer, not a proof).'},
-  {q:'Innate vs artificial desires - why it matters.', a:'The claim is not that every wish has a real object, but that every natural one does (hunger, thirst); artificial desires (a sports car, the land of Oz) can lack objects. That major premise is the contested hinge - it cannot be proved - so the honest defender rests the case on the shape of the longing itself.'},
-  {q:'Reply to: the longing is just an evolutionary byproduct.', a:'Stated at full strength, the rival story says a never-satisfied restlessness could be adaptive. The reply is a question of adequacy: evolution explains why we keep striving, but it is less clear that it explains the shape of Joy - homesickness for a place we have never been, that intensifies when every earthly good is secured.'},
-  {q:'Reply to: wish-fulfillment.', a:'Genetic fallacy - wanting heaven does not make it false. And the datum is the desire itself: why are we built with a hunger nothing in the world can feed?'},
-  {q:'What does the argument actually conclude?', a:'A reality beyond the world that can satisfy the heart - the direction, not the full face. That this is the triune God, made known in Jesus Christ, is not something the longing yields - that rests on revelation and on the historical case for the resurrection.'}
+  {q:'State the argument from desire (Lewis’s form).', a:'A longing nothing in this world satisfies is a clue: "the most probable explanation is that I was made for another world." It is an inference to the best explanation, a suggestive pointer - never a proof.'},
+  {q:'How did Lewis define Joy?', a:'"An unsatisfied desire which is itself more desirable than any other satisfaction" - the German Sehnsucht, an inconsolable longing for a far-off, half-remembered home, distinct from happiness or pleasure.'},
+  {q:'State Kreeft’s syllogism.', a:'Major: every natural, innate desire corresponds to a real object that can satisfy it. Minor: there exists in us a desire nothing in time/earth/creature can satisfy. Conclusion: therefore there exists something beyond time and earth that can - an unknown "X."'},
+  {q:'Natural vs artificial desire - what is the distinction?', a:'Natural (hunger, thirst, friendship, beauty) arise from within, are universal, and track real objects. Artificial (a sports car, Oz) come from without, vary person to person, and some objects do not exist. The claim: every NATURAL one has a real object.'},
+  {q:'Reply to: wanting something doesn’t make it exist.', a:'Grant it at once - any defender treating this as a proof has overreached. Lewis said "most probable explanation," not a demonstration; it is abductive and cumulative. Many impossible desires (to fly, to live forever) are a real good aimed at an impossible mode.'},
+  {q:'What is Beversluis’s circularity charge, and how do you answer it?', a:'A desire counts as "natural" only if it has a real object - the very thing to be proved - so the inconvenient cases get filed under "artificial." The honest answer CONCEDES the distinction is not load-bearing ("spontaneous and universal" is not "has a real object"; the desire never to die looks natural yet has no object in this life) and shifts the case to the shape of Joy.'},
+  {q:'What is the "dialectic of Desire" (Pilgrim’s Regress)?', a:'Each finite object the longing fastens on - a place, a person, an aesthetic thrill - is tried and found NOT to be what was wanted, and the desire survives every substitution. A desire fixed by what repeatedly fails to satisfy it is not a desire for nothing, but for something no finite thing is.'},
+  {q:'Reply to: it’s just an evolutionary byproduct.', a:'Not refutation but a question of adequacy: evolution explains why we keep striving, but less clearly the SHAPE of Joy - a homesickness for a place never been, that intensifies when every earthly good is secured. A survival instinct satisfied by nothing attainable is a strange one. A clue, not a proof.'},
+  {q:'Where does the honest case really rest - and why not on the natural/artificial distinction?', a:'On the phenomenological surplus - the peculiar shape of Joy - because the natural/artificial distinction draws a fair circularity charge and cannot be made load-bearing. The major premise is a contested hinge no neutral instrument settles.'},
+  {q:'How strong is the argument meant to be?', a:'Serious but minor - rarely a primary case, best as one strand in a cumulative one. Suggestive, experiential, confirmatory rather than coercive. It does not prove God and does not refute the naturalist, who can reinterpret the same experience.'},
+  {q:'How far does the conclusion reach?', a:'An unknown "X" - a reality beyond the world that can satisfy the heart, its direction known (more beauty, joy, reality) but not its full nature (Kreeft). NOT the creedal God by the longing alone; that this is the triune God made known in Jesus rests on revelation and the resurrection.'},
+  {q:'How do Augustine and Aquinas ground the intuition?', a:'Augustine: "You have made us for yourself... our heart is restless until it rests in you" (Confessions I.1) - the heart built with a tilt toward what it lacks. Aquinas: a natural desire cannot be in vain, since nature does nothing in vain (SCG III.48).'}
 ];
 let ci = 0;
 function renderCard(){
@@ -771,37 +952,97 @@ function renderCard(){
 function nextCard(){ ci = (ci+1)%cards.length; renderCard(); }
 function prevCard(){ ci = (ci-1+cards.length)%cards.length; renderCard(); }
 
-/* ---- debate ---- */
-document.getElementById('debateBox').addEventListener('input', ()=>{
-  if(document.getElementById('debateBox').value.trim().length > 8 && !state.debateTried){
-    state.debateTried = true; updateDial();
+/* ---- Bronze reconstruction gate (retrieval-earned "Understand") ---- */
+var ORDER = [
+  'Every natural, innate desire corresponds to a real object that can satisfy it (hunger to food, thirst to water).',
+  'But there exists in us a desire nothing in time, on earth, no creature can satisfy - Lewis’s Joy.',
+  'So (as "the most probable explanation," not a proof) there exists something beyond the world that can satisfy it - an unknown "X," not the creedal God.'
+];
+var PROPS = [
+  {t:'a longing nothing in this world satisfies is real and nearly universal', ok:true}, {t:'the peculiar shape of Joy is a clue a complete worldview must explain', ok:true}, {t:'it is "the most probable explanation" - abductive, one strand in a cumulative case', ok:true}, {t:'it points to a reality beyond the world that can satisfy the heart', ok:true},
+  {t:'a proof that God exists', ok:false}, {t:'the triune God of the creeds, by the longing alone', ok:false}, {t:'that wanting something makes it exist', ok:false}, {t:'that the natural/artificial distinction settles the matter', ok:false}
+];
+var _ordSel = [];
+function _shuf(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } return a; }
+function injectBronze(){
+  var pool=document.getElementById('orderPool');
+  if(pool && !pool.children.length){
+    _shuf([0,1,2]).forEach(function(k){
+      var b=document.createElement('button'); b.type='button'; b.className='btn ghost'; b.textContent=ORDER[k];
+      b.onclick=function(){ if(b.disabled) return; b.disabled=true; b.style.opacity=.4; _ordSel.push(k); _ordSeq(); };
+      pool.appendChild(b);
+    });
   }
-});
-document.querySelector('[onclick*="modelAns"]').addEventListener('click', ()=>{
-  state.debateTried = true; updateDial();
-});
-
-/* ---- prove it ---- */
-function markRead(){
-  state.read = true;
-  document.getElementById('readBtn').textContent = 'Marked as understood \u2713';
-  document.getElementById('readBtn').classList.remove('primary');
-  document.getElementById('readBtn').classList.add('ghost');
-  updateDial();
+  var pp=document.getElementById('propPool');
+  if(pp && !pp.children.length){
+    _shuf(PROPS).forEach(function(p){
+      var b=document.createElement('button'); b.type='button'; b.className='btn ghost'; b.textContent=p.t; b.setAttribute('data-ok', p.ok?'1':'0');
+      b.onclick=function(){ b.classList.toggle('sel'); };
+      pp.appendChild(b);
+    });
+  }
 }
+function _ordSeq(){ var el=document.getElementById('orderSeq'); if(el) el.textContent = _ordSel.length ? _ordSel.map(function(k,i){ return (i+1)+'. '+ORDER[k]; }).join('    ') : ''; }
+function resetBronze(){
+  _ordSel=[]; _ordSeq();
+  var pool=document.getElementById('orderPool'); if(pool){ [].forEach.call(pool.children,function(b){ b.disabled=false; b.style.opacity=1; }); }
+  var pp=document.getElementById('propPool'); if(pp){ [].forEach.call(pp.children,function(b){ b.classList.remove('sel'); }); }
+  var g=document.getElementById('bronzeGrade'); if(g){ g.className='gradeline'; g.textContent=''; }
+}
+function gradeBronze(){
+  var orderOK = _ordSel.length===3 && _ordSel[0]===0 && _ordSel[1]===1 && _ordSel[2]===2;
+  var pp=document.getElementById('propPool'); var right=0;
+  if(pp){ [].forEach.call(pp.children,function(b){ var want=b.getAttribute('data-ok')==='1'; var got=b.classList.contains('sel'); if(want===got) right++; }); }
+  var decisions = PROPS.length + 1, scored = right + (orderOK?1:0), pctOK = scored/decisions;
+  var g=document.getElementById('bronzeGrade'); if(!g) return;
+  g.className='gradeline show '+(pctOK>=0.8?'pass':'fail');
+  if(pctOK>=0.8){
+    state.bronze=true; updateDial();
+    g.textContent='✓ Bronze earned — you rebuilt the structure from memory ('+Math.round(pctOK*100)+'%). Now go defend it in Practice.';
+  } else {
+    g.textContent='Not yet — '+Math.round(pctOK*100)+'%. '+(orderOK?'':'Check the order of the three lines. ')+'Re-read the structure above, then try again — this rep is what makes it stick.';
+  }
+}
+
+/* ---- Drill 4: answer the objections cold (replies ported from the page) ---- */
+var OBJ = [
+  {who:'Skeptic', q:'The "natural vs artificial" distinction is rigged - a desire counts as "natural" only if it has a real object, which is the very thing you are trying to prove. You just file the awkward cases (immortality) under "artificial."', model:'This is the strongest objection and it must be taken seriously, not waved off. Defenders (Holyer) argue the distinction is not MERELY stipulated - there does seem a real difference in kind between appetites that arise spontaneously and universally and those manufactured by culture. But candor requires conceding plainly that this does not answer the charge: "arises spontaneously and universally" is not the same criterion as "has a real object," and the desire never to die looks spontaneous and universal yet, in this life, has no such object. (Answering that with the Christian hope of resurrection, true as it is, would here assume what the argument is trying to show.) So the honest defender rests LITTLE weight on the distinction and shifts to the phenomenological point - the peculiar shape of Joy - where the real case lies.'},
+  {who:'Skeptic', q:'Wanting something doesn’t make it exist. People crave all kinds of impossible things - to live forever, to fly. The inference is just invalid.', model:'Grant it at once - and any defender who treats the argument as a proof has overreached. Lewis said "the most probable explanation," not "the necessary conclusion"; properly understood this is an abductive, cumulative-case consideration, not a deduction. The claim is not that every wish has a real object, only the narrower one about natural desires - and many impossible desires (to fly, to escape death now) are a GENUINE good (mobility, continued life) misdirected onto an impossible mode. The weight, though, is not on that sorting; it is on the shape of the longing.'},
+  {who:'Skeptic', q:'Your restless longing is just an evolutionary byproduct - a never-satisfied disposition is adaptive, keeping us striving and exploring. It points to nothing transcendent.', model:'The strongest reply here is not refutation but a question about ADEQUACY. An evolutionary story explains why we keep striving; it is less clear that it explains the specific SHAPE of Joy - a longing that feels like homesickness for a place we have never been, and that intensifies rather than diminishes precisely when every earthly good has been secured. Why would a desire aimed at survival present itself as a desire that no survival, no pleasure, no human love could ever satisfy? That phenomenological surplus is what the argument trades on. Honest people divide over its weight; our judgment is that it is real evidence - not a proof, but a clue the naturalist must explain away and the theist can take at face value.'},
+  {who:'Skeptic', q:'Even if the longing points beyond the world, it gives you a vague "something" - not the triune God of Christianity, and certainly not Jesus.', model:'Exactly right, and Kreeft says so himself: what it points to is an unknown "X" whose DIRECTION is known (more beauty, more joy, more reality) but whose full nature it cannot supply. Even at full strength the argument reaches a reality beyond the world that can satisfy the heart - no more. That this reality is the triune God, made known in Jesus of Nazareth and raised from the dead, is not something the longing itself yields; it rests on revelation and the historical case for the resurrection. Augustine did not argue that the restless heart PROVES God; he confessed that the heart was restless and that he had found its rest.'}
+];
+var _od = 0;
+function odRender(){
+  var o=OBJ[_od];
+  var q=document.getElementById('odQ'); if(q) q.textContent='"'+o.q+'"';
+  var who=document.getElementById('odWho'); if(who) who.textContent=o.who;
+  var av=document.getElementById('odAv'); if(av) av.textContent=o.who.slice(0,2).toUpperCase();
+  var mt=document.getElementById('odModelText'); if(mt) mt.textContent=o.model;
+  var mm=document.getElementById('odModel'); if(mm) mm.classList.remove('show');
+  var bx=document.getElementById('odBox'); if(bx) bx.value='';
+  var c=document.getElementById('odCount'); if(c) c.textContent=(_od+1)+' of '+OBJ.length+(state.objCold.has(_od)?' · nailed ✓':'');
+}
+function odReveal(){ var mm=document.getElementById('odModel'); if(mm) mm.classList.add('show'); }
+function odRate(v){ if(v===2){ state.objCold.add(_od); } else { state.objCold.delete(_od); } updateDial(); if(_od<OBJ.length-1){ _od++; } odRender(); }
+function odNext(){ _od=(_od+1)%OBJ.length; odRender(); }
+function odPrev(){ _od=(_od-1+OBJ.length)%OBJ.length; odRender(); }
+
+/* ---- Gold part 1: the unseen objection ---- */
+function unseenReveal(){ var m=document.getElementById('unseenModel'); if(m) m.classList.add('show'); }
+function unseenRate(v){ state.unseen = (v===2); updateDial(); }
 function renderCalibration(){
   try{
     var el = document.getElementById('calibNote'); if(!el) return;
     var conf = state.conf||0, best = state.explainScore||0;
     var labels = {1:'Shaky',2:'Getting there',3:'Solid',4:'Could teach it'};
     if(conf){ var _b=document.querySelectorAll('#confRow button'); if(_b[conf-1]){ [].forEach.call(_b,function(b){b.classList.remove('sel');}); _b[conf-1].classList.add('sel'); } }
-    if(conf>=3 && best<7){
-      var shown = best>0 ? ('your best Explain It Back so far is '+best+'/10') : 'you haven\u2019t scored an Explain It Back yet';
+    if(conf>=3 && best<8){
+      var shown = best>0 ? ('your best Explain It Back so far is '+best+'/10') : 'you haven’t scored an Explain It Back yet';
       el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.8rem 1rem;';
-      el.innerHTML = '\u26A0 You rated yourself \u201C'+labels[conf]+'\u201D \u2014 but '+shown+'. Worth closing: confidence that holds up in a real conversation is confidence you\u2019ve <b>shown</b>, not just felt. <a href="#" onclick="var b=document.getElementById(\'explainBox\');if(b){b.scrollIntoView({behavior:\'smooth\'});b.focus();}return false;" style="color:#a88930;font-weight:600">Prove it on Explain It Back \u2192</a>';
-    } else if(conf>=3 && best>=7){
+      el.innerHTML = '⚠ You rated yourself “'+labels[conf]+'” — but '+shown+'. Worth closing: confidence that holds up in a real conversation is confidence you’ve <b>shown</b>, not just felt. <a href="#" onclick="var b=document.getElementById(\'explainBox\');if(b){b.scrollIntoView({behavior:\'smooth\'});b.focus();}return false;" style="color:#a88930;font-weight:600">Prove it on Explain It Back →</a>';
+    } else if(conf>=3 && best>=8){
       el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#2f7d4f;background:rgba(47,125,79,.08);border:1px solid rgba(47,125,79,.3);border-radius:6px;padding:.8rem 1rem;';
-      el.innerHTML = '\u2713 Calibrated \u2014 you feel ready and you\u2019ve shown it ('+best+'/10 on Explain It Back). That\u2019s earned confidence.';
+      el.innerHTML = '✓ Calibrated — you feel ready and you’ve shown it ('+best+'/10 on Explain It Back). That’s earned confidence.';
     } else {
       el.style.display = 'none';
     }
@@ -860,23 +1101,14 @@ async function boot(){
     if(!isPro){ showGate(); return; }
   }
   /* build the track */
+  injectBronze();
   adRestore();
   renderCard();
+  odRender();
   updateDial();
   renderCalibration();
   window._adLoaded = true;
 }
-/* "Understood it" is earned by opening every section in Phase 1 (defences + objections) */
-var _accs = Array.prototype.slice.call(document.querySelectorAll('#understand details.acc'));
-var _accOpened = new Set();
-_accs.forEach(function(d, i){
-  d.addEventListener('toggle', function(){
-    if(!d.open || state.read){ return; }
-    _accOpened.add(i);
-    if(_accOpened.size >= _accs.length){ state.read = true; }
-    updateDial();
-  });
-});
 
 /* ---- share-card: render this argument as a branded image ---- */
 function _shareSetMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
@@ -932,9 +1164,9 @@ document.addEventListener('DOMContentLoaded', boot);
   <div style="color:rgba(255,255,255,.55);font-size:12.5px;letter-spacing:.16em;font-weight:500;margin-top:32px;">COULD YOU DEFEND THIS?</div>
   <div id="scTitle" style="font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:700;color:#fff;line-height:1.16;margin-top:10px;"></div>
   <div style="width:56px;height:2px;background:#c8a951;margin:20px 0 24px;"></div>
-  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P1</div><div id="scP1" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.45;"></div></div>
-  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P2</div><div id="scP2" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.45;"></div></div>
-  <div style="display:flex;gap:14px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">&#8756;</div><div id="scC" style="color:#fff;font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.45;font-weight:600;"></div></div>
+  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P1</div><div id="scP1" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.4;"></div></div>
+  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P2</div><div id="scP2" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.4;"></div></div>
+  <div style="display:flex;gap:14px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">&#8756;</div><div id="scC" style="color:#fff;font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.4;font-weight:600;"></div></div>
   <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(200,169,81,.3);padding-top:16px;">
     <div style="color:rgba(255,255,255,.55);font-size:12.5px;">Learn it. Practice it. Defend it.</div>
     <div style="color:#c8a951;font-size:13px;font-weight:600;">apologiadaily.com</div>
