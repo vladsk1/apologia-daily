@@ -109,7 +109,7 @@ The book expands his 2009 *Journal of Theological Studies* 60: 570–584 article
   extramentally; IV the entity was the Jesus who died → ∴ V resurrection) — establishing I–IV needs
   *no* appeal to the supernatural; whether *God* (vs. an angel/alien) caused it is deferred to Ch. 8.
   Distinctive: the exhaustiveness *proof*; the clean "did it happen" vs "what caused it" split (Licona).
-  **Primary leads:** Origen, *Contra Celsum* 2.59 (**Phlegon's *Chronicles*, c. AD 140** — a checkable
+  **Primary leads:** [⚠ **CORRECTED 2026-10-04 — Phlegon:** Loke p. 8 credits Phlegon with the nail-marks line, but in Origen that line is Celsus's Jew (2.55, repeated at 2.59). Origen cites Phlegon only for Jesus's foreknowledge (2.14) and the eclipse and earthquakes (2.33, 2.59). Read the Phlegon lead below that way.] Origen, *Contra Celsum* 2.59 (**Phlegon's *Chronicles*, c. AD 140** — a checkable
   non-Christian notice); **James Ware, *NTS* 2014, p. 486/494** (*egeirō*/*anastasis* = revivification of
   the corpse); Justin, *First Apology* 21, 23–24, 54 and *Dial.* 108; Tacitus, *Annals* 15.44 (authenticity
   defence); Sandmel 1962 "parallelomania." ⚠ **Ch. 1 hazard — see verdict 5 below** (the "the body was
@@ -238,6 +238,7 @@ Classified against the five paired essays read in full at the top of this note.
 - **[Missing → P4] James Ware, *NTS* 2014** (*egeirō*/*anastasis* = bodily revivification) → a peer-reviewed
   reinforcement for the bodily-resurrection point on `appearances.html`/`emptytomb.html`. Also **Phlegon**
   (Origen *C. Cels.* 2.59) as a checkable extra-biblical crucifixion notice → `hist_jesus.html`.
+  ⚠ **CORRECTED 2026-10-04:** Phlegon is cited by Origen only for the eclipse, the earthquakes and Jesus's foreknowledge (2.14, 2.33, 2.59), never for the resurrection or the nail-marks, which are Celsus's words (2.55). The backlog row is rescoped accordingly.
   ⚠ **CORRECTED 2026-09-29:** this Phlegon lead never received a backlog row (Ware and Bolt above did not
   either); [✅ CORRECTED 2026-09-29: (later pass) Bolt 1996 and Ware 2014 are now logged OPEN in `docs/content-backlog.md` too, Resurrection-tab sweep cross-check.] Phlegon is now logged OPEN in `docs/content-backlog.md` (Jesus-tab sweep cross-check). Still absent
   from `hist_jesus.html` (0 hits site-wide, 2026-09-29).
@@ -285,3 +286,32 @@ read-only passes cross-checked against the five paired essays (read in full the 
 Grep-verified absence for the "missing" verdicts (Vansina, Rubin, Schudson, Kirk, "telephone," memory
 distortion, Bergeron, Phlegon, Ware, 1 Cor 15:15 false-witness, "transphysical," combination hypotheses —
 all confirmed absent from the resurrection cluster). No live content changed by this note.
+
+
+## ⭐ Personal full read — 2026-10-04 (supersedes "two independent read-only passes" above)
+This session then **read the whole book itself, line by line**: all 11,866 lines of the extracted text, chs. 1–9, every note, the bibliography and all three indexes. The earlier reports are confirmed except where noted here.
+- 🔴 **Phlegon misattribution** (Loke p. 8): see the two corrections above; backlog row rescoped.
+- ✅ **Two stale backlog rows found and flipped** (same day, commit `8a479cc7`): Bergeron & Habermas 2015 (live in `appearances.html`) and Bolt 1996 (live in `emptytomb.html`), both shipped in `850a934e` (2026-09-29). Ware 2014 (*NTS* 60: 475–98) is genuinely still open.
+- **Rubin wording:** Loke does quote Rubin 1995 p. 134 for chain vs net ("The main advantage of a net over a chain..."). Not using it was fine, but the wording above implied a misattribution. Read it as "not used; verify against Rubin p. 134 before ever using."
+- **New backlog rows (logged 2026-10-04):** IRJC-A (Boyarin calibration, `disciplesbelief.html`), IRJC-B (modern messianic parallels: Sabbatai Zevi, Chabad, the Baal Shem Tov), IRJC-C (Crossley's objection to the women-witness argument, `emptytomb.html`), IRJC-D (Litwa 2019, `uniqueness.html`).
+- **P4, logged here only:**
+  - Kalish & Reynolds, *JSSR* 12.2 (1973) p. 219: only about 2% reported a post-death encounter shared with another person present.
+  - Wright 2008 pp. 49–50, the Simon bar Giora thought experiment; Bryan 2011 pp. 162–9 ("why on earth did they not say so?").
+  - Crook 2013's Ned Ludd analogy vs Le Donne 2013.
+  - Plantinga's dwindling probabilities vs McGrew 2009 pp. 644–50.
+  - Padgett 1998 p. 305; Brad Gregory, *History and Theory* 45 (2006) 137–8.
+  - Asclepiades vs Aulus Cornelius Celsus, *De Medicina* 2.6.15.
+  - Ehrman 2014 p. 149: a bodily post-mortem appearance is "in theory possible" for a historian to affirm.
+  - Hurtado, *Destroyer of the Gods* (2016) on the costs of conversion.
+  - 2 Cor 11:24, five synagogue lashings, showing the message was preached publicly.
+  - Atkins 2019, the disciples' doubt as embarrassment.
+  - Gamaliel's spices (Craig 1989 pp. 184–5); Bryan 2011 p. 79 (Mark 1:44 as a parallel for Mark 16:8); Licona 2010 pp. 407–8 (*psychikon* never means "material").
+- **New hazards (ours better, or never port):**
+  - Habermas's flat "counterblast to Jesus" on Apollonius (`uniqueness.html` hedges correctly).
+  - Loke's resurrection-narrative harmonisation, drawn from popular sources (Casteel; Bock; Geisler & Howe); `consistency.html` concedes the hard case, which is better.
+  - Licona's apocalyptic reading of Matt 27:52–53 (an intra-evangelical inerrancy dispute; never adjudicate).
+  - Loke's suggestion that some apparitions are evil spirits masquerading as the dead.
+  - The "73% of US doctors" statistic (Brown 2012); P52 "within ten to sixty years" (contested); MacCulloch's unattributed "85%" estimate.
+  - Marian apparitions called naturalistic in Loke's own voice (existing non-recommendation).
+- **Corroboration confirmed:** Keim (`appearances.html`); Shaw vs Jones (`persecution.html`); Gal 1:11–12 (`earlydate.html`, `paul-divinity.html`); Acts 13:29; Yarbro Collins via Bolt; *ōphthē* and Acts 9:7 (`paulconv.html`); Whately; Hume's maxim (`miracles.html`); Paul Williams 2002 pp. 134–5 (also pp. 20–21).
+- Raw running notes: `docs/book-research/working-notes/loke-personal-read-notes-2026-10-04.md` (raw scratch notes, not a research note).

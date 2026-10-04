@@ -14,7 +14,7 @@
 > - **Licence note.** CC BY 4.0 means the site *may* quote or even host this book with attribution, unlike our
 >   other book notes. That changes what is legal, not what is wise: our house rule is still to port the
 >   **primaries** and write in our own words.
-> - **Loke is a committed DEFENDER** (Craig's disciple; his resurrection book is dedicated to Craig). His register
+> - **Loke is a committed DEFENDER** (this book is dedicated to J. P. Moreland; he works inside Craig's hybrid view of God and time, and his resurrection book is dedicated to Craig). His register
 >   is much stronger than ours: "demonstrates", "proof", "entails a contradiction", a "99.6%" probability for
 >   design, and a claim that no future science could overturn the conclusion. **Port his logic and his
 >   citations; never his register.** Our "serious reasons, not knock-down" and "confirmation, not proof"
@@ -244,3 +244,26 @@ Mined 2026-10-04. Step Zero (four essays read in full by this session) came firs
 four read-only passes with recorded line ranges; this session personally re-read the source passages behind
 every headline finding (listed above). "Missing" verdicts grep-confirmed across all six surfaces. No live content
 changed by this note.
+
+
+## ⭐ Personal full read — 2026-10-04 (supersedes the "How the book was read" caveat above)
+This session then **read the whole book itself, line by line**: all 15,869 lines of the extracted text, chs. 1–8, every note, every chapter bibliography, the general bibliography and the index. The four agent passes' reports were **confirmed accurate**. Corrections and additions:
+- **Correction:** the book is dedicated to **J. P. Moreland**, not Craig (usage rules fixed above).
+- **New backlog row TKCA-12** (Sober 2019 p. 73's observation-selection objection to the firing squad), and additions to **TKCA-7** (Halper 2021 vs Wall 2013a p. 2; Penrose's cyclic cosmology vs Jow & Scott 2020) and **TKCA-10** (Topham 2010 p. 66), logged 2026-10-04.
+- **New hazards (do not port):**
+  - Loke's Kryptic Christology: God's "potential for Incarnation actualized at a later time" (Loke 2014). Never imply the divine nature changes (Chalcedon: "without change").
+  - "God has parts" in a weak sense (§7.3), the same rejection of divine simplicity again.
+  - Origins adjudication: Kojonen 2021; Loke 2022; Peels 2018.
+  - Peckham 2018's cosmic-conflict theodicy.
+  - Einstein "perhaps a Deist" (ch. 4 n. 5); near-death experiences (Loose et al. 2018).
+  - The "why so little life?" reply (other "spiritual dimensions"; God "suspended these probabilities"); ours (Bromm & Larson; Carroll's waste objection) is better.
+  - "Maker and Father of all" attributed to Plato, *Laws* 10. The phrase is *Timaeus* 28c; verify before any use.
+  - Schaffer 2016 p. 95's debtors analogy, used for causal series although Schaffer denied it applies to them (Loke's n. 21).
+  - The Dawkins "almost worship" quote has no precise source.
+  - Register: "falsified by Mawson's argument" (p. 177); "cannot in principle be overturned by future scientific discoveries" (p. 340).
+- **P4, logged here only:**
+  - Leslie 1989 p. 109, the "GOD CREATED THE UNIVERSE" particle-chain thought experiment, for `cosmic.html`.
+  - Stoeger 2010 p. 174 and Feser 2017 p. 271 for a God-of-the-gaps reply in `kalam.html`.
+  - Mawson 2011's induction objection to the multiverse.
+  - Loke's paper-passing version of the Grim Reaper.
+- Raw running notes: `docs/book-research/working-notes/loke-personal-read-notes-2026-10-04.md` (raw scratch notes, not a research note).
