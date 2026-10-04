@@ -27,6 +27,15 @@
 > - **This is an ACADEMIC monograph**, so popular-level overstatement should be rare — but Loke argues a
 >   thesis, so treat any unanimity claim ("no scholar denies…") as a lead to soften, per rule 7.
 
+## ✅ LEDGER — rows EXECUTED 2026-10-04 (read this before the cross-map below, which is now history)
+
+See `docs/content-backlog.md` for the full account of each row.
+- **DONE:** the 1 Cor 15:15 false-witness lever and IRJC-A (Boyarin calibration) → `library/disciplesbelief.html`; the exhaustive-disjunction framework → `library/minimalfacts.html` (as a method, explicitly not a proof; MK/ES mirrors synced); IRJC-D (Litwa 2019, thesis level) → `library/uniqueness.html`. All gated read-only, four lenses, to STAMPABLE/CLEAN.
+- **PARTLY DONE:** IRJC-B — the Sabbatai Zevi parallel is answered from Habermas 1989; **the Chabad half is still open** (Marcus 2001 seen only at abstract level).
+- **BLOCKED:** IRJC-C (Crossley's argument not seen), the James Ware 2014 row (conclusion not verified). The Phlegon row was closed earlier the same day.
+- Leads NOT used because unverified: Knohl 2000 (named nowhere), Boyarin's page range (only the ch. 4 title is cited), Morgan 2013 and Litwa's own Philinnion/Aristeas/Achilles parallels, Kirk 2017 / Rosman.
+- ⚠ The cross-map and Live-door sections below record what was **missing at mining time**. Do not re-add any of the DONE items.
+
 ## ⭐ Paired essays read IN FULL this session (Step Zero, 2026-09-21)
 The book pairs with the **Resurrection cluster** (its whole subject is *the hypotheses for the origin of
 resurrection belief* — the post-mortem appearances + the fate of the body + the combination hypotheses +
