@@ -7,6 +7,45 @@ Owner-directed over-charity + live fact-check sweep of the Science & Faith tab (
 
 Everything below was surfaced by the gates and deliberately **not** fixed in this pass (rule 9: freeze the scope of a fix pass). Mastery pages (ev-m-*) are the next phase.
 
+## ✅ BACKLOG PASS 2026-10-04 — what was done, and what is left
+
+The owner's rule is to fix a tab's logged issues before the next tab, except low-priority missing-objection items.
+
+**Done.** The WORDING / ACCURACY items below are fixed and gated: four lenses, 0 heresy, confirmation rounds. They cover:
+- all card items, the tab intro, and the MK/ES card mirrors (fidelity-gated);
+- the essay citation and wording items;
+- the mastery-page leftovers, with the counters now set to the 7-page Science & Faith track;
+- the off-page twins: daily-args.json, api/push.js, pocket-cards (science), and the palace.html rooms (First Light, origin-of-life, mathematics, laws);
+- the overclaim scorer cap, ported to ev-m-beauty and widened on ev-m-privileged;
+- the Vilenkin colon twins: kalam, mk/kalam, who-said-it.
+
+**Still open, not wording fixes:**
+- **Essay ADDITIONS (P2, a separate authoring batch):**
+  - bigbang: Steinhardt–Turok / Ijjas–Steinhardt
+  - cosmic: inflation + Penrose
+  - originlife: Keefe & Szostak
+  - mathematics: a named living selection critic
+  - privileged: the 2024 edition
+  - miracles: Augustine, *City of God* 21.8
+- **Book checks:** McMullin page (bigbang fn 27); Leslie pp. 13–14 and the "fifty" marksmen (cosmic); Penrose *Road to Reality* §§28.6–28.7 locus (cosmic).
+- **Owner decisions:**
+  - laws "a gift … has a giver" (essay l.214; ev-s5 l.411/478/1102);
+  - re-base the cosmic card's Conway Morris / Rare Earth / Polkinghorne sections on the essay;
+  - rename "Cosmic Purposiveness" site-wide;
+  - the essay laws meta "governed by … laws";
+  - build ev-m-miracles?;
+  - the pocket bigbang "what Genesis 1:1 always implied".
+- **Other tabs / corpus:**
+  - "flagged above" (actually below) and "Each gets its best form first" on ~58 other ev-m pages;
+  - the counters on s1/s4/s8;
+  - scholars.html:983 Axe unscoped;
+  - the remaining daily-args science twins (mathematics p2, privileged eclipses/p2, cosmic evidence);
+  - the palace Window and Equations rooms;
+  - the ev-s5 originlife "10^106 trials … a reasonable chance" understatement;
+  - tools/check-footnote-integrity.mjs and tools/build-objections.mjs are inert/broken on Windows paths;
+  - objections.json is stale site-wide.
+- **Correction:** the Penzias do-not-use flag lives in docs/book-research/return-of-the-god-hypothesis.md (F17), not INDEX.md.
+
 ## Essays
 
 ### bigbang
