@@ -19,14 +19,32 @@ The owner's rule is to fix a tab's logged issues before the next tab, except low
 - the overclaim scorer cap, ported to ev-m-beauty and widened on ev-m-privileged;
 - the Vilenkin colon twins: kalam, mk/kalam, who-said-it.
 
-**Still open, not wording fixes:**
-- **Essay ADDITIONS (P2, a separate authoring batch):**
-  - bigbang: Steinhardt–Turok / Ijjas–Steinhardt
-  - cosmic: inflation + Penrose
-  - originlife: Keefe & Szostak
-  - mathematics: a named living selection critic
-  - privileged: the 2024 edition
-  - miracles: Augustine, *City of God* 21.8
+**✅ P2 essay ADDITIONS — DONE 2026-10-04** (each one drafted, gated through 3 rounds, 0 heresy):
+- bigbang: cyclic/bounce models (Steinhardt–Turok, Ijjas–Steinhardt, Kinney–Stein, Pavlović–Sossich)
+- cosmic: inflation and the low-entropy beginning (Guth; Carroll; Schiffrin–Wald; Penrose cited via Carroll)
+- originlife: Keefe & Szostak 2001
+- mathematics: Derek Abbott 2013
+- privileged: the 2024 edition (from the website description only)
+- miracles: Augustine, *City of God* XXI.8
+
+**✅ Axe 10^77 RESCOPE — DONE 2026-10-04, site-wide.** The 10^77 figure is Axe's EXTRAPOLATION to "sequences performing a specific function by any domain-sized fold". His β-lactamase domain gave about 1 in 10^64. Earlier wording called it the rarity "for the enzyme domain he studied", and this sweep had itself propagated that error. Fixed on:
+- the essays: originlife, cambrian
+- ev-s5 + MK/ES (including the 10^106 arithmetic sentence, which had understated its own result by ~29 orders of magnitude)
+- ev-m-cambrian, ev-m-originlife
+- daily-args.json
+- speed-round.html (quiz stem)
+- scholars.html: its "quotation" from Axe was not found in any source, so it was replaced with a marked summary of the abstract
+
+**New open items from this pass:**
+- **Sibling surfaces now lag the new essay sections:**
+  - ev-s5 card item (4) and ev-m-bigbang:419: the cyclic reply has no dilution answer and no Kinney–Stein / Pavlović–Sossich dispute
+  - ev-m-cosmic: no inflation objection
+  - ev-m-originlife: no Keefe & Szostak
+  - ev-m-mathematics: no Abbott base-rate concession
+  - ev-s5 mathematics card (~l.379): "not chosen by trial and error" is contested by Abbott
+- **/sources:** add `augustine-civ-21-8` (Dods, NPNF1 vol. 2; now verified verbatim), then rebuild.
+- **scholars.html Axe bio:** "Director of Biologic Institute" may be outdated (he is now at Biola), and "MRC Centre" should read "MRC Centre for Protein Engineering". Unverified, so not changed.
+- **ev-m-privileged and ev-m-beauty:** the overclaim-cap regex was widened. Other pages that carry a 'proves' guard still use the older form.
 - **Book checks:** McMullin page (bigbang fn 27); Leslie pp. 13–14 and the "fifty" marksmen (cosmic); Penrose *Road to Reality* §§28.6–28.7 locus (cosmic).
 - **Owner decisions:**
   - laws "a gift … has a giver" (essay l.214; ev-s5 l.411/478/1102);
