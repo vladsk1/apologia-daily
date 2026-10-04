@@ -91,6 +91,23 @@ Scrivener's editions may be paginated differently from ours, so each needs check
 - **ev-m-compassion:** the Julian, infant-exposure and Matthew 25:40 wording.
 - **ev-m-riseofchurch:** the Julian "ordered… fund", "done most" and "could not defeat" wording.
 
+## Mastery pages (ev-m-*): DONE 2026-10-04, with these items logged, not fixed
+All seven ev-m pages went live after one four-lens round and four confirmation rounds: all lenses STAMPABLE, 0 heresy.
+The biggest finding was the mock scorer (`renderMockScore`, the offline fallback grader). On every page it gave full marks to overclaims such as "this proves Christianity true" and penalised the corrected bounded answer. Each page now carries a shared, node-tested overclaim guard (`OVER` / `OVERCLAIM`) that caps an overclaiming answer at 6/10. The scripts and tests are in the session scratchpad.
+- **P3, model answers below 10 on the mock scorer:** science-history scores 8 (fails the Premise-2 check) and progress scores 6 (fails the Premise-2 and named-critic checks). Both are pre-existing: the model answer is a debate reply, not a full reconstruction.
+- **P3, guard limits.** The guard is verb-first. It does not catch subject-first overclaims: "Christianity is proven true", "Clearly Christianity is true", "This makes Christianity true". The real grader is /api/tutor; the regex is only the fallback, so this is an incremental-hardening item, not a blocker.
+- **P4, loose BOUNDNEG on equality/compassion.** A negation within 30 characters of "show"/"prove" earns bound credit. This predates the sweep.
+- **P3, science-history formnote:** still says "and it stops there". The page was not reframed to "not a proof is not not-evidence", unlike equality and compassion.
+- **P3, abolition:** in "Christians who were breaking it", "it" could point to the conviction or to the standard (P2, ARG_PREMISES[1], flashcard).
+- **P3, riseofchurch:**
+  - Flashcard 1 still says "the growth is attested by hostile witnesses", out of step with P1 and ARG_PREMISES.
+  - The sources row calls Hopkins a "critique".
+  - The ctaText reads "That's 1 of 22".
+- **P3, persecution:** Galen is said to explain the courage "only as delusion" beside his "not inferior to … philosophers". This is the existing Galen item.
+- **P3, the "1 of 22" counter** is stale boilerplate on about 19 ev-m pages site-wide. **"flagged above"** should read "below" on about 58 ev-m pages.
+- **Card twin:** in ev-s8.html:68, "Maximinus Daia soon renewed it" has an ambiguous antecedent. The mastery page now reads "renewed the persecution".
+- **Share card, site-wide:** `#shareCard` had a fixed `height:675px`, so long premises overflowed and clipped the footer from the PNG. These seven pages now use `min-height`; the other 74 ev-m pages still need it. A separate task was offered to the owner.
+
 ## Stale records to update
 - docs/content-backlog.md:
   - Row ~92 still treats the tab as "The Church in History", with three essays and legacy, and with ev-m-legacy. It should now cover seven essays.
