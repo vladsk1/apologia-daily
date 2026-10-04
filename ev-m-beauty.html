@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- content-review: {"argument": "2026-10-04", "orthodoxy": "2026-10-04", "by": "2026-10-04 SCIENCE & FAITH BACKLOG PASS (owner rule: fix the tab's logged issues before the next tab; low-priority missing-objection items excluded). Wording/accuracy items from docs/SCIENCE_FAITH_SWEEP_BACKLOG_2026-10-04.md: read-only Explore gates supplied ported replacement wording (citations verified on the web where needed), assert-guarded literal fix scripts applied it on scratch copies, then a four-lens confirmation round and a fix round (round 3 for scorer changes, node-tested). All lenses STAMPABLE, 0 HERESY. NOT RUN: pastoral sign-off (pending site-wide). Only changes here: the 'proves God' overclaim cap on the mock scorer and the 'flagged just below' pointer. PRIOR: 2026-10-02 OVER-CHARITY + FACT-CHECK SWEEP of the God's Existence mastery pages (owner-directed), following the certified essay (b33206c0) and cards (0575b1ab). Read-only Explore gates, md5-checked, four lenses (citations, argument, orthodoxy incl. clarifier verdict, neutrality). Round 1 reviewed all nine layers, graded layers first (ARG_PREMISES, cards, checks regexes, drill model answer). Fixes were applied by assert-guarded scripts on scratch copies. Rounds 2, 3 and 4 were confirmation gates on the fixed text. All lenses STAMPABLE, 0 HERESY. Every changed checks regex was node-tested: the essay-correct bounded answer passes, and the retired/overclaimed/negated answer fails (contractions handled). Every inline script compiles and the JSON-LD parses. The page now claims no more than its essay, carries the deism-gap fence plus a resurrection pointer, and states a bounded own-voice verdict. NOT RUN: pastoral sign-off (pending site-wide). Remaining pre-existing gaps are logged in docs/GODS_EXISTENCE_SWEEP_BACKLOG_2026-10-01.md, not fixed (rule 9). PRIOR: 2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md.", "citations": "2026-10-04", "neutrality": "2026-10-04"} -->
+<!-- content-review: {"argument": "2026-10-04", "orthodoxy": "2026-10-04", "citations": "2026-10-04", "neutrality": "2026-10-04", "by": "2026-10-04 WIP REBUILD (gates pending) — Bronze/Silver/Gold mastery rebuild of the Argument from Beauty, ported from the certified essay library/beauty.html (four-lens 2026-10-01). Retrieval-earned levels replace the activity dial; adds a 9-term glossary (aesthetic realism + fallible heuristic foregrounded), a trace-the-inference derive drill ending on the scope fence, premise supports (P1 three-layered datum incl. the math puzzle; P2 theism explains the convergence) with honest narrowing + who-holds, an honest-state card, a Bronze reconstruction checkpoint, an eye-of-the-beholder worked example (Drill 3), an objections-cold drill (Drill 4: subjectivism [hardest]/evolutionary aesthetics/ugliness/scope), and a Gold unseen objection (a critic who GRANTS objective beauty but says it needs no God — atheistic Platonism; answered from the essay convergence argument). Flashcards 5->12. No palace room for beauty, so 4 drills. The honest fences hold in every layer incl. the graded ones (ARG_PREMISES, cards, PROPS which marks proof/creedal-God-by-beauty/infallibly-tracks-truth/objectivity-settled as WRONG selections, OBJ, unseenModel): suggestive not a proof, the objectivity of beauty genuinely contested, beauty a fallible heuristic (Hossenfelder, never claim it infallibly tracks truth), ugliness blunts the edge, and it reaches a Source of beauty NOT the God of the creeds (that rests on revelation + the resurrection). FOUR READ-ONLY EXPLORE GATES PENDING — this stamp will be re-written with real results before deploy."} -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Argument from Beauty for God&#x27;s Existence | Apologia Daily</title>
+<title>The Argument from Beauty | Apologia Daily</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -211,19 +211,75 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 .seo-summary p:last-child{margin-bottom:0}
 .hero{padding-bottom:48px}
 .seo-summary + .dialcard{margin-top:24px}
+
+/* ---------- mastery levels (Bronze / Silver / Gold) ---------- */
+.levels{display:grid;gap:10px;margin-top:4px;width:100%}
+.lvl{display:grid;grid-template-columns:42px 1fr auto;gap:14px;align-items:center;border:1px solid var(--border);border-radius:11px;padding:13px 16px;background:var(--w);transition:.2s}
+.lvl .medal{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;background:#eef0f3;filter:grayscale(1);opacity:.45}
+.lvl.earned{border-color:#cfe6da;background:var(--okl)}
+.lvl.earned .medal{filter:none;opacity:1;background:#fff}
+.lvl .lt b{font-family:var(--fd);font-size:16px;display:block;color:var(--td)}
+.lvl .lt span{font-family:var(--ui);font-size:12.5px;color:var(--tm)}
+.lvl .ls{font-family:var(--ui);font-size:12px;font-weight:600;color:var(--tm);text-align:right;white-space:nowrap}
+.lvl.earned .ls{color:var(--ok)}
+.lvl.current{border-color:var(--g);box-shadow:0 0 0 1px var(--g) inset}
+
+/* ---------- key-terms glossary (pretraining) ---------- */
+.glossary{display:grid;gap:0;margin-top:6px}
+.gt{display:grid;grid-template-columns:168px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--border);font-family:var(--ui)}
+.gt:last-child{border-bottom:none}
+.gt b{font-size:14px;color:var(--td)}
+.gt b em{color:var(--gd);font-style:italic}
+.gt span{font-size:13.5px;color:var(--tm);line-height:1.5}
+@media(max-width:560px){.gt{grid-template-columns:1fr;gap:2px}}
+
+/* ---------- premise case: supports with strength pills ---------- */
+.stp{font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:5px;white-space:nowrap}
+.stp.proof{background:#e7eefb;color:#1e4278}
+.stp.strong{background:#fbf3e2;color:#9a7416}
+.stp.sugg{background:#eef0f3;color:#5a6b82}
+.support{border-left:3px solid #dbe6f4;padding:3px 0 3px 15px;margin:14px 0}
+.support .sh{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px}
+.support .sh b{font-family:var(--ui);font-size:14.5px;color:var(--td)}
+.support p{font-size:15px;margin-bottom:4px}
+.honest{font-family:var(--ui);font-size:13.5px;color:var(--td);background:#fbf8f0;border-left:3px solid var(--g);padding:9px 13px;border-radius:0 8px 8px 0;margin-top:6px}
+.honest b{color:var(--gd)}
+.whoholds{font-family:var(--ui);font-size:13px;color:var(--tm);background:#f4f7fb;border-radius:8px;padding:10px 14px;margin-top:12px}
+.whoholds b{color:var(--n5)}
+.precise{font-family:var(--ui);font-size:13px;color:var(--n7);background:#eef3fa;border:1px solid #dbe6f4;border-radius:8px;padding:9px 13px;margin:2px 0 10px}
+
+/* ---------- reveal-on-reason drill ---------- */
+.derive{display:grid;gap:10px;margin-top:10px}
+.dr{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:var(--ow);border:1px solid var(--border);border-radius:10px;padding:12px 15px}
+.dr .q{font-size:15px;font-family:var(--ss)}
+.dr .q em{color:var(--n5);font-style:italic}
+.dr .rev{font-family:var(--ui);font-size:12.5px;font-weight:600;color:var(--n5);background:#fff;border:1px solid #cfdcee;border-radius:7px;padding:6px 12px;cursor:pointer;white-space:nowrap}
+.dr .rev:hover{background:#f3f7fc}
+.dr .ans{display:none;font-family:var(--ui);font-weight:700;font-size:14px;color:var(--gd)}
+.dr.shown .rev{display:none}
+.dr.shown .ans{display:inline}
+@media(max-width:560px){.dr{grid-template-columns:1fr}.dr .ans,.dr .rev{justify-self:start}}
+
+/* ---------- retrieval gate ---------- */
+.recall{background:var(--w);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-top:14px}
+.recall .q{font-family:var(--ui);font-size:14.5px;font-weight:600;color:var(--td);margin-bottom:10px}
+.gradeline{font-family:var(--ui);font-size:13.5px;font-weight:600;margin-top:12px;display:none}
+.gradeline.show{display:block}
+.gradeline.pass{color:var(--ok)}
+.gradeline.fail{color:var(--gd)}
 </style>
   <link rel="stylesheet" href="/ad-nav.css">
-<meta name="description" content="Learn to make and defend the argument from beauty: why beauty points beyond the material, and how to answer the strongest naturalist replies.">
+<meta name="description" content="Master the argument from beauty: nature, art, and the unreasonable effectiveness of mathematics; Swinburne, Augustine, Balthasar; and how to answer subjectivism, evolutionary aesthetics, and ugliness.">
 <link rel="canonical" href="https://apologiadaily.com/library/beauty.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The Argument from Beauty for God&#x27;s Existence | Apologia Daily">
-<meta property="og:description" content="Learn to make and defend the argument from beauty: why beauty points beyond the material, and how to answer the strongest naturalist replies.">
+<meta property="og:title" content="The Argument from Beauty | Apologia Daily">
+<meta property="og:description" content="Master the argument from beauty: nature, art, and the unreasonable effectiveness of mathematics; Swinburne, Augustine, Balthasar; and how to answer subjectivism, evolutionary aesthetics, and ugliness.">
 <meta property="og:url" content="https://apologiadaily.com/ev-m-beauty.html">
 <meta property="og:image" content="https://apologiadaily.com/og-default.jpg">
 <meta name="twitter:image" content="https://apologiadaily.com/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@apologiadaily">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"The Argument from Beauty for God's Existence","description":"Learn to make and defend the argument from beauty: why beauty points beyond the material, and how to answer the strongest naturalist replies.","learningResourceType":"Self-paced mastery track","educationalLevel":"Intermediate","inLanguage":"en","isAccessibleForFree":true,"about":"Christian apologetics","url":"https://apologiadaily.com/ev-m-beauty.html","publisher":{"@type":"Organization","name":"Apologia Daily","url":"https://apologiadaily.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://apologiadaily.com/ev-m-beauty.html"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"The Argument from Beauty","description":"Master the argument from beauty: nature, art, and the unreasonable effectiveness of mathematics; Swinburne, Augustine, Balthasar; and how to answer subjectivism, evolutionary aesthetics, and ugliness.","learningResourceType":"Self-paced mastery track","educationalLevel":"Intermediate","inLanguage":"en","isAccessibleForFree":true,"about":"Christian apologetics","url":"https://apologiadaily.com/ev-m-beauty.html","publisher":{"@type":"Organization","name":"Apologia Daily","url":"https://apologiadaily.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://apologiadaily.com/ev-m-beauty.html"}}</script>
 </head>
 <body>
 
@@ -300,7 +356,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <div class="crumbs"><a href="evidence-library.html">Evidence Library</a> &nbsp;›&nbsp; God's Existence &nbsp;›&nbsp; <span style="color:var(--gl)">Beauty</span></div>
     <span class="eyebrow"><span class="dot"></span> Pro · Mastery Track</span>
     <h1>The Argument from Beauty</h1>
-    <p class="lede">The deep dive explains the argument. This track makes you able to <em>wield</em> it — rebuild it from memory, meet its hardest objections, and be clear about the kind of case it is.</p>
+    <p class="lede">The deep dive explains the argument. This track makes you able to <em>wield</em> it — rebuild it from memory, meet its hardest objections, and locate exactly where its weight rests.</p>
   </div>
 </header>
 
@@ -308,9 +364,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
   <!-- public, search-indexable summary (always visible) -->
   <section class="seo-summary">
     <h2>The argument in brief</h2>
-    <p>The argument from beauty observes something we find hard to deny in practice: that some things are genuinely beautiful — a Bach cantata, a star-filled sky, an act of self-giving love — and not merely that we happen to like them. If beauty is real and objective, the argument continues, it is better explained by a personal Creator who loves beauty than by blind, indifferent physical processes that have no interest in anything looking or sounding glorious. A universe of mindless matter has no reason to produce, or to be apprehended as, sublime; a universe made by an artist does.</p>
-    <p>The case gains force from the strange surplus of beauty in the world. The deep mathematical elegance of physical laws, the loveliness of distant galaxies no human eye evolved to see, the way music can move us to tears — none of this is obviously required for survival, yet it pervades reality. That overflow looks less like an accident and more like a signature.</p>
-    <p>It is fair to say this is an inference to the best explanation offered within a cumulative case, not a stand-alone proof. A skeptic can argue that beauty is subjective, or a by-product of evolved preferences. The believer does not claim to refute that outright, only that our persistent sense of real beauty fits more naturally in a world charged with the glory of a beauty-loving God. What it points to is still thin &mdash; a Source of beauty, not yet the Father, Son and Holy Spirit; the full Christian case rests on revelation and on <a href="/library/minimalfacts.html">the resurrection</a>.</p>
+    <p>Stand at the rim of a canyon as the light turns gold, or sit beneath a Bach passacaglia, and you are not merely registering data — you are <em>moved</em>. The argument from beauty asks a simple question: if the universe is at bottom only matter in motion, indifferent particles obeying blind laws, why is it so achingly beautiful, and why are we the kind of creatures who can be undone by it? Its datum is three-layered: the beauty of <em>nature</em>, the beauty of <em>art and music</em> (which we make at great cost and to no survival purpose), and — most striking of all — the beauty of <em>mathematics</em> and its "unreasonable effectiveness" in describing the physical world.</p>
+    <p>The claim is that the existence of beauty — especially its apparent objectivity, together with our capacity to apprehend it — is better explained by a Creator who is himself the source and standard of beauty than by blind, purposeless matter. On theism, beauty is just what you would expect; on naturalism it is a surd, an unpredicted bonus the theory neither implies nor easily explains away. Plato, Augustine, Jonathan Edwards, and Balthasar develop it; the sharpest modern form is Richard Swinburne's, who folds beauty into a <em>cumulative, probabilistic</em> case — one modest strand in a larger rope, raising the probability of theism rather than proving it.</p>
+    <p>In candor, this is among the gentlest of the theistic arguments, and among the most contested. It is not a proof: it does not corner the unbeliever, and it leans on a premise — that beauty is <em>objective</em> — that is genuinely disputed, with philosophers divided almost evenly (PhilPapers Survey, 2020). Nor does beauty even reliably track truth: the physicist Sabine Hossenfelder has shown elegance can lead science astray, so beauty is at best a fallible heuristic, and the real puzzle is why it should track reality <em>at all</em>. It persuades by resonance and fit, not by force — and what it points to is thin: a Source of beauty, not yet the God of the creeds. The full Christian case rests on revelation and on <a href="/library/minimalfacts.html">the resurrection</a>.</p>
   </section>
 
   <!-- mastery dial -->
@@ -324,119 +380,125 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     </div>
     <div class="dialmeta">
       <h2>Your mastery of this argument</h2>
-      <p>Four checkpoints: understand it, explain it, drill it, defend it. Complete them in any order — your progress saves to your account.</p>
+      <p>Three earned levels — <b>Bronze</b> (rebuild it), <b>Silver</b> (defend it cold), <b>Gold</b> (handle an objection you&rsquo;ve never seen, then prove it again weeks later). Clicking through no longer counts; demonstrated recall does. Progress saves to your account.</p>
       <span class="libnote">◆ &nbsp;Argument 10 of 22 in the mastery library</span>
     </div>
+  </div>
+
+  <div class="levels" id="levels">
+    <div class="lvl" id="lvl-bronze"><div class="medal">&#129353;</div><div class="lt"><b>Bronze · Understand</b><span>Rebuild the argument and exactly what it does (and does not) establish, from memory (&ge;80%)</span></div><div class="ls">Locked</div></div>
+    <div class="lvl" id="lvl-silver"><div class="medal">&#129352;</div><div class="lt"><b>Silver · Defend</b><span>Explain it &ge;8/10 <em>and</em> field its objections cold</span></div><div class="ls">Locked</div></div>
+    <div class="lvl" id="lvl-gold"><div class="medal">&#129351;</div><div class="lt"><b>Gold · Master</b><span>Answer an unseen objection, then re-prove it on 3 spaced reviews</span></div><div class="ls">Locked</div></div>
   </div>
 
   <!-- ===================== PHASE 1: UNDERSTAND ===================== -->
   <section id="understand">
     <div class="phasehead"><span class="phasenum">1</span><h3>Understand it</h3></div>
-    <p class="phasesub">Not more prose — the load-bearing structure. See the skeleton, then learn to defend each bone.</p>
+    <p class="phasesub">Not more prose — the load-bearing structure, defended bone by bone, then proven from memory. Work top to bottom; the checkpoint at the end asks you to rebuild it with nothing in front of you.</p>
 
     <div class="card">
-      <span class="kick">The argument, formally</span>
-      <h4>Three lines — an abductive case, not a deductive proof.</h4>
-      <div class="syllogism">
-        <div class="prem"><div class="tag">P1</div><p><b>Objective beauty</b> exists — some things are genuinely, not merely subjectively, beautiful.</p></div>
-        <div class="prem"><div class="tag">P2</div><p>Objective beauty is <b>better explained</b> by a personal, beauty-loving Creator than by blind, indifferent processes.</p></div>
-        <div class="prem concl"><div class="tag">∴ C</div><p>So beauty is <b>evidence for God</b>.</p></div>
+      <span class="kick">Before you start · key terms</span>
+      <h4>Nine terms this argument turns on</h4>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:6px">Learn these first — above all <em>aesthetic realism</em>, because the whole argument stands or falls on whether beauty is objective, and that premise is genuinely contested.</p>
+      <div class="glossary">
+        <div class="gt"><b>The argument from beauty</b><span>The claim that beauty &mdash; in nature, art, and mathematics &mdash; together with our capacity to apprehend it, is better explained by a Creator who is the source of beauty than by blind matter.</span></div>
+        <div class="gt"><b>The three-layered datum</b><span>What the argument means to explain: the beauty of <em>nature</em>, the beauty of <em>art and music</em> (made at great cost, to no survival end), and the beauty of <em>mathematics</em> and its fit with the world.</span></div>
+        <div class="gt"><b>Unreasonable effectiveness <em>(Wigner)</em></b><span>Eugene Wigner&rsquo;s puzzle: math developed for its formal elegance alone later describes the deep structure of the universe with uncanny precision &mdash; &ldquo;a wonderful gift which we neither understand nor deserve.&rdquo;</span></div>
+        <div class="gt"><b>Aesthetic realism <em>(objectivity of beauty)</em></b><span>The load-bearing, contested premise: that beauty is a real feature of the world, not merely of the observer. Grant it and the argument has traction; deny it and it collapses.</span></div>
+        <div class="gt"><b>Aesthetic subjectivism <em>(Hume)</em></b><span>The rival view: beauty &ldquo;is no quality in things themselves&rdquo; but exists &ldquo;merely in the mind.&rdquo; If true, beauty tells us about human psychology, not about reality.</span></div>
+        <div class="gt"><b>Cumulative case <em>(Swinburne)</em></b><span>Beauty is not offered as a stand-alone proof but as one modest strand, raising the probability of theism, carrying little weight alone and more in company with the other arguments.</span></div>
+        <div class="gt"><b>Fallible heuristic <em>(Hossenfelder)</em></b><span>Beauty does <em>not</em> reliably track truth &mdash; elegant ideas have repeatedly misled physics. So the argument leans not on beauty-as-method but on the deeper puzzle of why beauty should track reality at all.</span></div>
+        <div class="gt"><b>The problem of ugliness</b><span>Nature&rsquo;s horror &mdash; the parasitic wasp, the tumor, the rot. The mirror of the problem of evil; a concession that blunts the argument&rsquo;s edge and must be carried honestly.</span></div>
+        <div class="gt"><b>A Source of beauty</b><span>What the argument reaches even at its best: a Source and standard of beauty &mdash; <em>not</em> yet the God of the creeds. That rests on revelation and the resurrection.</span></div>
       </div>
-      <p class="formnote">This is an inference to the best explanation, offered as part of a cumulative case — not a knock-down proof. Objections cluster on P1 (is beauty really objective?) and P2 (cannot evolution or brain chemistry explain it?). Knowing which is which keeps the conversation clear.</p>
+    </div>
 
-      <span class="kick" style="margin-top:22px">Then the conceptual step — what does beauty point to?</span>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">A universe drenched in beauty far beyond any survival need, and minds wired to be moved by it, is surprising on blind naturalism but natural on theism — a Creator who delights in beauty and made creatures to share the delight.</p>
-      <div class="chiprow">
-        <span class="chip">a personal aesthetic source</span><span class="chip">beauty beyond utility</span><span class="chip">a world fitted to the mind</span><span class="chip">delight built into creation</span><span class="chip gold">a Creator who enjoys beauty</span>
+    <div class="card">
+      <span class="kick">The argument, carefully</span>
+      <h4>A weighing of likelihoods, not a syllogism.</h4>
+      <div class="syllogism">
+        <div class="prem"><div class="tag">P1</div><p>Beauty is a real, many-layered <b>datum</b> &mdash; in nature, in art, and in the &ldquo;unreasonable effectiveness&rdquo; of mathematics &mdash; and we are equipped to perceive and be moved by it.</p></div>
+        <div class="prem"><div class="tag">P2</div><p>A Creator who is himself the <b>source and standard of beauty</b> explains that datum &mdash; and the convergence of world, laws, and mind &mdash; better than blind, purposeless matter does.</p></div>
+        <div class="prem concl"><div class="tag">∴ C</div><p>So beauty <b>raises the probability of theism</b> &mdash; one modest strand in a cumulative case. <b>Not a proof</b>; the objectivity of beauty is contested; and it points to a Source of beauty, not yet the God of the creeds.</p></div>
       </div>
+      <p class="formnote">This is deliberately probabilistic and modest (Swinburne's form), not a demonstration. Its whole weight sits on whether beauty is <em>objective</em> (P1) — the one premise philosophers genuinely divide over. Almost every objection either denies that beauty is objective or offers a rival explanation of the datum (evolution, ugliness); spot which, and you are halfway to the answer.</p>
+    </div>
+
+    <div class="card">
+      <span class="kick">From a sunset to a Source</span>
+      <h4>Don&rsquo;t read the conclusion — reason to it</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:4px">Follow the moves, then reveal — and note exactly where the weight rests and how far the conclusion reaches.</p>
+      <div class="derive">
+        <div class="dr"><div class="q">Name the three layers of the datum the argument means to explain.</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">the beauty of nature, of art and music, and of mathematics (its &ldquo;unreasonable effectiveness&rdquo;)</span></div>
+        <div class="dr"><div class="q">Which premise carries the whole weight &mdash; and is it settled?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">that beauty is objective (aesthetic realism) &mdash; and no, it is genuinely contested (~even split)</span></div>
+        <div class="dr"><div class="q">Does the argument claim beauty reliably tracks truth?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">no &mdash; beauty is a fallible heuristic (Hossenfelder); the puzzle is why it should track reality <em>at all</em></span></div>
+        <div class="dr"><div class="q">How strong is the conclusion meant to be?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">suggestive &mdash; one modest strand in a cumulative case; it persuades by fit, not by force; not a proof</span></div>
+        <div class="dr"><div class="q">How far does it reach, even at its best?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">a Source of beauty &mdash; not yet the God of the creeds; that rests on revelation + the resurrection</span></div>
+      </div>
+      <p class="honest" style="margin-top:14px"><b>Honestly stated:</b> this is a weighing of likelihoods, not a demonstration. It does not corner the unbeliever, and its load-bearing premise — the objectivity of beauty — is a live and reputable dispute, with philosophers split almost evenly. Beauty does not even reliably track truth (Hossenfelder showed elegance can mislead physics), so the argument rests not on beauty-as-method but on the deeper puzzle of why beauty should track reality at all. It persuades by resonance and fit; thoughtful people weighing the same data still land on both sides. And at its best it reaches a Source of beauty — not the God of the creeds, which rests on revelation and <a href="/library/minimalfacts.html">the resurrection</a>. One strand in a cumulative case.</p>
     </div>
 
     <div class="card">
       <span class="kick">Defending the premises</span>
       <h4>Why each premise is more plausible than its denial</h4>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P1 — beauty is (at least partly) objective</summary>
-        <div class="body">
-          <p class="lbl steel">Convergence and correction</p>
-          <p>Tastes vary, yet the deepest beauty — a night sky, certain music, a mathematical proof — commands striking agreement across cultures and centuries, and we treat it as discovered: we say someone lacks taste, or grows in appreciation.</p>
-          <p class="lbl steel">We argue as if it is real</p>
-          <p>We dispute beauty as though there is a fact to get right or wrong. The convergence is best explained if there is something there to converge upon — yet this is an inference, not a demonstration; a determined subjectivist can hold it reflects shared human nature, and on the central premise the jury is genuinely out. If there is such an objective core, that is all the argument needs.</p>
-        </div>
-      </details>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P2 — a Creator explains it better</summary>
-        <div class="body">
-          <p class="lbl steel">The surplus problem</p>
-          <p>On naturalism, why would blind selection produce beings who weep at a requiem or find equations elegant — far beyond any reproductive need? Evolution can explain why we have the responses; it is far harder to see how it grounds the conviction that some are correct, or why the deepest laws should be elegant.</p>
-          <p class="lbl steel">Expected on theism</p>
-          <p>A beauty-loving Creator who made a world to be enjoyed, and minds attuned to enjoy it, makes the depth and pervasiveness of beauty unsurprising — even predicted.</p>
-        </div>
-      </details>
+      <p class="precise">The datum (P1) is vivid and hard to deny; the contested part is its <em>objectivity</em>. P2 — that theism explains it better — is where the argument does its real work, by the convergence of world, laws, and mind. Both are suggestive, not coercive.</p>
+
+      <div class="support">
+        <div class="sh"><b>P1 — the datum, and the math puzzle</b> <span class="stp strong">Vivid; its objectivity is the contested part</span></div>
+        <p>Beauty in nature and art is familiar; the striking layer is mathematics. Developed for its formal elegance alone, it later unlocks the deep structure of the physical world &mdash; Wigner&rsquo;s &ldquo;unreasonable effectiveness,&rdquo; Dirac&rsquo;s conviction that &ldquo;it is more important to have beauty in one&rsquo;s equations than to have them fit experiment.&rdquo; Mathematical beauty does no work for survival on the savanna, yet it has so often tracked physical truth.</p>
+        <p class="honest"><b>Honest narrowing:</b> two limits. First, beauty is a <em>fallible</em> heuristic &mdash; Sabine Hossenfelder (<em>Lost in Math</em>) shows elegant ideas like naturalness and supersymmetry have misled physics, so never claim beauty infallibly tracks truth; the argument leans on the puzzle of why it tracks reality at all. Second, that beauty is <em>objective</em> rather than &ldquo;in the eye of the beholder&rdquo; is exactly the premise a subjectivist denies &mdash; and that debate is genuinely unsettled.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>P2 — theism explains the convergence</b> <span class="stp strong">The real work; suggestive, not coercive</span></div>
+        <p>The theist offers a unified story: one Mind authored both the order of the world and the minds that delight in discerning it, so the fit between elegance and reality is not luck but design. A good God has reason to make a beautiful universe, because beauty is a good and a good God tends to realize goods (Swinburne). The naturalist, by contrast, must tell at least two stories &mdash; why the laws are elegant, and why survival-tuned minds can read that elegance &mdash; whose convergence he can describe but not deeply explain.</p>
+        <p class="honest"><b>Honest narrowing:</b> naturalism is not refuted. It can grant evolution shaped our preferences (so can the theist &mdash; God could use evolution), and it can invoke a selection effect (we only remember the elegant math that worked). The argument does not coerce; it claims the theistic story fits the convergence more naturally, and leaves honest people free to weigh it differently.</p>
+      </div>
+      <div class="whoholds"><b>The room:</b> the intuition runs from Plato (the <em>Symposium</em>&rsquo;s ascent to Beauty itself) through Augustine (&ldquo;Late have I loved you, beauty so old and so new&rdquo;), Jonathan Edwards (beauty as &ldquo;the consent of being to being,&rdquo; God its ground), and Hans Urs von Balthasar (<em>The Glory of the Lord</em>), to Richard Swinburne&rsquo;s cumulative, probabilistic case. The data were sharpened by the physicists Eugene Wigner and Paul Dirac. The critics are weighty: David Hume (aesthetic subjectivism), Denis Dutton (evolutionary aesthetics), Sabine Hossenfelder (beauty misleads physics), and Darwin himself on nature&rsquo;s horror. Few regard it as a stand-alone proof; aesthetic realism is contested, with philosophers split almost evenly (PhilPapers, 2020).</div>
     </div>
 
     <div class="card">
       <span class="kick">The hard part — objections, answered</span>
       <h4>The objections you will actually meet</h4>
-      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">A soft-sounding argument still has hard objections. Strongest form first, then the reply — and the hardest objection of all is flagged just below.</p>
-      <p class="hardest"><b>The one that matters most:</b> that aesthetic realism &mdash; the premise the whole argument rests on &mdash; is genuinely contested: philosophers divide almost evenly between objective and subjective views of aesthetic value (PhilPapers Survey, 2020). The <a href="/library/beauty.html">deep dive</a> answers it at length &mdash; take it with you, not just the replies below.</p>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Three objections deserve full strength, plus the scope question every honest version must face. The hardest of all is flagged below.</p>
+      <p class="hardest"><b>The one that matters most:</b> aesthetic subjectivism &mdash; if beauty is &ldquo;in the eye of the beholder,&rdquo; the whole argument&rsquo;s load-bearing premise is gone. The <a href="/library/beauty.html">deep dive</a> calls it the most serious objection and refuses to pretend the premise is settled &mdash; take it with you, not just the reply below.</p>
 
       <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Beauty is entirely subjective" <span class="badge hard">Hard</span></summary>
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Beauty is just in the eye of the beholder" <span class="badge hard">Hardest</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>People disagree wildly about beauty, so it is just preference — there is nothing objective to explain.</p>
+          <p>Hume: beauty "is no quality in things themselves: It exists merely in the mind which contemplates them; and each mind perceives a different beauty." If beauty is subjective, the existence of beauty tells us about human psychology, not about reality, and the argument to a cosmic Artist collapses.</p>
           <p class="lbl reply">Reply</p>
-          <p>Some beauty is taste-relative, granted. But the deepest cases show remarkable convergence across cultures and centuries, and we treat them as discoveries — we say someone lacks taste, or grows into appreciating something. The convergence is best explained if there is something there to converge upon — yet this is an inference, not a demonstration; a determined subjectivist can hold it reflects shared human nature, and on the central premise the jury is genuinely out. If there is such an objective core, that is all the argument needs.</p>
+          <p>Here the argument's load-bearing premise is genuinely contested, and we should not pretend otherwise. But notice how strange thoroughgoing subjectivism feels in practice: we argue about beauty as if we could be wrong; we think the person who finds a garish billboard lovelier than a Rembrandt has made a <em>mistake</em>, not just registered a different sensation. Hume's own retreat to "true judges" — a standard in the "joint verdict" of refined critics — concedes the point. The theist proposes that this convergence of refined judgment is best explained if there really is something there to converge upon, with God as its ultimate measure. Yet candor requires the admission that this is an inference, not a demonstration: a determined subjectivist can hold the convergence reflects shared human nature and nothing more. On this premise the jury is genuinely out, and the argument is only as strong as one's reasons for aesthetic realism.</p>
         </div>
       </details>
 
       <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Evolution explains our sense of beauty" <span class="badge mid">Trickier</span></summary>
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Beauty is just an evolutionary adaptation" <span class="badge mid">Trickier</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>Denis Dutton (<em>The Art Instinct</em>, 2009): landscape preferences track the savanna our species was shaped in, and our love of art and music is partly sexual selection — skill advertising a fit mate, like the peacock’s tail. Beauty is about us, not about God.</p>
+          <p>Denis Dutton (<em>The Art Instinct</em>): our perception of beauty is an adaptive byproduct. The "savanna hypothesis" — we prefer landscapes with water, open space, and game, the environments that helped our ancestors survive — plus sexual selection (skill and creativity advertise a fit mate) explains beauty fully, without God.</p>
           <p class="lbl reply">Reply</p>
-          <p>The theist can grant a great deal; God may have used evolution to fit creatures to their world. The decisive question is whether evolution <em>fully</em> explains the datum. Two residues remain: why the universe’s deepest laws should be elegant, readable in symbols of no survival value, and the felt sense that some aesthetic responses are <em>correct</em>, not merely liked. Evolution can explain why we have the responses; it is far harder to see how it grounds their correctness.</p>
+          <p>Grant a great deal: there is no contradiction in God's using evolution to fit creatures to their world, and an adaptive history for some preferences threatens the argument no more than the physiology of vision threatens the reality of light. The decisive question is whether evolution <em>fully</em> explains the datum, and two residues remain. First, the unreasonable effectiveness of mathematics: no selective story explains why the universe's deepest laws should be <em>elegant</em>, or why minds tuned by survival can read that elegance in symbols of no survival value. Second, the felt <em>normativity</em> of aesthetic experience — the sense that a late Beethoven quartet is not merely something we happen to like but something genuinely worthy. Evolution can explain why we have the responses; it is far harder to see how it grounds the conviction that some of them are <em>correct</em>.</p>
         </div>
       </details>
 
       <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Beauty is just a brain reward" <span class="badge mid">Trickier</span></summary>
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "What about nature's horror and ugliness?" <span class="badge hard">Hard</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>Beauty is whatever the brain finds pleasing — a neural reward response. Calling it objective is a confusion.</p>
+          <p>If the beauty of nature is evidence for a good Creator, what of the parasitic wasp that lays its eggs inside a living caterpillar, the maggot, the tumor, the rot? Darwin confessed he could not persuade himself a beneficent God had designed the <em>Ichneumonidae</em> with their gruesome habits. A world that contains the sublime also contains the squalid.</p>
           <p class="lbl reply">Reply</p>
-          <p>This reduces beauty to a feeling and then cannot explain why we treat aesthetic judgments as correct or mistaken, why beauty seems to make a claim on us, or why it so often points beyond itself in awe and longing. It explains the phenomenon away rather than explaining the thing we actually have.</p>
+          <p>No glib answer. Part of the reply is that disgust often tracks genuine disvalue — decay, disease, danger — so revulsion is itself a kind of perception of disvalue, parasitic on an order it presupposes; part is that the world's being lovely at all is striking, since a blind universe had no obligation to be; and part belongs to the larger Christian wrestling with a world at once "very good" and groaning, fallen, awaiting renewal. But this is a <em>concession</em> as much as a reply: ugliness blunts the argument's edge, and any honest version carries that weight rather than wishing it away. The argument from beauty is strongest when it travels alongside the problem of evil as its mirror, not when it pretends the shadows are not there.</p>
         </div>
       </details>
 
       <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "There is ugliness too" <span class="badge hard">Hard</span></summary>
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "At best it gives a vague 'Source of beauty', not God" <span class="badge mid">Trickier</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>Nature is full of disease, decay, and predation. An aesthetic argument cuts both ways.</p>
+          <p>Even if sound, the argument reaches some abstract source or standard of beauty — not the personal, triune God of Christianity, and certainly not Jesus.</p>
           <p class="lbl reply">Reply</p>
-          <p>The argument does not claim everything is beautiful; it claims the existence of objective beauty needs explaining, and even amid decay the world is shot through with gratuitous beauty. This is a concession as much as a reply: ugliness blunts the argument’s edge, and the honest version travels alongside the problem of evil as its mirror rather than pretending the shadows are not there. Still, the world’s being lovely at all is striking, since a blind universe had no obligation to be.</p>
-        </div>
-      </details>
-
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "This is too soft to be an argument" <span class="badge easy">Common</span></summary>
-        <div class="body">
-          <p class="lbl steel">Strongest form</p>
-          <p>Unlike the cosmological arguments, this is impressionistic, not rigorous.</p>
-          <p class="lbl reply">Reply</p>
-          <p>Agreed it is not a deductive proof, and it is not offered as one — it is an abductive, cumulative-case consideration: which worldview better predicts a universe drenched in disinterested beauty and minds that ache at it? Soft data still counts; the felt force of beauty is a real datum any worldview must place.</p>
-        </div>
-      </details>
-
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Even if it points beyond, why the Christian God?" <span class="badge mid">Trickier</span></summary>
-        <div class="body">
-          <p class="lbl steel">Strongest form</p>
-          <p>At most this gives a vague aesthetic source, not the God of the gospel.</p>
-          <p class="lbl reply">Reply</p>
-          <p>True — on its own it indicates a personal, beauty-loving ground of reality, part of a cumulative case. The Christian adds that this fits a God who made creation good, who is himself the source of glory, and whose beauty Scripture says creation declares. But the modest conclusion is a Source of beauty, not yet the God of the creeds; the full Christian case rests on revelation and on <a href="/library/minimalfacts.html">the resurrection</a>.</p>
+          <p>Exactly right, and the honest version says so first: what the argument points to is thin — a Source of beauty, not yet the God of the creeds. It is one modest strand in a cumulative case, persuading by resonance and fit rather than by force. That this Source is the personal, triune God, made flesh in Jesus and raised from the dead, is not something beauty yields on its own; it rests on revelation and <a href="/library/minimalfacts.html">the historical case for the resurrection</a>. As Augustine found, beauty has a way of calling out and sending the honest heart looking for the One whose radiance the world has been reflecting — but the finding comes through Christ, not through the sunset alone.</p>
         </div>
       </details>
     </div>
@@ -446,35 +508,65 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <h4>Where this comes from — primary sources, not our summary</h4>
       <div class="src">
         <div class="row">
-          <div class="who"><b>Augustine</b><span>4th–5th c. · <em>Confessions</em></span></div>
-          <div class="what">His cry, late have I loved you, beauty so old and so new — beauty as a road that leads the restless heart to God.</div>
+          <div class="who"><b>Augustine</b><span><em>Confessions</em>, Book X</span></div>
+          <div class="what">"Late have I loved you, beauty so old and so new" — a cry to God himself as Beauty, the One toward whom every lovely created thing had been secretly pointing.</div>
         </div>
         <div class="row">
-          <div class="who"><b>Jonathan Edwards</b><span>18th c. · <em>The Nature of True Virtue</em></span></div>
-          <div class="what">Defined beauty or “excellency” as “the consent of being to being,” with God its ground and fullness; created beauty a faint image of his.</div>
+          <div class="who"><b>Richard Swinburne</b><span><em>The Existence of God</em> (2004)</span></div>
+          <div class="what">The rigorous modern form: a good God has reason to make a beautiful universe, so observed beauty raises the probability of theism — one strand in a cumulative, probabilistic case.</div>
         </div>
         <div class="row">
-          <div class="who"><b>Richard Swinburne</b><span>contemporary</span></div>
-          <div class="what">Includes the argument from beauty within his cumulative probabilistic case for God.</div>
+          <div class="who"><b>Wigner · Dirac</b><span>physics · 1960, 1963</span></div>
+          <div class="what">Wigner's "unreasonable effectiveness of mathematics" and Dirac's "beauty in one's equations" — the striking third datum: elegance tracking physical truth.</div>
         </div>
         <div class="row">
-          <div class="who"><b>C.S. Lewis</b><span>20th c. · <em>The Weight of Glory</em></span></div>
-          <div class="what">Beauty as longing — the ache that points beyond the world to its source. (We paraphrase — read the originals.)</div>
+          <div class="who"><b>Hume · Dutton · Hossenfelder</b><span>the critics</span></div>
+          <div class="what">Hume, "Of the Standard of Taste" (1757), subjectivism; Dutton, <em>The Art Instinct</em> (2009), evolutionary aesthetics; Hossenfelder, <em>Lost in Math</em> (2018), beauty misleading physics. (We paraphrase — read the originals.)</div>
         </div>
       </div>
+    </div>
+
+    <div class="card">
+      <span class="kick">The honest state of the scholarship</span>
+      <h4>Where the argument really stands</h4>
+      <p>Few philosophers regard the argument from beauty as a stand-alone proof; even its defenders, Swinburne foremost, present it as one modest strand in a <em>cumulative</em> case, carrying little weight alone and more in company. Aesthetic realism — the objectivity of beauty — is genuinely contested: philosophers divide almost evenly between objective and subjective views of aesthetic value (PhilPapers Survey, 2020), and the argument's force rises and falls with that debate. The evolutionary literature on aesthetics, building on Dutton and others, is genuine science and has explained much.</p>
+      <p class="honest"><b>The real fork:</b> whether beauty is objective. None of the naturalistic work refutes the theistic reading, but it does mean the argument persuades by resonance and fit rather than by force — and that thoughtful people, weighing the same data, still land on different sides.</p>
+      <p><b>The bounded verdict:</b> not a proof. It does not corner the unbeliever, and it leans on a premise — the objectivity of beauty — that remains, in the most honest accounting, contested. What it <em>does</em> establish is more modest and more interesting: that beauty is a real datum demanding explanation, and that theism explains it with a peculiar grace — one Author for the cosmos, its elegant laws, and the minds that thrill to both — while naturalism must absorb beauty as an unpredicted extra. For many who came to faith through a sunset, a symphony, or a theorem, that asymmetry is quietly decisive. But even at its best it reaches a Source of beauty, not the God of the creeds; the full Christian case rests on revelation and <a href="/library/minimalfacts.html">the resurrection</a>.</p>
+    </div>
+
+    <div class="card" id="bronzeGate">
+      <span class="kick">Checkpoint · earn Bronze</span>
+      <h4>Rebuild it from memory — nothing in front of you</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:4px">Close the sections above. This is the retrieval that turns reading into knowing — and it is how this argument reaches <b>Bronze&nbsp;· Understand</b> on your shelf. Opening accordions no longer counts; showing you can rebuild the structure does.</p>
+      <div class="recall">
+        <div class="q">1 &middot; Put the argument in order — tap the three lines in sequence.</div>
+        <div id="orderPool" class="btnrow"></div>
+        <div id="orderSeq" style="font-family:var(--ui);font-size:13.5px;color:var(--tm);margin-top:10px;min-height:1.2em"></div>
+      </div>
+      <div class="recall" style="margin-top:12px">
+        <div class="q">2 &middot; What does the argument establish? Select every claim it makes — and nothing it doesn&rsquo;t.</div>
+        <div id="propPool" style="display:flex;flex-wrap:wrap;gap:9px;margin-top:4px"></div>
+      </div>
+      <div class="btnrow"><button class="btn primary" onclick="gradeBronze()">Check my reconstruction</button><button class="btn ghost" onclick="resetBronze()">Reset</button></div>
+      <div class="gradeline" id="bronzeGrade"></div>
     </div>
   </section>
 
   <!-- ===================== PHASE 2: PRACTICE ===================== -->
   <section id="practice">
     <div class="phasehead"><span class="phasenum">2</span><h3>Practice it</h3></div>
-    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Three drills that route this argument through tools you already have.</p>
+    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Four drills that route this argument through tools you already have.</p>
 
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back</span>
-      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument in your own words</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Reconstruct the argument from memory: the objectivity of the deepest beauty (P1), why a Creator explains it better than blind processes (P2), and the conclusion — and be clear it is abductive, not a proof.</p>
-      <textarea id="explainBox" placeholder="Start with: Some beauty is not merely subjective, and..."></textarea>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back &mdash; free recall</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument with nothing in front of you</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:12px">Scroll the sections away and generate it from memory — recalling is what builds durable memory; re-reading only feels like it does. Name the three-layered datum and where the weight rests (the objectivity of beauty), and keep the scope honest (suggestive not a proof; a Source of beauty, not the creedal God). Pick your level; the bar rises as you go. Scored out of 10, accuracy first. An 8+ is one half of <b>Silver</b>.</p>
+      <div class="btnrow" id="explainLevels" style="margin:0 0 10px">
+        <button class="btn ghost sel" type="button" data-lv="1" onclick="setExplainLevel(this,1)">1 · State it</button>
+        <button class="btn ghost" type="button" data-lv="2" onclick="setExplainLevel(this,2)">2 · &hellip;and answer the subjectivism objection</button>
+        <button class="btn ghost" type="button" data-lv="3" onclick="setExplainLevel(this,3)">3 · &hellip;to a hostile grad student</button>
+      </div>
+      <textarea id="explainBox" placeholder="Start with: Beauty is a real datum in three layers - nature, art, and the unreasonable effectiveness of mathematics..."></textarea>
       <div class="btnrow">
         <button class="btn primary" onclick="scoreExplain(this)">Score my explanation</button>
         <button class="btn ghost" onclick="document.getElementById('explainBox').value='';document.getElementById('scoreOut').classList.remove('show')">Clear</button>
@@ -491,7 +583,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <div class="practicecard">
       <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 2 · Flashcards</span>
       <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Drilled straight from this argument</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Five cards on the objectivity of beauty, the evolutionary surplus, the ugliness objection, and how strong this argument is.</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Twelve cards drawn from the datum, the premises, the objections, and the honest limits above. <b>Answer out loud before you flip</b> — the effort of recall is the whole point; a card you merely recognise hasn't stuck. They drop into your spaced-repetition deck so they return right before you'd forget.</p>
       <div class="flashwrap">
         <div class="flash" id="flash" onclick="this.classList.toggle('flipped')">
           <div class="face front"><div class="qlbl">Prompt</div><p id="fFront"></p><span class="tap">tap to flip</span></div>
@@ -506,14 +598,14 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     </div>
 
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · Live objection</span>
-      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Answer the it-is-just-evolution reply</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">A seeded scenario from the Debate Arena. Draft your reply, then reveal a model answer to compare.</p>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · The eye-of-the-beholder charge (worked example)</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Defuse the beauty-is-subjective charge</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Start here: draft your reply, then reveal a model answer to compare. This is the <em>worked example</em> — Drill 4 then makes you do it cold across the objection set.</p>
       <div class="interloc">
         <div class="av">SK</div>
         <div>
           <div class="who2">Skeptic</div>
-          <div class="bub">"Beauty is just subjective preference shaped by evolution. We like symmetry and green landscapes because it helped our ancestors survive. There is nothing there for a God to explain."</div>
+          <div class="bub">"Come on — beauty's just in the eye of the beholder. You find a sunset gorgeous, someone else shrugs. It tells us about human taste, not about God. There's nothing 'out there' to point at a Creator."</div>
         </div>
       </div>
       <textarea id="debateBox" placeholder="Your response..."></textarea>
@@ -522,27 +614,60 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       </div>
       <div class="modelans" id="modelAns">
         <div class="lbl">One strong way to answer — in a 1 Peter 3:15 tone</div>
-        <p>"Evolution does explain some of it — symmetry in a face, a fertile-looking valley, sure. But ask whether it explains all of it. Why does a Bach cello suite undo someone to tears? Why do mathematicians call a proof beautiful and mean it? Why does a sunset that feeds no one and warns of no danger stop people in their tracks? Some argue even our love of art is a fitness display, like a peacock’s tail — and maybe some of it is. But no survival story explains why the deepest laws of physics are elegant, readable in symbols of no survival value. And notice we argue about it as if we can get it right or wrong — we say someone has no taste, or grows into appreciating something. That is the language of discovery, not mere preference. A blind, indifferent process is a strange thing to credit with a universe drenched in beauty and creatures wired to be moved by it. A Maker who delights in beauty is a more natural fit."</p>
+        <p>"That's genuinely the hardest objection, and I won't pretend the premise is settled — whether beauty is objective is exactly where this argument is contested. But notice how strange pure subjectivism is in practice. We argue about beauty as if we could be <em>wrong</em>: we think someone who finds a garish billboard lovelier than a Rembrandt has made a mistake, not just had a different sensation. Even Hume, who said beauty is 'no quality in things themselves,' couldn't leave it there — he reached for a standard in the 'joint verdict' of refined critics. That convergence of good judgment is easiest to explain if there really is something out there to converge on, with God as its measure. I'll be honest that this is an inference, not a proof — a determined subjectivist can say it's just shared human nature. So I'm not claiming to corner you. I'm saying beauty fits a God-made world more naturally than a blind one, and it's one strand among several, not the whole case."</p>
       </div>
     </div>
+
+    <!-- answer the objections cold -->
+    <div class="practicecard" id="objDrill">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 4 · Answer the objections cold</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Four objections, no notes — reply, then check</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">The other half of <b>Silver</b>. Draft a reply from memory, reveal the certified answer, and rate yourself honestly. Clear all four with a &ldquo;nailed it&rdquo; and you can field them in the wild — not just recognise them on the page.</p>
+      <div class="interloc">
+        <div class="av" id="odAv">SK</div>
+        <div><div class="who2" id="odWho">Skeptic</div><div class="bub" id="odQ"></div></div>
+      </div>
+      <textarea id="odBox" placeholder="Your reply, from memory..."></textarea>
+      <div class="btnrow">
+        <button class="btn gold" type="button" onclick="odReveal()">Reveal the certified answer</button>
+      </div>
+      <div class="modelans" id="odModel">
+        <div class="lbl">A strong reply — ported from this page&rsquo;s certified answer</div>
+        <p id="odModelText"></p>
+        <div class="confrow" style="margin-top:12px">
+          <button type="button" onclick="odRate(1)">Shaky — I&rsquo;ll redo this one</button>
+          <button type="button" onclick="odRate(2)">Nailed it &#10003;</button>
+        </div>
+      </div>
+      <div class="flashnav">
+        <button class="btn ghost" type="button" onclick="odPrev()">&lsaquo; Prev</button>
+        <span id="odCount"></span>
+        <button class="btn ghost" type="button" onclick="odNext()">Next &rsaquo;</button>
+      </div>
+    </div>
+
   </section>
 
   <!-- ===================== PHASE 3: PROVE IT ===================== -->
   <section id="proveit">
     <div class="phasehead"><span class="phasenum">3</span><h3>Prove it</h3></div>
-    <p class="phasesub">Mastery isn't a feeling — it's four things done. Clear them and this argument turns gold on your shelf.</p>
+    <p class="phasesub">Mastery isn't a feeling — it's three levels, each earned by <em>showing</em> you can do the thing, then proven again over time. Don't trust the warm glow of having read it; prove it cold.</p>
 
     <div class="card">
-      <div class="checklist">
-        <div class="cl" id="ck-read"><div class="box">✓</div><div class="txt"><b>Understood it</b><span>Read the structure, defences, and all objections</span></div><div class="state">Open every section</div></div>
-        <div class="cl" id="ck-explain"><div class="box">✓</div><div class="txt"><b>Explained it</b><span>Score 7+ on Explain It Back</span></div><div class="state">Not yet</div></div>
-        <div class="cl" id="ck-cards"><div class="box">✓</div><div class="txt"><b>Drilled it</b><span>Cycle through every flashcard once</span></div><div class="state">Not yet</div></div>
-        <div class="cl" id="ck-debate"><div class="box">✓</div><div class="txt"><b>Defended it</b><span>Attempt the live objection</span></div><div class="state">Not yet</div></div>
+      <span class="kick">Your levels on this argument</span>
+      <h4>What each one takes</h4>
+      <div class="checklist" id="levelReqs">
+        <div class="cl" id="rq-bronze"><div class="box">✓</div><div class="txt"><b>Bronze · Understand</b><span>Rebuild the argument + exactly what it does and does not establish, from memory (&ge;80%) — the checkpoint at the end of &ldquo;Understand it.&rdquo;</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-explain"><div class="box">✓</div><div class="txt"><b>Silver · part 1 · Explain it</b><span>Score 8+ on Explain It Back (free recall)</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-objections"><div class="box">✓</div><div class="txt"><b>Silver · part 2 · Objections cold</b><span>Answer all four objection drills with &ldquo;nailed it&rdquo;</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-unseen"><div class="box">✓</div><div class="txt"><b>Gold · part 1 · The unseen objection</b><span>Face one objection the page never drilled (below)</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-spaced"><div class="box">✓</div><div class="txt"><b>Gold · part 2 · Prove it again</b><span>Clear this argument on 3 spaced reviews — it returns on its own</span></div><div class="state">0 of 3</div></div>
       </div>
-      <div style="margin-top:26px;border-top:1px solid var(--border);padding-top:20px">
+      <p style="font-family:var(--ui);font-size:13px;color:var(--tm);margin-top:14px">Gold can slip back to Silver if you stop turning up for the spaced reviews — real mastery is perishable, which is why it's worth something. The dashboard brings this one back when it's due.</p>
+      <div style="margin-top:22px;border-top:1px solid var(--border);padding-top:18px">
         <span class="kick">One more thing — be honest</span>
         <h4 style="font-size:17px">If a friend challenged you on this tomorrow, how ready are you?</h4>
-        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Your self-rating is tracked over time so you can watch confidence climb across the library.</p>
+        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Rate yourself — then see whether your Explain It Back score backs it up. Felt-confidence and shown-confidence are not the same thing, and the gap is worth knowing before a real conversation.</p>
         <div class="confrow" id="confRow">
           <button onclick="setConf(this,1)">Shaky</button>
           <button onclick="setConf(this,2)">Getting there</button>
@@ -550,6 +675,26 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <button onclick="setConf(this,4)">Could teach it</button>
         </div>
         <div id="calibNote" style="display:none"></div>
+      </div>
+    </div>
+
+    <div class="card" id="unseenGate">
+      <span class="kick">Gold gate · the unseen objection</span>
+      <h4>One you weren&rsquo;t coached on</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">The objections above attacked the datum or its objectivity. Here is a subtler one: a critic who <em>grants</em> that beauty is objective and still says it needs no God. Reason it out cold, then reveal how the argument handles it. An honest &ldquo;nailed it&rdquo; is the first half of <b>Gold</b>.</p>
+      <div class="interloc">
+        <div class="av">PH</div>
+        <div><div class="who2">Philosopher</div><div class="bub">"Fine — I'll grant you that beauty is objective. But that just makes it another abstract objective fact, like the number 7 or the truths of logic. Those don't need a God to ground them; they just <em>are</em>. Objective beauty is perfectly compatible with atheistic Platonism — a realm of inert Forms, no Creator required. So even if I concede your contested premise, your conclusion doesn't follow."</div></div>
+      </div>
+      <textarea id="unseenBox" placeholder="Reason it out — does objective beauty, on its own, get you to a Creator? What is the argument really resting on?"></textarea>
+      <div class="btnrow"><button class="btn gold" type="button" onclick="unseenReveal()">Reveal how the argument handles it</button></div>
+      <div class="modelans" id="unseenModel">
+        <div class="lbl">How the argument answers it — ported from the deep dive</div>
+        <p>Fair, and the honest defender concedes the structure up front: objective beauty by itself does not logically compel a Creator, and the argument never claimed to — it is a weighing of likelihoods, not a proof. But the argument was never resting on the bare objectivity of beauty alone. Its real work is the <em>convergence</em>: one Mind that authored the order of the world, the elegance of its deepest laws, and the minds that delight in discerning them, so that the fit between elegance and reality is not luck but design. Inert Platonic Forms explain none of that convergence — they just sit there; they are not the kind of thing that makes a world beautiful or tunes a survival-driven mind to read it. So atheistic Platonism can describe the fit but, like naturalism, must tell at least two unconnected stories whose convergence it cannot deeply explain, whereas theism tells one. And notice the scope either way: even granted in full, this reaches a Source of beauty — not yet the God of the creeds, which rests on revelation and <a href="/library/minimalfacts.html">the resurrection</a>. It is one strand in a cumulative case, persuading by fit, not by force.</p>
+        <div class="confrow" style="margin-top:12px">
+          <button type="button" onclick="unseenRate(1)">Shaky — I&rsquo;ll sit with it</button>
+          <button type="button" onclick="unseenRate(2)">Nailed it &#10003;</button>
+        </div>
       </div>
     </div>
 
@@ -569,37 +714,47 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
 <script>
-/* ---- in-memory state (swap for localStorage/Supabase in production) ---- */
-const state = { read:false, explainPass:false, cardsSeen:new Set(), debateTried:false, conf:0 };
+/* ---- state: three earned levels (Bronze / Silver / Gold) ----
+   bronze = reconstruction checkpoint passed (>=80%); explainScore = best Explain It Back
+   (Silver part 1 needs >=8); objCold = objection-drill indices self-rated "nailed it"
+   (Silver part 2 = all); unseen = Gold part 1; Gold part 2 = 3 spaced recalls (ad_reviews step). */
+const state = { bronze:false, explainScore:0, objCold:new Set(), unseen:false, cardsSeen:new Set(), conf:0, explainLevel:1 };
 
-/* ---- persistence + site streak (ad_mastery / ad_streak) ---- */
 const ARG_ID = location.pathname.split('/').pop().replace('ev-m-','').replace('.html','');
-const FRESH_MS = 30*24*60*60*1000; /* 30 days */
 function adAll(){ try{ return JSON.parse(localStorage.getItem('ad_mastery')||'{}'); }catch(e){ return {}; } }
-function adSave(full){
+function spacedCount(){ try{ var r = (JSON.parse(localStorage.getItem('ad_reviews')||'{}'))[ARG_ID]; return (r && r.step) ? r.step : 0; }catch(e){ return 0; } }
+
+function levelOf(){
+  var silver = state.bronze && state.explainScore>=8 && state.objCold.size>=OBJ.length;
+  if(silver && state.unseen && spacedCount()>=3) return 3;
+  if(silver) return 2;
+  if(state.bronze) return 1;
+  return 0;
+}
+
+function adSave(){
   try{
-    var m = adAll(); var e = m[ARG_ID] || {};
-    e.read = state.read; e.explain = state.explainPass;
-    e.cards = state.cardsSeen.size; e.debate = state.debateTried;
-    e.explainScore = state.explainScore || e.explainScore || 0; if(state.conf) e.conf = state.conf;
-    if(full){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
+    var m = adAll(); var e = m[ARG_ID] || {}; var lv = levelOf();
+    e.bronze = state.bronze;
+    e.explainScore = Math.max(state.explainScore||0, e.explainScore||0);
+    e.objCold = Array.from(state.objCold);
+    e.unseen = state.unseen;
+    e.cards = state.cardsSeen.size;
+    if(state.conf) e.conf = state.conf;
+    e.level = lv;
+    e.read = state.bronze; e.explain = state.explainScore>=8; e.debate = state.objCold.size>0;
+    if(lv>=2){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
     m[ARG_ID] = e; localStorage.setItem('ad_mastery', JSON.stringify(m));
   }catch(e){}
 }
 function adRestore(){
   try{
     var e = adAll()[ARG_ID]; if(!e) return;
-    state.read = !!e.read; state.explainPass = !!e.explain; state.debateTried = !!e.debate;
-    state.explainScore = e.explainScore || 0; state.conf = e.conf || 0;
-    var fresh = e.fresh && (Date.now() - e.fresh) < FRESH_MS;
-    if(e.cards >= cards.length && fresh){ for(var i=0;i<cards.length;i++) state.cardsSeen.add(i); }
-    if(e.cards >= cards.length && !fresh){
-      var note = document.createElement('div');
-      note.style.cssText = 'font-family:var(--ui);font-size:.8rem;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.7rem 1rem;margin:0 0 1rem;';
-      note.innerHTML = '&#9888; Memory fades \u2014 it has been a while. Flip through the flashcards again to restore this argument to gold.';
-      var fc = document.querySelector('.flashwrap') || document.getElementById('flash') || null;
-      if(fc && fc.parentNode){ fc.parentNode.insertBefore(note, fc); }
-    }
+    state.bronze = !!e.bronze || !!e.read;
+    state.explainScore = e.explainScore || 0;
+    state.unseen = !!e.unseen;
+    state.conf = e.conf || 0;
+    if(Array.isArray(e.objCold)){ e.objCold.forEach(function(i){ state.objCold.add(i); }); }
   }catch(e){}
 }
 function adMark(){
@@ -617,51 +772,67 @@ function adMark(){
   }catch(e){}
 }
 
-/* ---- mastery dial ---- */
+/* ---- mastery dial + level ladder ---- */
 const CIRC = 263.9;
+function setLvl(id, earned, current){
+  var el = document.getElementById(id); if(!el) return;
+  el.classList.toggle('earned', earned);
+  el.classList.toggle('current', current && !earned);
+  var s = el.querySelector('.ls'); if(s) s.textContent = earned ? 'Earned ✓' : (current ? 'Next up' : 'Locked');
+}
+function setReq(id, done, txt){
+  var el = document.getElementById(id); if(!el) return;
+  el.classList.toggle('done', done);
+  var s = el.querySelector('.state'); if(s) s.textContent = txt;
+}
 function updateDial(){
-  let done = 0;
-  if(state.read) done++;
-  if(state.explainPass) done++;
-  if(state.cardsSeen.size >= cards.length) done++;
-  if(state.debateTried) done++;
-  const pct = Math.round(done/4*100);
-  adSave(pct===100);
-  if(window._adLoaded && done>0) adMark();
-  document.getElementById('pctNum').textContent = pct + '%';
-  document.getElementById('ring').style.strokeDashoffset = CIRC - (CIRC*pct/100);
+  var lv = levelOf();
+  var pct = [0,34,67,100][lv];
+  adSave();
+  if(window._adLoaded && (state.bronze || state.explainScore || state.objCold.size || state.unseen)) adMark();
+  var pn = document.getElementById('pctNum'); if(pn) pn.textContent = pct + '%';
+  var ring = document.getElementById('ring'); if(ring) ring.style.strokeDashoffset = CIRC - (CIRC*pct/100);
 
-  setCheck('ck-read', state.read);
-  setCheck('ck-explain', state.explainPass);
-  setCheck('ck-cards', state.cardsSeen.size >= cards.length);
-  setCheck('ck-debate', state.debateTried);
+  setLvl('lvl-bronze', lv>=1, lv===0);
+  setLvl('lvl-silver', lv>=2, lv===1);
+  setLvl('lvl-gold',   lv>=3, lv===2);
+
+  setReq('rq-bronze', state.bronze, state.bronze ? 'Done' : 'Not yet');
+  setReq('rq-explain', state.explainScore>=8, state.explainScore>=8 ? ('Done · '+state.explainScore+'/10') : (state.explainScore ? ('Best '+state.explainScore+'/10') : 'Not yet'));
+  setReq('rq-objections', (typeof OBJ!=='undefined' && state.objCold.size>=OBJ.length), (typeof OBJ!=='undefined' && state.objCold.size>=OBJ.length) ? 'Done' : (state.objCold.size + ' of ' + (typeof OBJ!=='undefined'?OBJ.length:4)));
+  setReq('rq-unseen', state.unseen, state.unseen ? 'Done' : 'Not yet');
+  var sc = Math.min(spacedCount(), 3); setReq('rq-spaced', sc>=3, sc>=3 ? 'Done' : (sc + ' of 3'));
+
   try{ renderCalibration(); }catch(e){}
 
-  if(pct===100){
-    document.getElementById('ctaTitle').textContent = 'the Argument from Beauty mastered - it just turned gold on your shelf';
-    document.getElementById('ctaText').textContent = 'That is 10 of 22. The same path is waiting for every argument in the library. Keep the streak going.';
-    document.querySelector('.libnote').innerHTML = '&#9670; &nbsp;the Argument from Beauty mastered - 10 of 22 core arguments complete';
-  }
-}
-function setCheck(id, on){
-  const el = document.getElementById(id);
-  el.classList.toggle('done', on);
-  var stEl = el.querySelector('.state');
-  if(on){ stEl.textContent = 'Done'; return; }
-  if(id==='ck-read'){
-    stEl.textContent = (typeof _accOpened !== 'undefined' && _accs.length) ? (_accOpened.size + ' of ' + _accs.length + ' opened') : 'Open every section';
-  } else {
-    stEl.textContent = 'Not yet';
+  var ln = document.querySelector('.libnote');
+  if(lv>=3){
+    var ct = document.getElementById('ctaTitle'); if(ct) ct.textContent = 'the Argument from Beauty mastered — Gold on your shelf';
+    var cx = document.getElementById('ctaText'); if(cx) cx.textContent = 'You rebuilt it, defended it cold, met an objection you had never seen, and proved it again weeks later. That confidence is earned — keep it alive on the spaced reviews.';
+    if(ln) ln.innerHTML = '&#9670; &nbsp;the Argument from Beauty — Gold · mastered';
+  } else if(lv>=1 && ln){
+    ln.innerHTML = '&#9670; &nbsp;the Argument from Beauty — ' + (lv===2?'Silver':'Bronze') + ' · keep going';
   }
 }
 
-/* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
-/* ---- argument premises used to ground the AI scoring ---- */
+/* ---- explain it back (real AI scoring via /api/tutor; mock fallback) ---- */
+/* ARG_PREMISES: the certified rubric POSTed to /api/tutor and rendered into the share-card. */
 var ARG_PREMISES = [
-  'Objective beauty exists - some things are genuinely, not merely subjectively, beautiful.',
-  'Objective beauty is better explained by a personal Creator than by blind processes.',
-  'So beauty is evidence for God.'
+  'Beauty is a real, many-layered datum - in nature, in art, and in the "unreasonable effectiveness" of mathematics - and we are equipped to perceive and be moved by it.',
+  'A Creator who is himself the source and standard of beauty explains that datum, and the convergence of world, laws, and mind, better than blind purposeless matter does.',
+  'So beauty raises the probability of theism - one modest strand in a cumulative case. NOT a proof (the objectivity of beauty is genuinely contested), and it points to a Source of beauty, not yet the God of the creeds (that rests on revelation and the resurrection).'
 ];
+
+function setExplainLevel(btn, lv){
+  state.explainLevel = lv;
+  [].forEach.call(document.querySelectorAll('#explainLevels button'), function(b){ b.classList.remove('sel'); });
+  if(btn) btn.classList.add('sel');
+  var box = document.getElementById('explainBox');
+  var ph = lv===3 ? 'Explain it to a hostile, well-read skeptic — anticipate the pushback (beauty is subjective/Hume; it is an evolutionary adaptation/Dutton; nature is full of ugliness; and objective beauty needs no God) and answer it, keeping the scope honest...'
+         : lv===2 ? 'From memory: the argument AND your best answer to subjectivism (beauty is in the eye of the beholder) - why pure subjectivism is strange in practice, Hume’s own retreat to "true judges", while conceding it is an inference not a proof and the premise is genuinely contested...'
+         : 'Start with: Beauty is a real datum in three layers - nature, art, and the unreasonable effectiveness of mathematics...';
+  if(box) box.setAttribute('placeholder', ph);
+}
 
 /* Real AI scoring via /api/tutor (same method as explain-it-back.html).
    Falls back to a local heuristic if the API is unreachable (e.g. preview). */
@@ -671,7 +842,10 @@ async function scoreExplain(btn){
   if(!txt){ return; }
   if(btn){ btn.disabled = true; btn.dataset.lbl = btn.textContent; btn.textContent = 'Scoring...'; }
   try{
-    var prompt = 'Please evaluate this student explanation of "The Argument from Beauty". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
+    var lvAsk = state.explainLevel>=3 ? '\n\nThe student was asked to explain it to a hostile, well-read skeptic: weight whether they anticipated and answered the obvious pushback (beauty is subjective/Hume; beauty is an evolutionary adaptation/Dutton; nature’s ugliness; and that objective beauty needs no God / atheistic Platonism), not merely stated the argument. Keep the scope honest: suggestive not a proof; the objectivity of beauty is genuinely contested; even at its best it reaches a Source of beauty, not the God of the creeds (that rests on revelation and the resurrection).'
+              : state.explainLevel===2 ? '\n\nThe student was ALSO asked to answer the subjectivism objection ("beauty is in the eye of the beholder"): weight whether they noted that pure subjectivism is strange in practice (we argue about beauty as if we can be wrong), that Hume’s own retreat to "true judges" concedes a standard, and that convergence is best explained by real beauty with God as its measure - WHILE conceding this is an inference not a demonstration and the premise is genuinely contested.'
+              : '';
+    var prompt = 'Please evaluate this student explanation of "The Argument from Beauty". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + lvAsk + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
     var res = await fetch('/api/tutor', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
@@ -717,48 +891,54 @@ function renderCrisis(text){
 function renderScore(score, strengths, improvements){
   score = Math.max(0, Math.min(10, Math.round(Number(score) || 0)));
   var feed = '';
-  (strengths||[]).forEach(function(s){ feed += '<li class="hit"><span class="mk">\u2713</span>'+esc(s)+'</li>'; });
-  (improvements||[]).forEach(function(s){ feed += '<li class="miss"><span class="mk">\u25CB</span>'+esc(s)+'</li>'; });
+  (strengths||[]).forEach(function(s){ feed += '<li class="hit"><span class="mk">✓</span>'+esc(s)+'</li>'; });
+  (improvements||[]).forEach(function(s){ feed += '<li class="miss"><span class="mk">○</span>'+esc(s)+'</li>'; });
   document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
-  var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
+  var verdict = score>=8?'Strong — you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way — fill the gaps below' : 'Have another go with the structure in mind';
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score);
   updateDial();
 }
 
 function renderMockScore(txtRaw){
   var t = (txtRaw||'').toLowerCase();
   var checks = [
-    {ok:/beaut/.test(t) && /objective|real|genuine|not (merely |just )?subjective/.test(t) && !/everyone agrees|undeniabl|(?:no ?one|nobody) (?:disputes|denies|doubts)/.test(t), hit:'Premise 1 - you affirmed objective beauty', miss:'State Premise 1 - some beauty is objective, not merely subjective'},
-    {ok:/evolution|fitness|survival|subjective|preference/.test(t), hit:'Good - you engaged the main objection', miss:'Engage the main objection - evolution or subjectivity'},
-    {ok:/surplus|beyond|disinterested|overshoot|cross-cultural|convergen|creator|personal|better explain|explains? (?:it|this|beauty) better|mathemat|elegan|wigner|one (?:author|mind)|correct|normativ|residue/.test(t), hit:'Nice - you supported the better-explanation step', miss:'Support Premise 2 - the surplus of beauty fits a personal Creator better than blind processes'},
-    {ok:/god|points to|evidence for god/.test(t) && !/(?<!(?:\b(?:not|never|cannot)|n[^\sa-z]t)(?: \S+){0,2} )(?:proves? (?:that )?god|proof (?:of|for) god)/.test(t), hit:'Conclusion - you reached evidence for God', miss:'Draw the bounded conclusion: beauty is evidence for God - an inference, not a proof'},
+    {ok:/beaut|datum|nature|art|music|math/.test(t), hit:'Premise 1 - you named the datum (beauty in nature, art, mathematics)', miss:'State Premise 1 - beauty is a real datum in nature, art, and the effectiveness of mathematics'},
+    {ok:/creator|source|standard|god|author|designed|mind/.test(t), hit:'Premise 2 - you invoked a Source/standard of beauty explaining the datum', miss:'State Premise 2 - a Creator who is the source of beauty explains the datum better than blind matter'},
+    {ok:/subjectiv|objectiv|eye of the beholder|hume|evolution|dutton|ugliness|horror|contested/.test(t), hit:'Good - you engaged an objection', miss:'Engage at least one objection - subjectivism, evolution, or ugliness'},
+    {ok:/(not|n[^\sa-z]t) (a )?proof|(not|n[^\sa-z]t) prove|probab|cumulative|one strand|suggestiv|by fit|by (resonance|force)|source of beauty|not .*(creed|christian god)|rests on revelation|contested/.test(t), hit:'Conclusion - you kept the scope honest (suggestive, not a proof; a Source of beauty)', miss:'Draw the bounded conclusion: it raises the probability of theism (not a proof), one strand, reaching a Source of beauty not the creedal God'},
     {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth - you developed it, not just listed it', miss:'Go a bit deeper - a full reconstruction runs longer than this'}
   ];
   var score = 0, feed = '';
   checks.forEach(function(c){
-    if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">\u2713</span>'+c.hit+'</li>'; }
-    else{ feed += '<li class="miss"><span class="mk">\u25CB</span>'+c.miss+'</li>'; }
+    if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">✓</span>'+c.hit+'</li>'; }
+    else{ feed += '<li class="miss"><span class="mk">○</span>'+c.miss+'</li>'; }
   });
-  if(/(?<!(?:\b(?:not|never|cannot|no|of|than|without|mathematical)|n[^\sa-z]t|\b(?:does|do|did|is|are|was|were|ca|wo|could|would|should|has|have|had)nt),?(?: (?:by|on|in|its|itself|own|alone|strictly|actually|really|simply|necessarily|conclusively|logically|deductively|deductive|airtight|watertight|knock-down|formal|strict|scientifically|quite|fully|thereby|amounts?|to|a|an|any|the|that|be|been)[,]?){0,3} )\b(?:proves?(?! nothing)|proven|proof (?:of|for|that))\b/.test(t)){ score = Math.min(score, 6); feed += '<li class="miss"><span class="mk">○</span>Overclaim - beauty is evidence for God, an inference, not a proof</li>'; }
   document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
-  var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
+  var verdict = score>=8?'Strong — you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way — fill the gaps below' : 'Have another go with the structure in mind';
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score);
   updateDial();
 }
 
 /* ---- flashcards (generated from this argument) ---- */
 const cards = [
-  {q:'State the argument from beauty.', a:'Objective beauty exists. It is better explained by a personal, beauty-loving Creator than by blind processes. So beauty is evidence for God.'},
-  {q:'Reply to: beauty is purely subjective.', a:'Some is taste-relative, but the deepest beauty shows cross-cultural convergence and we treat it as discovered - we say someone lacks taste or grows in it. If that convergence reflects an objective core, that is all the argument needs - but it is an inference, not a demonstration; the jury is genuinely out.'},
-  {q:'Why does evolution not fully explain beauty?', a:'The theist can grant a lot - God could use evolution. Two residues remain: why the deepest laws of physics are elegant, readable in symbols of no survival value, and the sense that some aesthetic responses are correct, not just liked.'},
-  {q:'Does ugliness in nature defeat it?', a:'It blunts the argument, honestly conceded - but the world being lovely at all is still striking, since a blind universe had no obligation to be. It travels alongside the problem of evil as its mirror.'},
-  {q:'How strong is this argument?', a:'Abductive and cumulative, not a deductive proof. It asks which worldview better predicts a universe drenched in disinterested beauty and minds that ache at it.'}
+  {q:'State the argument from beauty.', a:'Beauty is a real datum (nature, art, and the unreasonable effectiveness of mathematics). A Creator who is the source and standard of beauty explains that datum - and the convergence of world, laws, and mind - better than blind matter. So beauty raises the probability of theism. Not a proof; one strand; a Source of beauty, not the creedal God.'},
+  {q:'What are the three layers of the datum?', a:'The beauty of nature; the beauty of art and music (made at great cost, to no survival end); and the beauty of mathematics - its "unreasonable effectiveness" in describing the physical world.'},
+  {q:'What is Wigner’s "unreasonable effectiveness of mathematics"?', a:'Math developed for its formal elegance alone later describes the deep structure of the universe with uncanny precision - "a wonderful gift which we neither understand nor deserve." Dirac: "more important to have beauty in one’s equations than to have them fit experiment."'},
+  {q:'Does the argument claim beauty reliably tracks truth?', a:'No. Hossenfelder (Lost in Math) shows elegant ideas (naturalness, supersymmetry) have misled physics, so beauty is a FALLIBLE heuristic. The argument leans not on beauty-as-method but on the deeper puzzle of why beauty should track reality at all.'},
+  {q:'Which premise carries the whole weight, and is it settled?', a:'That beauty is OBJECTIVE (aesthetic realism). It is genuinely contested - philosophers divide almost evenly between objective and subjective views (PhilPapers 2020). The argument is only as strong as one’s reasons for aesthetic realism.'},
+  {q:'Answer subjectivism (beauty is in the eye of the beholder).', a:'The hardest objection; do not pretend the premise is settled. But pure subjectivism is strange in practice - we argue about beauty as if we can be wrong - and Hume’s own retreat to "true judges" concedes a standard. Convergence of refined judgment is best explained by real beauty with God as its measure. But this is an inference, not a proof; the jury is genuinely out.'},
+  {q:'Answer evolutionary aesthetics (Dutton’s savanna hypothesis).', a:'Grant it - God could use evolution; an adaptive history for preferences no more threatens the argument than the physiology of vision threatens the reality of light. Two residues remain: why the deepest laws are ELEGANT and readable in symbols of no survival value, and the felt NORMATIVITY that some responses are genuinely correct, not merely liked.'},
+  {q:'Answer the problem of ugliness (Darwin’s wasp).', a:'No glib answer. Disgust often tracks genuine disvalue (decay, disease), parasitic on an order it presupposes; the world’s being lovely at all is striking; and it belongs to the Christian wrestling with a world "very good" yet fallen. But it is a CONCESSION: ugliness blunts the edge, so the argument travels alongside the problem of evil as its mirror.'},
+  {q:'How strong is the argument meant to be?', a:'Suggestive, not a proof - it does not corner the unbeliever and leans on a contested premise. One modest strand in a cumulative case (Swinburne), raising the probability of theism, persuading by resonance and fit rather than force.'},
+  {q:'How far does the conclusion reach?', a:'A Source of beauty - NOT the God of the creeds. That this Source is the personal, triune God made flesh in Jesus and raised from the dead rests on revelation and the historical case for the resurrection, not on the sunset alone.'},
+  {q:'What is C. S. Lewis’s point about beauty’s transcendence?', a:'In "The Weight of Glory": beautiful things "are not the thing itself; they are only the scent of a flower we have not found, the echo of a tune we have not heard." The longing beauty awakens points past the world - the theist reads the signpost as pointing to its Author.'},
+  {q:'How does Augustine frame beauty?', a:'"Late have I loved you, beauty so old and so new" - a cry to God himself as Beauty. Created beautiful things were never the destination but signposts; to rest in them rather than follow them home is misdirected love.'}
 ];
 let ci = 0;
 function renderCard(){
@@ -772,37 +952,97 @@ function renderCard(){
 function nextCard(){ ci = (ci+1)%cards.length; renderCard(); }
 function prevCard(){ ci = (ci-1+cards.length)%cards.length; renderCard(); }
 
-/* ---- debate ---- */
-document.getElementById('debateBox').addEventListener('input', ()=>{
-  if(document.getElementById('debateBox').value.trim().length > 8 && !state.debateTried){
-    state.debateTried = true; updateDial();
+/* ---- Bronze reconstruction gate (retrieval-earned "Understand") ---- */
+var ORDER = [
+  'Beauty is a real datum - in nature, art, and the unreasonable effectiveness of mathematics - and we can perceive and be moved by it.',
+  'A Creator who is the source and standard of beauty explains that datum, and the convergence of world, laws, and mind, better than blind matter.',
+  'So beauty raises the probability of theism - one modest strand in a cumulative case; not a proof, and reaching a Source of beauty, not the God of the creeds.'
+];
+var PROPS = [
+  {t:'beauty is a real datum that demands explanation', ok:true}, {t:'theism explains the convergence (cosmos, laws, minds) more naturally than naturalism', ok:true}, {t:'one modest strand in a cumulative case, persuading by fit not force', ok:true}, {t:'it points to a Source of beauty', ok:true},
+  {t:'a proof that compels the unbeliever', ok:false}, {t:'the God of the creeds, reached by beauty alone', ok:false}, {t:'that beauty infallibly tracks truth', ok:false}, {t:'that the objectivity of beauty is a settled matter', ok:false}
+];
+var _ordSel = [];
+function _shuf(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } return a; }
+function injectBronze(){
+  var pool=document.getElementById('orderPool');
+  if(pool && !pool.children.length){
+    _shuf([0,1,2]).forEach(function(k){
+      var b=document.createElement('button'); b.type='button'; b.className='btn ghost'; b.textContent=ORDER[k];
+      b.onclick=function(){ if(b.disabled) return; b.disabled=true; b.style.opacity=.4; _ordSel.push(k); _ordSeq(); };
+      pool.appendChild(b);
+    });
   }
-});
-document.querySelector('[onclick*="modelAns"]').addEventListener('click', ()=>{
-  state.debateTried = true; updateDial();
-});
-
-/* ---- prove it ---- */
-function markRead(){
-  state.read = true;
-  document.getElementById('readBtn').textContent = 'Marked as understood \u2713';
-  document.getElementById('readBtn').classList.remove('primary');
-  document.getElementById('readBtn').classList.add('ghost');
-  updateDial();
+  var pp=document.getElementById('propPool');
+  if(pp && !pp.children.length){
+    _shuf(PROPS).forEach(function(p){
+      var b=document.createElement('button'); b.type='button'; b.className='btn ghost'; b.textContent=p.t; b.setAttribute('data-ok', p.ok?'1':'0');
+      b.onclick=function(){ b.classList.toggle('sel'); };
+      pp.appendChild(b);
+    });
+  }
 }
+function _ordSeq(){ var el=document.getElementById('orderSeq'); if(el) el.textContent = _ordSel.length ? _ordSel.map(function(k,i){ return (i+1)+'. '+ORDER[k]; }).join('    ') : ''; }
+function resetBronze(){
+  _ordSel=[]; _ordSeq();
+  var pool=document.getElementById('orderPool'); if(pool){ [].forEach.call(pool.children,function(b){ b.disabled=false; b.style.opacity=1; }); }
+  var pp=document.getElementById('propPool'); if(pp){ [].forEach.call(pp.children,function(b){ b.classList.remove('sel'); }); }
+  var g=document.getElementById('bronzeGrade'); if(g){ g.className='gradeline'; g.textContent=''; }
+}
+function gradeBronze(){
+  var orderOK = _ordSel.length===3 && _ordSel[0]===0 && _ordSel[1]===1 && _ordSel[2]===2;
+  var pp=document.getElementById('propPool'); var right=0;
+  if(pp){ [].forEach.call(pp.children,function(b){ var want=b.getAttribute('data-ok')==='1'; var got=b.classList.contains('sel'); if(want===got) right++; }); }
+  var decisions = PROPS.length + 1, scored = right + (orderOK?1:0), pctOK = scored/decisions;
+  var g=document.getElementById('bronzeGrade'); if(!g) return;
+  g.className='gradeline show '+(pctOK>=0.8?'pass':'fail');
+  if(pctOK>=0.8){
+    state.bronze=true; updateDial();
+    g.textContent='✓ Bronze earned — you rebuilt the structure from memory ('+Math.round(pctOK*100)+'%). Now go defend it in Practice.';
+  } else {
+    g.textContent='Not yet — '+Math.round(pctOK*100)+'%. '+(orderOK?'':'Check the order of the three lines. ')+'Re-read the structure above, then try again — this rep is what makes it stick.';
+  }
+}
+
+/* ---- Drill 4: answer the objections cold (replies ported from the page) ---- */
+var OBJ = [
+  {who:'Skeptic', q:'Beauty is no quality in things themselves - it exists merely in the mind, and each mind perceives a different beauty. So it tells us about human taste, not about God.', model:'This is the hardest objection, and the argument’s load-bearing premise is genuinely contested - I won’t pretend otherwise. But notice how strange thoroughgoing subjectivism feels in practice: we argue about beauty as if we could be wrong; we think someone who finds a garish billboard lovelier than a Rembrandt has made a MISTAKE, not just registered a different sensation. Hume’s own retreat to "true judges" - a standard in the joint verdict of refined critics - concedes the point. The theist proposes that this convergence of refined judgment is best explained if there really is something there to converge upon, with God as its measure. But candor requires admitting this is an inference, not a demonstration: a determined subjectivist can hold it reflects shared human nature and nothing more. The jury is genuinely out, and the argument is only as strong as one’s reasons for aesthetic realism.'},
+  {who:'Skeptic', q:'Our sense of beauty is just an evolutionary adaptation - the savanna hypothesis, sexual selection. It is about us, not about God.', model:'Grant a great deal: there is no contradiction in God’s using evolution to fit creatures to their world, and an adaptive history for some preferences threatens the argument no more than the physiology of vision threatens the reality of light. The decisive question is whether evolution FULLY explains the datum, and two residues remain. First, the unreasonable effectiveness of mathematics: no selective story explains why the universe’s deepest laws should be elegant, or why minds tuned by survival can read that elegance in symbols of no survival value. Second, the felt normativity of aesthetic experience - the sense that a late Beethoven quartet is not merely something we happen to like but something genuinely worthy. Evolution explains why we have the responses; it is far harder to see how it grounds the conviction that some are correct.'},
+  {who:'Skeptic', q:'If beauty is evidence for a good Creator, what about the parasitic wasp, the tumor, the rot? Darwin couldn’t believe a good God designed the Ichneumonidae.', model:'No glib answer. Part of the reply is that disgust often tracks genuine disvalue - decay, disease, danger - so revulsion is itself a kind of perception of disvalue, parasitic on an order it presupposes. Part is that the world’s being lovely at all is striking, since a blind universe had no obligation to be. And part belongs to the larger Christian wrestling with a world at once "very good" and groaning, fallen, awaiting renewal. But this is a CONCESSION as much as a reply: ugliness blunts the argument’s edge, and any honest version carries that weight rather than wishing it away. The argument from beauty is strongest when it travels alongside the problem of evil as its mirror, not when it pretends the shadows are not there.'},
+  {who:'Skeptic', q:'Even if the argument works, it only gives you some abstract source of beauty - not the triune God of Christianity, and certainly not Jesus.', model:'Exactly right, and the honest version says so first: what the argument points to is thin - a Source of beauty, not yet the God of the creeds. It is one modest strand in a cumulative case, persuading by resonance and fit rather than by force. That this Source is the personal, triune God, made flesh in Jesus and raised from the dead, is not something beauty yields on its own; it rests on revelation and the historical case for the resurrection. As Augustine found, beauty has a way of calling out and sending the honest heart looking for the One whose radiance the world has been reflecting - but the finding comes through Christ, not the sunset alone.'}
+];
+var _od = 0;
+function odRender(){
+  var o=OBJ[_od];
+  var q=document.getElementById('odQ'); if(q) q.textContent='"'+o.q+'"';
+  var who=document.getElementById('odWho'); if(who) who.textContent=o.who;
+  var av=document.getElementById('odAv'); if(av) av.textContent=o.who.slice(0,2).toUpperCase();
+  var mt=document.getElementById('odModelText'); if(mt) mt.textContent=o.model;
+  var mm=document.getElementById('odModel'); if(mm) mm.classList.remove('show');
+  var bx=document.getElementById('odBox'); if(bx) bx.value='';
+  var c=document.getElementById('odCount'); if(c) c.textContent=(_od+1)+' of '+OBJ.length+(state.objCold.has(_od)?' · nailed ✓':'');
+}
+function odReveal(){ var mm=document.getElementById('odModel'); if(mm) mm.classList.add('show'); }
+function odRate(v){ if(v===2){ state.objCold.add(_od); } else { state.objCold.delete(_od); } updateDial(); if(_od<OBJ.length-1){ _od++; } odRender(); }
+function odNext(){ _od=(_od+1)%OBJ.length; odRender(); }
+function odPrev(){ _od=(_od-1+OBJ.length)%OBJ.length; odRender(); }
+
+/* ---- Gold part 1: the unseen objection ---- */
+function unseenReveal(){ var m=document.getElementById('unseenModel'); if(m) m.classList.add('show'); }
+function unseenRate(v){ state.unseen = (v===2); updateDial(); }
 function renderCalibration(){
   try{
     var el = document.getElementById('calibNote'); if(!el) return;
     var conf = state.conf||0, best = state.explainScore||0;
     var labels = {1:'Shaky',2:'Getting there',3:'Solid',4:'Could teach it'};
     if(conf){ var _b=document.querySelectorAll('#confRow button'); if(_b[conf-1]){ [].forEach.call(_b,function(b){b.classList.remove('sel');}); _b[conf-1].classList.add('sel'); } }
-    if(conf>=3 && best<7){
-      var shown = best>0 ? ('your best Explain It Back so far is '+best+'/10') : 'you haven\u2019t scored an Explain It Back yet';
+    if(conf>=3 && best<8){
+      var shown = best>0 ? ('your best Explain It Back so far is '+best+'/10') : 'you haven’t scored an Explain It Back yet';
       el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.8rem 1rem;';
-      el.innerHTML = '\u26A0 You rated yourself \u201C'+labels[conf]+'\u201D \u2014 but '+shown+'. Worth closing: confidence that holds up in a real conversation is confidence you\u2019ve <b>shown</b>, not just felt. <a href="#" onclick="var b=document.getElementById(\'explainBox\');if(b){b.scrollIntoView({behavior:\'smooth\'});b.focus();}return false;" style="color:#a88930;font-weight:600">Prove it on Explain It Back \u2192</a>';
-    } else if(conf>=3 && best>=7){
+      el.innerHTML = '⚠ You rated yourself “'+labels[conf]+'” — but '+shown+'. Worth closing: confidence that holds up in a real conversation is confidence you’ve <b>shown</b>, not just felt. <a href="#" onclick="var b=document.getElementById(\'explainBox\');if(b){b.scrollIntoView({behavior:\'smooth\'});b.focus();}return false;" style="color:#a88930;font-weight:600">Prove it on Explain It Back →</a>';
+    } else if(conf>=3 && best>=8){
       el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#2f7d4f;background:rgba(47,125,79,.08);border:1px solid rgba(47,125,79,.3);border-radius:6px;padding:.8rem 1rem;';
-      el.innerHTML = '\u2713 Calibrated \u2014 you feel ready and you\u2019ve shown it ('+best+'/10 on Explain It Back). That\u2019s earned confidence.';
+      el.innerHTML = '✓ Calibrated — you feel ready and you’ve shown it ('+best+'/10 on Explain It Back). That’s earned confidence.';
     } else {
       el.style.display = 'none';
     }
@@ -861,23 +1101,14 @@ async function boot(){
     if(!isPro){ showGate(); return; }
   }
   /* build the track */
+  injectBronze();
   adRestore();
   renderCard();
+  odRender();
   updateDial();
   renderCalibration();
   window._adLoaded = true;
 }
-/* "Understood it" is earned by opening every section in Phase 1 (defences + objections) */
-var _accs = Array.prototype.slice.call(document.querySelectorAll('#understand details.acc'));
-var _accOpened = new Set();
-_accs.forEach(function(d, i){
-  d.addEventListener('toggle', function(){
-    if(!d.open || state.read){ return; }
-    _accOpened.add(i);
-    if(_accOpened.size >= _accs.length){ state.read = true; }
-    updateDial();
-  });
-});
 
 /* ---- share-card: render this argument as a branded image ---- */
 function _shareSetMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
@@ -933,9 +1164,9 @@ document.addEventListener('DOMContentLoaded', boot);
   <div style="color:rgba(255,255,255,.55);font-size:12.5px;letter-spacing:.16em;font-weight:500;margin-top:32px;">COULD YOU DEFEND THIS?</div>
   <div id="scTitle" style="font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:700;color:#fff;line-height:1.16;margin-top:10px;"></div>
   <div style="width:56px;height:2px;background:#c8a951;margin:20px 0 24px;"></div>
-  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P1</div><div id="scP1" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.45;"></div></div>
-  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P2</div><div id="scP2" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.45;"></div></div>
-  <div style="display:flex;gap:14px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">&#8756;</div><div id="scC" style="color:#fff;font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.45;font-weight:600;"></div></div>
+  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P1</div><div id="scP1" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.4;"></div></div>
+  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P2</div><div id="scP2" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.4;"></div></div>
+  <div style="display:flex;gap:14px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">&#8756;</div><div id="scC" style="color:#fff;font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.4;font-weight:600;"></div></div>
   <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(200,169,81,.3);padding-top:16px;">
     <div style="color:rgba(255,255,255,.55);font-size:12.5px;">Learn it. Practice it. Defend it.</div>
     <div style="color:#c8a951;font-size:13px;font-weight:600;">apologiadaily.com</div>
