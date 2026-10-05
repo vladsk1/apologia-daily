@@ -1,0 +1,256 @@
+{
+  "reviewed": {
+    "argument": "2026-10-05",
+    "orthodoxy": "2026-10-05",
+    "neutrality": "2026-10-05",
+    "by": "2026-10-05 argument + orthodoxy + neutrality, READ-ONLY (Explore), against origin/main study-plans.html (10 plans; 14-30 days; levels B4/I3/A2/All1; 6 Pro / 4 Free, Pro is a badge only) and the 8 framed live screenshots (tools/reel/shots/study-plans/, captured 2026-10-05). R1: 0 BREAK; W1 closed task list 'read…then review' -> 'read, ask a question, take a quiz, teach it back, practise or reflect' (live day types counted: Read 74, Reflect 41, Ask 26, Quiz 13, Teach 11, Debate 9, Practice 8…); IG caption dove emoji / 'Jesus, The' -> live icon and title; 'Paul. The early creed.' (line length). R2 STAMPABLE. 'Progress saved' kept to the page's own chip (no cross-device claim). No price or review-scope claim. Clarifier candidates: none. X image reuses x-study-plans (re-verified 2026-10-05: still 10 plans). NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) FEATURE-PROMO reel for study-plans.html with framed phone screenshots of the LIVE page captured 2026-10-05 (headless Chrome, 560px wide @2x; tools/reel/shots/study-plans/). Every plan detail named is read off the live plans array: 10 plans, 14-30 days, Beginner/Intermediate/Advanced; Resurrection d1 Minimal Facts, d3 Empty Tomb, d5 Paul's Conversion and the Early Creed; God's Existence 21-day d1 Kalam, d3 Leibniz, d4 Thomistic, week 2 fine-tuning + consciousness; Jesus Divine Identity d2 claims, d3 titles, d5 John 1:1 + Phil 2 hymn; Bible Reliability manuscripts, Dead Sea Scrolls, archaeology, early date; Answering Islam Islamic Dilemma, Quran preservation, hadith; seasonal 25-before-Christmas / 40-before-Easter. No doctrinal claim; no review-stage claim; no price claim.",
+  "voiceover": "Want to learn apologetics, but don't know where to start? Apologia Daily has ten guided study plans — from fourteen to thirty days, beginner to advanced. The thirty-day Resurrection Deep Dive starts with the minimal facts, then the empty tomb, Paul's conversion and the early creed. Twenty-one days on God's existence: the Kalam, Leibniz and the Thomistic arguments, then fine-tuning and consciousness. Who was Jesus? Fourteen days on his claims, his titles, John 1 and the Philippians 2 hymn. Fourteen days on the Bible's reliability: manuscripts, the Dead Sea Scrolls, archaeology, and the early date of the New Testament. Or Answering Islam: the Islamic Dilemma, the preservation of the Quran, and the hadith. Every day is one task: read, ask a question, take a quiz, teach it back, practise or reflect. Your progress is saved as you go. Plus seasonal challenges: twenty-five questions before Christmas, and forty before Easter. Pick your plan at apologia daily dot com.",
+  "scenes": [
+    {
+      "vo": "Want to learn apologetics, but don't know where to start?",
+      "shot": "../shots/study-plans/01-hero.png",
+      "big": [
+        {
+          "t": "Don't know",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "where to start?",
+          "c": "gold",
+          "s": 64
+        }
+      ],
+      "dur": 4.8,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "Apologia Daily has ten guided study plans — from fourteen to thirty days, beginner to advanced.",
+      "shot": "../shots/study-plans/02-cards.png",
+      "kicker": "STUDY PLANS",
+      "lines": [
+        {
+          "t": "Ten guided plans.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "14 to 30 days.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Beginner to advanced.",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        }
+      ],
+      "dur": 7.3,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "The thirty-day Resurrection Deep Dive starts with the minimal facts, then the empty tomb, Paul's conversion and the early creed.",
+      "shot": "../shots/study-plans/03-resurrection.png",
+      "kicker": "30-DAY RESURRECTION DEEP DIVE",
+      "lines": [
+        {
+          "t": "The minimal facts.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "The empty tomb.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Paul. The early creed.",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        }
+      ],
+      "dur": 8.2,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "Twenty-one days on God's existence: the Kalam, Leibniz and the Thomistic arguments, then fine-tuning and consciousness.",
+      "shot": "../shots/study-plans/04-gods-existence.png",
+      "kicker": "21-DAY GOD'S EXISTENCE",
+      "lines": [
+        {
+          "t": "Kalam. Leibniz. Aquinas.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "Then fine-tuning",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        },
+        {
+          "t": "and consciousness.",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        }
+      ],
+      "dur": 8.1,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "Who was Jesus? Fourteen days on his claims, his titles, John 1 and the Philippians 2 hymn.",
+      "shot": "../shots/study-plans/05-jesus-identity.png",
+      "kicker": "14-DAY JESUS: THE DIVINE IDENTITY",
+      "lines": [
+        {
+          "t": "His claims. His titles.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "John 1 and",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        },
+        {
+          "t": "the Philippians 2 hymn.",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        }
+      ],
+      "dur": 8.1,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "Fourteen days on the Bible's reliability: manuscripts, the Dead Sea Scrolls, archaeology, and the early date of the New Testament.",
+      "shot": "../shots/study-plans/06-bible.png",
+      "kicker": "14-DAY BIBLE RELIABILITY",
+      "lines": [
+        {
+          "t": "Manuscripts.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "The Dead Sea Scrolls.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "Archaeology.",
+          "c": "gold",
+          "s": 52,
+          "f": "serifb"
+        }
+      ],
+      "dur": 8.8,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "Or Answering Islam: the Islamic Dilemma, the preservation of the Quran, and the hadith.",
+      "shot": "../shots/study-plans/07-islam.png",
+      "kicker": "14-DAY ANSWERING ISLAM",
+      "lines": [
+        {
+          "t": "The Islamic Dilemma.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "Quran preservation.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "The hadith.",
+          "c": "gold",
+          "s": 52,
+          "f": "serifb"
+        }
+      ],
+      "dur": 6.7,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "Every day is one task: read, ask a question, take a quiz, teach it back, practise or reflect. Your progress is saved as you go.",
+      "shot": "../shots/study-plans/03-resurrection.png",
+      "kicker": "ONE TASK A DAY",
+      "lines": [
+        {
+          "t": "Read. Ask. Quiz.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Teach it back. Reflect.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "Progress saved.",
+          "c": "gold",
+          "s": 52,
+          "f": "serifb"
+        }
+      ],
+      "dur": 10.4,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "Plus seasonal challenges: twenty-five questions before Christmas, and forty before Easter.",
+      "shot": "../shots/study-plans/08-challenges.png",
+      "kicker": "SEASONAL CHALLENGES",
+      "lines": [
+        {
+          "t": "25 before Christmas.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "40 before Easter.",
+          "c": "gold",
+          "s": 52,
+          "f": "serifb"
+        }
+      ],
+      "dur": 6.6,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "Pick your plan at apologia daily dot com.",
+      "big": [
+        {
+          "t": "Pick your plan.",
+          "c": "cream",
+          "s": 64
+        },
+        {
+          "t": "One lesson a day.",
+          "c": "gold",
+          "s": 60
+        }
+      ],
+      "sub": [
+        {
+          "t": "apologiadaily.com/study-plans.html",
+          "c": "gold",
+          "s": 42,
+          "f": "serifb"
+        }
+      ],
+      "dur": 4.1
+    }
+  ]
+}
