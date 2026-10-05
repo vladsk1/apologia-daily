@@ -305,6 +305,25 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   guards** (minority position). ⚠ **Denominational tripwire:** debunks **Marian apparitions** — general
   point only, never in our voice. ⚠ Loke is a **committed defender** (dedicated to W. L. Craig) — port his
   primaries, weigh his verdicts.
+- `jesus-and-the-god-of-israel.md` — Richard Bauckham, *Jesus and the God of Israel: "God Crucified" and Other
+  Essays on the New Testament's Christology of Divine Identity* (**Paternoster/Eerdmans 2008**; owner's Kindle =
+  Paternoster UK ed., so pages may differ from our Eerdmans bibliography) — ⭐ **the flagship scholarly statement of
+  DIVINE-IDENTITY Christology, and the source much of our deity cluster already rests on.** **Body (chs. 1–8) +
+  indexes read 2026-10-05:** ch. 1 *God Crucified* in full (the divine-identity framework — God as sole Creator /
+  sole Ruler / uniquely worshipped; Jesus *included in* the unique identity; the "God Crucified" corollary — the
+  cross reveals God's identity); ch. 2 (monotheism as a category; the NT Shema incl. 1 Cor 8:6; the Barker/"two
+  gods" rebuttal); ch. 3 ("the Most High"); ch. 4 (the worship of Jesus — Maranatha, Pliny, anti-Artemon, Rev 5:13;
+  **§5 not captured**); ch. 5 (the throne / Ps 110 — **§1–§5.1 not captured, core held via ch. 1**); ch. 6 (Paul's
+  divine-identity Christology; the YHWH-texts catalogue [Capes]; the Yahoel/Michael angel rebuttal); ch. 7 (Hebrews
+  — the divine-identity criteria list; Heb 1 catena, Heb 1:8 "your throne O God"); ch. 8 (the cry of dereliction,
+  Mark 15:34 / Ps 22). Paired essays read first: `shema`, `worship-of-jesus`, `jesus_as_god_nt`, `phil2`,
+  `jesus-is-yahweh`, `paul-divinity`. ⚠⚠ **Dominant finding: SOURCE OF RECORD — mostly corroboration;** the value is
+  a handful of improvement leads (see the note + backlog). ⚠ **Universalism fence** (as with `jesus-and-the-
+  eyewitnesses.md`): divine-identity exegesis/historiography only; never a general theological authority, never a
+  "further reading" list without naming the work. ⚠ **Daniel-7 hazard:** the Enoch *Son of Man* is handled as "the
+  exception that proves the rule" — never compress into the RETIRED `daniel7-figure-is-divine` / `pelach-only-to-God`
+  claims. ⚠ **Two small backward gaps owed** (ch. 4 §5; ch. 5 §1–§5.1 — this Kindle build won't page backward; needs
+  TOC navigation to finish).
 
 ### ⚠ PARTIAL notes — books NOT owned, NOT read (added 2026-07-26, Tyndale/evangelical mining batch)
 These four were queued as books by `docs/article-research/MINING-BRIEF-tyndale-batch.md`. Because we do

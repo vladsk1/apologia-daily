@@ -78,6 +78,21 @@ explanation"), and rests the empty tomb on **Matthew's guards** (a minority posi
 ⚠ **Denominational tripwire:** his anti-hallucination case debunks **Marian apparitions** — use the general
 point only, never in our voice. Resurrection tier → **dual-consensus** for any live change.
 
+**JGI** = `jesus-and-the-god-of-israel.md` (Richard Bauckham, *Jesus and the God of Israel: "God Crucified" and
+Other Essays on the New Testament's Christology of Divine Identity*, **Paternoster/Eerdmans 2008** — ⚠ owner's copy
+is the **Paternoster (UK) 2008** ed.; our bibliography cites the **Eerdmans (US) 2008** ed., so page citations may
+differ. **The flagship scholarly statement of DIVINE-IDENTITY Christology** and the source much of our deity cluster
+rests on. **Body [chs. 1–8] + indexes read 2026-10-05**; ch. 1 *God Crucified* fully; chs. 2–3 complete; ch. 4
+complete except §5; ch. 5 partial [core held via ch. 1]; chs. 6–8 mapped. ⚠ **Two small backward gaps owed** [ch. 4
+§5; ch. 5 §1–§5.1 — Kindle wouldn't page back; TOC help needed]. ⚠⚠ **Dominant finding: this is the SOURCE OF RECORD
+— mostly CORROBORATION** [`shema.html`, `jesus_as_god_nt.html`, `worship-of-jesus.html`, `phil2.html`,
+`jesus-is-yahweh.html` already rest on this framework]; the value is the handful of **improvement leads** in the
+topic rows. ⚠ **UNIVERSALISM FENCE** [same as JATE below]: mine Bauckham's divine-identity exegesis/historiography
+only; cite him as exegete/historian, never as a general theological authority, never in a "further reading" list
+without naming the specific work. ⚠ **Daniel-7 hazard:** the book handles the *Son of Man / Parables of Enoch*
+carefully as "the exception that proves the rule" — do NOT compress it into the RETIRED `daniel7-figure-is-divine` /
+`pelach-only-to-God` claims.)
+
 **⚠ PARTIAL notes added 2026-07-26 (books NOT owned, NOT read — mapped at thesis/chapter level only from
 the authors' own open-access work, published open-access reviews, publisher frontmatter, and our own
 already-certified citations):** **PXS** = `gathercole-preexistent-son-and-thomas.md` (Simon Gathercole —
@@ -115,6 +130,13 @@ not verified.
 | **The canon — do we have the right books?** | **IDB ch. 16** (Wegner/Wilder/Bock) | criteria of canonicity (apostolicity/catholicity/orthodoxy); Bruce, *Canon of Scripture*; Metzger, *Canon of the NT*; Athanasius 39th Festal Letter (367); Carthage (397). ⚠⚠ **OT-canon/Apocrypha scope is denominationally sensitive — use shared-tradition parts only, stay neutral** |
 | **"Lost gospels" / Da Vinci Code / suppressed gospels** | **IDB ch. 16** (Bock's section) | the extrabiblical gospels are late/non-apostolic/Gnostic; Dan Brown's "84 gospels" exaggerated (~39 real); Gospel of Peter/Mary/Judas/Thomas + Apocryphon of John; Klauck, *Apocryphal Gospels*; Bock, *The Missing Gospels* & *Breaking the Da Vinci Code*; "Constantine did NOT invent the Bible" |
 | **Deity of Christ** | **DJRS** (from Mark, via the enemies' reaction); IDHEF | Mark 2 (forgive-on-earth) / Mark 14 (judge-from-heaven) blasphemy scenes; ten data points + five best-explanation criteria |
+| ⭐ **Divine-identity Christology (the organizing framework)** | **JGI** ch. 1 *God Crucified* (the whole thesis) — ⚠ **already our backbone**, so mostly corroboration/source-of-record | God as **sole Creator** (Isa 44:24) + **sole Ruler** + **uniquely worshipped**; Jesus *included in* the unique identity (not a second god, not an intermediary). Live home: `shema.html`, `jesus_as_god_nt.html`, `hands.html` (HANDS). The crisp **criteria list** is in JGI ch. 7 §1 |
+| ⭐ **"God Crucified" — the cross as revelation of the divine identity** | **JGI** ch. 1 §3 + ch. 8 — ⭐ **the biggest GAP vs. our site** (backlog **JGI-1, JGI-2**) | **Isa 52:13 ↔ 6:1 ↔ 57:15** (Servant "lifted up" = YHWH "high and lifted up"; "dwells with the contrite") + John 12:41; the **cry of dereliction** (Mark 15:34 / Ps 22:1) as God's self-identification with the godforsaken. ⚠⚠⚠ **patripassianism/impassibility tripwire** — the incarnate **Son in his human nature** suffers, NOT the divine nature, NOT the Father; fence with an `orthonote`, dual-consensus |
+| **1 Cor 8:6 as the reformulated Shema; NT Shema echoes** | **JGI** ch. 2 §5 — 1 Cor 8:6 = corroboration (`shema.html`); the echoes are leads (**JGI-4**) | 1 Cor 8:6 (split "one God/one Lord" + "all things"); **Rom 3:29–30 + Zech 14:9**; **John 17:11,22**; **Eph 4:4–6** (as oneness-Shema, not just a triad). OT grounding: **Deut 4:35/4:39/32:39 + 1 Kgs 8:60** *ʾên ʿôd* (**JGI-3**) |
+| **Worship of Jesus = early, not a late Hellenistic development** | **JGI** ch. 4 — corroboration; anti-Artemon is the one lead (**JGI-5**) | Maranatha (1 Cor 16:22); "calling on the name" (Joel 2:32→Jesus); Rev 5:13 (God + the Lamb); Pliny *Ep.* 10.96 ("carmen Christo quasi deo"); ⭐ the **anti-Artemon fragment (Eusebius *HE* 5.28)** refuting "deity is a recent innovation" (also a PD `/sources` candidate) |
+| **Jesus is YHWH (OT YHWH-texts applied to Jesus)** | **JGI** ch. 6 §8 — catalogue corroborated (`jesus-is-yahweh.html`); the citation is the lead (**JGI-6**) | the practice predates Paul and is widespread; ⭐ cite **David Capes, *Old Testament Yahweh Texts in Paul's Christology*** (WUNT 2/47, 1992) — the missing monograph |
+| **Jesus > a principal angel; the throne / Ps 110** | **JGI** chs. 5–6 — corroboration (`titles.html`, `jesus_as_god_nt.html`); Yahoel is the small lead (**JGI-7**) | **Ps 110:1** throne = "novel exegesis / novel claim" (not borrowed); angels (Michael, **Yahoel** in *Apoc. Abraham*, Metatron) bear the name but never share the throne. ⚠ keep Enoch *Son of Man* as "the exception that proves the rule" — NOT the RETIRED Daniel-7 claims |
+| **Divinity of Jesus in Hebrews** | **JGI** ch. 7 — corroboration (`jesus_as_god_nt.html`) | the **Heb 1:5–14 catena**; **Heb 1:8** "your throne, O God" (Ps 45, vocative); **Heb 1:10–12** (Ps 102, Creator/eternity applied to the Son); Heb 1:6 (angels worship him); Heb 7:3 / Ps 110:4 (full eternity). Leads: Bauckham, "Monotheism and Christology in Hebrews"; Stuckenbruck; Eskola; Neyrey |
 | **Naturalism / miracles / "science" objections** | CFR Ch. 8 | Behe, *Darwin's Black Box* (the elephant); Swinburne, "Violation of a Law of Nature," in *Miracles* (1989); Hume, *Enquiry*; Yamauchi (rival-religion miracles). ⚠ fine-tuning/ID: *data* conceded, *design* is the contested inference — never "science proves design" |
 | **Kalam / fine-tuning / moral argument / NT reliability** | **IDHEF** (Geisler & Turek — the broad-apologetics map) | per that note's chapter map; hold the argument-specific rules (Kalam "begins to exist"; fine-tuning data-vs-design; moral duties-need-a-ground) |
 | **Suffering / hope** | BOP (the suffering chapter) | concede the mystery first; Plantinga is a *defense*, not a proof |
