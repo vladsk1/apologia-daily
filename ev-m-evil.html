@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- content-review: {"argument": "2026-10-02", "orthodoxy": "2026-10-02", "by": "2026-10-02 OVER-CHARITY + FACT-CHECK SWEEP of the God's Existence mastery pages (owner-directed), following the certified essay (b33206c0) and cards (0575b1ab). Read-only Explore gates, md5-checked, four lenses (citations, argument, orthodoxy incl. clarifier verdict, neutrality). Round 1 reviewed all nine layers, graded layers first (ARG_PREMISES, cards, checks regexes, drill model answer). Fixes were applied by assert-guarded scripts on scratch copies. Rounds 2, 3 and 4 were confirmation gates on the fixed text. All lenses STAMPABLE, 0 HERESY. Every changed checks regex was node-tested: the essay-correct bounded answer passes, and the retired/overclaimed/negated answer fails (contractions handled). Every inline script compiles and the JSON-LD parses. The page now claims no more than its essay, carries the deism-gap fence plus a resurrection pointer, and states a bounded own-voice verdict. NOT RUN: pastoral sign-off (pending site-wide). Remaining pre-existing gaps are logged in docs/GODS_EXISTENCE_SWEEP_BACKLOG_2026-10-01.md, not fixed (rule 9). PRIOR: 2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md.", "citations": "2026-10-02", "neutrality": "2026-10-02"} -->
+<!-- content-review: {"citations":"2026-10-05-WIP","argument":"2026-10-05-WIP","orthodoxy":"2026-10-05-WIP","neutrality":"2026-10-05-WIP","by":"Opus 4.8 rebuild to Bronze/Silver/Gold against library/evil-evidence.html - GATES PENDING"} -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Answering the Problem of Evil | Apologia Daily</title>
+<title>The Problem of Evil as Evidence for God | Apologia Daily</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -22,8 +22,6 @@
 html{scroll-behavior:smooth}
 body{font-family:var(--ss);color:var(--td);background:var(--ow);line-height:1.6;-webkit-font-smoothing:antialiased}
 .wrap{max-width:920px;margin:0 auto;padding:0 24px}
-
-/* ---------- site nav (matches hub) ---------- */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;border-bottom:1px solid rgba(255,255,255,.08)}
 nav .logo{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:#fff;text-decoration:none}
 nav .logo span{color:var(--g)}
@@ -39,8 +37,6 @@ nav .logo span{color:var(--g)}
 .nav-cta{font-weight:500;padding:8px 20px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none}
 @media(max-width:880px){.nl{display:none}}
 body{padding-top:64px}
-
-/* ---------- top hero ---------- */
 .hero{background:linear-gradient(160deg,var(--n) 0%,var(--n7) 70%,var(--n5) 160%);color:var(--w);padding:54px 0 130px;position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border:1px solid rgba(200,169,81,.18);border-radius:50%}
 .hero::before{content:"";position:absolute;right:10px;top:10px;width:200px;height:200px;border:1px solid rgba(200,169,81,.12);border-radius:50%}
@@ -51,8 +47,6 @@ body{padding-top:64px}
 .hero .lede em{color:var(--gl);font-style:italic}
 .crumbs{font-family:var(--ui);font-size:13px;color:#8ea2bf;margin-bottom:4px}
 .crumbs a{color:#8ea2bf;text-decoration:none}
-
-/* ---------- mastery dial card ---------- */
 .dialcard{background:var(--w);border:1px solid var(--border);border-radius:16px;box-shadow:0 18px 50px -24px rgba(5,13,26,.45);margin-top:-86px;position:relative;z-index:3;padding:26px 28px;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
 .dial{flex:0 0 96px;width:96px;height:96px;position:relative}
 .dial svg{transform:rotate(-90deg)}
@@ -63,19 +57,14 @@ body{padding-top:64px}
 .dialmeta h2{font-family:var(--fd);font-size:21px;font-weight:600;margin-bottom:4px}
 .dialmeta p{font-size:14.5px;color:var(--tm);font-family:var(--ui)}
 .libnote{font-family:var(--ui);font-size:12.5px;color:var(--gd);font-weight:600;margin-top:10px;display:inline-flex;align-items:center;gap:7px;background:#fbf7ec;border:1px solid #f0e6cb;padding:6px 12px;border-radius:99px}
-
-/* ---------- phase spine ---------- */
 section{padding:46px 0 6px}
 .phasehead{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
 .phasenum{font-family:var(--ui);font-weight:700;font-size:13px;color:var(--w);background:var(--n5);width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex:0 0 30px}
 .phasehead h3{font-family:var(--fd);font-size:27px;font-weight:600}
 .phasesub{font-family:var(--ui);color:var(--tm);font-size:15px;margin:2px 0 26px 44px}
-
 .card{background:var(--w);border:1px solid var(--border);border-radius:14px;padding:24px 26px;margin-bottom:18px}
 .card h4{font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:4px}
 .card .kick{font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;margin-bottom:11px;display:block}
-
-/* premises */
 .syllogism{display:grid;gap:12px;margin:8px 0 18px}
 .prem{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:start;background:var(--ow);border:1px solid var(--border);border-radius:11px;padding:15px 17px}
 .prem .tag{font-family:var(--ui);font-weight:700;font-size:12px;color:var(--n5);background:#fff;border:1px solid #d6e0ef;border-radius:7px;padding:6px 0;text-align:center}
@@ -85,13 +74,6 @@ section{padding:46px 0 6px}
 .prem p b{color:var(--n5)}
 .hardest{font-family:var(--ui);font-size:13.5px;color:var(--td);background:#fbf8f0;border-left:3px solid var(--g);padding:11px 14px;border-radius:0 8px 8px 0;margin-top:14px}.hardest b{color:var(--gd)}.hardest a{color:var(--gd);font-weight:600}
 .formnote{font-family:var(--ui);font-size:13px;color:var(--tm);font-style:normal;background:#f4f7fb;border-left:3px solid var(--n3);padding:10px 14px;border-radius:0 8px 8px 0}
-
-/* the cause chips */
-.chiprow{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.chip{font-family:var(--ui);font-size:13px;font-weight:600;color:var(--n7);background:#eef3fa;border:1px solid #dbe6f4;padding:7px 13px;border-radius:99px}
-.chip.gold{color:var(--gd);background:#fbf7ec;border-color:#f0e6cb}
-
-/* accordion (premise defence + objections) */
 .acc{border:1px solid var(--border);border-radius:11px;overflow:hidden;margin-bottom:11px;background:var(--w)}
 .acc summary{list-style:none;cursor:pointer;padding:16px 20px;display:flex;align-items:center;gap:14px;font-family:var(--ui);font-weight:600;font-size:15.5px;color:var(--td)}
 .acc summary::-webkit-details-marker{display:none}
@@ -105,12 +87,8 @@ section{padding:46px 0 6px}
 .acc .body{padding:2px 20px 20px;border-top:1px solid var(--border)}
 .acc .body .lbl{font-family:var(--ui);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin:16px 0 5px}
 .lbl.steel{color:var(--n5)}
-.lbl.heard{color:var(--tm)}
 .lbl.reply{color:var(--gd)}
 .acc .body p{font-size:15.5px;margin-bottom:4px}
-.acc .body .quote{background:var(--ow);border-left:3px solid var(--g);padding:11px 15px;border-radius:0 8px 8px 0;font-style:italic;color:var(--td);margin-top:4px}
-
-/* sources */
 .src{display:grid;grid-template-columns:1fr;gap:0}
 .src .row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);align-items:flex-start}
 .src .row:last-child{border-bottom:none}
@@ -118,8 +96,6 @@ section{padding:46px 0 6px}
 .src .who b{display:block;font-size:15px;color:var(--td)}
 .src .who span{font-size:12.5px;color:var(--tm)}
 .src .what{font-size:15px;color:var(--td)}
-
-/* practice: explain it back */
 .practicecard{background:var(--w);border:1px solid var(--border);border-radius:14px;padding:24px 26px;margin-bottom:18px}
 textarea{width:100%;min-height:120px;font-family:var(--ss);font-size:15.5px;color:var(--td);border:1px solid var(--border);border-radius:10px;padding:13px 15px;resize:vertical;background:var(--ow)}
 textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
@@ -144,8 +120,6 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 .feed li .mk{flex:0 0 auto;font-weight:700}
 .feed li.hit .mk{color:var(--ok)}
 .feed li.miss .mk{color:var(--gd)}
-
-/* flashcards */
 .flashwrap{perspective:1200px}
 .flash{position:relative;height:178px;cursor:pointer}
 .flash .face{position:absolute;inset:0;backface-visibility:hidden;border-radius:13px;padding:24px;display:flex;flex-direction:column;justify-content:center;transition:transform .5s;border:1px solid var(--border)}
@@ -160,19 +134,14 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 .flash .tap{position:absolute;bottom:13px;right:18px;font-family:var(--ui);font-size:11px;opacity:.6}
 .flashnav{display:flex;align-items:center;justify-content:space-between;margin-top:14px;font-family:var(--ui)}
 .flashnav span{font-size:13px;color:var(--tm)}
-
-/* debate */
 .interloc{display:flex;gap:13px;margin-bottom:8px}
 .interloc .av{flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:#e6ebf3;color:var(--n5);display:flex;align-items:center;justify-content:center;font-family:var(--ui);font-weight:700;font-size:14px}
 .interloc .bub{background:#eef2f8;border-radius:4px 14px 14px 14px;padding:13px 17px;font-size:16px}
 .interloc .who2{font-family:var(--ui);font-size:12px;color:var(--tm);margin-bottom:3px;font-weight:600}
-.reveal{margin-top:14px}
 .modelans{display:none;margin-top:12px;border:1px solid #f0e6cb;background:#fbf7ec;border-radius:12px;padding:16px 19px}
 .modelans.show{display:block;animation:fade .3s ease}
 .modelans .lbl{font-family:var(--ui);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--gd);margin-bottom:7px}
 .modelans p{font-size:15px}
-
-/* prove it checklist */
 .checklist{display:grid;gap:11px}
 .cl{display:flex;align-items:center;gap:14px;padding:15px 18px;border:1px solid var(--border);border-radius:11px;background:var(--w);transition:.2s}
 .cl.done{border-color:#cfe6da;background:var(--okl)}
@@ -183,47 +152,82 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 .cl .txt span{font-family:var(--ui);font-size:13px;color:var(--tm)}
 .cl .state{font-family:var(--ui);font-size:12.5px;font-weight:600;color:var(--tm)}
 .cl.done .state{color:var(--ok)}
-
-/* confidence */
 .confrow{display:flex;gap:9px;margin-top:14px;flex-wrap:wrap}
 .confrow button{flex:1;min-width:90px;font-family:var(--ui);font-weight:600;font-size:13.5px;border:1px solid #cfdcee;background:#fff;color:var(--n5);border-radius:9px;padding:11px 8px;cursor:pointer;transition:.15s}
 .confrow button:hover{border-color:var(--n3)}
 .confrow button.sel{background:var(--n5);color:#fff;border-color:var(--n5)}
-
 .bigcta{background:linear-gradient(150deg,var(--n) 0%,var(--n7) 100%);color:#fff;border-radius:16px;padding:30px 32px;margin:14px 0 60px;text-align:center}
 .bigcta h4{font-family:var(--fd);font-size:23px;font-weight:600;color:#fff;margin-bottom:6px}
 .bigcta p{color:#cdd8e8;font-family:var(--ui);font-size:14.5px;max-width:50ch;margin:0 auto 16px}
-
 .foot{text-align:center;font-family:var(--ui);font-size:12.5px;color:var(--tm);padding:0 0 50px}
-.foot code{background:#eef0f3;padding:2px 6px;border-radius:4px;font-size:12px}
-
-@media(max-width:560px){
-  .prem{grid-template-columns:46px 1fr;gap:11px}
-  .src .row{flex-direction:column;gap:4px}
-  .src .who{flex-basis:auto}
-  .dialcard{padding:22px}
-}
-
-/* ---------- public SEO summary (always visible, crawlable) ---------- */
+@media(max-width:560px){.prem{grid-template-columns:46px 1fr;gap:11px}.src .row{flex-direction:column;gap:4px}.src .who{flex-basis:auto}.dialcard{padding:22px}}
 .seo-summary{background:var(--w);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin:26px 0 0}
 .seo-summary h2{font-family:var(--fd);font-size:20px;font-weight:600;color:var(--td);margin-bottom:10px}
 .seo-summary p{font-family:var(--ss);font-size:16px;color:var(--td);margin-bottom:12px}
 .seo-summary p:last-child{margin-bottom:0}
 .hero{padding-bottom:48px}
 .seo-summary + .dialcard{margin-top:24px}
+.pastoral{background:#fbf7ec;border:1px solid #f0e6cb;border-radius:12px;padding:16px 20px;margin:0 0 18px;font-family:var(--ui);font-size:14.5px;color:#5a4a1e;line-height:1.6}
+.pastoral b{color:var(--gd)}
+.pastoral a{color:var(--gd);font-weight:600}
+.levels{display:grid;gap:10px;margin-top:4px;width:100%}
+.lvl{display:grid;grid-template-columns:42px 1fr auto;gap:14px;align-items:center;border:1px solid var(--border);border-radius:11px;padding:13px 16px;background:var(--w);transition:.2s}
+.lvl .medal{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;background:#eef0f3;filter:grayscale(1);opacity:.45}
+.lvl.earned{border-color:#cfe6da;background:var(--okl)}
+.lvl.earned .medal{filter:none;opacity:1;background:#fff}
+.lvl .lt b{font-family:var(--fd);font-size:16px;display:block;color:var(--td)}
+.lvl .lt span{font-family:var(--ui);font-size:12.5px;color:var(--tm)}
+.lvl .ls{font-family:var(--ui);font-size:12px;font-weight:600;color:var(--tm);text-align:right;white-space:nowrap}
+.lvl.earned .ls{color:var(--ok)}
+.lvl.current{border-color:var(--g);box-shadow:0 0 0 1px var(--g) inset}
+.glossary{display:grid;gap:0;margin-top:6px}
+.gt{display:grid;grid-template-columns:168px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--border);font-family:var(--ui)}
+.gt:last-child{border-bottom:none}
+.gt b{font-size:14px;color:var(--td)}
+.gt b em{color:var(--gd);font-style:italic}
+.gt span{font-size:13.5px;color:var(--tm);line-height:1.5}
+@media(max-width:560px){.gt{grid-template-columns:1fr;gap:2px}}
+.stp{font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:5px;white-space:nowrap}
+.stp.proof{background:#e7eefb;color:#1e4278}
+.stp.strong{background:#fbf3e2;color:#9a7416}
+.support{border-left:3px solid #dbe6f4;padding:3px 0 3px 15px;margin:14px 0}
+.support .sh{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px}
+.support .sh b{font-family:var(--ui);font-size:14.5px;color:var(--td)}
+.support p{font-size:15px;margin-bottom:4px}
+.honest{font-family:var(--ui);font-size:13.5px;color:var(--td);background:#fbf8f0;border-left:3px solid var(--g);padding:9px 13px;border-radius:0 8px 8px 0;margin-top:6px}
+.honest b{color:var(--gd)}
+.whoholds{font-family:var(--ui);font-size:13px;color:var(--tm);background:#f4f7fb;border-radius:8px;padding:10px 14px;margin-top:12px}
+.whoholds b{color:var(--n5)}
+.precise{font-family:var(--ui);font-size:13px;color:var(--n7);background:#eef3fa;border:1px solid #dbe6f4;border-radius:8px;padding:9px 13px;margin:2px 0 10px}
+.derive{display:grid;gap:10px;margin-top:10px}
+.dr{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:var(--ow);border:1px solid var(--border);border-radius:10px;padding:12px 15px}
+.dr .q{font-size:15px;font-family:var(--ss)}
+.dr .q em{color:var(--n5);font-style:italic}
+.dr .rev{font-family:var(--ui);font-size:12.5px;font-weight:600;color:var(--n5);background:#fff;border:1px solid #cfdcee;border-radius:7px;padding:6px 12px;cursor:pointer;white-space:nowrap}
+.dr .rev:hover{background:#f3f7fc}
+.dr .ans{display:none;font-family:var(--ui);font-weight:700;font-size:14px;color:var(--gd)}
+.dr.shown .rev{display:none}
+.dr.shown .ans{display:inline}
+@media(max-width:560px){.dr{grid-template-columns:1fr}.dr .ans,.dr .rev{justify-self:start}}
+.recall{background:var(--w);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-top:14px}
+.recall .q{font-family:var(--ui);font-size:14.5px;font-weight:600;color:var(--td);margin-bottom:10px}
+.gradeline{font-family:var(--ui);font-size:13.5px;font-weight:600;margin-top:12px;display:none}
+.gradeline.show{display:block}
+.gradeline.pass{color:var(--ok)}
+.gradeline.fail{color:var(--gd)}
 </style>
   <link rel="stylesheet" href="/ad-nav.css">
-<meta name="description" content="Learn to respond to the problem of evil - the logical and evidential versions, the free-will and soul-making replies, with care and clarity.">
-<link rel="canonical" href="https://apologiadaily.com/library/evil.html">
+<meta name="description" content="Master the turnabout argument: the problem of evil, pressed as an objection, presupposes an objective good — which points back toward God. How to make it, and keep it honest.">
+<link rel="canonical" href="https://apologiadaily.com/library/evil-evidence.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Answering the Problem of Evil | Apologia Daily">
-<meta property="og:description" content="Learn to respond to the problem of evil - the logical and evidential versions, the free-will and soul-making replies, with care and clarity.">
+<meta property="og:title" content="The Problem of Evil as Evidence for God | Apologia Daily">
+<meta property="og:description" content="Master the turnabout argument: the problem of evil, pressed as an objection, presupposes an objective good — which points back toward God. How to make it, and keep it honest.">
 <meta property="og:url" content="https://apologiadaily.com/ev-m-evil.html">
 <meta property="og:image" content="https://apologiadaily.com/og-default.jpg">
 <meta name="twitter:image" content="https://apologiadaily.com/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@apologiadaily">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Answering the Problem of Evil","description":"Learn to respond to the problem of evil - the logical and evidential versions, the free-will and soul-making replies, with care and clarity.","learningResourceType":"Self-paced mastery track","educationalLevel":"Intermediate","inLanguage":"en","isAccessibleForFree":true,"about":"Christian apologetics","url":"https://apologiadaily.com/ev-m-evil.html","publisher":{"@type":"Organization","name":"Apologia Daily","url":"https://apologiadaily.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://apologiadaily.com/ev-m-evil.html"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"The Problem of Evil as Evidence for God","description":"Master the turnabout argument: the problem of evil, pressed as an objection, presupposes an objective good — which points back toward God. How to make it, and keep it honest.","learningResourceType":"Self-paced mastery track","educationalLevel":"Intermediate","inLanguage":"en","isAccessibleForFree":true,"about":"Christian apologetics","url":"https://apologiadaily.com/ev-m-evil.html","publisher":{"@type":"Organization","name":"Apologia Daily","url":"https://apologiadaily.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://apologiadaily.com/ev-m-evil.html"}}</script>
 </head>
 <body>
 
@@ -305,17 +309,13 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 </header>
 
 <div class="wrap">
-  <!-- public, search-indexable summary (always visible) -->
   <section class="seo-summary">
     <h2>The argument in brief</h2>
-    <p>Let us be honest at the outset: suffering is the hardest objection to belief in God, and it deserves to be felt, not explained away. The reality of cancer wards, genocide, and the loss of a child is a genuine mystery, and no tidy theodicy can fully account for it. This argument does not pretend otherwise, and it is no substitute for grief or for sitting with someone in pain.</p>
-    <p>It makes one narrow, careful observation. When we call some things truly <em>evil</em> — not merely unpleasant, not merely things we dislike, but genuinely wrong, such as torturing a child for amusement — we are appealing to a real standard of good that the world has fallen short of. C.S. Lewis put it from his own atheist days: his case against God was that the universe seemed cruel and unjust. But where had he gotten the idea of just and unjust? A line is only crooked by comparison with a straight one. The very outrage that fuels the problem of evil presupposes an objective good, and an objective standard of good is itself hard to ground without God.</p>
-    <p>So this does not "solve" suffering or lessen its weight. It observes that the deep moral intuition driving the objection points, on reflection, back toward the existence of the very God it was raised against — turning the problem into unexpected evidence. Note the scope: this argument reaches, at most, a standard of good that points more naturally to a personal God than to brute fact — not yet the Father, Son and Holy Spirit. Identifying that being with the God revealed in Christ rests on revelation and on <a href="/library/minimalfacts.html">the historical case for the resurrection</a>.</p>
-  
-    <p style="font-size:14px;color:var(--tm);font-family:var(--ui);background:#fbf8f0;border-left:3px solid var(--g);padding:11px 14px;border-radius:0 8px 8px 0;margin-top:12px">If you are reading this in the middle of real grief, this page is not what you need right now, and it is not trying to be. Please tell someone &mdash; a trusted friend, a pastor, or a counsellor. You are not a problem to be solved.</p>
+    <p>Let it be said plainly, before any argument is offered: no argument removes the pain. The problem of evil is usually posed as an objection to God &mdash; if God exists, why is there evil and suffering? That objection is serious and it deserves to be felt, not explained away; this track is no substitute for grief or for sitting with someone who is hurting. What follows is a narrower observation, and it leaves the weight of suffering exactly where it is.</p>
+    <p>The observation is this: the very fact that we recognise something as genuinely <em>evil</em> &mdash; not just unpleasant or inconvenient, but truly wrong, like torturing a child for amusement &mdash; presupposes a real standard of good that the world has fallen short of. C. S. Lewis noticed it in his own atheist days: &ldquo;A man does not call a line crooked unless he has some idea of a straight line.&rdquo; And an objective standard of good points more naturally toward God, a personal source of the Good, than toward brute, impersonal fact. So the outrage that fuels the problem of evil, pressed hard enough, points back toward the God it was raised against.</p>
+    <p>In candor, this is a <em>consideration</em>, not a proof. It does not solve suffering; the evidential problem of evil (does <em>this much</em> suffering fit a good God?) remains live and unresolved, and a secular moral realist can hold objective evil without God &mdash; so one can keep the evil and decline the conclusion. It is a dispute about the best explanation, and it is no charge that unbelievers cannot be good. And even at its strongest it reaches a transcendent, personal source of the Good &mdash; not yet the triune God; that rests on revelation and <a href="/library/minimalfacts.html">the resurrection</a>.</p>
   </section>
 
-  <!-- mastery dial -->
   <div class="dialcard">
     <div class="dial">
       <svg width="96" height="96" viewBox="0 0 96 96">
@@ -326,79 +326,107 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     </div>
     <div class="dialmeta">
       <h2>Your mastery of this argument</h2>
-      <p>Four checkpoints: understand it, explain it, drill it, defend it. Complete them in any order — your progress saves to your account.</p>
+      <p>Three earned levels — <b>Bronze</b> (rebuild it), <b>Silver</b> (defend it cold), <b>Gold</b> (handle an objection you&rsquo;ve never seen, then prove it again weeks later). Clicking through no longer counts; demonstrated recall does. Progress saves to your account.</p>
       <span class="libnote">◆ &nbsp;Argument 11 of 22 in the mastery library</span>
     </div>
+  </div>
+
+  <div class="levels" id="levels">
+    <div class="lvl" id="lvl-bronze"><div class="medal">&#129353;</div><div class="lt"><b>Bronze · Understand</b><span>Rebuild the argument and exactly what it does (and does not) establish, from memory (&ge;80%)</span></div><div class="ls">Locked</div></div>
+    <div class="lvl" id="lvl-silver"><div class="medal">&#129352;</div><div class="lt"><b>Silver · Defend</b><span>Explain it &ge;8/10 <em>and</em> field its objections cold</span></div><div class="ls">Locked</div></div>
+    <div class="lvl" id="lvl-gold"><div class="medal">&#129351;</div><div class="lt"><b>Gold · Master</b><span>Answer an unseen objection, then re-prove it on 3 spaced reviews</span></div><div class="ls">Locked</div></div>
   </div>
 
   <!-- ===================== PHASE 1: UNDERSTAND ===================== -->
   <section id="understand">
     <div class="phasehead"><span class="phasenum">1</span><h3>Understand it</h3></div>
-    <p class="phasesub">Not more prose — the load-bearing structure. See the skeleton, then learn to defend each bone.</p>
+    <p class="phasesub">Not more prose — the load-bearing structure, defended bone by bone, then proven from memory. Work top to bottom; the checkpoint at the end asks you to rebuild it with nothing in front of you.</p>
+
+    <div class="pastoral"><b>Before anything else.</b> This is the one argument on the shelf you must hold with both hands. The problem of evil is, for most people who raise it, not a chess move but a wound. If the person in front of you is grieving, the loving response is <em>presence</em>, not this argument &mdash; and if you are the one in the dark, please reach for a real person, a pastor, or a professional, not a paragraph. Learn this to be <em>ready</em>, and know when to set it down.</div>
 
     <div class="card">
-      <span class="kick">The argument, formally</span>
-      <h4>Three lines on what the problem of evil presupposes.</h4>
-      <div class="syllogism">
-        <div class="prem"><div class="tag">P1</div><p>We recognise certain things as <b>objectively, genuinely evil</b> — not merely things we dislike.</p></div>
-        <div class="prem"><div class="tag">P2</div><p>Objective evil presupposes an <b>objective standard of good</b> that things fall short of.</p></div>
-        <div class="prem concl"><div class="tag">∴ C</div><p>An objective standard of good <b>points to God</b> as its most natural ground — so the recognition of evil points toward God.</p></div>
+      <span class="kick">Before you start · key terms</span>
+      <h4>Nine terms this argument turns on</h4>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:6px">Learn these first — above all <em>objective evil</em> and <em>a consideration, not a proof</em>, because the whole move turns on the reality of evil, and its honesty turns on how little it claims.</p>
+      <div class="glossary">
+        <div class="gt"><b>The turnabout</b><span>The move: the problem of evil, pressed as an objection, <em>presupposes</em> an objective good &mdash; so the very reality of evil points back toward the God it was raised against. Not a theodicy; it does not explain why God permits suffering.</span></div>
+        <div class="gt"><b>Objective evil</b><span>Something genuinely, really wrong &mdash; that <em>ought not</em> to be &mdash; not merely disliked. The load-bearing datum: if there is no objective evil, the popular problem of evil loses its force.</span></div>
+        <div class="gt"><b>The is/ought gap</b><span>From a complete description of what the universe <em>is</em>, no verdict about what <em>ought</em> to be follows by logic alone. &ldquo;This hurts&rdquo; is not yet &ldquo;this is wrong&rdquo;; the <em>wrong</em> comes from a standard laid over the facts.</span></div>
+        <div class="gt"><b>Privation of good <em>(Augustine)</em></b><span>Evil is not a thing in its own right but a corruption or lack of a good that ought to be whole &mdash; as blindness is a real lack of sight. It presupposes the standard it falls short of (it does <em>not</em> make evil harmless).</span></div>
+        <div class="gt"><b>The evidential problem <em>(Rowe)</em></b><span>The hardest reply: not that God and evil are contradictory, but that the sheer weight of apparently gratuitous suffering is evidence <em>against</em> God. Live and unresolved; the defensive essay engages it.</span></div>
+        <div class="gt"><b>Secular moral realism <em>(Wielenberg)</em></b><span>Objective moral facts as brute, necessary features of reality, needing no divine ground. A serious position &mdash; and the reason the argument is <em>not</em> a proof: one can keep objective evil and decline God.</span></div>
+        <div class="gt"><b>Grounding, not capacity</b><span>The claim is strictly about what <em>grounds</em> the good &mdash; never that unbelievers cannot be moral. They plainly can, often putting believers to shame. The question is the ground, not the conduct.</span></div>
+        <div class="gt"><b>Best explanation, not proof</b><span>The move is an inference to the best explanation, a consideration that asks the outraged objector what his outrage assumes. It does not compel; honest people land on both sides.</span></div>
+        <div class="gt"><b>A personal source of the Good</b><span>What the argument reaches even at its best: a transcendent, personal ground of goodness &mdash; <em>not</em> yet the triune God, and no answer to <em>why</em> God permits suffering. That rests on revelation and the resurrection.</span></div>
       </div>
-      <p class="formnote">This is the moral argument applied to the problem of evil — a narrow, careful point. It is not a pastoral answer to suffering, and it does not dismiss the force of the problem of evil. It observes only that calling something truly evil assumes a standard of good that is hard to ground without God.</p>
+    </div>
 
-      <span class="kick" style="margin-top:22px">Then the conceptual step — what does evil presuppose?</span>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">Evil is a departure from how things ought to be — a corruption of a good. That presupposes a real standard of good and a way things are supposed to be. A purely indifferent universe has no ought, so it can host only events we dislike, not genuine evil.</p>
-      <div class="chiprow">
-        <span class="chip">objective evil presupposes objective good</span><span class="chip">a transcendent standard</span><span class="chip">a way things ought to be</span><span class="chip">the demand for justice</span><span class="chip gold">evil as privation of good</span>
+    <div class="card">
+      <span class="kick">The argument, carefully</span>
+      <h4>Three steps that turn the objection around.</h4>
+      <div class="syllogism">
+        <div class="prem"><div class="tag">P1</div><p>We recognise certain things as <b>objectively, genuinely evil</b> &mdash; not merely disliked, but acts that ought not to be.</p></div>
+        <div class="prem"><div class="tag">P2</div><p>Objective evil presupposes an <b>objective standard of good</b> that such acts fall short of &mdash; &ldquo;evil&rdquo; is normative, not merely descriptive.</p></div>
+        <div class="prem concl"><div class="tag">∴ C</div><p>An objective standard of good points <b>more naturally toward God</b> than toward brute fact, so even the recognition of evil points toward God. <b>This does not explain why God permits suffering</b> &mdash; and it is a consideration, not a proof.</p></div>
       </div>
+      <p class="formnote">This is a weighing of likelihoods, not a demonstration, and it is deliberately narrow — it is <em>not</em> a theodicy. Almost every objection either denies that evil is objective, offers a rival account of the standard (evolution), or presses the evidential problem (does this much suffering fit God?); spot which, and you are halfway to the answer.</p>
+    </div>
+
+    <div class="card">
+      <span class="kick">From outrage to a Source</span>
+      <h4>Don&rsquo;t read the conclusion — reason to it</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:4px">Follow the moves, then reveal — and note exactly where the weight rests and how far the conclusion reaches.</p>
+      <div class="derive">
+        <div class="dr"><div class="q">When you call the Holocaust <em>evil</em>, are you reporting a feeling, or claiming something about the world?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">a claim that it is really, objectively wrong &mdash; not a mere preference</span></div>
+        <div class="dr"><div class="q">What does calling something a <em>shortfall</em> from good presuppose?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">a real standard &mdash; a mark it fails to hit (the is/ought gap: &ldquo;hurts&rdquo; is not yet &ldquo;wrong&rdquo;)</span></div>
+        <div class="dr"><div class="q">Does that standard fit indifferent matter, or a personal source?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">more naturally a personal source of the Good &mdash; particles have no way things &ldquo;ought&rdquo; to be</span></div>
+        <div class="dr"><div class="q">So has the objection been answered &mdash; is suffering now explained?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">no &mdash; the turnabout does NOT explain why God permits suffering; that is the defensive essay&rsquo;s work</span></div>
+        <div class="dr"><div class="q">How strong is the conclusion, and how far does it reach?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">a consideration not a proof (a secular realist can decline it); it reaches a personal source of the Good, not the triune God</span></div>
+      </div>
+      <p class="honest" style="margin-top:14px"><b>Honestly stated:</b> this is a best-explanation consideration, not a proof. It does not solve suffering or lessen its weight; the evidential problem of evil remains live and unresolved, and a secular moral realist (Wielenberg) can hold objective evil as a brute fact without God &mdash; so one can keep the evil and decline the conclusion. It is no charge that unbelievers cannot be good; the question is strictly what <em>grounds</em> the good. And even at full strength it reaches a transcendent, personal source of the Good &mdash; not the triune God; that rests on revelation and <a href="/library/minimalfacts.html">the historical case for the resurrection</a>. Read the full case, including the defensive side, in the <a href="/library/evil-evidence.html">deep dive</a>.</p>
     </div>
 
     <div class="card">
       <span class="kick">Defending the premises</span>
       <h4>Why each premise is more plausible than its denial</h4>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P1 — evil is objective, not preference</summary>
-        <div class="body">
-          <p class="lbl steel">Our outrage points past us</p>
-          <p>Our response to the Holocaust, to torture, to cruelty presents itself as a response to something really wrong, not merely disliked. If evil were mere preference, moral protest would be incoherent.</p>
-          <p class="lbl steel">Even the skeptic insists on it</p>
-          <p>The popular form of the objection presses the reality of evil — and that insistence assumes an objective wrong, not a matter of taste. (A sharper skeptic can instead press the problem as an internal critique — “granting your God and your standard, the evil we see is hard to square with him” — without claiming evil is objectively real. That version does not depend on moral realism; it earns the direct replies below, not this turnabout.)</p>
-        </div>
-      </details>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P2 — objective evil points to God</summary>
-        <div class="body">
-          <p class="lbl steel">Evil is a privation</p>
-          <p>Evil is a corruption or lack of a good that ought to be whole. That presupposes a real standard of good and a way things are supposed to be — a design, a purpose.</p>
-          <p class="lbl steel">Indifferent matter has no ought</p>
-          <p>A purely physical, indifferent universe has no way things are supposed to be, so it can host no genuine evil — only events we happen to dislike. The standard evil falls short of points most naturally to a personal source of the Good.</p>
-        </div>
-      </details>
+      <p class="precise">P1 (that some things are objectively evil) is the load-bearing datum — and the one a thoroughgoing subjectivist denies. P2 (that objective evil needs a standard) is near-analytic; the contested move is the conclusion's inference to God, which is a weighing of explanations, not a proof.</p>
+
+      <div class="support">
+        <div class="sh"><b>P1 &mdash; evil is objective, not preference</b> <span class="stp strong">The load-bearing datum</span></div>
+        <p>Our response to the Holocaust, to torture, to cruelty presents itself &mdash; from the inside &mdash; as a response to something really wrong, not merely disliked. If evil were mere preference, moral protest would be incoherent; we would only be announcing our tastes. And note the irony: the popular form of the problem of evil <em>insists</em> on the reality of evil &mdash; which already assumes an objective wrong.</p>
+        <p class="honest"><b>Honest narrowing:</b> a sharper sceptic can sidestep this by running the problem as an <em>internal</em> critique (&ldquo;granting your God and your standard, this evil is hard to square with him&rdquo;) without claiming evil is objectively real. That version does not walk into the turnabout &mdash; it earns the defensive replies instead. The argument here engages the far more common objector who is genuinely, morally angry.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>P2 &mdash; objective evil points to God</b> <span class="stp strong">Near-analytic; the inference is the contested part</span></div>
+        <p>Evil is a privation (Augustine) &mdash; a corruption of a good that ought to be whole, which presupposes the standard and the &ldquo;ought-to-be.&rdquo; And an objective <em>ought</em>, binding whether we like it or not, fits a personal, purposive source far better than indifferent matter, which has no way things are supposed to be. That is the is/ought gap: a complete physical description never yields the verdict &ldquo;this is wrong.&rdquo;</p>
+        <p class="honest"><b>Honest narrowing:</b> this is where the argument stops short of proof. A secular moral realist (Wielenberg) grants objective evil but makes the moral facts brute necessities needing no God; the theist replies only that a personal source <em>better explains</em> them (why these facts, why their authority, why we reliably know them) &mdash; a live, contested dispute, not a refutation.</p>
+      </div>
+      <div class="whoholds"><b>The room:</b> the move runs from Augustine (evil as <em>privatio boni</em>) and C. S. Lewis (the &ldquo;crooked line&rdquo; of his own atheist days) and is a cousin of the <a href="/library/moral.html">moral argument</a> (Craig). The critics are weighty: the evidential problem is sharpest in William Rowe; its logical form was pressed by J. L. Mackie (who later conceded the free-will defense may show theism is not logically inconsistent); Alvin Plantinga&rsquo;s free-will <em>defense</em> answers the logical version; and Erik Wielenberg holds objective evil with no God at all. No consensus that the turnabout succeeds; the evidential problem is genuinely unsettled.</div>
     </div>
 
     <div class="card">
       <span class="kick">The hard part — objections, answered</span>
       <h4>The objections you will actually meet</h4>
-      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Handle this gently — it touches real pain. Each objection in its strongest form first, then the reply.</p>
-      <p class="hardest"><b>The one that matters most:</b> Rowe&rsquo;s evidential problem &mdash; not a contradiction, but gratuitous suffering as evidence. The <a href="/library/evil.html">deep dive</a> answers it at length &mdash; take it with you, not just the replies below.</p>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Handle this gently — it touches real pain. Each objection in its strongest form first, then the reply. The hardest is flagged.</p>
+      <p class="hardest"><b>The one that matters most:</b> Rowe&rsquo;s evidential problem &mdash; not a contradiction, but the sheer weight of gratuitous-seeming suffering as evidence <em>against</em> God. The <a href="/library/evil-evidence.html">deep dive</a> and its <a href="/library/evil.html">defensive companion</a> engage it at length &mdash; take it with you, not just the reply below.</p>
 
       <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Evil disproves God" <span class="badge hard">Hard</span></summary>
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "The amount of suffering is evidence against God" <span class="badge hard">Hardest</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>A good, all-powerful God would not allow gratuitous suffering. The existence of evil is strong evidence against God.</p>
+          <p>A good, all-powerful God would not permit gratuitous suffering. Rowe's fawn, burning to death unseen in a forest fire, serves no greater good anyone can point to. The sheer quantity of such suffering makes it unlikely that a good, omnipotent God exists.</p>
           <p class="lbl reply">Reply</p>
-          <p>Concede its force first: suffering is a genuine intellectual difficulty for faith, and honesty requires saying so. The classical responses &mdash; free will, soul-making, and Plantinga&rsquo;s free-will defense &mdash; do real but limited work. Plantinga&rsquo;s defense is widely regarded, even by atheist philosophers, as having answered the <em>logical</em> version; it claims only consistency, not knowledge of God&rsquo;s reasons. (Christians differ on how free will works, and this site does not adjudicate that.) The evidential version remains live and unresolved by either side. The narrower point here is separate: calling suffering genuinely <em>evil</em>, not just unpleasant, leans on an objective standard of good that points more naturally toward God than toward brute, impersonal fact.</p>
+          <p>Concede its force; this is the genuinely hard one, and no honest version pretends otherwise. The free-will defense and Plantinga's work are widely regarded as answering the <em>logical</em> version (that God and evil are contradictory) — but the <em>evidential</em> version remains live and unresolved, and the <a href="/library/evil.html">defensive essay</a> engages it. Here, though, is the key: the turnabout and the evidential problem are about <em>different things</em>. The evidential problem asks whether <em>this much</em> suffering fits God. The turnabout asks what it even <em>means</em> to call it evil — and that it falls short of a real standard of good is not cancelled by the suffering's weight. Both can stand: evil is a hard problem for faith, and the reality of objective evil is a datum a godless universe must account for.</p>
         </div>
       </details>
 
       <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Evil is just harm or suffering" <span class="badge easy">Common</span></summary>
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Evil is just harm or suffering — no God needed" <span class="badge easy">Common</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>Define evil naturally as harm or suffering. No transcendent standard is required.</p>
+          <p>Define evil naturally — as harm, pain, suffering — and no transcendent standard is required.</p>
           <p class="lbl reply">Reply</p>
-          <p>Harm and suffering are descriptive; calling them evil — something that ought not to be, that demands a response — is normative. Why should a configuration of matter that causes pain be wrong? Naturalism can describe suffering but struggles to ground the ought-not-ness that makes it evil rather than merely unpleasant.</p>
+          <p>Harm and suffering are <em>descriptive</em>; calling them evil — something that <em>ought not</em> to be, that demands a response — is <em>normative</em>. Why should a configuration of matter that causes pain be <em>wrong</em>, rather than simply unwelcome? Naturalism can describe suffering in exhaustive detail and still not reach the ought-not-ness that makes it evil rather than merely unpleasant. The gap between "this hurts" and "this is wrong" is the whole question.</p>
         </div>
       </details>
 
@@ -408,46 +436,37 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Our sense of evil is an evolved reaction to things that harmed our ancestors — nothing more.</p>
           <p class="lbl reply">Reply</p>
-          <p>That explains the feeling of revulsion, not the fact that genocide is truly wrong. If evil is just an aversion, the torturer is not mistaken, only differently wired — which almost no one believes about real atrocities. Debunking the feeling does not touch the objective wrongness we actually affirm.</p>
+          <p>Grant the evolutionary history freely; it is very likely true. But it explains the <em>feeling</em> of revulsion, not the <em>fact</em> that genocide is truly wrong. If evil is only an aversion, then the torturer is not mistaken, merely differently wired — and almost no one believes that about real atrocities. We do not think the Nazi doctor had an unusual taste; we think he was <em>wrong</em>. Debunking the feeling leaves the objective wrongness we affirm standing: a genealogy of how we came to <em>sense</em> a fact is not yet a disproof of the fact.</p>
         </div>
       </details>
 
       <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "This dodges the real suffering" <span class="badge mid">Trickier</span></summary>
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "I can have objective evil without God" (Wielenberg) <span class="badge hard">Hard</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>Turning evil into an argument for God sidesteps the real pain and the real challenge.</p>
+          <p>A secular moral realist need not deny objective evil. Erik Wielenberg holds that objective moral facts are brute, necessary features of reality, needing no divine ground — and that God is no less a brute posit, while his own view is more economical.</p>
           <p class="lbl reply">Reply</p>
-          <p>A fair caution — and this argument is not a pastoral answer to suffering, nor does it dismiss the force of the problem of evil. It is a narrower logical point: the reality of objective evil sits uneasily in a godless universe. Both can be true at once — evil is a hard problem for faith, and the reality of evil is a hard problem for atheism.</p>
+          <p>This is a serious position — reputable, not desperate — and it shows the argument is <em>not</em> a proof: one can keep objective evil and decline God. So concede that cleanly. The theist's claim is the more modest one: a personal source of the Good <em>better explains</em> the moral facts than free-floating necessities do — why <em>these</em> facts, why they have authority over us, and why survival-driven creatures reliably come to <em>know</em> them. Wielenberg answers with parity and parsimony; the exchange is genuinely live. It is a weighing of explanations, not a demonstration — but the theist has a real case, not a desperate one.</p>
         </div>
       </details>
 
       <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Maybe nothing is objectively evil" <span class="badge hard">Hard</span></summary>
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Turning evil into an argument dodges the real pain" <span class="badge mid">Trickier</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>Bite the bullet — deny objective evil entirely. It is all just preference.</p>
+          <p>Turning evil into an argument for God sidesteps the real suffering and the real challenge.</p>
           <p class="lbl reply">Reply</p>
-          <p>That is at least consistent, but almost no one can live it. The person who says nothing is really evil still protests their own betrayal, still calls out injustice done to them. And denying all objective evil is a steep price. A secular moral realist can keep objective evil without God — but then owes an account of what grounds it, and the moral argument contends the standard points more naturally toward a personal source of the Good than toward brute, impersonal fact.</p>
+          <p>A fair caution, and it must be taken seriously rather than waved away — which is why the honest version opens by honoring the pain. This argument is not a pastoral answer to suffering, and it does not dismiss the force of the problem of evil. It is a narrower observation: that the reality of objective evil sits uneasily in a godless universe. To someone in grief, the right response is presence, not this argument. The two live on different levels and need not compete.</p>
         </div>
       </details>
 
       <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Evil as privation is just wordplay" <span class="badge mid">Trickier</span></summary>
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Calling evil a 'privation' is just wordplay" <span class="badge easy">Common</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>Calling evil a lack or privation rather than a real thing is a dodge.</p>
+          <p>Calling evil a lack or privation rather than a real thing is a dodge that makes evil sound harmless.</p>
           <p class="lbl reply">Reply</p>
-          <p>The privation view (Augustine) does not deny evil’s reality or horror — a privation can be devastating, as blindness is a real lack of sight. It is a metaphysical claim that evil is parasitic on good, a corruption of something that ought to be whole. That presupposes the ought-to-be, the standard — which is the argument’s point.</p>
-        </div>
-      </details>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> &ldquo;Not a contradiction &mdash; but isn&rsquo;t pointless suffering <em>evidence</em>?&rdquo; <span class="badge hard">Hard</span></summary>
-        <div class="body">
-          <p class="lbl steel">Strongest form</p>
-          <p>Grant the logical point entirely &mdash; William Rowe, a leading atheist critic, acknowledged that the bald charge of self-contradiction has not held up. That was never the real objection. Rowe&rsquo;s is evidential. Picture a fawn trapped in a distant forest fire, badly burned, lying in agony for days before it dies &mdash; suffering no human will ever know about, serving no purpose anyone can name. Cases like that exist in enormous numbers. Rowe grants he cannot prove such suffering pointless, but argues it is eminently reasonable to believe some of it is &mdash; and a wholly good God would prevent gratuitous suffering. This is the version that carries the weight, and it is the one you will actually be asked about.</p>
-          <p class="lbl reply">Reply</p>
-          <p>Concede first, because this is a real weight on faith and pretending otherwise is worse than useless. The classical reply is Stephen Wykstra&rsquo;s, and it is narrow. His principle &mdash; CORNEA &mdash; says you may move from &ldquo;I see no justifying reason&rdquo; to &ldquo;there probably is none&rdquo; only if you would <em>expect</em> to see the reason if there were one. Between an infinite mind and ours that expectation is hard to defend: a toddler who cannot see why the injection is necessary has not thereby found evidence that it isn&rsquo;t. But be honest about the cost &mdash; that reply buys agnosticism about God&rsquo;s reasons, not an account of them, and pressed too far it would undercut our confidence about God&rsquo;s goodness as well. The honest verdict is the one the deep dive reaches: the evidential problem remains live and unresolved by either side. There is no consensus that gratuitous evil disproves God, and none that it has been explained away. But the believer&rsquo;s confidence that God is good does not rest chiefly on a balanced ledger of the world&rsquo;s pains; it rests on the character of Christ and on <a href="/library/minimalfacts.html">the resurrection</a> as a public event. Given independent grounds for trusting God, unexplained evil is a genuine difficulty to be borne, not a decisive disproof &mdash; not a victory, and it should not be sold as one. What Christianity offers here is not a solution but a person &mdash; the Son, who is truly God, entering real human suffering rather than accounting for it.</p>
+          <p>It does the opposite. The privation view (Augustine) does not deny evil's reality or horror — a privation can be devastating, as blindness is a real lack of sight, no less terrible for being a lack. It is a metaphysical claim: evil is parasitic on good, a corruption of something that ought to be whole. And that "ought to be whole" is precisely the standard the argument points at. You cannot have a corruption without an original to be corrupted.</p>
         </div>
       </details>
     </div>
@@ -457,35 +476,65 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <h4>Where this comes from — primary sources, not our summary</h4>
       <div class="src">
         <div class="row">
-          <div class="who"><b>Augustine</b><span>4th–5th c. · <em>Confessions</em> / <em>Enchiridion</em></span></div>
-          <div class="what">Developed evil as privatio boni — a privation or corruption of good, not a thing in its own right.</div>
+          <div class="who"><b>C. S. Lewis</b><span><em>Mere Christianity</em>, Book II</span></div>
+          <div class="what">The "crooked line" from his own atheist days: "A man does not call a line crooked unless he has some idea of a straight line." The seed of the turnabout.</div>
         </div>
         <div class="row">
-          <div class="who"><b>C.S. Lewis</b><span>20th c. · <em>Mere Christianity</em></span></div>
-          <div class="what">His atheism rested on the world’s injustice — until he saw that just and unjust presuppose a real standard he had not invented.</div>
+          <div class="who"><b>Augustine</b><span><em>Enchiridion</em> · <em>Confessions</em></span></div>
+          <div class="what">Evil as a <em>privation</em> of good — a corruption or lack of what ought to be whole — the move that broke his Manichaean dualism and fixes attention on the standard.</div>
         </div>
         <div class="row">
-          <div class="who"><b>Alvin Plantinga</b><span>contemporary · <em>God, Freedom, and Evil</em></span></div>
-          <div class="what">The free-will defense — a defense of consistency, not a theodicy — widely regarded, even by atheist philosophers, as having answered the logical problem of evil.</div>
+          <div class="who"><b>William Rowe</b><span>1979 · <em>American Philosophical Quarterly</em></span></div>
+          <div class="what">The careful statement of the evidential problem of evil (the burning fawn) — the hardest reply, conceded as live and unresolved.</div>
         </div>
         <div class="row">
-          <div class="who"><b>Fyodor Dostoevsky</b><span>19th c. · <em>The Brothers Karamazov</em></span></div>
-          <div class="what">Gave the problem of evil its most searching voice — and its moral weight. (We paraphrase — read the originals.)</div>
+          <div class="who"><b>Plantinga · Wielenberg</b><span>the defense &amp; the secular realist</span></div>
+          <div class="what">Plantinga, <em>God, Freedom, and Evil</em> (1974), the free-will defense (logical version); Erik Wielenberg, <em>Robust Ethics</em> (2014), objective evil without God. (We paraphrase — read the originals.)</div>
         </div>
       </div>
+    </div>
+
+    <div class="card">
+      <span class="kick">The honest state of the scholarship</span>
+      <h4>Where the argument really stands</h4>
+      <p>The <em>logical</em> problem of evil — that God and evil are strictly contradictory — is now widely regarded as answered, Mackie himself conceding the free-will defense may show theism is not logically inconsistent. The <em>evidential</em> problem is a different matter: it remains a live, serious, unsettled debate with careful work on both sides, and the turnabout concedes it rather than pretending it away. Secular moral realism of Wielenberg's kind is a reputable position; the moral-argument dispute it belongs to is genuinely contested.</p>
+      <p class="honest"><b>The real fork:</b> whether an objective standard of good is better explained by a personal source of the Good or left as a brute, free-floating fact. No neutral instrument settles it, and honest people land on both sides.</p>
+      <p><b>The bounded verdict:</b> the turnabout is not a proof that forces the sceptic's hand; it does not solve suffering or deliver the God of any creed. What it does is quieter and, perhaps, more disarming: it asks the morally outraged objector to notice what his own outrage assumes — that cruelty is <em>really</em>, bindingly wrong — and where that straight line came from, by which he is so sure the world's cruelty is crooked. Even at full strength it reaches a transcendent, personal source of the Good, not the triune God; that this is the God who in Christ entered the suffering rather than explaining it away rests on revelation and <a href="/library/minimalfacts.html">the resurrection</a>.</p>
+    </div>
+
+    <div class="card" id="bronzeGate">
+      <span class="kick">Checkpoint · earn Bronze</span>
+      <h4>Rebuild it from memory — nothing in front of you</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:4px">Close the sections above. This is the retrieval that turns reading into knowing — and it is how this argument reaches <b>Bronze&nbsp;· Understand</b> on your shelf. Opening accordions no longer counts; showing you can rebuild the structure does.</p>
+      <div class="recall">
+        <div class="q">1 &middot; Put the argument in order — tap the three lines in sequence.</div>
+        <div id="orderPool" class="btnrow"></div>
+        <div id="orderSeq" style="font-family:var(--ui);font-size:13.5px;color:var(--tm);margin-top:10px;min-height:1.2em"></div>
+      </div>
+      <div class="recall" style="margin-top:12px">
+        <div class="q">2 &middot; What does the argument establish? Select every claim it makes — and nothing it doesn&rsquo;t.</div>
+        <div id="propPool" style="display:flex;flex-wrap:wrap;gap:9px;margin-top:4px"></div>
+      </div>
+      <div class="btnrow"><button class="btn primary" onclick="gradeBronze()">Check my reconstruction</button><button class="btn ghost" onclick="resetBronze()">Reset</button></div>
+      <div class="gradeline" id="bronzeGrade"></div>
     </div>
   </section>
 
   <!-- ===================== PHASE 2: PRACTICE ===================== -->
   <section id="practice">
     <div class="phasehead"><span class="phasenum">2</span><h3>Practice it</h3></div>
-    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Three drills that route this argument through tools you already have.</p>
+    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Four drills that route this argument through tools you already have.</p>
 
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back</span>
-      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument in your own words</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Reconstruct the argument from memory: that we recognise objective evil (P1), that this presupposes a standard of good (P2), and that the standard points to God — while being clear this is not a pastoral answer to suffering.</p>
-      <textarea id="explainBox" placeholder="Start with: We recognise some things as genuinely evil, and..."></textarea>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back &mdash; free recall</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument with nothing in front of you</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:12px">Scroll the sections away and generate it from memory — recalling is what builds durable memory; re-reading only feels like it does. Name the turnabout (objective evil → an objective good → a personal Source), and keep the scope honest (a consideration not a proof; it does NOT solve suffering; a Source of the Good, not the triune God). Pick your level; the bar rises as you go. Scored out of 10, accuracy first. An 8+ is one half of <b>Silver</b>.</p>
+      <div class="btnrow" id="explainLevels" style="margin:0 0 10px">
+        <button class="btn ghost sel" type="button" data-lv="1" onclick="setExplainLevel(this,1)">1 · State it</button>
+        <button class="btn ghost" type="button" data-lv="2" onclick="setExplainLevel(this,2)">2 · &hellip;and answer the evidential problem</button>
+        <button class="btn ghost" type="button" data-lv="3" onclick="setExplainLevel(this,3)">3 · &hellip;to a hostile grad student</button>
+      </div>
+      <textarea id="explainBox" placeholder="Start with: The problem of evil is usually an objection to God, but calling anything truly evil presupposes..."></textarea>
       <div class="btnrow">
         <button class="btn primary" onclick="scoreExplain(this)">Score my explanation</button>
         <button class="btn ghost" onclick="document.getElementById('explainBox').value='';document.getElementById('scoreOut').classList.remove('show')">Clear</button>
@@ -502,7 +551,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <div class="practicecard">
       <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 2 · Flashcards</span>
       <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Drilled straight from this argument</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Five cards on objective evil, how this relates to the usual problem of evil, and evil as privation.</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Twelve cards drawn from the turnabout, the objections, and the honest limits above. <b>Answer out loud before you flip</b> — the effort of recall is the whole point; a card you merely recognise hasn't stuck. They drop into your spaced-repetition deck so they return right before you'd forget.</p>
       <div class="flashwrap">
         <div class="flash" id="flash" onclick="this.classList.toggle('flipped')">
           <div class="face front"><div class="qlbl">Prompt</div><p id="fFront"></p><span class="tap">tap to flip</span></div>
@@ -517,14 +566,14 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     </div>
 
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · Live objection</span>
-      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Meet the strongest objection to faith</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">A seeded scenario from the Debate Arena. Draft your reply, then reveal a model answer to compare.</p>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · The just-harm charge (worked example)</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Defuse the evil-is-just-harm charge</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Start here: draft your reply, then reveal a model answer to compare. This is the <em>worked example</em> — Drill 4 then makes you do it cold across the objection set.</p>
       <div class="interloc">
         <div class="av">SK</div>
         <div>
           <div class="who2">Skeptic</div>
-          <div class="bub">"All the suffering in the world is the best evidence there is no God. A good, all-powerful God would never allow children to suffer. Evil disproves God."</div>
+          <div class="bub">"You don't need God for evil. Evil is just suffering, harm, things that hurt sentient creatures. That's a plain fact about the world — no cosmic standard required."</div>
         </div>
       </div>
       <textarea id="debateBox" placeholder="Your response..."></textarea>
@@ -533,27 +582,59 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       </div>
       <div class="modelans" id="modelAns">
         <div class="lbl">One strong way to answer — in a 1 Peter 3:15 tone</div>
-        <p>"That is the hardest question anyone can ask, and I do not want to wave it away &mdash; the suffering of children is a genuine weight on faith, and honest believers feel it. I cannot tell you why God permitted <em>this</em> suffering; no argument removes the pain. But let me gently point at two things. First, the strict version &mdash; that a good, all-powerful God and evil flatly contradict each other &mdash; is widely regarded, even by atheist philosophers, as answered; the harder question, whether so much apparently pointless suffering makes God unlikely, is live and unresolved on both sides. Second, notice what your objection leans on. You called that suffering evil &mdash; not just unfortunate, but truly wrong, something that ought not to be. Where does that ought-not come from? Some atheist philosophers agree it is objectively wrong and treat the standard as a brute fact; I think a standard like that points more naturally to a personal source of the Good. So evil is a real problem for my faith, and the reality of evil is a hard problem for a godless universe too. And the Christian answer is finally not an argument but a person: the Son, who is truly God, entered real human suffering on the cross, and promises to wipe away every tear."</p>
+        <p>"I'd agree that suffering and harm are real — no argument there. But notice what you did: you slid from a <em>description</em> (this causes pain) to a <em>verdict</em> (this is evil, it ought not to be). Those are different. You can give me the most complete physical account of a torture — every nerve, every molecule — and nowhere in that description does the word <em>wrong</em> appear. 'This hurts' isn't yet 'this is wrong'; the wrongness is a standard laid over the facts. So I'm not denying evil is real — I'm asking where that standard comes from, the one by which the harm counts as something that <em>ought not</em> to be. I think it fits a personal source of good better than it fits indifferent matter. I can't prove that to you, and a thoughtful atheist can say the standard is just a brute fact — but then it's worth asking why there's a standard at all. And none of this is me saying you can't be good; of course you can. I'm only asking what grounds the good we both see."</p>
       </div>
     </div>
+
+    <div class="practicecard" id="objDrill">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 4 · Answer the objections cold</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Four objections, no notes — reply, then check</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">The other half of <b>Silver</b>. Draft a reply from memory, reveal the certified answer, and rate yourself honestly. Clear all four with a &ldquo;nailed it&rdquo; and you can field them in the wild — not just recognise them on the page.</p>
+      <div class="interloc">
+        <div class="av" id="odAv">SK</div>
+        <div><div class="who2" id="odWho">Skeptic</div><div class="bub" id="odQ"></div></div>
+      </div>
+      <textarea id="odBox" placeholder="Your reply, from memory..."></textarea>
+      <div class="btnrow">
+        <button class="btn gold" type="button" onclick="odReveal()">Reveal the certified answer</button>
+      </div>
+      <div class="modelans" id="odModel">
+        <div class="lbl">A strong reply — ported from this page&rsquo;s certified answer</div>
+        <p id="odModelText"></p>
+        <div class="confrow" style="margin-top:12px">
+          <button type="button" onclick="odRate(1)">Shaky — I&rsquo;ll redo this one</button>
+          <button type="button" onclick="odRate(2)">Nailed it &#10003;</button>
+        </div>
+      </div>
+      <div class="flashnav">
+        <button class="btn ghost" type="button" onclick="odPrev()">&lsaquo; Prev</button>
+        <span id="odCount"></span>
+        <button class="btn ghost" type="button" onclick="odNext()">Next &rsaquo;</button>
+      </div>
+    </div>
+
   </section>
 
   <!-- ===================== PHASE 3: PROVE IT ===================== -->
   <section id="proveit">
     <div class="phasehead"><span class="phasenum">3</span><h3>Prove it</h3></div>
-    <p class="phasesub">Mastery isn't a feeling — it's four things done. Clear them and this argument turns gold on your shelf.</p>
+    <p class="phasesub">Mastery isn't a feeling — it's three levels, each earned by <em>showing</em> you can do the thing, then proven again over time. Don't trust the warm glow of having read it; prove it cold.</p>
 
     <div class="card">
-      <div class="checklist">
-        <div class="cl" id="ck-read"><div class="box">✓</div><div class="txt"><b>Understood it</b><span>Read the structure, defences, and all objections</span></div><div class="state">Open every section</div></div>
-        <div class="cl" id="ck-explain"><div class="box">✓</div><div class="txt"><b>Explained it</b><span>Score 7+ on Explain It Back</span></div><div class="state">Not yet</div></div>
-        <div class="cl" id="ck-cards"><div class="box">✓</div><div class="txt"><b>Drilled it</b><span>Cycle through every flashcard once</span></div><div class="state">Not yet</div></div>
-        <div class="cl" id="ck-debate"><div class="box">✓</div><div class="txt"><b>Defended it</b><span>Attempt the live objection</span></div><div class="state">Not yet</div></div>
+      <span class="kick">Your levels on this argument</span>
+      <h4>What each one takes</h4>
+      <div class="checklist" id="levelReqs">
+        <div class="cl" id="rq-bronze"><div class="box">✓</div><div class="txt"><b>Bronze · Understand</b><span>Rebuild the argument + exactly what it does and does not establish, from memory (&ge;80%) — the checkpoint at the end of &ldquo;Understand it.&rdquo;</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-explain"><div class="box">✓</div><div class="txt"><b>Silver · part 1 · Explain it</b><span>Score 8+ on Explain It Back (free recall)</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-objections"><div class="box">✓</div><div class="txt"><b>Silver · part 2 · Objections cold</b><span>Answer all four objection drills with &ldquo;nailed it&rdquo;</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-unseen"><div class="box">✓</div><div class="txt"><b>Gold · part 1 · The unseen objection</b><span>Face one objection the page never drilled (below)</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-spaced"><div class="box">✓</div><div class="txt"><b>Gold · part 2 · Prove it again</b><span>Clear this argument on 3 spaced reviews — it returns on its own</span></div><div class="state">0 of 3</div></div>
       </div>
-      <div style="margin-top:26px;border-top:1px solid var(--border);padding-top:20px">
+      <p style="font-family:var(--ui);font-size:13px;color:var(--tm);margin-top:14px">Gold can slip back to Silver if you stop turning up for the spaced reviews — real mastery is perishable, which is why it's worth something. The dashboard brings this one back when it's due.</p>
+      <div style="margin-top:22px;border-top:1px solid var(--border);padding-top:18px">
         <span class="kick">One more thing — be honest</span>
         <h4 style="font-size:17px">If a friend challenged you on this tomorrow, how ready are you?</h4>
-        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Your self-rating is tracked over time so you can watch confidence climb across the library.</p>
+        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Rate yourself — then see whether your Explain It Back score backs it up. Felt-confidence and shown-confidence are not the same thing, and the gap is worth knowing before a real conversation.</p>
         <div class="confrow" id="confRow">
           <button onclick="setConf(this,1)">Shaky</button>
           <button onclick="setConf(this,2)">Getting there</button>
@@ -564,9 +645,29 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       </div>
     </div>
 
+    <div class="card" id="unseenGate">
+      <span class="kick">Gold gate · the unseen objection</span>
+      <h4>One you weren&rsquo;t coached on</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">The objections above either denied objective evil or pressed the suffering. Here is a subtler one: a sceptic who refuses to supply objective evil at all, and runs the problem a different way. Reason it out cold, then reveal how the argument handles it. An honest &ldquo;nailed it&rdquo; is the first half of <b>Gold</b>.</p>
+      <div class="interloc">
+        <div class="av">PH</div>
+        <div><div class="who2">Philosopher</div><div class="bub">"Clever, but I won't take the bait. I don't need to claim anything is <em>objectively</em> evil. I'll grant your God and your standard of good purely for the sake of argument, and then show that the evil we actually see is impossible to square with <em>him</em>. It's a contradiction <em>inside your own system</em> — so there's nothing for my outrage to 'presuppose,' and your turnabout never touches me."</div></div>
+      </div>
+      <textarea id="unseenBox" placeholder="Reason it out — does the internal-critique version walk into the turnabout? What does it cost, and where does it get answered?"></textarea>
+      <div class="btnrow"><button class="btn gold" type="button" onclick="unseenReveal()">Reveal how the argument handles it</button></div>
+      <div class="modelans" id="unseenModel">
+        <div class="lbl">How the argument answers it — ported from the deep dive</div>
+        <p>That is a fair and sophisticated move, and the honest answer is: you&rsquo;re right that it sidesteps the turnabout. Run purely as an <em>internal</em> critique &mdash; &ldquo;granting your God and your standard, this evil is hard to square with him&rdquo; &mdash; it makes no claim that evil is objectively real, so there is indeed nothing for it to presuppose. The turnabout only engages the objector who means his outrage <em>literally</em>: that a real wrong has been done. But notice two things. First, the internal version forfeits the rhetorical force of righteous outrage &mdash; it is a cool logical exercise, not the cry of &ldquo;this is monstrous&rdquo; that gives the problem of evil its grip; most people who raise it do mean it literally. Second, the internal version is not unanswered &mdash; it just gets a <em>different</em> answer: the free-will defense, the evidential discussion, and the cross as presence, which the <a href="/library/evil.html">defensive essay</a> engages at length. So nothing is refuted here; the turnabout simply has a defined scope. It is one consideration, aimed at the common objector &mdash; and it reaches a personal source of the Good, not the triune God, which rests on revelation and <a href="/library/minimalfacts.html">the resurrection</a>.</p>
+        <div class="confrow" style="margin-top:12px">
+          <button type="button" onclick="unseenRate(1)">Shaky — I&rsquo;ll sit with it</button>
+          <button type="button" onclick="unseenRate(2)">Nailed it &#10003;</button>
+        </div>
+      </div>
+    </div>
+
     <div class="bigcta">
       <h4 id="ctaTitle">Master Evil as Evidence, then take the next one</h4>
-      <p id="ctaText">One more case for God remains in this set after this one — the Argument from Desire, which completes the God’s Existence shelf.</p>
+      <p id="ctaText">One more case for God remains in this set after this one — the Argument from Desire, which completes the God&rsquo;s Existence shelf.</p>
       <button class="btn gold" onclick="location.href='ev-m-desire.html'">Next: the Argument from Desire →</button>
       <div style="margin-top:18px"><button class="btn" onclick="shareArgCard(this)" style="background:transparent;color:var(--gl);border:1px solid rgba(200,169,81,.45);">Share this argument as an image</button></div>
       <div><a href="dashboard.html" style="display:inline-block;margin-top:14px;font-family:var(--ui);font-size:13.5px;color:rgba(255,255,255,.6);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:1px">Back to dashboard</a></div>
@@ -580,37 +681,43 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
 <script>
-/* ---- in-memory state (swap for localStorage/Supabase in production) ---- */
-const state = { read:false, explainPass:false, cardsSeen:new Set(), debateTried:false, conf:0 };
+const state = { bronze:false, explainScore:0, objCold:new Set(), unseen:false, cardsSeen:new Set(), conf:0, explainLevel:1 };
 
-/* ---- persistence + site streak (ad_mastery / ad_streak) ---- */
 const ARG_ID = location.pathname.split('/').pop().replace('ev-m-','').replace('.html','');
-const FRESH_MS = 30*24*60*60*1000; /* 30 days */
 function adAll(){ try{ return JSON.parse(localStorage.getItem('ad_mastery')||'{}'); }catch(e){ return {}; } }
-function adSave(full){
+function spacedCount(){ try{ var r = (JSON.parse(localStorage.getItem('ad_reviews')||'{}'))[ARG_ID]; return (r && r.step) ? r.step : 0; }catch(e){ return 0; } }
+
+function levelOf(){
+  var silver = state.bronze && state.explainScore>=8 && state.objCold.size>=OBJ.length;
+  if(silver && state.unseen && spacedCount()>=3) return 3;
+  if(silver) return 2;
+  if(state.bronze) return 1;
+  return 0;
+}
+
+function adSave(){
   try{
-    var m = adAll(); var e = m[ARG_ID] || {};
-    e.read = state.read; e.explain = state.explainPass;
-    e.cards = state.cardsSeen.size; e.debate = state.debateTried;
-    e.explainScore = state.explainScore || e.explainScore || 0; if(state.conf) e.conf = state.conf;
-    if(full){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
+    var m = adAll(); var e = m[ARG_ID] || {}; var lv = levelOf();
+    e.bronze = state.bronze;
+    e.explainScore = Math.max(state.explainScore||0, e.explainScore||0);
+    e.objCold = Array.from(state.objCold);
+    e.unseen = state.unseen;
+    e.cards = state.cardsSeen.size;
+    if(state.conf) e.conf = state.conf;
+    e.level = lv;
+    e.read = state.bronze; e.explain = state.explainScore>=8; e.debate = state.objCold.size>0;
+    if(lv>=2){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
     m[ARG_ID] = e; localStorage.setItem('ad_mastery', JSON.stringify(m));
   }catch(e){}
 }
 function adRestore(){
   try{
     var e = adAll()[ARG_ID]; if(!e) return;
-    state.read = !!e.read; state.explainPass = !!e.explain; state.debateTried = !!e.debate;
-    state.explainScore = e.explainScore || 0; state.conf = e.conf || 0;
-    var fresh = e.fresh && (Date.now() - e.fresh) < FRESH_MS;
-    if(e.cards >= cards.length && fresh){ for(var i=0;i<cards.length;i++) state.cardsSeen.add(i); }
-    if(e.cards >= cards.length && !fresh){
-      var note = document.createElement('div');
-      note.style.cssText = 'font-family:var(--ui);font-size:.8rem;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.7rem 1rem;margin:0 0 1rem;';
-      note.innerHTML = '&#9888; Memory fades \u2014 it has been a while. Flip through the flashcards again to restore this argument to gold.';
-      var fc = document.querySelector('.flashwrap') || document.getElementById('flash') || null;
-      if(fc && fc.parentNode){ fc.parentNode.insertBefore(note, fc); }
-    }
+    state.bronze = !!e.bronze || !!e.read;
+    state.explainScore = e.explainScore || 0;
+    state.unseen = !!e.unseen;
+    state.conf = e.conf || 0;
+    if(Array.isArray(e.objCold)){ e.objCold.forEach(function(i){ state.objCold.add(i); }); }
   }catch(e){}
 }
 function adMark(){
@@ -628,61 +735,72 @@ function adMark(){
   }catch(e){}
 }
 
-/* ---- mastery dial ---- */
 const CIRC = 263.9;
+function setLvl(id, earned, current){
+  var el = document.getElementById(id); if(!el) return;
+  el.classList.toggle('earned', earned);
+  el.classList.toggle('current', current && !earned);
+  var s = el.querySelector('.ls'); if(s) s.textContent = earned ? 'Earned ✓' : (current ? 'Next up' : 'Locked');
+}
+function setReq(id, done, txt){
+  var el = document.getElementById(id); if(!el) return;
+  el.classList.toggle('done', done);
+  var s = el.querySelector('.state'); if(s) s.textContent = txt;
+}
 function updateDial(){
-  let done = 0;
-  if(state.read) done++;
-  if(state.explainPass) done++;
-  if(state.cardsSeen.size >= cards.length) done++;
-  if(state.debateTried) done++;
-  const pct = Math.round(done/4*100);
-  adSave(pct===100);
-  if(window._adLoaded && done>0) adMark();
-  document.getElementById('pctNum').textContent = pct + '%';
-  document.getElementById('ring').style.strokeDashoffset = CIRC - (CIRC*pct/100);
-
-  setCheck('ck-read', state.read);
-  setCheck('ck-explain', state.explainPass);
-  setCheck('ck-cards', state.cardsSeen.size >= cards.length);
-  setCheck('ck-debate', state.debateTried);
+  var lv = levelOf();
+  var pct = [0,34,67,100][lv];
+  adSave();
+  if(window._adLoaded && (state.bronze || state.explainScore || state.objCold.size || state.unseen)) adMark();
+  var pn = document.getElementById('pctNum'); if(pn) pn.textContent = pct + '%';
+  var ring = document.getElementById('ring'); if(ring) ring.style.strokeDashoffset = CIRC - (CIRC*pct/100);
+  setLvl('lvl-bronze', lv>=1, lv===0);
+  setLvl('lvl-silver', lv>=2, lv===1);
+  setLvl('lvl-gold',   lv>=3, lv===2);
+  setReq('rq-bronze', state.bronze, state.bronze ? 'Done' : 'Not yet');
+  setReq('rq-explain', state.explainScore>=8, state.explainScore>=8 ? ('Done · '+state.explainScore+'/10') : (state.explainScore ? ('Best '+state.explainScore+'/10') : 'Not yet'));
+  setReq('rq-objections', (typeof OBJ!=='undefined' && state.objCold.size>=OBJ.length), (typeof OBJ!=='undefined' && state.objCold.size>=OBJ.length) ? 'Done' : (state.objCold.size + ' of ' + (typeof OBJ!=='undefined'?OBJ.length:4)));
+  setReq('rq-unseen', state.unseen, state.unseen ? 'Done' : 'Not yet');
+  var sc = Math.min(spacedCount(), 3); setReq('rq-spaced', sc>=3, sc>=3 ? 'Done' : (sc + ' of 3'));
   try{ renderCalibration(); }catch(e){}
-
-  if(pct===100){
-    document.getElementById('ctaTitle').textContent = 'Evil as Evidence mastered - it just turned gold on your shelf';
-    document.getElementById('ctaText').textContent = 'That is 11 of 22. The same path is waiting for every argument in the library. Keep the streak going.';
-    document.querySelector('.libnote').innerHTML = '&#9670; &nbsp;Evil as Evidence mastered - 11 of 22 core arguments complete';
-  }
-}
-function setCheck(id, on){
-  const el = document.getElementById(id);
-  el.classList.toggle('done', on);
-  var stEl = el.querySelector('.state');
-  if(on){ stEl.textContent = 'Done'; return; }
-  if(id==='ck-read'){
-    stEl.textContent = (typeof _accOpened !== 'undefined' && _accs.length) ? (_accOpened.size + ' of ' + _accs.length + ' opened') : 'Open every section';
-  } else {
-    stEl.textContent = 'Not yet';
+  var ln = document.querySelector('.libnote');
+  if(lv>=3){
+    var ct = document.getElementById('ctaTitle'); if(ct) ct.textContent = 'Evil as Evidence mastered — Gold on your shelf';
+    var cx = document.getElementById('ctaText'); if(cx) cx.textContent = 'You rebuilt it, defended it cold, met an objection you had never seen, and proved it again weeks later — and you learned to hold it gently. Keep it alive on the spaced reviews.';
+    if(ln) ln.innerHTML = '&#9670; &nbsp;Evil as Evidence — Gold · mastered';
+  } else if(lv>=1 && ln){
+    ln.innerHTML = '&#9670; &nbsp;Evil as Evidence — ' + (lv===2?'Silver':'Bronze') + ' · keep going';
   }
 }
 
-/* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
-/* ---- argument premises used to ground the AI scoring ---- */
+/* ARG_PREMISES: the certified rubric POSTed to /api/tutor and rendered into the share-card. */
 var ARG_PREMISES = [
-  'We recognise certain things as objectively, genuinely evil.',
-  'Objective evil presupposes an objective standard of good things fall short of.',
-  'An objective standard of good points more naturally toward God than toward brute, impersonal fact, so even the recognition of evil points toward God; this does not explain why God permits suffering.'
+  'We recognise certain things as objectively, genuinely evil - not merely disliked, but acts that ought not to be.',
+  'Objective evil presupposes an objective standard of good that such acts fall short of (evil is normative, not merely descriptive).',
+  'An objective standard of good points more naturally toward God - a personal source of the Good - than toward brute, impersonal fact, so even the recognition of evil points toward God. This does NOT explain why God permits suffering, it is a consideration not a proof (a secular realist can keep objective evil without God), and it reaches a personal source of the Good, not the triune God (which rests on revelation and the resurrection).'
 ];
 
-/* Real AI scoring via /api/tutor (same method as explain-it-back.html).
-   Falls back to a local heuristic if the API is unreachable (e.g. preview). */
+function setExplainLevel(btn, lv){
+  state.explainLevel = lv;
+  [].forEach.call(document.querySelectorAll('#explainLevels button'), function(b){ b.classList.remove('sel'); });
+  if(btn) btn.classList.add('sel');
+  var box = document.getElementById('explainBox');
+  var ph = lv===3 ? 'Explain it to a hostile, well-read skeptic — anticipate the pushback (the evidential problem/Rowe; evil is just harm; evolved aversion; objective evil without God/Wielenberg; and the internal-critique sidestep) and answer it, keeping the scope honest...'
+         : lv===2 ? 'From memory: the argument AND your best answer to the evidential problem (the AMOUNT of suffering as evidence against God) - why the turnabout and the evidential problem are about DIFFERENT things and both can stand...'
+         : 'Start with: The problem of evil is usually an objection to God, but calling anything truly evil presupposes...';
+  if(box) box.setAttribute('placeholder', ph);
+}
+
 async function scoreExplain(btn){
   var box = document.getElementById('explainBox');
   var txt = box ? box.value.trim() : '';
   if(!txt){ return; }
   if(btn){ btn.disabled = true; btn.dataset.lbl = btn.textContent; btn.textContent = 'Scoring...'; }
   try{
-    var prompt = 'Please evaluate this student explanation of "The Problem of Evil as Evidence for God". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
+    var lvAsk = state.explainLevel>=3 ? '\n\nThe student was asked to explain it to a hostile, well-read skeptic: weight whether they anticipated and answered the obvious pushback (the evidential problem of evil / Rowe; evil is just harm; evil as an evolved aversion; objective evil without God / Wielenberg; and the internal-critique sidestep), not merely stated the argument. Keep the scope honest: a consideration not a proof; it does NOT solve suffering or explain why God permits it; it is no charge that atheists cannot be moral; and it reaches a personal source of the Good, not the triune God (that rests on revelation and the resurrection).'
+              : state.explainLevel===2 ? '\n\nThe student was ALSO asked to answer the evidential problem of evil (the AMOUNT of apparently gratuitous suffering as evidence against God): weight whether they CONCEDE its force and explain that the turnabout and the evidential problem are about DIFFERENT things (one asks whether this much suffering fits God; the other asks what it means to call it evil at all), so both can stand - rather than pretending the problem of evil is answered.'
+              : '';
+    var prompt = 'Please evaluate this student explanation of "The Problem of Evil as Evidence for God". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + lvAsk + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
     var res = await fetch('/api/tutor', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
@@ -693,7 +811,8 @@ async function scoreExplain(btn){
     // CRISIS: /api/tutor answers {crisis:true} with a pastoral referral instead of
     // a score. It contains no JSON, so without this branch the parse below throws
     // and the catch calls renderMockScore(txt) — scoring the person's own words
-    // and discarding the referral entirely. Never score a crisis disclosure.
+    // and discarding the referral entirely. Never score a crisis disclosure. This
+    // matters most on THIS page, whose subject is suffering.
     if(data.crisis){ renderCrisis(data.answer || ''); if(btn){ btn.disabled=false; btn.textContent=btn.dataset.lbl||'Score my explanation'; } return; }
     var answer = data.answer || '';
     var m = answer.match(/\{[\s\S]*\}/);
@@ -711,7 +830,7 @@ function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').rep
 /* Renders the pastoral referral in place of a score. Deliberately does NOT touch
    scoreNum/scoreVerdict/state.explainScore: nobody gets marked out of 10, and no
    mastery progress is recorded, on a turn where they said something true about
-   their own life. See lib/crisis.js. */
+   their own life. See lib/crisis.js. Especially important on the evil page. */
 function renderCrisis(text){
   var out = document.getElementById('scoreOut');
   if(!out){ return; }
@@ -728,47 +847,54 @@ function renderCrisis(text){
 function renderScore(score, strengths, improvements){
   score = Math.max(0, Math.min(10, Math.round(Number(score) || 0)));
   var feed = '';
-  (strengths||[]).forEach(function(s){ feed += '<li class="hit"><span class="mk">\u2713</span>'+esc(s)+'</li>'; });
-  (improvements||[]).forEach(function(s){ feed += '<li class="miss"><span class="mk">\u25CB</span>'+esc(s)+'</li>'; });
+  (strengths||[]).forEach(function(s){ feed += '<li class="hit"><span class="mk">✓</span>'+esc(s)+'</li>'; });
+  (improvements||[]).forEach(function(s){ feed += '<li class="miss"><span class="mk">○</span>'+esc(s)+'</li>'; });
   document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
-  var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
+  var verdict = score>=8?'Strong — you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way — fill the gaps below' : 'Have another go with the structure in mind';
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score);
   updateDial();
 }
 
 function renderMockScore(txtRaw){
   var t = (txtRaw||'').toLowerCase();
   var checks = [
-    {ok:/objective(?:ly)? evil|(?:genuinely|truly|really|objectively) (?:evil|wrong)/.test(t), hit:'Premise 1 - you affirmed objective evil', miss:'State Premise 1 - we recognise some things as objectively evil'},
-    {ok:/standard|ought|good|presuppos/.test(t), hit:'Premise 2 - you tied evil to a standard of good', miss:'State Premise 2 - objective evil presupposes an objective standard of good'},
-    {ok:/god/.test(t) && !/(?<!(?:\b(?:not|never|cannot)|n[^\sa-z]t)(?: \S+){0,2} )(?:(?:proves?|requires) god|(?:is|been|gets|now) solved|proof of god)|only god can/.test(t), hit:'Conclusion - you reasoned from the standard toward God, without overclaiming', miss:'Draw the bounded conclusion: the standard of good points toward God as its most natural ground - it does not prove God or solve suffering'},
-    {ok:/problem of evil|harm|suffering|privation|aversion/.test(t) && /myster|pastoral|unresolved|not (?:a |an )?(?:answer|solution|theodicy|proof)|does ?n.?t (?:solve|explain|remove|answer)|(?:real|genuine) (?:weight|difficulty|problem)|hard(?:est)? (?:problem|objection)/.test(t), hit:'Good - you engaged the problem of evil and conceded its real weight', miss:'Engage the problem of evil honestly - concede its weight and mystery, and say this is not a pastoral answer to suffering'},
+    {ok:/objective|genuinely|really (wrong|evil)|ought not|not (just|merely)/.test(t), hit:'Premise 1 - you named objective evil (not mere preference)', miss:'State Premise 1 - we recognise certain things as objectively, genuinely evil'},
+    {ok:/standard|good|normative|ought|presuppos|falls short|privation/.test(t), hit:'Premise 2 - you linked objective evil to a standard of good', miss:'State Premise 2 - objective evil presupposes an objective standard of good'},
+    {ok:/god|personal|source of (the )?good|points (to|toward)|than (brute|matter)/.test(t), hit:'Conclusion - the standard points toward a personal source of the Good', miss:'Draw the conclusion: an objective standard of good points more naturally toward God'},
+    {ok:/(not|n[^\sa-z]t) (a )?proof|consideration|does (not|n[^\sa-z]t) (solve|explain)|evidential|wielenberg|without god|best explanation|not .*(triune|creed)|grounds|rests on revelation/.test(t), hit:'Scope - you kept it honest (not a proof; does not solve suffering; a Source of the Good, not the triune God)', miss:'Keep the scope honest: a consideration not a proof, it does NOT solve suffering, and it reaches a Source of the Good, not the triune God'},
     {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth - you developed it, not just listed it', miss:'Go a bit deeper - a full reconstruction runs longer than this'}
   ];
   var score = 0, feed = '';
   checks.forEach(function(c){
-    if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">\u2713</span>'+c.hit+'</li>'; }
-    else{ feed += '<li class="miss"><span class="mk">\u25CB</span>'+c.miss+'</li>'; }
+    if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">✓</span>'+c.hit+'</li>'; }
+    else{ feed += '<li class="miss"><span class="mk">○</span>'+c.miss+'</li>'; }
   });
   document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
-  var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
+  var verdict = score>=8?'Strong — you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way — fill the gaps below' : 'Have another go with the structure in mind';
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score);
   updateDial();
 }
 
-/* ---- flashcards (generated from this argument) ---- */
+/* ---- flashcards ---- */
 const cards = [
-  {q:'State the evil-as-evidence-for-God argument.', a:'We recognise objective evil. Objective evil presupposes an objective standard of good. That standard points to God as its most natural ground. So even evil points toward God - which does not solve suffering.'},
-  {q:'How does this relate to the usual problem of evil?', a:'It is narrower. The problem of evil challenges faith; this notes that calling something truly evil (not just unpleasant) assumes an objective good that points toward God as its most natural ground.'},
-  {q:'Reply to: evil is just harm or suffering.', a:'Harm is descriptive; calling it evil is normative - it ought not be. Naturalism can describe suffering but struggles to ground the ought-not-ness that makes it evil.'},
-  {q:'Reply to: evil is an evolved aversion.', a:'That explains the feeling of revulsion, not the fact that genocide is truly wrong. If evil is mere aversion, the torturer is not mistaken, just wired differently - which almost no one believes.'},
-  {q:'What is evil as privation (Augustine)?', a:'Evil is a corruption or lack of a good that ought to be whole - as blindness is a real lack of sight. It presupposes the standard of good it falls short of.'}
+  {q:'State the turnabout argument.', a:'We recognise objective evil. Objective evil presupposes an objective standard of good. That standard points more naturally to God - a personal source of the Good - than to brute matter. So even evil points toward God. It does NOT explain why God permits suffering, and it is a consideration, not a proof.'},
+  {q:'What is the "crooked line" (Lewis)?', a:'From his atheist days: his case against God was that the world seemed cruel and unjust - but "a man does not call a line crooked unless he has some idea of a straight line." The outrage presupposes a standard of good.'},
+  {q:'How does this relate to the usual problem of evil?', a:'It is narrower and it is NOT a theodicy. The problem of evil challenges faith; the turnabout notes that calling something truly evil (not just unpleasant) already assumes an objective good that points toward God. It does not explain why God permits suffering.'},
+  {q:'What is the is/ought gap, and why does it matter?', a:'From a complete description of what IS, no verdict about what OUGHT to be follows by logic alone. "This hurts" is not yet "this is wrong." The wrongness is a standard laid over the facts - and that standard is what the argument points at.'},
+  {q:'Answer: evil is just harm or suffering.', a:'Harm is descriptive; calling it evil - something that ought not to be - is normative. Naturalism can describe suffering exhaustively and never reach the ought-not-ness that makes it evil rather than merely unwelcome.'},
+  {q:'Answer: evil is just an evolved aversion.', a:'Grant the evolutionary history. But it explains the FEELING of revulsion, not the FACT that genocide is truly wrong. If evil is only an aversion, the torturer is just differently wired - which no one believes. A genealogy of the feeling is not a disproof of the fact.'},
+  {q:'What is the hardest objection, and how do you answer it?', a:'The EVIDENTIAL problem (Rowe): the amount of apparently gratuitous suffering is evidence AGAINST God. Concede its force - it is live and unresolved. But it and the turnabout are about different things: one asks if this much suffering fits God, the other asks what it means to call it evil at all. Both can stand.'},
+  {q:'Can an atheist have objective evil without God? (Wielenberg)', a:'Yes - a secular moral realist holds objective moral facts as brute, necessary features of reality, no God needed. A serious position, and the reason the argument is NOT a proof. The theist replies only that a personal source BETTER EXPLAINS the facts; the exchange is live.'},
+  {q:'Is this a charge that atheists cannot be moral?', a:'No - never. Unbelievers can plainly be good, often putting believers to shame. The claim is strictly about what GROUNDS the good, not about anyone’s conduct or sincerity.'},
+  {q:'Answer: calling evil a "privation" is just wordplay.', a:'It does the opposite of trivialising evil. A privation can be devastating - blindness is a real lack of sight. Augustine’s point is metaphysical: evil is a corruption of a good that OUGHT to be whole - which presupposes the very standard the argument points at.'},
+  {q:'Answer: this dodges the real suffering.', a:'A fair caution. The argument is NOT a pastoral answer, and does not dismiss the problem of evil - which is why the honest version opens by honoring the pain. To someone grieving, the response is presence, not an argument. The two live on different levels; both can be true.'},
+  {q:'What does the argument establish - and not?', a:'ESTABLISHES: the reality of objective evil sits uneasily in a godless universe; a best-explanation consideration, one strand. Does NOT: solve suffering, explain why God permits it, prove God, show atheists can’t be moral, or reach the triune God (that rests on revelation + the resurrection).'}
 ];
 let ci = 0;
 function renderCard(){
@@ -782,37 +908,96 @@ function renderCard(){
 function nextCard(){ ci = (ci+1)%cards.length; renderCard(); }
 function prevCard(){ ci = (ci-1+cards.length)%cards.length; renderCard(); }
 
-/* ---- debate ---- */
-document.getElementById('debateBox').addEventListener('input', ()=>{
-  if(document.getElementById('debateBox').value.trim().length > 8 && !state.debateTried){
-    state.debateTried = true; updateDial();
+/* ---- Bronze reconstruction gate ---- */
+var ORDER = [
+  'We recognise certain things as objectively, genuinely evil - acts that ought not to be.',
+  'Objective evil presupposes an objective standard of good that such acts fall short of.',
+  'So an objective standard of good points more naturally toward God than toward brute fact - but this is a consideration, not a proof, and it does not explain why God permits suffering.'
+];
+var PROPS = [
+  {t:'the reality of objective evil sits uneasily in a godless universe', ok:true}, {t:'even the recognition of evil points toward a personal source of the Good', ok:true}, {t:'a best-explanation consideration, one strand (not a proof)', ok:true}, {t:'it does NOT explain why God permits suffering', ok:true},
+  {t:'a proof that God exists', ok:false}, {t:'that it solves or answers the problem of suffering', ok:false}, {t:'that atheists cannot be moral', ok:false}, {t:'the triune God of the creeds, by this argument alone', ok:false}
+];
+var _ordSel = [];
+function _shuf(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } return a; }
+function injectBronze(){
+  var pool=document.getElementById('orderPool');
+  if(pool && !pool.children.length){
+    _shuf([0,1,2]).forEach(function(k){
+      var b=document.createElement('button'); b.type='button'; b.className='btn ghost'; b.textContent=ORDER[k];
+      b.onclick=function(){ if(b.disabled) return; b.disabled=true; b.style.opacity=.4; _ordSel.push(k); _ordSeq(); };
+      pool.appendChild(b);
+    });
   }
-});
-document.querySelector('[onclick*="modelAns"]').addEventListener('click', ()=>{
-  state.debateTried = true; updateDial();
-});
-
-/* ---- prove it ---- */
-function markRead(){
-  state.read = true;
-  document.getElementById('readBtn').textContent = 'Marked as understood \u2713';
-  document.getElementById('readBtn').classList.remove('primary');
-  document.getElementById('readBtn').classList.add('ghost');
-  updateDial();
+  var pp=document.getElementById('propPool');
+  if(pp && !pp.children.length){
+    _shuf(PROPS).forEach(function(p){
+      var b=document.createElement('button'); b.type='button'; b.className='btn ghost'; b.textContent=p.t; b.setAttribute('data-ok', p.ok?'1':'0');
+      b.onclick=function(){ b.classList.toggle('sel'); };
+      pp.appendChild(b);
+    });
+  }
 }
+function _ordSeq(){ var el=document.getElementById('orderSeq'); if(el) el.textContent = _ordSel.length ? _ordSel.map(function(k,i){ return (i+1)+'. '+ORDER[k]; }).join('    ') : ''; }
+function resetBronze(){
+  _ordSel=[]; _ordSeq();
+  var pool=document.getElementById('orderPool'); if(pool){ [].forEach.call(pool.children,function(b){ b.disabled=false; b.style.opacity=1; }); }
+  var pp=document.getElementById('propPool'); if(pp){ [].forEach.call(pp.children,function(b){ b.classList.remove('sel'); }); }
+  var g=document.getElementById('bronzeGrade'); if(g){ g.className='gradeline'; g.textContent=''; }
+}
+function gradeBronze(){
+  var orderOK = _ordSel.length===3 && _ordSel[0]===0 && _ordSel[1]===1 && _ordSel[2]===2;
+  var pp=document.getElementById('propPool'); var right=0;
+  if(pp){ [].forEach.call(pp.children,function(b){ var want=b.getAttribute('data-ok')==='1'; var got=b.classList.contains('sel'); if(want===got) right++; }); }
+  var decisions = PROPS.length + 1, scored = right + (orderOK?1:0), pctOK = scored/decisions;
+  var g=document.getElementById('bronzeGrade'); if(!g) return;
+  g.className='gradeline show '+(pctOK>=0.8?'pass':'fail');
+  if(pctOK>=0.8){
+    state.bronze=true; updateDial();
+    g.textContent='✓ Bronze earned — you rebuilt the structure from memory ('+Math.round(pctOK*100)+'%). Now go defend it in Practice.';
+  } else {
+    g.textContent='Not yet — '+Math.round(pctOK*100)+'%. '+(orderOK?'':'Check the order of the three lines. ')+'Re-read the structure above, then try again — this rep is what makes it stick.';
+  }
+}
+
+/* ---- Drill 4: objections cold (replies ported from the page) ---- */
+var OBJ = [
+  {who:'Skeptic', q:'A good, all-powerful God would not permit gratuitous suffering. The sheer amount of it - a fawn burning to death unseen - is strong evidence AGAINST God.', model:'Concede its force; this is the genuinely hard one, and no honest version pretends otherwise. The free-will defense is widely regarded as answering the LOGICAL version (that God and evil are contradictory), but the EVIDENTIAL version remains live and unresolved, and the defensive essay engages it. Here is the key: the turnabout and the evidential problem are about DIFFERENT things. The evidential problem asks whether THIS MUCH suffering fits God. The turnabout asks what it even MEANS to call it evil - and that it falls short of a real standard of good is not cancelled by the suffering’s weight. Both can stand: evil is a hard problem for faith, and the reality of objective evil is a datum a godless universe must account for.'},
+  {who:'Skeptic', q:'You don’t need God for evil - evil is just harm, pain, suffering. That is a plain fact about the world.', model:'Harm and suffering are DESCRIPTIVE; calling them evil - something that OUGHT NOT to be, that demands a response - is NORMATIVE. Why should a configuration of matter that causes pain be WRONG, rather than simply unwelcome? Naturalism can describe suffering in exhaustive detail and still not reach the ought-not-ness that makes it evil rather than merely unpleasant. The gap between "this hurts" and "this is wrong" is the whole question - and that is what I’m asking you to account for.'},
+  {who:'Skeptic', q:'Our sense of evil is just an evolved reaction to things that harmed our ancestors. Nothing more.', model:'Grant the evolutionary history freely; it is very likely true. But it explains the FEELING of revulsion, not the FACT that genocide is truly wrong. If evil is only an aversion, then the torturer is not mistaken, merely differently wired - and almost no one believes that about real atrocities. We do not think the Nazi doctor had an unusual taste; we think he was WRONG. Debunking the feeling leaves the objective wrongness we affirm standing: a genealogy of how we came to SENSE a fact is not a disproof of the fact.'},
+  {who:'Skeptic', q:'I can be a moral realist without God - objective moral facts are just brute, necessary features of reality (Wielenberg). And God is no less a brute posit, while my view is more economical.', model:'This is a serious position - reputable, not desperate - and it shows the argument is NOT a proof: one can keep objective evil and decline God, so I concede that cleanly. The theist’s claim is the more modest one: a personal source of the Good BETTER EXPLAINS the moral facts than free-floating necessities do - why THESE facts, why they have authority over us, and why survival-driven creatures reliably come to KNOW them. You answer with parity and parsimony; the exchange is genuinely live. It is a weighing of explanations, not a demonstration - but a real case, not a desperate one. And none of this says you can’t be good; the question is only what grounds the good.'}
+];
+var _od = 0;
+function odRender(){
+  var o=OBJ[_od];
+  var q=document.getElementById('odQ'); if(q) q.textContent='"'+o.q+'"';
+  var who=document.getElementById('odWho'); if(who) who.textContent=o.who;
+  var av=document.getElementById('odAv'); if(av) av.textContent=o.who.slice(0,2).toUpperCase();
+  var mt=document.getElementById('odModelText'); if(mt) mt.textContent=o.model;
+  var mm=document.getElementById('odModel'); if(mm) mm.classList.remove('show');
+  var bx=document.getElementById('odBox'); if(bx) bx.value='';
+  var c=document.getElementById('odCount'); if(c) c.textContent=(_od+1)+' of '+OBJ.length+(state.objCold.has(_od)?' · nailed ✓':'');
+}
+function odReveal(){ var mm=document.getElementById('odModel'); if(mm) mm.classList.add('show'); }
+function odRate(v){ if(v===2){ state.objCold.add(_od); } else { state.objCold.delete(_od); } updateDial(); if(_od<OBJ.length-1){ _od++; } odRender(); }
+function odNext(){ _od=(_od+1)%OBJ.length; odRender(); }
+function odPrev(){ _od=(_od-1+OBJ.length)%OBJ.length; odRender(); }
+
+function unseenReveal(){ var m=document.getElementById('unseenModel'); if(m) m.classList.add('show'); }
+function unseenRate(v){ state.unseen = (v===2); updateDial(); }
 function renderCalibration(){
   try{
     var el = document.getElementById('calibNote'); if(!el) return;
     var conf = state.conf||0, best = state.explainScore||0;
     var labels = {1:'Shaky',2:'Getting there',3:'Solid',4:'Could teach it'};
     if(conf){ var _b=document.querySelectorAll('#confRow button'); if(_b[conf-1]){ [].forEach.call(_b,function(b){b.classList.remove('sel');}); _b[conf-1].classList.add('sel'); } }
-    if(conf>=3 && best<7){
-      var shown = best>0 ? ('your best Explain It Back so far is '+best+'/10') : 'you haven\u2019t scored an Explain It Back yet';
+    if(conf>=3 && best<8){
+      var shown = best>0 ? ('your best Explain It Back so far is '+best+'/10') : 'you haven’t scored an Explain It Back yet';
       el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.8rem 1rem;';
-      el.innerHTML = '\u26A0 You rated yourself \u201C'+labels[conf]+'\u201D \u2014 but '+shown+'. Worth closing: confidence that holds up in a real conversation is confidence you\u2019ve <b>shown</b>, not just felt. <a href="#" onclick="var b=document.getElementById(\'explainBox\');if(b){b.scrollIntoView({behavior:\'smooth\'});b.focus();}return false;" style="color:#a88930;font-weight:600">Prove it on Explain It Back \u2192</a>';
-    } else if(conf>=3 && best>=7){
+      el.innerHTML = '⚠ You rated yourself “'+labels[conf]+'” — but '+shown+'. Worth closing: confidence that holds up in a real conversation is confidence you’ve <b>shown</b>, not just felt. <a href="#" onclick="var b=document.getElementById(\'explainBox\');if(b){b.scrollIntoView({behavior:\'smooth\'});b.focus();}return false;" style="color:#a88930;font-weight:600">Prove it on Explain It Back →</a>';
+    } else if(conf>=3 && best>=8){
       el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#2f7d4f;background:rgba(47,125,79,.08);border:1px solid rgba(47,125,79,.3);border-radius:6px;padding:.8rem 1rem;';
-      el.innerHTML = '\u2713 Calibrated \u2014 you feel ready and you\u2019ve shown it ('+best+'/10 on Explain It Back). That\u2019s earned confidence.';
+      el.innerHTML = '✓ Calibrated — you feel ready and you’ve shown it ('+best+'/10 on Explain It Back). That’s earned confidence.';
     } else {
       el.style.display = 'none';
     }
@@ -825,9 +1010,7 @@ function setConf(btn, val){
   adSave(); renderCalibration();
 }
 
-/* ---- Supabase auth + Pro gate (matches site conventions) ---- */
 var sb = null;
-
 async function navAuth(){
   try{
     var result = await sb.auth.getSession();
@@ -847,17 +1030,14 @@ async function navAuth(){
     }
   }catch(e){}
 }
-
 async function signOut(){
   try{ if(sb) await sb.auth.signOut(); }catch(e){}
   window.location.href = 'index.html';
 }
-
 function showGate(){
   var g = document.getElementById('proGate');
   if(g) g.style.display = 'flex';
 }
-
 async function boot(){
   if(window.supabase && window.supabase.createClient){
     sb = window.supabase.createClient('https://noprgxkwniouukmrfozc.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw');
@@ -866,30 +1046,17 @@ async function boot(){
     await navAuth();
     /* TEMP until Stripe is live — everything unlocked, same as flashcards/explain-it-back. */
     var isPro = true;
-    /* Post-Stripe, replace the line above with:
-       var isPro = !!(session && session.user && session.user.app_metadata && session.user.app_metadata.is_pro === true); */
     if(!isPro){ showGate(); return; }
   }
-  /* build the track */
+  injectBronze();
   adRestore();
   renderCard();
+  odRender();
   updateDial();
   renderCalibration();
   window._adLoaded = true;
 }
-/* "Understood it" is earned by opening every section in Phase 1 (defences + objections) */
-var _accs = Array.prototype.slice.call(document.querySelectorAll('#understand details.acc'));
-var _accOpened = new Set();
-_accs.forEach(function(d, i){
-  d.addEventListener('toggle', function(){
-    if(!d.open || state.read){ return; }
-    _accOpened.add(i);
-    if(_accOpened.size >= _accs.length){ state.read = true; }
-    updateDial();
-  });
-});
 
-/* ---- share-card: render this argument as a branded image ---- */
 function _shareSetMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
 function shareArgCard(btn){
   var prem = (typeof ARG_PREMISES !== 'undefined') ? ARG_PREMISES : [];
@@ -941,11 +1108,11 @@ document.addEventListener('DOMContentLoaded', boot);
     <span style="color:#c8a951;font-size:12px;letter-spacing:.22em;font-weight:600;">APOLOGIA DAILY</span>
   </div>
   <div style="color:rgba(255,255,255,.55);font-size:12.5px;letter-spacing:.16em;font-weight:500;margin-top:32px;">COULD YOU DEFEND THIS?</div>
-  <div id="scTitle" style="font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:700;color:#fff;line-height:1.16;margin-top:10px;"></div>
+  <div id="scTitle" style="font-family:'Playfair Display',Georgia,serif;font-size:30px;font-weight:700;color:#fff;line-height:1.16;margin-top:10px;"></div>
   <div style="width:56px;height:2px;background:#c8a951;margin:20px 0 24px;"></div>
-  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P1</div><div id="scP1" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.45;"></div></div>
-  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P2</div><div id="scP2" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.45;"></div></div>
-  <div style="display:flex;gap:14px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">&#8756;</div><div id="scC" style="color:#fff;font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.45;font-weight:600;"></div></div>
+  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P1</div><div id="scP1" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:15px;line-height:1.4;"></div></div>
+  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P2</div><div id="scP2" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:15px;line-height:1.4;"></div></div>
+  <div style="display:flex;gap:14px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">&#8756;</div><div id="scC" style="color:#fff;font-family:'Source Serif 4',Georgia,serif;font-size:14px;line-height:1.38;font-weight:600;"></div></div>
   <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(200,169,81,.3);padding-top:16px;">
     <div style="color:rgba(255,255,255,.55);font-size:12.5px;">Learn it. Practice it. Defend it.</div>
     <div style="color:#c8a951;font-size:13px;font-weight:600;">apologiadaily.com</div>
