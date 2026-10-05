@@ -126,5 +126,26 @@
     ],
     "note": "A first-person witness from inside the Great Persecution (c. AD 303-311). Phileas, bishop of Thmuis in Egypt, wrote this letter to his church from prison in Alexandria shortly before his own martyrdom (c. 306); Eusebius quotes it at length in Church History VIII.10. In this sentence the presiding judge orders the officers torturing the martyrs to pay them no attention at all - to act as if the sufferers no longer existed - which Phileas names a second torture added to the physical stripes. Store as historical testimony to how the persecution sought to un-person its victims, not as doctrinal proof. Wording verified byte-for-byte against the source_url (and Wikisource) by apologia-citations, 2026-08-25; the clause “were to think and act as if we no longer existed” is McGiffert’s actual translation, not a paraphrase. Do NOT re-attribute this exact wording to the ANF vol. 6 Roberts-Donaldson Phileas fragment - that is a different translation.",
     "text": "For he said that they were not to have the least concern for us, but were to think and act as if we no longer existed, our enemies having invented this second mode of torture in addition to the stripes."
+  },
+  {
+    "id": "eusebius-he-5-28-5",
+    "author": "Eusebius of Caesarea",
+    "work": "Church History",
+    "year": 325,
+    "section": "Bk V.28.5 (quoting the anonymous anti-Artemon work, the 'Little Labyrinth')",
+    "translation": "McGiffert (NPNF ser. 2 vol. 1), public domain",
+    "pd": true,
+    "source_url": "https://www.ccel.org/ccel/schaff/npnf201.iii.x.xxix.html",
+    "verified": true,
+    "tags": [
+      "deity of christ",
+      "worship of jesus",
+      "early church",
+      "trinity",
+      "hymns",
+      "not a late invention"
+    ],
+    "note": "From an anonymous early-third-century work (the 'Little Labyrinth', attributed to Hippolytus of Rome or to Gaius, c. AD 230-240), quoted by Eusebius, refuting the Artemonites' claim that the deity of Christ was a recent corruption of an originally 'mere man' teaching. The writer appeals to the church's hymnody 'from the beginning' as evidence that Christ was praised as God long before Nicaea - load-bearing against the 'Nicaea/Constantine invented Jesus' divinity' claim. A chain of testimony: Eusebius (c. 325) quotes the anonymous writer (c. 230-240) reporting hymnody 'from the beginning'. Store as historical testimony to early Christian worship of Christ, not as proof of the doctrine itself. Verified verbatim vs source_url (web, 2026-10-05).",
+    "text": "And how many psalms and hymns, written by the faithful brethren from the beginning, celebrate Christ the Word of God, speaking of him as Divine."
   }
 ]
