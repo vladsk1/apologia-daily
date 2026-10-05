@@ -90,19 +90,18 @@ other chapters develop aspects of the proposal.
 | Ch. 1 endnotes | q-0024 | ✅ read — footnote-text leads captured (scholar names + Scripture clusters) |
 | **Ch. 2 "Biblical Theology and the Problems of Monotheism" — ✅ COMPLETE** (§1–§5 + endnotes) | q-0025…q-0034 | ✅ DONE — MacDonald/"Enlightenment-category" debate; Deut 4/32:39/*'ên 'ôd* uniqueness; de Moor/Schmidt/Gnuse/Smith on monotheism's rise; §4 heavenly-retinue + two uniqueness idioms (Sawyer); §5 the Shema in the NT (Rom 3 + Zech 14:9; 1 Cor 8:6; John 17; Eph 4:4–6; the Barker/"two gods" rebuttal). |
 | **Ch. 3 "The 'Most High' God…" — ✅ COMPLETE** (§1–§3.3 + table + endnotes) | q-0035, q-0036, q-0040, q-0041 | ✅ DONE — Horbury "inclusive vs exclusive monotheism"; the *'Elyon*/*Hypsistos* title (temple/cult, sovereign rule, use to Gentiles); occurrence table; endnotes. |
-| **Ch. 4 "The Worship of Jesus in Early Christianity" — ✅ COMPLETE except §5** | q-0042…q-0052 | ✅ MINED — §1–§4 (Maranatha, calling-on-the-name/Joel 2:32, proskynein, doxologies/Rev 5:13, hymns/Pliny/anti-Artemon), §6 (Revelation worship), §6.3 (Apocryphal Acts), §7 (Origen/Arius/Nicaea), endnotes. ⚠ **§5 (one page) NOT captured** — auto-turner skipped it; owed (TOC help). |
-| **Ch. 5 "The Throne of God and the Worship of Jesus" — 🔶 PARTIAL** | q-0091, q-0092 | 🔶 §5.2 (Ps 110 "novel exegesis/novel claim") + conclusion + endnotes mined; **core held via Ch. 1 §2**. ⚠ **§1–§5.1 skipped** — owed (TOC help). |
+| **Ch. 4 "The Worship of Jesus in Early Christianity" — ✅ COMPLETE** (§1–§7 + endnotes) | q-0042…q-0052, c4c, g-0002 | ✅ MINED — §1–§4 (Maranatha, calling-on-the-name/Joel 2:32, proskynein, doxologies/Rev 5:13, hymns/Pliny/anti-Artemon), §5 (Pagan testimony — Celsus/*Contra Celsum*), §6 (Christian Adherence to Jewish Monotheism; §6.2 Revelation, §6.3 Apocryphal Acts), §7 (Origen/Arius/Nicaea), endnotes. **§5 gap filled 2026-10-05 via TOC.** |
+| **Ch. 5 "The Throne of God and the Worship of Jesus" — ✅ COMPLETE** (§1–§5 + conclusion) | g-0005…g-0008, q-0091, q-0092 | ✅ MINED — §1 (Second Temple monotheism; Josephus/Philo/Pseudo-Philo), §2–§3 (criteria + grand-vizier rebuttal), §4 (Wisdom & Moses "on the throne"), §5 (Ps 110 "novel exegesis/novel claim"), endnotes. **§1–§5.1 gap filled 2026-10-05.** |
 | **Ch. 6 "Paul's Christology of Divine Identity" — ✅ COMPLETE** in map | q-0093…q-0098 | ✅ MINED — framework recap; Phil 2/Isa 45:23; 1 Cor 8:6; §8 YHWH-texts-applied-to-Jesus (Capes); Yahoel/Michael angelic-intermediary rebuttal; endnotes. |
 | **Ch. 7 "The Divinity of Jesus in the Letter to the Hebrews" — ✅ MAPPED** | q-0099…q-0102 | ✅ MINED — divine-identity criteria list; Heb 1 catena (Heb 1:8 "your throne O God"; Ps 102 Creator; Heb 1:6 worship); Heb 7:3/Ps 110:4 eternity; endnotes. (§2–§3 + part of §5 at overview level.) |
 | **Ch. 8 "God's Self-Identification with the Godforsaken" — ✅ MAPPED** | q-0103…q-0105 | ✅ MINED — the cry of dereliction (Mark 15:34 / Ps 22:1); lament-psalm matrix; inclusive identification with the godforsaken (= "God Crucified" at the cross); Mark's narrative climax; Moltmann. (§1.1.1–§1.1.8 at overview level.) |
 | Indexes (Scripture/author/subject) | q-0106 | ✅ reached — no consolidated bibliography (footnotes only) |
 
-**▶ STATUS (2026-10-05):** ✅ **The whole book body (Chapters 1–8) + indexes have been read and mined** (Ch. 1 and 2
-fully; Ch. 3 complete; Ch. 4 complete except §5; Ch. 5 partial — core held via Ch. 1; Ch. 6 complete; Ch. 7 and 8
-mapped with theses + all load-bearing primaries, some dense sub-columns at overview level). The **six-surface
-cross-check** has been run (see the cross-check block near the end). **Two small backward gaps are still owed:
-Ch. 4 §5 (one page) and Ch. 5 §1–§5.1** — both heavily overlap the fully-mined Chapter 1, and both need the owner to
-use the Kindle **Table of Contents** to return to them (this build won't page backward reliably).
+**▶ STATUS (2026-10-05):** ✅ **COMPLETE — the whole book body (Chapters 1–8) + indexes read and mined, both earlier
+gaps now closed.** Ch. 1 and 2 fully; Ch. 3 complete; Ch. 4 complete (§5 "Pagan testimony" gap filled via the Kindle
+TOC); Ch. 5 complete (§1–§5.1 gap filled by continuing forward from Ch. 4); Ch. 6 complete; Ch. 7 and 8 mapped with
+theses + all load-bearing primaries (some dense sub-columns at overview level). The **six-surface cross-check** has
+been run (see the cross-check block near the end), and the improvement leads are logged as backlog rows JGI-1…JGI-8.
 ⚠ **TURN-METHOD (2026-10-05), hard-won — read before resuming the auto-turner:** (1) foreground via ALT-tap +
 AttachThreadInput (`cap.ps1`); (2) **turn pages with a RIGHT-EDGE MOUSE CLICK**, not the keyboard — `capN.ps1` now
 clicks at (right-edge−40, mid-height) each iteration. **Do NOT use keyboard arrows to turn:** when the reading pane
@@ -738,7 +737,7 @@ the answer to Horbury's "inclusive monotheism." Captured dense q-0035, q-0036, q
 
 ---
 
-## Chapter 4 — "The Worship of Jesus in Early Christianity" (COMPLETE except one page; dense q-0042…q-0052)
+## Chapter 4 — "The Worship of Jesus in Early Christianity" (COMPLETE; dense q-0042…q-0052 + c4c, g-0002)
 ⭐ **A MAJOR chapter for us — the worship-as-divine-identity-criterion argument; the main cross-check target for
 `worship-of-jesus.html`.** Bauckham argues the worship of Jesus is early, pervasive, and decisive for christological
 development (NT → Nicaea/Chalcedon), and that it was NOT a late Hellenistic development (rejects the old Bousset
@@ -762,10 +761,24 @@ development (NT → Nicaea/Chalcedon), and that it was NOT a late Hellenistic de
   of Paul; and ⭐ the anonymous early-3rd-c. **anti-Artemon fragment** (preserved in Eusebius *HE* 5.28) that refutes
   the heretic Artemon's claim that Christ's deity was a recent innovation — **directly answers the modern "high
   Christology developed late" objection.**
-- **§6 Worship of Jesus in Revelation** (dense q-0050) — ⭐ the **angel refuses worship** and redirects John to God
-  (Rev 19:10; 22:8–9), while **the Lamb IS worshipped** (Rev 5:8–14) in the heavenly throne-room — Jesus is placed
-  on the divine side of the worship boundary, not excluded with the angels. **§6.3 Missionary Christianity in the
-  Apocryphal Acts** (Acts of John 94–102,109, etc.) — conversion as turning from idols to the worship of Jesus.
+- **§5 "Pagan …"** (gap now filled 2026-10-05, dense c4c + g-0002; the qualifying noun in the heading was not
+  legible in the dense capture — the section is **pagan external testimony**) — ⭐ **Celsus**, the pagan critic (via
+  **Origen, *Contra Celsum* 8.12–8.15**), observed that Christians worship Jesus "to an extravagant degree… this man
+  who appeared recently" **yet claim it is not inconsistent with monotheism** ("If these men worshipped no other God
+  but one, perhaps they would have had a valid argument… but in fact they worship… this man"). ⭐ **A hostile
+  outside witness corroborating that Christians practised an exclusive monotheism centred on the worship of Jesus** —
+  it "corroborates the accounts of the martyrs." Also touches pagan inscriptions / *theos hypsistos* and an Apology.
+- **§6 "Christian Adherence to Jewish Monotheism"** (gap-opening filled 2026-10-05, dense g-0002; body at q-0050) —
+  ⭐ the chapter's payoff: the early churches held to **exclusive monotheism AND the worship of Jesus together**, and
+  did NOT abandon monotheism under pagan influence (the evidence runs the other way). The Pauline churches take up
+  polytheism by **christianizing the Shema** (1 Cor 8:6); **Hurtado**: "the accommodation of Jesus as recipient of
+  cultic worship with God is unparalleled" — an **unprecedented mutation within monotheism**, not a drift toward
+  paganism. Sub-sections survey the evidence:
+    - **§6.2 The Book of Revelation** (dense q-0050) — ⭐ the **angel refuses worship** and redirects John to God
+      (Rev 19:10; 22:8–9), while **the Lamb IS worshipped** (Rev 5:8–14) in the heavenly throne-room — Jesus is on
+      the divine side of the worship boundary, not excluded with the angels.
+    - **§6.3 Missionary Christianity in the Apocryphal Acts** (dense q-0050; Acts of John 94–102, 109, etc.) —
+      conversion as turning from idols to the worship of Jesus.
 - **§7 Conclusion** (dense q-0051) — the ante-Nicene continuity to Nicaea: **Origen** (four types of prayer/worship;
   the "relative" worship problem), **Arius** (drew an absolute Creator/creature distinction, so worshipping Jesus
   = worshipping a creature — the dilemma Nicaea resolved by confessing the Son's full deity), and the Nicene
@@ -773,29 +786,43 @@ development (NT → Nicaea/Chalcedon), and that it was NOT a late Hellenistic de
 - **Endnotes** (dense q-0052) — leads: **Martin Hengel, *Crucifixion*** (SCM 1977); Colin Gunton, *Yesterday and
   Today*; Frances Young, *Christ Proclaimed*; John McIntyre, *The Shape of Christology*; T. A. Kopecek on
   Neo-Arianism; A. Hamann, *La prière*; primaries from the Martyr Acts.
-- ⚠ **ONE PAGE NOT CAPTURED LINE-BY-LINE (§5, between §4 Hymns and §6).** The Kindle auto-turner skipped it during
-  a queued-keypress misfire, and this build will not reliably page backward to it (see TURN-METHOD note). §5 is
-  almost certainly a further worship-form sub-section (prayers / confession); the chapter's argument and all its
-  load-bearing primaries ARE captured above. **Owed: have the owner use the Kindle Table of Contents to return to
-  Chapter 4 §5 so it can be read.** (Recorded honestly per the "record what did NOT run" standing rule.)
+### ✅ CHAPTER 4 ("The Worship of Jesus in Early Christianity") — COMPLETE (§1–§7 + endnotes).
+The §5 (Pagan testimony) gap was filled 2026-10-05 after the owner navigated to Chapter 4 via the Kindle Table of
+Contents. The whole chapter is now mined.
 
 ---
 
-## Chapter 5 — "The Throne of God and the Worship of Jesus" (PARTIAL — core captured via Ch. 1 overlap; §1–§5.1 skipped)
+## Chapter 5 — "The Throne of God and the Worship of Jesus" (COMPLETE 2026-10-05; dense g-0005…g-0008 + q-0091, q-0092)
 Bauckham's well-known essay (first published in *The Jewish Roots of Christological Monotheism*, ed. C. C. Newman,
-J. R. Davila, G. S. Lewis; Brill, 1999). Its thesis — **Jesus' sharing of the divine THRONE** (Ps 110:1) is a
-divine-identity marker, since the heavenly throne is reserved to God alone — is **already fully mined in Chapter 1
-§2** (the throne texts: Ps 110:1; Acts 2:33–36; 5:31; Heb 1:3; Rev 3:21; 5; 22:1,3). Captured here directly:
-- **§5.2 "Novel exegesis and novel claim"** (dense q-0091): ⭐ **Psalm 110:1 is the OT verse most often applied to
-  Jesus in early Christian literature**, and the christological reading — Jesus *seated on God's own throne* — is a
-  **novel exegesis making a novel claim** (Second Temple Judaism did NOT read the royal psalms this way; cf.
-  *Testament of Job* 33:3, which uses throne-language quite differently). ⭐ **Good apologetic point: the
-  throne-sharing Christology was a bold, unprecedented claim, not something borrowed from existing Jewish
-  categories.** Engages **Timo Eskola, *Messiah and Throne: Jewish Merkabah Mysticism and Early Christian Exaltation
-  Discourse*** (WUNT 2/142; Mohr Siebeck, 2001) [lead].
-- ⚠ **§1–§5.1 NOT captured** (the throne-of-God setup, the merkabah tradition, the exalted-Jesus-enthroned argument).
-  **The core argument is held via Ch. 1 §2**, but the chapter's own development is owed — same TOC-navigation help
-  needed as Ch. 4 §5.
+J. R. Davila, G. S. Lewis; Brill, 1999). Thesis — **Jesus' sharing of the divine THRONE** (Ps 110:1) is a
+divine-identity marker, because the heavenly throne is reserved to God alone. (§1–§5.1 gap filled after the owner
+reached Chapter 4 and the read continued forward into Chapter 5.)
+- **§1 "Second Temple Jewish monotheism"** (dense g-0005) — exclusive monotheism + **exclusive worship** was common
+  and uncontroversial: the Shema + the first commandment, recited daily (worship/service = Heb. *ʿābad* / Gk.
+  *latreuō*, Deut 6:5; 10:12; 11:13). **Josephus *A.J.* 3.91** ("the first word teaches that God is one and he alone
+  must be worshipped"); **Philo *Decal.* 65**; **Pseudo-Philo *L.A.B.* 6:4** ("we know one Lord, and him only we
+  worship"). The burden of proof lies on anyone claiming exceptions.
+- **§2–§3 the divine-identity criteria + the intermediary-figure rebuttal** (dense g-0005, g-0006) — restates **sole
+  Creator / sole Ruler** and that Wisdom/Word are *intrinsic* to God's identity while exalted patriarchs and principal
+  angels are *created* agents. ⭐ Bauckham **dissents from the "single grand vizier / plenipotentiary / chief agent"**
+  reading (Hurtado's divine-agency line): God governs by a *council* of angels with differentiated roles, none with
+  sole universal authority — the few apparent exceptions are special cases (**Michael** in *Joseph and Aseneth*
+  14:8–9; the Prince of Light/**Michael** in Qumran **1QS 3–4**; the **Logos in Philo**). Overlaps Ch. 1 §1 and Ch. 6.
+- **§4 figures "on the throne"** (dense g-0007) — the test case: **§4.1 Wisdom** on God's throne (Wis 9:4,10) is
+  *intrinsic* to the divine identity; **§4.2 Moses on the throne** (**Ezekiel the Tragedian**'s *Exagoge* dream
+  vision) is a **figurative/prophetic exaltation** (Moses surveying the cosmos, to rule Israel as king), **NOT** a
+  real sharing of God's throne or identity. ⭐ This sets up the contrast: a *created* figure's enthronement is
+  figurative, whereas Jesus genuinely shares God's throne.
+- **§5 the NT: Jesus seated on God's throne, and "§5.2 Novel exegesis and novel claim"** (dense g-0008, q-0091) — ⭐
+  **Psalm 110:1 is the OT verse most often applied to Jesus** in early Christian literature, and the reading — Jesus
+  *seated on God's own throne* — is a **novel exegesis making a novel claim** (Second Temple Judaism did NOT read the
+  royal psalms this way; cf. *Testament of Job* 33:3, which uses throne-language quite differently). ⭐ **Apologetic
+  payoff: the throne-sharing Christology was a bold, unprecedented claim, not borrowed from existing Jewish
+  categories.** Engages **Timo Eskola, *Messiah and Throne*** (WUNT 2/142; Mohr Siebeck, 2001) [lead].
+- **Conclusion + endnotes** (dense q-0092) — the essay = Bauckham's *The Jewish Roots of Christological Monotheism*
+  chapter; engages Eskola. ⭐ **This whole chapter is the expanded standalone version of Chapter 1 §2's throne
+  argument** (Ps 110:1; Acts 2:33–36; 5:31; Heb 1:3; Rev 3:21; 5; 22:1,3), which our `jesus_as_god_nt.html` and
+  `titles.html` already carry.
 
 ---
 

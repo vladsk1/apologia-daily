@@ -322,8 +322,8 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   eyewitnesses.md`): divine-identity exegesis/historiography only; never a general theological authority, never a
   "further reading" list without naming the work. ⚠ **Daniel-7 hazard:** the Enoch *Son of Man* is handled as "the
   exception that proves the rule" — never compress into the RETIRED `daniel7-figure-is-divine` / `pelach-only-to-God`
-  claims. ⚠ **Two small backward gaps owed** (ch. 4 §5; ch. 5 §1–§5.1 — this Kindle build won't page backward; needs
-  TOC navigation to finish).
+  claims. ✅ **COMPLETE — both earlier backward gaps (ch. 4 §5 Pagan testimony; ch. 5 §1–§5.1) were filled 2026-10-05**
+  after the owner navigated to ch. 4 via the Kindle TOC.
 
 ### ⚠ PARTIAL notes — books NOT owned, NOT read (added 2026-07-26, Tyndale/evangelical mining batch)
 These four were queued as books by `docs/article-research/MINING-BRIEF-tyndale-batch.md`. Because we do

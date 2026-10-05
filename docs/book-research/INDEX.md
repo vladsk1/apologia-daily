@@ -82,9 +82,8 @@ point only, never in our voice. Resurrection tier → **dual-consensus** for any
 Other Essays on the New Testament's Christology of Divine Identity*, **Paternoster/Eerdmans 2008** — ⚠ owner's copy
 is the **Paternoster (UK) 2008** ed.; our bibliography cites the **Eerdmans (US) 2008** ed., so page citations may
 differ. **The flagship scholarly statement of DIVINE-IDENTITY Christology** and the source much of our deity cluster
-rests on. **Body [chs. 1–8] + indexes read 2026-10-05**; ch. 1 *God Crucified* fully; chs. 2–3 complete; ch. 4
-complete except §5; ch. 5 partial [core held via ch. 1]; chs. 6–8 mapped. ⚠ **Two small backward gaps owed** [ch. 4
-§5; ch. 5 §1–§5.1 — Kindle wouldn't page back; TOC help needed]. ⚠⚠ **Dominant finding: this is the SOURCE OF RECORD
+rests on. **Body [chs. 1–8] + indexes read 2026-10-05, COMPLETE**; ch. 1 *God Crucified* fully; chs. 2–5 complete [ch. 4 §5
+"Pagan testimony" and ch. 5 §1–§5.1 gaps filled 2026-10-05 via the Kindle TOC]; chs. 6–8 mapped. ⚠⚠ **Dominant finding: this is the SOURCE OF RECORD
 — mostly CORROBORATION** [`shema.html`, `jesus_as_god_nt.html`, `worship-of-jesus.html`, `phil2.html`,
 `jesus-is-yahweh.html` already rest on this framework]; the value is the handful of **improvement leads** in the
 topic rows. ⚠ **UNIVERSALISM FENCE** [same as JATE below]: mine Bauckham's divine-identity exegesis/historiography
