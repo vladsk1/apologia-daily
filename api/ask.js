@@ -17,25 +17,28 @@ import { applyCors } from '../lib/cors.js';
 // Crisis routing always outranks it (checked first in the handler), so a message
 // that is both a crisis disclosure and mentions slavery still gets the pastoral
 // crisis reply, not this decline.
-// The biblical metaphor "slave(s) to <X>" (slave to sin / to Christ / to
-// righteousness, Rom 6) is deliberately excluded, so a Romans 6 question is not
-// swept in.
+// The biblical doulos metaphor ("slave/bondservant OF or TO sin / Christ / God /
+// the Lord / righteousness"; Rom 1:1, Rom 6) is deliberately excluded, so a
+// Romans 1/6 question (e.g. "what does Paul mean by calling himself a slave of
+// Christ?") is not swept in.
 function isSlaveryTopic(text) {
   if (!text) return false;
   const t = String(text);
   // High-signal topic words are decisive on their own.
-  if (/\bslavery\b|\benslav(?:e|ed|es|ing|ement)\b|\bbond(?:servant|servants|slave|slaves)\b|\bslave[-\s]?(?:trade|trader|traders|owner|owners|owning|holder|holders|holding|master|masters|ship|ships)\b/i.test(t)) return true;
-  // Bare "slave(s)": a slavery question UNLESS every occurrence is the biblical
-  // metaphor "slave(s) to sin / to Christ / to righteousness", etc. (Rom 6).
-  // Only known ABSTRACT objects are stripped, so "slaves to obey their masters"
-  // (a real slavery question) is kept.
-  if (/\bslaves?\b/i.test(t)) {
-    const stripped = t.replace(/\bslaves?\s+to\s+(?:sin|christ|god|jesus|righteousness|money|mammon|greed|desires?|passions?|lust|fear|the\s+law|the\s+world)\b/ig, ' ');
-    return /\bslaves?\b/i.test(stripped);
+  if (/\bslavery\b|\benslav(?:e|ed|es|ing|ement)\b|\bslave[-\s]?(?:trade|trader|traders|owner|owners|owning|holder|holders|holding|master|masters|ship|ships)\b/i.test(t)) return true;
+  // "slave(s)" / "bondservant(s)" / "bondslave(s)": a slavery question UNLESS every
+  // occurrence is the biblical doulos metaphor — "slave/bondservant OF or TO
+  // sin / Christ / God / the Lord / righteousness" (Rom 1:1; Rom 6). Only known
+  // ABSTRACT objects are stripped, so "slaves to obey their masters" (a real
+  // slavery question) is kept, while "a slave of Christ" / "bondservant of Christ"
+  // (Paul's own self-description) is not declined.
+  if (/\b(?:slaves?|bond(?:servants?|slaves?))\b/i.test(t)) {
+    const stripped = t.replace(/\b(?:slaves?|bond(?:servants?|slaves?))\s+(?:to|of)\s+(?:sin|christ|god|jesus|the\s+lord(?:\s+jesus)?|righteousness|money|mammon|greed|desires?|passions?|lust|fear|the\s+law|the\s+world)\b/ig, ' ');
+    return /\b(?:slaves?|bond(?:servants?|slaves?))\b/i.test(stripped);
   }
   return false;
 }
-const SLAVERY_REPLY = "That's a weighty and painful question, and it isn't one this tool tries to answer. It deserves an unhurried, personal conversation rather than a quick reply from a bot — I'd gently encourage you to bring it to your own pastor or priest, who can sit with you, understand your context, and walk through it with the care it deserves.\n\nI'm glad to help with other questions, though — for example the historical evidence for the resurrection, the reliability of the New Testament, or the case that God exists.";
+const SLAVERY_REPLY = "That's a serious question, and it isn't one this tool tries to answer. It deserves a real, unhurried conversation with a person who can engage it properly — not a short reply from a bot. The best place to take it is a pastor or priest, or another thoughtful Christian you trust, who can work through it with you in context.\n\nI'm glad to help with other questions, though — for example the historical evidence for the resurrection, the reliability of the New Testament, or the case that God exists.";
 // Build the dynamic "verified primary sources" block appended to the system
 // prompt when retrieval finds relevant passages. Only fact-checked, public-domain
 // entries reach here (see lib/sources-verified.js). The instructions REINFORCE the
@@ -128,14 +131,6 @@ export default async function handler(req, res) {
     // other endpoints share it. Routing and behaviour here are identical.
     const crisisBackstop = isCrisis(question);
 
-    // Slavery is handled pastorally (owner directive, 2026-10-06): decline and
-    // refer to a pastor, deterministically, before any model call. Crisis always
-    // outranks it, so a crisis disclosure that also mentions slavery still gets
-    // the pastoral crisis reply.
-    if (!crisisBackstop && isSlaveryTopic(question)) {
-      return res.status(200).json({ answer: SLAVERY_REPLY, declined: 'slavery' });
-    }
-
     const apiKey = process.env.ANTHROPIC_API_KEY;
     // A crisis message must never get a bare 500 or 429. lib/crisis.js promises
     // the deterministic reply survives a dead key; on THIS endpoint it did not,
@@ -226,6 +221,18 @@ Respond with only ONTOPIC, DENOM, OFFTOPIC, or PASTORAL.`,
       // The deterministic crisisBackstop forces the same fall-through even if the
       // classifier misfires, so crisis routing never rests on Haiku alone.
       if (!crisisBackstop && !verdict.includes('PASTORAL')) {
+        // Slavery is handled pastorally (owner directive, 2026-10-06): the tool
+        // declines any slavery question and refers to a pastor. Placed AFTER the
+        // classifier and inside the !crisisBackstop && !PASTORAL guard, so BOTH
+        // the deterministic crisis regex AND the Haiku PASTORAL verdict (abuse /
+        // harm-to-others the regex misses) outrank it and still reach the crisis
+        // care path. A slavery question can classify as any non-PASTORAL verdict
+        // (often ONTOPIC, since it is a religious question), so this is checked
+        // before the OFFTOPIC/DENOM branches.
+        if (isSlaveryTopic(question)) {
+          return res.status(200).json({ answer: SLAVERY_REPLY, declined: 'slavery' });
+        }
+
         if (verdict.includes('OFFTOPIC')) {
           return res.status(200).json({
             answer: `This is a Christian apologetics tool — it's designed to answer questions about the Christian faith, theology, evidence, and how to engage with challenges to Christianity.\n\nYour question doesn't appear to be related to those topics. Try asking something like:\n\n• "How do I respond when someone says Jesus never existed?"\n• "What is the best evidence for the resurrection?"\n• "How do Christians answer the problem of evil?"\n• "Is the Bible historically reliable?"\n• "What should I say to an atheist friend who asks about suffering?"`
