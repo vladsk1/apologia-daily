@@ -672,7 +672,19 @@ function openArgCard(slug) {
   el.classList.add('op');
   currentArgSlug = slug;
   try { var ct = el.querySelector('.ct'); if (ct) { currentArgContext = ct.textContent.trim(); var lbl = document.getElementById('float-arg-label'); if (lbl) lbl.textContent = currentArgContext; } } catch (e) {}
-  setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); syncCardBar(); syncUrl(); }, 60);
+  /* If the reader left this card for its essay/mastery page (position stashed by
+     the pagehide handler below) and is now coming Back, drop them exactly where
+     they were — at the bottom CTAs or a mid-card "research in full" link — not at
+     the card's top, which on a 7–26-screen card means scrolling all the way down
+     again. One-shot: cleared on use, so a normal ?arg= deep-link from elsewhere
+     still opens at the top. */
+  var savedY = null;
+  try { var v = sessionStorage.getItem('ev_y_' + slug); if (v !== null) { savedY = parseInt(v, 10); sessionStorage.removeItem('ev_y_' + slug); } } catch (e) {}
+  setTimeout(function () {
+    if (savedY !== null && !isNaN(savedY)) window.scrollTo(0, savedY);
+    else el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    syncCardBar(); syncUrl();
+  }, 60);
 }
 
 /* The AI tutor must answer FROM the card in front of the reader, not from the card's
@@ -826,6 +838,19 @@ function syncCardBar() {
 }
 addEventListener('scroll', syncCardBar, { passive: true });
 addEventListener('resize', syncCardBar);
+
+/* Stash the reader's exact scroll position as they leave the hub with a card
+   open, so Back can restore it (see openArgCard). pagehide — not beforeunload —
+   because beforeunload would disable the bfcache this also wants to keep working,
+   and pagehide fires on both the bfcache freeze and a real unload. Keyed per
+   argument slug in sessionStorage (per-tab, survives the essay/mastery round
+   trip; irrelevant to cookies). */
+addEventListener('pagehide', function () {
+  try {
+    var card = document.querySelector('.sec.go .card.op');
+    if (card && card.id) sessionStorage.setItem('ev_y_' + card.id.replace(/^arg-/, ''), String(window.scrollY || window.pageYOffset || 0));
+  } catch (e) {}
+});
 
 function tog(card) {
   if (selectingInside(card)) return;
