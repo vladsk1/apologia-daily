@@ -144,3 +144,17 @@ essays + mirror lag** — NOT new arguments or tabs.
 Finer-grained open items live in the per-tab sweep docs: `JESUS_TAB_SWEEP_BACKLOG_2026-09-29.md`,
 `BIBLICAL_RELIABILITY_SWEEP_BACKLOG_2026-09-29.md`, `GODS_EXISTENCE_SWEEP_BACKLOG_2026-10-01.md`,
 `SCIENCE_FAITH_SWEEP_BACKLOG_2026-10-04.md`, `CHRISTIAN_REVOLUTION_SWEEP_BACKLOG_2026-10-04.md`.
+
+---
+
+## C. Low-priority tidy-ups (not content gaps)
+
+- **Footnote first-appearance order — 4 essays (cosmetic QA, pre-existing).** `node tools/check-footnote-integrity.mjs`
+  flags `library/hands.html`, `library/hist_jesus.html`, `library/holy_spirit.html`, `library/shema.html` as
+  "footnotes first called out of order" — a later-numbered `<sup>N</sup>` is cited in the body before a lower one
+  (e.g. `shema.html` cites footnote 18 before 15–17). Every marker still maps to exactly one `<li>` (nothing
+  broken for the reader, no missing source, no dead link); it is purely the first-appearance numbering sequence.
+  Not blocking: CI runs the check with `--changed`, so these dormant flags only fail the build if one of the four
+  essays is next edited. Fixing means renumbering the markers + the bibliography `<li>`s + any "(note N)"
+  cross-references together, in one pass, which also re-opens the gate for that essay (footnote numbers are cited
+  content). Low priority — do it only when one of these essays is next touched for other reasons. (Noted 2026-10-06.)
