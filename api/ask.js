@@ -8,6 +8,34 @@ import { parseBody } from '../lib/parse-body.js';
 import { isCrisis, CRISIS_REPLY } from '../lib/crisis.js';
 
 import { applyCors } from '../lib/cors.js';
+
+// ── SLAVERY → PASTORAL DECLINE (owner directive, 2026-10-06) ──
+// Slavery is treated as a pastoral matter rather than an apologetics topic: this
+// tool does not argue it. Any question on the subject is declined and referred to
+// a pastor/priest — the same decline-and-refer posture already used for
+// denominational questions — delivered deterministically before any model call.
+// Crisis routing always outranks it (checked first in the handler), so a message
+// that is both a crisis disclosure and mentions slavery still gets the pastoral
+// crisis reply, not this decline.
+// The biblical metaphor "slave(s) to <X>" (slave to sin / to Christ / to
+// righteousness, Rom 6) is deliberately excluded, so a Romans 6 question is not
+// swept in.
+function isSlaveryTopic(text) {
+  if (!text) return false;
+  const t = String(text);
+  // High-signal topic words are decisive on their own.
+  if (/\bslavery\b|\benslav(?:e|ed|es|ing|ement)\b|\bbond(?:servant|servants|slave|slaves)\b|\bslave[-\s]?(?:trade|trader|traders|owner|owners|owning|holder|holders|holding|master|masters|ship|ships)\b/i.test(t)) return true;
+  // Bare "slave(s)": a slavery question UNLESS every occurrence is the biblical
+  // metaphor "slave(s) to sin / to Christ / to righteousness", etc. (Rom 6).
+  // Only known ABSTRACT objects are stripped, so "slaves to obey their masters"
+  // (a real slavery question) is kept.
+  if (/\bslaves?\b/i.test(t)) {
+    const stripped = t.replace(/\bslaves?\s+to\s+(?:sin|christ|god|jesus|righteousness|money|mammon|greed|desires?|passions?|lust|fear|the\s+law|the\s+world)\b/ig, ' ');
+    return /\bslaves?\b/i.test(stripped);
+  }
+  return false;
+}
+const SLAVERY_REPLY = "That's a weighty and painful question, and it isn't one this tool tries to answer. It deserves an unhurried, personal conversation rather than a quick reply from a bot — I'd gently encourage you to bring it to your own pastor or priest, who can sit with you, understand your context, and walk through it with the care it deserves.\n\nI'm glad to help with other questions, though — for example the historical evidence for the resurrection, the reliability of the New Testament, or the case that God exists.";
 // Build the dynamic "verified primary sources" block appended to the system
 // prompt when retrieval finds relevant passages. Only fact-checked, public-domain
 // entries reach here (see lib/sources-verified.js). The instructions REINFORCE the
@@ -99,6 +127,14 @@ export default async function handler(req, res) {
     // The pattern itself moved to lib/crisis.js on 2026-08-10 (unchanged) so the
     // other endpoints share it. Routing and behaviour here are identical.
     const crisisBackstop = isCrisis(question);
+
+    // Slavery is handled pastorally (owner directive, 2026-10-06): decline and
+    // refer to a pastor, deterministically, before any model call. Crisis always
+    // outranks it, so a crisis disclosure that also mentions slavery still gets
+    // the pastoral crisis reply.
+    if (!crisisBackstop && isSlaveryTopic(question)) {
+      return res.status(200).json({ answer: SLAVERY_REPLY, declined: 'slavery' });
+    }
 
     const apiKey = process.env.ANTHROPIC_API_KEY;
     // A crisis message must never get a bare 500 or 429. lib/crisis.js promises

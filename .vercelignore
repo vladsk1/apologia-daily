@@ -64,3 +64,17 @@ homepage-v2.html
 # vercel.json, re-add the 'For Parents' item to the nav CANON in tools/sync-nav.mjs (and
 # the dashboard tile), and run it through the content pipeline first. See HANDOFF.md.
 parents.html
+
+# Parked slavery content — TAKEN OFF the live site 2026-10-06 (owner decision: slavery is
+# to be treated as a pastoral question, not an apologetics topic), KEPT in the repo for
+# possible reintroduction. The three files were MOVED here from library/, answers/ and the
+# root so the filesystem-scanning generators (essay-index, search-index, sources-index,
+# our-sources, trust-numbers) drop them automatically. This dir is excluded so Vercel never
+# serves them. To bring it back: git mv them to their original paths (_parked/abolition.html
+# -> library/abolition.html, _parked/ev-m-abolition.html -> ev-m-abolition.html,
+# _parked/did-christianity-end-slavery.html -> answers/did-christianity-end-slavery.html),
+# remove the three /…/abolition + did-christianity-end-slavery redirects in vercel.json,
+# re-wire the ev-s8 abolition card + evidence-library ARG_TAB/crawl-list + library/answers
+# indexes + the pocket card + briefs entry + the compassion/equality cross-links, then
+# re-run every generator. Also reconsider the slavery->pastor decline in api/ask.js.
+_parked/

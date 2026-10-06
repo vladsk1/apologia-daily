@@ -40,7 +40,7 @@
     trinity_mormons: DEITY,
     // The Christian Revolution
     riseofchurch: HARM, persecution: HARM, compassion: HARM, progress: HARM,
-    abolition: OPPRESS, equality: OPPRESS
+    equality: OPPRESS
   };
   var WHO = { atheist: 'an atheist', muslim: 'a Muslim', agnostic: 'an agnostic', secularist: 'a secularist' };
 
