@@ -463,6 +463,7 @@
       try {
         const res = await fetch('/api/ask', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ question: apiQ }) });
         if (res.status === 429) { setStatus("You've reached today's free limit for live answers. Please try again tomorrow, or browse the answered objections above.", 'err'); return; }
+        if (res.status === 413) { setStatus("That message — together with the earlier answer it builds on — is too long to send. Try asking your follow-up more briefly, or tap “× new question” to start a fresh thread.", 'err'); return; }
         if (!res.ok) throw new Error('API '+res.status);
         const data = await res.json();
         if (!data.answer) throw new Error('no answer');
