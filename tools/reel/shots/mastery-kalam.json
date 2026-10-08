@@ -1,0 +1,16 @@
+{
+  "base": "https://apologiadaily.com",
+  "width": 390,
+  "height": 700,
+  "scale": 2,
+  "prep": "document.documentElement.style.scrollBehavior='auto';try{localStorage.setItem('ad-nocount','1')}catch(e){};window.__hideFloats=()=>{for(const el of document.querySelectorAll('body *')){const cs=getComputedStyle(el);if(cs.position==='fixed'&&el.getBoundingClientRect().top>90)el.style.visibility='hidden';}};window.__go=async(sel,off)=>{const e=typeof sel==='string'?document.querySelector(sel):[...document.querySelectorAll('h2,h3')].find(h=>h.textContent.trim().startsWith(sel.text));if(e){e.scrollIntoView({block:'start'});window.scrollBy(0,-(off||70));}await new Promise(r=>setTimeout(r,500));__hideFloats();};",
+  "shots": [
+    { "name": "01-hero", "path": "/ev-m-kalam.html", "settle": 3000, "js": "__hideFloats();" },
+    { "name": "02-brief", "path": "/ev-m-kalam.html", "settle": 3000, "js": "await __go({text:'The argument in brief'});" },
+    { "name": "03-levels", "path": "/ev-m-kalam.html", "settle": 3000, "js": "await __go({text:'Your mastery of this argument'});" },
+    { "name": "04-understand", "path": "/ev-m-kalam.html", "settle": 3000, "js": "await __go('#understand');" },
+    { "name": "05-flash", "path": "/ev-m-kalam.html", "settle": 3000, "js": "await __go('#flash',120);" },
+    { "name": "06-proveit", "path": "/ev-m-kalam.html", "settle": 3000, "js": "await __go('#proveit');" },
+    { "name": "07-explain", "path": "/ev-m-kalam.html", "settle": 3000, "js": "await __go('#rq-explain',140);" }
+  ]
+}
