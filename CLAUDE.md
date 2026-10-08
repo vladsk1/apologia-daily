@@ -859,6 +859,14 @@
 > `xcards/x-honor-the-son.json`. It's gated content (argument+orthodoxy; +neutrality for
 > deity/Trinity/Islam) — reuse the reel/essay's certified framing; details in the `make-reel` skill.
 >
+> **🅿 PARKED — THE MEMORY PALACE IS OFF THE LIVE SITE BUT KEPT FOR LATER. OWNER DECISION, 2026-10-08.**
+> `palace.html` stays **in the repo** but is **not deployed** (`.vercelignore`), is excluded from the app bundle
+> (`tools/build-app-bundle.mjs`), and `/palace.html` + `/argument-map.html` redirect **temporarily (302)** to
+> `/evidence-library.html` (`vercel.json`). Its drill card was removed from the 36 `ev-m-*` mastery pages that had
+> it, plus the links on `games.html`, `dashboard.html` (tile + 7-day plan), `evidence-library.html`, the
+> `scholars.html` footer, `sitemap.xml` and the search index. **Do not re-add any of these on your own initiative —
+> the owner may bring it back later; only then reverse the steps listed in `.vercelignore`.**
+>
 > **🅿 PARKED — THE "FOR PARENTS" PAGE IS OFF THE LIVE SITE BUT KEPT FOR LATER. OWNER DECISION, 2026-10-01.**
 > `parents.html` stays **in the repo** but is **not deployed** (`.vercelignore`) and `/parents.html` redirects
 > **temporarily (302)** to `/` (`vercel.json`). Removed from the nav CANON (`tools/sync-nav.mjs`), the old
