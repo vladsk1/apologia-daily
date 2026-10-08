@@ -43,3 +43,22 @@ test('unsubUrl embeds the user id and a matching token', () => {
   assert.equal(q.get('u'), USER);
   assert.equal(verifyUnsubToken(q.get('u'), q.get('t'), SECRET), true);
 });
+
+test('unsubscribe links verify against UNSUB_SECRET or CRON_SECRET, so either can rotate safely', async () => {
+  const { verifyUnsubTokenAny, unsubSigningSecret } = await import('../lib/unsub-token.js');
+  const env = { UNSUB_SECRET: 'u-secret', CRON_SECRET: 'c-secret' };
+  assert.equal(unsubSigningSecret(env), 'u-secret');
+  assert.equal(unsubSigningSecret({ CRON_SECRET: 'c-secret' }), 'c-secret');
+  assert.ok(verifyUnsubTokenAny(USER, unsubToken(USER, 'u-secret'), env), 'new links');
+  assert.ok(verifyUnsubTokenAny(USER, unsubToken(USER, 'c-secret'), env), 'links already in inboxes');
+  assert.ok(!verifyUnsubTokenAny(USER, unsubToken(USER, 'other'), env));
+  assert.ok(!verifyUnsubTokenAny(USER, unsubToken(USER, 'c-secret'), { UNSUB_SECRET: 'u-secret' }));
+});
+
+test('marketing email footers carry the postal address when it is configured', async () => {
+  const { postalFooterHtml } = await import('../lib/mail-footer.js');
+  assert.equal(postalFooterHtml({}), '');
+  assert.match(postalFooterHtml({ EMAIL_POSTAL_ADDRESS: 'PO Box 1, Town <NSW>', EMAIL_SENDER_NAME: 'A & B' }), /A &amp; B &middot; PO Box 1, Town &lt;NSW&gt;/);
+  const src = (await import('node:fs')).readFileSync('api/weekly-email.js', 'utf8');
+  assert.equal((src.match(/\$\{postalFooterHtml\(\)\}/g) || []).length, 2, 'both email templates (summary + nudge) must include the postal line');
+});

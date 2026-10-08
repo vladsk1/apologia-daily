@@ -1,5 +1,6 @@
 import { requireSecret } from '../lib/require-secret.js';
-import { unsubUrl } from '../lib/unsub-token.js';
+import { unsubUrl, unsubSigningSecret } from '../lib/unsub-token.js';
+import { postalFooterHtml, hasPostalAddress } from '../lib/mail-footer.js';
 import { handleUnsubscribe } from '../lib/handle-unsubscribe.js';
 import { deleteAccount } from '../lib/delete-account.js';
 // api/weekly-email.js
@@ -98,7 +99,10 @@ export default async function handler(req, res) {
 
   try {
     // ── GET ALL USERS ──
-    const usersRes = await fetch(`${SB_URL}/auth/v1/admin/users?per_page=500`, {
+    // Paged: one request returns at most per_page users (capped at 100 pages as a
+    // runaway guard).
+    const PER_PAGE = 1000;
+    const usersRes = await fetch(`${SB_URL}/auth/v1/admin/users?per_page=${PER_PAGE}&page=1`, {
       headers: {
         'apikey': authKey,
         'Authorization': `Bearer ${authKey}`
@@ -117,6 +121,18 @@ export default async function handler(req, res) {
 
     const usersData = await usersRes.json();
     const users = usersData.users || [];
+    // Keep going until an empty page: the server may cap per_page below PER_PAGE, so
+    // a short page is not proof it was the last one.
+    for (let page = 2; users.length && page <= 100; page++) {
+      const more = await fetch(`${SB_URL}/auth/v1/admin/users?per_page=${PER_PAGE}&page=${page}`, {
+        headers: { 'apikey': authKey, 'Authorization': `Bearer ${authKey}` }
+      });
+      if (!more.ok) break;
+      const batch = ((await more.json()) || {}).users || [];
+      users.push(...batch);
+      if (!batch.length) break;
+    }
+    if (!hasPostalAddress()) console.warn('weekly-email: EMAIL_POSTAL_ADDRESS is not set; marketing emails go out without a postal address (docs/OWNER_TODO.md)');
 
     // ── GROUP NUDGES ──
     // Members whose study group has momentum this week but who haven't shown up
@@ -195,7 +211,7 @@ export default async function handler(req, res) {
       const ex = explainStats[user.id] || null;
 
       try {
-        const unsub = process.env.CRON_SECRET ? unsubUrl(user.id, process.env.CRON_SECRET) : 'https://apologiadaily.com';
+        const unsub = unsubSigningSecret() ? unsubUrl(user.id, unsubSigningSecret()) : 'https://apologiadaily.com';
         await sendWeeklyEmail(RESEND_KEY, user.email, name, fc, ex, unsub);
         results.sent++;
         // Small delay to avoid rate limits
@@ -286,7 +302,7 @@ async function sendGroupNudges({ SB_URL, authKey, RESEND_KEY, emailById }) {
   for (let i = 0; i < targets.length; i++) {
     const uid = targets[i], info = nudgeFor[uid], who = emailById[uid];
     try {
-      const unsub = process.env.CRON_SECRET ? unsubUrl(who.id, process.env.CRON_SECRET) : 'https://apologiadaily.com';
+      const unsub = unsubSigningSecret() ? unsubUrl(who.id, unsubSigningSecret()) : 'https://apologiadaily.com';
       await resendSend(RESEND_KEY, who.email, buildNudgeSubject(info.group), buildNudgeHtml(who.name, info.group, info.activeCount, info.memberCount, unsub), unsub);
       out.nudgedIds.add(uid); out.sent++;
       await new Promise(function (r) { setTimeout(r, 100); });
@@ -346,7 +362,7 @@ function buildNudgeHtml(name, g, activeCount, memberCount, unsub) {
   </div>
   <div style="background:#050d1a;padding:1.25rem 2rem;border-top:1px solid rgba(255,255,255,0.06);">
     <div style="font-family:Arial,sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.3);text-align:center;line-height:1.7;">
-      Apologia Daily &middot; apologiadaily.com<br>
+      ${postalFooterHtml()}Apologia Daily &middot; apologiadaily.com<br>
       You are receiving this because you joined a study group.
       <a href="https://apologiadaily.com/study-groups.html" style="color:rgba(200,169,81,0.5);text-decoration:none;">Manage your groups</a> &middot;
       <a href="${unsub || 'https://apologiadaily.com'}" style="color:rgba(200,169,81,0.5);text-decoration:none;">Unsubscribe</a>
@@ -519,7 +535,7 @@ function buildEmailHtml(name, fc, ex, unsub) {
   <!-- FOOTER -->
   <div style="background:#050d1a;padding:1.25rem 2rem;border-top:1px solid rgba(255,255,255,0.06);">
     <div style="font-family:Arial,sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.3);text-align:center;line-height:1.7;">
-      Apologia Daily &nbsp;&middot;&nbsp; apologiadaily.com<br>
+      ${postalFooterHtml()}Apologia Daily &nbsp;&middot;&nbsp; apologiadaily.com<br>
       <a href="https://apologiadaily.com/dashboard.html" style="color:rgba(255,255,255,0.3);">Dashboard</a> &nbsp;&middot;&nbsp;
       You are receiving this because you have an Apologia Daily account.<br>
       <a href="${unsub || 'https://apologiadaily.com'}" style="color:rgba(200,169,81,0.5);text-decoration:none;">Unsubscribe</a>

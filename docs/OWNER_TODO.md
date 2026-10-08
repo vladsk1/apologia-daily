@@ -22,7 +22,16 @@ You can run 1 and 2 in the same sitting, in that order.
 
 - [ ] **4. Add `RATE_SALT`** = any long random string (e.g. 40+ characters from a password
   manager), for Production. It scrambles IP addresses for the rate limits; without it the code
-  falls back to another secret, which works but isn't ideal. Redeploy afterwards.
+  falls back to another secret, which works but isn't ideal.
+- [ ] **4b. Add `EMAIL_POSTAL_ADDRESS`** = your postal address on one line (a PO box is fine),
+  and **`EMAIL_SENDER_NAME`** = the legal name (see 9). Both go in the footer of the weekly
+  summary and group-reminder emails, which anti-spam law requires (audit item 5). Until it is
+  set, those emails go out without an address.
+- [ ] **4c. Add `UNSUB_SECRET`** = another long random string. Unsubscribe links are then signed
+  with it instead of `CRON_SECRET`, so rotating `CRON_SECRET` later won't break them. Links
+  already sent keep working either way.
+
+Redeploy once after adding these (Deployments → ⋯ → Redeploy).
 
 ## When you have PostHog access (eu.posthog.com)
 
@@ -42,7 +51,8 @@ You can run 1 and 2 in the same sitting, in that order.
 
 - [ ] **9. Legal entity name** for the privacy policy: your name as a sole trader, or a business
   name (with ABN if you have one).
-- [ ] **10. Postal address** for the footer of marketing emails (audit item 5). A PO box is fine.
+- [ ] **10. Postal address**: you can set it yourself as `EMAIL_POSTAL_ADDRESS` (4b), or send it
+  to me and I'll put it in the privacy policy's contact section too.
 
 ---
 *New items are added here as the audit continues (items 5–10).*
