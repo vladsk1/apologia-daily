@@ -47,6 +47,21 @@ Redeploy once after adding these (Deployments → ⋯ → Redeploy).
 - [ ] **8. Test signup → Study Groups → delete account** with a throwaway account (after 1 and
   2 above). Account deletion has never been run against the live database.
 
+## Before Pro goes on sale (audit item 6; decided 2026-10-08: AUD, monthly only)
+
+You:
+- [ ] **11. Create a Stripe account** (stripe.com, Australian business) and a product "Apologia
+  Daily Pro" with one price: **A$8 / month, recurring**. Turn on the **Customer Portal**
+  (Settings → Billing → Customer portal: allow cancel, update card, view invoices) and
+  **email receipts** (Settings → Emails → successful payments + refunds).
+- [ ] **12. Decide, later:** free trial (none / 7 days / other) and which features stay free.
+
+Me, once 11 is done (the new terms already promise these, so they must exist on launch day):
+- Stripe Checkout button on the pricing card, with the terms line next to it (already there).
+- A webhook that marks the account as Pro, replacing the hardcoded `isPro = true`.
+- A "Manage or cancel subscription" button in Dashboard → Account (Stripe Customer Portal).
+- The in-app path: Apple/Google purchases through RevenueCat (no Stripe inside the app).
+
 ## Information I need from you
 
 - [ ] **9. Legal entity name** for the privacy policy: your name as a sole trader, or a business
