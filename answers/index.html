@@ -236,7 +236,9 @@
     var msg=document.getElementById('ask-submit-msg');
     if(q.length<8){ msg.style.display='block'; msg.style.color='#a23'; msg.textContent='Please type a bit more of your question.'; return; }
     var askLink=document.getElementById('ask-now-link');
-    try{ askLink.href='/asked-and-answered.html?q='+encodeURIComponent(q); }catch(e){}
+    // The question only goes into the "ask the AI" link once the safety check has
+    // come back clean (see below); until then the link carries no text.
+    try{ askLink.href='/asked-and-answered.html'; }catch(e){}
     // This form is otherwise fire-and-forget, but the endpoint answers crisis:true
     // on a message that reads as a cry for help. Show the referral instead of the
     // thank-you and the "ask the AI" nudge — the last thing that person needs is
@@ -258,6 +260,10 @@
           // answer — with their own words in the query string — is the opposite
           // of what the referral is for.
           if(askLink){ askLink.style.display='none'; askLink.href='/asked-and-answered.html'; }
+        } else {
+          var withQ='/asked-and-answered.html?q='+encodeURIComponent(q);
+          if(askLink) askLink.href=withQ;
+          var inMsg=msg.querySelector('a'); if(inMsg) inMsg.href=withQ;
         }
       }).catch(function(){});
     // Counted once, server-side, by /api/submit-question (no client capture).

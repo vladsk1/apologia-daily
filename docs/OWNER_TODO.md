@@ -1,0 +1,48 @@
+# Owner to-do — things only you can do
+
+One running list from the 2026-10-08 legal/security audit (items 1–10). Code changes are
+already live; these are the steps that need your Supabase, Vercel or PostHog login, or
+information only you have. Tick each one off (change `[ ]` to `[x]` and add the date).
+
+## When you have Supabase access (Dashboard → SQL Editor)
+
+- [ ] **1. Run [`docs/SUPABASE_RLS_HARDENING.md`](SUPABASE_RLS_HARDENING.md)** (audit item 1).
+  Run Step 1 first and keep its output, then Step 2, then the Step 3 checks. Step 4 (clear old
+  Explain It Back text) is optional but recommended. Until this runs, `push_subscriptions`,
+  `flashcards`, `study_plans_progress`, `explain_sessions` and `daily_arguments` are unverified.
+- [ ] **2. Run [`docs/AGE_SCREEN.md`](AGE_SCREEN.md)** (audit item 3). Until it runs, the 18+ rule
+  for Study Groups is only the old "press OK" box. Then do its Step 2 checks, including one
+  test signup. The optional cleanup line removes any existing under-18 group memberships.
+- [ ] **3. Database → Webhooks:** check that the `auth.users` signup webhook fires on **INSERT
+  only**. (An UPDATE hook is ignored by the code now, but it shouldn't be there.)
+
+You can run 1 and 2 in the same sitting, in that order.
+
+## When you have Vercel access (Project → Settings → Environment Variables)
+
+- [ ] **4. Add `RATE_SALT`** = any long random string (e.g. 40+ characters from a password
+  manager), for Production. It scrambles IP addresses for the rate limits; without it the code
+  falls back to another secret, which works but isn't ideal. Redeploy afterwards.
+
+## When you have PostHog access (eu.posthog.com)
+
+- [ ] **5. Settings → Session replay:** confirm it is off. (The code forces it off anyway.)
+- [ ] **6. Expect fewer PostHog events from now on.** PostHog only runs for visitors who click
+  "Allow analytics" (audit item 4). Vercel Analytics still counts every page view. Not a bug.
+- [ ] **7. Optional:** delete old events whose URL contains `?q=` (before 2026-10-08 a typed
+  question could appear in the page address). Data management → filter `$current_url`
+  contains `q=`.
+
+## With a computer and a throwaway email address
+
+- [ ] **8. Test signup → Study Groups → delete account** with a throwaway account (after 1 and
+  2 above). Account deletion has never been run against the live database.
+
+## Information I need from you
+
+- [ ] **9. Legal entity name** for the privacy policy: your name as a sole trader, or a business
+  name (with ABN if you have one).
+- [ ] **10. Postal address** for the footer of marketing emails (audit item 5). A PO box is fine.
+
+---
+*New items are added here as the audit continues (items 5–10).*

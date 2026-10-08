@@ -165,7 +165,7 @@
         <li>Detect and prevent fraud and abuse</li>
         <li>Comply with legal obligations</li>
       </ul>
-      <p><strong>Legal bases (for visitors in the UK and EEA):</strong> we process account, progress and study-group data to provide the Service you signed up for (performance of a contract); security, abuse prevention and basic usage analytics on the basis of our legitimate interest in running a safe, working site; and the weekly summary and study-group reminder emails on the basis of our legitimate interest in keeping you engaged with the Service you signed up for; you can object at any time with the unsubscribe link in any of them.</p>
+      <p><strong>Legal bases (for visitors in the UK and EEA):</strong> we process account, progress and study-group data to provide the Service you signed up for (performance of a contract); security, abuse prevention and cookie-free page-view counts (Vercel Web Analytics) on the basis of our legitimate interest in running a safe, working site; PostHog analytics only with your consent, which you can withdraw at any time (section 7); and the weekly summary and study-group reminder emails on the basis of our legitimate interest in keeping you engaged with the Service you signed up for; you can object at any time with the unsubscribe link in any of them.</p>
     </div>
 
     <div class="legal-section">
@@ -207,15 +207,16 @@
       <p>These providers have their own privacy policies governing their use of your data. We encourage you to review their policies.</p>
     </div>
 
-    <div class="legal-section">
+    <div class="legal-section" id="analytics">
       <h2>7. Analytics, Cookies and Local Storage</h2>
       <p>We use two analytics tools to understand how the Service is used:</p>
       <ul>
-        <li><strong>Vercel Web Analytics</strong> counts page views and where visitors come from. It does not use cookies.</li>
-        <li><strong>PostHog</strong> (data held in the EU) records the pages you view, the buttons and links you click, how far you scroll, and the page or campaign link (such as a <code>ref</code> or <code>utm</code> tag) that brought you here. It stores a random identifier in a cookie and in your browser&rsquo;s localStorage so visits from the same browser can be grouped. If you are signed in, this is linked to your account&rsquo;s internal ID &mdash; never your email address or name. It does not record what you type into forms or chat boxes, and we do not use session recording (screen replay).</li>
+        <li><strong>Vercel Web Analytics</strong> counts page views and where visitors come from. It sets no cookie and stores nothing on your device, so it runs for every visitor.</li>
+        <li><strong>PostHog</strong> (data held in the EU) runs <strong>only if you choose &ldquo;Allow analytics&rdquo;</strong> in the box shown on your first visit; until then it is not loaded at all. If you allow it, it records the pages you view, the links you click (not the text of buttons, and nothing at all on the sign-in, account, AI chat, debate, devotional and Study Groups pages), how far you scroll, and the page or campaign link (such as a <code>ref</code> or <code>utm</code> tag) that brought you here. It stores a random identifier in a cookie and in your browser&rsquo;s localStorage so visits from the same browser can be grouped. If you are signed in, this is linked to your account&rsquo;s internal ID &mdash; never your email address or name. It does not record what you type into forms or chat boxes, and we do not use session recording (screen replay).</li>
       </ul>
       <p>We also use localStorage to remember your progress, streak and preferences, and your last few Ask Anything questions (on your device only), and a cookie and localStorage to keep you signed in. We do not use advertising cookies, and we do not sell or share your data for advertising.</p>
-      <p><strong>To turn analytics off</strong> in a browser, visit <a href="/?nocount=1">apologiadaily.com/?nocount=1</a> once; this stops both analytics tools in that browser (visit <code>?nocount=0</code> to turn them back on). You can also clear the site&rsquo;s cookies and localStorage in your browser settings, though that will reset locally stored progress.</p>
+      <p><strong>Change your choice</strong> at any time: <button type="button" onclick="window.adConsent &amp;&amp; window.adConsent.reset()" style="font:inherit;padding:4px 12px;border:1px solid currentColor;border-radius:4px;background:transparent;color:inherit;cursor:pointer;">Change analytics choice</button> (this also removes PostHog&rsquo;s cookie and stored identifier from this browser).</p>
+      <p><strong>To turn all analytics off</strong> in a browser, visit <a href="/?nocount=1">apologiadaily.com/?nocount=1</a> once; this stops both analytics tools in that browser (visit <code>?nocount=0</code> to turn them back on). You can also clear the site&rsquo;s cookies and localStorage in your browser settings, though that will reset locally stored progress.</p>
     </div>
 
     <div class="legal-section">

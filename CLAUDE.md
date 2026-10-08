@@ -1082,6 +1082,9 @@
 >   until they expire. Fix: add the column, then add `['push_subscriptions','user_id']` to `USER_TABLES`.
 >
 > **Infrastructure / verification**
+> - ⭐ **THE OWNER'S SINGLE TO-DO LIST is [`docs/OWNER_TODO.md`](docs/OWNER_TODO.md)** (2026-10-08 audit).
+>   Every step that needs the owner's Supabase/Vercel/PostHog login or information lives there; add new
+>   ones to it rather than scattering them. The two SQL items below are items 1–2 on it.
 > - 🔴 **OWED BY THE OWNER — run `docs/SUPABASE_RLS_HARDENING.md` in the Supabase SQL editor (written
 >   2026-10-08, NOT YET RUN).** The 2026-10-08 legal/security audit found no row-level security in the repo
 >   for `push_subscriptions` (server-only; if RLS is off, the public anon key on every page can read every

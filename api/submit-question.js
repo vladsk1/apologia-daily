@@ -49,7 +49,8 @@ export default async function handler(req, res) {
   // Record demand in PostHog (server-side), so the funnel is measurable.
   var PH_KEY = process.env.POSTHOG_KEY;
   var PH_HOST = process.env.POSTHOG_HOST || 'https://eu.i.posthog.com';
-  if (PH_KEY) {
+  // A crisis message is not "demand" for an answer: don't count it.
+  if (PH_KEY && !crisis) {
     try {
       await fetch(PH_HOST + '/capture/', {
         method: 'POST',

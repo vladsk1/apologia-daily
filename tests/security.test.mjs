@@ -196,3 +196,16 @@ test('age screen: signup sends no birth date and nothing at all for an under-13'
   assert.ok(fn.indexOf('age < 13') !== -1 && fn.indexOf('age < 13') < fn.indexOf('sb.auth.signUp'),
     'the under-13 refusal must run before any signup call');
 });
+
+test('analytics: PostHog loads only after the visitor allows it, never with replay', () => {
+  const src = readFileSync('analytics.js', 'utf8');
+  const start = src.indexOf('function startPostHog()');
+  assert.ok(start !== -1, 'startPostHog() missing');
+  const init = src.indexOf('window.posthog.init(');
+  assert.ok(init > start, 'posthog.init must live inside startPostHog()');
+  // every call of startPostHog() outside its definition is behind a "yes"
+  const calls = [...src.matchAll(/startPostHog\(\);/g)].map((m) => src.slice(Math.max(0, m.index - 60), m.index));
+  for (const c of calls) assert.match(c, /=== 'yes'/, 'startPostHog() called without a yes: ' + c);
+  assert.match(src, /disable_session_recording: true/);
+  assert.match(src, /mask_all_text: true/);
+});
