@@ -1,0 +1,100 @@
+/* mastery-ui.css — shared layout + interaction-feedback layer for every ev-m-*.html
+   mastery page. Loaded after each page's inline <style>, so it refines rather than
+   replaces. Pairs with /library/mastery-ui.js. Pure presentation: no content lives here. */
+
+/* ---------- 1. Every toggle button shows that it is pressed ---------- */
+/* The rebuilt pages toggle .sel on .btn.ghost buttons (Bronze property chips, the
+   Explain-It-Back level picker) but no rule ever styled .btn.sel, so a pressed
+   button looked identical to an unpressed one. */
+.btn.ghost.sel,
+.btn.ghost[aria-pressed="true"]{background:var(--n5,#1e3a5f);color:#fff;border-color:var(--n5,#1e3a5f);box-shadow:0 0 0 3px rgba(30,58,95,.16)}
+.btn.ghost.sel:hover{background:var(--n7,#14294a)}
+#propPool .btn.ghost.sel::before,
+#explainLevels .btn.ghost.sel::before{content:"\2713\00a0";font-weight:700;color:var(--gl,#e0c878)}
+.confrow button.sel{box-shadow:0 0 0 3px rgba(30,58,95,.16)}
+.confrow button.sel::before{content:"\2713\00a0"}
+button:focus-visible{outline:2px solid var(--g,#c8a951);outline-offset:2px}
+
+/* Ordering chips: a tapped line no longer just fades out — it turns navy and
+   shows the position you gave it (1, 2, 3). */
+#orderPool .btn:disabled{opacity:1 !important;background:var(--n5,#1e3a5f);color:#fff;border-color:var(--n5,#1e3a5f);cursor:default}
+#orderPool .btn[data-step]:disabled::before{content:attr(data-step);display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--g,#c8a951);color:var(--n,#0a1628);font-size:12px;font-weight:700;margin-right:8px}
+
+/* Small confirmation that a rating was recorded (the objection drill moves on
+   to the next card the instant you rate, so the press needs a visible receipt). */
+.mu-toast{font-family:var(--ui,sans-serif);font-size:13px;font-weight:600;border-radius:8px;padding:8px 12px;margin-top:10px;animation:muFade .25s ease}
+.mu-toast.good{background:var(--okl,#e8f4ed);color:var(--ok,#2f7d4f);border:1px solid #cfe6da}
+.mu-toast.redo{background:#fbf3e2;color:#9a7416;border:1px solid #f0e6cb}
+@keyframes muFade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* ---------- 2. Reason-it-out reveals ---------- */
+.mu-derive-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:12px 0 2px;font-family:var(--ui,sans-serif);font-size:13px;color:var(--tm,#5a6b82)}
+.mu-derive-bar b{color:var(--td,#0a1628)}
+.mu-derive-bar .mu-link{background:none;border:none;padding:0;font:inherit;font-weight:600;color:var(--n5,#1e3a5f);text-decoration:underline;cursor:pointer}
+.mu-prog{flex:1;min-width:120px;max-width:220px;height:6px;border-radius:99px;background:#e6ebf3;overflow:hidden}
+.mu-prog i{display:block;height:100%;width:0;background:var(--g,#c8a951);transition:width .3s}
+
+.derive .dr{grid-template-columns:1fr auto;row-gap:10px}
+.derive .dr .q{grid-column:1}
+.derive .dr .rev{grid-column:2;grid-row:1}
+.derive .dr .mu-guess{grid-column:1 / -1;display:flex;gap:8px;align-items:center}
+.derive .dr .mu-guess input{flex:1;min-width:0;font-family:var(--ui,sans-serif);font-size:14px;color:var(--td,#0a1628);border:1px dashed #cfdcee;border-radius:8px;padding:8px 11px;background:#fff}
+.derive .dr .mu-guess input:focus{outline:2px solid var(--n3,#4a6fa5);outline-offset:1px;border-style:solid}
+.derive .dr.shown .mu-guess{display:none}
+/* the answer: a full-width block under the question, never a squeezed nowrap word */
+.derive .dr .ans{grid-column:1 / -1;white-space:normal;font-size:15px;line-height:1.45}
+.derive .dr.shown .ans{display:block;background:#fff;border:1px solid #f0e6cb;border-left:4px solid var(--g,#c8a951);border-radius:8px;padding:10px 13px;color:var(--td,#0a1628)}
+.derive .dr.shown .ans::before{content:"Answer";display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--gd,#9a7416);margin-bottom:3px}
+.derive .dr .why{display:none;grid-column:1 / -1;font-family:var(--ss,serif);font-size:14.5px;line-height:1.55;color:var(--td,#0a1628);background:#f4f7fb;border-radius:8px;padding:10px 13px}
+.derive .dr .why::before{content:"Why";display:block;font-family:var(--ui,sans-serif);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--n5,#1e3a5f);margin-bottom:3px}
+.derive .dr.shown .why{display:block}
+.derive .dr .mu-you{display:none;grid-column:1 / -1;font-family:var(--ui,sans-serif);font-size:13px;color:var(--tm,#5a6b82)}
+.derive .dr.shown .mu-you{display:block}
+.derive .dr .mu-self{display:none;grid-column:1 / -1;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--ui,sans-serif);font-size:13px;color:var(--tm,#5a6b82)}
+.derive .dr.shown .mu-self{display:flex}
+.derive .dr .mu-self-b{display:inline-flex;gap:8px;white-space:nowrap}
+.derive .dr .mu-self button{font-family:var(--ui,sans-serif);font-size:12.5px;font-weight:600;border:1px solid #cfdcee;background:#fff;color:var(--n5,#1e3a5f);border-radius:99px;padding:5px 12px;cursor:pointer}
+.derive .dr .mu-self button[aria-pressed="true"]{background:var(--n5,#1e3a5f);color:#fff;border-color:var(--n5,#1e3a5f)}
+.derive .dr .mu-self button[aria-pressed="true"]::before{content:"\2713\00a0"}
+.derive .dr.mu-got{border-color:#cfe6da;background:var(--okl,#e8f4ed)}
+.derive .dr.mu-miss{border-color:#f0e6cb;background:#fbf8f0}
+@media(max-width:560px){
+  .derive .dr{grid-template-columns:1fr}
+  .derive .dr .rev{grid-column:1;grid-row:auto;justify-self:start}
+}
+
+/* ---------- 3. Every section says what it is for ---------- */
+.mu-kickrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:11px}
+.mu-kickrow .kick{margin-bottom:0 !important}
+.mu-step{font-family:var(--ui,sans-serif);font-size:11px;font-weight:700;color:#fff;background:var(--n5,#1e3a5f);border-radius:6px;padding:3px 7px;letter-spacing:.02em}
+.mu-type{margin-left:auto;font-family:var(--ui,sans-serif);font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:99px;padding:3px 9px;white-space:nowrap}
+.mu-type.read{background:#eef0f3;color:#5a6b82}
+.mu-type.act{background:#fbf3e2;color:#9a7416}
+.mu-type.test{background:var(--okl,#e8f4ed);color:var(--ok,#2f7d4f)}
+
+/* Sticky "where am I" bar under the site nav */
+.mu-bar{position:sticky;top:64px;z-index:900;background:rgba(250,248,244,.96);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid var(--border,#e8e2d8);transform:translateY(-110%);opacity:0;pointer-events:none;transition:transform .2s,opacity .2s;margin-bottom:-45px}
+.mu-bar.on{transform:none;opacity:1;pointer-events:auto}
+.mu-bar-in{max-width:840px;margin:0 auto;padding:0 16px;height:45px;display:flex;align-items:center;gap:6px;font-family:var(--ui,sans-serif);font-size:13px;overflow-x:auto;scrollbar-width:none}
+.mu-bar-in::-webkit-scrollbar{display:none}
+.mu-bar a{display:inline-flex;align-items:center;gap:7px;color:var(--tm,#5a6b82);text-decoration:none;font-weight:600;padding:6px 10px;border-radius:8px;white-space:nowrap}
+.mu-bar a .n{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#e6ebf3;color:var(--n5,#1e3a5f);font-size:11.5px}
+.mu-bar a.cur{color:var(--td,#0a1628);background:#fff;box-shadow:0 1px 0 var(--border,#e8e2d8)}
+.mu-bar a.cur .n{background:var(--n5,#1e3a5f);color:#fff}
+.mu-bar .mu-where{margin-left:auto;color:var(--tm,#5a6b82);font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:42%}
+@media(max-width:560px){.mu-bar .mu-where{display:none}.mu-bar a{padding:6px 7px}}
+@media(max-width:340px){.mu-bar a .t{display:none}}
+@media(max-width:560px){.mu-pdef .mu-claim{margin:12px 12px 0}.mu-pdef .mu-why-h{margin:14px 12px -6px}.mu-pdef > summary{padding:12px 14px}}
+
+/* ---------- 4. Premise defences (older pages): open, with the claim on top ---------- */
+.mu-pdef{border:1px solid var(--border,#e8e2d8);border-radius:11px;background:var(--w,#fff);margin-bottom:12px;overflow:hidden}
+.mu-pdef > summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:14px 18px;background:#f7f9fc;font-family:var(--ui,sans-serif);font-weight:600;font-size:15px;color:var(--td,#0a1628)}
+.mu-pdef > summary::-webkit-details-marker{display:none}
+.mu-pdef .mu-ptag{flex:0 0 auto;font-family:var(--ui,sans-serif);font-size:12px;font-weight:700;color:#fff;background:var(--n5,#1e3a5f);border-radius:7px;padding:4px 9px}
+.mu-pdef .mu-claim{margin:14px 20px 0;padding:11px 14px;border-radius:9px;background:var(--ow,#faf8f4);border:1px solid var(--border,#e8e2d8)}
+.mu-pdef .mu-claim .l,
+.mu-pdef .mu-why-h{display:block;font-family:var(--ui,sans-serif);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--tm,#5a6b82);margin-bottom:3px}
+.mu-pdef .mu-claim p{font-size:15.5px;margin:0;color:var(--td,#0a1628)}
+.mu-pdef .mu-why-h{margin:16px 20px -6px;color:var(--gd,#9a7416)}
+.mu-pdef .body{border-top:none}
+.mu-pdef .body .lbl.steel{color:var(--n5,#1e3a5f);padding-left:11px;border-left:3px solid #dbe6f4}
