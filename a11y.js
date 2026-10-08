@@ -7,7 +7,12 @@
  *   2. a "Skip to content" link, shown only when it receives keyboard focus;
  *   3. reduced motion for people who ask their device for it;
  *   4. AI replies announced to screen readers as they arrive (aria-live);
- *   5. decorative SVG icons hidden from screen readers.
+ *   5. decorative SVG icons hidden from screen readers;
+ *   6. (batch 2) click-only elements (a div/span/li with an onclick: flashcards,
+ *      accordion cards, homepage feature cards, video cards, language switchers)
+ *      made reachable with Tab and operable with Enter / Space, and announced as a
+ *      button (or a link, when the click navigates). Covers content added later,
+ *      such as the Evidence Library tabs, through a MutationObserver.
  */
 (function () {
   'use strict';
@@ -108,10 +113,72 @@
     }
   }
 
+  /* 6. Keyboard access for click-only elements. Skips real controls, anything that
+     already manages its own focus (tabindex/role set), and the many wrappers whose
+     onclick only stops propagation. Enter/Space act only when the element itself has
+     focus, so a button nested inside a card does not also toggle the card. */
+  var CLICKABLE = 'div[onclick],span[onclick],li[onclick],article[onclick],section[onclick],td[onclick],img[onclick]';
+  // Accordion cards hold their whole expanded content inside the clickable element.
+  // Making that a "button" would flatten every heading and paragraph in it, so for
+  // those the keyboard control goes on the card's header line instead.
+  var HEADER = '.ch,.argument-header,.card-header,.cf-q,[class*="-header"],[class*="-head"]';
+  function headerOf(el) {
+    if ((el.textContent || '').length < 300) return null;      // small card: whole thing is the control
+    var kids = el.children;
+    for (var i = 0; i < kids.length; i++) if (kids[i].matches && kids[i].matches(HEADER)) return kids[i];
+    return null;
+  }
+  function isOpen(el) { return /\b(open|expanded|flipped|active)\b/.test(el.className || ''); }
+  function makeOperable(el) {
+    if (el.__adOperable) return;
+    var code = el.getAttribute('onclick') || '';
+    if (/^\s*event\.stopPropagation\(\)\s*;?\s*$/.test(code)) return;
+    el.__adOperable = true;
+    if (el.hasAttribute('role') || el.hasAttribute('tabindex')) return; // the page handles it
+    var hdr = headerOf(el);
+    var target = hdr || el;
+    if (target.hasAttribute('tabindex') || target.hasAttribute('role')) return; // page manages it
+    target.setAttribute('tabindex', '0');
+    target.setAttribute('role', /location|href/.test(code) ? 'link' : 'button');
+    if (hdr) {
+      target.setAttribute('aria-expanded', isOpen(el) ? 'true' : 'false');
+      el.addEventListener('click', function () {
+        setTimeout(function () { target.setAttribute('aria-expanded', isOpen(el) ? 'true' : 'false'); }, 0);
+      });
+    }
+    target.addEventListener('keydown', function (e) {
+      if (e.target !== target) return;
+      var k = e.key;
+      if (k === 'Enter' || k === ' ' || k === 'Spacebar') {
+        if (k !== 'Enter' && target.getAttribute('role') === 'link') return; // links: Enter only
+        e.preventDefault();
+        el.click();
+      }
+    });
+  }
+  function operableIn(root) {
+    var list = (root.querySelectorAll ? root.querySelectorAll(CLICKABLE) : []);
+    for (var i = 0; i < list.length; i++) makeOperable(list[i]);
+    if (root.matches && root.matches(CLICKABLE)) makeOperable(root);
+  }
+  function watch() {
+    if (!window.MutationObserver) return;
+    var pending = false;
+    new MutationObserver(function (muts) {
+      if (pending) return;
+      pending = true;
+      setTimeout(function () {
+        pending = false;
+        try { operableIn(document); hideDecorativeSvgs(); markLiveRegions(); } catch (e) {}
+      }, 50);
+    }).observe(document.body, { childList: true, subtree: true });
+  }
+
   function run() {
     try { addSkipLink(); } catch (e) {}
     try { markLiveRegions(); } catch (e) {}
     try { hideDecorativeSvgs(); } catch (e) {}
+    try { operableIn(document); watch(); } catch (e) {}
   }
 
   try { addStyle(); } catch (e) {}

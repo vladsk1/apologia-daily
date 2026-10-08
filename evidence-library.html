@@ -597,16 +597,23 @@ function enhanceCardsA11y(container) {
     var c = cards[i];
     if (c.getAttribute('data-a11y')) continue;
     c.setAttribute('data-a11y', '1');
-    c.setAttribute('role', 'button');
-    c.setAttribute('tabindex', '0');
-    c.setAttribute('aria-expanded', c.classList.contains('op') ? 'true' : 'false');
-    c.addEventListener('keydown', function (e) {
-      if (e.target !== this) return;           // keys from inner controls (tutor input, buttons) pass through
-      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
-        e.preventDefault();                     // Space must not scroll the page
-        tog(this);
-      }
-    });
+    // The control is the card's header line (.ch), not the whole card: the card also
+    // holds the opened essay text, and a role="button" over it would flatten every
+    // heading and paragraph inside for screen readers (2026-10-08 audit item 8).
+    var h = c.querySelector('.ch') || c;
+    h.setAttribute('role', 'button');
+    h.setAttribute('tabindex', '0');
+    h.setAttribute('aria-expanded', c.classList.contains('op') ? 'true' : 'false');
+    h.__adOperable = c.__adOperable = true;     // a11y.js: already handled here
+    (function (card, hdr) {
+      hdr.addEventListener('keydown', function (e) {
+        if (e.target !== hdr) return;           // keys from inner controls (tutor input, buttons) pass through
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();                   // Space must not scroll the page
+          tog(card);
+        }
+      });
+    })(c, h);
   }
 }
 function enhanceSection(container, id) {
@@ -873,6 +880,9 @@ function togInner(card) {
       if (label) label.textContent = currentArgContext;
     }
   }
+  // Keep each card header's aria-expanded in step with what is open (audit item 8).
+  var hs = document.querySelectorAll('.card[data-a11y] > .ch[aria-expanded]');
+  for (var j = 0; j < hs.length; j++) hs[j].setAttribute('aria-expanded', hs[j].parentElement.classList.contains('op') ? 'true' : 'false');
 }
 
 async function askT(tid, arg) {
