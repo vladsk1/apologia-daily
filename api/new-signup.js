@@ -181,7 +181,7 @@ export default async function handler(req, res) {
         body: JSON.stringify({
           api_key: PH_KEY,
           event: (kind === 'confirmed' ? 'email_confirmed' : 'signup_completed'),
-          // Never send the address itself to analytics (privacy.html §6): the
+          // Never send the address itself to analytics (privacy.html §7): the
           // Supabase user id is the only identifier PostHog receives.
           distinct_id: userId || 'signup-unknown',
           properties: { $lib: 'apologia-server' }

@@ -111,7 +111,23 @@
         persistence: 'localStorage+cookie',
         // No screen recording, ever (privacy.html §7): this stays off even if
         // "Record user sessions" is switched on in the PostHog dashboard.
-        disable_session_recording: true
+        disable_session_recording: true,
+        // A question typed into the site can travel in a link as ?q=... (the
+        // Answers search, "Get the answer to this question"). Strip it from every
+        // URL-like property before an event leaves the browser, so a reader's
+        // words never reach PostHog (privacy.html §4). Covers $current_url,
+        // $referrer, autocapture hrefs and the elements chain alike.
+        sanitize_properties: function (props) {
+          try {
+            var re = /([?&](?:amp;)?)q=[^&#"'\s]*/g;
+            for (var k in props) {
+              if (typeof props[k] === 'string' && props[k].indexOf('q=') !== -1) {
+                props[k] = props[k].replace(re, '$1q=removed');
+              }
+            }
+          } catch (e) {}
+          return props;
+        }
       });
     } catch (e) {}
 

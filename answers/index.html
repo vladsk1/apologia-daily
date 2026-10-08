@@ -260,7 +260,7 @@
           if(askLink){ askLink.style.display='none'; askLink.href='/asked-and-answered.html'; }
         }
       }).catch(function(){});
-    try{ if(window.posthog) window.posthog.capture('question_submitted',{source:'answers-index'}); }catch(e){}
+    // Counted once, server-side, by /api/submit-question (no client capture).
     msg.style.display='block'; msg.style.color='#3a7d44';
     msg.innerHTML='Thank you &mdash; we count the questions people ask to decide which answers to write next (we don\'t keep your words). Want an answer right now? <a href="'+askLink.href+'">Ask the AI &rarr;</a>';
     document.getElementById('ask-submit-q').value='';

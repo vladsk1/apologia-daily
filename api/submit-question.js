@@ -22,7 +22,7 @@ export default async function handler(req, res) {
   var rawQuestion = (body.question || '').toString().trim();
   // Scan the RAW, untruncated text before anything can short-circuit. The
   // honeypot returns a silent 200 (browser autofill does fill a field named
-  // "website"), and the 1000-char clamp below would cut away a disclosure that
+  // "website"), and a length clamp would cut away a disclosure that
   // came at the end of a long message — both ran before the scan.
   var crisis = isCrisis(rawQuestion);
   if (body.website && !crisis) return res.status(200).json({ ok: true });
@@ -30,7 +30,6 @@ export default async function handler(req, res) {
   var question = rawQuestion;
   var source = (body.source || 'unknown').toString().slice(0, 60);
   if (!question || question.length < 8) return res.status(400).json({ error: 'Please enter a question.' });
-  if (question.length > 1000) question = question.slice(0, 1000) + '…';
 
   // Per-IP daily cap so a bot ignoring the honeypot can't flood the analytics
   // count. A genuine ask form needs only a handful/day.
@@ -41,7 +40,6 @@ export default async function handler(req, res) {
     return res.status(429).json({ error: 'Thanks — you have submitted several questions today. Please try again tomorrow.' });
   }
 
-  var notes = [];
   var when = new Date().toISOString();
 
   // Questions are NOT emailed or stored (owner decision, 2026-10-08): the text is
@@ -67,6 +65,6 @@ export default async function handler(req, res) {
   }
 
   // Always 200 so the browser form gets a clean success.
-  if (crisis) return res.status(200).json({ ok: true, crisis: true, message: CRISIS_REPLY, notes: notes });
-  return res.status(200).json({ ok: true, notes: notes });
+  if (crisis) return res.status(200).json({ ok: true, crisis: true, message: CRISIS_REPLY });
+  return res.status(200).json({ ok: true });
 }

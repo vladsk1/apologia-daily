@@ -510,7 +510,7 @@
 
     // Enter / Ctrl+Enter submits; prefill from ?q=
     document.getElementById('obj').addEventListener('keydown', e => { if ((e.key==='Enter') && (e.ctrlKey||e.metaKey)) { e.preventDefault(); answer(); } });
-    try { const pq = new URLSearchParams(location.search).get('q'); if (pq) { document.getElementById('obj').value = pq; answer(); } } catch(e){}
+    try { const pq = new URLSearchParams(location.search).get('q'); if (pq) { document.getElementById('obj').value = pq; answer(); } try { history.replaceState(null, '', location.pathname + location.hash); } catch(e){} } catch(e){}
   </script>
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
