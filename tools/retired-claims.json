@@ -677,6 +677,33 @@
           "\"shaliach\", \"jesus gods agent\", \"share gods throne\", \"worship the lamb\""
         ]
       }
+    },
+    {
+      "id": "arabic-testimonium-independent",
+      "retired": "2026-10-08",
+      "what": "Agapius's Arabic version of Josephus's Testimonium Flavianum presented as an independent, purer or more original Josephan witness (a check on the received Greek).",
+      "why": "Alice Whealey (New Testament Studies 54, 2008) showed the Arabic descends from the Syriac translation of Eusebius's Church History, not from an independent Josephan line; library/hist_jesus.html, ev-m-hist_jesus.html and speed-round.html carry the correction. CLAUDE.md recorded it (2026-07-28) but the registry had no entry, so nothing stopped it returning (Josephus decision pass, 2026-10-08; backlog JOS-1).",
+      "instead": "Say what the certified essay says: Jerome's credebatur and the Syriac (and the Arabic that descends from it) depend on Eusebius, so they are not independent witnesses; Origen's testimony that Josephus did not accept Jesus as the Christ is the independent plank. Cite Whealey 2008.",
+      "patterns": [
+        "(agapius|arabic (version|text|testimonium|paraphrase|recension))[^.<\"]{0,120}?(?<!once thought to )(?<!was thought to )(?<!long thought to )(?<!not )\\b(preserves?|preserving|gives?|offers?|is|represents?|reflects?|provides?) (us )?(an? |the )?(independent|purer|pure|more original|original|uninterpolated|untouched|earlier|earliest) (josephan )?(line|witness|version|text|form|josephus|testimonium|reading|tradition)",
+        "(independent|purer|uninterpolated|more original) (josephan )?(witness|line|version|text|testimony|form)[^.<\"]{0,40}\\b(agapius|in the arabic|arabic (version|text))"
+      ],
+      "allow": [],
+      "netting": "claim",
+      "corpus": {
+        "must_fire": [
+          "The Arabic version of Agapius preserves an independent Josephan line behind the Testimonium.",
+          "Agapius's Arabic text gives us a purer Testimonium, free of Christian interpolation.",
+          "An independent witness to Josephus survives in the Arabic version of Agapius.",
+          "The Arabic paraphrase reflects the original Josephus before Christian retouching."
+        ],
+        "must_not_fire": [
+          "An Arabic paraphrase once thought to preserve a purer Josephus, but shown by Whealey (2008) to descend from the Syriac Eusebius",
+          "The Arabic version is no independent check here: Whealey showed it descends from the Syriac of Eusebius, not from an independent Josephan line.",
+          "Jerome's credebatur and the Syriac depend on Eusebius; Origen is the independent plank.",
+          "The Agapius version of the Testimonium Flavianum is significant because..."
+        ]
+      }
     }
   ]
 }
