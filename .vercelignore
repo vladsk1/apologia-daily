@@ -78,3 +78,11 @@ parents.html
 # indexes + the pocket card + briefs entry + the compassion/equality cross-links, then
 # re-run every generator. Also reconsider the slavery->pastor decline in api/ask.js.
 _parked/
+
+# Memory Palace — RETIRED from the live site 2026-10-08 (owner decision), KEPT in the repo
+# for possible reintroduction. To bring it back: delete this line and the /palace.html
+# redirect in vercel.json (and restore /argument-map.html -> /palace.html), re-add the
+# Memory Palace drill card to the ev-m-* mastery pages (git history: the commit that
+# retired it), the games.html card, dashboard tile + 7-day-plan link, evidence-library
+# button, scholars.html footer link, sitemap entry and the build-search-index.mjs entry.
+palace.html

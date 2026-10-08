@@ -127,7 +127,7 @@ const FEATURE_PAGES = [
   ['games.html', 'Practice'], ['daily-quiz.html', 'Practice'],
   ['daily-mix.html', 'Practice'], ['speed-round.html', 'Practice'], ['who-said-it.html', 'Practice'],
   ['challenge.html', 'Practice'], ['objection-deck.html', 'Practice'], ['objection-catcher.html', 'Practice'],
-  ['palace.html', 'Practice'], ['explain-it-back.html', 'Practice'],
+  ['explain-it-back.html', 'Practice'],
   ['name-the-heresy.html', 'Practice'],
   ['evidence-library.html', 'Guides & Tools'], ['worldviews.html', 'Guides & Tools'],
   ['pocket-cards.html', 'Guides & Tools'], ['debate-arena.html', 'Guides & Tools'],

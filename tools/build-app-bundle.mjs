@@ -46,7 +46,9 @@ const EXCLUDE_ROOT_FILES = new Set([
   // Operator-only pages. These must NEVER ship in a store binary: an IPA/APK is
   // trivially unzipped and is archived by third parties forever, so anything
   // embedded in one cannot be cleanly rotated later.
-  'monitor.html', 'logs.html', 'admin.html'
+  'monitor.html', 'logs.html', 'admin.html',
+  // Retired from the live site (owner decision 2026-10-08); kept in the repo only.
+  'palace.html'
 ]);
 
 async function rmrf(p) {
