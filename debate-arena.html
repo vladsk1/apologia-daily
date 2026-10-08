@@ -105,6 +105,8 @@
     .msg-name { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 5px; }
     .msg.opp .msg-name { color: rgba(255,255,255,0.35); }
     .msg.user .msg-name { color: rgba(200,169,81,0.6); text-align: right; }
+    .ai-tag { display:inline-block; margin-left:6px; padding:1px 7px; border-radius:999px; border:1px solid rgba(200,169,81,0.55); color:var(--gold); font-size:0.6rem; letter-spacing:0.08em; vertical-align:1px; }
+    .ai-notice { font-family: var(--font-ui); font-size: 0.78rem; line-height:1.5; color: rgba(255,255,255,0.55); text-align:center; border-bottom:1px solid rgba(255,255,255,0.08); padding:0 0.5rem 0.75rem; margin-bottom:1rem; }
     .msg-bubble { padding: 11px 14px; border-radius: 4px; font-size: 0.9rem; line-height: 1.7; }
     .msg.opp .msg-bubble { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.88); border-left: 2px solid rgba(255,255,255,0.12); }
     .msg.user .msg-bubble { background: rgba(200,169,81,0.12); color: rgba(255,255,255,0.92); border-right: 2px solid var(--gold); }
@@ -860,6 +862,7 @@
       document.getElementById('arena-diff-badge').style.color = '#5dcaa5';
       document.getElementById('arena-topic-pill').textContent = convoState.topic;
       document.getElementById('chat-box').innerHTML = '';
+      addAiNotice();
       document.getElementById('error-msg').classList.remove('visible');
       document.getElementById('end-btn').disabled = true;
       document.getElementById('hints-row').innerHTML = '';
@@ -1097,6 +1100,7 @@
       document.getElementById('arena-diff-badge').textContent = state.difficulty.charAt(0).toUpperCase() + state.difficulty.slice(1);
       document.getElementById('arena-topic-pill').textContent = 'Topic: ' + state.topic;
       document.getElementById('chat-box').innerHTML = '';
+      addAiNotice();
       document.getElementById('error-msg').classList.remove('visible');
       document.getElementById('end-btn').disabled = true;
       updateTurnCount();
@@ -1123,6 +1127,14 @@
       }, 100);
     }
 
+    // Shown at the top of every debate and conversation (point-of-interaction AI disclosure).
+    function addAiNotice() {
+      const n = document.createElement('p');
+      n.className = 'ai-notice';
+      n.textContent = 'You\u2019re practising with an AI playing a character. It isn\u2019t a real person, and its views aren\u2019t Apologia Daily\u2019s.';
+      document.getElementById('chat-box').appendChild(n);
+    }
+
     function addMessage(role, text) {
       const chatBox = document.getElementById('chat-box');
       const msg = document.createElement('div');
@@ -1131,7 +1143,8 @@
       const avatarStyle = role === 'opp'
         ? 'background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);'
         : 'background:rgba(200,169,81,0.2);color:var(--gold);';
-      const displayName = role === 'user' ? 'You' : oppName;
+      // Every opponent reply is labelled, so a screenshot of any one still says AI.
+      const displayName = role === 'user' ? 'You' : oppName + '<span class="ai-tag">AI role-play</span>';
       const avatarText = role === 'user' ? 'You' : oppName.charAt(0);
       msg.innerHTML = `<div class="msg-avatar" style="${avatarStyle}">${avatarText}</div><div class="msg-body"><div class="msg-name">${displayName}</div><div class="msg-bubble">${text}</div></div>`;
       chatBox.appendChild(msg);
@@ -1192,7 +1205,7 @@
       typing.className = 'msg opp';
       typing.id = 'typing-indicator';
       const oppName = oppNames[state.opponent] || 'Opponent';
-      typing.innerHTML = `<div class="msg-avatar" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);">${oppName.charAt(0)}</div><div class="msg-body"><div class="msg-name">${oppName}</div><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>`;
+      typing.innerHTML = `<div class="msg-avatar" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);">${oppName.charAt(0)}</div><div class="msg-body"><div class="msg-name">${oppName}<span class="ai-tag">AI role-play</span></div><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>`;
       chatBox.appendChild(typing);
       chatBox.scrollTop = chatBox.scrollHeight;
     }
