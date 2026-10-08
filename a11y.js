@@ -14,7 +14,12 @@
  *      button (or a link, when the click navigates). Covers content added later,
  *      such as the Evidence Library tabs, through a MutationObserver;
  *   7. (batch 3) form fields with no accessible name (only a placeholder) get an
- *      aria-label from their placeholder, so screen readers announce what to type.
+ *      aria-label from their placeholder, so screen readers announce what to type;
+ *   8. (batch 4) colour contrast on LIGHT backgrounds: text below the WCAG AA ratio
+ *      (4.5:1, or 3:1 for large text) is darkened in the same hue just enough to
+ *      pass, and form-field borders / placeholders get a 3:1 / 4.5:1 colour. Text on
+ *      dark backgrounds (gold on navy) is never touched. ?nocontrast=1 turns this
+ *      off for one page view (used for before/after comparisons).
  */
 (function () {
   'use strict';
@@ -30,6 +35,8 @@
     '.a11y-skip{position:absolute;left:-9999px;top:0;z-index:2147483001;}',
     '.a11y-skip:focus{left:16px;top:12px;background:#0a1628;color:#f5f0e6;padding:10px 16px;border-radius:4px;' +
       'font:600 15px/1.2 system-ui,-apple-system,Segoe UI,sans-serif;text-decoration:none;}',
+    /* placeholders on light-background fields (class added by fixContrast) */
+    '.a11y-ph::placeholder{color:#5c6b7d !important;opacity:1 !important;}',
     '.sr-only{position:absolute !important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}',
     /* 3. Reduced motion. Very short rather than zero, so animations and transitions
        still reach their end state (content that fades in still appears). */
@@ -171,7 +178,7 @@
       pending = true;
       setTimeout(function () {
         pending = false;
-        try { operableIn(document); hideDecorativeSvgs(); markLiveRegions(); labelFields(); } catch (e) {}
+        try { operableIn(document); hideDecorativeSvgs(); markLiveRegions(); labelFields(); fixContrast(); } catch (e) {}
       }, 50);
     }).observe(document.body, { childList: true, subtree: true });
   }
@@ -209,11 +216,132 @@
     }
   }
 
+  /* 8. Contrast on light backgrounds. */
+  function parseRgb(c) {
+    var m = /rgba?\(([\d.]+),\s*([\d.]+),\s*([\d.]+)(?:,\s*([\d.]+))?\)/.exec(c || '');
+    return m ? [+m[1], +m[2], +m[3], m[4] === undefined ? 1 : +m[4]] : null;
+  }
+  function lum(r, g, b) {
+    var a = [r, g, b].map(function (v) { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); });
+    return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2];
+  }
+  function ratio(l1, l2) { var a = Math.max(l1, l2), b = Math.min(l1, l2); return (a + 0.05) / (b + 0.05); }
+  // Effective solid background behind el, or null if it sits on an image/gradient.
+  function bgOf(el) {
+    for (var n = el; n && n.nodeType === 1; n = n.parentElement) {
+      var cs = getComputedStyle(n);
+      if (cs.backgroundImage && cs.backgroundImage !== 'none') return null;
+      var c = parseRgb(cs.backgroundColor);
+      if (c && c[3] > 0.95) return c;
+    }
+    return [255, 255, 255, 1];
+  }
+  function blend(fg, bg) { var a = fg[3]; return [fg[0] * a + bg[0] * (1 - a), fg[1] * a + bg[1] * (1 - a), fg[2] * a + bg[2] * (1 - a)]; }
+  function rgbToHsl(r, g, b) {
+    r /= 255; g /= 255; b /= 255;
+    var mx = Math.max(r, g, b), mn = Math.min(r, g, b), h = 0, s = 0, l = (mx + mn) / 2;
+    if (mx !== mn) {
+      var d = mx - mn; s = l > 0.5 ? d / (2 - mx - mn) : d / (mx + mn);
+      h = mx === r ? (g - b) / d + (g < b ? 6 : 0) : mx === g ? (b - r) / d + 2 : (r - g) / d + 4; h /= 6;
+    }
+    return [h, s, l];
+  }
+  function hslToRgb(h, s, l) {
+    function f(p, q, t) { if (t < 0) t += 1; if (t > 1) t -= 1; return t < 1 / 6 ? p + (q - p) * 6 * t : t < 1 / 2 ? q : t < 2 / 3 ? p + (q - p) * (2 / 3 - t) * 6 : p; }
+    if (!s) return [l * 255, l * 255, l * 255];
+    var q = l < 0.5 ? l * (1 + s) : l + s - l * s, p = 2 * l - q;
+    return [f(p, q, h + 1 / 3) * 255, f(p, q, h) * 255, f(p, q, h - 1 / 3) * 255];
+  }
+  // Darken rgb (same hue/saturation) until it reaches `need` against bg luminance.
+  function darkenTo(rgb, bgL, need) {
+    var hsl = rgbToHsl(rgb[0], rgb[1], rgb[2]);
+    for (var l = hsl[2]; l > 0; l -= 0.02) {
+      var c = hslToRgb(hsl[0], hsl[1], l);
+      if (ratio(lum(c[0], c[1], c[2]), bgL) >= need) return 'rgb(' + Math.round(c[0]) + ',' + Math.round(c[1]) + ',' + Math.round(c[2]) + ')';
+    }
+    return null;
+  }
+  var CONTRAST_OFF = /[?&]nocontrast=1\b/.test(location.search);
+  function fixContrast(root) {
+    if (CONTRAST_OFF) return;
+    var all = root ? [root].concat([].slice.call(root.querySelectorAll('*'))) : document.body.querySelectorAll('*');
+    for (var i = 0; i < all.length; i++) {
+      var el = all[i];
+      if (el.__adC) continue;
+      el.__adC = 1;
+      var tag = el.tagName;
+      if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'SVG' || tag === 'svg') continue;
+      var isField = tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
+      var hasText = false;
+      for (var k = el.firstChild; k; k = k.nextSibling) if (k.nodeType === 3 && /\S/.test(k.nodeValue)) { hasText = true; break; }
+      if (!hasText && !isField) continue;
+      var cs = getComputedStyle(el);
+      if (cs.visibility === 'hidden' || cs.display === 'none') continue;
+      var bg = bgOf(el);
+      if (!bg) continue;
+      var bgL = lum(bg[0], bg[1], bg[2]);
+      if (bgL < 0.45) continue;                                  // dark background: leave alone
+      var fg = parseRgb(cs.color);
+      if (fg && hasText) {
+        var f = blend(fg, bg);
+        var size = parseFloat(cs.fontSize) || 16, bold = (parseInt(cs.fontWeight, 10) || 400) >= 700;
+        var need = (size >= 24 || (bold && size >= 18.66)) ? 3 : 4.5;
+        if (ratio(lum(f[0], f[1], f[2]), bgL) < need) {
+          var nc = darkenTo(f, bgL, need);
+          if (nc) { el.__adCol = [el.style.getPropertyValue('color'), el.style.getPropertyPriority('color')]; el.style.setProperty('color', nc, 'important'); }
+        }
+      }
+      if (isField) {
+        var bc = parseRgb(cs.borderTopColor), bw = parseFloat(cs.borderTopWidth) || 0;
+        if (bc && bw > 0) {
+          var b2 = blend(bc, bg);
+          if (ratio(lum(b2[0], b2[1], b2[2]), bgL) < 3) {
+            var nb = darkenTo(b2, bgL, 3);
+            if (nb) { el.__adBorder = [el.style.getPropertyValue('border-color'), el.style.getPropertyPriority('border-color')]; el.style.setProperty('border-color', nb, 'important'); }
+          }
+        }
+        if (el.getAttribute('placeholder')) el.classList.add('a11y-ph');
+      }
+    }
+  }
+
+  // When a page changes an element's class (a tab turning active, a card opening),
+  // drop our override on it and its children and measure again, so a colour we
+  // darkened never gets stuck after the page restyles the element.
+  function restore(el, prop, saved) {
+    if (saved[0]) el.style.setProperty(prop, saved[0], saved[1]); else el.style.removeProperty(prop);
+  }
+  function recheck(node) {
+    var list = [node].concat([].slice.call(node.querySelectorAll ? node.querySelectorAll('*') : []));
+    for (var i = 0; i < list.length; i++) {
+      var el = list[i];
+      // Put back exactly what the page had set inline (often nothing).
+      if (el.__adCol) { restore(el, 'color', el.__adCol); el.__adCol = 0; }
+      if (el.__adBorder) { restore(el, 'border-color', el.__adBorder); el.__adBorder = 0; }
+      el.__adC = 0;
+    }
+    fixContrast(node);
+  }
+  function watchClasses() {
+    if (!window.MutationObserver || CONTRAST_OFF) return;
+    var queue = [], timer = null;
+    new MutationObserver(function (muts) {
+      for (var i = 0; i < muts.length; i++) queue.push(muts[i].target);
+      if (timer) return;
+      timer = setTimeout(function () {
+        timer = null;
+        var q = queue; queue = [];
+        for (var j = 0; j < q.length; j++) { try { if (q[j].isConnected) recheck(q[j]); } catch (e) {} }
+      }, 60);
+    }).observe(document.body, { attributes: true, attributeFilter: ['class'], subtree: true });
+  }
+
   function run() {
     try { addSkipLink(); } catch (e) {}
     try { markLiveRegions(); } catch (e) {}
     try { hideDecorativeSvgs(); } catch (e) {}
     try { labelFields(); } catch (e) {}
+    try { fixContrast(); watchClasses(); } catch (e) {}
     try { operableIn(document); watch(); } catch (e) {}
   }
 
