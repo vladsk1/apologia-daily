@@ -225,9 +225,7 @@ function page(e) {
 <meta name="twitter:image" content="https://apologiadaily.com/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@apologiadaily">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="stylesheet" href="answers.css">
 <script type="application/ld+json">${ld}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://apologiadaily.com/"},{"@type":"ListItem","position":2,"name":"Answers","item":"https://apologiadaily.com/answers/"},{"@type":"ListItem","position":3,"name":"${esc(e.category)}"}]}</script>

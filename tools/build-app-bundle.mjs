@@ -12,7 +12,7 @@
  *
  * What ships in the bundle:
  *   - every client-facing file at the repo root (html/css/js/json/img/…)
- *   - the answers/, library/, and demo/ directories
+ *   - the answers/, library/, demo/ and fonts/ directories
  * What is EXCLUDED (server-only, build-only, or meta):
  *   - api/ (serverless — stays on Vercel), lib/ (server modules),
  *     sources/ & briefs/ (build inputs; the client fetches the *-index.json
@@ -30,7 +30,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'app', 'www');
 
 // Directories at the repo root that are client-facing and ship whole.
-const INCLUDE_DIRS = new Set(['answers', 'library', 'demo']);
+const INCLUDE_DIRS = new Set(['answers', 'library', 'demo', 'fonts']); // fonts: self-hosted web fonts (audit item 10)
 
 // Root-level files with these extensions are client assets and ship...
 const CLIENT_EXT = new Set([

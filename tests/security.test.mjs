@@ -225,3 +225,13 @@ test('accessibility basics (a11y.js) load site-wide and keep their key rules', (
   assert.match(src, /function fixContrast/, 'contrast fixer present');
   assert.match(src, /if \(bgL < 0\.45\) continue;/, 'contrast fixer never touches dark backgrounds');
 });
+
+test('every third-party script from jsDelivr is version-pinned with an integrity hash', () => {
+  const bad = [];
+  for (const f of globSync('**/*.html').filter((f) => !/^(app|node_modules|ios|android)\//.test(f))) {
+    for (const m of readFileSync(f, 'utf8').matchAll(/<script[^>]*src="https:\/\/cdn\.jsdelivr\.net\/[^"]+"[^>]*>/g)) {
+      if (!/integrity="sha(256|384|512)-/.test(m[0]) || /@\d+"/.test(m[0])) bad.push(`${f}: ${m[0].slice(0, 90)}`);
+    }
+  }
+  assert.deepEqual(bad, [], 'unpinned or unchecked jsDelivr scripts:\n' + bad.slice(0, 20).join('\n'));
+});
