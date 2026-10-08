@@ -4,6 +4,13 @@ One running list from the 2026-10-08 legal/security audit (items 1–10). Code c
 already live; these are the steps that need your Supabase, Vercel or PostHog login, or
 information only you have. Tick each one off (change `[ ]` to `[x]` and add the date).
 
+## First, a 2-minute check of the live site
+
+- [ ] **0. Open apologiadaily.com on a computer** and check: the homepage loads, you can sign in
+  (the "I'm human" check appears), an essay looks normal, and a video plays. The security policy
+  and self-hosted fonts (audit item 10) were tested on a local copy, not production. If anything
+  looks wrong, tell me what you saw.
+
 ## When you have Supabase access (Dashboard → SQL Editor)
 
 - [ ] **1. Run [`docs/SUPABASE_RLS_HARDENING.md`](SUPABASE_RLS_HARDENING.md)** (audit item 1).
@@ -78,4 +85,4 @@ Me, once 11 is done (the new terms already promise these, so they must exist on 
   to me and I'll put it in the privacy policy's contact section too.
 
 ---
-*New items are added here as the audit continues (items 5–10).*
+*Audit items 1–10: all code changes are live (2026-10-08). Everything left on this list needs you.*
