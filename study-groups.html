@@ -899,6 +899,7 @@
   async function markStudiedToday(){
     if (!currentGroup) return;
     var btn = document.getElementById('pulse-btn');
+    if (!(await adultOk())) return;
     btn.disabled = true;
     try {
       var ins = await sb.from('group_activity').insert({
@@ -963,6 +964,7 @@
     var btn = document.getElementById('send-btn');
     btn.disabled = true;
     var channel = currentTab;
+    if (!(await adultOk())) { btn.disabled = false; return; }
     try {
       var ins = await sb.from('group_messages').insert({
         group_id: currentGroup.id, user_id: currentUser.id, display_name: myName, channel: channel, body: text
@@ -1037,12 +1039,8 @@
       await loadMembers(currentGroup.id);
     } catch(e){ showToast('Could not remove that member.'); }
   }
-  function adultOk(){
-    try { if (localStorage.getItem('ad_groups_adult_ok')==='1') return true; } catch(e){}
-    var ok = confirm('Study Groups are for adults (18+).\n\nPress OK to confirm you are 18 or older. Under 18? Ask a parent, youth leader or pastor to run the group.');
-    if (ok) { try { localStorage.setItem('ad_groups_adult_ok','1'); } catch(e){} }
-    return ok;
-  }
+  // 18+ check: see age-gate.js (the database enforces it; this is the friendly front).
+  function adultOk(){ return window.adAgeGate(sb); }
 
   async function joinGroup(id){
     try {
@@ -1126,7 +1124,7 @@
     var privacy = 'invite';   // public groups switched off (safety, 2026-09-30)
     var plan = document.getElementById('group-plan').value;
     if (!name) { showToast('Please give your group a name.'); return; }
-    if (!adultOk()) return;
+    if (!(await adultOk())) return;
 
     var btn = document.getElementById('create-btn');
     btn.disabled = true; btn.innerHTML = '<span class="spinner"></span>';
@@ -1278,6 +1276,7 @@
   }
 </script>
   <script src="/ad-nav.js" defer></script>
+  <script src="/age-gate.js"></script>
   <script src="/analytics.js" defer></script>
 </body>
 </html>

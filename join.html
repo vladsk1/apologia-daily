@@ -44,6 +44,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
+  <script src="/age-gate.js"></script>
   <script>
   var sb = null;
   var code = new URLSearchParams(location.search).get('g');
@@ -86,12 +87,9 @@
 
     // Signed in — join via the security-definer RPC.
     // Adults only (2026-09-30): groups are open chat between members.
-    var adult = false;
-    try { adult = localStorage.getItem('ad_groups_adult_ok') === '1'; } catch(e){}
-    if (!adult) {
-      adult = confirm('Study Groups are for adults (18+).\n\nPress OK to confirm you are 18 or older. Under 18? Ask a parent, youth leader or pastor to run the group.');
-      if (adult) { try { localStorage.setItem('ad_groups_adult_ok','1'); } catch(e){} }
-    }
+    // The database enforces 18+ (join_group_by_code checks is_adult); age-gate.js asks
+    // once for accounts made before the age screen, then reads the stored band.
+    var adult = await window.adAgeGate(sb);
     if (!adult) {
       hideSpinner();
       render('<div class="icon">🙏</div><h1>Study Groups are for adults</h1><p>Ask a parent, youth leader or pastor to run a group you can be part of with them. Everything else on the site is open to you.</p><div class="btn-row"><a href="/evidence-library.html" class="btn btn-gold">Explore the Evidence Library</a></div>');
@@ -99,6 +97,11 @@
     }
     try {
       var res = await sb.rpc('join_group_by_code', { code: code });
+      if (res.error && /adults_only/.test(res.error.message || '')) {
+        hideSpinner();
+        render('<div class="icon">🙏</div><h1>Study Groups are for adults</h1><p>Ask a parent, youth leader or pastor to run a group you can be part of with them. Everything else on the site is open to you.</p><div class="btn-row"><a href="/evidence-library.html" class="btn btn-gold">Explore the Evidence Library</a></div>');
+        return;
+      }
       if (res.error) throw res.error;
       var gid = res.data;
       if (!gid) {

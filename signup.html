@@ -89,6 +89,14 @@
       </div>
 
       <div class="form-group">
+        <label class="form-label" id="dob-label">Month and year you were born</label>
+        <div style="display:flex;gap:8px;" role="group" aria-labelledby="dob-label">
+          <select class="form-input" id="dob-month" aria-label="Birth month"><option value="">Month</option></select>
+          <select class="form-input" id="dob-year" aria-label="Birth year"><option value="">Year</option></select>
+        </div>
+      </div>
+
+      <div class="form-group">
         <label class="form-label" for="password">Password</label>
         <div class="pw-wrap">
           <input class="form-input" type="password" id="password" placeholder="At least 8 characters" autocomplete="new-password" />
@@ -138,6 +146,27 @@
       if (session) window.location.href = nextDest();
     });
 
+    // Neutral age screen (privacy.html §9). We ask month + year, never the day, and
+    // keep only an age band: under 13 cannot sign up and nothing is sent; 13-17 get an
+    // account without Study Groups (enforced in the database, docs/AGE_SCREEN.md).
+    (function fillDob(){
+      var m = document.getElementById('dob-month'), y = document.getElementById('dob-year');
+      ['January','February','March','April','May','June','July','August','September','October','November','December']
+        .forEach(function(n, i){ var o = document.createElement('option'); o.value = i + 1; o.textContent = n; m.appendChild(o); });
+      var now = new Date().getFullYear();
+      for (var yr = now; yr >= now - 100; yr--) { var o = document.createElement('option'); o.value = yr; o.textContent = yr; y.appendChild(o); }
+      try { if (sessionStorage.getItem('ad_age_block') === '1') ageBlocked(); } catch(e){}
+    })();
+    function ageFrom(year, month){
+      var d = new Date(), a = d.getFullYear() - year - ((d.getMonth() + 1) < month ? 1 : 0);
+      return a;
+    }
+    function ageBlocked(){
+      document.getElementById('form-wrap').innerHTML =
+        '<p style="text-align:center;line-height:1.6;">Sorry, you need to be 13 or older to create an account.<br>'
+        + 'You can still read everything in the <a href="/evidence-library.html">Evidence Library</a> without one.</p>';
+    }
+
     async function handleSignup() {
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
@@ -148,6 +177,16 @@
       const btnText = document.getElementById('btn-text');
 
       errorBox.classList.remove('visible');
+      const dobM = parseInt(document.getElementById('dob-month').value, 10);
+      const dobY = parseInt(document.getElementById('dob-year').value, 10);
+      if (!dobM || !dobY) { showError('Please choose the month and year you were born.'); return; }
+      const age = ageFrom(dobY, dobM);
+      if (age < 13) {
+        // Nothing is sent or kept: no signup call, and the page just closes the form.
+        try { sessionStorage.setItem('ad_age_block', '1'); } catch(e){}
+        ageBlocked();
+        return;
+      }
       if (!sb) { showError(SB_BLOCKED_MSG); return; }
 
       const password2 = document.getElementById('password2').value;
@@ -168,6 +207,8 @@
       try { referredBy = new URLSearchParams(location.search).get('ref') || localStorage.getItem('ad_ref') || ''; } catch(e) {}
       const signUpData = { full_name: name };
       if (referredBy) signUpData.referred_by = referredBy;
+      signUpData.age_band = age >= 18 ? '18+' : '13-17';
+      if (age < 18) signUpData.adult_from = (dobY + 18) + '-' + String(dobM).padStart(2, '0');
 
       const { data, error } = await sb.auth.signUp({
         email,

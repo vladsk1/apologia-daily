@@ -1090,6 +1090,11 @@
 >   (run that first — the tables may already be protected from the dashboard), an idempotent access-only
 >   Step 2 fix, a Step 3 re-check, and an optional Step 4 that clears pre-2026-10-08 Explain It Back text.
 >   Until it is run, treat those tables as UNVERIFIED. Mark the doc's status line when done.
+> - 🔴 **OWED BY THE OWNER — run `docs/AGE_SCREEN.md` in the Supabase SQL editor (written 2026-10-08,
+>   NOT YET RUN).** Audit item 3: signup now asks month + year of birth (under-13 refused, nothing sent),
+>   and `age-gate.js` fronts Study Groups — but the 18+ rule is only ENFORCED once this SQL adds
+>   `public.user_age`, `is_adult()`, the signup trigger, `set_my_age()`, and `is_adult` checks on every
+>   group insert policy + `join_group_by_code`. Until then the pages fall back to the old confirm().
 > - ✅ **DONE + VERIFIED 2026-09-23:** the AI rate-limit migration `docs/ASK_RATE_LIMIT.md`
 >   (`ask_rate` table + `bump_ask_rate` RPC) re-applied on production by the owner via Claude in
 >   Chrome, verify results relayed (1→2, anon/authenticated locked out). Table + function
