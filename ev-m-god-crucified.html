@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- UNSTAMPED mastery page: every argument string ported from library/god-crucified.html (certified 2026-10-08); this page itself has not been through its own gate. -->
+<!-- content-review: {"citations": "2026-10-08", "argument": "2026-10-08", "neutrality": "2026-10-08", "orthodoxy": "2026-10-08", "by": "2026-10-08 NEW mastery page for 'God Crucified', every argument layer PORTED from the certified library/god-crucified.html (deity/cross tier); template = ev-m-crucified-messiah.html (same tab). FOUR-LENS GATE via READ-ONLY Explore agents (citations Sonnet; argument/neutrality/orthodoxy Opus), md5 verified every round; memorised/graded layers read first. Round 1: 0 HERESY in prose; BREAK x2 - (1) the offline fallback scorer passed a patripassian answer ('the father was crucified too, not only the son') and marked orthodox ones down ('God died ... in his human nature'); (2) the kick called the developmental objection 'the popular skeptic's move' (essay: 'the most serious academic challenge'). WEAKs fixed: Mark not a glory-language witness in Drill 1/checks; invented 'because you were slain' (-> ESV 'for you were slain'); 'the pit' antecedent restored; 'first confessed by a human being'; Drill 3 now lands an explicit verdict on the agency claim. Round 2: prose STAMPABLE on all four; the scorer still leaked -> rebuilt as patri()+FENCE. Round 3 prose CLEAN x4; scorer still leaked/marked down -> round-3 supplied patri adopted. Round 4: orthodoxy+argument supplied a final patch (word boundaries: 'change'/'immortal'/'parent'; modalist/adoptionist/'in his divinity' rules) applied verbatim; the scorer now passes a 106-case matrix collected from all four rounds (heterodox caught; orthodox not marked down) - verified in node against the live file, not re-read by a lens after the last patch. The fence HIT message no longer certifies doctrine ('a keyword check only'). The scorer is only the offline fallback when /api/tutor is unavailable. Clarifier candidates: none new (three essay orthonotes carried as prose notes; the page has no orthonote host). No Memory Palace. AI-assisted gate, NOT pastoral sign-off."} -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>God Crucified: How the Cross Reveals Who God Is | Apologia Daily</title>
@@ -794,11 +794,11 @@ function renderMockScore(txtRaw){
   var t = (txtRaw||'').toLowerCase();
   function patri(t){
     var SUBJ=/(?<!\b(?:of|to|by|from|unto|with|his|my|our|your|the|a) )(god the father|the father|father|the divine (nature|essence|being)|divine (nature|essence|being)|the divinity|the godhead|godhead|the deity|god.s (very |eternal |own )?(being|nature|essence)|(?<!of )the (whole )?trinity)(?!['’]s)/g;
-    var PRED=/(suffer\w*|died|dies|die\b|(?<!the |a )crucif\w*|bled|bleed\w*|wound\w*|pierc\w*|wept|weep\w*|(?<!by the |the )forsak\w*|abandon\w*|torn|rent\b|ripped|crush\w*|broken|hung|hang\w*|nail\w*|perish\w*|in pain|agony|experienc(ed|es|ing)\b|felt|mortal|(did|does)(?! not| never)\s*(so|too|also)?\s*(,|$))/;
+    var PRED=/(suffer\w*|died|dies|die\b|dying|(?<!the |a )crucif\w*|bled|bleed\w*|wound\w*|pierc\w*|wept|weep\w*|(?<!by the |the )forsak\w*|abandon\w*|torn|\brent\b|ripped|crush\w*|broken|\bhung\b|\bhang\w*|nail\w*|perish\w*|in pain|agony|experienc(ed|es|ing)\b(?!\s+(no|nothing)\b)|felt(?!\s+(no|nothing)\b)|\bmortal\b|(did|does)(?! not| never)\s*(so|too|also)?\s*(,|$))/;
     var ATTR=/(moltmann|\berror|heres|patripass|reject|refus|den(y|ies)|\bwrong\b|\bnot that\b|\b(they|some|others|people|critics|skeptics?|sceptics?|hick|ehrman|reimarus) (say|says|said|claim|claims|argue|argues|argued|hold|holds|think|thinks)\b)/;
     var ENDORSE=/(\b(i|we) (would )?(say|believe|hold|think|affirm|maintain|insist|agree|confess)\b|rightly|\bis right\b|correctly|\bunlike\b|\bagainst\b.{0,30}impassib|rejecting|reject\w* (the )?(doctrine of )?impassib)/;
     var NEG=/(\bnot\b|n[o'’]t\b|\bnever\b|\bnor\b|\bcannot\b|\bno\b|\bincapable\b|\bimpassib\w*)\s+(\w+\s+){0,2}$/;
-    var SHIFT=/(\b(who|whom|which|that|while|whereas|when|before|after|because|until)\b|\b(and|but|yet|so|as)\s+(he|jesus|christ|the son|the word|the lamb)\b(?!\s+(both|together|alike|also|too|each)\b)|\b(sent|gave|raised|vindicated|handed|delivered|willed|spared)\b)/;
+    var SHIFT=/(\b(who|whom|which|that|while|whereas|when|before|after|because|until)\b|\b(and|but|yet|so|as)\s+(he|jesus|christ|the son|the word|the lamb)\b(?!\s+(both|together|alike|also|too|each)\b)|\b(sent|gave|raised|vindicated|handed|delivered|willed|spared|pleased|purposed|chose|planned|ordained)\b)/;
     return t.split(/[.!?;:]+/).some(function(s){
       if(ATTR.test(s) && !ENDORSE.test(s)) return false;
       var m; SUBJ.lastIndex=0;
@@ -816,6 +816,8 @@ function renderMockScore(txtRaw){
       if(/(god the father|the father) in the flesh|incarnate father|(jesus|christ|the son) (was|is) (god )?the father|(jesus|christ|the son) and the father (are|were|is) (the same|one) person|(suffered|died) as god\b/.test(s)) return true;
       if(/(only|merely|just|simply|nothing but|a mere) a? ?(suffering )?(man|human)\b/.test(s)) return true;
       if(/\bfather and (the )?son\b[^.;]{0,25}\b(suffer\w*|died|crucif\w*|bled|forsaken)/.test(s)) return true;
+      if(/(masks?|modes?|roles?|manifestations?) of (the )?(one|a single|the same) (person|god)\b|(jesus|christ|the son) (is|was) (just |simply |really |only |merely )?the father|the father (appearing|appeared|became (a )?man|became incarnate|took (on )?flesh)|adopt\w* (him )?(as )?(the |god.s |his )?son\b|became (the )?son of god at (his )?baptism|the trinity (was |is )?(fractur|shatter|sunder|splinter)\w*|\bhis (divine nature|divinity|deity|godhead) (itself |also |too )*(suffer|died|dying|bled|was crucified|perish)|his (divine nature|divinity|deity) (itself )?(dying|suffering)|in (his|the) (divinity|deity|divine nature)\s*,?\s*(he|christ|jesus|god) (also |too )?(suffer|died|was crucified|bled)/.test(s)) return true;
+      var dv=s.match(/(died|dying|suffer\w*|crucified|bled|perish\w*)[^.;]{0,20}\bin (his|the) (divinity|deity|divine nature|godhead)/); if(dv && !/\bnot\b|n.t\b|\bnever\b|\bnor\b/.test(dv[0])) return true;
       return false;
     });
   }
