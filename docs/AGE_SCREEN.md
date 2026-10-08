@@ -80,7 +80,7 @@ returns trigger language plpgsql security definer set search_path = public as $$
 declare band text := new.raw_user_meta_data->>'age_band';
         af   text := new.raw_user_meta_data->>'adult_from';
 begin
-  begin
+  begin                               -- step 1: record the band
     if band = '18+' then
       insert into public.user_age(user_id, age_band) values (new.id, '18+')
       on conflict (user_id) do nothing;
@@ -89,6 +89,9 @@ begin
       values (new.id, '13-17', (af || '-01')::date)
       on conflict (user_id) do nothing;
     end if;
+  exception when others then null;   -- an age problem must never block a signup
+  end;
+  begin                               -- step 2, separate so a failure here keeps step 1
     if new.raw_user_meta_data ? 'age_band' or new.raw_user_meta_data ? 'adult_from' then
       update auth.users
          set raw_user_meta_data = raw_user_meta_data - 'age_band' - 'adult_from'
@@ -207,6 +210,22 @@ commit;
 > (`select pg_get_functiondef('public.join_group_by_code(text)'::regprocedure);`).
 
 ## Step 2 — check it worked
+
+After one test signup:
+
+```sql
+-- want: a band, and still_in_profile = false
+select a.age_band, u.raw_user_meta_data ? 'age_band' as still_in_profile
+from auth.users u left join public.user_age a on a.user_id = u.id
+order by u.created_at desc limit 1;
+```
+
+If `still_in_profile` is true, the trigger could not update `auth.users` on this project
+(the age row is still kept; only the profile tidy-up failed). Tell me and I'll move that
+step to the server instead. Also check **Database → Webhooks**: the `auth.users` signup
+hook should fire on INSERT only (an UPDATE hook is now ignored by `api/new-signup.js`, but
+there's no reason to send it). Re-signing-up with an unconfirmed email is an update, not an
+insert, so those few accounts are simply asked the age question on Study Groups.
 
 ```sql
 -- table + RLS

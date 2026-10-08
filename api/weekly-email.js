@@ -251,7 +251,7 @@ async function sendGroupNudges({ SB_URL, authKey, RESEND_KEY, emailById }) {
   let adultIds = null;
   try {
     const today = new Date().toISOString().slice(0, 10);
-    const uaR = await fetch(`${SB_URL}/rest/v1/user_age?select=user_id,age_band,adult_from`, { headers: h });
+    const uaR = await fetch(`${SB_URL}/rest/v1/user_age?select=user_id,age_band,adult_from&age_band=in.(18%2B,13-17)`, { headers: h });
     if (uaR.ok) {
       adultIds = new Set();
       (await uaR.json()).forEach(function (a) {

@@ -120,6 +120,9 @@ export default async function handler(req, res) {
   var when = record.created_at || new Date().toISOString();
   var userId = record.id || null;
   var kind = (body.event === 'confirmed') ? 'confirmed' : 'created';
+  // A plain row UPDATE (e.g. the age-screen trigger tidying the profile right after
+  // signup, docs/AGE_SCREEN.md) is not a new signup: don't email or count it twice.
+  if (body.type === 'UPDATE' && kind !== 'confirmed') return res.status(200).json({ ok: true, ignored: 'update' });
 
   var notes = [];
 
