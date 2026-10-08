@@ -12,7 +12,9 @@
  *      accordion cards, homepage feature cards, video cards, language switchers)
  *      made reachable with Tab and operable with Enter / Space, and announced as a
  *      button (or a link, when the click navigates). Covers content added later,
- *      such as the Evidence Library tabs, through a MutationObserver.
+ *      such as the Evidence Library tabs, through a MutationObserver;
+ *   7. (batch 3) form fields with no accessible name (only a placeholder) get an
+ *      aria-label from their placeholder, so screen readers announce what to type.
  */
 (function () {
   'use strict';
@@ -169,15 +171,49 @@
       pending = true;
       setTimeout(function () {
         pending = false;
-        try { operableIn(document); hideDecorativeSvgs(); markLiveRegions(); } catch (e) {}
+        try { operableIn(document); hideDecorativeSvgs(); markLiveRegions(); labelFields(); } catch (e) {}
       }, 50);
     }).observe(document.body, { childList: true, subtree: true });
+  }
+
+  /* 7. Name unlabelled fields. A placeholder is not a label: it is often not read,
+     and it disappears once you type. Anything already named (aria-label,
+     aria-labelledby, title, a <label for>, or a wrapping <label>) is left alone. */
+  function hasName(el) {
+    if (el.getAttribute('aria-label') || el.getAttribute('aria-labelledby') || el.getAttribute('title')) return true;
+    if (el.closest('label')) return true;
+    if (el.id) {
+      try { if (document.querySelector('label[for="' + (window.CSS && CSS.escape ? CSS.escape(el.id) : el.id) + '"]')) return true; } catch (e) {}
+    }
+    return false;
+  }
+  function labelFields(root) {
+    var f = (root || document).querySelectorAll('input:not([type=hidden]):not([type=submit]):not([type=button]):not([type=reset]):not([type=image]):not([type=checkbox]):not([type=radio]),textarea,select');
+    for (var i = 0; i < f.length; i++) {
+      var el = f[i];
+      if (hasName(el)) continue;
+      var name = '';
+      // 1) a visible <label> right before the field that just isn't connected to it
+      var prev = el.previousElementSibling;
+      if (prev && prev.tagName === 'LABEL' && !prev.htmlFor) name = (prev.textContent || '').trim();
+      // 2) the placeholder, cut before any worked example ("e.g. ...", "...")
+      if (!name) {
+        name = (el.getAttribute('placeholder') || '').replace(/^\s*e\.g\.?\s*/i, '').split(/\s+e\.g\.|\u2026|\.\.\./)[0].replace(/[\s,.:;\u2014-]+$/, '').trim();
+        if (!name) name = (el.getAttribute('placeholder') || '').replace(/^\s*e\.g\.?\s*/i, '').split(/\u2026|\.\.\./)[0].replace(/\s+/g, ' ').trim().slice(0, 80);
+      }
+      // 3) a select's empty "choose one" prompt option (never a real choice)
+      if (!name && el.tagName === 'SELECT' && el.options && el.options[0] && el.options[0].value === '') name = (el.options[0].text || '').replace(/^[-\s]+|[-\s]+$/g, '');
+      // 4) a short text sibling just before it
+      if (!name && prev && prev.textContent && prev.textContent.trim().length < 80) name = prev.textContent.trim();
+      if (name) el.setAttribute('aria-label', name);
+    }
   }
 
   function run() {
     try { addSkipLink(); } catch (e) {}
     try { markLiveRegions(); } catch (e) {}
     try { hideDecorativeSvgs(); } catch (e) {}
+    try { labelFields(); } catch (e) {}
     try { operableIn(document); watch(); } catch (e) {}
   }
 

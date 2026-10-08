@@ -221,4 +221,5 @@ test('accessibility basics (a11y.js) load site-wide and keep their key rules', (
   assert.match(src, /aria-live/, 'AI replies announced');
   assert.match(src, /function makeOperable/, 'click-only elements made keyboard-operable');
   assert.match(src, /MutationObserver/, 'covers content added after load');
+  assert.match(src, /function labelFields/, 'unlabelled form fields get a name');
 });
