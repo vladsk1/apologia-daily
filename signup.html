@@ -148,8 +148,8 @@
 
     // Neutral age screen (privacy.html §9). We ask month + year, never the day.
     // Under 13: no signup, nothing sent, and this browser stays blocked for 30 days.
-    // 18+: only the band is sent. 13-17: nothing about age is sent; Study Groups ask
-    // them later and the database enforces 18+ (docs/AGE_SCREEN.md).
+    // 13+: the band (and, for 13-17, the month they turn 18) is sent once; the database
+    // stores it and enforces 18+ for Study Groups (docs/AGE_SCREEN.md).
     (function fillDob(){
       var m = document.getElementById('dob-month'), y = document.getElementById('dob-year');
       ['January','February','March','April','May','June','July','August','September','October','November','December']
@@ -208,9 +208,11 @@
       try { referredBy = new URLSearchParams(location.search).get('ref') || localStorage.getItem('ad_ref') || ''; } catch(e) {}
       const signUpData = { full_name: name };
       if (referredBy) signUpData.referred_by = referredBy;
-      // Adults: only the band is kept. 13-17: nothing about age is sent here; the
-      // Study Groups page asks them once (docs/AGE_SCREEN.md).
-      if (age >= 18) signUpData.age_band = '18+';
+      // The database trigger copies these into public.user_age and then removes them
+      // from the account profile (docs/AGE_SCREEN.md). For 13-17, adult_from is the
+      // month they turn 18, so Study Groups open on their own.
+      signUpData.age_band = age >= 18 ? '18+' : '13-17';
+      if (age < 18) signUpData.adult_from = (dobY + 18) + '-' + String(dobM).padStart(2, '0');
 
       const { data, error } = await sb.auth.signUp({
         email,

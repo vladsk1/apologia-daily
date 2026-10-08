@@ -40,7 +40,7 @@
   }
 
   function under13Box() {
-    var w = notice('<p style="margin:0 0 1rem;">Accounts on Apologia Daily are for people aged 13 and over, so this account will be deleted within 7 days. A parent or guardian can delete it now from <a href="/dashboard.html">Dashboard &rarr; Account</a>. If you chose the wrong year by mistake, email <a href="mailto:contact@apologiadaily.com">contact@apologiadaily.com</a> before then.</p><button type="button" style="padding:10px 18px;border:0;border-radius:4px;background:#c8a951;color:#0a1628;font-weight:600;cursor:pointer;">OK</button>');
+    var w = notice('<p style="margin:0 0 1rem;">Accounts on Apologia Daily are for people aged 13 and over, so this account will be deleted within 14 days. A parent or guardian can delete it now from <a href="/dashboard.html">Dashboard &rarr; Account</a>. If you chose the wrong year by mistake, email <a href="mailto:contact@apologiadaily.com">contact@apologiadaily.com</a> before then.</p><button type="button" style="padding:10px 18px;border:0;border-radius:4px;background:#c8a951;color:#0a1628;font-weight:600;cursor:pointer;">OK</button>');
     w.querySelector('button').onclick = function () { w.remove(); };
   }
 
@@ -74,7 +74,7 @@
         '<select id="ag-m" aria-label="Birth month" ' + sel + '><option value="">Month</option>' +
         months.map(function (n, i) { return '<option value="' + (i + 1) + '">' + n + '</option>'; }).join('') + '</select>' +
         '<select id="ag-y" aria-label="Birth year" ' + sel + '><option value="">Year</option>' + years + '</select></div>' +
-        '<p style="font-size:.85rem;color:#555;margin:0 0 1rem;">Adults: we keep only that you are 18 or over. Under 18: we keep the month you turn 18 (which is your birth month and year) until then. You only need to answer this once.</p>' +
+        '<p style="font-size:.85rem;color:#555;margin:0 0 1rem;">You only need to answer this once. <a href="/privacy.html" target="_blank">What we keep</a></p>' +
         '<div style="display:flex;gap:8px;justify-content:flex-end;">' +
         '<button type="button" id="ag-cancel" style="padding:10px 16px;border:1px solid #ccc;border-radius:4px;background:#fff;cursor:pointer;">Cancel</button>' +
         '<button type="button" id="ag-ok" style="padding:10px 18px;border:0;border-radius:4px;background:#c8a951;color:#0a1628;font-weight:600;cursor:pointer;">Continue</button></div>');
@@ -83,6 +83,10 @@
       w.querySelector('#ag-ok').onclick = function () {
         var m = parseInt(w.querySelector('#ag-m').value, 10), y = parseInt(w.querySelector('#ag-y').value, 10);
         if (!m || !y) return;
+        // An under-13 answer leads to the account being deleted, so confirm it first:
+        // the year list starts at this year, and a slip is easy.
+        var d = new Date(), age = d.getFullYear() - y - ((d.getMonth() + 1) < m ? 1 : 0);
+        if (age < 13 && !confirm('You chose ' + months[m - 1] + ' ' + y + ', which would make you ' + Math.max(age, 0) + '. Is that right?')) return;
         w.remove(); resolve({ year: y, month: m });
       };
     });

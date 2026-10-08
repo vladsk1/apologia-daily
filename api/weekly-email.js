@@ -71,10 +71,12 @@ export default async function handler(req, res) {
       });
     } catch (e) { /* non-fatal; table may not exist yet */ }
     try {
-      // Accounts whose holder told us they are under 13: delete them. (To cancel one
-      // reported by mistake, delete its user_age row in the dashboard before Monday.)
-      const hourAgo = new Date(Date.now() - 3600e3).toISOString();
-      const r = await fetch(`${SB_URL}/rest/v1/user_age?age_band=eq.under_13&set_at=lt.${hourAgo}&select=user_id`, { headers: H });
+      // Accounts whose holder told us they are under 13 (and confirmed it): delete them
+      // after a 6-day grace period, so with this weekly run it happens 6-13 days after the
+      // answer (privacy.html §9 says "within 14 days"). To cancel one reported by mistake,
+      // delete its user_age row in the Supabase dashboard.
+      const graceCut = new Date(Date.now() - 6 * 864e5).toISOString();
+      const r = await fetch(`${SB_URL}/rest/v1/user_age?age_band=eq.under_13&set_at=lt.${graceCut}&select=user_id`, { headers: H });
       if (r.ok) {
         for (const row of (await r.json()) || []) {
           const out = await deleteAccount(row.user_id);
@@ -243,6 +245,20 @@ async function sendGroupNudges({ SB_URL, authKey, RESEND_KEY, emailById }) {
   if (!Array.isArray(groups) || !groups.length) return out;
   out.groups = groups.length;
 
+  // Adults only (docs/AGE_SCREEN.md): this runs with the service key, which bypasses
+  // the is_adult() policies, so filter here too. If user_age doesn't exist yet (SQL not
+  // run), adultIds stays null and the pre-age-screen behaviour is kept.
+  let adultIds = null;
+  try {
+    const today = new Date().toISOString().slice(0, 10);
+    const uaR = await fetch(`${SB_URL}/rest/v1/user_age?select=user_id,age_band,adult_from`, { headers: h });
+    if (uaR.ok) {
+      adultIds = new Set();
+      (await uaR.json()).forEach(function (a) {
+        if (a.age_band === '18+' || (a.age_band === '13-17' && a.adult_from && a.adult_from <= today)) adultIds.add(a.user_id);
+      });
+    }
+  } catch (e) { /* keep adultIds null */ }
   const gById = {}; groups.forEach(function (g) { gById[g.id] = g; });
   const byGroup = {}; // gid -> { members: [], active: Set }
   members.forEach(function (m) {
@@ -260,6 +276,7 @@ async function sendGroupNudges({ SB_URL, authKey, RESEND_KEY, emailById }) {
       if (gg.active.has(m.user_id)) return;                         // studied recently
       if (new Date(m.joined_at).getTime() > cutoff) return;          // too new to nudge
       if (!emailById[m.user_id]) return;                             // no confirmed email
+      if (adultIds && !adultIds.has(m.user_id)) return;              // not a confirmed adult
       const prev = nudgeFor[m.user_id];
       if (!prev || activeCount > prev.activeCount) nudgeFor[m.user_id] = { group: g, activeCount: activeCount, memberCount: memberCount };
     });

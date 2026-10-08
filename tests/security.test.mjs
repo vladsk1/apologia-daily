@@ -176,13 +176,22 @@ test('age screen: every Study Groups read/write policy and the invite RPC requir
   // the signup trigger must never be able to abort account creation
   const trg = sql.match(/function public\.copy_signup_age[\s\S]*?end; \$\$;/);
   assert.ok(trg && /exception when others then null/.test(trg[0]), 'copy_signup_age must swallow its own errors');
+  assert.match(trg[0], /raw_user_meta_data - 'age_band' - 'adult_from'/, 'the trigger must strip the age keys from the profile');
   // is_adult takes no argument, so nobody can ask about another user
   assert.doesNotMatch(sql, /function public\.is_adult\(\s*\w/);
 });
 
+test('age screen: weekly cleanup keeps its grace window and only touches age-filtered rows', () => {
+  const src = readFileSync('api/weekly-email.js', 'utf8');
+  assert.match(src, /user_age\?age_band=eq\.under_13&set_at=lt\.\$\{graceCut\}/);
+  assert.match(src, /const graceCut = new Date\(Date\.now\(\) - 6 \* 864e5\)/, 'under-13 grace period must stay 6 days (privacy.html: within 14 days)');
+  assert.match(src, /user_age\?age_band=eq\.13-17&adult_from=lte\./);
+  assert.match(readFileSync('privacy.html', 'utf8'), /deleted automatically within 14 days/);
+});
+
 test('age screen: signup sends no birth date and nothing at all for an under-13', () => {
   const src = readFileSync('signup.html', 'utf8');
-  assert.doesNotMatch(src, /adult_from|birth_year|dobY\s*\}/, 'signup must not send a birth date');
+  assert.doesNotMatch(src, /birth_year|birth_month|signUpData\.(dob|birth)/, 'signup must not send a birth date');
   const fn = src.slice(src.indexOf('async function handleSignup'));
   assert.ok(fn.indexOf('age < 13') !== -1 && fn.indexOf('age < 13') < fn.indexOf('sb.auth.signUp'),
     'the under-13 refusal must run before any signup call');

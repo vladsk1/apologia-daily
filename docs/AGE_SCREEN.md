@@ -14,16 +14,20 @@ back to the old "Press OK if you are 18+" confirm, and nothing below is enforced
 
 What is stored, in a table only the server can write (`public.user_age`):
 
-- **Adults:** `age_band = '18+'`, nothing else. Signup also leaves `age_band: "18+"` in the
-  account profile (`auth.users.raw_user_meta_data`); no date goes there.
-- **13–17:** signup sends nothing about age. The first time they open Study Groups they are
-  asked month + year once, and the table keeps `age_band = '13-17'` plus `adult_from`, the
-  first day of the month they turn 18. ⚠ **That date is equivalent to their birth month and
-  year**, and the privacy policy says so. The weekly cron (`api/weekly-email.js`) turns the
-  row into a plain `18+` and clears the date once it has passed.
-- **Under 13 on an existing account:** a row `age_band = 'under_13'` so the answer cannot be
-  retried with a different year, and the weekly cron deletes the account once the row is 7
-  days old (privacy.html §9).
+- **Adults:** `age_band = '18+'`, nothing else.
+- **13–17:** `age_band = '13-17'` plus `adult_from`, the first day of the month they turn 18.
+  ⚠ **That date is equivalent to their birth month and year**, and the privacy policy says
+  so. The weekly cron (`api/weekly-email.js`) turns the row into a plain `18+` and clears the
+  date within a week of it passing.
+- Signup sends the band (and `adult_from` for 13–17) in the signup metadata; the trigger
+  copies it into the table and then **removes both keys from the account profile**
+  (`auth.users.raw_user_meta_data`), so they are kept in one place only.
+- **Accounts made before this change** are asked month + year once on the Study Groups page.
+- **Under 13 on an existing account** (answered on that question, after a confirm step): a
+  row `age_band = 'under_13'`, so the answer cannot be retried with a different year. The
+  weekly cron deletes the account once the row is 6 days old, i.e. 6–13 days after the
+  answer (privacy.html §9: "within 14 days"). To cancel one entered by mistake, delete the
+  `user_age` row in the dashboard.
 
 The band is written **once** (by the signup trigger or by the one-time question). A user
 cannot change it through the API: there is no insert/update grant, and the setter returns the
@@ -42,10 +46,13 @@ begin;
 -- ── 1. Where the band lives. Server-written only.
 create table if not exists public.user_age (
   user_id    uuid primary key references auth.users(id) on delete cascade,
-  age_band   text not null check (age_band in ('under_13', '13-17', '18+')),
+  age_band   text not null,
   adult_from date,
   set_at     timestamptz not null default now()
 );
+alter table public.user_age drop constraint if exists user_age_age_band_check;
+alter table public.user_age add constraint user_age_age_band_check
+  check (age_band in ('under_13', '13-17', '18+'));
 alter table public.user_age enable row level security;
 drop policy if exists ua_select on public.user_age;
 create policy ua_select on public.user_age for select to authenticated using (auth.uid() = user_id);
@@ -54,7 +61,6 @@ grant select on public.user_age to authenticated;
 grant all on public.user_age to service_role;
 
 -- ── 2. Is the CALLER an adult right now? (No argument, so nobody can ask about someone else.)
-drop function if exists public.is_adult(uuid);
 create or replace function public.is_adult()
 returns boolean language sql stable security definer set search_path = public as $$
   select exists(
@@ -66,15 +72,27 @@ $$;
 revoke all on function public.is_adult() from public, anon;
 grant execute on function public.is_adult() to authenticated;
 
--- ── 3. Signup: copy an adult band from the signup metadata. Only '18+' is ever sent
---    (13-17 are asked later), and this can NEVER make account creation fail.
+-- ── 3. Signup: copy the band from the signup metadata, then remove it (and adult_from)
+--    from the account profile so it is kept in user_age only. This can NEVER make
+--    account creation fail: any error is swallowed and the user is simply asked later.
 create or replace function public.copy_signup_age()
 returns trigger language plpgsql security definer set search_path = public as $$
+declare band text := new.raw_user_meta_data->>'age_band';
+        af   text := new.raw_user_meta_data->>'adult_from';
 begin
   begin
-    if new.raw_user_meta_data->>'age_band' = '18+' then
+    if band = '18+' then
       insert into public.user_age(user_id, age_band) values (new.id, '18+')
       on conflict (user_id) do nothing;
+    elsif band = '13-17' and af ~ '^\d{4}-(0[1-9]|1[0-2])$' then
+      insert into public.user_age(user_id, age_band, adult_from)
+      values (new.id, '13-17', (af || '-01')::date)
+      on conflict (user_id) do nothing;
+    end if;
+    if new.raw_user_meta_data ? 'age_band' or new.raw_user_meta_data ? 'adult_from' then
+      update auth.users
+         set raw_user_meta_data = raw_user_meta_data - 'age_band' - 'adult_from'
+       where id = new.id;
     end if;
   exception when others then null;   -- an age problem must never block a signup
   end;
@@ -164,10 +182,18 @@ begin
   return gid;
 end; $$;
 
+-- Only matters if an earlier draft of this file was run: remove its is_adult(uuid).
+-- Done last, after every policy above has been moved to is_adult().
+drop function if exists public.is_adult(uuid);
+
 commit;
 ```
 
-> ⚠ **Every existing member must answer the one-time question before their groups show
+> ⚠ Optional, once this has run: remove any existing memberships held by people who are
+> not adults (they can no longer read those groups anyway):
+> `delete from public.group_members m using public.user_age a where a.user_id = m.user_id and a.age_band <> '18+' and not (a.age_band = '13-17' and a.adult_from <= current_date);`
+>
+> ⚠ **Every existing member must answer the one-time age question before their groups show
 > again.** The Study Groups page asks it when it opens, so for adults this is one tap. Until
 > they answer, the group list and chat read as empty. Expected, not a bug.
 >
