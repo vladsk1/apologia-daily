@@ -110,6 +110,24 @@ button:focus-visible{outline:2px solid var(--g,#c8a951);outline-offset:2px}
 .objin .badge.hard{background:#fdeceb;color:#b23b32}
 .support > .sh + p + .objin, .support .objin{margin-left:0}
 
+/* ---------- 5b. Premise-defence base styles (Kalam standard) ----------
+   Originally inline on the God's Existence pages only; shared here so every tab's
+   rebuilt premise cards render the same. Pages that still carry them inline are
+   unaffected (identical rules). */
+.stp{font-family:var(--ui,sans-serif);font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:5px;white-space:nowrap}
+.stp.proof{background:#e7eefb;color:#1e4278}
+.stp.strong{background:#fbf3e2;color:#9a7416}
+.stp.sugg{background:#eef0f3;color:#5a6b82}
+.support{border-left:3px solid #dbe6f4;padding:3px 0 3px 15px;margin:14px 0}
+.support .sh{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px}
+.support .sh b{font-family:var(--ui,sans-serif);font-size:14.5px;color:var(--td,#0f1f38)}
+.support p{font-size:15px;margin-bottom:4px}
+.honest{font-family:var(--ui,sans-serif);font-size:13.5px;color:var(--td,#0f1f38);background:#fbf8f0;border-left:3px solid var(--g,#c8a951);padding:9px 13px;border-radius:0 8px 8px 0;margin-top:6px}
+.honest b{color:var(--gd,#8a6d1e)}
+.whoholds{font-family:var(--ui,sans-serif);font-size:13px;color:var(--tm,#5a6b82);background:#f4f7fb;border-radius:8px;padding:10px 14px;margin-top:12px}
+.whoholds b{color:var(--n5,#1e4278)}
+.precise{font-family:var(--ui,sans-serif);font-size:13px;color:var(--n7,#14305a);background:#eef3fa;border:1px solid #dbe6f4;border-radius:8px;padding:9px 13px;margin:2px 0 10px}
+
 /* ---------- 6. Premise-defence cards: map, sub-heads, numbered supports ---------- */
 .mu-pdmap{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 0 6px;font-family:var(--ui,sans-serif);font-size:13px}
 .mu-pdmap .l{color:var(--tm,#5a6b82);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;margin-right:2px}
