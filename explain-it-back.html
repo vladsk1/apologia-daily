@@ -448,8 +448,9 @@
       await sb.from('explain_sessions').insert({
         user_id:currentUser.id,argument_id:currentArgId,
         argument_title:ARGS[currentArgId].title,
-        user_explanation:userText,
-        ai_feedback:JSON.stringify(fb),score:validScore(fb.score)
+        // Only the score is kept (privacy.html §4): the written explanation and the
+        // AI feedback are shown on screen and never stored.
+        score:validScore(fb.score)
       });
     }catch(e){console.warn('Failed to save session',e);}
   }

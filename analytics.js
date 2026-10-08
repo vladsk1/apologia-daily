@@ -108,7 +108,10 @@
         ui_host: 'https://eu.posthog.com',
         capture_pageview: true,
         autocapture: true,
-        persistence: 'localStorage+cookie'
+        persistence: 'localStorage+cookie',
+        // No screen recording, ever (privacy.html §7): this stays off even if
+        // "Record user sessions" is switched on in the PostHog dashboard.
+        disable_session_recording: true
       });
     } catch (e) {}
 

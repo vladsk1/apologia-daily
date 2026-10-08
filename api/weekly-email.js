@@ -48,6 +48,18 @@ export default async function handler(req, res) {
     return res.status(200).json(status);
   }
 
+  // Retention: rate-limit counters (hashed IP + day) are only needed for the
+  // current day. Purge anything older than 14 days (privacy.html §10). Runs even
+  // when email is dormant.
+  if (SB_SERVICE_KEY) {
+    try {
+      const cutoff = new Date(Date.now() - 14 * 864e5).toISOString().slice(0, 10);
+      await fetch(`${SB_URL}/rest/v1/ask_rate?day=lt.${cutoff}`, {
+        method: 'DELETE', headers: { apikey: SB_SERVICE_KEY, Authorization: `Bearer ${SB_SERVICE_KEY}` }
+      });
+    } catch (e) { /* non-fatal */ }
+  }
+
   if (!RESEND_KEY) {
     return res.status(200).json({
       status: 'skipped',

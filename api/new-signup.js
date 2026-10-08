@@ -3,7 +3,7 @@ import { applyCors } from '../lib/cors.js';
 import { verifyUserResult } from '../lib/verify-user.js';
 import { deleteAccount } from '../lib/delete-account.js';
 import { parseBody } from '../lib/parse-body.js';
-import { overRateLimit, clientIp } from '../lib/ratelimit.js';
+import { overRateLimit } from '../lib/ratelimit.js';
 
 /* Delete the CALLER'S OWN account and all their data (Apple Guideline 5.1.1(v);
    Google Play has the same requirement). See lib/delete-account.js.
@@ -58,7 +58,6 @@ async function handleDeleteAccount(req, res) {
      and nothing to spot a stolen token being used this way. */
   console.log('account-deleted', {
     userId: user.id,
-    ip: clientIp(req),
     at: new Date().toISOString(),
     deleted: result.deleted,
   });
@@ -182,8 +181,10 @@ export default async function handler(req, res) {
         body: JSON.stringify({
           api_key: PH_KEY,
           event: (kind === 'confirmed' ? 'email_confirmed' : 'signup_completed'),
-          distinct_id: userId || email,
-          properties: { email: email, $lib: 'apologia-server' }
+          // Never send the address itself to analytics (privacy.html §6): the
+          // Supabase user id is the only identifier PostHog receives.
+          distinct_id: userId || 'signup-unknown',
+          properties: { $lib: 'apologia-server' }
         })
       });
     } catch (e) { /* non-fatal */ }
