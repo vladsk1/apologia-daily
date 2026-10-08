@@ -62,6 +62,14 @@ Me, once 11 is done (the new terms already promise these, so they must exist on 
 - A "Manage or cancel subscription" button in Dashboard → Account (Stripe Customer Portal).
 - The in-app path: Apple/Google purchases through RevenueCat (no Stripe inside the app).
 
+## Optional
+
+- [ ] **13. Register a US DMCA agent** (audit item 9). Only matters for US "safe harbour" if a
+  user posts infringing material in a study group. About US$6 every 3 years at
+  dmca.copyright.gov (needs the legal name, 9, and a postal address, 10). The terms already
+  carry a copyright-complaints process (`terms.html#copyright-complaints`) that works without
+  it; once registered, tell me and I'll name the agent there.
+
 ## Information I need from you
 
 - [ ] **9. Legal entity name** for the privacy policy: your name as a sole trader, or a business
