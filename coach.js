@@ -433,6 +433,9 @@
        alter table public.coach_signals enable row level security;
        create policy "coach_own" on public.coach_signals for all
          using (auth.uid() = user_id) with check (auth.uid() = user_id);
+       -- explicit grants (Supabase stops auto-granting new tables 2026-10-30):
+       revoke all on public.coach_signals from anon;
+       grant select, insert, update, delete on public.coach_signals to authenticated;
   */
   var SB_URL = 'https://noprgxkwniouukmrfozc.supabase.co';
   var SB_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw';

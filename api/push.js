@@ -15,7 +15,11 @@ import { overRateLimit } from '../lib/ratelimit.js';
    Subscriptions table (Supabase SQL editor):
      create table if not exists push_subscriptions (
        endpoint text primary key, p256dh text not null,
-       auth text not null, created_at timestamptz default now()); */
+       auth text not null, created_at timestamptz default now());
+     alter table push_subscriptions enable row level security;  -- server-only:
+     revoke all on push_subscriptions from anon, authenticated; -- no policies,
+     grant  all on push_subscriptions to service_role;          -- service key only
+   (See docs/SUPABASE_RLS_HARDENING.md.) */
 import crypto from 'crypto';
 
 import { applyCors } from '../lib/cors.js';

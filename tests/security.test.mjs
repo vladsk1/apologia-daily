@@ -128,3 +128,37 @@ test('/api/health signals outages with 503 so uptime monitors can see them', asy
     if (savedHealth !== undefined) process.env.HEALTH_SECRET = savedHealth;
   }
 });
+
+test('every table created in the repo setup SQL turns on row-level security', () => {
+  // Supabase exposes every public table to the anon key through PostgREST. A table
+  // created without RLS is readable and writable by anyone holding the key that sits in
+  // every page. 2026-10-08 audit: push_subscriptions was documented with no RLS at all.
+  const files = [
+    ...globSync('docs/**/*.md'), ...globSync('api/*.js'), ...globSync('lib/*.js'),
+    ...globSync('*.js'), ...globSync('**/*.sql').filter((f) => !f.startsWith('node_modules')),
+  ];
+  const missing = [];
+  for (const f of files) {
+    const src = readFileSync(f, 'utf8');
+    const created = [...src.matchAll(/create table(?: if not exists)?\s+(?:public\.)?([a-z_][a-z0-9_]*)/gi)].map((m) => m[1].toLowerCase());
+    for (const t of new Set(created)) {
+      const rls = new RegExp(`alter table\\s+(?:public\\.)?${t}\\s+enable row level security`, 'i');
+      if (!rls.test(src)) missing.push(`${f}: ${t}`);
+    }
+  }
+  assert.deepEqual(missing, [], 'tables created without "enable row level security" in the same file:\n' + missing.join('\n'));
+});
+
+test('every Supabase JWT shipped to the browser is the anon key, never service_role', () => {
+  const files = [...globSync('*.html'), ...globSync('*.js'), ...globSync('library/**/*.{html,js}'),
+    ...globSync('answers/*.html'), ...globSync('lib/*.js').filter((f) => !/delete-account|verify-user/.test(f))];
+  const bad = [];
+  for (const f of files) {
+    for (const m of readFileSync(f, 'utf8').matchAll(/eyJ[A-Za-z0-9_-]{10,}\.(eyJ[A-Za-z0-9_-]{10,})\.[A-Za-z0-9_-]{10,}/g)) {
+      let role = '?';
+      try { role = JSON.parse(Buffer.from(m[1], 'base64url').toString('utf8')).role; } catch { /* not a JWT */ }
+      if (role !== 'anon') bad.push(`${f}: role=${role}`);
+    }
+  }
+  assert.deepEqual(bad, [], 'non-anon JWT in a client-shipped file:\n' + bad.join('\n'));
+});
