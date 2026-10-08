@@ -1082,6 +1082,14 @@
 >   until they expire. Fix: add the column, then add `['push_subscriptions','user_id']` to `USER_TABLES`.
 >
 > **Infrastructure / verification**
+> - 🔴 **OWED BY THE OWNER — run `docs/SUPABASE_RLS_HARDENING.md` in the Supabase SQL editor (written
+>   2026-10-08, NOT YET RUN).** The 2026-10-08 legal/security audit found no row-level security in the repo
+>   for `push_subscriptions` (server-only; if RLS is off, the public anon key on every page can read every
+>   subscriber's push endpoint + keys), `flashcards`, `study_plans_progress`, `explain_sessions` and
+>   `daily_arguments`, plus missing explicit grants on `coach_signals`. The doc has a read-only Step 1 check
+>   (run that first — the tables may already be protected from the dashboard), an idempotent access-only
+>   Step 2 fix, a Step 3 re-check, and an optional Step 4 that clears pre-2026-10-08 Explain It Back text.
+>   Until it is run, treat those tables as UNVERIFIED. Mark the doc's status line when done.
 > - ✅ **DONE + VERIFIED 2026-09-23:** the AI rate-limit migration `docs/ASK_RATE_LIMIT.md`
 >   (`ask_rate` table + `bump_ask_rate` RPC) re-applied on production by the owner via Claude in
 >   Chrome, verify results relayed (1→2, anon/authenticated locked out). Table + function

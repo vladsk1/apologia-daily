@@ -142,6 +142,22 @@ commit;
    the browser console will show a `403` / "new row violates row-level security policy" —
    send me the message.
 
+## Step 4 (optional) — clear old Explain It Back text
+
+Since 2026-10-08 Explain It Back stores only the score (`explain-it-back.html`); the
+written explanation and AI feedback are no longer saved. Rows from before that date
+still hold the text. To clear it (keeps the scores):
+
+```sql
+update public.explain_sessions set user_explanation = null, ai_feedback = null
+where user_explanation is not null or ai_feedback is not null;
+```
+
+If this errors with "null value violates not-null constraint", run
+`alter table public.explain_sessions alter column user_explanation drop not null, alter column ai_feedback drop not null;`
+first — and note new inserts would already be failing in that case (the page now omits
+both columns), so check Explain It Back still saves a score after Step 2.
+
 ## Afterwards
 
 - Note the date you ran it at the top of this file (replace "NOT YET RUN").
