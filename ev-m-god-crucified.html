@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- UNSTAMPED mastery page: every argument string ported from library/god-crucified.html (certified 2026-10-08); this page itself has not been through its own gate. -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>God Crucified: How the Cross Reveals Who God Is | Apologia Daily</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --n:#050d1a; --n8:#0a1628; --n7:#0f2040; --n5:#1e4278; --n3:#4a7ab5;
+  --g:#c8a951; --gl:#d4b96a; --gd:#a88930;
+  --w:#fff; --ow:#f7f4ef; --border:#e8e2d8; --tm:#3a4a62; --td:#0f1f38;
+  --fd:'Playfair Display',Georgia,serif;
+  --ss:'Source Serif 4',Georgia,serif;
+  --ui:'DM Sans',system-ui,sans-serif;
+  --ok:#2f7d57; --okl:#e7f2ec;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ss);color:var(--td);background:var(--ow);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px}
+
+/* ---------- site nav (matches hub) ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;border-bottom:1px solid rgba(255,255,255,.08)}
+nav .logo{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:#fff;text-decoration:none}
+nav .logo span{color:var(--g)}
+.nl{display:flex;gap:1.5rem;list-style:none}
+.nl a{font-family:var(--ui);font-size:.82rem;color:rgba(255,255,255,.7);text-decoration:none;text-transform:uppercase;letter-spacing:.04em}
+.nl a.active{color:var(--g)}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-right a,.nav-right span,.nav-right button{font-family:var(--ui);font-size:.82rem}
+.nav-dashboard{color:rgba(255,255,255,.7);text-decoration:none;text-transform:uppercase;letter-spacing:.04em}
+.nav-user{color:var(--gl);font-weight:600}
+.nav-signin{color:rgba(255,255,255,.7);text-decoration:none}
+.nav-signout{background:none;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);padding:6px 14px;border-radius:3px;cursor:pointer}
+.nav-cta{font-weight:500;padding:8px 20px;border-radius:3px;background:var(--g);color:var(--n);text-decoration:none}
+@media(max-width:880px){.nl{display:none}}
+body{padding-top:64px}
+
+/* ---------- top hero ---------- */
+.hero{background:linear-gradient(160deg,var(--n) 0%,var(--n7) 70%,var(--n5) 160%);color:var(--w);padding:54px 0 130px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border:1px solid rgba(200,169,81,.18);border-radius:50%}
+.hero::before{content:"";position:absolute;right:10px;top:10px;width:200px;height:200px;border:1px solid rgba(200,169,81,.12);border-radius:50%}
+.eyebrow{font-family:var(--ui);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gl);font-weight:600;display:inline-flex;align-items:center;gap:9px}
+.eyebrow .dot{width:5px;height:5px;background:var(--g);border-radius:50%}
+.hero h1{font-family:var(--fd);font-weight:700;font-size:clamp(34px,6vw,52px);line-height:1.05;margin:16px 0 14px;max-width:16ch}
+.hero .lede{font-size:clamp(16px,2.4vw,19px);color:#cdd8e8;max-width:56ch}
+.hero .lede em{color:var(--gl);font-style:italic}
+.crumbs{font-family:var(--ui);font-size:13px;color:#8ea2bf;margin-bottom:4px}
+.crumbs a{color:#8ea2bf;text-decoration:none}
+
+/* ---------- mastery dial card ---------- */
+.dialcard{background:var(--w);border:1px solid var(--border);border-radius:16px;box-shadow:0 18px 50px -24px rgba(5,13,26,.45);margin-top:-86px;position:relative;z-index:3;padding:26px 28px;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.dial{flex:0 0 96px;width:96px;height:96px;position:relative}
+.dial svg{transform:rotate(-90deg)}
+.dial .pct{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--ui)}
+.dial .pct b{font-size:24px;color:var(--td);font-weight:700;line-height:1}
+.dial .pct span{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-top:2px}
+.dialmeta{flex:1;min-width:240px}
+.dialmeta h2{font-family:var(--fd);font-size:21px;font-weight:600;margin-bottom:4px}
+.dialmeta p{font-size:14.5px;color:var(--tm);font-family:var(--ui)}
+.libnote{font-family:var(--ui);font-size:12.5px;color:var(--gd);font-weight:600;margin-top:10px;display:inline-flex;align-items:center;gap:7px;background:#fbf7ec;border:1px solid #f0e6cb;padding:6px 12px;border-radius:99px}
+
+/* ---------- phase spine ---------- */
+section{padding:46px 0 6px}
+.phasehead{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+.phasenum{font-family:var(--ui);font-weight:700;font-size:13px;color:var(--w);background:var(--n5);width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex:0 0 30px}
+.phasehead h3{font-family:var(--fd);font-size:27px;font-weight:600}
+.phasesub{font-family:var(--ui);color:var(--tm);font-size:15px;margin:2px 0 26px 44px}
+
+.card{background:var(--w);border:1px solid var(--border);border-radius:14px;padding:24px 26px;margin-bottom:18px}
+.card h4{font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:4px}
+.card .kick{font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;margin-bottom:11px;display:block}
+
+/* premises */
+.syllogism{display:grid;gap:12px;margin:8px 0 18px}
+.prem{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:start;background:var(--ow);border:1px solid var(--border);border-radius:11px;padding:15px 17px}
+.prem .tag{font-family:var(--ui);font-weight:700;font-size:12px;color:var(--n5);background:#fff;border:1px solid #d6e0ef;border-radius:7px;padding:6px 0;text-align:center}
+.prem.concl{background:linear-gradient(120deg,#fbf7ec,#fff);border-color:#eeddb6}
+.prem.concl .tag{color:var(--gd);border-color:#ecdcae;background:#fffdf6}
+.prem p{font-size:16.5px;font-family:var(--ss)}
+.prem p b{color:var(--n5)}
+.hardest{font-family:var(--ui);font-size:13.5px;color:var(--td);background:#fbf8f0;border-left:3px solid var(--g);padding:11px 14px;border-radius:0 8px 8px 0;margin-top:14px}.hardest b{color:var(--gd)}.hardest a{color:var(--gd);font-weight:600}
+.formnote{font-family:var(--ui);font-size:13px;color:var(--tm);font-style:normal;background:#f4f7fb;border-left:3px solid var(--n3);padding:10px 14px;border-radius:0 8px 8px 0}
+
+/* the cause chips */
+.chiprow{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{font-family:var(--ui);font-size:13px;font-weight:600;color:var(--n7);background:#eef3fa;border:1px solid #dbe6f4;padding:7px 13px;border-radius:99px}
+.chip.gold{color:var(--gd);background:#fbf7ec;border-color:#f0e6cb}
+
+/* accordion (premise defence + objections) */
+.acc{border:1px solid var(--border);border-radius:11px;overflow:hidden;margin-bottom:11px;background:var(--w)}
+.acc summary{list-style:none;cursor:pointer;padding:16px 20px;display:flex;align-items:center;gap:14px;font-family:var(--ui);font-weight:600;font-size:15.5px;color:var(--td)}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary:hover{background:#fafbfd}
+.acc .badge{font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:6px;margin-left:auto;white-space:nowrap}
+.badge.hard{background:#fdeceb;color:#b23b32}
+.badge.mid{background:#fbf3e2;color:#9a7416}
+.badge.easy{background:var(--okl);color:var(--ok)}
+.acc .chev{color:var(--n3);transition:transform .2s;flex:0 0 auto}
+.acc[open] .chev{transform:rotate(90deg)}
+.acc .body{padding:2px 20px 20px;border-top:1px solid var(--border)}
+.acc .body .lbl{font-family:var(--ui);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin:16px 0 5px}
+.lbl.steel{color:var(--n5)}
+.lbl.heard{color:var(--tm)}
+.lbl.reply{color:var(--gd)}
+.acc .body p{font-size:15.5px;margin-bottom:4px}
+.acc .body .quote{background:var(--ow);border-left:3px solid var(--g);padding:11px 15px;border-radius:0 8px 8px 0;font-style:italic;color:var(--td);margin-top:4px}
+
+/* sources */
+.src{display:grid;grid-template-columns:1fr;gap:0}
+.src .row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.src .row:last-child{border-bottom:none}
+.src .who{font-family:var(--ui);flex:0 0 150px}
+.src .who b{display:block;font-size:15px;color:var(--td)}
+.src .who span{font-size:12.5px;color:var(--tm)}
+.src .what{font-size:15px;color:var(--td)}
+
+/* practice: explain it back */
+.practicecard{background:var(--w);border:1px solid var(--border);border-radius:14px;padding:24px 26px;margin-bottom:18px}
+textarea{width:100%;min-height:120px;font-family:var(--ss);font-size:15.5px;color:var(--td);border:1px solid var(--border);border-radius:10px;padding:13px 15px;resize:vertical;background:var(--ow)}
+textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
+.btn{font-family:var(--ui);font-weight:600;font-size:14.5px;border:none;border-radius:9px;padding:11px 20px;cursor:pointer;transition:transform .08s,background .15s}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:var(--n5);color:#fff}
+.btn.primary:hover{background:var(--n7)}
+.btn.gold{background:var(--g);color:var(--n)}
+.btn.gold:hover{background:var(--gl)}
+.btn.ghost{background:transparent;color:var(--n5);border:1px solid #cfdcee}
+.btn.ghost:hover{background:#f3f7fc}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.score{margin-top:18px;border:1px solid var(--border);border-radius:11px;padding:18px 20px;background:var(--ow);display:none}
+.score.show{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.scorehead{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+.scorenum{font-family:var(--fd);font-size:34px;font-weight:700;color:var(--n5);line-height:1}
+.scorenum small{font-size:16px;color:var(--tm)}
+.scoreverdict{font-family:var(--ui);font-weight:600;font-size:15px}
+.feed{list-style:none;display:grid;gap:7px}
+.feed li{font-family:var(--ui);font-size:14px;display:flex;gap:9px;align-items:flex-start}
+.feed li .mk{flex:0 0 auto;font-weight:700}
+.feed li.hit .mk{color:var(--ok)}
+.feed li.miss .mk{color:var(--gd)}
+
+/* flashcards */
+.flashwrap{perspective:1200px}
+.flash{position:relative;height:178px;cursor:pointer}
+.flash .face{position:absolute;inset:0;backface-visibility:hidden;border-radius:13px;padding:24px;display:flex;flex-direction:column;justify-content:center;transition:transform .5s;border:1px solid var(--border)}
+.flash .front{background:linear-gradient(150deg,var(--n7),var(--n5));color:#fff}
+.flash .back{background:var(--w);transform:rotateY(180deg)}
+.flash.flipped .front{transform:rotateY(180deg)}
+.flash.flipped .back{transform:rotateY(0)}
+.flash .qlbl{font-family:var(--ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gl);font-weight:600;margin-bottom:9px}
+.flash .front p{font-family:var(--fd);font-size:19px;font-weight:500}
+.flash .back .qlbl{color:var(--gd)}
+.flash .back p{font-size:15px;color:var(--td)}
+.flash .tap{position:absolute;bottom:13px;right:18px;font-family:var(--ui);font-size:11px;opacity:.6}
+.flashnav{display:flex;align-items:center;justify-content:space-between;margin-top:14px;font-family:var(--ui)}
+.flashnav span{font-size:13px;color:var(--tm)}
+
+/* debate */
+.interloc{display:flex;gap:13px;margin-bottom:8px}
+.interloc .av{flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:#e6ebf3;color:var(--n5);display:flex;align-items:center;justify-content:center;font-family:var(--ui);font-weight:700;font-size:14px}
+.interloc .bub{background:#eef2f8;border-radius:4px 14px 14px 14px;padding:13px 17px;font-size:16px}
+.interloc .who2{font-family:var(--ui);font-size:12px;color:var(--tm);margin-bottom:3px;font-weight:600}
+.reveal{margin-top:14px}
+.modelans{display:none;margin-top:12px;border:1px solid #f0e6cb;background:#fbf7ec;border-radius:12px;padding:16px 19px}
+.modelans.show{display:block;animation:fade .3s ease}
+.modelans .lbl{font-family:var(--ui);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--gd);margin-bottom:7px}
+.modelans p{font-size:15px}
+
+/* prove it checklist */
+.checklist{display:grid;gap:11px}
+.cl{display:flex;align-items:center;gap:14px;padding:15px 18px;border:1px solid var(--border);border-radius:11px;background:var(--w);transition:.2s}
+.cl.done{border-color:#cfe6da;background:var(--okl)}
+.cl .box{flex:0 0 24px;width:24px;height:24px;border-radius:7px;border:2px solid #cdd6e2;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;transition:.2s}
+.cl.done .box{background:var(--ok);border-color:var(--ok)}
+.cl .txt{flex:1}
+.cl .txt b{font-family:var(--ui);font-size:15px;display:block}
+.cl .txt span{font-family:var(--ui);font-size:13px;color:var(--tm)}
+.cl .state{font-family:var(--ui);font-size:12.5px;font-weight:600;color:var(--tm)}
+.cl.done .state{color:var(--ok)}
+
+/* confidence */
+.confrow{display:flex;gap:9px;margin-top:14px;flex-wrap:wrap}
+.confrow button{flex:1;min-width:90px;font-family:var(--ui);font-weight:600;font-size:13.5px;border:1px solid #cfdcee;background:#fff;color:var(--n5);border-radius:9px;padding:11px 8px;cursor:pointer;transition:.15s}
+.confrow button:hover{border-color:var(--n3)}
+.confrow button.sel{background:var(--n5);color:#fff;border-color:var(--n5)}
+
+.bigcta{background:linear-gradient(150deg,var(--n) 0%,var(--n7) 100%);color:#fff;border-radius:16px;padding:30px 32px;margin:14px 0 60px;text-align:center}
+.bigcta h4{font-family:var(--fd);font-size:23px;font-weight:600;color:#fff;margin-bottom:6px}
+.bigcta p{color:#cdd8e8;font-family:var(--ui);font-size:14.5px;max-width:50ch;margin:0 auto 16px}
+
+.foot{text-align:center;font-family:var(--ui);font-size:12.5px;color:var(--tm);padding:0 0 50px}
+.foot code{background:#eef0f3;padding:2px 6px;border-radius:4px;font-size:12px}
+
+@media(max-width:560px){
+  .prem{grid-template-columns:46px 1fr;gap:11px}
+  .src .row{flex-direction:column;gap:4px}
+  .src .who{flex-basis:auto}
+  .dialcard{padding:22px}
+}
+.seo-summary{background:var(--w);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin:26px 0 0}
+.seo-summary h2{font-family:var(--fd);font-size:20px;font-weight:600;color:var(--td);margin-bottom:10px}
+.seo-summary p{font-family:var(--ss);font-size:16px;color:var(--td);margin-bottom:12px}
+.seo-summary p:last-child{margin-bottom:0}
+.hero{padding-bottom:48px}
+.seo-summary + .dialcard{margin-top:24px}
+</style>
+  <link rel="stylesheet" href="/ad-nav.css">
+  <link rel="stylesheet" href="/library/mastery-ui.css">
+<meta name="description" content="Did the earliest Christians read the cross as revealing who God is? Isaiah’s exalted Servant, Philippians 2, the slain Lamb, and the cry of dereliction.">
+<link rel="canonical" href="https://apologiadaily.com/library/god-crucified.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="God Crucified: How the Cross Reveals Who God Is | Apologia Daily">
+<meta property="og:description" content="Did the earliest Christians read the cross as revealing who God is? Isaiah’s exalted Servant, Philippians 2, the slain Lamb, and the cry of dereliction.">
+<meta property="og:url" content="https://apologiadaily.com/ev-m-god-crucified.html">
+<meta property="og:image" content="https://apologiadaily.com/og-default.jpg">
+<meta name="twitter:image" content="https://apologiadaily.com/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@apologiadaily">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"God Crucified: How the Cross Reveals Who God Is","description":"Did the earliest Christians read the cross as revealing who God is? Isaiah’s exalted Servant, Philippians 2, the slain Lamb, and the cry of dereliction. Learn to defend it and answer its five objections.","learningResourceType":"Self-paced mastery track","educationalLevel":"Advanced","inLanguage":"en","isAccessibleForFree":true,"about":"Christian apologetics","url":"https://apologiadaily.com/ev-m-god-crucified.html","publisher":{"@type":"Organization","name":"Apologia Daily","url":"https://apologiadaily.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://apologiadaily.com/ev-m-god-crucified.html"}}</script>
+</head>
+<body>
+
+<nav class="adn-nav">
+  <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
+  <button class="adn-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="adn-collapse">
+    <ul class="adn-links">
+      <li><a href="/search.html" class="adn-search-link" aria-label="Search">&#128269; Search</a></li>
+      <li><a href="/today">Today</a></li>
+      <li><a href="/evidence-library.html">Evidence Library</a></li>
+      <li><a href="/daily-devotional.html">Daily Devotional</a></li>
+      <li><a href="/debate-arena.html">Debate Arena</a></li>
+      <li><a href="/asked-and-answered.html">Asked &amp; Answered</a></li>
+      <li><a href="/worldviews.html">Worldviews</a></li>
+      <li><a href="/study-plans.html">Study Plans</a></li>
+      <li class="adn-has-drop adn-has-mega">
+        <button type="button" class="adn-more" aria-expanded="false">More <span class="adn-caret">&#9662;</span></button>
+        <div class="adn-mega">
+          <div class="adn-mega-in">
+            <div class="adn-mega-col">
+              <div class="adn-mega-h">Go deeper</div>
+              <a class="adn-mi" href="/library/"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Deep-Dive Essays</span><span class="adn-mi-dc">Long-form, fully-cited essays.</span></span></a>
+              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Common Questions</span><span class="adn-mi-dc">Short answers to the questions people ask most.</span></span></a>
+              <a class="adn-mi" href="/sources.html"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Church Fathers &amp; Creeds</span><span class="adn-mi-dc">The early church in its own words, verified.</span></span></a>
+              <a class="adn-mi" href="/our-sources.html"><span class="adn-mi-ic">&#128218;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Our Sources</span><span class="adn-mi-dc">Books and articles our essays cite.</span></span></a>
+              <a class="adn-mi" href="/whats-new.html"><span class="adn-mi-ic">&#128240;</span><span class="adn-mi-tx"><span class="adn-mi-nm">What&#39;s New</span><span class="adn-mi-dc">Latest essays, features &amp; reels.</span></span></a>
+            </div>
+            <div class="adn-mega-col">
+              <div class="adn-mega-h">Practice &amp; community</div>
+              <a class="adn-mi" href="/coach.html"><span class="adn-mi-ic">&#129305;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Coach</span><span class="adn-mi-dc">Your skill map &amp; a plan for your weak spots.</span></span></a>
+              <a class="adn-mi" href="/games.html"><span class="adn-mi-ic">&#127918;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Games</span><span class="adn-mi-dc">Quizzes that feed your streak.</span></span></a>
+              <a class="adn-mi" href="/study-groups.html"><span class="adn-mi-ic">&#128101;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Study Groups <span class="adn-mi-tag">New</span></span><span class="adn-mi-dc">Study with people you love.</span></span></a>
+              <a class="adn-mi" href="/reading-club.html"><span class="adn-mi-ic">&#128214;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Reading Clubs</span><span class="adn-mi-dc">The classics, chapter by chapter.</span></span></a>
+            </div>
+            <div class="adn-mega-col">
+              <div class="adn-mega-h">For you</div>
+              <a class="adn-mi" href="/video-library.html"><span class="adn-mi-ic">&#127909;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Videos</span><span class="adn-mi-dc">Short, shareable explainers.</span></span></a>
+            </div>
+            <div class="adn-mega-foot">
+              <a href="/about.html">About</a>
+              <a href="/what-we-believe.html">What We Believe</a>
+              <a href="/editorial-standards.html">Editorial Standards</a>
+              <a href="/privacy.html">Privacy</a>
+              <a href="/terms.html">Terms</a>
+              <a href="https://www.instagram.com/apologiadaily/" target="_blank" rel="me noopener">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="adn-right">
+      <a href="/dashboard.html" class="adn-dash" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span class="adn-user" id="nav-user"></span>
+      <button class="adn-signout" id="nav-signout" onclick="signOut()" style="display:none;">Sign out</button>
+      <a href="/login.html" class="adn-signin" id="nav-signin">Sign in</a>
+      <a href="/signup.html" class="adn-cta" id="nav-cta">Start Free</a>
+    </div>
+  </div>
+</nav>
+
+<div id="proGate" style="display:none;position:fixed;inset:64px 0 0;z-index:90;background:linear-gradient(160deg,#050d1a,#0f2040);color:#fff;align-items:center;justify-content:center;text-align:center;padding:24px">
+  <div style="max-width:440px">
+    <div style="font-size:34px;margin-bottom:8px">&#128274;</div>
+    <h2 style="font-family:var(--fd);font-size:28px;font-weight:600;margin-bottom:10px">Mastery Tracks are a Pro feature</h2>
+    <p style="font-family:var(--ui);color:#cdd8e8;font-size:15px;margin-bottom:22px">Go beyond reading the deep dive — reconstruct each argument from memory, answer its hardest objections, and track your mastery across the library.</p>
+    <a href="index.html#pricing" class="btn gold" style="display:inline-block;text-decoration:none;margin-bottom:14px">Pro &mdash; launching soon</a>
+    <div><a href="evidence-library.html" style="font-family:var(--ui);color:#8ea2bf;font-size:13px;text-decoration:none">&larr; Back to the Evidence Library</a></div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="crumbs"><a href="evidence-library.html">Evidence Library</a> &nbsp;›&nbsp; Jesus &nbsp;›&nbsp; <span style="color:var(--gl)">God Crucified</span></div>
+    <span class="eyebrow"><span class="dot"></span> Pro · Mastery Track</span>
+    <h1>God Crucified: How the Cross Reveals Who God Is</h1>
+    <p class="lede">The deep dive explains the case. This track makes you able to <em>wield</em> it — rebuild from memory the four steps of the argument, hold the fences that keep it orthodox, answer its five objections, then hold it together in a real conversation.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="seo-summary">
+    <h2>The argument in brief</h2>
+    <p>Mark tells the death of Jesus without ornament. Darkness has covered the land since noon. At the ninth hour the man from Nazareth cries out, in Aramaic, the opening line of a psalm of lament — “Eloi, Eloi, lema sabachthani?” which means, “My God, my God, why have you forsaken me?” — and a little later, with a loud cry, he breathes his last. Then comes the sentence Mark has been holding back. The voice from heaven has called Jesus God’s Son at his baptism, and again from the cloud on the mountain; unclean spirits have shrieked it. But the first human being in the story to confess it is a Roman officer, and what moves him, on Mark’s telling, is above all the manner of a death. “And when the centurion, who stood facing him, saw that in this way he breathed his last, he said, ‘Truly this man was the Son of God!’” (Mark 15:33–39)</p>
+    <p>That is a strange place to look for God. In the ancient world a crucified man was the opposite of divine: a slave’s death, a rebel’s death, and to a Jew a death under the curse of the Law. Yet Mark chooses that moment, and no other, for the confession his whole book has been driving toward. The earliest Christians, who included Jesus within the identity of the one God of Israel, included the <em>crucified</em> Jesus there too. So they read the cross not as the place where God was absent but as the place where the Son, who is truly God, made known most fully who God is: a God whose glory is not only enthroned above the world but poured out for it.</p>
+    <p>Who suffers there, and how, must be said with care. The Son, who is truly God, entered real human suffering and death on the cross — God is not a spectator above our pain. Not that the divine nature “dies,” nor that the Father suffered (an error called <em>patripassianism</em>). The suffering is located in the Son according to his assumed human nature — one of the Trinity suffered in the flesh — not in the divine nature and not in the Father.</p>
+    <p>Honesty about scope is part of the case. This argument establishes a bounded claim: that the New Testament, which includes Jesus within the identity of the one God of Israel, deliberately includes his humiliation and death there too, and so presents the cross as a disclosure of who God is — a God whose glory is shown in self-giving love. It does not, by itself, prove that the claim is true. That the first Christians read the cross this way is a historical finding; whether they were right depends on whether God vindicated the crucified one, which is the question the resurrection evidence, beginning with the creed Paul quotes in 1 Corinthians 15:3–7, is meant to answer. It does not settle how the cross saves. And it is not a theodicy. It does not explain why <em>this</em> child suffers <em>this</em> way. It claims something different: that the God against whom we protest has not stayed out of reach of the protest.</p>
+  </section>
+  <!-- mastery dial -->
+  <div class="dialcard">
+    <div class="dial">
+      <svg width="96" height="96" viewBox="0 0 96 96">
+        <circle cx="48" cy="48" r="42" fill="none" stroke="#ede7db" stroke-width="9"/>
+        <circle id="ring" cx="48" cy="48" r="42" fill="none" stroke="var(--g)" stroke-width="9" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="263.9"/>
+      </svg>
+      <div class="pct"><b id="pctNum">0%</b><span>mastered</span></div>
+    </div>
+    <div class="dialmeta">
+      <h2>Your mastery of this argument</h2>
+      <p>Four checkpoints: understand it, explain it, drill it, defend it. Complete them in any order — your progress saves to your account.</p>
+      <span class="libnote">◆ &nbsp;God Crucified &middot; Jesus mastery track</span>
+    </div>
+  </div>
+
+
+  <!-- ===================== PHASE 1: UNDERSTAND ===================== -->
+  <section id="understand">
+    <div class="phasehead"><span class="phasenum">1</span><h3>Understand it</h3></div>
+    <p class="phasesub">Not more prose — the load-bearing structure. See the skeleton, then learn to defend each bone.</p>
+
+    <div class="card">
+      <span class="kick">The argument, formally</span>
+      <h4>The cross as the place where the Son, who is truly God, made known most fully who God is.</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:12px">The argument has four steps.</p>
+      <div class="syllogism">
+        <div class="prem"><div class="tag">S1</div><p>The earliest Christians included Jesus within the unique identity of the one God of Israel.</p></div>
+        <div class="prem"><div class="tag">S2</div><p>The Jesus they so included was not only the exalted and pre-existent Lord but the humiliated and crucified one: the New Testament tells his self-humbling and death in the very language Israel’s Scriptures use for God’s own exaltation, throne and worship.</p></div>
+        <div class="prem"><div class="tag">S3</div><p>If the one who belongs to God’s identity is the one who humbled himself to death on a cross, then that self-giving is not foreign to who God is; it discloses it.</p></div>
+        <div class="prem concl"><div class="tag">∴ S4</div><p>Therefore the earliest Christians read the cross as a revelation — on their own telling, the decisive revelation — of who God is.</p></div>
+      </div>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:12px">Each step carries a different kind of weight. The first is a historical claim about early Christian belief, argued at length elsewhere in this library and summarized below. The second is exegetical, and it is the heart of the argument. The third is a conceptual step, and it is only as safe as the Christology that governs it, so it needs two fences.</p>
+      <p class="formnote"><b>The first fence concerns <em>who</em> suffers.</b> The historic confession is that the eternal Son of God, without ceasing to be God, took a complete human nature and in that nature suffered and died. The cross does not mean that the Father was crucified, that the divine nature as such bled or perished, or that the Trinity was torn apart. <b>The second fence concerns <em>how</em> the cross saves.</b> Christians across the traditions confess that “Christ died for our sins” (1 Corinthians 15:3), but how exactly the cross saves — the mechanism of the atonement — is a question on which sincere Christians have long differed, and this argument deliberately does not settle it. Its subject is narrower: not what the cross accomplished, but what it reveals.</p>
+
+      <span class="kick" style="margin-top:22px">Why “that is later theology read back into the texts” is the popular skeptic’s move.</span>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">On the developmental view, to speak of the cross as revealing “who God is” is to read the creeds of the fourth and fifth centuries back into first-century texts. The reply begins with a concession: the developed creedal vocabulary came later. The communication-of-properties language is the church’s later articulation, not a New Testament term. But the Philippians 2 hymn, widely regarded as pre-Pauline, places Christ’s “death on a cross” on the path to the name above every name and applies to him Isaiah’s oath that every knee will bow to God. <em>The development is in the clarity, not in the substance.</em></p>
+      <div class="chiprow">
+        <span class="chip">Mark: the centurion confesses at the death</span><span class="chip">Isaiah’s throne and Isaiah’s Servant</span><span class="chip">Philippians 2: the downward path and the name</span><span class="chip">Revelation 5: the Lamb on the throne</span><span class="chip">the cry of dereliction</span><span class="chip gold">the Son, who is truly God, made known who God is</span>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <span class="kick">Defending the steps</span>
+      <h4>Why each step is more plausible than its denial</h4>
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for S1 — Jesus within the identity of the one God</summary>
+        <div class="body">
+          <p class="lbl steel">Included within the unique identity of the one God of Israel</p>
+          <p>The first premise is defended in full in our essays on <a href="/library/jesus_as_god_nt.html">Jesus as God in the New Testament</a>, <a href="/library/shema.html">the Shema</a> and <a href="/library/worship-of-jesus.html">the worship of Jesus</a>, so a summary will do here. What the New Testament does, repeatedly and across independent authors, is something Bauckham has called including Jesus <em>within the unique identity of the one God of Israel.</em> Jesus is placed on the Creator’s side of the line that Jewish monotheism drew between God and everything else: he shares God’s throne, God’s acts of creation, God’s eternal name, and — most tellingly — God’s worship.</p>
+          <p class="lbl steel">The worship is the decisive marker, and it is early</p>
+          <p>Paul preserves an Aramaic prayer untranslated into his Greek-speaking churches: <em>Marana tha</em>, “Our Lord, come!” That the invocation survives in Aramaic is the point. It carries us back behind Paul’s Greek to the Aramaic-speaking Judean church — to the very first community, calling on the risen Jesus as the Lord who will come. Larry Hurtado documented a pattern of devotion to Jesus that emerged, in his phrase, “amazingly early,” among Jewish believers who would have regarded worshiping any creature as blasphemy.</p>
+          <p class="lbl steel">An honest caution</p>
+          <p>Bauckham’s “divine identity” framework is influential but not uncontested: James D. G. Dunn and, from a different angle, James F. McGrath have questioned how sharply the boundary of divine identity can be drawn, and Hurtado — broadly an ally — preferred to frame the data as devotional practice rather than in Bauckham’s identity categories. Nothing in this argument depends on Bauckham’s vocabulary as such. It depends on what the worship evidence shows: that the first Christians gave Jesus the devotion Jewish monotheism reserved for God alone.</p>
+          <p class="lbl steel">Whose argument this is</p>
+          <p>The phrase “God crucified” belongs, as a title, to the British New Testament scholar Richard Bauckham. We draw on his exegesis of particular texts, and on that alone: it is a historian’s and an interpreter’s argument, to be weighed like any other, and nothing here rests on his wider theology. The texts themselves are the evidence.</p>
+
+        </div>
+      </details>
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for S2 — the humiliation told in the language of God’s own glory, throne and worship</summary>
+        <div class="body">
+          <p>It would be possible, in principle, to include an exalted Jesus in God’s identity while treating his earthly life and death as a regrettable prelude — something he passed through on the way to glory and left behind. The New Testament does not do that. In three places it tells the humiliation itself in the language of God’s own glory, throne and worship; in a fourth, Mark, the death itself becomes the moment of confession.</p>
+          <p class="lbl steel">Isaiah’s throne and Isaiah’s Servant</p>
+          <p>Isaiah had seen “the Lord sitting upon a throne, high and lifted up” (Isaiah 6:1); and when the same prophet turns to the Servant who is despised and crushed, he says that he too shall be “high and lifted up” (Isaiah 52:13), reaching for the very words of the throne-vision. The God who “inhabits eternity,” Isaiah adds, is the same God who dwells “with him who is of a contrite and lowly spirit” (Isaiah 57:15). And John draws the threads together without apology: Isaiah, he says, “saw his glory and spoke of him” — of Jesus (John 12:41). The exaltation of the crucified Servant is told in the language of YHWH’s own throne.</p>
+          <p>The verbal link is closer in Hebrew than in English. The same two roots, “be high” (<em>rûm</em>) and “be lifted up” (<em>nāśā’</em>), stand together in all three verses: of the Lord enthroned (6:1), of the Servant (52:13), and of “the One who is high and lifted up” (57:15). And 57:15 adds a second thread. The word rendered “contrite” there comes from the same Hebrew root as “crushed” in the Servant song — “he was crushed for our iniquities” (53:5).</p>
+          <p>Bauckham proposes that early Christian readers made exactly this connection, using a Jewish interpretive habit later rabbis would list among their rules — <em>gezerâ shāvâ</em>, the practice of reading together passages that share a distinctive word. That is his proposal, and it is an inference about how the texts were read, not a report of what any first-century reader wrote down. But John’s own text shows the pairing at work. Within three verses he quotes Isaiah 53:1 (John 12:38: ‘Lord, who has believed what he heard from us?’) and Isaiah 6:10, the commission that follows the throne-vision, and then says that Isaiah “saw his glory” (John 12:38–41). The Servant song and the throne-vision sit together in John’s mind, and the glory he says Isaiah saw belongs to Jesus.</p>
+          <p>The pairing also explains one of John’s most characteristic habits of speech. In the Greek Old Testament the Servant of Isaiah 52:13 will be “lifted up” and “glorified” — two verbs John uses again and again of the cross. “As Moses lifted up the serpent in the wilderness, so must the Son of Man be lifted up”; “When you have lifted up the Son of Man, then you will know that I am he”; “And I, when I am lifted up from the earth, will draw all people to myself,” which John glosses, “He said this to show by what kind of death he was going to die.” And as the cross approaches: “The hour has come for the Son of Man to be glorified”; “Now is the Son of Man glorified, and God is glorified in him.” For John the lifting up on the cross <em>is</em> the exaltation. He does not tell a story of humiliation followed by glory; he tells a story in which the humiliation is where the glory shows.</p>
+          <p><b>The honest limit:</b> Bauckham’s specific reading of the Isaiah passages is a distinctive proposal; it is suggestive and well grounded in John’s own juxtapositions, but it has not been weighed as widely as his wider framework, and it should be presented as one strong reading, not a consensus. By itself the Servant’s exaltation does not make the Servant divine — Isaiah’s God exalts the humble. It is John who draws the further inference, assigning the glory of the throne-vision to Jesus.</p>
+          <p class="lbl steel">Philippians 2: the downward path and the name</p>
+          <p>The second witness is older than any Gospel. In Philippians 2:6–11 Paul quotes what most scholars regard as a pre-Pauline hymn. Christ, “though he was in the form of God, did not count equality with God a thing to be grasped, but emptied himself, by taking the form of a servant, being born in the likeness of men. And being found in human form, he humbled himself by becoming obedient to the point of death, even death on a cross. Therefore God has highly exalted him and bestowed on him the name that is above every name, so that at the name of Jesus every knee should bow, in heaven and on earth and under the earth, and every tongue confess that Jesus Christ is Lord, to the glory of God the Father.”</p>
+          <p><b>A note of care on “emptied himself”:</b> Christ “emptied himself” <em>by adding</em> — taking the form of a servant and veiling his glory (the Greek names no thing he emptied himself <em>of</em>). Not that he set aside, lost, or diminished his deity. He remained what he was and took up what he was not; full deity and immutability are intact.</p>
+          <p>“Every knee should bow… every tongue confess” is lifted from Isaiah 45:23. In its original context this is one of the most fiercely monotheistic passages in all of Scripture. In Isaiah, YHWH declares, “I am God, and there is no other,” and swears that to him alone “every knee shall bow, every tongue shall swear allegiance.” The hymn takes that text and applies it to <em>Jesus</em>.</p>
+          <p>The hardest word in the passage, <em>harpagmos</em> (“a thing to be grasped”), is genuinely contested, but on the reading defended by Roy Hoover and developed by N. T. Wright the verse renders something like: “he did not regard equality with God as something to be used for his own advantage.” The shape of the hymn is then striking: precisely because he <em>was</em> equal with God, he did not treat that equality as a perk to be exploited, but spent it in self-giving. And the “therefore” of verse 9 rewards the self-humbling of one who was <em>already</em> “in the form of God.” The same one who descends to “death on a cross” — the slave’s death — receives the name and the worship that Isaiah reserves for God. The hymn does not say he became worthy of the divine name in spite of the cross. It places the cross on the path to the name. On the orthodox reading the descent <em>reveals</em> the divine character rather than <em>suspending</em> the divine nature.</p>
+          <p class="lbl steel">Revelation 5: the Lamb on the throne</p>
+          <p>In Revelation 4 John sees the throne of God and the worship of heaven offered to the Creator: “Worthy are you, our Lord and God, to receive glory and honor and power, for you created all things.” Then in chapter 5 he is told of the Lion of the tribe of Judah, and turns to see instead, “between the throne and the four living creatures and among the elders,” “a Lamb standing, as though it had been slain.” The new song is sung to the Lamb precisely <em>because</em> of his death — “Worthy are you… for you were slain, and by your blood you ransomed people for God” — and the chapter ends with every creature in heaven and on earth and under the earth and in the sea saying, “To him who sits on the throne and to the Lamb be blessing and honor and glory and might forever and ever!” By the book’s end the city has one throne, “the throne of God and of the Lamb.”</p>
+          <p>The setting makes the point sharp. In the very same book an angel twice refuses the worship John offers and redirects it to God (Revelation 19:10; 22:8–9); the Lamb receives it without a word of protest. And the Lamb is not worshiped in spite of the wounds. He is identified by them. The figure who shares the worship of the Creator is the slaughtered one.</p>
+          <p class="lbl steel">Mark and the cry of dereliction</p>
+          <p>The fourth witness is the darkest, and it returns us to Mark. This is why the Gospels can place on the lips of the dying Jesus the opening cry of Psalm 22, “My God, my God, why have you forsaken me?” (Mark 15:34). The one who shares the divine identity enters, on the cross, the depths of human god-forsakenness. On the divine-identity reading this is not a lapse into something less than God but the fullest disclosure of who God is: the God of Israel is the God who gives himself, to the uttermost, for his people.</p>
+          <p><b>A note of care on who suffers:</b> It is the incarnate Son, in his full humanity, who suffers, dies, and cries out — so that God himself, in the person of the Son, has entered our suffering and death for us. Not that the divine nature suffered or changed, and not that the Father was crucified or forsaken (the ancient error of patripassianism). The Father is not the Son; the impassible God does not perish; the cross reveals who God is, it does not make God mortal. Nor was the Son torn from the Father or the Trinity divided: the Father never ceased to love the Son, and the union of the persons was never broken. The forsakenness is real, borne in the Son’s human experience, not a severing within the one God.</p>
+          <p>Psalm 22 is a prayer of the righteous sufferer, and Jesus prays it as his own. Bauckham reads the cry as Jesus taking up that prayer not only for himself but in solidarity with all who have prayed it — entering, from the inside, the condition of the godforsaken. The psalm itself does not end in the dark. It turns to a God who “has not despised or abhorred the affliction of the afflicted, and he has not hidden his face from him, but has heard, when he cried to him” (22:24), and it closes with the nations turning to the LORD (22:27–28). We should not use that ending to drain the cry of its anguish; Mark records the first verse, not the last. This does not explain the pit. It populates it.</p>
+
+        </div>
+      </details>
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for S3 — who suffers, and how the church says it without heresy</summary>
+        <div class="body">
+          <p class="lbl steel">Where the idea comes from</p>
+          <p>Early in the second century, Ignatius of Antioch, on his way to execution in Rome, asked the Roman Christians not to hinder his martyrdom: “Permit me to be an imitator of the passion of my God.” Writing to Polycarp he held the paradox together in one breath: “Look for Him who is above all time, eternal and invisible, yet who became visible for our sakes; impalpable and impassible, yet who became passible on our account; and who in every kind of way suffered for our sakes.” Ignatius did not explain how the impassible one could become passible. He simply would not let go of either half.</p>
+          <p>Cyril of Alexandria’s Second Letter to Nestorius, read and ratified at Ephesus in 431 and again at Chalcedon in 451, insisted that the one Christ truly suffered while the divine nature as such did not, and the Second Council of Constantinople in 553 anathematized anyone who would not confess that “our Lord Jesus Christ who was crucified in the flesh is true God and the Lord of Glory and one of the Holy Trinity.” Constantinople II’s formula concerns the one person of the Son crucified “in the flesh.” Historians sometimes call it the “theopaschite” formula, and it is orthodox: it is neither the error that the Father suffered (patripassianism) nor the error that the divine nature itself suffered.</p>
+          <p>In the Reformation era Martin Luther, in his Heidelberg Disputation of 1518, set a “theologian of glory” against a “theologian of the cross,” arguing that God is truly known through suffering and the cross rather than by reasoning up to his invisible attributes from his works. (Luther is cited as a historical milestone in the use of the theme; this argument does not adjudicate any intra-Christian dispute.) In the twentieth century the German theologian Jürgen Moltmann pressed the theme much further in <em>The Crucified God</em> (1972), arguing that the cross is an event within God’s own life in which God himself suffers. That last step is one the classical faith declines to take.</p>
+          <p class="lbl steel">How the church says “God died” without heresy</p>
+          <p>The New Testament already shows how. Paul writes that the rulers of this age “crucified the Lord of glory” (1 Corinthians 2:8); Peter tells the crowd in Jerusalem, “you killed the Author of life” (Acts 3:15). Neither means that glory or life itself died. Both name the <em>person</em> by his divine titles and predicate of him what he underwent in his human nature. Later theology called this the “communication of properties” (<em>communicatio idiomatum</em>): because the Son is one person with two natures, what belongs to either nature may truly be said of the one person.</p>
+          <p>Cyril of Alexandria stated the rule with care, and every clause of his sentence is load-bearing:</p>
+          <p class="quote">“On this account we say that he suffered and rose again; not as if God the Word suffered in his own nature stripes, or the piercing of the nails, or any other wounds, for the Divine nature is incapable of suffering, inasmuch as it is incorporeal, but since that which had become his own body suffered in this way, he is also said to suffer for us; for he who is in himself incapable of suffering was in a suffering body.”</p>
+          <p>Notice what Cyril refuses on both sides. He refuses to say that the divine nature was wounded. He equally refuses to say that only a man suffered while God watched: “<em>he</em> is also said to suffer for us,” and the “he” is God the Word. The suffering is real, and it is the Son’s own, because the body that suffered is his own body. That is why the Second Council of Constantinople could require Christians to confess that the one “crucified in the flesh is true God and the Lord of Glory and one of the Holy Trinity” — and why that confession is neither the error of saying the Father suffered nor the error of saying the divine nature as such suffered. The Council of Chalcedon in 451 drew the boundary that has defined orthodox Christianity across Catholic, Orthodox, and Protestant lines ever since: one and the same Christ, “truly God and truly man,” made known “in two natures, inconfusedly, unchangeably, indivisibly, inseparably.”</p>
+          <p class="lbl steel">Why the third step follows</p>
+          <p>If the one who hangs on the cross is personally the Son of God, then what he does there — giving himself, to the point of death, for others — is the act of a divine person, done in his human nature. That act therefore tells us who that person is. And since the Son is one God with the Father and the Spirit, it tells us who God is. What the Son undergoes in the flesh — hunger, wounds, death — he undergoes in his human nature, not in the divine nature as such; but the self-giving is his own free act, begun, as Philippians puts it, by one who was already “in the form of God.” So the cross discloses not that God is mortal but what kind of love God is: not a power that saves itself, but a love that gives itself.</p>
+
+        </div>
+      </details>
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for S4 — what the cross-as-revelation claim does and does not establish</summary>
+        <div class="body">
+          <p class="lbl steel">What the argument establishes</p>
+          <p>This argument establishes a bounded claim: that the New Testament, which includes Jesus within the identity of the one God of Israel, deliberately includes his humiliation and death there too, and so presents the cross as a disclosure of who God is — a God whose glory is shown in self-giving love. It argues that this reading is not a later imposition but is present in some of the earliest christological material we have, and that it can be stated without heresy, by the classical grammar of one person in two natures.</p>
+          <p class="lbl steel">What it does not establish</p>
+          <p>It does not, by itself, prove that the claim is true. That the first Christians read the cross this way is a historical finding; whether they were right depends on whether God vindicated the crucified one, which is the question the resurrection evidence, beginning with the creed Paul quotes in 1 Corinthians 15:3–7, is meant to answer. It does not settle how the cross saves: some traditions emphasize Christ bearing the penalty of sin in our place; others, his victory over the powers of sin and death; others, the satisfaction of divine honor, or the recapitulation of humanity, or the transforming power of self-giving love. These differ in emphasis, and each tradition argues its case — but they are the family’s internal debate, held within a shared confession the New Testament states plainly. And it is not a theodicy. It does not explain why <em>this</em> child suffers <em>this</em> way. It claims something different: that the God against whom we protest has not stayed out of reach of the protest.</p>
+          <p class="lbl steel">The verdict</p>
+          <p>The objection that a crucified man cannot reveal God does not hold as a presumption: it assumes that divine glory and self-humbling exclude one another, and the earliest Christian witnesses deny that they do — the Philippians hymn exalts to the name above every name the one who went to “death on a cross,” and in Revelation the slain Lamb is worshiped with the one on the throne. Nor does the charge of incoherence hold as a presumption: the claim, made of one person in two natures, does not affirm and deny the same thing of the same subject in the same respect, and while philosophers still debate how fully the two-natures account succeeds, a formal contradiction has not been shown.</p>
+
+        </div>
+      </details>
+    </div>
+
+
+    <div class="card">
+      <span class="kick">The hard part — objections, answered</span>
+      <h4>The objections you will actually meet</h4>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Each of these gets its strongest form first, then the reply — and the hardest objection of all is flagged above.</p>
+      <p class="hardest"><b>The one that matters most:</b> the developmental objection &mdash; that the idea of the cross revealing &ldquo;who God is&rdquo; reads the creeds of the fourth and fifth centuries back into first-century texts. The essay calls it &ldquo;the most serious academic challenge.&rdquo; The <a href="/library/god-crucified.html">deep dive</a> answers it at length &mdash; take it with you, not just the reply below.</p>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> “This reads later theology back into the texts” <span class="badge hard">Hard</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>The most serious academic challenge comes from the developmental reading of early Christology. Bart Ehrman argues in <em>How Jesus Became God</em> that the historical Jesus did not claim divinity, that his earliest followers held an “exaltation” Christology — God raised the man Jesus and adopted him to divine status — yet he also finds a pre-existent Christ already in material older than Paul, a figure he takes to have been conceived at first as a subordinate divine being — God’s chief angel, or a divinity of a lesser order — whose elevation to the co-equal God confessed at Nicaea in 325 is the later step. James Dunn read the Philippians hymn as Adam Christology, a contrast between two men rather than the descent of a pre-existent person. And in its academic form the agency reading is subtler still: the New Testament historian James F. McGrath, contesting Bauckham’s and Wright’s “divine-identity” category, grants that John’s language about Jesus is genuinely exalted yet argues that Second Temple Judaism could let God share his name and functions with a supreme agent without a second God arising. On any of these views, to speak of the cross as revealing “who God is” is to read the creeds of the fourth and fifth centuries back into first-century texts.</p>
+          <p class="lbl reply">Reply</p>
+          <p>The reply begins with a concession, and it is narrower than it first appears. The developed creedal vocabulary came later: the New Testament hands us the data — the throne, the name, the worship, the tensions — but not the fourth-century grammar that later systematized it. The communication-of-properties language above is the church’s later articulation, not a New Testament term. What the developmental objection gets wrong is the next step. The disagreement is not really about dates — Ehrman himself finds a pre-existent Christ in material older than Paul’s letters — but about what kind of being the earliest Christians took him to be. And the evidence answers that question with the one thing his developmental thesis cannot easily accommodate: the earliest worship. The Philippians hymn, widely regarded as pre-Pauline, already applies an exclusive-worship text of YHWH to Jesus (the pre-Pauline dating is itself debated — Gordon Fee argues Paul composed the hymn — but the worship-of-Jesus datum stands either way).</p>
+          <p>The hymn does not merely include an exalted Jesus in God’s worship; it places “death on a cross” on the road to the name above every name. So the pairing of humiliation and divine identity is not a late Johannine refinement. It is in a text Paul was quoting in the mid-50s or early 60s, and on the majority view one he inherited. Against Dunn, N. T. Wright and Gordon Fee argue that the hymn describes one who was already “in the form of God” <em>before</em> “taking the form of a servant” and being “born in the likeness of men” — a transition Adam never made. And against McGrath’s agency reading, the same line holds here that holds elsewhere: grant that God’s name and functions could be entrusted to a supreme agent, and the worship itself still could not be. (McGrath replies that the decisive line in Jewish worship was sacrifice, which Jesus does not receive; we think a shared doxology and the invocation <em>Marana tha</em> reach past that line, but the point is contested.) The development is in the <em>clarity</em>, not in the <em>substance.</em></p>
+
+        </div>
+      </details>
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> “Isaiah 52:13 and 6:1 share a phrase, not a meaning” <span class="badge mid">Trickier</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>A careful reader — and not only a skeptical one — can press the exegetical link hard. First, the Hebrew pairing of “high” and “lifted up” is not reserved for God. Isaiah uses the same language of everything proud that God will bring low: “against all that is proud and lofty, against all that is lifted up… against all the cedars of Lebanon, lofty and lifted up” (Isaiah 2:12–13). A shared phrase is thin ground for a claim about identity. Second, <em>gezerâ shāvâ</em> is named in lists of rabbinic interpretive rules that are later than the New Testament, so attributing it to the earliest Christians is a reconstruction. Third, the referent of John 12:41 is itself debated: “he saw his glory” may point to the throne-vision of Isaiah 6, to the Servant of Isaiah 53, or to both. On this view Bauckham has found a pattern in the Hebrew that the first readers need never have seen.</p>
+          <p class="lbl reply">Reply</p>
+          <p>Much of this should simply be granted. Nothing here claims that the prophet Isaiah, writing centuries earlier, intended a cross; the claim is about how the New Testament writers read him. The <em>gezerâ shāvâ</em> mechanism is Bauckham’s proposal, a plausible reconstruction rather than an attested report, and the phrase “high and lifted up” can certainly be used of proud men. But the context of Isaiah 2 is the point, not a counter-point: there the human “high and lifted up” is exactly what the LORD will humble, “and the LORD alone will be exalted in that day” (2:11, 17). That makes the pairing more striking, not less: the proud are brought low, yet the crushed Servant is exalted in the very words of the throne-vision. By itself that does not make the Servant divine — Isaiah’s God exalts the humble. It is John who draws the further inference, assigning the glory of the throne-vision to Jesus. And the argument does not stand on the Hebrew echo in any case. Whatever John’s exact referent in 12:41, he sets Isaiah 53 and Isaiah 6 side by side and assigns the glory Isaiah saw to Jesus; he uses the Greek Servant’s two verbs, “lifted up” and “glorified,” for the cross; and the Philippians hymn and Revelation 5 make the same pairing of humiliation and divine worship without any appeal to Isaiah’s vocabulary at all. The verbal echo is corroboration. The convergence of witnesses from different streams of early Christianity is the case.</p>
+
+        </div>
+      </details>
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> “If God cannot suffer, the cross cannot reveal God” — and its mirror image <span class="badge hard">Hard</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>This objection comes from two opposite directions, and both deserve a full hearing.</p>
+          <p>From the side of critics of incarnational doctrine, the problem is coherence. The philosopher of religion John Hick, in the 1977 collection <em>The Myth of God Incarnate</em>, compared the bare assertion that the historical Jesus was also God to the assertion that a circle drawn in pencil on paper is also a square: without an explanation, he argued, the words have no content. On this view “God crucified” is not a profound paradox but a contradiction. Either the one on the cross is impassible God, in which case he did not truly suffer, or he truly suffered, in which case he is not impassible God.</p>
+          <p>From the other side comes a theological version of the same dilemma, pressed by Moltmann and many twentieth-century theologians after him. If the divine nature cannot suffer, they argue, then the cross reveals only a suffering man, and God remains a spectator. To let the cross reveal God, we must say that God suffers in his own being — that the cross is an event between the Father, who suffers the loss of the Son, and the Son, who suffers death. Moltmann wrote with Auschwitz in view, and his question deserves respect: whatever else the cross is, it is not a deity who answers Ivan Karamazov’s protest from a safe distance.</p>
+          <p class="lbl reply">Reply</p>
+          <p>The classical reply, which this argument holds, refuses both horns, for neither allows the distinction the creeds draw: the one divine person truly suffers, in his human nature, while the divine nature as such does not. Cyril’s sentence puts it in a line: God the Word suffers in the body that is his own. That is not a contradiction of the circle-and-square kind, because it does not affirm and deny the same thing of the same subject in the same respect. It is a claim about one person with two natures, and philosophers such as Thomas V. Morris have argued at book length that the charge of formal incoherence does not go through. Whether such two-natures accounts fully succeed is itself debated among philosophers; the point here is that the charge of formal contradiction is contested, not obvious. The creeds fenced the mystery rather than dissolving it. But a mystery is not a contradiction.</p>
+          <p>Nor is the classical position the cold Greek import it is often said to be. Paul Gavrilyuk’s study of the Fathers argues that the old story of theology’s “fall” into Hellenistic philosophy misreads them: divine impassibility functioned for them as a qualifier marking God’s transcendence over creaturely passion, held together with a real suffering of the Son in the flesh. Thomas Weinandy, defending impassibility at length, argues that it is precisely the Son’s suffering <em>as man</em> that is redemptive. On this account the cross does reveal God — not because the divine nature was wounded, but because the one who freely bore the wounds is the Son himself, and what he chose to do discloses who he is. So we decline Moltmann’s step of locating suffering in the divine being itself, while honoring his question. The God of the classical creeds is not a spectator: in the person of the Son he entered our suffering and death for us.</p>
+
+        </div>
+      </details>
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> “A crucified God is a scandal, not a revelation” <span class="badge easy">Common</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>The oldest objection is the one Paul himself names: “we preach Christ crucified, a stumbling block to Jews and folly to Gentiles” (1 Corinthians 1:23). The historian Martin Hengel, in the standard study of the subject, gathered the ancient sources to show that crucifixion was what Josephus called “the most wretched of deaths,” reserved for slaves, violent criminals, and rebels against Rome, deliberately public and deliberately obscene. For a Jew the offense cut deeper, and touched God directly: “a hanged man is cursed by God” (Deuteronomy 21:23). So “crucified Messiah” was not merely an unhappy phrase; it was very nearly a contradiction in terms. If a crucified Messiah was nearly a contradiction, a crucified <em>God</em> would seem to be one outright.</p>
+          <p class="lbl reply">Reply</p>
+          <p>Paul’s answer is not to soften the offense but to relocate wisdom. “For the foolishness of God is wiser than men, and the weakness of God is stronger than men” (1 Corinthians 1:25). The scandal is conceded as a scandal; what is denied is that our sense of what is fitting for God is the measure of God. This is not a license to believe anything: the claim must still be coherent (objection 3) and vindicated (the resurrection). And there is a historical point here, worth stating with its limits. Inventors do not sabotage their own inventions; the offensiveness of the cross explains why no one would fabricate it. It does not, by itself, show that the first Christians were right to see God revealed there; for that, a further event is needed — the vindication they claimed had occurred. The scandal clears the ground; it does not, alone, raise the dead. Our essay on <a href="/library/crucified-messiah.html">the crucified Messiah</a> develops that argument in full.</p>
+
+        </div>
+      </details>
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> “The cry shows that Jesus died in despair” <span class="badge mid">Trickier</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>The last objection takes the cry of dereliction at face value and draws the opposite conclusion. In the eighteenth century Hermann Samuel Reimarus, in the fragments published after his death by Lessing, read the cry as the words of a man whose hopes had collapsed: Jesus had expected God to establish his kingdom, and on the cross he found that God had not come to his aid. On this reading the cry is not a revelation of God but the most honest line in the Gospels, preserved because it could not be erased.</p>
+          <p class="lbl reply">Reply</p>
+          <p>The reply grants part of this. The cry is raw, and Christians should not hurry past it; Luke and John do not record it, and Matthew keeps it. Its anguish is real, and on the orthodox account it is the real anguish of the Son in his human experience. But Reimarus’s reading requires us to set aside the narrative Mark actually wrote, in which Jesus three times predicts his death and says that the Son of Man came “to give his life as a ransom for many” (Mark 10:45), and in which the cry stands within five verses of the centurion’s confession. One may judge Mark’s framing to be theology rather than history; that is a further argument, and it rests partly on wider questions, including whether the resurrection happened. Grant, as many historians do, that the cry is authentic precisely because it was awkward. Its content still tells against despair of God: the dying man addresses God as “my God” in the opening line of Israel’s own lament — and whatever one concludes about whether that line evokes the psalm’s later turn to vindication (Psalm 22:24), a contested question, lament prayed to God is the speech of trust under anguish, not its abandonment. Whether that trust was vindicated — whether God did come to his aid — is, again, the resurrection question.</p>
+
+        </div>
+      </details>
+    </div>
+
+
+    <div class="card">
+      <span class="kick">Touch the originals</span>
+      <h4>Where this comes from — primary sources, not our summary</h4>
+      <div class="src">
+        <div class="row">
+          <div class="who"><b>Mark 15:33–39 · Psalm 22</b><span>the death where Jesus is first confessed as Son of God</span></div>
+          <div class="what">“And when the centurion, who stood facing him, saw that in this way he breathed his last, he said, ‘Truly this man was the Son of God!’” The first human being in Mark’s story to confess it is a Roman officer. The cry of Mark 15:34 opens Psalm 22, which turns to a God who “has not despised or abhorred the affliction of the afflicted, and he has not hidden his face from him, but has heard, when he cried to him” (22:24). Mark records the first verse, not the last.</div>
+        </div>
+        <div class="row">
+          <div class="who"><b>Isaiah 6:1 · 52:13 · 57:15 · John 12:41</b><span>the throne and the Servant</span></div>
+          <div class="what">“The Lord sitting upon a throne, high and lifted up” (6:1); the Servant too shall be “high and lifted up” (52:13); the God who “inhabits eternity” dwells “with him who is of a contrite and lowly spirit” (57:15); Isaiah “saw his glory and spoke of him” — of Jesus (John 12:41). The exaltation of the crucified Servant is told in the language of YHWH’s own throne. Bauckham’s reading of the Isaiah echo is one strong reading, not a consensus; <em>gezerâ shāvâ</em> is his proposal, not an attested report.</div>
+        </div>
+        <div class="row">
+          <div class="who"><b>Philippians 2:6–11 · Isaiah 45:23</b><span>the downward path and the name</span></div>
+          <div class="what">The hymn Paul quotes places “death on a cross” on the path to “the name that is above every name,” and applies to Jesus the text in which YHWH swears that to him alone every knee shall bow. Widely regarded as pre-Pauline (debated: Gordon Fee argues Paul composed it); the worship-of-Jesus datum stands either way.</div>
+        </div>
+        <div class="row">
+          <div class="who"><b>Revelation 4–5; 22:1, 3</b><span>the Lamb on the throne</span></div>
+          <div class="what">“A Lamb standing, as though it had been slain,” sung to “because you were slain”; “To him who sits on the throne and to the Lamb be blessing and honor and glory and might forever and ever!”; “the throne of God and of the Lamb.” The angel twice refuses worship (19:10; 22:8–9); the Lamb receives it. The figure who shares the worship of the Creator is the slaughtered one.</div>
+        </div>
+        <div class="row">
+          <div class="who"><b>Ignatius · Cyril · Constantinople II · Chalcedon</b><span>the grammar of one person in two natures</span></div>
+          <div class="what">Ignatius: “Permit me to be an imitator of the passion of my God.” Cyril: “the Divine nature is incapable of suffering… but since that which had become his own body suffered in this way, he is also said to suffer for us.” Constantinople II (553): “crucified in the flesh is true God and the Lord of Glory and one of the Holy Trinity.” Chalcedon (451): “truly God and truly man… in two natures, inconfusedly, unchangeably, indivisibly, inseparably.”</div>
+        </div>
+        <div class="row">
+          <div class="who"><b>Bauckham · Hurtado · McGrath · Dunn · Ehrman · Moltmann · Gavrilyuk · Weinandy · Brown</b><span>the state of scholarship</span></div>
+          <div class="what">That the earliest Christians worshiped Jesus very early, within a Jewish monotheistic frame, is widely granted, though how to describe it is not: Bauckham’s “divine identity,” Hurtado’s “devotional pattern,” and McGrath’s agency model are live, competing accounts of the same data. The theological question of divine impassibility is vigorously debated: the passibilist view associated with Moltmann became common among theologians in the twentieth century, while a substantial recent literature, Gavrilyuk and Weinandy among it, has defended and retrieved the classical position. The interpretation of the cry of dereliction remains contested among New Testament scholars; Raymond Brown’s <em>The Death of the Messiah</em> surveys the range. Bauckham is cited as an exegete and historian on the divine-identity question only; his wider theological positions are not adopted. What does not depend on any of these disputes is the textual pattern itself: in Philippians, in John and in Revelation, the self-humbling and death of Jesus are told in the language of God’s own glory, throne and worship; and Mark makes that death the place where Jesus is first confessed by a human being as the Son of God.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== PHASE 2: PRACTICE ===================== -->
+  <section id="practice">
+    <div class="phasehead"><span class="phasenum">2</span><h3>Practice it</h3></div>
+    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Three drills that route this argument through tools you already have.</p>
+
+    <div class="practicecard">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument in your own words</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Write it from memory: state the four steps (the earliest Christians included Jesus within the identity of the one God of Israel; the Jesus they included was the crucified one, told in the language of God’s own exaltation, throne and worship — Isaiah 52:13 and 6:1, Philippians 2, Revelation 5, Mark’s centurion; so the self-giving is not foreign to who God is; so they read the cross as a revelation of who God is). Then hold the fences: it is the eternal Son, in his human nature, who suffers and dies — not the Father, not the divine nature as such; Bauckham’s Isaiah echo is one strong reading, not a consensus; and the argument is not a proof of the resurrection, not an atonement theory, and not a theodicy.</p>
+      <textarea id="explainBox" placeholder="Start with: The earliest Christians included Jesus within the identity of the one God of Israel, and they included the crucified Jesus there too..."></textarea>
+      <div class="btnrow">
+        <button class="btn primary" onclick="scoreExplain(this)">Score my explanation</button>
+        <button class="btn ghost" onclick="document.getElementById('explainBox').value='';document.getElementById('scoreOut').classList.remove('show')">Clear</button>
+      </div>
+      <div class="score" id="scoreOut">
+        <div class="scorehead">
+          <div class="scorenum" id="scoreNum">0<small>/10</small></div>
+          <div class="scoreverdict" id="scoreVerdict"></div>
+        </div>
+        <ul class="feed" id="scoreFeed"></ul>
+      </div>
+    </div>
+
+    <div class="practicecard">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 2 · Flashcards</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Drilled straight from this argument</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Six cards pulled straight from this argument and its sharpest objections. Flip, recall, repeat until it is automatic.</p>
+      <div class="flashwrap">
+        <div class="flash" id="flash" onclick="this.classList.toggle('flipped')">
+          <div class="face front"><div class="qlbl">Prompt</div><p id="fFront"></p><span class="tap">tap to flip</span></div>
+          <div class="face back"><div class="qlbl">Answer</div><p id="fBack"></p><span class="tap">tap to flip</span></div>
+        </div>
+      </div>
+      <div class="flashnav">
+        <button class="btn ghost" onclick="prevCard()">‹ Prev</button>
+        <span id="cardCount"></span>
+        <button class="btn ghost" onclick="nextCard()">Next ›</button>
+      </div>
+    </div>
+
+    <div class="practicecard">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · Live objection (unseen)</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Answer the “to the glory of God the Father” objection</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">A seeded scenario from the Debate Arena &mdash; one the deep dive raises but the objection bank above did not teach. Draft your reply, then reveal a model answer to compare.</p>
+      <div class="interloc">
+        <div class="av">SK</div>
+        <div>
+          <div class="who2">Skeptic</div>
+          <div class="bub">“Look at how your own hymn ends: ‘to the glory of God the Father.’ That is a sign that this worship is offered through an agent. Jesus is the agent God honors, not God himself — so the cross is the story of a man God exalted, not a revelation of who God is.”</div>
+        </div>
+      </div>
+      <textarea id="debateBox" placeholder="Your response..."></textarea>
+      <div class="btnrow">
+        <button class="btn gold" onclick="document.getElementById('modelAns').classList.add('show')">Reveal a model response</button>
+      </div>
+      <div class="modelans" id="modelAns">
+        <div class="lbl">One strong way to answer — in a 1 Peter 3:15 tone</div>
+        <p>“The clause relates the Son to the Father within one act of worship; it does not reduce it to the honor paid an agent, for the text applied to Jesus is the one in which YHWH swears that this homage is his alone (Isaiah 45:23). Grant for argument’s sake that God’s name and functions could be entrusted to a supreme agent: the worship itself still could not be. (McGrath replies that the decisive line in Jewish worship was sacrifice, which Jesus does not receive; we think a shared doxology and the invocation <em>Marana tha</em> reach past that line, but the point is contested.) And the Lamb who shares the worship of the Creator in Revelation 5 is not an agent honored beside God; he is worshiped <em>with</em> him, in the same doxology — contrast the angels who refuse worship, Revelation 19:10; 22:9. The development is in the <em>clarity</em>, not in the <em>substance.</em> And I would say it plainly: that the first Christians read the cross this way is a historical finding; whether they were right depends on whether God vindicated the crucified one, which is the question the resurrection evidence is meant to answer.”</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== PHASE 3: PROVE IT ===================== -->
+  <section id="proveit">
+    <div class="phasehead"><span class="phasenum">3</span><h3>Prove it</h3></div>
+    <p class="phasesub">Mastery isn't a feeling — it's four things done. Clear them and this argument turns gold on your shelf.</p>
+
+    <div class="card">
+      <div class="checklist">
+        <div class="cl" id="ck-read"><div class="box">✓</div><div class="txt"><b>Understood it</b><span>Read the structure, defences, and all objections</span></div><div class="state">Open every section</div></div>
+        <div class="cl" id="ck-explain"><div class="box">✓</div><div class="txt"><b>Explained it</b><span>Score 7+ on Explain It Back</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="ck-cards"><div class="box">✓</div><div class="txt"><b>Drilled it</b><span>Cycle through every flashcard once</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="ck-debate"><div class="box">✓</div><div class="txt"><b>Defended it</b><span>Attempt the live objection</span></div><div class="state">Not yet</div></div>
+      </div>
+      <div style="margin-top:26px;border-top:1px solid var(--border);padding-top:20px">
+        <span class="kick">One more thing — be honest</span>
+        <h4 style="font-size:17px">If a friend challenged you on this tomorrow, how ready are you?</h4>
+        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Your self-rating is tracked over time so you can watch confidence climb across the library.</p>
+        <div class="confrow" id="confRow">
+          <button onclick="setConf(this,1)">Shaky</button>
+          <button onclick="setConf(this,2)">Getting there</button>
+          <button onclick="setConf(this,3)">Solid</button>
+          <button onclick="setConf(this,4)">Could teach it</button>
+        </div>
+        <div id="calibNote" style="display:none"></div>
+      </div>
+    </div>
+
+    <div class="bigcta">
+      <h4 id="ctaTitle">Master “God Crucified,” then take the next one</h4>
+      <p id="ctaText">The place where the Son, who is truly God, made known most fully who God is: a God whose glory is not only enthroned above the world but poured out for it. The full library is waiting for whatever you take on next.</p>
+      <button class="btn gold" onclick="location.href='evidence-library.html'">Back to the Evidence Library →</button>
+      <div style="margin-top:18px"><button class="btn" onclick="shareArgCard(this)" style="background:transparent;color:var(--gl);border:1px solid rgba(200,169,81,.45);">Share this argument as an image</button></div>
+      <div><a href="dashboard.html" style="display:inline-block;margin-top:14px;font-family:var(--ui);font-size:13.5px;color:rgba(255,255,255,.6);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:1px">Back to dashboard</a></div>
+    </div>
+  </section>
+
+
+  <p class="foot">
+    Apologia Daily &mdash; defending the faith with gentleness and respect.
+  </p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
+<script>
+/* ---- in-memory state (swap for localStorage/Supabase in production) ---- */
+const state = { read:false, explainPass:false, cardsSeen:new Set(), debateTried:false, conf:0 };
+
+/* ---- persistence + site streak (ad_mastery / ad_streak) ---- */
+const ARG_ID = location.pathname.split('/').pop().replace('ev-m-','').replace('.html','');
+const FRESH_MS = 30*24*60*60*1000; /* 30 days */
+function adAll(){ try{ return JSON.parse(localStorage.getItem('ad_mastery')||'{}'); }catch(e){ return {}; } }
+function adSave(full){
+  try{
+    var m = adAll(); var e = m[ARG_ID] || {};
+    e.read = state.read; e.explain = state.explainPass;
+    e.cards = state.cardsSeen.size; e.debate = state.debateTried;
+    e.explainScore = state.explainScore || e.explainScore || 0; if(state.conf) e.conf = state.conf;
+    if(full){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
+    m[ARG_ID] = e; localStorage.setItem('ad_mastery', JSON.stringify(m));
+  }catch(e){}
+}
+function adRestore(){
+  try{
+    var e = adAll()[ARG_ID]; if(!e) return;
+    state.read = !!e.read; state.explainPass = !!e.explain; state.debateTried = !!e.debate;
+    state.explainScore = e.explainScore || 0; state.conf = e.conf || 0;
+    var fresh = e.fresh && (Date.now() - e.fresh) < FRESH_MS;
+    if(e.cards >= cards.length && fresh){ for(var i=0;i<cards.length;i++) state.cardsSeen.add(i); }
+    if(e.cards >= cards.length && !fresh){
+      var note = document.createElement('div');
+      note.style.cssText = 'font-family:var(--ui);font-size:.8rem;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.7rem 1rem;margin:0 0 1rem;';
+      note.innerHTML = '&#9888; Memory fades — it has been a while. Flip through the flashcards again to restore this argument to gold.';
+      var fc = document.querySelector('.flashwrap') || document.getElementById('flash') || null;
+      if(fc && fc.parentNode){ fc.parentNode.insertBefore(note, fc); }
+    }
+  }catch(e){}
+}
+function adMark(){
+  try{
+    var t = new Date(); var iso = function(d){ return d.toISOString().slice(0,10); };
+    var td = iso(t), y1 = iso(new Date(t.getTime()-864e5)), y2 = iso(new Date(t.getTime()-1728e5));
+    var s = JSON.parse(localStorage.getItem('ad_streak')||'{"last":"","count":0,"freezes":0}');
+    if(s.last === td) return;
+    if(s.last === y1){ s.count += 1; }
+    else if(s.last === y2 && s.freezes > 0){ s.freezes -= 1; s.count += 2; }
+    else { s.count = 1; }
+    s.last = td;
+    if(s.count % 7 === 0){ s.freezes = Math.min(3, (s.freezes||0) + 1); }
+    localStorage.setItem('ad_streak', JSON.stringify(s));
+  }catch(e){}
+}
+
+/* ---- mastery dial ---- */
+const CIRC = 263.9;
+function updateDial(){
+  let done = 0;
+  if(state.read) done++;
+  if(state.explainPass) done++;
+  if(state.cardsSeen.size >= cards.length) done++;
+  if(state.debateTried) done++;
+  const pct = Math.round(done/4*100);
+  adSave(pct===100);
+  if(window._adLoaded && done>0) adMark();
+  document.getElementById('pctNum').textContent = pct + '%';
+  document.getElementById('ring').style.strokeDashoffset = CIRC - (CIRC*pct/100);
+
+  setCheck('ck-read', state.read);
+  setCheck('ck-explain', state.explainPass);
+  setCheck('ck-cards', state.cardsSeen.size >= cards.length);
+  setCheck('ck-debate', state.debateTried);
+  try{ renderCalibration(); }catch(e){}
+
+  if(pct===100){
+    document.getElementById('ctaTitle').textContent = 'God Crucified mastered - it just turned gold on your shelf';
+    document.getElementById('ctaText').textContent = 'You have mastered the case that the earliest Christians read the cross as the place where the Son, who is truly God, made known most fully who God is. The same path is waiting for every argument in the library.';
+    document.querySelector('.libnote').innerHTML = '&#9670; &nbsp;God Crucified mastered - Jesus mastery track';
+  }
+}
+function setCheck(id, on){
+  const el = document.getElementById(id);
+  el.classList.toggle('done', on);
+  var stEl = el.querySelector('.state');
+  if(on){ stEl.textContent = 'Done'; return; }
+  if(id==='ck-read'){
+    stEl.textContent = (typeof _accOpened !== 'undefined' && _accs.length) ? (_accOpened.size + ' of ' + _accs.length + ' opened') : 'Open every section';
+  } else {
+    stEl.textContent = 'Not yet';
+  }
+}
+
+/* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
+/* ---- argument premises used to ground the AI scoring ---- */
+var ARG_PREMISES = [
+  "The earliest Christians included Jesus within the unique identity of the one God of Israel.",
+  "The Jesus they so included was not only the exalted and pre-existent Lord but the humiliated and crucified one: the New Testament tells his self-humbling and death in the very language Israel’s Scriptures use for God’s own exaltation, throne and worship.",
+  "If the one who belongs to God’s identity is the one who humbled himself to death on a cross, then that self-giving is not foreign to who God is; it discloses it. (The historic confession is that the eternal Son of God, without ceasing to be God, took a complete human nature and in that nature suffered and died. The cross does not mean that the Father was crucified, that the divine nature as such bled or perished, or that the Trinity was torn apart.)",
+  "Therefore the earliest Christians read the cross as a revelation — on their own telling, the decisive revelation — of who God is. (Scope: That the first Christians read the cross this way is a historical finding; whether they were right depends on whether God vindicated the crucified one, which is the question the resurrection evidence, beginning with the creed Paul quotes in 1 Corinthians 15:3–7, is meant to answer. It does not settle how the cross saves. And it is not a theodicy.)"
+];
+
+/* Real AI scoring via /api/tutor (same method as explain-it-back.html).
+   Falls back to a local heuristic if the API is unreachable (e.g. preview). */
+async function scoreExplain(btn){
+  var box = document.getElementById('explainBox');
+  var txt = box ? box.value.trim() : '';
+  if(!txt){ return; }
+  if(btn){ btn.disabled = true; btn.dataset.lbl = btn.textContent; btn.textContent = 'Scoring...'; }
+  try{
+    var prompt = 'Please evaluate this student explanation of "God Crucified: How the Cross Reveals Who God Is". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
+    var res = await fetch('/api/tutor', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ question: prompt, argument: 'God Crucified: How the Cross Reveals Who God Is', category: 'Evidence Library' })
+    });
+    if(!res.ok){ throw new Error('bad status'); }
+    var data = await res.json();
+    // CRISIS: /api/tutor answers {crisis:true} with a pastoral referral instead of
+    // a score. It contains no JSON, so without this branch the parse below throws
+    // and the catch calls renderMockScore(txt) — scoring the person's own words
+    // and discarding the referral entirely. Never score a crisis disclosure.
+    if(data.crisis){ renderCrisis(data.answer || ''); if(btn){ btn.disabled=false; btn.textContent=btn.dataset.lbl||'Score my explanation'; } return; }
+    var answer = data.answer || '';
+    var m = answer.match(/\{[\s\S]*\}/);
+    if(!m){ throw new Error('no json'); }
+    var fb = JSON.parse(m[0]);
+    renderScore(fb.score || 0, fb.strengths || [], fb.improvements || []);
+  }catch(e){
+    renderMockScore(txt);
+  }
+  if(btn){ btn.disabled = false; btn.textContent = btn.dataset.lbl || 'Score my explanation'; }
+}
+
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+/* Renders the pastoral referral in place of a score. Deliberately does NOT touch
+   scoreNum/scoreVerdict/state.explainScore: nobody gets marked out of 10, and no
+   mastery progress is recorded, on a turn where they said something true about
+   their own life. See lib/crisis.js. */
+function renderCrisis(text){
+  var out = document.getElementById('scoreOut');
+  if(!out){ return; }
+  var num = document.getElementById('scoreNum'); if(num) num.innerHTML = '';
+  var vd = document.getElementById('scoreVerdict'); if(vd) vd.textContent = 'Stepping out of the exercise';
+  var feed = document.getElementById('scoreFeed');
+  if(feed){ feed.innerHTML = ''; var p = document.createElement('p');
+    p.style.cssText = 'white-space:pre-wrap;line-height:1.75;margin:0;';
+    p.textContent = text; feed.appendChild(p); }
+  out.classList.add('show');
+  out.scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+function renderScore(score, strengths, improvements){
+  score = Math.max(0, Math.min(10, Math.round(Number(score) || 0)));
+  var feed = '';
+  (strengths||[]).forEach(function(s){ feed += '<li class="hit"><span class="mk">✓</span>'+esc(s)+'</li>'; });
+  (improvements||[]).forEach(function(s){ feed += '<li class="miss"><span class="mk">○</span>'+esc(s)+'</li>'; });
+  document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
+  var verdict = score>=8?'Strong — you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way — fill the gaps below' : 'Have another go with the structure in mind';
+  document.getElementById('scoreVerdict').textContent = verdict;
+  document.getElementById('scoreFeed').innerHTML = feed;
+  document.getElementById('scoreOut').classList.add('show');
+  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  updateDial();
+}
+
+function renderMockScore(txtRaw){
+  var t = (txtRaw||'').toLowerCase();
+  var BAD = /(father (was |is |got )?(crucified|died|suffered|forsaken)|father (abandon\w*|forsook|turned (his )?back)|(divine|god.?s) nature (itself |as such |also )?(suffered|died|perished|bled|was wounded)|god (the father |himself )?(died|perished)|the trinity (was |is )?(torn|divided|split|broken)|(only|merely|just) a (suffering )?(man|human)|god suffers in (his|the divine) (own )?(being|nature|essence))/i;
+  var EXEMPT = /(\bnot\b|n.t\b|\bnever\b|\bwithout\b|\bnor\b|\bno\b|refus|error|heres|decline|reject|den(y|ies)|communicat|cyril|constantinople|chalcedon|((they|some|others|people|scholars|critics|skeptics|sceptics|moltmann|hick|ehrman|dunn|mcgrath) (say|says|said|claim|claimed|argue|argued|argues|press|presses|held|holds|think|thinks)))/i;
+  var badSent = t.split(/[.!?;]+/).some(function(s){ return BAD.test(s) && !EXEMPT.test(s); });
+  var checks = [
+    {ok:(/(reveal\w*|disclos\w*|made known|show\w* (us )?who god is|not foreign to who god is|god crucified|divine identity|identity of (the one )?god|included (the )?(crucified )?jesus|crucified (jesus|one).{0,60}(identity|god)|self.giving|(humili\w*|self.humbl\w*|death on a cross).{0,60}(glory|throne|worship|name))/i.test(t)) && !badSent, hit:'You landed the verdict - the earliest Christians included the crucified Jesus within the identity of the one God, and read the cross as a revelation of who God is', miss:'Land the verdict: the earliest Christians included Jesus within the identity of the one God of Israel - and included the CRUCIFIED Jesus there too - so they read the cross as a revelation of who God is. (An answer that says the Father was crucified, that the divine nature as such suffered or died, or that the Trinity was torn apart, cannot pass.)'},
+    {ok:/(isaiah|52:13|6:1|57:15|high and lifted up|lifted up|glorified|john 12|philippians|phil 2|2:6|hymn|45:23|every knee|harpagmos|revelation|rev 5|lamb|slain|centurion|mark 15|son of god|psalm 22|forsaken|dereliction|marana tha|worship)/i.test(t), hit:'You gave the evidence - the humiliation told in the language of God\'s own throne, glory and worship', miss:'Give the evidence: Isaiah\'s Servant \'high and lifted up\' in the words of the throne-vision (Isaiah 52:13, 6:1) and John 12:41; the Philippians 2 hymn (death on a cross on the path to the name, Isaiah 45:23); the slain Lamb worshiped with the one on the throne (Revelation 5); and Mark\'s centurion'},
+    {ok:/(human nature|in the flesh|incarnate son|assumed human|one of the (holy )?trinity|communicat\w* (of )?(idioms|properties)|cyril|chalcedon|two natures|crucified the lord of glory|(father|divine nature).{0,40}(not|n.t|never)|(not|never).{0,40}(father|divine nature))/i.test(t), hit:'You held the fence - the eternal Son suffers in his human nature, not the Father and not the divine nature as such', miss:'Hold the fence: the eternal Son, without ceasing to be God, suffered and died in his assumed human nature - the Father was not crucified, the divine nature as such did not bleed or perish, the Trinity was not torn apart (one of the Trinity suffered in the flesh)'},
+    {ok:/(not (by itself )?(prove|proof|establish).{0,30}(true|resurrect)|vindicat|resurrection (question|case|evidence)|not a theodicy|theodicy|does not settle|mechanism of the atonement|internal debate|bounded|contested|one strong reading|not a consensus|gezer|proposal|reconstruct)/i.test(t), hit:'You marked the honest limit', miss:'Mark the limit: this is not a proof of the resurrection (whether they were right depends on whether God vindicated the crucified one), it does not settle how the cross saves, it is not a theodicy, and Bauckham\'s Isaiah echo is one strong reading, not a consensus'},
+    {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth - you developed it, not just listed it', miss:'Go a bit deeper - a full reconstruction runs longer than this'}
+  ];
+  var score = 0, feed = '';
+  checks.forEach(function(c){
+    if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">✓</span>'+c.hit+'</li>'; }
+    else{ feed += '<li class="miss"><span class="mk">○</span>'+c.miss+'</li>'; }
+  });
+  if(!checks[0].ok){ score = Math.min(score, 5); } /* verdict fence: an answer that never lands the verdict, or that says the Father was crucified, the divine nature as such suffered or died, or the Trinity was torn apart, cannot pass or score Strong */
+  if(!checks[2].ok){ score = Math.min(score, 6); } /* who-suffers fence: an answer that never locates the suffering in the Son's human nature cannot pass (pass = 7+) */
+  document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
+  var verdict = score>=8?'Strong — you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way — fill the gaps below' : 'Have another go with the structure in mind';
+  document.getElementById('scoreVerdict').textContent = verdict;
+  document.getElementById('scoreFeed').innerHTML = feed;
+  document.getElementById('scoreOut').classList.add('show');
+  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  updateDial();
+}
+
+/* ---- flashcards (generated from this argument) ---- */
+const cards = [
+  {
+    "q": "What are the four steps of the “God crucified” argument?",
+    "a": "The earliest Christians included Jesus within the unique identity of the one God of Israel. The Jesus they so included was not only the exalted and pre-existent Lord but the humiliated and crucified one: the New Testament tells his self-humbling and death in the very language Israel’s Scriptures use for God’s own exaltation, throne and worship. If the one who belongs to God’s identity is the one who humbled himself to death on a cross, then that self-giving is not foreign to who God is; it discloses it. Therefore the earliest Christians read the cross as a revelation — on their own telling, the decisive revelation — of who God is. (The historic confession is that the eternal Son of God, without ceasing to be God, took a complete human nature and in that nature suffered and died. The cross does not mean that the Father was crucified, that the divine nature as such bled or perished, or that the Trinity was torn apart.)"
+  },
+  {
+    "q": "Where does Isaiah’s throne meet Isaiah’s Servant, and what does John do with it?",
+    "a": "Isaiah saw “the Lord sitting upon a throne, high and lifted up” (6:1); the Servant too shall be “high and lifted up” (52:13), reaching for the very words of the throne-vision; and the God who “inhabits eternity” dwells “with him who is of a contrite and lowly spirit” (57:15). John says Isaiah “saw his glory and spoke of him” — of Jesus (John 12:41), and uses the Servant’s two Greek verbs, “lifted up” and “glorified,” for the cross. Bauckham’s gezerâ shāvâ link is his proposal, not an attested report; his reading is one strong reading, not a consensus. By itself the Servant’s exaltation does not make the Servant divine — Isaiah’s God exalts the humble. It is John who draws the further inference."
+  },
+  {
+    "q": "What does the Philippians 2 hymn do with “death on a cross”?",
+    "a": "It places “death on a cross” on the road to the name above every name. The hymn, widely regarded as pre-Pauline, applies to Jesus Isaiah 45:23 — the text in which YHWH swears that to him alone every knee shall bow. It does not say he became worthy of the divine name in spite of the cross. On the orthodox reading the descent reveals the divine character rather than suspending the divine nature. (The pre-Pauline dating is itself debated — Gordon Fee argues Paul composed the hymn — but the worship-of-Jesus datum stands either way.)"
+  },
+  {
+    "q": "Who suffers on the cross?",
+    "a": "The historic confession is that the eternal Son of God, without ceasing to be God, took a complete human nature and in that nature suffered and died. The cross does not mean that the Father was crucified, that the divine nature as such bled or perished, or that the Trinity was torn apart. The Second Council of Constantinople required Christians to confess that the one “crucified in the flesh is true God and the Lord of Glory and one of the Holy Trinity” — neither the error of saying the Father suffered nor the error of saying the divine nature as such suffered. Cyril’s sentence puts it in a line: God the Word suffers in the body that is his own."
+  },
+  {
+    "q": "Does “My God, my God, why have you forsaken me?” mean the Father abandoned the Son?",
+    "a": "No. The Son was not torn from the Father and the Trinity was not divided: the Father never ceased to love the Son, and the union of the persons was never broken. The forsakenness is real, borne in the Son’s human experience, not a severing within the one God. Jesus prays the opening line of Psalm 22, a psalm that moves from anguish to a God who has heard the afflicted, and in praying it he enters the depths of human god-forsakenness for us."
+  },
+  {
+    "q": "Does the argument prove the resurrection, settle how the cross saves, or explain suffering?",
+    "a": "That the first Christians read the cross this way is a historical finding; whether they were right depends on whether God vindicated the crucified one, which is the question the resurrection evidence, beginning with the creed Paul quotes in 1 Corinthians 15:3–7, is meant to answer. It does not settle how the cross saves: some traditions emphasize Christ bearing the penalty of sin in our place; others, his victory over the powers of sin and death; others, the satisfaction of divine honor, or the recapitulation of humanity, or the transforming power of self-giving love — the family’s internal debate, held within a shared confession. And it is not a theodicy. The charge of incoherence is contested, not obvious: while philosophers still debate how fully the two-natures account succeeds, a formal contradiction has not been shown."
+  }
+];
+let ci = 0;
+function renderCard(){
+  document.getElementById('flash').classList.remove('flipped');
+  document.getElementById('fFront').textContent = cards[ci].q;
+  document.getElementById('fBack').textContent = cards[ci].a;
+  document.getElementById('cardCount').textContent = (ci+1) + ' of ' + cards.length;
+  state.cardsSeen.add(ci);
+  updateDial();
+}
+function nextCard(){ ci = (ci+1)%cards.length; renderCard(); }
+function prevCard(){ ci = (ci-1+cards.length)%cards.length; renderCard(); }
+
+/* ---- debate ---- */
+document.getElementById('debateBox').addEventListener('input', ()=>{
+  if(document.getElementById('debateBox').value.trim().length > 8 && !state.debateTried){
+    state.debateTried = true; updateDial();
+  }
+});
+document.querySelector('[onclick*="modelAns"]').addEventListener('click', ()=>{
+  state.debateTried = true; updateDial();
+});
+
+/* ---- prove it ---- */
+function markRead(){
+  state.read = true;
+  document.getElementById('readBtn').textContent = 'Marked as understood ✓';
+  document.getElementById('readBtn').classList.remove('primary');
+  document.getElementById('readBtn').classList.add('ghost');
+  updateDial();
+}
+function renderCalibration(){
+  try{
+    var el = document.getElementById('calibNote'); if(!el) return;
+    var conf = state.conf||0, best = state.explainScore||0;
+    var labels = {1:'Shaky',2:'Getting there',3:'Solid',4:'Could teach it'};
+    if(conf){ var _b=document.querySelectorAll('#confRow button'); if(_b[conf-1]){ [].forEach.call(_b,function(b){b.classList.remove('sel');}); _b[conf-1].classList.add('sel'); } }
+    if(conf>=3 && best<7){
+      var shown = best>0 ? ('your best Explain It Back so far is '+best+'/10') : 'you haven’t scored an Explain It Back yet';
+      el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.8rem 1rem;';
+      el.innerHTML = '⚠ You rated yourself “'+labels[conf]+'” — but '+shown+'. Worth closing: confidence that holds up in a real conversation is confidence you’ve <b>shown</b>, not just felt. <a href="#" onclick="var b=document.getElementById(\'explainBox\');if(b){b.scrollIntoView({behavior:\'smooth\'});b.focus();}return false;" style="color:#a88930;font-weight:600">Prove it on Explain It Back →</a>';
+    } else if(conf>=3 && best>=7){
+      el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#2f7d4f;background:rgba(47,125,79,.08);border:1px solid rgba(47,125,79,.3);border-radius:6px;padding:.8rem 1rem;';
+      el.innerHTML = '✓ Calibrated — you feel ready and you’ve shown it ('+best+'/10 on Explain It Back). That’s earned confidence.';
+    } else {
+      el.style.display = 'none';
+    }
+  }catch(e){}
+}
+function setConf(btn, val){
+  [...document.querySelectorAll('#confRow button')].forEach(b=>b.classList.remove('sel'));
+  btn.classList.add('sel');
+  state.conf = val;
+  adSave(); renderCalibration();
+}
+
+/* ---- Supabase auth + Pro gate (matches site conventions) ---- */
+var sb = null;
+
+async function navAuth(){
+  try{
+    var result = await sb.auth.getSession();
+    var session = result.data && result.data.session;
+    if(session){
+      var name = (session.user.user_metadata && session.user.user_metadata.full_name) || session.user.email.split('@')[0];
+      var nu = document.getElementById('nav-user');
+      var ns = document.getElementById('nav-signout');
+      var ni = document.getElementById('nav-signin');
+      var nc = document.getElementById('nav-cta');
+      var nd = document.getElementById('nav-dashboard');
+      if(nu) nu.textContent = name;
+      if(ns) ns.style.display = 'inline-block';
+      if(ni) ni.style.display = 'none';
+      if(nc) nc.style.display = 'none';
+      if(nd) nd.style.display = 'inline-block';
+    }
+  }catch(e){}
+}
+
+async function signOut(){
+  try{ if(sb) await sb.auth.signOut(); }catch(e){}
+  window.location.href = 'index.html';
+}
+
+function showGate(){
+  var g = document.getElementById('proGate');
+  if(g) g.style.display = 'flex';
+}
+
+async function boot(){
+  if(window.supabase && window.supabase.createClient){
+    sb = window.supabase.createClient('https://noprgxkwniouukmrfozc.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw');
+    var result = await sb.auth.getSession();
+    var session = result.data && result.data.session;
+    await navAuth();
+    /* TEMP until Stripe is live — everything unlocked, same as flashcards/explain-it-back. */
+    var isPro = true;
+    /* Post-Stripe, replace the line above with:
+       var isPro = !!(session && session.user && session.user.app_metadata && session.user.app_metadata.is_pro === true); */
+    if(!isPro){ showGate(); return; }
+  }
+  /* build the track */
+  adRestore();
+  renderCard();
+  updateDial();
+  renderCalibration();
+  window._adLoaded = true;
+}
+/* "Understood it" is earned by opening every section in Phase 1 (defences + objections) */
+var _accs = Array.prototype.slice.call(document.querySelectorAll('#understand details.acc'));
+var _accOpened = new Set();
+_accs.forEach(function(d, i){
+  d.addEventListener('toggle', function(){
+    if(!d.open || state.read){ return; }
+    _accOpened.add(i);
+    if(_accOpened.size >= _accs.length){ state.read = true; }
+    updateDial();
+  });
+});
+
+/* ---- share-card: render this argument as a branded image ---- */
+function _shareSetMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
+function shareArgCard(btn){
+  var prem = (typeof ARG_PREMISES !== 'undefined') ? ARG_PREMISES : [];
+  document.getElementById('scTitle').textContent = document.querySelector('h1').textContent;
+  document.getElementById('scP1').textContent = prem[0];
+  document.getElementById('scP2').textContent = prem[1];
+  document.getElementById('scP3').textContent = prem[2];
+  document.getElementById('scC').textContent  = prem[3];
+  if (typeof html2canvas === 'undefined'){ _shareSetMsg(btn, 'Still loading - try again'); return; }
+  _shareSetMsg(btn, 'Creating image...');
+  var card = document.getElementById('shareCard');
+  html2canvas(card, { scale: 2, backgroundColor: null, useCORS: true }).then(function(canvas){
+    canvas.toBlob(function(blob){
+      var file = new File([blob], 'apologia-daily-argument.png', { type: 'image/png' });
+      if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })){
+        navigator.share({ files: [file], title: 'Apologia Daily' }).catch(function(err){
+          if (err && err.name !== 'AbortError'){ _shareCopy(canvas, blob, btn); }
+        });
+      } else {
+        _shareCopy(canvas, blob, btn);
+      }
+    });
+  });
+}
+function _shareCopy(canvas, blob, btn){
+  if (navigator.clipboard && window.ClipboardItem){
+    try {
+      navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })])
+        .then(function(){ _shareSetMsg(btn, 'Image copied - paste it anywhere'); })
+        .catch(function(){ _shareDownload(canvas, btn); });
+      return;
+    } catch(e){}
+  }
+  _shareDownload(canvas, btn);
+}
+function _shareDownload(canvas, btn){
+  var a = document.createElement('a');
+  a.download = 'apologia-daily-argument.png';
+  a.href = canvas.toDataURL('image/png');
+  a.click();
+  _shareSetMsg(btn, 'Image downloaded');
+}
+
+document.addEventListener('DOMContentLoaded', boot);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" integrity="sha384-ZZ1pncU3bQe8y31yfZdMFdSpttDoPmOZg2wguVK9almUodir1PghgT0eY7Mrty8H" crossorigin="anonymous"></script>
+<div id="shareCard" style="position:fixed;left:-9999px;top:0;width:540px;min-height:675px;box-sizing:border-box;background:linear-gradient(160deg,#050d1a 0%,#0f2040 100%);padding:44px 44px 34px;display:flex;flex-direction:column;font-family:'DM Sans',sans-serif;">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <span style="color:#c8a951;font-size:13px;">&#9670;</span>
+    <span style="color:#c8a951;font-size:12px;letter-spacing:.22em;font-weight:600;">APOLOGIA DAILY</span>
+  </div>
+  <div style="color:rgba(255,255,255,.55);font-size:12.5px;letter-spacing:.16em;font-weight:500;margin-top:32px;">COULD YOU DEFEND THIS?</div>
+  <div id="scTitle" style="font-family:'Playfair Display',Georgia,serif;font-size:28px;font-weight:700;color:#fff;line-height:1.16;margin-top:10px;"></div>
+  <div style="width:56px;height:2px;background:#c8a951;margin:20px 0 24px;"></div>
+  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P1</div><div id="scP1" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:14px;line-height:1.38;"></div></div>
+  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P2</div><div id="scP2" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:14px;line-height:1.38;"></div></div>
+  <div style="display:flex;gap:14px;margin-bottom:16px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">P3</div><div id="scP3" style="color:#f1ede4;font-family:'Source Serif 4',Georgia,serif;font-size:14px;line-height:1.38;"></div></div>
+  <div style="display:flex;gap:14px;"><div style="color:#c8a951;font-weight:700;font-size:14px;min-width:28px;">&#8756;</div><div id="scC" style="color:#fff;font-family:'Source Serif 4',Georgia,serif;font-size:14px;line-height:1.38;font-weight:600;"></div></div>
+  <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(200,169,81,.3);padding-top:16px;">
+    <div style="color:rgba(255,255,255,.55);font-size:12.5px;">Learn it. Practice it. Defend it.</div>
+    <div style="color:#c8a951;font-size:13px;font-weight:600;">apologiadaily.com</div>
+  </div>
+</div>
+
+  <script src="/ad-nav.js" defer></script>
+  <script src="/analytics.js" defer></script>
+  <script src="/lib/review-queue.js" defer></script>
+  <script src="/library/mastery-ui.js" defer></script>
+  <script src="/library/verse-popup.js" defer></script>
+<script src="/defend-live.js" defer></script>
+</body>
+</html>
