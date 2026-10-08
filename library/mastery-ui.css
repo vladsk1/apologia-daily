@@ -98,3 +98,14 @@ button:focus-visible{outline:2px solid var(--g,#c8a951);outline-offset:2px}
 .mu-pdef .mu-why-h{margin:16px 20px -6px;color:var(--gd,#9a7416)}
 .mu-pdef .body{border-top:none}
 .mu-pdef .body .lbl.steel{color:var(--n5,#1e3a5f);padding-left:11px;border-left:3px solid #dbe6f4}
+
+/* ---------- 5. Objections attached to the premise they target ----------
+   (same rules as ev-m-kalam.html's inline style, so every God's Existence page
+   can use the Kalam-standard premise-defence cards) */
+.objin{background:var(--ow,#faf8f4);border:1px solid var(--border,#e8e2d8);border-radius:9px;padding:12px 15px;margin-top:11px}
+.objin .ol{font-family:var(--ui,sans-serif);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#b23b32;margin-bottom:4px}
+.objin .rl{font-family:var(--ui,sans-serif);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--gd,#9a7416);margin:9px 0 4px}
+.objin p{font-size:14.5px;margin-bottom:3px}
+.objin .badge{font-family:var(--ui,sans-serif);font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:6px}
+.objin .badge.hard{background:#fdeceb;color:#b23b32}
+.support > .sh + p + .objin, .support .objin{margin-left:0}
