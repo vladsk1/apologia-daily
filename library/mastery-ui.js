@@ -237,11 +237,61 @@
     });
   }
 
+  /* ---------- 5. premise-defence cards: map, sub-heads, numbered supports,
+     objections with the reply held back until the reader has tried ---------- */
+  function initPremiseCards() {
+    $$('#understand .card').forEach(function (c) {
+      var sups = $$(':scope > .support', c);
+      if (!sups.length) return;
+      var objs = $$('.objin', c);
+      var room = $(':scope > .whoholds', c);
+      var id = c.id || (c.id = 'mu-pd-' + Math.random().toString(36).slice(2, 8));
+      function anchorFor(node, key) { node.id = node.id || (id + '-' + key); return '#' + node.id; }
+      // sub-heads
+      var h1 = el('div', 'mu-pdh', '<span class="i">1</span>Why believe it');
+      sups[0].parentNode.insertBefore(h1, sups[0]);
+      var topObj = $$(':scope > .objin', c);
+      var h2 = null;
+      if (topObj.length) { h2 = el('div', 'mu-pdh obj', '<span class="i">2</span>Objections it must survive'); c.insertBefore(h2, topObj[0]); }
+      var h3 = null;
+      if (room) { h3 = el('div', 'mu-pdh room', '<span class="i">' + (h2 ? 3 : 2) + '</span>Who holds what'); c.insertBefore(h3, room); }
+      // map
+      var map = el('div', 'mu-pdmap');
+      map.appendChild(el('span', 'l', 'In this section'));
+      function chip(label, target) { var a = el('a', null, label); a.href = target; map.appendChild(a); }
+      chip(sups.length + (sups.length === 1 ? ' line' : ' lines') + ' of support', anchorFor(h1, 'why'));
+      if (objs.length) chip(objs.length + (objs.length === 1 ? ' objection' : ' objections') + ' answered', anchorFor(h2 || objs[0], 'obj'));
+      if (h3) chip('Who holds what', anchorFor(h3, 'room'));
+      var after = $(':scope > .precise', c) || $(':scope > h4', c);
+      if (after) after.parentNode.insertBefore(map, after.nextSibling);
+      // numbered supports
+      sups.forEach(function (sp, i) { sp.classList.add('mu-sup'); var sh = $('.sh', sp); if (sh) sh.insertBefore(el('span', 'mu-supn', String(i + 1)), sh.firstChild); });
+      // objections: reply held back
+      objs.forEach(function (o) {
+        var rl = $(':scope > .rl', o);
+        if (!rl || o.querySelector('.mu-replybtn')) return;
+        var wrap = el('div', 'mu-reply');
+        var n = rl; var move = [];
+        while (n) { move.push(n); n = n.nextElementSibling; }
+        move.forEach(function (x) { wrap.appendChild(x); });
+        var btn = el('button', 'mu-replybtn', 'Try to answer it, then show the reply');
+        btn.type = 'button'; btn.setAttribute('aria-expanded', 'false');
+        btn.addEventListener('click', function () {
+          var open = o.classList.toggle('mu-open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          btn.textContent = open ? 'Hide the reply' : 'Try to answer it, then show the reply';
+        });
+        o.appendChild(btn); o.appendChild(wrap);
+      });
+    });
+  }
+
   function run() {
-    try { initPremiseDefence(); } catch (e) {}
-    try { initSections(); } catch (e) {}
-    try { initDerive(); } catch (e) {}
-    try { initPressed(); } catch (e) {}
+    try { initPremiseDefence(); } catch (e) { if (window.console) console.warn("mastery-ui initPremiseDefence:", e); }
+    try { initPremiseCards(); } catch (e) { if (window.console) console.warn("mastery-ui initPremiseCards:", e); }
+    try { initSections(); } catch (e) { if (window.console) console.warn("mastery-ui initSections:", e); }
+    try { initDerive(); } catch (e) { if (window.console) console.warn("mastery-ui initDerive:", e); }
+    try { initPressed(); } catch (e) { if (window.console) console.warn("mastery-ui initPressed:", e); }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
 })();

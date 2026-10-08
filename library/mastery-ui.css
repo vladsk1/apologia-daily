@@ -109,3 +109,22 @@ button:focus-visible{outline:2px solid var(--g,#c8a951);outline-offset:2px}
 .objin .badge{font-family:var(--ui,sans-serif);font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:6px}
 .objin .badge.hard{background:#fdeceb;color:#b23b32}
 .support > .sh + p + .objin, .support .objin{margin-left:0}
+
+/* ---------- 6. Premise-defence cards: map, sub-heads, numbered supports ---------- */
+.mu-pdmap{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 0 6px;font-family:var(--ui,sans-serif);font-size:13px}
+.mu-pdmap .l{color:var(--tm,#5a6b82);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;margin-right:2px}
+.mu-pdmap a{color:var(--n5,#1e3a5f);background:#fff;border:1px solid #cfdcee;border-radius:99px;padding:5px 11px;text-decoration:none;font-weight:600}
+.mu-pdmap a:hover{background:#f3f7fc}
+.mu-pdh{display:flex;align-items:center;gap:9px;margin:22px 0 4px;padding-top:14px;border-top:1px solid var(--border,#e8e2d8);font-family:var(--ui,sans-serif);font-size:12px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--n5,#1e3a5f);scroll-margin-top:130px}
+.mu-pdh .i{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--n5,#1e3a5f);color:#fff;font-size:11.5px;letter-spacing:0}
+.mu-pdh.obj{color:#b23b32}.mu-pdh.obj .i{background:#b23b32}
+.mu-pdh.room{color:var(--tm,#5a6b82)}.mu-pdh.room .i{background:#8795a8}
+.support.mu-sup{border:1px solid var(--border,#e8e2d8);border-left:4px solid #dbe6f4;border-radius:10px;background:#fff;padding:12px 15px;margin:10px 0}
+.mu-supn{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:6px;background:#eef3fa;color:var(--n5,#1e3a5f);font-family:var(--ui,sans-serif);font-size:12px;font-weight:700}
+.objin{border-left:4px solid #e7b3ae}
+.objin .mu-reply{display:none}
+.objin.mu-open .mu-reply{display:block;animation:muFade .25s ease}
+.mu-replybtn{margin-top:9px;font-family:var(--ui,sans-serif);font-size:12.5px;font-weight:600;color:var(--gd,#9a7416);background:#fff;border:1px solid #f0e6cb;border-radius:8px;padding:6px 12px;cursor:pointer}
+.mu-replybtn:hover{background:#fbf7ec}
+.objin.mu-open .mu-replybtn{color:var(--tm,#5a6b82);border-color:var(--border,#e8e2d8)}
+.whoholds{scroll-margin-top:130px}
