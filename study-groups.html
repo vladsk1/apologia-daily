@@ -589,6 +589,9 @@
     buildKindGrid();
     buildIconGrid();
     fillPlanSelects();
+    // Ask the one-time age question up front: the database hides group members,
+    // messages and check-ins from anyone without an adult age record.
+    await adultOk();
     await loadGroups();
 
     var params = new URLSearchParams(location.search);
@@ -710,6 +713,7 @@
   }
 
   async function openGroup(id) {
+    if (!(await adultOk())) return;
     var group = null;
     try {
       var res = await sb.from('groups').select('*').eq('id', id).single();

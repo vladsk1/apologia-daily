@@ -89,7 +89,22 @@
     // Adults only (2026-09-30): groups are open chat between members.
     // The database enforces 18+ (join_group_by_code checks is_adult); age-gate.js asks
     // once for accounts made before the age screen, then reads the stored band.
-    var adult = await window.adAgeGate(sb);
+    var adult = await window.adAgeGate(sb, { quiet: true });
+    if (!adult && window.adAgeGate.reason === 'error') {
+      hideSpinner();
+      render('<div class="icon">🤔</div><h1>Something went wrong</h1><p>We couldn&rsquo;t check your account just now. Please reload the page and try again.</p>');
+      return;
+    }
+    if (!adult && window.adAgeGate.reason === 'cancel') {
+      hideSpinner();
+      render('<div class="icon">👋</div><h1>Join when you&rsquo;re ready</h1><p>Reload this page whenever you want to join the group.</p>');
+      return;
+    }
+    if (!adult && window.adAgeGate.reason === 'under_13') {
+      hideSpinner();
+      render('<div class="icon">🙏</div><h1>Accounts are for ages 13 and up</h1><p>This account will be deleted within 7 days. A parent or guardian can delete it now from <a href="/dashboard.html">Dashboard &rarr; Account</a>, or email <a href="mailto:contact@apologiadaily.com">contact@apologiadaily.com</a> if the year was chosen by mistake.</p>');
+      return;
+    }
     if (!adult) {
       hideSpinner();
       render('<div class="icon">🙏</div><h1>Study Groups are for adults</h1><p>Ask a parent, youth leader or pastor to run a group you can be part of with them. Everything else on the site is open to you.</p><div class="btn-row"><a href="/evidence-library.html" class="btn btn-gold">Explore the Evidence Library</a></div>');

@@ -1,6 +1,7 @@
 import { requireSecret } from '../lib/require-secret.js';
 import { unsubUrl } from '../lib/unsub-token.js';
 import { handleUnsubscribe } from '../lib/handle-unsubscribe.js';
+import { deleteAccount } from '../lib/delete-account.js';
 // api/weekly-email.js
 // Sends a personalised weekly summary email to all users every Sunday
 // Triggered by Vercel cron (configure in vercel.json) or called manually
@@ -58,6 +59,29 @@ export default async function handler(req, res) {
         method: 'DELETE', headers: { apikey: SB_SERVICE_KEY, Authorization: `Bearer ${SB_SERVICE_KEY}` }
       });
     } catch (e) { /* non-fatal */ }
+
+    // Age records (docs/AGE_SCREEN.md, privacy.html §9-10). Weekly run, so each
+    // promise below is met within 7 days.
+    const H = { apikey: SB_SERVICE_KEY, Authorization: `Bearer ${SB_SERVICE_KEY}`, 'Content-Type': 'application/json' };
+    try {
+      // Under-18s who have now turned 18: keep only "18+", drop the date.
+      const today = new Date().toISOString().slice(0, 10);
+      await fetch(`${SB_URL}/rest/v1/user_age?age_band=eq.13-17&adult_from=lte.${today}`, {
+        method: 'PATCH', headers: H, body: JSON.stringify({ age_band: '18+', adult_from: null })
+      });
+    } catch (e) { /* non-fatal; table may not exist yet */ }
+    try {
+      // Accounts whose holder told us they are under 13: delete them. (To cancel one
+      // reported by mistake, delete its user_age row in the dashboard before Monday.)
+      const hourAgo = new Date(Date.now() - 3600e3).toISOString();
+      const r = await fetch(`${SB_URL}/rest/v1/user_age?age_band=eq.under_13&set_at=lt.${hourAgo}&select=user_id`, { headers: H });
+      if (r.ok) {
+        for (const row of (await r.json()) || []) {
+          const out = await deleteAccount(row.user_id);
+          console.log('under-13 account deletion', out.ok ? 'ok' : 'FAILED ' + (out.error || ''));
+        }
+      }
+    } catch (e) { /* non-fatal; table may not exist yet */ }
   }
 
   if (!RESEND_KEY) {

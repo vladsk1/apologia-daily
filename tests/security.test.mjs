@@ -162,3 +162,28 @@ test('every Supabase JWT shipped to the browser is the anon key, never service_r
   }
   assert.deepEqual(bad, [], 'non-anon JWT in a client-shipped file:\n' + bad.join('\n'));
 });
+
+test('age screen: every Study Groups read/write policy and the invite RPC require an adult', () => {
+  // docs/AGE_SCREEN.md is the SQL the owner runs; the database is the only real 18+ guard.
+  const sql = readFileSync('docs/AGE_SCREEN.md', 'utf8');
+  for (const p of ['groups_insert', 'gm_select', 'gm_insert', 'gmsg_select', 'gmsg_insert', 'gact_select', 'gact_insert']) {
+    const m = sql.match(new RegExp(`create policy ${p} on[\\s\\S]*?;`));
+    assert.ok(m, `${p} policy missing from docs/AGE_SCREEN.md`);
+    assert.match(m[0], /public\.is_adult\(\)/, `${p} does not check is_adult()`);
+  }
+  const rpc = sql.match(/function public\.join_group_by_code[\s\S]*?end; \$\$;/);
+  assert.ok(rpc && /if not public\.is_adult\(\) then raise exception 'adults_only'/.test(rpc[0]), 'join_group_by_code must refuse non-adults');
+  // the signup trigger must never be able to abort account creation
+  const trg = sql.match(/function public\.copy_signup_age[\s\S]*?end; \$\$;/);
+  assert.ok(trg && /exception when others then null/.test(trg[0]), 'copy_signup_age must swallow its own errors');
+  // is_adult takes no argument, so nobody can ask about another user
+  assert.doesNotMatch(sql, /function public\.is_adult\(\s*\w/);
+});
+
+test('age screen: signup sends no birth date and nothing at all for an under-13', () => {
+  const src = readFileSync('signup.html', 'utf8');
+  assert.doesNotMatch(src, /adult_from|birth_year|dobY\s*\}/, 'signup must not send a birth date');
+  const fn = src.slice(src.indexOf('async function handleSignup'));
+  assert.ok(fn.indexOf('age < 13') !== -1 && fn.indexOf('age < 13') < fn.indexOf('sb.auth.signUp'),
+    'the under-13 refusal must run before any signup call');
+});

@@ -10,6 +10,9 @@
  *     old "press OK if you are 18+" confirm so the page keeps working.
  *
  * Usage:  if (!(await adAgeGate(sb))) return;
+ *         adAgeGate(sb, { quiet: true }) shows no "adults only" box (the caller renders
+ *         its own), and adAgeGate.reason says why: 'ok' | 'minor' | 'under_13' |
+ *         'cancel' | 'error'.
  */
 (function () {
   var cached = null; // true | false once known for this page view
@@ -29,10 +32,16 @@
     return ok;
   }
 
+  // Mirrors is_adult() in the database, which compares against the server's (UTC) date.
   function isAdultRow(row) {
     if (!row) return false;
     if (row.age_band === '18+') return true;
-    return !!(row.adult_from && new Date(row.adult_from + 'T00:00:00') <= new Date());
+    return row.age_band === '13-17' && !!row.adult_from && row.adult_from <= new Date().toISOString().slice(0, 10);
+  }
+
+  function under13Box() {
+    var w = notice('<p style="margin:0 0 1rem;">Accounts on Apologia Daily are for people aged 13 and over, so this account will be deleted within 7 days. A parent or guardian can delete it now from <a href="/dashboard.html">Dashboard &rarr; Account</a>. If you chose the wrong year by mistake, email <a href="mailto:contact@apologiadaily.com">contact@apologiadaily.com</a> before then.</p><button type="button" style="padding:10px 18px;border:0;border-radius:4px;background:#c8a951;color:#0a1628;font-weight:600;cursor:pointer;">OK</button>');
+    w.querySelector('button').onclick = function () { w.remove(); };
   }
 
   function notice(html) {
@@ -65,7 +74,7 @@
         '<select id="ag-m" aria-label="Birth month" ' + sel + '><option value="">Month</option>' +
         months.map(function (n, i) { return '<option value="' + (i + 1) + '">' + n + '</option>'; }).join('') + '</select>' +
         '<select id="ag-y" aria-label="Birth year" ' + sel + '><option value="">Year</option>' + years + '</select></div>' +
-        '<p style="font-size:.85rem;color:#555;margin:0 0 1rem;">We keep only whether you are 18 or over, not your birth date. You only need to answer this once.</p>' +
+        '<p style="font-size:.85rem;color:#555;margin:0 0 1rem;">Adults: we keep only that you are 18 or over. Under 18: we keep the month you turn 18 (which is your birth month and year) until then. You only need to answer this once.</p>' +
         '<div style="display:flex;gap:8px;justify-content:flex-end;">' +
         '<button type="button" id="ag-cancel" style="padding:10px 16px;border:1px solid #ccc;border-radius:4px;background:#fff;cursor:pointer;">Cancel</button>' +
         '<button type="button" id="ag-ok" style="padding:10px 18px;border:0;border-radius:4px;background:#c8a951;color:#0a1628;font-weight:600;cursor:pointer;">Continue</button></div>');
@@ -79,34 +88,41 @@
     });
   }
 
-  window.adAgeGate = async function (sb) {
-    if (cached !== null) { if (!cached) showAdultsOnly(); return cached; }
-    if (!sb) return false;
+  function done(ok, reason, quiet) {
+    window.adAgeGate.reason = reason;
+    if (!quiet) {
+      if (reason === 'minor') showAdultsOnly();
+      if (reason === 'under_13') under13Box();
+    }
+    return ok;
+  }
+
+  window.adAgeGate = async function (sb, opts) {
+    var quiet = !!(opts && opts.quiet);
+    if (cached !== null) return done(cached.ok, cached.reason, quiet);
+    if (!sb) return done(false, 'error', true);
     var r = await sb.from('user_age').select('age_band,adult_from').maybeSingle();
     if (r.error) {
-      if (missing(r.error)) return (cached = legacyConfirm());
-      return false; // unknown error: don't let them through, don't cache
+      if (missing(r.error)) { var ok = legacyConfirm(); return done(ok, ok ? 'ok' : 'minor', true); }
+      return done(false, 'error', true); // unknown error: fail closed, don't cache
     }
+    var band;
     if (r.data) {
-      cached = isAdultRow(r.data);
-      if (!cached) showAdultsOnly();
-      return cached;
-    }
-    var b = await askBirth();
-    if (!b) return false;
-    var s = await sb.rpc('set_my_age', { birth_year: b.year, birth_month: b.month });
-    if (s.error) {
-      if (missing(s.error)) return (cached = legacyConfirm());
-      return false;
-    }
-    if (s.data === '18+') return (cached = true);
-    cached = false;
-    if (s.data === 'under_13') {
-      var w = notice('<p style="margin:0 0 1rem;">Accounts on Apologia Daily are for people aged 13 and over. Please ask a parent or guardian to delete this account from <a href="/dashboard.html">Dashboard &rarr; Account</a>, or email <a href="mailto:contact@apologiadaily.com">contact@apologiadaily.com</a> and we will delete it.</p><button type="button" style="padding:10px 18px;border:0;border-radius:4px;background:#c8a951;color:#0a1628;font-weight:600;cursor:pointer;">OK</button>');
-      w.querySelector('button').onclick = function () { w.remove(); };
+      band = isAdultRow(r.data) ? '18+' : r.data.age_band;
     } else {
-      showAdultsOnly();
+      var b = await askBirth();
+      if (!b) return done(false, 'cancel', true);
+      var s = await sb.rpc('set_my_age', { birth_year: b.year, birth_month: b.month });
+      if (s.error) {
+        if (missing(s.error)) { var ok2 = legacyConfirm(); return done(ok2, ok2 ? 'ok' : 'minor', true); }
+        return done(false, 'error', true);
+      }
+      band = s.data;
     }
-    return false;
+    cached = band === '18+' ? { ok: true, reason: 'ok' }
+           : band === 'under_13' ? { ok: false, reason: 'under_13' }
+           : { ok: false, reason: 'minor' };
+    return done(cached.ok, cached.reason, quiet);
   };
+  window.adAgeGate.reason = '';
 })();
