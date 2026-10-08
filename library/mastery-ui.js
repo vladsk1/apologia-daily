@@ -286,12 +286,79 @@
     });
   }
 
+  /* ---------- 6. Bronze checkpoint: undo, instant order feedback, per-chip marks ----------
+     The ordering chips locked on tap, so a wrong first tap could only be cleared
+     with the separate Reset (which also wiped the property picks), and nothing
+     said whether the order was right until "Check my reconstruction" — often off
+     screen. This adds Undo / Start over, says right-or-not the moment all lines
+     are placed, and after Check marks each property chip right / wrong / missed.
+     Reads the page's own globals (ORDER, _ordSel, _ordSeq); scoring unchanged. */
+  function initCheckpoint() {
+    var pool = document.getElementById('orderPool');
+    var seq = document.getElementById('orderSeq');
+    if (!pool || !seq || !window.ORDER) return;
+    var ctr = el('div', 'mu-ordctl',
+      '<button type="button" class="mu-mini" data-a="undo">&#8630; Undo last</button>' +
+      '<button type="button" class="mu-mini" data-a="clear">Start over</button>');
+    var fb = el('div', 'mu-ordfb');
+    seq.parentNode.insertBefore(ctr, seq.nextSibling);
+    ctr.parentNode.insertBefore(fb, ctr.nextSibling);
+    function sel() { return window._ordSel || []; }
+    function chipFor(k) { return $$('button', pool).filter(function (b) { return b.textContent === window.ORDER[k]; })[0]; }
+    function refresh() {
+      var s = sel(), n = window.ORDER.length;
+      ctr.style.display = s.length ? '' : 'none';
+      if (s.length < n) { fb.className = 'mu-ordfb'; fb.textContent = ''; return; }
+      var ok = s.every(function (k, i) { return k === i; });
+      fb.className = 'mu-ordfb show ' + (ok ? 'good' : 'bad');
+      fb.textContent = ok
+        ? '✓ Right order. Now pick the properties below, then press “Check my reconstruction.”'
+        : '✗ Not quite — that is not the order of the argument. Use Undo or Start over and try again.';
+    }
+    function release(k) { var b = chipFor(k); if (b) { b.disabled = false; b.style.opacity = 1; b.removeAttribute('data-step'); } }
+    ctr.addEventListener('click', function (e) {
+      var a = e.target.closest('button'); if (!a) return;
+      var s = sel();
+      if (a.getAttribute('data-a') === 'undo') { if (s.length) release(s.pop()); }
+      else { while (s.length) release(s.pop()); }
+      if (typeof window._ordSeq === 'function') window._ordSeq();
+      refresh();
+    });
+    pool.addEventListener('click', function () { setTimeout(refresh, 0); });
+    // per-chip marks after Check; cleared on Reset or on any further pick
+    var pp = document.getElementById('propPool');
+    function clearMarks() { if (pp) $$('button', pp).forEach(function (b) { b.classList.remove('mu-right', 'mu-wrong', 'mu-missed'); }); var k = document.getElementById('mu-key'); if (k) k.remove(); }
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('button'); if (!b) return;
+      var oc = b.getAttribute('onclick') || '';
+      if (/gradeBronze/.test(oc)) setTimeout(function () {
+        clearMarks();
+        if (pp) $$('button', pp).forEach(function (c) {
+          var want = c.getAttribute('data-ok') === '1', got = c.classList.contains('sel');
+          if (want && got) c.classList.add('mu-right');
+          else if (!want && got) c.classList.add('mu-wrong');
+          else if (want && !got) c.classList.add('mu-missed');
+        });
+        var g = document.getElementById('bronzeGrade');
+        if (g) {
+          var key = el('div', 'mu-key', '<span class="r">Green</span> = right · <span class="w">red</span> = not something the argument establishes · <span class="m">dashed</span> = one you missed');
+          key.id = 'mu-key'; g.parentNode.insertBefore(key, g.nextSibling);
+          g.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 0);
+      if (/resetBronze/.test(oc)) setTimeout(function () { clearMarks(); refresh(); }, 0);
+      if (pp && b.closest('#propPool')) clearMarks();
+    }, true);
+    refresh();
+  }
+
   function run() {
     try { initPremiseDefence(); } catch (e) { if (window.console) console.warn("mastery-ui initPremiseDefence:", e); }
     try { initPremiseCards(); } catch (e) { if (window.console) console.warn("mastery-ui initPremiseCards:", e); }
     try { initSections(); } catch (e) { if (window.console) console.warn("mastery-ui initSections:", e); }
     try { initDerive(); } catch (e) { if (window.console) console.warn("mastery-ui initDerive:", e); }
     try { initPressed(); } catch (e) { if (window.console) console.warn("mastery-ui initPressed:", e); }
+    try { initCheckpoint(); } catch (e) { if (window.console) console.warn("mastery-ui initCheckpoint:", e); }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
 })();

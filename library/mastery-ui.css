@@ -17,7 +17,7 @@ button:focus-visible{outline:2px solid var(--g,#c8a951);outline-offset:2px}
 
 /* Ordering chips: a tapped line no longer just fades out — it turns navy and
    shows the position you gave it (1, 2, 3). */
-#orderPool .btn:disabled{opacity:1 !important;background:var(--n5,#1e3a5f);color:#fff;border-color:var(--n5,#1e3a5f);cursor:default}
+#orderPool .btn:disabled,#orderPool .btn.ghost:disabled{opacity:1 !important;background:var(--n5,#1e3a5f);color:#fff;border-color:var(--n5,#1e3a5f);cursor:default}
 #orderPool .btn[data-step]:disabled::before{content:attr(data-step);display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--g,#c8a951);color:var(--n,#0a1628);font-size:12px;font-weight:700;margin-right:8px}
 
 /* Small confirmation that a rating was recorded (the objection drill moves on
@@ -128,3 +128,19 @@ button:focus-visible{outline:2px solid var(--g,#c8a951);outline-offset:2px}
 .mu-replybtn:hover{background:#fbf7ec}
 .objin.mu-open .mu-replybtn{color:var(--tm,#5a6b82);border-color:var(--border,#e8e2d8)}
 .whoholds{scroll-margin-top:130px}
+
+/* ---------- 7. Bronze checkpoint: undo, instant order feedback, per-chip marks ---------- */
+#propPool .btn.ghost,#orderPool .btn.ghost{background:#fff;border:1.5px solid #b9cbe4}
+.mu-ordctl{display:flex;gap:8px;margin-top:10px}
+.mu-mini{font-family:var(--ui,sans-serif);font-size:12.5px;font-weight:600;color:var(--n5,#1e3a5f);background:#fff;border:1px solid #cfdcee;border-radius:7px;padding:5px 11px;cursor:pointer}
+.mu-mini:hover{background:#f3f7fc}
+.mu-ordfb{display:none;font-family:var(--ui,sans-serif);font-size:13.5px;font-weight:600;border-radius:8px;padding:8px 12px;margin-top:10px}
+.mu-ordfb.show{display:block;animation:muFade .25s ease}
+.mu-ordfb.good{background:var(--okl,#e8f4ed);color:var(--ok,#2f7d4f);border:1px solid #cfe6da}
+.mu-ordfb.bad{background:#fdeceb;color:#b23b32;border:1px solid #f3cfcb}
+#propPool .btn.mu-right{background:var(--ok,#2f7d4f) !important;border-color:var(--ok,#2f7d4f) !important;color:#fff !important}
+#propPool .btn.mu-wrong{background:#b23b32 !important;border-color:#b23b32 !important;color:#fff !important}
+#propPool .btn.mu-wrong::before{content:"\2717\00a0" !important;color:#fff !important}
+#propPool .btn.mu-missed{border:2px dashed var(--ok,#2f7d4f) !important;color:var(--ok,#2f7d4f) !important}
+.mu-key{font-family:var(--ui,sans-serif);font-size:12.5px;color:var(--tm,#5a6b82);margin-top:8px}
+.mu-key .r{color:var(--ok,#2f7d4f);font-weight:700}.mu-key .w{color:#b23b32;font-weight:700}.mu-key .m{color:var(--ok,#2f7d4f);font-weight:700;text-decoration:underline dashed}
