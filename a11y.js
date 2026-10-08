@@ -326,7 +326,13 @@
     if (!window.MutationObserver || CONTRAST_OFF) return;
     var queue = [], timer = null;
     new MutationObserver(function (muts) {
-      for (var i = 0; i < muts.length; i++) queue.push(muts[i].target);
+      for (var i = 0; i < muts.length; i++) {
+        var t = muts[i].target;
+        // body/html classes flip on scroll or menu-open on some pages: re-checking the
+        // whole page each time would be wasted work, and they don't recolour text.
+        if (t === document.body || t === document.documentElement) continue;
+        if (queue.indexOf(t) === -1) queue.push(t);
+      }
       if (timer) return;
       timer = setTimeout(function () {
         timer = null;

@@ -222,4 +222,6 @@ test('accessibility basics (a11y.js) load site-wide and keep their key rules', (
   assert.match(src, /function makeOperable/, 'click-only elements made keyboard-operable');
   assert.match(src, /MutationObserver/, 'covers content added after load');
   assert.match(src, /function labelFields/, 'unlabelled form fields get a name');
+  assert.match(src, /function fixContrast/, 'contrast fixer present');
+  assert.match(src, /if \(bgL < 0\.45\) continue;/, 'contrast fixer never touches dark backgrounds');
 });
