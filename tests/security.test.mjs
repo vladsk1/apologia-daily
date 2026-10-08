@@ -209,3 +209,14 @@ test('analytics: PostHog loads only after the visitor allows it, never with repl
   assert.match(src, /disable_session_recording: true/);
   assert.match(src, /mask_all_text: true/);
 });
+
+test('accessibility basics (a11y.js) load site-wide and keep their key rules', () => {
+  for (const f of ['ad-nav.js', 'analytics.js']) {
+    assert.match(readFileSync(f, 'utf8'), /\/a11y\.js/, `${f} must load /a11y.js`);
+  }
+  const src = readFileSync('a11y.js', 'utf8');
+  assert.match(src, /:focus-visible\{outline:3px solid/, 'keyboard focus ring');
+  assert.match(src, /prefers-reduced-motion: reduce/, 'reduced motion');
+  assert.match(src, /Skip to content/, 'skip link');
+  assert.match(src, /aria-live/, 'AI replies announced');
+});

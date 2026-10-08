@@ -50,6 +50,16 @@
     }
   } catch (e) {}
 
+  /* Accessibility basics (a11y.js): focus rings, skip link, reduced motion, screen-
+     reader announcements. Loaded from here and from analytics.js; it guards itself. */
+  try {
+    if (!window.__AD_A11Y && !document.querySelector('script[src="/a11y.js"]')) {
+      var _a11y = document.createElement('script');
+      _a11y.src = '/a11y.js';
+      (document.head || document.documentElement).appendChild(_a11y);
+    }
+  } catch (e) {}
+
   /* ---- Cross-device progress sync (loads regardless of the analytics opt-out
      below — it syncs the USER'S OWN learning progress, not tracking). Strict
      no-op until signed in AND the user_progress migration is run. See

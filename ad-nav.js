@@ -1,5 +1,12 @@
 /* Apologia Daily — shared nav behavior: dropdown, mobile menu, active link */
 (function(){
+  /* Accessibility basics (a11y.js): loaded from here and from analytics.js; it guards itself. */
+  try {
+    if(!window.__AD_A11Y && !document.querySelector('script[src="/a11y.js"]')){
+      var a11y=document.createElement('script'); a11y.src='/a11y.js';
+      (document.head||document.documentElement).appendChild(a11y);
+    }
+  } catch(e){}
   function init(){
     var nav=document.querySelector('.adn-nav'); if(!nav) return;
     /* Ask Anything was replaced by Asked & Answered. Repoint any legacy nav link at
