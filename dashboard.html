@@ -871,7 +871,9 @@
         var confirmKey = 'ad_signup_confirmed_' + user.id;
         var createdAt = Date.parse(user.created_at || '');
         var isNewAccount = createdAt && (Date.now() - createdAt) < 7 * 24 * 60 * 60 * 1000;
-        if (isNewAccount && !localStorage.getItem(confirmKey)) {
+        // Only mark it sent when PostHog is actually running (the visitor allowed
+        // analytics), so a later "Allow" can still record it.
+        if (isNewAccount && window.posthog && !localStorage.getItem(confirmKey)) {
           localStorage.setItem(confirmKey, '1');
           window.adTrack && window.adTrack('signup_confirmed', {
             hours_to_confirm: Math.round((Date.now() - createdAt) / 3600000)

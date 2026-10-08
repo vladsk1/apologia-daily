@@ -262,7 +262,7 @@
           if(askLink){ askLink.style.display='none'; askLink.href='/asked-and-answered.html'; }
         } else {
           var withQ='/asked-and-answered.html?q='+encodeURIComponent(q);
-          if(askLink) askLink.href=withQ;
+          if(askLink){ askLink.href=withQ; askLink.style.display=''; }
           var inMsg=msg.querySelector('a'); if(inMsg) inMsg.href=withQ;
         }
       }).catch(function(){});

@@ -204,7 +204,7 @@ test('analytics: PostHog loads only after the visitor allows it, never with repl
   const init = src.indexOf('window.posthog.init(');
   assert.ok(init > start, 'posthog.init must live inside startPostHog()');
   // every call of startPostHog() outside its definition is behind a "yes"
-  const calls = [...src.matchAll(/startPostHog\(\);/g)].map((m) => src.slice(Math.max(0, m.index - 60), m.index));
+  const calls = [...src.matchAll(/startPostHog\(\);/g)].map((m) => src.slice(Math.max(0, m.index - 400), m.index));
   for (const c of calls) assert.match(c, /=== 'yes'/, 'startPostHog() called without a yes: ' + c);
   assert.match(src, /disable_session_recording: true/);
   assert.match(src, /mask_all_text: true/);

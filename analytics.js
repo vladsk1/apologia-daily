@@ -136,9 +136,17 @@
       if (!c) return;
       setConsent(c);
       b.remove();
-      if (c === 'yes') startPostHog();
+      if (c === 'yes') {
+        // Re-allowing after "Change your choice" on the same page: the instance is
+        // already running but opted out, so switch it back on rather than re-init.
+        if (_phStarted && window.posthog && window.posthog.opt_in_capturing) {
+          try { window.posthog.opt_in_capturing(); } catch (e) {}
+        } else startPostHog();
+      }
     });
-    (document.body || document.documentElement).appendChild(b);
+    // First in the page, so keyboard users reach it before the content.
+    var host = document.body || document.documentElement;
+    host.insertBefore(b, host.firstChild);
   }
 
   window.adConsent = {
@@ -149,12 +157,18 @@
       if (was === 'yes' && window.posthog && window.posthog.opt_out_capturing) {
         try { window.posthog.opt_out_capturing(); window.posthog.reset(); } catch (e) {}
       }
-      // Remove PostHog's own cookie/storage so a "no" leaves nothing behind.
+      // Remove PostHog's own cookie/storage so a "no" leaves nothing behind. That
+      // includes its opt-out record (__ph_opt_in_out_<key>): left in place, a later
+      // "Allow" would load PostHog but it would stay silently opted out. PostHog sets
+      // its cookie on the parent domain (.apologiadaily.com), so delete it there too.
       try {
-        Object.keys(localStorage).forEach(function (k) { if (/^ph_/.test(k)) localStorage.removeItem(k); });
+        Object.keys(localStorage).forEach(function (k) { if (/^(__)?ph_/.test(k)) localStorage.removeItem(k); });
+        var dom = location.hostname.replace(/^www\./, '');
         document.cookie.split(';').forEach(function (c) {
           var n = c.split('=')[0].trim();
-          if (/^ph_/.test(n)) document.cookie = n + '=; Max-Age=0; path=/; SameSite=Lax';
+          if (!/^(__)?ph_/.test(n)) return;
+          document.cookie = n + '=; Max-Age=0; path=/; SameSite=Lax';
+          document.cookie = n + '=; Max-Age=0; path=/; domain=.' + dom + '; SameSite=Lax';
         });
       } catch (e) {}
       showConsentBanner();
@@ -191,6 +205,15 @@
                 props[k] = props[k].replace(re, '$1q=removed');
               }
             }
+            // Older SDKs send clicked elements as an array of objects, not a string.
+            if (Array.isArray(props.$elements)) {
+              props.$elements.forEach(function (el) {
+                if (!el) return;
+                ['attr__href', 'href'].forEach(function (a) {
+                  if (typeof el[a] === 'string') el[a] = el[a].replace(re, '$1q=removed');
+                });
+              });
+            }
           } catch (e) {}
           return props;
         }
@@ -220,7 +243,9 @@
   if (phOn) {
     var _c0 = getConsent();
     if (_c0 === 'yes') startPostHog();
-    else if (_c0 !== 'no') {
+    // Not in the native app: /ingest does not resolve there, so asking would be
+    // asking consent for analytics that cannot run.
+    else if (_c0 !== 'no' && !window.__AD_IN_APP) {
       if (document.body) showConsentBanner();
       else document.addEventListener('DOMContentLoaded', showConsentBanner);
     }
