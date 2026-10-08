@@ -1,0 +1,269 @@
+{
+  "reviewed": {
+    "argument": "2026-10-08",
+    "orthodoxy": "2026-10-08",
+    "neutrality": "2026-10-08",
+    "by": "2026-10-08 argument + orthodoxy + neutrality + feature-accuracy, READ-ONLY (Explore), against origin/main ev-m-kalam.html + lib/review-queue.js (cloze drill) + ev-s* 'Master this argument — Pro' links, and the 7 live screenshots (tools/reel/shots/mastery-kalam/, 2026-10-08). R1: 0 BREAK / 0 WEAK, STAMPABLE; gate-supplied polishes applied (one drill, not 'drills', rebuilds word by word; Gold incl. re-prove). R2 confirmation STAMPABLE. Score = AI via /api/tutor (heuristic fallback); no review/human-grading claim; objections-cold self-rated, not claimed as graded. Kalam premise in its 'begins to exist' form; no conclusion or God claim, so no deism clause needed. No price/free claim (Pro label accurate; gate off until Stripe). No track count claimed (screenshot 03 shows the page's own stale '12 of 19' chip). Clarifier candidates: none. NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) FEATURE-PROMO reel for the mastery tracks (ev-m-*), using ev-m-kalam.html as the example, with framed phone screenshots of the LIVE page captured 2026-10-08 (tools/reel/shots/mastery-kalam.json -> shots/mastery-kalam/). Wording ported from the page's own copy: hero ('The deep dive tells you what the argument is. This track makes you able to use it'), levels ('Bronze (rebuild it), Silver (defend it cold), Gold (handle an objection you've never seen, then prove it again weeks later)'), Understand ('Not more prose — the load-bearing structure, defended bone by bone, then proven from memory'), drill card ('Rebuild the reply, word by word', injected onto every ev-m page by lib/review-queue.js ~l.332 from the page's Drill 3 model answer), Prove ('Mastery isn't a feeling… Don't trust the warm glow of having read it; prove it cold'), Silver part 1 ('Score 8+ on Explain It Back'), Silver part 2 ('Objections cold'). Kalam premise in its guardrail form ('whatever begins to exist'). No price/Pro/free claim; no count of tracks. NOTE: screenshot 03 shows the page's own chip 'Argument 12 of 19 in the mastery library' (stale; 80 ev-m pages exist) — the reel states no count.",
+  "voiceover": "You've read the argument. But could you explain it to a friend tomorrow, from memory? That's what a mastery track is for. The deep dive tells you what the argument is. This track makes you able to use it. Take the Kalam. It starts with the argument in brief: whatever begins to exist has a cause, and the universe began to exist. Then three earned levels. Bronze: rebuild it. Silver: defend it cold. Gold: handle an objection you've never seen, then prove it again weeks later. Understand it: not more prose, but the load-bearing structure, defended bone by bone, then proven from memory. Practice it, with flashcards and drills, including one that makes you rebuild the reply, word by word. Then prove it. Mastery isn't a feeling. Don't trust the warm glow of having read it. Prove it cold. Explain it back in your own words and get a score, then answer the objections without notes. Don't just read the case for your faith. Be able to give it. Find the mastery tracks in the Evidence Library at apologia daily dot com.",
+  "scenes": [
+    {
+      "vo": "You've read the argument. But could you explain it to a friend tomorrow, from memory?",
+      "shot": "../shots/mastery-kalam/01-hero.png",
+      "big": [
+        {
+          "t": "You read it.",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "Could you explain it",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "tomorrow?",
+          "c": "gold",
+          "s": 68
+        }
+      ],
+      "dur": 6.4,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "That's what a mastery track is for. The deep dive tells you what the argument is. This track makes you able to use it.",
+      "shot": "../shots/mastery-kalam/01-hero.png",
+      "kicker": "MASTERY TRACKS",
+      "lines": [
+        {
+          "t": "The deep dive tells you",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "what the argument is.",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "This track makes you",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        },
+        {
+          "t": "able to use it.",
+          "c": "gold",
+          "s": 52,
+          "f": "serifb"
+        }
+      ],
+      "dur": 9.1,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "Take the Kalam. It starts with the argument in brief: whatever begins to exist has a cause, and the universe began to exist.",
+      "shot": "../shots/mastery-kalam/02-brief.png",
+      "kicker": "EXAMPLE: THE KALAM",
+      "lines": [
+        {
+          "t": "Whatever begins",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "to exist has a cause.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "The universe",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        },
+        {
+          "t": "began to exist.",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        }
+      ],
+      "dur": 8.8,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "Then three earned levels. Bronze: rebuild it. Silver: defend it cold. Gold: handle an objection you've never seen, then prove it again weeks later.",
+      "shot": "../shots/mastery-kalam/03-levels.png",
+      "kicker": "THREE EARNED LEVELS",
+      "lines": [
+        {
+          "t": "Bronze: rebuild it.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "Silver: defend it cold.",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "Gold: a new objection,",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        },
+        {
+          "t": "then prove it again.",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        }
+      ],
+      "dur": 12.4,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "Understand it: not more prose, but the load-bearing structure, defended bone by bone, then proven from memory.",
+      "shot": "../shots/mastery-kalam/04-understand.png",
+      "kicker": "1 · UNDERSTAND IT",
+      "lines": [
+        {
+          "t": "The load-bearing",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "structure,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "defended bone by bone.",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        }
+      ],
+      "dur": 7.7,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "Practice it, with flashcards and drills, including one that makes you rebuild the reply, word by word.",
+      "shot": "../shots/mastery-kalam/05-flash.png",
+      "kicker": "2 · PRACTICE IT",
+      "lines": [
+        {
+          "t": "Flashcards.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "Drills.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "Rebuild the reply,",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        },
+        {
+          "t": "word by word.",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        }
+      ],
+      "dur": 7.3,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "Then prove it. Mastery isn't a feeling. Don't trust the warm glow of having read it. Prove it cold.",
+      "shot": "../shots/mastery-kalam/06-proveit.png",
+      "kicker": "3 · PROVE IT",
+      "lines": [
+        {
+          "t": "Mastery isn't",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "a feeling.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "Prove it cold.",
+          "c": "gold",
+          "s": 60,
+          "f": "serifb"
+        }
+      ],
+      "dur": 9.1,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "Explain it back in your own words and get a score, then answer the objections without notes.",
+      "shot": "../shots/mastery-kalam/07-explain.png",
+      "kicker": "EXPLAIN IT BACK",
+      "lines": [
+        {
+          "t": "Explain it back.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Get a score.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Then face the",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        },
+        {
+          "t": "objections cold.",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        }
+      ],
+      "dur": 6.4,
+      "shot_h": 0.52
+    },
+    {
+      "vo": "Don't just read the case for your faith. Be able to give it. Find the mastery tracks in the Evidence Library at apologia daily dot com.",
+      "big": [
+        {
+          "t": "Don't just read it.",
+          "c": "cream",
+          "s": 58
+        },
+        {
+          "t": "Be able to give it.",
+          "c": "gold",
+          "s": 60
+        }
+      ],
+      "sub": [
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        }
+      ],
+      "dur": 9.5
+    }
+  ]
+}
