@@ -29,7 +29,7 @@ You can run 1 and 2 in the same sitting, in that order.
 - [x] **4. Add `RATE_SALT`** ✅ added 2026-10-09 (Production). = any long random string (e.g. 40+ characters from a password
   manager), for Production. It scrambles IP addresses for the rate limits; without it the code
   falls back to another secret, which works but isn't ideal.
-- [ ] **4b. Add `EMAIL_POSTAL_ADDRESS`** ⏳ waiting on a PO box + the entity name (items 9–10). = your postal address on one line (a PO box is fine),
+- [~] **4b. Add `EMAIL_POSTAL_ADDRESS`** — `EMAIL_SENDER_NAME` ✅ added 2026-10-09; ⏳ `EMAIL_POSTAL_ADDRESS` waits on a PO box (item 10). = your postal address on one line (a PO box is fine),
   and **`EMAIL_SENDER_NAME`** = the legal name (see 9). Both go in the footer of the weekly
   summary and group-reminder emails, which anti-spam law requires (audit item 5). Until it is
   set, those emails go out without an address.
