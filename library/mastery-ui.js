@@ -168,6 +168,9 @@
         n++;
         c.id = c.id || ('mu-' + p[0] + '-' + n);
         c.setAttribute('data-mu-title', txt($('h4', c)) || txt(kick));
+        var h4 = $(':scope > h4', c);
+        // Long premise sentences read as a wall of display type on phones; set them smaller.
+        if (h4 && txt(h4).length > 110) h4.classList.add('mu-longh');
         var row = el('div', 'mu-kickrow');
         kick.parentNode.insertBefore(row, kick);
         row.appendChild(el('span', 'mu-step', (pi + 1) + '.' + n));

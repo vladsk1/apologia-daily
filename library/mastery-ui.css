@@ -162,3 +162,6 @@ button:focus-visible{outline:2px solid var(--g,#c8a951);outline-offset:2px}
 #propPool .btn.mu-missed{border:2px dashed var(--ok,#2f7d4f) !important;color:var(--ok,#2f7d4f) !important}
 .mu-key{font-family:var(--ui,sans-serif);font-size:12.5px;color:var(--tm,#5a6b82);margin-top:8px}
 .mu-key .r{color:var(--ok,#2f7d4f);font-weight:700}.mu-key .w{color:#b23b32;font-weight:700}.mu-key .m{color:var(--ok,#2f7d4f);font-weight:700;text-decoration:underline dashed}
+/* Long premise headings (most tabs state the full premise as the card heading): smaller, tighter, so a 200-character premise is not eight lines of display type on a phone. */
+.card h4.mu-longh{font-size:17px;line-height:1.42}
+@media (max-width:640px){.card h4.mu-longh{font-size:15.5px;line-height:1.45}}
