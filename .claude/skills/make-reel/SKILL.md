@@ -68,9 +68,15 @@ Tooling lives in `tools/reel/`:
    ```
    If a kicker or line overflows the frame edge, shorten the text or split the line.
 
-5. **Deliver** the MP4(s) to the user with `SendUserFile` (display: render). Include a short
-   kit: the `voiceover` script, a caption + hashtags, and a one-line note that the video is
-   silent-but-captioned and voiceover is a one-pass editor step.
+5. **Deliver** the MP4(s) to the user with `SendUserFile` (display: render).
+   **OWNER RULE (2026-10-09) — every reel ALWAYS ships with BOTH captions, even if not asked:**
+   - an **Instagram caption** (hook line, short body, "link in bio" CTA, hashtags), and
+   - an **X post caption** (≤280 characters with the link counted as 23; the link must be a
+     live URL — check it returns 200, and use `.html` paths, since `/library/foo` without
+     `.html` 404s), plus an **X share-card image** made with `gen_xcard.py` (see below).
+   Both captions and the X card are gated content: run them through the same gate round as the
+   reel spec, and port their wording from the certified essay/reel rather than authoring it.
+   Present each caption in its own fenced block so it can be copied.
 
 ## X / social share-cards — THE standard X-image style (use for EVERY X post image)
 When a thread or post needs an image, **always generate it with `tools/reel/gen_xcard.py`** — the
