@@ -28,9 +28,9 @@
     } catch (e) { return 'en'; }
   })();
   var T = {
-    en: { tab: 'On this tab' },
-    mk: { tab: 'Во овој дел' },
-    es: { tab: 'En esta pestaña' }
+    en: { tab: 'On this tab', essay: 'Read the deep-dive essay', mastery: 'Mastery track' },
+    mk: { tab: 'Во овој дел', essay: 'Прочитај го есејот', mastery: 'Мајсторска патека' },
+    es: { tab: 'En esta pestaña', essay: 'Leer el ensayo completo', mastery: 'Ruta de dominio' }
   }[LANG];
 
   var HEAD_SEL = '.apl, .obt, .prob, .psl';
@@ -53,6 +53,17 @@
       if (h.offsetParent === null) return false;                    // skip hidden (paywalled etc.)
       return txt(h).length > 1;
     });
+  }
+
+  // The essay a card points to most often (cards also link sibling essays).
+  function essayHref(card) {
+    var n = {}, best = null;
+    $$('a[href^="/library/"]', card).forEach(function (x) {
+      var h = (x.getAttribute('href') || '').split('#')[0];
+      if (!/^\/library\/[^/]+\.html$/.test(h)) return;
+      n[h] = (n[h] || 0) + 1; if (!best || n[h] > n[best]) best = h;
+    });
+    return best;
   }
 
   function scrollToEl(el) {
@@ -82,6 +93,17 @@
       li.appendChild(a);
       if (c === open) {
         var sub = document.createElement('ul'); sub.className = 'tn-sub';
+        // The card's own links to its deep-dive essay and its mastery page.
+        var go = [];
+        var ess = essayHref(c); if (ess) go.push([ess, T.essay]);
+        var mas = $('a[href^="ev-m-"], a[href^="/ev-m-"]', c); if (mas) go.push([mas.getAttribute('href'), T.mastery]);
+        if (go.length) {
+          var gl = document.createElement('li'); gl.className = 'tn-go';
+          go.forEach(function (g) {
+            var ga = document.createElement('a'); ga.href = g[0]; ga.textContent = g[1]; gl.appendChild(ga);
+          });
+          sub.appendChild(gl);
+        }
         heads(c).forEach(function (h, i) {
           if (!h.id) h.id = c.id + '-s' + i;
           var sl = document.createElement('li');
@@ -144,6 +166,9 @@
       '.tn-sub{margin:.1em 0 .5em !important}',
       '.tn-sub a{padding-left:2.3em !important;font-size:.76rem !important;color:#7a8ba0 !important}',
       '.tn-sub li.tn-psl a{padding-left:3em !important}',
+      '.tn-go{display:flex;flex-direction:column;gap:4px;margin:.3em 0 .5em 2.3em}',
+      '.tn-go a{padding:.45em .7em !important;border:1px solid #e3d6ad !important;border-radius:6px;background:#fbf8f0;color:#7a5c12 !important;font-weight:600;font-size:.76rem !important}',
+      '.tn-go a:hover{background:#f4ecd4}',
       '.tn-sub a.is-active{color:#0a1628 !important;font-weight:600;border-left-color:#c8a951}',
       '.tn-h{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8a6d1f;margin:0 0 .6em .7em}',
       '.tn-side{position:fixed;top:140px;left:24px;width:220px;max-height:calc(100vh - 170px);overflow:auto;z-index:20;display:none;padding-right:6px}',
