@@ -41,14 +41,12 @@
 - `library/jewishness.html` — read in full (Jewish context; the *aposynagōgos* passages).
 
 ## Read-coverage (measured, not estimated)
-- **Read:** Preface; Abbreviations; Introduction (complete); Ch. 1 Mark (complete); Ch. 2 Matthew **except Kindle
-  pp. 63–77**; Ch. 3 Luke–Acts (complete); Ch. 4 John (complete); Conclusion (complete); **all endnotes** (Intro
+- **Read:** Preface; Abbreviations; Introduction (complete); Ch. 1 Mark (complete); Ch. 2 Matthew (complete — pp. 63–77
+  on a second pass); Ch. 3 Luke–Acts (complete); Ch. 4 John (complete); Conclusion (complete); **all endnotes** (Intro
   1–92; ch.1 1–113; ch.2 1–68; ch.3 1–50; ch.4 1–108; Conclusion 1–3); the Bibliography skimmed (not transcribed).
-- ⬜ **GAP — Ch. 2 Matthew, Kindle pp. 63–77 (loc 1246–1492) NOT read.** The reader jumped about two screens
-  between capture batches. From the chapter's endnotes 44–62, which were read, the gap covers the rest of the
-  Son-of-David section and Matthew's Messiah as teacher / new Moses (Allison *New Moses*; Gaston; Yieh on Matt
-  23:10), plus Peter's confession (Matt 16:16; Gundry; Davies & Allison) and the passion. **Verdicts below for
-  that stretch rest on its endnotes only and are marked so.** ⬜ *(fill in when read)*
+- ✅ **Ch. 2 Matthew, Kindle pp. 63–77 — read 2026-10-09 (second pass).** The first pass jumped ~2 screens between
+  capture batches; the owner reset the reader to p. 61 and the stretch was re-captured (screens m-0001…m-0004,
+  continuity checked column to column through to the chapter conclusion). **The whole book's body is now read.**
 - ⬜ Copyright page not captured (see edition note).
 
 ## Thesis / spine (our words)
@@ -81,8 +79,11 @@ invent it after Easter, because a resurrection by itself would not make anyone a
 | 1 | Summary + conclusion (Mark as apology for the cross) | 51–52 | 1 Corroboration | `crucified-messiah.html` |
 | 2 | Matthew: intro (most Jewish Gospel; church's book) | 53–57 | 6 Non-recommendation | — |
 | 2 | The beginnings of the Messiah (incipit, genealogy, four women, exile, birth narrative, Magi, Egypt) | 57–63 | 1 Corroboration (Hos 11:1 typology, Isa 7:14 dual reading already ours) | `messianic-prophecy.html` |
-| 2 | The Son of David (healer, shepherd) | 63+ | 1 Corroboration (healer-Son-of-David material partly in the **GAP**) | — |
-| 2 | ⬜ GAP pp. 63–77 (from endnotes: Messiah as teacher/new Moses; Peter's confession; passion) | 63–77 | ⬜ endnotes only, provisional 6 | — |
+| 2 | The Son of David (healer — Solomon-exorcist and Isaianic-healing backgrounds, Matt 8:17 / Isa 53:4, 4Q521; shepherd) | 63–66 | 1 Corroboration; feeds BIRD-1 (4Q521) | — |
+| 2 | The deeds of the Messiah (Matt 11:2–6, John's question; healings don't authenticate by themselves but help recognition) | 66–67 | 4 Missing → **BIRD-1** | new essay |
+| 2 | Peter's confession (Matt 16:13–20: Messiah + Son of the *living* God; Caesarea Philippi / Pan shrine) | 67–69 | 1 Corroboration on the confession; ⚠ **5 Hazard on the "rock" (16:18)** — see fences | — |
+| 2 | Messiah as teacher / new Moses (Matt 23:8–10; five discourses; Allison *New Moses*; Dahl) | 69–70 | 6 Non-recommendation (Bird himself notes no widespread Jewish expectation of a teaching Messiah) | — |
+| 2 | Trial and passion (Matt 26:63–64 "the Messiah, the Son of God" / "you have said so" + Ps 110 / Dan 7; royal + prophetic messianism; Servant echoes; Son of God at the cross, Wis 2:17–18) | 70–77 | 1 Corroboration (`jesus_claims.html` already handles Matthew's "you have said so") | `jesus_claims.html` |
 | 2 | Son of God at the cross; resurrection (Matt 28:17–20); conclusion | 77 | 1 Corroboration | — |
 | 3 | Luke: Prophet-Messiah; birth narratives (Luke 1:32–35; 2:11 christos kyrios; anatolē 1:78) | 79–85 | **4 Missing** (Luke 2:11 / Rowe; anatolē P4) | `titles.html`; `jesus_as_god_nt.html` |
 | 3 | Nazareth manifesto (Isa 61), Luke 7:22 + 4Q521; travel narrative; passion; resurrection | 81–88 | **4 Missing** (Isa 61: 0 hits site-wide) | → BIRD-1 |
@@ -167,6 +168,11 @@ predates both); Stoner (ours retires the statistical argument; Bird does not tou
   Jewish-relations sensitive; **do not import** his ecclesiology.
 - **Colwell's rule** appears here only about John 20:31's word order (Carson vs Wallace). It has nothing to do
   with the retired John 1:1 misapplication; do not conflate them.
+- ⚠ **Matt 16:18 ("on this rock")** — Bird reads Peter himself as the rock and treats "the confession only"
+  as Protestant anxiety about the papacy. That adjudicates the **papacy** question, one of the six intra-Christian
+  disputes the denominational-neutrality guardrail names. **Do not port his reading of the rock.** If the verse
+  is ever used, use it only for the confession (16:16) and leave the rock's referent unstated or named as
+  disputed.
 - **Isa 7:14** — Bird reads it typologically; ours ("dual fulfilment, contested") already says this.
 
 ## Live-door status
