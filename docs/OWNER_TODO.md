@@ -20,8 +20,7 @@ information only you have. Tick each one off (change `[ ]` to `[x]` and add the 
 - [~] **2. Run [`docs/AGE_SCREEN.md`](AGE_SCREEN.md)** (audit item 3). ✅ SQL run + table checks passed 2026-10-09; ⬜ still to do: the test signup + Study Groups test (its Step 2). Until it runs, the 18+ rule
   for Study Groups is only the old "press OK" box. Then do its Step 2 checks, including one
   test signup. The optional cleanup line removes any existing under-18 group memberships.
-- [ ] **3. Database → Webhooks:** check that the `auth.users` signup webhook fires on **INSERT
-  only**. (An UPDATE hook is ignored by the code now, but it shouldn't be there.)
+- [x] **3. Signup notification fires on INSERT only** — ✅ checked 2026-10-09. There is no dashboard "Webhook": the notices come from two custom triggers on `auth.users` — `on_auth_user_created` → `notify_new_signup()` on **INSERT** (correct), and `on_auth_user_confirmed` → `notify_email_confirmed()` on **UPDATE**, which is intended (the "email confirmed" notice) and whose function checks `email_confirmed_at`, so it does not fire on ordinary account updates such as sign-ins. (Plus `trg_copy_signup_age` on INSERT from the age screen.)
 
 You can run 1 and 2 in the same sitting, in that order.
 
