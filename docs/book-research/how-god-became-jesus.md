@@ -241,7 +241,8 @@ The five contributors reply that:
 - "Is the source better than our essay anywhere?" — yes, in four places: the adoptionist proof-texts; Paul's wider Christ-devotion; the second-century evidence (Ebionites, modalism-majority, Justin, material evidence); the Similitudes counter-example. See the STANDING OUTPUT above.
 
 ## Live-door status
-- No live content changed by this mining run. No `/sources` or `/briefs` entry created. The leads reach a live answer
+- ✅ **2026-10-09 (same day): HGBJ-1…10 ALL SHIPPED** — `jesus_as_god_nt.html` (+ new answer `was-jesus-adopted-as-gods-son`), `early_church_trinity.html`, `worship-of-jesus.html`, `paul-divinity.html`, `burial.html`, `hands.html`, and 5 verified `/sources` entries (Justin *1 Apol.* 6 deliberately held back). Three gate rounds, four lenses, read-only. ⭐ **The lesson of the round:** the first draft of HGBJ-1 answered a WEAKER Ehrman than the real one (he argues Acts 2:36 / 13:33 / Rom 1:3–4 preserve OLDER formulas, not that Luke or Paul meant adoption) — argument and neutrality caught it independently. The book's own framing had invited it: Gathercole answers the authors' meaning, which is not where Ehrman's case sits. **The cross-map below is now history for rows 1–10, not a to-do list.** Follow-ups: HGBJ-11 (mastery pages), HGBJ-12, HGBJ-13.
+- (Original, at mining time:) No live content changed by this mining run. No `/sources` or `/briefs` entry created. The leads reach a live answer
   only via the backlog rows below → a certified essay → (optionally) a gated brief, or via a verified PD primary in
   `/sources`.
 
