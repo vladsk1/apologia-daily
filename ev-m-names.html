@@ -335,7 +335,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <h4>Three lines. The whole weight rests on the two premises.</h4>
       <div class="syllogism">
         <div class="prem"><div class="tag">P1</div><p>The <b>frequency of personal names</b> in a population is local and time-bound, and is very hard for an outsider or a much later writer to reproduce by guesswork.</p></div>
-        <div class="prem"><div class="tag">P2</div><p>The names in the Gospels and Acts <b>match the statistical profile</b> of Jewish Palestine in the early first century — the same common names, the same ratios, the same disambiguation habits attested in independent sources.</p></div>
+        <div class="prem"><div class="tag">P2</div><p>The names in the Gospels and Acts <b>match the statistical profile</b> of Jewish Palestine in roughly 330 BCE–200 CE — in their specific names, their relative frequencies, and their disambiguation habits, attested in independent sources.</p></div>
         <div class="prem concl"><div class="tag">∴ C</div><p>Therefore, the Gospel traditions are best explained as rooted in <b>early Palestinian sources close to the events</b>, not composed by distant, later authors.</p></div>
       </div>
       <p class="formnote">It is an inference to the best explanation resting on a statistical fact. P1's first half is uncontroversial — onomastics genuinely varies by region and era; its second half is where Tuckett presses, since Palestinian naming knowledge travelled with people like Josephus. The action is on P2 (does the data really match?) and on how far the match licenses the conclusion.</p>
@@ -385,7 +385,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 
     <div class="card">
       <span class="kick">Defending Premise 2</span>
-      <h4>The names in the Gospels and Acts <b>match the statistical profile</b> of Jewish Palestine in the early first century &mdash; the same common names, the same ratios, the same disambiguation habits attested in independent sources</h4>
+      <h4>The names in the Gospels and Acts <b>match the statistical profile</b> of Jewish Palestine in roughly 330 BCE&ndash;200 CE &mdash; in their specific names, their relative frequencies, and their disambiguation habits, attested in independent sources</h4>
       <p class="precise">Precision check: the claim is a match to Jewish Palestine specifically, and it is a claim about <em>provenance</em> &mdash; of when and where these traditions were really formed. It does not prove that the named individuals are eyewitness authors, does not by itself establish that any reported event happened, and does not establish the miraculous. The real work &mdash; and the real debate &mdash; lies here: does the data genuinely match, and how tightly?</p>
 
       <div class="support">
@@ -433,7 +433,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>An educated writer with access to Jewish sources could have studied which names were common and salted his story accordingly to sound authentic.</p>
           <p class="lbl reply">Reply</p>
-          <p>That demands a feat no ancient author is known to have attempted: there were no name-frequency tables to consult, and matching the <em>relative ratios</em> — not just including common names but getting their proportions and the nicknaming patterns right across dozens of incidental characters — is statistical research no first- or second-century writer had the tools to perform. The far simpler explanation is that the names entered the tradition because that's who the people actually were.</p>
+          <p>That demands a feat no ancient author is known to have attempted: there were no name-frequency tables to consult, and matching the <em>relative ratios</em> — not just including common names but getting their proportions and the nicknaming patterns right across dozens of incidental characters — is statistical research no first- or second-century writer had the tools to perform.</p>
         </div>
       </details>
 
@@ -699,7 +699,7 @@ function setCheck(id, on){
 /* ---- Palestinian Names premises used to ground the AI scoring ---- */
 var ARG_PREMISES = [
   'The frequency of personal names in a population is local and time-bound, and is very hard for an outsider or a much later writer to reproduce by guesswork.',
-  'The names in the Gospels and Acts match the statistical profile of Jewish Palestine in the early first century — the same common names, ratios, and disambiguation habits.',
+  'The names in the Gospels and Acts match the statistical profile of Jewish Palestine in roughly 330 BCE–200 CE — in their specific names, their relative frequencies, and their disambiguation habits.',
   'Therefore, the Gospel traditions are best explained as rooted in early Palestinian sources close to the events, not composed by distant, later authors.'
 ];
 
@@ -794,7 +794,7 @@ function renderMockScore(txtRaw){
 /* ---- flashcards (generated from this argument) ---- */
 const cards = [
   {q:'State Premise 1 of the Palestinian Names argument.', a:'Personal-name frequencies are local and time-bound, and are very hard for an outsider or a much later writer to reproduce by guesswork.'},
-  {q:'State Premise 2.', a:'The names in the Gospels and Acts match the statistical profile of early-first-century Jewish Palestine — same common names, same ratios, same disambiguation habits.'},
+  {q:'State Premise 2.', a:'The names in the Gospels and Acts match the statistical profile of Jewish Palestine in roughly 330 BCE–200 CE — their specific names, their relative frequencies, and their disambiguation habits.'},
   {q:'Why isn’t "a later author just researched the names" a good objection?', a:'There were no ancient name-frequency tables. Matching the relative ratios and the nicknaming of over-common names is statistical research that was very hard for any ancient writer to do.'},
   {q:'What baseline are the Gospel names tested against — and how do they fare?', a:'Ilan’s Lexicon pools Josephus, ossuaries, Judean Desert texts and rabbinic sources; and Van de Weghe & Wilson (2024) found the Gospel names fit that baseline at least as well as Josephus’s own names do.'},
   {q:'What is the disambiguation clue, and why does it matter?', a:'So many shared a few names that people were distinguished by patronymics, places, or nicknames (Simon Bar-Jonah, Joseph of Arimathea). The Gospels apply this to exactly the over-common names — as real Palestinians did.'}

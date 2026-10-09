@@ -337,8 +337,8 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <span class="kick">The argument, formally</span>
       <h4>Three lines. The whole weight rests on the two premises.</h4>
       <div class="syllogism">
-        <div class="prem"><div class="tag">P1</div><p>A text whose <b>manuscript tradition</b> is early, abundant, and in close agreement can be <b>reconstructed</b> to what its authors originally wrote.</p></div>
-        <div class="prem"><div class="tag">P2</div><p>The <b>New Testament</b> has a manuscript tradition that is early, abundant, and in close agreement.</p></div>
+        <div class="prem"><div class="tag">P1</div><p>A text whose <b>manuscript tradition</b> is early, abundant, and in broad agreement can be <b>reconstructed</b> to what its authors originally wrote.</p></div>
+        <div class="prem"><div class="tag">P2</div><p>The <b>New Testament</b> has a manuscript tradition that is early, abundant, and in broad agreement.</p></div>
         <div class="prem concl"><div class="tag">∴ C</div><p>Therefore, the New Testament we read today <b>faithfully transmits</b> what its authors originally wrote.</p></div>
       </div>
       <p class="formnote">The logic is valid — if both premises are true, the conclusion follows. So objections come in two families: attacks on P1 (the criteria for reconstruction) or P2 (whether the NT actually meets them), and attacks on the further step from the conclusion to what it is taken to show. Knowing <em>which premise</em> an objection targets is half the battle.</p>
@@ -354,7 +354,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 
     <div class="card">
       <span class="kick">Defending Premise 1</span>
-      <h4>A text whose <em>manuscript tradition</em> is early, abundant, and in close agreement can be <em>reconstructed</em> to what its authors originally wrote.</h4>
+      <h4>A text whose <em>manuscript tradition</em> is early, abundant, and in broad agreement can be <em>reconstructed</em> to what its authors originally wrote.</h4>
       <p class="precise">Precision check: the question is one of <em>transmission, not truth</em>. Establishing that we possess the authors’ words tells us nothing, by itself, about whether those words are true. The Iliad is splendidly preserved, and no one thinks that settles the existence of Zeus. What good textual transmission does is more modest and more foundational: it removes one specific objection—“you’re reading a late legend, rewritten beyond recognition”—so that the real arguments about the contents can proceed on first-century testimony rather than be dismissed in advance.</p>
 
       <div class="support">
@@ -388,7 +388,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 
     <div class="card">
       <span class="kick">Defending Premise 2</span>
-      <h4>The <em>New Testament</em> has a manuscript tradition that is early, abundant, and in close agreement.</h4>
+      <h4>The <em>New Testament</em> has a manuscript tradition that is early, abundant, and in broad agreement.</h4>
       <p class="precise">Precision check: the raw total is not itself the argument; the weight lies in the early witnesses and their wide geographic spread, not in sheer number. This is, in the end, a convergence argument—abundance, antiquity, geographic spread, cross-checking, the P75–Vaticanus stability, and the patristic citations all pointing the same way—not a single knockdown proof. And none of it speaks to whether the contents are true.</p>
 
       <div class="support">
@@ -708,8 +708,8 @@ function setCheck(id, on){
 /* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
 /* ---- Manuscript Reliability premises used to ground the AI scoring ---- */
 var ARG_PREMISES = [
-  'A text whose manuscript tradition is early, abundant, and in close agreement can be reconstructed to what its authors originally wrote.',
-  'The New Testament has a manuscript tradition that is early, abundant, and in close agreement.',
+  'A text whose manuscript tradition is early, abundant, and in broad agreement can be reconstructed to what its authors originally wrote.',
+  'The New Testament has a manuscript tradition that is early, abundant, and in broad agreement.',
   'Therefore, the New Testament we read today faithfully transmits what its authors originally wrote.'
 ];
 
