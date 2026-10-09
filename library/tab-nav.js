@@ -35,7 +35,7 @@
   }[LANG];
 
   var HEAD_SEL = '.apl, .obt, .prob, .psl';
-  var side, lastSig = '';
+  var side, lastSig = '', lastActive = null;
 
   function $(s, r) { return (r || document).querySelector(s); }
   function $$(s, r) { return [].slice.call((r || document).querySelectorAll(s)); }
@@ -141,6 +141,12 @@
     // (a) sidebar
     side.innerHTML = '<div class="tn-h">' + T.tab + '</div>';
     side.appendChild(buildList());
+    // Bring the open argument's entry into the sidebar's own view (the list
+    // can be longer than the screen, and argument 17 would otherwise sit far
+    // below where the sidebar is scrolled to).
+    var openLi = $('li.tn-card.is-open', side);
+    if (openLi) requestAnimationFrame(function () { side.scrollTop = Math.max(0, openLi.offsetTop - 36); });
+    lastActive = null;
 
     // Phones: the Sections dropdown belongs to ONE argument; if a different
     // argument opens (or none), close it so it never shows the wrong list.
@@ -166,6 +172,16 @@
       if (hs[i].getBoundingClientRect().top <= mark) active = hs[i].id; else break;
     }
     $$('.tn-sub a').forEach(function (a) { a.classList.toggle('is-active', a.dataset.id === active); });
+    // Keep the highlighted section visible inside the sidebar as the reader scrolls.
+    if (active && active !== lastActive && side) {
+      lastActive = active;
+      var al = $('.tn-sub a[data-id="' + active + '"]', side);
+      if (al) {
+        var t = al.offsetTop, b = t + al.offsetHeight;
+        if (t < side.scrollTop + 30 || b > side.scrollTop + side.clientHeight - 30)
+          side.scrollTop = Math.max(0, t - side.clientHeight / 3);
+      }
+    }
   }
 
   // Phones: a "Sections" button in the hub's pinned open-card bar (.ocb) that
