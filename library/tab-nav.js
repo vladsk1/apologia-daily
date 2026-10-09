@@ -10,9 +10,10 @@
 
    Layout: wide screens only (>=1280px) — a fixed sidebar in the left margin;
    the hub's centred column is nudged right so the two never overlap, and the
-   sidebar shortens so it never runs past the end of the tab content. Phones
-   get nothing (owner decision 2026-10-09: an inline panel and an open-card-bar
-   dropdown were tried and did not work well on a phone).
+   sidebar shortens so it never runs past the end of the tab content. Phones:
+   a "Sections" button in the pinned open-card bar drops down the sections of
+   the argument currently open (owner decision 2026-10-09: per argument, not the
+   whole tab; it closes when a different argument opens).
 
    Hooks: none required. It watches the hub for tab switches, fragment loads and
    card open/close (MutationObserver), and uses the hub's own tog() and
@@ -28,9 +29,9 @@
     } catch (e) { return 'en'; }
   })();
   var T = {
-    en: { tab: 'On this tab', mastery: 'Master this argument', essay: 'Read the full deep-dive essay', tutor: 'Ask the AI Tutor about this argument' },
-    mk: { tab: 'Во овој дел', mastery: 'Совладај го аргументот', essay: 'Прочитај го целиот есеј', tutor: 'Прашај го AI тутор за овој аргумент' },
-    es: { tab: 'En esta pestaña', mastery: 'Domina este argumento', essay: 'Lee el ensayo completo', tutor: 'Pregunta al tutor de IA sobre este argumento' }
+    en: { tab: 'On this tab', sec: 'Sections', mastery: 'Master this argument', essay: 'Read the full deep-dive essay', tutor: 'Ask the AI Tutor about this argument' },
+    mk: { tab: 'Во овој дел', sec: 'Делови', mastery: 'Совладај го аргументот', essay: 'Прочитај го целиот есеј', tutor: 'Прашај го AI тутор за овој аргумент' },
+    es: { tab: 'En esta pestaña', sec: 'Secciones', mastery: 'Domina este argumento', essay: 'Lee el ensayo completo', tutor: 'Pregunta al tutor de IA sobre este argumento' }
   }[LANG];
 
   var HEAD_SEL = '.apl, .obt, .prob, .psl';
@@ -94,6 +95,25 @@
     setTimeout(function () { scrollToEl(h); }, 30);
   }
 
+  // The open argument's own sections, ending with its Master / essay / tutor blocks.
+  function buildSub(c) {
+    var sub = document.createElement('ul'); sub.className = 'tn-sub';
+    heads(c).forEach(function (h, i) {
+      if (!h.id) h.id = c.id + '-s' + i;
+      var sl = document.createElement('li');
+      if (h.classList.contains('psl')) sl.className = 'tn-psl';
+      var sa = document.createElement('a'); sa.href = '#' + h.id; sa.dataset.id = h.id;
+      sa.textContent = h.__tnLabel || txt(h);
+      sa.addEventListener('click', function (e) {
+        e.preventDefault(); closeDrop(); scrollToEl(h);
+        var inp = h.classList.contains('inline-tutor') && $('input', h);
+        if (inp) setTimeout(function () { try { inp.focus({ preventScroll: true }); } catch (x) { inp.focus(); } }, 450);
+      });
+      sl.appendChild(sa); sub.appendChild(sl);
+    });
+    return sub;
+  }
+
   // Build the list markup for the current tab.
   function buildList(withAllLabel) {
     var sec = curSec(), ul = document.createElement('ul'), open = openCard(sec);
@@ -105,23 +125,7 @@
       a.lastChild.textContent = txt($('.ct', c));
       a.addEventListener('click', function (e) { e.preventDefault(); goCard(c); });
       li.appendChild(a);
-      if (c === open) {
-        var sub = document.createElement('ul'); sub.className = 'tn-sub';
-        heads(c).forEach(function (h, i) {
-          if (!h.id) h.id = c.id + '-s' + i;
-          var sl = document.createElement('li');
-          if (h.classList.contains('psl')) sl.className = 'tn-psl';
-          var sa = document.createElement('a'); sa.href = '#' + h.id; sa.dataset.id = h.id;
-          sa.textContent = h.__tnLabel || txt(h);
-          sa.addEventListener('click', function (e) {
-            e.preventDefault(); scrollToEl(h);
-            var inp = h.classList.contains('inline-tutor') && $('input', h);
-            if (inp) setTimeout(function () { try { inp.focus({ preventScroll: true }); } catch (x) { inp.focus(); } }, 450);
-          });
-          sl.appendChild(sa); sub.appendChild(sl);
-        });
-        if (sub.children.length) li.appendChild(sub);
-      }
+      if (c === open) { var sub = buildSub(c); if (sub.children.length) li.appendChild(sub); }
       ul.appendChild(li);
     });
     return ul;
@@ -138,8 +142,10 @@
     side.innerHTML = '<div class="tn-h">' + T.tab + '</div>';
     side.appendChild(buildList());
 
-    // Phones get no tab menu (owner decision 2026-10-09: the inline panel and
-    // the open-card-bar dropdown did not work well on a phone).
+    // Phones: the Sections dropdown belongs to ONE argument; if a different
+    // argument opens (or none), close it so it never shows the wrong list.
+    if (drop.__card && drop.__card !== open) closeDrop();
+    attachBarButton();
     spy();
   }
 
@@ -161,6 +167,35 @@
     $$('.tn-sub a').forEach(function (a) { a.classList.toggle('is-active', a.dataset.id === active); });
   }
 
+  // Phones: a "Sections" button in the hub's pinned open-card bar (.ocb) that
+  // drops down the CURRENT argument's sections only — rebuilt on every open, so
+  // it always matches the argument the reader is in.
+  var drop, dropBtn;
+  function attachBarButton() {
+    var bar = $('.ocb'); if (!bar || $('.tn-ocb', bar)) return;
+    dropBtn = document.createElement('button');
+    dropBtn.type = 'button'; dropBtn.className = 'tn-ocb'; dropBtn.setAttribute('aria-expanded', 'false');
+    dropBtn.innerHTML = '&#9776; ' + T.sec;
+    dropBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (drop.classList.contains('tn-on')) { closeDrop(); return; }
+      var open = openCard(curSec()); if (!open) return;
+      drop.innerHTML = '';
+      var h = document.createElement('div'); h.className = 'tn-h';
+      h.textContent = (txt($('.cnum', open)) + ' ' + txt($('.ct', open))).trim();
+      drop.appendChild(h); drop.appendChild(buildSub(open));
+      drop.__card = open;
+      drop.style.top = bar.getBoundingClientRect().bottom + 'px';
+      drop.classList.add('tn-on'); dropBtn.setAttribute('aria-expanded', 'true'); spy();
+    });
+    var x = $('.ocb-x', bar); bar.insertBefore(dropBtn, x || null);
+  }
+  function closeDrop() {
+    if (!drop || !drop.classList.contains('tn-on')) return;
+    drop.classList.remove('tn-on'); drop.__card = null;
+    if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
+  }
+
   function css() {
     var s = document.createElement('style'); s.id = 'tab-nav-css';
     s.textContent = [
@@ -177,7 +212,16 @@
       '.tn-h{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8a6d1f;margin:0 0 .6em .7em}',
       '.tn-side{position:fixed;top:140px;left:24px;width:220px;max-height:calc(100vh - 170px);overflow:auto;z-index:20;display:none;padding-right:6px}',
       '.tn-side a:focus-visible{outline:2px solid #c8a951;outline-offset:2px}',
-      '@media (min-width:1280px){.tn-side{display:block}',
+      ".tn-drop{font-family:'DM Sans',sans-serif;position:fixed;left:0;right:0;z-index:2147483000;display:none;background:#fff;border-bottom:1px solid #e8e2d8;box-shadow:0 10px 24px rgba(5,13,26,.25);max-height:65vh;overflow:auto;padding:12px 16px}",
+      '.tn-drop.tn-on{display:block}',
+      '.tn-drop ul{list-style:none;margin:0;padding:0}',
+      '.tn-drop a{display:block;text-decoration:none;color:#5a6b82;font-size:.86rem;line-height:1.4;padding:.45em 0 .45em .8em;border-left:2px solid transparent}',
+      '.tn-drop li.tn-psl a{padding-left:1.6em;font-size:.82rem}',
+      '.tn-drop a.is-active{color:#0a1628;font-weight:600;border-left-color:#c8a951}',
+      '.tn-drop .tn-h{font-family:var(--fd,serif);font-size:.95rem;letter-spacing:0;text-transform:none;color:#0a1628;margin:0 0 .5em .8em}',
+      '.tn-ocb{flex:0 0 auto;font-family:var(--ui,sans-serif);font-size:.76rem;font-weight:500;cursor:pointer;color:#fff;background:transparent;border:1px solid rgba(200,169,81,.6);border-radius:3px;padding:6px 12px}',
+      '.tn-ocb:focus-visible,.tn-drop a:focus-visible{outline:2px solid #c8a951;outline-offset:2px}',
+      '@media (min-width:1280px){.tn-side{display:block}.tn-ocb{display:none}',
       '  .main{margin-left:max(270px, calc((100vw - 1100px) / 2)) !important;max-width:min(1100px, calc(100vw - 300px)) !important}}'
     ].join('\n');
     document.head.appendChild(s);
@@ -188,6 +232,12 @@
     css();
     side = document.createElement('div'); side.className = 'tn-side'; side.setAttribute('role', 'navigation'); side.setAttribute('aria-label', T.tab);
     document.body.appendChild(side);
+    drop = document.createElement('div'); drop.className = 'tn-drop';
+    drop.setAttribute('role', 'navigation'); drop.setAttribute('aria-label', T.sec);
+    document.body.appendChild(drop);
+    document.addEventListener('click', function (e) {
+      if (drop.contains(e.target) || (dropBtn && dropBtn.contains(e.target))) return; closeDrop();
+    });
 
     var pending = false;
     function schedule() {
@@ -200,7 +250,7 @@
         if (muts[i].type === 'childList' || (t.classList && (t.classList.contains('sec') || t.classList.contains('card')))) { schedule(); return; }
       }
     }).observe($('.main'), { subtree: true, childList: true, attributes: true, attributeFilter: ['class'] });
-    addEventListener('scroll', spy, { passive: true });
+    addEventListener('scroll', function () { closeDrop(); attachBarButton(); spy(); }, { passive: true });
     addEventListener('resize', schedule);
     render();
   }
