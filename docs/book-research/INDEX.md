@@ -78,7 +78,7 @@ explanation"), and rests the empty tomb on **Matthew's guards** (a minority posi
 ⚠ **Denominational tripwire:** his anti-hallucination case debunks **Marian apparitions** — use the general
 point only, never in our voice. Resurrection tier → **dual-consensus** for any live change.
 
-**JITC** = `jesus-is-the-christ.md` (Michael F. Bird, *Jesus is the Christ: The Messianic Testimony of the Gospels*, 2012 — owned Kindle copy, read in full 2026-10-09; ⚠ copyright page not yet captured; ⚠ do NOT port its Matt 16:18 "rock" reading — papacy). The site's missing **messiahship** source: Jesus' own messianic claim, why "Christ" stayed a title, and why a resurrection alone would not make anyone Messiah. ✅ Ours is better on Son of Man / Daniel 7 and *aposynagōgos*; do not import those.
+**JITC** = `jesus-is-the-christ.md` (Michael F. Bird, *Jesus is the Christ: The Messianic Testimony of the Gospels*, 2012 — owned Kindle copy, Paternoster 2012, ISBN 978-1-78078-036-8; read in full 2026-10-09; ⚠ do NOT port its Matt 16:18 "rock" reading — papacy). The site's missing **messiahship** source: Jesus' own messianic claim, why "Christ" stayed a title, and why a resurrection alone would not make anyone Messiah. ✅ Ours is better on Son of Man / Daniel 7 and *aposynagōgos*; do not import those.
 
 **JGI** = `jesus-and-the-god-of-israel.md` (Richard Bauckham, *Jesus and the God of Israel: "God Crucified" and
 Other Essays on the New Testament's Christology of Divine Identity*, **Paternoster/Eerdmans 2008** — ⚠ owner's copy

@@ -3,9 +3,12 @@
 > **Michael F. Bird, *Jesus is the Christ: The Messianic Testimony of the Gospels*.** Abbreviation here: **`JITC`**.
 > Read from the **owner's own Kindle copy** in Kindle-for-PC (Paternoster imprint; the closing page of the
 > Kindle file is a Paternoster / Authentic Media, Milton Keynes page). Preface dated **Brisbane, May 2011**.
-> ⚠ **EDITION / PAGES:** the copyright page was **not captured** in this session, so imprint, year and ISBN are
-> **unverified**. Page numbers below are the **Kindle "page" numbers** shown by the reader (206 pages, 4,148
-> locations) — treat every page/locus as **edition-specific and unverified** until checked against a print copy.
+> ✅ **EDITION — VERIFIED from the copyright page of the owner's Kindle copy (2026-10-09):** © 2012 Michael F. Bird;
+> this edition first published **2012 by Paternoster**, an imprint of Authentic Media Limited, Milton Keynes;
+> **ISBN 978-1-78078-036-8**. **Scripture default: TNIV** (2001/2005) unless Bird marks his own translation, so
+> any wording quoted *via* Bird must be re-checked against our house version (ESV) before use.
+> ⚠ **PAGES:** the numbers below are the **Kindle "page" numbers** shown by the reader (206 pages, 4,148
+> locations), not print pages. Treat every page/locus as **unverified** until checked against a print copy.
 > The US co-edition is IVP Academic (Downers Grove). Bird's own note: chs. 1 and 3 first appeared, revised, in
 > *Reformed Theological Review*; the book follows on from his *Are You the One Who Is to Come? The Historical
 > Jesus and the Messianic Question* (Baker Academic, 2009), to which it repeatedly defers for the detailed
@@ -47,7 +50,7 @@
 - ✅ **Ch. 2 Matthew, Kindle pp. 63–77 — read 2026-10-09 (second pass).** The first pass jumped ~2 screens between
   capture batches; the owner reset the reader to p. 61 and the stretch was re-captured (screens m-0001…m-0004,
   continuity checked column to column through to the chapter conclusion). **The whole book's body is now read.**
-- ⬜ Copyright page not captured (see edition note).
+- ✅ Copyright page captured (see edition note).
 
 ## Thesis / spine (our words)
 Messiahship is the **root of all early christology**, not a minor or late title. Every other Gospel title
