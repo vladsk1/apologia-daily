@@ -169,8 +169,10 @@
         c.id = c.id || ('mu-' + p[0] + '-' + n);
         c.setAttribute('data-mu-title', txt($('h4', c)) || txt(kick));
         var h4 = $(':scope > h4', c);
-        // Long premise sentences read as a wall of display type on phones; set them smaller.
-        if (h4 && txt(h4).length > 110) h4.classList.add('mu-longh');
+        // Premise headings are full sentences: set every "Defending Premise" heading
+        // (and any other long card heading) at body size, so they read as text, not
+        // as a wall of display type, and all premise cards match.
+        if (h4 && (/^\s*Defending/i.test(txt(kick)) || txt(h4).length > 110)) h4.classList.add('mu-longh');
         var row = el('div', 'mu-kickrow');
         kick.parentNode.insertBefore(row, kick);
         row.appendChild(el('span', 'mu-step', (pi + 1) + '.' + n));
