@@ -41,7 +41,7 @@ Redeploy once after adding these (Deployments → ⋯ → Redeploy).
 
 ## When you have PostHog access (eu.posthog.com)
 
-- [ ] **5. Settings → Session replay:** confirm it is off. (The code forces it off anyway.)
+- [x] **5. Settings → Session replay:** ✅ 2026-10-09 — it was ON in PostHog ("Record user sessions" + "Capture console logs"); owner switched recording OFF (console-log capture is then locked, as it depends on recording). The site's code had already forced replay off, so nothing was recorded. (The code forces it off anyway.)
 - [ ] **6. Expect fewer PostHog events from now on.** PostHog only runs for visitors who click
   "Allow analytics" (audit item 4). Vercel Analytics still counts every page view. Not a bug.
 - [ ] **7. Optional:** delete old events whose URL contains `?q=` (before 2026-10-08 a typed
