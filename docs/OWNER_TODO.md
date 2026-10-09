@@ -23,7 +23,7 @@ information only you have. Tick each one off (change `[ ]` to `[x]` and add the 
 - ⬜ 7 — Optional: delete old PostHog events whose URL contains `q=`.
 - ⬜ 0 — Quick live-site check on a computer (homepage, sign-in, an essay, a video) — not yet confirmed.
 - ⬜ 11 / 12 — Before Pro goes on sale: Stripe account + A$8/month product; free-trial decision.
-- ⬜ (from today's content work) — To start the Cavin reply: allow `philarchive.org` + `webapp.uibk.ac.at` in the cloud environment's network settings, or upload his 2019 paper.
+- 💤 **Cavin reply — DEFERRED by the owner (2026-10-09), pick up any time.** Full write-up: `docs/content-backlog.md` → row **MPD-8**, item **(d)** (what's thin in `library/minimalfacts.html`, what Cavin & Colombetti argue, options 1–3, cost). To start it: either allow `philarchive.org` + `webapp.uibk.ac.at` in the cloud environment's network settings (session title bar → environment menu → Edit → Network access), or upload their paper — "Assessing the Resurrection Hypothesis: Problems with Craig's Inference to the Best Explanation", *European Journal for Philosophy of Religion* 11.2 (2019): 205–228. Then say "do the Cavin reply, option 2" (narrow the wording) or "option 3" (full reply).
 
 ## First, a 2-minute check of the live site
 
