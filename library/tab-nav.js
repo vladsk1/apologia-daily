@@ -28,9 +28,9 @@
     } catch (e) { return 'en'; }
   })();
   var T = {
-    en: { tab: 'On this tab', essay: 'Read the deep-dive essay', mastery: 'Mastery track' },
-    mk: { tab: 'Во овој дел', essay: 'Прочитај го есејот', mastery: 'Мајсторска патека' },
-    es: { tab: 'En esta pestaña', essay: 'Leer el ensayo completo', mastery: 'Ruta de dominio' }
+    en: { tab: 'On this tab', mastery: 'Master this argument', essay: 'Read the full deep-dive essay', tutor: 'Ask the AI Tutor about this argument' },
+    mk: { tab: 'Во овој дел', mastery: 'Совладај го аргументот', essay: 'Прочитај го целиот есеј', tutor: 'Прашај го AI тутор за овој аргумент' },
+    es: { tab: 'En esta pestaña', mastery: 'Domina este argumento', essay: 'Lee el ensayo completo', tutor: 'Pregunta al tutor de IA sobre este argumento' }
   }[LANG];
 
   var HEAD_SEL = '.apl, .obt, .prob, .psl';
@@ -52,7 +52,21 @@
       if (h.closest('details:not([open])')) return false;          // skip collapsed drill-downs
       if (h.offsetParent === null) return false;                    // skip hidden (paywalled etc.)
       return txt(h).length > 1;
+    }).concat(tail(card));
+  }
+
+  // The three blocks every card closes with — kept on this page: the sidebar
+  // scrolls to them rather than leaving for the mastery page or the essay.
+  function tail(card) {
+    var out = [];
+    var mas = $('a[href^="ev-m-"], a[href^="/ev-m-"]', card);
+    var ess = null;
+    if (mas) $$('a[href^="/library/"]', mas.parentNode).forEach(function (x) { if (x.parentNode === mas.parentNode) ess = x; });
+    var tut = $('.inline-tutor', card);
+    [[mas, T.mastery], [ess, T.essay], [tut, T.tutor]].forEach(function (t) {
+      if (t[0] && t[0].offsetParent !== null) { t[0].__tnLabel = t[1]; out.push(t[0]); }
     });
+    return out;
   }
 
   // The essay a card points to most often (cards also link sibling essays).
@@ -93,24 +107,17 @@
       li.appendChild(a);
       if (c === open) {
         var sub = document.createElement('ul'); sub.className = 'tn-sub';
-        // The card's own links to its deep-dive essay and its mastery page.
-        var go = [];
-        var ess = essayHref(c); if (ess) go.push([ess, T.essay]);
-        var mas = $('a[href^="ev-m-"], a[href^="/ev-m-"]', c); if (mas) go.push([mas.getAttribute('href'), T.mastery]);
-        if (go.length) {
-          var gl = document.createElement('li'); gl.className = 'tn-go';
-          go.forEach(function (g) {
-            var ga = document.createElement('a'); ga.href = g[0]; ga.textContent = g[1]; gl.appendChild(ga);
-          });
-          sub.appendChild(gl);
-        }
         heads(c).forEach(function (h, i) {
           if (!h.id) h.id = c.id + '-s' + i;
           var sl = document.createElement('li');
           if (h.classList.contains('psl')) sl.className = 'tn-psl';
           var sa = document.createElement('a'); sa.href = '#' + h.id; sa.dataset.id = h.id;
-          sa.textContent = txt(h);
-          sa.addEventListener('click', function (e) { e.preventDefault(); scrollToEl(h); });
+          sa.textContent = h.__tnLabel || txt(h);
+          sa.addEventListener('click', function (e) {
+            e.preventDefault(); scrollToEl(h);
+            var inp = h.classList.contains('inline-tutor') && $('input', h);
+            if (inp) setTimeout(function () { try { inp.focus({ preventScroll: true }); } catch (x) { inp.focus(); } }, 450);
+          });
           sl.appendChild(sa); sub.appendChild(sl);
         });
         if (sub.children.length) li.appendChild(sub);
@@ -166,9 +173,6 @@
       '.tn-sub{margin:.1em 0 .5em !important}',
       '.tn-sub a{padding-left:2.3em !important;font-size:.76rem !important;color:#7a8ba0 !important}',
       '.tn-sub li.tn-psl a{padding-left:3em !important}',
-      '.tn-go{display:flex;flex-direction:column;gap:4px;margin:.3em 0 .5em 2.3em}',
-      '.tn-go a{padding:.45em .7em !important;border:1px solid #e3d6ad !important;border-radius:6px;background:#fbf8f0;color:#7a5c12 !important;font-weight:600;font-size:.76rem !important}',
-      '.tn-go a:hover{background:#f4ecd4}',
       '.tn-sub a.is-active{color:#0a1628 !important;font-weight:600;border-left-color:#c8a951}',
       '.tn-h{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8a6d1f;margin:0 0 .6em .7em}',
       '.tn-side{position:fixed;top:140px;left:24px;width:220px;max-height:calc(100vh - 170px);overflow:auto;z-index:20;display:none;padding-right:6px}',
