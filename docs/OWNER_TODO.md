@@ -17,7 +17,7 @@ information only you have. Tick each one off (change `[ ]` to `[x]` and add the 
   Run Step 1 first and keep its output, then Step 2, then the Step 3 checks. Step 4 (clear old
   Explain It Back text) is optional but recommended. Until this runs, `push_subscriptions`,
   `flashcards`, `study_plans_progress`, `explain_sessions` and `daily_arguments` are unverified.
-- [ ] **2. Run [`docs/AGE_SCREEN.md`](AGE_SCREEN.md)** (audit item 3). Until it runs, the 18+ rule
+- [~] **2. Run [`docs/AGE_SCREEN.md`](AGE_SCREEN.md)** (audit item 3). ✅ SQL run + table checks passed 2026-10-09; ⬜ still to do: the test signup + Study Groups test (its Step 2). Until it runs, the 18+ rule
   for Study Groups is only the old "press OK" box. Then do its Step 2 checks, including one
   test signup. The optional cleanup line removes any existing under-18 group memberships.
 - [ ] **3. Database → Webhooks:** check that the `auth.users` signup webhook fires on **INSERT
