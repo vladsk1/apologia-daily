@@ -32,7 +32,7 @@
     // Jesus and the Trinity
     jesus_claims: DEITY, jesus_as_god_nt: DEITY, titles: DEITY, hands: DEITY, phil2: DEITY,
     john11: DEITY, 'jesus-is-yahweh': DEITY, 'worship-of-jesus': DEITY, 'paul-divinity': DEITY,
-    'christ-before-bethlehem': DEITY, 'crucified-messiah': DEITY, virginbirth: DEITY,
+    'christ-before-bethlehem': DEITY, 'crucified-messiah': DEITY, 'jesus-messiah-claim': DEITY, virginbirth: DEITY,
     jesuschar: DEITY, humanity: DEITY, nt_trinity: DEITY, ot_trinity: DEITY, shema: DEITY,
     modalism: DEITY, relations: DEITY, philosophical_trinity: DEITY,
     'proto-trinitarian': DEITY, early_church_trinity: DEITY, eternal_generation: DEITY,
