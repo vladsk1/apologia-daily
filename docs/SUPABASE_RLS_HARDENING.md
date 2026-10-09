@@ -1,6 +1,6 @@
 # Supabase RLS hardening — 2026-10-08 security audit, items 1–4
 
-**Status: SQL WRITTEN, NOT YET RUN.** The owner runs this in the Supabase SQL editor
+**Status: RUN by the owner, reported 2026-10-09 ("checked and it worked"; owner-reported, not independently verified from a session). Whether the optional Step 4 cleanup was run was not stated.** The owner runs this in the Supabase SQL editor
 (Dashboard → SQL Editor → New query). Nothing here has been applied to the live database
 from a session — a session cannot reach it. Run **Step 1 first** and keep its output: it
 tells you what the live database actually looks like before anything changes.
