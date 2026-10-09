@@ -88,6 +88,10 @@ Tooling lives in `tools/reel/`:
    Both captions and the X card are gated content: run them through the same gate round as the
    reel spec, and port their wording from the certified essay/reel rather than authoring it.
    Present each caption in its own fenced block so it can be copied.
+   **OWNER RULE (2026-10-09) — DON'T COMMIT REELS.** Do not commit or push the reel spec,
+   X-card spec or screenshots to the repo; the owner keeps the delivered files. Write them
+   locally (the renderer needs them), gate them as usual, render, deliver — and stop there.
+   Do not rewrite older reels either.
 
 ## X / social share-cards — THE standard X-image style (use for EVERY X post image)
 When a thread or post needs an image, **always generate it with `tools/reel/gen_xcard.py`** — the
