@@ -166,6 +166,15 @@ const targets = [
   }),
 ];
 
+/* our-sources.html states the verified historic-passage count as a hand-typed
+   `var HISTORIC = N;`. It sat at 156 while /sources reached 164 (found 2026-10-09).
+   Manage it here so it moves with sources-index.json and CI catches drift. */
+{
+  const OS = path.join(ROOT, "our-sources.html");
+  const src = readFileSync(OS, "utf8");
+  targets.push({ file: OS, label: "our-sources.html", src, next: src.replace(/var HISTORIC = \d+;/, `var HISTORIC = ${c.sourcesVerified};`) });
+}
+
 const stale = targets.filter((t) => t.next !== t.src);
 
 if (process.argv.includes('--check')) {
