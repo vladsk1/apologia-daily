@@ -1598,6 +1598,34 @@
         "orthodoxy": "2026-08-24",
         "by": "apologia argument+orthodoxy+neutrality gates (session 2026-08-24). Ported from the certified paired deep-dive essay (library/<slug>.html) and its gated FAQ. All three lenses STAMPABLE: orthodoxy 6/6 CLEAN 0 heresy (good-not-true firewall present + sound on each; compassion 'God stooped' confirmed orthodox incarnation, leave-as-is); argument+neutrality both flagged ONE WEAK on how-did-christianity-take-over-rome (named two empire-wide persecutions, should be three) - corrected to 'Decius, Valerian, and Diocletian', a verbatim port of both essays and the CLEAN sibling persecution answer, so no new claim. Pastoral sign-off _pending_ site-wide."
       }
+    },
+    {
+      "slug": "did-jesus-claim-to-be-the-messiah",
+      "q": "Did Jesus claim to be the Messiah?",
+      "category": "Who Jesus Is",
+      "meta": "Yes — more in deed than in word. He answered John the Baptist with the signs Isaiah tied to the anointed one, chose the Twelve, entered Jerusalem on Zechariah's pattern, and died under the charge \"The King of the Jews.\"",
+      "reviewed": {
+        "argument": "2026-10-09",
+        "orthodoxy": "2026-10-09",
+        "by": "2026-10-09 NEW (BIRD-1 follow-on), ported from library/jesus-messiah-claim.html (Q1) and library/titles.html (Q2). Four lenses incl. citations (Sonnet 5.5) + neutrality; R1: Isaiah overattribution (Q1) and a title-vs-surname self-contradiction (Q2, neutrality BREAK) fixed; R2: Q2 deep-dive pointer corrected (gate wording verbatim). Leads with the answer. Human/pastoral sign-off owed."
+      },
+      "a": "Yes — Jesus presented himself as Israel's Messiah, more in deed than in word, and he died for it. He seldom used the title of himself, and he discouraged others from spreading it, likely because \"Messiah\" was a dangerous word under Rome. But when John the Baptist sent to ask, \"Are You the One who was to come?\", Jesus answered with a list — the blind receive sight, the lame walk, the dead are raised, and the good news is preached to the poor (Matthew 11:3–6; Luke 7:20–23) — echoing the signs Isaiah tied to the anointed one (Isaiah 35:5–6; 61:1). (The raising of the dead is not in Isaiah 35 or 61; it appears beside them in a pre-Christian text from Qumran, 4Q521.) He chose twelve men to judge Israel's twelve tribes, rode into Jerusalem on Zechariah's pattern, and acted with authority over the temple. On Mark's account, when the high priest asked, \"Are You the Christ?\", he answered, \"I am\" (Mark 14:61–62), though the historicity of that night hearing is disputed. And Rome crucified him under the charge \"The King of the Jews\" (Mark 15:26), its way of naming a royal pretender.\n\nNo one strand settles it, and each has critics; the case rests on how they converge. It shows that Jesus made the claim, not, by itself, that the claim was true — that turns on what happened after the cross. The full case, with the objections from Wrede's \"messianic secret\" to the idea that the church made him Messiah after Easter, is in the deep dive.",
+      "related": "ev-m-jesus-messiah-claim.html",
+      "relatedLabel": "Did Jesus Claim to Be the Messiah?"
+    },
+    {
+      "slug": "why-is-jesus-called-christ",
+      "q": "Why is Jesus called \"Christ\"?",
+      "category": "Who Jesus Is",
+      "meta": "\"Christ\" is the Greek form of \"Messiah\" — \"anointed one,\" God's anointed king. It began as a title, not a surname, and to say \"Jesus Christ\" is, at root, to say \"Jesus the Messiah.\"",
+      "reviewed": {
+        "argument": "2026-10-09",
+        "orthodoxy": "2026-10-09",
+        "by": "2026-10-09 NEW (BIRD-1 follow-on), ported from library/jesus-messiah-claim.html (Q1) and library/titles.html (Q2). Four lenses incl. citations (Sonnet 5.5) + neutrality; R1: Isaiah overattribution (Q1) and a title-vs-surname self-contradiction (Q2, neutrality BREAK) fixed; R2: Q2 deep-dive pointer corrected (gate wording verbatim). Leads with the answer. Human/pastoral sign-off owed."
+      },
+      "a": "Because \"Christ\" began as a title, not a surname: it is the Greek form (Christos) of the Hebrew \"Messiah,\" which means \"anointed one\" — God's anointed king. Jewish hope in Jesus' day was not one thing, but where a deliverer was hoped for, in its most familiar form he was a son of David who would restore Israel. To say \"Jesus Christ\" is, at root, to say \"Jesus the Messiah.\" The disciples were named after the title: \"The disciples were first called Christians at Antioch\" (Acts 11:26), and the Roman historian Tacitus, describing Nero's persecution after the fire of AD 64, explains the group's name by its founder, \"Christus.\" How often \"Christ\" works as a title rather than a name in Paul is debated; even those who judge it largely a proper name there, as Dahl and Hengel do, hold that it presupposes the claim that Jesus is the Messiah.\n\nOn its own, \"Messiah\" did not mean \"divine\": a first-century Jew could hope for an anointed king while holding the strictest monotheism. The New Testament fills the title fuller, and the church confesses the Messiah as the eternal Son, fully God and fully man. What the title came to mean, beside Jesus' other titles, is taken up in the deep dive; whether Jesus himself claimed it is answered in \"Did Jesus Claim to Be the Messiah?\"",
+      "related": "ev-m-titles.html",
+      "relatedLabel": "The Titles of Jesus"
     }
   ]
 }

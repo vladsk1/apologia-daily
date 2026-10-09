@@ -190,7 +190,7 @@ predates both); Stoner (ours retires the statistical argument; Bird does not tou
 - "Is the source better than our essay anywhere?" — yes, in three places: Jesus' own messianic claim (we have no case); the resurrection-does-not-make-a-Messiah step (sharper than `crucified-messiah.html`); the Synoptic "Lord" (`titles.html` rests on Paul only). See the STANDING OUTPUT section above.
 
 ## Live-door status
-- ✅ **2026-10-09 (same day): BIRD-2…8 and BIRD-10 SHIPPED** to `crucified-messiah.html`, `ev-m-crucified-messiah.html`, `titles.html`, `messianic-prophecy.html`, `jesus_as_god_nt.html` and `/sources` (Irenaeus *AH* 3.18.3, Justin *Dial.* 32, both `verified:true`), four-lens gated in two rounds. **BIRD-9 BLOCKED** (unverifiable commentary pages). **BIRD-1 (the new essay) is in progress.** The cross-map below is now history for those rows, not a to-do list.
+- ✅ **2026-10-09 (same day): BIRD-2…8 and BIRD-10 SHIPPED** to `crucified-messiah.html`, `ev-m-crucified-messiah.html`, `titles.html`, `messianic-prophecy.html`, `jesus_as_god_nt.html` and `/sources` (Irenaeus *AH* 3.18.3, Justin *Dial.* 32, both `verified:true`), four-lens gated in two rounds. **BIRD-9 BLOCKED** (unverifiable commentary pages). **BIRD-1 SHIPPED** the same day as a full stack (essay + Jesus-tab card + mastery page + two answers; Macedonian card pending native gate). The cross-map below is now history for those rows, not a to-do list.
 - (Original, at mining time:) No live content changed by this mining run. No `/sources` or `/briefs` entry created. The leads reach a live
   answer only via the backlog rows below → certified essay → (optionally) a gated brief, or via a verified PD
   primary in `/sources`.
