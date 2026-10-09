@@ -33,11 +33,22 @@ Tooling lives in `tools/reel/`:
      `voiceover` **and** the on-screen scenes must NOT steelman, restate, or give the
      opposing objection any airtime. State the case confidently from open to close. Do not
      add an "objection scene" or a "now, skeptics argue…" beat, even briefly.
-   - This does **not** license overstatement. Keep the honest *scope bounds* the
-     argument/orthodoxy gates require (e.g. "this corroborates — it doesn't by itself prove
-     X," or the deity-vs-metaphysics distinction) — those are **accuracy, not
-     steelmanning**, and stay. The banned thing is voicing the other side's counter-case;
-     the required thing is not claiming more than the evidence shows.
+   - **OWNER RULE (2026-10-09) — NO SCOPE DISCLAIMERS IN REELS.** Do not add "this doesn't
+     prove X", "it clears the ground", "corroborates, not proves", "not yet the full God of
+     Christianity" or similar hedge lines to a reel's voiceover, on-screen text or captions.
+     Reels state the case positively and close on a confident, ported verdict (e.g. the
+     essay's own "we say it with them…" line), never on a limitation. The full honest scope
+     lives in the linked essay, not the reel. (This supersedes the earlier "keep the scope
+     bounds" instruction for reels.)
+   - **This is still not a licence to overclaim — honour the bound by OMISSION, not by
+     disclaimer.** If a claim would need a "doesn't prove" hedge to be accurate, leave the
+     claim out rather than state it unhedged. Never write "this proves he rose", "scientists
+     agree the universe is designed", "everything has a cause", "virtually all scholars", etc.
+   - **DOCTRINAL FENCES ARE NOT DISCLAIMERS — they always stay.** Wording that keeps a line
+     orthodox (e.g. "the Son, truly God, died in his human nature — not the Father, not the
+     divine nature"; "in the form of God… therefore"; distinct persons on Trinity/deity
+     reels) is required, because a reel cannot host the site's ＊ orthonote box. Gate briefs
+     for reels must tell the lenses about this rule so they do not demand scope hedges.
    - No fabricated quotes/citations/stats. For a brand-new argument (not derived from an
      already-certified page), run it past the `apologia-orthodoxy` agent before delivering.
 
