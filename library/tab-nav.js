@@ -146,6 +146,7 @@
     // argument opens (or none), close it so it never shows the wrong list.
     if (drop.__card && drop.__card !== open) closeDrop();
     attachBarButton();
+    cardButton(open);
     spy();
   }
 
@@ -179,21 +180,44 @@
     dropBtn.addEventListener('click', function (e) {
       e.stopPropagation();
       if (drop.classList.contains('tn-on')) { closeDrop(); return; }
-      var open = openCard(curSec()); if (!open) return;
-      drop.innerHTML = '';
-      var h = document.createElement('div'); h.className = 'tn-h';
-      h.textContent = (txt($('.cnum', open)) + ' ' + txt($('.ct', open))).trim();
-      drop.appendChild(h); drop.appendChild(buildSub(open));
-      drop.__card = open;
-      drop.style.top = bar.getBoundingClientRect().bottom + 'px';
-      drop.classList.add('tn-on'); dropBtn.setAttribute('aria-expanded', 'true'); spy();
+      openDrop(openCard(curSec()), bar.getBoundingClientRect().bottom, dropBtn);
     });
     var x = $('.ocb-x', bar); bar.insertBefore(dropBtn, x || null);
   }
+  function openDrop(card, topPx, btn) {
+    if (!card) return;
+    drop.innerHTML = '';
+    var h = document.createElement('div'); h.className = 'tn-h';
+    h.textContent = (txt($('.cnum', card)) + ' ' + txt($('.ct', card))).trim();
+    drop.appendChild(h); drop.appendChild(buildSub(card));
+    drop.__card = card; drop.__btn = btn;
+    drop.style.top = Math.max(0, topPx) + 'px';
+    drop.classList.add('tn-on'); if (btn) btn.setAttribute('aria-expanded', 'true'); spy();
+  }
+
+  // The same button in the open argument's own title row, so the list is
+  // available the moment an argument opens (the pinned bar only appears once
+  // the title has scrolled away).
+  function cardButton(card) {
+    $$('.tn-cardbtn').forEach(function (b) { if (!card || !card.contains(b)) b.remove(); });
+    if (!card || $('.tn-cardbtn', card)) return;
+    var row = $('.ch .cm', card) || $('.ch', card); if (!row) return;
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'tn-cardbtn'; b.setAttribute('aria-expanded', 'false');
+    b.innerHTML = '&#9776; ' + T.sec;
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();                       // the header row toggles the card
+      if (drop.classList.contains('tn-on')) { closeDrop(); return; }
+      openDrop(card, b.getBoundingClientRect().bottom + 6, b);
+    });
+    b.addEventListener('keydown', function (e) { e.stopPropagation(); });
+    var chev = $('.chev', row); row.insertBefore(b, chev || null);
+  }
+
   function closeDrop() {
     if (!drop || !drop.classList.contains('tn-on')) return;
     drop.classList.remove('tn-on'); drop.__card = null;
-    if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
+    if (drop.__btn) drop.__btn.setAttribute('aria-expanded', 'false');
   }
 
   function css() {
@@ -221,7 +245,9 @@
       '.tn-drop .tn-h{font-family:var(--fd,serif);font-size:.95rem;letter-spacing:0;text-transform:none;color:#0a1628;margin:0 0 .5em .8em}',
       '.tn-ocb{flex:0 0 auto;font-family:var(--ui,sans-serif);font-size:.76rem;font-weight:500;cursor:pointer;color:#fff;background:transparent;border:1px solid rgba(200,169,81,.6);border-radius:3px;padding:6px 12px}',
       '.tn-ocb:focus-visible,.tn-drop a:focus-visible{outline:2px solid #c8a951;outline-offset:2px}',
-      '@media (min-width:1280px){.tn-side{display:block}.tn-ocb{display:none}',
+      '.tn-cardbtn{font-family:var(--ui,sans-serif);font-size:.74rem;font-weight:600;cursor:pointer;color:#0a1628;background:#fbf8f0;border:1px solid #e3d6ad;border-radius:4px;padding:5px 10px;margin-left:auto;margin-right:8px}',
+      '.tn-cardbtn:focus-visible{outline:2px solid #c8a951;outline-offset:2px}',
+      '@media (min-width:1280px){.tn-side{display:block}.tn-ocb,.tn-cardbtn{display:none}',
       '  .main{margin-left:max(270px, calc((100vw - 1100px) / 2)) !important;max-width:min(1100px, calc(100vw - 300px)) !important}}'
     ].join('\n');
     document.head.appendChild(s);
@@ -236,7 +262,7 @@
     drop.setAttribute('role', 'navigation'); drop.setAttribute('aria-label', T.sec);
     document.body.appendChild(drop);
     document.addEventListener('click', function (e) {
-      if (drop.contains(e.target) || (dropBtn && dropBtn.contains(e.target))) return; closeDrop();
+      if (drop.contains(e.target) || (drop.__btn && drop.__btn.contains(e.target))) return; closeDrop();
     });
 
     var pending = false;
