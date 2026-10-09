@@ -178,8 +178,20 @@ predates both); Stoner (ours retires the statistical argument; Bird does not tou
   disputed.
 - **Isa 7:14** — Bird reads it typologically; ours ("dual fulfilment, contested") already says this.
 
+## Five-surface cross-check — 2026-10-09 (run by the Bird mining session; surfaces swept by two read-only Explore agents on Sonnet 5.5, essays read in full by the note-writer)
+- [x] library/*.html essay(s)  — `crucified-messiah`, `messianic-prophecy`, `jesus_claims`, `titles`, `jewishness` read in full; every other essay grepped by agent. Verdicts: weaker in ours on resurrection≠messiahship (crucified-messiah), Christ-as-title and the Synoptic Kyrios (titles); missing: Jesus' own messianic claim (no essay); ours better on Son of Man / Daniel 7 and *aposynagōgos*.
+- [x] /answers/*               — no matching answer for "Did Jesus claim to be the Messiah?", "Why is Jesus called Christ?" or "Did the Jews expect a suffering Messiah?"; nearest are Isaiah 53, Daniel 70 weeks, Son of Man and "Did Jesus claim to be God?" (all consistent with this note).
+- [x] ev-s*.html tab card(s)   — no card on Jesus' messianic claim or the Christ title; `ev-s3` cards for jesus_claims / titles / crucified-messiah / messianic-prophecy carry none of the BIRD leads (Isa 61, 4Q521, Twelve, Wrede, Acts 11:26 all absent).
+- [x] ev-m*.html mastery page(s) — the Akiba/ben Kosiba point is already on `ev-m-jesus_claims.html` (its essays lack it → BIRD-5); the titulus appears only on `ev-m-jesuschar.html`; every other lead absent.
+- [x] /briefs                  — `titles-of-jesus-son-of-man-kyrios`, `messianic-prophecy`, `daniel-seventy-weeks`, `jesus-implicit-claims-synoptics` are adjacent; none frames the Messiah question.
+- [x] /sources                 — no Irenaeus *AH* 3.18 and no Justin *Dial.* 32 (only *Dial.* 8, which already covers the hidden-Messiah point) → BIRD-6.
+- Mandatory-fix findings (verdict 2 — errors / retired claims): none.
+- Backlog rows logged (verdicts 3/4): BIRD-1 … BIRD-10 in `docs/content-backlog.md`.
+- "Is the source better than our essay anywhere?" — yes, in three places: Jesus' own messianic claim (we have no case); the resurrection-does-not-make-a-Messiah step (sharper than `crucified-messiah.html`); the Synoptic "Lord" (`titles.html` rests on Paul only). See the STANDING OUTPUT section above.
+
 ## Live-door status
-- No live content changed by this mining run. No `/sources` or `/briefs` entry created. The leads reach a live
+- ✅ **2026-10-09 (same day): BIRD-2…8 and BIRD-10 SHIPPED** to `crucified-messiah.html`, `ev-m-crucified-messiah.html`, `titles.html`, `messianic-prophecy.html`, `jesus_as_god_nt.html` and `/sources` (Irenaeus *AH* 3.18.3, Justin *Dial.* 32, both `verified:true`), four-lens gated in two rounds. **BIRD-9 BLOCKED** (unverifiable commentary pages). **BIRD-1 (the new essay) is in progress.** The cross-map below is now history for those rows, not a to-do list.
+- (Original, at mining time:) No live content changed by this mining run. No `/sources` or `/briefs` entry created. The leads reach a live
   answer only via the backlog rows below → certified essay → (optionally) a gated brief, or via a verified PD
   primary in `/sources`.
 

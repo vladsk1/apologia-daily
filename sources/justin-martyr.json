@@ -110,5 +110,19 @@
     "tags": ["conversion", "faith and reason", "philosophy", "apologetics", "pre-nicene", "early church"],
     "note": "Justin's own account of coming to faith after an old man pointed him past the philosophers to the prophets — the philosopher who found the true philosophy. Adds the Dialogue with Trypho to the corpus (First Apology already present) and fills the Christian Life bucket with an early conversion witness, c. AD 155. Verified verbatim against source_url (apologia-citations, web, 2026-08-24; translator credit corrected to Dods & Reith, the ANF Dialogue translators).",
     "text": "But straightway a flame was kindled in my soul; and a love of the prophets, and of those men who are friends of Christ, possessed me; and while revolving his words in my mind, I found this philosophy alone to be safe and profitable."
+  },
+  {
+    "id": "justin-dialogue-32",
+    "author": "Justin Martyr",
+    "work": "Dialogue with Trypho",
+    "year": 155,
+    "section": "ch. 32",
+    "translation": "Dods & Reith (ANF vol. 1), public domain",
+    "pd": true,
+    "source_url": "https://www.newadvent.org/fathers/01283.htm",
+    "verified": true,
+    "tags": ["messiah", "crucified messiah", "scandal of the cross", "curse", "deuteronomy 21:23", "daniel 7", "jewish objection", "two advents"],
+    "note": "Trypho the Jew states the objection Christians faced from the start: the Scriptures speak of a glorious figure who receives the everlasting kingdom (Dan 7), but Jesus died the death the Law calls cursed (Deut 21:23). An early written statement of the 'crucified Messiah' objection as a second-century Christian author puts it in a Jewish interlocutor's mouth; how far Trypho represents actual Jewish opinion is debated. Bounded to Trypho's objection; Justin's reply (two advents) follows in the chapter and contains sharp polemic ('pierced by you') -- do not quote that line in the site's voice. Always attribute the quoted words to Trypho as an objection; never state them in the site's voice. Captured 2026-10-09 via fetch from New Advent; wording and translator attribution (Dods & Reith, ANF vol. 1) verified word-for-word by apologia-citations, 2026-10-09.",
+    "text": "These and such like Scriptures, sir, compel us to wait for Him who, as Son of man, receives from the Ancient of days the everlasting kingdom. But this so-called Christ of yours was dishonourable and inglorious, so much so that the last curse contained in the law of God fell on him, for he was crucified."
   }
 ]
