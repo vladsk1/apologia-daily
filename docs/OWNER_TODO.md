@@ -4,6 +4,27 @@ One running list from the 2026-10-08 legal/security audit (items 1–10). Code c
 already live; these are the steps that need your Supabase, Vercel or PostHog login, or
 information only you have. Tick each one off (change `[ ]` to `[x]` and add the date).
 
+## Status — 2026-10-09
+
+**Done**
+- ✅ 1 — Supabase security script (RLS hardening) run; owner-reported.
+- ✅ 2 (part) — Age-screen SQL run; checks passed (`user_age` protected, `authenticated SELECT` only).
+- ✅ 3 — Signup notifications checked: new-account trigger on INSERT; email-confirmed trigger on UPDATE, gated on `email_confirmed_at`.
+- ✅ 4 / 4c — `RATE_SALT` and `UNSUB_SECRET` added in Vercel; redeployed.
+- ✅ 4b (part) — `EMAIL_SENDER_NAME` added in Vercel.
+- ✅ 5 — PostHog session replay switched off (it had been on; the site's code was already blocking it).
+- ✅ 13 — DMCA agent: declined.
+
+**Still to do**
+- ⬜ 2 (rest) — Test signup with a throwaway email (check `age_band` = 18+, `still_in_profile` = false), then Study Groups on your own account: answer the age question, post a message.
+- ⬜ 8 — Delete that test account from Dashboard → Account (first live test of account deletion).
+- ⏳ 4b (rest) / 10 — `EMAIL_POSTAL_ADDRESS` once you have a PO box; redeploy after adding it.
+- ⏳ 9 — Send me the legal/entity name (+ ABN if any) if you want it in the privacy policy.
+- ⬜ 7 — Optional: delete old PostHog events whose URL contains `q=`.
+- ⬜ 0 — Quick live-site check on a computer (homepage, sign-in, an essay, a video) — not yet confirmed.
+- ⬜ 11 / 12 — Before Pro goes on sale: Stripe account + A$8/month product; free-trial decision.
+- ⬜ (from today's content work) — To start the Cavin reply: allow `philarchive.org` + `webapp.uibk.ac.at` in the cloud environment's network settings, or upload his 2019 paper.
+
 ## First, a 2-minute check of the live site
 
 - [ ] **0. Open apologiadaily.com on a computer** and check: the homepage loads, you can sign in
@@ -70,7 +91,7 @@ Me, once 11 is done (the new terms already promise these, so they must exist on 
 
 ## Optional
 
-- [ ] **13. Register a US DMCA agent** (audit item 9). Only matters for US "safe harbour" if a
+- [x] ~~**13. Register a US DMCA agent**~~ — **declined by the owner 2026-10-09.** The terms' own copyright-complaints process stands without it. (audit item 9). Only matters for US "safe harbour" if a
   user posts infringing material in a study group. About US$6 every 3 years at
   dmca.copyright.gov (needs the legal name, 9, and a postal address, 10). The terms already
   carry a copyright-complaints process (`terms.html#copyright-complaints`) that works without
