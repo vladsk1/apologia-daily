@@ -1,6 +1,6 @@
 # Active-Reading Layer — feature spec (draft for owner decision)
 
-**Status:** proposal / not built. **Author:** web session 2026-07-24. **Origin:** the "active reading
+**Status:** BUILT and live since 2026-07-24 (`library/active-reading.js`, included on 102 essays; curated takeaways for 86 essays in `active-reading-data.json`; status line corrected 2026-10-11 — it had still said "not built"). Open gap: the checkpoint is a self-tick ("I could recall it") with no typed recall, and results stay in `ad_read_<slug>` localStorage, never reaching the review queue or Coach. **Author:** web session 2026-07-24. **Origin:** the "active reading
 protocol" idea (spaced-repetition / active-recall / apply-within-48h) surfaced in the 2026-07-24
 learning-science assessment, cross-checked against what the site already has.
 
