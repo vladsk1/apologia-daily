@@ -22,11 +22,11 @@
 import { test, beforeEach, afterEach } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import path from 'node:path';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const LIB = (f) => path.join(ROOT, 'lib', f);
+const LIB = (f) => pathToFileURL(path.join(ROOT, 'lib', f)).href;
 
 // The service-role delete path now requires a UUID-shaped id.
 const UID = '11111111-2222-4333-8444-555555555555';

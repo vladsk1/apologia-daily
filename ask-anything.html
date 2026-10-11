@@ -384,6 +384,8 @@
     function incrementUsage() {
       const n = getUsageThisWeek() + 1;
       try { localStorage.setItem('ad_askcount', JSON.stringify({ d: adToday(), n: n })); } catch(e) {}
+      /* Lifetime counter for the dashboard / belt (was read but never written) */
+      try { var au = JSON.parse(localStorage.getItem('askUsage') || '{}'); au.count = (au.count || 0) + 1; localStorage.setItem('askUsage', JSON.stringify(au)); } catch(e) {}
     }
 
     function checkLimit() {

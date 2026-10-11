@@ -18,7 +18,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import path from 'node:path';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -113,7 +113,7 @@ test('app-facing API endpoints set CORS on the real response, not only OPTIONS',
   }
 
   // And the helper itself must set the header for non-OPTIONS methods.
-  const { applyCors } = await import(path.join(ROOT, 'lib', 'cors.js'));
+  const { applyCors } = await import(pathToFileURL(path.join(ROOT, 'lib', 'cors.js')).href);
   const headers = {};
   const res = { setHeader: (k, v) => { headers[k] = v; }, status() { return this; }, end() { return this; } };
   const isPreflight = applyCors({ method: 'POST', headers: { origin: 'https://localhost' } }, res);

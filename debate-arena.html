@@ -1508,6 +1508,8 @@
           /* Coach capture — record this debate as a category-level signal. The Coach
              keeps a private 0-100 mastery estimate, so each band maps to one value;
              the user never sees it as a score. */
+          /* Dashboard / belt counter (was read by dashboard.html + games.html but never written) */
+          try{ if(band){ var _dc = parseInt(localStorage.getItem('debateCount')||'0',10)||0; localStorage.setItem('debateCount', String(_dc+1)); } }catch(e){}
           try{
             if(band && window.Coach && state && state.opponent){
               var _opp2cat={atheist:"God's Existence",agnostic:"God's Existence",secularist:"God's Existence",muslim:"The Trinity"};

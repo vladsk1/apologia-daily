@@ -1103,11 +1103,12 @@
   async function updateLearningStatus(userId) {
     try {
       var dayNum = (function(){ var now=new Date(),start=new Date(now.getFullYear(),0,0),diff=now-start; return Math.floor(diff/86400000); })();
-      var stored = localStorage.getItem('daily_arg_complete');
+      /* Today's session writes ad_today_v1 = {day,date,...}; daily_arg_complete was never written anywhere. */
+      var stored = localStorage.getItem('ad_today_v1');
       var dailyEl = document.getElementById('daily-arg-status');
       if (stored) {
         var obj = JSON.parse(stored);
-        if (obj.day === dayNum && obj.userId === userId) {
+        if (obj && obj.date === new Date().toDateString()) {
           if (dailyEl) { dailyEl.textContent = '\u2713 Done today'; dailyEl.style.color = '#22c55e'; }
         }
       }
@@ -1495,11 +1496,11 @@
   async function updateLearningStatus(userId) {
     try {
       var dayNum = (function(){ var now=new Date(),start=new Date(now.getFullYear(),0,0),diff=now-start; return Math.floor(diff/86400000); })();
-      var stored = localStorage.getItem('daily_arg_complete');
+      var stored = localStorage.getItem('ad_today_v1');
       var dailyEl = document.getElementById('daily-arg-status');
       if (stored && dailyEl) {
         var obj = JSON.parse(stored);
-        if (obj.day === dayNum && obj.userId === userId) { dailyEl.textContent = '\u2713 Done today'; dailyEl.style.color = '#22c55e'; }
+        if (obj && obj.date === new Date().toDateString()) { dailyEl.textContent = '\u2713 Done today'; dailyEl.style.color = '#22c55e'; }
       }
     } catch(e) {}
     try {

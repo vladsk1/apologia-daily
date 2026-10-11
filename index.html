@@ -1820,7 +1820,8 @@
     if (s.d !== hcToday()){ return 0; }
     return s.n || 0;
   }
-  function hcAcctSave(n){ try { localStorage.setItem('ad_askcount', JSON.stringify({ d: hcToday(), n: n })); } catch(e){} }
+  function hcAcctSave(n){ try { localStorage.setItem('ad_askcount', JSON.stringify({ d: hcToday(), n: n })); } catch(e){}
+    try { var au = JSON.parse(localStorage.getItem('askUsage') || '{}'); au.count = (au.count || 0) + 1; localStorage.setItem('askUsage', JSON.stringify(au)); } catch(e){} }
   function hcShowLimit(loggedIn){
     try{ if(window.adTrack) adTrack('homechat_wall_hit',{loggedIn:!!loggedIn}); }catch(e){}
     var el = document.getElementById('hcLimit');

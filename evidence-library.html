@@ -1276,6 +1276,12 @@ window.addEventListener('load', function() {
       return;
     }
   } catch(e) {}
+  // Phones: never auto-play (the panel covers the hero on a 375px screen); pulse the button instead.
+  if (window.innerWidth < 700) {
+    var fb = document.getElementById('float-btn');
+    if (fb) { fb.classList.add('pulsing'); setTimeout(function() { fb.classList.remove('pulsing'); }, 4000); }
+    return;
+  }
   setTimeout(startDemo, 2000);
 });
 
