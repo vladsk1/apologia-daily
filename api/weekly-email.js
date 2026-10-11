@@ -197,6 +197,36 @@ export default async function handler(req, res) {
       }
     } catch(e) {}
 
+    // ── MASTERY / REVIEW STATE (user_progress snapshot synced by progress-sync.js) ──
+    // 2026-10-11 (Phase 1.10): the email used to count only the Supabase flashcard
+    // deck and ignored the mastery reviews, per-card schedule, levels and if-then plans
+    // that live in the user's synced localStorage snapshot.
+    let progStats = {};
+    try {
+      const prRes = await fetch(`${SB_URL}/rest/v1/user_progress?select=user_id,data`, {
+        headers: { 'apikey': authKey, 'Authorization': `Bearer ${authKey}` }
+      });
+      if (prRes.ok) {
+        const rows = await prRes.json();
+        rows.forEach(function(row) {
+          const d = (row && row.data) || {};
+          const rv = d.ad_reviews || {};
+          let due = 0, oldest = null;
+          Object.keys(rv).forEach(function(k) { const e = rv[k]; if (e && e.due && e.due <= today) { due++; if (!oldest || e.due < oldest.due) oldest = { due: e.due, t: String(e.t || k) }; } });
+          const cards = d.ad_cards || {};
+          let cdue = 0;
+          Object.keys(cards).forEach(function(a) { Object.keys(cards[a] || {}).forEach(function(i) { const c = cards[a][i]; if (c && c.q && c.due && c.due <= today) cdue++; }); });
+          const m = d.ad_mastery || {};
+          const lv = { 1: 0, 2: 0, 3: 0 };
+          Object.keys(m).forEach(function(k) { const l = (m[k] || {}).level || 0; if (l >= 1 && l <= 3) lv[l]++; });
+          const plans = [];
+          const it = d.ad_ifthen_arg || {};
+          Object.keys(it).forEach(function(k) { (it[k] || []).forEach(function(pl) { if (plans.length < 2 && pl && pl.i && pl.t) plans.push({ i: String(pl.i).slice(0, 120), t: String(pl.t).slice(0, 160) }); }); });
+          progStats[row.user_id] = { due: due, cdue: cdue, oldest: oldest, lv: lv, plans: plans };
+        });
+      }
+    } catch(e) {}
+
     // ── SEND EMAIL TO EACH USER ──
     for (const user of users) {
       if (!user.email || !user.email_confirmed_at) { results.skipped++; continue; }
@@ -209,10 +239,11 @@ export default async function handler(req, res) {
 
       const fc = flashcardStats[user.id] || null;
       const ex = explainStats[user.id] || null;
+      const pg = progStats[user.id] || null;
 
       try {
         const unsub = unsubSigningSecret() ? unsubUrl(user.id, unsubSigningSecret()) : 'https://apologiadaily.com';
-        await sendWeeklyEmail(RESEND_KEY, user.email, name, fc, ex, unsub);
+        await sendWeeklyEmail(RESEND_KEY, user.email, name, fc, ex, unsub, pg);
         results.sent++;
         // Small delay to avoid rate limits
         await new Promise(r => setTimeout(r, 100));
@@ -372,9 +403,9 @@ function buildNudgeHtml(name, g, activeCount, memberCount, unsub) {
 </body></html>`;
 }
 
-async function sendWeeklyEmail(resendKey, email, name, fc, ex, unsub) {
-  const html = buildEmailHtml(name, fc, ex, unsub);
-  const subject = buildSubject(fc, ex);
+async function sendWeeklyEmail(resendKey, email, name, fc, ex, unsub, pg) {
+  const html = buildEmailHtml(name, fc, ex, unsub, pg);
+  const subject = buildSubject(fc, ex, pg);
 
   const response = await fetch('https://api.resend.com/emails', {
     method: 'POST',
@@ -399,13 +430,38 @@ async function sendWeeklyEmail(resendKey, email, name, fc, ex, unsub) {
   return response.json();
 }
 
-function buildSubject(fc, ex) {
+function buildSubject(fc, ex, pg) {
+  const pdue = pg ? (pg.due + pg.cdue) : 0;
+  if (pdue > 0) return `${pdue} review${pdue !== 1 ? 's' : ''} due${pg.oldest ? ' — oldest: ' + pg.oldest.t : ''}`;
   if (fc && fc.due > 0) return `${fc.due} flashcard${fc.due !== 1 ? 's' : ''} due for review this week`;
   if (ex && ex.sessions > 0) return `Your apologetics practice this week`;
   return `Your weekly apologetics update`;
 }
 
-function buildEmailHtml(name, fc, ex, unsub) {
+function escHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+
+function buildEmailHtml(name, fc, ex, unsub, pg) {
+  // Your arguments: levels, what is due, your own if-then plans (all from the synced progress snapshot)
+  let progressSection = '';
+  if (pg && (pg.due + pg.cdue > 0 || pg.lv[1] + pg.lv[2] + pg.lv[3] > 0)) {
+    const pdue = pg.due + pg.cdue;
+    const levels = [pg.lv[3] ? pg.lv[3] + ' Gold' : '', pg.lv[2] ? pg.lv[2] + ' Silver' : '', pg.lv[1] ? pg.lv[1] + ' Bronze' : ''].filter(Boolean).join(' &middot; ');
+    const dueText = pdue > 0
+      ? `<span style="color:#c8a951;font-weight:600;">${pdue} review${pdue !== 1 ? 's' : ''} due</span>${pg.oldest ? ` &nbsp;&middot;&nbsp; oldest: ${escHtml(pg.oldest.t)} (since ${escHtml(pg.oldest.due)})` : ''}`
+      : `<span style="color:#22c55e;font-weight:600;">Nothing due — your arguments are resting</span>`;
+    const plans = pg.plans.length
+      ? `<div style="font-size:0.8rem;color:rgba(255,255,255,0.6);margin-top:0.6rem;">Your plans: ${pg.plans.map(p => `<i>if</i> ${escHtml(p.i)} &rarr; <i>then</i> ${escHtml(p.t)}`).join(' &nbsp;&middot;&nbsp; ')}</div>`
+      : '';
+    progressSection = `
+      <div style="background:#0f2040;border-radius:6px;padding:1.25rem 1.5rem;margin-bottom:1rem;">
+        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#c8a951;margin-bottom:0.5rem;">Your Arguments</div>
+        <div style="font-size:0.9rem;color:rgba(255,255,255,0.8);margin-bottom:0.25rem;">${dueText}</div>
+        ${levels ? `<div style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Levels earned: ${levels}</div>` : ''}
+        ${plans}
+        <div style="font-size:0.8rem;color:rgba(255,255,255,0.45);margin-top:0.5rem;">Gold is perishable on purpose: a review you re-prove is a review that sticks.</div>
+        <a href="https://apologiadaily.com/today" style="display:inline-block;margin-top:0.875rem;font-size:0.8rem;font-weight:600;background:#c8a951;color:#050d1a;padding:7px 16px;border-radius:3px;text-decoration:none;">Review now &rarr;</a>
+      </div>`;
+  }
   // Personalised sections
   let flashcardSection = '';
   if (fc && fc.total > 0) {
@@ -476,6 +532,7 @@ function buildEmailHtml(name, fc, ex, unsub) {
 
   <!-- STATS SECTION -->
   <div style="background:#0a1628;padding:1.5rem 2rem;">
+    ${progressSection}
     ${flashcardSection}
     ${explainSection}
   </div>

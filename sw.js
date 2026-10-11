@@ -10,7 +10,7 @@
    Bump CACHE_VERSION to force-update clients after a deploy. */
 'use strict';
 
-var CACHE_VERSION = 'apd-v40';
+var CACHE_VERSION = 'apd-v41';
 var SHELL = [
   '/',
   '/index.html',
@@ -100,12 +100,35 @@ self.addEventListener('fetch', function (e) {
 /* ---- Push notifications (ready for the "daily argument" nudge) ----
    Server sends a push payload; this shows it. Wired but dormant until you
    add a push provider + VAPID keys. */
+/* Pages post {type:'ad-due', n, oldest, at} (lib/review-queue.js) so a payload-less
+   push can say what is actually due for THIS learner instead of the rotating
+   argument. Stored as a tiny cached response; read in the push handler below. */
+var DUE_URL = '/__ad_due';
+self.addEventListener('message', function (e) {
+  var d = e.data || {};
+  if (d.type !== 'ad-due') return;
+  e.waitUntil(caches.open(CACHE_VERSION).then(function (c) {
+    return c.put(DUE_URL, new Response(JSON.stringify({ n: d.n | 0, oldest: String(d.oldest || '').slice(0, 80), at: String(d.at || '') }), { headers: { 'Content-Type': 'application/json' } }));
+  }).catch(function () {}));
+});
+
 self.addEventListener('push', function (e) {
   // Payload pushes are supported, but our daily cron sends no payload — so we
   // fetch today's argument to show something fresh and specific.
   e.waitUntil((async function () {
     var data = {};
     try { if (e.data) data = e.data.json(); } catch (err) {}
+    if (!data.title) {
+      // Prefer the learner's own due list (posted by the pages within the last 3 days).
+      try {
+        var c = await caches.open(CACHE_VERSION), hit = await c.match(DUE_URL);
+        if (hit) {
+          var j = await hit.json();
+          var fresh = j.at && (Date.now() - new Date(j.at + 'T00:00:00Z').getTime()) < 3 * 86400000;
+          if (fresh && j.n > 0) data = { title: j.n + ' argument' + (j.n !== 1 ? 's' : '') + ' due to re-prove', body: (j.oldest ? 'Oldest: ' + j.oldest + '. ' : '') + 'Five minutes on Today keeps it.', url: '/today' };
+        }
+      } catch (err0) {}
+    }
     if (!data.title) {
       try {
         var r = await fetch('/api/push?do=today', { cache: 'no-store' });

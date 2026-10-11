@@ -19,7 +19,21 @@
       Read / Try it / Test yourself, and adds a sticky Understand · Practice · Prove
       bar that shows where you are.
    4. Older pages' premise defences — opened by default, each headed by the exact
-      premise it defends (cloned from the syllogism) and a "Why believe it" label. */
+      premise it defends (cloned from the syllogism) and a "Why believe it" label.
+
+   PAGE DATA CONTRACT (Phase 1.1, 2026-10-11; enforced by tests/mastery-contract.test.mjs).
+   Every Bronze/Silver/Gold page (one that defines levelOf) carries, in its inline script:
+     ARG_PREMISES (3)  — the certified rubric POSTed to /api/tutor and drawn on the share card
+     ORDER (3) + PROPS (6 ok:true, 4 ok:false) — the Bronze reconstruction checkpoint
+     cards (>= 12 {q,a}) — graded per card by lib/review-queue.js; rest after 3 correct
+     OBJ (4 {who,q,model}) — the cold objections; OBJ[0] doubles as the pretest
+     an #unseenModel block — the Gold unseen objection and its certified reply
+     checks (5 regex rows) — the offline Explain It Back scorer
+     discPassed() in levelOf() and an #rq-disc ladder row — the mixed-argument Gold sub-gate
+   CARD RULE — structure, not names: cards test the shape of the argument (premises, what each
+   objection attacks, what the conclusion does and does not reach); never a scholar's name, a year
+   or a page number as the answer. Memory for structure lasts years; names and dates decay first.
+   Every string in these arrays is PORTED from the paired certified essay, never authored. */
 (function () {
   'use strict';
   if (!/\/ev-m-[^/]*$/.test(location.pathname) && !document.getElementById('understand')) return;

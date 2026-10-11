@@ -36,6 +36,8 @@ mastery work and two of them are on the first pages a new visitor sees.
 
 ## Phase 0 — live defects (one session; do before anything else)
 
+> **STATUS 2026-10-11: DONE and live on `main` (commit `1768f6fe`).** Beginner's Path gated in three rounds and stamped; demo auto-play off on phones; dashboard counters wired; flashcard sentence and shelf counts fixed on the 13; test suite now runs on Windows (142/142).
+
 | Step | What to do | Gate | Done when |
 |---|---|---|---|
 | 0.1 | **Beginner's Path.** Replace the Day-1 takeaway ("even atheist scientists agree… that's not faith, that's logic") with wording ported from `ev-m-kalam.html`'s certified "argument in brief". Run argument + orthodoxy on the whole page. Add `/^beginners-path\.html$/` to `CONTENT_PATTERNS` in `tools/check-content-review.mjs` and stamp the page **in the same commit**. | Yes | CI green; page carries a `content-review` stamp. |
@@ -50,6 +52,8 @@ Verify after: `node --test tests/*.test.mjs`, `node tools/check-content-review.m
 ---
 
 ## Phase 1 — fix the standard on the 13 converted pages (one to two sessions)
+
+> **STATUS 2026-10-11: BUILT (see the commit after `1768f6fe`).** 1.1 contract + test (`tests/mastery-contract.test.mjs`); 1.2 re-proof review; 1.3 graded per-card flashcards feeding `/today`; 1.4 pretest; 1.5 discrimination drill as a Gold sub-gate (`rq-disc`, `discPassed()`); 1.6 if-then plans (`ad_ifthen_arg`, shown at review + in the weekly email); 1.7 confident-wrong items go first (`hot`) — the two calibration widgets are **not** merged (left as a Phase 3 tidy-up); 1.8 the 8+ must come at Explain level 2 or 3 (`explainHi`) + hide-the-page toggle; 1.9 Listen buttons on the summary and the cold-objection reply; 1.10 push uses the learner's own due list (posted to the service worker) and the weekly email gained a "Your arguments" section; 1.12 typed cloze + fade past Silver; 1.13 **already true** for Daily Quiz and Daily Mix (both show the certified `feedback`/`e` text on every answer) — Speed Round has no explanation field, so adding one is CONTENT (a Phase 2 row), not plumbing. 1.11 (re-gate the 13 for changed UI wording) was not needed: no doctrinal string changed; editorial stamp notes added, lens dates unchanged. All mechanics are in the shared `lib/review-queue.js`, so they reach all 83 pages where the page carries the data (the 70 legacy pages get the hide toggle, Listen, typed cloze and the premises re-proof now; cards/OBJ-based features switch on as each page is converted).
 
 Goal: when this phase ends, Kalam is the template the 70 will be copied from, and every mechanic on it
 is honest. Work only on shared files plus the 13 pages. **Define the data shape first (1.1), because

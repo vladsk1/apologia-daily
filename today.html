@@ -509,13 +509,15 @@
         cards = deck.filter(function(c){ return c.next_review <= today; }).map(function(c){ c.kind = 'card'; return c; });
       }catch(e){ cards = []; }
     }
-    var objs = [], mast = [];
+    var objs = [], mast = [], mcards = [];
     try{ objs = window.ADStudy ? window.ADStudy.objDue(await loadObjections()).map(function(o){ return { kind:'obj', id:o.id, arg:o.arg, argument_title:o.argName, category:o.category, front:o.front, back:o.back }; }) : []; }catch(e){ objs = []; }
     try{ mast = window.ADReview ? window.ADReview.due().map(function(m){ return { kind:'mastery', id:m.id, argument_title:m.title, url:m.url }; }) : []; }catch(e){ mast = []; }
+    // Mastery-page flashcards graded on the page itself (lib/review-queue.js, 2026-10-11): per-card schedule, due ones come here.
+    try{ mcards = (window.ADReview && window.ADReview.dueCards) ? window.ADReview.dueCards().map(function(c){ return { kind:'mcard', id:c.arg+'#'+c.i, arg:c.arg, i:c.i, argument_title:c.arg.replace(/[-_]/g,' '), front:c.q, back:c.a }; }) : []; }catch(e){ mcards = []; }
     // Interleave so every system gets a turn: up to 4 cards, then 1 objection and
     // 1 refresh, then fill the remaining places from whatever is left.
-    var pick = cards.slice(0,4).concat(objs.slice(0,1), mast.slice(0,1));
-    var rest = cards.slice(4).concat(objs.slice(1), mast.slice(1));
+    var pick = cards.slice(0,4).concat(objs.slice(0,1), mast.slice(0,1), mcards.slice(0,1));
+    var rest = cards.slice(4).concat(objs.slice(1), mast.slice(1), mcards.slice(1));
     while(pick.length < RV_MAX && rest.length) pick.push(rest.shift());
     dueCards = pick.slice(0, RV_MAX);
     if(!dueCards.length){
@@ -575,7 +577,7 @@
   function renderReviewCard(){
     if(rvIdx >= dueCards.length){ finishReview(false); return; }
     var c = dueCards[rvIdx]; rvFlipped = false;
-    var src = c.kind === 'obj' ? 'Objection' : (c.kind === 'mastery' ? 'Refresh' : 'Card');
+    var src = c.kind === 'obj' ? 'Objection' : (c.kind === 'mastery' ? 'Refresh' : (c.kind === 'mcard' ? 'Mastery card' : 'Card'));
     var front = c.kind === 'mastery'
       ? 'Can you still make the case for ' + esc(c.argument_title) + ' from memory? Say it out loud, then check.'
       : esc(c.front);
@@ -610,7 +612,9 @@
   }
   async function rateCard(quality){
     var card = dueCards[rvIdx];
-    if(card.kind === 'obj'){
+    if(card.kind === 'mcard'){
+      try{ window.ADReview.gradeCard(card.arg, card.i, quality); }catch(e){}
+    } else if(card.kind === 'obj'){
       try{ window.ADStudy.objGrade(card.id, quality); }catch(e){}
       try{ if(window.Coach && Coach.record){ var sc = quality<=2?0.15 : quality===4?0.8 : 1.0; Coach.record({ id:card.arg, src:'objection', score:sc, note:'Today review — '+(quality<4?'missed':'recalled') }); } }catch(e){}
     } else if(card.kind === 'mastery'){

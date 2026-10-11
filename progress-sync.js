@@ -34,7 +34,9 @@
     // 2026-09-30: the rest of the learning record, so a new device picks it up too —
     // mastery-refresh schedule, confidence calibration, the Beginner's Path, devotional
     // completions and joined reading-club books.
-    'ad_reviews', 'ad_calibration', 'beginners_path', 'completed', 'ad_joined_books'];
+    'ad_reviews', 'ad_calibration', 'beginners_path', 'completed', 'ad_joined_books',
+    // 2026-10-11 (Phase 1): per-card flashcard schedule, pretest attempts, if-then plans.
+    'ad_cards', 'ad_pretest', 'ad_ifthen_arg'];
   var PREFIXES = ['ad_ch_', 'quizScore_', 'ad_fc_', 'ad_coach'];
 
   function keyMatches(k) {
