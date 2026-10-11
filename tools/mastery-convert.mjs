@@ -311,7 +311,8 @@ S = S.replace(/var PROPS = \[[\s\S]*?\n\];/, () => 'var PROPS = [\n' + P.props.m
 S = S.replace(/var OBJ = \[[\s\S]*?\n\];/, () => 'var OBJ = [\n' + P.obj.map(o => `  {who:${js(o.who)}, q:${js(o.q)}, model:${js(o.model)}}`).join(',\n') + '\n];');
 must(S.includes("'The Kalam Cosmological Argument'"), 'title slots');
 S = S.split("'The Kalam Cosmological Argument'").join(js(P.title));
-S = S.split('"The Kalam Cosmological Argument"').join(js(P.title));
+// the double-quoted title sits INSIDE a single-quoted JS string (the grader prompt): escape for that context
+S = S.split('"The Kalam Cosmological Argument"').join('"' + String(P.title).replace(/\\/g, '\\\\').replace(/'/g, "\\'") + '"');
 must(S.includes('(Morriston: our causal intuition'), 'level-2 prompt slot');
 // the slot sits inside a single-quoted JS string: escape backslashes and apostrophes
 const explain2 = String(P.explain2).replace(/\n/g, ' ').replace(/\\/g, '\\\\').replace(/'/g, "\\'");

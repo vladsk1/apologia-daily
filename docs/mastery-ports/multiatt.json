@@ -1,0 +1,350 @@
+{
+ "slug": "multiatt",
+ "title": "The Criterion of Multiple Attestation",
+ "short": "multiple attestation",
+ "keyTerms": [
+  {
+   "t": "Multiple attestation",
+   "d": "A saying or deed attested in two or more literarily independent sources is more likely to be historical than one found in a single source, because independent agreement pushes the tradition back behind both sources, toward a common origin."
+  },
+  {
+   "t": "Literary independence",
+   "d": "Independence is argued, never simply assumed. Where Matthew and Luke reproduce Mark almost verbatim, that is not independent attestation; it is copying. The criterion only does work where agreement cannot be explained by literary borrowing."
+  },
+  {
+   "t": "The Two-Source hypothesis",
+   "d": "On the dominant view, Mark is the earliest Gospel; Matthew and Luke each used Mark plus a second source of sayings, conventionally labeled Q (from the German Quelle, “source”); each evangelist also had material unique to him, called special-M and special-L."
+  },
+  {
+   "t": "Independent streams",
+   "d": "Mark, Q, special-M, special-L, John (which many scholars treat as drawing on traditions substantially independent of the Synoptics, though this is itself debated), the pre-Pauline traditions Paul says he “received” and “passed on,” and a handful of non-Christian sources."
+  },
+  {
+   "t": "Multiple attestation of forms",
+   "d": "Attestation can be multiple not only in sources but in forms — when a motif appears across different literary genres (parable, miracle story, aphorism, dispute), the independence is even harder to dismiss as a single source’s editorial habit."
+  },
+  {
+   "t": "Attestation outside the church",
+   "d": "One of a handful of non-Christian sources: a Roman with no motive to flatter Christianity confirming the same execution that Christian creeds confess. The outside witness is widely treated as independent of Christian sources, though some scholars suspect he may be relaying what Christians of his own day reported."
+  },
+  {
+   "t": "Recurrent attestation",
+   "d": "Patterns that surface again and again across the tradition, to which memory scholars appeal when they defend the secure historical core — a cousin of multiple attestation rather than the very same instrument: attestation operating at the level of the broad portrait rather than the isolated proof-text."
+  },
+  {
+   "t": "Demotion, not abolition",
+   "d": "Multiple attestation is best understood not as a verdict but as one weighted indicator within a cumulative, memory-aware argument — strongest for broad, recurring features of Jesus’ career, weakest when pressed to certify the exact wording of a single saying."
+  }
+ ],
+ "derive": [
+  {
+   "q": "Two reporters who never spoke to each other describe the same event — so their agreement is…?",
+   "ans": "unlikely to be a coincidence",
+   "why": "The principle is one historians use everywhere, not just in religious studies. If two reporters who never spoke to each other describe the same event, their agreement is unlikely to be a coincidence; the simplest explanation is that something happened."
+  },
+  {
+   "q": "Matthew and Luke reproduce Mark almost verbatim — so their agreement with Mark counts as…?",
+   "ans": "copying, not independent attestation",
+   "why": "Where Matthew and Luke reproduce Mark almost verbatim, that is not independent attestation; it is copying. This is why the most secure results come from material crossing genuinely separate streams — say, Mark and John, or the Synoptics and Paul, or Christian and non-Christian sources."
+  },
+  {
+   "q": "The crucifixion is in Mark and the passion traditions, in Paul and the pre-Pauline confession (though Paul never names Pilate outside 1 Timothy 6:13), and under Pilate in a Roman annalist and a Jewish historian — so it is…?",
+   "ans": "about as close to bedrock as ancient history offers",
+   "why": "That is multiple attestation reaching outside the church. The limits are stated with it: the Roman witness may be relaying what Christians of his own day reported, and the Jewish passage has Christian-sounding phrases widely judged to be later additions, though its core most scholars accept."
+  },
+  {
+   "q": "His opponents did not deny the healings and exorcisms — they reattributed them to dark powers — so the opponents’ charge is…?",
+   "ans": "a backhanded form of attestation",
+   "why": "Whatever one concludes about the supernatural, the reputation of Jesus as a healer and exorcist is multiply attested to a striking degree, running through Mark, the Q material, special-M, special-L, and John, across narrative and saying alike."
+  },
+  {
+   "q": "A motif is shown to be early and widespread — does that make it historical?",
+   "ans": "no — earliness is not the same as historicity",
+   "why": "A misunderstanding, a community’s theological conviction, or a popular legend could circulate widely and independently within a generation. Attestation counts the witnesses; it does not interrogate them."
+  },
+  {
+   "q": "The criterion is strong for that he died on a Roman cross, weak for the exact wording of one saying — so it should be used…?",
+   "ans": "at the right altitude: as one weighted indicator",
+   "why": "It is strongest for establishing broad, recurring features of Jesus’ career; it is weakest, and the critics are right here, when pressed to certify the exact wording of a single saying. Used at the right altitude, with full knowledge of its limits, the criterion remains genuinely useful."
+  }
+ ],
+ "honestState": {
+  "p1": "Most historians, including many who hold no religious faith, do think we can recover a historical core of Jesus’ life, and multiple attestation is one of the chief tools that made this possible. But the criteria of authenticity have come under sustained, learned attack from within the guild, and the field is in flux: some defend a chastened use of the criteria, some argue the paradigm has run its course, and there is, at present, no consensus method to replace them — which is itself a reason not to discard the better criteria entirely while the alternatives are still being built.",
+  "fairness": "The critics are right that no criterion is a “precision tool” that mechanically sifts authentic from inauthentic, that the discontinuity criterion is badly flawed, that all our sources are interpreted, and that the older hope of excavating facts wholly free of interpretation was overconfident. The judgment of which sources are independent is itself prior and contestable — whether John is independent of the Synoptics is debated, and the reality and extent of the Mark-Q overlaps is contested. The most defensible position today is not to crown multiple attestation as decisive.",
+  "verdict": "The criterion does not prove that Christianity is true, nor that any miracle occurred, nor that a given sentence left Jesus’ lips exactly as printed. What it does do — modestly, cumulatively, alongside other considerations — is make it very hard to dismiss the broad historical outline of Jesus’ life as later fabrication. The honest conclusion is neither triumphalist nor skeptical but disciplined: there was a Jesus of Nazareth, the rough shape of his life is recoverable, and any serious account — of faith or of unbelief — must begin there."
+ },
+ "order": [
+  "A saying or deed attested in two or more literarily independent sources is more likely to be historical than one found in a single source.",
+  "Different facts about Jesus are attested by different combinations of genuinely independent streams.",
+  "Therefore multiple attestation, used as one weighted indicator, makes it very hard to dismiss the broad historical outline of Jesus’ life as later fabrication."
+ ],
+ "props": [
+  {
+   "t": "independent agreement pushes the tradition back toward a common origin",
+   "ok": true
+  },
+  {
+   "t": "one weighted indicator within a cumulative argument",
+   "ok": true
+  },
+  {
+   "t": "strongest for broad, recurring features of Jesus’ career",
+   "ok": true
+  },
+  {
+   "t": "counts streams, not books",
+   "ok": true
+  },
+  {
+   "t": "reaches outside the church",
+   "ok": true
+  },
+  {
+   "t": "proves that Christianity is true",
+   "ok": false
+  },
+  {
+   "t": "certifies the exact wording of a single saying",
+   "ok": false
+  },
+  {
+   "t": "early and widespread means historical",
+   "ok": false
+  },
+  {
+   "t": "a precision tool that mechanically sifts authentic from inauthentic",
+   "ok": false
+  },
+  {
+   "t": "Matthew and Luke copying Mark counts as independent attestation",
+   "ok": false
+  }
+ ],
+ "cards": [
+  {
+   "q": "State Premise 1 — and why independence matters.",
+   "a": "A saying or deed attested in two or more literarily independent sources is more likely to be historical than one found in a single source, because independent agreement pushes the tradition back behind both sources, toward a common origin."
+  },
+  {
+   "q": "State Premise 2 — and the prior judgment it depends on.",
+   "a": "Different facts about Jesus are attested by different combinations of genuinely independent streams. The whole method depends on a prior, contestable judgment — which sources are actually independent? Independence is argued, never simply assumed."
+  },
+  {
+   "q": "What does the conclusion reach — and not reach?",
+   "a": "Used as one weighted indicator, it makes it very hard to dismiss the broad historical outline of Jesus’ life as later fabrication. It does not prove that Christianity is true, nor that any miracle occurred, nor that a given sentence left Jesus’ lips exactly as printed."
+  },
+  {
+   "q": "Which agreements does the criterion refuse to count?",
+   "a": "Agreement explained by literary borrowing. Where one Gospel reproduces another almost verbatim, that is not independent attestation; it is copying. The criterion only does work where agreement cannot be explained that way."
+  },
+  {
+   "q": "Where do the most secure results come from?",
+   "a": "From material crossing genuinely separate streams — say, Mark and John, or the Synoptics and Paul, or Christian and non-Christian sources."
+  },
+  {
+   "q": "Why does multiplicity of forms strengthen the case?",
+   "a": "When a motif appears across different literary genres (parable, miracle story, aphorism, dispute), the independence is even harder to dismiss as a single source’s editorial habit."
+  },
+  {
+   "q": "Why is the crucifixion under Pilate the showcase example — and what is its limit?",
+   "a": "It is in Mark and the passion traditions behind all four Gospels, in Paul and the pre-Pauline confession he cites (the death, though Paul’s letters never name Pilate outside 1 Timothy 6:13), and in two hostile or neutral outside witnesses: multiple attestation reaching outside the church. Limit: the Roman witness may be relaying what Christians of his day reported, and the Jewish passage carries later Christian additions around a core most scholars accept."
+  },
+  {
+   "q": "What does the opponents’ charge about the exorcisms concede?",
+   "a": "They did not deny the deeds — they reattributed them to dark powers, which is itself a backhanded form of attestation."
+  },
+  {
+   "q": "Reply to: early and widespread is not the same as true.",
+   "a": "Granted — attestation counts the witnesses; it does not interrogate them. But the legend objection meets its limit where the broad outline is secured: the streams are independent and reach back within a generation, while people who knew Jesus still led the movement, and they preserve what no legend-maker would invent, a baptism for sins and a shameful cross."
+  },
+  {
+   "q": "What do the critics of the criteria largely NOT deny?",
+   "a": "That Jesus existed, was baptized by John, gathered followers, was reputed a healer, clashed over the Temple, and was crucified under Pilate. Their quarrel is with using criteria to authenticate this saying versus that one."
+  },
+  {
+   "q": "Is recurrent attestation simply multiple attestation under another name?",
+   "a": "No — a cousin rather than the very same instrument, best read as a close analogy: attestation operating at the level of the broad portrait rather than the isolated proof-text. The instrument survives in altered form; it changes scale."
+  },
+  {
+   "q": "Why are the other criteria said to work alongside attestation rather than on their own?",
+   "a": "Multiple attestation is strongest when its findings are confirmed by the others. But embarrassment turns on reconstructing what the earliest church found embarrassing, which we infer rather than read off the text; and coherence is the most circular move in the set, sound only insofar as the assumed core is."
+  }
+ ],
+ "obj": [
+  {
+   "who": "Skeptic",
+   "q": "The Gospels copied each other. Matthew and Luke reproduce Mark nearly word for word — your four witnesses are really one witness photocopied.",
+   "model": "That is precisely why the criterion counts streams, not books. Where Matthew and Luke reproduce Mark almost verbatim, that is not independent attestation; it is copying — and the criterion only does work where agreement cannot be explained by literary borrowing. Independence is argued, never simply assumed. This is why the most secure results come from material crossing genuinely separate streams — Mark and John, the Synoptics and Paul, or Christian and non-Christian sources. The crucifixion under Pilate, for one, stands in Mark, in Paul’s letters (which proclaim Christ crucified, though outside 1 Timothy 6:13 they never name Pilate; the death itself is in the pre-Pauline confession he cites), and in a Roman senator’s annals."
+  },
+  {
+   "who": "Skeptic",
+   "q": "Independent or not, every source is a believer with a stake. Multiple biased witnesses are still biased.",
+   "model": "First, not all: Tacitus — a hostile Roman — and Josephus anchor the crucifixion from outside. A non-Christian Roman with no motive to flatter Christianity confirming the same execution that Christian creeds confess — that is multiple attestation reaching outside the church. Grant the limit honestly: Tacitus is widely treated as independent of Christian sources, though some scholars suspect he may be relaying what Christians of his own day reported, and Josephus’ passage has Christian-sounding phrases widely judged to be later additions, though its core most scholars accept. Second, historians do not discard interested sources; they test them. And bias explains spin, not unconnected sources agreeing on a shameful cross — and the tradition preserves what no legend-maker would invent, a baptism for sins."
+  },
+  {
+   "who": "Skeptic",
+   "q": "Five echoes of one rumor is one rumor. A legend could spread widely and independently within a generation — attestation proves it was early, not that it was true.",
+   "model": "The observation is right, and it should be conceded plainly: earliness is not the same as historicity. A misunderstanding, a community’s theological conviction, or a popular legend could circulate widely and independently within a generation; attestation counts the witnesses, it does not interrogate them. But the legend objection meets its limit exactly where the broad outline is secured: the streams are independent and reach back within a generation, while people who knew Jesus still led the movement (Paul stayed with Peter and met James, the Lord’s brother), and they preserve what no legend-maker would invent, a baptism for sins and a shameful cross."
+  },
+  {
+   "who": "Scholar",
+   "q": "Your whole toolkit is obsolete. The criteria were forged as tools of form criticism, and that model has collapsed. The only Jesus we have is already a remembered, interpreted Jesus — there is no uninterpreted bedrock to excavate.",
+   "model": "What should be conceded, should be conceded plainly. The critics are right that no criterion is a “precision tool” that mechanically sifts authentic from inauthentic; that all our sources are interpreted; and that the older hope of excavating facts wholly free of interpretation was overconfident. But notice what they largely do not deny: they are not mythicists; they affirm that Jesus existed, was baptized by John, gathered followers, was reputed a healer, clashed over the Temple, and was crucified under Pilate. Their quarrel is with authenticating this saying versus that one. And when memory scholars defend that secure core, they appeal to recurrent attestation — a close analogy, operating at the level of the broad portrait rather than the isolated proof-text. So the reply is one of demotion, not abolition: one weighted indicator, strongest for broad, recurring features, weakest for the exact wording of a single saying. There is, at present, no consensus method to replace the criteria — which is itself a reason not to discard the better criteria entirely while the alternatives are still being built. Used at the right altitude, with full knowledge of its limits, the criterion remains genuinely useful."
+  }
+ ],
+ "unseen": {
+  "who": "History student",
+  "av": "HS",
+  "q": "The sharpest test you have is dissimilarity: only what is unlike both the Judaism of Jesus’ day and the later church can be trusted, since it could have been borrowed from neither. Run that filter honestly and almost nothing about Jesus survives.",
+  "model": "That is the most famous criterion and also the most treacherous, and honesty demands saying so before the critics do. Used to include, it has a modest place: a distinctive, unexpected datum unlike both settings is at least unlikely to be a mere borrowing — though even this use leans on a confident picture of both Judaism and the early church that we only partly possess. Used to exclude — as a filter that discards whatever Jesus shared with his contemporaries or handed on to his followers — it becomes the most criticized tool in the kit. Morna Hooker’s point is devastating: a criterion that counts as authentic only what is unlike both Judaism and the early church guarantees a Jesus with no real context and no real influence — an impossible figure. Dissimilarity is one place the guild’s turn against the criteria has concentrated its fire — but that turn indicts the whole toolkit, coherence and embarrassment included; the reply is demotion, not abolition: multiple attestation survives as one weighted indicator, strongest for broad, recurring features of Jesus’ career.",
+  "source": "library/multiatt.html — “Attestation Never Works Alone” (dissimilarity paragraph) + “The Turn Against the Criteria — Steelmanned” (Hooker, fn 8)"
+ },
+ "explain2": "Hooker’s objection that the criteria of authenticity cannot deliver what is asked of them, and Keith and Le Donne’s that the paradigm has run its course",
+ "ledger": [
+  {
+   "field": "title",
+   "from": "ev-m-multiatt.html <h1> “The Criterion of Multiple Attestation” verbatim."
+  },
+  {
+   "field": "keyTerms[0]",
+   "from": "essay §What the Criterion Claims para 1, verbatim core."
+  },
+  {
+   "field": "keyTerms[1]",
+   "from": "essay §The Independent Source Streams para 2, verbatim."
+  },
+  {
+   "field": "keyTerms[2]",
+   "from": "essay §The Independent Source Streams para 1 (Two-Source description), verbatim with light compression."
+  },
+  {
+   "field": "keyTerms[3]",
+   "from": "essay §The Independent Source Streams para 1 (John hedge; pre-Pauline “received/passed on”; non-Christian sources), compressed into a list."
+  },
+  {
+   "field": "keyTerms[4]",
+   "from": "essay §What the Criterion Claims para 2 (Meier refinement), verbatim."
+  },
+  {
+   "field": "keyTerms[5]",
+   "from": "essay §Crucifixion under Pontius Pilate, last two sentences, verbatim; the Roman is left unnamed so the term is structural."
+  },
+  {
+   "field": "keyTerms[6]",
+   "from": "essay §The Considered Reply para 2 (recurrent attestation; ‘cousin… rather than the very same instrument’; ‘broad portrait rather than the isolated proof-text’)."
+  },
+  {
+   "field": "keyTerms[7]",
+   "from": "essay §The Considered Reply para 3, verbatim core."
+  },
+  {
+   "field": "derive[0]",
+   "from": "essay §What the Criterion Claims para 1, verbatim."
+  },
+  {
+   "field": "derive[1]",
+   "from": "essay §The Independent Source Streams para 2, verbatim."
+  },
+  {
+   "field": "derive[2]",
+   "from": "essay §Crucifixion worked example (‘about as close to bedrock’; ‘reaching outside the church’) + fn 4/fn 5 limits as stated on the page’s certified Honest-limit line."
+  },
+  {
+   "field": "derive[3]",
+   "from": "essay §Reputation as Healer and Exorcist, verbatim sentences."
+  },
+  {
+   "field": "derive[4]",
+   "from": "essay §The Turn Against the Criteria, closing paragraph, verbatim."
+  },
+  {
+   "field": "derive[5]",
+   "from": "essay §The Considered Reply para 3 (‘strongest… weakest…’; ‘Used at the right altitude…’), verbatim."
+  },
+  {
+   "field": "honestState.p1",
+   "from": "essay intro (‘most historians, including many who hold no religious faith…’; ‘one of the chief tools’) + §Turn Against the Criteria opening + §The State of the Question (‘field is in flux… no consensus method to replace the criteria’)."
+  },
+  {
+   "field": "honestState.fairness",
+   "from": "essay §The Considered Reply para 1 verbatim + §Independent Source Streams (‘prior, contestable judgment’; John ‘itself debated’) + §Healer (Mark-Q overlap ‘itself contested’)."
+  },
+  {
+   "field": "honestState.verdict",
+   "from": "essay Conclusion, verbatim with light compression."
+  },
+  {
+   "field": "order",
+   "from": "ev-m-multiatt.html certified syllogism P1/P2/C; P2 shortened to its main clause."
+  },
+  {
+   "field": "props (true)",
+   "from": "essay §What the Criterion Claims; §Considered Reply para 3; page reply ‘counts streams, not books’; essay §Crucifixion ‘reaching outside the church’."
+  },
+  {
+   "field": "props (decoys)",
+   "from": "each explicitly denied in the essay: ‘does not prove that Christianity is true’; ‘weakest… when pressed to certify the exact wording of a single saying’; ‘earliness is not the same as historicity’; ‘no criterion is a “precision tool”’; ‘that is not independent attestation; it is copying’."
+  },
+  {
+   "field": "cards[0–2]",
+   "from": "certified syllogism + essay §What the Criterion Claims + §Independent Source Streams (‘prior, contestable judgment… argued, never simply assumed’) + Conclusion."
+  },
+  {
+   "field": "cards[3–4]",
+   "from": "essay §Independent Source Streams para 2."
+  },
+  {
+   "field": "cards[5]",
+   "from": "essay §What the Criterion Claims para 2 (forms refinement)."
+  },
+  {
+   "field": "cards[6]",
+   "from": "essay §Crucifixion worked example + fn 4/fn 5 limits."
+  },
+  {
+   "field": "cards[7]",
+   "from": "essay §Reputation as Healer and Exorcist."
+  },
+  {
+   "field": "cards[8]",
+   "from": "essay §Turn Against the Criteria closing paragraph + §Considered Reply para 3 legend-limit sentence."
+  },
+  {
+   "field": "cards[9]",
+   "from": "essay §The Considered Reply para 2, verbatim."
+  },
+  {
+   "field": "cards[10]",
+   "from": "essay §The Considered Reply para 2 (Allison relabel caveat; ‘changes scale’)."
+  },
+  {
+   "field": "cards[11]",
+   "from": "essay §Attestation Never Works Alone para 1 (embarrassment and coherence limits)."
+  },
+  {
+   "field": "obj[0]",
+   "from": "page accordion ‘The Gospels copied each other’ (Common) + essay §Independent Source Streams para 2 + §Crucifixion worked example; ‘letters of the 50s’ from the same essay section."
+  },
+  {
+   "field": "obj[1]",
+   "from": "page accordion ‘All the sources are Christian’ (Common) reply, first/second/third points ported; essay §Crucifixion (‘reaching outside the church’) + Tacitus/Josephus limits."
+  },
+  {
+   "field": "obj[2]",
+   "from": "page accordion ‘one rumor, many echoes’ + essay §Turn Against the Criteria closing paragraph + §Considered Reply legend-limit sentence, verbatim."
+  },
+  {
+   "field": "obj[3]",
+   "from": "page ‘Objection — the turn against the criteria’ (Hardest) + essay §Turn Against the Criteria (Keith genealogy; ‘no uninterpreted bedrock’) + §Considered Reply paras 1–3 + §State of the Question last sentence."
+  },
+  {
+   "field": "unseen",
+   "from": "essay §Attestation Never Works Alone para 2 (dissimilarity, include vs exclude) + §Turn Against the Criteria para 2 (Hooker: ‘an impossible figure’). On the current page dissimilarity appears only as a half-sentence in an Honest-limit line; it is not an objection, accordion, card, or drill anywhere, and it is kept out of every other field of this port."
+  },
+  {
+   "field": "explain2",
+   "from": "ev-m-multiatt.html certified routing line (‘The one that matters most: the turn against the criteria (Hooker; Keith and Le Donne)’) + essay ‘the criteria cannot deliver what is asked of them’."
+  }
+ ],
+ "notes": "Authored/connective strings, declared: (1) derive[].q prompts and derive[].ans short answers are question scaffolding in the template’s register, built from essay vocabulary (‘unlikely to be a coincidence’, ‘copying’, ‘about as close to bedrock’, ‘backhanded form of attestation’, ‘right altitude’) — no new claim; (2) card questions are structural prompts; no card answer is a name, year or page (scholar names appear only inside honestState/obj/unseen as supporting attribution, as on the certified page); (3) unseen.model’s sentence ‘So the filter’s near-empty result is a verdict on the filter, not on Jesus’ and its last sentence (‘The broad outline does not rest on it…’) are MINE — connective inferences from the essay’s Hooker point and its demotion reply; drop them if a lens objects; (4) obj[].q phrasings compress the page accordions’ ‘Strongest form’ statements and the essay’s own statement of the critique; obj[0]’s final sentence (crucifixion in Mark, Paul’s received confession, a Roman senator’s annals) is a compression of the essay’s worked example — note it deliberately names the pre-Pauline confession for the DEATH only, as the essay does. HAZARDS honoured: no claim that Mark narrates or attests any appearance (retired mark-attests-appearances) — the page’s ‘Paul before the Gospels’ card line about ‘appearances via a creed’ was NOT ported; no ‘virtually all’ consensus language (retired minimal-facts-virtually-all) — only the essay’s ‘most historians’ / ‘most scholars accept’ / ‘a broad range of scholars’; the essay’s bound (attestation shows early and widespread, not true; does not prove Christianity, any miracle, or exact wording) is carried in derive[4], props decoys, cards[2], cards[8], obj[2] and honestState.verdict. NOT ported from the page because it has no essay basis: the Hannibal/Alexander/Nero comparisons, the ‘same standard as Caesar’ chip, the Socrates drill line, and the James-reference claim in the Josephus/Tacitus accordion. The Q-is-hypothetical and miracles accordions are left as page content rather than obj, keeping the four obj to the most-met objections answered by the essay itself. || 2026-10-11 gate R1: Pilate-in-Paul hedge on all three surfaces; Hooker vs Keith/Le Donne distinguished; unseen's authored closing replaced with the essay's demotion line; 'no consensus method' no longer the last word; baptism moved from attestation to embarrassment. || 2026-10-12 gate R2 residue: unseen close qualified ('coherence and embarrassment included; demotion, not abolition')."
+}
