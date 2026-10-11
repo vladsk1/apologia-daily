@@ -142,7 +142,11 @@ ${P.derive.map(r => `        <div class="dr"><div class="q">${esc(r.q)}</div><bu
 
 `;
 {
-  const dp1 = L.indexOf('Defending Premise 1'); must(dp1 > 0, 'Defending Premise 1 kick');
+  // insert the reason-it-out card before the first premise-defence card ("Defending Premise 1", or
+  // "Defending the steps" on pages whose argument is a chain); fall back to the objections card.
+  let dp1 = L.indexOf('class="kick">Defending');
+  if (dp1 < 0) dp1 = L.indexOf('The hard part');
+  must(dp1 > 0, 'a Defending… or "The hard part" kick');
   const cardStart = lastIndexBefore(L, '<div class="card"', dp1);
   L = L.slice(0, cardStart) + DERIVE.trimStart() + '    ' + L.slice(cardStart);
 }
@@ -197,9 +201,13 @@ L = replaceOnce(L, /Drill 1 · Explain It Back<\/span>/, 'Drill 1 · Explain It 
     '      </div>';
   L = L.slice(0, pOpen) + intro + L.slice(pClose);
 }
-L = replaceOnce(L, /<p style="font-size:15px;color:var\(--tm\);font-family:var\(--ui\);margin-bottom:16px">Five cards[^<]*<\/p>/,
-  '<p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Twelve cards drawn from the premises, objections, concessions, and sources above. <b>Answer out loud before you flip</b> — the effort of recall is the whole point; a card you merely recognise hasn\'t stuck. Each card is graded: type the key idea, flip, mark it. Three correct recalls and a card rests; it comes back on Today when it is due.</p>',
-  'the "Five cards" intro');
+{
+  // the first <p> after the Drill 2 kick is the flashcard intro, whatever the legacy wording ("Five cards…", "Six cards…", "Cards pulled…", "Auto-generated…")
+  const d2 = L.indexOf('Drill 2 · Flashcards'); must(d2 > 0, 'Drill 2 kick');
+  const pOpen = L.indexOf('<p ', d2); const pClose = L.indexOf('</p>', pOpen) + 4;
+  must(pOpen > 0 && pClose > pOpen && pClose - pOpen < 1200, 'the flashcard intro paragraph');
+  L = L.slice(0, pOpen) + '<p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Twelve cards drawn from the premises, objections, concessions, and sources above. <b>Answer out loud before you flip</b> — the effort of recall is the whole point; a card you merely recognise hasn\'t stuck. Each card is graded: type the key idea, flip, mark it. Three correct recalls and a card rests; it comes back on Today when it is due.</p>' + L.slice(pClose);
+}
 L = replaceOnce(L, /Drill 3 · [^<]*<\/span>/, 'Drill 3 · The common objection (worked example)</span>', 'Drill 3 kick');
 {
   const d3 = L.indexOf('Drill 3 · The common objection'); const pOpen = L.indexOf('<p ', d3); const pClose = L.indexOf('</p>', pOpen) + 4;
