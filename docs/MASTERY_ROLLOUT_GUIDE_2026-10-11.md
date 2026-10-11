@@ -57,7 +57,7 @@ the rollout porting in Phase 2 must produce it.**
 
 | Step | What to do | Where | Gate |
 |---|---|---|---|
-| 1.1 | **Write down the page data contract.** Each new-standard page carries, in its inline script: `ARG_PREMISES` (3), `KEY_TERMS` (6–8), `DERIVE` rows, `cards` (12, each with a `front`, `back`, and a short `accept` regex or key-phrase list so it can be graded), `OBJ` (4 cold objections with certified replies), `UNSEEN` (1), `PRETEST` (1 objection + certified reply, may reuse OBJ[0]), `checks` (5 regexes). Put the contract at the top of `library/mastery-ui.js` as a comment and add a test in `tests/` that asserts every page containing `levelOf` has all the fields with the right counts. | `library/mastery-ui.js`, `tests/mastery-contract.test.mjs` (new) | No |
+| 1.1 | **Write down the page data contract.** Each new-standard page carries, in its inline script: `ARG_PREMISES` (3), `KEY_TERMS` (6–8), `DERIVE` rows, `cards` (12, each with a `front`, `back`, and a short `accept` regex or key-phrase list so it can be graded), `OBJ` (4 cold objections with certified replies), `UNSEEN` (1), `PRETEST` (1 objection + certified reply, may reuse OBJ[0]), `checks` (5 regexes). **Card rule: structure, not names.** Cards test the shape of the argument (premises, what each objection attacks, what the conclusion does and does not reach); never a scholar's name, a year or a page number as the answer. Memory for structure lasts years; names and dates decay first (Conway 1991). Put the contract at the top of `library/mastery-ui.js` as a comment and add a test in `tests/` that asserts every page containing `levelOf` has all the fields with the right counts. | `library/mastery-ui.js`, `tests/mastery-contract.test.mjs` (new) | No |
 | 1.2 | **Make the spaced review a real re-proof.** When an argument is due, the banner shows one Bronze chip set *or* one cold objection (alternate), graded by the existing checkpoint/regex code; only then show "I've still got it / Needs work", and record the grade from the result rather than the click. Gold's "3 spaced reviews" now means three passed re-proofs. | `lib/review-queue.js` (banner, ~134–157), reads the page's `OBJ` / chip data | No |
 | 1.3 | **Grade and schedule flashcards per card.** Flip stays, but the learner types or speaks a short answer first; grade with the card's `accept`; "correct 3× then it leaves today's set"; store per-card state in `ad_reviews[arg].cards`; feed the due cards into `/today`'s Review step through `lib/study-queue.js`. Then restore the "drop into your spaced deck" sentence, because it will be true. | `mastery-ui.js`, `review-queue.js`, `study-queue.js`, `today.html` | No |
 | 1.4 | **Pretest slot.** Above "The argument in brief", one box: *"A friend says: '…' What would you say right now?"* Save the attempt; at the Bronze checkpoint show it beside the certified reply. Uses `PRETEST`. | `mastery-ui.js`; page markup | Content is the existing OBJ text, so no new gate |
@@ -68,6 +68,8 @@ the rollout porting in Phase 2 must produce it.**
 | 1.9 | **Read-along audio** on the summary and on each objection reply, reusing `library/read-along.js`. | page include | No |
 | 1.10 | **Reminders tied to what is due.** `api/push.js`: if the user's `user_progress` has due items, send "N due, oldest: Kalam" instead of the rotating argument. `api/weekly-email.js`: add levels gained, retention rate, oldest due, the if-then plans. | `api/push.js`, `api/weekly-email.js` | Template copy only |
 | 1.11 | **Re-gate the 13** for any user-facing wording that changed (the checklist copy, the pretest frame, the banner). One merged round, all lenses, then stamp. | the 13 pages | Yes |
+| 1.12 | **Typed cloze, and fade the worked example.** The fill-in-the-blanks drill accepts a typed word per blank (graded against the blank; tap-to-reveal kept as a second chance) instead of reveal-only. Once a page reaches Silver, collapse the Drill 3 model reply by default (expertise reversal: scaffolds that help novices hurt learners who have moved past them). Shared code, so it reaches all 83 pages. | `lib/review-queue.js` (cloze, ~315–380), `mastery-ui.js` | No |
+| 1.13 | **Show the certified reply on quiz misses** in `daily-quiz.html`, `daily-mix.html` and `speed-round.html`: when an answer is wrong, show the stored certified reply beside the key, not just right/wrong. The reply text already exists and is gated; this is plumbing. Confident misses feed 1.7. | the three game pages | No |
 
 Exit test for Phase 1: a tester who has never seen Kalam cannot reach Gold without typing or
 selecting correct answers at least: 1 Bronze set, 1 Explain at level 3 scoring 8+, 4 cold objections,
@@ -123,7 +125,7 @@ Budget to expect: on the God's Existence conversion the per-page gate took 2–3
 
 | Step | What | Gate |
 |---|---|---|
-| 3.1 | **Single mistakes lane** on `/today`: misses from cards, cloze, Explain criteria, quizzes and the deck, each shown with the page's stored certified reply as the "why". Unify the three schedulers (`flashcards`, `ad_objdeck`, `ad_reviews`) into one store so `/today`, the dashboard, push and email read the same list. | Plumbing (explanations are stored text) |
+| 3.1 | **Single mistakes lane** on `/today`: misses from cards, cloze, Explain criteria, quizzes and the deck, each shown with the page's stored certified reply as the "why". Include the essay recall checkpoints (`library/active-reading.js`, live since 2026-07-24): a section the reader did not tick "I could recall it" becomes a due item here, answered by its curated takeaway (today `ad_read_<slug>` reaches nothing). Unify the three schedulers (`flashcards`, `ad_objdeck`, `ad_reviews`) into one store so `/today`, the dashboard, push and email read the same list. | Plumbing (explanations are stored text) |
 | 3.2 | **Retention readout and study calendar** on `coach.html` ("of reviews due in 30 days, you passed 71%"). | No |
 | 3.3 | **Flexible weekly goal** beside the streak. | No |
 | 3.4 | **"Explain it to a confused friend"** teach-back mode in `api/tutor.js` (new system prompt: crisis guard first, then argument + orthodoxy + neutrality). | Yes |
@@ -131,7 +133,8 @@ Budget to expect: on the God's Existence conversion the per-page gate took 2–3
 | 3.6 | **Tab-level closed-book exam** once a whole tab is on the new standard. | Content from existing certified items |
 
 Deferred on purpose: FSRS, widgets, offline practice, certificates, friend streaks (needs the age-screen
-SQL live and a privacy review).
+SQL live and a privacy review), and teach-one-argument-each in Study Groups (same mechanism as 3.4 but it
+needs a group that meets; revisit only if groups get traction).
 
 ---
 
