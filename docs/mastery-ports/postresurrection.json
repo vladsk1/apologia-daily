@@ -1,0 +1,358 @@
+{
+ "slug": "postresurrection",
+ "title": "Post-Resurrection Behaviour",
+ "short": "Post-Resurrection Behaviour",
+ "keyTerms": [
+  {
+   "t": "Inference to the best explanation",
+   "d": "The historian’s ordinary question: what cause best explains this pattern? The same reasoning a coroner or a detective uses. The claim is not that any single fact proves Jesus rose, but that, taken together, the facts form a shape."
+  },
+  {
+   "t": "Criterion of embarrassment",
+   "d": "The portrait of a collapsed, frightened band — “all left him and fled” (Mark 14:50) — is not the kind of thing a movement invents about its own heroes. It is preserved because it was remembered."
+  },
+  {
+   "t": "Sincerity, not truth",
+   "d": "What martyrdom rules out is deliberate fraud. People will die for what they wrongly believe to be true; they do not generally die for what they know to be a lie they themselves manufactured. Willingness to suffer secures sincerity, not the truth of what was sincerely held."
+  },
+  {
+   "t": "Mutation",
+   "d": "A departure from an inherited, conservative religion that has no obvious precedent — like a fossil, it preserves a record of the force that produced it. Hurtado calls the worship of Jesus a “mutation” rather than an importation."
+  },
+  {
+   "t": "Cultic devotion",
+   "d": "Prayer, hymn, invocation, and sacred meal — the devotion first-century Jewish monotheism reserved for the one God alone. Paul’s letters of the 50s already show Jewish believers directing it to Jesus."
+  },
+  {
+   "t": "Marana tha",
+   "d": "The Aramaic cry of 1 Corinthians 16:22, most naturally “Our Lord, come” — prayer to Jesus. The letters can also be divided as “our Lord has come.”"
+  },
+  {
+   "t": "“Received” and “delivered”",
+   "d": "Paul’s parelabon/paredōka — the technical idiom for transmitting fixed tradition, used of the Lord’s Supper (1 Corinthians 11:23–26) and paralleling 1 Corinthians 15:3."
+  },
+  {
+   "t": "Cognitive dissonance",
+   "d": "The theory that a group whose hopes are shattered by an unexpected disconfirmation does not collapse but rationalises the failure and proselytises all the harder. A genuine phenomenon — it explains persistence, not the content of what persisted."
+  }
+ ],
+ "derive": [
+  {
+   "q": "The witnesses kept proclaiming under lethal pressure, when falling silent would have ended the danger — so this rules out…?",
+   "ans": "deliberate fraud (not false belief)",
+   "why": "Sincere people die for false beliefs all the time. What martyrdom rules out is deliberate fraud: people do not generally die for what they know to be a lie they themselves manufactured. Sincerity is established; the truth of their conviction must be argued on other grounds."
+  },
+  {
+   "q": "Strict monotheists directed prayer, hymn and the divine name to a crucified man within two decades — so, on Hurtado’s reading, the development is…?",
+   "ans": "hard to explain by gradual drift",
+   "why": "Hurtado insists the cause cannot be a gradual evolutionary drift; the speed and intensity demand a precipitating force. On Hurtado’s reading — and the matter is debated — Judaism never folded any exalted figure into its worship, so the earliest believers were not stretching an existing category but doing the one thing their monotheism had always refused."
+  },
+  {
+   "q": "They built weekly rites around a specific death — so they believed that death was…?",
+   "ans": "vindicated",
+   "why": "Communities do not build weekly rites around the execution of a failed leader. They build them around a death they believe was vindicated."
+  },
+  {
+   "q": "The claim was preached, and grew fastest, in Jerusalem — so the venue is…?",
+   "ans": "the worst possible venue for a known falsehood",
+   "why": "Within walking distance of the tomb, before the very council that had secured the execution. A resurrection preached in Jerusalem could in principle have been ended by one produced corpse. It was not. (The point is the location, not the debated convert figures in Acts.)"
+  },
+  {
+   "q": "One proximate cause — they sincerely came to believe Jesus had been raised — already unifies all the behaviour. So what question remains?",
+   "ans": "what caused that belief",
+   "why": "The honest force of the argument is not that the behaviour resists a single cause, but that it presses the question back one step: what caused that belief, so suddenly, so early, and so resistant to the ordinary engines of grief, expectation, and legend?"
+  },
+  {
+   "q": "On its own, does this argument prove the empty tomb or that the appearances were real encounters?",
+   "ans": "no — those belong to the sibling arguments",
+   "why": "This one does not independently prove the empty tomb, nor that the appearances were real encounters with the risen Jesus. What it shows is a set of hard historical effects that genuinely require a cause — and that the cause the first Christians named accounts for all of them with a single explanation."
+  }
+ ],
+ "honestState": {
+  "p1": "The facts are very widely granted: the disciples’ sincere transformed conviction, the early and intense devotion to Jesus, the shift to Sunday, the new sacraments, the Jerusalem proclamation — affirmed across the spectrum from Wright to Hurtado to Ehrman. What is contested is the inference from the facts to a bodily resurrection as their cause. Sceptical scholars — Ehrman, the late Gerd Lüdemann and Maurice Casey — accept the data and reach for naturalistic causes (visions, dissonance, gradual development). The argument from behaviour does not pretend this debate is settled.",
+  "fairness": "A fair-minded sceptic will rightly note that these effects are not really six unrelated puzzles: one proximate cause, neutral between the rival accounts — the disciples sincerely came to believe Jesus had been raised — already unifies the behaviour, since people who hold that belief will worship, change their rites, and preach boldly. Granted. And the disciples’ willingness to die does not prove their belief true; it proves they were not knowing frauds.",
+  "verdict": "Its claim is narrower and, in its place, strong: the convergence of these effects is better explained by the cause the witnesses named than by any single naturalistic substitute. The resurrection itself answers the question of what caused that belief directly, while its competitors must each be made to bear weight, and even then struggle with the speed and the convergence. It is not the whole case for Easter, but it is a real and weighty part of it. And this is what we hold to be true: Jesus of Nazareth was bodily raised from the dead, and the wider case — the empty tomb, the failure of the alternatives, the conversions of James and Paul — shows it."
+ },
+ "order": [
+  "Within a generation of the crucifixion, the community’s costly practices changed.",
+  "People do not behave this way for claims they know to be false.",
+  "Therefore the witnesses sincerely believed — which retires fraud and presses the question back."
+ ],
+ "props": [
+  {
+   "t": "the witnesses were sincere",
+   "ok": true
+  },
+  {
+   "t": "they were not knowing frauds",
+   "ok": true
+  },
+  {
+   "t": "the pattern is real and demands a cause",
+   "ok": true
+  },
+  {
+   "t": "the question moves back: what caused the belief?",
+   "ok": true
+  },
+  {
+   "t": "prayer, hymn and the divine name are in the earliest sources",
+   "ok": true
+  },
+  {
+   "t": "their willingness to die proves the belief true",
+   "ok": false
+  },
+  {
+   "t": "any single one of these facts proves Jesus rose",
+   "ok": false
+  },
+  {
+   "t": "the behaviour resists any single cause",
+   "ok": false
+  },
+  {
+   "t": "the empty tomb, proved independently",
+   "ok": false
+  },
+  {
+   "t": "an apostle refused an offer of life for a denial",
+   "ok": false
+  }
+ ],
+ "cards": [
+  {
+   "q": "State Premise 1 — what changed?",
+   "a": "Within a generation of the crucifixion, the community’s costly practices changed: a crucified man was worshipped by monotheist Jews, worship moved toward the first day of the week, new rites appeared, and the founders proclaimed the claim under judicial threat."
+  },
+  {
+   "q": "State Premise 2 — and what exactly it rules out.",
+   "a": "People do not behave this way for claims they know to be false. What it rules out is deliberate fraud — not false belief. Sincere people die for false beliefs all the time."
+  },
+  {
+   "q": "What does the conclusion reach — and what does it not?",
+   "a": "It establishes that the witnesses sincerely believed, which retires fraud. It does not by itself prove the belief true; it presses the question back one step: what caused a belief this sudden, early and costly?"
+  },
+  {
+   "q": "“They never recanted” — how must that claim be read?",
+   "a": "Precisely: not that any apostle was offered his life in exchange for a denial and refused it, but that no recantation under lethal pressure is on record, when falling silent would have ended the danger at once."
+  },
+  {
+   "q": "Why is the worship of Jesus a mutation, not a familiar development?",
+   "a": "The concept of an exalted agent beside God was available, but on Hurtado’s reading (debated) none was folded into the cultic devotion reserved for the one God. Directing that devotion to Jesus while still reciting the Shema gave a crucified man the worship their religion reserved for God alone — not a second god, but the one God’s own worship."
+  },
+  {
+   "q": "Why does worshipping a CRUCIFIED man sharpen the point?",
+   "a": "Crucifixion was the most shameful death Rome could impose, and under the law a sign of God’s curse. For a monotheist to worship such a man is on its face inexplicable. Something overturned the verdict of the cross; the believers said it was the raising of Jesus."
+  },
+  {
+   "q": "What do the first-day gatherings and the new rites show — and the honest limit?",
+   "a": "The natural explanation for the day is the one the sources give: the day of the resurrection; and weekly rites were built around a death believed vindicated. Limit: the full transfer away from the Sabbath becomes clear only by the early second century."
+  },
+  {
+   "q": "Why does it matter that the proclamation began in Jerusalem?",
+   "a": "It is the worst possible venue for a known falsehood — near the tomb, before the council that secured the execution. One produced corpse could have ended it. The point is the location and the claim’s survival there, not the debated convert counts."
+  },
+  {
+   "q": "“One cause — sincere belief — already explains all the behaviour.” Reply?",
+   "a": "Granted. So the force of the argument is not that the behaviour resists a single cause; it presses the question back: what caused that belief, so suddenly, so early, and so resistant to grief, expectation, and legend? The resurrection answers that directly; the rivals struggle with the speed and the convergence. Rival accounts of the belief’s origin are taken up in the companion essays."
+  },
+  {
+   "q": "Cognitive dissonance — what does it explain, and what not?",
+   "a": "It explains persistence — a group saying “the end is merely delayed.” It does not explain the content of what persisted — bodily resurrection of one man, mid-history, worshipped as Lord — and it is far weaker at explaining a group saying “we saw him, the tomb is empty, come and check” in the city of the burial."
+  },
+  {
+   "q": "“Devotion grew slowly, and grief visions started it.” Reply?",
+   "a": "Concede the development. But prayer, hymn and the divine name are already in the earliest sources. Visions are private; they do not move a man to abandon the Sabbath or worship the deceased as God — a thin cause for an institutional revolution, and they do not explain the bodily-resurrection interpretation."
+  },
+  {
+   "q": "What does this argument NOT establish on its own?",
+   "a": "It does not independently prove the empty tomb, nor that the appearances were real encounters — those belong to the sibling arguments. It does not compel someone who holds a resurrection impossible on prior grounds; it shows the price of stacking naturalistic explanations is higher than it first appears."
+  }
+ ],
+ "obj": [
+  {
+   "who": "Skeptic",
+   "q": "People die for false beliefs all the time. All your martyrs prove is that they believed it.",
+   "model": "Agreed — and that concession is the argument’s whole job. What martyrdom rules out is deliberate fraud: people will die for what they wrongly believe to be true; they do not generally die for what they know to be a lie they themselves manufactured. So sincerity is established, and the truth of their conviction must be argued on other grounds. That presses the real question back one step: what caused that belief, so suddenly, so early, and so resistant to grief, expectation, and legend?"
+  },
+  {
+   "who": "Sociologist",
+   "q": "Bold preaching after a failure is exactly what cognitive dissonance predicts. Failed-prophecy groups proselytise harder.",
+   "model": "Dissonance-reduction is a genuine phenomenon, but the analogy strains at the decisive points. It can explain a group that says “the end is merely delayed”; it is far weaker at explaining a group that says “we saw him, the tomb is empty, come and check” in the city of the burial. Disappointed messianic movements in this period typically either dissolved or found a new leader. The model explains persistence; it does not explain the content of what persisted — bodily resurrection of one man, mid-history, worshipped as Lord."
+  },
+  {
+   "who": "Historian",
+   "q": "High Christology grew over time, and grief visions explain the start. No empty tomb or bodily rising is needed.",
+   "model": "Concede what is true: there was theological development, and visionary experience is a real human phenomenon. But the highest devotional practices — prayer, hymns, the divine name — are already present in our earliest sources, not merely at the end of a long curve. And bereavement visions are private; they do not move a man to abandon the Sabbath, reorganise his community around a new rite, or worship the deceased as God. Nor do they explain why the disciples interpreted those experiences as a bodily resurrection of one man, mid-history — the one category their tradition lacked. The behaviour outruns the proposed mechanism."
+  },
+  {
+   "who": "Skeptic",
+   "q": "Dying-and-rising saviours, sacred meals, divine men — the church just borrowed from the pagan world around it.",
+   "model": "The reply now dominant in scholarship is that the parallels are late, loose, or imposed. The closest analogues to a Lord-cult are pagan, but the worship of a recently executed contemporary by strict monotheists has no genuine pagan or Jewish precedent — which is precisely why it is called a mutation rather than an importation. Borrowing explains a detail here or there; it does not explain why monotheists, still confessing the one God, gave a crucified man the worship their religion reserved for God alone."
+  }
+ ],
+ "unseen": {
+  "who": "Skeptic",
+  "av": "SK",
+  "q": "The Easter stories are legends that grew in the telling. That’s just what happens to stories about religious heroes.",
+  "model": "For all that the four Gospels report of Easter, not one of them narrates the moment of rising itself — the event on which everything turns happens off the page. That is exactly the scene a storyteller improving a legend would most want to stage, and exactly the scene the later apocrypha did stage: the second-century Gospel of Peter supplies guards as eyewitnesses and three figures coming out of the tomb, two of a great height leading a third. That is what embellishment looks like. The canonical writers decline it; their refusal to narrate the one scene a legend most wants is a mark of fidelity to what was remembered rather than to what would persuade. The point is modest and cumulative, not a proof: it does not by itself establish the resurrection, but it tells against the theory that the accounts are legends, for legends of this improving kind rarely show this discipline.",
+  "source": "library/postres.html — section “A Restraint the Legends Could Not Manage” (footnotes 14–15)"
+ },
+ "explain2": "The hardest objection: one cause — that they sincerely came to believe Jesus had been raised — already explains all the behaviour. Answer it, then say what question that leaves.",
+ "ledger": [
+  {
+   "field": "title",
+   "from": "ev-m-postresurrection.html <h1> verbatim"
+  },
+  {
+   "field": "short",
+   "from": "same as the h1 (already short); page breadcrumb uses 'Behaviour'"
+  },
+  {
+   "field": "keyTerms[0]",
+   "from": "postres.html 'These are effects...' paragraph (IBE, coroner/detective, 'not that any single one of these facts proves')"
+  },
+  {
+   "field": "keyTerms[1]",
+   "from": "postres.html First Datum ¶1 + footnote 1 ('criterion of embarrassment')"
+  },
+  {
+   "field": "keyTerms[2]",
+   "from": "postres.html First Datum ¶2 (martyrdom rules out deliberate fraud; McDowell sincerity-not-truth sentence)"
+  },
+  {
+   "field": "keyTerms[3]",
+   "from": "postres.html Second Datum ¶1 ('departures... no obvious precedent... like fossils') + Borrowed reply ('mutation rather than an importation')"
+  },
+  {
+   "field": "keyTerms[4]",
+   "from": "postres.html mutation-not-development ¶ ('prayer, hymn, invocation, and sacred meal... reserved for the one God alone') + devotional ¶ ('Paul's letters of the 50s')"
+  },
+  {
+   "field": "keyTerms[5]",
+   "from": "postres.html devotional ¶ (Marana tha, both divisions)"
+  },
+  {
+   "field": "keyTerms[6]",
+   "from": "postres.html liturgical ¶ + footnote 9 (parelabon/paredōka, parallels 1 Cor 15:3)"
+  },
+  {
+   "field": "keyTerms[7]",
+   "from": "postres.html Gager objection + reply ('genuine phenomenon'; 'explains persistence; it does not explain the content')"
+  },
+  {
+   "field": "derive[0]",
+   "from": "postres.html First Datum ¶2 + ¶3 ('Sincerity is established; the truth... must be argued on other grounds')"
+  },
+  {
+   "field": "derive[1]",
+   "from": "postres.html Hurtado ¶ ('cannot be a gradual evolutionary drift; the speed and intensity demand a precipitating force') + mutation ¶"
+  },
+  {
+   "field": "derive[2]",
+   "from": "postres.html liturgical ¶ last two sentences, verbatim"
+  },
+  {
+   "field": "derive[3]",
+   "from": "postres.html Third Datum ¶ (worst possible venue; one produced corpse; Acts figures debated)"
+  },
+  {
+   "field": "derive[4]",
+   "from": "postres.html 'Putting the Inference Together' ¶ (presses the question back one step), verbatim"
+  },
+  {
+   "field": "derive[5]",
+   "from": "postres.html 'What the Argument Does and Does Not Establish' ¶1 + ¶2 first sentence"
+  },
+  {
+   "field": "honestState.p1",
+   "from": "postres.html 'The State of the Scholarship' ¶, compressed"
+  },
+  {
+   "field": "honestState.fairness",
+   "from": "postres.html 'Putting the Inference Together' (fair-minded sceptic... Granted.) + Does-Not-Establish ¶1 last sentence"
+  },
+  {
+   "field": "honestState.verdict",
+   "from": "postres.html State of the Scholarship ('narrower and, in its place, strong') + final ¶ ('not the whole case for Easter... real and weighty part'; own-voice bodily-resurrection sentence verbatim, also on the page's brief)"
+  },
+  {
+   "field": "order",
+   "from": "ev-m-postresurrection.html syllogism P1/P2/C, compressed (C keeps 'retires fraud and presses the question back')"
+  },
+  {
+   "field": "props (true)",
+   "from": "postres.html: 'Sincerity is established'; 'it proves they were not knowing frauds'; 'the pattern is real and demands a cause'; 'presses the question back'; 'highest devotional practices... already present in our earliest sources'"
+  },
+  {
+   "field": "props (decoys)",
+   "from": "postres.html explicit denials: 'willingness to die does not prove the resurrection true'; 'The claim is not that any single one of these facts proves Jesus rose'; 'not that the behaviour resists a single cause'; 'does not independently prove the empty tomb'; 'not that any apostle was offered his life in exchange for a denial and refused it'"
+  },
+  {
+   "field": "cards[0-2]",
+   "from": "page syllogism P1/P2/C + ARG_PREMISES; postres.html First Datum ('Sincere people die for false beliefs all the time')"
+  },
+  {
+   "field": "cards[3]",
+   "from": "postres.html First Datum ¶2 last sentence"
+  },
+  {
+   "field": "cards[4]",
+   "from": "postres.html mutation-not-development ¶ (incl. 'the matter is debated' hedge)"
+  },
+  {
+   "field": "cards[5]",
+   "from": "postres.html Hurtado/Bauckham ¶ last three sentences"
+  },
+  {
+   "field": "cards[6]",
+   "from": "postres.html liturgical ¶ (natural explanation; vindicated; full transfer early second century)"
+  },
+  {
+   "field": "cards[7]",
+   "from": "postres.html Third Datum ¶"
+  },
+  {
+   "field": "cards[8]",
+   "from": "postres.html 'Putting the Inference Together' ¶ / page one-cause accordion reply"
+  },
+  {
+   "field": "cards[9]",
+   "from": "postres.html Gager reply"
+  },
+  {
+   "field": "cards[10]",
+   "from": "postres.html Ehrman reply / page 'evolved slowly' accordion reply"
+  },
+  {
+   "field": "cards[11]",
+   "from": "postres.html 'What the Argument Does and Does Not Establish' ¶1"
+  },
+  {
+   "field": "obj[0]",
+   "from": "q compressed from page Drill 3 skeptic line + essay 'Sincere people die for false beliefs all the time'; model: page accordion 'that concession is this argument's whole job' + postres.html First Datum ¶2–3 + 'Putting the Inference Together'"
+  },
+  {
+   "field": "obj[1]",
+   "from": "q compressed from postres.html Gager objection; model from the Gager reply"
+  },
+  {
+   "field": "obj[2]",
+   "from": "q compressed from postres.html Ehrman objection ('no empty tomb or bodily rising is needed'); model from the Ehrman reply"
+  },
+  {
+   "field": "obj[3]",
+   "from": "q compressed from postres.html history-of-religions objection; model from its reply"
+  },
+  {
+   "field": "unseen",
+   "from": "postres.html 'A Restraint the Legends Could Not Manage' ¶ (Gospel of Peter description compressed from text + fn 14; Dudrey's 'a fabricator would have told the story better' left unattributed per card rule; closing hedge verbatim). q compressed from 'the theory that the accounts are legends'."
+  },
+  {
+   "field": "explain2",
+   "from": "page's own 'Hardest' flag on the one-cause objection + postres.html 'Putting the Inference Together'"
+  }
+ ],
+ "notes": "Authored framing only: the 'q' prompts of derive/cards/obj/unseen and the explain2 instruction are question stems, compressed from the essay's own statement of each objection (logged above); every answer/model sentence is ported or lightly compressed from library/postres.html or the page's certified text. Deliberately NOT ported from the current page: the Drill 3 / accordion line that hallucination is 'left without documented precedent, carrying a burden it has not discharged' and the old card 5 'the best explanation is that they saw what they said they saw' — library/postres.html makes neither claim (it defers rival accounts of the belief's origin to the companion essays), so they stay out of this graded layer. Also not ported: 'Heaven's Gate' (page-only, not in the essay), 'Conspiracies leak' and 'staking their souls' cards (page-authored, no essay sentence), and the Josephus catalogue of failed messianic movements (names/dates would violate the card rule). Martyrdom kept as 'willing to suffer' / 'would not fall silent', never 'all died for'. Unseen objection (legend) checked absent from the 4 obj, the page's six accordions, the premise-card objections (Ehrman, borrowed, one-cause, Gager) and the 12 cards; the nearest page item, 'Martyrdom traditions are late hagiography', concerns the apostles' death traditions, not the resurrection accounts. Not gated: this JSON is a port draft and owes the normal lens round before any of it reaches the page."
+}

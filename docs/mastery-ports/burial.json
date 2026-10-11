@@ -1,0 +1,258 @@
+{
+ "slug": "burial",
+ "title": "The Argument from the Burial",
+ "short": "The Burial",
+ "keyTerms": [
+  {
+   "t": "The pre-Pauline creed",
+   "d": "The formula Paul quotes in 1 Corinthians 15, which most scholars date to within a few years of the crucifixion. “He was buried” is one of the four load-bearing clauses of the oldest Christian confession we possess."
+  },
+  {
+   "t": "Pre-Markan passion source",
+   "d": "A connected narrative of Jesus’ final days that circulated before Mark wove it into his Gospel. Its specific dating is debated; that Mark drew on one is widely held."
+  },
+  {
+   "t": "Multiple independent attestation",
+   "d": "John’s burial account shows little sign of literary dependence on the Synoptics — so the burial is not a single story copied three times but a memory surfacing in independent channels."
+  },
+  {
+   "t": "The Sanhedrin (“the council”)",
+   "d": "The very body the Gospels portray as having handed Jesus over to Pilate — and the body Joseph of Arimathea, “a respected member of the council” (Mark 15:43), belonged to."
+  },
+  {
+   "t": "Criterion of embarrassment",
+   "d": "Embarrassing details are remembered because they happened, not because they help. A probabilistic tool, not a proof — and it has critics."
+  },
+  {
+   "t": "Same-day burial (Deuteronomy 21:22–23)",
+   "d": "The body of a hanged criminal “shall not remain all night on the tree, but you shall bury him the same day.” Jewish law made same-day burial of the executed a religious imperative."
+  },
+  {
+   "t": "Secondary burial",
+   "d": "Once the flesh had wasted — roughly a year later, by the ordinary practice — the family gathered the bones and reburied them in the ancestral tomb. Yehohanan’s bones were placed in an ossuary in this normal Jewish way."
+  },
+  {
+   "t": "Buried vs. a known, locatable tomb",
+   "d": "Two claims to keep distinct. That Jesus was buried is held by most critical scholars. That the tomb was known and locatable is better supported than its denials, but it is the genuinely debated point."
+  }
+ ],
+ "derive": [
+  {
+   "q": "The oldest Christian confession says “he was buried” — so the burial is…?",
+   "ans": "bedrock from the start",
+   "why": "Not a later embellishment but part of the original proclamation, set there to underline the reality of the death it followed. Honest limit: the creed does not name Joseph or describe a tomb."
+  },
+  {
+   "q": "All four Gospels, Mark’s early source, and a John that shows little sign of dependence — so the burial is…?",
+   "ans": "multiply attested, not copied",
+   "why": "It is the convergence that carries the weight, not any one line of it. The creed gives antiquity; Mark gives an early connected narrative; the four-Gospel spread gives independence. Take any single strand away and the others still stand."
+  },
+  {
+   "q": "The burier is a member of the very council that handed Jesus over — so the detail is…?",
+   "ans": "unlikely to be invented",
+   "why": "The point is not that a forger could not have invented Joseph but that he had no incentive to, and strong incentive not to. The criterion of embarrassment is a probabilistic tool, not a proof."
+  },
+  {
+   "q": "Deuteronomy, Josephus, Philo, and the Yehohanan ossuary — so in Jerusalem a burial was…?",
+   "ans": "expected, not exceptional",
+   "why": "Crossan’s reconstruction describes the empire at large; it does not describe Jerusalem under the constraints of Jewish law, Roman pragmatism, and the festival calendar. What Josephus establishes is the strength of the Jewish burial norm, not a claim that Rome invariably complied."
+  },
+  {
+   "q": "Grant every premise — does the burial reach the resurrection?",
+   "ans": "no — a location and a person, not a miracle",
+   "why": "The burial is the foundation; the resurrection is the building. One can grant every word of the argument and still ask, separately, what became of the body. The resurrection is an inference drawn from the empty tomb, the appearances, and the transformation of the witnesses taken together."
+  },
+  {
+   "q": "Does it reach a tomb that was known and locatable?",
+   "ans": "better supported than its denials — but debated",
+   "why": "That the tomb was known and locatable — the further step the empty-tomb argument needs — is the genuinely debated point, and it should be defended as such rather than smuggled in under the consensus that covers the burial itself."
+  }
+ ],
+ "honestState": {
+  "p1": "On the bare fact of the burial, the consensus is broad and crosses confessional lines. The live dissent is real but narrower than it first appears, and it runs along two fault lines. Crossan and a minority deny that Jesus received any known, identifiable burial, and Bart Ehrman, on independent grounds, has likewise argued that the burial tradition is doubtful; most critical scholars have not followed. McCane and others grant the burial but contest its honour; that debate leaves the foundational fact standing.",
+  "fairness": "A concession the case owes: crucifixion was meant to humiliate, and in much of the empire the denial of burial was indeed routine. The honest reply is not to deny the general Roman practice but to ask whether first-century Judaea was an exception. And what Josephus establishes is the strength of the Jewish burial norm, not a claim that Rome invariably complied; Philo mentions the festival clemency precisely because a brutal prefect had violated it, which itself shows the norm could be honoured or breached.",
+  "verdict": "Two claims should be kept distinct. That Jesus was buried is held by most critical scholars; on that bare fact, most sceptics and believers agree. That the tomb was known and locatable is, in our judgment, better supported than its denials, but it is the genuinely debated point. The burial is the first stone of the arch, not the keystone — and a sceptic who hopes to dissolve the whole resurrection case by denying the burial at the outset has, on the present evidence, chosen the worst possible place to make a stand."
+ },
+ "order": [
+  "The burial is attested early and independently — “he was buried” in the early creed; all four Gospels name Joseph of Arimathea.",
+  "A burial by a named member of the condemning court is embarrassing and checkable — a probabilistic criterion, not a proof.",
+  "Therefore Jesus was buried — whether the tomb was known and locatable is the debated step."
+ ],
+ "props": [
+  {
+   "t": "Jesus was really buried",
+   "ok": true
+  },
+  {
+   "t": "the burial is in the earliest creed",
+   "ok": true
+  },
+  {
+   "t": "attested in independent channels",
+   "ok": true
+  },
+  {
+   "t": "a burial in Jerusalem was expected, not exceptional",
+   "ok": true
+  },
+  {
+   "t": "a forger had strong incentive not to invent Joseph",
+   "ok": true
+  },
+  {
+   "t": "the tomb was later found empty, by this argument alone",
+   "ok": false
+  },
+  {
+   "t": "the resurrection, by this argument alone",
+   "ok": false
+  },
+  {
+   "t": "Rome always released the crucified for burial",
+   "ok": false
+  },
+  {
+   "t": "a known, locatable tomb is the consensus",
+   "ok": false
+  },
+  {
+   "t": "the criterion of embarrassment is a proof",
+   "ok": false
+  }
+ ],
+ "cards": [
+  {
+   "q": "State Premise 1 — where is the burial attested?",
+   "a": "In the pre-Pauline creed (“he was buried”) and in all four Gospels, which name Joseph of Arimathea, resting on Mark’s early source and on John, which shows little sign of literary dependence. Every surviving line of tradition has Jesus buried; the variations concern who did it — Acts 13:29 credits the Jerusalem authorities generically — never whether it happened."
+  },
+  {
+   "q": "What does the creed’s “he was buried” establish — and what does it not?",
+   "a": "That the burial was bedrock from the start — part of the original proclamation, not a later embellishment. It does not name Joseph or describe a tomb; the narrative detail comes in the Gospels."
+  },
+  {
+   "q": "Why does the convergence of sources matter more than any one source?",
+   "a": "The creed gives antiquity; Mark gives an early connected narrative; the four-Gospel spread gives independence. Take any single strand away and the others still stand."
+  },
+  {
+   "q": "State Premise 2 — why does Joseph resist invention?",
+   "a": "He belongs to the very council the Gospels portray as handing Jesus over. A movement with every motive to cast the leadership as villains would not invent a pious Sanhedrist — not that a forger could not, but that he had no incentive to, and strong incentive not to."
+  },
+  {
+   "q": "The criterion of embarrassment is contested, and Luke and John soften Joseph — reply?",
+   "a": "The caution is accurate as far as it goes, and the criterion is probabilistic, not a proof. But the trajectory runs the wrong way for the sceptic: the earliest form gives the most awkward version, and the later Gospels relieve the embarrassment rather than create it — a hard fact being managed, not a fiction being born."
+  },
+  {
+   "q": "How do the name and the women corroborate Premise 2?",
+   "a": "A named council member tied to a specific town is a dangerous thing to fabricate before an audience that could, in principle, ask after him. And in a culture where women’s testimony could be ruled inadmissible, putting women at the tomb is the last thing a fabricator polishing his case would do. Both details point the same way."
+  },
+  {
+   "q": "The crucified were left for the birds and dogs — what does this objection attack, and what is the reply?",
+   "a": "It attacks the foundation: no burial, no tomb, nothing for an empty tomb to be empty of. Reply: not to deny the general Roman practice, but to ask whether first-century Judaea was an exception — and the evidence that it was is considerable. The Gospels’ burial is what the convergence of law, politics, and archaeology would lead us to expect."
+  },
+  {
+   "q": "What does the Jewish testimony about burial establish — and not?",
+   "a": "The strength of the Jewish burial norm — the religious expectation that the executed be interred the same day — not a claim that Rome invariably complied. The festival clemency is reported because it had been violated, so the norm could be honoured or breached."
+  },
+  {
+   "q": "What does the crucified man’s ossuary show — and what did the later re-examination change?",
+   "a": "A man crucified under Roman rule in the very city and roughly the very period of Jesus, given a proper Jewish burial. The re-examination corrected the anatomical reconstruction, not the two facts that carry the weight: he was crucified, and he was afterwards buried."
+  },
+  {
+   "q": "“Buried, yes — but shamefully, in a criminal’s tomb” — what does this dispute?",
+   "a": "The manner of the burial, not its reality. A shameful burial is, if anything, more securely historical, because it is even less likely to be invented. The load-bearing fact survives: Jesus was buried."
+  },
+  {
+   "q": "What two claims must be kept distinct?",
+   "a": "That Jesus was buried — held by most critical scholars. That the tomb was known and locatable — better supported than its denials, but the genuinely debated point, to be defended as such rather than smuggled in under the consensus."
+  },
+  {
+   "q": "What does the argument establish — and not?",
+   "a": "A location and a person, not a miracle. It does not by itself establish that the tomb was later found empty, still less the resurrection — an inference drawn from the empty tomb, the appearances, and the transformation of the witnesses taken together, which this Library defends elsewhere: that Jesus rose bodily from the dead."
+  }
+ ],
+ "obj": [
+  {
+   "who": "Skeptic",
+   "q": "Rome did not do funerals for rebels. The body went to the dogs, the Joseph story is pious fiction, and without a tomb your whole empty-tomb case is hot air.",
+   "model": "As a general imperial statement, partly true — in much of the empire the denial of burial was routine. But Crossan’s reconstruction describes the empire at large, not Jerusalem. Deuteronomy commanded same-day burial; Josephus says Jews buried even crucified men before sunset, which establishes the strength of the Jewish burial norm, not that Rome invariably complied; Philo records festival clemency, mentioned because a brutal prefect had violated it; and Yehohanan, crucified under Roman rule in the very city and roughly the very period of Jesus, had his bones gathered by his family into an ossuary in the normal Jewish way. Jesus was buried; that the tomb was known and locatable is better supported than its denials, but it is the genuinely debated point."
+  },
+  {
+   "who": "Literary critic",
+   "q": "A wealthy secret sympathiser appearing from nowhere to provide a convenient tomb — Joseph reads like a plot device.",
+   "model": "Plot devices serve the plot; Joseph embarrasses it — a member of the very council that handed Jesus over honours him while the disciples hide. The early movement had every motive to cast the Jewish leadership as villains; a named council member is a dangerous thing to fabricate before an audience that could, in principle, ask after him. And the earliest form gives the most awkward version — the later Gospels soften it, the signature of a hard fact being managed."
+  },
+  {
+   "who": "Historian",
+   "q": "Grant Jesus was buried — but as a criminal, hastily and shamefully, without mourning rites. The Gospels softened a disgrace into a kindness.",
+   "model": "That disputes the manner of the burial, not its reality — and it actually strengthens the core claim. A shameful burial is, if anything, a more securely historical datum, because it is even less likely to be invented: a movement proclaiming its Lord’s vindication would not gratuitously fabricate his being dumped in a criminals’ plot. Jesus was buried. Whether the tomb was also known and locatable is the further, genuinely debated step — argued, not assumed."
+  },
+  {
+   "who": "Skeptic",
+   "q": "The creed says only that he “was buried” — no tomb, no Joseph. And Acts 13:29 has the Jerusalem authorities, not a sympathetic councilman, lay him in a tomb.",
+   "model": "The creed compresses; it does not float free of events. Each line summarises a known narrative, and the burial it compresses is attested in every surviving line of tradition; the variation — Acts 13:29 credits the Jerusalem authorities generically — is over who buried him, never whether he was buried. Joseph, on Mark’s account, was himself a member of the council. And the creed names no city, no governor and no festival either: silence in a summary is not denial."
+  }
+ ],
+ "unseen": {
+  "who": "Skeptic",
+  "av": "SK",
+  "q": "Maybe Jesus merely fainted on the cross. A burial tells you where a body was put — not that the man was dead.",
+  "model": "The burial itself answers that. A body was not released for burial until the executioners were satisfied their work was done. The burial is, in effect, the Roman and Jewish authorities’ public sign-off that Jesus was dead — which is why the much later “swoon” theory, on which Jesus merely fainted, founders on the burial as much as on the medical facts. (What happened on the cross is treated in its own place in this Library.)",
+  "source": "library/burial.html — “Why the burial is the foundation”, first job (“it certifies the death”); scope line from the opening section."
+ },
+ "explain2": "The hardest objection: Crossan’s — that crucified men were left unburied, so there was no known tomb.",
+ "ledger": [
+  {
+   "field": "title",
+   "from": "ev-m-burial.html <h1>, verbatim."
+  },
+  {
+   "field": "keyTerms",
+   "from": "library/burial.html: Premise 1 section (creed, pre-Markan source, John’s independence), Premise 2 section (Mark 15:43, Sanhedrin, embarrassment ‘remembered because they happened’, ‘probabilistic tool, not a proof’), Premise 3 reply (Deut 21:22–23), McCane section ¶ on m. Sanhedrin 6:5–6 (secondary burial) + Yehohanan para, ‘The state of the question’ (two claims distinct). Term labels are glossary headings, not claims."
+  },
+  {
+   "field": "derive",
+   "from": "library/burial.html Premise 1 (creed honest limit; ‘It is the convergence that carries the weight…’), Premise 2 (‘no incentive to, and strong incentive not to’; ‘probabilistic tool’), Crossan reply close (‘Crossan’s reconstruction describes the empire at large…’) + Josephus bound, ‘The argument, stated carefully’ (location and person, not a miracle; foundation/building), ‘What the argument does and does not establish’, ‘The state of the question’ (known/locatable debated). The q prompts are question framings of those sentences."
+  },
+  {
+   "field": "honestState",
+   "from": "p1: ‘The state of the question’ ¶1 + ¶3 (two fault lines). fairness: Crossan section (‘in much of the empire the denial of burial was indeed routine… honest reply is not to deny…’) + Premise 3 reply (Josephus bound; Philo clemency). verdict: ‘The state of the question’ ¶3 (‘in this essay’s judgment’ → ‘in our judgment’, as the page already has it) + closing section (‘first stone of the arch, not the keystone’; ‘worst possible place to make a stand’)."
+  },
+  {
+   "field": "order",
+   "from": "ev-m-burial.html certified syllogism (P1, P2, ∴C) and ARG_PREMISES, compressed."
+  },
+  {
+   "field": "props",
+   "from": "True: essay Premise 1, Premise 3 reply close, Premise 2 (‘strong incentive not to’), state of the question (‘That Jesus was buried is held by most critical scholars’). Decoys each explicitly denied by the essay: empty tomb (‘does not, by itself, establish that the tomb was later found empty’); resurrection (‘Still less does it establish the resurrection’); Rome always complied (‘not a claim that Rome invariably complied’; ‘permission could be withheld’); known tomb as consensus (‘rather than smuggled in under the consensus’); embarrassment as proof (‘a probabilistic tool, not a proof’)."
+  },
+  {
+   "field": "cards",
+   "from": "1: page P1 + ARG_PREMISES. 2: essay Premise 1 creed para. 3: essay ‘It is the convergence…’. 4: essay Premise 2 ¶1–2. 5: essay Premise 2 concession para + page accordion reply. 6: essay Premise 2 ‘Two corroborating features’. 7: essay Crossan section + reply. 8: essay Premise 3 Josephus/Philo. 9: essay Yehohanan + Haas/Zias–Sekeles paras (no name/year as the answer). 10: essay McCane ¶2. 11: essay state-of-the-question ¶3. 12: essay ‘What the argument does and does not establish’ (bodily resurrection in our own voice, as the essay has it)."
+  },
+  {
+   "field": "obj[0]",
+   "from": "q: page Drill 3 skeptic line, compressed. model: page accordion ‘Romans left crucified men on crosses’ reply + Drill 3 model answer + essay Crossan reply + page ∴C hedge."
+  },
+  {
+   "field": "obj[1]",
+   "from": "q: page accordion ‘Joseph of Arimathea is a literary invention’ strongest form (Arimathea-location clause dropped). model: that accordion’s reply + essay Premise 2 (motive to cast leadership as villains; trajectory of softening)."
+  },
+  {
+   "field": "obj[2]",
+   "from": "q: essay McCane section (‘hasty, shameful disposal… without mourning rites… softened a disgrace into a kindness’). model: essay McCane ¶2 + Evans close (‘argued, not assumed’)."
+  },
+  {
+   "field": "obj[3]",
+   "from": "q + model: essay Premise 1 Ehrman paragraph, near-verbatim, with the 2026-09-24 Acts 13:29 bound kept (‘credits the Jerusalem authorities generically’; Joseph ‘on Mark’s account’ a council member). The page’s added clause ‘which is why Paul can assume an emptied tomb without arguing it’ deliberately NOT ported — the essay instead says whether the grave was known is a separate, debated question."
+  },
+  {
+   "field": "unseen",
+   "from": "model: essay ‘Why the burial is the foundation’, first job, verbatim + opening-section scope line (‘What happened on the cross is treated elsewhere in this Library’). Swoon appears nowhere on ev-m-burial.html (grep: 0 hits for swoon/faint) and in none of the 4 obj or 12 cards; deliberately kept out of derive and props too so it stays cold."
+  },
+  {
+   "field": "explain2",
+   "from": "ev-m-burial.html objections intro (‘The one that matters most: John Dominic Crossan’s — that crucified men were left unburied, so there was no known tomb’)."
+  }
+ ],
+ "notes": "Authored framing only, no new claims: (1) the derive q prompts, card questions and obj speaker labels (‘Literary critic’, ‘Historian’) are question framings; (2) the unseen q is a compression of the essay’s own one-clause description of the swoon theory (‘on which Jesus merely fainted’) put in a speaker’s mouth; (3) obj[2] q is the McCane position from the essay put in a speaker’s mouth. Not ported, deliberately: the page accordion ‘Mark wrote 40 years later’ (its Alexander-sources comparison is not in the essay), the page’s ‘Paul can assume an emptied tomb without arguing it’ (stronger than the essay’s hedge), and the page’s ‘Mark’s rock-hewn tomb… John notes’ trench-grave reply (not in the essay). The essay’s ¶94 phrase ‘laid in an identifiable tomb by an identifiable man’ was NOT used in props/cards because it sits in tension with the essay’s own ‘known and locatable is the genuinely debated point’; the bounded wording was used everywhere instead. The Matthew 28:13 ‘stolen body’ point (third job of the burial) was not carded, to keep the deck at 12 structural cards. Card 6 drops the Josephus attribution and quote on women’s testimony so the answer is the structure, not a source."
+}
