@@ -1,0 +1,149 @@
+# Mastery rollout guide — the implementation plan from the 2026-10-11 assessment
+
+Companion to [`SITE_ASSESSMENT_2026-10-11.md`](SITE_ASSESSMENT_2026-10-11.md). That document says *what* is
+wrong and why; this one says *in what order to fix it, step by step*, so any session can pick it up.
+Owner question answered first.
+
+---
+
+## The sequencing decision: standard first, then rollout
+
+**Recommendation: fix the standard on the 13 converted pages first, then roll it out to the 70. Do not
+convert the 70 to today's Kalam and fix everything afterwards.**
+
+Why, in plain terms:
+
+1. **Most of the fixes live in shared code, not in the pages.** The spaced-review banner, calibration,
+   fill-in-the-blanks and "Teach me this" are injected at runtime by `lib/review-queue.js` and
+   `library/mastery-ui.js`. A fix there reaches all 83 pages at once, whichever order you choose. So the
+   order question is really about the **per-page content** (cards, objections, the unseen objection, key
+   terms), and that content must be shaped to fit the fixed mechanics.
+2. **A converted page is a gated page.** Every one of the 70 conversions costs a gate round at the page's
+   tier (dual consensus on Jesus, Trinity and Resurrection). If the template changes after a page is
+   converted, any copy the change touches has to be re-gated on that page. Changing the template once on
+   13 pages is cheaper than changing it twice on 83.
+3. **The 70 would inherit the two dishonest bits.** Today's Gold is earned by three clicks on "I've still
+   got it", and the flashcard copy promises a spaced deck that does not exist. Rolling that out means 70
+   more pages making a promise the site cannot keep, on a site whose whole pitch is "checked before
+   published".
+4. **Timebox it.** The standard-fixing phase must not become a reason to delay the rollout. The items in
+   Phase 1 are plumbing, scoped to two shared files and a data-shape rule. One to two sessions.
+
+The one thing that should NOT wait: the five live defects in Phase 0. They are independent of the
+mastery work and two of them are on the first pages a new visitor sees.
+
+---
+
+## Phase 0 — live defects (one session; do before anything else)
+
+| Step | What to do | Gate | Done when |
+|---|---|---|---|
+| 0.1 | **Beginner's Path.** Replace the Day-1 takeaway ("even atheist scientists agree… that's not faith, that's logic") with wording ported from `ev-m-kalam.html`'s certified "argument in brief". Run argument + orthodoxy on the whole page. Add `/^beginners-path\.html$/` to `CONTENT_PATTERNS` in `tools/check-content-review.mjs` and stamp the page **in the same commit**. | Yes | CI green; page carries a `content-review` stamp. |
+| 0.2 | **Evidence Library demo.** In `evidence-library.html` (~line 1269), skip `startDemo` when the viewport is under 700px; keep the pulsing button. | No | On a phone, first visit shows the hero unobstructed. |
+| 0.3 | **Dead dashboard stats.** Either write `debateCount` (from `debate-arena.html` on debate end), `askUsage` (from `ask-anything.html`), `daily_arg_complete` (from `today.html`), or remove the tiles and the belt points that read them. | No | Dashboard numbers move after one debate / one question. |
+| 0.4 | **Flashcard sentence** on the 13 pages: change "They drop into your spaced-repetition deck…" to a true sentence until Phase 1.2 lands (e.g. "Answer out loud before you flip; the whole argument returns for review on a spaced schedule"). | Copy only (editorial note on stamp, lens dates unchanged) | grep for the old sentence returns 0. |
+| 0.5 | **Shelf counts** ("Argument 12 of 19", "Twenty-one more"): compute from the tab's page list, or reword. | No | No hard-coded totals on the 13 pages. |
+
+Verify after: `node --test tests/*.test.mjs`, `node tools/check-content-review.mjs --changed`,
+`node tools/check-retired-claims.mjs`, `node tools/check-orthodoxy-tripwires.mjs`. Push to `main`.
+
+---
+
+## Phase 1 — fix the standard on the 13 converted pages (one to two sessions)
+
+Goal: when this phase ends, Kalam is the template the 70 will be copied from, and every mechanic on it
+is honest. Work only on shared files plus the 13 pages. **Define the data shape first (1.1), because
+the rollout porting in Phase 2 must produce it.**
+
+| Step | What to do | Where | Gate |
+|---|---|---|---|
+| 1.1 | **Write down the page data contract.** Each new-standard page carries, in its inline script: `ARG_PREMISES` (3), `KEY_TERMS` (6–8), `DERIVE` rows, `cards` (12, each with a `front`, `back`, and a short `accept` regex or key-phrase list so it can be graded), `OBJ` (4 cold objections with certified replies), `UNSEEN` (1), `PRETEST` (1 objection + certified reply, may reuse OBJ[0]), `checks` (5 regexes). Put the contract at the top of `library/mastery-ui.js` as a comment and add a test in `tests/` that asserts every page containing `levelOf` has all the fields with the right counts. | `library/mastery-ui.js`, `tests/mastery-contract.test.mjs` (new) | No |
+| 1.2 | **Make the spaced review a real re-proof.** When an argument is due, the banner shows one Bronze chip set *or* one cold objection (alternate), graded by the existing checkpoint/regex code; only then show "I've still got it / Needs work", and record the grade from the result rather than the click. Gold's "3 spaced reviews" now means three passed re-proofs. | `lib/review-queue.js` (banner, ~134–157), reads the page's `OBJ` / chip data | No |
+| 1.3 | **Grade and schedule flashcards per card.** Flip stays, but the learner types or speaks a short answer first; grade with the card's `accept`; "correct 3× then it leaves today's set"; store per-card state in `ad_reviews[arg].cards`; feed the due cards into `/today`'s Review step through `lib/study-queue.js`. Then restore the "drop into your spaced deck" sentence, because it will be true. | `mastery-ui.js`, `review-queue.js`, `study-queue.js`, `today.html` | No |
+| 1.4 | **Pretest slot.** Above "The argument in brief", one box: *"A friend says: '…' What would you say right now?"* Save the attempt; at the Bronze checkpoint show it beside the certified reply. Uses `PRETEST`. | `mastery-ui.js`; page markup | Content is the existing OBJ text, so no new gate |
+| 1.5 | **Discrimination drill ("which argument answers this?")** as a Gold sub-requirement: 3 objections from this argument + 2 from sibling arguments on the same tab (pulled from `objections.json`), learner picks the argument first, then answers. | `mastery-ui.js`, `objections.json` (66 of 83 arguments have entries; add the missing 17 during Phase 2) | Plumbing; any new objection text is gated |
+| 1.6 | **If-then plans after Silver.** Two fields: "If someone says… / I'll start with…". Store in `ad_ifthen` keyed by argument; add `ad_ifthen` to `progress-sync.js`'s synced keys; show them in the next due review and in the weekly email. | `mastery-ui.js`, `progress-sync.js`, `api/weekly-email.js` | No |
+| 1.7 | **One calibration widget.** Merge the injected predict-your-score and the page's "be honest" row; confident-wrong items (predicted ≥7, scored ≤5) go to the front of the next review. | `review-queue.js`, page markup | No |
+| 1.8 | **Count only the highest Explain level** toward Silver; hide the page body while recalling (a "hide the page" toggle on Drill 1). | page script (`explainLevels`), `mastery-ui.js` | No |
+| 1.9 | **Read-along audio** on the summary and on each objection reply, reusing `library/read-along.js`. | page include | No |
+| 1.10 | **Reminders tied to what is due.** `api/push.js`: if the user's `user_progress` has due items, send "N due, oldest: Kalam" instead of the rotating argument. `api/weekly-email.js`: add levels gained, retention rate, oldest due, the if-then plans. | `api/push.js`, `api/weekly-email.js` | Template copy only |
+| 1.11 | **Re-gate the 13** for any user-facing wording that changed (the checklist copy, the pretest frame, the banner). One merged round, all lenses, then stamp. | the 13 pages | Yes |
+
+Exit test for Phase 1: a tester who has never seen Kalam cannot reach Gold without typing or
+selecting correct answers at least: 1 Bronze set, 1 Explain at level 3 scoring 8+, 4 cold objections,
+1 unseen, 3 passed spaced re-proofs on 3 different days, and 5 discrimination items.
+
+---
+
+## Phase 2 — roll the standard out to the 70 pages (the long phase)
+
+Order: **Resurrection (8) → Jesus (21) → Biblical Reliability (11) → Science (7) → Trinity (15) →
+Christian Revolution (6)** (plus the 2 remaining God's Existence pages, cosmic and design, if they are
+not already in the 13). Resurrection first because it is the flagship cluster, has 8 pages, and the
+premise-defence ports there were clean in three rounds.
+
+**Per page, in this order (one page = one unit of work; batch 3–5 per session, same tab):**
+
+1. **Read the paired essay in full** (resolve it by `<link rel="canonical">`, not filename). Then read
+   the existing mastery page in full, including `ARG_PREMISES`, `cards`, `checks`.
+2. **Port, never author.** Fill the Phase 1.1 contract from the essay and the ev-s card:
+   - `KEY_TERMS`: the essay's own definitions.
+   - `DERIVE`: the "what follows" lines (for non-cosmological arguments: the properties or facts the
+     argument establishes, each as a reveal row).
+   - "The honest state of the debate": the essay's bounded verdict and its named critics.
+   - Bronze chip set: 6 true properties/claims + 4 decoys; decoys must be things the essay explicitly
+     denies the argument reaches (e.g. "proves the Trinity").
+   - 12 `cards` with `accept` phrases taken from the essay's wording.
+   - 4 `OBJ` with replies ported verbatim from the essay's objection sections.
+   - 1 `UNSEEN`: an objection the essay answers but the page's §1 and Drill 4 do not show. Record in
+     the stamp which essay section it was ported from.
+   - 3 Explain levels: level 2's objection is `OBJ`'s hardest.
+   - `PRETEST`: reuse the "Common" objection.
+   - Add any missing `objections.json` entries for the argument (for the discrimination drill).
+3. **Replace the legacy script**: remove the 4-checkpoint state, `FRESH_MS`, the debate-box rule;
+   install the B/S/G block from the template. Fix the dial intro, the flashcard intro, the shelf line.
+4. **Mechanical checks before any gate**: `node --test tests/*.test.mjs` (includes the contract test
+   and inline-script syntax), `check-footnote-integrity`, `check-retired-claims`,
+   `check-orthodoxy-tripwires`, `check-content-review --changed`.
+5. **Gate, one merged round, all lenses, as READ-ONLY Explore agents** (hash the files before and
+   after; never accept an agent's own account of what it changed). Diff the graded layer first:
+   `ARG_PREMISES`, `cards`, `checks`, `OBJ`, `UNSEEN`, the Bronze chips. Fix all findings together;
+   re-gate; stamp. Expect 2 rounds; if round 3 finds mostly your own authored strings, stop and port.
+6. **Mirror.** If the argument has an MK/ES mastery mirror, sync it in the same commit (AI-translated,
+   stamped "pending native gate"), or log the lag in `tools/mirror-parity-ledger.json`.
+7. **Regenerate counted figures** (`build-sources-index`, `build-our-sources`, `update-trust-numbers`)
+   if any essay or source changed; push to `main`.
+
+Budget to expect: on the God's Existence conversion the per-page gate took 2–3 rounds. Plan on roughly
+3–5 pages per working session, so 70 pages is about 15–25 sessions of content work.
+
+---
+
+## Phase 3 — cross-page features (after at least one full tab is converted)
+
+| Step | What | Gate |
+|---|---|---|
+| 3.1 | **Single mistakes lane** on `/today`: misses from cards, cloze, Explain criteria, quizzes and the deck, each shown with the page's stored certified reply as the "why". Unify the three schedulers (`flashcards`, `ad_objdeck`, `ad_reviews`) into one store so `/today`, the dashboard, push and email read the same list. | Plumbing (explanations are stored text) |
+| 3.2 | **Retention readout and study calendar** on `coach.html` ("of reviews due in 30 days, you passed 71%"). | No |
+| 3.3 | **Flexible weekly goal** beside the streak. | No |
+| 3.4 | **"Explain it to a confused friend"** teach-back mode in `api/tutor.js` (new system prompt: crisis guard first, then argument + orthodoxy + neutrality). | Yes |
+| 3.5 | **Arena: transcript, weakest turn, certified reply, retry-the-turn.** | Yes if `api/debate.js` changes |
+| 3.6 | **Tab-level closed-book exam** once a whole tab is on the new standard. | Content from existing certified items |
+
+Deferred on purpose: FSRS, widgets, offline practice, certificates, friend streaks (needs the age-screen
+SQL live and a privacy review).
+
+---
+
+## How to start a session on this guide
+
+Paste this at the start of a session:
+
+> Work from `docs/MASTERY_ROLLOUT_GUIDE_2026-10-11.md`, Phase N, step N.N. Read the assessment it links
+> first. Measure, don't estimate; port, don't author; run the mechanical checks before any gate; run gate
+> lenses as read-only Explore agents and hash files before and after; a fix pass re-opens the gate.
+> Record what did not run. Report the exit test result for the phase.
+
+Definition of done for the whole programme: all 83 `ev-m-*.html` pages pass the contract test; no page
+contains `FRESH_MS`; the live review banner requires a graded re-proof; the flashcard sentence is true;
+`/today`, the dashboard, push and email agree on what is due.
