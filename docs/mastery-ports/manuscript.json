@@ -1,0 +1,370 @@
+{
+ "slug": "manuscript",
+ "title": "The Manuscript Reliability Argument",
+ "short": "New Testament manuscript reliability",
+ "keyTerms": [
+  {
+   "t": "Transmission, not truth",
+   "d": "The question here is one of transmission, not truth: can we reconstruct, with confidence, what the original authors wrote? Establishing that we possess the authors’ words tells us nothing, by itself, about whether those words are true — the Iliad is splendidly preserved, and no one thinks that settles the existence of Zeus."
+  },
+  {
+   "t": "Textual criticism",
+   "d": "The discipline of comparing the surviving witnesses to recover what an author wrote. It is far older than the apologetic use to which it is sometimes put, and it is the ordinary method applied to Homer, Plato, Tacitus, and every other ancient author — not special pleading invented for the Bible."
+  },
+  {
+   "t": "Branching transmission",
+   "d": "Manuscript transmission is not a single whispered chain, as in the game of telephone. Copies were carried to Egypt, Syria, Rome, and Asia Minor, translated into Latin, Coptic and Syriac, and quoted across the Mediterranean, so the streams cross-check one another; a vast, geographically scattered tradition cannot easily bury the original in every branch at once."
+  },
+  {
+   "t": "Textual variant",
+   "d": "Any point at which the manuscripts differ. Estimates of the total run somewhere between 200,000 and 400,000 (scholars’ estimates differ) — a by-product of abundance, not of corruption, since more manuscripts mechanically produce more recorded disagreements. The overwhelming majority are spelling differences, word-order slips, and obvious copying errors."
+  },
+  {
+   "t": "Meaningful and viable",
+   "d": "Daniel B. Wallace’s two independent tests for a variant: does it change the sense (meaningful), and does it have a serious claim to be what the author wrote (viable)? On his sorting the variants fall into four groups, and only the meaningful-and-viable group — which he estimates at less than one percent of all variants — is a live candidate for the original."
+  },
+  {
+   "t": "The “strict text”",
+   "d": "The most careful category in Kurt and Barbara Aland’s classification of manuscript quality, reserved for copies made with unusual discipline; P75 is its exemplar. Not every early papyrus was copied so strictly — the Alands label others, such as P66 and P45, “free.”"
+  },
+  {
+   "t": "Initial text",
+   "d": "The form from which the surviving tradition descends. Modern editors increasingly speak of reconstructing the “initial text” rather than the autograph itself, because for some passages — the ending of Mark is the classic example — the search for a single original wording may be genuinely indeterminate. A refinement at the margins, not a collapse at the center."
+  },
+  {
+   "t": "Independent comparanda",
+   "d": "Critical editions built on different foundations by different methods. Gregory Lanier’s collations found the Tyndale House Greek New Testament agreeing with the standard Nestle-Aland text in about 98.8 percent of its wording, and even the opposite-method Byzantine text agreeing with the older critical text in roughly 92 to 93 percent. Part of edition-to-edition agreement is editorial conservatism, which is why these independent comparisons carry the weight."
+  }
+ ],
+ "derive": [
+  {
+   "q": "More copies, made by more fallible scribes — does that make the original harder or easier to find…?",
+   "ans": "easier: different scribes make different errors",
+   "why": "Each independent line of copying introduces its own errors — but different scribes make different errors. When you lay many independent copies side by side, a slip in one is exposed by the dozens that do not share it. The original reading tends to survive somewhere in the stream, and the comparison of witnesses lets you triangulate back toward it."
+  },
+  {
+   "q": "The manuscripts carry hundreds of thousands of variants — so the size of that number reflects…?",
+   "ans": "the abundance of witnesses, not corruption",
+   "why": "More manuscripts mechanically produce more recorded disagreements; a tradition surviving in three copies would have almost no variants, while one surviving in thousands generates hundreds of thousands. The decisive question is not how many variants there are but what kind they are."
+  },
+  {
+   "q": "An early, strictly copied papyrus closely matches a codex copied a century and a half later — so the agreement shows…?",
+   "ans": "a faithful line of transmission, not a lucky match",
+   "why": "P75 is not merely old but demonstrably careful, so its closeness to Codex Vaticanus reflects a faithful line of transmission. When we can actually compare a copy from around AD 200 with one from around AD 350, we find not wild drift but stability. It is powerful corroboration that the text was being copied carefully — not a photograph of the first decades."
+  },
+  {
+   "q": "We can name the longer ending of Mark and the Johannine Comma as later additions — so the deliberate changes show…?",
+   "ans": "the method works: it is how we know about them",
+   "why": "We can name these passages precisely because the comparative method flagged them as later additions, which is why modern critical Bibles bracket or footnote them. The discipline is not defeated by the intentional changes; the discipline is how we know about them. Whether some were theologically motivated is Ehrman’s further, more contested claim."
+  },
+  {
+   "q": "At John 1:18 the witnesses divide between “the only Son” and “the only God” — so does the deity of Christ hang on the choice…?",
+   "ans": "no — it rests on a broad range of texts",
+   "why": "The weighty variants genuinely change how a single verse reads — at John 1:18 the witnesses divide between “the only Son” and “the only God, who is at the Father’s side” (ESV) — yet the choice lies between two orthodox readings, and neither overturns a teaching the rest of the New Testament does not establish on its own. The deity of Christ rests on a broad range of texts, not on how that one verse is decided."
+  },
+  {
+   "q": "Grant it all: we read what the authors wrote. Does that show the contents are true…?",
+   "ans": "no — truth is argued separately, on other grounds",
+   "why": "A defender who slides from “the text is well preserved” to “therefore Christianity is true” has committed a fallacy. What good transmission does is clear the ground, so the questions that bear on truth — how early the Gospels were written, whether they rest on eyewitness testimony, and above all whether Jesus rose from the dead — can be argued on first-century evidence."
+  }
+ ],
+ "honestState": {
+  "p1": "The substance of this argument is accepted by the great majority of working textual critics — and, on its central point, by Bart Ehrman, the agnostic scholar whose Misquoting Jesus popularized the variant problem. There is broad agreement across the ideological spectrum that the New Testament is by far the best-attested text of antiquity, that the great majority of variants are trivial, and that no central Christian teaching hangs on a contested reading. The live debates are narrower and more technical: how to date particular early fragments (Pasquale Orsini and Willy Clarysse widen P52 to about AD 125–175); whether “original text,” “initial text,” or “living text” is the right editorial goal (David C. Parker presses the last); how much intentional theological alteration occurred and how early (Ehrman); and how to model the unobserved second-century transmission. These are real disagreements among serious people, but they are disagreements about the second decimal place, not about whether we have roughly the right book.",
+  "fairness": "Honest defenders concede the observations. Some alterations were intentional — Ehrman has demonstrated that — though whether they were theologically motivated is his further and more contested claim. The great majority of the Greek copies are later, medieval manuscripts, so the raw total is not itself the argument. Our manuscripts still begin after a gap of one to several generations from the autographs, the period we can least directly observe, and the P75–Vaticanus stability is not a photograph of the first decades. For some passages the original wording may be genuinely indeterminate. But the inference does not follow: this is a convergence argument — abundance, antiquity, geographic spread, cross-checking, the P75–Vaticanus stability, and the patristic citations all pointing the same way — and the evidence that does bear on the unobserved gap tells against wholesale alteration. As an argument that we lack what the authors wrote, it does not hold.",
+  "verdict": "The manuscript evidence establishes, with as much confidence as historical method allows, that the New Testament has been accurately preserved — that the text we read today is, in all but a handful of marginal and well-flagged cases, what the first-century authors wrote. It is not a late, anonymous legend rewritten beyond recognition across the centuries, and on the narrower point that no essential Christian belief turns on a textual variant, even the discipline’s most prominent skeptic agrees. But it does not prove the contents of the New Testament true, nor show that the miracles happened or that the authors were honest and in a position to know. Reliable transmission is the foundation the arguments about truth stand on, not a substitute for them: we can be confident we are reading what the apostolic generation wrote, and whether what they wrote is true is the conversation that begins where this one ends."
+ },
+ "order": [
+  "A text whose manuscript tradition is early, abundant, and in broad agreement can be reconstructed to what its authors originally wrote.",
+  "The New Testament has exactly such a tradition.",
+  "Therefore the New Testament we read faithfully transmits what its authors wrote — accurate preservation, not proof that its contents are true."
+ ],
+ "props": [
+  {
+   "t": "the text we read is substantially what the authors wrote",
+   "ok": true
+  },
+  {
+   "t": "the variant count reflects abundance, not corruption",
+   "ok": true
+  },
+  {
+   "t": "no essential Christian belief turns on a textual variant",
+   "ok": true
+  },
+  {
+   "t": "the NT is by far the best-attested text of antiquity",
+   "ok": true
+  },
+  {
+   "t": "removes the “late legend, rewritten beyond recognition” objection",
+   "ok": true
+  },
+  {
+   "t": "proves the contents of the New Testament true",
+   "ok": false
+  },
+  {
+   "t": "shows the authors were honest and in a position to know",
+   "ok": false
+  },
+  {
+   "t": "every variant is trivial — none changes how a verse reads",
+   "ok": false
+  },
+  {
+   "t": "the doctrine of the Trinity rests on the Johannine Comma",
+   "ok": false
+  },
+  {
+   "t": "P52 is securely dated to AD 125",
+   "ok": false
+  },
+  {
+   "t": "Ehrman estimates under one percent of variants are meaningful and viable",
+   "ok": false
+  }
+ ],
+ "cards": [
+  {
+   "q": "What question does this argument answer — and which question does it leave open?",
+   "a": "It answers a question of transmission: can we reconstruct, with confidence, what the original authors wrote? It leaves open the question of truth — whether the miracles happened, whether Jesus rose — which is argued separately, on separate grounds."
+  },
+  {
+   "q": "Why do many copies by fallible scribes help rather than hurt?",
+   "a": "Different scribes make different errors, so a slip in one copy is exposed by the dozens that do not share it. The original reading tends to survive somewhere in the stream, and comparing the witnesses lets you triangulate back toward it."
+  },
+  {
+   "q": "What can a small tradition hide that a large, scattered one cannot?",
+   "a": "A small tradition — three copies in one place — can hide a corruption in every surviving witness. A vast, geographically scattered one, carried across regions and languages, cannot easily bury the original in every branch at once."
+  },
+  {
+   "q": "Why is the raw count of Greek manuscripts not itself the argument?",
+   "a": "The great majority of those Greek copies are later, medieval manuscripts. The weight lies in the early witnesses and their wide geographic spread, not in sheer number."
+  },
+  {
+   "q": "What does the P75–Vaticanus agreement show — and what does it not show?",
+   "a": "Where a strictly copied papyrus from around AD 200 overlaps a fourth-century codex, the two are remarkably close: not wild drift but stability, the empirical check the “telephone” worry demands. It is powerful corroboration of careful copying — not a photograph of the first decades."
+  },
+  {
+   "q": "Why does the argument survive if P75 is dated later?",
+   "a": "Its date rests on paleography and carries real uncertainty, but the argument turns on how carefully it was copied — it is the exemplar of the Alands’ “strict text” — not on the exact decade. The honest form is narrow: other early papyri, such as P66 and P45, are classed “free.”"
+  },
+  {
+   "q": "Why is the variant count not news — and how was it first answered?",
+   "a": "In 1707 John Mill’s Greek New Testament catalogued some 30,000 variants; in 1713 the deist Anthony Collins argued they left the text uncertain, and Richard Bentley answered him the same year that the true text is not lost but dispersed among the copies. The abundance of variants is a function of the abundance of witnesses."
+  },
+  {
+   "q": "What are the two tests for sorting variants, and which group matters?",
+   "a": "Is a reading meaningful (does it change the sense)? Is it viable (does it have a serious claim to be original)? Only the meaningful-and-viable group is a live candidate for the original — under one percent of all variants, on Daniel B. Wallace’s estimate."
+  },
+  {
+   "q": "Is the meaningful-and-viable sliver all trivial?",
+   "a": "No — it would be a cheat to pretend so. Some members are doctrinally weightless (a single vowel at Romans 5:1), but others carry real exegetical interest, such as “compassion” or “anger” at Mark 1:41. Even then, the choice lies between two orthodox readings, and none threatens an article of the faith."
+  },
+  {
+   "q": "What does the leading skeptic concede?",
+   "a": "In a written exchange appended to later editions of Misquoting Jesus, Bart Ehrman agrees with Bruce Metzger “that the essential Christian beliefs are not affected by textual variants,” and says a jointly reconstructed text would differ in “maybe one or two dozen places out of many thousands.” The under-one-percent figure is Wallace’s, not Ehrman’s."
+  },
+  {
+   "q": "What do the famous deliberate changes — the longer ending of Mark, the Johannine Comma — actually show?",
+   "a": "That the method works: we can name them because comparison flagged them as later additions, and none establishes a doctrine the rest of the New Testament does not teach independently. The Comma is the most theologically loaded interpolation, and the doctrine of the Trinity rests not an ounce on it."
+  },
+  {
+   "q": "Why do comparisons between independently built editions matter more than the old-to-new edition figure?",
+   "a": "Part of edition-to-edition agreement is editorial conservatism, since later editors begin from the received text. Editions reached by contrary routes landing close together (about 98.8 percent, and even roughly 92 to 93 percent for the opposite-method Byzantine text) is real evidence the text is recoverable — though a stably transmitted text is one worth arguing about, not one thereby proved."
+  }
+ ],
+ "obj": [
+  {
+   "who": "Skeptic",
+   "q": "There are somewhere between 200,000 and 400,000 variants (scholars’ estimates differ) — as Bart Ehrman puts it, “there are more variations among our manuscripts than there are words in the New Testament.” The New Testament has roughly 138,000 Greek words, and the variants outnumber them. How can anyone claim to possess the original wording when the copies disagree that many times?",
+   "model": "The headline number is real, but it is a by-product of abundance, not of corruption: more manuscripts mechanically produce more recorded disagreements, and a tradition surviving in three copies would have almost none. The decisive question is not how many variants there are but what kind they are. The overwhelming majority are spelling differences, word-order slips that Greek’s flexible grammar renders meaningless in translation, and obvious copying errors; Daniel B. Wallace estimates that less than one percent are both meaningful and viable, and even those lie between readings no article of faith depends on. Nor is the objection new: when John Mill’s 1707 edition catalogued some 30,000 variants and the deist Anthony Collins argued in 1713 that they left the text uncertain, Richard Bentley answered him the same year: the true text is not lost but dispersed among the copies. And Ehrman himself agrees with Bruce Metzger “that the essential Christian beliefs are not affected by textual variants.” So the count does not show we have lost the text — the “thousands of variants” headline, in substance, was answered before it was modern. (That is a claim about preservation, not yet about whether the contents are true.)"
+  },
+  {
+   "who": "Textual critic",
+   "q": "Some changes were not innocent slips but deliberate alterations — scribes sharpening the text’s Christology, harmonizing the Gospels, settling theological disputes. Bart Ehrman documents them in The Orthodox Corruption of Scripture. So the transmission was an interested relay, and the text we have was shaped by the very debates it was later used to adjudicate.",
+   "model": "Ehrman is right that some alterations were intentional; he has demonstrated that. Whether they were theologically motivated — as opposed to reverent smoothing or harmonizing — is his further and more contested claim, which the identifiable, catalogued nature of these changes does not by itself establish. But notice what follows: we can name these passages — the longer ending of Mark, the woman caught in adultery, the Johannine Comma — precisely because the comparative method flagged them as later additions. Harmonizing, one of the commonest deliberate changes, conforms a passage to a parallel the scribe received as already fixed, which is why textual critics can recover the earlier, non-harmonized reading. And the famous cases are few, identifiable, and none establishes a doctrine that the rest of the New Testament does not teach independently; the Comma is the most theologically loaded interpolation in the tradition, and the doctrine of the Trinity rests not an ounce on it. So the discipline is not defeated by the intentional changes; the discipline is how we know about them."
+  },
+  {
+   "who": "Textual critic",
+   "q": "For the earliest Christians the Gospel tradition was fluid and performed, not a fixed wording to be transcribed — David C. Parker’s “living text.” So the very idea of a single recoverable “original text” may be the wrong question, and the apologist is chasing a phantom the early church itself never treated as a fixed target.",
+   "model": "Grant the observation beneath it while refusing the inference drawn from it. It is true that for some passages — the ending of Mark is the classic example — the search for a single original wording may be genuinely indeterminate, and the discipline has grown more cautious about the very phrase “the original text”; modern editors increasingly speak of reconstructing the “initial text,” the form from which the surviving tradition descends. But this is a refinement at the margins, not a collapse at the center. The fluidity Parker documents operates within narrow bounds: the substance of the narratives, the sayings, the letters of Paul, is stable across the tradition. So the objection does not reach its conclusion: granting that a handful of passages resist a single resolution is a long way from granting that we cannot recover what the authors substantially wrote."
+  },
+  {
+   "who": "Skeptic",
+   "q": "You keep retreating to “substantially” what the authors wrote. But the early period you cannot observe is exactly where the most consequential changes would have happened, while the text was new, uncontrolled, and theologically up for grabs — so your measured stability after AD 200 is stability of an already-altered text.",
+   "model": "The gap is real: our manuscripts begin one to several generations after the autographs, and that window is the period we can least directly observe. But the objection proves less than it needs to. It is a claim about a possibility in a period we lack direct evidence for — and the indirect evidence we do have constrains it. The second-century church fathers quote the Gospels and Paul copiously, and their citations, though often loose and from memory, show the same books in recognizably the same form as the text we reconstruct; the geographic spread happened early, leaving little time for a single controlled revision to reach every branch before it diverged; and the Christological changes Ehrman identifies were typically caught precisely because they entered the tradition after it had already branched. A hypothetical wholesale alteration in the dark decades is conceivable, but conceivability is not evidence: the objection rests on a gap in the record, and the evidence that does bear on that gap tells against it. As an argument that we lack what the authors wrote, it does not hold."
+  }
+ ],
+ "unseen": {
+  "who": "History student",
+  "av": "HS",
+  "q": "Fine — the copying was careful. But the Gospels themselves were written decades after the events they describe. A source at that distance from what it reports shouldn’t be treated as history at all.",
+  "model": "Historians rely with confidence on Tacitus, whose Annals was written around AD 116, and on Suetonius, whose Lives of the Caesars appeared around AD 121, even though much of what they report happened decades to over a century before they wrote — a gap as large as or larger than the distance between the Gospels and the life of Jesus. So the objection does not hold as stated: a source can remain usable at such a remove, and the New Testament is simply being treated as an ordinary historical source rather than held to a uniquely severe standard. That parallel must be stated with care: it does not show that what the Gospels report is true, and temporal proximity does not guarantee the truth of what is reported. Whether the events actually happened is, for the New Testament as for Tacitus, a further question settled on other grounds.",
+  "source": "library/manuscript.html — Conclusion, the Tacitus/Suetonius temporal-gap paragraph + fn 18 (Syme, Tacitus, 1958). q AUTHORED — declared (the essay answers this objection but never states it in an objector’s voice); model ported, with ‘So the objection does not hold as stated’ as the declared landing clause."
+ },
+ "explain2": "the objection that the measured stability starts around AD 200 — the unobserved second century is where changes would have happened",
+ "ledger": [
+  {
+   "field": "title",
+   "from": "ev-m-manuscript.html <h1> “The Manuscript Reliability Argument” verbatim."
+  },
+  {
+   "field": "short",
+   "from": "essay title subject (‘Are the New Testament Manuscripts Reliable?’), as a lower-case noun phrase."
+  },
+  {
+   "field": "keyTerms[0]",
+   "from": "essay §Stating the Question Carefully, paras 1–2, verbatim with compression."
+  },
+  {
+   "field": "keyTerms[1]",
+   "from": "essay §How the Argument Developed opening + §Premise 1 para 3 (‘None of this is special pleading… Homer, Plato, Tacitus’), verbatim. No per-author copy counts used."
+  },
+  {
+   "field": "keyTerms[2]",
+   "from": "essay §Premise 1 para 2 (telephone vs branching), verbatim with compression."
+  },
+  {
+   "field": "keyTerms[3]",
+   "from": "essay §The Strongest Objection para 2 (‘somewhere between 200,000 and 400,000 textual variants (scholars’ estimates differ)’) + §A Reply para 1 (abundance not corruption; overwhelming majority trivial). Range framed exactly as the essay frames it; never a bare ‘400,000’."
+  },
+  {
+   "field": "keyTerms[4]",
+   "from": "essay §What the Disputed Variants Actually Look Like para 1 + §A Reply para 1 Wallace estimate; attributed to Wallace, never Ehrman."
+  },
+  {
+   "field": "keyTerms[5]",
+   "from": "essay §Premise 2 para 3 (Aland ‘strict text’, P75 exemplar; P66/P45 ‘free’), verbatim."
+  },
+  {
+   "field": "keyTerms[6]",
+   "from": "essay §A Reply, Parker paragraph (‘initial text’; ‘refinement at the margins, not a collapse at the center’), verbatim."
+  },
+  {
+   "field": "keyTerms[7]",
+   "from": "essay §The Honest State of Scholarship para 2 (Lanier; THGNT ~98.8%; Byzantine ~92–93%; editorial-conservatism caveat), verbatim with compression."
+  },
+  {
+   "field": "derive[0]",
+   "from": "essay §Premise 1 para 1, verbatim."
+  },
+  {
+   "field": "derive[1]",
+   "from": "essay §A Reply para 1, verbatim."
+  },
+  {
+   "field": "derive[2]",
+   "from": "essay §Premise 2 paras 2–3 + §A Reply ‘Honesty requires’ para (‘not a photograph of the first decades’)."
+  },
+  {
+   "field": "derive[3]",
+   "from": "essay §A Reply, deliberate-changes paragraph, verbatim with compression; the theological-motivation hedge kept."
+  },
+  {
+   "field": "derive[4]",
+   "from": "essay §What the Disputed Variants Actually Look Like para 2 (John 1:18; ‘two orthodox readings’; ‘rests on a broad range of texts’)."
+  },
+  {
+   "field": "derive[5]",
+   "from": "essay §Stating the Question para 2 (the fallacy) + Conclusion para 3 (‘clear the ground’; the three truth questions)."
+  },
+  {
+   "field": "honestState.p1",
+   "from": "essay §The Honest State of Scholarship para 1, verbatim, with names attached from §The Strongest Objection (Ehrman, Parker) and §A Reply ‘Honesty requires’ (Orsini & Clarysse, AD 125–175)."
+  },
+  {
+   "field": "honestState.fairness",
+   "from": "essay §A Reply deliberate-changes para (concession) + §Premise 2 para 1 (medieval majority) + ‘Honesty requires’ para (gap; not a photograph; convergence argument) + Parker para (indeterminate passages) + final reply para (‘As an argument that we lack what the authors wrote, it does not hold’)."
+  },
+  {
+   "field": "honestState.verdict",
+   "from": "essay Conclusion paras 1 and 3, verbatim with compression."
+  },
+  {
+   "field": "order",
+   "from": "essay §Stating the Question para 3 (formal P1/P2/C) + ev-m-manuscript.html ARG_PREMISES; line 3’s fence compresses the Conclusion (‘accurately preserved… It does not prove the contents of the New Testament true’)."
+  },
+  {
+   "field": "props (true)",
+   "from": "essay Conclusion para 1 (accurately preserved; not a late legend; no essential belief turns on a variant), §A Reply para 1 (abundance not corruption), §The Honest State para 1 (‘by far the best-attested text of antiquity’), §Stating para 2 (removes the late-legend objection)."
+  },
+  {
+   "field": "props (decoys)",
+   "from": "each explicitly denied: ‘It does not prove the contents of the New Testament true’ / ‘does not show… that the authors were honest, or that they were in a position to know’ (Conclusion); ‘it would be a cheat to pretend the whole category is that light… genuinely change how a single verse reads’ (Disputed Variants); ‘the doctrine of the Trinity rests not an ounce on it’ (A Reply); P52’s ‘date… is disputed… about AD 125–175’ (Honesty requires); the under-one-percent estimate is Wallace’s (A Reply para 1), and the certified page objection reply says attributing it to Ehrman is an error a reader can check."
+  },
+  {
+   "field": "cards[0]",
+   "from": "essay §Stating the Question para 1."
+  },
+  {
+   "field": "cards[1]",
+   "from": "essay §Premise 1 para 1."
+  },
+  {
+   "field": "cards[2]",
+   "from": "essay §Premise 1 para 2 closing sentences."
+  },
+  {
+   "field": "cards[3]",
+   "from": "essay §Premise 2 para 1 (‘the raw total is not itself the argument’)."
+  },
+  {
+   "field": "cards[4]",
+   "from": "essay §Premise 2 para 2 + ‘Honesty requires’ para."
+  },
+  {
+   "field": "cards[5]",
+   "from": "essay §Premise 2 para 3, verbatim with compression."
+  },
+  {
+   "field": "cards[6]",
+   "from": "essay §A Reply para 2 (Mill 1707, Collins 1713, Bentley 1713 — paraphrased, as the essay paraphrases him; ‘dispersed’ kept)."
+  },
+  {
+   "field": "cards[7]",
+   "from": "essay §Disputed Variants para 1 + §A Reply para 1 Wallace estimate."
+  },
+  {
+   "field": "cards[8]",
+   "from": "essay §Disputed Variants para 2 (Rom 5:1; Mark 1:41; ‘two orthodox readings’; ‘not one of which threatens an article of the faith’)."
+  },
+  {
+   "field": "cards[9]",
+   "from": "essay §A Reply para 3 + fn 13 (Ehrman, Misquoting Jesus Plus ed., 2007, p. 252 — page in ledger only); Wallace/Ehrman attribution line from the certified page objection reply."
+  },
+  {
+   "field": "cards[10]",
+   "from": "essay §A Reply, deliberate-changes paragraph, verbatim with compression."
+  },
+  {
+   "field": "cards[11]",
+   "from": "essay §The Honest State para 2 (Lanier) + its closing ‘two honesties’."
+  },
+  {
+   "field": "obj[0]",
+   "from": "essay §The Strongest Objection para 2 (statement) + §A Reply paras 1–3 (reply, Mill/Bentley, Ehrman concession) + §Disputed Variants close. Distinct from the kept Drill 3 model answer (abundance + kind + Ehrman in conversational voice); this model adds the Wallace estimate, the 1707/1713 history, and the bounded landing."
+  },
+  {
+   "field": "obj[1]",
+   "from": "essay §The Strongest Objection para 3 (statement) + §A Reply deliberate-changes paragraph (reply), compressed."
+  },
+  {
+   "field": "obj[2]",
+   "from": "essay §The Strongest Objection para 4 (Parker statement) + §A Reply Parker paragraph, verbatim with compression."
+  },
+  {
+   "field": "obj[3]",
+   "from": "essay §A Reply ‘And here the last objection should go to the critic’ (statement verbatim) + ‘Honesty requires’ (gap concession) + final reply paragraph, verbatim."
+  },
+  {
+   "field": "unseen",
+   "from": "essay Conclusion para 2 (Tacitus/Suetonius) + fn 18 (‘a source can remain usable at such a remove; it does not imply that temporal proximity guarantees the truth’). q AUTHORED — declared. Not stated as an objection anywhere on ev-m-manuscript.html (Tacitus appears there only in the ‘Homer, Plato, Tacitus’ method list; Suetonius not at all) and absent from the four obj, every card and every derive row."
+  },
+  {
+   "field": "explain2",
+   "from": "ev-m-manuscript.html .hardest line (‘The one that matters most: that the measured stability starts around AD 200 — the unobserved second century is where changes would have happened’), recast as a noun phrase."
+  }
+ ],
+ "notes": "Paired essay read in full: library/manuscript.html (body, all 18 footnotes, bibliography, FAQ). Kept page read in full: ev-m-manuscript.html (summary, syllogism, premise-defence accordions, all objection accordions, sources cards, Drill 3, ARG_PREMISES, cards, checks). DECLARED AUTHORED (name to every lens): (1) unseen.q — the essay answers the temporal-gap objection in its Conclusion but never states it in an objector’s voice, so the objector’s wording is mine; (2) the landing clauses ‘So the objection does not hold as stated’ (unseen.model), ‘So the count does not show we have lost the text’ (obj[0].model) and ‘So the objection does not reach its conclusion’ (obj[2].model) — added only to land an explicit verdict, each immediately followed by the essay’s own verdict sentence; (3) order[2]’s appended fence ‘— accurate preservation, not proof that its contents are true’ compresses the Conclusion. Also scaffolding, no new claim: derive[].q/ans, card questions, and obj[0]’s closing parenthesis, which compresses §Stating para 2. BOUNDS KEPT: preservation≠truth stated in keyTerms[0], derive[5], honestState.verdict, order[2], the props decoys, cards[0], cards[11], obj[0] and unseen; the variant total always as ‘somewhere between 200,000 and 400,000 (scholars’ estimates differ)’, never a bare 400,000; the under-one-percent figure always attributed to Wallace, never Ehrman (a props decoy tests exactly this); Ehrman’s concession quoted verbatim and attributed; no per-author classical copy counts (no Plato/Homer figures — the essay gives only ‘a few dozen to a few hundred copies… 700 to 1,000 years’, and even that is not ported into a card); no ‘virtually all’ (only ‘the great majority of working textual critics’, the essay’s own phrase); P52 never given as a secure AD 125; Bentley paraphrased, not quoted, as the essay does; the Comma/Trinity and John 1:18/deity lines carry the essay’s ‘rests not an ounce’ / ‘broad range of texts’ wording. No entry in tools/retired-claims.json touches this topic, and none is reinstated. NOT CONTRADICTED / NOT DUPLICATED: the kept Drill 3 (variant-count skeptic, conversational model) is not reused verbatim — obj[0] answers the same objection with different, essay-ported material; the kept accordions for telephone, ‘earliest copies late’, ‘scribes deliberately changed’ and ‘a reliable text isn’t a true text’ are not duplicated as obj (telephone and truth are carried in keyTerms/derive instead). BACKLOG ISSUES NOTICED IN THE KEPT PAGE (not fixed): (a) the ‘Scribes deliberately changed the text for theology’ accordion reply calls the intentional changes ‘doctrinally minor’ — stronger than the essay, which calls the Comma ‘the most theologically loaded interpolation’ and bounds the point to ‘none establishes a doctrine the rest of the NT does not teach independently’; that reply also omits the essay’s theological-motivation concession; (b) the summary says P52 is ‘within a few decades of composition’, where the essay says ‘perhaps within half a century, and on any dating within a few generations’; (c) kept flashcard 2 and the chip row use ‘multiple (independent) text-families’, phrasing the essay never uses; (d) the Kenyon sources card restates his ‘remove any doubt’ claim without the essay’s fn 2 caveat (‘Kenyon’s strong summary judgment, not a consensus statement of the discipline’); (e) the next-argument panel says ‘Twenty-one more’ / ‘1 of 22’ while the dial note says ‘Argument 14 of 19’ — a count inconsistency. Nothing I could not source. || 2026-10-12 gate R1 (Biblical Reliability): Bentley answered Collins in 1713, not Mill in 1707 — a regression of a previously fixed error (BREAK, citations) fixed in obj[0] and cards[6]; p1 'real disagreements among serious people' restored; John 1:18 quoted with the Father-distinguishing clause; props[4] 'rewritten beyond recognition'. DECLINED (lens-authored replacements of essay-verbatim strings — rule 8): the 'theologically motivated… contested' and Parker 'narrow bounds' lines → essay backlog BR-RB-5."
+}

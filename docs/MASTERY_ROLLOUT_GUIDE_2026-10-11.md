@@ -101,7 +101,11 @@ premise-defence ports there were clean in three rounds.
      argument establishes, each as a reveal row).
    - "The honest state of the debate": the essay's bounded verdict and its named critics.
    - Bronze chip set: 6 true properties/claims + 4 decoys; decoys must be things the essay explicitly
-     denies the argument reaches (e.g. "proves the Trinity").
+     denies the argument reaches (e.g. "proves the Trinity"). **STANDING RULE (Biblical Reliability tab,
+     2026-10-15): every decoy must carry a VERB on the argument** — "proves / requires / by itself rules
+     out / settles …" — because a bare proposition graded false reads as the site denying the proposition
+     itself (e.g. the bare decoy "the inclusio is a recognized ancient convention" → "the inclusio settles
+     whose testimony stands behind Mark").
    - 12 `cards` with `accept` phrases taken from the essay's wording.
    - 4 `OBJ` with replies ported verbatim from the essay's objection sections.
    - 1 `UNSEEN`: an objection the essay answers but the page's §1 and Drill 4 do not show. Record in
@@ -157,3 +161,39 @@ Paste this at the start of a session:
 Definition of done for the whole programme: all 83 `ev-m-*.html` pages pass the contract test; no page
 contains `FRESH_MS`; the live review banner requires a graded re-proof; the flashcard sentence is true;
 `/today`, the dashboard, push and email agree on what is due.
+
+## ✅ Biblical Reliability tab (11 pages) — DONE 2026-10-15
+
+All 11 `ev-m-*` Biblical Reliability pages (archaeology, canon, coincidences, consistency, deadseascrolls,
+earlydate, eyewitnesses, jewishness, manuscript, names, prophecy) carry the Bronze/Silver/Gold standard and
+are four-lens gated (rounds 1–3, READ-ONLY Explore/Opus agents, md5-checked before/after every round, git
+status/log verified). **Round 2 (16 reports, all four lenses × 11 pages): orthodoxy 11/11 CLEAN (0 HERESY,
+0 DRIFT); every NEW layer certified sound; the residue was localized KEPT-LAYER TWINS (stale pre-fix wording
+beside the fixed NEW-layer string) + one NEW-layer Bronze-decoy-verb fix,** applied in one merged pass (port
+fields via assert-guarded script + reconvert; kept-layer via `kept_patch_br.py`). **Round 3 (4 narrow lenses)
+confirmed every residue edit landed and caught two of its own fix-artifacts (a duplicated phrase on
+deadseascrolls, a bookended sentence on eyewitnesses) + two word-echoes — all cleaned.** Stamped 2026-10-15
+(four lens dates + gate account). The port rule held once more: every verbatim essay port survived; the only
+findings were in the few authored/attributed connective strings, all declared and re-gated. Pre-existing
+kept-page/essay items → `docs/content-backlog.md` **BR-RB-1..8** (rule 9, not bundled; BR-RB-1 = the
+consistency track-vs-essay mismatch, an OWNER CALL). **57 of 83 pages now carry the standard.**
+Scratchpad artefacts for the pattern: `port-brief-br.txt`, `r2-brief-br.txt`, `r3-manifest-br.txt`,
+`port_r2_br.py`, `kept_patch_br.py`, `kept_patch_br_r3.py`, `stamp_res.py`, `stamp_account_br.txt`.
+
+## ⏸ RESUME HERE — Science tab (7 pages), next
+
+Remaining Phase 2 order: **Science (7) → Trinity (15, DUAL CONSENSUS — orthodoxy AND neutrality must both
+certify) → Christian Revolution (6) → the 2 God's Existence pages not yet converted (cosmic, design).** The
+Science pages are the `ev-m-*` links in `ev-s5.html` — confirm the exact slug list against that fragment
+before starting. Use the same method the Jesus and Biblical Reliability batches proved (and the lessons in
+the Phase 2 STATUS note above): one Opus port agent per page writing `docs/mastery-ports/<slug>.json` after
+reading the paired essay in full → `node tools/mastery-convert.mjs <slug>` → `node --test tests/*.test.mjs` +
+check-retired-claims/orthodoxy-tripwires/unquoted-attributions/footnote-integrity → four-lens gate (citations,
+argument, neutrality, orthodoxy) as READ-ONLY Explore/Opus agents, md5-checked, two pages per agent → merged
+residue pass (NEW-layer fixes via assert-guarded port script + reconvert; KEPT-LAYER twins via a `kept_patch`
+script re-run after every reconversion) → narrow round 3 → stamp with `stamp_res.py` → append backlog rows →
+commit the ports + pages + baseline + backlog + guide, **never the reel specs under `tools/reel/`**, and push
+`HEAD:main`. Tab-wide hazards to brief the agents on: Science cards divide the traditions on the
+intelligent-design inference / old-earth cosmology (keep "data conceded / design inferred", never "scientists
+agree the universe is designed"); fine-tuning is the fragile one (never claim unanimity on window-narrowness;
+carry the Stenger and Hossenfelder fences); and the standing Bronze-decoy-verb rule now in Phase 2 step 2.
