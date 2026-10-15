@@ -180,20 +180,48 @@ consistency track-vs-essay mismatch, an OWNER CALL). **57 of 83 pages now carry 
 Scratchpad artefacts for the pattern: `port-brief-br.txt`, `r2-brief-br.txt`, `r3-manifest-br.txt`,
 `port_r2_br.py`, `kept_patch_br.py`, `kept_patch_br_r3.py`, `stamp_res.py`, `stamp_account_br.txt`.
 
-## ⏸ RESUME HERE — Science tab (7 pages), next
+## ✅ Science tab (7 pages) — DONE 2026-10-16
 
-Remaining Phase 2 order: **Science (7) → Trinity (15, DUAL CONSENSUS — orthodoxy AND neutrality must both
-certify) → Christian Revolution (6) → the 2 God's Existence pages not yet converted (cosmic, design).** The
-Science pages are the `ev-m-*` links in `ev-s5.html` — confirm the exact slug list against that fragment
-before starting. Use the same method the Jesus and Biblical Reliability batches proved (and the lessons in
-the Phase 2 STATUS note above): one Opus port agent per page writing `docs/mastery-ports/<slug>.json` after
-reading the paired essay in full → `node tools/mastery-convert.mjs <slug>` → `node --test tests/*.test.mjs` +
-check-retired-claims/orthodoxy-tripwires/unquoted-attributions/footnote-integrity → four-lens gate (citations,
-argument, neutrality, orthodoxy) as READ-ONLY Explore/Opus agents, md5-checked, two pages per agent → merged
-residue pass (NEW-layer fixes via assert-guarded port script + reconvert; KEPT-LAYER twins via a `kept_patch`
-script re-run after every reconversion) → narrow round 3 → stamp with `stamp_res.py` → append backlog rows →
-commit the ports + pages + baseline + backlog + guide, **never the reel specs under `tools/reel/`**, and push
-`HEAD:main`. Tab-wide hazards to brief the agents on: Science cards divide the traditions on the
-intelligent-design inference / old-earth cosmology (keep "data conceded / design inferred", never "scientists
-agree the universe is designed"); fine-tuning is the fragile one (never claim unanimity on window-narrowness;
-carry the Stenger and Hossenfelder fences); and the standing Bronze-decoy-verb rule now in Phase 2 step 2.
+All 7 `ev-m-*` Science pages (bigbang, cambrian, cosmic, laws, mathematics, originlife, privileged) carry the
+Bronze/Silver/Gold standard and are four-lens gated (round 1 + an independent round-2 confirmation, READ-ONLY
+Explore/Opus agents, md5-checked, git status/log verified). **This was the cleanest batch yet: round 1 — 8
+reports, all four lenses × 7 pages, including a kept-layer contradiction sweep — returned 0 BREAK / 0 DRIFT /
+0 HERESY / 0 must-fix / 0 clarifier on every page; round 2 (3 independent lenses) confirmed it; no residue was
+applied, so no round 3 was needed.** The port rule paid off end to end — every string ported, the tab hazards
+front-loaded in the writer brief, the 2–3 declared-authored strings per page (unseen.q, obj landing clauses,
+the order[2] fence) all surviving scrutiny. Verified on every surface: the DEISM-GAP fence (each reaches a
+transcendent cause / purposive Mind, not yet the Triune God, pointing onward to the resurrection) + the
+data-conceded/design-inferred wall; bigbang kalam ("begins to exist") with Guth kept as the dissenting BGV
+co-author; cosmic carries its OWN cast (not finetuning's Stenger/Hossenfelder/Lewis-Barnes); the mathematics
+Logos passage confirmed Nicene-common and conditionally framed; no god-of-the-gaps on origin-of-life/Cambrian;
+Francis Collins never an ID premise. Stamped 2026-10-16. Pre-existing kept-page/essay items →
+`docs/content-backlog.md` **SCI-RB-1..7**. ⚠ **SCI-RB-1 is an owner call: `ev-s5.html` links
+`ev-m-miracles.html`, which does not exist** (a pre-existing broken tab link — build the page or drop the
+link). **64 of 83 pages now carry the standard.**
+
+## ⏸ RESUME HERE — Trinity tab (15 pages), DUAL CONSENSUS, next
+
+Remaining Phase 2 order: **Trinity (15, DUAL CONSENSUS) → Christian Revolution (6) → the God's-Existence
+pages not yet converted** (confirm which remain against `ev-s1.html` — "cosmic" is now done as part of Science,
+so re-check the exact remaining God's-Existence slugs rather than assuming "cosmic, design"). The Trinity
+pages are the `ev-m-*` links in `ev-s6.html` — confirm the exact slug list against that fragment first. Same
+proven method as the Jesus / Biblical Reliability / Science batches: one Opus port agent per page reading the
+paired essay in full (resolve by `<link rel="canonical">`) → `node tools/mastery-convert.mjs <slug>` →
+`node --test tests/*.test.mjs` + check-retired-claims/orthodoxy-tripwires/unquoted-attributions/footnote-integrity
+→ four-lens gate as READ-ONLY Explore/Opus agents, md5-checked → merged residue pass (NEW-layer via
+assert-guarded port script + reconvert; KEPT-LAYER twins via a `kept_patch` script re-run after every
+reconversion) → narrow round 3 **only if a fix was applied** → stamp with `stamp_res.py` → append backlog rows
+→ commit ports + pages + backlog + guide, **NEVER the reel specs under `tools/reel/`**, push `HEAD:main`,
+verify live.
+⚠ **TRINITY IS THE HIGHEST-STAKES TAB — four hard rules:** (1) **DUAL CONSENSUS is mandatory** — `apologia-orthodoxy`
+AND the adversarial `apologia-neutrality` lens must BOTH return CLEAN/STAMPABLE on every page before stamping;
+one lens is not enough, and a fix pass re-opens both. (2) 🔴 **NO TRINITY DIAGRAM, EVER** (standing owner ruling
+in CLAUDE.md) — no figure/chart/illustration of the Trinity or the relations of the persons on any surface; the
+converter builds none and no port may introduce one. (3) **The compression hazards this file already records cost
+real rounds on Trinity content before** — modalism ("honoring the Son AS the Father"), the Arian-direction
+"distinct from the essence" flashcard, the retired lexical *kalām Allāh* / *kalima* bridge on the Islam-adjacent
+cards, "three hundred bishops" (→ "about 250 and 318"), and the Shema/*echad* overreach: grep
+`tools/retired-claims.json`, carry every `orthonote` ＊ fence into the wording (cards/chips cannot host the box),
+and name the person on any screenshot-bound surface. (4) **Several `ev-s6` Trinity cards were edited 2026-10-15**
+(the verdict-close sweep), so read each paired essay in full and **diff the graded layer (ARG_PREMISES, cards,
+checks) first.** The standing Bronze-decoy-verb rule (Phase 2 step 2) applies.

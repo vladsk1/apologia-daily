@@ -1,0 +1,366 @@
+{
+ "slug": "originlife",
+ "title": "The Origin of Life Argument",
+ "short": "the origin of life and the design inference from biological information",
+ "keyTerms": [
+  {
+   "t": "The information problem",
+   "d": "“The origin of life” is at least three problems — metabolism (a self-sustaining network of reactions), self-replication, and the origin of biological information — and the third is the deepest. The discovery of the genetic code revealed that the cell is not just a bag of reacting molecules but an information-processing system, so the explanatory target is not “how did chemistry get complicated?” but “where did the specified sequence — the code itself — come from?”"
+  },
+  {
+   "t": "Specified information",
+   "d": "Life’s sequences are aperiodic yet functionally specific, like the letters of a sentence — unlike crystals (ordered but repetitive, carrying almost no information) and random polymers (no functional message). Stephen Meyer, following others, calls this “specified complexity” or “specified information.” To stay non-circular the term is defined strictly functionally: a sequence carries specified information when, of the astronomically many sequences of its length, it falls in the tiny set that actually folds and replicates — a property fixed by chemistry and measurable in the laboratory, not by appeal to any author’s purpose."
+  },
+  {
+   "t": "The sequence hypothesis",
+   "d": "Francis Crick’s 1958 proposal that a molecule of DNA carries its instructions by the precise order of its bases, the way letters carry meaning by their order in a sentence: “Information,” Crick wrote, “means here the precise determination of sequence.” Michael Polanyi made the point structurally — the order of the bases is not dictated by the chemical bonding of the backbone (any base can follow any other), so the sequence is a boundary condition the chemistry of its medium leaves open."
+  },
+  {
+   "t": "The RNA-world hypothesis",
+   "d": "The dominant answer since the 1980s to the chicken-and-egg loop (DNA needs proteins to copy, proteins need DNA’s information): RNA can both store information and catalyze reactions, so an RNA molecule that could copy itself would in principle break the loop. Named by Walter Gilbert in 1986; made concrete by the discovery of catalytic RNAs (ribozymes). There has been real progress (Sutherland’s 2009 activated ribonucleotides; Szostak’s protocell work), but no one has demonstrated a self-replicating RNA arising and sustaining itself under realistic prebiotic conditions — and even one would presuppose a specified sequence, pushing the information question back a step rather than dissolving it."
+  },
+  {
+   "t": "Inference to the best explanation",
+   "d": "The design argument is best understood not as “science can’t explain it, therefore God,” but as an abductive inference about a specific kind of effect — the same reasoning a forensic scientist or an archaeologist uses. It is comparative (which of the available causes best explains the data?) and defeasible (overturnable by a laboratory result), never a deductive proof."
+  },
+  {
+   "t": "Argument from knowledge, not ignorance",
+   "d": "The distinction that answers the god-of-the-gaps charge: the inference does not say “we can’t imagine how nature did it” but “we positively know one kind of cause — a mind — that produces specified information, and no undirected cause has yet been shown to.” What sets it apart from a bare gap argument is not that it can be overturned (gap arguments are overturned all the time) but that it rests on a positive, known cause rather than on ignorance alone."
+  },
+  {
+   "t": "Defeasible (held provisionally)",
+   "d": "The inference is explicitly revisable: demonstrate an undirected chemical route from simple precursors to specified information and it is overturned. The honest claim is comparative and provisional — the current best explanation, not the final word — and anyone who says “abiogenesis is impossible” has overreached the evidence."
+  },
+  {
+   "t": "The scope of the inference (the deism gap)",
+   "d": "Even if it succeeds, the argument points to a designing intelligence behind life’s code — and no further. It says nothing of incarnation, resurrection, or covenant; it reaches an intelligent cause, not yet the Father, Son and Holy Spirit. It is one strand in a cumulative natural theology, not the whole rope: identifying that mind with the God revealed in Christ is the work of revelation and, above all, of the historical evidence for the resurrection."
+  }
+ ],
+ "derive": [
+  {
+   "q": "Of metabolism, self-replication, and information, which is the deepest origin-of-life problem — and why…?",
+   "ans": "information — a heap of molecules is not a code",
+   "why": "Making building blocks is not making a cell: a bucket of letter tiles is to the works of Shakespeare what a heap of amino acids is to a genome. The discovery of the genetic code showed the cell is an information-processing system, so the target is not complicated chemistry but the origin of the specified sequence — the functional arrangement of parts, the code itself."
+  },
+  {
+   "q": "A working gene and a random string of the same length — do they carry equal Shannon information…?",
+   "ans": "yes — which is why “specified” adds function, not mere improbability",
+   "why": "Claude Shannon’s theory measures how much a signal reduces uncertainty while treating meaning as “irrelevant to the engineering problem,” so a random string and a working gene of equal length carry equal Shannon information. What the word specified adds is the further constraint that the sequence actually do something — fold, catalyse, replicate — which is why bare improbability is not the quantity that matters."
+  },
+  {
+   "q": "Why can’t natural selection be invoked to explain the FIRST life…?",
+   "ans": "it presupposes the heritable replication being explained",
+   "why": "Natural selection requires heritable self-replication to already exist — which is precisely what is being explained. The evolutionary geneticist Theodosius Dobzhansky put it bluntly: “Prebiological natural selection is a contradiction of terms.” So selection cannot be reached for at the very first step, and self-organizing order (like a crystal) is low-information repetition, not aperiodic specified information."
+  },
+  {
+   "q": "A one-in-10⁷⁷ fold, with ~10⁸⁰ particles and ~10¹⁷ seconds of trials — does that improbability by itself defeat chance…?",
+   "ans": "a single fold, perhaps not; a whole coded system, yes",
+   "why": "A single fold at those odds is not, by itself, beyond the probabilistic resources the observable universe affords. But a working cell requires many such folds together in one integrated, coded system, and it is that compound improbability, not any single protein, that outstrips chance. And Axe’s figure is sharply contested, so the case leans on the convergence of several lines, not on one number."
+  },
+  {
+   "q": "No undirected route to biological information has been demonstrated — so is “therefore a designer” an argument from ignorance…?",
+   "ans": "no — it argues from a known cause: minds make specified information",
+   "why": "Properly stated, the inference is from knowledge, not ignorance: intelligence is the one cause known, from repeated experience, to produce specified information, and no undirected cause has yet been shown to. It is the abductive logic of a forensic scientist, and it is defeasible — though the experience it rests on is of human minds, which is why it stays comparative rather than demonstrative."
+  },
+  {
+   "q": "Grant that the design inference succeeds — does it get you to the God of Christianity…?",
+   "ans": "no — to a designing mind, and no further",
+   "why": "The inference points to a designing intelligence behind life’s code and says nothing of incarnation, resurrection, or covenant. It is one strand in a cumulative natural theology, not the whole rope; identifying that mind with the God revealed in Christ is the work of revelation and, above all, of the historical evidence for the resurrection."
+  }
+ ],
+ "honestState": {
+  "p1": "There is no scientific consensus mechanism for the origin of life; the leading textbooks and review articles describe the problem as open, and that is said not only by design theorists but by researchers who are no friends of design — Eugene Koonin (candid about how intractable the origin of the translation system and the genetic code remains, even invoking the multiverse for probabilistic resources), Leslie Orgel, and Robert Shapiro. The field is vigorous and advancing on sub-problems, and is genuinely divided between replicator-first routes (the RNA world — Sutherland, Szostak) and metabolism-first routes (alkaline hydrothermal vents — Michael Russell, Nick Lane, William Martin), with no agreed mechanism in either. The design inference is a minority position in the academy, defended by a serious but small community (Stephen Meyer; the synthetic chemist James Tour; the Discovery Institute’s circle; sympathetic philosophers), and is widely — though not universally — judged to fall outside methodological naturalism. It is pressed against by philosophers such as Graham Oppy and Sahotra Sarkar, by working scientists generally, and, notably, by many Christians (evolutionary creationists; the Christian chemist Charles Coulson popularized “God of the gaps”). The live disputes are sharp: whether functional sequences are vanishingly rare (Axe’s 1-in-10⁷⁷) or far commoner (Keefe and Szostak); whether an undirected route can bridge the chemistry-to-code gap; and whether the design inference is science at all. Most working scientists expect a natural route to be found, and given the history of the discipline that expectation is not irrational.",
+  "fairness": "Honest defenders concede the observations. Absence of a current explanation is not proof of impossibility — anyone who says “abiogenesis is impossible” has overreached; we do not know that no undirected pathway exists, only that none has been demonstrated. The RNA-world and metabolism-first programs are serious and genuinely advancing on sub-problems, not stagnant. Douglas Axe’s 1-in-10⁷⁷ figure is sharply contested — Keefe and Szostak found functional proteins far commoner — so the probability strand cannot carry the argument alone. Early-Earth conditions are poorly known. But the inference does not follow from these concessions, because it rests not on ignorance but on a positive, known cause — intelligence is the one cause shown to produce specified information — together with the persistent failure of undirected proposals so far; and it is defeasible, revisable the moment prebiotic chemistry delivers a real mechanism. As a claim that a mind is the best present explanation of life’s informational signature, it stands; as a proof that nature could never do it, it was never made.",
+  "verdict": "The design inference from biological information does not prove that life was designed. What it establishes is narrower and real: that the confident assurance science has essentially solved the origin of life outruns the evidence; that there is a genuine, deep mystery at the foundation of biology — code-like, functionally specified information, of which intelligence is the one known cause and which no undirected cause has yet been shown to produce; and that, among the causes currently on offer, intelligent agency is the one we know can produce the relevant effect, which makes design the best present explanation of life’s informational signature. It is a probabilistic, defeasible, comparative claim that could be overturned tomorrow by a laboratory result, and the honest defender should say so cheerfully. And its reach stops at a designing intelligence behind life’s code — not yet the Father, Son and Holy Spirit. Identifying that mind with the God revealed in Christ is the work of revelation and, above all, of the historical evidence for the resurrection; this is one strand in a cumulative natural theology, not the whole rope."
+ },
+ "order": [
+  "The origin of the first life required the production of large amounts of functionally specified information — the genetic code and the sequence-specificity of biological macromolecules.",
+  "Of the available causes — chance, physical-chemical necessity, the two combined, or intelligent agency — only intelligent agency is known, from repeated experience, to produce specified information of this kind.",
+  "Therefore intelligent design is, at present, the best explanation for the origin of biological information — an inference to the best explanation, not a proof, reaching a designing mind, not yet the Triune God."
+ ],
+ "props": [
+  {
+   "t": "establishes that the origin of life is, at present, genuinely unsolved in mainstream science",
+   "ok": true
+  },
+  {
+   "t": "establishes that even the simplest cell runs on functionally specified information",
+   "ok": true
+  },
+  {
+   "t": "shows that intelligent agency is the one known cause of specified information",
+   "ok": true
+  },
+  {
+   "t": "concludes to a designing mind as the best present explanation — inferred, not proven",
+   "ok": true
+  },
+  {
+   "t": "shows that natural selection cannot explain the first information, since it presupposes replication",
+   "ok": true
+  },
+  {
+   "t": "proves that the first life was designed",
+   "ok": false
+  },
+  {
+   "t": "by itself shows that the God of the Bible exists",
+   "ok": false
+  },
+  {
+   "t": "demonstrates that an undirected origin of life is impossible",
+   "ok": false
+  },
+  {
+   "t": "settles that functional protein folds are as rare as one in 10⁷⁷",
+   "ok": false
+  },
+  {
+   "t": "requires the Christian to reject evolution and common descent",
+   "ok": false
+  }
+ ],
+ "cards": [
+  {
+   "q": "“The origin of life” is really how many problems — and which is the deepest?",
+   "a": "At least three: metabolism (a self-sustaining reaction network), self-replication, and the origin of biological information. The third is the deepest and now dominates the field — the cell is an information-processing system, so the target is not complicated chemistry but the origin of the specified sequence."
+  },
+  {
+   "q": "What does “specified” add to “improbable,” and why does it matter?",
+   "a": "A random string and a working gene of equal length carry equal Shannon information, so bare improbability is not the quantity that matters. Specified adds the constraint that the sequence actually fold, catalyse, or replicate — defined strictly functionally and measurably, not by appeal to any author’s purpose, to keep the term from smuggling in a mind."
+  },
+  {
+   "q": "Why is this an inference to the best explanation rather than “science can’t, therefore God”?",
+   "a": "It is an abductive claim about a specific effect — the same reasoning a forensic scientist or archaeologist uses — asking which of the available causes best explains the data. It is comparative and defeasible, not a deductive proof, and could be overturned by a laboratory result."
+  },
+  {
+   "q": "State Premise 2, and say what carries its weight.",
+   "a": "Of the available causes — chance, necessity, the two combined, or intelligent agency — only intelligent agency is known, from repeated experience, to produce specified information of this kind. Its engine is the positive track record of minds plus the apparent inadequacy of the alternatives; the inference stays comparative because that experience is of human minds."
+  },
+  {
+   "q": "Why can’t natural selection build the first information?",
+   "a": "Selection requires heritable self-replication to already exist — the very thing being explained — so it cannot be invoked at the first step (“prebiological natural selection is a contradiction of terms,” Dobzhansky). And self-organizing order like a crystal is low-information repetition, not aperiodic specified information."
+  },
+  {
+   "q": "Given a vast, old universe, doesn’t chance have enough trials?",
+   "a": "The resources are finite — roughly 10⁸⁰ particles and 10¹⁷ seconds. A single fold at Axe’s (contested) odds is not by itself beyond them; it is the compound improbability of many folds working together in one integrated, coded system that outstrips chance. More time only helps if each trial has a real chance, which is what is in dispute."
+  },
+  {
+   "q": "What is the status of Axe’s one-in-10⁷⁷ figure?",
+   "a": "Sharply contested: Keefe and Szostak found functional proteins far commoner, and the two experiments did not measure the same thing. The argument must not lean on a single contested number as though it were settled — the case rests on more than one line, and leans on the convergence."
+  },
+  {
+   "q": "How is this different from a god-of-the-gaps argument?",
+   "a": "It argues from knowledge, not ignorance: intelligence is the one known cause of specified information, and no undirected cause has yet been shown to produce it. What sets it apart from a bare gap argument is not that it can be overturned (gap arguments are, all the time) but that it rests on a positive, known cause — and it is held provisionally, overturned the moment an undirected route is demonstrated."
+  },
+  {
+   "q": "What does the RNA-world hypothesis propose, and what remains unsolved?",
+   "a": "RNA can both store information and catalyze reactions, so a self-copying RNA could break the DNA–protein loop. There is real progress (Sutherland’s 2009 ribonucleotides), but no self-replicating RNA has been shown to arise and sustain itself under realistic prebiotic conditions — and even one would presuppose a long, specified sequence, pushing the information question back a step, not dissolving it."
+  },
+  {
+   "q": "Do the field’s own researchers concede the difficulty — and does that concede design?",
+   "a": "Yes, several do: Orgel, Joyce, Crick, de Duve and Dobzhansky are all on record on the difficulty. But conceding the difficulty is not conceding design — Crick floated directed panspermia, and de Duve held that life was “a cosmic imperative,” rejecting chance while affirming a naturalistic origin. Their judgement counts because they are mainstream authorities, not critics."
+  },
+  {
+   "q": "Does the argument require rejecting evolution, or a particular age of the earth?",
+   "a": "No. The origin of life (abiogenesis) and the origin of species (evolution) are distinct questions, and Darwin himself bracketed the former; the argument concerns the first cell, not the mechanisms of descent thereafter. Old-earth, young-earth and evolutionary-creationist believers hold the Nicene faith in common, and this site does not adjudicate between them."
+  },
+  {
+   "q": "If the inference succeeds, how far does it actually reach?",
+   "a": "To a designing intelligence behind life’s code, and no further — it says nothing of incarnation, resurrection, or covenant. It is one strand in a cumulative natural theology; the fuller case for the Christian God rests on revelation and, above all, on the historical evidence for the resurrection."
+  }
+ ],
+ "obj": [
+  {
+   "who": "Philosopher",
+   "q": "This just baptizes ignorance. The history of science is a history of gaps closing — lightning, disease, planetary motion, the diversity of species were all once laid at God’s door and later explained naturally. Inferring a designer from today’s missing mechanism repeats a discredited move and bets against the very process that has reliably delivered; worse, it is a science-stopper — if “a mind did it” is on the table, why keep working at the chemistry? And this is not only a skeptic’s warning: Graham Oppy and Sahotra Sarkar press it, and so does the Christian chemist Charles Coulson, who coined “God of the gaps.”",
+   "model": "Two limbs, and the first calls for a concession: absence of a current explanation is not proof of impossibility, and anyone who says “abiogenesis is impossible” has overreached — we do not know that no undirected pathway exists, only that none has been demonstrated. But the inference, properly stated, is not an argument from ignorance; it is an argument from knowledge. We are not saying “we can’t imagine how nature did it”; we are saying we positively know one kind of cause — a mind — that produces specified information, and no undirected cause has yet been shown to. That is the abductive logic a forensic scientist or an archaeologist uses, and it is defeasible: demonstrate an undirected chemical route from simple precursors to specified information and the inference is overturned. What distinguishes it from a bare gap argument is not that it can be overturned — gap arguments are overturned all the time — but that it rests on a positive, known cause rather than on ignorance alone. The science-stopper worry cuts the other way too: many who draw this inference actively want the chemistry pursued, precisely because a clean negative result strengthens it and a positive result would settle it. So the verdict is bounded: this is a comparative, provisional claim held as the current best explanation — not a demonstration, and not a bet against inquiry."
+  },
+  {
+   "who": "Biochemist",
+   "q": "Your probability case rests on Douglas Axe’s claim that functional folds are as rare as one in 10⁷⁷ — and that number is wrong. Three years before Axe, Anthony Keefe and Jack Szostak screened a library of some six trillion random proteins and recovered functional ATP-binding proteins, estimating that roughly one random-sequence protein in a hundred billion has activity comparable to the ones they isolated. That is some sixty-six orders of magnitude commoner than Axe says. If function is anywhere near that abundant, your improbability strand does not merely weaken — it largely fails.",
+   "model": "That result should be stated without hedging, and I will concede exactly what it shows: Axe’s figure cannot be treated as the settled rarity of protein function, and an honest defender should cite Keefe and Szostak alongside him. But the two experiments did not measure the same thing, and the gap between their numbers partly reflects that. Keefe and Szostak selected 80-residue random proteins for binding a small molecule, and based their frequency on the families recovered before any mutagenesis; Axe tested random replacements within a weakly functional β-lactamase domain for a working enzyme active site — which, he notes, requires tertiary structure — and then extrapolated to the prevalence of sequences performing a specific function by any domain-sized fold. Which measure better represents what the first cell required is itself part of the dispute, and neither experiment settles it. So the verdict is bounded two ways: Keefe and Szostak give a serious, peer-reviewed reason not to lean on Axe’s number — and their work does not show that undirected chemistry can produce the integrated, coded system a cell requires. The comparative inference never required Axe’s exact figure in the first place: the origin-of-life problem is not one protein fold but an integrated, coded system, and the probability argument is one strand of a convergent case, not its load-bearing pillar. Where the numbers are contested, say so, and lean on the convergence."
+  },
+  {
+   "who": "Philosopher of biology",
+   "q": "You are demanding the present mechanism when the question is a historical one. We do not know early-Earth conditions well enough to declare any gap real — prebiotic chemistry may have run along routes that left no trace and that no one has thought to test. To infer design from our ignorance of four-billion-year-old conditions is simply premature.",
+   "model": "It is true that early-Earth conditions are poorly known, and the right response is not to deny it but to locate the inference correctly. It does not rest on our ignorance of ancient conditions; it rests on two things together — the positive track record of intelligence as a cause of specified information, and the persistent failure of undirected proposals so far — and it remains revisable the moment prebiotic chemistry delivers a real mechanism. That is exactly how an inference to the best explanation is supposed to work: held as the current best, not the final word. So the bounded verdict is that the objection correctly limits how firmly the inference may be held — provisionally and defeasibly — but it does not defeat it: a poorly-known past is a reason for humility, not a demonstrated undirected pathway."
+  },
+  {
+   "who": "Biologist",
+   "q": "Your whole case hangs on the phrase “specified information” — and that phrase quietly smuggles in a mind. “Specified” in ordinary use means specified by someone, for a purpose. So when you say information of this kind always comes from intelligence, you have built the conclusion into the definition. The argument is circular.",
+   "model": "That is the sharpest objection to the key term, and it should be answered by tightening the definition, not dodging it. The argument should rest on a strictly functional definition: a sequence carries specified information when, of the astronomically many sequences of its length, it falls in the tiny set that actually folds and replicates — a property fixed by chemistry and measurable in the laboratory, not by appeal to any author’s purpose. Defined that way, “specified information” names a measurable feature of nature, and the claim that such functional specificity is, in our experience, mind-produced is no longer built into the word; it becomes a claim about nature, open to refutation. I will concede what honesty requires: the experience that claim rests on is still our experience of human minds, which is why critics press the analogy and why the inference stays comparative rather than demonstrative. So the bounded verdict is that the circularity charge is answered once the term is defined functionally — but the price of answering it is that the inference is a comparative argument and the best present explanation, not a proof."
+  }
+ ],
+ "unseen": {
+  "who": "Working scientist",
+  "av": "WS",
+  "q": "If this inference were any good, scientists would accept it. But it is a fringe minority view — nearly every working origin-of-life researcher rejects design, and it is widely judged to fall outside science altogether. Doesn’t that expert consensus tell you the reasoning is bad?",
+  "model": "Weigh that sociological fact honestly — it is true and it matters. The design inference is a minority position in the academy, defended by a serious but small community, and it is widely, though not universally, judged to fall outside methodological naturalism. Most working scientists do expect an undirected route to be found, and given the history of the discipline that expectation is not irrational. But notice what the consensus establishes and what it does not. What is agreed across the field — by Koonin, Orgel and Shapiro, no friends of design — is that there is at present no consensus mechanism for the origin of life: the problem is open. The disagreement is not that these researchers have found an undirected route and the design theorist denies it; it is that most judge design to be ruled out as an explanation in principle, by the ground rule of methodological naturalism, rather than weighed and found wanting on the evidence. So the bounded verdict is this: the expert majority is a real reason for humility, and it should be stated plainly — but a consensus that the problem is unsolved, held alongside a methodological commitment to admit only undirected causes, is not evidence that an undirected cause has been shown to do the job. Among the causes currently on offer, intelligence remains the one known to produce the relevant effect, and the inference is held provisionally, as the current best.",
+  "source": "Essay §The State of the Scholarship para 2 (minority position; ‘widely — though not universally — judged to fall outside methodological naturalism’; most experts disagree with the design conclusion even while agreeing the problem is unsolved; the expectation of a natural route ‘is not irrational given the history of the discipline’) + §State of the Scholarship para 1 (no consensus mechanism; Koonin/Orgel/Shapiro) + §What the Argument Does and Doesn’t Establish (comparative, defeasible; ‘among the causes currently on offer, intelligent agency is the one we know can produce the relevant effect’). model ported; q AUTHORED — declared: the essay answers the consensus/authority objection but never states it in an objector’s voice. Genuinely unseen on ev-m-originlife.html: the consensus/minority fact appears only descriptively in the Premise-2 ‘The room’ whoholds line, never posed as an objection in any accordion, Drill, card, chip or derive row — and ‘methodological naturalism’ appears nowhere on the kept page."
+ },
+ "explain2": "the god-of-the-gaps charge — that an unsolved problem is not an argument for design, and that inferring a designer from a missing mechanism simply baptizes ignorance",
+ "ledger": [
+  {
+   "field": "title",
+   "from": "ev-m-originlife.html hero <h1> “The Origin of Life Argument” verbatim."
+  },
+  {
+   "field": "short",
+   "from": "essay subject (title ‘The Origin of Life: Evidence and Design’; the information-based design inference), as a lower-case noun phrase."
+  },
+  {
+   "field": "keyTerms[0]",
+   "from": "essay §What Abiogenesis Must Explain, paras 1–4 (three problems; information the deepest; ‘information-processing system’; the explanatory target), verbatim with compression."
+  },
+  {
+   "field": "keyTerms[1]",
+   "from": "essay §What Abiogenesis Must Explain para 4 (crystals/random/third category; ‘specified complexity’/‘specified information’, Meyer following others) + §The Design Inference from Information, Premise-2 para (the strictly functional definition; ‘fixed by chemistry and measurable in the laboratory, not by appeal to any author’s purpose’), verbatim."
+  },
+  {
+   "field": "keyTerms[2]",
+   "from": "essay §The Design Inference, Premise-1 para (Crick 1958 sequence hypothesis; ‘Information means here the precise determination of sequence’; Polanyi structural point — base order not fixed by backbone chemistry), verbatim with compression."
+  },
+  {
+   "field": "keyTerms[3]",
+   "from": "essay §The RNA world, and its real difficulties (chicken-and-egg loop; Gilbert 1986; ribozymes; Sutherland 2009; Szostak protocells; no self-replicating RNA under realistic conditions; ‘would presuppose a functional, specified sequence… pushing the central question back one step’), verbatim with compression."
+  },
+  {
+   "field": "keyTerms[4]",
+   "from": "essay §The Design Inference para 1 (‘inference to the best explanation’, not ‘science can’t explain it, therefore God’) + §god-of-the-gaps reply (‘the same abductive logic a forensic scientist or an archaeologist uses’; defeasible), verbatim with compression."
+  },
+  {
+   "field": "keyTerms[5]",
+   "from": "essay §‘This is a god-of-the-gaps argument’ reply (‘not an argument from ignorance but an argument from knowledge’; ‘we positively know one kind of cause…’; ‘what distinguishes it from a bare gap argument is not that it can be overturned… but that it rests on a positive, known cause’), verbatim."
+  },
+  {
+   "field": "keyTerms[6]",
+   "from": "essay §god-of-the-gaps concession (‘absence of a current explanation is not proof of impossibility… has overreached’) + reply (‘defeasible: demonstrate an undirected chemical route… and the inference is overturned’; ‘held as provisional’), verbatim."
+  },
+  {
+   "field": "keyTerms[7]",
+   "from": "essay §What the Argument Does and Doesn’t Establish (‘points, if it succeeds, to a designing intelligence behind life’s code — and no further. It says nothing of incarnation, resurrection, or covenant… one strand in a cumulative natural theology, not the whole rope… rests above all on the historical evidence for the resurrection’), verbatim. Carries the deism-gap fence."
+  },
+  {
+   "field": "derive[0]",
+   "from": "essay §What Abiogenesis Must Explain (three problems; information deepest) + §Miller–Urey (‘a heap of amino acids is to a cell what a bucket of letter tiles is to the works of Shakespeare’). q/ans scaffolding, no new claim."
+  },
+  {
+   "field": "derive[1]",
+   "from": "essay §The Design Inference, Premise-1 para (Shannon ‘irrelevant to the engineering problem’; ‘a random string and a working gene of equal length carry equal Shannon information’; ‘specified adds the further constraint that the sequence… actually do something — fold, catalyse, replicate’), verbatim with compression."
+  },
+  {
+   "field": "derive[2]",
+   "from": "essay §The Design Inference, Premise-2 para (‘selection cannot be invoked at the very first step, because natural selection requires heritable self-replication to already exist — which is precisely what is being explained’) + the Dobzhansky quote (‘Prebiological natural selection is a contradiction of terms’) + the self-organization/crystal point (§natural-selection objection reply on the kept page / essay crystal contrast)."
+  },
+  {
+   "field": "derive[3]",
+   "from": "essay §The Design Inference, Premise-2 para (Axe 1-in-10⁷⁷ extrapolation; ‘A single fold at those odds is not, by itself, beyond the roughly 10⁸⁰ particles and 10¹⁷ seconds… but a working cell requires many such folds together in one integrated, coded system… compound improbability’) + §‘improbability numbers are wrong’ (‘the comparative inference does not require Axe’s exact figure… one strand of a convergent case’)."
+  },
+  {
+   "field": "derive[4]",
+   "from": "essay §god-of-the-gaps reply (‘not an argument from ignorance but an argument from knowledge… we positively know one kind of cause… no undirected cause has yet been shown to’; forensic/archaeologist; defeasible) + §Design Inference Premise-2 (‘the experience it rests on is still our experience of human minds… the inference stays comparative rather than demonstrative’)."
+  },
+  {
+   "field": "derive[5]",
+   "from": "essay §What the Argument Does and Doesn’t Establish (‘points… to a designing intelligence behind life’s code — and no further… nothing of incarnation, resurrection, or covenant… one strand in a cumulative natural theology, not the whole rope… rests above all on the historical evidence for the resurrection’)."
+  },
+  {
+   "field": "honestState.p1",
+   "from": "essay §The State of the Scholarship paras 1–2 (no consensus mechanism, problem open; Koonin ‘no friend of design’, Orgel, Shapiro; minority position, serious but small community, Meyer/Tour/Discovery Institute; ‘widely — though not universally — judged to fall outside methodological naturalism’; most experts expect a route, ‘not irrational given the history’) + §Metabolism-first (Russell, Lane, Martin; ‘genuinely divided between replicator-first and metabolism-first camps’) + §RNA world (Sutherland, Szostak) + §improbability-numbers (Axe vs Keefe & Szostak dispute) + §god-of-the-gaps (Oppy, Sarkar, Coulson, evolutionary creationists)."
+  },
+  {
+   "field": "honestState.fairness",
+   "from": "essay §god-of-the-gaps concession (‘absence of a current explanation is not proof of impossibility… abiogenesis is impossible has overreached… we do not know that no undirected pathway exists; we know that none has been demonstrated’) + §RNA world (‘not a stagnant field’) + §improbability-numbers (Axe ‘sharply contested’; Keefe & Szostak; ‘should not lean on a single contested number’) + §present-vs-historical (‘early-Earth conditions are poorly known’) + §god-of-the-gaps reply (‘argument from knowledge… defeasible’). ‘As a claim that a mind is the best present explanation… it stands; as a proof that nature could never do it, it was never made’ compresses the Conclusion."
+  },
+  {
+   "field": "honestState.verdict",
+   "from": "essay §What the Argument Does and Doesn’t Establish, paras 1–2 (‘does not prove that life was designed… points… to a designing intelligence behind life’s code — and no further… probabilistic, defeasible, comparative claim… could be overturned tomorrow’; ‘the confident assurance… outruns the evidence’; ‘a genuine and deep mystery… code-like, functionally specified information, of which intelligence is the one known cause, and which no undirected cause has yet been shown to produce’; resurrection pointer), verbatim with compression. Carries design-inferred/data-conceded + deism-gap + resurrection pointer."
+  },
+  {
+   "field": "order",
+   "from": "ev-m-originlife.html ARG_PREMISES (P1/P2/C verbatim) + essay §The Design Inference Premise/Conclusion block; line 3’s appended fence (‘an inference to the best explanation, not a proof, reaching a designing mind, not yet the Triune God’) compresses the essay’s IBE framing (§Design Inference para 1) and the deism-gap (§What the Argument Does). Fence AUTHORED as a compression — declared."
+  },
+  {
+   "field": "props (true)",
+   "from": "essay §State of the Scholarship (‘no scientific consensus mechanism… the field describes the problem as open’); §What Abiogenesis Must Explain (even minimal cells information-rich; functionally specified information); §Design Inference Premise-2 (intelligent agency the one known cause of specified information); §What the Argument Does (designing mind as best present explanation, inferred not proven); §Design Inference Premise-2 (selection presupposes replication, cannot explain the first information)."
+  },
+  {
+   "field": "props (decoys)",
+   "from": "each explicitly denied by the essay: ‘does not prove that life was designed’ (§What the Argument Does); ‘says nothing of incarnation, resurrection, or covenant… and no further’ (§What the Argument Does — denies ‘shows the God of the Bible exists’); ‘anyone who says abiogenesis is impossible has overreached’ (§god-of-the-gaps — denies ‘demonstrates an undirected origin is impossible’); Axe’s figure ‘sharply contested… should not lean on a single contested number as though it were settled’ (§improbability-numbers — denies ‘settles… one in 10⁷⁷’); ‘none of this essay’s argument depends on rejecting common descent or biological evolution’ (§State of the Scholarship — denies ‘requires rejecting evolution’). Every decoy carries a verb on the argument (proves / shows / demonstrates / settles / requires)."
+  },
+  {
+   "field": "cards[0]",
+   "from": "essay §What Abiogenesis Must Explain paras 1–4."
+  },
+  {
+   "field": "cards[1]",
+   "from": "essay §Design Inference Premise-1 para (Shannon meaning-neutral; specified adds function) + Premise-2 para (strictly functional definition, non-circular)."
+  },
+  {
+   "field": "cards[2]",
+   "from": "essay §The Design Inference para 1 (‘inference to the best explanation… not science can’t explain it, therefore God’) + §god-of-the-gaps reply (forensic/archaeologist; defeasible)."
+  },
+  {
+   "field": "cards[3]",
+   "from": "ev-m ARG_PREMISES P2 + essay §Design Inference Premise-2 (‘the argument’s engine is Premise 2… positive… and the apparent inadequacy of the alternatives’; ‘the experience it rests on is still our experience of human minds… comparative rather than demonstrative’)."
+  },
+  {
+   "field": "cards[4]",
+   "from": "essay §Design Inference Premise-2 (selection presupposes replication) + Dobzhansky quote (fn 18) + crystal/self-organization contrast (§What Abiogenesis / kept natural-selection accordion)."
+  },
+  {
+   "field": "cards[5]",
+   "from": "essay §Design Inference Premise-2 (~10⁸⁰ particles, ~10¹⁷ seconds; single fold vs compound improbability of an integrated coded system) + §improbability-numbers (‘does not require Axe’s exact figure… one strand of a convergent case’) + kept ‘given enough time’ accordion (‘more time only helps if each trial has a real chance’)."
+  },
+  {
+   "field": "cards[6]",
+   "from": "essay §‘The improbability numbers are wrong’ + §Keefe & Szostak para (‘sharply contested’; ‘should not lean on a single contested number’; ‘the case must rest on more than one line’; ‘lean on the convergence’)."
+  },
+  {
+   "field": "cards[7]",
+   "from": "essay §‘This is a god-of-the-gaps argument’ reply (argument from knowledge not ignorance; ‘what distinguishes it from a bare gap argument… rests on a positive, known cause’; defeasible / held provisional), verbatim with compression."
+  },
+  {
+   "field": "cards[8]",
+   "from": "essay §The RNA world (Gilbert 1986; ribozymes; Sutherland 2009; ‘no one has demonstrated a self-replicating RNA arising and sustaining itself under realistic prebiotic conditions’; ‘would presuppose a functional, specified sequence… pushing the central question back one step’)."
+  },
+  {
+   "field": "cards[9]",
+   "from": "essay §Design Inference ‘how seriously leading scientists have felt the force’ (Crick ‘almost a miracle’ + panspermia hedge; de Duve lottery/bridge + ‘a cosmic imperative’; Dobzhansky) + fn 16/17 (‘these are the field’s own mainstream authorities conceding the difficulty, not its critics’; ‘the difficulty is widely conceded; the inference to a designer is not’)."
+  },
+  {
+   "field": "cards[10]",
+   "from": "essay §State of the Scholarship para 3 + FAQ (‘the origin of life (abiogenesis) and the origin of species (evolution) are distinct questions; Darwin himself bracketed the former’; ‘takes no institutional position… old-earth, young-earth, and evolutionary-creationist alike… hold the Nicene faith in common’; ‘concerns the first cell, not the mechanisms of descent thereafter’)."
+  },
+  {
+   "field": "cards[11]",
+   "from": "essay §What the Argument Does and Doesn’t Establish (‘points… to a designing intelligence behind life’s code — and no further… nothing of incarnation, resurrection, or covenant… one strand in a cumulative natural theology… rests above all on the historical evidence for the resurrection’)."
+  },
+  {
+   "field": "obj[0]",
+   "from": "essay §‘This is a god-of-the-gaps argument’ (statement: Oppy, Sarkar, Coulson, evolutionary creationists; gaps history; science-stopper) + its concession + reply (‘argument from knowledge’; forensic/archaeologist; defeasible; ‘what distinguishes it… rests on a positive, known cause’; ‘the science-stopper worry also cuts the other way’). Distinct from the kept Drill 3 god-of-the-gaps model (a first-person conversational script ending ‘Can I ask what you’d count as a real solution?’): obj[0] is a third-person structural reply and lands an explicit bounded verdict. ‘So the verdict is bounded’ AUTHORED landing clause — declared."
+  },
+  {
+   "field": "obj[1]",
+   "from": "essay §‘The improbability numbers are wrong’ + the Keefe & Szostak paragraphs (six trillion proteins; ‘comparable to the proteins isolated in this study’ qualifier KEPT; ‘sixty-six orders of magnitude’; binding a small molecule vs β-lactamase enzyme active site / tertiary structure / domain-sized-fold extrapolation; ‘neither experiment settles it’; ‘does not show that undirected chemistry can produce the integrated, coded system’; ‘one strand of a convergent case, not its load-bearing pillar’; ‘lean on the convergence’), verbatim with compression. ‘So the verdict is bounded two ways’ AUTHORED landing clause — declared."
+  },
+  {
+   "field": "obj[2]",
+   "from": "essay §‘You’re demanding the present mechanism instead of the historical one’ (statement + reply verbatim: ‘early-Earth conditions are poorly known… locate the inference correctly… positive track record… plus the persistent failure of undirected proposals so far… remains revisable… held as the current best, not the final word’). ‘So the bounded verdict is’ AUTHORED landing clause — declared."
+  },
+  {
+   "field": "obj[3]",
+   "from": "essay §The Design Inference Premise-2 (the ‘specified information… quietly smuggles in the intentional, semantic sense… which would make the conclusion circular’ objection + the strictly-functional-definition reply, verbatim; ‘the experience it rests on is still our experience of human minds… comparative rather than demonstrative’). Mirrors the kept Premise-1 ‘objin’ box but in an objector’s voice with a bounded verdict; ‘So the bounded verdict is’ AUTHORED landing clause — declared."
+  },
+  {
+   "field": "unseen",
+   "from": "essay §The State of the Scholarship para 2 + para 1 + §What the Argument Does and Doesn’t Establish. model ported; q AUTHORED — declared. Genuinely unseen on ev-m-originlife.html: the consensus/minority fact appears only descriptively in the Premise-2 ‘The room’ whoholds, never as an objection in any accordion, Drill, card, chip or derive; ‘methodological naturalism’ is absent from the kept page."
+  },
+  {
+   "field": "explain2",
+   "from": "ev-m-originlife.html .hardest line (‘The one that matters most: god-of-the-gaps — an unsolved problem is not an argument for design’) + the formnote (‘the hardest objection is the god-of-the-gaps charge, which contests the form of the inference itself’), recast as a noun phrase."
+  }
+ ],
+ "notes": "Paired essay read in full: library/originlife.html (body, all 24 footnotes, bibliography, 3-item FAQ; canonical link confirmed — the first /library/ ref on the page is a cross-link to minimalfacts.html, not the self-canonical). Kept page read in full: ev-m-originlife.html (seo-summary, syllogism + formnote, three premise-defence cards with supports/honest-limits/objin/‘The room’, five objection accordions, sources cards, Drills 1–3, ARG_PREMISES, cards, mock-scorer checks). DECLARED AUTHORED (named to every lens): (1) unseen.q — the consensus / appeal-to-expert-authority objection: the essay answers it in §The State of the Scholarship but never states it in an objector’s voice, so the objector wording is mine; (2) the bounded landing clauses ‘So the verdict is bounded’ (obj[0]), ‘So the verdict is bounded two ways’ (obj[1]), ‘So the bounded verdict is’ (obj[2], obj[3], unseen) — added only to land an explicit verdict, each immediately followed by essay-ported verdict content; (3) order[2]’s appended fence ‘— an inference to the best explanation, not a proof, reaching a designing mind, not yet the Triune God’ compresses the essay’s IBE framing + the deism-gap. Also scaffolding, no new claim: derive[].q/ans and the card question wordings. TAB HAZARDS HELD: design is INFERRED / data is CONCEDED kept apart on every surface (keyTerms[1]/[5], derive[4], honestState.verdict, props — true chip ‘intelligent agency is the one known cause of specified information’ paired with decoys ‘proves that the first life was designed’ and ‘by itself shows that the God of the Bible exists’); the DEISM-GAP fence is in keyTerms[7], derive[5], order[2], honestState.verdict, cards[11] and the unseen, always with the resurrection pointer; GOD-OF-THE-GAPS is answered as an argument from knowledge not ignorance, never claiming abiogenesis is impossible (a decoy tests exactly ‘demonstrates an undirected origin is impossible’); Axe’s 10⁷⁷ is always flagged ‘sharply contested’ / an extrapolation ‘to sequences performing a specific function by any domain-sized fold’, never settled, and Keefe & Szostak’s frequency keeps its ‘comparable to the proteins isolated in this study’ qualifier (the exact detachment a prior gate round flagged); the field’s own conceders (Orgel, Joyce, Crick, de Duve, Dobzhansky) are carried with the fence that conceding the difficulty is NOT conceding design (Crick’s panspermia, de Duve’s ‘cosmic imperative’); denominational/ evolution neutrality kept (abiogenesis ≠ evolution; old-/young-earth/evolutionary-creation all confess the creeds; no verdict adjudicated); FRANCIS COLLINS is not mentioned anywhere (the essay does not cite him and he is never enlisted as an ID premise). No tools/retired-claims.json entry touches origin-of-life, and none is reinstated. NOT CONTRADICTED / NOT DUPLICATED: the kept Drill 3 (god-of-the-gaps skeptic, first-person conversational model) is not reused — obj[0] answers the same objection in a third-person structural reply ported from the essay’s §Steelmanning subsection, with an explicit bounded verdict; the kept five objection accordions (god-of-the-gaps / RNA world / enough-time / natural-selection / prebiotic-conditions) are not duplicated verbatim — obj picks the four the essay steelmans MOST fully (gaps, the Axe-vs-Keefe/Szostak numbers, present-vs-historical, the ‘specified information smuggles in a mind’ circularity), two of which (the Keefe-Szostak counter and the circularity charge) appear on the kept page only inside the Premise-defence cards, never as standalone objections; honestState does not restate the kept seo-summary verbatim. BACKLOG ISSUES NOTICED IN THE KEPT PAGE (not fixed, logged for a human): (a) the god-of-the-gaps objection is the single most-covered item on the kept page — it appears in the formnote, as a ‘Hard’ accordion, AND as the Drill-3 worked example — while the essay’s §State of the Scholarship consensus / ‘falls outside methodological naturalism’ objection has no representation in the kept objection layer at all (which is why it serves here as the Gold unseen); a future content pass could add it as an explicit objection accordion; (b) minor, non-doctrinal: the sources card for Eugene Koonin says ‘we paraphrase, but the originals reward the time’ — fine, just noting it is the one sources row that editorializes. Nothing I could not source; every non-declared string is a verbatim lift or faithful compression of the paired essay or the kept certified layer."
+}

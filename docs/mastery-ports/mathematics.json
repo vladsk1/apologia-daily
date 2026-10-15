@@ -1,0 +1,365 @@
+{
+ "slug": "mathematics",
+ "title": "The Argument from Mathematics",
+ "short": "the unreasonable effectiveness of mathematics",
+ "keyTerms": [
+  {
+   "t": "The unreasonable effectiveness",
+   "d": "Eugene Wigner’s name for the puzzle, from his 1959 lecture: that mathematics is “extraordinarily, and often predictively, effective” in physics is “something bordering on the mysterious,” and he judged there is “no rational explanation for it.” His worry had two prongs — the concepts are very often chosen for their formal beauty with no eye to physics and then prove indispensable, and the precision runs to many decimal places."
+  },
+  {
+   "t": "Inference to the best explanation",
+   "d": "The form the argument takes — the reasoning of a detective or a scientist, not a deductive proof that God exists. The claim is comparative and probabilistic: the applicability of mathematics fits theism more comfortably than naturalism. It is one strand in a cumulative case, and it does not settle the matter by itself."
+  },
+  {
+   "t": "Predictive, not merely descriptive",
+   "d": "The distinction the case leans on. A descriptive match is found after the fact; a predictive success is mathematics pointing to something unknown that then turns up — Dirac’s antimatter (1931), Gell-Mann’s omega-minus (specified in advance in 1962, found in 1964). That is the part hardest to dismiss as selection, because you cannot select-after-the-fact a prediction of a particle no one has seen."
+  },
+  {
+   "t": "The selection reply (Hamming)",
+   "d": "The deepest deflationary reply, from Richard Hamming (1980): “we see what we look for,” and “we select the kind of mathematics to use.” We build and keep the mathematics that fits and discard the rest, then marvel at a fit we engineered. Part of this must be conceded — much mathematics describes nothing physical — but it struggles with the predictive cases, and Hamming himself ended his essay still calling the situation unresolved."
+  },
+  {
+   "t": "The honest hinge (how real mathematics is)",
+   "d": "The argument’s own disclosed weak point. W. V. O. Quine and Hilary Putnam argued mathematics is indispensable to our best science, supporting realism; Penelope Maddy challenged the holism that assumes, and nominalists such as Hartry Field have labored to show science could be done without quantifying over numbers at all. So how real mathematics is — and therefore how deep the puzzle runs — is itself unsettled among first-rate philosophers. The argument is strongest if mathematical realism is roughly correct, weaker if a thoroughgoing nominalism succeeds."
+  },
+  {
+   "t": "The Logos / one rationality",
+   "d": "The theistic proposal, stated at its proper strength. On classical theism reality is the free creation of a rational mind — in Christian terms a cosmos spoken into being through the Logos, the divine Word and Reason “through whom all things were made.” The world is intelligible because it issues from intelligence, and human minds can read it because they are made to reflect the rationality of their source; the match of thought and thing flows from one rationality rather than coincidence between two unrelated realms."
+  },
+  {
+   "t": "Causally inert abstract objects",
+   "d": "The problem Platonism sharpens rather than solves. If numbers, sets and structures exist necessarily and mind-independently in a timeless realm, they by definition push nothing and pull nothing — so how do they come to dictate the behavior of matter? Roger Penrose, a leading Platonist, frames reality as three worlds joined by three mysteries, one of them being exactly why the physical world is governed so precisely by the Platonic one."
+  },
+  {
+   "t": "The deism gap (scope)",
+   "d": "Where the argument stops. Even at full strength it reaches a rational Mind behind the order we describe — not yet the Father, Son and Holy Spirit, let alone the empty tomb. It does not prove God exists and does not refute a determined naturalist who calls the fit brute fact. Identifying that Mind with the God revealed in Christ is the work of the other arguments, of revelation and, above all, of the historical evidence for the resurrection."
+  }
+ ],
+ "derive": [
+  {
+   "q": "Pure mathematics is often worked out for its elegance alone and only later fits physics — why is that fit surprising rather than obvious…?",
+   "ans": "the fit is unplanned, and the precision is staggering",
+   "why": "Wigner’s worry had two prongs. The concepts of mathematics are very often chosen for their formal beauty, with no eye to physics, and then later prove indispensable to it; and the precision is staggering — theories built on such mathematics predict measured quantities to many decimal places. The fit, he thought, is too good and too unplanned to be shrugged off as obvious."
+  },
+  {
+   "q": "Riemann’s curved-space geometry sat unused for sixty years before Einstein needed it, and Dirac’s equation pointed to antimatter before anyone found it — so what is the hardest part to explain away…?",
+   "ans": "the mathematics predicted reality no one had yet seen",
+   "why": "These cases are not merely descriptive matches found after the fact; several are predictive — the mathematics pointed to something unknown, and the something turned up. Dirac’s positron and Gell-Mann’s omega-minus were drawn from the mathematics before the observation, and the world then complied. That is the part hardest to dismiss as a fit we engineered."
+  },
+  {
+   "q": "A critic says we simply keep the mathematics that works and forget the rest — does that selection reply dissolve the puzzle…?",
+   "ans": "no — you cannot select-after-the-fact a prediction",
+   "why": "Part of it must be conceded: there is a vast body of mathematics with no known application, and we do retain the tools that work. But selection explains only why our toolkit fits the problems we chose; it does not explain why pure structure keeps anticipating reality we did not yet know was there. A prediction stated in advance, which could have failed in public and sometimes does, cannot be quietly retrofitted."
+  },
+  {
+   "q": "So does the applicability of mathematics prove that God exists…?",
+   "ans": "no — it is some evidence, not proof",
+   "why": "This is not a deductive proof but an inference to the best explanation. The claim is comparative: the data fit theism more comfortably than naturalism, so the applicability of mathematics is some evidence — not proof — that a rational mind stands behind the world. It is one strand in a cumulative case, strongest if mathematical realism is roughly correct, and should be presented as such."
+  },
+  {
+   "q": "Grant that the argument succeeds and a rational Mind stands behind the order — have you reached the God of Christianity…?",
+   "ans": "no — a rational Mind, not yet the Triune God",
+   "why": "The argument reaches a rational Mind behind the order we describe, not yet the Father, Son and Holy Spirit. It does not by itself get you to the God of Abraham, let alone the Trinity or the empty tomb; those rest on other arguments. Identifying that Mind with the God revealed in Christ is the work of revelation and, above all, of the historical evidence for the resurrection."
+  }
+ ],
+ "honestState": {
+  "p1": "Three things can be said fairly about where the live debate stands. First, the phenomenon is not seriously in dispute: that mathematics is extraordinarily, and often predictively, effective in physics is acknowledged across the board, by atheist and theist alike. Second, the explanation is wide open. Naturalistic proposals abound — Max Tegmark’s bold “Mathematical Universe Hypothesis,” on which physical reality simply is a mathematical structure, is one striking example — but none commands consensus, and Tegmark’s own view faces heavy criticism. Richard Hamming and, more sharply, the avowedly non-Platonist engineer Derek Abbott press deflationary selection replies. Third, even those who decline a theological conclusion concede the puzzle points somewhere unexpected: Mark Steiner argued in a rigorous book-length study that physics’ reliance on mathematical analogy yields an “anthropocentric” or “user-friendly” picture of the universe deeply uncomfortable for naturalism, without the book itself arguing for theism. The theistic reading, advanced by philosophers such as Alvin Plantinga, is one serious option in this field, not a fringe view and not a settled victory.",
+  "fairness": "Honest defenders concede the observations. There is a vast body of mathematics with no known application, and we do retain the tools that work — the selection reply is partly true. Mathematically-motivated predictions also frequently fail: supersymmetry, for instance, predicted a spectrum of partner particles the Large Hadron Collider has so far not found, so the track record is successes among genuine misses, not an unbroken string. Abbott is right about the base rate, and his charge bites hardest on the Riemann story, where a tool already on the shelf and later found useful is just what selection says we will remember. And how real mathematics is — the hinge the whole case leans on — is genuinely disputed. But the inference does not follow from any of this: the predictive cases were stated before the observation, where they could fail in public, so they cannot be retrofitted; the puzzle survives under every representative philosophy of mathematics; and the argument is offered as a better overall explanation competing with naturalism on the same evidence, not as a gap. The concessions sharpen the case against selection rather than defeating it.",
+  "verdict": "The unreasonable effectiveness of mathematics does not prove that God exists, does not by itself get you to the God of Abraham, the Trinity or the empty tomb, and does not refute a determined naturalist, who can absorb the data as brute fact or bet on a future explanation. It leans, as we have said, on a contested view of how real mathematics is. What it does is more modest and still worth having: it identifies a deep, conceded feature of reality — that the world is rationally ordered and that this order is legible to the rational mind — and shows that this feature is more at home in a universe made by a rational mind than in one that is not. Note the scope exactly: the argument reaches a rational Mind behind the order, not yet the Father, Son and Holy Spirit; the design-reading is inferred, not proven, while the phenomenon itself is conceded on all sides. Wigner, no theologian, called it a gift we neither understand nor deserve and meant “gift” as a figure of speech; no Giver follows from the word alone. The Christian adds only that, if reality is grounded in a rational Mind, the figure happens to be literally true — and that the fuller case rests on the historical evidence for the resurrection (see The Minimal Facts Argument). For anyone who has felt the strangeness of an equation foretelling a star, it is a thoroughly reasonable place to begin."
+ },
+ "order": [
+  "The deep, predictive applicability of mathematics to the physical world is a striking fact that calls for explanation.",
+  "This fact is far less surprising — more at home, more expected — if reality is the product of a rational mind than if it is not.",
+  "Therefore the applicability of mathematics is some evidence (not proof) that a rational mind stands behind the world — a rational Mind behind the order, not yet the Triune God."
+ ],
+ "props": [
+  {
+   "t": "the predictive applicability of mathematics is a striking fact that calls for explanation",
+   "ok": true
+  },
+  {
+   "t": "shows the fit is more at home on theism than on naturalism",
+   "ok": true
+  },
+  {
+   "t": "is an inference to the best explanation, not a deductive proof",
+   "ok": true
+  },
+  {
+   "t": "rests on a phenomenon conceded by atheist and theist alike",
+   "ok": true
+  },
+  {
+   "t": "the predictive cases cannot be retrofitted after the fact by selection",
+   "ok": true
+  },
+  {
+   "t": "reaches at most a rational Mind behind the order",
+   "ok": true
+  },
+  {
+   "t": "proves that God exists",
+   "ok": false
+  },
+  {
+   "t": "by itself gets you to the God of Abraham, the Trinity or the empty tomb",
+   "ok": false
+  },
+  {
+   "t": "establishes that physicists agree the universe was designed",
+   "ok": false
+  },
+  {
+   "t": "refutes the determined naturalist who calls the fit brute fact",
+   "ok": false
+  },
+  {
+   "t": "predicts particular equations the way a physical theory explains a phenomenon",
+   "ok": false
+  },
+  {
+   "t": "by itself proves that mathematical Platonism is true",
+   "ok": false
+  }
+ ],
+ "cards": [
+  {
+   "q": "What kind of argument is this — and what kind is it not?",
+   "a": "An inference to the best explanation — the reasoning of a detective or a scientist — not a deductive proof that God exists. The claim is comparative and probabilistic: the data fit theism more comfortably than naturalism. It is one strand in a cumulative case, not a settlement on its own."
+  },
+  {
+   "q": "Why did Wigner — a working physicist and no theologian — reach for the word “miracle”?",
+   "a": "Two prongs. The concepts of mathematics are very often chosen for their formal beauty, with no eye to physics, and then prove indispensable to it; and the precision is staggering, predicting measured quantities to many decimal places. The fit struck him as too good and too unplanned to shrug off as obvious."
+  },
+  {
+   "q": "Why are the predictive cases harder to dismiss than descriptive matches found after the fact?",
+   "a": "Because the mathematics pointed to something unknown and it turned up: Dirac’s equation to antimatter, Gell-Mann’s SU(3) scheme to the omega-minus, specified in strangeness, charge and mass before it was found. You cannot select-after-the-fact a prediction of a particle no one has seen."
+  },
+  {
+   "q": "Does the track record of mathematically-led prediction run unbroken?",
+   "a": "No, and it would be a cheat to pretend so. Mathematically-motivated predictions frequently fail — supersymmetry predicted partner particles the Large Hadron Collider has so far not found. But a prediction that could have failed in public, and sometimes does, cannot be quietly retrofitted, and the successes remain surprising."
+  },
+  {
+   "q": "How does Derek Abbott sharpen the selection reply, and how far does it reach?",
+   "a": "He adds a “Darwinian Struggle for the Survival of Ideas”: the millions of failed models that never made it onto paper are forgotten, so our wonder is a base-rate error. Granted where it lands, and it bites hardest on the Riemann story — but Dirac’s and Gell-Mann’s predictions were stated in advance where they could fail, so he does not show the predictive successes are an artifact of selection."
+  },
+  {
+   "q": "Why does the anthropic reply — “any orderly universe would look mathematical” — not close the question?",
+   "a": "Observers do require some order, but the reply relocates the mystery rather than removing it. The target is the specific, deep, elegant, tractable character of the fundamental laws; “a livable universe must be somewhat orderly” does not entail “describable by a handful of beautiful symmetry groups to many decimal places.” It caps the mystery; it does not pay it off."
+  },
+  {
+   "q": "Why does the evolution reply only reach so far?",
+   "a": "Within its range it is true: selection plausibly gave us reliable intuitions about quantities, shapes, and middle-sized objects. But Riemannian geometry, complex Hilbert spaces and the representation theory of Lie groups are remote from any survival task — no reproductive advantage attaches to grasping SU(3). Why that by-product unlocks the deepest layers of physics is left unexplained."
+  },
+  {
+   "q": "On the theistic proposal, why is the fit of thought and thing no longer a coincidence?",
+   "a": "Because reality is the free creation of a rational mind — a cosmos spoken into being through the Logos. The world is intelligible because it issues from intelligence, it is ordered by mathematically expressible law because order is what a mind imposes, and minds can read it because they are made to reflect the rationality of their source. Both flow from one rationality."
+  },
+  {
+   "q": "At its proper strength, what does theism offer here — and what does it not do?",
+   "a": "It offers a worldview in which the intelligibility of nature, the rationality of mind, and their fit are expected rather than fortunate — an explanatory virtue, not a demonstration. It does not predict any particular equation, and it does not explain mathematics the way a physical theory explains a phenomenon."
+  },
+  {
+   "q": "What is the honest hinge the argument openly leans on?",
+   "a": "How real mathematics is — and so how deep the puzzle runs — is itself a live, unsettled question. Quine and Putnam argued from indispensability toward realism; Maddy challenged the holism that assumes, and nominalists like Hartry Field labored to do science without numbers. The argument is strongest if mathematical realism is roughly correct, weaker if a thoroughgoing nominalism succeeds — and we should say so."
+  },
+  {
+   "q": "Why is Wigner’s “gift” language not itself an argument for God?",
+   "a": "Wigner used “gift” as a figure of speech, not as an argument, and no Giver follows from the word alone. The Christian adds only that, if reality is grounded in a rational Mind, the figure happens to be literally true — which is a reading of the evidence, not a deduction from the vocabulary."
+  },
+  {
+   "q": "Where does the live debate actually stand?",
+   "a": "The phenomenon is not in dispute; the explanation is wide open. Naturalistic proposals abound — Tegmark’s Mathematical Universe Hypothesis among them, though it is widely contested — while Steiner, who does not argue for theism, finds the picture uncomfortable for naturalism. The theistic reading (Plantinga) is one serious option, not fringe and not a settled victory."
+  }
+ ],
+ "obj": [
+  {
+   "who": "Mathematician",
+   "q": "This is Richard Hamming’s point, and Derek Abbott has sharpened it: we see what we look for and we select the kind of mathematics to use, keeping the tools that fit and discarding the rest. Most mathematics describes nothing physical at all. As Abbott puts it, “I argue that this innateness is illusory, as we have cherry picked a successful coincidence from a backdrop of many more cases that are not as fortuitous” — add the millions of failed models that never made it onto paper, and your wonder is just a base-rate error: you count the hits and forget the misses.",
+   "model": "Part of this is simply true and must be conceded: there is a vast body of mathematics with no known application, we do retain the tools that work, and Abbott is right about the base rate — his charge bites hardest on the Riemann story, where a tool already on the shelf and later found useful is exactly what selection says we will remember. But selection struggles with the predictive cases. Dirac’s positron and Gell-Mann’s omega-minus were consequences of the mathematics drawn before the observation, where they could fail in public; the world then complied. We should concede frankly that mathematically-motivated predictions also frequently fail — supersymmetry is a live example — but that is just what makes the successes hard to explain away, because a prediction that could have failed, and sometimes does, cannot be quietly retrofitted after the fact. Abbott’s own “failed models” are, in his words, ones “which never made it on paper”; the in-advance predictions did make it onto paper. So selection explains why our toolkit fits the problems we chose; it does not explain why pure structure keeps anticipating reality we did not yet know was there — Hamming himself ended his essay still calling the situation unresolved. The verdict is bounded exactly: Abbott sharpens the concession that the successes are selected and the misses real; he does not show that the predictive successes are an artifact of selection. (And even granted, this reaches a rational Mind, not a proof of God.)"
+  },
+  {
+   "who": "Physicist",
+   "q": "In any universe orderly enough to contain observers, those observers would necessarily find regularities, and regularities just are what mathematics codifies. So a mathematical-looking world is simply a precondition of our being here to ask the question — the fit is a selection effect on which universes can be observed, and there is nothing left to explain.",
+   "model": "The reply’s premise is true — observers do require some order — but it relocates the mystery rather than removing it. The argument’s target is not the bare existence of some pattern but the specific, deep, unifying, elegant, mathematically tractable character of the fundamental laws, and the surplus structure that lets a nineteenth-century geometry govern twentieth-century gravity. “A livable universe must be somewhat orderly” does not entail “a livable universe must be describable by a handful of beautiful symmetry groups to many decimal places.” So the objection does not reach its conclusion: the anthropic point caps the mystery — it tells us why we observe some order — but it does not pay it off, and the depth and elegance of that order is precisely what still calls for explanation. The verdict is bounded: the anthropic observation is correct and the puzzle survives it."
+  },
+  {
+   "who": "Cognitive scientist",
+   "q": "Natural selection favored brains that model the environment accurately, so of course our mathematics fits the world — survival did the calibrating. The “miracle” is just the predictable result of minds that were tuned by evolution to track real patterns; there is no surplus fact here for a designer to explain.",
+   "model": "Within its range the point is true, and it should be granted: selection plausibly gave us reliable intuitions about quantities, shapes, and middle-sized objects, and our general capacity for abstraction can be called a by-product of those selected faculties. But the range is the problem. The mathematics that turns out to describe fundamental physics — Riemannian geometry, complex Hilbert spaces, the representation theory of Lie groups — is wildly remote from any survival task on any savanna; no reproductive advantage attaches to grasping SU(3). So the reply holds for the near range and fails for the deep reach: what remains unexplained is why that by-product, exercised on objects of no biological interest, should turn out to unlock the deepest layers of physical reality. Many naturalists simply treat it as a happy surprise, which is to concede the explanandum rather than account for it. The verdict is bounded: evolution explains our grip on middle-sized quantities, not the applicability of pure structure at the foundations."
+  },
+  {
+   "who": "Skeptic",
+   "q": "This is just a God-of-the-gaps. You have found a gap in our understanding and stuffed God into it; one day cognitive science or a final physics will close the gap, and your “explanation” will evaporate, like every gap argument before it.",
+   "model": "The history behind the worry is real, and it needs an answer — but the argument here is not of the gap form. A God-of-the-gaps argument says: “science cannot yet explain X, therefore God.” This argument says something different: even with the physics and the cognitive science completed, there would remain the question of why reality is the kind of thing that submits to elegant mathematical law and is legible to mind — a question one level up from any particular scientific result. It is offered as a better overall explanation of a standing feature of the world, competing with naturalism on the same evidence, not as a placeholder for missing data. That is the structure of inference to the best explanation, not of a gap. So the verdict is bounded exactly: whether the argument finally succeeds is contestable and turns on the hinge about how real mathematics is; that it is not a mere gap-filler is, we judge, clear."
+  }
+ ],
+ "unseen": {
+  "who": "Philosopher of mathematics",
+  "av": "PM",
+  "q": "Your whole puzzle assumes there is something — real mathematical structure — out there to fit the world. But a nominalist like Hartry Field, in Science Without Numbers, argues there are no numbers at all; mathematical statements are strictly false, useful fictions, and science can in principle be done without quantifying over them. If mathematics is just a human invention for describing patterns, then there is no deep two-realm correspondence to marvel at — the “unreasonable effectiveness” dissolves into the ordinary fact that we made tools that describe things.",
+  "model": "Grant the observation and refuse the inference. It is true, and this case says so openly, that how real mathematics is — and therefore how deep the applicability puzzle runs — is a live and unsettled question among first-rate philosophers; the argument is strongest if mathematical realism is roughly correct and weaker if a thoroughgoing nominalism succeeds. That hinge is genuinely disputed, and we should not hide it. But the objection overreaches when it says the puzzle simply dissolves. A fiction that keeps predicting unobserved particles is a very peculiar fiction; the applicability puzzle reappears, now as the question: why is this fiction so unreasonably, predictively good? Dirac’s antimatter and Gell-Mann’s omega-minus were drawn from the “merely invented” structure before the particles were observed, and the world complied — a bare invention for describing patterns we already see should not keep anticipating patterns we have not yet found. So the verdict is bounded: nominalism, if it succeeds, weakens the argument’s strength and the depth of the puzzle; it does not make the predictive effectiveness go away, it only renames the thing that still needs accounting for.",
+  "source": "essay §Four Philosophies of Mathematics (Fictionalism, Hartry Field; “a fiction that keeps predicting unobserved particles is a very peculiar fiction… why is this fiction so unreasonably good?”) + §The Indispensability Debate, and an Honest Hinge (Quine/Putnam, Maddy, Field; “strongest if mathematical realism is roughly correct… weaker if a thoroughgoing nominalism succeeds… we should say so”). q AUTHORED — declared: the essay discusses fictionalism/nominalism in premise-defence prose and names Field in the live debate, but the page never states the “there are no numbers, so the puzzle dissolves” move in an objector’s voice (the Phase-1 accordion for a philosophy-of-math objection is Platonism, a different objection; fictionalism appears only inside the ‘puzzle survives each philosophy’ support card and ‘the room’). model fully ported; ‘Grant the observation and refuse the inference’ and the closing ‘it only renames the thing that still needs accounting for’ are the declared landing clauses (the latter compresses the page accordion’s anthropic line ‘just renames the thing that needs accounting for’)."
+ },
+ "explain2": "the selection reply — we notice the mathematics that works, and the misses are real",
+ "ledger": [
+  {
+   "field": "title",
+   "from": "ev-m-mathematics.html <h1> “The Argument from Mathematics” verbatim."
+  },
+  {
+   "field": "short",
+   "from": "essay §Wigner Names the Puzzle / title subject, as a lower-case noun phrase (‘the unreasonable effectiveness of mathematics’)."
+  },
+  {
+   "field": "keyTerms[0]",
+   "from": "essay §Wigner Names the Puzzle paras 1–2 + §State of Scholarship para (‘extraordinarily, and often predictively, effective’); Wigner’s ‘bordering on the mysterious’ / ‘no rational explanation’ quoted and attributed."
+  },
+  {
+   "field": "keyTerms[1]",
+   "from": "essay §The Argument, Stated Carefully, paras 1 and 3 (‘inference to the best explanation’; comparative and probabilistic; one strand in a cumulative case)."
+  },
+  {
+   "field": "keyTerms[2]",
+   "from": "essay §The Evidence para 1 + the caveat para (‘not merely descriptive matches… several are predictive’); Dirac/omega-minus dates as the essay gives them."
+  },
+  {
+   "field": "keyTerms[3]",
+   "from": "essay §1 Selection paras 1–2 (Hamming 1980; ‘we see what we look for’ / ‘we select the kind of mathematics’; ‘Hamming himself… ended his essay still calling the situation unresolved’)."
+  },
+  {
+   "field": "keyTerms[4]",
+   "from": "essay §The Indispensability Debate, and an Honest Hinge (Quine/Putnam, Maddy, Field; ‘how real mathematics is… is itself a live and unsettled question’; ‘strongest if mathematical realism is roughly correct; weaker if a thoroughgoing nominalism succeeds’)."
+  },
+  {
+   "field": "keyTerms[5]",
+   "from": "essay §The Theistic Proposal para 1 (Logos ‘through whom all things were made’; intelligible because it issues from intelligence; minds made to reflect their source)."
+  },
+  {
+   "field": "keyTerms[6]",
+   "from": "essay §Four Philosophies, Platonism para (Penrose three worlds/three mysteries; causally inert abstract objects ‘push nothing and pull nothing… come to dictate the behavior of matter’)."
+  },
+  {
+   "field": "keyTerms[7]",
+   "from": "essay §What the Argument Does, and Does Not, Establish paras 1–2 + ev-m seo-summary scope line (reaches a rational Mind, not yet the Father/Son/Spirit; resurrection pointer)."
+  },
+  {
+   "field": "derive[0]",
+   "from": "essay §Wigner Names the Puzzle para 2 (the two prongs; ‘too good and too unplanned to be shrugged off’)."
+  },
+  {
+   "field": "derive[1]",
+   "from": "essay §The Evidence caveat para (predictive not merely descriptive) + §1 Selection reply (Dirac/Gell-Mann drawn before the observation)."
+  },
+  {
+   "field": "derive[2]",
+   "from": "essay §1 Selection reply paras (concession + ‘Selection explains why our toolkit fits the problems we chose; it does not explain why pure structure keeps anticipating reality we did not yet know was there’)."
+  },
+  {
+   "field": "derive[3]",
+   "from": "essay §The Argument, Stated Carefully (inference to the best explanation, comparative) + §What the Argument Does (‘does not prove that God exists’)."
+  },
+  {
+   "field": "derive[4]",
+   "from": "essay §What the Argument Does, and Does Not, Establish para 1 + ev-m seo-summary scope line (reaches a rational Mind, not the God of Abraham/Trinity/empty tomb; resurrection)."
+  },
+  {
+   "field": "honestState.p1",
+   "from": "essay §The State of the Scholarship (the three fair things; Tegmark MUH ‘faces heavy criticism’; Steiner ‘anthropocentric/user-friendly’, not arguing for theism; Plantinga ‘one serious option… not a fringe view and not a settled victory’) + §1 Selection (Hamming, Abbott non-Platonist)."
+  },
+  {
+   "field": "honestState.fairness",
+   "from": "essay §1 Selection reply (vast unapplied mathematics; supersymmetry/LHC misses; Abbott right about the base rate; bites hardest on Riemann; ‘which never made it on paper’) + §Indispensability Hinge (contested realism) + the reply’s bounded close; concessions carried to the reply, never ending bare."
+  },
+  {
+   "field": "honestState.verdict",
+   "from": "essay §What the Argument Does, and Does Not, Establish paras 1–2 + Conclusion (‘gift’ figure of speech; ‘if reality is grounded in a rational Mind, the figure happens to be literally true’; ‘a thoroughly reasonable place to begin’) + ev-m seo-summary scope + resurrection pointer; design-inferred/data-conceded kept apart."
+  },
+  {
+   "field": "order",
+   "from": "ev-m-mathematics.html ARG_PREMISES (P1/P2/C verbatim); line 3’s appended fence ‘— a rational Mind behind the order, not yet the Triune God’ ported from the ev-m seo-summary scope sentence."
+  },
+  {
+   "field": "props (true)",
+   "from": "essay §Argument Stated Carefully (striking fact calls for explanation; inference to the best explanation; more at home on theism) + §State of Scholarship (phenomenon not in dispute, conceded by atheist and theist) + §1 Selection reply (predictive cases cannot be retrofitted) + §What the Argument Does (reaches a rational Mind)."
+  },
+  {
+   "field": "props (decoys)",
+   "from": "each explicitly denied by the essay: ‘does not prove that God exists’ / ‘does not… get you to the God of Abraham… the Trinity or the empty tomb’ / ‘does not refute a determined naturalist, who can absorb the data as brute fact’ (§What the Argument Does); ‘the explanation is wide open… many naturalists simply treat the fit as a happy surprise’ vs any ‘physicists agree it was designed’ (data conceded / design inferred, §State of Scholarship); ‘Theism does not predict any particular equation, and it does not explain mathematics in the way a physical theory explains a phenomenon’ (§The Theistic Proposal); ‘strongest if mathematical realism is roughly correct… weaker if a thoroughgoing nominalism succeeds’ — the argument never claims to prove Platonism (§Indispensability Hinge, §Four Philosophies). Every decoy carries a verb on the argument."
+  },
+  {
+   "field": "cards[0]",
+   "from": "essay §The Argument, Stated Carefully, paras 1 and 3."
+  },
+  {
+   "field": "cards[1]",
+   "from": "essay §Wigner Names the Puzzle para 2 (two prongs)."
+  },
+  {
+   "field": "cards[2]",
+   "from": "essay §The Evidence (Gell-Mann SU(3)/omega-minus; Dirac) + caveat para (predictive vs descriptive); §1 Selection reply (‘cannot select-after-the-fact a prediction of a particle no one has seen’)."
+  },
+  {
+   "field": "cards[3]",
+   "from": "essay §1 Selection reply para 2 (supersymmetry/LHC; ‘successes among genuine misses, not an unbroken string’; ‘cannot be quietly retrofitted’) + §Disputed/‘it would be a cheat’ phrasing adapted from the essay’s honest-caveat tone."
+  },
+  {
+   "field": "cards[4]",
+   "from": "essay §1 Selection, the Abbott paragraphs (‘Darwinian Struggle for the Survival of Ideas’; ‘cherry picked a successful coincidence’; ‘bites hardest on the Riemann story’; ‘he does not show that the predictive successes are an artifact of selection’), compressed with quotation marks kept."
+  },
+  {
+   "field": "cards[5]",
+   "from": "essay §2 Anthropic reply (‘relocates the mystery rather than removing it’; ‘does not entail… a handful of beautiful symmetry groups to many decimal places’; ‘caps the mystery; it does not pay it off’)."
+  },
+  {
+   "field": "cards[6]",
+   "from": "essay §3 Evolution reply (within its range true; Riemannian geometry/Hilbert spaces/Lie groups remote from survival; ‘No reproductive advantage attaches to grasping SU(3)’; by-product unexplained)."
+  },
+  {
+   "field": "cards[7]",
+   "from": "essay §The Theistic Proposal para 1 (Logos; one rationality behind both)."
+  },
+  {
+   "field": "cards[8]",
+   "from": "essay §The Theistic Proposal para 3 (explanatory virtue, not a demonstration; ‘Theism does not predict any particular equation’)."
+  },
+  {
+   "field": "cards[9]",
+   "from": "essay §The Indispensability Debate, and an Honest Hinge (Quine/Putnam, Maddy, Field; the disclosed hinge)."
+  },
+  {
+   "field": "cards[10]",
+   "from": "essay Conclusion (Wigner used ‘gift’ as a figure of speech; no Giver follows from the word alone; ‘the figure happens to be literally true’) + the ev-m ‘Where it stops’ honest-limit."
+  },
+  {
+   "field": "cards[11]",
+   "from": "essay §The State of the Scholarship (phenomenon not in dispute / explanation wide open; Tegmark MUH contested; Steiner; Plantinga ‘one serious option… not a settled victory’)."
+  },
+  {
+   "field": "obj[0]",
+   "from": "essay §1 Selection, full statement (Hamming + Abbott, the ‘cherry picked’ quote, the ‘failed models… never made it on paper’ point, base-rate ‘count the hits and forget the misses’) + the full reply + §State of Scholarship. Deliberately NOT the ev-m Drill 3 model answer (conversational 1 Peter 3:15 voice): this ports the fuller essay material (Abbott quote, supersymmetry concession, the in-advance/on-paper distinction, Hamming unresolved, bounded verdict)."
+  },
+  {
+   "field": "obj[1]",
+   "from": "essay §2 Any describable universe would look mathematical (anthropic), statement + reply verbatim with compression (‘relocates the mystery’; ‘surplus structure that lets a 19th-century geometry govern 20th-century gravity’; ‘caps the mystery; it does not pay it off’). ‘So the objection does not reach its conclusion’ is the declared landing join."
+  },
+  {
+   "field": "obj[2]",
+   "from": "essay §3 Evolution tuned our minds, statement + reply verbatim with compression. ‘So the reply holds for the near range and fails for the deep reach’ and the closing bounded verdict are declared landing clauses, each compressing the essay’s own ‘within its range… but the range is the problem’ structure."
+  },
+  {
+   "field": "obj[3]",
+   "from": "essay §4 This is a God-of-the-gaps, statement + reply verbatim with compression (‘not of the gap form’; ‘even with the physics and the cognitive science completed…’; ‘better overall explanation… not a placeholder’; ‘that it is not a mere gap-filler is, we judge, clear’); the clause tying the open question to the realism hinge ported from §Indispensability Hinge."
+  },
+  {
+   "field": "unseen",
+   "from": "essay §Four Philosophies (Fictionalism/Field; ‘a fiction that keeps predicting unobserved particles is a very peculiar fiction… why is this fiction so unreasonably good?’) + §Indispensability Hinge (nominalism; ‘strongest if mathematical realism is roughly correct… we should say so’). q AUTHORED — declared; model ported. Genuinely unseen as an objection: the page’s only philosophy-of-math accordion is Platonism; fictionalism/nominalism appears on the page only inside premise-defence support prose and ‘the room’, never stated in an objector’s voice."
+  },
+  {
+   "field": "explain2",
+   "from": "ev-m-mathematics.html .hardest line (‘The one that matters most: Hamming’s selection reply — we notice the mathematics that works, and the misses are real’), recast as a noun phrase, matching it."
+  }
+ ],
+ "notes": "Paired essay read in full: library/mathematics.html (body, all 16 footnotes, bibliography, FAQ). Kept page read in full: ev-m-mathematics.html (seo-summary, syllogism/ARG_PREMISES, both premise-defence cards with supports/honest-limits/objin/‘the room’, the six objection accordions, the sources cards, Drills 1–3, the flashcard `cards` deck, the mock-scorer `checks` regexes, share-card). DECLARED AUTHORED (named to every lens): (1) unseen.q — the nominalism/fictionalism ‘there are no numbers, so the puzzle dissolves’ move; the essay answers it and the page carries its content in defence prose, but neither states it in an objector’s voice (the Phase-1 philosophy-of-math accordion is Platonism, a different objection), so the objector’s wording is mine; the model is ported. (2) obj[2].model’s landing clauses ‘So the reply holds for the near range and fails for the deep reach’ and its closing bounded verdict — added to land an explicit verdict where the essay’s evolution reply trails off at ‘happy surprise’; each compresses the essay’s own ‘within its range… but the range is the problem’ structure. Also scaffolding, no new claim: derive[].q/ans and the card question strings (the ans/why/answer bodies are ported); the join phrases ‘So the objection does not reach its conclusion’ (obj[1]) and ‘Grant the observation and refuse the inference’ / ‘it only renames the thing that still needs accounting for’ (unseen.model — the latter compresses the page accordion’s ‘just renames the thing that needs accounting for’); and order[2]’s appended deism fence, ported from the ev-m seo-summary scope sentence. BOUNDS KEPT: deism gap stated in keyTerms[7], derive[4], honestState.verdict, order[2], props (true chip ‘reaches at most a rational Mind’ + decoy ‘gets you to the God of Abraham/Trinity/empty tomb’), cards[10]/[11], obj[0] close and unseen; DATA CONCEDED / DESIGN INFERRED kept apart everywhere (phenomenon ‘not in dispute… conceded by atheist and theist alike’ vs the inferred Mind; a props decoy ‘establishes that physicists agree the universe was designed’ tests exactly this); never ‘scientists agree it was designed/created’. FRAGILE-PAGE HAZARD: this is the Science tab’s mathematics page, not fine-tuning, so Stenger/Hossenfelder/Lewis-Barnes do not appear — the fragile analogue here is the Hamming/Abbott selection reply and the realism/nominalism hinge, both carried with their named critics (Hamming, Abbott ‘avowedly non-Platonist’, Field, Maddy, Quine/Putnam) and the hinge disclosed as genuinely disputed, never claiming the phenomenon’s explanation is settled. Kalam not invoked; no young-earth/old-earth or ID verdict (not applicable to this argument). Francis Collins not mentioned. Quotations keep their marks and attributions (Wigner ‘bordering on the mysterious’/‘no rational explanation’/‘wonderful gift… neither understand nor deserve’; Abbott ‘cherry picked a successful coincidence’, ‘Darwinian Struggle for the Survival of Ideas’). No entry in tools/retired-claims.json touches this topic, and none is reinstated (the god-of-the-gaps handling and the ‘objections stated as you will actually meet it’ framing both match the corrected forms). NOT CONTRADICTED / NOT DUPLICATED: the kept Drill 3 (SK skeptic, conversational selection reply) is NOT reused — obj[0] answers the same objection with fuller essay-ported material; the kept 8 flashcards (P1, P2, Wigner-when, two predictive cases, Platonism-doesn’t-remove-God, selection-hardest, god-of-the-gaps, how-far-reaches) are not duplicated — my 12 cards take different angles (why ‘miracle’, the fail-rate/supersymmetry, Abbott specifically, anthropic, evolution-range, the Logos, theism’s proper strength, the honest hinge, the ‘gift’ figure, the state of the explanation), and Platonism + god-of-the-gaps are deliberately left to the kept accordions rather than re-carded. BACKLOG ISSUES NOTICED IN THE KEPT PAGE (not fixed — listed for the backlog): (a) the seo-summary asserts ‘Mathematical truths also seem necessary, timeless, and the same for every mind that grasps them’ — this necessity/timelessness line has no clear anchor in the essay body, which argues from applicability/effectiveness, not from the modal status of mathematical truth; either port a supporting sentence or soften the claim; (b) the kept Drill 3 model answer says ‘group theory went on to describe subatomic particles’ — accurate but looser than the essay’s predictive framing (the omega-minus was predicted, not merely described), a mild weakening of the page’s own strongest point. Nothing I could not source."
+}

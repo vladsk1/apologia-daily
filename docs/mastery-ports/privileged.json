@@ -1,0 +1,365 @@
+{
+ "slug": "privileged",
+ "title": "The Privileged Planet Argument",
+ "short": "the correlation between a planet’s habitability and its discoverability",
+ "keyTerms": [
+  {
+   "t": "The habitability–measurability correlation",
+   "d": "The distinctive claim of the thesis: the same rare local conditions required for complex, observing life — a clear atmosphere, a stable star, a well-placed orbit — correlate with the conditions that make the universe measurable and intelligible to the observers who live there. It is offered as a suggestive, cumulative pattern, not a theorem."
+  },
+  {
+   "t": "The two layers (data vs. inference)",
+   "d": "Almost every dispute turns on keeping these apart. The factual layer — atmospheres, eclipses, galactic chemistry, the detectability of the cosmic microwave background — is ordinary, checkable astronomy and can be conceded. The further step, that this pairing is best explained by a purposeful mind, is a philosophical inference drawn from that science, not a result of it, and it is genuinely contested."
+  },
+  {
+   "t": "Inference to the best explanation",
+   "d": "The form of the argument. Gonzalez and Richards are explicit that they are reasoning to the best explanation, not deducing God from a telescope. The logic is probabilistic, not deductive; the weight rests on whether the correlation is real and on whether the likelihood comparison in Premise 2 holds up."
+  },
+  {
+   "t": "The weak anthropic principle",
+   "d": "Articulated by the cosmologist Brandon Carter in 1973: we could not possibly find ourselves anywhere that did not permit observers, so it is no surprise that our location permits observation. The thesis both uses it and presses past it — selection explains why we are somewhere livable, which is not yet why we are somewhere measurable."
+  },
+  {
+   "t": "Surplus intelligibility",
+   "d": "The fact the selection effect cannot absorb. Observers require only a livable world, not a measurable one, so a correlation between habitability and discoverability — if it holds — is a surplus the anthropic principle does not account for. The eclipse is the clean case: it serves no survival purpose whatsoever, yet it delivered helium and a test of relativity."
+  },
+  {
+   "t": "The full ledger",
+   "d": "The test the cherry-picking objection demands: a correlation claim is only as good as the unfavourable factors counted alongside the favourable ones. The honest verdict is that this ledger has not been compiled rigorously enough, by either side, to settle the matter, so the thesis points to a suggestive pattern rather than a demonstrated correlation."
+  },
+  {
+   "t": "Rare Earth (Ward and Brownlee)",
+   "d": "The secular precursor — Peter Ward and Donald Brownlee’s Rare Earth (2000), which argued that while simple microbial life may be widespread, the conditions for complex life are forbiddingly rare. Neither author makes any theological claim; it remains a serious minority position in astrobiology, and some of its claims (a large stabilising Moon, Jupiter-class shielding) are now disputed."
+  },
+  {
+   "t": "Its stated failure condition",
+   "d": "Gonzalez and Richards argue the thesis is falsifiable in principle: if the best sites for life turned out to be systematically poor for observation, the thesis would fail. That is a real failure condition, and stating one is what keeps the argument from being bare selection bias — though stating a failure condition is not the same as having compiled the ledger that tests it."
+  }
+ ],
+ "derive": [
+  {
+   "q": "Habitability and discoverability are logically independent — so when they keep coinciding, what is it that calls for explanation…?",
+   "ans": "the correlation itself, not the mere fact that Earth is habitable",
+   "why": "There is no law of physics that ties “good for life” to “good for science.” One can readily imagine a world that supports life but frustrates observers — microbes under a permanent cloud deck, or a civilization wrapped in haze who never see a star. That habitability and discoverability keep coming together, across seemingly unrelated domains, is what Gonzalez and Richards say cries out for explanation."
+  },
+  {
+   "q": "The weak anthropic principle says we must find ourselves somewhere livable — does that also explain why our place is unusually good for science…?",
+   "ans": "no — observers need a livable world, not a measurable one",
+   "why": "The anthropic principle fully explains why we find ourselves somewhere habitable. What it does not explain is why that same place should also be unusually good for measuring the universe, because a planet teeming with life under a permanent overcast would host observers who could never do astronomy at all. If the correlation holds, it is precisely the surplus fact the selection effect cannot absorb."
+  },
+  {
+   "q": "The near-perfect eclipse revealed helium and tested relativity — does it serve any purpose for survival…?",
+   "ans": "none — so a selection effect cannot account for it",
+   "why": "Some pairings, like our eyes and the atmosphere’s window, may be selection at work — our eyes evolved to use exactly the light the atmosphere lets through. But the size-and-distance coincidence that yields perfect eclipses is not, on its face, required for life at all, yet it delivered helium (1868) and a test of general relativity (1919). That is the kind of surplus the anthropic principle does not reach."
+  },
+  {
+   "q": "A critic says the favourable factors were cherry-picked — what single test answers the charge…?",
+   "ans": "the full ledger — count the hindering factors alongside the helpful ones",
+   "why": "A correlation claim is only as good as the full ledger of unfavourable factors counted beside the favourable ones, and the honest verdict is that this ledger has not been compiled rigorously enough, by either side, to settle it. Gonzalez and Richards do state a genuine failure condition, which keeps the thesis from being bare selection bias, but it stays an intriguing hypothesis, not a proven correlation."
+  },
+  {
+   "q": "Grant the correlation and the design inference — how far does it actually reach…?",
+   "ans": "to a purposing designer at most, not yet the Triune God",
+   "why": "Even at its strongest the argument reaches a purposing designer, not yet the Triune God of the creeds; it says nothing of incarnation, resurrection, or covenant. It is at most a clue — one quiet line in a larger cumulative case alongside fine-tuning. The fuller case for the Christian God rests on revelation and, above all, on the historical evidence for the resurrection."
+  }
+ ],
+ "honestState": {
+  "p1": "Two layers stand in different places. The habitability science is alive and respectable: the “rare Earth” considerations of Peter Ward and Donald Brownlee remain a serious minority position in astrobiology, contested by those who expect life to be common, and the discovery of thousands of exoplanets since 2004 has enriched — without settling — the debate over how unusual Earth’s conditions really are; some Rare Earth claims (the stabilising Moon, Jupiter’s shielding) are now disputed. The measurability correlation, by contrast, has not entered mainstream scientific literature as an accepted result; it lives chiefly within the intelligent-design and broader natural-theology conversation, is defended by the astronomer Guillermo Gonzalez and the philosopher Jay W. Richards, and drew significant criticism from astronomers when it appeared. Brandon Carter articulated the weak anthropic principle the critics press (1973); the astronomer William H. Jefferys criticised the thesis as either trivial (the anthropic principle handles it) or methodologically unsound (selection bias); and the Smithsonian’s National Museum of Natural History withdrew co-sponsorship of the 2005 film premiere, a reminder that the mainstream community does not regard the design inference as established science. Gonzalez and Richards issued a 2024 twentieth-anniversary edition claiming the exoplanet harvest strengthens their case; that is the book’s own promotional account and has not been assessed here against its critics.",
+  "fairness": "Honest defenders concede the observations. The correlation is not rigorously established; the eclipse coincidence is genuinely time-bound (the Moon recedes about 3.8 cm a year, so near-perfect total eclipses will cease in roughly six hundred million years); the full ledger the cherry-picking charge demands has not been compiled by either side; and scientists in general do not accept the design inference. But the inference the critic draws does not follow. The selection effect fully explains livability and leaves untouched the surplus intelligibility — a world could be livable yet unmeasurable — and the eclipse fit serves no survival purpose at all. The thesis states a genuine failure condition (it would fail if the best sites for life proved systematically poor for observation), so it is falsifiable in principle, not bare selection bias. The pattern is under-quantified, but it is not nothing: it points, suggestively and defeasibly, in the direction of purpose. Concede every observation; the conclusion that the pattern is mere selection bias is the one thing that does not follow.",
+  "verdict": "The Privileged Planet thesis does not prove that Earth was designed. It does not establish, by the standards of mainstream science, even that habitability and measurability are robustly correlated — that claim remains under-tested and disputed — and it does not show that scientists agree the cosmos is arranged for discovery; they do not. What it does accomplish is more modest and still worth having: it identifies a real and often-overlooked distinction between a universe being livable and its being knowable, and it shows that the anthropic principle, which explains the first, does not by itself explain the second. That surplus intelligibility fits comfortably within a theistic picture and sits a little awkwardly within a purely indifferent one. It is at most a clue — one quiet line in a larger cumulative case alongside fine-tuning and the origin of the cosmos, not a substitute for them. And even at its strongest it reaches a purposing designer, not yet the Triune God of the creeds; it says nothing of incarnation, resurrection, or covenant. The fuller case for the Christian God rests on revelation and, above all, on the historical evidence for the resurrection."
+ },
+ "order": [
+  "The same narrow set of conditions that make a location habitable for complex life also tend to make it an unusually good platform for scientific discovery.",
+  "This correlation, if it holds, is surprising on chance or physical necessity but is what one would expect if the cosmos were arranged by a mind intending its inhabitants to understand it.",
+  "Therefore the correlation is some evidence for purpose behind the cosmos — an inference to the best explanation that reaches at most a purposing designer, not a proof and not yet the Triune God."
+ ],
+ "props": [
+  {
+   "t": "identifies a real distinction between a universe being livable and its being knowable",
+   "ok": true
+  },
+  {
+   "t": "shows the anthropic principle explains habitability but not measurability",
+   "ok": true
+  },
+  {
+   "t": "offers the correlation as an inference to the best explanation, not a deductive proof",
+   "ok": true
+  },
+  {
+   "t": "states its own failure condition — it fails if the best sites for life prove systematically poor for observation",
+   "ok": true
+  },
+  {
+   "t": "treats the factual astronomy — eclipses, atmosphere, galactic chemistry — as checkable, revisable science",
+   "ok": true
+  },
+  {
+   "t": "reaches at most a purposing designer, as one strand in a larger cumulative case",
+   "ok": true
+  },
+  {
+   "t": "proves that the Earth was designed",
+   "ok": false
+  },
+  {
+   "t": "shows that scientists in general agree the cosmos is arranged for discovery",
+   "ok": false
+  },
+  {
+   "t": "by itself establishes that habitability and measurability are robustly correlated",
+   "ok": false
+  },
+  {
+   "t": "reaches the Triune God of the creeds",
+   "ok": false
+  },
+  {
+   "t": "proves the near-perfect eclipse is a permanent, designed feature",
+   "ok": false
+  },
+  {
+   "t": "requires rejecting the anthropic principle in order to work",
+   "ok": false
+  }
+ ],
+ "cards": [
+  {
+   "q": "What two layers must be kept apart in this argument, and which one can be conceded?",
+   "a": "The factual layer — atmospheres, eclipses, galactic chemistry, the detectability of the cosmic microwave background — is ordinary, checkable astronomy and can be conceded. The design step is a philosophical inference drawn from that science, not a result of it, and it is genuinely contested. Confusing the two is the surest way to misjudge the whole."
+  },
+  {
+   "q": "State the correlation the argument rests on — and the caveat that travels with it.",
+   "a": "The same narrow conditions that make a location habitable for complex life also tend to make it an unusually good platform for scientific discovery. The caveat is built in: the claim has to be shown real and not cherry-picked, and the full ledger that would settle that has not been compiled by either side."
+  },
+  {
+   "q": "Why is the logical independence of habitability and discoverability the crux of the case?",
+   "a": "There is no law of physics that ties “good for life” to “good for science” — a world could support life yet frustrate observers (microbes under a permanent cloud deck). That the two keep coming together, across unrelated domains, is what Gonzalez and Richards say cries out for explanation; if the conjunction holds, it is the puzzle, not the rarity."
+  },
+  {
+   "q": "What exactly does the anthropic principle explain here — and what does it leave unexplained?",
+   "a": "It fully explains why we find ourselves somewhere habitable; observers could not arise on a dead world. It does not explain why that same place should also be unusually good for measuring the universe, since observers require only a livable world, not a measurable one. If the correlation holds, that surplus is what selection cannot absorb."
+  },
+  {
+   "q": "What is the “surplus intelligibility” the selection effect cannot absorb, and what is its cleanest instance?",
+   "a": "It is the bonus that a livable world is also a knowable one — something observers do not strictly need. The eclipse is the clean case: some pairings (our eyes and the atmosphere’s window) may be selection at work, but the size-and-distance fit that yields perfect eclipses serves no survival purpose, yet it delivered helium and a test of relativity."
+  },
+  {
+   "q": "Why is the eclipse the signature example — and what weakens it?",
+   "a": "Because it is not required for life at all, so it is surplus to any selection effect. Its honest limit is that it is time-bound: the Moon recedes about 3.8 cm a year, so near-perfect eclipses will cease in roughly six hundred million years. The fair reader takes it as a vivid illustration whose evidential weight is contested, not a clinching proof."
+  },
+  {
+   "q": "What is the cherry-picking objection, and what concession does it win?",
+   "a": "The charge (pressed by the astronomer William H. Jefferys) is that favourable factors are selected and unfavourable ones ignored, so the “correlation” is selection bias dressed as data. A real concession is owed: the full ledger has not been compiled rigorously enough, by either side, to settle it, so the thesis is a suggestive pattern, not a demonstrated correlation."
+  },
+  {
+   "q": "What makes the thesis falsifiable in principle, and why does that matter?",
+   "a": "Gonzalez and Richards state a genuine failure condition: if the best sites for life turned out to be systematically poor for observation, the thesis would fail. That keeps it from being bare selection bias and is to their credit — though stating a failure condition is not the same as having compiled the ledger that would test it."
+  },
+  {
+   "q": "Why isn’t the Privileged Planet argument a god-of-the-gaps argument?",
+   "a": "It does not say “we can’t explain this, therefore God.” It says that on theism a world both livable and legible is expected, while on chance such a pairing, if it holds, would be unexpected. That is a claim about a standing pattern in what we already know, with a stated failure condition — not a placeholder for missing data."
+  },
+  {
+   "q": "How does the reply to the Copernican / mediocrity objection run?",
+   "a": "Copernicus moved Earth from the physical centre; he did not show it was undistinguished, and “not central” does not entail “not special.” The mediocrity principle is an assumption, not a finding, and the secular Rare Earth literature pushes the other way. Note the irony: it took our clear vantage to discover we are not at the centre — discoverability made the Copernican revolution possible."
+  },
+  {
+   "q": "What is Rare Earth, and how is it related to this argument?",
+   "a": "Rare Earth (Ward and Brownlee, 2000) is the secular precursor arguing complex life is forbiddingly rare — a serious minority position in astrobiology, with no theological claim. Gonzalez and Richards accepted much of that habitability literature and added the move that is theirs: that those rare conditions also correlate with measurability. Some Rare Earth claims (the Moon, Jupiter) are now disputed."
+  },
+  {
+   "q": "How far does the argument reach, and where does the fuller case lie?",
+   "a": "At most a clue to purpose: even at its strongest it reaches a purposing designer, not yet the Triune God of the creeds, and says nothing of incarnation, resurrection, or covenant. It is one quiet line in a cumulative case; the fuller case for the Christian God rests on revelation and, above all, on the historical evidence for the resurrection."
+  }
+ ],
+ "obj": [
+  {
+   "who": "Cosmologist",
+   "q": "The whole pattern is just the weak anthropic principle, which Brandon Carter articulated in 1973. We could not possibly find ourselves anywhere that did not permit observers, so it is no surprise that our location permits observation. Treating “we are somewhere we can observe” as evidence of design mistakes a tautology for a discovery — any observers anywhere would say the same of their own circumstances.",
+   "model": "The anthropic principle does real work, and it should be granted its due: it fully explains why we find ourselves somewhere habitable. What it does not explain is why that same place should also be unusually good for measuring the universe — because observers require only a livable world, not a measurable one. A planet teeming with intelligent life under a permanent overcast would host observers who could never do astronomy at all. So if the correlation between habitability and discoverability holds, it is precisely the surplus fact the selection effect cannot absorb: selection explains the livability, not the bonus of intelligibility. And “any observers anywhere would say the same” is true only of livability — it is not true that any observers anywhere would find themselves well placed to read the cosmos. Some pairings, like our eyes and the atmosphere’s window, may indeed be selection at work; but the eclipse fit serves no survival purpose whatsoever, and selection does not explain it. So the objection does not reach the surplus: on its own, the selection effect does not account for the extra intelligibility the thesis points to, and if that surplus is real it is left unexplained on the chance hypothesis. (That is a claim about where selection runs out, not yet a proof of design.)"
+  },
+  {
+   "who": "Astronomer",
+   "q": "Reviewing the book for the National Center for Science Education, William H. Jefferys judged that “the little that is new in this book is not interesting, and what is old is just old-hat creationism in a new, modern-looking astronomical costume.” For every factor you count as aiding discovery I can name one that hinders it — cloud cover, light from our own atmosphere, our short lifespans, the vast reaches we cannot see — and with enough candidate factors some will line up by chance. Singling out the favourable ones and calling the pattern “design” is selection bias dressed as data.",
+   "model": "Here a real concession is owed, and the right response is not to deny the worry but to name the test that answers it: a correlation claim is only as good as the full ledger — the unfavourable factors counted alongside the favourable ones. The honest verdict is that the relevant ledger has not been compiled rigorously enough, by either side, to settle the matter; the thesis points to a suggestive pattern, not a demonstrated correlation, and it has not been shown with the kind of controlled, quantitative comparison that would silence the charge. But two things keep it from collapsing into mere selection bias. Gonzalez and Richards state a genuine failure condition — if the best sites for life turned out to be systematically poor for observation, the thesis would fail — and it is to their credit that they state one; a thesis that can specify what would refute it is not simply reading pattern into noise. And the pattern, though under-quantified, is not nothing: the surplus the anthropic principle cannot absorb is real if the correlation holds, and it points — suggestively, defeasibly — in the direction of purpose. So the bounded verdict is the honest one: the thesis was never offered as a proof, and on its own modest terms it survives — hold it as an intriguing hypothesis, at most a clue, one quiet line in a much larger case, not a proven correlation."
+  },
+  {
+   "who": "Philosopher of science",
+   "q": "Inferring a designer from a correlation is not science: a designer can be invoked to explain any data whatever, so the hypothesis risks no possible observation and explains nothing. And appeals to design at the edge of knowledge have a history of retreating as science advances — the measurability pattern may likewise dissolve under a fuller ledger. When the film premiered at the Smithsonian in 2005, the museum withdrew its co-sponsorship; the scientific community plainly does not treat this as science.",
+   "model": "Distinguish the two layers, because the objection runs them together. The factual claims — about atmospheric transparency, galactic chemistry, the detectability of the microwave background — are straightforwardly testable and revisable; that part is science. The design inference is not itself an empirical hypothesis but a philosophical interpretation of the data, an inference to the best explanation. That is not a defect peculiar to theism: naturalists likewise interpret the same data as brute fact or as the product of a vast multiverse, and those interpretations are no more directly testable — we are comparing rival interpretations of agreed evidence, and the question is which is more reasonable, not which wears the lab coat. Nor is it god-of-the-gaps: it does not say “we can’t explain this, therefore God,” but that on theism a world both livable and legible is expected while on chance such a pairing, if it holds, is not — a claim about a standing pattern in what we already know, with a stated failure condition, not a placeholder for missing data. What the apologist must not do — and the Smithsonian episode is exactly the reminder — is claim that scientists in general agree the Earth is designed. They do not; the design reading is a minority philosophical position, and it should be presented as one. So the verdict is bounded: the inference is a reasonable interpretation offered as one, not an established scientific result."
+  },
+  {
+   "who": "Skeptic",
+   "q": "Science has steadily demoted us: Earth is not the centre, the Sun is an ordinary star, the galaxy one of billions. Carl Sagan gave the mood its classic form, reflecting on the Voyager image of Earth as a “pale blue dot” — “a lonely speck in the great enveloping cosmic dark.” The principle of mediocrity says our location is typical, so claiming Earth is privileged reverses the trajectory of modern astronomy and smells of pre-Copernican self-importance.",
+   "model": "The objection rests on a quiet equivocation. Copernicus moved Earth from the physical centre of the solar system; he did not show that Earth is undistinguished, and “not central” does not entail “not special.” The principle of mediocrity is an assumption, not a finding — and notably the secular “rare Earth” literature of Ward and Brownlee pushes in the opposite direction, suggesting that habitable worlds may be genuinely uncommon. There is even a gentle irony worth naming without overplaying: it took our comparatively clear vantage — our transparent sky and well-placed orbit — for Copernicus and his heirs to discover that we are not at the centre at all; discoverability is what made the Copernican revolution possible. So the objection does not land: “not central” was never the claim in dispute, and the mediocrity principle it leans on is a premise, not a result — which leaves the habitability–measurability question exactly where it stood, to be settled on the full ledger, not on a slogan."
+  }
+ ],
+ "unseen": {
+  "who": "Astrobiologist",
+  "av": "AB",
+  "q": "Since the book first appeared, astronomers have catalogued thousands of exoplanets, and the authors have just reissued it in a twentieth-anniversary edition claiming that harvest strengthens their case. Two decades of real discovery — doesn’t that finally vindicate the thesis and settle that Earth’s conditions are rare and purposeful?",
+  "model": "Weigh the reissue for exactly what it is. On the book’s own description the headline new evidence is the exoplanet harvest, and that bears most directly on the habitability layer — where, as the state of the debate shows, specialists still disagree and the data are still coming in; the exoplanet discoveries have enriched that question without settling it. The distinctive claim of the thesis, the correlation between habitability and measurability, still stands or falls on the full ledger the cherry-picking objection demands, and no description of a book can compile that ledger. A revised edition is the right kind of response to an empirical dispute; whether it actually answers the critics is for the reader to test against them, not to accept on the authors’ word, or on ours. So the reissue does not settle it: it strengthens, at most, the habitability layer that was already contested, and leaves the measurability correlation exactly where the ledger objection left it — a suggestive pattern, not a proven one.",
+  "source": "library/privileged.html — §The Honest State of the Debate, para 1 (exoplanets since 2004 “enriched — without settling”) and para 3 (the 2024 20th-anniversary edition; the privilegedplanet.com promotional sentence; “the headline new evidence is the exoplanet harvest, which bears most directly on the habitability layer”; the correlation “still stands or falls on the full ledger the cherry-picking objection demands, and no description of a book can settle that”; “whether it answers the critics is for the reader to test against them, not to accept on the authors’ word, or on ours”) + fn 14. q AUTHORED — declared: the essay discusses the reissue at length but never frames it in an objector’s voice, and the ev-m page never mentions exoplanets, the 2024 edition, or the exoplanets-strengthen claim anywhere (summary, syllogism, premise-defence cards, objection accordions, sources, drills, ARG_PREMISES, cards, checks). model ported; “So the reissue does not settle it” is the declared landing clause."
+ },
+ "explain2": "the cherry-picking charge — that counting the factors that hinder discovery alongside those that aid it would show the “correlation” to be selection bias dressed as data",
+ "ledger": [
+  {
+   "field": "title",
+   "from": "ev-m-privileged.html hero <h1> “The Privileged Planet Argument” verbatim."
+  },
+  {
+   "field": "short",
+   "from": "essay §Stating the Thesis Carefully (habitability correlates with discoverability/measurability), as a lower-case noun phrase."
+  },
+  {
+   "field": "keyTerms[0]",
+   "from": "essay §Stating the Thesis Carefully, para 1 (the rare local conditions correlate with measurability) + §Premise 1 para 2 (“cumulative, suggestive pattern… not a theorem”)."
+  },
+  {
+   "field": "keyTerms[1]",
+   "from": "essay §Stating the Thesis Carefully, para 2 (the factual layer vs. the design inference; “The data can be conceded; the design inference must be argued for separately, and it is genuinely contested”)."
+  },
+  {
+   "field": "keyTerms[2]",
+   "from": "essay §Stating the Thesis Carefully para 2 (“reasoning to the best explanation, not deducing God from a telescope”) + §Stating the Thesis para 3 (“probabilistic, not deductive”)."
+  },
+  {
+   "field": "keyTerms[3]",
+   "from": "essay §The selection-effect objection (Carter 1973, weak anthropic principle) + §A Reply para 1 (selection explains livability, not measurability)."
+  },
+  {
+   "field": "keyTerms[4]",
+   "from": "essay §A Reply para 1 (“it is precisely the surplus fact that the selection effect cannot absorb… the eclipse fit serves no survival purpose whatsoever”)."
+  },
+  {
+   "field": "keyTerms[5]",
+   "from": "essay §A Reply para 2 (“a correlation claim is only as good as the full ledger… the relevant ledger has not been compiled rigorously enough, by either side, to settle the matter”)."
+  },
+  {
+   "field": "keyTerms[6]",
+   "from": "essay §How the Idea Developed para 1 (Rare Earth, Ward & Brownlee 2000, secular) + fn 6 (Moon/Jupiter claims disputed)."
+  },
+  {
+   "field": "keyTerms[7]",
+   "from": "essay §A Reply para 2 (“Gonzalez and Richards do argue that the thesis is in principle falsifiable… a real failure condition”) + fn 12."
+  },
+  {
+   "field": "derive[0]",
+   "from": "essay §Premise 1 para 1 (no law ties good-for-life to good-for-science; “cries out for explanation”)."
+  },
+  {
+   "field": "derive[1]",
+   "from": "essay §A Reply para 1 (anthropic explains livability not measurability; the permanent-overcast case)."
+  },
+  {
+   "field": "derive[2]",
+   "from": "essay §A Reply para 1 (eyes/atmosphere may be selection; “the eclipse fit serves no survival purpose whatsoever”) + §Premise 1 para 2 + intro (helium 1868, relativity 1919)."
+  },
+  {
+   "field": "derive[3]",
+   "from": "essay §A Reply para 2 (the full ledger; not compiled by either side; the stated failure condition)."
+  },
+  {
+   "field": "derive[4]",
+   "from": "essay Conclusion para 2 (“even at its strongest it reaches a purposing designer, not yet the Triune God of the creeds… nothing of incarnation, resurrection, or covenant”; the resurrection pointer)."
+  },
+  {
+   "field": "honestState.p1",
+   "from": "essay §The Honest State of the Debate paras 1–3 (habitability science alive; measurability not mainstream; Jefferys trivial-or-unsound; Smithsonian; 2024 edition) + §The selection-effect objection (Carter 1973) + §The falsifiability objection (Smithsonian 2005). Gonzalez/Richards named per §Stating the Thesis."
+  },
+  {
+   "field": "honestState.fairness",
+   "from": "essay §A Reply paras 1–3 + §On the receding Moon para (concessions) and the §A Reply final paragraph (“the thesis was never offered as a proof, and on its own modest terms it survives… it is not nothing… suggestively, defeasibly”). Concedes observations, carries the reply, never ends on a bare concession."
+  },
+  {
+   "field": "honestState.verdict",
+   "from": "essay Conclusion paras 1–2, verbatim with compression (does not prove design / does not establish the correlation / scientists do not agree; the livable-vs-knowable distinction; “at most a clue… one quiet line in a larger cumulative case”; the deism-gap fence + resurrection pointer)."
+  },
+  {
+   "field": "order",
+   "from": "essay §Stating the Thesis Carefully para 3 (formal P1/P2/C) + ev-m-privileged.html syllogism (ARG_PREMISES). Line 3’s fence compresses the Conclusion (“reaches a purposing designer, not yet the Triune God… not a proof”)."
+  },
+  {
+   "field": "props (true)",
+   "from": "essay Conclusion para 2 (livable-vs-knowable distinction; anthropic explains first not second; “at most a clue… one quiet line in a larger cumulative case”), §Stating the Thesis para 2 (IBE; checkable astronomy), §A Reply para 2 + fn 12 (stated failure condition)."
+  },
+  {
+   "field": "props (decoys)",
+   "from": "each explicitly denied by the essay Conclusion para 1 (“does not prove that Earth was designed”; “does not establish… that habitability and measurability are robustly correlated”; “does not show that scientists agree”) + Conclusion para 2 (“not yet the Triune God”) + §On the receding Moon / §The cherry-picking objection (eclipse time-bound; “reading significance into a snapshot”) + §A Reply para 1 (the anthropic principle “does real work”, is accepted, not rejected)."
+  },
+  {
+   "field": "cards[0]",
+   "from": "essay §Stating the Thesis Carefully para 2 (the two layers; “Confusing the two layers is the surest way to misjudge the whole”)."
+  },
+  {
+   "field": "cards[1]",
+   "from": "essay §Stating the Thesis para 1 + §A Reply para 2 (full ledger not compiled); ev-m ARG_PREMISES P1."
+  },
+  {
+   "field": "cards[2]",
+   "from": "essay §Premise 1 para 1 (independence; cloud-deck case; “cries out for explanation”) + Drill-2 flashcard topic framing (“if the conjunction holds, it — not the rarity — is the point”), reworded, not duplicated."
+  },
+  {
+   "field": "cards[3]",
+   "from": "essay §A Reply para 1 (anthropic explains habitability, not measurability; the surplus)."
+  },
+  {
+   "field": "cards[4]",
+   "from": "essay §A Reply para 1 (eyes/atmosphere may be selection; eclipse serves no survival purpose) + intro/§Premise 1 (helium, relativity)."
+  },
+  {
+   "field": "cards[5]",
+   "from": "essay §Premise 1 para 2 + §On the receding Moon para (time-bound; Moon recedes ~3.8 cm/yr; ~600 Myr; “vivid illustration whose evidential weight is contested”)."
+  },
+  {
+   "field": "cards[6]",
+   "from": "essay §The cherry-picking objection (Jefferys) + §A Reply para 2 (concession; full ledger not compiled; suggestive pattern, not demonstrated correlation)."
+  },
+  {
+   "field": "cards[7]",
+   "from": "essay §A Reply para 2 + fn 12 (stated failure condition; to their credit) with the honest-limit note (stating a condition ≠ compiling the ledger), ported from the same paragraph."
+  },
+  {
+   "field": "cards[8]",
+   "from": "essay §A Reply, god-of-the-gaps paragraph (“not saying ‘we can’t explain this, therefore God’… a standing pattern in what we already know, not a placeholder for missing data”)."
+  },
+  {
+   "field": "cards[9]",
+   "from": "essay §The Copernican objection + §A Reply, Copernican paragraph (“not central” ≠ “not special”; mediocrity an assumption; Rare Earth the other way; the discoverability irony)."
+  },
+  {
+   "field": "cards[10]",
+   "from": "essay §How the Idea Developed paras 1–2 (Rare Earth secular; Gonzalez & Richards added the measurability move) + fn 6 (Moon/Jupiter disputed)."
+  },
+  {
+   "field": "cards[11]",
+   "from": "essay Conclusion para 2 (purposing designer not Triune God; revelation + resurrection; minimalfacts pointer)."
+  },
+  {
+   "field": "obj[0]",
+   "from": "essay §The selection-effect objection (statement: Carter 1973, the tautology charge, “any observers anywhere”) + §A Reply para 1 (reply in full). Distinct from the kept Drill 3 (same objection, conversational 1-Peter-3:15 voice); this model ports the essay’s own wording and lands the “does not reach the surplus” verdict the Drill 3 does not state."
+  },
+  {
+   "field": "obj[1]",
+   "from": "essay §The cherry-picking objection (statement + the Jefferys “old-hat creationism” quotation, fn 8) + §A Reply para 2 (reply; concession; failure condition; not nothing) + §A Reply final para (“never offered as a proof… on its own modest terms it survives”)."
+  },
+  {
+   "field": "obj[2]",
+   "from": "essay §The falsifiability objection (statement; Smithsonian 2005, fn 10) + §A Reply, falsifiability paragraph + god-of-the-gaps paragraph (two layers; naturalist multiverse/brute-fact parallel; not god-of-gaps; “must not claim scientists agree”)."
+  },
+  {
+   "field": "obj[3]",
+   "from": "essay §The Copernican objection (statement; Sagan “pale blue dot”/“lonely speck”, fn 11) + §A Reply, Copernican paragraph (equivocation; mediocrity an assumption; Rare Earth; the discoverability irony)."
+  },
+  {
+   "field": "unseen",
+   "from": "essay §The Honest State of the Debate paras 1 and 3 (exoplanets enriched-not-settled; the 2024 20th-anniversary edition; privilegedplanet.com promo; “no description of a book can settle that”; “for the reader to test against them”) + fn 14. q AUTHORED — declared (the reissue is discussed but never voiced as an objection, and exoplanets / the 2024 edition appear nowhere on the ev-m page). model ported; “So the reissue does not settle it” is the declared landing clause."
+  },
+  {
+   "field": "explain2",
+   "from": "ev-m-privileged.html .hardest line (“Jefferys’s cherry-picking charge — count the factors that hinder discovery alongside those that aid it, and the ‘correlation’ may be selection bias dressed as data”), recast as a noun phrase."
+  }
+ ],
+ "notes": "Paired essay read in full: library/privileged.html (body, all 14 footnotes, bibliography, and the three-item FAQ), resolved by its <link rel=\"canonical\"> (which points at library/privileged.html — the same file). Kept page read in full: ev-m-privileged.html (seo-summary, syllogism/ARG_PREMISES, the two premise-defence cards with supports + honest limits + inline objections + “The room”, the seven objection accordions, the Touch-the-originals source rows, Drill 1 scorer + checks, Drill 2 cards deck, Drill 3 worked model answer, and the .hardest line). DECLARED AUTHORED (named to every lens): (1) unseen.q — the essay discusses the 2024 reissue / exoplanets-strengthen claim at length but never states it in an objector’s voice, so the objector’s wording is mine; (2) the landing clauses “So the objection does not reach the surplus” (obj[0].model), “So the reissue does not settle it” (unseen.model) and “So the objection does not land” (obj[3].model) — each added only to land an explicit bounded verdict and each immediately followed by the essay’s own bounding; (3) order[2]’s appended fence “— an inference to the best explanation that reaches at most a purposing designer, not a proof and not yet the Triune God” compresses the Conclusion. Also scaffolding, no new claim: derive[].q/ans and the card question strings. BOUNDS KEPT (tab hazards): DATA conceded / DESIGN inferred kept apart on every surface (keyTerms[1], derive, props decoy “proves that the Earth was designed”, honestState, obj[2]); the DEISM-GAP fence (“at most a purposing designer, not yet the Triune God… the resurrection”) is in honestState.verdict, order[2], derive[4], cards[11], props, and obj implications; NO claim of scientific consensus on design (props decoy + obj[2] + honestState.p1 carry the essay’s “scientists do not agree” / Smithsonian wording); DENOMINATIONAL NEUTRALITY observed — old-earth/young-earth is never raised by the essay and is not introduced, and the ID inference is reported as a minority philosophical position, never adjudicated as doctrine; Francis Collins is not invoked anywhere (he does not appear in this essay). The fine-tuning fragility note (Stenger/Hossenfelder/Lewis-Barnes) does not bite on this page — none of those names is in the essay; fine-tuning appears only as the companion cumulative-case argument, carried as such. No tools/retired-claims.json entry touches this topic, and none is reinstated. NOT CONTRADICTED / NOT DUPLICATED: the kept Drill 3 model answer (the selection-effect skeptic, conversational voice) is NOT reused verbatim — obj[0] answers the same objection from the essay’s §The selection-effect objection + §A Reply with the Carter attribution and the explicit surplus verdict the Drill 3 omits; the kept 8-card flashcard deck is not duplicated — these 12 cards are more term/structure-weighted and no card repeats a kept card’s wording, while matching its position (design inferred not proven, anthropic bounded, eclipse time-bound, deism gap). explain2 matches the page’s .hardest line (Jefferys’s cherry-picking charge). BACKLOG ISSUES NOTICED (NOT fixed — for the backlog): (a) the ev-m dial note and CTA say “Argument 6 of 7 in the Science & Faith mastery track” / “6 of 7”, while the CTA’s next-step line points to Laws of Nature as the 7th — self-consistent, but confirm the Science tab’s current count hasn’t drifted since the 2026-10-09 rebuild; (b) the ev-m page’s “Touch the originals” row for Arthur Eddington says “Read the original report,” which could read as inviting a primary read the essay does not require — minor, not a doctrinal issue. Nothing I could not source — every string traces to library/privileged.html or the kept ev-m certified layer, except the three declared-authored items above."
+}
