@@ -230,13 +230,65 @@ Scutum Fidei verbal description, an OWNER CALL — doctrinally clean, no rendere
 sign-off still `_pending_` site-wide (deity/Trinity is the first tier owed a human pass).
 **76 of 83 pages now carry the standard.**
 
-## ⏸ RESUME HERE — Christian Revolution tab, next
+## ✅ Christian Revolution tab (6) + proto-trinitarian — DONE 2026-10-16 → PHASE 2 COMPLETE (83/83)
 
-Remaining Phase 2 order: **Christian Revolution (the `ev-m-*` links in `ev-s8.html` — confirm the exact slug
-list against that fragment first; the 2026-09-30 ruling replaced the old `legacy` essay with the 7 Christian
-Revolution essays, so re-target any stale `legacy` reference) → the God's-Existence pages not yet converted**
-(confirm which remain against `ev-s1.html` — "cosmic" is done as part of Science, so re-check the exact
-remaining God's-Existence slugs rather than assuming). Same proven method as the Jesus / Biblical Reliability
+The last 7 legacy `ev-m-*` pages now carry the Bronze/Silver/Gold standard: the **6 Christian Revolution**
+pages (`riseofchurch, persecution, equality, compassion, progress, science-history`) and **`proto-trinitarian`**
+(a Trinity-tier page, "Was the Trinity Invented at Nicaea?", that had been missed in the Trinity batch).
+⚠ **Scope note for the next reader:** `abolition` is **parked** (the card was removed + moved to `_parked/` on
+2026-10-06, owner ruling — do NOT rebuild it), and the **God's Existence tab was already fully converted** — the
+2026-10-12 guide line "the 2 God's Existence pages (cosmic, design)" was stale; cosmic was done with Science and
+every other ev-s1 page (`beauty, consciousness, desire, evil, finetuning, kalam, leibniz, moral, ontological,
+properly-basic, reason, religious, thomistic`) already carried `levelOf`. The real remaining set was these 7, not
+"Christian Revolution + God's Existence."
+
+Method identical to the prior batches: one Opus port agent per page read the paired `library/<slug>.html` essay in
+full → `node tools/mastery-convert.mjs <slug>` → mechanical checks (145/145 tests, retired-claims, orthodoxy-tripwires,
+unquoted-attributions, footnote-integrity all clean) → four-lens gate as **READ-ONLY Explore/Opus agents** (citations +
+argument + orthodoxy + neutrality; **dual consensus — orthodoxy AND neutrality both CLEAN — on proto-trinitarian**),
+md5-checked before/after and git status/log verified (write-access hazard). **Round 1 returned every page STAMPABLE /
+CLEAN — 0 BREAK, 0 HERESY, 0 DRIFT, 0 clarifier across all 7** (the cleanest kind of batch, like Science). The port
+rule held yet again: the only findings were the disclosed authored `unseen.q` framings (each carrying a firewall-intact
+ported model) and optional polish. **One optional polish applied** (both the argument and neutrality lenses flagged it
+independently): the Lewis Ayres post-325 turbulence ("homoousios so far from an instant slogan that for nearly twenty
+years scarcely anyone invoked it, and the decades after 325 were a chaos of competing parties; the full synthesis the
+Cappadocians', the fuller Spirit clause from Constantinople 381") was ported **verbatim** from `library/proto-trinitarian.html`
+§"What Nicaea actually did" into graded `card[8]`, so the honest concession lives in the memorised layer and not only the
+prose support. A **narrow round-2** confirmation (argument + orthodoxy + neutrality, that one field) returned STAMPABLE/CLEAN
+— the invention-thesis fence intact, and the concession is the *opposite* of the retired `pre-nicene-floor-never-moves`
+overclaim, not a reintroduction.
+
+Hazards verified on every graded surface where they arise: the **good≠true firewall** (the church's social fruit is never
+by itself proof; the case rests above all on the resurrection), decoy-enforced by ≥1 verb-bearing `ok:false` prop per page;
+the honest ledger of the church's crimes (anti-triumphalism); martyrdom proves **sincerity, not truth**; **Julian AD 362**
+grounded only in the undisputed Fragment of a Letter to a Priest (Letter to Arsacius disclaimed per Van Nuffelen), never
+among the illegal-period witnesses (Pliny c.112, Lucian c.165, Cornelius 251); **imago Dei Jewish-rooted** (no supersessionism);
+the **moral-source step bounded** (points toward the same God, never "proves the Triune God"); Greek + Islamic roots of
+science conceded and the narrow "metaphysical soil" thesis held (not "no Christianity, no science"), **Galileo/Bruno bounded**
+and denominationally neutral (Bruno not a heliocentrism martyr); **Pinker narrowed** to the single "arc bending toward justice"
+echo; proto-trinitarian's retired-claim hazards all absent ("250 to 318" bishops never "300", Bauckham's divine-identity kept
+contested, Ehrman kind-not-date), the anti-modalism/homoousios fence carried, and **no Trinity diagram anywhere**. One new
+tripwire baselined (`ev-m-equality.html||divine-nature-died`) — the orthodox communicatio-idiomatum fence (said of the one
+divine person *without* implying the divine nature suffered or the Father was crucified), confirmed legitimate by the
+orthodoxy lens. Pre-existing kept-page items → `docs/content-backlog.md` **CR-RB-1** (the progress `whatHit` Pinker-idioms
+chrome, optional) and **CR-RB-2** (pastoral sign-off owed). Pastoral/elder sign-off still `_pending_` site-wide.
+
+**83 of 83 pages now carry the standard — Phase 2 (the rollout) is COMPLETE.** No `ev-m-*` page contains `FRESH_MS`; all 83
+pass `tests/mastery-contract.test.mjs`. Remaining programme work is Phase 3 (cross-page features) and the standing
+pastoral/elder human review, both tracked above and in the backlog.
+
+## ✅ RESUME — Phase 2 COMPLETE as of 2026-10-16 (83/83). Next work is Phase 3, not more conversions.
+
+**All 83 `ev-m-*` pages now carry the Bronze/Silver/Gold standard; none contains `FRESH_MS`; all pass
+`tests/mastery-contract.test.mjs`.** The final batch (the 6 Christian Revolution pages + `proto-trinitarian`) is
+documented in the "Christian Revolution tab … DONE 2026-10-16" section above. A new session should NOT look for more
+pages to convert — there are none. The remaining programme work is **Phase 3 (cross-page features)** and the standing
+**pastoral/elder human review** (`docs/STATEMENT_OF_FAITH.md` logs the reviewer `_pending_`; deity/Trinity pages are the
+first tier owed it). The method notes below are kept as the reference for any future per-page re-gate.
+
+<!-- HISTORICAL (the original resume instruction, now satisfied): Christian Revolution + the God's-Existence pages not
+yet converted. The God's-Existence tab turned out to be already fully converted, and `abolition` is parked, so the real
+remaining set was the 6 CR pages + proto-trinitarian. --> Same proven method as the Jesus / Biblical Reliability
 / Science / Trinity batches: one Opus port agent per page reading the paired essay in full (resolve by
 `<link rel="canonical">`) → `node tools/mastery-convert.mjs <slug>` → `node --test tests/*.test.mjs` +
 check-retired-claims/orthodoxy-tripwires/unquoted-attributions/footnote-integrity → four-lens gate as
