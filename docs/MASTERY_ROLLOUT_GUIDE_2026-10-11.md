@@ -199,20 +199,53 @@ Francis Collins never an ID premise. Stamped 2026-10-16. Pre-existing kept-page/
 `ev-m-miracles.html`, which does not exist** (a pre-existing broken tab link — build the page or drop the
 link). **64 of 83 pages now carry the standard.**
 
-## ⏸ RESUME HERE — Trinity tab (15 pages), DUAL CONSENSUS, next
+## ✅ Trinity tab (12 pages) — DONE 2026-10-16, DUAL CONSENSUS
 
-Remaining Phase 2 order: **Trinity (15, DUAL CONSENSUS) → Christian Revolution (6) → the God's-Existence
-pages not yet converted** (confirm which remain against `ev-s1.html` — "cosmic" is now done as part of Science,
-so re-check the exact remaining God's-Existence slugs rather than assuming "cosmic, design"). The Trinity
-pages are the `ev-m-*` links in `ev-s6.html` — confirm the exact slug list against that fragment first. Same
-proven method as the Jesus / Biblical Reliability / Science batches: one Opus port agent per page reading the
-paired essay in full (resolve by `<link rel="canonical">`) → `node tools/mastery-convert.mjs <slug>` →
-`node --test tests/*.test.mjs` + check-retired-claims/orthodoxy-tripwires/unquoted-attributions/footnote-integrity
-→ four-lens gate as READ-ONLY Explore/Opus agents, md5-checked → merged residue pass (NEW-layer via
-assert-guarded port script + reconvert; KEPT-LAYER twins via a `kept_patch` script re-run after every
-reconversion) → narrow round 3 **only if a fix was applied** → stamp with `stamp_res.py` → append backlog rows
-→ commit ports + pages + backlog + guide, **NEVER the reel specs under `tools/reel/`**, push `HEAD:main`,
-verify live.
+All 12 legacy `ev-m-*` Trinity pages carry the Bronze/Silver/Gold standard and are four-lens gated at
+dual consensus: **analogies, early_church_trinity, eternal_generation, holy_spirit, modalism, nt_trinity,
+ot_trinity, philosophical_trinity, relations, shema, trinity_islam, trinity_mormons.** (The other two
+`ev-s6` links — `jesus_as_god_nt` and `trinity_jw` — were already converted + gated with the Jesus tab, so
+the tab is **14 pages, 12 new this batch**.) Method: one Opus port agent per page (each reading the paired
+essay in full, resolved by `<link rel="canonical">`) → `node tools/mastery-convert.mjs <slug>` → mechanical
+checks → four-lens gate (citations + argument + **apologia-orthodoxy AND apologia-neutrality both CLEAN**) as
+READ-ONLY Explore/Opus agents, md5-checked before/after and git status/log verified (write-access hazard) →
+merged residue pass (NEW-layer via assert-guarded port edit + reconvert; KEPT-LAYER twins via a kept_patch
+re-run after reconversion) → narrow round 2 confirmation **only where a fix was applied** → stamped with
+`scratchpad/stamp_trinity.mjs`. **Round 1 returned all 12 STAMPABLE, 0 BREAK, 0 HERESY** — the port rule held
+yet again: the only findings were DRIFT-level authored/compressed strings. Residue applied (all ports):
+shema (dropped "outright"; added the essay's "we know of"+Philo "nearest case" qualifier across new + kept
+layers — propagated to nt_trinity's kept twin too), ot_trinity (dropped an authored "symbol for faithful
+Israel" Daniel-7 option; restored the Zechariah "referent debated" hedge), nt_trinity (unseen "as to a god"
+→ "as though he were that God"), eternal_generation (distinguished Goligher's vs Trueman's distinct charges
+per the essay). Trinity hard rules verified on every surface: **NO Trinity diagram/figure anywhere**; every
+orthonote fence carried into the port prose; no retired echad-plurality / 300-bishops (always "about 250 to
+318") / divine-identity-as-consensus / kalām-kalima lexical bridge / Arian "distinct from the essence";
+modalism's "just as" (never "as the Father") and one-divine-will Gethsemane fence held; rival-worldview
+EXPLICIT-VERDICT + FALSE-COMMON-GROUND landed and fenced; intra-Christian disputes (Filioque, EFS, relations
+of origin, social-vs-classical) reported, not adjudicated. 3 coarse-net tripwire strings on the rival pages
+(trinity_islam same-God DENIAL; trinity_mormons two LDS-belief attributions/rejections) confirmed legitimate
+by both dual-consensus lenses and baselined in `tools/orthodoxy-tripwires-baseline.json`. Pre-existing
+kept-page items → `docs/content-backlog.md` **TRIN-RB-1..3** (rule 9; TRIN-RB-1 = the analogies kept-layer
+Scutum Fidei verbal description, an OWNER CALL — doctrinally clean, no rendered figure). Pastoral/elder
+sign-off still `_pending_` site-wide (deity/Trinity is the first tier owed a human pass).
+**76 of 83 pages now carry the standard.**
+
+## ⏸ RESUME HERE — Christian Revolution tab, next
+
+Remaining Phase 2 order: **Christian Revolution (the `ev-m-*` links in `ev-s8.html` — confirm the exact slug
+list against that fragment first; the 2026-09-30 ruling replaced the old `legacy` essay with the 7 Christian
+Revolution essays, so re-target any stale `legacy` reference) → the God's-Existence pages not yet converted**
+(confirm which remain against `ev-s1.html` — "cosmic" is done as part of Science, so re-check the exact
+remaining God's-Existence slugs rather than assuming). Same proven method as the Jesus / Biblical Reliability
+/ Science / Trinity batches: one Opus port agent per page reading the paired essay in full (resolve by
+`<link rel="canonical">`) → `node tools/mastery-convert.mjs <slug>` → `node --test tests/*.test.mjs` +
+check-retired-claims/orthodoxy-tripwires/unquoted-attributions/footnote-integrity → four-lens gate as
+READ-ONLY Explore/Opus agents, md5-checked → merged residue pass (NEW-layer via assert-guarded port edit +
+reconvert; KEPT-LAYER twins via a `kept_patch` script re-run after every reconversion) → narrow round 2
+**only if a fix was applied** → stamp → append backlog rows → commit ports + pages + backlog + guide,
+**NEVER the reel specs under `tools/reel/`**, push `HEAD:main`, verify live. (Reusable Trinity-batch
+scaffolding is in this session's scratchpad: `PORT_BRIEF_TRINITY.md`, `GATE_BRIEF_TRINITY.md`,
+`stamp_trinity.mjs`.)
 ⚠ **TRINITY IS THE HIGHEST-STAKES TAB — four hard rules:** (1) **DUAL CONSENSUS is mandatory** — `apologia-orthodoxy`
 AND the adversarial `apologia-neutrality` lens must BOTH return CLEAN/STAMPABLE on every page before stamping;
 one lens is not enough, and a fix pass re-opens both. (2) 🔴 **NO TRINITY DIAGRAM, EVER** (standing owner ruling
