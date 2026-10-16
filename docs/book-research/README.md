@@ -324,6 +324,17 @@ Fathers, named scholars, dates) to chase down and quote *from the primaries*. Se
   exception that proves the rule" — never compress into the RETIRED `daniel7-figure-is-divine` / `pelach-only-to-God`
   claims. ✅ **COMPLETE — both earlier backward gaps (ch. 4 §5 Pagan testimony; ch. 5 §1–§5.1) were filled 2026-10-05**
   after the owner navigated to ch. 4 via the Kindle TOC.
+- `confronting-jesus.md` — Rebecca McLaughlin, *Confronting Jesus: 9 Encounters with the Hero of the Gospels*
+  (**Crossway, 2022**; ISBN 978-1-4335-8113-7; Scripture = **ESV**; owned Kindle, **read cover to cover**): a
+  **popular-level evangelistic survey** walking nine Gospel titles of Jesus (Jew / Son / King / Healer / Teacher /
+  Lover / Servant / Sacrifice / Lord). ⚠⚠ **Mostly corroboration** — our certified essays make every apologetic case
+  it makes, deeper and (on atonement/impassibility) more careful; chs. 2 and 8 cite **no** scholarly sources.
+  ⭐ **Daniel 7 PASSES the retired-claim tripwire** (frames the Son of Man as "God's eternal King" via the clouds +
+  Ps 110, the safe `titles.html` reading — unlike the three prior popular deity books). ⭐ **One lead: Tom Holland,
+  *Dominion* (Basic, 2019)**, its load-bearing non-Christian-historian witness, under-cited in our live Christian-
+  revolution essays (backlog P3). ⚠ **Sex-ethics material (chs. 5–6) is a deliberate NON-RECOMMENDATION** (the site
+  makes no apologetic case on sexual ethics); **ch. 8's penal-wrath / God-crucified material lacks our impassibility
+  fence — ours is more careful, do not port as-is.**
 
 ### ⚠ PARTIAL notes — books NOT owned, NOT read (added 2026-07-26, Tyndale/evangelical mining batch)
 These four were queued as books by `docs/article-research/MINING-BRIEF-tyndale-batch.md`. Because we do

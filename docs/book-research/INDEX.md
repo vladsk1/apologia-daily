@@ -82,6 +82,21 @@ point only, never in our voice. Resurrection tier → **dual-consensus** for any
 
 **HGBJ** = `how-god-became-jesus.md` (Michael F. Bird, ed., with Evans, Gathercole, Hill and Tilling, *How God Became Jesus: The Real Origins of Belief in Jesus' Divine Nature — A Response to Bart D. Ehrman*, Zondervan 2014 — owned Kindle copy, ISBN 978-0-310-51961-4; read in full incl. all endnotes 2026-10-09). The site's best source for answering **Ehrman's evolutionary thesis on its own proof-texts**: the "adoptionist" verses (Mark 1:11; Acts 2:36; 13:33; Rom 1:3–4) as new roles, not new identity; the Ebionites and "modalism the majority" objections; Paul's wider Christ-devotion; the material evidence of worship (nomina sacra, Megiddo). 🔴 **Bird's ch. 3 / ch. 10 Son-of-Man material trips `daniel7-figure-is-divine` + `pelach-only-to-God` — do NOT port.** ✅ Ours is better on Gal 4:14, Phil 2, manuscripts, the empty tomb.
 
+**CONJ** = `confronting-jesus.md` (Rebecca McLaughlin, *Confronting Jesus: 9 Encounters with the Hero of the Gospels*,
+**Crossway 2022**; ISBN 978-1-4335-8113-7; Scripture = **ESV**; owned Kindle, **read cover to cover** 2026-10-16). A
+**popular-level evangelistic survey** (written for skeptics; pop-culture framing throughout) walking nine Gospel titles:
+Jew (existence/reliability), Son (divine identity), King (messiahship + two-stage King), Healer (devotional), Teacher
+(moral paradigms + the Christian-revolution grounding), Lover (bridegroom — N/A), Servant (Isaiah-53 Servant + status-
+inversion), Sacrifice (the Lamb **and** the temple), Lord (resurrection + Lordship). ⚠⚠ **Mostly CORROBORATION** — our
+essays make every case it makes, deeper and (on atonement/impassibility) more careful; chs. 2 and 8 cite **zero** scholarly
+sources. ⭐ **Daniel 7 PASSES the retired-claim tripwire** — frames Son-of-Man as "God's eternal, universal King" via the
+clouds-coming + Ps 110, the safe `titles.html` reading (UNLIKE Geisler-Turek / Strobel / Craig *On Guard*). ⭐ **One lead:
+Tom Holland, *Dominion* (Basic 2019)** — its load-bearing non-Christian-historian witness to the Christian-revolution thesis,
+under-cited in our LIVE essays (esp. `equality.html`, which uses Harari for the same point; backlog P3). ⚠ **Sex-ethics
+material (chs. 5–6) = NON-RECOMMENDATION** (the site makes no apologetic case on sexual ethics). ⚠ **ch. 8 atonement /
+God-crucified** leans explicit penal substitution and lacks our impassibility / "Trinity-not-divided" fence — **ours is
+more careful; do not port as-is.** Not denominationally safe to run its sexual-ethics or penal-wrath material in our voice.
+
 **JGI** = `jesus-and-the-god-of-israel.md` (Richard Bauckham, *Jesus and the God of Israel: "God Crucified" and
 Other Essays on the New Testament's Christology of Divine Identity*, **Paternoster/Eerdmans 2008** — ⚠ owner's copy
 is the **Paternoster (UK) 2008** ed.; our bibliography cites the **Eerdmans (US) 2008** ed., so page citations may
