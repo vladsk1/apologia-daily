@@ -213,10 +213,14 @@ must keep him as a **theistic evolutionist who rejects Meyer-style ID** (standin
   `crucified-messiah.html` and `god-crucified.html`. → **SHIPPED 2026-10-17 to `library/equality.html`** (Holland added
   alongside Harari in the "honest witness" section — new body ¶ + footnote 17 + bibliography; **paraphrase only**, no
   verbatim quote, good≠true firewall explicit; four-lens read-only gate + one fix round + confirmation, all STAMPABLE/
-  CLEAN, 0 HERESY; `our-sources.json` regenerated; stamp bumped all four lenses to 2026-10-17). The optional
-  `compassion.html` / `crucified-messiah.html` / `god-crucified.html` complements were **deliberately NOT done** (fix
-  scope frozen to one essay per pipeline rule 9) and remain the open tail of the P3 backlog row. See
-  `docs/content-backlog.md`.
+  CLEAN, 0 HERESY; `our-sources.json` regenerated; stamp bumped all four lenses to 2026-10-17). **The optional
+  `compassion.html` / `crucified-messiah.html` / `god-crucified.html` complements were ALSO SHIPPED 2026-10-17** (owner
+  asked for them after the equality pass): Holland folded into each essay's existing historian footnote (Hurtado fn 15 in
+  compassion; Hengel fn 2 in crucified-messiah; Hengel fn 24 in god-crucified) &mdash; no renumbering. In compassion he
+  carries the broader (contested) genealogy thesis with the full hedge + good≠true firewall; in the two Hengel essays he is
+  scoped strictly to the UNCONTESTED scandal of the cross (god-crucified adds "not for any theological claim"). Full
+  four-lens read-only gate on all three (+ one body polish on compassion, confirmed): all STAMPABLE/CLEAN, 0 HERESY; the
+  god-crucified deity/impassibility fences were confirmed undisturbed. P3/P4 rows in `docs/content-backlog.md` marked DONE.
 - **Verdict 5 — Hazard, ours is better (flag, no row):** ch. 8 atonement (she crowns penal substitution; we stay neutral)
   and ch. 8 God-crucified / cry of dereliction (she lacks our impassibility / Trinity-not-divided fence). **Do not
   "improve" our essays toward her less-fenced, mechanism-specific version.**
@@ -238,8 +242,8 @@ must keep him as a **theistic evolutionist who rejects Meyer-style ID** (standin
   Daniel‑7 tripwire PASSES. The one live under-citation was **Tom Holland *Dominion* in `library/equality.html`** (made
   the equal-dignity-origins point via Harari, where Holland p. 494 is the flagship non-Christian-historian witness) —
   **RESOLVED 2026-10-17: Holland now cited alongside Harari there** (paraphrase-only, four-lens gate CLEAN). Optional
-  complements in `compassion.html` (p. 139, fix the orphan entry) and `crucified-messiah.html`/`god-crucified.html`
-  (pp. 2, 6, the crucifixion transvaluation, alongside Hengel) deliberately left for a later pass.
+  complements in `compassion.html` (p. 139, the orphan entry fixed) and `crucified-messiah.html`/`god-crucified.html`
+  (pp. 2, 6, the scandal of the cross, alongside Hengel) **also SHIPPED 2026-10-17** (four-lens gate CLEAN).
 - [x] /answers/* — the matching answers (did‑jesus‑really‑exist, is‑jesus‑god, resurrection, messiah/prophecy, etc.)
   are corroboration; `answers/_data.json` grepped — **no Holland/*Dominion*** present (so the card/answer surface does
   not yet carry it, but no answer is in error). No answer-level fix required beyond the essay row.
