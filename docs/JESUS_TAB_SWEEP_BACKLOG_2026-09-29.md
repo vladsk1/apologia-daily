@@ -137,3 +137,14 @@ Resurrection tab, same pass:
 The MK and ES versions of jesus_claims, emptytomb and paulconv were synced.
 
 Still open from the lists above: the other structural gaps (e.g. Mark 13:32 as its own objection, John 10:34–36, Price's interpolation claim) and the page checks that need the book in hand.
+
+## Jesus-tab independent hostile-review sweep — 2026-10-17 (DONE, with one deferral)
+A hostile academic re-review ran on all 24 ev-s3 cards' essays. Most were confirmed clean (jesus-is-yahweh, christ-before-bethlehem, crucified-messiah, god-crucified: 0 definite errors — findings were calibration/hedging preferences, deferred). Concrete defects fixed + four-lens gated + deployed:
+- **paul-divinity** — footnote cross-ref n.18→n.19 (contested-category note).
+- **worship-of-jesus** — footnote cross-ref n.11→n.15 (Hurtado). (Reviewer's flat-"no shaliach ever" overclaim flag judged defensible for the human-agent category; deferred.)
+- **typology** — Melchizedek "genealogy and death of every other patriarch" was a false universal (Genesis records no death for Enoch, Gen 5:24); → "is otherwise careful to record the genealogy and death of a patriarch". All three surfaces.
+- **humanity** — (1) "two opposite errors" → "two errors, each denying a different part of his real humanity"; (2) FAQ exemplar disputed 1 Tim 2:5 → undisputed Rom 5:15; (3) orthonote 2 Tim 1:9 misparse ("grace given before the beginning of time") removed and re-grounded in the worship/divine-name evidence. Essay + ev-m + clarifiers.md.
+- **ev-s3 hub card (humanity)** — same 2 Tim 1:9 orthonote fix propagated (EN + MK).
+- **jesus-messiah-claim** — (1) FACTUAL: "thrones of the Twelve … from his Galilean ministry" → "appointing of the Twelve (Mark 3:13–19) …" (the thrones saying is Jerusalem/Last Supper, Matt 19:28 en route to Judea; the *appointing*, Mark 3, is the Galilean datum); (2) dropped "and from John" from the strand-sources summary; (3) "rising from the dead as the sign of the Messiah" → "the Messiah's own rising …" (4Q521 is the Messiah raising others); (4) "nothing in their tradition" → "nothing in the mainstream expectation". Essay + ev-m + port + ev-s3 EN/MK. Item-9 BSB-vs-NASB suspicion web-checked — NOT borne out; all sampled quotes are correct BSB.
+
+**Still open (pre-existing WEAK, NOT in the 2026-10-17 fix scope):** `library/jesus-messiah-claim.html` line 212 says the essay "builds its historical case without leaning on John," but strand 4 (temple saying) does cite John for Mark+John multiple attestation, and strand 6 counts John 19:19. Mild self-tension flagged independently by the argument and neutrality lenses; candidate for a future one-clause tightening (e.g. "leans only lightly on John" / name John as corroborative there). Not a deploy blocker.
