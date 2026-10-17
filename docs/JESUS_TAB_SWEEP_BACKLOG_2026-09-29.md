@@ -165,3 +165,26 @@ Result: **7 of 8 CLEAN** (no concrete defect — these are heavily-swept, exempl
 - **postres** — CLEAN. (Wright mutations; Hurtado binitarian explosion with "two powers/angel veneration debated" concession; Sabbath→Lord's-Day transfer dated to "clear only by early 2nd c."; Festinger/2025 caveat; Josephus failed-messiah catalogue; honest "presses the question back one step".)
 
 Nothing deferred on this tab beyond the standing site-wide pastoral sign-off (_pending_).
+
+## Resurrection tab (ev-s2) hostile-review FIX-PHASE — 2026-10-18 (DONE, commit `0b4cf94b`, branch `resurrection-sweep-2026-10-18`)
+The fuller review the 2026-10-17 single-reviewer fork pass (above) invited: an independent hostile review of all 8 essays whose findings were VERIFIED against the live files and, where genuine, FIXED by PORTING wording (never authored), retired on EVERY surface, then re-certified through the full four-lens dual-consensus gate. This is not an improper reopen — the 2026-10-17 pass explicitly flagged itself as provisional (single-reviewer, no independent gate).
+
+**Measured counts:** 41 files changed (243 real insertions / 243 deletions, LF-normalised); 27 surfaces re-stamped to 2026-10-18; `dateModified` synced on 15 pages; 2 briefs' `reviewed` dates bumped (`resurrection-group-appearances`, `resurrection-joseph-of-arimathea-burial`); essay + briefs indexes rebuilt. Gate: READ-ONLY agents (citations; argument/orthodoxy/neutrality), hashes verified before/after, no agent edits — citations STAMPABLE (0 errors, 1 pre-existing Hengel-wording note), argument STAMPABLE 0 BREAK, orthodoxy CLEAN 0 heresy/0 clarifiers, neutrality STAMPABLE 0 BREAK; a confirmation re-gate on the memorised-layer surfaces (ev-m/ports/briefs) returned CLEAN. Mechanical: `node --test` 145/145; content-review 28/28 ✓; stamp-integrity clean; footnote-integrity clean; retired-claims 33/0 on 1909 served files; orthodoxy-tripwires 186/0; mirror-parity 10 sources with every mirror moved.
+
+**Three cross-cutting themes (ported from `earlycreed.html`):**
+- **A. Creed extent** — received core is 1 Cor 15:3b-5 (v.7/James debated); the 500 (v.6) and Paul (v.8) are Paul's own additions, not the received formula. Retired the "500 inside the earliest creed Paul personally received" phrasing EVERYWHERE it occurred — ev-s2 card, appearances essay+mastery+port, the group-appearances brief — to "within the early tradition Paul received and passed on". (The ev-s2 instance was the neutrality lens's WEAK; the sibling appearances/brief instances were the identical defect found by a retire-everywhere grep and fixed the same way — de-overclaim, within the certified envelope.)
+- **B. Creed-dating arithmetic** — scoped the two branches: received at conversion ≈ 2-5 yrs / first half of the 30s; received only at the Gal 1:18 Jerusalem visit = outer bound mid-to-late 30s; either way predates Paul. On minimalfacts, paulconv, and earlycreed.html.
+- **C. Wright flat universal** — "no first-century Jew could describe a man as 'raised' while his corpse lay in the tomb" → "in mainstream first-century Jewish usage no one would…", attributed to Wright (guards Jubilees 23:31). On appearances, emptytomb.
+
+**One finding REJECTED on verification:** minimalfacts "removes the historical excuse for unbelief" — a certified bounded formula, not an overclaim; left as-is.
+
+**Owner-level judgment calls (surfaced, not decided silently):**
+1. The neutrality WEAK touched only ev-s2's untouched 500-passage; I extended the identical de-overclaim fix to the appearances essay/mastery/port + the group-appearances brief that carried the same phrasing (retire-it-everywhere), treating it as consistency within the already-certified theme-A envelope rather than a fresh full reopen.
+2. The commit carries `Co-Authored-By: Claude Opus 4.8` but NO `Claude-Session:` line — this desktop-app session's canonical `https://claude.ai/code/session_…` URL was not retrievable and I would not fabricate one. Can be amended in before push if the owner supplies it.
+
+**Deferred (out of resurrection-tab scope / cannot be safely done here — logged for a later pass):**
+- The theme-B earlycreed instance on the **Jesus-tab** `ev-s3` / `ev-s3.mk` card and `library/paul-divinity`, and `active-reading-data.json` ("went and checked" phrasing) — Jesus-tab surfaces, not touched here.
+- **MK/ES mirrors, theme-A 500-nuance:** the Macedonian/Spanish rendering of the "500 inside the creed" phrasing was not reliably locatable to edit without risking mistranslation; flagged for the **native-language doctrinal gate** that these AI-translated mirrors already await. (The mirrors' stamps/dates track the English gate and carry the "pending native gate" note.)
+- `pocket-cards.html`: "The earliest creed gives one cause for both — he appeared to them (1 Cor 15:7-8)" treats vv.7-8 (James + Paul, v.8 being Paul's own addition) as "the earliest creed" — a mild theme-A echo on a non-ev-s2 flashcard surface; left for a pocket-cards pass.
+- **sceptics stamp correction (done this sweep):** the 2026-09-29 sceptics stamp claimed the bereavement-vision reply cites Alter & Slade (SHERM 3.2, 2021); that citation is not on the page. Corrected forward in this sweep's sceptics `by`-note; the reply stands as a bounded documented-phenomenon concession.
+- Standing site-wide **pastoral sign-off** remains _pending_.
