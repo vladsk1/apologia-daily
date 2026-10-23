@@ -64,6 +64,64 @@ async function handleDeleteAccount(req, res) {
 
   return res.status(200).json({ ok: true });
 }
+
+/* Owner signup notification — the RELIABLE, trigger-free path.
+   Called by the app itself (dashboard.html) on a new account's first confirmed,
+   signed-in dashboard load, authenticated by the caller's OWN access token. This
+   needs no Supabase auth.users trigger, no pg_net, and no shared secret — the
+   three invisible, dashboard-only pieces that made the INSERT-webhook path fail
+   silently. The webhook path (handler below) stays as a redundant best-effort.
+
+   Identity comes solely from the verified token, so the emailed address is the
+   caller's real account email (never a value from the body). Fires at confirmed-
+   and-active, which is a better signal than the old on-creation trigger, and it
+   is already disclosed in privacy.html §1 ("...and again when its email address
+   is confirmed we receive an email notification"). */
+async function handleNotifySelf(req, res) {
+  const { user } = await verifyUserResult(req);
+  // Fail quiet: this is a best-effort notice, not a user-facing action. An
+  // unverified caller simply gets nothing sent — never an error to act on.
+  if (!user) return res.status(200).json({ ok: false, reason: 'unauthenticated' });
+
+  // Per-user cap so a reloaded tab, a cleared localStorage flag, or a crafted
+  // repeat cannot flood the inbox. The client already fires this once per device.
+  if (await overRateLimit(req, 3, 'notify-self:' + user.id)) {
+    return res.status(200).json({ ok: true, throttled: true });
+  }
+
+  const email = user.email || '(no email on account)';
+  const when = new Date().toISOString();
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+  const RESEND = process.env.RESEND_API_KEY;
+  if (RESEND) {
+    const TO = process.env.SIGNUP_NOTIFY_TO || 'vkiparizov@gmail.com';
+    const FROM = process.env.SIGNUP_NOTIFY_FROM || 'Apologia Daily <contact@apologiadaily.com>';
+    try {
+      const r = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: { Authorization: 'Bearer ' + RESEND, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          from: FROM,
+          to: [TO],
+          subject: '🎉 New signup (confirmed): ' + email,
+          html:
+            '<div style="font-family:system-ui,sans-serif;font-size:15px;line-height:1.6">' +
+            '<h2 style="margin:0 0 8px">New Apologia Daily signup</h2>' +
+            '<p style="margin:0"><strong>' + esc(email) + '</strong></p>' +
+            '<p style="margin:6px 0;color:#888;font-size:13px">confirmed &middot; ' + esc(when) + '</p>' +
+            '</div>'
+        })
+      });
+      if (!r.ok) console.warn('notify-self: Resend returned status ' + r.status);
+    } catch (e) { console.warn('notify-self: email send failed: ' + e.message); }
+  } else {
+    console.warn('notify-self: RESEND_API_KEY not set — no signup email sent.');
+  }
+
+  return res.status(200).json({ ok: true });
+}
 /* New-signup notifier.
    Fired by a Supabase Database Webhook on INSERT into auth.users. Emails the
    founder so new signups land in real time, and (optionally) records a
@@ -105,6 +163,14 @@ export default async function handler(req, res) {
      to the shared-secret path — hence the early return. */
   if ((req.query && req.query.do) === 'delete-account') {
     return handleDeleteAccount(req, res);
+  }
+
+  /* ---- Owner notification, APP-driven (?do=notify-self) ------------------
+     Same user-authenticated model as deletion (bearer token, no shared
+     secret), so it must also return before the shared-secret webhook guard
+     below. This is the reliable signup-notice path; see handleNotifySelf. */
+  if ((req.query && req.query.do) === 'notify-self') {
+    return handleNotifySelf(req, res);
   }
 
   // Shared-secret guard so randoms can't spam the notifier. FAIL CLOSED: if the

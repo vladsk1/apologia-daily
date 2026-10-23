@@ -877,6 +877,23 @@
             hours_to_confirm: Math.round((Date.now() - createdAt) / 3600000)
           });
         }
+
+        /* Owner email notification — the reliable, trigger-free signup notice.
+           Posts to /api/new-signup?do=notify-self with THIS user's own access
+           token (no Supabase trigger, no shared secret). Fires once per device
+           per new account, inside the same 7-day window as signup_confirmed, but
+           is NOT gated on analytics consent — it is a legitimate-interest server
+           action already disclosed in privacy.html §1. Best-effort: the flag is
+           set first so a reloaded tab cannot double-send, and the server caps it
+           per user as a backstop. */
+        var notifyKey = 'ad_signup_notified_' + user.id;
+        if (isNewAccount && !localStorage.getItem(notifyKey) && session.access_token) {
+          localStorage.setItem(notifyKey, '1');
+          fetch('/api/new-signup?do=notify-self', {
+            method: 'POST',
+            headers: { Authorization: 'Bearer ' + session.access_token }
+          }).catch(function () {});
+        }
       } catch (e) {}
 
       // Cross-device: hydrate onboarding prefs from the account if this device has none
