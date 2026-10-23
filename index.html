@@ -122,7 +122,7 @@
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       text-align: center;
-      padding: 8rem 2rem 6rem;
+      padding: 8rem 2rem 3rem;
       position: relative;
       overflow: hidden;
     }
@@ -204,8 +204,11 @@
       transition: all 0.2s;
     }
     .btn-ghost:hover { border-color: rgba(255,255,255,0.5); color: var(--white); }
+    /* In normal flow under the buttons (was position:absolute; bottom:2.5rem). Pinned
+       to the hero's bottom edge, the verse wrapped to three lines on 375-393px phones
+       (iPhone 12-16, SE, mini) and rode up over the "See today's session" button. */
     .hero-verse {
-      position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+      position: relative; margin: 3rem auto 0;
       font-family: var(--font-body);
       font-size: 0.8rem;
       font-style: italic;
@@ -219,7 +222,7 @@
       text-align: center;
       line-height: 1.55;
       opacity: 0;
-      animation: fadeUpCentred 0.8s ease 1.2s forwards;
+      animation: fadeUp 0.8s ease 1.2s forwards;
     }
     .hero-scroll {
       position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
@@ -802,7 +805,8 @@
       .stat-lbl { font-size: 0.66rem; }
       .trust-note { font-size: 0.78rem; }
       section { padding: 4rem 1.25rem; }
-      .hero { padding: 7rem 1.25rem 5rem; }
+      .hero { padding: 7rem 1.25rem 2.75rem; }
+      .hero-verse { margin-top: 2.25rem; }
     }
 
     /* ── WHERE DO I START ── */
