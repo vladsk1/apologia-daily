@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Join a Study Group — Apologia Daily</title>
   <meta name="robots" content="noindex" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700&family=Source+Serif+4:wght@300;400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/fonts/fonts.css">
   <style>
     :root {
       --navy-950:#050d1a; --navy-900:#0a1628; --navy-700:#163058; --navy-600:#1e4278;
@@ -44,6 +42,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
+  <script src="/age-gate.js"></script>
   <script>
   var sb = null;
   var code = new URLSearchParams(location.search).get('g');
@@ -84,9 +83,38 @@
       return;
     }
 
-    // Signed in — join via the security-definer RPC (works for public + invite groups).
+    // Signed in — join via the security-definer RPC.
+    // Adults only (2026-09-30): groups are open chat between members.
+    // The database enforces 18+ (join_group_by_code checks is_adult); age-gate.js asks
+    // once for accounts made before the age screen, then reads the stored band.
+    var adult = await window.adAgeGate(sb, { quiet: true });
+    if (!adult && window.adAgeGate.reason === 'error') {
+      hideSpinner();
+      render('<div class="icon">🤔</div><h1>Something went wrong</h1><p>We couldn&rsquo;t check your account just now. Please reload the page and try again.</p>');
+      return;
+    }
+    if (!adult && window.adAgeGate.reason === 'cancel') {
+      hideSpinner();
+      render('<div class="icon">👋</div><h1>Join when you&rsquo;re ready</h1><p>Reload this page whenever you want to join the group.</p>');
+      return;
+    }
+    if (!adult && window.adAgeGate.reason === 'under_13') {
+      hideSpinner();
+      render('<div class="icon">🙏</div><h1>Accounts are for ages 13 and up</h1><p>This account will be deleted within 14 days. A parent or guardian can delete it now from <a href="/dashboard.html">Dashboard &rarr; Account</a>, or email <a href="mailto:contact@apologiadaily.com">contact@apologiadaily.com</a> if the year was chosen by mistake.</p>');
+      return;
+    }
+    if (!adult) {
+      hideSpinner();
+      render('<div class="icon">🙏</div><h1>Study Groups are for adults</h1><p>Ask a parent, youth leader or pastor to run a group you can be part of with them. Everything else on the site is open to you.</p><div class="btn-row"><a href="/evidence-library.html" class="btn btn-gold">Explore the Evidence Library</a></div>');
+      return;
+    }
     try {
       var res = await sb.rpc('join_group_by_code', { code: code });
+      if (res.error && /adults_only/.test(res.error.message || '')) {
+        hideSpinner();
+        render('<div class="icon">🙏</div><h1>Study Groups are for adults</h1><p>Ask a parent, youth leader or pastor to run a group you can be part of with them. Everything else on the site is open to you.</p><div class="btn-row"><a href="/evidence-library.html" class="btn btn-gold">Explore the Evidence Library</a></div>');
+        return;
+      }
       if (res.error) throw res.error;
       var gid = res.data;
       if (!gid) {
@@ -108,5 +136,6 @@
     }
   }
   </script>
+<script src="/a11y.js" defer></script>
 </body>
 </html>

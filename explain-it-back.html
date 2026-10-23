@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Explain It Back — Apologia Daily</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/fonts/fonts.css">
   <style>
     :root{--n:#050d1a;--n8:#0a1628;--n7:#0f2040;--n5:#1e4278;--n3:#4a7ab5;--g:#c8a951;--gl:#d4b96a;--gd:#a88930;--w:#fff;--ow:#f7f4ef;--border:#e8e2d8;--tm:#3a4a62;--td:#0f1f38;--fd:'Playfair Display',Georgia,serif;--ss:'Source Serif 4',Georgia,serif;--ui:'DM Sans',system-ui,sans-serif;}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -31,7 +31,7 @@
     /* HOW IT WORKS */
     .how-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.5rem;}
     .how-card{background:var(--w);border:1px solid var(--border);border-radius:6px;padding:1.25rem;}
-    .how-num{font-family:var(--fd);font-size:1.8rem;font-weight:700;color:var(--g);margin-bottom:0.5rem;}
+    .how-num{font-family:var(--fd);font-size:1.8rem;font-weight:700;color:#7a5c12;margin-bottom:0.5rem;}
     .how-title{font-family:var(--ui);font-size:0.82rem;font-weight:600;color:var(--td);margin-bottom:0.35rem;}
     .how-desc{font-family:var(--ui);font-size:0.78rem;color:var(--tm);line-height:1.6;}
     @media(max-width:600px){.how-row{grid-template-columns:1fr;}}
@@ -127,7 +127,7 @@
             <div class="adn-mega-col">
               <div class="adn-mega-h">Go deeper</div>
               <a class="adn-mi" href="/library/"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Deep-Dive Essays</span><span class="adn-mi-dc">Long-form, fully-cited essays.</span></span></a>
-              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Answers</span><span class="adn-mi-dc">The questions people ask most.</span></span></a>
+              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Common Questions</span><span class="adn-mi-dc">Short answers to the questions people ask most.</span></span></a>
               <a class="adn-mi" href="/sources.html"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Church Fathers &amp; Creeds</span><span class="adn-mi-dc">The early church in its own words, verified.</span></span></a>
               <a class="adn-mi" href="/our-sources.html"><span class="adn-mi-ic">&#128218;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Our Sources</span><span class="adn-mi-dc">Books and articles our essays cite.</span></span></a>
               <a class="adn-mi" href="/whats-new.html"><span class="adn-mi-ic">&#128240;</span><span class="adn-mi-tx"><span class="adn-mi-nm">What&#39;s New</span><span class="adn-mi-dc">Latest essays, features &amp; reels.</span></span></a>
@@ -138,11 +138,9 @@
               <a class="adn-mi" href="/games.html"><span class="adn-mi-ic">&#127918;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Games</span><span class="adn-mi-dc">Quizzes that feed your streak.</span></span></a>
               <a class="adn-mi" href="/study-groups.html"><span class="adn-mi-ic">&#128101;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Study Groups <span class="adn-mi-tag">New</span></span><span class="adn-mi-dc">Study with people you love.</span></span></a>
               <a class="adn-mi" href="/reading-club.html"><span class="adn-mi-ic">&#128214;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Reading Clubs</span><span class="adn-mi-dc">The classics, chapter by chapter.</span></span></a>
-              <a class="adn-mi" href="/conversation-journal.html"><span class="adn-mi-ic">&#128221;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Conversation Journal</span><span class="adn-mi-dc">Log real conversations, get AI coaching.</span></span></a>
             </div>
             <div class="adn-mega-col">
               <div class="adn-mega-h">For you</div>
-              <a class="adn-mi" href="/parents.html"><span class="adn-mi-ic">&#128106;</span><span class="adn-mi-tx"><span class="adn-mi-nm">For Parents</span><span class="adn-mi-dc">Your kids&#39; hardest questions.</span></span></a>
               <a class="adn-mi" href="/video-library.html"><span class="adn-mi-ic">&#127909;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Videos</span><span class="adn-mi-dc">Short, shareable explainers.</span></span></a>
             </div>
             <div class="adn-mega-foot">
@@ -381,6 +379,7 @@
         if(jsonMatch){
           try{
             var fb=JSON.parse(jsonMatch[0]);
+            fb.score=validScore(fb.score);
             showFeedback(fb,txt);
             if(currentUser){saveFeedback(fb,txt);}
           }catch(e){showRawFeedback(raw);}
@@ -389,21 +388,31 @@
     }catch(e){btn.disabled=false;btn.textContent='Submit for feedback';alert('Something went wrong. Please try again.');}
   }
 
+  /* A real 0-10 number, or null. Never invent a score: a missing or malformed
+     grade shows as "—" (a made-up number would be manufactured confidence). */
+  function validScore(v){
+    var n=(typeof v==='number')?v:parseFloat(v);
+    return (isFinite(n)&&n>=0&&n<=10)?Math.round(n):null;
+  }
+  function escText(t){var d=document.createElement('div');d.textContent=String(t==null?'':t);return d.innerHTML;}
+  function asList(v){return Array.isArray(v)?v:(v?[v]:[]);}
+
   function showFeedback(fb, userText){
-    var score=fb.score||5;
-    var badgeCls=score>=8?'excellent':score>=6?'good':score>=4?'ok':'poor';
+    var score=validScore(fb.score);
+    var badgeCls=score===null?'ok':score>=8?'excellent':score>=6?'good':score>=4?'ok':'poor';
     var wrap=document.getElementById('feedback-wrap');
+    document.getElementById('score-badge').style.display='';
     document.getElementById('score-badge').className='score-badge '+badgeCls;
-    document.getElementById('score-badge').textContent=score+'/10';
-    document.getElementById('fb-strengths').innerHTML=(fb.strengths||[]).map(function(s){return'<li>'+s+'</li>';}).join('');
-    document.getElementById('fb-improve').innerHTML=(fb.improvements||[]).map(function(s){return'<li>'+s+'</li>';}).join('');
+    document.getElementById('score-badge').textContent=score===null?'\u2014':score+'/10';
+    document.getElementById('fb-strengths').innerHTML=asList(fb.strengths).map(function(s){return'<li>'+escText(s)+'</li>';}).join('');
+    document.getElementById('fb-improve').innerHTML=asList(fb.improvements).map(function(s){return'<li>'+escText(s)+'</li>';}).join('');
     document.getElementById('fb-model').textContent=fb.model_answer||'';
     wrap.style.display='block';
     wrap.scrollIntoView({behavior:'smooth',block:'start'});
     /* Coach capture — map this tool's arg ids to the registry, then record the score */
     try{
       var _eib2arg={kalam:'kalam',finetuning:'finetuning',moral:'moral',consciousness:'consciousness',minimal:'minimal',emptytomb:'emptytomb',paul_creed:'earlycreed',trilemma:'jesus_claims',divinity:'jesus_as_god_nt',manuscript:'manuscript',deadseascrolls:'deadseascrolls',islamic_dilemma:'trinity_islam',jesus_quran:'trinity_islam'};
-      if(window.Coach && _eib2arg[currentArgId]) Coach.recordExplain(_eib2arg[currentArgId], score, ARGS[currentArgId].title);
+      if(score!==null && window.Coach && _eib2arg[currentArgId]) Coach.recordExplain(_eib2arg[currentArgId], score, ARGS[currentArgId].title);
     }catch(e){}
     sessionHistory.unshift({title:ARGS[currentArgId].title,score:score,time:new Date()});
     renderHistory();
@@ -439,8 +448,9 @@
       await sb.from('explain_sessions').insert({
         user_id:currentUser.id,argument_id:currentArgId,
         argument_title:ARGS[currentArgId].title,
-        user_explanation:userText,
-        ai_feedback:JSON.stringify(fb),score:fb.score||null
+        // Only the score is kept (privacy.html §4): the written explanation and the
+        // AI feedback are shown on screen and never stored.
+        score:validScore(fb.score)
       });
     }catch(e){console.warn('Failed to save session',e);}
   }
@@ -470,9 +480,9 @@
     if(sessionHistory.length===0){section.style.display='none';return;}
     section.style.display='block';
     list.innerHTML=sessionHistory.slice(0,10).map(function(h){
-      var cls=h.score>=8?'hi-ex':h.score>=6?'hi-gd':h.score>=4?'hi-ok':'hi-pr';
+      var cls=h.score===null?'hi-ok':h.score>=8?'hi-ex':h.score>=6?'hi-gd':h.score>=4?'hi-ok':'hi-pr';
       var time=h.time.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-      return'<div class="history-item"><div><div class="hi-title">'+h.title+'</div><div class="hi-meta">Today at '+time+'</div></div><div class="hi-score '+cls+'">'+h.score+'/10</div></div>';
+      return'<div class="history-item"><div><div class="hi-title">'+h.title+'</div><div class="hi-meta">Today at '+time+'</div></div><div class="hi-score '+cls+'">'+(h.score===null?'\u2014':h.score+'/10')+'</div></div>';
     }).join('');
   }
 

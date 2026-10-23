@@ -147,8 +147,10 @@
   function recordQuiz(idOrCat, pct, label) {
     record({ id: idOrCat, src: 'quiz', score: Math.max(0, Math.min(1, Number(pct) / 100)), note: 'Quiz \u2014 ' + Math.round(Number(pct)) + '%' + (label ? ' (' + label + ')' : '') });
   }
-  function recordDebate(idOrCat, score100, label) {
-    record({ id: idOrCat, src: 'debate', score: Math.max(0, Math.min(1, Number(score100) / 100)), note: 'Debate Arena \u2014 scored ' + Math.round(Number(score100)) + '/100' + (label ? ' (' + label + ')' : '') });
+  /* verdict: the Arena's band name ('Strong defence' etc.). The Arena no longer shows
+     numbers, so the note names the band; score100 stays a private mastery input. */
+  function recordDebate(idOrCat, score100, label, verdict) {
+    record({ id: idOrCat, src: 'debate', score: Math.max(0, Math.min(1, Number(score100) / 100)), note: 'Debate Arena \u2014 ' + (verdict ? verdict : 'scored ' + Math.round(Number(score100)) + '/100') + (label ? ' (' + label + ')' : '') });
   }
   function recordFlashcards(id, ok) {
     record({ id: id, src: 'flashcard', score: ok ? 0.7 : 0.3, note: ok ? 'Cleared the flashcard deck' : 'Struggled on flashcards' });
@@ -253,7 +255,10 @@
         '<p style="font-family:\'DM Sans\',sans-serif;font-size:0.74rem;color:rgba(255,255,255,0.4);margin-bottom:1rem;">' + esc(p.evidence) + '</p>' +
         '<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:9px;padding:0.4rem 1rem;margin-bottom:1.1rem;">' + steps + '</div>' +
         '<div style="display:flex;gap:0.6rem;flex-wrap:wrap;">' +
-          '<a href="' + esc(p.startHref) + '" style="font-family:\'DM Sans\',sans-serif;font-size:0.85rem;font-weight:600;background:#c8a951;color:#050d1a;padding:10px 22px;border-radius:4px;text-decoration:none;">Start session &rarr;</a>' +
+          /* One site-wide "today's step" (lib/today-step.js): the Coach's pick is
+             carried into Today's session, which puts a Beginner's Path or Study Plan
+             day first when one is active, so this button opens Today (2026-09-30). */
+          '<a href="/today" style="font-family:\'DM Sans\',sans-serif;font-size:0.85rem;font-weight:600;background:#c8a951;color:#050d1a;padding:10px 22px;border-radius:4px;text-decoration:none;">Start today&rsquo;s session &rarr;</a>' +
           '<a href="coach.html" style="font-family:\'DM Sans\',sans-serif;font-size:0.85rem;font-weight:500;color:rgba(255,255,255,0.7);padding:10px 16px;border-radius:4px;text-decoration:none;border:1px solid rgba(255,255,255,0.14);">Full training log</a></div>' +
         convoLink();
     } else {
@@ -266,12 +271,8 @@
         convoLink();
     }
   }
-  /* link to log a real-world conversation for coaching (feeds the profile) */
-  function convoLink() {
-    return '<div style="margin-top:0.9rem;border-top:1px solid rgba(255,255,255,0.08);padding-top:0.8rem;">' +
-      '<a href="conversation-journal.html" style="font-family:\'DM Sans\',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.55);text-decoration:none;">' +
-      '&#128172; Had a real debate or got a question you couldn&rsquo;t answer? <span style="color:#c8a951;font-weight:600;">Log it for coaching &rarr;</span></a></div>';
-  }
+  /* The Conversation Journal was retired (2026-09-30); this used to link to it. */
+  function convoLink() { return ''; }
 
   function dial(pct) {
     var r = 20, c = 2 * Math.PI * r, off = c * (1 - pct / 100);
@@ -432,6 +433,9 @@
        alter table public.coach_signals enable row level security;
        create policy "coach_own" on public.coach_signals for all
          using (auth.uid() = user_id) with check (auth.uid() = user_id);
+       -- explicit grants (Supabase stops auto-granting new tables 2026-10-30):
+       revoke all on public.coach_signals from anon;
+       grant select, insert, update, delete on public.coach_signals to authenticated;
   */
   var SB_URL = 'https://noprgxkwniouukmrfozc.supabase.co';
   var SB_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw';

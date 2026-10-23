@@ -87,7 +87,7 @@ page that ASSERTS something is not.**
 | `monitor.html` | Operator dashboard; excluded from the app bundle, not publicly linked. |
 | `dashboard`, `today` | App shells; everything they display is gated at source. |
 | `search.html` | Renders `search-index.json`, generated from gated pages. |
-| `shared-answer.html` | Renders a gated `/answers` entry. |
+| `shared-answer.html` | Shows only the shared question (escaped) and links to Ask; never renders answer text from the URL (2026-09-30). |
 | `sources.html` | Renders the `/sources` corpus, gated by `verified:true`. |
 | `ask-anything.html` | Shell for `api/ask.js`, which is itself gated. |
 | `coach`, `conversation-journal`, `study-groups` | Shells; user-authored or `api/*` content. |

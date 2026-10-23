@@ -44,6 +44,7 @@ const CONTENT_PATTERNS = [
   /^ev-s\d[a-z0-9.]*\.html$/,              // Evidence Library hub fragments (+ .mk/.es)
   /^ev-m-.+\.html$/,                       // Evidence Library mastery pages (all 67, gated 2026-07-29)
   /^worldviews\.html$/,                    // worldviews cards (Islam Case tier etc.)
+  /^beginners-path\.html$/,                // 5-day Beginner's Path — first gated 2026-10-11
   /^flashcards\.html$/,                    // ALL_ARGS recited deck — first gated 2026-09-07
   /^explain-it-back\.html$/,               // ARGS grading rubric — first gated 2026-09-07
   /^tools\/reel\/specs\/.+\.json$/,        // short-form reel scripts
@@ -78,6 +79,14 @@ const CONTENT_PATTERNS = [
                                            // dual-consensus): the memorised/graded layer — readers are
                                            // marked right/wrong, so a retired overclaim as the correct
                                            // answer is the same failure mode as daily-mix.
+  /^objection-catcher\.html$/,             // 15-item graded quiz: pick the best reply to a real objection
+                                           // (first gated 2026-09-30, four lenses, dual-consensus because
+                                           // it carries deity / resurrection / Islam items).
+  /^daily-quiz\.html$/,                    // 90-question graded daily quiz (first gated 2026-09-30,
+                                           // four lenses, dual-consensus: deity / resurrection / Islam
+                                           // items; answer-length + answer-position tells fixed).
+  /^who-said-it\.html$/,                   // 26-quote graded attribution game (first gated 2026-09-30,
+                                           // four lenses; Scripture items removed at owner direction).
   /^daily-mix\.html$/,                      // 43-item graded quiz (first gated 2026-08-19, row 29,
                                            // dual-consensus): same memorised/graded layer as speed-round;
                                            // the answer-length tell (correct = longest option) and
@@ -137,11 +146,10 @@ const EXEMPT = new Map([
   ['dashboard.html', 'app shell; renders gated content'],
   ['today.html', 'shell; renders the gated daily items'],
   ['search.html', 'renders search-index.json, which is generated from gated pages'],
-  ['shared-answer.html', 'renders a gated /answers entry'],
+  ['shared-answer.html', 'shows only a shared question (escaped); never renders answer text'],
   ['sources.html', 'renders the /sources corpus, gated by verified:true'],
   ['ask-anything.html', 'shell for api/ask.js, which is itself gated'],
   ['coach.html', 'shell; coaching prompts live in api/*'],
-  ['conversation-journal.html', 'shell; user-authored content'],
   ['study-groups.html', 'shell; group plumbing'],
   ['video-library.html', 'catalogue of third-party videos'],
 ]);
@@ -190,7 +198,7 @@ function changedFiles(base) {
 }
 
 function allContentFiles() {
-  return globSync('{library/**/*.html,ev-s*.html,ev-m-*.html,worldviews.html,pocket-cards.html,speed-round.html,daily-mix.html,study-plans.html,tools/reel/specs/*.json,api/ask.js}').filter(isContent);
+  return globSync('{library/**/*.html,ev-s*.html,ev-m-*.html,worldviews.html,pocket-cards.html,speed-round.html,objection-catcher.html,daily-quiz.html,who-said-it.html,daily-mix.html,study-plans.html,tools/reel/specs/*.json,api/ask.js}').filter(isContent);
 }
 
 /* Everything user-facing that is not explicitly exempt. This is the AUDIT scope,

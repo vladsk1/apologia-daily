@@ -31,7 +31,7 @@ concession the essay makes must survive the compression. A video cannot host an
 Spec: see specs/explainer-kalam.json. Each scene = {kicker?, visual{type,…}, say[…]}.
 Visual elements reveal on sentence cues: `"at": k` = when sentence k of that scene starts.
 """
-import os, sys, re, json, math, random, hashlib, argparse, subprocess, tarfile, wave
+import os, sys, re, json, math, random, hashlib, argparse, subprocess, tarfile, wave, shutil
 from multiprocessing import Pool
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -50,8 +50,9 @@ MODEL_SHA256 = "fbae9257e1e05ffc727e951ef9b9c98418e6d79f1c9b6b13bd59f5c9028a1478
 NPM_MODEL, NPM_VOICES = "kokoro-q8-shards@1.0.0", "kokoro-js@1.2.1"
 
 def _npm_extract(spec, dest):
+    npm = shutil.which("npm") or ("npm.cmd" if os.name == "nt" else "npm")  # Windows ships npm.cmd
     os.makedirs(dest, exist_ok=True)
-    tgz = subprocess.run(["npm", "pack", spec, "--silent"], cwd=dest, capture_output=True,
+    tgz = subprocess.run([npm, "pack", spec, "--silent"], cwd=dest, capture_output=True,
                          text=True, check=True).stdout.strip().splitlines()[-1]
     with tarfile.open(os.path.join(dest, tgz)) as t:
         t.extractall(os.path.join(dest, spec.split("@")[0]), filter="data")
@@ -482,9 +483,125 @@ def v_close(base, ctx, v):
         text_c(d, W / 2, 585, v.get("ref", ""), R.F("sans", 30), GOLD(th))
     draw_fade(base, ctx, a1, f)
 
+# ---- generic, topic-agnostic scenes (the reusable "The Case" vocabulary) ----
+# None of these bake in any argument's wording; every string comes from the spec.
+def v_options(base, ctx, v):
+    """Two labelled options with an 'or' between, and an optional question line. (A generic fork.)"""
+    th = ctx.th; W = ctx.W
+    for side, (lab, sub, delay) in enumerate([(v["left"], v.get("left_sub", ""), 0.3),
+                                              (v["right"], v.get("right_sub", ""), 2.4)]):
+        a = ctx.p(0, 0.9, delay)
+        def f(d, side=side, lab=lab, sub=sub):
+            cx = W * (0.27 if side == 0 else 0.73); x0, x1 = cx - 400, cx + 400
+            rrect(d, [x0, 230, x1, 600], fill=PANEL,
+                  outline=GOLD(th) if side == 1 else DIM(th, 100), width=3 if side == 1 else 2)
+            wrapped_c(d, cx, 305, lab, R.F("serifb", 58), GOLD(th) if side == 1 else CREAM(th), 720)
+            wrapped_c(d, cx, 470, sub, R.F("serif", 36), DIM(th), 720)
+        draw_fade(base, ctx, a, f)
+    draw_fade(base, ctx, ctx.p(0, 0.8, 1.4), lambda d: text_c(d, W / 2, 400, "or", R.F("serif", 46), DIM(th)))
+    q = v.get("question")
+    if q:
+        draw_fade(base, ctx, ctx.p(v.get("question_at", 2), 0.9),
+                  lambda d: wrapped_c(d, W / 2, 710, q, R.F("serifb", 60), GOLD(th), 1500))
+
+def v_quote(base, ctx, v):
+    """A quotation card: a block of quoted text with an attribution. (Scripture or a source.)"""
+    th = ctx.th; W = ctx.W
+    size = v.get("size", 54); font = R.F("serif", size); maxw = 1480; lh = size + 20
+    probe = ImageDraw.Draw(Image.new("RGB", (10, 10)))
+    lines = R.wrap(probe, v["text"], font, maxw); block_h = len(lines) * lh
+    top = max(300, 470 - block_h / 2)
+    a = ease(ctx.t / 0.8); lead = v.get("lead")
+    def f(d):
+        text_c(d, W / 2, top - 160, "“", R.F("serifb", 150), GOLD(th, 140))
+        if lead: text_c(d, W / 2, top - 72, lead, R.F("sans", 30), GOLD(th))
+        for i, ln in enumerate(lines): text_c(d, W / 2, top + i * lh, ln, font, CREAM(th))
+    draw_fade(base, ctx, a, f)
+    cy = top + block_h + 36
+    def c(d):
+        d.line([(W / 2 - 80, cy), (W / 2 + 80, cy)], fill=GOLD(th), width=3)
+        text_c(d, W / 2, cy + 22, v["cite"], R.F("sans", 34), GOLD(th))
+    draw_fade(base, ctx, ctx.p(v.get("cite_at", 1), 0.8), c)
+
+def v_events(base, ctx, v):
+    """A horizontal timeline of dated events, revealing left→right, with an optional highlighted window."""
+    th = ctx.th; W = ctx.W; items = v["items"]; n = len(items)
+    xl, xr, y = 340, W - 340, 540
+    xs = [xl + (xr - xl) * (i / (n - 1) if n > 1 else 0.5) for i in range(n)]
+    win = v.get("window")
+    if win:
+        def wf(d):
+            x0, x1 = xs[win["from"]], xs[win["to"]]
+            rrect(d, [x0 - 30, y - 118, x1 + 30, y + 118], fill=(200, 169, 81, 38), outline=GOLD(th, 160), width=2, r=20)
+            wrapped_c(d, (x0 + x1) / 2, y - 205, win["label"], R.F("serifb", 38), GOLD(th), (x1 - x0) + 360)
+        draw_fade(base, ctx, ctx.p(win["at"], 0.8), wf)
+    draw_fade(base, ctx, ease(ctx.t / 0.6), lambda d: d.line([(xl, y), (xr, y)], fill=DIM(th, 150), width=3))
+    for i, it in enumerate(items):
+        def f(d, i=i, it=it):
+            x = xs[i]; col = GOLD(th) if it.get("gold") else CREAM(th)
+            d.ellipse([x - 12, y - 12, x + 12, y + 12], fill=col)
+            text_c(d, x, y - 82, it["date"], R.F("serifb", 40), col)
+            wrapped_c(d, x, y + 42, it["label"], R.F("serif", 32), DIM(th), 360)
+        draw_fade(base, ctx, ctx.p(it["at"], 0.8), f)
+
+def v_scales(base, ctx, v):
+    """Two columns — e.g. what a claim establishes vs. what it does not. The right column reads in gold."""
+    th = ctx.th; W = ctx.W
+    for title, its, cx, tcol, oc in [(v["left_title"], v["left_items"], W * 0.27, CREAM(th), DIM(th, 110)),
+                                     (v["right_title"], v["right_items"], W * 0.73, GOLD(th), GOLD(th))]:
+        def hdr(d, title=title, cx=cx, tcol=tcol, oc=oc):
+            rrect(d, [cx - 400, 220, cx + 400, 800], fill=PANEL, outline=oc, width=2)
+            wrapped_c(d, cx, 258, title, R.F("serifb", 46), tcol, 740)
+            d.line([(cx - 120, 356), (cx + 120, 356)], fill=oc, width=2)
+        draw_fade(base, ctx, ease(ctx.t / 0.8), hdr)
+        for j, it in enumerate(its):
+            def f(d, it=it, cx=cx, j=j):
+                wrapped_c(d, cx, 404 + j * 112, it["t"], R.F("serif", 38), CREAM(th), 720)
+            draw_fade(base, ctx, ctx.p(it["at"], 0.7), f)
+
+def v_claimreply(base, ctx, v):
+    """A critic's name + claim, then a 'reply' divider and short reply lines (the last may be gold)."""
+    th = ctx.th; W = ctx.W
+    def top(d):
+        rrect(d, [W / 2 - 720, 180, W / 2 + 720, 400], fill=(66, 34, 34, 110), outline=DIM(th, 120), width=2)
+        text_c(d, W / 2, 206, v["who"], R.F("serifb", 50), CREAM(th))
+    draw_fade(base, ctx, ease(ctx.t / 0.8), top)
+    draw_fade(base, ctx, ctx.p(v.get("claim_at", 1), 0.8),
+              lambda d: wrapped_c(d, W / 2, 292, v["claim"], R.F("serif", 36), DIM(th), 1340))
+    pts = v.get("points", [])
+    ra = ctx.p(v.get("reply_at", (pts[0]["at"] - 1 if pts else 2)), 0.8)
+    def rl(d):
+        text_c(d, W / 2, 442, v.get("reply_label", "The reply"), R.F("sans", 30), GOLD(th))
+        d.line([(W / 2 - 70, 492), (W / 2 + 70, 492)], fill=GOLD(th), width=3)
+    draw_fade(base, ctx, ra, rl)
+    for j, it in enumerate(pts):
+        def f(d, it=it, j=j):
+            col = GOLD(th) if it.get("gold") else CREAM(th)
+            wrapped_c(d, W / 2, 540 + j * 90, it["t"], R.F("serifb" if it.get("gold") else "serif", 40), col, 1440)
+        draw_fade(base, ctx, ctx.p(it["at"], 0.7), f)
+
+def v_landing(base, ctx, v):
+    """A verdict close: a headline (last line gold), a scope sub-line, and an optional reference."""
+    th = ctx.th; W = ctx.W
+    head = v["head"] if isinstance(v["head"], list) else [v["head"]]
+    for i, ln in enumerate(head):
+        a = ease((ctx.t - 0.2 - i * 0.4) / 0.8)
+        draw_fade(base, ctx, a, lambda d, i=i, ln=ln: text_c(d, W / 2, 310 + i * 95, ln,
+                  R.F("serifb", 84), GOLD(th) if i == len(head) - 1 else CREAM(th)))
+    y2 = 310 + len(head) * 95 + 44
+    draw_fade(base, ctx, ease((ctx.t - 1.2) / 0.8),
+              lambda d: wrapped_c(d, W / 2, y2, v.get("sub", ""), R.F("serif", 44), DIM(th), 1500))
+    if v.get("ref"):
+        def r(d):
+            d.line([(W / 2 - 90, y2 + 150), (W / 2 + 90, y2 + 150)], fill=GOLD(th), width=3)
+            text_c(d, W / 2, y2 + 175, v["ref"], R.F("sans", 30), GOLD(th))
+        draw_fade(base, ctx, ease((ctx.t - 2.0) / 0.8), r)
+
 VISUALS = dict(title=v_title, end=v_end, fork=v_fork, syllogism=v_syllogism, vacuum=v_vacuum, hotel=v_hotel,
                succession=v_succession, timeline=v_timeline, attributes=v_attributes, contrast=v_contrast,
-               strands=v_strands, objection=v_objection, close=v_close)
+               strands=v_strands, objection=v_objection, close=v_close,
+               options=v_options, quote=v_quote, events=v_events, scales=v_scales,
+               claimreply=v_claimreply, landing=v_landing)
 
 # ---------------------------------------------------------------- captions
 def caption_chunks(cues, d, font, max_w):
@@ -502,9 +619,9 @@ def _ts(sec, sep):
     return f"{h:02d}:{m:02d}:{s:02d}{sep}{ms:03d}"
 
 def write_subs(chunks, base):
-    with open(base + ".srt", "w") as f:
+    with open(base + ".srt", "w", encoding="utf-8") as f:
         for i, (a, b, g) in enumerate(chunks, 1): f.write(f"{i}\n{_ts(a, ',')} --> {_ts(b, ',')}\n" + "\n".join(g) + "\n\n")
-    with open(base + ".vtt", "w") as f:
+    with open(base + ".vtt", "w", encoding="utf-8") as f:
         f.write("WEBVTT\n\n")
         for a, b, g in chunks: f.write(f"{_ts(a, '.')} --> {_ts(b, '.')}\n" + "\n".join(g) + "\n\n")
 
@@ -565,7 +682,7 @@ def main():
     ap.add_argument("--fps", type=int); ap.add_argument("--jobs", type=int, default=os.cpu_count() or 2)
     ap.add_argument("--no-burn-captions", action="store_true"); ap.add_argument("--preview", action="store_true")
     a = ap.parse_args()
-    spec = json.load(open(a.spec)); assert spec.get("format") == "explainer", "not an explainer spec"
+    spec = json.load(open(a.spec, encoding="utf-8")); assert spec.get("format") == "explainer", "not an explainer spec"
     W, H = R.ASPECTS[spec.get("aspect", "wide")]; fps = a.fps or int(spec.get("fps", 30))
     voice = a.voice or spec.get("voice", "am_michael"); speed = a.speed or float(spec.get("speed", 1.0))
     name = os.path.splitext(os.path.basename(a.spec))[0]

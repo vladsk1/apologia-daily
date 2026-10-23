@@ -4,6 +4,7 @@
 > Resurrection of Jesus — and Why It Matters Today.* Foreword by **Gary Habermas**.
 > Publisher/year: **TBD — need the copyright-page photo** (likely Bethany House, ~2023; do
 > not treat as confirmed until the copyright page is captured).
+> ✅ CORRECTED 2026-09-29: publisher/year confirmed from retailer listings as **Bethany House, 14 March 2023** (ISBN 978-0-7642-3083-7), which is what `library/postres.html` already prints ("Bethany House, 2023"). The copyright page itself has still not been photographed.
 > This note is a **research map**, not the book.
 
 > ## ✅ STATUS: COMPLETE (finalized as-is 2026-07-14) — Intro + Chs. 1, 3–12 + full Notes captured
@@ -14,7 +15,7 @@
 > hard **Ch. 4 Bill-Warner/CSPI do-not-use** flag). **Two gaps were intentionally left un-captured** (not
 > blockers for using the note): the **Ch. 2 body (pp. 33–42)** — the skeptical-case chapter, anchored on
 > E. P. Sanders, whose thesis is already summarized from the TOC + resolved via its endnote — and the
-> **copyright page** (publisher/year still listed as "TBD — assumed Bethany House ~2023"). Add either
+> **copyright page** (publisher/year still listed as "TBD — assumed Bethany House ~2023"). [✅ CORRECTED 2026-09-29: publisher/year now confirmed as Bethany House, 2023 — see the header; only the photo is outstanding.] Add either
 > later if the pages are sent; the note is otherwise finished. See the capture-status table at the foot.
 >
 > **Standing rule:** this is a *research map of a copyrighted book*, not a quotable source. Do
@@ -150,7 +151,7 @@ creeds) → **`/sources` candidate, P3.** ✅ **SHIPPED 2026-08-17** (backlog ro
 | Ch. 5/7 — messianic-pretenders "lone survivor" catalogue | ~~3 weaker in ours~~ **DONE 2026-08-17** | **SHIPPED** to `library/postres.html` (catalogue in the dissonance reply + expanded fn 11; Theudas/Acts 5:36 crux handled; dual-consensus CLEAN). → **R-C, P3 — DONE**. |
 | Ch. 3/5 — Second-Temple resurrection primaries (4Q521, Isa 26:19, 2 Macc 7:9) | ~~4 missing / partial~~ **DONE 2026-08-17** | **SHIPPED** to `uniqueness.html` (4Q521 + Isaiah 26:19; 2 Macc deliberately skipped on denom-neutrality). Dual-consensus CLEAN. → **R-D, P3 — DONE**. |
 | Ch. 12 — anti-copycat assets (Bowersock, Asclepius, Aeschylus) | ~~4 missing~~ **DONE 2026-08-17** | **SHIPPED** to `uniqueness.html` (Aeschylus *anastasis*-denial [verified], Asclepius myth reframed, Bowersock flagged debated). → **R-E, P3 — DONE**. |
-| Ch. 12 (endnote n.33) — Keener "Otho" discrepancy comparison | ✅ **SHIPPED 2026-08-14** to `consistency.html` §186 (fn 19) | Keener's Suetonius-vs-Tacitus-on-Otho comparison added as a complementary control to the existing Plutarch material (two independent authors vs one author twice). Bounded to GENRE reliability, not inspiration/inerrancy; "as free as any two Gospels" (comparable, not "fewer"); its second thrust (convergence → source-dependence) stated. dual-consensus CLEAN. |
+| Ch. 12 (endnote n.33) — Keener "Otho" discrepancy comparison | ✅ **SHIPPED 2026-08-14** to `consistency.html` §186 (fn 19 → *(corrected 2026-09-29, Biblical-Reliability sweep: now **fn 20**)*) | Keener's Suetonius-vs-Tacitus-on-Otho comparison added as a complementary control to the existing Plutarch material (two independent authors vs one author twice). Bounded to GENRE reliability, not inspiration/inerrancy; "as free as any two Gospels" (comparable, not "fewer"); its second thrust (convergence → source-dependence) stated. dual-consensus CLEAN. |
 | Ch. 8 — rabbinic criminal-burial apparatus (m. Sanh. 6:5–6, Semahot) | ~~4 missing (additive)~~ **DONE 2026-08-15** | → **R-G, P3 — SHIPPED** to `library/burial.html` (McCane-subsection paragraph + Craig Evans; dual-consensus CLEAN). ⚠ **Semahot 13.7 was the WRONG locus** (it is a restriction on moving remains) — corrected to ch. 2 + chs. 12-13; the "~1 year" is general ossilegium, not in the mishnah. ⚠ Evans is *more* optimistic than McCane (defends the known-tomb account) — took 3 neutrality rounds to get right. |
 | Ch. 3/6 — apostolic-eyewitness office-requirement (Acts 1:21–22) | ~~4 missing (additive)~~ **DONE 2026-08-15** | → **R-H, P3 — SHIPPED** to `library/eyewitnesses.html` (new Reply-section paragraph; the form-critical *Sitz im Leben* legitimation reply named + answered; claim bounded to early-witness/living-memory; dual-consensus CLEAN). Bauckham universalism fence RESPECTED. |
 | Ch. 9 — the 1 Cor 15 creed, Dunn page cite | ~~3 weaker in ours~~ **DONE** | Standing output #1 (Dunn absent from `earlycreed.html`, 0 hits; present on `ev-s3`) → backlog P2-1. **DONE 2026-08-13 — Dunn added to `earlycreed.html` (State-of-the-Scholarship + fn 21 + bibliography), dual-consensus certified; quote verified genuine, p. 854-855 attested in secondary lit, not yet eyeballed against the book.** ✅ **CORRECTED 2026-09-29: SETTLED 2026-08-17** — the owner read the sentence in a searchable copy; it is on **p. 855** (live `earlycreed.html` fn 21 reads 855). |

@@ -1,6 +1,8 @@
 import { requireSecret } from '../lib/require-secret.js';
-import { unsubUrl } from '../lib/unsub-token.js';
+import { unsubUrl, unsubSigningSecret } from '../lib/unsub-token.js';
+import { postalFooterHtml, hasPostalAddress } from '../lib/mail-footer.js';
 import { handleUnsubscribe } from '../lib/handle-unsubscribe.js';
+import { deleteAccount } from '../lib/delete-account.js';
 // api/weekly-email.js
 // Sends a personalised weekly summary email to all users every Sunday
 // Triggered by Vercel cron (configure in vercel.json) or called manually
@@ -48,6 +50,43 @@ export default async function handler(req, res) {
     return res.status(200).json(status);
   }
 
+  // Retention: rate-limit counters (hashed IP + day) are only needed for the
+  // current day. Purge anything older than 14 days (privacy.html §10). Runs even
+  // when email is dormant.
+  if (SB_SERVICE_KEY) {
+    try {
+      const cutoff = new Date(Date.now() - 14 * 864e5).toISOString().slice(0, 10);
+      await fetch(`${SB_URL}/rest/v1/ask_rate?day=lt.${cutoff}`, {
+        method: 'DELETE', headers: { apikey: SB_SERVICE_KEY, Authorization: `Bearer ${SB_SERVICE_KEY}` }
+      });
+    } catch (e) { /* non-fatal */ }
+
+    // Age records (docs/AGE_SCREEN.md, privacy.html §9-10). Weekly run, so each
+    // promise below is met within 7 days.
+    const H = { apikey: SB_SERVICE_KEY, Authorization: `Bearer ${SB_SERVICE_KEY}`, 'Content-Type': 'application/json' };
+    try {
+      // Under-18s who have now turned 18: keep only "18+", drop the date.
+      const today = new Date().toISOString().slice(0, 10);
+      await fetch(`${SB_URL}/rest/v1/user_age?age_band=eq.13-17&adult_from=lte.${today}`, {
+        method: 'PATCH', headers: H, body: JSON.stringify({ age_band: '18+', adult_from: null })
+      });
+    } catch (e) { /* non-fatal; table may not exist yet */ }
+    try {
+      // Accounts whose holder told us they are under 13 (and confirmed it): delete them
+      // after a 6-day grace period, so with this weekly run it happens 6-13 days after the
+      // answer (privacy.html §9 says "within 14 days"). To cancel one reported by mistake,
+      // delete its user_age row in the Supabase dashboard.
+      const graceCut = new Date(Date.now() - 6 * 864e5).toISOString();
+      const r = await fetch(`${SB_URL}/rest/v1/user_age?age_band=eq.under_13&set_at=lt.${graceCut}&select=user_id`, { headers: H });
+      if (r.ok) {
+        for (const row of (await r.json()) || []) {
+          const out = await deleteAccount(row.user_id);
+          console.log('under-13 account deletion', out.ok ? 'ok' : 'FAILED ' + (out.error || ''));
+        }
+      }
+    } catch (e) { /* non-fatal; table may not exist yet */ }
+  }
+
   if (!RESEND_KEY) {
     return res.status(200).json({
       status: 'skipped',
@@ -60,7 +99,10 @@ export default async function handler(req, res) {
 
   try {
     // ── GET ALL USERS ──
-    const usersRes = await fetch(`${SB_URL}/auth/v1/admin/users?per_page=500`, {
+    // Paged: one request returns at most per_page users (capped at 100 pages as a
+    // runaway guard).
+    const PER_PAGE = 1000;
+    const usersRes = await fetch(`${SB_URL}/auth/v1/admin/users?per_page=${PER_PAGE}&page=1`, {
       headers: {
         'apikey': authKey,
         'Authorization': `Bearer ${authKey}`
@@ -79,6 +121,18 @@ export default async function handler(req, res) {
 
     const usersData = await usersRes.json();
     const users = usersData.users || [];
+    // Keep going until an empty page: the server may cap per_page below PER_PAGE, so
+    // a short page is not proof it was the last one.
+    for (let page = 2; users.length && page <= 100; page++) {
+      const more = await fetch(`${SB_URL}/auth/v1/admin/users?per_page=${PER_PAGE}&page=${page}`, {
+        headers: { 'apikey': authKey, 'Authorization': `Bearer ${authKey}` }
+      });
+      if (!more.ok) break;
+      const batch = ((await more.json()) || {}).users || [];
+      users.push(...batch);
+      if (!batch.length) break;
+    }
+    if (!hasPostalAddress()) console.warn('weekly-email: EMAIL_POSTAL_ADDRESS is not set; marketing emails go out without a postal address (docs/OWNER_TODO.md)');
 
     // ── GROUP NUDGES ──
     // Members whose study group has momentum this week but who haven't shown up
@@ -143,6 +197,36 @@ export default async function handler(req, res) {
       }
     } catch(e) {}
 
+    // ── MASTERY / REVIEW STATE (user_progress snapshot synced by progress-sync.js) ──
+    // 2026-10-11 (Phase 1.10): the email used to count only the Supabase flashcard
+    // deck and ignored the mastery reviews, per-card schedule, levels and if-then plans
+    // that live in the user's synced localStorage snapshot.
+    let progStats = {};
+    try {
+      const prRes = await fetch(`${SB_URL}/rest/v1/user_progress?select=user_id,data`, {
+        headers: { 'apikey': authKey, 'Authorization': `Bearer ${authKey}` }
+      });
+      if (prRes.ok) {
+        const rows = await prRes.json();
+        rows.forEach(function(row) {
+          const d = (row && row.data) || {};
+          const rv = d.ad_reviews || {};
+          let due = 0, oldest = null;
+          Object.keys(rv).forEach(function(k) { const e = rv[k]; if (e && e.due && e.due <= today) { due++; if (!oldest || e.due < oldest.due) oldest = { due: e.due, t: String(e.t || k) }; } });
+          const cards = d.ad_cards || {};
+          let cdue = 0;
+          Object.keys(cards).forEach(function(a) { Object.keys(cards[a] || {}).forEach(function(i) { const c = cards[a][i]; if (c && c.q && c.due && c.due <= today) cdue++; }); });
+          const m = d.ad_mastery || {};
+          const lv = { 1: 0, 2: 0, 3: 0 };
+          Object.keys(m).forEach(function(k) { const l = (m[k] || {}).level || 0; if (l >= 1 && l <= 3) lv[l]++; });
+          const plans = [];
+          const it = d.ad_ifthen_arg || {};
+          Object.keys(it).forEach(function(k) { (it[k] || []).forEach(function(pl) { if (plans.length < 2 && pl && pl.i && pl.t) plans.push({ i: String(pl.i).slice(0, 120), t: String(pl.t).slice(0, 160) }); }); });
+          progStats[row.user_id] = { due: due, cdue: cdue, oldest: oldest, lv: lv, plans: plans };
+        });
+      }
+    } catch(e) {}
+
     // ── SEND EMAIL TO EACH USER ──
     for (const user of users) {
       if (!user.email || !user.email_confirmed_at) { results.skipped++; continue; }
@@ -155,10 +239,11 @@ export default async function handler(req, res) {
 
       const fc = flashcardStats[user.id] || null;
       const ex = explainStats[user.id] || null;
+      const pg = progStats[user.id] || null;
 
       try {
-        const unsub = process.env.CRON_SECRET ? unsubUrl(user.id, process.env.CRON_SECRET) : 'https://apologiadaily.com';
-        await sendWeeklyEmail(RESEND_KEY, user.email, name, fc, ex, unsub);
+        const unsub = unsubSigningSecret() ? unsubUrl(user.id, unsubSigningSecret()) : 'https://apologiadaily.com';
+        await sendWeeklyEmail(RESEND_KEY, user.email, name, fc, ex, unsub, pg);
         results.sent++;
         // Small delay to avoid rate limits
         await new Promise(r => setTimeout(r, 100));
@@ -207,6 +292,20 @@ async function sendGroupNudges({ SB_URL, authKey, RESEND_KEY, emailById }) {
   if (!Array.isArray(groups) || !groups.length) return out;
   out.groups = groups.length;
 
+  // Adults only (docs/AGE_SCREEN.md): this runs with the service key, which bypasses
+  // the is_adult() policies, so filter here too. If user_age doesn't exist yet (SQL not
+  // run), adultIds stays null and the pre-age-screen behaviour is kept.
+  let adultIds = null;
+  try {
+    const today = new Date().toISOString().slice(0, 10);
+    const uaR = await fetch(`${SB_URL}/rest/v1/user_age?select=user_id,age_band,adult_from&age_band=in.(18%2B,13-17)`, { headers: h });
+    if (uaR.ok) {
+      adultIds = new Set();
+      (await uaR.json()).forEach(function (a) {
+        if (a.age_band === '18+' || (a.age_band === '13-17' && a.adult_from && a.adult_from <= today)) adultIds.add(a.user_id);
+      });
+    }
+  } catch (e) { /* keep adultIds null */ }
   const gById = {}; groups.forEach(function (g) { gById[g.id] = g; });
   const byGroup = {}; // gid -> { members: [], active: Set }
   members.forEach(function (m) {
@@ -224,6 +323,7 @@ async function sendGroupNudges({ SB_URL, authKey, RESEND_KEY, emailById }) {
       if (gg.active.has(m.user_id)) return;                         // studied recently
       if (new Date(m.joined_at).getTime() > cutoff) return;          // too new to nudge
       if (!emailById[m.user_id]) return;                             // no confirmed email
+      if (adultIds && !adultIds.has(m.user_id)) return;              // not a confirmed adult
       const prev = nudgeFor[m.user_id];
       if (!prev || activeCount > prev.activeCount) nudgeFor[m.user_id] = { group: g, activeCount: activeCount, memberCount: memberCount };
     });
@@ -233,7 +333,7 @@ async function sendGroupNudges({ SB_URL, authKey, RESEND_KEY, emailById }) {
   for (let i = 0; i < targets.length; i++) {
     const uid = targets[i], info = nudgeFor[uid], who = emailById[uid];
     try {
-      const unsub = process.env.CRON_SECRET ? unsubUrl(who.id, process.env.CRON_SECRET) : 'https://apologiadaily.com';
+      const unsub = unsubSigningSecret() ? unsubUrl(who.id, unsubSigningSecret()) : 'https://apologiadaily.com';
       await resendSend(RESEND_KEY, who.email, buildNudgeSubject(info.group), buildNudgeHtml(who.name, info.group, info.activeCount, info.memberCount, unsub), unsub);
       out.nudgedIds.add(uid); out.sent++;
       await new Promise(function (r) { setTimeout(r, 100); });
@@ -293,7 +393,7 @@ function buildNudgeHtml(name, g, activeCount, memberCount, unsub) {
   </div>
   <div style="background:#050d1a;padding:1.25rem 2rem;border-top:1px solid rgba(255,255,255,0.06);">
     <div style="font-family:Arial,sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.3);text-align:center;line-height:1.7;">
-      Apologia Daily &middot; apologiadaily.com<br>
+      ${postalFooterHtml()}Apologia Daily &middot; apologiadaily.com<br>
       You are receiving this because you joined a study group.
       <a href="https://apologiadaily.com/study-groups.html" style="color:rgba(200,169,81,0.5);text-decoration:none;">Manage your groups</a> &middot;
       <a href="${unsub || 'https://apologiadaily.com'}" style="color:rgba(200,169,81,0.5);text-decoration:none;">Unsubscribe</a>
@@ -303,9 +403,9 @@ function buildNudgeHtml(name, g, activeCount, memberCount, unsub) {
 </body></html>`;
 }
 
-async function sendWeeklyEmail(resendKey, email, name, fc, ex, unsub) {
-  const html = buildEmailHtml(name, fc, ex, unsub);
-  const subject = buildSubject(fc, ex);
+async function sendWeeklyEmail(resendKey, email, name, fc, ex, unsub, pg) {
+  const html = buildEmailHtml(name, fc, ex, unsub, pg);
+  const subject = buildSubject(fc, ex, pg);
 
   const response = await fetch('https://api.resend.com/emails', {
     method: 'POST',
@@ -330,13 +430,38 @@ async function sendWeeklyEmail(resendKey, email, name, fc, ex, unsub) {
   return response.json();
 }
 
-function buildSubject(fc, ex) {
+function buildSubject(fc, ex, pg) {
+  const pdue = pg ? (pg.due + pg.cdue) : 0;
+  if (pdue > 0) return `${pdue} review${pdue !== 1 ? 's' : ''} due${pg.oldest ? ' — oldest: ' + pg.oldest.t : ''}`;
   if (fc && fc.due > 0) return `${fc.due} flashcard${fc.due !== 1 ? 's' : ''} due for review this week`;
   if (ex && ex.sessions > 0) return `Your apologetics practice this week`;
   return `Your weekly apologetics update`;
 }
 
-function buildEmailHtml(name, fc, ex, unsub) {
+function escHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+
+function buildEmailHtml(name, fc, ex, unsub, pg) {
+  // Your arguments: levels, what is due, your own if-then plans (all from the synced progress snapshot)
+  let progressSection = '';
+  if (pg && (pg.due + pg.cdue > 0 || pg.lv[1] + pg.lv[2] + pg.lv[3] > 0)) {
+    const pdue = pg.due + pg.cdue;
+    const levels = [pg.lv[3] ? pg.lv[3] + ' Gold' : '', pg.lv[2] ? pg.lv[2] + ' Silver' : '', pg.lv[1] ? pg.lv[1] + ' Bronze' : ''].filter(Boolean).join(' &middot; ');
+    const dueText = pdue > 0
+      ? `<span style="color:#c8a951;font-weight:600;">${pdue} review${pdue !== 1 ? 's' : ''} due</span>${pg.oldest ? ` &nbsp;&middot;&nbsp; oldest: ${escHtml(pg.oldest.t)} (since ${escHtml(pg.oldest.due)})` : ''}`
+      : `<span style="color:#22c55e;font-weight:600;">Nothing due — your arguments are resting</span>`;
+    const plans = pg.plans.length
+      ? `<div style="font-size:0.8rem;color:rgba(255,255,255,0.6);margin-top:0.6rem;">Your plans: ${pg.plans.map(p => `<i>if</i> ${escHtml(p.i)} &rarr; <i>then</i> ${escHtml(p.t)}`).join(' &nbsp;&middot;&nbsp; ')}</div>`
+      : '';
+    progressSection = `
+      <div style="background:#0f2040;border-radius:6px;padding:1.25rem 1.5rem;margin-bottom:1rem;">
+        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#c8a951;margin-bottom:0.5rem;">Your Arguments</div>
+        <div style="font-size:0.9rem;color:rgba(255,255,255,0.8);margin-bottom:0.25rem;">${dueText}</div>
+        ${levels ? `<div style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Levels earned: ${levels}</div>` : ''}
+        ${plans}
+        <div style="font-size:0.8rem;color:rgba(255,255,255,0.45);margin-top:0.5rem;">Gold is perishable on purpose: a review you re-prove is a review that sticks.</div>
+        <a href="https://apologiadaily.com/today" style="display:inline-block;margin-top:0.875rem;font-size:0.8rem;font-weight:600;background:#c8a951;color:#050d1a;padding:7px 16px;border-radius:3px;text-decoration:none;">Review now &rarr;</a>
+      </div>`;
+  }
   // Personalised sections
   let flashcardSection = '';
   if (fc && fc.total > 0) {
@@ -348,14 +473,14 @@ function buildEmailHtml(name, fc, ex, unsub) {
         <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#c8a951;margin-bottom:0.5rem;">Your Flashcard Deck</div>
         <div style="font-size:0.9rem;color:rgba(255,255,255,0.8);margin-bottom:0.25rem;">${dueText} &nbsp;&middot;&nbsp; ${fc.total} total cards &nbsp;&middot;&nbsp; ${fc.mastered} mastered</div>
         <div style="font-size:0.8rem;color:rgba(255,255,255,0.45);margin-top:0.5rem;">Spaced repetition only works when you review on schedule. Even 3 minutes today makes a difference.</div>
-        <a href="https://apologiadaily.com/flashcards.html" style="display:inline-block;margin-top:0.875rem;font-size:0.8rem;font-weight:600;background:#c8a951;color:#050d1a;padding:7px 16px;border-radius:3px;text-decoration:none;">Review cards now</a>
+        <a href="https://apologiadaily.com/today" style="display:inline-block;margin-top:0.875rem;font-size:0.8rem;font-weight:600;background:#c8a951;color:#050d1a;padding:7px 16px;border-radius:3px;text-decoration:none;">Review cards now</a>
       </div>`;
   } else {
     flashcardSection = `
       <div style="background:#0f2040;border-radius:6px;padding:1.25rem 1.5rem;margin-bottom:1rem;">
         <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#c8a951;margin-bottom:0.5rem;">Flashcard Deck</div>
-        <div style="font-size:0.88rem;color:rgba(255,255,255,0.7);margin-bottom:0.75rem;">You have not started your flashcard deck yet. This is the single most effective thing you can do to remember arguments long term.</div>
-        <a href="https://apologiadaily.com/flashcards.html" style="display:inline-block;font-size:0.8rem;font-weight:600;background:#c8a951;color:#050d1a;padding:7px 16px;border-radius:3px;text-decoration:none;">Build your deck</a>
+        <div style="font-size:0.88rem;color:rgba(255,255,255,0.7);margin-bottom:0.75rem;">You have not started your daily review yet. Five minutes on Today is the single most effective thing you can do to remember arguments long term.</div>
+        <a href="https://apologiadaily.com/today" style="display:inline-block;font-size:0.8rem;font-weight:600;background:#c8a951;color:#050d1a;padding:7px 16px;border-radius:3px;text-decoration:none;">Start today&rsquo;s session</a>
       </div>`;
   }
 
@@ -407,6 +532,7 @@ function buildEmailHtml(name, fc, ex, unsub) {
 
   <!-- STATS SECTION -->
   <div style="background:#0a1628;padding:1.5rem 2rem;">
+    ${progressSection}
     ${flashcardSection}
     ${explainSection}
   </div>
@@ -466,7 +592,7 @@ function buildEmailHtml(name, fc, ex, unsub) {
   <!-- FOOTER -->
   <div style="background:#050d1a;padding:1.25rem 2rem;border-top:1px solid rgba(255,255,255,0.06);">
     <div style="font-family:Arial,sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.3);text-align:center;line-height:1.7;">
-      Apologia Daily &nbsp;&middot;&nbsp; apologiadaily.com<br>
+      ${postalFooterHtml()}Apologia Daily &nbsp;&middot;&nbsp; apologiadaily.com<br>
       <a href="https://apologiadaily.com/dashboard.html" style="color:rgba(255,255,255,0.3);">Dashboard</a> &nbsp;&middot;&nbsp;
       You are receiving this because you have an Apologia Daily account.<br>
       <a href="${unsub || 'https://apologiadaily.com'}" style="color:rgba(200,169,81,0.5);text-decoration:none;">Unsubscribe</a>

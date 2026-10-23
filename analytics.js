@@ -50,6 +50,16 @@
     }
   } catch (e) {}
 
+  /* Accessibility basics (a11y.js): focus rings, skip link, reduced motion, screen-
+     reader announcements. Loaded from here and from analytics.js; it guards itself. */
+  try {
+    if (!window.__AD_A11Y && !document.querySelector('script[src="/a11y.js"]')) {
+      var _a11y = document.createElement('script');
+      _a11y.src = '/a11y.js';
+      (document.head || document.documentElement).appendChild(_a11y);
+    }
+  } catch (e) {}
+
   /* ---- Cross-device progress sync (loads regardless of the analytics opt-out
      below — it syncs the USER'S OWN learning progress, not tracking). Strict
      no-op until signed in AND the user_progress migration is run. See
@@ -98,17 +108,125 @@
     }
   } catch (e) {}
 
-  /* ---- PostHog (only when a real key is configured) ---- */
+  /* ---- PostHog: ONLY after the visitor says yes (privacy.html §7) ------------
+     PostHog sets a cookie + localStorage id, so it needs consent (UK/EU PECR + GDPR,
+     and it is simply the honest default). Until a choice is made it is not loaded at
+     all: no script, no cookie, no request. Vercel Web Analytics above stays on for
+     everyone because it sets no cookie and stores nothing on the device.
+     The choice lives in localStorage 'ad-consent' = 'yes' | 'no' (that is a record of
+     the choice itself, which is allowed). window.adConsent.reset() asks again
+     (the "Change your choice" button on privacy.html). */
   var phOn = POSTHOG_KEY && POSTHOG_KEY.indexOf('REPLACE') === -1;
-  if (phOn) {
+  var CONSENT_KEY = 'ad-consent';
+  function getConsent() { try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; } }
+  function setConsent(v) { try { localStorage.setItem(CONSENT_KEY, v); } catch (e) {} }
+
+  // Pages where people type into an AI, sign in, manage their account or chat in a
+  // group: no click recording at all here. Everywhere else autocapture records link
+  // clicks only, with element text masked, so button labels such as suggested-question
+  // chips are never sent.
+  var NO_AUTOCAPTURE = /^\/(login|signup|update-password|dashboard|ask-anything|asked-and-answered|debate-arena|explain-it-back|daily-devotional|study-groups|join)(\.html)?$/;
+
+  function showConsentBanner() {
+    if (document.getElementById('ad-consent')) return;
+    var b = document.createElement('div');
+    b.id = 'ad-consent';
+    b.setAttribute('role', 'region');
+    b.setAttribute('aria-label', 'Analytics choice');
+    b.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;max-width:560px;margin:0 auto;z-index:2147483000;'
+      + 'background:#0a1628;color:#f5f0e6;border:1px solid #c8a951;border-radius:8px;padding:14px 16px;'
+      + 'font:14px/1.5 system-ui,-apple-system,Segoe UI,sans-serif;box-shadow:0 6px 24px rgba(0,0,0,.35);';
+    b.innerHTML = '<p style="margin:0 0 10px;">May we use analytics cookies to see which pages help people most? '
+      + 'We never sell data or use advertising cookies. <a href="/privacy.html#analytics" style="color:#c8a951;">Details</a></p>'
+      + '<div style="display:flex;gap:8px;flex-wrap:wrap;">'
+      + '<button type="button" data-c="yes" style="padding:8px 16px;border:0;border-radius:4px;background:#c8a951;color:#0a1628;font-weight:600;cursor:pointer;">Allow analytics</button>'
+      + '<button type="button" data-c="no" style="padding:8px 16px;border:1px solid #c8a951;border-radius:4px;background:transparent;color:#f5f0e6;cursor:pointer;">No thanks</button></div>';
+    b.addEventListener('click', function (ev) {
+      var c = ev.target && ev.target.getAttribute && ev.target.getAttribute('data-c');
+      if (!c) return;
+      setConsent(c);
+      b.remove();
+      if (c === 'yes') {
+        // Re-allowing after "Change your choice" on the same page: the instance is
+        // already running but opted out, so switch it back on rather than re-init.
+        if (_phStarted && window.posthog && window.posthog.opt_in_capturing) {
+          try { window.posthog.opt_in_capturing(); } catch (e) {}
+        } else startPostHog();
+      }
+    });
+    // First in the page, so keyboard users reach it before the content.
+    var host = document.body || document.documentElement;
+    host.insertBefore(b, host.firstChild);
+  }
+
+  window.adConsent = {
+    get: getConsent,
+    reset: function () {
+      var was = getConsent();
+      try { localStorage.removeItem(CONSENT_KEY); } catch (e) {}
+      if (was === 'yes' && window.posthog && window.posthog.opt_out_capturing) {
+        try { window.posthog.opt_out_capturing(); window.posthog.reset(); } catch (e) {}
+      }
+      // Remove PostHog's own cookie/storage so a "no" leaves nothing behind. That
+      // includes its opt-out record (__ph_opt_in_out_<key>): left in place, a later
+      // "Allow" would load PostHog but it would stay silently opted out. PostHog sets
+      // its cookie on the parent domain (.apologiadaily.com), so delete it there too.
+      try {
+        Object.keys(localStorage).forEach(function (k) { if (/^(__)?ph_/.test(k)) localStorage.removeItem(k); });
+        var dom = location.hostname.replace(/^www\./, '');
+        document.cookie.split(';').forEach(function (c) {
+          var n = c.split('=')[0].trim();
+          if (!/^(__)?ph_/.test(n)) return;
+          document.cookie = n + '=; Max-Age=0; path=/; SameSite=Lax';
+          document.cookie = n + '=; Max-Age=0; path=/; domain=.' + dom + '; SameSite=Lax';
+        });
+      } catch (e) {}
+      showConsentBanner();
+    }
+  };
+
+  var _phStarted = false;
+  function startPostHog() {
+    if (!phOn || _phStarted) return;
+    _phStarted = true;
     !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.async = !0, p.src = s.api_host + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
     try {
       window.posthog.init(POSTHOG_KEY, {
         api_host: POSTHOG_HOST,
         ui_host: 'https://eu.posthog.com',
         capture_pageview: true,
-        autocapture: true,
-        persistence: 'localStorage+cookie'
+        persistence: 'localStorage+cookie',
+        // Links only, text masked; nothing at all on the AI / sign-in / group pages.
+        autocapture: NO_AUTOCAPTURE.test(location.pathname) ? false : { element_allowlist: ['a'] },
+        mask_all_text: true,
+        // No screen recording, ever (privacy.html §7): this stays off even if
+        // "Record user sessions" is switched on in the PostHog dashboard.
+        disable_session_recording: true,
+        // A question typed into the site can travel in a link as ?q=... (the
+        // Answers search, "Get the answer to this question"). Strip it from every
+        // URL-like property before an event leaves the browser, so a reader's
+        // words never reach PostHog (privacy.html §4). Covers $current_url,
+        // $referrer, autocapture hrefs and the elements chain alike.
+        sanitize_properties: function (props) {
+          try {
+            var re = /([?&](?:amp;)?)q=[^&#"'\s]*/g;
+            for (var k in props) {
+              if (typeof props[k] === 'string' && props[k].indexOf('q=') !== -1) {
+                props[k] = props[k].replace(re, '$1q=removed');
+              }
+            }
+            // Older SDKs send clicked elements as an array of objects, not a string.
+            if (Array.isArray(props.$elements)) {
+              props.$elements.forEach(function (el) {
+                if (!el) return;
+                ['attr__href', 'href'].forEach(function (a) {
+                  if (typeof el[a] === 'string') el[a] = el[a].replace(re, '$1q=removed');
+                });
+              });
+            }
+          } catch (e) {}
+          return props;
+        }
       });
     } catch (e) {}
 
@@ -130,6 +248,17 @@
         }
       }
     } catch (e) {}
+  }
+
+  if (phOn) {
+    var _c0 = getConsent();
+    if (_c0 === 'yes') startPostHog();
+    // Not in the native app: /ingest does not resolve there, so asking would be
+    // asking consent for analytics that cannot run.
+    else if (_c0 !== 'no' && !window.__AD_IN_APP) {
+      if (document.body) showConsentBanner();
+      else document.addEventListener('DOMContentLoaded', showConsentBanner);
+    }
   }
 
   /* ---- tiny event helper (safe no-op if PostHog is off) ---- */

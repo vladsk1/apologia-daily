@@ -119,3 +119,72 @@ Still needing a human with the book:
 - daniel70: Goldingay pages
 
 Found out of scope: the same 2016 blog still props up the 75% empty-tomb figure in `library/emptytomb.html` and its MK/ES mirrors. Handle it in the Resurrection-tab sweep.
+
+## Objections: DONE 2026-09-29 (later, owner request)
+New sections were added, each stating the objection at full strength and refuting it with an explicit, bounded own-voice verdict. They went through dual consensus over three rounds and were rated STRONG, with 0 HERESY.
+- Mark 10:18 and Matthew 11:27 → jesus_claims
+- The unfulfilled messianic tasks (Maimonides, Hilchot Melachim 11:4; two comings; Sukkah 52a) → messianic-prophecy
+- Ehrman's angel Christology (including the Angel of the LORD and Galatians 4:14) → phil2
+- The late dating of the dying-and-rising gods (J. Z. Smith) → uniqueness
+- Hosea 11:1 in Matthew 2:15 → typology
+
+Resurrection tab, same pass:
+- Mark 16:8, with Bolt's 1996 *TynBul* article answering the "hero" parallel → emptytomb
+- Carrier's two-body reading, with Bergeron & Habermas 2015 → appearances
+- Temporal-lobe epilepsy → paulconv
+- Herod's "John the Baptist has been raised" (Mark 6:14–16) → disciplesbelief
+
+The MK and ES versions of jesus_claims, emptytomb and paulconv were synced.
+
+Still open from the lists above: the other structural gaps (e.g. Mark 13:32 as its own objection, John 10:34–36, Price's interpolation claim) and the page checks that need the book in hand.
+
+## Jesus-tab independent hostile-review sweep — 2026-10-17 (DONE, with one deferral)
+A hostile academic re-review ran on all 24 ev-s3 cards' essays. Most were confirmed clean (jesus-is-yahweh, christ-before-bethlehem, crucified-messiah, god-crucified: 0 definite errors — findings were calibration/hedging preferences, deferred). Concrete defects fixed + four-lens gated + deployed:
+- **paul-divinity** — footnote cross-ref n.18→n.19 (contested-category note).
+- **worship-of-jesus** — footnote cross-ref n.11→n.15 (Hurtado). (Reviewer's flat-"no shaliach ever" overclaim flag judged defensible for the human-agent category; deferred.)
+- **typology** — Melchizedek "genealogy and death of every other patriarch" was a false universal (Genesis records no death for Enoch, Gen 5:24); → "is otherwise careful to record the genealogy and death of a patriarch". All three surfaces.
+- **humanity** — (1) "two opposite errors" → "two errors, each denying a different part of his real humanity"; (2) FAQ exemplar disputed 1 Tim 2:5 → undisputed Rom 5:15; (3) orthonote 2 Tim 1:9 misparse ("grace given before the beginning of time") removed and re-grounded in the worship/divine-name evidence. Essay + ev-m + clarifiers.md.
+- **ev-s3 hub card (humanity)** — same 2 Tim 1:9 orthonote fix propagated (EN + MK).
+- **jesus-messiah-claim** — (1) FACTUAL: "thrones of the Twelve … from his Galilean ministry" → "appointing of the Twelve (Mark 3:13–19) …" (the thrones saying is Jerusalem/Last Supper, Matt 19:28 en route to Judea; the *appointing*, Mark 3, is the Galilean datum); (2) dropped "and from John" from the strand-sources summary; (3) "rising from the dead as the sign of the Messiah" → "the Messiah's own rising …" (4Q521 is the Messiah raising others); (4) "nothing in their tradition" → "nothing in the mainstream expectation". Essay + ev-m + port + ev-s3 EN/MK. Item-9 BSB-vs-NASB suspicion web-checked — NOT borne out; all sampled quotes are correct BSB.
+
+**Still open (pre-existing WEAK, NOT in the 2026-10-17 fix scope):** `library/jesus-messiah-claim.html` line 212 says the essay "builds its historical case without leaning on John," but strand 4 (temple saying) does cite John for Mark+John multiple attestation, and strand 6 counts John 19:19. Mild self-tension flagged independently by the argument and neutrality lenses; candidate for a future one-clause tightening (e.g. "leans only lightly on John" / name John as corroborative there). Not a deploy blocker.
+
+## Resurrection tab (ev-s2) independent hostile-review sweep — 2026-10-17 (DONE)
+Same hostile-review method applied to all 8 ev-s2 essays, in card order: minimalfacts, emptytomb, paulconv, appearances, disciplesbelief, sceptics, burial, postres.
+⚠ METHOD CAVEAT: run inside a FORK, which may not spawn subagents — so this was a SINGLE-REVIEWER (Opus self-read) pass, NOT the parallel-Sonnet-reviewers + independent four-lens dual-consensus the Jesus tab received. Footnote-integrity + retired-claims + orthodoxy-tripwires were clean across all 8 (mechanical). A future session with agent access could run the full independent dual-consensus gate on this tab if desired.
+
+Result: **7 of 8 CLEAN** (no concrete defect — these are heavily-swept, exemplary essays that hedge their consensus claims, tier the facts, steelman the critics, and carry honest "this does not prove the resurrection" limits). Measured counts: 8 reviewed, 1 fixed+deployed, 7 clean-no-fix.
+
+- **minimalfacts** — CLEAN. (75%/consensus figure fenced; Allison/Cavin/Carrier/Alter-Slade handled; Hartshorne corrected to panentheist; Strauss dated 1864; Licona bedrock/second-order tiers.)
+- **emptytomb** — CLEAN. (75% figure fenced as "one researcher's count, not a poll"; Grant's "necessitate" + Maier's "no shred" both flagged as claiming more than the essay does; Bolt hero/translation section sound; Bode on Mark 16:8.)
+- **paulconv** — CLEAN. (ōphthē handled; historēsai NT-hapax correct; "none of this proves" disclaimer; endorsement-not-audit.)
+- **appearances** — CLEAN. (Cook on Paul-vs-Gospels bodies; Bergeron-Habermas ITQ bounded as clinical-fit not proof; Allison's equivocal verdict fair; Keim firewall with "could be Lukan theology" concession; 500 single-attestation candid.)
+- **disciplesbelief** — CLEAN. (Moss stated at full strength and bounded — the prior accepted item is handled in-text; Oppy; Festinger/Kelly 2025; Ehrman telephone-game with Kirk/Vansina/Rubin.)
+- **sceptics** — **FIXED + DEPLOYED** (commit c5039abc): Paul's first Jerusalem visit dated "around AD 35-36" → "around AD 36-38", aligning to the sibling earlycreed.html chronology the Jesus-tab sweep had already corrected (crucifixion AD 30-33 → conversion AD 33-35 → "after three years", Gal 1:18). sceptics is on ev-s2 so it was never caught. Factual date-alignment to an already-gated figure; citations lens bumped, argument/orthodoxy/neutrality unchanged; figure on no other surface or mirror; dateModified synced; 145/145 tests.
+- **burial** — CLEAN. (Acts 13:29 handled; Pesch hedged; Crossan steelmanned; Josephus/Philo/Ulpian-Paul bounded; Yehohanan with Haas→Zias-Sekeles correction.)
+- **postres** — CLEAN. (Wright mutations; Hurtado binitarian explosion with "two powers/angel veneration debated" concession; Sabbath→Lord's-Day transfer dated to "clear only by early 2nd c."; Festinger/2025 caveat; Josephus failed-messiah catalogue; honest "presses the question back one step".)
+
+Nothing deferred on this tab beyond the standing site-wide pastoral sign-off (_pending_).
+
+## Resurrection tab (ev-s2) hostile-review FIX-PHASE — 2026-10-18 (DONE, commit `0b4cf94b`, branch `resurrection-sweep-2026-10-18`)
+The fuller review the 2026-10-17 single-reviewer fork pass (above) invited: an independent hostile review of all 8 essays whose findings were VERIFIED against the live files and, where genuine, FIXED by PORTING wording (never authored), retired on EVERY surface, then re-certified through the full four-lens dual-consensus gate. This is not an improper reopen — the 2026-10-17 pass explicitly flagged itself as provisional (single-reviewer, no independent gate).
+
+**Measured counts:** 41 files changed (243 real insertions / 243 deletions, LF-normalised); 27 surfaces re-stamped to 2026-10-18; `dateModified` synced on 15 pages; 2 briefs' `reviewed` dates bumped (`resurrection-group-appearances`, `resurrection-joseph-of-arimathea-burial`); essay + briefs indexes rebuilt. Gate: READ-ONLY agents (citations; argument/orthodoxy/neutrality), hashes verified before/after, no agent edits — citations STAMPABLE (0 errors, 1 pre-existing Hengel-wording note), argument STAMPABLE 0 BREAK, orthodoxy CLEAN 0 heresy/0 clarifiers, neutrality STAMPABLE 0 BREAK; a confirmation re-gate on the memorised-layer surfaces (ev-m/ports/briefs) returned CLEAN. Mechanical: `node --test` 145/145; content-review 28/28 ✓; stamp-integrity clean; footnote-integrity clean; retired-claims 33/0 on 1909 served files; orthodoxy-tripwires 186/0; mirror-parity 10 sources with every mirror moved.
+
+**Three cross-cutting themes (ported from `earlycreed.html`):**
+- **A. Creed extent** — received core is 1 Cor 15:3b-5 (v.7/James debated); the 500 (v.6) and Paul (v.8) are Paul's own additions, not the received formula. Retired the "500 inside the earliest creed Paul personally received" phrasing EVERYWHERE it occurred — ev-s2 card, appearances essay+mastery+port, the group-appearances brief — to "within the early tradition Paul received and passed on". (The ev-s2 instance was the neutrality lens's WEAK; the sibling appearances/brief instances were the identical defect found by a retire-everywhere grep and fixed the same way — de-overclaim, within the certified envelope.)
+- **B. Creed-dating arithmetic** — scoped the two branches: received at conversion ≈ 2-5 yrs / first half of the 30s; received only at the Gal 1:18 Jerusalem visit = outer bound mid-to-late 30s; either way predates Paul. On minimalfacts, paulconv, and earlycreed.html.
+- **C. Wright flat universal** — "no first-century Jew could describe a man as 'raised' while his corpse lay in the tomb" → "in mainstream first-century Jewish usage no one would…", attributed to Wright (guards Jubilees 23:31). On appearances, emptytomb.
+
+**One finding REJECTED on verification:** minimalfacts "removes the historical excuse for unbelief" — a certified bounded formula, not an overclaim; left as-is.
+
+**Owner-level judgment calls (surfaced, not decided silently):**
+1. The neutrality WEAK touched only ev-s2's untouched 500-passage; I extended the identical de-overclaim fix to the appearances essay/mastery/port + the group-appearances brief that carried the same phrasing (retire-it-everywhere), treating it as consistency within the already-certified theme-A envelope rather than a fresh full reopen.
+2. The commit carries `Co-Authored-By: Claude Opus 4.8` but NO `Claude-Session:` line — this desktop-app session's canonical `https://claude.ai/code/session_…` URL was not retrievable and I would not fabricate one. Can be amended in before push if the owner supplies it.
+
+**Deferred (out of resurrection-tab scope / cannot be safely done here — logged for a later pass):**
+- ✅ **DONE 2026-10-18 (follow-up commit):** the theme-B creed-dating instance ("pushes its origin into the first half of the 30s", pinning the tight figure to Paul's later Gal 1:18 visit) is now retired across the **Jesus-tab** cluster — `ev-s3.html` (×2), `ev-s3.mk.html` (×3, MK mirror synced same commit), `library/paul-divinity.html`, `ev-m-paul-divinity.html`, `docs/mastery-ports/paul-divinity.json` — ported verbatim from the certified earlycreed/paulconv scoping (citations bumped; argument/orthodoxy/neutrality content unchanged). The `ev-s3.es.html` Spanish mirror phrases the dating loosely ("within 20 years") and carries no such claim. ✅ **ALSO DONE 2026-10-18:** `library/active-reading-data.json` (paulconv) — its annotation heading *"Paul went and checked"* and the stronger explanation *"the witness cross-examined the others"* (both overstating an audit of the other witnesses) reworded to match the certified essay softening: *"Paul's account lined up with theirs"* / *"set his own account beside the others' and found no conflict"*. (Confirmed these keys are teaching labels, not verbatim highlight-anchors.)
+- **MK/ES mirrors, theme-A 500-nuance:** the Macedonian/Spanish rendering of the "500 inside the creed" phrasing was not reliably locatable to edit without risking mistranslation; flagged for the **native-language doctrinal gate** that these AI-translated mirrors already await. (The mirrors' stamps/dates track the English gate and carry the "pending native gate" note.)
+- ✅ **DONE 2026-10-18:** `pocket-cards.html` no longer labels 1 Cor 15:7-8 "the earliest creed" (v.7/James debated, v.8/Paul is Paul's own addition, not the vv.3b-5 core) — the James+Paul motivation card now reads *"One thing explains both — the risen Jesus appeared to each (1 Cor 15:7-8)"*. De-overclaim; pocket-cards re-stamped with a transparent note (adversarial lenses not independently re-run on the one-line change).
+- **sceptics stamp correction (done this sweep):** the 2026-09-29 sceptics stamp claimed the bereavement-vision reply cites Alter & Slade (SHERM 3.2, 2021); that citation is not on the page. Corrected forward in this sweep's sceptics `by`-note; the reply stands as a bounded documented-phenomenon concession.
+- Standing site-wide **pastoral sign-off** remains _pending_.

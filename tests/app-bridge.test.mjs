@@ -18,7 +18,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import path from 'node:path';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -113,7 +113,7 @@ test('app-facing API endpoints set CORS on the real response, not only OPTIONS',
   }
 
   // And the helper itself must set the header for non-OPTIONS methods.
-  const { applyCors } = await import(path.join(ROOT, 'lib', 'cors.js'));
+  const { applyCors } = await import(pathToFileURL(path.join(ROOT, 'lib', 'cors.js')).href);
   const headers = {};
   const res = { setHeader: (k, v) => { headers[k] = v; }, status() { return this; }, end() { return this; } };
   const isPreflight = applyCors({ method: 'POST', headers: { origin: 'https://localhost' } }, res);
@@ -201,7 +201,7 @@ test('app bundle build excludes server-side and secret-bearing paths', () => {
   const m = src.match(/INCLUDE_DIRS\s*=\s*new Set\(\[([^\]]*)\]\)/);
   assert.ok(m, 'INCLUDE_DIRS allowlist not found');
   const included = m[1].match(/'([^']+)'/g).map(s => s.replace(/'/g, ''));
-  assert.deepEqual(included.sort(), ['answers', 'demo', 'library'],
+  assert.deepEqual(included.sort(), ['answers', 'demo', 'fonts', 'library'],
     'bundle dir allowlist changed — server dirs (api/, lib/, sources/, briefs/) must never ship');
   // Dotfiles (.env) are skipped by prefix, not by extension.
   assert.match(src, /startsWith\('\.'\)/, 'dotfile exclusion (.env etc.) must remain');

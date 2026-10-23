@@ -37,7 +37,7 @@ Per Step Zero the paired essays should be read **in full before** mining. That d
 a fresh full re-read this session. The cross-check verdicts below rest on: (a) deep prior knowledge
 of most paired essays (the positive-evidence sweep; the 2026-09-04 `earlycreed.html` work); (b)
 `CLAUDE.md`'s detailed current-state records of each essay; and (c) **targeted greps/reads done this
-session** — `kalam.html` 178–222, `tools/retired-claims.json`, `moral.html` (Sorley), and a
+session** — `kalam.html` 178–222 *(✅ corrected 2026-10-01: line range stale — the essay has been edited since, so these line numbers no longer map)*, `tools/retired-claims.json`, `moral.html` (Sorley), and a
 site-wide `Lapide` grep. **Any backlog row from this note must still get the paired essay's full
 Step-Zero read before it is executed.** Two candidate "leads" were already dissolved into
 corroboration by reading the actual essay/footnotes this session (Augustine; Lapide — see below);
@@ -252,7 +252,7 @@ Craig's specific position as the site's**.
 |---|---|---|---|
 | 1 | Leibniz contingency (3) | **Corroboration** — `leibniz.html` carries every move | none |
 | 2 | Kalam + Big Bang (4) | **Corroboration + ✅ ours is better** — `kalam.html` engages Morriston, Oppy, Hartle–Hawking, the Grim Reaper paradox, Wall 2013, and the Aquinas/Maimonides "tradition divided" honesty; On Guard is popular-level | none; **do not regress our essay** toward On Guard's more triumphant BGV framing (it lacks Guth's dissent + Vilenkin's "corroboration not proof") |
-| 3 | Augustine "created with time" (4) | **Corroboration** — `kalam.html` fn 18 already cites *City of God* XI.4–6 on this exact point | none *(a candidate "gap" dissolved on reading the footnotes)* |
+| 3 | Augustine "created with time" (4) | **Corroboration** — `kalam.html` fn ~~18~~ **17** already cites *City of God* XI.4–6 on this exact point *(✅ corrected 2026-10-01: the live essay has 17 notes; Augustine is in fn 17)* | none *(a candidate "gap" dissolved on reading the footnotes)* |
 | 4 | Fine-tuning (5) | **Corroboration + ✅ ours is better** — Craig honors "fine-tuned ≠ designed" (our guardrail), but his multiverse/Boltzmann-brain section is **thin** vs. `finetuning.html`, which also handles the Barnes/Stenger window-narrowness dispute (the "fragile" essay) | none; **do not regress** `finetuning.html` |
 | 5 | Moral argument (6) | **Corroboration**, but ⚠ **hazard** — the bald close "we cannot truly be good without God" is exactly what our guardrail forbids; ours frames it as objective *duties* needing a *ground* (atheists *can* behave morally) | none; **do not port that close** |
 | 6 | Sorley (6) | **Missing (minor)** — `moral.html` does not name William Sorley (*Moral Values and the Idea of God*, 1918, **PD**) | **P4 optional** — a PD historical anchor; `moral.html` makes the argument well without him, so low priority |

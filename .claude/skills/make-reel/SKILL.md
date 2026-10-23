@@ -33,11 +33,22 @@ Tooling lives in `tools/reel/`:
      `voiceover` **and** the on-screen scenes must NOT steelman, restate, or give the
      opposing objection any airtime. State the case confidently from open to close. Do not
      add an "objection scene" or a "now, skeptics argue…" beat, even briefly.
-   - This does **not** license overstatement. Keep the honest *scope bounds* the
-     argument/orthodoxy gates require (e.g. "this corroborates — it doesn't by itself prove
-     X," or the deity-vs-metaphysics distinction) — those are **accuracy, not
-     steelmanning**, and stay. The banned thing is voicing the other side's counter-case;
-     the required thing is not claiming more than the evidence shows.
+   - **OWNER RULE (2026-10-09) — NO SCOPE DISCLAIMERS IN REELS.** Do not add "this doesn't
+     prove X", "it clears the ground", "corroborates, not proves", "not yet the full God of
+     Christianity" or similar hedge lines to a reel's voiceover, on-screen text or captions.
+     Reels state the case positively and close on a confident, ported verdict (e.g. the
+     essay's own "we say it with them…" line), never on a limitation. The full honest scope
+     lives in the linked essay, not the reel. (This supersedes the earlier "keep the scope
+     bounds" instruction for reels.)
+   - **This is still not a licence to overclaim — honour the bound by OMISSION, not by
+     disclaimer.** If a claim would need a "doesn't prove" hedge to be accurate, leave the
+     claim out rather than state it unhedged. Never write "this proves he rose", "scientists
+     agree the universe is designed", "everything has a cause", "virtually all scholars", etc.
+   - **DOCTRINAL FENCES ARE NOT DISCLAIMERS — they always stay.** Wording that keeps a line
+     orthodox (e.g. "the Son, truly God, died in his human nature — not the Father, not the
+     divine nature"; "in the form of God… therefore"; distinct persons on Trinity/deity
+     reels) is required, because a reel cannot host the site's ＊ orthonote box. Gate briefs
+     for reels must tell the lenses about this rule so they do not demand scope hedges.
    - No fabricated quotes/citations/stats. For a brand-new argument (not derived from an
      already-certified page), run it past the `apologia-orthodoxy` agent before delivering.
 
@@ -68,9 +79,19 @@ Tooling lives in `tools/reel/`:
    ```
    If a kicker or line overflows the frame edge, shorten the text or split the line.
 
-5. **Deliver** the MP4(s) to the user with `SendUserFile` (display: render). Include a short
-   kit: the `voiceover` script, a caption + hashtags, and a one-line note that the video is
-   silent-but-captioned and voiceover is a one-pass editor step.
+5. **Deliver** the MP4(s) to the user with `SendUserFile` (display: render).
+   **OWNER RULE (2026-10-09) — every reel ALWAYS ships with BOTH captions, even if not asked:**
+   - an **Instagram caption** (hook line, short body, "link in bio" CTA, hashtags), and
+   - an **X post caption** (≤280 characters with the link counted as 23; the link must be a
+     live URL — check it returns 200, and use `.html` paths, since `/library/foo` without
+     `.html` 404s), plus an **X share-card image** made with `gen_xcard.py` (see below).
+   Both captions and the X card are gated content: run them through the same gate round as the
+   reel spec, and port their wording from the certified essay/reel rather than authoring it.
+   Present each caption in its own fenced block so it can be copied.
+   **OWNER RULE (2026-10-09) — DON'T COMMIT REELS.** Do not commit or push the reel spec,
+   X-card spec or screenshots to the repo; the owner keeps the delivered files. Write them
+   locally (the renderer needs them), gate them as usual, render, deliver — and stop there.
+   Do not rewrite older reels either.
 
 ## X / social share-cards — THE standard X-image style (use for EVERY X post image)
 When a thread or post needs an image, **always generate it with `tools/reel/gen_xcard.py`** — the

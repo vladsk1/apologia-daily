@@ -128,3 +128,110 @@ test('/api/health signals outages with 503 so uptime monitors can see them', asy
     if (savedHealth !== undefined) process.env.HEALTH_SECRET = savedHealth;
   }
 });
+
+test('every table created in the repo setup SQL turns on row-level security', () => {
+  // Supabase exposes every public table to the anon key through PostgREST. A table
+  // created without RLS is readable and writable by anyone holding the key that sits in
+  // every page. 2026-10-08 audit: push_subscriptions was documented with no RLS at all.
+  const files = [
+    ...globSync('docs/**/*.md'), ...globSync('api/*.js'), ...globSync('lib/*.js'),
+    ...globSync('*.js'), ...globSync('**/*.sql').filter((f) => !f.startsWith('node_modules')),
+  ];
+  const missing = [];
+  for (const f of files) {
+    const src = readFileSync(f, 'utf8');
+    const created = [...src.matchAll(/create table(?: if not exists)?\s+(?:public\.)?([a-z_][a-z0-9_]*)/gi)].map((m) => m[1].toLowerCase());
+    for (const t of new Set(created)) {
+      const rls = new RegExp(`alter table\\s+(?:public\\.)?${t}\\s+enable row level security`, 'i');
+      if (!rls.test(src)) missing.push(`${f}: ${t}`);
+    }
+  }
+  assert.deepEqual(missing, [], 'tables created without "enable row level security" in the same file:\n' + missing.join('\n'));
+});
+
+test('every Supabase JWT shipped to the browser is the anon key, never service_role', () => {
+  const files = [...globSync('*.html'), ...globSync('*.js'), ...globSync('library/**/*.{html,js}'),
+    ...globSync('answers/*.html'), ...globSync('lib/*.js').filter((f) => !/delete-account|verify-user/.test(f))];
+  const bad = [];
+  for (const f of files) {
+    for (const m of readFileSync(f, 'utf8').matchAll(/eyJ[A-Za-z0-9_-]{10,}\.(eyJ[A-Za-z0-9_-]{10,})\.[A-Za-z0-9_-]{10,}/g)) {
+      let role = '?';
+      try { role = JSON.parse(Buffer.from(m[1], 'base64url').toString('utf8')).role; } catch { /* not a JWT */ }
+      if (role !== 'anon') bad.push(`${f}: role=${role}`);
+    }
+  }
+  assert.deepEqual(bad, [], 'non-anon JWT in a client-shipped file:\n' + bad.join('\n'));
+});
+
+test('age screen: every Study Groups read/write policy and the invite RPC require an adult', () => {
+  // docs/AGE_SCREEN.md is the SQL the owner runs; the database is the only real 18+ guard.
+  const sql = readFileSync('docs/AGE_SCREEN.md', 'utf8');
+  for (const p of ['groups_insert', 'gm_select', 'gm_insert', 'gmsg_select', 'gmsg_insert', 'gact_select', 'gact_insert']) {
+    const m = sql.match(new RegExp(`create policy ${p} on[\\s\\S]*?;`));
+    assert.ok(m, `${p} policy missing from docs/AGE_SCREEN.md`);
+    assert.match(m[0], /public\.is_adult\(\)/, `${p} does not check is_adult()`);
+  }
+  const rpc = sql.match(/function public\.join_group_by_code[\s\S]*?end; \$\$;/);
+  assert.ok(rpc && /if not public\.is_adult\(\) then raise exception 'adults_only'/.test(rpc[0]), 'join_group_by_code must refuse non-adults');
+  // the signup trigger must never be able to abort account creation
+  const trg = sql.match(/function public\.copy_signup_age[\s\S]*?end; \$\$;/);
+  assert.ok(trg && /exception when others then null/.test(trg[0]), 'copy_signup_age must swallow its own errors');
+  assert.match(trg[0], /raw_user_meta_data - 'age_band' - 'adult_from'/, 'the trigger must strip the age keys from the profile');
+  // is_adult takes no argument, so nobody can ask about another user
+  assert.doesNotMatch(sql, /function public\.is_adult\(\s*\w/);
+});
+
+test('age screen: weekly cleanup keeps its grace window and only touches age-filtered rows', () => {
+  const src = readFileSync('api/weekly-email.js', 'utf8');
+  assert.match(src, /user_age\?age_band=eq\.under_13&set_at=lt\.\$\{graceCut\}/);
+  assert.match(src, /const graceCut = new Date\(Date\.now\(\) - 6 \* 864e5\)/, 'under-13 grace period must stay 6 days (privacy.html: within 14 days)');
+  assert.match(src, /user_age\?age_band=eq\.13-17&adult_from=lte\./);
+  assert.match(readFileSync('privacy.html', 'utf8'), /deleted automatically within 14 days/);
+});
+
+test('age screen: signup sends no birth date and nothing at all for an under-13', () => {
+  const src = readFileSync('signup.html', 'utf8');
+  assert.doesNotMatch(src, /birth_year|birth_month|signUpData\.(dob|birth)/, 'signup must not send a birth date');
+  const fn = src.slice(src.indexOf('async function handleSignup'));
+  assert.ok(fn.indexOf('age < 13') !== -1 && fn.indexOf('age < 13') < fn.indexOf('sb.auth.signUp'),
+    'the under-13 refusal must run before any signup call');
+});
+
+test('analytics: PostHog loads only after the visitor allows it, never with replay', () => {
+  const src = readFileSync('analytics.js', 'utf8');
+  const start = src.indexOf('function startPostHog()');
+  assert.ok(start !== -1, 'startPostHog() missing');
+  const init = src.indexOf('window.posthog.init(');
+  assert.ok(init > start, 'posthog.init must live inside startPostHog()');
+  // every call of startPostHog() outside its definition is behind a "yes"
+  const calls = [...src.matchAll(/startPostHog\(\);/g)].map((m) => src.slice(Math.max(0, m.index - 400), m.index));
+  for (const c of calls) assert.match(c, /=== 'yes'/, 'startPostHog() called without a yes: ' + c);
+  assert.match(src, /disable_session_recording: true/);
+  assert.match(src, /mask_all_text: true/);
+});
+
+test('accessibility basics (a11y.js) load site-wide and keep their key rules', () => {
+  for (const f of ['ad-nav.js', 'analytics.js']) {
+    assert.match(readFileSync(f, 'utf8'), /\/a11y\.js/, `${f} must load /a11y.js`);
+  }
+  const src = readFileSync('a11y.js', 'utf8');
+  assert.match(src, /:focus-visible\{outline:3px solid/, 'keyboard focus ring');
+  assert.match(src, /prefers-reduced-motion: reduce/, 'reduced motion');
+  assert.match(src, /Skip to content/, 'skip link');
+  assert.match(src, /aria-live/, 'AI replies announced');
+  assert.match(src, /function makeOperable/, 'click-only elements made keyboard-operable');
+  assert.match(src, /MutationObserver/, 'covers content added after load');
+  assert.match(src, /function labelFields/, 'unlabelled form fields get a name');
+  assert.match(src, /function fixContrast/, 'contrast fixer present');
+  assert.match(src, /if \(bgL < 0\.45\) continue;/, 'contrast fixer never touches dark backgrounds');
+});
+
+test('every third-party script from jsDelivr is version-pinned with an integrity hash', () => {
+  const bad = [];
+  for (const f of globSync('**/*.html').filter((f) => !/^(app|node_modules|ios|android)\//.test(f))) {
+    for (const m of readFileSync(f, 'utf8').matchAll(/<script[^>]*src="https:\/\/cdn\.jsdelivr\.net\/[^"]+"[^>]*>/g)) {
+      if (!/integrity="sha(256|384|512)-/.test(m[0]) || /@\d+"/.test(m[0])) bad.push(`${f}: ${m[0].slice(0, 90)}`);
+    }
+  }
+  assert.deepEqual(bad, [], 'unpinned or unchecked jsDelivr scripts:\n' + bad.slice(0, 20).join('\n'));
+});

@@ -42,10 +42,10 @@ def _find(*cands):
         if os.path.exists(c):
             return c
     return cands[-1]
-SERIF_IT  = _find("/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf")
-SERIF_BIT = _find("/usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf", SERIF_IT)
-SANS      = _find("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
-SANS_B    = _find("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf")
+SERIF_IT  = _find("/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf", "C:/Windows/Fonts/timesi.ttf")
+SERIF_BIT = _find("/usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf", "C:/Windows/Fonts/timesbi.ttf", SERIF_IT)
+SANS      = _find("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", "C:/Windows/Fonts/verdana.ttf")
+SANS_B    = _find("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", "C:/Windows/Fonts/verdanab.ttf")
 def Fserif(sz, bold=False): return ImageFont.truetype(SERIF_BIT if bold else SERIF_IT, sz)
 def Fsans(sz, bold=True):   return ImageFont.truetype(SANS_B if bold else SANS, sz)
 

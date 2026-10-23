@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- content-review: {"argument": "2026-07-29", "orthodoxy": "2026-07-29", "by": "2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md."} -->
+<!-- content-review: {"argument":"2026-10-08","orthodoxy":"2026-10-08","by":"2026-10-11 PHASE 1 MECHANICS (docs/MASTERY_ROLLOUT_GUIDE_2026-10-11.md 1.2-1.9, 1.12; plumbing + UI labels, NON-DOCTRINAL): Silver part 1 now requires the 8+ at Explain level 2 or 3; a new Gold sub-gate (the mixed 'which argument answers this?' drill, injected by lib/review-queue.js from this page's own OBJ + objections.json) is wired into levelOf() and the ladder; graded per-card flashcards, the re-proof review, the pretest, if-then plans, hide-the-page, Listen and typed cloze are injected by the shared lib/review-queue.js and reuse only this page's certified strings. No argument content, model answer, card or check changed; lens dates deliberately NOT bumped. || 2026-10-11 EDITORIAL, NON-DOCTRINAL (Phase 0 of docs/MASTERY_ROLLOUT_GUIDE_2026-10-11.md): the flashcard intro no longer promises a per-card spaced deck the code does not implement (now: the whole argument returns on a spaced schedule); shelf line corrected to 'Argument N of 13 in the God's Existence track'; next-argument CTA count corrected. No argument content, graded layer or claim changed; lens dates deliberately NOT bumped. || 2026-10-08 EDITORIAL, NON-DOCTRINAL (owner retired the Memory Palace from the live site): the Memory Palace drill card and the 'including a room in the Memory Palace' clause of the Practice intro removed (drill count word adjusted). No argument content, graded layer or claim changed; lens dates deliberately NOT bumped. || 2026-10-08 PREMISE-DEFENCE REBUILD (owner-directed: 'the defending premises need to be better'). The single thin Defending-the-premises card replaced with Kalam-standard cards, one per premise: precision check, numbered supports with strength pills + honest limits, the objections that bite on that premise with replies, The room. Drafted by READ-ONLY agents as PORTS from the certified paired essay (canonical link) + the old card, with per-paragraph port ledgers; applied by assert-guarded script. FULL FOUR-LENS GATE via READ-ONLY Explore agents (citations port-check, argument, neutrality, orthodoxy incl. clarifier verdict), md5-checked before/after every round. ROUND 1 findings, ONE merged fix pass in the lenses' essay-verbatim wording: P2 room fixed (Oppy concession re-attached to its qualifier; defenders named); taxicab objection now stated (essay steelman) before answered; Gold-gate overlap reduced to the concession only; explanans sentence restored. Post-gate POLISH '(Schopenhauer onward)' applied, self-verified. ROUND 2 confirmation (same reviewers, fixed text): citations STAMPABLE, argument STAMPABLE (0 BREAK/0 WEAK), neutrality STAMPABLE, orthodoxy CLEAN (0 HERESY/0 DRIFT, clarifier candidates none new). Mechanical: 132 node tests pass; retired-claims 0 alive; tripwires 0 new; unquoted-attributions clean; div balance verified. Scope frozen to the new cards (rule 9). AUTOMATED GATE, NOT pastoral sign-off (docs/STATEMENT_OF_FAITH.md reviewer _pending_). || PRIOR: 2026-10-04 MASTERY-PAGE DEPTH + LEVELS REBUILD (owner-directed, third pilot after kalam + finetuning). Rebuilt Phase 1 (key-terms glossary — PSR, contingent/necessary, weak PSR, modal collapse, brute fact, free-choice explanation, necessary ground; a trace-the-inference derive drill with the necessary-ground-not-yet-the-triune-God scope fence; deepened P1/P2 premise supports with strength labels, the weak-PSR honest narrowing, and a who-holds-what; an honest-state-of-the-scholarship card; a Bronze reconstruction checkpoint). Kept the existing 7-objection bank. Replaced the 4-click activity dial with retrieval-earned Bronze/Silver/Gold: Bronze reconstruction >=80%; Silver = Explain-It-Back >=8 free-recall + all four objection drills cold; Gold = an unseen objection (Russell's fallacy-of-composition) + 3 spaced recalls via lib/review-queue.js, with decay. Flashcards 5->12; escalating Explain It Back; objection-cold drill. ALL doctrinal prose and every graded layer PORTED from the certified library/leibniz.html; no new citation/footnote. GATE via READ-ONLY Explore agents (Explore has no Edit/Write; md5 1cfb7fa verified identical before/after by the lenses that completed): apologia-orthodoxy CLEAN + STAMPABLE, 0 HERESY (all five scope/deism fences present incl. the graded Bronze PROPS; denominational neutrality held — classical theism attributed not asserted; free-choice reply flagged contested; clarifier NONE NEW); apologia-neutrality STAMPABLE, 0 BREAK (PSR not overstated — weak PSR used, strong form named as its target; Oppy/van Inwagen/Russell correctly cast; verdict bounded); apologia-argument STAMPABLE, 0 BREAK (scope fence held, weak PSR, free-will reply hedged, Oppy steelmanned). THREE in-scope findings applied AFTER the gate as verbatim essay ports / self-verified, NOT re-read by the lenses: (1) restored 'The theist's reply is a weighing rather than a knockout' to the Oppy/parsimony reply (essay l.183; argument WEAK); (2) dropped a Gold-unseen parenthetical that asserted the disputed point as settled, reworded to keep contingency-transfer as the question in dispute (argument WEAK / neutrality); (3) softened a derive step 'only free choice explains' -> 'free choice best explains' (argument POLISH / neutrality WEAK). CITATIONS lens NOT COMPLETED: the apologia-citations Explore agent was terminated by a session rate limit (HTTP 429, resets ~13:20 UTC) before finishing, so its date is deliberately NOT bumped and stays 2026-10-02. In its place the main session string-verified the ports against the essay: every named scholar on the page (Leibniz, Craig, Hume/Cleanthes, van Inwagen, Russell, Oppy, Gale, Pruss, Duns Scotus, Koons, Rasmussen, Mackie) and the quoted phrasing trace to library/leibniz.html. A full citations Explore pass was OWED and RAN CLEAN 2026-10-04 (read-only Explore lens, STAMPABLE, 0 errors / 0 misattributions / 0 wrong dates; all 13 named scholars + ~7 quoted phrasings verified against library/leibniz.html), so the citations date is now bumped to 2026-10-04. The citations pass CONFIRMED the standing backlog item: the Samuel Clarke (1705, A Demonstration of the Being and Attributes of God) and Richard Taylor (Metaphysics, translucent-ball) rows in the Touch-the-originals source card are genuinely ABSENT from library/leibniz.html but FACTUALLY ACCURATE (Clarke's 1704 Boyle Lectures publ. 1705; Taylor's forest-ball example) — non-blocking, still owed a traceable home or a cite to wherever they are certified. BACKLOG, NOT fixed here (rule 9 — pre-existing certified content this rebuild did not touch, accurate but not traceable to THIS essay): the Samuel Clarke (1705) and Richard Taylor (translucent-ball) entries in the Touch-the-originals source card do not appear in the certified essay; log for the owed citations pass. Mechanical checks green (132 node tests; retired-claims 0; tripwires 0 new; div balanced; inline JS node --check OK). AUTOMATED GATE, NOT pastoral sign-off (pending site-wide). || PRIOR: 2026-10-02 OVER-CHARITY + FACT-CHECK SWEEP of the God's Existence mastery pages (owner-directed), following the certified essay (b33206c0) and cards (0575b1ab). Read-only Explore gates, md5-checked, four lenses (citations, argument, orthodoxy incl. clarifier verdict, neutrality). Round 1 reviewed all nine layers, graded layers first (ARG_PREMISES, cards, checks regexes, drill model answer). Fixes were applied by assert-guarded scripts on scratch copies. Rounds 2, 3 and 4 were confirmation gates on the fixed text. All lenses STAMPABLE, 0 HERESY. Every changed checks regex was node-tested: the essay-correct bounded answer passes, and the retired/overclaimed/negated answer fails (contractions handled). Every inline script compiles and the JSON-LD parses. The page now claims no more than its essay, carries the deism-gap fence plus a resurrection pointer, and states a bounded own-voice verdict. NOT RUN: pastoral sign-off (pending site-wide). Remaining pre-existing gaps are logged in docs/GODS_EXISTENCE_SWEEP_BACKLOG_2026-10-01.md, not fixed (rule 9). PRIOR: 2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md.","citations":"2026-10-08","neutrality":"2026-10-08"} -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Contingency Argument (Leibniz) | Apologia Daily</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
 :root{
   --n:#050d1a; --n8:#0a1628; --n7:#0f2040; --n5:#1e4278; --n3:#4a7ab5;
@@ -211,8 +209,65 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 .seo-summary p:last-child{margin-bottom:0}
 .hero{padding-bottom:48px}
 .seo-summary + .dialcard{margin-top:24px}
+
+/* ---------- mastery levels (Bronze / Silver / Gold) ---------- */
+.levels{display:grid;gap:10px;margin-top:4px;width:100%}
+.lvl{display:grid;grid-template-columns:42px 1fr auto;gap:14px;align-items:center;border:1px solid var(--border);border-radius:11px;padding:13px 16px;background:var(--w);transition:.2s}
+.lvl .medal{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;background:#eef0f3;filter:grayscale(1);opacity:.45}
+.lvl.earned{border-color:#cfe6da;background:var(--okl)}
+.lvl.earned .medal{filter:none;opacity:1;background:#fff}
+.lvl .lt b{font-family:var(--fd);font-size:16px;display:block;color:var(--td)}
+.lvl .lt span{font-family:var(--ui);font-size:12.5px;color:var(--tm)}
+.lvl .ls{font-family:var(--ui);font-size:12px;font-weight:600;color:var(--tm);text-align:right;white-space:nowrap}
+.lvl.earned .ls{color:var(--ok)}
+.lvl.current{border-color:var(--g);box-shadow:0 0 0 1px var(--g) inset}
+
+/* ---------- key-terms glossary (pretraining) ---------- */
+.glossary{display:grid;gap:0;margin-top:6px}
+.gt{display:grid;grid-template-columns:168px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--border);font-family:var(--ui)}
+.gt:last-child{border-bottom:none}
+.gt b{font-size:14px;color:var(--td)}
+.gt b em{color:var(--gd);font-style:italic}
+.gt span{font-size:13.5px;color:var(--tm);line-height:1.5}
+@media(max-width:560px){.gt{grid-template-columns:1fr;gap:2px}}
+
+/* ---------- premise case: supports with strength pills ---------- */
+.stp{font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:5px;white-space:nowrap}
+.stp.proof{background:#e7eefb;color:#1e4278}
+.stp.strong{background:#fbf3e2;color:#9a7416}
+.stp.sugg{background:#eef0f3;color:#5a6b82}
+.support{border-left:3px solid #dbe6f4;padding:3px 0 3px 15px;margin:14px 0}
+.support .sh{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px}
+.support .sh b{font-family:var(--ui);font-size:14.5px;color:var(--td)}
+.support p{font-size:15px;margin-bottom:4px}
+.honest{font-family:var(--ui);font-size:13.5px;color:var(--td);background:#fbf8f0;border-left:3px solid var(--g);padding:9px 13px;border-radius:0 8px 8px 0;margin-top:6px}
+.honest b{color:var(--gd)}
+.whoholds{font-family:var(--ui);font-size:13px;color:var(--tm);background:#f4f7fb;border-radius:8px;padding:10px 14px;margin-top:12px}
+.whoholds b{color:var(--n5)}
+.precise{font-family:var(--ui);font-size:13px;color:var(--n7);background:#eef3fa;border:1px solid #dbe6f4;border-radius:8px;padding:9px 13px;margin:2px 0 10px}
+
+/* ---------- reveal-on-reason drill ---------- */
+.derive{display:grid;gap:10px;margin-top:10px}
+.dr{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:var(--ow);border:1px solid var(--border);border-radius:10px;padding:12px 15px}
+.dr .q{font-size:15px;font-family:var(--ss)}
+.dr .q em{color:var(--n5);font-style:italic}
+.dr .rev{font-family:var(--ui);font-size:12.5px;font-weight:600;color:var(--n5);background:#fff;border:1px solid #cfdcee;border-radius:7px;padding:6px 12px;cursor:pointer;white-space:nowrap}
+.dr .rev:hover{background:#f3f7fc}
+.dr .ans{display:none;font-family:var(--ui);font-weight:700;font-size:14px;color:var(--gd)}
+.dr.shown .rev{display:none}
+.dr.shown .ans{display:inline}
+@media(max-width:560px){.dr{grid-template-columns:1fr}.dr .ans,.dr .rev{justify-self:start}}
+
+/* ---------- retrieval gate ---------- */
+.recall{background:var(--w);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-top:14px}
+.recall .q{font-family:var(--ui);font-size:14.5px;font-weight:600;color:var(--td);margin-bottom:10px}
+.gradeline{font-family:var(--ui);font-size:13.5px;font-weight:600;margin-top:12px;display:none}
+.gradeline.show{display:block}
+.gradeline.pass{color:var(--ok)}
+.gradeline.fail{color:var(--gd)}
 </style>
   <link rel="stylesheet" href="/ad-nav.css">
+  <link rel="stylesheet" href="/library/mastery-ui.css?v=20261009b">
 <meta name="description" content="Learn the Leibnizian contingency argument - why anything exists at all - and how to defend it against the &#x27;universe is necessary&#x27; reply.">
 <link rel="canonical" href="https://apologiadaily.com/library/leibniz.html">
 <meta property="og:type" content="article">
@@ -247,7 +302,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
             <div class="adn-mega-col">
               <div class="adn-mega-h">Go deeper</div>
               <a class="adn-mi" href="/library/"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Deep-Dive Essays</span><span class="adn-mi-dc">Long-form, fully-cited essays.</span></span></a>
-              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Answers</span><span class="adn-mi-dc">The questions people ask most.</span></span></a>
+              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Common Questions</span><span class="adn-mi-dc">Short answers to the questions people ask most.</span></span></a>
               <a class="adn-mi" href="/sources.html"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Church Fathers &amp; Creeds</span><span class="adn-mi-dc">The early church in its own words, verified.</span></span></a>
               <a class="adn-mi" href="/our-sources.html"><span class="adn-mi-ic">&#128218;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Our Sources</span><span class="adn-mi-dc">Books and articles our essays cite.</span></span></a>
               <a class="adn-mi" href="/whats-new.html"><span class="adn-mi-ic">&#128240;</span><span class="adn-mi-tx"><span class="adn-mi-nm">What&#39;s New</span><span class="adn-mi-dc">Latest essays, features &amp; reels.</span></span></a>
@@ -258,11 +313,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
               <a class="adn-mi" href="/games.html"><span class="adn-mi-ic">&#127918;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Games</span><span class="adn-mi-dc">Quizzes that feed your streak.</span></span></a>
               <a class="adn-mi" href="/study-groups.html"><span class="adn-mi-ic">&#128101;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Study Groups <span class="adn-mi-tag">New</span></span><span class="adn-mi-dc">Study with people you love.</span></span></a>
               <a class="adn-mi" href="/reading-club.html"><span class="adn-mi-ic">&#128214;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Reading Clubs</span><span class="adn-mi-dc">The classics, chapter by chapter.</span></span></a>
-              <a class="adn-mi" href="/conversation-journal.html"><span class="adn-mi-ic">&#128221;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Conversation Journal</span><span class="adn-mi-dc">Log real conversations, get AI coaching.</span></span></a>
             </div>
             <div class="adn-mega-col">
               <div class="adn-mega-h">For you</div>
-              <a class="adn-mi" href="/parents.html"><span class="adn-mi-ic">&#128106;</span><span class="adn-mi-tx"><span class="adn-mi-nm">For Parents</span><span class="adn-mi-dc">Your kids&#39; hardest questions.</span></span></a>
               <a class="adn-mi" href="/video-library.html"><span class="adn-mi-ic">&#127909;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Videos</span><span class="adn-mi-dc">Short, shareable explainers.</span></span></a>
             </div>
             <div class="adn-mega-foot">
@@ -312,7 +365,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <h2>The argument in brief</h2>
     <p>The Leibnizian cosmological argument starts from a famous question Gottfried Leibniz pressed: "Why is there something rather than nothing?" Its engine is the Principle of Sufficient Reason — the idea that whatever exists has an explanation of its existence, either in the necessity of its own nature or in an external cause. The universe, by contrast, looks contingent: it exists, but there seems to be no reason it <em>had</em> to exist, and it could have been otherwise. If the universe is contingent, it cannot be the explanation of itself, so its explanation must lie in a being that exists necessarily — a being whose non-existence is impossible. That necessary, self-existent ground is what believers call God.</p>
     <p>Unlike the Kalam argument, this one does not depend on the universe having a beginning. Even an eternal universe would still be contingent and still require an explanation for why it exists at all. The whole case therefore turns on two points: whether the Principle of Sufficient Reason holds, and whether the universe is genuinely contingent rather than itself necessary.</p>
-    <p>In fairness, a skeptic can call the universe a "brute fact" needing no explanation, or treat the cosmos itself as the necessary being. The argument does not claim to be a knock-down proof; it claims that a necessary, personal ground is a more satisfying explanation than an unexplained brute fact, and it leaves further questions about that being's character to other arguments.</p>
+    <p>In fairness, a skeptic can call the universe a "brute fact" needing no explanation, or treat the cosmos itself as the necessary being. The argument does not claim to be a knock-down proof; our judgment, held with confidence rather than certainty, is that "the universe is just there" is a possible answer but not the better one: it stops explaining exactly where the question begins. That is not yet the whole Christian faith, which rests on revelation and on the historical evidence for the resurrection of Jesus.</p>
   </section>
 
   <!-- mastery dial -->
@@ -326,15 +379,37 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     </div>
     <div class="dialmeta">
       <h2>Your mastery of this argument</h2>
-      <p>Four checkpoints: understand it, explain it, drill it, defend it. Complete them in any order — your progress saves to your account.</p>
-      <span class="libnote">◆ &nbsp;Argument 3 of 22 in the mastery library</span>
+      <p>Three earned levels — <b>Bronze</b> (rebuild it), <b>Silver</b> (defend it cold), <b>Gold</b> (handle an objection you&rsquo;ve never seen, then prove it again weeks later). Clicking through no longer counts; demonstrated recall does. Progress saves to your account.</p>
+      <span class="libnote">◆ &nbsp;Argument 3 of 13 in the God&rsquo;s Existence track</span>
     </div>
+  </div>
+
+  <div class="levels" id="levels">
+    <div class="lvl" id="lvl-bronze"><div class="medal">&#129353;</div><div class="lt"><b>Bronze · Understand</b><span>Rebuild the argument and what the necessary ground must be, from memory (&ge;80%)</span></div><div class="ls">Locked</div></div>
+    <div class="lvl" id="lvl-silver"><div class="medal">&#129352;</div><div class="lt"><b>Silver · Defend</b><span>Explain it &ge;8/10 <em>and</em> field its objections cold</span></div><div class="ls">Locked</div></div>
+    <div class="lvl" id="lvl-gold"><div class="medal">&#129351;</div><div class="lt"><b>Gold · Master</b><span>Answer an unseen objection, pick the right argument from a mixed set, then re-prove it on 3 spaced reviews</span></div><div class="ls">Locked</div></div>
   </div>
 
   <!-- ===================== PHASE 1: UNDERSTAND ===================== -->
   <section id="understand">
     <div class="phasehead"><span class="phasenum">1</span><h3>Understand it</h3></div>
-    <p class="phasesub">Not more prose — the load-bearing structure. See the skeleton, then learn to defend each bone.</p>
+    <p class="phasesub">Not more prose — the load-bearing structure, defended bone by bone, then proven from memory. Work top to bottom; the checkpoint at the end asks you to rebuild it with nothing in front of you.</p>
+
+    <div class="card">
+      <span class="kick">Before you start · key terms</span>
+      <h4>Eight terms this argument turns on</h4>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:6px">Learn these first — the whole dispute is about the first one, the Principle of Sufficient Reason, and the contingent/necessary distinction it rests on.</p>
+      <div class="glossary">
+        <div class="gt"><b>Principle of Sufficient Reason</b><span>No fact exists, and no statement is true, without a sufficient reason why it is so and not otherwise. Reality is, at bottom, intelligible.</span></div>
+        <div class="gt"><b>Contingent being</b><span>One that <em>could have failed to exist</em> — you, this planet, a hydrogen atom. Nothing in its nature guarantees its being; it depends on something else.</span></div>
+        <div class="gt"><b>Necessary being</b><span>One that exists <em>by its own nature</em> — it could not have failed to be, and so requires no external cause. The terminus the argument reaches.</span></div>
+        <div class="gt"><b>Weak PSR (Gale&ndash;Pruss)</b><span>Every fact <em>possibly</em> has an explanation (not &ldquo;every fact <em>has</em> one&rdquo;). Traceable to Duns Scotus; meant to run the argument while sidestepping modal collapse.</span></div>
+        <div class="gt"><b>Modal collapse</b><span>Van Inwagen's reductio: a strong PSR that <em>necessitates</em> every fact would make everything necessary — nothing could have been otherwise. The reason defenders retreat to the weak PSR + free choice.</span></div>
+        <div class="gt"><b>Brute fact</b><span>Something that exists with no explanation at all — Russell's &ldquo;the universe is just there, and that's all.&rdquo; The argument's central rival.</span></div>
+        <div class="gt"><b>Explanation by free choice</b><span>A free agent's choice explains an effect <em>without</em> necessitating it — so God can explain the world while the world stays contingent (He could have chosen otherwise).</span></div>
+        <div class="gt"><b>Necessary ground</b><span>The most the argument reaches: a necessary, transcendent, self-explanatory ground of all contingent reality — <em>not yet</em> the personal, good, triune God of worship.</span></div>
+      </div>
+    </div>
 
     <div class="card">
       <span class="kick">The argument, formally</span>
@@ -342,44 +417,101 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <div class="syllogism">
         <div class="prem"><div class="tag">P1</div><p>Whatever exists has an <b>explanation</b> of its existence — in the necessity of its own nature or in an external cause.</p></div>
         <div class="prem"><div class="tag">P2</div><p>The <b>universe is contingent</b> — it exists, but it could have failed to exist.</p></div>
-        <div class="prem concl"><div class="tag">∴ C</div><p>Therefore the universe’s explanation lies in a <b>necessary being</b> — which is God.</p></div>
+        <div class="prem concl"><div class="tag">∴ C</div><p>Therefore the universe’s explanation lies in a <b>necessary being</b> — the terminus Leibniz called God.</p></div>
       </div>
-      <p class="formnote">The form is valid — deny the conclusion and you must reject a premise. So every objection lands on either the Principle of Sufficient Reason (P1) or the claim that the universe is contingent (P2). Spot which one, and you are halfway to the answer.</p>
+      <p class="formnote">The conclusion follows with one step the deep dive makes explicit: the cause of all contingent things cannot itself be one more contingent thing, on pain of needing a further explanation. So objections land on the Principle of Sufficient Reason (P1), the claim that the universe is contingent (P2), or that extra step. Spot which one, and you are halfway to the answer.</p>
 
-      <span class="kick" style="margin-top:22px">Then the conceptual step — what must this necessary being be?</span>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">A being whose explanation lies in its own nature cannot be contingent, cannot depend on anything, and cannot fail to exist. That rules out matter and energy, which come in arbitrary amounts and could always have been otherwise.</p>
-      <div class="chiprow">
-        <span class="chip">necessary</span><span class="chip">self-existent</span><span class="chip">uncaused</span><span class="chip">eternal</span><span class="chip">the ground of all contingent things</span><span class="chip gold">and plausibly personal</span>
-      </div>
     </div>
 
     <div class="card">
-      <span class="kick">Defending the premises</span>
-      <h4>Why each premise is more plausible than its denial</h4>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P1 — the Principle of Sufficient Reason</summary>
-        <div class="body">
-          <p class="lbl steel">The bedrock of reason</p>
-          <p>Every rational inquiry assumes things have explanations — that is what it means to look for a reason at all. Deny the principle and science, history, and ordinary thought collapse into magic.</p>
-          <p class="lbl steel">A modest version</p>
-          <p>The argument needs only the modest claim that whatever exists has some explanation — in its own nature or in a cause. That avoids overreach while still ruling out sheer brute existence.</p>
+      <span class="kick">From a necessary ground to God</span>
+      <h4>Don&rsquo;t read the conclusion — reason to it</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:4px">Follow the explanation of the universe all the way down, then reveal — and note exactly how far it reaches, and how far it does not.</p>
+      <div class="derive">
+        <div class="dr"><div class="q">The universe exists. Is it contingent or necessary?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">contingent — it could have failed to exist</span></div>
+        <div class="dr"><div class="q">So by the PSR its explanation must lie…?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">in an external cause, beyond all physical reality</span></div>
+        <div class="dr"><div class="q">That cause can&rsquo;t be spatial, temporal, or itself contingent (or it needs its own explanation) — so it is…?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">a necessary, transcendent being</span></div>
+        <div class="dr"><div class="q">Why <em>plausibly a mind</em>, not an inert necessity?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">a mindless necessity yields all-or-nothing; free choice best explains <em>this</em> world</span></div>
+        <div class="dr"><div class="q">How far does the inference reach?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">a necessary, self-explanatory ground — no further</span></div>
+      </div>
+      <p class="honest" style="margin-top:14px"><b>Honestly stated:</b> if the argument succeeds it shows a necessary, transcendent, self-explanatory ground of all contingent reality — a great deal, but not yet the full God of Christian worship. The inference to <em>personhood</em> is a further step (though not arbitrary: a mindless necessary being would produce its effects necessarily, or nothing — a personal ground can freely choose to create <em>this</em> world). The inference to the triune God revealed in Jesus Christ requires the rest of the case — moral, <a href="/library/minimalfacts.html">historical</a>, and revelatory. It is <em>one strand</em> in a cumulative case, held with confidence rather than certainty.</p>
+    </div>
+
+    <div class="card">
+      <span class="kick">Defending Premise 1</span>
+      <h4>Whatever exists has an <b>explanation</b> of its existence &mdash; in the necessity of its own nature or in an external cause.</h4>
+      <p class="precise">The conclusion is valid; the fight is P1 (the Principle of Sufficient Reason) and P2 (the universe is contingent). Precision check: Premise 1 never said everything has an <em>external cause</em>; it said everything has an explanation <em>either</em> in an external cause <em>or</em> in the necessity of its own nature.</p>
+
+      <div class="support">
+        <div class="sh"><b>Reality is intelligible</b> <span class="stp strong">Modest form defensible</span></div>
+        <p>Reality is, at bottom, intelligible: things do not just happen to be the case for no reason whatsoever. To deny the principle is to say some things exist for no reason at all &mdash; which, on reflection, is harder to believe than the premise.</p>
+        <p class="honest"><b>Honest narrowing:</b> the argument needs only a <em>modest</em> PSR &mdash; Gale and Pruss&rsquo;s weak principle that every fact <em>possibly</em> has an explanation (traceable to Duns Scotus), not the strong &ldquo;every fact <em>has</em> one&rdquo; that van Inwagen&rsquo;s modal-collapse reductio targets. (Oppy replies the weak principle may entail the strong one given the other premises &mdash; which is why the free-choice move matters; see the bank.)</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>Two ways a thing can exist</b> <span class="stp sugg">Clarification</span></div>
+        <p>A <strong>contingent</strong> being is one that <em>could have failed to exist</em> &mdash; you, this planet, the hydrogen atom. Nothing about its nature guarantees its being; it depends on something else. A <strong>necessary</strong> being, by contrast, exists <em>by its own nature</em> &mdash; it could not have failed to be, and so requires no external cause. Premise 1 simply says that for any existing thing, one of these two accounts must hold.</p>
+      </div>
+        <div class="objin">
+          <div class="ol">Objection &mdash; the &ldquo;taxicab&rdquo; charge (Schopenhauer onward)</div>
+          <p>Critics from Schopenhauer onward have leveled a <em>tu quoque</em>: the theist invokes the PSR to demand a cause of the universe, then suddenly dismisses it the moment we ask, &ldquo;And what caused God?&rdquo; The PSR, they charge, is treated like a hired cab &mdash; dismissed once it has carried you to your destination. If everything needs an explanation, so does God; if God can be the unexplained stopping point, why not the universe?</p>
+          <div class="rl">Reply</div>
+          <p>God is not an arbitrary exception to the PSR &mdash; God <em>satisfies</em> the PSR, as the being whose explanation lies in his own necessary nature. The argument concludes <em>to</em> a necessary being precisely because a necessary being is self-explanatory. To ask &ldquo;what caused the necessary being?&rdquo; is to ask what caused something that by definition could not fail to exist &mdash; a confused request. The taxi is not dismissed; it arrives at its proper destination.</p>
         </div>
-      </details>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P2 — the universe is contingent</summary>
-        <div class="body">
-          <p class="lbl steel">It could have been otherwise</p>
-          <p>Nothing about the universe is self-explanatory: the constants, the amount of matter, the laws could all have been different, or absent. A thing that could have failed to exist does not carry the reason for its own existence.</p>
-          <p class="lbl steel">Necessity belongs elsewhere</p>
-          <p>Matter and energy are exactly the kind of thing that comes in arbitrary quantities and configurations. A truly necessary being could not be otherwise — which is not how the physical world looks.</p>
-        </div>
-      </details>
+        <div class="objin">
+        <div class="ol">Objection &mdash; van Inwagen: the PSR collapses into necessitarianism</div>
+        <p>Suppose the PSR is true, and consider the conjunction of <em>all</em> contingent truths &mdash; call it the Big Contingent Fact. By the PSR it must have an explanation. That explanation cannot be a necessary truth (necessary truths entail only necessary consequences, but the Big Contingent Fact is contingent). Nor can it be a contingent truth, for then it would be one of the conjuncts of the very fact it is supposed to explain &mdash; explaining itself, which is absurd. Worse, a strong PSR would entail that every truth is necessary &mdash; a <strong>modal collapse</strong> in which nothing could have been otherwise. If the PSR destroys all contingency, the theist cannot use it.</p>
+        <div class="rl">Reply</div>
+        <p>The theist has two moves, and the better defenders use both. First, the argument need not rest on the <em>strong</em> PSR at all. Gale and Pruss reformulate the principle as a <strong>weak PSR</strong>, traceable to Duns Scotus: not &ldquo;every fact <em>has</em> an explanation&rdquo; but &ldquo;every fact <em>possibly</em> has an explanation.&rdquo; This far more modest claim is meant to run a cosmological argument while sidestepping the modal-collapse worry, since merely <em>possibly</em> having an explanation does not by itself necessitate anything &mdash; though Oppy has argued that, given the argument&rsquo;s other modal premises, the weak principle entails the strong one after all, which is why the second move matters. Second, the collapse objection assumes that to explain a contingent fact one must <em>necessitate</em> it. But explanation by <strong>free choice</strong> breaks this. If God freely chooses to create, the choice explains the world without making the world necessary &mdash; a free agent could have chosen otherwise. The explanans is necessary (God), but the explaining act is free, so contingency survives. Van Inwagen anticipates this and is unpersuaded; and the reply leans on a <em>libertarian</em> view of free will &mdash; itself a disputed metaphysics &mdash; so it arguably relocates the controversy rather than ending it. <strong>This is contested.</strong> But the defender&rsquo;s position is reasonable, not desperate.</p>
+      </div>
+      <div class="objin">
+        <div class="ol">Objection &mdash; &ldquo;The universe is just a brute fact&rdquo;</div>
+        <p>In the 1948 BBC radio debate, asked whether the universe is &ldquo;gratuitous,&rdquo; Russell answered, &ldquo;I should say that the universe is just there, and that&rsquo;s all.&rdquo; The cosmos, on this view, is a <em>brute fact</em> &mdash; it exists, full stop, and the demand for a further explanation is a category mistake. We can simply reject the Principle of Sufficient Reason for the universe itself &mdash; some things have no explanation.</p>
+        <div class="rl">Reply</div>
+        <p>If the universe is brute, the principle &mdash; even in its modest form &mdash; has been abandoned at the crucial point, and the naturalist owes an account of why this universe rather than any other. A brute initial state explains nothing about why it obtains, while a necessary ground that freely chooses to create explains both that there is a world and why it is contingent. So &ldquo;the universe is just there&rdquo; is a possible answer but not the better one. That is our judgment, held with confidence rather than certainty.</p>
+      </div>
+      <div class="whoholds"><b>The room:</b> defended by Pruss and Gale (the weak-PSR version), Koons, and Rasmussen; pressed by Oppy, Mackie, and van Inwagen. The central battleground is the PSR &mdash; few accept the unrestricted strong form; the action is on restricted and weak versions, and whether they suffice is genuinely disputed. The free-will reply to modal collapse is promising but not decisive.</div>
+    </div>
+
+    <div class="card">
+      <span class="kick">Defending Premise 2</span>
+      <h4>The <b>universe is contingent</b> &mdash; it exists, but it could have failed to exist.</h4>
+      <p class="precise">Precision check: &ldquo;the universe&rdquo; means the whole of physical reality, all space, time, matter, and energy. The claim is contingency, not a beginning: the contingency argument is indifferent to whether the universe is finite or infinitely old.</p>
+
+      <div class="support">
+        <div class="sh"><b>The universe could have been otherwise</b> <span class="stp strong">Strongly supported</span></div>
+        <p>Nothing about the universe is self-explanatory: we can readily conceive the constants, the amount of matter, and the laws as different, or absent altogether. Its contents are paradigmatically contingent: a different array of particles, different laws, fewer galaxies, or none, all seem perfectly possible. A thing that could have failed to exist does not carry the reason for its own existence &mdash; and matter and energy come in arbitrary quantities, exactly unlike something that exists by the necessity of its own nature.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>Many philosophers reject the universe&rsquo;s metaphysical necessity</b> <span class="stp sugg">Supporting</span></div>
+        <p>As Craig notes, many philosophers reject the idea that the universe exists by metaphysical necessity.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>A whole of contingent things has nothing to ground it</b> <span class="stp sugg">Contested</span></div>
+        <p>A whole composed <em>entirely</em> of contingent things, with no necessary member anywhere in it, has nothing within it that grounds its existence &mdash; and adding up things that each could have failed to exist does not produce something that <em>could not</em> have failed to exist.</p>
+        <p class="honest"><b>Honest limit:</b> whether contingency transfers from parts to whole is exactly the question &mdash; critics rightly insist it is what is in dispute.</p>
+      </div>
+
+      <div class="objin">
+        <div class="ol">Objection &mdash; &ldquo;The universe itself is the necessary being&rdquo;</div>
+        <p>Why add God? Maybe the universe just exists necessarily &mdash; it is the brute necessary thing, and no further explanation is required. If we are allowed to posit one necessary stopping point, why must it be God rather than matter-energy?</p>
+        <div class="rl">Reply</div>
+        <p>The universe does not <em>look</em> necessary. A necessary being must exist in every possible world and could not have been otherwise in any respect. But we can readily conceive the universe with different laws, different particles, or not at all. Its constituents are contingent through and through, and a being whose every part could have been different is a poor candidate for something that exists by the sheer necessity of its own nature.</p>
+      </div>
+      <div class="objin">
+        <div class="ol">Objection &mdash; Oppy: the cosmos or its initial state is the terminus <span class="badge hard" style="margin-left:6px">Hardest</span></div>
+        <p>Oppy accepts that explanation must stop somewhere &mdash; but he argues the naturalist can take the stopping point to be the cosmos itself, or its <em>initial state</em>. He frames a dilemma: either every possible world shares an initial segment with the actual world, in which case the universe&rsquo;s initial state is <em>necessary</em>; or it does not, in which case that state is a <em>brute</em> contingent fact. Either way, naturalism has a terminus. And by a principle of parsimony, whatever explanatory role the theist assigns to God, the naturalist can assign to nature itself &mdash; positing one fewer entity, and so winning on simplicity.</p>
+        <div class="rl">Reply</div>
+        <p>The theist&rsquo;s reply is a weighing rather than a knockout. If the cosmos&rsquo;s initial state is brute, then the PSR &mdash; even the weak PSR &mdash; has been abandoned at the crucial point, and the naturalist owes an account of why <em>this</em> state rather than any other. If instead the initial state is necessary, the theist asks whether a specific physical configuration &mdash; describable, quantifiable, seemingly capable of being otherwise &mdash; is really the kind of thing that could exist by absolute necessity, in the way a non-composite, non-physical ground might. Oppy can press back that &ldquo;God&rdquo; is no more obviously necessary than the cosmos, and that parsimony favors stopping sooner. But parsimony only breaks ties between explanations that explain equally well, and these do not: a brute initial state explains nothing about why it obtains, while a necessary ground that freely chooses to create explains both that there is a world and why it is contingent. The exchange ends in a judgment about which terminus is more plausibly necessary and more genuinely explanatory &mdash; and on both counts the theist&rsquo;s is the better one.</p>
+      </div>
+
+      <p class="honest"><b>What it does, and doesn&rsquo;t, establish:</b> if the argument succeeds, it shows a necessary, transcendent, self-explanatory ground of all contingent reality. That is a great deal. But it is not yet the full God of Christian worship. The inference to the triune God revealed in Jesus Christ requires the rest of the case &mdash; moral, <a href="/library/minimalfacts.html">historical</a>, and revelatory.</p>
+      <div class="whoholds"><b>The room:</b> defended by Pruss and Gale (the weak-PSR version), Koons, and Rasmussen; pressed by Oppy, Mackie, and van Inwagen. Oppy, the sharpest contemporary opponent, grants more than Hume or Russell did: he accepts that explanation must stop somewhere, but argues the naturalist can take the stopping point to be the cosmos itself, or its initial state. As Craig notes, many philosophers reject the idea that the universe exists by metaphysical necessity. Whether the universe can simply be &ldquo;just there&rdquo; &mdash; a brute fact &mdash; remains, after two and a half centuries, a real fork in the road on which honest thinkers part ways.</div>
     </div>
 
     <div class="card">
       <span class="kick">The hard part — objections, answered</span>
       <h4>The objections you will actually meet</h4>
-      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">This is what separates someone who has heard of the argument from someone who can defend it. Each of these gets its strongest form first, then the reply — and the hardest objection of all is flagged above.</p>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">This is what separates someone who has heard of the argument from someone who can defend it. Each of these gets its strongest form first, then the reply — and the hardest objection of all is flagged below.</p>
       <p class="hardest"><b>The one that matters most:</b> Oppy&rsquo;s &mdash; a necessary God is a terminus too, and on a bare count of entities his ledger is shorter. The <a href="/library/leibniz.html">deep dive</a> answers it at length &mdash; take it with you, not just the replies below.</p>
 
       <details class="acc">
@@ -388,7 +520,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Why add God? Maybe the universe just exists necessarily — it is the brute necessary thing, and no further explanation is required.</p>
           <p class="lbl reply">Reply</p>
-          <p>The universe shows every mark of contingency: different constants, a different amount of matter, or no universe at all were all genuinely possible. A necessary being could not be otherwise in any possible world — and the universe plainly could. Matter is the wrong kind of thing to be necessary.</p>
+          <p>The universe does not look necessary. A necessary being must exist in every possible world and could not have been otherwise in any respect. But we can readily conceive the universe with different laws, different particles, or not at all — and a being whose every part could have been different is a poor candidate for something that exists by the sheer necessity of its own nature.</p>
         </div>
       </details>
 
@@ -398,7 +530,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Russell’s line: the universe is just there, and that is all. We can simply reject the Principle of Sufficient Reason for the universe itself — some things have no explanation.</p>
           <p class="lbl reply">Reply</p>
-          <p>A brute fact is an admission of defeat, not an explanation — and we accept it nowhere else in rational life. Applying the principle everywhere inside the universe but suspending it for the universe itself is the taxicab fallacy: using the rule until it becomes inconvenient. The modest principle leads to no absurdity, so there is no principled reason to exempt the universe.</p>
+          <p>If the universe is brute, the principle — even in its modest form — has been abandoned at the crucial point, and the naturalist owes an account of why this universe rather than any other. A brute initial state explains nothing about why it obtains, while a necessary ground that freely chooses to create explains both that there is a world and why it is contingent. So "the universe is just there" is a possible answer but not the better one. That is our judgment, held with confidence rather than certainty.</p>
         </div>
       </details>
 
@@ -408,7 +540,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>If you explain every contingent thing by a prior contingent thing — even an infinite chain — you have explained everything. Asking for a further explanation of the whole collection is a fallacy.</p>
           <p class="lbl reply">Reply</p>
-          <p>Even an infinite chain of contingent things is itself contingent. Explaining each link by the previous link never answers why there is any chain at all rather than nothing. A contingent series, however long, still needs a non-contingent ground outside the series.</p>
+          <p>Explaining each link by the previous link never answers why there is any chain at all rather than nothing. A contingent series, however long, still seems to need explaining. Whether contingency transfers from parts to whole is exactly the question, and some properties do transfer (a wall built entirely of brick is itself brick). A whole composed entirely of contingent things, with no necessary member anywhere in it, has nothing within it that grounds its existence.</p>
         </div>
       </details>
 
@@ -418,7 +550,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>If every fact has a sufficient reason that necessitates it, then nothing is contingent and no choice is free — the principle leads to modal collapse and refutes itself.</p>
           <p class="lbl reply">Reply</p>
-          <p>The argument uses the modest principle (everything has an explanation), not the strong rationalist one (every fact is necessitated). That is enough to run the argument, and it is why the modal-collapse worry does not arise: the modest principle asks for an explanation, not for a necessitating cause.</p>
+          <p>The theist has two moves. First, Gale and Pruss reformulate the principle as a weak PSR — not "every fact has an explanation" but "every fact possibly has an explanation." This far more modest claim is meant to run a cosmological argument while sidestepping the modal-collapse worry — though Oppy has argued that, given the argument's other modal premises, the weak principle entails the strong one after all, which is why the second move matters. Second, explanation by free choice explains the world without making it necessary: a free agent could have chosen otherwise. The reply leans on a libertarian view of free will, itself disputed — but the defender's position is reasonable, not desperate.</p>
         </div>
       </details>
 
@@ -438,7 +570,17 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Even granting the universe has an explanation, you cannot leap straight to God. It could be some unknown necessary cause we have no concept of.</p>
           <p class="lbl reply">Reply</p>
-          <p>The argument does not start from the word God. It reasons to the properties the explanation must have — necessary, self-existent, the cause of all space, time, and matter, plausibly personal — and notes these are exactly the core attributes classical theism ascribes to God. It is an inference to what the ground must be like, not a label slapped on a mystery.</p>
+          <p>The argument does not start from the word God. It reasons to the properties the explanation must have — necessary, self-existent, the cause of all space, time, and matter, plausibly personal — and notes these are exactly the core attributes classical theism ascribes to God. It is an inference to what the ground must be like, not a label slapped on a mystery. Still, it is not yet the full God of Christian worship: the inference to the triune God revealed in Jesus Christ requires the rest of the case — moral, historical, and revelatory.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "The cosmos itself can be the stopping point" <span class="badge hard">Hard</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>Explanation must stop somewhere — but the naturalist can take the stopping point to be the cosmos itself, or its <em>initial state</em>. Either way, naturalism has a terminus. And by a principle of parsimony, whatever explanatory role the theist assigns to God, the naturalist can assign to nature itself — positing one fewer entity, and so winning on simplicity.</p>
+          <p class="lbl reply">Reply</p>
+          <p>The theist's reply is a weighing rather than a knockout. But parsimony only breaks ties between explanations that explain equally well, and these do not: a brute initial state explains nothing about why it obtains, while a necessary ground that freely chooses to create explains both that there is a world and why it is contingent. The exchange ends in a judgment about which terminus is more plausibly necessary and more genuinely explanatory — and on both counts the theist's is the better one.</p>
         </div>
       </details>
     </div>
@@ -448,11 +590,11 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <h4>Where this comes from — primary sources, not our summary</h4>
       <div class="src">
         <div class="row">
-          <div class="who"><b>Gottfried Leibniz</b><span>18th c. · <em>Monadology</em></span></div>
+          <div class="who"><b>Gottfried Leibniz</b><span>1714 · <em>Principles of Nature and Grace</em>; <em>Monadology</em></span></div>
           <div class="what">Framed the Principle of Sufficient Reason and the question behind the whole argument: why is there something rather than nothing?</div>
         </div>
         <div class="row">
-          <div class="who"><b>Samuel Clarke</b><span>18th c. · <em>Leibniz–Clarke correspondence</em></span></div>
+          <div class="who"><b>Samuel Clarke</b><span>1705 · <em>A Demonstration of the Being and Attributes of God</em></span></div>
           <div class="what">Developed the contingency argument in detail and defended it against early objections.</div>
         </div>
         <div class="row">
@@ -461,21 +603,51 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         </div>
         <div class="row">
           <div class="who"><b>William Lane Craig</b><span>contemporary</span></div>
-          <div class="what">Gave the clean three-line formulation used here and defends the link from a necessary being to God. (We paraphrase — the originals reward the time.)</div>
+          <div class="what">Gave the argument's most widely discussed modern formulation (<em>Reasonable Faith</em>, ch. 3) and defends the link from a necessary being to God. (We paraphrase — the originals reward the time.)</div>
         </div>
       </div>
+    </div>
+
+    <div class="card">
+      <span class="kick">The honest state of the scholarship</span>
+      <h4>Where the argument really stands</h4>
+      <p>Among professional philosophers of religion the contingency argument is taken seriously — defended ably by Pruss (with Gale), Koons and Rasmussen, and pressed hard by Oppy, Mackie and others. The central battleground is the Principle of Sufficient Reason: few today accept the unrestricted strong PSR in van Inwagen's target form, so the action has moved to restricted and weak versions, and whether those suffice is genuinely disputed. The free-will reply to modal collapse is promising but not decisive.</p>
+      <p class="honest"><b>The real fork:</b> whether the universe can simply be &ldquo;just there&rdquo; — a brute fact — remains, after two and a half centuries, a point on which honest thinkers part ways. Naming it so is accuracy, not weakness.</p>
+      <p><b>The bounded verdict:</b> if it succeeds, the argument shows a necessary, transcendent, self-explanatory ground of all contingent reality — not yet the personal, good, triune God of worship. &ldquo;The universe is just there&rdquo; is a possible answer, but not the better one: it stops explaining exactly where the question begins, while a necessary being is the kind of thing that could answer it. That is our judgment, held with confidence rather than certainty — one strand in a cumulative case that rests, above all, on the <a href="/library/minimalfacts.html">historical evidence for the resurrection</a>.</p>
+    </div>
+
+    <div class="card" id="bronzeGate">
+      <span class="kick">Checkpoint · earn Bronze</span>
+      <h4>Rebuild it from memory — nothing in front of you</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:4px">Close the sections above. This is the retrieval that turns reading into knowing — and it is how this argument reaches <b>Bronze&nbsp;· Understand</b> on your shelf. Opening accordions no longer counts; showing you can rebuild the structure does.</p>
+      <div class="recall">
+        <div class="q">1 &middot; Put the argument in order — tap the three lines in sequence.</div>
+        <div id="orderPool" class="btnrow"></div>
+        <div id="orderSeq" style="font-family:var(--ui);font-size:13.5px;color:var(--tm);margin-top:10px;min-height:1.2em"></div>
+      </div>
+      <div class="recall" style="margin-top:12px">
+        <div class="q">2 &middot; What must the necessary ground be? Select every property the argument establishes — and nothing it doesn&rsquo;t.</div>
+        <div id="propPool" style="display:flex;flex-wrap:wrap;gap:9px;margin-top:4px"></div>
+      </div>
+      <div class="btnrow"><button class="btn primary" onclick="gradeBronze()">Check my reconstruction</button><button class="btn ghost" onclick="resetBronze()">Reset</button></div>
+      <div class="gradeline" id="bronzeGrade"></div>
     </div>
   </section>
 
   <!-- ===================== PHASE 2: PRACTICE ===================== -->
   <section id="practice">
     <div class="phasehead"><span class="phasenum">2</span><h3>Practice it</h3></div>
-    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Four drills that route this argument through tools you already have — including a room in the Memory Palace.</p>
+    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Three drills that route this argument through tools you already have.</p>
 
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back</span>
-      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument in your own words</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Write the argument from memory: the Principle of Sufficient Reason, why the universe is contingent, and why its explanation must be a necessary being. Aim for the logic, not pretty words.</p>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back &mdash; free recall</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument with nothing in front of you</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:12px">Scroll the sections away and generate it from memory — recalling is what builds durable memory; re-reading only feels like it does. Keep the scope honest (a necessary ground, not yet the full God). Pick your level; the bar rises as you go. Scored out of 10, accuracy first. An 8+ is one half of <b>Silver</b>.</p>
+      <div class="btnrow" id="explainLevels" style="margin:0 0 10px">
+        <button class="btn ghost sel" type="button" data-lv="1" onclick="setExplainLevel(this,1)">1 · State it</button>
+        <button class="btn ghost" type="button" data-lv="2" onclick="setExplainLevel(this,2)">2 · &hellip;and answer the brute-fact objection</button>
+        <button class="btn ghost" type="button" data-lv="3" onclick="setExplainLevel(this,3)">3 · &hellip;to a hostile grad student</button>
+      </div>
       <textarea id="explainBox" placeholder="Start with: Everything that exists has an explanation..."></textarea>
       <div class="btnrow">
         <button class="btn primary" onclick="scoreExplain(this)">Score my explanation</button>
@@ -493,7 +665,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <div class="practicecard">
       <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 2 · Flashcards</span>
       <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Drilled straight from this argument</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Five cards pulled straight from the contingency argument and its sharpest objections. Flip, recall, repeat until it is automatic.</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Twelve cards drawn from the PSR, the contingent/necessary distinction, the objections, and the honest limits above. <b>Answer out loud before you flip</b> — the effort of recall is the whole point; a card you merely recognise hasn't stuck. Each card is graded: type the key idea, flip, mark it. Three correct recalls and a card rests; it comes back on Today when it is due.</p>
       <div class="flashwrap">
         <div class="flash" id="flash" onclick="this.classList.toggle('flipped')">
           <div class="face front"><div class="qlbl">Prompt</div><p id="fFront"></p><span class="tap">tap to flip</span></div>
@@ -508,9 +680,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     </div>
 
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · Live objection</span>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · The brute fact (worked example)</span>
       <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Hold the line on a brute fact</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">A seeded scenario from the Debate Arena. Draft your reply, then reveal a model answer to compare.</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Start here: draft your reply, then reveal a model answer to compare. This is the <em>worked example</em> — Drill 4 then makes you do it cold across the objection set.</p>
       <div class="interloc">
         <div class="av">SK</div>
         <div>
@@ -524,37 +696,62 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       </div>
       <div class="modelans" id="modelAns">
         <div class="lbl">One strong way to answer — in a 1 Peter 3:15 tone</div>
-        <p>"I get the instinct, but notice we never accept a brute fact anywhere else — every science assumes things have explanations. To switch that rule off only for the universe is the taxicab fallacy: you cannot ride everything-has-a-reason your whole life and then wave the cab away at the one question that points beyond the physical. And the universe looks deeply contingent — different constants, a different amount of matter, or nothing at all were all possible. Contingent things get their explanation from something outside themselves. Follow that all the way down and you reach something that cannot fail to exist."</p>
+        <p>"I get the instinct, and &lsquo;the universe is just there&rsquo; is a possible answer — but not the better one: it stops explaining exactly where the question begins. Things do not just happen to be the case for no reason whatsoever; if the universe is brute, the principle has been abandoned at the crucial point, and you still owe an account of why this universe rather than any other, or none. And the universe doesn't look necessary: we can readily conceive it with different laws, different particles, or not at all. Follow its explanation all the way down and you reach something that cannot fail to exist — the kind of thing that could actually answer the question."</p>
       </div>
     </div>
-    <!-- memory palace (folded in from the standalone tool) -->
-    <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 4 · Memory Palace</span>
-      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Lock it into a room you can walk</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">This argument has its own room in the Memory Palace — a single vivid scene that encodes the premises and the conclusion. Walk it once to learn the picture, then switch on the recall walk and say the argument back from memory. The method of loci is how memory champions hold long lists; here it is built for this case.</p>
+
+    <!-- answer the objections cold -->
+    <div class="practicecard" id="objDrill">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 4 · Answer the objections cold</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Four objections, no notes — reply, then check</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">The other half of <b>Silver</b>. Draft a reply from memory, reveal the certified answer, and rate yourself honestly. Clear all four with a &ldquo;nailed it&rdquo; and you can field them in the wild — not just recognise them on the page.</p>
+      <div class="interloc">
+        <div class="av" id="odAv">SK</div>
+        <div><div class="who2" id="odWho">Skeptic</div><div class="bub" id="odQ"></div></div>
+      </div>
+      <textarea id="odBox" placeholder="Your reply, from memory..."></textarea>
       <div class="btnrow">
-        <a class="btn gold" style="text-decoration:none;display:inline-flex;align-items:center" href="/palace.html#leibniz">&#127963;&nbsp; Enter this room in the Memory Palace &rsaquo;</a>
+        <button class="btn gold" type="button" onclick="odReveal()">Reveal the certified answer</button>
+      </div>
+      <div class="modelans" id="odModel">
+        <div class="lbl">A strong reply — ported from this page&rsquo;s certified answer</div>
+        <p id="odModelText"></p>
+        <div class="confrow" style="margin-top:12px">
+          <button type="button" onclick="odRate(1)">Shaky — I&rsquo;ll redo this one</button>
+          <button type="button" onclick="odRate(2)">Nailed it &#10003;</button>
+        </div>
+      </div>
+      <div class="flashnav">
+        <button class="btn ghost" type="button" onclick="odPrev()">&lsaquo; Prev</button>
+        <span id="odCount"></span>
+        <button class="btn ghost" type="button" onclick="odNext()">Next &rsaquo;</button>
       </div>
     </div>
+
 
   </section>
 
   <!-- ===================== PHASE 3: PROVE IT ===================== -->
   <section id="proveit">
     <div class="phasehead"><span class="phasenum">3</span><h3>Prove it</h3></div>
-    <p class="phasesub">Mastery isn't a feeling — it's four things done. Clear them and this argument turns gold on your shelf.</p>
+    <p class="phasesub">Mastery isn't a feeling — it's three levels, each earned by <em>showing</em> you can do the thing, then proven again over time. Don't trust the warm glow of having read it; prove it cold.</p>
 
     <div class="card">
-      <div class="checklist">
-        <div class="cl" id="ck-read"><div class="box">✓</div><div class="txt"><b>Understood it</b><span>Read the structure, defences, and all objections</span></div><div class="state">Open every section</div></div>
-        <div class="cl" id="ck-explain"><div class="box">✓</div><div class="txt"><b>Explained it</b><span>Score 7+ on Explain It Back</span></div><div class="state">Not yet</div></div>
-        <div class="cl" id="ck-cards"><div class="box">✓</div><div class="txt"><b>Drilled it</b><span>Cycle through every flashcard once</span></div><div class="state">Not yet</div></div>
-        <div class="cl" id="ck-debate"><div class="box">✓</div><div class="txt"><b>Defended it</b><span>Attempt the live objection</span></div><div class="state">Not yet</div></div>
+      <span class="kick">Your levels on this argument</span>
+      <h4>What each one takes</h4>
+      <div class="checklist" id="levelReqs">
+        <div class="cl" id="rq-bronze"><div class="box">✓</div><div class="txt"><b>Bronze · Understand</b><span>Rebuild the argument + what the necessary ground must be, from memory (&ge;80%) — the checkpoint at the end of &ldquo;Understand it.&rdquo;</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-explain"><div class="box">✓</div><div class="txt"><b>Silver · part 1 · Explain it</b><span>Score 8+ on Explain It Back at level 2 or 3 (the argument <em>and</em> its hardest objection)</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-objections"><div class="box">✓</div><div class="txt"><b>Silver · part 2 · Objections cold</b><span>Answer all four objection drills with &ldquo;nailed it&rdquo;</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-unseen"><div class="box">✓</div><div class="txt"><b>Gold · part 1 · The unseen objection</b><span>Face one objection the page never drilled (below)</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-disc"><div class="box">✓</div><div class="txt"><b>Gold · part 2 · Pick the right tool</b><span>Pass &ldquo;which argument answers this?&rdquo; &mdash; four of five, mixed with neighbouring arguments</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-spaced"><div class="box">✓</div><div class="txt"><b>Gold · part 3 · Prove it again</b><span>Clear this argument on 3 spaced reviews — it returns on its own</span></div><div class="state">0 of 3</div></div>
       </div>
-      <div style="margin-top:26px;border-top:1px solid var(--border);padding-top:20px">
+      <p style="font-family:var(--ui);font-size:13px;color:var(--tm);margin-top:14px">Gold can slip back to Silver if you stop turning up for the spaced reviews — real mastery is perishable, which is why it's worth something. The dashboard brings this one back when it's due.</p>
+      <div style="margin-top:22px;border-top:1px solid var(--border);padding-top:18px">
         <span class="kick">One more thing — be honest</span>
         <h4 style="font-size:17px">If a friend challenged you on this tomorrow, how ready are you?</h4>
-        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Your self-rating is tracked over time so you can watch confidence climb across the library.</p>
+        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Rate yourself — then see whether your Explain It Back score backs it up. Felt-confidence and shown-confidence are not the same thing, and the gap is worth knowing before a real conversation.</p>
         <div class="confrow" id="confRow">
           <button onclick="setConf(this,1)">Shaky</button>
           <button onclick="setConf(this,2)">Getting there</button>
@@ -562,6 +759,26 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <button onclick="setConf(this,4)">Could teach it</button>
         </div>
         <div id="calibNote" style="display:none"></div>
+      </div>
+    </div>
+
+    <div class="card" id="unseenGate">
+      <span class="kick">Gold gate · the unseen objection</span>
+      <h4>One you weren&rsquo;t coached on</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Everything above rehearsed objections the page showed you. Here is the real test: an objection we deliberately did <em>not</em> drill — Russell's famous charge that the whole argument commits a logical fallacy. Reason it out cold, then reveal how the argument handles it. An honest &ldquo;nailed it&rdquo; is the first half of <b>Gold</b>.</p>
+      <div class="interloc">
+        <div class="av">BR</div>
+        <div><div class="who2">Bertrand Russell</div><div class="bub">"Your argument commits the fallacy of composition. Every man who exists has a mother — but obviously the human race doesn't have a mother. Just because each part of the universe is contingent, it doesn't follow that the whole universe is."</div></div>
+      </div>
+      <textarea id="unseenBox" placeholder="Reason it out — does the property transfer, and why or why not?"></textarea>
+      <div class="btnrow"><button class="btn gold" type="button" onclick="unseenReveal()">Reveal how the argument handles it</button></div>
+      <div class="modelans" id="unseenModel">
+        <div class="lbl">How the argument answers it — ported from the deep dive</div>
+        <p>The fallacy-of-composition charge does not always hold: some properties <em>do</em> transfer from parts to whole (a wall built entirely of brick is itself brick). Whether <em>contingency</em> transfers is exactly the question in dispute — and the theist gives a reason it does: a whole composed <em>entirely</em> of contingent things, with no necessary member anywhere in it, has nothing within it that grounds its existence, and adding up things that each could have failed to exist does not produce something that <em>could not</em> have failed to exist. So this is not a blind inference from part to whole; it is a claim about what a wholly-contingent collection can and cannot explain about itself — and Russell's &ldquo;mother&rdquo; analogy, like any composition example, cannot settle by itself whether <em>this</em> particular property transfers.</p>
+        <div class="confrow" style="margin-top:12px">
+          <button type="button" onclick="unseenRate(1)">Shaky — I&rsquo;ll sit with it</button>
+          <button type="button" onclick="unseenRate(2)">Nailed it &#10003;</button>
+        </div>
       </div>
     </div>
 
@@ -581,37 +798,52 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
 <script>
-/* ---- in-memory state (swap for localStorage/Supabase in production) ---- */
-const state = { read:false, explainPass:false, cardsSeen:new Set(), debateTried:false, conf:0 };
+/* ---- state: three earned levels (Bronze / Silver / Gold) ----
+   bronze = reconstruction checkpoint passed (>=80%); explainScore = best Explain It Back
+   (Silver part 1 needs >=8); objCold = objection-drill indices self-rated "nailed it"
+   (Silver part 2 = all); unseen = Gold part 1; Gold part 2 = 3 spaced recalls (ad_reviews step). */
+const state = { bronze:false, explainScore:0, objCold:new Set(), unseen:false, explainHi:false, cardsSeen:new Set(), conf:0, explainLevel:1 };
 
-/* ---- persistence + site streak (ad_mastery / ad_streak) ---- */
 const ARG_ID = location.pathname.split('/').pop().replace('ev-m-','').replace('.html','');
-const FRESH_MS = 30*24*60*60*1000; /* 30 days */
 function adAll(){ try{ return JSON.parse(localStorage.getItem('ad_mastery')||'{}'); }catch(e){ return {}; } }
-function adSave(full){
+function spacedCount(){ try{ var r = (JSON.parse(localStorage.getItem('ad_reviews')||'{}'))[ARG_ID]; return (r && r.step) ? r.step : 0; }catch(e){ return 0; } }
+
+/* Gold sub-gate (Phase 1.5, 2026-10-11): the mixed 'which argument answers this?' drill, run by lib/review-queue.js. */
+function discPassed(){ try{ return !!((adAll()[ARG_ID]||{}).disc); }catch(e){ return false; } }
+
+function levelOf(){
+  var silver = state.bronze && state.explainScore>=8 && state.explainHi && state.objCold.size>=OBJ.length;
+  if(silver && state.unseen && discPassed() && spacedCount()>=3) return 3;
+  if(silver) return 2;
+  if(state.bronze) return 1;
+  return 0;
+}
+
+function adSave(){
   try{
-    var m = adAll(); var e = m[ARG_ID] || {};
-    e.read = state.read; e.explain = state.explainPass;
-    e.cards = state.cardsSeen.size; e.debate = state.debateTried;
-    e.explainScore = state.explainScore || e.explainScore || 0; if(state.conf) e.conf = state.conf;
-    if(full){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
+    var m = adAll(); var e = m[ARG_ID] || {}; var lv = levelOf();
+    e.bronze = state.bronze;
+    e.explainScore = Math.max(state.explainScore||0, e.explainScore||0);
+    e.objCold = Array.from(state.objCold);
+    e.unseen = state.unseen;
+    e.explainHi = !!state.explainHi || !!e.explainHi;
+    e.cards = state.cardsSeen.size;
+    if(state.conf) e.conf = state.conf;
+    e.level = lv;
+    e.read = state.bronze; e.explain = state.explainScore>=8; e.debate = state.objCold.size>0;
+    if(lv>=2){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
     m[ARG_ID] = e; localStorage.setItem('ad_mastery', JSON.stringify(m));
   }catch(e){}
 }
 function adRestore(){
   try{
     var e = adAll()[ARG_ID]; if(!e) return;
-    state.read = !!e.read; state.explainPass = !!e.explain; state.debateTried = !!e.debate;
-    state.explainScore = e.explainScore || 0; state.conf = e.conf || 0;
-    var fresh = e.fresh && (Date.now() - e.fresh) < FRESH_MS;
-    if(e.cards >= cards.length && fresh){ for(var i=0;i<cards.length;i++) state.cardsSeen.add(i); }
-    if(e.cards >= cards.length && !fresh){
-      var note = document.createElement('div');
-      note.style.cssText = 'font-family:var(--ui);font-size:.8rem;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.7rem 1rem;margin:0 0 1rem;';
-      note.innerHTML = '&#9888; Memory fades \u2014 it has been a while. Flip through the flashcards again to restore this argument to gold.';
-      var fc = document.querySelector('.flashwrap') || document.getElementById('flash') || null;
-      if(fc && fc.parentNode){ fc.parentNode.insertBefore(note, fc); }
-    }
+    state.bronze = !!e.bronze || !!e.read;
+    state.explainScore = e.explainScore || 0;
+    state.unseen = !!e.unseen;
+    state.explainHi = !!e.explainHi;
+    state.conf = e.conf || 0;
+    if(Array.isArray(e.objCold)){ e.objCold.forEach(function(i){ state.objCold.add(i); }); }
   }catch(e){}
 }
 function adMark(){
@@ -629,51 +861,68 @@ function adMark(){
   }catch(e){}
 }
 
-/* ---- mastery dial ---- */
+/* ---- mastery dial + level ladder ---- */
 const CIRC = 263.9;
+function setLvl(id, earned, current){
+  var el = document.getElementById(id); if(!el) return;
+  el.classList.toggle('earned', earned);
+  el.classList.toggle('current', current && !earned);
+  var s = el.querySelector('.ls'); if(s) s.textContent = earned ? 'Earned \u2713' : (current ? 'Next up' : 'Locked');
+}
+function setReq(id, done, txt){
+  var el = document.getElementById(id); if(!el) return;
+  el.classList.toggle('done', done);
+  var s = el.querySelector('.state'); if(s) s.textContent = txt;
+}
 function updateDial(){
-  let done = 0;
-  if(state.read) done++;
-  if(state.explainPass) done++;
-  if(state.cardsSeen.size >= cards.length) done++;
-  if(state.debateTried) done++;
-  const pct = Math.round(done/4*100);
-  adSave(pct===100);
-  if(window._adLoaded && done>0) adMark();
-  document.getElementById('pctNum').textContent = pct + '%';
-  document.getElementById('ring').style.strokeDashoffset = CIRC - (CIRC*pct/100);
+  var lv = levelOf();
+  var pct = [0,34,67,100][lv];
+  adSave();
+  if(window._adLoaded && (state.bronze || state.explainScore || state.objCold.size || state.unseen)) adMark();
+  var pn = document.getElementById('pctNum'); if(pn) pn.textContent = pct + '%';
+  var ring = document.getElementById('ring'); if(ring) ring.style.strokeDashoffset = CIRC - (CIRC*pct/100);
 
-  setCheck('ck-read', state.read);
-  setCheck('ck-explain', state.explainPass);
-  setCheck('ck-cards', state.cardsSeen.size >= cards.length);
-  setCheck('ck-debate', state.debateTried);
+  setLvl('lvl-bronze', lv>=1, lv===0);
+  setLvl('lvl-silver', lv>=2, lv===1);
+  setLvl('lvl-gold',   lv>=3, lv===2);
+
+  setReq('rq-bronze', state.bronze, state.bronze ? 'Done' : 'Not yet');
+  setReq('rq-explain', state.explainScore>=8 && state.explainHi, (state.explainScore>=8 && state.explainHi) ? ('Done \u00b7 '+state.explainScore+'/10') : (state.explainScore ? ('Best '+state.explainScore+'/10') : 'Not yet'));
+  setReq('rq-objections', (typeof OBJ!=='undefined' && state.objCold.size>=OBJ.length), (typeof OBJ!=='undefined' && state.objCold.size>=OBJ.length) ? 'Done' : (state.objCold.size + ' of ' + (typeof OBJ!=='undefined'?OBJ.length:4)));
+  setReq('rq-unseen', state.unseen, state.unseen ? 'Done' : 'Not yet');
+  var sc = Math.min(spacedCount(), 3); setReq('rq-spaced', sc>=3, sc>=3 ? 'Done' : (sc + ' of 3'));
+  setReq('rq-disc', discPassed(), discPassed() ? 'Done' : 'Not yet');
+
   try{ renderCalibration(); }catch(e){}
 
-  if(pct===100){
-    document.getElementById('ctaTitle').textContent = 'the Contingency Argument mastered - it just turned gold on your shelf';
-    document.getElementById('ctaText').textContent = 'That is 3 of 22. The same path is waiting for every argument in the library. Keep the streak going.';
-    document.querySelector('.libnote').innerHTML = '&#9670; &nbsp;the Contingency Argument mastered - 3 of 22 core arguments complete';
-  }
-}
-function setCheck(id, on){
-  const el = document.getElementById(id);
-  el.classList.toggle('done', on);
-  var stEl = el.querySelector('.state');
-  if(on){ stEl.textContent = 'Done'; return; }
-  if(id==='ck-read'){
-    stEl.textContent = (typeof _accOpened !== 'undefined' && _accs.length) ? (_accOpened.size + ' of ' + _accs.length + ' opened') : 'Open every section';
-  } else {
-    stEl.textContent = 'Not yet';
+  var ln = document.querySelector('.libnote');
+  if(lv>=3){
+    var ct = document.getElementById('ctaTitle'); if(ct) ct.textContent = 'the Contingency Argument mastered \u2014 Gold on your shelf';
+    var cx = document.getElementById('ctaText'); if(cx) cx.textContent = 'You rebuilt it, defended it cold, met an objection you had never seen, and proved it again weeks later. That confidence is earned \u2014 keep it alive on the spaced reviews.';
+    if(ln) ln.innerHTML = '&#9670; &nbsp;the Contingency Argument \u2014 Gold \u00b7 mastered';
+  } else if(lv>=1 && ln){
+    ln.innerHTML = '&#9670; &nbsp;the Contingency Argument \u2014 ' + (lv===2?'Silver':'Bronze') + ' \u00b7 keep going';
   }
 }
 
-/* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
-/* ---- argument premises used to ground the AI scoring ---- */
+/* ---- explain it back (real AI scoring via /api/tutor; mock fallback) ---- */
+/* ARG_PREMISES: the certified rubric POSTed to /api/tutor and rendered into the share-card. */
 var ARG_PREMISES = [
   'Everything that exists has an explanation, in its own necessity or in an external cause.',
   'The universe is contingent - it exists but could have failed to.',
-  'Therefore the universes explanation lies in a necessary, transcendent being - what classical theism calls God, though naming that being the Father, Son and Holy Spirit is the work of revelation.'
+  'Therefore the universe’s explanation lies in a necessary, transcendent being - what classical theism calls God, though naming that being the Father, Son and Holy Spirit is the work of revelation.'
 ];
+
+function setExplainLevel(btn, lv){
+  state.explainLevel = lv;
+  [].forEach.call(document.querySelectorAll('#explainLevels button'), function(b){ b.classList.remove('sel'); });
+  if(btn) btn.classList.add('sel');
+  var box = document.getElementById('explainBox');
+  var ph = lv===3 ? 'Explain it to a hostile, well-read skeptic — anticipate the pushback and answer it...'
+         : lv===2 ? 'From memory: the argument AND your best answer to the brute-fact objection (why not let the universe just be there?)...'
+         : 'Start with: Everything that exists has an explanation...';
+  if(box) box.setAttribute('placeholder', ph);
+}
 
 /* Real AI scoring via /api/tutor (same method as explain-it-back.html).
    Falls back to a local heuristic if the API is unreachable (e.g. preview). */
@@ -683,7 +932,10 @@ async function scoreExplain(btn){
   if(!txt){ return; }
   if(btn){ btn.disabled = true; btn.dataset.lbl = btn.textContent; btn.textContent = 'Scoring...'; }
   try{
-    var prompt = 'Please evaluate this student explanation of "The Leibniz Contingency Argument". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
+    var lvAsk = state.explainLevel>=3 ? '\n\nThe student was asked to explain it to a hostile, well-read skeptic: weight whether they anticipated and answered the obvious pushback (brute fact, the PSR, the fallacy of composition), not merely stated the argument. Keep the scope honest: a necessary ground, not yet the full God of Christian worship.'
+              : state.explainLevel===2 ? '\n\nThe student was ALSO asked to answer the brute-fact objection (why not let the universe simply be there, with no explanation?): weight whether they engaged it honestly rather than waving it off.'
+              : '';
+    var prompt = 'Please evaluate this student explanation of "The Leibniz Contingency Argument". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + lvAsk + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
     var res = await fetch('/api/tutor', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
@@ -736,7 +988,8 @@ function renderScore(score, strengths, improvements){
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score);
+  if(score>=8 && (state.explainLevel||1)>=2) state.explainHi = true;
   updateDial();
 }
 
@@ -744,8 +997,8 @@ function renderMockScore(txtRaw){
   var t = (txtRaw||'').toLowerCase();
   var checks = [
     {ok:/explanation|sufficient reason|psr/.test(t) && /exist/.test(t), hit:'Premise 1 - you named the principle that what exists has an explanation', miss:'Premise 1 is missing - say that whatever exists has an explanation, in its nature or a cause'},
-    {ok:/contingent|could have|might not|necessary being|necessary/.test(t), hit:'Premise 2 - you flagged the universe as contingent', miss:'Premise 2 is thin - say the universe is contingent and could have failed to exist'},
-    {ok:/necessary being|external cause|ground|self-exist/.test(t), hit:'Good - you reasoned to a necessary, self-existent ground', miss:'Push to the necessary being - the ground that cannot fail to exist'},
+    {ok:/\bcontingen|could have (failed|been otherwise|not existed|been different)|might not have existed|need not have existed|could fail to exist/.test(t), hit:'Premise 2 - you flagged the universe as contingent', miss:'Premise 2 is thin - say the universe is contingent and could have failed to exist'},
+    {ok:/necessar(y|ily) (being|ground|mind|cause|foundation|exist\w*)|exists? necessarily|self-exist|cannot fail to exist|could not (have )?fail(ed)? to exist/.test(t) && !/(?<!of )\b(the|this|our|a) ?(universe|cosmos|world|multiverse|matter-energy|matter|physical reality) (itself )?(exists? necessarily|necessarily exists?|is (itself )?(the |a )?(necessary|self-exist))/.test(t), hit:'Good - you reasoned to a necessary, self-existent ground', miss:'Push to the necessary being - the ground that cannot fail to exist'},
     {ok:/god|mind|personal/.test(t), hit:'Nice - you connected the necessary being to God', miss:'Close the loop: the necessary being is what theism calls God'},
     {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth - you developed it, not just listed it', miss:'Go a bit deeper - a full reconstruction runs longer than this'}
   ];
@@ -759,17 +1012,25 @@ function renderMockScore(txtRaw){
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score);
+  if(score>=8 && (state.explainLevel||1)>=2) state.explainHi = true;
   updateDial();
 }
 
 /* ---- flashcards (generated from this argument) ---- */
 const cards = [
   {q:'State the Principle of Sufficient Reason (P1).', a:'Everything that exists has an explanation of its existence - either in the necessity of its own nature or in an external cause.'},
-  {q:'What is the taxicab fallacy?', a:'Using the Principle of Sufficient Reason everywhere, then dismissing it the moment it points beyond the universe. You cannot ride the cab your whole life and wave it away at your stop.'},
-  {q:'Reply to: the universe is just a brute fact.', a:'A brute fact is a refusal to explain, not an explanation. We accept it nowhere else, so exempting only the universe is arbitrary - the taxicab fallacy.'},
-  {q:'Reply to: explaining each part explains the whole.', a:'Even an infinite chain of contingent causes is itself contingent. Why this chain rather than none? The whole series still needs a non-contingent ground.'},
-  {q:'Why must the necessary being be more than a number?', a:'Abstract objects are causally impotent - a number cannot cause a universe. The ground of contingent reality must be able to cause, and plausibly chooses - so it is a mind, not a number.'}
+  {q:'Contingent vs. necessary being - define each.', a:'A contingent being could have failed to exist and depends on something else (you, this planet, an atom). A necessary being exists by its own nature, could not have failed to be, and needs no external cause.'},
+  {q:'Why isn’t the universe itself the necessary being?', a:'It doesn’t look necessary: we can readily conceive it with different laws, different particles, or not at all. A being whose every part could have been different is a poor candidate for existing by the sheer necessity of its own nature.'},
+  {q:'Strong vs. weak PSR - and why the difference matters.', a:'Strong: every fact HAS an explanation (van Inwagen: this leads to modal collapse). Weak (Gale-Pruss, from Duns Scotus): every fact POSSIBLY has one - enough to run the argument while sidestepping the collapse worry.'},
+  {q:'How does "explanation by free choice" answer modal collapse?', a:'The explanans (God) is necessary, but the explaining ACT is free - a free agent could have chosen otherwise - so the world is explained without being necessitated. It leans on a libertarian view of free will, which is itself contested.'},
+  {q:'Reply to the taxicab objection: the theist uses the PSR, then dismisses it at God.', a:'Premise 1 never said everything has an external cause; God satisfies the principle as the being whose explanation lies in his own necessary nature. The taxi is not dismissed; it arrives at its proper destination.'},
+  {q:'Reply to: the universe is just a brute fact.', a:'A brute initial state explains nothing about why it obtains, while a necessary ground that freely chooses to create explains both that there is a world and why it is contingent. "The universe is just there" is a possible answer but not the better one.'},
+  {q:'Reply to: explaining each part explains the whole.', a:'Why this chain rather than none? A whole composed entirely of contingent things, with no necessary member anywhere in it, has nothing within it that grounds its existence.'},
+  {q:'Reply to Russell’s fallacy-of-composition charge.', a:'Some properties do transfer from parts to whole (a wall of brick is brick); whether contingency does is the question. Adding up things that each could have failed to exist does not produce something that could NOT have failed. "Having a mother" doesn’t sum; "needing a ground of existence" does.'},
+  {q:'Why must the necessary being be more than a number?', a:'Abstract objects are causally impotent - a number cannot cause a universe. The ground of contingent reality must be able to cause, and plausibly chooses - so it is plausibly a mind, not an inert abstraction.'},
+  {q:'Oppy’s parsimony challenge - and the reply.', a:'The naturalist can stop at the cosmos or its initial state, positing one fewer entity. Reply: parsimony only breaks ties between explanations that explain equally well - and a brute state explains nothing about why it obtains, while a necessary ground that freely creates explains both that there is a world and why it is contingent.'},
+  {q:'What does the argument establish - and not?', a:'A necessary, transcendent, self-explanatory ground of all contingent reality - NOT yet the personal, good, triune God of worship. That requires the moral, historical and revelatory case. One strand in a cumulative case.'}
 ];
 let ci = 0;
 function renderCard(){
@@ -783,35 +1044,95 @@ function renderCard(){
 function nextCard(){ ci = (ci+1)%cards.length; renderCard(); }
 function prevCard(){ ci = (ci-1+cards.length)%cards.length; renderCard(); }
 
-/* ---- debate ---- */
-document.getElementById('debateBox').addEventListener('input', ()=>{
-  if(document.getElementById('debateBox').value.trim().length > 8 && !state.debateTried){
-    state.debateTried = true; updateDial();
+/* ---- Bronze reconstruction gate (retrieval-earned "Understand") ---- */
+var ORDER = [
+  'Whatever exists has an explanation - in its own nature or an external cause.',
+  'The universe is contingent - it could have failed to exist.',
+  'Therefore its explanation is a necessary, transcendent being.'
+];
+var PROPS = [
+  {t:'necessary (couldn\u2019t fail to exist)', ok:true}, {t:'self-existent / self-explanatory', ok:true}, {t:'transcendent (beyond space and time)', ok:true}, {t:'plausibly a mind', ok:true},
+  {t:'the triune God of worship', ok:false}, {t:'morally good', ok:false}, {t:'proven with certainty', ok:false}, {t:'one more contingent thing', ok:false}
+];
+var _ordSel = [];
+function _shuf(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } return a; }
+function injectBronze(){
+  var pool=document.getElementById('orderPool');
+  if(pool && !pool.children.length){
+    _shuf([0,1,2]).forEach(function(k){
+      var b=document.createElement('button'); b.type='button'; b.className='btn ghost'; b.textContent=ORDER[k];
+      b.onclick=function(){ if(b.disabled) return; b.disabled=true; b.style.opacity=.4; _ordSel.push(k); _ordSeq(); };
+      pool.appendChild(b);
+    });
   }
-});
-document.querySelector('[onclick*="modelAns"]').addEventListener('click', ()=>{
-  state.debateTried = true; updateDial();
-});
-
-/* ---- prove it ---- */
-function markRead(){
-  state.read = true;
-  document.getElementById('readBtn').textContent = 'Marked as understood \u2713';
-  document.getElementById('readBtn').classList.remove('primary');
-  document.getElementById('readBtn').classList.add('ghost');
-  updateDial();
+  var pp=document.getElementById('propPool');
+  if(pp && !pp.children.length){
+    _shuf(PROPS).forEach(function(p){
+      var b=document.createElement('button'); b.type='button'; b.className='btn ghost'; b.textContent=p.t; b.setAttribute('data-ok', p.ok?'1':'0');
+      b.onclick=function(){ b.classList.toggle('sel'); };
+      pp.appendChild(b);
+    });
+  }
 }
+function _ordSeq(){ var el=document.getElementById('orderSeq'); if(el) el.textContent = _ordSel.length ? _ordSel.map(function(k,i){ return (i+1)+'. '+ORDER[k]; }).join('    ') : ''; }
+function resetBronze(){
+  _ordSel=[]; _ordSeq();
+  var pool=document.getElementById('orderPool'); if(pool){ [].forEach.call(pool.children,function(b){ b.disabled=false; b.style.opacity=1; }); }
+  var pp=document.getElementById('propPool'); if(pp){ [].forEach.call(pp.children,function(b){ b.classList.remove('sel'); }); }
+  var g=document.getElementById('bronzeGrade'); if(g){ g.className='gradeline'; g.textContent=''; }
+}
+function gradeBronze(){
+  var orderOK = _ordSel.length===3 && _ordSel[0]===0 && _ordSel[1]===1 && _ordSel[2]===2;
+  var pp=document.getElementById('propPool'); var right=0;
+  if(pp){ [].forEach.call(pp.children,function(b){ var want=b.getAttribute('data-ok')==='1'; var got=b.classList.contains('sel'); if(want===got) right++; }); }
+  var decisions = PROPS.length + 1, scored = right + (orderOK?1:0), pctOK = scored/decisions;
+  var g=document.getElementById('bronzeGrade'); if(!g) return;
+  g.className='gradeline show '+(pctOK>=0.8?'pass':'fail');
+  if(pctOK>=0.8){
+    state.bronze=true; updateDial();
+    g.textContent='\u2713 Bronze earned \u2014 you rebuilt the structure from memory ('+Math.round(pctOK*100)+'%). Now go defend it in Practice.';
+  } else {
+    g.textContent='Not yet \u2014 '+Math.round(pctOK*100)+'%. '+(orderOK?'':'Check the order of the three lines. ')+'Re-read the structure above, then try again \u2014 this rep is what makes it stick.';
+  }
+}
+
+/* ---- Drill 4: answer the objections cold (replies ported from the page) ---- */
+var OBJ = [
+  {who:'Skeptic', q:'Why add God? Maybe the universe just exists necessarily \u2014 it is the brute necessary thing, and no further explanation is required.', model:'The universe does not look necessary. A necessary being must exist in every possible world and could not have been otherwise in any respect \u2014 but we can readily conceive the universe with different laws, different particles, or not at all. A being whose every part could have been different is a poor candidate for something that exists by the sheer necessity of its own nature.'},
+  {who:'Skeptic', q:'The universe is just there, and that is all. We can simply reject the Principle of Sufficient Reason for the universe itself.', model:'If the universe is brute, the principle \u2014 even in its modest form \u2014 has been abandoned at the crucial point, and you still owe an account of why this universe rather than any other, or none. A brute state explains nothing about why it obtains, while a necessary ground that freely chooses to create explains both that there is a world and why it is contingent. So "just there" is a possible answer, but not the better one.'},
+  {who:'Philosopher', q:'Explain every contingent thing by a prior one \u2014 even an infinite chain \u2014 and you have explained everything. Asking for an explanation of the whole collection is a fallacy.', model:'Explaining each link by the previous one never answers why there is any chain at all rather than nothing. Whether contingency transfers from parts to whole is exactly the question, and some properties do transfer (a wall of brick is brick). A whole composed entirely of contingent things, with no necessary member anywhere in it, has nothing within it that grounds its existence.'},
+  {who:'Skeptic', q:'Grant a necessary explanation \u2014 why think it is God rather than some abstract object, like a number, existing necessarily?', model:'Abstract objects are causally impotent \u2014 a number cannot cause a universe. The necessary being must be able to produce contingent reality and, to bring about a contingent universe, plausibly chooses to. That points to a necessary mind, not an inert abstraction or a brute particle (which would itself be contingent).'}
+];
+var _od = 0;
+function odRender(){
+  var o=OBJ[_od];
+  var q=document.getElementById('odQ'); if(q) q.textContent='"'+o.q+'"';
+  var who=document.getElementById('odWho'); if(who) who.textContent=o.who;
+  var av=document.getElementById('odAv'); if(av) av.textContent=o.who.slice(0,2).toUpperCase();
+  var mt=document.getElementById('odModelText'); if(mt) mt.textContent=o.model;
+  var mm=document.getElementById('odModel'); if(mm) mm.classList.remove('show');
+  var bx=document.getElementById('odBox'); if(bx) bx.value='';
+  var c=document.getElementById('odCount'); if(c) c.textContent=(_od+1)+' of '+OBJ.length+(state.objCold.has(_od)?' \u00b7 nailed \u2713':'');
+}
+function odReveal(){ var mm=document.getElementById('odModel'); if(mm) mm.classList.add('show'); }
+function odRate(v){ if(v===2){ state.objCold.add(_od); } else { state.objCold.delete(_od); } updateDial(); if(_od<OBJ.length-1){ _od++; } odRender(); }
+function odNext(){ _od=(_od+1)%OBJ.length; odRender(); }
+function odPrev(){ _od=(_od-1+OBJ.length)%OBJ.length; odRender(); }
+
+/* ---- Gold part 1: the unseen objection ---- */
+function unseenReveal(){ var m=document.getElementById('unseenModel'); if(m) m.classList.add('show'); }
+function unseenRate(v){ state.unseen = (v===2); updateDial(); }
 function renderCalibration(){
   try{
     var el = document.getElementById('calibNote'); if(!el) return;
     var conf = state.conf||0, best = state.explainScore||0;
     var labels = {1:'Shaky',2:'Getting there',3:'Solid',4:'Could teach it'};
     if(conf){ var _b=document.querySelectorAll('#confRow button'); if(_b[conf-1]){ [].forEach.call(_b,function(b){b.classList.remove('sel');}); _b[conf-1].classList.add('sel'); } }
-    if(conf>=3 && best<7){
+    if(conf>=3 && best<8){
       var shown = best>0 ? ('your best Explain It Back so far is '+best+'/10') : 'you haven\u2019t scored an Explain It Back yet';
       el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.8rem 1rem;';
       el.innerHTML = '\u26A0 You rated yourself \u201C'+labels[conf]+'\u201D \u2014 but '+shown+'. Worth closing: confidence that holds up in a real conversation is confidence you\u2019ve <b>shown</b>, not just felt. <a href="#" onclick="var b=document.getElementById(\'explainBox\');if(b){b.scrollIntoView({behavior:\'smooth\'});b.focus();}return false;" style="color:#a88930;font-weight:600">Prove it on Explain It Back \u2192</a>';
-    } else if(conf>=3 && best>=7){
+    } else if(conf>=3 && best>=8){
       el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#2f7d4f;background:rgba(47,125,79,.08);border:1px solid rgba(47,125,79,.3);border-radius:6px;padding:.8rem 1rem;';
       el.innerHTML = '\u2713 Calibrated \u2014 you feel ready and you\u2019ve shown it ('+best+'/10 on Explain It Back). That\u2019s earned confidence.';
     } else {
@@ -872,23 +1193,14 @@ async function boot(){
     if(!isPro){ showGate(); return; }
   }
   /* build the track */
+  injectBronze();
   adRestore();
   renderCard();
+  odRender();
   updateDial();
   renderCalibration();
   window._adLoaded = true;
 }
-/* "Understood it" is earned by opening every section in Phase 1 (defences + objections) */
-var _accs = Array.prototype.slice.call(document.querySelectorAll('#understand details.acc'));
-var _accOpened = new Set();
-_accs.forEach(function(d, i){
-  d.addEventListener('toggle', function(){
-    if(!d.open || state.read){ return; }
-    _accOpened.add(i);
-    if(_accOpened.size >= _accs.length){ state.read = true; }
-    updateDial();
-  });
-});
 
 /* ---- share-card: render this argument as a branded image ---- */
 function _shareSetMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
@@ -956,6 +1268,8 @@ document.addEventListener('DOMContentLoaded', boot);
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
   <script src="/lib/review-queue.js" defer></script>
+  <script src="/library/mastery-ui.js?v=20261009e" defer></script>
   <script src="/library/verse-popup.js" defer></script>
+<script src="/defend-live.js" defer></script>
 </body>
 </html>

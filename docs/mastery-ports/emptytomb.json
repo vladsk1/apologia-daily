@@ -1,0 +1,354 @@
+{
+ "slug": "emptytomb",
+ "title": "The Empty Tomb",
+ "short": "the empty tomb",
+ "keyTerms": [
+  {
+   "t": "Bare burial vs. a known tomb",
+   "d": "The bare fact of burial is held by most critical scholars; whether the tomb was known and locatable is the genuinely debated point, and it is the hinge on which the strongest version of the sceptical case turns."
+  },
+  {
+   "t": "Criterion of embarrassment",
+   "d": "A movement free to compose its founding story for maximum credibility would not choose a counter-productive detail; such a detail the criterion of embarrassment marks as probably historical."
+  },
+  {
+   "t": "Enemy attestation",
+   "d": "Jesus’ opponents did not deny the tomb was empty — they offered a rival explanation for it. To bother explaining why a tomb is empty is most naturally read as conceding that it was empty. The counter-story is securely attested only from Matthew’s period onward, so the datum is strong but not contemporaneous with the events themselves."
+  },
+  {
+   "t": "The Jerusalem factor",
+   "d": "The resurrection was first proclaimed in Jerusalem, not in distant Galilee a generation later: the tomb was local and accessible, and the authorities had every motive and every means to end the movement by producing the corpse. The argument is not airtight — a body weeks dead might be hard to identify, and we cannot prove the authorities tried and failed — but the silence about any such refutation, in a context where one was so obviously wanted, is suggestive."
+  },
+  {
+   "t": "Multiple attestation",
+   "d": "The empty tomb is reported in Mark and, independently, in the special material of Matthew, Luke, and John. Multiple independent lines reporting the same outcome raise its probability above what any single witness could establish."
+  },
+  {
+   "t": "Pre-Markan passion source",
+   "d": "An earlier connected source from which a number of scholars judge Mark drew his passion-and-burial account, pushing the tradition back well before the Gospel’s composition. The existence and extent of such a source is debated."
+  },
+  {
+   "t": "“Raised” in a first-century Jewish frame",
+   "d": "As N. T. Wright argues, in mainstream first-century Jewish usage no one would have described a man as “raised” while his corpse still lay in the tomb; “resurrection” meant precisely the reversal of that state — so the creed’s “was buried … was raised” presupposes the empty tomb."
+  },
+  {
+   "t": "Cumulative case",
+   "d": "Five lines of evidence are usually advanced. None is decisive alone; their force is cumulative — circumstantial, in the way most ancient history is."
+  }
+ ],
+ "derive": [
+  {
+   "q": "A named burial in the tomb of Joseph of Arimathea, a member of the council that handed Jesus over — so the claim is…?",
+   "ans": "checkable — and awkward to invent",
+   "why": "A named tomb in a named owner’s possession means the claim was, in the language of historians, falsifiable: there was a specific place to point to. And for a pious member of that body to step forward and do right by Jesus cuts against the grain of early Christian writing, which is sharply hostile to the Jewish leadership."
+  },
+  {
+   "q": "The earliest recoverable enemy response was “the body was taken,” not “the body is still there” — so it…?",
+   "ans": "most naturally read as conceding the vacancy (but not contemporaneous)",
+   "why": "To bother explaining why a tomb is empty is most naturally read as conceding that it was empty. It should be granted, in fairness, that this counter-story is securely attested only from Matthew’s period onward, so the datum is strong but not contemporaneous with the events themselves."
+  },
+  {
+   "q": "Women — whose public word carried little weight — are credited as the first and primary witnesses — so the detail is…?",
+   "ans": "probably historical",
+   "why": "A movement free to compose its founding story for maximum credibility would naturally have put male disciples at the tomb. Whether women were formally barred from giving legal testimony is itself disputed, but even the weaker claim about how their word was regarded is enough to make female first-witnesses a counter-productive choice for an inventor."
+  },
+  {
+   "q": "The resurrection was proclaimed first in Jerusalem, and no source records the body ever being produced — so the silence is…?",
+   "ans": "suggestive, not airtight",
+   "why": "The authorities had both the motive and the means to strangle the preaching at birth by producing the body. The argument is not airtight — a body weeks dead might be hard to identify, and we cannot prove the authorities tried and failed — but the silence about any such refutation, in a context where one was so obviously wanted, is suggestive."
+  },
+  {
+   "q": "Mark plus the independent special material of Matthew, Luke, and John, and a creed that says “he was buried … he was raised” — so the tradition is…?",
+   "ans": "early and multiply attested (its source debated)",
+   "why": "On the view that the empty-tomb report belongs to the pre-Markan passion source, it is very early — and its earliest form is conspicuously plain: an open grave and frightened women. A tradition that reports a puzzle rather than a triumph reads far more like early memory than like developed legend. The existence and extent of that source is debated."
+  },
+  {
+   "q": "Grant all of it: the grave was found empty. Does that, by itself, prove a resurrection?",
+   "ans": "no — it raises the question “why was it empty?”",
+   "why": "An empty tomb, by itself, is consistent with theft, relocation, confusion, or causes we cannot now recover; the leap from “the grave was empty” to “God raised him” depends on the appearances and on the failure of natural alternatives, argued separately. The empty tomb is a necessary feature of the bodily-resurrection claim and a serious historical datum in its own right — not, on its own, a demonstration of the miracle."
+  }
+ ],
+ "honestState": {
+  "p1": "The empty tomb is affirmed by a wide range of mainstream scholars — the position of a substantial majority of those who have worked closely on the question, how large a majority cannot be precisely quantified, and not a unanimous one. It is also genuinely disputed, with Crossan, Ehrman, and others on the other side. The empty tomb is better described as a strong, well-defended position than as a settled fact — and noticeably less secure than the near-consensus that the disciples had experiences they took to be appearances.",
+  "fairness": "The oft-cited “about 75 percent” comes from Gary Habermas’s ongoing bibliographic survey: it is a count of published positions assembled by one researcher, not a randomised poll, and critics have questioned how the sample was drawn. And some of the affirming side claim more than we do: Michael Grant’s “necessitate” and Paul Maier’s argument from the absence of disproof state the case more confidently than the cautious “more probable than not” defended here.",
+  "verdict": "The verdict a careful inquirer can reach is confident but bounded: the grave was, in all probability, found empty; what emptied it is the next and larger question. The empty tomb does not by itself prove the resurrection, and the most serious sceptical reply — that there was no known tomb to begin with — is one the evidence answers on balance even if it cannot rule it out with certainty. With the appearances, the most natural explanation of those facts together, for anyone not antecedently committed to ruling miracles out, is that Jesus rose bodily from the dead."
+ },
+ "order": [
+  "Jesus was buried in a tomb.",
+  "That tomb was, more probably than not, found empty.",
+  "Therefore the vacancy needs explaining."
+ ],
+ "props": [
+  {
+   "t": "a named burial by Joseph of Arimathea",
+   "ok": true
+  },
+  {
+   "t": "a vacancy that needs explaining",
+   "ok": true
+  },
+  {
+   "t": "an enemy counter-story that presupposes the vacancy",
+   "ok": true
+  },
+  {
+   "t": "the tomb found empty, more probably than not",
+   "ok": true
+  },
+  {
+   "t": "multiply attested",
+   "ok": true
+  },
+  {
+   "t": "proves the resurrection by itself",
+   "ok": false
+  },
+  {
+   "t": "accepted by all scholars",
+   "ok": false
+  },
+  {
+   "t": "the evidence compels the conclusion",
+   "ok": false
+  },
+  {
+   "t": "as secure as the appearances",
+   "ok": false
+  },
+  {
+   "t": "Paul narrates the discovery",
+   "ok": false
+  }
+ ],
+ "cards": [
+  {
+   "q": "State Premise 1 — and its honest limit.",
+   "a": "Jesus was buried in a tomb — that of Joseph of Arimathea. The bare fact of burial is held by most critical scholars; whether the tomb was known and locatable is the genuinely debated point, and the hinge of the strongest sceptical case."
+  },
+  {
+   "q": "State Premise 2 — and how strong a verdict it claims.",
+   "a": "That tomb was, more probably than not, found empty by women followers on the first day of the week, and no source records the body ever being produced. The verdict is the cautious “more probable than not,” not that the evidence compels the conclusion."
+  },
+  {
+   "q": "What does the conclusion reach — and not reach?",
+   "a": "That the vacancy needs explaining. An empty tomb, by itself, is consistent with theft, relocation, confusion, or causes we cannot now recover; the leap to “God raised him” depends on the appearances and on the failure of natural alternatives, argued separately."
+  },
+  {
+   "q": "Why does the burial by Joseph of Arimathea carry weight?",
+   "a": "Because it is awkward: a member of the council that handed Jesus over does right by him, against the grain of early Christian hostility to that leadership. And a named tomb in a named owner’s possession made the claim falsifiable — there was a specific place to point to."
+  },
+  {
+   "q": "Why are women as first witnesses evidence?",
+   "a": "A movement free to compose its founding story for maximum credibility would have put male disciples at the tomb. Whether women were formally barred from legal testimony is disputed, but how their word was regarded is enough to make female first-witnesses a counter-productive choice for an inventor."
+  },
+  {
+   "q": "What does the theft accusation concede?",
+   "a": "To bother explaining why a tomb is empty is most naturally read as conceding that it was empty. The earliest recoverable Jewish response was not ‘the body is still there’ but ‘the body was taken’ — though the counter-story is securely attested only from Matthew’s period onward."
+  },
+  {
+   "q": "The Jerusalem factor — what does it show, and what is its limit?",
+   "a": "A movement proclaiming a bodily resurrection took root in the very city of the execution and burial, where the authorities had motive and means to produce the body — yet the counter-move recorded is a story about a stolen one. Limit: a body weeks dead might be hard to identify; the silence is suggestive, not airtight."
+  },
+  {
+   "q": "Reply to: Paul never mentions the empty tomb.",
+   "a": "Granted — Paul nowhere narrates the discovery. But the creed runs died, buried, raised, appeared, and for a first-century Jew “raised” after “buried” entails an emptied grave; a compressed formula would not pause to narrate a tomb-discovery; silence in a summary is not denial."
+  },
+  {
+   "q": "“There was no known tomb at all” — which premise does it attack, and what tells against it?",
+   "a": "Premise 1 — it denies there was a known tomb to reach. Against it: Jewish law and practice required burial of the executed before nightfall; a crucified man in a first-century Jerusalem tomb shows some victims were properly buried; and the awkward details — a Sanhedrist benefactor, the women — bear the marks of memory rather than invention. Answered on balance, not with certainty."
+  },
+  {
+   "q": "“The disciples stole the body” — what does it grant, and what burden must it carry?",
+   "a": "It grants the tomb and seeks a natural emptying. Its burden: the would-be thieves went on to suffer, and in several cases die, proclaiming a resurrection they would have known to be staged. Sincere people die for false beliefs; a coordinated group dying for what they personally know to be a fraud is psychologically strained."
+  },
+  {
+   "q": "“Mark’s women said nothing to anyone, so the story was late” — why does the inference fail?",
+   "a": "The silence is a reaction, not a policy; the verse before commissions them to tell; the other Gospels have them tell. And the excuse theory needs the tomb story to be late: if, as a number of scholars judge, Mark drew on an earlier passion source containing it, a story already circulating before Mark cannot have been composed to explain why it had never circulated. That source is debated, but the creed shows an emptied grave belonged to the belief from before any Gospel was written."
+  },
+  {
+   "q": "How secure is the empty tomb compared with the appearances?",
+   "a": "A strong, well-defended position rather than a settled fact, and noticeably less secure than the near-consensus that the disciples had experiences they took to be appearances. It is genuinely disputed, with Crossan, Ehrman, and others on the other side."
+  }
+ ],
+ "obj": [
+  {
+   "who": "Skeptic",
+   "q": "The oldest explanation is the obvious one: the followers took the body at night and proclaimed a resurrection they knew was false.",
+   "model": "Theft was the very charge the earliest polemic preferred — which itself treats the tomb as empty. The difficulty is motive and consequence: the disciples who would have to be the thieves went on to suffer and, in several cases, die for proclaiming a resurrection they would have known to be staged. Sincere people die for false beliefs all the time; what is psychologically strained is a coordinated group dying for what they personally know to be a fraud. Not a knock-down refutation — a reason the theory has not commanded a consensus."
+  },
+  {
+   "who": "Skeptic",
+   "q": "Grieving women in the dark misidentified the tomb — or the authorities quietly moved the body. The legend grew from a simple mistake.",
+   "model": "The women saw where he was laid, and the Gospels place it in a named man’s tomb. And each variant founders on the same rock: had the body existed anywhere recoverable, producing it would have been the obvious and devastating reply, and no source records anyone doing so. The argument is not airtight — a body weeks dead might be hard to identify — but the silence, in a context where a refutation was so obviously wanted, is suggestive. These are not knock-down refutations; they are reasons the natural theories have not commanded a consensus."
+  },
+  {
+   "who": "Historian",
+   "q": "Rome left crucified men on the cross or in shallow graves for the dogs. There was no known tomb at all — the burial story is a Markan creation.",
+   "model": "Concede what is true: crucifixion was designed to deny honourable burial, and non-burial was common. But Jewish law required burial of the executed before nightfall, and Josephus says the Jews buried even the crucified before sunset; the heel-bone of Yehohanan, a crucified man found in a first-century Jerusalem tomb, shows at least some victims were properly buried; and the thesis must treat as fiction precisely the details — a Sanhedrist benefactor, the women witnesses — that bear the marks of awkward memory. The evidence answers it on balance, even if it cannot rule it out with certainty."
+  },
+  {
+   "who": "Skeptic",
+   "q": "Our earliest source, Paul, never mentions an empty tomb. It first turns up in Mark, a decade or more later — a later invention.",
+   "model": "The observation is accurate: Paul nowhere narrates the discovery. But the inference does not follow. The creed he cites says Christ “was buried” and “was raised on the third day” — and, as N. T. Wright argues, in mainstream first-century Jewish usage no one would have described a man as “raised” while his corpse still lay in the tomb. A compressed four-line formula would not pause to narrate a tomb-discovery; silence in a summary is not denial. And the tradition Mark preserves, women as the first witnesses, bears the embarrassment marks that tell against a late invention."
+  }
+ ],
+ "unseen": {
+  "who": "Classics student",
+  "av": "CS",
+  "q": "Mark borrowed a Greco-Roman convention. Romulus and Heracles were removed from the earth and taken up among the gods — an empty grave was the sign a hero had been exalted. Mark’s scene needn’t owe anything to a visit to a real grave.",
+  "model": "Tested against the ancient evidence, Peter Bolt shows, the claim fails at both ends. Greek hero cults were grave cults: it was possession of the hero’s bones that bound him to the place, so that, far from a hero being recognised by an empty grave, “exactly the opposite was normally the case” — the “empty tombs” that did exist were cenotaphs, memorials for someone whose body everyone knew to lie somewhere else. Nor does it fit the translation stories: in the normal pattern the favoured one escapes death altogether, so there is no grave at all, and the handful of exceptions only widen the gap — Achilles and Heracles are taken away at the funeral pyre, Alkmene’s body disappears from the bier before it is ever buried. Mark’s Jesus dies, is buried, lies in the grave, and is raised out of it — the women saw where he was laid and are pointed to “the place where they laid him”; and the verb, “he has risen,” is the language of resurrection, not of removal. That establishes what kind of story Mark is telling, not by itself that it happened; the historical case rests on the lines of evidence set out above.",
+  "source": "library/emptytomb.html — “Was Mark’s empty tomb borrowed from Greco-Roman hero stories?” (Bolt, Tyndale Bulletin 47.1, 1996; fn 22)"
+ },
+ "explain2": "Crossan’s — and on independent grounds Ehrman’s — objection that there was no known tomb to find empty",
+ "ledger": [
+  {
+   "field": "title",
+   "from": "ev-m-emptytomb.html <h1> “The Empty Tomb” verbatim."
+  },
+  {
+   "field": "keyTerms[0]",
+   "from": "essay §Crossan close (“The bare fact of burial is held by most critical scholars; whether the tomb was known…the hinge…”), verbatim."
+  },
+  {
+   "field": "keyTerms[1]",
+   "from": "essay §3 women witnesses (“A movement free to compose its founding story…”; “counter-productive detail the criterion of embarrassment marks as probably historical”), lightly recombined."
+  },
+  {
+   "field": "keyTerms[2]",
+   "from": "essay §2 enemy attestation, two sentences verbatim."
+  },
+  {
+   "field": "keyTerms[3]",
+   "from": "essay §4 Jerusalem factor, opening two sentences, joined."
+  },
+  {
+   "field": "keyTerms[4]",
+   "from": "essay §5 multiple attestation, first and last sentences."
+  },
+  {
+   "field": "keyTerms[5]",
+   "from": "essay §5 + fn 13 (“the existence and extent of such a source is debated”)."
+  },
+  {
+   "field": "keyTerms[6]",
+   "from": "essay §Paul’s silence (Wright paraphrase: “in mainstream first-century Jewish usage no one would have described a man as ‘raised’…”), verbatim."
+  },
+  {
+   "field": "keyTerms[7]",
+   "from": "essay §The fact and its supports (“Five lines of evidence…their force is cumulative”) + Conclusion (“cumulative and circumstantial, in the way most ancient history is”)."
+  },
+  {
+   "field": "derive[0]",
+   "from": "essay §1 burial by Joseph (falsifiable; ‘cuts against the grain’), lightly compressed."
+  },
+  {
+   "field": "derive[1]",
+   "from": "essay §2, verbatim sentences incl. the ‘securely attested only from Matthew’s period onward’ concession."
+  },
+  {
+   "field": "derive[2]",
+   "from": "essay §3 + its ‘limit should be stated precisely’ paragraph."
+  },
+  {
+   "field": "derive[3]",
+   "from": "essay §4 (Craig paragraph + ‘not airtight’ limit), verbatim."
+  },
+  {
+   "field": "derive[4]",
+   "from": "essay §5 + fn 13 debated-source hedge."
+  },
+  {
+   "field": "derive[5]",
+   "from": "essay §What the evidence does and does not show, verbatim; FAQ 1 framing ‘why was the grave empty?’."
+  },
+  {
+   "field": "honestState.p1",
+   "from": "essay §Where the scholarship stands, paras 2–3 (‘substantial majority…cannot be precisely quantified…not a unanimous one’; ‘genuinely disputed…noticeably less secure…’)."
+  },
+  {
+   "field": "honestState.fairness",
+   "from": "essay §Where the scholarship stands para 1 (Habermas caveat) + the Grant ‘necessitate’ and Maier ‘absence of disproof’ disclaimers; mirrors the mastery page’s certified ‘The room’ line."
+  },
+  {
+   "field": "honestState.verdict",
+   "from": "essay Conclusion, verbatim with light compression; ‘rose bodily’ kept in our own voice as the essay has it."
+  },
+  {
+   "field": "order",
+   "from": "ev-m-emptytomb.html certified syllogism P1/P2/C, shortened to the main clause of each."
+  },
+  {
+   "field": "props (true)",
+   "from": "essay Conclusion’s five-strand summary + mastery-page chip row."
+  },
+  {
+   "field": "props (decoys)",
+   "from": "each is explicitly denied in the essay: ‘None of this proves a resurrection’; ‘not a unanimous one’; ‘not that the evidence compels the conclusion’; ‘noticeably less secure than the near-consensus’ on appearances; ‘Paul nowhere narrates the discovery’."
+  },
+  {
+   "field": "cards[0–2]",
+   "from": "certified syllogism + Premise-2 precision check + essay §What the evidence does and does not show."
+  },
+  {
+   "field": "cards[3]",
+   "from": "essay §1 (awkward Sanhedrist; falsifiable named tomb)."
+  },
+  {
+   "field": "cards[4]",
+   "from": "existing certified card 2 + essay §3 limit sentence."
+  },
+  {
+   "field": "cards[5]",
+   "from": "existing certified card 3, verbatim."
+  },
+  {
+   "field": "cards[6]",
+   "from": "essay §4 (Craig paragraph + limit)."
+  },
+  {
+   "field": "cards[7]",
+   "from": "existing certified card 4 + essay §Paul’s silence reasons 1–2."
+  },
+  {
+   "field": "cards[8]",
+   "from": "essay §Crossan reply (three considerations) + Conclusion ‘answers on balance even if it cannot rule it out with certainty’. Premise label from the certified P1 precision check (‘the hinge’)."
+  },
+  {
+   "field": "cards[9]",
+   "from": "essay §The stolen-body theories (‘If one grants the tomb but seeks a natural emptying…’), verbatim core."
+  },
+  {
+   "field": "cards[10]",
+   "from": "essay §Mark’s silent women, reasons 1–4 and the ‘story already circulating before Mark’ sentence."
+  },
+  {
+   "field": "cards[11]",
+   "from": "essay §Where the scholarship stands para 3; ‘Never claim the sceptics concede it’ is the brief’s hedge stated as instruction (see notes)."
+  },
+  {
+   "field": "obj[0]",
+   "from": "page accordion ‘The disciples stole the body’ + essay §stolen-body + FAQ 2 (‘Theft was the very charge the earliest Jewish polemic preferred, which itself suggests the tomb was empty’)."
+  },
+  {
+   "field": "obj[1]",
+   "from": "essay §stolen-body ‘Variants…each founder on the same rock…’ verbatim; ‘saw where he was laid’ from essay §Bolt (Mark 15:47); page accordion ‘wrong tomb’ (named man’s tomb)."
+  },
+  {
+   "field": "obj[2]",
+   "from": "essay §Crossan (statement + three-part reply) and page Drill/accordion ‘Crucifixion victims were not buried’."
+  },
+  {
+   "field": "obj[3]",
+   "from": "essay §Paul’s silence; page accordion ‘Paul never mentions an empty tomb’."
+  },
+  {
+   "field": "unseen",
+   "from": "essay §‘Was Mark’s empty tomb borrowed from Greco-Roman hero stories?’ (objection statement + Bolt reply + bounded close). Absent from the 4 obj, every page accordion and every card."
+  },
+  {
+   "field": "explain2",
+   "from": "ev-m-emptytomb.html certified routing line (‘The one that matters most: Crossan and Ehrman’s — that there was no known tomb to find empty’)."
+  }
+ ],
+ "notes": "Authored/connective strings, declared: (1) derive[].q prompts and derive[].ans short answers are question scaffolding in the kalam template’s register, built from essay vocabulary (‘falsifiable’, ‘concedes’, ‘probably historical’, ‘suggestive…not airtight’, ‘very early’, ‘why was it empty?’) — no new claim; (2) card questions and the premise-labels in cards[8–9] (‘which premise does it attack / what does it grant’) are structural framing, the labels taken from the certified P1 precision check and the essay’s ‘If one grants the tomb’; (3) cards[11]’s closing ‘Never claim the sceptics concede it’ is an instruction derived from the brief/essay hedge, not an essay sentence — drop it if a lens objects; (4) obj[].q objection phrasings are compressions of the essay’s and page accordions’ ‘Strongest form’ statements; unseen.q compresses the essay’s own statement of the Bickermann/Hamilton view. The Habermas/Grant/Maier names appear only in honestState.fairness (as on the certified ‘The room’ line), never as a card answer. Josephus and Yehohanan appear inside obj[2] as supporting evidence ported from the essay, not as answers. Not ported: the essay’s ‘relocation by authorities’ has no separate essay reply beyond the shared ‘same rock’ sentence, so it is folded into obj[1]; the Mark-16:8 excuse objection is carried as a card (cards[10]) rather than an obj, keeping the four obj to the most-met objections. The Greco-Roman hero/translation objection was deliberately kept OUT of keyTerms, derive, cards and obj so it can serve as the unseen Gold-gate objection (it is not on the current mastery page at all)."
+}

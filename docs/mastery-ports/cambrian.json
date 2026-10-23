@@ -1,0 +1,365 @@
+{
+ "slug": "cambrian",
+ "title": "The Cambrian Explosion",
+ "short": "the Cambrian explosion and the design inference",
+ "keyTerms": [
+  {
+   "t": "The Cambrian explosion",
+   "d": "The geologically rapid appearance of most major animal body plans, beginning around 538.8 million years ago and unfolding over roughly the first 20 to 25 million years of the Cambrian, with a denser pulse of body-plan innovation inside that window. It is a real landmark event, but slower and more layered than the word suggests: it was preceded by the Ediacaran biota, the small shelly fauna and complex trace fossils."
+  },
+  {
+   "t": "Phylum (body plan)",
+   "d": "A body plan at the highest level of architectural difference — the distinction between an insect and a starfish and a fish. The striking thing is not merely that the Cambrian animals are complex but that the deep, top-level differences among them appear early and close together, rather than accumulating slowly over hundreds of millions of years."
+  },
+  {
+   "t": "Specified information and dGRNs",
+   "d": "Meyer's argument is about information, not gaps in the fossil record (he grants the record is incomplete). Building a new body plan, he contends, requires new, functionally specified genetic information — new genes coding for new proteins, and, more demandingly, new developmental gene regulatory networks (dGRNs) that switch genes on and off in the right cells at the right times to assemble an embryo."
+  },
+  {
+   "t": "Inference to the best explanation",
+   "d": "The argument's form: design is offered as the best current explanation of the Cambrian information, not as a deductive proof. The entire weight rests on the two premises, and it is there that the real debate lives — inference to the best explanation is how Darwin himself argued, and the god-of-the-gaps charge contests the form of the inference rather than the data."
+  },
+  {
+   "t": "Axe's rarity estimate (contested)",
+   "d": "The design biochemist Douglas Axe estimated, by extrapolating from experiments on a β-lactamase enzyme domain, that sequences performing a specific function by any domain-sized fold might be as rare as 1 in 10^77 — which, if correct, would make a blind mutational search prohibitively unlikely in the time available. It is genuinely contested: Arthur Hunt argues the experiment does not measure the global density of all functional sequences, and that functional proteins may be far commoner. It is one disputed estimate in a live technical dispute, and the case cannot lean on it as settled."
+  },
+  {
+   "t": "Evo-devo and regulatory rewiring",
+   "d": "The mainstream developmental answer to Premise 2: evolutionary developmental biology showed that large morphological change need not require large amounts of brand-new information, because much body-plan diversity arises from rewiring an ancient, shared genetic toolkit (the Hox genes and other regulators), changing where and when existing genes are expressed. Marshall's central rebuttal is that building Cambrian animals may have required little new genetic information and much rearrangement of connections among genes already present."
+  },
+  {
+   "t": "God-of-the-gaps (and the positive reply)",
+   "d": "The charge, pressed by Marshall, that the inference reads design off what evolution has not yet explained; the phrase was popularized by the Christian mathematician and chemist Charles Coulson (1955), and evolutionary creationists press it today. The design reply is that the inference is meant to be positive — intelligence is the only known cause of large amounts of functionally specified information — but its force still depends on whether the naturalistic options are genuinely inadequate, which is the contested half."
+  },
+  {
+   "t": "Data conceded, design inferred",
+   "d": "The data of the Cambrian explosion are not in serious dispute, and on the data the design movement and mainstream paleontology largely agree: complex animal body plans appear over a geologically short interval, and the full causal story of how their developmental programs originated is not yet known. What is contested is the inference to a mind; mainstream biology treats the event as a partly open chapter within evolutionary history, not as evidence against common descent."
+  }
+ ],
+ "derive": [
+  {
+   "q": "Darwin saw complex animals in the oldest fossil-bearing rocks with no ancestors beneath them — did he call it a problem or brush it off…?",
+   "ans": "a problem — \"a valid argument against\" his theory",
+   "why": "In On the Origin of Species (1859) Darwin confronted the puzzle and conceded its force: the case \"may be truly urged as a valid argument against the views here entertained.\" His gradualism predicted a long, branching pedigree of simpler ancestors stretching down beneath the Cambrian; the rocks of his day showed him none. He bet that future discovery would fill the gap."
+  },
+  {
+   "q": "Meyer grants the fossil record is incomplete — so what is his argument actually about…?",
+   "ans": "information, not gaps in the fossils",
+   "why": "His case is not primarily about gaps in the fossil record. It is about the origin of new, functionally specified genetic information — new genes coding for new proteins, and, more demandingly, the developmental gene regulatory networks that assemble an embryo. Premise 2, about the adequacy of unguided mechanisms, is where his distinctive argument lives."
+  },
+  {
+   "q": "The \"explosion\" ran 20–25 million years with Ediacaran precursors — so is the honest defender's move to deny that or concede it…?",
+   "ans": "concede it — the premises are softer than \"sudden\"",
+   "why": "A 20-to-25-million-year diversification, preceded by Ediacaran organisms, small shellies, complex trace fossils and molecular-clock signals of deeper divergence, is slower and more textured than \"explosion\" conveys to a lay reader, and the honest defender concedes this. But against the roughly three billion years of microbial life that preceded it, the burst is still abrupt enough that even its most committed naturalistic students call it, without embarrassment, an explosion."
+  },
+  {
+   "q": "Mainstream biology answers Premise 2 with evo-devo rewiring of existing genes — what does the defender say that leaves untouched…?",
+   "ans": "the origin of the networks being rewired",
+   "why": "Regulatory rewiring presupposes the very developmental logic whose origin is in question: rearranging an existing gene-regulatory network is not the same as explaining how that network first arose, and it is the origin of the dGRNs, not their later redeployment, that the argument presses. But whether the naturalistic options are genuinely inadequate is precisely the empirical question the mainstream answers differently."
+  },
+  {
+   "q": "Grant the design inference its full force — how far does it actually reach…?",
+   "ans": "a purposing designer, not yet the Triune God",
+   "why": "Even at its strongest the argument reaches a purposing designer, not yet the Triune God of the creeds — a companion to the fuller case, not a substitute for it. The fuller case for the Christian God rests on revelation and, above all, on the historical evidence for the resurrection. And it does not show that evolution is false, or that scientists agree the animals were designed."
+  }
+ ],
+ "honestState": {
+  "p1": "The data of the Cambrian explosion are not in serious dispute, and on the data the design movement and mainstream paleontology largely agree: complex animal body plans appear over a geologically short interval, and the full causal story of how their developmental programs originated is not yet known. What is contested is the inference. Stephen Meyer (Darwin's Doubt, 2013) presses the design argument from the origin of biological information; the mainstream paleontologists Douglas Erwin and James Valentine (The Cambrian Explosion, 2013) agree the event is real and partly unexplained while disputing the information claim; the geologist Donald Prothero argues the radiation was protracted and stepwise and that Meyer underweights the earlier record; the Berkeley paleontologist Charles Marshall, in his Science review \"When Prior Belief Trumps Scholarship,\" argues Meyer omits relevant fossils and \"misunderstands the nuances of molecular phylogenetics,\" and that much of the diversity came from rewiring genes already present; the biochemist Arthur Hunt contests Douglas Axe's rarity figure. The overwhelming majority of paleontologists and evolutionary biologists do not accept the design inference, and their reasons are substantial, not reflexive.",
+  "fairness": "Honest defenders concede the observations. The empirical premises are softer than the rhetoric of \"sudden\" suggests: a 20-to-25-million-year diversification, preceded by Ediacaran organisms, small shellies, complex trace fossils and molecular-clock signals of deeper divergence, is slower and more textured than \"explosion\" conveys. Douglas Axe's rarity figure — load-bearing for the time-budget claim — is genuinely contested, and a responsible presentation cannot lean on it as though it were settled. The developmental answer (evo-devo), rising oxygen and ecological triggers are real responses worth weighing. But the inference does not follow from the concessions: against roughly three billion years of microbial life the burst is still abrupt; regulatory rewiring presupposes the very developmental logic whose origin is in question; and the origin of the developmental programs that build animals remains, by mainstream admission, a deep open problem. The concession is about the tempo and about one disputed number, not about the hard question at the centre — and the hard question is no proof of design either.",
+  "verdict": "The Cambrian explosion is a real and remarkable event, and the origin of the developmental information that builds animal body plans is, by the admission of mainstream paleontologists, a genuine and partly open scientific problem. But the argument establishes far less than its strongest advocates sometimes suggest: it does not show that evolution is false, that the explosion was instantaneous, or that scientists agree the Cambrian animals were designed — they do not. At most it raises a serious philosophical challenge about the origin of biological information, one whose force depends on empirical claims (the rarity of functional proteins, the rigidity of developmental networks, the adequacy of the available time) that remain disputed among qualified researchers. It is best held as a live and interesting inference, offered with intellectual humility and without overstatement — and even at its strongest it reaches a purposing designer, not yet the Triune God of the creeds. The fuller case for the Christian God rests on revelation and, above all, on the historical evidence for the resurrection; this site takes no position binding the faith to intelligent design or to any reading of the timescales of Genesis."
+ },
+ "order": [
+  "The geologically rapid Cambrian appearance of most major animal body plans, without the long graded series of intermediate architectures strict gradualism predicts, needs an adequate cause for that burst of biological information.",
+  "Unguided mutation and selection are not an adequate cause of that information in the available time, whereas intelligent agency is a known and adequate cause of specified information.",
+  "Therefore the best current explanation of the Cambrian information is an intelligent cause — an inference to the best explanation, reaching at most a purposing designer, not proof that evolution is false or that the animals were designed, and not yet the Triune God."
+ ],
+ "props": [
+  {
+   "t": "that the Cambrian explosion is a real event, with the data not in serious dispute",
+   "ok": true
+  },
+  {
+   "t": "that most major animal body plans appear over a geologically short, roughly 20–25-million-year interval",
+   "ok": true
+  },
+  {
+   "t": "that the origin of the developmental programs that build animals is a genuine, partly unsolved problem",
+   "ok": true
+  },
+  {
+   "t": "a serious philosophical challenge about the origin of biological information",
+   "ok": true
+  },
+  {
+   "t": "that the inference is offered as a best explanation, not a deductive proof",
+   "ok": true
+  },
+  {
+   "t": "that even at its strongest it reaches at most a purposing designer, not the Triune God",
+   "ok": true
+  },
+  {
+   "t": "proves the Cambrian animals were designed",
+   "ok": false
+  },
+  {
+   "t": "shows that evolution is false",
+   "ok": false
+  },
+  {
+   "t": "settles that unguided mutation and selection cannot produce new body plans",
+   "ok": false
+  },
+  {
+   "t": "by itself shows the God of the Bible exists",
+   "ok": false
+  },
+  {
+   "t": "demonstrates that the explosion was instantaneous",
+   "ok": false
+  },
+  {
+   "t": "amounts to a scientific consensus that the animals were designed",
+   "ok": false
+  }
+ ],
+ "cards": [
+  {
+   "q": "What does this argument press, and what does it leave open?",
+   "a": "It presses a question about the origin of biological information — what best explains the geologically rapid arrival of new animal body plans. It leaves open whether evolution is false (it does not show that) and whether the designer is the God of the Bible (that is the work of the other arguments and of revelation, above all the resurrection)."
+  },
+  {
+   "q": "Why did the puzzle begin with Darwin himself?",
+   "a": "In On the Origin of Species he faced complex animals in the oldest fossil-bearing rocks with no ancestors in the strata beneath, and conceded the case \"may be truly urged as a valid argument against\" his theory. His gradualism predicted a long pedigree of simpler ancestors; the rocks of his day showed none. He bet future discovery would fill the gap."
+  },
+  {
+   "q": "Meyer grants the fossil record is incomplete — so what is his case really about?",
+   "a": "Information, not gaps. Building a new body plan, he argues, requires large amounts of new, functionally specified genetic information — new proteins and, more demandingly, the developmental gene regulatory networks that switch genes on and off to assemble an embryo. The gaps in the rocks are not the load-bearing claim."
+  },
+  {
+   "q": "What is the single most honest concession Premise 1 has to make?",
+   "a": "That \"explosion\" is softer than it sounds. The diversification runs roughly 20–25 million years and was preceded by the Ediacaran biota, the small shelly fauna and complex trace fossils, with molecular clocks placing many divergences deeper still. It is a real but slower, more textured event than the word conveys to a lay reader, and the honest defender concedes this."
+  },
+  {
+   "q": "If the data are conceded on both sides, what exactly is in dispute?",
+   "a": "The inference, not the data. The reality of the explosion and the open status of how the developmental programs arose are agreed across the board; what is contested is whether a mind is the best explanation of the information, or whether that remains an unsolved problem within evolutionary biology — which is how the mainstream treats it, not as evidence against common descent."
+  },
+  {
+   "q": "What is Axe's rarity estimate, and why can't the argument lean on it as settled?",
+   "a": "Axe extrapolated from a β-lactamase enzyme domain that functional folds might be as rare as 1 in 10^77, which would make a blind search prohibitively unlikely in the time available. But it is genuinely contested — Arthur Hunt argues the method does not measure the global density of all functional sequences, and that proteins may be far commoner — so it is one disputed estimate in a live technical dispute, not a settled number."
+  },
+  {
+   "q": "What is the mainstream's developmental answer to Premise 2?",
+   "a": "Evo-devo: large morphological change need not require large amounts of brand-new information, because much body-plan diversity comes from rewiring an ancient, shared genetic toolkit (the Hox genes), changing where and when existing genes are expressed. Marshall's central rebuttal is that building Cambrian animals may have needed little new genetic information and much rearrangement."
+  },
+  {
+   "q": "What does the defender say regulatory rewiring leaves unexplained?",
+   "a": "The origin of the networks being rewired. Rearranging an existing gene-regulatory network is not the same as explaining how that network first arose, and it is the origin of the developmental programs, not their later redeployment, that the argument presses. But whether the naturalistic options are genuinely inadequate is the empirical question the mainstream answers differently."
+  },
+  {
+   "q": "Why is the design inference called \"god-of-the-gaps,\" and what is the reply?",
+   "a": "The charge — pressed by Marshall, the phrase popularized by the Christian chemist Charles Coulson — is that design is read off what evolution has not yet explained. The reply is that the inference is meant to be positive: intelligence is the only known cause of large amounts of specified information. But its force still depends on whether the natural mechanisms are genuinely inadequate, which is the contested half it cannot escape."
+  },
+  {
+   "q": "How should the \"extended evolutionary synthesis\" debate be read — and how is it often misread?",
+   "a": "A real in-house debate (the 2008 Altenberg workshop; a 2016 Royal Society meeting opened by Gerd Müller) asks whether neo-Darwinism alone is sufficient for major novelty. But the additions it proposes — developmental plasticity, niche construction, epigenetic inheritance — are every one of them natural mechanisms, not design, and its proponents affirm common descent and have publicly repudiated the design movement's use of their work. A live mechanism-debate is evidence the naturalistic programme is alive, not evidence for design."
+  },
+  {
+   "q": "Does the site take a position on evolution or the age of the earth here?",
+   "a": "No. Apologia Daily binds the faith neither to intelligent design as science nor to any reading of the timescales of Genesis; faithful Catholic, Orthodox and Protestant believers — old-earth, young-earth and evolutionary-creationist alike — hold the Nicene faith in common while differing on these natural-historical questions. The doctrine of creation is that all things depend on God, not a verdict on the mechanism."
+  },
+  {
+   "q": "Granting the inference its full strength, how far does it reach?",
+   "a": "At most to a purposing designer, not yet the Triune God of the creeds — a companion to the fuller case, not a substitute for it. The fuller case for the Christian God rests on revelation and, above all, on the historical evidence for the resurrection. Held as more than a live inference, it claims a certainty the evidence does not yet supply."
+  }
+ ],
+ "obj": [
+  {
+   "who": "Paleontologist",
+   "q": "Calling this an \"explosion\" is rhetoric. The diversification unfolds in stages over roughly 20 to 25 million years, and it was preceded by the Ediacaran biota, the \"small shelly fauna,\" and trace fossils that record increasingly complex, mobile animals before they left good body fossils. The geologist Donald Prothero argues it is far better described as a protracted, stepwise diversification, and that Meyer underweights that earlier record.",
+   "model": "Concede what is true, and the honest defender does: the empirical premises are softer than the rhetoric of \"sudden\" suggests — a 20-to-25-million-year diversification, preceded by Ediacaran organisms, small shellies, complex trace fossils and molecular-clock signals of deeper divergence, is slower and more textured than the word \"explosion\" conveys to a lay reader. But two things follow. First, against the roughly three billion years of microbial life that preceded it, the burst of animal architecture is abrupt enough that even its most committed naturalistic students call it, without embarrassment, an explosion. Second, and more important, the argument was never chiefly about the clock: it is about the origin of the developmental programs that build animals, which mainstream paleontologists themselves count a genuine and partly open problem. A longer fuse makes that question less dramatic; it does not answer it. So the verdict is bounded: the objection rightly deflates the rhetoric of suddenness, but it leaves the information question — the real load-bearing claim — exactly where it was, and it is no evidence that the inference to design is false."
+  },
+  {
+   "who": "Paleobiologist",
+   "q": "In his Science review \"When Prior Belief Trumps Scholarship,\" the Berkeley paleontologist Charles Marshall argued that Meyer omits relevant fossils — the Early Cambrian small shelly fauna among them — and \"misunderstands the nuances of molecular phylogenetics,\" both of which \"cause him to exaggerate the apparent suddenness of the Cambrian explosion.\" Marshall also charged that a passage Meyer quotes from one of Marshall's own review papers was stitched together from two separate sections, omitting its central conclusion that new genes were not the principal driver of the radiation. So the case rests on bad scholarship.",
+   "model": "Take the charges in turn. On the molecular clocks, concede the point: phylogenetics generally dates the genetic splits among the major animal lineages well before the Cambrian, so on that view what \"exploded\" was the acquisition of fossilizable hard parts and larger size, not the lineages themselves — though these estimates carry large uncertainties that depend on calibration and model assumptions, and pushing a sequence-divergence date earlier does not by itself supply a mechanism for assembling a new animal architecture. On the selective-quotation charge, Meyer and the Discovery Institute disputed Marshall's characterization, replying that the quotation fairly conveyed his point, and readers can weigh the exchange for themselves. And notice what Marshall himself granted in a later radio exchange — that the fossil-record portion of the book reflects \"good scholarship,\" a limited concession about the descriptive paleontology, not an endorsement of the conclusion, which was sharply negative. So the bounded verdict: Marshall's review genuinely wounds the rhetoric of suddenness and must be taken as decisive against overstatement — but it does not touch the core, which is the origin of the developmental information, and even its author concedes the descriptive paleontology is sound."
+  },
+  {
+   "who": "Biologist",
+   "q": "Modern biology moved past mutation-plus-selection. Evolutionary developmental biology shows that large morphological change need not require large amounts of brand-new genetic information: much body-plan diversity comes from rewiring the regulation of an ancient, shared genetic toolkit — the Hox genes and other regulators — changing where and when existing genes are expressed. Add ecological triggers like predation and a rise in atmospheric oxygen, and Marshall's central rebuttal stands: building Cambrian animals may have needed little new information and much rearrangement.",
+   "model": "These are real and important, and they should be stated at full strength — but they describe enabling conditions and machinery far better than they demonstrate a step-by-step pathway by which the first developmental networks were assembled. Oxygen and ecology may explain why complex animals could be sustained, not how their genetic instructions arose. And regulatory rewiring presupposes the very developmental logic whose origin is in question: rearranging an existing gene-regulatory network is not the same as explaining how that network first arose, and it is the origin of the dGRNs, not their later redeployment, that the argument presses. Here, though, is the honest boundary: whether the naturalistic options are genuinely inadequate is precisely the empirical question the mainstream answers differently, and the consensus judgment of the scientists who study the event most closely is that this is an unsolved problem within evolutionary biology, not a refutation of it. So the verdict lands exactly there: the developmental answer does not close the information question, but neither does the information question establish design — it marks a hard, genuinely open problem, and the argument cannot escape the verdict of the science; it depends on it."
+  },
+  {
+   "who": "Skeptic",
+   "q": "This is a god-of-the-gaps move: you infer a designer from what evolution has not yet explained. Science has a long record of filling such gaps with natural causes, and invoking intelligence halts inquiry and isn't testable. And the warning isn't only a skeptic's — the phrase was popularized by the Christian chemist Charles Coulson, and evolutionary creationists press it against the design movement today.",
+   "model": "The charge has to be met head-on, and the design reply is that the inference is meant to be positive, not negative: in every case where we independently know the cause of large amounts of functionally specified information — software, language, codes — that cause is a mind, so design is offered as an argument from what minds are known to do, not merely from biology's present ignorance. That is a real and respectable form of reasoning; inference to the best explanation is how Darwin himself argued, and it no more halts science than inferring a human cause halts archaeology. But honesty requires conceding the hinge: the inference's persuasiveness depends on both halves of the comparison — what minds are known to do, and whether the naturalistic options are genuinely inadequate — and the second half is exactly the empirical question the mainstream answers differently. So the bounded verdict: the argument is not a fallacy by its mere form, but it cannot escape the verdict of the science, and the consensus today is that the naturalistic resources are not exhausted — this is an unsolved problem within evolutionary biology, not a refutation of it. The argument reaches a live philosophical challenge, not a proof, and not yet the God of the creeds."
+  }
+ ],
+ "unseen": {
+  "who": "ID proponent",
+  "av": "ID",
+  "q": "You keep saying the mainstream rejects the design inference — but the mainstream is quietly abandoning Darwin anyway. Since the 2008 \"Altenberg\" workshop, and at a 2016 Royal Society meeting opened by Gerd Müller, serious evolutionary biologists have argued that standard mutation-and-selection is not by itself sufficient to explain major anatomical novelty. If even they admit the mechanism is broken, your Premise 2 is practically conceded by the field.",
+  "model": "The in-house debate is real, and it should be stated accurately — but it is the opposite of what the design literature often makes of it. This is the \"extended evolutionary synthesis,\" and the additions it proposes — developmental plasticity, niche construction, epigenetic inheritance, self-organization — are every one of them natural mechanisms, not design, and emphatically not a challenge to common descent, which its proponents affirm. Several have publicly repudiated the design movement's use of their work: the scientists of the \"Third Way of Evolution\" state that their website \"is wrongly being referenced by proponents of Intelligent Design and creationist ideas\" and that they reject any appeal to \"supernatural intervention.\" So the move cuts the other way: these researchers are calling for more natural mechanisms folded into evolutionary biology, not for a mind, and not against common descent. The bounded verdict follows exactly: that a mechanism-debate is live is not evidence for design; it is evidence that the naturalistic research programme is very much alive.",
+  "source": "library/cambrian.html — \"The Honest State of the Question,\" the extended-evolutionary-synthesis paragraph (Altenberg 2008; a 2016 Royal Society meeting on \"new trends in evolutionary biology\" opened by Gerd Müller; Müller, \"Why an Extended Evolutionary Synthesis Is Necessary,\" Interface Focus 7 [2017]; the \"Third Way of Evolution\" repudiation, thethirdwayofevolution.com). model ported verbatim/compressed with its natural-mechanisms-not-design fence and the repudiation quotation intact; the landing sentence is the essay's own (\"That a mechanism-debate is live is not evidence for design…\"). q AUTHORED — declared: the essay describes this as something \"a design advocate will raise… often quoted out of context,\" but never states it in an objector's full voice, so the objector's wording is mine. Genuinely unseen on the page: Altenberg, the Royal Society meeting, Müller, the extended evolutionary synthesis and the \"Third Way\" appear nowhere on ev-m-cambrian.html (verified by grep), and its five objection accordions are time/explosion, unfossilized ancestors, molecular clocks, evo-devo/oxygen, and god-of-the-gaps."
+ },
+ "explain2": "the objection that the window is really 20–25 million years with real Ediacaran precursors, and that evo-devo answers the developmental premise — a slower, layered event whose information problem has a mainstream developmental answer",
+ "ledger": [
+  {
+   "field": "title",
+   "from": "ev-m-cambrian.html <h1> \"The Cambrian Explosion\" verbatim (hero + <title> \"The Cambrian Explosion and Design\")."
+  },
+  {
+   "field": "short",
+   "from": "essay title/subject (\"The Cambrian Explosion and the Case for Design\") as a lower-case noun phrase."
+  },
+  {
+   "field": "keyTerms[0]",
+   "from": "essay §What the \"Explosion\" Actually Is paras 1–2 (538.8 Mya; \"first 20 to 25 million years\"; denser pulse) + §Honest State / mainstream-reply window para (Ediacaran, small shelly, trace fossils; \"slower and more textured\"), compressed."
+  },
+  {
+   "field": "keyTerms[1]",
+   "from": "essay §What the \"Explosion\" Actually Is para 1 (\"A phylum is a body plan at the highest level of architectural difference… insect and a starfish and a fish\"; deep top-level differences appear early), verbatim with compression."
+  },
+  {
+   "field": "keyTerms[2]",
+   "from": "essay §Darwin's Doubt para 2 (\"not primarily about gaps… he grants that fossils are incomplete… about information… new developmental gene regulatory networks (dGRNs)\"), verbatim with compression."
+  },
+  {
+   "field": "keyTerms[3]",
+   "from": "essay §The Case for the Premises / formal-statement para (\"inference to the best explanation, not a deductive proof; the entire weight rests on the two premises\") + §god-of-the-gaps para (\"inference to the best explanation is how Darwin himself argued\") + ev-m formnote."
+  },
+  {
+   "field": "keyTerms[4]",
+   "from": "essay §Case for the Premises para on Axe (β-lactamase extrapolation; \"as rare as one in 10^77\") + §Weighing the Exchange para 2 (Arthur Hunt; \"does not measure… the global density of all functional sequences\"; \"cannot lean on Axe's number as though it were settled; it is one disputed estimate in a live technical dispute\"), compressed; attributed to Axe/Hunt, never presented as settled."
+  },
+  {
+   "field": "keyTerms[5]",
+   "from": "essay §The information problem has a developmental answer (evo-devo; \"rewiring… an ancient, shared genetic toolkit (the Hox genes…)\"; Marshall's central rebuttal that little new information was required), verbatim with compression."
+  },
+  {
+   "field": "keyTerms[6]",
+   "from": "essay §Weighing the Exchange para 3 (god-of-the-gaps; Marshall; \"Charles Coulson (Science and Christian Belief, 1955)\"; evolutionary creationists; \"the inference is meant to be positive, not negative\"; \"persuasiveness depends on both halves\"), compressed."
+  },
+  {
+   "field": "keyTerms[7]",
+   "from": "essay §The Honest State of the Question paras 1–2 (\"The data… are not in serious dispute… largely agree… What is contested is the inference… a fascinating, partly unsolved chapter within evolutionary history — not as evidence against common descent\"), compressed."
+  },
+  {
+   "field": "derive[0]",
+   "from": "essay §Darwin's Doubt para 1 (Darwin's concession quoted; gradualism predicted a pedigree beneath the Cambrian; \"He bet that future discovery would fill the gap\"), verbatim with compression."
+  },
+  {
+   "field": "derive[1]",
+   "from": "essay §Darwin's Doubt para 2 (\"not primarily about gaps… about information… dGRNs\") + formal-statement para (Premise 2 is where the distinctive argument lives)."
+  },
+  {
+   "field": "derive[2]",
+   "from": "essay §window para + §What the \"Explosion\" Actually Is para 2 (\"against the roughly three billion years of microbial life… call it, without embarrassment, an explosion\") + §Weighing the Exchange para 2 (\"The honest defender concedes this\"), compressed."
+  },
+  {
+   "field": "derive[3]",
+   "from": "essay §Weighing the Exchange para 1 (\"regulatory rewiring presupposes the very developmental logic whose origin is in question… it is the origin of the dGRNs, not their later redeployment, that the argument presses\") + §god-of-the-gaps para (\"precisely the empirical question the mainstream answers differently\"), verbatim with compression."
+  },
+  {
+   "field": "derive[4]",
+   "from": "essay Conclusion para 2 (\"reaches a purposing designer, not yet the Triune God of the creeds — a companion to the fuller case, not a substitute… rests on revelation and… the resurrection\") + (\"It does not show that evolution is false… scientists agree the Cambrian animals were designed — they do not\"), compressed."
+  },
+  {
+   "field": "honestState.p1",
+   "from": "essay §The Honest State paras 1–2 + §Mainstream Reply intro (\"the overwhelming majority… do not accept this argument, and their reasons are substantial, not reflexive\") + the named critics/defenders from the window para (Prothero), the molecular-clock para (Marshall, Science review title), the evo-devo para, the Axe/Hunt pair, and Erwin & Valentine; all attributions kept as the essay keeps them."
+  },
+  {
+   "field": "honestState.fairness",
+   "from": "essay §Weighing the Exchange paras 1–2 (concessions: \"softer than the rhetoric of 'sudden'\"; Axe \"genuinely contested… cannot lean on… as settled\") + §Honest State para 3 enabling conditions + §Weighing para 1 (\"regulatory rewiring presupposes…\") + §Case for Premises (origin of developmental programs a deep open problem); ends on the reply, not the bare concession."
+  },
+  {
+   "field": "honestState.verdict",
+   "from": "essay Conclusion paras 1–2 (\"real and remarkable event… genuine and partly open scientific problem… does not show that evolution is false, that the explosion was instantaneous, or that scientists agree… At most it raises a serious philosophical challenge… live and interesting inference, offered with intellectual humility… reaches a purposing designer, not yet the Triune God… rests on revelation and… the resurrection\") + §Honest State para 4 (site takes no position on ID or the timescales of Genesis), verbatim with compression."
+  },
+  {
+   "field": "order",
+   "from": "ev-m-cambrian.html ARG_PREMISES (P1/P2/C verbatim) + essay formal-statement para; line 3's fence compresses the Conclusion (\"inference to the best explanation… reaches a purposing designer, not yet the Triune God\" and \"does not show that evolution is false… that scientists agree the Cambrian animals were designed\")."
+  },
+  {
+   "field": "props (true)",
+   "from": "essay Conclusion (\"real and remarkable event\"; \"At most it raises a serious philosophical challenge about the origin of biological information\"; \"reaches a purposing designer, not yet the Triune God\") + §What the \"Explosion\" Actually Is (20–25 My interval) + §Honest State paras 1–2 (data not in serious dispute; developmental origin a partly unsolved problem) + formal-statement para (inference to the best explanation, not a deductive proof)."
+  },
+  {
+   "field": "props (decoys)",
+   "from": "each explicitly denied by the essay: \"It does not show that evolution is false, that the explosion was instantaneous, or that scientists agree the Cambrian animals were designed — they do not\" (Conclusion); \"this inference is not a scientific consensus\" + central premise \"is rejected by the working scientists\" (Honest State para 2; \"the naturalistic resources are not exhausted,\" Weighing para 3) → \"settles that unguided mutation and selection cannot…\"; \"reaches a purposing designer, not yet the Triune God… The fuller case for the Christian God rests on revelation and… the resurrection\" → \"by itself shows the God of the Bible exists.\" Every decoy carries a verb on the argument (proves / shows / settles / demonstrates / amounts to)."
+  },
+  {
+   "field": "cards[0]",
+   "from": "essay §intro (\"states the design inference at its strongest… where the philosophical inference parts company from the empirical data\") + Conclusion para 2 (evolution not shown false; the God-of-the-creeds step belongs to revelation/the resurrection)."
+  },
+  {
+   "field": "cards[1]",
+   "from": "essay §Darwin's Doubt para 1 (Darwin's quoted concession; the missing Precambrian ancestors; \"He bet that future discovery would fill the gap\")."
+  },
+  {
+   "field": "cards[2]",
+   "from": "essay §Darwin's Doubt para 2 (\"not primarily about gaps… he grants that fossils are incomplete… about information… dGRNs\"), compressed."
+  },
+  {
+   "field": "cards[3]",
+   "from": "essay §window para + §Weighing para 2 (\"softer than the rhetoric of 'sudden'… 20-million-year diversification, preceded by Ediacaran organisms, small shellies, complex trace fossils, and molecular-clock signals… The honest defender concedes this\"), compressed."
+  },
+  {
+   "field": "cards[4]",
+   "from": "essay §Honest State paras 1–2 (\"The data… are not in serious dispute… largely agree… What is contested is the inference… a partly unsolved chapter within evolutionary history — not as evidence against common descent\"), compressed."
+  },
+  {
+   "field": "cards[5]",
+   "from": "essay §Case for Premises Axe para + §Weighing para 2 (Hunt; \"does not measure… the global density of all functional sequences\"; \"cannot lean on Axe's number as though it were settled; it is one disputed estimate in a live technical dispute\")."
+  },
+  {
+   "field": "cards[6]",
+   "from": "essay §The information problem has a developmental answer (evo-devo; Hox toolkit rewiring; Marshall's central rebuttal that little new genetic information was required), compressed."
+  },
+  {
+   "field": "cards[7]",
+   "from": "essay §Weighing para 1 (\"regulatory rewiring presupposes the very developmental logic whose origin is in question… the origin of the dGRNs, not their later redeployment, that the argument presses\") + §god-of-the-gaps para (\"the empirical question the mainstream answers differently\")."
+  },
+  {
+   "field": "cards[8]",
+   "from": "essay §Weighing para 3 (Marshall presses god-of-the-gaps; \"Charles Coulson… 1955\"; \"the inference is meant to be positive, not negative… intelligence is the only known cause of large amounts of functionally specified information… persuasiveness depends on both halves\"), compressed."
+  },
+  {
+   "field": "cards[9]",
+   "from": "essay §Honest State para 3 (the extended-evolutionary-synthesis paragraph: Altenberg 2008, 2016 Royal Society/Müller; \"developmental plasticity, niche construction, epigenetic inheritance, self-organization… every one of them natural mechanisms, not design… affirm [common descent]\"; the \"Third Way\" repudiation; \"a mechanism-debate is live is not evidence for design\"), compressed with the fence intact."
+  },
+  {
+   "field": "cards[10]",
+   "from": "essay §Honest State para 4 (\"takes no institutional position binding the Christian faith to intelligent design as science, nor to any particular reading of the timescales of Genesis; faithful Catholic, Orthodox, and Protestant believers — old-earth, young-earth, and evolutionary-creationist alike — hold the Nicene faith in common… The doctrine of creation is the confession that all things depend on God\"), verbatim with compression."
+  },
+  {
+   "field": "cards[11]",
+   "from": "essay Conclusion para 2 (\"reaches a purposing designer, not yet the Triune God of the creeds — a companion to the fuller case, not a substitute… rests on revelation and… the resurrection… Held as more than that, it claims a certainty the evidence does not yet supply\"), verbatim with compression."
+  },
+  {
+   "field": "obj[0]",
+   "from": "essay §The window was longer, and the fuse was lit earlier (statement: Prothero, protracted/stepwise; Ediacaran, small shelly, trace fossils) + reply from §What the \"Explosion\" Actually Is para 2 (three billion years / \"call it… an explosion\"), §Honest State para 1, and §intro (the argument is about the origin of developmental programs). Distinct from the kept Drill 3 (combined skeptic); this isolates Prothero's window and lands a bounded verdict."
+  },
+  {
+   "field": "obj[1]",
+   "from": "essay §Molecular clocks push divergences deep into the Precambrian (Marshall's Science review; \"misunderstands the nuances of molecular phylogenetics\"; \"exaggerate the apparent suddenness\"; the selective-quotation charge) + reply from the same para (Meyer/DI dispute; molecular clocks concede-but-uncertain, cf. dos Reis on ev-m) + §Weighing para 1 / fn 17 (the \"good scholarship\" limited concession; review titled \"When Prior Belief Trumps Scholarship\")."
+  },
+  {
+   "field": "obj[2]",
+   "from": "essay §The information problem has a developmental answer (evo-devo; Hox; Marshall's rebuttal; oxygen + ecological triggers) + reply from §Weighing para 1 (\"enabling conditions and machinery… regulatory rewiring presupposes the very developmental logic whose origin is in question\") + §god-of-the-gaps para + §Conclusion (unsolved problem within evolutionary biology, not a refutation), verbatim with compression. Bounded both ways: evo-devo does not close the question, the question does not establish design."
+  },
+  {
+   "field": "obj[3]",
+   "from": "essay §Weighing para 3 (god-of-the-gaps statement: Marshall; Coulson 1955; evolutionary creationists) + reply from the same para (positive inference; \"inference to the best explanation is how Darwin himself argued\"; \"persuasiveness depends on both halves\") + §Conclusion (\"a live philosophical challenge… not a knockdown proof\"). Distinct from the kept god-of-the-gaps accordion; adds the bounded \"not yet the God of the creeds\" landing."
+  },
+  {
+   "field": "unseen",
+   "from": "essay §The Honest State of the Question para 3 (extended evolutionary synthesis; Altenberg 2008; 2016 Royal Society/Müller; Interface Focus 7 [2017]; \"Third Way of Evolution\" repudiation). model ported with its fence + repudiation quotation + the essay's own landing sentence. q AUTHORED — declared. Verified absent as an objection on ev-m-cambrian.html by grep (no Altenberg/Müller/EES/Third Way/Royal Society match)."
+  },
+  {
+   "field": "explain2",
+   "from": "ev-m-cambrian.html .hardest line (\"The one that matters most: that the window is 20–25 million years with real Ediacaran precursors, and evo-devo denies the developmental premise\"), recast as a noun phrase; also matches the two \"Hardest\"-badged premise objections on the page."
+  }
+ ],
+ "notes": "Paired essay read in full: library/cambrian.html (body, all 20 footnotes, bibliography, FAQ + JSON-LD). Kept page read in full: ev-m-cambrian.html (seo-summary, syllogism/ARG_PREMISES, both premise-defence cards with supports + honest limits + inline objections + 'The room', the five objection accordions, the sources cards, Drill 1 scorer + mock-scorer checks regexes, Drill 2 cards deck, Drill 3 worked example, the .hardest line). DECLARED AUTHORED (named to every lens): (1) unseen.q — the essay answers the extended-evolutionary-synthesis point but states it as something 'a design advocate will raise… often quoted out of context,' never in an objector's full voice, so the objector's wording is mine (the model and its landing are ported); (2) the bounded landing clauses that open/close several obj models ('So the verdict is bounded…', 'So the bounded verdict…', 'the verdict lands exactly there…') — connective scaffolding added only to make the explicit bounded verdict land per the EXPLICIT-VERDICT rule, each immediately carrying the essay's own verdict wording; (3) derive[].q/ans, card questions and chip phrasings are scaffolding, no new claim. BOUNDS KEPT (tab hazards): DATA conceded / DESIGN inferred held apart on every surface — keyTerms[7], derive[4], honestState (all three), order[2], the props decoys, cards[1]/[5]/[11], and every obj land the data as conceded and design as a contested inference, never 'scientists agree it was designed/created' (that exact phrasing is a graded-false decoy and the essay's denial is quoted); the DEISM-GAP fence ('a purposing designer, not yet the Triune God of the creeds… rests on revelation and… the resurrection') is in honestState.verdict, order[2], derive[4], cards[0]/[11], props, and obj[3]; no young-earth/old-earth verdict as settled — card[10] + honestState.verdict port the essay's positional-neutrality paragraph verbatim; Francis Collins is NOT enlisted as an ID premise (he is absent from the essay and from this port); Axe's 10^77 is always his contested extrapolation with Hunt's rebuttal (keyTerms[4], cards[5]) and a decoy forbids 'proves Axe's figure correct' in spirit; the EES / 'Third Way' material always carries its natural-mechanisms-not-design fence + the public repudiation (cards[9], unseen) so a methodological in-house debate never becomes a witness for design. No retired claim is reinstated: I checked tools/check-retired-claims.mjs --list; none of the 33 entries touches this topic, and nothing here asserts a divine/worshipped figure, 'virtually all scholars,' etc. NOT CONTRADICTED / NOT DUPLICATED: the kept Drill 3 (combined Skeptic: 'no real explosion' + 'ancestors not fossilized' + 'hanging a designer on a gap in the rocks') is not reused verbatim — obj[0] isolates Prothero's window and obj[3] isolates the god-of-the-gaps charge, each with essay-ported material and a distinct bounded verdict; the kept 6-card deck is not duplicated (my 12 cards reframe the questions and go wider — e.g. the EES card and the positional-neutrality card have no kept-deck twin); the kept .hardest line and the two 'Hardest'-badged premise objections are matched by explain2, not contradicted. BACKLOG ISSUES NOTICED (not fixed, listed for the backlog): (a) the kept Premise-1 defence card's second honest-objection reply ('Objection — molecular clocks and preservation bias') compresses Marshall's selective-quotation charge into the OBJECTION but its Reply answers only the quotation dispute and the 'good scholarship' concession, leaving the preservation-bias limb of its own objection header unanswered on that card — the essay answers preservation bias in its own §Preservation bias is real; (b) the kept sources card lists 'Charles R. Marshall — 2006 · Annual Review of Earth and Planetary Sciences,' a real review article, but the essay's load-bearing Marshall citation is the 2013 Science review (fn 12–13, 18–19); the 2006 piece is not in the essay's footnotes/bibliography, so the primary-source card points readers to a different Marshall work than the one the argument rests on; (c) the seo-summary says the discovery of the Burgess Shale/Chengjiang 'has sharpened rather than dissolved the puzzle,' slightly stronger than the essay's framing that the sites 'confirm… real, anatomically sophisticated animals' while the mainstream regards the puzzle as a partly-open problem within evolution — minor tonal drift, not a doctrinal issue. Nothing I could not source."
+}

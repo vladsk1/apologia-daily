@@ -103,41 +103,18 @@ Built and deployed:
   `var isPro = !!(session.user.user_metadata.is_pro===true)` in `asked-and-answered.html` to make
   live answers paid-only; retrieval-hit library answers stay free.
 
-### ⛔ SUPERSEDED — DO NOT RUN THIS SQL (kept for history only)
-Replaced by **`docs/ASK_RATE_LIMIT.md`**, which is what `lib/ratelimit.js` targets (table `ask_rate`). This older block
-defines the SAME function name `bump_ask_rate` against a DIFFERENT table
-(`ask_rate_limit`), so running it would silently repoint the live rate limiter.
-```sql
-create table if not exists public.ask_rate_limit (
-  ip  text not null,
-  day date not null default current_date,
-  n   int  not null default 0,
-  primary key (ip, day)
-);
-alter table public.ask_rate_limit enable row level security; -- service role bypasses RLS
+### ⛔ SUPERSEDED — rate-limit SQL removed (2026-10-08)
+The original rate-limit SQL that lived here has been **deleted**, not just labelled. It defined the
+same function name `bump_ask_rate` against a different table (`ask_rate_limit`) and without the
+`search_path` / `revoke execute` hardening, so running it by mistake would have replaced the live
+rate limiter with a version any caller could invoke. The live, hardened setup is
+**`docs/ASK_RATE_LIMIT.md`** (table `ask_rate`), which is what `lib/ratelimit.js` targets.
 
--- Explicit Data API grants. From 2026-10-30 Supabase no longer auto-grants new
--- public tables to the API roles, so a fresh run (new project, preview branch,
--- `supabase db reset`) needs these. Harmless on a project where they already exist.
--- Service role only: the anon/authenticated roles never touch this table.
-revoke all on public.ask_rate_limit from anon, authenticated;
-grant  all on public.ask_rate_limit to service_role;
-
-create or replace function public.bump_ask_rate(p_ip text)
-returns int language plpgsql security definer as $$
-declare cur int;
-begin
-  insert into public.ask_rate_limit(ip, day, n) values (p_ip, current_date, 1)
-  on conflict (ip, day) do update set n = public.ask_rate_limit.n + 1
-  returning n into cur;
-  return cur;
-end; $$;
-```
 `api/ask.js` POSTs to `/rest/v1/rpc/bump_ask_rate` with the service-role key
 (`SUPABASE_SERVICE_ROLE_KEY`), and returns HTTP 429 once an IP exceeds 40/day.
 
 ### Still open (follow-ups)
-- Run the SQL above (you). · Verify OCR on a real device (CDN blocked in CI sandbox).
+- Rate limit: run `docs/ASK_RATE_LIMIT.md`, not anything here (done 2026-09-23). · Verify OCR on a real device (CDN blocked in CI sandbox).
 - Later: free-taste metering; the batch review sweep that promotes good live answers into
   `/answers/`; Claude-vision OCR fallback; port the old "share this answer to a skeptic" feature.
 

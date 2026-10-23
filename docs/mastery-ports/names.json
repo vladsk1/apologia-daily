@@ -1,0 +1,370 @@
+{
+ "slug": "names",
+ "title": "The Argument from Palestinian Names",
+ "short": "the argument from Palestinian names",
+ "keyTerms": [
+  {
+   "t": "Onomastics",
+   "d": "The study of personal names and their distribution. Its founding observation is simple and uncontroversial: the popularity of a given name is sharply local and time-bound — which names are common, and in what proportions, varies by region, by religious community, and by generation."
+  },
+  {
+   "t": "Ilan’s Lexicon — the baseline",
+   "d": "Tal Ilan’s Lexicon of Jewish Names in Late Antiquity, Part I: Palestine 330 BCE–200 CE (2002) catalogues the attested Jewish persons of that region and era — roughly three thousand individuals, drawn from literary texts, Josephus, ossuary inscriptions, and documentary papyri — with the frequencies of their names. Ilan was not doing apologetics; she was building a reference work, an independent baseline against which any text claiming to depict that world can be tested."
+  },
+  {
+   "t": "Relative frequencies",
+   "d": "It is one thing to include a few common names and quite another to reproduce their relative frequencies. What no ancient author had the tools to do was ensure that the second-commonest name appeared about as often as it actually did, and that the rare names stayed rare in roughly the right proportion. There were no frequency tables in antiquity."
+  },
+  {
+   "t": "Disambiguation",
+   "d": "Because a handful of names were so over-common, first-century Palestinian Jews tagged people — by a patronymic (Simon bar-Jonah), a hometown (Joseph of Arimathea, Mary Magdalene), a nickname (Simon the Zealot, Simon the Leper), or a trade. The Gospels apply this disambiguation selectively, to exactly the over-common names, while rare names are usually left bare."
+  },
+  {
+   "t": "The diaspora profile",
+   "d": "Among Egyptian Jews the most common names included forms like Eleazar, Sabbataeus, Joseph, Dositheus, and Pappus — a noticeably different mix, with far more Greek names, than that of Palestine. The Gospels match Palestine specifically; they do not match the diaspora profile."
+  },
+  {
+   "t": "Goodness-of-fit test",
+   "d": "The chi-squared test Luuk Van de Weghe and the statistician Jason Wilson (2024) used to ask whether the Gospel names behave like a sample drawn from the population or from an author’s imagination. They found the fit at least as good as that of the names in Josephus, and markedly better than names drawn from ancient fiction or modern historical novels. Gregor and Blais have in turn replied, and the exchange is ongoing."
+  },
+  {
+   "t": "Anonymous community transmission",
+   "d": "The rival model Kamil Gregor and Brian Blais (2023) propose: the names accrued through a Palestinian Christian community over time, with no need for named eyewitnesses behind them. Even granted in full, it grants that the names entered the tradition in Palestine — the core of the provenance claim."
+  },
+  {
+   "t": "Provenance, not truth",
+   "d": "The argument addresses provenance and dating — when and where these traditions were really formed — not inerrancy or the resurrection. It does not, by itself, establish that any reported event happened; accurate names alone cannot rule out a story that later grew, which is why the other lines of evidence matter."
+  }
+ ],
+ "derive": [
+  {
+   "q": "An author could easily salt a story with “Simon” and “Mary” — so the part that is hard to fake is…?",
+   "ans": "the relative frequencies, not the names themselves",
+   "why": "What no ancient author had the tools to do was ensure that the second-commonest name appeared about as often as it actually did, and that the rare names stayed rare in roughly the right proportion. There were no frequency tables in antiquity; reconstructing them took Ilan a modern scholar’s lifetime of cataloguing inscriptions. The pattern can leak out of genuine memory; it is very hard to engineer from the outside."
+  },
+  {
+   "q": "A writer composing in the Jewish diaspora, far from Judea, would tend to use…?",
+   "ans": "the names of his own world, not Palestine’s",
+   "why": "The diaspora pattern differed sharply from the Palestinian one, with far more Greek names. So a writer working in the diaspora would not merely fail to copy the Palestinian list; he would tend to default to the names of his own world. The watermark is not just hard to forge — the forger’s own background actively pulls him away from it."
+  },
+  {
+   "q": "The Gospels tag their Simons and Josephs but usually leave rare names bare — that pattern is the behaviour of…?",
+   "ans": "a culture that genuinely had too many Simons",
+   "why": "In any first-century Palestinian crowd there were too many Simons and Josephs to keep straight, so people were tagged by patronymic, hometown, nickname, or trade. The Gospels apply this disambiguation selectively, and apply it to exactly the names that needed it. That is not the behaviour of a writer sprinkling in local colour; it is the unconscious behaviour of a culture that genuinely had too many Simons."
+  },
+  {
+   "q": "Palestinian naming knowledge demonstrably travelled — Josephus wrote in Rome. So the names cannot, by themselves, prove…?",
+   "ans": "that a Galilean eyewitness wrote them down",
+   "why": "The reply is to grant the logic and narrow the claim. The argument does not need eyewitness authorship to do real work: a “skilled diaspora mimic” would have to reproduce the relative frequencies across dozens of incidental characters and nickname exactly the over-common names, with no frequency tables to work from. Tuckett shows the door is not bolted; he does not show that anyone of the relevant profile is known to have walked through it."
+  },
+  {
+   "q": "Gregor and Blais’s rival model has the names accrue through a Palestinian Christian community — so even granted in full, it…?",
+   "ans": "still grants that the names entered the tradition in Palestine",
+   "why": "The rival model is itself a story of names accruing through a Palestinian Christian community. Even granted in full, it grants the core of the provenance claim. What it contests is the maximal claim that named eyewitnesses stand behind each pericope — which the narrow conclusion does not need."
+  },
+  {
+   "q": "Grant that the names are right in every respect. Does that prove the events the Gospels report?",
+   "ans": "no — it addresses provenance, not the truth of the events",
+   "why": "The argument does not, by itself, establish that any reported event happened, and it certainly does not establish the miraculous. It addresses provenance and dating, not inerrancy or the resurrection; accurate names alone cannot rule out a story that later grew, which is why the other lines of evidence matter. What it does is relocate the conversation onto early, locally grounded testimony."
+  }
+ ],
+ "honestState": {
+  "p1": "The underlying facts are not seriously disputed: no one denies that name frequency is local and time-bound, and few deny that the Gospel names sit far closer to the Palestinian profile than to the diaspora one. The live disagreement is about strength and reach. Bauckham, Williams, and Van de Weghe with the statistician Jason Wilson hold that the fit is tight enough to point to early, locally grounded — and probably eyewitness — sources. Gregor and Blais argue the sample is too thin to license that inference and that alternative transmission models fit equally well; Tuckett grants the match but denies it isolates eyewitnesses specifically. Gregor and Blais have in turn replied to Van de Weghe and Wilson, and the statistical exchange is ongoing.",
+  "fairness": "The sample is modest, and one should not oversell the precision of any single ratio drawn from a few dozen names; the women’s figures in particular wobble, and individual anomalies are real. And Tuckett’s logical point is accurate: the onomastic data underdetermines the eyewitness conclusion. But that narrows the claim rather than defeating it. The fit is real and is not plausibly the product of invention, and that alone is enough to carry the narrow conclusion, which is about provenance; Tuckett shows the door is not bolted, but he does not show that anyone of the relevant profile is known to have walked through it.",
+  "verdict": "The onomastic data is genuine and significant corroborating evidence for an early Palestinian provenance. The personal names woven through the Gospels and Acts carry the unconscious watermark of early-first-century Jewish Palestine — the right names, in roughly the right proportions, disambiguated in the right way — and conspicuously not the watermark of the diaspora. That makes the popular picture of the Gospels as late Greek legends untethered from Judea very difficult to maintain. The maximal claim — that it proves named eyewitnesses — remains contested and should be held with a lighter grip; and the argument addresses provenance and dating, not inerrancy or the resurrection; the resurrection — that Jesus rose bodily from the dead — is the inference this Library defends elsewhere."
+ },
+ "order": [
+  "Name frequencies are local and time-bound, and very hard for an outsider or a much later author to reproduce by guesswork.",
+  "The Gospel and Acts names match the independently attested profile of early Jewish Palestine — in their names, relative frequencies and disambiguation habits — and not the diaspora’s.",
+  "Therefore the Gospel traditions are best explained as rooted in early Palestinian sources close to the events, not as late, distant compositions."
+ ],
+ "props": [
+  {
+   "t": "names matching early Palestine, not the diaspora",
+   "ok": true
+  },
+  {
+   "t": "a match in relative frequencies, not just a few common names",
+   "ok": true
+  },
+  {
+   "t": "nicknames falling on exactly the over-common names",
+   "ok": true
+  },
+  {
+   "t": "traditions best explained as rooted in early Palestinian sources",
+   "ok": true
+  },
+  {
+   "t": "the late-Greek-legend picture becomes very hard to hold",
+   "ok": true
+  },
+  {
+   "t": "proves named eyewitnesses wrote the Gospels",
+   "ok": false
+  },
+  {
+   "t": "proves the reported events — the miracles included — happened",
+   "ok": false
+  },
+  {
+   "t": "the statisticians have settled it",
+   "ok": false
+  },
+  {
+   "t": "the women’s names fit as tightly as the men’s",
+   "ok": false
+  },
+  {
+   "t": "no one outside Palestine could have known the names",
+   "ok": false
+  },
+  {
+   "t": "Josephus is a control independent of Ilan’s data",
+   "ok": false
+  }
+ ],
+ "cards": [
+  {
+   "q": "State Premise 1 — which half is conceded, and which half is pressed?",
+   "a": "Name frequencies are local and time-bound, and very hard for an outsider or a much later author to reproduce by guesswork. The first half is essentially conceded by everyone; the second half is where Tuckett’s objection presses."
+  },
+  {
+   "q": "State Premise 2 — what must the names match, and what must they not match?",
+   "a": "They must match the independently attested profile of Jewish Palestine in roughly 330 BCE–200 CE — in their specific names, their relative frequencies, and their disambiguation habits — and they do not match the different profile of the Jewish diaspora."
+  },
+  {
+   "q": "What kind of argument is this — and where is the real debate?",
+   "a": "An inference to the best explanation built on a statistical fact, not a deductive proof. The real work, and the real debate, lies in Premise 2 — does the data genuinely match, and how tightly? — and in how far that match licenses the conclusion."
+  },
+  {
+   "q": "How do the Gospel men’s names compare with the external Palestinian record?",
+   "a": "The two commonest Palestinian male names are exactly the top two in the Gospels and Acts, and the share of men bearing one of the nine most popular names is close in both (roughly 41.5% against about 40.3%). The sample is modest, so no single ratio should be oversold."
+  },
+  {
+   "q": "And the women’s names — what matches, and what is the honest limit?",
+   "a": "The two commonest female names in the Palestinian record are again the two commonest in the Gospels and Acts, so the rank order and broad shape match. But the fit is looser (about 28.6% against about 38.9%), and the smaller female sample makes these figures less stable than the men’s."
+  },
+  {
+   "q": "Why does a forger’s own background count against him?",
+   "a": "The diaspora profile differed sharply, with far more Greek names. A diaspora writer would not merely fail to copy the Palestinian list; he would tend to default to the names of his own world — his background actively pulls him away from the watermark."
+  },
+  {
+   "q": "What tool did no ancient author have — and why does its absence matter?",
+   "a": "Name-frequency tables. Without them no ancient author could ensure the second-commonest name appeared about as often as it actually did, or that rare names stayed rare in roughly the right proportion. The pattern can leak out of genuine memory; it is very hard to engineer from the outside."
+  },
+  {
+   "q": "What did the 2024 goodness-of-fit reply find — and how firm is it?",
+   "a": "Using a chi-squared test, it found the Gospel and Acts names fit their Palestinian context at least as well as the names in Josephus do, and markedly better than names from ancient fiction or modern historical novels. The critics have replied and the exchange is ongoing, so the weight rests on the narrow provenance claim, not on “the statisticians settled it.”"
+  },
+  {
+   "q": "Is Josephus an independent check on the name baseline?",
+   "a": "No — Ilan’s lexicon itself draws on Josephus alongside ossuaries, the Judean Desert texts and rabbinic sources. The comparison is that the Gospel names fit that pooled Palestinian baseline at least as well as Josephus’s own names do."
+  },
+  {
+   "q": "Answer Tuckett’s objection in one move.",
+   "a": "Grant the logic and narrow the claim: the names cannot by themselves prove that a Galilean fisherman wrote them down. But a “skilled diaspora mimic” would need the relative frequencies and the nicknaming right across dozens of incidental characters, with no tables to work from — Tuckett shows the door is not bolted, not that anyone of the relevant profile walked through it."
+  },
+  {
+   "q": "What does the “sea” or “lake” observation add — and how much weight can it bear?",
+   "a": "Matthew, Mark and John call the Galilean body of water a sea (thalassa), the grand local term; Luke never does, calling it a lake (limnē) — a usage that tracks the writers’ own backgrounds, as Peter J. Williams argues. It reaches provenance from a different direction, but it is suggestive rather than decisive, since Luke’s Antioch connection is itself a tradition."
+  },
+  {
+   "q": "What does the argument establish — and what does it not?",
+   "a": "That the names carry the unconscious watermark of early-first-century Jewish Palestine, which makes the picture of the Gospels as late Greek legends untethered from Judea very difficult to maintain. It does not prove the named individuals are eyewitness authors, and it addresses provenance, not inerrancy or the resurrection."
+  }
+ ],
+ "obj": [
+  {
+   "who": "Historian",
+   "q": "As Christopher Tuckett argues, to conclude that the names could not have been invented outside Palestine you would need evidence that people outside Palestine were unaware of Palestinian names — and that is exactly the evidence we lack. Jews were mobile, pilgrims streamed to Jerusalem, and Josephus wrote his Palestinian narratives in Rome. A well-read diaspora insider could have reproduced the right names without being a Galilean eyewitness.",
+   "model": "Grant the logic and narrow the claim. Tuckett is right that the names cannot, by themselves, prove that a Galilean fisherman wrote them down. But the “skilled diaspora mimic” must do far more than know which names were common: he must reproduce their relative frequencies across dozens of incidental characters and deploy disambiguating nicknames on exactly the over-common names — all with no frequency tables to work from and, so far as we know, no awareness that anyone would ever check. Josephus could write accurate Palestinian narratives in Rome because he was a Palestinian writing from memory; he is evidence that the knowledge travels with such a person, not that it could be reconstructed by a Gentile or a third-generation diaspora author from scratch. Tuckett shows the door is not bolted; he does not show that anyone of the relevant profile is known to have walked through it. So the objection narrows the conclusion rather than defeating it: the most economical explanation of an unconscious statistical fingerprint remains that it was left by people who actually lived in that world — whether the named eyewitnesses Bauckham argues for, or, at minimum, the early Palestinian tradition the names entered before the books were written far away."
+  },
+  {
+   "who": "Statistician",
+   "q": "A few dozen named people is far too small a sample for the law of large numbers to do reliable work, and on a closer look certain names sit awkwardly with the external data. Kamil Gregor and Brian Blais made exactly this case in a peer-reviewed journal in 2023: a sample this size cannot establish a tight statistical fit.",
+   "model": "Concede what is accurate: the sample is modest, one should not oversell the precision of any single ratio drawn from a few dozen names, the women’s figures in particular wobble, and individual anomalies are real. But the field has litigated the statistics directly. In 2024 Luuk Van de Weghe and Jason Wilson — the latter a working statistician — argued that the negative verdict followed from questionable testing choices and data selection; using a chi-squared goodness-of-fit test, they found the name occurrences in the Gospels and Acts fit their Palestinian context at least as well as the names in Josephus do, and markedly better than names drawn from ancient fiction or modern historical novels. The appropriate question is not “is the fit perfect?” (no real sample is) but “does it behave like a sample drawn from the population, or like a sample drawn from an author’s imagination?” — and on Van de Weghe and Wilson’s test it behaves like the former. Gregor and Blais have replied and the exchange is ongoing, so the case rests on the narrow provenance claim, not on “the statisticians settled it”: the fit is real and is not plausibly the product of invention, and that is enough to carry the conclusion."
+  },
+  {
+   "who": "Critic",
+   "q": "Even if the names fit, the eyewitness thesis buys nothing. Gregor and Blais’s “anonymous community transmission” model — names accruing through a Palestinian Christian community over time, with no named eyewitnesses behind them — predicts the same data. If a non-eyewitness model predicts it equally well, the name fit is no evidence for eyewitnesses.",
+   "model": "The methodological demand behind this — that the eyewitness hypothesis be tested against rival explanations rather than simply asserted — is exactly the right demand, and the maximal claim that the names prove named eyewitnesses remains contested and should be held with a lighter grip. But notice what the rival model concedes. It is itself a story of names accruing through a Palestinian Christian community; even granted in full, it grants that the names entered the tradition in Palestine — the core of the provenance claim. The argument’s conclusion is about provenance, not about proving named eyewitnesses stand behind each pericope. That alone is enough to carry the narrow conclusion; the objection presses only the maximal claim, which the narrow argument does not need."
+  },
+  {
+   "who": "Skeptic",
+   "q": "Grant that every name is right. Plenty of legends carry accurate local detail and still grew in the telling. Accurate names don’t make a single miracle happen — so this argument tells us nothing about whether the Gospels are true.",
+   "model": "Grant the limit, because the argument states it itself: it does not, by itself, establish that any reported event happened, and it certainly does not establish the miraculous; accurate names alone cannot rule out a story that later grew, which is why the other lines of evidence matter. But “nothing” does not follow. The names carry the unconscious watermark of early-first-century Jewish Palestine — the right names, in roughly the right proportions, disambiguated in the right way — and conspicuously not the watermark of the diaspora. That fingerprint is very hard to explain if the Gospels are late, distant, fictional compositions, and very easy to explain if their traditions trace back to people who actually lived among first-century Palestinian Jews. So the objection fails as stated: the argument relocates the whole conversation onto early, locally grounded testimony, where the case for the resurrection — the inference this Library defends elsewhere, that Jesus rose bodily from the dead — is argued on its own grounds."
+  }
+ ],
+ "unseen": {
+  "who": "Sceptical reader",
+  "av": "SR",
+  "q": "The Gospels are crowded with Marys — the mother of Jesus, Magdalene, the sister of Martha, the mother of James, the wife of Clopas. Stories that cannot even keep their characters’ names distinct look like a muddle of merged legends, not reliable tradition.",
+  "model": "The sheer profusion of Marys is not a narrative embarrassment to be explained away; it is precisely what a real first-century Palestinian sample looks like. Mary (Mariam) and Salome were the two most popular female names in the Palestinian record, and in the Gospels and Acts they are again the two commonest. The fit is looser than for the men — about 38.9% of named women in the New Testament bear those two names against about 28.6% in the external data — and the smaller female sample makes those figures less stable, but the rank order and the broad shape match. And a culture with too many of one name kept its bearers apart by tagging them — by patronymic, hometown, nickname, or trade — as the Gospels do with Mary Magdalene. So the profusion of Marys is no sign of muddle: Mary was the commonest woman’s name, and the Gospels tag their Marys as that world did.",
+  "source": "library/names.html — §Premise 2: Do the Gospel Names Actually Match? (women’s-names paragraph, ‘not a narrative embarrassment to be explained away’) + fn 7 + disambiguation paragraph. The objection’s wording (q) and the model’s final sentence are AUTHORED — declared in notes."
+ },
+ "explain2": "Tuckett’s objection that Palestinian naming knowledge travelled — Josephus wrote Palestinian narratives in Rome — so a well-read diaspora insider could have reproduced the names",
+ "ledger": [
+  {
+   "field": "title",
+   "from": "ev-m-names.html <h1> “The Argument from Palestinian Names” verbatim."
+  },
+  {
+   "field": "short",
+   "from": "ev-m-names.html summary opening (‘The argument from Palestinian names…’)."
+  },
+  {
+   "field": "keyTerms[0]",
+   "from": "essay §Stating the Argument Carefully para 1, verbatim with compression."
+  },
+  {
+   "field": "keyTerms[1]",
+   "from": "essay §How the Argument Developed para 1 (incl. ‘Ilan was not doing apologetics; she was building a reference work’) + fn 1 (‘roughly three thousand individuals’)."
+  },
+  {
+   "field": "keyTerms[2]",
+   "from": "essay §Premise 1 ‘Third’ paragraph, verbatim with compression."
+  },
+  {
+   "field": "keyTerms[3]",
+   "from": "essay §Premise 2 disambiguation paragraph, verbatim with compression."
+  },
+  {
+   "field": "keyTerms[4]",
+   "from": "essay §Premise 1 ‘Second’ paragraph (names list) + §Premise 2 ‘Two further controls’ (‘the Gospels match Palestine specifically. They do not match the diaspora profile’)."
+  },
+  {
+   "field": "keyTerms[5]",
+   "from": "essay §A Reply para 1 (chi-squared, ‘at least as well as the names in Josephus… markedly better than names drawn from ancient fiction or modern historical novels’, ‘sample drawn from the population, or… from an author’s imagination’, ‘Gregor and Blais have in turn replied… ongoing’) + fn 12."
+  },
+  {
+   "field": "keyTerms[6]",
+   "from": "essay §The Strongest Objections para 2 (third point, rival model) + §A Reply para 2 last sentence, verbatim with compression."
+  },
+  {
+   "field": "keyTerms[7]",
+   "from": "essay §Conclusion para 2, verbatim with compression; page ‘honest scope’ line."
+  },
+  {
+   "field": "derive[0]",
+   "from": "essay §Premise 1 ‘Third’."
+  },
+  {
+   "field": "derive[1]",
+   "from": "essay §Premise 1 ‘Second’."
+  },
+  {
+   "field": "derive[2]",
+   "from": "essay §Premise 2 disambiguation paragraph."
+  },
+  {
+   "field": "derive[3]",
+   "from": "essay §A Reply, Tuckett paragraphs (‘grant the logic and narrow the claim’; ‘skilled diaspora mimic’; ‘door is not bolted’)."
+  },
+  {
+   "field": "derive[4]",
+   "from": "essay §A Reply para 2 (‘That alone is enough to carry the narrow conclusion… not about proving named eyewitnesses stand behind each pericope’; rival-model sentence)."
+  },
+  {
+   "field": "derive[5]",
+   "from": "essay §Conclusion para 2, verbatim with compression."
+  },
+  {
+   "field": "honestState.p1",
+   "from": "essay §The Honest State of Scholarship paras 1–2 verbatim with compression + §A Reply para 1 (‘Gregor and Blais have in turn replied, and the statistical exchange is ongoing’)."
+  },
+  {
+   "field": "honestState.fairness",
+   "from": "essay §A Reply para 2 (sample-modest concession; ‘That alone is enough to carry the narrow conclusion’) + Tuckett para (‘underdetermines the eyewitness conclusion. That logical point is accurate’) + reply (‘door is not bolted…’). ‘But that narrows the claim rather than defeating it’ compresses the essay’s ‘The reply is to grant the logic and narrow the claim accordingly’."
+  },
+  {
+   "field": "honestState.verdict",
+   "from": "essay §Honest State para 2 final sentence (‘responsible verdict… lighter grip’) + §Conclusion paras 1–2 (watermark sentence; ‘very difficult to maintain’; provenance not inerrancy or the resurrection, with the essay’s bodily-resurrection clause verbatim)."
+  },
+  {
+   "field": "order",
+   "from": "essay §Stating the Argument Carefully Premise 1 / Premise 2 / Conclusion + page certified syllogism and ARG_PREMISES, shortened; the ‘not the diaspora’s’ clause is from the essay’s Premise 2."
+  },
+  {
+   "field": "props (true)",
+   "from": "essay §Premise 2 (‘match Palestine specifically’; relative frequencies; disambiguation on the over-common names), Conclusion of the syllogism (‘rooted in early Palestinian sources’), §Conclusion (‘very difficult to maintain’)."
+  },
+  {
+   "field": "props (decoys)",
+   "from": "each denied in the essay: ‘does not prove that the named individuals are eyewitness authors’ (Conclusion); ‘does not, by itself, establish that any reported event happened, and it certainly does not establish the miraculous’ (Conclusion); ‘not on the verdict that “the statisticians settled it”’ (§A Reply); ‘The fit is looser here’ (women’s paragraph); ‘Palestinian onomastic knowledge demonstrably circulated in the diaspora’ (§Tuckett); fn 9 ‘Ilan’s lexicon itself draws on Josephus’."
+  },
+  {
+   "field": "cards[0]",
+   "from": "essay Premise 1 + ‘The first half of Premise 1 is essentially conceded by everyone; its second half is where Tuckett’s objection presses.’"
+  },
+  {
+   "field": "cards[1]",
+   "from": "essay Premise 2, verbatim with compression."
+  },
+  {
+   "field": "cards[2]",
+   "from": "essay §Stating the Argument Carefully, ‘Notice what this is and is not’ paragraph."
+  },
+  {
+   "field": "cards[3]",
+   "from": "essay §Premise 2 para 1 + fn 6 (41.5% / 40.3%) + §A Reply para 2 (do not oversell any single ratio). Names deliberately not the answer."
+  },
+  {
+   "field": "cards[4]",
+   "from": "essay §Premise 2 women’s paragraph + fn 7 (‘smaller female sample… less stable’)."
+  },
+  {
+   "field": "cards[5]",
+   "from": "essay §Premise 1 ‘Second’."
+  },
+  {
+   "field": "cards[6]",
+   "from": "essay §Premise 1 ‘Third’."
+  },
+  {
+   "field": "cards[7]",
+   "from": "essay §A Reply para 1, verbatim with compression."
+  },
+  {
+   "field": "cards[8]",
+   "from": "essay fn 9 + §Premise 2 ‘Two further controls’ (the 2026-09-29 correction: Josephus is inside Ilan’s data, not an independent control); page flashcard 4 and ‘Ilan’s data patchy’ reply."
+  },
+  {
+   "field": "cards[9]",
+   "from": "essay §A Reply, Tuckett reply paragraph, compressed."
+  },
+  {
+   "field": "cards[10]",
+   "from": "essay §A Reply final paragraph (Williams, ch. 3; thalassa/limnē; Antioch tradition; ‘suggestive rather than decisive’)."
+  },
+  {
+   "field": "cards[11]",
+   "from": "essay §Conclusion paras 1–2."
+  },
+  {
+   "field": "obj[0]",
+   "from": "essay §The Strongest Objections para 2 (Tuckett statement) + §A Reply Tuckett paragraphs (reply verbatim with compression); page P1 ‘Tuckett: the knowledge travelled’ accordion. Connective ‘So the objection narrows the conclusion rather than defeating it’ compresses ‘grant the logic and narrow the claim accordingly’."
+  },
+  {
+   "field": "obj[1]",
+   "from": "essay §The Strongest Objections para 1 (limbs one and two) + §A Reply paras 1–2, verbatim with compression."
+  },
+  {
+   "field": "obj[2]",
+   "from": "essay §The Strongest Objections para 1 (third limb) + §A Reply para 2 (‘exactly the right demand’; ‘That alone is enough to carry the narrow conclusion… not about proving named eyewitnesses stand behind each pericope’; rival-model sentence) + §Honest State (‘lighter grip’)."
+  },
+  {
+   "field": "obj[3]",
+   "from": "essay §Conclusion paras 1–2, verbatim with compression; page ‘Even genuine early names don’t prove the miracles’ accordion (topic shared, wording ported from the essay instead)."
+  },
+  {
+   "field": "unseen",
+   "from": "essay §Premise 2 women’s paragraph (‘The sheer profusion of Marys… is not a narrative embarrassment to be explained away; it is precisely what a real first-century Palestinian sample looks like’) + fn 7 + disambiguation paragraph. q AUTHORED — declared; final sentence AUTHORED — declared."
+  },
+  {
+   "field": "explain2",
+   "from": "ev-m-names.html certified routing line (‘The one that matters most: Tuckett’s — Josephus wrote Palestinian narratives in Rome, so the knowledge travelled’), recast as a noun phrase with the essay’s ‘well-read insider’ limb."
+  }
+ ],
+ "notes": "Paired essay read in full: library/names.html (cover to cover, incl. all 12 footnotes, bibliography and FAQ); current page ev-m-names.html read in full (summary, syllogism, both premise-defence blocks with their objection/reply pairs, the five objection accordions, primary-sources block, ARG_PREMISES, the 5 flashcards, the mock-scorer checks, Drill 3). DECLARED AUTHORED (3): (1) unseen.q — the essay answers the many-Marys point (‘not a narrative embarrassment to be explained away’) but never voices it as an objector, so the objection’s wording is mine; (2) unseen.model final sentence (‘So the objection does not hold: the many Marys are part of the Palestinian watermark, not a sign of muddle.’) — a landing verdict built from the essay’s sentence; drop it to the essay’s own sentence if a lens objects; (3) obj[2].model final sentence (‘So the objection does not touch that conclusion: it presses only the maximal eyewitness claim, which the narrow argument does not need.’) — compresses the essay’s ‘That alone is enough to carry the narrow conclusion… not about proving named eyewitnesses’. Also scaffolding, no new claim: derive[].q/ans prompts, card questions, obj[].q phrasings (compressions of the essay’s own statements of each objection), connective ‘So the objection narrows the conclusion rather than defeating it’ (obj[0]) and ‘But that narrows the claim rather than defeating it’ (honestState.fairness), both compressing ‘grant the logic and narrow the claim accordingly’. UNSEEN CHECK: the page mentions Mary and Salome as the commonest female names and Mary Magdalene as a hometown tag, but nowhere frames the profusion of Marys as an objection (checked every accordion, both premise blocks, the 5 flashcards and Drill 3); the essay answers it. The unseen.model’s disambiguation sentence uses only the essay’s four tag types and only Mary Magdalene as the example — it deliberately does NOT claim ‘the mother of James’/‘the wife of Clopas’ are disambiguation tags, because the essay lists them only as instances of profusion. HAZARDS HONOURED: Bauckham fence — Bauckham appears only as the scholar who ran the names test on Ilan’s data and as a party to the eyewitness dispute (honestState.p1, obj[0]); no theological use, no further-reading listing; Williams is credited only for the popularisation and the ch. 3 thalassa/limnē plank, as the essay credits him. Provenance ≠ truth carried in keyTerms[7], derive[5], props decoy 2, cards[11], obj[3], honestState.verdict (with the essay’s bodily-resurrection clause). Ilan’s lexicon is the data source throughout; the 2026-09-29 correction is respected — Josephus is never presented as a control independent of Ilan’s baseline (cards[8] and a decoy enforce it; the comparison is credited to Van de Weghe & Wilson 2024). The statistical exchange is never called settled (Gregor & Blais’s reply, and Wilson & Van de Weghe’s answer, are ‘ongoing’). No ‘virtually all scholars’; the essay’s ‘not seriously disputed… few deny… broadly accepted’ is the strongest consensus language used, and only of the underlying facts. Tuckett is met at full strength: his logical point is conceded as accurate (honestState.fairness, obj[0]) and the reply narrows rather than denies it. No retired claim applies to this topic; none reinstated. NOT DUPLICATED from the kept page: Drill 3’s ‘any later writer could look up names’ skeptic (left out of obj; its substance lives only in derive[0]/cards[6] in different wording); the page’s ‘names edited in later’ and ‘Ilan’s data patchy’ accordions were not turned into obj because the essay has no reply to the first and only fn 9 for the second. obj[3] shares a topic with the page’s ‘miracles’ accordion but is ported from the essay’s Conclusion, not the page reply. ISSUES NOTICED (not fixed — backlog candidates): (a) the page’s ‘sample is too small’ accordion reply says ‘Bauckham also tested it against the wrong baseline — the diaspora —’, a sentence with no counterpart in the essay (the essay says the Gospels match Palestine and not the diaspora, but never that Bauckham ran a diaspora-baseline test); (b) the same accordion’s ‘a simultaneous fit on all three is much harder to produce by chance’ and the ‘edited in later’ reply (‘The realism is too systematic to be a plausible cosmetic later layer’) are page-authored with no essay sentence underneath; (c) the page’s primary-sources Williams blurb lists ‘coins’ among his local-knowledge tests, while essay fn 3 lists ‘geography, botany, finance’ — likely equivalent but worth a citations check; (d) the page’s summary says the Gospel names match ‘the same ratios’, slightly stronger than the essay’s ‘roughly the right proportions’ with the women’s fit ‘looser’. || 2026-10-12 gate R1 (Biblical Reliability): obj[2] landing ported (the rival model grants Palestine, not 'close to the events'); 'on the published evidence' → the specific test; unseen gives the direction of the women's gap and lands on the essay's point; verdict no longer reads as the Library defending inerrancy; props[3] 'best explained as'."
+}

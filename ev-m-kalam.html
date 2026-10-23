@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- content-review: {"argument": "2026-07-29", "orthodoxy": "2026-07-29", "by": "2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md."} -->
+<!-- content-review: {"argument":"2026-10-08","orthodoxy":"2026-10-08","by":"2026-10-15 EDITORIAL, NON-DOCTRINAL (owner-directed, reveal-drill phrasing): the 'From a cause to a Creator' derive-the-cause prompts on rows 1-3 reworded from 'It caused all X - so it is...?' to a two-beat form that surfaces the hidden negation step ('It caused all space. Could the cause itself be spatial? So it is...?'; likewise all time/temporal and all matter and energy/material), so the drill rewards reasoning to the attribute rather than pattern-matching. Prompt text ONLY; the certified answers (spaceless, timeless*, immaterial) and every Why line are byte-identical, no doctrinal claim altered, the timeless* succession fence untouched. Per the 2026-10-08 prompt-reword precedent below, no gate round owed; lens dates deliberately NOT bumped. || 2026-10-11 PHASE 1 MECHANICS (docs/MASTERY_ROLLOUT_GUIDE_2026-10-11.md 1.2-1.9, 1.12; plumbing + UI labels, NON-DOCTRINAL): Silver part 1 now requires the 8+ at Explain level 2 or 3; a new Gold sub-gate (the mixed 'which argument answers this?' drill, injected by lib/review-queue.js from this page's own OBJ + objections.json) is wired into levelOf() and the ladder; graded per-card flashcards, the re-proof review, the pretest, if-then plans, hide-the-page, Listen and typed cloze are injected by the shared lib/review-queue.js and reuse only this page's certified strings. No argument content, model answer, card or check changed; lens dates deliberately NOT bumped. || 2026-10-11 EDITORIAL, NON-DOCTRINAL (Phase 0 of docs/MASTERY_ROLLOUT_GUIDE_2026-10-11.md): the flashcard intro no longer promises a per-card spaced deck the code does not implement (now: the whole argument returns on a spaced schedule); shelf line corrected to 'Argument N of 13 in the God's Existence track'; next-argument CTA count corrected. No argument content, graded layer or claim changed; lens dates deliberately NOT bumped. || 2026-10-08 EDITORIAL, NON-DOCTRINAL (owner retired the Memory Palace from the live site): the Memory Palace drill card and the 'including a room in the Memory Palace' clause of the Practice intro removed (drill count word adjusted). No argument content, graded layer or claim changed; lens dates deliberately NOT bumped. || 2026-10-08 EDITORIAL FIX (owner-caught, after deploy): reveal-drill row 1 prompt read 'It caused all space - so it cannot itself be...?' with the answer 'spaceless', which inverts the sense (the cause cannot be SPATIAL; it IS spaceless). Prompt reworded to 'so it is...?' to match rows 2-3 ('It caused all time - so it is...?'). Prompt only; the certified answer and Why line are unchanged, no doctrinal claim altered, so no gate round owed. || 2026-10-08 REVEAL-DRILL WHY LINES (owner-directed: the From-a-cause-to-a-Creator reveals showed a bare word). Six <span class=why> lines added, PORTED from library/kalam.html ll.174-177/191 and this page's own certified ll.478/815; no new claim, citation or footnote. Read-only Explore gates, md5-checked before/after every round. ROUND 1: citations (port check) PORT-CLEAN 6/6; orthodoxy FLAGGED 2 DRIFT (row 1 'cannot be temporal' settled divine temporality unqualified; row 6 'changeless, eternal cause' shown without the succession fence); argument + neutrality WEAK on row 6 (Morriston + tentativeness concessions dropped; dangling 'These last steps'). ONE fix pass, all wording ported (essay l.174 qualifier on row 1; timeless* on row 3; 'It must be uncaused' restored on row 4; row 6 rebuilt from page l.815 + l.478 + succession fence). ROUND 2 confirmation: orthodoxy CLEAN + STAMPABLE (0 HERESY, clarifier candidates NONE), argument STAMPABLE (0 BREAK/0 WEAK), neutrality STAMPABLE (0 BREAK/0 WEAK). One POLISH applied after round 2 in the gate's own paste-ready wording, self-verified not re-read: deleted the dangling 'also' in the Morriston line. Remaining POLISH declined on record (row1/row2 repeat kept deliberately - trimming row 1 reinstates the DRIFT; chance-horn sentence not added). AUTOMATED GATE, not pastoral sign-off (STATEMENT_OF_FAITH.md reviewer _pending_). || PRIOR: 2026-10-04 MASTERY-PAGE DEPTH + LEVELS REBUILD (owner-directed pilot: a real mastery page, not a gimmick). Rebuilt Phase 1 (key-terms pretraining glossary; derive-the-cause reveal drill; full multi-layer defences of P1 and P2 with strength labels, objections attached where they bite, and who-holds-what; tiered objection bank incl. three objections NEW to this page — isn't-God-infinitely-old, quantum-cosmology/no-boundary, the-cause-needn't-be-God/deism; the honest-state-of-the-debate card incl. Aquinas/Maimonides fairness + bounded verdict). Replaced the 4-click activity dial with retrieval-earned Bronze/Silver/Gold: Bronze = reconstruction checkpoint >=80%; Silver = Explain-It-Back >=8 (free-recall, escalating) + all four objection drills answered cold; Gold = an unseen-objection transfer test + 3 spaced recalls read from lib/review-queue.js, with decay. Flashcards 5->12; objection-cold drill; Gold unseen objection = the impersonal-chance-cause dilemma. ALL doctrinal prose and every graded/invisible layer (ARG_PREMISES, cards, OBJ, Bronze ORDER/PROPS, drill model answers, the unseen-objection model) PORTED from the certified library/kalam.html; no new citation or footnote added. FULL GATE via READ-ONLY Explore agents (specialized gate agents de-registered this session; Explore has no Edit/Write per the write-access hazard rule; file md5 93b6919c verified identical before/after by all four lenses): apologia-citations CLEAN (0 port errors; every ported quote/name/date/number matches the essay); apologia-orthodoxy CLEAN + STAMPABLE, 0 HERESY (deism-scope fences intact in all required locations, with the no-orthonote-js constraint discharged by plain wording; divine-eternity/temporality neutrality held; denominational neutrality held; clarifier verdict NONE NEW); apologia-neutrality STAMPABLE, 0 BREAK / 0 credibility-WEAK (every honest limit survived compression into the graded layers — classical-geometry caveat, Guth unpersuaded, Carroll entropy ceiling, Cantor concrete-instantiation 'disputed hinge' in all four places, Hume affirms-the-principle, 'plausibly personal' discipline); apologia-argument STAMPABLE, 0 BREAK / 0 WEAK (the four Kalam guardrails intact: begins-to-exist not everything; science = corroboration not proof; plausibly-personal not proven-personal; transcendent cause, not yet the Nicene God). TWO OPTIONAL POLISH items (argument flagged both; neutrality independently flagged the first) applied AFTER the gate as verbatim ports from the essay and SELF-VERIFIED against it, NOT re-read by the lenses: (1) the 'isn't God infinitely old?' reply restored the temporalist concession 'on the other account the defender owes a further answer about God's own past' (essay l.185); (2) flashcard 3 restored 'concretely instantiated in the physical world' (essay l.166). Mechanical checks green after the ports: 132 node tests pass; check-retired-claims 0 alive; check-orthodoxy-tripwires 0 new; div structure balanced; inline JS node --check OK. AUTOMATED GATE, NOT pastoral sign-off — docs/STATEMENT_OF_FAITH.md still logs the human/pastoral reviewer as pending site-wide. || PRIOR: 2026-10-04: 'timeless' scoped (propagated from library/kalam.html) and 'a personal agent' -> 'plausibly a personal agent' (neutrality WEAK, its wording); argument+neutrality+orthodoxy CLEAN on the propagated copies; citations unaffected. Read-only Explore gates, md5-checked before/after each round; all findings merged into one fix pass per round, mostly in the lenses' own paste-ready wording. AI-reviewed under human supervision; pastoral sign-off still _pending_ site-wide (docs/STATEMENT_OF_FAITH.md). || PRIOR: 2026-10-02 OVER-CHARITY + FACT-CHECK SWEEP of the God's Existence mastery pages (owner-directed), following the certified essay (b33206c0) and cards (0575b1ab). Read-only Explore gates, md5-checked, four lenses (citations, argument, orthodoxy incl. clarifier verdict, neutrality). Round 1 reviewed all nine layers, graded layers first (ARG_PREMISES, cards, checks regexes, drill model answer). Fixes were applied by assert-guarded scripts on scratch copies. Rounds 2, 3 and 4 were confirmation gates on the fixed text. All lenses STAMPABLE, 0 HERESY. Every changed checks regex was node-tested: the essay-correct bounded answer passes, and the retired/overclaimed/negated answer fails (contractions handled). Every inline script compiles and the JSON-LD parses. The page now claims no more than its essay, carries the deism-gap fence plus a resurrection pointer, and states a bounded own-voice verdict. NOT RUN: pastoral sign-off (pending site-wide). Remaining pre-existing gaps are logged in docs/GODS_EXISTENCE_SWEEP_BACKLOG_2026-10-01.md, not fixed (rule 9). PRIOR: 2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md.","citations":"2026-10-08","neutrality":"2026-10-08"} -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Kalam Cosmological Argument Explained | Apologia Daily</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
 :root{
   --n:#050d1a; --n8:#0a1628; --n7:#0f2040; --n5:#1e4278; --n3:#4a7ab5;
@@ -211,8 +209,76 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 .seo-summary p:last-child{margin-bottom:0}
 .hero{padding-bottom:48px}
 .seo-summary + .dialcard{margin-top:24px}
+
+/* ---------- mastery levels (Bronze / Silver / Gold) ---------- */
+.levels{display:grid;gap:10px;margin-top:4px;width:100%}
+.lvl{display:grid;grid-template-columns:42px 1fr auto;gap:14px;align-items:center;border:1px solid var(--border);border-radius:11px;padding:13px 16px;background:var(--w);transition:.2s}
+.lvl .medal{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;background:#eef0f3;filter:grayscale(1);opacity:.45}
+.lvl.earned{border-color:#cfe6da;background:var(--okl)}
+.lvl.earned .medal{filter:none;opacity:1;background:#fff}
+.lvl .lt b{font-family:var(--fd);font-size:16px;display:block;color:var(--td)}
+.lvl .lt span{font-family:var(--ui);font-size:12.5px;color:var(--tm)}
+.lvl .ls{font-family:var(--ui);font-size:12px;font-weight:600;color:var(--tm);text-align:right;white-space:nowrap}
+.lvl.earned .ls{color:var(--ok)}
+.lvl.current{border-color:var(--g);box-shadow:0 0 0 1px var(--g) inset}
+
+/* ---------- key-terms glossary (pretraining) ---------- */
+.glossary{display:grid;gap:0;margin-top:6px}
+.gt{display:grid;grid-template-columns:168px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--border);font-family:var(--ui)}
+.gt:last-child{border-bottom:none}
+.gt b{font-size:14px;color:var(--td)}
+.gt b em{color:var(--gd);font-style:italic}
+.gt span{font-size:13.5px;color:var(--tm);line-height:1.5}
+@media(max-width:560px){.gt{grid-template-columns:1fr;gap:2px}}
+
+/* ---------- premise case: supports with strength pills + attached objections ---------- */
+.stp{font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:5px;white-space:nowrap}
+.stp.proof{background:#e7eefb;color:#1e4278}
+.stp.strong{background:#fbf3e2;color:#9a7416}
+.stp.sugg{background:#eef0f3;color:#5a6b82}
+.support{border-left:3px solid #dbe6f4;padding:3px 0 3px 15px;margin:14px 0}
+.support .sh{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px}
+.support .sh b{font-family:var(--ui);font-size:14.5px;color:var(--td)}
+.support p{font-size:15px;margin-bottom:4px}
+.honest{font-family:var(--ui);font-size:13.5px;color:var(--td);background:#fbf8f0;border-left:3px solid var(--g);padding:9px 13px;border-radius:0 8px 8px 0;margin-top:6px}
+.honest b{color:var(--gd)}
+.whoholds{font-family:var(--ui);font-size:13px;color:var(--tm);background:#f4f7fb;border-radius:8px;padding:10px 14px;margin-top:12px}
+.whoholds b{color:var(--n5)}
+.objin{background:var(--ow);border:1px solid var(--border);border-radius:9px;padding:12px 15px;margin-top:11px}
+.objin .ol{font-family:var(--ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#b23b32;margin-bottom:4px}
+.objin .rl{font-family:var(--ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--gd);margin:9px 0 4px}
+.objin p{font-size:14.5px;margin-bottom:3px}
+.precise{font-family:var(--ui);font-size:13px;color:var(--n7);background:#eef3fa;border:1px solid #dbe6f4;border-radius:8px;padding:9px 13px;margin:2px 0 10px}
+
+/* ---------- reveal-on-reason drills (derive the cause / source match) ---------- */
+.derive{display:grid;gap:10px;margin-top:10px}
+.dr{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:var(--ow);border:1px solid var(--border);border-radius:10px;padding:12px 15px}
+.dr .q{font-size:15px;font-family:var(--ss)}
+.dr .q em{color:var(--n5);font-style:italic}
+.dr .rev{font-family:var(--ui);font-size:12.5px;font-weight:600;color:var(--n5);background:#fff;border:1px solid #cfdcee;border-radius:7px;padding:6px 12px;cursor:pointer;white-space:nowrap}
+.dr .rev:hover{background:#f3f7fc}
+.dr .ans{display:none;font-family:var(--ui);font-weight:700;font-size:14px;color:var(--gd);white-space:nowrap}
+.dr.shown .rev{display:none}
+.dr.shown .ans{display:inline}
+@media(max-width:560px){.dr{grid-template-columns:1fr}.dr .ans,.dr .rev{justify-self:start}}
+
+/* ---------- retrieval gate (reconstruct before credit) ---------- */
+.recall{background:var(--w);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-top:14px}
+.recall .q{font-family:var(--ui);font-size:14.5px;font-weight:600;color:var(--td);margin-bottom:10px}
+.ordergrid{display:grid;gap:8px}
+.oi{display:flex;align-items:center;gap:11px;background:var(--ow);border:1px solid var(--border);border-radius:9px;padding:11px 14px;cursor:grab;font-size:15px}
+.oi .h{font-family:var(--ui);font-weight:700;color:var(--n3);flex:0 0 auto}
+.gradeline{font-family:var(--ui);font-size:13.5px;font-weight:600;margin-top:12px;display:none}
+.gradeline.show{display:block}
+.gradeline.pass{color:var(--ok)}
+.gradeline.fail{color:var(--gd)}
+
+/* ---------- tier label on objection bank ---------- */
+.tierhead{font-family:var(--ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--tm);margin:18px 0 8px;display:flex;align-items:center;gap:9px}
+.tierhead::after{content:"";flex:1;height:1px;background:var(--border)}
 </style>
   <link rel="stylesheet" href="/ad-nav.css">
+  <link rel="stylesheet" href="/library/mastery-ui.css?v=20261009b">
 <meta name="description" content="Master the Kalam cosmological argument - that whatever begins to exist has a cause - and learn to defend both premises with confidence.">
 <link rel="canonical" href="https://apologiadaily.com/library/kalam.html">
 <meta property="og:type" content="article">
@@ -247,7 +313,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
             <div class="adn-mega-col">
               <div class="adn-mega-h">Go deeper</div>
               <a class="adn-mi" href="/library/"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Deep-Dive Essays</span><span class="adn-mi-dc">Long-form, fully-cited essays.</span></span></a>
-              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Answers</span><span class="adn-mi-dc">The questions people ask most.</span></span></a>
+              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Common Questions</span><span class="adn-mi-dc">Short answers to the questions people ask most.</span></span></a>
               <a class="adn-mi" href="/sources.html"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Church Fathers &amp; Creeds</span><span class="adn-mi-dc">The early church in its own words, verified.</span></span></a>
               <a class="adn-mi" href="/our-sources.html"><span class="adn-mi-ic">&#128218;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Our Sources</span><span class="adn-mi-dc">Books and articles our essays cite.</span></span></a>
               <a class="adn-mi" href="/whats-new.html"><span class="adn-mi-ic">&#128240;</span><span class="adn-mi-tx"><span class="adn-mi-nm">What&#39;s New</span><span class="adn-mi-dc">Latest essays, features &amp; reels.</span></span></a>
@@ -258,11 +324,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
               <a class="adn-mi" href="/games.html"><span class="adn-mi-ic">&#127918;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Games</span><span class="adn-mi-dc">Quizzes that feed your streak.</span></span></a>
               <a class="adn-mi" href="/study-groups.html"><span class="adn-mi-ic">&#128101;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Study Groups <span class="adn-mi-tag">New</span></span><span class="adn-mi-dc">Study with people you love.</span></span></a>
               <a class="adn-mi" href="/reading-club.html"><span class="adn-mi-ic">&#128214;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Reading Clubs</span><span class="adn-mi-dc">The classics, chapter by chapter.</span></span></a>
-              <a class="adn-mi" href="/conversation-journal.html"><span class="adn-mi-ic">&#128221;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Conversation Journal</span><span class="adn-mi-dc">Log real conversations, get AI coaching.</span></span></a>
             </div>
             <div class="adn-mega-col">
               <div class="adn-mega-h">For you</div>
-              <a class="adn-mi" href="/parents.html"><span class="adn-mi-ic">&#128106;</span><span class="adn-mi-tx"><span class="adn-mi-nm">For Parents</span><span class="adn-mi-dc">Your kids&#39; hardest questions.</span></span></a>
               <a class="adn-mi" href="/video-library.html"><span class="adn-mi-ic">&#127909;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Videos</span><span class="adn-mi-dc">Short, shareable explainers.</span></span></a>
             </div>
             <div class="adn-mega-foot">
@@ -310,9 +374,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
   <!-- public, search-indexable summary (always visible) -->
   <section class="seo-summary">
     <h2>The argument in brief</h2>
-    <p>The Kalam cosmological argument runs on two short premises: whatever <em>begins to exist</em> has a cause, and the universe began to exist — so the universe has a cause. Notice the careful wording. The claim is not that "everything has a cause" (which would invite the question "then what caused God?"), but only that things which <em>come into being</em> require something to bring them about. The first premise is rooted in constant experience: things do not pop into existence from nothing, uncaused.</p>
-    <p>The second premise — that the universe had a beginning — draws on both philosophy and science. Philosophers argue that an actually infinite past leads to absurdities, since you could never "finish" counting through an endless series of prior moments to arrive at today. Scientifically, the standard Big Bang model and the 2003 Borde–Guth–Vilenkin theorem point to a finite cosmic past. A cause of all space, time and matter would itself have to be spaceless, timeless, immensely powerful, and — as the best explanation of why a timeless cause produces a temporal effect — a personal agent.</p>
-    <p>Honestly stated: the argument concludes to a transcendent cause, not yet to the full God of Christianity. That further step is taken by other arguments. Kalam clears the ground by showing the universe is not self-explaining brute fact.</p>
+    <p>The Kalam cosmological argument runs on two short premises: whatever <em>begins to exist</em> has a cause, and the universe began to exist — so the universe has a cause. Notice the careful wording. The claim is not that "everything has a cause" (which would invite the question "then what caused God?"), but only that things which <em>come into being</em> require something to bring them about. The first premise rests on one of the most secure intuitions we have — out of nothing, nothing comes — and its deepest warrant is that metaphysical intuition, not the inductive track record alone.</p>
+    <p>The second premise — that the universe had a beginning — draws on both philosophy and science. Philosophers argue that an actually infinite past leads to absurdities, since you could never "finish" counting through an endless series of prior moments to arrive at today. These arguments are serious reasons, though contested, not knock-down demonstrations. Scientifically, the standard Big Bang model and the 2003 Borde–Guth–Vilenkin theorem strongly corroborate, without proving, a finite cosmic past. A cause of all space, time and matter would itself have to be spaceless, timeless (no part of the time that began with the universe), immensely powerful, and — as the best explanation of why a timeless cause produces a temporal effect — plausibly a personal agent.</p>
+    <p>Honestly stated: the argument concludes to a transcendent cause, not yet to the full God of Christianity. Kalam is one strand in a cumulative case, alongside fine-tuning, moral value, contingency, and ultimately the historical evidence for the resurrection. "The universe just exists, inexplicably" is not the only rational option — and, we judge, not the most reasonable one: taken together, the premises and the inference to the best explanation favor a personal Creator.</p>
   </section>
 
   <!-- mastery dial -->
@@ -326,15 +390,37 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     </div>
     <div class="dialmeta">
       <h2>Your mastery of this argument</h2>
-      <p>Four checkpoints: understand it, explain it, drill it, defend it. Complete them in any order — your progress saves to your account.</p>
-      <span class="libnote">◆ &nbsp;Argument 12 of 19 in the mastery library</span>
+      <p>Three earned levels — <b>Bronze</b> (rebuild it), <b>Silver</b> (defend it cold), <b>Gold</b> (handle an objection you&rsquo;ve never seen, then prove it again weeks later). Clicking through no longer counts; demonstrated recall does. Progress saves to your account.</p>
+      <span class="libnote">◆ &nbsp;Argument 1 of 13 in the God&rsquo;s Existence track</span>
     </div>
+  </div>
+
+  <div class="levels" id="levels">
+    <div class="lvl" id="lvl-bronze"><div class="medal">&#129353;</div><div class="lt"><b>Bronze · Understand</b><span>Rebuild the syllogism and the cause&rsquo;s properties from memory (&ge;80%)</span></div><div class="ls">Locked</div></div>
+    <div class="lvl" id="lvl-silver"><div class="medal">&#129352;</div><div class="lt"><b>Silver · Defend</b><span>Explain it &ge;8/10 <em>and</em> field its objections cold</span></div><div class="ls">Locked</div></div>
+    <div class="lvl" id="lvl-gold"><div class="medal">&#129351;</div><div class="lt"><b>Gold · Master</b><span>Answer an unseen objection, pick the right argument from a mixed set, then re-prove it on 3 spaced reviews</span></div><div class="ls">Locked</div></div>
   </div>
 
   <!-- ===================== PHASE 1: UNDERSTAND ===================== -->
   <section id="understand">
     <div class="phasehead"><span class="phasenum">1</span><h3>Understand it</h3></div>
-    <p class="phasesub">Not more prose — the load-bearing structure. See the skeleton, then learn to defend each bone.</p>
+    <p class="phasesub">Not more prose — the load-bearing structure, defended bone by bone, then proven from memory. Work top to bottom; the checkpoint at the end asks you to rebuild it with nothing in front of you.</p>
+
+    <div class="card">
+      <span class="kick">Before you start · key terms</span>
+      <h4>Eight words this argument leans on</h4>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:6px">Learn these first — the objections below turn on them, and most weak versions of the Kalam come from blurring one of them.</p>
+      <div class="glossary">
+        <div class="gt"><b>&ldquo;Begins to exist&rdquo;</b><span>The premise is restricted to things that <em>come into being</em> — never &ldquo;everything has a cause.&rdquo; The precision is built into the argument, not bolted on after the fact.</span></div>
+        <div class="gt"><b><em>Ex nihilo nihil fit</em></b><span>&ldquo;Out of nothing, nothing comes&rdquo; — being does not arise from non-being. The deepest warrant for Premise 1.</span></div>
+        <div class="gt"><b>Actual infinite</b><span>An infinite collection existing all at once in reality — as opposed to a <em>potential</em> infinite that only ever grows toward it.</span></div>
+        <div class="gt"><b>Successive addition</b><span>Building a collection one member after another. However long you go on, you can always add one more — you never <em>complete</em> it.</span></div>
+        <div class="gt"><b>Material vs. efficient cause</b><span>What a thing is made <em>out of</em> (material) versus what <em>brings it about</em> (efficient). Premise 1 asks only for the second.</span></div>
+        <div class="gt"><b>BGV theorem</b><span>Borde&ndash;Guth&ndash;Vilenkin, 2003: any universe that has on average been expanding has a past boundary — it cannot be extended infinitely into the past as a classical spacetime.</span></div>
+        <div class="gt"><b>Agent causation</b><span>An agent bringing about a new state of affairs without any prior determining change — the signature of a person, not a mechanism.</span></div>
+        <div class="gt"><b>Inference to the best explanation</b><span>Reasoning to the most reasonable account of the evidence — strong where it holds, but not a deductive proof.</span></div>
+      </div>
+    </div>
 
     <div class="card">
       <span class="kick">The argument, formally</span>
@@ -346,74 +432,133 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       </div>
       <p class="formnote">The logic is valid — if both premises are true, the conclusion follows. So objections come in two families: attacks on P1 or P2, and attacks on the further step from the conclusion to what it is taken to show. Knowing <em>which premise</em> an objection targets is half the battle.</p>
 
-      <span class="kick" style="margin-top:22px">Then the conceptual step — what must this cause be?</span>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">Reasoning from the conclusion: a cause of <em>all</em> space, time, and matter cannot itself be spatial, temporal, or material. That narrows the candidate dramatically.</p>
-      <div class="chiprow">
-        <span class="chip">uncaused</span><span class="chip">beginningless</span><span class="chip">timeless</span>
-        <span class="chip">spaceless</span><span class="chip">immaterial</span><span class="chip">enormously powerful</span>
-        <span class="chip gold">and plausibly personal</span>
-      </div>
     </div>
 
     <div class="card">
-      <span class="kick">Defending the premises</span>
-      <h4>Why each premise is more plausible than its denial</h4>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P1 — everything that begins has a cause</summary>
-        <div class="body">
-          <p class="lbl steel">The intuition</p>
-          <p>Out of nothing, nothing comes. Things don't pop into being uncaused from non-being — if they could, it's inexplicable why we don't see anything and everything doing so constantly.</p>
-          <p class="lbl steel">The track record</p>
-          <p>P1 is confirmed throughout ordinary experience &mdash; though that track record is entirely of causes acting on pre-existing material inside the universe, so extending it to the universe's own beginning is a step a critic can resist. The deeper warrant is the metaphysical intuition, not the induction alone.</p>
+      <span class="kick">From a cause to a Creator</span>
+      <h4>Don&rsquo;t read the conclusion — reason to it</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:4px">Working purely from the premises, before importing any religious commitment: what must a cause of <em>all</em> space, time, and matter be like? Reason each line out, then reveal.</p>
+      <div class="derive">
+        <div class="dr"><div class="q">It caused <em>all space</em>. Could the cause itself be spatial? So it is…?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">spaceless</span><span class="why">The cause brought <em>all</em> of physical reality into being &mdash; all space, all time, all matter and energy. Therefore the cause cannot itself be spatial, temporal, or material &mdash; timeless in at least this sense, that it is no part of the time that began with the universe.</span></div>
+        <div class="dr"><div class="q">It caused <em>all time</em>. Could the cause itself be temporal? So it is…?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">timeless*</span><span class="why">&hellip;timeless in at least this sense, that it is no part of the time that began with the universe. (Whether God&rsquo;s own life has any succession to it is a further question, on which orthodox Christians differ and which this argument does not settle.)</span></div>
+        <div class="dr"><div class="q">It caused <em>all matter and energy</em>. Could the cause itself be material? So it is…?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">immaterial</span><span class="why">&hellip;it must be spaceless, timeless*, and immaterial, transcending the very framework it produced.</span></div>
+        <div class="dr"><div class="q">If it had <em>begun</em>, Premise 1 would demand its own cause — so it is…?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">uncaused, beginningless</span><span class="why">It must be uncaused &mdash; for if it began to exist it would, by Premise 1, require a cause of its own, and we have simply moved the question back a step. The cause of the universe is itself beginningless.</span></div>
+        <div class="dr"><div class="q">It brought the entire cosmos into being — so it is…?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">enormously powerful</span><span class="why">It must be unimaginably powerful, having brought the entire cosmos into existence.</span></div>
+        <div class="dr"><div class="q">Best explanation of a <em>temporal</em> effect from a <em>timeless</em> cause (agent causation)?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">plausibly personal</span><span class="why">If the cause were a changeless set of sufficient conditions &mdash; like water freezing the instant the temperature drops below zero &mdash; then wherever the cause existed, the effect would exist too, and a timeless cause would yield an equally timeless, beginningless universe. But the universe is not beginningless. An agent — who can refrain as well as act — is the most natural fit for a cause that is changeless without the universe and yet brings about an effect that begins. (Morriston doubts a timeless agent can coherently &ldquo;timelessly will&rdquo; a first moment.) So it adds weight to the case for a personal cause rather than settling it — inference to the best explanation, not proof. (Those who hold that God&rsquo;s own life has succession will frame the step differently; the argument does not decide that.)</span></div>
+      </div>
+      <p class="honest" style="margin-top:14px"><b>* Timeless</b> here means only that the cause is no part of the time that began with the universe. Whether God&rsquo;s own life has any succession to it is a further question on which orthodox Christians differ, and which this argument does not settle.</p>
+      <p class="honest"><b>Honestly stated:</b> this reaches a spaceless, timeless, immaterial, enormously powerful, and <em>plausibly personal</em> cause — a long way toward theism, but not yet the triune God of the Nicene Creed, nor even a morally good or worship-worthy being. That is not a flaw; it is honesty about scope. Kalam is <em>one strand</em> in a cumulative case, alongside fine-tuning, moral value, contingency, and ultimately the <a href="/library/minimalfacts.html">historical evidence for the resurrection</a>.</p>
+    </div>
+
+    <div class="card">
+      <span class="kick">Defending Premise 1</span>
+      <h4>Whatever <em>begins to exist</em> has a cause</h4>
+      <p class="precise">Precision check: <b>not</b> &ldquo;everything has a cause&rdquo; (which invites &ldquo;then what caused the cause?&rdquo;) — only things that <em>begin to exist</em>. The restriction is principled, built into the argument from its origins.</p>
+
+      <div class="support">
+        <div class="sh"><b>The metaphysical intuition</b> <span class="stp strong">The core warrant</span></div>
+        <p>Being does not arise from non-being — <em>ex nihilo nihil fit</em>. If things could pop into existence uncaused out of nothing, it becomes inexplicable why we do not see bicycles, symphonies, and herds of zebra flickering into being in midair. That reality is orderly rather than a lottery of spontaneous somethings is itself evidence that coming-to-be requires a cause.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>The inductive track record</b> <span class="stp sugg">Confirmatory · limited</span></div>
+        <p>Premise 1 is confirmed throughout ordinary experience — though that track record is entirely of causes acting on pre-existing material <em>inside</em> the universe, so extending it to the universe&rsquo;s own beginning is a step a critic can resist. The deeper warrant is the intuition above, not the induction alone.</p>
+        <p class="honest">Even David Hume — usually cited against the principle — affirmed it: in a 1754 letter he denied ever asserting &ldquo;so absurd a Proposition&rdquo; as that anything might arise without a cause. What he disputed was only that we know it by intuition or demonstration — which is exactly where Morriston presses.</p>
+      </div>
+
+      <div class="objin">
+        <div class="ol">Objection — &ldquo;Quantum particles come from nothing&rdquo;</div>
+        <p>In the quantum vacuum, virtual particles appear with no deterministic cause — so Premise 1 is empirically false.</p>
+        <div class="rl">Reply</div>
+        <p>The quantum vacuum is emphatically <em>not</em> &ldquo;nothing.&rdquo; It is a real sea of fluctuating energy governed by the laws of quantum field theory; a particle arising from it is no more something-from-nothing than a wave from the ocean. The objection equivocates: the physicist&rsquo;s &ldquo;nothing&rdquo; is empty space with its fields; Premise 1&rsquo;s &ldquo;nothing&rdquo; is non-being — no space, no fields, no laws. Two further distinctions: an indeterministic event is not thereby <em>uncaused</em> (a nucleus decays randomly in time but, as the physicist Peter Bussey notes, &ldquo;because certain nuclear forces are acting&rdquo;); and &ldquo;creation out of nothing&rdquo; denies a <em>material</em> cause, not an <em>efficient</em> one — Premise 1 asks only for the latter.</p>
+      </div>
+      <div class="objin">
+        <div class="ol">Objection — Morriston: our causal sense comes only from inside time <span class="badge hard" style="margin-left:6px">Hardest</span></div>
+        <p>Our confidence that things have causes is built from events <em>within</em> time and space. The absolute beginning of all space and time is utterly unlike that — so why assume the principle reaches that far? (Morriston also doubts a timeless agent can coherently &ldquo;timelessly will&rdquo; a first moment.)</p>
+        <div class="rl">Reply</div>
+        <p>The causal principle is grounded not merely in inductive habit but in a metaphysical insight about being and non-being that holds whether the &ldquo;beginning&rdquo; is <em>in</em> time or <em>of</em> time — a case the defender must make, not assume: nothing has no properties and no powers, so it can produce nothing. On timeless willing: an agent can bring about a new state without any prior determining change, since what is willed, changelessly, is a world with a first moment. This is the objection worth taking most seriously.</p>
+      </div>
+      <div class="objin">
+        <div class="ol">Objection — Oppy: the first state could be an exception</div>
+        <p>The principle may hold everywhere except at the very first state — singled out by its position, as the one state with nothing before it — so the naturalist may take the initial state as a brute fact needing no cause.</p>
+        <div class="rl">Reply</div>
+        <p>Being <em>first</em> is not a power or feature that could make uncaused origination possible; it is only the absence of anything prior — and the absence of anything is exactly the condition under which the principle says nothing comes (an answer going back to Jonathan Edwards, which the logician A. N. Prior, no apologist, judged &ldquo;entirely cogent&rdquo;). Oppy has replied that this still allows a first state of only contingent things; whether that holds at the absolute beginning is the same question Morriston presses, and it remains open.</p>
+      </div>
+      <div class="whoholds"><b>The room:</b> Craig defends it; Quentin Smith denied it of the universe in a 1993 exchange (&ldquo;we came from nothing, by nothing, and for nothing&rdquo;), later arguing from quantum cosmology instead; Morriston and Oppy press it hardest — both fair-minded critics, not cranks.</div>
+    </div>
+
+    <div class="card">
+      <span class="kick">Defending Premise 2</span>
+      <h4>The universe <em>began</em> to exist</h4>
+      <p class="precise">The controversial premise, and the battleground. Claim: the past is <em>finite</em> — a first moment, not an endless ocean of prior events. Defended along two independent lines, so even if one failed entirely, the other would remain.</p>
+
+      <p style="font-family:var(--ui);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--n5);margin:6px 0 0">Line 1 — philosophical</p>
+      <div class="support">
+        <div class="sh"><b>A · An actual infinite can&rsquo;t be instantiated</b> <span class="stp strong">Strong · contested</span></div>
+        <p>Hilbert&rsquo;s Hotel: a &ldquo;full&rdquo; hotel of infinitely many rooms still takes new guests; empty the odd-numbered rooms and infinitely many leave, yet exactly as many remain. Signs, the argument runs, that an actually infinite number of real things cannot be instantiated in the concrete world — so the series of past events cannot be actually infinite.</p>
+        <p class="honest"><b>Honest narrowing:</b> Cantorian set theory shows the actual infinite is perfectly coherent <em>mathematically</em> — Hilbert&rsquo;s Hotel is counterintuitive, not contradictory. So the claim must be narrowed to: an actual infinite cannot be <em>concretely instantiated</em> in the physical world. Whether that holds is the disputed hinge.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>B · You can&rsquo;t form an infinite by successive addition</b> <span class="stp strong">Strong · contested</span></div>
+        <p>The past is built up one event at a time; however long you add, you never <em>complete</em> an infinite — reaching today by traversing infinitely many prior moments would be completing the uncompletable. Since we <em>have</em> arrived at today, the series behind us is finite.</p>
+        <p class="honest"><b>Honest limit:</b> this assumes time really passes (a dynamic view). On the rival &ldquo;block&rdquo; view, nothing is ever added and the argument loses its grip — Craig grants it presupposes a dynamical view of time. One reason Premise 2 does not rest on it alone.</p>
+        <div class="objin">
+          <div class="ol">Objection — Morriston: &ldquo;counting down from infinity&rdquo; begs the question</div>
+          <p>A beginningless past has no first moment to set out <em>from</em>, so the image smuggles in a starting point; the defender owes a &ldquo;symmetry breaker&rdquo; to count a beginningless past impossible while allowing an endless future (Malpass &amp; Morriston, 2020).</p>
+          <div class="rl">Reply</div>
+          <p>The worry was never about a starting point: it is that an actual infinite cannot be <em>completed</em> by successive addition, one moment at a time, whether or not the series had a first member — and a beginningless past is precisely such an uncompletable series offered to us as already complete.</p>
         </div>
-      </details>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P2 — the universe began to exist</summary>
-        <div class="body">
-          <p class="lbl steel">Two philosophical arguments</p>
-          <p>An <em>actual infinite</em> number of past events leads to absurdities (Hilbert's Hotel — a full hotel that still takes guests). And even if such a thing could exist, you couldn't <em>form</em> it by adding one event after another — you'd never arrive at today.</p>
-          <p class="lbl steel">Two scientific confirmations</p>
-          <p>Standard Big Bang cosmology traces the expansion of the universe back to a finite beginning. And the second law of thermodynamics: a universe with an infinite past would plausibly have reached equilibrium by now — a point cosmologists still debate, but one that tells against a literally infinite past.</p>
-        </div>
-      </details>
+      </div>
+      <div class="support">
+        <div class="sh"><b>C · The Grim Reaper paradox</b> <span class="stp strong">Strong · contested</span></div>
+        <p>Infinitely many &ldquo;reapers,&rdquo; each set to act at a fixed moment packed ever closer to noon: you cannot survive past noon, yet no reaper can be the one who strikes (there is always an earlier one). The scenario is flatly contradictory — so the actually infinite army it requires cannot exist. Pruss and Koons, from a 1964 Benardete paradox, spread the same structure across an infinite past.</p>
+      </div>
+
+      <p style="font-family:var(--ui);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--n5);margin:16px 0 0">Line 2 — scientific (corroboration, stated honestly)</p>
+      <div class="support">
+        <div class="sh"><b>D · Big Bang cosmology</b> <span class="stp proof">Corroboration</span></div>
+        <p>The standard model traces the expansion of the universe back toward a finite past boundary some 13.8 billion years ago.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>E · The Borde&ndash;Guth&ndash;Vilenkin theorem (2003)</b> <span class="stp proof">Corroboration</span></div>
+        <p>Any universe that has, on average, been expanding cannot be extended infinitely into the past — its history has a past boundary — with no assumptions about energy content, so it reaches even most multiverse and eternal-inflation models.</p>
+        <p class="honest"><b>Stated honestly:</b> it is a result about <em>classical</em> spacetime; it does not by itself say what lies at the boundary. Vilenkin says the universe &ldquo;probably&rdquo; began and that &ldquo;a deep mystery remains&rdquo;; his own co-author Alan Guth is <em>not</em> persuaded it began (he is sympathetic to past-eternal models like Carroll&ndash;Chen). Powerful corroboration of a beginning of the universe as we know it — not an airtight proof.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>F · Thermodynamics</b> <span class="stp sugg">Suggestive</span></div>
+        <p>If the universe were infinitely old it would presumably have reached &ldquo;heat death&rdquo; equilibrium an infinite time ago; that it has not suggests a finite wind-up. Genuinely disputed — Carroll notes that in an expanding universe the maximum possible entropy rises, so equilibrium need never be reached — so best treated as suggestive; but the low-entropy past we actually observe still sits awkwardly with a literally infinite history.</p>
+      </div>
+      <div class="whoholds"><b>The room:</b> Vilenkin (&ldquo;probably began&rdquo;), Guth (unpersuaded), Carroll (rising entropy ceiling), Mithani &amp; Vilenkin (no viable eternal model). The science converges on a beginning; it does not close the case — which is why the philosophical line matters independently.</div>
     </div>
 
     <div class="card">
       <span class="kick">The hard part — objections, answered</span>
       <h4>The objections you will actually meet</h4>
-      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">This is what separates someone who <em>knows</em> the Kalam from someone who can <em>defend</em> it. Each gets its best form first, then the reply — and the hardest objection of all is flagged above.</p>
-      <p class="hardest"><b>The one that matters most:</b> Morriston&rsquo;s &mdash; our causal intuition is built from events <em>inside</em> time and space. The <a href="/library/kalam.html">deep dive</a> answers it at length &mdash; take it with you, not just the replies below.</p>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">This is what separates someone who <em>knows</em> the Kalam from someone who can <em>defend</em> it. Each gets its best form first, then the reply, sorted by difficulty. Two of the sharpest — Morriston on the causal principle and Oppy on the first state — are answered inside <em>Defending Premise 1</em> above, where they bite.</p>
+      <p class="hardest"><b>The one that matters most:</b> Morriston&rsquo;s — our causal intuition is built from events <em>inside</em> time and space. It is answered under <em>Defending Premise 1</em> above; the <a href="/library/kalam.html">deep dive</a> presses it further — take it with you.</p>
 
+      <div class="tierhead">Common</div>
       <details class="acc">
         <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Then what caused God?" <span class="badge easy">Common</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
           <p>If everything needs a cause, then God needs one too. Stopping at God is an arbitrary exception — special pleading.</p>
           <p class="lbl reply">Reply</p>
-          <p>P1 doesn't say <em>everything</em> needs a cause. It says everything that <strong>begins to exist</strong> does. God, by definition, never began — so He's not an exception to the rule, He simply falls outside its scope. It isn't arbitrary; the premise was principled from the start.</p>
+          <p>P1 doesn't say <em>everything</em> needs a cause. It says everything that <strong>begins to exist</strong> does. God, by definition, never began — so He's not an exception to the rule, He simply falls outside its scope. It isn't arbitrary; the premise was principled from the start. The question is rather like asking what the bachelor's wife is doing tonight: it presupposes what the case has already ruled out.</p>
         </div>
       </details>
 
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Quantum particles come from nothing" <span class="badge mid">Trickier</span></summary>
-        <div class="body">
-          <p class="lbl steel">Strongest form</p>
-          <p>In quantum mechanics, virtual particles appear in the vacuum without a deterministic cause. So P1 is empirically false — things <em>do</em> begin without a cause.</p>
-          <p class="lbl reply">Reply</p>
-          <p>The quantum vacuum is not "nothing." It's a seething sea of energy governed by physical laws — a richly structured something. Particles emerging from it have a cause: that physical substrate. The objection trades on "nothing" meaning empty space, when the argument means <em>non-being</em>.</p>
-        </div>
-      </details>
-
+      <div class="tierhead">Trickier</div>
       <details class="acc">
         <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Mathematicians use infinities fine" <span class="badge mid">Trickier</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
           <p>Cantor showed actual infinite sets are perfectly coherent. So why deny an actual infinite of past events?</p>
           <p class="lbl reply">Reply</p>
-          <p>There's a difference between the infinite as a concept in mathematics (consistent within its axioms) and an infinite collection <em>instantiated</em> in the physical world. The Kalam denies the latter, not the former — and the Hilbert's Hotel absurdities are exactly what go wrong when you try to make it real.</p>
+          <p>There's a difference between the infinite as a concept in mathematics (consistent within its axioms) and an infinite collection <em>instantiated</em> in the physical world. Granted: Cantorian set theory shows the actual infinite to be perfectly coherent mathematically — Hilbert's Hotel is counterintuitive, not contradictory — so the defender's claim must be narrowed to that second thing: an actual infinite cannot be concretely instantiated in the physical world. Whether that metaphysical claim holds is precisely the disputed hinge, so the arguments are offered not as knock-down demonstrations but as serious reasons to doubt that the past stretches back forever.</p>
         </div>
       </details>
 
+      <div class="tierhead">Hard</div>
       <details class="acc">
         <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Maybe the universe has no beginning" <span class="badge hard">Hard</span></summary>
         <div class="body">
@@ -430,7 +575,37 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Even granting a first cause, you've got a deist abstraction, not God. Why think it's a mind that chooses, rather than some impersonal force?</p>
           <p class="lbl reply">Reply</p>
-          <p>Two considerations point to a mind. First, a cause of all space, time, and matter must be either an abstract object (a number, say) or an unembodied mind — and abstract objects don't stand in causal relations. Second, if a <em>changeless</em> cause were mechanically sufficient, its effect should be as eternal as the cause; the best explanation for why a temporal universe springs from a timeless cause is a free act of will — agent causation. Neither is a deductive proof, but together they make a personal cause the most reasonable inference — a mind, not a mechanism.</p>
+          <p>Two considerations point to a mind. First, a cause of all space, time, and matter seems to fall into one of only two categories we can conceive: an abstract object (a number, say) or an unembodied mind — and abstract objects don't stand in causal relations. Second, if a <em>changeless</em> cause were mechanically sufficient, its effect should be as eternal as the cause; the best explanation for why a temporal universe springs from a timeless cause is a free act of will — agent causation. Neither is a deductive proof, but together they make a personal cause the most reasonable inference — a mind, not a mechanism. Even so, that is not yet the triune God of the Nicene Creed, nor even a morally good or worship-worthy being: Kalam is one strand in a cumulative case, alongside arguments from fine-tuning, moral value, contingency, and ultimately the historical evidence for the resurrection.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Then isn't God infinitely old?" <span class="badge hard">Hard</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>Turn the argument's own philosophy back on it: if an actual infinite can't be concretely instantiated, and no infinite series can be completed by successive addition, what about God? Some theists hold God is everlasting <em>in</em> time — so His own past would be an unbounded series of moments, now complete: the very thing the two arguments were built to tell against.</p>
+          <p class="lbl reply">Reply</p>
+          <p>Both arguments are pressed against a series of <em>events</em> in the <em>physical</em> world; the cause this argument reaches is spaceless, timeless, and immaterial. On the classical account of divine eternity, a timeless cause is not a series of moments at all, so there is nothing to "complete." Don't answer by calling God "infinitely old" — that concedes the very picture being denied, treating His eternity as a vast stretch of elapsed time. How God stands to time is genuinely disputed among orthodox Christians, and the Kalam settles none of it. On the classical account the objection dissolves; on the other account the defender owes a further answer about God's own past — but the conclusion does not fall with it either way, since neither account makes God a member of the physical past these arguments are about.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Quantum cosmology dissolves the beginning" <span class="badge hard">Hard</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>The Hartle–Hawking "no-boundary proposal" replaces ordinary time with a fourth dimension of space near the earliest era, so the universe is finite in the past but has no sharp first moment — "like the surface of the earth" with no edge. Hawking drew the moral himself: "What place, then, for a creator?"</p>
+          <p class="lbl reply">Reply</p>
+          <p>The model is speculative and leans on the contested device of "imaginary time," which Vilenkin describes as introduced "only for computational convenience" and which Hawking himself read positivistically — as just a mathematical model — on which reading it cannot carry the theological moral. More importantly, even on the no-boundary model the universe still has a <em>finite</em> past; it still begins to exist in the relevant sense, even without a first instant as we ordinarily picture one. And smoothing the earliest geometry does not, by itself, supply a cause for why there is a finite cosmos at all rather than nothing.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "The cause needn't be the God of theism" <span class="badge hard">Hard</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>Even granting everything, the argument delivers a spaceless, timeless, immaterial, enormously powerful, and plausibly personal cause — not yet the triune God of the Nicene Creed, nor even a morally good or worship-worthy being.</p>
+          <p class="lbl reply">Reply</p>
+          <p>Simply true, and a careful defender should say so plainly. This is not a flaw; it is honesty about scope. No single argument of natural theology was ever meant to carry the whole weight. Kalam's job is more modest and more foundational: to show that the universe is not a self-explaining brute fact, and that the door to a transcendent cause stands open. It is one strand in a cumulative case — alongside fine-tuning, moral value, contingency, and ultimately the historical evidence for the resurrection.</p>
         </div>
       </details>
     </div>
@@ -440,12 +615,12 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <h4>Where this comes from — primary sources, not our summary</h4>
       <div class="src">
         <div class="row">
-          <div class="who"><b>Al-Ghazali</b><span>c. 1095 · <em>Incoherence of the Philosophers</em></span></div>
-          <div class="what">The medieval Islamic theologian who gave the argument its classic form, holding that whatever comes to be has a cause for its coming-to-be — the seed of P1.</div>
+          <div class="who"><b>Al-Ghazali</b><span>c. 1095 · <em>Incoherence of the Philosophers</em>; <em>Kitab al-Iqtisad</em></span></div>
+          <div class="what">The Persian theologian who gave the argument its classic shape, attacking the philosophers' eternal world in the <em>Incoherence</em> and formulating the syllogism itself in his <em>Kitab al-Iqtisad</em>: "Every being which begins has a cause for its beginning."</div>
         </div>
         <div class="row">
           <div class="who"><b>John Philoponus</b><span>6th c. · <em>Against Aristotle, on the Eternity of the World</em></span></div>
-          <div class="what">The Christian Neoplatonist who first turned Aristotle's own ban on a completed actual infinite <em>against</em> the eternal universe — arguing the past must be finite. This is the genuine seed of the Kalam's finite-past reasoning, later developed in Islamic kalam.</div>
+          <div class="what">The Alexandrian Christian philosopher who turned Aristotle's own ban on a completed actual infinite <em>against</em> the eternal universe — arguing the past must be finite. This is the genuine seed of the Kalam's finite-past reasoning, later developed in Islamic kalam.</div>
         </div>
         <div class="row">
           <div class="who"><b>Borde, Guth &amp; Vilenkin</b><span>2003 · <em>Phys. Rev. Lett.</em> 90, 151301</span></div>
@@ -457,18 +632,48 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         </div>
       </div>
     </div>
+
+    <div class="card">
+      <span class="kick">The honest state of the debate</span>
+      <h4>Where the argument really stands — and a fairness most defenders skip</h4>
+      <p>Among philosophers it remains live and genuinely contested. Premise 1 is widely regarded as plausible, though critics like Morriston raise real questions about its scope. Premise 2 is the battleground: the philosophical arguments have able defenders and able critics, and the scientific evidence is corroborative rather than conclusive. The step from cause to <em>personal</em> Creator is the most contested of all, best held as a reasoned inference, not a proof. The Kalam has not ended the conversation; it has sharpened it, and forced naturalists to say exactly where they get off the train.</p>
+      <p class="honest"><b>A fairness most defenders skip:</b> the whole theistic tradition does <em>not</em> reason as the Kalam does. Thomas Aquinas held that the world's beginning in time cannot be proved by reason at all — "by faith alone do we hold… that the world did not always exist" — while still judging God's existence demonstrable by <a href="/library/thomistic.html">arguments that don't turn on a temporal beginning</a>. Maimonides reasoned much the same way. None of this refutes the Kalam, but a case is not strengthened by conscripting authorities who expressly declined to make it.</p>
+      <p><b>The bounded verdict:</b> stated without exaggeration, the Kalam makes a serious, defensible case that the universe began and therefore has a transcendent cause — spaceless, timeless, immaterial, beginningless, enormously powerful, and most plausibly a personal mind. It does not by itself prove the God of any particular religion, and the best critics remain in the field. What it accomplishes is to show that "the universe just exists, inexplicably" is not the only rational option — and, we judge, not the most reasonable one.</p>
+    </div>
+
+    <div class="card" id="bronzeGate">
+      <span class="kick">Checkpoint · earn Bronze</span>
+      <h4>Rebuild it from memory — nothing in front of you</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:4px">Close the sections above. This is the retrieval that turns reading into knowing — and it is how this argument reaches <b>Bronze&nbsp;· Understand</b> on your shelf. Opening accordions no longer counts; showing you can rebuild the structure does.</p>
+      <div class="recall">
+        <div class="q">1 &middot; Put the argument in order — tap the three lines in sequence.</div>
+        <div id="orderPool" class="btnrow"></div>
+        <div id="orderSeq" style="font-family:var(--ui);font-size:13.5px;color:var(--tm);margin-top:10px;min-height:1.2em"></div>
+      </div>
+      <div class="recall" style="margin-top:12px">
+        <div class="q">2 &middot; What must the cause be? Select every property the argument establishes — and nothing it doesn&rsquo;t.</div>
+        <div id="propPool" style="display:flex;flex-wrap:wrap;gap:9px;margin-top:4px"></div>
+      </div>
+      <div class="btnrow"><button class="btn primary" onclick="gradeBronze(this)">Check my reconstruction</button><button class="btn ghost" onclick="resetBronze()">Reset</button></div>
+      <div class="gradeline" id="bronzeGrade"></div>
+    </div>
   </section>
 
   <!-- ===================== PHASE 2: PRACTICE ===================== -->
   <section id="practice">
     <div class="phasehead"><span class="phasenum">2</span><h3>Practice it</h3></div>
-    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Four drills that route this argument through tools you already have — including a room in the Memory Palace.</p>
+    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. These drills make you <em>generate</em> the argument, not recognise it — harder now, on purpose, so it holds in a real conversation.</p>
 
     <!-- explain it back -->
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back</span>
-      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument in your own words</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">No looking back. State both premises, the conclusion, and what the cause must be like. You'll get scored out of 10.</p>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back &mdash; free recall</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument with nothing in front of you</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:12px">Scroll the sections away and generate it from memory — recalling is what builds durable memory; re-reading only feels like it does. Pick your level; the bar rises as you go. Scored out of 10, graded for <em>accuracy</em> first. An 8+ is one half of <b>Silver</b>.</p>
+      <div class="btnrow" id="explainLevels" style="margin:0 0 10px">
+        <button class="btn ghost sel" type="button" data-lv="1" onclick="setExplainLevel(this,1)">1 · State it</button>
+        <button class="btn ghost" type="button" data-lv="2" onclick="setExplainLevel(this,2)">2 · &hellip;and answer its hardest objection</button>
+        <button class="btn ghost" type="button" data-lv="3" onclick="setExplainLevel(this,3)">3 · &hellip;to a hostile grad student</button>
+      </div>
       <textarea id="explainBox" placeholder="The Kalam argument says that..."></textarea>
       <div class="btnrow">
         <button class="btn primary" onclick="scoreExplain(this)">Score my explanation</button>
@@ -487,7 +692,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <div class="practicecard">
       <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 2 · Flashcards</span>
       <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Drilled straight from this argument</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Auto-generated from the premises and rebuttals above. These drop into your spaced-repetition deck so they come back exactly when you're about to forget.</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Twelve cards drawn from the premises, objections, concessions, and sources above. <b>Answer out loud before you flip</b> — the effort of recall is the whole point; a card you merely recognise hasn't stuck. Each card is graded: type the key idea, flip, mark it. Three correct recalls and a card rests; it comes back on Today when it is due.</p>
       <div class="flashwrap">
         <div class="flash" id="flash" onclick="this.classList.toggle('flipped')">
           <div class="face front"><div class="qlbl">Prompt</div><p id="fFront"></p><span class="tap">tap to flip</span></div>
@@ -503,9 +708,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 
     <!-- debate -->
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · Live objection</span>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · The common objection (worked example)</span>
       <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Someone hits you with the most common pushback</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">A seeded scenario from the Debate Arena. Draft your reply, then reveal a model answer to compare.</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Start here: draft your reply, then reveal a model answer to compare. This is the <em>worked example</em> — Drill 4 then makes you do it cold across the whole objection set.</p>
       <div class="interloc">
         <div class="av">SK</div>
         <div>
@@ -522,34 +727,59 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         <p>"Good question — and notice the premise carefully. It isn't 'everything needs a cause.' It's 'everything that <em>begins</em> to exist needs a cause.' God never began to exist, so the question 'who caused Him?' doesn't apply — it's a bit like asking who the bachelor's wife is — the question presupposes the very thing the case rules out. I'm not making a convenient exception; the premise was about things that come into being from the start. The universe is exactly that kind of thing — which is why it needs a cause and an eternal God doesn't."</p>
       </div>
     </div>
-    <!-- memory palace (folded in from the standalone tool) -->
-    <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 4 · Memory Palace</span>
-      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Lock it into a room you can walk</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">This argument has its own room in the Memory Palace — a single vivid scene that encodes the premises and the conclusion. Walk it once to learn the picture, then switch on the recall walk and say the argument back from memory. The method of loci is how memory champions hold long lists; here it is built for this case.</p>
+
+    <!-- answer the objections cold -->
+    <div class="practicecard" id="objDrill">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 4 · Answer the objections cold</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Four objections, no notes — reply, then check</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">The other half of <b>Silver</b>. Draft a reply from memory, reveal the certified answer, and rate yourself honestly. Clear all four with a &ldquo;nailed it&rdquo; and you can field them in the wild — not just recognise them on the page.</p>
+      <div class="interloc">
+        <div class="av" id="odAv">SK</div>
+        <div><div class="who2" id="odWho">Skeptic</div><div class="bub" id="odQ"></div></div>
+      </div>
+      <textarea id="odBox" placeholder="Your reply, from memory..."></textarea>
       <div class="btnrow">
-        <a class="btn gold" style="text-decoration:none;display:inline-flex;align-items:center" href="/palace.html#kalam">&#127963;&nbsp; Enter this room in the Memory Palace &rsaquo;</a>
+        <button class="btn gold" type="button" onclick="odReveal()">Reveal the certified answer</button>
+      </div>
+      <div class="modelans" id="odModel">
+        <div class="lbl">A strong reply — ported from this page&rsquo;s certified answer</div>
+        <p id="odModelText"></p>
+        <div class="confrow" style="margin-top:12px">
+          <button type="button" onclick="odRate(1)">Shaky — I&rsquo;ll redo this one</button>
+          <button type="button" onclick="odRate(2)">Nailed it &#10003;</button>
+        </div>
+      </div>
+      <div class="flashnav">
+        <button class="btn ghost" type="button" onclick="odPrev()">&lsaquo; Prev</button>
+        <span id="odCount"></span>
+        <button class="btn ghost" type="button" onclick="odNext()">Next &rsaquo;</button>
       </div>
     </div>
+
 
   </section>
 
   <!-- ===================== PHASE 3: PROVE IT ===================== -->
   <section id="proveit">
     <div class="phasehead"><span class="phasenum">3</span><h3>Prove it</h3></div>
-    <p class="phasesub">Mastery isn't a feeling — it's four things done. Clear them and this argument turns gold on your shelf.</p>
+    <p class="phasesub">Mastery isn't a feeling — it's three levels, each earned by <em>showing</em> you can do the thing, then proven again over time. Don't trust the warm glow of having read it; prove it cold.</p>
 
     <div class="card">
-      <div class="checklist">
-        <div class="cl" id="ck-read"><div class="box">✓</div><div class="txt"><b>Understood it</b><span>Read the structure, defences, and all objections</span></div><div class="state">Open every section</div></div>
-        <div class="cl" id="ck-explain"><div class="box">✓</div><div class="txt"><b>Explained it</b><span>Score 7+ on Explain It Back</span></div><div class="state">Not yet</div></div>
-        <div class="cl" id="ck-cards"><div class="box">✓</div><div class="txt"><b>Drilled it</b><span>Cycle through every flashcard once</span></div><div class="state">Not yet</div></div>
-        <div class="cl" id="ck-debate"><div class="box">✓</div><div class="txt"><b>Defended it</b><span>Attempt the live objection</span></div><div class="state">Not yet</div></div>
+      <span class="kick">Your levels on this argument</span>
+      <h4>What each one takes</h4>
+      <div class="checklist" id="levelReqs">
+        <div class="cl" id="rq-bronze"><div class="box">✓</div><div class="txt"><b>Bronze · Understand</b><span>Rebuild the syllogism + the cause's properties from memory (&ge;80%) — the checkpoint at the end of &ldquo;Understand it.&rdquo;</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-explain"><div class="box">✓</div><div class="txt"><b>Silver · part 1 · Explain it</b><span>Score 8+ on Explain It Back at level 2 or 3 (the argument <em>and</em> its hardest objection)</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-objections"><div class="box">✓</div><div class="txt"><b>Silver · part 2 · Objections cold</b><span>Answer all four objection drills with &ldquo;nailed it&rdquo;</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-unseen"><div class="box">✓</div><div class="txt"><b>Gold · part 1 · The unseen objection</b><span>Face one objection the page never drilled (below)</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-disc"><div class="box">✓</div><div class="txt"><b>Gold · part 2 · Pick the right tool</b><span>Pass &ldquo;which argument answers this?&rdquo; &mdash; four of five, mixed with neighbouring arguments</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-spaced"><div class="box">✓</div><div class="txt"><b>Gold · part 3 · Prove it again</b><span>Clear this argument on 3 spaced reviews — it returns on its own</span></div><div class="state">0 of 3</div></div>
       </div>
-      <div style="margin-top:26px;border-top:1px solid var(--border);padding-top:20px">
+      <p style="font-family:var(--ui);font-size:13px;color:var(--tm);margin-top:14px">Gold can slip back to Silver if you stop turning up for the spaced reviews — real mastery is perishable, which is why it's worth something. The dashboard brings this one back when it's due.</p>
+      <div style="margin-top:22px;border-top:1px solid var(--border);padding-top:18px">
         <span class="kick">One more thing — be honest</span>
         <h4 style="font-size:17px">If a friend challenged you on this tomorrow, how ready are you?</h4>
-        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Your self-rating is tracked over time so you can watch confidence climb across the library.</p>
+        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Rate yourself — then see whether your Explain It Back score backs it up. Felt-confidence and shown-confidence are not the same thing, and the gap is worth knowing before a real conversation.</p>
         <div class="confrow" id="confRow">
           <button onclick="setConf(this,1)">Shaky</button>
           <button onclick="setConf(this,2)">Getting there</button>
@@ -560,9 +790,29 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       </div>
     </div>
 
+    <div class="card" id="unseenGate">
+      <span class="kick">Gold gate · the unseen objection</span>
+      <h4>One you weren&rsquo;t coached on</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Everything above rehearsed objections the page showed you. Here is the real test of mastery: an objection we deliberately did <em>not</em> drill. Reason it out cold from what the argument established, then reveal how it actually handles it. An honest &ldquo;nailed it&rdquo; is the first half of <b>Gold</b>.</p>
+      <div class="interloc">
+        <div class="av">PH</div>
+        <div><div class="who2">Philosophy student</div><div class="bub">"Fine — but why think the first cause is a <em>mind</em> at all? Why not an impersonal state that just happened to have some chance of producing a universe? You don't need a <em>will</em> for that — physics with a dice-roll would do."</div></div>
+      </div>
+      <textarea id="unseenBox" placeholder="Reason it out from what the argument established..."></textarea>
+      <div class="btnrow"><button class="btn gold" type="button" onclick="unseenReveal()">Reveal how the argument handles it</button></div>
+      <div class="modelans" id="unseenModel">
+        <div class="lbl">How the argument answers it — ported from the deep dive</div>
+        <p>An impersonal first state that produced the universe by chance meets a dilemma. A cause that <em>necessitated</em> its effect would have an effect as old as itself — but the universe is not beginningless. A mindless state with merely <em>some</em> chance of producing a universe would be poised to change; and it is hard to see how a mindless state poised to change could remain changeless without beginning, rather than changing after some finite stretch. An agent — who can refrain as well as act — is the most natural fit for a cause that is changeless without the universe and yet brings about an effect that begins. Critics reply that without time &ldquo;some finite stretch&rdquo; has no clear meaning; so it adds weight to the case for a personal cause rather than settling it — inference to the best explanation, not proof. (Those who hold that God's own life has succession will frame the step differently; the argument does not decide that.)</p>
+        <div class="confrow" style="margin-top:12px">
+          <button type="button" onclick="unseenRate(1)">Shaky — I&rsquo;ll sit with it</button>
+          <button type="button" onclick="unseenRate(2)">Nailed it &#10003;</button>
+        </div>
+      </div>
+    </div>
+
     <div class="bigcta">
       <h4 id="ctaTitle">Master the Kalam, then take the next one</h4>
-      <p id="ctaText">Twenty-one more core arguments are waiting on your shelf — each with the same path from understanding to defence. The cosmological set comes next.</p>
+      <p id="ctaText">Twelve more arguments on this tab are waiting on your shelf — each with the same path from understanding to defence. The cosmological set comes next.</p>
       <button class="btn gold" onclick="location.href='ev-m-finetuning.html'">Next: the Fine-Tuning Argument →</button>
       <div style="margin-top:18px"><button class="btn" onclick="shareArgCard(this)" style="background:transparent;color:var(--gl);border:1px solid rgba(200,169,81,.45);">Share this argument as an image</button></div>
       <div><a href="dashboard.html" style="display:inline-block;margin-top:14px;font-family:var(--ui);font-size:13.5px;color:rgba(255,255,255,.6);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:1px">Back to dashboard</a></div>
@@ -576,37 +826,59 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
 <script>
-/* ---- in-memory state (swap for localStorage/Supabase in production) ---- */
-const state = { read:false, explainPass:false, cardsSeen:new Set(), debateTried:false, conf:0 };
+/* ---- state: three earned levels (Bronze / Silver / Gold) ----
+   bronze    = reconstruction checkpoint passed (>=80%)
+   explainScore = best Explain It Back (Silver part 1 needs >=8)
+   objCold   = objection-drill indices self-rated "nailed it" (Silver part 2 = all)
+   unseen    = Gold part 1: the unseen objection nailed
+   Gold part 2 = 3 successful spaced recalls, read from lib/review-queue.js (ad_reviews step). */
+const state = { bronze:false, explainScore:0, objCold:new Set(), unseen:false, explainHi:false, cardsSeen:new Set(), conf:0, explainLevel:1 };
 
-/* ---- persistence + site streak (ad_mastery / ad_streak) ---- */
 const ARG_ID = location.pathname.split('/').pop().replace('ev-m-','').replace('.html','');
-const FRESH_MS = 30*24*60*60*1000; /* 30 days */
 function adAll(){ try{ return JSON.parse(localStorage.getItem('ad_mastery')||'{}'); }catch(e){ return {}; } }
-function adSave(full){
+
+/* Successful spaced recalls so far, read from the shared review engine
+   (lib/review-queue.js advances ad_reviews[ARG].step on each "I've still got it"). */
+function spacedCount(){ try{ var r = (JSON.parse(localStorage.getItem('ad_reviews')||'{}'))[ARG_ID]; return (r && r.step) ? r.step : 0; }catch(e){ return 0; } }
+
+/* Gold sub-gate (Phase 1.5, 2026-10-11): the mixed 'which argument answers this?' drill, run by lib/review-queue.js. */
+function discPassed(){ try{ return !!((adAll()[ARG_ID]||{}).disc); }catch(e){ return false; } }
+
+function levelOf(){
+  var silver = state.bronze && state.explainScore>=8 && state.explainHi && state.objCold.size>=OBJ.length;
+  if(silver && state.unseen && discPassed() && spacedCount()>=3) return 3;
+  if(silver) return 2;
+  if(state.bronze) return 1;
+  return 0;
+}
+
+function adSave(){
   try{
-    var m = adAll(); var e = m[ARG_ID] || {};
-    e.read = state.read; e.explain = state.explainPass;
-    e.cards = state.cardsSeen.size; e.debate = state.debateTried;
-    e.explainScore = state.explainScore || e.explainScore || 0; if(state.conf) e.conf = state.conf;
-    if(full){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
+    var m = adAll(); var e = m[ARG_ID] || {}; var lv = levelOf();
+    e.bronze = state.bronze;
+    e.explainScore = Math.max(state.explainScore||0, e.explainScore||0);
+    e.objCold = Array.from(state.objCold);
+    e.unseen = state.unseen;
+    e.explainHi = !!state.explainHi || !!e.explainHi;
+    e.cards = state.cardsSeen.size;
+    if(state.conf) e.conf = state.conf;
+    e.level = lv;
+    /* lib/review-queue.js schedules spaced reviews once e.done (or the four legacy
+       flags) is set. Scheduling must begin at Silver so Gold part 2 can accrue. */
+    e.read = state.bronze; e.explain = state.explainScore>=8; e.debate = state.objCold.size>0;
+    if(lv>=2){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
     m[ARG_ID] = e; localStorage.setItem('ad_mastery', JSON.stringify(m));
   }catch(e){}
 }
 function adRestore(){
   try{
     var e = adAll()[ARG_ID]; if(!e) return;
-    state.read = !!e.read; state.explainPass = !!e.explain; state.debateTried = !!e.debate;
-    state.explainScore = e.explainScore || 0; state.conf = e.conf || 0;
-    var fresh = e.fresh && (Date.now() - e.fresh) < FRESH_MS;
-    if(e.cards >= cards.length && fresh){ for(var i=0;i<cards.length;i++) state.cardsSeen.add(i); }
-    if(e.cards >= cards.length && !fresh){
-      var note = document.createElement('div');
-      note.style.cssText = 'font-family:var(--ui);font-size:.8rem;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.7rem 1rem;margin:0 0 1rem;';
-      note.innerHTML = '&#9888; Memory fades \u2014 it has been a while. Flip through the flashcards again to restore this argument to gold.';
-      var fc = document.querySelector('.flashwrap') || document.getElementById('flash') || null;
-      if(fc && fc.parentNode){ fc.parentNode.insertBefore(note, fc); }
-    }
+    state.bronze = !!e.bronze || !!e.read;
+    state.explainScore = e.explainScore || 0;
+    state.unseen = !!e.unseen;
+    state.explainHi = !!e.explainHi;
+    state.conf = e.conf || 0;
+    if(Array.isArray(e.objCold)){ e.objCold.forEach(function(i){ state.objCold.add(i); }); }
   }catch(e){}
 }
 function adMark(){
@@ -624,51 +896,69 @@ function adMark(){
   }catch(e){}
 }
 
-/* ---- mastery dial ---- */
+/* ---- mastery dial + level ladder ---- */
 const CIRC = 263.9;
+function setLvl(id, earned, current){
+  var el = document.getElementById(id); if(!el) return;
+  el.classList.toggle('earned', earned);
+  el.classList.toggle('current', current && !earned);
+  var s = el.querySelector('.ls'); if(s) s.textContent = earned ? 'Earned \u2713' : (current ? 'Next up' : 'Locked');
+}
+function setReq(id, done, txt){
+  var el = document.getElementById(id); if(!el) return;
+  el.classList.toggle('done', done);
+  var s = el.querySelector('.state'); if(s) s.textContent = txt;
+}
 function updateDial(){
-  let done = 0;
-  if(state.read) done++;
-  if(state.explainPass) done++;
-  if(state.cardsSeen.size >= cards.length) done++;
-  if(state.debateTried) done++;
-  const pct = Math.round(done/4*100);
-  adSave(pct===100);
-  if(window._adLoaded && done>0) adMark();
-  document.getElementById('pctNum').textContent = pct + '%';
-  document.getElementById('ring').style.strokeDashoffset = CIRC - (CIRC*pct/100);
+  var lv = levelOf();
+  var pct = [0,34,67,100][lv];
+  adSave();
+  if(window._adLoaded && (state.bronze || state.explainScore || state.objCold.size || state.unseen)) adMark();
+  var pn = document.getElementById('pctNum'); if(pn) pn.textContent = pct + '%';
+  var ring = document.getElementById('ring'); if(ring) ring.style.strokeDashoffset = CIRC - (CIRC*pct/100);
 
-  setCheck('ck-read', state.read);
-  setCheck('ck-explain', state.explainPass);
-  setCheck('ck-cards', state.cardsSeen.size >= cards.length);
-  setCheck('ck-debate', state.debateTried);
+  setLvl('lvl-bronze', lv>=1, lv===0);
+  setLvl('lvl-silver', lv>=2, lv===1);
+  setLvl('lvl-gold',   lv>=3, lv===2);
+
+  setReq('rq-bronze', state.bronze, state.bronze ? 'Done' : 'Not yet');
+  setReq('rq-explain', state.explainScore>=8 && state.explainHi, (state.explainScore>=8 && state.explainHi) ? ('Done \u00B7 '+state.explainScore+'/10') : (state.explainScore ? ('Best '+state.explainScore+'/10') : 'Not yet'));
+  setReq('rq-objections', (typeof OBJ!=='undefined' && state.objCold.size>=OBJ.length), (typeof OBJ!=='undefined' && state.objCold.size>=OBJ.length) ? 'Done' : (state.objCold.size + ' of ' + (typeof OBJ!=='undefined'?OBJ.length:4)));
+  setReq('rq-unseen', state.unseen, state.unseen ? 'Done' : 'Not yet');
+  var sc = Math.min(spacedCount(), 3); setReq('rq-spaced', sc>=3, sc>=3 ? 'Done' : (sc + ' of 3'));
+  setReq('rq-disc', discPassed(), discPassed() ? 'Done' : 'Not yet');
+
   try{ renderCalibration(); }catch(e){}
 
-  if(pct===100){
-    document.getElementById('ctaTitle').textContent = 'Kalam mastered \u2014 it just turned gold on your shelf';
-    document.getElementById('ctaText').textContent = 'That\u2019s 1 of 22. The same path is waiting for every argument in the library. Keep the streak going.';
-    document.querySelector('.libnote').innerHTML = '\u25C6 \u00A0Kalam mastered \u2014 1 of 22 core arguments complete';
-  }
-}
-function setCheck(id, on){
-  const el = document.getElementById(id);
-  el.classList.toggle('done', on);
-  var stEl = el.querySelector('.state');
-  if(on){ stEl.textContent = 'Done'; return; }
-  if(id==='ck-read'){
-    stEl.textContent = (typeof _accOpened !== 'undefined' && _accs.length) ? (_accOpened.size + ' of ' + _accs.length + ' opened') : 'Open every section';
-  } else {
-    stEl.textContent = 'Not yet';
+  var ln = document.querySelector('.libnote');
+  if(lv>=3){
+    var ct = document.getElementById('ctaTitle'); if(ct) ct.textContent = 'Kalam mastered \u2014 Gold on your shelf';
+    var cx = document.getElementById('ctaText'); if(cx) cx.textContent = 'You rebuilt it, defended it cold, met an objection you had never seen, and proved it again weeks later. That confidence is earned \u2014 keep it alive on the spaced reviews.';
+    if(ln) ln.innerHTML = '\u25C6 \u00A0Kalam \u2014 Gold \u00B7 mastered';
+  } else if(lv>=1 && ln){
+    ln.innerHTML = '\u25C6 \u00A0Kalam \u2014 ' + (lv===2?'Silver':'Bronze') + ' \u00B7 keep going';
   }
 }
 
-/* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
-/* ---- Kalam premises used to ground the AI scoring ---- */
-var KALAM_PREMISES = [
+/* ---- explain it back (real AI scoring via /api/tutor; mock fallback) ---- */
+/* ARG_PREMISES: the certified rubric POSTed to /api/tutor and rendered into the
+   share-card PNG. Ported verbatim from the syllogism above. */
+var ARG_PREMISES = [
   'Whatever begins to exist has a cause of its existence.',
   'The universe began to exist.',
   'Therefore, the universe has a cause of its existence.'
 ];
+
+function setExplainLevel(btn, lv){
+  state.explainLevel = lv;
+  [].forEach.call(document.querySelectorAll('#explainLevels button'), function(b){ b.classList.remove('sel'); });
+  if(btn) btn.classList.add('sel');
+  var box = document.getElementById('explainBox');
+  var ph = lv===3 ? 'Explain it to a hostile, well-read skeptic — anticipate the pushback and answer it...'
+         : lv===2 ? 'From memory: the argument AND your best answer to its hardest objection (Morriston)...'
+         : 'From memory: both premises, the conclusion, and what the cause must be...';
+  if(box) box.setAttribute('placeholder', ph);
+}
 
 /* Real AI scoring via /api/tutor (same method as explain-it-back.html).
    Falls back to a local heuristic if the API is unreachable (e.g. preview). */
@@ -678,7 +968,10 @@ async function scoreExplain(btn){
   if(!txt){ return; }
   if(btn){ btn.disabled = true; btn.dataset.lbl = btn.textContent; btn.textContent = 'Scoring...'; }
   try{
-    var prompt = 'Please evaluate this student explanation of "The Kalam Cosmological Argument". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + KALAM_PREMISES.join('\n') + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
+    var lvAsk = state.explainLevel>=3 ? '\n\nThe student was asked to explain it to a hostile, well-read skeptic: weight whether they anticipated and answered the obvious pushback, not merely stated the argument.'
+              : state.explainLevel===2 ? '\n\nThe student was ALSO asked to answer its hardest objection (Morriston: our causal intuition is drawn from events inside time, so why extend it to the beginning of time itself): weight whether they engaged it honestly.'
+              : '';
+    var prompt = 'Please evaluate this student explanation of "The Kalam Cosmological Argument". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + lvAsk + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
     var res = await fetch('/api/tutor', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
@@ -731,16 +1024,17 @@ function renderScore(score, strengths, improvements){
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score);
+  if(score>=8 && (state.explainLevel||1)>=2) state.explainHi = true;
   updateDial();
 }
 
 function renderMockScore(txtRaw){
   var t = (txtRaw||'').toLowerCase();
   var checks = [
-    {ok:/(begin|began|begins|come into|came into)/.test(t) && /(cause|caused)/.test(t), hit:'Premise 1 \u2014 you named the begins-to-exist cause link', miss:'Premise 1 is missing \u2014 say that whatever begins to exist has a cause'},
-    {ok:/universe|cosmos|world/.test(t) && /(begin|began|start|finite past)/.test(t), hit:'Premise 2 \u2014 you stated the universe began to exist', miss:'Premise 2 is thin \u2014 state clearly that the universe began to exist'},
-    {ok:/therefore|so |conclu|has a cause|must have/.test(t), hit:'Conclusion \u2014 you drew out that the universe has a cause', miss:'Draw the conclusion explicitly: therefore the universe has a cause'},
+    {ok:/(whatever|everything|anything|something|things?|being|all that)\s+(that\s+|which\s+)?(begins?|began|comes? (into|to be)|came (into|to be)|has a beginning|had a beginning)\b/.test(t) && /caus/.test(t), hit:'Premise 1 \u2014 you named the begins-to-exist cause link', miss:'Premise 1 is missing \u2014 say that whatever begins to exist has a cause'},
+    {ok:/(universe|cosmos|world)[^.]{0,40}\b(began|begins|beginning|started|finite past|not eternal|came into)/.test(t), hit:'Premise 2 \u2014 you stated the universe began to exist', miss:'Premise 2 is thin \u2014 state clearly that the universe began to exist'},
+    {ok:/(therefore|thus|hence|so|conclu\w*)[^.]{0,30}(universe|cosmos|\bit\b)[^.]{0,30}((has|had|needs|must have|requires)[^.]{0,10}(?<!\bno |\bun)caus|was caused)|(universe|cosmos)[^.]{0,20}(has|had|needs|must have|requires) a (transcendent )?cause/.test(t), hit:'Conclusion \u2014 you drew out that the universe has a cause', miss:'Draw the conclusion explicitly: therefore the universe has a cause'},
     {ok:/(timeless|spaceless|immaterial|outside time|personal|powerful|mind|beginningless)/.test(t), hit:'Nice \u2014 you described what the cause must be like', miss:'Push further: what must the cause be (timeless, spaceless, immaterial, personal)'},
     {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth \u2014 you developed it, not just listed it', miss:'Go a bit deeper \u2014 a full reconstruction runs longer than this'}
   ];
@@ -754,17 +1048,25 @@ function renderMockScore(txtRaw){
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score);
+  if(score>=8 && (state.explainLevel||1)>=2) state.explainHi = true;
   updateDial();
 }
 
 /* ---- flashcards (generated from this argument) ---- */
 const cards = [
-  {q:'State Premise 1 of the Kalam.', a:'Whatever begins to exist has a cause of its existence.'},
-  {q:'State Premise 2.', a:'The universe began to exist \u2014 supported by the impossibility of an infinite past and by Big Bang cosmology.'},
-  {q:'A skeptic asks: "What caused God?" \u2014 your reply?', a:'P1 only applies to things that BEGIN to exist. God never began, so He falls outside the premise. It\u2019s principled, not special pleading.'},
-  {q:'Why isn\u2019t "particles from the quantum vacuum" a counterexample to P1?', a:'The quantum vacuum is not nothing \u2014 it\u2019s structured energy governed by laws. So those particles do have a cause.'},
-  {q:'Why must the first cause be personal, not a mechanism?', a:'A changeless, timeless cause could only produce a temporal effect by a free act of will. That points to a mind \u2014 agent causation.'}
+  {q:'State Premise 1 \u2014 and why not "everything has a cause"?', a:'Whatever BEGINS to exist has a cause. Not "everything" \u2014 that invites "then what caused the cause?" The restriction to things that begin is principled, built in from the start.'},
+  {q:'What is the deepest warrant for Premise 1 (not the track record)?', a:'The metaphysical intuition that out of nothing, nothing comes (ex nihilo nihil fit). The inductive track record only covers causes acting inside the universe, so the intuition carries the weight.'},
+  {q:'State Premise 2 and how it is supported.', a:'The universe began to exist \u2014 two independent lines: philosophical (no actual infinite can be concretely instantiated in the physical world; you can\u2019t form one by successive addition) and scientific (Big Bang + the BGV theorem). Serious reasons and corroboration, not knock-down proof.'},
+  {q:'"Quantum particles come from nothing" \u2014 reply?', a:'The quantum vacuum is not nothing \u2014 it\u2019s structured energy governed by laws; a particle from it is like a wave from the ocean. An indeterministic event isn\u2019t uncaused, and "out of nothing" denies a material cause, not an efficient one.'},
+  {q:'"Mathematicians use infinities fine (Cantor)" \u2014 reply?', a:'Coherent as a mathematical concept is not the same as instantiable as a concrete collection in the physical world. Hilbert\u2019s Hotel is counterintuitive, not contradictory \u2014 so the claim narrows to concrete instantiation, and whether THAT holds is the disputed hinge.'},
+  {q:'What does the BGV theorem show \u2014 and its honest limit?', a:'Any on-average expanding spacetime has a past boundary (classical geometry), with no assumption about energy content. Honest limit: it doesn\u2019t say what lies at the boundary, and co-author Alan Guth isn\u2019t persuaded. Corroboration, not proof.'},
+  {q:'Morriston\u2019s objection to Premise 1 \u2014 and the reply?', a:'Our causal sense is built from events inside time, so why extend it to the beginning of time itself? Reply: the principle rests on a metaphysical insight about being and non-being (nothing has no powers, so it can produce nothing), not mere induction.'},
+  {q:'Why must the cause be personal, not a mechanism?', a:'Timeless/spaceless/immaterial \u2014 so an abstract object or an unembodied mind; abstracts cause nothing. And a changeless cause with a temporal effect is best explained by a free act of will (agent causation). Inference to the best explanation, not proof.'},
+  {q:'"What caused God?" \u2014 reply?', a:'P1 is only about things that begin to exist. God never began, so He falls outside a rule that was about beginnings all along \u2014 principled, not special pleading. Like asking what the bachelor\u2019s wife is doing tonight.'},
+  {q:'"Then isn\u2019t God infinitely old?" \u2014 reply?', a:'The arguments target a physical series of events; on the classical account God\u2019s eternity is not a series of moments at all, so there is nothing to "complete." Don\u2019t call God "infinitely old." Christians differ on how God relates to time; the Kalam settles none of it.'},
+  {q:'What does Kalam establish \u2014 and not?', a:'A spaceless, timeless, immaterial, beginningless, enormously powerful, and plausibly personal cause \u2014 NOT yet the triune God, nor even a morally good being. One strand in a cumulative case with fine-tuning, moral value, contingency, and the resurrection.'},
+  {q:'Who gave the argument its classic shape, and its deepest root?', a:'Al-Ghazali (d. 1111) gave it its classic syllogistic shape in medieval Islamic kalam; the deeper root is the 6th-century Christian John Philoponus, who turned Aristotle\u2019s ban on a completed actual infinite against an eternal past. Revived in modern analytic form by William Lane Craig.'}
 ];
 let ci = 0;
 function renderCard(){
@@ -778,35 +1080,96 @@ function renderCard(){
 function nextCard(){ ci = (ci+1)%cards.length; renderCard(); }
 function prevCard(){ ci = (ci-1+cards.length)%cards.length; renderCard(); }
 
-/* ---- debate ---- */
-document.getElementById('debateBox').addEventListener('input', ()=>{
-  if(document.getElementById('debateBox').value.trim().length > 8 && !state.debateTried){
-    state.debateTried = true; updateDial();
+/* ---- Bronze reconstruction gate (retrieval-earned "Understand") ---- */
+var ORDER = [
+  'Whatever begins to exist has a cause.',
+  'The universe began to exist.',
+  'Therefore, the universe has a cause.'
+];
+var PROPS = [
+  {t:'spaceless', ok:true}, {t:'timeless', ok:true}, {t:'immaterial', ok:true},
+  {t:'uncaused / beginningless', ok:true}, {t:'enormously powerful', ok:true}, {t:'plausibly personal', ok:true},
+  {t:'made of energy', ok:false}, {t:'began to exist', ok:false}, {t:'part of time', ok:false}, {t:'morally good', ok:false}
+];
+var _ordSel = [];
+function _shuf(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } return a; }
+function injectBronze(){
+  var pool=document.getElementById('orderPool');
+  if(pool && !pool.children.length){
+    _shuf([0,1,2]).forEach(function(k){
+      var b=document.createElement('button'); b.type='button'; b.className='btn ghost'; b.textContent=ORDER[k];
+      b.onclick=function(){ if(b.disabled) return; b.disabled=true; b.style.opacity=.4; _ordSel.push(k); _ordSeq(); };
+      pool.appendChild(b);
+    });
   }
-});
-document.querySelector('[onclick*="modelAns"]').addEventListener('click', ()=>{
-  state.debateTried = true; updateDial();
-});
-
-/* ---- prove it ---- */
-function markRead(){
-  state.read = true;
-  document.getElementById('readBtn').textContent = 'Marked as understood \u2713';
-  document.getElementById('readBtn').classList.remove('primary');
-  document.getElementById('readBtn').classList.add('ghost');
-  updateDial();
+  var pp=document.getElementById('propPool');
+  if(pp && !pp.children.length){
+    _shuf(PROPS).forEach(function(p){
+      var b=document.createElement('button'); b.type='button'; b.className='btn ghost'; b.textContent=p.t; b.setAttribute('data-ok', p.ok?'1':'0');
+      b.onclick=function(){ b.classList.toggle('sel'); };
+      pp.appendChild(b);
+    });
+  }
 }
+function _ordSeq(){ var el=document.getElementById('orderSeq'); if(el) el.textContent = _ordSel.length ? _ordSel.map(function(k,i){ return (i+1)+'. '+ORDER[k]; }).join('    ') : ''; }
+function resetBronze(){
+  _ordSel=[]; _ordSeq();
+  var pool=document.getElementById('orderPool'); if(pool){ [].forEach.call(pool.children,function(b){ b.disabled=false; b.style.opacity=1; }); }
+  var pp=document.getElementById('propPool'); if(pp){ [].forEach.call(pp.children,function(b){ b.classList.remove('sel'); }); }
+  var g=document.getElementById('bronzeGrade'); if(g){ g.className='gradeline'; g.textContent=''; }
+}
+function gradeBronze(){
+  var orderOK = _ordSel.length===3 && _ordSel[0]===0 && _ordSel[1]===1 && _ordSel[2]===2;
+  var pp=document.getElementById('propPool'); var right=0;
+  if(pp){ [].forEach.call(pp.children,function(b){ var want=b.getAttribute('data-ok')==='1'; var got=b.classList.contains('sel'); if(want===got) right++; }); }
+  var decisions = PROPS.length + 1, scored = right + (orderOK?1:0), pctOK = scored/decisions;
+  var g=document.getElementById('bronzeGrade'); if(!g) return;
+  g.className='gradeline show '+(pctOK>=0.8?'pass':'fail');
+  if(pctOK>=0.8){
+    state.bronze=true; updateDial();
+    g.textContent='\u2713 Bronze earned \u2014 you rebuilt the structure from memory ('+Math.round(pctOK*100)+'%). Now go defend it in Practice.';
+  } else {
+    g.textContent='Not yet \u2014 '+Math.round(pctOK*100)+'%. '+(orderOK?'':'Check the order of the three lines. ')+'Re-read the structure above, then try again \u2014 this rep is what makes it stick.';
+  }
+}
+
+/* ---- Drill 4: answer the objections cold (replies ported from the page) ---- */
+var OBJ = [
+  {who:'Skeptic', q:'If everything needs a cause, who created God? You\u2019re just stopping where it\u2019s convenient.', model:'P1 doesn\u2019t say everything needs a cause \u2014 only things that BEGIN to exist. God never began, so He falls outside the rule, not as an exception to it. "What caused God?" is like asking what the bachelor\u2019s wife is doing tonight: it presupposes what the case already ruled out.'},
+  {who:'Physicist', q:'Virtual particles pop out of the quantum vacuum with no cause. So Premise 1 is just false.', model:'The vacuum isn\u2019t "nothing" \u2014 it\u2019s structured energy governed by quantum field theory; a particle from it is like a wave from the ocean. And an indeterministic event isn\u2019t uncaused \u2014 a nucleus decays because forces are acting. "Out of nothing" denies a material cause, not an efficient one; Premise 1 asks only for the latter.'},
+  {who:'Philosopher', q:'Cantor showed infinite sets are perfectly consistent. So why can\u2019t the past be actually infinite?', model:'Consistent as a mathematical concept isn\u2019t the same as instantiable as a concrete collection in the physical world. Hilbert\u2019s Hotel is counterintuitive, not contradictory \u2014 so the claim narrows to concrete instantiation, and whether THAT holds is the disputed hinge. It\u2019s offered as a serious reason, not a proof.'},
+  {who:'Skeptic', q:'Even if there\u2019s a first cause, that\u2019s a deist abstraction, not God. Why think it\u2019s a mind?', model:'A timeless, spaceless, immaterial cause is either an abstract object or an unembodied mind \u2014 and abstract objects cause nothing. And a changeless cause with a temporal effect is best explained by a free act of will (agent causation). It\u2019s inference to the best explanation \u2014 and still only a transcendent mind, not yet the triune God.'}
+];
+var _od = 0;
+function odRender(){
+  var o=OBJ[_od];
+  var q=document.getElementById('odQ'); if(q) q.textContent='"'+o.q+'"';
+  var who=document.getElementById('odWho'); if(who) who.textContent=o.who;
+  var av=document.getElementById('odAv'); if(av) av.textContent=o.who.slice(0,2).toUpperCase();
+  var mt=document.getElementById('odModelText'); if(mt) mt.textContent=o.model;
+  var mm=document.getElementById('odModel'); if(mm) mm.classList.remove('show');
+  var bx=document.getElementById('odBox'); if(bx) bx.value='';
+  var c=document.getElementById('odCount'); if(c) c.textContent=(_od+1)+' of '+OBJ.length+(state.objCold.has(_od)?' \u00b7 nailed \u2713':'');
+}
+function odReveal(){ var mm=document.getElementById('odModel'); if(mm) mm.classList.add('show'); }
+function odRate(v){ if(v===2){ state.objCold.add(_od); } else { state.objCold.delete(_od); } updateDial(); if(_od<OBJ.length-1){ _od++; } odRender(); }
+function odNext(){ _od=(_od+1)%OBJ.length; odRender(); }
+function odPrev(){ _od=(_od-1+OBJ.length)%OBJ.length; odRender(); }
+
+/* ---- Gold part 1: the unseen objection ---- */
+function unseenReveal(){ var m=document.getElementById('unseenModel'); if(m) m.classList.add('show'); }
+function unseenRate(v){ state.unseen = (v===2); updateDial(); }
 function renderCalibration(){
   try{
     var el = document.getElementById('calibNote'); if(!el) return;
     var conf = state.conf||0, best = state.explainScore||0;
     var labels = {1:'Shaky',2:'Getting there',3:'Solid',4:'Could teach it'};
     if(conf){ var _b=document.querySelectorAll('#confRow button'); if(_b[conf-1]){ [].forEach.call(_b,function(b){b.classList.remove('sel');}); _b[conf-1].classList.add('sel'); } }
-    if(conf>=3 && best<7){
+    if(conf>=3 && best<8){
       var shown = best>0 ? ('your best Explain It Back so far is '+best+'/10') : 'you haven\u2019t scored an Explain It Back yet';
       el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.8rem 1rem;';
       el.innerHTML = '\u26A0 You rated yourself \u201C'+labels[conf]+'\u201D \u2014 but '+shown+'. Worth closing: confidence that holds up in a real conversation is confidence you\u2019ve <b>shown</b>, not just felt. <a href="#" onclick="var b=document.getElementById(\'explainBox\');if(b){b.scrollIntoView({behavior:\'smooth\'});b.focus();}return false;" style="color:#a88930;font-weight:600">Prove it on Explain It Back \u2192</a>';
-    } else if(conf>=3 && best>=7){
+    } else if(conf>=3 && best>=8){
       el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#2f7d4f;background:rgba(47,125,79,.08);border:1px solid rgba(47,125,79,.3);border-radius:6px;padding:.8rem 1rem;';
       el.innerHTML = '\u2713 Calibrated \u2014 you feel ready and you\u2019ve shown it ('+best+'/10 on Explain It Back). That\u2019s earned confidence.';
     } else {
@@ -867,28 +1230,19 @@ async function boot(){
     if(!isPro){ showGate(); return; }
   }
   /* build the track */
+  injectBronze();
   adRestore();
   renderCard();
+  odRender();
   updateDial();
   renderCalibration();
   window._adLoaded = true;
 }
-/* "Understood it" is earned by opening every section in Phase 1 (defences + objections) */
-var _accs = Array.prototype.slice.call(document.querySelectorAll('#understand details.acc'));
-var _accOpened = new Set();
-_accs.forEach(function(d, i){
-  d.addEventListener('toggle', function(){
-    if(!d.open || state.read){ return; }
-    _accOpened.add(i);
-    if(_accOpened.size >= _accs.length){ state.read = true; }
-    updateDial();
-  });
-});
 
 /* ---- share-card: render this argument as a branded image ---- */
 function _shareSetMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
 function shareArgCard(btn){
-  var prem = (typeof ARG_PREMISES !== 'undefined') ? ARG_PREMISES : KALAM_PREMISES;
+  var prem = ARG_PREMISES;
   document.getElementById('scTitle').textContent = document.querySelector('h1').textContent;
   document.getElementById('scP1').textContent = prem[0];
   document.getElementById('scP2').textContent = prem[1];
@@ -951,6 +1305,8 @@ document.addEventListener('DOMContentLoaded', boot);
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
   <script src="/lib/review-queue.js" defer></script>
+  <script src="/library/mastery-ui.js?v=20261009e" defer></script>
   <script src="/library/verse-popup.js" defer></script>
+<script src="/defend-live.js" defer></script>
 </body>
 </html>

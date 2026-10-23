@@ -65,9 +65,7 @@ $tpl=@'
 <meta property="og:url" content="https://apologiadaily.com/library/{{SLUG}}.html">
 <meta name="twitter:card" content="summary">
 {{SCHEMA}}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="stylesheet" href="/ad-nav.css">
 <style>
   body{background:#f7f4ef;color:#0f1f38;font-family:'Source Serif 4',Georgia,serif;line-height:1.75;margin:0}

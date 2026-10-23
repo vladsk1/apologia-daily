@@ -1,0 +1,250 @@
+{
+  "reviewed": {
+    "argument": "2026-10-07",
+    "orthodoxy": "2026-10-07",
+    "neutrality": "2026-10-07",
+    "citations": "2026-10-07",
+    "by": "2026-10-07 NEW scene-locked vertical (Instagram) POSITIVE-CASE reel built on ONE quote: Ignatius, To the Ephesians 18, verbatim from verified /sources ignatius-anf-eph-18 (ANF, short recension). Who/when/why ported from certified library/early_church_trinity.html (line 151, fn 4 'conventionally dated c. AD 107-110', FAQ). DUAL-CONSENSUS (deity tier), READ-ONLY (Explore) argument+orthodoxy+neutrality+citations, 2 rounds. Round 1: 0 heresy; one citations ERROR, on-screen ellipsis misplaced (marked a cut before 'was'; the cut is after it) -> 'Jesus Christ,' / 'was … conceived'. Round 2 STAMPABLE. Deity + humanity (conceived by Mary, seed of David) in one quote = Chalcedon anchor; Holy Ghost named distinctly. Clarifier candidates considered, none actioned. 'Nicaea' kept out of VO (TTS). NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) POSITIVE-CASE reel built on ONE quote: Ignatius of Antioch, To the Ephesians 18, quoted verbatim from the verified /sources entry ignatius-anf-eph-18 (Roberts-Donaldson ANF vol. 1, short/genuine recension; verified 2026-07-11; the reel omits only 'according to the appointment of God' on screen, marked by the ellipsis, while the VO reads it in full). Who/when/why ported from certified library/early_church_trinity.html ('bishop of Antioch, wrote seven letters around 107-110 while being marched under guard to his execution in Rome'; 'without apology or argument'; 'A man writing on his way to be eaten by beasts is not polishing an archive for posterity; he is recording the settled speech of his churches'; 'defended an inherited faith rather than manufacturing a novelty'). 'Nicaea' kept out of the VO (TTS mispronounces it); captions keep the correct spelling.",
+  "voiceover": "More than two centuries before the council of 325, one bishop wrote a single sentence about Jesus. His name was Ignatius, bishop of Antioch, in the generation after the apostles. Around the years 107 to 110, he wrote seven letters while being marched under guard to his execution in Rome. To the church at Ephesus, he wrote: For our God, Jesus Christ, was, according to the appointment of God, conceived in the womb by Mary, of the seed of David, but by the Holy Ghost. He calls Jesus our God, without apology or argument — and in the same breath, born of Mary, of the seed of David. A man writing on his way to be eaten by beasts is not polishing an archive for posterity. He is recording the settled speech of his churches. So the council of 325 did not invent the divinity of Jesus. It defended an inherited faith, rather than manufacturing a novelty.",
+  "scenes": [
+    {
+      "vo": "More than two centuries before the council of 325, one bishop wrote a single sentence about Jesus.",
+      "big": [
+        {
+          "t": "One sentence.",
+          "c": "cream",
+          "s": 66
+        },
+        {
+          "t": "Two centuries",
+          "c": "gold",
+          "s": 60
+        },
+        {
+          "t": "before Nicaea.",
+          "c": "gold",
+          "s": 60
+        }
+      ],
+      "dur": 7.9
+    },
+    {
+      "vo": "His name was Ignatius, bishop of Antioch, in the generation after the apostles.",
+      "kicker": "WHO SAID IT",
+      "lines": [
+        {
+          "t": "Ignatius,",
+          "c": "gold",
+          "s": 64,
+          "f": "serifb"
+        },
+        {
+          "t": "bishop of Antioch.",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "The generation",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "after the apostles.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "dur": 5.9
+    },
+    {
+      "vo": "Around the years 107 to 110, he wrote seven letters while being marched under guard to his execution in Rome.",
+      "kicker": "WHEN · c. AD 107–110",
+      "lines": [
+        {
+          "t": "Seven letters,",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "written under guard",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "on the road to",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "his execution in Rome.",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        }
+      ],
+      "dur": 8.2
+    },
+    {
+      "vo": "To the church at Ephesus, he wrote: For our God, Jesus Christ,",
+      "kicker": "THE LETTER TO THE EPHESIANS",
+      "lines": [
+        {
+          "t": "“For our God,",
+          "c": "cream",
+          "s": 64
+        },
+        {
+          "t": "Jesus Christ,",
+          "c": "gold",
+          "s": 68,
+          "f": "serifb"
+        }
+      ],
+      "dur": 5.6
+    },
+    {
+      "vo": "was, according to the appointment of God, conceived in the womb by Mary, of the seed of David, but by the Holy Ghost.",
+      "lines": [
+        {
+          "t": "was … conceived",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "in the womb by Mary,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "of the seed of David,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "but by the Holy Ghost.”",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "— Ignatius, To the Ephesians 18",
+          "c": "dim",
+          "s": 32,
+          "f": "serif"
+        }
+      ],
+      "dur": 7.7
+    },
+    {
+      "vo": "He calls Jesus our God, without apology or argument — and in the same breath, born of Mary, of the seed of David.",
+      "kicker": "WHAT HE SAID",
+      "lines": [
+        {
+          "t": "“Our God” —",
+          "c": "gold",
+          "s": 60,
+          "f": "serifb"
+        },
+        {
+          "t": "without apology",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "or argument.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "And born of Mary.",
+          "c": "gold",
+          "s": 52,
+          "f": "serifb"
+        }
+      ],
+      "dur": 8.1
+    },
+    {
+      "vo": "A man writing on his way to be eaten by beasts is not polishing an archive for posterity. He is recording the settled speech of his churches.",
+      "kicker": "WHY IT MATTERS",
+      "lines": [
+        {
+          "t": "On his way",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "to the beasts,",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "he wrote down",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "what his churches",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        },
+        {
+          "t": "already said.",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        }
+      ],
+      "dur": 9.3
+    },
+    {
+      "vo": "So the council of 325 did not invent the divinity of Jesus. It defended an inherited faith, rather than manufacturing a novelty.",
+      "big": [
+        {
+          "t": "Not invented",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "in 325.",
+          "c": "cream",
+          "s": 60
+        },
+        {
+          "t": "Inherited.",
+          "c": "gold",
+          "s": 76
+        }
+      ],
+      "sub": [
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        }
+      ],
+      "dur": 9.8
+    }
+  ]
+}

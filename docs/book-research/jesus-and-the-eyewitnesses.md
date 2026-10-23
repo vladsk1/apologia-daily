@@ -63,6 +63,9 @@ In practice: **Mark stands very close to Peter**, and **John's Gospel was writte
    preference for orality but the widespread ancient historiographic conviction that **living eyewitnesses
    take priority**. → *Primaries:* **Eusebius, *Hist. eccl.* 3.39** (esp. 3.39.3–4 and 3.39.15). *Already
    live on our site* — `library/eyewitnesses.html` cites 3.39.15 with the Loeb (Kirsopp Lake) rendering.
+   *(corrected 2026-09-29, Biblical-Reliability sweep: as of 2026-09-29 the essay quotes **A. C. McGiffert's
+   public-domain translation (NPNF 2nd ser., vol. 1, 1890)** explicitly; Lake/Loeb survives only as a
+   comparative rendering in one footnote and as a bibliography entry.)*
 2. **⭐ Names and onomastics.** The pattern of who is named and who is not reflects real recollection (the
    women at the cross; Simon of Cyrene **and his two sons**; Zacchaeus; Bartimaeus), and the Gospel names
    fit the Palestinian-Jewish name distribution strikingly well. → *Primaries:* **Tal Ilan, *Lexicon of
@@ -153,7 +156,10 @@ unreachable) are recorded so a later session does not repeat the search or, wors
 - **`/sources`: —** (modern copyrighted monograph). Downstream PD note: **Eusebius, *Hist. eccl.* 3.39**
   (the Papias fragments) is a PD-translation candidate for `/sources` if a citations pass verifies a
   public-domain translation — the Loeb (Lake, 1926) currently cited in `eyewitnesses.html` is **not**
-  clearly PD for our purposes, so verify before storing.
+  clearly PD for our purposes, so verify before storing. *(corrected 2026-09-29, Biblical-Reliability sweep:
+  **no longer a future candidate** — Eusebius *H.E.* 3.39.15–16 has been in `sources/eusebius.json` as
+  `verified:true` since 2026-07-11 (ids `eusebius-he-3-39-15`, `eusebius-he-3-39-16`), and `eyewitnesses.html`
+  now quotes McGiffert (NPNF), not the Loeb.)*
 - **`/briefs`: —** the topic is already served by the certified `eyewitnesses.html` / `names.html` pair.
 
 ## ✅ Six-verdict re-test 2026-08-10

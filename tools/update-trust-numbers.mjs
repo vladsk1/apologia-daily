@@ -152,7 +152,6 @@ const withArgs = (src, n) => src
 
 const ARG_ONLY_FILES = [
   { file: path.join(ROOT, 'homepage-v2.html'), label: 'homepage-v2.html' }, // .vercelignored, kept in sync anyway
-  { file: path.join(ROOT, 'flashcards.html'), label: 'flashcards.html' },
 ];
 
 const homeSplice = splice(HOME, 'index.html', HOME_START, HOME_END, renderHome(c));
@@ -166,6 +165,15 @@ const targets = [
     return { file, label, src, next: withArgs(src, c.args) };
   }),
 ];
+
+/* our-sources.html states the verified historic-passage count as a hand-typed
+   `var HISTORIC = N;`. It sat at 156 while /sources reached 164 (found 2026-10-09).
+   Manage it here so it moves with sources-index.json and CI catches drift. */
+{
+  const OS = path.join(ROOT, "our-sources.html");
+  const src = readFileSync(OS, "utf8");
+  targets.push({ file: OS, label: "our-sources.html", src, next: src.replace(/var HISTORIC = \d+;/, `var HISTORIC = ${c.sourcesVerified};`) });
+}
 
 const stale = targets.filter((t) => t.next !== t.src);
 

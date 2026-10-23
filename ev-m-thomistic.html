@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- content-review: {"argument": "2026-07-29", "orthodoxy": "2026-07-29", "by": "2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md."} -->
+<!-- content-review: {"argument":"2026-10-08","orthodoxy":"2026-10-08","by":"2026-10-11 PHASE 1 MECHANICS (docs/MASTERY_ROLLOUT_GUIDE_2026-10-11.md 1.2-1.9, 1.12; plumbing + UI labels, NON-DOCTRINAL): Silver part 1 now requires the 8+ at Explain level 2 or 3; a new Gold sub-gate (the mixed 'which argument answers this?' drill, injected by lib/review-queue.js from this page's own OBJ + objections.json) is wired into levelOf() and the ladder; graded per-card flashcards, the re-proof review, the pretest, if-then plans, hide-the-page, Listen and typed cloze are injected by the shared lib/review-queue.js and reuse only this page's certified strings. No argument content, model answer, card or check changed; lens dates deliberately NOT bumped. || 2026-10-11 EDITORIAL, NON-DOCTRINAL (Phase 0 of docs/MASTERY_ROLLOUT_GUIDE_2026-10-11.md): the flashcard intro no longer promises a per-card spaced deck the code does not implement (now: the whole argument returns on a spaced schedule); shelf line corrected to 'Argument N of 13 in the God's Existence track'; next-argument CTA count corrected. No argument content, graded layer or claim changed; lens dates deliberately NOT bumped. || 2026-10-08 PREMISE-DEFENCE REBUILD (owner-directed: 'the defending premises need to be better'). The single thin Defending-the-premises card replaced with Kalam-standard cards, one per premise: precision check, numbered supports with strength pills + honest limits, the objections that bite on that premise with replies, The room. Drafted by READ-ONLY agents as PORTS from the certified paired essay (canonical link) + the old card, with per-paragraph port ledgers; applied by assert-guarded script. FULL FOUR-LENS GATE via READ-ONLY Explore agents (citations port-check, argument, neutrality, orthodoxy incl. clarifier verdict), md5-checked before/after every round. ROUND 1 findings, ONE merged fix pass in the lenses' essay-verbatim wording: Oppy objection DELETED (gave away the Gold unseen objection, and its Trinity fence sentence mis-fit simplicity); potency/act principle re-attributed ('The Thomistic response is that'); honest limit scoped to Hume/Kant; Feser room line ported. Post-gate POLISH 'Such a cause is not yet' applied, self-verified. ROUND 2 confirmation (same reviewers, fixed text): citations STAMPABLE, argument STAMPABLE (0 BREAK/0 WEAK), neutrality STAMPABLE, orthodoxy CLEAN (0 HERESY/0 DRIFT, clarifier candidates none new). Mechanical: 132 node tests pass; retired-claims 0 alive; tripwires 0 new; unquoted-attributions clean; div balance verified. Scope frozen to the new cards (rule 9). AUTOMATED GATE, NOT pastoral sign-off (docs/STATEMENT_OF_FAITH.md reviewer _pending_). || PRIOR: 2026-10-04 MASTERY-PAGE DEPTH + LEVELS REBUILD (owner-directed, sixth pilot after kalam + finetuning + leibniz + moral + consciousness). Rebuilt Phase 1 (eight-term key-terms glossary; a trace-the-inference derive drill that nails the per se / here-and-now key - NOT a temporal regress - and ends at a purely actual sustaining First Cause with the not-yet-the-triune-God + not-a-beginning-in-time scope fence; P1/P2 premise supports with strength pills + honest narrowing + a who-holds-what; an honest-state-of-the-scholarship card; a Bronze reconstruction checkpoint whose false-property distractors include 'the first event in time / the Big Bang' - the signature Thomistic-is-not-Kalam fence). Kept the existing 7-objection bank (incl. the in-sentence Trinity/simplicity fence on the 'only one' objection). Replaced the 4-click activity dial with retrieval-earned Bronze/Silver/Gold: Bronze reconstruction >=80%; Silver = Explain-It-Back >=8 free-recall + all four objection drills cold; Gold = an unseen objection (Oppy's necessary-physical-state move, carrying the in-sentence Trinity/simplicity fence) + 3 spaced recalls via lib/review-queue.js, with decay. Flashcards 5->12; escalating Explain It Back; objection-cold drill. No Memory Palace drill (no palace room exists for this argument). ALL doctrinal prose and every graded layer (ARG_PREMISES, cards, mock-scorer checks, Bronze ORDER/PROPS, OBJ, unseenModel, derive answers) PORTED from the certified library/thomistic.html (stamped 2026-10-01). GATE via READ-ONLY Explore agents (Explore has no Edit/Write; four lenses, one round): apologia-orthodoxy CLEAN + STAMPABLE 0 HERESY/0 BREAK/0 CONCERN (both mandated divine-simplicity/modalism fences present and correct - the 'only one' objection AND the Oppy unseenModel carry the in-sentence 'oneness of the divine nature, not a denial of the Trinity ... one simple divine essence subsisting as Father, Son, and Spirit, neither collapsed into one nor parts of God' fence; scope/deism fence holds in every layer incl. Bronze PROPS marking 'the triune God of worship' FALSE; clarifier verdict 2 candidates / 0 actioned, both LEAVE-AS-IS - the Oppy flashcard 'absolutely simple' is contrasted with 'composite' and never invokes the Trinity, and the word 'modalism' is defined in plain language rather than named); apologia-citations STAMPABLE (date bumped to 2026-10-04); apologia-argument STAMPABLE 0 BREAK/0 WEAK (NOT the Kalam - per se/here-and-now, not a beginning in time; who-caused-God answered by the narrow premise, not special pleading; Newton-inertia flagged hardest and the underlying worry conceded serious; Oppy unseen a measured weighing); apologia-neutrality STAMPABLE 0 BREAK (no overclaim - no knockdown/consensus; First and Second Ways carry the weight, Third needs quantifier-shift repair, Fourth weakest; Oppy/Kenny/Russell correctly cast; verdict bounded). THREE ported fixes applied after the gate (verbatim essay ports / self-verified): (1) CITATIONS - restored the P1-support direct quotation to the certified Dominican-Fathers wording 'Nothing can be reduced from potentiality to actuality, except by something in a state of actuality' (essay fn6); (2) NEUTRALITY WEAK-1 - the crawlable SEO-summary own-voice verdict was missing the knockdown/certainty bounding clause carried by the essay (line 200) and the page's other two verdicts, so appended 'That is a serious, still-living case - not a knockdown proof - held with confidence rather than certainty'; (3) NEUTRALITY WEAK-2 - ported the essay's charitable Russell balancing clause ('To his credit, Russell engaged these arguments more seriously elsewhere; it is the endlessly-repeated one-liner, not the man, that misses the qualifier in the premise', essay line 168). LEFT AS-IS (defensible, documented): the Oppy-flashcard simplicity phrasing (orthodoxy leave-as-is), the 'goodness' both-sides phrasing in the why-God objection (argument POLISH, faithful to the essay's 'with further argument / by themselves' distinction), and the renderMockScore keyword fallback's inability to down-score an overclaim (a structural limit of the DEGRADED /api/tutor-unreachable path, NOT port-introduced; the Bronze PROPS gate and the fenced ARG_PREMISES rubric carry the scope). BACKLOG, NOT fixed (rule 9): the Etienne Gilson source row and the Aristotle 'Metaphysics' / 'unmoved mover' detail in the Touch-the-originals card are pre-existing certified content with no counterpart in library/thomistic.html; both are factually accurate and were re-cleared this round, and the citations lens called them non-blocking - kept and logged for a traceable home. Mechanical checks green (132 node tests; retired-claims 0 alive; orthodoxy tripwires 0 new; div balanced; inline JS node --check OK; JSON-LD parses). AUTOMATED GATE, NOT pastoral sign-off (pending site-wide). || PRIOR: 2026-10-02 OVER-CHARITY + FACT-CHECK SWEEP of the God's Existence mastery pages (owner-directed), following the certified essay (b33206c0) and cards (0575b1ab). Read-only Explore gates, md5-checked, four lenses (citations, argument, orthodoxy incl. clarifier verdict, neutrality). Round 1 reviewed all nine layers, graded layers first (ARG_PREMISES, cards, checks regexes, drill model answer). Fixes were applied by assert-guarded scripts on scratch copies. Rounds 2, 3 and 4 were confirmation gates on the fixed text. All lenses STAMPABLE, 0 HERESY. Every changed checks regex was node-tested: the essay-correct bounded answer passes, and the retired/overclaimed/negated answer fails (contractions handled). Every inline script compiles and the JSON-LD parses. The page now claims no more than its essay, carries the deism-gap fence plus a resurrection pointer, and states a bounded own-voice verdict. NOT RUN: pastoral sign-off (pending site-wide). Remaining pre-existing gaps are logged in docs/GODS_EXISTENCE_SWEEP_BACKLOG_2026-10-01.md, not fixed (rule 9). PRIOR: 2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md.","citations":"2026-10-08","neutrality":"2026-10-08"} -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Five Ways of Thomas Aquinas | Apologia Daily</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>The Thomistic Cosmological Argument | Apologia Daily</title>
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
 :root{
   --n:#050d1a; --n8:#0a1628; --n7:#0f2040; --n5:#1e4278; --n3:#4a7ab5;
@@ -211,19 +209,76 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 .seo-summary p:last-child{margin-bottom:0}
 .hero{padding-bottom:48px}
 .seo-summary + .dialcard{margin-top:24px}
+
+/* ---------- mastery levels (Bronze / Silver / Gold) ---------- */
+.levels{display:grid;gap:10px;margin-top:4px;width:100%}
+.lvl{display:grid;grid-template-columns:42px 1fr auto;gap:14px;align-items:center;border:1px solid var(--border);border-radius:11px;padding:13px 16px;background:var(--w);transition:.2s}
+.lvl .medal{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;background:#eef0f3;filter:grayscale(1);opacity:.45}
+.lvl.earned{border-color:#cfe6da;background:var(--okl)}
+.lvl.earned .medal{filter:none;opacity:1;background:#fff}
+.lvl .lt b{font-family:var(--fd);font-size:16px;display:block;color:var(--td)}
+.lvl .lt span{font-family:var(--ui);font-size:12.5px;color:var(--tm)}
+.lvl .ls{font-family:var(--ui);font-size:12px;font-weight:600;color:var(--tm);text-align:right;white-space:nowrap}
+.lvl.earned .ls{color:var(--ok)}
+.lvl.current{border-color:var(--g);box-shadow:0 0 0 1px var(--g) inset}
+
+/* ---------- key-terms glossary (pretraining) ---------- */
+.glossary{display:grid;gap:0;margin-top:6px}
+.gt{display:grid;grid-template-columns:168px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--border);font-family:var(--ui)}
+.gt:last-child{border-bottom:none}
+.gt b{font-size:14px;color:var(--td)}
+.gt b em{color:var(--gd);font-style:italic}
+.gt span{font-size:13.5px;color:var(--tm);line-height:1.5}
+@media(max-width:560px){.gt{grid-template-columns:1fr;gap:2px}}
+
+/* ---------- premise case: supports with strength pills ---------- */
+.stp{font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:5px;white-space:nowrap}
+.stp.proof{background:#e7eefb;color:#1e4278}
+.stp.strong{background:#fbf3e2;color:#9a7416}
+.stp.sugg{background:#eef0f3;color:#5a6b82}
+.support{border-left:3px solid #dbe6f4;padding:3px 0 3px 15px;margin:14px 0}
+.support .sh{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px}
+.support .sh b{font-family:var(--ui);font-size:14.5px;color:var(--td)}
+.support p{font-size:15px;margin-bottom:4px}
+.honest{font-family:var(--ui);font-size:13.5px;color:var(--td);background:#fbf8f0;border-left:3px solid var(--g);padding:9px 13px;border-radius:0 8px 8px 0;margin-top:6px}
+.honest b{color:var(--gd)}
+.whoholds{font-family:var(--ui);font-size:13px;color:var(--tm);background:#f4f7fb;border-radius:8px;padding:10px 14px;margin-top:12px}
+.whoholds b{color:var(--n5)}
+.precise{font-family:var(--ui);font-size:13px;color:var(--n7);background:#eef3fa;border:1px solid #dbe6f4;border-radius:8px;padding:9px 13px;margin:2px 0 10px}
+
+/* ---------- reveal-on-reason drill ---------- */
+.derive{display:grid;gap:10px;margin-top:10px}
+.dr{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:var(--ow);border:1px solid var(--border);border-radius:10px;padding:12px 15px}
+.dr .q{font-size:15px;font-family:var(--ss)}
+.dr .q em{color:var(--n5);font-style:italic}
+.dr .rev{font-family:var(--ui);font-size:12.5px;font-weight:600;color:var(--n5);background:#fff;border:1px solid #cfdcee;border-radius:7px;padding:6px 12px;cursor:pointer;white-space:nowrap}
+.dr .rev:hover{background:#f3f7fc}
+.dr .ans{display:none;font-family:var(--ui);font-weight:700;font-size:14px;color:var(--gd)}
+.dr.shown .rev{display:none}
+.dr.shown .ans{display:inline}
+@media(max-width:560px){.dr{grid-template-columns:1fr}.dr .ans,.dr .rev{justify-self:start}}
+
+/* ---------- retrieval gate ---------- */
+.recall{background:var(--w);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-top:14px}
+.recall .q{font-family:var(--ui);font-size:14.5px;font-weight:600;color:var(--td);margin-bottom:10px}
+.gradeline{font-family:var(--ui);font-size:13.5px;font-weight:600;margin-top:12px;display:none}
+.gradeline.show{display:block}
+.gradeline.pass{color:var(--ok)}
+.gradeline.fail{color:var(--gd)}
 </style>
   <link rel="stylesheet" href="/ad-nav.css">
-<meta name="description" content="Master Aquinas&#x27;s Five Ways - motion, causation, contingency, and more - and learn to present these classical arguments accurately.">
+  <link rel="stylesheet" href="/library/mastery-ui.css?v=20261009b">
+<meta name="description" content="Master Aquinas's cosmological argument: the per se vs per accidens key, act and potency, and how to answer the who-caused-God and Newton's-inertia replies.">
 <link rel="canonical" href="https://apologiadaily.com/library/thomistic.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The Five Ways of Thomas Aquinas | Apologia Daily">
-<meta property="og:description" content="Master Aquinas&#x27;s Five Ways - motion, causation, contingency, and more - and learn to present these classical arguments accurately.">
+<meta property="og:title" content="The Thomistic Cosmological Argument | Apologia Daily">
+<meta property="og:description" content="Master Aquinas's cosmological argument: the per se vs per accidens key, act and potency, and how to answer the who-caused-God and Newton's-inertia replies.">
 <meta property="og:url" content="https://apologiadaily.com/ev-m-thomistic.html">
 <meta property="og:image" content="https://apologiadaily.com/og-default.jpg">
 <meta name="twitter:image" content="https://apologiadaily.com/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@apologiadaily">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"The Five Ways of Thomas Aquinas","description":"Master Aquinas's Five Ways - motion, causation, contingency, and more - and learn to present these classical arguments accurately.","learningResourceType":"Self-paced mastery track","educationalLevel":"Intermediate","inLanguage":"en","isAccessibleForFree":true,"about":"Christian apologetics","url":"https://apologiadaily.com/ev-m-thomistic.html","publisher":{"@type":"Organization","name":"Apologia Daily","url":"https://apologiadaily.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://apologiadaily.com/ev-m-thomistic.html"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"The Thomistic Cosmological Argument","description":"Master Aquinas's cosmological argument: the per se vs per accidens key, act and potency, and how to answer the who-caused-God and Newton's-inertia replies.","learningResourceType":"Self-paced mastery track","educationalLevel":"Intermediate","inLanguage":"en","isAccessibleForFree":true,"about":"Christian apologetics","url":"https://apologiadaily.com/ev-m-thomistic.html","publisher":{"@type":"Organization","name":"Apologia Daily","url":"https://apologiadaily.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://apologiadaily.com/ev-m-thomistic.html"}}</script>
 </head>
 <body>
 
@@ -247,7 +302,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
             <div class="adn-mega-col">
               <div class="adn-mega-h">Go deeper</div>
               <a class="adn-mi" href="/library/"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Deep-Dive Essays</span><span class="adn-mi-dc">Long-form, fully-cited essays.</span></span></a>
-              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Answers</span><span class="adn-mi-dc">The questions people ask most.</span></span></a>
+              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Common Questions</span><span class="adn-mi-dc">Short answers to the questions people ask most.</span></span></a>
               <a class="adn-mi" href="/sources.html"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Church Fathers &amp; Creeds</span><span class="adn-mi-dc">The early church in its own words, verified.</span></span></a>
               <a class="adn-mi" href="/our-sources.html"><span class="adn-mi-ic">&#128218;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Our Sources</span><span class="adn-mi-dc">Books and articles our essays cite.</span></span></a>
               <a class="adn-mi" href="/whats-new.html"><span class="adn-mi-ic">&#128240;</span><span class="adn-mi-tx"><span class="adn-mi-nm">What&#39;s New</span><span class="adn-mi-dc">Latest essays, features &amp; reels.</span></span></a>
@@ -258,11 +313,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
               <a class="adn-mi" href="/games.html"><span class="adn-mi-ic">&#127918;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Games</span><span class="adn-mi-dc">Quizzes that feed your streak.</span></span></a>
               <a class="adn-mi" href="/study-groups.html"><span class="adn-mi-ic">&#128101;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Study Groups <span class="adn-mi-tag">New</span></span><span class="adn-mi-dc">Study with people you love.</span></span></a>
               <a class="adn-mi" href="/reading-club.html"><span class="adn-mi-ic">&#128214;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Reading Clubs</span><span class="adn-mi-dc">The classics, chapter by chapter.</span></span></a>
-              <a class="adn-mi" href="/conversation-journal.html"><span class="adn-mi-ic">&#128221;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Conversation Journal</span><span class="adn-mi-dc">Log real conversations, get AI coaching.</span></span></a>
             </div>
             <div class="adn-mega-col">
               <div class="adn-mega-h">For you</div>
-              <a class="adn-mi" href="/parents.html"><span class="adn-mi-ic">&#128106;</span><span class="adn-mi-tx"><span class="adn-mi-nm">For Parents</span><span class="adn-mi-dc">Your kids&#39; hardest questions.</span></span></a>
               <a class="adn-mi" href="/video-library.html"><span class="adn-mi-ic">&#127909;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Videos</span><span class="adn-mi-dc">Short, shareable explainers.</span></span></a>
             </div>
             <div class="adn-mega-foot">
@@ -311,8 +364,8 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
   <section class="seo-summary">
     <h2>The argument in brief</h2>
     <p>Thomas Aquinas's cosmological argument is often confused with the Kalam, but it makes a very different point. It is not about who lit the fuse at the beginning of time; it is about what holds everything in being <em>right now</em>. Aquinas noticed that things in the world are constantly being changed, moved, and kept in existence by something other than themselves. A coffee cup rests on a table, which rests on the floor, which rests on the earth — and the support has to be supplied at every instant, not just once in the past.</p>
-    <p>The key distinction is between a per se series (causes acting simultaneously, here and now) and a per accidens series (causes strung out over time, like fathers begetting sons). A per se series of sustainers cannot stretch back to infinity, because every member is borrowing its causal power from a prior member; remove a first source and there is nothing to borrow from. So there must be a being that does not derive its existence or activity from anything else — pure actuality, unchanging, self-existent. That, says Aquinas, is what everyone means by God.</p>
-    <p>Honestly, the argument requires effort to follow, and it leans on a classical metaphysics of act and potency that not everyone shares. But it has the striking feature that it works even if the universe is eternal — the question is not when things began, but why they continue to be. Note the scope: this argument reaches a purely actual First Cause sustaining the world — not yet the Father, Son and Holy Spirit. Identifying that being with the God revealed in Christ is the work of the other arguments and of revelation.</p>
+    <p>The key distinction is between a per se series (causes acting simultaneously, here and now) and a per accidens series (causes strung out over time, like fathers begetting sons). A per se series of sustainers cannot stretch back to infinity, because every member is borrowing its causal power from a prior member; remove a first source and there is nothing to borrow from. So there must be a being that does not derive its existence or activity from anything else — pure actuality, unchanging, self-existent. "And this," says Aquinas, "everyone understands to be God."</p>
+    <p>Honestly, the argument requires effort to follow, and it leans on a classical metaphysics of act and potency that not everyone shares. But it has the striking feature that it works even if the universe is eternal — the question is not when things began, but why they continue to be. Note the scope: this argument reaches a purely actual First Cause sustaining the world — not yet the Father, Son and Holy Spirit. Identifying that being with the God revealed in Christ is the work of the other arguments, of revelation, and of the historical evidence for the resurrection. We judge that the argument succeeds where it matters most: rightly read, the First and Second Ways survive their famous objections and give strong reason to believe that a purely actual cause holds the world in being now. That is a serious, still-living case — not a knockdown proof — held with confidence rather than certainty.</p>
   </section>
 
   <!-- mastery dial -->
@@ -326,15 +379,37 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     </div>
     <div class="dialmeta">
       <h2>Your mastery of this argument</h2>
-      <p>Four checkpoints: understand it, explain it, drill it, defend it. Complete them in any order — your progress saves to your account.</p>
-      <span class="libnote">◆ &nbsp;Argument 6 of 22 in the mastery library</span>
+      <p>Three earned levels — <b>Bronze</b> (rebuild it), <b>Silver</b> (defend it cold), <b>Gold</b> (handle an objection you&rsquo;ve never seen, then prove it again weeks later). Clicking through no longer counts; demonstrated recall does. Progress saves to your account.</p>
+      <span class="libnote">◆ &nbsp;Argument 6 of 13 in the God&rsquo;s Existence track</span>
     </div>
+  </div>
+
+  <div class="levels" id="levels">
+    <div class="lvl" id="lvl-bronze"><div class="medal">&#129353;</div><div class="lt"><b>Bronze · Understand</b><span>Rebuild the argument and what the First Cause must be, from memory (&ge;80%)</span></div><div class="ls">Locked</div></div>
+    <div class="lvl" id="lvl-silver"><div class="medal">&#129352;</div><div class="lt"><b>Silver · Defend</b><span>Explain it &ge;8/10 <em>and</em> field its objections cold</span></div><div class="ls">Locked</div></div>
+    <div class="lvl" id="lvl-gold"><div class="medal">&#129351;</div><div class="lt"><b>Gold · Master</b><span>Answer an unseen objection, pick the right argument from a mixed set, then re-prove it on 3 spaced reviews</span></div><div class="ls">Locked</div></div>
   </div>
 
   <!-- ===================== PHASE 1: UNDERSTAND ===================== -->
   <section id="understand">
     <div class="phasehead"><span class="phasenum">1</span><h3>Understand it</h3></div>
-    <p class="phasesub">Not more prose — the load-bearing structure. See the skeleton, then learn to defend each bone.</p>
+    <p class="phasesub">Not more prose — the load-bearing structure, defended bone by bone, then proven from memory. Work top to bottom; the checkpoint at the end asks you to rebuild it with nothing in front of you.</p>
+
+    <div class="card">
+      <span class="kick">Before you start · key terms</span>
+      <h4>Eight terms this argument turns on</h4>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:6px">Learn these first — above all the <em>per se</em> vs <em>per accidens</em> distinction, which is where nearly every objection goes wrong.</p>
+      <div class="glossary">
+        <div class="gt"><b>The Five Ways</b><span>Aquinas&rsquo;s five compressed arguments for God (<em>Summa Theologiae</em> I, q.2, a.3, c.1265&ndash;68). The First and Second carry the weight; this track works the First.</span></div>
+        <div class="gt"><b>Change (<em>motus</em>)</b><span>For Aquinas, not merely local motion but <em>any</em> actualization of a potential &mdash; change of quality, quantity, or substance, not just of place.</span></div>
+        <div class="gt"><b>Potency vs act</b><span>A thing changes when a potential becomes actual (cold water becomes hot). A potential cannot actualize itself; something already actual (the flame) must do it.</span></div>
+        <div class="gt"><b>Pure Act (<em>actus purus</em>)</b><span>The terminus: a being with no unrealized potential, so it needs no actualizer &mdash; and it actualizes everything else.</span></div>
+        <div class="gt"><b><em>Per se</em> (essentially ordered) series</b><span>Operates <em>simultaneously</em>, here and now &mdash; hand moves stick moves stone. The later members have only &ldquo;borrowed&rdquo; power; remove the first and all motion stops <em>now</em>. This is the series that cannot regress.</span></div>
+        <div class="gt"><b><em>Per accidens</em> (accidentally ordered) series</b><span>Strung out over time &mdash; a father begets a son who begets a son. Each member, once it acts, no longer needs its predecessor; such a series <em>could</em> run back forever.</span></div>
+        <div class="gt"><b>The key confusion</b><span>The argument is <em>not</em> a regress back through time to a first event. Aquinas held reason cannot even prove the universe began; the dependence he means is present and sustaining, not a starting gun.</span></div>
+        <div class="gt"><b>Sustaining First Cause</b><span>What the argument reaches: a purely actual, necessary, unchanging cause holding the world in being <em>now</em> &mdash; <em>not yet</em> the good, personal, triune God of worship.</span></div>
+      </div>
+    </div>
 
     <div class="card">
       <span class="kick">The argument, formally</span>
@@ -342,45 +417,95 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <div class="syllogism">
         <div class="prem"><div class="tag">P1</div><p>Some things are <b>being sustained</b> in existence right now — changed, moved, kept in being by something else.</p></div>
         <div class="prem"><div class="tag">P2</div><p>An <b>essentially ordered</b> (here-and-now) series of sustaining causes cannot regress to infinity — it needs a first sustainer.</p></div>
-        <div class="prem concl"><div class="tag">∴ C</div><p>So there is a <b>purely actual, unchanging First Cause</b> sustaining all things now — which is God.</p></div>
+        <div class="prem concl"><div class="tag">∴ C</div><p>So there is a <b>purely actual, unchanging First Cause</b> sustaining all things now — "and this everyone understands to be God."</p></div>
       </div>
       <p class="formnote">This is not the Kalam. It is not about a beginning in the past, but about what holds things in being right now — even if the universe were eternal. The key distinction is per se versus per accidens causation; miss it and every objection looks stronger than it is.</p>
-
-      <span class="kick" style="margin-top:22px">Then the conceptual step — what must this First Cause be?</span>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">Whatever is sustained has potential being actualized by another. Trace the here-and-now dependence to its source and you reach something with no unrealized potential — Pure Actuality — that needs nothing to sustain it and sustains everything else.</p>
-      <div class="chiprow">
-        <span class="chip">pure actuality</span><span class="chip">no unrealized potential</span><span class="chip">unchanging</span><span class="chip">self-existent</span><span class="chip">sustaining all things now</span><span class="chip gold">necessarily one</span>
-      </div>
     </div>
 
     <div class="card">
-      <span class="kick">Defending the premises</span>
-      <h4>The one distinction that decides every objection</h4>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Per se vs per accidens — the crucial distinction</summary>
-        <div class="body">
-          <p class="lbl steel">Two kinds of causal series</p>
-          <p>An accidentally ordered series (a father begets a son who begets a son) can in principle run back forever — each cause is not needed now for the effect to continue. An essentially ordered series (a hand moves a stick that moves a stone) depends on every member simultaneously.</p>
-          <p class="lbl steel">Why per se must terminate</p>
-          <p>In an essentially ordered series the later members have no power of their own — they are instruments. An infinite series of instruments with no first source explains nothing, like an endless paintbrush with no painter. The power has to originate somewhere.</p>
-        </div>
-      </details>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Why it terminates in Pure Act</summary>
-        <div class="body">
-          <p class="lbl steel">From potential to actual</p>
-          <p>Change and dependence mean a potential being actualized by something already actual. The source of all such actualizing can have no unrealized potential itself — it is Pure Actuality.</p>
-          <p class="lbl steel">Not the biggest link, but the ground</p>
-          <p>God here is not the first item in a chain needing a prior item. He is the unconditioned ground the whole chain hangs on, here and now.</p>
-        </div>
-      </details>
+      <span class="kick">From the stone to Pure Act</span>
+      <h4>Don&rsquo;t read the conclusion — reason to it</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:4px">Follow the here-and-now dependence down, then reveal — and note exactly how far it reaches, and how far it does not.</p>
+      <div class="derive">
+        <div class="dr"><div class="q">A cup rests on a table, on the floor, on the earth — and the support must be supplied at every instant. Is this a chain back through <em>time</em>, or a dependence happening <em>now</em>?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">now — a here-and-now (per se) series, not a temporal regress</span></div>
+        <div class="dr"><div class="q">Each member&rsquo;s power is borrowed — the stick moves only because the hand moves it. Can such a series of borrowers run back forever?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">no — infinitely many powerless instruments still lift nothing; the power must originate</span></div>
+        <div class="dr"><div class="q">So there is a first member that moves without being moved. Does it have unrealized potential?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">no — it is Pure Act, with no potential needing to be actualized</span></div>
+        <div class="dr"><div class="q">Does that First Cause need its own cause, the way each link does?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">no — only what has potential, or is dependent, needs a sustainer</span></div>
+        <div class="dr"><div class="q">How far does the inference reach?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">a purely actual, sustaining First Cause — not yet the good, personal, triune God</span></div>
+      </div>
+      <p class="honest" style="margin-top:14px"><b>Honestly stated:</b> if sound, the Ways reach a purely actual, necessary, sustaining first cause of present reality. They do <em>not</em>, by themselves, establish that this cause is good, personal, triune, or the God of Abraham — that is the work of the subsequent questions of the <em>Summa</em> and of revelation. Nor do they prove the universe began in time; Aquinas insisted they don&rsquo;t need to. The First and Second Ways carry the weight (the Third needs repair for a known quantifier-shift worry, and the Fourth is widely conceded the weakest). It is <em>one strand</em> in a cumulative case, held with confidence rather than certainty, resting above all on the <a href="/library/minimalfacts.html">historical evidence for the resurrection</a>.</p>
+    </div>
+
+    <div class="card">
+      <span class="kick">Defending Premise 1</span>
+      <h4>Some things are <em>being sustained</em> in existence right now &mdash; changed, moved, kept in being by something else.</h4>
+      <p class="precise">Precision check: <em>motus</em> is not merely local motion (change of place) but <em>any</em> actualization of a potential &mdash; change of quality, quantity, substance. And the causal series Aquinas has in mind does not stretch backward in time to a first event.</p>
+
+      <div class="support">
+        <div class="sh"><b>P1 &mdash; things are being sustained right now</b> <span class="stp proof">Observed, here and now</span></div>
+        <p>The cup on the table on the floor; the stone moved by the stick moved by the hand. Each is, at this instant, having a potential actualized by something already actual &mdash; cold water does not heat itself; the flame does. &ldquo;Nothing can be reduced from potentiality to actuality, except by something in a state of actuality.&rdquo;</p>
+        <p>The stone moves because the stick moves it; the stick moves because the hand moves it. Remove the hand and the whole sequence collapses at once &mdash; not eventually, but <em>now</em>. Aquinas chose exactly this image to anchor the first and most famous of his arguments for God: &ldquo;the staff moves only because it is put in motion by the hand.&rdquo;</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>Why whatever changes is changed by another</b> <span class="stp strong">Metaphysical principle &middot; contested</span></div>
+        <p>Aquinas&rsquo;s answer rests on Aristotle&rsquo;s distinction between <em>potency</em> and <em>act</em>. A thing changes when a potential it has becomes actual &mdash; cold water becomes hot. But a mere potential cannot actualize itself; the cold water does not heat itself. Something already actual (the flame) must do it. The Thomistic response is that the principle &ldquo;a potential cannot actualize itself&rdquo; is not an empirical generalization like &ldquo;fire is hot&rdquo; but a metaphysical truth about the nature of potency and act.</p>
+        <p class="honest"><b>Honest limit:</b> a fully adequate defence requires defending an entire realist metaphysics against empiricism and transcendental idealism &mdash; more than any essay can do. Whether the replies to Hume and Kant below fully succeed is contested, and honesty requires saying so.</p>
+      </div>
+
+      <div class="objin">
+        <div class="ol">Objection &mdash; Newton&rsquo;s inertia <span class="badge hard" style="margin-left:6px">Hardest</span></div>
+        <p>Aquinas&rsquo;s premise &ldquo;whatever is moved is moved by another&rdquo; looks like exactly what Newtonian physics overturned. By the principle of inertia, a body in uniform motion stays in motion <em>with no mover at all</em>. Anthony Kenny, in his skeptical study <em>The Five Ways</em> (1969), pressed the point hard, concluding that the First Way fails in light of modern dynamics, which dissolves the medieval premise that sustained motion needs a sustaining mover. If the paradigm Way rests on dead physics, that is a grave problem.</p>
+        <div class="rl">Reply</div>
+        <p>The reply turns on what &ldquo;motion&rdquo; means. For Aristotle and Aquinas, <em>motus</em> is not merely local motion (change of place) but <em>any actualization of a potential</em> &mdash; change of quality, quantity, substance. Inertia concerns only local motion, and &mdash; on this view &mdash; even there it does not touch the deeper principle. Inertia, the Thomist replies, <em>describes</em> that bodies persist in motion; it does not <em>explain</em> what grounds the existence of that motion, or of the body, or of the law itself, from moment to moment. The Thomist relocates the argument from &ldquo;what keeps the cannonball moving?&rdquo; to &ldquo;what sustains in being, right now, every actualized potential &mdash; including the persistence the law describes?&rdquo; Thomists add a second point: Newtonian physics itself treats uniform motion as a <em>state</em>, not a change, so inertia is no counterexample to the claim that change requires a changer. The reply is not a dodge: it reflects what Aquinas meant by change all along, and in our judgment it answers the objection. What remains open is the deeper question of potency and act, not whether Newton refuted Aquinas.</p>
+      </div>
+      <div class="objin">
+        <div class="ol">Objection &mdash; Hume and Kant</div>
+        <p>David Hume argued that causation is not a rationally intuited necessary connection but a habit of mind: we see one billiard ball strike another and infer a &ldquo;power,&rdquo; but we observe only constant conjunction. If so, the causal principle behind the Ways loses its self-evidence. Immanuel Kant, in the <em>Critique of Pure Reason</em> (1781), pressed a different line: the cosmological argument, in inferring from a necessary being to the supremely real being, secretly relies on the ontological argument, which Kant thought already refuted &mdash; and in any case the categories of cause and necessity apply only within possible experience, not beyond it.</p>
+        <div class="rl">Reply</div>
+        <p>These are formidable, and a fully adequate reply requires defending an entire realist metaphysics against empiricism and transcendental idealism &mdash; more than any essay can do. The Thomistic response is that Hume&rsquo;s analysis describes how we <em>come to know</em> causal connections without showing there are none, and that the principle &ldquo;a potential cannot actualize itself&rdquo; is not an empirical generalization like &ldquo;fire is hot&rdquo; but a metaphysical truth about the nature of potency and act. Against Kant, Thomists deny that the argument depends on the ontological proof at all: it argues from features of the world to their required cause, not from a concept to existence. Against Kant&rsquo;s second charge, Thomists answer that the claim that causal concepts cannot reach beyond possible experience is itself a claim about what lies beyond experience. Whether these replies fully succeed is contested, and honesty requires saying so; but neither Hume nor Kant shows that a potential can actualize itself, and that is the premise the First Way needs.</p>
+      </div>
+      <div class="whoholds"><b>The room:</b> Aquinas (the <em>Summa</em>) builds on Aristotle&rsquo;s act/potency and unmoved mover. Edward Feser, a leading recent defender, replies that inertia describes but does not explain; Anthony Kenny presses it, concluding the proofs fail; Hume and Kant press the causal principle itself. There is no scholarly consensus that the arguments succeed, nor that they fail.</div>
+    </div>
+
+    <div class="card">
+      <span class="kick">Defending Premise 2</span>
+      <h4>An <em>essentially ordered</em> (here-and-now) series of sustaining causes cannot regress to infinity &mdash; it needs a first sustainer.</h4>
+      <p class="precise">The whole case turns on the <em>per se</em> / <em>per accidens</em> distinction in P2. Get that right and nearly every objection answers itself; the sharpest ones are in the bank below. A <em>per accidens</em> series <em>could</em>, for all philosophy shows, regress forever &mdash; which is precisely why Aquinas conceded the universe might be eternal.</p>
+
+      <div class="support">
+        <div class="sh"><b>The two kinds of series</b> <span class="stp strong">The key distinction</span></div>
+        <p>A series ordered <em>per accidens</em> (&ldquo;accidentally ordered&rdquo;) runs through time: a father begets a son, who begets a grandson. Each member, once it acts, no longer needs its predecessor. Abraham can be long dead while Isaac fathers Jacob.</p>
+        <p>A series ordered <em>per se</em> (&ldquo;essentially ordered&rdquo;) operates <em>simultaneously</em>, here and now. The stone&rsquo;s motion depends, at this very instant, on the stick, which depends on the hand. The later members have no causal power <em>of their own</em>; they move only insofar as something is moving them <em>right now</em>. Take away the first member and the entire series ceases instantly.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>P2 &mdash; a per se series needs a first sustainer</b> <span class="stp strong">The load-bearing premise</span></div>
+        <p>In a <em>per se</em> series the later members are mere instruments with only borrowed power &mdash; like a paintbrush moving a paintbrush moving a paintbrush, with no hand. As Edward Feser, a leading recent defender, puts it, in such a series the intermediate causes are mere <em>instruments</em>; their causal power is &ldquo;borrowed.&rdquo; A series of borrowers with no one who owns the power outright explains nothing. Infinitely many powerless instruments still lift nothing, so the power must originate in a first, underived member acting now. (A <em>per accidens</em> series, by contrast, <em>can</em> be infinite &mdash; which is exactly why Aquinas allowed that the universe might be eternal.)</p>
+        <p class="honest"><b>Honest narrowing:</b> this is the premise everything turns on. Whether a <em>per se</em> regress must terminate in a single first member &mdash; rather than, say, a necessary initial state of the universe &mdash; is exactly what the sharpest critics contest (the Gold gate below takes it up). And note the scope: because the <em>per accidens</em> series may run forever, the argument neither needs nor claims a beginning in time. It is not the Kalam.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>No beginning in time is needed</b> <span class="stp sugg">Scope &middot; not the Kalam</span></div>
+        <p>The causal series Aquinas has in mind does not stretch backward in time to a first event. Aquinas, remarkably, did not think reason could prove the universe began at all. In his treatise <em>De aeternitate mundi</em> (c. 1271) and in the <em>Summa</em> itself, he held that the world&rsquo;s beginning is &ldquo;an object of faith, but not of demonstration or science&rdquo; (<em>ST</em> I, q. 46, a. 2). This put him in open disagreement with his Franciscan contemporary Bonaventure, who insisted the world&rsquo;s temporal beginning <em>could</em> be philosophically proven. So the Five Ways cannot depend on a beginning: they point to a sustainer at the foundation of present reality, not a starter long ago.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>What the first member is &mdash; and what it is not</b> <span class="stp sugg">Scope &middot; not yet the triune God</span></div>
+        <p>Trace the present chain of actualizers, and you reach something that actualizes without itself being actualized &mdash; something with no unrealized potential, <em>pure actuality</em> (<em>actus purus</em>). That, Aquinas argues across the following questions, must be one, immaterial, unchanging, and the source of all being.</p>
+        <p class="honest"><b>Honest limit:</b> the arguments, <em>if sound</em>, establish a purely actual, necessary, sustaining first cause of present reality. They do <em>not</em>, by themselves, establish that this cause is good, personal, triune, or the God of Abraham; that is the work of the subsequent questions of the <em>Summa</em> and of revelation. Such a cause is not yet the whole Christian faith, which rests on revelation and on the historical evidence for <a href="/library/minimalfacts.html">the resurrection of Jesus</a>. Nor do they prove the universe began in time &mdash; Aquinas insisted they don&rsquo;t, and didn&rsquo;t need to.</p>
+      </div>
+
+      <div class="objin">
+        <div class="ol">Objection &mdash; &ldquo;Why cannot the series be infinite?&rdquo;</div>
+        <p>Maybe there is just an infinite regress of sustaining causes, with no first member at all.</p>
+        <div class="rl">Reply</div>
+        <p>That confuses the two series. An accidentally ordered series could be infinite &mdash; Aquinas grants it. But an essentially ordered, here-and-now series cannot, because every later member is a mere instrument with no power of its own. Infinitely many powerless instruments still lift nothing &mdash; the power must originate in a first, underived source.</p>
+      </div>
+        <div class="whoholds"><b>The room:</b> Aquinas (the <em>Summa</em>) builds on Aristotle&rsquo;s act/potency and unmoved mover. A genuine revival &mdash; Edward Feser, David Oderberg &mdash; has put rigorous versions back into peer-reviewed debate, met by equally rigorous critics, above all Graham Oppy and (on the inertia objection) Anthony Kenny. There is no scholarly consensus that the arguments succeed, nor that they fail. The First and Second Ways carry the weight; the Third needs repair for a quantifier-shift worry; the Fourth is widely regarded, even by sympathetic readers, as the weakest.</div>
     </div>
 
     <div class="card">
       <span class="kick">The hard part — objections, answered</span>
       <h4>The objections you will actually meet</h4>
-      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Almost every objection here comes from missing the per se / per accidens distinction. Strongest form first, then the reply — and the hardest objection of all is flagged above.</p>
-      <p class="hardest"><b>The one that matters most:</b> Newtonian inertia (Kenny) &mdash; does sustained motion really need a sustaining mover?. The <a href="/library/thomistic.html">deep dive</a> answers it at length &mdash; take it with you, not just the replies below.</p>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Almost every objection here comes from missing the per se / per accidens distinction. Strongest form first, then the reply — and the hardest objection of all is flagged below.</p>
+      <p class="hardest"><b>The one that matters most:</b> Newtonian inertia (Kenny) &mdash; does sustained motion really need a sustaining mover? The <a href="/library/thomistic.html">deep dive</a> answers it at length &mdash; take it with you, not just the replies below.</p>
 
       <details class="acc">
         <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Who caused God? Why stop there?" <span class="badge easy">Common</span></summary>
@@ -408,7 +533,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>The metaphysics of actuality and potentiality is medieval physics, long superseded by modern science.</p>
           <p class="lbl reply">Reply</p>
-          <p>Act and potency are not empirical physics; they are an analysis of what change and dependence are — presupposed by any physics. Whatever the underlying mechanics, change still means something potential becoming actual. The argument operates one level below physics, on what it is for anything to change or depend at all.</p>
+          <p>Act and potency are not empirical physics; they are an analysis of what change and dependence are. The principle that a potential cannot actualize itself is not an empirical generalization but a metaphysical claim about potency and act. Whatever the underlying mechanics, change still means something potential becoming actual. The argument operates one level below physics, on what it is for anything to change or depend at all. Whether this reply fully succeeds is contested; but no physics shows that a potential can actualize itself, and that is the premise the First Way needs.</p>
         </div>
       </details>
 
@@ -418,7 +543,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Even granting Pure Act, that is an abstraction. Getting to a personal God is a further leap.</p>
           <p class="lbl reply">Reply</p>
-          <p>From Pure Actuality, Aquinas derives — with further argument — unity, immateriality, eternity, omnipotence, omniscience, and goodness, because a purely actual being lacks the limitations that come from potency. The divine attributes are not slapped on; they follow from what Pure Act is.</p>
+          <p>From Pure Actuality, Aquinas derives — with further argument — unity, immateriality, eternity, omnipotence, omniscience, and goodness, because a purely actual being lacks the limitations that come from potency. The divine attributes are not slapped on; they follow from what Pure Act is. But the Ways themselves, if sound, establish a purely actual, necessary, sustaining first cause of present reality; they do not, by themselves, establish that this cause is good, personal, triune, or the God of Abraham. That is the work of the subsequent questions of the <em>Summa</em> and of revelation — and the whole Christian faith rests on revelation and on the historical evidence for the resurrection of Jesus.</p>
         </div>
       </details>
 
@@ -438,7 +563,17 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Maybe there are many ultimate sustainers, not one God.</p>
           <p class="lbl reply">Reply</p>
-          <p>A being of Pure Actuality cannot be multiplied. To have two, they would have to differ — and difference requires one to have some feature, some potency or limitation, the other lacks, which contradicts pure actuality. So there can be only one purely actual being. Unity follows from the nature of Pure Act.</p>
+          <p>A being of Pure Actuality cannot be multiplied. To have two, they would have to differ — and difference requires one to have some feature, some potency or limitation, the other lacks, which contradicts pure actuality. So there can be only one purely actual being. Unity follows from the nature of Pure Act. This is the oneness of the divine nature, not a denial of the Trinity: classical orthodoxy holds one simple divine essence subsisting as Father, Son, and Spirit — the persons neither collapsed into one nor parts of God.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Newton's inertia refuted the First Way" <span class="badge hard">Hard</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>Aquinas's premise "whatever is moved is moved by another" looks like exactly what Newtonian physics overturned. By the principle of inertia, a body in uniform motion stays in motion <em>with no mover at all</em>. Anthony Kenny, in his skeptical study <em>The Five Ways</em> (1969), pressed the point hard, concluding that the First Way fails in light of modern dynamics.</p>
+          <p class="lbl reply">Reply</p>
+          <p>Inertia concerns only local motion, and — on this view — even there it does not touch the deeper principle. Inertia, the Thomist replies, <em>describes</em> that bodies persist in motion; it does not <em>explain</em> what grounds the existence of that motion, or of the body, or of the law itself, from moment to moment. The Thomist relocates the argument from "what keeps the cannonball moving?" to "what sustains in being, right now, every actualized potential — including the persistence the law describes?" Thomists add a second point: Newtonian physics itself treats uniform motion as a <em>state</em>, not a change, so inertia is no counterexample to the claim that change requires a changer. The reply is not a dodge: it reflects what Aquinas meant by change all along, and in our judgment it answers the objection. What remains open is the deeper question of potency and act, not whether Newton refuted Aquinas.</p>
         </div>
       </details>
     </div>
@@ -460,23 +595,57 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <div class="what">Recovers the per se / per accidens distinction and answers modern objections with care.</div>
         </div>
         <div class="row">
+          <div class="who"><b>Anthony Kenny</b><span>1969 · <em>The Five Ways</em></span></div>
+          <div class="what">The skeptical study that pressed the inertia objection against the First Way; Kenny concludes the proofs fail, partly through reliance on outdated cosmology.</div>
+        </div>
+        <div class="row">
           <div class="who"><b>Étienne Gilson</b><span>20th c.</span></div>
           <div class="what">Historian who recovered the genuine shape of Thomistic metaphysics against later caricatures. (We paraphrase — read the originals.)</div>
         </div>
       </div>
+    </div>
+
+    <div class="card">
+      <span class="kick">The honest state of the scholarship</span>
+      <h4>Where the argument really stands</h4>
+      <p>The Five Ways are not a museum piece. A genuine revival of Aristotelian-Thomistic philosophy — Feser, Oderberg, and others — has put rigorous versions back into peer-reviewed debate, met by equally rigorous critics like Oppy and Kenny. There is no scholarly consensus that the arguments succeed; neither is there consensus that they fail. What no longer survives careful reading is the quick dismissal — the Russell &ldquo;who caused God?&rdquo; one-liner, the bumper-sticker &ldquo;Newton settled it.&rdquo; Those are misreadings. To his credit, Russell engaged these arguments more seriously elsewhere; it is the endlessly-repeated one-liner, not the man, that misses the qualifier in the premise. This is not to wave away the inertia objection itself: the underlying worry about whether sustained motion needs a sustaining mover is serious and must be answered with real work, not a slogan. What collapses is only the cheap version.</p>
+      <p class="honest"><b>The real fork:</b> whether an essentially ordered series must terminate in something <em>purely actual</em> (God) or whether reality might simply bottom out in a necessary initial physical state. That exchange — Oppy&rsquo;s — not a slogan, is where the live debate now sits.</p>
+      <p><b>The bounded verdict:</b> if sound, the argument establishes a purely actual, necessary, sustaining first cause of present reality — <em>not</em> by itself the good, personal, triune God, and <em>not</em> a beginning in time. We judge that it succeeds where it matters most: rightly read, the First and Second Ways survive their famous objections and give strong reason to believe a purely actual cause holds the world in being now. That is a serious, still-living case — not a knockdown proof — held with confidence rather than certainty, one strand in a cumulative case resting above all on the <a href="/library/minimalfacts.html">historical evidence for the resurrection</a>.</p>
+    </div>
+
+    <div class="card" id="bronzeGate">
+      <span class="kick">Checkpoint · earn Bronze</span>
+      <h4>Rebuild it from memory — nothing in front of you</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:4px">Close the sections above. This is the retrieval that turns reading into knowing — and it is how this argument reaches <b>Bronze&nbsp;· Understand</b> on your shelf. Opening accordions no longer counts; showing you can rebuild the structure does.</p>
+      <div class="recall">
+        <div class="q">1 &middot; Put the argument in order — tap the three lines in sequence.</div>
+        <div id="orderPool" class="btnrow"></div>
+        <div id="orderSeq" style="font-family:var(--ui);font-size:13.5px;color:var(--tm);margin-top:10px;min-height:1.2em"></div>
+      </div>
+      <div class="recall" style="margin-top:12px">
+        <div class="q">2 &middot; What must the First Cause be? Select every property the argument establishes — and nothing it doesn&rsquo;t.</div>
+        <div id="propPool" style="display:flex;flex-wrap:wrap;gap:9px;margin-top:4px"></div>
+      </div>
+      <div class="btnrow"><button class="btn primary" onclick="gradeBronze()">Check my reconstruction</button><button class="btn ghost" onclick="resetBronze()">Reset</button></div>
+      <div class="gradeline" id="bronzeGrade"></div>
     </div>
   </section>
 
   <!-- ===================== PHASE 2: PRACTICE ===================== -->
   <section id="practice">
     <div class="phasehead"><span class="phasenum">2</span><h3>Practice it</h3></div>
-    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Three drills that route this argument through tools you already have.</p>
+    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Four drills that take you from recognising this argument to defending it cold.</p>
 
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back</span>
-      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument in your own words</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Reconstruct the argument from memory — and make the per se versus per accidens distinction explicit, because it carries the whole thing. Then answer who caused God in a sentence.</p>
-      <textarea id="explainBox" placeholder="Start with: Things are being sustained in existence right now, and..."></textarea>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back &mdash; free recall</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument with nothing in front of you</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:12px">Scroll the sections away and generate it from memory — recalling is what builds durable memory; re-reading only feels like it does. Keep the <em>per se</em> key front and centre, and keep the scope honest (a purely actual sustaining cause — not yet the full God, and not a beginning in time). Pick your level; the bar rises as you go. Scored out of 10, accuracy first. An 8+ is one half of <b>Silver</b>.</p>
+      <div class="btnrow" id="explainLevels" style="margin:0 0 10px">
+        <button class="btn ghost sel" type="button" data-lv="1" onclick="setExplainLevel(this,1)">1 · State it</button>
+        <button class="btn ghost" type="button" data-lv="2" onclick="setExplainLevel(this,2)">2 · &hellip;and answer &ldquo;who caused God?&rdquo;</button>
+        <button class="btn ghost" type="button" data-lv="3" onclick="setExplainLevel(this,3)">3 · &hellip;to a hostile grad student</button>
+      </div>
+      <textarea id="explainBox" placeholder="Start with: Some things are being sustained in existence right now..."></textarea>
       <div class="btnrow">
         <button class="btn primary" onclick="scoreExplain(this)">Score my explanation</button>
         <button class="btn ghost" onclick="document.getElementById('explainBox').value='';document.getElementById('scoreOut').classList.remove('show')">Clear</button>
@@ -493,7 +662,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <div class="practicecard">
       <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 2 · Flashcards</span>
       <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Drilled straight from this argument</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Five cards on per se causation, Pure Act, and why this is not the Kalam.</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Twelve cards drawn from the per se / per accidens key, act and potency, the objections, and the honest limits above. <b>Answer out loud before you flip</b> — the effort of recall is the whole point; a card you merely recognise hasn't stuck. Each card is graded: type the key idea, flip, mark it. Three correct recalls and a card rests; it comes back on Today when it is due.</p>
       <div class="flashwrap">
         <div class="flash" id="flash" onclick="this.classList.toggle('flipped')">
           <div class="face front"><div class="qlbl">Prompt</div><p id="fFront"></p><span class="tap">tap to flip</span></div>
@@ -508,9 +677,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     </div>
 
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · Live objection</span>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · The first-cause objection (worked example)</span>
       <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Untangle the first-cause objection</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">A seeded scenario from the Debate Arena. Draft your reply, then reveal a model answer to compare.</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Start here: draft your reply, then reveal a model answer to compare. This is the <em>worked example</em> — Drill 4 then makes you do it cold across the objection set.</p>
       <div class="interloc">
         <div class="av">SK</div>
         <div>
@@ -524,27 +693,61 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       </div>
       <div class="modelans" id="modelAns">
         <div class="lbl">One strong way to answer — in a 1 Peter 3:15 tone</div>
-        <p>"Fair — but this version is different from the one you are picturing, and your two questions actually answer each other. It is not everything needs a cause; it is that whatever is being sustained needs something sustaining it right now. Picture a chandelier on a chain of links: each link only holds because the one above holds — none has power of its own. A chain like that cannot be infinite, because infinitely many powerless links still hold nothing up; the support has to originate somewhere. That origin is not another link needing support — it is the ceiling. Who sustains God is like asking what holds up the ceiling: God is Pure Act, with nothing to be sustained. He is not the first domino; he is the floor they all stand on."</p>
+        <p>"Fair — but this version is different from the one you are picturing, and your two questions actually answer each other. It is not everything needs a cause; it is that whatever is being sustained needs something sustaining it right now. Picture a chandelier on a chain of links: each link only holds because the one above holds — none has power of its own. A chain like that cannot be infinite, because infinitely many powerless links still hold nothing up; the support has to originate somewhere. That origin is not another link needing support. What is purely actual has no potential to be actualized and so needs no actualizer. God is not an exception smuggled in arbitrarily; he is the one thing the argument's own logic says cannot stand in the dependent series — not a starter long ago, but a sustainer at the foundation of present reality."</p>
       </div>
     </div>
+
+    <!-- answer the objections cold -->
+    <div class="practicecard" id="objDrill">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 4 · Answer the objections cold</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Four objections, no notes — reply, then check</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">The other half of <b>Silver</b>. Draft a reply from memory, reveal the certified answer, and rate yourself honestly. Clear all four with a &ldquo;nailed it&rdquo; and you can field them in the wild — not just recognise them on the page.</p>
+      <div class="interloc">
+        <div class="av" id="odAv">SK</div>
+        <div><div class="who2" id="odWho">Skeptic</div><div class="bub" id="odQ"></div></div>
+      </div>
+      <textarea id="odBox" placeholder="Your reply, from memory..."></textarea>
+      <div class="btnrow">
+        <button class="btn gold" type="button" onclick="odReveal()">Reveal the certified answer</button>
+      </div>
+      <div class="modelans" id="odModel">
+        <div class="lbl">A strong reply — ported from this page&rsquo;s certified answer</div>
+        <p id="odModelText"></p>
+        <div class="confrow" style="margin-top:12px">
+          <button type="button" onclick="odRate(1)">Shaky — I&rsquo;ll redo this one</button>
+          <button type="button" onclick="odRate(2)">Nailed it &#10003;</button>
+        </div>
+      </div>
+      <div class="flashnav">
+        <button class="btn ghost" type="button" onclick="odPrev()">&lsaquo; Prev</button>
+        <span id="odCount"></span>
+        <button class="btn ghost" type="button" onclick="odNext()">Next &rsaquo;</button>
+      </div>
+    </div>
+
   </section>
 
   <!-- ===================== PHASE 3: PROVE IT ===================== -->
   <section id="proveit">
     <div class="phasehead"><span class="phasenum">3</span><h3>Prove it</h3></div>
-    <p class="phasesub">Mastery isn't a feeling — it's four things done. Clear them and this argument turns gold on your shelf.</p>
+    <p class="phasesub">Mastery isn't a feeling — it's three levels, each earned by <em>showing</em> you can do the thing, then proven again over time. Don't trust the warm glow of having read it; prove it cold.</p>
 
     <div class="card">
-      <div class="checklist">
-        <div class="cl" id="ck-read"><div class="box">✓</div><div class="txt"><b>Understood it</b><span>Read the structure, defences, and all objections</span></div><div class="state">Open every section</div></div>
-        <div class="cl" id="ck-explain"><div class="box">✓</div><div class="txt"><b>Explained it</b><span>Score 7+ on Explain It Back</span></div><div class="state">Not yet</div></div>
-        <div class="cl" id="ck-cards"><div class="box">✓</div><div class="txt"><b>Drilled it</b><span>Cycle through every flashcard once</span></div><div class="state">Not yet</div></div>
-        <div class="cl" id="ck-debate"><div class="box">✓</div><div class="txt"><b>Defended it</b><span>Attempt the live objection</span></div><div class="state">Not yet</div></div>
+      <span class="kick">Your levels on this argument</span>
+      <h4>What each one takes</h4>
+      <div class="checklist" id="levelReqs">
+        <div class="cl" id="rq-bronze"><div class="box">✓</div><div class="txt"><b>Bronze · Understand</b><span>Rebuild the argument + what the First Cause must be, from memory (&ge;80%) — the checkpoint at the end of &ldquo;Understand it.&rdquo;</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-explain"><div class="box">✓</div><div class="txt"><b>Silver · part 1 · Explain it</b><span>Score 8+ on Explain It Back at level 2 or 3 (the argument <em>and</em> its hardest objection)</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-objections"><div class="box">✓</div><div class="txt"><b>Silver · part 2 · Objections cold</b><span>Answer all four objection drills with &ldquo;nailed it&rdquo;</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-unseen"><div class="box">✓</div><div class="txt"><b>Gold · part 1 · The unseen objection</b><span>Face one objection the page never drilled (below)</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-disc"><div class="box">✓</div><div class="txt"><b>Gold · part 2 · Pick the right tool</b><span>Pass &ldquo;which argument answers this?&rdquo; &mdash; four of five, mixed with neighbouring arguments</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-spaced"><div class="box">✓</div><div class="txt"><b>Gold · part 3 · Prove it again</b><span>Clear this argument on 3 spaced reviews — it returns on its own</span></div><div class="state">0 of 3</div></div>
       </div>
-      <div style="margin-top:26px;border-top:1px solid var(--border);padding-top:20px">
+      <p style="font-family:var(--ui);font-size:13px;color:var(--tm);margin-top:14px">Gold can slip back to Silver if you stop turning up for the spaced reviews — real mastery is perishable, which is why it's worth something. The dashboard brings this one back when it's due.</p>
+      <div style="margin-top:22px;border-top:1px solid var(--border);padding-top:18px">
         <span class="kick">One more thing — be honest</span>
         <h4 style="font-size:17px">If a friend challenged you on this tomorrow, how ready are you?</h4>
-        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Your self-rating is tracked over time so you can watch confidence climb across the library.</p>
+        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Rate yourself — then see whether your Explain It Back score backs it up. Felt-confidence and shown-confidence are not the same thing, and the gap is worth knowing before a real conversation.</p>
         <div class="confrow" id="confRow">
           <button onclick="setConf(this,1)">Shaky</button>
           <button onclick="setConf(this,2)">Getting there</button>
@@ -552,6 +755,26 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <button onclick="setConf(this,4)">Could teach it</button>
         </div>
         <div id="calibNote" style="display:none"></div>
+      </div>
+    </div>
+
+    <div class="card" id="unseenGate">
+      <span class="kick">Gold gate · the unseen objection</span>
+      <h4>One you weren&rsquo;t coached on</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Everything above rehearsed objections the page showed you. Here is the real test: the most rigorous contemporary objection, from an atheist philosopher who <em>grants</em> the per se / per accidens distinction. Reason it out cold, then reveal how the argument handles it. An honest &ldquo;nailed it&rdquo; is the first half of <b>Gold</b>.</p>
+      <div class="interloc">
+        <div class="av">GO</div>
+        <div><div class="who2">Graham Oppy</div><div class="bub">"I'll grant you the per se / per accidens distinction — more than most atheists will. But why must an essentially ordered series terminate in God? Why not let it bottom out in a necessary initial state of the universe itself — no God required? On the naturalistic options, a necessary physical ground is at least as defensible as a divine one."</div></div>
+      </div>
+      <textarea id="unseenBox" placeholder="Reason it out — could a physical state be the terminus, or does it fail the test that forced us up the series?"></textarea>
+      <div class="btnrow"><button class="btn gold" type="button" onclick="unseenReveal()">Reveal how the argument handles it</button></div>
+      <div class="modelans" id="unseenModel">
+        <div class="lbl">How the argument answers it — ported from the deep dive</div>
+        <p>This is the most serious contemporary form of the objection, and it grants the hardest-won distinction — so it deserves a real answer, not a slogan. The reply: a brute necessary <em>physical</em> state is not enough to be the terminus. Anything composed of parts, or carrying unrealized potential, still requires actualization — so it cannot be the first, underived member; it would just be one more dependent link. Only something <em>purely actual</em> and absolutely simple — not built up out of parts — can stop the series. Could the cosmos itself be that: purely actual, with no potency? That is the real crux — but a universe is changeable and composite, so it fails the very test that forced us up the series in the first place. (Note what &ldquo;simple&rdquo; means here: not built from components — it is <em>not</em> a claim about the Trinity. Classical orthodoxy holds one simple divine essence subsisting as Father, Son, and Spirit — neither collapsed into one nor parts of God.) That exchange — not a one-liner — is where the live debate now sits.</p>
+        <div class="confrow" style="margin-top:12px">
+          <button type="button" onclick="unseenRate(1)">Shaky — I&rsquo;ll sit with it</button>
+          <button type="button" onclick="unseenRate(2)">Nailed it &#10003;</button>
+        </div>
       </div>
     </div>
 
@@ -571,37 +794,52 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
 <script>
-/* ---- in-memory state (swap for localStorage/Supabase in production) ---- */
-const state = { read:false, explainPass:false, cardsSeen:new Set(), debateTried:false, conf:0 };
+/* ---- state: three earned levels (Bronze / Silver / Gold) ----
+   bronze = reconstruction checkpoint passed (>=80%); explainScore = best Explain It Back
+   (Silver part 1 needs >=8); objCold = objection-drill indices self-rated "nailed it"
+   (Silver part 2 = all); unseen = Gold part 1; Gold part 2 = 3 spaced recalls (ad_reviews step). */
+const state = { bronze:false, explainScore:0, objCold:new Set(), unseen:false, explainHi:false, cardsSeen:new Set(), conf:0, explainLevel:1 };
 
-/* ---- persistence + site streak (ad_mastery / ad_streak) ---- */
 const ARG_ID = location.pathname.split('/').pop().replace('ev-m-','').replace('.html','');
-const FRESH_MS = 30*24*60*60*1000; /* 30 days */
 function adAll(){ try{ return JSON.parse(localStorage.getItem('ad_mastery')||'{}'); }catch(e){ return {}; } }
-function adSave(full){
+function spacedCount(){ try{ var r = (JSON.parse(localStorage.getItem('ad_reviews')||'{}'))[ARG_ID]; return (r && r.step) ? r.step : 0; }catch(e){ return 0; } }
+
+/* Gold sub-gate (Phase 1.5, 2026-10-11): the mixed 'which argument answers this?' drill, run by lib/review-queue.js. */
+function discPassed(){ try{ return !!((adAll()[ARG_ID]||{}).disc); }catch(e){ return false; } }
+
+function levelOf(){
+  var silver = state.bronze && state.explainScore>=8 && state.explainHi && state.objCold.size>=OBJ.length;
+  if(silver && state.unseen && discPassed() && spacedCount()>=3) return 3;
+  if(silver) return 2;
+  if(state.bronze) return 1;
+  return 0;
+}
+
+function adSave(){
   try{
-    var m = adAll(); var e = m[ARG_ID] || {};
-    e.read = state.read; e.explain = state.explainPass;
-    e.cards = state.cardsSeen.size; e.debate = state.debateTried;
-    e.explainScore = state.explainScore || e.explainScore || 0; if(state.conf) e.conf = state.conf;
-    if(full){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
+    var m = adAll(); var e = m[ARG_ID] || {}; var lv = levelOf();
+    e.bronze = state.bronze;
+    e.explainScore = Math.max(state.explainScore||0, e.explainScore||0);
+    e.objCold = Array.from(state.objCold);
+    e.unseen = state.unseen;
+    e.explainHi = !!state.explainHi || !!e.explainHi;
+    e.cards = state.cardsSeen.size;
+    if(state.conf) e.conf = state.conf;
+    e.level = lv;
+    e.read = state.bronze; e.explain = state.explainScore>=8; e.debate = state.objCold.size>0;
+    if(lv>=2){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
     m[ARG_ID] = e; localStorage.setItem('ad_mastery', JSON.stringify(m));
   }catch(e){}
 }
 function adRestore(){
   try{
     var e = adAll()[ARG_ID]; if(!e) return;
-    state.read = !!e.read; state.explainPass = !!e.explain; state.debateTried = !!e.debate;
-    state.explainScore = e.explainScore || 0; state.conf = e.conf || 0;
-    var fresh = e.fresh && (Date.now() - e.fresh) < FRESH_MS;
-    if(e.cards >= cards.length && fresh){ for(var i=0;i<cards.length;i++) state.cardsSeen.add(i); }
-    if(e.cards >= cards.length && !fresh){
-      var note = document.createElement('div');
-      note.style.cssText = 'font-family:var(--ui);font-size:.8rem;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.7rem 1rem;margin:0 0 1rem;';
-      note.innerHTML = '&#9888; Memory fades \u2014 it has been a while. Flip through the flashcards again to restore this argument to gold.';
-      var fc = document.querySelector('.flashwrap') || document.getElementById('flash') || null;
-      if(fc && fc.parentNode){ fc.parentNode.insertBefore(note, fc); }
-    }
+    state.bronze = !!e.bronze || !!e.read;
+    state.explainScore = e.explainScore || 0;
+    state.unseen = !!e.unseen;
+    state.explainHi = !!e.explainHi;
+    state.conf = e.conf || 0;
+    if(Array.isArray(e.objCold)){ e.objCold.forEach(function(i){ state.objCold.add(i); }); }
   }catch(e){}
 }
 function adMark(){
@@ -619,51 +857,68 @@ function adMark(){
   }catch(e){}
 }
 
-/* ---- mastery dial ---- */
+/* ---- mastery dial + level ladder ---- */
 const CIRC = 263.9;
+function setLvl(id, earned, current){
+  var el = document.getElementById(id); if(!el) return;
+  el.classList.toggle('earned', earned);
+  el.classList.toggle('current', current && !earned);
+  var s = el.querySelector('.ls'); if(s) s.textContent = earned ? 'Earned ✓' : (current ? 'Next up' : 'Locked');
+}
+function setReq(id, done, txt){
+  var el = document.getElementById(id); if(!el) return;
+  el.classList.toggle('done', done);
+  var s = el.querySelector('.state'); if(s) s.textContent = txt;
+}
 function updateDial(){
-  let done = 0;
-  if(state.read) done++;
-  if(state.explainPass) done++;
-  if(state.cardsSeen.size >= cards.length) done++;
-  if(state.debateTried) done++;
-  const pct = Math.round(done/4*100);
-  adSave(pct===100);
-  if(window._adLoaded && done>0) adMark();
-  document.getElementById('pctNum').textContent = pct + '%';
-  document.getElementById('ring').style.strokeDashoffset = CIRC - (CIRC*pct/100);
+  var lv = levelOf();
+  var pct = [0,34,67,100][lv];
+  adSave();
+  if(window._adLoaded && (state.bronze || state.explainScore || state.objCold.size || state.unseen)) adMark();
+  var pn = document.getElementById('pctNum'); if(pn) pn.textContent = pct + '%';
+  var ring = document.getElementById('ring'); if(ring) ring.style.strokeDashoffset = CIRC - (CIRC*pct/100);
 
-  setCheck('ck-read', state.read);
-  setCheck('ck-explain', state.explainPass);
-  setCheck('ck-cards', state.cardsSeen.size >= cards.length);
-  setCheck('ck-debate', state.debateTried);
+  setLvl('lvl-bronze', lv>=1, lv===0);
+  setLvl('lvl-silver', lv>=2, lv===1);
+  setLvl('lvl-gold',   lv>=3, lv===2);
+
+  setReq('rq-bronze', state.bronze, state.bronze ? 'Done' : 'Not yet');
+  setReq('rq-explain', state.explainScore>=8 && state.explainHi, (state.explainScore>=8 && state.explainHi) ? ('Done · '+state.explainScore+'/10') : (state.explainScore ? ('Best '+state.explainScore+'/10') : 'Not yet'));
+  setReq('rq-objections', (typeof OBJ!=='undefined' && state.objCold.size>=OBJ.length), (typeof OBJ!=='undefined' && state.objCold.size>=OBJ.length) ? 'Done' : (state.objCold.size + ' of ' + (typeof OBJ!=='undefined'?OBJ.length:4)));
+  setReq('rq-unseen', state.unseen, state.unseen ? 'Done' : 'Not yet');
+  var sc = Math.min(spacedCount(), 3); setReq('rq-spaced', sc>=3, sc>=3 ? 'Done' : (sc + ' of 3'));
+  setReq('rq-disc', discPassed(), discPassed() ? 'Done' : 'Not yet');
+
   try{ renderCalibration(); }catch(e){}
 
-  if(pct===100){
-    document.getElementById('ctaTitle').textContent = 'the Thomistic Argument mastered - it just turned gold on your shelf';
-    document.getElementById('ctaText').textContent = 'That is 6 of 22. The same path is waiting for every argument in the library. Keep the streak going.';
-    document.querySelector('.libnote').innerHTML = '&#9670; &nbsp;the Thomistic Argument mastered - 6 of 22 core arguments complete';
-  }
-}
-function setCheck(id, on){
-  const el = document.getElementById(id);
-  el.classList.toggle('done', on);
-  var stEl = el.querySelector('.state');
-  if(on){ stEl.textContent = 'Done'; return; }
-  if(id==='ck-read'){
-    stEl.textContent = (typeof _accOpened !== 'undefined' && _accs.length) ? (_accOpened.size + ' of ' + _accs.length + ' opened') : 'Open every section';
-  } else {
-    stEl.textContent = 'Not yet';
+  var ln = document.querySelector('.libnote');
+  if(lv>=3){
+    var ct = document.getElementById('ctaTitle'); if(ct) ct.textContent = 'the Thomistic Argument mastered — Gold on your shelf';
+    var cx = document.getElementById('ctaText'); if(cx) cx.textContent = 'You rebuilt it, defended it cold, met an objection you had never seen, and proved it again weeks later. That confidence is earned — keep it alive on the spaced reviews.';
+    if(ln) ln.innerHTML = '&#9670; &nbsp;the Thomistic Cosmological Argument — Gold · mastered';
+  } else if(lv>=1 && ln){
+    ln.innerHTML = '&#9670; &nbsp;the Thomistic Cosmological Argument — ' + (lv===2?'Silver':'Bronze') + ' · keep going';
   }
 }
 
-/* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
-/* ---- argument premises used to ground the AI scoring ---- */
+/* ---- explain it back (real AI scoring via /api/tutor; mock fallback) ---- */
+/* ARG_PREMISES: the certified rubric POSTed to /api/tutor and rendered into the share-card. */
 var ARG_PREMISES = [
   'Things are being sustained in existence right now.',
   'A here-and-now essentially ordered series of causes cannot regress infinitely - it needs a first sustainer.',
-  'So there is a purely actual, unchanging First Cause sustaining all things - God.'
+  'So there is a purely actual, unchanging First Cause sustaining all things now - “and this everyone understands to be God” (Aquinas), though this argument alone does not reach the good, personal, triune God of Christian worship, nor a beginning in time.'
 ];
+
+function setExplainLevel(btn, lv){
+  state.explainLevel = lv;
+  [].forEach.call(document.querySelectorAll('#explainLevels button'), function(b){ b.classList.remove('sel'); });
+  if(btn) btn.classList.add('sel');
+  var box = document.getElementById('explainBox');
+  var ph = lv===3 ? 'Explain it to a hostile, well-read skeptic — anticipate the pushback (Newton’s inertia, Oppy’s necessary-physical-state move, “act and potency is obsolete”) and answer it...'
+         : lv===2 ? 'From memory: the argument AND your best answer to "who caused God?" (use the per se / Pure Act distinction, not special pleading)...'
+         : 'Start with: Some things are being sustained in existence right now...';
+  if(box) box.setAttribute('placeholder', ph);
+}
 
 /* Real AI scoring via /api/tutor (same method as explain-it-back.html).
    Falls back to a local heuristic if the API is unreachable (e.g. preview). */
@@ -673,7 +928,10 @@ async function scoreExplain(btn){
   if(!txt){ return; }
   if(btn){ btn.disabled = true; btn.dataset.lbl = btn.textContent; btn.textContent = 'Scoring...'; }
   try{
-    var prompt = 'Please evaluate this student explanation of "The Thomistic Cosmological Argument". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
+    var lvAsk = state.explainLevel>=3 ? '\n\nThe student was asked to explain it to a hostile, well-read skeptic: weight whether they anticipated and answered the obvious pushback (Newton’s inertia; Oppy’s move that an essentially ordered series could bottom out in a necessary physical state rather than God; the charge that act and potency is obsolete physics), not merely stated the argument. Keep the scope honest: a purely actual sustaining first cause, not yet the good/personal/triune God, and NOT a claim about a beginning in time (this is not the Kalam).'
+              : state.explainLevel===2 ? '\n\nThe student was ALSO asked to answer "who caused God?": weight whether they used the per se / Pure Act distinction (the premise is not "everything has a cause" - only what is dependent or has potential being actualized needs a sustainer) rather than special-pleading an exception.'
+              : '';
+    var prompt = 'Please evaluate this student explanation of "The Thomistic Cosmological Argument". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + lvAsk + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
     var res = await fetch('/api/tutor', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
@@ -719,14 +977,15 @@ function renderCrisis(text){
 function renderScore(score, strengths, improvements){
   score = Math.max(0, Math.min(10, Math.round(Number(score) || 0)));
   var feed = '';
-  (strengths||[]).forEach(function(s){ feed += '<li class="hit"><span class="mk">\u2713</span>'+esc(s)+'</li>'; });
-  (improvements||[]).forEach(function(s){ feed += '<li class="miss"><span class="mk">\u25CB</span>'+esc(s)+'</li>'; });
+  (strengths||[]).forEach(function(s){ feed += '<li class="hit"><span class="mk">✓</span>'+esc(s)+'</li>'; });
+  (improvements||[]).forEach(function(s){ feed += '<li class="miss"><span class="mk">○</span>'+esc(s)+'</li>'; });
   document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
-  var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
+  var verdict = score>=8?'Strong — you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way — fill the gaps below' : 'Have another go with the structure in mind';
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score);
+  if(score>=8 && (state.explainLevel||1)>=2) state.explainHi = true;
   updateDial();
 }
 
@@ -734,32 +993,40 @@ function renderMockScore(txtRaw){
   var t = (txtRaw||'').toLowerCase();
   var checks = [
     {ok:/sustain|change|caused|dependent|here and now|right now|moved/.test(t), hit:'Premise 1 - you grounded it in present dependence', miss:'State Premise 1 - things are being sustained or changed right now'},
-    {ok:/per se|essentially ordered|instrument|infinite|regress|series/.test(t), hit:'Good - you used the essentially ordered series', miss:'Bring in the key idea - an essentially ordered (per se) series cannot regress'},
-    {ok:/first cause|pure act|unchang|sustainer|uncaused|actual/.test(t), hit:'Nice - you reached a first, purely actual cause', miss:'Reason to the First Cause - purely actual, sustaining all else'},
-    {ok:/god|one|self-exist/.test(t), hit:'Conclusion - you connected Pure Act to God', miss:'Close the loop: Pure Act is what theism calls God'},
+    {ok:/per se|per accidens|essentially ordered|accidentally ordered|instrument|simultaneous|here[- ]and[- ]now|borrow/.test(t), hit:'Good - you used the essentially ordered series', miss:'Bring in the key idea - an essentially ordered (per se) series cannot regress'},
+    {ok:/pure(ly)? act|actus purus|no (unrealized )?potential|unchang\w*,? (first )?(changer|mover|cause|sustainer)|first cause[^.]{0,30}(?<!not |n.t )sustain|unmoved mover|first (sustainer|mover)/.test(t), hit:'Nice - you reached a first, purely actual cause', miss:'Reason to the First Cause - purely actual, sustaining all else'},
+    {ok:/\bgod\b|self-exist/.test(t), hit:'Conclusion - you connected Pure Act to God', miss:'Close the loop: Pure Act is what theism calls God'},
     {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth - you developed it, not just listed it', miss:'Go a bit deeper - a full reconstruction runs longer than this'}
   ];
   var score = 0, feed = '';
   checks.forEach(function(c){
-    if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">\u2713</span>'+c.hit+'</li>'; }
-    else{ feed += '<li class="miss"><span class="mk">\u25CB</span>'+c.miss+'</li>'; }
+    if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">✓</span>'+c.hit+'</li>'; }
+    else{ feed += '<li class="miss"><span class="mk">○</span>'+c.miss+'</li>'; }
   });
   document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
-  var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
+  var verdict = score>=8?'Strong — you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way — fill the gaps below' : 'Have another go with the structure in mind';
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score);
+  if(score>=8 && (state.explainLevel||1)>=2) state.explainHi = true;
   updateDial();
 }
 
 /* ---- flashcards (generated from this argument) ---- */
 const cards = [
-  {q:'Per se vs per accidens causal series - the key distinction.', a:'Per accidens (father to son) can regress infinitely. Per se (hand to stick to stone) depends on every member now; remove the first and all motion stops - so it cannot be infinite.'},
-  {q:'Why is this not just the Kalam?', a:'Kalam is about a temporal beginning. The Thomistic argument is about here-and-now dependence - what sustains things in existence right now, even if the universe were eternal.'},
-  {q:'Answer who caused God on the Thomistic version.', a:'The argument applies to what has potential actualized or is dependent. God is Pure Act - no potential, not dependent - so he is the unconditioned ground, not a link needing a prior link.'},
+  {q:'Per se vs per accidens causal series - the key distinction.', a:'Per accidens (father to son) can regress infinitely - each cause is not needed now. Per se (hand to stick to stone) depends on every member simultaneously; remove the first and all motion stops - so it cannot be infinite.'},
+  {q:'Why is this not just the Kalam?', a:'Kalam is about a temporal beginning. The Thomistic argument is about here-and-now dependence - what sustains things in existence right now, even if the universe were eternal. Aquinas held reason cannot even prove the universe began.'},
+  {q:'The single most important point - is it a chain back through time?', a:'No. It is not a regress to a first event. It is a present, simultaneous dependence - a sustainer at the foundation of present reality, not a starter long ago.'},
   {q:'Why can the per se series not be infinite?', a:'Its later members are mere instruments with no power of their own. An infinite series of instruments with no first source explains nothing - like an endless paintbrush with no painter.'},
-  {q:'What is the First Cause in Aquinas terms?', a:'Pure Actuality - no unrealized potential - which yields unity, immateriality, eternity, and the other classical divine attributes.'}
+  {q:'Potency and act - why must whatever changes be changed by another?', a:'Change is a potential becoming actual. A potential cannot actualize itself (cold water does not heat itself); something already actual must do it. Trace the present chain of actualizers to its source.'},
+  {q:'What is Pure Act (actus purus)?', a:'A being with no unrealized potential - so it needs no actualizer and nothing sustains it, while it sustains everything else. From it Aquinas argues, in further steps, to unity, immateriality, eternity and the other divine attributes.'},
+  {q:'Answer "who caused God?" on the Thomistic version.', a:'The argument applies to what has potential actualized or is dependent. God is Pure Act - no potential, not dependent - so he is the unconditioned ground, not a link needing a prior link. The premise was never "everything has a cause."'},
+  {q:'Newton’s inertia - does it refute the First Way?', a:'No. Inertia concerns only local motion and describes that bodies persist; it does not explain what sustains the motion, the body, or the law from moment to moment. And change (motus) means any actualization of a potential, not just change of place; uniform motion is a state, not a change.'},
+  {q:'Oppy’s challenge - why not a necessary physical state?', a:'A brute necessary physical state is composite and changeable, so it still has potency to be actualized - it fails the very test that forced us up the series. Only something purely actual and absolutely simple can be the terminus. Whether the cosmos could be that is the live crux.'},
+  {q:'Why must the First Cause be only one?', a:'Two purely actual beings would have to differ, and difference requires one to have some potency or limitation the other lacks - contradicting pure actuality. So there is only one. (This is the oneness of the divine nature, not a denial of the Trinity.)'},
+  {q:'Which Ways carry the weight, and which are weak?', a:'The First and Second Ways carry it. The Third faces a quantifier-shift worry and needs repair before it can be leaned on. The Fourth (degrees of perfection) is widely regarded, even by sympathetic readers, as the weakest.'},
+  {q:'What do the Five Ways establish - and not?', a:'If sound: a purely actual, necessary, sustaining first cause of present reality. NOT by themselves that it is good, personal, triune, or the God of Abraham (that is the later Summa questions + revelation); and NOT a beginning in time. One strand in a cumulative case resting on the resurrection.'}
 ];
 let ci = 0;
 function renderCard(){
@@ -773,37 +1040,97 @@ function renderCard(){
 function nextCard(){ ci = (ci+1)%cards.length; renderCard(); }
 function prevCard(){ ci = (ci-1+cards.length)%cards.length; renderCard(); }
 
-/* ---- debate ---- */
-document.getElementById('debateBox').addEventListener('input', ()=>{
-  if(document.getElementById('debateBox').value.trim().length > 8 && !state.debateTried){
-    state.debateTried = true; updateDial();
+/* ---- Bronze reconstruction gate (retrieval-earned "Understand") ---- */
+var ORDER = [
+  'Some things are being sustained in existence right now - kept in being by something else.',
+  'An essentially ordered (here-and-now) series of sustaining causes cannot regress to infinity.',
+  'So there is a purely actual, unchanging First Cause sustaining all things now.'
+];
+var PROPS = [
+  {t:'purely actual (no unrealized potential)', ok:true}, {t:'the sustaining ground of all things now', ok:true}, {t:'unchanging / self-existent', ok:true}, {t:'necessarily one', ok:true},
+  {t:'the triune God of worship', ok:false}, {t:'proven with certainty', ok:false}, {t:'the first event in time / the Big Bang', ok:false}, {t:'good and personal by this argument alone', ok:false}
+];
+var _ordSel = [];
+function _shuf(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } return a; }
+function injectBronze(){
+  var pool=document.getElementById('orderPool');
+  if(pool && !pool.children.length){
+    _shuf([0,1,2]).forEach(function(k){
+      var b=document.createElement('button'); b.type='button'; b.className='btn ghost'; b.textContent=ORDER[k];
+      b.onclick=function(){ if(b.disabled) return; b.disabled=true; b.style.opacity=.4; _ordSel.push(k); _ordSeq(); };
+      pool.appendChild(b);
+    });
   }
-});
-document.querySelector('[onclick*="modelAns"]').addEventListener('click', ()=>{
-  state.debateTried = true; updateDial();
-});
-
-/* ---- prove it ---- */
-function markRead(){
-  state.read = true;
-  document.getElementById('readBtn').textContent = 'Marked as understood \u2713';
-  document.getElementById('readBtn').classList.remove('primary');
-  document.getElementById('readBtn').classList.add('ghost');
-  updateDial();
+  var pp=document.getElementById('propPool');
+  if(pp && !pp.children.length){
+    _shuf(PROPS).forEach(function(p){
+      var b=document.createElement('button'); b.type='button'; b.className='btn ghost'; b.textContent=p.t; b.setAttribute('data-ok', p.ok?'1':'0');
+      b.onclick=function(){ b.classList.toggle('sel'); };
+      pp.appendChild(b);
+    });
+  }
 }
+function _ordSeq(){ var el=document.getElementById('orderSeq'); if(el) el.textContent = _ordSel.length ? _ordSel.map(function(k,i){ return (i+1)+'. '+ORDER[k]; }).join('    ') : ''; }
+function resetBronze(){
+  _ordSel=[]; _ordSeq();
+  var pool=document.getElementById('orderPool'); if(pool){ [].forEach.call(pool.children,function(b){ b.disabled=false; b.style.opacity=1; }); }
+  var pp=document.getElementById('propPool'); if(pp){ [].forEach.call(pp.children,function(b){ b.classList.remove('sel'); }); }
+  var g=document.getElementById('bronzeGrade'); if(g){ g.className='gradeline'; g.textContent=''; }
+}
+function gradeBronze(){
+  var orderOK = _ordSel.length===3 && _ordSel[0]===0 && _ordSel[1]===1 && _ordSel[2]===2;
+  var pp=document.getElementById('propPool'); var right=0;
+  if(pp){ [].forEach.call(pp.children,function(b){ var want=b.getAttribute('data-ok')==='1'; var got=b.classList.contains('sel'); if(want===got) right++; }); }
+  var decisions = PROPS.length + 1, scored = right + (orderOK?1:0), pctOK = scored/decisions;
+  var g=document.getElementById('bronzeGrade'); if(!g) return;
+  g.className='gradeline show '+(pctOK>=0.8?'pass':'fail');
+  if(pctOK>=0.8){
+    state.bronze=true; updateDial();
+    g.textContent='✓ Bronze earned — you rebuilt the structure from memory ('+Math.round(pctOK*100)+'%). Now go defend it in Practice.';
+  } else {
+    g.textContent='Not yet — '+Math.round(pctOK*100)+'%. '+(orderOK?'':'Check the order of the three lines. ')+'Re-read the structure above, then try again — this rep is what makes it stick.';
+  }
+}
+
+/* ---- Drill 4: answer the objections cold (replies ported from the page) ---- */
+var OBJ = [
+  {who:'Skeptic', q:'Aquinas’s premise "whatever is moved is moved by another" is exactly what Newton overturned: by inertia, a body in uniform motion stays in motion with no mover at all. Kenny concluded the First Way fails.', model:'Inertia concerns only local motion, and even there it does not touch the deeper principle. Inertia describes that bodies persist in motion; it does not explain what grounds the existence of that motion, or of the body, or of the law itself, from moment to moment. And change (motus) means any actualization of a potential, not just change of place. Newtonian physics itself treats uniform motion as a state, not a change, so inertia is no counterexample to the claim that change requires a changer. The open question is potency and act, not whether Newton refuted Aquinas.'},
+  {who:'Skeptic', q:'If everything needs a cause, God does too. Stopping at God is arbitrary.', model:'The argument never says everything has a cause. It says whatever has potential being actualized, or is dependent, needs a sustainer. God is Pure Act - no potential, nothing to actualize, not dependent - so the question does not apply. He is not a first link needing a prior link; he is the ground the whole chain hangs on.'},
+  {who:'Skeptic', q:'Maybe there is just an infinite regress of sustaining causes, with no first member at all.', model:'That confuses the two series. An accidentally ordered series could be infinite - Aquinas grants it. But an essentially ordered, here-and-now series cannot, because every later member is a mere instrument with no power of its own. Infinitely many powerless instruments still lift nothing - the power must originate in a first, underived source.'},
+  {who:'Skeptic', q:'The metaphysics of actuality and potentiality is medieval physics, long superseded by modern science.', model:'Act and potency are not empirical physics; they are an analysis of what change and dependence are. The principle that a potential cannot actualize itself is not an empirical generalization but a metaphysical claim. Whatever the underlying mechanics, change still means something potential becoming actual - the argument operates one level below physics. Whether this reply fully succeeds is contested, but no physics shows that a potential can actualize itself, and that is the premise the First Way needs.'}
+];
+var _od = 0;
+function odRender(){
+  var o=OBJ[_od];
+  var q=document.getElementById('odQ'); if(q) q.textContent='"'+o.q+'"';
+  var who=document.getElementById('odWho'); if(who) who.textContent=o.who;
+  var av=document.getElementById('odAv'); if(av) av.textContent=o.who.slice(0,2).toUpperCase();
+  var mt=document.getElementById('odModelText'); if(mt) mt.textContent=o.model;
+  var mm=document.getElementById('odModel'); if(mm) mm.classList.remove('show');
+  var bx=document.getElementById('odBox'); if(bx) bx.value='';
+  var c=document.getElementById('odCount'); if(c) c.textContent=(_od+1)+' of '+OBJ.length+(state.objCold.has(_od)?' · nailed ✓':'');
+}
+function odReveal(){ var mm=document.getElementById('odModel'); if(mm) mm.classList.add('show'); }
+function odRate(v){ if(v===2){ state.objCold.add(_od); } else { state.objCold.delete(_od); } updateDial(); if(_od<OBJ.length-1){ _od++; } odRender(); }
+function odNext(){ _od=(_od+1)%OBJ.length; odRender(); }
+function odPrev(){ _od=(_od-1+OBJ.length)%OBJ.length; odRender(); }
+
+/* ---- Gold part 1: the unseen objection ---- */
+function unseenReveal(){ var m=document.getElementById('unseenModel'); if(m) m.classList.add('show'); }
+function unseenRate(v){ state.unseen = (v===2); updateDial(); }
 function renderCalibration(){
   try{
     var el = document.getElementById('calibNote'); if(!el) return;
     var conf = state.conf||0, best = state.explainScore||0;
     var labels = {1:'Shaky',2:'Getting there',3:'Solid',4:'Could teach it'};
     if(conf){ var _b=document.querySelectorAll('#confRow button'); if(_b[conf-1]){ [].forEach.call(_b,function(b){b.classList.remove('sel');}); _b[conf-1].classList.add('sel'); } }
-    if(conf>=3 && best<7){
-      var shown = best>0 ? ('your best Explain It Back so far is '+best+'/10') : 'you haven\u2019t scored an Explain It Back yet';
+    if(conf>=3 && best<8){
+      var shown = best>0 ? ('your best Explain It Back so far is '+best+'/10') : 'you haven’t scored an Explain It Back yet';
       el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.8rem 1rem;';
-      el.innerHTML = '\u26A0 You rated yourself \u201C'+labels[conf]+'\u201D \u2014 but '+shown+'. Worth closing: confidence that holds up in a real conversation is confidence you\u2019ve <b>shown</b>, not just felt. <a href="#" onclick="var b=document.getElementById(\'explainBox\');if(b){b.scrollIntoView({behavior:\'smooth\'});b.focus();}return false;" style="color:#a88930;font-weight:600">Prove it on Explain It Back \u2192</a>';
-    } else if(conf>=3 && best>=7){
+      el.innerHTML = '⚠ You rated yourself “'+labels[conf]+'” — but '+shown+'. Worth closing: confidence that holds up in a real conversation is confidence you’ve <b>shown</b>, not just felt. <a href="#" onclick="var b=document.getElementById(\'explainBox\');if(b){b.scrollIntoView({behavior:\'smooth\'});b.focus();}return false;" style="color:#a88930;font-weight:600">Prove it on Explain It Back →</a>';
+    } else if(conf>=3 && best>=8){
       el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#2f7d4f;background:rgba(47,125,79,.08);border:1px solid rgba(47,125,79,.3);border-radius:6px;padding:.8rem 1rem;';
-      el.innerHTML = '\u2713 Calibrated \u2014 you feel ready and you\u2019ve shown it ('+best+'/10 on Explain It Back). That\u2019s earned confidence.';
+      el.innerHTML = '✓ Calibrated — you feel ready and you’ve shown it ('+best+'/10 on Explain It Back). That’s earned confidence.';
     } else {
       el.style.display = 'none';
     }
@@ -862,23 +1189,14 @@ async function boot(){
     if(!isPro){ showGate(); return; }
   }
   /* build the track */
+  injectBronze();
   adRestore();
   renderCard();
+  odRender();
   updateDial();
   renderCalibration();
   window._adLoaded = true;
 }
-/* "Understood it" is earned by opening every section in Phase 1 (defences + objections) */
-var _accs = Array.prototype.slice.call(document.querySelectorAll('#understand details.acc'));
-var _accOpened = new Set();
-_accs.forEach(function(d, i){
-  d.addEventListener('toggle', function(){
-    if(!d.open || state.read){ return; }
-    _accOpened.add(i);
-    if(_accOpened.size >= _accs.length){ state.read = true; }
-    updateDial();
-  });
-});
 
 /* ---- share-card: render this argument as a branded image ---- */
 function _shareSetMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
@@ -946,6 +1264,8 @@ document.addEventListener('DOMContentLoaded', boot);
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
   <script src="/lib/review-queue.js" defer></script>
+  <script src="/library/mastery-ui.js?v=20261009e" defer></script>
   <script src="/library/verse-popup.js" defer></script>
+<script src="/defend-live.js" defer></script>
 </body>
 </html>

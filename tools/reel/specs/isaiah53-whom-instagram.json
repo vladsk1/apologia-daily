@@ -1,0 +1,285 @@
+{
+  "reviewed": {
+    "argument": "2026-10-01",
+    "orthodoxy": "2026-10-01",
+    "neutrality": "2026-10-01",
+    "citations": "2026-10-01",
+    "by": "2026-10-01 NEW scene-locked vertical (Instagram) POSITIVE-CASE reel, 'About whom does the prophet say this?' (Acts 8:34), ported from certified library/messianic-prophecy.html. Gated READ-ONLY (Explore) argument+orthodoxy+neutrality+citations, 2 rounds. Round 1 NOT STAMPABLE: the Targum (52:13 'my servant the Messiah') sat among the suffering scenes, implying it read the SUFFERING as the Messiah's -> now carries the essay's bound ('redirects the servant's sufferings to Israel and the nations') and moved to follow Acts 8:34; Acts 8:34 ellipsis added; 'set apart' -> 'distinct from'. Round 2 STAMPABLE. Scripture ESV. No resurrection-prediction upgrade of 53:10. 0 HERESY, clarifiers none. NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) POSITIVE-CASE reel ported from the certified library/messianic-prophecy.html (Acts 8:34-35; Isa 53:8 'stricken for the transgression of my people' distinguishing the Servant; Isa 53:9 innocence; Targum on Isa 52:13 'my servant the Messiah' as evidence an individual-messianic reading was live in ancient Judaism; Isa 53:10-12 vindication after death; Great Isaiah Scroll c.125 BC). Scripture ESV. Distinct angle from isaiah53.json. Guardrails: no claim that Judaism read Isaiah 53 messianically as a whole; no overclaimed proof; Jewish readers not caricatured.",
+  "voiceover": "Two thousand years ago, a traveller reading Isaiah 53 asked the question everyone should ask. In Acts chapter 8, an Ethiopian official asks: about whom does the prophet say this — about himself, or about someone else? An ancient Jewish Aramaic translation, the Targum, names the servant in this song's first verse: my servant the Messiah. It redirects the servant's sufferings to Israel and the nations — but reading the Servant as the Messiah is not a Christian invention. The song itself gives clues. The servant is stricken for the transgression of my people — distinct from the people he suffers for. And he is innocent: he had done no violence, and there was no deceit in his mouth. And the song does not end at the grave. He poured out his soul to death — and after it, he shall see his offspring; he shall prolong his days. Innocent. Suffering for others. Dying — and then living on. And our oldest complete copy of Isaiah is dated to about 125 BC, long before Jesus. So who is it? Philip, beginning with this very Scripture, told him the good news about Jesus. Read Isaiah 53 for yourself.",
+  "scenes": [
+    {
+      "vo": "Two thousand years ago, a traveller reading Isaiah 53 asked the question everyone should ask.",
+      "big": [
+        {
+          "t": "The question",
+          "c": "cream",
+          "s": 64
+        },
+        {
+          "t": "Isaiah 53",
+          "c": "gold",
+          "s": 84
+        },
+        {
+          "t": "makes you ask.",
+          "c": "cream",
+          "s": 64
+        }
+      ],
+      "dur": 7.1
+    },
+    {
+      "vo": "In Acts chapter 8, an Ethiopian official asks: about whom does the prophet say this — about himself, or about someone else?",
+      "kicker": "ACTS 8:34",
+      "lines": [
+        {
+          "t": "“About whom …",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "does the prophet",
+          "c": "cream",
+          "s": 54
+        },
+        {
+          "t": "say this?”",
+          "c": "gold",
+          "s": 60,
+          "f": "serifb"
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "— an Ethiopian official",
+          "c": "dim",
+          "s": 32,
+          "f": "serif"
+        }
+      ],
+      "dur": 8.6
+    },
+    {
+      "vo": "An ancient Jewish Aramaic translation, the Targum, names the servant in this song's first verse: my servant the Messiah. It redirects the servant's sufferings to Israel and the nations — but reading the Servant as the Messiah is not a Christian invention.",
+      "kicker": "THE TARGUM ON ISAIAH 52:13",
+      "lines": [
+        {
+          "t": "An ancient Jewish",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "translation reads:",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 10
+        },
+        {
+          "t": "“My servant",
+          "c": "gold",
+          "s": 58,
+          "f": "serifb"
+        },
+        {
+          "t": "the Messiah.”",
+          "c": "gold",
+          "s": 58,
+          "f": "serifb"
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "Reading him as Messiah:",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "not a Christian invention.",
+          "c": "cream",
+          "s": 42
+        }
+      ],
+      "dur": 14.7
+    },
+    {
+      "vo": "The song itself gives clues. The servant is stricken for the transgression of my people — distinct from the people he suffers for.",
+      "kicker": "ISAIAH 53:8",
+      "lines": [
+        {
+          "t": "“Stricken for",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "the transgression",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "of my people.”",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "Distinct from",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        },
+        {
+          "t": "those he suffers for.",
+          "c": "gold",
+          "s": 50,
+          "f": "serifb"
+        }
+      ],
+      "dur": 8.7
+    },
+    {
+      "vo": "And he is innocent: he had done no violence, and there was no deceit in his mouth.",
+      "kicker": "ISAIAH 53:9",
+      "lines": [
+        {
+          "t": "“He had done",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "no violence,",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "and there was no deceit",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "in his mouth.”",
+          "c": "gold",
+          "s": 54,
+          "f": "serifb"
+        }
+      ],
+      "dur": 6.0
+    },
+    {
+      "vo": "And the song does not end at the grave. He poured out his soul to death — and after it, he shall see his offspring; he shall prolong his days.",
+      "kicker": "ISAIAH 53:10–12",
+      "lines": [
+        {
+          "t": "“He poured out",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "his soul to death” —",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "then “he shall",
+          "c": "gold",
+          "s": 54,
+          "f": "serifb"
+        },
+        {
+          "t": "prolong his days.”",
+          "c": "gold",
+          "s": 54,
+          "f": "serifb"
+        }
+      ],
+      "dur": 9.6
+    },
+    {
+      "vo": "Innocent. Suffering for others. Dying — and then living on. And our oldest complete copy of Isaiah is dated to about 125 BC, long before Jesus.",
+      "kicker": "THE GREAT ISAIAH SCROLL",
+      "lines": [
+        {
+          "t": "Innocent.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Suffering for others.",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "Dying — then living on.",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "Copied c. 125 BC.",
+          "c": "gold",
+          "s": 54,
+          "f": "serifb"
+        }
+      ],
+      "dur": 13.0
+    },
+    {
+      "vo": "So who is it? Philip, beginning with this very Scripture, told him the good news about Jesus. Read Isaiah 53 for yourself.",
+      "big": [
+        {
+          "t": "Beginning with",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "this Scripture,",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "he told him about Jesus.",
+          "c": "gold",
+          "s": 54
+        }
+      ],
+      "sub": [
+        {
+          "t": "— Acts 8:35",
+          "c": "dim",
+          "s": 34,
+          "f": "serif"
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        }
+      ],
+      "dur": 10.1
+    }
+  ]
+}

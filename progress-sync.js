@@ -30,7 +30,13 @@
   // in one place avoids two writers with different conflict rules racing on one key.
   var KEYS = ['ad_streak', 'ad_mastery', 'ad_visits', 'ad_today_done', 'ad_today_v1',
     'daily_arg_complete', 'ad_objdeck', 'ad_mix_done', 'quizCompleted', 'quizTotal',
-    'speedRoundHistory', 'debateCount', 'ad_askcount'];
+    'speedRoundHistory', 'debateCount', 'ad_askcount',
+    // 2026-09-30: the rest of the learning record, so a new device picks it up too —
+    // mastery-refresh schedule, confidence calibration, the Beginner's Path, devotional
+    // completions and joined reading-club books.
+    'ad_reviews', 'ad_calibration', 'beginners_path', 'completed', 'ad_joined_books',
+    // 2026-10-11 (Phase 1): per-card flashcard schedule, pretest attempts, if-then plans.
+    'ad_cards', 'ad_pretest', 'ad_ifthen_arg'];
   var PREFIXES = ['ad_ch_', 'quizScore_', 'ad_fc_', 'ad_coach'];
 
   function keyMatches(k) {
@@ -66,6 +72,14 @@
     return o;
   }
 
+  function tstamp() { var args = arguments; return function (r) { if (!r || typeof r !== 'object') return ''; for (var i = 0; i < args.length; i++) if (r[args[i]]) return String(r[args[i]]); return ''; }; }
+  // ad_reviews: a record that has been reviewed (has 'last') always outranks one that has only
+  // been scheduled ('added'); 'added' only breaks a tie. A reset sets 'last', so it still wins.
+  var RECORD_KEYS = {
+    ad_reviews: function (r) { return (r && typeof r === 'object') ? (r.last ? '1' : '0') + String(r.last || '') + '|' + String(r.added || '') : ''; },
+    ad_calibration: tstamp('at')
+  };
+  function isNum(v) { return typeof v === 'number' ? isFinite(v) : (typeof v === 'string' && /^-?\d+(\.\d+)?$/.test(v.trim())); }
   function pj(s) { try { return JSON.parse(s); } catch (e) { return null; } }
   function bad(k) { return k === '__proto__' || k === 'constructor' || k === 'prototype'; }
 
@@ -77,8 +91,18 @@
       if (a.done || b.done) o.done = true;  // mastery: once done, always done
       return o;
     }
-    var x = parseFloat(a), y = parseFloat(b);
-    if (!isNaN(x) && !isNaN(y)) return Math.max(x, y);  // counters only go up
+    // One side an array, the other not: keep the array. Before 2026-09-30 a nested array
+    // could be merged into a bare number (parseFloat([1,2,3]) is 1), so some stored copies
+    // of ad_ch_*.completed are numbers; the array is always the real record.
+    if (Array.isArray(a) !== Array.isArray(b) && (Array.isArray(a) || Array.isArray(b))) return Array.isArray(a) ? a : b;
+    if (Array.isArray(a) && Array.isArray(b)) {   // e.g. beginners_path.days: union, never drop a day
+      var seenV = {}, outV = [];
+      [].concat(a, b).forEach(function (x) { var s = JSON.stringify(x); if (!seenV[s]) { seenV[s] = 1; outV.push(x); } });
+      return outV;
+    }
+    // Only real numbers compare numerically. parseFloat('2026-10-01') is 2026, so a date
+    // string must never take this branch (it would be merged into a bare number).
+    if (isNum(a) && isNum(b)) return Math.max(Number(a), Number(b));  // counters only go up
     if (a == null) return b; if (b == null) return a;
     return (String(a) >= String(b)) ? a : b;  // later date / non-reverting flag
   }
@@ -97,29 +121,48 @@
       return JSON.stringify(out);
     }
     var oa = pj(localStr), ob = pj(serverStr);
+    // Whole-record keys: each entry is one event (a review grade, a prediction + score), so
+    // keep the whole newer record rather than mixing fields from two different events.
+    if (RECORD_KEYS[k] && oa && ob && typeof oa === 'object' && typeof ob === 'object') {
+      var stamp = RECORD_KEYS[k], rec = {}, rk;
+      for (rk in oa) if (!bad(rk)) rec[rk] = oa[rk];
+      for (rk in ob) {
+        if (bad(rk)) continue;
+        if (!(rk in rec)) { rec[rk] = ob[rk]; continue; }
+        var la = stamp(rec[rk]), lb = stamp(ob[rk]);
+        if (lb > la) rec[rk] = ob[rk];
+      }
+      return JSON.stringify(rec);
+    }
     if (oa && ob && typeof oa === 'object' && typeof ob === 'object' && !Array.isArray(oa) && !Array.isArray(ob)) {
       var o2 = {}, key;
       for (key in oa) if (!bad(key)) o2[key] = oa[key];
       for (key in ob) if (!bad(key)) o2[key] = (key in o2) ? mergeVal(o2[key], ob[key]) : ob[key];
       return JSON.stringify(o2);
     }
-    if (Array.isArray(oa) && Array.isArray(ob)) {   // history: union, LOCAL-FIRST so newest survives the cap
+    if (Array.isArray(oa) && Array.isArray(ob)) {
+      // Append-order lists (newest LAST): union with the other device's entries first and
+      // this device's after, then keep the newest end. 'completed' (devotional days) and
+      // 'quizCompleted' are small date strings that feed streaks, so they keep 2000.
       var seen = {}, res = [];
-      [].concat(oa, ob).forEach(function (x) { var s = JSON.stringify(x); if (!seen[s]) { seen[s] = 1; res.push(x); } });
-      return JSON.stringify(res.slice(0, 200));
+      [].concat(ob, oa).forEach(function (x) { var s = JSON.stringify(x); if (!seen[s]) { seen[s] = 1; res.push(x); } });
+      return JSON.stringify(res.slice((k === 'completed' || k === 'quizCompleted') ? -2000 : -200));
     }
-    var na = parseFloat(localStr), nb = parseFloat(serverStr);
-    if (!isNaN(na) && !isNaN(nb)) return String(Math.max(na, nb));
+    if (isNum(localStr) && isNum(serverStr)) return String(Math.max(Number(localStr), Number(serverStr)));
     return (localStr >= serverStr) ? localStr : serverStr;  // later date / non-reverting flag (not blind server-wins)
   }
 
+  // Keys whose arrival from the account means real progress this device did not have
+  // (not pure counters like visits or ask counts, which differ on every session).
+  var COUNTERS = { ad_visits: 1, ad_askcount: 1, debateCount: 1, quizTotal: 1, ad_mix_done: 1 };
+  var imported = false;
   function mergeIn(server) {
     if (!server || typeof server !== 'object') return false;
     var changed = false;
     for (var k in server) {
       if (!keyMatches(k)) continue;
       var sv = server[k], lv = localStorage.getItem(k);
-      if (lv == null) { try { localStorage.setItem(k, sv); changed = true; } catch (e) {} continue; }
+      if (lv == null) { try { localStorage.setItem(k, sv); changed = true; if (!COUNTERS[k]) imported = true; } catch (e) {} continue; }
       if (lv === sv) continue;
       var merged = mergeKey(k, lv, sv);
       if (merged != null && merged !== lv) { try { localStorage.setItem(k, merged); changed = true; } catch (e) {} }
@@ -134,6 +177,27 @@
 
   var S = session();
   if (!S) return;  // signed out → local-only, identical to today's behaviour
+
+  function showSyncedNotice() {
+    try {
+      if (sessionStorage.getItem('ad_sync_notice')) return;
+      sessionStorage.setItem('ad_sync_notice', '1');
+      var d = document.createElement('div');
+      d.setAttribute('role', 'status');
+      d.style.cssText = 'position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:9999;background:#0a1628;color:#fff;font-family:system-ui,sans-serif;font-size:14px;padding:10px 14px;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.25);display:flex;gap:12px;align-items:center;max-width:calc(100% - 32px)';
+      d.appendChild(document.createTextNode('Your progress from your account has been loaded.'));
+      var b = document.createElement('button');
+      b.type = 'button'; b.textContent = 'Refresh to see it';
+      b.style.cssText = 'background:#c8a951;color:#0a1628;border:0;border-radius:6px;padding:6px 10px;font-weight:600;cursor:pointer;font-size:13px';
+      b.onclick = function () { location.reload(); };
+      var x = document.createElement('button');
+      x.type = 'button'; x.setAttribute('aria-label', 'Dismiss'); x.textContent = '\u00d7';
+      x.style.cssText = 'background:none;border:0;color:#fff;font-size:18px;cursor:pointer;line-height:1';
+      x.onclick = function () { d.remove(); };
+      d.appendChild(b); d.appendChild(x);
+      (document.body || document.documentElement).appendChild(d);
+    } catch (e) {}
+  }
 
   var H = { 'apikey': ANON, 'Authorization': 'Bearer ' + S.token, 'Content-Type': 'application/json' };
   var lastSent = '', timer = null;
@@ -161,7 +225,13 @@
       .then(function (r) { if (!r.ok) throw 0; return r.json(); })
       .then(function (rows) {
         var server = (rows && rows[0] && rows[0].data) || null;
-        if (mergeIn(server)) { try { window.dispatchEvent(new Event('ad-progress-synced')); } catch (e) {} }
+        if (mergeIn(server)) {
+          try { window.dispatchEvent(new Event('ad-progress-synced')); } catch (e) {}
+          // Pages read progress once, on load. If the account brought in progress this
+          // device did not have at all (a new phone, a cleared browser), offer a refresh
+          // rather than reloading on its own, so nothing the reader is doing is lost.
+          if (imported) showSyncedNotice();
+        }
         schedulePush(true);
       })
       .catch(function () { /* table missing / offline / RLS → stay local-only */ });

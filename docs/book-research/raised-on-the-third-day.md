@@ -189,7 +189,7 @@ the Acts 12:2/Stephen brevity contrast — **is now live on `disciplesbelief.htm
 book is **still ahead of us** is the two objections McDowell answers that our essay still does not raise —
 **Candida Moss's "never offered the chance to recant"** and the **defended** "nobody recanted" argument
 (both owner-accepted open, rows 3–4) — plus one framing move: Licona's **"Paul as a verifiable link to the
-Jerusalem apostles' preaching."** Those are the genuine open gaps.
+Jerusalem apostles' preaching."** Those are the genuine open gaps. ✅ CORRECTED 2026-09-29: none of the three is open any more — the Moss objection and the defended "nobody recanted" argument shipped 2026-08-13 (Moss subsection of `disciplesbelief.html`), and the Paul-as-link framing shipped 2026-08-17 (`earlydate.html`); see the ledger below. Of the rows logged from the mapped chapters, none remains open.
 
 ### Six-verdict cross-check (ledger corrected 2026-08-10)
 
@@ -204,8 +204,8 @@ Jerusalem apostles' preaching."** Those are the genuine open gaps.
 | McDowell's salvaged "willing to suffer → not liars" form | **1 corroboration** | `disciplesbelief.html:159` + `answers/why-did-the-disciples-die-for-their-faith.html` lead with sincerity-not-proof and concede the "all twelve" overreach (McDowell's own calibration). |
 | The three limits (not-all-martyred / sincerity-not-truth / not-unique) | **1 corroboration** | Ours holds all three. |
 | Precondition (a) — 1 Cor 15 creed / transmission verbs | **1 corroboration** | `earlycreed.html` carries the *paradidōmi*/*paralambanō* + non-Pauline-vocabulary material (Habermas reasons 1–2). |
-| Precondition (b) — **Schnabel** persecution survey | 4 was-missing → **✅ DONE 2026-08-05** | Shipped to `disciplesbelief.html:163` (fn 12) with 2 Cor 11:23–25; citation CONFIRMED 2026-08-06. ⚠ Ledger flip was overdue. |
-| Peter — **John 21:18–19 + Ehrman** concession | 4 was-missing → **✅ DONE (essay) 2026-08-05** | Shipped to `disciplesbelief.html:161` (fn 10). ⚠ The **`ev-m-postresurrection.html`** half is NOT done (0 hits, 2026-08-10) — still open for the mastery page. |
+| Precondition (b) — **Schnabel** persecution survey | 4 was-missing → **✅ DONE 2026-08-05** | Shipped to `disciplesbelief.html:163` (fn 12) with 2 Cor 11:23–25; citation CONFIRMED 2026-08-06. ⚠ Ledger flip was overdue. ✅ CORRECTED 2026-09-29: Schnabel is now fn 13 after renumbering. |
+| Peter — **John 21:18–19 + Ehrman** concession | 4 was-missing → **✅ DONE (essay) 2026-08-05** | Shipped to `disciplesbelief.html:161` (fn 10). ⚠ The **`ev-m-postresurrection.html`** half is NOT done (0 hits, 2026-08-10) — still open for the mastery page. ✅ CORRECTED 2026-09-29: the essay footnote is now fn 11 after renumbering, and the mastery half is DONE 2026-09-28 (`ev-m-postresurrection.html` "strip the hagiography" reply, backlog row 141). |
 | James son of Zebedee — **Acts 12:2 brevity** contrast | 4 was-missing → **✅ DONE 2026-08-05** | Shipped to `disciplesbelief.html:161` as the Acts 12:2/Stephen contrast. (Dunn 2:209 was dropped as probably the wrong page.) |
 | James brother of Jesus — Josephus *Ant.* 20.197–203 | **1 corroboration** | `sceptics.html` (read in full) covers it richly — the appearance, the Ananus stoning ~AD 62, Hegesippus flagged as more legendary. |
 | **"Nobody recanted" defended** | ~~4 missing — OPEN~~ **DONE 2026-08-13** | Shipped in the new Candida Moss subsection of `disciplesbelief.html`. ⚠ Final form is **Celsus + Lucian only** (the published Licona/McDowell version); the *lapsi* bridge and Porphyry were drafted then **DROPPED** on `apologia-argument`'s [WEAK] (authored-beyond-source), so this note's original triad is superseded. Bounded as an argument from silence. |
@@ -221,6 +221,6 @@ example, and it should still not go on our pages — keep the eyewitness/secondh
 
 ### Backlog-row status (corrected 2026-08-10 — the rows live in `docs/content-backlog.md`)
 - **Row 1 (Schnabel) · Row 2 (John 21:18–19, essay half) · Row 5 (Acts 12:2)** — **✅ DONE 2026-08-05.**
-- **Row 2 (`ev-m-postresurrection` half)** — still open (mastery page only).
+- **Row 2 (`ev-m-postresurrection` half)** — still open (mastery page only). ✅ CORRECTED 2026-09-29: DONE 2026-09-28 (backlog row 141).
 - **Rows 3 (defended "none recanted") + 4 (Candida Moss)** — **DONE 2026-08-13** (both folded into one new Moss subsection in `disciplesbelief.html`, dual-consensus certified; backlog P2-7 + P2-8).
 - **Row 6 (Licona primacy of Paul)** — **DONE 2026-08-17**: dating was corroboration; the "link to Jerusalem preaching" gap is now shipped to `earlydate.html` (dual-consensus CLEAN). ⚠ Framed as endorsement, NOT a memory cross-check (both argument + neutrality flagged the audit reading as an overreach of Gal 2).

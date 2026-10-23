@@ -1,0 +1,260 @@
+{
+  "reviewed": {
+    "argument": "2026-10-02",
+    "orthodoxy": "2026-10-02",
+    "neutrality": "2026-10-02",
+    "citations": "2026-10-02",
+    "by": "2026-10-02 NEW scene-locked vertical (Instagram) POSITIVE-CASE reel, 'verses about the LORD alone, said of Jesus', ported from certified library/jesus_as_god_nt.html. DUAL-CONSENSUS (deity tier). Gated READ-ONLY (Explore) argument+orthodoxy+neutrality+citations, 3 rounds. Round 1 (0 heresy, 4 WEAK): Father line added on screen to Phil 2 (anti-modalist fence); Rom 10 now 'having just written that Jesus is Lord' + v.12 and screen 'Four verses earlier'; Hurtado moved from 'the writers' to the first believers; close ported from essay ('the Word who was God became flesh', Chalcedon anchor); kicker arrows replaced (font). Round 2: one WEAK (scene-6 antecedent / worship premise) fixed with gate wording. Round 3 STAMPABLE. Retired-claims: 0 hits. Clarifiers: 3 considered, all leave-as-is. Overlaps divine-name-instagram on the three YHWH texts. NOT pastoral sign-off."
+  },
+  "aspect": "vertical",
+  "theme": "navy",
+  "fps": 30,
+  "crossfade": 0.5,
+  "pace": 1,
+  "source": "Scene-locked vertical (Instagram) POSITIVE-CASE reel ported from the certified library/jesus_as_god_nt.html: YHWH texts applied to Jesus (Ps 102 -> Heb 1:10-12; Isa 45:23 -> Phil 2:10-11, hymn 'widely regarded as pre-Pauline'; Joel 2:32 -> Rom 10:13 after 'Jesus is Lord' v.9), Mark 2:7 answered by demonstration, Hurtado's Jewish believers, Bauckham's 'within the unique identity of the one God of Israel'. Close ported from the essay ('the Word who was God became flesh'; Bauckham's 'within the unique identity of the one God of Israel'). Overlaps divine-name-instagram.json on the three YHWH texts; distinct via Mark 2:7 and the first believers (Hurtado). Scripture ESV. Distinct angle from jesus-god-in-the-nt / phil2 reels. Guardrails: no modalism (Phil 2:11 'to the glory of God the Father' keeps the persons distinct; never 'Jesus is the Father'); not 'a second god' (no ditheism); 'the Word who was God became flesh' keeps the incarnation in view.",
+  "voiceover": "Some Old Testament verses are about the LORD, and the LORD alone. Watch what the New Testament does with them. Psalm 102 is addressed to the LORD, the unchanging Creator. Hebrews chapter 1 applies it to the Son: You, Lord, laid the foundation of the earth in the beginning … you are the same, and your years will have no end. In Isaiah 45, the LORD swears: to me every knee shall bow. A hymn in Philippians 2, widely regarded as older than Paul's letter, says that at the name of Jesus every knee should bow — to the glory of God the Father. Joel promises: everyone who calls on the name of the LORD shall be saved. Paul quotes it in Romans 10, having just written that Jesus is Lord — and that the same Lord is Lord of all, bestowing his riches on all who call on him. And when Jesus forgives a man's sins, his critics object: who can forgive sins but God alone? He does not deny it. He answers by demonstration — he heals the man. The first Christians to apply these texts to Jesus, and to worship him, were Jewish believers who would have regarded worshipping any creature as blasphemy. So the New Testament does not add a second god beside the LORD. It includes Jesus within the unique identity of the one God of Israel. And the Word who was God became flesh.",
+  "scenes": [
+    {
+      "vo": "Some Old Testament verses are about the LORD, and the LORD alone. Watch what the New Testament does with them.",
+      "big": [
+        {
+          "t": "Verses about",
+          "c": "cream",
+          "s": 64
+        },
+        {
+          "t": "the LORD alone —",
+          "c": "gold",
+          "s": 72
+        },
+        {
+          "t": "said of Jesus.",
+          "c": "cream",
+          "s": 64
+        }
+      ],
+      "dur": 7.8
+    },
+    {
+      "vo": "Psalm 102 is addressed to the LORD, the unchanging Creator. Hebrews chapter 1 applies it to the Son: You, Lord, laid the foundation of the earth in the beginning … you are the same, and your years will have no end.",
+      "kicker": "PSALM 102 IN HEBREWS 1:10–12",
+      "lines": [
+        {
+          "t": "“You, Lord, laid",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "the foundation",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "of the earth …”",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 12
+        },
+        {
+          "t": "A psalm to the Creator —",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        },
+        {
+          "t": "spoken to the Son.",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        }
+      ],
+      "dur": 13.5
+    },
+    {
+      "vo": "In Isaiah 45, the LORD swears: to me every knee shall bow. A hymn in Philippians 2, widely regarded as older than Paul's letter, says that at the name of Jesus every knee should bow — to the glory of God the Father.",
+      "kicker": "ISAIAH 45:23 IN PHILIPPIANS 2:10–11",
+      "lines": [
+        {
+          "t": "“To me every knee",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "shall bow.” — the LORD",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "“At the name of Jesus",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        },
+        {
+          "t": "every knee should bow …",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        },
+        {
+          "t": "to the glory of",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        },
+        {
+          "t": "God the Father.”",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        }
+      ],
+      "dur": 13.5
+    },
+    {
+      "vo": "Joel promises: everyone who calls on the name of the LORD shall be saved. Paul quotes it in Romans 10, having just written that Jesus is Lord — and that the same Lord is Lord of all, bestowing his riches on all who call on him.",
+      "kicker": "JOEL 2:32 IN ROMANS 10:13",
+      "lines": [
+        {
+          "t": "“Everyone who calls",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "on the name of the Lord",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "will be saved.”",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "Four verses earlier:",
+          "c": "cream",
+          "s": 42
+        },
+        {
+          "t": "“Jesus is Lord.”",
+          "c": "gold",
+          "s": 56,
+          "f": "serifb"
+        }
+      ],
+      "dur": 13.7
+    },
+    {
+      "vo": "And when Jesus forgives a man's sins, his critics object: who can forgive sins but God alone? He does not deny it. He answers by demonstration — he heals the man.",
+      "kicker": "MARK 2:7",
+      "lines": [
+        {
+          "t": "“Who can forgive sins",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "but God alone?”",
+          "c": "gold",
+          "s": 58,
+          "f": "serifb"
+        },
+        {
+          "t": "",
+          "s": 14
+        },
+        {
+          "t": "He doesn't deny it.",
+          "c": "cream",
+          "s": 46
+        },
+        {
+          "t": "He heals the man.",
+          "c": "cream",
+          "s": 46
+        }
+      ],
+      "dur": 11.8
+    },
+    {
+      "vo": "The first Christians to apply these texts to Jesus, and to worship him, were Jewish believers who would have regarded worshipping any creature as blasphemy.",
+      "kicker": "THE FIRST BELIEVERS",
+      "lines": [
+        {
+          "t": "They worshipped Jesus —",
+          "c": "gold",
+          "s": 48,
+          "f": "serifb"
+        },
+        {
+          "t": "Jewish believers",
+          "c": "cream",
+          "s": 52
+        },
+        {
+          "t": "for whom worshipping",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "any creature",
+          "c": "cream",
+          "s": 48
+        },
+        {
+          "t": "was blasphemy.",
+          "c": "gold",
+          "s": 58,
+          "f": "serifb"
+        }
+      ],
+      "dur": 9.1
+    },
+    {
+      "vo": "So the New Testament does not add a second god beside the LORD. It includes Jesus within the unique identity of the one God of Israel. And the Word who was God became flesh.",
+      "big": [
+        {
+          "t": "Not a second god.",
+          "c": "cream",
+          "s": 56
+        },
+        {
+          "t": "Within the identity",
+          "c": "cream",
+          "s": 50
+        },
+        {
+          "t": "of the one God.",
+          "c": "gold",
+          "s": 64
+        }
+      ],
+      "sub": [
+        {
+          "t": "The Word who was God became flesh.",
+          "c": "cream",
+          "s": 36,
+          "f": "serif"
+        },
+        {
+          "t": "apologiadaily.com",
+          "c": "gold",
+          "s": 46,
+          "f": "serifb"
+        }
+      ],
+      "dur": 11.8
+    }
+  ]
+}

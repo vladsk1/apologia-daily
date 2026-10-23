@@ -6,7 +6,7 @@
   <title>Today — Your 5-Minute Session — Apologia Daily</title>
   <link rel="canonical" href="https://apologiadaily.com/today">
   <meta name="description" content="Your daily 5-minute apologetics session: review what's due, learn today's argument, prove you can say it, keep your streak alive." />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/fonts/fonts.css">
   <style>
     :root{--n:#050d1a;--n8:#0a1628;--n7:#0f2040;--n5:#1e4278;--n3:#4a7ab5;--g:#c8a951;--gl:#d4b96a;--gd:#a88930;--w:#fff;--ow:#f7f4ef;--border:#e8e2d8;--tm:#3a4a62;--td:#0f1f38;--fd:'Playfair Display',Georgia,serif;--ss:'Source Serif 4',Georgia,serif;--ui:'DM Sans',system-ui,sans-serif;}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -150,7 +150,7 @@
             <div class="adn-mega-col">
               <div class="adn-mega-h">Go deeper</div>
               <a class="adn-mi" href="/library/"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Deep-Dive Essays</span><span class="adn-mi-dc">Long-form, fully-cited essays.</span></span></a>
-              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Answers</span><span class="adn-mi-dc">The questions people ask most.</span></span></a>
+              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Common Questions</span><span class="adn-mi-dc">Short answers to the questions people ask most.</span></span></a>
               <a class="adn-mi" href="/sources.html"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Church Fathers &amp; Creeds</span><span class="adn-mi-dc">The early church in its own words, verified.</span></span></a>
               <a class="adn-mi" href="/our-sources.html"><span class="adn-mi-ic">&#128218;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Our Sources</span><span class="adn-mi-dc">Books and articles our essays cite.</span></span></a>
               <a class="adn-mi" href="/whats-new.html"><span class="adn-mi-ic">&#128240;</span><span class="adn-mi-tx"><span class="adn-mi-nm">What&#39;s New</span><span class="adn-mi-dc">Latest essays, features &amp; reels.</span></span></a>
@@ -161,11 +161,9 @@
               <a class="adn-mi" href="/games.html"><span class="adn-mi-ic">&#127918;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Games</span><span class="adn-mi-dc">Quizzes that feed your streak.</span></span></a>
               <a class="adn-mi" href="/study-groups.html"><span class="adn-mi-ic">&#128101;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Study Groups <span class="adn-mi-tag">New</span></span><span class="adn-mi-dc">Study with people you love.</span></span></a>
               <a class="adn-mi" href="/reading-club.html"><span class="adn-mi-ic">&#128214;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Reading Clubs</span><span class="adn-mi-dc">The classics, chapter by chapter.</span></span></a>
-              <a class="adn-mi" href="/conversation-journal.html"><span class="adn-mi-ic">&#128221;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Conversation Journal</span><span class="adn-mi-dc">Log real conversations, get AI coaching.</span></span></a>
             </div>
             <div class="adn-mega-col">
               <div class="adn-mega-h">For you</div>
-              <a class="adn-mi" href="/parents.html"><span class="adn-mi-ic">&#128106;</span><span class="adn-mi-tx"><span class="adn-mi-nm">For Parents</span><span class="adn-mi-dc">Your kids&#39; hardest questions.</span></span></a>
               <a class="adn-mi" href="/video-library.html"><span class="adn-mi-ic">&#127909;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Videos</span><span class="adn-mi-dc">Short, shareable explainers.</span></span></a>
             </div>
             <div class="adn-mega-foot">
@@ -233,6 +231,8 @@
     </div>
 
     <!-- STEP 1: REVIEW -->
+    <div id="today-step" style="display:none;"></div>
+
     <div class="step open" id="step-1">
       <div class="step-head">
         <div class="step-chip" id="chip-1">1</div>
@@ -337,6 +337,9 @@
 
   </div>
 
+  <script src="/lib/review-queue.js"></script>
+  <script src="/lib/study-queue.js"></script>
+  <script src="/lib/today-step.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
   <script>
   var sb = null, currentUser = null;
@@ -421,7 +424,13 @@
         'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
       );
       init();
-    } else { setTimeout(initSb, 50); }
+    } else if ((initSb.tries = (initSb.tries || 0) + 1) < 60) { setTimeout(initSb, 50); }
+    else {
+      /* The Supabase library never loaded (school/church firewall, ad-blocker, offline).
+         Stop waiting after ~3s and run the signed-out session: every sb call below is
+         inside try/catch and falls back to the local rotation. */
+      sb = null; init();
+    }
   }
   document.addEventListener('DOMContentLoaded', initSb);
 
@@ -445,6 +454,10 @@
     track('today_opened',{day:dayNum});
     await navAuth();
     if(!currentUser){ var _sub=$('signup-banner'); if(_sub) _sub.style.display='flex'; }
+    // One site-wide "today's step" (lib/today-step.js): shown here when it is a
+    // Beginner's Path day or a Study Plan day.
+    // (coach is skipped here because the Learn step below already targets it)
+    try{ if(window.ADToday) ADToday.render($('today-step'), { skip:['daily','coach'] }); }catch(e){}
     await loadArgument();
 
     // already completed today?
@@ -471,24 +484,46 @@
     await loadDue();
   }
 
-  /* ---- STEP 1: review (same table + SM-2 rules as flashcards.html) ---- */
-  var RV_MAX = 5;
+  /* ---- STEP 1: review — ONE queue across all three review systems ----
+     (2026-09-30) Account cards (Supabase `flashcards`, signed-in only), plus the
+     Objection Deck's drilled objections and the mastery-page refreshes, which
+     both live on this device and need no account (lib/study-queue.js,
+     lib/review-queue.js). Nothing is migrated: each item is graded back into
+     its own store. Capped so the step stays about 90 seconds. */
+  var RV_MAX = 6;
+  var OBJLIST = null;
+  async function loadObjections(){
+    if(OBJLIST) return OBJLIST;
+    try{ var r = await fetch('/objections.json', {cache:'default'}); if(r.ok){ var j = await r.json(); OBJLIST = (j && j.objections) || []; } }catch(e){}
+    return OBJLIST || [];
+  }
   async function loadDue(){
     var area = $('rv-area');
-    if(!currentUser){
-      area.innerHTML = '<div class="rv-empty">Reviews live in your free account — <a href="/signup.html" style="color:var(--n5);">create one</a> or <a href="/login.html" style="color:var(--n5);">sign in</a> and the cards you learn will come back at the perfect moment. For now, straight to today’s argument.</div>' +
-        '<div class="btn-row"><button class="btn-primary" onclick="finishReview(true)">Continue &rarr;</button></div>';
-      return;
+    var today = new Date().toISOString().split('T')[0];
+    var cards = [];
+    if(currentUser){
+      try{
+        var r = await sb.from('flashcards').select('*').eq('user_id', currentUser.id).order('next_review');
+        var deck = (r.data||[]);
+        if(!deck.length){ deck = (await seedStarterDeck(today)) || []; }  // brand-new user: seed a starter deck (A4)
+        cards = deck.filter(function(c){ return c.next_review <= today; }).map(function(c){ c.kind = 'card'; return c; });
+      }catch(e){ cards = []; }
     }
-    try{
-      var today = new Date().toISOString().split('T')[0];
-      var r = await sb.from('flashcards').select('*').eq('user_id', currentUser.id).order('next_review');
-      var deck = (r.data||[]);
-      if(!deck.length){ deck = (await seedStarterDeck(today)) || []; }  // brand-new user: seed a starter deck (A4)
-      dueCards = deck.filter(function(c){ return c.next_review <= today; }).slice(0, RV_MAX);
-    }catch(e){ dueCards = []; }
+    var objs = [], mast = [], mcards = [];
+    try{ objs = window.ADStudy ? window.ADStudy.objDue(await loadObjections()).map(function(o){ return { kind:'obj', id:o.id, arg:o.arg, argument_title:o.argName, category:o.category, front:o.front, back:o.back }; }) : []; }catch(e){ objs = []; }
+    try{ mast = window.ADReview ? window.ADReview.due().map(function(m){ return { kind:'mastery', id:m.id, argument_title:m.title, url:m.url }; }) : []; }catch(e){ mast = []; }
+    // Mastery-page flashcards graded on the page itself (lib/review-queue.js, 2026-10-11): per-card schedule, due ones come here.
+    try{ mcards = (window.ADReview && window.ADReview.dueCards) ? window.ADReview.dueCards().map(function(c){ return { kind:'mcard', id:c.arg+'#'+c.i, arg:c.arg, i:c.i, argument_title:c.arg.replace(/[-_]/g,' '), front:c.q, back:c.a }; }) : []; }catch(e){ mcards = []; }
+    // Interleave so every system gets a turn: up to 4 cards, then 1 objection and
+    // 1 refresh, then fill the remaining places from whatever is left.
+    var pick = cards.slice(0,4).concat(objs.slice(0,1), mast.slice(0,1), mcards.slice(0,1));
+    var rest = cards.slice(4).concat(objs.slice(1), mast.slice(1), mcards.slice(1));
+    while(pick.length < RV_MAX && rest.length) pick.push(rest.shift());
+    dueCards = pick.slice(0, RV_MAX);
     if(!dueCards.length){
-      area.innerHTML = '<div class="rv-empty">Nothing due today — your cards are resting until the ideal review moment. Learn today’s argument and add it to your deck to keep the engine fed.</div>' +
+      area.innerHTML = (currentUser
+        ? '<div class="rv-empty">Nothing due today — your cards are resting until the ideal review moment. Learn today’s argument and add it to your deck to keep the engine fed.</div>'
+        : '<div class="rv-empty">Nothing due yet. Objections you drill and arguments you master come back here to refresh. <a href="/signup.html" style="color:var(--n5);">Create a free account</a> or <a href="/login.html" style="color:var(--n5);">sign in</a> to add your own card deck too. For now, straight to today’s argument.</div>') +
         '<div class="btn-row"><button class="btn-primary" onclick="finishReview(true)">Continue &rarr;</button></div>';
       return;
     }
@@ -542,46 +577,66 @@
   function renderReviewCard(){
     if(rvIdx >= dueCards.length){ finishReview(false); return; }
     var c = dueCards[rvIdx]; rvFlipped = false;
+    var src = c.kind === 'obj' ? 'Objection' : (c.kind === 'mastery' ? 'Refresh' : (c.kind === 'mcard' ? 'Mastery card' : 'Card'));
+    var front = c.kind === 'mastery'
+      ? 'Can you still make the case for ' + esc(c.argument_title) + ' from memory? Say it out loud, then check.'
+      : esc(c.front);
+    var rate = c.kind === 'mastery'
+      ? '<button class="rate-btn again" onclick="rateCard(2)">Needs work</button>' +
+        '<button class="rate-btn good" onclick="rateCard(4)">Still got it</button>'
+      : '<button class="rate-btn again" onclick="rateCard(2)">Again</button>' +
+        '<button class="rate-btn good" onclick="rateCard(4)">Good</button>' +
+        '<button class="rate-btn easy" onclick="rateCard(5)">Easy</button>';
     $('rv-area').innerHTML =
-      '<div class="rv-meta">Card ' + (rvIdx+1) + ' of ' + dueCards.length + ' • ' + esc(c.argument_title || c.category || '') + '</div>' +
+      '<div class="rv-meta">' + src + ' ' + (rvIdx+1) + ' of ' + dueCards.length + ' • ' + esc(c.argument_title || c.category || '') + '</div>' +
       '<div class="rv-card" id="rv-card" onclick="flipCard()">' +
-        '<div class="rv-side-label" id="rv-side">Question</div>' +
-        '<div class="rv-text" id="rv-text">' + esc(c.front) + '</div>' +
+        '<div class="rv-side-label" id="rv-side">' + (c.kind === 'obj' ? 'Objection' : 'Question') + '</div>' +
+        '<div class="rv-text" id="rv-text">' + front + '</div>' +
         '<div class="rv-hint" id="rv-hint">Tap to reveal the answer</div>' +
       '</div>' +
-      '<div class="rate-row" id="rv-rate" style="display:none;">' +
-        '<button class="rate-btn again" onclick="rateCard(2)">Again</button>' +
-        '<button class="rate-btn good" onclick="rateCard(4)">Good</button>' +
-        '<button class="rate-btn easy" onclick="rateCard(5)">Easy</button>' +
-      '</div>';
+      '<div class="rate-row" id="rv-rate" style="display:none;">' + rate + '</div>';
   }
   function flipCard(){
     if(rvFlipped) return;
     rvFlipped = true;
     var c = dueCards[rvIdx];
-    $('rv-side').textContent = 'Answer';
-    $('rv-text').textContent = c.back;
+    $('rv-side').textContent = c.kind === 'obj' ? 'Your reply' : 'Answer';
+    if(c.kind === 'mastery'){
+      var u = /^\/[\w\-\/.]*$/.test(c.url || '') ? c.url : '/evidence-library.html';   // local data; same-site paths only
+      $('rv-text').innerHTML = 'Open the argument to check yourself: <a href="' + u + '" target="_blank" rel="noopener" style="color:var(--n5);">' + esc(c.argument_title) + ' &rarr;</a>';
+    } else {
+      $('rv-text').textContent = c.back;
+    }
     $('rv-hint').style.display = 'none';
     $('rv-rate').style.display = 'flex';
   }
   async function rateCard(quality){
     var card = dueCards[rvIdx];
-    // SM-2 — identical maths to flashcards.html
-    var ef = Math.max(1.3, (card.ease_factor || 2.5) + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02)));
-    var reps = quality < 3 ? 0 : (card.reps || 0) + 1;
-    var interval;
-    if(quality < 3){ interval = 1; }
-    else if(reps === 1){ interval = 1; }
-    else if(reps === 2){ interval = 6; }
-    else { interval = Math.round((card.interval || 1) * ef); }
-    var nextDate = new Date(); nextDate.setDate(nextDate.getDate() + interval);
-    try{
-      await sb.from('flashcards').update({
-        ease_factor: ef, reps: reps, interval: interval,
-        next_review: nextDate.toISOString().split('T')[0], last_reviewed: new Date().toISOString()
-      }).eq('id', card.id);
-    }catch(e){}
-    try{ if(window.Coach && Coach.recordFlashcards) Coach.recordFlashcards(card.argument_id, quality >= 3); }catch(e){}
+    if(card.kind === 'mcard'){
+      try{ window.ADReview.gradeCard(card.arg, card.i, quality); }catch(e){}
+    } else if(card.kind === 'obj'){
+      try{ window.ADStudy.objGrade(card.id, quality); }catch(e){}
+      try{ if(window.Coach && Coach.record){ var sc = quality<=2?0.15 : quality===4?0.8 : 1.0; Coach.record({ id:card.arg, src:'objection', score:sc, note:'Today review — '+(quality<4?'missed':'recalled') }); } }catch(e){}
+    } else if(card.kind === 'mastery'){
+      try{ window.ADReview.grade(card.id, quality); }catch(e){}
+    } else {
+      // SM-2 — identical maths to the Objection Deck (lib/study-queue.js)
+      var ef = Math.max(1.3, (card.ease_factor || 2.5) + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02)));
+      var reps = quality < 3 ? 0 : (card.reps || 0) + 1;
+      var interval;
+      if(quality < 3){ interval = 1; }
+      else if(reps === 1){ interval = 1; }
+      else if(reps === 2){ interval = 6; }
+      else { interval = Math.round((card.interval || 1) * ef); }
+      var nextDate = new Date(); nextDate.setDate(nextDate.getDate() + interval);
+      try{
+        await sb.from('flashcards').update({
+          ease_factor: ef, reps: reps, interval: interval,
+          next_review: nextDate.toISOString().split('T')[0], last_reviewed: new Date().toISOString()
+        }).eq('id', card.id);
+      }catch(e){}
+      try{ if(window.Coach && Coach.recordFlashcards) Coach.recordFlashcards(card.argument_id, quality >= 3); }catch(e){}
+    }
     reviewedCount++;
     rvIdx++;
     renderReviewCard();
@@ -589,10 +644,10 @@
   function finishReview(skipped){
     track('today_review_done',{reviewed:reviewedCount,skipped:!!skipped});
     $('rv-area').innerHTML = '<div class="rv-empty">' + (reviewedCount
-      ? 'Reviewed ' + reviewedCount + ' card' + (reviewedCount>1?'s':'') + ' today — they will come back at the ideal moment.'
+      ? 'Reviewed ' + reviewedCount + ' item' + (reviewedCount>1?'s':'') + ' today — each will come back at the ideal moment.'
       : 'Nothing was due today. Cards you learn come back here at the ideal review moment.') + '</div>';
     $('body-1').style.display='none';
-    completeStep(1, reviewedCount ? (reviewedCount + ' card' + (reviewedCount>1?'s':'') + ' reviewed') : 'Nothing due');
+    completeStep(1, reviewedCount ? (reviewedCount + ' item' + (reviewedCount>1?'s':'') + ' reviewed') : 'Nothing due');
   }
 
   /* ---- STEP 2: learn ---- */

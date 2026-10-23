@@ -1,0 +1,246 @@
+{
+ "slug": "sceptics",
+ "title": "The Conversion of the Sceptics",
+ "short": "The sceptics",
+ "keyTerms": [
+  {
+   "t": "Hostile witness",
+   "d": "A witness who testifies against his own prior convictions, against his own interests, against everything he had reason to want. His agreement is hard to explain away as wishful thinking."
+  },
+  {
+   "t": "Criterion of embarrassment",
+   "d": "A tradition awkward for the people who preserved it is unlikely to have been invented by them. A tool of historians, not a proof."
+  },
+  {
+   "t": "The early creed (1 Corinthians 15:7)",
+   "d": "The formula Paul recites, which most scholars date to within a few years of the crucifixion: “Then he appeared to James, then to all the apostles.” Early tradition that singles James out by name."
+  },
+  {
+   "t": "Strong inference",
+   "d": "Mark 3:21 speaks of the family as a whole and John 7:5 of “his brothers”; neither names James. His own unbelief is a strong inference from this family tradition rather than a line that singles him out by name."
+  },
+  {
+   "t": "Bereavement-vision hypothesis",
+   "d": "Grieving people who loved someone deeply, and who long for that person’s return, sometimes vividly perceive the deceased as present. A real, documented phenomenon, and the documented cases are keyed to yearning."
+  },
+  {
+   "t": "Dynastic succession",
+   "d": "The reading on which James, as a leading member of Jesus’ family, stepped in to lead his brother’s movement, with the resurrection claim as the family business."
+  },
+  {
+   "t": "Gradualist reading",
+   "d": "James won over slowly, and the “appearance” of 1 Corinthians 15:7 a later, stylized way of marking a gradual change of mind. The most serious naturalistic reading, because it does not require any anomalous experience at all."
+  },
+  {
+   "t": "Convergence",
+   "d": "Independent sources agreeing on one shape that no single source could fabricate. The case for James should lean on the convergence, not on any single embellished narrative."
+  }
+ ],
+ "derive": [
+  {
+   "q": "James’s family thought Jesus out of his mind; his brothers did not believe. So his later faith is hard to explain as…?",
+   "ans": "wishful thinking",
+   "why": "A witness who confirms what he wants to be true may be reporting his hopes. A witness who testifies against his own prior convictions is, in the legal idiom, a hostile witness, and his agreement is hard to explain away as wishful thinking."
+  },
+  {
+   "q": "Grief visions are keyed to yearning. James is not on record as yearning for his brother’s return. So for James the grief hypothesis is…?",
+   "ans": "the weakest naturalistic option",
+   "why": "For James in particular, the grief or bereavement-vision hypothesis is the weakest of the naturalistic options, precisely because the yearning it depends on is absent."
+  },
+  {
+   "q": "Leading a persecuted sect of a crucified criminal was a liability, not a prize. So dynastic ambition explains…?",
+   "ans": "the leadership, not the conversion",
+   "why": "Dynastic ambition explains why a man might lead a winning movement, not why a sceptic would join a losing and dangerous one. The succession theory explains the leadership while leaving the conversion, which is the thing to be explained, untouched."
+  },
+  {
+   "q": "The creed names a discrete appearance, in among the earliest tradition we have. So the gradualist reading must treat “he appeared to James” as…?",
+   "ans": "a later, stylized way of marking a slow change of mind",
+   "why": "The early creed of 1 Corinthians 15:7 does not describe a process of persuasion; it names a discrete appearance, and it is among the earliest tradition we have, leaving little room for a slow legend to form."
+  },
+  {
+   "q": "He went on proclaiming under lethal pressure, to the point of a violent death. So gradual persuasion…?",
+   "ans": "can explain a change of view, but strains to explain a death",
+   "why": "People are talked into opinions and talked out of them; the willingness to go on proclaiming under lethal pressure is the mark of a conviction the holder regards as anchored in something he himself encountered, not merely argued into."
+  },
+  {
+   "q": "Put it all together. What does the argument reach, and what does it not?",
+   "ans": "a sceptic became a martyr-leader who attributed the change to an appearance; the resurrection is a further inference",
+   "why": "That James was sincerely and radically transformed is well supported. That the cause of his transformation was a literal resurrection is a further inference, the best explanation, we hold, defended alongside the empty tomb, the disciples’ experiences, and the conversion of Paul, not a proof standing alone."
+  }
+ ],
+ "honestState": {
+  "p1": "The bare facts are not seriously in dispute. That James existed, was Jesus’ brother, led the Jerusalem church, and died a violent death is close to consensus across the scholarly spectrum, from confessional historians to sceptics who grant the same facts while disputing their cause. The live debate is not over whether James converted but over why.",
+  "fairness": "The naturalistic options are still defended by able critics, even as their proponents must concede how poorly James fits the grief profile their best theory relies on. The bereavement-vision phenomenon is real and documented, and we should concede it plainly — but the documented cases are keyed to yearning, the variable James most conspicuously lacks. And the sources are real but uneven: the Gospel data on his unbelief and the Pauline data on his leadership are early and strong, and the Josephan notice of his death is solid; but the Hegesippus martyrdom is later and partly legendary, and even the Josephus passage, while accepted by most, has been questioned by a minority who suspect the words “who was called Christ” of being a later gloss.",
+  "verdict": "The honest claim is modest and strong at once: the conversion of James is a fact the naturalistic theories handle poorly, and the cumulative case is the better for it. It does not, on its own, prove that Jesus rose; it is one premise of the case, not the whole of it. And this is what we hold to be true: Jesus of Nazareth was bodily raised from the dead, and the wider case shows it."
+ },
+ "order": [
+  "James, the brother of Jesus, did not believe during the ministry.",
+  "After the crucifixion he led the Jerusalem church and died for the faith, and the creed gives the cause: then he appeared to James. The persecutor Paul follows the same arc.",
+  "Therefore the appearances reached hostile minds, the cases grief and longing handle poorly."
+ ],
+ "props": [
+  {
+   "t": "James was sincerely and radically transformed",
+   "ok": true
+  },
+  {
+   "t": "a sceptic became a martyr-leader",
+   "ok": true
+  },
+  {
+   "t": "he and the earliest community attributed the change to an appearance",
+   "ok": true
+  },
+  {
+   "t": "the naturalistic theories handle it poorly",
+   "ok": true
+  },
+  {
+   "t": "the earliest creed names him as a witness",
+   "ok": true
+  },
+  {
+   "t": "proves the resurrection on its own",
+   "ok": false
+  },
+  {
+   "t": "Mark 3:21 names James as an unbeliever",
+   "ok": false
+  },
+  {
+   "t": "the Hegesippus martyrdom is reliable in its details",
+   "ok": false
+  },
+  {
+   "t": "bereavement visions are not a real phenomenon",
+   "ok": false
+  },
+  {
+   "t": "the Josephus passage is undisputed by anyone",
+   "ok": false
+  }
+ ],
+ "cards": [
+  {
+   "q": "Why does a hostile witness carry special weight?",
+   "a": "He testifies against his own prior convictions and interests, so his agreement is hard to explain away as wishful thinking. A witness who confirms what he wants to be true may be reporting his hopes."
+  },
+  {
+   "q": "How does James’s prior unbelief pass the criterion of embarrassment?",
+   "a": "The early church revered James, so a memory of his earlier scepticism is the last thing it would have manufactured. A founder’s family thinking him mad is not a detail a community fabricates to flatter itself."
+  },
+  {
+   "q": "Do the Gospels name James as an unbeliever?",
+   "a": "No. Mark 3:21 speaks of the family as a whole; John 7:5 of “his brothers.” James’s own unbelief is a strong inference from that family tradition, not a line that singles him out. Well grounded, but an inference."
+  },
+  {
+   "q": "State the argument in three lines.",
+   "a": "P1: James did not believe during the ministry. P2: after the crucifixion he led the Jerusalem church and died for the faith, and the creed gives the cause: he appeared to James; the persecutor Paul follows the same arc. C: the appearances reached hostile minds, the cases grief and longing handle poorly."
+  },
+  {
+   "q": "What does the argument establish, and what does it not?",
+   "a": "It establishes that a sceptic became a martyr-leader and that he and the earliest community attributed the change to an appearance. That the cause was a literal resurrection is a further inference, the best explanation, we hold, defended alongside the empty tomb, the disciples’ experiences and Paul, not a proof standing alone."
+  },
+  {
+   "q": "What variable do bereavement visions depend on, and why does James lack it?",
+   "a": "Yearning: the ache of someone who longs to see the deceased restored. James is not on record as a devoted follower yearning for his brother’s return; his family is on record as having thought his brother out of his mind."
+  },
+  {
+   "q": "Reply to: the trauma of the execution made him hallucinate his brother alive.",
+   "a": "Trauma and guilt can disturb perception, but crucifixion was not merely a death but a shameful, covenant-cursed death. For a first-century Jew, a crucified messianic claimant was a refuted messianic claimant. Nothing about the manner of Jesus’ death would have inclined a sceptical brother toward sudden faith; it would have confirmed his doubts. A vision must explain a complete reversal of conviction in someone with no prior wish to believe."
+  },
+  {
+   "q": "What does the dynastic-succession reading explain, and what does it leave untouched?",
+   "a": "It explains the leadership, but not the conversion, which is the thing to be explained. And it must still account for the creed’s claim: not that James inherited a role, but that the risen Jesus appeared to him."
+  },
+  {
+   "q": "Which naturalistic reading must a fair case actually beat, and why?",
+   "a": "The gradualist reading, with its late-interpretation handling of “he appeared to James.” It is the most serious because it requires no anomalous experience at all. Grief is the weakest option for James."
+  },
+  {
+   "q": "What two considerations weigh against gradual persuasion?",
+   "a": "First, the creed names a discrete appearance, not a process, in among the earliest tradition we have. Second, gradual persuasion does not easily produce martyrs: it can explain a change of view; it strains to explain a death — the willingness to go on proclaiming under lethal pressure is the mark of a conviction the holder regards as anchored in something he himself encountered, not merely argued into."
+  },
+  {
+   "q": "Why should the case lean on the convergence, not one source?",
+   "a": "The sources are real but uneven: the Gospel and Pauline data are early and strong, the Josephus notice solid, but the later martyrdom account is partly legendary and a minority question one phrase in Josephus. No single source could fabricate the shape they make together."
+  },
+  {
+   "q": "How do James and Paul work together as witnesses?",
+   "a": "As a pincer: the outside enemy and the inside sceptic, converging on the same claim from opposite starting points, each immune to the explanation that fits the other."
+  }
+ ],
+ "obj": [
+  {
+   "who": "Skeptic",
+   "q": "James lost a brother to a horrific execution. Grief pulled him into the movement. Grieving people see their dead all the time.",
+   "model": "The bereavement-vision phenomenon is real, and I’ll concede it plainly. But the documented cases are keyed to yearning, and that is the variable James most conspicuously lacks. He is not on record as a devoted follower longing for his brother’s return; his family is on record as having thought his brother out of his mind. Grief must explain not just an experience but a complete reversal of conviction in someone who had no prior wish to believe."
+  },
+  {
+   "who": "Historian",
+   "q": "The founder dies, the brother inherits the movement. That is dynastic succession: ambition, not an appearance.",
+   "model": "The reply turns on timing and cost. Leadership of a persecuted sect of a crucified criminal in early-30s Jerusalem was a liability as much as a prize: the standing was real but sat inside a persecuted sect, carrying shame and eventually a death sentence, not worldly power or wealth. Ambition explains why a man might lead a winning movement, not why a sceptic would join a losing, dangerous one. And it must still account for the creed’s claim, not that James inherited a role, but that the risen Jesus appeared to him. It explains the leadership and leaves the conversion untouched."
+  },
+  {
+   "who": "Scholar",
+   "q": "He was talked round slowly by the preaching and the community. “He appeared to James” is just a stylized way of marking that change.",
+   "model": "This is the most serious naturalistic reading, because it needs no anomalous experience, and it is the one a fair case must beat. Two things weigh against it. The early creed does not describe a process of persuasion; it names a discrete appearance, and it is among the earliest tradition we have, leaving little room for a slow legend to form. And gradual persuasion does not easily produce martyrs: it can explain a change of view; it strains to explain a death — the willingness to go on proclaiming under lethal pressure is the mark of a conviction the holder regards as anchored in something he himself encountered, not merely argued into."
+  },
+  {
+   "who": "Skeptic",
+   "q": "The James sources are thin: a legendary martyrdom story and a Josephus passage people question.",
+   "model": "The sources are real but uneven, and I won’t lean on the weak ones. The later martyrdom account is partly legendary, and a minority suspect “who was called Christ” in Josephus of being a gloss. But the Gospel data on his unbelief and the Pauline data on his leadership are early and strong, and the overwhelming majority of scholars, sceptics included, accept the Josephus notice, which mentions James only incidentally. The case leans on the convergence, not on any single embellished narrative."
+  }
+ ],
+ "unseen": {
+  "who": "Skeptic",
+  "av": "SK",
+  "q": "The appearance to James was added later. The Jerusalem church needed its leader to have seen the risen Jesus, so somebody gave him one.",
+  "model": "The appearance to James is not a late legend about him; it stands in the creed Paul recites in 1 Corinthians 15, a formula most scholars date to within a few years of the crucifixion, early tradition that singles him out by name. And the motive runs the wrong way: a community inventing appearances to lend its message authority had no motive to award one to the founder’s estranged, doubting brother — and a church burnishing a revered leader would hardly also preserve the memory of his earlier scepticism, the last thing it would have manufactured. And the creed is among the earliest tradition we have, leaving little room for a slow legend to form. Of the individuals the creed names, James is the one whose prior unbelief the Gospel tradition lets us infer, which makes his line the hardest in the formula to explain as pious embellishment. That it is there is better explained by memory than by invention.",
+  "source": "library/sceptics.html, section “What we actually know about James” (the 1 Corinthians 15:7 paragraph and the paragraph after it)"
+ },
+ "explain2": "that James was gradually persuaded, and “he appeared to James” is a later, stylized way of marking a slow change of mind",
+ "ledger": [
+  {
+   "field": "title",
+   "from": "ev-m-sceptics.html <h1> verbatim"
+  },
+  {
+   "field": "keyTerms",
+   "from": "library/sceptics.html: 'The logic of the hostile witness' (hostile witness, criterion of embarrassment); 'What we actually know about James' (creed, strong inference, convergence); 'The transformation that needs explaining' (bereavement vision); 'Family loyalty and dynastic ambition'; 'Gradual persuasion'. Embarrassment's 'a tool of historians, not a proof' from ev-m-sceptics.html honest-limit line."
+  },
+  {
+   "field": "derive",
+   "from": "library/sceptics.html: hostile-witness section; 'Gradual persuasion' (weight sentence + two considerations); 'Family loyalty and dynastic ambition'; 'What the argument does and does not establish'. Question stems are compressed restatements of the same sentences."
+  },
+  {
+   "field": "honestState",
+   "from": "library/sceptics.html: 'The transformation that needs explaining' first line; 'The state of the question'; 'What the argument does and does not establish' (uneven sources, honest claim); FAQ 3 ('one premise of the case, not the whole of it'); Conclusion (bodily-resurrection line, our voice)."
+  },
+  {
+   "field": "order",
+   "from": "ev-m-sceptics.html syllogism P1/P2/C, compressed ('faith, grief, or longing' shortened to 'grief and longing'; Paul clause dropped from P2 for length)."
+  },
+  {
+   "field": "props",
+   "from": "True: 'What the argument does and does not establish' + Conclusion. Decoys each explicitly denied by the essay: 'does not by itself prove the resurrection'; Mark 3:21 'not one that names James'; Hegesippus 'more legendary in its details'; bereavement vision 'a real, documented phenomenon'; Josephus 'questioned by a minority'."
+  },
+  {
+   "field": "cards",
+   "from": "library/sceptics.html sections: hostile witness; embarrassment; family-tradition paragraph; syllogism (ev-m page); does/does-not-establish; transformation; trauma and guilt; dynastic; gradual persuasion (x2); uneven sources; Paul pincer ('The state of the question')."
+  },
+  {
+   "field": "obj",
+   "from": "1 grief: 'The transformation that needs explaining' + trauma section closing sentence; 2 dynastic: 'Family loyalty and dynastic ambition'; 3 gradual: 'Gradual persuasion'; 4 thin sources: 'What the argument does and does not establish' + Josephus paragraph + ev-m page 'too thin' accordion reply."
+  },
+  {
+   "field": "unseen",
+   "from": "library/sceptics.html 'What we actually know about James', 1 Cor 15:7 paragraph ('not a late legend', 'pre-Pauline confession') and next paragraph ('no motive to award one to the founder's estranged, doubting brother', 'better explained by memory than by invention'). Not among the page's 7 objection accordions, its 3 inline premise objections, the 4 obj, or the 12 cards."
+  },
+  {
+   "field": "explain2",
+   "from": "ev-m-sceptics.html hardest-objection routing line ('The one that matters most')."
+  }
+ ],
+ "notes": "No scholar, number or new claim authored. Authored connective only: derive and card question stems, objector question wording (each restates the objection as the essay states it), 'Strong inference' and 'Convergence' as key-term labels (the essay uses both phrases but not as glossary headings), and two short first-person framings in obj models ('I'll concede it plainly', 'I won't lean on the weak ones') restating the essay's own concessions. Obj 4 compresses 'the overwhelming majority of scholars, including sceptics' to 'sceptics included'. Paul kept only as the pincer card, per the essay's 'the depth belongs to James'. John 19:26-27 not used. The existing page summary's '2-5 years' was NOT ported; the essay says 'within a few years', which is used. Scholar names (Habermas/Licona, Fuller, Painter, Bauckham, Wright, Ehrman) kept out of cards and obj answers per the card rule. The 'two converts is a rounding error' and 'circular' accordion replies were not ported: they have no counterpart sentence in the essay. || 2026-10-11 gate: the P2 Paul clause was RESTORED in round 1 (order[1], cards[3]); earlier 'Paul clause dropped for length' / 'Paul kept only as the pincer card' notes are superseded."
+}

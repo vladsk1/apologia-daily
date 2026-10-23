@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Create Account — Apologia Daily</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/fonts/fonts.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -89,6 +87,14 @@
       </div>
 
       <div class="form-group">
+        <label class="form-label" id="dob-label">Month and year you were born</label>
+        <div style="display:flex;gap:8px;" role="group" aria-labelledby="dob-label">
+          <select class="form-input" id="dob-month" aria-label="Birth month"><option value="">Month</option></select>
+          <select class="form-input" id="dob-year" aria-label="Birth year"><option value="">Year</option></select>
+        </div>
+      </div>
+
+      <div class="form-group">
         <label class="form-label" for="password">Password</label>
         <div class="pw-wrap">
           <input class="form-input" type="password" id="password" placeholder="At least 8 characters" autocomplete="new-password" />
@@ -121,7 +127,10 @@
   <script>
     const SUPABASE_URL = 'https://noprgxkwniouukmrfozc.supabase.co';
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw';
-    const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    // If the sign-in service is blocked (a school, church or office network, or an
+    // ad-blocker), keep the page working and explain instead of doing nothing.
+    const sb = (window.supabase && window.supabase.createClient) ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+    const SB_BLOCKED_MSG = 'We couldn\u2019t reach our sign-in service. Your network may be blocking it \u2014 please try another connection.';
 
     function nextDest(){
       try {
@@ -131,9 +140,31 @@
       return 'dashboard.html';
     }
 
-    sb.auth.getSession().then(({ data: { session } }) => {
+    if (sb) sb.auth.getSession().then(({ data: { session } }) => {
       if (session) window.location.href = nextDest();
     });
+
+    // Neutral age screen (privacy.html §9). We ask month + year, never the day.
+    // Under 13: no signup, nothing sent, and this browser stays blocked for 30 days.
+    // 13+: the band (and, for 13-17, the month they turn 18) is sent once; the database
+    // stores it and enforces 18+ for Study Groups (docs/AGE_SCREEN.md).
+    (function fillDob(){
+      var m = document.getElementById('dob-month'), y = document.getElementById('dob-year');
+      ['January','February','March','April','May','June','July','August','September','October','November','December']
+        .forEach(function(n, i){ var o = document.createElement('option'); o.value = i + 1; o.textContent = n; m.appendChild(o); });
+      var now = new Date().getFullYear();
+      for (var yr = now; yr >= now - 100; yr--) { var o = document.createElement('option'); o.value = yr; o.textContent = yr; y.appendChild(o); }
+      try { var blk = +localStorage.getItem('ad_age_block'); if (blk && Date.now() - blk < 30 * 864e5) ageBlocked(); } catch(e){}
+    })();
+    function ageFrom(year, month){
+      var d = new Date(), a = d.getFullYear() - year - ((d.getMonth() + 1) < month ? 1 : 0);
+      return a;
+    }
+    function ageBlocked(){
+      document.getElementById('form-wrap').innerHTML =
+        '<p style="text-align:center;line-height:1.6;">Sorry, you need to be 13 or older to create an account.<br>'
+        + 'You can still read everything in the <a href="/evidence-library.html">Evidence Library</a> without one.</p>';
+    }
 
     async function handleSignup() {
       const name = document.getElementById('name').value.trim();
@@ -145,6 +176,17 @@
       const btnText = document.getElementById('btn-text');
 
       errorBox.classList.remove('visible');
+      const dobM = parseInt(document.getElementById('dob-month').value, 10);
+      const dobY = parseInt(document.getElementById('dob-year').value, 10);
+      if (!dobM || !dobY) { showError('Please choose the month and year you were born.'); return; }
+      const age = ageFrom(dobY, dobM);
+      if (age < 13) {
+        // Nothing is sent or kept: no signup call, and the page just closes the form.
+        try { localStorage.setItem('ad_age_block', String(Date.now())); } catch(e){}
+        ageBlocked();
+        return;
+      }
+      if (!sb) { showError(SB_BLOCKED_MSG); return; }
 
       const password2 = document.getElementById('password2').value;
 
@@ -164,6 +206,11 @@
       try { referredBy = new URLSearchParams(location.search).get('ref') || localStorage.getItem('ad_ref') || ''; } catch(e) {}
       const signUpData = { full_name: name };
       if (referredBy) signUpData.referred_by = referredBy;
+      // The database trigger copies these into public.user_age and then removes them
+      // from the account profile (docs/AGE_SCREEN.md). For 13-17, adult_from is the
+      // month they turn 18, so Study Groups open on their own.
+      signUpData.age_band = age >= 18 ? '18+' : '13-17';
+      if (age < 18) signUpData.adult_from = (dobY + 18) + '-' + String(dobM).padStart(2, '0');
 
       const { data, error } = await sb.auth.signUp({
         email,

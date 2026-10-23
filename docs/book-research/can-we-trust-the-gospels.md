@@ -136,6 +136,8 @@ The pre-scan's prediction held. Specifically:
   `eyewitnesses.html` cluster.
 
 ## ✅ Six-verdict re-test 2026-08-10
+> *(corrected 2026-09-29, Biblical-Reliability sweep: **SUPERSEDED on the limnē point** — the "still absent / P4 row still open" statements below were true on 2026-08-10 but the plank SHIPPED to `library/names.html` 2026-08-24 (see line 120 of this note; confirmed live 2026-09-29). Kept as history.)*
+
 Ledger held: `names.html` still cites Williams ch. 3 (×6); the **thalassa/limnē** observation is still
 absent from `names`/`eyewitnesses`/`coincidences` (the **P4 row is still open + logged** in
 `content-backlog.md`); Blunt's *Undesigned Coincidences* (1847) is still absent from `/sources` (the PD

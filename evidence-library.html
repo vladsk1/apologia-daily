@@ -11,8 +11,7 @@
 <link rel="alternate" hreflang="mk" href="https://apologiadaily.com/evidence-library.html?lang=mk"/>
 <link rel="alternate" hreflang="es" href="https://apologiadaily.com/evidence-library.html?lang=es"/>
 <link rel="alternate" hreflang="x-default" href="https://apologiadaily.com/evidence-library.html"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=DM+Sans:wght@400;500&family=Source+Serif+4:wght@400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -43,8 +42,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96)
 .ht em{font-style:italic;color:var(--g);}
 .hs{font-size:1.05rem;color:rgba(255,255,255,.6);max-width:560px;line-height:1.8;}
 .bb{background:rgba(200,169,81,.08);border-bottom:1px solid rgba(200,169,81,.2);padding:10px 2rem;text-align:center;display:none;}
-.bb span{font-family:var(--ui);font-size:.82rem;color:var(--g);}
-.bb a{color:var(--g);font-weight:600;text-decoration:underline;}
+.bb span{font-family:var(--ui);font-size:.82rem;color:#7a5c12;}
+.bb a{color:#7a5c12;font-weight:600;text-decoration:underline;}
 .leg{background:var(--o);border-bottom:1px solid var(--b);padding:.6rem 2rem;}
 .li{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
 .ll{font-family:var(--ui);font-size:.68rem;color:var(--mu);font-weight:500;text-transform:uppercase;letter-spacing:.08em;}
@@ -106,6 +105,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,13,26,.96)
 .cg{font-family:var(--ui);font-size:.78rem;color:var(--mu);}
 .cm{display:flex;align-items:center;gap:10px;}
 .chev{width:18px;height:18px;stroke:var(--mu);fill:none;stroke-width:2;flex-shrink:0;transition:transform .2s;}
+/* Beginner banner inside each tab (2026-09-30): the fragments set color:var(--g) inline,
+   which is 2.0:1 on the cream banner. Deeper gold = 5.5:1. */
+.intro span[style*="color:var(--g)"]{color:#7a5c12 !important;}
+/* Phones (2026-09-30): number beside the title, badge + chevron on their own row. */
+@media(max-width:600px){
+  .ch{flex-wrap:wrap;align-items:flex-start;gap:.5rem .6rem;padding:1.1rem;}
+  .cnum{min-width:auto;font-size:.9rem;line-height:1.7;}
+  .ci{flex:1 1 0;min-width:0;}
+  .cm{flex-basis:100%;justify-content:space-between;padding-left:1.6rem;}
+}
 .card.op .chev{transform:rotate(180deg);}
 .cb{display:none;padding:0 1.5rem 1.5rem 4.5rem;border-top:1px solid var(--b);}
 /* Mobile: reclaim the wasted side space. The desktop .cb left-indent (aligns the
@@ -213,7 +222,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
     .pv>summary{list-style:none;cursor:pointer;padding:12px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
     .pv>summary::-webkit-details-marker{display:none;}
     .pv>summary:hover{background:var(--n4,#f7f4ef);}
-    .pv .pvn{font-family:var(--ui,'DM Sans',sans-serif);font-size:.64rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--g,#a88930);}
+    .pv .pvn{font-family:var(--ui,'DM Sans',sans-serif);font-size:.64rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#7a5c12;}
     .pv .pvt{font-family:var(--fd,'Playfair Display',serif);font-weight:700;font-size:.98rem;color:var(--n,#0a1628);}
     .pv .pvchev{margin-left:auto;color:var(--n3,#8a94a3);font-size:.8rem;transition:transform .15s;}
     .pv[open] .pvchev{transform:rotate(180deg);}
@@ -223,7 +232,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
     .pvb ol.pvlist{margin:8px 0;padding-left:1.2rem;}
     .pvb ol.pvlist li{font-size:.92rem;line-height:1.55;color:var(--n2,#26364d);margin:9px 0;}
     .pvb ol.pvlist li b{color:var(--n,#0a1628);}
-    .pv-more{display:inline-block;margin-top:6px;font-family:var(--ui,'DM Sans',sans-serif);font-size:.8rem;font-weight:600;color:var(--g,#a88930);text-decoration:none;border-bottom:1px solid transparent;}
+    .pv-more{display:inline-block;margin-top:6px;font-family:var(--ui,'DM Sans',sans-serif);font-size:.8rem;font-weight:600;color:#7a5c12;text-decoration:none;border-bottom:1px solid transparent;}
     .pv-more:hover{border-color:var(--g,#c8a951);}
   </style>
   <link rel="stylesheet" href="/ad-nav.css">
@@ -264,7 +273,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
             <div class="adn-mega-col">
               <div class="adn-mega-h">Go deeper</div>
               <a class="adn-mi" href="/library/"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Deep-Dive Essays</span><span class="adn-mi-dc">Long-form, fully-cited essays.</span></span></a>
-              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Answers</span><span class="adn-mi-dc">The questions people ask most.</span></span></a>
+              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Common Questions</span><span class="adn-mi-dc">Short answers to the questions people ask most.</span></span></a>
               <a class="adn-mi" href="/sources.html"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Church Fathers &amp; Creeds</span><span class="adn-mi-dc">The early church in its own words, verified.</span></span></a>
               <a class="adn-mi" href="/our-sources.html"><span class="adn-mi-ic">&#128218;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Our Sources</span><span class="adn-mi-dc">Books and articles our essays cite.</span></span></a>
               <a class="adn-mi" href="/whats-new.html"><span class="adn-mi-ic">&#128240;</span><span class="adn-mi-tx"><span class="adn-mi-nm">What&#39;s New</span><span class="adn-mi-dc">Latest essays, features &amp; reels.</span></span></a>
@@ -275,11 +284,9 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
               <a class="adn-mi" href="/games.html"><span class="adn-mi-ic">&#127918;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Games</span><span class="adn-mi-dc">Quizzes that feed your streak.</span></span></a>
               <a class="adn-mi" href="/study-groups.html"><span class="adn-mi-ic">&#128101;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Study Groups <span class="adn-mi-tag">New</span></span><span class="adn-mi-dc">Study with people you love.</span></span></a>
               <a class="adn-mi" href="/reading-club.html"><span class="adn-mi-ic">&#128214;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Reading Clubs</span><span class="adn-mi-dc">The classics, chapter by chapter.</span></span></a>
-              <a class="adn-mi" href="/conversation-journal.html"><span class="adn-mi-ic">&#128221;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Conversation Journal</span><span class="adn-mi-dc">Log real conversations, get AI coaching.</span></span></a>
             </div>
             <div class="adn-mega-col">
               <div class="adn-mega-h">For you</div>
-              <a class="adn-mi" href="/parents.html"><span class="adn-mi-ic">&#128106;</span><span class="adn-mi-tx"><span class="adn-mi-nm">For Parents</span><span class="adn-mi-dc">Your kids&#39; hardest questions.</span></span></a>
               <a class="adn-mi" href="/video-library.html"><span class="adn-mi-ic">&#127909;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Videos</span><span class="adn-mi-dc">Short, shareable explainers.</span></span></a>
             </div>
             <div class="adn-mega-foot">
@@ -354,7 +361,6 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
     <span class="lb"><span class="db dbi">&#128218; Intermediate</span>&nbsp;Helpful to read basics first</span>
     <span class="lb"><span class="db dba">&#127891; Advanced</span>&nbsp;Some philosophy background helpful</span>
     <span class="lb"><a href="glossary.html" style="font-family:var(--ui);font-size:0.82rem;color:var(--n3);text-decoration:none;border:1px solid var(--b);padding:3px 12px;border-radius:3px;">&#128218; Glossary &rarr;</a></span>
-    <span class="lb"><span class="mp-wrap"><a href="palace.html" style="font-family:var(--ui);font-size:0.82rem;color:var(--g);text-decoration:none;border:1px solid rgba(200,169,81,0.4);background:rgba(200,169,81,0.06);padding:3px 12px;border-radius:3px;">&#127963; Walk it as a Memory Palace &rarr;</a><button type="button" class="mp-info" aria-label="What is a Memory Palace?" aria-describedby="mp-tip">&#9432;</button><span class="mp-tip" id="mp-tip" role="tooltip">The technique memory champions use &mdash; turn each argument into a room you can walk, so it actually sticks. <span style="color:var(--g);">Pro</span></span></span></span>
 </div>
 </div>
 
@@ -408,6 +414,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
 <li><a href="/library/beauty.html">The Argument from Beauty: Does Beauty Point Beyond the World to God?</a></li>
 <li><a href="/library/evil.html">Why Would a Good God Allow So Much Suffering? The Problem of Evil</a></li>
 <li><a href="/library/desire.html">The Argument from Desire: Does Our Deepest Longing Point to God?</a></li>
+<li><a href="/library/properly-basic.html">Is Belief in God Properly Basic? Reformed Epistemology and Rational Faith Without an Argument</a></li>
 </ul></div>
 <div class="cl-cat"><h3 class="cl-cat-title">The Resurrection</h3>
 <ul class="cl-list">
@@ -439,7 +446,7 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
 <li><a href="/library/respred.html">Did Jesus Predict His Own Resurrection?</a></li>
 <li><a href="/library/typology.html">Christ in All the Scriptures: How the Old Testament Foreshadows Jesus Through Typology</a></li>
 <li><a href="/library/humanity.html">The Full Humanity of Christ: Why It Matters That God Took Real Flesh</a></li>
-<li><a href="/library/paul-divinity.html">Did Paul Invent Jesus's Divinity?</a></li><li><a href="/library/worship-of-jesus.html">Did the First Christians Worship Jesus as God?</a></li><li><a href="/library/jesus-is-yahweh.html">Is Jesus Yahweh? The Divine-Name Argument</a></li><li><a href="/library/christ-before-bethlehem.html">Christ Before Bethlehem: Preexistence in Paul</a></li><li><a href="/library/crucified-messiah.html">Why a Crucified Messiah? The Scandal of the Cross</a></li>
+<li><a href="/library/paul-divinity.html">Did Paul Invent Jesus's Divinity?</a></li><li><a href="/library/worship-of-jesus.html">Did the First Christians Worship Jesus as God?</a></li><li><a href="/library/jesus-is-yahweh.html">Is Jesus Yahweh? The Divine-Name Argument</a></li><li><a href="/library/christ-before-bethlehem.html">Christ Before Bethlehem: Preexistence in Paul</a></li><li><a href="/library/jesus-messiah-claim.html">Did Jesus Claim to Be the Messiah?</a></li><li><a href="/library/crucified-messiah.html">Why a Crucified Messiah? The Scandal of the Cross</a></li><li><a href="/library/god-crucified.html">God Crucified: How the Cross Reveals Who God Is</a></li>
 </ul></div>
 <div class="cl-cat"><h3 class="cl-cat-title">Biblical Reliability</h3>
 <ul class="cl-list">
@@ -490,7 +497,6 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
 <li><a href="/library/equality.html">Where Did Human Equality Come From?</a></li>
 <li><a href="/library/compassion.html">Who Taught the World to Care for the Weak?</a></li>
 <li><a href="/library/science-history.html">Did Christianity Give Us Science?</a></li>
-<li><a href="/library/abolition.html">Who Ended Slavery?</a></li>
 <li><a href="/library/progress.html">Where Did the Idea of Progress Come From?</a></li>
 </ul></div>
     </div>
@@ -517,6 +523,18 @@ footer{background:var(--n2);border-top:1px solid rgba(255,255,255,.08);padding:3
 
 <script>
 var loaded = {};
+/* Back-navigation fix (2026-10-06): the tab fragments are lazy-fetched and the
+   open card lives only in a CSS class, never in the URL. So when a reader opens
+   a card, clicks its essay/mastery link, and presses Back, a fresh reload (when
+   the browser's bfcache misses) found no ?arg= and fell back to tab s1 at the
+   top — while the browser tried to re-apply the reader's old deep scroll onto a
+   now-shorter, still-async-loading page, landing them "at the bottom or
+   somewhere else." Two parts fix it for EVERY argument: (1) syncUrl() records
+   the open card as ?arg=<slug> via replaceState so a fresh reload restores the
+   right tab + card + scroll (reusing the existing deep-link machinery), and
+   (2) scrollRestoration='manual' stops the browser fighting our own
+   scroll-to-card with a stale Y it can't position correctly on the rebuilt DOM. */
+try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
 var LANG = (function(){ try { var u = new URLSearchParams(location.search).get('lang'); if (u==='mk'||u==='en'||u==='es') return u; var s = localStorage.getItem('ev_lang'); return (s==='mk'||s==='es') ? s : 'en'; } catch(e){ return 'en'; } })();
 
 function sw(id, btn) {
@@ -528,6 +546,7 @@ function sw(id, btn) {
   btn.className = 'tab on';
   loadSection(id, function () { scrollToNewTab(id); });
   syncCardBar();   /* a tab switch changes which card (if any) is open */
+  syncUrl();       /* a tab switch with no open card clears ?arg= */
 }
 
 /* On a manual tab switch, reset the scroll to the top of the new tab's content.
@@ -577,16 +596,23 @@ function enhanceCardsA11y(container) {
     var c = cards[i];
     if (c.getAttribute('data-a11y')) continue;
     c.setAttribute('data-a11y', '1');
-    c.setAttribute('role', 'button');
-    c.setAttribute('tabindex', '0');
-    c.setAttribute('aria-expanded', c.classList.contains('op') ? 'true' : 'false');
-    c.addEventListener('keydown', function (e) {
-      if (e.target !== this) return;           // keys from inner controls (tutor input, buttons) pass through
-      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
-        e.preventDefault();                     // Space must not scroll the page
-        tog(this);
-      }
-    });
+    // The control is the card's header line (.ch), not the whole card: the card also
+    // holds the opened essay text, and a role="button" over it would flatten every
+    // heading and paragraph inside for screen readers (2026-10-08 audit item 8).
+    var h = c.querySelector('.ch') || c;
+    h.setAttribute('role', 'button');
+    h.setAttribute('tabindex', '0');
+    h.setAttribute('aria-expanded', c.classList.contains('op') ? 'true' : 'false');
+    h.__adOperable = c.__adOperable = true;     // a11y.js: already handled here
+    (function (card, hdr) {
+      hdr.addEventListener('keydown', function (e) {
+        if (e.target !== hdr) return;           // keys from inner controls (tutor input, buttons) pass through
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();                   // Space must not scroll the page
+          tog(card);
+        }
+      });
+    })(c, h);
   }
 }
 function enhanceSection(container, id) {
@@ -638,7 +664,7 @@ function fixCategoryEyebrow(container, id) {
 /* Deep-linking: evidence-library.html?arg=<slug> (or #arg-<slug>) opens the tab
    containing that argument card and scrolls to it. Cards carry id="arg-<slug>";
    ARG_TAB (generated from the fragments) maps each slug to its tab. */
-var ARG_TAB = {"analogies":"s6","appearances":"s2","archaeology":"s4","beauty":"s1","bigbang":"s5","burial":"s2","cambrian":"s5","canon":"s4","coincidences":"s4","consciousness":"s1","consistency":"s4","cosmic":"s5","daniel70":"s3","deadseascrolls":"s4","desire":"s1","disciplesbelief":"s2","early_church_trinity":"s6","earlycreed":"s3","earlydate":"s4","emptytomb":"s2","eternal_generation":"s6","evil":"s1","eyewitnesses":"s4","finetuning":"s1","hands":"s3","hist_jesus":"s3","humanity":"s3","paul-divinity":"s3","worship-of-jesus":"s3","jesus-is-yahweh":"s3","christ-before-bethlehem":"s3","crucified-messiah":"s3","holy_spirit":"s6","jesus_as_god_nt":"s6","jesus_claims":"s3","jesuschar":"s3","jewishness":"s4","john11":"s3","kalam":"s1","laws":"s5","leibniz":"s1","manuscript":"s4","mathematics":"s5","messianic_prophecy":"s3","minimal":"s2","modalism":"s6","moral":"s1","multiatt":"s3","names":"s4","nt_trinity":"s6","ontological":"s1","originlife":"s5","ot_trinity":"s6","paul":"s2","phil2":"s3","philosophical_trinity":"s6","postresurrection":"s2","privileged":"s5","prophecy":"s4","reason":"s1","relations":"s6","proto-trinitarian":"s6","religious":"s1","respred":"s3","sceptics":"s2","shema":"s6","thomistic":"s1","titles":"s3","trinity_islam":"s6","trinity_jw":"s6","trinity_mormons":"s6","typology":"s3","uniqueness":"s3","virginbirth":"s3","riseofchurch":"s8","persecution":"s8","equality":"s8","compassion":"s8","science-history":"s8","abolition":"s8","progress":"s8"};
+var ARG_TAB = {"analogies":"s6","appearances":"s2","archaeology":"s4","beauty":"s1","bigbang":"s5","burial":"s2","cambrian":"s5","canon":"s4","coincidences":"s4","consciousness":"s1","consistency":"s4","cosmic":"s5","daniel70":"s3","deadseascrolls":"s4","desire":"s1","properly-basic":"s1","disciplesbelief":"s2","early_church_trinity":"s6","earlycreed":"s3","earlydate":"s4","emptytomb":"s2","eternal_generation":"s6","evil":"s1","eyewitnesses":"s4","finetuning":"s1","hands":"s3","hist_jesus":"s3","humanity":"s3","paul-divinity":"s3","worship-of-jesus":"s3","jesus-is-yahweh":"s3","christ-before-bethlehem":"s3","crucified-messiah":"s3","jesus-messiah-claim":"s3","god-crucified":"s3","holy_spirit":"s6","jesus_as_god_nt":"s6","jesus_claims":"s3","jesuschar":"s3","jewishness":"s4","john11":"s3","kalam":"s1","laws":"s5","leibniz":"s1","manuscript":"s4","mathematics":"s5","messianic_prophecy":"s3","isaiah53":"s3","minimal":"s2","modalism":"s6","moral":"s1","multiatt":"s3","names":"s4","nt_trinity":"s6","ontological":"s1","originlife":"s5","ot_trinity":"s6","paul":"s2","phil2":"s3","philosophical_trinity":"s6","postresurrection":"s2","privileged":"s5","prophecy":"s4","reason":"s1","relations":"s6","proto-trinitarian":"s6","religious":"s1","respred":"s3","sceptics":"s2","shema":"s6","thomistic":"s1","titles":"s3","trinity_islam":"s6","trinity_jw":"s6","trinity_mormons":"s6","typology":"s3","uniqueness":"s3","virginbirth":"s3","riseofchurch":"s8","persecution":"s8","equality":"s8","compassion":"s8","science-history":"s8","progress":"s8"};
 function activateTab(id) {
   var s = document.querySelectorAll('.sec'); for (var i = 0; i < s.length; i++) s[i].className = 'sec';
   var t = document.querySelectorAll('.tab'); for (var i = 0; i < t.length; i++) t[i].className = 'tab';
@@ -651,7 +677,19 @@ function openArgCard(slug) {
   el.classList.add('op');
   currentArgSlug = slug;
   try { var ct = el.querySelector('.ct'); if (ct) { currentArgContext = ct.textContent.trim(); var lbl = document.getElementById('float-arg-label'); if (lbl) lbl.textContent = currentArgContext; } } catch (e) {}
-  setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); syncCardBar(); }, 60);
+  /* If the reader left this card for its essay/mastery page (position stashed by
+     the pagehide handler below) and is now coming Back, drop them exactly where
+     they were — at the bottom CTAs or a mid-card "research in full" link — not at
+     the card's top, which on a 7–26-screen card means scrolling all the way down
+     again. One-shot: cleared on use, so a normal ?arg= deep-link from elsewhere
+     still opens at the top. */
+  var savedY = null;
+  try { var v = sessionStorage.getItem('ev_y_' + slug); if (v !== null) { savedY = parseInt(v, 10); sessionStorage.removeItem('ev_y_' + slug); } } catch (e) {}
+  setTimeout(function () {
+    if (savedY !== null && !isNaN(savedY)) window.scrollTo(0, savedY);
+    else el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    syncCardBar(); syncUrl();
+  }, 60);
 }
 
 /* The AI tutor must answer FROM the card in front of the reader, not from the card's
@@ -680,6 +718,23 @@ function argExcerpt(el) {
 }
 function deepLinkArg() {
   try { var a = new URLSearchParams(location.search).get('arg'); if (!a && location.hash) a = location.hash.replace(/^#(arg-)?/, ''); return a || ''; } catch (e) { return ''; }
+}
+
+/* Keep the URL in step with the open card so the browser Back button can restore
+   it. Writes ?arg=<slug> when a card in the active tab is open, removes it when
+   none is (a closed card / a bare tab). replaceState (not pushState) so toggling
+   cards does not pollute history — Back still leaves the hub for the previous
+   real page, it just leaves it ABLE to rebuild the reader's place on reload.
+   Preserves every other query param (notably lang). Called from every place the
+   open-card state changes: tog(), the close bar, openArgCard(), and sw(). */
+function syncUrl() {
+  try {
+    var card = document.querySelector('.sec.go .card.op');
+    var u = new URL(location.href);
+    if (card && card.id) u.searchParams.set('arg', card.id.replace(/^arg-/, ''));
+    else u.searchParams.delete('arg');
+    history.replaceState(history.state, '', u);
+  } catch (e) {}
 }
 
 /* Is the reader mid-selection inside THIS card?
@@ -761,6 +816,7 @@ function cardBar() {
     if (!card) { syncCardBar(); return; }
     keepInView(card, function () { card.classList.remove('op'); });
     syncCardBar();
+    syncUrl();
   });
   document.body.appendChild(_ocb);
   return _ocb;
@@ -788,10 +844,24 @@ function syncCardBar() {
 addEventListener('scroll', syncCardBar, { passive: true });
 addEventListener('resize', syncCardBar);
 
+/* Stash the reader's exact scroll position as they leave the hub with a card
+   open, so Back can restore it (see openArgCard). pagehide — not beforeunload —
+   because beforeunload would disable the bfcache this also wants to keep working,
+   and pagehide fires on both the bfcache freeze and a real unload. Keyed per
+   argument slug in sessionStorage (per-tab, survives the essay/mastery round
+   trip; irrelevant to cookies). */
+addEventListener('pagehide', function () {
+  try {
+    var card = document.querySelector('.sec.go .card.op');
+    if (card && card.id) sessionStorage.setItem('ev_y_' + card.id.replace(/^arg-/, ''), String(window.scrollY || window.pageYOffset || 0));
+  } catch (e) {}
+});
+
 function tog(card) {
   if (selectingInside(card)) return;
   keepInView(card, function () { togInner(card); });
   syncCardBar();
+  syncUrl();
 }
 
 function togInner(card) {
@@ -809,6 +879,9 @@ function togInner(card) {
       if (label) label.textContent = currentArgContext;
     }
   }
+  // Keep each card header's aria-expanded in step with what is open (audit item 8).
+  var hs = document.querySelectorAll('.card[data-a11y] > .ch[aria-expanded]');
+  for (var j = 0; j < hs.length; j++) hs[j].setAttribute('aria-expanded', hs[j].parentElement.classList.contains('op') ? 'true' : 'false');
 }
 
 async function askT(tid, arg) {
@@ -898,6 +971,8 @@ applyChrome();
 
 // Auth
 (function(){
+  // Sign-in service blocked (school/church networks, ad-blockers): stay signed out.
+  if (!window.supabase || !window.supabase.createClient) return;
   var sb = window.supabase.createClient(
     'https://noprgxkwniouukmrfozc.supabase.co',
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw'
@@ -1201,6 +1276,12 @@ window.addEventListener('load', function() {
       return;
     }
   } catch(e) {}
+  // Phones: never auto-play (the panel covers the hero on a 375px screen); pulse the button instead.
+  if (window.innerWidth < 700) {
+    var fb = document.getElementById('float-btn');
+    if (fb) { fb.classList.add('pulsing'); setTimeout(function() { fb.classList.remove('pulsing'); }, 4000); }
+    return;
+  }
   setTimeout(startDemo, 2000);
 });
 
@@ -1278,5 +1359,6 @@ async function sendFloatQuestion() {
   <script src="/library/ask-selection.js" defer></script>
   <script src="/library/verse-popup.js" defer></script>
   <script src="/library/tutor-help.js" defer></script>
+  <script src="/library/tab-nav.js?v=20261009d" defer></script>
 </body>
 </html>

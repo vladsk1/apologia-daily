@@ -1,0 +1,370 @@
+{
+ "slug": "minimal",
+ "title": "The Minimal Facts Argument",
+ "short": "Minimal Facts",
+ "keyTerms": [
+  {
+   "t": "Minimal fact",
+   "d": "Not simply a fact Habermas finds persuasive, but one that satisfies two deliberately demanding tests: it must be strongly evidenced — typically by multiple independent lines of testimony — and it must be accepted by the great majority of scholars who study the subject, including the sceptical ones."
+  },
+  {
+   "t": "Historical bedrock vs. second-order facts",
+   "d": "Licona counts only three facts as historical \"bedrock\" — the crucifixion, the disciples' appearance-experiences, and Paul's conversion — and relegates the conversion of James and the empty tomb to a lower tier of \"second-order\" facts, to be weighed only where the bedrock leaves a question undecided. Tellingly, he sets James aside not because the datum is doubted — the scholars who grant it range from atheist to conservative — but only because too few specialists have written on it to establish the near-unanimity his own criterion demands."
+  },
+  {
+   "t": "Known Historical Facts",
+   "d": "Habermas's broader list, on which he applies the criteria more leniently; he has never counted the empty tomb as a Minimal Fact, since it does not command the near-unanimity the others do, and files it here instead."
+  },
+  {
+   "t": "Pre-Pauline creed",
+   "d": "The formula in 1 Corinthians 15:3–5 that Paul did not compose but inherited; the verbs \"delivered\" and \"received\" are the technical vocabulary of passing on fixed oral tradition."
+  },
+  {
+   "t": "Inference to the best explanation",
+   "d": "Not a deduction: among the live hypotheses, which one accounts for the whole body of data with the most explanatory scope and power, the least strain, and the fewest unsupported assumptions?"
+  },
+  {
+   "t": "Abduction (and affirming the consequent)",
+   "d": "Peirce's name for this mode of reasoning; stated crudely, the pattern is the textbook fallacy of affirming the consequent, because some other cause might produce the same facts — the comparative move, entertaining all the live hypotheses, blunts that worry without dissolving it entirely."
+  },
+  {
+   "t": "Swoon theory",
+   "d": "The apparent-death hypothesis: that Jesus survived the cross, revived in the cool of the tomb, and was mistaken for one risen from the dead."
+  },
+  {
+   "t": "Prior probability",
+   "d": "Whether the resurrection is the best explanation depends in part on one's prior estimate of whether such a thing can happen at all — and that prior is not itself settled by the historical data."
+  }
+ ],
+ "derive": [
+  {
+   "q": "Jesus died by Roman crucifixion — so the swoon theory…?",
+   "ans": "fails",
+   "why": "Roman crucifixion was a slow, deliberately lethal execution carried out by professional executioners with every incentive to confirm death. And a battered survivor would have drawn pity and a physician, not the worship of a conqueror of death."
+  },
+  {
+   "q": "Appearances are reported to Paul, a hostile persecutor, and to James, a sceptic — so shared bereavement visions…?",
+   "ans": "are resisted by them",
+   "why": "The appearances include people with no grief and no prior expectation, whereas bereavement visions arise among those already devoted to and longing for the one they have lost. And no documented apparition tradition on record has produced a community that concluded a particular person had been bodily raised and then proved willing to suffer and die proclaiming it."
+  },
+  {
+   "q": "The disciples suffered for their conviction, and the persecutor Paul converted — so the stolen-body hypothesis…?",
+   "ans": "breaks on them",
+   "why": "It might explain an empty tomb, but it cannot explain why the disciples would suffer, and in documented cases die, for what they would then know to be a fraud, nor why Paul, attacking the movement from the outside, would convert."
+  },
+  {
+   "q": "The creed traces to within roughly two to five years of the crucifixion — so the legend hypothesis…?",
+   "ans": "founders on chronology",
+   "why": "The resurrection was being preached in Jerusalem within a very few years, and the tradition itself traces to within a few years of the crucifixion, far too early for legend to have done its slow work."
+  },
+  {
+   "q": "Each rival covers one or two facts but breaks on the others — so the resurrection is…?",
+   "ans": "the best explanation, not a proof",
+   "why": "A single hypothesis — that Jesus actually rose — covers all of them at once. Licona claims the best explanation, reached by ordinary historical method, not a mathematical proof."
+  },
+  {
+   "q": "Does that compel the committed naturalist to conclude that God acted…?",
+   "ans": "no — it invites, it cannot compel",
+   "why": "The argument removes the historical excuse for unbelief; it cannot remove the metaphysical one, and it should not pretend to. The last step, from \"best historical explanation\" to \"and therefore God acted,\" is one the evidence invites but cannot compel."
+  }
+ ],
+ "honestState": {
+  "p1": "On the foundational data, there is genuine and broad agreement: across the spectrum, scholars accept that Jesus was crucified and that his followers had experiences they sincerely interpreted as encounters with the risen Christ. That much is not seriously contested. What is contested is everything downstream — the cause of those experiences, the historicity of the empty tomb, and above all whether history can license the supernatural conclusion at all. The minimal facts argument contends that no naturalistic mechanism yet proposed accounts for the whole set without straining badly somewhere; its critics contend that the resurrection hypothesis strains worse, because it requires a miracle. That is the real fault line, and it is a philosophical one as much as a historical one.",
+  "fairness": "\"The disciples believed they saw the risen Jesus\" is nearly universally granted; \"they saw group appearances,\" as the creed reports, is granted by fewer; and \"the tomb was empty\" by fewer still. This tiering is not merely a critic's complaint; it is built into the method by its most rigorous practitioner. Licona counts only three facts as historical \"bedrock\" and relegates the conversion of James and the empty tomb to a lower tier of \"second-order\" facts. Tellingly, he sets James aside not because the datum is doubted — the scholars who grant it range from atheist to conservative — but only because too few specialists have written on it to establish the near-unanimity his own criterion demands. And Habermas has never counted the empty tomb as a Minimal Fact at all. The honest version of the argument keeps these tiers distinct. Where presenters blur the tiers, treating every fact as equally bulletproof, they hand the critic an easy and deserved rebuttal.",
+  "verdict": "The minimal facts argument establishes that a small set of facts about the death and aftermath of Jesus is firmly grounded and broadly conceded, and that the most natural explanation of those facts together — for anyone not antecedently committed to ruling miracles out — is that Jesus rose bodily from the dead. It does not prove the resurrection in the way a theorem is proved; it makes it the best explanation, which is the most any historical argument about any event can claim. Its power is that it begins where even the critic stands; its limit is that the last step, from \"best historical explanation\" to \"and therefore God acted,\" is one the evidence invites but cannot compel."
+ },
+ "order": [
+  "A core set of facts is granted by the majority of critical scholars, including sceptics.",
+  "The resurrection explains all of them; every rival explanation fails at least one.",
+  "Therefore the bodily resurrection of Jesus is the best explanation of the agreed evidence."
+ ],
+ "props": [
+  {
+   "t": "facts critics themselves grant",
+   "ok": true
+  },
+  {
+   "t": "argues without first presupposing inspiration",
+   "ok": true
+  },
+  {
+   "t": "a creed traced to ~2–5 years after the cross",
+   "ok": true
+  },
+  {
+   "t": "each rival breaks on some fact",
+   "ok": true
+  },
+  {
+   "t": "resurrection as the best explanation",
+   "ok": true
+  },
+  {
+   "t": "a mathematical proof",
+   "ok": false
+  },
+  {
+   "t": "the empty tomb as a core minimal fact",
+   "ok": false
+  },
+  {
+   "t": "sceptics conceding he rose",
+   "ok": false
+  },
+  {
+   "t": "every listed fact equally undisputed",
+   "ok": false
+  },
+  {
+   "t": "compels the committed naturalist",
+   "ok": false
+  }
+ ],
+ "cards": [
+  {
+   "q": "Name the minimal facts.",
+   "a": "Death by crucifixion; the disciples' sincere belief in appearances; the conversion of the persecutor Paul; the conversion of the sceptic James. Granted by the majority of critical scholars."
+  },
+  {
+   "q": "What two tests must a fact pass to count as a minimal fact?",
+   "a": "It must be strongly evidenced — typically by multiple independent lines of testimony — and accepted by the great majority of scholars who study the subject, including the sceptical ones."
+  },
+  {
+   "q": "Does the case stand or fall on the scholarly head-count?",
+   "a": "No. Habermas holds the demand for strong, multiply-attested evidence to be \"by far the most crucial\" criterion; the survey of opinion is only a secondary check that \"may be mistaken or it could change.\" And the crucifixion and the disciples' sincere belief are conceded by named sceptics on the merits of the evidence, quite apart from any survey. The call for an auditable count still stands."
+  },
+  {
+   "q": "Is the empty tomb one of the core minimal facts?",
+   "a": "No. It does not command the near-unanimity the others do, so the minimal-facts case does not rest on it; it is argued separately and openly, on its own evidence."
+  },
+  {
+   "q": "What kind of argument is this — deduction or something else?",
+   "a": "An inference to the best explanation, not a deduction. Its force is cumulative: no single fact, taken alone, forces the resurrection; what the naturalistic alternatives struggle with is the conjunction."
+  },
+  {
+   "q": "Reply to: sincere belief proves nothing.",
+   "a": "Sincere people believe false things. But the experiences include Paul, a hostile persecutor, and James, a former sceptic, with no grief to project — and no naturalistic mechanism yet proposed covers the whole set without straining badly somewhere."
+  },
+  {
+   "q": "Which granted facts resist the bereavement-vision hypothesis?",
+   "a": "The appearances to people with no grief and no prior expectation — the persecutor Paul and the sceptic James. And no documented apparition tradition has produced a community that concluded a particular person had been bodily raised and then proved willing to suffer and die proclaiming it."
+  },
+  {
+   "q": "Where does the stolen-body hypothesis break?",
+   "a": "It might explain an empty tomb, but not why the disciples would suffer, and in documented cases die, for what they would then know to be a fraud, nor why Paul, attacking the movement from the outside, would convert."
+  },
+  {
+   "q": "Why does the legend hypothesis fail?",
+   "a": "Chronology: the tradition itself traces to within a few years of the crucifixion, far too early for legend to have done its slow work."
+  },
+  {
+   "q": "Why does the swoon (apparent-death) theory fail?",
+   "a": "Crucifixion was a deliberately lethal execution carried out by professional executioners with every incentive to confirm death; and a battered survivor would have drawn pity and a physician, not the worship of a conqueror of death."
+  },
+  {
+   "q": "The strongest objection (worldview-dependent priors) attacks which step — and how do you reply?",
+   "a": "Not the facts, but the step from facts to miracle: whether the resurrection is the best explanation depends in part on one's prior. Concede it as far as it goes: history removes the historical excuse for unbelief, not the metaphysical one — but for anyone open to God raising the dead, the resurrection covers every fact while each rival fails at least one."
+  },
+  {
+   "q": "What does the argument establish — and not?",
+   "a": "That a small set of facts is firmly grounded and broadly conceded, and that the most natural explanation of them together, for anyone not antecedently committed to ruling miracles out, is that Jesus rose bodily from the dead. NOT a theorem-style proof, and not that the sceptics who grant the facts concede the resurrection."
+  }
+ ],
+ "obj": [
+  {
+   "who": "Skeptic",
+   "q": "Shared visions are well documented — Ehrman points to collective experiences such as Marian apparitions, where many people sincerely report seeing a figure together. Why not the disciples?",
+   "model": "The strongest form of the visionary objection is shared bereavement and religious visions, and that deserves a direct answer. Two features resist it: first, the appearances include people with no grief and no prior expectation — Paul, a hostile outsider actively persecuting the movement, and James, who did not believe during the ministry — whereas bereavement visions arise among those already devoted to and longing for the one they have lost; and second, no documented apparition tradition on record has produced a community that concluded a particular person had been bodily raised and then proved willing to suffer and die proclaiming it."
+  },
+  {
+   "who": "Skeptic",
+   "q": "The Gospels were written decades after the events — time enough for stories of a risen Jesus to grow in the telling. Why isn't the resurrection a legend that developed?",
+   "model": "The legend theory founders on chronology. The resurrection was being preached in Jerusalem within a very few years — on the early Christian account, within weeks — and the creed Paul says he received and delivered in 1 Corinthians 15:3-7 can be dated to within a few years of the crucifixion, far too early for legend to do its slow work. The case also starts from facts even sceptics like Crossan concede on the evidence."
+  },
+  {
+   "who": "Historian",
+   "q": "Probability is in the eye of the beholder. Whether the resurrection is the best explanation depends in part on your prior about miracles — and history can't settle that.",
+   "model": "This is the strongest objection in the literature, and it should be conceded as far as it goes: the minimal facts do not, by themselves, compel assent from someone whose background convictions assign a vanishingly small prior to any miracle. The argument does not claim to coerce the committed naturalist. It claims that, if one is open to the possibility that God might raise the dead, the historical evidence then makes the resurrection the most reasonable explanation of an otherwise baffling set of facts. It removes the historical excuse for unbelief; it cannot remove the metaphysical one, and it should not pretend to. Allison himself judges the resurrection appearances and the empty tomb to be better evidenced than most sceptics allow — he simply will not take the last step on historical grounds alone. What stays his hand is a metaphysical prior, not a gap in the historical evidence."
+  },
+  {
+   "who": "Skeptic",
+   "q": "Which scholars, counted how? That 'consensus' is a compilation of people who chose to publish on the resurrection — it may over-represent the religiously committed.",
+   "model": "This is a fair methodological warning, and the figures should be handled with the corresponding caution. But the head-count was never what bears the weight: of his two criteria, Habermas holds the demand for strong, multiply-attested evidence to be \"by far the most crucial,\" while the survey of scholarly opinion is only a secondary check that \"may be mistaken or it could change.\" And the strongest minimal facts do not depend on a contested headcount at all: that Jesus was crucified and that the disciples sincerely believed they had seen him alive are conceded by named sceptics — Crossan, Lüdemann, Ehrman — on the merits of the evidence, quite apart from any survey. The call for an auditable count stands; the case is strongest when it leans on the facts the critics themselves grant."
+  }
+ ],
+ "unseen": {
+  "who": "Believer",
+  "av": "BE",
+  "q": "If we only argue from what sceptics grant, aren't we admitting the Gospels can't really be trusted?",
+  "model": "No. The approach is an apologetic strategy, not a verdict on the trustworthiness of Scripture. In Habermas's words it is \"not a prescription for how a given text should be approached … or how a sermon is written,\" and its deliberate restriction to what critics grant \"should never be concluded\" to indicate \"a lack of trust in Scripture … Nor should it cause others to question or doubt their beliefs.\" The minimal-facts case is a bridge built to be crossed from the sceptic's side; the believer who already trusts the Gospels has simply been handed one more reason to do so — a corroboration, not a new foundation.",
+  "source": "library/minimalfacts.html §What the Argument Does and Doesn't Establish (final paragraph; quotations per fn 2)"
+ },
+ "explain2": "Dale Allison's worldview objection: whether the resurrection is the best explanation depends in part on one's prior estimate of whether such a thing can happen at all, and that prior is not itself settled by the historical data",
+ "ledger": [
+  {
+   "field": "title",
+   "from": "ev-m-minimal.html <h1> (line 299)"
+  },
+  {
+   "field": "short",
+   "from": "ev-m-minimal.html breadcrumb 'Minimal Facts'"
+  },
+  {
+   "field": "keyTerms[0]",
+   "from": "library/minimalfacts.html §The Two Criteria ¶1"
+  },
+  {
+   "field": "keyTerms[1]",
+   "from": "library/minimalfacts.html §The 'minimal' facts may not be minimal enough (+fn 20); also ev-m-minimal.html Paul and James honest limit"
+  },
+  {
+   "field": "keyTerms[2]",
+   "from": "library/minimalfacts.html §The Two Criteria ¶2 (+fn 4)"
+  },
+  {
+   "field": "keyTerms[3]",
+   "from": "library/minimalfacts.html §The Earliest Report ¶2"
+  },
+  {
+   "field": "keyTerms[4]",
+   "from": "library/minimalfacts.html §From Facts to Resurrection ¶1"
+  },
+  {
+   "field": "keyTerms[5]",
+   "from": "library/minimalfacts.html §The name for this reasoning ¶1–2 (compressed)"
+  },
+  {
+   "field": "keyTerms[6]",
+   "from": "library/minimalfacts.html §Did Jesus really die? The swoon theory ¶1"
+  },
+  {
+   "field": "keyTerms[7]",
+   "from": "library/minimalfacts.html §Dale Allison ¶1"
+  },
+  {
+   "field": "derive[0]",
+   "from": "library/minimalfacts.html §The swoon theory (medical sentence + Strauss conclusion)"
+  },
+  {
+   "field": "derive[1]",
+   "from": "library/minimalfacts.html §From Facts to Resurrection ¶2 (bereavement reply)"
+  },
+  {
+   "field": "derive[2]",
+   "from": "library/minimalfacts.html §From Facts to Resurrection ¶2 (stolen-body sentence)"
+  },
+  {
+   "field": "derive[3]",
+   "from": "library/minimalfacts.html §From Facts to Resurrection ¶2 (legend sentence); '2–5 years' from §The Earliest Report ¶3"
+  },
+  {
+   "field": "derive[4]",
+   "from": "library/minimalfacts.html §From Facts to Resurrection ¶3"
+  },
+  {
+   "field": "derive[5]",
+   "from": "library/minimalfacts.html §Dale Allison ¶2 + §What the Argument Does and Doesn't Establish ¶2"
+  },
+  {
+   "field": "honestState.p1",
+   "from": "library/minimalfacts.html §The State of the Scholarship ¶1–2 (compressed); ev-m-minimal.html Premise 2 'The room'"
+  },
+  {
+   "field": "honestState.fairness",
+   "from": "library/minimalfacts.html §The 'minimal' facts may not be minimal enough + §The Two Criteria ¶2"
+  },
+  {
+   "field": "honestState.verdict",
+   "from": "library/minimalfacts.html §What the Argument Does and Doesn't Establish ¶1–2"
+  },
+  {
+   "field": "order",
+   "from": "ev-m-minimal.html ARG_PREMISES (lines 712–716) verbatim"
+  },
+  {
+   "field": "props (ok:true)",
+   "from": "library/minimalfacts.html §An Argument Designed to Survive Disagreement ¶1; §What the Argument Does and Doesn't Establish ¶1 (no inspiration/inerrancy/reliability needed); §The Earliest Report ¶3; §From Facts to Resurrection ¶3"
+  },
+  {
+   "field": "props (ok:false)",
+   "from": "library/minimalfacts.html §From Facts to Resurrection ¶3 ('not a mathematical proof'); §The Two Criteria ¶2 (empty tomb never a Minimal Fact); §What even the sceptics grant ¶2 (none concedes the resurrection); §Cavin/Carrier ¶2 last sentence (do not inflate 'majority' into 'virtually all'); §Dale Allison ¶2 (does not coerce the committed naturalist)"
+  },
+  {
+   "field": "cards[0], cards[5]",
+   "from": "ev-m-minimal.html existing cards 1 and 3 verbatim"
+  },
+  {
+   "field": "cards[1]",
+   "from": "library/minimalfacts.html §The Two Criteria ¶1"
+  },
+  {
+   "field": "cards[2]",
+   "from": "library/minimalfacts.html §Cavin/Carrier ¶2; ev-m-minimal.html consensus objection reply"
+  },
+  {
+   "field": "cards[3]",
+   "from": "library/minimalfacts.html §The Two Criteria ¶2 + §Cavin/Carrier ¶2 + §minimal enough"
+  },
+  {
+   "field": "cards[4]",
+   "from": "library/minimalfacts.html §From Facts to Resurrection ¶1–2"
+  },
+  {
+   "field": "cards[6]–cards[8]",
+   "from": "library/minimalfacts.html §From Facts to Resurrection ¶2"
+  },
+  {
+   "field": "cards[9]",
+   "from": "library/minimalfacts.html §The swoon theory"
+  },
+  {
+   "field": "cards[10]",
+   "from": "library/minimalfacts.html §Dale Allison ¶1–2; ev-m-minimal.html existing card 4"
+  },
+  {
+   "field": "cards[11]",
+   "from": "library/minimalfacts.html §What the Argument Does and Doesn't Establish ¶1–2 + §What even the sceptics grant ¶2"
+  },
+  {
+   "field": "obj[0].q",
+   "from": "ev-m-minimal.html accordion 'Group hallucinations happen' strongest form, verbatim"
+  },
+  {
+   "field": "obj[0].model",
+   "from": "library/minimalfacts.html §From Facts to Resurrection ¶2 (bereavement reply, light compression)"
+  },
+  {
+   "field": "obj[1].q",
+   "from": "library/minimalfacts.html FAQ 'Weren't the Gospels written decades later…' (split into two sentences)"
+  },
+  {
+   "field": "obj[1].model",
+   "from": "library/minimalfacts.html FAQ answer (legend), verbatim"
+  },
+  {
+   "field": "obj[2].q",
+   "from": "library/minimalfacts.html §Dale Allison ¶1 (in speaker's voice)"
+  },
+  {
+   "field": "obj[2].model",
+   "from": "library/minimalfacts.html §Dale Allison ¶2"
+  },
+  {
+   "field": "obj[3].q",
+   "from": "library/minimalfacts.html §Cavin/Carrier ¶1; ev-m-minimal.html consensus accordion strongest form"
+  },
+  {
+   "field": "obj[3].model",
+   "from": "library/minimalfacts.html §Cavin/Carrier ¶2 (compressed)"
+  },
+  {
+   "field": "unseen",
+   "from": "library/minimalfacts.html §What the Argument Does and Doesn't Establish, final paragraph (Habermas quotations per fn 2)"
+  },
+  {
+   "field": "explain2",
+   "from": "ev-m-minimal.html 'The one that matters most: Dale Allison's' line + library/minimalfacts.html §Dale Allison ¶1"
+  }
+ ],
+ "notes": "Authored strings (no sentence to port), flagged for the gate: (1) the question wordings in speaker's voice for obj[1], obj[2], obj[3] and unseen.q are rephrasings of objections the essay states (FAQ, Allison ¶1, Carrier ¶1, Habermas fn 2); the unseen question in particular is a believer-voice paraphrase of the misreading Habermas warns against. (2) Card questions, derive 'q' prompts and the short derive 'ans' labels are authored framing. (3) The 10 prop chip labels are compressed paraphrases (e.g. 'a creed within ~2–5 years', 'compels the committed naturalist'). No new scholars, numbers or claims were introduced. Unseen objection: chosen because the Scripture-trust misreading appears nowhere on the mastery page (accordions, premise cards, cards) or in the 4 obj; the swoon theory was rejected as the unseen candidate because ev-m-minimal.html already covers it in the Premise 1 crucifixion block. The derive rows replace the Kalam's cause-to-Creator properties with what each granted fact rules out. The existing page's Fatima reply ('ambiguous lights', 'the disciples were not expectant — Jewish hope was a general resurrection') and the 'biased sources' reply were NOT ported: they are mastery-page-authored and have no counterpart in the essay; obj[0] uses the essay's bereavement reply instead."
+}

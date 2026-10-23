@@ -1,0 +1,358 @@
+{
+ "slug": "hist_jesus",
+ "title": "The Historical Existence of Jesus",
+ "short": "the historical existence of Jesus",
+ "keyTerms": [
+  {
+   "t": "Mythicism",
+   "d": "The claim, pressed by a small but vocal current of writers, that Jesus of Nazareth is a literary or mythological construction with no flesh-and-blood original. Its best-credentialed advocate, Richard Carrier, argues that the earliest Christians may have believed in a purely celestial Jesus, only later historicized into a Galilean preacher."
+  },
+  {
+   "t": "The direct personal link",
+   "d": "Paul never met Jesus during his earthly life, and he says little about Jesus’s teaching. But he supplies something historians prize even more: a direct personal link to people who knew Jesus — he stayed with Peter and met James, whom he calls “the Lord’s brother.”"
+  },
+  {
+   "t": "Hostile attestation",
+   "d": "Writers with no stake in Christianity took the bedrock fact for granted — Tacitus, who calls the faith a pernicious superstition, names the execution under Pilate, and Josephus identifies James as “the brother of Jesus who was called Christ.” The evidence here is thinner than apologetic literature sometimes implies, but it is not absent."
+  },
+  {
+   "t": "Multiple attestation",
+   "d": "A datum found in independent sources is unlikely to be the fabrication of any one of them, and Jesus’s crucifixion appears in Paul, the Gospels, Tacitus, and Josephus, the last three naming Pilate."
+  },
+  {
+   "t": "Criterion of embarrassment",
+   "d": "The principle that the early church would not have invented details that cut against its own interests. Two such details anchor the historical Jesus: he was crucified, and he was baptized by John. Inconvenient facts that a forger would smooth away are the historian’s gold."
+  },
+  {
+   "t": "Interpolation, used selectively",
+   "d": "Interpolation is a real and legitimate tool of textual criticism. The objection is to its selective use: declaring a well-attested text spurious on no manuscript evidence, and only where it is inconvenient, is not textual criticism but a principle of convenience; applied evenly it would unravel the transmission of nearly every ancient author."
+  },
+  {
+   "t": "Argument from silence",
+   "d": "Arguments from silence are weak at the best of times; aimed at a genre whose whole purpose is to address what the readers already know — Paul’s occasional letters, which presuppose the story of Jesus rather than retell it — they are weaker still."
+  },
+  {
+   "t": "Parallelomania",
+   "d": "Samuel Sandmel’s standing warning against mistaking superficial verbal resemblance for literary dependence. Even if some motif had been borrowed, it would bear on how the story was later told, not on whether the man at its center existed."
+  }
+ ],
+ "derive": [
+  {
+   "q": "Writing in the 50s, a former persecutor of the church says, in passing, that he stayed with Peter and met “James the Lord’s brother” — so the claim is…?",
+   "ans": "not the kind of thing one invents about a person who never lived",
+   "why": "It is an offhand, hostile-context remark, written within roughly twenty-five years of the crucifixion, by a man who had no motive to fabricate and who is writing to people who could have checked his claims. A purely heavenly figure is an odd sort of being to have a flesh-and-blood brother walking among Paul’s contemporaries; historical persons are not."
+  },
+  {
+   "q": "A Roman historian who calls the faith a pernicious superstition names the executioner, the emperor, and the punishment — so…?",
+   "ans": "a hostile writer took the bedrock fact for granted (his independence debated)",
+   "why": "Tacitus is widely treated as independent of Christian sources — though some scholars suspect he may be relaying what Christians of his own day reported — and either way it shows a hostile Roman writer took the bedrock fact for granted: a man called Christ was executed under Pilate."
+  },
+  {
+   "q": "Josephus identifies a man stoned around AD 62 as “the brother of Jesus who was called Christ” — “called” Christ, not “the” Christ — so the passage is…?",
+   "ans": "regarded by the large majority as authentic",
+   "why": "James is mentioned only incidentally, to explain why Ananus was deposed, and its casual, non-laudatory phrasing is not how a Christian would write. A minority argue that “who was called Christ” is a later scribal gloss; most specialists, sceptics among them, still read the phrase as Josephus’s own."
+  },
+  {
+   "q": "Jesus’s ancient enemies called him a sorcerer, a deceiver, and a man of illegitimate birth — but none is known to have said there had been no such man — so…?",
+   "ans": "they contested the meaning of a real figure, not the memory of one",
+   "why": "The people with the strongest motive to deny his existence — and standing far nearer the events than any modern writer — instead argued about what he was."
+  },
+  {
+   "q": "A founder shamefully crucified, and baptized by John in a rite “for the forgiveness of sins” — so these details are…?",
+   "ans": "probably historical — a forger would smooth them away",
+   "why": "No movement seeking converts in the Roman world would fabricate a shamefully executed founder, and the baptism places John in the superior role and raises awkward questions about a sinless messiah submitting to it. The Gospel writers visibly squirm at this episode, which is the surest sign they did not make it up."
+  },
+  {
+   "q": "Grant all of it: Jesus of Nazareth lived and was crucified under Pilate. Does that show he was the Son of God?",
+   "ans": "no — it establishes only the floor",
+   "why": "That Jesus existed does not show that he was the Son of God, that his teachings were true, or that he rose from the dead. Those are separate claims, resting on separate arguments, and a reader who grants the historical floor has granted only the floor. But the floor matters: one cannot debate the meaning of a man’s life until one accepts that there was a man."
+  }
+ ],
+ "honestState": {
+  "p1": "The historical existence of Jesus is not a contested question among professional historians of antiquity; it is about as close to a settled matter as ancient history offers. The consensus is not a confessional huddle of believers: it spans Catholic and Protestant scholars, secular Jewish historians, agnostics, and atheists, who agree on remarkably little about what Jesus was but agree almost unanimously that he was.",
+  "fairness": "Bart Ehrman, an agnostic who built a career on challenging traditional Christian claims, states that Jesus “certainly existed” — a concession about existence only, not about what Jesus was. The non-Christian evidence is thinner than apologetic literature sometimes implies, and honesty requires saying so. And what should be conceded to the other side is real: Carrier is a credentialed historian arguing in good faith, and he has exposed weak links in the popular apologetic case — the over-reliance on a disputed Testimonium, the casual citation of late or ambiguous sources.",
+  "verdict": "The honest verdict is that mythicism fails: its central moves rest on readings the evidence does not support, which is why it has failed to persuade the field. The historical evidence establishes, to the ordinary standard of ancient history, that a Jewish man named Jesus of Nazareth lived in early first-century Galilee, was baptized by John, gathered followers as a teacher and reputed healer, and was crucified under Pontius Pilate around AD 30. It establishes nothing more — but the figure at the center of the Western world’s longest argument was, at minimum, a real human being who really died on a Roman cross."
+ },
+ "order": [
+  "Outside witnesses take for granted that a man called Christ was executed under Pilate.",
+  "The earliest Christian sources treat him as a recent, known man with a brother Paul had met.",
+  "Therefore Jesus of Nazareth lived and was crucified under Pontius Pilate."
+ ],
+ "props": [
+  {
+   "t": "a brother Paul says he met face to face",
+   "ok": true
+  },
+  {
+   "t": "a hostile Roman writer taking the execution under Pilate for granted",
+   "ok": true
+  },
+  {
+   "t": "no ancient opponent known to deny he existed",
+   "ok": true
+  },
+  {
+   "t": "a crucifixion found in independent sources",
+   "ok": true
+  },
+  {
+   "t": "established to the ordinary standard of ancient history",
+   "ok": true
+  },
+  {
+   "t": "by itself shows that he was the Son of God",
+   "ok": false
+  },
+  {
+   "t": "rests on the Testimonium Flavianum",
+   "ok": false
+  },
+  {
+   "t": "Tacitus certainly independent of Christian informants",
+   "ok": false
+  },
+  {
+   "t": "mythicism has no credentialed advocate",
+   "ok": false
+  },
+  {
+   "t": "Paul’s letters retell the life of Jesus",
+   "ok": false
+  }
+ ],
+ "cards": [
+  {
+   "q": "State Premise 1 — and its honest limit.",
+   "a": "Outside witnesses — the hostile Tacitus and the hostile-neutral Josephus — take for granted that a man called Christ was executed under Pilate. Limit: the evidence here is thinner than apologetic literature sometimes implies, and it is not a claim that any of them confirms what he was. Josephus’s notice of the execution stands in the Testimonium, whose received wording is genuinely debated (the majority reconstruction keeps an authentic core), and the premise does not rest on it: Tacitus names the execution under Pilate, and Josephus’s James notice, regarded by the large majority as authentic, treats “Jesus who was called Christ” as a known man."
+  },
+  {
+   "q": "State Premise 2 — and what kind of claim it is.",
+   "a": "The earliest Christian sources — the undisputed letters of Paul, within 25 years — treat him as a recent, known man with a brother Paul had met; and no ancient opponent is known to have argued that there had been no such man at all. It is a claim about what the earliest sources presuppose, not a claim that Paul wrote biography."
+  },
+  {
+   "q": "What does the conclusion reach — and not reach?",
+   "a": "That Jesus of Nazareth lived and was crucified under Pontius Pilate, to the ordinary standard of ancient history. It does not show that he was the Son of God, that his teachings were true, or that he rose from the dead — those are separate claims, resting on separate arguments."
+  },
+  {
+   "q": "Why does Paul’s remark about “the Lord’s brother” carry such weight?",
+   "a": "It is the testimony of a man who was at first a persecutor of the church, who had no motive to fabricate, and who is writing to people who could have checked his claims. If Jesus had been a purely celestial being who never walked the earth, it is exceedingly strange that his contemporaries should include a man universally known as his brother, whom Paul says he met face to face."
+  },
+  {
+   "q": "“The James notice in Josephus was glossed by a scribe” — what tells against it?",
+   "a": "Its casual, non-laudatory phrasing — Jesus “called” Christ, not “the” Christ — is not how a Christian would write, and it appears in every manuscript we possess, with no textual sign of insertion. The gloss case is an inference from how Origen cites Josephus, not a manuscript that lacks it, and the large majority of specialists find it unpersuasive."
+  },
+  {
+   "q": "What does the Testimonium Flavianum show — and how much rests on it?",
+   "a": "Genuinely debated. On the majority reconstruction a Christian copyist shaped the received wording around an authentic Josephan core; its chief support is that early readers describe a more restrained text — Origen, in the mid-third century, twice remarks that Josephus did not accept Jesus as the Christ — the stronger plank. The question is who wrote those words, not whether the claims are true, and the case for Jesus’s existence does not rest on this passage."
+  },
+  {
+   "q": "Reply to: Tacitus just repeated what Christians told him.",
+   "a": "This is widely treated as independent of Christian sources — though some scholars suspect Tacitus may be relaying what Christians of his own day reported — and either way it shows a hostile Roman writer took the bedrock fact for granted: a man called Christ was executed under Pilate."
+  },
+  {
+   "q": "Why is the silence of the ancient critics evidence?",
+   "a": "Jesus had determined enemies — pagan critics like Celsus and a hostile strand of Jewish polemic — who charged sorcery, deception, and illegitimate birth. What no ancient opponent is known to have argued is that there had been no such man at all. They argued about what he was, not whether he was."
+  },
+  {
+   "q": "Which two criteria secure the historical core — and what do they anchor?",
+   "a": "Multiple attestation: the crucifixion appears in Paul, the Gospels, Tacitus, and Josephus, the last three naming Pilate. Embarrassment: two details cut against the church’s own interests — a crucifixion, “a stumbling block to Jews and folly to Gentiles,” and a baptism by John that places John in the superior role."
+  },
+  {
+   "q": "Reply to: Paul says almost nothing about the earthly Jesus.",
+   "a": "The inference mistakes the kind of documents these are: occasional letters to congregations he had already taught in person, which presuppose the story of Jesus rather than retell it. And the silence is not total: born of woman, born under the law, descended from David according to the flesh, a last supper on the night he was betrayed, crucified and buried — a spare but unmistakably earthly outline."
+  },
+  {
+   "q": "Reply to: Josephus’s earlier history of the war never mentions Jesus.",
+   "a": "That book is a history of the revolt and the political road to it; what earns a mention there is bearing on the conflict, not bare existence. His later, sprawling history of the whole Jewish people is where he pauses over religious figures at the edges of the main story, John the Baptist among them. The omission is a fact about a book’s scope, not evidence that there was no one to omit."
+  },
+  {
+   "q": "What do the scholars outside the faith grant — and what do they not?",
+   "a": "That he was, not what he was. The consensus spans agnostics and atheists who disagree about what Jesus was — apocalyptic prophet, social reformer, charismatic healer, failed messiah — but agree almost unanimously that he was. Granting the historical floor is granting only the floor; never present it as a concession of his divinity or resurrection."
+  }
+ ],
+ "obj": [
+  {
+   "who": "Skeptic",
+   "q": "There is not a single contemporary record of Jesus. A miracle-working sensation should have left a footprint in the writers of his own day.",
+   "model": "This proves far less than it seems, because it is the normal condition of ancient history. Almost nothing written about Hannibal in his own lifetime survives, and the earliest substantial sources for Alexander the Great postdate him by centuries — yet no one doubts they lived. A standard that erases Jesus erases most of antiquity. What such a figure would leave is a movement and traditions within a generation — which is precisely what we have, plus enemy notices once the movement reached Rome. And the criterion of embarrassment cuts directly against the mythicist program: invented saviors are not baptized for sin or nailed to crosses."
+  },
+  {
+   "who": "Skeptic",
+   "q": "The Josephus passage calls Jesus the Christ and reports his resurrection — obviously Christian scribes wrote it. Strike Josephus from the list.",
+   "model": "What that passage shows is genuinely debated. On the majority reconstruction a Christian copyist later shaped the received wording around an authentic Josephan core mentioning Jesus as a teacher crucified under Pilate; the earliest readers of Josephus describe a more restrained text, Origen above all. But either way the question is about who wrote those words, not whether the claims are true, and the case for Jesus’s existence does not rest on this passage. Strike it anyway: the second passage — James, “the brother of Jesus who was called Christ” — is regarded by the large majority of scholars as authentic, and Tacitus stands untouched."
+  },
+  {
+   "who": "Mythicist",
+   "q": "Paul’s Jesus is a celestial being crucified by demonic powers in a heavenly realm; the Gospels later historicised him. And “brother of the Lord” just means a fellow believer — in fact a cultic title for a class of ordinary, non-apostle Christians.",
+   "model": "This is the best-credentialed case on the other side — Carrier is a credentialed historian arguing in good faith — and it deserves a real answer. Paul’s own Jesus is earthly: “born of woman, born under the law,” descended from David according to the flesh, betrayed on a night Paul names, crucified and buried. The cultic-title hypothesis is offered to rescue his reading from self-contradiction, but only by positing a title for which there is no clear evidence, while the simpler reading of kinship is available throughout. Josephus independently identifies James as “the brother of Jesus who was called Christ,” in a passage with no Christian motive to invent a sibling relationship (Carrier contests that passage too, reading “who was called Christ” as a scribal gloss — a minority reading), and the Gospel tradition names the brothers as a matter of ordinary local kinship (Mark 6:3). Between an unattested special sense and a plain reading confirmed by a hostile-neutral source, the plain reading wins: James was Jesus’s brother. And Carrier’s key text does not bear his reading: James F. McGrath argues that the descent in the Ascension of Isaiah need not stop short of earth — that the work reflects a docetic or quasi-docetic outlook rather than a purely heavenly crucifixion — and that it cannot bear the weight Carrier places on it."
+  },
+  {
+   "who": "Skeptic",
+   "q": "The Jesus story is a copy of the pagan dying-and-rising gods — so saturated with borrowed motifs that no historical residue can be recovered.",
+   "model": "Even if some motif had been borrowed, it would bear on how the story was later told, not on whether the man at its center existed; real people attract legendary embellishment in the retelling. The Hebraist Tryggve Mettinger concluded that a few genuine dying-and-rising figures did exist — Dumuzi, Baal, and Melqart — though he reached that verdict against what remains the prevailing view; but the specific parallels to Jesus prove on inspection to be late, loose, or too unlike the resurrection in their contours to establish dependence, and Mettinger himself concludes that the Christian claim “retains its unique character.” Sandmel’s warning against “parallelomania” — mistaking superficial verbal resemblance for literary dependence — applies with full force."
+  }
+ ],
+ "unseen": {
+  "who": "Mythicist blogger",
+  "av": "MB",
+  "q": "The Gospels weren’t written until around AD 180 — that’s the first time anyone names all four. A ‘biography’ composed a century and a half after the fact is legend, not history.",
+  "model": "That figure is reached by treating the date of a work’s first unambiguous external citation as the date of its composition — here, Irenaeus’s naming of the four Gospels around AD 180 — a method no classicist applies to any other ancient text. The manuscript evidence in fact runs the other way: a fragment of John (P52) is generally dated to the first half of the second century, earlier than any such attestation. And a late manuscript proves nothing about composition in any case — the earliest complete manuscript of Thucydides is medieval, well over a thousand years after he wrote, yet no one concludes that Thucydides belongs to the Middle Ages. Dated by the ordinary criteria — internal evidence, and use and quotation by second-century writers — the Gospels sit in the last third of the first century, which is where the field, skeptical and confessional alike, places them. And the earliest witness is not the Gospels at all, but Paul’s letters of the 50s.",
+  "source": "library/hist_jesus.html — §“The Gospels and the tradition behind them” (the AD 180 dating move; P52; the Thucydides manuscript comparison) + §“The earliest witness: Paul”"
+ },
+ "explain2": "Carrier’s celestial-Jesus reading of Paul, including “brother of the Lord” as a cultic title",
+ "ledger": [
+  {
+   "field": "title",
+   "from": "ev-m-hist_jesus.html <h1> “The Historical Existence of Jesus” verbatim."
+  },
+  {
+   "field": "keyTerms[0]",
+   "from": "essay intro (“a small but vocal current of writers… a literary or mythological construction with no flesh-and-blood original”) + §The strongest case for the other side (Carrier, celestial Jesus, “only later historicized into a Galilean preacher”)."
+  },
+  {
+   "field": "keyTerms[1]",
+   "from": "essay §The earliest witness: Paul, para 1 last two sentences verbatim + para 2 (Galatians 1)."
+  },
+  {
+   "field": "keyTerms[2]",
+   "from": "essay §The witnesses outside the church (Tacitus ‘pernicious superstition’; ‘took the bedrock fact for granted’; ‘thinner than apologetic literature sometimes implies… But it is not absent’); page certified Precision check P1."
+  },
+  {
+   "field": "keyTerms[3]",
+   "from": "essay §The criteria that secure a core, multiple-attestation sentence verbatim."
+  },
+  {
+   "field": "keyTerms[4]",
+   "from": "essay §The criteria that secure a core, embarrassment paragraph, compressed; last sentence verbatim."
+  },
+  {
+   "field": "keyTerms[5]",
+   "from": "essay §Reply ‘To the habit of dissolving inconvenient texts’ (first and last sentences, verbatim)."
+  },
+  {
+   "field": "keyTerms[6]",
+   "from": "essay §The earliest witness: Paul, para 3 (‘Arguments from silence are weak…’; ‘presuppose the story of Jesus rather than retell it’)."
+  },
+  {
+   "field": "keyTerms[7]",
+   "from": "essay §Reply to Price + fn 22 (Sandmel definition) — ‘Even if some motif had been borrowed…’ verbatim."
+  },
+  {
+   "field": "derive[0]",
+   "from": "essay opening para (‘offhand, hostile-context remark… within roughly twenty-five years… not the kind of thing one invents’) + §Paul para 2 (persecutor, no motive, could have checked; ‘purely heavenly figure’ sentence)."
+  },
+  {
+   "field": "derive[1]",
+   "from": "essay §witnesses outside the church, Tacitus paragraph, verbatim incl. the ‘some scholars suspect’ hedge."
+  },
+  {
+   "field": "derive[2]",
+   "from": "essay Josephus paragraph (Ant. 20.9.1: incidental mention; ‘casual, non-laudatory phrasing… not how a Christian would write’; Carrier minority; ‘most specialists, sceptics among them’)."
+  },
+  {
+   "field": "derive[3]",
+   "from": "essay ‘quieter piece of evidence’ paragraph (Celsus charges; ‘The people with the strongest motive…’), verbatim."
+  },
+  {
+   "field": "derive[4]",
+   "from": "essay §The criteria that secure a core, embarrassment paragraph, verbatim core."
+  },
+  {
+   "field": "derive[5]",
+   "from": "essay §What this establishes, and what it does not, para 2, verbatim."
+  },
+  {
+   "field": "honestState.p1",
+   "from": "essay §The shape of the consensus, para 1 first two sentences + para 3 (‘not a confessional huddle… agree almost unanimously that he was’)."
+  },
+  {
+   "field": "honestState.fairness",
+   "from": "essay §shape of the consensus (Ehrman description + quotation) bounded by para 3’s ‘disagree about what Jesus was but agree that he was’; §witnesses outside (‘thinner… honesty requires saying so’); §‘What should be conceded is real’ (Carrier), verbatim."
+  },
+  {
+   "field": "honestState.verdict",
+   "from": "essay §‘What should be conceded’ (‘The honest verdict is that mythicism fails…’) + §What this establishes paras 1–2, verbatim with light compression."
+  },
+  {
+   "field": "order",
+   "from": "ev-m-hist_jesus.html certified syllogism P1/P2/C, shortened to the main clause of each (P2’s ‘no ancient opponent’ clause and C’s ‘to the ordinary standard of ancient history’ dropped for length; both carried in cards[1–2])."
+  },
+  {
+   "field": "props (true)",
+   "from": "page chip row (Tacitus · Paul within 25 years · met his brother · no known ancient denial) + essay multiple-attestation sentence + Conclusion (‘ordinary standard of ancient history’)."
+  },
+  {
+   "field": "props (decoys)",
+   "from": "each is explicitly denied in the essay: ‘does not show that he was the Son of God’; ‘the case for Jesus’s existence does not rest on this passage’ (Testimonium); ‘some scholars suspect Tacitus may be relaying what Christians of his own day reported’; Carrier ‘holds a Ph.D. in ancient history… a credentialed, peer-reviewed defense of the position’; Paul’s letters ‘presuppose the story of Jesus rather than retell it’."
+  },
+  {
+   "field": "cards[0–1]",
+   "from": "certified syllogism P1/P2 + page certified Precision checks for each premise."
+  },
+  {
+   "field": "cards[2]",
+   "from": "certified conclusion + essay §What this establishes para 2."
+  },
+  {
+   "field": "cards[3]",
+   "from": "essay §Paul para 2 (persecutor/no motive/could have checked; Ehrman’s ‘exceedingly strange’ point), verbatim core."
+  },
+  {
+   "field": "cards[4]",
+   "from": "essay Ant. 20.9.1 paragraph (‘called’ vs ‘the’) + interpolation reply (‘appear in every manuscript we possess’; ‘an inference from how Origen cites Josephus, not a manuscript that lacks it’); page certified objection card ‘Carrier: who was called Christ is a scribal gloss’."
+  },
+  {
+   "field": "cards[5]",
+   "from": "essay Testimonium paragraph + fn 7 (‘Origen, writing earlier and independently, is the stronger plank’). Deliberately omits Jerome/Syriac/Arabic so no wording can read as an independent-Arabic claim (retired-claims `arabic-testimonium-independent`)."
+  },
+  {
+   "field": "cards[6]",
+   "from": "page certified objection reply ‘Tacitus just repeated what Christians told him’ = essay Tacitus sentence, verbatim."
+  },
+  {
+   "field": "cards[7]",
+   "from": "existing certified card 5 + essay ‘quieter piece of evidence’ paragraph."
+  },
+  {
+   "field": "cards[8]",
+   "from": "essay §The criteria that secure a core, compressed."
+  },
+  {
+   "field": "cards[9]",
+   "from": "essay §Paul para 3 (genre reply + the earthly outline), compressed; page certified objection ‘Paul says almost nothing about the earthly Jesus’."
+  },
+  {
+   "field": "cards[10]",
+   "from": "essay Jewish War paragraph (‘a history of the revolt and the political road to it’; ‘bearing on the conflict, not bare existence’; ‘a fact about a book’s scope’), compressed. Not on the current mastery page."
+  },
+  {
+   "field": "cards[11]",
+   "from": "essay §shape of the consensus para 3 + §What this establishes (‘has granted only the floor’); final clause is an instruction derived from those sentences (see notes)."
+  },
+  {
+   "field": "obj[0]",
+   "from": "essay §Reply ‘To “no contemporary documents”’ verbatim + page certified objection reply ‘If Jesus were real, contemporary writers would mention him’ (‘What such a figure would leave…’); q compresses the page’s ‘Strongest form’ + Drill 3 opener."
+  },
+  {
+   "field": "obj[1]",
+   "from": "page certified objection ‘The Josephus passage is a Christian forgery’ (strongest form + ‘Strike the whole passage anyway’ reply) + essay Testimonium paragraph and fn 7 (Origen). The page reply’s Arabic aside is deliberately NOT carried."
+  },
+  {
+   "field": "obj[2]",
+   "from": "essay §The strongest case for the other side (Carrier statement) + reply to ‘brother of the Lord’ and to the ‘celestial Jesus’ (McGrath), verbatim core; page certified Hardest objection card."
+  },
+  {
+   "field": "obj[3]",
+   "from": "essay §Reply ‘To Price’s pagan parallels’ verbatim core; q compresses the essay’s statement of Price’s case (‘so saturated with Old Testament typology and pagan parallel that no historical residue can be recovered’) + page ‘dying-rising god’ objection."
+  },
+  {
+   "field": "unseen",
+   "from": "essay §The Gospels and the tradition behind them (‘It is worth naming one move that pushes the other way…’ through ‘…places them’), verbatim; last sentence from §The earliest witness: Paul (‘The strongest evidence is also the earliest, and it is not the Gospels… written in the 50s’). Absent from the 4 obj, every page accordion, every card and the current page."
+  },
+  {
+   "field": "explain2",
+   "from": "ev-m-hist_jesus.html certified routing line (‘The one that matters most: Carrier’s celestial-Jesus reading of Paul, including “brother of the Lord” as a cultic title’), verbatim noun phrase."
+  }
+ ],
+ "notes": "Authored/connective strings, declared: (1) derive[].q prompts and derive[].ans short answers are question scaffolding in the kalam template’s register, built from essay vocabulary (‘not the kind of thing one invents’, ‘took the bedrock fact for granted’, ‘regarded by the large majority as authentic’, ‘contesting the meaning of a real figure’, ‘a forger would smooth away’, ‘granted only the floor’) — no new claim; (2) card questions are structural framing; cards[4] and cards[10] phrase the objection as a question; (3) cards[11]’s closing ‘never present it as a concession of his divinity or resurrection’ is an instruction derived from the essay’s ‘That Jesus existed does not show that he was the Son of God… or that he rose from the dead’ and its ‘disagree about what Jesus was but agree that he was’ — drop it if a lens objects; (4) honestState.fairness’s ‘a concession about existence only, not about what Jesus was’ is our bounding gloss on Ehrman, derived from the same two essay sentences — DECLARED; (5) obj[].q phrasings compress the essay’s and page’s ‘Strongest form’ statements; obj[2].model’s opening ‘This is the best-credentialed case on the other side… deserves a real answer’ compresses the essay’s ‘best-credentialed advocate’ and ‘These arguments deserve a real answer, not a sneer’; unseen.q is our compression of the essay’s description of ‘popular mythicist writing’. GUARDRAILS: Ehrman is bounded everywhere to existence (never divinity/resurrection). ‘Virtually every competent scholar’ appears only as Ehrman’s quoted claim about EXISTENCE, which retired-claims `minimal-facts-virtually-all` explicitly allows; no minimal-facts tiering claim is made. The Arabic Testimonium is mentioned nowhere — the page’s certified Arabic aside was deliberately not ported into obj[1], and cards[5] names Origen (the independent plank) without Jerome/Syriac, so no wording can reinstate `arabic-testimonium-independent`. Carrier is stated fairly (credentialed, peer-reviewed, good faith, his cultic-title anticipation stated before it is answered); Price’s case stated in the essay’s words. Names appear only as supporting evidence or in honestState, never as a card answer. Not ported: the Pliny/Suetonius/Lucian/Mara bar Serapion paragraph (corroboration, not foundation — kept off the graded layer); Wells’s later Q concession; Casey. The Gospel-dating-to-AD-180 objection (Irenaeus, P52, Thucydides) was deliberately kept OUT of keyTerms, derive, cards and obj so it can serve as the unseen Gold-gate objection (it is not on the current mastery page at all); the Jewish War silence (cards[10]) is also new to the mastery layer but is used as a card, not the unseen. || 2026-10-11 gate R1: keyTerms[2] no longer has Josephus attest Pilate (James notice only); Carrier's gloss reply met; Paul's earthly Jesus restored; Mettinger led by the decisive point, not the concession; Origen dated. || 2026-10-12 gate R2 residue: cards[0] Limit rebuilt (essay §The witnesses outside the church + Testimonium + Ant. 20.9.1): the Pilate datum is Tacitus's; Josephus's undisputed contribution is the James notice."
+}

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- content-review: {"argument": "2026-07-29", "orthodoxy": "2026-07-29", "by": "2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md."} -->
+<!-- content-review: {"argument":"2026-10-15", "orthodoxy":"2026-10-15", "by": "2026-10-11 CONVERSION TO THE BRONZE/SILVER/GOLD STANDARD (tools/mastery-convert.mjs from docs/mastery-ports/canon.json; Phase 2 of docs/MASTERY_ROLLOUT_GUIDE_2026-10-11.md). Added: key terms, what-follows rows, honest state, Bronze checkpoint (ORDER/PROPS), 12 cards, 4 cold objections, unseen-objection Gold gate, three Explain levels. Kept verbatim: summary, syllogism, premise-defence cards, objection accordions, Touch the originals, ARG_PREMISES, checks, Drill 3. Every new string PORTED from the paired essay / this page (see the port file's ledger). 2026-10-15 FOUR-LENS GATE COMPLETE (Biblical Reliability tab, Phase 2 of docs/MASTERY_ROLLOUT_GUIDE_2026-10-11.md). Rounds 1-3 via READ-ONLY Explore agents (Opus), md5-checked before/after every round and git status/log verified unchanged (write-access hazard rule). Round 1 (14 reports): 0 HERESY, 4 compression BREAKs + ~40 WEAKs, all applied to the ports in one merged pass. Round 2 (16 reports, all four lenses x 11 pages): orthodoxy 11/11 CLEAN (0 HERESY, 0 DRIFT); every NEW layer (keyTerms/derive/honestState/order/props/12 cards/4 obj/unseen/explain2) certified sound; the residue was localized KEPT-LAYER TWINS (stale pre-fix wording still printed beside the fixed NEW-layer string) plus one NEW-layer Bronze-decoy-verb fix, applied in one merged pass (port fields via assert-guarded script + reconvert; kept-layer via kept_patch_br.py). Round 3 (4 narrow lenses) confirmed every residue edit landed and introduced no new defect. The port rule held: every authored/attributed string was declared and scrutinised, every verbatim essay port survived. Preservation/corroboration is kept apart from truth on every surface; denominational neutrality kept (no deuterocanon verdict on canon, no end-times scheme on prophecy); Bauckham cited as a historian only, with his live critics named. Pre-existing kept-page/essay items logged to docs/content-backlog.md BR-RB-1..8 (rule 9, not bundled; BR-RB-1 is an owner call). Standing rule added this tab: every Bronze decoy carries a verb on the argument (a bare proposition graded false reads as the site denying the proposition itself). Automated gate only; pastoral/elder sign-off still _pending_ site-wide per docs/STATEMENT_OF_FAITH.md. || 2026-10-09 PREMISE-DEFENCE REBUILD, Biblical-reliability tab (owner-directed: run the God's Existence mastery-page update on the rest of the tabs). The single thin Defending-the-premises card replaced with Kalam-standard cards, one per premise: precision check, supports with strength pills + honest limits, the objections that bite on that premise with replies, The room. Drafted by write-restricted agents as PORTS from the certified paired essay (canonical link) + the old certified card, with per-paragraph port ledgers; applied by assert-guarded script. FULL FOUR-LENS GATE via READ-ONLY Explore agents (citations port-check, argument, neutrality, orthodoxy incl. clarifier verdict), md5-checked before/after every round. ROUND 1: 0 HERESY, 0 BREAK; one orthodoxy DRIFT (prophecy: an Isaiah 7 sentence conceded the critic's reading unanswered; deleted) and WEAK findings (pills above the essay, dropped qualifiers, one-sided statement of the Jewish readings of Isaiah 53 / Psalm 22:16, the Mill/Collins/Bentley date error, an unverifiable Athanasius quote DELETED rather than shipped) fixed in essay-verbatim or gate-supplied wording. ROUND 2 confirmation: fix-introduced WEAKs (consistency: a sentence moved into the wrong reply; jewishness: \"this essay\" left on the card; prophecy: the Isaiah 53 kings verdict left without its reason) fixed by essay ports or deletion. ROUND 3 targeted confirmation of every round-2 hunk. Preservation is kept apart from truth; no \"word for word\"/\"virtually identical\"; Stoner odds retired; canon neutrality kept. Out-of-scope items logged to docs/content-backlog.md MPD-4, not bundled (rule 9). Automated gate only; pastoral sign-off still _pending_ site-wide. || PRIOR: 2026-09-29/10-01 OVER-CHARITY + FACT-CHECK SWEEP of the Biblical Reliability mastery pages (owner-directed). Read-only Explore gates, md5-checked: round-1 review of all nine layers with the GRADED layers first (ARG_PREMISES rubric, flashcard deck, mock-scorer checks regexes, drill model answers) against the certified essay (185d2045) and certified ev-s4 card; round-1 fixes as assert-guarded scripts tested on scratch copies and applied byte-identical; four-lens confirmation gate; round-2 fixes; narrow final gate; its supplied wording applied verbatim and confirmed by two further narrow read-only passes - all four lenses STAMPABLE, 0 HERESY. Known structural debt (logged in docs/BIBLICAL_RELIABILITY_SWEEP_BACKLOG_2026-09-29.md): ev-m-consistency argues unity-to-Author, which library/consistency.html does not argue. Every essay correction propagated into the graded layers (a rubric or regex that rewarded a retired or overclaimed answer, or penalised the corrected one, was a BREAK); every changed checks regex tested with node against an essay-faithful answer (must match) and a retired/overclaimed answer (must not); inline script parses (tests/inline-script-syntax). Over-charity removed, consensus claims bounded, objections answered with landed bounded verdicts, resurrection pointer added. NOT RUN: native pastoral sign-off (site-wide pending). PRIOR: 2026-08-10 re-stamp (crisis rendering only): renderCrisis() added to scoreExplain() so a crisis referral from /api/tutor is displayed instead of being discarded — the catch previously called renderMockScore(txt) on the user's OWN words, returning a fabricated score out of 10 and 'Have another go with the structure in mind' with no referral at all. apologia-orthodoxy round 3 CLEAN + STAMPABLE: verified present and identical on all 67 pages; its only user-visible string, 'Stepping out of the exercise', carries no doctrinal claim and does not cast the tool as a companion; verified it clears the score, adds no /10, leaves state.explainScore/explainPass untouched and never calls updateDial(), so a crisis disclosure is neither scored nor recorded as mastery progress. No argument content changed. PRIOR: 2026-07-28/29 full-corpus gate of all 63 ungated mastery pages: apologia-argument x63, apologia-orthodoxy x63. 0 HERESY. ~133 BREAK and 37 CONCERN findings fixed across four rounds and re-gated against the current text; the confirmation pass certified this page CLEAN. The fix pass explicitly diffed ARG_PREMISES (the rubric POSTed to /api/tutor and rendered into the share-card PNG), the `cards` flashcard deck and the mock-scorer `checks` against the paired essay resolved by <link rel=\"canonical\"> - those compressed layers are where the certified position had been reversed, and no prose review reads them. AUTOMATED GATE, not pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the human reviewer as pending. Queue: docs/MASTERY_PAGE_AUDIT.md.", "citations":"2026-10-15", "neutrality":"2026-10-15"} -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>How Was the Bible's Canon Decided? | Apologia Daily</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
 :root{
   --n:#050d1a; --n8:#0a1628; --n7:#0f2040; --n5:#1e4278; --n3:#4a7ab5;
@@ -211,8 +209,48 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 .seo-summary p:last-child{margin-bottom:0}
 .hero{padding-bottom:48px}
 .seo-summary + .dialcard{margin-top:24px}
+
+/* ---- Bronze/Silver/Gold template styles (added by tools/mastery-convert.mjs) ---- */
+/* ---------- mastery levels (Bronze / Silver / Gold) ---------- */
+.levels{display:grid;gap:10px;margin-top:4px;width:100%}
+.lvl{display:grid;grid-template-columns:42px 1fr auto;gap:14px;align-items:center;border:1px solid var(--border);border-radius:11px;padding:13px 16px;background:var(--w);transition:.2s}
+.lvl .medal{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;background:#eef0f3;filter:grayscale(1);opacity:.45}
+.lvl.earned{border-color:#cfe6da;background:var(--okl)}
+.lvl.earned .medal{filter:none;opacity:1;background:#fff}
+.lvl .lt b{font-family:var(--fd);font-size:16px;display:block;color:var(--td)}
+.lvl .lt span{font-family:var(--ui);font-size:12.5px;color:var(--tm)}
+.lvl .ls{font-family:var(--ui);font-size:12px;font-weight:600;color:var(--tm);text-align:right;white-space:nowrap}
+.lvl.earned .ls{color:var(--ok)}
+.lvl.current{border-color:var(--g);box-shadow:0 0 0 1px var(--g) inset}
+/* ---------- key-terms glossary (pretraining) ---------- */
+.glossary{display:grid;gap:0;margin-top:6px}
+.gt{display:grid;grid-template-columns:168px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--border);font-family:var(--ui)}
+.gt:last-child{border-bottom:none}
+.gt b{font-size:14px;color:var(--td)}
+.gt b em{color:var(--gd);font-style:italic}
+.gt span{font-size:13.5px;color:var(--tm);line-height:1.5}
+.honest{font-family:var(--ui);font-size:13.5px;color:var(--td);background:#fbf8f0;border-left:3px solid var(--g);padding:9px 13px;border-radius:0 8px 8px 0;margin-top:6px}
+.honest b{color:var(--gd)}
+/* ---------- reveal-on-reason drills (derive the cause / source match) ---------- */
+.derive{display:grid;gap:10px;margin-top:10px}
+.dr{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:var(--ow);border:1px solid var(--border);border-radius:10px;padding:12px 15px}
+.dr .q{font-size:15px;font-family:var(--ss)}
+.dr .q em{color:var(--n5);font-style:italic}
+.dr .rev{font-family:var(--ui);font-size:12.5px;font-weight:600;color:var(--n5);background:#fff;border:1px solid #cfdcee;border-radius:7px;padding:6px 12px;cursor:pointer;white-space:nowrap}
+.dr .rev:hover{background:#f3f7fc}
+.dr .ans{display:none;font-family:var(--ui);font-weight:700;font-size:14px;color:var(--gd);white-space:nowrap}
+.dr.shown .rev{display:none}
+.dr.shown .ans{display:inline}
+/* ---------- retrieval gate (reconstruct before credit) ---------- */
+.recall{background:var(--w);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-top:14px}
+.recall .q{font-family:var(--ui);font-size:14.5px;font-weight:600;color:var(--td);margin-bottom:10px}
+.gradeline{font-family:var(--ui);font-size:13.5px;font-weight:600;margin-top:12px;display:none}
+.gradeline.show{display:block}
+.gradeline.pass{color:var(--ok)}
+.gradeline.fail{color:var(--gd)}
 </style>
   <link rel="stylesheet" href="/ad-nav.css">
+  <link rel="stylesheet" href="/library/mastery-ui.css?v=20261009b">
   <meta name="description" content="Who chose the books of the Bible, and why? How the New Testament canon formed - not by a council vote, but by early, widespread recognition.">
   <link rel="canonical" href="https://apologiadaily.com/library/canon.html">
   <meta property="og:type" content="article">
@@ -247,7 +285,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
             <div class="adn-mega-col">
               <div class="adn-mega-h">Go deeper</div>
               <a class="adn-mi" href="/library/"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Deep-Dive Essays</span><span class="adn-mi-dc">Long-form, fully-cited essays.</span></span></a>
-              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Answers</span><span class="adn-mi-dc">The questions people ask most.</span></span></a>
+              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Common Questions</span><span class="adn-mi-dc">Short answers to the questions people ask most.</span></span></a>
               <a class="adn-mi" href="/sources.html"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Church Fathers &amp; Creeds</span><span class="adn-mi-dc">The early church in its own words, verified.</span></span></a>
               <a class="adn-mi" href="/our-sources.html"><span class="adn-mi-ic">&#128218;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Our Sources</span><span class="adn-mi-dc">Books and articles our essays cite.</span></span></a>
               <a class="adn-mi" href="/whats-new.html"><span class="adn-mi-ic">&#128240;</span><span class="adn-mi-tx"><span class="adn-mi-nm">What&#39;s New</span><span class="adn-mi-dc">Latest essays, features &amp; reels.</span></span></a>
@@ -258,11 +296,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
               <a class="adn-mi" href="/games.html"><span class="adn-mi-ic">&#127918;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Games</span><span class="adn-mi-dc">Quizzes that feed your streak.</span></span></a>
               <a class="adn-mi" href="/study-groups.html"><span class="adn-mi-ic">&#128101;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Study Groups <span class="adn-mi-tag">New</span></span><span class="adn-mi-dc">Study with people you love.</span></span></a>
               <a class="adn-mi" href="/reading-club.html"><span class="adn-mi-ic">&#128214;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Reading Clubs</span><span class="adn-mi-dc">The classics, chapter by chapter.</span></span></a>
-              <a class="adn-mi" href="/conversation-journal.html"><span class="adn-mi-ic">&#128221;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Conversation Journal</span><span class="adn-mi-dc">Log real conversations, get AI coaching.</span></span></a>
             </div>
             <div class="adn-mega-col">
               <div class="adn-mega-h">For you</div>
-              <a class="adn-mi" href="/parents.html"><span class="adn-mi-ic">&#128106;</span><span class="adn-mi-tx"><span class="adn-mi-nm">For Parents</span><span class="adn-mi-dc">Your kids&#39; hardest questions.</span></span></a>
               <a class="adn-mi" href="/video-library.html"><span class="adn-mi-ic">&#127909;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Videos</span><span class="adn-mi-dc">Short, shareable explainers.</span></span></a>
             </div>
             <div class="adn-mega-foot">
@@ -310,9 +346,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
   <!-- public, search-indexable summary (always visible) -->
   <section class="seo-summary">
     <h2>The argument in brief</h2>
-    <p>Who decided what books are in the Bible — and did the church just pick them at a council? The argument is that the church <em>recognized</em> a set of writings that already carried authority rather than <em>creating</em> their authority by a vote. The historical evidence shows the core books were received, copied and cited as Scripture long before any council ratified a list, so the canon reflects the books' inherent authority, not a late ecclesiastical invention.</p>
-    <p>The timeline bears this out. The Muratorian Fragment (c. 170) already lists most of the New Testament; Irenaeus around 180 treats the four Gospels as fixed and indispensable; Paul's letters circulated as a collection within the first century. A common myth holds the canon was chosen at the Council of Nicaea in 325 — but Nicaea addressed the deity of Christ and never voted on books at all. When councils such as Hippo (393) and Carthage (397) affirmed lists, they ratified a consensus already in place for generations. The fathers tested candidates against principled criteria: apostolic origin, orthodox teaching and widespread use.</p>
-    <p>The honest scope: a handful of books at the margins (Hebrews, James, 2 Peter, Revelation) were genuinely disputed for a time — evidence of careful sifting, not rubber-stamping — and Catholics, Orthodox and Protestants still differ over the Old Testament books Catholics and the Orthodox call deuterocanonical and Protestants call the Apocrypha. But on the 27-book New Testament these traditions are unanimous, a convergence best explained by recognition of genuine authority.</p>
+    <p>Who decided what books are in the Bible — and did the church just pick them at a council? The argument is that the church <em>recognized</em> a set of writings that already carried authority rather than <em>creating</em> their authority by a vote. The historical evidence shows the core books were received, copied and cited as Scripture long before any council ratified a list, so the canon reflects something the church found rather than something it manufactured, not a late ecclesiastical invention.</p>
+    <p>The timeline bears this out. The Muratorian Fragment (late-second-century on the majority dating, though a minority redates it to the fourth century) already lists most of the New Testament; Irenaeus around 180 treats the four Gospels as fixed and indispensable; Paul's letters were already being collected and exchanged within the first century. A common myth holds the canon was chosen at the Council of Nicaea in 325 — but Nicaea addressed the deity of Christ and never voted on books at all. When councils such as Hippo (393) and Carthage (397) affirmed lists, they ratified a consensus already in place for generations. The fathers tested candidates against principled criteria: apostolic origin, orthodox teaching and widespread use.</p>
+    <p>The honest scope: a handful of books at the margins (Hebrews, James, 2 Peter, Revelation) were genuinely disputed for a time — evidence of careful sifting, not rubber-stamping — and Catholics, Orthodox and Protestants still differ over the extent of the Old Testament. But on the 27-book New Testament these traditions are unanimous, a convergence that fits recognition far better than invention. Recognizing the canon is not proving it inspired; that turns on further grounds — above all, whether Jesus rose from the dead.</p>
   </section>
 
   <!-- mastery dial -->
@@ -326,63 +362,159 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     </div>
     <div class="dialmeta">
       <h2>Your mastery of this argument</h2>
-      <p>Four checkpoints: understand it, explain it, drill it, defend it. Complete them in any order — your progress saves to your account.</p>
+      <p>Three earned levels — <b>Bronze</b> (rebuild it), <b>Silver</b> (defend it cold), <b>Gold</b> (handle an objection you&rsquo;ve never seen, then prove it again weeks later). Clicking through no longer counts; demonstrated recall does. Progress saves to your account.</p>
       <span class="libnote">◆ &nbsp;Argument 4 of 19 in the mastery library</span>
     </div>
+  </div>
+
+  
+  <div class="levels" id="levels">
+    <div class="lvl" id="lvl-bronze"><div class="medal">&#129353;</div><div class="lt"><b>Bronze · Understand</b><span>Rebuild the syllogism and what the argument establishes, from memory (&ge;80%)</span></div><div class="ls">Locked</div></div>
+    <div class="lvl" id="lvl-silver"><div class="medal">&#129352;</div><div class="lt"><b>Silver · Defend</b><span>Explain it &ge;8/10 <em>and</em> field its objections cold</span></div><div class="ls">Locked</div></div>
+    <div class="lvl" id="lvl-gold"><div class="medal">&#129351;</div><div class="lt"><b>Gold · Master</b><span>Answer an unseen objection, pick the right argument from a mixed set, then re-prove it on 3 spaced reviews</span></div><div class="ls">Locked</div></div>
   </div>
 
   <!-- ===================== PHASE 1: UNDERSTAND ===================== -->
   <section id="understand">
     <div class="phasehead"><span class="phasenum">1</span><h3>Understand it</h3></div>
-    <p class="phasesub">Not more prose — the load-bearing structure. See the skeleton, then learn to defend each bone.</p>
+    <p class="phasesub">Not more prose — the load-bearing structure, defended bone by bone, then proven from memory. Work top to bottom; the checkpoint at the end asks you to rebuild it with nothing in front of you.</p>
+
+    <div class="card">
+      <span class="kick">Before you start · key terms</span>
+      <h4>Eight words this argument leans on</h4>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:6px">Learn these first — the objections below turn on them, and most weak versions of the argument come from blurring one of them.</p>
+      <div class="glossary">
+        <div class="gt"><b>Canon (kanōn)</b><span>“Canon” comes from the Greek kanōn, a measuring reed or rule — a standard. To speak of the biblical canon is to speak of the list of books the church received as the rule of its faith.</span></div>
+        <div class="gt"><b>Recognition, not creation</b><span>The canon was not decided at a moment; it emerged over centuries. The better way to describe what the church did is not that it created a canon but that it gradually recognized one — sifting the writings already circulating under its hand, testing them against criteria, and slowly arriving at a list.</span></div>
+        <div class="gt"><b>The three criteria</b><span>Apostolicity, the first and most important: did the writing come from an apostle or a close associate of one? Orthodoxy, the “rule of faith”: was the book consonant with the teaching the churches had received? Catholicity, or widespread use: was it received and read across the scattered churches, not just prized by one faction in one region?</span></div>
+        <div class="gt"><b>The rule of faith (regula fidei)</b><span>A short summary of the apostolic preaching, handed down in the churches and attested independently of any list: Irenaeus sets it out around AD 180, and a little later Tertullian names it the regula fidei. These summaries do not name which books belong in the canon.</span></div>
+        <div class="gt"><b>Recognized, disputed, spurious</b><span>In the early fourth century — and crucially, before Nicaea — Eusebius sorts the writings into the “recognized” (homologoumena), the “disputed” (antilegomena), and the “spurious” (notha). A careful sorting by inherited usage was already underway before Constantine’s council met.</span></div>
+        <div class="gt"><b>The Muratorian Fragment</b><span>An anonymous list that names most of the books we know — the oldest surviving canon list. It is mutilated at both ends, accepts the Wisdom of Solomon and, with hesitation, the Apocalypse of Peter, and omits Hebrews, James, and 1–2 Peter. Its date is debated: late-second-century (roughly AD 170–200) is the majority view; a minority argues for the fourth century.</span></div>
+        <div class="gt"><b>The 39th Festal Letter</b><span>Athanasius’s Easter letter of 367 is the first surviving list that matches our twenty-seven New Testament books exactly; he calls them “fountains of salvation.” He writes as one recording a settled deposit, not legislating a new one.</span></div>
+        <div class="gt"><b>Deuterocanonical / Apocrypha</b><span>Catholic and Orthodox Bibles include a set of Old Testament books and additions — Tobit, Judith, Wisdom, Sirach, Baruch, 1 and 2 Maccabees, and parts of Daniel and Esther — that they call deuterocanonical (“second canon”) and that Protestants call the Apocrypha and place outside the canon (Orthodox canons are broader still). Both traditions can point to early precedent; it is a real and reasonable disagreement that this argument does not adjudicate.</span></div>
+      </div>
+    </div>
 
     <div class="card">
       <span class="kick">The argument, formally</span>
       <h4>Three lines. The whole weight rests on the two premises.</h4>
       <div class="syllogism">
-        <div class="prem"><div class="tag">P1</div><p>If the church <b>recognized</b> a fixed set of writings as Scripture rather than <b>creating</b> their authority by vote, then the canon reflects the books' inherent authority.</p></div>
+        <div class="prem"><div class="tag">P1</div><p>If the church <b>recognized</b> a fixed set of writings as Scripture rather than <b>creating</b> their authority by vote, then the canon reflects something the church found rather than something it manufactured.</p></div>
         <div class="prem"><div class="tag">P2</div><p>The historical evidence shows the core books were <b>received and used as authoritative</b> long before any council ratified a list.</p></div>
-        <div class="prem concl"><div class="tag">∴ C</div><p>Therefore, the canon is a <b>recognition</b> of books that already carried divine authority, not a late ecclesiastical invention.</p></div>
+        <div class="prem concl"><div class="tag">∴ C</div><p>Therefore, the canon is a <b>recognition</b> of books the churches already received as authoritative, not a late ecclesiastical invention. (That it was recognized is a historical claim; that it is inspired is a further argument, which turns above all on whether Jesus rose from the dead.)</p></div>
       </div>
       <p class="formnote">The logic is valid — if both premises are true, the conclusion follows. So objections come in two families: attacks on P1 or P2, and attacks on the further step from the conclusion to what it is taken to show. Knowing <em>which premise</em> an objection targets is half the battle.</p>
 
       <span class="kick" style="margin-top:22px">Then the conceptual step — what criteria did the church actually use?</span>
       <p style="font-size:15px;color:var(--tm);font-family:var(--ui)">The fathers did not vote on which books they liked; they tested candidates against settled marks of authenticity. Those marks reveal a process of <em>discovery</em>, not fabrication.</p>
       <div class="chiprow">
-        <span class="chip">apostolic origin</span><span class="chip">orthodoxy of doctrine</span><span class="chip">universal usage</span>
+        <span class="chip">apostolic origin</span><span class="chip">orthodoxy of doctrine</span><span class="chip">widespread use</span>
         <span class="chip">antiquity</span><span class="chip">public reading in worship</span><span class="chip">read as Scripture already</span>
         <span class="chip gold">and recognized, not created</span>
       </div>
     </div>
 
     <div class="card">
-      <span class="kick">Defending the premises</span>
-      <h4>Why each premise is more plausible than its denial</h4>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P1 — recognition, not creation</summary>
-        <div class="body">
-          <p class="lbl steel">The fathers' own language</p>
-          <p>Athanasius' Festal Letter of 367 lists the 27 New Testament books as those "handed down and believed to be divine" — describing a received deposit, not a committee's choice. Councils like Hippo (393) and Carthage (397) ratified what was already in use; they did not legislate it into being.</p>
-          <p class="lbl steel">The criteria were principled</p>
-          <p>Apostolicity, orthodoxy, and catholicity functioned as tests of a book's authentic origin, not preferences. A community searching for authentic apostolic writings is behaving like someone discovering a fact, not inventing one.</p>
-        </div>
-      </details>
-      <details class="acc">
-        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Support for P2 — early and widespread reception</summary>
-        <div class="body">
-          <p class="lbl steel">A functioning core before any council</p>
-          <p>The Muratorian Fragment (c. 170) already lists most of the New Testament. Irenaeus (c. 180) treats the four Gospels as fixed and indispensable. Paul's letters circulated as a collection within the first century, and 2 Peter 3:16 already calls them "Scripture."</p>
-          <p class="lbl steel">Citation as Scripture, not debate over it</p>
-          <p>The earliest fathers quote the core books the way they quote the Old Testament — as binding authority — generations before the disputed antilegomena were settled. The fringe was contested; the center never was.</p>
-        </div>
-      </details>
+      <span class="kick">What follows — and what doesn&rsquo;t</span>
+      <h4>Don&rsquo;t read the conclusion — reason to it</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:4px">Working only from what the argument has established: what does each piece of evidence rule out, and how far does the inference reach? Reason each line out, then reveal.</p>
+      <div class="derive">
+        <div class="dr"><div class="q">Eusebius sorts the books into recognized, disputed and spurious before Nicaea ever meets — so the council…?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">did not create the canon; the sorting already existed</span><span class="why">The Council of Nicaea did not vote on the canon, did not discuss the canon, and left no record of anyone raising the subject; its business was the relationship of Christ to the Father in the Arian controversy. Eusebius’s snapshot is the decisive evidence against the conspiracy story: a careful sorting by inherited usage was already underway before Constantine’s council met.</span></div>
+        <div class="dr"><div class="q">Around AD 180 Irenaeus treats any number of Gospels other than four as self-evidently absurd — so by then…?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">a fourfold Gospel was already an established fact</span><span class="why">His comparison of the Gospels to the four zones of the world and the four winds is a strange-sounding argument to modern ears, but it only works if a fourfold Gospel was already an established fact his readers would not dispute. Irenaeus is the earliest surviving witness to treat all four canonical Gospels as a fixed and necessary set.</span></div>
+        <div class="dr"><div class="q">The canonical four date to the first century; Thomas, Peter and Judas, as we have them, to the second or later — so the rival gospels were excluded…?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">rightly set aside: as we have them, too late to be apostolic</span><span class="why">The decisive point is chronology, not theology. These works were written generations after the apostles whose names they borrow, and often betray that lateness in their developed Gnostic theology. The exclusion was not, at root, the silencing of equally ancient witnesses; it was the recognition that the late pseudonymous works were exactly that.</span></div>
+        <div class="dr"><div class="q">The church kept Revelation, Hebrews and 2 Peter through long doubt — so its criteria…?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">had teeth; the process was not results-driven</span><span class="why">The church kept books it would have found convenient to drop: Revelation was doubted by serious orthodox figures for centuries yet retained; Hebrews was kept despite its anonymity; 2 Peter survived a long shadow of doubt. A purely results-driven process would have been tidier than the messy, hesitant one the sources actually record.</span></div>
+        <div class="dr"><div class="q">The rule of faith is attested around AD 180 and names no books — so the orthodoxy criterion…?</div><button class="rev" type="button" onclick="this.closest('.dr').classList.add('shown')">Reveal</button><span class="ans">was not reverse-engineered from a list of books</span><span class="why">The rule of faith was a short summary of the apostolic preaching, attested independently of any list, so the standard did not depend on the list. That answers one form of the circularity charge; it does not prove the criterion infallible, and it does not by itself show that the summary faithfully preserves what the apostles taught — that is a further historical question.</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="kick">Defending Premise 1</span>
+      <h4>If the church <em>recognized</em> a fixed set of writings as Scripture rather than <em>creating</em> their authority by vote, then the canon reflects something the church found rather than something it manufactured</h4>
+      <p class="precise">Precision check: two things must be distinguished from the start. The <em>historical</em> question&mdash;how the canon was formed&mdash;is the question the evidence can actually settle; the <em>theological</em> question&mdash;whether the books in that canon are in fact inspired and true&mdash;is a different argument, resting on different grounds. The premise claims that the canon was found rather than manufactured; it does not claim that recognition proves the contents inspired. The honest apologetic gain is narrower: it dismantles the conspiracy story, and shows the canon to be the fruit of a discriminating, centuries-long reception rather than a fourth-century political fiat.</p>
+
+      <div class="support">
+        <div class="sh"><b>The fathers&rsquo; own language</b> <span class="stp sugg">Supporting</span></div>
+        <p>The first surviving list that matches our twenty-seven exactly comes in 367, in the 39th Festal Letter of Athanasius, bishop of Alexandria&mdash;an annual Easter letter in which he enumerates the books and calls them &ldquo;fountains of salvation,&rdquo; warning, &ldquo;let no man add to these, neither let him take ought from these.&rdquo; The language is telling: Athanasius writes as one recording a settled deposit, not legislating a new one.</p>
+        <p>Finally, the regional Councils of Hippo (393) and Carthage (397) listed and affirmed the canon for the churches of North Africa. By then the core had been read as Scripture for the better part of three centuries. The councils did not vote books into existence; they ratified a consensus long since reached.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>The criteria were principled, not arbitrary</b> <span class="stp strong">The core warrant</span></div>
+        <p>The heart of the &ldquo;recognition&rdquo; case is that the church was not choosing favorites but applying tests. Three criteria recur in the sources. The first and most important was <strong>apostolicity</strong>: did the writing come from an apostle or a close associate of one, and so trace back to the founding generation? The second was <strong>orthodoxy</strong>, or what the fathers called the &ldquo;rule of faith&rdquo;: was the book consonant with the teaching the churches had received? The third was <strong>catholicity</strong>, or widespread use: was the book received and read across the scattered churches, not just prized by one faction in one region?</p>
+        <p>These criteria behave like the marks of a discovery, not an invention. A community that asks &ldquo;is this writing genuinely apostolic, and has it been received everywhere?&rdquo; is acting like someone trying to find out a fact, not like someone free to decide one.</p>
+        <p class="honest"><b>Honest limit:</b> the Edinburgh-trained scholar Michael J. Kruger argues that the canon is in this sense &ldquo;self-authenticating,&rdquo; but his model is developed within the Reformed tradition; Catholic and Orthodox Christians also hold that the church recognized rather than created the canon, but locate that recognition in the church&rsquo;s authoritative judgment&mdash;a difference this page does not adjudicate. One need not adopt any of these theological models to grant the historical point underneath them: the church behaved as though it were measuring candidates against a standard it did not feel free to invent.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>The rule of faith was not drawn up to fit a list</b> <span class="stp sugg">Bounded</span></div>
+        <p>The rule of faith was a short summary of the apostolic preaching, handed down in the churches, and it is attested independently of any list. Around AD 180 Irenaeus sets it out&mdash;one God the Father Almighty, one Christ Jesus the Son of God &ldquo;who became incarnate for our salvation,&rdquo; and the Holy Spirit&mdash;as the faith the church &ldquo;has received from the apostles and their disciples&rdquo; (<em>Against Heresies</em> 1.10.1), and he says that many nations of barbarian believers hold it &ldquo;without paper or ink,&rdquo; &ldquo;in the absence of written documents&rdquo; (3.4.2). A little later Tertullian names it the <em>regula fidei</em>, the &ldquo;rule of faith,&rdquo; and states its content in the same creedal shape. Either way, the standard did not depend on the list, and these summaries do not name which books belong in the canon.</p>
+        <p class="honest"><b>Honest limit:</b> that answers one form of the charge&mdash;that the criterion was reverse-engineered from a predetermined list. It does not answer the deeper form&mdash;that the rule itself was simply the winning party&rsquo;s view: the argument does not prove the criterion infallible, and it does not by itself show that the summary faithfully preserves what the apostles taught; that is a further historical question.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>What the church refused</b> <span class="stp sugg">Bounded</span></div>
+        <p>Around AD 200, Serapion, bishop of Antioch, found the congregation at Rhossus divided over a book circulating as the Gospel of Peter; when he later obtained a copy and read it through, he found much in it &ldquo;in accordance with the true doctrine of the Saviour, but some things added to that doctrine,&rdquo; and wrote to refute it, stating the principle he was applying: &ldquo;we receive both Peter and the other apostles as Christ; but we reject intelligently the writings falsely ascribed to them, knowing that such were not handed down to us.&rdquo; At about the same time Tertullian reports that the presbyter in Asia who composed the <em>Acts of Paul</em> was convicted, confessed that he had written it &ldquo;from love of Paul,&rdquo; and was removed from his office. Neither a pious motive nor a congregation&rsquo;s attachment was allowed to settle the question.</p>
+        <p class="honest"><b>Honest limit:</b> a critic can fairly point out that Serapion&rsquo;s verdict was partly doctrinal&mdash;the very criterion the circularity charge targets; but his stated ground was also one of provenance, a book &ldquo;not handed down to us,&rdquo; and he reached his verdict by obtaining and reading the text, not by reflex. These episodes show that the church tested books for apostolic origin and orthodoxy and was willing to reject even one already in use; they do not by themselves prove that every judgment it made was right.</p>
+      </div>
+
+      <div class="objin">
+        <div class="ol">Objection &mdash; &ldquo;The church just picked the books at Nicaea&rdquo;</div>
+        <p>The canon was decided by a council of bishops in the fourth century&mdash;power and politics chose your Bible, so its authority is man-made. In Dan Brown&rsquo;s <em>The Da Vinci Code</em>, a character claims that the Bible was collated by the pagan Roman emperor Constantine the Great, and that Jesus&rsquo;s divinity itself was settled at the Council of Nicaea in 325 by &ldquo;a relatively close vote.&rdquo;</p>
+        <div class="rl">Reply</div>
+        <p>Almost every detail of that story is false. The Council of Nicaea did not vote on the canon, did not discuss the canon, and left no record of anyone raising the subject; its business was the relationship of Christ to the Father in the Arian controversy. The canon was not decided at a moment; it emerged over centuries. The better way to describe what the church did is not that it <em>created</em> a canon but that it gradually <em>recognized</em> one. Constantine selected nothing: the four-Gospel core was already functioning as Scripture generations before he was born. And the character&rsquo;s claim that the early church weighed &ldquo;more than eighty gospels&rdquo; is mistaken as well: scholars who actually catalogue the surviving gospel and gospel-like writings count only a few dozen&mdash;on the order of forty known titles, many of them preserved merely as names or in scraps.</p>
+      </div>
+      <div class="objin">
+        <div class="ol">Objection &mdash; Ehrman: the orthodoxy criterion is circular, and apostolicity was enforced on judgments critics reject <span class="badge hard" style="margin-left:6px">Hardest</span></div>
+        <p>The criterion of orthodoxy, a critic will say, is circular: a book counted as orthodox if it agreed with the views of the group doing the judging, so &ldquo;testing against the rule of faith&rdquo; just means &ldquo;keeping the books that already agree with us.&rdquo; And the criterion of apostolicity was applied inconsistently&mdash;Hebrews was kept despite uncertain authorship, while other early texts were excluded. Ehrman would press further: you keep appealing to &ldquo;apostolic origin,&rdquo; but several of your own canonical books are pseudonymous by the judgment of most critical scholars&mdash;the Pastoral Epistles, 2 Peter, perhaps Ephesians&mdash;so the church enforced a criterion it could not actually verify and sometimes got wrong.</p>
+        <div class="rl">Reply</div>
+        <p>The reply is to grant the possibility of abuse while showing that it did not decide the outcome. Yes, &ldquo;agrees with the rule of faith&rdquo; could in principle be used to launder a predetermined result. But the rule of faith was not drawn up to fit a list of books, and the criteria worked together and constrained one another. Apostolicity and catholicity ask <em>when</em> a book was written and <em>where</em> it was received, questions the judges were trying to get right on historical grounds, even where their tools sometimes failed. The proof that the criteria had teeth is that the church kept books it would have found convenient to drop. Revelation was doubted by serious orthodox figures for centuries yet retained; Hebrews was kept despite its anonymity; 2 Peter survived a long shadow of doubt. A purely results-driven process would have been tidier than the messy, hesitant one the sources actually record.</p>
+        <p>On authorship, the church&rsquo;s judgments were made with the limited tools of antiquity and are regarded as insecure by many modern critics&mdash;though those judgments are themselves contested by other scholars, evangelical and Catholic, and the argument here does not turn on any single attribution being correct. The reply is bounded but real: even granting disputed authorship for a few books, the argument requires only that the canon was formed by a discriminating reception keyed to perceived apostolic connection and widespread use&mdash;and that is true whether or not every individual judgment about authorship would survive a modern seminar. The process was principled even on the critics&rsquo; own assumptions about authorship.</p>
+      </div>
+      <div class="whoholds"><b>The room:</b> Kruger defends the &ldquo;self-authenticating&rdquo; model from within the Reformed tradition, while Catholic and Orthodox Christians locate recognition in the church&rsquo;s authoritative judgment&mdash;a difference this page does not adjudicate. Ehrman presses the circularity and pseudonymy charges, but he has explicitly debunked the &ldquo;Constantine voted&rdquo; myth himself and affirms the basic chronology. Among historians who actually work on the canon, the popular myth has no defenders among specialists.</div>
+    </div>
+
+    <div class="card">
+      <span class="kick">Defending Premise 2</span>
+      <h4>The historical evidence shows the core books were <em>received and used as authoritative</em> long before any council ratified a list</h4>
+      <p class="precise">The second premise is where the historical record does its heaviest lifting, and it is largely uncontested. The claim concerns the <em>core</em>: what was contested were a handful of shorter or later-attested books; what was never seriously in question were the four Gospels, Acts, and the letters of Paul&mdash;precisely the doctrinal core. A skeptic and a believer surveying the second-century evidence will agree on this much: the center was fixed early, and only the margins were argued over.</p>
+
+      <div class="support">
+        <div class="sh"><b>Circulation in the first century</b> <span class="stp sugg">Early &middot; limited</span></div>
+        <p>Within the first century, Paul&rsquo;s letters were already being collected and exchanged among churches. Colossians closes with an instruction: &ldquo;And when this letter has been read among you, have it also read in the church of the Laodiceans; and see that you also read the letter from Laodicea&rdquo; (Colossians 4:16). Remarkably, 2 Peter 3:15&ndash;16 (first-century on the traditional dating, early second-century on many critical datings&mdash;early on either) refers to Paul&rsquo;s letters and groups them with &ldquo;the other Scriptures,&rdquo; an early sign that apostolic writings were being read as authoritative alongside the Old Testament.</p>
+        <p class="honest"><b>Honest limit:</b> many critical scholars doubt that Paul wrote Colossians and date it to the years or decades after his death, while others defend his authorship; on either view it is usually dated within the first century. It shows circulation, not yet a fixed collection, let alone a canon.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>Read aloud in worship</b> <span class="stp strong">Strong</span></div>
+        <p>One of the clearest early marks of that authority is liturgical: the apostolic writings were read aloud in the churches&rsquo; worship from the first generation&mdash;and, by the mid-second century, demonstrably alongside the Old Testament. The Pastoral Epistles urge attention to &ldquo;the public reading of Scripture&rdquo; (1 Timothy 4:13); and Revelation pronounces a blessing on &ldquo;the one who reads aloud the words of this prophecy&rdquo; (Revelation 1:3). By around AD 150 the practice is explicit: Justin Martyr describes the Sunday gathering, where &ldquo;the memoirs of the apostles or the writings of the prophets are read, as long as time permits&rdquo; (<em>First Apology</em> 66&ndash;67). To read a text in worship was itself a public act of recognition&mdash;to treat it as functioning Scripture.</p>
+        <p class="honest"><b>Honest limit:</b> this attests early functional authority; it does not by itself prove a <em>closed</em> canon at that date, since which books were read could still vary from region to region.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>Irenaeus and the Muratorian Fragment</b> <span class="stp strong">Strong</span></div>
+        <p>By around AD 180, the boundary around the four Gospels was firm enough that Irenaeus of Lyons could treat any deviation from exactly four as self-evidently absurd. In <em>Against Heresies</em> he insists &ldquo;it is not possible that the Gospels can be either more or fewer in number than they are&rdquo;&mdash;a strange-sounding argument to modern ears, but one that only works if a fourfold Gospel was already an established fact his readers would not dispute. Around the same period an anonymous list now called the Muratorian Fragment names most of the books we know: the four Gospels, Acts, thirteen letters of Paul, Jude, two (perhaps three) letters of John, and Revelation. The earliest fathers cite these books the way they cite the Old Testament&mdash;as authority, not as candidates under review.</p>
+        <p class="honest"><b>Honest limit:</b> the Fragment is mutilated at both ends, and it also accepts the Wisdom of Solomon and, with hesitation, the Apocalypse of Peter while omitting Hebrews, James, and 1&ndash;2 Peter. Its dating is itself debated: late-second-century is the majority view (defended by scholars like Joseph Verheyden); fourth-century is a minority view argued by Geoffrey Hahneman and Albert Sundberg.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>Eusebius&rsquo; snapshot, before Nicaea</b> <span class="stp strong">Strong</span></div>
+        <p>In the early fourth century&mdash;and crucially, <em>before</em> Nicaea&mdash;the historian Eusebius of Caesarea gives us a snapshot of where things stood. In his <em>Church History</em> (3.25) he sorts the writings into the &ldquo;recognized&rdquo; (<em>homologoumena</em>), the &ldquo;disputed&rdquo; (<em>antilegomena</em>), and the &ldquo;spurious&rdquo; (<em>notha</em>). The recognized books include the four Gospels, Acts, Paul&rsquo;s letters, 1 John, and 1 Peter; the disputed include James, Jude, 2 Peter, 2&ndash;3 John, and (with hesitation on either side) Revelation; the spurious include works like the <em>Shepherd of Hermas</em> and the <em>Apocalypse of Peter</em>. A careful sorting by inherited usage was already underway before Constantine&rsquo;s council met.</p>
+      </div>
+      <div class="support">
+        <div class="sh"><b>The disputed books, treated honestly</b> <span class="stp sugg">Contested margin</span></div>
+        <p>Honesty requires naming the books the early church genuinely doubted&mdash;the <em>antilegomena</em>, the &ldquo;spoken against.&rdquo; Hebrews was questioned in the West because its authorship was uncertain. James, 2 Peter, 2 and 3 John, and Jude were received slowly and unevenly; 2 Peter is the most weakly attested book in the entire New Testament in the early centuries. Revelation was widely accepted in the West but doubted for a long time in the Greek East, partly because of its use by millenarian movements. The very existence of a category of &ldquo;disputed&rdquo; books shows the church was not rubber-stamping; it was sifting, sometimes for generations, before settling. That is what careful recognition looks like, not what a coordinated invention looks like.</p>
+        <p class="honest"><b>Honest limit:</b> it would be dishonest to pretend these doubts were trivial or quickly resolved&mdash;in some regions they persisted into the fifth century and beyond. None of the disputed books carries a <em>central</em> doctrine the rest of the New Testament does not teach independently; the faith does not stand or fall on 2 Peter or Jude. On the twenty-seven-book New Testament, Catholics, Eastern Orthodox, and Protestants are unanimous; the genuine difference lies in the extent of the Old Testament, which this page does not adjudicate.</p>
+      </div>
+
+      <div class="objin">
+        <div class="ol">Objection &mdash; &ldquo;History written by the winners&rdquo;: the church suppressed the rival gospels</div>
+        <p>Early Christianity was not a single stream but a roiling diversity of Christianities: Ebionites who kept the Law and denied Jesus&rsquo;s divinity, Marcionites who severed Christianity from Judaism entirely, and various Gnostic groups, each with its own gospels and revelations, each claiming apostolic pedigree. On this telling, what we call &ldquo;orthodoxy&rdquo; was simply the party that won; the canon is &ldquo;history written by the winners,&rdquo; and the rejected gospels&mdash;Thomas, Peter, Mary, Judas&mdash;were silenced not because they were demonstrably late but because they lost a power struggle.</p>
+        <div class="rl">Reply</div>
+        <p>The factual kernel of this objection is accurate: the early Jesus movement <em>was</em> more diverse than the tidy Sunday-school picture suggests, and the proto-orthodox did prevail. What does not follow is the inference that prevailing is all that orthodoxy was. The decisive point is chronology, not theology. The Gospel of Thomas as we have it, the Gospel of Peter, the Gospel of Judas, and the rest are second-century or later compositions&mdash;the Gospel of Judas, recovered and published in 2006, is a Sethian Gnostic text generally dated to around the mid-second century, far too late to come from Judas. These works were excluded first and foremost because they failed the test of apostolic origin on <em>historical</em> grounds: they were written generations after the apostles whose names they borrow. The four canonical Gospels were already being received across the churches before most of these rivals were even composed.</p>
+        <p>The Gospel of Thomas is the one rival most often pressed as an <em>early, independent</em> witness. Thomas survives in full only in a fourth-century Coptic translation, with three earlier Greek fragments, and a strong line of scholarship argues that at points it preserves the distinctively <em>Lukan</em> and <em>Matthean</em> reworking of sayings the Synoptics share&mdash;which would mean it is drawing on the finished Gospels rather than on an independent stream. This is genuinely contested. What the dispute does <em>not</em> turn on is theology: even on the more cautious readings, Thomas as we have it is a second-century Greek composition that stands downstream of the first-century Gospels. Diversity at the start is fully compatible with a principled sorting later. So the &ldquo;history written by the winners&rdquo; objection does not hold: the Gospels the church kept are the first-century ones, and the rival gospels it set aside are, as we have them, second-century or later.</p>
+      </div>
+      <div class="whoholds"><b>The room:</b> Among historians who actually work on the canon there is wide agreement that the core books were received early, that no ecumenical council &ldquo;created&rdquo; the canon, that Nicaea did not address it, and that the process was one of gradual recognition extending over centuries; even Ehrman affirms the basic chronology. On Thomas, Mark Goodacre makes the case for dependence in detail and Simon Gathercole argues that Thomas knows the Synoptics without being a mere copy of them, while April DeConick and Stephen Patterson defend an early and independent core. These are disagreements about the mechanism and timing of recognition, not about whether the canon was voted into being by an emperor.</div>
     </div>
 
     <div class="card">
       <span class="kick">The hard part — objections, answered</span>
       <h4>The objections you will actually meet</h4>
-      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">This is what separates someone who <em>knows</em> the argument from someone who can <em>defend</em> it. Each gets its best form first, then the reply — and the hardest objection of all is flagged above.</p>
-      <p class="hardest"><b>The one that matters most:</b> Ehrman&rsquo;s &mdash; that the orthodoxy criterion is circular, and apostolicity was enforced on judgments most critical scholars reject. The <a href="/library/canon.html">deep dive</a> answers it at length &mdash; take it with you, not just the replies below.</p>
+      <p style="font-size:14.5px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">This is what separates someone who <em>knows</em> the argument from someone who can <em>defend</em> it. Each gets its best form first, then the reply — and the hardest objection of all is flagged just below.</p>
+      <p class="hardest"><b>The one that matters most:</b> Ehrman&rsquo;s &mdash; that the orthodoxy criterion is circular, and apostolicity was enforced on judgments most critical scholars reject. The last reply below takes it on, and the <a href="/library/canon.html">deep dive</a> answers it at length &mdash; take it with you, not just the replies below.</p>
 
       <details class="acc">
         <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "The church just picked the books at Nicaea" <span class="badge easy">Common</span></summary>
@@ -390,7 +522,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>The canon was decided by a council of bishops in the fourth century — power and politics chose your Bible, so its authority is man-made.</p>
           <p class="lbl reply">Reply</p>
-          <p>The Council of Nicaea (325) addressed the deity of Christ, not the canon — it never voted on books at all; that claim is a popular myth. By the time any list-affirming council met, the core books had been read, copied, and cited as Scripture for over two centuries. The councils <strong>recognized</strong> a settled consensus rather than imposing one.</p>
+          <p>The Council of Nicaea (325) addressed the deity of Christ, not the canon — it never voted on books at all; that claim is a popular myth. By the time the regional councils of Hippo (393) and Carthage (397) listed and affirmed the canon, the core books had been read, copied, and cited as Scripture for the better part of three centuries. The councils <strong>recognized</strong> a settled consensus rather than imposing one.</p>
         </div>
       </details>
 
@@ -400,7 +532,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Texts like the Gospel of Thomas were just as valid; the winners excluded rivals to enforce their orthodoxy, so the canon is the residue of a power struggle.</p>
           <p class="lbl reply">Reply</p>
-          <p>The Gnostic gospels are second-century and later — written generations after the apostles they claim, and demonstrably so by their developed Gnostic theology. They failed the test of apostolic origin on historical grounds, not merely doctrinal taste. The four canonical Gospels were already universally received before these rivals were even composed.</p>
+          <p>The Gospel of Thomas as we have it, the Gospels of Peter and Judas, and the rest are second-century or later — written generations after the apostles they claim, and often betraying that lateness in their developed Gnostic theology (whether Thomas preserves an early independent core is contested). They failed the test of apostolic origin on historical grounds, not merely doctrinal taste. The four canonical Gospels were already being received across the churches before most of these rivals were even composed. So the “history written by the winners” objection does not hold: the Gospels the church kept are the first-century ones, and the rival gospels it set aside are, as we have them, second-century or later.</p>
         </div>
       </details>
 
@@ -420,7 +552,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <p class="lbl steel">Strongest form</p>
           <p>Marcion produced the first canon around 140, and the church only assembled its own list in reaction. So the canon is a defensive construction, not a recognition of pre-existing authority.</p>
           <p class="lbl reply">Reply</p>
-          <p>Marcion did not create the church's books; he <em>mutilated</em> already-circulating ones — cutting Luke and editing Paul to fit his theology. The church's response presupposes those writings already held recognized authority worth defending. A controversy can prompt the church to articulate a boundary that was implicitly there all along.</p>
+          <p>Marcion did not create the church's books; on the testimony of Irenaeus and Tertullian and the majority of scholars, he <em>cut down</em> already-circulating ones — trimming Luke and editing Paul to fit his theology. The church's response presupposes those writings already held recognized authority worth defending. A controversy can prompt the church to articulate a boundary that was implicitly there all along. So Marcion explains the timing of the church&rsquo;s lists, not the authority of its books.</p>
         </div>
       </details>
 
@@ -428,9 +560,19 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "Different churches still disagree on the canon" <span class="badge hard">Hard</span></summary>
         <div class="body">
           <p class="lbl steel">Strongest form</p>
-          <p>Catholics, Protestants, and the Orthodox don't agree on the Apocrypha, and the Ethiopian church has extra books. If recognition were reliable, the result would be uniform.</p>
+          <p>Catholics, Protestants, and the Orthodox don't agree on the extent of the Old Testament, and the Ethiopian church has extra books. If recognition were reliable, the result would be uniform.</p>
           <p class="lbl reply">Reply</p>
-          <p>The remaining disagreements concern the Old Testament books Catholics and the Orthodox call deuterocanonical and Protestants call the Apocrypha and a few peripheral texts — not the 27-book New Testament, on which these communions are unanimous. A near-total convergence across independent traditions, languages, and centuries is far better explained by recognition of genuine authority than by coordinated invention.</p>
+          <p>The remaining disagreements concern the extent of the Old Testament and a few peripheral texts — not the 27-book New Testament, on which these communions are unanimous. A near-total convergence across independent traditions, languages, and centuries is far better explained by a shared recognition of what the churches had received than by coordinated invention. (The Ethiopian Orthodox broader canon adds further books but keeps all twenty-seven.)</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><svg class="chev" width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> "The criteria were circular, and the church got authorship wrong" <span class="badge hard">Hard</span></summary>
+        <div class="body">
+          <p class="lbl steel">Strongest form</p>
+          <p>The criterion of orthodoxy, a critic will say, is circular: a book counted as orthodox if it agreed with the views of the group doing the judging, so “testing against the rule of faith” just means “keeping the books that already agree with us.” And several canonical books are pseudonymous by the judgment of most critical scholars — the Pastoral Epistles, 2 Peter, perhaps Ephesians — so the church enforced a criterion it could not actually verify and sometimes got wrong.</p>
+          <p class="lbl reply">Reply</p>
+          <p>Yes, &ldquo;agrees with the rule of faith&rdquo; could in principle be used to launder a predetermined result. But in practice the criteria worked together and constrained one another. Apostolicity and catholicity are not circular in that way — they ask <em>when</em> a book was written and <em>where</em> it was received, questions the judges were trying to get right on historical grounds, even where their tools sometimes failed. The proof that the criteria had teeth is that the church kept books it would have found convenient to drop. Revelation was doubted by serious orthodox figures for centuries yet retained; Hebrews was kept despite its anonymity; 2 Peter survived a long shadow of doubt. And even granting disputed authorship for a few books, the argument does not require that every canonical attribution be correct. (Those authorship judgments are themselves contested by other scholars, evangelical and Catholic.) It requires that the canon was formed by a discriminating reception keyed to perceived apostolic connection and widespread use — and that is true whether or not every individual judgment about authorship would survive a modern seminar. The process was principled even on the critics' own assumptions about authorship.</p>
         </div>
       </details>
     </div>
@@ -440,8 +582,8 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
       <h4>Where this comes from — primary sources, not our summary</h4>
       <div class="src">
         <div class="row">
-          <div class="who"><b>Muratorian Fragment</b><span>c. 170 · earliest canon list</span></div>
-          <div class="what">The oldest known list of New Testament books, already naming most of them — direct evidence that a functioning canon existed long before any council.</div>
+          <div class="who"><b>Muratorian Fragment</b><span>c. 170 on the majority dating (debated) · earliest canon list</span></div>
+          <div class="what">The oldest known list of New Testament books, already naming most of them, though it omits Hebrews, James, and 1–2 Peter and accepts the Wisdom of Solomon — direct evidence that a functioning canon existed long before any council.</div>
         </div>
         <div class="row">
           <div class="who"><b>Athanasius</b><span>367 · 39th Festal Letter</span></div>
@@ -449,7 +591,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         </div>
         <div class="row">
           <div class="who"><b>Eusebius</b><span>c. 325 · <em>Church History</em> 3.25</span></div>
-          <div class="what">Sorts the books into the universally accepted, the disputed, and the spurious — showing the criteria operating in real time, not arbitrary choice.</div>
+          <div class="what">Sorts the books into the recognized (homologoumena), the disputed (antilegomena), and the spurious (notha) — showing the criteria operating in real time, not arbitrary choice.</div>
         </div>
         <div class="row">
           <div class="who"><b>Bruce M. Metzger</b><span>1987 · <em>The Canon of the New Testament</em></span></div>
@@ -457,18 +599,47 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         </div>
       </div>
     </div>
+  <div class="card">
+      <span class="kick">The honest state of the debate</span>
+      <h4>Where the argument really stands — and a fairness most defenders skip</h4>
+      <p>Among historians who actually work on the canon, the broad outline is not seriously contested, and it crosses the ideological spectrum: the core books were received early, no ecumenical council “created” the canon, Nicaea did not address it, and the process was one of gradual recognition extending over centuries. Even Bart Ehrman affirms the basic chronology and rejects the Constantine myth. The live debates are more refined: how early the four-Gospel collection truly crystallized; whether the Muratorian Fragment is late-second-century (the majority view, defended by scholars like Joseph Verheyden) or fourth-century (a minority view argued by Geoffrey Hahneman and Albert Sundberg); how much weight to give “intrinsic” versus “community” factors in explaining reception; how to characterize the diversity of earliest Christianity; and whether Thomas preserves an early independent core (Mark Goodacre and Simon Gathercole argue it knows the Synoptics; April DeConick and Stephen Patterson defend an early and independent core). These are disagreements about the mechanism and timing of recognition, not about whether the canon was voted into being by an emperor.</p>
+      <p class="honest"><b>A fairness most defenders skip:</b> The factual kernel of Ehrman’s objection is accurate, and an honest apologist should grant it: the early Jesus movement was more diverse than the tidy Sunday-school picture suggests, there really were competing groups with competing texts, and the proto-orthodox did prevail. The doubts over the disputed books were not trivial or quickly resolved — in some regions they persisted into the fifth century and beyond. And the church’s judgments about authorship were made with the limited tools of antiquity and are regarded as insecure by many modern critics, though those judgments are themselves contested by other scholars, evangelical and Catholic. What does not follow is the inference that prevailing is all that orthodoxy was: diversity at the start is fully compatible with a principled sorting later, and the argument requires only that the canon was formed by a discriminating reception keyed to perceived apostolic connection and widespread use — which is true whether or not every individual judgment about authorship would survive a modern seminar.</p>
+      <p><b>The bounded verdict:</b> The canon was not handed down by Constantine, not voted on at Nicaea, and not imposed by a late council on a church that had no Bible until then. The core of the New Testament was received as Scripture within the first and second centuries, sifted by criteria of apostolic origin, orthodoxy, and widespread use, and only formally ratified once a consensus had long existed. The disputed books were genuinely disputed — evidence of care, not of fabrication — and the differences that remain among Christians concern the extent of the Old Testament, not the New Testament, a disagreement this argument does not adjudicate. The conspiracy story collapses under the weight of the actual sources. But showing that the church recognized these books does not, by itself, show that they are inspired or true; that is a further question, argued on further grounds — and, decisively, whether Jesus rose from the dead. Recognizing the canon is where the conversation about its truth can honestly begin — not where it ends.</p>
+    </div>
+
+    <div class="card" id="bronzeGate">
+      <span class="kick">Checkpoint · earn Bronze</span>
+      <h4>Rebuild it from memory — nothing in front of you</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:4px">Close the sections above. This is the retrieval that turns reading into knowing — and it is how this argument reaches <b>Bronze&nbsp;· Understand</b> on your shelf. Opening accordions no longer counts; showing you can rebuild the structure does.</p>
+      <div class="recall">
+        <div class="q">1 &middot; Put the argument in order — tap the three lines in sequence.</div>
+        <div id="orderPool" class="btnrow"></div>
+        <div id="orderSeq" style="font-family:var(--ui);font-size:13.5px;color:var(--tm);margin-top:10px;min-height:1.2em"></div>
+      </div>
+      <div class="recall" style="margin-top:12px">
+        <div class="q">2 &middot; What does the argument establish? Select every claim it reaches — and nothing it doesn&rsquo;t.</div>
+        <div id="propPool" style="display:flex;flex-wrap:wrap;gap:9px;margin-top:4px"></div>
+      </div>
+      <div class="btnrow"><button class="btn primary" onclick="gradeBronze(this)">Check my reconstruction</button><button class="btn ghost" onclick="resetBronze()">Reset</button></div>
+      <div class="gradeline" id="bronzeGrade"></div>
+    </div>
   </section>
 
   <!-- ===================== PHASE 2: PRACTICE ===================== -->
   <section id="practice">
     <div class="phasehead"><span class="phasenum">2</span><h3>Practice it</h3></div>
-    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. Three drills that route this argument through tools you already have.</p>
+    <p class="phasesub">Knowledge you can't retrieve under pressure isn't yours yet. These drills make you <em>generate</em> the argument, not recognise it — harder now, on purpose, so it holds in a real conversation.</p>
 
     <!-- explain it back -->
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back</span>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 1 · Explain It Back &mdash; free recall</span>
       <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Reconstruct the argument in your own words</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">No looking back. State both premises, the conclusion, and what the cause must be like. You'll get scored out of 10.</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:12px">Scroll the sections away and generate it from memory — recalling is what builds durable memory; re-reading only feels like it does. Pick your level; the bar rises as you go. Scored out of 10, graded for accuracy first. An 8+ at level 2 or 3 is one half of <b>Silver</b>.</p>
+      <div class="btnrow" id="explainLevels" style="margin:0 0 10px">
+        <button class="btn ghost sel" type="button" data-lv="1" onclick="setExplainLevel(this,1)">1 · State it</button>
+        <button class="btn ghost" type="button" data-lv="2" onclick="setExplainLevel(this,2)">2 · &hellip;and answer its hardest objection</button>
+        <button class="btn ghost" type="button" data-lv="3" onclick="setExplainLevel(this,3)">3 · &hellip;to a hostile grad student</button>
+      </div>
       <textarea id="explainBox" placeholder="The Canon Formation Argument says that..."></textarea>
       <div class="btnrow">
         <button class="btn primary" onclick="scoreExplain(this)">Score my explanation</button>
@@ -487,7 +658,7 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
     <div class="practicecard">
       <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 2 · Flashcards</span>
       <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Drilled straight from this argument</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Auto-generated from the premises and rebuttals above. These drop into your spaced-repetition deck so they come back exactly when you're about to forget.</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Twelve cards drawn from the premises, objections, concessions, and sources above. <b>Answer out loud before you flip</b> — the effort of recall is the whole point; a card you merely recognise hasn't stuck. Each card is graded: type the key idea, flip, mark it. Three correct recalls and a card rests; it comes back on Today when it is due.</p>
       <div class="flashwrap">
         <div class="flash" id="flash" onclick="this.classList.toggle('flipped')">
           <div class="face front"><div class="qlbl">Prompt</div><p id="fFront"></p><span class="tap">tap to flip</span></div>
@@ -503,9 +674,9 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 
     <!-- debate -->
     <div class="practicecard">
-      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · Live objection</span>
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 3 · The common objection (worked example)</span>
       <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Someone hits you with the most common pushback</h4>
-      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">A seeded scenario from the Debate Arena. Draft your reply, then reveal a model answer to compare.</p>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">Start here: draft your reply, then reveal a model answer to compare. This is the <em>worked example</em> — Drill 4 then makes you do it cold across the whole objection set.</p>
       <div class="interloc">
         <div class="av">SK</div>
         <div>
@@ -522,24 +693,57 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
         <p>"I used to picture it that way too — but the history is actually the opposite. There was no vote at Nicaea on the books; that council was about who Jesus is. The four Gospels and Paul's letters were already being read and quoted as Scripture by Christians a century or more before any council list. When bishops later affirmed the canon, they were <em>recognizing</em> what the churches had long received, the way a court confirms a fact rather than creating it. They weren't choosing favorites — they were testing for genuine apostolic origin. Happy to point you to the earliest sources if you'd like to check it for yourself."</p>
       </div>
     </div>
+  <!-- answer the objections cold -->
+    <div class="practicecard" id="objDrill">
+      <span class="kick" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);font-weight:600;display:block;margin-bottom:11px">Drill 4 · Answer the objections cold</span>
+      <h4 style="font-family:var(--fd);font-size:19px;font-weight:600;margin-bottom:6px">Four objections, no notes — reply, then check</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:16px">The other half of <b>Silver</b>. Draft a reply from memory, reveal the certified answer, and rate yourself honestly. Clear all four with a &ldquo;nailed it&rdquo; and you can field them in the wild — not just recognise them on the page.</p>
+      <div class="interloc">
+        <div class="av" id="odAv">SK</div>
+        <div><div class="who2" id="odWho">Skeptic</div><div class="bub" id="odQ"></div></div>
+      </div>
+      <textarea id="odBox" placeholder="Your reply, from memory..."></textarea>
+      <div class="btnrow">
+        <button class="btn gold" type="button" onclick="odReveal()">Reveal the certified answer</button>
+      </div>
+      <div class="modelans" id="odModel">
+        <div class="lbl">A strong reply — ported from this page&rsquo;s certified answer</div>
+        <p id="odModelText"></p>
+        <div class="confrow" style="margin-top:12px">
+          <button type="button" onclick="odRate(1)">Shaky — I&rsquo;ll redo this one</button>
+          <button type="button" onclick="odRate(2)">Nailed it &#10003;</button>
+        </div>
+      </div>
+      <div class="flashnav">
+        <button class="btn ghost" type="button" onclick="odPrev()">&lsaquo; Prev</button>
+        <span id="odCount"></span>
+        <button class="btn ghost" type="button" onclick="odNext()">Next &rsaquo;</button>
+      </div>
+    </div>
+
   </section>
 
   <!-- ===================== PHASE 3: PROVE IT ===================== -->
   <section id="proveit">
     <div class="phasehead"><span class="phasenum">3</span><h3>Prove it</h3></div>
-    <p class="phasesub">Mastery isn't a feeling — it's four things done. Clear them and this argument turns gold on your shelf.</p>
+    <p class="phasesub">Mastery isn't a feeling — it's three levels, each earned by <em>showing</em> you can do the thing, then proven again over time. Don't trust the warm glow of having read it; prove it cold.</p>
 
     <div class="card">
-      <div class="checklist">
-        <div class="cl" id="ck-read"><div class="box">✓</div><div class="txt"><b>Understood it</b><span>Read the structure, defences, and all objections</span></div><div class="state">Open every section</div></div>
-        <div class="cl" id="ck-explain"><div class="box">✓</div><div class="txt"><b>Explained it</b><span>Score 7+ on Explain It Back</span></div><div class="state">Not yet</div></div>
-        <div class="cl" id="ck-cards"><div class="box">✓</div><div class="txt"><b>Drilled it</b><span>Cycle through every flashcard once</span></div><div class="state">Not yet</div></div>
-        <div class="cl" id="ck-debate"><div class="box">✓</div><div class="txt"><b>Defended it</b><span>Attempt the live objection</span></div><div class="state">Not yet</div></div>
+      <span class="kick">Your levels on this argument</span>
+      <h4>What each one takes</h4>
+      <div class="checklist" id="levelReqs">
+        <div class="cl" id="rq-bronze"><div class="box">✓</div><div class="txt"><b>Bronze · Understand</b><span>Rebuild the syllogism + what the argument establishes, from memory (&ge;80%) — the checkpoint at the end of &ldquo;Understand it.&rdquo;</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-explain"><div class="box">✓</div><div class="txt"><b>Silver · part 1 · Explain it</b><span>Score 8+ on Explain It Back at level 2 or 3 (the argument <em>and</em> its hardest objection)</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-objections"><div class="box">✓</div><div class="txt"><b>Silver · part 2 · Objections cold</b><span>Answer all four objection drills with &ldquo;nailed it&rdquo;</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-unseen"><div class="box">✓</div><div class="txt"><b>Gold · part 1 · The unseen objection</b><span>Face one objection the page never drilled (below)</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-disc"><div class="box">✓</div><div class="txt"><b>Gold · part 2 · Pick the right tool</b><span>Pass &ldquo;which argument answers this?&rdquo; &mdash; four of five, mixed with neighbouring arguments</span></div><div class="state">Not yet</div></div>
+        <div class="cl" id="rq-spaced"><div class="box">✓</div><div class="txt"><b>Gold · part 3 · Prove it again</b><span>Clear this argument on 3 spaced reviews — it returns on its own</span></div><div class="state">0 of 3</div></div>
       </div>
+      <p style="font-family:var(--ui);font-size:13px;color:var(--tm);margin-top:14px">Gold can slip back to Silver if you stop turning up for the spaced reviews — real mastery is perishable, which is why it's worth something. The dashboard brings this one back when it's due.</p>
       <div style="margin-top:26px;border-top:1px solid var(--border);padding-top:20px">
         <span class="kick">One more thing — be honest</span>
         <h4 style="font-size:17px">If a friend challenged you on this tomorrow, how ready are you?</h4>
-        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Your self-rating is tracked over time so you can watch confidence climb across the library.</p>
+        <p style="font-size:14px;color:var(--tm);font-family:var(--ui)">Rate yourself — then see whether your Explain It Back score backs it up. Felt-confidence and shown-confidence are not the same thing, and the gap is worth knowing before a real conversation.</p>
         <div class="confrow" id="confRow">
           <button onclick="setConf(this,1)">Shaky</button>
           <button onclick="setConf(this,2)">Getting there</button>
@@ -547,6 +751,26 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
           <button onclick="setConf(this,4)">Could teach it</button>
         </div>
         <div id="calibNote" style="display:none"></div>
+      </div>
+    </div>
+
+    <div class="card" id="unseenGate">
+      <span class="kick">Gold gate · the unseen objection</span>
+      <h4>One you weren&rsquo;t coached on</h4>
+      <p style="font-size:15px;color:var(--tm);font-family:var(--ui);margin-bottom:14px">Everything above rehearsed objections the page showed you. Here is the real test of mastery: an objection we deliberately did <em>not</em> drill. Reason it out cold from what the argument established, then reveal how it actually handles it. An honest &ldquo;nailed it&rdquo; is the first half of Gold.</p>
+      <div class="interloc">
+        <div class="av">TS</div>
+        <div><div class="who2">Thoughtful sceptic</div><div class="bub">"Fine — grant your history: no vote at Nicaea, an early core, careful criteria. But a careful, centuries-long reception is just what you would get if these were merely the earliest and best-attested human documents of a new religion. A church recognizing a book does not make it the word of God."</div></div>
+      </div>
+      <textarea id="unseenBox" placeholder="Reason it out from what the argument established..."></textarea>
+      <div class="btnrow"><button class="btn gold" type="button" onclick="unseenReveal()">Reveal how the argument handles it</button></div>
+      <div class="modelans" id="unseenModel">
+        <div class="lbl">How the argument answers it — ported from the deep dive</div>
+        <p>Grant what is true in it: showing that the church recognized these books does not, by itself, show that they are inspired or true, and a discriminating, principled, centuries-long reception is — as a skeptic may insist — compatible with their being merely the earliest and best-attested human documents of a new religion. But the canon argument never claimed more. It is also exactly what we would expect if these were the genuine apostolic writings, and what the historical argument does is clear the ground: it removes the charge that the Bible is a fourth-century political invention and shows the canon to be a thoughtful inheritance. Whether the books it preserves are the word of God is a further question, argued on further grounds — how early and how close to the events the Gospels stand, whether the Scriptures cohere as the unified testimony they claim to be, and, decisively, whether Jesus rose from the dead. So the objection does not defeat the canon argument; it names the next question. Recognizing the canon is where the conversation about its truth can honestly begin — not where it ends.</p>
+        <div class="confrow" style="margin-top:12px">
+          <button type="button" onclick="unseenRate(1)">Shaky — I&rsquo;ll sit with it</button>
+          <button type="button" onclick="unseenRate(2)">Nailed it &#10003;</button>
+        </div>
       </div>
     </div>
 
@@ -566,37 +790,59 @@ textarea:focus{outline:2px solid var(--n3);outline-offset:1px;background:#fff}
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
 <script>
-/* ---- in-memory state (swap for localStorage/Supabase in production) ---- */
-const state = { read:false, explainPass:false, cardsSeen:new Set(), debateTried:false, conf:0 };
+/* ---- state: three earned levels (Bronze / Silver / Gold) ----
+   bronze    = reconstruction checkpoint passed (>=80%)
+   explainScore = best Explain It Back (Silver part 1 needs >=8)
+   objCold   = objection-drill indices self-rated "nailed it" (Silver part 2 = all)
+   unseen    = Gold part 1: the unseen objection nailed
+   Gold part 2 = 3 successful spaced recalls, read from lib/review-queue.js (ad_reviews step). */
+const state = { bronze:false, explainScore:0, objCold:new Set(), unseen:false, explainHi:false, cardsSeen:new Set(), conf:0, explainLevel:1 };
 
-/* ---- persistence + site streak (ad_mastery / ad_streak) ---- */
 const ARG_ID = location.pathname.split('/').pop().replace('ev-m-','').replace('.html','');
-const FRESH_MS = 30*24*60*60*1000; /* 30 days */
 function adAll(){ try{ return JSON.parse(localStorage.getItem('ad_mastery')||'{}'); }catch(e){ return {}; } }
-function adSave(full){
+
+/* Successful spaced recalls so far, read from the shared review engine
+   (lib/review-queue.js advances ad_reviews[ARG].step on each "I've still got it"). */
+function spacedCount(){ try{ var r = (JSON.parse(localStorage.getItem('ad_reviews')||'{}'))[ARG_ID]; return (r && r.step) ? r.step : 0; }catch(e){ return 0; } }
+
+/* Gold sub-gate (Phase 1.5, 2026-10-11): the mixed 'which argument answers this?' drill, run by lib/review-queue.js. */
+function discPassed(){ try{ return !!((adAll()[ARG_ID]||{}).disc); }catch(e){ return false; } }
+
+function levelOf(){
+  var silver = state.bronze && state.explainScore>=8 && state.explainHi && state.objCold.size>=OBJ.length;
+  if(silver && state.unseen && discPassed() && spacedCount()>=3) return 3;
+  if(silver) return 2;
+  if(state.bronze) return 1;
+  return 0;
+}
+
+function adSave(){
   try{
-    var m = adAll(); var e = m[ARG_ID] || {};
-    e.read = state.read; e.explain = state.explainPass;
-    e.cards = state.cardsSeen.size; e.debate = state.debateTried;
-    e.explainScore = state.explainScore || e.explainScore || 0; if(state.conf) e.conf = state.conf;
-    if(full){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
+    var m = adAll(); var e = m[ARG_ID] || {}; var lv = levelOf();
+    e.bronze = state.bronze;
+    e.explainScore = Math.max(state.explainScore||0, e.explainScore||0);
+    e.objCold = Array.from(state.objCold);
+    e.unseen = state.unseen;
+    e.explainHi = !!state.explainHi || !!e.explainHi;
+    e.cards = state.cardsSeen.size;
+    if(state.conf) e.conf = state.conf;
+    e.level = lv;
+    /* lib/review-queue.js schedules spaced reviews once e.done (or the four legacy
+       flags) is set. Scheduling must begin at Silver so Gold part 2 can accrue. */
+    e.read = state.bronze; e.explain = state.explainScore>=8; e.debate = state.objCold.size>0;
+    if(lv>=2){ if(!e.done) e.done = Date.now(); e.fresh = Date.now(); }
     m[ARG_ID] = e; localStorage.setItem('ad_mastery', JSON.stringify(m));
   }catch(e){}
 }
 function adRestore(){
   try{
     var e = adAll()[ARG_ID]; if(!e) return;
-    state.read = !!e.read; state.explainPass = !!e.explain; state.debateTried = !!e.debate;
-    state.explainScore = e.explainScore || 0; state.conf = e.conf || 0;
-    var fresh = e.fresh && (Date.now() - e.fresh) < FRESH_MS;
-    if(e.cards >= cards.length && fresh){ for(var i=0;i<cards.length;i++) state.cardsSeen.add(i); }
-    if(e.cards >= cards.length && !fresh){
-      var note = document.createElement('div');
-      note.style.cssText = 'font-family:var(--ui);font-size:.8rem;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.7rem 1rem;margin:0 0 1rem;';
-      note.innerHTML = '&#9888; Memory fades — it has been a while. Flip through the flashcards again to restore this argument to gold.';
-      var fc = document.querySelector('.flashwrap') || document.getElementById('flash') || null;
-      if(fc && fc.parentNode){ fc.parentNode.insertBefore(note, fc); }
-    }
+    state.bronze = !!e.bronze || !!e.read;
+    state.explainScore = e.explainScore || 0;
+    state.unseen = !!e.unseen;
+    state.explainHi = !!e.explainHi;
+    state.conf = e.conf || 0;
+    if(Array.isArray(e.objCold)){ e.objCold.forEach(function(i){ state.objCold.add(i); }); }
   }catch(e){}
 }
 function adMark(){
@@ -614,51 +860,69 @@ function adMark(){
   }catch(e){}
 }
 
-/* ---- mastery dial ---- */
+/* ---- mastery dial + level ladder ---- */
 const CIRC = 263.9;
+function setLvl(id, earned, current){
+  var el = document.getElementById(id); if(!el) return;
+  el.classList.toggle('earned', earned);
+  el.classList.toggle('current', current && !earned);
+  var s = el.querySelector('.ls'); if(s) s.textContent = earned ? 'Earned \u2713' : (current ? 'Next up' : 'Locked');
+}
+function setReq(id, done, txt){
+  var el = document.getElementById(id); if(!el) return;
+  el.classList.toggle('done', done);
+  var s = el.querySelector('.state'); if(s) s.textContent = txt;
+}
 function updateDial(){
-  let done = 0;
-  if(state.read) done++;
-  if(state.explainPass) done++;
-  if(state.cardsSeen.size >= cards.length) done++;
-  if(state.debateTried) done++;
-  const pct = Math.round(done/4*100);
-  adSave(pct===100);
-  if(window._adLoaded && done>0) adMark();
-  document.getElementById('pctNum').textContent = pct + '%';
-  document.getElementById('ring').style.strokeDashoffset = CIRC - (CIRC*pct/100);
+  var lv = levelOf();
+  var pct = [0,34,67,100][lv];
+  adSave();
+  if(window._adLoaded && (state.bronze || state.explainScore || state.objCold.size || state.unseen)) adMark();
+  var pn = document.getElementById('pctNum'); if(pn) pn.textContent = pct + '%';
+  var ring = document.getElementById('ring'); if(ring) ring.style.strokeDashoffset = CIRC - (CIRC*pct/100);
 
-  setCheck('ck-read', state.read);
-  setCheck('ck-explain', state.explainPass);
-  setCheck('ck-cards', state.cardsSeen.size >= cards.length);
-  setCheck('ck-debate', state.debateTried);
+  setLvl('lvl-bronze', lv>=1, lv===0);
+  setLvl('lvl-silver', lv>=2, lv===1);
+  setLvl('lvl-gold',   lv>=3, lv===2);
+
+  setReq('rq-bronze', state.bronze, state.bronze ? 'Done' : 'Not yet');
+  setReq('rq-explain', state.explainScore>=8 && state.explainHi, (state.explainScore>=8 && state.explainHi) ? ('Done \u00B7 '+state.explainScore+'/10') : (state.explainScore ? ('Best '+state.explainScore+'/10') : 'Not yet'));
+  setReq('rq-objections', (typeof OBJ!=='undefined' && state.objCold.size>=OBJ.length), (typeof OBJ!=='undefined' && state.objCold.size>=OBJ.length) ? 'Done' : (state.objCold.size + ' of ' + (typeof OBJ!=='undefined'?OBJ.length:4)));
+  setReq('rq-unseen', state.unseen, state.unseen ? 'Done' : 'Not yet');
+  var sc = Math.min(spacedCount(), 3); setReq('rq-spaced', sc>=3, sc>=3 ? 'Done' : (sc + ' of 3'));
+  setReq('rq-disc', discPassed(), discPassed() ? 'Done' : 'Not yet');
+
   try{ renderCalibration(); }catch(e){}
 
-  if(pct===100){
-    document.getElementById('ctaTitle').textContent = 'Canon Formation mastered — it just turned gold on your shelf';
-    document.getElementById('ctaText').textContent = 'That’s 1 of 22. The same path is waiting for every argument in the library. Keep the streak going.';
-    document.querySelector('.libnote').innerHTML = '◆  Canon Formation mastered — 1 of 22 core arguments complete';
-  }
-}
-function setCheck(id, on){
-  const el = document.getElementById(id);
-  el.classList.toggle('done', on);
-  var stEl = el.querySelector('.state');
-  if(on){ stEl.textContent = 'Done'; return; }
-  if(id==='ck-read'){
-    stEl.textContent = (typeof _accOpened !== 'undefined' && _accs.length) ? (_accOpened.size + ' of ' + _accs.length + ' opened') : 'Open every section';
-  } else {
-    stEl.textContent = 'Not yet';
+  var ln = document.querySelector('.libnote');
+  if(lv>=3){
+    var ct = document.getElementById('ctaTitle'); if(ct) ct.textContent = "the canon formation argument mastered — Gold on your shelf";
+    var cx = document.getElementById('ctaText'); if(cx) cx.textContent = 'You rebuilt it, defended it cold, met an objection you had never seen, and proved it again weeks later. That confidence is earned \u2014 keep it alive on the spaced reviews.';
+    if(ln) ln.innerHTML = "◆  the canon formation argument — Gold · mastered";
+  } else if(lv>=1 && ln){
+    ln.innerHTML = "◆  the canon formation argument — " + (lv===2?'Silver':'Bronze') + ' \u00B7 keep going';
   }
 }
 
-/* ---- explain it back (mock scorer; live version calls /api/tutor) ---- */
-/* ---- Canon Formation premises used to ground the AI scoring ---- */
+/* ---- explain it back (real AI scoring via /api/tutor; mock fallback) ---- */
+/* ARG_PREMISES: the certified rubric POSTed to /api/tutor and rendered into the
+   share-card PNG. Ported verbatim from the syllogism above. */
 var ARG_PREMISES = [
-  'If the church recognized a fixed set of writings as Scripture rather than creating their authority by vote, then the canon reflects the books’ inherent authority.',
+  'If the church recognized a fixed set of writings as Scripture rather than creating their authority by vote, then the canon reflects something the church found rather than something it manufactured.',
   'The historical evidence shows the core books were received and used as authoritative long before any council ratified a list.',
-  'Therefore, the canon is a recognition of writings the churches already received as authoritative — something the church found rather than manufactured, not a late ecclesiastical invention. (That it was recognised is a historical claim; that it is inspired is a further argument.)'
+  'Therefore, the canon is a recognition of writings the churches already received as authoritative — something the church found rather than manufactured, not a late ecclesiastical invention. (That it was recognized is a historical claim; that it is inspired is a further argument, which turns above all on whether Jesus rose from the dead.)'
 ];
+
+function setExplainLevel(btn, lv){
+  state.explainLevel = lv;
+  [].forEach.call(document.querySelectorAll('#explainLevels button'), function(b){ b.classList.remove('sel'); });
+  if(btn) btn.classList.add('sel');
+  var box = document.getElementById('explainBox');
+  var ph = lv===3 ? 'Explain it to a hostile, well-read skeptic — anticipate the pushback and answer it...'
+         : lv===2 ? 'From memory: the argument AND your best answer to its hardest objection...'
+         : 'From memory: both premises, the conclusion, and what follows from them...';
+  if(box) box.setAttribute('placeholder', ph);
+}
 
 /* Real AI scoring via /api/tutor (same method as explain-it-back.html).
    Falls back to a local heuristic if the API is unreachable (e.g. preview). */
@@ -668,11 +932,14 @@ async function scoreExplain(btn){
   if(!txt){ return; }
   if(btn){ btn.disabled = true; btn.dataset.lbl = btn.textContent; btn.textContent = 'Scoring...'; }
   try{
-    var prompt = 'Please evaluate this student explanation of "The Canon Formation Argument". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
+    var lvAsk = state.explainLevel>=3 ? '\n\nThe student was asked to explain it to a hostile, well-read skeptic: weight whether they anticipated and answered the obvious pushback, not merely stated the argument.'
+              : state.explainLevel===2 ? '\n\nThe student was ALSO asked to answer its hardest objection (Ehrman’s objection that the orthodoxy criterion is circular, and that apostolicity was enforced on authorship judgments most critical scholars reject): weight whether they engaged it honestly.'
+              : '';
+    var prompt = 'Please evaluate this student explanation of "The Canon Formation Argument". Score it 1-10 and give structured feedback.\n\nARGUMENT PREMISES:\n' + ARG_PREMISES.join('\n') + lvAsk + '\n\nSTUDENT EXPLANATION:\n' + txt + '\n\nRespond in this exact JSON format (no other text):\n{"score":7,"strengths":["specific thing they got right","another strength"],"improvements":["specific thing missing or wrong","another improvement"]}';
     var res = await fetch('/api/tutor', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ question: prompt, argument: 'The Canon Formation Argument', category: 'Evidence Library' })
+      body: JSON.stringify({ question: prompt, argument: "The Canon Formation Argument", category: 'Evidence Library' })
     });
     if(!res.ok){ throw new Error('bad status'); }
     var data = await res.json();
@@ -714,14 +981,15 @@ function renderCrisis(text){
 function renderScore(score, strengths, improvements){
   score = Math.max(0, Math.min(10, Math.round(Number(score) || 0)));
   var feed = '';
-  (strengths||[]).forEach(function(s){ feed += '<li class="hit"><span class="mk">✓</span>'+esc(s)+'</li>'; });
-  (improvements||[]).forEach(function(s){ feed += '<li class="miss"><span class="mk">○</span>'+esc(s)+'</li>'; });
+  (strengths||[]).forEach(function(s){ feed += '<li class="hit"><span class="mk">\u2713</span>'+esc(s)+'</li>'; });
+  (improvements||[]).forEach(function(s){ feed += '<li class="miss"><span class="mk">\u25CB</span>'+esc(s)+'</li>'; });
   document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
-  var verdict = score>=8?'Strong — you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way — fill the gaps below' : 'Have another go with the structure in mind';
+  var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score);
+  if(score>=8 && (state.explainLevel||1)>=2) state.explainHi = true;
   updateDial();
 }
 
@@ -730,31 +998,39 @@ function renderMockScore(txtRaw){
   var checks = [
     {ok:/(recogn|received|receiv|discover|not creat|not invent|already)/.test(t) && /(authorit|scripture|canon)/.test(t), hit:'Premise 1 — you named recognition rather than creation', miss:'Premise 1 is missing — say the church recognized authority rather than creating it'},
     {ok:/(before|early|earlier|first century|second century|prior|long before)/.test(t) && /(council|nicaea|carthage|hippo|list)/.test(t), hit:'Premise 2 — you stated the books were used as authoritative before any council', miss:'Premise 2 is thin — state that the core books were received as authoritative before any council'},
-    {ok:/therefore|so |conclu|not a (late |)invention|recognition of/.test(t), hit:'Conclusion — you drew out that the canon is a recognition, not an invention', miss:'Draw the conclusion explicitly: the canon recognizes books that already had authority'},
-    {ok:/(apostol|orthodox|universal|usage|antiquity|criteria)/.test(t), hit:'Nice — you named the criteria the church actually used', miss:'Push further: what criteria did the church use (apostolicity, orthodoxy, universal usage)'},
+    {ok:/therefore|so |conclu|not a (late |)invention|recognition of/.test(t), hit:'Conclusion — you drew out that the canon is a recognition, not an invention', miss:'Draw the conclusion explicitly: therefore the canon is a recognition of books the churches already received as authoritative, not a late ecclesiastical invention'},
+    {ok:/(apostol|orthodox|universal|usage|antiquity|criteria)/.test(t), hit:'Nice — you named the criteria the church actually used', miss:'Push further: what criteria did the church use (apostolicity, orthodoxy, widespread use)'},
     {ok:t.split(/\s+/).filter(Boolean).length >= 35, hit:'Good depth — you developed it, not just listed it', miss:'Go a bit deeper — a full reconstruction runs longer than this'}
   ];
   var score = 0, feed = '';
   checks.forEach(function(c){
-    if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">✓</span>'+c.hit+'</li>'; }
-    else{ feed += '<li class="miss"><span class="mk">○</span>'+c.miss+'</li>'; }
+    if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">\u2713</span>'+c.hit+'</li>'; }
+    else{ feed += '<li class="miss"><span class="mk">\u25CB</span>'+c.miss+'</li>'; }
   });
   document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
-  var verdict = score>=8?'Strong — you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way — fill the gaps below' : 'Have another go with the structure in mind';
+  var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
   document.getElementById('scoreVerdict').textContent = verdict;
   document.getElementById('scoreFeed').innerHTML = feed;
   document.getElementById('scoreOut').classList.add('show');
-  state.explainScore = Math.max(state.explainScore||0, score); if(score>=7){ state.explainPass = true; }
+  state.explainScore = Math.max(state.explainScore||0, score);
+  if(score>=8 && (state.explainLevel||1)>=2) state.explainHi = true;
   updateDial();
 }
 
 /* ---- flashcards (generated from this argument) ---- */
 const cards = [
-  {q:'State Premise 1 of the Canon Formation Argument.', a:'If the church recognized writings as Scripture rather than creating their authority by vote, the canon reflects the books’ inherent authority.'},
-  {q:'State Premise 2.', a:'The core books were received and cited as authoritative long before any council ratified a list — e.g. the Muratorian Fragment (c. 170) and Irenaeus on the four Gospels.'},
-  {q:'A skeptic says: "The books were chosen by a vote at Nicaea." — your reply?', a:'Nicaea (325) was about the deity of Christ, not the canon; it never voted on books. The core was already received as Scripture for over two centuries.'},
-  {q:'Why don’t the Gnostic gospels belong in the canon?', a:'They are second-century and later, written after the apostles they claim, and fail the test of apostolic origin on historical grounds — not just doctrinal taste.'},
-  {q:'Why are the disputes over Hebrews, James, and Revelation evidence FOR the argument?', a:'They show the church applied real criteria carefully rather than rubber-stamping — which is what discovery looks like. The doctrinal core was never in question.'}
+  {q:"State Premise 1 — and what it does NOT claim.", a:"If the church recognized writings that already carried authority, rather than creating their authority by vote, then the canon reflects something the church found rather than something it manufactured. It does not claim that recognition proves the contents inspired — that is a different argument, resting on different grounds."},
+  {q:"State Premise 2 — and where the disputes actually clustered.", a:"The core books were received, copied, and cited as Scripture long before any council ratified a list. The disputes clustered at the edges: a handful of shorter or later-attested books were contested, while the four Gospels, Acts, and the letters of Paul — the doctrinal core — were never seriously in question."},
+  {q:"What does the conclusion reach — and not reach?", a:"That the canon is recognition, not invention: it dismantles the conspiracy story and shows the canon to be the fruit of a discriminating, centuries-long reception rather than a fourth-century political fiat. It does not, by itself, show that the books are inspired or true; that is argued on further grounds."},
+  {q:"What was the Council of Nicaea’s actual business — and what did Constantine select?", a:"The relationship of Christ to the Father in the Arian controversy; it did not vote on, discuss, or record anyone raising the canon. Constantine selected nothing: the four-Gospel core was already functioning as Scripture generations before he was born."},
+  {q:"Why is the early-fourth-century sorting into “recognized,” “disputed,” and “spurious” books decisive?", a:"Because it comes before Nicaea: a careful sorting by inherited usage was already underway before Constantine’s council met. That is the decisive evidence against the conspiracy story."},
+  {q:"Why does Irenaeus’s “four winds” argument for exactly four Gospels count as evidence?", a:"It is a strange-sounding argument to modern ears, but it only works if, around AD 180, a fourfold Gospel was already an established fact his readers would not dispute."},
+  {q:"The oldest surviving canon list — what does it show, and how secure is its date?", a:"It already looks substantially like the New Testament, though it is mutilated at both ends, accepts the Wisdom of Solomon, and omits Hebrews, James, and 1–2 Peter. Its date is debated: late second century is the majority view; a minority argues for the fourth century."},
+  {q:"What did the 367 Easter list and the councils of Hippo and Carthage actually do?", a:"The Easter list records a settled deposit of New Testament books rather than legislating a new one. The regional councils listed and affirmed the canon for North Africa when the New Testament core had been read as Scripture for the better part of three centuries: they did not vote books into existence; they ratified a consensus long since reached. (Their lists also included the books Catholics and Orthodox call deuterocanonical, which Athanasius set apart as books to be read — a real, reasonable disagreement this argument does not adjudicate.)"},
+  {q:"Why were the Gospels of Thomas, Peter, and Judas left out?", a:"Chronology, not theology, is the decisive point: as we have them they are second-century or later, written generations after the apostles whose names they borrow, so they failed the test of apostolic origin on historical grounds. The four canonical Gospels date to the first century, within living memory of the events. Ancient judges also weighed doctrine (Serapion’s verdict on the Gospel of Peter was partly doctrinal), but his stated ground was also provenance, a book “not handed down to us.”"},
+  {q:"Is the Gospel of Thomas an early, independent rival to the four?", a:"Genuinely contested: a strong line of scholarship argues it draws on the finished Synoptics, while others defend an early and independent core. But even on the more cautious readings, Thomas as we have it is a second-century Greek composition that stands downstream of the first-century Gospels, not a first-century rival to them."},
+  {q:"Reply to: “The orthodoxy test is circular — they kept the books that already agreed with them.”", a:"The rule of faith was not drawn up to fit a list: it is a short summary of the apostolic preaching, attested around AD 180 independently of any list, and it names no books. And the criteria had teeth — the church kept Revelation, Hebrews, and 2 Peter through long doubt. This does not prove the criterion infallible; it shows the criterion did not decide the outcome."},
+  {q:"Why do Catholic, Orthodox, and Protestant Bibles differ — and what does that do to the argument?", a:"The difference lies in the extent of the Old Testament — the books Catholics and Orthodox call deuterocanonical and Protestants call the Apocrypha; both traditions can point to early precedent, and the argument does not adjudicate it. On the twenty-seven-book New Testament all three are unanimous, so the disagreement leaves the New Testament canon, and the conspiracy-theory framing, untouched."}
 ];
 let ci = 0;
 function renderCard(){
@@ -768,35 +1044,104 @@ function renderCard(){
 function nextCard(){ ci = (ci+1)%cards.length; renderCard(); }
 function prevCard(){ ci = (ci-1+cards.length)%cards.length; renderCard(); }
 
-/* ---- debate ---- */
-document.getElementById('debateBox').addEventListener('input', ()=>{
-  if(document.getElementById('debateBox').value.trim().length > 8 && !state.debateTried){
-    state.debateTried = true; updateDial();
+/* ---- Bronze reconstruction gate (retrieval-earned "Understand") ---- */
+var ORDER = [
+  "If the church recognized writings that already carried authority, rather than conferring it by vote, the canon reflects something found, not manufactured.",
+  "The historical evidence shows the core books were received and used as authoritative long before any council ratified a list.",
+  "Therefore the canon is a recognition of books the churches already received as authoritative, not a late ecclesiastical invention."
+];
+var PROPS = [
+  {t:"the core books were received as Scripture long before any council ratified a list", ok:true},
+  {t:"the Council of Nicaea never took up the canon", ok:true},
+  {t:"the rejected gospels are, as we have them, second-century or later", ok:true},
+  {t:"the criteria had teeth: the church kept books it would have found convenient to drop", ok:true},
+  {t:"the New Testament disputes clustered at the edges, not the doctrinal core", ok:true},
+  {t:"proves the books are inspired", ok:false},
+  {t:"settles which Old Testament canon is correct", ok:false},
+  {t:"early Christianity was a single, uniform stream", ok:false},
+  {t:"requires every canonical authorship attribution to be correct", ok:false},
+  {t:"the Muratorian Fragment’s second-century date is undisputed", ok:false},
+  {t:"Constantine chose among more than eighty gospels", ok:false}
+];
+var _ordSel = [];
+function _shuf(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } return a; }
+function injectBronze(){
+  var pool=document.getElementById('orderPool');
+  if(pool && !pool.children.length){
+    _shuf([0,1,2]).forEach(function(k){
+      var b=document.createElement('button'); b.type='button'; b.className='btn ghost'; b.textContent=ORDER[k];
+      b.onclick=function(){ if(b.disabled) return; b.disabled=true; b.style.opacity=.4; _ordSel.push(k); _ordSeq(); };
+      pool.appendChild(b);
+    });
   }
-});
-document.querySelector('[onclick*="modelAns"]').addEventListener('click', ()=>{
-  state.debateTried = true; updateDial();
-});
-
-/* ---- prove it ---- */
-function markRead(){
-  state.read = true;
-  document.getElementById('readBtn').textContent = 'Marked as understood ✓';
-  document.getElementById('readBtn').classList.remove('primary');
-  document.getElementById('readBtn').classList.add('ghost');
-  updateDial();
+  var pp=document.getElementById('propPool');
+  if(pp && !pp.children.length){
+    _shuf(PROPS).forEach(function(p){
+      var b=document.createElement('button'); b.type='button'; b.className='btn ghost'; b.textContent=p.t; b.setAttribute('data-ok', p.ok?'1':'0');
+      b.onclick=function(){ b.classList.toggle('sel'); };
+      pp.appendChild(b);
+    });
+  }
 }
+function _ordSeq(){ var el=document.getElementById('orderSeq'); if(el) el.textContent = _ordSel.length ? _ordSel.map(function(k,i){ return (i+1)+'. '+ORDER[k]; }).join('    ') : ''; }
+function resetBronze(){
+  _ordSel=[]; _ordSeq();
+  var pool=document.getElementById('orderPool'); if(pool){ [].forEach.call(pool.children,function(b){ b.disabled=false; b.style.opacity=1; }); }
+  var pp=document.getElementById('propPool'); if(pp){ [].forEach.call(pp.children,function(b){ b.classList.remove('sel'); }); }
+  var g=document.getElementById('bronzeGrade'); if(g){ g.className='gradeline'; g.textContent=''; }
+}
+function gradeBronze(){
+  var orderOK = _ordSel.length===3 && _ordSel[0]===0 && _ordSel[1]===1 && _ordSel[2]===2;
+  var pp=document.getElementById('propPool'); var right=0;
+  if(pp){ [].forEach.call(pp.children,function(b){ var want=b.getAttribute('data-ok')==='1'; var got=b.classList.contains('sel'); if(want===got) right++; }); }
+  var decisions = PROPS.length + 1, scored = right + (orderOK?1:0), pctOK = scored/decisions;
+  var g=document.getElementById('bronzeGrade'); if(!g) return;
+  g.className='gradeline show '+(pctOK>=0.8?'pass':'fail');
+  if(pctOK>=0.8){
+    state.bronze=true; updateDial();
+    g.textContent='\u2713 Bronze earned \u2014 you rebuilt the structure from memory ('+Math.round(pctOK*100)+'%). Now go defend it in Practice.';
+  } else {
+    g.textContent='Not yet \u2014 '+Math.round(pctOK*100)+'%. '+(orderOK?'':'Check the order of the three lines. ')+'Re-read the structure above, then try again \u2014 this rep is what makes it stick.';
+  }
+}
+
+/* ---- Drill 4: answer the objections cold (replies ported from the page) ---- */
+var OBJ = [
+  {who:"Historian", q:"Earliest Christianity was a roiling diversity — Ebionites, Marcionites, Gnostics — each with its own gospels and each claiming apostolic pedigree. As Bart Ehrman argues, “orthodoxy” was simply the party that won: the canon is history written by the winners. On this telling, Thomas, Peter, Mary and Judas were silenced not because they were demonstrably late but because they lost a power struggle.", model:"The factual kernel is accurate, and it should be granted: the early Jesus movement was more diverse than the tidy Sunday-school picture suggests, there really were competing groups with competing texts, and the proto-orthodox did prevail. What does not follow is the inference that prevailing is all that orthodoxy was. The decisive point is chronology, not theology: the canonical four date to the first century, within living memory of the events, while the Gospel of Thomas as we have it, the Gospel of Peter, the Gospel of Judas, and the rest are second-century or later — Judas, published in 2006, is a Sethian Gnostic text generally dated to around the mid-second century, far too late to come from Judas. Whether Thomas preserves an early independent core is contested, but even on the more cautious readings it stands downstream of the first-century Gospels. These works failed the test of apostolic origin on historical grounds, and the four were already being received across the churches before most of these rivals were even composed. So the “history written by the winners” objection does not hold: the Gospels the church kept are the first-century ones, and the rival gospels it set aside are, as we have them, second-century or later."},
+  {who:"Critic", q:"Your orthodoxy criterion is circular. A book counted as orthodox if it agreed with the views of the group doing the judging, so “testing against the rule of faith” just means “keeping the books that already agree with us.” The “criteria” look less like neutral tests and more like rationalizations for choices made on other grounds.", model:"Grant the possibility of abuse: “agrees with the rule of faith” could in principle be used to launder a predetermined result. But the rule of faith was not drawn up to fit a list of books. It was a short summary of the apostolic preaching, attested independently of any list: around AD 180 Irenaeus sets it out as the faith the church “has received from the apostles and their disciples,” held by believers “without paper or ink,” and a little later Tertullian names it the regula fidei — and these summaries do not name which books belong in the canon. That answers one form of the charge — that the criterion was reverse-engineered from a predetermined list. It does not answer the deeper form — that the rule itself was simply the winning party’s view; that is met on chronology, since the rival gospels are, as we have them, second-century or later. Nor does it prove the criterion infallible, or by itself show that the summary faithfully preserves what the apostles taught. And in practice the criteria constrained one another: apostolicity and catholicity ask when a book was written and where it was received, and the proof that the criteria had teeth is that the church kept books it would have found convenient to drop — Revelation, Hebrews, 2 Peter. A purely results-driven process would have been tidier than the messy, hesitant one the sources actually record. So the circularity charge does not hold as an account of the outcome: the criterion did not decide it."},
+  {who:"Critical scholar", q:"You keep appealing to “apostolic origin,” but several of your own canonical books are pseudonymous by the judgment of most critical scholars — the Pastoral Epistles, 2 Peter, perhaps Ephesians. As Bart Ehrman presses it, the church enforced a criterion it could not actually verify, and sometimes got it wrong.", model:"That is the objection at its sharpest, and it must be acknowledged: the church’s judgments about authorship were made with the limited tools of antiquity and are regarded as insecure by many modern critics — though those judgments are themselves contested by other scholars, evangelical and Catholic, The reply is bounded but real. Even granting disputed authorship for a few books, the argument does not require that every canonical attribution be correct. It requires that the canon was formed by a discriminating reception keyed to perceived apostolic connection and widespread use — and that is true whether or not every individual judgment about authorship would survive a modern seminar. So the objection does not overturn the argument: the process was principled even on the critics’ own assumptions about authorship."},
+  {who:"Skeptic", q:"If the canon were obvious, why did Hebrews, James, 2 Peter, 2–3 John, Jude and Revelation stay in doubt for generations — in some regions into the fifth century? Prolonged uncertainty looks like a list that was negotiated, not found.", model:"The doubts were real, and it would be dishonest to pretend they were trivial: Hebrews was questioned in the West because its authorship was uncertain; James, 2 Peter, 2 and 3 John, and Jude were received slowly and unevenly — 2 Peter is the most weakly attested book in the New Testament in the early centuries; Revelation was doubted for a long time in the Greek East; and in some regions the doubts persisted into the fifth century and beyond. But the very existence of a category of “disputed” books shows the church was not rubber-stamping; it was sifting, sometimes for generations, before settling — what careful recognition looks like, not what a coordinated invention looks like. The disputes clustered at the edges: the four Gospels, Acts, and the letters of Paul were never seriously in question, and none of the disputed books carries a central doctrine the rest of the New Testament does not teach independently. So the prolonged doubt is not evidence of invention: a stable, early core and a slowly resolved fringe is the signature of discovery, not decree."}
+];
+var _od = 0;
+function odRender(){
+  var o=OBJ[_od];
+  var q=document.getElementById('odQ'); if(q) q.textContent='"'+o.q+'"';
+  var who=document.getElementById('odWho'); if(who) who.textContent=o.who;
+  var av=document.getElementById('odAv'); if(av) av.textContent=o.who.slice(0,2).toUpperCase();
+  var mt=document.getElementById('odModelText'); if(mt) mt.textContent=o.model;
+  var mm=document.getElementById('odModel'); if(mm) mm.classList.remove('show');
+  var bx=document.getElementById('odBox'); if(bx) bx.value='';
+  var c=document.getElementById('odCount'); if(c) c.textContent=(_od+1)+' of '+OBJ.length+(state.objCold.has(_od)?' \u00b7 nailed \u2713':'');
+}
+function odReveal(){ var mm=document.getElementById('odModel'); if(mm) mm.classList.add('show'); }
+function odRate(v){ if(v===2){ state.objCold.add(_od); } else { state.objCold.delete(_od); } updateDial(); if(_od<OBJ.length-1){ _od++; } odRender(); }
+function odNext(){ _od=(_od+1)%OBJ.length; odRender(); }
+function odPrev(){ _od=(_od-1+OBJ.length)%OBJ.length; odRender(); }
+
+/* ---- Gold part 1: the unseen objection ---- */
+function unseenReveal(){ var m=document.getElementById('unseenModel'); if(m) m.classList.add('show'); }
+function unseenRate(v){ state.unseen = (v===2); updateDial(); }
 function renderCalibration(){
   try{
     var el = document.getElementById('calibNote'); if(!el) return;
     var conf = state.conf||0, best = state.explainScore||0;
     var labels = {1:'Shaky',2:'Getting there',3:'Solid',4:'Could teach it'};
     if(conf){ var _b=document.querySelectorAll('#confRow button'); if(_b[conf-1]){ [].forEach.call(_b,function(b){b.classList.remove('sel');}); _b[conf-1].classList.add('sel'); } }
-    if(conf>=3 && best<7){
+    if(conf>=3 && best<8){
       var shown = best>0 ? ('your best Explain It Back so far is '+best+'/10') : 'you haven\u2019t scored an Explain It Back yet';
       el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#a88930;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.3);border-radius:6px;padding:.8rem 1rem;';
       el.innerHTML = '\u26A0 You rated yourself \u201C'+labels[conf]+'\u201D \u2014 but '+shown+'. Worth closing: confidence that holds up in a real conversation is confidence you\u2019ve <b>shown</b>, not just felt. <a href="#" onclick="var b=document.getElementById(\'explainBox\');if(b){b.scrollIntoView({behavior:\'smooth\'});b.focus();}return false;" style="color:#a88930;font-weight:600">Prove it on Explain It Back \u2192</a>';
-    } else if(conf>=3 && best>=7){
+    } else if(conf>=3 && best>=8){
       el.style.cssText = 'display:block;margin-top:16px;font-family:var(--ui);font-size:13.5px;line-height:1.55;color:#2f7d4f;background:rgba(47,125,79,.08);border:1px solid rgba(47,125,79,.3);border-radius:6px;padding:.8rem 1rem;';
       el.innerHTML = '\u2713 Calibrated \u2014 you feel ready and you\u2019ve shown it ('+best+'/10 on Explain It Back). That\u2019s earned confidence.';
     } else {
@@ -857,28 +1202,19 @@ async function boot(){
     if(!isPro){ showGate(); return; }
   }
   /* build the track */
+  injectBronze();
   adRestore();
   renderCard();
+  odRender();
   updateDial();
   renderCalibration();
   window._adLoaded = true;
 }
-/* "Understood it" is earned by opening every section in Phase 1 (defences + objections) */
-var _accs = Array.prototype.slice.call(document.querySelectorAll('#understand details.acc'));
-var _accOpened = new Set();
-_accs.forEach(function(d, i){
-  d.addEventListener('toggle', function(){
-    if(!d.open || state.read){ return; }
-    _accOpened.add(i);
-    if(_accOpened.size >= _accs.length){ state.read = true; }
-    updateDial();
-  });
-});
 
 /* ---- share-card: render this argument as a branded image ---- */
 function _shareSetMsg(btn, msg){ var t = btn.textContent; btn.textContent = msg; setTimeout(function(){ btn.textContent = t; }, 2400); }
 function shareArgCard(btn){
-  var prem = (typeof ARG_PREMISES !== 'undefined') ? ARG_PREMISES : ARG_PREMISES;
+  var prem = ARG_PREMISES;
   document.getElementById('scTitle').textContent = document.querySelector('h1').textContent;
   document.getElementById('scP1').textContent = prem[0];
   document.getElementById('scP2').textContent = prem[1];
@@ -941,6 +1277,8 @@ document.addEventListener('DOMContentLoaded', boot);
   <script src="/ad-nav.js" defer></script>
   <script src="/analytics.js" defer></script>
   <script src="/lib/review-queue.js" defer></script>
+  <script src="/library/mastery-ui.js?v=20261009e" defer></script>
   <script src="/library/verse-popup.js" defer></script>
+<script src="/defend-live.js" defer></script>
 </body>
 </html>

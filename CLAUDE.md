@@ -121,7 +121,9 @@
 > Macedonian mirror `ev-s8.mk.html` still serves gated English under a pending-translation banner (native MK
 > gate owed), and **pastoral sign-off** is owed on all three essays as site-wide (`STATEMENT_OF_FAITH.md` = pending).
 > Also open (row 30): `tools/reel/specs/air-we-breathe.json` still calls Tom Holland "the secular historian" — stale
-> (Salisbury Canon Historian, June 2025), re-word or pull before that reel is posted.
+> (Salisbury Canon Historian, June 2025), re-word or pull before that reel is posted. ✅ **DONE 2026-09-09**
+> (commit `ae035f00`; re-verified 2026-10-04: the spec says "The historian Tom Holland" and "secular" survives
+> only inside its `reviewed` stamp, which records the old wording as history).
 >
 > **BOOK-SWEEP HANDOVER — 2026-08-08. ⭐ START A RESEARCH-LIBRARY SWEEP SESSION AT
 > [`docs/BOOK_SWEEP_HANDOVER.md`](docs/BOOK_SWEEP_HANDOVER.md).** The cross-check has now run on
@@ -857,6 +859,34 @@
 > `xcards/x-honor-the-son.json`. It's gated content (argument+orthodoxy; +neutrality for
 > deity/Trinity/Islam) — reuse the reel/essay's certified framing; details in the `make-reel` skill.
 >
+> **🅿 PARKED — THE MEMORY PALACE IS OFF THE LIVE SITE BUT KEPT FOR LATER. OWNER DECISION, 2026-10-08.**
+> `palace.html` stays **in the repo** but is **not deployed** (`.vercelignore`), is excluded from the app bundle
+> (`tools/build-app-bundle.mjs`), and `/palace.html` + `/argument-map.html` redirect **temporarily (302)** to
+> `/evidence-library.html` (`vercel.json`). Its drill card was removed from the 36 `ev-m-*` mastery pages that had
+> it, plus the links on `games.html`, `dashboard.html` (tile + 7-day plan), `evidence-library.html`, the
+> `scholars.html` footer, `sitemap.xml` and the search index. **Do not re-add any of these on your own initiative —
+> the owner may bring it back later; only then reverse the steps listed in `.vercelignore`.**
+>
+> **🅿 PARKED — THE "FOR PARENTS" PAGE IS OFF THE LIVE SITE BUT KEPT FOR LATER. OWNER DECISION, 2026-10-01.**
+> `parents.html` stays **in the repo** but is **not deployed** (`.vercelignore`) and `/parents.html` redirects
+> **temporarily (302)** to `/` (`vercel.json`). Removed from the nav CANON (`tools/sync-nav.mjs`), the old
+> `worldviews.html` menu and the `dashboard.html` tools grid. **Unlike the legacy pages, this one MAY come
+> back** — but only when the owner asks. Why it was pulled: it presented popular survey statistics (Barna-style
+> figures) as research and has **never been content-gated**. To reintroduce: run it through the full content
+> pipeline first (fix the statistics), then undo the four changes above. Its `/api/tutor` parent-question mode
+> and the crisis guard's handling of it are left in place.
+>
+> **🔴 STANDING NOTE — THE "LEGACY" PAGES ARE GONE FOR GOOD. OWNER RULING, 2026-09-30. DO NOT RECREATE THEM.**
+> `library/legacy.html` (the *Dominion*/"Did Christianity change the world?" essay) and its mastery page
+> `ev-m-legacy.html` were **replaced by "The Christian Revolution" (the `ev-s8` tab)** and its seven live,
+> gated essays — `library/{riseofchurch,persecution,equality,compassion,science-history,abolition,progress}.html`.
+> Both legacy files were **deleted on 2026-09-30**; both old addresses **301-redirect** to
+> `/evidence-library.html?arg=riseofchurch` (`vercel.json`). The legacy material is **not coming back** and is
+> not "pending a rebuild" — the Christian Revolution **is** the rebuild. So: never re-create a `legacy` essay,
+> mastery page, pocket card, `defend-live` mapping or sitemap entry; if an older doc, backlog row or status entry
+> in this file (including the 2026-08-22 entries below) points at `legacy.html` / `ev-m-legacy.html`, treat it as
+> **history** and re-target the work to the Christian Revolution essays. Only the owner can reverse this.
+>
 > **🔴 STANDING RULE — NO TRINITY DIAGRAM ON ANY PAGE. OWNER RULING, 2026-08-29. NOT A JUDGEMENT CALL.**
 > No diagram, figure, chart or illustration of the Trinity may be built or shipped on any surface —
 > essay, `ev-s*` tab card, `ev-m-*` mastery page, pocket card, flashcard, reel, X card, share-card PNG,
@@ -1052,6 +1082,22 @@
 >   until they expire. Fix: add the column, then add `['push_subscriptions','user_id']` to `USER_TABLES`.
 >
 > **Infrastructure / verification**
+> - ⭐ **THE OWNER'S SINGLE TO-DO LIST is [`docs/OWNER_TODO.md`](docs/OWNER_TODO.md)** (2026-10-08 audit).
+>   Every step that needs the owner's Supabase/Vercel/PostHog login or information lives there; add new
+>   ones to it rather than scattering them. The two SQL items below are items 1–2 on it.
+> - 🔴 **OWED BY THE OWNER — run `docs/SUPABASE_RLS_HARDENING.md` in the Supabase SQL editor (written
+>   2026-10-08, NOT YET RUN).** The 2026-10-08 legal/security audit found no row-level security in the repo
+>   for `push_subscriptions` (server-only; if RLS is off, the public anon key on every page can read every
+>   subscriber's push endpoint + keys), `flashcards`, `study_plans_progress`, `explain_sessions` and
+>   `daily_arguments`, plus missing explicit grants on `coach_signals`. The doc has a read-only Step 1 check
+>   (run that first — the tables may already be protected from the dashboard), an idempotent access-only
+>   Step 2 fix, a Step 3 re-check, and an optional Step 4 that clears pre-2026-10-08 Explain It Back text.
+>   Until it is run, treat those tables as UNVERIFIED. Mark the doc's status line when done.
+> - 🔴 **OWED BY THE OWNER — run `docs/AGE_SCREEN.md` in the Supabase SQL editor (written 2026-10-08,
+>   NOT YET RUN).** Audit item 3: signup now asks month + year of birth (under-13 refused, nothing sent),
+>   and `age-gate.js` fronts Study Groups — but the 18+ rule is only ENFORCED once this SQL adds
+>   `public.user_age`, `is_adult()`, the signup trigger, `set_my_age()`, and `is_adult` checks on every
+>   group insert policy + `join_group_by_code`. Until then the pages fall back to the old confirm().
 > - ✅ **DONE + VERIFIED 2026-09-23:** the AI rate-limit migration `docs/ASK_RATE_LIMIT.md`
 >   (`ask_rate` table + `bump_ask_rate` RPC) re-applied on production by the owner via Claude in
 >   Chrome, verify results relayed (1→2, anon/authenticated locked out). Table + function

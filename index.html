@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- content-review: {"argument": "2026-07-28", "orthodoxy": "2026-07-28", "by": "Homepage START_PATHS rework. apologia-orthodoxy: 0 HERESY; explain + together CLEAN; other-faith FLAGGED at DRIFT x2, both fixed. (1) atheism was filed under 'another faith' / 'follows another religion' — which no atheist recognises, and which broke the card's own promise to state each position as its adherents would. Now 'another worldview' / 'a different faith, or none at all', matching worldviews.html's own 'Atheism & Secularism' label. (2) EXPLICIT-VERDICT: 'where WE THINK it does not hold' hedged the verdict while the steelman side carried no hedge; 'we think' deleted, 'and why' carries the humility. NOTE also applied: fairness had been grounded in what persuades rather than in what honesty owes. FALSE-COMMON-GROUND clean — no shared-words framing, and 'no pretending the differences are smaller than they are' is an explicit anti-symmetry fence. Clarifier candidates: 1 considered, 0 actioned (no doctrinal formula asserted; both defects were wording, not orthodox-but-misreadable). NOT pastoral sign-off — the gate flags this rival-worldview homepage framing as a fair candidate for the outstanding human review."} -->
+<!-- content-review: {"argument": "2026-09-30", "orthodoxy": "2026-09-30", "by": "2026-09-30 (b) OWNER DECISION: the review-stage wording added earlier today (AI reviewers / pastoral review not yet in place) was reverted on the hero, meta/og and trust-note; the claim reads as it did before. The disclosure itself remains on editorial-standards.html, which the trust-note links to. || 2026-09-30 trust-wording fix: 'five review stages' now says how they run - hero: 'run by AI reviewers under human supervision; pastoral review is not yet in place' (linked to editorial-standards); meta/og '(AI reviewers, human supervision)'; trust-note adds 'pastoral sign-off is not yet in place'. Debate Arena feature copy: 'written coaching' in place of scored feedback. All wording supplied by the confirmation gate (it caught that 'AI-assisted' understated the AI's role). AUTOMATED GATE (read-only Explore agents, files hash-checked unchanged by reviewers), NOT pastoral sign-off; docs/STATEMENT_OF_FAITH.md still logs the reviewer as pending. || Homepage START_PATHS rework. apologia-orthodoxy: 0 HERESY; explain + together CLEAN; other-faith FLAGGED at DRIFT x2, both fixed. (1) atheism was filed under 'another faith' / 'follows another religion' — which no atheist recognises, and which broke the card's own promise to state each position as its adherents would. Now 'another worldview' / 'a different faith, or none at all', matching worldviews.html's own 'Atheism & Secularism' label. (2) EXPLICIT-VERDICT: 'where WE THINK it does not hold' hedged the verdict while the steelman side carried no hedge; 'we think' deleted, 'and why' carries the humility. NOTE also applied: fairness had been grounded in what persuades rather than in what honesty owes. FALSE-COMMON-GROUND clean — no shared-words framing, and 'no pretending the differences are smaller than they are' is an explicit anti-symmetry fence. Clarifier candidates: 1 considered, 0 actioned (no doctrinal formula asserted; both defects were wording, not orthodox-but-misreadable). NOT pastoral sign-off — the gate flags this rival-worldview homepage framing as a fair candidate for the outstanding human review."} -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -19,9 +19,7 @@
   <meta name="twitter:site" content="@apologiadaily" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Apologia Daily","url":"https://apologiadaily.com","logo":"https://apologiadaily.com/logo.jpg","sameAs":["https://www.instagram.com/apologiadaily/"]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Apologia Daily","url":"https://apologiadaily.com","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://apologiadaily.com/search?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/fonts/fonts.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -525,7 +523,7 @@
       border-top: 1px solid rgba(255,255,255,0.1);
     }
     .daily-actions {
-      display: flex; gap: 10px; margin-top: 1.5rem;
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.5rem;
     }
     .daily-btn {
       font-family: var(--font-ui);
@@ -537,6 +535,10 @@
       color: rgba(255,255,255,0.6);
       cursor: pointer;
       transition: all 0.2s;
+      text-decoration: none;
+      display: inline-block;
+      min-height: 44px;
+      line-height: 28px;
     }
     .daily-btn:hover { border-color: var(--gold); color: var(--gold); }
     .streak-row {
@@ -933,7 +935,7 @@
             <div class="adn-mega-col">
               <div class="adn-mega-h">Go deeper</div>
               <a class="adn-mi" href="/library/"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Deep-Dive Essays</span><span class="adn-mi-dc">Long-form, fully-cited essays.</span></span></a>
-              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Answers</span><span class="adn-mi-dc">The questions people ask most.</span></span></a>
+              <a class="adn-mi" href="/answers/"><span class="adn-mi-ic">&#10024;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Common Questions</span><span class="adn-mi-dc">Short answers to the questions people ask most.</span></span></a>
               <a class="adn-mi" href="/sources.html"><span class="adn-mi-ic">&#128220;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Church Fathers &amp; Creeds</span><span class="adn-mi-dc">The early church in its own words, verified.</span></span></a>
               <a class="adn-mi" href="/our-sources.html"><span class="adn-mi-ic">&#128218;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Our Sources</span><span class="adn-mi-dc">Books and articles our essays cite.</span></span></a>
               <a class="adn-mi" href="/whats-new.html"><span class="adn-mi-ic">&#128240;</span><span class="adn-mi-tx"><span class="adn-mi-nm">What&#39;s New</span><span class="adn-mi-dc">Latest essays, features &amp; reels.</span></span></a>
@@ -944,11 +946,9 @@
               <a class="adn-mi" href="/games.html"><span class="adn-mi-ic">&#127918;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Games</span><span class="adn-mi-dc">Quizzes that feed your streak.</span></span></a>
               <a class="adn-mi" href="/study-groups.html"><span class="adn-mi-ic">&#128101;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Study Groups <span class="adn-mi-tag">New</span></span><span class="adn-mi-dc">Study with people you love.</span></span></a>
               <a class="adn-mi" href="/reading-club.html"><span class="adn-mi-ic">&#128214;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Reading Clubs</span><span class="adn-mi-dc">The classics, chapter by chapter.</span></span></a>
-              <a class="adn-mi" href="/conversation-journal.html"><span class="adn-mi-ic">&#128221;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Conversation Journal</span><span class="adn-mi-dc">Log real conversations, get AI coaching.</span></span></a>
             </div>
             <div class="adn-mega-col">
               <div class="adn-mega-h">For you</div>
-              <a class="adn-mi" href="/parents.html"><span class="adn-mi-ic">&#128106;</span><span class="adn-mi-tx"><span class="adn-mi-nm">For Parents</span><span class="adn-mi-dc">Your kids&#39; hardest questions.</span></span></a>
               <a class="adn-mi" href="/video-library.html"><span class="adn-mi-ic">&#127909;</span><span class="adn-mi-tx"><span class="adn-mi-nm">Videos</span><span class="adn-mi-dc">Short, shareable explainers.</span></span></a>
             </div>
             <div class="adn-mega-foot">
@@ -991,7 +991,7 @@
     <div class="hc-card">
       <div class="hc-kick">TRY IT RIGHT NOW &mdash; NO ACCOUNT NEEDED</div>
       <h2 class="hc-title">Ask the hardest question about Christianity you&rsquo;ve got</h2>
-      <p class="hc-sub">A real answer in seconds &mdash; grounded in classical Christian orthodoxy, gentle in tone, honest about difficulty. Your first two questions are free, no sign-up.</p>
+      <p class="hc-sub">A real answer in seconds &mdash; grounded in classical Christian orthodoxy, gentle in tone, honest about difficulty. Two free questions a day with no sign-up, or three a day with a free account.</p>
       <div class="hc-chips">
         <button class="hc-chip" onclick="hcUse(this)">Isn&rsquo;t the Bible full of contradictions?</button>
         <button class="hc-chip" onclick="hcUse(this)">Hasn&rsquo;t science made God unnecessary?</button>
@@ -1004,7 +1004,7 @@
       <div id="hcAnswer" class="hc-answer" style="display:none"></div>
       <div id="hcLimit" class="hc-limit" style="display:none">
         <h4>You&rsquo;ve used today&rsquo;s free questions</h4>
-        <p>Create a free account to keep asking &mdash; and save your conversations, build flashcards, and start the 7-day journey.</p>
+        <p>Create a free account for three questions a day &mdash; and save your conversations, keep a daily review deck, and start the 7-day journey.</p>
         <a class="hc-cta" href="signup.html">Start Free &rarr;</a>
         <span class="hc-login">Already have an account? <a href="login.html">Log in</a> &middot; or come back tomorrow</span>
       </div>
@@ -1022,11 +1022,11 @@
       <div class="stats-bar">
         <!-- trust-strip:start -->
     <div class="stat-item">
-      <span class="stat-num">156</span>
+      <span class="stat-num">164</span>
       <span class="stat-lbl">Verified sources</span>
     </div>
     <div class="stat-item">
-      <span class="stat-num">100</span>
+      <span class="stat-num">102</span>
       <span class="stat-lbl">Cited deep dives</span>
     </div>
     <div class="stat-item">
@@ -1034,7 +1034,7 @@
       <span class="stat-lbl">Review stages</span>
     </div>
     <div class="stat-item">
-      <span class="stat-num">110</span>
+      <span class="stat-num">112</span>
       <span class="stat-lbl">Answer pages</span>
     </div>
   <!-- trust-strip:end -->
@@ -1055,7 +1055,7 @@
       <div class="start-grid reveal" id="start-grid">
 
         <div class="start-card" onclick="selectStart(this, 'challenged')">
-          <div class="start-icon">&#9878;</div>
+          <div class="start-icon">&#9878;&#65039;</div>
           <div class="start-label">Someone challenged my faith</div>
           <div class="start-desc">A friend, colleague, or family member raised questions I wasn't sure how to answer.</div>
         </div>
@@ -1119,7 +1119,7 @@
             <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
           </div>
           <div class="feature-title">Evidence Library</div>
-          <div class="feature-desc">82 in-depth arguments for God's existence, the resurrection, biblical reliability, and science & faith. Organised from beginner to advanced.</div>
+          <div class="feature-desc">84 in-depth arguments for God's existence, the resurrection, biblical reliability, and science & faith. Organised from beginner to advanced.</div>
           <span class="feature-tag">Explore arguments →</span>
         </div>
 
@@ -1137,7 +1137,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
           <div class="feature-title">Debate Arena</div>
-          <div class="feature-desc">Go head to head with an AI atheist, Muslim, agnostic, or secularist. Choose your topic, pick your difficulty, and get scored feedback after every round.</div>
+          <div class="feature-desc">Go head to head with an AI atheist, Muslim, agnostic, or secularist. Choose your topic, pick your difficulty, and get written coaching when each debate ends.</div>
           <span class="feature-tag">Enter the arena →</span>
         </div>
 
@@ -1186,14 +1186,13 @@
           <span class="feature-tag">Play &amp; learn →</span>
         </div>
 
-        <div class="feature-card" style="opacity:0.65;position:relative;">
-          <div style="position:absolute;top:12px;right:12px;font-family:var(--font-ui);font-size:0.65rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;background:var(--navy-100);color:var(--navy-600);padding:3px 10px;border-radius:20px;">Coming Soon</div>
+        <div class="feature-card" onclick="window.location='study-groups.html'" style="cursor:pointer;">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <div class="feature-title">Community</div>
-          <div class="feature-desc">A moderated forum where Christians sharpen each other — discuss arguments, share stories, and prepare together for the conversations that matter.</div>
-          <span class="feature-tag" style="color:var(--text-muted);border-color:var(--border);">Coming soon</span>
+          <div class="feature-title">Study Groups &amp; Reading Clubs</div>
+          <div class="feature-desc">Work through the evidence together &mdash; an invite-only group with friends, family or your church small group, or a guided read-through of a book.</div>
+          <span class="feature-tag">Start a group &rarr;</span>
         </div>
 
       </div>
@@ -1210,7 +1209,7 @@
       .ba-head p{font-family:'DM Sans',sans-serif;color:#3a4a62;max-width:60ch;margin:0 auto;font-size:1rem}
       .ba-cols{display:grid;grid-template-columns:1fr 1fr;gap:34px}
       @media(max-width:720px){.ba-cols{grid-template-columns:1fr;gap:8px}}
-      .ba-col h3{font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.11em;font-size:.76rem;font-weight:700;color:#c8a951;margin:0 0 8px}
+      .ba-col h3{font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.11em;font-size:.76rem;font-weight:700;color:#7a5c12;margin:0 0 8px}
       .ba-col ul{list-style:none;margin:0;padding:0}
       .ba-col li{border-bottom:1px solid #e3ddd0}
       .ba-col a{display:block;padding:11px 2px;color:#0a1628;text-decoration:none;font-family:'Source Serif 4',Georgia,serif;font-size:1.02rem;line-height:1.35}
@@ -1277,16 +1276,17 @@
             </li>
             <li>
               <div class="arena-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
-              Scored feedback after every debate round
+              Written coaching at the end of every debate
             </li>
             <li>
               <div class="arena-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
               Linked directly to study resources for each weakness
             </li>
           </ul>
-          <a href="signup.html" class="btn-primary">Try the Arena</a>
+          <a href="debate-arena.html" class="btn-primary">Try the Arena</a>
         </div>
         <div class="arena-visual reveal">
+          <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.6rem;">Example exchange</div>
           <div class="arena-vs-bar">
             <div class="arena-side">
               <div class="arena-side-name">You</div>
@@ -1304,7 +1304,7 @@
           </div>
           <div class="arena-msg user">
             <div class="arena-msg-label">You</div>
-            Science explains the how — but not the why there is something rather than nothing. The Kalam argument shows the universe began to exist and therefore requires a cause outside itself...
+            Science explains the how — but not the why there is something rather than nothing. The Kalam argument makes the case that the universe began to exist and therefore has a cause outside itself...
           </div>
           <div class="arena-msg opp">
             <div class="arena-msg-label">Atheist</div>
@@ -1320,24 +1320,49 @@
     <div class="container">
       <div class="daily-inner">
         <div class="daily-card reveal">
-          <div class="daily-date">Today · Wednesday, 4 June 2026</div>
-          <div class="daily-verse">"Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have — but do this with gentleness and respect."</div>
-          <div class="daily-ref">1 Peter 3:15</div>
-          <div class="daily-reflection">Apologetics is not about winning arguments. It is about loving people enough to think carefully on their behalf. Today, consider who in your life is asking hard questions — and how you might meet them with both truth and grace.</div>
+          <div class="daily-date" id="daily-date">Today</div>
+          <div class="daily-verse" id="daily-verse">"Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have — but do this with gentleness and respect."</div>
+          <div class="daily-ref" id="daily-ref">1 Peter 3:15</div>
+          <div class="daily-reflection" id="daily-reflection">Apologetics is not about winning arguments. It is about loving people enough to think carefully on their behalf. Today, consider who in your life is asking hard questions — and how you might meet them with both truth and grace.</div>
           <div class="daily-actions">
-            <button class="daily-btn">▶ Listen</button>
-            <button class="daily-btn">✦ Pray</button>
-            <button class="daily-btn">↗ Share</button>
+            <a class="daily-btn" href="/daily-devotional.html">Open today&rsquo;s devotional &rarr;</a>
+            <a class="daily-btn" href="/today">Start today&rsquo;s session &rarr;</a>
           </div>
-          <div class="streak-row">
-            <div class="streak-day done">M</div>
-            <div class="streak-day done">T</div>
-            <div class="streak-day done">W</div>
-            <div class="streak-day done">T</div>
-            <div class="streak-day done">F</div>
-            <div class="streak-day today">S</div>
-            <div class="streak-day empty">S</div>
-          </div>
+          <script>
+            /* Live date (was a hardcoded "4 June 2026"). No streak is shown here:
+               this card has no access to the visitor's real progress, and a
+               pre-filled streak would be a fabricated one. */
+            (function(){ try {
+              document.getElementById('daily-date').textContent = 'Today \u00b7 ' +
+                new Date().toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
+            } catch(e){} })();
+            /* Today's real devotional verse (2026-09-30): the same entry, day number and
+               cache ('devo_cache') as daily-devotional.html, so the two always match.
+               The 1 Peter 3:15 text above stays as the fallback if the fetch fails. */
+            (function(){
+              function show(d){
+                if(!d || !d.verse || !d.ref) return;
+                document.getElementById('daily-verse').textContent = '\u201c' + d.verse + '\u201d';
+                document.getElementById('daily-ref').textContent = d.ref;
+                if(d.theme) document.getElementById('daily-reflection').textContent = 'Today\u2019s theme: ' + d.theme + '. Read the full reflection and prayer in today\u2019s devotional.';
+              }
+              try {
+                var now = new Date(), start = new Date(now.getFullYear(), 0, 0);
+                var day = ((Math.floor((now - start) / 864e5) - 1) % 365) + 1;
+                var c = JSON.parse(localStorage.getItem('devo_cache') || 'null');
+                if(c && c.day === day && c.date === now.toDateString()){ show(c.devo); return; }
+                var K = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcHJneGt3bmlvdXVrbXJmb3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjE1MTUsImV4cCI6MjA5NjEzNzUxNX0.GKmQgpndtaBUcz5SoT9H3bDsqjNSPixJJj4G3BrVkJw';
+                fetch('https://noprgxkwniouukmrfozc.supabase.co/rest/v1/devotionals?day_number=eq.' + day + '&select=*',
+                      { headers: { apikey: K, Authorization: 'Bearer ' + K } })
+                  .then(function(r){ return r.ok ? r.json() : null; })
+                  .then(function(data){
+                    if(!data || !data.length) return;
+                    try { localStorage.setItem('devo_cache', JSON.stringify({ day: day, date: now.toDateString(), devo: data[0] })); } catch(e){}
+                    show(data[0]);
+                  }).catch(function(){});
+              } catch(e){}
+            })();
+          </script>
         </div>
         <div class="reveal">
           <p class="section-eyebrow">Daily Devotional</p>
@@ -1430,7 +1455,7 @@
           <ul class="pricing-features">
             <li>
               <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Evidence Library &mdash; free summaries on all 82 arguments
+              Evidence Library &mdash; free summaries on all 84 arguments
             </li>
             <li>
               <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1456,6 +1481,10 @@
               <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
               2 free games &mdash; Daily Quiz &amp; Who Said It?
             </li>
+            <li>
+              <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Study Groups &amp; Reading Clubs
+            </li>
           </ul>
           <a href="signup.html" class="btn-pricing btn-pricing-outline">Start Free</a>
           <p style="text-align:center;font-family:var(--font-ui);font-size:0.72rem;color:var(--text-muted);margin-top:0.75rem;">Browse Evidence Library &amp; Glossary without an account</p>
@@ -1465,8 +1494,8 @@
         <div class="pricing-card featured">
           <div class="pricing-badge">Coming soon</div>
           <div class="pricing-tier">Pro</div>
-          <div class="pricing-price" style="color:var(--gold);">$8</div>
-          <div class="pricing-period">planned price &middot; launching soon</div>
+          <div class="pricing-price" style="color:var(--gold);font-size:1.7rem;line-height:1.15;">Launching soon</div>
+          <div class="pricing-period">Pricing announced at launch</div>
           <ul class="pricing-features">
             <li>
               <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1474,7 +1503,7 @@
             </li>
             <li>
               <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Full Evidence Library &mdash; Pro deep dives on all 82 arguments
+              Full Evidence Library &mdash; Pro deep dives on all 84 arguments
             </li>
             <li>
               <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1494,19 +1523,15 @@
             </li>
             <li>
               <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              3 Pro games &mdash; Speed Round, Objection Catcher, Conversation Journal
-            </li>
-            <li>
-              <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Study Groups &amp; Reading Clubs
+              2 Pro games &mdash; Speed Round and Objection Catcher
             </li>
             <li>
               <svg class="check-mark" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
               Full video library (coming soon)
             </li>
           </ul>
-          <a href="signup.html" class="btn-pricing btn-pricing-gold">Create a free account</a>
-          <p style="text-align:center;font-family:var(--font-ui);font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:0.75rem;">Pro is launching soon &mdash; we'll email you the moment it's ready.</p>
+          <p style="text-align:center;font-family:var(--font-ui);font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:0.75rem;">Pro is launching soon &mdash; start with a free account. We&rsquo;ll announce it here on the site.</p>
+          <p style="text-align:center;font-family:var(--font-ui);font-size:0.72rem;color:rgba(255,255,255,0.55);margin-top:0.6rem;line-height:1.5;">Pricing will be shown here before you pay, and you can cancel any time (online from your account, or in App Store / Google Play settings if you subscribe in the app). <a href="/terms.html#subscriptions" style="color:inherit;text-decoration:underline;">Subscription terms</a></p>
         </div>
 
       </div>
@@ -1534,7 +1559,6 @@
     <div class="container" style="position:relative;z-index:1;">
       <p class="section-eyebrow">Begin today</p>
       <h2 class="section-title reveal">Are you ready to <em>defend</em><br />what you believe?</h2>
-      <p class="section-sub reveal">Join thousands of Christians building a confident, evidence-based faith — one day at a time.</p>
       <div class="hero-actions reveal">
         <a href="signup.html" class="btn-primary">Start Free</a>
         <a href="#features" class="btn-ghost">See All Features</a>
@@ -1796,12 +1820,13 @@
     if (s.d !== hcToday()){ return 0; }
     return s.n || 0;
   }
-  function hcAcctSave(n){ try { localStorage.setItem('ad_askcount', JSON.stringify({ d: hcToday(), n: n })); } catch(e){} }
+  function hcAcctSave(n){ try { localStorage.setItem('ad_askcount', JSON.stringify({ d: hcToday(), n: n })); } catch(e){}
+    try { var au = JSON.parse(localStorage.getItem('askUsage') || '{}'); au.count = (au.count || 0) + 1; localStorage.setItem('askUsage', JSON.stringify(au)); } catch(e){} }
   function hcShowLimit(loggedIn){
     try{ if(window.adTrack) adTrack('homechat_wall_hit',{loggedIn:!!loggedIn}); }catch(e){}
     var el = document.getElementById('hcLimit');
     if (loggedIn){
-      el.innerHTML = '<h4>You&rsquo;ve used today&rsquo;s 3 free questions</h4>' +
+      el.innerHTML = '<h4>You&rsquo;ve used today&rsquo;s ' + HC_ACCT_FREE + ' free questions</h4>' +
         '<p>Pro is unlimited \u2014 plus the full Debate Arena, the AI Tutor, and every Mastery Track.</p>' +
         '<a class="hc-cta" href="#pricing">Upgrade to Pro &rarr;</a>' +
         '<span class="hc-login">Your free questions reset daily</span>';
