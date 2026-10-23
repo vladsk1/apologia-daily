@@ -88,7 +88,7 @@ export default async function handler(req, res) {
       var clipped = cleaned.length > MAX ? cleaned.slice(0, MAX) + ' …[truncated]' : cleaned;
       var safeSource = source.replace(/[\r\n]+/g, ' ');
       var TO = process.env.QUESTION_NOTIFY_TO || process.env.SIGNUP_NOTIFY_TO || 'vkiparizov@gmail.com';
-      var FROM = process.env.QUESTION_NOTIFY_FROM || process.env.SIGNUP_NOTIFY_FROM || 'Apologia Daily <onboarding@resend.dev>';
+      var FROM = process.env.QUESTION_NOTIFY_FROM || process.env.SIGNUP_NOTIFY_FROM || 'Apologia Daily <contact@apologiadaily.com>';
       try {
         var r = await fetch('https://api.resend.com/emails', {
           method: 'POST',

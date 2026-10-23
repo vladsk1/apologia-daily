@@ -76,7 +76,8 @@ async function handleDeleteAccount(req, res) {
    Vercel env to set:
      RESEND_API_KEY        (required to actually send email)
      SIGNUP_NOTIFY_TO      (default: vkiparizov@gmail.com)
-     SIGNUP_NOTIFY_FROM    (default: "Apologia Daily <onboarding@resend.dev>")
+     SIGNUP_NOTIFY_FROM    (default: "Apologia Daily <contact@apologiadaily.com>",
+                            the verified domain the weekly email already sends from)
      SIGNUP_HOOK_SECRET    (optional; if set, the webhook must pass it as
                             ?secret=... or header x-signup-secret)
      SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY  (optional for the notifier; REQUIRED
@@ -149,7 +150,12 @@ export default async function handler(req, res) {
 
   // Send the email via Resend.
   var TO = process.env.SIGNUP_NOTIFY_TO || 'vkiparizov@gmail.com';
-  var FROM = process.env.SIGNUP_NOTIFY_FROM || 'Apologia Daily <onboarding@resend.dev>';
+  // Default to the VERIFIED domain sender the weekly email already uses — Resend
+  // delivers that to any inbox. The old default (onboarding@resend.dev) is Resend's
+  // shared TEST address, which only reaches your own Resend-account email and is
+  // heavily spam-filtered, so signup notices were being dropped. Override with
+  // SIGNUP_NOTIFY_FROM if you move the sending domain.
+  var FROM = process.env.SIGNUP_NOTIFY_FROM || 'Apologia Daily <contact@apologiadaily.com>';
   var RESEND = process.env.RESEND_API_KEY;
   var totalLine = (total !== null) ? ('Total users: ' + total) : '';
   if (RESEND) {
