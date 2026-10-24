@@ -896,6 +896,28 @@
 .hc-close:hover{color:#fff;border-color:var(--gold)}
 </style>
   <link rel="stylesheet" href="/ad-nav.css">
+<style>
+.featclub{padding:0 2rem;margin:-1.5rem auto 0;max-width:860px;position:relative;z-index:6}
+.featclub+.homechat{margin-top:.9rem}
+.fc-card{background:linear-gradient(150deg,#0d1d38,#0a1628 60%,#12264a);border:1px solid var(--gold);border-radius:16px;padding:2rem 2.4rem;box-shadow:0 18px 50px rgba(5,13,26,.45)}
+.fc-kick{font-family:var(--font-ui);font-size:.72rem;letter-spacing:.18em;color:var(--gold);font-weight:600;margin-bottom:.8rem}
+.fc-row{display:flex;gap:1.2rem;align-items:flex-start}
+.fc-cover{width:84px;flex-shrink:0;aspect-ratio:2/3;border-radius:4px;background:linear-gradient(160deg,#1a2f52,#0c1a30);border:1px solid rgba(255,255,255,.18);box-shadow:0 8px 20px rgba(0,0,0,.45);padding:.5rem;display:flex;flex-direction:column;justify-content:space-between}
+.fc-cover i{font-family:var(--font-display);color:#e8cf87;font-size:.66rem;line-height:1.15}.fc-cover small{font-family:var(--font-ui);font-size:.44rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.05em}
+.fc-title{font-family:var(--font-display);font-size:1.6rem;color:#fff;line-height:1.2;margin:0 0 .4rem}
+.fc-meta{font-family:var(--font-ui);color:rgba(255,255,255,.72);font-size:.85rem;line-height:1.5}.fc-meta b{color:#fff}
+.fc-ivp{display:flex;gap:.55rem;align-items:flex-start;margin:1rem 0;background:rgba(200,169,81,.10);border:1px solid rgba(200,169,81,.45);border-left:3px solid var(--gold);border-radius:6px;padding:.7rem .85rem;color:#fff;font-family:var(--font-ui);font-size:.9rem;font-weight:600;line-height:1.4}
+.fc-sub{font-family:var(--font-ui);font-size:.92rem;color:rgba(255,255,255,.65);line-height:1.6;margin:0}
+.fc-author{border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);padding:.9rem 0;margin:1rem 0;display:flex;gap:.85rem;align-items:flex-start}
+.fc-ph{width:48px;height:48px;border-radius:50%;flex-shrink:0;border:1px dashed rgba(200,169,81,.6);color:rgba(200,169,81,.85);font-family:var(--font-ui);font-size:.5rem;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.1}
+.fc-author h4{font-family:var(--font-ui);color:var(--gold);font-size:.68rem;letter-spacing:.14em;margin:0 0 .3rem}
+.fc-author p{font-family:var(--font-ui);color:rgba(255,255,255,.72);font-size:.85rem;line-height:1.5;margin:0}
+.fc-tbd{background:rgba(200,169,81,.16);color:#e8cf87;padding:0 .2rem;border-radius:2px}
+.fc-btns{display:flex;gap:.7rem;flex-wrap:wrap}
+.fc-b1{flex:1;min-width:200px;background:var(--gold);color:#050d1a;text-align:center;border-radius:8px;padding:.9rem;font-family:var(--font-ui);font-weight:600;font-size:.98rem;text-decoration:none}
+.fc-b2{flex:1;min-width:200px;border:1px solid rgba(255,255,255,.3);color:#fff;text-align:center;border-radius:8px;padding:.85rem;font-family:var(--font-ui);font-size:.92rem;text-decoration:none}
+@media(max-width:640px){.featclub{padding:0 1rem}.fc-card{padding:1.5rem 1.2rem}.fc-title{font-size:1.35rem}.fc-cover{width:72px}}
+</style>
 </head>
 <body>
 
@@ -988,6 +1010,27 @@
       <a href="/today" class="btn-ghost">See today&rsquo;s session &rarr;</a>
     </div>
     <p class="hero-verse">&ldquo;Always be prepared to give an answer to everyone who asks.&rdquo;&nbsp;&mdash;&nbsp;1&nbsp;Peter&nbsp;3:15</p>
+  </section>
+
+  <!-- FEATURED READING CLUB — Del Rosario study, published by permission of InterVarsity Press.
+       IVP may request removal after the first year: to take it down, delete this <section> (and its
+       .featclub CSS). Copy gated 2026-10-23 (citations/argument/orthodoxy/neutrality); do not reword
+       without re-gating, and never call it IVP-"approved" or "endorsed". -->
+  <section class="featclub" id="featured-club">
+    <div class="fc-card">
+      <div class="fc-kick">FEATURED READING CLUB</div>
+      <div class="fc-row">
+        <div class="fc-cover"><i>Did Jesus Really Say He Was God?</i><small>Dr. Mikel Del Rosario</small></div>
+        <div>
+          <h2 class="fc-title">Did Jesus Really Say He Was God?</h2>
+          <div class="fc-meta">by <b>Dr. Mikel Del Rosario</b><br>IVP Academic, 2025 &middot; Foreword by Darrell&nbsp;L.&nbsp;Bock</div>
+        </div>
+      </div>
+      <div class="fc-ivp"><span style="color:var(--gold)">&#128278;</span><span><span style="color:var(--gold)">The study guide:</span> Created and distributed by permission of InterVarsity Press. <span style="font-weight:400;font-style:italic;color:rgba(255,255,255,.7)">IVP&rsquo;s permission covers this study guide only.</span></span></div>
+      <p class="fc-sub">Read the book chapter by chapter with a study guide for each session: a short summary, discussion questions and a key takeaway. Great for small groups, or on your own.</p>
+      <div class="fc-author" style="display:block"><h4>ABOUT THE BOOK</h4><p>Can we show &mdash; by the standards of professional historians &mdash; that it&rsquo;s <em>very probable</em> the historical Jesus claimed <em>divine authority</em>? Dr. Mikel Del Rosario builds the case through two parallel &ldquo;blasphemy accusation&rdquo; scenes: the paralytic Jesus forgives in Mark 2 (authority to <em>forgive</em> sins), and the Jewish examination in Mark 14 (authority to <em>judge</em>).</p></div>
+      <div class="fc-btns"><a class="fc-b1" href="/reading-club-did-jesus-say-he-was-god.html">Start the study &rarr;</a><a class="fc-b2" href="https://amzn.to/4sfNrm5" rel="sponsored noopener" target="_blank">Get the book</a></div>
+    </div>
   </section>
 
   <!-- HOMEPAGE CHAT — the no-account "aha", first thing after the hero -->
