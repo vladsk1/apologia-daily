@@ -1005,6 +1005,7 @@ function renderMockScore(txtRaw){
     if(c.ok){ score += 2; feed += '<li class="hit"><span class="mk">\u2713</span>'+c.hit+'</li>'; }
     else{ feed += '<li class="miss"><span class="mk">\u25CB</span>'+c.miss+'</li>'; }
   });
+  if(!checks[0].ok) score = Math.min(score, 5);
   document.getElementById('scoreNum').innerHTML = score + '<small>/10</small>';
   var verdict = score>=8?'Strong \u2014 you own this one' : score>=6?'Solid, a couple of gaps to close' : score>=3?'On the way \u2014 fill the gaps below' : 'Have another go with the structure in mind';
   document.getElementById('scoreVerdict').textContent = verdict;
