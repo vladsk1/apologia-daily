@@ -760,6 +760,53 @@
      The server authenticates the caller by their own access token and ignores
      any user id we might send, so this can only ever delete the signed-in
      account. The typed DELETE confirmation guards against an accidental tap. */
+  /* Owner-only self-test for signup notifications. Shows up ONLY on the owner's
+     own account and lets you fire the notifier on demand, printing the real
+     outcome on screen — so "did it send?" can be answered without the Resend log
+     or DevTools. It calls the same token-authenticated endpoint the automatic
+     notice uses, so a green result here means the automatic one works too. */
+  function setupSignupNotifyTest(user, session) {
+    if (!user || user.email !== 'vkiparizov@gmail.com') return;
+    var card = el('account-card');
+    if (!card) return;
+    card.style.display = 'block';
+    var wrap = document.createElement('div');
+    wrap.style.cssText = 'margin-top:1rem;padding-top:1rem;border-top:1px dashed rgba(255,255,255,0.08);';
+    wrap.innerHTML =
+      '<div style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:0.5rem;">Signup-notification self-test (only you see this):</div>' +
+      '<button type="button" id="notify-test-btn" style="font-family:inherit;font-size:0.78rem;font-weight:600;background:transparent;color:#7fd1b9;border:1px solid rgba(127,209,185,0.45);border-radius:4px;padding:8px 16px;cursor:pointer;">Send me a test notice</button>' +
+      '<div id="notify-test-result" style="font-size:0.8rem;line-height:1.6;margin-top:0.6rem;color:rgba(255,255,255,0.75);"></div>';
+    card.appendChild(wrap);
+    var btn = el('notify-test-btn');
+    var out = el('notify-test-result');
+    btn.onclick = function () {
+      btn.disabled = true;
+      out.textContent = 'Sending…';
+      var token = session && session.access_token;
+      fetch('/api/new-signup?do=notify-self', { method: 'POST', headers: { Authorization: 'Bearer ' + token } })
+        .then(function (r) { return r.json().then(function (j) { return { s: r.status, j: j }; }); })
+        .then(function (x) {
+          var j = x.j || {};
+          if (j.ok && j.throttled) {
+            out.innerHTML = '⏳ Rate-limited (max 3/day). You already sent a few today — check your inbox and <strong>spam</strong> for mail from contact@apologiadaily.com.';
+          } else if (j.ok) {
+            out.innerHTML = '✅ Sent. Check your inbox and <strong>spam / Promotions</strong> for mail from <strong>contact@apologiadaily.com</strong>. If it is not there, the problem is email delivery, not the code.';
+          } else if (j.reason === 'unavailable') {
+            out.innerHTML = '⚠ Could not verify your session — SUPABASE_ANON_KEY is likely missing or wrong in Vercel. Nothing was sent.';
+          } else if (j.reason === 'unauthenticated') {
+            out.innerHTML = '⚠ Your login token was not accepted. Sign out and back in, then try again. (HTTP ' + x.s + ')';
+          } else {
+            out.textContent = 'Unexpected response (HTTP ' + x.s + '): ' + JSON.stringify(j);
+          }
+          btn.disabled = false;
+        })
+        .catch(function (e) {
+          out.textContent = '⚠ Request failed: ' + (e && e.message ? e.message : e);
+          btn.disabled = false;
+        });
+    };
+  }
+
   function setupDeleteAccount(user) {
     var card = el('account-card');
     var modal = el('delete-modal');
@@ -851,6 +898,7 @@
       setText('user-name', firstName);
       setText('nav-user', name);
       try { setupDeleteAccount(user); } catch (e) {}
+      try { setupSignupNotifyTest(user, session); } catch (e) {}
 
       /* ---- signup_confirmed — the TRUE conversion event -------------------
          signup.html fires `signup_completed` at form-submit success, which is
