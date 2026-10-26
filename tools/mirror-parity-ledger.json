@@ -66,9 +66,9 @@
       "reason": "EN-only minor wording fixes (2026-10-25 Jesus-tab review): (1) jesuschar card — text-critical hedge on Luke 23:34a (absent from P75, aleph*, B, D*, W, Theta); (2) isaiah53 card subtitle — restored the body's 'to name the Servant' qualifier so it no longer outruns the ancient collective reading (Origen); (3) virginbirth card — 'has no union with her until she gives birth' -> 'before the birth (Matthew 1:25)', stating only the undisputed fact without the until->after implication that would adjudicate perpetual virginity. The MK/ES mirror is not WRONG, only less current on these three minor phrasings; nothing false is live in translation. Deliberately NOT machine-translated: the MK/ES mirrors are whole-file AI translations already flagged 'pending native gate', and the virginbirth wording is Marian-sensitive and must carry its neutrality fence under a native reviewer, not a machine pass. Clear this entry when a native reviewer syncs. Macedonian/Spanish doctrinal review is outstanding (docs/STATEMENT_OF_FAITH.md)."
     },
     "ev-s4.html -> ev-s4.es.html": {
-      "acceptedAt": "2026-09-26",
-      "sourceCommit": "4f24abc0",
-      "reason": "AI-translated Spanish hub fragment created 2026-09-14/16 to match the English ev-sN.html as of 12-14 Sept 2026. It is NOT doctrinally gated in Spanish (no native-Spanish reviewer in the loop; docs/STATEMENT_OF_FAITH.md logs Spanish doctrinal review as outstanding). Since the sync the English tabs have advanced substantially (~6,500 lines added corpus-wide, e.g. new ev-s3 cards 18-22, ev-s6 card 17, and the 'research the evidence' panels), so this mirror now LAGS its English source and is missing that newer content. OWED: re-sync to the current English AND run the two-lens translation gate (translation-fidelity + Macedonian/Spanish doctrinal wording, read-only) with a confirmation round, mirroring the 2026-09-26 Macedonian process. Tracked in docs/content-backlog.md."
+      "acceptedAt": "2026-10-26",
+      "sourceCommit": "pending-this-commit",
+      "reason": "EN-only minor wording fix (2026-10-26 Biblical-Reliability review): arg-consistency free tier 'resists a purely natural explanation'->'hardest to explain on inheritance alone', matching the card's own corrected deep-dive register (a pointer, not a proof). The MK/ES mirror is not WRONG, only carries the slightly stronger prior phrasing; nothing false is live. Deliberately NOT machine-translated per the standing MK/ES lag; native review outstanding. Clear when a native reviewer syncs."
     },
     "ev-s5.html -> ev-s5.es.html": {
       "acceptedAt": "2026-09-26",
@@ -109,6 +109,11 @@
       "acceptedAt": "2026-10-25",
       "sourceCommit": "pending-this-commit",
       "reason": "EN-only wording fix (2026-10-25 Resurrection-tab review): the Hengel line 'knowledge of Saul the Jew is a precondition ... of understanding Paul the Christian' had its quotation marks removed (converted to paraphrase, since the verbatim wording is not re-verified against Hengel, The Pre-Christian Paul). The mirror is not WRONG, only carries the same point still quote-marked; nothing false is live. Deliberately NOT hand-translated per the standing MK/ES lag; native review outstanding. Clear when a native reviewer syncs."
+    },
+    "ev-s4.html -> ev-s4.mk.html": {
+      "acceptedAt": "2026-10-26",
+      "sourceCommit": "pending-this-commit",
+      "reason": "EN-only minor wording fix (2026-10-26 Biblical-Reliability review): arg-consistency free tier 'resists a purely natural explanation'->'hardest to explain on inheritance alone', matching the card's own corrected deep-dive register (a pointer, not a proof). The MK/ES mirror is not WRONG, only carries the slightly stronger prior phrasing; nothing false is live. Deliberately NOT machine-translated per the standing MK/ES lag; native review outstanding. Clear when a native reviewer syncs."
     }
   }
 }
