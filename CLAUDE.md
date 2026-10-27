@@ -1023,6 +1023,13 @@
 > Previously scattered across nineteen dated entries, which made them easy to miss. Full history for
 > any of them: `HANDOFF.md` → *Archived project-guide status entries*.
 >
+> **⭐ CLEANUP PASS — 2026-10-28.** Verified every item below against the live `origin/main` and crossed
+> off the ones already shipped (marked `✅ DONE/VERIFIED 2026-10-28`, kept for the audit trail, not
+> deleted). Four ghosts found and cleared: the 6 `verified:false` sources (all 164 now verified), Synoptic
+> preexistence, the islam-tawhid CONTINUITY+COST argument, and the `ev-s5` miracles card. Everything still
+> listed as open was re-confirmed genuinely open (owner Supabase/app-store work, pastoral sign-off,
+> physical-book cites, web-only gate rounds) — none of that was touched.
+>
 > **Doctrinal / pastoral**
 > - ⭐ **[`docs/ETERNAL_GENERATION_GATE_FINDINGS.md`](docs/ETERNAL_GENERATION_GATE_FINDINGS.md) (2026-08-05)** —
 >   all four gates run on `library/eternal_generation.html` after an owner-supplied third-party review.
@@ -1125,9 +1132,11 @@
 >   "neither God nor other than God"). **But its `argument`/`orthodoxy` date fields still read
 >   `2026-07-14`** — the note was appended without bumping the dates. Fix when next opened, and take
 >   the general warning: a date field and a `by` note can disagree, and the tooling reads the dates.
-> - **6 source passages still `verified:false`** (creeds + Athanasius §54) — the clean hosts
->   (CCEL/ANF/Wikisource) are network-blocked in the sandbox; needs a local/web-enabled session.
->   (A 7th, a Chrysostom eucharist passage, was **removed** 2026-07-26 — see `docs/source-library-held.md`.)
+> - ✅ **DONE/VERIFIED 2026-10-28 — the 6 `verified:false` source passages are now all verified.** A
+>   sweep of every `sources/*.json` on `origin/main` returns **0** `verified:false` entries (all 164 are
+>   `verified:true`). The creeds + Athanasius §54 were confirmed at some point after this item was written;
+>   no passage is held back now. (A 7th, a Chrysostom eucharist passage, was **removed** 2026-07-26 — see
+>   `docs/source-library-held.md`.)
 > - **Monthly agent-sweep Routine was never created** (`create_trigger` hit a permission error).
 > - **Browser-verify:** the CSP; the nav mega-menu on desktop + mobile; SRI on the gated essays.
 > - Bring the nav mega-menu to the gated pages via a stamp pass.
@@ -1185,16 +1194,14 @@
 >   *Christ in Islam and Christianity* (SUNY 1991).
 >
 > **Content backlog** (full queue: `docs/content-backlog.md`)
-> - **Synoptic preexistence is a real gap (P2)** — the top find of the Tyndale batch; every
->   preexistence argument on the site runs through Paul/Hebrews/John. Plus 10 further backlog rows
->   from that batch, and the **John 17:22 "shared glory"** row (P3) from the video-research cross-check.
-> - **The CONTINUITY + COST argument for `library/islam-tawhid.html` (P2)** — the replacement the
->   argument gate specified after `worldviews.html` card 14's "responsive love-language" survey claim
->   was cut on 2026-07-29. Not a nice-to-have: the card now makes its metaphysical case and stops, and
->   this is the step that carries it to the cross. Full brief + three mandatory guardrails in the
->   backlog (the "Islam has no grace" overreach is the one that will get caught). Dual-consensus, and
->   `apologia-citations` runs on the five Qur'anic references BEFORE drafting.
-> - **`ev-s5` argument card** for `library/miracles.html` is still TODO.
+> - ✅ **DONE/VERIFIED 2026-10-28 — Synoptic preexistence shipped** (backlog row marked DONE 2026-08-20;
+>   two paragraphs added to `library/jesus_as_god_nt.html`). The remaining Tyndale-batch rows and the
+>   **John 17:22 "shared glory"** row live on in `docs/content-backlog.md` — track them there, not here.
+> - ✅ **DONE/VERIFIED 2026-10-28 — the CONTINUITY + COST argument for `library/islam-tawhid.html`**
+>   shipped (backlog row marked DONE 2026-08-25). It was the replacement the argument gate specified after
+>   `worldviews.html` card 14's "responsive love-language" survey claim was cut on 2026-07-29.
+> - ✅ **DONE/VERIFIED 2026-10-28 — the `ev-s5` argument card for `library/miracles.html` exists** (the
+>   `arg-miracles` card is live on `ev-s5.html`).
 > - Five Tyndale-batch article notes are **PARTIAL reads** — each states its own page range; they are
 >   not complete maps. PDFs are in the git-ignored `_pdfs/` for a later pass.
 > - A **Reasonable Faith** (Craig) book-research note awaits a print/Kindle copy. **Perlego is
