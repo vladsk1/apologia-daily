@@ -593,6 +593,34 @@
       }
     },
     {
+      "id": "five-hundred-in-received-creed",
+      "retired": "2026-10-27",
+      "what": "Locating the appearance to the five hundred (1 Corinthians 15:6) INSIDE the creed/formula Paul RECEIVED — e.g. 'the five hundred stand in the creed Paul received'. The 500 is Paul's own addition (v.6b, 'most still alive'), not the vv.3b-5 received core (which ends at 'the Twelve').",
+      "why": "library/appearances.html FAQ treats the received core as vv.3-5 ('to it Paul adds the five hundred, James, and his own appearance'); the legend-reply keeps it open ('whether within the formula he received or, as some scholars hold, added from his own early knowledge of the witnesses'). Asserting creed-membership for the 500 overclaims what the scholarship settles. Retired on the EN surfaces 2026-10-18 but left unregistered; it then leaked back onto ev-s2 + the /answers layer (2026-10-27 resurrection-cluster audit, Part A1). This entry closes the gap.",
+      "instead": "Attribute the 500 to Paul, not the received creed. Short form: 'within the early tradition Paul received and passed on'. Fuller (ported from library/appearances.html): 'the received core names Cephas and the Twelve; to it Paul adds the five hundred, James, all the apostles, and himself', or 'whether within the formula he received or, as some scholars hold, added from his own early knowledge of the witnesses'. Loosely calling the whole 1 Cor 15 passage 'a creedal list' including the 500 is fine (the essays do it); the defect is specifically placing the 500 in the RECEIVED formula.",
+      "patterns": [
+        "(five hundred|\\b500\\b)[^.<>]{0,70}\\b(in|inside|within)\\b[^.<>]{0,25}creed[^.<>]{0,25}(paul|he)\\s+received",
+        "\\b(in|inside|within)\\b[^.<>]{0,25}creed[^.<>]{0,25}(paul|he)\\s+received[^.<>]{0,70}(five hundred|\\b500\\b)"
+      ],
+      "allow": [],
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "the five hundred stand already in the creed Paul received within a few years of the cross",
+          "the datum is singly attested, but the five hundred were in the creed Paul received",
+          "within the creed Paul received stood the five hundred, James, and all the apostles"
+        ],
+        "must_not_fire": [
+          "The five hundred stand in the tradition Paul passed on in 1 Corinthians 15 — whether within the formula he received or, as some scholars hold, added from his own early knowledge of the witnesses.",
+          "Single attestation within the early tradition Paul received and passed on is categorically stronger than single attestation in a late, anonymous source.",
+          "The received core names Cephas and the Twelve, and to it Paul adds appearances to more than five hundred at once, to James, to all the apostles, and last of all to himself.",
+          "There is also the creed Paul received, older than any Gospel, whose own words imply an emptied grave.",
+          "The creed and the Gospels report group appearances — the Twelve, all the apostles, the more than five hundred.",
+          "It names Cephas and James — and Paul adds more than 500 at once, most still alive when he wrote"
+        ]
+      }
+    },
+    {
       "id": "gethsemane-proves-distinct-wills",
       "retired": "2026-08-14",
       "what": "Using Gethsemane's 'not my will but yours' (Luke 22:42) to prove the Father and Son are distinct PERSONS, or to prove the persons have distinct/separate WILLS, WITHOUT fencing it as Christ's HUMAN will yielding to the one divine will. Includes the flat form 'three divine wills'.",
