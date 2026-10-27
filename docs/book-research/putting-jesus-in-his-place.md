@@ -102,7 +102,7 @@ the HANDS deity leads as corroboration (Pliny/Heb 1:6/1 Cor 8:6/Col 2:9/Kyrios),
 book. **Optional enrichment rows found (both P3, routed elsewhere by design — logged in `content-backlog.md`, NOT
 owed):** (a) `ev-s6.html` firstborn block lacks the **Rev 3:14 archē=origin** leg (Col 1:15 + Prov 8:22 present;
 the full created-Christ trio lives on `trinity_jw.html` and is linked from the card) — ⚠ ev-s6 has pre-existing
-gate debts, so any edit there inherits them; (b) `ev-s3.html` could name **Granville Sharp** at Titus 2:13 / 2
+gate debts, so any edit there inherits them; (b) `ev-s3.html` ✅ now names (SHIPPED 2026-10-27, commit 1606215b) **Granville Sharp** at Titus 2:13 / 2
 Pet 1:1 (very low value; the named version is on `hands.html`). **Informational (not a defect):** no **Pliny
 `/sources`** entry exists — the corpus is patristic-only by design, so adding Pliny *Letters* 10.96 as a citable
 external witness would be a scope expansion (owner call), not a gap.
