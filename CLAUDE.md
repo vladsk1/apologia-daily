@@ -38,7 +38,7 @@
 > the viral Hijab vs GodLogic *Islamic Dilemma* exchange), and a **pending owned book**: Gordon D. Fee, *Jesus the Lord
 > according to Paul the Apostle* (Baker Academic, 2018; the concise version of his *Pauline Christology*, which
 > `jesus_as_god_nt.html` already cites). **Owner owns it and will send page photos (or a slow page-turn video; ffmpeg is
-> installable via `pip install imageio-ffmpeg` to pull frames).** Intended use: the missing "Did Paul invent Jesus's
+> installable via `pip install imageio-ffmpeg` to pull frames).** Intended use: the then-missing, since-SHIPPED (`library/paul-divinity.html`, gated 2026-10-09 — Fee now enriches it, does not create it) "Did Paul invent Jesus's
 > divinity?" essay, Christ's full humanity in Paul (the recurring Chalcedon gap), and the OT YHWH-texts Paul applies to
 > Jesus. Follow `docs/book-research/README.md` + Step Zero; Fee is Pentecostal, so cite him on exegesis only.
 >

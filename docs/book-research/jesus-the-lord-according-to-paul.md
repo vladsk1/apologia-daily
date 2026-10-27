@@ -77,7 +77,7 @@
 Before mining/classifying, read each of these start to finish (per `CLAUDE.md` Step Zero). The book's four
 parts map to:
 - **`library/jesus_as_god_nt.html`** — the deity of Christ in Paul (PRIMARY pair; already cites *Pauline
-  Christology*). Also the not-yet-written **"Did Paul invent Jesus's divinity?"** essay this book is meant to seed.
+  Christology*). Also the **"Did Paul invent Jesus's divinity?"** essay this book helped seed (⚠ since SHIPPED — `library/paul-divinity.html` + `ev-m-paul-divinity.html` + the `ev-s3` card `arg-paul-divinity`, gated 2026-10-09; Fee now ENRICHES it, exegesis-only, it does not create it).
 - **`library/phil2.html`** — Phil 2:6–11, preexistence → incarnation (Part 1 ch. 2).
 - **`library/titles.html`** — *Kyrios* = the divine Name, Ps 110:1, "Lord" (Part 4 chs. 8–9).
 - **`library/shema.html`** — 1 Cor 8:6 / the divine identity, monotheism redefined around Christ (Part 4 / conclusion).
@@ -126,7 +126,7 @@ parts map to:
   attributes to Christ activities/identity that (in Fee's phrase) belong to God alone — so the relationship of
   the Son to the Father raises the Trinity. ✅ **This is the site's `jesus_as_god_nt` / `shema` thesis
   exactly** (monotheism redefined around Christ) — a strong corroboration candidate and possibly a
-  better-articulated frame for the missing "Did Paul invent Jesus's divinity?" essay. Confirm at Step Zero.
+  better-articulated frame for the (since-SHIPPED, see top) "Did Paul invent Jesus's divinity?" essay. Confirm at Step Zero.
 - Fee on **1 Cor 1:18–2:5** (Preface): Paul's "demolition" of the Corinthians' boasted wisdom — **God's
   "wisdom" is the crucified Messiah** ("God's foolishness"), not a personified Wisdom figure (see Flag 3).
 
@@ -261,7 +261,7 @@ Leads / primaries to verify (all UNVERIFIED until checked against the text + gat
   **Nils A. Dahl, *Jesus the Christ: The Historical Origins of Christological Doctrine* (Minneapolis:
   Fortress, 1991), 15** ("whether Jesus was the Messiah was crucial in the life of the one-time persecutor").
 - ⭐ **The six-part "story of Israel," with Christ placed into EACH (pp. 85–91) — a strong STRUCTURE, test as
-  a verdict-3 upgrade for the missing "Did Paul invent Jesus's divinity?" essay:** Paul echoes the OT 200+
+  a verdict-3 upgrade for the (since-SHIPPED, see top) "Did Paul invent Jesus's divinity?" essay:** Paul echoes the OT 200+
   times across 13 letters (**over 70% Genesis / Deuteronomy / Isaiah / Psalter**, from the **LXX**). The six
   moments = (1) **creation** (1 Cor 8:6; Col 1:15–16), (2) **Abraham / gentile inclusion** (Gal 3:16, 29; Rom
   8:32 = the Isaac/Gen 22 typology, "did not spare his own Son"), (3) **exodus** (Col 1:12–16; **1 Cor 10:4
@@ -397,7 +397,7 @@ the transfers (all UNVERIFIED; mostly likely already in `titles.html`/`jesus_as_
   already assumed**; the divine name was bestowed on Christ at his exaltation. The trinitarian articulation
   came later; the data is Paul's.
 
-**⭐⭐⭐ CONCLUSION: "Paul as a Proto-trinitarian" (pp. 175–188) — the crown section for the missing "Did Paul
+**⭐⭐⭐ CONCLUSION: "Paul as a Proto-trinitarian" (pp. 175–188) — the crown section for the (since-SHIPPED, see top) "Did Paul
 invent Jesus's divinity?" essay + `nt_trinity.html` / `holy_spirit.html` / `relations.html`.**
 - **The frame:** Paul's high Christology (preexistent Son + exalted *Kyrios*) held *with* his vigorous
   monotheism FORCES the trinitarian question. Paul does not *resolve* it (the creeds do); he *expresses* it in
