@@ -33,8 +33,7 @@
       -webkit-font-smoothing:antialiased;
     }
     .wrap{width:100%; max-width:440px; margin:auto; text-align:center;}
-    .logo{ width:74px; margin:0 auto 1rem; display:block; }
-    .logo svg{ width:100%; height:auto; display:block; }
+    .logo{ width:210px; max-width:64%; height:auto; display:block; margin:0 auto .5rem; border-radius:12px; }
     .brand{font-family:var(--fd); font-size:1.5rem; font-weight:700;}
     .brand span{color:var(--g);}
     .tag{font-family:var(--ui); font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.5); margin-top:.35rem;}
@@ -65,15 +64,7 @@
 </head>
 <body>
   <div class="wrap">
-    <div class="logo" aria-label="Apologia Daily">
-      <svg viewBox="0 0 100 118" role="img" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 5 L84 17 Q88 18.5 88 23 L88 57 C88 87 70 103 50 111 C30 103 12 87 12 57 L12 23 Q12 18.5 16 17 Z"
-              fill="rgba(200,169,81,0.05)" stroke="#c8a951" stroke-width="3" stroke-linejoin="round"/>
-        <rect x="45.5" y="27" width="9" height="57" rx="1.5" fill="#c8a951"/>
-        <rect x="32" y="45" width="36" height="9" rx="1.5" fill="#c8a951"/>
-      </svg>
-    </div>
-    <div class="brand">Apologia<span>Daily</span></div>
+    <img class="logo" src="/logo.jpg" alt="Apologia Daily" />
     <div class="tag">Checked before published</div>
     <p class="lede">Swipe through the case for the faith, one answer at a time — so the next time you meet a hard question, you already have the answer.</p>
 
