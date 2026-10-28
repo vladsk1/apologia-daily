@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Bio-link landing page ("link in bio" destination for Instagram / social).
+     Deliberately standalone (no site nav) for a clean, focused tap-through that
+     matches the reels. Leads with the Scroll feed. No gated content — framing copy
+     only; the reel hook line is already live/validated. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Apologia Daily — Start here</title>
+  <meta name="description" content="The case for the Christian faith — swipe through it one answer at a time. The next time you meet an objection, you'll already have the answer." />
+  <meta property="og:title" content="Apologia Daily" />
+  <meta property="og:description" content="Swipe through the case for the faith, one answer at a time." />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <style>
+    :root{
+      --n:#050d1a; --n7:#0f2040; --n5:#1e4278; --n3:#4a7ab5;
+      --g:#c8a951; --gl:#d4b96a; --w:#fff;
+      --fd:'Playfair Display',Georgia,serif;
+      --ss:'Source Serif 4',Georgia,serif;
+      --ui:'DM Sans',system-ui,sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html,body{min-height:100%;}
+    body{
+      font-family:var(--ss); color:var(--w); background:var(--n);
+      min-height:100dvh; display:flex; flex-direction:column; align-items:center;
+      padding:max(2.5rem,env(safe-area-inset-top)) 1.25rem max(2rem,env(safe-area-inset-bottom));
+      background-image:
+        radial-gradient(ellipse 85% 50% at 50% 22%, rgba(200,169,81,0.14), transparent 60%),
+        radial-gradient(ellipse 120% 70% at 50% 115%, rgba(30,66,120,0.4), transparent 55%);
+      -webkit-font-smoothing:antialiased;
+    }
+    .wrap{width:100%; max-width:440px; margin:auto; text-align:center;}
+    .logo{
+      width:64px;height:64px;border-radius:50%; margin:0 auto 1rem;
+      display:flex;align-items:center;justify-content:center;
+      border:1.5px solid rgba(200,169,81,.5); background:rgba(200,169,81,.08);
+      font-family:var(--fd); font-size:1.7rem; color:var(--g); line-height:1;
+    }
+    .brand{font-family:var(--fd); font-size:1.5rem; font-weight:700;}
+    .brand span{color:var(--g);}
+    .tag{font-family:var(--ui); font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.5); margin-top:.35rem;}
+    .lede{font-family:var(--ss); font-style:italic; font-size:.98rem; line-height:1.55; color:rgba(255,255,255,.72); margin:1.1rem auto 1.75rem; max-width:360px;}
+
+    .links{display:flex; flex-direction:column; gap:.7rem; width:100%;}
+    a.lk{
+      display:flex; align-items:center; gap:.85rem; text-decoration:none;
+      font-family:var(--ui); font-weight:500; font-size:.95rem;
+      padding:1rem 1.15rem; border-radius:6px; transition:all .15s;
+      border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:var(--w);
+    }
+    a.lk:hover{border-color:var(--g); background:rgba(255,255,255,.07);}
+    a.lk .ic{font-size:1.2rem; flex:0 0 1.5rem; text-align:center;}
+    a.lk .tx{flex:1; text-align:left;}
+    a.lk .tx small{display:block; font-family:var(--ss); font-weight:400; font-size:.78rem; color:rgba(255,255,255,.55); margin-top:.1rem;}
+    a.lk .arr{color:rgba(255,255,255,.35); font-size:1.05rem;}
+
+    /* primary CTA — the Scroll feed */
+    a.lk.primary{background:var(--g); border-color:var(--g); color:var(--n);}
+    a.lk.primary:hover{background:var(--gl);}
+    a.lk.primary .tx small{color:rgba(5,13,26,.6);}
+    a.lk.primary .arr{color:rgba(5,13,26,.5);}
+
+    .foot{margin-top:1.75rem; font-family:var(--ui); font-size:.72rem; color:rgba(255,255,255,.4);}
+    .foot a{color:rgba(255,255,255,.55); text-decoration:none;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo">&#10013;</div>
+    <div class="brand">Apologia<span>Daily</span></div>
+    <div class="tag">Checked before published</div>
+    <p class="lede">Swipe through the case for the faith, one answer at a time — so the next time you meet a hard question, you already have the answer.</p>
+
+    <nav class="links" aria-label="Apologia Daily links">
+      <a class="lk primary" href="/scroll.html">
+        <span class="ic">&#128241;</span>
+        <span class="tx">Scroll the Evidence<small>Swipe the case, one answer at a time</small></span>
+        <span class="arr">&rarr;</span>
+      </a>
+      <a class="lk" href="/evidence-library.html">
+        <span class="ic">&#128220;</span>
+        <span class="tx">The Evidence Library<small>The full, cited case — explore by topic</small></span>
+        <span class="arr">&rarr;</span>
+      </a>
+      <a class="lk" href="/asked-and-answered.html">
+        <span class="ic">&#10024;</span>
+        <span class="tx">Saw an objection? Ask it<small>Short, sourced answers to the hard questions</small></span>
+        <span class="arr">&rarr;</span>
+      </a>
+      <a class="lk" href="/library/">
+        <span class="ic">&#128218;</span>
+        <span class="tx">Deep-Dive Essays<small>Long-form, fully-cited studies</small></span>
+        <span class="arr">&rarr;</span>
+      </a>
+      <a class="lk" href="https://www.instagram.com/apologiadaily/" target="_blank" rel="me noopener">
+        <span class="ic">&#9673;</span>
+        <span class="tx">Instagram<small>@apologiadaily</small></span>
+        <span class="arr">&rarr;</span>
+      </a>
+    </nav>
+
+    <div class="foot"><a href="/">apologiadaily.com</a></div>
+  </div>
+</body>
+</html>
