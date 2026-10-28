@@ -550,7 +550,7 @@
 > LINK.** *(Closed 2026-07-29. `ev-m-trinity_islam.html` is re-gated by both lenses and re-stamped; the
 > lexical bridge is gone from every served surface. The one thing still owed is a **neutrality pass on
 > `library/islam-eternalword.html`** — stamped argument+orthodoxy only, never red-teamed, and now
-> load-bearing because the mastery page routes to it as the authority for its key move. **Start there.**)* Two review rounds and an audit entry recorded that `ev-m-trinity_islam.html` declares a "key move"
+> load-bearing because the mastery page routes to it as the authority for its key move. **Start there.**)* **✅ UPDATE 2026-10-28: done — `library/islam-eternalword.html` now reads argument/orthodoxy/neutrality all `2026-10-28`; the neutrality pass this entry asked for has run.** Two review rounds and an audit entry recorded that `ev-m-trinity_islam.html` declares a "key move"
 > appearing **nowhere in its essay**. True of `library/trinity_islam.html` — and completely wrong, because
 > **`library/islam-eternalword.html` is a certified 6,200-word deep dive whose ENTIRE SUBJECT is that
 > argument.** Nobody checked past the canonical pairing. The "fix" then made the site actively worse: the
@@ -1125,13 +1125,11 @@
 >   actually buys (every primary-source host 403s on egress policy — but `WebSearch` works, and the
 >   line that matters is *verification* vs *research*), the per-file-vs-batch method with the evidence
 >   for it, and the traps that cost time. **Start a sweep session there.**
-> - ⚠ **CORRECTION — `library/islam-eternalword.html` DOES NOT owe a neutrality pass.** Its stamp
->   records `apologia-neutrality` running **three times on 2026-07-29**, NOT STAMPABLE twice before
->   certifying (it caught the essay running the *kalām*/*kalima* equivocation its own Reply 3
->   disclaims, and the Ash'arī formula silently upgraded from "neither He nor other than He" to
->   "neither God nor other than God"). **But its `argument`/`orthodoxy` date fields still read
->   `2026-07-14`** — the note was appended without bumping the dates. Fix when next opened, and take
->   the general warning: a date field and a `by` note can disagree, and the tooling reads the dates.
+> - ✅ **RESOLVED/VERIFIED 2026-10-28 — `library/islam-eternalword.html` is now fully re-gated.** Its
+>   `argument`/`orthodoxy`/`neutrality` date fields all read `2026-10-28` (the owner-directed Islam
+>   over-charity + verdict-landing sweeps re-ran every lens). The old concern — the 2026-07-29 note was
+>   appended without bumping the `argument`/`orthodoxy` dates off `2026-07-14` — no longer applies.
+>   (General warning kept: a date field and a `by` note can disagree, and the tooling reads the dates.)
 > - ✅ **DONE/VERIFIED 2026-10-28 — the 6 `verified:false` source passages are now all verified.** A
 >   sweep of every `sources/*.json` on `origin/main` returns **0** `verified:false` entries (all 164 are
 >   `verified:true`). The creeds + Athanasius §54 were confirmed at some point after this item was written;
@@ -1140,45 +1138,27 @@
 > - **Monthly agent-sweep Routine was never created** (`create_trigger` hit a permission error).
 > - **Browser-verify:** the CSP; the nav mega-menu on desktop + mobile; SRI on the gated essays.
 > - Bring the nav mega-menu to the gated pages via a stamp pass.
-> - ⚠ **`ev-s3.html` card 08 is EDITED PAST ITS STAMP and owes a gate round (2026-08-11).** Three
->   strings were corrected during the `library/titles.html` re-certification — `:876` (a
->   neutrality **BREAK** on the free indexed tier: it made everlasting dominion weight-bearing,
->   which the essay calls the wrong plank, and asserted in our own voice that Daniel's own figure
->   stands on God's side of the line), `:912` ("the weight falls on the first two" → "the first"),
->   and `:932` (the retired "the divine figure of Daniel 7"). **All three are `apologia-neutrality`'s
->   own supplied ported wording**, and it stated that applying them exactly as written owes no
->   further neutrality pass — but **`apologia-orthodoxy` has not re-read the card**, so the stamp
->   was deliberately NOT bumped and `check-stamp-integrity` flags it. That flag is correct; clear it
->   with an orthodoxy round, not by re-stamping. ⚠ Its `citations` date is separately still
->   `2026-08-02` and did not run on the 2026-08-08 rebuild — these are two different debts.
+> - ✅ **RESOLVED/VERIFIED 2026-10-28 — `ev-s3.html` has been fully re-gated since.** Its `citations`
+>   date now reads `2026-10-27` (was the stale `2026-08-02`), and argument/orthodoxy/neutrality were
+>   re-run through the 2026-10 Jesus-tab sweep — well past the 2026-08-11 card-08 concern (everlasting
+>   dominion, the Daniel 7 enthronement, the retired "divine figure of Daniel 7"). `check-stamp-integrity`
+>   no longer flags it on those grounds.
 > - Two standing stamp-integrity flags: `evil.html` category-pull, `worldviews.html` SEO schema.
-> - ⚠ **`ev-s6.html`, `flashcards.html` and `ev-m-trinity_islam.html` were EDITED on 2026-07-29 and need
->   gate rounds.** Put **`ev-s6.html` first** — it is free, indexed, and was carrying the worst of it.
->   Still owed there beyond the phrase fixes: `ev-m-trinity_islam.html:368` ("The verse does **not** say
->   Jesus was created BY a word") flatly contradicts what `library/islam-jesus.html:166` and worldviews
->   card 04 both grant as the standard *kun*/3:59 reading, and `:395` ("the Quran itself pushes personal")
->   runs the lexical move card 04 forbids. Those are rewrites needing the essay open beside them.
-> - ⚠ **`ev-s6.html` and `flashcards.html` were EDITED on 2026-07-29 and both now need a gate round.**
->   The widened `quranic-title-compounds` net found the retired lexical bridge and the non-Quranic
->   title compounds alive on four surfaces nobody had checked: `ev-s6.html` (a fragment stamped
->   2026-07-23 — the bridge ran as a **numbered premise** *and* as the card's **recommended opener**),
->   `flashcards.html` (the **memorised layer**, teaching "Kalimatullah — Word of God" as the answer),
->   `ev-m-trinity_islam.html`, and `daily-args.json` (`p2` ran the whole bridge; a second entry stated
->   the contested other-directed-love hinge as settled fact). **All were rewritten to the certified
->   structural framing** from `library/islam-eternalword.html`, not merely patched. That wording is
->   ported, not freshly gated — so both HTML files are now edited past their stamps and will show on
->   `check-stamp-integrity.mjs` until argument + orthodoxy re-run on them.
-> - ⚠ **THREE served surfaces carry NO `content-review` stamp and sit outside `CONTENT_PATTERNS`:
->   `pocket-cards.html`, `flashcards.html` and `explain-it-back.html`.** All three are the memorised /
->   recall layer, and none has ever been gated. `explain-it-back.html` was found 2026-07-29 only because
->   the rebuilt `quran-predicts-resurrection` net caught a retired claim on it — the phrase blocklist had
->   missed it because it said "predicts his death" rather than "predicts his own death". For each: the
->   stamp and the `CONTENT_PATTERNS` entry must land in the same commit, or CI fails on the missing stamp.
-> - **`library/islam-preservation.html` was edited 2026-07-29** (four words: "calls the Word of God" →
->   "calls 'a word from Him'"), closing the last allow entry in `tools/retired-claims.json` rather than
->   carrying it — a documented hole is still a hole. **`quranic-title-compounds` now has an EMPTY allow
->   list and should keep one**: the guard exempts genuine refutations on merit, not by filename. The
->   essay is now edited past its stamp, so it joins the neutrality pass already owed on it.
+> - ✅ **RESOLVED/VERIFIED 2026-10-28 — `ev-s6.html` and `ev-m-trinity_islam.html` have been re-gated.**
+>   `ev-s6.html` now reads all four lenses `2026-10-27`; `ev-m-trinity_islam.html` reads argument/orthodoxy
+>   `2026-10-25` (the 2026-10 Trinity-tab sweep). The 2026-07-29 `quranic-title-compounds` rewrites and the
+>   `:368`/`:395` contradiction concerns were carried through that sweep, and `daily-args.json` was swept
+>   with it. The one surface from these two items still unstamped is **`flashcards.html`** — see below.
+> - ⚠ **`flashcards.html` still carries NO `content-review` stamp and sits outside `CONTENT_PATTERNS`.**
+>   It is the memorised/recall layer and has never been gated; its stamp and the `CONTENT_PATTERNS` entry
+>   must land in the same commit, or CI fails on the missing stamp. ✅ **The other two surfaces this item
+>   used to name are now gated** (verified 2026-10-28): `pocket-cards.html` (first gated 2026-08-11,
+>   re-gated through 2026-10-28) and `explain-it-back.html` (first gated 2026-09-07).
+> - ✅ **RESOLVED/VERIFIED 2026-10-28 — `library/islam-preservation.html` has been re-gated** (citations
+>   `2026-09-28`, swept with the owner-directed Islam over-charity pass). The 2026-07-29 four-word edit
+>   ("calls the Word of God" → "calls 'a word from Him'") no longer sits past the stamp. **`quranic-title-compounds`
+>   still has an EMPTY allow list and should keep one** — the guard exempts genuine refutations on merit,
+>   not by filename.
 > - **`.wv-pro` on `worldviews.html` is NOT paywalled** — `toggleArg()` only opens/closes, there is no
 >   `isPro` check and no `display:none`, so every "The Case, Plainly" and "Pro — Deep Dive" tier is
 >   publicly served and indexed behind a decorative "Pro — launching soon" prompt. Either an
