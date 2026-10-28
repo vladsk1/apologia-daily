@@ -281,34 +281,32 @@
          onboarded before these questions existed see no empty box. -->
     <div class="start-here" id="start-here" style="display:none;"></div>
 
-    <!-- STATS -->
-    <div class="stats-grid">
-      <div class="stat-card highlight">
-        <div class="stat-num" id="stat-streak">0</div>
-        <div class="stat-label">&#128293; Day streak</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num" id="stat-debates" style="color:var(--navy-600);">0</div>
-        <div class="stat-label">Debates completed</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num" id="stat-questions" style="color:var(--navy-600);">0</div>
-        <div class="stat-label">Questions asked</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num" id="stat-devotionals" style="color:var(--navy-600);">0</div>
-        <div class="stat-label">Devotionals read</div>
-      </div>
-    </div>
-
-    <!-- BELT -->
-    <div class="belt-card" onclick="openBeltInfo()" style="cursor:pointer;" title="Tap to see how belts work">
+    <!-- PROGRESS (belt + key counters merged into one strip; streak shown once, here) -->
+    <div class="belt-card" onclick="openBeltInfo()" style="cursor:pointer;gap:1.5rem 2rem;" title="Tap to see how belts work">
       <div class="belt-icon" id="belt-icon">&#129293;</div>
-      <div class="belt-info">
+      <div class="belt-info" style="min-width:200px;">
         <div class="belt-level" id="belt-level">White Belt &mdash; Beginner</div>
         <div class="belt-desc" id="belt-desc">Complete your first debate and devotional to begin your apologetics journey</div>
         <div class="belt-progress"><div class="belt-progress-fill" id="belt-fill" style="width:5%;"></div></div>
         <div class="belt-progress-label" id="belt-progress-label">0 / 10 points to Yellow Belt</div>
+      </div>
+      <div style="display:flex;gap:1.5rem;flex-wrap:wrap;align-items:flex-start;">
+        <div style="text-align:center;min-width:56px;">
+          <div style="font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:var(--gold);line-height:1;"><span id="streak-flame">&#128293;</span> <span id="streak-count">0 days</span></div>
+          <div id="streak-sub" style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:5px;">Practice streak</div>
+        </div>
+        <div style="text-align:center;min-width:56px;">
+          <div id="stat-debates" style="font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:#fff;line-height:1;">0</div>
+          <div style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:5px;">Debates</div>
+        </div>
+        <div style="text-align:center;min-width:56px;">
+          <div id="stat-questions" style="font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:#fff;line-height:1;">0</div>
+          <div style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:5px;">Questions</div>
+        </div>
+        <div style="text-align:center;min-width:56px;">
+          <div id="stat-devotionals" style="font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:#fff;line-height:1;">0</div>
+          <div style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:5px;">Devotionals</div>
+        </div>
       </div>
       <a href="daily-devotional.html" class="belt-next" onclick="event.stopPropagation()">Earn your first points &rarr;</a>
       <div style="position:absolute;top:10px;right:14px;font-family:var(--font-ui);font-size:0.68rem;color:rgba(255,255,255,0.35);display:flex;align-items:center;gap:4px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border:1px solid rgba(255,255,255,0.35);border-radius:50%;font-size:0.6rem;">?</span> How belts work</div>
@@ -394,13 +392,6 @@
 
       <!-- Practice row: streak / daily mix / mastery shelf -->
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.75rem;margin-bottom:1.25rem;" id="practice-row">
-        <div style="background:var(--navy-950);border:1px solid var(--navy-700);border-radius:8px;padding:0.9rem 1.1rem;display:flex;align-items:center;gap:0.8rem;">
-          <span style="font-size:1.5rem;" id="streak-flame">&#128293;</span>
-          <div>
-            <div style="font-family:var(--font-serif);font-size:1.15rem;font-weight:700;color:var(--gold);" id="streak-count">0 days</div>
-            <div style="font-family:var(--font-ui);font-size:0.68rem;color:rgba(255,255,255,0.45);" id="streak-sub">Practice streak</div>
-          </div>
-        </div>
         <a href="daily-mix.html" style="text-decoration:none;background:var(--navy-950);border:1px solid var(--navy-700);border-radius:8px;padding:0.9rem 1.1rem;display:flex;align-items:center;gap:0.8rem;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--navy-700)'">
           <span style="font-size:1.4rem;">&#127922;</span>
           <div>
@@ -622,9 +613,13 @@
       <a href="study-plans.html" class="plan-progress-btn">Continue today &rarr;</a>
     </div>
 
-    <!-- EVERYTHING ELSE (always accessible) -->
-    <p class="section-label">Everything on the platform</p>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.6rem;margin-bottom:1.75rem;">
+    <!-- EVERYTHING ELSE (collapsed by default; every link is still one tap away) -->
+    <details class="browse-all" style="margin-bottom:1.75rem;">
+      <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:0.9rem 1.25rem;">
+        <span style="font-family:var(--font-ui);font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);">Everything on the platform</span>
+        <span style="font-family:var(--font-ui);font-size:0.8rem;font-weight:600;color:var(--navy-500);">Browse all &rarr;</span>
+      </summary>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.6rem;margin-top:0.6rem;">
       <a href="evidence-library.html" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:0.875rem;text-decoration:none;text-align:center;transition:all 0.15s;" onmouseover="this.style.borderColor='#4a7ab5'" onmouseout="this.style.borderColor='var(--border)'">
         <div style="font-size:1.2rem;">&#128218;</div>
         <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Evidence Library</div>
@@ -666,6 +661,7 @@
         <div style="font-family:var(--font-ui);font-size:0.75rem;font-weight:500;color:var(--navy-900);margin-top:0.35rem;">Videos</div>
       </a>
     </div>
+    </details>
 
     <!-- RECENT ACTIVITY -->
     <p class="section-label">Recent activity</p>
