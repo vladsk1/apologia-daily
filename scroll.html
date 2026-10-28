@@ -148,6 +148,41 @@
     }
     @keyframes bob{0%,100%{transform:translateY(0);opacity:.4;}50%{transform:translateY(5px);opacity:.75;}}
 
+    /* TOPIC PICKER — tap-to-open sheet that filters the feed to one topic */
+    .topics-btn{
+      pointer-events:auto; font-family:var(--ui); font-size:.72rem; font-weight:600;
+      letter-spacing:.04em; color:rgba(255,255,255,.85); background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.2); border-radius:999px; padding:.35rem .7rem;
+      cursor:pointer; display:flex; align-items:center; gap:.4rem; max-width:60vw;
+      white-space:nowrap; overflow:hidden; transition:all .15s;
+    }
+    .topics-btn .label{overflow:hidden; text-overflow:ellipsis;}
+    .topics-btn:hover{border-color:var(--g);color:var(--g);}
+    .topics-btn.active{border-color:var(--g);color:var(--g);background:rgba(200,169,81,.12);}
+    .topics-btn .tx{font-size:.82rem; flex:0 0 auto;}
+    .topic-sheet{
+      position:fixed; inset:0; z-index:60; display:none;
+      background:rgba(5,13,26,.82); -webkit-backdrop-filter:blur(3px); backdrop-filter:blur(3px);
+      flex-direction:column; justify-content:flex-end;
+    }
+    .topic-sheet.open{display:flex;}
+    .topic-sheet-inner{
+      background:var(--n8); border-top:1px solid rgba(200,169,81,.3);
+      border-radius:16px 16px 0 0; padding:1.1rem 1.2rem max(1.4rem,env(safe-area-inset-bottom));
+      max-height:80dvh; overflow-y:auto;
+    }
+    .topic-sheet-head{display:flex; align-items:center; justify-content:space-between; margin-bottom:.95rem;}
+    .topic-sheet-title{font-family:var(--ui); font-size:.66rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--g);}
+    .topic-sheet-close{background:none; border:none; color:rgba(255,255,255,.7); font-size:1.3rem; line-height:1; cursor:pointer; padding:.1rem .3rem;}
+    .topic-chips{display:flex; flex-wrap:wrap; gap:.55rem;}
+    .topic-chip{
+      font-family:var(--ui); font-size:.82rem; color:rgba(255,255,255,.85);
+      background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.18);
+      border-radius:999px; padding:.5rem .95rem; cursor:pointer; transition:all .15s;
+    }
+    .topic-chip:hover{border-color:var(--g);color:var(--g);}
+    .topic-chip.sel{background:var(--g);color:var(--n);border-color:var(--g);font-weight:600;}
+
     /* INTRO slide (the objection-frame hook) */
     .intro .eyebrow{justify-content:center;}
     .intro{text-align:center;}
@@ -161,6 +196,9 @@
   <div id="rail"></div>
   <div class="topbar">
     <a class="brand" href="/">Apologia<span>Daily</span></a>
+    <button class="topics-btn" id="topicsBtn" type="button" aria-haspopup="dialog" aria-expanded="false">
+      <span class="label">Topics</span><span class="tx">☰</span>
+    </button>
   </div>
   <main id="feed" aria-label="Scroll the Evidence feed"></main>
 
@@ -291,33 +329,102 @@
       return s;
     }
 
-    function render(cards){
-      var saved = readSaved();
-      feed.appendChild(introSlide());
-      var ordered = dayShuffle(cards);
-      ordered.forEach(function(c, i){ feed.appendChild(cardSlide(c, saved, i+1)); });
-      var total = ordered.length;
-      track('scroll_feed_opened', {total: total});
+    function clear(node){ while(node.firstChild) node.removeChild(node.firstChild); }
 
-      // per-card reach / depth: fire once when a card is ≥60% on screen
-      if ('IntersectionObserver' in window){
-        var seen = {};
-        var io = new IntersectionObserver(function(entries){
-          entries.forEach(function(en){
-            var id = en.target.dataset.cardId;
-            if (en.isIntersecting && en.intersectionRatio >= 0.6 && id && !seen[id]){
-              seen[id] = 1;
-              track('scroll_card_viewed', {card:id, category:en.target.dataset.cat, position:+en.target.dataset.pos});
-            }
-          });
-        }, {root: feed, threshold: 0.6});
-        feed.querySelectorAll('.slide[data-card-id]').forEach(function(s){ io.observe(s); });
+    var ALL = [];            // every card, as loaded
+    var CATS = [];           // [{cat,label}] in authored order
+    var currentCat = null;   // null = All topics
+    var io = null;
+
+    // per-card reach / depth: fire once when a card is ≥60% on screen.
+    // Re-created on every (re)build so a filtered view observes its own slides.
+    function connectIO(){
+      if (!('IntersectionObserver' in window)) return;
+      if (io) io.disconnect();
+      var seen = {};
+      io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          var id = en.target.dataset.cardId;
+          if (en.isIntersecting && en.intersectionRatio >= 0.6 && id && !seen[id]){
+            seen[id] = 1;
+            track('scroll_card_viewed', {card:id, category:en.target.dataset.cat, position:+en.target.dataset.pos});
+          }
+        });
+      }, {root: feed, threshold: 0.6});
+      feed.querySelectorAll('.slide[data-card-id]').forEach(function(s){ io.observe(s); });
+    }
+
+    // (Re)build the feed for a topic. cat===null → intro + the day-shuffled mix;
+    // a category → just that topic's cards, in their authored order.
+    function buildSlides(cat){
+      var saved = readSaved();
+      clear(feed);
+      var list;
+      if (cat){ list = ALL.filter(function(c){ return c.category===cat; }); }
+      else { feed.appendChild(introSlide()); list = dayShuffle(ALL); }
+      list.forEach(function(c, i){ feed.appendChild(cardSlide(c, saved, i+1)); });
+      feed.scrollTop = 0; rail.style.width = '0%';
+      connectIO();
+    }
+
+    function setTopic(cat){
+      currentCat = cat;
+      var btn = document.getElementById('topicsBtn');
+      var found = cat ? CATS.filter(function(x){ return x.cat===cat; })[0] : null;
+      btn.querySelector('.label').textContent = found ? found.label : 'Topics';
+      btn.classList.toggle('active', !!cat);
+      buildSlides(cat);
+      track('scroll_topic_selected', {category: cat || 'all'});
+    }
+
+    // the tap-to-open topic sheet — built in JS so chips stay data-driven (textContent)
+    function buildTopicUI(){
+      var btn = document.getElementById('topicsBtn');
+      var entries = [{cat:null, label:'All topics'}].concat(CATS);
+
+      var sheet = el('div','topic-sheet'); sheet.id='topicSheet';
+      sheet.setAttribute('role','dialog'); sheet.setAttribute('aria-modal','true'); sheet.setAttribute('aria-label','Choose a topic');
+      var inner = el('div','topic-sheet-inner');
+      var head = el('div','topic-sheet-head');
+      head.appendChild(el('div','topic-sheet-title','Jump to a topic'));
+      var closeBtn = el('button','topic-sheet-close'); closeBtn.type='button'; closeBtn.setAttribute('aria-label','Close'); closeBtn.textContent='✕';
+      head.appendChild(closeBtn); inner.appendChild(head);
+
+      var chips = el('div','topic-chips');
+      entries.forEach(function(e){
+        var chip = el('button','topic-chip', e.label); chip.type='button';
+        chip.addEventListener('click', function(){ setTopic(e.cat); closeSheet(); });
+        chips.appendChild(chip);
+      });
+      inner.appendChild(chips); sheet.appendChild(inner);
+      document.body.appendChild(sheet);
+
+      function openSheet(){
+        chips.querySelectorAll('.topic-chip').forEach(function(ch, idx){
+          ch.classList.toggle('sel', (entries[idx].cat || null) === currentCat);
+        });
+        sheet.classList.add('open'); btn.setAttribute('aria-expanded','true');
+        track('scroll_topics_opened', {});
       }
-      // progress + counter on scroll
+      function closeSheet(){ sheet.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+
+      btn.addEventListener('click', function(){ sheet.classList.contains('open') ? closeSheet() : openSheet(); });
+      closeBtn.addEventListener('click', closeSheet);
+      sheet.addEventListener('click', function(e){ if (e.target === sheet) closeSheet(); }); // backdrop tap
+      document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeSheet(); });
+    }
+
+    function render(cards){
+      ALL = cards;
+      var seenCat = {};
+      cards.forEach(function(c){ if (!seenCat[c.category]){ seenCat[c.category]=1; CATS.push({cat:c.category, label:c.categoryLabel}); } });
+      buildTopicUI();
+      buildSlides(null);
+      track('scroll_feed_opened', {total: cards.length});
+      // progress rail — attached once; reads the live feed on every scroll.
+      // Still no "n / N" counter: it would advertise a finite end and cap the endless feel.
       feed.addEventListener('scroll', function(){
         var max = feed.scrollHeight - feed.clientHeight;
-        // subtle progress rail only — no "n / 77" counter, which would advertise
-        // the end of a finite feed and cap the endless-scroll feel.
         rail.style.width = (max>0 ? (feed.scrollTop/max*100) : 0) + '%';
       }, {passive:true});
     }
