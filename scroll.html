@@ -135,7 +135,6 @@
   <div id="rail"></div>
   <div class="topbar">
     <a class="brand" href="/">Apologia<span>Daily</span></a>
-    <span class="counter" id="counter"></span>
   </div>
   <main id="feed" aria-label="Scroll the Evidence feed"></main>
 
@@ -146,7 +145,6 @@
     "use strict";
     var feed = document.getElementById('feed');
     var rail = document.getElementById('rail');
-    var counter = document.getElementById('counter');
 
     // Safe wrapper — adTrack may be absent (analytics still loading / consent off).
     function track(name, props){ try { if (window.adTrack) window.adTrack(name, props||{}); } catch(e){} }
@@ -260,9 +258,9 @@
       // progress + counter on scroll
       feed.addEventListener('scroll', function(){
         var max = feed.scrollHeight - feed.clientHeight;
+        // subtle progress rail only — no "n / 77" counter, which would advertise
+        // the end of a finite feed and cap the endless-scroll feel.
         rail.style.width = (max>0 ? (feed.scrollTop/max*100) : 0) + '%';
-        var idx = Math.round(feed.scrollTop / feed.clientHeight); // 0 = intro
-        counter.textContent = idx>0 ? (idx + ' / ' + total) : '';
       }, {passive:true});
     }
 
