@@ -180,6 +180,10 @@
     }
     .topic-chip:hover{border-color:var(--g);color:var(--g);}
     .topic-chip.sel{background:var(--g);color:var(--n);border-color:var(--g);font-weight:600;}
+    .sheet-streak{font-family:var(--ui); font-size:.68rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--g); margin:-.35rem 0 .9rem;}
+    .saved-empty{text-align:center;}
+    .saved-empty .actions{justify-content:center;}
+    .saved-empty .evidence-link{flex:0 0 auto;}
 
     /* INTRO slide (the objection-frame hook) */
     .intro .eyebrow{justify-content:center;}
@@ -223,6 +227,86 @@
       var a = arr.slice();
       for (var i=a.length-1;i>0;i--){ seed=(seed*9301+49297)%233280; var j=Math.floor(seed/233280*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; }
       return a;
+    }
+    // a fresh random shuffle for each *subsequent* loop pass, so the endless feed
+    // keeps feeling new instead of repeating the same daily order.
+    function randShuffle(arr){ var a=arr.slice(); for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } return a; }
+
+    // ---- per-viewer day streak (localStorage; purely a light habit nudge) ----
+    function dayKey(d){ return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate(); }
+    function bumpStreak(){
+      try{
+        var raw = JSON.parse(localStorage.getItem('ad_scroll_streak')||'null') || {last:null,count:0};
+        var t = dayKey(new Date());
+        if (raw.last !== t){
+          var y=new Date(); y.setDate(y.getDate()-1);
+          raw.count = (raw.last === dayKey(y)) ? (raw.count+1) : 1;
+          raw.last = t;
+          localStorage.setItem('ad_scroll_streak', JSON.stringify(raw));
+        }
+        return raw.count || 1;
+      } catch(e){ return 0; }
+    }
+
+    // ---- #2 branded share image — redraws the card's EXISTING certified title +
+    // tagline onto a navy/gold card (no new content), so a share is Story-ready. ----
+    function wrapText(ctx, text, maxW){
+      var words=(text||'').split(/\s+/), lines=[], line='';
+      for (var i=0;i<words.length;i++){
+        var test = line ? line+' '+words[i] : words[i];
+        if (ctx.measureText(test).width > maxW && line){ lines.push(line); line=words[i]; }
+        else line=test;
+      }
+      if (line) lines.push(line);
+      return lines;
+    }
+    function renderShareCanvas(c){
+      var W=1080, H=1350, cv=document.createElement('canvas'); cv.width=W; cv.height=H;
+      var x=cv.getContext('2d'); var M=96;
+      var g=x.createLinearGradient(0,0,0,H); g.addColorStop(0,'#071225'); g.addColorStop(1,'#030a16');
+      x.fillStyle=g; x.fillRect(0,0,W,H);
+      var rg=x.createRadialGradient(W/2,H*0.30,60,W/2,H*0.30,W*0.75);
+      rg.addColorStop(0,'rgba(200,169,81,0.16)'); rg.addColorStop(1,'rgba(200,169,81,0)');
+      x.fillStyle=rg; x.fillRect(0,0,W,H);
+      x.textAlign='left';
+      x.fillStyle='#c8a951'; x.font='600 30px "DM Sans",system-ui,sans-serif';
+      x.fillText((c.categoryLabel||'').toUpperCase(), M, 232);
+      x.strokeStyle='rgba(200,169,81,0.55)'; x.lineWidth=2; x.beginPath(); x.moveTo(M,256); x.lineTo(M+88,256); x.stroke();
+      x.fillStyle='#fff'; x.font='700 76px "Playfair Display",Georgia,serif';
+      var ty=362; wrapText(x,c.title,W-2*M).forEach(function(ln){ x.fillText(ln,M,ty); ty+=92; });
+      x.fillStyle='rgba(255,255,255,0.80)'; x.font='italic 40px "Source Serif 4",Georgia,serif';
+      var gy=ty+36; wrapText(x,c.tagline,W-2*M).forEach(function(ln){ x.fillText(ln,M,gy); gy+=56; });
+      x.font='700 42px "Playfair Display",Georgia,serif'; x.fillStyle='#fff';
+      x.fillText('Apologia', M, H-148);
+      x.fillStyle='#c8a951'; x.fillText('Daily', M + x.measureText('Apologia').width, H-148);
+      x.font='500 28px "DM Sans",system-ui,sans-serif'; x.fillStyle='rgba(255,255,255,0.62)';
+      x.fillText('Scroll the Evidence · apologiadaily.com', M, H-102);
+      return cv;
+    }
+    function shareCardImage(c, btn){
+      var url='https://apologiadaily.com/'+c.essay;
+      function linkFallback(){
+        if (navigator.share){ navigator.share({title:'Apologia Daily — '+c.title, text:c.title, url:url}).catch(function(){}); }
+        else if (navigator.clipboard){ navigator.clipboard.writeText(url); btn.textContent='✓'; setTimeout(function(){btn.textContent='↗';},1200); }
+      }
+      var ready = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+      ready.then(function(){
+        var cv; try { cv=renderShareCanvas(c); } catch(e){ return linkFallback(); }
+        if (!cv.toBlob) return linkFallback();
+        cv.toBlob(function(blob){
+          if (!blob) return linkFallback();
+          var file=null; try { file=new File([blob],(c.id||'card')+'.png',{type:'image/png'}); } catch(e){}
+          if (file && navigator.canShare && navigator.canShare({files:[file]}) && navigator.share){
+            navigator.share({files:[file], title:'Apologia Daily — '+c.title, text:c.title+' — '+url}).catch(function(){});
+          } else {
+            var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=(c.id||'card')+'.png';
+            document.body.appendChild(a); a.click(); document.body.removeChild(a);
+            setTimeout(function(){ try{URL.revokeObjectURL(a.href);}catch(e){} },4000);
+            if (navigator.clipboard){ try{navigator.clipboard.writeText(url);}catch(e){} }
+            btn.textContent='✓'; setTimeout(function(){btn.textContent='↗';},1400);
+          }
+        }, 'image/png');
+      });
     }
 
     function introSlide(){
@@ -313,10 +397,7 @@
       share.textContent='↗';
       share.addEventListener('click', function(){
         track('scroll_card_shared', {card:c.id, category:c.category});
-        var url = 'https://apologiadaily.com/' + c.essay;
-        var data = { title:'Apologia Daily — '+c.title, text:c.title, url:url };
-        if (navigator.share){ navigator.share(data).catch(function(){}); }
-        else if (navigator.clipboard){ navigator.clipboard.writeText(url); share.textContent='✓'; setTimeout(function(){share.textContent='↗';},1200); }
+        shareCardImage(c, share);
       });
       actions.appendChild(share);
       card.appendChild(actions);
@@ -331,45 +412,89 @@
 
     var ALL = [];            // every card, as loaded
     var CATS = [];           // [{cat,label}] in authored order
-    var currentCat = null;   // null = All topics
-    var io = null;
+    var currentCat = null;   // null = All topics; '__saved__' = saved view
+    var io = null, ioSeen = {};
+    var posCounter = 0;      // running position across appended loop passes
+    var loopOn = false;      // only the mixed (all-topics) feed loops endlessly
+    var streakCount = 0;
 
-    // per-card reach / depth: fire once when a card is ≥60% on screen.
-    // Re-created on every (re)build so a filtered view observes its own slides.
-    function connectIO(){
-      if (!('IntersectionObserver' in window)) return;
+    // per-card reach / depth: fire once (per id) when a card is ≥60% on screen.
+    function makeIO(){
+      if (!('IntersectionObserver' in window)) { io=null; return; }
       if (io) io.disconnect();
-      var seen = {};
+      ioSeen = {};
       io = new IntersectionObserver(function(entries){
         entries.forEach(function(en){
           var id = en.target.dataset.cardId;
-          if (en.isIntersecting && en.intersectionRatio >= 0.6 && id && !seen[id]){
-            seen[id] = 1;
+          if (en.isIntersecting && en.intersectionRatio >= 0.6 && id && !ioSeen[id]){
+            ioSeen[id] = 1;
             track('scroll_card_viewed', {card:id, category:en.target.dataset.cat, position:+en.target.dataset.pos});
           }
         });
       }, {root: feed, threshold: 0.6});
-      feed.querySelectorAll('.slide[data-card-id]').forEach(function(s){ io.observe(s); });
+    }
+    function observeSlides(nodes){ if (io) nodes.forEach(function(s){ if (s.dataset && s.dataset.cardId) io.observe(s); }); }
+
+    function savedEmptySlide(){
+      var s=el('section','slide'); var card=el('div','card saved-empty');
+      card.appendChild(el('div','eyebrow','Saved'));
+      card.appendChild(el('h2','card-title','Nothing saved yet'));
+      card.appendChild(el('p','card-tagline','Tap the ☆ on any card to keep it here — your saved cards live on this device.'));
+      var a=el('button','evidence-link','Browse all topics'); a.type='button';
+      a.addEventListener('click', function(){ setTopic(null); });
+      var act=el('div','actions'); act.appendChild(a); card.appendChild(act);
+      s.appendChild(card); return s;
     }
 
-    // (Re)build the feed for a topic. cat===null → intro + the day-shuffled mix;
-    // a category → just that topic's cards, in their authored order.
+    // Append one more pass of cards (mixed feed only) so it never dead-ends at 77.
+    // First pass = the daily order; later passes = a fresh random shuffle.
+    function appendPass(){
+      var saved = readSaved();
+      var list = (posCounter===0 ? dayShuffle(ALL) : randShuffle(ALL));
+      var frag = document.createDocumentFragment(), added=[];
+      list.forEach(function(c){ posCounter++; var sl=cardSlide(c, saved, posCounter); frag.appendChild(sl); added.push(sl); });
+      feed.appendChild(frag);
+      observeSlides(added);
+      pruneTop();
+    }
+    // keep the DOM bounded during the endless loop: drop slides fully scrolled past.
+    function pruneTop(){
+      var WINDOW = ALL.length*2 + 4;
+      while (feed.children.length > WINDOW){
+        var first = feed.firstChild; var h = first.offsetHeight||0;
+        if (feed.scrollTop <= h + 8) break;   // never remove what we're on/near
+        feed.removeChild(first); feed.scrollTop -= h;
+      }
+    }
+
+    // (Re)build the feed. cat===null → intro + endlessly-looping day-shuffled mix;
+    // a category → just that topic (finite); '__saved__' → saved cards (finite).
     function buildSlides(cat){
       var saved = readSaved();
-      clear(feed);
-      var list;
-      if (cat){ list = ALL.filter(function(c){ return c.category===cat; }); }
-      else { feed.appendChild(introSlide()); list = dayShuffle(ALL); }
-      list.forEach(function(c, i){ feed.appendChild(cardSlide(c, saved, i+1)); });
+      clear(feed); posCounter = 0; makeIO();
+      if (cat === '__saved__'){
+        loopOn = false;
+        var ls = ALL.filter(function(c){ return saved.indexOf(c.id)>-1; });
+        if (!ls.length){ feed.appendChild(savedEmptySlide()); }
+        else { var as=[]; ls.forEach(function(c,i){ var sl=cardSlide(c,saved,i+1); feed.appendChild(sl); as.push(sl); }); observeSlides(as); }
+      } else if (cat){
+        loopOn = false;
+        var lt = ALL.filter(function(c){ return c.category===cat; }), at=[];
+        lt.forEach(function(c,i){ var sl=cardSlide(c,saved,i+1); feed.appendChild(sl); at.push(sl); });
+        observeSlides(at);
+      } else {
+        loopOn = true;
+        feed.appendChild(introSlide());
+        appendPass();   // first pass (daily order), observed; prune is a no-op here
+      }
       feed.scrollTop = 0; rail.style.width = '0%';
-      connectIO();
     }
 
     function setTopic(cat){
       currentCat = cat;
       var btn = document.getElementById('topicsBtn');
       var found = cat ? CATS.filter(function(x){ return x.cat===cat; })[0] : null;
-      btn.querySelector('.label').textContent = found ? found.label : 'Topics';
+      btn.querySelector('.label').textContent = cat==='__saved__' ? '★ Saved' : (found ? found.label : 'Topics');
       btn.classList.toggle('active', !!cat);
       buildSlides(cat);
       track('scroll_topic_selected', {category: cat || 'all'});
@@ -378,7 +503,7 @@
     // the tap-to-open topic sheet — built in JS so chips stay data-driven (textContent)
     function buildTopicUI(){
       var btn = document.getElementById('topicsBtn');
-      var entries = [{cat:null, label:'All topics'}].concat(CATS);
+      var entries = [{cat:null, label:'All topics'}, {cat:'__saved__', label:'★ Saved'}].concat(CATS);
 
       var sheet = el('div','topic-sheet'); sheet.id='topicSheet';
       sheet.setAttribute('role','dialog'); sheet.setAttribute('aria-modal','true'); sheet.setAttribute('aria-label','Choose a topic');
@@ -387,6 +512,11 @@
       head.appendChild(el('div','topic-sheet-title','Jump to a topic'));
       var closeBtn = el('button','topic-sheet-close'); closeBtn.type='button'; closeBtn.setAttribute('aria-label','Close'); closeBtn.textContent='✕';
       head.appendChild(closeBtn); inner.appendChild(head);
+
+      if (streakCount > 0){
+        inner.appendChild(el('div','sheet-streak',
+          streakCount === 1 ? 'Day 1 — come back tomorrow to start a streak' : (streakCount + '-day streak')));
+      }
 
       var chips = el('div','topic-chips');
       entries.forEach(function(e){
@@ -414,6 +544,7 @@
 
     function render(cards){
       ALL = cards;
+      streakCount = bumpStreak();
       var seenCat = {};
       cards.forEach(function(c){ if (!seenCat[c.category]){ seenCat[c.category]=1; CATS.push({cat:c.category, label:c.categoryLabel}); } });
       buildTopicUI();
@@ -424,6 +555,8 @@
       feed.addEventListener('scroll', function(){
         var max = feed.scrollHeight - feed.clientHeight;
         rail.style.width = (max>0 ? (feed.scrollTop/max*100) : 0) + '%';
+        // #4 endless loop (mixed feed only): extend before the reader hits the end
+        if (loopOn && (feed.scrollHeight - (feed.scrollTop + feed.clientHeight) < feed.clientHeight*2)){ appendPass(); }
       }, {passive:true});
     }
 
