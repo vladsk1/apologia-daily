@@ -1031,7 +1031,11 @@
         "A cause outside space and time is at least the kind of thing theism describes"
       ],
       "question": "If the universe has a finite past, what caused it — and what could a cause of space and time itself be like?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The Big Bang describes the expansion and cooling of the universe from a hot, dense early state; it does not, by itself, prove that this was the absolute first moment of all reality. The famous \"singularity\" is widely regarded by physicists as a signal that the theory has broken down, not as a photograph of the first instant. The Borde–Guth–Vilenkin theorem reaches a \"past boundary,\" but as Sean Carroll pressed in his 2014 debate with Craig, it is a theorem about classical spacetime, and the regime it reaches back into is precisely where classical descriptions fail and quantum gravity takes over—so a past boundary in the classical model need not be a metaphysical beginning of being; it may simply mark where our current equations stop applying.",
+        "concession": "The hot Big Bang model—expansion, the CMB, light-element abundances—is not in serious dispute, but the metaphysical interpretation of the past boundary genuinely is: whether it is a true beginning of being, or the place where our physics runs out. The BGV theorem is a classical result, its most famous co-author Alan Guth suspects the universe did not have a beginning, and the proposed escape routes (quantum-gravity, bounce, eternal-inflation) have not been refuted—this is contested territory, and saying so is honesty, not weakness.",
+        "reply": "Our own claim is deliberately modest: the best current science is consistent with—indeed naturally suggestive of—a universe with a finite past, and the proposed escape routes either smuggle in a structured \"something,\" or face thermodynamic and BGV-type pressure, or remain speculative. The argument does not need cosmology to be finished; it needs only that, weighing the convergence of evidence against the alternatives, a real beginning is more reasonable than its denial—an inference to the best explanation, not a demonstration that forecloses inquiry. So the answer to the title's question is a bounded yes: the Big Bang does not prove God, but a universe that began is better explained by a transcendent cause beyond it than by no cause at all—a real pointer toward a Creator, though not, by itself, to the Triune God."
+      },
       "essay": "library/bigbang.html"
     },
     {
@@ -1047,7 +1051,11 @@
         "That makes a designing mind the best present explanation — contested, and offered for weighing"
       ],
       "question": "The first cell needed functional, sequence-specific information — the kind we only ever see minds produce. What produced it, if not a mind?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The design inference turns on the term \"specified information,\" and the strongest objection says it is only as strong as that key term. Critics press that it may quietly smuggle in the intentional, semantic sense that belongs to messages authored by minds — which would make the conclusion circular — since the experience it rests on is our experience of human minds. And the progress of the RNA world, where a self-replicating RNA molecule could in principle arise, looks like undirected chemistry generating function without a mind.",
+        "concession": "The inference is indeed only as strong as its key term, and the experience it rests on is our experience of human minds — which is why critics press the analogy, and the inference stays comparative rather than demonstrative. The RNA world is a real, advancing research program, not a stagnant one.",
+        "reply": "Rest the argument on a strictly functional definition: a sequence carries specified information when, of the astronomically many sequences of its length, it falls in the tiny set that actually folds and replicates — a property fixed by chemistry and measurable in the laboratory, not by appeal to any author's purpose. Defined that way, the claim that such functional specificity is, in our experience, mind-produced becomes a claim about a measurable feature of nature. And even a working RNA replicator would not by itself explain the origin of the information — it would presuppose a functional, specified sequence to get started, pushing the central question back one step rather than dissolving it. So the bounded verdict is that intelligent design is, at present, the best explanation for the origin of biological information — a comparative, defeasible inference, not a demonstration, and not a scientific consensus."
+      },
       "essay": "library/originlife.html"
     },
     {
@@ -1063,7 +1071,11 @@
         "The only source we know of for coded information is a mind — contested, and offered for weighing"
       ],
       "question": "Every code whose origin we know has a coder. Why should the oldest code be the one exception?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The most important objection is that the design inference simply baptizes ignorance. The history of science is a history of gaps closing — lightning, disease, planetary motion, and the diversity of species were all once laid to divine action and later given natural explanations — so inferring a designer from today's missing mechanism repeats a discredited move and bets against the very process that has reliably delivered. Worse, it can be a science-stopper; and the probability figures the argument leans on are themselves sharply contested. The warning is pressed not only by skeptics but by many Christians.",
+        "concession": "Absence of a current explanation is not proof of impossibility — anyone who says \"abiogenesis is impossible\" has overreached the evidence; we do not know that no undirected pathway exists, only that none has been demonstrated. The field is genuinely advancing on sub-problems, and the objection is pressed in good faith.",
+        "reply": "The design inference, properly stated, is not an argument from ignorance but an argument from knowledge — from a known causal power: we positively know one kind of cause that produces specified information, and no undirected cause has yet been shown to. That is the same abductive logic a forensic scientist or an archaeologist uses, and it is defeasible — demonstrate an undirected chemical route from simple precursors to specified information and the inference is overturned. The right posture is to keep doing the chemistry while being candid that, as of now, it has not delivered, and not to lean on any single contested number. So the verdict is bounded: there is no scientific consensus mechanism for the origin of life, but that does not show one is impossible — the inference to design is a comparative, provisional claim offered for weighing, not a proof."
+      },
       "essay": "library/originlife.html"
     },
     {
@@ -1079,7 +1091,11 @@
         "The fit suits theism more comfortably than naturalism — evidence, not a settled proof"
       ],
       "question": "Why is the universe written in the one language minds invented for truth?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The deepest deflationary reply is selection: we build and keep the mathematics that fits the phenomena and quietly discard the rest, then marvel at the fit we engineered—a kind of streetlight effect, since most mathematics describes nothing physical at all. Derek Abbott presses it further as a “Darwinian Struggle for the Survival of Ideas”: our sense of wonder is a base-rate error, because we count the hits and forget the misses—the millions of failed models that never made it onto paper. On that non-Platonist view, mathematics is simply a human invention for describing patterns and regularities.",
+        "concession": "Part of this is simply true and must be conceded: there is a vast body of mathematics with no known application, we do retain the tools that work, and mathematically-motivated predictions frequently fail—supersymmetry predicted a spectrum of partner particles the Large Hadron Collider has so far not found. Abbott is right about the base rate, and successes must be weighed against failures.",
+        "reply": "But selection struggles with the predictive cases. You cannot select-after-the-fact a prediction of a particle no one has seen: Dirac’s positron and Gell-Mann’s omega-minus were drawn from pure mathematics before the observation, stated in advance where they could fail in public, and the world then complied—a prediction that could have failed, and sometimes does, cannot be quietly retrofitted. Selection explains why our toolkit fits the problems we chose; it does not explain why pure structure keeps anticipating reality we did not yet know was there. So the verdict is bounded: the applicability of mathematics is some evidence, not proof, that a rational mind stands behind the world—one strand in a cumulative case, more at home in a universe made by a rational mind than in one that is not. It does not by itself reach the God of Abraham, let alone the Trinity, and it leans on the contested view that mathematical realism is roughly correct."
+      },
       "essay": "library/mathematics.html"
     },
     {
@@ -1095,7 +1111,11 @@
         "Design is the inference some draw — contested, and not the scientific consensus"
       ],
       "question": "Gradualism predicts a slow fuse. Why do so many animal body plans arrive in a geological burst?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The overwhelming majority of paleontologists and evolutionary biologists reject the design inference, and their reasons are substantial, not reflexive. The \"explosion\" is real but slower and more layered than \"sudden\" suggests — a roughly 20-to-25-million-year diversification preceded by the Ediacaran biota, the small shelly fauna, complex trace fossils, and molecular-clock signals of deeper divergence. Most importantly, they deny that building new body plans required vast brand-new information: evo-devo shows much morphological diversity comes from rewiring an ancient, shared genetic toolkit. So the inference looks like a \"god-of-the-gaps\" move — inferring design from what evolution has not yet explained.",
+        "concession": "The data are largely agreed across the board: the explosion is a real and not-fully-explained burst of morphological novelty, and the origin of the developmental programs that build animals remains a deep open problem — even Marshall granted the fossil-record portion of Meyer's book reflected \"good scholarship,\" and Axe's load-bearing rarity figure is genuinely contested. The people who pose the question sharply are not simply confused.",
+        "reply": "The argument fastens onto something true — a hard, unsolved question — but it establishes far less than its strongest advocates sometimes suggest. It does not show that evolution is false, that the explosion was instantaneous, or that scientists agree the Cambrian animals were designed; they do not. Its empirical premises are softer than the rhetoric of \"sudden,\" its key probability estimate (Axe's) is disputed by qualified specialists, and its central premise about the inadequacy of natural mechanisms is rejected by the working scientists who study the event most closely. So the bounded verdict: design is not the scientific consensus here; it is best held as a live, interesting inference offered with humility — reaching at most a purposing designer, not yet the Triune God of the creeds — not a knockdown proof that claims a certainty the evidence does not supply."
+      },
       "essay": "library/cambrian.html"
     },
     {
@@ -1111,7 +1131,11 @@
         "Together they are evidence — not proof — for cosmic purpose"
       ],
       "question": "Does the cosmos look like it is for something?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The most serious objection is the one Carroll has pressed most pointedly, and it should be stated at full strength. Suppose the universe were arranged by a mind that wanted observers. Then the extravagant excess is itself evidence against that hypothesis: why an initial entropy needlessly lower than life requires, and why a hundred billion galaxies of mostly barren space, if the point was us? A naturalistic universe, he suggests, predicts exactly this sort of grandiose, undirected profusion better than a purposive one does.",
+        "concession": "The underlying physics is not in dispute—the low entropy of the early universe is mainstream cosmology—and the cosmos's prodigality is a genuine datum that any honest design inference must carry; the charge of waste is real and should not be softened or denied.",
+        "reply": "The reply is not to deny the objection but to weigh it. \"Wasteful\" presupposes that we know the goal and the cheapest route to it; a vast, slow, prodigal cosmos may simply be the kind of place in which embodied, free, rational agents can arise through lawful processes rather than fiat—and the scale that looks like excess is also the scale that makes the heavy elements, and us. The charge of waste tells against a particular reading of the designer's character, not against the order that called for explanation in the first place. The excess also cuts the other way: Penrose's own point is that an initial entropy far lower than observers need is exactly what a selection-effect or fluctuation explanation does not predict, since a far smaller ordered patch would be vastly more probable — so the needless order tells against simple selection-effect and fluctuation explanations, not only against design. To say \"scientists agree the universe is designed\" would be false, and the argument needs no such claim; our own judgment is that a purposive mind explains this cluster of features better than its rivals—a real tilt of the scales toward a mind, not a mathematical proof."
+      },
       "essay": "library/cosmic.html"
     },
     {
@@ -1127,7 +1151,11 @@
         "Design is the inference some draw — the correlation is under-tested and disputed, and not the scientific consensus; offered for weighing, not proof"
       ],
       "question": "Why should the place fit for observers also be an unusually good platform for discovery?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The most telling objection is cherry-picking: the correlation between habitability and discoverability may be manufactured by selective attention. For every factor the authors count as aiding discovery, one could name factors that hinder it—cloud cover, our short lifespans, the vast reaches we cannot see—and with enough candidate factors, some will line up by chance. The committed skeptic presses it home: you have conceded that the correlation is not rigorously established, that the eclipse is time-bound, and that scientists reject the inference; what remains is an aesthetic impression of pattern, and impressions of pattern are exactly what selection bias manufactures.",
+        "concession": "A real concession is owed: a correlation claim is only as good as the full ledger of unfavorable factors counted alongside the favorable ones, and that ledger has not been compiled rigorously enough, by either side, to settle the matter. The thesis points to a suggestive pattern, not a demonstrated correlation, and scientists do not agree the Earth is designed—the design reading is a minority philosophical position.",
+        "reply": "The measured reply is that the thesis was never offered as a proof, and on its own modest terms it survives. The anthropic principle fully explains why we find ourselves somewhere habitable; what it does not explain is why that same place should also be unusually good for measuring the universe—because observers require only a livable world, not a measurable one. If that surplus intelligibility is real, it is unexplained on the chance hypothesis, and it points—suggestively, defeasibly—in the direction of purpose. A careful advocate should hold it as an intriguing hypothesis, not a proven correlation: at most a clue, one quiet line in a much larger cumulative case alongside cosmic fine-tuning—and even at its strongest it reaches a purposing designer, not yet the Triune God of the creeds."
+      },
       "essay": "library/privileged.html"
     },
     {
@@ -1143,7 +1171,11 @@
         "Science assumes the lawfulness it cannot explain"
       ],
       "question": "Science runs on laws it cannot account for. What grounds them?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The strongest reply is the deflationary one, pressed by the naturalist Graham Oppy, and it comes in two stages. First the category point: “law” is a misleading metaphor—there is no cosmic legislature, no decree, no obedience, only how things behave, which we summarize in equations, so asking “who made the laws?” commits a category mistake. Second the brute-fact point: every worldview must terminate in something unexplained—the theist stops at God, the naturalist at the initial state of the universe together with its laws—so the naturalist’s brute laws are no worse off, explanatorily, than the theist’s brute God, and by Ockham’s razor the simpler stopping point, laws without a lawgiver, is preferable.",
+        "concession": "This should be conceded: the category point lands a real blow against a crude version of the argument, and if laws are merely descriptive, no lawgiver follows from the word alone—the honest theist drops that move entirely. Oppy is also right that every worldview stops somewhere, and that “God” is, in one sense, the theist’s stopping point.",
+        "reply": "But the deeper point survives the concession. Grant that laws are only descriptions; the question simply migrates—why is the mosaic summarizable at all, so uniform across space and time and so amenable to a handful of simple equations, rather than an irreducible chaos that no compression could capture? Calling the pattern “brute” names the mystery; it does not dissolve it. And not all termini are equal, for two reasons. First, the classical doctrine is that God exists necessarily and is metaphysically simple — not one more contingent item that might have been otherwise — so, if that contested doctrine holds, God is a genuinely different category of terminus than a brute contingent law. Second, a Mind that intends order supplies a reason why the order obtains, whereas the brute laws supply none, so the choice is “a terminus that explains vs. a terminus that merely halts.” The verdict is bounded—the order of nature is evidence, not proof, of a rational Author; it reaches a rational ground of order, not yet the personal or Triune God of Christianity, and is best presented as tipping a balance, not closing a case."
+      },
       "essay": "library/laws.html"
     },
     {
