@@ -815,7 +815,11 @@
         "The text is preserved with extraordinary fidelity"
       ],
       "question": "This shows the text we have is the text that was written. Whether what it says is true is the next question — shall we take it?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The most influential challenge comes from the agnostic scholar Bart Ehrman. There are, he reports, somewhere between 200,000 and 400,000 textual variants among the manuscripts — famously, more variations among our manuscripts than there are words in the New Testament. He presses further: some changes were not innocent slips but deliberate alterations, scribes adjusting the text to sharpen its Christology or settle theological disputes, so that the text we have was shaped by the very debates it was later used to adjudicate.",
+        "concession": "The headline variant count is real, and Ehrman is right that some alterations were intentional — he has demonstrated that. Whether they were theologically motivated — as opposed to reverent smoothing or harmonizing — is his further and more contested claim, which the identifiable, catalogued nature of these changes does not by itself establish. But establishing that we possess the authors' words tells us nothing, by itself, about whether those words are true: preservation is not truth.",
+        "reply": "The decisive question is not how many variants there are but what kind they are, and the number is a by-product of abundance, not of corruption. The overwhelming majority are spelling differences and obvious copying errors; Daniel Wallace, who has spent his career cataloguing the manuscripts, estimates that less than one percent of all variants are both meaningful and viable. Most strikingly, Ehrman himself concedes the point that matters most: he agrees that the essential Christian beliefs are not affected by textual variants, and that a jointly reconstructed original would differ in only maybe one or two dozen places out of many thousands. The famous deliberate changes — the longer ending of Mark, the woman caught in adultery, the Johannine Comma — are few, identifiable (we know of them precisely because the comparative method flagged them), and none establishes a doctrine the rest of the New Testament does not teach independently."
+      },
       "essay": "library/manuscript.html"
     },
     {
@@ -831,7 +835,11 @@
         "Isaiah’s prophecies were on record before Jesus — not rewritten by Christians afterward"
       ],
       "question": "The Isaiah scroll predates Jesus by generations. How do you account for the fit between Isaiah 53 and the crucifixion?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The strongest challenge comes not from popular skepticism but from the textual scholarship itself, built from the work of Emanuel Tov. The comfortable apologetic picture — ancient text equals medieval text, therefore the Bible was perfectly preserved — is a distortion of what the Scrolls reveal. At Qumran the Hebrew Bible was pluriform: there was no single 'the text' in the last centuries BC, but multiple living editions. Jeremiah, for instance, existed in two forms — the Qumran 4QJer-b witnesses a Hebrew text about one-seventh shorter than the Masoretic Jeremiah — so the very thing the apologist wants to prove, a stable unitary text, is precisely what the Scrolls complicate.",
+        "concession": "The factual kernel is accurate and the people who document it are not enemies of the text but its most careful students: before standardization the text was pluriform, and the cases of Jeremiah, Samuel, and Exodus are real and well documented. The older apologetic that spoke of an utterly unchanged text was overclaiming — conceding that is the price of telling the truth.",
+        "reply": "What does not follow is the inference that the stream behind most modern translations is a moving target. The variation is bounded in kind — spelling, grammatical updating, occasional expansion, and at the outer edge the arrangement of a few books — not rival accounts teaching contradictory things: the shorter Jeremiah and the longer Jeremiah preach the same prophet's same message. The proto-Masoretic stream, the one that became the standard, is the one the Scrolls document most fully, and when we follow that stream across the millennium we find the stability the argument claims — confirmed decisively by non-Essene manuscripts from Masada and the Bar Kokhba caves that agree closely, often almost letter-for-letter, with the later Masoretic Text. The charge that the Hebrew Scriptures were garbled beyond recognition by centuries of copying does not survive contact with the evidence; whether that book is true is a separate conversation that begins where this one ends."
+      },
       "essay": "library/deadseascrolls.html"
     },
     {
@@ -847,7 +855,11 @@
         "It confirms the setting, not every event — the Exodus, the conquest, and the scale of the united monarchy stay genuinely disputed"
       ],
       "question": "Time and again, where a biblical name or place could be checked, how has the record of confident “errors” actually held up?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The strongest challenge comes not from cranks but from working archaeologists like Israel Finkelstein, who would press: you keep retreating to \"framework\" and \"presumption,\" but the central narratives your tradition cares about—a grand united monarchy, a conquest, an Exodus on the biblical scale—are precisely the ones the archaeology fails to confirm and in places contradicts. The names you can verify, like Pilate or the House of David, are the easy, late, or incidental ones; the load-bearing theological history is exactly where the evidence thins out.",
+        "concession": "This is no fringe complaint, and honesty requires conceding where the record genuinely strains: there is no direct Egyptian record of a mass Israelite departure, Kenyon's excavation redated Jericho's great destruction to roughly 1550 BC—well before any plausible date for Joshua—and the scale and splendor of David and Solomon's kingdom as Kings describes it is exactly what Finkelstein's chronology calls into question. On all three, these are contested, and on some the burden of evidence does not currently favor a maximal reading.",
+        "reply": "The reply grants the observation in Finkelstein's point, not his inference: archaeology does not deliver a grand united monarchy or a sweeping conquest, but silence is not refutation, and an unconfirmed narrative is not thereby an invented one—the Exodus and the conquest are unconfirmed and disputed, not refuted. The verifications are real and not confined to trivia—the House of David in the ninth century, Hezekiah's tunnel and seal, the Assyrian and Babylonian synchronisms with named Judahite kings, the precise administrative texture of Acts—and the track record runs in one direction more often than the other: the Hittites, the existence of David, the title of Pilate, the politarchs, the five-portico pool were all confidently asserted \"errors\" later overturned by discovery, which counsels humility before declaring the unconfirmed to be refuted. But confirming a reliable setting is not the same as confirming every event set within it—a novel can be set in a meticulously accurate London. So the right conclusion is neither \"archaeology proves the Bible\" nor \"archaeology refutes it\": the biblical authors knew their world, and a source that reliable deserves to be weighed, not waved away."
+      },
       "essay": "library/archaeology.html"
     },
     {
@@ -863,7 +875,11 @@
         "Not handed down by Constantine, not voted on at Nicaea"
       ],
       "question": "If the canon was politics, why was Irenaeus already defending exactly four Gospels around AD 180 — long before Nicaea?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The strongest modern challenge comes not from Dan Brown but from Bart Ehrman — and it is not the crude 'Constantine voted' myth, which he has himself debunked. He argues that earliest Christianity was not one stream with a few heretical eddies but a roiling diversity of Christianities — Ebionites, Marcionites, and Gnostic groups, each with its own gospels claiming apostolic pedigree. On this telling, what we call 'orthodoxy' was simply the party that won; the canon is 'history written by the winners,' and the rejected gospels — Thomas, Peter, Mary, Judas — were silenced not because they were demonstrably late but because they lost a power struggle.",
+        "concession": "The factual kernel is accurate and an honest apologist should grant it: the early Jesus movement was more diverse than the tidy Sunday-school picture suggests, there really were competing groups with competing texts, and the proto-orthodox did prevail. What does not follow is the inference that prevailing is all that orthodoxy was.",
+        "reply": "The decisive point is chronology, not theology. The canonical four Gospels date to the first century, within living memory of the events; the Gospel of Thomas, Peter, Judas, and the rest are second-century or later compositions, written generations after the apostles whose names they borrow. They were excluded first and foremost because they failed the test of apostolic origin on historical grounds — not because they lost a power struggle — so the 'history written by the winners' objection does not hold: the Gospels the church kept are the first-century ones, and the rival gospels it set aside are, as we have them, the late ones. The canon was not handed down by Constantine or voted on at Nicaea; the core was received as Scripture within the first and second centuries and only formally ratified once a consensus had long existed — recognition, not invention. Showing that the church recognized these books does not, by itself, show they are inspired or true; that is a further question, argued on further grounds."
+      },
       "essay": "library/canon.html"
     },
     {
@@ -895,7 +911,11 @@
         "Variation in detail, unity in doctrine"
       ],
       "question": "Try getting forty authors across fifteen centuries to agree on anything — then explain this book.",
-      "deeper": null,
+      "deeper": {
+        "objection": "Bart Ehrman urges readers to stop reading the Gospels \"vertically\" (each straight through, blended into one harmonized story) and read them \"horizontally,\" setting parallel accounts side by side. Do this and the discrepancies are not trivial misspellings; they reach into the narratives themselves — the day of the crucifixion (Passover in Mark, the day before in John), the death of Judas, the two genealogies, and who went to the tomb on Easter morning. His deeper claim is that harmonizers cheat: to reconcile the accounts you must invent a fifth Gospel none of the four wrote, splicing details into a composite that flattens each author's distinct theological voice.",
+        "concession": "He is right that crude harmonization can distort the text, and right that the Evangelists were authors with theological aims, not stenographers; the differences they point to are really there in the text, and a few cases — above all the day of the crucifixion — are genuinely hard, which honesty forbids us to pretend away.",
+        "reply": "The question is whether those differences are contradictions — and two accounts contradict only if they cannot both be true, not merely if they differ, emphasize different things, or one omits what the other includes. Applied case by case, the great majority resolve by reading carefully, not by force: \"Mary went to the tomb\" and \"Mary and others went\" do not contradict, and mentioning one angel does not deny a second. Michael Licona's comparison with Plutarch shows that when a single respected ancient author narrates the same event twice he compresses, transfers, and paraphrases exactly as the Gospels do — these are the fingerprints of the genre, not of falsehood. The honest verdict is not that every difference dissolves, but that the residue of genuinely hard cases is small, peripheral, and powerless to overturn the central narrative the accounts share. And the scope cuts both ways: demonstrating consistency removes a defeater; it does not, by itself, prove the contents true — that is argued on its own ground."
+      },
       "essay": "library/consistency.html"
     },
     {
@@ -911,7 +931,11 @@
         "The writers distinguish their own words from the words of Jesus"
       ],
       "question": "Legends polish their heroes. Why do the Gospels keep all the embarrassing parts?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The Gospels are formally anonymous: no author names himself in the text, and the familiar titles were attached by the early church, not signed by the authors. And the most prominent critic, Bart Ehrman, grants that the stories ultimately go back to people who knew Jesus but argues that what reaches us is memory after decades of distortion. Human memory, including collective memory, is demonstrably unreliable over time; the writers were neither eyewitnesses nor in direct contact with them; so eyewitness origin does not buy you accuracy, only a starting point the intervening years could badly corrupt.",
+        "concession": "The anonymity point is granted in full: the Gospels are formally anonymous, and the claim defended was never that we can prove who held the pen. And memory does drift; that much is simply true, and eyewitness origin does not, by itself, prove that a miracle happened.",
+        "reply": "The claim is narrower and more defensible: that the traditions are rooted in eyewitness testimony, tracing to identifiable people who saw and heard rather than a faceless, author-less crowd. The reply to Ehrman is not to deny that memory drifts but to insist on the conditions under which it drifts least: memory is far more durable for repeated, salient, emotionally central experiences, which is precisely the category here, and the eyewitnesses were still alive as recognized leaders during the very decades the tradition was forming, functioning as a brake on legend, not its engine. Embarrassing material the community had every incentive to smooth away, the disciples' failures, Peter's denial, women as the first witnesses, survives as memory the tradents were not free to delete. Taken together with the named minor characters, the statistical fingerprint of first-century Palestinian names, and the earliest external witness attributing Mark to Peter's preaching, this makes the 'anonymous late folklore' thesis the less plausible account. It does not prove the miracles occurred; what it earns is a hearing, that the Gospels be read as serious testimony about Jesus rather than dismissed before the conversation begins."
+      },
       "essay": "library/eyewitnesses.html"
     },
     {
@@ -927,7 +951,11 @@
         "Eyewitnesses were still alive to contradict any errors"
       ],
       "question": "Acts stops with Paul alive and the Temple standing. What is your best explanation for the silence?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The mainstream of critical scholarship dates Mark to around AD 70, Matthew and Luke to roughly 80–85, and John to 90–95. The reasoning is layered: Matthew and Luke used Mark, which requires Mark to have circulated first; and — the decisive point — Mark 13, the Olivet Discourse, has Jesus predicting the encirclement and destruction of Jerusalem. The simplest historical explanation is that the Evangelist wrote after AD 70 and shaped the prophecy in light of what had occurred — a vaticinium ex eventu, a \"prophecy after the fact.\" To a critic, the early-dater looks willing to multiply improbabilities — genuine prediction, a string of coincidental silences in Acts — to avoid the obvious.",
+        "concession": "The vaticinium ex eventu reading is not special pleading as a method: historians as a rule do not assume miracles or genuine foreknowledge when an ordinary explanation is available, and the correspondence between Jesus's words and the events of 70 is real. And the argument from silence in Acts is genuinely an argument from silence, only as strong as the certainty that Luke would have mentioned the missing events — a judgment about which reasonable scholars differ.",
+        "reply": "The inference is far less decisive than it sounds. Mark 13 is conspicuously unspecific about how Jerusalem fell — it says nothing of the fire that gutted the Temple, the months-long siege, or the legions of Titus, the very details a writer narrating after the fact would find hard to omit — which is why even E. P. Sanders, who dates the Gospels post-70, judged Mark's prediction \"probably pre-70.\" Most importantly, the early-dating case for the central claims does not stand or fall with Mark's date at all: even on Ehrman's own chronology, the creed of 1 Corinthians 15 and Paul's letters carry the death, burial, and resurrection proclamation back into the 30s and 50s, within a few years of the events and naming witnesses who could still be questioned. The pre-70 dating of the narrative Gospels, championed by Robinson and Hemer, remains a respected minority position, not the field's settled judgment — but the earliness of the central proclamation is agreed across the spectrum, skeptics included. And early does not mean true: an early date rules out slow, undetected legendary development, not sincere error or deliberate fabrication; it clears the ground so the central claims can be assessed as first-generation testimony."
+      },
       "essay": "library/earlydate.html"
     },
     {
@@ -943,7 +971,11 @@
         "Forgers do not plant puzzles in their own work and bury the solutions in rival documents"
       ],
       "question": "Pick one coincidence and check it yourself — both passages, ten minutes, open Bible.",
-      "deeper": null,
+      "deeper": {
+        "objection": "The most forceful objection, from Richard Carrier, is that the argument quietly assumes the texts are independent when the dominant view in New Testament studies is that they are not. On the two-source hypothesis Mark was written first and Matthew and Luke both used him, so a 'coincidence' between Mark and Luke may be nothing more than a later author copying and lightly editing his source, an artifact of redaction rather than independent memory. Carrier presses it further and closes the escape route defenders lean on hardest: the Acts-Epistles correspondences fail too, because, as he puts it, 'Obviously the author of Acts used those Epistles as a source text', so even the strongest tier collapses into deliberate borrowing dressed up as independent memory.",
+        "concession": "The honest concession is large: where a coincidence holds only between texts in a known dependence relation, especially Mark and a Gospel that used him, redaction is a live alternative, so such cases carry less weight and the weak ones (the green-grass/Passover link above all) should be dropped from the load-bearing set. Markan priority is the majority view and cannot be waved away, and defenders have not, on the whole, done the rigorous work of counting the misses. That is a gap in the defense's bookkeeping, not a defeater: a missing count does not turn question-and-answer interlocks into chance fits.",
+        "reply": "The objection does not reach the strongest cases, and the reason is the shape of genuine redaction. When a later author notices a connection in his source, the natural editorial move is to state it, to clarify and smooth the link for the reader; but the strong undesigned coincidences do the opposite, with the explaining detail sitting in a different document, dropped for an unrelated reason, neither writer flagging it, a copyist who saw that Philip was from Bethsaida would simply have written 'Jesus asked Philip, because Philip was a local.' On the Acts-Epistles cases, grant Carrier his premise that the author of Acts had read the letters: Acts still never verbatim-quotes them, and at the points where a borrower would most want to lean on his source it diverges rather than smooths. So the material survives not because dependence has been ruled out a priori, but because the pattern fits independent knowledge better than a redactor reworking the letters. The dependence move deflates the weaker cases, but the best-shaped ones survive it, so the claim in Carrier's title does not hold."
+      },
       "essay": "library/coincidences.html"
     },
     {
@@ -959,7 +991,11 @@
         "The data: Tal Ilan’s lexicon of thousands of ancient Jewish names; the analysis: Bauckham, Jesus and the Eyewitnesses"
       ],
       "question": "How would a second-century writer in Egypt fake statistics nobody knew existed until 2002?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The sharpest objection, which the essay lets get the last word, is Christopher Tuckett's. He grants that the names match Palestine, calling Bauckham's book a 'tour de force', but presses that this shows provenance, not eyewitnesses: Palestinian onomastic knowledge demonstrably circulated in the diaspora, Josephus himself wrote accurate Palestinian narratives in Rome, so a skilled, well-read insider could in principle have reproduced the right names without being a Galilean eyewitness. Kamil Gregor and Brian Blais add a statistical version: the New Testament sample is too small to license a tight inference, and an 'anonymous community transmission' model fits the data as well as the eyewitness thesis.",
+        "concession": "Tuckett's logical point is accurate and should be conceded cleanly: the names cannot, by themselves, prove that a Galilean fisherman wrote them down, the door is not bolted. And the sample is modest, so one should not oversell the precision of any single ratio (the women's figures in particular wobble); this remains a genuinely contested area of scholarship, not a settled one.",
+        "reply": "The reply is to grant the logic and narrow the claim accordingly. Consider what the 'skilled diaspora mimic' hypothesis actually requires: an author who not only knew which Palestinian names were common but reproduced their relative frequencies across dozens of incidental characters, and who deployed disambiguating nicknames on exactly the over-common names, all with no frequency tables to work from and no awareness that anyone would ever check. Josephus could write accurate Palestinian narratives in Rome because he was a Palestinian writing from memory; he is evidence that the knowledge travels with such a person, not that it could be reconstructed by a Gentile or third-generation diaspora author from scratch. Tuckett shows the door is not bolted; he does not show that anyone of the relevant profile is known to have walked through it, so the most economical explanation of an unconscious statistical fingerprint remains that it was left by people who actually lived in that world. The names do not prove any event happened, let alone the miraculous; they establish early Palestinian provenance, making the picture of the Gospels as late Greek legends untethered from Judea very hard to maintain, a thread the late-legend hypothesis has a remarkably hard time cutting."
+      },
       "essay": "library/names.html"
     },
     {
@@ -975,7 +1011,11 @@
         "A Gentile invention would not look like this"
       ],
       "question": "If Christianity invented Jesus, why is he so irreducibly Jewish?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The objection that gets the last word, pressed by a thoroughgoing skeptic in the line of Bart Ehrman, concedes the argument's data and denies its reach: granting everything about Jesus' Jewishness, you have at most shown that the setting is authentic, not that the events are. Authentic Jewishness gets you a realistic backdrop and an early Palestinian milieu—and not one inch further toward a miracle. The wallpaper being right tells you nothing about what happened in the room.",
+        "concession": "Its core is correct, and the argument concedes it without flinching: the Jewishness of Jesus establishes provenance, not the supernatural—it does not, by itself, prove the resurrection, the miracles, or the divinity of Christ. A historical novel can have an impeccably accurate setting; rootedness in a real world does not on its own prove that every reported event occurred.",
+        "reply": "But the objection overreaches when it says the setting tells us nothing about what happened: early reports from inside the world they describe are exactly the evidence on which the events must then be weighed. The texture is not merely general Jewishness a competent author could fake but inconvenient, against-interest Jewishness—a church rapidly becoming Gentile kept sayings awkward for its own mission, like \"I was sent only to the lost sheep of the house of Israel,\" preserved anyway; authentic color is cheap, authentic inconvenience is not, and that friction points to memory, not invention. So the argument dismantles the \"Hellenistic myth\" thesis at the root and tells heavily against the \"late legend\" thesis: it establishes, with high historical confidence, that the Gospel tradition is early and authentically Palestinian-Jewish, not a Gentile cult's invention. Removing the oldest reasons for refusing the Gospels a hearing does not prove Easter, but it changes the conversation from \"these are late legends\" to \"these are early reports—now let us argue about what they report,\" and hands the question on, intact, to eyewitness testimony, early dating, and the historical case for the resurrection."
+      },
       "essay": "library/jewishness.html"
     },
     {
