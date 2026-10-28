@@ -22,6 +22,21 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html,body{height:100%;overflow:hidden;background:var(--n);}
     body{font-family:var(--ss);color:var(--w);-webkit-font-smoothing:antialiased;}
+    /* one fixed background behind the whole feed, so a tall card that has to
+       scroll keeps the starfield + glow instead of running onto black */
+    body::before{ content:''; position:fixed; inset:0; z-index:-1; pointer-events:none;
+      background:
+        radial-gradient(ellipse 80% 55% at 50% 38%, rgba(200,169,81,0.13), transparent 60%),
+        radial-gradient(ellipse 120% 80% at 50% 110%, rgba(30,66,120,0.35), transparent 55%),
+        var(--n); }
+    body::after{ content:''; position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.5;
+      background-image:
+        radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,.7), transparent),
+        radial-gradient(1px 1px at 70% 20%, rgba(255,255,255,.5), transparent),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,.6), transparent),
+        radial-gradient(1px 1px at 85% 60%, rgba(255,255,255,.4), transparent),
+        radial-gradient(1px 1px at 15% 85%, rgba(255,255,255,.5), transparent),
+        radial-gradient(1px 1px at 60% 90%, rgba(255,255,255,.35), transparent); }
 
     /* FEED — full-screen vertical scroll-snap, one card per screen */
     #feed{
@@ -32,29 +47,15 @@
 
     .slide{
       height:100dvh; scroll-snap-align:start; scroll-snap-stop:always;
-      display:flex; flex-direction:column; justify-content:center;
-      padding:max(2rem,env(safe-area-inset-top)) 1.5rem max(2.5rem,env(safe-area-inset-bottom));
-      position:relative; overflow:hidden;
+      display:flex; flex-direction:column;
+      padding:calc(env(safe-area-inset-top,0px) + 3.6rem) 1.5rem max(1.6rem,env(safe-area-inset-bottom));
+      position:relative; overflow-y:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none;
     }
-    /* starfield + radial glow, matching the reel aesthetic */
-    .slide::before{
-      content:''; position:absolute; inset:0; z-index:0;
-      background:
-        radial-gradient(ellipse 80% 55% at 50% 38%, rgba(200,169,81,0.13), transparent 60%),
-        radial-gradient(ellipse 120% 80% at 50% 110%, rgba(30,66,120,0.35), transparent 55%),
-        var(--n);
-    }
-    .slide::after{
-      content:''; position:absolute; inset:0; z-index:0; opacity:.5;
-      background-image:
-        radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,.7), transparent),
-        radial-gradient(1px 1px at 70% 20%, rgba(255,255,255,.5), transparent),
-        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,.6), transparent),
-        radial-gradient(1px 1px at 85% 60%, rgba(255,255,255,.4), transparent),
-        radial-gradient(1px 1px at 15% 85%, rgba(255,255,255,.5), transparent),
-        radial-gradient(1px 1px at 60% 90%, rgba(255,255,255,.35), transparent);
-    }
-    .card{ position:relative; z-index:1; max-width:560px; margin:0 auto; width:100%; }
+    .slide::-webkit-scrollbar{display:none;}
+    /* margin:auto centres a short card, but collapses to 0 when the card is taller
+       than the screen — so the whole card scrolls (top and bottom both reachable)
+       instead of being clipped by the old overflow:hidden + justify-content:center */
+    .card{ position:relative; z-index:1; max-width:560px; margin:auto; width:100%; }
 
     .eyebrow{
       font-family:var(--ui); font-size:.68rem; font-weight:600; letter-spacing:.2em;
@@ -79,9 +80,8 @@
       border-bottom:1px solid rgba(255,255,255,.07);
     }
     .points li::before{content:'→'; color:var(--g); flex-shrink:0; font-family:var(--ui);}
-    /* keep long decks on-screen: points area scrolls inside the slide if needed */
-    .points-wrap{ max-height:38vh; overflow-y:auto; scrollbar-width:none; -webkit-mask-image:linear-gradient(180deg,#000 85%,transparent);}
-    .points-wrap::-webkit-scrollbar{display:none;}
+    /* points flow at natural height; a tall card scrolls as one surface (the .slide) */
+    .points-wrap{}
     .question{
       background:rgba(200,169,81,.1); border-left:3px solid var(--g);
       padding:.7rem .9rem; border-radius:0 4px 4px 0; margin-bottom:1.25rem;
@@ -106,9 +106,7 @@
       transition:max-height .28s ease, opacity .2s ease, margin-bottom .28s ease;
       border-left:3px solid rgba(200,169,81,.5); padding-left:0;
     }
-    .deeper.open{ max-height:42vh; opacity:1; margin-bottom:1.1rem; padding-left:.9rem; overflow-y:auto; scrollbar-width:none;
-      -webkit-mask-image:linear-gradient(180deg,#000 92%,transparent); }
-    .deeper.open::-webkit-scrollbar{display:none;}
+    .deeper.open{ max-height:2000px; opacity:1; margin-bottom:1.1rem; padding-left:.9rem; }
     .deeper .dblk{margin:.5rem 0;}
     .deeper .dlabel{font-family:var(--ui); font-weight:600; font-size:.56rem; letter-spacing:.14em; text-transform:uppercase;
       color:var(--g); display:block; margin-bottom:.22rem;}
@@ -141,9 +139,9 @@
     .brand{font-family:var(--fd); font-size:.95rem; font-weight:700; color:var(--w); pointer-events:auto; text-decoration:none;}
     .brand span{color:var(--g);}
     .counter{font-family:var(--ui); font-size:.72rem; color:rgba(255,255,255,.55);}
+    /* in normal flow after the card so it can never overlap the card's own content */
     .swipe-cue{
-      position:absolute; left:0; right:0; bottom:max(1rem,env(safe-area-inset-bottom)); z-index:2;
-      text-align:center; font-family:var(--ui); font-size:.7rem; letter-spacing:.14em;
+      margin:1.5rem 0 .2rem; text-align:center; font-family:var(--ui); font-size:.7rem; letter-spacing:.14em;
       text-transform:uppercase; color:rgba(255,255,255,.4); animation:bob 1.8s ease-in-out infinite;
     }
     @keyframes bob{0%,100%{transform:translateY(0);opacity:.4;}50%{transform:translateY(5px);opacity:.75;}}
