@@ -255,7 +255,16 @@
         "Paul the persecutor and James the sceptic converted after experiences they were certain were the risen Jesus"
       ],
       "question": "Can you explain the appearances, the transformation of the disciples, and the conversion of Paul and James — without using the resurrection?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The method's sharpest critic, Dale Allison, grants much of the data but argues the inference from the facts to the resurrection can't be made independently of the worldview the investigator brings: “Probability is in the eye of the beholder” — whether the resurrection is the best explanation depends partly on your prior estimate of whether such a thing can happen at all, and that prior isn't settled by the historical data.",
+        "concession": "This is the strongest objection in the literature, and it should be conceded as far as it goes: the minimal facts do not, by themselves, compel assent from someone whose convictions assign a vanishingly small prior to any miracle. And the empty tomb — the one fact Habermas flags as more disputed — is the soft point in the chain, not a settled premise; the case is weakest when it inflates “majority” into “virtually all.”",
+        "reply": "The honest reply is not to deny this but to reframe the claim: if one is open to the possibility that God might raise the dead, the historical evidence makes the resurrection the most reasonable explanation of an otherwise baffling set of facts. It removes the historical excuse for unbelief; it cannot remove the metaphysical one — and what stays even Allison's hand is a metaphysical prior, not a gap in the history.",
+        "_src": {
+          "objection": "minimalfacts.html:201",
+          "concession": "minimalfacts.html:203, minimalfacts.html:209",
+          "reply": "minimalfacts.html:203"
+        }
+      },
       "essay": "library/minimalfacts.html"
     },
     {
@@ -271,7 +280,16 @@
         "Strong and well-defended, not settled — Crossan and Ehrman dispute the burial itself"
       ],
       "question": "If the tomb was not empty, why does the earliest enemy reply explain the emptiness — a stolen body — instead of pointing to the grave?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The strongest sceptical case doesn't quibble over who reached the tomb first — it denies there was a known tomb to reach. John Dominic Crossan argues Rome crucified to terrify and routinely left the dead for scavengers, so a condemned provincial like Jesus most likely met the same fate, the burial narratives being “a Markan creation”; Bart Ehrman reaches the same doubt on independent grounds.",
+        "concession": "What is true in it should be granted: Roman crucifixion was a horror designed to deny honourable burial, and non-burial was common. And the empty tomb is more contested than the appearances — better described as a strong, well-defended position than a settled fact.",
+        "reply": "But Judaea was the exception the objection needs it not to be: Jewish law required the executed buried before nightfall (Deuteronomy 21:22–23; Josephus), the crucified man Yehohanan — whose nail-pierced heel bone was found in a Jerusalem tomb — is material proof that victims in Jesus' own city were given proper burial, and no inventor would have credited the burial to a Sanhedrist and the discovery to women. The grave was, in all probability, found empty.",
+        "_src": {
+          "objection": "emptytomb.html:186, emptytomb.html:188",
+          "concession": "emptytomb.html:188, emptytomb.html:236",
+          "reply": "emptytomb.html:190, emptytomb.html:240"
+        }
+      },
       "essay": "library/emptytomb.html"
     },
     {
@@ -287,7 +305,16 @@
         "Hostile witness, then convert — every motive to reject it and none to invent it"
       ],
       "question": "Paul spent fifteen days with Peter and met James, the Lord’s brother. What do you suppose they talked about?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The most serious naturalistic reply doesn't deny Paul's experience or his sincerity — it reinterprets the experience as a subjective vision, a powerful inner episode he sincerely took for an encounter with the risen Lord (Gerd Lüdemann's “Christ complex”); no corpse need have left any tomb.",
+        "concession": "Concede what is true: the bare report “Paul saw Jesus” is, on its face, compatible with a vision rather than a bodily appearance — the case can't be settled by the verb ōphthē alone, and that Paul was sincere does not by itself prove he was not mistaken.",
+        "reply": "But the vision reading was built for the grieving disciples and does almost no work for Paul, who had no grief, no prior expectation, and no social incentive — bereavement and longing are its usual fuel, and he had neither. Lüdemann's “Christ complex” is speculative psychoanalysis of a man we cannot put on the couch; a theory forced to invent a separate accident for each non-grieving convert — the persecutor and the sceptical brother alike — is buying its way out of the evidence rather than explaining it.",
+        "_src": {
+          "objection": "paulconv.html:207, paulconv.html:209, paulconv.html:211",
+          "concession": "paulconv.html:211, paulconv.html:151",
+          "reply": "paulconv.html:213, paulconv.html:215, paulconv.html:217"
+        }
+      },
       "essay": "library/paulconv.html"
     },
     {
@@ -303,7 +330,16 @@
         "Varied times, places and people make a single trigger implausible"
       ],
       "question": "A whole group sharing one detailed, conversational hallucination has no documented parallel. What mechanism are you proposing?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The most serious alternative grants the disciples' sincerity and proposes that what they “saw” was generated by their own minds — Ehrman leans on well-documented bereavement visions, with the group numbers swelling later in the retelling.",
+        "concession": "This is a real and well-documented phenomenon, and honesty requires conceding that the bare sentence “they saw him” is, on its face, compatible with a vision; the five hundred, moreover, appear only in Paul, so that datum is singly attested.",
+        "reply": "What the theory cannot survive is the combination: hallucinations are private, and clinical psychiatry recognises no mechanism for many people sharing the same detailed, interactive figure over a meal; the witnesses include an enemy (Paul) and a sceptic (James) with no grief to project; their world gave them no template to hallucinate a single man raised mid-history; and a vision empties no tomb. Group hallucination of a shared, conversational, embodied figure fits no documented case.",
+        "_src": {
+          "objection": "appearances.html:162, appearances.html:164",
+          "concession": "appearances.html:164, appearances.html:200",
+          "reply": "appearances.html:174, appearances.html:178, appearances.html:182, appearances.html:186, appearances.html:190"
+        }
+      },
       "essay": "library/appearances.html"
     },
     {
@@ -319,7 +355,16 @@
         "Several paid for it with their lives — proof of sincerity, not of truth"
       ],
       "question": "What turned men who fled at his arrest into men who faced lethal danger and did not recant?",
-      "deeper": null,
+      "deeper": {
+        "objection": "Candida Moss presses the sharpest challenge to the martyrdom plank: the surviving martyrdom accounts are largely later, edited compositions, and “we also do not know whether at any point they were given the opportunity to deny Christ and live” — you cannot decline an offer that was never made, so “they did not recant” proves nothing.",
+        "concession": "Grant both: the later Acts of the Martyrs are embellished, and there is no record of a formal offer of apostasy-for-life put to any apostle — Sean McDowell grants as much. And grant the deeper point the honest apologist insists on first: many people die for false beliefs, so martyrdom never makes a belief true.",
+        "reply": "What martyrdom does establish is sincerity — and it rules out deliberate fraud, because the disciples were uniquely placed to know whether they were lying. “They did not recant” means not a staged courtroom choice but that none fell silent under lethal pressure when silence would have ended the danger at once. That leaves the real puzzle untouched: a belief with a shape — a crucified man raised bodily, alone, mid-history — that no one in that Jewish world was poised to invent.",
+        "_src": {
+          "objection": "disciplesbelief.html:197",
+          "concession": "disciplesbelief.html:199, disciplesbelief.html:171",
+          "reply": "disciplesbelief.html:201, disciplesbelief.html:203, disciplesbelief.html:153"
+        }
+      },
       "essay": "library/disciplesbelief.html"
     },
     {
@@ -335,7 +380,16 @@
         "One thing explains both — the risen Jesus appeared to each (1 Cor 15:7-8)"
       ],
       "question": "Friends might imagine a beloved teacher alive. What explains his enemy and his sceptical brother?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The toughest naturalistic reading of James isn't grief — which fails, since a sceptical brother had no yearning to project — but gradual persuasion: perhaps he was won over slowly, by the disciples' preaching and reflection on the scriptures, and “he appeared to James” is just a stylized later way of marking a change of mind. It requires no anomalous experience at all.",
+        "concession": "That is the most serious of the options, and it should be faced as such; the sources for James are also uneven — the vivid Hegesippus martyrdom is later and partly legendary — and that the cause of his transformation was a literal resurrection remains an inference, not a proof.",
+        "reply": "But two things weigh against it: 1 Corinthians 15:7 names a discrete appearance, not a process of persuasion, and — whether it stood in the received formula or Paul's expansion of it — it is early tradition, leaving little room for a slow legend; and gradual persuasion does not easily produce martyrs. People are talked into opinions and out of them; dying for one marks a conviction the holder takes to be anchored in something he himself encountered.",
+        "_src": {
+          "objection": "sceptics.html:182, sceptics.html:183",
+          "concession": "sceptics.html:183, sceptics.html:191, sceptics.html:193",
+          "reply": "sceptics.html:185"
+        }
+      },
       "essay": "library/sceptics.html"
     },
     {
@@ -351,7 +405,16 @@
         "Disputed — Crossan and Ehrman argue for a common grave — but no rival burial account survives"
       ],
       "question": "If the burial story were invented, why hand the honour to the council that condemned him?",
-      "deeper": null,
+      "deeper": {
+        "objection": "John Dominic Crossan argues the burial is “hope and hyperbole,” not history: Roman crucifixion was designed to deny burial, the body left for scavenging dogs and birds and what remained thrown into a shallow common grave — so there was no tomb, no Joseph, and nothing for an empty tomb to be empty of.",
+        "concession": "This cannot be waved away: crucifixion was meant to humiliate, and across much of the empire the denial of burial was indeed routine. And Byron McCane may well be right that the burial was a hasty, dishonourable one in a criminal's tomb rather than the loving interment the Gospels imply.",
+        "reply": "But that disputes the manner, not the reality — a shameful burial is, if anything, harder to invent. And three things tell against “eaten by dogs” in Jerusalem specifically: Jewish law required the executed buried before nightfall (Deuteronomy 21:22–23; Josephus, Philo), Roman governors had reason to concede it at festival time, and the nail-pierced heel bone of the crucified Yehohanan is physical proof a crucified man in first-century Jerusalem got a proper Jewish burial. That Jesus was buried is as solid as any fact about him.",
+        "_src": {
+          "objection": "burial.html:174",
+          "concession": "burial.html:176, burial.html:194",
+          "reply": "burial.html:182, burial.html:186, burial.html:196, burial.html:220"
+        }
+      },
       "essay": "library/burial.html"
     },
     {
@@ -367,7 +430,16 @@
         "Liars make poor martyrs"
       ],
       "question": "Peter, Paul, and James the brother of Jesus all died for the claim. What makes a person die for something he would know was invented?",
-      "deeper": null,
+      "deeper": {
+        "objection": "The most substantial naturalistic reply is sociological: drawing on Festinger's When Prophecy Fails, John Gager argues the disciples' boldness is exactly what cognitive-dissonance theory predicts — a group whose hopes are shattered rationalises the failure and proselytises all the harder, so the behaviour evidences no real resurrection.",
+        "concession": "Dissonance-reduction is a genuine phenomenon, and one proximate cause — that the disciples sincerely came to believe Jesus was raised — does unify the behaviour; that much is granted. And their willingness to die never proves the resurrection true; it rules out deliberate fraud, not honest error.",
+        "reply": "But dissonance explains persistence, not content. Festinger's cult retreated into a hidden, unverifiable success; the disciples said “we saw him, the tomb is empty, come and check” in the very city of the burial. And disappointed messianic movements of that era dissolved or found a new living leader — not one declared its executed leader bodily raised, enthroned, and worthy of the worship strict monotheists reserved for God alone. The behaviour only presses the question back: what lit that fire?",
+        "_src": {
+          "objection": "postres.html:179",
+          "concession": "postres.html:181, postres.html:173, postres.html:141",
+          "reply": "postres.html:181, postres.html:183, postres.html:157"
+        }
+      },
       "essay": "library/postres.html"
     },
     {
