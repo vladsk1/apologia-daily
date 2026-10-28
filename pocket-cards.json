@@ -1,0 +1,1161 @@
+{
+  "generated": "tools/build-pocket-data.mjs — do not edit by hand; edit pocket-cards.html",
+  "count": 77,
+  "cards": [
+    {
+      "id": "kalam",
+      "category": "existence",
+      "categoryLabel": "Does God exist?",
+      "title": "The Kalam Cosmological Argument",
+      "tagline": "The universe had a beginning. Everything that begins to exist has a cause. That cause is transcendent — and most plausibly a personal mind.",
+      "points": [
+        "The universe began to exist — powerful corroboration from cosmology, not an airtight proof; the case leans on independent philosophical reasons too",
+        "Everything that begins to exist has a cause",
+        "That cause must be spaceless, timeless, and powerful",
+        "A personal cause best explains a universe with a beginning — the most contested step, held as a reasoned inference, not a proof"
+      ],
+      "question": "What caused the universe? If you say nothing — then it becomes inexplicable why we never see things begin uncaused. If you say something — what was that something?",
+      "essay": "library/kalam.html"
+    },
+    {
+      "id": "finetuning",
+      "category": "existence",
+      "categoryLabel": "Does God exist?",
+      "title": "The Fine-Tuning Argument",
+      "tagline": "A handful of nature’s constants fall in strikingly narrow life-permitting ranges — and the question is why.",
+      "points": [
+        "A short list of constants and initial conditions — the cosmological constant, the early universe’s entropy, the carbon resonance — sits in startlingly narrow life-permitting ranges",
+        "Predicted and observed vacuum energy differ by roughly 120 orders of magnitude — the cosmological-constant puzzle",
+        "Some are acutely sensitive — a few-percent change in the strong force would prevent hydrogen or the heavier elements",
+        "The data are conceded even by atheist physicists like Penrose; that they point to a mind is the contested inference"
+      ],
+      "question": "If the fine-tuning of the universe was not intentional, the strongest answer is the multiverse — and it needs its own fine-tuning to get going. Which puzzle would you rather have?",
+      "essay": "library/finetuning.html"
+    },
+    {
+      "id": "moral",
+      "category": "existence",
+      "categoryLabel": "Does God exist?",
+      "title": "The Moral Argument",
+      "tagline": "Objective moral values require a foundation beyond human opinion — and that foundation is God.",
+      "points": [
+        "The Holocaust was objectively evil — not merely unpopular",
+        "The strongest atheist answer (Wielenberg) grants objective morality as a brute fact — but a fact owed to no one cannot ground an obligation: duties are owed to someone, and commands require a commander",
+        "Objective moral duties need a foundation beyond human opinion",
+        "Not that atheists can’t be good — plainly they can. The question is what makes goodness real"
+      ],
+      "question": "Was the Holocaust objectively wrong — or did the Nazis just have different opinions? If objectively wrong, what standard are you appealing to?",
+      "essay": "library/moral.html"
+    },
+    {
+      "id": "consciousness",
+      "category": "existence",
+      "categoryLabel": "Does God exist?",
+      "title": "The Consciousness Argument",
+      "tagline": "Subjective experience resists physical reduction — pushing us off pure physicalism toward a world where mind is fundamental.",
+      "points": [
+        "Why does it feel like something to see red or feel grief?",
+        "The hard problem: no physical story yet explains why experience feels like anything — taken seriously across the field",
+        "On theism, consciousness is expected — God is mind",
+        "It pushes hard against pure physicalism — theism is one strong candidate, not the only one"
+      ],
+      "question": "Why does it feel like anything at all to be you? What in pure physics predicts that?",
+      "essay": "library/consciousness.html"
+    },
+    {
+      "id": "leibniz",
+      "category": "existence",
+      "categoryLabel": "Does God exist?",
+      "title": "The Leibniz Contingency Argument",
+      "tagline": "Why is there something rather than nothing? Leibniz held that whatever exists has an explanation — and the universe points beyond itself.",
+      "points": [
+        "Premise: everything that exists has an explanation of its existence — the argument’s central, contested battleground",
+        "The universe is contingent — it could have failed to exist",
+        "Its explanation must lie in a necessary being",
+        "That necessary being is what Leibniz called God — not yet the full God of Christian worship"
+      ],
+      "question": "Why does anything exist at all? If the universe could have not existed, what explains the fact that it does?",
+      "essay": "library/leibniz.html"
+    },
+    {
+      "id": "thomistic",
+      "category": "existence",
+      "categoryLabel": "Does God exist?",
+      "title": "The Thomistic Cosmological Argument",
+      "tagline": "Not what started the universe — what sustains it right now. Every dependent thing needs a ground that simply is.",
+      "points": [
+        "Things are being sustained in existence right now",
+        "A present, essentially ordered chain of sustaining causes cannot regress forever",
+        "It must terminate in a first, purely actual sustainer",
+        "Aquinas calls that Pure Act God — goodness, personhood and Trinity need further steps"
+      ],
+      "question": "Forget the distant past — what is holding everything in existence at this very moment?",
+      "essay": "library/thomistic.html"
+    },
+    {
+      "id": "reason",
+      "category": "existence",
+      "categoryLabel": "Does God exist?",
+      "title": "The Argument from Reason",
+      "tagline": "If thoughts are just atoms obeying physics, why trust them — including the thought that atheism is true?",
+      "points": [
+        "On naturalism, beliefs come from non-rational causes",
+        "Selection rewards adaptive behaviour, not true belief, Plantinga argues",
+        "So naturalism sits in tension with trusting reason itself",
+        "A problem for naturalism, not a proof of God — reason sits easier if mind is fundamental"
+      ],
+      "question": "If your brain is only chemistry, why trust its conclusion that God does not exist?",
+      "essay": "library/reason.html"
+    },
+    {
+      "id": "ontological",
+      "category": "existence",
+      "categoryLabel": "Does God exist?",
+      "title": "The Ontological Argument",
+      "tagline": "If a maximally great being is possible, it exists. The whole debate comes down to one question.",
+      "points": [
+        "God is the maximally great being — necessary, perfect",
+        "A necessary being possible in any world exists in every world",
+        "The whole argument lives on that one premise — and it is genuinely contested",
+        "If the premise holds, necessity does the rest"
+      ],
+      "question": "Plantinga claims only that belief in God can be rational, not that this proves God to a sceptic. So: is a maximally great being possible?",
+      "essay": "library/ontological.html"
+    },
+    {
+      "id": "religious",
+      "category": "existence",
+      "categoryLabel": "Does God exist?",
+      "title": "The Argument from Religious Experience",
+      "tagline": "Across radically different societies, large fractions report experiences they describe as contact with a transcendent reality. We trust experience everywhere else — why not here?",
+      "points": [
+        "Vast numbers report direct experience of the divine",
+        "We take experience at face value absent a defeater",
+        "Brain involvement does not mean no one is there",
+        "It cannot by itself settle which God is real — the diversity under-determines theology — but it is real, defeasible evidence that something transcendent is being encountered"
+      ],
+      "question": "If even a fraction of the reported encounters with God are genuine, what follows?",
+      "essay": "library/religious.html"
+    },
+    {
+      "id": "beauty",
+      "category": "existence",
+      "categoryLabel": "Does God exist?",
+      "title": "The Argument from Beauty",
+      "tagline": "A sunset feeds no one. A requiem saves no genes. Why is the world drenched in beauty far beyond survival?",
+      "points": [
+        "Premise: beauty is objective — discovered, not invented; the argument’s contested hinge",
+        "Evolution explains some preferences, not the surplus",
+        "Great music and starlight pay no survival rent",
+        "A beauty-loving Creator explains it better than blind, purposeless matter"
+      ],
+      "question": "Why do we weep at music? What survival purpose does a sunset serve?",
+      "essay": "library/beauty.html"
+    },
+    {
+      "id": "evil",
+      "category": "existence",
+      "categoryLabel": "Does God exist?",
+      "title": "Evil as Evidence for God",
+      "tagline": "Calling something truly evil — not just unpleasant — assumes a standard of good. Where does that standard come from?",
+      "points": [
+        "We recognise some things as objectively evil",
+        "Objective evil presupposes an objective good",
+        "The argument holds that such a standard needs a ground — and God is the best one",
+        "The outrage is right — and it needs a ground matter alone cannot give"
+      ],
+      "question": "Your outrage is right — evil is real, and nothing here explains your suffering. But what makes it truly wrong in a universe of mere matter?",
+      "essay": "library/moral.html"
+    },
+    {
+      "id": "desire",
+      "category": "existence",
+      "categoryLabel": "Does God exist?",
+      "title": "The Argument from Desire",
+      "tagline": "Every innate hunger we know of has a real food. We carry a longing nothing in this world satisfies — what is it for?",
+      "points": [
+        "Premise: innate desires correspond to real objects — hunger to food (the contested hinge)",
+        "Humans have a longing no earthly thing satisfies",
+        "A stab of longing we would not trade for any contentment the world offers",
+        "The most probable explanation: we were made for another world"
+      ],
+      "question": "If nothing in this world satisfies the deepest human longing, was it made for this world?",
+      "essay": "library/desire.html"
+    },
+    {
+      "id": "minimal",
+      "category": "resurrection",
+      "categoryLabel": "The Resurrection",
+      "title": "The Minimal Facts Argument",
+      "tagline": "A short list of facts sceptical scholars largely grant — and one explanation that covers all of them.",
+      "points": [
+        "Jesus died by crucifixion — granted by Crossan, Lüdemann and Ehrman alike",
+        "The tomb was reported empty — the most disputed of the facts, argued separately",
+        "Disciples genuinely believed they saw the risen Jesus",
+        "Paul the persecutor and James the sceptic converted after experiences they were certain were the risen Jesus"
+      ],
+      "question": "Can you explain the appearances, the transformation of the disciples, and the conversion of Paul and James — without using the resurrection?",
+      "essay": "library/minimalfacts.html"
+    },
+    {
+      "id": "emptytomb",
+      "category": "resurrection",
+      "categoryLabel": "The Resurrection",
+      "title": "The Empty Tomb",
+      "tagline": "No surviving source has even Jesus's enemies claiming the tomb still held his body.",
+      "points": [
+        "The earliest enemy reply was not ‘the body is still there’ but ‘the body was taken’",
+        "No first-century source claims the tomb contained Jesus",
+        "Enemies had motive and means to produce the body — the sources record a theft story instead",
+        "Strong and well-defended, not settled — Crossan and Ehrman dispute the burial itself"
+      ],
+      "question": "If the tomb was not empty, why does the earliest enemy reply explain the emptiness — a stolen body — instead of pointing to the grave?",
+      "essay": "library/emptytomb.html"
+    },
+    {
+      "id": "paul",
+      "category": "resurrection",
+      "categoryLabel": "The Resurrection",
+      "title": "Paul Met the Witnesses",
+      "tagline": "Paul did not inherit a rumour. He went to Jerusalem and met the men whose names are in the creed.",
+      "points": [
+        "Galatians 1:18-19 — Paul stayed with Peter, and met James, the Lord’s brother",
+        "He had every reason to check: he had been persecuting the movement",
+        "The creed he passes on names witnesses still alive to contradict it",
+        "Hostile witness, then convert — every motive to reject it and none to invent it"
+      ],
+      "question": "Paul spent fifteen days with Peter and met James, the Lord’s brother. What do you suppose they talked about?",
+      "essay": "library/paulconv.html"
+    },
+    {
+      "id": "appearances",
+      "category": "resurrection",
+      "categoryLabel": "The Resurrection",
+      "title": "The Resurrection Appearances",
+      "tagline": "Not a vision to one person — appearances to individuals and groups, to friends, a sceptical brother, and a former enemy, in varied settings.",
+      "points": [
+        "Listed in the creed of 1 Corinthians 15 — dated within years",
+        "Group hallucination of a shared, detailed figure fits none of the documented cases",
+        "Sceptics saw him too — Paul the persecutor and James the doubter",
+        "Varied times, places and people make a single trigger implausible"
+      ],
+      "question": "A whole group sharing one detailed, conversational hallucination has no documented parallel. What mechanism are you proposing?",
+      "essay": "library/appearances.html"
+    },
+    {
+      "id": "disciplesbelief",
+      "category": "resurrection",
+      "categoryLabel": "The Resurrection",
+      "title": "Why the Disciples Believed",
+      "tagline": "Crucified messiahs stay dead and failed movements scatter. Something turned men who fled into men who preached him in Jerusalem, under threat.",
+      "points": [
+        "Their leader died the death the Torah calls cursed",
+        "Messianic movements scattered or found a new claimant when their leader died — this one did neither",
+        "They proclaimed resurrection in Jerusalem — where the tomb could be checked",
+        "Several paid for it with their lives — proof of sincerity, not of truth"
+      ],
+      "question": "What turned men who fled at his arrest into men who faced lethal danger and did not recant?",
+      "essay": "library/disciplesbelief.html"
+    },
+    {
+      "id": "sceptics",
+      "category": "resurrection",
+      "categoryLabel": "The Resurrection",
+      "title": "The Conversion of the Sceptics",
+      "tagline": "The strongest witnesses are hostile ones — the brother who doubted and the enemy who persecuted.",
+      "points": [
+        "His family thought Jesus out of his mind; his brothers did not believe — then James led his church and died for him",
+        "Paul was arresting Christians — then became one",
+        "Neither had anything to gain and everything to lose",
+        "One thing explains both — the risen Jesus appeared to each (1 Cor 15:7-8)"
+      ],
+      "question": "Friends might imagine a beloved teacher alive. What explains his enemy and his sceptical brother?",
+      "essay": "library/sceptics.html"
+    },
+    {
+      "id": "burial",
+      "category": "resurrection",
+      "categoryLabel": "The Resurrection",
+      "title": "The Argument from the Burial",
+      "tagline": "Joseph of Arimathea — a named member of the very court that condemned Jesus — is an unlikely Christian invention.",
+      "points": [
+        "Burial by a Sanhedrist is embarrassing — and therefore credible",
+        "The account is early, simple, and unembellished",
+        "A known tomb made the empty tomb publicly checkable",
+        "Disputed — Crossan and Ehrman argue for a common grave — but no rival burial account survives"
+      ],
+      "question": "If the burial story were invented, why hand the honour to the council that condemned him?",
+      "essay": "library/burial.html"
+    },
+    {
+      "id": "postresurrection",
+      "category": "resurrection",
+      "categoryLabel": "The Resurrection",
+      "title": "Post-Resurrection Behaviour",
+      "tagline": "Read the evidence like a detective — people do not behave this way for something they know is false.",
+      "points": [
+        "The first day of the week took on special weight — the day they said he rose",
+        "Devout Jews began worshipping a crucified Galilean as God — unthinkable without cause",
+        "Several — Peter, Paul, and James the brother of Jesus among them — suffered and died for the claim: that shows sincerity, they were no knowing frauds",
+        "Liars make poor martyrs"
+      ],
+      "question": "Peter, Paul, and James the brother of Jesus all died for the claim. What makes a person die for something he would know was invented?",
+      "essay": "library/postres.html"
+    },
+    {
+      "id": "trilemma",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "Lord, Liar, Lunatic — or Legend",
+      "tagline": "The claims Jesus made leave no room for \"great moral teacher.\"",
+      "points": [
+        "He forgave sins on his own authority — who can forgive sins but God alone? (Mark 2:7)",
+        "He overruled the Torah on his own authority — acting where only God stands",
+        "At his trial he took the throne-scene of Daniel 7 for himself — coming on the clouds (Mark 14:62) — the claim that got him condemned",
+        "Legend is the fourth option — but Mark, our earliest Gospel, already has him forgiving sins and making himself the criterion of final judgment"
+      ],
+      "question": "Great moral teacher is not on the menu. Was he telling the truth, lying, deluded — or is the record itself a later invention? Take the last one first: how early is too early for legend?",
+      "essay": "library/jesuschar.html"
+    },
+    {
+      "id": "divinity",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "The Divine Christology of Paul",
+      "tagline": "Christians were worshipping Jesus as God within two decades of the crucifixion.",
+      "points": [
+        "Philippians 2:6-11 quotes a confession plausibly reaching back into the 40s",
+        "It describes Jesus as being in very nature God before incarnation",
+        "Jewish monotheists worshipped Jesus — an explosive development",
+        "The high Christology is early — the slow-evolution model has to explain this passage away"
+      ],
+      "question": "Paul was a trained Pharisee who believed worshipping anyone other than God was blasphemy. Yet he worshipped Jesus. What do you think changed his mind?",
+      "essay": "library/paul-divinity.html"
+    },
+    {
+      "id": "hist_jesus",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "The Historical Existence of Jesus",
+      "tagline": "Virtually no serious historian doubts Jesus lived — his existence is about as settled as ancient history offers.",
+      "points": [
+        "Non-Christian sources — Tacitus, and Josephus in his uninterpolated core — report his life and execution",
+        "The letters of Paul date within about 25 years of the cross",
+        "No ancient opponent is known to have argued there was no such man",
+        "Mythicism is rejected across the scholarly spectrum"
+      ],
+      "question": "If Jesus never existed, why did no enemy of the early church ever say so?",
+      "essay": "library/hist_jesus.html"
+    },
+    {
+      "id": "hands",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "The HANDS Framework",
+      "tagline": "Five lines of divine identity converging on Jesus",
+      "points": [
+        "HONORS — the risen Jesus receives the worship, prayer and doxology that Revelation’s angels refuse twice",
+        "ATTRIBUTES and NAMES — before Abraham was I AM; YHWH-texts applied to Jesus; the First and the Last",
+        "DEEDS — all things made through him, sins forgiven in his own person, all judgment given to the Son",
+        "SEAT — one throne of God AND of the Lamb, with one set of servants worshipping (Rev 22)"
+      ],
+      "question": "Moses, Enoch, Michael were exalted high. Which of them received worship offered to God, alongside God — or made all things?",
+      "essay": "library/hands.html"
+    },
+    {
+      "id": "jesus_as_god_nt",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "Jesus as God in the New Testament",
+      "tagline": "The New Testament gives Jesus the divine name, the Creator’s works — and the worship reserved for God alone.",
+      "points": [
+        "Jesus receives worship reserved for God alone",
+        "He bears the divine name and titles of YHWH",
+        "He does what only God does — creates, forgives sins, judges the world",
+        "Monotheistic Jews worshipped him within years of the cross"
+      ],
+      "question": "Why would strict Jewish monotheists worship a crucified man as God — unless something happened?",
+      "essay": "library/jesus_as_god_nt.html"
+    },
+    {
+      "id": "jesus_claims",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "Did Jesus Claim to Be God?",
+      "tagline": "Forgiving sins, overruling the Torah, claiming Daniel’s cloud-coming for himself — Jesus claimed what belongs to God, and was condemned for it.",
+      "points": [
+        "He forgave sins on his own authority — who can forgive sins but God alone? (Mark 2:7)",
+        "He overruled the Torah on his own authority — you have heard it said, but I say to you — standing where only God stands",
+        "The Son of Man of Daniel 7 comes on the clouds - elsewhere God’s own conveyance - and receives everlasting dominion",
+        "The formal charge at his trial was blasphemy"
+      ],
+      "question": "The council’s verdict was blasphemy. What exactly had he claimed to earn it?",
+      "essay": "library/jesus_claims.html"
+    },
+    {
+      "id": "messianic_prophecy",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "Messianic Prophecy — the Convergence",
+      "tagline": "A constellation of expectations — birthplace, lineage, a rejected and suffering deliverer, a death among criminals and a rich man’s burial — converges on one first-century life, from documents provably older than he was.",
+      "points": [
+        "Written centuries before Jesus — preserved in the Dead Sea Scrolls",
+        "The weightiest of these lie outside any human power to arrange — where he was born, his tribe and lineage, the manner and timing of a death under Rome",
+        "Some fulfilments are typological, and some texts are disputed — Psalm 22:16, Daniel 9 — say so",
+        "The force is the convergence itself — not a manufactured probability"
+      ],
+      "question": "One detail might be luck. But a whole constellation — the ones no one could arrange, like his birthplace and the manner of his death under Rome — converging on a single life?",
+      "essay": "library/messianic-prophecy.html"
+    },
+    {
+      "id": "isaiah53",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "Isaiah 53 — The Suffering Servant",
+      "tagline": "A chapter fixed before Jesus was born, and read of an individual Messiah by the oldest Jewish interpreters, that settles onto his trial, death, and burial.",
+      "points": [
+        "Written c. 700 BC on the traditional dating; the Great Isaiah Scroll (c. 125 BC) proves it predates Jesus",
+        "A Servant pierced for the sins of others, silent before his accusers, buried “with the wicked” yet “with a rich man” (53:9) — matched in Jesus crucified among criminals and laid in Joseph of Arimathea’s tomb",
+        "The individual, messianic reading is the ancient one — the Targum names “my servant the Messiah” (52:13); the “servant = the nation” reading of this chapter became standard only later, with Rashi, though the collective reading is itself as old as Origen",
+        "The referent is genuinely contested — say so gently — but the Servant suffers “for the transgression of my people” (53:8), distinguished from the people. On balance the individual reading is the better one, and Jesus fits it"
+      ],
+      "question": "Before the medieval period, Jewish interpreters often read this chapter of the Messiah. Read beside Jesus’ trial and burial — who does it fit?",
+      "essay": "library/messianic-prophecy.html"
+    },
+    {
+      "id": "john11",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "John 1:1 and the Pre-existence of Christ",
+      "tagline": "In the beginning was the Word, and the Word was God — the Word did not begin at Bethlehem.",
+      "points": [
+        "The Word already WAS when all things began",
+        "All things were made through him — so he is not a creature",
+        "The Word was God — full deity, distinct person",
+        "The Word became flesh — eternity entered history"
+      ],
+      "question": "If all things were made through the Word, how can the Word himself be a made thing?",
+      "essay": "library/john11.html"
+    },
+    {
+      "id": "phil2",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "The Philippians 2 Hymn",
+      "tagline": "A worship song from the first decades of the church — treating the crucified Jesus as the LORD of Isaiah.",
+      "points": [
+        "Widely judged pre-Pauline — a confession plausibly reaching back into the 40s",
+        "Jesus exists in the form of God before his birth",
+        "Every knee shall bow — language Isaiah reserves for YHWH alone",
+        "Worship of Jesus as God is no late accretion — it stands at the headwaters"
+      ],
+      "question": "Legends take generations to grow. How is worship of Jesus in words Isaiah reserves for YHWH already a hymn within two decades?",
+      "essay": "library/phil2.html"
+    },
+    {
+      "id": "titles",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "The Titles of Jesus",
+      "tagline": "Lord, Son of God, Son of Man, I AM — traced to their Old Testament sources and read together, they made monotheists tremble.",
+      "points": [
+        "Kyrios — the word the New Testament uses for YHWH — applied to Jesus, with YHWH-texts moved onto him (Romans 10:13)",
+        "Son of Man — its address is Daniel 7:13-14, a figure who comes on the clouds, elsewhere God’s own conveyance — not the humble title it sounds",
+        "The absolute I AM sayings echo the LORD’s own ‘I am he’ of Isaiah 40–55",
+        "Together they form a deliberate, consistent claim to deity"
+      ],
+      "question": "Messiah and Son of David are royal, and human. So why do Lord and Son of Man lead back to the name and the throne of Israel’s God?",
+      "essay": "library/titles.html"
+    },
+    {
+      "id": "multiatt",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "The Criterion of Multiple Attestation",
+      "tagline": "The core facts about Jesus arrive through many independent streams — exactly what historians look for.",
+      "points": [
+        "Mark, Paul and — many judge — John are independent streams, plus the material behind Matthew and Luke",
+        "The crucifixion is in Mark, in Paul, and in Tacitus and Josephus — attestation reaching outside the church",
+        "Independent agreement is one weighted indicator, not a verdict — but strongest exactly where the case needs it",
+        "Few events in antiquity are this well sourced"
+      ],
+      "question": "Sanders, Ehrman and Allison all grant the core: baptised by John, a healer’s reputation, the Temple clash, crucified by Rome. What do you do with a core that secure?",
+      "essay": "library/multiatt.html"
+    },
+    {
+      "id": "earlycreed",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "The Early Creed of 1 Corinthians 15",
+      "tagline": "Christ died, was buried, was raised, appeared — a formal creed dated within a few years of the cross.",
+      "points": [
+        "Paul says he RECEIVED it — it predates his letters",
+        "Scholars across the spectrum, sceptics included, date it within a few years of the cross",
+        "It names Cephas and James — and Paul adds more than 500 at once, most still alive when he wrote",
+        "Far too early for legend to grow"
+      ],
+      "question": "Legends need time. What do you do with a resurrection creed dated within a few years of the event?",
+      "essay": "library/earlycreed.html"
+    },
+    {
+      "id": "jesuschar",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "The Character of Jesus",
+      "tagline": "Liar, lunatic, legend — or Lord. The character on the page fits neither a liar nor a madman.",
+      "points": [
+        "Even many who reject his claims call the Sermon on the Mount unsurpassed",
+        "Grandiosity and sanctity rarely coexist — that conjunction is what the sceptic has to explain",
+        "The tradition did not flatter him — his family’s verdict, Gethsemane, the cry of abandonment all kept",
+        "His claims force a verdict — good teacher is not on the menu"
+      ],
+      "question": "Could the most luminous moral teacher in history have been lying about who he was?",
+      "essay": "library/jesuschar.html"
+    },
+    {
+      "id": "daniel70",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "Daniel’s 70 Weeks",
+      "tagline": "Daniel 9 names a window — a decree, an anointed one cut off, a city destroyed. On the Christian reading, that window closes in AD 70.",
+      "points": [
+        "Daniel 9 sets a countdown from a decree to an Anointed One",
+        "Even on the critics’ second-century dating it still predates Jesus by generations",
+        "An anointed one is cut off — then city and sanctuary fall, as they did in AD 70",
+        "Copies found at Qumran, dated c. 125 BC — even on the critics’ 165 BC date, nearly two centuries before Jesus"
+      ],
+      "question": "How does a centuries-old text place the Messiah — and his death — before the Temple fell?",
+      "essay": "library/daniel70.html"
+    },
+    {
+      "id": "uniqueness",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "The Uniqueness of the Resurrection Claim",
+      "tagline": "Dying-and-rising gods? Look closer — nothing in the ancient world resembles a bodily resurrection inside history.",
+      "points": [
+        "Pagan parallels are seasonal myths — not historical claims about a named man",
+        "Jewish resurrection hope was end-of-history — never one man in the middle of it",
+        "The claim emerged among monotheists hostile to such ideas",
+        "Its very oddness is evidence it was forced by events"
+      ],
+      "question": "If the resurrection was borrowed mythology, why does it match none of the myths?",
+      "essay": "library/uniqueness.html"
+    },
+    {
+      "id": "virginbirth",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "The Virgin Birth and Isaiah 7:14",
+      "tagline": "Two independent infancy accounts, an embarrassing claim, and a prophecy with a double horizon.",
+      "points": [
+        "Matthew and Luke attest it independently",
+        "No one invents a story inviting the charge of illegitimacy",
+        "Isaiah 7:14 is a window, not a proof — Matthew read the pre-Christian Greek parthenos",
+        "It fits the dual-fulfilment pattern of Old Testament prophecy"
+      ],
+      "question": "Why would two independent sources invent a claim that exposed Jesus to lifelong slander?",
+      "essay": "library/virginbirth.html"
+    },
+    {
+      "id": "respred",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "The Resurrection Predictions",
+      "tagline": "He walked toward that Friday expecting it would not be the end of him — and said so beforehand.",
+      "points": [
+        "The predictions are multiply attested across the Gospels",
+        "The disciples did not expect it — awkward material the church had no motive to invent",
+        "The exact wording is contested — but a Jesus who expected vindication fits everything else we know of him",
+        "A failed public prediction would have killed the movement"
+      ],
+      "question": "If the evangelists composed these predictions to fit the outcome, why leave the disciples baffled by them?",
+      "essay": "library/respred.html"
+    },
+    {
+      "id": "manuscripts",
+      "category": "bible",
+      "categoryLabel": "Is the Bible reliable?",
+      "title": "The Manuscript Evidence",
+      "tagline": "The New Testament is the most attested document of the ancient world.",
+      "points": [
+        "5,800+ Greek manuscripts — vastly more, and far closer to the original, than any other ancient text",
+        "No cardinal doctrine rests on a disputed variant — even Ehrman concedes this",
+        "Modern translations work from a Greek text reconstructed from the earliest manuscripts",
+        "The text is preserved with extraordinary fidelity"
+      ],
+      "question": "This shows the text we have is the text that was written. Whether what it says is true is the next question — shall we take it?",
+      "essay": "library/manuscript.html"
+    },
+    {
+      "id": "deadseascrolls",
+      "category": "bible",
+      "categoryLabel": "Is the Bible reliable?",
+      "title": "The Dead Sea Scrolls",
+      "tagline": "A copy of Isaiah from c. 125 BC — a thousand years older than anything we had.",
+      "points": [
+        "Discovered 1947 — including a complete copy of Isaiah",
+        "Dated c. 125–100 BC — before Jesus was born",
+        "Recognisably the same Isaiah as the medieval text — differences chiefly of spelling, not message",
+        "Isaiah’s prophecies were on record before Jesus — not rewritten by Christians afterward"
+      ],
+      "question": "The Isaiah scroll predates Jesus by generations. How do you account for the fit between Isaiah 53 and the crucifixion?",
+      "essay": "library/deadseascrolls.html"
+    },
+    {
+      "id": "archaeology",
+      "category": "bible",
+      "categoryLabel": "Is the Bible reliable?",
+      "title": "Archaeological Confirmation",
+      "tagline": "Critics said these people and places never existed — until the spade found them.",
+      "points": [
+        "The Hittites, Belshazzar, and Pontius Pilate — all once doubted, all confirmed",
+        "The pools of Bethesda and Siloam found exactly as John describes",
+        "Luke names rulers, titles, and places with verified precision",
+        "It confirms the setting, not every event — the Exodus, the conquest, and the scale of the united monarchy stay genuinely disputed"
+      ],
+      "question": "Time and again, where a biblical name or place could be checked, how has the record of confident “errors” actually held up?",
+      "essay": "library/archaeology.html"
+    },
+    {
+      "id": "canon",
+      "category": "bible",
+      "categoryLabel": "Is the Bible reliable?",
+      "title": "The Canon Formation Argument",
+      "tagline": "The church did not create the canon — it recognised the books that already carried authority.",
+      "points": [
+        "The four Gospels were received early and across the churches — not selected by a vote",
+        "A handful — Hebrews, James, 2 Peter, Jude, Revelation — were genuinely disputed for generations; a stable core with a slowly resolved fringe is the signature of discovery, not decree",
+        "The tests were apostolic origin, universal use, and orthodox content",
+        "Not handed down by Constantine, not voted on at Nicaea"
+      ],
+      "question": "If the canon was politics, why was Irenaeus already defending exactly four Gospels around AD 180 — long before Nicaea?",
+      "essay": "library/canon.html"
+    },
+    {
+      "id": "prophecy",
+      "category": "bible",
+      "categoryLabel": "Is the Bible reliable?",
+      "title": "Fulfilled Old Testament Prophecy",
+      "tagline": "Cities, empires, and kings — named and judged in advance, on the record.",
+      "points": [
+        "Nineveh and Babylon fell as foretold",
+        "Cyrus is named in Isaiah — on the traditional single-author reading, long before his birth",
+        "Israel was exiled and returned, as Moses warned (Deut 28-30)",
+        "Where a date is genuinely disputed — Daniel most of all — say so and lean elsewhere"
+      ],
+      "question": "One lucky guess is fine. How many specific, named fulfilments before luck stops being an explanation?",
+      "essay": "library/prophecy.html"
+    },
+    {
+      "id": "consistency",
+      "category": "bible",
+      "categoryLabel": "Is the Bible reliable?",
+      "title": "The Internal Consistency of Scripture",
+      "tagline": "About 40 authors, 1500 years, three continents — one unfolding storyline without doctrinal collapse.",
+      "points": [
+        "Written across three continents in three languages",
+        "One arc of redemption runs from Genesis to Revelation",
+        "Most differences are complementary, not contradictory — and a handful (the day of the crucifixion) are genuinely hard, and named as such",
+        "Variation in detail, unity in doctrine"
+      ],
+      "question": "Try getting forty authors across fifteen centuries to agree on anything — then explain this book.",
+      "essay": "library/consistency.html"
+    },
+    {
+      "id": "eyewitnesses",
+      "category": "bible",
+      "categoryLabel": "Is the Bible reliable?",
+      "title": "The Gospel Eyewitnesses",
+      "tagline": "The Gospels behave like testimony — named sources, interlocking details, embarrassing admissions.",
+      "points": [
+        "Named figures function as living source citations",
+        "Undesigned coincidences interlock the independent accounts",
+        "Embarrassing details survive that no inventor would keep",
+        "The writers distinguish their own words from the words of Jesus"
+      ],
+      "question": "Legends polish their heroes. Why do the Gospels keep all the embarrassing parts?",
+      "essay": "library/eyewitnesses.html"
+    },
+    {
+      "id": "earlydate",
+      "category": "bible",
+      "categoryLabel": "Is the Bible reliable?",
+      "title": "The Early Date of the New Testament",
+      "tagline": "Acts ends with Paul alive and Jerusalem standing. The silence is real — and on a respected minority view, it points to an early date.",
+      "points": [
+        "Acts never mentions the fall of Jerusalem in 70 AD",
+        "It never mentions the deaths of Paul, Peter, or James",
+        "An Acts written before Paul’s death explains it — a respected minority case, not the consensus",
+        "Eyewitnesses were still alive to contradict any errors"
+      ],
+      "question": "Acts stops with Paul alive and the Temple standing. What is your best explanation for the silence?",
+      "essay": "library/earlydate.html"
+    },
+    {
+      "id": "coincidences",
+      "category": "bible",
+      "categoryLabel": "Is the Bible reliable?",
+      "title": "Undesigned Coincidences",
+      "tagline": "Interlocking details across independent Gospels — the fingerprint of real memory",
+      "points": [
+        "John 6:5 — Jesus asks PHILIP about bread, unexplained. Luke 9:10: the feeding was near Bethsaida. John 1:44: Philip was FROM Bethsaida",
+        "Matt 26:68 — Prophesy, who hit you? — a strange taunt. Luke 22:64 supplies the missing piece: they had blindfolded him",
+        "Matt 14:2 — Herod speaks privately to his servants. Luke 8:3 — Joanna, wife of Herod’s household manager, supported Jesus. There is the pipeline",
+        "Forgers do not plant puzzles in their own work and bury the solutions in rival documents"
+      ],
+      "question": "Pick one coincidence and check it yourself — both passages, ten minutes, open Bible.",
+      "essay": "library/coincidences.html"
+    },
+    {
+      "id": "names",
+      "category": "bible",
+      "categoryLabel": "Is the Bible reliable?",
+      "title": "The Palestinian Names Argument",
+      "tagline": "The Gospels match first-century Palestinian name-statistics — a test forgers could not know existed",
+      "points": [
+        "Simon and Joseph were the top male names in Palestine — and the top names in the Gospels; diaspora communities ranked names differently",
+        "Common names get qualifiers — Simon Peter, Simon the Zealot, Mary Magdalene — while rare names stand alone, exactly as real communities require",
+        "Late apocryphal gospels, written far from Palestine, flunk the test — they reach for exotic names",
+        "The data: Tal Ilan’s lexicon of thousands of ancient Jewish names; the analysis: Bauckham, Jesus and the Eyewitnesses"
+      ],
+      "question": "How would a second-century writer in Egypt fake statistics nobody knew existed until 2002?",
+      "essay": "library/names.html"
+    },
+    {
+      "id": "jewishness",
+      "category": "bible",
+      "categoryLabel": "Is the Bible reliable?",
+      "title": "The Jewishness of Jesus",
+      "tagline": "Jesus only makes sense inside Israel — the law, the feasts, and the promises all converge on him.",
+      "points": [
+        "He fulfils Passover, the Day of Atonement, and the Davidic hope",
+        "The earliest church was entirely Jewish",
+        "The Gospels fit their Palestinian soil in detail",
+        "A Gentile invention would not look like this"
+      ],
+      "question": "If Christianity invented Jesus, why is he so irreducibly Jewish?",
+      "essay": "library/jewishness.html"
+    },
+    {
+      "id": "bigbang",
+      "category": "science",
+      "categoryLabel": "Science & Faith",
+      "title": "The Big Bang and Genesis 1:1",
+      "tagline": "A universe with a beginning is what Genesis 1:1 always implied — and what the best cosmology points to.",
+      "points": [
+        "Georges Lemaître — a Catholic priest — proposed the Big Bang",
+        "A finite past is the most natural reading of the best cosmology — as Genesis 1:1 always said",
+        "A beginning is the kind of thing that cries out for a cause beyond itself",
+        "A cause outside space and time is at least the kind of thing theism describes"
+      ],
+      "question": "If the universe has a finite past, what caused it — and what could a cause of space and time itself be like?",
+      "essay": "library/bigbang.html"
+    },
+    {
+      "id": "dna",
+      "category": "science",
+      "categoryLabel": "Science & Faith",
+      "title": "DNA and the Information Argument",
+      "tagline": "The genome is a digital information system — and the only source we know of for coded information is a mind.",
+      "points": [
+        "The information is functional, not just any pattern: of the astronomically many sequences its length, DNA sits in the tiny set that actually folds and replicates — fixed by chemistry, measurable in the lab",
+        "The only source we know of for coded, specified information is a mind",
+        "No undirected chemical route from molecules to code has been demonstrated",
+        "That makes a designing mind the best present explanation — contested, and offered for weighing"
+      ],
+      "question": "The first cell needed functional, sequence-specific information — the kind we only ever see minds produce. What produced it, if not a mind?",
+      "essay": "library/originlife.html"
+    },
+    {
+      "id": "originlife",
+      "category": "science",
+      "categoryLabel": "Science & Faith",
+      "title": "The Origin of Life",
+      "tagline": "A cell runs on coded instructions — and no undirected chemical route to code has yet been demonstrated.",
+      "points": [
+        "DNA is a digital code — instructions, not just chemicals",
+        "No undirected route to functional coded information has been demonstrated — not shown impossible",
+        "The best-known probability estimates are contested — the case rests on convergence, not one number",
+        "The only source we know of for coded information is a mind — contested, and offered for weighing"
+      ],
+      "question": "Every code whose origin we know has a coder. Why should the oldest code be the one exception?",
+      "essay": "library/originlife.html"
+    },
+    {
+      "id": "mathematics",
+      "category": "science",
+      "categoryLabel": "Science & Faith",
+      "title": "The Argument from Mathematics",
+      "tagline": "Why does pure thought, done with a pencil, keep describing the universe before telescopes confirm it?",
+      "points": [
+        "Wigner called it the unreasonable effectiveness of mathematics",
+        "Pure mathematics has run ahead of physics — Riemann’s geometry, Dirac’s positron, Gell-Mann’s omega-minus",
+        "A rational universe fits a rational Mind behind it",
+        "The fit suits theism more comfortably than naturalism — evidence, not a settled proof"
+      ],
+      "question": "Why is the universe written in the one language minds invented for truth?",
+      "essay": "library/mathematics.html"
+    },
+    {
+      "id": "cambrian",
+      "category": "science",
+      "categoryLabel": "Science & Faith",
+      "title": "The Cambrian Explosion",
+      "tagline": "The geologically rapid appearance of animal body plans raises a hard question about the origin of biological information.",
+      "points": [
+        "Mainstream palaeontologists and design theorists agree the explosion is real and partly unexplained; they divide on the cause",
+        "Darwin himself flagged it as a serious problem for his theory",
+        "Meyer argues new body plans need vast new information — evo-devo biologists dispute it",
+        "Design is the inference some draw — contested, and not the scientific consensus"
+      ],
+      "question": "Gradualism predicts a slow fuse. Why do so many animal body plans arrive in a geological burst?",
+      "essay": "library/cambrian.html"
+    },
+    {
+      "id": "cosmic",
+      "category": "science",
+      "categoryLabel": "Science & Faith",
+      "title": "Cosmic Purposiveness",
+      "tagline": "Beyond fine-tuning: the universe’s low-entropy beginning, its intelligibility, and its discoverability.",
+      "points": [
+        "The universe began in an improbably ordered, low-entropy state — Penrose puts the odds at 1 in 10 to the power of 10 to the 123; what that signifies is contested",
+        "The universe is comprehensible — and it did not need to be",
+        "It appears built to be discovered — the most contested strand, and flagged as such",
+        "Together they are evidence — not proof — for cosmic purpose"
+      ],
+      "question": "Does the cosmos look like it is for something?",
+      "essay": "library/cosmic.html"
+    },
+    {
+      "id": "privileged",
+      "category": "science",
+      "categoryLabel": "Science & Faith",
+      "title": "The Privileged Planet",
+      "tagline": "The same rare conditions that allow life here also allow discovery — we live on an observatory.",
+      "points": [
+        "Near-perfect solar eclipses — a coincidence of sizes and distances",
+        "A galactic address both survivable and comparatively unobscured",
+        "Habitability and measurability arrive together",
+        "Design is the inference some draw — the correlation is under-tested and disputed, and not the scientific consensus; offered for weighing, not proof"
+      ],
+      "question": "Why should the place fit for observers also be an unusually good platform for discovery?",
+      "essay": "library/privileged.html"
+    },
+    {
+      "id": "lawsofnature",
+      "category": "science",
+      "categoryLabel": "Science & Faith",
+      "title": "The Laws of Nature",
+      "tagline": "Why are there laws at all — universal, elegant, mathematical — and why do they keep holding?",
+      "points": [
+        "Laws are not explained by positing more laws",
+        "Calling the laws brute names the mystery — it does not dissolve it",
+        "Such order is better explained by a rational Mind than by brute fact — evidence, not proof",
+        "Science assumes the lawfulness it cannot explain"
+      ],
+      "question": "Science runs on laws it cannot account for. What grounds them?",
+      "essay": "library/laws.html"
+    },
+    {
+      "id": "trinity_biblical",
+      "category": "trinity",
+      "categoryLabel": "The Trinity",
+      "title": "The Trinity in Scripture",
+      "tagline": "The Trinity is not a Greek imposition — it emerges from the New Testament itself.",
+      "points": [
+        "Matthew 28:19 — one name, three persons: Father, Son, Spirit",
+        "John 1:1 — the Word was with God and the Word was God",
+        "Paul reworks the Jewish Shema around Jesus (1 Corinthians 8:6) — arguably the dominant reading, though genuinely contested",
+        "Divine Christology was present within a couple of decades of the crucifixion"
+      ],
+      "question": "Christians confess one God, not three. The question is whether the New Testament puts Father, Son and Spirit inside that one God — can we read John 1:1 and 1 Corinthians 8:6 together?",
+      "essay": "library/nt_trinity.html"
+    },
+    {
+      "id": "shema",
+      "category": "trinity",
+      "categoryLabel": "The Trinity",
+      "title": "The Shema and the Trinity",
+      "tagline": "Hear O Israel — the LORD is one. On what is arguably the dominant reading, Paul puts Jesus inside that oneness, not beside it.",
+      "points": [
+        "The Shema excludes rival gods — it does not settle God’s inner life",
+        "In 1 Corinthians 8:6 Paul writes Jesus into the Shema itself — Father and Son inside the one God: arguably the dominant reading, though contested",
+        "One God the Father, one Lord Jesus Christ — still one God",
+        "The Trinity keeps monotheism — it does not abandon it"
+      ],
+      "question": "If Paul wrote Jesus into the Shema itself, what gave a trained Pharisee the right?",
+      "essay": "library/shema.html"
+    },
+    {
+      "id": "nt_trinity",
+      "category": "trinity",
+      "categoryLabel": "The Trinity",
+      "title": "The Trinity in the New Testament",
+      "tagline": "Father, Son, and Spirit — distinguished as persons, united in one divine name.",
+      "points": [
+        "Baptise in the NAME — singular — of the Father, Son, and Spirit",
+        "Each person does what only God does — and to lie to the Spirit is to lie to God (Acts 5:3-4)",
+        "They speak to and send one another — real personal distinction",
+        "One God in three persons — the data demands both truths"
+      ],
+      "question": "Read Matthew 28:19 slowly. Why one name for three?",
+      "essay": "library/nt_trinity.html"
+    },
+    {
+      "id": "ot_trinity",
+      "category": "trinity",
+      "categoryLabel": "The Trinity",
+      "title": "Old Testament Foundations",
+      "tagline": "The Old Testament never spells out the Trinity — but it keeps drawing the same silhouette.",
+      "points": [
+        "Judaism itself had to legislate against “two powers in heaven” — the texts generated the reading from inside",
+        "The Angel of the LORD speaks and is addressed as YHWH — yet is distinguished from him",
+        "The LORD rains fire from the LORD (Genesis 19:24) — alone it does not demand two persons, but it belongs to a pattern the Old Testament never disowns",
+        "Word, Wisdom and Spirit act as God and with God — distinction within the one God, never a second god"
+      ],
+      "question": "Israel guarded its oneness fiercely. So why did its own teachers have to rule out “two powers in heaven”?",
+      "essay": "library/ot_trinity.html"
+    },
+    {
+      "id": "early_church_trinity",
+      "category": "trinity",
+      "categoryLabel": "The Trinity",
+      "title": "The Trinity in the Early Church",
+      "tagline": "Nicaea did not invent the Trinity — it defended what the churches had prayed for two centuries.",
+      "points": [
+        "Ignatius calls Jesus God around 107 AD",
+        "Pliny reports Christians singing to Christ as to a god around AD 112",
+        "One God confessed as Father, and the Son who is fully God and not a creature, and the Spirit — the church still working out how to say it: development, not invention",
+        "Arius was the innovation — Nicaea was the response"
+      ],
+      "question": "If the Trinity was invented in 325 AD, who was teaching it in 107?",
+      "essay": "library/early_church_trinity.html"
+    },
+    {
+      "id": "philosophical_trinity",
+      "category": "trinity",
+      "categoryLabel": "The Trinity",
+      "title": "The Philosophical Defence",
+      "tagline": "One what, three whos — and the sharpest critics (Dale Tuggy) press the hardest form of the objection, which the leading models answer.",
+      "points": [
+        "One divine essence — three distinct persons",
+        "Not three gods, and not one person wearing masks",
+        "One God, one undivided divine will and act — the persons differ in relation, not in rank",
+        "Mystery is not the same thing as contradiction"
+      ],
+      "question": "A contradiction means affirming and denying the same predicate in the same respect. God is one in being and three in person — two different things counted to two different totals. Is that a contradiction, or precision?",
+      "essay": "library/philosophical_trinity.html"
+    },
+    {
+      "id": "trinity_islam",
+      "category": "trinity",
+      "categoryLabel": "The Trinity",
+      "title": "Answering Islam on the Trinity",
+      "tagline": "The Quran rejects three gods — and so do Christians. The real disagreement lies deeper — and it is worth having.",
+      "points": [
+        "Surah 5 targets God, Jesus, and Mary — which is not the Trinity",
+        "We confess one God, undivided — tawhid assumes what it must prove, that oneness excludes persons",
+        "The Quran calls Jesus a word from Him and a spirit from Him (3:45; 4:171) — titles that strain the frame it gives him",
+        "The Ash’ari schools allowed real eternal distinctions in God — distinctions of attribute, not of person, but enough to show the no-distinction premise is contested, not axiomatic"
+      ],
+      "question": "The Quran raises one objection that reaches the real Trinity — that the One admits no inner distinction — and it is contested even within Islam, not proven. So it does not refute the doctrine; it clears the way for the real question: who is Jesus?",
+      "essay": "library/trinity_islam.html"
+    },
+    {
+      "id": "trinity_jw",
+      "category": "trinity",
+      "categoryLabel": "The Trinity",
+      "title": "Answering the Watchtower",
+      "tagline": "The construction says what the Word IS — God by nature — not that he is one god among several.",
+      "points": [
+        "In John 1:1 the construction marks quality — the Word had the very nature of God",
+        "Firstborn means preeminent heir — as in Psalm 89 — not first-created",
+        "Jesus receives the worship that Revelation forbids to angels",
+        "Thomas said my Lord and my God — and Jesus blessed him for it"
+      ],
+      "question": "If Jesus is a created angel, why does he accept what angels refuse — worship?",
+      "essay": "library/trinity_jw.html"
+    },
+    {
+      "id": "trinity_mormons",
+      "category": "trinity",
+      "categoryLabel": "The Trinity",
+      "title": "Answering Mormonism",
+      "tagline": "A Godhead of three separate beings, with God the Father himself once a man — that is not the God of Israel or of the creeds.",
+      "points": [
+        "Before me no god was formed, nor shall there be after me — Isaiah 43",
+        "God is not an exalted man — he is the eternal Creator",
+        "From everlasting to everlasting, you are God — Psalm 90",
+        "A society of separate gods breaks biblical monotheism"
+      ],
+      "question": "Isaiah says no god was formed before or after. Where does an exalted-man god fit?",
+      "essay": "library/trinity_mormons.html"
+    },
+    {
+      "id": "modalism",
+      "category": "trinity",
+      "categoryLabel": "The Trinity",
+      "title": "Answering Modalism",
+      "tagline": "Not one actor in three masks — at the Jordan the Son is baptised, the Father speaks, the Spirit descends.",
+      "points": [
+        "All three persons are present at once at the baptism of Jesus",
+        "The Son prays TO the Father — not to himself",
+        "The Father sends, the Son is sent, the Spirit proceeds — distinction of persons within the one God, never of rank",
+        "Masks cannot love each other — persons can"
+      ],
+      "question": "When Jesus prayed in Gethsemane, who was listening — and how is that still one God?",
+      "essay": "library/modalism.html"
+    },
+    {
+      "id": "eternal_generation",
+      "category": "trinity",
+      "categoryLabel": "The Trinity",
+      "title": "The Eternal Generation of the Son",
+      "tagline": "Begotten, not made — the Son is from the Father as Light is from Light: eternally, without beginning.",
+      "points": [
+        "Generation is a relation — not a creation",
+        "There was never a time when the Son was not",
+        "Light from light — one being, not two; a distinct person, not a second God",
+        "It grounds real Fatherhood and real Sonship in God"
+      ],
+      "question": "What does begotten-not-made protect — and what is lost if the Son ever began?",
+      "essay": "library/eternal_generation.html"
+    },
+    {
+      "id": "islamic_dilemma",
+      "category": "islam",
+      "categoryLabel": "Islam",
+      "title": "The Islamic Dilemma",
+      "tagline": "The Quran affirms the Torah and the Gospel as divine revelation — so the wholesale-corruption claim does not survive the Quran’s own testimony.",
+      "points": [
+        "Surah 5:46-47 — Allah gave the Gospel as guidance and light",
+        "Surah 10:94 — Muhammad told, if in doubt, to ask those reading the Scripture before him",
+        "Surah 5:43 and 5:68 — the Torah and Gospel treated as a living authority in Muhammad’s own day",
+        "The charges are concealing and twisting meaning (3:78; 4:46). The verse most often pressed the other way, 2:79, rebukes a local fraud — it never names the Torah or Gospel"
+      ],
+      "question": "Surah 10:94 sends Muhammad to those reading the Book before him. If that text was already corrupt, why send him to it?",
+      "essay": "library/islam-dilemma.html"
+    },
+    {
+      "id": "jesus_quran",
+      "category": "islam",
+      "categoryLabel": "Islam",
+      "title": "Jesus in the Quran",
+      "tagline": "The Quran honours Jesus with titles it gives no one else — yet its portrait does not hold where history can test it: its denial of the cross, as the great majority of Muslims have always read it, runs against the clearest evidence we have.",
+      "points": [
+        "Surah 3:45 and 4:171 — Messiah, a word from God, a spirit from Him: titles no other prophet receives",
+        "The same book denies he is the Son of God, and on its dominant reading denies the cross (4:171; 4:157)",
+        "Shared words, not shared belief — and John 5:23 sets the bar: honour the Son “just as” the Father is honoured",
+        "A Jesus this exalted overflows the prophet the Quran allows him to be"
+      ],
+      "question": "Who must Jesus be, that even the book most determined to deny his deity calls him “but a messenger” (4:171) yet cannot speak of him without titles it gives no other prophet?",
+      "essay": "library/islam-jesus.html"
+    },
+    {
+      "id": "paraclete",
+      "category": "islam",
+      "categoryLabel": "Islam",
+      "title": "Does the Bible Predict Muhammad?",
+      "tagline": "No — read in context, none of the standard proof-texts predicts Muhammad.",
+      "points": [
+        "John 14:16-17 — the Paraclete is the Spirit of truth who lives in the disciples",
+        "No Greek manuscript of John reads Periklutos — every copy reads Parakletos",
+        "Deuteronomy 17:15 uses that same phrase, “from among your brothers”, to exclude foreigners — it means an Israelite",
+        "Acts 3:22-23 applies Deuteronomy 18 to Jesus — by the disciples who knew him"
+      ],
+      "question": "Can we read John 14:16-17 together? The Paraclete is described as living inside the disciples. Muhammad came 600 years later as an external prophet. Does the text fit?",
+      "essay": "library/islam-prophecy.html"
+    },
+    {
+      "id": "riseofchurch",
+      "category": "church",
+      "categoryLabel": "The Christian Revolution",
+      "title": "How the Church Took Over the Empire",
+      "tagline": "A tiny illegal sect became a substantial minority of Rome in three centuries — and “Constantine did it” is false for the period that matters. But growth is not truth.",
+      "points": [
+        "Christians grew from a few hundred to millions while the faith was illegal, with no political advantage — attested by hostile witnesses like Pliny and Lucian, and by the church’s own relief roll (Cornelius, 251)",
+        "The honest numbers are a range — from Ehrman’s ~2.5–3 million to Stark’s ~6.3 million by AD 300; Stark’s figure is a model, not a census",
+        "“Constantine did it” explains the wrong period: two persecutions had already failed and Galerius conceded toleration in 311, a year before the Milvian Bridge — the state gave up first",
+        "None of this shows Christianity is true — movements grow for many reasons; it shows only that the imperial-power story is false"
+      ],
+      "question": "Suppose I grant that Constantine made Christianity powerful in the fourth century. That still doesn’t explain why it was already too big to stamp out before him — while it was illegal, and two emperors had tried. What did that?",
+      "essay": "library/riseofchurch.html"
+    },
+    {
+      "id": "persecution",
+      "category": "church",
+      "categoryLabel": "The Christian Revolution",
+      "title": "What the Early Church Suffered",
+      "tagline": "A hunted, illegal faith Rome could not kill out of existence — being a Christian was itself a capital charge, and the ones who died were handed an exit and refused it.",
+      "points": [
+        "The crime was the name — under Trajan’s policy (c. AD 112) a Christian was not charged with arson or sedition but only with being a Christian and admitting it aloud; a small public gesture won release, refusing it cost your life",
+        "We are not depending on legend — roughly forty-six certificates of sacrifice from the Decian order of 250 survive on papyrus, and the earliest martyr accounts (Polycarp, the Scillitan martyrs, Lyons, Perpetua) are sober, dated, and singled out even by the most sceptical specialists",
+        "The best evidence is hostile — Pliny, Tacitus, Lucian and Galen, none of them friends of the church, record the executions and the Christians’ startling readiness to face them; they concede the courage and cannot explain it",
+        "This does not by itself prove Christianity true — dying for a belief proves sincerity, not truth; what it rules out is cynical pretence, and why they were so sure belongs with the evidence for the resurrection, elsewhere in this library"
+      ],
+      "question": "Pliny offered every one of them an exit — a pinch of incense and they walked free. The ones who died chose to. And it’s the Romans who despised them — Pliny, Tacitus, Galen — who tell us they faced death without flinching. What do you make of people like that?",
+      "essay": "library/persecution.html"
+    },
+    {
+      "id": "equality",
+      "category": "church",
+      "categoryLabel": "The Christian Revolution",
+      "title": "Where Did Human Equality Come From?",
+      "tagline": "Equal worth is a value, not a biological fact — and it entered the West through the image of God, first taught in Jewish Scripture.",
+      "points": [
+        "Equal worth is a value, not a biological fact — as a measurement it is plainly false, since humans are unequal in every capacity you can test; even the atheist historian Yuval Noah Harari grants “there are no such things as rights in biology”",
+        "The ancient Mediterranean assumed the opposite — Aristotle taught that “from the hour of their birth, some are marked out for subjection, others for rule”; ancient justice ranked persons, modern justice levels them",
+        "The conviction entered the West through a Jewish-rooted claim — Genesis says God made humanity, male and female alike, in his own image, so worth is conferred, not earned; the church carried it to the Gentile world and welded it to the cross, worshipping as God the Son, in his true human nature, executed by Rome’s instrument for un-personing slaves",
+        "None of this shows the faith is true — it is a genealogy of a conviction, not a proof of a creed; the case for the faith’s truth rests on the resurrection and the arguments made elsewhere in this library"
+      ],
+      "question": "You’re as certain as I am that a trafficked child and a titan of industry are of exactly equal worth. But that’s not something you can weigh or measure — every capacity you can test comes out unequal. So where did the conviction come from? For most of history almost no one held it.",
+      "essay": "library/equality.html"
+    },
+    {
+      "id": "compassion",
+      "category": "church",
+      "categoryLabel": "The Christian Revolution",
+      "title": "Who Taught the World to Care for the Weak?",
+      "tagline": "The instinct to judge a society by how it treats its weakest was not natural at all — it was learned, late, against the grain of nature and the wisdom of the ancient philosophers.",
+      "points": [
+        "Outside Israel, nothing in the Greco-Roman world rested a law or institution on the conviction that the weak, as the weak, have first claim on the strong — care ran toward the useful, and unwanted newborns could be “exposed,” a practice recommended by Plato, Aristotle and the physician Soranus",
+        "The change came from two Jewish-rooted convictions welded together — that every human bears God’s image (Genesis 1:26–27), so worth cannot be forfeited by weakness, and that God himself stooped to the bottom (“whatever you did for the least of these, you did for me,” Matthew 25:40) — and they built institutions, including the charitably endowed hospital for the sick poor (Christians did not invent all care, but this kind of institution had no clear precedent)",
+        "Nietzsche saw the change and hated it — Christianity really is the great champion of the weak, and that does cut against nature; but he treats “nature culls the weak” as a command when it is only a fact, and no “ought” follows from an “is” (Hume) — to forbid the atrocity you must appeal to a standard above nature, which pure naturalism has, by its own account, ruled out",
+        "None of this shows Christianity is true — a set of beliefs can remake the world and still be false; the reflex was learned, and the case that the faith is true rests elsewhere, above all on the resurrection"
+      ],
+      "question": "You judge a society by how it treats its weakest — almost everyone does. But that test isn’t the natural setting of the human heart; the best ancient minds thought the opposite. Where do you think we learned to care for people precisely when they can give us nothing back?",
+      "essay": "library/compassion.html"
+    },
+    {
+      "id": "science-history",
+      "category": "church",
+      "categoryLabel": "The Christian Revolution",
+      "title": "Did Christianity Give Us Science?",
+      "tagline": "The idea that faith and science are ancient enemies is a nineteenth-century invention — and the men who founded modern science thought they were reading a second scripture.",
+      "points": [
+        "The “conflict thesis” has a birthday — it was built by two nineteenth-century writers, John William Draper (1874) and Andrew Dickson White (1896), and modern specialists, many of them secular, have retired it as bad history",
+        "A careful, contested thesis has real support — certain Christian convictions (a free Creator, an intelligible ordered creation, and human fallibility) supplied intellectual preconditions that helped make experimental science thinkable; this is not the strong slogan “no Christianity, no science,” which overreaches badly",
+        "Science was never a solely Christian achievement — it stands on Greek mathematics and the Islamic Golden Age (Baghdad, Cairo and Córdoba: preserved Greek learning, founded algebra as a discipline, pioneered controlled experiment); and the Galileo affair was a real injustice — the Roman authorities were wrong to condemn him — but not the clean fable of reason versus faith",
+        "None of this shows Christianity is true — fruitfulness is not truth, and a worldview can be productive without being correct; the case for the faith rests on whether Jesus rose from the dead, argued on its own evidence elsewhere"
+      ],
+      "question": "The “war” between science and faith is the modern invention here, not the peace. The people who actually turned the telescope on the heavens, and gave us the laws of motion and the ellipse — Copernicus, Kepler, Galileo, Newton — would have found the whole quarrel bewildering. Most of them thought they were studying nature because it was God’s handiwork.",
+      "essay": "library/science-history.html"
+    },
+    {
+      "id": "progress",
+      "category": "church",
+      "categoryLabel": "The Christian Revolution",
+      "title": "Where Did the Idea of Progress Come From?",
+      "tagline": "“The arc of the moral universe bends toward justice” — why the belief that history is going somewhere is a biblical inheritance, not a human universal.",
+      "points": [
+        "The belief that time has a direction, and that the direction is up, is a specific and unusual conviction, not common sense — step outside the modern West and the confidence that history improves largely evaporates",
+        "The dominant ancient pictures were the wheel and the decline — Hesiod’s history running downhill from a Golden Age, the Stoics’ cosmos repeating in endless identical cycles, Fortune’s wheel simply turning; none had a destination the whole was moving toward",
+        "The Hebrew Scriptures gave history an arrow — a road with a destination, judged against a justice that lies ahead rather than a golden age behind (“Let justice roll down like waters,” Amos); an arc bends toward justice only because a fixed point stands above history to fix the direction, and King’s cadences are the prophets’ own",
+        "None of this shows Christianity is true — that a conviction has biblical roots tells you where it came from, not whether the faith is right about God; the confidence that history bends toward justice is an inheritance, and the case for the faith rests elsewhere, above all on the resurrection"
+      ],
+      "question": "You believe the future can be better than the past, that we can name old cruelties as evils and leave them behind. That’s a beautiful conviction — but it isn’t what most people who ever lived believed. It came from a very particular story about time. An arc has to bend toward something — so what fixes the direction?",
+      "essay": "library/progress.html"
+    }
+  ]
+}
