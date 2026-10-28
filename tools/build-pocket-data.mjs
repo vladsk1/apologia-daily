@@ -74,6 +74,10 @@ for (const [cat, list] of Object.entries(ARGS)) {
       tagline: c.tagline,
       points: c.points,
       question: c.question,
+      // optional in-feed "go deeper" layer (objection -> concession -> reply),
+      // ported from the card's certified essay and gated. Absent on cards not
+      // yet done, so the feed renders the toggle only where content exists.
+      deeper: c.deeper || null,
       essay: ESSAY[c.id] || 'library/',
     });
   }

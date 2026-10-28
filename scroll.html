@@ -90,6 +90,32 @@
     }
     .question b{font-family:var(--ui);font-style:normal;font-weight:600;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--g);display:block;margin-bottom:.3rem;}
 
+    /* GO DEEPER — in-feed expandable answer (objection → concession → reply).
+       Keeps the reader in the swipe; "See the evidence →" remains the full essay. */
+    .deeper-toggle{
+      font-family:var(--ui); font-size:.7rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+      color:var(--g); background:rgba(200,169,81,.08); border:1px solid rgba(200,169,81,.3);
+      border-radius:3px; cursor:pointer; padding:.5rem .8rem; margin-bottom:1rem;
+      display:flex; align-items:center; justify-content:space-between; width:100%; transition:background .15s;
+    }
+    .deeper-toggle:hover{background:rgba(200,169,81,.14);}
+    .deeper-toggle .chev{font-size:.8rem; transition:transform .22s; margin-left:.5rem;}
+    .deeper-toggle[aria-expanded="true"] .chev{transform:rotate(180deg);}
+    .deeper{
+      max-height:0; opacity:0; overflow:hidden; margin-bottom:0;
+      transition:max-height .28s ease, opacity .2s ease, margin-bottom .28s ease;
+      border-left:3px solid rgba(200,169,81,.5); padding-left:0;
+    }
+    .deeper.open{ max-height:42vh; opacity:1; margin-bottom:1.1rem; padding-left:.9rem; overflow-y:auto; scrollbar-width:none;
+      -webkit-mask-image:linear-gradient(180deg,#000 92%,transparent); }
+    .deeper.open::-webkit-scrollbar{display:none;}
+    .deeper .dblk{margin:.5rem 0;}
+    .deeper .dlabel{font-family:var(--ui); font-weight:600; font-size:.56rem; letter-spacing:.14em; text-transform:uppercase;
+      color:var(--g); display:block; margin-bottom:.22rem;}
+    .deeper .dtext{font-family:var(--ss); font-size:clamp(.82rem,3.2vw,.92rem); line-height:1.5; color:rgba(255,255,255,.86);}
+    .deeper .dblk.answer .dlabel{color:var(--gl);}
+    .deeper .dblk.answer .dtext{color:#fff;}
+
     .actions{display:flex;align-items:center;gap:.6rem;}
     .evidence-link{
       font-family:var(--ui); font-size:.82rem; font-weight:600; letter-spacing:.02em;
@@ -190,6 +216,38 @@
       var ul = el('ul','points');
       (c.points||[]).forEach(function(p){ ul.appendChild(el('li',null,p)); });
       pw.appendChild(ul); card.appendChild(pw);
+
+      // GO DEEPER — in-feed expand (only when the card has gated deeper content)
+      var d = c.deeper;
+      if (d && (d.objection || d.concession || d.reply)){
+        var dBtn = el('button','deeper-toggle'); dBtn.type='button';
+        dBtn.setAttribute('aria-expanded','false');
+        dBtn.appendChild(document.createTextNode('Go deeper'));
+        dBtn.appendChild(el('span','chev','▾'));
+
+        var panel = el('div','deeper'); panel.setAttribute('aria-hidden','true');
+        var pid = 'deeper-' + c.id; panel.id = pid;
+        dBtn.setAttribute('aria-controls', pid);
+        function dblk(label, text, extra){
+          if (!text) return;
+          var b = el('div','dblk' + (extra ? ' ' + extra : ''));
+          b.appendChild(el('span','dlabel', label));
+          b.appendChild(el('p','dtext', text));
+          panel.appendChild(b);
+        }
+        dblk('The objection', d.objection);
+        dblk("What's fair to grant", d.concession);
+        dblk('The answer', d.reply, 'answer');
+
+        dBtn.addEventListener('click', function(){
+          var open = panel.classList.toggle('open');
+          dBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+          if (open) track('scroll_card_deeper_opened', {card:c.id, category:c.category});
+        });
+        card.appendChild(dBtn);
+        card.appendChild(panel);
+      }
 
       if (c.question){
         var q = el('div','question');
