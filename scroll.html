@@ -139,12 +139,17 @@
   </div>
   <main id="feed" aria-label="Scroll the Evidence feed"></main>
 
+  <!-- site analytics (PostHog via window.adTrack) + the Capacitor /api fetch shim -->
+  <script src="/analytics.js" defer></script>
   <script>
   (function(){
     "use strict";
     var feed = document.getElementById('feed');
     var rail = document.getElementById('rail');
     var counter = document.getElementById('counter');
+
+    // Safe wrapper — adTrack may be absent (analytics still loading / consent off).
+    function track(name, props){ try { if (window.adTrack) window.adTrack(name, props||{}); } catch(e){} }
 
     // ---- per-viewer saves (localStorage; guarded, never load-bearing) ----
     function readSaved(){ try { return JSON.parse(localStorage.getItem('ad_saved_cards')||'[]'); } catch(e){ return []; } }
@@ -175,8 +180,9 @@
       return s;
     }
 
-    function cardSlide(c, saved){
+    function cardSlide(c, saved, pos){
       var s = el('section','slide');
+      s.dataset.cardId = c.id; s.dataset.cat = c.category; s.dataset.pos = pos;
       var card = el('div','card');
       card.appendChild(el('div','eyebrow', c.categoryLabel));
       card.appendChild(el('h2','card-title', c.title));
@@ -197,6 +203,7 @@
       var actions = el('div','actions');
       var link = el('a','evidence-link','See the evidence →');
       link.href = '/' + c.essay;
+      link.addEventListener('click', function(){ track('scroll_evidence_clicked', {card:c.id, category:c.category}); });
       actions.appendChild(link);
 
       var save = el('button','icon-btn' + (saved.indexOf(c.id)>-1?' saved':''));
@@ -205,7 +212,7 @@
       save.addEventListener('click', function(){
         var arr = readSaved(); var i = arr.indexOf(c.id);
         if (i>-1){ arr.splice(i,1); save.classList.remove('saved'); save.textContent='☆'; }
-        else { arr.push(c.id); save.classList.add('saved'); save.textContent='★'; }
+        else { arr.push(c.id); save.classList.add('saved'); save.textContent='★'; track('scroll_card_saved', {card:c.id, category:c.category}); }
         writeSaved(arr);
       });
       actions.appendChild(save);
@@ -213,6 +220,7 @@
       var share = el('button','icon-btn'); share.type='button'; share.title='Share'; share.setAttribute('aria-label','Share this card');
       share.textContent='↗';
       share.addEventListener('click', function(){
+        track('scroll_card_shared', {card:c.id, category:c.category});
         var url = 'https://apologiadaily.com/' + c.essay;
         var data = { title:'Apologia Daily — '+c.title, text:c.title, url:url };
         if (navigator.share){ navigator.share(data).catch(function(){}); }
@@ -231,8 +239,24 @@
       var saved = readSaved();
       feed.appendChild(introSlide());
       var ordered = dayShuffle(cards);
-      ordered.forEach(function(c){ feed.appendChild(cardSlide(c, saved)); });
+      ordered.forEach(function(c, i){ feed.appendChild(cardSlide(c, saved, i+1)); });
       var total = ordered.length;
+      track('scroll_feed_opened', {total: total});
+
+      // per-card reach / depth: fire once when a card is ≥60% on screen
+      if ('IntersectionObserver' in window){
+        var seen = {};
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(en){
+            var id = en.target.dataset.cardId;
+            if (en.isIntersecting && en.intersectionRatio >= 0.6 && id && !seen[id]){
+              seen[id] = 1;
+              track('scroll_card_viewed', {card:id, category:en.target.dataset.cat, position:+en.target.dataset.pos});
+            }
+          });
+        }, {root: feed, threshold: 0.6});
+        feed.querySelectorAll('.slide[data-card-id]').forEach(function(s){ io.observe(s); });
+      }
       // progress + counter on scroll
       feed.addEventListener('scroll', function(){
         var max = feed.scrollHeight - feed.clientHeight;
