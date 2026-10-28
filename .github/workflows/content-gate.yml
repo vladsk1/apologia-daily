@@ -78,6 +78,8 @@ jobs:
         run: node tools/sync-date-modified.mjs --check
       - name: Check the Our Sources list matches the essays' bibliographies
         run: node tools/build-our-sources.mjs --check
+      - name: Check the Scroll feed data matches the pocket-card deck
+        run: node tools/build-pocket-data.mjs --check
 
   orthodoxy-guards:
     # Doctrinal regression guards over the WHOLE corpus (not just changed files).
