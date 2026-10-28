@@ -36,6 +36,7 @@
     { "source": "/ev-m-legacy.html", "destination": "/evidence-library.html?arg=riseofchurch", "permanent": true },
     { "source": "/parents.html", "destination": "/", "permanent": false },
     { "source": "/palace.html", "destination": "/evidence-library.html", "permanent": false },
+    { "source": "/scholars.html", "destination": "/evidence-library.html", "permanent": false },
     { "source": "/library/abolition.html", "destination": "/evidence-library.html?arg=riseofchurch", "permanent": false },
     { "source": "/ev-m-abolition.html", "destination": "/evidence-library.html?arg=riseofchurch", "permanent": false },
     { "source": "/answers/did-christianity-end-slavery.html", "destination": "/asked-and-answered.html", "permanent": false },

@@ -133,7 +133,7 @@ const FEATURE_PAGES = [
   ['pocket-cards.html', 'Guides & Tools'], ['debate-arena.html', 'Guides & Tools'],
   ['daily-devotional.html', 'Guides & Tools'], ['study-plans.html', 'Guides & Tools'],
   ['beginners-path.html', 'Guides & Tools'], ['today.html', 'Guides & Tools'],
-  ['coach.html', 'Guides & Tools'], ['scholars.html', 'Guides & Tools'],
+  ['coach.html', 'Guides & Tools'],
   ['ask-anything.html', 'Guides & Tools'],
 ];
 function features() {

@@ -86,3 +86,13 @@ _parked/
 # retired it), the games.html card, dashboard tile + 7-day-plan link, evidence-library
 # button, scholars.html footer link, sitemap entry and the build-search-index.mjs entry.
 palace.html
+
+# Apologists & Scholars page — RETIRED from the live site 2026-10-28 (owner decision), KEPT in
+# the repo for possible reintroduction. The "cite scholars by name" credibility value is being
+# kept INSIDE the Evidence Library cards instead of on a separate people-page; this was also the
+# longest ungated page on the site (see docs/GATE_COVERAGE.md). To bring it back: delete this line
+# and the /scholars.html redirect in vercel.json, re-add the ['scholars.html', ...] entry in
+# tools/build-search-index.mjs (then rebuild search-index.json), the sitemap.xml <url> entry, the
+# dashboard.html tile, the daily-devotional.html rel-scholar tile, the index.html 'deep-study'
+# btn2 + step, and the two study-plans.html day links.
+scholars.html
