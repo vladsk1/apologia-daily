@@ -160,16 +160,26 @@
 
     /* TOPIC PICKER — tap-to-open sheet that filters the feed to one topic */
     .topics-btn{
-      pointer-events:auto; font-family:var(--ui); font-size:.72rem; font-weight:600;
-      letter-spacing:.04em; color:rgba(255,255,255,.85); background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.2); border-radius:999px; padding:.35rem .7rem;
+      pointer-events:auto; font-family:var(--ui); font-size:.72rem; font-weight:700;
+      letter-spacing:.04em; color:var(--g); background:rgba(200,169,81,.14);
+      border:1px solid rgba(200,169,81,.5); border-radius:999px; padding:.4rem .85rem;
       cursor:pointer; display:flex; align-items:center; gap:.4rem; max-width:60vw;
       white-space:nowrap; overflow:hidden; transition:all .15s;
+      box-shadow:0 0 0 0 rgba(200,169,81,.45);
     }
     .topics-btn .label{overflow:hidden; text-overflow:ellipsis;}
-    .topics-btn:hover{border-color:var(--g);color:var(--g);}
-    .topics-btn.active{border-color:var(--g);color:var(--g);background:rgba(200,169,81,.12);}
+    .topics-btn:hover{border-color:var(--g);background:rgba(200,169,81,.22);}
+    /* a filter is applied — solid gold so it reads differently from the default prompt */
+    .topics-btn.active{color:var(--n);background:var(--g);border-color:var(--g);}
     .topics-btn .tx{font-size:.82rem; flex:0 0 auto;}
+    /* gentle one-time pulse so first-time viewers notice the filter exists */
+    @media (prefers-reduced-motion:no-preference){
+      .topics-btn:not(.active){animation:topicsPulse 2.4s ease-out 3;}
+    }
+    @keyframes topicsPulse{
+      0%,100%{box-shadow:0 0 0 0 rgba(200,169,81,0);}
+      40%{box-shadow:0 0 0 5px rgba(200,169,81,.22);}
+    }
     .topic-sheet{
       position:fixed; inset:0; z-index:60; display:none;
       background:rgba(5,13,26,.82); -webkit-backdrop-filter:blur(3px); backdrop-filter:blur(3px);
@@ -210,7 +220,7 @@
       <a class="brand" href="/">Apologia<span>Daily</span></a>
     </div>
     <button class="topics-btn" id="topicsBtn" type="button" aria-haspopup="dialog" aria-expanded="false">
-      <span class="label">Topics</span><span class="tx">☰</span>
+      <span class="label">Topics</span><span class="tx" aria-hidden="true">▾</span>
     </button>
   </div>
   <main id="feed" aria-label="Scroll the Evidence feed"></main>
