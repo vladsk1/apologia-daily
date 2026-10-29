@@ -136,8 +136,20 @@
     .topbar{position:fixed; top:0; left:0; right:0; z-index:40; display:flex; justify-content:space-between; align-items:center;
       padding:max(.9rem,env(safe-area-inset-top)) 1.2rem .7rem; pointer-events:none;
       background:linear-gradient(180deg,rgba(5,13,26,.75),transparent);}
+    .topbar-left{display:flex; align-items:center; gap:.6rem; pointer-events:auto; min-width:0;}
     .brand{font-family:var(--fd); font-size:.95rem; font-weight:700; color:var(--w); pointer-events:auto; text-decoration:none;}
     .brand span{color:var(--g);}
+    /* clear, noticeable way back to the main menu (home) */
+    .menu-btn{
+      pointer-events:auto; font-family:var(--ui); font-size:.72rem; font-weight:600;
+      letter-spacing:.04em; color:var(--g); background:rgba(200,169,81,.12);
+      border:1px solid rgba(200,169,81,.45); border-radius:999px; padding:.35rem .75rem .35rem .6rem;
+      cursor:pointer; display:inline-flex; align-items:center; gap:.35rem; text-decoration:none;
+      white-space:nowrap; flex:0 0 auto; transition:all .15s;
+    }
+    .menu-btn:hover{background:rgba(200,169,81,.2); border-color:var(--g);}
+    .menu-btn .mx{font-size:.95rem; line-height:1; margin-top:-1px;}
+    @media (max-width:360px){ .brand{display:none;} }
     .counter{font-family:var(--ui); font-size:.72rem; color:rgba(255,255,255,.55);}
     /* in normal flow after the card so it can never overlap the card's own content */
     .swipe-cue{
@@ -193,7 +205,10 @@
 <body>
   <div id="rail"></div>
   <div class="topbar">
-    <a class="brand" href="/">Apologia<span>Daily</span></a>
+    <div class="topbar-left">
+      <a class="menu-btn" href="/" aria-label="Back to main menu"><span class="mx" aria-hidden="true">‹</span> Menu</a>
+      <a class="brand" href="/">Apologia<span>Daily</span></a>
+    </div>
     <button class="topics-btn" id="topicsBtn" type="button" aria-haspopup="dialog" aria-expanded="false">
       <span class="label">Topics</span><span class="tx">☰</span>
     </button>
