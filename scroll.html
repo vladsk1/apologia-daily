@@ -136,8 +136,20 @@
     .topbar{position:fixed; top:0; left:0; right:0; z-index:40; display:flex; justify-content:space-between; align-items:center;
       padding:max(.9rem,env(safe-area-inset-top)) 1.2rem .7rem; pointer-events:none;
       background:linear-gradient(180deg,rgba(5,13,26,.75),transparent);}
+    .topbar-left{display:flex; align-items:center; gap:.6rem; pointer-events:auto; min-width:0;}
     .brand{font-family:var(--fd); font-size:.95rem; font-weight:700; color:var(--w); pointer-events:auto; text-decoration:none;}
     .brand span{color:var(--g);}
+    /* clear, noticeable way back to the main menu (home) */
+    .menu-btn{
+      pointer-events:auto; font-family:var(--ui); font-size:.72rem; font-weight:600;
+      letter-spacing:.04em; color:var(--g); background:rgba(200,169,81,.12);
+      border:1px solid rgba(200,169,81,.45); border-radius:999px; padding:.35rem .75rem .35rem .6rem;
+      cursor:pointer; display:inline-flex; align-items:center; gap:.35rem; text-decoration:none;
+      white-space:nowrap; flex:0 0 auto; transition:all .15s;
+    }
+    .menu-btn:hover{background:rgba(200,169,81,.2); border-color:var(--g);}
+    .menu-btn .mx{font-size:.95rem; line-height:1; margin-top:-1px;}
+    @media (max-width:360px){ .brand{display:none;} }
     .counter{font-family:var(--ui); font-size:.72rem; color:rgba(255,255,255,.55);}
     /* in normal flow after the card so it can never overlap the card's own content */
     .swipe-cue{
@@ -148,16 +160,26 @@
 
     /* TOPIC PICKER — tap-to-open sheet that filters the feed to one topic */
     .topics-btn{
-      pointer-events:auto; font-family:var(--ui); font-size:.72rem; font-weight:600;
-      letter-spacing:.04em; color:rgba(255,255,255,.85); background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.2); border-radius:999px; padding:.35rem .7rem;
+      pointer-events:auto; font-family:var(--ui); font-size:.72rem; font-weight:700;
+      letter-spacing:.04em; color:var(--g); background:rgba(200,169,81,.14);
+      border:1px solid rgba(200,169,81,.5); border-radius:999px; padding:.4rem .85rem;
       cursor:pointer; display:flex; align-items:center; gap:.4rem; max-width:60vw;
       white-space:nowrap; overflow:hidden; transition:all .15s;
+      box-shadow:0 0 0 0 rgba(200,169,81,.45);
     }
     .topics-btn .label{overflow:hidden; text-overflow:ellipsis;}
-    .topics-btn:hover{border-color:var(--g);color:var(--g);}
-    .topics-btn.active{border-color:var(--g);color:var(--g);background:rgba(200,169,81,.12);}
+    .topics-btn:hover{border-color:var(--g);background:rgba(200,169,81,.22);}
+    /* a filter is applied — solid gold so it reads differently from the default prompt */
+    .topics-btn.active{color:var(--n);background:var(--g);border-color:var(--g);}
     .topics-btn .tx{font-size:.82rem; flex:0 0 auto;}
+    /* gentle one-time pulse so first-time viewers notice the filter exists */
+    @media (prefers-reduced-motion:no-preference){
+      .topics-btn:not(.active){animation:topicsPulse 2.4s ease-out 3;}
+    }
+    @keyframes topicsPulse{
+      0%,100%{box-shadow:0 0 0 0 rgba(200,169,81,0);}
+      40%{box-shadow:0 0 0 5px rgba(200,169,81,.22);}
+    }
     .topic-sheet{
       position:fixed; inset:0; z-index:60; display:none;
       background:rgba(5,13,26,.82); -webkit-backdrop-filter:blur(3px); backdrop-filter:blur(3px);
@@ -197,9 +219,12 @@
 <body>
   <div id="rail"></div>
   <div class="topbar">
-    <a class="brand" href="/">Apologia<span>Daily</span></a>
+    <div class="topbar-left">
+      <a class="menu-btn" href="/" aria-label="Back to main menu"><span class="mx" aria-hidden="true">‹</span> Menu</a>
+      <a class="brand" href="/">Apologia<span>Daily</span></a>
+    </div>
     <button class="topics-btn" id="topicsBtn" type="button" aria-haspopup="dialog" aria-expanded="false">
-      <span class="label">Topics</span><span class="tx">☰</span>
+      <span class="label">Topics</span><span class="tx" aria-hidden="true">▾</span>
     </button>
   </div>
   <main id="feed" aria-label="Scroll the Evidence feed"></main>
