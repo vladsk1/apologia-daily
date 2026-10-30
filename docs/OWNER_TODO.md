@@ -104,5 +104,23 @@ Me, once 11 is done (the new terms already promise these, so they must exist on 
 - [ ] **10. Postal address**: you can set it yourself as `EMAIL_POSTAL_ADDRESS` (4b), or send it
   to me and I'll put it in the privacy policy's contact section too.
 
+## CI integrity (found 2026-10-30)
+
+- [ ] **14. Decide whether the content-gate CI must actually block a bad push to `main`.**
+  Context: the `content-gate` workflow was found **red on `main` for ~12 consecutive pushes**
+  (runs #1397–#1408). The failing step is `nav-consistency` → "Check the What's New feed is in
+  sync": the 2026-10-28 Scroll/pocket-card commits bumped review stamps without re-running the
+  generators, so `whats-new.html` (and, behind it, `our-sources.json`) went stale. The guard is
+  written correctly and **did** fail — but because work is pushed straight to `main` with no
+  branch protection / required status checks, Vercel deploys regardless and the red ❌ is purely
+  cosmetic, so it rode unnoticed. The stale files themselves were regenerated and deployed
+  2026-10-30 (so `main` should be green again), **but the enforcement gap remains**: nothing
+  stops the next skipped-generator push. Options, your call — (a) enable GitHub branch protection
+  with `content-gate` as a required status check (⚠ this changes the push-straight-to-`main`
+  deploy workflow and could block your own direct pushes — decide deliberately); (b) leave it as a
+  smoke alarm and rely on running the three generators before each push (the standing rule already
+  says to); or (c) gate the Vercel deploy on the Actions result. Needs your GitHub repo-admin
+  access, so it's yours to decide.
+
 ---
 *Audit items 1–10: all code changes are live (2026-10-08). Everything left on this list needs you.*
