@@ -219,7 +219,8 @@
       "why": "The sources vary between about 250 and 318. The round number is a popular-apologetics artefact.",
       "instead": "'the sources vary between about 250 and 318 bishops'.",
       "patterns": [
-        "(roughly|about|around) 300 bishops"
+        "(roughly|about|around) 300 bishops",
+        "~\\s*300 bishops"
       ],
       "allow": [],
       "netting": "phrase"
@@ -245,7 +246,8 @@
       "why": "library/shema.html says honesty requires saying no: echad is the ordinary word for one and carries no such freight.",
       "instead": "Run 1 Corinthians 8:6 as a deliberate reformulation of the Shema — noting that the reading is arguably dominant but genuinely contested (James McGrath).",
       "patterns": [
-        "composite unity"
+        "composite unity",
+        "compound unity"
       ],
       "allow": [
         "library/shema.html",
@@ -254,7 +256,15 @@
         "palace.html",
         "api/feedback.js",
         "pocket-cards.html",
-        "pocket-cards.json"
+        "pocket-cards.json",
+        "answers/doesnt-the-trinity-mean-three-gods.html",
+        "answers/_data.json",
+        "library/jesus-is-yahweh.html",
+        "ev-m-jesus-is-yahweh.html",
+        "ev-s3.html",
+        "library/active-reading-data.json",
+        "briefs-index.json",
+        "briefs/_data.json"
       ],
       "netting": "phrase"
     },

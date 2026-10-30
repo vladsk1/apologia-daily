@@ -1034,7 +1034,7 @@
 > - ⭐ **[`docs/ETERNAL_GENERATION_GATE_FINDINGS.md`](docs/ETERNAL_GENERATION_GATE_FINDINGS.md) (2026-08-05)** —
 >   all four gates run on `library/eternal_generation.html` after an owner-supplied third-party review.
 >   **NOT STAMPABLE; the trial edit was REVERTED and the essay is byte-identical to its 2026-07-11
->   certified state.** ⚠ **A pre-existing FACTUAL ERROR is live at line 181:** "They held this alongside
+>   certified state.** ✅ **CORRECTED/VERIFIED 2026-10-30 (whole-library audit): the line-181 error is FIXED** — the essay now states both Ware *and* Grudem were "openly skeptical of eternal generation" and "both later reversed… affirming eternal generation at the Evangelical Theological Society in November 2016" (verified by direct read of `library/eternal_generation.html:181`). The rest of this entry predates the 2026-10-25 Trinity-tab re-gate, which certified `eternal_generation.html` CLEAN — re-verify the remaining sub-items before treating any as still-open. The description that follows is kept as history. ⚠ **(HISTORICAL) A pre-existing FACTUAL ERROR was reported at line 181:** "They held this alongside
 >   (in Ware's case)… eternal generation" — Ware **rejected** eternal generation before Nov 2016, which is
 >   what Trueman's charge turned on; he reversed at ETS that November. **Fix it first** — two gates
 >   proposed downstream fixes that *restate* the error, having taken the essay as ground truth, and only
