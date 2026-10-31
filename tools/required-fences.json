@@ -10,8 +10,10 @@
     "",
     "Each rule says: these FILES make a claim that REQUIRES a fence, so each of them must",
     "contain at least one of the `require` patterns (case-insensitive regexes, matched",
-    "against the raw served text — fences live in prose AND in card/ARG_PREMISES script",
-    "strings, so nothing is stripped). A file with none of them has dropped the fence.",
+    "against the served content — prose AND card/ARG_PREMISES script strings both count).",
+    "The content-review STAMP is stripped first, so a fence merely DOCUMENTED in the review",
+    "comment does not satisfy the rule; it must be in the reader-facing content. A file with",
+    "none of them has dropped the fence.",
     "",
     "DISCIPLINE (identical to every other net here): a rule must pass on ALL current",
     "content with ZERO gaps before it ships — a guard that fires on our own fenced pages",
@@ -39,9 +41,51 @@
       ],
       "require": [
         "human nature", "communicatio", "patripassian", "impassib",
-        "not that the (divine nature|Father)", "the divine nature (did not|itself|never)"
+        "the divine nature (did not|itself|never)",
+        "(not|nor|never)[^.]{0,45}the divine nature[^.]{0,25}(die|died|suffer|could die|be cursed)",
+        "(not|nor|never)[^.]{0,45}the Father (was |were )?(crucif|hated|divided|forsak|abandon)"
       ],
       "instead": "Fence with the two-natures / communicatio idiomatum point: the eternal Son suffered in the human nature he assumed; the divine nature did not die and the Father was not crucified."
+    },
+    {
+      "id": "kalam-begins-to-exist",
+      "what": "Any surface running the Kalam cosmological argument must use the guarded premise 'whatever BEGINS TO EXIST has a cause', never the self-refuting 'everything has a cause'.",
+      "files": ["library/kalam.html", "ev-m-kalam.html"],
+      "require": ["begins? to exist", "began to exist"],
+      "instead": "State premise 1 as 'whatever begins to exist has a cause of its existence' — the whole argument turns on the universe BEGINNING; 'everything has a cause' invites 'then what caused God?' and is not what the argument claims."
+    },
+    {
+      "id": "finetuning-data-vs-design",
+      "what": "Any fine-tuning surface must keep the data/design firewall: the DATA is conceded by atheist physicists; DESIGN is the contested, inferred conclusion — never 'scientists agree the universe is designed'.",
+      "files": ["library/finetuning.html", "ev-m-finetuning.html", "ev-m-cosmic.html"],
+      "require": [
+        "design[^.]{0,30}(inference|inferred|contested)",
+        "data[^.]{0,30}(conceded|not seriously disputed|widely accepted)",
+        "not that scientists agree"
+      ],
+      "instead": "Keep the two separate: the fine-tuning data is granted even by atheist physicists; that it points to a designer is a contested philosophical INFERENCE, not a scientific consensus."
+    },
+    {
+      "id": "manuscript-preservation-not-truth",
+      "what": "Any manuscript/textual-reliability surface must fence preservation from truth: the manuscripts show the text was accurately PRESERVED, not that its contents are TRUE — that is argued separately.",
+      "files": ["library/manuscript.html", "ev-m-manuscript.html"],
+      "require": [
+        "preserv[^.]{0,50}(not|does not|isn'?t|rather than)[^.]{0,45}(true|truth|content)",
+        "(not|doesn'?t|does not)[^.]{0,30}(prove|mean|show)[^.]{0,30}(it|they|the content|the Bible)[^.]{0,20}(is |are )?true"
+      ],
+      "instead": "State plainly that textual evidence establishes accurate transmission, NOT the truth of what was transmitted; the truth of the content is a separate argument."
+    },
+    {
+      "id": "resurrection-early-creed",
+      "what": "The resurrection minimal-facts / creed surfaces must lead with the 1 Corinthians 15:3-7 pre-Pauline creed dated to within a few years of the crucifixion, never frame the evidence as merely 'written decades later'.",
+      "files": ["library/minimalfacts.html", "ev-m-minimal.html", "library/earlycreed.html", "ev-m-earlycreed.html"],
+      "require": [
+        "pre-Pauline",
+        "1 Corinthians 15:3",
+        "within (a )?(very )?few years",
+        "two to five years"
+      ],
+      "instead": "Anchor the case in the 1 Corinthians 15:3-7 formula Paul RECEIVED (pre-Pauline, traceable to within roughly two to five years of the crucifixion); do not let the Gospels' later composition date stand as the earliest evidence."
     }
   ]
 }

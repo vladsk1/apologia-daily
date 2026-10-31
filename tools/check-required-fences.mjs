@@ -12,9 +12,11 @@
  *
  * HOW IT WORKS: tools/required-fences.json lists rules. Each rule names the FILES that make a
  * claim requiring a fence, plus `require` — a set of case-insensitive regexes, at least one of
- * which must appear in each file's raw served text (fences live in prose AND in card /
- * ARG_PREMISES script strings, so nothing is stripped). A listed file containing none of them
- * has dropped the fence → a gap.
+ * which must appear in each file's served content (prose AND card / ARG_PREMISES script
+ * strings both count). The content-review STAMP is stripped first, so a fence only documented
+ * in the review comment ("GUARDRAIL HELD: preservation-not-truth") does NOT satisfy the rule —
+ * the fence must be in the reader-facing content. A listed file with none of them has dropped
+ * the fence → a gap.
  *
  * FALSE-POSITIVE SAFETY (the repo's cardinal rule — a net that cries wolf gets ignored): this
  * is NOT a corpus-wide scan. It only checks the files a rule explicitly lists, so a page that
@@ -35,6 +37,13 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RULES_FILE = join(ROOT, 'tools', 'required-fences.json');
 const BASELINE = join(ROOT, 'tools', 'required-fences-baseline.json');
 
+/* A fence only counts when it is in the SERVED content, not merely documented in the
+   review stamp. Without this, "GUARDRAIL HELD: preservation-not-truth" sitting in a
+   content-review comment would satisfy the rule while the actual prose had dropped the
+   fence — the exact false-pass this guard exists to prevent. Strip stamps before matching
+   (same shape check-retired-claims.mjs strips). */
+const STAMP = /<!--\s*content-review:[\s\S]*?-->|"reviewed"\s*:\s*\{[\s\S]*?\}/g;
+
 // Pure core, unit-testable: given the rules and a reader, return every gap.
 // readFile(relPath) -> string | null (null = file does not exist).
 // Returns [{rule, file, kind:'missing-fence'|'missing-file', what, instead}].
@@ -43,7 +52,8 @@ export function findGaps(rules, readFile) {
   for (const rule of rules) {
     const res = (rule.require || []).map((p) => new RegExp(p, 'i'));
     for (const file of rule.files || []) {
-      const text = readFile(file);
+      let text = readFile(file);
+      if (text != null) text = text.replace(STAMP, ' ');
       if (text == null) {
         gaps.push({ rule: rule.id, file, kind: 'missing-file',
                     what: rule.what, instead: rule.instead });
