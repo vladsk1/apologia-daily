@@ -69,6 +69,14 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ANSWERS = join(ROOT, 'answers');
 const data = JSON.parse(readFileSync(join(ANSWERS, '_data.json'), 'utf8'));
 
+// --check: read-only CI guard — exit 1 if any served page's HTML has drifted from _data.json
+//          (body + clarifier boxes + meta + JSON-LD), or a gate-passed entry has no page.
+// --sync : rewrite the drifted pages (and create missing gate-passed ones) from _data.json.
+// default: additive creation of new pages + a non-fatal drift WARNING (prior behavior).
+const ARGV = process.argv.slice(2);
+const CHECK = ARGV.includes('--check');
+const SYNC = ARGV.includes('--sync');
+
 // ── SHORT-FORM RULE GATE (fail closed, runs FIRST) ──
 // gen-answers is the script you MUST run to create any new answer page, so it is
 // the natural chokepoint to enforce the SHORT-FORM ANSWER RULE mechanically: no
@@ -89,36 +97,11 @@ for (const lint of ['check-answer-openings.mjs', 'check-answer-concessions.mjs']
   }
 }
 
-// ── DRIFT AUDIT ──
-// Every answer's text lives in THREE places that must agree: the visible <div class="ad-answer">,
-// the FAQPage JSON-LD acceptedAnswer, and _data.json "a". If the visible page is hand-edited
-// without updating _data.json, the gate (which reads _data.json) certifies the wrong copy —
-// exactly the 2026-07-04 finding on the Bible-reliability pages. This runs on every invocation
-// and loudly warns on any page whose live visible text has drifted from its _data.json source.
-const _norm = (s) => String(s)
-  // orthonote clarifiers are presentation-only: unwrap the whole clarifier span back to
-  // just its phrase (group $1) so the ＊ mark + box vanish AND no boundary whitespace is
-  // introduced — the phrase then compares exactly against _data.json "a".
-  .replace(/<span class="on"><span class="on-phrase">([\s\S]*?)<\/span><!--onote-->[\s\S]*?<!--\/onote--><\/span>/g, '$1')
-  .replace(/<[^>]*>/g, ' ')
-  .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
-  .replace(/&mdash;/g, '-').replace(/&ndash;/g, '-').replace(/&rsquo;|&lsquo;|’|‘/g, "'")
-  .replace(/&ldquo;|&rdquo;|“|”/g, '"').replace(/[—–]/g, '-')
-  .replace(/\s+/g, ' ').trim();
-const drift = [];
-for (const e of data.answers) {
-  const fp = join(ANSWERS, e.slug + '.html');
-  if (!existsSync(fp)) continue;
-  const html = readFileSync(fp, 'utf8');
-  const m = html.match(/<div class="ad-answer">([\s\S]*?)<\/div>/);
-  if (!m) continue;
-  if (_norm(m[1]) !== _norm(String(e.a).split('\n\n').map((p) => `<p>${p}</p>`).join(''))) drift.push(e.slug);
-}
-if (drift.length) {
-  console.error(`\n⚠️  DRIFT: ${drift.length} page(s) whose live visible text ≠ _data.json "a" (the gate reads _data.json, so the live copy may be UN-REVIEWED). Reconcile _data.json + JSON-LD to the visible text, then re-gate:`);
-  drift.forEach((s) => console.error('   - ' + s));
-  console.error('');
-}
+// ── DRIFT AUDIT runs at the END of this file ──
+// (it needs renderBody()/page()/esc(), which are defined below; running it here hit the
+// temporal-dead-zone on `esc`.) The extended audit compares the served HTML's body
+// INCLUDING its clarifier boxes, plus the meta description and the FAQPage JSON-LD, against
+// _data.json — see the "DRIFT AUDIT (extended)" block near the bottom.
 
 const NAV = `<nav class="adn-nav">
   <a href="/" class="adn-logo">Apologia<span>Daily</span></a>
@@ -191,8 +174,10 @@ function clarifierMarkup(c) {
     + `</span><!--/onote--></span>`;
 }
 
-function page(e) {
-  const url = `https://apologiadaily.com/answers/${e.slug}.html`;
+// The canonical visible-body render (paragraphs + inlined clarifier boxes). Shared by page()
+// AND the drift audit so the two can never disagree about what the body "should" be — which is
+// the whole point: the audit must compare against exactly what the generator would write.
+function renderBody(e) {
   let paras = String(e.a).split('\n\n').map((p) => `<p>${esc(p.trim())}</p>`).join('\n      ');
   for (const c of (e.clarifiers || [])) {
     const target = esc(c.phrase);
@@ -200,6 +185,12 @@ function page(e) {
     if (idx === -1) throw new Error(`clarifier phrase not found in ${e.slug}: "${c.phrase}"`);
     paras = paras.slice(0, idx) + clarifierMarkup(c) + paras.slice(idx + target.length);
   }
+  return paras;
+}
+
+function page(e) {
+  const url = `https://apologiadaily.com/answers/${e.slug}.html`;
+  const paras = renderBody(e);
   // FAQPage (not QAPage): these are single, site-authored authoritative answers, which is
   // what FAQPage is for. QAPage is for community/forum pages with user-submitted, voted
   // answers, and Google validates it against fields that don't apply here (answerCount,
@@ -284,25 +275,88 @@ const missingChecks = (e) => {
   if (!r || typeof r !== 'object') return ['argument', 'orthodoxy'];
   return ['argument', 'orthodoxy'].filter((k) => !r[k]);   // null / "" / absent = not done
 };
-const blocked = [];
-const created = [];
+// ── DRIFT AUDIT (extended) — the served page must match _data.json ──
+// Three reader-facing surfaces are generated from each entry and must agree with it: the
+// visible <div class="ad-answer"> body (INCLUDING its clarifier is/not boxes), the meta
+// description, and the FAQPage JSON-LD acceptedAnswer. gen-answers is additive and never
+// rewrites a live page, so editing _data.json alone leaves the SERVED html stale — which on
+// 2026-10-31 let six answer fixes (incl. a 'proceeds'->'begotten' clarifier correction) land
+// in _data.json while readers kept the old text. The old audit stripped clarifier boxes before
+// comparing, so a box-only edit was invisible to it; this one compares the FULL rendered body.
+const collapse = (s) => String(s).replace(/\s+/g, ' ').trim();
+function driftFields(e, html) {
+  const out = [];
+  const b = html.match(/<div class="ad-answer">([\s\S]*?)<\/div>/);
+  if (b && collapse(b[1]) !== collapse(renderBody(e))) out.push('body/clarifier');
+  const md = html.match(/<meta name="description" content="([\s\S]*?)">/);
+  if (md && collapse(md[1]) !== collapse(escAttr(e.meta))) out.push('meta');
+  const lj = html.match(/"acceptedAnswer":\{"@type":"Answer","text":("(?:[^"\\]|\\.)*")\}/);
+  if (lj) { try { if (collapse(JSON.parse(lj[1])) !== collapse(String(e.a).replace(/\n\n/g, '  '))) out.push('json-ld'); } catch { /* malformed ld is caught by the JSON-LD test */ } }
+  return out;
+}
+const drifted = [];
 for (const e of data.answers) {
   const fp = join(ANSWERS, e.slug + '.html');
-  if (existsSync(fp)) continue;              // additive: never overwrite a live page
-  const missing = missingChecks(e);
-  if (missing.length) { blocked.push([e, missing]); continue; }
-  writeFileSync(fp, page(e), 'utf8');
-  created.push(e);
+  if (!existsSync(fp)) continue;
+  const f = driftFields(e, readFileSync(fp, 'utf8'));
+  if (f.length) drifted.push({ e, fields: f });
 }
 
-if (blocked.length) {
-  console.error(`\n⛔ ${blocked.length} new entr${blocked.length === 1 ? 'y' : 'ies'} BLOCKED — reviewed.{argument,orthodoxy} not both stamped. Run the missing gate(s), fix to CLEAN, then add the date(s):`);
-  blocked.forEach(([e, missing]) => console.error(`   - ${e.slug}   missing: ${missing.join(' + ')}`));
-  console.error('   No page was written for the above. Gate content, then re-run.\n');
+if (SYNC) {
+  for (const { e } of drifted) writeFileSync(join(ANSWERS, e.slug + '.html'), page(e), 'utf8');
+  console.log(drifted.length ? `--sync: regenerated ${drifted.length} drifted page(s):` : '--sync: no drifted pages.');
+  drifted.forEach(({ e, fields }) => console.log(`   - ${e.slug}  [${fields.join(', ')}]`));
+}
+
+// ── REVIEW GATE (enforced) + additive creation ──
+// Skipped under --check (read-only). Under --sync it still runs, to create any brand-new pages.
+const blocked = [];
+const created = [];
+if (!CHECK) {
+  for (const e of data.answers) {
+    const fp = join(ANSWERS, e.slug + '.html');
+    if (existsSync(fp)) continue;              // additive: never overwrite a live page
+    const missing = missingChecks(e);
+    if (missing.length) { blocked.push([e, missing]); continue; }
+    writeFileSync(fp, page(e), 'utf8');
+    created.push(e);
+  }
+  if (blocked.length) {
+    console.error(`\n⛔ ${blocked.length} new entr${blocked.length === 1 ? 'y' : 'ies'} BLOCKED — reviewed.{argument,orthodoxy} not both stamped. Run the missing gate(s), fix to CLEAN, then add the date(s):`);
+    blocked.forEach(([e, missing]) => console.error(`   - ${e.slug}   missing: ${missing.join(' + ')}`));
+    console.error('   No page was written for the above. Gate content, then re-run.\n');
+  }
+}
+
+if (CHECK) {
+  // A gate-passed entry with no page is also out of sync (it should have been generated).
+  const ungenerated = data.answers
+    .filter((e) => !existsSync(join(ANSWERS, e.slug + '.html')) && !missingChecks(e).length)
+    .map((e) => e.slug);
+  if (!drifted.length && !ungenerated.length) {
+    console.log(`✓ answers in sync: ${data.answers.length} entries — served HTML (body + clarifier boxes + meta + JSON-LD) matches _data.json.`);
+    process.exit(0);
+  }
+  if (drifted.length) {
+    console.error(`\n⛔ DRIFT: ${drifted.length} served page(s) no longer match _data.json — readers see stale, possibly UN-REVIEWED text. Fix: node tools/gen-answers.mjs --sync`);
+    drifted.forEach(({ e, fields }) => console.error(`   - ${e.slug}  [${fields.join(', ')}]`));
+  }
+  if (ungenerated.length) {
+    console.error(`\n⛔ ${ungenerated.length} gate-passed entr${ungenerated.length === 1 ? 'y' : 'ies'} has no page. Fix: node tools/gen-answers.mjs`);
+    ungenerated.forEach((s) => console.error('   - ' + s));
+  }
+  console.error('');
+  process.exit(1);
+}
+
+// default (non-check, non-sync): drift is a loud WARNING, not fatal (prior behavior preserved).
+if (drifted.length && !SYNC) {
+  console.error(`\n⚠️  DRIFT: ${drifted.length} page(s) whose served HTML ≠ _data.json (readers may see stale/un-reviewed text). Fix: node tools/gen-answers.mjs --sync`);
+  drifted.forEach(({ e, fields }) => console.error(`   - ${e.slug}  [${fields.join(', ')}]`));
+  console.error('');
 }
 
 if (!created.length) { console.log('No new pages — every _data.json entry already has a page.'); process.exit(0); }
-
 console.log(`Created ${created.length} new page(s):`);
 created.forEach((e) => console.log('  answers/' + e.slug + '.html  [' + e.category + ']'));
 

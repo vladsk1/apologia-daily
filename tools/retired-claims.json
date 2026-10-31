@@ -979,6 +979,34 @@
           "The Agapius version of the Testimonium Flavianum is significant because..."
         ]
       }
+    },
+    {
+      "id": "relation-of-origin-son-spirit-swap",
+      "retired": "2026-10-31",
+      "what": "Assigning the wrong eternal relation of origin: saying the SON 'proceeds' from the Father (procession is the Spirit's), or that the SPIRIT is 'begotten'/'generated' (generation is the Son's).",
+      "why": "Right word, wrong person. It is not heresy on its face -- it still affirms an eternal relation and co-equality -- so the orthodoxy heresy-scan passes it. That is exactly how 'the Son eternally proceeds from the Father' shipped in the if-jesus-is-god-why-did-he-pray clarifier box (2026-10-31), the layer whose whole job is doctrinal precision. No heresy-token net could see it; this claim-net catches the swap directly. The Nicene order is fixed: the Father is unbegotten, the Son is begotten/generated, the Spirit proceeds.",
+      "instead": "Son: 'eternally begotten / generated of the Father.' Spirit: 'eternally proceeds from the Father.' Never swap them. 'The Spirit proceeds from the Father' and 'the Son is begotten of the Father' are BOTH correct and must never be flagged -- the patterns use a negative lookahead so a sentence naming both persons in their right order does not fire.",
+      "patterns": [
+        "\\bSon\\b(?:(?!\\bSpirit\\b)[^.]){0,20}\\bproceeds\\b",
+        "\\bSpirit\\b(?:(?!\\bSon\\b)[^.]){0,20}\\b(begotten|generated)\\b"
+      ],
+      "allow": [],
+      "netting": "claim",
+      "corpus": {
+        "must_fire": [
+          "the Son eternally proceeds from the Father",
+          "the Son proceeds from the Father and is sent by him",
+          "the Holy Spirit is eternally begotten of the Father",
+          "the Spirit is generated from the Father"
+        ],
+        "must_not_fire": [
+          "the Son is eternally begotten of the Father and is sent by him",
+          "the Spirit eternally proceeds from the Father",
+          "the Father is unbegotten, the Son is begotten, and the Spirit proceeds from the Father",
+          "the Spirit's being sent is parallel to the Son's being begotten",
+          "the Spirit glorifies the Son; the Spirit proceeds from the Father"
+        ]
+      }
     }
   ]
 }

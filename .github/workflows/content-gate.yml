@@ -80,6 +80,8 @@ jobs:
         run: node tools/build-our-sources.mjs --check
       - name: Check the Scroll feed data matches the pocket-card deck
         run: node tools/build-pocket-data.mjs --check
+      - name: Check served answer pages match _data.json (body + clarifier boxes + meta + JSON-LD)
+        run: node tools/gen-answers.mjs --check
 
   orthodoxy-guards:
     # Doctrinal regression guards over the WHOLE corpus (not just changed files).
