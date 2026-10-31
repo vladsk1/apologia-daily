@@ -673,3 +673,19 @@ test('cross-check block matcher catches every incomplete-block failure mode', as
   // Dropping the ev-m line must be caught (the surface added 2026-09-24).
   assert.match(violationReason(filled.replace('- [x] ev-m-foo.html mastery page — corroboration\n', '')), /does not mention surface|6 surface boxes/);
 });
+
+// B3: the Scripture-reference resolver catches a fabricated/typo'd chapter and
+// leaves valid citations (incl. single-chapter verse refs and a Father's letter)
+// alone — so the tool itself can't silently rot into a no-op or a wolf-crier.
+test('scripture-ref resolver flags out-of-range chapters, not valid citations', async () => {
+  const { findBadRefs } = await import('../tools/check-scripture-refs.mjs');
+  const bad = (t) => findBadRefs(['f'], () => t).map((h) => h.ref);
+  assert.deepEqual(bad('see Daniel 15:2 for this'), ['Daniel 15:2']); // Daniel has 12
+  assert.equal(bad('Hebrews 14:1').length, 1);                        // Hebrews has 13
+  assert.equal(bad('2 Peter 4:1').length, 1);                         // 2 Peter has 3
+  // Valid references must NOT fire: in-range, a single-chapter book as ch1,
+  // and Ignatius "to the Ephesians" (guarded), 2 Baruch (extra-canonical, 87 ch).
+  assert.deepEqual(bad('Daniel 9:2; 1 Corinthians 15:3; Revelation 22:1; Jude 1:9'), []);
+  assert.deepEqual(bad('Ignatius, to the Ephesians 9:1'), []);
+  assert.deepEqual(bad('2 Baruch 71:3'), []);
+});

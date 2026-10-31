@@ -104,6 +104,8 @@ jobs:
         run: node tools/check-unquoted-attributions.mjs
       - name: Retired-claims scan (blocking)
         run: node tools/check-retired-claims.mjs
+      - name: Scripture-reference resolver — chapter in range, book resolves (blocking)
+        run: node tools/check-scripture-refs.mjs
       - name: Five-surface cross-check block on research notes (blocking)
         run: node tools/check-crosscheck-block.mjs
       - name: Footnote apparatus (markers + internal cross-references resolve)
