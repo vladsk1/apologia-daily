@@ -1007,6 +1007,32 @@
           "the Spirit glorifies the Son; the Spirit proceeds from the Father"
         ]
       }
+    },
+    {
+      "id": "penrose-atheist-label",
+      "retired": "2026-10-31",
+      "what": "Labelling the physicist Roger Penrose flatly an 'atheist' by name.",
+      "why": "His self-description is mixed across sources — a first-person 'I would say I'm an atheist' (Jewish Virtual Library), Craig reporting him as self-describing agnostic, and Humanists UK listing him a patron of 'no religious doctrine'. A knowledgeable reader can contest a flat 'atheist Penrose'; it is the recurring scholar-mislabel class (Ehrman, Allison, Stenger, Vermes, BeDuhn all mislabelled here before). See docs/scholar-labels.md.",
+      "instead": "'non-believing physicist Roger Penrose' (or 'no theist' / 'no religious commitment') — accurate under every source and it keeps the 'even a non-theist concedes the data' probative force. A GENERIC 'atheist physicists' class statement that does NOT name Penrose is fine and does not fire this net.",
+      "patterns": [
+        "\\batheist[^.<\"]{0,25}\\bPenrose\\b",
+        "\\bPenrose\\b[^.<\"]{0,25}\\batheist\\b"
+      ],
+      "allow": [],
+      "netting": "claim",
+      "corpus": {
+        "must_fire": [
+          "atheist physicists like Penrose",
+          "Penrose, an atheist, concedes the ordering",
+          "the atheist Roger Penrose estimated"
+        ],
+        "must_not_fire": [
+          "a point conceded even by non-believing physicists like Roger Penrose",
+          "Penrose is no theist; he reads this as a clue about physics",
+          "Penrose (a non-theist)",
+          "the fine-tuning data is conceded by atheist physicists across the board"
+        ]
+      }
     }
   ]
 }

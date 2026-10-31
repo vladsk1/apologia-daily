@@ -2013,6 +2013,21 @@ essay-level citation check.
     thing a reader ever sees*, and the fence must live in the sentence itself (these surfaces cannot
     host an `orthonote` ＊). The essays are consistently clean; compression drift is where heresy
     actually ships, so this layer gets its own routine pass, not an afterthought.
+  - ⭐ **GATE AGENTS NOW LOAD TWO LEDGERS + CHECK A PRECISION CLASS (2026-10-31).** Both
+    `apologia-orthodoxy` and `apologia-neutrality` are instructed to load, re-check against, and
+    MAINTAIN two reference files at the start of every run: **`docs/known-traps.md`** (the specific
+    errors this site has actually shipped — the Son/Spirit relation-of-origin swap, the Julian trap,
+    the `pelach` overreach, the Colwell misattribution, the "same God" false common ground, etc.) and
+    **`docs/scholar-labels.md`** (how named scholars may/may not be described — Penrose, Lewis/Barnes,
+    Stenger, Ehrman, Allison, Vermes, BeDuhn, Mettinger, Bauckham). When a gate or a human catches a
+    NEW recurring trap or mislabel, add a row to the relevant ledger in the SAME change. Orthodoxy
+    also now certifies a **precision class** distinct from heresy — "right word, wrong person/category"
+    (relation-of-origin attribution, person-vs-nature, essence/substance/hypostasis, communicatio
+    idiomatum) — the class that is orthodox-sounding so the heresy scan passes it (it shipped once, in
+    the if-jesus-why-pray clarifier). Two mechanical nets back the proven cases:
+    `relation-of-origin-son-spirit-swap` and `penrose-atheist-label` in `retired-claims.json`. Both
+    gates also now owe a mandatory **"what I did NOT check"** residual line, and are told to VERIFY
+    (cite the source) rather than clear/flag a scholar-label or consensus claim from memory.
 - **Doctrinal clarifiers (`orthonote`) — STANDARD for delicate-but-orthodox phrases.** When a
   phrase is orthodox but a compressed reader could misread it as heterodox (subordination,
   modalism, tritheism, partialism, patripassianism, works-salvation, universalism-as-certain,
