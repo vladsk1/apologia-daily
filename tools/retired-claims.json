@@ -54,7 +54,17 @@
         "neither God nor other than God"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "the Ash'ari formula: the eternal Word is neither God nor other than God",
+          "Sunni theology calls it neither God nor other than God, just what we say of the Son"
+        ],
+        "must_not_fire": [
+          "the Ash'ari formula is 'neither He nor other than He' — neither identical with the bare essence nor a separate thing beside it",
+          "they hold the eternal Word to be neither He nor other than He"
+        ]
+      }
     },
     {
       "id": "colwell-qualitative",
@@ -67,7 +77,18 @@
         "Colwell[^.]{0,40}qualitative, not indefinite"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "Colwell's rule shows qualitative force, so 'the Word was God'",
+          "Colwell's construction means qualitative force here",
+          "Colwell proves it is qualitative, not indefinite"
+        ],
+        "must_not_fire": [
+          "The qualitative force is Harner's and Wallace's point, not Colwell's rule, which concerns definiteness",
+          "Colwell's rule is about definiteness; verse 3 settles the meaning"
+        ]
+      }
     },
     {
       "id": "nwt-identical-construction",
@@ -86,7 +107,19 @@
         "ev-m-john11.html",
         "ev-m-jesus_as_god_nt.html"
       ],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "the identical construction is rendered 'God' at 1:6, 1:12 and 1:13",
+          "the same construction appears four times in the same chapter",
+          "the NWT renders anarthrous theos 'God' throughout the same chapter",
+          "it is the identical construction in John 1"
+        ],
+        "must_not_fire": [
+          "The NWT renders article-less theos as 'God' at 1:6, 1:12 and 1:13 — but these are NOT the identical construction to 1:1c",
+          "the 1:6/1:12/1:13 parallels are anarthrous genitives, not the preverbal predicate; note 1:18 before the Witness raises it"
+        ]
+      }
     },
     {
       "id": "pelach-only-to-God",
@@ -106,7 +139,20 @@
       ],
       "allow": [],
       "netting": "phrase",
-      "cannot_net": "2026-08-14: 'the service of all nations' CANNOT be phrase-netted. It surfaced UNFENCED as the graded-correct answer on daily-mix.html:158 (fixed 2026-08-14 by resting the answer on cloud-coming) — but the same phrase is used LEGITIMATELY and fenced on four certified served surfaces: library/titles.html:140 and ev-s3.html:912 (both name pelach, cite Daniel 3:12 + the 7:27 saints reading, and rest the weight on the clouds), daily-args.json:361 ('though it is the manner of his coming, not the extent of his rule, that carries the weight'), and tools/reel/specs/jesus-titles.json (recites Daniel 7:14 then pivots to 'that imagery is not neutral — coming with the clouds'). A phrase net on the words would cry wolf on all four; the distinguisher is the FENCE, which a regex cannot see. Fix future overclaims at the source, as with daily-mix:158."
+      "cannot_net": "2026-08-14: 'the service of all nations' CANNOT be phrase-netted. It surfaced UNFENCED as the graded-correct answer on daily-mix.html:158 (fixed 2026-08-14 by resting the answer on cloud-coming) — but the same phrase is used LEGITIMATELY and fenced on four certified served surfaces: library/titles.html:140 and ev-s3.html:912 (both name pelach, cite Daniel 3:12 + the 7:27 saints reading, and rest the weight on the clouds), daily-args.json:361 ('though it is the manner of his coming, not the extent of his rule, that carries the weight'), and tools/reel/specs/jesus-titles.json (recites Daniel 7:14 then pivots to 'that imagery is not neutral — coming with the clouds'). A phrase net on the words would cry wolf on all four; the distinguisher is the FENCE, which a regex cannot see. Fix future overclaims at the source, as with daily-mix:158.",
+      "corpus": {
+        "must_fire": [
+          "Daniel's pelach is used only to God, so the Son of Man is divine",
+          "the service-word used of God is given to this figure",
+          "he is served with the worship due to God",
+          "in Daniel 7 the figure receives universal worship",
+          "he receives worship of all nations"
+        ],
+        "must_not_fire": [
+          "The clouds are the stronger half — cloud-riding is YHWH's own vehicle in the Hebrew Bible; treat the service-verb as suggestive, not decisive",
+          "pelach is also used of serving Nebuchadnezzar's gods, so it does not by itself settle who receives it"
+        ]
+      }
     },
     {
       "id": "son-of-man-never-disputed",
@@ -118,7 +164,15 @@
         "critics never accuse the church of inventing"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "critics never accuse the church of inventing the Son of Man sayings"
+        ],
+        "must_not_fire": [
+          "It is hard to explain as a church invention — about eighty times on Jesus' lips, almost absent from the epistles — and critics like Vielhauer do argue it"
+        ]
+      }
     },
     {
       "id": "only-formulation-keeps-all-data",
@@ -130,7 +184,15 @@
         "only formulation that keeps all the data"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "the Trinity is the only formulation that keeps all the data"
+        ],
+        "must_not_fire": [
+          "the reading that keeps all the data at once, where every rival buys its simplicity by dropping a line of it"
+        ]
+      }
     },
     {
       "id": "divine-identity-consensus",
@@ -160,7 +222,17 @@
         "expelled it almost unanimously"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "the pre-Nicene doctrine is the floor that never moves",
+          "the council expelled it almost unanimously"
+        ],
+        "must_not_fire": [
+          "the floor that barely moves — name the wobbles; the settlement was not secure until 381",
+          "Arius was condemned, though several who signed would soon waver in the decades that followed"
+        ]
+      }
     },
     {
       "id": "lds-christ-centred",
@@ -169,10 +241,20 @@
       "why": "Concedes the object of worship, not merely the sincerity — and on this page's own account the Christ in view is a different Christ.",
       "instead": "Concede sincerity and devoutness, then say plainly that sincerity is not the question at issue; who God is, is.",
       "patterns": [
-        "Christ-cent(re|er)ed lives"
+        "Christ-cent(ered|red) lives"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "Latter-day Saints live Christ-centred lives",
+          "they lead Christ-centered lives",
+          "Mormons live Christ-centred lives of real devotion"
+        ],
+        "must_not_fire": [
+          "Concede their sincerity and devoutness, then say plainly that sincerity is not the question at issue; who God is, is"
+        ]
+      }
     },
     {
       "id": "aseity-possessed-from-the-father",
@@ -184,7 +266,15 @@
         "underived aseity"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "the Son has underived aseity, possessed from the Father"
+        ],
+        "must_not_fire": [
+          "the Son possesses the same underived, self-existent life, eternally from the Father — an eternal relation of origin, never a dependence in being"
+        ]
+      }
     },
     {
       "id": "logos-distinct-from-essence",
@@ -198,7 +288,18 @@
         "Logos-shaped"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "the Logos is distinct in some way from the essence",
+          "the Word is not simply identical to the essence",
+          "it leaves a Logos-shaped slot in the Godhead"
+        ],
+        "must_not_fire": [
+          "One divine essence, undivided — eternally Father, Son and Spirit",
+          "the Ash'ari attribute language is reported as theirs, never as our own description of the Word"
+        ]
+      }
     },
     {
       "id": "objections-never-a-strawman",
@@ -210,7 +311,15 @@
         "never a strawman"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "each objection is stated as its strongest defender would put it — never a strawman"
+        ],
+        "must_not_fire": [
+          "Each objection is stated as you will actually meet it, then answered, with the hardest one named above"
+        ]
+      }
     },
     {
       "id": "nicaea-300-bishops",
@@ -223,7 +332,18 @@
         "~\\s*300 bishops"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "roughly 300 bishops gathered at Nicaea",
+          "about 300 bishops attended the council",
+          "~300 bishops signed the creed"
+        ],
+        "must_not_fire": [
+          "the sources vary between about 250 and 318 bishops",
+          "of the bishops present, all but two subscribed"
+        ]
+      }
     },
     {
       "id": "unearned-praise-ashari",
@@ -237,7 +357,18 @@
         "model of theological seriousness"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "the Ash'ari resolution is a genuine intellectual accomplishment",
+          "it is a marvel of careful thought",
+          "the formula is a model of theological seriousness"
+        ],
+        "must_not_fire": [
+          "a serious and disciplined position — then pivot immediately to what it concedes",
+          "serious theology, not evasion"
+        ]
+      }
     },
     {
       "id": "echad-composite-unity",
@@ -266,7 +397,17 @@
         "briefs-index.json",
         "briefs/_data.json"
       ],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "echad means a composite unity, hinting at the Trinity",
+          "the Hebrew 'one' carries a compound unity"
+        ],
+        "must_not_fire": [
+          "echad is the ordinary Hebrew word for one and carries no such freight",
+          "run 1 Corinthians 8:6 as a deliberate reformulation of the Shema, which McGrath notes is contested"
+        ]
+      }
     },
     {
       "id": "stoner-odds",
@@ -291,7 +432,15 @@
         "pocket-cards.html",
         "pocket-cards.json"
       ],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "Stoner calculated the odds at 1 in ten to the seventeenth"
+        ],
+        "must_not_fire": [
+          "Argue from textually secure prophecies like Isaiah 53:9 and the Dead Sea Scrolls' pre-Christian dating, not from manufactured odds"
+        ]
+      }
     },
     {
       "id": "isaiah53-fits-no-nation",
@@ -303,7 +452,15 @@
         "fits no nation"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "the Isaiah 53 servant fits no nation"
+        ],
+        "must_not_fire": [
+          "it fits awkwardly with a purely collective reading, though its defenders answer with a righteous remnant"
+        ]
+      }
     },
     {
       "id": "trinity-arithmetic-1x1x1",
@@ -316,7 +473,16 @@
         "1 x 1 x 1"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "classical writers preferred 1x1x1 to 1+1+1 as a Trinity illustration",
+          "the Trinity is 1 x 1 x 1, not 1 + 1 + 1"
+        ],
+        "must_not_fire": [
+          "the contradiction charge must be 'X and not-X, in the same respect'; meet the transitivity-of-identity argument rather than assuming it"
+        ]
+      }
     },
     {
       "id": "mihna-motive-christology",
@@ -329,7 +495,16 @@
         "standard histories of the Mihna"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "the Mu'tazila pushed the created-Quran doctrine to vindicate the Christian doctrine of the uncreated Christ",
+          "the standard histories of the Mihna say as much"
+        ],
+        "must_not_fire": [
+          "The Mu'tazila's worry, well attested, was internal: anything genuinely eternal is uncaused and self-subsistent, and those are marks of deity"
+        ]
+      }
     },
     {
       "id": "quranic-title-compounds",
@@ -381,7 +556,18 @@
         "distinct from (?:Allah|God) yet (?:divine|eternal and divine)"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "God's eternal speech is distinct from Allah yet divine",
+          "the Word is distinct from God, yet divine",
+          "something distinct from God yet eternal and divine"
+        ],
+        "must_not_fire": [
+          "the Ash'ari formula is 'neither He nor other than He' — neither identical with the bare essence nor a separate thing beside it",
+          "they hold the eternal Word to be neither He nor other than He, not a separate divine thing"
+        ]
+      }
     },
     {
       "id": "quran-predicts-resurrection",
@@ -673,7 +859,19 @@
         "(pre-existence|pre-existent)[^.]{0,60}(is|was|are|were) (a )?late (invention|development)"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "Ehrman's premise is that high Christology is late",
+          "high Christology is necessarily late, the critics say",
+          "it is the endpoint of a long evolution",
+          "pre-existence language was a late development"
+        ],
+        "must_not_fire": [
+          "The dispute is about KIND not DATE — Ehrman takes the earliest Christology to be one of exaltation, and dates the belief early",
+          "he disputes its content, not its date"
+        ]
+      }
     },
     {
       "id": "rival-same-christ-concession",
@@ -691,7 +889,19 @@
         "заљубени во Исус"
       ],
       "allow": [],
-      "netting": "phrase"
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "Latter-day Saints sincerely love Jesus",
+          "Mormons are genuinely in love with Jesus",
+          "Jehovah's Witnesses love Christ",
+          "they love Jesus with their whole hearts"
+        ],
+        "must_not_fire": [
+          "Many Latter-day Saints are sincere, moral, and devout; the question is not their sincerity but who God is",
+          "Concede sincerity and devoutness, never the relationship to Christ itself"
+        ]
+      }
     },
     {
       "id": "agent-never-shared-throne-or-name",
