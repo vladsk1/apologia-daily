@@ -689,3 +689,26 @@ test('scripture-ref resolver flags out-of-range chapters, not valid citations', 
   assert.deepEqual(bad('Ignatius, to the Ephesians 9:1'), []);
   assert.deepEqual(bad('2 Baruch 71:3'), []);
 });
+
+test('required-fences guard: catches a dropped fence, passes a present one, and the live registry has 0 gaps', async () => {
+  const { findGaps } = await import('../tools/check-required-fences.mjs');
+  const rule = { id: 'r', what: 'w', instead: 'i',
+                 files: ['a', 'b'], require: ['human nature', 'patripassian'] };
+  // File that keeps a required fence -> no gap; file that drops all of them -> one gap.
+  const store = { a: 'the Son suffered in his human nature', b: 'God the Son was executed.' };
+  const gaps = findGaps([rule], (f) => store[f] ?? null);
+  assert.deepEqual(gaps.map((g) => `${g.file}:${g.kind}`), ['b:missing-fence']);
+  // A listed file that does not exist is reported, not silently skipped.
+  const missing = findGaps([rule], (f) => (f === 'a' ? store.a : null));
+  assert.ok(missing.some((g) => g.file === 'b' && g.kind === 'missing-file'));
+  // The real registry over the real tree must be gap-free (the seed rules are validated).
+  const { readFileSync } = await import('node:fs');
+  const { fileURLToPath } = await import('node:url');
+  const { dirname, join } = await import('node:path');
+  const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+  const rules = JSON.parse(readFileSync(join(root, 'tools/required-fences.json'), 'utf8')).rules;
+  const liveGaps = findGaps(rules, (rel) => {
+    try { return readFileSync(join(root, rel), 'utf8'); } catch { return null; }
+  });
+  assert.deepEqual(liveGaps, [], `required-fences registry has gaps: ${JSON.stringify(liveGaps)}`);
+});

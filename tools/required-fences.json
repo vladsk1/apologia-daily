@@ -1,0 +1,47 @@
+{
+  "_readme": [
+    "REQUIRED-FENCE REGISTRY — the inverse of tools/retired-claims.json (check C1).",
+    "",
+    "retired-claims.json catches a BANNED claim REAPPEARING. This catches a REQUIRED",
+    "safeguard GOING MISSING — the compression-drift failure this repo records over and",
+    "over: an essay says 'X is true, but only in this fenced sense', and the card /",
+    "mastery page / daily-arg keeps X and drops the fence, so a sentence that was safe in",
+    "the essay reads as heresy on its own screen.",
+    "",
+    "Each rule says: these FILES make a claim that REQUIRES a fence, so each of them must",
+    "contain at least one of the `require` patterns (case-insensitive regexes, matched",
+    "against the raw served text — fences live in prose AND in card/ARG_PREMISES script",
+    "strings, so nothing is stripped). A file with none of them has dropped the fence.",
+    "",
+    "DISCIPLINE (identical to every other net here): a rule must pass on ALL current",
+    "content with ZERO gaps before it ships — a guard that fires on our own fenced pages",
+    "gets ignored. Scope `files` to pages that actually MAKE the claim (e.g. compassion.html",
+    "is NOT in the patripassianism rule — it never says the Son was executed, so it needs no",
+    "fence; adding it would false-fire). Seeded conservatively; add a rule only after",
+    "confirming every listed file currently passes (node tools/check-required-fences.mjs).",
+    "A genuinely fence-free exception is accepted on-record in required-fences-baseline.json."
+  ],
+  "rules": [
+    {
+      "id": "eternal-generation-not-lesser",
+      "what": "Any surface arguing eternal generation must fence the Son against derived/later/lesser deity (the Arian direction).",
+      "files": ["library/eternal_generation.html", "ev-m-eternal_generation.html"],
+      "require": ["co-?equal", "later or lesser", "relation of origin", "God from God", "begotten,? not made"],
+      "instead": "Carry one of: 'co-equal and co-eternal' / 'in no way later or lesser' / 'an eternal relation of origin' / 'God from God' / 'begotten, not made'."
+    },
+    {
+      "id": "cross-suffering-patripassianism-fence",
+      "what": "Any surface saying the Son or God was crucified/executed must fence patripassianism: the Son suffered in his assumed human nature; the divine nature did not die and the Father was not crucified.",
+      "files": [
+        "library/god-crucified.html", "ev-m-god-crucified.html",
+        "library/crucified-messiah.html", "ev-m-crucified-messiah.html",
+        "library/equality.html", "ev-m-equality.html"
+      ],
+      "require": [
+        "human nature", "communicatio", "patripassian", "impassib",
+        "not that the (divine nature|Father)", "the divine nature (did not|itself|never)"
+      ],
+      "instead": "Fence with the two-natures / communicatio idiomatum point: the eternal Son suffered in the human nature he assumed; the divine nature did not die and the Father was not crucified."
+    }
+  ]
+}
