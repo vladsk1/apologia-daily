@@ -32,17 +32,32 @@
         "the Logos structure",
         "hands the title to Jesus",
         "marks with that very vocabulary",
-        "maps precisely onto the Christian claim",
+        "maps? (precisely |neatly |exactly )?onto the Christian",
         "calls Jesus Kalimatullah",
         "same Quran calls Jesus God's Word",
         "Quran agrees that Jesus is a",
-        "the very parallel the text invites",
+        "the (very )?parallel[^.]{0,25}(text |quran |qur'?an )?invites",
         "the title carries eternal weight for a book",
-        "disagreeing only about whether that Word"
+        "disagreeing only about whether that Word",
+        "(Muslim|Islam|Qur'?an)[^.]{0,90}uncreated,? ?(and )?(eternal )?[Ww]ord[^.]{0,150}(gives?|applies|calls?|grants?|hands?|bestows?)[^.]{0,30}(that|the same |this )?(title|word|name)[^.]{0,25}(to )?(Jesus|him|Christ)",
+        "(already )?(believe|holds?|affirms?|accepts?)[^.]{0,45}uncreated,? ?(and )?(eternal )?[Ww]ord[^.]{0,120}(his own|the same) (book|Qur'?an|scripture)[^.]{0,70}(Jesus|that title|him)"
       ],
       "allow": [],
-      "netting": "phrase",
-      "rebuild_debt": "PHRASE-SHAPED ON A CLAIM-SHAPED SURFACE. This claim was retired on a free, indexed, deity/Trinity-tier surface (worldviews.html card 13, library/islam-eternalword.html), which the _readme rule says must be claim-shaped -- so the registry currently breaks its own rule in its first entry. Ten literal strings cover only the wordings someone happened to find; the distinctive MOVE (Qur'an-eternal-Word premise + Jesus-Word-title premise => shared eternity) has no general net. Known leak, verified by reading and NOT yet added as a must_fire because it would fail the suite before the rebuild lands: 'so the Muslim already believes in an uncreated Word - and his own book gives that title to Jesus' trips neither this entry nor quranic-title-compounds ('his own book' and 'that title' supply no Qur'an token, no Jesus token, no predicated title). REBUILD FIRST, then add that sentence as must_fire. Order after it: logos-distinct-from-essence (highest doctrinal stakes -- misses 'in some respect', 'somehow other than the essence', 'not wholly identical with the essence'), then ashari-formula-as-deity-predication ('neither Allah nor other than Allah' and 'not God and not other than God' both slip)."
+      "netting": "claim",
+      "corpus": {
+        "must_fire": [
+          "so the Muslim already believes in an uncreated Word - and his own book gives that title to Jesus",
+          "the Muslim already affirms an eternal, uncreated Word, and the same Qur'an applies that title to Jesus",
+          "the Islamic Logos structure maps precisely onto the Christian claim",
+          "and the very parallel the Quran invites is between the eternal Word and Jesus"
+        ],
+        "must_not_fire": [
+          "settling the Mihna, mainstream Sunni orthodoxy held God's speech eternal and uncreated — 'neither He nor other than He' — and thereby built the very category it tells Christians is incoherent",
+          "the two terms are genuinely different: the Qur'an's word for God's own speech is kalam; 4:171's word for Jesus is kalima, and Sunni theology has never identified them",
+          "the Qur'an calls Jesus 'a Word from God' (Surah 4:171), meaning he was brought into being by God's command 'Be'"
+        ]
+      },
+      "rebuild_debt": "DISCHARGED 2026-10-31 — rebuilt from phrase to claim. The two proximity regexes now catch the distinctive MOVE regardless of wording: an Islamic-frame token (Muslim/Islam/Qur'an) + the uncreated/eternal Word + the bridge verb transferring that title to Jesus. Validated 0 false hits on the whole served corpus, fires on the known leak ('the Muslim already believes in an uncreated Word - and his own book gives that title to Jesus', now a must_fire) and its variants, and stays quiet on the STRUCTURAL argument and the lexical DISTINCTION the essay legitimately draws (both must_not_fire). allow stays [] — the net does not fire on library/islam-eternalword.html even though that essay states the bridge in order to reject it, because the refutation keeps the two premises on opposite sides of a full stop. ORIGINAL DEBT, kept for the record: PHRASE-SHAPED ON A CLAIM-SHAPED SURFACE. This claim was retired on a free, indexed, deity/Trinity-tier surface (worldviews.html card 13, library/islam-eternalword.html), which the _readme rule says must be claim-shaped -- so the registry currently breaks its own rule in its first entry. Ten literal strings cover only the wordings someone happened to find; the distinctive MOVE (Qur'an-eternal-Word premise + Jesus-Word-title premise => shared eternity) has no general net. Known leak, verified by reading and NOT yet added as a must_fire because it would fail the suite before the rebuild lands: 'so the Muslim already believes in an uncreated Word - and his own book gives that title to Jesus' trips neither this entry nor quranic-title-compounds ('his own book' and 'that title' supply no Qur'an token, no Jesus token, no predicated title). REBUILD FIRST, then add that sentence as must_fire. Order after it: logos-distinct-from-essence (highest doctrinal stakes -- misses 'in some respect', 'somehow other than the essence', 'not wholly identical with the essence'), then ashari-formula-as-deity-predication ('neither Allah nor other than Allah' and 'not God and not other than God' both slip)."
     },
     {
       "id": "ashari-formula-as-deity-predication",
@@ -51,14 +66,17 @@
       "why": "The formula (la huwa wa la ghayruhu) is about the attribute vis-a-vis the ESSENCE, not a predication of deity. Rendered this way it predicates near-deity of an impersonal attribute, and when set beside John 1:1 it flattens the Son toward an attribute — the compressed-modalist direction.",
       "instead": "'neither He nor other than He' — neither identical with the bare essence nor a separate thing beside it. And state the asymmetry: the Ash'ari formula denies otherness; John positively confesses that the Word IS God, a divine person and not an attribute.",
       "patterns": [
-        "neither God nor other than God"
+        "neither (God|Allah)[^.]{0,8}(nor|and not)[^.]{0,20}(other than |anything other than )?(God|Allah)",
+        "not (God|Allah),?[^.]{0,8}(nor|and not)[^.]{0,20}(other than |anything other than )?(God|Allah)"
       ],
       "allow": [],
-      "netting": "phrase",
+      "netting": "claim",
       "corpus": {
         "must_fire": [
           "the Ash'ari formula: the eternal Word is neither God nor other than God",
-          "Sunni theology calls it neither God nor other than God, just what we say of the Son"
+          "Sunni theology calls it neither God nor other than God, just what we say of the Son",
+          "they render it neither Allah nor other than Allah",
+          "the Word is not God and not other than God"
         ],
         "must_not_fire": [
           "the Ash'ari formula is 'neither He nor other than He' — neither identical with the bare essence nor a separate thing beside it",
@@ -283,21 +301,26 @@
       "why": "That is the Arian direction. The orthodoxy gate rated it the nearest thing to a deploy-blocker in its batch.",
       "instead": "One divine essence, undivided — eternally Father, Son and Spirit. Report Ash'ari attribute language as THEIRS, never as a description of the Logos.",
       "patterns": [
-        "distinct in some (way|sense) from the essence",
-        "not simply identical to the essence",
+        "(distinct|other|separate)[^.]{0,25}(in some (way|sense|respect)|somehow)[^.]{0,25}from the essence",
+        "(somehow |in some (way|sense|respect) )(other than|distinct from|separate from) the essence",
+        "not (simply |wholly |fully |entirely )?identical (to|with)[^.]{0,20}the essence",
         "Logos-shaped"
       ],
       "allow": [],
-      "netting": "phrase",
+      "netting": "claim",
       "corpus": {
         "must_fire": [
           "the Logos is distinct in some way from the essence",
           "the Word is not simply identical to the essence",
+          "the Word is distinct in some respect from the essence",
+          "the Logos is somehow other than the essence",
+          "it is not wholly identical with the essence",
           "it leaves a Logos-shaped slot in the Godhead"
         ],
         "must_not_fire": [
           "One divine essence, undivided — eternally Father, Son and Spirit",
-          "the Ash'ari attribute language is reported as theirs, never as our own description of the Word"
+          "the Ash'ari attribute language is reported as theirs, never as our own description of the Word",
+          "the Son is of one essence with the Father, homoousios"
         ]
       }
     },
