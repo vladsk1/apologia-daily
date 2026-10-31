@@ -1135,7 +1135,19 @@
 >   `verified:true`). The creeds + Athanasius §54 were confirmed at some point after this item was written;
 >   no passage is held back now. (A 7th, a Chrysostom eucharist passage, was **removed** 2026-07-26 — see
 >   `docs/source-library-held.md`.)
-> - **Monthly agent-sweep Routine was never created** (`create_trigger` hit a permission error).
+> - ✅ **DONE 2026-10-31 — the monthly agent-sweep scheduled task now exists** (`trig_01JppxGv59UDiJqqF4k9QYNh`,
+>   "Monthly doctrine sweep", cron `23 18 1 * *` UTC, fires a FRESH session on the 1st of each month;
+>   first run 2026-11-01). It runs the dual-consensus lenses (orthodoxy + neutrality) as READ-ONLY agents
+>   over the compressed/shareable layer + a rotating twelfth of the essays, re-checks `docs/known-traps.md`
+>   + `docs/scholar-labels.md` + the precision class, and is **REPORT-ONLY**: it writes
+>   `docs/audits/monthly-sweep-<YYYY-MM>.md` to a `sweep-<YYYY-MM>` branch (never main), opens a task
+>   suggestion for blocking findings, and deploys NOTHING (a fix re-opens the gate → human-supervised
+>   round). Push notification on completion. ⚠ The fired session runs WITHOUT MCP connector tools (the
+>   trigger stores none) — it relies only on built-in git/node/file/agent tools, which is all the sweep
+>   needs; if `spawn_task` is unavailable in that session it degrades to the written report. To change the
+>   cadence/scope, edit the trigger (`update_trigger`) — do not delete+recreate (loses run history).
+>   **STILL SEPARATE:** the `apologia-engineer` monthly SECURITY sweep of `api/*.js` + RLS is a different
+>   job and does not yet have its own scheduled task.
 > - **Browser-verify:** the CSP; the nav mega-menu on desktop + mobile; SRI on the gated essays.
 > - Bring the nav mega-menu to the gated pages via a stamp pass.
 > - ✅ **RESOLVED/VERIFIED 2026-10-28 — `ev-s3.html` has been fully re-gated since.** Its `citations`
