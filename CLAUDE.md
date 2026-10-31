@@ -2000,6 +2000,19 @@ essay-level citation check.
   `apologia-orthodoxy` AND the adversarial `apologia-neutrality` red-team to certify CLEAN (two
   independent lenses must agree) before deploy. Record both in the stamp `by` note. For all other
   content the single orthodoxy gate remains the bar.
+  - ⭐ **A3 — DIVERSIFY THE LENS (2026-10-31).** Where practical, run the two dual-consensus passes
+    on **different model families** (e.g. one lens on a non-Opus model), and name the model that ran
+    each in the stamp `by` note. Two lenses from the *same* model share blind spots; a different
+    model catches what the first cannot see. Not a hard blocker (a second family is not always
+    available), but the default for the highest-stakes tiers — prefer a cross-model dual consensus to
+    a same-model one.
+  - ⭐ **C2 — PULL-QUOTE TEST ON THE COMPRESSED/SHAREABLE LAYER, ROUTINELY (2026-10-31).** The
+    orthodoxy + neutrality passes are not essay-only. Every compressed, screenshot-and-share surface —
+    `ev-m-*` `ARG_PREMISES`/flashcard `cards`/quiz `checks`/drill answers, pocket cards, `daily-args`,
+    `worldviews.html` tiers, reel specs and X-cards — is read *in isolation, as if it were the only
+    thing a reader ever sees*, and the fence must live in the sentence itself (these surfaces cannot
+    host an `orthonote` ＊). The essays are consistently clean; compression drift is where heresy
+    actually ships, so this layer gets its own routine pass, not an afterthought.
 - **Doctrinal clarifiers (`orthonote`) — STANDARD for delicate-but-orthodox phrases.** When a
   phrase is orthodox but a compressed reader could misread it as heterodox (subordination,
   modalism, tritheism, partialism, patripassianism, works-salvation, universalism-as-certain,
