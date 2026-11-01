@@ -1,6 +1,6 @@
 {
   "generated": "tools/build-pocket-data.mjs — do not edit by hand; edit pocket-cards.html",
-  "count": 77,
+  "count": 78,
   "cards": [
     {
       "id": "kalam",
@@ -801,6 +801,31 @@
         "reply": "But invention is a poor explanation of rough edges. If the evangelists were freely composing prophecies to fit the outcome, why leave the sign of Jonah a riddle, preserve the disciples' failure to understand, and let the temple saying stand as a hostile accusation at the trial? Even Ehrman grants Jesus announced coming judgment and vindication, and Dale Allison — no apologist — judges he likely foresaw his death and looked for vindication. The bounded verdict: Jesus went to Jerusalem expecting to die and foretold, in veiled terms, that God would vindicate him beyond death — a supporting strand, not a standalone proof."
       },
       "essay": "library/respred.html"
+    },
+    {
+      "id": "nt-use-of-ot",
+      "category": "jesus",
+      "categoryLabel": "Who is Jesus?",
+      "title": "Did the New Testament Quote the Old Testament Out of Context?",
+      "tagline": "The method charge — that the apostles ripped verses out of context — fails: the New Testament’s use of the Old is graded, self-aware, and open to inspection.",
+      "points": [
+        "“Quoting the Old Testament” is not one move but four — Matthew 2 cites it as direct prediction (Micah 5:2), typology (Hosea 11:1), applied analogy (Jeremiah 31:15), and summary (“a Nazarene”)",
+        "“Fulfill” (Greek plēroō) is wider than “predict” — often “filled full,” a pattern reaching completion in Christ; Jesus came to “fulfill” the Law (Matthew 5:17), and commandments are not predictions",
+        "The method is contextual, not atomistic — the earliest datable Jewish scribal exegesis assumed Scripture coherent and read in context (Instone-Brewer); Snodgrass finds the same in the New Testament",
+        "The forward-leaning reading was not imposed from outside — Israel’s own Scriptures already read their promises as still reaching ahead (inner-biblical exegesis; Fishbane)"
+      ],
+      "question": "In one chapter Matthew quotes the Old Testament four different ways and flags which is which. Is that the behaviour of someone ripping verses out of context?",
+      "deeper": {
+        "objection": "The sharpest form is S. Vernon McCasland’s 1961 article, blunt in its title — “Matthew Twists the Scriptures”: Matthew sets Hosea’s “Out of Egypt I called my son” over the flight to Egypt, yet in Hosea the line is about Israel’s past exodus, has no future-tense verb, and its “son” is the nation, not an individual — past history read as prediction and dressed up as fulfilled prophecy.",
+        "concession": "Grant the kernel: the objection is right about Hosea’s grammar — the verse is about the past, and its “son” is Israel. And some New Testament citations really are highly compressed, so the question of method is a live one among specialists, not a settled triviality.",
+        "reply": "But “fulfill” (plēroō) is wider than “prediction” — Jesus came to “fulfill” the Law (Matthew 5:17), and commandments are not predictions — so Matthew is drawing an analogy, not mistaking a memory for a forecast; the “son” is Israel precisely because his claim is that Jesus sums up Israel’s story in himself. And the method is sorted and self-aware: Matthew 2 cites the Old in four distinct ways and flags the looser links with a looser verb, a contextual habit the earliest Jewish exegesis shared (Instone-Brewer, Snodgrass), and the forward-leaning reading was not imposed from outside — Israel’s own Scriptures already read their promises as still reaching ahead. Honest limit: this shows the New Testament reads in context; it does not by itself prove Jesus is the one in whom Israel’s story reaches its goal — that case rests on the resurrection.",
+        "_src": {
+          "objection": "nt-use-of-ot.html:137",
+          "concession": "nt-use-of-ot.html:137, nt-use-of-ot.html:151",
+          "reply": "nt-use-of-ot.html:139, nt-use-of-ot.html:151, nt-use-of-ot.html:155, nt-use-of-ot.html:163"
+        }
+      },
+      "essay": "library/nt-use-of-ot.html"
     },
     {
       "id": "manuscripts",
