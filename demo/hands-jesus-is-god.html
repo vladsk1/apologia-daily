@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<!-- content-review: {"argument":"2026-11-02-ported","orthodoxy":"2026-11-02-ported","by":"HANDS teaching deck (Jesus is God, deity of Christ). PORTED from already dual-consensus-certified content: library/hands.html + ev-m-hands.html + the ev-s HANDS cards. Every slide reviewed VISUALLY with the owner over this session; the standard fences are carried verbatim from the certified source (angel twice refuses worship / the Lamb receives what the angel forbids; Shema reworked within not beside, McGrath hedge noted; Titus 2:13 most-natural-reading-of-the-Greek; Distinct persons, one God; Fully God and fully man). The dedicated apologia-argument / apologia-orthodoxy / apologia-neutrality gates were NOT separately re-run on this assembled deck. Deployed UNLISTED (noindex,nofollow; not in nav/sitemap/search) for a private share with a specific church. RUN THE DEDICATED GATES before any public / linked use."} -->
+<title>Jesus is God — HANDS</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  /* HANDS — editorial, fine-Bible treatment. Committed light "parchment" world. */
+  :root{
+    --paper:#f3ecdd; --paper-hi:#faf5ea; --paper-lo:#ebe1cc; --card:#fcf8ee;
+    --ink:#201a12; --ink-soft:#514a3d; --muted:#8f8571;
+    --gold:#8a6410; --gold-leaf:#c39a3c; --gold-bright:#d8b457;
+    --navy:#0f1c33; --navy-deep:#0a1527; --cream:#f3ecdd;
+    --rule:#ddd1b6; --rule-soft:#e8dec9; --hair:#c9bb9b;
+    --display:"Playfair Display", Georgia, "Times New Roman", serif;
+    --body:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --maxw:1020px;
+    color-scheme: light;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; color:var(--ink); font-family:var(--body);
+    -webkit-font-smoothing:antialiased; overflow:hidden;
+    background:
+      radial-gradient(1200px 760px at 50% -12%, var(--paper-hi), transparent 60%),
+      radial-gradient(1000px 720px at 108% 112%, var(--paper-lo), transparent 55%),
+      var(--paper);
+  }
+  body::before{ content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:60; background:var(--paper-hi); }
+
+  .stage{position:fixed; inset:0; z-index:1; display:flex; align-items:center; justify-content:center;
+    padding-left:max(32px, env(safe-area-inset-left,0px)); padding-right:max(32px, env(safe-area-inset-right,0px));
+    padding-block:80px; overflow-y:auto;}
+  .slide{width:100%; max-width:var(--maxw); margin:auto; display:none; animation:fade .5s ease both}
+  .slide.active{display:block}
+  @keyframes fade{from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:none}}
+  @media (prefers-reduced-motion:reduce){.slide{animation:none}}
+
+  /* ——— masthead kicker (double hairline) ——— */
+  .kicker{font-family:var(--body); text-transform:uppercase; letter-spacing:.26em; font-size:.68rem;
+    font-weight:700; color:var(--gold); display:flex; align-items:center; gap:.8rem; margin:0 0 1.5rem;
+    padding-bottom:.7rem; position:relative}
+  .kicker::before{content:""; position:absolute; left:0; right:0; bottom:0; height:3px;
+    border-top:1px solid var(--hair); border-bottom:1px solid var(--rule-soft)}
+  .kicker .dim{color:var(--muted); font-weight:600; letter-spacing:.2em}
+  .orn{color:var(--gold-leaf); font-size:.7em; transform:translateY(-1px)}
+
+  h1{font-family:var(--display); font-weight:600; font-size:clamp(3rem,8.5vw,5.8rem); line-height:1.0;
+    letter-spacing:-.015em; margin:0; text-wrap:balance}
+  h2{font-family:var(--display); font-weight:600; font-size:clamp(2rem,4.6vw,3.1rem); line-height:1.08;
+    letter-spacing:-.012em; margin:0 0 1.1rem; text-wrap:balance}
+  p{font-size:clamp(1.04rem,1.7vw,1.24rem); line-height:1.64; color:var(--ink-soft); margin:0 0 1.05rem; max-width:63ch}
+  .lead{font-size:clamp(1.18rem,2.1vw,1.5rem); color:var(--ink); line-height:1.5}
+  b,strong{color:var(--ink); font-weight:600}
+  .gold{color:var(--gold); font-weight:600}
+  .dropcap::first-letter{font-family:var(--display); font-weight:700; float:left; font-size:3.5em;
+    line-height:.72; padding:.05em .1em 0 0; color:var(--gold); font-optical-sizing:auto}
+
+  /* ——— cover ——— */
+  .cover{text-align:center; padding:1rem 0}
+  .cover-frame{display:inline-flex; gap:1rem; align-items:center; justify-content:center; width:100%;
+    text-transform:uppercase; letter-spacing:.3em; font-size:.72rem; font-weight:700; color:var(--gold); margin-bottom:2.4rem}
+  .cover-frame::before,.cover-frame::after{content:""; height:1px; background:linear-gradient(90deg,transparent,var(--hair)); flex:1; max-width:120px}
+  .cover-frame::after{background:linear-gradient(90deg,var(--hair),transparent)}
+  .cover h1{font-family:"Playfair Display", Georgia, serif; font-size:clamp(3.6rem,12vw,7.4rem); font-weight:600}
+  .goldrule{display:flex; align-items:center; justify-content:center; gap:.9rem; margin:1.9rem 0}
+  .goldrule::before,.goldrule::after{content:""; height:2px; width:70px; background:var(--gold-leaf); border-radius:2px}
+  .goldrule .d{color:var(--gold-leaf); font-size:.8rem}
+  .cover .sub{font-family:var(--display); font-style:italic; font-size:clamp(1.3rem,3vw,1.95rem); color:var(--ink-soft)}
+  .cover .foot{margin-top:2.8rem; font-size:.78rem; letter-spacing:.22em; text-transform:uppercase; color:var(--muted)}
+
+  /* ——— generic blocks ——— */
+  .note{font-size:.95rem; color:var(--muted); font-style:italic; max-width:62ch}
+  .pull{margin:1.5rem 0 0; padding:1.25rem 1.5rem; background:var(--card); border:1px solid var(--rule);
+    border-left:3px solid var(--gold-leaf); border-radius:5px; color:var(--ink); font-size:clamp(1.02rem,1.8vw,1.2rem);
+    line-height:1.56; max-width:none; box-shadow:0 1px 0 var(--paper-hi), 0 10px 30px -22px rgba(32,26,18,.5)}
+  blockquote{margin:0; font-family:var(--display); font-style:italic; font-weight:400;
+    font-size:clamp(1.55rem,3.5vw,2.4rem); line-height:1.26; color:var(--ink); padding-left:1.4rem;
+    border-left:3px solid var(--gold-leaf); position:relative}
+  blockquote cite{display:block; margin-top:.75rem; font-family:var(--body); font-style:normal; font-weight:700;
+    font-size:.74rem; letter-spacing:.16em; text-transform:uppercase; color:var(--gold)}
+
+  /* ——— scholars ——— */
+  .scholars{display:flex; flex-direction:column; gap:1rem; margin-top:.6rem}
+  .scholar{display:grid; grid-template-columns:168px 1fr; gap:1rem 1.3rem; align-items:baseline;
+    padding:1.1rem 1.3rem; background:var(--card); border:1px solid var(--rule); border-radius:7px}
+  .scholar .tag{font-family:var(--display); font-weight:600; color:var(--gold); font-size:1.08rem; line-height:1.15}
+  .scholar p{margin:0; font-size:.98rem; line-height:1.5}
+
+  /* ——— hand motif + legend ——— */
+  .hand-wrap{display:grid; grid-template-columns:auto auto; gap:2.8rem; align-items:center; align-self:center; margin:1.6rem 0 1.2rem}
+  .hand-svg{width:clamp(200px,30vw,290px); height:auto; display:block}
+  .legend{display:flex; flex-direction:column; gap:.55rem}
+  .legend .li{display:grid; grid-template-columns:2.2rem 1fr; align-items:baseline; gap:.8rem;
+    padding:.55rem 0; border-top:1px solid var(--rule-soft)}
+  .legend .li:first-child{border-top:none}
+  .legend .lt{font-family:var(--display); font-weight:700; color:var(--gold); font-size:1.5rem; line-height:1}
+  .legend .lw{font-weight:600; color:var(--ink)}
+  .legend .lw small{display:block; font-weight:400; color:var(--ink-soft); font-size:.86rem; margin-top:.1rem}
+
+  /* ——— letter page ——— */
+  .letter{position:relative}
+  .ghost{position:absolute; top:12px; right:4%; font-family:var(--display); font-weight:900;
+    font-size:min(32vh,230px); line-height:.78; color:var(--gold-leaf); opacity:.09; pointer-events:none; z-index:0}
+  .lgrid{position:relative; z-index:1; display:grid; grid-template-columns:1.3fr .85fr; gap:2.6rem; align-items:start}
+  .lhead{display:flex; align-items:center; gap:1.1rem; margin-bottom:1.2rem; position:relative; z-index:1}
+  .numbox{width:74px; height:74px; flex:none; display:grid; place-items:center; border:1px solid var(--gold-leaf);
+    border-radius:8px; background:var(--card); position:relative; box-shadow:inset 0 0 0 3px var(--paper-hi)}
+  .numbox .bl{font-family:var(--display); font-weight:700; font-size:2.4rem; color:var(--gold); line-height:1}
+  .lhead .wordmark{display:flex; flex-direction:column; gap:.3rem}
+  .lhead .wordmark .w{font-family:var(--display); font-size:1.15rem; font-weight:600; letter-spacing:.02em; color:var(--ink); text-transform:uppercase}
+  .ticks{display:flex; gap:.45rem; align-items:center}
+  .tick{width:22px; height:4px; border-radius:3px; background:var(--rule)}
+  .tick.on{background:var(--gold-leaf)}
+  .teach h2{margin-top:0}
+  .teach p{font-size:clamp(1rem,1.7vw,1.18rem)}
+  .fence{margin-top:1.15rem; font-size:.97rem; color:var(--ink); line-height:1.5; padding-top:.85rem;
+    border-top:1px solid var(--rule)}
+  .fence b{color:var(--gold)}
+  .fence::before{content:"◆"; color:var(--gold-leaf); font-size:.7rem; margin-right:.5rem; vertical-align:1px}
+  .hero{margin:1.6rem 0 0}
+  .ev{background:var(--card); border:1px solid var(--rule); border-radius:9px; padding:1.35rem 1.45rem;
+    box-shadow:0 12px 34px -26px rgba(32,26,18,.6)}
+  .ev h3{margin:0 0 1.1rem; font-family:var(--body); font-size:.7rem; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--gold); font-weight:700; padding-bottom:.7rem; border-bottom:1px solid var(--rule)}
+  .ev ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.9rem}
+  .ev li{font-size:.92rem; line-height:1.46; color:var(--ink-soft)}
+  .ev li .r{display:block; font-weight:600; color:var(--ink); font-size:.82rem; letter-spacing:.02em; margin-bottom:.12rem}
+  .ev li .r .v{color:var(--gold); text-transform:uppercase; letter-spacing:.04em}
+  .ev li.minor{font-size:.82rem; color:var(--muted)}
+
+  /* ——— summary table ——— */
+  .tablewrap{overflow-x:auto; border:1px solid var(--rule); border-radius:9px; background:var(--card); margin-top:.5rem}
+  table{border-collapse:collapse; width:100%; min-width:540px}
+  th,td{text-align:left; padding:.85rem 1.1rem; vertical-align:baseline}
+  thead th{font-family:var(--body); font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; color:var(--gold);
+    font-weight:700; border-bottom:1px solid var(--rule)}
+  tbody tr+tr td{border-top:1px solid var(--rule-soft)}
+  tbody tr:nth-child(even){background:rgba(195,154,60,.05)}
+  td:first-child{font-family:var(--display); font-weight:600; color:var(--ink); white-space:nowrap; font-size:1.05rem}
+  td{font-size:.95rem; color:var(--ink-soft)}
+  td .v{color:var(--gold); font-weight:600; font-size:.84rem; text-transform:uppercase; letter-spacing:.03em}
+
+  /* ——— verdict (inverted, inset frame) ——— */
+  .verdict{position:relative; background:
+      radial-gradient(900px 500px at 50% -20%, #16263f, transparent 60%), var(--navy);
+    color:var(--cream); border-radius:12px; padding:clamp(2.4rem,5.5vw,3.8rem); text-align:center;
+    box-shadow:0 30px 70px -30px rgba(10,21,39,.8)}
+  .verdict::before{content:""; position:absolute; inset:15px; border:1px solid rgba(216,180,87,.4); border-radius:7px; pointer-events:none}
+  .verdict > *{position:relative}
+  .verdict .kicker{color:var(--gold-bright); justify-content:center; border:none; padding:0; margin-bottom:1.4rem}
+  .verdict .kicker::before{display:none}
+  .verdict .lead{color:#d8deea; max-width:60ch; margin:0 auto 1.7rem}
+  .verdict .big{font-family:var(--display); font-weight:600; font-size:clamp(3rem,8.5vw,5.4rem); color:var(--gold-bright);
+    margin:.2rem 0; line-height:1; letter-spacing:-.01em}
+  .verdict .fg{font-family:var(--display); font-style:italic; font-size:clamp(1.3rem,3vw,1.95rem); color:var(--cream); margin:.3rem 0 1.5rem}
+  .verdict blockquote{border-color:var(--gold-bright); color:var(--cream); display:inline-block; text-align:left; margin-top:.4rem}
+  .verdict blockquote cite{color:var(--gold-bright)}
+
+  /* ——— how to teach ——— */
+  .steps{display:flex; flex-direction:column; gap:.2rem; margin-top:.6rem}
+  .q{display:grid; grid-template-columns:auto 1fr; gap:1rem; align-items:baseline; padding:.85rem 0; border-top:1px solid var(--rule)}
+  .q .n{font-family:var(--display); font-weight:600; color:var(--gold); font-size:1.3rem; line-height:1}
+  .q p{margin:0; color:var(--ink); font-size:1.02rem}
+
+  .sources .big-link{font-family:var(--display); font-size:clamp(1.25rem,2.6vw,1.65rem); color:var(--gold); margin:.5rem 0 1.1rem; word-break:break-word}
+
+  /* ——— chrome ——— */
+  .brand{position:fixed; z-index:40; top:calc(env(safe-area-inset-top,0px) + 20px);
+    left:max(26px, env(safe-area-inset-left,0px)); font-family:var(--display); font-weight:600; font-size:1rem; color:var(--ink); letter-spacing:.01em}
+  .brand span{color:var(--gold)}
+  .counter{position:fixed; z-index:40; top:calc(env(safe-area-inset-top,0px) + 20px);
+    right:max(26px, env(safe-area-inset-right,0px)); font-variant-numeric:tabular-nums; color:var(--muted); font-size:.78rem; letter-spacing:.14em}
+  .progress{position:fixed; top:0; left:0; height:3px; background:var(--gold-leaf); z-index:50; transition:width .35s ease}
+  .nav{position:fixed; z-index:40; bottom:calc(env(safe-area-inset-bottom,0px) + 16px); left:0; right:0;
+    display:flex; align-items:center; justify-content:center; gap:1rem;
+    padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .btn{appearance:none; border:1px solid var(--rule); background:var(--card); color:var(--ink);
+    width:46px; height:46px; border-radius:50%; font-size:1.2rem; cursor:pointer; display:grid; place-items:center;
+    transition:background .2s,border-color .2s,color .2s; box-shadow:0 6px 18px -12px rgba(32,26,18,.5)}
+  .btn:hover{background:var(--gold-leaf); border-color:var(--gold-leaf); color:#fff}
+  .btn:focus-visible{outline:2px solid var(--gold); outline-offset:2px}
+  .btn[disabled]{opacity:.32; cursor:default; box-shadow:none}
+  .dots{display:flex; gap:.42rem; flex-wrap:wrap; justify-content:center; max-width:56vw}
+  .dot{width:7px; height:7px; border-radius:50%; background:var(--rule); border:none; padding:0; cursor:pointer; transition:transform .2s,background .2s}
+  .dot.on{background:var(--gold-leaf); transform:scale(1.35)}
+  .hint{position:fixed; z-index:40; bottom:calc(env(safe-area-inset-bottom,0px) + 74px); left:0; right:0; text-align:center;
+    color:var(--muted); font-size:.76rem; pointer-events:none; transition:opacity .5s}
+
+  @media (max-width:860px){
+    .lgrid{grid-template-columns:1fr; gap:1.4rem}
+    .ghost{font-size:32vh; top:-2rem}
+    .hand-wrap{grid-template-columns:1fr; justify-items:center; gap:1.3rem}
+    .scholar{grid-template-columns:1fr; gap:.3rem}
+  }
+  @media (max-width:620px){
+    .brand,.hint{display:none}
+    .stage{padding-block:68px}
+    .numbox{width:60px; height:60px}
+    .numbox .bl{font-size:2rem}
+  }
+</style>
+
+<div class="progress" id="progress"></div>
+<div class="brand">Apologia <span>Daily</span></div>
+<div class="counter" id="counter">1 / 13</div>
+</head>
+<body>
+<main class="stage" id="stage" tabindex="0" aria-live="polite">
+
+  <!-- 1 COVER -->
+  <section class="slide active cover" aria-label="Cover">
+    <div class="cover-frame">A Teaching from the Evidence Library</div>
+    <h1>Jesus&nbsp;is&nbsp;God</h1>
+    <div class="goldrule"><span class="d">◆</span></div>
+    <p class="sub">The HANDS Framework — five reasons from the Bible</p>
+    <p class="foot">Apologia Daily · apologiadaily.com</p>
+  </section>
+
+  <!-- 2 BIG IDEA -->
+  <section class="slide" aria-label="The big idea">
+    <p class="kicker"><span class="orn">◆</span> The big idea</p>
+    <h2>Five things that belong to God alone</h2>
+    <p class="dropcap">The New Testament gives Jesus five things that, in the Bible, belong to God alone — the <b>H</b>onors, <b>A</b>ttributes, <b>N</b>ames, <b>D</b>eeds, and <b>S</b>eat of God.</p>
+    <p>The earliest Christians were Jews who would rather die than worship an idol. Yet they gave Jesus the honor due to God alone — and still believed they were faithful to the one God. They were not turning a man into a god. They had come to see that Jesus, the crucified Galilean they knew, is <b>God himself — truly God, and truly man</b>.</p>
+    <div class="pull">This study walks through all five strands of evidence, so you can see for yourself how the New Testament presents Jesus — and carry the case in your hand.</div>
+  </section>
+
+  <!-- 3 WHERE IT COMES FROM -->
+  <section class="slide" aria-label="Where it comes from">
+    <p class="kicker"><span class="orn">◆</span> Where it comes from</p>
+    <h2>Not a new idea</h2>
+    <p>A simple way to organise what the Bible already says. Three leading scholars gather the same evidence:</p>
+    <div class="scholars">
+      <div class="scholar"><div class="tag">HANDS</div><p>Robert Bowman &amp; J. Ed Komoszewski, evangelical scholars, in <i>Putting Jesus in His Place</i> (2007).</p></div>
+      <div class="scholar"><div class="tag">Divine identity</div><p>Richard Bauckham: the one God is known by who he is — he alone creates, rules, bears the divine name, and is worshipped. The New Testament deliberately places Jesus <b>inside</b> that identity.</p></div>
+      <div class="scholar"><div class="tag">Early worship</div><p>Larry Hurtado: devotion to Jesus as divine appears at the <b>earliest stage we can see</b> — within the first years, among Jews — not a belief that grew up gradually in later generations.</p></div>
+    </div>
+  </section>
+
+  <!-- 4 ONE HAND -->
+  <section class="slide" aria-label="One hand, five fingers">
+    <p class="kicker"><span class="orn">◆</span> The big picture</p>
+    <h2>One hand, five fingers</h2>
+    <p>Each finger stands for <b>one thing that belongs to God alone</b>. The New Testament gives <b>all five</b> to Jesus.</p>
+    <div class="hand-wrap">
+      <svg class="hand-svg" viewBox="0 0 300 330" role="img" aria-label="A hand; its five fingers are labelled H, A, N, D, S">
+        <defs><style>
+          .fng{fill:var(--card); stroke:var(--gold-leaf); stroke-width:2.4}
+          .fl{fill:var(--gold); font-family:var(--display); font-weight:700; font-size:20px; text-anchor:middle}
+        </style></defs>
+        <!-- palm -->
+        <path class="fng" d="M78 196 q-6 70 24 104 q22 26 60 26 q46 0 66 -30 q16 -26 16 -74 l0 -30 q-83 -16 -166 -16 z"/>
+        <!-- thumb (H) angled left -->
+        <g transform="rotate(-38 92 206)"><rect class="fng" x="70" y="120" width="34" height="96" rx="17"/></g>
+        <text class="fl" x="52" y="118">H</text>
+        <!-- index (A) --><rect class="fng" x="112" y="96" width="33" height="118" rx="16"/><text class="fl" x="128" y="88">A</text>
+        <!-- middle (N) --><rect class="fng" x="150" y="74" width="33" height="140" rx="16"/><text class="fl" x="166" y="66">N</text>
+        <!-- ring (D) --><rect class="fng" x="188" y="92" width="33" height="122" rx="16"/><text class="fl" x="204" y="84">D</text>
+        <!-- pinky (S) --><rect class="fng" x="226" y="120" width="30" height="94" rx="15"/><text class="fl" x="241" y="112">S</text>
+      </svg>
+      <div class="legend">
+        <div class="li"><span class="lt">H</span><span class="lw">Honors<small>the worship due to God alone</small></span></div>
+        <div class="li"><span class="lt">A</span><span class="lw">Attributes<small>what only God is by nature</small></span></div>
+        <div class="li"><span class="lt">N</span><span class="lw">Names<small>the names and name of God</small></span></div>
+        <div class="li"><span class="lt">D</span><span class="lw">Deeds<small>what only God can do</small></span></div>
+        <div class="li"><span class="lt">S</span><span class="lw">Seat<small>God's own throne</small></span></div>
+      </div>
+    </div>
+    <p class="note">One finger can be discussed on its own. Five fingers, all pointing the same way, are far harder to explain.</p>
+  </section>
+
+  <!-- 5 H -->
+  <section class="slide letter" aria-label="H — Honors">
+    <div class="ghost" aria-hidden="true">H</div>
+    <p class="kicker"><span class="orn">◆</span> The first finger <span class="dim">· Honors</span></p>
+    <div class="lhead">
+      <div class="numbox"><span class="bl">H</span></div>
+      <div class="wordmark"><span class="w">Honors</span>
+        <span class="ticks" aria-label="Finger 1 of 5"><span class="tick on"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span></span>
+      </div>
+    </div>
+    <div class="lgrid">
+      <div class="teach">
+        <h2>He receives the honor due to God</h2>
+        <p class="dropcap">“Honor” here means worship, prayer, and reverence. In <span class="gold">John 5:23</span> Jesus says the Father gave him all judgment “that all may honor the Son, just as they honor the Father.” The standard is not merely <i>like</i> God’s — it is <b>identical</b> to it.</p>
+        <blockquote class="hero">“…to him who sits on the throne and to the Lamb be blessing and honor and glory.”<cite>Revelation 5:13</cite></blockquote>
+        <p class="fence">In the same book an angel twice <b>refuses</b> worship: “Worship God!” (Revelation 19:10; 22:9). <b>The Lamb receives what the angel forbids.</b></p>
+      </div>
+      <aside class="ev">
+        <h3>The evidence</h3>
+        <ul>
+          <li><span class="r"><span class="v">John 5:23</span></span>Honor the Son just as they honor the Father.</li>
+          <li><span class="r"><span class="v">Revelation 5:13–14</span></span>Every creature worships the One on the throne and the Lamb.</li>
+          <li><span class="r"><span class="v">Hebrews 1:6</span></span>Even the angels: “Let all God’s angels worship him.”</li>
+          <li><span class="r"><span class="v">Acts 7:59</span></span>Stephen prays, “Lord Jesus, receive my spirit.”</li>
+          <li><span class="r"><span class="v">1 Cor 1:2; Rom 10:13</span></span>Christians “call upon the name of our Lord Jesus Christ” (Joel 2:32).</li>
+          <li class="minor"><span class="r"><span class="v">Pliny, c. AD 112</span></span>A hostile Roman governor reports Christians sang “a hymn to Christ, as to a god” — outside confirmation.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 6 A -->
+  <section class="slide letter" aria-label="A — Attributes">
+    <div class="ghost" aria-hidden="true">A</div>
+    <p class="kicker"><span class="orn">◆</span> The second finger <span class="dim">· Attributes</span></p>
+    <div class="lhead">
+      <div class="numbox"><span class="bl">A</span></div>
+      <div class="wordmark"><span class="w">Attributes</span>
+        <span class="ticks" aria-label="Finger 2 of 5"><span class="tick"></span><span class="tick on"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span></span>
+      </div>
+    </div>
+    <div class="lgrid">
+      <div class="teach">
+        <h2>He has what only God has by nature</h2>
+        <p class="dropcap">Attributes are the things that are true of God <b>by his very nature</b> — being eternal, holding the whole universe together, knowing every heart. No single verse proves everything by itself; but <b>together</b> they describe one who stands on the Creator’s side of the line, not the creature’s.</p>
+        <blockquote class="hero">“In him the whole fullness of deity dwells bodily.”<cite>Colossians 2:9 — Paul says it flatly</cite></blockquote>
+      </div>
+      <aside class="ev">
+        <h3>The evidence</h3>
+        <ul>
+          <li><span class="r"><span class="v">John 1:1</span></span>Eternal: “the Word was God.”</li>
+          <li><span class="r"><span class="v">Colossians 1:17; Hebrews 1:3</span></span>“In him all things hold together”; he “upholds the universe by the word of his power.”</li>
+          <li><span class="r"><span class="v">John 2:24–25</span></span>Knows every heart: he “knew what was in man.”</li>
+          <li><span class="r"><span class="v">Colossians 2:9</span></span>“The whole fullness of deity dwells bodily.”</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 7 N -->
+  <section class="slide letter" aria-label="N — Names">
+    <div class="ghost" aria-hidden="true">N</div>
+    <p class="kicker"><span class="orn">◆</span> The third finger <span class="dim">· Names</span></p>
+    <div class="lhead">
+      <div class="numbox"><span class="bl">N</span></div>
+      <div class="wordmark"><span class="w">Names</span>
+        <span class="ticks" aria-label="Finger 3 of 5"><span class="tick"></span><span class="tick"></span><span class="tick on"></span><span class="tick"></span><span class="tick"></span></span>
+      </div>
+    </div>
+    <div class="lgrid">
+      <div class="teach">
+        <h2>He bears the names of God</h2>
+        <p class="dropcap">In the Old Testament, <b>YHWH</b> is God’s own personal name; in Greek it was read as <b>Kyrios</b>, “Lord.” Again and again the New Testament takes a text about YHWH and applies it to Jesus — and in a few places calls him, outright, “God.”</p>
+        <blockquote class="hero">“Thomas answered him, ‘My Lord and my God!’”<cite>John 20:28</cite></blockquote>
+      </div>
+      <aside class="ev">
+        <h3>The evidence</h3>
+        <ul>
+          <li><span class="r"><span class="v">Philippians 2:10–11</span></span>Every knee bows to Jesus in God’s own words (Isaiah 45:23).</li>
+          <li><span class="r"><span class="v">Romans 10:13</span></span>“Everyone who calls on the name of the Lord will be saved” (Joel 2:32).</li>
+          <li><span class="r"><span class="v">1 Peter 3:15</span></span>“Honor Christ the Lord as holy” reworks Isaiah 8:13.</li>
+          <li><span class="r"><span class="v">John 8:58</span></span>“Before Abraham was, I am” — and they pick up stones.</li>
+          <li class="minor"><span class="r"><span class="v">1 Corinthians 8:6</span></span>Paul reworks the Shema — not a lesser being <i>beside</i> God, but the one Lord <i>within</i> the one God. (Bauckham &amp; Wright; contested — McGrath reads it otherwise.)</li>
+          <li class="minor"><span class="r"><span class="v">Titus 2:13; 2 Peter 1:1</span></span>On the most natural reading of the Greek, “our great God and Savior Jesus Christ.”</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 8 D -->
+  <section class="slide letter" aria-label="D — Deeds">
+    <div class="ghost" aria-hidden="true">D</div>
+    <p class="kicker"><span class="orn">◆</span> The fourth finger <span class="dim">· Deeds</span></p>
+    <div class="lhead">
+      <div class="numbox"><span class="bl">D</span></div>
+      <div class="wordmark"><span class="w">Deeds</span>
+        <span class="ticks" aria-label="Finger 4 of 5"><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick on"></span><span class="tick"></span></span>
+      </div>
+    </div>
+    <div class="lgrid">
+      <div class="teach">
+        <h2>He does what only God can do</h2>
+        <p class="dropcap">Some works belong to God alone — making the world, giving life, judging every person, forgiving sins. The New Testament says Jesus does them.</p>
+        <blockquote class="hero">“Who can forgive sins but God alone?”<cite>Mark 2:7 — the scribes, rightly</cite></blockquote>
+      </div>
+      <aside class="ev">
+        <h3>The evidence</h3>
+        <ul>
+          <li><span class="r"><span class="v">John 1:3; Colossians 1:16</span></span>Creation: “all things were made through him.”</li>
+          <li><span class="r"><span class="v">John 5:21–22</span></span>Gives life and judges — works the Old Testament keeps for God.</li>
+          <li><span class="r"><span class="v">Mark 2:5–7</span></span>Forgives sins: “your sins are forgiven.”</li>
+          <li class="minor"><span class="r"><span class="v">Matthew 24:31</span></span>Gathers “his elect,” who are God’s own (Isaiah 65:9). One strand in a cumulative case, not a proof on its own.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 9 S -->
+  <section class="slide letter" aria-label="S — Seat">
+    <div class="ghost" aria-hidden="true">S</div>
+    <p class="kicker"><span class="orn">◆</span> The fifth finger <span class="dim">· Seat</span></p>
+    <div class="lhead">
+      <div class="numbox"><span class="bl">S</span></div>
+      <div class="wordmark"><span class="w">Seat</span>
+        <span class="ticks" aria-label="Finger 5 of 5"><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick on"></span></span>
+      </div>
+    </div>
+    <div class="lgrid">
+      <div class="teach">
+        <h2>He shares God’s own throne</h2>
+        <p class="dropcap">To <b>sit on God’s throne</b> is to share God’s own rule. The verse the New Testament quotes or alludes to most often is Psalm 110:1 — and the book of Revelation goes furthest of all.</p>
+        <blockquote class="hero">“The LORD says to my Lord, ‘Sit at my right hand.’”<cite>Psalm 110:1</cite></blockquote>
+        <p class="fence">A servant may share a king’s rule — but never his <b>worship</b>. The Son is distinct from the Father; yet they share one throne, one name, one worship. <b>Distinct persons, one God.</b></p>
+      </div>
+      <aside class="ev">
+        <h3>The evidence</h3>
+        <ul>
+          <li><span class="r"><span class="v">Psalm 110:1</span></span>“Sit at my right hand” — the most-quoted Old Testament verse in the NT.</li>
+          <li><span class="r"><span class="v">Matthew 22:43–45</span></span>Jesus applies it to himself.</li>
+          <li><span class="r"><span class="v">Hebrews 1:13</span></span>Said to no angel, ever.</li>
+          <li><span class="r"><span class="v">Revelation 22:1,3</span></span>“The throne of God and of the Lamb” — one seat. Revelation refuses to picture two thrones.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 10 WHOLE HAND -->
+  <section class="slide" aria-label="The whole hand">
+    <p class="kicker"><span class="orn">◆</span> Put it together</p>
+    <h2>The whole hand</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Finger</th><th>Belongs to God alone</th><th>Given to Jesus</th></tr></thead>
+      <tbody>
+      <tr><td>H — Honors</td><td>Worship</td><td><span class="v">Rev 5:13–14; John 5:23</span></td></tr>
+      <tr><td>A — Attributes</td><td>Eternal; upholds all</td><td><span class="v">John 1:1; Col 2:9</span></td></tr>
+      <tr><td>N — Names</td><td>God’s own name, Lord</td><td><span class="v">Phil 2:10–11; John 20:28</span></td></tr>
+      <tr><td>D — Deeds</td><td>Creating; judging; forgiving</td><td><span class="v">John 1:3; Mark 2:7</span></td></tr>
+      <tr><td>S — Seat</td><td>God’s throne</td><td><span class="v">Ps 110:1; Rev 22:1,3</span></td></tr>
+      </tbody>
+    </table></div>
+    <p style="margin-top:1.4rem">Five strands, written by different authors in different decades, all pointing the same way. One verse can be discussed on its own; five together point to one thing: <b>Jesus is God</b> — included within the very identity of the one God of Israel.</p>
+  </section>
+
+  <!-- 11 VERDICT -->
+  <section class="slide" aria-label="The verdict">
+    <div class="verdict">
+      <p class="kicker">The verdict</p>
+      <p class="lead">Read in its own first-century Jewish world, the New Testament gives Jesus the Honors, Attributes, Names, Deeds, and Seat of the one God of Israel — early, everywhere, and on purpose.</p>
+      <p class="big">Jesus is God.</p>
+      <p class="fg">Fully God, and fully man.</p>
+      <blockquote>“My Lord and my God!”<cite>Thomas · John 20:28</cite></blockquote>
+    </div>
+  </section>
+
+  <!-- 12 HOW TO TEACH -->
+  <section class="slide" aria-label="How to teach and remember">
+    <p class="kicker"><span class="orn">◆</span> For the church</p>
+    <h2>How to teach and remember</h2>
+    <div class="pull"><b>The hand drill (do it together):</b> hold up a hand. Name each finger — Honors, Attributes, Names, Deeds, Seat. For each, say one verse. Do it three times. Now the whole congregation carries the case in their hand.</div>
+    <div class="steps">
+      <div class="q"><div class="n">1</div><p>Which of the five fingers speaks most to you? Why?</p></div>
+      <div class="q"><div class="n">2</div><p>Which one verse will you memorise first for each finger?</p></div>
+      <div class="q"><div class="n">3</div><p>How does it change the way you pray and worship, to know that Jesus is God?</p></div>
+    </div>
+  </section>
+
+  <!-- 13 SOURCES -->
+  <section class="slide sources" aria-label="Sources">
+    <p class="kicker"><span class="orn">◆</span> Sources</p>
+    <h2>Where this comes from</h2>
+    <p>Drawn, word for word where possible, from the Apologia Daily Evidence Library:</p>
+    <p class="big-link">apologiadaily.com/library/hands.html</p>
+    <p class="note">Scholars behind the framework: Richard Bauckham, Larry Hurtado, Robert M. Bowman Jr. &amp; J. Ed Komoszewski. Scripture: ESV.</p>
+    <div class="pull"><b>A note for the church leader:</b> this material has been carefully checked for accuracy, faithful citation, and sound doctrine. As with all teaching on the person of Christ, we warmly encourage a pastor or elder to read it through once before it is taught.</div>
+  </section>
+
+</main>
+
+<div class="hint" id="hint">Tap the right side, press → , or use the arrows below</div>
+<div class="nav">
+  <button class="btn" id="prev" aria-label="Previous slide">‹</button>
+  <div class="dots" id="dots"></div>
+  <button class="btn" id="next" aria-label="Next slide">›</button>
+</div>
+
+<script>
+const slideEls=[...document.querySelectorAll('.slide')];
+const stage=document.getElementById('stage');
+const dotsBox=document.getElementById('dots');
+const counter=document.getElementById('counter');
+const progress=document.getElementById('progress');
+const prevBtn=document.getElementById('prev');
+const nextBtn=document.getElementById('next');
+const hint=document.getElementById('hint');
+let i=0;
+
+slideEls.forEach((el,idx)=>{
+  el.setAttribute('role','group');
+  el.setAttribute('aria-roledescription','slide');
+  const d=document.createElement('button');
+  d.className='dot'+(idx===0?' on':''); d.setAttribute('aria-label','Go to slide '+(idx+1));
+  d.addEventListener('click',()=>go(idx)); dotsBox.appendChild(d);
+});
+const dotEls=[...dotsBox.children];
+
+function go(n){
+  n=Math.max(0,Math.min(slideEls.length-1,n));
+  slideEls[i].classList.remove('active'); dotEls[i].classList.remove('on');
+  i=n;
+  slideEls[i].classList.add('active'); dotEls[i].classList.add('on');
+  counter.textContent=(i+1)+' / '+slideEls.length;
+  progress.style.width=(i/(slideEls.length-1)*100)+'%';
+  prevBtn.disabled=(i===0); nextBtn.disabled=(i===slideEls.length-1);
+  if(i>0&&hint) hint.style.opacity='0';
+  stage.scrollTop=0;
+}
+function next(){go(i+1)} function prev(){go(i-1)}
+nextBtn.addEventListener('click',next);
+prevBtn.addEventListener('click',prev);
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key==='PageDown'){e.preventDefault();next();}
+  else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();prev();}
+  else if(e.key==='Home'){e.preventDefault();go(0);} else if(e.key==='End'){e.preventDefault();go(slideEls.length-1);}
+});
+stage.addEventListener('click',e=>{
+  if(e.target.closest('a,button,aside,table,svg')) return;
+  if(window.getSelection && String(window.getSelection())) return;
+  const x=e.clientX, w=window.innerWidth;
+  if(x> w*0.58) next(); else if(x < w*0.42) prev();
+});
+let tx=0,ty=0;
+stage.addEventListener('touchstart',e=>{tx=e.changedTouches[0].clientX;ty=e.changedTouches[0].clientY;},{passive:true});
+stage.addEventListener('touchend',e=>{
+  const dx=e.changedTouches[0].clientX-tx, dy=e.changedTouches[0].clientY-ty;
+  if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)){ dx<0?next():prev(); }
+},{passive:true});
+go(0);
+stage.focus();
+</script>
+</body>
+</html>
