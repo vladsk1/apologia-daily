@@ -572,7 +572,10 @@ function loadSection(id, cb) {
   loaded[id] = true;
   var container = document.getElementById(id + '-content');
   if (!container) { if (cb) cb(); return; }
-  fetch('ev-' + id + (LANG === 'en' ? '' : '.' + LANG) + '.html')
+  // {cache:'no-cache'} forces a server revalidation (conditional GET) on every load,
+  // so a newly added/edited card lands on the next visit without a hard refresh; when
+  // the fragment is unchanged the server answers 304 and the cached copy is reused.
+  fetch('ev-' + id + (LANG === 'en' ? '' : '.' + LANG) + '.html', { cache: 'no-cache' })
     .then(function(r) { return r.text(); })
     .then(function(html) { container.innerHTML = html; enhanceSection(container, id); if (cb) cb(); })
     .catch(function() { container.innerHTML = '<p style="padding:2rem;color:red;">Failed to load. Please refresh.</p>'; });
