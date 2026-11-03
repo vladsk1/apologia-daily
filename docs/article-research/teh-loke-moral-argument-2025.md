@@ -51,8 +51,10 @@ faith. **It passes the orthodox-author screen.**
   against the live `origin/main` before executing): `ev-m-moral.html` (exists),
   `answers/where-does-morality-come-from-without-god.html` (exists, the short answer),
   `answers/what-is-the-moral-argument-for-god.html` (exists), the ev-s1 "God's Existence" moral card.
-  **No `/briefs` moral entry exists** (the live AI has no moral-argument framing — separate gap, noted
-  below). `/sources` N/A (no PD primary here).
+  A moral-argument **`/briefs` entry ALREADY EXISTS and is live** (id `moral-argument`, gated
+  argument+orthodoxy 2026-07-17); it was **enriched 2026-11-03** with the relaxed-realism objection
+  (see below). ⚠ The first draft of this note wrongly said none existed — I did not grep
+  `briefs/_data.json`; corrected. `/sources` N/A (no PD primary here).
 
 ## Argument map (our words — do not reproduce the paper's prose)
 The paper is a **defence of Loke's "New Moral Argument" (Loke 2023) against a 2024 critique** by Evan
@@ -106,7 +108,7 @@ Philosophica* 101 [2024]: 705–14).
 - [x] /answers/*               — `where-does-morality-come-from-without-god.html` + `what-is-the-moral-argument-for-god.html` both exist and lead with the answer; relaxed realism is essay-depth, not short-answer depth (no row)
 - [x] ev-s*.html tab card(s)   — ev-s1 "God's Existence" moral card; summary-level, no relaxed-realism gap to fix at card depth (no row)
 - [x] ev-m*.html mastery page(s) — `ev-m-moral.html` exists; relaxed-realism propagation to it deferred as a P3 follow-up (logged backlog), not shipped in this change
-- [x] /briefs                  — none; no moral-argument brief exists (logged OPEN P3)
+- [x] /briefs                  — a moral-argument brief ALREADY EXISTS and is live (id `moral-argument`, gated 2026-07-17); ENRICHED 2026-11-03 with the relaxed-realism objection + reply, re-gated. (Earlier draft wrongly said none existed — corrected.)
 - [x] /sources                 — none / out of scope (PD-patristic only; every lead here is a modern copyrighted work)
 - Mandatory-fix findings (verdict 2 — errors / retired claims): none
 - Backlog rows logged (verdicts 3/4): `content-backlog.md` — relaxed-realism (P2, SHIPPED), Evans 2013 citation (P3, SHIPPED), /briefs moral entry (P3, OPEN)
@@ -121,7 +123,7 @@ Philosophica* 101 [2024]: 705–14).
 | 3 | **C. Stephen Evans, *God and Moral Obligation* (2013)** as the citation for the "obligation is owed to someone / a command needs a commander" move | **3 — weaker in ours (by citation).** `moral.html` *makes* this exact point in the Wielenberg reply ("a duty seems owed to someone; a command needs a commander") but cited it to **no one**. Evans is the standard scholarly anchor and is an orthodox Christian. | ✅ **SHIPPED 2026-11-03.** Added Evans, *God and Moral Obligation* (OUP, 2013) as footnote 12 on that sentence + bibliography. |
 | 4 | **Francis Collins (2006) citing the moral argument in his conversion** | **5/6 — hazard + optional.** Accurate, but Collins is a sensitive name here (ID-misuse history; already on `finetuning`/`cosmic`). | **Not done, not recommended.** Flagged. |
 | 5 | **Baggett & Walls 2025, *The Good, the Right, and the Real: Is Value a Fact?* (OUP); Horner & Moreland 2024, *Metaethics: A Short Companion* (B&H)** | **future leads, not rows.** Two *recent orthodox-Christian metaethics works* this paper leans on. | **Record as book-research leads** (neither owned; acquire before mining). |
-| 6 | **No `/briefs` moral-argument entry exists** | separate structural gap (found during the cross-check). | **OPEN, P3.** Now that `moral.html` is re-gated (2026-11-03), a `/briefs` moral entry can be distilled. |
+| 6 | **Moral-argument `/briefs` entry** | **CORRECTION — it ALREADY EXISTED and was live** (id `moral-argument`, gated 2026-07-17). My first cross-check wrongly reported it missing (I never grepped `briefs/_data.json`). | ✅ **ENRICHED + re-gated 2026-11-03** with the relaxed-realism objection + reply, ported from the re-certified essay. |
 
 ## Is the source better than our essay anywhere? Where, and how?
 **Almost nowhere — and this is the honest, dominant finding, exactly as `book-research/INDEX.md`
@@ -134,8 +136,9 @@ It was also the occasion to cite **Evans 2013** for a move we already made uncit
 
 ## Live-door status
 - `/sources`: **N/A** — no public-domain primary (all leads are modern copyrighted works).
-- `/briefs`: no moral brief exists yet; now that `moral.html` is re-gated, a brief should be distilled
-  (OPEN, its own backlog row).
+- `/briefs`: a moral-argument brief ALREADY EXISTS and is live (id `moral-argument`, gated 2026-07-17);
+  ENRICHED 2026-11-03 with the relaxed-realism objection + reply, re-gated argument+orthodoxy. (The first
+  draft of this note wrongly said none existed.)
 - `our-sources.html`: a gated ARTICLES card for this note was added in the same commit (OUR SOURCES
   standing rule); `node tools/build-our-sources.mjs` run.
 - The two actionable content rows (relaxed-realism P2; Evans P3) are **SHIPPED 2026-11-03.**
@@ -145,7 +148,7 @@ It was also the occasion to cite **Evans 2013** for a move we already made uncit
   a distinct strongest-objection variant + the replies.
 - ✅ **P3 — SHIPPED 2026-11-03** — `moral.html`: C. Stephen Evans, *God and Moral Obligation* (OUP, 2013)
   cited at the "a command needs a commander" sentence.
-- ⬜ **P3 — OPEN** — `/briefs`: create a moral-argument brief from the certified `moral.html` (live-AI framing).
+- ✅ **P3 — DONE 2026-11-03** — `/briefs`: the moral-argument brief ALREADY EXISTED and was live; ENRICHED with the relaxed-realism objection + reply from the re-certified `moral.html`, re-gated. (Correction: the earlier "create … none exists" wording was wrong — the brief existed.)
 - ⬜ **(leads, not rows)** — acquire Baggett & Walls 2025, *The Good, the Right, and the Real* and
   Horner & Moreland 2024, *Metaethics: A Short Companion* for a future `book-research` note.
 
