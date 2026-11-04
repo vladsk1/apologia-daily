@@ -142,17 +142,29 @@ because Suetonius "wrote more closely to how modern biographers write" — Walla
 - `/briefs`: no new live-AI framing owed; the certified essays already carry the reliability case.
 - `our-sources.html`: a gated ARTICLES card for this note was added in the same commit (OUR SOURCES rule);
   `node tools/build-our-sources.mjs` run.
-- No live content changed by this mine (docs only). The three essay rows are logged, not shipped.
+- **UPDATE 2026-11-04 — both essay rows are now SHIPPED (owner-approved); this note is no longer a to-do list.**
 
 ## Backlog rows logged (see `docs/content-backlog.md`)
-- ⬜ **P3 — OPEN** — `consistency.html`: add Licona 2019 (Suetonius *Augustus* vs Mark) as a second named
-  genre-reliability control beside Keener's Otho comparison; ported with grounds, reliability-≠-truth bound kept.
-- ⬜ **P3 — OPEN** — `eyewitnesses.html`/`earlydate.html`: the "Mark's authorship evidence beats Plutarch's"
-  comparison + the 17–40-yr-vs-105-yr dating contrast (⚠ **full Step-Zero read of both essays required first**).
+- ✅ **P3 — DONE 2026-11-04** — `consistency.html`: added Licona 2019 (Suetonius *Augustus* vs Mark) as a
+  second named genre-reliability control beside Keener's Otho comparison (body sentence + footnote 21 +
+  bibliography; `our-sources.json` regenerated), ported with its grounds and the reliability-≠-truth /
+  not-inerrancy fence kept in fn 21. Four-lens gate (citations/argument/orthodoxy/neutrality), round 1 +
+  confirmation: all STAMPABLE/CLEAN, 0 heresy. Ran the higher (dual-consensus) bar because the addition sits
+  in the resurrection-appearances paragraph.
+- ✅ **P3 — DONE 2026-11-04** — `earlydate.html` ONLY: added the authorship-attestation half (Mark's named
+  external attestation vs the late, partly-spurious Lamprias Catalogue behind Plutarch's *Lives*) as one
+  inline-cited sentence in the Papias paragraph. ⚠ **Full Step-Zero read of both essays done:** the
+  dating-contrast half was deliberately NOT shipped — `earlydate.html` already makes it, more strongly
+  (Arrian/Plutarch on Alexander, ~4 centuries), and `eyewitnesses.html` already carries Papias, so no change
+  there. Round-1 argument WEAK (first draft ran the analogy backwards — Plutarch self-identifies, the Gospels
+  are anonymous) → fixed by conceding the disanalogy → confirmation all STAMPABLE/CLEAN. Eve/Downing/Taylor
+  not folded in (not needed).
 - ✅ **non-recommendation** — do not import the 4-criteria "accurate gist/true enough" scaffold wholesale.
 
 ---
 *Mined 2026-11-03 (CC BY source read in full via the in-app browser; `consistency.html` read in full for
-Step Zero; siblings grep-checked). No live content changed — docs only. The three essay leads are logged
-as backlog rows for a content session (none is a correction; all are enrichments, one with a full-read
-prerequisite). Ships with a gated `our-sources.html` ARTICLES card + `node tools/build-our-sources.mjs`.*
+Step Zero; siblings grep-checked). **Executed 2026-11-04 (owner-approved):** the two enrichment rows shipped
+to `consistency.html` and `earlydate.html` (four-lens gated, STAMPABLE/CLEAN); the dating-contrast half was
+dropped as redundant after the full Step-Zero read of `earlydate.html`/`eyewitnesses.html`. The gated
+`our-sources.html` ARTICLES card + `node tools/build-our-sources.mjs` shipped with the original mine. This
+note is now a completed record, not a to-do list.*
