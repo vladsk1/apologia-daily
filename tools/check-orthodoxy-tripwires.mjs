@@ -8,7 +8,9 @@
  * that are heterodox when written in the site's OWN voice — "the Word was a
  * god" (John 1:1 / NWT), "Jesus became God," "we worship the same God" (of
  * Allah), modalist "God is one person," works-salvation, universalism-as-
- * certain, etc. It is NOT a doctrinal judge — the apologia-orthodoxy agent is.
+ * certain, or conceding (in our own voice) that the Gospel writers invented or
+ * "sharpened in the retelling" Jesus' words — which bruises the authority &
+ * reliability of Scripture. It is NOT a doctrinal judge — the apologia-orthodoxy agent is.
  * Regex cannot tell "we affirm X" from "our opponents claim X, and here is why
  * they are wrong." Our pages refute these very heresies constantly, so a naive
  * scan would be almost all false positives.
@@ -69,6 +71,26 @@ const PATTERNS = [
     note: 'Religious pluralism in own voice.' },
   { name: 'divine-nature-died', re: /\bthe divine nature (?:died|suffered|perished)\b/gi,
     note: 'Patripassianism/theopaschism.' },
+
+  // --- Gospel reliability / inspiration (added 2026-11-04) ---
+  // Conceding IN OUR OWN VOICE that the Gospel writers invented, embellished, or
+  // retrojected Jesus' sayings/events undercuts the authority and reliability of
+  // Scripture (a NON-NEGOTIABLE guardrail). The orthodox shape is: assert
+  // authenticity, honor the text, refuse the written-back theory, don't claim
+  // verbatim. Naming the theory in order to REFUSE it, or stating a sceptic's
+  // objection fairly before answering it, is legitimate — those get baselined.
+  { name: 'gospel-sharpened-retelling', re: /\bsharpened in the retelling\b/gi,
+    note: 'Our-voice concession that a saying was embellished in transmission. Attribute the claim to critics and decline it; do not grant it.' },
+  { name: 'gospel-words-back-into-mouth', re: /\bback into (?:his|jesus(?:'|’|&rsquo;)?s?) mouth\b/gi,
+    note: '"written/read/wrote … back into his mouth" — vaticinium-style invention. Legit only as the objection stated-to-refute.' },
+  { name: 'gospel-put-in-mouth-by', re: /\bput (?:in|into) (?:his|jesus(?:'|’|&rsquo;)?s?) (?:mouth|lips) by\b/gi,
+    note: '"put in his mouth by a later church/community" — invention in our voice. Legit only as objection.' },
+  { name: 'gospel-church-invented', re: /\b(?:the )?(?:later |early )?church invented\b/gi,
+    note: 'Our-voice claim the church invented a saying/event. Legit only as objection stated-to-refute.' },
+  { name: 'gospel-vaticinium', re: /\bvaticinium ex eventu\b/gi,
+    note: 'Prophecy-after-the-event. Every use must be reviewed: fine as the NAMED objection, never as our conceded verdict.' },
+  { name: 'gospel-on-the-lips-of', re: /\b(?:place|places|placed|put|puts|putting) (?:it |them |the \w+ )?on (?:his|the|jesus(?:'|’|&rsquo;)?s?) lips\b/gi,
+    note: '"the evangelist places/puts [words] on the lips of Jesus" — redaction-critical invention in our voice. Jesus SPOKE it; the Gospels RECORD it. (Jesus-as-subject "he took X on his lips" is fine and not matched.)' },
 ];
 
 // Scan set: every live HTML page that carries doctrinal content.
