@@ -114,8 +114,9 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 11 "The origin of information" (pp. 174–192) | ✅ **COMPLETE — pp. 174–192 captured.** 🔴🔴 FENCED + the "Who made God?" safe thread. Light log below. |
 | Ch. 12 "Violating nature? (Hume on miracles)" (pp. 193–206) | ✅ **COMPLETE — pp. 193–206 captured.** ✅✅ **SAFE + MINEABLE (pairs with `library/miracles.html`).** Fuller log below. |
 | Epilogue "Beyond science but not beyond reason" (pp. 207–210) | ✅ **captured.** 🔴 FENCED (Mind-behind-universe + John 1 Logos). |
-| **References (pp. 211–221)** | ⚠ **pp. 211–215 captured (Preface + chs. 1–6 endnotes); pp. 216–221 MISSING — incl. 🔴 the ch. 12 (Hume) endnotes, the ones the mineable chapter needs.** |
-| Index (pp. 222+) | ⬜ not captured (optional) |
+| **References (pp. 211–221)** | ✅ **COMPLETE — pp. 211–221 captured (all endnotes, Preface → ch. 12 + Epilogue). The ch. 12 Hume endnotes are in.** |
+| Index (pp. 222+) | ⬜ not captured — **optional, not needed for mining** |
+| **WHOLE BOOK** | ✅ **FULLY CAPTURED (body pp. 7–210 + References pp. 211–221).** Only the Index is uncaptured and it is not needed. |
 
 ## Preface — procedural disclosure worth recording (p. 13)
 
@@ -1031,10 +1032,54 @@ p. 344, Davies p. 232, Crick p. 3** are legible with confidence. **The two still
 locus and the Darwin's-Doubt letter.** ⚠ Chs. 4–6 endnotes (pp. 213–215) are captured too but are for FENCED
 chapters — not worked up.
 
-> **STATUS — BODY COMPLETE, REFERENCES HALF-DONE:** the whole body (pp. 7–210) + Preface/ch.1–6 endnotes
-> (pp. 211–215) are captured. 🔴🔴 **ONE capture left that matters: References pp. 216–221 — the ch. 7–12
-> endnotes, above all CH. 12 (Hume), which the mineable chapter's six-verdict cross-check needs.** (Index
-> pp. 222+ optional.) Once pp. 216–221 are in + `miracles.html` is read in full, the ch. 12 cross-check runs.
+**References pp. 216–221 captured — completes the endnotes (chs. 7–12 + Epilogue).** Chs. 7–11 endnotes are
+for FENCED chapters (not worked up; they contain the ID apparatus — Dembski *No Free Lunch*, Behe *Darwin's
+Black Box*, Meyer, the *Of Pandas and People* / Wells material, etc. — none mine-able). The ones that matter:
+
+**⭐ Chapter 12 endnotes (p. 221) — these RESOLVE the mineable Hume/miracles leads (legible with confidence):**
+- n1 Francis Collins, *The Language of God*, op. cit., **pp. 51–52**.
+- n2 **Hume, *An Enquiry Concerning Human Understanding*** (with 'A Letter from a Gentleman…' + the 'Abstract
+  of a Treatise of Human Nature'), Indiana, **Hackett, 1993** — **§10.1, pp. 76–77** (the miracles essay).
+- n4 **Hume, *Enquiry*, §4.1, p. 15 — "the so-called Problem of Induction"** ⭐ (this is the citation behind
+  the **self-contradiction** lead — Hume leaning on uniformity here, denying we can know it there).
+- n6 **Hume, *Enquiry*, §7.2, p. 49** (causation / "no necessary connection" — the billiard balls).
+- n8 **Antony Flew, *There Is a God*, New York, HarperOne, 2007, pp. 57–58** ⭐ (Flew the critic conceding).
+- n9 Christopher Hitchens, *God Is Not Great*, London, Atlantic Books, 2007, p. 141.
+- n11 **Luke 1:5–25** (Zechariah's skepticism) · n12 **Acts 4:1–21** · n13 **Acts 23:8** (the Sadducees).
+- n14 **N.T. Wright, James Gregory Lecture, University of Durham, 2007** ⚠ **NOTE: the source is a 2007
+  LECTURE, not *The Resurrection of the Son of God* — correct my earlier guess; cite the lecture, or find the
+  equivalent in a verifiable Wright publication before use.**
+- n15 **C.S. Lewis, *Miracles*, p. 62** · n17 *Miracles*, p. 63 · n18 p. 73 · n19 p. 77 ⭐ (the thief/
+  arithmetic + "God feeds a new event into the system / nature domiciles it" passages).
+- n16 a **Wittgenstein** line ("the laws of nature describe the regularities… but they explain nothing").
+- n20 a **"Miracles"** article in *The Encyclopedia of Philosophy*, ed. Paul Edwards, Macmillan, New York, 1967.
+- ⚠ nn3, 5, 7, 10, 21–24 (incl. Dawkins *God Delusion* p. 187; Whitehead *Process and Reality* 1929) — verify
+  vs photo during the citations pass.
+
+**Epilogue endnotes (p. 221):** n1 **Erwin Schrödinger, *Nature and the Greeks*, Cambridge, CUP, 1954**;
+n2 Genesis 1:1; n3–4 John 1:1–4 / John 1:14; n5 cited in Margenau & Varghese (eds.), *Cosmos, Bios, Theos*,
+La Salle IL, Open Court, 1992, p. 107. (Fenced — epilogue material.)
+
+> ## ✅ CAPTURE COMPLETE — THE WHOLE BOOK IS IN (pp. 7–221). The mining can now begin.
+> Body pp. 7–210 + all endnotes pp. 211–221 are captured (only the optional Index is not). **Everything needed
+> for the one mineable chapter is now in hand:** ch. 12's full argument (pp. 193–206) AND its endnotes
+> (p. 221). **The remaining work is the grounded pass, which is a DISTINCT task (and partly needs a
+> web-enabled session):**
+> 1. **Step Zero — read `library/miracles.html` in full** (plus any `/answers/*` on miracles/Hume), start to
+>    finish, BEFORE comparing.
+> 2. **Six-verdict cross-check of ch. 12** against the six surfaces (essay · `/answers` · `ev-s` card · `ev-m`
+>    · `/briefs` · `/sources`), answering the standing output: *"Is the source better than our essay anywhere?"*
+>    Expected shape: the **begs-the-question** and **Lewis-laws-don't-forbid-intervention** moves are
+>    near-certain corroboration; the **Hume self-contradiction / induction** point (n4), the **Flew
+>    concession** (n8), the **Big-Bang-singularity counterexample**, and the **Zechariah/Sadducees
+>    "ancients weren't credulous"** material are the candidates that might sharpen or extend `miracles.html`.
+> 3. **Verify every Hume/Lewis locus against the PRIMARY** (Hume *Enquiry* §10 Hackett 1993; Lewis
+>    *Miracles*) — the egress policy may 403 these, so this likely needs a web-enabled session.
+> 4. Only then: a `content-backlog.md` row (if warranted) → essay edit → re-gate (citations + argument +
+>    orthodoxy; miracles/resurrection tier) → rebuild indexes. **Chs. 1–3 (the other mineable front end) get
+>    their own Step-Zero reads + cross-checks separately** (`science-history`, `reason`, `mathematics`,
+>    `does-naturalism-undermine-reason`, and the science-faith answers).
+> ⚠ **Everything in chs. 4–11 stays FENCED** pending the owner's ID / science-tab decision — do not mine.
 
 **✅ GAP FILLED (2026-11-05): pp. 138–139 — "How does the DNA give rise to the proteins?"** (ch. 8). Content
 confirms the page range (sits between p. 137 "What is DNA?" and p. 140 "Is it all in the genes?"): the
