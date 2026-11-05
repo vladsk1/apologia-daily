@@ -104,7 +104,7 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 1 "War of the worldviews" (pp. 15–30) | ✅ **COMPLETE — pp. 14–30 captured.** Raw leads logged below, UNMINED — citations unresolved pending References. |
 | Ch. 2 "The scope and limits of science" (pp. 31–46) | ✅ **COMPLETE — pp. 31–46 captured.** Raw leads logged below, UNMINED. |
 | Ch. 3 "Reduction, reduction, reduction…" (pp. 47–57) | ✅ **COMPLETE — pp. 47–57 captured.** Raw leads logged below, UNMINED. |
-| Ch. 4 "Designer universe?" (pp. 58–77) | ⚠ **pp. 58–67 captured; pp. 68–77 MISSING.** 🔴 FENCED (design inference). Light log below. |
+| Ch. 4 "Designer universe?" (pp. 58–77) | ✅ **COMPLETE — pp. 58–77 captured.** 🔴 FENCED (design/fine-tuning). Light log below. |
 | Chs. 5–12 (bodies) | ⬜ NOT captured — 🔴 chs. 5, 8–11 are the other fenced design-inference chapters; ch. 12 (Hume/miracles) is safe |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
@@ -518,10 +518,30 @@ is touched, the standing rule holds — **fine-tuning *data* is conceded, *desig
   Near-certain corroboration — and bigbang.html is ahead. Do NOT import; at most verify wording.** ⚠ Also:
   Aquinas/Augustine on the beginning already SHIPPED to `kalam.html` (2026-08-20, per CLAUDE.md).
 
-> **STATUS (ch. 4 — partial 58–67, FENCED):** nothing here changes the mining plan. The safe-adjacent
-> material (beginning-of-universe history, Leibniz contingency, intelligibility, the bank-account rebuttal)
-> is almost certainly corroboration against already-mature essays; the fine-tuning/design core stays fenced
-> pending the owner's decision. Still owed: References pp. 211–221 + Step-Zero reads before any grounded pass.
+**Ch. 4 cont'd, pp. 68–77 — COMPLETES the chapter (🔴 FENCED — fine-tuning / anthropic / multiverse):**
+section structure → "The very beginning" (Planck time 10⁻⁴³s; Hawking–Hartle imaginary time / quantum
+vacuum; Hawking "What is the origin of the laws governing… a vacuum?") → "The fine-tuning of the universe"
+→ "The anthropic principle" → (multiverse). 🔴 **All of this is the design-inference / fine-tuning case —
+captured for completeness, NOT for mining pending the owner's science-tab decision.** Names recorded only so
+the map is complete (do NOT work up): Hoyle (carbon resonance), Paul Davies, **Penrose** (entropy 1 in
+10^10^123), **Hugh Ross** (coin illustration), **Gonzalez & Richards, *The Privileged Planet***, the **weak
+vs strong anthropic principle**, **John Leslie** (firing-squad), **Dawkins** (*God Delusion* on anthropic),
+the **multiverse** (Everett many-worlds; **Deutsch**, *The Fabric of Reality*; **Martin Rees**, *Just Six
+Numbers*; de Duve "drowning the fish"; **Lockwood**; **Edward Harrison**'s cosmological design argument;
+**Swinburne**; **Polkinghorne** rejects the many-universe move), **Plantinga**, **Penzias**, and **Lemaître**
+(*Nature* 1931; a priest — `bigbang.html` already opens on exactly that).
+
+⚠ **This chapter is squarely the OPEN OWNER DECISION. Two standing cross-note reminders apply when/if it is
+ever mined:** (1) `library/finetuning.html` is **already mature and ahead of a popular book** — INDEX: it
+"handles the multiverse + Barnes/Stenger," so expect corroboration, not import; (2) the **standing
+fine-tuning guardrail** — *data* conceded, *design* contested — governs every line, and `library/privileged.html`
+covers the Gonzalez–Richards material. **Nothing here is actionable now.**
+
+> **STATUS (ch. 4 — COMPLETE capture, FENCED):** full chapter captured (pp. 58–77); nothing here changes the
+> mining plan. The safe-adjacent material from the first half (beginning-of-universe history, Leibniz
+> contingency, intelligibility, the bank-account rebuttal) is almost certainly corroboration against mature
+> essays; the fine-tuning/anthropic/multiverse core stays fenced pending the owner's decision. Still owed:
+> References pp. 211–221 + Step-Zero reads before any grounded pass.
 
 ## Still needed to mine this book
 
