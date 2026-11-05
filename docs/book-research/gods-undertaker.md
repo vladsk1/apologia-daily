@@ -105,7 +105,7 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 2 "The scope and limits of science" (pp. 31–46) | ✅ **COMPLETE — pp. 31–46 captured.** Raw leads logged below, UNMINED. |
 | Ch. 3 "Reduction, reduction, reduction…" (pp. 47–57) | ✅ **COMPLETE — pp. 47–57 captured.** Raw leads logged below, UNMINED. |
 | Ch. 4 "Designer universe?" (pp. 58–77) | ✅ **COMPLETE — pp. 58–77 captured.** 🔴 FENCED (design/fine-tuning). Light log below. |
-| Ch. 5 "Designer biosphere?" (pp. 78–99) | ⚠ **pp. 78–89 captured; pp. 90–99 MISSING.** 🔴 FENCED (design in biology) + ⚠ evolution sensitivity. Light log below. |
+| Ch. 5 "Designer biosphere?" (pp. 78–99) | ✅ **COMPLETE — pp. 78–99 captured.** 🔴 FENCED (design in biology) + ⚠ evolution sensitivity. Light log below. |
 | Chs. 6–12 (bodies) | ⬜ NOT captured — 🔴 chs. 6 (evolution scope), 8–11 fenced; ch. 12 (Hume/miracles) is safe |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
@@ -596,6 +596,39 @@ stance (`answers/can-a-christian-believe-in-evolution.html`). Section continues 
 > only safe threads are "evolution ≠ atheism / Assertion 1 is a category error" (consonant with us, mine-able)
 > and Hume's critique of the design inference (verify vs finetuning/miracles). Denominational tripwire on p. 83
 > logged. pp. 90–99 awaited.
+
+**Ch. 5 cont'd, pp. 90–99 — COMPLETES the chapter (🔴 FENCED + ⚠ evolution sensitivity):** sections
+"Undesigned designers" (pp. 90–93) → "The question that dare not be asked" (pp. 94–95) → "The relationship
+between evolution and philosophy" (pp. 96–97) → "The logical implications of naturalism" (p. 98) → "Paradigm
+pressure" (p. 99). Logged lightly; names only.
+- ✅ **SAFE thread (consonant with us): many evolutionary biologists are theists/Christians.** Lennox names
+  **Francis Collins**, **Denis Alexander**, **Alister McGrath**, **Simon Conway Morris**, Ghillean Prance,
+  Brian Heap, Bob White, Sam Berry; **Gould** ("either half of my colleagues are enormously stupid"); the
+  Victorian **Charles Kingsley** / **Asa Gray** "God who makes things make themselves" theistic-evolution
+  line. This is the "evolution ≠ atheism" point again — it matches our gated refuse-to-referee stance and is
+  the mine-able part. ⭐ Conway Morris / Denis Alexander / McGrath are the *theistic-evolution* voices our
+  `answers/can-a-christian-believe-in-evolution.html` already honours — corroboration, don't import as if new.
+- 🔴🔴 **FENCED + QUOTE-MINE HAZARD — "The relationship between evolution and philosophy" (pp. 96–97):** this is
+  the ID-critique-of-Darwinism core (Lennox's **Assertion 2**), which is fenced AND cuts against our
+  refuse-to-referee stance. Worse, it leans on names that are **classic creationist quote-mines — do NOT port
+  any of them in our voice:** ⚠ **Colin Patterson** ("evolution is a scientific religion" / his transitional-
+  fossils remarks are the single most notorious quote-mine in the whole debate), **Phillip Johnson** (*Darwin
+  on Trial*; founder of the ID movement — citing him is deep in the fenced zone), **Michael Ruse**, **Donald
+  MacKay**, **D.M.S. Watson**. ⚠ **C.S. Lewis's "The Funeral of a Great Myth"** is used for the
+  *evolutionism (worldview) vs evolution (science)* distinction — that distinction itself is fine, but it is
+  doing fenced work here. **None of pp. 96–97 is mine-able under the current owner decision.**
+- **"The logical implications of naturalism" (p. 98):** **Lucretius**, *De Rerum Natura* (naturalism →
+  evolution as a priori necessity) + **Epicurus**. ⚠ *De Rerum Natura* is **public domain** → a possible
+  `/sources` candidate *in principle*, but here it is deployed for the fenced naturalism-implies-evolution
+  point; any use would be for the general "naturalism is a prior commitment" thread (ch. 2 material), not this.
+- **"Paradigm pressure" (p. 99):** **Kuhn**, **Feynman**, and the **Lewontin** a-priori-materialism quote
+  again (ties back to ch. 2's methodological-naturalism core — the one genuinely strong front-end lead).
+
+> **STATUS (ch. 5 — COMPLETE, FENCED):** full chapter captured (pp. 78–99). Chs. 4–5 (the design-inference
+> pair) are now both fully captured and both fenced. The only mine-able threads remain "evolution ≠ atheism"
+> (corroboration vs our refuse-to-referee answer), Hume on design (verify vs finetuning/miracles), and the
+> Lewontin/methodological-naturalism material (ch. 2). ⚠ Carry the **Colin Patterson / Phillip Johnson
+> quote-mine hazard** into any future mining of ch. 5. Ch. 6 "The nature and scope of evolution" begins p. 100.
 
 ## Still needed to mine this book
 
