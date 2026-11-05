@@ -1081,6 +1081,50 @@ La Salle IL, Open Court, 1992, p. 107. (Fenced — epilogue material.)
 >    `does-naturalism-undermine-reason`, and the science-faith answers).
 > ⚠ **Everything in chs. 4–11 stays FENCED** pending the owner's ID / science-tab decision — do not mine.
 
+## ✅ CH. 12 SIX-VERDICT CROSS-CHECK — RUN 2026-11-05 (the book's first grounded cross-check)
+
+**Paired essay read in full:** `library/miracles.html` (read start to finish, 2026-11-05 — it is a mature,
+dual-consensus essay re-gated the same day; covers BOTH Spinoza and Hume plus Troeltsch's analogy principle).
+
+**Six-surface scan (all six checked):**
+- ⬜→✅ **library essay** — `library/miracles.html`: read in full. Covers the Lewis descriptive-law move, the
+  begs-the-question/circularity point, the Big-Bang/origin-of-life **singularity counterexample**, Earman's
+  Bayesian rebuttal, the Troeltsch analogy objection, Mackie, the SEP survey, Augustine, Spinoza. **Far ahead
+  of Lennox's chapter.**
+- ⬜→✅ **/answers** — `answers/do-miracles-really-happen.html` exists; also does not carry the ancients-
+  weren't-credulous point.
+- ⬜→✅ **ev-s card** — miracles is live on the `ev-s5` (Science & Faith) tab.
+- ⬜→✅ **ev-m mastery** — **N/A: `ev-m-miracles.html` does not exist** (a known structural gap per CLAUDE.md,
+  not a Lennox finding).
+- ⬜→✅ **/briefs** — the gated brief **`miracles-hume-spinoza`** exists in `briefs/_data.json`.
+- ⬜→✅ **/sources** — **Hume's *Enquiry* §10 and Spinoza's *TTP* ch. 6 are PD and cited by the essay but are
+  NOT in the `/sources` corpus.** (A pre-existing `/sources` opportunity, not a Lennox finding — noted, no row.)
+
+**Six-verdict classification of ch. 12's leads:**
+| Lennox lead | Verdict |
+|---|---|
+| Lewis laws-are-descriptive / miracles don't "violate" (the outfielder / "feeds a new event in") | **1. Corroboration** — ours is arguably better (outfielder + Augustine + the "cause the law never claimed to exclude" framing) |
+| Hume arg 1 begs the question (Charles I) | **1. Corroboration** (via the Lewis circularity point; Charles I illustration not needed) |
+| "Wise man proportions belief to evidence" is rigged + the **Big-Bang singularity** counterexample | **1. Corroboration** — already the essay's first rebuttal |
+| Hume **self-contradiction via his own induction scepticism** (+ Flew on causation) | **5/6. Ours is better by restraint** — the essay deliberately uses the Lewis circularity point instead; the induction-gotcha is weaker and contested. **No row** (non-recommendation, logged with reason). |
+| **"The ancients were not credulous pre-scientific dupes"** (Zechariah/Luke 1; the Sadducees; N.T. Wright) | **4. Missing** — the essay rebuts Hume's Part II in one sentence; Lennox concretizes it. ⭐ **The one backlog row** (P3, logged in `content-backlog.md`). |
+| Uniformity of nature grounded in a Creator (argument from reason) | **Routed elsewhere** — belongs to `laws.html` / `does-naturalism-undermine-reason.html`, not miracles.html |
+
+> ### ⭐ STANDING OUTPUT — "Is the source better than our essay anywhere? Where, and how?"
+> **Essentially no.** `library/miracles.html` is a markedly more sophisticated, better-sourced, better-
+> structured treatment than Lennox's chapter — it adds Spinoza, Earman's Bayesian analysis, the Troeltsch
+> analogy objection, Mackie, the SEP survey and Augustine, most of which Lennox lacks. This is the same
+> "ours is better" finding every science-book mine has returned. **The single place Lennox adds something we
+> lack** is the concrete rebuttal of Hume's Part II — the point that the ancients understood nature's
+> regularities perfectly well (Zechariah's scepticism; the Sadducees; Wright on ancient paganism), which
+> exposes the "credulous pre-scientific witnesses" charge as a myth. That is the one P3 row.
+
+**Result: 1 backlog row (P3, ancients-weren't-credulous), 1 logged non-recommendation (the induction
+self-contradiction), the rest corroboration. ⚠ The row is NOT executed — it needs the primaries verified
+(Luke 1 NIV; the N.T. Wright 2007 Durham lecture locus — likely a web-enabled session) and a dual-consensus
+re-gate (miracles/resurrection tier) before it ships. Chs. 1–3 (the other mineable front end) still owe
+their own Step-Zero reads + cross-checks.**
+
 **✅ GAP FILLED (2026-11-05): pp. 138–139 — "How does the DNA give rise to the proteins?"** (ch. 8). Content
 confirms the page range (sits between p. 137 "What is DNA?" and p. 140 "Is it all in the genes?"): the
 ribosome / mRNA / transcription–translation / codon–tRNA mechanism (the "DNA as magnetic-tape / Turing-
