@@ -117,8 +117,12 @@ numerical apparatus Craig leans on against Ehrman. The qualitative Bayesian poin
 already present in both essays without the math.
 
 ## Live-door status
-Docs-only. Backlog rows MM-1, MM-7 (and Craig-citation folded into MM-2) logged in
-`docs/content-backlog.md` (2026-11-05). All leads sit inside the possibility/historian's-bar lane or
-the already-conceded worldview-limit; none collapses the wall. Executing a row re-opens the gate
-(citations → argument → orthodoxy; dual-consensus where it touches `minimalfacts`). Verify Paley,
-Sherlock, Less, Becker, Nineham against the primaries before drafting.
+MM-1 and the Craig-citation folded into MM-2 **SHIPPED 2026-11-06** to `library/miracles.html` —
+Craig, "The Problem of Miracles" (Gospel Perspectives VI, 1986) is now cited at fn18, and the
+natural-vs-historical-impossibility cut is in the Hume Part-I rebuttal (dual-consensus + confirmation;
+stamp 2026-11-06). **Less was DROPPED as unverifiable** (catalogs disagree on the date); **Becker and
+Nineham were also dropped** when MM-4 shipped (loci unconfirmable from open sources). **MM-7
+(`minimalfacts.html` — Paley's twelve-honest-men test case + Craig's IBE treatment) is still OPEN.**
+All leads sit inside the possibility/historian's-bar lane or the already-conceded worldview-limit; none
+collapses the wall. Executing MM-7 re-opens the gate (citations → argument → orthodoxy + neutrality;
+dual-consensus). Verify Paley against the primary before drafting.

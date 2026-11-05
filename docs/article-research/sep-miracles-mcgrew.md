@@ -116,8 +116,12 @@ move, and the Hume circularity. The five borrowable spots (Voltaire; Flew 1966 +
 names; Adams's parity; Whately; Abbé Paris) are additions at the edges, not corrections of the core.
 
 ## Live-door status
-Docs-only. Nothing promoted to `/sources` (SEP is not PD-verbatim) or `/briefs` (no certified-essay
-change yet). Backlog rows MM-1, MM-3, MM-4, MM-5, MM-6 logged in `docs/content-backlog.md` (2026-11-05).
-Executing any row re-opens the gate: citations → argument → orthodoxy (resurrection-adjacent leads
-touching `minimalfacts` are dual-consensus). Verify every primary against the original before drafting
-— these loci are SEP's, not independently confirmed.
+Backlog rows MM-1, MM-3, MM-4, MM-5, MM-6 all **SHIPPED 2026-11-06** to `library/miracles.html`
+(full dual-consensus + a confirmation round, 0 BREAK / 0 HERESY; stamp 2026-11-06) — **do not re-mine
+these leads.** Execution notes carried forward: **Less, Becker and Nineham were DROPPED as unverifiable**
+(catalogs disagree on Less's date; Becker/Nineham loci unconfirmable from open sources); the two Voltaire
+theological-objection strings ("disfigure … his own work"; "avowal of weakness") are carried as
+**paraphrase, not verbatim** (the Fleming "Miracles" entry was unreachable from open sources); **Douglas
+dated 1754** (first ed., ESTC T64655 — 1757 is a later printing). Nothing promoted to `/sources` (SEP is
+not PD-verbatim) or `/briefs`. Any further edit re-opens the gate: citations → argument → orthodoxy
+(resurrection-adjacent leads touching `minimalfacts` are dual-consensus).
