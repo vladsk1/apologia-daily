@@ -107,8 +107,9 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 4 "Designer universe?" (pp. 58–77) | ✅ **COMPLETE — pp. 58–77 captured.** 🔴 FENCED (design/fine-tuning). Light log below. |
 | Ch. 5 "Designer biosphere?" (pp. 78–99) | ✅ **COMPLETE — pp. 78–99 captured.** 🔴 FENCED (design in biology) + ⚠ evolution sensitivity. Light log below. |
 | Ch. 6 "The nature and scope of evolution" (pp. 100–121) | ✅ **COMPLETE — pp. 100–121 captured.** 🔴🔴 FENCED + DENSE QUOTE-MINE ZONE. Light log below. |
-| Ch. 7 "The origin of life" (pp. 122–134) | ⚠ **pp. 122–129 captured; pp. 130–134 MISSING.** 🔴 FENCED-ADJACENT (design in OOL); `originlife.html` is AHEAD. Light log below. |
-| Chs. 8–12 (bodies) | ⬜ NOT captured — 🔴 chs. 8–11 fenced (information/genetic code); ch. 12 (Hume/miracles) is safe |
+| Ch. 7 "The origin of life" (pp. 122–134) | ✅ **COMPLETE — pp. 122–134 captured.** 🔴 FENCED-ADJACENT (design in OOL); `originlife.html` is AHEAD. Light log below. |
+| Ch. 8 "The genetic code and its origin" (pp. 135–147) | ⚠ **pp. 135–137 captured; pp. 138–147 MISSING.** 🔴 FENCED (information argument); `originlife.html` AHEAD. Light log below. |
+| Chs. 9–12 (bodies) | ⬜ NOT captured — 🔴 chs. 9–11 fenced (information); ch. 12 (Hume/miracles) is safe |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
 
@@ -720,6 +721,38 @@ Ch. 6 now COMPLETE (pp. 100–121).
 > **STATUS (ch. 7 — partial 122–129, FENCED-ADJACENT):** nothing actionable; `originlife.html` is our mature,
 > gated home and is ahead of this chapter — default verdict is corroboration / ours-is-better, do not import.
 > pp. 130–134 (end of ch. 7) awaited; ch. 8 "The genetic code and its origin" begins p. 135.
+
+**Ch. 7 end, pp. 130–134 — COMPLETES the chapter (🔴 FENCED; `originlife.html` AHEAD):** "Self-organization
+scenarios" + "The core problem". Names only: **Ilya Prigogine & Isabelle Stengers** (order from
+non-equilibrium; the **Belousov–Zhabotinsky** reaction; autocatalysis); **Stuart Kauffman**; **Robert
+Shapiro** (metabolism-first) vs **Leslie Orgel**; **Stephen Meyer** ("self-organization is not the origin of
+information"); **Paul Davies**; **Klaus Dose**; **Francis Crick** ("the origin of life almost a miracle");
+**Francis Collins** ("anyone who tells you he knows how life started is a fool or a knave"). ⚠⚠ **Key hazard
+re-confirmed:** Prigogine/Kauffman/Shapiro/Orgel are **naturalists describing the problem — NOT witnesses for
+design.** Do not port them as conceding a designer (the recurring OOL error). ✅ Honest takeaway only: "the
+origin of life is genuinely unsolved" — which `originlife.html` already states, better. Ch. 7 COMPLETE.
+
+## Raw capture log — Ch. 8 "The genetic code and its origin", pp. 135–137 (LIGHT LOG — 🔴 FENCED; `originlife.html` AHEAD)
+
+> 🔴 **FENCE: the biological-INFORMATION argument — the fence edge flagged in ch. 3 (m). Captured; NOT
+> mine-able as a design inference.** ⚠⚠ Per INDEX, the separable-and-safe part is **only** the Polanyi point
+> ("laws transmit but do not generate information," sourced to Polanyi 1967/68) carried WITHOUT the "therefore
+> a designer" leap — and `library/originlife.html` already carries the information material and is ahead.
+> **Default verdict: corroboration / ours-is-better; do not import.** Section structure (pp. 135–137):
+> epigraphs **Richard Dawkins** ("what lies at the heart of every living thing is… information, words,
+> instructions") + **John Maynard Smith** ("a central idea in contemporary biology is that of information") →
+> "Information in the cell" → "What is DNA?".
+- Names/content (map only): **Michael Denton**; the DNA-as-digital-code / four-letter-alphabet / codon
+  exposition; the *Encyclopaedia Britannica* storage-capacity analogy; the "junk DNA is mostly functional"
+  update; **Alec Jeffreys** (DNA fingerprinting, 1986) — a bare verifiable fact, not design-laden.
+- ⭐ **One point genuinely worth remembering (consonant with us, not design-laden):** the atheist **Dawkins**
+  and **Maynard Smith** both frame life as fundamentally *information* — useful as "even the leading atheists
+  describe the cell in information terms," which sets up the Polanyi question honestly. Still, check
+  `originlife.html` first; likely already there.
+
+> **STATUS (ch. 8 — partial 135–137, FENCED):** nothing actionable; `originlife.html` is ahead. ⚠ The batch
+> that delivered these re-sent pp. 128–129 (already captured) — only pp. 130–137 were new. pp. 138–147 (rest
+> of ch. 8) awaited; ch. 9 "Matters of information" begins p. 148.
 
 ## Still needed to mine this book
 
