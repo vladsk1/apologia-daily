@@ -106,7 +106,8 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 3 "Reduction, reduction, reduction…" (pp. 47–57) | ✅ **COMPLETE — pp. 47–57 captured.** Raw leads logged below, UNMINED. |
 | Ch. 4 "Designer universe?" (pp. 58–77) | ✅ **COMPLETE — pp. 58–77 captured.** 🔴 FENCED (design/fine-tuning). Light log below. |
 | Ch. 5 "Designer biosphere?" (pp. 78–99) | ✅ **COMPLETE — pp. 78–99 captured.** 🔴 FENCED (design in biology) + ⚠ evolution sensitivity. Light log below. |
-| Chs. 6–12 (bodies) | ⬜ NOT captured — 🔴 chs. 6 (evolution scope), 8–11 fenced; ch. 12 (Hume/miracles) is safe |
+| Ch. 6 "The nature and scope of evolution" (pp. 100–121) | ⚠ **pp. 100–119 captured; pp. 120–121 MISSING.** 🔴🔴 FENCED + DENSE QUOTE-MINE ZONE. Light log below. |
+| Chs. 7–12 (bodies) | ⬜ NOT captured — 🔴 chs. 8–11 fenced; ch. 7 (origin of life, p.122) fenced-adjacent; ch. 12 (Hume/miracles) is safe |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
 
@@ -629,6 +630,52 @@ pressure" (p. 99). Logged lightly; names only.
 > (corroboration vs our refuse-to-referee answer), Hume on design (verify vs finetuning/miracles), and the
 > Lewontin/methodological-naturalism material (ch. 2). ⚠ Carry the **Colin Patterson / Phillip Johnson
 > quote-mine hazard** into any future mining of ch. 5. Ch. 6 "The nature and scope of evolution" begins p. 100.
+
+## Raw capture log — Ch. 6 "The nature and scope of evolution", pp. 100–119 (LIGHT LOG — 🔴🔴 FENCED + QUOTE-MINE ZONE)
+
+> 🔴🔴🔴 **DO NOT MINE THIS CHAPTER under the current owner decision — and it is the most dangerous chapter in
+> the book for us.** It is the micro-vs-macroevolution / "limits of Darwinism" case (Lennox's **Assertion 2**),
+> which is both fenced (ID) AND cuts against our gated refuse-to-referee stance
+> (`answers/can-a-christian-believe-in-evolution.html`). Worse, it is built almost entirely from the
+> **classic creationist quote-mine canon** — names whose actual positions are routinely misrepresented by
+> the exact move this chapter makes. If the owner ever opens ID, **every one of these needs individual
+> verification against the scholar's own stated position before a single word is ported** (most of them
+> explicitly affirm macroevolution and repudiated the creationist use of their words).
+
+**Section structure (pp. 100–119):** epigraphs Dobzhansky + Robert Wesson → "The definition of evolution"
+(the 5 senses: change / microevolution / macroevolution / artificial selection / molecular evolution;
+Jonathan Weiner, the peppered-moth *Biston betularia* and Galápagos-finch textbook cases, both of which
+Lennox says are **microevolution**) → "What say the mathematicians?" (the 1966 **Wistar Institute**
+symposium — Eden, Schützenberger, Ulam vs Waddington; Fred Hoyle) → "The fossil record" (Darwin, David Raup,
+Mark Ridley, Gould) → punctuated equilibrium (Gould & Eldredge vs the "ultra-Darwinists" Dawkins/Dennett;
+the Cambrian explosion; Simon Conway Morris) → "Genetic relatedness — a formidable objection?" (common
+descent; Behe's *The Edge of Evolution* — the "CCC"/chloroquine-complexity-cluster malaria argument).
+
+🔴 **THE QUOTE-MINE ROLL-CALL — every one is do-not-port without primary verification of the person's actual view:**
+- **Colin Patterson** (again) — "I will lay it on the line, there is not one such fossil for which one could
+  make a watertight argument" — ⚠⚠ **the single most notorious transitional-fossil quote-mine in existence**;
+  Patterson protested its creationist misuse and affirmed common descent.
+- **Stephen Jay Gould** — the "extreme rarity of transitional forms… trade secret of paleontology" / "stasis"
+  / punctuated equilibrium lines — ⚠⚠ **the #2 quote-mine**; Gould furiously repudiated creationist use and
+  called punctuated equilibrium a pattern *within* evolution, not against it.
+- **Pierre-Paul Grassé** (*L'évolution du vivant*) — anti-*neo-Darwinian-mechanism*, **not** anti-evolution.
+- **Fred Hoyle** ("tornado in a junkyard") — rejected Darwinian macroevolution but was no theist (panspermia).
+- **Michael Behe** (*The Edge of Evolution*; CCC / malaria / chloroquine resistance) — ID; the fenced core.
+- The **1966 Wistar Institute** symposium (Schützenberger, Ulam, Murray Eden) — a staple ID/creationist citation.
+- **Richard Lewontin** "birds arose from non-birds" · **Søren Løvtrup** · **David Raup**, **Mark Ridley**,
+  **Niles Eldredge** — all deployed for the macroevolution-is-not-observed point.
+- ⚠ **Hoyle's "rejected Assertion 2 but not Assertion 1"** framing on p. 112 ties back to ch. 5's two-assertion
+  structure — the only through-line that is *about the logic*, not the biology.
+
+⚠ **Not one lead here is actionable.** The *only* even-arguably-safe thread is the generic "microevolution is
+observed; whether it extrapolates to macroevolution is the contested question" framing — but even stating
+that in our voice would take a side on exactly what `answers/can-a-christian-believe-in-evolution.html`
+refuses to referee. **Leave the whole chapter.** `library/cambrian.html` is our own gated home for the
+Cambrian material — do NOT let this chapter "improve" it backwards.
+
+> **STATUS (ch. 6 — partial 100–119, FENCED + QUOTE-MINE):** nothing actionable; nothing to mine. Logged only
+> so the map is complete and the quote-mine hazard is on the record for any future ID-decision session.
+> pp. 120–121 (end of ch. 6) awaited; ch. 7 "The origin of life" begins p. 122.
 
 ## Still needed to mine this book
 
