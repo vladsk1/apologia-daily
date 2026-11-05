@@ -104,7 +104,8 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 1 "War of the worldviews" (pp. 15–30) | ✅ **COMPLETE — pp. 14–30 captured.** Raw leads logged below, UNMINED — citations unresolved pending References. |
 | Ch. 2 "The scope and limits of science" (pp. 31–46) | ✅ **COMPLETE — pp. 31–46 captured.** Raw leads logged below, UNMINED. |
 | Ch. 3 "Reduction, reduction, reduction…" (pp. 47–57) | ✅ **COMPLETE — pp. 47–57 captured.** Raw leads logged below, UNMINED. |
-| Chs. 4–12 (bodies) | ⬜ NOT captured — 🔴 **ch. 4 "Designer universe?" begins the fenced design-inference chapters** |
+| Ch. 4 "Designer universe?" (pp. 58–77) | ⚠ **pp. 58–67 captured; pp. 68–77 MISSING.** 🔴 FENCED (design inference). Light log below. |
+| Chs. 5–12 (bodies) | ⬜ NOT captured — 🔴 chs. 5, 8–11 are the other fenced design-inference chapters; ch. 12 (Hume/miracles) is safe |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
 
@@ -470,6 +471,57 @@ strongest apologetics lead in chs. 1–3. Maps to `answers/does-naturalism-under
 > (`science-history.html`, `reason.html`, `consciousness.html`, `mathematics.html`, and the science-faith
 > answer pages). First impressions, to be tested: (k) de-deifying ≈ corroboration; (n) **argument from
 > reason is the strongest "might sharpen our wording" candidate from the whole front end.**
+
+## Raw capture log — Ch. 4 "Designer universe?", pp. 58–67 (LIGHT LOG — 🔴 FENCED, partial 58–77)
+
+> 🔴🔴 **FENCE: this is a design-inference / fine-tuning chapter — the open owner decision on the science
+> tab. Captured for completeness; DO NOT mine the design/fine-tuning inference until the owner settles it.**
+> Below I record (a) the chapter's section structure and (b) only the **safe-adjacent** leads — cosmological-
+> beginning *history*, the Leibniz contingency question, and the intelligibility argument — which overlap
+> essays that are already mature (`bigbang.html`, `kalam.html`, `leibniz.html`, `mathematics.html`) and are
+> therefore **almost certainly corroboration**. I am NOT working up the fine-tuning case. pp. 68–77 not yet
+> captured.
+
+**Section structure (pp. 58–67):** epigraphs **Keith Ward** + **Arno Penzias** (Nobel, CMB) → "Evidence for
+design?" → "The rational intelligibility of the universe" → "The nature and role of faith in science" →
+"The existence of the universe" → "The beginning of the universe" → "Antipathy to the idea of a beginning".
+
+🔴 **FENCED (fine-tuning / design inference) — captured, NOT for mining now:** the Penzias "supernatural
+plan" epigraph; **Freeman Dyson** ("the universe in some sense knew we were coming"); **Paul Davies** on the
+cosmic fine-balance; the whole "Evidence for design?" section. Leave until the owner decides; and whenever it
+is touched, the standing rule holds — **fine-tuning *data* is conceded, *design* is the contested inference.**
+
+**Safe-adjacent leads (likely CORROBORATION — verify vs the mature essay, don't import blindly):**
+- **Rational intelligibility of the universe** → `mathematics.html` / `reason.html` / `bigbang.html`.
+  **Einstein** ("the most incomprehensible thing… is that it is comprehensible"); **Eugene Wigner** ("the
+  unreasonable effectiveness of mathematics"); **Roger Penrose**; **Keith Ward**. ⚠ check `mathematics.html`
+  already carries Wigner (very likely). Calibration: intelligibility is *consonant* with theism, not a proof.
+- **Faith in science** (ties back to ch. 1's "faith is not blind") → **Polkinghorne**; **J.J.C. Smart & J.J.
+  Haldane**, *Atheism and Theism* ("science is faith-like in resting upon creedal presuppositions"). Safe.
+- **"The existence of the universe / why is there something rather than nothing?"** → `library/leibniz.html`
+  (contingency). **Stephen Hawking** ("what breathes fire into the equations… the universe can't explain why
+  there is a universe"). ⚠ almost certainly corroboration — `leibniz.html` is the contingency essay.
+- ⭐ **Lennox's "bank account" rebuttal** to "the universe creates itself from the laws of physics" — laws of
+  arithmetic never put £1,000 into an empty account; laws *describe/predict*, they do not *create* or *cause*.
+  Paired with **Atkins's "cosmic bootstrap" / "space-time generates itself"**, which Lennox calls
+  self-contradictory (nothing can create itself — it would have to exist before it existed). ⭐ Portable,
+  memorable, and on the right side of the kalam rule ("whatever *begins to exist* has a cause"). Maps to
+  `kalam.html` / `bigbang.html`. ⚠ check we don't already use an equivalent; verify the Atkins quote.
+- **"The beginning of the universe" + "Antipathy to the idea of a beginning" (pp. 66–67)** → `library/bigbang.html`.
+  History: Plato/Aristotle's eternal universe vs the Hebrews/**Augustine/Irenaeus/Aquinas** on a beginning;
+  the Big Bang (red-shift, CMB); **Eddington** (1882–1944) — "philosophically, the notion of a beginning… is
+  repugnant"; the **steady-state** contest (Gold/Bondi/**Hoyle & Narlikar**); **Engels**; **Hawking**; **John
+  Gribbin** in *Nature* on the beginning's "theological problems" motivating steady-state; **Allan Sandage**
+  (quasars, Crafoord Prize) — "Or does it need a Creator?". ⚠⚠ **This is EXACTLY the steady-state-as-
+  falsification-narrative + Eddington's anti-beginning sentence that `docs/book-research/return-of-the-god-
+  hypothesis.md` flagged, and that `library/bigbang.html` ALREADY covers ("The Theory That Could Have Died").
+  Near-certain corroboration — and bigbang.html is ahead. Do NOT import; at most verify wording.** ⚠ Also:
+  Aquinas/Augustine on the beginning already SHIPPED to `kalam.html` (2026-08-20, per CLAUDE.md).
+
+> **STATUS (ch. 4 — partial 58–67, FENCED):** nothing here changes the mining plan. The safe-adjacent
+> material (beginning-of-universe history, Leibniz contingency, intelligibility, the bank-account rebuttal)
+> is almost certainly corroboration against already-mature essays; the fine-tuning/design core stays fenced
+> pending the owner's decision. Still owed: References pp. 211–221 + Step-Zero reads before any grounded pass.
 
 ## Still needed to mine this book
 
