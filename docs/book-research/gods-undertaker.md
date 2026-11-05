@@ -100,10 +100,58 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 |---|---|
 | Cover + copyright page | ✅ captured + verified (2026-11-05) |
 | Contents (full TOC) | ✅ captured + verified (2026-11-05) |
-| Preface (pp. 7–9) | ⚠ photographed but body text largely illegible at this resolution; not transcribed (and the preface is framing, not citation-bearing) |
-| Chapters 1–12 (bodies) | ⬜ NOT captured |
-| **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next** |
+| Preface (pp. 7–13) | ✅ captured + legible (2026-11-05) — framing + one procedural disclosure (below); not citation-heavy |
+| Ch. 1 "War of the worldviews" (pp. 15–30) | ⚠ **PARTIAL — only pp. 14–17 captured** (chapter runs to p. 30). Raw leads logged below, UNMINED. |
+| Chs. 2–12 (bodies) | ⬜ NOT captured |
+| **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
+
+## Preface — procedural disclosure worth recording (p. 13)
+
+Lennox states his own method: he makes frequent use of **quotations from leading scientists and thinkers**,
+is **aware that quoting out of context would be unfair and distorting**, and hopes he has "succeeded in
+avoiding that particular danger." ✅ A point in his favour on citation care (contrast the *Is God Real?*
+"edited for content" disclosure) — **but it does not lower our bar:** every quote he gives is still an
+**unverified lead** until checked against the primary. The preface also sets the book's thesis as the
+**worldview question** — "which worldview sits most comfortably with science, theism or atheism? Has science
+buried God or not?" (p. 14) — and names its targets: Atkins, Dawkins, Weinberg, the "new atheism."
+
+## Raw capture log — Ch. 1, pp. 14–17 (UNMINED, UNVERIFIED, footnotes unresolved)
+
+> ⚠ These are **raw leads from a partial chapter**, not a mined chapter map and not verdicts. The chapter
+> runs to p. 30 and the References (pp. 211–221) are not captured, so the superscript footnote numbers
+> below **cannot yet be resolved to actual citations.** Do not act on any of this until the full chapter +
+> References are in hand and Step Zero has run. **Routing (to confirm by reading in full):** this chapter's
+> "is faith blind? / faith vs evidence" material maps to the answer pages
+> `answers/isnt-faith-believing-without-evidence.html`, `answers/are-science-and-christianity-enemies.html`,
+> and `answers/doesnt-science-disprove-god.html` — so expect **mostly corroboration**, pending the read.
+
+- **Chapter thesis (our words):** a popular impression says each scientific advance is "another nail in
+  God's coffin" (Atkins). Lennox reframes: the real question is not science *vs* religion but *which
+  worldview* — theism or naturalism — science fits best.
+- **Primary leads seen (all UNVERIFIED, footnote #s unresolved):**
+  - **Peter Atkins** (Oxford chemistry) — "Science and religion cannot be reconciled"; science has
+    "eliminated the justification for believing in cosmic purpose"; faith is "the great sin." Verify against
+    Atkins's own writings/debates.
+  - **Richard Dawkins** — the "what kind of evidence" line; faith as "blind faith," "belief that isn't based
+    on evidence," faith as one of the world's great evils "comparable to the smallpox virus but harder to
+    eradicate." Sources to pin: *The God Delusion* and *The Selfish Gene* / Dawkins's 1992 Edinburgh lecture.
+  - **Robert Pirsig**, *Zen and the Art of Motorcycle Maintenance* — the "when one person suffers from a
+    delusion it is called insanity; when many people suffer… Religion" line (quoted *by Dawkins*, so cite
+    the chain carefully).
+  - **Francis Collins** — the faith of serious believers is not blind / is based on evidence.
+  - **John Haught** — "Even one white crow is enough to show that not all crows are black" (against the
+    claim that all faith is blind).
+  - **Alister McGrath** — Dawkins failed to engage serious Christian thinkers; critique of the "blind faith"
+    definition.
+  - **Edward Larson & Larry Witham** — surveys of belief among scientists published in *Nature* (1996/1997);
+    the repeat of the 1916 Leuba survey. ⚠ verify year + exact figures against the *Nature* letters.
+  - **Scripture:** Romans 1 (creation/divine nature "clearly seen") as the biblical view that faith attends
+    to evidence — contra "blind." Verify wording/translation (book default NIV).
+- ⚠ **Calibration flag for the mining session:** Lennox's framing that Dawkins's definition of faith is
+  "idiosyncratic" / not how serious believers use the word is fair, **but** our answer pages must not
+  overclaim — "faith is not blind" is the right verdict; "faith is just like scientific reasoning" would
+  overstate. Hold the lead-with-the-answer + no-overstatement rules when this reaches any answer page.
 
 ## Still needed to mine this book
 
