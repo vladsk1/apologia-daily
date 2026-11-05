@@ -106,8 +106,9 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 3 "Reduction, reduction, reduction…" (pp. 47–57) | ✅ **COMPLETE — pp. 47–57 captured.** Raw leads logged below, UNMINED. |
 | Ch. 4 "Designer universe?" (pp. 58–77) | ✅ **COMPLETE — pp. 58–77 captured.** 🔴 FENCED (design/fine-tuning). Light log below. |
 | Ch. 5 "Designer biosphere?" (pp. 78–99) | ✅ **COMPLETE — pp. 78–99 captured.** 🔴 FENCED (design in biology) + ⚠ evolution sensitivity. Light log below. |
-| Ch. 6 "The nature and scope of evolution" (pp. 100–121) | ⚠ **pp. 100–119 captured; pp. 120–121 MISSING.** 🔴🔴 FENCED + DENSE QUOTE-MINE ZONE. Light log below. |
-| Chs. 7–12 (bodies) | ⬜ NOT captured — 🔴 chs. 8–11 fenced; ch. 7 (origin of life, p.122) fenced-adjacent; ch. 12 (Hume/miracles) is safe |
+| Ch. 6 "The nature and scope of evolution" (pp. 100–121) | ✅ **COMPLETE — pp. 100–121 captured.** 🔴🔴 FENCED + DENSE QUOTE-MINE ZONE. Light log below. |
+| Ch. 7 "The origin of life" (pp. 122–134) | ⚠ **pp. 122–129 captured; pp. 130–134 MISSING.** 🔴 FENCED-ADJACENT (design in OOL); `originlife.html` is AHEAD. Light log below. |
+| Chs. 8–12 (bodies) | ⬜ NOT captured — 🔴 chs. 8–11 fenced (information/genetic code); ch. 12 (Hume/miracles) is safe |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
 
@@ -676,6 +677,49 @@ Cambrian material — do NOT let this chapter "improve" it backwards.
 > **STATUS (ch. 6 — partial 100–119, FENCED + QUOTE-MINE):** nothing actionable; nothing to mine. Logged only
 > so the map is complete and the quote-mine hazard is on the record for any future ID-decision session.
 > pp. 120–121 (end of ch. 6) awaited; ch. 7 "The origin of life" begins p. 122.
+
+**Ch. 6 end, pp. 120–121 (🔴 FENCED):** closes on Behe's "edge of evolution" + **Francis Collins's objection to
+the term "theistic evolution"** (he prefers "BioLogos"; thinks "theistic" as an adjective subordinates God —
+a terminology point) and **Thomas Nagel**'s respect for ID arguments. ⚠ All fenced; the Collins/Nagel
+material is the "even non-ID thinkers take the questions seriously" move — not mine-able under the fence.
+Ch. 6 now COMPLETE (pp. 100–121).
+
+## Raw capture log — Ch. 7 "The origin of life", pp. 122–129 (LIGHT LOG — 🔴 FENCED-ADJACENT; `originlife.html` AHEAD)
+
+> 🔴 **FENCE: origin-of-life / design-in-biology chapter. Captured for completeness; largely NOT mine-able.**
+> ⚠⚠ **And the standing verdict from the research INDEX is decisive here: `library/originlife.html` is
+> ALREADY MATURE AND AHEAD of popular OOL books** (INDEX, on IGR ch. 3: "corroboration only, and originlife.html
+> is ahead of it on every shared point — Axe marked contested, Polanyi sourced, Dobzhansky with the fairness
+> note, the god-of-the-gaps objection answered at greater length"). So treat this chapter as **corroboration /
+> "ours is better" by default**; do NOT import, and above all do NOT let it "improve" `originlife.html`
+> backwards. Section structure (pp. 122–129): epigraphs **Stuart Kauffman** + **Antony Flew** → "The complexity
+> of the living cell" → "Irreducible complexity" → "The building blocks of life" → "The major problem: the
+> origin of protein structure" → "Self-organization scenarios".
+
+**Names recorded for map-completeness only (NOT worked up):**
+- Cell complexity: **Michael Denton** (*Evolution: A Theory in Crisis*), **Bruce Alberts** ("the cell as a
+  factory of protein machines"), **Jacques Monod**.
+- 🔴 **Irreducible complexity: Michael Behe** (the bacterial **flagellum**; *Darwin's Black Box*) + critics
+  (**Kenneth Miller**, **Cavalier-Smith**, **James Shapiro**, **Gould**). The fenced ID core.
+- Building blocks: **Oparin**, the **Miller–Urey** 1952 experiment (and the reducing-atmosphere caveat that
+  undercuts it), **homochirality** (L-amino-acids), the probability arguments (1 in 10⁶⁰ etc.), **Paul Davies**,
+  the Second Law.
+- The protein-structure problem: the amino-acid "letters/word" information analogy; **Fred Hoyle**'s "**Boeing
+  747** from a junkyard" and the "10⁴⁰,⁰⁰⁰" figure; the Stoic **Balbus**/**Cicero** (*De Natura Deorum*) ancient
+  design argument; **A.G. Cairns-Smith** (clay-first / the "scaffolding" critique).
+
+⚠⚠ **TWO HARD HAZARD FLAGS carried from the other science notes — do NOT repeat these errors:**
+- 🔴 **Cairns-Smith and the RNA-world/self-organization researchers are NOT hostile witnesses to naturalistic
+  OOL.** (RotGH/IGR notes: "Joyce and Cairns-Smith are not hostile witnesses" — quoting them as *conceding
+  design* inverts them; Cairns-Smith proposes a *naturalistic* clay-first route.) Any future use must not
+  present OOL researchers describing the problem as though they endorse a designer.
+- 🔴 **The probability arguments (Hoyle's 747, 1-in-10⁶⁰, etc.) are "proof"-shaped and must never be ported as
+  proof.** They are the exact register `originlife.html` deliberately avoids. The honest claim is "the origin
+  of life is genuinely unsolved," for which (per the RotGH note) better, non-quote-mined sources exist.
+
+> **STATUS (ch. 7 — partial 122–129, FENCED-ADJACENT):** nothing actionable; `originlife.html` is our mature,
+> gated home and is ahead of this chapter — default verdict is corroboration / ours-is-better, do not import.
+> pp. 130–134 (end of ch. 7) awaited; ch. 8 "The genetic code and its origin" begins p. 135.
 
 ## Still needed to mine this book
 
