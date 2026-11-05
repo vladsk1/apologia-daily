@@ -103,8 +103,8 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Preface (pp. 7–13) | ✅ captured + legible (2026-11-05) — framing + one procedural disclosure (below); not citation-heavy |
 | Ch. 1 "War of the worldviews" (pp. 15–30) | ✅ **COMPLETE — pp. 14–30 captured.** Raw leads logged below, UNMINED — citations unresolved pending References. |
 | Ch. 2 "The scope and limits of science" (pp. 31–46) | ✅ **COMPLETE — pp. 31–46 captured.** Raw leads logged below, UNMINED. |
-| Ch. 3 "Reduction, reduction, reduction…" (pp. 47–57) | ⚠ **p. 47 only captured** (chapter runs to ~p. 57). Stub logged below. |
-| Chs. 4–12 (bodies) | ⬜ NOT captured |
+| Ch. 3 "Reduction, reduction, reduction…" (pp. 47–57) | ✅ **COMPLETE — pp. 47–57 captured.** Raw leads logged below, UNMINED. |
+| Chs. 4–12 (bodies) | ⬜ NOT captured — 🔴 **ch. 4 "Designer universe?" begins the fenced design-inference chapters** |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
 
@@ -380,8 +380,96 @@ incoherent** (the same fate as logical positivism's verification principle). Str
   postulating a 'God of the gaps'… I am postulating a God to explain **why science explains**."
 - **"The God of the gaps" section opens:** God is NOT introduced to cover ignorance (intellectual laziness);
   he is not to be "found in the gaps." ⭐ Reinforces the ID fence again: Lennox explicitly disowns
-  god-of-the-gaps reasoning. (Reductionism proper — the "nothing but" move — is the chapter's main target;
-  awaits pp. 48–57.)
+  god-of-the-gaps reasoning.
+
+### Ch. 3 cont'd, pp. 48–57 — COMPLETES the chapter (UNMINED, UNVERIFIED)
+
+**(j) God-of-the-gaps, finished (p. 48).** **Swinburne** (full): "I am not postulating a 'God of the gaps'…
+I am postulating a God to explain **why science explains**… the very success of science… is evidence for
+believing there is an even deeper cause." ⭐⭐ **This is the single most important sentence for our ID fence**
+— God as the ground of the whole explanatory order, not a rival to scientific explanation. Port this if the
+design chapters are ever mined.
+
+**(k) "De-deifying the universe — the very first scientists" (pp. 48–51) — maps to `library/science-history.html`.**
+⚠ **EXPECT CORROBORATION (continues the forgotten-roots thesis); read the essay in full first.** Leads:
+- The **Milesians** — Thales, Anaximander, Anaximenes (c. 600 BC) — sought natural (not mythological, contra
+  Homer/Hesiod c. 700 BC) explanations. **Thales** predicted a solar eclipse (585 BC). **Xenophanes of
+  Colophon** (c. 570–478 BC) — fossils of sea-creatures (Malta); the **projection critique** of the gods
+  ("Ethiopians'… dark and flat-nosed; … if cows and horses had hands…"). **Epicurus** (b. 341 BC) — remove
+  the gods from explanation ("thunderbolts can be produced in several ways… keep the gods out of it").
+- ⭐ **Lennox's key move (safe, and the heart of the forgotten-roots thesis):** *de-deifying* nature
+  (removing the many capricious gods *from inside* the world) is **NOT** the same as removing *God the
+  Creator*. The Hebrew Scriptures already de-deified nature (**Moses**: do not worship sun/moon/stars;
+  **Jeremiah**: the absurdity of deifying nature) — sun and stars are creatures, not gods. **Werner Jaeger**
+  on the Greek gods generated *inside* the world (Hesiod's *Theogony*) vs the **Logos / Creator stationed
+  outside** the world (Genesis, *ex nihilo*). **Melvin Calvin** again (Hebrew monotheism → the order-
+  conviction). ⚠ Verify Jaeger + the Xenophanes fragments. ⚠ **IRONY WORTH FLAGGING:** the Xenophanes
+  "projection" fragment is also the stock *atheist* argument (Feuerbach/Freud: God as human projection) —
+  Lennox uses it *against polytheism*, not against theism. Any card must not let it read as conceding the
+  projection charge against God.
+
+**(l) Aquinas: primary vs secondary causation (pp. 50–51).** ⭐ **Aquinas** — God *directly* causes the
+universe to exist and upholds it (primary causation); the interlocking system of natural laws is *secondary*
+causation. Secondary causes don't imply the non-existence of the Creator they depend on → belief in a Creator
+does not "end science." ⚠ **LIKELY CORROBORATION:** `CLAUDE.md` records `library/kalam.html` SHIPPED
+Aquinas/Augustine/Maimonides on 2026-08-20 — but the *primary/secondary causation* framing specifically may
+be a nuance worth checking in `kalam.html` / `science-history.html`. **James Clerk Maxwell** — the Cavendish
+Laboratory inscription, **Psalm 111:2** ("Great are the works of the Lord…"). ⚠ verify the inscription wording
++ that it is Ps 111:2 (Vulgate numbering issues).
+
+**(m) "Reductionism" — methodological / epistemological / ontological (pp. 52–55).** Home: a
+limits-of-reductionism topic (possibly `library/reason.html`, `consciousness.html`, `mathematics.html`; may
+be partly a GAP).
+- **Methodological reductionism** (good, normal science) illustrated by mathematical compression — Kepler's
+  ellipses from Tycho Brahe; Newton; Maxwell/Schrödinger/Dirac; the TOE quest. ⭐⭐ **Gödel's Incompleteness
+  Theorems** — **Hilbert's Programme** (reduce all maths to a finite axiom set) shown unrealizable by **Kurt
+  Gödel** (1931, "On Formally Undecidable Propositions…"); the First & Second Incompleteness Theorems →
+  there are true arithmetic statements unprovable within the system, and the system's consistency can't be
+  proved from within. **Freeman Dyson:** "Gödel proved that in mathematics the whole is always greater than
+  the sum of the parts." ⚠ verify Gödel paper title/date + the Dyson quote. ⚠ **CALIBRATION:** do NOT
+  overclaim Gödel as "disproving materialism" — the honest point is a *limit on reductionism*, not a proof
+  of theism. (Check `library/mathematics.html` — we may already handle Gödel; if so, hold its calibration.)
+- **Epistemological reductionism** ("bottom-up": sociology→psychology→biology→chemistry→physics) — **Dawkins**
+  ("explain… in terms of the simple things"), **Francis Crick** ("explain all biology in terms of physics and
+  chemistry"). **Karl Popper:** "almost always an unresolved residue." **Michael Polanyi** — the *levels*
+  argument (bricks/building, letters/meaning): lower-level laws **govern** the raw material but do not
+  **generate** the higher-level message/organisation. **Arthur Peacocke** on "information" not being
+  articulable in physics/chemistry terms.
+- ⚠⚠ **DNA-AS-INFORMATION (pp. 54–55) IS THE EDGE OF THE ID FENCE.** The "sequence of letters is not
+  generated by the chemistry of the bases / information needs a higher level" argument shades into the
+  design inference. **Per the RotGH note, the separable-and-safe part is the Polanyi point — "laws transmit
+  but do not generate information," sourced to Polanyi (1967/68)** — carried WITHOUT the "therefore a
+  designer" leap. **`library/originlife.html` already carries the information material (INDEX: corroboration,
+  Polanyi-sourced, originlife is ahead) — so this is almost certainly corroboration, not an import.** Also:
+  **Dawkins'** 20 Jan 1999 Oxford lecture on "emergence"; the Microsoft Word / software-needs-design analogy.
+
+**(n) ⭐⭐ Ontological reductionism + THE ARGUMENT FROM REASON (pp. 56–57) — the chapter's payoff and the
+strongest apologetics lead in chs. 1–3. Maps to `answers/does-naturalism-undermine-reason.html` + possibly
+`library/reason.html` / `consciousness.html`.**
+- The "nothing but / sole / simply" tell of **ontological reductionism**: **Dawkins** ("the universe is
+  nothing but a collection of atoms… human beings are simply machines for propagating DNA"); **Francis
+  Crick** ("You, your joys and your sorrows… are in fact no more than the behaviour of a vast assembly of
+  nerve cells"; the "astonishing hypothesis"; "you are nothing but a pack of neurons").
+- ⭐⭐ **The argument from reason (self-refutation of naturalism):** if thought is *nothing but* neural
+  events, those events "are neither right nor wrong — they simply happen," and rational discourse dissolves;
+  the reductionist's *own* assertions become "blips in the neural network." **Darwin's Doubt** ("the horrid
+  doubt always arises whether the convictions of man's mind, developed from the lower animals, are of any
+  value or at all trustworthy"); **John Polkinghorne** — reductionism is "ultimately suicidal"; **Fraser
+  Watts**. Lennox: using minds to argue there's no reason to trust minds is self-refuting — "lifting oneself
+  by one's own bootstraps." ⚠ This is **Plantinga's EAAN / C.S. Lewis's argument from reason** in popular
+  form — **check `does-naturalism-undermine-reason.html` + `library/reason.html` in full**; likely
+  corroboration, but the Darwin's-Doubt + Crick + Polkinghorne primaries may sharpen our wording (verdict 3).
+  ⚠ verify every quote (Darwin's letter to William Graham 1881; Crick *The Astonishing Hypothesis* 1994;
+  Polkinghorne locus).
+
+> **STATUS (ch. 3 — COMPLETE capture, still UNMINED):** chs. 1–3 (pp. 14–57) now fully captured. These are
+> the whole safe-to-mine "front end" (worldviews / limits of science / reductionism). **Ch. 4 "Designer
+> universe?" (p. 58) begins the ID/design-inference chapters that are fenced pending the owner's science-tab
+> decision** — capture them if you like, but they cannot be *mined for the design inference* until that
+> decision. Still owed before ANY grounded pass: **References pp. 211–221** + the **Step-Zero full reads**
+> (`science-history.html`, `reason.html`, `consciousness.html`, `mathematics.html`, and the science-faith
+> answer pages). First impressions, to be tested: (k) de-deifying ≈ corroboration; (n) **argument from
+> reason is the strongest "might sharpen our wording" candidate from the whole front end.**
 
 ## Still needed to mine this book
 
