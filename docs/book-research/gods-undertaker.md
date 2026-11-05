@@ -101,7 +101,7 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Cover + copyright page | ✅ captured + verified (2026-11-05) |
 | Contents (full TOC) | ✅ captured + verified (2026-11-05) |
 | Preface (pp. 7–13) | ✅ captured + legible (2026-11-05) — framing + one procedural disclosure (below); not citation-heavy |
-| Ch. 1 "War of the worldviews" (pp. 15–30) | ⚠ **PARTIAL — only pp. 14–17 captured** (chapter runs to p. 30). Raw leads logged below, UNMINED. |
+| Ch. 1 "War of the worldviews" (pp. 15–30) | ⚠ **pp. 14–27 captured** (chapter runs to ~p. 30; pp. 28–30 may remain). Raw leads logged below, UNMINED — citations unresolved pending References. |
 | Chs. 2–12 (bodies) | ⬜ NOT captured |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
@@ -152,6 +152,80 @@ buried God or not?" (p. 14) — and names its targets: Atkins, Dawkins, Weinberg
   "idiosyncratic" / not how serious believers use the word is fair, **but** our answer pages must not
   overclaim — "faith is not blind" is the right verdict; "faith is just like scientific reasoning" would
   overstate. Hold the lead-with-the-answer + no-overstatement rules when this reaches any answer page.
+
+### Ch. 1 cont'd, pp. 18–27 (UNMINED, UNVERIFIED, footnotes 13–32 unresolved)
+
+**Second half of ch. 1 has THREE distinct sections, each with a different on-site home — route separately:**
+
+**(a) "Do scientists believe in God?" — the belief-among-scientists surveys (pp. 18–19).** Likely home:
+`answers/are-science-and-christianity-enemies.html` / `doesnt-science-disprove-god.html`.
+- **Leuba 1916** survey (1,000 American "men of science"): ~41.8% believed in a God "who answers prayer",
+  ~41.5% did not, rest agnostic. **Larson & Witham 1996/1997** *repeat* (same questions): ~39.6% yes,
+  45.5% no, 14.9% agnostic — **strikingly little change in 80 years.** ⚠ verify exact figures + year
+  (1996 survey, published 1997) against the *Nature* letters.
+- **NAS / Royal Society (Larson & Witham 1998, *Nature*):** among the *elite* (US National Academy of
+  Sciences) belief far lower — ~**7% believed in God, 20.8% agnostic, 72.2% atheist/disbelief**; Royal
+  Society similar. ⚠ verify figures + year. ⚠⚠ **CALIBRATION:** the honest reading is "belief is lower
+  among elite scientists," NOT a claim that undermines theism — correlation, and Lennox's own point is
+  that *statements by scientists are not statements of science* (below). Do not let a card spin this.
+- **Named believing scientists** Lennox lists (all living/recent, verify affiliations): **Francis Collins**
+  (Human Genome Project), **William D. (Bill) Phillips** (Nobel Physics 1997), **Sir Brian Heap** FRS,
+  **Sir John Houghton** FRS (IPCC / Met Office), **Sir Ghillean Prance** FRS (former Director, Kew).
+- ⭐ **Lennox's key move (safe, portable):** *"statements by scientists are not necessarily statements of
+  science"* — Atkins's/Dawkins's anti-God pronouncements are worldview claims, not science. This is a
+  clean, quotable *distinction* worth checking against our science-faith answers.
+
+**(b) "The forgotten roots of science" (pp. 20–23) — maps to `library/science-history.html` (ev-s8 Christian
+Revolution; swept + certified 2026-10-04).** ⚠ **EXPECT HEAVY CORROBORATION — this is the one section most
+likely already covered, and covered well.** Read `science-history.html` IN FULL before claiming any gap.
+Leads to compare (all UNVERIFIED):
+- **C.S. Lewis:** "Men became scientific because they expected law in nature, and they expected law in
+  nature because they believed in a Lawgiver." (verify locus — *Miracles*?)
+- **Melvin Calvin** (Nobel biochemist) tracing the order-conviction to Hebrew monotheism (one God, not the
+  whims of many gods). ⚠ verify source.
+- **Alfred North Whitehead** — medieval theology's insistence on the rationality of God grounded the
+  expectation of natural law (*Science and the Modern World*). **T.F. Torrance.**
+- **Kepler** — science as "thinking God's thoughts after him" (verify wording/attribution — commonly
+  loose). Roll-call of believing pioneers: Bacon, Galileo, Kepler, Pascal, Boyle, Mendel, Newton,
+  Faraday, Babbage, Clerk Maxwell, Kelvin, Pasteur.
+- ⭐ **The strongest candidate IMPROVEMENT to check:** the **contingent-creation argument** — a universe
+  freely created (not a necessary emanation) *cannot* be deduced a priori, so you must *go and look*; this
+  is why the doctrine of creation **freed** science from the Aristotelian a priori method. **Peter
+  Harrison** (Oxford; Brooke's successor) on the Bible's literal reading + the rise of science. ⚠ If
+  `science-history.html` lacks the *contingent-creation-freed-empiricism* point specifically, that is a
+  real "missing/weaker" candidate — but confirm by full read first.
+- ⚠ **Guardrail:** **John Brooke's "complexity thesis"** — Lennox himself cites Brooke's caution against
+  overstating "Christianity birthed science." **Our essay already refuses the triumphalist version (good≠
+  true / the ev-s8 closing move); do not let this section push it the other way.** Also: the roots are
+  shared by Judaism + Islam (monotheist doctrine of creation) — Lennox says so; don't let a card imply the
+  pioneers' faith *proves* anything (he says it doesn't: "science does not prove atheism" — nor theism).
+
+**(c) "Myths of conflict: Galileo; Huxley–Wilberforce" (pp. 23–27) — maps to
+`answers/are-science-and-christianity-enemies.html`.** The **conflict thesis is a myth** case:
+- **Galileo (pp. 24–26):** Dava Sobel, *Galileo's Daughter* (debunks the myth); Galileo a firm believer
+  ("laws of nature written by the hand of God"); his real opponents were the **Aristotelian secular
+  philosophers**, and the Jesuit astronomers of the **Collegio Romano** initially endorsed him; **Letter to
+  the Grand Duchess Christina (1615)**; 1604 supernova + sunspots broke the "immutable heavens"; **Pope
+  Urban VIII (Maffeo Barberini)** turned after Galileo put his argument in the mouth of **Simplicio**;
+  **never tortured**, house arrest in comfortable residences. ⚠⚠ **DENOMINATIONAL-NEUTRALITY TRIPWIRE:**
+  this is a Roman Catholic episode — the lesson Lennox draws (and the one we may port) is **the
+  Bible-speaks-phenomenologically / be-humble-about-our-interpretations** point and **"lack of belief in
+  God is no more a guarantee of scientific orthodoxy than belief in God"** — NOT a swipe at Catholicism.
+  Keep the handling even-handed (the ev-s8 neutrality bar).
+- **Huxley–Wilberforce, Oxford 1860 (pp. 26–27):** the "Soapy Sam got demolished" story is **historically
+  doubtful** — Wilberforce was no ignoramus (wrote a serious 50-page *Quarterly Review* of the *Origin*
+  that Darwin called "uncommonly clever", scientifically advised by **Richard Owen**); **John Brooke**:
+  "it is a significant fact that initially the event seemed to cause little or no stir"; no official record;
+  the victory legend grew later. Historians: **Frank James** (Royal Institution), Charles Taylor, the
+  *Athenaeum* report. ⚠ verify all names/quotes against the historians' own work.
+
+> **STATUS:** ch. 1 is now substantially captured but **still not mined** — two things remain before a
+> grounded pass: (1) the **References pp. 211–221** (to resolve footnotes 1–32 and verify every lead), and
+> (2) the **Step-Zero full reads** of `science-history.html` + the three science-faith answer pages. I will
+> do both as **one clean pass** (reads + cross-check + citation-verify together) rather than guess verdicts
+> now. First impression only, to be tested not trusted: **(b) is probably corroboration; the live finding
+> to chase is whether the *contingent-creation-freed-empiricism* argument + Peter Harrison are in
+> `science-history.html`.**
 
 ## Still needed to mine this book
 
