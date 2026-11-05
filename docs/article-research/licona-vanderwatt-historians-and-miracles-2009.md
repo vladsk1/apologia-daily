@@ -252,11 +252,16 @@ history," Butler, Cladis — and Witherington).
   rule); `node tools/build-our-sources.mjs` run.
 - **UPDATE 2026-11-05 — HM-1 (the P2 principle-of-analogy row) HAS SHIPPED** (commit 153a5605):
   a new section "Can a Historian Even Consider a Miracle?" in `library/miracles.html`, dual-consensus
-  certified (stamp 2026-11-05), keeping the possibility/actuality wall. HM-2/HM-3/HM-4 remain open
-  proposals. One residual CHECK: Dunn, *Jesus Remembered*, 876–878 exact pages need a human with the
-  physical volume (plausible/consistent, hedged in the footnote).
-- The note's original mining was DOCS-ONLY; the backlog rows below (except HM-1, now done) remain
-  proposals for a future owner-approved content session.
+  certified (stamp 2026-11-05), keeping the possibility/actuality wall. **HM-2 and HM-3 then shipped the
+  same day** (same read-only dual-consensus + confirmation method), and **HM-4 shipped the same day under
+  the stricter Islam-tier gate** (dual-consensus + EXPLICIT-VERDICT + FALSE-COMMON-GROUND, with a focused
+  two-lens re-check on the Surah 54:1 proportion). The whole cluster (#129 analogy + #130
+  theological/consensus/rival-religion objections) is now fully executed and live in `library/miracles.html`
+  as the section "Can a Historian Even Consider a Miracle?" (four stacked objections) plus a fourth
+  door-closer in the Conclusion. One residual CHECK: Dunn, *Jesus Remembered*, 876–878 exact pages need a
+  human with the physical volume (plausible/consistent, hedged in the footnote).
+- The note's original mining was DOCS-ONLY; the backlog rows below (HM-1 through HM-4) are now **all DONE**
+  (shipped 2026-11-05), leaving no open content row from this note.
 
 ## Backlog rows logged (see `docs/content-backlog.md`)
 One clustered item — **"The historian's right to adjudicate a miracle" (methodological-naturalism bar),
@@ -268,10 +273,15 @@ caution flags above:
   actually raise. ✅ **SHIPPED 2026-11-05 (commit 153a5605)** as the `miracles.html` section "Can a
   Historian Even Consider a Miracle?"
 - **P3** — the theological objection (Meier "crossing the line") + the event-not-cause / Carloman /
-  inferred-unobservables (quarks, Polkinghorne) reply.
-- **P3** — lack of consensus + replies (horizons in secular history; Ehrman's inconsistency; consensus ≠ truth).
+  inferred-unobservables (quarks, Polkinghorne) reply. ✅ **SHIPPED 2026-11-05 (HM-2).**
+- **P3** — lack of consensus + replies (horizons in secular history; the field affirms Jesus' crucifixion
+  despite fringe dissent; consensus ≠ truth). ✅ **SHIPPED 2026-11-05 (HM-3)** — used the mythicism example,
+  not the Muslim-crucifixion-denial/Ehrman-inconsistency framing, to keep the section non-Islam-tier.
 - **P3** — rival-religion comparative attestation + case-by-case + genetic-fallacy reply. ⚠ **Islam-tier:**
   dual-consensus, EXPLICIT-VERDICT + FALSE-COMMON-GROUND; cross-check `library/islam-*` first.
+  ✅ **SHIPPED 2026-11-05 (HM-4)** — Muhammad framed per `islam-jesus.html` (sign = the Qur'an itself; Surah
+  54:1 named as a disputed verse, majority-miracle/minority-eschatological), the possibility/actuality wall
+  kept; Q 4:157–158 deliberately NOT used here (it is the crucifixion-denial, handled elsewhere).
 - **P4 (optional)** — the explicit Ehrman "most/least probable" framing of antecedent probability
   (mostly corroboration; only if the cluster ships).
 Non-recommendations recorded: do **not** import the Katja contemporary-miracle example (row 9), Licona's
