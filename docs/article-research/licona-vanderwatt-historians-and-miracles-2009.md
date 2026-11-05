@@ -250,8 +250,13 @@ history," Butler, Cladis — and Witherington).
   ships and is certified.
 - `our-sources.html`: a gated ARTICLES card for this note was added in the **same commit** (OUR SOURCES
   rule); `node tools/build-our-sources.mjs` run.
-- **This note is DOCS-ONLY. No live content changed.** The backlog rows below are proposals for a
-  future owner-approved content session, not work done here.
+- **UPDATE 2026-11-05 — HM-1 (the P2 principle-of-analogy row) HAS SHIPPED** (commit 153a5605):
+  a new section "Can a Historian Even Consider a Miracle?" in `library/miracles.html`, dual-consensus
+  certified (stamp 2026-11-05), keeping the possibility/actuality wall. HM-2/HM-3/HM-4 remain open
+  proposals. One residual CHECK: Dunn, *Jesus Remembered*, 876–878 exact pages need a human with the
+  physical volume (plausible/consistent, hedged in the footnote).
+- The note's original mining was DOCS-ONLY; the backlog rows below (except HM-1, now done) remain
+  proposals for a future owner-approved content session.
 
 ## Backlog rows logged (see `docs/content-backlog.md`)
 One clustered item — **"The historian's right to adjudicate a miracle" (methodological-naturalism bar),
@@ -260,7 +265,8 @@ absent site-wide.** Placement is an editorial/owner decision: (i) a new clearly-
 `minimalfacts.html`/`hist_jesus.html`, or (iii) a short new essay. Sub-leads, each ported with the
 caution flags above:
 - **P2** — principle of analogy (Troeltsch/Dunn) + replies. Highest value; the objection people
-  actually raise.
+  actually raise. ✅ **SHIPPED 2026-11-05 (commit 153a5605)** as the `miracles.html` section "Can a
+  Historian Even Consider a Miracle?"
 - **P3** — the theological objection (Meier "crossing the line") + the event-not-cause / Carloman /
   inferred-unobservables (quarks, Polkinghorne) reply.
 - **P3** — lack of consensus + replies (horizons in secular history; Ehrman's inconsistency; consensus ≠ truth).
