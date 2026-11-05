@@ -110,8 +110,9 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 7 "The origin of life" (pp. 122–134) | ✅ **COMPLETE — pp. 122–134 captured.** 🔴 FENCED-ADJACENT (design in OOL); `originlife.html` is AHEAD. Light log below. |
 | Ch. 8 "The genetic code and its origin" (pp. 135–147) | ⚠ **pp. 135–137 + 140–147 captured; ⚠️ pp. 138–139 SKIPPED (gap).** 🔴 FENCED; `originlife.html` AHEAD. Light log below. |
 | Ch. 9 "Matters of information" (pp. 148–162) | ✅ **COMPLETE — pp. 148–162 captured.** 🔴 FENCED (information/Dembski). Light log below. |
-| Ch. 10 "The monkey machine" (pp. 163–173) | ⚠ **pp. 163–167 captured; pp. 168–173 MISSING.** 🔴 FENCED (Dawkins weasel critique). Light log below. |
-| Chs. 11–12 (bodies) | ⬜ NOT captured — 🔴 ch. 11 fenced (origin of info); ch. 12 (Hume/miracles) is safe |
+| Ch. 10 "The monkey machine" (pp. 163–173) | ✅ **COMPLETE — pp. 163–173 captured.** 🔴 FENCED. Light log below. |
+| Ch. 11 "The origin of information" (pp. 174–192) | ⚠ **pp. 174–177 captured; pp. 178–192 MISSING.** 🔴🔴 FENCED (explicit design inference: Dembski/SETI/"it from bit"). Light log below. |
+| Ch. 12 "Violating nature? (Hume)" (pp. 193–206) | ⬜ NOT captured — ✅ **SAFE to mine (pairs with `miracles.html`)** |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
 
@@ -817,6 +818,37 @@ note). ⚠ `originlife.html` is ahead and does not rest on Dembski; keep it that
 > nothing to import. ⚠⚠ **GAPS/DUPLICATES to note:** (1) **pp. 138–139 still MISSING** (not filled by this
 > batch — it jumped 149→150); (2) this batch re-sent **pp. 162–163** (duplicate within the batch). pp. 168–173
 > (rest of ch. 10) awaited; ch. 11 "The origin of information" begins p. 174.
+
+**Ch. 10 end, pp. 168–173 — COMPLETES the chapter (🔴 FENCED):** finishes the Dawkins-weasel critique
+(Berlinski's "the entire exercise is… an achievement" line; the weasel smuggles a target = teleology; the
+Bernoulli probability math), **Behe's irreducibly complex machines** + the **combination-lock** illustration
+(from Elliott Sober's version), and **"Computer simulations"** (Kauffman/Santa Fe; the von Neumann-machine
+point; Schützenberger). ⚠ All fenced; standard ID argumentation. Nothing actionable. Ch. 10 COMPLETE.
+
+## Raw capture log — Ch. 11 "The origin of information", pp. 174–177 (LIGHT LOG — 🔴🔴 FENCED: explicit design inference)
+
+> 🔴🔴 **THE most explicitly design-inference chapter so far — fully fenced, captured for completeness only,
+> NOT mine-able.** Epigraphs: Hans Christian von Baeyer ("In the beginning was the bit") + **John 1:1** ("In
+> the beginning was the Word," attributed "The Christian apostle John"). Sections (pp. 174–177): "Information
+> and the design argument" → "The Search for Extra-Terrestrial Intelligence and its implications" → "Information
+> as a fundamental quantity".
+- 🔴 **"Information and the design argument":** **Stephen Meyer** + **William Dembski** (*The Design
+  Inference*) — the DNA-as-language / design-by-analogy / "reasoning back from effect to intelligent cause"
+  move. The chapter's fenced core; `originlife.html` does not and should not rest on this.
+- 🔴 **"SETI" analogy:** NASA/SETI treat a specified signal from space as a marker of intelligence, so (the
+  argument runs) DNA's specified information should count the same way. ⚠ Standard ID analogy — fenced.
+- **"Information as a fundamental quantity":** **Paul Davies** (*New Scientist*), **Anton Zeilinger**
+  (quantum information), **John Archibald Wheeler** ("it from bit"), **Francis Collins** ("we have caught the
+  first glimpse of our own instruction book, previously known only to God"), **Gene Myers** (Celera), **Allan
+  Sandage**, **Anthony Flew** (⚠ already fenced in ch. 2 — his turn was to **DEISM, not Christianity**).
+- ⚠ **The John 1 *Logos* turn (p. 177):** Lennox links the "information at the base of reality" theme to the
+  Word/*Logos* of John 1. This is a *theological* flourish inside the fenced ID argument. ⚠⚠ **If any Logos/
+  deity-of-Christ point were ever wanted, it must come from our OWN certified deity-of-Christ essays, which
+  are dual-consensus gated — NEVER ported from a science book's closing analogy.** Not mine-able here.
+
+> **STATUS (ch. 10 complete + ch. 11 opening):** both fenced; nothing actionable. ⚠️ **pp. 138–139 STILL the
+> one open gap.** pp. 178–192 (rest of ch. 11) awaited; then ⭐ **ch. 12 "Violating nature?" (pp. 193–206) —
+> the Hume-on-miracles chapter, which is SAFE to mine and pairs with `library/miracles.html`.**
 
 ## Still needed to mine this book
 
