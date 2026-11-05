@@ -108,8 +108,9 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 5 "Designer biosphere?" (pp. 78–99) | ✅ **COMPLETE — pp. 78–99 captured.** 🔴 FENCED (design in biology) + ⚠ evolution sensitivity. Light log below. |
 | Ch. 6 "The nature and scope of evolution" (pp. 100–121) | ✅ **COMPLETE — pp. 100–121 captured.** 🔴🔴 FENCED + DENSE QUOTE-MINE ZONE. Light log below. |
 | Ch. 7 "The origin of life" (pp. 122–134) | ✅ **COMPLETE — pp. 122–134 captured.** 🔴 FENCED-ADJACENT (design in OOL); `originlife.html` is AHEAD. Light log below. |
-| Ch. 8 "The genetic code and its origin" (pp. 135–147) | ⚠ **pp. 135–137 captured; pp. 138–147 MISSING.** 🔴 FENCED (information argument); `originlife.html` AHEAD. Light log below. |
-| Chs. 9–12 (bodies) | ⬜ NOT captured — 🔴 chs. 9–11 fenced (information); ch. 12 (Hume/miracles) is safe |
+| Ch. 8 "The genetic code and its origin" (pp. 135–147) | ⚠ **pp. 135–137 + 140–147 captured; ⚠️ pp. 138–139 SKIPPED (gap).** 🔴 FENCED; `originlife.html` AHEAD. Light log below. |
+| Ch. 9 "Matters of information" (pp. 148–162) | ⚠ **pp. 148–149 captured; pp. 150–162 MISSING.** 🔴 FENCED (Shannon information). Light log below. |
+| Chs. 10–12 (bodies) | ⬜ NOT captured — 🔴 chs. 10–11 fenced (information/origin of info); ch. 12 (Hume/miracles) is safe |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
 
@@ -753,6 +754,37 @@ origin of life is genuinely unsolved" — which `originlife.html` already states
 > **STATUS (ch. 8 — partial 135–137, FENCED):** nothing actionable; `originlife.html` is ahead. ⚠ The batch
 > that delivered these re-sent pp. 128–129 (already captured) — only pp. 130–137 were new. pp. 138–147 (rest
 > of ch. 8) awaited; ch. 9 "Matters of information" begins p. 148.
+
+**Ch. 8 cont'd, pp. 140–147 — ⚠️ pp. 138–139 SKIPPED (gap); otherwise completes the chapter (🔴 FENCED):**
+sections "A hierarchy of complexity" → "Is it all in the genes?" → "1. Alternative splicing / 2. Error-
+correction / 3. The geometry of proteins" → "Proteomics" → "Information processing in the cell". Names/content
+(map only): **Steve Jones** (the 30–40k human-gene count; the 98%-chimp caveat — "it is not human at all");
+**gene-regulation / promoters / expression states** (A has 2³²,⁰⁰⁰, B 2³⁰,⁰⁰⁰ states); **Barry Commoner**
+("Unravelling the DNA Myth"); **alternative splicing** (Shin Kwak, ALS, 1 gene → up to ~38,016 proteins);
+**error-correction** enzymes (James Shapiro); **prions** (Prusiner, protein folding); **proteomics**; and
+"information processing" — **Hofstadter** (*Gödel, Escher, Bach*), **Bill Gates** ("DNA is like a software
+program, only far more advanced"), **Werner Loewenstein**; then (p. 146–147) **Michael Polanyi** (the
+load-bearing lead: base-sequence is "physically indeterminate," not fixed by chemistry — the ONE safe,
+originlife-sourced point), **Hubert Yockey** (*Information Theory and Molecular Biology*), **Theodosius
+Dobzhansky** (⚠ the famous "nothing in biology makes sense except in the light of evolution" line AND his
+"prebiotic evolution is a contradiction in terms" caution — `originlife.html` already carries Dobzhansky
+*with the fairness note*, per INDEX), **John Barrow**, **James Clerk Maxwell** (1873 atoms-as-manufactured).
+⚠ **All fenced; `originlife.html` is ahead (Polanyi sourced, Dobzhansky fenced). Nothing to import.**
+
+## Raw capture log — Ch. 9 "Matters of information", pp. 148–149 (LIGHT LOG — 🔴 FENCED; `originlife.html` AHEAD)
+
+> 🔴 **FENCE: continues the biological-information case into formal information theory. Captured; NOT
+> mine-able as a design inference.** Section structure (pp. 148–149): epigraphs **Matt Ridley** ("life is
+> digital information") + **Bernd-Olaf Küppers** + **Manfred Eigen** + **Leonard Brillouin** → "What is
+> information?". Content = a textbook exposition of **Shannon information** (bits, log₂, the hotel-room /
+> text-message illustrations; "a machine does not create new information" — Brillouin). ⚠ This is the setup
+> for the "law + chance cannot generate information → mind" move (chs. 9–11), which is the fenced design
+> inference. The only safe, originlife-sourced thread remains **Polanyi's** physical-indeterminacy point.
+> Nothing actionable.
+
+> **STATUS (ch. 8 + ch. 9 opening):** ⚠️ **GAP — pp. 138–139 were skipped** (previous batch ended p. 137,
+> this batch began p. 140). Needs re-shooting. Both chapters fenced; `originlife.html` ahead; nothing to
+> import. pp. 150–162 (rest of ch. 9) awaited; ch. 10 "The monkey machine" begins p. 163.
 
 ## Still needed to mine this book
 
