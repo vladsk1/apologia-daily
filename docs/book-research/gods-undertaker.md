@@ -112,7 +112,7 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 9 "Matters of information" (pp. 148–162) | ✅ **COMPLETE — pp. 148–162 captured.** 🔴 FENCED (information/Dembski). Light log below. |
 | Ch. 10 "The monkey machine" (pp. 163–173) | ✅ **COMPLETE — pp. 163–173 captured.** 🔴 FENCED. Light log below. |
 | Ch. 11 "The origin of information" (pp. 174–192) | ✅ **COMPLETE — pp. 174–192 captured.** 🔴🔴 FENCED + the "Who made God?" safe thread. Light log below. |
-| Ch. 12 "Violating nature? (Hume on miracles)" (pp. 193–206) | ⚠ **pp. 193–195 captured; pp. 196–206 MISSING.** ✅✅ **SAFE + MINEABLE (pairs with `library/miracles.html`).** Fuller log below. |
+| Ch. 12 "Violating nature? (Hume on miracles)" (pp. 193–206) | ⚠ **pp. 193–205 captured; only p. 206 MISSING.** ✅✅ **SAFE + MINEABLE (pairs with `library/miracles.html`).** Fuller log below. |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
 
@@ -919,6 +919,57 @@ note); **Robert Spaemann**; **Helga Thoene** (hidden chorale codes in Bach's *Vi
 > and pp. 193–195 are captured; **pp. 196–206 (rest of ch. 12) are the highest-value remaining body capture.**
 > Then the **References pp. 211–221**. Once both are in hand + `miracles.html` is read in full, ch. 12 can get
 > a proper six-verdict cross-check (the first of the book).
+
+**Ch. 12 cont'd, pp. 196–205 — the chapter's full argument (✅ SAFE + MINEABLE; verdicts still await Step-Zero
+read of `miracles.html` + References pp. 211–221). Sections:** "Miracles and the laws of nature" → "Hume's
+argument from the uniformity of experience" → "Hume's criteria for evidence and the credibility of witnesses".
+These are **real leads for `library/miracles.html`** — listed so the grounded pass can compare point-by-point:
+
+1. ⭐⭐ **Miracles do NOT "violate" laws — C.S. Lewis's thief/arithmetic illustration + the "feeds a new event
+   into the system" move (pp. 200–201).** A law of arithmetic doesn't stop a thief removing money from a
+   drawer; a law of nature tells you what happens *barring intervention*, not that intervention is impossible.
+   **Lewis** (*Miracles*): "If God annihilates or creates or deflects a unit of matter, He has created a new
+   situation at that point. Immediately all nature domiciles this new arrival… the new situation is at once
+   conformed to all the laws." ⭐ Load-bearing. **CHECK `miracles.html` — almost certainly already carries the
+   Lewis "laws don't forbid intervention" move; likely corroboration.**
+2. ⭐⭐ **Hume's argument 1 (uniformity of experience) BEGS THE QUESTION (pp. 201–202).** "Uniform experience
+   against miracles" assumes miracles have never happened — the point at issue. The **Charles I decapitation**
+   illustration (no decapitated king has risen → but that can't prove one couldn't). Likely corroboration.
+3. ⭐ **Hume is SELF-CONTRADICTORY / his theory of causation undercuts him (pp. 197–198).** Hume's own account
+   of cause-effect (constant conjunction, no *necessary* connection — the billiard balls) denies the very
+   law-necessity miracles supposedly "violate"; and he denies we can rationally establish nature's uniformity
+   (induction). ⭐ **Antony Flew** (a Hume scholar/critic) **revised his assessment and granted Hume's causation
+   analysis was "far too weak"** — a critic conceding. **CHECK whether `miracles.html` has the
+   self-contradiction/induction point specifically — if not, a strong verdict-3/4 candidate.**
+4. ⭐ **"Ancients were credulous pre-scientific dupes" is false (pp. 199–200).** **Luke** (the historian):
+   **Zechariah** is *skeptical* of the angel's promise precisely because he knows barren old women don't
+   conceive; the ancients knew dead men stay dead (that is *why* resurrection startled them). The first
+   opposition to the resurrection came not from atheists but from **Sadducean High Priests who believed in
+   God**. **N.T. Wright** (*The Resurrection of the Son of God*) — ancient paganism knew corpses don't rise.
+   ⭐ **CHECK `miracles.html`/`library/postres.html`/resurrection answers — strong, and verify the Zechariah/
+   Luke 1 reading + the Wright citation.**
+5. ⭐ **Hume's "a wise man proportions his belief to the evidence" — agreed, but Hume rigs it (pp. 202–204).**
+   He sets the bar so no evidence could *ever* count (the "greater miracle" criterion), and never actually
+   weighed the historical evidence for the resurrection. ⭐⭐ **The Big Bang counterexample to Hume's point 3**
+   ("evidence for a singular/unrepeatable event can never suffice"): the Big Bang is a singular, unrepeatable
+   event that scientists accept on evidence — so the principle is false. **Flew** made this point. ⚠ verify.
+   The **Indian prince / frost** anecdote (Hume's own) actually cuts *against* him — the prince was wrong to
+   reject new evidence just because it was outside his experience.
+6. ⭐ **The uniformity of nature is better grounded in a Creator than in naturalism (p. 205).** Ties back to
+   ch. 3's **argument from reason** — **C.S. Lewis**: "If all that exists is Nature, the great mindless
+   interlocking event… our convictions are merely the by-products…" Naturalism can't justify trusting nature's
+   regularity; theism can. (Overlaps `does-naturalism-undermine-reason.html`.)
+
+⚠ **Mining guardrails when this is worked up:** verify **Hume's *Enquiry* §10** directly (not Lennox's
+paraphrase); verify the **Lewis *Miracles*** quotations; hold the site's resurrection/miracles rules (a miracle
+argument shows *possibility given theism* + weighs evidence — it does not "prove" by itself). ⚠ The **Charles I,
+Indian-prince, and Big-Bang-singularity** points are the freshest "maybe we lack this" candidates; the
+begs-the-question and Lewis-laws points are near-certain corroboration.
+
+> **STATUS (ch. 12 — captured pp. 193–205, only p. 206 left):** ⭐ **this is the whole mineable payoff of the
+> book, and it is now essentially fully captured.** The moment **p. 206 + the References pp. 211–221** are in
+> hand and **`miracles.html` is read in full (Step Zero)**, ch. 12 gets the book's **first real six-verdict
+> cross-check** — the first thing in this entire note that can generate a `content-backlog.md` row.
 
 **✅ GAP FILLED (2026-11-05): pp. 138–139 — "How does the DNA give rise to the proteins?"** (ch. 8). Content
 confirms the page range (sits between p. 137 "What is DNA?" and p. 140 "Is it all in the genes?"): the
