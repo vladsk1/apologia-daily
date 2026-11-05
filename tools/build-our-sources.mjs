@@ -170,6 +170,7 @@ export const serialize = (d) => JSON.stringify(d) + '\n';
 export const STUDIED_DIRS = ['docs/video-research', 'docs/article-research'];
 export const STUDIED_EXCLUDED = {
   'muhammad-in-the-bible-prophet-dilemma': 'speaker not identified in the note ("Michael", surname not captured); list once verified',
+  'mcgrew-undesigned-coincidences-erkenntnis-2020': 'mapped at abstract/metadata level only — Springer paywalled and the free indexes (PhilPapers/PhilArchive) bot-blocked, so the full text was not read; its formal Bayesian apparatus is fenced out site-wide (minimalfacts.html ~185), so it yields no portable number-free lead. List if a future full-text read ever turns one up.',
 };
 const NON_NOTES = /^(INDEX|README|MINING-BRIEF.*)\.md$/;
 
