@@ -112,8 +112,9 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 9 "Matters of information" (pp. 148–162) | ✅ **COMPLETE — pp. 148–162 captured.** 🔴 FENCED (information/Dembski). Light log below. |
 | Ch. 10 "The monkey machine" (pp. 163–173) | ✅ **COMPLETE — pp. 163–173 captured.** 🔴 FENCED. Light log below. |
 | Ch. 11 "The origin of information" (pp. 174–192) | ✅ **COMPLETE — pp. 174–192 captured.** 🔴🔴 FENCED + the "Who made God?" safe thread. Light log below. |
-| Ch. 12 "Violating nature? (Hume on miracles)" (pp. 193–206) | ⚠ **pp. 193–205 captured; only p. 206 MISSING.** ✅✅ **SAFE + MINEABLE (pairs with `library/miracles.html`).** Fuller log below. |
-| **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
+| Ch. 12 "Violating nature? (Hume on miracles)" (pp. 193–206) | ✅ **COMPLETE — pp. 193–206 captured.** ✅✅ **SAFE + MINEABLE (pairs with `library/miracles.html`).** Fuller log below. |
+| Epilogue "Beyond science but not beyond reason" (pp. 207–210) | ✅ **captured.** 🔴 FENCED (Mind-behind-universe + John 1 Logos). |
+| **References (pp. 211–221)** | ⚠ **pp. 211–215 captured (Preface + chs. 1–6 endnotes); pp. 216–221 MISSING — incl. 🔴 the ch. 12 (Hume) endnotes, the ones the mineable chapter needs.** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
 
 ## Preface — procedural disclosure worth recording (p. 13)
@@ -970,6 +971,70 @@ begs-the-question and Lewis-laws points are near-certain corroboration.
 > book, and it is now essentially fully captured.** The moment **p. 206 + the References pp. 211–221** are in
 > hand and **`miracles.html` is read in full (Step Zero)**, ch. 12 gets the book's **first real six-verdict
 > cross-check** — the first thing in this entire note that can generate a `content-backlog.md` row.
+
+**Ch. 12 end (p. 206) + Epilogue (pp. 207–210):** p. 206 closes ch. 12 ("…whether there is a mouse in the
+attic unless we actually go and look!"). **Epilogue "Beyond science but not beyond reason"** 🔴 FENCED —
+epigraph **Erwin Schrödinger** (science is silent on beauty/good/evil/God); Lennox's close: the universe's
+rational intelligibility + fine-tuning point to a **Mind**, and (p. 209) the **John 1 *Logos*** — "In the
+beginning was the Word… the Word became flesh." ⚠⚠ Same fence: the Logos/deity material comes ONLY from our
+own dual-consensus-gated essays, never from the epilogue's framing. **Arthur Schawlow** (Nobel, laser) quoted
+on the Bible. Not mine-able.
+
+## References — endnotes pp. 211–215 captured (Preface + chs. 1–6); pp. 216–221 (chs. 7–12) STILL NEEDED
+
+> ✅ **This resolves the footnotes for the mineable front end (chs. 1–3).** ⚠ The reference pages are dense
+> and shot at an angle; I record ONLY entries legible with confidence (per "never guess a citation"). Anything
+> uncertain is marked `⚠ verify vs photo` and must be re-read during the actual `apologia-citations` pass.
+> 🔴🔴 **The ch. 12 (Hume) endnotes are on pp. 216–221 and are NOT yet captured — they are the ones the one
+> mineable chapter needs, so pp. 216–221 is now the single highest-value remaining capture.**
+
+**Chapter 1 endnotes (p. 211) — resolve the "is faith blind? / scientist-belief" leads:**
+- n1 Atkins, 'Will science ever fail?', *New Scientist*, 8 Aug 1992, pp. 32–35.
+- n2 Dawkins, 'Is science a religion?', *The Humanist*, Jan/Feb 1997, pp. 26–39.
+- n3 Dawkins, *The God Delusion*, London, Bantam Press, 2006.  · n4 *Daily Telegraph* Science Extra, 11 Sept
+  1989.  · n5 **John 20:31**  · n6 **Romans 1:20**.
+- n7 Francis Collins, *The Language of God*, New York, Free Press, 2006, **p. 164**.
+- n8 John F. Haught, *God and the New Atheists*, Louisville, Westminster John Knox Press, 2008, **p. 62**.
+- n9 Alister McGrath, *Dawkins' God*, Oxford, Blackwell, 2004.  · n10 Dawkins, *A Devil's Chaplain*, London,
+  Weidenfeld & Nicolson, 2003, **p. 248**.
+- n12 Larry Witham, *Where Darwin Meets the Bible*, Oxford, OUP, 2002, **p. 272**.  · n13 *Scientific
+  American*, September 1999, **pp. 88–93** (the NAS belief survey). ⚠ n11 (a *Nature* ref) + nn14–17 — verify vs photo.
+
+**Chapter 2 endnotes (pp. 211–212) — resolve the limits-of-science / methodological-naturalism / conflict-myth leads:**
+- n18 **A.N. Whitehead, *Science and the Modern World*, London, Macmillan, 1925, p. 19.**
+- n19 cited in Morris Kline, *Mathematics: The Loss of Certainty*, New York, OUP, 1980, p. 31.
+- n21 **T.F. Torrance, *Theological Science*, 1969.**
+- n23 **John Hedley Brooke, *Science and Religion: Some Historical Perspectives*, Cambridge, CUP, 1991, p. 19**
+  (the "complexity thesis" guardrail source).
+- n24 **Peter Harrison, *The Bible, Protestantism and the Rise of Science*, Cambridge, CUP, 1998** (the
+  contingent-creation / "go and look" lead — the strongest front-end improvement candidate).
+- n26 the Galileo chapter in **J.H. Brooke & Geoffrey Cantor, *Reconstructing Nature*, Edinburgh, T&T Clark, 1998**.
+- n27 Galileo, **Letter to the Grand Duchess Christina (1615)**.
+- n29 **J.H. Brooke, "The Wilberforce–Huxley Debate: Why Did It Happen?", *Science and Christian Belief*, 2001,
+  13, 127–41.**  · n30 **J.R. Lucas, "Wilberforce and Huxley: A Legendary Encounter", *The Historical Journal*,
+  22(2), 1979, 313–30.** ⚠ n20 (Needham, *The Great Titration* — verify publisher), n25, n28, nn31–40 — verify vs photo.
+- ⚠⚠ **The Lewontin "divine foot in the door" quote** (the single strongest front-end lead) — its endnote
+  number was not legibly matched to an entry in these shots. **Pin it during the citations pass:** it is the
+  NYRB review "Billions and Billions of Demons", 9 Jan 1997. Do not cite until the exact locus is confirmed.
+
+**Chapter 3 endnotes (pp. 212–213) — resolve the reductionism / argument-from-reason leads:**
+- n1 **G.G. Simpson, *The Meaning of Evolution*, Yale, 1949, p. 344.**  · n2 Freeman Dyson, 'Energy in the
+  Universe', *Scientific American*, 224, 1971, p. 50.  · n3 **Paul Davies, *The Mind of God*, London, Simon &
+  Schuster, 1992, p. 232.**
+- n18 **Francis Crick, *The Astonishing Hypothesis*, London, Simon & Schuster, 1994, p. 3** (the "you are
+  nothing but a pack of neurons" lead). ⚠ nn4–17, 19–23 (incl. the **Darwin's Doubt** / Darwin-to-W.-Graham
+  1881 letter, and the **Polanyi** locus) — verify vs photo during the citations pass.
+
+⭐ **Front-end citation status:** chs. 1–3's load-bearing leads are now mostly resolvable — **Collins p. 164,
+Whitehead p. 19, Harrison 1998, Brooke 1991, the Wilberforce–Huxley pair (Brooke 2001 / Lucas 1979), Simpson
+p. 344, Davies p. 232, Crick p. 3** are legible with confidence. **The two still to pin: the Lewontin NYRB
+locus and the Darwin's-Doubt letter.** ⚠ Chs. 4–6 endnotes (pp. 213–215) are captured too but are for FENCED
+chapters — not worked up.
+
+> **STATUS — BODY COMPLETE, REFERENCES HALF-DONE:** the whole body (pp. 7–210) + Preface/ch.1–6 endnotes
+> (pp. 211–215) are captured. 🔴🔴 **ONE capture left that matters: References pp. 216–221 — the ch. 7–12
+> endnotes, above all CH. 12 (Hume), which the mineable chapter's six-verdict cross-check needs.** (Index
+> pp. 222+ optional.) Once pp. 216–221 are in + `miracles.html` is read in full, the ch. 12 cross-check runs.
 
 **✅ GAP FILLED (2026-11-05): pp. 138–139 — "How does the DNA give rise to the proteins?"** (ch. 8). Content
 confirms the page range (sits between p. 137 "What is DNA?" and p. 140 "Is it all in the genes?"): the
