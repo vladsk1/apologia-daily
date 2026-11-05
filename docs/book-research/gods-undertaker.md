@@ -105,7 +105,7 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 2 "The scope and limits of science" (pp. 31–46) | ✅ **COMPLETE — pp. 31–46 captured.** Raw leads logged below, UNMINED. |
 | Ch. 3 "Reduction, reduction, reduction…" (pp. 47–57) | ✅ **COMPLETE — pp. 47–57 captured.** Raw leads logged below, UNMINED. |
 | Ch. 4 "Designer universe?" (pp. 58–77) | ✅ **COMPLETE — pp. 58–77 captured.** 🔴 FENCED (design/fine-tuning). Light log below. |
-| Ch. 5 "Designer biosphere?" (pp. 78–99) | ⚠ **pp. 78–87 captured; pp. 88–99 MISSING.** 🔴 FENCED (design in biology) + ⚠ evolution sensitivity. Light log below. |
+| Ch. 5 "Designer biosphere?" (pp. 78–99) | ⚠ **pp. 78–89 captured; pp. 90–99 MISSING.** 🔴 FENCED (design in biology) + ⚠ evolution sensitivity. Light log below. |
 | Chs. 6–12 (bodies) | ⬜ NOT captured — 🔴 chs. 6 (evolution scope), 8–11 fenced; ch. 12 (Hume/miracles) is safe |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
@@ -581,9 +581,21 @@ ch. 12 (miracles) → `library/miracles.html`**. It is *about the logic of the a
 it is safer than the rest of the chapter — but it still sits adjacent to the fence; treat as "verify, likely
 corroboration" against `finetuning.html`'s own handling of the inference and `miracles.html`'s Hume material.
 
-> **STATUS (ch. 5 — partial 78–87, FENCED):** nothing actionable. The design-in-biology case is fenced; the
-> only safe threads are "evolution ≠ atheism" (consonant with us, mine-able) and Hume's critique of the design
-> inference (verify vs finetuning/miracles). Denominational tripwire on p. 83 logged. pp. 88–99 awaited.
+**Ch. 5 cont'd, pp. 88–89 — "Does evolution exclude God?" (🔴 FENCED + ⚠ evolution sensitivity):** Lennox
+frames the question as two separable assertions — **Assertion 1:** biological evolution is *incompatible with
+a Creator*; **Assertion 2:** biological evolution *accounts for life's complexity*. His move: these are
+independent, and the *atheism-follows-from-evolution* claim (Assertion 1) is a **category/logic error**, not a
+scientific result. Names (not worked up): Dawkins (the "blind watchmaker"; the 5 claims about natural
+selection), **G.G. Simpson**, Futuyma, Scruton, **William Provine**, Dennett, Huxley (1959). ⚠⚠ **Same
+evolution fence as pp. 86–87:** the *"evolution ≠ atheism / Assertion 1 is a logic error"* thread is **safe and
+consonant with us** and is the only mine-able part; Lennox's critique of **Assertion 2** (that Darwinism is
+scientifically insufficient) is the fenced ID move that also cuts against our gated "it isn't ours to referee"
+stance (`answers/can-a-christian-believe-in-evolution.html`). Section continues past p. 89 (pp. 90–99 awaited).
+
+> **STATUS (ch. 5 — partial 78–89, FENCED):** nothing actionable. The design-in-biology case is fenced; the
+> only safe threads are "evolution ≠ atheism / Assertion 1 is a category error" (consonant with us, mine-able)
+> and Hume's critique of the design inference (verify vs finetuning/miracles). Denominational tripwire on p. 83
+> logged. pp. 90–99 awaited.
 
 ## Still needed to mine this book
 
