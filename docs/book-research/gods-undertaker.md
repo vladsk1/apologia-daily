@@ -1173,6 +1173,20 @@ non-recommendations** (de-deification/Xenophanes; survey numbers). Nothing execu
 pipeline (+ dual-consensus where the tier calls for it); the scope-of-science essay and the Gödel row are
 explicit **owner decisions**, not auto-queued.
 
+## Five-surface cross-check (six surfaces) — mineable regions only
+
+⚠ Chs. 4–11 are FENCED (ID / design inference = open owner decision) and were deliberately NOT cross-checked.
+Only the two mineable regions were scanned against every served surface (2026-11-05): **ch. 12 (Hume on
+miracles)** and **chs. 1–3 (the anti-scientism front end)**. Full verdicts are in the two cross-check sections
+above; this is the required checklist.
+
+- [x] **library essay** — `library/miracles.html` read in full (ch. 12: our essay is ahead; 1 P3 row). `library/science-history.html`, `library/reason.html`, `library/mathematics.html` read in full (chs. 1–3: ours-is-better throughout; Harrison correctly attributed). Verdicts logged above.
+- [x] **/answers** — scanned `/answers/do-miracles-really-happen.html`, `/answers/doesnt-science-disprove-god.html`, `/answers/isnt-faith-believing-without-evidence.html`, `/answers/is-mathematics-evidence-for-god.html`, `/answers/is-there-scientific-evidence-for-god.html`. Faith-is-blind strengthening + the scope-of-science gap logged as rows.
+- [x] **ev-s card** — ev-s5 (miracles) and ev-s8 (science-history) cards checked; the Huxley–Wilberforce line is to mirror into the ev-s8 card when that row ships.
+- [x] **ev-m mastery** — `ev-m-science-history` carries the premises; `ev-m-reason` / `ev-m-mathematics` checked (no scope-of-science / Gödel content). **`ev-m-miracles.html` does NOT exist** (known structural gap — N/A for this mine).
+- [x] **/briefs** — `miracles-hume-spinoza`, `argument-from-reason`, `christianity-and-science-history` and the Wigner brief all exist in `briefs/_data.json`; NO brief on scientism / methodological naturalism / limits-of-science (part of the scope-of-science gap row).
+- [x] **/sources** — the `/sources` corpus is patristics/creeds only, so N/A for these argument leads. Note: Hume *Enquiry* §10 + Spinoza *TTP* ch. 6 are public-domain but absent from `/sources` — a pre-existing opportunity, logged, no row.
+
 > ## ✅ MINE COMPLETE. Whole book captured + both mineable regions (ch. 12 Hume, chs. 1–3 front end) cross-checked.
 > Everything in **chs. 4–11 stays FENCED** pending the owner's ID / science-tab decision. Total actionable
 > output of the entire mine: **1× P3 (miracles/ancients-credulous) + 3× P2 + 2× P3 (front end)**, plus logged
