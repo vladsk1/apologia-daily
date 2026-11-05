@@ -101,8 +101,9 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Cover + copyright page | ✅ captured + verified (2026-11-05) |
 | Contents (full TOC) | ✅ captured + verified (2026-11-05) |
 | Preface (pp. 7–13) | ✅ captured + legible (2026-11-05) — framing + one procedural disclosure (below); not citation-heavy |
-| Ch. 1 "War of the worldviews" (pp. 15–30) | ⚠ **pp. 14–27 captured** (chapter runs to ~p. 30; pp. 28–30 may remain). Raw leads logged below, UNMINED — citations unresolved pending References. |
-| Chs. 2–12 (bodies) | ⬜ NOT captured |
+| Ch. 1 "War of the worldviews" (pp. 15–30) | ✅ **COMPLETE — pp. 14–30 captured.** Raw leads logged below, UNMINED — citations unresolved pending References. |
+| Ch. 2 "The scope and limits of science" (pp. 31–46) | ⚠ **pp. 31–37 captured; pp. 38–46 MISSING.** Raw leads logged below, UNMINED. |
+| Chs. 3–12 (bodies) | ⬜ NOT captured |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
 
@@ -219,13 +220,104 @@ Leads to compare (all UNVERIFIED):
   the victory legend grew later. Historians: **Frank James** (Royal Institution), Charles Taylor, the
   *Athenaeum* report. ⚠ verify all names/quotes against the historians' own work.
 
-> **STATUS:** ch. 1 is now substantially captured but **still not mined** — two things remain before a
-> grounded pass: (1) the **References pp. 211–221** (to resolve footnotes 1–32 and verify every lead), and
-> (2) the **Step-Zero full reads** of `science-history.html` + the three science-faith answer pages. I will
-> do both as **one clean pass** (reads + cross-check + citation-verify together) rather than guess verdicts
-> now. First impression only, to be tested not trusted: **(b) is probably corroboration; the live finding
-> to chase is whether the *contingent-creation-freed-empiricism* argument + Peter Harrison are in
-> `science-history.html`.**
+### Ch. 1 end, pp. 28–30 (UNMINED, UNVERIFIED, footnotes 33–40 unresolved)
+
+**(d) Huxley's crusade + the conflict-thesis verdict (p. 28).** Home: `are-science-and-christianity-enemies.html`.
+- ⭐ **Colin Russell** (historian of science), the headline anti-conflict-thesis quote: the common belief
+  that science and religion have been in enduring hostility is "not only historically inaccurate, but
+  actually a caricature so grotesque that what needs to be explained is how it could possibly have achieved
+  any degree of respectability." **Strong, quotable, from a professional historian — a good verified-primary
+  candidate** (verify exact wording + locus, *Cross-currents: Interactions Between Science and Faith*?).
+- **Michael Poole** on **T.H. Huxley** — the crusade was institutional: Huxley reified **"Nature"** (capital
+  N, "Dame Nature"), promoting **Victorian scientific naturalism** and the supremacy of the new professional
+  scientist class *against* the clergy. The conflict was about *power/respectability*, not science vs faith.
+
+**(e) "The real conflict — naturalism versus theism" (pp. 28–30) — the chapter's PAYOFF, maps to
+`answers/doesnt-science-disprove-god.html` + `does-naturalism-undermine-reason.html`.** The thesis: the real
+clash is not science vs religion but **naturalism vs theism** — two worldviews, and the question is which one
+science fits. Leads (UNVERIFIED):
+- *The Oxford Companion to Philosophy* on naturalism/materialism ("the various materialist philosophies…").
+- **E.O. Wilson** (*Consilience*) distinguishing two naturalisms — (i) the Marxist-Leninist **blank-slate**
+  "political behaviourism" (mind as *tabula rasa*, culture-moulded — Lennox notes its catastrophic 20th-c.
+  record) vs (ii) Wilson's own scientific-humanist version (human nature exists, self-assembled, Darwinian).
+  ⚠ handle the "tens of millions of deaths" line carefully — verify Wilson's own wording; don't editorialise.
+- **Carl Sagan**, *Cosmos*: "The cosmos is all that is, or ever was, or ever will be." · **Sterling
+  Lamprecht**'s definition of naturalism (one all-encompassing closed system of cause and effect).
+- **Henry F. (Fritz) Schaefer** (quantum chemist) — the "ex nihilo creation consistent with Genesis" quote.
+  ⚠⚠ **FINE-TUNING / CONCORDISM TRIPWIRE:** this is a "Big Bang ripples (1992) point to Genesis" concordist
+  claim — exactly the register our `bigbang.html` keeps separate (the classical beginning is science; the
+  Creator inference is a distinct, contested step). **Do not port Schaefer as if the science "points to
+  Genesis."** Lennox's own framing is the safe one: science doesn't *prove* theism, the question is which
+  worldview it sits with.
+
+> **STATUS (ch. 1 — COMPLETE capture, still UNMINED):** the full chapter is now in hand (pp. 14–30). Still
+> not mined — two things remain before a grounded pass: (1) the **References pp. 211–221** (to resolve
+> footnotes and verify every lead), and (2) the **Step-Zero full reads** of `science-history.html` + the
+> science-faith answer pages. Do both as **one clean pass**. First impressions only, to be tested not
+> trusted: (b) forgotten-roots ≈ corroboration (chase whether *contingent-creation-freed-empiricism* +
+> Peter Harrison are in `science-history.html`); **(e) naturalism-vs-theism framing + the Colin Russell
+> and Lewontin quotes (ch. 2) are the strongest "might be missing / might sharpen" candidates** — confirm
+> against the answer pages.
+
+## Raw capture log — Ch. 2 "The scope and limits of science", pp. 31–37 (UNMINED, UNVERIFIED)
+
+> ⚠ **PARTIAL chapter — pp. 31–37 of 31–46.** pp. 38–46 not captured; References not captured, so footnotes
+> 1–12 (this chapter restarts footnote numbering) are unresolved. Not a mined map, no verdicts. **This is
+> the anti-scientism / limits-of-science chapter — squarely in the safe-to-mine zone — BUT it runs right up
+> to the ID/Dover question (see the fence below).** Likely homes: `answers/doesnt-science-disprove-god.html`,
+> `answers/does-naturalism-undermine-reason.html`, `answers/are-science-and-christianity-enemies.html`, and
+> possibly a genuine coverage gap (we may have no full ESSAY on the scope/limits of science — confirm).
+
+- **Chapter thesis (our words):** science is powerful but bounded; it cannot answer the "first and last"
+  questions (why is there anything? what is it all for?). **Scientism** — the claim that science is the only
+  route to knowledge — is itself a *philosophical* (self-refuting) claim, not a scientific result.
+- **Epigraphs / scientism leads (UNVERIFIED):**
+  - **Bertrand Russell:** "Whatever knowledge is attainable, must be attained by scientific methods; and
+    what science cannot discover, mankind cannot know." (verify — *Religion and Science*, 1935.) ⭐ the
+    classic self-refuting scientism quote — strong verified-primary candidate.
+  - **Sir Peter Medawar**, *The Limits of Science* (1984) — science's inability to answer the "childlike
+    elementary questions… How did everything begin? What are we all here for? What is the point of living?"
+    ⭐ a *Nobel-laureate critic of scientism's reach* — high-value, and Medawar is unimpeachable (not a
+    theist apologist). Verify wording.
+- **"Science is theory-laden" (p. 32):** the Enlightenment "dispassionate unbiased observer" is a myth;
+  observation is theory-laden (even a temperature reading). **Werner Heisenberg** on observation/quantum
+  theory. Underdetermination of theory by data; tentativeness; "critical realism."
+- **"Defining science" (p. 33):** no single agreed definition or "scientific method." **Michael Ruse** —
+  science "by definition deals only with the natural, the repeatable, the law-governed." Origin-of-universe
+  events are unique/unrepeatable → **inference to the best explanation (abduction)** as the operative logic.
+- ⭐⭐ **"Which comes first — science or philosophy?" (pp. 34–37) — the methodological-naturalism core, the
+  highest-value section of the chapter for us.** This is the argument that *methodological* naturalism
+  quietly smuggles in *metaphysical* naturalism. Leads (UNVERIFIED):
+  - **Christian de Duve** (Nobel) — "scientific enquiry rests on the notion that all manifestations… are
+    explainable in natural terms" — which de Duve calls a *working hypothesis / postulate*, **not** an a
+    priori philosophical stand. Lennox's point: equating "rational" with "natural" (and "supernatural" with
+    "non-rational") is a **category mistake**.
+  - **Kitzmiller v. Dover (2005), Judge John E. Jones III** — ID ruled "a religious and not a scientific
+    view." 🔴🔴 **ID FENCE — this is the pressure point.** Lennox uses Dover to argue methodological
+    naturalism is a *convention*, not a finding, and can smuggle in metaphysics. Mining the
+    **methodological-vs-metaphysical naturalism distinction** is safe; **re-litigating the Dover verdict / the
+    "ID is science" claim is NOT — that is the open owner decision.** Keep any port to the
+    naturalism-is-a-prior-commitment point, not "the court was wrong / ID is science."
+  - **Paul Kurtz** — naturalism as method; the *tabula rasa* framing.
+  - **George Klein** (immunologist) — ⭐ a clean, powerful lead: his atheism is openly **an a priori faith,
+    not a conclusion of science** — "I am not an agnostic. I am an atheist. My attitude is not based on
+    science but… on faith… the non-existence of God is my childhood faith." (verify — Klein, *The Atheist
+    and the Holy City*.) Excellent primary for "atheism is a worldview, not a scientific result."
+  - ⭐⭐ **Richard Lewontin**, review of Carl Sagan's *The Demon-Haunted World* (*New York Review of Books*,
+    9 Jan 1997, "Billions and Billions of Demons") — the famous passage: "…we have a prior commitment, a
+    commitment to materialism… we are forced by our a priori adherence to material causes… **we cannot allow
+    a Divine foot in the door.**" **This is the single strongest lead in chs. 1–2** — a leading geneticist
+    conceding materialism is *a priori*, not science-driven. Verify the quote exactly against the NYRB
+    piece (it is frequently truncated/quote-mined by apologists — get the full context; Lennox appears to
+    quote it at length, which is the honest way). **Strong verified-primary + `/briefs` candidate.**
+  - **Ernan McMullin** — the *careful* distinction: methodological naturalism "lays down which sort of study
+    qualifies as science" and (on his reading) says nothing metaphysical — the honest counter-voice to the
+    Lewontin reading. ⭐ **Porting BOTH McMullin and Lewontin is what keeps this fair** (not every
+    methodological naturalist is sneaking in metaphysics) — don't drop McMullin, or the argument overclaims.
+- ⚠ **Calibration for the mining session:** the defensible verdict is **"methodological naturalism can be,
+  and in Lewontin's case openly is, a metaphysical commitment smuggled in as a method"** — NOT "science is
+  atheism" or "all scientists are closet dogmatists." McMullin is the fence. And keep the Dover/ID material
+  on the naturalism-is-a-convention point only.
 
 ## Still needed to mine this book
 
