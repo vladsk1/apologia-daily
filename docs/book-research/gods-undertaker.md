@@ -111,8 +111,8 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 8 "The genetic code and its origin" (pp. 135–147) | ✅ **COMPLETE — pp. 135–147 captured (138–139 gap now FILLED).** 🔴 FENCED; `originlife.html` AHEAD. Light log below. |
 | Ch. 9 "Matters of information" (pp. 148–162) | ✅ **COMPLETE — pp. 148–162 captured.** 🔴 FENCED (information/Dembski). Light log below. |
 | Ch. 10 "The monkey machine" (pp. 163–173) | ✅ **COMPLETE — pp. 163–173 captured.** 🔴 FENCED. Light log below. |
-| Ch. 11 "The origin of information" (pp. 174–192) | ⚠ **pp. 174–185 captured; pp. 186–192 MISSING.** 🔴🔴 FENCED + one SAFE-ADJACENT "Who made God?" thread. Light log below. |
-| Ch. 12 "Violating nature? (Hume)" (pp. 193–206) | ⬜ NOT captured — ✅ **SAFE to mine (pairs with `miracles.html`)** |
+| Ch. 11 "The origin of information" (pp. 174–192) | ✅ **COMPLETE — pp. 174–192 captured.** 🔴🔴 FENCED + the "Who made God?" safe thread. Light log below. |
+| Ch. 12 "Violating nature? (Hume on miracles)" (pp. 193–206) | ⚠ **pp. 193–195 captured; pp. 196–206 MISSING.** ✅✅ **SAFE + MINEABLE (pairs with `library/miracles.html`).** Fuller log below. |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
 
@@ -874,6 +874,51 @@ sections "The complexity of God: a fatal objection?" → "Who made God?" → "Is
   calibration (a limit on reductionism, not a disproof of materialism).
 - ⚠⚠ **The John 1 *Logos* / "In the beginning was the Word" turn recurs (pp. 182–184)** — same fence as p. 177:
   any Logos/deity point comes from our OWN dual-consensus-gated essays, never from this book's framing.
+
+**Ch. 11 end, pp. 186–192 — COMPLETES the chapter (🔴 FENCED):** "The burning question" (does science point
+to Mind-before-matter?) → "God of the Gaps again?" → the music/message analogy. Names (map only): **Dean
+Kenyon** 🔴🔴 **HARD DO-NOT-USE — same hazard the `return-of-the-god-hypothesis.md` note flags: Kenyon's
+repudiation of his own abiogenesis work is sourced to an ID-advocacy film, and he is himself an ID advocate;
+never cite him as a naturalist conceding design**; **E.O. Wilson**; **Del Ratzsch** + **Alvin Plantinga** +
+**John Polkinghorne** ("good gaps" vs "bad gaps" — Lennox again disowning god-of-the-gaps, the one safe
+note); **Robert Spaemann**; **Helga Thoene** (hidden chorale codes in Bach's *Violin Partita in D minor* /
+*Ciaccona* — the music-as-encoded-message analogy, *Ex Deo nascimur*). ⚠⚠ The **John 1 *Logos*** theme recurs
+(p. 191) — same fence; deity/Logos points come only from our own gated essays. All fenced. Ch. 11 COMPLETE.
+
+## Raw capture log — Ch. 12 "Violating nature? The legacy of David Hume", pp. 193–195 (✅ SAFE + MINEABLE — pairs with `library/miracles.html`)
+
+> ✅✅ **THIS IS THE ONE SAFE, GENUINELY MINEABLE CHAPTER — Hume on miracles. Captured more fully than the
+> fenced chapters.** It pairs with **`library/miracles.html`** (and likely an `/answers/*` on miracles/Hume).
+> Still **UNMINED** — verdicts await (1) **Step Zero: read `miracles.html` in full**, and (2) the **References
+> pp. 211–221** to verify every Hume locus. But the argument structure below is real lead material, not just
+> names. Epigraphs: **Hume** ("A miracle is a violation of the laws of nature…") + **Anthony Flew**
+> ("Generations of Humeans have… been misled into offering analyses of causation… far too weak…").
+- **"Introduction to David Hume's arguments" (pp. 193–194):** ⭐ the framing move — *if* there is a Creator
+  God, miracles are no problem; **the only thing that rules them out in advance is committed materialism**
+  (so the miracle question is really the God question). **Francis Collins** on "healthy scepticism." The
+  **definition**: a miracle is a *supernatural exception to a regular natural order* — so a miracle
+  **presupposes** a normal course of nature (you can't flag an exception without the rule). ⚠ **Melanie
+  Phillips / Dawkins "little green men"** anecdote (Dawkins said he'd sooner invoke aliens than God) — verify
+  the locus before any use. **Hume (1711–76)**, *Enquiry Concerning Human Understanding* — the famous essay.
+- ⭐⭐ **"The argument from the uniformity of experience" (pp. 194–195):** Hume's **first** argument — uniform
+  experience testifies against miracle, so no testimony can establish one. ⭐ **Lennox's reply (the standard,
+  strong one): it BEGS THE QUESTION** — "uniform experience against miracles" *assumes* miracles have never
+  occurred, which is the very point at issue. **CHECK `miracles.html`: it almost certainly already makes this
+  move — likely corroboration.**
+- ⭐⭐ **"The argument from the uniformity of nature — Hume's self-contradictory position" (p. 195):** Hume's
+  **second** argument — miracles violate the uniform laws of nature. ⭐ **Lennox's reply: Hume CONTRADICTS
+  himself** — the same Hume who leans on nature's uniformity *here* **elsewhere denies we can rationally know
+  nature is uniform** (Hume's own **problem of induction**). So he cannot have it both ways. ⭐ This is a
+  sharp, quotable structural point — **CHECK whether `miracles.html` carries the self-contradiction/induction
+  point specifically; if not, it is a strong verdict-3/4 candidate.**
+- ⚠ **Mining guardrail (the site's own rule):** when this is worked up, hold the resurrection/miracles rules
+  — never overclaim; a miracle argument establishes *possibility given theism*, not proof. And verify Hume's
+  text directly (the *Enquiry*, §10 "Of Miracles") — do not rest on Lennox's paraphrase.
+
+> **STATUS (ch. 11 complete + ch. 12 opening — the SAFE chapter begins):** ⭐ ch. 12 is the real mining target
+> and pp. 193–195 are captured; **pp. 196–206 (rest of ch. 12) are the highest-value remaining body capture.**
+> Then the **References pp. 211–221**. Once both are in hand + `miracles.html` is read in full, ch. 12 can get
+> a proper six-verdict cross-check (the first of the book).
 
 **✅ GAP FILLED (2026-11-05): pp. 138–139 — "How does the DNA give rise to the proteins?"** (ch. 8). Content
 confirms the page range (sits between p. 137 "What is DNA?" and p. 140 "Is it all in the genes?"): the
