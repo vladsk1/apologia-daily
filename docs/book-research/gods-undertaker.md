@@ -1122,8 +1122,62 @@ dual-consensus essay re-gated the same day; covers BOTH Spinoza and Hume plus Tr
 **Result: 1 backlog row (P3, ancients-weren't-credulous), 1 logged non-recommendation (the induction
 self-contradiction), the rest corroboration. ⚠ The row is NOT executed — it needs the primaries verified
 (Luke 1 NIV; the N.T. Wright 2007 Durham lecture locus — likely a web-enabled session) and a dual-consensus
-re-gate (miracles/resurrection tier) before it ships. Chs. 1–3 (the other mineable front end) still owe
-their own Step-Zero reads + cross-checks.**
+re-gate (miracles/resurrection tier) before it ships.**
+
+## ✅ CHS. 1–3 SIX-VERDICT CROSS-CHECK — RUN 2026-11-05 (the safe front end)
+
+**Method:** three read-only Explore agents, each reading its paired essays in full (Step Zero) and classifying
+against all six surfaces; findings then **verified by hand** (the Harrison attribution, the Huxley–Wilberforce
+absence, the no-limits-of-science-essay claim, the Lewontin absence, and the mathematics.html "Hilbert" =
+*complex Hilbert spaces* not Hilbert's programme — all confirmed).
+
+**⚠ CORRECTION TO THIS NOTE'S EARLIER CH. 1–3 LOG:** I had flagged the **contingent-creation / Peter Harrison**
+lead as "the strongest front-end improvement candidate." **That was wrong.** `library/science-history.html`
+(lines 147–149) already runs the exact "free Creator → contingent world → you have to *go and look* → empirical
+turn" argument — and attributes the voluntarism thesis to **Hooykaas/Foster** while casting **Harrison as its
+*critic/qualifier*** ("Harrison has cautioned that the link is looser than that thesis claims"). Lennox treats
+Harrison as the *proponent*; porting Lennox would have **mis-assigned Harrison**. Verdict: **corroboration —
+ours is better. Do NOT touch.**
+
+**Six-verdict summary (verified):**
+| Lennox lead | Home | Verdict |
+|---|---|---|
+| Forgotten-roots core (Whitehead, Kepler, pioneers) | `science-history.html` | **Corroboration** (Kepler fenced as paraphrase — a hygiene win) |
+| ⭐ Contingent-creation / Harrison | `science-history.html` | **Ours is better** — Harrison correctly cast as critic (see correction above). No action. |
+| Conflict-thesis-is-a-myth (Galileo core) | `science-history.html` | **Corroboration / ours is better** (Numbers, Brooke, Finocchiaro, JP II 1992, Melanchthon) |
+| **Huxley–Wilberforce 1860 myth** | `science-history.html` | **4. Missing** → **P2 row** (verified: 0 hits) |
+| Founders roll-call (Boyle/Faraday/Maxwell + Cavendish Ps 111:2); C.S. Lewis "Lawgiver" | `science-history.html` | **4. Missing** (vivid specifics) → **P3 row** |
+| De-deifying the universe (Milesians/Xenophanes/Epicurus/Jaeger) | — | **6. Non-recommendation** (Xenophanes = the Feuerbach/Freud projection argument; + scope-creep/triumphalism). Declined. |
+| Scientism is self-refuting (Russell, Medawar) | — | **4. Missing** → folds into the scope-of-science **P2** |
+| Methodological-vs-metaphysical naturalism (Lewontin/de Duve/Klein + McMullin fence) | — | **4. Missing** — the strongest genuinely-absent lead → scope-of-science **P2** |
+| Mechanism-vs-agency (category mistake, Laplace, Aunt Matilda) | `answers/doesnt-science-disprove-god.html` | **3. Weaker in ours** (kernel present, thin) → scope-of-science **P2** |
+| ⭐ Argument from reason (Darwin/Crick/Polkinghorne) | `library/reason.html` | **Ours is better** — reason.html runs Balfour/Haldane/Lewis/Reppert/Plantinga EAAN *with* Anscombe + the contested-status fence; Lennox's "blips in the neural network" is the naive flat-contradiction form Anscombe refuted. **Do NOT import.** Optional P3 color only (Darwin's horrid-doubt already live on `daily-args.json`). |
+| Gödel incompleteness as limit on reductionism | — | **4. Missing** (site-wide) → **P3 FENCED/owner** (hardest calibration; never "disproves materialism") |
+| Wigner "unreasonable effectiveness" | `library/mathematics.html` | **Ours is better** (full objection suite + nominalism hinge + bounded verdict) |
+| Einstein "comprehensibility" | present on `ev-s5`/`cosmic`, absent from `mathematics.html` | **4. Missing from mathematics.html** → **P3 row** (port from our own surfaces) |
+| "Is faith blind?" | `answers/isnt-faith-believing-without-evidence.html` | **3. Weaker in ours** (right verdict, generic) → **P2 row** (name Dawkins + add Rom 1:20 / John 20:31; keep calibration) |
+| "Statements by scientists ≠ statements of science" (clean point) | `glossary.html` | **Corroboration** |
+| The belief-survey numbers (Leuba / Larson–Witham / 1998 NAS) | — | **6. Non-recommendation** (correlation, genetic-fallacy risk). Declined. |
+
+> ### ⭐ STANDING OUTPUT — "Is the source better than our essays anywhere?"
+> **Overwhelmingly no — same "ours is better" finding as every science-book mine** (reason.html, mathematics.html,
+> science-history.html are each more careful and better-sourced than Lennox's popular chapters, and three times
+> ours is *more accurately attributed* — Harrison as critic, the Anscombe-refined argument from reason, the
+> Wigner "gift"-figure correction). **The one real structural finding is a GAP, not a Lennox superiority:** we
+> have **no deep-dive on the scope & limits of science** — scientism-self-refutes, methodological-vs-metaphysical
+> naturalism, and a fuller mechanism-vs-agency treatment currently have only a 2-paragraph answer as their home.
+
+**Backlog rows logged (all 2026-11-05, chs. 1–3): 3× P2** (scope-of-science gap [owner scope decision];
+Huxley–Wilberforce; faith-is-blind strengthening) **+ 2× P3** (enrichment bundle; Gödel [fenced/owner]). **2
+non-recommendations** (de-deification/Xenophanes; survey numbers). Nothing executed — all go through the full
+pipeline (+ dual-consensus where the tier calls for it); the scope-of-science essay and the Gödel row are
+explicit **owner decisions**, not auto-queued.
+
+> ## ✅ MINE COMPLETE. Whole book captured + both mineable regions (ch. 12 Hume, chs. 1–3 front end) cross-checked.
+> Everything in **chs. 4–11 stays FENCED** pending the owner's ID / science-tab decision. Total actionable
+> output of the entire mine: **1× P3 (miracles/ancients-credulous) + 3× P2 + 2× P3 (front end)**, plus logged
+> non-recommendations and "ours-is-better" flags. The INDEX.md routing row can be added now (the note is mined);
+> the six-surface checklists above satisfy the required cross-check block.
 
 **✅ GAP FILLED (2026-11-05): pp. 138–139 — "How does the DNA give rise to the proteins?"** (ch. 8). Content
 confirms the page range (sits between p. 137 "What is DNA?" and p. 140 "Is it all in the genes?"): the
