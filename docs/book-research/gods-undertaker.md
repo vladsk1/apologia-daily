@@ -102,8 +102,9 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Contents (full TOC) | ✅ captured + verified (2026-11-05) |
 | Preface (pp. 7–13) | ✅ captured + legible (2026-11-05) — framing + one procedural disclosure (below); not citation-heavy |
 | Ch. 1 "War of the worldviews" (pp. 15–30) | ✅ **COMPLETE — pp. 14–30 captured.** Raw leads logged below, UNMINED — citations unresolved pending References. |
-| Ch. 2 "The scope and limits of science" (pp. 31–46) | ⚠ **pp. 31–37 captured; pp. 38–46 MISSING.** Raw leads logged below, UNMINED. |
-| Chs. 3–12 (bodies) | ⬜ NOT captured |
+| Ch. 2 "The scope and limits of science" (pp. 31–46) | ✅ **COMPLETE — pp. 31–46 captured.** Raw leads logged below, UNMINED. |
+| Ch. 3 "Reduction, reduction, reduction…" (pp. 47–57) | ⚠ **p. 47 only captured** (chapter runs to ~p. 57). Stub logged below. |
+| Chs. 4–12 (bodies) | ⬜ NOT captured |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
 
@@ -318,6 +319,69 @@ science fits. Leads (UNVERIFIED):
   and in Lewontin's case openly is, a metaphysical commitment smuggled in as a method"** — NOT "science is
   atheism" or "all scientists are closet dogmatists." McMullin is the fence. And keep the Dover/ID material
   on the naturalism-is-a-convention point only.
+
+### Ch. 2 cont'd, pp. 38–46 — COMPLETES the chapter (UNMINED, UNVERIFIED)
+
+**(f) "Following where the evidence leads — always?" (pp. 38–39).** Home: `does-naturalism-undermine-reason.html` / `are-science-and-christianity-enemies.html`.
+- **Kuhn** (paradigms / resistance to new evidence); **Lysenko-era Marxism** rejecting Mendelian genetics
+  because it clashed with Marxist philosophy (the mirror of churchmen vs Galileo — ideology, not evidence,
+  driving the refusal). **Thomas Nagel** (belief and the will — "I don't want there to be a God" register).
+- ⭐ **Anthony Flew** — "follow the evidence wherever it leads" (Plato's Socrates), and his **late turn from
+  atheism to theism**. ⚠⚠ **FENCE: Flew became a DEIST, not a Christian** (*There Is a God*, 2007) — cite him
+  only as "a lifelong atheist who followed the argument to a designing mind," **never** as a convert to
+  Christianity. Good illustration of "following evidence," bounded.
+
+**(g) "The limits of scientific explanation" + "Aunt Matilda's cake" (pp. 40–43) — the chapter's核心, maps
+to a limits-of-science / scientism answer (likely `doesnt-science-disprove-god.html`; possibly a GAP).**
+- **Dawkins** (*The God Delusion* dedication to **Douglas Adams**: "Isn't it enough to see that a garden is
+  beautiful without having to believe that there are fairies at the bottom of it too?"); the
+  Father-Christmas/fairies/leprechauns framing of God. ⚠ cite the Adams line as quoted-by-Dawkins.
+- ⭐ **Bertrand Russell** scientism line again — Lennox's point: it is **self-refuting** (the statement
+  "only science delivers knowledge" is itself not a scientific statement).
+- ⭐⭐ **"Aunt Matilda's cake"** — Lennox's signature **how/why illustration**: the world's top scientists
+  can exhaustively describe *how* the cake is constituted, but **none can say *why* Aunt Matilda made it
+  unless she tells them.** Science answers *how*, not *why/purpose*. Memorable, portable, safe — a prime
+  candidate for an answer-page or reel if we don't already have an equivalent. ⚠ check we don't already use
+  a near-identical illustration (and that porting it keeps the bound: this shows science is *incomplete*,
+  not *false*).
+- **Peter Medawar**, *Advice to a Young Scientist* — "there is no quicker way for a scientist to bring
+  discredit on himself than to declare that science knows, or will know, the answers to all questions
+  worth asking"; the "first and last things" are outside science's scope. ⭐ a second Medawar primary.
+- **Peter Atkins** — the purposeless-universe / "dungheap of corruption" line; Lennox: that is Atkins taking
+  materialism to its logical end, not a finding of science.
+
+**(h) "Scientism refutes itself" (p. 43).** ⭐⭐ The central philosophical move, clean and safe: **scientism
+is a *metascientific* statement, so by its own standard it is not knowledge — it is self-refuting /
+incoherent** (the same fate as logical positivism's verification principle). Strong `/briefs` candidate for
+"doesn't science disprove God / is science the only path to truth."
+
+**(i) "God — an unnecessary hypothesis?" (pp. 44–46) — mechanism vs agency + the Laplace story.** Home:
+`doesnt-science-disprove-god.html`. ⭐⭐ **This is the section that most reinforces our ID fence — mine it.**
+- **The "Mr Ford" motor-car analogy** — understanding the *mechanism* (internal combustion) does not
+  eliminate the *agent* (Mr Ford who designed it). **Mechanism and agency are not competing explanations;
+  treating them as alternatives is a CATEGORY MISTAKE.** ⭐ Lennox's signature argument — portable and safe.
+- **Newton** — discovering the law of gravitation moved him to *greater* admiration for the Designer, not
+  to "now I don't need God." **Michael Poole** on Dawkins.
+- ⭐ **Laplace & Napoleon** — "Sir, I have no need of that hypothesis." Lennox's (correct, careful) reading:
+  Laplace was answering a *narrow* question about the planetary orbits — God is not a term *inside* the
+  physics equation (just as Mr Ford is not a term inside a description of combustion), so the remark is **not
+  an argument against God's existence.** **Austin Farrer**'s comment on the incident. ⚠ The anecdote is
+  frequently mis-told; Lennox's framing is the honest one — port *his reading*, not the triumphalist version.
+- ⚠ **The whole section is Lennox pre-empting the "God of the gaps" charge** — which is exactly why it
+  *helps* our ID owner-decision fence: his God is the ground of the whole rational order, **not** a stopgap
+  for current scientific ignorance. Note this when the mining session weighs the design-inference chapters.
+
+## Raw capture log — Ch. 3 "Reduction, reduction, reduction…", p. 47 (STUB — chapter 47–57)
+
+> ⚠ **Only p. 47 (chapter opening) captured.** Not mined. Likely home: `doesnt-science-disprove-god.html`
+> (the "God of the gaps" objection) + `does-naturalism-undermine-reason.html` (reductionism).
+- Epigraphs: **Xenophanes (c. 500 BC)** — "If cows and horses or lions had hands… they would draw the forms
+  of gods like horses, cows like cows" (the projection charge); **Richard Swinburne** — "I am not
+  postulating a 'God of the gaps'… I am postulating a God to explain **why science explains**."
+- **"The God of the gaps" section opens:** God is NOT introduced to cover ignorance (intellectual laziness);
+  he is not to be "found in the gaps." ⭐ Reinforces the ID fence again: Lennox explicitly disowns
+  god-of-the-gaps reasoning. (Reductionism proper — the "nothing but" move — is the chapter's main target;
+  awaits pp. 48–57.)
 
 ## Still needed to mine this book
 
