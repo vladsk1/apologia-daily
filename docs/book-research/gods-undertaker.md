@@ -109,8 +109,9 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 6 "The nature and scope of evolution" (pp. 100–121) | ✅ **COMPLETE — pp. 100–121 captured.** 🔴🔴 FENCED + DENSE QUOTE-MINE ZONE. Light log below. |
 | Ch. 7 "The origin of life" (pp. 122–134) | ✅ **COMPLETE — pp. 122–134 captured.** 🔴 FENCED-ADJACENT (design in OOL); `originlife.html` is AHEAD. Light log below. |
 | Ch. 8 "The genetic code and its origin" (pp. 135–147) | ⚠ **pp. 135–137 + 140–147 captured; ⚠️ pp. 138–139 SKIPPED (gap).** 🔴 FENCED; `originlife.html` AHEAD. Light log below. |
-| Ch. 9 "Matters of information" (pp. 148–162) | ⚠ **pp. 148–149 captured; pp. 150–162 MISSING.** 🔴 FENCED (Shannon information). Light log below. |
-| Chs. 10–12 (bodies) | ⬜ NOT captured — 🔴 chs. 10–11 fenced (information/origin of info); ch. 12 (Hume/miracles) is safe |
+| Ch. 9 "Matters of information" (pp. 148–162) | ✅ **COMPLETE — pp. 148–162 captured.** 🔴 FENCED (information/Dembski). Light log below. |
+| Ch. 10 "The monkey machine" (pp. 163–173) | ⚠ **pp. 163–167 captured; pp. 168–173 MISSING.** 🔴 FENCED (Dawkins weasel critique). Light log below. |
+| Chs. 11–12 (bodies) | ⬜ NOT captured — 🔴 ch. 11 fenced (origin of info); ch. 12 (Hume/miracles) is safe |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
 
@@ -785,6 +786,37 @@ Dobzhansky** (⚠ the famous "nothing in biology makes sense except in the light
 > **STATUS (ch. 8 + ch. 9 opening):** ⚠️ **GAP — pp. 138–139 were skipped** (previous batch ended p. 137,
 > this batch began p. 140). Needs re-shooting. Both chapters fenced; `originlife.html` ahead; nothing to
 > import. pp. 150–162 (rest of ch. 9) awaited; ch. 10 "The monkey machine" begins p. 163.
+
+**Ch. 9 cont'd, pp. 150–162 — COMPLETES the chapter (🔴 FENCED — the law+chance-can't-generate-information →
+design move):** sections "Syntactic and semantic information" → "DNA and information" → "Complexity" →
+"Algorithmic information theory" → "Is information conserved?". ⚠⚠ **This is the fenced design-inference
+core, and it brings in the ID movement's own theorists — do NOT port in our voice:** **William Dembski**
+(*The Design Inference*, *No Free Lunch*; "specified complexity", the "design filter", the
+"law-of-conservation-of-information"), **Gregory Chaitin** / **Kolmogorov** (algorithmic information theory,
+incompressibility), **Bernd-Olaf Küppers**, **Hubert Yockey**, **Leonard Brillouin** ("a machine does not
+create new information"). Also: Derek Bickerton (linguistics), Paul Davies ("the problem is the origin of
+information"), and another "God of the gaps" pass (Lennox again disowning gaps-reasoning — the one safe
+note). ⚠ `originlife.html` is ahead and does not rest on Dembski; keep it that way. Ch. 9 COMPLETE.
+
+## Raw capture log — Ch. 10 "The monkey machine", pp. 163–167 (LIGHT LOG — 🔴 FENCED)
+
+> 🔴 **FENCE: Dawkins's "weasel" program + Mount Improbable — captured, NOT mine-able as a design inference.**
+> The chapter's spine: Dawkins (*The Blind Watchmaker*) argues cumulative natural selection climbs "Mount
+> Improbable" in small steps; Lennox's critique is that Dawkins's **"METHINKS IT IS LIKE A WEASEL"** program
+> **smuggles in a fixed target** (a distant goal the algorithm compares each try against), i.e. it covertly
+> uses teleology/information — "a profoundly un-Darwinian concept." ⚠⚠ **This "the weasel program cheats by
+> having a target" argument is a standard ID talking point and is fenced.** Names (map only): the typing-
+> monkeys / *Hamlet* probability exposition (Russell Grigg's "Could Monkeys Type the 23rd Psalm?" ⚠ **Grigg
+> is Creation Ministries International — a young-earth apologetics source, same do-not-use class as the CSPI
+> and CMI flags elsewhere in our notes**); **Hoyle & Wickramasinghe** (haemoglobin "1 in 10³⁰⁰"; Hoyle's
+> "junkyard 747"); **Brian Josephson**; **David Berlinski** (*The Deniable Darwin*); Huxley/Wilberforce 1860
+> again. ⚠ All probability/"Mount Improbable" material is proof-shaped — never port as proof; `finetuning.html`
+> and `originlife.html` keep the honest register. Nothing actionable.
+
+> **STATUS (ch. 9 complete + ch. 10 opening):** both fenced; `originlife.html`/`finetuning.html` ahead;
+> nothing to import. ⚠⚠ **GAPS/DUPLICATES to note:** (1) **pp. 138–139 still MISSING** (not filled by this
+> batch — it jumped 149→150); (2) this batch re-sent **pp. 162–163** (duplicate within the batch). pp. 168–173
+> (rest of ch. 10) awaited; ch. 11 "The origin of information" begins p. 174.
 
 ## Still needed to mine this book
 
