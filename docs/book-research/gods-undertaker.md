@@ -111,7 +111,7 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 8 "The genetic code and its origin" (pp. 135–147) | ✅ **COMPLETE — pp. 135–147 captured (138–139 gap now FILLED).** 🔴 FENCED; `originlife.html` AHEAD. Light log below. |
 | Ch. 9 "Matters of information" (pp. 148–162) | ✅ **COMPLETE — pp. 148–162 captured.** 🔴 FENCED (information/Dembski). Light log below. |
 | Ch. 10 "The monkey machine" (pp. 163–173) | ✅ **COMPLETE — pp. 163–173 captured.** 🔴 FENCED. Light log below. |
-| Ch. 11 "The origin of information" (pp. 174–192) | ⚠ **pp. 174–177 captured; pp. 178–192 MISSING.** 🔴🔴 FENCED (explicit design inference: Dembski/SETI/"it from bit"). Light log below. |
+| Ch. 11 "The origin of information" (pp. 174–192) | ⚠ **pp. 174–185 captured; pp. 186–192 MISSING.** 🔴🔴 FENCED + one SAFE-ADJACENT "Who made God?" thread. Light log below. |
 | Ch. 12 "Violating nature? (Hume)" (pp. 193–206) | ⬜ NOT captured — ✅ **SAFE to mine (pairs with `miracles.html`)** |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
@@ -849,6 +849,31 @@ point; Schützenberger). ⚠ All fenced; standard ID argumentation. Nothing acti
 > **STATUS (ch. 10 complete + ch. 11 opening):** both fenced; nothing actionable. ⚠️ **pp. 138–139 STILL the
 > one open gap.** pp. 178–192 (rest of ch. 11) awaited; then ⭐ **ch. 12 "Violating nature?" (pp. 193–206) —
 > the Hume-on-miracles chapter, which is SAFE to mine and pairs with `library/miracles.html`.**
+
+**Ch. 11 cont'd, pp. 178–185 (🔴 mostly FENCED, but with the first SAFE-ADJACENT thread since the front end):**
+sections "The complexity of God: a fatal objection?" → "Who made God?" → "Is there anything eternal?" →
+"A theory of everything?". ⚠ **The batch re-sent pp. 178–179 (duplicate within the batch).**
+- 🔴 **FENCED (the complexity-of-God reply, pp. 178–181):** Lennox answers **Dawkins**'s *God Delusion* "who
+  designed the designer / a designer must be more complex than what it designs" objection partly via the
+  **information-is-immaterial** move (**Rolf Landauer** 1961 "information is physical" — Lennox argues
+  information itself is not material), and the titanium-cubes / prime-numbers **SETI** / *Contact* illustration,
+  and the **multiverse**. This half is entangled with the fenced ID/information argument — leave it.
+- ⭐ **SAFE-ADJACENT, LIKELY CORROBORATION — "Who made God?" (pp. 182–184).** This is a **general apologetics
+  objection**, NOT the ID design inference, and **we already cover it**: `answers/who-made-god.html`,
+  `answers/what-caused-the-universe.html`, `answers/what-is-the-kalam-cosmological-argument.html`, and
+  `library/kalam.html`. Lennox's moves: the **created-God vs eternal-God** distinction (the question "who made
+  God?" assumes a *created* god — a category error, since the God of classical theism is **uncreated/eternal**,
+  cf. the kalam rule "whatever **begins to exist** has a cause"; God did not begin); **Dawkins himself concedes**
+  the argument "leaves us needing an explanation" only *for a created* God; **matter is not eternal** (contra the
+  Greeks); and **Acts 17 — Paul at the Areopagus, "To an Unknown God"**. ⭐ **Verdict to TEST during the grounded
+  pass: almost certainly corroboration, but possibly a verdict-3 "sharpen our wording" on `who-made-god.html`**
+  (the created-vs-eternal category-error framing + Acts 17 Areopagus as a verified primary). ⚠ Do NOT import the
+  information-is-immaterial half — that is ID-entangled and `who-made-god.html` should not take it on.
+- **"A theory of everything?" (p. 185):** **Gödel's incompleteness** again (a TOE can't be complete/self-
+  certifying) + Dawkins's TOE optimism. ⚠ Ties to `mathematics.html` (already flagged); hold the Gödel
+  calibration (a limit on reductionism, not a disproof of materialism).
+- ⚠⚠ **The John 1 *Logos* / "In the beginning was the Word" turn recurs (pp. 182–184)** — same fence as p. 177:
+  any Logos/deity point comes from our OWN dual-consensus-gated essays, never from this book's framing.
 
 **✅ GAP FILLED (2026-11-05): pp. 138–139 — "How does the DNA give rise to the proteins?"** (ch. 8). Content
 confirms the page range (sits between p. 137 "What is DNA?" and p. 140 "Is it all in the genes?"): the
