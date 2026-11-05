@@ -122,7 +122,16 @@ Craig, "The Problem of Miracles" (Gospel Perspectives VI, 1986) is now cited at 
 natural-vs-historical-impossibility cut is in the Hume Part-I rebuttal (dual-consensus + confirmation;
 stamp 2026-11-06). **Less was DROPPED as unverifiable** (catalogs disagree on the date); **Becker and
 Nineham were also dropped** when MM-4 shipped (loci unconfirmable from open sources). **MM-7
-(`minimalfacts.html` — Paley's twelve-honest-men test case + Craig's IBE treatment) is still OPEN.**
+(`minimalfacts.html` — Paley's twelve-honest-men test case + Craig cited) SHIPPED 2026-11-06.**
+Paley's twelve-honest-men added at the cumulative-case paragraph as an inline parenthetical cite (no
+new footnote, no renumber; 32/32 sup-li). ⚠ Craig, "The Problem of Miracles" (1986) is credited ONLY
+with reviving the test case against Hume — NOT with the phrase "inference to the best explanation,"
+which his 1986 article does not use (verified; attribute that method to another Craig work if ever
+needed). Paley quote verified "give up the truth of their account" (Gutenberg #14780's "live up" is an
+OCR artifact); locus = "Preparatory Considerations" opening the *Evidences* (1794); the twelve are a
+HYPOTHETICAL, fenced on the page as echoing but not identified with the apostles. Four-lens
+dual-consensus CLEAN + confirmation; MK+ES mirrors synced same commit.**
 All leads sit inside the possibility/historian's-bar lane or the already-conceded worldview-limit; none
-collapses the wall. Executing MM-7 re-opens the gate (citations → argument → orthodoxy + neutrality;
-dual-consensus). Verify Paley against the primary before drafting.
+collapses the wall. MM-7 was executed 2026-11-06 under that gate (citations → argument → orthodoxy +
+neutrality; dual-consensus); Paley was verified against the primary before drafting. All of this note's
+rows (MM-1, the MM-2 Craig fold, and MM-7) are now SHIPPED — nothing in this ledger is open.
