@@ -105,7 +105,8 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 2 "The scope and limits of science" (pp. 31–46) | ✅ **COMPLETE — pp. 31–46 captured.** Raw leads logged below, UNMINED. |
 | Ch. 3 "Reduction, reduction, reduction…" (pp. 47–57) | ✅ **COMPLETE — pp. 47–57 captured.** Raw leads logged below, UNMINED. |
 | Ch. 4 "Designer universe?" (pp. 58–77) | ✅ **COMPLETE — pp. 58–77 captured.** 🔴 FENCED (design/fine-tuning). Light log below. |
-| Chs. 5–12 (bodies) | ⬜ NOT captured — 🔴 chs. 5, 8–11 are the other fenced design-inference chapters; ch. 12 (Hume/miracles) is safe |
+| Ch. 5 "Designer biosphere?" (pp. 78–99) | ⚠ **pp. 78–87 captured; pp. 88–99 MISSING.** 🔴 FENCED (design in biology) + ⚠ evolution sensitivity. Light log below. |
+| Chs. 6–12 (bodies) | ⬜ NOT captured — 🔴 chs. 6 (evolution scope), 8–11 fenced; ch. 12 (Hume/miracles) is safe |
 | **References (pp. 211–221)** | ⬜ **NOT captured — highest-value pages to shoot next (footnote numbers below are unresolved without them)** |
 | Index (pp. 222+) | ⬜ not captured (optional) |
 
@@ -542,6 +543,47 @@ covers the Gonzalez–Richards material. **Nothing here is actionable now.**
 > contingency, intelligibility, the bank-account rebuttal) is almost certainly corroboration against mature
 > essays; the fine-tuning/anthropic/multiverse core stays fenced pending the owner's decision. Still owed:
 > References pp. 211–221 + Step-Zero reads before any grounded pass.
+
+## Raw capture log — Ch. 5 "Designer biosphere?", pp. 78–87 (LIGHT LOG — 🔴 FENCED, partial 78–99)
+
+> 🔴🔴 **FENCE: design-in-biology chapter — the heart of the open owner decision. Captured for completeness;
+> DO NOT mine the design inference.** Section structure (pp. 78–87): epigraphs **Paley** (the watch) /
+> **Stephen Jay Gould** / **Dawkins** (the blind watchmaker) → "The wonder of the living world" → "Paley and
+> his watch" → "Does evolution eliminate the need for a Creator?". pp. 88–99 not yet captured.
+
+**Names recorded for map-completeness only (NOT worked up):** Paley's watch; **Cicero** (106–43 BC) as the
+ancient design-argument precursor; **Dawkins** (*The Blind Watchmaker*; "biology is the study of complicated
+things that give the appearance of having been designed for a purpose"); **Francis Crick** ("biologists must
+constantly keep in mind that what they see was not designed, but rather evolved"); **Daniel Dennett**
+(*Darwin's Dangerous Idea* — "universal acid"); **John Henry Newman** on Paley/natural theology; **Stephen
+Jay Gould**; **Elliott Sober**; **Julian Huxley** (1959 Darwin Centennial); **Douglas Futuyma**; **Roger
+Scruton**; **Robert Green Ingersoll**.
+
+⚠⚠ **TWO GUARDRAIL FLAGS THAT APPEAR IN THESE PAGES — carry them into any future mining:**
+- **DENOMINATIONAL-NEUTRALITY TRIPWIRE (p. 83):** Lennox's aside contrasts **Newman (Oxford, Roman Catholic)**
+  with **Paley (Cambridge, Protestant)** as a jokey "boat-race" rivalry. Harmless in Lennox, but **do NOT port
+  anything that frames a Catholic/Protestant contrast as scorekeeping** — the site defends the common faith
+  and does not adjudicate intra-Christian disputes.
+- 🔴 **EVOLUTION / THEISTIC-EVOLUTION SENSITIVITY (pp. 86–87, "Does evolution eliminate the need for a
+  Creator?"):** Lennox's point here — that *evolution does not entail atheism* (Huxley/Futuyma/Scruton
+  overreach when they say it does) — is **safe and correct, and consonant with our own stance.** BUT this
+  chapter and ch. 6 go on to critique evolutionary theory itself from an ID standpoint, which is the fraught
+  area. **Our settled, gated position is `answers/can-a-christian-believe-in-evolution.html`: of young-earth /
+  old-earth / evolutionary creation, "It isn't ours to referee."** Per the RotGH note's ch.-14 warning, the
+  separable-and-safe lead is only *"evolution ≠ atheism"* (mine that if anything); the *"Darwinism is
+  scientifically inadequate, therefore design"* move is fenced AND cuts against our refuse-to-referee stance.
+
+**Safe-adjacent (the one genuinely mineable thread here) — Hume on the design argument (pp. 84–85):** Lennox
+engages **David Hume**'s critique of design (the *Dialogues* — Cleanthes/Philo; single-universe sample
+problem; design inferences as inference-to-the-best-explanation vs analogy) and **Elliott Sober**'s modern
+version. ⭐ This bears on **how we evaluate design/teleological arguments generally** and connects to **Hume →
+ch. 12 (miracles) → `library/miracles.html`**. It is *about the logic of the argument*, not the biology, so
+it is safer than the rest of the chapter — but it still sits adjacent to the fence; treat as "verify, likely
+corroboration" against `finetuning.html`'s own handling of the inference and `miracles.html`'s Hume material.
+
+> **STATUS (ch. 5 — partial 78–87, FENCED):** nothing actionable. The design-in-biology case is fenced; the
+> only safe threads are "evolution ≠ atheism" (consonant with us, mine-able) and Hume's critique of the design
+> inference (verify vs finetuning/miracles). Denominational tripwire on p. 83 logged. pp. 88–99 awaited.
 
 ## Still needed to mine this book
 
